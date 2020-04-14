@@ -1,5 +1,37 @@
 Linux Kernel Debugging
 ======================
+This course is a Linux Kernel Deubgging course and explores the various tools
+and techniques that enable efficient debugging of code in the Linux kernel.
+
+
+Target audience
+---------------
+This course is intended for kernel developers which either do not have many
+years experience in Linux kernel development or for developers who want to
+expand their knowledge about the tools and techniques for debugging code
+in the Linux kernel.
+
+
+Prerequisites
+-------------
+* C language
+* Linux command line
+* Linux kernel programming
+
+
+Notes
+-----
+Several of the chapters in this course are based on chapters from
+[here](https://training.linuxfoundation.org/training/linux-kernel-debugging-and-security).
+Other chapters are written by [me](mailto:mark.veltzer@gmail.com).
+This course does not teach Linux Kernel Programming from the ground up. Kernel knowledge
+is assumed and should have been acquired in a previous course or some years with hands
+on experience in kernel programming.
+
+
+Outline
+-------
+
 
 * Basics
 	* Procedures
@@ -12,6 +44,16 @@ Linux Kernel Debugging
 	* Available System Calls
 	* Scheduling Algorithms and Task Structures
 	* Process Context
+* Techniques for finding the problem
+	* Binary search for your bug
+	* Building in debugging capabilities into your module
+	* Building in configurability into your module
+* Correct locking in the kernel
+	* Locking rules
+	* using `lockdep`
+* Malloc problems in the kernel
+	*
+	*
 * Monitoring and Debugging
 	* Debuginfo Packages
 	* Tracing and Profiling
@@ -64,10 +106,3 @@ Linux Kernel Debugging
 	* What are netlink Sockets?
 	* Opening a netlink Socket
 	* netlink Messages
-* Correct locking in the kernel
-	* locking rules
-	* lockdep
-* Malloc problems in the kernel
-* Techniques for finding the problem
-	* binary search your module
-	* build in debugging capabilities

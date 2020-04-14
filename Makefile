@@ -125,8 +125,9 @@ $(MKD_PDF): out/%.pdf: %.mkd $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)markdown-pdf $< --out $@
+	$(Q)pandoc $< -o $@
 	$(Q)chmod 444 $@
+#$(Q)markdown-pdf $< --out $@
 #$(Q)pandoc -t beamer $< -o $@
 #$(Q)pandoc $< -o $@
 # beamer
