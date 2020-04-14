@@ -1,0 +1,73 @@
+Linux Kernel Debugging
+======================
+
+* Basics
+	* Procedures
+	* Kernel Versions
+	* Kernel Sources and Use of git
+* Kernel Features (reminder)
+	* Components of the Kernel
+	* User-Space vs. Kernel-Space
+	* What are System Calls?
+	* Available System Calls
+	* Scheduling Algorithms and Task Structures
+	* Process Context
+* Monitoring and Debugging
+	* Debuginfo Packages
+	* Tracing and Profiling
+	* sysctl
+	* SysRq Key
+	* oops Messages
+	* Kernel Debuggers
+	* debugfs
+* The proc Filesystem
+	* What is the proc Filesystem?
+	* Creating and Removing Entries
+	* Reading and Writing Entries
+	* The `seq_file` Interface
+* kprobes
+	* kprobes
+	* kretprobes
+	* SystemTap
+* Ftrace
+	* What is ftrace?
+	* ftrace, trace-cmd and kernelshark
+	* Available Tracers
+	* Using ftrace
+	* Files in the Tracing Directory
+	* Tracing Options
+	* Printing with `trace_printk()`
+	* Trace Markers
+	* Dumping the Buffer
+	* trace-cmd
+* Perf
+	* What is perf?
+	* perf stat
+	* perf list
+	* perf record
+	* perf report
+	* perf annotate
+	* perf top
+* Crash
+	* Crash
+	* Main Commands
+* Kernel Core Dumps
+	* Generating Kernel Core Dumps
+	* kexec
+	* Setting Up Kernel Core Dumps
+* Linux Kernel Debugging Tools
+	* Linux Kernel (built-in) tools and helpers
+	* kdb
+	* qemu+gdb
+	* kgdb: hardware+serial+gdb
+* Netlink Sockets
+	* What are netlink Sockets?
+	* Opening a netlink Socket
+	* netlink Messages
+* Correct locking in the kernel
+	* locking rules
+	* lockdep
+* Malloc problems in the kernel
+* Techniques for finding the problem
+	* binary search your module
+	* build in debugging capabilities

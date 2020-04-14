@@ -10,7 +10,9 @@ DO_FMT_ODP_PPT:=1
 # do you want to do 'pdf' from 'odp'?
 DO_FMT_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
-DO_FMT_MKD_HTML:=1
+DO_FMT_MKD_HTM:=1
+# do you want to do 'pdf' from 'mkd'?
+DO_FMT_MKD_PDF:=1
 # do you want to do 'pdf' from 'tex'?
 DO_FMT_TEX_PDF:=1
 # do you want to do 'pdf' from 'txt'?
@@ -59,9 +61,13 @@ endif
 # markdown
 MKD_SRC:=$(shell find mkd -name "*.mkd")
 MKD_BAS:=$(basename $(MKD_SRC))
-MKD_HTML:=$(addprefix out/,$(addsuffix .html,$(MKD_BAS)))
-ifeq ($(DO_FMT_MKD_HTML),1)
-ALL+=$(MKD_HTML)
+MKD_HTM:=$(addprefix out/,$(addsuffix .html,$(MKD_BAS)))
+MKD_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MKD_BAS)))
+ifeq ($(DO_FMT_MKD_HTM),1)
+ALL+=$(MKD_HTM)
+endif
+ifeq ($(DO_FMT_MKD_PDF),1)
+ALL+=$(MKD_PDF)
 endif
 
 # beamer
@@ -109,12 +115,20 @@ $(ODP_PDF): out/%.pdf: %.odp $(ALL_DEP)
 	$(Q)unoconv --timeout 5 --output $@ --format pdf $<
 	$(Q)chmod 444 $@
 # markdown
-$(MKD_HTML): out/%.html: %.mkd $(ALL_DEP)
+$(MKD_HTM): out/%.html: %.mkd $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)markdown $< > $@
 	$(Q)chmod 444 $@
+$(MKD_PDF): out/%.pdf: %.mkd $(ALL_DEP)
+	$(info doing [$@])
+	$(Q)rm -f $@
+	$(Q)mkdir -p $(dir $@)
+	$(Q)markdown-pdf $< --out $@
+	$(Q)chmod 444 $@
+#$(Q)pandoc -t beamer $< -o $@
+#$(Q)pandoc $< -o $@
 # beamer
 $(TEX_PDF): out/%.pdf: %.tex $(ALL_DEP)
 	$(info doing [$@])
@@ -125,13 +139,14 @@ $(TEX_PDF): out/%.pdf: %.tex $(ALL_DEP)
 $(TXT_PDF): out/%.pdf: %.txt $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)a2x -f pdf --destination-dir=$(dir $@) $< 2> /dev/null
+	$(Q)a2x -f pdf $<
+	$(Q)mv $(basename $<).pdf $@
 
 .PHONY: all_odp
 all_odp: $(ODP_PPT) $(ODP_PDF)
 
 .PHONY: all_mkd
-all_mkd: $(MKD_HTML)
+all_mkd: $(MKD_HTM)
 
 .PHONY: all_beamer
 all_beamer: $(TEX_PDF)
@@ -147,9 +162,10 @@ debug:
 	$(info ODP_PPT is $(ODP_PPT))
 	$(info ODP_PDF is $(ODP_PDF))
 	$(info MKD_SRC is $(MKD_SRC))
-	$(info MKD_HTML is $(MKD_HTML))
+	$(info MKD_HTM is $(MKD_HTM))
+	$(info MKD_PDF is $(MKD_PDF))
 	$(info TEX_SRC is $(TEX_SRC))
-	$(info TEX_HTML is $(TEX_HTML))
+	$(info TEX_HTM is $(TEX_HTM))
 	$(info TXT_SRC is $(TXT_SRC))
 	$(info TXT_PDF is $(TXT_PDF))
 
