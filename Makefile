@@ -95,11 +95,10 @@ endif
 all: $(ALL)
 	@true
 
-# tools
-tools.stamp: templardefs/deps.py
+tools.stamp:
 	$(info doing [$@])
-	$(Q)templar install_deps
-	$(Q)make_helper touch-mkdir $@
+	$(Q)touch $@
+#$(Q)templar install_deps
 
 # odps
 $(ODP_PPT): out/%.ppt: %.odp $(ALL_DEP)
