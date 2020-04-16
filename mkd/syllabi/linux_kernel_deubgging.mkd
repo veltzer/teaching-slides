@@ -29,6 +29,12 @@ is assumed and should have been acquired in a previous course or some years with
 on experience in kernel programming.
 
 
+Timeframe
+---------
+3 days for experienced programmer.
+5 days for non experienced programmers.
+
+
 Outline
 -------
 
@@ -49,14 +55,20 @@ Outline
 	* Building in debugging capabilities into your module
 	* Building in configurability into your module
 * Correct locking in the kernel
-	* Locking rules
+	* Review of locking rules in the kernel
 	* Using `lockdep`
-	* Keeping the types of your locks flexible for debugging
+	* Keeping the types of your locks flexible
 	* Avoiding locks altogether
-* Malloc problems in the kernel
-	*
-	* Debugging caches via your code
-	* Debugging caches via `/proc/slabinfo`
+* Kernel debugging overview
+	* Using the kernel log
+	* Debug fs
+	* `ioctl`
+	* Proc fs.
+	* Sys fs.
+* Malloc debugging in the kernel
+	* Debugging caches via your code and `/proc/slabinfo`
+	* KASAN
+	* Kmemleak
 * Monitoring and Debugging
 	* Debuginfo Packages
 	* Tracing and Profiling
