@@ -105,13 +105,13 @@ $(ODP_PPT): out/%.ppt: %.odp $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)unoconv --timeout 5 --output $@ --format ppt $<
+	$(Q)unoconv --timeout=5 --doctype=presentation --output=$@ --format=ppt $<
 	$(Q)chmod 444 $@
 $(ODP_PDF): out/%.pdf: %.odp $(ALL_DEP)
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)unoconv --timeout 5 --output $@ --format pdf $<
+	$(Q)unoconv --timeout=5 --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
 # markdown
 $(MKD_HTM): out/%.html: %.mkd $(ALL_DEP)
