@@ -10,15 +10,13 @@ DevOps engineers to manage large server deployments as they scale their products
 for web scale.
 
 The Intermediate Puppet training course is designed to engage students in more of the features
-of Puppet such as the Puppet language, custom functions, facter, API, reporting and
+of Puppet such as the Puppet language, custom functions, facter, Hiera, rspec and
 architecture beyond what they may have learned in introductory courses. The course begins
 with a deep understanding of Puppet language with hands-on labs addressing real world
 scenarios. Next, students will learn how to write their own custom functions to extend Puppet to
 automate processes that may be considered custom to their own infrastructure. Students will
 get more familiar with Facter and understand how to use it with Puppet. Finally, students will dig
-into the Puppet API, reporting features and the Puppet architecture in order to full grasp what
-Puppet is capable of.
-
+into Hiera and rspec ending with exercises to test their manifests.
 
 
 Intended Audience
@@ -49,16 +47,17 @@ At the end of the course participats will be able to...
 * Understand and use the Puppet development language
 * Create your own custom functions to be used within Puppet
 * Learn how to use Facter
-* Enable reporting and customize what you report on within Puppet
-* Use the Puppet API to extend Puppet
-* Understand the Puppet Architecture
+* Use Hiera to define and use data sources.
+* Use rspec in order to test that their manifests are correct.
 
 
 Outline
 -------
-* Puppet Language Primer
+* From zero to Puppet
 	* Configuration Management
 	* Installing the Puppet CLI
+	* Basic operations
+* Puppet Language Primer
 	* Working with Puppet Apply and Manifests
 	* Working with Puppet Resources
 	* Exposing the Puppet Language
@@ -70,21 +69,34 @@ Outline
 * Deep dive into Facter
 	* What is Facter?
 	* Understanding Core Facts
+	* External facts
 	* Creating your own facts
-* Using the Puppet API
-	* Catalog
-	* Facts
-	* Node
-	* File bucket file
-	* File content
-	* File metadata
-	* Environments
-	* Status
-* Reporting in Puppet
-	* How reports work and configuration
-	* Using the custom reporting processor
-	* Using query operators and the reports API
-* Puppet Architecture
-	* Master <> Agent Communication
-	* Catalog Compilation
-	* Puppet Enterprise versus Puppet Open Source
+	* Configuring Facter with facter.conf
+* Hiera
+	* About Hiera
+	* Getting started with Hiera.
+	* Configuring Hiera.
+	* Creating and Editing data.
+	* Looking up data with Hiera
+	* Writing new data backends.
+* Bolt
+	* Installing Bolt.
+	* Getting started with Bolt
+	* Configuring Bolt
+	* Running Bolt basic commands
+	* Plans
+	* Tasks
+	* Modules
+	* Using Bolt with Puppet
+* Rspec-puppet
+	* Installing rspec-puppet
+	* Setup
+		* Manual vs automatic
+	* Doing various tests
+		* Classes
+		* Defined Types
+		* Functions
+		* Hosts
+		* Applications
+		* Types
+		* Type Aliases
