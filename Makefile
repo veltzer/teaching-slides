@@ -58,18 +58,6 @@ ifeq ($(DO_FMT_ODP_PDF),1)
 ALL+=$(ODP_PDF)
 endif
 
-# markdown
-MKD_SRC:=$(shell find mkd -name "*.mkd")
-MKD_BAS:=$(basename $(MKD_SRC))
-MKD_HTM:=$(addprefix out/,$(addsuffix .html,$(MKD_BAS)))
-MKD_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MKD_BAS)))
-ifeq ($(DO_FMT_MKD_HTM),1)
-ALL+=$(MKD_HTM)
-endif
-ifeq ($(DO_FMT_MKD_PDF),1)
-ALL+=$(MKD_PDF)
-endif
-
 # beamer
 TEX_SRC:=$(shell find beamer -name "*.tex")
 TEX_BAS:=$(basename $(TEX_SRC))
