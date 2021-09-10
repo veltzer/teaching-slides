@@ -86,7 +86,6 @@ all: $(ALL)
 tools.stamp:
 	$(info doing [$@])
 	$(Q)touch $@
-#$(Q)templar install_deps
 
 # odps
 $(ODP_PPT): out/%.ppt: %.odp $(ALL_DEP)
