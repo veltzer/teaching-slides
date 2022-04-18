@@ -77,8 +77,6 @@ endif
 #########
 # rules #
 #########
-
-.DEFAULT_GOAL=all
 .PHONY: all
 all: $(ALL)
 	@true
