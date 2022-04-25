@@ -37,7 +37,7 @@ endif # DO_MKDBG
 # dependency on the makefile itself
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif
+endif # DO_ALLDEP
 
 # tools
 ifeq ($(DO_TOOLS),1)
@@ -51,10 +51,10 @@ ODP_PPT:=$(addprefix out/,$(addsuffix .ppt,$(ODP_BAS)))
 ODP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(ODP_BAS)))
 ifeq ($(DO_FMT_ODP_PPT),1)
 ALL+=$(ODP_PPT)
-endif
+endif # DO_FMT_ODP_PPT
 ifeq ($(DO_FMT_ODP_PDF),1)
 ALL+=$(ODP_PDF)
-endif
+endif # DO_FMT_ODP_PDF
 
 # beamer
 TEX_SRC:=$(shell find beamer -name "*.tex")
@@ -62,7 +62,7 @@ TEX_BAS:=$(basename $(TEX_SRC))
 TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
 ifeq ($(DO_FMT_TEX_PDF),1)
 ALL+=$(TEX_PDF)
-endif
+endif # DO_FMT_TEX_PDF
 
 # slidy
 TXT_SRC:=$(shell find slidy -name "*.txt")
@@ -70,7 +70,7 @@ TXT_BAS:=$(basename $(TXT_SRC))
 TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
 ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
-endif
+endif # DO_FMT_TXT_PDF
 
 #########
 # rules #
