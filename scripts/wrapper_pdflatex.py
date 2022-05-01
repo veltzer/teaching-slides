@@ -121,6 +121,7 @@ def my_rename(old_filename: str, new_filename: str, check: bool):
 filename_input = sys.argv[1]
 filename_output = sys.argv[2]
 output_dir = os.path.dirname(filename_output)
+output_base = os.path.splitext(filename_output)[0]
 
 args = [
     "pdflatex",
@@ -143,10 +144,13 @@ unlink_check(
 # we need to run the command twice!!! (to generate the index and more)
 for _ in range(runs):
     my_call(args)
-    unlink_check(output_dir+'.log', False, True)
-    unlink_check(output_dir+'.out', False, True)
-    unlink_check(output_dir+'.toc', False, True)
-    unlink_check(output_dir+'.aux', False, True)
+    unlink_check(output_base+'.log', True, True)
+    unlink_check(output_base+'.out', True, True)
+    unlink_check(output_base+'.toc', True, True)
+    unlink_check(output_base+'.aux', True, True)
+    unlink_check(output_base+'.nav', True, True)
+    unlink_check(output_base+'.snm', True, True)
+    unlink_check(output_base+'.vrb', True, True)
 
 if qpdf:
     # move the output to the new place
