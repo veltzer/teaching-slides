@@ -28,20 +28,23 @@ This python script is a rewrite of a similar script in perl.
 
 #parameters
 # do you want debugging...
-debug = 0
+debug = False 
 # remove the tmp file for output at the end of the run? (this should be yes
 # unless you want junk files hanging around in /tmp...)
-remove_tmp = 1
+remove_tmp = True
 # how many times to run 'pdflatex(1)' ?
 runs = 2
 # do you want to run the 'qpdf' post processing stage?
-qpdf = 1
+qpdf = False
 
-# print to stdout a file content
-# this function is adjusted for the ugly output that pdflatex produces and so it
-# only prints the lines between lines starting with '!' (including the actual lines
-# starting with '!'). Apparently this is how pdflatex shows errors. Ugrrr...
-def printout(filename: str) {
+
+def printout(filename: str):
+    """
+    print to stdout a file content
+    this function is adjusted for the ugly output that pdflatex produces and so it
+    only prints the lines between lines starting with '!' (including the actual lines
+    starting with '!'). Apparently this is how pdflatex shows errors. Ugrrr...
+    """
     if debug:
         print(f"printing [{filename}]", file=sys.stderr)
     with open(filename):
@@ -50,16 +53,19 @@ def printout(filename: str) {
             if inerr:
                 print(line, file=sys.stderr)
                 inerr = False
-		    else
+            else:
                 if line.startswith("!"):
                     print(line, file=sys.stderr)
                     inerr = True
 
-# this is a function that removes a file and can optionally die if there is a problem
+
 def unlink_check(filename: str, check: bool, doit: bool):
+    """
+    this is a function that removes a file and can optionally die if there is a problem
+    """
     if doit:
         if debug:
-			print(f"unlinking [{filename}]", file=sys.stderr)
+            print(f"unlinking [{filename}]", file=sys.stderr)
         if check:
             os.unlink(filename)
         else:
@@ -68,30 +74,41 @@ def unlink_check(filename: str, check: bool, doit: bool):
             except:
                 pass
 
-# this is a function that chmods a file and can optionally die if there is a problem
+
 def chmod_check(filename:str, check: bool):
+    """
+    this is a function that chmods a file and can optionally die if there is a problem
+    """
     if debug:
         print(f"chmodding [{filename}]", file=sys.stderr)
     if check:
-	    os.chmod(filename, 0o444)
+        os.chmod(filename, 0o444)
     else:
         try:
             os.chmod(filename, 0o444)
         except:
             pass
 
+
 def my_call(args):
     if debug:
-		print(f"my_call args are [{args}]", file=sys.stderr)
-	res = subprocess.call(args)
+        print(f"my_call args are [{args}]", file=sys.stderr)
+    res = subprocess.check_call(
+        args,
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+    )
     if debug:
-		print(f"my_call res is [{res}]", file=sys.stderr)
-	return res
+        print(f"my_call res is [{res}]", file=sys.stderr)
+    return res
 
-# this is a function that renames a file and dies if there is a problem 
-def rename(old_filename: str, new_filename: str, check: bool):
+
+def my_rename(old_filename: str, new_filename: str, check: bool):
+    """
+    this is a function that renames a file and dies if there is a problem 
+    """
     if debug:
-		print(f"my_rename [{old_filename, new_filename}]", file=sys.stderr)
+        print(f"my_rename [{old_filename, new_filename}]", file=sys.stderr)
     if check:
         os.rename(old_filename, new_filename)
     else:
@@ -103,84 +120,44 @@ def rename(old_filename: str, new_filename: str, check: bool):
 # here we go...
 filename_input = sys.argv[1]
 filename_output = sys.argv[2]
-output_dir = os.path.basename(filename_output)
-my($input)=shift(@ARGV)
-my($output)=shift(@ARGV)
-my($output_dir)=File::Basename::dirname($output)
-# temporary file name to store errors...
-my($volume,$directories,$myscript)=File::Spec->splitpath($0)
-my($tmp_fname_out)='/tmp/'.$myscript.$$.'.out'
-my($tmp_fname_err)='/tmp/'.$myscript.$$.'.err'
-#my($tmp_output)='/tmp/'.$myscript.$$.'.pdf'
-my($cmd)='pdflatex -interaction=nonstopmode -halt-on-error -output-directory '.$output_dir.' '.$input.' > '.$tmp_fname_out.' 2> '.$tmp_fname_err
-if($debug) {
-	print 'input is ['.$input.']'."\n"
-	print 'output is ['.$output.']'."\n"
-	print 'cmd is ['.$cmd.']'."\n"
-}
+output_dir = os.path.dirname(filename_output)
+
+args = [
+    "pdflatex",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-output-directory",
+    output_dir,
+    filename_input,
+]
+if debug:
+    print(f"input is [{filename_input}]")
+    print(f"output is [{filename_output}")
+    print(f"cmd is [{args}")
 # first remove the output (if it exists)
-unlink_check($output,1,-f $output)
+unlink_check(
+    filename_output,
+    True,
+    os.path.isfile(filename_output),
+)
 # we need to run the command twice!!! (to generate the index and more)
-for(my($i)=0;$i<$runs;$i++) {
-	my($res)=my_call($cmd)
-	if($res) {
-		# error path
-		# print the errors
-		printout($tmp_fname_out)
-		printout($tmp_fname_err)
-		# remove the tmp file for the errors
-		unlink_check($tmp_fname_out,1,$remove_tmp)
-		unlink_check($tmp_fname_err,1,$remove_tmp)
-		# make sure to the remove the output (we are in the error path)
-		unlink_check($output,1,-f $output)
-		# exit with error code of the child...
-		exit($res >> 8)
-	} else {
-		# everything is ok
-		# remove the tmp file for the errors
-		unlink_check($tmp_fname_out,1,$remove_tmp)
-		unlink_check($tmp_fname_err,1,$remove_tmp)
-		# change the output to be unchangble (but only in the final run!)
-		if($i==$runs-1) {
-			chmod_check($output,1)
-			my($name,$path,$suffix)=File::Basename::fileparse($output, qw(.pdf))
-			my($output_base)=File::Spec->catfile($path,$name)
-			unlink_check($output_base.'.log',1,1)
-			unlink_check($output_base.'.out',1,1)
-			unlink_check($output_base.'.toc',1,1)
-			unlink_check($output_base.'.aux',1,1)
-		}
-	}
-}
-if($qpdf) {
-	# move the output to the new place
-	my($tmp_output)=$output.'.pdf'
-	my_rename($output,$tmp_output,1)
-	# I also had '--force-version=1.5' but it is not needed since I use pdflatex and pdftex with the right version there...
-	my($cmd4)='qpdf --deterministic-id --linearize '.$tmp_output.' '.$output.' > '.$tmp_fname_out.' 2> '.$tmp_fname_err
-	my($res)=my_call($cmd4)
-	if($res) {
-		# error path
-		# print the errors
-		printout($tmp_fname_out)
-		printout($tmp_fname_err)
-		# remove the tmp file for the errors
-		unlink_check($tmp_fname_out,1,$remove_tmp)
-		unlink_check($tmp_fname_err,1,$remove_tmp)
-		# remove the temporary file...
-		unlink_check($tmp_output,1,1)
-		# make sure to the remove the output (we are in the error path)
-		unlink_check($output,1,-f $output)
-		# exit with error code of the child...
-		exit($res >> 8)
-	} else {
-		# everything is ok
-		# remove the temporary file...
-		unlink_check($tmp_output,1,1)
-		# remove the tmp file for the errors
-		unlink_check($tmp_fname_out,1,$remove_tmp)
-		unlink_check($tmp_fname_err,1,$remove_tmp)
-		# change the output to be unchangble (but only in the second time!)
-		chmod_check($output,1)
-	}
-}
+for _ in range(runs):
+    my_call(args)
+    unlink_check(output_dir+'.log', False, True)
+    unlink_check(output_dir+'.out', False, True)
+    unlink_check(output_dir+'.toc', False, True)
+    unlink_check(output_dir+'.aux', False, True)
+
+if qpdf:
+    # move the output to the new place
+    tmp_output = filename_output+'.tmp'
+    my_rename(filename_output, tmp_output, True)
+    # I also had '--force-version=1.5' but it is not needed since I use pdflatex and pdftex with the right version there...
+    args = [
+        "qpdf",
+        "--deterministic-id",
+        "--linearize",
+        tmp_output,
+        filename_output,
+    ]
+    unlink_check(tmp_output, True, True)

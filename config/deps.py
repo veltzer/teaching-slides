@@ -2,7 +2,6 @@ packages=[
     'unoconv',
     'markdown',
     'asciidoc',
-    'asciidoc-base',
     'asciidoc-dblatex',
     'libreoffice',
     'pandoc',

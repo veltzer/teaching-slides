@@ -119,8 +119,7 @@ $(MKD_PDF): out/%.pdf: %.mkd
 $(TEX_PDF): out/%.pdf: %.tex
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)scripts/wrapper_pdflatex.pl $< $@
-	$(Q)rm -f $(basename $@).log $(basename $@).aux $(basename $@).nav $(basename $@).out $(basename $@).snm $(basename $@).toc $(basename $@).vrb
+	$(Q)scripts/wrapper_pdflatex.py $< $@
 # slidy
 $(TXT_PDF): out/%.pdf: %.txt
 	$(info doing [$@])
