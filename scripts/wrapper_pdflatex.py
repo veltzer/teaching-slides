@@ -35,7 +35,7 @@ remove_tmp = True
 # how many times to run 'pdflatex(1)' ?
 runs = 2
 # do you want to run the 'qpdf' post processing stage?
-qpdf = False
+qpdf = True
 
 
 def printout(filename: str):
@@ -164,4 +164,5 @@ if qpdf:
         tmp_output,
         filename_output,
     ]
+    my_call(args)
     unlink_check(tmp_output, True, True)
