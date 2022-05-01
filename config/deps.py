@@ -5,4 +5,5 @@ packages=[
     'asciidoc',
     'asciidoc-base',
     'asciidoc-dblatex',
+    'libreoffice',
 ]
