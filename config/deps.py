@@ -1,9 +1,11 @@
 packages=[
     'unoconv',
     'markdown',
-    'texlive-latex-base',
     'asciidoc',
     'asciidoc-base',
     'asciidoc-dblatex',
     'libreoffice',
+    'pandoc',
+    'texlive',
+    'texlive-latex-extra',
 ]
