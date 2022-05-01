@@ -24,6 +24,7 @@ DO_TOOLS:=1
 # code #
 ########
 ALL:=
+TOOLS=tools.stamp
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -41,7 +42,8 @@ endif # DO_ALLDEP
 
 # tools
 ifeq ($(DO_TOOLS),1)
-.EXTRA_PREREQS+=tools.stamp
+.EXTRA_PREREQS+=$(TOOLS)
+ALL+=$(TOOLS)
 endif # DO_TOOLS
 
 # odps
@@ -79,9 +81,10 @@ endif # DO_FMT_TXT_PDF
 all: $(ALL)
 	@true
 
-tools.stamp:
+$(TOOLS): packages.txt config/deps.py
 	$(info doing [$@])
-	$(Q)touch $@
+	$(Q)xargs -a packages.txt sudo apt-get -y install > /dev/null
+	$(Q)pymakehelper touch_mkdir $@
 
 # odps
 $(ODP_PPT): out/%.ppt: %.odp
