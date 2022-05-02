@@ -17,14 +17,11 @@ DO_FMT_MKD_PDF:=1
 DO_FMT_TEX_PDF:=1
 # do you want to do 'pdf' from 'txt'?
 DO_FMT_TXT_PDF:=1
-# do the tools?
-DO_TOOLS:=1
 
 ########
 # code #
 ########
 ALL:=
-TOOLS=tools.stamp
 
 # silent stuff
 ifeq ($(DO_MKDBG),1)
@@ -39,12 +36,6 @@ endif # DO_MKDBG
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
-
-# tools
-ifeq ($(DO_TOOLS),1)
-.EXTRA_PREREQS+=$(TOOLS)
-ALL+=$(TOOLS)
-endif # DO_TOOLS
 
 # odps
 ODP_SRC:=$(shell find odp -name "*.odp")
@@ -80,11 +71,6 @@ endif # DO_FMT_TXT_PDF
 .PHONY: all
 all: $(ALL)
 	@true
-
-$(TOOLS): packages.txt config/deps.py
-	$(info doing [$@])
-	$(Q)xargs -a packages.txt sudo apt-get -y install > /dev/null
-	$(Q)pymakehelper touch_mkdir $@
 
 # odps
 $(ODP_PPT): out/%.ppt: %.odp
