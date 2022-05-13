@@ -6,6 +6,8 @@ dev_requires = [
     "pymakehelper",
     "pydmt",
     "pyclassifiers",
+]
+run_requires = [
     "asciidoc",
 ]
 
