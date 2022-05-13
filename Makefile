@@ -2,7 +2,7 @@
 # parameters #
 ##############
 # do you want to show the commands executed ?
-DO_MKDBG:=0
+DO_MKDBG:=1
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
@@ -110,7 +110,7 @@ $(TEX_PDF): out/%.pdf: %.tex
 $(TXT_PDF): out/%.pdf: %.txt
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)a2x -f pdf $<
+	$(Q)a2x -v -f pdf $<
 	$(Q)mv $(basename $<).pdf $@
 
 .PHONY: all_odp
