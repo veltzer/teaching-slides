@@ -2,13 +2,13 @@ import config.project
 
 package_name = config.project.project_name
 
+install_requires = [
+    "asciidoc",
+]
 dev_requires = [
     "pymakehelper",
     "pydmt",
     "pyclassifiers",
-]
-run_requires = [
-    "asciidoc",
 ]
 
 python_requires = ">=3.10"
