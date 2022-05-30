@@ -1,5 +1,6 @@
 packages=[
     'unoconv',
+    'python3-uno',
     'markdown',
     'asciidoc',
     'asciidoc-dblatex',
@@ -20,8 +21,11 @@ packages=[
     'texlive-plain-generic',
     'ghostscript',
     'qpdf',
-    'sketch-doc',
     'poppler-utils',
     'luatex',
     'tex4ht',
+]
+
+packages_docs = [
+    'sketch-doc',
 ]
