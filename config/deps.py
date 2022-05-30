@@ -24,6 +24,7 @@ packages=[
     'poppler-utils',
     'luatex',
     'tex4ht',
+    'virtualenvwrapper',
 ]
 
 packages_docs = [
