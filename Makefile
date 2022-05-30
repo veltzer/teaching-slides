@@ -6,9 +6,9 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=1
+DO_FMT_ODP_PPT:=0
 # do you want to do 'pdf' from 'odp'?
-DO_FMT_ODP_PDF:=1
+DO_FMT_ODP_PDF:=0
 # do you want to do 'html' from 'mkd'?
 DO_FMT_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
