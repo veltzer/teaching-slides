@@ -4,28 +4,35 @@ You have functions/methods calling functions/methods calling functions/methods .
 How to you pass a paramter from the high fuctions/methods to the low functions/methods?
 
 Method 1 - arguments
+Just regular function/method arguments down the entire call chain.
 pros:
 - you can pass a differrent value on every invocation.
 cons:
-- ALL the functions down the chain have to be aware of the argument and pass it off
+- ALL the functions down the chain have to be aware of the argument and pass them off
 - this is run time intensive as all the arguments are really passed off.
 - this means that you will have to change the signatures of all functions down the chain
-EVERY TIME YOU NEED ANOTHER ARGUMENT.
+EVERY TIME YOU NEED TO MODIFY (remove, change, add) ARGUMENTS.
 - this means that your APIs are not very stable (they could be made more stable with named
-arguments but still...)
+arguments and default values but still...)
 - above a certain number of arguments (6? 7?) this is ridiculous.
+- the problems created by this solution could be alleviated by either named arguments and/or
+default values.
 
-Method 2 - object with parameters
+Method 2 - activation object
+The idea: create an object with all the paramenters and pass that down the call chain.
 pros:
 - still can pass a different value on every invocation.
 - only one (?) object passed so API is stable and not all functions down the chain
 	need to be modified on every parameters addition/removal.
 cons:
 - need yet another object.
-- the act of passing the object is still done at runtime (slows down).
+- you still need to pass the object down the chain which slows the function calls
+all down the chain.
 
-Method 3 - global variables
+Method 3 - object oriented
 
-Method 4 - configuation object
+Method 4 - global variables
 
-Method 5 - depedency injection
+Method 5 - configuation object
+
+Method 6 - depedency injection
