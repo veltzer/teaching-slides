@@ -72,8 +72,6 @@ endif # DO_FMT_TXT_PDF
 all: $(ALL)
 	@true
 
-VIRTUALENVWRAPPER=/usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
 # odps
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
@@ -87,6 +85,7 @@ $(ODP_PDF): out/%.pdf: %.odp
 	$(Q)mkdir -p $(dir $@)
 	$(Q)unoconv --timeout=5 --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
+
 # markdown
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
@@ -100,14 +99,13 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pandoc -f markdown $< -o $@
 	$(Q)chmod 444 $@
-#$(Q)markdown-pdf $< --out $@
-#$(Q)pandoc -t beamer $< -o $@
-#$(Q)pandoc $< -o $@
+
 # beamer
 $(TEX_PDF): out/%.pdf: %.tex
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)scripts/wrapper_pdflatex.py $< $@
+
 # slidy
 $(TXT_PDF): out/%.pdf: %.txt
 	$(info doing [$@])
