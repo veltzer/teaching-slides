@@ -6,9 +6,9 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=0
+DO_FMT_ODP_PPT:=1
 # do you want to do 'pdf' from 'odp'?
-DO_FMT_ODP_PDF:=0
+DO_FMT_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
 DO_FMT_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
@@ -77,13 +77,13 @@ $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)PYTHONPATH= /usr/bin/python3 /usr/bin/unoconv --timeout=5 --doctype=presentation --output=$@ --format=ppt $<
+	$(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=5 --doctype=presentation --output=$@ --format=ppt $<
 	$(Q)chmod 444 $@
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)unoconv --timeout=5 --doctype=presentation --output=$@ --format=pdf $<
+	$(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=5 --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
 
 # markdown
