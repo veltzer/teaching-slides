@@ -80,14 +80,14 @@ $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)UNIPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
+	$(Q)UNOPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
 	$(Q)chmod 444 $@
 # $(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)UNIPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
+	$(Q)UNOPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
 # $(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
 
