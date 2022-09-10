@@ -21,7 +21,7 @@ DO_FMT_TXT_PDF:=1
 ########
 # code #
 ########
-UNOPATH=/opt/libreoffice7.3
+UNOPATH=$(shell ls -d /opt/libreoffice*)
 UNOPYTHON=$(UNOPATH)/program/python
 UNOTIMEOUT=30
 ALL:=
@@ -133,6 +133,8 @@ all_slidy: $(TXT_PDF)
 .PHONY: debug
 debug:
 	$(info doing [$@])
+	$(info UNOPATH is $(UNOPATH))
+	$(info UNOPYTHON is $(UNOPYTHON))
 	$(info ALL is $(ALL))
 	$(info ODP_SRC is $(ODP_SRC))
 	$(info ODP_PPT is $(ODP_PPT))
