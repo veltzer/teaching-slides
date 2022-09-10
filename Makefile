@@ -21,9 +21,12 @@ DO_FMT_TXT_PDF:=1
 ########
 # code #
 ########
-UNOPATH=$(shell ls -d /opt/libreoffice*)
-UNOPYTHON=$(UNOPATH)/program/python
+# UNOPATH=UNOPATH="$(shell ls -d /opt/libreoffice*)"
+# UNOPYTHON=$(UNOPATH)/program/python
+UNOPATH=
+UNOPYTHON=/usr/bin/python3
 UNOTIMEOUT=30
+UNOWARNINGS=PYTHONWARNINGS="ignore::DeprecationWarning"
 ALL:=
 
 # silent stuff
@@ -80,16 +83,14 @@ $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)UNOPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
+	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
 	$(Q)chmod 444 $@
-# $(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)UNOPATH=$(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
+	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
-# $(Q)PYTHONWARNINGS="ignore::DeprecationWarning" unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
 
 # markdown
 $(MKD_HTM): out/%.html: %.mkd
