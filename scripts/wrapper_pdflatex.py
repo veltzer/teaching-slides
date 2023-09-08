@@ -125,6 +125,7 @@ output_base = os.path.splitext(filename_output)[0]
 
 args = [
     "pdflatex",
+    "-shell-escape",
     "-interaction=nonstopmode",
     "-halt-on-error",
     "-output-directory",

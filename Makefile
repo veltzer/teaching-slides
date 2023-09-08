@@ -108,7 +108,7 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)chmod 444 $@
 
 # beamer
-$(TEX_PDF): out/%.pdf: %.tex
+$(TEX_PDF): out/%.pdf: %.tex scripts/wrapper_pdflatex.py
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)scripts/wrapper_pdflatex.py $< $@
