@@ -22,8 +22,6 @@ packages=[
     "ghostscript",
     "qpdf",
     "poppler-utils",
-    "luatex",
-    "tex4ht",
     "virtualenvwrapper",
 ]
 
