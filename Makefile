@@ -21,6 +21,8 @@ DO_FMT_TXT_PDF:=1
 DO_MARP_PDF:=1
 # do you want to convert marp to PDF?
 DO_MARP_PPTX:=1
+# do spell check on all?
+DO_MD_ASPELL:=1
 
 ########
 # code #
@@ -93,6 +95,15 @@ ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
 endif # DO_FMT_TXT_PDF
 
+MD_SRC:=$(shell find marp -type f -and -name "*.md")
+MD_BAS:=$(basename $(MD_SRC))
+MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
+MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
+
+ifeq ($(DO_MD_ASPELL),1)
+ALL+=$(MD_ASPELL)
+endif # DO_MD_ASPELL
+
 #########
 # rules #
 #########
@@ -132,6 +143,10 @@ debug:
 	$(info MARP_BAS is $(MARP_BAS))
 	$(info MARP_PDF is $(MARP_PDF))
 	$(info MARP_PPTX is $(MARP_PPTX))
+	$(info MD_SRC is $(MD_SRC))
+	$(info MD_BAS is $(MD_BAS))
+	$(info MD_ASPELL is $(MD_ASPELL))
+	$(info MD_MDL is $(MD_MDL))
 
 .PHONY: clean
 clean:
@@ -195,4 +210,10 @@ $(MARP_PDF): out/%.pdf: %.md
 $(MARP_PPTX): out/%.pptx: %.md
 	$(info doing [$@])
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --quiet --pptx --output $@ $<
+	$(Q)pymakehelper touch_mkdir $@
+
+# aspell
+$(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
+	$(info doing [$@])
+	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
