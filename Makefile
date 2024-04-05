@@ -17,6 +17,10 @@ DO_FMT_MKD_PDF:=1
 DO_FMT_TEX_PDF:=1
 # do you want to do 'pdf' from 'txt'?
 DO_FMT_TXT_PDF:=1
+# do you want to convert marp to PDF?
+DO_MARP_PDF:=1
+# do you want to convert marp to PDF?
+DO_MARP_PPTX:=1
 
 ########
 # code #
@@ -49,6 +53,7 @@ ODP_SRC:=$(shell find odp -name "*.odp")
 ODP_BAS:=$(basename $(ODP_SRC))
 ODP_PPT:=$(addprefix out/,$(addsuffix .ppt,$(ODP_BAS)))
 ODP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(ODP_BAS)))
+
 ifeq ($(DO_FMT_ODP_PPT),1)
 ALL+=$(ODP_PPT)
 endif # DO_FMT_ODP_PPT
@@ -56,10 +61,25 @@ ifeq ($(DO_FMT_ODP_PDF),1)
 ALL+=$(ODP_PDF)
 endif # DO_FMT_ODP_PDF
 
+# marp
+MARP_SRC:=$(shell find marp -type f -and -name "*.md")
+MARP_BAS:=$(basename $(MARP_SRC))
+MARP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MARP_BAS)))
+MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
+
+ifeq ($(DO_MARP_PDF),1)
+ALL+=$(MARP_PDF)
+endif # DO_MARP_PDF
+
+ifeq ($(DO_MARP_PPTX),1)
+ALL+=$(MARP_PPTX)
+endif # DO_MARP_PPTX
+
 # beamer
 TEX_SRC:=$(shell find beamer -name "*.tex")
 TEX_BAS:=$(basename $(TEX_SRC))
 TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
+
 ifeq ($(DO_FMT_TEX_PDF),1)
 ALL+=$(TEX_PDF)
 endif # DO_FMT_TEX_PDF
@@ -68,6 +88,7 @@ endif # DO_FMT_TEX_PDF
 TXT_SRC:=$(shell find slidy -name "*.txt")
 TXT_BAS:=$(basename $(TXT_SRC))
 TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
+
 ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
 endif # DO_FMT_TXT_PDF
@@ -79,6 +100,52 @@ endif # DO_FMT_TXT_PDF
 all: $(ALL)
 	@true
 
+.PHONY: all_odp
+all_odp: $(ODP_PPT) $(ODP_PDF)
+
+.PHONY: all_mkd
+all_mkd: $(MKD_HTM)
+
+.PHONY: all_beamer
+all_beamer: $(TEX_PDF)
+
+.PHONY: all_slidy
+all_slidy: $(TXT_PDF)
+
+.PHONY: debug
+debug:
+	$(info doing [$@])
+	$(info UNOPATH is $(UNOPATH))
+	$(info UNOPYTHON is $(UNOPYTHON))
+	$(info ALL is $(ALL))
+	$(info ODP_SRC is $(ODP_SRC))
+	$(info ODP_PPT is $(ODP_PPT))
+	$(info ODP_PDF is $(ODP_PDF))
+	$(info MKD_SRC is $(MKD_SRC))
+	$(info MKD_HTM is $(MKD_HTM))
+	$(info MKD_PDF is $(MKD_PDF))
+	$(info TEX_SRC is $(TEX_SRC))
+	$(info TEX_HTM is $(TEX_HTM))
+	$(info TXT_SRC is $(TXT_SRC))
+	$(info TXT_PDF is $(TXT_PDF))
+	$(info MARP_SRC is $(MARP_SRC))
+	$(info MARP_BAS is $(MARP_BAS))
+	$(info MARP_PDF is $(MARP_PDF))
+	$(info MARP_PPTX is $(MARP_PPTX))
+
+.PHONY: clean
+clean:
+	$(info doing [$@])
+	$(Q)rm -f $(ALL)
+
+.PHONY: clean_hard
+clean_hard:
+	$(info doing [$@])
+	$(Q)git clean -qffxd
+
+############
+# patterns #
+############
 # odps
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
@@ -120,41 +187,12 @@ $(TXT_PDF): out/%.pdf: %.txt
 	$(Q)a2x -f pdf $<
 	$(Q)mv $(basename $<).pdf $@
 
-.PHONY: all_odp
-all_odp: $(ODP_PPT) $(ODP_PDF)
-
-.PHONY: all_mkd
-all_mkd: $(MKD_HTM)
-
-.PHONY: all_beamer
-all_beamer: $(TEX_PDF)
-
-.PHONY: all_slidy
-all_slidy: $(TXT_PDF)
-
-.PHONY: debug
-debug:
+# marp
+$(MARP_PDF): out/%.pdf: %.md
 	$(info doing [$@])
-	$(info UNOPATH is $(UNOPATH))
-	$(info UNOPYTHON is $(UNOPYTHON))
-	$(info ALL is $(ALL))
-	$(info ODP_SRC is $(ODP_SRC))
-	$(info ODP_PPT is $(ODP_PPT))
-	$(info ODP_PDF is $(ODP_PDF))
-	$(info MKD_SRC is $(MKD_SRC))
-	$(info MKD_HTM is $(MKD_HTM))
-	$(info MKD_PDF is $(MKD_PDF))
-	$(info TEX_SRC is $(TEX_SRC))
-	$(info TEX_HTM is $(TEX_HTM))
-	$(info TXT_SRC is $(TXT_SRC))
-	$(info TXT_PDF is $(TXT_PDF))
-
-.PHONY: clean
-clean:
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --pdf --output $@ $<
+	$(Q)pymakehelper touch_mkdir $@
+$(MARP_PPTX): out/%.pptx: %.md
 	$(info doing [$@])
-	$(Q)rm -f $(ALL)
-
-.PHONY: clean_hard
-clean_hard:
-	$(info doing [$@])
-	$(Q)git clean -qffxd
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --quiet --pptx --output $@ $<
+	$(Q)pymakehelper touch_mkdir $@
