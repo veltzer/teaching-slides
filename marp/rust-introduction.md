@@ -39,3 +39,4 @@ _paginate: false
 fn main() {
     println!("Hello, Rust!");
 }
+```
