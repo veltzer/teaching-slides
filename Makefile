@@ -210,7 +210,7 @@ $(TXT_PDF): out/%.pdf: %.txt
 # marp
 $(MARP_PDF): out/%.pdf: %.md
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --config .marp.config.js --pdf --output $@ $<
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --pdf --output $@ $<
 $(MARP_PPTX): out/%.pptx: %.md
 	$(info doing [$@])
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --quiet --pptx --output $@ $<
