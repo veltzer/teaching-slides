@@ -1,11 +1,8 @@
 ---
 marp: true
 ---
-
 # DNS Cache Poisoning
-
 ---
-
 ## What is DNS Cache Poisoning?
 
 DNS Cache Poisoning, also known as DNS Spoofing, is a type of cyber attack where an attacker exploits vulnerabilities in the Domain Name System (DNS) to redirect traffic from legitimate websites to malicious sites.

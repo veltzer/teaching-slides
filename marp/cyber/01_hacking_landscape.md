@@ -1,10 +1,8 @@
 ---
 marp: true
-theme: default
-paginate: true
-_paginate: false
 ---
-
+# Hacking Landscape
+---
 ## Who are the hackers?
 
 - Script kiddies

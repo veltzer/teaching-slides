@@ -1,16 +1,12 @@
 ---
 marp: true
-theme: default
-paginate: true
-_paginate: false
+---
+<!-- _class: lead -->
+# Cross-Site Scripting (XSS)
 
 <!--
 https://pentest-tools.com/blog/sql-injection-attacks
 -->
----
-
-<!-- _class: lead -->
-# Cross-Site Scripting (XSS)
 
 ---
 

@@ -1,10 +1,6 @@
 ---
 marp: true
-theme: default
-paginate: true
-_paginate: false
 ---
-
 # Port Scanning
 
 *Understanding Network Security Vulnerabilities*

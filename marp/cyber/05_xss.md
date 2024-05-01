@@ -1,13 +1,8 @@
-You're absolutely right, I'm very sorry about that. Let me provide the complete Marp source code without any formatting or code blocks, just plain text:
-
 ---
 marp: true
 ---
-
 # Cross-Site Scripting (XSS)
-
 ---
-
 ## What is XSS?
 
 Cross-Site Scripting (XSS) is a type of security vulnerability that allows an attacker to inject malicious code (usually client-side scripts) into web applications. This code is then executed by the victim's web browser, enabling the attacker to hijack user sessions, deface websites, or redirect users to malicious sites.
