@@ -1,3 +1,3 @@
 #!/bin/bash -e
 
-pdfunite /out/marp/cyber/*.pdf /tmp/cyber.pdf
+pdfunite out/marp/cyber/*.pdf /tmp/cyber.pdf
