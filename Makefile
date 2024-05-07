@@ -243,10 +243,10 @@ $(TXT_PDF): out/%.pdf: %.txt
 # marp
 $(MARP_PDF): out/%.pdf: %.md
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --pdf --output $@ $<
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --html --pdf --output $@ $<
 $(MARP_PPTX): out/%.pptx: %.md
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --quiet --pptx --output $@ $<
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --html --quiet --pptx --output $@ $<
 
 # aspell
 $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws

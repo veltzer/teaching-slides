@@ -27,7 +27,7 @@ Suppose a website has a search function that takes user input and displays the r
 http://example.com/search?query=<script>alert('XSS')</script>
 ```
 
-When a victim visits this URL, the malicious script <script>alert('XSS')</script> will be executed in their browser, displaying an alert dialog.
+When a victim visits this URL, the malicious script `<script>alert('XSS')</script>` will be executed in their browser, displaying an alert dialog.
 
 ---
 
