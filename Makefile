@@ -23,6 +23,8 @@ DO_MARP_PDF:=1
 DO_MARP_PPTX:=1
 # do spell check on all?
 DO_MD_ASPELL:=1
+# do you want to convert mermaid diagrams into png?
+DO_MERMAID_PNG:=1
 
 ########
 # code #
@@ -69,6 +71,8 @@ MARP_BAS:=$(basename $(MARP_SRC))
 MARP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MARP_BAS)))
 MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
 
+MARP_DEPENDS=marp.config.js
+
 ifeq ($(DO_MARP_PDF),1)
 ALL+=$(MARP_PDF)
 endif # DO_MARP_PDF
@@ -95,6 +99,7 @@ ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
 endif # DO_FMT_TXT_PDF
 
+# md
 MD_SRC:=$(shell find marp -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
@@ -103,6 +108,15 @@ MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
+
+# mermaid
+MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd")
+MERMAID_BAS:=$(basename $(MERMAID_SRC))
+MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
+
+ifeq ($(DO_MERMAID_PNG),1)
+ALL+=$(MERMAID_PNG)
+endif # DO_MERMAID_PNG
 
 #########
 # rules #
@@ -147,6 +161,9 @@ debug:
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
+	$(info MERMAID_SRC is $(MERMAID_SRC))
+	$(info MERMAID_BAS is $(MERMAID_BAS))
+	$(info MERMAID_PNG is $(MERMAID_PNG))
 
 .PHONY: clean
 clean:
@@ -220,3 +237,8 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
+# mermaid
+$(MERMAID_PNG): out/%.png: %.mmd
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
