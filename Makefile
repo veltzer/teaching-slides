@@ -25,6 +25,10 @@ DO_MARP_PPTX:=1
 DO_MD_ASPELL:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
+# do you want to convert mermaid diagrams into pdf?
+DO_MERMAID_PDF:=1
+# do you want to convert mermaid diagrams into svg?
+DO_MERMAID_SVG:=1
 
 ########
 # code #
@@ -113,10 +117,20 @@ endif # DO_MD_ASPELL
 MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd")
 MERMAID_BAS:=$(basename $(MERMAID_SRC))
 MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
+MERMAID_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MERMAID_BAS)))
+MERMAID_SVG:=$(addprefix out/,$(addsuffix .svg,$(MERMAID_BAS)))
 
 ifeq ($(DO_MERMAID_PNG),1)
 ALL+=$(MERMAID_PNG)
 endif # DO_MERMAID_PNG
+
+ifeq ($(DO_MERMAID_PDF),1)
+ALL+=$(MERMAID_PDF)
+endif # DO_MERMAID_PDF
+
+ifeq ($(DO_MERMAID_SVG),1)
+ALL+=$(MERMAID_SVG)
+endif # DO_MERMAID_SVG
 
 #########
 # rules #
@@ -164,6 +178,8 @@ debug:
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
 	$(info MERMAID_PNG is $(MERMAID_PNG))
+	$(info MERMAID_PDF is $(MERMAID_PDF))
+	$(info MERMAID_SVG is $(MERMAID_SVG))
 
 .PHONY: clean
 clean:
@@ -239,6 +255,14 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(Q)pymakehelper touch_mkdir $@
 # mermaid
 $(MERMAID_PNG): out/%.png: %.mmd
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
+$(MERMAID_PDF): out/%.pdf: %.mmd
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
+$(MERMAID_SVG): out/%.svg: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
