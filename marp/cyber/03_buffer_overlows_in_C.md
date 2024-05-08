@@ -21,7 +21,7 @@
 
 ## Diagram
 
-![](https://veltzer.github.io/assets/mermaid/cyber/buffer_overflow.png)
+![center](https://veltzer.github.io/assets/raw/buffer_overflow.png)
 
 ---
 
