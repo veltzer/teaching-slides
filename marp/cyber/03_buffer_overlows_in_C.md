@@ -17,6 +17,14 @@
   - Off-by-one errors
   - Inadequate bounds checking
 
+---
+
+## Diagram
+
+![](https://veltzer.github.io/assets/mermaid/cyber/buffer_overflow.png)
+
+---
+
 ## Consequences
 
 - Execution of malicious code
