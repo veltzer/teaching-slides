@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Account Takeover: Protecting Your Digital Identities
 
 ---

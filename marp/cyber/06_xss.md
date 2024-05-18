@@ -1,6 +1,3 @@
----
-marp: true
----
 # Cross-Site Scripting (XSS)
 ---
 ## What is XSS?

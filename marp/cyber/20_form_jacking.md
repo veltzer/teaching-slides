@@ -1,6 +1,3 @@
----
-marp: true
----
 # Formjacking
 ---
 ## What is Formjacking?

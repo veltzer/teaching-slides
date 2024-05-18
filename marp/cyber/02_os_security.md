@@ -1,6 +1,3 @@
----
-marp: true
----
 # Basic OS Security
 ---
 ## OS Security Fundamentals

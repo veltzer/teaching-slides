@@ -1,6 +1,3 @@
----
-marp: true
----
 # Hacking Landscape
 ---
 ## Who are the hackers?

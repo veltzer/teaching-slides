@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Man-in-the-Middle Attacks: Intercepting Communications
 
 ---

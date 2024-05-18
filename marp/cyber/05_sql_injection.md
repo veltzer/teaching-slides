@@ -1,6 +1,3 @@
----
-marp: true
----
 # SQL Injection
 
 <!--

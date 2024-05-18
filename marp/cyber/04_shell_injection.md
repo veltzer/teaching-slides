@@ -1,6 +1,3 @@
----
-marp: true
----
 # Shell Injection: Defending Against Command Injection Attacks
 ---
 

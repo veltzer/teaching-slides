@@ -1,6 +1,3 @@
----
-marp: true
----
 # Port Scanning
 
 *Understanding Network Security Vulnerabilities*

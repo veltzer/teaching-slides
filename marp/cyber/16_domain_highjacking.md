@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Domain Hijacking: Protecting Your Online Identity
 
 ---

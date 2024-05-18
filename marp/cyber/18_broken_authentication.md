@@ -1,6 +1,3 @@
----
-marp: true
----
 # Broken Authentication
 ---
 ## What is Broken Authentication?

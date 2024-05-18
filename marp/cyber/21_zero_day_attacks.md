@@ -1,7 +1,3 @@
----
-marp: true
----
-
 # Zero-Day Attacks: Mitigating the Unknown Threat
 
 ---

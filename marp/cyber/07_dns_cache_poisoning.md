@@ -1,6 +1,3 @@
----
-marp: true
----
 # DNS Cache Poisoning
 ---
 ## What is DNS Cache Poisoning?

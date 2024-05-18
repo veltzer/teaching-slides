@@ -1,5 +1,4 @@
 # SYN Flood Attacks
-
 ---
 
 ## What is a SYN Flood Attack?

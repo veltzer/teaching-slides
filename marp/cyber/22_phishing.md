@@ -1,6 +1,3 @@
----
-marp: true
----
 # Phishing: Don't Take the Bait
 ---
 

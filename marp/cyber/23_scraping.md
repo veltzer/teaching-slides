@@ -1,6 +1,3 @@
----
-marp: true
----
 # Web Scraping: Extracting Data from the Web
 ---
 
