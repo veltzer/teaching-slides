@@ -24,7 +24,7 @@ DNS amplification is a type of Distributed Denial of Service (DDoS) attack that 
 
 ## Diagram
 
-![](https://veltzer.github.io/assets/raw/dns_amplification.png)
+![](https://veltzer.github.io/assets/mermaid/cyber/dns_amplification.png)
 
 ---
 
