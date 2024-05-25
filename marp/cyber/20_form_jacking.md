@@ -2,7 +2,7 @@
 ---
 ## What is Formjacking?
 
-Formjacking, also known as Web Form Skimming or Digital Skimming, is a type of cyber attack where malicious code is injected into the payment forms of legitimate websites to steal sensitive information, such as credit card details and personal data.
+Formjacking, also known as Web Form Skimming or Digital Skimming, is a type of cyber attack where malicious code is injected into the important/payment forms of legitimate websites to steal sensitive information, such as credit card details and personal data.
 
 ---
 
