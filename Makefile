@@ -257,12 +257,12 @@ $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 $(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
 $(MERMAID_PDF): out/%.pdf: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
 $(MERMAID_SVG): out/%.svg: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -i $< -o $@
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
