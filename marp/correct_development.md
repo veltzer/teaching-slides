@@ -1,5 +1,12 @@
 ---
+marp: true
+theme: default
+paginate: true
+_paginate: false
+---
+
 # Correct Development
+
 ---
 ## Script everything
 * This means even things you do once every year
@@ -97,7 +104,7 @@
 ---
 ## Microservices
 * You are doing it wrong
-* The most important part of Micro-services is that they are **Independently Deployable**.
+* The most important part of Micro-services is that they are **Independently Deployable** and *Independently Testable**.
 ---
 ## Stop using MS-Windows!
 * Why Linux is better for developers and facilitates all of the above
