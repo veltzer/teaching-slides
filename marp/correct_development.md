@@ -14,23 +14,27 @@ _paginate: false
 * Use templating engines to tie systems together.
 * Use secrets storage solutions to not put secrets in your code.
 ---
+## Error Handling
+* The sad Java checked exceptions story
+* Never catch errors you don't understand
+* Your real enemy are permanent bugs
+---
 ## Writing code
 * Reward developers who remove code more than those who add code
 * Avoid "it's working so don't touch it" attitude
 * Allow developers to rebuild everything, fast!
 * Reward developers who manage to redesign your code - they are the true heroes.
-* Agile works, rewriting doesn't.
+* Above a certain size agile works, rewriting doesn't.
 * Keep it simple, Stupid! (your codes architecture that is).
-* Use simple text or MD drawings to document your systems, avoid GUI tools.
 * Have good taste.
 * Lint with tons of tools. Don't allow any unlinted code in.
 ---
 ## Documentation
-* Don't use fancy tools, use text tools
+* Use simple text or MD drawings to document your systems, avoid GUI tools.
 * Use git to maintain the docs.
-* Document the hard parts in your code, don't document the simple
-* Must be accurate
-* Must be fast to write
+* Document the hard parts in your code, don't document the simple ones
+* Must be synced to your code.
+* Must be fast and easy to write otherwise it won't happen
 ---
 ## Debugging
 * [do not use a debugger](https://lemire.me/blog/2016/06/21/i-do-not-use-a-debugger/)
@@ -39,7 +43,7 @@ _paginate: false
     * reading your code
     * infrastructure for visibility
     * configurable logging
-* Debugging cycles should be fast (see building your code fast above).
+* Debugging cycles should be fast (see building your code fast - see above).
 ---
 ## Do not use user interfaces
 * Not reproducible
@@ -83,6 +87,10 @@ _paginate: false
 * Micro-services
 * Different code repos
 * Everything in computing is about separation.
+---
+## Using source control correctly
+* Don't use feature branches
+* Correct tagging.
 ---
 ## Zero aural traditions
 * No special URLs, users, passwords, tools, that people need to gather: everything in one clear page.
