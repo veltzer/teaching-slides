@@ -140,3 +140,9 @@ _paginate: false
 ## How to use docker correctly
 * Always use one docker image! that's the whole point of docker!
 * Don't abuse the technology.
+
+[comment:] Not to use a lot of bookmarks
+[comment:] not to use a lot of tabs
+[comment:] not to use branches in git but work with trunk.
+[comment:] how to correctly use microservices.
+[comment:] how to simply use git.
