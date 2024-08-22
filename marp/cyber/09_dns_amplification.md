@@ -28,6 +28,16 @@ DNS amplification is a type of Distributed Denial of Service (DDoS) attack that 
 
 ---
 
+## Demo
+
+```bash
+$ dig . NS +trace
+```
+
+Look at the large response!
+
+---
+
 ## Impact of DNS Amplification
 
 - Overwhelms victim's network and server resources
