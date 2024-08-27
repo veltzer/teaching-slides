@@ -113,3 +113,15 @@
 - Continuously monitor and improve your organization's security posture.
 
 Defending against MITM attacks requires a multi-layered approach, including encryption, authentication, network monitoring, and user awareness.
+
+---
+
+## Interesting command lines that have to do with libssl
+
+```bash
+# install the documentation for the libssl library
+sudo apt install libssl-doc
+# dpkg --status libssl-dev
+# dpkg --status libssl3t64
+# openssl ciphers -v
+```
