@@ -191,8 +191,10 @@ clean:
 2. Per-CPU Variables
    - Utilize `per_cpu` variables for better performance in concurrent scenarios
 
-3. Reentrant Code
-   - Ensure your hook functions are reentrant (can be interrupted and resumed safely)
+3. Execution Context
+
+Understand the context in which your hook functions run (softirq context)
+Use appropriate synchronization primitives based on the execution context
 
 ---
 
