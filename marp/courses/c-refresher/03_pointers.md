@@ -1,11 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "C Pointers Refresher"
-footer: "C Programming - Pointers"
----
-
 # Pointers in C: A Refresher
 
 **C Programming Refresher Course**

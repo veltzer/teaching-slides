@@ -1,9 +1,4 @@
----
-marp: true
----
-
 # Container Security Issues
-
 ---
 
 ## Security Risks with Containers
