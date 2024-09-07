@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 7: Arithmetic and Logical Operations
+# Arithmetic and Logical Operations
 
 ---
 
@@ -190,10 +184,3 @@ Example:
     fadd dword ptr [var2]
     fstp dword ptr [result]
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on arithmetic and logical operations!
-

@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 4: GNU Assembler (GAS) Syntax
+# GNU Assembler (GAS) Syntax
 
 ---
 
@@ -189,10 +183,3 @@ Example:
 .equ BUFFER_SIZE, 1024
 .equ HALF_BUFFER, BUFFER_SIZE / 2
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on GNU Assembler (GAS) syntax!
-

@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 2: Setting Up the Development Environment
+# Setting Up the Development Environment
 
 ---
 
@@ -182,10 +176,3 @@ echo $?
    - `next`
    - `step`
    - `info registers`
-
----
-
-## Questions?
-
-Thank you for attending this session on setting up your development environment!
-

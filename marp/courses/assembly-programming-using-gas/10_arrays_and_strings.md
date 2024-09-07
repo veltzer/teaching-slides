@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 10: Working with Arrays and Strings
+# Working with Arrays and Strings
 
 ---
 
@@ -169,10 +163,3 @@ Declaring and accessing:
     # Accessing matrix[1][2]
     mov matrix+20, %eax  # 20 = (row * cols + col) * 4
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on working with arrays and strings in assembly!
-

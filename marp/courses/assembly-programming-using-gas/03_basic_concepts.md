@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 3: Basic Assembly Concepts
+# Basic Assembly Concepts
 
 ---
 
@@ -195,10 +189,3 @@ not_equal:
   - Local variables
   - Function parameters
   - Return addresses
-
----
-
-## Questions?
-
-Thank you for attending this session on basic assembly concepts!
-

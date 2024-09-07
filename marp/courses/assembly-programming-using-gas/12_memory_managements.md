@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 12: Memory Management
+# Memory Management
 
 ---
 
@@ -166,10 +160,3 @@ Example (full barrier):
 - Pages: Fixed-size blocks of memory (typically 4KB)
 - Page tables: Map virtual addresses to physical addresses
 - TLB (Translation Lookaside Buffer): Cache for page table entries
-
----
-
-## Questions?
-
-Thank you for attending this session on memory management in assembly!
-

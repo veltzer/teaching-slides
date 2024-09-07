@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 6: Data Types and Data Movement
+# Data Types and Data Movement
 
 ---
 
@@ -169,10 +163,3 @@ Example:
 ```gas
     movaps %xmm0, %xmm1   # Move 4 floats at once
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on data types and data movement!
-

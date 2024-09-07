@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 1: Introduction to Assembly Language
+# Introduction to Assembly Language
 
 ---
 

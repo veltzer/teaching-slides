@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 11: System Calls and File I/O
+# System Calls and File I/O
 
 ---
 
@@ -174,10 +168,3 @@ close_files:
     xor %ebx, %ebx
     int $0x80
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on system calls and file I/O in assembly!
-

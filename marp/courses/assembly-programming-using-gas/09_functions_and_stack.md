@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 9: Functions and the Stack
+# Functions and the Stack
 
 ---
 
@@ -186,10 +180,3 @@ Some functions (especially system calls) require the stack to be aligned:
 ```
 
 Important for SSE instructions and certain library functions
-
----
-
-## Questions?
-
-Thank you for attending this session on functions and the stack in assembly!
-

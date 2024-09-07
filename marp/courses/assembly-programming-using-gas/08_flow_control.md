@@ -1,10 +1,4 @@
----
-marp: true
-theme: default
-paginate: true
----
-
-# Chapter 8: Control Flow
+# Flow Control
 
 ---
 
@@ -182,10 +176,3 @@ Most assemblers automatically choose the appropriate jump type
     jmp short_label  # Force short jump
     jmp near label   # Force near jump
 ```
-
----
-
-## Questions?
-
-Thank you for attending this session on control flow in assembly!
-
