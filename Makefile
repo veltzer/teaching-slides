@@ -56,20 +56,40 @@ ODP_BAS:=$(basename $(ODP_SRC))
 ODP_PPT:=$(addprefix out/,$(addsuffix .ppt,$(ODP_BAS)))
 ODP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(ODP_BAS)))
 
-ifeq ($(DO_FMT_ODP_PPT),1)
-ALL+=$(ODP_PPT)
-endif # DO_FMT_ODP_PPT
-ifeq ($(DO_FMT_ODP_PDF),1)
-ALL+=$(ODP_PDF)
-endif # DO_FMT_ODP_PDF
+# md
+MD_SRC:=$(shell find marp -type f -and -name "*.md")
+MD_BAS:=$(basename $(MD_SRC))
+MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
+MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 
 # marp
 MARP_SRC:=$(shell find marp -type f -and -name "*.md")
 MARP_BAS:=$(basename $(MARP_SRC))
 MARP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MARP_BAS)))
 MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
-
 MARP_DEPENDS=marp.config.js
+
+# beamer
+TEX_SRC:=$(shell find beamer -name "*.tex")
+TEX_BAS:=$(basename $(TEX_SRC))
+TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
+
+# slidy
+TXT_SRC:=$(shell find slidy -name "*.txt")
+TXT_BAS:=$(basename $(TXT_SRC))
+TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
+
+ifeq ($(DO_MD_ASPELL),1)
+ALL+=$(MD_ASPELL)
+endif # DO_MD_ASPELL
+
+ifeq ($(DO_FMT_ODP_PPT),1)
+ALL+=$(ODP_PPT)
+endif # DO_FMT_ODP_PPT
+
+ifeq ($(DO_FMT_ODP_PDF),1)
+ALL+=$(ODP_PDF)
+endif # DO_FMT_ODP_PDF
 
 ifeq ($(DO_MARP_PDF),1)
 ALL+=$(MARP_PDF)
@@ -79,33 +99,13 @@ ifeq ($(DO_MARP_PPTX),1)
 ALL+=$(MARP_PPTX)
 endif # DO_MARP_PPTX
 
-# beamer
-TEX_SRC:=$(shell find beamer -name "*.tex")
-TEX_BAS:=$(basename $(TEX_SRC))
-TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
-
 ifeq ($(DO_FMT_TEX_PDF),1)
 ALL+=$(TEX_PDF)
 endif # DO_FMT_TEX_PDF
 
-# slidy
-TXT_SRC:=$(shell find slidy -name "*.txt")
-TXT_BAS:=$(basename $(TXT_SRC))
-TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
-
 ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
 endif # DO_FMT_TXT_PDF
-
-# md
-MD_SRC:=$(shell find marp -type f -and -name "*.md")
-MD_BAS:=$(basename $(MD_SRC))
-MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
-MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
-
-ifeq ($(DO_MD_ASPELL),1)
-ALL+=$(MD_ASPELL)
-endif # DO_MD_ASPELL
 
 #########
 # rules #
