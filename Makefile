@@ -69,16 +69,6 @@ MARP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MARP_BAS)))
 MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
 MARP_DEPENDS=marp.config.js
 
-# beamer
-TEX_SRC:=$(shell find beamer -name "*.tex")
-TEX_BAS:=$(basename $(TEX_SRC))
-TEX_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TEX_BAS)))
-
-# slidy
-TXT_SRC:=$(shell find slidy -name "*.txt")
-TXT_BAS:=$(basename $(TXT_SRC))
-TXT_PDF:=$(addprefix out/,$(addsuffix .pdf,$(TXT_BAS)))
-
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
@@ -119,12 +109,6 @@ all_odp: $(ODP_PPT) $(ODP_PDF)
 
 .PHONY: all_mkd
 all_mkd: $(MKD_HTM)
-
-.PHONY: all_beamer
-all_beamer: $(TEX_PDF)
-
-.PHONY: all_slidy
-all_slidy: $(TXT_PDF)
 
 .PHONY: debug
 debug:
@@ -196,19 +180,6 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pandoc -f markdown $< -o $@
 	$(Q)chmod 444 $@
-
-# beamer
-$(TEX_PDF): out/%.pdf: %.tex scripts/wrapper_pdflatex.py
-	$(info doing [$@])
-	$(Q)mkdir -p $(dir $@)
-	$(Q)scripts/wrapper_pdflatex.py $< $@
-
-# slidy
-$(TXT_PDF): out/%.pdf: %.txt
-	$(info doing [$@])
-	$(Q)mkdir -p $(dir $@)
-	$(Q)a2x -f pdf $<
-	$(Q)mv $(basename $<).pdf $@
 
 # marp
 $(MARP_PDF): out/%.pdf: %.md

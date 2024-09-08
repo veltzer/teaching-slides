@@ -3,12 +3,11 @@ from typing import List
 
 config_requires: List[str] = []
 dev_requires: List[str] = []
-install_requires: List[str] = [
-    "asciidoc",
-]
+install_requires: List[str] = []
 build_requires: List[str] = [
     "pymakehelper",
     "pydmt",
+    "asciidoc",
 ]
 test_requires: List[str] = []
 requires = config_requires + install_requires + build_requires + test_requires

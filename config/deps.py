@@ -6,7 +6,6 @@ packages=[
     "asciidoc-dblatex",
     "libreoffice",
     "pandoc",
-    "qpdf",
     "lacheck",
     "latex2html",
     "sketch",
