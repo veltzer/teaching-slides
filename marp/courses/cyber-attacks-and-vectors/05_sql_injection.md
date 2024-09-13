@@ -15,7 +15,7 @@ https://pentest-tools.com/blog/sql-injection-attacks
 
 ## How Does SQL Injection Work?
 
-![right:50% w=50](https://veltzer.github.io/assets/raw/cyber/sql-injection.png)
+![right:50% w=50](../../../raw/cyber/sql-injection.png)
 
 ---
 

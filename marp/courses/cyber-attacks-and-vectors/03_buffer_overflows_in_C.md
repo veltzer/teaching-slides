@@ -21,7 +21,7 @@
 
 ## Diagram
 
-![center](https://veltzer.github.io/assets/raw/cyber/buffer_overflow.png)
+![center](../../../raw/cyber/buffer_overflow.png)
 
 ---
 
