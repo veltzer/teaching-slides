@@ -23,6 +23,10 @@ DO_MARP_PDF:=1
 DO_MARP_PPTX:=1
 # do spell check on all?
 DO_MD_ASPELL:=1
+# do you want to convert marp to HTML?
+DO_MARP_HTML:=1
+# do you want to convert mermaid diagrams into png?
+DO_MERMAID_PNG:=1
 
 ########
 # code #
@@ -67,7 +71,12 @@ MARP_SRC:=$(shell find marp -type f -and -name "*.md")
 MARP_BAS:=$(basename $(MARP_SRC))
 MARP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(MARP_BAS)))
 MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
-MARP_DEPENDS=marp.config.js
+MARP_HTML:=$(addprefix out/,$(addsuffix .html,$(MARP_BAS)))
+
+# mermaid
+MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd")
+MERMAID_BAS:=$(basename $(MERMAID_SRC))
+MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
 
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
@@ -89,6 +98,10 @@ ifeq ($(DO_MARP_PPTX),1)
 ALL+=$(MARP_PPTX)
 endif # DO_MARP_PPTX
 
+ifeq ($(DO_MARP_HTML),1)
+ALL+=$(MARP_HTML)
+endif # DO_MARP_HTML
+
 ifeq ($(DO_FMT_TEX_PDF),1)
 ALL+=$(TEX_PDF)
 endif # DO_FMT_TEX_PDF
@@ -96,6 +109,14 @@ endif # DO_FMT_TEX_PDF
 ifeq ($(DO_FMT_TXT_PDF),1)
 ALL+=$(TXT_PDF)
 endif # DO_FMT_TXT_PDF
+
+ifeq ($(DO_MERMAID_PNG),1)
+ALL+=$(MERMAID_PNG)
+endif # DO_MERMAID_PNG
+
+# MARP_DEPENDS=marp.config.js
+MARP_DEPENDS=
+MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
 
 #########
 # rules #
@@ -130,10 +151,14 @@ debug:
 	$(info MARP_BAS is $(MARP_BAS))
 	$(info MARP_PDF is $(MARP_PDF))
 	$(info MARP_PPTX is $(MARP_PPTX))
+	$(info MARP_HTML is $(MARP_HTML))
 	$(info MD_SRC is $(MD_SRC))
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_MDL is $(MD_MDL))
+	$(info MERMAID_SRC is $(MERMAID_SRC))
+	$(info MERMAID_BAS is $(MERMAID_BAS))
+	$(info MERMAID_PNG is $(MERMAID_PNG))
 
 .PHONY: clean
 clean:
@@ -166,7 +191,6 @@ $(ODP_PDF): out/%.pdf: %.odp
 	$(Q)mkdir -p $(dir $@)
 	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
 	$(Q)chmod 444 $@
-
 # markdown
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
@@ -180,17 +204,26 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pandoc -f markdown $< -o $@
 	$(Q)chmod 444 $@
-
 # marp
-$(MARP_PDF): out/%.pdf: %.md
+$(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS)
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --html --pdf --output $@ $<
-$(MARP_PPTX): out/%.pptx: %.md
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --pdf --output $@ $<
+$(MARP_PPTX): out/%.pptx: %.md $(MARP_DEPENDS)
 	$(info doing [$@])
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp --html --quiet --pptx --output $@ $<
-
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --pptx --output $@ $<
+$(MARP_HTML): out/%.html: %.md $(MARP_DEPENDS)
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --html --output $@ $<
 # aspell
 $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
+# mermaid
+$(MERMAID_PNG): out/%.png: %.mmd
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@

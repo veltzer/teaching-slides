@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant Client
+    participant Recursive DNS Server
+    participant Attacker
+    participant Authoritative DNS Server
+
+    Client->>Recursive DNS Server: Request example.com
+    Recursive DNS Server->>Authoritative DNS Server: Request example.com
+    Authoritative DNS Server-->>Recursive DNS Server: Response (example.com -> 1.2.3.4)
+    Attacker->>Recursive DNS Server: Spoofed response (example.com -> 5.6.7.8)
+    Recursive DNS Server-->>Client: Response (example.com -> 5.6.7.8)
+    Client->>Attacker: Connects to 5.6.7.8 (malicious server)
