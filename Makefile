@@ -30,7 +30,7 @@ DO_MD_ASPELL:=1
 # UNOPATH=UNOPATH="$(shell ls -d /opt/libreoffice*)"
 # UNOPYTHON=$(UNOPATH)/program/python
 UNOPATH=
-UNOPYTHON=/usr/bin/python3
+UNOPYTHON=/usr/bin/python
 UNOTIMEOUT=30
 UNOWARNINGS=PYTHONWARNINGS="ignore::DeprecationWarning"
 
