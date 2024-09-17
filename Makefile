@@ -6,7 +6,7 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=1
+DO_FMT_ODP_PPT:=0
 # do you want to do 'pdf' from 'odp'?
 DO_FMT_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
@@ -49,10 +49,6 @@ Q:=@
 #.SILENT:
 endif # DO_MKDBG
 
-# dependency on the makefile itself
-ifeq ($(DO_ALLDEP),1)
-.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
-endif # DO_ALLDEP
 
 # odps
 ODP_SRC:=$(shell find odp -name "*.odp")
@@ -227,3 +223,10 @@ $(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
+
+##########
+# alldep #
+##########
+ifeq ($(DO_ALLDEP),1)
+.EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
+endif # DO_ALLDEP
