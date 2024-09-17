@@ -6,7 +6,9 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=0
+DO_FMT_ODP_PPT:=1
+# do you want to do 'pptx' from 'odp'?
+DO_FMT_ODP_PPTX:=1
 # do you want to do 'pdf' from 'odp'?
 DO_FMT_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
@@ -54,6 +56,7 @@ endif # DO_MKDBG
 ODP_SRC:=$(shell find odp -name "*.odp")
 ODP_BAS:=$(basename $(ODP_SRC))
 ODP_PPT:=$(addprefix out/,$(addsuffix .ppt,$(ODP_BAS)))
+ODP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(ODP_BAS)))
 ODP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(ODP_BAS)))
 
 # md
@@ -81,6 +84,10 @@ endif # DO_MD_ASPELL
 ifeq ($(DO_FMT_ODP_PPT),1)
 ALL+=$(ODP_PPT)
 endif # DO_FMT_ODP_PPT
+
+ifeq ($(DO_FMT_ODP_PPTX),1)
+ALL+=$(ODP_PPTX)
+endif # DO_FMT_ODP_PPTX
 
 ifeq ($(DO_FMT_ODP_PDF),1)
 ALL+=$(ODP_PDF)
@@ -122,7 +129,7 @@ all: $(ALL)
 	@true
 
 .PHONY: all_odp
-all_odp: $(ODP_PPT) $(ODP_PDF)
+all_odp: $(ODP_PPTX) $(ODP_PPT) $(ODP_PDF)
 
 .PHONY: all_mkd
 all_mkd: $(MKD_HTM)
@@ -135,6 +142,7 @@ debug:
 	$(info ALL is $(ALL))
 	$(info ODP_SRC is $(ODP_SRC))
 	$(info ODP_PPT is $(ODP_PPT))
+	$(info ODP_PPTX is $(ODP_PPTX))
 	$(info ODP_PDF is $(ODP_PDF))
 	$(info MKD_SRC is $(MKD_SRC))
 	$(info MKD_HTM is $(MKD_HTM))
@@ -175,18 +183,30 @@ spell_many:
 # patterns #
 ############
 # odps
+$(ODP_PPTX): out/%.pptx: %.odp
+	$(info doing [$@])
+	$(Q)rm -f $@
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
+	$(Q)chmod 444 $@
+# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=pptx $<
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=ppt $<
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
 	$(Q)chmod 444 $@
+# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=ppt $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --doctype=presentation --output=$@ --format=pdf $<
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
 	$(Q)chmod 444 $@
+# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=pdf $<
+.PHONY: unoshow
+unoshow:
+	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --show
 # markdown
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
