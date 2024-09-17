@@ -20,11 +20,11 @@ DO_FMT_TXT_PDF:=1
 # do you want to convert marp to PDF?
 DO_MARP_PDF:=1
 # do you want to convert marp to PDF?
-DO_MARP_PPTX:=1
+DO_MARP_PPTX:=0
+# do you want to convert marp to HTML?
+DO_MARP_HTML:=0
 # do spell check on all?
 DO_MD_ASPELL:=1
-# do you want to convert marp to HTML?
-DO_MARP_HTML:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
 

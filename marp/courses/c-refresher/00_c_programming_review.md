@@ -32,7 +32,7 @@ int main() {
 ```
 
 Compile and run:
-```
+```bash
 gcc hello.c -o hello
 ./hello
 ```
