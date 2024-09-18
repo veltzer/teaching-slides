@@ -29,6 +29,12 @@ DO_MARP_HTML:=0
 DO_MD_ASPELL:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
+# convert drawio images to png?
+ifdef GITHUB_WORKFLOW
+DO_DRAWIO_PNG:=0
+else
+DO_DRAWIO_PNG:=1
+endif # GITHUB_WORKFLOW
 
 ########
 # code #
@@ -77,6 +83,11 @@ MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd")
 MERMAID_BAS:=$(basename $(MERMAID_SRC))
 MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
 
+# drawio
+DRAWIO_SRC:=$(shell find drawings -type f -and -name "*.drawio")
+DRAWIO_BAS:=$(basename $(DRAWIO_SRC))
+DRAWIO_PNG:=$(addprefix out/,$(addsuffix .png,$(DRAWIO_BAS)))
+
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
@@ -117,6 +128,10 @@ ifeq ($(DO_MERMAID_PNG),1)
 ALL+=$(MERMAID_PNG)
 endif # DO_MERMAID_PNG
 
+ifeq ($(DO_DRAWIO_PNG),1)
+ALL+=$(DRAWIO_PNG)
+endif # DO_DRAWIO_PNG
+
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=
 MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
@@ -133,6 +148,9 @@ all_odp: $(ODP_PPTX) $(ODP_PPT) $(ODP_PDF)
 
 .PHONY: all_mkd
 all_mkd: $(MKD_HTM)
+
+.PHONY: all_drawio_png
+all_drawio_png: $(DRAWIO_PNG)
 
 .PHONY: debug
 debug:
@@ -163,6 +181,9 @@ debug:
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
 	$(info MERMAID_PNG is $(MERMAID_PNG))
+	$(info DRAWIO_SRC is $(DRAWIO_SRC))
+	$(info DRAWIO_BAS is $(DRAWIO_BAS))
+	$(info DRAWIO_PNG is $(DRAWIO_PNG))
 
 .PHONY: clean
 clean:
@@ -243,6 +264,11 @@ $(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
+# drawio
+$(DRAWIO_PNG): out/%.png: %.drawio
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
 
 ##########
 # alldep #
