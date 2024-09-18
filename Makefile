@@ -39,13 +39,6 @@ endif # GITHUB_WORKFLOW
 ########
 # code #
 ########
-# UNOPATH=UNOPATH="$(shell ls -d /opt/libreoffice*)"
-# UNOPYTHON=$(UNOPATH)/program/python
-UNOPATH=
-UNOPYTHON=/usr/bin/python
-UNOTIMEOUT=30
-UNOWARNINGS=PYTHONWARNINGS="ignore::DeprecationWarning"
-
 ALL:=
 
 # silent stuff
@@ -56,7 +49,6 @@ else # DO_MKDBG
 Q:=@
 #.SILENT:
 endif # DO_MKDBG
-
 
 # odps
 ODP_SRC:=$(shell find odp -name "*.odp")
@@ -155,8 +147,6 @@ all_drawio_png: $(DRAWIO_PNG)
 .PHONY: debug
 debug:
 	$(info doing [$@])
-	$(info UNOPATH is $(UNOPATH))
-	$(info UNOPYTHON is $(UNOPYTHON))
 	$(info ALL is $(ALL))
 	$(info ODP_SRC is $(ODP_SRC))
 	$(info ODP_PPT is $(ODP_PPT))
@@ -210,24 +200,18 @@ $(ODP_PPTX): out/%.pptx: %.odp
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
 	$(Q)chmod 444 $@
-# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=pptx $<
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
 	$(Q)chmod 444 $@
-# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=ppt $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
 	$(Q)chmod 444 $@
-# $(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --timeout=$(UNOTIMEOUT) --output=$@ --format=pdf $<
-.PHONY: unoshow
-unoshow:
-	$(Q)$(UNOWARNINGS) $(UNOPATH) $(UNOPYTHON) /usr/bin/unoconv --show
 # markdown
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
