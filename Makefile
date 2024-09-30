@@ -51,7 +51,7 @@ Q:=@
 endif # DO_MKDBG
 
 # odps
-ODP_SRC:=$(shell find odp -name "*.odp")
+ODP_SRC:=$(shell find odp -type f -and -name "*.odp")
 ODP_BAS:=$(basename $(ODP_SRC))
 ODP_PPT:=$(addprefix out/,$(addsuffix .ppt,$(ODP_BAS)))
 ODP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(ODP_BAS)))
