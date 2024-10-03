@@ -1899,3 +1899,497 @@ Cons:
 - When implementing consistent security policies across APIs
 - To handle differences between client protocols and internal services
 - For gradually migrating from a monolith to microservices
+# Anti-Corruption Layer Pattern
+
+- Acts as a facade between different subsystems or models
+- Translates requests between incompatible domain models
+- Protects the integrity of a new or refactored system from legacy influences
+- Facilitates integration between systems with different semantics
+- Enables gradual migration from legacy to new systems
+- Originated from Domain-Driven Design principles
+
+---
+
+# Anti-Corruption Layer Pattern Diagram
+
+```mermaid
+graph LR
+    A[New System] --> B[Anti-Corruption Layer]
+    B --> C[Legacy System]
+    
+    subgraph "ACL"
+    B --> D[Translator]
+    B --> E[Adapter]
+    B --> F[Facade]
+    end
+    
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style E fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Isolates and protects the new system from legacy complexities
+- Facilitates incremental migration and modernization
+- Improves maintainability by centralizing integration logic
+- Allows for independent evolution of connected systems
+- Reduces the risk of corrupting the new system's domain model
+
+Cons:
+- Adds an extra layer of complexity to the overall architecture
+- Can introduce performance overhead due to additional translations
+- Requires effort to design, implement, and maintain the translation layer
+- May become a bottleneck if not properly designed and scaled
+- Can be challenging to keep in sync with changes in connected systems
+
+---
+
+# When to Use
+
+- During large-scale system modernization or migration projects
+- When integrating systems with fundamentally different domain models
+- In scenarios where a new system must coexist with legacy systems
+- To protect a well-designed domain model from external influence
+- When gradually replacing a legacy system over time
+- In situations where direct translation between two models is complex or undesirable
+- To facilitate communication between bounded contexts in a microservices architecture
+---
+
+# Database per Service Pattern
+
+- Each microservice has its own private database
+- Ensures loose coupling between services
+- Allows each service to choose the most appropriate database type
+- Prevents services from accessing each other's data directly
+- Supports the autonomy and independence of microservices
+- Facilitates independent scaling and deployment of services
+
+---
+
+# Database per Service Pattern Diagram
+
+```mermaid
+graph TD
+    A[Service A] --> B[(Database A)]
+    C[Service B] --> D[(Database B)]
+    E[Service C] --> F[(Database C)]
+    
+    G[API Gateway] --> A
+    G --> C
+    G --> E
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Supports service autonomy and independent deployment
+- Allows for choosing the best database type for each service
+- Improves scalability and performance through focused optimization
+- Enhances data security by isolating data access
+- Facilitates easier schema changes and database upgrades
+
+Cons:
+- Increases complexity in data management and consistency
+- Can lead to data duplication across services
+- Makes it challenging to perform queries across multiple services
+- May increase infrastructure and operational costs
+- Requires careful handling of distributed transactions
+
+---
+
+# When to Use
+
+- In microservices architectures to ensure service independence
+- When different services have distinct data storage requirements
+- To support independent scaling of services and their data stores
+- In scenarios where data isolation and security are critical
+- When evolving from a monolithic to a microservices architecture
+- To enable independent development and deployment of services
+- In systems where services need to be loosely coupled
+- When different teams are responsible for different services and their data
+---
+
+# Geode Pattern
+
+- Deploys a subset of application's services into satellite locations
+- Brings services closer to end users to reduce latency
+- Replicates data to local caches in each geode
+- Improves performance and availability for distributed applications
+- Helps comply with data sovereignty and regulations
+- Allows for local processing while maintaining global consistency
+
+---
+
+# Geode Pattern Diagram
+
+```mermaid
+graph TD
+    A[Global Core Services] --> B[Geode 1]
+    A --> C[Geode 2]
+    A --> D[Geode N]
+    
+    B --> E[Local Cache 1]
+    B --> F[Local Services 1]
+    
+    C --> G[Local Cache 2]
+    C --> H[Local Services 2]
+    
+    D --> I[Local Cache N]
+    D --> J[Local Services N]
+    
+    K[Users Region 1] --> B
+    L[Users Region 2] --> C
+    M[Users Region N] --> D
+    
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style B fill:#bfb,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Reduces latency for geographically distributed users
+- Improves application responsiveness and user experience
+- Enables better scalability and load distribution
+- Facilitates compliance with data residency requirements
+- Enhances fault tolerance and availability
+
+Cons:
+- Increases overall system complexity
+- Can be challenging to maintain data consistency across geodes
+- Requires careful management of data replication and synchronization
+- May increase operational costs due to distributed infrastructure
+- Can complicate deployment and versioning processes
+
+---
+
+# When to Use
+
+- For globally distributed applications with users across different regions
+- When low latency is critical for application performance
+- To comply with data sovereignty and local regulatory requirements
+- In scenarios where you need to process data locally while maintaining global consistency
+- For applications that benefit from bringing compute closer to the data and users
+- When you need to improve availability and fault tolerance across geographic regions
+- In large-scale systems where global deployment is necessary but challenging
+---
+
+# Kappa Architecture
+
+- Simplifies Lambda Architecture by treating all data as streams
+- Uses a single processing engine for both real-time and batch processing
+- Relies on replayable logs or event sourcing for data storage
+- Eliminates the need for separate batch and speed layers
+- Aims to reduce complexity while maintaining scalability and fault-tolerance
+
+---
+
+# Kappa Architecture Diagram
+
+```mermaid
+graph TD
+    A[Data Source] --> B[Log Storage / Event Store]
+    B --> C[Stream Processing Engine]
+    C --> D[Serving Layer]
+    D --> E[Query Interface]
+    B -.-> C
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#bfb,stroke:#333,stroke-width:4px
+    style D fill:#bbf,stroke:#333,stroke-width:4px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Simplifies architecture by using a single processing path
+- Reduces code duplication and maintenance overhead
+- Allows easy reprocessing of data by replaying the event stream
+- Provides consistency between "batch" and "real-time" results
+- Typically easier to reason about and debug
+
+Cons:
+- May require more storage for maintaining a long-term log
+- Can be less efficient for certain types of batch processing
+- Relies heavily on the scalability of the stream processing system
+- May not be suitable for all types of data or processing requirements
+- Can be challenging to implement for systems not designed with event sourcing in mind
+
+---
+
+# When to Use
+
+- When your data can be naturally represented as a series of events or changes
+- In systems where the distinction between batch and real-time processing is blurred
+- When you need to frequently reprocess historical data
+- For applications built around event sourcing and CQRS principles
+- When you want to simplify your architecture and reduce maintenance overhead
+- In scenarios where consistency between historical and real-time views is crucial
+- When your use case allows for incremental processing of all data
+---
+
+# Lambda Architecture
+
+- Combines batch and stream processing methods
+- Designed to handle massive quantities of data
+- Provides comprehensive and accurate views of batch data
+- Offers real-time views of online data
+- Aims to balance latency, throughput, and fault-tolerance
+
+---
+
+# Lambda Architecture Diagram
+
+```mermaid
+graph TD
+    A[Data Source] --> B[Batch Layer]
+    A --> C[Speed Layer]
+    B --> D[Batch Views]
+    C --> E[Real-time Views]
+    D --> F[Serving Layer]
+    E --> F
+    F --> G[Query Interface]
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#bfb,stroke:#333,stroke-width:4px
+    style F fill:#bbf,stroke:#333,stroke-width:4px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Handles both real-time and batch processing
+- Provides fault tolerance and scalability
+- Allows reprocessing of data in batch layer
+- Supports complex analytics on large datasets
+- Enables correction of errors in real-time layer through batch processing
+
+Cons:
+- Increased complexity in system architecture
+- Requires maintaining two separate systems for batch and speed layers
+- May lead to increased operational and development costs
+- Potential for data inconsistency between batch and speed layers
+- Batch processing introduces latency in data availability
+
+---
+
+# When to Use
+
+- For systems requiring both batch and real-time data processing
+- When dealing with large-scale data that needs both historical and real-time analysis
+- In scenarios where data accuracy is crucial, but low-latency views are also needed
+- For applications that can tolerate some degree of eventual consistency
+- When building systems that need to handle both incremental and reprocessing computations
+- In use cases where you need to balance between accuracy (batch layer) and speed (real-time layer)
+---
+
+# Mesh Architecture
+
+- Decentralized networking approach for microservices
+- Provides service-to-service communication without a central gateway
+- Uses a lightweight proxy (sidecar) alongside each service instance
+- Manages routing, load balancing, and security at the service level
+- Enables fine-grained control over network behavior and observability
+
+---
+
+# Mesh Architecture Diagram
+
+```mermaid
+graph TD
+    A[Client] --> B[Service A]
+    A --> C[Service B]
+    A --> D[Service C]
+    B <--> C
+    B <--> D
+    C <--> D
+    
+    B --- B1[Sidecar]
+    C --- C1[Sidecar]
+    D --- D1[Sidecar]
+    
+    B1 <--> C1
+    B1 <--> D1
+    C1 <--> D1
+    
+    style B1 fill:#f9f,stroke:#333,stroke-width:2px
+    style C1 fill:#f9f,stroke:#333,stroke-width:2px
+    style D1 fill:#f9f,stroke:#333,stroke-width:2px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Improves reliability and fault tolerance
+- Enhances observability with detailed metrics and tracing
+- Provides consistent security policies across services
+- Enables advanced traffic management (e.g., canary releases, A/B testing)
+- Reduces the complexity of individual microservices
+
+Cons:
+- Increases overall system complexity
+- Can introduce latency due to proxy communication
+- Requires additional resources for sidecar proxies
+- May have a steep learning curve for teams
+- Can be overkill for smaller or simpler microservices architectures
+
+---
+
+# When to Use
+
+- In large-scale microservices architectures
+- When you need fine-grained control over service-to-service communication
+- For systems requiring advanced traffic management and load balancing
+- When implementing consistent security policies across services is crucial
+- In environments where detailed observability and monitoring are necessary
+- For gradual adoption of microservices in a hybrid architecture
+- When you want to offload common networking concerns from application code
+---
+
+# Sharded Architecture Pattern
+
+- Horizontally partitions data across multiple databases or 'shards'
+- Each shard contains a subset of the data, determined by a shard key
+- Improves scalability and performance for large-scale distributed databases
+- Allows for parallel processing of queries across multiple shards
+- Enables handling of larger datasets than can fit on a single server
+
+---
+
+# Sharded Architecture Diagram
+
+```mermaid
+graph TD
+    A[Application] --> B[Shard Router]
+    B --> C[Shard 1]
+    B --> D[Shard 2]
+    B --> E[Shard 3]
+    B --> F[Shard N]
+    
+    C --> G[Data Subset 1]
+    D --> H[Data Subset 2]
+    E --> I[Data Subset 3]
+    F --> J[Data Subset N]
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style E fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bfb,stroke:#333,stroke-width:2px
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Improves scalability for large datasets
+- Enhances query performance through parallelization
+- Allows for better resource utilization
+- Provides fault isolation (issues in one shard don't affect others)
+- Enables geographic distribution of data
+
+Cons:
+- Increases complexity in data management and application logic
+- Can lead to data distribution skew if shard key is poorly chosen
+- Makes it challenging to perform queries across multiple shards
+- Complicates data consistency and transaction management
+- Can make resharding (rebalancing data across shards) difficult
+
+---
+
+# When to Use
+
+- When dealing with very large datasets that exceed single server capacity
+- In systems requiring high throughput for read and write operations
+- When you need to scale out database resources horizontally
+- For applications with clear data partitioning strategies
+- In scenarios where data can be naturally segmented (e.g., by customer, region, or time)
+- When you need to improve performance by reducing contention and increasing cache efficiency
+---
+
+# Throttling Pattern
+
+- Controls the rate at which requests are processed or resources are consumed
+- Prevents system overload and ensures fair resource allocation
+- Can be applied at various levels: user, service, or system-wide
+- Implements strategies like fixed window, sliding window, or token bucket algorithms
+- Helps maintain system stability and responsiveness under high load
+
+---
+
+# Throttling Pattern Diagram
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant API Gateway
+    participant Rate Limiter
+    participant Backend Service
+
+    Client->>API Gateway: Request
+    API Gateway->>Rate Limiter: Check limit
+    alt Limit not exceeded
+        Rate Limiter->>API Gateway: Allow
+        API Gateway->>Backend Service: Forward request
+        Backend Service->>API Gateway: Response
+        API Gateway->>Client: Response
+    else Limit exceeded
+        Rate Limiter->>API Gateway: Reject
+        API Gateway->>Client: 429 Too Many Requests
+    end
+```
+
+---
+
+# Pros and Cons
+
+Pros:
+- Prevents system overload and improves stability
+- Ensures fair resource allocation among clients
+- Protects against certain types of DoS attacks
+- Can prioritize critical operations under high load
+- Helps in capacity planning and resource management
+
+Cons:
+- May degrade user experience if not carefully implemented
+- Can be complex to configure and fine-tune
+- Might introduce additional latency
+- Can be challenging to implement in distributed systems
+- May require additional infrastructure for rate limiting
+
+---
+
+# When to Use
+
+- In public-facing APIs to prevent abuse
+- When dealing with limited backend resources
+- In systems with varying levels of service (e.g., free vs. premium tiers)
+- To protect dependent services from cascading failures
+- When implementing fair use policies
+- In scenarios where certain clients might monopolize resources
+- To manage traffic spikes and ensure system stability
