@@ -16,11 +16,7 @@ paginate: true
 - Client-server protocol
 - Stateless, but not sessionless
 
-```mermaid
-graph LR
-    A[Client] -->|Request| B[Server]
-    B -->|Response| A
-```
+![client_server](client_server.mmd)
 
 ---
 
@@ -31,15 +27,7 @@ graph LR
 - Headers introduced
 - Methods: GET, HEAD, POST
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: TCP Connection
-    Client->>Server: HTTP Request
-    Server->>Client: HTTP Response
-    Client->>Server: TCP Close
-```
+![http1](http1.mmd)
 
 ---
 
@@ -51,17 +39,7 @@ sequenceDiagram
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: TCP Connection
-    Client->>Server: Request 1
-    Client->>Server: Request 2
-    Server->>Client: Response 1
-    Server->>Client: Response 2
-    Note over Client,Server: Connection remains open
-```
+![http11](http11.mmd)
 
 ---
 
@@ -82,30 +60,13 @@ sequenceDiagram
 - Server push
 - Stream prioritization
 
-```mermaid
-graph TD
-    A[Single TCP Connection] --> B[Stream 1]
-    A --> C[Stream 2]
-    A --> D[Stream 3]
-    B --> E[Request/Response 1]
-    C --> F[Request/Response 2]
-    D --> G[Request/Response 3]
-```
+![http2_overall](http2_overall.mmd)
 
 ---
 
 # HTTP/2 Server Push
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: Request HTML
-    Server->>Client: HTML
-    Server->>Client: CSS (pushed)
-    Server->>Client: JavaScript (pushed)
-    Note over Client,Server: Server anticipates client needs
-```
+![http2](http2.mmd)
 
 ---
 
@@ -117,26 +78,13 @@ sequenceDiagram
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
 
-```mermaid
-graph LR
-    A[HTTP/3] --> B[QUIC]
-    B --> C[UDP]
-    C --> D[IP]
-```
+![quic](quic.mmd)
 
 ---
 
 # HTTP/3 Connection Establishment
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: QUIC Handshake (includes TLS)
-    Note over Client,Server: 0-RTT if resuming
-    Client->>Server: HTTP Request
-    Server->>Client: HTTP Response
-```
+![quic_handshake](quic_handshake.mmd)
 
 ---
 

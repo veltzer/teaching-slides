@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant Client
+    participant Server
+    Client->>Server: Request HTML
+    Server->>Client: HTML
+    Server->>Client: CSS (pushed)
+    Server->>Client: JavaScript (pushed)
+    Note over Client,Server: Server anticipates client needs
