@@ -16,7 +16,7 @@ paginate: true
 - Client-server protocol
 - Stateless, but not sessionless
 
-![client_server](client_server.mmd)
+![Client Server](../../../out/mermaid/http/dclient_server.png)
 
 ---
 
@@ -27,7 +27,7 @@ paginate: true
 - Headers introduced
 - Methods: GET, HEAD, POST
 
-![http1](http1.mmd)
+![HTTP 1.0](../../../out/mermaid/http/http1.png)
 
 ---
 
@@ -39,7 +39,7 @@ paginate: true
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
 
-![http11](http11.mmd)
+![HTTP 1.1](../../../out/mermaid/http/http11.png)
 
 ---
 
@@ -60,13 +60,13 @@ paginate: true
 - Server push
 - Stream prioritization
 
-![http2_overall](http2_overall.mmd)
+![HTTP 2](../../../out/mermaid/http/http2_overall.png)
 
 ---
 
 # HTTP/2 Server Push
 
-![http2](http2.mmd)
+![HTTP 2](../../../out/mermaid/http/http2.png)
 
 ---
 
@@ -78,13 +78,13 @@ paginate: true
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
 
-![quic](quic.mmd)
+![QUIC](../../../out/mermaid/http/quic.png)
 
 ---
 
 # HTTP/3 Connection Establishment
 
-![quic_handshake](quic_handshake.mmd)
+![QUIC Handshake](../../../out/mermaid/http/quic_handshake.png)
 
 ---
 
@@ -108,12 +108,3 @@ paginate: true
 3. HTTP/2 and HTTP/3 focus on multiplexing and reducing latency
 4. Modern websites benefit from using the latest HTTP version
 5. Understanding HTTP versions helps in web optimization
-
----
-
-# Questions?
-
-Thank you for your attention!
-
-Feel free to ask any questions about HTTP and its evolution.
-
