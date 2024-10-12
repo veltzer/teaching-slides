@@ -30,14 +30,7 @@
 
 ## Interaction Diagram
 
-```mermaid
-graph TD
-    U[User] --> V[View]
-    V -->|User Input| C[Controller]
-    C -->|Update| M[Model]
-    M -->|Notify| V
-    C -->|Select| V
-```
+![MVC](../../../out/mermaid/design_patterns/mvc.png)
 
 ---
 
@@ -98,25 +91,7 @@ Cons:
 
 ## Structure Diagram
 
-```mermaid
-classDiagram
-    class Client
-    class Context
-    class AbstractExpression {
-        +interpret(context: Context): void
-    }
-    class TerminalExpression {
-        +interpret(context: Context): void
-    }
-    class NonterminalExpression {
-        +interpret(context: Context): void
-    }
-    Client --> Context
-    Client --> AbstractExpression
-    AbstractExpression <|-- TerminalExpression
-    AbstractExpression <|-- NonterminalExpression
-    NonterminalExpression o-- AbstractExpression
-```
+![Expression](../../../out/mermaid/design_patterns/expression.png)
 
 ---
 
@@ -156,14 +131,7 @@ Cons:
 
 # Repository Pattern Diagram
 
-```mermaid
-graph TD
-    A[Client] --> B[Repository Interface]
-    B --> C[Concrete Repository]
-    C --> D[Data Source]
-    style B fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#bbf,stroke:#333,stroke-width:2px
-```
+![Repository](../../../out/mermaid/design_patterns/repository.png)
 
 ---
 
@@ -203,28 +171,7 @@ Cons:
 
 # Command Pattern Diagram
 
-```mermaid
-classDiagram
-    class Client
-    class Invoker
-    class Command {
-        <<interface>>
-        +execute()
-    }
-    class ConcreteCommand {
-        -receiver: Receiver
-        +execute()
-    }
-    class Receiver {
-        +action()
-    }
-
-    Client --> Invoker
-    Client --> ConcreteCommand
-    Invoker o-- Command
-    ConcreteCommand --|> Command
-    ConcreteCommand --> Receiver
-```
+![Command](../../../out/mermaid/design_patterns/command.png)
 
 ---
 
@@ -267,34 +214,7 @@ Cons:
 
 # Decorator Pattern Diagram
 
-```mermaid
-classDiagram
-    class Component {
-        <<interface>>
-        +operation()
-    }
-    class ConcreteComponent {
-        +operation()
-    }
-    class Decorator {
-        -component: Component
-        +operation()
-    }
-    class ConcreteDecoratorA {
-        +operation()
-        +addedBehavior()
-    }
-    class ConcreteDecoratorB {
-        +operation()
-        -addedState
-    }
-
-    Component <|.. ConcreteComponent
-    Component <|.. Decorator
-    Decorator o-- Component
-    Decorator <|-- ConcreteDecoratorA
-    Decorator <|-- ConcreteDecoratorB
-```
+![Decorator](../../../out/mermaid/design_patterns/decorator.png)
 
 ---
 
@@ -337,28 +257,7 @@ Cons:
 
 # Facade Pattern Diagram
 
-```mermaid
-classDiagram
-    class Client
-    class Facade {
-        +operation1()
-        +operation2()
-    }
-    class SubsystemA {
-        +operationA()
-    }
-    class SubsystemB {
-        +operationB()
-    }
-    class SubsystemC {
-        +operationC()
-    }
-
-    Client --> Facade
-    Facade --> SubsystemA
-    Facade --> SubsystemB
-    Facade --> SubsystemC
-```
+![Facade](../../../out/mermaid/design_patterns/facade.png)
 
 ---
 
