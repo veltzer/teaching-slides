@@ -6,11 +6,11 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=1
+DO_FMT_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
-DO_FMT_ODP_PPTX:=1
+DO_FMT_ODP_PPTX:=0
 # do you want to do 'pdf' from 'odp'?
-DO_FMT_ODP_PDF:=1
+DO_FMT_ODP_PDF:=0
 # do you want to do 'html' from 'mkd'?
 DO_FMT_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
@@ -193,39 +193,31 @@ spell_many:
 ############
 # patterns #
 ############
-# odps
 $(ODP_PPTX): out/%.pptx: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
-	$(Q)chmod 444 $@
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
-	$(Q)chmod 444 $@
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
-	$(Q)chmod 444 $@
-# markdown
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)markdown $< > $@
-	$(Q)chmod 444 $@
 $(MKD_PDF): out/%.pdf: %.mkd
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pandoc -f markdown $< -o $@
-	$(Q)chmod 444 $@
-# marp
 $(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
@@ -238,17 +230,14 @@ $(MARP_HTML): out/%.html: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --html --output $@ $<
-# aspell
 $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
 	$(Q)pymakehelper touch_mkdir $@
-# mermaid
 $(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
-# drawio
 $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
