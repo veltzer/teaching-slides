@@ -226,15 +226,15 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)pandoc -f markdown $< -o $@
 	$(Q)chmod 444 $@
 # marp
-$(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS)
+$(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --pdf --output $@ $<
-$(MARP_PPTX): out/%.pptx: %.md $(MARP_DEPENDS)
+$(MARP_PPTX): out/%.pptx: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --pptx --output $@ $<
-$(MARP_HTML): out/%.html: %.md $(MARP_DEPENDS)
+$(MARP_HTML): out/%.html: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --html --output $@ $<

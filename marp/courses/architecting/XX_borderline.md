@@ -30,16 +30,7 @@
 
 ## Layer Diagram
 
-```mermaid
-graph TB
-   P(Presentation Layer)
-   A(Application Layer) 
-   B(Business Logic Layer)
-   D(Data Access Layer)
-   P --> A
-   A --> B
-   B --> D
-```
+![Layered](../../../out/mermaid/borderline_patterns/layered.png)
 
 ---
 
@@ -98,19 +89,8 @@ Cons:
 
 ## Interaction Diagram
 
-```mermaid
-graph LR
-    M((Master))
-    S1((Slave 1))
-    S2((Slave 2))
-    S3((Slave 3))
-    M --> S1
-    M --> S2
-    M --> S3
-    S1 --> M
-    S2 --> M
-    S3 --> M
-```
+![](.mmd)
+![Master/Slave](../../../out/mermaid/borderline_patterns/master-slave.png)
 
 ---
 
@@ -171,15 +151,7 @@ Cons:
 
 ## Pipeline Diagram
 
-```mermaid
-graph LR
-    D1["Data"] --> F1["Filter 1"] 
-    F1 --> P1["Pipe"] 
-    P1 --> F2["Filter 2"]
-    F2 --> P2["Pipe"]
-    P2 --> F3["Filter 3"]
-    F3 --> D2["Data"]
-```
+![pipe-filter](pipe-filter.mmd)
 
 ---
 
@@ -241,18 +213,7 @@ Cons:
 
 ## Interaction Diagram
 
-```mermaid
-graph TD
-    B[Blackboard] --> KS1[Knowledge Source 1]
-    B --> KS2[Knowledge Source 2]
-    B --> KS3[Knowledge Source 3]
-    KS1 -->|Update| B
-    KS2 -->|Update| B
-    KS3 -->|Update| B
-    C[Control] -->|Activate| KS1
-    C -->|Activate| KS2
-    C -->|Activate| KS3
-```
+![knowledge-source](knowledge-source.mmd)
 
 ---
 
@@ -294,16 +255,7 @@ Cons:
 
 # Ambassador Pattern Diagram
 
-```mermaid
-graph TD
-    A[Client Application] --> B[Ambassador]
-    B --> C[Remote Service 1]
-    B --> D[Remote Service 2]
-    B --> E[Remote Service 3]
-    
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#bfb,stroke:#333,stroke-width:4px
-```
+![ambassador](ambassador.mmd)
 
 ---
 
@@ -349,23 +301,7 @@ Cons:
 
 # Cache-Aside Pattern Diagram
 
-```mermaid
-sequenceDiagram
-    participant App as Application
-    participant Cache
-    participant DB as Data Store
-
-    App->>Cache: Check for data
-    alt Data in cache
-        Cache->>App: Return data
-    else Data not in cache
-        Cache->>App: Data not found
-        App->>DB: Retrieve data
-        DB->>App: Return data
-        App->>Cache: Store data
-        App->>App: Use data
-    end
-```
+![cache-aside](cache-aside.mmd)
 
 ---
 
@@ -410,21 +346,7 @@ Cons:
 
 # Sidecar Pattern Diagram
 
-```mermaid
-graph TD
-    subgraph "Host"
-        A[Main Application]
-        B[Sidecar]
-        A --- B
-    end
-    C[External Service 1]
-    D[External Service 2]
-    B --> C
-    B --> D
-    
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#bfb,stroke:#333,stroke-width:4px
-```
+![sidecar](sidecar.mmd)
 
 ---
 
@@ -470,24 +392,7 @@ Cons:
 
 # Valet Key Pattern Diagram
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant App as Application Server
-    participant Storage as Storage Service
-
-    Client->>App: Request access to resource
-    App->>Storage: Generate limited access token
-    Storage->>App: Return token
-    App->>Client: Provide token (valet key)
-    Client->>Storage: Access resource directly with token
-    Storage->>Storage: Validate token
-    alt Token valid
-        Storage->>Client: Grant limited access
-    else Token invalid
-        Storage->>Client: Deny access
-    end
-```
+![vallet_key](vallet_key.mmd)
 
 ---
 
