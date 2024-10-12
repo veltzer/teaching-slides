@@ -10,7 +10,7 @@ DO_FMT_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
 DO_FMT_ODP_PPTX:=0
 # do you want to do 'pdf' from 'odp'?
-DO_FMT_ODP_PDF:=0
+DO_FMT_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
 DO_FMT_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
