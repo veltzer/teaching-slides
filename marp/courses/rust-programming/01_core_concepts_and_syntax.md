@@ -476,18 +476,3 @@ fn main() {
     };
 }
 ```
-
----
-
-# Questions?
-## Next Chapter: Understanding Ownership
-
----
-
-# Practice Exercises
-
-1. Create a temperature converter (F to C)
-2. Implement a simple calculator
-3. Write a function to find the nth Fibonacci number
-4. Create a grade calculator using match expressions
-

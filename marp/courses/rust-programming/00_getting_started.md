@@ -435,30 +435,3 @@ mindmap
 
 </div>
 </div>
-
----
-
-# Practice Exercise
-
-Create a simple calculator that:
-1. Accepts two numbers
-2. Asks for operation (+, -, *, /)
-3. Prints the result
-4. Handles basic errors
-
----
-
-# Questions?
-
-```mermaid
-graph LR
-    A[Questions?] --> B[Discord]
-    A --> C[Reddit]
-    A --> D[GitHub]
-    A --> E[Forum]
-    
-    B --> F[rust-lang]
-    C --> G[r/rust]
-    D --> H[rust-lang/rust]
-    E --> I[users.rust-lang.org]
-```

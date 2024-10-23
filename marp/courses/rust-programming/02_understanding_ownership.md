@@ -1,15 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Understanding Ownership
 ## Chapter 3: Rust's Unique Memory Management
 
@@ -445,9 +433,3 @@ Create a function that:
 - Slices
 - Memory management
 - Best practices
-
----
-
-# Questions?
-## Next Chapter: Structs and Enums
-
