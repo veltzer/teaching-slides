@@ -209,10 +209,10 @@ cargo doc
 
 ```
 my_project/
-+-- Cargo.toml          # Project manifest
-+-- Cargo.lock          # Lock file
-+-- src/
-    +-- main.rs         # Source code
+├── Cargo.toml          # Project manifest
+├── Cargo.lock          # Lock file
+└── src/
+    └── main.rs         # Source code
 ```
 
 ---

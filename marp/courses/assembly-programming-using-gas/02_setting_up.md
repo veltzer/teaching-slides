@@ -89,10 +89,10 @@ set autoindent
 Project structure:
 ```
 my_assembly_project/
-+-- src/
-|   +-- main.s
-+-- Makefile
-+-- README.md
+├── src/
+│   └── main.s
+├── Makefile
+└── README.md
 ```
 
 ---
