@@ -57,7 +57,7 @@ Example:
 ```gas
 .data
     ascii_string: .ascii "Hello"
-    utf8_string:  .ascii "こんにちは"
+    utf8_string:  .ascii "unicode-string"
 ```
 
 ---

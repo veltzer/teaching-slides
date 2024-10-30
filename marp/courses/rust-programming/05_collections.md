@@ -178,9 +178,9 @@ graph TD
 # String Slicing
 
 ```rust
-let hello = "Здравствуйте";
+let hello = "hello";
 
-let s = &hello[0..4]; // Gets "Зд"
+let s = &hello[0..4]; // Gets "he"
 
 // Be careful with slicing - must be valid UTF-8 boundaries
 ```
@@ -190,7 +190,7 @@ let s = &hello[0..4]; // Gets "Зд"
 # String Iteration
 
 ```rust
-let s = String::from("नमस्ते");
+let s = String::from("hello");
 
 // Chars
 for c in s.chars() {

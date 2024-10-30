@@ -27,6 +27,8 @@ DO_MARP_PPTX:=0
 DO_MARP_HTML:=0
 # do spell check on all?
 DO_MD_ASPELL:=1
+# do you want to check that the md files are pure ASCII?
+DO_MD_ASCII:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
 # convert drawio images to png?
@@ -62,6 +64,7 @@ MD_SRC:=$(shell find marp -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
+MD_ASCII:=$(addprefix out/,$(addsuffix .ascii,$(MD_BAS)))
 
 # marp
 MARP_SRC:=$(shell find marp -type f -and -name "*.md")
@@ -83,6 +86,10 @@ DRAWIO_PNG:=$(addprefix out/,$(addsuffix .png,$(DRAWIO_BAS)))
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
 endif # DO_MD_ASPELL
+
+ifeq ($(DO_MD_ASCII),1)
+ALL+=$(MD_ASCII)
+endif # DO_MD_ASCII
 
 ifeq ($(DO_FMT_ODP_PPT),1)
 ALL+=$(ODP_PPT)
@@ -167,6 +174,7 @@ debug:
 	$(info MD_SRC is $(MD_SRC))
 	$(info MD_BAS is $(MD_BAS))
 	$(info MD_ASPELL is $(MD_ASPELL))
+	$(info MD_ASCII is $(MD_ASCII))
 	$(info MD_MDL is $(MD_MDL))
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
@@ -233,6 +241,10 @@ $(MARP_HTML): out/%.html: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
 $(MD_ASPELL): out/%.aspell: %.md .aspell.conf .aspell.en.prepl .aspell.en.pws
 	$(info doing [$@])
 	$(Q)aspell --conf-dir=. --conf=.aspell.conf list < $< | pymakehelper error_on_print sort -u
+	$(Q)pymakehelper touch_mkdir $@
+$(MD_ASCII): out/%.ascii: %.md
+	$(info doing [$@])
+	$(Q)pymakehelper error_on_print grep -P -n "[^\x00-\x7F]" $<
 	$(Q)pymakehelper touch_mkdir $@
 $(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
