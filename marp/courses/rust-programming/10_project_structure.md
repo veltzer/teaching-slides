@@ -22,16 +22,16 @@ graph TD
 
 ```
 my_project/
-├── Cargo.toml
-├── Cargo.lock
-├── src/
-│   ├── main.rs
-│   ├── lib.rs
-│   └── bin/
-├── tests/
-├── examples/
-├── benches/
-└── docs/
++-- Cargo.toml
++-- Cargo.lock
++-- src/
+|   +-- main.rs
+|   +-- lib.rs
+|   +-- bin/
++-- tests/
++-- examples/
++-- benches/
++-- docs/
 ```
 
 ---

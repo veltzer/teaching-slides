@@ -65,9 +65,9 @@ mindmap
 ## Signed
 - i8: -128 to 127
 - i16: -32,768 to 32,767
-- i32: -2³¹ to 2³¹-1
-- i64: -2⁶³ to 2⁶³-1
-- i128: -2¹²⁷ to 2¹²⁷-1
+- i32: -2^32 to 2^31-1
+- i64: -2^63 to 2^63-1
+- i128: -2^127 to 2i^127-1
 
 </div>
 <div>
@@ -75,9 +75,9 @@ mindmap
 ## Unsigned
 - u8: 0 to 255
 - u16: 0 to 65,535
-- u32: 0 to 2³²-1
-- u64: 0 to 2⁶⁴-1
-- u128: 0 to 2¹²⁸-1
+- u32: 0 to 2^32-1
+- u64: 0 to 2^64-1
+- u128: 0 to 2^128-1
 
 </div>
 </div>
@@ -145,14 +145,14 @@ fn main() {
 ```rust
 fn main() {
     let c = 'z';
-    let z: char = 'ℤ'; // explicit type annotation
-    let heart_eyed_cat = '😻';
+    let z: char = 'z'; // explicit type annotation
+    let heart_eyed_cat = 'cat';
     
     // Characters are 4 bytes
     println!("Size of char: {} bytes", std::mem::size_of::<char>());
     
     // Unicode support
-    let kanji = '漢';
+    let kanji = 'fu';
 }
 ```
 
