@@ -5,17 +5,12 @@
 Cross-Site Scripting (XSS) is a type of security vulnerability that allows an attacker to inject malicious code (usually client-side scripts) into web applications. This code is then executed by the victim's web browser, enabling the attacker to hijack user sessions, deface websites, or redirect users to malicious sites.
 
 ---
-
 ## Types of XSS
 
-1. **Reflected XSS**: The malicious script is reflected off the web application to the victim's browser. This occurs when user input is immediately returned by the web application without proper validation.
-
-2. **Stored XSS**: The malicious script is stored on the target server (e.g., in a database) and is served to the victim's browser when the vulnerable page is requested.
-
-3. **DOM-based XSS**: The malicious script is executed as a result of modifying the Document Object Model (DOM) environment in the victim's browser.
-
+1. **Reflected XSS**: The malicious script is reflected off the web application to the victim's browser. This occurs when user input is immediately returned by the web application without proper validation
+1. **Stored XSS**: The malicious script is stored on the target server (e.g., in a database) and is served to the victim's browser when the vulnerable page is requested
+1. **DOM-based XSS**: The malicious script is executed as a result of modifying the Document Object Model (DOM) environment in the victim's browser
 ---
-
 ## Reflected XSS Example
 
 Suppose a website has a search function that takes user input and displays the results on the same page without proper validation.
@@ -98,9 +93,9 @@ $userInput = htmlspecialchars($untrustedData, ENT_QUOTES, 'UTF-8');
 - Allows developers to define a whitelist of trusted sources for resources
 - Example CSP header:
 
-Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted.example.com
+Content-Security-Policy: default-src 'self'; script-src 'self' [https://trusted.example.com](https://trusted.example.com)
 
-This policy allows scripts only from the same origin and https://trusted.example.com.
+This policy allows scripts only from the same origin and [https://trusted.example.com](https://trusted.example.com)
 
 ---
 

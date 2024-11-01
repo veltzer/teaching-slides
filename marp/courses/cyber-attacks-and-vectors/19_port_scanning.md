@@ -1,14 +1,13 @@
 # Port Scanning
 
-*Understanding Network Security Vulnerabilities*
+## Understanding Network Security Vulnerabilities
 
 <!-- Speaker notes:
 In this presentation, we will explore the concept of port scanning, a technique used to identify open ports on a computer or network device. By understanding port scanning, we can learn about potential security vulnerabilities and take steps to mitigate them.
 -->
 
 ---
-
-# What is Port Scanning?
+## What is Port Scanning?
 
 * Port scanning is the process of identifying open ports on a computer or network device.
 * Ports are virtual numbered connections that allow communication between devices on a network.
@@ -19,8 +18,7 @@ Think of ports like doorways on a castle wall. Each port has a specific number a
 -->
 
 ---
-
-# Why Port Scanning is Done
+## Why Port Scanning is Done
 
 * Port scanning can be used for both malicious and non-malicious purposes.
 * **Malicious actors** can use port scanning to identify vulnerabilities in a network that they can exploit.
@@ -29,10 +27,8 @@ Think of ports like doorways on a castle wall. Each port has a specific number a
 <!-- Speaker notes:
 Port scanning is a double-edged sword. Malicious actors can use it to find weaknesses in a network, while network administrators can use it to identify and address potential security risks.
 -->
-
 ---
-
-# Types of Port Scanning
+## Types of Port Scanning
 
 * There are different types of port scanning techniques, each with its own advantages and disadvantages.
 * **TCP SYN Scan:** A common technique that sends a SYN packet to a port and waits for a response.
@@ -42,11 +38,8 @@ Port scanning is a double-edged sword. Malicious actors can use it to find weakn
 <!-- Speaker notes:
 There are various port scanning methods, each suited for different purposes. TCP SYN scans are efficient, UDP scans can be used for firewalled networks, and ping scans simply check for active devices.
 -->
-
 ---
-
-# Protecting Against Port Scanning
-
+## Protecting Against Port Scanning
 * There are several ways to protect against port scanning and potential attacks.
 * **Use a firewall:** A firewall can filter incoming and outgoing traffic, blocking access to unauthorized ports.
 * **Keep software up to date:** Outdated software can contain vulnerabilities that attackers can exploit.

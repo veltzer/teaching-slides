@@ -1,8 +1,8 @@
 # Broken Authentication
 ---
-## What is Broken Authentication?
+## What is Broken Authentication
 
-Broken Authentication is a web application security risk that occurs when authentication mechanisms are improperly implemented, allowing attackers to compromise user accounts or gain unauthorized access to sensitive data.
+- Broken Authentication is a web application security risk that occurs when authentication mechanisms are improperly implemented, allowing attackers to compromise user accounts or gain unauthorized access to sensitive data
 ---
 
 ## Common Broken Authentication Vulnerabilities
