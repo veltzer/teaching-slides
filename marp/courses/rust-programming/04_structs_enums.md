@@ -460,9 +460,9 @@ match value {
 
 Create a basic state machine using enums:
 1. Define states
-2. Implement transitions
-3. Add validation
-4. Handle errors
+1. Implement transitions
+1. Add validation
+1. Handle errors
 
 ---
 

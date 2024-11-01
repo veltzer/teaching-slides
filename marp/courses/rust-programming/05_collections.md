@@ -437,9 +437,9 @@ fn main() {
 
 Create a simple text analyzer that:
 1. Counts word frequency
-2. Tracks unique words
-3. Finds longest/shortest words
-4. Reports statistics
+1. Tracks unique words
+1. Finds longest/shortest words
+1. Reports statistics
 
 ---
 

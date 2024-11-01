@@ -405,19 +405,19 @@ mindmap
 
 Create an async application that:
 1. Handles HTTP requests
-2. Processes data streams
-3. Uses proper error handling
-4. Implements timeouts
-5. Manages resources efficiently
+1. Processes data streams
+1. Uses proper error handling
+1. Implements timeouts
+1. Manages resources efficiently
 
 ---
 
 # Common Pitfalls
 1. Blocking in async
-2. Task starvation
-3. Resource leaks
-4. Poor error handling
-5. Callback hell
+1. Task starvation
+1. Resource leaks
+1. Poor error handling
+1. Callback hell
 
 ---
 

@@ -398,9 +398,9 @@ fn generic<T: ?Sized>(t: &T) {
 
 Create a generic data structure that:
 1. Stores any type
-2. Implements multiple traits
-3. Uses associated types
-4. Provides custom operators
+1. Implements multiple traits
+1. Uses associated types
+1. Provides custom operators
 
 ---
 

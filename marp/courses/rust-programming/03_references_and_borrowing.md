@@ -3,7 +3,7 @@
 
 ---
 
-# What are References?
+## What are References
 
 ```mermaid
 graph TD
@@ -17,7 +17,7 @@ graph TD
 
 ---
 
-# Basic References
+## Basic References
 
 ```rust
 fn main() {
@@ -33,7 +33,7 @@ fn calculate_length(s: &String) -> usize {
 
 ---
 
-# Memory Layout: References
+## Memory Layout: References
 
 ```mermaid
 graph LR
@@ -44,17 +44,17 @@ graph LR
 
 ---
 
-# Reference Rules
+## Reference Rules
 
 1. At any given time, you can have either:
-   - One mutable reference
-   - Any number of immutable references
-2. References must always be valid
-3. References can't outlive their referent
+    - One mutable reference
+    - Any number of immutable references
+1. References must always be valid
+1. References can't outlive their referent
 
 ---
 
-# Mutable References
+## Mutable References
 
 ```rust
 fn main() {
@@ -70,7 +70,7 @@ fn change(s: &mut String) {
 
 ---
 
-# Reference Scope
+## Reference Scope
 
 ```rust
 let mut s = String::from("hello");
@@ -87,7 +87,7 @@ println!("{}", r3);
 
 ---
 
-# Reference Restrictions
+## Reference Restrictions
 
 ```rust
 let mut s = String::from("hello");
@@ -100,7 +100,7 @@ println!("{}", r1);
 
 ---
 
-# Data Race Prevention
+## Data Race Prevention
 
 ```rust
 let mut s = String::from("hello");
@@ -114,7 +114,7 @@ println!("{}, {}, and {}", r1, r2, r3);
 
 ---
 
-# Dangling References
+## Dangling References
 
 ```rust
 fn dangle() -> &String {            // WRONG
@@ -129,7 +129,7 @@ fn no_dangle() -> String {         // CORRECT
 
 ---
 
-# Reference Lifetime
+## Reference Lifetime
 
 ```rust
 fn main() {
@@ -141,7 +141,7 @@ fn main() {
 
 ---
 
-# Mutable and Immutable Together
+## Mutable and Immutable Together
 
 ```rust
 let mut s = String::from("hello");
@@ -157,7 +157,7 @@ println!("{}", r3);
 
 ---
 
-# Borrowing Rules Visualization
+## Borrowing Rules Visualization
 
 ```mermaid
 graph TB
@@ -169,7 +169,7 @@ graph TB
 
 ---
 
-# Reference in Structs
+## Reference in Structs
 
 ```rust
 struct Person {
@@ -185,7 +185,7 @@ struct ValidPerson<'a> {
 
 ---
 
-# Multiple References
+## Multiple References
 
 ```rust
 fn main() {
@@ -199,7 +199,7 @@ fn main() {
 
 ---
 
-# Mutable Reference Mutation
+## Mutable Reference Mutation
 
 ```rust
 fn main() {
@@ -212,7 +212,7 @@ fn main() {
 
 ---
 
-# Borrowing in Functions
+## Borrowing in Functions
 
 ```rust
 fn print_string(s: &String) {
@@ -232,7 +232,7 @@ fn main() {
 
 ---
 
-# Borrowing and Ownership
+## Borrowing and Ownership
 
 ```rust
 fn main() {
@@ -245,7 +245,7 @@ fn main() {
 
 ---
 
-# References vs. Smart Pointers
+## References vs. Smart Pointers
 
 ```rust
 use std::rc::Rc;
@@ -257,7 +257,7 @@ let s2 = Rc::clone(&s); // Smart Pointer clone
 
 ---
 
-# Auto-Dereferencing
+## Auto-Dereferencing
 
 ```rust
 fn main() {
@@ -270,7 +270,7 @@ fn main() {
 
 ---
 
-# References in Collections
+## References in Collections
 
 ```rust
 fn main() {
@@ -283,7 +283,7 @@ fn main() {
 
 ---
 
-# Common Reference Patterns
+## Common Reference Patterns
 
 ```rust
 // Passing large structs
@@ -298,7 +298,7 @@ fn read_data(data1: &Data, data2: &Data) { }
 
 ---
 
-# Error Patterns to Avoid
+## Error Patterns to Avoid
 
 ```rust
 // Don't return references to local variables
@@ -315,7 +315,7 @@ fn unnecessary(s: &mut String) {  // Use &String if not modifying
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -336,27 +336,27 @@ mindmap
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create functions that:
 1. Use immutable references
-2. Use mutable references
-3. Handle multiple references
-4. Demonstrate scope rules
-5. Show reference patterns
+1. Use mutable references
+1. Handle multiple references
+1. Demonstrate scope rules
+1. Show reference patterns
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 1. Fighting the borrow checker
-2. Unnecessary mutable references
-3. Reference lifetime issues
-4. Complex borrowing patterns
-5. Returning dangling references
+1. Unnecessary mutable references
+1. Reference lifetime issues
+1. Complex borrowing patterns
+1. Returning dangling references
 
 ---
 
-# Summary
+## Summary
 - Reference basics
 - Borrowing rules
 - Mutable references

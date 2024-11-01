@@ -2,8 +2,7 @@
 ## Chapter 8: Parallel Programming in Rust
 
 ---
-
-# Concurrency Models
+## Concurrency Models
 
 ```mermaid
 mindmap
@@ -22,8 +21,7 @@ mindmap
 ```
 
 ---
-
-# Creating Threads
+## Creating Threads
 
 ```rust
 use std::thread;
@@ -42,8 +40,7 @@ fn main() {
 ```
 
 ---
-
-# Thread Handles
+## Thread Handles
 
 ```rust
 let handle = thread::spawn(|| {
@@ -60,8 +57,7 @@ match handle.join() {
 ```
 
 ---
-
-# Moving Values into Threads
+## Moving Values into Threads
 
 ```rust
 let v = vec![1, 2, 3];
@@ -75,8 +71,7 @@ handle.join().unwrap();
 ```
 
 ---
-
-# Message Passing: Channels
+## Message Passing: Channels
 
 ```rust
 use std::sync::mpsc;
@@ -93,8 +88,7 @@ println!("Got: {}", received);
 ```
 
 ---
-
-# Multiple Producers
+## Multiple Producers
 
 ```rust
 let (tx, rx) = mpsc::channel();
@@ -114,8 +108,7 @@ for received in rx {
 ```
 
 ---
-
-# Channel Types
+## Channel Types
 
 ```mermaid
 graph TD
@@ -128,8 +121,7 @@ graph TD
 ```
 
 ---
-
-# Shared State: Mutex
+## Shared State: Mutex
 
 ```rust
 use std::sync::Mutex;
@@ -145,8 +137,7 @@ println!("m = {:?}", m);
 ```
 
 ---
-
-# Mutex Between Threads
+## Mutex Between Threads
 
 ```rust
 use std::sync::{Arc, Mutex};
@@ -166,8 +157,7 @@ for _ in 0..10 {
 ```
 
 ---
-
-# Arc (Atomic Reference Counting)
+## Arc (Atomic Reference Counting)
 
 ```rust
 use std::sync::Arc;
@@ -184,8 +174,7 @@ for _ in 0..3 {
 ```
 
 ---
-
-# Atomic Types
+## Atomic Types
 
 ```rust
 use std::sync::atomic::{AtomicI32, Ordering};
@@ -197,8 +186,7 @@ println!("Count: {}", counter.load(Ordering::SeqCst));
 ```
 
 ---
-
-# Memory Ordering
+## Memory Ordering
 
 ```rust
 use std::sync::atomic::Ordering;
@@ -212,8 +200,7 @@ Ordering::SeqCst;     // Strongest
 ```
 
 ---
-
-# RwLock (Reader-Writer Lock)
+## RwLock (Reader-Writer Lock)
 
 ```rust
 use std::sync::RwLock;
@@ -230,8 +217,7 @@ let w = lock.write().unwrap();
 ```
 
 ---
-
-# Thread Pools
+## Thread Pools
 
 ```rust
 use threadpool::ThreadPool;
@@ -246,8 +232,7 @@ for i in 0..8 {
 ```
 
 ---
-
-# Barrier Synchronization
+## Barrier Synchronization
 
 ```rust
 use std::sync::{Arc, Barrier};
@@ -265,8 +250,7 @@ for _ in 0..3 {
 ```
 
 ---
-
-# Condition Variables
+## Condition Variables
 
 ```rust
 use std::sync::{Arc, Mutex, Condvar};
@@ -283,8 +267,7 @@ thread::spawn(move || {
 ```
 
 ---
-
-# Thread Safety Traits
+## Thread Safety Traits
 
 ```mermaid
 graph TD
@@ -295,8 +278,7 @@ graph TD
 ```
 
 ---
-
-# Send and Sync
+## Send and Sync
 
 ```rust
 // Types that can be transferred across threads
@@ -312,8 +294,7 @@ unsafe impl Send for MySendType {}
 ```
 
 ---
-
-# Deadlock Prevention
+## Deadlock Prevention
 
 ```rust
 use std::sync::{Mutex, MutexGuard};
@@ -340,8 +321,7 @@ fn transfer(
 ```
 
 ---
-
-# Thread Local Storage
+## Thread Local Storage
 
 ```rust
 thread_local! {
@@ -355,8 +335,7 @@ COUNTER.with(|c| {
 ```
 
 ---
-
-# Scoped Threads
+## Scoped Threads
 
 ```rust
 let mut v = vec![1, 2, 3];
@@ -371,8 +350,7 @@ println!("v: {:?}", v);
 ```
 
 ---
-
-# Error Handling in Threads
+## Error Handling in Threads
 
 ```rust
 let handle = thread::spawn(|| {
@@ -391,8 +369,7 @@ match handle.join() {
 ```
 
 ---
-
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -412,37 +389,29 @@ mindmap
 ```
 
 ---
-
-# Performance Considerations
+## Performance Considerations
 1. Thread creation overhead
-2. Context switching costs
-3. Cache coherency
-4. Lock contention
-5. Memory ordering impact
-
+1. Context switching costs
+1. Cache coherency
+1. Lock contention
+1. Memory ordering impact
 ---
-
-# Practice Exercise
-
+## Practice Exercise
 Create a concurrent application that:
 1. Uses multiple threads
-2. Shares data safely
-3. Handles errors
-4. Prevents deadlocks
-5. Uses message passing
-
+1. Shares data safely
+1. Handles errors
+1. Prevents deadlocks
+1. Uses message passing
 ---
-
-# Common Pitfalls
+## Common Pitfalls
 1. Race conditions
-2. Deadlocks
-3. Thread leak
-4. Lock contention
-5. Incorrect synchronization
-
+1. Deadlocks
+1. Thread leak
+1. Lock contention
+1. Incorrect synchronization
 ---
-
-# Summary
+## Summary
 - Thread basics
 - Message passing
 - Shared state

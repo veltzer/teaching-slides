@@ -29,8 +29,8 @@ graph LR
 # Ownership Rules
 
 1. Each value has exactly one owner
-2. Only one owner at a time
-3. When owner goes out of scope, value is dropped
+1. Only one owner at a time
+1. When owner goes out of scope, value is dropped
 
 ---
 
@@ -408,9 +408,9 @@ fn main() {
 
 Create a function that:
 1. Takes a string slice
-2. Returns first word
-3. Uses string slices
-4. Handles empty strings
+1. Returns first word
+1. Uses string slices
+1. Handles empty strings
 
 ---
 

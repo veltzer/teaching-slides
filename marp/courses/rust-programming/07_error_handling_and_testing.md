@@ -403,19 +403,19 @@ cargo tarpaulin -o Html
 
 Create a library that:
 1. Implements error handling
-2. Has comprehensive tests
-3. Includes documentation tests
-4. Uses test fixtures
-5. Has integration tests
+1. Has comprehensive tests
+1. Includes documentation tests
+1. Uses test fixtures
+1. Has integration tests
 
 ---
 
 # Common Pitfalls
 1. Inadequate error handling
-2. Missing edge cases
-3. Brittle tests
-4. Poor test organization
-5. Insufficient documentation
+1. Missing edge cases
+1. Brittle tests
+1. Poor test organization
+1. Insufficient documentation
 
 ---
 
