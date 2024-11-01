@@ -2,8 +2,7 @@
 ## Chapter 6: Abstraction and Code Reuse
 
 ---
-
-# What are Generics?
+## What are Generics
 
 ```mermaid
 mindmap
@@ -25,7 +24,7 @@ mindmap
 
 ---
 
-# Function with Generics
+## Function with Generics
 
 ```rust
 fn largest<T>(list: &[T]) -> &T
@@ -44,7 +43,7 @@ where T: PartialOrd {
 
 ---
 
-# Generic Structs
+## Generic Structs
 
 ```rust
 struct Point<T> {
@@ -59,7 +58,7 @@ let float = Point { x: 1.0, y: 4.0 };
 
 ---
 
-# Multiple Generic Parameters
+## Multiple Generic Parameters
 
 ```rust
 struct Point<T, U> {
@@ -72,7 +71,7 @@ let mixed = Point { x: 5, y: 4.0 };
 
 ---
 
-# Generic Enums
+## Generic Enums
 
 ```rust
 enum Option<T> {
@@ -88,7 +87,7 @@ enum Result<T, E> {
 
 ---
 
-# Generic Methods
+## Generic Methods
 
 ```rust
 impl<T> Point<T> {
@@ -107,7 +106,7 @@ impl Point<f64> {
 
 ---
 
-# What are Traits?
+## What are Traits
 
 ```mermaid
 graph TD
@@ -121,7 +120,7 @@ graph TD
 
 ---
 
-# Defining Traits
+## Defining Traits
 
 ```rust
 trait Summary {
@@ -135,7 +134,7 @@ trait Summary {
 
 ---
 
-# Implementing Traits
+## Implementing Traits
 
 ```rust
 struct NewsArticle {
@@ -152,7 +151,7 @@ impl Summary for NewsArticle {
 
 ---
 
-# Trait Bounds
+## Trait Bounds
 
 ```rust
 pub fn notify<T: Summary>(item: &T) {
@@ -165,7 +164,7 @@ pub fn notify<T: Summary + Display>(item: &T)
 
 ---
 
-# Where Clauses
+## Where Clauses
 
 ```rust
 fn some_function<T, U>(t: &T, u: &U) -> i32
@@ -178,7 +177,7 @@ fn some_function<T, U>(t: &T, u: &U) -> i32
 
 ---
 
-# Default Implementations
+## Default Implementations
 
 ```rust
 trait Summary {
@@ -192,7 +191,7 @@ trait Summary {
 
 ---
 
-# Trait Objects
+## Trait Objects
 
 ```rust
 pub trait Draw {
@@ -214,7 +213,7 @@ impl Screen {
 
 ---
 
-# Object Safety
+## Object Safety
 
 ```rust
 trait Clone {
@@ -228,7 +227,7 @@ trait Draw {
 
 ---
 
-# Associated Types
+## Associated Types
 
 ```rust
 trait Iterator {
@@ -240,7 +239,7 @@ trait Iterator {
 
 ---
 
-# Operator Overloading
+## Operator Overloading
 
 ```rust
 use std::ops::Add;
@@ -259,7 +258,7 @@ impl Add for Point {
 
 ---
 
-# Supertraits
+## Supertraits
 
 ```rust
 trait OutlinePrint: Display {
@@ -274,7 +273,7 @@ trait OutlinePrint: Display {
 
 ---
 
-# Newtype Pattern
+## Newtype Pattern
 
 ```rust
 struct Wrapper(Vec<String>);
@@ -288,7 +287,7 @@ impl Display for Wrapper {
 
 ---
 
-# Conditional Implementation
+## Conditional Implementation
 
 ```rust
 impl<T: Display> ToString for T {
@@ -304,7 +303,7 @@ impl<T: Display + PartialOrd> MyTrait for T {
 
 ---
 
-# Common Traits
+## Common Traits
 
 ```mermaid
 mindmap
@@ -328,7 +327,7 @@ mindmap
 
 ---
 
-# From and Into
+## From and Into
 
 ```rust
 struct Number {
@@ -347,7 +346,7 @@ let int: i32 = num.into();
 
 ---
 
-# AsRef and AsMut
+## AsRef and AsMut
 
 ```rust
 fn process<T: AsRef<str>>(data: T) {
@@ -362,7 +361,7 @@ process(String::from("hello"));
 
 ---
 
-# Drop Trait
+## Drop Trait
 
 ```rust
 struct CustomSmartPointer {
@@ -378,7 +377,7 @@ impl Drop for CustomSmartPointer {
 
 ---
 
-# Sized Trait
+## Sized Trait
 
 ```rust
 // T must be Sized
@@ -394,7 +393,7 @@ fn generic<T: ?Sized>(t: &T) {
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create a generic data structure that:
 1. Stores any type
@@ -404,7 +403,7 @@ Create a generic data structure that:
 
 ---
 
-# Performance Considerations
+## Performance Considerations
 
 ```rust
 // Monomorphization
@@ -423,7 +422,7 @@ fn process_string(x: String) {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -443,17 +442,14 @@ mindmap
 ```
 
 ---
-
-# Common Pitfalls
+## Common Pitfalls
 1. Overly generic code
-2. Unnecessary trait bounds
-3. Object safety violations
-4. Trait coherence issues
-5. Performance implications
-
+1. Unnecessary trait bounds
+1. Object safety violations
+1. Trait coherence issues
+1. Performance implications
 ---
-
-# Summary
+## Summary
 - Generic types
 - Traits and bounds
 - Associated types

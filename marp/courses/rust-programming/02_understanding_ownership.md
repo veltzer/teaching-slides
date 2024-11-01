@@ -3,7 +3,7 @@
 
 ---
 
-# Memory Management Evolution
+## Memory Management Evolution
 
 ```mermaid
 graph LR
@@ -16,7 +16,7 @@ graph LR
 
 ---
 
-# What is Ownership?
+## What is Ownership
 
 - Memory management system
 - Compile-time checks
@@ -26,7 +26,7 @@ graph LR
 
 ---
 
-# Ownership Rules
+## Ownership Rules
 
 1. Each value has exactly one owner
 1. Only one owner at a time
@@ -34,7 +34,7 @@ graph LR
 
 ---
 
-# Variable Scope Basics
+## Variable Scope Basics
 
 ```rust
 {
@@ -45,7 +45,7 @@ graph LR
 
 ---
 
-# The Stack and The Heap
+## The Stack and The Heap
 
 ```mermaid
 graph TD
@@ -59,7 +59,7 @@ graph TD
 
 ---
 
-# Stack vs Heap
+## Stack vs Heap
 
 <div class="columns">
 <div>
@@ -86,7 +86,7 @@ graph TD
 
 ---
 
-# Stack-Only Data
+## Stack-Only Data
 
 ```rust
 fn main() {
@@ -98,7 +98,7 @@ fn main() {
 
 ---
 
-# Move Semantics
+## Move Semantics
 
 ```rust
 fn main() {
@@ -111,7 +111,7 @@ fn main() {
 
 ---
 
-# Memory Layout: Move
+## Memory Layout: Move
 
 ```mermaid
 graph LR
@@ -123,7 +123,7 @@ graph LR
 
 ---
 
-# Clone for Deep Copy
+## Clone for Deep Copy
 
 ```rust
 fn main() {
@@ -134,8 +134,7 @@ fn main() {
 ```
 
 ---
-
-# Copy Types
+## Copy Types
 
 - Integers
 - Booleans
@@ -146,7 +145,7 @@ fn main() {
 
 ---
 
-# Ownership and Functions
+## Ownership and Functions
 
 ```rust
 fn main() {
@@ -162,7 +161,7 @@ fn takes_ownership(s: String) {
 
 ---
 
-# Return Values and Scope
+## Return Values and Scope
 
 ```rust
 fn main() {
@@ -182,7 +181,7 @@ fn takes_and_gives_back(s: String) -> String {
 
 ---
 
-# References and Borrowing
+## References and Borrowing
 
 ```rust
 fn main() {
@@ -198,15 +197,15 @@ fn calculate_length(s: &String) -> usize {
 
 ---
 
-# References Rules
+## References Rules
 
 1. One mutable reference OR many immutable references
-2. References must always be valid
-3. Reference scope ends at last usage
+1. References must always be valid
+1. Reference scope ends at last usage
 
 ---
 
-# Mutable References
+## Mutable References
 
 ```rust
 fn main() {
@@ -222,7 +221,7 @@ fn change(s: &mut String) {
 
 ---
 
-# Reference Restrictions
+## Reference Restrictions
 
 ```rust
 fn main() {
@@ -235,7 +234,7 @@ fn main() {
 
 ---
 
-# Multiple Immutable References
+## Multiple Immutable References
 
 ```rust
 fn main() {
@@ -248,7 +247,7 @@ fn main() {
 
 ---
 
-# Reference Scope
+## Reference Scope
 
 ```rust
 fn main() {
@@ -264,7 +263,7 @@ fn main() {
 
 ---
 
-# Dangling References
+## Dangling References
 
 ```rust
 fn main() {
@@ -279,7 +278,7 @@ fn dangle() -> &String { // Error!
 
 ---
 
-# The Slice Type
+## The Slice Type
 
 ```rust
 fn main() {
@@ -292,7 +291,7 @@ fn main() {
 
 ---
 
-# String Slices
+## String Slices
 
 ```rust
 let s = String::from("hello world");
@@ -305,7 +304,7 @@ let hw = &s[..];         // whole string
 
 ---
 
-# String Literals as Slices
+## String Literals as Slices
 
 ```rust
 let s: &str = "Hello, world!";
@@ -319,7 +318,7 @@ graph LR
 
 ---
 
-# Other Slice Types
+## Other Slice Types
 
 ```rust
 fn main() {
@@ -331,7 +330,7 @@ fn main() {
 
 ---
 
-# String Types
+## String Types
 
 <div class="columns">
 <div>
@@ -356,7 +355,7 @@ fn main() {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -377,17 +376,17 @@ mindmap
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 
 1. Fighting the borrow checker
-2. Unnecessary cloning
-3. Complex ownership patterns
-4. Inefficient data sharing
-5. Improper scope management
+1. Unnecessary cloning
+1. Complex ownership patterns
+1. Inefficient data sharing
+1. Improper scope management
 
 ---
 
-# String Operations Example
+## String Operations Example
 
 ```rust
 fn main() {
@@ -404,7 +403,7 @@ fn main() {
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create a function that:
 1. Takes a string slice
@@ -414,7 +413,7 @@ Create a function that:
 
 ---
 
-# Summary
+## Summary
 - Ownership rules
 - References and borrowing
 - Slices

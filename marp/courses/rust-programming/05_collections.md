@@ -3,7 +3,7 @@
 
 ---
 
-# Common Collections
+## Common Collections
 
 ```mermaid
 mindmap
@@ -24,7 +24,7 @@ mindmap
 
 ---
 
-# Vector Basics
+## Vector Basics
 
 ```rust
 // Creating new vectors
@@ -39,7 +39,7 @@ v.push(6);
 
 ---
 
-# Accessing Vector Elements
+## Accessing Vector Elements
 
 ```rust
 let v = vec![1, 2, 3, 4, 5];
@@ -56,7 +56,7 @@ match v.get(2) {
 
 ---
 
-# Vector Safety
+## Vector Safety
 
 ```rust
 let v = vec![1, 2, 3, 4, 5];
@@ -74,7 +74,7 @@ match does_not_exist {
 
 ---
 
-# Iterating Over Vectors
+## Iterating Over Vectors
 
 ```rust
 let v = vec![100, 32, 57];
@@ -93,7 +93,7 @@ for i in &mut v {
 
 ---
 
-# Vector with Different Types
+## Vector with Different Types
 
 ```rust
 enum SpreadsheetCell {
@@ -111,7 +111,7 @@ let row = vec![
 
 ---
 
-# Vector Methods
+## Vector Methods
 
 ```rust
 fn main() {
@@ -128,7 +128,7 @@ fn main() {
 
 ---
 
-# String Creation
+## String Creation
 
 ```rust
 // Empty string
@@ -143,7 +143,7 @@ let s = String::from("initial contents");
 
 ---
 
-# String Updates
+## String Updates
 
 ```rust
 let mut s = String::from("foo");
@@ -162,7 +162,7 @@ let s3 = s1 + &s2; // s1 has been moved
 
 ---
 
-# String Internals
+## String Internals
 
 ```mermaid
 graph TD
@@ -175,7 +175,7 @@ graph TD
 
 ---
 
-# String Slicing
+## String Slicing
 
 ```rust
 let hello = "hello";
@@ -187,7 +187,7 @@ let s = &hello[0..4]; // Gets "he"
 
 ---
 
-# String Iteration
+## String Iteration
 
 ```rust
 let s = String::from("hello");
@@ -205,7 +205,7 @@ for b in s.bytes() {
 
 ---
 
-# HashMap Basics
+## HashMap Basics
 
 ```rust
 use std::collections::HashMap;
@@ -218,7 +218,7 @@ scores.insert(String::from("Yellow"), 50);
 
 ---
 
-# Creating HashMap
+## Creating HashMap
 
 ```rust
 use std::collections::HashMap;
@@ -234,7 +234,7 @@ let scores: HashMap<_, _> = teams.iter()
 
 ---
 
-# Accessing HashMap Values
+## Accessing HashMap Values
 
 ```rust
 let mut scores = HashMap::new();
@@ -254,7 +254,7 @@ for (key, value) in &scores {
 
 ---
 
-# Updating HashMap
+## Updating HashMap
 
 ```rust
 let mut scores = HashMap::new();
@@ -269,7 +269,7 @@ scores.entry(String::from("Yellow")).or_insert(50);
 
 ---
 
-# Update Based on Old Value
+## Update Based on Old Value
 
 ```rust
 use std::collections::HashMap;
@@ -286,7 +286,7 @@ for word in text.split_whitespace() {
 
 ---
 
-# Hash Functions
+## Hash Functions
 
 ```rust
 use std::collections::HashMap;
@@ -303,7 +303,7 @@ let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
 
 ---
 
-# Collection Traits
+## Collection Traits
 
 ```mermaid
 graph TD
@@ -317,7 +317,7 @@ graph TD
 
 ---
 
-# Vec vs Array vs Slice
+## Vec vs Array vs Slice
 
 <div class="columns">
 <div>
@@ -340,7 +340,7 @@ graph TD
 
 ---
 
-# Common Methods
+## Common Methods
 
 ```rust
 let mut vec = vec![1, 2, 3];
@@ -375,7 +375,7 @@ mindmap
 
 ---
 
-# Collection Examples
+## Collection Examples
 
 ```rust
 // Frequency counter
@@ -392,7 +392,7 @@ fn word_frequency(text: &str) -> HashMap<String, u32> {
 
 ---
 
-# Error Handling
+## Error Handling
 
 ```rust
 fn main() {
@@ -416,7 +416,7 @@ fn main() {
 
 ---
 
-# Memory Management
+## Memory Management
 
 ```rust
 fn main() {
@@ -433,7 +433,7 @@ fn main() {
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create a simple text analyzer that:
 1. Counts word frequency
@@ -443,7 +443,7 @@ Create a simple text analyzer that:
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -464,7 +464,7 @@ mindmap
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 1. Index out of bounds
 2. Invalid string slicing
 3. HashMap key type constraints
@@ -473,7 +473,7 @@ mindmap
 
 ---
 
-# Summary
+## Summary
 - Vectors for sequences
 - Strings for text
 - HashMaps for key-value data
