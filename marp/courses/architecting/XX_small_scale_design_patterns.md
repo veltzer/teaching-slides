@@ -1,4 +1,6 @@
-# Model-View-Controller (MVC) Pattern
+# Small Scale Design patterns
+
+## Model-View-Controller (MVC) Pattern
 
 ---
 
@@ -14,17 +16,17 @@
 ## Component Roles
 
 - Model
-  - Represents the data and business logic of the application
-  - Independent of the user interface and presentation
-  - Notifies the View when data changes
+    - Represents the data and business logic of the application
+    - Independent of the user interface and presentation
+    - Notifies the View when data changes
 - View
-  - Presents the data to the user and handles user interaction
-  - Receives updates from the Model and renders the data
-  - Sends user input to the Controller
+    - Presents the data to the user and handles user interaction
+    - Receives updates from the Model and renders the data
+    - Sends user input to the Controller
 - Controller
-  - Receives user input from the View and translates it into actions
-  - Updates the Model based on the actions
-  - Selects the appropriate View for presenting the updated data
+    - Receives user input from the View and translates it into actions
+    - Updates the Model based on the actions
+    - Selects the appropriate View for presenting the updated data
 
 ---
 
@@ -60,11 +62,7 @@ Cons:
 
 ---
 
-# Interpreter Pattern
-
----
-
-## Overview
+## Interpreter Pattern
 
 - Defines a representation for a grammar and an interpreter to interpret sentences in the language
 - Provides a way to evaluate language grammar or expressions
@@ -73,29 +71,29 @@ Cons:
 
 ---
 
-## Component Roles
+## Interpreter Component Roles
 
 - Abstract Expression
-  - Declares an abstract interpret operation that is common to all nodes in the abstract syntax tree
+    - Declares an abstract interpret operation that is common to all nodes in the abstract syntax tree
 - Terminal Expression
-  - Implements an interpret operation associated with terminal symbols in the grammar
-  - No recursion since it is a leaf node
+    - Implements an interpret operation associated with terminal symbols in the grammar
+    - No recursion since it is a leaf node
 - Non-terminal Expression
-  - Implements an interpret operation for non-terminal symbols in the grammar
-  - Recursively calls interpret on its child nodes
+    - Implements an interpret operation for non-terminal symbols in the grammar
+    - Recursively calls interpret on its child nodes
 - Context
-  - Contains information that is global to the interpreter
-  - Accessed and manipulated by the expression nodes during interpretation
+    - Contains information that is global to the interpreter
+    - Accessed and manipulated by the expression nodes during interpretation
 
 ---
 
-## Structure Diagram
+## Interpreter Diagram
 
 ![Expression](../../../out/mermaid/design_patterns/expression.png)
 
 ---
 
-## Pros and Cons
+## Interpreter Pros and Cons
 
 Pros:
 - Provides a way to interpret a language or grammar
@@ -111,7 +109,7 @@ Cons:
 
 ---
 
-## When to Use
+## Interpreter When to Use
 
 - When there is a language to interpret and the grammar is simple
 - When the efficiency is not a critical concern
@@ -120,7 +118,7 @@ Cons:
 
 ---
 
-# Repository Pattern
+## Repository Pattern
 
 - Mediates between the domain and data mapping layers
 - Provides an abstraction of data for the domain layer
@@ -129,13 +127,13 @@ Cons:
 
 ---
 
-# Repository Pattern Diagram
+## Repository Pattern Diagram
 
 ![Repository](../../../out/mermaid/design_patterns/repository.png)
 
 ---
 
-# Pros and Cons
+## Repository Pros and Cons
 
 Pros:
 - Separation of concerns
@@ -150,7 +148,7 @@ Cons:
 
 ---
 
-# When to Use
+## Repository When to Use
 
 - Large-scale applications with complex domain models
 - Projects requiring database independence
@@ -159,7 +157,7 @@ Cons:
 - In domain-driven design (DDD) architectures
 ---
 
-# Command Pattern
+## Repository Command Pattern
 
 - Encapsulates a request as an object
 - Decouples the object that invokes the operation from the one that knows how to perform it
@@ -169,13 +167,13 @@ Cons:
 
 ---
 
-# Command Pattern Diagram
+## Command Pattern Diagram
 
 ![Command](../../../out/mermaid/design_patterns/command.png)
 
 ---
 
-# Pros and Cons
+## Command Pros and Cons
 
 Pros:
 - Decouples the sender and receiver of a request
@@ -192,7 +190,7 @@ Cons:
 
 ---
 
-# When to Use
+## Command When to Use
 
 - When you need to parameterize objects with operations
 - To implement undo/redo functionality
@@ -202,7 +200,7 @@ Cons:
 - When you need to structure a system around high-level operations built on primitive operations
 ---
 
-# Decorator Pattern
+## Decorator Pattern
 
 - Allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class
 - Provides a flexible alternative to subclassing for extending functionality
@@ -212,13 +210,13 @@ Cons:
 
 ---
 
-# Decorator Pattern Diagram
+## Decorator Pattern Diagram
 
 ![Decorator](../../../out/mermaid/design_patterns/decorator.png)
 
 ---
 
-# Pros and Cons
+## Decorator Pros and Cons
 
 Pros:
 - Extends an object's behavior without making a new subclass
@@ -235,7 +233,7 @@ Cons:
 
 ---
 
-# When to Use
+## Decorator When to Use
 
 - When you need to add responsibilities to objects dynamically without affecting other objects
 - When extension by subclassing is impractical or impossible
@@ -245,7 +243,7 @@ Cons:
 - When applying the Open/Closed principle in your design
 ---
 
-# Facade Pattern
+## Facade Pattern
 
 - Provides a simplified interface to a complex subsystem
 - Acts as a front-facing interface masking more complex underlying or structural code
@@ -255,13 +253,13 @@ Cons:
 
 ---
 
-# Facade Pattern Diagram
+## Facade Pattern Diagram
 
 ![Facade](../../../out/mermaid/design_patterns/facade.png)
 
 ---
 
-# Pros and Cons
+## Facade Pros and Cons
 
 Pros:
 - Simplifies the interface for a complex system
@@ -278,7 +276,7 @@ Cons:
 
 ---
 
-# When to Use
+## Facade When to Use
 
 - When you need to provide a simple interface to a complex subsystem
 - To decompose a subsystem into separate layers

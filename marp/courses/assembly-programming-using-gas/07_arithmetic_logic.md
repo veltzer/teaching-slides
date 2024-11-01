@@ -128,7 +128,7 @@ Used to set flags for conditional jumps:
 ```gas
     cmp $10, %eax     # Compare EAX with 10
     je equal_ten      # Jump if equal
-    
+
     test $1, %eax     # Test if EAX is odd
     jnz is_odd        # Jump if not zero (odd)
 ```

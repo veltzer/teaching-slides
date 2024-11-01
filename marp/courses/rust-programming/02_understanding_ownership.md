@@ -92,7 +92,6 @@ graph TD
 fn main() {
     let x = 5;        // i32 goes on stack
     let y = x;        // Copy of x
-    
     println!("x = {}, y = {}", x, y); // Both valid
 }
 ```
@@ -105,7 +104,6 @@ fn main() {
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1; // s1 is moved to s2
-    
     // println!("{}", s1); // Error! s1 was moved
     println!("{}", s2);    // Works fine
 }
@@ -131,7 +129,6 @@ graph LR
 fn main() {
     let s1 = String::from("hello");
     let s2 = s1.clone(); // Deep copy
-    
     println!("s1 = {}, s2 = {}", s1, s2); // Both valid
 }
 ```
@@ -230,10 +227,8 @@ fn change(s: &mut String) {
 ```rust
 fn main() {
     let mut s = String::from("hello");
-    
     let r1 = &mut s;
     // let r2 = &mut s; // Error!
-    
     println!("{}", r1);
 }
 ```
@@ -245,10 +240,8 @@ fn main() {
 ```rust
 fn main() {
     let s = String::from("hello");
-    
     let r1 = &s;
     let r2 = &s;
-    
     println!("{} and {}", r1, r2);
 }
 ```
@@ -260,12 +253,10 @@ fn main() {
 ```rust
 fn main() {
     let mut s = String::from("hello");
-    
     let r1 = &s; // ok
     let r2 = &s; // ok
     println!("{} and {}", r1, r2);
     // r1 and r2 scope ends here
-    
     let r3 = &mut s; // ok
     println!("{}", r3);
 }
@@ -401,16 +392,12 @@ mindmap
 ```rust
 fn main() {
     let mut s = String::from("hello");
-    
     // Push string
     s.push_str(" world");
-    
     // Push character
     s.push('!');
-    
     // Get length
     let len = s.len();
-    
     println!("{} ({})", s, len);
 }
 ```

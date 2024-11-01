@@ -190,11 +190,9 @@ struct ValidPerson<'a> {
 ```rust
 fn main() {
     let mut s = String::from("hello");
-    
     let r1 = &s;
     let r2 = &s;
     let r3 = &s;
-    
     println!("{} {} {}", r1, r2, r3);
 }
 ```
@@ -207,7 +205,6 @@ fn main() {
 fn main() {
     let mut s = String::from("hello");
     let r1 = &mut s;
-    
     r1.push_str(" world");    // ok
     println!("{}", r1);       // hello world
 }
@@ -266,7 +263,6 @@ let s2 = Rc::clone(&s); // Smart Pointer clone
 fn main() {
     let s = String::from("hello");
     let s_ref = &s;
-    
     println!("Length: {}", s_ref.len());
     // Rust automatically dereferences s_ref
 }
@@ -280,7 +276,6 @@ fn main() {
 fn main() {
     let mut vec = Vec::new();
     let s = String::from("hello");
-    
     vec.push(&s);  // Store reference
     println!("{}", vec[0]);
 }

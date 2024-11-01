@@ -107,7 +107,6 @@ fn main() {
 fn main() {
     let x = 2.0;      // f64 (default)
     let y: f32 = 3.0; // f32 (explicit)
-    
     // Basic operations
     let sum = 5.0 + 10.0;             // addition
     let difference = 95.5 - 4.3;       // subtraction
@@ -125,12 +124,10 @@ fn main() {
 fn main() {
     let t = true;
     let f: bool = false; // with explicit type annotation
-    
     // Booleans in conditionals
     if t {
         println!("This is true!");
     }
-    
     // Boolean operations
     let a = true && false; // false
     let b = true || false; // true
@@ -147,10 +144,10 @@ fn main() {
     let c = 'z';
     let z: char = 'z'; // explicit type annotation
     let heart_eyed_cat = 'cat';
-    
+
     // Characters are 4 bytes
     println!("Size of char: {} bytes", std::mem::size_of::<char>());
-    
+
     // Unicode support
     let kanji = 'fu';
 }
@@ -178,11 +175,11 @@ graph TD
 fn main() {
     // Basic tuple
     let tup: (i32, f64, u8) = (500, 6.4, 1);
-    
+
     // Destructuring
     let (x, y, z) = tup;
     println!("y is: {}", y);
-    
+
     // Accessing elements
     let five_hundred = tup.0;
     let six_point_four = tup.1;
@@ -197,13 +194,13 @@ fn main() {
 fn main() {
     // Fixed-length array
     let months = ["Jan", "Feb", "Mar", "Apr", "May"];
-    
+
     // Array with explicit type and size
     let numbers: [i32; 5] = [1, 2, 3, 4, 5];
-    
+
     // Initialize array with same value
     let zeros = [0; 5]; // [0, 0, 0, 0, 0]
-    
+
     // Accessing elements
     let first = months[0];
 }
@@ -239,7 +236,7 @@ fn main() {
     let number = if condition { 5 } else { 6 };
 
     println!("The value of number is: {}", number);
-    
+
     // Both arms must return same type
     // This would NOT work:
     // let number = if condition { 5 } else { "six" };
@@ -277,12 +274,10 @@ fn main() {
 
         'inner: loop {
             println!("Entered inner loop");
-            
             // Break outer loop
             break 'outer;
         }
     }
-    
     println!("Exited outer loop");
 }
 ```
@@ -315,7 +310,6 @@ fn main() {
     for element in numbers.iter() {
         println!("The value is: {}", element);
     }
-    
     // Range-based loop
     for number in (1..4).rev() {
         println!("{}!", number);
@@ -392,7 +386,6 @@ fn plus_one(x: i32) -> i32 {
 fn main() {
     let x = five();
     let y = plus_one(5);
-    
     println!("x is: {}, y is: {}", x, y);
 }
 ```
@@ -405,13 +398,11 @@ fn main() {
 fn main() {
     // Statement (doesn't return a value)
     let y = 6;
-    
     // Expression (returns a value)
     let x = {
         let y = 3;
         y + 1  // Note: no semicolon
     };
-    
     println!("x is: {}", x);  // 4
 }
 ```
@@ -426,7 +417,6 @@ use std::fs::File;
 fn main() {
     // Using expect
     let f = File::open("hello.txt").expect("Failed to open file");
-    
     // Using match
     let f = match File::open("hello.txt") {
         Ok(file) => file,

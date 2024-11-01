@@ -60,7 +60,6 @@ async fn main() {
     tokio::spawn(async {
         println!("Hello from task!");
     });
-    
     println!("Hello from main!");
 }
 ```
@@ -77,7 +76,6 @@ async fn main() {
         tokio::time::sleep(Duration::from_secs(1)).await;
         42
     });
-    
     let result = handle.await.unwrap();
     println!("Got: {}", result);
 }
@@ -92,7 +90,7 @@ use tokio_stream::{self as stream, StreamExt};
 
 async fn process_stream() {
     let mut stream = stream::iter(1..=3);
-    
+
     while let Some(num) = stream.next().await {
         println!("Got: {}", num);
     }
@@ -105,9 +103,8 @@ async fn process_stream() {
 
 ```rust
 async fn fetch_data() -> Result<String, Error> {
-    let response = reqwest::get("https://example.com")
-        .await?;
-        
+    let response = reqwest::get("https://example.com").await?;
+
     let body = response.text().await?;
     Ok(body)
 }
@@ -138,7 +135,6 @@ use tokio::select;
 
 async fn process() {
     let mut interval = tokio::time::interval(Duration::from_secs(1));
-    
     select! {
         _ = interval.tick() => println!("Tick"),
         Some(msg) = rx.recv() => println!("Got message: {}", msg),
@@ -156,11 +152,9 @@ use tokio::sync::mpsc;
 
 async fn channel_example() {
     let (tx, mut rx) = mpsc::channel(100);
-    
     tokio::spawn(async move {
         tx.send(42).await.unwrap();
     });
-    
     while let Some(value) = rx.recv().await {
         println!("got = {}", value);
     }
@@ -176,7 +170,6 @@ use tokio::sync::Mutex;
 
 async fn shared_state() {
     let counter = Arc::new(Mutex::new(0));
-    
     let counter_clone = counter.clone();
     tokio::spawn(async move {
         let mut lock = counter_clone.lock().await;
@@ -194,10 +187,8 @@ use tokio::sync::RwLock;
 
 async fn reader_writer() {
     let lock = Arc::new(RwLock::new(0));
-    
     // Multiple readers
     let read = lock.read().await;
-    
     // Single writer
     let mut write = lock.write().await;
     *write += 1;
@@ -214,11 +205,9 @@ use tokio::sync::broadcast;
 async fn broadcast_example() {
     let (tx, mut rx1) = broadcast::channel(16);
     let mut rx2 = tx.subscribe();
-    
     tokio::spawn(async move {
         tx.send(10).unwrap();
     });
-    
     println!("rx1: {}", rx1.recv().await.unwrap());
     println!("rx2: {}", rx2.recv().await.unwrap());
 }
@@ -237,7 +226,6 @@ async fn process_items() {
         .filter(|x| future::ready(*x > 2))
         .collect::<Vec<_>>()
         .await;
-    
     println!("Results: {:?}", stream);
 }
 ```
@@ -270,7 +258,6 @@ async fn with_timeout() {
             42
         }
     ).await;
-    
     match result {
         Ok(value) => println!("Completed with: {}", value),
         Err(_) => println!("Operation timed out"),
@@ -319,13 +306,11 @@ use tokio::task::JoinSet;
 
 async fn parallel_tasks() {
     let mut set = JoinSet::new();
-    
     for i in 0..10 {
         set.spawn(async move {
             process_item(i).await
         });
     }
-    
     while let Some(res) = set.join_next().await {
         println!("Task completed: {:?}", res);
     }

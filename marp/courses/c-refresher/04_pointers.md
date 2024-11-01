@@ -38,7 +38,7 @@ int *ptr = &x; // ptr is a pointer to an int, initialized with the address of x
 ## Dereferencing Pointers
 
 - Dereferencing a pointer means accessing the value stored at the memory address the pointer holds.
-  
+
 ```c
 int y = 20;
 int *ptr = &y;
@@ -71,7 +71,7 @@ printf("%d", *ptr); // Outputs: 20
 ## Pointers and Arrays
 
 - The name of an array is a pointer to its first element.
-  
+
 ```c
 int arr[3] = {1, 2, 3};
 int *ptr = arr; // ptr points to arr[0]

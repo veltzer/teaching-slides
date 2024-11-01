@@ -28,7 +28,7 @@ mindmap
 # Function with Generics
 
 ```rust
-fn largest<T>(list: &[T]) -> &T 
+fn largest<T>(list: &[T]) -> &T
 where T: PartialOrd {
     let mut largest = &list[0];
 
@@ -126,7 +126,7 @@ graph TD
 ```rust
 trait Summary {
     fn summarize(&self) -> String;
-    
+
     fn default_behavior(&self) -> String {
         String::from("Default implementation")
     }

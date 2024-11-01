@@ -31,6 +31,8 @@ DO_MD_ASPELL:=1
 DO_MD_ASCII:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
+# do you want to run mdl on md files?
+DO_MD_MDL:=1
 # convert drawio images to png?
 ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
@@ -130,6 +132,10 @@ endif # DO_MERMAID_PNG
 ifeq ($(DO_DRAWIO_PNG),1)
 ALL+=$(DRAWIO_PNG)
 endif # DO_DRAWIO_PNG
+
+ifeq ($(DO_MD_MDL),1)
+ALL+=$(MD_MDL)
+endif # DO_MD_MDL
 
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=

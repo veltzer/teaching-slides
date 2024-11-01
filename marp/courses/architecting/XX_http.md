@@ -1,15 +1,10 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # HTTP Protocol: Evolution and Versions
+
 ## From 1.0 to 3.0
 
 ---
 
-# What is HTTP?
+## What is HTTP
 
 - HTTP: Hypertext Transfer Protocol
 - Foundation of data exchange on the Web
@@ -20,7 +15,7 @@ paginate: true
 
 ---
 
-# HTTP/1.0 (1996)
+## HTTP/1.0 (1996)
 
 - First standardized version
 - One request-response pair per TCP connection
@@ -31,7 +26,7 @@ paginate: true
 
 ---
 
-# HTTP/1.1 (1997)
+## HTTP/1.1 (1997)
 
 - Persistent connections
 - Pipelining (multiple requests before responses)
@@ -43,7 +38,7 @@ paginate: true
 
 ---
 
-# HTTP/1.1 Improvements
+## HTTP/1.1 Improvements
 
 - Reduced latency for multiple requests
 - Better bandwidth utilization
@@ -52,7 +47,7 @@ paginate: true
 
 ---
 
-# HTTP/2 (2015)
+## HTTP/2 (2015)
 
 - Binary protocol (not text-based)
 - Multiplexing (multiple requests/responses over single connection)
@@ -64,13 +59,13 @@ paginate: true
 
 ---
 
-# HTTP/2 Server Push
+## HTTP/2 Server Push
 
 ![HTTP 2](../../../out/mermaid/http/http2.png)
 
 ---
 
-# HTTP/3 (2022)
+## HTTP/3 (2022)
 
 - Based on QUIC protocol (Quick UDP Internet Connections)
 - Replaces TCP with UDP
@@ -82,13 +77,13 @@ paginate: true
 
 ---
 
-# HTTP/3 Connection Establishment
+## HTTP/3 Connection Establishment
 
 ![QUIC Handshake](../../../out/mermaid/http/quic_handshake.png)
 
 ---
 
-# Version Comparison
+## Version Comparison
 
 | Feature           | HTTP/1.0 | HTTP/1.1 | HTTP/2   | HTTP/3   |
 |-------------------|----------|----------|----------|----------|
@@ -98,13 +93,11 @@ paginate: true
 | Server Push       | No       | No       | Yes      | Yes      |
 | HOL Blocking      | Yes      | Yes      | Reduced  | Eliminated |
 | Transport Protocol| TCP      | TCP      | TCP      | UDP (QUIC) |
-
 ---
-
-# Key Takeaways
+## Key Takeaways
 
 1. HTTP has evolved to meet increasing web demands
-2. Each version improved performance and capabilities
-3. HTTP/2 and HTTP/3 focus on multiplexing and reducing latency
-4. Modern websites benefit from using the latest HTTP version
-5. Understanding HTTP versions helps in web optimization
+1. Each version improved performance and capabilities
+1. HTTP/2 and HTTP/3 focus on multiplexing and reducing latency
+1. Modern websites benefit from using the latest HTTP version
+1. Understanding HTTP versions helps in web optimization

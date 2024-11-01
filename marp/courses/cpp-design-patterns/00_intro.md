@@ -1,7 +1,6 @@
 # C++ Design Patterns
 ---
-
-## What are Design Patterns?
+## What are Design Patterns
 
 - Design patterns are reusable solutions to common software design problems
 - They provide a way to structure code for better maintainability, flexibility, and reusability
@@ -9,7 +8,7 @@
 
 ---
 
-## Why use Design Patterns?
+## Why use Design Patterns
 
 - They promote code reuse and reduce duplication
 - They make code more maintainable and extensible
@@ -38,12 +37,12 @@
 ## Course Structure
 
 1. **Introduction to Design Patterns**
-2. **Creational Patterns**
-   - Singleton, Factory Method, Abstract Factory, Builder, Prototype
-3. **Structural Patterns**
-   - Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
-4. **Behavioral Patterns**
-   - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor
+1. **Creational Patterns**
+    - Singleton, Factory Method, Abstract Factory, Builder, Prototype
+1. **Structural Patterns**
+    - Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy
+1. **Behavioral Patterns**
+    - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor
 
 ---
 
@@ -52,11 +51,3 @@
 - "Design Patterns: Elements of Reusable Object-Oriented Software" by Gamma, Helm, Johnson, and Vlissides
 - Online catalogs and references (e.g., SourceMaking, Refactoring Guru)
 - Sample code and exercises provided throughout the course
-
----
-
-## Let's Begin!
-
-In the next chapter, we will dive into the first set of patterns: Creational Patterns.
-
-Get ready to explore the world of design patterns and unlock their power in your C++ projects!

@@ -87,13 +87,13 @@ graph LR
     R[Rust] --> Safety[Memory Safety]
     R --> Performance[C++ Level Performance]
     R --> Modern[Modern Ecosystem]
-    
+
     C[C/C++] --> Performance
     C --> Legacy[Legacy Support]
-    
+
     Go[Go] --> Modern
     Go --> GC[Garbage Collection]
-    
+
     Java[Java] --> GC
     Java --> Modern
 ```
@@ -339,13 +339,13 @@ use std::io;
 
 fn main() {
     println!("What's your name?");
-    
+
     let mut input = String::new();
-    
+
     io::stdin()
         .read_line(&mut input)
         .expect("Failed to read line");
-        
+
     println!("Hello, {}!", input.trim());
 }
 ```

@@ -4,9 +4,9 @@
 
 ## Overview
 
-- Separates the system into two applications: 
-  - Client: Requests services, can be "thin" or "thick"
-  - Server: Provides services, often manages resources 
+- Separates the system into two applications:
+    - Client: Requests services, can be "thin" or "thick"
+    - Server: Provides services, often manages resources
 - Client and server have different lifecycles but communicate via requests/responses
 
 ---
@@ -14,14 +14,14 @@
 ## Component Roles
 
 - Client
-  - Initiates requests to the server
-  - Waits for and receives server responses
-  - Usually interacts directly with end users
+    - Initiates requests to the server
+    - Waits for and receives server responses
+    - Usually interacts directly with end users
 - Server
-  - Listens for client requests
-  - Processes requests and sends responses back 
-  - May validate requests and authorize access
-  - Often manages shared resources
+    - Listens for client requests
+    - Processes requests and sends responses back
+    - May validate requests and authorize access
+    - Often manages shared resources
 
 ---
 
@@ -45,7 +45,7 @@ Pros:
 - Easy to add new clients without changing the server
 - Clients and servers can evolve independently
 
-Cons: 
+Cons:
 - Server can be a single point of failure
 - Potential performance bottlenecks at the server
 - Limited offline capability for thin clients
@@ -83,12 +83,12 @@ Cons:
   - Receives client requests and forwards them to appropriate servers
   - May provide additional services like logging, security, or transaction management
 - Client
-  - Requests services from the broker using a common interface
-  - Does not need to know the location or implementation details of servers
+    - Requests services from the broker using a common interface
+    - Does not need to know the location or implementation details of servers
 - Server
-  - Registers its services with the broker
-  - Receives requests from the broker and sends responses back
-  - Does not interact directly with clients
+    - Registers its services with the broker
+    - Receives requests from the broker and sends responses back
+    - Does not interact directly with clients
 
 ---
 
@@ -116,7 +116,7 @@ Pros:
 - Supports dynamic registration and discovery of services
 - Can provide additional services and optimizations
 
-Cons: 
+Cons:
 - Broker can become a performance bottleneck or single point of failure
 - Added complexity from the broker component and interactions
 - Potential latency overhead from indirection through broker
@@ -150,14 +150,14 @@ Cons:
 ## Peer Roles
 
 - Peer
-  - Participates in the network both as a consumer and supplier of resources
-  - Can act as a client by requesting services from other peers
-  - Can act as a server by providing services to other peers
-  - May have different capabilities or responsibilities
+    - Participates in the network both as a consumer and supplier of resources
+    - Can act as a client by requesting services from other peers
+    - Can act as a server by providing services to other peers
+    - May have different capabilities or responsibilities
 - Connection
-  - Logical link between two peers that enables communication
-  - Can be direct or indirect (e.g., through other peers)
-  - Can be persistent or created on-demand
+    - Logical link between two peers that enables communication
+    - Can be direct or indirect (e.g., through other peers)
+    - Can be persistent or created on-demand
 
 ---
 
@@ -217,17 +217,17 @@ Cons:
 ## Component Roles
 
 - Event Bus
-  - Central communication channel for events
-  - Receives events from publishers and dispatches them to subscribers
-  - Can provide additional services like event filtering, transformation, or persistence
+    - Central communication channel for events
+    - Receives events from publishers and dispatches them to subscribers
+    - Can provide additional services like event filtering, transformation, or persistence
 - Publisher
-  - Sends events to the event bus
-  - Does not need to know or depend on the subscribers
-  - Can publish different types of events
+    - Sends events to the event bus
+    - Does not need to know or depend on the subscribers
+    - Can publish different types of events
 - Subscriber
-  - Registers interest in specific events with the event bus
-  - Receives and handles events dispatched by the bus
-  - Can subscribe to different types of events
+    - Registers interest in specific events with the event bus
+    - Receives and handles events dispatched by the bus
+    - Can subscribe to different types of events
 
 ---
 
@@ -287,15 +287,15 @@ Cons:
 ## Key Principles
 
 - Single Responsibility Principle
-  - Each service focuses on a single business capability or function
+    - Each service focuses on a single business capability or function
 - Loose Coupling
-  - Services are independent and can be developed, deployed, and scaled separately
+    - Services are independent and can be developed, deployed, and scaled separately
 - Encapsulation
-  - Services hide their internal details and expose functionality through well-defined interfaces
+    - Services hide their internal details and expose functionality through well-defined interfaces
 - Autonomy
-  - Services have control over their own data and can make decisions independently
+    - Services have control over their own data and can make decisions independently
 - Resilience
-  - Services are designed to handle failures gracefully and recover independently
+    - Services are designed to handle failures gracefully and recover independently
 
 ---
 
@@ -1610,22 +1610,22 @@ sequenceDiagram
     participant P as Payment Service
     participant I as Inventory Service
     participant D as Delivery Service
-    
+
     O->>P: Process Payment
     activate P
     P-->>O: Payment Processed
     deactivate P
-    
+
     O->>I: Reserve Inventory
     activate I
     I-->>O: Inventory Reserved
     deactivate I
-    
+
     O->>D: Schedule Delivery
     activate D
     D-->>O: Delivery Scheduled
     deactivate D
-    
+
     Note over O,D: If any step fails, compensating transactions are triggered
 ```
 
@@ -1728,25 +1728,25 @@ graph TD
     A[Client] --> B[Facade/Router]
     B --> C[Legacy System]
     B --> D[New System]
-    
+
     subgraph "Phase 1"
     C --> E[Functionality 1]
     C --> F[Functionality 2]
     C --> G[Functionality 3]
     end
-    
+
     subgraph "Phase 2"
     D --> H[New Functionality 1]
     C --> I[Functionality 2]
     C --> J[Functionality 3]
     end
-    
+
     subgraph "Phase 3"
     D --> K[New Functionality 1]
     D --> L[New Functionality 2]
     D --> M[New Functionality 3]
     end
-    
+
     style C fill:#f9f,stroke:#333,stroke-width:2px
     style D fill:#bfb,stroke:#333,stroke-width:2px
 ```
@@ -1795,19 +1795,19 @@ graph TD
     A[Web Client] --> B[Web BFF]
     C[Mobile Client] --> D[Mobile BFF]
     E[Desktop Client] --> F[Desktop BFF]
-    
+
     B --> G[Microservice 1]
     B --> H[Microservice 2]
     B --> I[Microservice 3]
-    
+
     D --> G
     D --> H
     D --> I
-    
+
     F --> G
     F --> H
     F --> I
-    
+
     style B fill:#f9f,stroke:#333,stroke-width:2px
     style D fill:#bfb,stroke:#333,stroke-width:2px
     style F fill:#bbf,stroke:#333,stroke-width:2px
@@ -1859,15 +1859,15 @@ graph TD
     A[Mobile Client] --> G[API Gateway]
     B[Web Client] --> G
     C[Desktop Client] --> G
-    
+
     G --> D[Microservice 1]
     G --> E[Microservice 2]
     G --> F[Microservice 3]
-    
+
     G --> H[Authentication]
     G --> I[Logging]
     G --> J[Monitoring]
-    
+
     style G fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
@@ -1916,13 +1916,13 @@ Cons:
 graph LR
     A[New System] --> B[Anti-Corruption Layer]
     B --> C[Legacy System]
-    
+
     subgraph "ACL"
     B --> D[Translator]
     B --> E[Adapter]
     B --> F[Facade]
     end
-    
+
     style B fill:#f9f,stroke:#333,stroke-width:4px
     style D fill:#bfb,stroke:#333,stroke-width:2px
     style E fill:#bfb,stroke:#333,stroke-width:2px
@@ -1978,11 +1978,11 @@ graph TD
     A[Service A] --> B[(Database A)]
     C[Service B] --> D[(Database B)]
     E[Service C] --> F[(Database C)]
-    
+
     G[API Gateway] --> A
     G --> C
     G --> E
-    
+
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style C fill:#f9f,stroke:#333,stroke-width:2px
     style E fill:#f9f,stroke:#333,stroke-width:2px
@@ -2041,20 +2041,20 @@ graph TD
     A[Global Core Services] --> B[Geode 1]
     A --> C[Geode 2]
     A --> D[Geode N]
-    
+
     B --> E[Local Cache 1]
     B --> F[Local Services 1]
-    
+
     C --> G[Local Cache 2]
     C --> H[Local Services 2]
-    
+
     D --> I[Local Cache N]
     D --> J[Local Services N]
-    
+
     K[Users Region 1] --> B
     L[Users Region 2] --> C
     M[Users Region N] --> D
-    
+
     style A fill:#f9f,stroke:#333,stroke-width:4px
     style B fill:#bfb,stroke:#333,stroke-width:2px
     style C fill:#bfb,stroke:#333,stroke-width:2px
@@ -2225,15 +2225,15 @@ graph TD
     B <--> C
     B <--> D
     C <--> D
-    
+
     B --- B1[Sidecar]
     C --- C1[Sidecar]
     D --- D1[Sidecar]
-    
+
     B1 <--> C1
     B1 <--> D1
     C1 <--> D1
-    
+
     style B1 fill:#f9f,stroke:#333,stroke-width:2px
     style C1 fill:#f9f,stroke:#333,stroke-width:2px
     style D1 fill:#f9f,stroke:#333,stroke-width:2px
@@ -2289,7 +2289,7 @@ graph TD
     B --> D[Shard 2]
     B --> E[Shard 3]
     B --> F[Shard N]
-    
+
     C --> G[Data Subset 1]
     D --> H[Data Subset 2]
     E --> I[Data Subset 3]

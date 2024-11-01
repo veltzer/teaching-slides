@@ -325,7 +325,7 @@ fn transfer(
 ) {
     let mut source_guard: MutexGuard<i32>;
     let mut dest_guard: MutexGuard<i32>;
-    
+
     // Acquire locks in a consistent order
     if std::ptr::eq(source, dest) {
         return;

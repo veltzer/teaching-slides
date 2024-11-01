@@ -75,7 +75,7 @@ Steps:
     mov $45, %eax
     lea 1000(%esi), %ebx
     int $0x80
-    
+
     # Use memory...
 
     # Free memory

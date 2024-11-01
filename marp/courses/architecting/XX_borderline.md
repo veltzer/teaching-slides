@@ -1,10 +1,6 @@
 # Layered (n-tier) Pattern
 
----
-
-## Overview
-
-- Partitions the system into layers, each with a specific role and responsibility 
+- Partitions the system into layers, each with a specific role and responsibility
 - Common layers: Presentation, Application, Business Logic, Data Access
 - Adjacent layers communicate via well-defined interfaces
 
@@ -13,18 +9,18 @@
 ## Layer Responsibilities
 
 - Presentation Layer
-  - User interface and user interaction
-  - Displays information to the user and interprets user commands
-- Application Layer  
-  - Coordinates application activity
-  - Doesn't contain business logic 
-  - Delegates to business logic layer
+    - User interface and user interaction
+    - Displays information to the user and interprets user commands
+- Application Layer
+    - Coordinates application activity
+    - Doesn't contain business logic
+    - Delegates to business logic layer
 - Business Logic Layer
-  - Core functionality and business rules
-  - Independent of other layers
+    - Core functionality and business rules
+    - Independent of other layers
 - Data Access Layer
-  - Provides persistence for the business layer
-  - Abstracts the actual database or external services
+    - Provides persistence for the business layer
+    - Abstracts the actual database or external services
 
 ---
 
@@ -42,7 +38,7 @@ Pros:
 - Easy to understand and implement
 - Supports incremental development
 
-Cons: 
+Cons:
 - Potential for tight coupling between layers
 - Performance overhead from layer-to-layer communication
 - Limited flexibility and scalability
@@ -52,18 +48,14 @@ Cons:
 
 ## When to Use
 
-- Business logic can be cleanly separated from presentation and data 
+- Business logic can be cleanly separated from presentation and data
 - Multiple user interfaces need to reuse business logic
 - Incremental development is desired
 - Different teams will work on different layers
 
 ---
 
-# Master-Slave Pattern
-
----
-
-## Overview
+## Master-Slave Pattern
 
 - One component (the master) controls one or more other components (the slaves)
 - Master assigns tasks to slaves and monitors their progress
@@ -75,26 +67,25 @@ Cons:
 ## Component Roles
 
 - Master
-  - Decomposes task into smaller subtasks
-  - Distributes subtasks to slaves 
-  - Monitors slave progress and health
-  - Aggregates results from slaves
+    - Decomposes task into smaller subtasks
+    - Distributes subtasks to slaves
+    - Monitors slave progress and health
+    - Aggregates results from slaves
 - Slave
-  - Accepts tasks from master
-  - Processes subtasks independently
-  - Reports status and results to master
-  - May be identical to each other
+    - Accepts tasks from master
+    - Processes subtasks independently
+    - Reports status and results to master
+    - May be identical to each other
 
 ---
 
 ## Interaction Diagram
 
-![](.mmd)
 ![Master/Slave](../../../out/mermaid/borderline_patterns/master-slave.png)
 
 ---
 
-## Pros and Cons
+## Master Slave Pros and Cons
 
 Pros:
 - Enables parallel processing for better performance
@@ -104,13 +95,12 @@ Pros:
 
 Cons:
 - Master can be a single point of failure
-- Added latency from master-slave communication 
+- Added latency from master-slave communication
 - Limited applicability outside parallel processing
 - Slaves are not autonomous and rely on master
-
 ---
 
-## When to Use
+## Master Slave When to Use
 
 - Task can be decomposed into independent subtasks
 - Processing can be done more efficiently in parallel
@@ -120,11 +110,7 @@ Cons:
 
 ---
 
-# Pipe-Filter Pattern
-
----
-
-## Overview
+## Pipe-Filter Pattern
 
 - Decomposes a task into a series of sequential steps (filters)
 - Data flows through the steps via connectors (pipes)
@@ -133,29 +119,29 @@ Cons:
 
 ---
 
-## Component Roles
+## Pipe-Filter Component Roles
 
 - Filter
-  - Performs a specific processing step
-  - Receives input data, processes it, and produces output
-  - Does not know or interact with other filters
+    - Performs a specific processing step
+    - Receives input data, processes it, and produces output
+    - Does not know or interact with other filters
 - Pipe
-  - Connects the output of one filter to the input of the next
-  - Passes data between filters
-  - Can perform buffering, synchronization, or transformation
+    - Connects the output of one filter to the input of the next
+    - Passes data between filters
+    - Can perform buffering, synchronization, or transformation
 - Data
-  - Flows through the pipes and is processed by the filters
-  - Can be a stream of bytes, objects, or messages
+    - Flows through the pipes and is processed by the filters
+    - Can be a stream of bytes, objects, or messages
 
 ---
 
-## Pipeline Diagram
+## Pipe-Filter Diagram
 
 ![pipe-filter](pipe-filter.mmd)
 
 ---
 
-## Pros and Cons
+## Pipe-Filter Pros and Cons
 
 Pros:
 - Supports reuse and late binding of filters
@@ -163,7 +149,7 @@ Pros:
 - Flexible and adaptable to changing requirements
 - Naturally fits batch processing scenarios
 
-Cons: 
+Cons:
 - Not suitable for interactive or request-response interactions
 - Error handling and recovery can be complex
 - Potential performance overhead from data flow between filters
@@ -171,7 +157,7 @@ Cons:
 
 ---
 
-## When to Use
+## Pipe-Filter When to Use
 
 - Processing can be divided into a sequence of independent steps
 - Reuse and late composition of steps is desired
@@ -181,11 +167,7 @@ Cons:
 
 ---
 
-# Blackboard Pattern
-
----
-
-## Overview
+## Blackboard Pattern
 
 - Coordinates a group of loosely coupled, independent Knowledge Sources (KSs)
 - KSs work collaboratively to solve a problem using a shared data structure (Blackboard)
@@ -194,30 +176,30 @@ Cons:
 
 ---
 
-## Component Roles
+## Blackboard Component Roles
 
 - Blackboard
-  - Shared data structure that holds the problem state and partial solutions
-  - Accessible by all Knowledge Sources for reading and writing
-  - Organized into hierarchical levels of abstraction
+    - Shared data structure that holds the problem state and partial solutions
+    - Accessible by all Knowledge Sources for reading and writing
+    - Organized into hierarchical levels of abstraction
 - Knowledge Source (KS)
-  - Independent module that encapsulates a specific piece of knowledge or expertise
-  - Reads data from the Blackboard, processes it, and writes results back
-  - Triggered by changes in the Blackboard or by the Control component
+    - Independent module that encapsulates a specific piece of knowledge or expertise
+    - Reads data from the Blackboard, processes it, and writes results back
+    - Triggered by changes in the Blackboard or by the Control component
 - Control
-  - Manages the activation and scheduling of Knowledge Sources
-  - Monitors the Blackboard for changes and selects appropriate KSs to activate
-  - Can implement different strategies for KS activation and conflict resolution
+    - Manages the activation and scheduling of Knowledge Sources
+    - Monitors the Blackboard for changes and selects appropriate KSs to activate
+    - Can implement different strategies for KS activation and conflict resolution
 
 ---
 
-## Interaction Diagram
+## Blackboard Interaction Diagram
 
 ![knowledge-source](knowledge-source.mmd)
 
 ---
 
-## Pros and Cons
+## Blackboard Pros and Cons
 
 Pros:
 - Enables collaboration among independent, heterogeneous Knowledge Sources
@@ -233,7 +215,7 @@ Cons:
 
 ---
 
-## When to Use
+## Blackboard When to Use
 
 - Problem can be decomposed into loosely coupled subproblems
 - Multiple, independent sources of knowledge need to collaborate
@@ -243,7 +225,7 @@ Cons:
 
 ---
 
-# Ambassador Pattern
+## Ambassador Pattern
 
 - Provides a proxy service for connecting to external services or resources
 - Offloads common client connectivity tasks from the main application
@@ -253,13 +235,13 @@ Cons:
 
 ---
 
-# Ambassador Pattern Diagram
+## Ambassador Pattern Diagram
 
 ![ambassador](ambassador.mmd)
 
 ---
 
-# Pros and Cons
+## Ambassador Pros and Cons
 
 Pros:
 - Simplifies client application by offloading connectivity concerns
@@ -277,7 +259,7 @@ Cons:
 
 ---
 
-# When to Use
+## Ambassador When to Use
 
 - In microservices architectures to manage inter-service communication
 - When connecting to external services with complex protocols or authentication
@@ -288,7 +270,7 @@ Cons:
 - In scenarios where you want to shield the main application from the complexities of service discovery
 ---
 
-# Cache-Aside Pattern
+## Cache-Aside Pattern
 
 - Also known as Lazy Loading
 - Loads data on demand into a cache from a data store
@@ -299,13 +281,13 @@ Cons:
 
 ---
 
-# Cache-Aside Pattern Diagram
+## Cache-Aside Pattern Diagram
 
 ![cache-aside](cache-aside.mmd)
 
 ---
 
-# Pros and Cons
+## Cache-Aside Pros and Cons
 
 Pros:
 - Improves application performance for read-heavy workloads
@@ -323,7 +305,7 @@ Cons:
 
 ---
 
-# When to Use
+## Cache-Aside When to Use
 
 - In read-heavy applications where data doesn't change frequently
 - When you want to reduce load on the database
@@ -334,7 +316,7 @@ Cons:
 - When you need fine-grained control over what gets cached and when
 ---
 
-# Sidecar Pattern
+## Sidecar Pattern
 
 - Deploys components of an application as a separate process or container
 - Attaches and co-locates the sidecar with a parent application
@@ -344,13 +326,13 @@ Cons:
 
 ---
 
-# Sidecar Pattern Diagram
+## Sidecar Pattern Diagram
 
 ![sidecar](sidecar.mmd)
 
 ---
 
-# Pros and Cons
+## Sidecar Pros and Cons
 
 Pros:
 - Separation of concerns between core functionality and peripheral tasks
@@ -368,7 +350,7 @@ Cons:
 
 ---
 
-# When to Use
+## Sidecar When to Use
 
 - In microservices architectures to handle cross-cutting concerns
 - When you need to add features to an application without modifying its code
@@ -379,7 +361,7 @@ Cons:
 - To extend the functionality of legacy applications without modifying them
 ---
 
-# Valet Key Pattern
+## Valet Key Pattern
 
 - Provides clients with restricted direct access to a specific resource
 - Uses a token or key with limited privileges and validity period
@@ -390,13 +372,13 @@ Cons:
 
 ---
 
-# Valet Key Pattern Diagram
+## Valet Key Pattern Diagram
 
 ![vallet_key](vallet_key.mmd)
 
 ---
 
-# Pros and Cons
+## Valet Key Pros and Cons
 
 Pros:
 - Reduces load on application servers
@@ -414,7 +396,7 @@ Cons:
 
 ---
 
-# When to Use
+## Valet Key When to Use
 
 - In cloud-based applications for managing access to storage services
 - When handling large file uploads or downloads

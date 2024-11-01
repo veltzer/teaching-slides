@@ -189,7 +189,7 @@ assert!(
 #[cfg(test)]
 mod tests {
     use super::*;
-    
+
     #[test]
     fn internal_test() {
         // Test private functionality

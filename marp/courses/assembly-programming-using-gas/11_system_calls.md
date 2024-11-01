@@ -139,7 +139,7 @@ copy_loop:
     mov $buffer, %ecx
     mov $1024, %edx
     int $0x80
-    
+
     test %eax, %eax
     jz close_files     # EOF reached
 

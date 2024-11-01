@@ -63,7 +63,6 @@ fn main() {
 
     // Access fields using dot notation
     println!("Username: {}", user1.username);
-    
     // Modify field (requires mut)
     user1.email = String::from("newemail@example.com");
 }
@@ -280,7 +279,6 @@ fn main() {
 
     // This won't compile
     // let sum = x + y;
-    
     // Need to handle the Option
     let sum = x + y.unwrap_or(0);
 }

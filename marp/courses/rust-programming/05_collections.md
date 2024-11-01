@@ -116,7 +116,7 @@ let row = vec![
 ```rust
 fn main() {
     let mut v = vec![1, 2, 3];
-    
+
     v.push(4);        // Add element
     v.pop();          // Remove last
     v.len();          // Get length
@@ -297,7 +297,7 @@ use std::collections::hash_map::DefaultHasher;
 let mut map = HashMap::new();
 
 // Using custom hasher
-let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> = 
+let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
     HashMap::default();
 ```
 
@@ -381,11 +381,11 @@ mindmap
 // Frequency counter
 fn word_frequency(text: &str) -> HashMap<String, u32> {
     let mut map = HashMap::new();
-    
+
     for word in text.split_whitespace() {
         *map.entry(word.to_string()).or_insert(0) += 1;
     }
-    
+
     map
 }
 ```
@@ -397,17 +397,17 @@ fn word_frequency(text: &str) -> HashMap<String, u32> {
 ```rust
 fn main() {
     let v = vec![1, 2, 3];
-    
+
     // Safe index access
     match v.get(5) {
         Some(value) => println!("Value: {}", value),
         None => println!("Index out of bounds"),
     }
-    
+
     // Safe key access
     let mut map = HashMap::new();
     map.insert(String::from("key"), 42);
-    
+
     if let Some(value) = map.get("key") {
         println!("Value: {}", value);
     }
@@ -422,10 +422,10 @@ fn main() {
 fn main() {
     // Pre-allocation
     let mut v = Vec::with_capacity(10);
-    
+
     // String pre-allocation
     let mut s = String::with_capacity(100);
-    
+
     // HashMap with capacity
     let mut map = HashMap::with_capacity(50);
 }

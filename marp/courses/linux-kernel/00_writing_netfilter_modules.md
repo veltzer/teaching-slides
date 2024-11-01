@@ -209,7 +209,7 @@ static unsigned long my_counter = 0;
 unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_state *state)
 {
     unsigned long flags;
-    
+
     spin_lock_irqsave(&my_lock, flags);
     my_counter++;
     spin_unlock_irqrestore(&my_lock, flags);
