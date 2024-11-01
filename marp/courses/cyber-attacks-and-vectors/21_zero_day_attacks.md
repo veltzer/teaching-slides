@@ -2,7 +2,7 @@
 
 ---
 
-## What Are Zero-Day Attacks?
+## What Are Zero-Day Attacks
 
 - A zero-day attack exploits a previously unknown software vulnerability.
 - The vulnerability has not been disclosed or patched by the vendor.

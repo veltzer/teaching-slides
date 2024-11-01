@@ -1,7 +1,7 @@
 # Shell Injection: Defending Against Command Injection Attacks
 ---
 
-## What is Shell Injection?
+## What is Shell Injection
 
 - Shell injection, also known as command injection, is a type of web application security vulnerability.
 - It occurs when user input is passed to system shell commands without proper validation or sanitization.
