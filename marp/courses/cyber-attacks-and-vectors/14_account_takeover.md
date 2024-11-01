@@ -2,7 +2,7 @@
 
 ---
 
-## What is Account Takeover?
+## What is Account Takeover
 
 - Account takeover (ATO) is a type of cyber attack where a malicious actor gains unauthorized access to a user's account.
 - Attackers can leverage stolen credentials, stolen session tokens, or exploit vulnerabilities to gain control over accounts.

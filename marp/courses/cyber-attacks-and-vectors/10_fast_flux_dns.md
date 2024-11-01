@@ -7,12 +7,9 @@ Fast Flux DNS is a technique used by botnets and other malicious actors to hide 
 ## How Fast Flux DNS Works
 
 1. **DNS Abuse**: Legitimate DNS services are abused to rapidly change the mapping between a domain name and the IP addresses hosting the malicious content.
-
-2. **Rapidly Changing IP Addresses**: The domain name is associated with a large pool of compromised hosts (bots) whose IP addresses are constantly rotating and changing rapidly.
-
-3. **Load Balancing**: The changing IP addresses are used to load-balance the malicious traffic across multiple compromised hosts.
-
-4. **Proxy Redirection**: User requests are redirected through multiple layers of proxies and compromised hosts before reaching the malicious content or command-and-control server.
+1. **Rapidly Changing IP Addresses**: The domain name is associated with a large pool of compromised hosts (bots) whose IP addresses are constantly rotating and changing rapidly.
+1. **Load Balancing**: The changing IP addresses are used to load-balance the malicious traffic across multiple compromised hosts.
+1. **Proxy Redirection**: User requests are redirected through multiple layers of proxies and compromised hosts before reaching the malicious content or command-and-control server.
 
 ---
 

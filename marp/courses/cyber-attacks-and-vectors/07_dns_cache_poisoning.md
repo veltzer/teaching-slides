@@ -7,15 +7,10 @@ DNS Cache Poisoning, also known as DNS Spoofing, is a type of cyber attack where
 The attacker injects forged DNS records into the cache of a recursive DNS server, causing it to return incorrect IP addresses for requested domains.
 
 ---
-
 ## How Does DNS Cache Poisoning Work?
-
 1. The attacker sends a large number of forged DNS responses to a recursive DNS server, containing false information mapping a domain name to a malicious IP address.
-
-2. If one of the forged responses passes the validation checks and matches an existing recursive query, the server will cache the false record.
-
-3. When a user requests the domain associated with the poisoned record, the recursive DNS server will return the malicious IP address, redirecting the user's traffic to a malicious site.
-
+1. If one of the forged responses passes the validation checks and matches an existing recursive query, the server will cache the false record.
+1. When a user requests the domain associated with the poisoned record, the recursive DNS server will return the malicious IP address, redirecting the user's traffic to a malicious site.
 ---
 
 ## Diagram
