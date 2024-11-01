@@ -151,6 +151,9 @@ all_mkd: $(MKD_HTM)
 .PHONY: all_drawio_png
 all_drawio_png: $(DRAWIO_PNG)
 
+.PHONY: all_mdl
+all_mdl: $(MD_MDL)
+
 .PHONY: debug
 debug:
 	$(info doing [$@])
@@ -246,7 +249,7 @@ $(MD_ASCII): out/%.ascii: %.md
 	$(info doing [$@])
 	$(Q)pymakehelper error_on_print grep -P -n "[^\x00-\x7F]" $<
 	$(Q)pymakehelper touch_mkdir $@
-$(MERMAID_PNG): out/%.png: %.mmd
+$(MERMAID_PNG): out/%.png: %.mmd .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
@@ -254,6 +257,10 @@ $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
+$(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
+	$(info doing [$@])
+	$(Q)GEM_HOME=gems gems/bin/mdl $<
+	$(Q)pymakehelper touch_mkdir $@
 
 ##########
 # alldep #
@@ -262,4 +269,4 @@ ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
 
-.NOTPARALLEL:
+# .NOTPARALLEL:

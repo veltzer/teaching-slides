@@ -212,4 +212,3 @@ Future Trends in QEMU for Kernel Development
 - Emerging QEMU features for kernel developers
 - Potential impacts of hardware trends on QEMU and kernel testing
 - Preparing for future challenges in kernel development with QEMU
-

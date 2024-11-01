@@ -3,14 +3,14 @@
 
 ---
 
-# Understanding CPU Optimization
+## Understanding CPU Optimization
 - Compiler optimization is crucial for performance
 - CPU-specific tuning can provide significant speedups
 - Different optimization levels available in GCC
 
 ---
 
-# Basic Optimization Flags and Inspection
+## Basic Optimization Flags and Inspection
 - `-O0`: No optimization (default)
 - `-O1`: Basic optimization
 - `-O2`: Recommended optimization level
@@ -27,14 +27,14 @@ gcc -O2 -fopt-info
 
 ---
 
-# CPU-Specific Flags Overview
+## CPU-Specific Flags Overview
 - `-march`: Architecture-specific instructions
 - `-mtune`: Performance tuning
 - `-mcpu`: Combined architecture and tuning (some platforms)
 
 ---
 
-# Understanding -march
+## Understanding -march
 - Sets minimum CPU architecture
 - Generates CPU-specific instructions
 - Code won't run on older processors
@@ -42,7 +42,7 @@ gcc -O2 -fopt-info
 
 ---
 
-# Understanding -mtune
+## Understanding -mtune
 - Optimizes for target CPU
 - Maintains backward compatibility
 - Safe for distribution
@@ -50,7 +50,7 @@ gcc -O2 -fopt-info
 
 ---
 
-# Auto-detection with 'native'
+## Auto-detection with 'native'
 - `-march=native`
 - `-mtune=native`
 - Automatically detects host CPU
@@ -58,22 +58,22 @@ gcc -O2 -fopt-info
 
 ---
 
-# Common CPU Types
+## Common CPU Types
 
-## Intel
+### Intel
 - skylake
 - haswell
 - broadwell
 - icelake
 
-## AMD
+### AMD
 - znver1 (Zen 1)
 - znver2 (Zen 2)
 - znver3 (Zen 3)
 
 ---
 
-# Vector Extensions
+## Vector Extensions
 - `-mavx`
 - `-mavx2`
 - `-msse4.2`
@@ -82,7 +82,8 @@ gcc -O2 -fopt-info
 
 ---
 
-# Finding Supported CPUs
+## Finding Supported CPUs
+
 ```bash
 gcc -march=help
 gcc -mtune=help
@@ -91,7 +92,8 @@ gcc -Q --help=target
 
 ---
 
-# Real-world Example
+## Real-world Example
+
 ```bash
 # Full optimization for current CPU
 gcc -O3 -march=native program.c
@@ -102,7 +104,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Profiling Tools
+## Profiling Tools
 - `-fprofile-generate`
 - `-fprofile-use`
 - Allows optimization based on runtime behavior
@@ -110,7 +112,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 - Over-optimization
 - Platform compatibility issues
 - Testing implications
@@ -118,15 +120,15 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Best Practices
+## Best Practices
 1. Test performance impact
-2. Maintain compatibility requirements
-3. Document CPU requirements
-4. Consider distribution needs
+1. Maintain compatibility requirements
+1. Document CPU requirements
+1. Consider distribution needs
 
 ---
 
-# Performance Monitoring
+## Performance Monitoring
 - Use perf tools
 - Benchmark before/after
 - Monitor CPU utilization
@@ -134,7 +136,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Distribution Considerations
+## Distribution Considerations
 - Binary compatibility
 - Target audience
 - Platform support
@@ -142,16 +144,16 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Optimization Strategy
+## Optimization Strategy
 1. Start with -O2
-2. Profile code
-3. Add CPU-specific flags
-4. Benchmark results
-5. Test compatibility
+1. Profile code
+1. Add CPU-specific flags
+1. Benchmark results
+1. Test compatibility
 
 ---
 
-# When to Use CPU-Specific Tuning
+## When to Use CPU-Specific Tuning
 - Performance-critical applications
 - Known deployment environment
 - Local builds
@@ -159,7 +161,7 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Additional Resources
+## Additional Resources
 - GCC documentation
 - CPU vendor optimization guides
 - Performance tuning guides
@@ -167,15 +169,15 @@ gcc -O2 -march=skylake -mtune=skylake program.c
 
 ---
 
-# Questions to Consider
+## Questions to Consider
 1. What is your target platform?
-2. Performance requirements?
-3. Distribution needs?
-4. Maintenance considerations?
+1. Performance requirements?
+1. Distribution needs?
+1. Maintenance considerations?
 
 ---
 
-# Summary
+## Summary
 - CPU tuning can improve performance
 - Consider compatibility needs
 - Test thoroughly

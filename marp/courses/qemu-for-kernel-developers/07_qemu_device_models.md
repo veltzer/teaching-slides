@@ -217,4 +217,3 @@ Future Trends in QEMU Device Models
 - Upcoming features and improvements
 - Challenges in emulating future hardware
 - Preparing for next-generation devices in kernel development
-

@@ -225,4 +225,3 @@ Future of QEMU Networking
 - Upcoming features and improvements
 - Trends in virtualized networking
 - Preparing for future kernel networking challenges
-

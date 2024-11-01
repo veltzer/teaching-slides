@@ -12,9 +12,9 @@
 ## How Shell Injection Works
 
 1. The application takes user input (e.g., from a form field or URL parameter).
-2. The user input is concatenated with a shell command without proper sanitization.
-3. The resulting command is executed by the system shell.
-4. If the user input contains malicious code or commands, they are executed with the same privileges as the application.
+1. The user input is concatenated with a shell command without proper sanitization.
+1. The resulting command is executed by the system shell.
+1. If the user input contains malicious code or commands, they are executed with the same privileges as the application.
 
 ---
 

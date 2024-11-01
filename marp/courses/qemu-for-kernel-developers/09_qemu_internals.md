@@ -216,4 +216,3 @@ Future Directions in QEMU Development
 - Ongoing research and development areas
 - Potential new features and improvements
 - Challenges in emulation and virtualization
-

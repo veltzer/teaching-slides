@@ -384,10 +384,10 @@ mindmap
 # Common Patterns
 
 1. Producer-Consumer
-2. Fan-out/Fan-in
-3. Load Balancing
-4. Circuit Breaking
-5. Retry Logic
+1. Fan-out/Fan-in
+1. Load Balancing
+1. Circuit Breaking
+1. Retry Logic
 
 ---
 
