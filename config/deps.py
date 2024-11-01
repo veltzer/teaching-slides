@@ -22,6 +22,9 @@ packages=[
     "qpdf",
     "poppler-utils",
     "virtualenvwrapper",
+    # ruby stuff
+    "ruby-bundler",
+    "rbenv",
 ]
 
 packages_docs = [
