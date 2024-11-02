@@ -188,7 +188,7 @@ free(dynamicArray);
    }
    ```
 
-2. Searching:
+1. Searching:
    ```c
    int search(int arr[], int size, int key) {
        for (int i = 0; i < size; i++) {
@@ -198,7 +198,7 @@ free(dynamicArray);
    }
    ```
 
-3. Sorting (e.g., bubble sort):
+1. Sorting (e.g., bubble sort):
    ```c
    void bubbleSort(int arr[], int size) {
        for (int i = 0; i < size-1; i++) {

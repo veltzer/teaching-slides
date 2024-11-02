@@ -6,10 +6,10 @@
 
 Typical memory layout of a program:
 1. Text (Code) segment
-2. Data segment
-3. BSS segment
-4. Heap
-5. Stack
+1. Data segment
+1. BSS segment
+1. Heap
+1. Stack
 
 ---
 
@@ -60,9 +60,9 @@ System calls:
 
 Steps:
 1. Get current program break
-2. Increment break to allocate memory
-3. Use allocated memory
-4. Decrement break to free memory
+1. Increment break to allocate memory
+1. Use allocated memory
+1. Decrement break to free memory
 
 ```gas
     # Get current break

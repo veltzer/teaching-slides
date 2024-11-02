@@ -119,27 +119,27 @@ objdump -d program
   - Valgrind
 
 ---
-
-# Using gprof
+## Using gprof
 
 1. Compile with profiling support:
-   ```bash
-   gcc -pg program.c -o program
-   ```
 
-2. Run the program:
-   ```bash
-   ./program
-   ```
+```bash
+gcc -pg program.c -o program
+```
 
-3. Analyze the profile:
-   ```bash
-   gprof program gmon.out > analysis.txt
-   ```
+1. Run the program:
 
+```bash
+./program
+```
+
+1. Analyze the profile:
+
+```bash
+gprof program gmon.out > analysis.txt
+```
 ---
-
-# perf Example
+## perf Example
 
 Record performance data:
 ```bash
@@ -170,7 +170,7 @@ valgrind --tool=callgrind ./program
 # Debugging Tips
 
 1. Use meaningful labels in your code
-2. Comment your code thoroughly
-3. Test small code sections independently
-4. Use print statements for quick debugging
-5. Leverage debugging symbols (-g flag)
+1. Comment your code thoroughly
+1. Test small code sections independently
+1. Use print statements for quick debugging
+1. Leverage debugging symbols (-g flag)

@@ -213,8 +213,8 @@ void add_vectors(float *a, float *b, float *result, int size) {
 # Best Practices
 
 1. Use inline assembly sparingly
-2. Document thoroughly
-3. Consider portability and maintainability
-4. Profile to ensure actual performance gains
-5. Use constraints and clobbers correctly
-6. Be aware of compiler optimizations
+1. Document thoroughly
+1. Consider portability and maintainability
+1. Profile to ensure actual performance gains
+1. Use constraints and clobbers correctly
+1. Be aware of compiler optimizations

@@ -105,7 +105,7 @@ int main() {
 ## Compilation Process
 
 1. Compile each .c file into object files
-2. Link object files to create executable
+1. Link object files to create executable
 
 Example:
 ```

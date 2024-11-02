@@ -2,8 +2,7 @@
 ## Chapter 2: Core Concepts and Basic Syntax
 
 ---
-
-# Variables and Mutability
+## Variables and Mutability
 
 ```rust
 // Immutable by default
@@ -19,8 +18,7 @@ let x = x + 1; // New variable, shadows previous x
 ```
 
 ---
-
-# Constants
+## Constants
 
 ```rust
 const MAX_POINTS: u32 = 100_000;
@@ -36,7 +34,7 @@ fn main() {
 
 ---
 
-# Scalar Types
+## Scalar Types
 
 ```mermaid
 mindmap
@@ -57,12 +55,12 @@ mindmap
 
 ---
 
-# Integer Types
+## Integer Types
 
 <div class="columns">
 <div>
 
-## Signed
+### Signed
 - i8: -128 to 127
 - i16: -32,768 to 32,767
 - i32: -2^32 to 2^31-1
@@ -72,7 +70,7 @@ mindmap
 </div>
 <div>
 
-## Unsigned
+### Unsigned
 - u8: 0 to 255
 - u16: 0 to 65,535
 - u32: 0 to 2^32-1
@@ -84,7 +82,7 @@ mindmap
 
 ---
 
-# Number Literals
+## Number Literals
 
 ```rust
 fn main() {
@@ -101,7 +99,7 @@ fn main() {
 
 ---
 
-# Floating-Point Types
+## Floating-Point Types
 
 ```rust
 fn main() {
@@ -118,7 +116,7 @@ fn main() {
 
 ---
 
-# Boolean Type
+## Boolean Type
 
 ```rust
 fn main() {
@@ -137,7 +135,7 @@ fn main() {
 
 ---
 
-# Character Type
+## Character Type
 
 ```rust
 fn main() {
@@ -155,7 +153,7 @@ fn main() {
 
 ---
 
-# Compound Types
+## Compound Types
 
 ```mermaid
 graph TD
@@ -169,7 +167,7 @@ graph TD
 
 ---
 
-# Tuples
+## Tuples
 
 ```rust
 fn main() {
@@ -188,7 +186,7 @@ fn main() {
 
 ---
 
-# Arrays
+## Arrays
 
 ```rust
 fn main() {
@@ -208,7 +206,7 @@ fn main() {
 
 ---
 
-# Control Flow: if Expressions
+## Control Flow: if Expressions
 
 ```rust
 fn main() {
@@ -228,7 +226,7 @@ fn main() {
 
 ---
 
-# If in Let Statements
+## If in Let Statements
 
 ```rust
 fn main() {
@@ -245,7 +243,7 @@ fn main() {
 
 ---
 
-# Loops: loop Expression
+## Loops: loop Expression
 
 ```rust
 fn main() {
@@ -265,7 +263,7 @@ fn main() {
 
 ---
 
-# Loop Labels
+## Loop Labels
 
 ```rust
 fn main() {
@@ -284,7 +282,7 @@ fn main() {
 
 ---
 
-# While Loops
+## While Loops
 
 ```rust
 fn main() {
@@ -301,7 +299,7 @@ fn main() {
 
 ---
 
-# For Loops
+## For Loops
 
 ```rust
 fn main() {
@@ -319,7 +317,7 @@ fn main() {
 
 ---
 
-# Match Expression
+## Match Expression
 
 ```rust
 fn main() {
@@ -340,7 +338,7 @@ fn main() {
 
 ---
 
-# Match with Binding
+## Match with Binding
 
 ```rust
 fn main() {
@@ -358,7 +356,7 @@ fn main() {
 
 ---
 
-# Functions
+## Functions
 
 ```rust
 fn main() {
@@ -372,7 +370,7 @@ fn print_labeled_measurement(value: i32, unit_label: char) {
 
 ---
 
-# Function Return Values
+## Function Return Values
 
 ```rust
 fn five() -> i32 {
@@ -392,7 +390,7 @@ fn main() {
 
 ---
 
-# Expressions vs Statements
+## Expressions vs Statements
 
 ```rust
 fn main() {
@@ -409,7 +407,7 @@ fn main() {
 
 ---
 
-# Basic Error Handling
+## Basic Error Handling
 
 ```rust
 use std::fs::File;
@@ -427,7 +425,7 @@ fn main() {
 
 ---
 
-# Option Type
+## Option Type
 
 ```rust
 fn main() {
@@ -445,7 +443,7 @@ fn main() {
 
 ---
 
-# Result Type
+## Result Type
 
 ```rust
 use std::fs::File;

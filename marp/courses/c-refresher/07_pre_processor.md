@@ -122,15 +122,16 @@
 ## Preprocessor in the Build Process
 
 - Preprocessing stage:
-  1. Tokenization
-  2. Macro expansion
-  3. Include file expansion
-  4. Conditional compilation
-  5. Line control
+    1. Tokenization
+    1. Macro expansion
+    1. Include file expansion
+    1. Conditional compilation
+    1. Line control
 - View preprocessor output:
-  ```
-  gcc -E source.c -o preprocessed.i
-  ```
+
+```bash
+gcc -E source.c -o preprocessed.i
+```
 
 ---
 

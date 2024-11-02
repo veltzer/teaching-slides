@@ -21,14 +21,16 @@ char greeting[] = {'H', 'e', 'l', 'l', 'o', '\0'};
 Two main ways to declare strings:
 
 1. Character array:
-   ```c
-   char str[6] = "Hello";
-   ```
 
-2. Pointer to char:
-   ```c
-   char *str = "Hello";
-   ```
+```c
+char str[6] = "Hello";
+```
+
+1. Pointer to char:
+
+```c
+char *str = "Hello";
+```
 
 Note: The second method creates a read-only string literal.
 

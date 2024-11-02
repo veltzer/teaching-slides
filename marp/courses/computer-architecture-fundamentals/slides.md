@@ -1,24 +1,17 @@
 # Computer Architecture Fundamentals
-
 ## From Basic Principles to Modern Systems
-
 ---
-
-# Table of Contents
+## Table of Contents
 1. System Architecture Basics
-2. Data Management
-3. Performance & Scaling
-4. Reliability & Redundancy
-5. Security Fundamentals
-6. Modern Architecture Patterns
-
+1. Data Management
+1. Performance & Scaling
+1. Reliability & Redundancy
+1. Security Fundamentals
+1. Modern Architecture Patterns
 ---
-
-# Part 1: System Architecture Basics
-
+## Part 1: System Architecture Basics
 ---
-
-# What is Computer Architecture?
+## What is Computer Architecture?
 - Design and organization of computing systems
 - Hardware and software integration
 - Optimization of resources

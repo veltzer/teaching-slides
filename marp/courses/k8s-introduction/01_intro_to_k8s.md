@@ -63,15 +63,15 @@ spec:
 ## Course Outline
 
 1. Kubernetes Fundamentals
-2. Setting up a Kubernetes Cluster
-3. Deploying Applications on Kubernetes
-4. Kubernetes Networking
-5. Storage and Persistence
-6. Resource Management and Scaling
-7. Security in Kubernetes
-8. Monitoring and Logging
-9. Continuous Integration/Continuous Deployment (CI/CD) with Kubernetes
-10. Advanced Kubernetes Concepts
+1. Setting up a Kubernetes Cluster
+1. Deploying Applications on Kubernetes
+1. Kubernetes Networking
+1. Storage and Persistence
+1. Resource Management and Scaling
+1. Security in Kubernetes
+1. Monitoring and Logging
+1. Continuous Integration/Continuous Deployment (CI/CD) with Kubernetes
+1. Advanced Kubernetes Concepts
 ---
 ## Learning Resources
 

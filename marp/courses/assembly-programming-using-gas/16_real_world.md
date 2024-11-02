@@ -103,11 +103,11 @@ module_exit(cleanup_module);
 # Basic Reverse Engineering Workflow
 
 1. Obtain the binary
-2. Analyze file format and architecture
-3. Disassemble the code
-4. Identify key functions and data structures
-5. Reconstruct program logic
-6. Document findings
+1. Analyze file format and architecture
+1. Disassemble the code
+1. Identify key functions and data structures
+1. Reconstruct program logic
+1. Document findings
 
 ---
 
@@ -173,27 +173,20 @@ _start:
 ```
 
 ---
-
-# Malware Analysis Techniques
-
+## Malware Analysis Techniques
 1. Static Analysis
-   - Examine without running
-   - Disassemble and analyze code structure
-
-2. Dynamic Analysis
-   - Run in controlled environment
-   - Monitor behavior, network activity, etc.
-
-3. Memory Analysis
-   - Examine process memory dumps
-   - Identify hidden functionality
-
+    - Examine without running
+    - Disassemble and analyze code structure
+1. Dynamic Analysis
+    - Run in controlled environment
+    - Monitor behavior, network activity, etc.
+1. Memory Analysis
+    - Examine process memory dumps
+    - Identify hidden functionality
 ---
-
-# Project Ideas
-
+## Project Ideas
 1. Implement a simple encryption algorithm
-2. Write a basic bootloader
-3. Create a minimal operating system kernel
-4. Develop a game in assembly (e.g., Pong, Snake)
-5. Build a simple compiler or interpreter
+1. Write a basic bootloader
+1. Create a minimal operating system kernel
+1. Develop a game in assembly (e.g., Pong, Snake)
+1. Build a simple compiler or interpreter

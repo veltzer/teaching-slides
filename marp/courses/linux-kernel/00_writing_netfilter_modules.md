@@ -186,19 +186,15 @@ clean:
 # Concurrency Challenges
 
 1. Shared Resource Access
-   - Use appropriate synchronization mechanisms (e.g., spinlocks, RCU) when accessing shared data
-
-2. Per-CPU Variables
-   - Utilize `per_cpu` variables for better performance in concurrent scenarios
-
-3. Execution Context
+    - Use appropriate synchronization mechanisms (e.g., spinlocks, RCU) when accessing shared data
+1. Per-CPU Variables
+    - Utilize `per_cpu` variables for better performance in concurrent scenarios
+1. Execution Context
 
 Understand the context in which your hook functions run (softirq context)
 Use appropriate synchronization primitives based on the execution context
-
 ---
-
-# Example: Using Spinlocks for Shared Data
+## Example: Using Spinlocks for Shared Data
 
 ```c
 #include <linux/spinlock.h>

@@ -124,19 +124,17 @@ int *ptr = (int *)malloc(sizeof(int) * 10); // Allocate space for 10 ints
 
 ## Common Pointer Pitfalls
 
-### 1. **Uninitialized Pointers**:
-   - Using pointers before they are initialized leads to undefined behavior.
-
-### 2. **Dangling Pointers**:
-   - After freeing memory, the pointer still holds the address. Always set pointers to `NULL` after freeing them.
-
-### 3. **Pointer Arithmetic Misuse**:
-   - Ensure correct data type alignment when performing arithmetic operations.
+1. **Uninitialized Pointers**:
+    - Using pointers before they are initialized leads to undefined behavior.
+1. **Dangling Pointers**:
+    - After freeing memory, the pointer still holds the address. Always set pointers to `NULL` after freeing them.
+1. **Pointer Arithmetic Misuse**:
+    - Ensure correct data type alignment when performing arithmetic operations.
 
 ---
 
 ## Quiz Time!
 
 1. What does the `&` operator do?
-2. How do you dereference a pointer?
-3. What's the difference between `ptr++` and `(*ptr)++`?
+1. How do you dereference a pointer?
+1. What's the difference between `ptr++` and `(*ptr)++`?

@@ -3,7 +3,7 @@
 
 ---
 
-# Why Async?
+## Why Async?
 
 ```mermaid
 graph TD
@@ -18,7 +18,7 @@ graph TD
 
 ---
 
-# Async/Await Basics
+## Async/Await Basics
 
 ```rust
 async fn hello_world() {
@@ -33,7 +33,7 @@ async fn main() {
 
 ---
 
-# Futures
+## Futures
 
 ```rust
 use std::future::Future;
@@ -49,7 +49,7 @@ let future = example();
 
 ---
 
-# Async Runtime: Tokio
+## Async Runtime: Tokio
 
 ```rust
 use tokio;
@@ -66,7 +66,7 @@ async fn main() {
 
 ---
 
-# Task Spawning
+## Task Spawning
 
 ```rust
 #[tokio::main]
@@ -83,7 +83,7 @@ async fn main() {
 
 ---
 
-# Async Streams
+## Async Streams
 
 ```rust
 use tokio_stream::{self as stream, StreamExt};
@@ -99,7 +99,7 @@ async fn process_stream() {
 
 ---
 
-# Error Handling in Async
+## Error Handling in Async
 
 ```rust
 async fn fetch_data() -> Result<String, Error> {
@@ -112,7 +112,7 @@ async fn fetch_data() -> Result<String, Error> {
 
 ---
 
-# Async IO Operations
+## Async IO Operations
 
 ```rust
 use tokio::fs::File;
@@ -128,7 +128,7 @@ async fn read_file() -> Result<(), std::io::Error> {
 
 ---
 
-# Select! Macro
+## Select! Macro
 
 ```rust
 use tokio::select;
@@ -145,7 +145,7 @@ async fn process() {
 
 ---
 
-# Channels in Async
+## Channels in Async
 
 ```rust
 use tokio::sync::mpsc;
@@ -163,7 +163,7 @@ async fn channel_example() {
 
 ---
 
-# Async Mutex
+## Async Mutex
 
 ```rust
 use tokio::sync::Mutex;
@@ -180,7 +180,7 @@ async fn shared_state() {
 
 ---
 
-# RwLock in Async
+## RwLock in Async
 
 ```rust
 use tokio::sync::RwLock;
@@ -197,7 +197,7 @@ async fn reader_writer() {
 
 ---
 
-# Broadcast Channels
+## Broadcast Channels
 
 ```rust
 use tokio::sync::broadcast;
@@ -214,8 +214,7 @@ async fn broadcast_example() {
 ```
 
 ---
-
-# Stream Processing
+## Stream Processing
 
 ```rust
 use futures::stream::{self, StreamExt};
@@ -231,8 +230,7 @@ async fn process_items() {
 ```
 
 ---
-
-# Async Traits
+## Async Traits
 
 ```rust
 #[async_trait]
@@ -244,7 +242,7 @@ trait DataFetcher {
 
 ---
 
-# Timeout Handling
+## Timeout Handling
 
 ```rust
 use tokio::time::{timeout, Duration};
@@ -267,7 +265,7 @@ async fn with_timeout() {
 
 ---
 
-# Graceful Shutdown
+## Graceful Shutdown
 
 ```rust
 use tokio::signal;
@@ -286,7 +284,7 @@ async fn shutdown_signal() {
 
 ---
 
-# Error Propagation
+## Error Propagation
 
 ```rust
 #[tokio::main]
@@ -299,7 +297,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 ---
 
-# Task Groups
+## Task Groups
 
 ```rust
 use tokio::task::JoinSet;
@@ -319,7 +317,7 @@ async fn parallel_tasks() {
 
 ---
 
-# Resource Management
+## Resource Management
 
 ```mermaid
 graph TD
@@ -333,7 +331,7 @@ graph TD
 
 ---
 
-# Testing Async Code
+## Testing Async Code
 
 ```rust
 #[tokio::test]
@@ -345,7 +343,7 @@ async fn test_async_function() {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -366,7 +364,7 @@ mindmap
 
 ---
 
-# Common Patterns
+## Common Patterns
 
 1. Producer-Consumer
 1. Fan-out/Fan-in
@@ -376,7 +374,7 @@ mindmap
 
 ---
 
-# Performance Considerations
+## Performance Considerations
 
 <div class="columns">
 <div>
@@ -401,7 +399,7 @@ mindmap
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create an async application that:
 1. Handles HTTP requests
@@ -412,7 +410,7 @@ Create an async application that:
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 1. Blocking in async
 1. Task starvation
 1. Resource leaks
@@ -421,7 +419,7 @@ Create an async application that:
 
 ---
 
-# Summary
+## Summary
 - Async/Await syntax
 - Future and Stream
 - Task management

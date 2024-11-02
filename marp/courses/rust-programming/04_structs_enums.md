@@ -2,8 +2,7 @@
 ## Chapter 4: Custom Data Types in Rust
 
 ---
-
-# What are Structs?
+## What are Structs?
 
 ```mermaid
 mindmap
@@ -23,8 +22,7 @@ mindmap
 ```
 
 ---
-
-# Defining a Struct
+## Defining a Struct
 
 ```rust
 struct User {
@@ -37,7 +35,7 @@ struct User {
 
 ---
 
-# Creating Struct Instances
+## Creating Struct Instances
 
 ```rust
 let user1 = User {
@@ -50,7 +48,7 @@ let user1 = User {
 
 ---
 
-# Accessing Struct Fields
+## Accessing Struct Fields
 
 ```rust
 fn main() {
@@ -70,7 +68,7 @@ fn main() {
 
 ---
 
-# Field Init Shorthand
+## Field Init Shorthand
 
 ```rust
 fn build_user(email: String, username: String) -> User {
@@ -85,7 +83,7 @@ fn build_user(email: String, username: String) -> User {
 
 ---
 
-# Struct Update Syntax
+## Struct Update Syntax
 
 ```rust
 let user2 = User {
@@ -96,7 +94,7 @@ let user2 = User {
 
 ---
 
-# Tuple Structs
+## Tuple Structs
 
 ```rust
 struct Color(i32, i32, i32);
@@ -108,7 +106,7 @@ let origin = Point(0, 0, 0);
 
 ---
 
-# Unit Structs
+## Unit Structs
 
 ```rust
 struct AlwaysEqual;
@@ -122,7 +120,7 @@ impl SomeTrait for AlwaysEqual {
 
 ---
 
-# Struct Methods
+## Struct Methods
 
 ```rust
 struct Rectangle {
@@ -139,7 +137,7 @@ impl Rectangle {
 
 ---
 
-# Associated Functions
+## Associated Functions
 
 ```rust
 impl Rectangle {
@@ -157,7 +155,7 @@ impl Rectangle {
 
 ---
 
-# Multiple impl Blocks
+## Multiple impl Blocks
 
 ```rust
 impl Rectangle {
@@ -174,8 +172,7 @@ impl Rectangle {
 ```
 
 ---
-
-# What are Enums?
+## What are Enums
 
 ```mermaid
 mindmap
@@ -196,7 +193,7 @@ mindmap
 
 ---
 
-# Basic Enum Definition
+## Basic Enum Definition
 
 ```rust
 enum IpAddrKind {
@@ -210,7 +207,7 @@ let six = IpAddrKind::V6;
 
 ---
 
-# Enums with Data
+## Enums with Data
 
 ```rust
 enum IpAddr {
@@ -224,7 +221,7 @@ let loopback = IpAddr::V6(String::from("::1"));
 
 ---
 
-# Complex Enum Data
+## Complex Enum Data
 
 ```rust
 enum Message {
@@ -237,7 +234,7 @@ enum Message {
 
 ---
 
-# Methods on Enums
+## Methods on Enums
 
 ```rust
 impl Message {
@@ -255,7 +252,7 @@ impl Message {
 
 ---
 
-# The Option Enum
+## The Option Enum
 
 ```rust
 enum Option<T> {
@@ -270,7 +267,7 @@ let absent_number: Option<i32> = None;
 
 ---
 
-# Working with Option
+## Working with Option
 
 ```rust
 fn main() {
@@ -286,7 +283,7 @@ fn main() {
 
 ---
 
-# Match Expression
+## Match Expression
 
 ```rust
 enum Coin {
@@ -308,7 +305,7 @@ fn value_in_cents(coin: Coin) -> u8 {
 
 ---
 
-# Match with Patterns
+## Match with Patterns
 
 ```rust
 fn plus_one(x: Option<i32>) -> Option<i32> {
@@ -325,7 +322,7 @@ let none = plus_one(None);
 
 ---
 
-# Match with Guards
+## Match with Guards
 
 ```rust
 match some_value {
@@ -338,7 +335,7 @@ match some_value {
 
 ---
 
-# Catch-all Patterns
+## Catch-all Patterns
 
 ```rust
 let dice_roll = 9;
@@ -351,7 +348,7 @@ match dice_roll {
 
 ---
 
-# if let Syntax
+## if let Syntax
 
 ```rust
 let some_value = Some(3);
@@ -370,7 +367,7 @@ if let Some(3) = some_value {
 
 ---
 
-# while let Syntax
+## while let Syntax
 
 ```rust
 let mut stack = Vec::new();
@@ -385,7 +382,7 @@ while let Some(top) = stack.pop() {
 
 ---
 
-# Pattern Binding
+## Pattern Binding
 
 ```rust
 enum Color {
@@ -401,7 +398,7 @@ match color {
 
 ---
 
-# Nested Patterns
+## Nested Patterns
 
 ```rust
 enum Message {
@@ -421,7 +418,7 @@ match msg {
 
 ---
 
-# Common Patterns Example
+## Common Patterns Example
 
 ```rust
 enum Status {
@@ -439,7 +436,7 @@ struct User {
 
 ---
 
-# Reference Patterns
+## Reference Patterns
 
 ```rust
 let reference = &4;
@@ -456,7 +453,7 @@ match value {
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create a basic state machine using enums:
 1. Define states
@@ -466,7 +463,7 @@ Create a basic state machine using enums:
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -487,7 +484,7 @@ mindmap
 
 ---
 
-# Summary
+## Summary
 - Structs and their types
 - Methods and associated functions
 - Enums and variants

@@ -132,7 +132,7 @@ exit_program:
 GAS supports two types of comments:
 
 1. Full-line comments start with `#` or `/* */`
-2. End-of-line comments start with `#` or `//`
+1. End-of-line comments start with `#` or `//`
 
 Example:
 ```gas
@@ -149,10 +149,11 @@ movl $1, %eax  // This is an end-of-line comment
 GAS programs typically have three main sections:
 
 1. `.text`: Contains executable code
-2. `.data`: Contains initialized data
-3. `.bss`: Contains uninitialized data
+1. `.data`: Contains initialized data
+1. `.bss`: Contains uninitialized data
 
 Example:
+
 ```gas
 .section .data
     message: .asciz "Hello, World!\n"
@@ -179,6 +180,7 @@ GAS supports various operators for use in expressions:
 - Logical: `&&`, `||`, `!`
 
 Example:
+
 ```gas
 .equ BUFFER_SIZE, 1024
 .equ HALF_BUFFER, BUFFER_SIZE / 2

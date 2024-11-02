@@ -14,12 +14,12 @@
 # Common Optimization Strategies
 
 1. Loop optimization
-2. Function inlining
-3. Branch prediction optimization
-4. Data alignment
-5. Register allocation
-6. Instruction selection
-7. Parallelization
+1. Function inlining
+1. Branch prediction optimization
+1. Data alignment
+1. Register allocation
+1. Instruction selection
+1. Parallelization
 
 ---
 
@@ -215,7 +215,7 @@ gprof program gmon.out > analysis.txt
 # Best Practices
 
 1. Profile before optimizing
-2. Focus on hot spots (frequently executed code)
-3. Benchmark to verify improvements
-4. Consider trade-offs (speed vs. readability, memory usage)
-5. Comment optimized code thoroughly
+1. Focus on hot spots (frequently executed code)
+1. Benchmark to verify improvements
+1. Consider trade-offs (speed vs. readability, memory usage)
+1. Comment optimized code thoroughly

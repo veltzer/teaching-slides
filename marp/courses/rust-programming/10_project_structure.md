@@ -1,9 +1,10 @@
 # Project Structure and Tools
+
 ## Chapter 10: Organizing and Managing Rust Projects
 
 ---
 
-# Cargo Project Structure
+## Cargo Project Structure
 
 ```mermaid
 graph TD
@@ -18,9 +19,9 @@ graph TD
 
 ---
 
-# Basic Project Layout
+## Basic Project Layout
 
-```
+```text
 my_project/
 +-- Cargo.toml
 +-- Cargo.lock
@@ -36,7 +37,7 @@ my_project/
 
 ---
 
-# Cargo.toml Structure
+## Cargo.toml Structure
 
 ```toml
 [package]
@@ -58,7 +59,7 @@ cc = "1.0"
 
 ---
 
-# Workspace Structure
+## Workspace Structure
 
 ```toml
 # workspace root Cargo.toml
@@ -75,7 +76,7 @@ serde = "1.0"
 
 ---
 
-# Module Organization
+## Module Organization
 
 ```rust
 // lib.rs
@@ -93,7 +94,7 @@ use crate::front_of_house::hosting;
 
 ---
 
-# Use Declarations
+## Use Declarations
 
 ```rust
 use std::{fmt, io};
@@ -108,7 +109,7 @@ fn main() {
 
 ---
 
-# Project Configuration
+## Project Configuration
 
 ```mermaid
 graph TD
@@ -123,7 +124,7 @@ graph TD
 
 ---
 
-# Build Profiles
+## Build Profiles
 
 ```toml
 [profile.dev]
@@ -142,7 +143,7 @@ debug = true
 
 ---
 
-# Feature Flags
+## Feature Flags
 
 ```toml
 [features]
@@ -156,7 +157,7 @@ gtk = { version = "0.1", optional = true }
 
 ---
 
-# Development Tools
+## Development Tools
 
 ```mermaid
 mindmap
@@ -178,7 +179,7 @@ mindmap
 
 ---
 
-# Code Organization Best Practices
+## Code Organization Best Practices
 
 <div class="columns">
 <div>
@@ -203,7 +204,7 @@ mindmap
 
 ---
 
-# Documentation
+## Documentation
 
 ```rust
 /// Adds two numbers together
@@ -221,7 +222,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 
 ---
 
-# Testing Organization
+## Testing Organization
 
 ```rust
 #[cfg(test)]
@@ -245,7 +246,7 @@ fn integration_test() {
 
 ---
 
-# Continuous Integration
+## Continuous Integration
 
 ```yaml
 # .github/workflows/rust.yml
@@ -266,7 +267,7 @@ jobs:
 
 ---
 
-# Publishing to crates.io
+## Publishing to crates.io
 
 ```bash
 # Update version in Cargo.toml
@@ -279,7 +280,7 @@ cargo publish
 
 ---
 
-# Version Control Best Practices
+## Version Control Best Practices
 
 ```gitignore
 /target
@@ -290,7 +291,7 @@ Cargo.lock
 
 ---
 
-# Build Scripts
+## Build Scripts
 
 ```rust
 // build.rs
@@ -304,7 +305,7 @@ fn main() {
 
 ---
 
-# Dependency Management
+## Dependency Management
 
 ```mermaid
 graph TD
@@ -319,7 +320,7 @@ graph TD
 
 ---
 
-# Cross Compilation
+## Cross Compilation
 
 ```toml
 # .cargo/config.toml
@@ -329,8 +330,7 @@ ar = "x86_64-w64-mingw32-ar"
 ```
 
 ---
-
-# Project Automation
+## Project Automation
 
 ```bash
 #!/bin/bash
@@ -344,7 +344,7 @@ cargo build --release
 
 ---
 
-# IDE Integration
+## IDE Integration
 
 ```json
 {
@@ -356,7 +356,7 @@ cargo build --release
 
 ---
 
-# Benchmarking
+## Benchmarking
 
 ```rust
 #[bench]
@@ -369,8 +369,7 @@ fn bench_add(b: &mut test::Bencher) {
 ```
 
 ---
-
-# Profiling Tools
+## Profiling Tools
 
 ```bash
 # Flamegraph generation
@@ -383,7 +382,7 @@ valgrind --leak-check=full ./target/debug/myapp
 
 ---
 
-# Error Handling Strategy
+## Error Handling Strategy
 
 ```rust
 #[derive(Debug)]
@@ -398,7 +397,7 @@ impl std::error::Error for AppError {}
 
 ---
 
-# Project Templates
+### Project Templates
 
 ```bash
 # Create new project from template
@@ -410,7 +409,7 @@ cargo new my_project --bin
 
 ---
 
-# Security Best Practices
+## Security Best Practices
 
 ```mermaid
 mindmap
@@ -431,7 +430,7 @@ mindmap
 
 ---
 
-# Practice Exercise
+## Practice Exercise
 
 Create a complete project that:
 1. Uses proper structure
@@ -442,7 +441,7 @@ Create a complete project that:
 
 ---
 
-# Summary
+## Summary
 - Project organization
 - Tools and workflows
 - Documentation

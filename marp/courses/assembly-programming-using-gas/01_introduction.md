@@ -25,18 +25,18 @@
 ## Advantages of Assembly Language
 
 1. **Performance**: Potential for highly optimized code
-2. **Hardware Control**: Direct access to system resources
-3. **Size Efficiency**: Smaller program size possible
-4. **Understanding Computer Architecture**: Learn how computers work at a low level
+1. **Hardware Control**: Direct access to system resources
+1. **Size Efficiency**: Smaller program size possible
+1. **Understanding Computer Architecture**: Learn how computers work at a low level
 
 ---
 
 ## Disadvantages of Assembly Language
 
 1. **Complexity**: Steeper learning curve
-2. **Time-consuming**: Writing and debugging can be slower
-3. **Lack of Portability**: Code is specific to an architecture
-4. **Maintenance Challenges**: Can be harder to update and maintain
+1. **Time-consuming**: Writing and debugging can be slower
+1. **Lack of Portability**: Code is specific to an architecture
+1. **Maintenance Challenges**: Can be harder to update and maintain
 
 ---
 

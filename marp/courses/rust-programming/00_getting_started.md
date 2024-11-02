@@ -2,8 +2,7 @@
 ## Chapter 1: Introduction to Rust Programming
 
 ---
-
-# What is Rust?
+## What is Rust
 
 ![bg right:40% 80%](https://raw.githubusercontent.com/rust-lang/rust-artwork/master/logo/rust-logo-blk.svg)
 
@@ -12,10 +11,8 @@
 - Created by Mozilla Research
 - First released in 2015
 - Now used by: Mozilla, Microsoft, Amazon, Google
-
 ---
-
-# Key Features of Rust
+## Key Features of Rust
 
 ```mermaid
 mindmap
@@ -39,13 +36,12 @@ mindmap
 ```
 
 ---
-
-# Why Choose Rust?
+## Why Choose Rust
 
 <div class="columns">
 <div>
 
-## Benefits
+### Benefits
 - Memory safety
 - Zero-cost abstractions
 - Modern tooling
@@ -54,7 +50,7 @@ mindmap
 </div>
 <div>
 
-## Features
+### Features
 - No garbage collector
 - Concurrency support
 - Cross-platform
@@ -65,7 +61,7 @@ mindmap
 
 ---
 
-# Use Cases for Rust
+## Use Cases for Rust
 
 ```mermaid
 graph TD
@@ -80,7 +76,7 @@ graph TD
 
 ---
 
-# Rust vs Other Languages
+## Rust vs Other Languages
 
 ```mermaid
 graph LR
@@ -100,21 +96,23 @@ graph LR
 
 ---
 
-# Installing Rust
+## Installing Rust
 
 <div class="columns">
 <div>
 
-## Unix/Linux/macOS
+### Unix/Linux/macOS
+
+<!--- markdownlint-skip -->
+
 ```bash
-curl --proto '=https' --tlsv1.2 \
-     -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh {MD034}
 ```
 
 </div>
 <div>
 
-## Windows
+### Windows
 - Download rustup-init.exe
 - Run installer
 - Follow prompts
@@ -124,7 +122,7 @@ curl --proto '=https' --tlsv1.2 \
 
 ---
 
-# Rustup Components
+## Rustup Components
 
 ```mermaid
 graph TD
@@ -137,7 +135,7 @@ graph TD
 
 ---
 
-# Verifying Installation
+## Verifying Installation
 
 ```bash
 # Check Rust compiler version
@@ -152,11 +150,11 @@ rustup component list
 
 ---
 
-# Development Environment
+## Development Environment
 
 ![bg right:40% 90%](https://code.visualstudio.com/assets/images/code-stable.png)
 
-## Recommended Setup
+### Recommended Setup
 - VS Code
 - rust-analyzer extension
 - CodeLLDB extension
@@ -164,7 +162,7 @@ rustup component list
 
 ---
 
-# Cargo: Rust's Package Manager
+## Cargo: Rust's Package Manager
 
 ```mermaid
 graph TD
@@ -178,12 +176,13 @@ graph TD
 
 ---
 
-# Common Cargo Commands
+## Common Cargo Commands
 
 <div class="columns">
 <div>
 
-## Project Management
+### Project Management
+
 ```bash
 cargo new project_name
 cargo build
@@ -193,7 +192,8 @@ cargo run
 </div>
 <div>
 
-## Development
+### Development
+
 ```bash
 cargo check
 cargo test
@@ -205,9 +205,9 @@ cargo doc
 
 ---
 
-# Project Structure
+## Project Structure
 
-```
+```text
 my_project/
 +-- Cargo.toml          # Project manifest
 +-- Cargo.lock          # Lock file
@@ -217,7 +217,7 @@ my_project/
 
 ---
 
-# Cargo.toml Explained
+## Cargo.toml Explained
 
 ```toml
 [package]
@@ -231,8 +231,7 @@ tokio = { version = "1.0", features = ["full"] }
 ```
 
 ---
-
-# Hello, World!
+## Hello, World
 
 ```rust
 fn main() {
@@ -241,8 +240,7 @@ fn main() {
 ```
 
 ---
-
-# Basic Program Structure
+## Basic Program Structure
 
 ```rust
 // Import standard library
@@ -256,8 +254,7 @@ fn main() {
 ```
 
 ---
-
-# Comments in Rust
+## Comments in Rust
 
 ```rust
 // Line comment
@@ -273,8 +270,7 @@ fn main() {
 ```
 
 ---
-
-# Basic Syntax Elements
+## Basic Syntax Elements
 
 ```mermaid
 mindmap
@@ -298,8 +294,7 @@ mindmap
 ```
 
 ---
-
-# Function Syntax
+## Function Syntax
 
 ```rust
 // Basic function
@@ -315,8 +310,7 @@ fn add(a: i32, b: i32) -> i32 {
 ```
 
 ---
-
-# Macro Usage
+## Macro Usage
 
 ```rust
 // Common macros
@@ -331,8 +325,7 @@ println!("Hello, {}!", name);
 ```
 
 ---
-
-# Basic Input/Output
+## Basic Input/Output
 
 ```rust
 use std::io;
@@ -351,8 +344,7 @@ fn main() {
 ```
 
 ---
-
-# Code Organization
+## Code Organization
 
 ```mermaid
 graph TD
@@ -366,13 +358,12 @@ graph TD
 ```
 
 ---
-
-# Best Practices
+## Best Practices
 
 <div class="columns">
 <div>
 
-## Development
+### Development
 - Use rust-analyzer
 - Follow style guide
 - Write documentation
@@ -381,7 +372,7 @@ graph TD
 </div>
 <div>
 
-## Code Quality
+### Code Quality
 - Use `cargo clippy`
 - Write tests
 - Handle errors
@@ -391,8 +382,7 @@ graph TD
 </div>
 
 ---
-
-# Common Mistakes to Avoid
+## Common Mistakes to Avoid
 
 ```mermaid
 mindmap
@@ -412,13 +402,12 @@ mindmap
 ```
 
 ---
-
-# Resources for Learning
+## Resources for Learning
 
 <div class="columns">
 <div>
 
-## Official
+### Official
 - The Rust Book
 - Rust by Example
 - Standard Library Docs
@@ -427,7 +416,7 @@ mindmap
 </div>
 <div>
 
-## Community
+### Community
 - Discord
 - Reddit (r/rust)
 - Stack Overflow

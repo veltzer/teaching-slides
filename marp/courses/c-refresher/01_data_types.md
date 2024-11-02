@@ -75,9 +75,9 @@ char newline = '\n';
 
 - Represents the absence of a value
 - Used in three ways:
-  1. Function returns nothing
-  2. Function takes no parameters
-  3. Generic pointer type
+    1. Function returns nothing
+    1. Function takes no parameters
+    1. Generic pointer type
 
 ```c
 void print_hello(void) {

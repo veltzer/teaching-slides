@@ -68,19 +68,22 @@ _start:
 ## Addressing Modes
 
 1. Immediate: Constant value
-   ```gas
-   mov eax, 42
-   ```
 
-2. Register: Value in a register
-   ```gas
-   mov ebx, eax
-   ```
+```gas
+mov eax, 42
+```
 
-3. Direct: Memory address
-   ```gas
-   mov eax, [0x1000]
-   ```
+1. Register: Value in a register
+
+```gas
+mov ebx, eax
+```
+
+1. Direct: Memory address
+
+```gas
+mov eax, [0x1000]
+```
 
 ---
 

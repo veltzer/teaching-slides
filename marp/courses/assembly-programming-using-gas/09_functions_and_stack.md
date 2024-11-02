@@ -64,7 +64,7 @@ Cleanup at the end of a function:
 
 Common ways to pass arguments:
 1. Via the stack (cdecl calling convention)
-2. Via registers (fastcall convention)
+1. Via registers (fastcall convention)
 
 Stack example (cdecl):
 ```gas

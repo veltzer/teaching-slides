@@ -3,7 +3,7 @@
 
 ---
 
-# Types of Errors
+## Types of Errors
 
 ```mermaid
 graph TD
@@ -19,7 +19,7 @@ graph TD
 
 ---
 
-# Unrecoverable Errors: panic!
+## Unrecoverable Errors: panic
 
 ```rust
 fn main() {
@@ -31,7 +31,7 @@ fn main() {
 
 ---
 
-# Stack Unwinding vs Abort
+## Stack Unwinding vs Abort
 
 ```toml
 # Cargo.toml
@@ -47,8 +47,7 @@ fn main() {
 ```
 
 ---
-
-# Recoverable Errors: Result
+## Recoverable Errors: Result
 
 ```rust
 enum Result<T, E> {
@@ -63,7 +62,7 @@ fn get_username(id: i32) -> Result<String, io::Error> {
 
 ---
 
-# Handling Result
+## Handling Result
 
 ```rust
 let f = File::open("hello.txt");
@@ -76,7 +75,7 @@ let f = match f {
 
 ---
 
-# Multiple Error Types
+## Multiple Error Types
 
 ```rust
 use std::io;
@@ -91,7 +90,7 @@ fn read_username() -> Result<String, io::Error> {
 
 ---
 
-# The ? Operator
+## The ? Operator
 
 ```rust
 fn read_file() -> Result<String, io::Error> {
@@ -104,7 +103,7 @@ fn read_file() -> Result<String, io::Error> {
 
 ---
 
-# Custom Error Types
+## Custom Error Types
 
 ```rust
 #[derive(Debug)]
@@ -123,7 +122,7 @@ impl From<std::io::Error> for AppError {
 
 ---
 
-# Error Propagation
+## Error Propagation
 
 ```rust
 fn function_that_might_fail() -> Result<Success, Error> {
@@ -135,7 +134,7 @@ fn function_that_might_fail() -> Result<Success, Error> {
 
 ---
 
-# Unit Testing Basics
+## Unit Testing Basics
 
 ```rust
 #[cfg(test)]
@@ -152,7 +151,7 @@ mod tests {
 
 ---
 
-# Test Attributes
+## Test Attributes
 
 ```rust
 #[test]
@@ -165,7 +164,7 @@ fn expensive_test() {
 
 ---
 
-# Assert Macros
+## Assert Macros
 
 ```rust
 // Basic assertions
@@ -182,7 +181,7 @@ assert!(
 
 ---
 
-# Test Organization
+## Test Organization
 
 ```rust
 // Unit tests
@@ -201,7 +200,7 @@ mod tests {
 
 ---
 
-# Integration Tests
+## Integration Tests
 
 ```rust
 // In tests/integration_test.rs
@@ -215,7 +214,7 @@ fn test_external_api() {
 
 ---
 
-# Test Fixtures
+## Test Fixtures
 
 ```rust
 #[cfg(test)]
@@ -236,7 +235,7 @@ mod tests {
 
 ---
 
-# Running Tests
+## Running Tests
 
 ```bash
 # Run all tests
@@ -254,7 +253,7 @@ cargo test -- --nocapture
 
 ---
 
-# Test Documentation
+## Test Documentation
 
 ```rust
 /// ```
@@ -270,7 +269,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 
 ---
 
-# Parameterized Tests
+## Parameterized Tests
 
 ```rust
 #[test]
@@ -289,7 +288,7 @@ fn test_multiple_cases() {
 
 ---
 
-# Mocking in Tests
+## Mocking in Tests
 
 ```rust
 trait Database {
@@ -311,7 +310,7 @@ impl Database for MockDatabase {
 
 ---
 
-# Benchmark Tests
+## Benchmark Tests
 
 ```rust
 #![feature(test)]
@@ -332,7 +331,7 @@ mod tests {
 
 ---
 
-# Result in Tests
+## Result in Tests
 
 ```rust
 #[test]
@@ -347,7 +346,7 @@ fn test_with_result() -> Result<(), String> {
 
 ---
 
-# Testing Private Functions
+## Testing Private Functions
 
 ```rust
 #[cfg(test)]
@@ -363,7 +362,7 @@ mod tests {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ```mermaid
 mindmap
@@ -384,7 +383,7 @@ mindmap
 
 ---
 
-# Code Coverage
+## Code Coverage
 
 ```bash
 # Install cargo-tarpaulin
@@ -398,28 +397,22 @@ cargo tarpaulin -o Html
 ```
 
 ---
-
-# Practice Exercise
-
+## Practice Exercise
 Create a library that:
 1. Implements error handling
 1. Has comprehensive tests
 1. Includes documentation tests
 1. Uses test fixtures
 1. Has integration tests
-
 ---
-
-# Common Pitfalls
+## Common Pitfalls
 1. Inadequate error handling
 1. Missing edge cases
 1. Brittle tests
 1. Poor test organization
 1. Insufficient documentation
-
 ---
-
-# Summary
+## Summary
 - Error types and handling
 - Testing methodology
 - Test organization

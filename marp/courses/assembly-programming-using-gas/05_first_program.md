@@ -40,9 +40,9 @@ _start:
 # Assembling and Linking
 
 1. Save the program as `hello.s`
-2. Assemble: `as hello.s -o hello.o`
-3. Link: `ld hello.o -o hello`
-4. Run: `./hello`
+1. Assemble: `as hello.s -o hello.o`
+1. Link: `ld hello.o -o hello`
+1. Run: `./hello`
 
 Output:
 ```
@@ -54,10 +54,10 @@ Hello, World!
 # Program Structure Breakdown
 
 1. `.section .data`: Declares the data section
-2. `.section .text`: Declares the code section
-3. `.globl _start`: Makes the _start label global
-4. `_start:`: Entry point of the program
-5. System calls: `write` for output, `exit` to terminate
+1. `.section .text`: Declares the code section
+1. `.globl _start`: Makes the _start label global
+1. `_start:`: Entry point of the program
+1. System calls: `write` for output, `exit` to terminate
 
 ---
 
