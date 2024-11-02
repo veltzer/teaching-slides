@@ -32,7 +32,7 @@ DO_MD_ASCII:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
 # do you want to run mdl on md files?
-DO_MD_MDL:=1
+DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
 # convert drawio images to png?
