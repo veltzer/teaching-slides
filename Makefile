@@ -33,6 +33,8 @@ DO_MD_ASCII:=1
 DO_MERMAID_PNG:=1
 # do you want to run mdl on md files?
 DO_MD_MDL:=1
+# do you want to run markdownlint on md files?
+DO_MD_MARKDOWNLINT:=1
 # convert drawio images to png?
 ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
@@ -67,6 +69,7 @@ MD_BAS:=$(basename $(MD_SRC))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_ASCII:=$(addprefix out/,$(addsuffix .ascii,$(MD_BAS)))
+MD_MARKDOWNLINT:=$(addprefix out/,$(addsuffix .markdownlint,$(MD_BAS)))
 
 # marp
 MARP_SRC:=$(shell find marp -type f -and -name "*.md")
@@ -137,6 +140,10 @@ ifeq ($(DO_MD_MDL),1)
 ALL+=$(MD_MDL)
 endif # DO_MD_MDL
 
+ifeq ($(DO_MD_MARKDOWNLINT),1)
+ALL+=$(MD_MARKDOWNLINT)
+endif # DO_MD_MARKDOWNLINT
+
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=
 MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
@@ -159,6 +166,9 @@ all_drawio_png: $(DRAWIO_PNG)
 
 .PHONY: all_mdl
 all_mdl: $(MD_MDL)
+
+.PHONY: all_markdownlint
+all_markdownlint: $(MD_MARKDOWNLINT)
 
 .PHONY: debug
 debug:
@@ -185,6 +195,7 @@ debug:
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_ASCII is $(MD_ASCII))
 	$(info MD_MDL is $(MD_MDL))
+	$(info MD_MARKDOWNLINT is $(MD_MARKDOWNLINT))
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
 	$(info MERMAID_PNG is $(MERMAID_PNG))
@@ -266,6 +277,10 @@ $(DRAWIO_PNG): out/%.png: %.drawio
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
+	$(Q)pymakehelper touch_mkdir $@
+$(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
+	$(info doing [$@])
+	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)pymakehelper touch_mkdir $@
 
 ##########

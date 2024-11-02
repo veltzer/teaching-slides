@@ -6,7 +6,9 @@
 - Can lead to data theft, data manipulation, or even server takeover
 ---
 ## How Does SQL Injection Work?
+
 ![right:50% w=50](../../../raw/cyber/sql-injection.png)
+
 ---
 ## How Does SQL Injection Work?
 1. User input is not properly sanitized

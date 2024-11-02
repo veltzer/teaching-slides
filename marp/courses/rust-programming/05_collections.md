@@ -353,8 +353,7 @@ vec.extend([6,7,8]);     // Add multiple
 ```
 
 ---
-
-# Performance Considerations
+## Performance Considerations
 
 ```mermaid
 mindmap

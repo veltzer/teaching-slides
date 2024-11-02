@@ -12,7 +12,9 @@
     - Inadequate bounds checking
 ---
 ## Diagram
+
 ![center](../../../raw/cyber/buffer_overflow.png)
+
 ---
 ## Consequences
 - Execution of malicious code

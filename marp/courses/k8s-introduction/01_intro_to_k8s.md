@@ -26,6 +26,7 @@
 ## Kubernetes Architecture
 
 ![Kubernetes Architecture](https://d33wubrfki0l68.cloudfront.net/2475489eaf20163ec0f54ddc1d92aa8d4c87c96b/e7c81/images/docs/components-of-kubernetes.svg)
+
 ---
 ## Core Kubernetes Objects
 
@@ -59,6 +60,7 @@ spec:
         ports:
         - containerPort: 80
 ```
+
 ---
 ## Course Outline
 
@@ -75,7 +77,7 @@ spec:
 ---
 ## Learning Resources
 
-* Official Kubernetes Documentation: kubernetes.io
-* Kubernetes: Up and Running (Book) by Kelsey Hightower, Brendan Burns, and Joe Beda
-* Kubernetes the Hard Way by Kelsey Hightower
-* CNCF Kubernetes Certification (CKA, CKAD)
+- Official Kubernetes Documentation: kubernetes.io
+- Kubernetes: Up and Running (Book) by Kelsey Hightower, Brendan Burns, and Joe Beda
+- Kubernetes the Hard Way by Kelsey Hightower
+- CNCF Kubernetes Certification (CKA, CKAD)

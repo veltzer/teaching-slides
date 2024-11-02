@@ -17,7 +17,9 @@
 - Generates massive traffic with little bandwidth from attacker
 ---
 ## Diagram
+
 ![DNS Amplification](../../../out/mermaid/cyber/dns_amplification.png)
+
 ---
 ## Demo
 

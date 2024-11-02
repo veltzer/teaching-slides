@@ -16,281 +16,207 @@
 - Hardware and software integration
 - Optimization of resources
 - Balance of competing needs
-
 ---
-
-# Key Architecture Components
+## Key Architecture Components
 - Processing units (CPU, GPU)
 - Memory systems
 - Storage
 - Network interfaces
 - Input/Output systems
-
 ---
-
-# System Boundaries
+## System Boundaries
 - Physical boundaries
 - Logical boundaries
 - Security perimeters
 - Network segments
-
 ---
-
-# Part 2: Data Management
-
+## Part 2: Data Management
 ---
-
-# Data Duplication
+## Data Duplication
 - Purpose and benefits
 - Types of duplication
-  - Full copies
-  - Partial copies
-  - Caching
+    - Full copies
+    - Partial copies
+    - Caching
 - Trade-offs
-
 ---
-
-# Data Consistency
+## Data Consistency
 - Strong consistency
 - Eventual consistency
 - CAP theorem basics
 - Synchronization methods
-
 ---
-
-# Caching Strategies
+## Caching Strategies
 - Cache levels
 - Cache invalidation
 - Write-through vs Write-back
 - Cache coherency
-
 ---
-
-# Data Locality
+## Data Locality
 - Temporal locality
 - Spatial locality
 - Data placement strategies
 - Access patterns
-
 ---
-
-# Part 3: Performance & Scaling
-
+## Part 3: Performance & Scaling
 ---
-
-# Load Balancing
+## Load Balancing
 - Purpose
 - Common algorithms
-  - Round-robin
-  - Least connections
-  - Resource-based
+    - Round-robin
+    - Least connections
+    - Resource-based
 - Health checks
-
 ---
-
-# Load Balancer Types
+## Load Balancer Types
 - Layer 4 (Transport)
 - Layer 7 (Application)
 - DNS-based
 - Geographic
-
 ---
-
-# Scaling Patterns
+## Scaling Patterns
 - Vertical scaling (Up/Down)
 - Horizontal scaling (Out/In)
 - When to use each
 - Cost considerations
-
 ---
-
-# Performance Metrics
+## Performance Metrics
 - Throughput
 - Latency
 - IOPS
 - Response time
 - Resource utilization
-
 ---
-
-# Concurrent Operations
+## Concurrent Operations
 - Parallel processing
 - Asynchronous I/O
 - Thread management
 - Process scheduling
-
 ---
-
-# I/O Optimization
+## I/O Optimization
 - Buffering
 - Queuing
 - Batching
 - Prioritization
-
 ---
-
-# Part 4: Reliability & Redundancy
-
+## Part 4: Reliability & Redundancy
 ---
-
-# High Availability Basics
+## High Availability Basics
 - Availability calculations
 - SLA definitions
 - Redundancy levels
 - Failure domains
-
 ---
-
-# Redundancy Patterns
+## Redundancy Patterns
 - N+1
 - N+2
 - 2N
 - 2N+1
 - Cost vs. reliability
-
 ---
-
-# Fault Tolerance
+## Fault Tolerance
 - Failure detection
 - Failover mechanisms
 - Recovery procedures
 - Testing strategies
-
 ---
-
-# Self-Healing Systems
+## Self-Healing Systems
 - Automated recovery
 - Health monitoring
 - Auto-scaling
 - Circuit breakers
-
 ---
-
-# Disaster Recovery
+## Disaster Recovery
 - RPO (Recovery Point Objective)
 - RTO (Recovery Time Objective)
 - Backup strategies
 - Site redundancy
-
 ---
-
-# Part 5: Security Fundamentals
-
+## Part 5: Security Fundamentals
 ---
-
-# Basic Encryption
+## Basic Encryption
 - Symmetric encryption
 - Asymmetric encryption
 - Key management
 - Common algorithms
-
 ---
-
-# Data in Transit
+## Data in Transit
 - TLS/SSL
 - VPN
 - Protocol security
 - Network encryption
-
 ---
-
-# Data at Rest
+## Data at Rest
 - Disk encryption
 - Database encryption
 - Key storage
 - Access controls
-
 ---
-
-# Security Layers
+## Security Layers
 - Physical security
 - Network security
 - Application security
 - Data security
-
 ---
-
-# Part 6: Modern Architecture Patterns
-
+## Part 6: Modern Architecture Patterns
 ---
-
-# Microservices
+## Microservices
 - Service boundaries
 - Inter-service communication
 - Deployment patterns
 - Monitoring
-
 ---
-
-# Containerization
+## Containerization
 - Container basics
 - Orchestration
 - Service mesh
 - Security considerations
-
 ---
-
-# Serverless Architecture
+## Serverless Architecture
 - Functions as a Service (FaaS)
 - Event-driven design
 - Cold starts
 - Cost optimization
-
 ---
-
-# Edge Computing
+## Edge Computing
 - Edge vs. Cloud
 - Use cases
 - Deployment strategies
 - Performance benefits
-
 ---
-
-# Cloud Native Design
+## Cloud Native Design
 - Cloud services
 - Managed services
 - Infrastructure as Code
 - DevOps integration
-
 ---
-
-# Best Practices
-
+## Best Practices
 ---
-
-# Documentation
+## Documentation
 - Architecture diagrams
 - System specifications
 - Runbooks
 - Recovery procedures
-
 ---
-
-# Monitoring
+## Monitoring
 - System metrics
 - Application metrics
 - User metrics
 - Alert management
-
 ---
-
-# Performance Testing
+## Performance Testing
 - Load testing
 - Stress testing
 - Capacity planning
 - Benchmarking
-
 ---
-
-# Cost Optimization
+## Cost Optimization
 - Resource sizing
 - Usage patterns
 - Cost allocation
 - Efficiency metrics
-
 ---
-
-# Future Trends
+## Future Trends
 - Quantum computing
 - AI/ML integration
 - Sustainable computing
