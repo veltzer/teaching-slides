@@ -1,15 +1,7 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Writing Your First Assembly Program
 ## Assembly Programming using GAS
-
 ---
-
-# "Hello, World!" in Assembly
+## "Hello, World!" in Assembly
 
 A simple program to print "Hello, World!" to the console.
 
@@ -36,8 +28,7 @@ _start:
 ```
 
 ---
-
-# Assembling and Linking
+## Assembling and Linking
 
 1. Save the program as `hello.s`
 1. Assemble: `as hello.s -o hello.o`
@@ -45,13 +36,14 @@ _start:
 1. Run: `./hello`
 
 Output:
-```
+
+```text
 Hello, World!
 ```
 
 ---
 
-# Program Structure Breakdown
+## Program Structure Breakdown
 
 1. `.section .data`: Declares the data section
 1. `.section .text`: Declares the code section
@@ -61,12 +53,12 @@ Hello, World!
 
 ---
 
-# System Calls
+## System Calls
 
 - `int $0x80`: Interrupt to invoke a system call
 - Register usage for system calls:
-  - `%eax`: System call number
-  - `%ebx`, `%ecx`, `%edx`: Arguments
+    - `%eax`: System call number
+    - `%ebx`, `%ecx`, `%edx`: Arguments
 
 Common system calls:
 - 1: exit
@@ -74,19 +66,19 @@ Common system calls:
 
 ---
 
-# Debugging with GDB
+## Debugging with GDB
 
 1. Compile with debug symbols: `as -g hello.s -o hello.o`
-2. Link: `ld hello.o -o hello`
-3. Start GDB: `gdb ./hello`
-4. Set breakpoint: `break _start`
-5. Run: `run`
-6. Step through: `stepi`
-7. Examine registers: `info registers`
+1. Link: `ld hello.o -o hello`
+1. Start GDB: `gdb ./hello`
+1. Set breakpoint: `break _start`
+1. Run: `run`
+1. Step through: `stepi`
+1. Examine registers: `info registers`
 
 ---
 
-# Modifying the Program
+## Modifying the Program
 
 Let's change the message:
 
@@ -95,14 +87,14 @@ Let's change the message:
     msg: .ascii "Assembly is awesome!\n"
     len: .long . - msg
 
-# ... rest of the code remains the same
+## ... rest of the code remains the same
 ```
 
 Reassemble, link, and run to see the new output.
 
 ---
 
-# Adding User Input
+## Adding User Input
 
 ```x86asm
 .section .data
@@ -154,42 +146,31 @@ _start:
 
 ---
 
-# Common Errors and Debugging
+## Common Errors and Debugging
 
 1. Segmentation fault
-   - Often due to accessing invalid memory
-   - Use GDB to identify the problematic instruction
-
-2. Incorrect output
-   - Check your data declarations
-   - Verify system call arguments
-
-3. Assembler errors
-   - Syntax errors in your code
-   - Incorrect directives or register names
-
+    - Often due to accessing invalid memory
+    - Use GDB to identify the problematic instruction
+1. Incorrect output
+    - Check your data declarations
+    - Verify system call arguments
+1. Assembler errors
+    - Syntax errors in your code
+    - Incorrect directives or register names
 ---
-
-# Best Practices
-
+## Best Practices
 1. Comment your code thoroughly
-2. Use meaningful label names
-3. Organize your code into logical sections
-4. Test small parts of your program incrementally
-5. Use debugging tools like GDB to understand program flow
-
+1. Use meaningful label names
+1. Organize your code into logical sections
+1. Test small parts of your program incrementally
+1. Use debugging tools like GDB to understand program flow
 ---
-
-# Exercises
-
+## Exercises
 1. Modify the "Hello, World!" program to print your name
-2. Write a program that adds two numbers and prints the result
-3. Create a program that prints numbers from 1 to 10
-
+1. Write a program that adds two numbers and prints the result
+1. Create a program that prints numbers from 1 to 10
 ---
-
-# Additional Resources
-
-- GAS manual: https://sourceware.org/binutils/docs/as/
-- x86 instruction set reference: https://www.felixcloutier.com/x86/
-- Linux system call table: https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md
+## Additional Resources
+- [GAS manual](https://sourceware.org/binutils/docs/as)
+- [x86 instruction set reference](https://www.felixcloutier.com/x86)
+- [Linux system call table](https://chromium.googlesource.com/chromiumos/docs/+/master/constants/syscalls.md)

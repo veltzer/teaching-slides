@@ -37,22 +37,18 @@ section .data
 ```
 
 ---
-
 ## Instruction Set Architecture (ISA)
-
 - Set of instructions that a CPU can execute
 - Defines:
-  - Available operations
-  - Instruction formats
-  - Registers
-  - Addressing modes
-  - Memory organization
-
+    - Available operations
+    - Instruction formats
+    - Registers
+    - Addressing modes
+    - Memory organization
 ---
-
 ## Basic x86 Instruction Format
 
-```
+```x86asm
 [label:] mnemonic [operands] [; comment]
 ```
 
@@ -89,31 +85,33 @@ mov eax, [0x1000]
 
 ## Addressing Modes (continued)
 
-4. Indirect: Address stored in a register
-   ```gas
-   mov eax, [ebx]
-   ```
+1. Indirect: Address stored in a register
 
-5. Base + Offset: Address calculated from base and offset
-   ```gas
-   mov eax, [ebx + 8]
-   ```
+```gas
+mov eax, [ebx]
+```
 
-6. Scaled Index: Used for array access
-   ```gas
-   mov eax, [ebx + ecx*4]
-   ```
+1. Base + Offset: Address calculated from base and offset
+
+```gas
+mov eax, [ebx + 8]
+```
+
+1. Scaled Index: Used for array access
+
+```gas
+mov eax, [ebx + ecx*4]
+```
 
 ---
-
 ## Data Types
-
 - Byte: 8 bits
 - Word: 16 bits
 - Double Word: 32 bits
 - Quad Word: 64 bits
 
 Example:
+
 ```gas
 section .data
     my_byte  db 0xFF
@@ -134,6 +132,7 @@ section .data
 - DEC: Decrement
 
 Example:
+
 ```gas
 mov eax, 5
 add eax, 3      ; EAX now contains 8
@@ -189,6 +188,6 @@ not_equal:
 - Grows downwards in memory
 - Managed by ESP (Stack Pointer)
 - Used for:
-  - Local variables
-  - Function parameters
-  - Return addresses
+    - Local variables
+    - Function parameters
+    - Return addresses

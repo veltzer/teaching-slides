@@ -1,16 +1,11 @@
 # Debugging and Tools
-
 ---
-
-# GDB for Assembly Programs
-
+## GDB for Assembly Programs
 - GNU Debugger (GDB)
 - Powerful tool for debugging assembly code
 - Supports both source-level and machine-level debugging
-
 ---
-
-# Compiling for Debugging
+## Compiling for Debugging
 
 ```bash
 as -g program.s -o program.o
@@ -21,7 +16,7 @@ The `-g` flag includes debugging information.
 
 ---
 
-# Basic GDB Commands
+## Basic GDB Commands
 
 - `run` (r): Start the program
 - `break` (b): Set a breakpoint
@@ -33,9 +28,9 @@ The `-g` flag includes debugging information.
 
 ---
 
-# GDB Example Session
+## GDB Example Session
 
-```
+```gdb
 $ gdb ./program
 (gdb) break _start
 (gdb) run
@@ -47,21 +42,21 @@ $ gdb ./program
 
 ---
 
-# Examining Memory in GDB
+## Examining Memory in GDB
 
 - `x/nfu addr`: Examine memory
-  - n: number of units to display
-  - f: format (x: hex, d: decimal, u: unsigned, i: instruction)
-  - u: unit size (b: byte, h: halfword, w: word, g: giant word)
+    - n: number of units to display
+    - f: format (x: hex, d: decimal, u: unsigned, i: instruction)
+    - u: unit size (b: byte, h: halfword, w: word, g: giant word)
 
 Example:
-```
+
+```gdb
 (gdb) x/10xw $esp
 ```
 
 ---
-
-# Objdump
+## Objdump
 
 - Displays information about object files
 - Useful for disassembling binary files
@@ -73,9 +68,9 @@ objdump -d program
 
 ---
 
-# Objdump Output Example
+## Objdump Output Example
 
-```
+```text
 0000000000001129 <main>:
     1129:   55                      push   %rbp
     112a:   48 89 e5                mov    %rsp,%rbp
@@ -100,7 +95,7 @@ objdump -d program
 
 ---
 
-# Other Binary Analysis Tools
+## Other Binary Analysis Tools
 
 - `nm`: List symbols from object files
 - `readelf`: Display information about ELF files
@@ -110,13 +105,13 @@ objdump -d program
 
 ---
 
-# Performance Profiling
+## Performance Profiling
 
 - Identify performance bottlenecks
 - Tools:
-  - `gprof`: GNU Profiler
-  - `perf`: Linux profiling tool
-  - Valgrind
+    - `gprof`: GNU Profiler
+    - `perf`: Linux profiling tool
+    - Valgrind
 
 ---
 ## Using gprof
@@ -153,7 +148,7 @@ perf report
 
 ---
 
-# Valgrind
+## Valgrind
 
 - Suite of debugging and profiling tools
 - Memcheck: Memory error detector
@@ -167,7 +162,7 @@ valgrind --tool=callgrind ./program
 
 ---
 
-# Debugging Tips
+## Debugging Tips
 
 1. Use meaningful labels in your code
 1. Comment your code thoroughly

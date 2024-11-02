@@ -29,12 +29,12 @@ DO_MARP_HTML:=0
 DO_MD_ASPELL:=1
 # do you want to check that the md files are pure ASCII?
 DO_MD_ASCII:=1
-# do you want to convert mermaid diagrams into png?
-DO_MERMAID_PNG:=1
 # do you want to run mdl on md files?
 DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
+# do you want to convert mermaid diagrams into png?
+DO_MERMAID_PNG:=1
 # convert drawio images to png?
 ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
@@ -96,6 +96,14 @@ ifeq ($(DO_MD_ASCII),1)
 ALL+=$(MD_ASCII)
 endif # DO_MD_ASCII
 
+ifeq ($(DO_MD_MDL),1)
+ALL+=$(MD_MDL)
+endif # DO_MD_MDL
+
+ifeq ($(DO_MD_MARKDOWNLINT),1)
+ALL+=$(MD_MARKDOWNLINT)
+endif # DO_MD_MARKDOWNLINT
+
 ifeq ($(DO_FMT_ODP_PPT),1)
 ALL+=$(ODP_PPT)
 endif # DO_FMT_ODP_PPT
@@ -135,14 +143,6 @@ endif # DO_MERMAID_PNG
 ifeq ($(DO_DRAWIO_PNG),1)
 ALL+=$(DRAWIO_PNG)
 endif # DO_DRAWIO_PNG
-
-ifeq ($(DO_MD_MDL),1)
-ALL+=$(MD_MDL)
-endif # DO_MD_MDL
-
-ifeq ($(DO_MD_MARKDOWNLINT),1)
-ALL+=$(MD_MARKDOWNLINT)
-endif # DO_MD_MARKDOWNLINT
 
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=
@@ -266,14 +266,6 @@ $(MD_ASCII): out/%.ascii: %.md
 	$(info doing [$@])
 	$(Q)pymakehelper error_on_print grep -P -n "[^\x00-\x7F]" $<
 	$(Q)pymakehelper touch_mkdir $@
-$(MERMAID_PNG): out/%.png: %.mmd .mdlrc .mdl.style.rb
-	$(info doing [$@])
-	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
-$(DRAWIO_PNG): out/%.png: %.drawio
-	$(info doing [$@])
-	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
@@ -282,6 +274,14 @@ $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(info doing [$@])
 	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)pymakehelper touch_mkdir $@
+$(MERMAID_PNG): out/%.png: %.mmd .mdlrc .mdl.style.rb
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
+$(DRAWIO_PNG): out/%.png: %.drawio
+	$(info doing [$@])
+	$(Q)mkdir -p $(dir $@)
+	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
 
 ##########
 # alldep #

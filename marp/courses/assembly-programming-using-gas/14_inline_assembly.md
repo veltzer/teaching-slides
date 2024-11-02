@@ -2,7 +2,7 @@
 
 ---
 
-# What is Inline Assembly?
+## What is Inline Assembly?
 
 - Assembly code embedded directly in C code
 - Allows low-level optimizations and hardware access
@@ -11,7 +11,7 @@
 
 ---
 
-# Basic Syntax
+## Basic Syntax
 
 ```c
 __asm__ (
@@ -30,7 +30,7 @@ __asm__ (
 
 ---
 
-# Extended ASM Syntax
+## Extended ASM Syntax
 
 ```c
 __asm__ (
@@ -53,7 +53,7 @@ __asm__ (
 
 ---
 
-# Output Operands
+## Output Operands
 
 - Specify where results are stored
 - Use "=" for write-only, "+" for read-write
@@ -69,7 +69,7 @@ __asm__ (
 
 ---
 
-# Input Operands
+## Input Operands
 
 - Provide values to the assembly code
 - Can use variables or constants
@@ -86,7 +86,7 @@ __asm__ (
 
 ---
 
-# Clobbers
+## Clobbers
 
 - Tell the compiler which registers or memory are modified
 - Use "memory" for any memory writes
@@ -103,16 +103,17 @@ __asm__ (
 
 ---
 
-# Constraints
+## Constraints
 
 - Tell the compiler how to allocate variables
 - Common constraints:
-  - "r": Any general-purpose register
-  - "m": Memory operand
-  - "i": Immediate integer operand
-  - "0", "1", "2", etc.: Use the same place as the nth operand
+    - "r": Any general-purpose register
+    - "m": Memory operand
+    - "i": Immediate integer operand
+    - "0", "1", "2", etc.: Use the same place as the nth operand
 
 Example:
+
 ```c
 int src = 1, dst;
 __asm__ (
@@ -123,8 +124,7 @@ __asm__ (
 ```
 
 ---
-
-# Using Inline Assembly for Optimization
+## Using Inline Assembly for Optimization
 
 Example: Fast integer square root
 ```c
@@ -145,7 +145,7 @@ static inline int isqrt(int num) {
 
 ---
 
-# Accessing Special CPU Instructions
+## Accessing Special CPU Instructions
 
 Example: Using RDTSC to read CPU timestamp
 ```c
@@ -165,7 +165,7 @@ unsigned long long rdtsc() {
 
 ---
 
-# Inline Assembly in Functions
+## Inline Assembly in Functions
 
 Example: Optimized strlen
 ```c
@@ -188,7 +188,7 @@ size_t my_strlen(const char *str) {
 
 ---
 
-# Portability Concerns
+## Portability Concerns
 
 - Inline assembly is architecture-specific
 - May break with compiler optimizations
@@ -210,7 +210,7 @@ void add_vectors(float *a, float *b, float *result, int size) {
 
 ---
 
-# Best Practices
+## Best Practices
 
 1. Use inline assembly sparingly
 1. Document thoroughly
