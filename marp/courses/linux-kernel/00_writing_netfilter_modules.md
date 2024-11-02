@@ -1,45 +1,34 @@
 # Writing Netfilter Modules
-An Introduction with Examples
+
+## An Introduction with Examples
 
 ---
-
-# Outline
-
+## Outline
 1. Introduction to Netfilter
-2. Netfilter Hook Points
-3. Basic Structure of a Netfilter Module
-4. Example: A Simple Packet Logger
-5. Example: IP Address Blacklist
-6. Compiling and Loading Netfilter Modules
-7. Concurrency in Netfilter Modules
-8. Best Practices and Considerations
-
+1. Netfilter Hook Points
+1. Basic Structure of a Netfilter Module
+1. Example: A Simple Packet Logger
+1. Example: IP Address Blacklist
+1. Compiling and Loading Netfilter Modules
+1. Concurrency in Netfilter Modules
+1. Best Practices and Considerations
 ---
-
-# 1. Introduction to Netfilter
-
+## Introduction to Netfilter
 - Netfilter is the packet filtering framework in the Linux kernel
 - It allows packet filtering, network address translation (NAT), and other packet mangling
 - Netfilter provides a set of hooks in the networking stack
 - Modules can register callback functions with these hooks
-
 ---
-
-# 2. Netfilter Hook Points
-
+## Netfilter Hook Points
 Five main hook points:
-
 1. `NF_INET_PRE_ROUTING`
-2. `NF_INET_LOCAL_IN`
-3. `NF_INET_FORWARD`
-4. `NF_INET_LOCAL_OUT`
-5. `NF_INET_POST_ROUTING`
-
+1. `NF_INET_LOCAL_IN`
+1. `NF_INET_FORWARD`
+1. `NF_INET_LOCAL_OUT`
+1. `NF_INET_POST_ROUTING`
 Each hook point allows you to intercept and modify packets at different stages of processing.
-
 ---
-
-# 3. Basic Structure of a Netfilter Module
+## Basic Structure of a Netfilter Module
 
 ```c
 #include <linux/module.h>
@@ -74,7 +63,7 @@ MODULE_LICENSE("GPL");
 
 ---
 
-# 4. Example: A Simple Packet Logger
+## Example: A Simple Packet Logger
 
 ```c
 #include <linux/module.h>
@@ -107,8 +96,7 @@ MODULE_LICENSE("GPL");
 ```
 
 ---
-
-# 5. Example: IP Address Blacklist
+## Example: IP Address Blacklist
 
 ```c
 #include <linux/module.h>
@@ -142,7 +130,7 @@ MODULE_LICENSE("GPL");
 
 ---
 
-# 6. Compiling and Loading Netfilter Modules
+## Compiling and Loading Netfilter Modules
 
 1. Create a Makefile:
 
@@ -156,34 +144,36 @@ clean:
     make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
 ```
 
-2. Compile the module:
-   ```
-   make
-   ```
+1. Compile the module:
 
-3. Load the module:
-   ```
-   sudo insmod mymodule.ko
-   ```
+```bash
+make
+```
 
-4. Unload the module:
-   ```
-   sudo rmmod mymodule
-   ```
+1. Load the module:
+
+```bash
+sudo insmod mymodule.ko
+```
+
+1. Unload the module:
+
+```bash
+sudo rmmod mymodule
+```
 
 ---
 
-# 7. Concurrency in Netfilter Modules
+## Concurrency in Netfilter Modules
 
-## Hook Function Execution
+### Hook Function Execution
 
 - Hook functions can run on any CPU core
 - Multiple instances of the same hook function can run in parallel on different cores
 - Different hook functions can also run concurrently
 
 ---
-
-# Concurrency Challenges
+## Concurrency Challenges
 
 1. Shared Resource Access
     - Use appropriate synchronization mechanisms (e.g., spinlocks, RCU) when accessing shared data
@@ -193,6 +183,7 @@ clean:
 
 Understand the context in which your hook functions run (softirq context)
 Use appropriate synchronization primitives based on the execution context
+
 ---
 ## Example: Using Spinlocks for Shared Data
 
@@ -216,8 +207,7 @@ unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_sta
 ```
 
 ---
-
-# Example: Using Per-CPU Variables
+## Example: Using Per-CPU Variables
 
 ```c
 #include <linux/percpu.h>
@@ -235,8 +225,7 @@ unsigned int hook_func(void *priv, struct sk_buff *skb, const struct nf_hook_sta
 ```
 
 ---
-
-# Concurrency Considerations
+## Concurrency Considerations
 
 - Minimize time spent in critical sections
 - Be aware of potential deadlocks when using multiple locks
