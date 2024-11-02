@@ -1,30 +1,21 @@
 # Comparison with Other Architectures
-
 ---
-
-# ARM Assembly Basics
-
+## ARM Assembly Basics
 - Reduced Instruction Set Computing (RISC)
 - Used in mobile devices, embedded systems
 - Different syntax and conventions from x86
-
 ---
-
-# ARM vs x86: Register Set
-
+## ARM vs x86: Register Set
 ARM:
 - r0-r15 (general-purpose registers)
 - sp (stack pointer, alias for r13)
 - lr (link register, alias for r14)
 - pc (program counter, alias for r15)
-
 x86:
 - eax, ebx, ecx, edx, esi, edi, ebp, esp
 - eip (instruction pointer)
-
 ---
-
-# ARM Assembly Example
+## ARM Assembly Example
 
 ```arm
 .global _start
@@ -45,7 +36,7 @@ message:
 
 ---
 
-# x86 Equivalent
+## x86 Equivalent
 
 ```x86asm
 .global _start
@@ -67,7 +58,7 @@ message:
 
 ---
 
-# RISC vs CISC
+## RISC vs CISC
 
 RISC (e.g., ARM):
 - Simple instructions
@@ -81,7 +72,7 @@ CISC (e.g., x86):
 
 ---
 
-# Instruction Comparison
+## Instruction Comparison
 
 ARM (RISC):
 ```arm
@@ -97,7 +88,7 @@ add [ecx], edx  @ Load, add, and store in one instruction
 
 ---
 
-# MIPS Architecture
+## MIPS Architecture
 
 - Another RISC architecture
 - Used in embedded systems and networking equipment
@@ -120,13 +111,14 @@ hello_msg: .asciiz "Hello, World!\n"
 
 ---
 
-# PowerPC Architecture
+## PowerPC Architecture
 
 - RISC architecture used in older Macs, game consoles
 - 32 general-purpose registers (r0-r31)
 
 PowerPC Example:
-```
+
+```asm
 .global _start
 _start:
     li r0, 4        # System call: write
@@ -146,14 +138,15 @@ msg: .ascii "Hello, World\n"
 
 ---
 
-# RISC-V Architecture
+## RISC-V Architecture
 
 - Open-source RISC architecture
 - Gaining popularity in embedded systems and academia
 - Extensible instruction set
 
 RISC-V Example:
-```
+
+```asm
 .global _start
 _start:
     li a7, 64       # System call: write
@@ -172,9 +165,7 @@ message:
 ```
 
 ---
-
-# Instruction Set Comparison
-
+## Instruction Set Comparison
 | Architecture | Add           | Load                | Branch        |
 |--------------|---------------|---------------------|---------------|
 | x86          | add eax, ebx  | mov eax, [ebx]      | jne label     |
@@ -182,20 +173,14 @@ message:
 | MIPS         | add $t0,$t1,$t2| lw $t0, 0($t1)     | bne $t0,$t1,label |
 | PowerPC      | add r3, r4, r5| lwz r3, 0(r4)       | bne cr0, label|
 | RISC-V       | add a0, a1, a2| lw a0, 0(a1)        | bne a0, a1, label |
-
 ---
-
-# Architectural Trade-offs
-
+## Architectural Trade-offs
 - Performance vs Power consumption
 - Code density vs Simplicity
 - Hardware complexity vs Software flexibility
 - Backward compatibility vs Clean design
-
 ---
-
-# Choosing an Architecture
-
+## Choosing an Architecture
 - Consider target platform (mobile, desktop, server)
 - Evaluate performance requirements
 - Assess development tools and ecosystem

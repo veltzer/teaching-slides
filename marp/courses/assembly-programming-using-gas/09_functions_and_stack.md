@@ -8,10 +8,10 @@
 - Grows downward in memory
 - ESP (Stack Pointer) points to the top of the stack
 - Used for:
-  - Local variables
-  - Function parameters
-  - Return addresses
-  - Saving registers
+    - Local variables
+    - Function parameters
+    - Return addresses
+    - Saving registers
 
 ---
 

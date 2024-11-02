@@ -1,17 +1,17 @@
 # Real-world Applications and Projects
 ---
 
-# Implementing Simple Algorithms
+## Implementing Simple Algorithms
 
 - Great way to practice assembly programming
 - Examples:
-  - Sorting algorithms
-  - Search algorithms
-  - Cryptographic functions
+    - Sorting algorithms
+    - Search algorithms
+    - Cryptographic functions
 
 ---
 
-# Bubble Sort in Assembly
+## Bubble Sort in Assembly
 
 ```x86asm
 .globl bubble_sort
@@ -43,17 +43,17 @@ done:
 
 ---
 
-# Writing Device Drivers
+## Writing Device Drivers
 
 - Interface between hardware and OS
 - Requires understanding of:
-  - Hardware specifications
-  - OS kernel API
-  - Low-level I/O operations
+    - Hardware specifications
+    - OS kernel API
+    - Low-level I/O operations
 
 ---
 
-# Simple Character Device Driver
+## Simple Character Device Driver
 
 ```c
 #include <linux/module.h>
@@ -92,7 +92,7 @@ module_exit(cleanup_module);
 
 ---
 
-# Reverse Engineering
+## Reverse Engineering
 
 - Analyzing compiled binaries
 - Understanding program behavior without source code
@@ -100,7 +100,7 @@ module_exit(cleanup_module);
 
 ---
 
-# Basic Reverse Engineering Workflow
+## Basic Reverse Engineering Workflow
 
 1. Obtain the binary
 1. Analyze file format and architecture
@@ -111,7 +111,7 @@ module_exit(cleanup_module);
 
 ---
 
-# Disassembly Example
+## Disassembly Example
 
 Original C code:
 ```c
@@ -133,7 +133,7 @@ add:
 
 ---
 
-# Security Applications
+## Security Applications
 
 - Vulnerability assessment
 - Exploit development
@@ -141,7 +141,7 @@ add:
 
 ---
 
-# Buffer Overflow Example
+## Buffer Overflow Example
 
 Vulnerable C code:
 ```c

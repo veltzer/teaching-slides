@@ -39,6 +39,7 @@ Note: The second method creates a read-only string literal.
 ## String Input and Output
 
 Input:
+
 ```c
 char name[50];
 scanf("%s", name);  // Reads until whitespace
@@ -46,6 +47,7 @@ fgets(name, sizeof(name), stdin);  // Reads entire line
 ```
 
 Output:
+
 ```c
 char *greeting = "Hello, World!";
 printf("%s\n", greeting);

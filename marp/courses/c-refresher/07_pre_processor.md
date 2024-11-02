@@ -5,13 +5,13 @@
 ## Introduction to the C Preprocessor
 
 - What is the preprocessor?
-  - First stage of compilation
-  - Text substitution tool
+    - First stage of compilation
+    - Text substitution tool
 - Key functions:
-  - File inclusion
-  - Macro expansion
-  - Conditional compilation
-  - Line control
+    - File inclusion
+    - Macro expansion
+    - Conditional compilation
+    - Line control
 
 ---
 
@@ -19,13 +19,14 @@
 
 - `#include` directive
 - Two forms:
-  - `#include <file>` (system headers)
-  - `#include "file"` (user-defined headers)
+    - `#include <file>` (system headers)
+    - `#include "file"` (user-defined headers)
 - Example:
-  ```c
-  #include <stdio.h>
-  #include "myheader.h"
-  ```
+
+```c
+#include <stdio.h>
+#include "myheader.h"
+```
 
 ---
 
@@ -33,14 +34,17 @@
 
 - `#define` directive
 - Object-like macros:
-  ```c
-  #define PI 3.14159
-  #define MAX_SIZE 100
-  ```
+
+```c
+#define PI 3.14159
+#define MAX_SIZE 100
+```
+
 - Function-like macros:
-  ```c
-  #define MAX(a, b) ((a) > (b) ? (a) : (b))
-  ```
+
+```c
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+```
 
 ---
 
@@ -48,15 +52,16 @@
 
 - `#ifdef`, `#ifndef`, `#if`, `#elif`, `#else`, `#endif`
 - Used for:
-  - Platform-specific code
-  - Debugging
-  - Feature toggles
+    - Platform-specific code
+    - Debugging
+    - Feature toggles
 - Example:
-  ```c
-  #ifdef DEBUG
-    printf("Debug: x = %d\n", x);
-  #endif
-  ```
+
+```c
+#ifdef DEBUG
+printf("Debug: x = %d\n", x);
+#endif
+```
 
 ---
 
@@ -64,44 +69,42 @@
 
 - Automatically defined by the compiler
 - Examples:
-  - `__FILE__`: Current source file name
-  - `__LINE__`: Current line number
-  - `__DATE__`: Compilation date
-  - `__TIME__`: Compilation time
-  - `__STDC__`: Conformance to ISO Standard C
+    - `__FILE__`: Current source file name
+    - `__LINE__`: Current line number
+    - `__DATE__`: Compilation date
+    - `__TIME__`: Compilation time
+    - `__STDC__`: Conformance to ISO Standard C
 
 ---
-
 ## Macro Pitfalls and Best Practices
-
 - Be cautious with side effects
 - Use parentheses in macro definitions
 - Consider using inline functions instead
 - Avoid overly complex macros
 - Example of a problematic macro:
-  ```c
-  #define SQUARE(x) x * x
-  // SQUARE(a + 1) expands to a + 1 * a + 1
-  ```
+
+```c
+#define SQUARE(x) x * x
+// SQUARE(a + 1) expands to a + 1 * a + 1
+```
 
 ---
-
 ## #pragma Directive
-
 - Compiler-specific instructions
 - Common uses:
-  - Control struct packing
-  - Manage warnings
-  - Specify optimization levels
+    - Control struct packing
+    - Manage warnings
+    - Specify optimization levels
 - Example:
-  ```c
-  #pragma pack(1)
-  struct tightly_packed {
-      char c;
-      int i;
-  };
-  #pragma pack()
-  ```
+
+```c
+#pragma pack(1)
+struct tightly_packed {
+  char c;
+  int i;
+};
+#pragma pack()
+```
 
 ---
 
@@ -111,11 +114,12 @@
 - Stringification operator (`#`)
 - Variadic macros
 - Example:
-  ```c
-  #define CONCAT(a, b) a ## b
-  #define STRINGIFY(x) #x
-  #define DEBUG_PRINT(...) printf("Debug: " __VA_ARGS__)
-  ```
+
+```c
+#define CONCAT(a, b) a ## b
+#define STRINGIFY(x) #x
+#define DEBUG_PRINT(...) printf("Debug: " __VA_ARGS__)
+```
 
 ---
 
@@ -150,8 +154,8 @@ gcc -E source.c -o preprocessed.i
 
 - The preprocessor is a powerful tool
 - Key features:
-  - File inclusion
-  - Macro expansion
-  - Conditional compilation
+    - File inclusion
+    - Macro expansion
+    - Conditional compilation
 - Use with caution and follow best practices
 - Balance between preprocessor and language features

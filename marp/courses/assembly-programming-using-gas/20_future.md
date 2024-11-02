@@ -1,23 +1,18 @@
 # Future of Assembly Programming
-
 ---
-
-# Current Role of Assembly
-
+## Current Role of Assembly
 - Performance-critical sections
 - Device drivers and OS kernels
 - Embedded systems
 - Reverse engineering and security
-
 ---
-
-# High-Level Languages vs Assembly
-
+## High-Level Languages vs Assembly
 - Most applications: High-level languages
 - Specific use cases: Assembly still relevant
 - Compilers becoming increasingly sophisticated
 
 Example of inline assembly in C:
+
 ```c
 int add(int a, int b) {
     int result;
@@ -31,14 +26,13 @@ int add(int a, int b) {
 ```
 
 ---
-
-# Emerging Architectures
-
+## Emerging Architectures
 - RISC-V: Open-source ISA
 - Quantum Computing
 - Neuromorphic Computing
 
 RISC-V Example:
+
 ```riscv
 .global _start
 _start:
@@ -58,35 +52,31 @@ message:
 ```
 
 ---
-
-# Specialized Instruction Sets
+## Specialized Instruction Sets
 
 - AI and Machine Learning (e.g., TPUs)
 - Graphics Processing (e.g., CUDA)
 - Cryptography (e.g., AES-NI)
 
 Example of using AES-NI:
+
 ```x86asm
 aesenc xmm0, xmm1   ; AES encryption round
 ```
 
 ---
-
-# Assembly in Education
-
+## Assembly in Education
 - Teaching computer architecture
 - Understanding low-level operations
 - Foundation for systems programming
-
 ---
-
-# WebAssembly (Wasm)
-
+## WebAssembly (Wasm)
 - Binary instruction format for stack-based VM
 - Designed for client and server-side web programming
 - Can be generated from languages like C, C++, Rust
 
 Example:
+
 ```wat
 (module
   (func $add (param $a i32) (param $b i32) (result i32)
@@ -98,22 +88,18 @@ Example:
 ```
 
 ---
-
-# Just-In-Time (JIT) Compilation
-
+## Just-In-Time (JIT) Compilation
 - Runtime compilation of code
 - Combines advantages of interpreted and compiled code
 - Often uses low-level optimization techniques
-
 ---
-
-# Assembly in Heterogeneous Computing
-
+## Assembly in Heterogeneous Computing
 - CPU-GPU hybrid systems
 - FPGA programming
 - Custom accelerators
 
 Example of CUDA kernel:
+
 ```cuda
 __global__ void add(int *a, int *b, int *c) {
     int index = threadIdx.x + blockIdx.x * blockDim.x;
@@ -122,14 +108,13 @@ __global__ void add(int *a, int *b, int *c) {
 ```
 
 ---
-
-# Optimizing for Modern Hardware
-
+## Optimizing for Modern Hardware
 - Instruction pipelining
 - Branch prediction
 - Cache-friendly code
 
 Example of loop unrolling:
+
 ```x86asm
 .loop:
     mov eax, [esi]
@@ -143,14 +128,13 @@ Example of loop unrolling:
 ```
 
 ---
-
-# Security Considerations
-
+## Security Considerations
 - Control-flow Integrity (CFI)
 - Return-Oriented Programming (ROP) defenses
 - Hardware-level security features
 
 Example of CFI check:
+
 ```x86asm
     call check_target
     jmp [function_pointer]
@@ -162,14 +146,13 @@ check_target:
 ```
 
 ---
-
-# Assembly in IoT and Embedded Systems
-
+## Assembly in IoT and Embedded Systems
 - Resource-constrained devices
 - Real-time systems
 - Power efficiency
 
 Example for an ARM Cortex-M:
+
 ```arm
     ldr r0, =GPIO_BASE
     mov r1, #LED_PIN
@@ -177,18 +160,13 @@ Example for an ARM Cortex-M:
 ```
 
 ---
-
-# Ongoing Relevance of Assembly
-
+## Ongoing Relevance of Assembly
 - Performance optimization
 - Hardware-software interface
 - Low-level system control
 - Understanding computer architecture
-
 ---
-
-# Challenges and Opportunities
-
+## Challenges and Opportunities
 - Keeping up with new architectures
 - Balancing performance and maintainability
 - Integrating with high-level languages

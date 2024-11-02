@@ -1,8 +1,7 @@
 # Best Practices and Coding Standards
 
 ---
-
-# Code Organization
+## Code Organization
 
 - Use a consistent file structure
 - Separate code into logical sections
@@ -20,13 +19,13 @@ Example:
 ```
 
 ---
-
-# Naming Conventions
+## Naming Conventions
 
 - Use descriptive names for labels and variables
 - Follow a consistent naming style
 
 Examples:
+
 ```x86asm
 calculate_sum:
     # Function to calculate sum
@@ -37,13 +36,13 @@ current_index: .long 0
 ```
 
 ---
-
-# Commenting
+## Commenting
 
 - Comment your code thoroughly
 - Explain the "why", not just the "what"
 
 Example:
+
 ```x86asm
 # Calculate factorial of n (in eax)
 # Result stored in eax
@@ -65,13 +64,13 @@ factorial:
 ```
 
 ---
-
-# Modular Programming
+## Modular Programming
 
 - Break code into reusable functions
 - Use stack for parameter passing
 
 Example:
+
 ```x86asm
 .globl add_numbers
 add_numbers:
@@ -84,13 +83,13 @@ add_numbers:
 ```
 
 ---
-
-# Consistent Register Usage
+## Consistent Register Usage
 
 - Use registers consistently across your program
 - Document register usage in comments
 
 Example:
+
 ```x86asm
 # eax: loop counter
 # ebx: array base address
@@ -99,13 +98,12 @@ Example:
 ```
 
 ---
-
-# Proper Alignment
-
+## Proper Alignment
 - Align data for optimal performance
 - Use appropriate directives
 
 Example:
+
 ```x86asm
 .align 16
 sse_data:
@@ -113,13 +111,12 @@ sse_data:
 ```
 
 ---
-
-# Error Handling in Assembly
-
+## Error Handling in Assembly
 - Use conditional jumps for error checking
 - Set error codes in a consistent manner
 
 Example:
+
 ```x86asm
     cmp eax, 0
     jl .error_handler
@@ -133,8 +130,7 @@ Example:
 ```
 
 ---
-
-# Use of Macros
+## Use of Macros
 
 - Create macros for repeated code patterns
 - Improves readability and maintainability
@@ -158,7 +154,7 @@ Example:
 
 ---
 
-# Consistent Indentation
+## Consistent Indentation
 
 - Use consistent indentation for readability
 - Align similar instructions
@@ -176,12 +172,13 @@ Example:
 
 ---
 
-# Documentation
+## Documentation
 
 - Provide a header comment for each file
 - Include purpose, author, date, and usage
 
 Example:
+
 ```x86asm
 # File: math_utils.s
 # Author: John Doe
@@ -191,8 +188,7 @@ Example:
 ```
 
 ---
-
-# Avoid Self-Modifying Code
+## Avoid Self-Modifying Code
 
 - Self-modifying code is hard to maintain
 - Use it only when absolutely necessary
@@ -208,7 +204,7 @@ Use variables or conditional execution
 
 ---
 
-# Testing and Validation
+## Testing and Validation
 
 - Write test cases for your assembly code
 - Use assertions to catch errors early

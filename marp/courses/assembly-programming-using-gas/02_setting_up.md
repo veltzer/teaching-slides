@@ -87,7 +87,8 @@ set autoindent
 ## Creating a Basic Assembly Project
 
 Project structure:
-```
+
+```text
 my_assembly_project/
 +-- src/
 |   +-- main.s

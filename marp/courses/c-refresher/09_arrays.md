@@ -10,6 +10,7 @@
 - Zero-indexed: first element is at index 0
 
 Basic syntax:
+
 ```c
 data_type array_name[array_size];
 ```
@@ -19,11 +20,13 @@ data_type array_name[array_size];
 ## Declaring and Initializing Arrays
 
 Declaration:
+
 ```c
 int numbers[5];  // Declares an array of 5 integers
 ```
 
 Initialization:
+
 ```c
 int numbers[5] = {1, 2, 3, 4, 5};  // Full initialization
 int partial[5] = {1, 2};  // Partial (rest are 0)
@@ -91,6 +94,7 @@ printArray(numbers, 5);
 ```
 
 Alternative syntax:
+
 ```c
 void printArray(int *arr, int size) {
     // Function body remains the same
@@ -112,6 +116,7 @@ int matrix[3][4] = {
 ```
 
 Accessing elements:
+
 ```c
 int element = matrix[1][2];  // element is 7
 ```
@@ -182,63 +187,58 @@ free(dynamicArray);
 ## Common Array Operations
 
 1. Traversing:
-   ```c
-   for (int i = 0; i < size; i++) {
-       printf("%d ", arr[i]);
-   }
-   ```
+
+```c
+for (int i = 0; i < size; i++) {
+   printf("%d ", arr[i]);
+}
+```
 
 1. Searching:
-   ```c
-   int search(int arr[], int size, int key) {
-       for (int i = 0; i < size; i++) {
-           if (arr[i] == key) return i;
-       }
-       return -1;  // Not found
+
+```c
+int search(int arr[], int size, int key) {
+   for (int i = 0; i < size; i++) {
+       if (arr[i] == key) return i;
    }
-   ```
+   return -1;  // Not found
+}
+```
 
 1. Sorting (e.g., bubble sort):
-   ```c
-   void bubbleSort(int arr[], int size) {
-       for (int i = 0; i < size-1; i++) {
-           for (int j = 0; j < size-i-1; j++) {
-               if (arr[j] > arr[j+1]) {
-                   // Swap arr[j] and arr[j+1]
-                   int temp = arr[j];
-                   arr[j] = arr[j+1];
-                   arr[j+1] = temp;
-               }
+
+```c
+void bubbleSort(int arr[], int size) {
+   for (int i = 0; i < size-1; i++) {
+       for (int j = 0; j < size-i-1; j++) {
+           if (arr[j] > arr[j+1]) {
+               // Swap arr[j] and arr[j+1]
+               int temp = arr[j];
+               arr[j] = arr[j+1];
+               arr[j+1] = temp;
            }
        }
    }
-   ```
+}
+```
 
 ---
-
 ## Array Limitations and Considerations
-
 1. Fixed size: Cannot be resized after declaration
-2. No bounds checking: Accessing out-of-bounds elements can cause undefined behavior
-3. No built-in size information: Size must be tracked separately
-4. Whole array assignment not possible: Must copy element by element
-5. When passed to functions, arrays decay to pointers, losing size information
-
+1. No bounds checking: Accessing out-of-bounds elements can cause undefined behavior
+1. No built-in size information: Size must be tracked separately
+1. Whole array assignment not possible: Must copy element by element
+1. When passed to functions, arrays decay to pointers, losing size information
 ---
-
 ## Best Practices
-
 1. Always initialize arrays when declared, if possible
-2. Use const for arrays that shouldn't be modified
-3. Use sizeof() carefully with arrays (doesn't work as expected when arrays decay to pointers)
-4. Consider using dynamic allocation for large or variably-sized arrays
-5. Be cautious with multidimensional arrays and their memory usage
-6. Always free dynamically allocated arrays when no longer needed
-
+1. Use const for arrays that shouldn't be modified
+1. Use sizeof() carefully with arrays (doesn't work as expected when arrays decay to pointers)
+1. Consider using dynamic allocation for large or variably-sized arrays
+1. Be cautious with multidimensional arrays and their memory usage
+1. Always free dynamically allocated arrays when no longer needed
 ---
-
 ## Summary
-
 - Arrays in C are fixed-size collections of elements of the same type
 - They are closely related to pointers and are passed by reference to functions
 - Multidimensional arrays and arrays of pointers provide more complex data structures

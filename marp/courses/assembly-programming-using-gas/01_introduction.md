@@ -56,18 +56,18 @@
 - CISC (Complex Instruction Set Computing) architecture
 - Widely used in personal computers and servers
 - Versions:
-  - 16-bit (8086/8088)
-  - 32-bit (IA-32 or i386)
-  - 64-bit (x86-64 or AMD64)
+    - 16-bit (8086/8088)
+    - 32-bit (IA-32 or i386)
+    - 64-bit (x86-64 or AMD64)
 
 ---
 
 ## x86 Register Set (32-bit)
 
 - General Purpose Registers:
-  - EAX, EBX, ECX, EDX
-  - ESI, EDI
-  - EBP, ESP
+    - EAX, EBX, ECX, EDX
+    - ESI, EDI
+    - EBP, ESP
 - Segment Registers: CS, DS, SS, ES, FS, GS
 - Status Flags Register: EFLAGS
 - Instruction Pointer: EIP
@@ -86,8 +86,8 @@
 ## x86-64 Register Set
 
 - General Purpose Registers:
-  - RAX, RBX, RCX, RDX, RSI, RDI, RBP, RSP
-  - R8 to R15 (new 64-bit registers)
+    - RAX, RBX, RCX, RDX, RSI, RDI, RBP, RSP
+    - R8 to R15 (new 64-bit registers)
 - Wider registers (64-bit instead of 32-bit)
 - More registers available for general use
 

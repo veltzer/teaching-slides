@@ -17,11 +17,11 @@ C provides several basic data types:
 
 - Used to store whole numbers
 - Various sizes available:
-  - `char`: 1 byte
-  - `short`: 2 bytes
-  - `int`: 2 or 4 bytes (usually 4)
-  - `long`: 4 or 8 bytes
-  - `long long`: 8 bytes (C99 and later)
+    - `char`: 1 byte
+    - `short`: 2 bytes
+    - `int`: 2 or 4 bytes (usually 4)
+    - `long`: 4 or 8 bytes
+    - `long long`: 8 bytes (C99 and later)
 
 ```c
 int a = 10;
@@ -46,9 +46,9 @@ signed char small = -128;
 
 - Used to store decimal numbers
 - Three types available:
-  - `float`: Single precision (4 bytes)
-  - `double`: Double precision (8 bytes)
-  - `long double`: Extended precision (at least 10 bytes, often 16)
+    - `float`: Single precision (4 bytes)
+    - `double`: Double precision (8 bytes)
+    - `long double`: Extended precision (at least 10 bytes, often 16)
 
 ```c
 float pi = 3.14159F;

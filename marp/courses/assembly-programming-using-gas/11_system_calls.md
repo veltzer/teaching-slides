@@ -29,9 +29,9 @@
 
 - Integer that uniquely identifies an open file
 - Standard file descriptors:
-  - 0: stdin (Standard input)
-  - 1: stdout (Standard output)
-  - 2: stderr (Standard error)
+    - 0: stdin (Standard input)
+    - 1: stdout (Standard output)
+    - 2: stderr (Standard error)
 
 ---
 

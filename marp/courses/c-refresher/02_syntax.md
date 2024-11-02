@@ -1,7 +1,5 @@
 # C Syntax Refresher
-
 ---
-
 ## Basic Program Structure
 
 A simple C program consists of:
@@ -92,6 +90,7 @@ if (condition) {
 ```
 
 Example:
+
 ```c
 if (score >= 90) {
     printf("Grade: A");
@@ -120,6 +119,7 @@ switch (expression) {
 ```
 
 Example:
+
 ```c
 switch (day) {
     case 1:
@@ -144,6 +144,7 @@ for (initialization; condition; update) {
 ```
 
 Example:
+
 ```c
 for (int i = 0; i < 5; i++) {
     printf("%d ", i);
@@ -155,6 +156,7 @@ for (int i = 0; i < 5; i++) {
 ## Loops: while and do-while
 
 While loop:
+
 ```c
 while (condition) {
     // Code to repeat
@@ -162,6 +164,7 @@ while (condition) {
 ```
 
 Do-while loop:
+
 ```c
 do {
     // Code to repeat
@@ -169,6 +172,7 @@ do {
 ```
 
 Example:
+
 ```c
 int i = 0;
 while (i < 5) {
@@ -182,6 +186,7 @@ while (i < 5) {
 ## Functions
 
 Function declaration and definition:
+
 ```c
 return_type function_name(parameter_list) {
     // Function body
@@ -190,6 +195,7 @@ return_type function_name(parameter_list) {
 ```
 
 Example:
+
 ```c
 int add(int a, int b) {
     return a + b;
@@ -203,6 +209,7 @@ int result = add(5, 3);
 ## Arrays
 
 Declaration and initialization:
+
 ```c
 type array_name[size];
 type array_name[] = {value1, value2, ...};
@@ -247,6 +254,7 @@ struct structure_name variable_name;
 ```
 
 Example:
+
 ```c
 struct Person {
     char name[50];
@@ -265,6 +273,7 @@ struct Person p1 = {"Alice", 30};
 - `#ifdef`, `#ifndef`, `#endif`: Conditional compilation
 
 Example:
+
 ```c
 #include <stdio.h>
 #define MAX_SIZE 100
@@ -275,9 +284,7 @@ Example:
 ```
 
 ---
-
 ## Summary
-
 - C programs have a specific structure with the `main()` function as the entry point
 - Variables and constants store data, with various data types available
 - Control structures (`if-else`, `switch`) and loops (`for`, `while`) control program flow

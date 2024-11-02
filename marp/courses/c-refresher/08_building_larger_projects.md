@@ -5,30 +5,30 @@
 ## Introduction
 
 - Why use multiple files?
-  - Better organization
-  - Improved readability
-  - Easier maintenance
-  - Code reusability
+    - Better organization
+    - Improved readability
+    - Easier maintenance
+    - Code reusability
 
 ---
 
 ## Project Structure
 
 - Typical structure:
-  - Header files (.h)
-  - Source files (.c)
-  - Main file (main.c)
+    - Header files (.h)
+    - Source files (.c)
+    - Main file (main.c)
 
 ---
 
 ## Header Files
 
 - Purpose:
-  - Declare functions, structures, and variables
-  - Provide interfaces for modules
+    - Declare functions, structures, and variables
+    - Provide interfaces for modules
 - Best practices:
-  - Use header guards
-  - Keep declarations only
+    - Use header guards
+    - Keep declarations only
 
 ---
 
@@ -50,11 +50,11 @@ int subtract(int a, int b);
 ## Source Files
 
 - Purpose:
-  - Implement functions declared in header files
-  - Contain the actual code logic
+    - Implement functions declared in header files
+    - Contain the actual code logic
 - Best practices:
-  - One source file per module
-  - Include corresponding header file
+    - One source file per module
+    - Include corresponding header file
 
 ---
 
@@ -78,11 +78,11 @@ int subtract(int a, int b) {
 ## Main File
 
 - Purpose:
-  - Entry point of the program
-  - Coordinates the use of other modules
+    - Entry point of the program
+    - Coordinates the use of other modules
 - Best practices:
-  - Keep it simple
-  - Include necessary header files
+    - Keep it simple
+    - Include necessary header files
 
 ---
 
@@ -108,7 +108,8 @@ int main() {
 1. Link object files to create executable
 
 Example:
-```
+
+```bash
 gcc -c math_operations.c
 gcc -c main.c
 gcc math_operations.o main.o -o program
@@ -155,11 +156,11 @@ clean:
 ## Conclusion
 
 - Multi-file systems improve:
-  - Code organization
-  - Maintainability
-  - Reusability
+    - Code organization
+    - Maintainability
+    - Reusability
 - Key components:
-  - Header files
-  - Source files
-  - Main file
-  - Build system (e.g., Makefile)
+    - Header files
+    - Source files
+    - Main file
+    - Build system (e.g., Makefile)

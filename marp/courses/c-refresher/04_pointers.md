@@ -1,6 +1,6 @@
 # Pointers in C: A Refresher
 
-**C Programming Refresher Course**
+## C Programming Refresher Course
 
 ---
 

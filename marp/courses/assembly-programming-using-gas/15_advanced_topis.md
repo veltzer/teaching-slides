@@ -2,7 +2,7 @@
 
 ---
 
-# Floating-Point Operations
+## Floating-Point Operations
 
 - x87 FPU (Floating-Point Unit)
 - SSE (Streaming SIMD Extensions)
@@ -10,7 +10,7 @@
 
 ---
 
-# x87 FPU Instructions
+## x87 FPU Instructions
 
 - Stack-based architecture
 - 8 80-bit registers (ST0-ST7)
@@ -22,10 +22,8 @@ fld dword ptr [y]    ; Load y into ST0, push previous value to ST1
 faddp                ; Add ST0 and ST1, pop
 fstp dword ptr [z]   ; Store result in z and pop
 ```
-
 ---
-
-# SSE Floating-Point Operations
+## SSE Floating-Point Operations
 
 - SIMD (Single Instruction, Multiple Data)
 - 128-bit XMM registers (XMM0-XMM15)
@@ -39,7 +37,7 @@ movss [z], xmm0      ; Store result in z
 
 ---
 
-# AVX Floating-Point Operations
+## AVX Floating-Point Operations
 
 - Extended SSE capabilities
 - 256-bit YMM registers
@@ -54,7 +52,7 @@ vmovaps [result], ymm2   ; Store 8 float results
 
 ---
 
-# SIMD Programming: SSE
+## SIMD Programming: SSE
 
 - Perform multiple operations in parallel
 - 128-bit XMM registers
@@ -68,7 +66,7 @@ movdqa [result], xmm0    ; Store 4 int results
 
 ---
 
-# SIMD Programming: AVX
+## SIMD Programming: AVX
 
 - Extended SIMD capabilities
 - 256-bit YMM registers
@@ -82,7 +80,7 @@ vmovaps [result], ymm0   ; Store 8 float results
 
 ---
 
-# Multi-threading Basics
+## Multi-threading Basics
 
 - Parallel execution of code
 - Shared memory between threads
@@ -90,7 +88,7 @@ vmovaps [result], ymm0   ; Store 8 float results
 
 ---
 
-# Creating Threads (Using Pthreads)
+## Creating Threads (Using Pthreads)
 
 ```c
 #include <pthread.h>
@@ -110,7 +108,7 @@ int main() {
 
 ---
 
-# Thread Synchronization: Mutex
+## Thread Synchronization: Mutex
 
 ```c
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
@@ -127,7 +125,7 @@ lock xadd dword ptr [mutex], eax
 
 ---
 
-# Atomic Operations
+## Atomic Operations
 
 Example: Atomic increment
 ```x86asm
@@ -142,7 +140,7 @@ lock cmpxchg dword ptr [address], new_value
 
 ---
 
-# Memory Ordering
+## Memory Ordering
 
 - Compiler and CPU can reorder instructions
 - Memory barriers ensure proper ordering
@@ -156,7 +154,7 @@ sfence  ; Store fence
 
 ---
 
-# Cache Considerations
+## Cache Considerations
 
 - Understand cache line size (typically 64 bytes)
 - Align data to cache lines for better performance

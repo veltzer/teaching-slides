@@ -1,18 +1,12 @@
 # Optimization Techniques
-
 ---
-
-# Why Optimize?
-
+## Why Optimize?
 - Improve execution speed
 - Reduce memory usage
 - Enhance energy efficiency
 - Better utilization of hardware resources
-
 ---
-
-# Common Optimization Strategies
-
+## Common Optimization Strategies
 1. Loop optimization
 1. Function inlining
 1. Branch prediction optimization
@@ -20,12 +14,11 @@
 1. Register allocation
 1. Instruction selection
 1. Parallelization
-
 ---
-
-# Loop Optimization: Loop Unrolling
+## Loop Optimization: Loop Unrolling
 
 Before:
+
 ```x86asm
     mov ecx, 100
 .loop:
@@ -38,6 +31,7 @@ Before:
 ```
 
 After:
+
 ```x86asm
     mov ecx, 25
 .loop:
@@ -56,14 +50,13 @@ After:
 ```
 
 ---
-
-# Function Inlining
-
+## Function Inlining
 - Replace function call with actual code
 - Eliminates call/return overhead
 - May increase code size
 
 Example:
+
 ```x86asm
 ; Instead of calling a function
 call calculate_sum
@@ -75,13 +68,12 @@ mov [result], eax
 ```
 
 ---
-
-# Branch Prediction Optimization
-
+## Branch Prediction Optimization
 - Arrange code so that the most likely path is fall-through
 - Use conditional moves instead of branches for simple conditions
 
 Example:
+
 ```x86asm
     cmp eax, ebx
     jg .greater
@@ -93,6 +85,7 @@ Example:
 ```
 
 Can be optimized to:
+
 ```x86asm
     cmp eax, ebx
     cmovle ecx, eax
@@ -100,13 +93,12 @@ Can be optimized to:
 ```
 
 ---
-
-# Data Alignment
-
+## Data Alignment
 - Align data to natural boundaries
 - Improves memory access efficiency
 
 Example:
+
 ```x86asm
 .data
     .align 16
@@ -115,13 +107,12 @@ my_array:
 ```
 
 ---
-
-# Register Allocation
-
+## Register Allocation
 - Keep frequently used values in registers
 - Minimize memory access
 
 Example:
+
 ```x86asm
 ; Less efficient
 mov eax, [counter]
@@ -139,13 +130,12 @@ mov [counter], eax
 ```
 
 ---
-
-# Instruction Selection
-
+## Instruction Selection
 - Choose instructions with lower latency or higher throughput
 - Use SIMD instructions for data parallelism
 
 Example:
+
 ```x86asm
 ; Instead of
 mov eax, 0
@@ -163,7 +153,7 @@ movdqa [result], xmm0
 
 ---
 
-# Parallelization
+## Parallelization
 
 - Utilize multiple cores or threads
 - Use SIMD instructions for data-level parallelism
@@ -187,14 +177,13 @@ add esi, array_start  ; starting point for this thread
 ```
 
 ---
-
-# Profiling and Benchmarking
-
+## Profiling and Benchmarking
 - Use tools like `gprof`, `perf`, or `valgrind`
 - Identify performance bottlenecks
 - Measure impact of optimizations
 
 Example:
+
 ```bash
 gcc -pg program.c -o program
 ./program
@@ -202,18 +191,13 @@ gprof program gmon.out > analysis.txt
 ```
 
 ---
-
-# Optimization Pitfalls
-
+## Optimization Pitfalls
 - Premature optimization
 - Over-optimization leading to unreadable code
 - Architecture-specific optimizations reducing portability
 - Optimizations that break correctness
-
 ---
-
-# Best Practices
-
+## Best Practices
 1. Profile before optimizing
 1. Focus on hot spots (frequently executed code)
 1. Benchmark to verify improvements
