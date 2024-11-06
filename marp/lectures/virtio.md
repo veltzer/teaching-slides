@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Understanding Linux Virtio and Queue Management
 - An in-depth look at virtualization I/O
 - Queue structures and implementation
@@ -11,7 +5,7 @@ paginate: true
 
 ---
 
-# What is Virtio?
+## What is Virtio?
 
 - Standard for virtual device interfaces
 - Efficient I/O virtualization
@@ -20,7 +14,7 @@ paginate: true
 
 ---
 
-# Key Components of Virtio
+## Key Components of Virtio
 
 1. Frontend (Guest Driver)
 2. Backend (Host Driver)
@@ -29,7 +23,7 @@ paginate: true
 
 ---
 
-# Virtio Device Types
+## Virtio Device Types
 
 - Network (virtio-net)
 - Block (virtio-blk)
@@ -40,7 +34,7 @@ paginate: true
 
 ---
 
-# Basic Virtio Architecture
+## Basic Virtio Architecture
 ```c
 struct virtio_device {
     struct device dev;
@@ -53,7 +47,7 @@ struct virtio_device {
 
 ---
 
-# Virtqueues Overview
+## Virtqueues Overview
 
 - Circular buffer for I/O requests
 - Shared between guest and host
@@ -62,7 +56,7 @@ struct virtio_device {
 
 ---
 
-# Split Virtqueue Structure
+## Split Virtqueue Structure
 ```c
 struct virtqueue {
     struct virtio_device *vdev;
@@ -76,7 +70,7 @@ struct virtqueue {
 
 ---
 
-# Virtring Components
+## Virtring Components
 
 ```c
 struct virtring {
@@ -89,7 +83,7 @@ struct virtring {
 
 ---
 
-# Descriptor Table Structure
+## Descriptor Table Structure
 
 ```c
 struct vring_desc {
@@ -102,7 +96,7 @@ struct vring_desc {
 
 ---
 
-# Available Ring Structure
+## Available Ring Structure
 
 ```c
 struct vring_avail {
@@ -114,7 +108,7 @@ struct vring_avail {
 
 ---
 
-# Used Ring Structure
+## Used Ring Structure
 
 ```c
 struct vring_used {
@@ -126,7 +120,7 @@ struct vring_used {
 
 ---
 
-# Initializing a Virtqueue
+## Initializing a Virtqueue
 
 ```c
 int virtqueue_add_sgs(struct virtqueue *vq,
@@ -151,7 +145,7 @@ int virtqueue_add_sgs(struct virtqueue *vq,
 
 ---
 
-# Adding Buffers to Queue
+## Adding Buffers to Queue
 
 ```c
 static inline void virtqueue_add_buff(struct virtqueue *vq,
@@ -167,7 +161,7 @@ static inline void virtqueue_add_buff(struct virtqueue *vq,
 
 ---
 
-# Notifying the Host
+## Notifying the Host
 
 ```c
 static inline void virtqueue_kick(struct virtqueue *vq)
@@ -179,7 +173,7 @@ static inline void virtqueue_kick(struct virtqueue *vq)
 
 ---
 
-# Processing Used Buffers
+## Processing Used Buffers
 
 ```c
 void vring_interrupt(int irq, void *_vq)
@@ -196,7 +190,7 @@ void vring_interrupt(int irq, void *_vq)
 
 ---
 
-# Packed Virtqueues
+## Packed Virtqueues
 
 - Modern alternative to split virtqueues
 - More efficient memory usage
@@ -205,7 +199,7 @@ void vring_interrupt(int irq, void *_vq)
 
 ---
 
-# Packed Virtqueue Structure
+## Packed Virtqueue Structure
 
 ```c
 struct virtqueue_packed {
@@ -219,7 +213,7 @@ struct virtqueue_packed {
 
 ---
 
-# Memory Barrier Usage
+## Memory Barrier Usage
 
 ```c
 /* Ensure descriptor updates are visible */
@@ -237,7 +231,7 @@ static inline void virtio_wmb(struct virtio_device *vdev)
 
 ---
 
-# Error Handling
+## Error Handling
 
 ```c
 static int virtio_dev_probe(struct virtio_device *vdev)
@@ -258,7 +252,7 @@ err_setup_vqs:
 
 ---
 
-# DMA Mapping
+## DMA Mapping
 
 ```c
 static int virtqueue_map_sg(struct virtqueue *vq,
@@ -272,7 +266,7 @@ static int virtqueue_map_sg(struct virtqueue *vq,
 
 ---
 
-# Zero-Copy Operations
+## Zero-Copy Operations
 
 ```c
 static bool try_zero_copy_tx(struct virtnet_info *vi,
@@ -285,7 +279,7 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Performance Optimization
+## Performance Optimization
 
 - Batch operations when possible
 - Use indirect descriptors for large transfers
@@ -294,7 +288,7 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Debugging Tools
+## Debugging Tools
 
 - virtio-trace
 - ftrace events
@@ -303,7 +297,7 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Best Practices
+## Best Practices
 
 1. Proper error handling
 2. Memory barrier usage
@@ -313,7 +307,7 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Common Pitfalls
+## Common Pitfalls
 
 1. Missing memory barriers
 2. Incorrect descriptor chaining
@@ -323,7 +317,7 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Future Developments
+## Future Developments
 
 - Enhanced zero-copy support
 - New device types
@@ -332,17 +326,9 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 
 ---
 
-# Resources
+## Resources
 
 - Virtio Specification
 - Linux Kernel Documentation
 - QEMU Documentation
 - KVM Documentation
-
----
-
-# Questions?
-
-Thank you for your attention!
-Contact: your@email.com
-
