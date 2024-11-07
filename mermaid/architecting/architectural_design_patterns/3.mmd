@@ -1,0 +1,7 @@
+graph LR
+    P1[Publisher 1] -->|Event A| B(Event Bus)
+    P2[Publisher 2] -->|Event B| B
+    B -->|Event A| S1[Subscriber 1]
+    B -->|Event A| S2[Subscriber 2]
+    B -->|Event B| S2
+    B -->|Event B| S3[Subscriber 3]

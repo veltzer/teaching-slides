@@ -170,6 +170,9 @@ all_mdl: $(MD_MDL)
 .PHONY: all_markdownlint
 all_markdownlint: $(MD_MARKDOWNLINT)
 
+.PHONY: all_mermaid_png
+all_mermaid_png: $(MERMAID_PNG)
+
 .PHONY: debug
 debug:
 	$(info doing [$@])

@@ -1,0 +1,20 @@
+graph TD
+    A[Web Client] --> B[Web BFF]
+    C[Mobile Client] --> D[Mobile BFF]
+    E[Desktop Client] --> F[Desktop BFF]
+
+    B --> G[Microservice 1]
+    B --> H[Microservice 2]
+    B --> I[Microservice 3]
+
+    D --> G
+    D --> H
+    D --> I
+
+    F --> G
+    F --> H
+    F --> I
+
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px

@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Client
+    participant API Gateway
+    participant Rate Limiter
+    participant Backend Service
+
+    Client->>API Gateway: Request
+    API Gateway->>Rate Limiter: Check limit
+    alt Limit not exceeded
+        Rate Limiter->>API Gateway: Allow
+        API Gateway->>Backend Service: Forward request
+        Backend Service->>API Gateway: Response
+        API Gateway->>Client: Response
+    else Limit exceeded
+        Rate Limiter->>API Gateway: Reject
+        API Gateway->>Client: 429 Too Many Requests
+    end

@@ -21,13 +21,7 @@
 ---
 ## Communication Diagram
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant S as Server
-    C->>S: Request
-    S->>C: Response
-```
+![0](../../../out/mermaid/architecting/architectural_design_patterns/0.png)
 
 ---
 
@@ -83,17 +77,7 @@ Cons:
 
 ## Broker Interaction Diagram
 
-```mermaid
-sequenceDiagram
-    participant C as Client
-    participant B as Broker
-    participant S as Server
-    S->>B: Register Service
-    C->>B: Request Service
-    B->>S: Forward Request
-    S->>B: Send Response
-    B->>C: Forward Response
-```
+![1](../../../out/mermaid/architecting/architectural_design_patterns/1.png)
 
 ---
 ## Broker Pros and Cons
@@ -145,15 +129,7 @@ Cons:
 
 ## Peer-to-Peer Diagram
 
-```mermaid
-graph TD
-    P1((Peer 1)) --- P2((Peer 2))
-    P1 --- P3((Peer 3))
-    P2 --- P3
-    P2 --- P4((Peer 4))
-    P3 --- P5((Peer 5))
-    P4 --- P5
-```
+![2](../../../out/mermaid/architecting/architectural_design_patterns/2.png)
 
 ---
 ## Peer-to-Peer Pros and Cons
@@ -206,15 +182,7 @@ Cons:
 
 ## Event Bus Interaction Diagram
 
-```mermaid
-graph LR
-    P1[Publisher 1] -->|Event A| B(Event Bus)
-    P2[Publisher 2] -->|Event B| B
-    B -->|Event A| S1[Subscriber 1]
-    B -->|Event A| S2[Subscriber 2]
-    B -->|Event B| S2
-    B -->|Event B| S3[Subscriber 3]
-```
+![3](../../../out/mermaid/architecting/architectural_design_patterns/3.png)
 
 ---
 
@@ -265,21 +233,7 @@ Cons:
 ---
 ## Microservices Architecture Diagram
 
-```mermaid
-graph TD
-    Gateway[API Gateway] --> S1[Service 1]
-    Gateway --> S2[Service 2]
-    Gateway --> S3[Service 3]
-    S1 -->|Async| MessageBus[Message Bus]
-    S2 -->|Async| MessageBus
-    S3 -->|Async| MessageBus
-    MessageBus -->|Async| S1
-    MessageBus -->|Async| S2
-    MessageBus -->|Async| S3
-    S1 -->|Sync| S2
-    S2 -->|Sync| S3
-    Client[Client] --> Gateway
-```
+![4](../../../out/mermaid/architecting/architectural_design_patterns/4.png)
 
 ---
 ## Microservices Pros and Cons
@@ -332,18 +286,7 @@ Cons:
 
 ## Service-Oriented Architecture Diagram
 
-```mermaid
-graph LR
-    ESB[Enterprise Service Bus] --> S1[Service 1]
-    ESB --> S2[Service 2]
-    ESB --> S3[Service 3]
-    S1 --> DB1[Database 1]
-    S2 --> DB2[Database 2]
-    S3 --> DB3[Database 3]
-    Client1[Client 1] --> ESB
-    Client2[Client 2] --> ESB
-    Client3[Client 3] --> ESB
-```
+![5](../../../out/mermaid/architecting/architectural_design_patterns/5.png)
 
 ---
 ## Service-Oriented Architecture Pros and Cons
@@ -399,15 +342,7 @@ Cons:
 
 ## Event-Driven Architecture Diagram
 
-```mermaid
-graph LR
-    P1[Producer 1] -->|Event| EC[Event Channel]
-    P2[Producer 2] -->|Event| EC
-    P3[Producer 3] -->|Event| EC
-    EC -->|Event| C1[Consumer 1]
-    EC -->|Event| C2[Consumer 2]
-    EC -->|Event| C3[Consumer 3]
-```
+![6](../../../out/mermaid/architecting/architectural_design_patterns/6.png)
 
 ---
 
@@ -469,23 +404,7 @@ Cons:
 
 ## DDD Architecture Diagram
 
-```mermaid
-graph TD
-    BC1[Bounded Context 1] --> BC2[Bounded Context 2]
-    BC1 --> BC3[Bounded Context 3]
-    BC2 --> BC3
-    BC1 --> E1[Entity 1]
-    BC1 --> E2[Entity 2]
-    BC1 --> VO1[Value Object 1]
-    BC2 --> E3[Entity 3]
-    BC2 --> VO2[Value Object 2]
-    BC3 --> E4[Entity 4]
-    BC3 --> VO3[Value Object 3]
-    E1 --> VO1
-    E2 --> VO1
-    E3 --> VO2
-    E4 --> VO3
-```
+![7](../../../out/mermaid/architecting/architectural_design_patterns/7.png)
 
 ---
 ## DDD Pros and Cons
@@ -552,15 +471,7 @@ Cons:
 
 ## CQRS Architecture Diagram
 
-```mermaid
-graph LR
-    Client[Client] --> CommandAPI[Command API]
-    Client --> QueryAPI[Query API]
-    CommandAPI --> CommandModel[Command Model]
-    CommandModel --> EventStore[Event Store]
-    QueryAPI --> QueryModel[Query Model]
-    EventStore --> QueryModel
-```
+![8](../../../out/mermaid/architecting/architectural_design_patterns/8.png)
 
 ---
 
@@ -623,22 +534,7 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Application
-    participant EventStore
-    Client->>Application: Command
-    Application->>EventStore: Append Event
-    EventStore-->>Application: Event Appended
-    Application->>Application: Apply Event
-    Application-->>Client: Command Result
-    Client->>Application: Query
-    Application->>EventStore: Retrieve Events
-    EventStore-->>Application: Events
-    Application->>Application: Rebuild State
-    Application-->>Client: Query Result
-```
+![9](../../../out/mermaid/architecting/architectural_design_patterns/9.png)
 
 ---
 ## Event Sourcing Pros and Cons
@@ -696,16 +592,7 @@ Cons:
 ---
 ## Serverless Architecture Diagram
 
-```mermaid
-graph LR
-    Client[Client] --> APIGateway[API Gateway]
-    APIGateway --> Function1[Function 1]
-    APIGateway --> Function2[Function 2]
-    APIGateway --> Function3[Function 3]
-    Function1 --> Database[Database]
-    Function2 --> MessageQueue[Message Queue]
-    Function3 --> ObjectStorage[Object Storage]
-```
+![10](../../../out/mermaid/architecting/architectural_design_patterns/10.png)
 
 ---
 ## Serverless Pros and Cons
@@ -763,21 +650,7 @@ Cons:
 ---
 ## Space-Based Architecture Diagram
 
-```mermaid
-graph TD
-    Client[Client] --> LoadBalancer[Load Balancer]
-    LoadBalancer --> ProcessingUnit1[Processing Unit 1]
-    LoadBalancer --> ProcessingUnit2[Processing Unit 2]
-    LoadBalancer --> ProcessingUnit3[Processing Unit 3]
-    ProcessingUnit1 --> InMemoryDataGrid[In-Memory Data Grid]
-    ProcessingUnit2 --> InMemoryDataGrid
-    ProcessingUnit3 --> InMemoryDataGrid
-    ProcessingUnit1 --> MessagingGrid[Messaging Grid]
-    ProcessingUnit2 --> MessagingGrid
-    ProcessingUnit3 --> MessagingGrid
-    InMemoryDataGrid --> DataVirtualization[Data Virtualization]
-    DataVirtualization --> ExternalDataSources[External Data Sources]
-```
+![11](../../../out/mermaid/architecting/architectural_design_patterns/11.png)
 
 ---
 ## Space-Based Pros and Cons
@@ -839,15 +712,7 @@ Cons:
 
 ## Hexagonal Architecture Diagram
 
-```mermaid
-graph LR
-    User[User] --> InboundAdapter[Inbound Adapter]
-    InboundAdapter --> InboundPort[Inbound Port]
-    InboundPort --> Domain[Domain]
-    Domain --> OutboundPort[Outbound Port]
-    OutboundPort --> OutboundAdapter[Outbound Adapter]
-    OutboundAdapter --> ExternalSystem[External System]
-```
+![12](../../../out/mermaid/architecting/architectural_design_patterns/12.png)
 
 ---
 ## Hexagonal Architecture Pros and Cons
@@ -911,17 +776,7 @@ Cons:
 
 ## Architecture Diagram
 
-```mermaid
-graph TD
-    Frameworks[Frameworks and Drivers]
-    InterfaceAdapters[Interface Adapters]
-    UseCases[Use Cases]
-    Entities[Entities]
-
-    Frameworks --> InterfaceAdapters
-    InterfaceAdapters --> UseCases
-    UseCases --> Entities
-```
+![13](../../../out/mermaid/architecting/architectural_design_patterns/13.png)
 
 ---
 ## Pros and Cons
@@ -977,17 +832,7 @@ Cons:
 ---
 ## Onion Architecture Diagram
 
-```mermaid
-graph TD
-    DomainModel[Domain Model]
-    DomainServices[Domain Services]
-    ApplicationServices[Application Services]
-    Infrastructure[Infrastructure]
-
-    DomainModel --> DomainServices
-    DomainServices --> ApplicationServices
-    ApplicationServices --> Infrastructure
-```
+![14](../../../out/mermaid/architecting/architectural_design_patterns/14.png)
 
 ---
 ## Onion Architecture Pros and Cons
@@ -1048,17 +893,7 @@ Cons:
 ---
 ## Microkernel Architecture Diagram
 
-```mermaid
-graph TD
-    Microkernel[Microkernel]
-    Plugin1[Plugin 1]
-    Plugin2[Plugin 2]
-    Plugin3[Plugin 3]
-
-    Microkernel -- Contract --> Plugin1
-    Microkernel -- Contract --> Plugin2
-    Microkernel -- Contract --> Plugin3
-```
+![15](../../../out/mermaid/architecting/architectural_design_patterns/15.png)
 
 ---
 ## Microkernel Pros and Cons
@@ -1122,14 +957,7 @@ Cons:
 
 ## Publish-Subscribe Diagram
 
-```mermaid
-graph LR
-    Publisher1[Publisher 1] --> MessageBroker[Message Broker]
-    Publisher2[Publisher 2] --> MessageBroker
-    MessageBroker --> Subscriber1[Subscriber 1]
-    MessageBroker --> Subscriber2[Subscriber 2]
-    MessageBroker --> Subscriber3[Subscriber 3]
-```
+![16](../../../out/mermaid/architecting/architectural_design_patterns/16.png)
 
 ---
 
@@ -1187,17 +1015,7 @@ Cons:
 
 ## Monolithic Architecture Diagram
 
-```mermaid
-graph TD
-    UserInterface[User Interface]
-    BusinessLogic[Business Logic]
-    DataAccess[Data Access]
-    Database[Database]
-
-    UserInterface --> BusinessLogic
-    BusinessLogic --> DataAccess
-    DataAccess --> Database
-```
+![17](../../../out/mermaid/architecting/architectural_design_patterns/17.png)
 
 ---
 
@@ -1261,21 +1079,7 @@ Cons:
 ---
 ## Modular Monolith Architecture Diagram
 
-```mermaid
-graph TD
-    Monolith[Modular Monolith]
-    Module1[Module 1]
-    Module2[Module 2]
-    Module3[Module 3]
-
-    Monolith --> Module1
-    Monolith --> Module2
-    Monolith --> Module3
-
-    Module1 --> SharedDB[Shared Database]
-    Module2 --> SharedDB
-    Module3 --> SharedDB
-```
+![18](../../../out/mermaid/architecting/architectural_design_patterns/18.png)
 
 ---
 
@@ -1338,20 +1142,7 @@ Cons:
 ---
 ## Share-Nothing Architecture Diagram
 
-```mermaid
-graph TD
-    Node1[Node 1]
-    Node2[Node 2]
-    Node3[Node 3]
-    Node4[Node 4]
-
-    Node1 --Message Passing--> Node2
-    Node1 --Message Passing--> Node3
-    Node1 --Message Passing--> Node4
-    Node2 --Message Passing--> Node3
-    Node2 --Message Passing--> Node4
-    Node3 --Message Passing--> Node4
-```
+![19](../../../out/mermaid/architecting/architectural_design_patterns/19.png)
 
 ---
 ## Share-Nothing Pros and Cons
@@ -1388,17 +1179,7 @@ Cons:
 ---
 ## Circuit Breaker Pattern Diagram
 
-```mermaid
-stateDiagram-v2
-    [*] --> Closed
-    Closed --> Open : Failure threshold reached
-    Open --> Half-Open : Timeout period elapsed
-    Half-Open --> Closed : Success
-    Half-Open --> Open : Failure
-    Open --> [*]
-    Closed --> [*]
-    Half-Open --> [*]
-```
+![20](../../../out/mermaid/architecting/architectural_design_patterns/20.png)
 
 ---
 ## Pros and Cons
@@ -1433,30 +1214,7 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-```mermaid
-sequenceDiagram
-    participant O as Order Service
-    participant P as Payment Service
-    participant I as Inventory Service
-    participant D as Delivery Service
-
-    O->>P: Process Payment
-    activate P
-    P-->>O: Payment Processed
-    deactivate P
-
-    O->>I: Reserve Inventory
-    activate I
-    I-->>O: Inventory Reserved
-    deactivate I
-
-    O->>D: Schedule Delivery
-    activate D
-    D-->>O: Delivery Scheduled
-    deactivate D
-
-    Note over O,D: If any step fails, compensating transactions are triggered
-```
+![21](../../../out/mermaid/architecting/architectural_design_patterns/21.png)
 
 ---
 ## Pros and Cons
@@ -1490,22 +1248,7 @@ Cons:
 ---
 ## Bulkhead Pattern Diagram
 
-```mermaid
-graph TD
-    A[Client] --> B[API Gateway]
-    B --> C[Service A Pool]
-    B --> D[Service B Pool]
-    B --> E[Service C Pool]
-    C --> F[Instance A1]
-    C --> G[Instance A2]
-    D --> H[Instance B1]
-    D --> I[Instance B2]
-    E --> J[Instance C1]
-    E --> K[Instance C2]
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bbf,stroke:#333,stroke-width:2px
-    style E fill:#bfb,stroke:#333,stroke-width:2px
-```
+![22](../../../out/mermaid/architecting/architectural_design_patterns/22.png)
 
 ---
 ## Bulkhead Pattern Pros and Cons
@@ -1540,33 +1283,7 @@ Cons:
 ---
 ## Strangler Fig Pattern Diagram
 
-```mermaid
-graph TD
-    A[Client] --> B[Facade/Router]
-    B --> C[Legacy System]
-    B --> D[New System]
-
-    subgraph "Phase 1"
-    C --> E[Functionality 1]
-    C --> F[Functionality 2]
-    C --> G[Functionality 3]
-    end
-
-    subgraph "Phase 2"
-    D --> H[New Functionality 1]
-    C --> I[Functionality 2]
-    C --> J[Functionality 3]
-    end
-
-    subgraph "Phase 3"
-    D --> K[New Functionality 1]
-    D --> L[New Functionality 2]
-    D --> M[New Functionality 3]
-    end
-
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-```
+![23](../../../out/mermaid/architecting/architectural_design_patterns/23.png)
 
 ---
 ## Strangler Fig Pros and Cons
@@ -1601,28 +1318,7 @@ Cons:
 ---
 ## Backend for Frontend (BFF) Pattern Diagram
 
-```mermaid
-graph TD
-    A[Web Client] --> B[Web BFF]
-    C[Mobile Client] --> D[Mobile BFF]
-    E[Desktop Client] --> F[Desktop BFF]
-
-    B --> G[Microservice 1]
-    B --> H[Microservice 2]
-    B --> I[Microservice 3]
-
-    D --> G
-    D --> H
-    D --> I
-
-    F --> G
-    F --> H
-    F --> I
-
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style F fill:#bbf,stroke:#333,stroke-width:2px
-```
+![24](../../../out/mermaid/architecting/architectural_design_patterns/24.png)
 
 ---
 ## BFF Pros and Cons
@@ -1659,22 +1355,7 @@ Cons:
 ---
 ## API Gateway Pattern Diagram
 
-```mermaid
-graph TD
-    A[Mobile Client] --> G[API Gateway]
-    B[Web Client] --> G
-    C[Desktop Client] --> G
-
-    G --> D[Microservice 1]
-    G --> E[Microservice 2]
-    G --> F[Microservice 3]
-
-    G --> H[Authentication]
-    G --> I[Logging]
-    G --> J[Monitoring]
-
-    style G fill:#f9f,stroke:#333,stroke-width:4px
-```
+![25](../../../out/mermaid/architecting/architectural_design_patterns/25.png)
 
 ---
 
@@ -1718,22 +1399,7 @@ Cons:
 
 ## Anti-Corruption Layer Pattern Diagram
 
-```mermaid
-graph LR
-    A[New System] --> B[Anti-Corruption Layer]
-    B --> C[Legacy System]
-
-    subgraph "ACL"
-    B --> D[Translator]
-    B --> E[Adapter]
-    B --> F[Facade]
-    end
-
-    style B fill:#f9f,stroke:#333,stroke-width:4px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style E fill:#bfb,stroke:#333,stroke-width:2px
-    style F fill:#bfb,stroke:#333,stroke-width:2px
-```
+![26](../../../out/mermaid/architecting/architectural_design_patterns/26.png)
 
 ---
 ## Anti-Corruption Pros and Cons
@@ -1778,23 +1444,7 @@ Cons:
 
 ## Database per Service Pattern Diagram
 
-```mermaid
-graph TD
-    A[Service A] --> B[(Database A)]
-    C[Service B] --> D[(Database B)]
-    E[Service C] --> F[(Database C)]
-
-    G[API Gateway] --> A
-    G --> C
-    G --> E
-
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style C fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style F fill:#bfb,stroke:#333,stroke-width:2px
-```
+![27](../../../out/mermaid/architecting/architectural_design_patterns/27.png)
 
 ---
 
@@ -1841,30 +1491,7 @@ Cons:
 
 ## Geode Pattern Diagram
 
-```mermaid
-graph TD
-    A[Global Core Services] --> B[Geode 1]
-    A --> C[Geode 2]
-    A --> D[Geode N]
-
-    B --> E[Local Cache 1]
-    B --> F[Local Services 1]
-
-    C --> G[Local Cache 2]
-    C --> H[Local Services 2]
-
-    D --> I[Local Cache N]
-    D --> J[Local Services N]
-
-    K[Users Region 1] --> B
-    L[Users Region 2] --> C
-    M[Users Region N] --> D
-
-    style A fill:#f9f,stroke:#333,stroke-width:4px
-    style B fill:#bfb,stroke:#333,stroke-width:2px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-```
+![28](../../../out/mermaid/architecting/architectural_design_patterns/28.png)
 
 ---
 ## Geode Pros and Cons
@@ -1903,18 +1530,7 @@ Cons:
 ---
 ## Kappa Architecture Diagram
 
-```mermaid
-graph TD
-    A[Data Source] --> B[Log Storage / Event Store]
-    B --> C[Stream Processing Engine]
-    C --> D[Serving Layer]
-    D --> E[Query Interface]
-    B -.-> C
-
-    style B fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#bfb,stroke:#333,stroke-width:4px
-    style D fill:#bbf,stroke:#333,stroke-width:4px
-```
+![29](../../../out/mermaid/architecting/architectural_design_patterns/29.png)
 
 ---
 ## Pros and Cons
@@ -1953,20 +1569,7 @@ Cons:
 ---
 ## Lambda Architecture Diagram
 
-```mermaid
-graph TD
-    A[Data Source] --> B[Batch Layer]
-    A --> C[Speed Layer]
-    B --> D[Batch Views]
-    C --> E[Real-time Views]
-    D --> F[Serving Layer]
-    E --> F
-    F --> G[Query Interface]
-
-    style B fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#bfb,stroke:#333,stroke-width:4px
-    style F fill:#bbf,stroke:#333,stroke-width:4px
-```
+![30](../../../out/mermaid/architecting/architectural_design_patterns/30.png)
 
 ---
 ## Pros and Cons
@@ -2004,27 +1607,7 @@ Cons:
 ---
 ## Mesh Architecture Diagram
 
-```mermaid
-graph TD
-    A[Client] --> B[Service A]
-    A --> C[Service B]
-    A --> D[Service C]
-    B <--> C
-    B <--> D
-    C <--> D
-
-    B --- B1[Sidecar]
-    C --- C1[Sidecar]
-    D --- D1[Sidecar]
-
-    B1 <--> C1
-    B1 <--> D1
-    C1 <--> D1
-
-    style B1 fill:#f9f,stroke:#333,stroke-width:2px
-    style C1 fill:#f9f,stroke:#333,stroke-width:2px
-    style D1 fill:#f9f,stroke:#333,stroke-width:2px
-```
+![31](../../../out/mermaid/architecting/architectural_design_patterns/31.png)
 
 ---
 ## Mesh Architecture Pros and Cons
@@ -2063,25 +1646,7 @@ Cons:
 ---
 ## Sharded Architecture Diagram
 
-```mermaid
-graph TD
-    A[Application] --> B[Shard Router]
-    B --> C[Shard 1]
-    B --> D[Shard 2]
-    B --> E[Shard 3]
-    B --> F[Shard N]
-
-    C --> G[Data Subset 1]
-    D --> H[Data Subset 2]
-    E --> I[Data Subset 3]
-    F --> J[Data Subset N]
-
-    style B fill:#f9f,stroke:#333,stroke-width:4px
-    style C fill:#bfb,stroke:#333,stroke-width:2px
-    style D fill:#bfb,stroke:#333,stroke-width:2px
-    style E fill:#bfb,stroke:#333,stroke-width:2px
-    style F fill:#bfb,stroke:#333,stroke-width:2px
-```
+![32](../../../out/mermaid/architecting/architectural_design_patterns/32.png)
 
 ---
 ## Sharded Pros and Cons
@@ -2119,25 +1684,7 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant API Gateway
-    participant Rate Limiter
-    participant Backend Service
-
-    Client->>API Gateway: Request
-    API Gateway->>Rate Limiter: Check limit
-    alt Limit not exceeded
-        Rate Limiter->>API Gateway: Allow
-        API Gateway->>Backend Service: Forward request
-        Backend Service->>API Gateway: Response
-        API Gateway->>Client: Response
-    else Limit exceeded
-        Rate Limiter->>API Gateway: Reject
-        API Gateway->>Client: 429 Too Many Requests
-    end
-```
+![33](../../../out/mermaid/architecting/architectural_design_patterns/33.png)
 
 ---
 ## Throttling Pros and Cons

@@ -1,0 +1,17 @@
+graph TD
+    A[Application] --> B[Shard Router]
+    B --> C[Shard 1]
+    B --> D[Shard 2]
+    B --> E[Shard 3]
+    B --> F[Shard N]
+
+    C --> G[Data Subset 1]
+    D --> H[Data Subset 2]
+    E --> I[Data Subset 3]
+    F --> J[Data Subset N]
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style E fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bfb,stroke:#333,stroke-width:2px

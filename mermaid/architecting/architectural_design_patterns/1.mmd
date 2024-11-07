@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant C as Client
+    participant B as Broker
+    participant S as Server
+    S->>B: Register Service
+    C->>B: Request Service
+    B->>S: Forward Request
+    S->>B: Send Response
+    B->>C: Forward Response

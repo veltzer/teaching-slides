@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant Client
+    participant Application
+    participant EventStore
+    Client->>Application: Command
+    Application->>EventStore: Append Event
+    EventStore-->>Application: Event Appended
+    Application->>Application: Apply Event
+    Application-->>Client: Command Result
+    Client->>Application: Query
+    Application->>EventStore: Retrieve Events
+    EventStore-->>Application: Events
+    Application->>Application: Rebuild State
+    Application-->>Client: Query Result

@@ -1,0 +1,10 @@
+graph TD
+    A[Data Source] --> B[Log Storage / Event Store]
+    B --> C[Stream Processing Engine]
+    C --> D[Serving Layer]
+    D --> E[Query Interface]
+    B -.-> C
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style C fill:#bfb,stroke:#333,stroke-width:4px
+    style D fill:#bbf,stroke:#333,stroke-width:4px

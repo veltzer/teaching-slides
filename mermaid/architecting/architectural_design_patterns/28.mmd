@@ -1,0 +1,22 @@
+graph TD
+    A[Global Core Services] --> B[Geode 1]
+    A --> C[Geode 2]
+    A --> D[Geode N]
+
+    B --> E[Local Cache 1]
+    B --> F[Local Services 1]
+
+    C --> G[Local Cache 2]
+    C --> H[Local Services 2]
+
+    D --> I[Local Cache N]
+    D --> J[Local Services N]
+
+    K[Users Region 1] --> B
+    L[Users Region 2] --> C
+    M[Users Region N] --> D
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style B fill:#bfb,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px

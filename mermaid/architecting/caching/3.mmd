@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant App
+    participant Cache
+    participant DB
+    App->>Cache: Write Data
+    Cache-->>App: Write Complete
+    Note over Cache,DB: Async Write
+    Cache->>DB: Write Data

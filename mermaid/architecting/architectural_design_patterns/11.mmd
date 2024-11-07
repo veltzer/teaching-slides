@@ -1,0 +1,13 @@
+graph TD
+    Client[Client] --> LoadBalancer[Load Balancer]
+    LoadBalancer --> ProcessingUnit1[Processing Unit 1]
+    LoadBalancer --> ProcessingUnit2[Processing Unit 2]
+    LoadBalancer --> ProcessingUnit3[Processing Unit 3]
+    ProcessingUnit1 --> InMemoryDataGrid[In-Memory Data Grid]
+    ProcessingUnit2 --> InMemoryDataGrid
+    ProcessingUnit3 --> InMemoryDataGrid
+    ProcessingUnit1 --> MessagingGrid[Messaging Grid]
+    ProcessingUnit2 --> MessagingGrid
+    ProcessingUnit3 --> MessagingGrid
+    InMemoryDataGrid --> DataVirtualization[Data Virtualization]
+    DataVirtualization --> ExternalDataSources[External Data Sources]

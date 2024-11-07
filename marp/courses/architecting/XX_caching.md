@@ -26,14 +26,7 @@
 
 ## Cache Hit vs Cache Miss
 
-```mermaid
-flowchart TD
-    A[Request] --> B{Cache Hit?}
-    B -->|Yes| C[Return Cached Data]
-    B -->|No| D[Fetch from Source]
-    D --> E[Store in Cache]
-    E --> F[Return Data]
-```
+![0](../../../out/mermaid/architecting/caching/0.png)
 
 ---
 
@@ -110,51 +103,19 @@ def get_product(product_id):
 
 ## Cache-Aside Pattern
 
-```mermaid
-sequenceDiagram
-    participant App
-    participant Cache
-    participant DB
-    App->>Cache: Get Data
-    alt Cache Hit
-        Cache-->>App: Return Data
-    else Cache Miss
-        Cache-->>App: Not Found
-        App->>DB: Get Data
-        DB-->>App: Return Data
-        App->>Cache: Store Data
-    end
-```
+![1](../../../out/mermaid/architecting/caching/1.png)
 
 ---
 
 ## Write-Through Pattern
 
-```mermaid
-sequenceDiagram
-    participant App
-    participant Cache
-    participant DB
-    App->>Cache: Write Data
-    Cache->>DB: Write Data
-    DB-->>Cache: Confirm Write
-    Cache-->>App: Write Complete
-```
+![2](../../../out/mermaid/architecting/caching/2.png)
 
 ---
 
 ## Write-Behind Pattern
 
-```mermaid
-sequenceDiagram
-    participant App
-    participant Cache
-    participant DB
-    App->>Cache: Write Data
-    Cache-->>App: Write Complete
-    Note over Cache,DB: Async Write
-    Cache->>DB: Write Data
-```
+![3](../../../out/mermaid/architecting/caching/3.png)
 
 ---
 
@@ -200,15 +161,7 @@ def get_trending_posts():
 
 ## CDN Architecture
 
-```mermaid
-graph LR
-    U1[User USA] --> CDN1[CDN USA]
-    U2[User Europe] --> CDN2[CDN Europe]
-    U3[User Asia] --> CDN3[CDN Asia]
-    CDN1 --> O[Origin Server]
-    CDN2 --> O
-    CDN3 --> O
-```
+![4](../../../out/mermaid/architecting/caching/4.png)
 
 ---
 
@@ -251,14 +204,7 @@ Vary: Accept-Encoding
 
 ## Edge Computing Architecture
 
-```mermaid
-graph TD
-    C[Client] --> E[Edge Server]
-    E --> CDN[CDN]
-    CDN --> O[Origin]
-    E --> Cache[Edge Cache]
-    E --> Compute[Edge Functions]
-```
+![5](../../../out/mermaid/architecting/caching/5.png)
 
 ---
 
@@ -362,17 +308,7 @@ Key Metrics:
 
 ## Cache Monitoring Dashboard
 
-```mermaid
-graph TD
-    A[Cache Metrics] --> B[Hit Rate]
-    A --> C[Miss Rate]
-    A --> D[Latency]
-    A --> E[Storage]
-    B --> F[Alerts]
-    C --> F
-    D --> F
-    E --> F
-```
+![6](../../../out/mermaid/architecting/caching/6.png)
 
 ---
 

@@ -1,0 +1,6 @@
+flowchart TD
+    A[Request] --> B{Cache Hit?}
+    B -->|Yes| C[Return Cached Data]
+    B -->|No| D[Fetch from Source]
+    D --> E[Store in Cache]
+    E --> F[Return Data]

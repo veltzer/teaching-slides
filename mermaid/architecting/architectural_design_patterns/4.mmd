@@ -1,0 +1,13 @@
+graph TD
+    Gateway[API Gateway] --> S1[Service 1]
+    Gateway --> S2[Service 2]
+    Gateway --> S3[Service 3]
+    S1 -->|Async| MessageBus[Message Bus]
+    S2 -->|Async| MessageBus
+    S3 -->|Async| MessageBus
+    MessageBus -->|Async| S1
+    MessageBus -->|Async| S2
+    MessageBus -->|Async| S3
+    S1 -->|Sync| S2
+    S2 -->|Sync| S3
+    Client[Client] --> Gateway

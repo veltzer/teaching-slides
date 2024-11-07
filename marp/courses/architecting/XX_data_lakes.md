@@ -27,31 +27,13 @@
 
 ## Data Lake vs Data Warehouse
 
-```mermaid
-graph TB
-    subgraph DataLake
-    A[Raw Data] --> B[Semi-processed]
-    B --> C[Processed Data]
-    end
-    
-    subgraph DataWarehouse
-    D[Structured Data] --> E[Star Schema]
-    E --> F[OLAP Cubes]
-    end
-```
+![0](../../../out/mermaid/architecting/data_lakes/0.png)
 
 ---
 
 ## Data Lake Architecture
 
-```mermaid
-graph LR
-    A[Data Sources] --> B[Landing Zone]
-    B --> C[Raw Zone]
-    C --> D[Refined Zone]
-    D --> E[Curated Zone]
-    E --> F[Consumption Zone]
-```
+![1](../../../out/mermaid/architecting/data_lakes/1.png)
 
 ---
 
@@ -109,16 +91,7 @@ Solution: Data Lakehouse Architecture
 
 ## Data Lakehouse Architecture
 
-```mermaid
-graph TD
-    A[Raw Data] --> B[Delta Lake/Iceberg/Hudi]
-    B --> C[SQL Engine]
-    B --> D[Streaming]
-    B --> E[ML Training]
-    C --> F[BI Tools]
-    D --> G[Real-time Analytics]
-    E --> H[ML Models]
-```
+![2](../../../out/mermaid/architecting/data_lakes/2.png)
 
 ---
 
@@ -232,13 +205,7 @@ def batch_ingest():
 
 ## Streaming Ingestion
 
-```mermaid
-graph LR
-    A[Kafka] --> B[Spark Streaming]
-    C[Kinesis] --> B
-    D[Pub/Sub] --> B
-    B --> E[Data Lake]
-```
+![3](../../../out/mermaid/architecting/data_lakes/3.png)
 
 ---
 
@@ -332,14 +299,7 @@ processed.write.format("delta") \
 
 ## ML Pipeline Integration
 
-```mermaid
-graph TD
-    A[Raw Data] --> B[Feature Engineering]
-    B --> C[Feature Store]
-    C --> D[Model Training]
-    D --> E[Model Registry]
-    E --> F[Model Serving]
-```
+![4](../../../out/mermaid/architecting/data_lakes/4.png)
 
 ---
 
@@ -427,17 +387,7 @@ def setup_security():
 
 ## Monitoring Dashboard
 
-```mermaid
-graph TD
-    A[Metrics Collection] --> B[Storage Usage]
-    A --> C[Query Performance]
-    A --> D[Data Quality]
-    A --> E[User Access]
-    B --> F[Dashboard]
-    C --> F
-    D --> F
-    E --> F
-```
+![5](../../../out/mermaid/architecting/data_lakes/5.png)
 
 ---
 
@@ -457,18 +407,7 @@ graph TD
 
 ## Hybrid Architecture
 
-```mermaid
-graph LR
-    subgraph OnPrem
-    A[Local Data] --> B[HDFS]
-    end
-    
-    subgraph Cloud
-    C[Cloud Storage] --> D[Cloud Services]
-    end
-    
-    B <--> C
-```
+![6](../../../out/mermaid/architecting/data_lakes/6.png)
 
 ---
 

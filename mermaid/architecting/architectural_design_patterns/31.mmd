@@ -1,0 +1,19 @@
+graph TD
+    A[Client] --> B[Service A]
+    A --> C[Service B]
+    A --> D[Service C]
+    B <--> C
+    B <--> D
+    C <--> D
+
+    B --- B1[Sidecar]
+    C --- C1[Sidecar]
+    D --- D1[Sidecar]
+
+    B1 <--> C1
+    B1 <--> D1
+    C1 <--> D1
+
+    style B1 fill:#f9f,stroke:#333,stroke-width:2px
+    style C1 fill:#f9f,stroke:#333,stroke-width:2px
+    style D1 fill:#f9f,stroke:#333,stroke-width:2px

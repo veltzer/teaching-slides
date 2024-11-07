@@ -1,0 +1,14 @@
+graph LR
+    A[New System] --> B[Anti-Corruption Layer]
+    B --> C[Legacy System]
+
+    subgraph "ACL"
+    B --> D[Translator]
+    B --> E[Adapter]
+    B --> F[Facade]
+    end
+
+    style B fill:#f9f,stroke:#333,stroke-width:4px
+    style D fill:#bfb,stroke:#333,stroke-width:2px
+    style E fill:#bfb,stroke:#333,stroke-width:2px
+    style F fill:#bfb,stroke:#333,stroke-width:2px

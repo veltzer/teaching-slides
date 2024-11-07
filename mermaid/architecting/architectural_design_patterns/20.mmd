@@ -1,0 +1,9 @@
+stateDiagram-v2
+    [*] --> Closed
+    Closed --> Open : Failure threshold reached
+    Open --> HalfOpen : Timeout period elapsed
+    HalfOpen --> Closed : Success
+    HalfOpen --> Open : Failure
+    Open --> [*]
+    Closed --> [*]
+    HalfOpen --> [*]

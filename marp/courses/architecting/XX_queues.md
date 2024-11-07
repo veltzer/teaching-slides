@@ -28,15 +28,7 @@
 
 ## Queue Components
 
-```mermaid
-graph LR
-    P[Producer] --> Q[Queue]
-    Q --> C[Consumer]
-    Q --> DLQ[Dead Letter Queue]
-    
-    style Q fill:#f9f,stroke:#333
-    style DLQ fill:#ff9,stroke:#333
-```
+![0](../../../out/mermaid/architecting/queues/0.png)
 
 ---
 
@@ -52,20 +44,7 @@ graph LR
 
 ## Point-to-Point vs Pub/Sub
 
-```mermaid
-graph LR
-    subgraph "Point-to-Point"
-    P1[Producer] --> Q1[Queue]
-    Q1 --> C1[Consumer]
-    end
-    
-    subgraph "Pub/Sub"
-    P2[Producer] --> T[Topic]
-    T --> C2[Consumer 1]
-    T --> C3[Consumer 2]
-    T --> C4[Consumer 3]
-    end
-```
+![1](../../../out/mermaid/architecting/queues/1.png)
 
 ---
 
@@ -94,14 +73,7 @@ def consume():
 
 ## RabbitMQ Architecture
 
-```mermaid
-graph TD
-    P[Producer] --> E[Exchange]
-    E --> Q1[Queue 1]
-    E --> Q2[Queue 2]
-    Q1 --> C1[Consumer 1]
-    Q2 --> C2[Consumer 2]
-```
+![2](../../../out/mermaid/architecting/queues/2.png)
 
 ---
 
@@ -145,29 +117,13 @@ channel.start_consuming()
 
 ## Apache Kafka Architecture
 
-```mermaid
-graph TD
-    P[Producer] --> B[Broker 1]
-    P --> B2[Broker 2]
-    B --> C1[Consumer 1]
-    B2 --> C2[Consumer 2]
-    Z[ZooKeeper] --> B
-    Z --> B2
-```
+![3](../../../out/mermaid/architecting/queues/3.png)
 
 ---
 
 ## Kafka Topics and Partitions
 
-```mermaid
-graph TD
-    T[Topic] --> P1[Partition 0]
-    T --> P2[Partition 1]
-    T --> P3[Partition 2]
-    
-    P1 --> R1[Replica 1]
-    P1 --> R2[Replica 2]
-```
+![4](../../../out/mermaid/architecting/queues/4.png)
 
 ---
 
@@ -221,13 +177,7 @@ for message in consumer:
 
 ## Amazon SQS Architecture
 
-```mermaid
-graph LR
-    P[Producer] --> Q[Standard Queue]
-    P --> F[FIFO Queue]
-    Q --> C1[Consumer 1]
-    F --> C2[Consumer 2]
-```
+![5](../../../out/mermaid/architecting/queues/5.png)
 
 ---
 
@@ -335,14 +285,7 @@ class BatchProducer:
 
 ## Dead Letter Queues
 
-```mermaid
-graph LR
-    P[Producer] --> Q[Main Queue]
-    Q --> C[Consumer]
-    Q --> DLQ[Dead Letter Queue]
-    DLQ --> R[Retry Process]
-    R --> Q
-```
+![6](../../../out/mermaid/architecting/queues/6.png)
 
 ---
 
@@ -384,17 +327,7 @@ Key Metrics:
 
 ## Monitoring Dashboard
 
-```mermaid
-graph TD
-    A[Metrics Collection] --> B[Queue Length]
-    A --> C[Processing Time]
-    A --> D[Error Rate]
-    A --> E[Throughput]
-    B --> F[Dashboard]
-    C --> F
-    D --> F
-    E --> F
-```
+![7](../../../out/mermaid/architecting/queues/7.png)
 
 ---
 
@@ -434,20 +367,7 @@ def retry_with_backoff(func, max_retries=3):
 
 ## Consumer Group Pattern
 
-```mermaid
-graph TD
-    T[Topic] --> P1[Partition 1]
-    T --> P2[Partition 2]
-    T --> P3[Partition 3]
-    
-    P1 --> C1[Consumer 1]
-    P2 --> C2[Consumer 2]
-    P3 --> C3[Consumer 3]
-    
-    C1 --> G[Consumer Group]
-    C2 --> G
-    C3 --> G
-```
+![8](../../../out/mermaid/architecting/queues/8.png)
 
 ---
 

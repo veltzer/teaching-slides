@@ -1,0 +1,25 @@
+graph TD
+    A[Client] --> B[Facade/Router]
+    B --> C[Legacy System]
+    B --> D[New System]
+
+    subgraph "Phase 1"
+    C --> E[Functionality 1]
+    C --> F[Functionality 2]
+    C --> G[Functionality 3]
+    end
+
+    subgraph "Phase 2"
+    D --> H[New Functionality 1]
+    C --> I[Functionality 2]
+    C --> J[Functionality 3]
+    end
+
+    subgraph "Phase 3"
+    D --> K[New Functionality 1]
+    D --> L[New Functionality 2]
+    D --> M[New Functionality 3]
+    end
+
+    style C fill:#f9f,stroke:#333,stroke-width:2px
+    style D fill:#bfb,stroke:#333,stroke-width:2px

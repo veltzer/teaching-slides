@@ -1,0 +1,7 @@
+graph LR
+    Client[Client] --> CommandAPI[Command API]
+    Client --> QueryAPI[Query API]
+    CommandAPI --> CommandModel[Command Model]
+    CommandModel --> EventStore[Event Store]
+    QueryAPI --> QueryModel[Query Model]
+    EventStore --> QueryModel
