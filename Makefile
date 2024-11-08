@@ -6,19 +6,19 @@ DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
 DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
-DO_FMT_ODP_PPT:=0
+DO_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
-DO_FMT_ODP_PPTX:=0
+DO_ODP_PPTX:=0
 # do you want to do 'pdf' from 'odp'?
-DO_FMT_ODP_PDF:=1
+DO_ODP_PDF:=1
 # do you want to do 'html' from 'mkd'?
-DO_FMT_MKD_HTM:=1
+DO_MKD_HTM:=1
 # do you want to do 'pdf' from 'mkd'?
-DO_FMT_MKD_PDF:=1
+DO_MKD_PDF:=1
 # do you want to do 'pdf' from 'tex'?
-DO_FMT_TEX_PDF:=1
+DO_TEX_PDF:=1
 # do you want to do 'pdf' from 'txt'?
-DO_FMT_TXT_PDF:=1
+DO_TXT_PDF:=1
 # do you want to convert marp to PDF?
 DO_MARP_PDF:=1
 # do you want to convert marp to PDF?
@@ -104,17 +104,17 @@ ifeq ($(DO_MD_MARKDOWNLINT),1)
 ALL+=$(MD_MARKDOWNLINT)
 endif # DO_MD_MARKDOWNLINT
 
-ifeq ($(DO_FMT_ODP_PPT),1)
+ifeq ($(DO_ODP_PPT),1)
 ALL+=$(ODP_PPT)
-endif # DO_FMT_ODP_PPT
+endif # DO_ODP_PPT
 
-ifeq ($(DO_FMT_ODP_PPTX),1)
+ifeq ($(DO_ODP_PPTX),1)
 ALL+=$(ODP_PPTX)
-endif # DO_FMT_ODP_PPTX
+endif # DO_ODP_PPTX
 
-ifeq ($(DO_FMT_ODP_PDF),1)
+ifeq ($(DO_ODP_PDF),1)
 ALL+=$(ODP_PDF)
-endif # DO_FMT_ODP_PDF
+endif # DO_ODP_PDF
 
 ifeq ($(DO_MARP_PDF),1)
 ALL+=$(MARP_PDF)
@@ -128,13 +128,13 @@ ifeq ($(DO_MARP_HTML),1)
 ALL+=$(MARP_HTML)
 endif # DO_MARP_HTML
 
-ifeq ($(DO_FMT_TEX_PDF),1)
+ifeq ($(DO_TEX_PDF),1)
 ALL+=$(TEX_PDF)
-endif # DO_FMT_TEX_PDF
+endif # DO_TEX_PDF
 
-ifeq ($(DO_FMT_TXT_PDF),1)
+ifeq ($(DO_TXT_PDF),1)
 ALL+=$(TXT_PDF)
-endif # DO_FMT_TXT_PDF
+endif # DO_TXT_PDF
 
 ifeq ($(DO_MERMAID_PNG),1)
 ALL+=$(MERMAID_PNG)
@@ -228,17 +228,17 @@ $(ODP_PPTX): out/%.pptx: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
+	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
+	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
+	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
 	$(Q)rm -f $@
@@ -293,4 +293,3 @@ ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
 
-.NOTPARALLEL:
