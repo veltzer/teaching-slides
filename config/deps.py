@@ -22,6 +22,7 @@ packages=[
     "qpdf",
     "poppler-utils",
     "virtualenvwrapper",
+    "aspell",
     # ruby stuff
     "ruby-bundler",
     "rbenv",
