@@ -6,7 +6,7 @@
 
 ## Cargo Project Structure
 
-![0](../../../out/mermaid/courses/rust-programming/10_project_structure/0.png)
+![0](../../../out/mermaid/marp/courses/rust-programming/10_project_structure/0.png)
 
 ---
 
@@ -102,7 +102,7 @@ fn main() {
 
 ## Project Configuration
 
-![1](../../../out/mermaid/courses/rust-programming/10_project_structure/1.png)
+![1](../../../out/mermaid/marp/courses/rust-programming/10_project_structure/1.png)
 
 ---
 
@@ -141,7 +141,7 @@ gtk = { version = "0.1", optional = true }
 
 ## Development Tools
 
-![2](../../../out/mermaid/courses/rust-programming/10_project_structure/2.png)
+![2](../../../out/mermaid/marp/courses/rust-programming/10_project_structure/2.png)
 
 ---
 
@@ -273,7 +273,7 @@ fn main() {
 
 ## Dependency Management
 
-![3](../../../out/mermaid/courses/rust-programming/10_project_structure/3.png)
+![3](../../../out/mermaid/marp/courses/rust-programming/10_project_structure/3.png)
 
 ---
 
@@ -368,7 +368,7 @@ cargo new my_project --bin
 
 ## Security Best Practices
 
-![4](../../../out/mermaid/courses/rust-programming/10_project_structure/4.png)
+![4](../../../out/mermaid/marp/courses/rust-programming/10_project_structure/4.png)
 
 ---
 
