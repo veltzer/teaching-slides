@@ -228,17 +228,17 @@ $(ODP_PPTX): out/%.pptx: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pptx --outdir $(dir $@) $<
 $(ODP_PPT): out/%.ppt: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to ppt --outdir $(dir $@) $<
 $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)flock /tmp/flock pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
+	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
 	$(Q)rm -f $@
@@ -293,3 +293,4 @@ ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
 
+.NOTPARALLEL:
