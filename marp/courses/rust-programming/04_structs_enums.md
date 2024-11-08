@@ -4,22 +4,7 @@
 ---
 ## What are Structs?
 
-```mermaid
-mindmap
-  root((Structs))
-    Custom Types
-      Group related data
-      Named fields
-      Different types
-    Usage
-      Data organization
-      Object modeling
-      API design
-    Types
-      Classic structs
-      Tuple structs
-      Unit structs
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/04_structs_enums.md/0.png)
 
 ---
 ## Defining a Struct
@@ -174,22 +159,7 @@ impl Rectangle {
 ---
 ## What are Enums
 
-```mermaid
-mindmap
-  root((Enums))
-    Variants
-      Multiple possibilities
-      Different types
-      Named variants
-    Usage
-      State machines
-      Option types
-      Result types
-    Features
-      Methods
-      Pattern matching
-      Data storage
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/04_structs_enums.md/1.png)
 
 ---
 
@@ -465,22 +435,7 @@ Create a basic state machine using enums:
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Struct Design
-      Meaningful names
-      Clear organization
-      Documentation
-    Enum Usage
-      State representation
-      Error handling
-      Pattern matching
-    Implementation
-      Method organization
-      Associated functions
-      Validation
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/04_structs_enums.md/2.png)
 
 ---
 

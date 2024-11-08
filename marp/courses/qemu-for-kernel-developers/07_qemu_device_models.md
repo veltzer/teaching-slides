@@ -18,16 +18,7 @@ Introduction to QEMU Device Models
 
 QEMU Device Model Architecture
 
-```mermaid
-graph TD
-    A[QEMU] --> B[Device Models]
-    B --> C[Emulated Devices]
-    B --> D[Virtio Devices]
-    B --> E[Passthrough Devices]
-    C --> F[PCI/PCIe Devices]
-    C --> G[USB Devices]
-    C --> H[Other Bus Devices]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/07_qemu_device_models.md/0.png)
 
 ---
 

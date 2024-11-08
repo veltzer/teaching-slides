@@ -5,22 +5,7 @@
 
 ## Common Collections
 
-```mermaid
-mindmap
-  root((Collections))
-    Vec<T>
-      Dynamic array
-      Growable
-      Contiguous
-    String
-      UTF-8 encoded
-      Growable text
-      Unicode support
-    HashMap<K,V>
-      Key-value pairs
-      Hash-based
-      Dynamic size
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/05_collections.md/0.png)
 
 ---
 
@@ -164,14 +149,7 @@ let s3 = s1 + &s2; // s1 has been moved
 
 ## String Internals
 
-```mermaid
-graph TD
-    A[String] --> B[ptr]
-    A --> C[len]
-    A --> D[capacity]
-    B --> E[heap memory]
-    E --> F[UTF-8 bytes]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/05_collections.md/1.png)
 
 ---
 
@@ -305,15 +283,7 @@ let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
 
 ## Collection Traits
 
-```mermaid
-graph TD
-    A[Collection Traits] --> B[IntoIterator]
-    A --> C[Extend]
-    A --> D[FromIterator]
-    B --> E[iter()]
-    B --> F[iter_mut()]
-    B --> G[into_iter()]
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/05_collections.md/2.png)
 
 ---
 
@@ -355,22 +325,7 @@ vec.extend([6,7,8]);     // Add multiple
 ---
 ## Performance Considerations
 
-```mermaid
-mindmap
-  root((Performance))
-    Vector
-      Amortized O(1) push
-      O(n) insertion
-      O(1) pop
-    HashMap
-      O(1) average lookup
-      Hash collisions
-      Memory overhead
-    String
-      UTF-8 encoding
-      O(n) concatenation
-      Memory reallocation
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/05_collections.md/3.png)
 
 ---
 
@@ -444,22 +399,7 @@ Create a simple text analyzer that:
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Choose Right Collection
-      Use case
-      Performance needs
-      Memory constraints
-    Memory Management
-      Pre-allocation
-      Capacity planning
-      Clear unused
-    Safety
-      Bounds checking
-      Null handling
-      Error cases
-```
+![4](../../../out/mermaid/marp/courses/rust-programming/05_collections.md/4.png)
 
 ---
 

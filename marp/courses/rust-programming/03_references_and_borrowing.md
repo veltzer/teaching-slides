@@ -5,15 +5,7 @@
 
 ## What are References
 
-```mermaid
-graph TD
-    A[References] --> B[Immutable &]
-    A --> C[Mutable &mut]
-    B --> D[Read-only access]
-    C --> E[Read-write access]
-    D --> F[Multiple allowed]
-    E --> G[Only one allowed]
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/03_references_and_borrowing.md/0.png)
 
 ---
 
@@ -35,12 +27,7 @@ fn calculate_length(s: &String) -> usize {
 
 ## Memory Layout: References
 
-```mermaid
-graph LR
-    A[s1] --> B[String]
-    C[s] --> |reference| B
-    B --> D[heap data]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/03_references_and_borrowing.md/1.png)
 
 ---
 
@@ -159,13 +146,7 @@ println!("{}", r3);
 
 ## Borrowing Rules Visualization
 
-```mermaid
-graph TB
-    A[Value] --> B[One &mut reference]
-    A --> C[Multiple & references]
-    B --> D[Exclusive access]
-    C --> E[Shared access]
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/03_references_and_borrowing.md/2.png)
 
 ---
 
@@ -317,22 +298,7 @@ fn unnecessary(s: &mut String) {  // Use &String if not modifying
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Use References
-      For large data
-      When sharing needed
-      To avoid copies
-    Mutable References
-      Only when needed
-      Smallest scope
-      Clear ownership
-    Borrowing Rules
-      Follow compiler
-      Document lifetime
-      Clear boundaries
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/03_references_and_borrowing.md/3.png)
 
 ---
 

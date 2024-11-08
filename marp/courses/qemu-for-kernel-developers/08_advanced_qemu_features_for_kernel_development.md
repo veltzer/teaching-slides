@@ -18,18 +18,7 @@ QEMU Tracing Framework
 
 QEMU Tracing Architecture
 
-```mermaid
-graph TD
-    A[QEMU] --> B[Trace Events]
-    B --> C[Backends]
-    C --> D[Simple]
-    C --> E[ftrace]
-    C --> F[LTTng]
-    B --> G[Trace Points]
-    G --> H[TCG]
-    G --> I[KVM]
-    G --> J[Devices]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/08_advanced_qemu_features_for_kernel_development.md/0.png)
 
 ---
 

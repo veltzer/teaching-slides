@@ -4,21 +4,7 @@
 ---
 ## Concurrency Models
 
-```mermaid
-mindmap
-  root((Concurrency))
-    Threads
-      OS threads
-      Green threads
-      Thread pools
-    Message Passing
-      Channels
-      Actor model
-    Shared State
-      Mutexes
-      Atomic types
-      Memory ordering
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/08_threads_and_concurrency.md/0.png)
 
 ---
 ## Creating Threads
@@ -110,15 +96,7 @@ for received in rx {
 ---
 ## Channel Types
 
-```mermaid
-graph TD
-    A[Channels] --> B[Synchronous]
-    A --> C[Asynchronous]
-    B --> D[mpsc::sync_channel]
-    C --> E[mpsc::channel]
-    D --> F[Bounded]
-    E --> G[Unbounded]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/08_threads_and_concurrency.md/1.png)
 
 ---
 ## Shared State: Mutex
@@ -269,13 +247,7 @@ thread::spawn(move || {
 ---
 ## Thread Safety Traits
 
-```mermaid
-graph TD
-    A[Thread Safety] --> B[Send]
-    A --> C[Sync]
-    B --> D[Safe to transfer between threads]
-    C --> E[Safe to share between threads]
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/08_threads_and_concurrency.md/2.png)
 
 ---
 ## Send and Sync
@@ -371,22 +343,7 @@ match handle.join() {
 ---
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Thread Management
-      Pool sizing
-      Error handling
-      Resource cleanup
-    Synchronization
-      Lock ordering
-      Minimal scope
-      Proper atomics
-    Design
-      Message passing
-      Data ownership
-      Thread safety
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/08_threads_and_concurrency.md/3.png)
 
 ---
 ## Performance Considerations

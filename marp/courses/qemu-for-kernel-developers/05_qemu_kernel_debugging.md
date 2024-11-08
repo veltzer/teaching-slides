@@ -18,14 +18,7 @@ Importance of Kernel Debugging
 
 QEMU Debugging Architecture
 
-```mermaid
-graph TD
-    A[QEMU] --> B[GDB Server]
-    B <--> C[GDB Client]
-    A --> D[QEMU Monitor]
-    A --> E[Kernel]
-    C --> E
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/05_qemu_kernel_debugging.md/0.png)
 
 ---
 

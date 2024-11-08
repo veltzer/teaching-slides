@@ -5,14 +5,7 @@
 
 ## Memory Management Evolution
 
-```mermaid
-graph LR
-    A[Manual Management] --> B[Garbage Collection]
-    B --> C[Ownership System]
-    A -->|C/C++| D[Manual]
-    B -->|Java/Python| E[GC]
-    C -->|Rust| F[Compile-time]
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/02_understanding_ownership.md/0.png)
 
 ---
 
@@ -47,15 +40,7 @@ graph LR
 
 ## The Stack and The Heap
 
-```mermaid
-graph TD
-    A[Memory] --> B[Stack]
-    A --> C[Heap]
-    B --> D[Fixed Size]
-    B --> E[Fast Access]
-    C --> F[Variable Size]
-    C --> G[Dynamic Memory]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/02_understanding_ownership.md/1.png)
 
 ---
 
@@ -113,13 +98,7 @@ fn main() {
 
 ## Memory Layout: Move
 
-```mermaid
-graph LR
-    S1[s1] --> |moved| S2[s2]
-    S2 --> ptr[ptr]
-    ptr --> Heap[hello]
-    style S1 fill:#f44
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/02_understanding_ownership.md/2.png)
 
 ---
 
@@ -310,11 +289,7 @@ let hw = &s[..];         // whole string
 let s: &str = "Hello, world!";
 ```
 
-```mermaid
-graph LR
-    A[s] --> B[Read-Only Memory]
-    B --> C["Hello, world!"]
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/02_understanding_ownership.md/3.png)
 
 ---
 
@@ -357,22 +332,7 @@ fn main() {
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Use References
-      When possible
-      Minimize moves
-    Slice Types
-      For string operations
-      For array views
-    Clear Ownership
-      Document transfers
-      Use descriptive names
-    Memory Safety
-      Follow compiler
-      Handle errors
-```
+![4](../../../out/mermaid/marp/courses/rust-programming/02_understanding_ownership.md/4.png)
 
 ---
 

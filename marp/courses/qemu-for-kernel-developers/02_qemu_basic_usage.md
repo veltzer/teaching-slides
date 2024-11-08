@@ -17,15 +17,7 @@ QEMU Command Line Basics
 
 Kernel Boot Process in QEMU
 
-```mermaid
-graph TD
-    A[QEMU Start] --> B[Load Kernel Image]
-    B --> C[Set up Initial RAM Disk]
-    C --> D[Configure Virtual Hardware]
-    D --> E[Execute Kernel Entry Point]
-    E --> F[Kernel Initialization]
-    F --> G[User Space Start]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/02_qemu_basic_usage.md/0.png)
 
 ---
 
@@ -87,12 +79,7 @@ Network Device Emulation
 
 Virtual Network Configuration
 
-```mermaid
-graph LR
-    A[QEMU VM] -- virtio-net --> B[Virtual Bridge]
-    B -- tap0 --> C[Host Network Stack]
-    C -- eth0 --> D[Physical Network]
-```
+![1](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/02_qemu_basic_usage.md/1.png)
 
 ---
 

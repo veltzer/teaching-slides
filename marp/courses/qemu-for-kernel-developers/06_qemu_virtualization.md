@@ -18,14 +18,7 @@ Introduction to Virtualization
 
 QEMU/KVM Architecture
 
-```mermaid
-graph TD
-    A[User Space] --> B[QEMU]
-    B --> C[KVM Module]
-    C --> D[Hardware]
-    B --> E[Emulated Devices]
-    C --> F[Virtualization Extensions]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/06_qemu_virtualization.md/0.png)
 
 ---
 

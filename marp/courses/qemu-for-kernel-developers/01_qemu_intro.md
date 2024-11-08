@@ -31,15 +31,7 @@ QEMU vs Other Virtualization Solutions
 
 QEMU Architecture Overview
 
-```mermaid
-graph TD
-    A[User Interface] --> B[Emulation Core]
-    B --> C[CPU Emulation]
-    B --> D[Device Emulation]
-    B --> E[Memory Management]
-    F[Host OS] --> B
-    G[Guest OS/Kernel] --> B
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/01_qemu_intro.md/0.png)
 
 ---
 
@@ -100,13 +92,7 @@ QEMU Installation
 
 Basic QEMU Usage
 
-```mermaid
-graph LR
-    A[Prepare Disk Image] --> B[Choose Machine Type]
-    B --> C[Configure Virtual Hardware]
-    C --> D[Select Kernel/OS Image]
-    D --> E[Launch QEMU]
-```
+![1](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/01_qemu_intro.md/1.png)
 
 ---
 

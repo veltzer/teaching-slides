@@ -14,26 +14,7 @@
 ---
 ## Key Features of Rust
 
-```mermaid
-mindmap
-  root((Rust))
-    Safety
-      Memory safety
-      Thread safety
-      No null pointers
-    Performance
-      Zero-cost abstractions
-      No garbage collector
-      Predictable performance
-    Tooling
-      Cargo package manager
-      Built-in testing
-      Great documentation
-    Modern Features
-      Pattern matching
-      Type inference
-      Trait-based generics
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/0.png)
 
 ---
 ## Why Choose Rust
@@ -63,36 +44,13 @@ mindmap
 
 ## Use Cases for Rust
 
-```mermaid
-graph TD
-    R[Rust Applications] --> Sys[Systems Programming]
-    R --> Web[WebAssembly]
-    R --> CLI[Command Line Tools]
-    R --> Net[Network Services]
-    R --> Emb[Embedded Systems]
-    R --> OS[Operating Systems]
-    R --> Game[Game Development]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/1.png)
 
 ---
 
 ## Rust vs Other Languages
 
-```mermaid
-graph LR
-    R[Rust] --> Safety[Memory Safety]
-    R --> Performance[C++ Level Performance]
-    R --> Modern[Modern Ecosystem]
-
-    C[C/C++] --> Performance
-    C --> Legacy[Legacy Support]
-
-    Go[Go] --> Modern
-    Go --> GC[Garbage Collection]
-
-    Java[Java] --> GC
-    Java --> Modern
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/2.png)
 
 ---
 
@@ -124,14 +82,7 @@ curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh {MD034}
 
 ## Rustup Components
 
-```mermaid
-graph TD
-    Rustup --> Rustc[rustc - Compiler]
-    Rustup --> Cargo[cargo - Package Manager]
-    Rustup --> Fmt[rustfmt - Formatter]
-    Rustup --> Clippy[clippy - Linter]
-    Rustup --> Docs[rust-docs - Documentation]
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/3.png)
 
 ---
 
@@ -164,15 +115,7 @@ rustup component list
 
 ## Cargo: Rust's Package Manager
 
-```mermaid
-graph TD
-    A[cargo new] --> B[Project Creation]
-    B --> C[cargo build]
-    C --> D[cargo run]
-    C --> E[cargo test]
-    B --> F[cargo check]
-    B --> G[cargo doc]
-```
+![4](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/4.png)
 
 ---
 
@@ -272,26 +215,7 @@ fn main() {
 ---
 ## Basic Syntax Elements
 
-```mermaid
-mindmap
-  root((Syntax))
-    Keywords
-      fn
-      let
-      use
-    Identifiers
-      Variables
-      Functions
-      Types
-    Expressions
-      Operators
-      Function calls
-      Blocks
-    Statements
-      Declarations
-      Assignments
-      Control flow
-```
+![5](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/5.png)
 
 ---
 ## Function Syntax
@@ -346,16 +270,7 @@ fn main() {
 ---
 ## Code Organization
 
-```mermaid
-graph TD
-    A[Project] --> B[Modules]
-    B --> C[Functions]
-    B --> D[Types]
-    B --> E[Tests]
-    A --> F[Dependencies]
-    F --> G[External Crates]
-    F --> H[Standard Library]
-```
+![6](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/6.png)
 
 ---
 ## Best Practices
@@ -384,22 +299,7 @@ graph TD
 ---
 ## Common Mistakes to Avoid
 
-```mermaid
-mindmap
-  root((Mistakes))
-    Tooling
-      Ignoring warnings
-      Skipping cargo fmt
-      Not using clippy
-    Code
-      Fighting borrow checker
-      Premature optimization
-      Poor error handling
-    Process
-      No documentation
-      Skipping tests
-      Cargo.lock in git
-```
+![7](../../../out/mermaid/marp/courses/rust-programming/00_getting_started.md/7.png)
 
 ---
 ## Resources for Learning

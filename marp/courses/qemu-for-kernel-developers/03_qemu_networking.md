@@ -18,14 +18,7 @@ Importance of Networking in Kernel Development
 
 QEMU Network Models Overview
 
-```mermaid
-graph TD
-    A[QEMU Network Models] --> B[User Networking]
-    A --> C[Tap Networking]
-    A --> D[Bridge Networking]
-    A --> E[VDE Networking]
-    A --> F[Custom Backend]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/03_qemu_networking.md/0.png)
 
 ---
 
@@ -86,12 +79,7 @@ QEMU Network Configuration Syntax
 
 Setting Up a Basic Network
 
-```mermaid
-graph LR
-    A[QEMU VM] --virtio-net--> B[User Networking]
-    B --NAT--> C[Host Network]
-    C --> D[Internet]
-```
+![1](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/03_qemu_networking.md/1.png)
 
 ---
 

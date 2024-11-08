@@ -18,18 +18,7 @@ QEMU Project Structure
 
 QEMU Source Code Architecture
 
-```mermaid
-graph TD
-    A[QEMU] --> B[CPU Emulation]
-    A --> C[Device Models]
-    A --> D[System Emulation]
-    A --> E[User Mode Emulation]
-    B --> F[TCG]
-    B --> G[KVM]
-    C --> H[hw/]
-    D --> I[vl.c]
-    E --> J[linux-user/]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/09_qemu_internals.md/0.png)
 
 ---
 
@@ -70,12 +59,7 @@ TCG Intermediate Representation
 
 TCG Code Generation Process
 
-```mermaid
-graph LR
-    A[Target Instructions] --> B[TCG Ops]
-    B --> C[TCG Optimization]
-    C --> D[Host Instructions]
-```
+![1](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/09_qemu_internals.md/1.png)
 
 ---
 

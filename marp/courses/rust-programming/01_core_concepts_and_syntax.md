@@ -36,22 +36,7 @@ fn main() {
 
 ## Scalar Types
 
-```mermaid
-mindmap
-  root((Scalar Types))
-    Integers
-      Signed(i8..i128)
-      Unsigned(u8..u128)
-    Floating-Point
-      f32
-      f64
-    Boolean
-      true
-      false
-    Character
-      Unicode
-      4 bytes
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/01_core_concepts_and_syntax.md/0.png)
 
 ---
 
@@ -155,15 +140,7 @@ fn main() {
 
 ## Compound Types
 
-```mermaid
-graph TD
-    A[Compound Types] --> B[Tuples]
-    A --> C[Arrays]
-    B --> D[Fixed Length]
-    B --> E[Mixed Types]
-    C --> F[Fixed Length]
-    C --> G[Same Type]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/01_core_concepts_and_syntax.md/1.png)
 
 ---
 

@@ -18,14 +18,7 @@ Importance of Block Devices in Kernel Development
 
 QEMU Block Device Models
 
-```mermaid
-graph TD
-    A[QEMU Block Devices] --> B[IDE/ATA]
-    A --> C[SCSI]
-    A --> D[Virtio-blk]
-    A --> E[NVMe]
-    A --> F[Custom Block Devices]
-```
+![0](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/04_qemu_block_devices.md/0.png)
 
 ---
 
@@ -95,14 +88,7 @@ Configuring Block Devices in QEMU
 
 QEMU Block Layer Architecture
 
-```mermaid
-graph TD
-    A[QEMU Block Layer] --> B[Block Frontend]
-    A --> C[Block Backend]
-    B --> D[Device Models]
-    C --> E[Image Formats]
-    C --> F[Block Drivers]
-```
+![1](../../../out/mermaid/marp/courses/qemu-for-kernel-developers/04_qemu_block_devices.md/1.png)
 
 ---
 

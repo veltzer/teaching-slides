@@ -1,0 +1,7 @@
+graph TD
+    A[Channels] --> B[Synchronous]
+    A --> C[Asynchronous]
+    B --> D[mpsc::sync_channel]
+    C --> E[mpsc::channel]
+    D --> F[Bounded]
+    E --> G[Unbounded]

@@ -1,0 +1,4 @@
+graph LR
+    A[QEMU VM] -- virtio-net --> B[Virtual Bridge]
+    B -- tap0 --> C[Host Network Stack]
+    C -- eth0 --> D[Physical Network]

@@ -1,0 +1,9 @@
+graph TD
+    A[Errors] --> B[Recoverable]
+    A --> C[Unrecoverable]
+    B --> D[Result<T,E>]
+    C --> E[panic!]
+    D --> F[File not found]
+    D --> G[Network timeout]
+    E --> H[Array bounds]
+    E --> I[Stack overflow]

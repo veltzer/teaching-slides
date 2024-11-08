@@ -5,17 +5,7 @@
 
 ## Types of Errors
 
-```mermaid
-graph TD
-    A[Errors] --> B[Recoverable]
-    A --> C[Unrecoverable]
-    B --> D[Result<T,E>]
-    C --> E[panic!]
-    D --> F[File not found]
-    D --> G[Network timeout]
-    E --> H[Array bounds]
-    E --> I[Stack overflow]
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/07_error_handling_and_testing.md/0.png)
 
 ---
 
@@ -364,22 +354,7 @@ mod tests {
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Testing))
-    Organization
-      Unit tests
-      Integration tests
-      Documentation tests
-    Coverage
-      Edge cases
-      Error paths
-      Happy paths
-    Maintenance
-      Clear names
-      Setup/teardown
-      Documentation
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/07_error_handling_and_testing.md/1.png)
 
 ---
 

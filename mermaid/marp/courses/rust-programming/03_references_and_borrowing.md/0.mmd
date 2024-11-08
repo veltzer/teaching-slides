@@ -1,0 +1,7 @@
+graph TD
+    A[References] --> B[Immutable &]
+    A --> C[Mutable &mut]
+    B --> D[Read-only access]
+    C --> E[Read-write access]
+    D --> F[Multiple allowed]
+    E --> G[Only one allowed]

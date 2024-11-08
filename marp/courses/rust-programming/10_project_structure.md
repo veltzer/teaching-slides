@@ -6,16 +6,7 @@
 
 ## Cargo Project Structure
 
-```mermaid
-graph TD
-    A[Project Root] --> B[src/]
-    A --> C[tests/]
-    A --> D[Cargo.toml]
-    A --> E[Cargo.lock]
-    B --> F[main.rs/lib.rs]
-    B --> G[modules]
-    C --> H[integration tests]
-```
+![0](../../../out/mermaid/courses/rust-programming/10_project_structure/0.png)
 
 ---
 
@@ -111,16 +102,7 @@ fn main() {
 
 ## Project Configuration
 
-```mermaid
-graph TD
-    A[Configuration] --> B[Cargo.toml]
-    A --> C[.cargo/config.toml]
-    A --> D[Environment Variables]
-    B --> E[Dependencies]
-    B --> F[Build Settings]
-    C --> G[Target Settings]
-    C --> H[Environment Settings]
-```
+![1](../../../out/mermaid/courses/rust-programming/10_project_structure/1.png)
 
 ---
 
@@ -159,23 +141,7 @@ gtk = { version = "0.1", optional = true }
 
 ## Development Tools
 
-```mermaid
-mindmap
-  root((Tools))
-    Cargo
-      build
-      test
-      doc
-    Rustfmt
-      Code formatting
-      Style enforcement
-    Clippy
-      Linting
-      Best practices
-    RLS/rust-analyzer
-      IDE support
-      Code completion
-```
+![2](../../../out/mermaid/courses/rust-programming/10_project_structure/2.png)
 
 ---
 
@@ -307,16 +273,7 @@ fn main() {
 
 ## Dependency Management
 
-```mermaid
-graph TD
-    A[Dependencies] --> B[Direct]
-    A --> C[Development]
-    A --> D[Build]
-    B --> E[Version Control]
-    B --> F[Feature Selection]
-    C --> G[Testing Tools]
-    D --> H[Build Tools]
-```
+![3](../../../out/mermaid/courses/rust-programming/10_project_structure/3.png)
 
 ---
 
@@ -411,22 +368,7 @@ cargo new my_project --bin
 
 ## Security Best Practices
 
-```mermaid
-mindmap
-  root((Security))
-    Dependencies
-      Audit
-      Updates
-      Minimal deps
-    Code Review
-      Safety checks
-      Input validation
-      Error handling
-    Tools
-      cargo-audit
-      cargo-crev
-      cargo-deny
-```
+![4](../../../out/mermaid/courses/rust-programming/10_project_structure/4.png)
 
 ---
 

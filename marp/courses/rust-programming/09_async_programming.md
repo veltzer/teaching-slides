@@ -5,16 +5,7 @@
 
 ## Why Async?
 
-```mermaid
-graph TD
-    A[Program Types] --> B[Synchronous]
-    A --> C[Threaded]
-    A --> D[Asynchronous]
-    B --> E[Blocking]
-    C --> F[OS Threads]
-    D --> G[Event Loop]
-    D --> H[Task Based]
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/09_async_programming.md/0.png)
 
 ---
 
@@ -319,15 +310,7 @@ async fn parallel_tasks() {
 
 ## Resource Management
 
-```mermaid
-graph TD
-    A[Resources] --> B[Connection Pools]
-    A --> C[Rate Limiting]
-    A --> D[Backpressure]
-    B --> E[Database]
-    B --> F[HTTP Client]
-    C --> G[Throttling]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/09_async_programming.md/1.png)
 
 ---
 
@@ -345,22 +328,7 @@ async fn test_async_function() {
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Async Best Practices))
-    Task Management
-      Proper cancellation
-      Error handling
-      Resource cleanup
-    Performance
-      Connection pooling
-      Batching
-      Backpressure
-    Design
-      Proper abstraction
-      Error propagation
-      Testing strategy
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/09_async_programming.md/2.png)
 
 ---
 

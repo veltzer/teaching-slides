@@ -4,23 +4,7 @@
 ---
 ## What are Generics
 
-```mermaid
-mindmap
-  root((Generics))
-    Abstract Types
-      Type parameters
-      Code reuse
-      Zero cost
-    Usage
-      Functions
-      Structs
-      Enums
-      Methods
-    Benefits
-      Type safety
-      Code reduction
-      Flexibility
-```
+![0](../../../out/mermaid/marp/courses/rust-programming/06_generics_traits.md/0.png)
 
 ---
 
@@ -108,15 +92,7 @@ impl Point<f64> {
 
 ## What are Traits
 
-```mermaid
-graph TD
-    A[Traits] --> B[Shared Behavior]
-    A --> C[Interface Definition]
-    A --> D[Generic Constraints]
-    B --> E[Method Signatures]
-    C --> F[Default Implementation]
-    D --> G[Bounds]
-```
+![1](../../../out/mermaid/marp/courses/rust-programming/06_generics_traits.md/1.png)
 
 ---
 
@@ -305,25 +281,7 @@ impl<T: Display + PartialOrd> MyTrait for T {
 
 ## Common Traits
 
-```mermaid
-mindmap
-  root((Common Traits))
-    Display
-      String formatting
-      User output
-    Debug
-      Development output
-      Debugging
-    Clone
-      Value duplication
-      Deep copy
-    Copy
-      Stack-only data
-      Implicit copies
-    Default
-      Default values
-      Initialization
-```
+![2](../../../out/mermaid/marp/courses/rust-programming/06_generics_traits.md/2.png)
 
 ---
 
@@ -424,22 +382,7 @@ fn process_string(x: String) {
 
 ## Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Generics
-      Meaningful constraints
-      Clear bounds
-      Documentation
-    Traits
-      Focused behavior
-      Default impl
-      Clear contracts
-    Implementation
-      Code organization
-      Error handling
-      Performance
-```
+![3](../../../out/mermaid/marp/courses/rust-programming/06_generics_traits.md/3.png)
 
 ---
 ## Common Pitfalls
