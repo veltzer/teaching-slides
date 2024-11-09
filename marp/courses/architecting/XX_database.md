@@ -29,13 +29,7 @@
 
 ## ACID Properties
 
-```mermaid
-graph TD
-    A[ACID] --> B[Atomicity]
-    A --> C[Consistency]
-    A --> D[Isolation]
-    A --> E[Durability]
-```
+![0](../../../out/mermaid/marp/courses/architecting/XX_database.md/0.png)
 
 ---
 
@@ -68,13 +62,7 @@ COMMIT;
 
 ## Isolation Problems
 
-```mermaid
-graph TD
-    A[Isolation Issues] --> B[Dirty Reads]
-    A --> C[Non-repeatable Reads]
-    A --> D[Phantom Reads]
-    A --> E[Lost Updates]
-```
+![1](../../../out/mermaid/marp/courses/architecting/XX_database.md/1.png)
 
 ---
 
@@ -202,13 +190,7 @@ with driver.session() as session:
 
 ## Normalization Example
 
-```mermaid
-graph TD
-    A[Unnormalized] --> B[1NF]
-    B --> C[2NF]
-    C --> D[3NF]
-    D --> E[BCNF]
-```
+![2](../../../out/mermaid/marp/courses/architecting/XX_database.md/2.png)
 
 ---
 
@@ -276,13 +258,7 @@ FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 
 ## Sharding Architecture
 
-```mermaid
-graph TD
-    A[Application] --> B[Shard Manager]
-    B --> C[Shard 1]
-    B --> D[Shard 2]
-    B --> E[Shard 3]
-```
+![3](../../../out/mermaid/marp/courses/architecting/XX_database.md/3.png)
 
 ---
 
@@ -316,18 +292,7 @@ def store_data(key, value):
 
 ## Replication Types
 
-```mermaid
-graph LR
-    subgraph "Master-Slave"
-    M[Master] --> S1[Slave 1]
-    M --> S2[Slave 2]
-    end
-    
-    subgraph "Multi-Master"
-    M1[Master 1] --> M2[Master 2]
-    M2 --> M1
-    end
-```
+![4](../../../out/mermaid/marp/courses/architecting/XX_database.md/4.png)
 
 ---
 
@@ -433,13 +398,7 @@ engine = create_engine(
 
 ## Caching Patterns
 
-```mermaid
-graph TD
-    A[Cache Patterns] --> B[Cache-Aside]
-    A --> C[Read-Through]
-    A --> D[Write-Through]
-    A --> E[Write-Behind]
-```
+![5](../../../out/mermaid/marp/courses/architecting/XX_database.md/5.png)
 
 ---
 
@@ -478,17 +437,7 @@ def get_user(user_id):
 
 ## Monitoring Dashboard
 
-```mermaid
-graph TD
-    A[Metrics Collection] --> B[Query Stats]
-    A --> C[Connection Pool]
-    A --> D[Cache Stats]
-    A --> E[System Resources]
-    B --> F[Dashboard]
-    C --> F
-    D --> F
-    E --> F
-```
+![6](../../../out/mermaid/marp/courses/architecting/XX_database.md/6.png)
 
 ---
 

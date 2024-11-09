@@ -25,14 +25,7 @@
 
 ## Common Isolation Problems
 
-```mermaid
-graph TD
-    A[Isolation Problems] --> B[Dirty Reads]
-    A --> C[Non-repeatable Reads]
-    A --> D[Phantom Reads]
-    A --> E[Lost Updates]
-    A --> F[Write Skew]
-```
+![0](../../../out/mermaid/marp/courses/architecting/XX_isolation_levels.md/0.png)
 
 ---
 
@@ -93,15 +86,7 @@ SELECT COUNT(*) FROM accounts WHERE balance > 1000;  -- Returns 6
 
 ## Standard Isolation Levels
 
-```mermaid
-graph TD
-    A[Isolation Levels] --> B[Read Uncommitted]
-    B --> C[Read Committed]
-    C --> D[Repeatable Read]
-    D --> E[Serializable]
-    
-    style E fill:#f96
-```
+![1](../../../out/mermaid/marp/courses/architecting/XX_isolation_levels.md/1.png)
 
 ---
 
@@ -136,18 +121,7 @@ COMMIT;
 
 ## Optimistic vs Pessimistic Locking
 
-```mermaid
-graph LR
-    subgraph "Pessimistic"
-    A[Lock] --> B[Modify]
-    B --> C[Unlock]
-    end
-    
-    subgraph "Optimistic"
-    D[Read] --> E[Check Version]
-    E --> F[Modify if Unchanged]
-    end
-```
+![2](../../../out/mermaid/marp/courses/architecting/XX_isolation_levels.md/2.png)
 
 ---
 
@@ -216,16 +190,7 @@ def transfer_money(from_id, to_id, amount):
 
 ## Dealing with Deadlocks
 
-```mermaid
-graph LR
-    T1[Transaction 1] --> L1[Lock A]
-    T1 --> L2[Wants Lock B]
-    T2[Transaction 2] --> L3[Lock B]
-    T2 --> L4[Wants Lock A]
-    
-    style L2 fill:#f96
-    style L4 fill:#f96
-```
+![3](../../../out/mermaid/marp/courses/architecting/XX_isolation_levels.md/3.png)
 
 ---
 
@@ -251,13 +216,7 @@ def safe_update(account_ids, callback):
 
 ## Multi-Version Concurrency Control (MVCC)
 
-```mermaid
-graph TD
-    T1[Transaction 1] --> V1[Version 1]
-    T2[Transaction 2] --> V2[Version 2]
-    V1 --> C[Commit]
-    V2 --> C
-```
+![4](../../../out/mermaid/marp/courses/architecting/XX_isolation_levels.md/4.png)
 
 ---
 
