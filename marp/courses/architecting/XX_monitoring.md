@@ -1,0 +1,407 @@
+# Monitoring and Observability
+## Modern Architecture Course
+---
+## Agenda
+1. Introduction to Observability
+2. The Three Pillars
+3. Logging Strategies
+4. Metrics Collection
+5. Tracing Implementation
+6. Alerting Systems
+7. Dashboard Design
+8. Best Practices
+---
+## What is Observability?
+- Ability to understand internal state from external outputs
+- Beyond traditional monitoring
+- Debug problems you haven't predicted
+- Understand system behavior
+- Make data-driven decisions
+---
+## The Three Pillars of Observability
+
+![0](../../../out/mermaid/marp/courses/architecting/XX_monitoring.md/0.png)
+
+---
+
+## Logs vs Metrics vs Traces
+
+| Type | Format | Cardinality | Use Case |
+|------|---------|------------|-----------|
+| Logs | Text | High | Debugging |
+| Metrics | Numbers | Low | Patterns/Alerts |
+| Traces | Graphs | Medium | Performance |
+
+---
+
+## Logging Levels
+
+```python
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+logger.debug("Detailed information")
+logger.info("General information")
+logger.warning("Warning messages")
+logger.error("Error messages")
+logger.critical("Critical failures")
+```
+
+---
+
+## Structured Logging
+
+```python
+import structlog
+
+logger = structlog.get_logger()
+
+logger.info("order_processed",
+    order_id="12345",
+    customer_id="CUS789",
+    amount=99.99,
+    status="completed",
+    processing_time_ms=150
+)
+```
+
+---
+
+## ELK Stack Architecture
+
+![1](../../../out/mermaid/marp/courses/architecting/XX_monitoring.md/1.png)
+
+---
+
+## Elasticsearch Template
+
+```json
+{
+  "template": "logs-*",
+  "mappings": {
+    "properties": {
+      "@timestamp": { "type": "date" },
+      "service": { "type": "keyword" },
+      "level": { "type": "keyword" },
+      "message": { "type": "text" },
+      "trace_id": { "type": "keyword" },
+      "duration_ms": { "type": "long" }
+    }
+  }
+}
+```
+
+---
+
+## Metrics Collection
+
+1. System Metrics
+   - CPU, Memory, Disk, Network
+2. Application Metrics
+   - Response time, Error rates
+3. Business Metrics
+   - Transactions, Users, Revenue
+
+---
+
+## Prometheus Metrics
+
+```python
+from prometheus_client import Counter, Histogram, start_http_server
+
+# Counter for total requests
+requests_total = Counter(
+    'http_requests_total',
+    'Total HTTP requests',
+    ['method', 'endpoint']
+)
+
+# Histogram for response time
+response_time = Histogram(
+    'http_response_time_seconds',
+    'Response time in seconds',
+    ['endpoint']
+)
+
+@response_time.time()
+def process_request():
+    requests_total.labels(
+        method='POST',
+        endpoint='/api/orders'
+    ).inc()
+    # Process request...
+```
+
+---
+
+## Distributed Tracing
+
+![2](../../../out/mermaid/marp/courses/architecting/XX_monitoring.md/2.png)
+
+---
+
+## OpenTelemetry Example
+
+```python
+from opentelemetry import trace
+from opentelemetry.trace import Status, StatusCode
+
+tracer = trace.get_tracer(__name__)
+
+@tracer.start_as_current_span("process_order")
+def process_order(order_id):
+    with tracer.start_span("validate_order") as span:
+        span.set_attribute("order_id", order_id)
+        # Validation logic
+        
+    with tracer.start_span("payment_processing") as span:
+        try:
+            process_payment()
+            span.set_status(Status(StatusCode.OK))
+        except Exception as e:
+            span.set_status(Status(StatusCode.ERROR))
+            span.record_exception(e)
+```
+
+---
+
+## Alert Definition
+
+```yaml
+alert: HighErrorRate
+expr: |
+  sum(rate(http_requests_total{status=~"5.."}[5m])) 
+  / 
+  sum(rate(http_requests_total[5m])) 
+  > 0.01
+for: 5m
+labels:
+  severity: critical
+  team: backend
+annotations:
+  summary: High error rate detected
+  description: Error rate above 1% for 5 minutes
+```
+
+---
+
+## Alert Routing
+
+![3](../../../out/mermaid/marp/courses/architecting/XX_monitoring.md/3.png)
+
+---
+
+## Anomaly Detection
+
+```python
+from sklearn.ensemble import IsolationForest
+
+def detect_anomalies(metrics_df):
+    model = IsolationForest(
+        contamination=0.1,
+        random_state=42
+    )
+    
+    predictions = model.fit_predict(metrics_df)
+    anomalies = metrics_df[predictions == -1]
+    
+    alert_on_anomalies(anomalies)
+```
+
+---
+
+## Dashboard Design Principles
+
+1. Purpose-driven layout
+2. Clear hierarchy
+3. Consistent metrics
+4. Interactive elements
+5. Responsive design
+
+---
+
+## Grafana Dashboard Example
+
+```javascript
+{
+  "dashboard": {
+    "title": "Service Overview",
+    "panels": [
+      {
+        "title": "Request Rate",
+        "type": "graph",
+        "targets": [{
+          "expr": "rate(http_requests_total[5m])"
+        }]
+      },
+      {
+        "title": "Error Rate",
+        "type": "graph",
+        "targets": [{
+          "expr": "rate(http_errors_total[5m])"
+        }]
+      }
+    ]
+  }
+}
+```
+
+---
+
+## SLI/SLO Implementation
+
+```python
+def calculate_sli():
+    # Get metrics from Prometheus
+    success_rate = prom.query("""
+        sum(rate(http_requests_total{status=~"2.."}[1h]))
+        /
+        sum(rate(http_requests_total[1h]))
+    """)
+    
+    latency_p95 = prom.query("""
+        histogram_quantile(0.95, 
+            sum(rate(http_latency_bucket[1h])) 
+            by (le)
+        )
+    """)
+    
+    return {
+        "availability": success_rate,
+        "latency_p95": latency_p95
+    }
+```
+
+---
+
+## Error Budget Tracking
+
+```python
+class ErrorBudget:
+    def __init__(self, slo_target, time_window):
+        self.slo_target = slo_target
+        self.time_window = time_window
+        
+    def calculate_remaining(self):
+        current_availability = get_availability()
+        error_budget = 1 - self.slo_target
+        used_budget = 1 - current_availability
+        
+        return max(0, error_budget - used_budget)
+```
+
+---
+
+## Monitoring as Code
+
+```terraform
+resource "grafana_dashboard" "service_overview" {
+  config_json = jsonencode({
+    title = "Service Overview"
+    panels = [
+      {
+        title = "Request Rate"
+        type  = "graph"
+        datasource = "Prometheus"
+      },
+      {
+        title = "Error Rate"
+        type  = "graph"
+        datasource = "Prometheus"
+      }
+    ]
+  })
+}
+```
+
+---
+
+## Incident Response Integration
+
+```python
+def handle_alert(alert):
+    # Create incident
+    incident = create_pagerduty_incident(alert)
+    
+    # Gather context
+    context = {
+        "logs": fetch_relevant_logs(alert.timeframe),
+        "metrics": fetch_related_metrics(alert.timeframe),
+        "traces": fetch_related_traces(alert.trace_id)
+    }
+    
+    # Update incident
+    update_incident(incident.id, context)
+```
+
+---
+
+## Cost of Monitoring
+
+![4](../../../out/mermaid/marp/courses/architecting/XX_monitoring.md/4.png)
+
+---
+
+## Retention Policies
+
+```yaml
+retention:
+  logs:
+    hot: 7d
+    warm: 30d
+    cold: 90d
+  metrics:
+    raw: 15d
+    aggregated: 365d
+  traces:
+    sampled: 7d
+    errors: 30d
+```
+
+---
+
+## System Health Score
+
+```python
+def calculate_health_score():
+    metrics = {
+        "availability": get_availability_score(),
+        "latency": get_latency_score(),
+        "error_rate": get_error_score(),
+        "saturation": get_saturation_score()
+    }
+    
+    weights = {
+        "availability": 0.4,
+        "latency": 0.3,
+        "error_rate": 0.2,
+        "saturation": 0.1
+    }
+    
+    return sum(score * weights[metric] 
+              for metric, score in metrics.items())
+```
+
+---
+
+## Best Practices
+
+1. Start with business objectives
+2. Use structured logging
+3. Implement proper sampling
+4. Set meaningful alerts
+5. Automate responses
+6. Regular review and updates
+7. Documentation
+
+---
+
+## Future Trends
+
+1. AI-powered analysis
+2. Automated remediation
+3. Chaos engineering integration
+4. Real-time visualization
+5. Predictive monitoring
