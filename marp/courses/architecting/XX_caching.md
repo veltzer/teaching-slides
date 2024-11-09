@@ -26,7 +26,7 @@
 
 ## Cache Hit vs Cache Miss
 
-![0](../../../out/mermaid/architecting/caching/0.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_caching.md/0.png)
 
 ---
 
@@ -103,19 +103,19 @@ def get_product(product_id):
 
 ## Cache-Aside Pattern
 
-![1](../../../out/mermaid/architecting/caching/1.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_caching.md/1.png)
 
 ---
 
 ## Write-Through Pattern
 
-![2](../../../out/mermaid/architecting/caching/2.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_caching.md/2.png)
 
 ---
 
 ## Write-Behind Pattern
 
-![3](../../../out/mermaid/architecting/caching/3.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_caching.md/3.png)
 
 ---
 
@@ -161,7 +161,7 @@ def get_trending_posts():
 
 ## CDN Architecture
 
-![4](../../../out/mermaid/architecting/caching/4.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_caching.md/4.png)
 
 ---
 
@@ -204,7 +204,7 @@ Vary: Accept-Encoding
 
 ## Edge Computing Architecture
 
-![5](../../../out/mermaid/architecting/caching/5.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_caching.md/5.png)
 
 ---
 
@@ -308,7 +308,7 @@ Key Metrics:
 
 ## Cache Monitoring Dashboard
 
-![6](../../../out/mermaid/architecting/caching/6.png)
+![6](../../../out/mermaid/marp/courses/architecting/XX_caching.md/6.png)
 
 ---
 
