@@ -15,7 +15,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 ## Diagram
 
-![Cache Poisoning](../../../out/mermaid/cyber/dns_cache_poisoning.png)
+![0](../../../out/mermaid/marp/courses/cyber-attacks-and-vectors/07_dns_cache_poisoning.md/0.png)
 
 ---
 ## Consequences of DNS Cache Poisoning

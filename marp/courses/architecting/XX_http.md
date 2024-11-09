@@ -11,7 +11,7 @@
 - Client-server protocol
 - Stateless, but not sessionless
 
-![Client Server](../../../out/mermaid/http/dclient_server.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_http.md/0.png)
 
 ---
 
@@ -22,7 +22,7 @@
 - Headers introduced
 - Methods: GET, HEAD, POST
 
-![HTTP 1.0](../../../out/mermaid/http/http1.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_http.md/1.png)
 
 ---
 
@@ -34,7 +34,7 @@
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
 
-![HTTP 1.1](../../../out/mermaid/http/http11.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_http.md/2.png)
 
 ---
 
@@ -55,13 +55,13 @@
 - Server push
 - Stream prioritization
 
-![HTTP 2](../../../out/mermaid/http/http2_overall.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_http.md/3.png)
 
 ---
 
 ## HTTP/2 Server Push
 
-![HTTP 2](../../../out/mermaid/http/http2.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_http.md/4.png)
 
 ---
 
@@ -73,13 +73,13 @@
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
 
-![QUIC](../../../out/mermaid/http/quic.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_http.md/5.png)
 
 ---
 
 ## HTTP/3 Connection Establishment
 
-![QUIC Handshake](../../../out/mermaid/http/quic_handshake.png)
+![6](../../../out/mermaid/marp/courses/architecting/XX_http.md/6.png)
 
 ---
 

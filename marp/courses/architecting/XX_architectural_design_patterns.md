@@ -21,7 +21,7 @@
 ---
 ## Communication Diagram
 
-![0](../../../out/mermaid/architecting/architectural_design_patterns/0.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/0.png)
 
 ---
 
@@ -77,7 +77,7 @@ Cons:
 
 ## Broker Interaction Diagram
 
-![1](../../../out/mermaid/architecting/architectural_design_patterns/1.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/1.png)
 
 ---
 ## Broker Pros and Cons
@@ -129,7 +129,7 @@ Cons:
 
 ## Peer-to-Peer Diagram
 
-![2](../../../out/mermaid/architecting/architectural_design_patterns/2.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/2.png)
 
 ---
 ## Peer-to-Peer Pros and Cons
@@ -182,7 +182,7 @@ Cons:
 
 ## Event Bus Interaction Diagram
 
-![3](../../../out/mermaid/architecting/architectural_design_patterns/3.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/3.png)
 
 ---
 
@@ -233,7 +233,7 @@ Cons:
 ---
 ## Microservices Architecture Diagram
 
-![4](../../../out/mermaid/architecting/architectural_design_patterns/4.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/4.png)
 
 ---
 ## Microservices Pros and Cons
@@ -286,7 +286,7 @@ Cons:
 
 ## Service-Oriented Architecture Diagram
 
-![5](../../../out/mermaid/architecting/architectural_design_patterns/5.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/5.png)
 
 ---
 ## Service-Oriented Architecture Pros and Cons
@@ -342,7 +342,7 @@ Cons:
 
 ## Event-Driven Architecture Diagram
 
-![6](../../../out/mermaid/architecting/architectural_design_patterns/6.png)
+![6](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/6.png)
 
 ---
 
@@ -404,7 +404,7 @@ Cons:
 
 ## DDD Architecture Diagram
 
-![7](../../../out/mermaid/architecting/architectural_design_patterns/7.png)
+![7](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/7.png)
 
 ---
 ## DDD Pros and Cons
@@ -471,7 +471,7 @@ Cons:
 
 ## CQRS Architecture Diagram
 
-![8](../../../out/mermaid/architecting/architectural_design_patterns/8.png)
+![8](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/8.png)
 
 ---
 
@@ -534,7 +534,7 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-![9](../../../out/mermaid/architecting/architectural_design_patterns/9.png)
+![9](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/9.png)
 
 ---
 ## Event Sourcing Pros and Cons
@@ -592,7 +592,7 @@ Cons:
 ---
 ## Serverless Architecture Diagram
 
-![10](../../../out/mermaid/architecting/architectural_design_patterns/10.png)
+![10](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/10.png)
 
 ---
 ## Serverless Pros and Cons
@@ -650,7 +650,7 @@ Cons:
 ---
 ## Space-Based Architecture Diagram
 
-![11](../../../out/mermaid/architecting/architectural_design_patterns/11.png)
+![11](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/11.png)
 
 ---
 ## Space-Based Pros and Cons
@@ -712,7 +712,7 @@ Cons:
 
 ## Hexagonal Architecture Diagram
 
-![12](../../../out/mermaid/architecting/architectural_design_patterns/12.png)
+![12](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/12.png)
 
 ---
 ## Hexagonal Architecture Pros and Cons
@@ -776,7 +776,7 @@ Cons:
 
 ## Architecture Diagram
 
-![13](../../../out/mermaid/architecting/architectural_design_patterns/13.png)
+![13](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/13.png)
 
 ---
 ## Pros and Cons
@@ -832,7 +832,7 @@ Cons:
 ---
 ## Onion Architecture Diagram
 
-![14](../../../out/mermaid/architecting/architectural_design_patterns/14.png)
+![14](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/14.png)
 
 ---
 ## Onion Architecture Pros and Cons
@@ -893,7 +893,7 @@ Cons:
 ---
 ## Microkernel Architecture Diagram
 
-![15](../../../out/mermaid/architecting/architectural_design_patterns/15.png)
+![15](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/15.png)
 
 ---
 ## Microkernel Pros and Cons
@@ -957,7 +957,7 @@ Cons:
 
 ## Publish-Subscribe Diagram
 
-![16](../../../out/mermaid/architecting/architectural_design_patterns/16.png)
+![16](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/16.png)
 
 ---
 
@@ -1015,7 +1015,7 @@ Cons:
 
 ## Monolithic Architecture Diagram
 
-![17](../../../out/mermaid/architecting/architectural_design_patterns/17.png)
+![17](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/17.png)
 
 ---
 
@@ -1079,7 +1079,7 @@ Cons:
 ---
 ## Modular Monolith Architecture Diagram
 
-![18](../../../out/mermaid/architecting/architectural_design_patterns/18.png)
+![18](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/18.png)
 
 ---
 
@@ -1142,7 +1142,7 @@ Cons:
 ---
 ## Share-Nothing Architecture Diagram
 
-![19](../../../out/mermaid/architecting/architectural_design_patterns/19.png)
+![19](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/19.png)
 
 ---
 ## Share-Nothing Pros and Cons
@@ -1179,7 +1179,7 @@ Cons:
 ---
 ## Circuit Breaker Pattern Diagram
 
-![20](../../../out/mermaid/architecting/architectural_design_patterns/20.png)
+![20](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/20.png)
 
 ---
 ## Pros and Cons
@@ -1214,7 +1214,7 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-![21](../../../out/mermaid/architecting/architectural_design_patterns/21.png)
+![21](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/21.png)
 
 ---
 ## Pros and Cons
@@ -1248,7 +1248,7 @@ Cons:
 ---
 ## Bulkhead Pattern Diagram
 
-![22](../../../out/mermaid/architecting/architectural_design_patterns/22.png)
+![22](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/22.png)
 
 ---
 ## Bulkhead Pattern Pros and Cons
@@ -1283,7 +1283,7 @@ Cons:
 ---
 ## Strangler Fig Pattern Diagram
 
-![23](../../../out/mermaid/architecting/architectural_design_patterns/23.png)
+![23](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/23.png)
 
 ---
 ## Strangler Fig Pros and Cons
@@ -1318,7 +1318,7 @@ Cons:
 ---
 ## Backend for Frontend (BFF) Pattern Diagram
 
-![24](../../../out/mermaid/architecting/architectural_design_patterns/24.png)
+![24](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/24.png)
 
 ---
 ## BFF Pros and Cons
@@ -1355,7 +1355,7 @@ Cons:
 ---
 ## API Gateway Pattern Diagram
 
-![25](../../../out/mermaid/architecting/architectural_design_patterns/25.png)
+![25](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/25.png)
 
 ---
 
@@ -1399,7 +1399,7 @@ Cons:
 
 ## Anti-Corruption Layer Pattern Diagram
 
-![26](../../../out/mermaid/architecting/architectural_design_patterns/26.png)
+![26](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/26.png)
 
 ---
 ## Anti-Corruption Pros and Cons
@@ -1444,7 +1444,7 @@ Cons:
 
 ## Database per Service Pattern Diagram
 
-![27](../../../out/mermaid/architecting/architectural_design_patterns/27.png)
+![27](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/27.png)
 
 ---
 
@@ -1491,7 +1491,7 @@ Cons:
 
 ## Geode Pattern Diagram
 
-![28](../../../out/mermaid/architecting/architectural_design_patterns/28.png)
+![28](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/28.png)
 
 ---
 ## Geode Pros and Cons
@@ -1530,7 +1530,7 @@ Cons:
 ---
 ## Kappa Architecture Diagram
 
-![29](../../../out/mermaid/architecting/architectural_design_patterns/29.png)
+![29](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/29.png)
 
 ---
 ## Pros and Cons
@@ -1569,7 +1569,7 @@ Cons:
 ---
 ## Lambda Architecture Diagram
 
-![30](../../../out/mermaid/architecting/architectural_design_patterns/30.png)
+![30](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/30.png)
 
 ---
 ## Pros and Cons
@@ -1607,7 +1607,7 @@ Cons:
 ---
 ## Mesh Architecture Diagram
 
-![31](../../../out/mermaid/architecting/architectural_design_patterns/31.png)
+![31](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/31.png)
 
 ---
 ## Mesh Architecture Pros and Cons
@@ -1646,7 +1646,7 @@ Cons:
 ---
 ## Sharded Architecture Diagram
 
-![32](../../../out/mermaid/architecting/architectural_design_patterns/32.png)
+![32](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/32.png)
 
 ---
 ## Sharded Pros and Cons
@@ -1684,7 +1684,7 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-![33](../../../out/mermaid/architecting/architectural_design_patterns/33.png)
+![33](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/33.png)
 
 ---
 ## Throttling Pros and Cons

@@ -18,7 +18,7 @@
 ---
 ## Diagram
 
-![DNS Amplification](../../../out/mermaid/cyber/dns_amplification.png)
+![DNS Amplification](../../../out/mermaid/marp/courses/cyber-attacks-and-vectors/09_dns_amplification.md/0.png)
 
 ---
 ## Demo

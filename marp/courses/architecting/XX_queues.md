@@ -28,7 +28,7 @@
 
 ## Queue Components
 
-![0](../../../out/mermaid/architecting/queues/0.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_queues.md/0.png)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Point-to-Point vs Pub/Sub
 
-![1](../../../out/mermaid/architecting/queues/1.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_queues.md/1.png)
 
 ---
 
@@ -73,7 +73,7 @@ def consume():
 
 ## RabbitMQ Architecture
 
-![2](../../../out/mermaid/architecting/queues/2.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_queues.md/2.png)
 
 ---
 
@@ -117,13 +117,13 @@ channel.start_consuming()
 
 ## Apache Kafka Architecture
 
-![3](../../../out/mermaid/architecting/queues/3.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_queues.md/3.png)
 
 ---
 
 ## Kafka Topics and Partitions
 
-![4](../../../out/mermaid/architecting/queues/4.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_queues.md/4.png)
 
 ---
 
@@ -177,7 +177,7 @@ for message in consumer:
 
 ## Amazon SQS Architecture
 
-![5](../../../out/mermaid/architecting/queues/5.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_queues.md/5.png)
 
 ---
 
@@ -285,7 +285,7 @@ class BatchProducer:
 
 ## Dead Letter Queues
 
-![6](../../../out/mermaid/architecting/queues/6.png)
+![6](../../../out/mermaid/marp/courses/architecting/XX_queues.md/6.png)
 
 ---
 
@@ -327,7 +327,7 @@ Key Metrics:
 
 ## Monitoring Dashboard
 
-![7](../../../out/mermaid/architecting/queues/7.png)
+![7](../../../out/mermaid/marp/courses/architecting/XX_queues.md/7.png)
 
 ---
 
@@ -367,7 +367,7 @@ def retry_with_backoff(func, max_retries=3):
 
 ## Consumer Group Pattern
 
-![8](../../../out/mermaid/architecting/queues/8.png)
+![8](../../../out/mermaid/marp/courses/architecting/XX_queues.md/8.png)
 
 ---
 

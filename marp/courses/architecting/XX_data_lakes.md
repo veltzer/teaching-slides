@@ -27,13 +27,13 @@
 
 ## Data Lake vs Data Warehouse
 
-![0](../../../out/mermaid/architecting/data_lakes/0.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/0.png)
 
 ---
 
 ## Data Lake Architecture
 
-![1](../../../out/mermaid/architecting/data_lakes/1.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/1.png)
 
 ---
 
@@ -91,7 +91,7 @@ Solution: Data Lakehouse Architecture
 
 ## Data Lakehouse Architecture
 
-![2](../../../out/mermaid/architecting/data_lakes/2.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/2.png)
 
 ---
 
@@ -205,7 +205,7 @@ def batch_ingest():
 
 ## Streaming Ingestion
 
-![3](../../../out/mermaid/architecting/data_lakes/3.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/3.png)
 
 ---
 
@@ -299,7 +299,7 @@ processed.write.format("delta") \
 
 ## ML Pipeline Integration
 
-![4](../../../out/mermaid/architecting/data_lakes/4.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/4.png)
 
 ---
 
@@ -387,7 +387,7 @@ def setup_security():
 
 ## Monitoring Dashboard
 
-![5](../../../out/mermaid/architecting/data_lakes/5.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/5.png)
 
 ---
 
@@ -407,7 +407,7 @@ def setup_security():
 
 ## Hybrid Architecture
 
-![6](../../../out/mermaid/architecting/data_lakes/6.png)
+![6](../../../out/mermaid/marp/courses/architecting/XX_data_lakes.md/6.png)
 
 ---
 

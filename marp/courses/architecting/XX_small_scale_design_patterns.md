@@ -32,7 +32,7 @@
 
 ## Interaction Diagram
 
-![MVC](../../../out/mermaid/design_patterns/mvc.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/0.png)
 
 ---
 
@@ -89,7 +89,7 @@ Cons:
 
 ## Interpreter Diagram
 
-![Expression](../../../out/mermaid/design_patterns/expression.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/1.png)
 
 ---
 
@@ -129,7 +129,7 @@ Cons:
 
 ## Repository Pattern Diagram
 
-![Repository](../../../out/mermaid/design_patterns/repository.png)
+![2](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/2.png)
 
 ---
 
@@ -169,7 +169,7 @@ Cons:
 
 ## Command Pattern Diagram
 
-![Command](../../../out/mermaid/design_patterns/command.png)
+![3](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/3.png)
 
 ---
 
@@ -212,7 +212,7 @@ Cons:
 
 ## Decorator Pattern Diagram
 
-![Decorator](../../../out/mermaid/design_patterns/decorator.png)
+![4](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/4.png)
 
 ---
 
@@ -255,7 +255,7 @@ Cons:
 
 ## Facade Pattern Diagram
 
-![Facade](../../../out/mermaid/design_patterns/facade.png)
+![5](../../../out/mermaid/marp/courses/architecting/XX_small_scale_design_patterns.md/5.png)
 
 ---
 

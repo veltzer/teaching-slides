@@ -26,7 +26,7 @@
 
 ## Layer Diagram
 
-![Layered](../../../out/mermaid/borderline_patterns/layered.png)
+![0](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/0.png)
 
 ---
 
@@ -81,7 +81,7 @@ Cons:
 
 ## Interaction Diagram
 
-![Master/Slave](../../../out/mermaid/borderline_patterns/master-slave.png)
+![1](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/1.png)
 
 ---
 
@@ -137,7 +137,7 @@ Cons:
 
 ## Pipe-Filter Diagram
 
-![pipe-filter](pipe-filter.mmd)
+![2](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/2.png)
 
 ---
 
@@ -195,7 +195,7 @@ Cons:
 
 ## Blackboard Interaction Diagram
 
-![knowledge-source](knowledge-source.mmd)
+![3](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/3.png)
 
 ---
 
@@ -237,7 +237,7 @@ Cons:
 
 ## Ambassador Pattern Diagram
 
-![ambassador](ambassador.mmd)
+![4](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/4.png)
 
 ---
 
@@ -283,7 +283,7 @@ Cons:
 
 ## Cache-Aside Pattern Diagram
 
-![cache-aside](cache-aside.mmd)
+![5](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/5.png)
 
 ---
 
@@ -328,7 +328,7 @@ Cons:
 
 ## Sidecar Pattern Diagram
 
-![sidecar](sidecar.mmd)
+![6](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/6.png)
 
 ---
 
@@ -374,7 +374,7 @@ Cons:
 
 ## Valet Key Pattern Diagram
 
-![vallet_key](vallet_key.mmd)
+![7](../../../out/mermaid/marp/courses/architecting/XX_borderline.md/7.png)
 
 ---
 
