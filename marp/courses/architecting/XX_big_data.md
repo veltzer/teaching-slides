@@ -1,16 +1,9 @@
----
-marp: true
-theme: default
-paginate: true
-header: "Architecting Systems for Big Data"
----
-
 # Architecting Systems for Big Data
 ## Modern Architecture Course
 
 ---
 
-# Agenda
+## Agenda
 
 1. Introduction to Big Data
 2. Big Data Architecture
@@ -22,7 +15,7 @@ header: "Architecting Systems for Big Data"
 
 ---
 
-# The 3 V's of Big Data
+## The 3 V's of Big Data
 
 - Volume: Scale of data
 - Velocity: Speed of data generation
@@ -34,20 +27,13 @@ Additional V's:
 
 ---
 
-# Big Data Architecture Overview
+## Big Data Architecture Overview
 
-```mermaid
-graph TD
-    A[Data Sources] --> B[Ingestion Layer]
-    B --> C[Storage Layer]
-    C --> D[Processing Layer]
-    D --> E[Analytics Layer]
-    E --> F[Visualization Layer]
-```
+![0](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/0.png)
 
 ---
 
-# Data Sources
+## Data Sources
 
 1. Structured Data
    - Databases
@@ -62,44 +48,25 @@ graph TD
 
 ---
 
-# Lambda Architecture
+## Lambda Architecture
 
-```mermaid
-graph TD
-    A[Data] --> B[Batch Layer]
-    A --> C[Speed Layer]
-    B --> D[Batch Views]
-    C --> E[Realtime Views]
-    D --> F[Serving Layer]
-    E --> F
-```
+![1](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/1.png)
 
 ---
 
-# Kappa Architecture
+## Kappa Architecture
 
-```mermaid
-graph LR
-    A[Data] --> B[Stream Processing]
-    B --> C[Real-time Store]
-    C --> D[Serving Layer]
-```
+![2](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/2.png)
 
 ---
 
-# Data Lake Architecture
+## Data Lake Architecture
 
-```mermaid
-graph TD
-    A[Raw Data] --> B[Bronze Layer]
-    B --> C[Silver Layer]
-    C --> D[Gold Layer]
-    D --> E[Consumers]
-```
+![3](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/3.png)
 
 ---
 
-# Storage Systems
+## Storage Systems
 
 1. HDFS
 2. Object Storage
@@ -109,22 +76,13 @@ graph TD
 
 ---
 
-# HDFS Architecture
+## HDFS Architecture
 
-```mermaid
-graph TD
-    C[Client] --> N[NameNode]
-    N --> D1[DataNode 1]
-    N --> D2[DataNode 2]
-    N --> D3[DataNode 3]
-    C --> D1
-    C --> D2
-    C --> D3
-```
+![4](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/4.png)
 
 ---
 
-# Object Storage Example (S3)
+## Object Storage Example (S3)
 
 ```python
 import boto3
@@ -147,7 +105,7 @@ def store_data(data, bucket, key):
 
 ---
 
-# Processing Frameworks
+## Processing Frameworks
 
 1. Apache Hadoop
 2. Apache Spark
@@ -157,19 +115,13 @@ def store_data(data, bucket, key):
 
 ---
 
-# Spark Architecture
+## Spark Architecture
 
-```mermaid
-graph TD
-    D[Driver] --> M1[Master]
-    M1 --> W1[Worker 1]
-    M1 --> W2[Worker 2]
-    M1 --> W3[Worker 3]
-```
+![5](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/5.png)
 
 ---
 
-# Spark Processing Example
+## Spark Processing Example
 
 ```python
 from pyspark.sql import SparkSession
@@ -200,7 +152,7 @@ result.write \
 
 ---
 
-# Stream Processing
+## Stream Processing
 
 1. Real-time Analytics
 2. Event Processing
@@ -210,7 +162,7 @@ result.write \
 
 ---
 
-# Streaming Example (Flink)
+## Streaming Example (Flink)
 
 ```java
 StreamExecutionEnvironment env = 
@@ -229,7 +181,7 @@ env.execute("Streaming Pipeline");
 
 ---
 
-# Data Warehousing
+## Data Warehousing
 
 1. Schema Design
 2. Partitioning
@@ -239,7 +191,7 @@ env.execute("Streaming Pipeline");
 
 ---
 
-# SQL Query Engines
+## SQL Query Engines
 
 1. Apache Hive
 2. Presto/Trino
@@ -249,7 +201,7 @@ env.execute("Streaming Pipeline");
 
 ---
 
-# Presto Query Example
+## Presto Query Example
 
 ```sql
 WITH daily_stats AS (
@@ -274,19 +226,13 @@ ORDER BY 1 DESC
 
 ---
 
-# Machine Learning Pipeline
+## Machine Learning Pipeline
 
-```mermaid
-graph LR
-    A[Data Collection] --> B[Feature Engineering]
-    B --> C[Training]
-    C --> D[Model Serving]
-    D --> E[Predictions]
-```
+![6](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/6.png)
 
 ---
 
-# ML Pipeline Example
+## ML Pipeline Example
 
 ```python
 from pyspark.ml import Pipeline
@@ -315,7 +261,7 @@ model.write().overwrite().save("s3://models/latest")
 
 ---
 
-# Data Quality
+## Data Quality
 
 1. Schema Validation
 2. Data Profiling
@@ -325,7 +271,7 @@ model.write().overwrite().save("s3://models/latest")
 
 ---
 
-# Data Quality Example
+## Data Quality Example
 
 ```python
 from great_expectations.dataset import SparkDFDataset
@@ -347,7 +293,7 @@ def validate_dataset(df):
 
 ---
 
-# Monitoring Systems
+## Monitoring Systems
 
 1. Cluster Metrics
 2. Job Statistics
@@ -357,23 +303,13 @@ def validate_dataset(df):
 
 ---
 
-# Monitoring Dashboard
+## Monitoring Dashboard
 
-```mermaid
-graph TD
-    A[Metrics Collection] --> B[Resource Usage]
-    A --> C[Job Metrics]
-    A --> D[Data Quality]
-    A --> E[Performance]
-    B --> F[Dashboard]
-    C --> F
-    D --> F
-    E --> F
-```
+![7](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/7.png)
 
 ---
 
-# Resource Management
+## Resource Management
 
 ```yaml
 resources:
@@ -393,7 +329,7 @@ dynamic:
 
 ---
 
-# Security Implementation
+## Security Implementation
 
 ```python
 def secure_data_access():
@@ -410,7 +346,7 @@ def secure_data_access():
 
 ---
 
-# Data Governance
+## Data Governance
 
 1. Access Control
 2. Data Catalog
@@ -420,7 +356,7 @@ def secure_data_access():
 
 ---
 
-# Data Catalog Example
+## Data Catalog Example
 
 ```python
 from datacatalog import DataCatalog
@@ -441,7 +377,7 @@ catalog.register_dataset(
 
 ---
 
-# Cost Optimization
+## Cost Optimization
 
 1. Storage Tiering
 2. Compute Scaling
@@ -451,7 +387,7 @@ catalog.register_dataset(
 
 ---
 
-# Cost Optimization Example
+## Cost Optimization Example
 
 ```python
 def optimize_storage():
@@ -475,7 +411,7 @@ def optimize_storage():
 
 ---
 
-# Disaster Recovery
+## Disaster Recovery
 
 1. Backup Strategy
 2. Recovery Plans
@@ -485,7 +421,7 @@ def optimize_storage():
 
 ---
 
-# Performance Optimization
+## Performance Optimization
 
 1. Partitioning Strategy
 2. Indexing
@@ -495,7 +431,7 @@ def optimize_storage():
 
 ---
 
-# Partitioning Example
+## Partitioning Example
 
 ```python
 def optimize_partitioning(df):
@@ -515,46 +451,25 @@ def optimize_partitioning(df):
 
 ---
 
-# Real-time Processing
+## Real-time Processing
 
-```mermaid
-graph LR
-    A[Events] --> B[Kafka]
-    B --> C[Stream Processing]
-    C --> D[Real-time Store]
-    D --> E[Serving Layer]
-    E --> F[Applications]
-```
+![8](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/8.png)
 
 ---
 
-# Batch Processing
+## Batch Processing
 
-```mermaid
-graph TD
-    A[Data Sources] --> B[Data Lake]
-    B --> C[Processing Jobs]
-    C --> D[Data Warehouse]
-    D --> E[BI Tools]
-```
+![9](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/9.png)
 
 ---
 
-# Hybrid Processing
+## Hybrid Processing
 
-```mermaid
-graph TD
-    A[Data] --> B[Stream Processing]
-    A --> C[Batch Processing]
-    B --> D[Real-time Views]
-    C --> E[Batch Views]
-    D --> F[Applications]
-    E --> F
-```
+![10](../../../out/mermaid/marp/courses/architecting/XX_big_data.md/10.png)
 
 ---
 
-# Future Trends
+## Future Trends
 
 1. Serverless Analytics
 2. AI-Driven Optimization
@@ -564,7 +479,7 @@ graph TD
 
 ---
 
-# Best Practices
+## Best Practices
 
 1. Data Quality First
 2. Proper Partitioning
@@ -573,13 +488,3 @@ graph TD
 5. Cost Optimization
 6. Regular Monitoring
 7. Documentation
-
----
-
-# Questions?
-
-Thank you for attending!
-
-Contact: instructor@example.com
-
----
