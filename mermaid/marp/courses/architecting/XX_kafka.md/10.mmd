@@ -1,0 +1,8 @@
+flowchart TD
+    L[Leader] --> F1[Follower 1]
+    L --> F2[Follower 2]
+    subgraph ISR[In-Sync Replicas]
+        L
+        F1
+        F2
+    end
