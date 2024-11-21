@@ -8,6 +8,7 @@
 ![0](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/0.png)
 
 Basic usage:
+
 ```bash
 # Simple process list
 ps
@@ -57,6 +58,7 @@ TIME  - CPU time used
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/1.png)
 
 Different methods:
+
 ```bash
 # Using ps and grep
 ps aux | grep nginx
@@ -78,6 +80,7 @@ ps -o ppid= -p PID
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/2.png)
 
 Common signals:
+
 ```bash
 # Terminate gracefully (SIGTERM)
 kill PID
@@ -111,7 +114,22 @@ kill -CONT PID
 ---
 ## Monitoring with top
 
+<<<<<<< HEAD
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/3.png)
+=======
+## Monitoring with top
+
+```mermaid
+graph TD
+    A[top] --> B[System Summary]
+    A --> C[Process List]
+    B --> D[Load Average]
+    B --> E[CPU Usage]
+    B --> F[Memory Usage]
+    C --> G[Interactive Commands]
+    style A fill:#f96,stroke:#333
+```
+>>>>>>> 4636c0d (more linting)
 
 Interactive commands:
 
@@ -149,6 +167,7 @@ Key sections:
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/4.png)
 
 Identifying zombies:
+
 ```bash
 # Show zombie processes
 ps aux | grep 'Z'
@@ -167,6 +186,7 @@ kill -9 PARENT_PID
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/5.png)
 
 Job control:
+
 ```bash
 # Start background job
 command &
@@ -251,6 +271,7 @@ watch -n 1 'free -m'
 ![7](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/7.png)
 
 Common commands:
+
 ```bash
 # CPU usage
 pidstat -p PID 1
