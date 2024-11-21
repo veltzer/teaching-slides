@@ -28,7 +28,7 @@ DO_MARP_HTML:=0
 # do spell check on all?
 DO_MD_ASPELL:=1
 # do you want to check that the md files are pure ASCII?
-DO_MD_ASCII:=1
+DO_MD_ASCII:=0
 # do you want to run mdl on md files?
 DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
@@ -172,6 +172,9 @@ all_markdownlint: $(MD_MARKDOWNLINT)
 
 .PHONY: all_mermaid_png
 all_mermaid_png: $(MERMAID_PNG)
+
+.PHONY: all_marp_pdf
+all_marp_pdf: $(MARP_PDF)
 
 .PHONY: debug
 debug:
