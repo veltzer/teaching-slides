@@ -5,18 +5,7 @@
 
 ## Why Use a Shell?
 
-```mermaid
-graph TD
-    A[Shell] --> B[Command Interpreter]
-    A --> C[Scripting Language]
-    A --> D[Job Control]
-    A --> E[Environment Control]
-    B --> F[Execute Programs]
-    C --> G[Automate Tasks]
-    D --> H[Process Management]
-    E --> I[Configure Settings]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/0.png)
 
 The shell is your interface to the system:
 - Command interpretation
@@ -28,19 +17,7 @@ The shell is your interface to the system:
 
 ## Shell Families
 
-```mermaid
-graph TD
-    A[UNIX Shells] --> B[Bourne Family]
-    A --> C[C Shell Family]
-    B --> D[sh]
-    B --> E[bash]
-    B --> F[ksh]
-    C --> G[csh]
-    C --> H[tcsh]
-    style A fill:#f96,stroke:#333
-    style B fill:#bbf,stroke:#333
-    style C fill:#bbf,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/1.png)
 
 ---
 
@@ -60,14 +37,7 @@ export PATH=$PATH:/new/path
 echo $PATH
 ```
 
-```mermaid
-graph LR
-    A[Variable Types] --> B[Local]
-    A --> C[Environment]
-    B --> D[name="value"]
-    C --> E[export name="value"]
-    style A fill:#f96,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/2.png)
 
 ---
 
@@ -121,16 +91,7 @@ set files = `ls`
 
 ## Glob Patterns
 
-```mermaid
-graph TD
-    A[Glob Patterns] --> B[* Wildcard]
-    A --> C[? Single Char]
-    A --> D[[] Character Class]
-    B --> E[*.txt]
-    C --> F[file?.txt]
-    D --> G[[a-z]]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/3.png)
 
 Examples:
 ```bash
@@ -148,18 +109,7 @@ ls [a-z]*.txt
 
 ## Input/Output Redirection
 
-```mermaid
-graph LR
-    A[Redirection] --> B[Input <]
-    A --> C[Output >]
-    A --> D[Append >>]
-    A --> E[Error 2>]
-    B --> F[file.txt]
-    C --> G[output.txt]
-    D --> H[log.txt]
-    E --> I[error.log]
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/4.png)
 
 Examples:
 ```bash
@@ -213,14 +163,7 @@ unalias ll
 
 ## Pipes
 
-```mermaid
-graph LR
-    A[Command1] -->|pipe| B[Command2]
-    B -->|pipe| C[Command3]
-    style A fill:#f96,stroke:#333
-    style B fill:#bbf,stroke:#333
-    style C fill:#fdd,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/5.png)
 
 Examples:
 ```bash
@@ -272,14 +215,7 @@ history
 
 ## Session Initialization
 
-```mermaid
-graph TD
-    A[Login Shell] --> B[/etc/profile]
-    B --> C[~/.profile]
-    A --> D[/etc/bash.bashrc]
-    D --> E[~/.bashrc]
-    style A fill:#f96,stroke:#333
-```
+![6](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/6.png)
 
 Files for Bourne Family:
 ```bash

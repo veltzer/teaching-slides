@@ -3,14 +3,7 @@
 ---
 ## The Client/Server Model
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: Request
-    Server->>Client: Response
-    Note over Client,Server: TCP/IP Protocol
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/0.png)
 
 Common examples:
 - Web servers (HTTP)
@@ -20,17 +13,7 @@ Common examples:
 ---
 ## Network Interface Configuration
 
-```mermaid
-graph TD
-    A[Network Config] --> B[ifconfig]
-    A --> C[ip addr]
-    A --> D[ifup/ifdown]
-    B --> E[View Status]
-    B --> F[Set Address]
-    C --> G[Modern Tool]
-    D --> H[Enable/Disable]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/1.png)
 
 Using ifconfig:
 ```bash
@@ -66,14 +49,7 @@ ip route add default via 192.168.1.1
 ---
 ## Interface Management
 
-```mermaid
-graph LR
-    A[Interface] --> B[ifup]
-    A --> C[ifdown]
-    B --> D[Enable]
-    C --> E[Disable]
-    style A fill:#f96,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/2.png)
 
 Basic commands:
 ```bash
@@ -90,16 +66,7 @@ ip link show eth0
 ---
 ## Network Statistics (netstat)
 
-```mermaid
-graph TD
-    A[netstat] --> B[Connections]
-    A --> C[Routing]
-    A --> D[Interfaces]
-    A --> E[Statistics]
-    B --> F[-t TCP]
-    B --> G[-u UDP]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/3.png)
 
 Common options:
 ```bash
@@ -121,15 +88,7 @@ netstat -r
 ---
 ## SSH (Secure Shell)
 
-```mermaid
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: SSH Connection Request
-    Server->>Client: Server Public Key
-    Client->>Server: Encrypted Session Key
-    Note over Client,Server: Encrypted Communication
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/4.png)
 
 Basic usage:
 
@@ -146,16 +105,7 @@ ssh user@remote.host 'ls -l'
 ---
 ## SSH Configuration and Keys
 
-```mermaid
-graph TD
-    A[SSH Setup] --> B[Generate Keys]
-    A --> C[Configure Client]
-    A --> D[Known Hosts]
-    B --> E[ssh-keygen]
-    C --> F[~/.ssh/config]
-    D --> G[~/.ssh/known_hosts]
-    style A fill:#f96,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/5.png)
 
 Key management:
 ```bash
@@ -174,16 +124,7 @@ Host server1
 ---
 ## Remote File Transfer
 
-```mermaid
-graph LR
-    A[File Transfer] --> B[scp]
-    A --> C[sftp]
-    A --> D[rsync]
-    B --> E[Secure Copy]
-    C --> F[Interactive]
-    D --> G[Synchronization]
-    style A fill:#f96,stroke:#333
-```
+![6](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/6.png)
 
 Examples:
 ```bash
@@ -218,14 +159,7 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 ---
 ## Trust Relationships
 
-```mermaid
-graph TD
-    A[Trust Setup] --> B[Host Based]
-    A --> C[User Based]
-    B --> D[/etc/hosts.equiv]
-    C --> E[~/.rhosts]
-    style A fill:#f96,stroke:#333
-```
+![7](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/7.png)
 
 Configuration files:
 ```bash
@@ -241,14 +175,7 @@ Configuration files:
 ---
 ## Network Troubleshooting
 
-```mermaid
-graph TD
-    A[Troubleshooting] --> B[ping]
-    A --> C[traceroute]
-    A --> D[dig/nslookup]
-    A --> E[tcpdump]
-    style A fill:#f96,stroke:#333
-```
+![8](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/8.png)
 
 Common commands:
 ```bash
@@ -312,16 +239,7 @@ rsync -avz --progress /local/dir/ \
 ---
 ## Best Practices
 
-```mermaid
-graph TD
-    A[Best Practices] --> B[Use SSH]
-    A --> C[Secure Keys]
-    A --> D[Monitor Logs]
-    A --> E[Regular Updates]
-    B --> F[Avoid telnet/rsh]
-    C --> G[Protected files]
-    style A fill:#f96,stroke:#333
-```
+![9](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/9.png)
 
 Key points:
 - Always use encrypted protocols

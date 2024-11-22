@@ -1,0 +1,8 @@
+graph TD
+    A[Boot Issues] --> B[Check Logs]
+    A --> C[Emergency Mode]
+    A --> D[Debug Shell]
+    B --> E[journalctl]
+    C --> F[systemctl emergency]
+    D --> G[systemd.debug-shell]
+    style A fill:#f96,stroke:#333

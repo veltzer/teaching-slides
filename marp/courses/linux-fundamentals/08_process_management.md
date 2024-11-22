@@ -5,18 +5,7 @@
 
 ## The ps Command
 
-```mermaid
-graph TD
-    A[ps command] --> B[Basic View]
-    A --> C[Full Format]
-    A --> D[All Processes]
-    A --> E[Tree View]
-    B --> F[ps]
-    C --> G[ps -f]
-    D --> H[ps aux]
-    E --> I[ps -ejH]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/0.png)
 
 Basic usage:
 ```bash
@@ -65,16 +54,7 @@ TIME  - CPU time used
 
 ## Finding Process IDs
 
-```mermaid
-graph LR
-    A[Find PID] --> B[ps]
-    A --> C[pgrep]
-    A --> D[pidof]
-    B --> E[grep]
-    C --> F[Pattern match]
-    D --> G[Exact name]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/1.png)
 
 Different methods:
 ```bash
@@ -95,14 +75,7 @@ ps -o ppid= -p PID
 
 ## Sending Signals (kill)
 
-```mermaid
-stateDiagram-v2
-    [*] --> Running
-    Running --> Stopped: SIGSTOP
-    Stopped --> Running: SIGCONT
-    Running --> Terminated: SIGTERM
-    Running --> Killed: SIGKILL
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/2.png)
 
 Common signals:
 ```bash
@@ -138,16 +111,7 @@ kill -CONT PID
 ---
 ## Monitoring with top
 
-```mermaid
-graph TD
-    A[top] --> B[System Summary]
-    A --> C[Process List]
-    B --> D[Load Average]
-    B --> E[CPU Usage]
-    B --> F[Memory Usage]
-    C --> G[Interactive Commands]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/3.png)
 
 Interactive commands:
 
@@ -182,16 +146,7 @@ Key sections:
 
 ## Dealing with Zombies
 
-```mermaid
-graph TD
-    A[Zombie Process] --> B[Parent dies]
-    A --> C[Parent alive]
-    B --> D[Adopted by init]
-    C --> E[Parent must wait]
-    D --> F[Cleaned up]
-    E --> F
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/4.png)
 
 Identifying zombies:
 ```bash
@@ -209,15 +164,7 @@ kill -9 PARENT_PID
 
 ## The Shell and Jobs
 
-```mermaid
-stateDiagram-v2
-    [*] --> Foreground
-    Foreground --> Background: Ctrl+Z, bg
-    Background --> Foreground: fg
-    Background --> Stopped: Ctrl+Z
-    Stopped --> Background: bg
-    Stopped --> Foreground: fg
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/5.png)
 
 Job control:
 ```bash
@@ -238,14 +185,7 @@ bg %1
 
 ## Process Priorities (nice)
 
-```mermaid
-graph TD
-    A[Process Priority] --> B[Nice Values]
-    B --> C[-20 Highest]
-    B --> D[0 Default]
-    B --> E[19 Lowest]
-    style A fill:#f96,stroke:#333
-```
+![6](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/6.png)
 
 Managing priorities:
 ```bash
@@ -308,16 +248,7 @@ watch -n 1 'free -m'
 ---
 ## Process Troubleshooting
 
-```mermaid
-graph TD
-    A[Process Issues] --> B[High CPU]
-    A --> C[Memory Leak]
-    A --> D[Zombie Process]
-    B --> E[top, pidstat]
-    C --> F[free, vmstat]
-    D --> G[ps, kill parent]
-    style A fill:#f96,stroke:#333
-```
+![7](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/7.png)
 
 Common commands:
 ```bash

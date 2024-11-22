@@ -5,18 +5,7 @@
 
 ## Basic File Operations
 
-```mermaid
-graph TD
-    A[File Operations] --> B[View]
-    A --> C[Create]
-    A --> D[Modify]
-    A --> E[Delete]
-    B --> F[ls/cat/more]
-    C --> G[touch/mkdir]
-    D --> H[mv/cp]
-    E --> I[rm/rmdir]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/0.png)
 
 ---
 
@@ -56,18 +45,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 
 ## Viewing File Contents
 
-```mermaid
-graph LR
-    A[View Commands] --> B[cat]
-    A --> C[more/less]
-    A --> D[head]
-    A --> E[tail]
-    B --> F[Full file]
-    C --> G[Paged view]
-    D --> H[First lines]
-    E --> I[Last lines]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/1.png)
 
 Examples:
 ```bash
@@ -118,16 +96,7 @@ mv old_dir new_dir
 
 ## Disk Usage Commands
 
-```mermaid
-graph TD
-    A[Disk Commands] --> B[df]
-    A --> C[du]
-    B --> D[System storage]
-    C --> E[Directory usage]
-    D --> F[Available space]
-    E --> G[Space used]
-    style A fill:#f96,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/2.png)
 
 Examples:
 ```bash
@@ -201,18 +170,7 @@ sort file.txt | uniq -d
 
 ## Finding Files
 
-```mermaid
-graph TD
-    A[find] --> B[Name]
-    A --> C[Type]
-    A --> D[Size]
-    A --> E[Time]
-    B --> F[-name "*.txt"]
-    C --> G[-type f/d]
-    D --> H[-size +100M]
-    E --> I[-mtime -7]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/3.png)
 
 Examples:
 ```bash

@@ -5,21 +5,7 @@
 
 ## Basic File System Structure
 
-```mermaid
-graph TD
-    A[/] --> B[/bin]
-    A --> C[/etc]
-    A --> D[/home]
-    A --> E[/usr]
-    A --> F[/var]
-    D --> G[/home/user1]
-    D --> H[/home/user2]
-    E --> I[/usr/bin]
-    E --> J[/usr/lib]
-    F --> K[/var/log]
-    F --> L[/var/spool]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/0.png)
 
 Key Directories:
 - `/bin`: Essential commands
@@ -47,17 +33,7 @@ Key Directories:
 
 ## Understanding Paths
 
-```mermaid
-graph LR
-    A[Path Types] --> B[Absolute]
-    A --> C[Relative]
-    B --> D[/home/user/docs]
-    C --> E[./docs]
-    C --> F[../user2/docs]
-    style A fill:#f96,stroke:#333
-    style B fill:#bbf,stroke:#333
-    style C fill:#bbf,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/1.png)
 
 Examples:
 ```bash
@@ -102,18 +78,7 @@ cd -
 
 ## Home Directories
 
-```mermaid
-graph TD
-    A[/home] --> B[user1]
-    A --> C[user2]
-    B --> D[.bashrc]
-    B --> E[Documents]
-    B --> F[Downloads]
-    C --> G[.bashrc]
-    C --> H[Documents]
-    C --> I[Downloads]
-    style A fill:#f96,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/2.png)
 
 Access methods:
 ```bash
@@ -164,21 +129,7 @@ dirs -v
 
 ## Directory Stack Management
 
-```mermaid
-sequenceDiagram
-    participant User
-    participant Stack
-    participant FileSystem
-    
-    User->>Stack: pushd /dir1
-    Stack->>FileSystem: Change to /dir1
-    User->>Stack: pushd /dir2
-    Stack->>FileSystem: Change to /dir2
-    User->>Stack: dirs -v
-    Stack->>User: Show stack
-    User->>Stack: popd
-    Stack->>FileSystem: Return to /dir1
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/3.png)
 
 ---
 
@@ -229,16 +180,7 @@ echo $HOME
 
 ## Common Path Operations
 
-```mermaid
-graph TD
-    A[Path Operations] --> B[dirname]
-    A --> C[basename]
-    A --> D[realpath]
-    B --> E[Get directory]
-    C --> F[Get filename]
-    D --> G[Resolve links]
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/4.png)
 
 Examples:
 ```bash

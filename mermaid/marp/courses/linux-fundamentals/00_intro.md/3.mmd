@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> Created
+    Created --> Running
+    Running --> Waiting
+    Waiting --> Running
+    Running --> Terminated
+    Terminated --> Zombie
+    Zombie --> [*]

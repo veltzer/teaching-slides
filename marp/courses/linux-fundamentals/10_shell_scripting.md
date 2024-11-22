@@ -3,16 +3,7 @@
 ---
 ## Your First Shell Script
 
-```mermaid
-graph TD
-    A[Shell Script] --> B[Shebang]
-    A --> C[Permissions]
-    A --> D[Execution]
-    B --> E[#!/bin/bash]
-    C --> F[chmod +x]
-    D --> G[./script.sh]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/0.png)
 
 Basic script:
 ```bash
@@ -57,16 +48,7 @@ exit 0
 
 ## Variables
 
-```mermaid
-graph TD
-    A[Variables] --> B[Assignment]
-    A --> C[Usage]
-    A --> D[Scope]
-    B --> E[name=value]
-    C --> F[$name ${name}]
-    D --> G[local/export]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/1.png)
 
 Variable examples:
 ```bash
@@ -90,16 +72,7 @@ read -p "Enter name: " user_name
 
 ## Command Line Arguments
 
-```mermaid
-sequenceDiagram
-    participant Script
-    participant Arguments
-    Arguments->>Script: $0 (script name)
-    Arguments->>Script: $1 (first arg)
-    Arguments->>Script: $2 (second arg)
-    Arguments->>Script: $# (arg count)
-    Arguments->>Script: $@ (all args)
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/2.png)
 
 Argument handling:
 ```bash
@@ -144,15 +117,7 @@ let "count--"
 
 ## Exit Status and Error Handling
 
-```mermaid
-graph TD
-    A[Error Handling] --> B[Exit Codes]
-    A --> C[Error Checking]
-    A --> D[Error Messages]
-    B --> E[0 Success]
-    B --> F[Non-zero Failure]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/3.png)
 
 Error handling:
 ```bash
@@ -176,16 +141,7 @@ fi
 
 ## Expressions and Operators
 
-```mermaid
-graph TD
-    A[Operators] --> B[Arithmetic]
-    A --> C[String]
-    A --> D[File]
-    B --> E[+, -, *, /]
-    C --> F[-z, -n, =]
-    D --> G[-f, -d, -r]
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/4.png)
 
 Examples:
 ```bash
@@ -258,16 +214,7 @@ esac
 
 ## Loops
 
-```mermaid
-graph TD
-    A[Loops] --> B[for]
-    A --> C[while]
-    A --> D[until]
-    B --> E[Iterate list]
-    C --> F[While condition]
-    D --> G[Until condition]
-    style A fill:#f96,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/5.png)
 
 Examples:
 ```bash

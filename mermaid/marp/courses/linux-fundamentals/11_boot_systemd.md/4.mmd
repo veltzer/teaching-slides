@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Stopped
+    Stopped --> Running: start
+    Running --> Stopped: stop
+    Running --> Running: reload
+    Running --> Restarted: restart
+    Restarted --> Running

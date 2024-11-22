@@ -1,20 +1,9 @@
 # Security in Practice
 ## Understanding UNIX Security Mechanisms
-
 ---
+## UNIX Accounts
 
-# UNIX Accounts
-
-```mermaid
-graph TD
-    A[User Account] --> B[Username]
-    A --> C[UID]
-    A --> D[Primary Group]
-    A --> E[Secondary Groups]
-    A --> F[Home Directory]
-    A --> G[Login Shell]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/0.png)
 
 Key components:
 - Username (human readable)
@@ -24,15 +13,16 @@ Key components:
 - Default shell
 
 ---
-
-# The /etc/passwd File
+## The /etc/passwd File
 
 Structure:
-```
+
+```txt
 username:x:UID:GID:comment:home:shell
 ```
 
 Example entries:
+
 ```bash
 root:x:0:0:root:/root:/bin/bash
 john:x:1000:1000:John Doe:/home/john:/bin/bash
@@ -40,6 +30,7 @@ nginx:x:998:998:Nginx web server:/var/www:/sbin/nologin
 ```
 
 View entries:
+
 ```bash
 # View all entries
 cat /etc/passwd
@@ -50,26 +41,13 @@ grep "^john:" /etc/passwd
 # Count users
 wc -l /etc/passwd
 ```
-
 ---
+## The `/etc/shadow` File
 
-# The /etc/shadow File
-
-```mermaid
-graph LR
-    A[/etc/shadow] --> B[Username]
-    A --> C[Encrypted Password]
-    A --> D[Last Change]
-    A --> E[Min Age]
-    A --> F[Max Age]
-    A --> G[Warning]
-    A --> H[Inactive]
-    A --> I[Expire]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/1.png)
 
 Structure:
-```
+```txt
 username:password:lastchg:min:max:warn:inactive:expire:
 ```
 
@@ -79,8 +57,7 @@ john:$6$xyz...:18900:0:99999:7:::
 ```
 
 ---
-
-# File Ownership
+## File Ownership
 
 ```bash
 # View file ownership
@@ -100,28 +77,18 @@ chown -R john:developers directory/
 ```
 
 Output example:
-```
+```txt
 -rw-r--r-- 1 john developers 4096 Nov 19 10:00 file.txt
 ```
 
 ---
+## Directory and File Access Modes
 
-# Directory and File Access Modes
-
-```mermaid
-graph TD
-    A[Permission Types] --> B[Read r]
-    A --> C[Write w]
-    A --> D[Execute x]
-    E[Access Levels] --> F[User u]
-    E --> G[Group g]
-    E --> H[Others o]
-    style A fill:#f96,stroke:#333
-    style E fill:#bbf,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/2.png)
 
 Symbolic notation:
-```
+
+```txt
 rwxr-xr--
 │││││││││
 ││││││││└─ Others: no execute
@@ -136,18 +103,19 @@ rwxr-xr--
 ```
 
 ---
-
-# Understanding Permission Bits
+## Understanding Permission Bits
 
 Permission calculation:
-```
+
+```txt
 r = 4 (100 binary)
 w = 2 (010 binary)
 x = 1 (001 binary)
 ```
 
 Examples:
-```
+
+```txt
 rwx = 7 (4+2+1)
 rw- = 6 (4+2+0)
 r-x = 5 (4+0+1)
@@ -155,39 +123,24 @@ r-- = 4 (4+0+0)
 ```
 
 Full permission string:
-```
+
+```txt
 chmod 754 file.txt
 # rwxr-xr--
 # 7   5   4
 ```
 
 ---
+## How File Access is Determined
 
-# How File Access is Determined
-
-```mermaid
-sequenceDiagram
-    participant User
-    participant System
-    participant File
-
-    User->>System: Request file access
-    System->>File: Check owner
-    File->>System: Return owner
-    System->>System: Compare with user
-    System->>File: Check permissions
-    File->>System: Return permissions
-    System->>User: Grant/Deny access
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/3.png)
 
 Access check order:
 1. Is user the owner?
 1. Is user in the group?
 1. What are "other" permissions?
-
 ---
-
-# Changing Modes and Ownership
+## Changing Modes and Ownership
 
 Symbolic mode:
 ```bash
@@ -215,21 +168,10 @@ chmod 777 file.txt
 # r--------
 chmod 400 file.txt
 ```
-
 ---
+## Special Permissions
 
-# Special Permissions
-
-```mermaid
-graph TD
-    A[Special Permissions] --> B[SUID 4000]
-    A --> C[SGID 2000]
-    A --> D[Sticky 1000]
-    B --> E[Run as owner]
-    C --> F[Inherit group]
-    D --> G[Restrict delete]
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/4.png)
 
 Examples:
 ```bash
@@ -245,20 +187,10 @@ chmod 2755 directory
 chmod +t directory
 chmod 1755 directory
 ```
-
 ---
+## The umask Command
 
-# The umask Command
-
-```mermaid
-graph LR
-    A[umask] --> B[Default Permissions]
-    B --> C[Files]
-    B --> D[Directories]
-    C --> E[666 - umask]
-    D --> F[777 - umask]
-    style A fill:#f96,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/5.png)
 
 Common umask values:
 ```bash
@@ -271,10 +203,8 @@ umask 027  # rwxr-x---
 # Set common permissions
 umask 022  # rwxr-xr-x
 ```
-
 ---
-
-# Practical Security Examples
+## Practical Security Examples
 
 1. Setting up a shared directory:
 ```bash
@@ -295,10 +225,8 @@ chmod 700 ~/.private
 # Set secure umask
 umask 077
 ```
-
 ---
-
-# Security Best Practices
+## Security Best Practices
 
 1. File Permissions:
 ```bash
@@ -322,19 +250,10 @@ sudo usermod -aG developers john
 # Check group membership
 groups john
 ```
-
 ---
+## Advanced Security Topics
 
-# Advanced Security Topics
-
-```mermaid
-graph TD
-    A[Advanced Security] --> B[ACLs]
-    A --> C[SELinux]
-    A --> D[AppArmor]
-    A --> E[Capabilities]
-    style A fill:#f96,stroke:#333
-```
+![6](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/6.png)
 
 Example with ACLs:
 ```bash

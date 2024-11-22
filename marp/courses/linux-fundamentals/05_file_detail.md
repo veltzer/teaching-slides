@@ -3,17 +3,7 @@
 ---
 ## Seven File Types in UNIX
 
-```mermaid
-graph TD
-    A[UNIX File Types] --> B[Regular -]
-    A --> C[Directory d]
-    A --> D[Character Device c]
-    A --> E[Block Device b]
-    A --> F[Symbolic Link l]
-    A --> G[Socket s]
-    A --> H[Named Pipe p]
-    style A fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/0.png)
 
 First character in ls -l output indicates type:
 
@@ -51,16 +41,7 @@ Common types:
 ---
 ## Directories (d)
 
-```mermaid
-graph TD
-    A[Directory] --> B[.]
-    A --> C[..]
-    A --> D[Files]
-    A --> E[Subdirs]
-    B --> F[Current Dir]
-    C --> G[Parent Dir]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/1.png)
 
 ```bash
 # Create directory
@@ -100,13 +81,7 @@ ls -l /dev/null   # Null device
 ---
 ## Symbolic Links (l)
 
-```mermaid
-graph LR
-    A[Symbolic Link] -->|Points to| B[Target File]
-    C[Hard Link] -->|Shares inode| D[Target File]
-    style A fill:#f96,stroke:#333
-    style C fill:#bbf,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/2.png)
 
 ```bash
 # Create symbolic link
@@ -146,16 +121,7 @@ cat < mypipe
 ---
 ## The INODE Concept
 
-```mermaid
-graph TD
-    A[Inode] --> B[Metadata]
-    A --> C[Data Blocks]
-    B --> D[Permissions]
-    B --> E[Timestamps]
-    B --> F[Size]
-    B --> G[Link Count]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/3.png)
 
 Inode contains:
 - File type
@@ -194,16 +160,7 @@ Example output:
 ---
 ## Hard Links vs Symbolic Links
 
-```mermaid
-graph TD
-    A[Link Types] --> B[Hard Links]
-    A --> C[Symbolic Links]
-    B --> D[Same inode]
-    B --> E[Must be same filesystem]
-    C --> F[Different inode]
-    C --> G[Can cross filesystems]
-    style A fill:#f96,stroke:#333
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/4.png)
 
 Creating Links:
 ```bash
@@ -296,17 +253,7 @@ ln -s /absolute/path/target.txt abslink.txt
 ---
 ## File System Layout
 
-```mermaid
-graph TD
-    A[File System] --> B[Superblock]
-    A --> C[Inode Table]
-    A --> D[Data Blocks]
-    C --> E[Inode 1]
-    C --> F[Inode 2]
-    E --> G[Data Block 1]
-    F --> H[Data Block 2]
-    style A fill:#f96,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/5.png)
 
 Key components:
 - Superblock: File system metadata

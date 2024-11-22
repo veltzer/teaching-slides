@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant User
+    participant System
+    participant File
+
+    User->>System: Request file access
+    System->>File: Check owner
+    File->>System: Return owner
+    System->>System: Compare with user
+    System->>File: Check permissions
+    File->>System: Return permissions
+    System->>User: Grant/Deny access

@@ -3,16 +3,7 @@
 ---
 ## Linux Boot Sequence
 
-```mermaid
-graph TD
-    A[Power On] --> B[BIOS/UEFI]
-    B --> C[Boot Loader]
-    C --> D[Kernel]
-    D --> E[systemd]
-    E --> F[System Services]
-    style A fill:#f96,stroke:#333
-    style E fill:#f96,stroke:#333
-```
+![0](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/0.png)
 
 1. BIOS/UEFI initialization
 1. Bootloader (GRUB) loads kernel
@@ -22,20 +13,7 @@ graph TD
 ---
 ## Old SysV Init System
 
-```mermaid
-graph LR
-    A[SysV Init] --> B[runlevel 0]
-    A --> C[runlevel 1]
-    A --> D[runlevel 3]
-    A --> E[runlevel 5]
-    A --> F[runlevel 6]
-    B --> G[Halt]
-    C --> H[Single User]
-    D --> I[Multi-User]
-    E --> J[Graphical]
-    F --> K[Reboot]
-    style A fill:#f96,stroke:#333
-```
+![1](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/1.png)
 
 Traditional runlevels:
 - 0: Halt
@@ -49,15 +27,7 @@ Traditional runlevels:
 ---
 ## systemd Introduction
 
-```mermaid
-graph TD
-    A[systemd] --> B[Service Management]
-    A --> C[Dependency Handling]
-    A --> D[Parallel Startup]
-    A --> E[Socket Activation]
-    A --> F[Resource Control]
-    style A fill:#f96,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/2.png)
 
 Key features:
 - Service management
@@ -70,15 +40,7 @@ Key features:
 ---
 ## systemd Units
 
-```mermaid
-graph LR
-    A[Unit Types] --> B[service]
-    A --> C[socket]
-    A --> D[target]
-    A --> E[mount]
-    A --> F[timer]
-    style A fill:#f96,stroke:#333
-```
+![3](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/3.png)
 
 Common unit types:
 ```bash
@@ -114,15 +76,7 @@ systemctl disable nginx.service
 ---
 ## Service Management
 
-```mermaid
-stateDiagram-v2
-    [*] --> Stopped
-    Stopped --> Running: start
-    Running --> Stopped: stop
-    Running --> Running: reload
-    Running --> Restarted: restart
-    Restarted --> Running
-```
+![4](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/4.png)
 
 Common operations:
 ```bash
@@ -160,16 +114,7 @@ WantedBy=multi-user.target
 ---
 ## Service File Sections
 
-```mermaid
-graph TD
-    A[Service File] --> B[Unit Section]
-    A --> C[Service Section]
-    A --> D[Install Section]
-    B --> E[Dependencies]
-    C --> F[Execution]
-    D --> G[Installation]
-    style A fill:#f96,stroke:#333
-```
+![5](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/5.png)
 
 Common options:
 ```ini
@@ -262,15 +207,7 @@ exit 0
 ---
 ## Systemd Targets
 
-```mermaid
-graph TD
-    A[Targets] --> B[poweroff.target]
-    A --> C[rescue.target]
-    A --> D[multi-user.target]
-    A --> E[graphical.target]
-    A --> F[reboot.target]
-    style A fill:#f96,stroke:#333
-```
+![6](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/6.png)
 
 Target management:
 ```bash
@@ -287,16 +224,7 @@ systemctl isolate graphical.target
 ---
 ## Troubleshooting Boot Issues
 
-```mermaid
-graph TD
-    A[Boot Issues] --> B[Check Logs]
-    A --> C[Emergency Mode]
-    A --> D[Debug Shell]
-    B --> E[journalctl]
-    C --> F[systemctl emergency]
-    D --> G[systemd.debug-shell]
-    style A fill:#f96,stroke:#333
-```
+![7](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/7.png)
 
 Debug commands:
 ```bash

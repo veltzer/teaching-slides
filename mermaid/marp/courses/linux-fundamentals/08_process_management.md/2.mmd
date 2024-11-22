@@ -1,0 +1,6 @@
+stateDiagram-v2
+    [*] --> Running
+    Running --> Stopped: SIGSTOP
+    Stopped --> Running: SIGCONT
+    Running --> Terminated: SIGTERM
+    Running --> Killed: SIGKILL

@@ -1,0 +1,7 @@
+stateDiagram-v2
+    [*] --> Foreground
+    Foreground --> Background: Ctrl+Z, bg
+    Background --> Foreground: fg
+    Background --> Stopped: Ctrl+Z
+    Stopped --> Background: bg
+    Stopped --> Foreground: fg
