@@ -38,16 +38,18 @@ ps -ejH
 
 ---
 
-# PS Output Fields
+## PS Output Fields
 
 Example output:
-```
+
+```txt
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.0  0.0 225868  9416 ?        Ss   Oct19   0:23 /sbin/init
 ```
 
 Key fields:
-```
+
+```txt
 USER  - Process owner
 PID   - Process ID
 %CPU  - CPU usage
@@ -61,7 +63,7 @@ TIME  - CPU time used
 
 ---
 
-# Finding Process IDs
+## Finding Process IDs
 
 ```mermaid
 graph LR
@@ -91,7 +93,7 @@ ps -o ppid= -p PID
 
 ---
 
-# Sending Signals (kill)
+## Sending Signals (kill)
 
 ```mermaid
 stateDiagram-v2
@@ -119,7 +121,7 @@ kill -CONT PID
 
 ---
 
-# Common Signal Numbers
+## Common Signal Numbers
 
 | Signal    | Number | Purpose               |
 |-----------|--------|----------------------|
@@ -134,8 +136,7 @@ kill -CONT PID
 | SIGUSR2   | 12     | User defined        |
 
 ---
-
-# Monitoring with top
+## Monitoring with top
 
 ```mermaid
 graph TD
@@ -149,7 +150,8 @@ graph TD
 ```
 
 Interactive commands:
-```
+
+```txt
 h - help
 k - kill process
 r - renice process
@@ -159,7 +161,7 @@ q - quit
 
 ---
 
-# Top Display
+## Top Display
 
 ```bash
 top - 14:28:00 up 10 days,  5:27,  1 user,  load average: 0.15, 0.22, 0.25
@@ -178,7 +180,7 @@ Key sections:
 
 ---
 
-# Dealing with Zombies
+## Dealing with Zombies
 
 ```mermaid
 graph TD
@@ -205,7 +207,7 @@ kill -9 PARENT_PID
 
 ---
 
-# The Shell and Jobs
+## The Shell and Jobs
 
 ```mermaid
 stateDiagram-v2
@@ -234,7 +236,7 @@ bg %1
 
 ---
 
-# Process Priorities (nice)
+## Process Priorities (nice)
 
 ```mermaid
 graph TD
@@ -259,7 +261,7 @@ ps -o pid,nice,command
 
 ---
 
-# Process Resource Limits
+## Process Resource Limits
 
 ```bash
 # View limits
@@ -284,7 +286,7 @@ Example limits:
 
 ---
 
-# Practical Process Management
+## Practical Process Management
 
 1. Find and monitor specific process:
 ```bash
@@ -303,10 +305,8 @@ nice -n 19 tar -czf backup.tar.gz /data
 # Memory monitoring
 watch -n 1 'free -m'
 ```
-
 ---
-
-# Process Troubleshooting
+## Process Troubleshooting
 
 ```mermaid
 graph TD

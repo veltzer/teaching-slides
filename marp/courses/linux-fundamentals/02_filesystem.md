@@ -30,7 +30,7 @@ Key Directories:
 
 ---
 
-# Important System Directories
+## Important System Directories
 
 | Directory | Purpose |
 |-----------|---------|
@@ -45,7 +45,7 @@ Key Directories:
 
 ---
 
-# Understanding Paths
+## Understanding Paths
 
 ```mermaid
 graph LR
@@ -75,7 +75,7 @@ cd -        # Previous directory
 
 ---
 
-# Path Navigation Examples
+## Path Navigation Examples
 
 ```bash
 # Current location
@@ -100,7 +100,7 @@ cd -
 
 ---
 
-# Home Directories
+## Home Directories
 
 ```mermaid
 graph TD
@@ -131,7 +131,7 @@ cd /home/username
 
 ---
 
-# Moving Around Commands
+## Moving Around Commands
 
 ## Basic Navigation
 
@@ -162,7 +162,7 @@ dirs -v
 
 ---
 
-# Directory Stack Management
+## Directory Stack Management
 
 ```mermaid
 sequenceDiagram
@@ -182,7 +182,7 @@ sequenceDiagram
 
 ---
 
-# Practical Directory Navigation
+## Practical Directory Navigation
 
 ```bash
 # Start in home directory
@@ -208,7 +208,7 @@ pwd
 
 ---
 
-# Path Manipulation Tips
+## Path Manipulation Tips
 
 ```bash
 # Get directory name
@@ -227,7 +227,7 @@ echo $HOME
 
 ---
 
-# Common Path Operations
+## Common Path Operations
 
 ```mermaid
 graph TD
@@ -250,7 +250,7 @@ echo $(basename "$path") # file.txt
 
 ---
 
-# Practice Exercises
+## Practice Exercises
 
 1. Directory Navigation
 ```bash
@@ -280,7 +280,7 @@ echo $(basename ~/test/a/1/file.txt)
 
 ---
 
-# Advanced Topics
+## Advanced Topics
 
 ## Symbolic Links
 ```bash
