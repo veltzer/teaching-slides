@@ -1,9 +1,7 @@
 # UNIX Basics
 ## Getting Started with the Command Line
-
 ---
-
-# Logging In and Out
+## Logging In and Out
 
 ```mermaid
 sequenceDiagram
@@ -29,8 +27,7 @@ Ctrl+D    # EOF (same as exit)
 ```
 
 ---
-
-# Password Management
+## Password Management
 
 ```bash
 # Change your password
@@ -53,17 +50,17 @@ graph TD
     style B fill:#bbf,stroke:#333
     style C fill:#fdd,stroke:#333
 ```
-
 ---
-
-# Command Structure
+## Command Structure
 
 Basic syntax:
+
 ```bash
 command [options] [arguments]
 ```
 
 Examples:
+
 ```bash
 ls -l /home
 cp -r source_dir destination_dir
@@ -80,12 +77,11 @@ graph LR
     C --> G[Directories]
     style A fill:#f96,stroke:#333
 ```
-
 ---
-
-# Simple Commands
+## Simple Commands
 
 Common basic commands:
+
 ```bash
 # Display current directory
 pwd
@@ -107,8 +103,7 @@ mv old.txt new.txt
 ```
 
 ---
-
-# Getting Help
+## Getting Help
 
 ```bash
 # View manual page
@@ -135,10 +130,8 @@ graph TD
     B --> H[Section 5: File formats]
     style A fill:#f96,stroke:#333
 ```
-
 ---
-
-# Control Characters
+## Control Characters
 
 ```mermaid
 graph TB
@@ -165,8 +158,7 @@ Common control characters:
 | Ctrl+R   | Search history   |
 
 ---
-
-# Command Line Editing
+## Command Line Editing
 
 ```mermaid
 sequenceDiagram
@@ -193,8 +185,7 @@ Alt+F   # Move forward one word
 ```
 
 ---
-
-# Command Examples in Practice
+## Command Examples in Practice
 
 Let's combine what we've learned:
 ```bash
@@ -214,10 +205,8 @@ less notes.txt
 cp notes.txt backup_notes.txt
 mv backup_notes.txt ../notes_backup.txt
 ```
-
 ---
-
-# Common Mistakes and Solutions
+## Common Mistakes and Solutions
 
 ```mermaid
 graph TD
@@ -243,10 +232,8 @@ echo $PATH
 ls -la
 pwd
 ```
-
 ---
-
-# Practice Exercise
+## Practice Exercise
 
 Try these commands:
 ```bash

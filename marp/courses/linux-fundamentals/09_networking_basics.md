@@ -1,9 +1,7 @@
 # Networking Basics
 ## Understanding UNIX Network Configuration and Tools
-
 ---
-
-# The Client/Server Model
+## The Client/Server Model
 
 ```mermaid
 sequenceDiagram
@@ -19,10 +17,8 @@ Common examples:
 - File transfer (FTP)
 - Remote login (SSH)
 - Email (SMTP/POP3)
-
 ---
-
-# Network Interface Configuration
+## Network Interface Configuration
 
 ```mermaid
 graph TD
@@ -48,10 +44,8 @@ ifconfig eth0 192.168.1.100 netmask 255.255.255.0
 ifconfig eth0 up
 ifconfig eth0 down
 ```
-
 ---
-
-# Modern IP Command
+## Modern IP Command
 
 ```bash
 # Show IP addresses
@@ -69,10 +63,8 @@ ip route show
 # Add route
 ip route add default via 192.168.1.1
 ```
-
 ---
-
-# Interface Management
+## Interface Management
 
 ```mermaid
 graph LR
@@ -95,10 +87,8 @@ ifdown eth0
 ifconfig eth0
 ip link show eth0
 ```
-
 ---
-
-# Network Statistics (netstat)
+## Network Statistics (netstat)
 
 ```mermaid
 graph TD
@@ -128,10 +118,8 @@ netstat -s
 # Show routing table
 netstat -r
 ```
-
 ---
-
-# SSH (Secure Shell)
+## SSH (Secure Shell)
 
 ```mermaid
 sequenceDiagram
@@ -144,6 +132,7 @@ sequenceDiagram
 ```
 
 Basic usage:
+
 ```bash
 # Connect to remote host
 ssh user@remote.host
@@ -154,10 +143,8 @@ ssh -p 2222 user@remote.host
 # Run remote command
 ssh user@remote.host 'ls -l'
 ```
-
 ---
-
-# SSH Configuration and Keys
+## SSH Configuration and Keys
 
 ```mermaid
 graph TD
@@ -184,10 +171,8 @@ Host server1
     User username
     Port 2222
 ```
-
 ---
-
-# Remote File Transfer
+## Remote File Transfer
 
 ```mermaid
 graph LR
@@ -211,10 +196,8 @@ scp user@remote.host:file.txt .
 # Sync directories
 rsync -av local/ user@remote.host:backup/
 ```
-
 ---
-
-# Legacy Remote Commands
+## Legacy Remote Commands
 
 ```bash
 # Remote login
@@ -233,8 +216,7 @@ rexec remote.host command
 Note: These commands are insecure and should be avoided in favor of SSH.
 
 ---
-
-# Trust Relationships
+## Trust Relationships
 
 ```mermaid
 graph TD
@@ -256,10 +238,8 @@ Configuration files:
 # SSH trust
 ~/.ssh/authorized_keys
 ```
-
 ---
-
-# Network Troubleshooting
+## Network Troubleshooting
 
 ```mermaid
 graph TD
@@ -285,10 +265,8 @@ nslookup google.com
 # Packet capture
 tcpdump -i eth0
 ```
-
 ---
-
-# Network Security Basics
+## Network Security Basics
 
 ```bash
 # Check open ports
@@ -304,10 +282,8 @@ tail -f /var/log/auth.log
 # Monitor network traffic
 iftop -i eth0
 ```
-
 ---
-
-# Practical Examples
+## Practical Examples
 
 1. Remote Server Setup:
 ```bash
@@ -327,15 +303,14 @@ EOF
 ```
 
 1. File Synchronization:
+
 ```bash
 # Sync with remote
 rsync -avz --progress /local/dir/ \
     user@remote:/backup/
 ```
-
 ---
-
-# Best Practices
+## Best Practices
 
 ```mermaid
 graph TD

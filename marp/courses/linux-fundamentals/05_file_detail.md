@@ -1,9 +1,7 @@
 # Files in Detail
 ## Understanding UNIX File Types and Inodes
-
 ---
-
-# Seven File Types in UNIX
+## Seven File Types in UNIX
 
 ```mermaid
 graph TD
@@ -18,6 +16,7 @@ graph TD
 ```
 
 First character in ls -l output indicates type:
+
 ```bash
 -rw-r--r--  # Regular file
 drwxr-xr-x  # Directory
@@ -27,10 +26,8 @@ brw-rw-rw-  # Block device
 srwxrwxrwx  # Socket
 prw-r--r--  # Named pipe
 ```
-
 ---
-
-# Regular Files (-)
+## Regular Files (-)
 
 ```bash
 # Create regular file
@@ -52,8 +49,7 @@ Common types:
 - Executables
 
 ---
-
-# Directories (d)
+## Directories (d)
 
 ```mermaid
 graph TD
@@ -79,10 +75,8 @@ file newdir
 # Directory permissions
 ls -ld newdir
 ```
-
 ---
-
-# Device Files (c, b)
+## Device Files (c, b)
 
 Character Devices (c):
 - Serial ports
@@ -103,10 +97,8 @@ ls -l /dev/sda    # Hard drive
 ls -l /dev/tty    # Terminal
 ls -l /dev/null   # Null device
 ```
-
 ---
-
-# Symbolic Links (l)
+## Symbolic Links (l)
 
 ```mermaid
 graph LR
@@ -129,10 +121,8 @@ readlink link.txt
 # Find broken links
 find . -type l -! -exec test -e {} \; -print
 ```
-
 ---
-
-# Sockets (s) and Named Pipes (p)
+## Sockets (s) and Named Pipes (p)
 
 Sockets:
 ```bash
@@ -154,8 +144,7 @@ cat < mypipe
 ```
 
 ---
-
-# The INODE Concept
+## The INODE Concept
 
 ```mermaid
 graph TD
@@ -178,8 +167,7 @@ Inode contains:
 - Data block pointers
 
 ---
-
-# Working with Inodes
+## Working with Inodes
 
 ```bash
 # View inode numbers
@@ -196,16 +184,15 @@ df -i
 ```
 
 Example output:
-```
+
+```txt
 # ls -i
 12345 file.txt
 12345 hardlink.txt  # Same inode number
 67890 different.txt # Different inode
 ```
-
 ---
-
-# Hard Links vs Symbolic Links
+## Hard Links vs Symbolic Links
 
 ```mermaid
 graph TD
@@ -231,8 +218,7 @@ ls -li target.txt hardlink.txt symlink.txt
 ```
 
 ---
-
-# Link Count and Storage
+## Link Count and Storage
 
 ```bash
 # Create test file
@@ -249,10 +235,8 @@ ls -l original.txt  # Shows count of 3
 rm original.txt     # File still exists
 cat link1.txt      # Still accessible
 ```
-
 ---
-
-# File Timestamps
+## File Timestamps
 
 Three main timestamps:
 ```bash
@@ -280,12 +264,11 @@ touch -a file.txt
 # Update modification time only
 touch -m file.txt
 ```
-
 ---
-
-# Practical Examples
+## Practical Examples
 
 1. Finding files by inode:
+
 ```bash
 # Create test files
 echo "content" > original.txt
@@ -297,6 +280,7 @@ find . -inum $(ls -i original.txt | cut -d' ' -f1)
 ```
 
 1. Link management:
+
 ```bash
 # Create directory structure
 mkdir -p dir1/dir2
@@ -309,10 +293,8 @@ ln -s dir2/target.txt link.txt
 # Create absolute symbolic link
 ln -s /absolute/path/target.txt abslink.txt
 ```
-
 ---
-
-# File System Layout
+## File System Layout
 
 ```mermaid
 graph TD

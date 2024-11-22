@@ -1,9 +1,7 @@
 # Linux Boot System
 ## Understanding systemd and Boot Process
-
 ---
-
-# Linux Boot Sequence
+## Linux Boot Sequence
 
 ```mermaid
 graph TD
@@ -21,10 +19,8 @@ graph TD
 1. Kernel initialization
 1. systemd starts system
 1. Services start in parallel
-
 ---
-
-# Old SysV Init System
+## Old SysV Init System
 
 ```mermaid
 graph LR
@@ -51,8 +47,7 @@ Traditional runlevels:
 - 6: Reboot
 
 ---
-
-# systemd Introduction
+## systemd Introduction
 
 ```mermaid
 graph TD
@@ -73,8 +68,7 @@ Key features:
 - Logging (journald)
 
 ---
-
-# systemd Units
+## systemd Units
 
 ```mermaid
 graph LR
@@ -98,8 +92,7 @@ Common unit types:
 ```
 
 ---
-
-# Basic systemctl Commands
+## Basic systemctl Commands
 
 ```bash
 # List units
@@ -119,8 +112,7 @@ systemctl disable nginx.service
 ```
 
 ---
-
-# Service Management
+## Service Management
 
 ```mermaid
 stateDiagram-v2
@@ -146,8 +138,7 @@ journalctl -u service
 ```
 
 ---
-
-# Writing systemd Service Files
+## Writing systemd Service Files
 
 Location: `/etc/systemd/system/myservice.service`
 
@@ -166,10 +157,8 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
-
 ---
-
-# Service File Sections
+## Service File Sections
 
 ```mermaid
 graph TD
@@ -199,10 +188,8 @@ Restart=
 # Install section
 WantedBy=
 ```
-
 ---
-
-# Dependency Management
+## Dependency Management
 
 ```bash
 # View dependencies
@@ -215,10 +202,8 @@ systemctl list-dependencies --reverse nginx.service
 systemctl show -p "Requires" nginx.service
 systemctl show -p "Wants" nginx.service
 ```
-
 ---
-
-# rc.local Compatibility
+## rc.local Compatibility
 
 For legacy support:
 ```bash
@@ -239,10 +224,8 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 ```
-
 ---
-
-# Writing Custom init.d Scripts
+## Writing Custom init.d Scripts
 
 ```bash
 #!/bin/bash
@@ -276,10 +259,8 @@ esac
 
 exit 0
 ```
-
 ---
-
-# Systemd Targets
+## Systemd Targets
 
 ```mermaid
 graph TD
@@ -304,8 +285,7 @@ systemctl isolate graphical.target
 ```
 
 ---
-
-# Troubleshooting Boot Issues
+## Troubleshooting Boot Issues
 
 ```mermaid
 graph TD
