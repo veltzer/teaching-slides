@@ -100,3 +100,8 @@
 1. HTTP/2 and HTTP/3 focus on multiplexing and reducing latency
 1. Modern websites benefit from using the latest HTTP version
 1. Understanding HTTP versions helps in web optimization
+---
+
+## Final image of HTTP1.1
+
+![7](../../../out/mermaid/marp/courses/architecting/XX_http.md/7.png)
