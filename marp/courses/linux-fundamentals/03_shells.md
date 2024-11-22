@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "UNIX Shells"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # UNIX Shells
 ## Understanding Shell Types and Usage
 

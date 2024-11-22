@@ -133,8 +133,8 @@ my_function:
 
 Common methods:
 1. Via EAX register (for 32-bit values)
-2. Via EDX:EAX (for 64-bit values)
-3. Via the stack (for larger structures)
+1. Via EDX:EAX (for 64-bit values)
+1. Via the stack (for larger structures)
 
 Example:
 ```gas

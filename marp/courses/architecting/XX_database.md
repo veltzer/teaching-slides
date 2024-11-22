@@ -6,13 +6,13 @@
 ## Agenda
 
 1. Core Database Concepts
-2. ACID Properties
-3. SQL vs NoSQL Databases
-4. Database Types Deep Dive
-5. Data Modeling
-6. Scalability Patterns
-7. High Availability
-8. Performance Optimization
+1. ACID Properties
+1. SQL vs NoSQL Databases
+1. Database Types Deep Dive
+1. Data Modeling
+1. Scalability Patterns
+1. High Availability
+1. Performance Optimization
 
 ---
 
@@ -54,9 +54,9 @@ COMMIT;
 ## Isolation Levels
 
 1. Read Uncommitted
-2. Read Committed
-3. Repeatable Read
-4. Serializable
+1. Read Committed
+1. Repeatable Read
+1. Serializable
 
 ---
 
@@ -81,9 +81,9 @@ COMMIT;
 ## NoSQL Database Types
 
 1. Key-Value Stores
-2. Document Databases
-3. Column-Family Stores
-4. Graph Databases
+1. Document Databases
+1. Column-Family Stores
+1. Graph Databases
 
 ---
 
@@ -181,10 +181,10 @@ with driver.session() as session:
 ## Database Schema Design
 
 1. Normalization
-2. Denormalization
-3. Indexing Strategies
-4. Partitioning
-5. Sharding
+1. Denormalization
+1. Indexing Strategies
+1. Partitioning
+1. Sharding
 
 ---
 
@@ -197,10 +197,10 @@ with driver.session() as session:
 ## Index Types
 
 1. B-Tree
-2. Hash
-3. Bitmap
-4. GiST
-5. Full-Text
+1. Hash
+1. Bitmap
+1. GiST
+1. Full-Text
 
 ---
 
@@ -230,9 +230,9 @@ ON users USING GIN (to_tsvector('english', description));
 ## Partitioning Strategies
 
 1. Range Partitioning
-2. List Partitioning
-3. Hash Partitioning
-4. Composite Partitioning
+1. List Partitioning
+1. Hash Partitioning
+1. Composite Partitioning
 
 ---
 
@@ -284,9 +284,9 @@ def store_data(key, value):
 ## High Availability
 
 1. Replication
-2. Failover
-3. Load Balancing
-4. Backup Strategies
+1. Failover
+1. Load Balancing
+1. Backup Strategies
 
 ---
 
@@ -318,9 +318,9 @@ members:
 ## Backup Strategies
 
 1. Full Backup
-2. Incremental Backup
-3. Differential Backup
-4. Point-in-Time Recovery
+1. Incremental Backup
+1. Differential Backup
+1. Point-in-Time Recovery
 
 ---
 
@@ -351,10 +351,10 @@ def backup_database():
 ## Performance Optimization
 
 1. Query Optimization
-2. Index Optimization
-3. Connection Pooling
-4. Caching Strategies
-5. Resource Management
+1. Index Optimization
+1. Connection Pooling
+1. Caching Strategies
+1. Resource Management
 
 ---
 
@@ -428,10 +428,10 @@ def get_user(user_id):
 ## Monitoring and Metrics
 
 1. Query Performance
-2. Connection Stats
-3. Cache Hit Ratio
-4. Resource Usage
-5. Error Rates
+1. Connection Stats
+1. Cache Hit Ratio
+1. Resource Usage
+1. Error Rates
 
 ---
 
@@ -444,10 +444,10 @@ def get_user(user_id):
 ## Security Best Practices
 
 1. Access Control
-2. Encryption
-3. Audit Logging
-4. Network Security
-5. Backup Security
+1. Encryption
+1. Audit Logging
+1. Network Security
+1. Backup Security
 
 ---
 
@@ -474,9 +474,9 @@ ALTER SYSTEM SET ssl_key_file = 'server.key';
 ## Data Migration Strategies
 
 1. Big Bang Migration
-2. Incremental Migration
-3. Zero-Downtime Migration
-4. Reversible Migration
+1. Incremental Migration
+1. Zero-Downtime Migration
+1. Reversible Migration
 
 ---
 
@@ -510,19 +510,19 @@ def migrate_data():
 ## Modern Database Trends
 
 1. NewSQL Databases
-2. Serverless Databases
-3. Edge Databases
-4. AI Integration
-5. Time-Series Optimization
+1. Serverless Databases
+1. Edge Databases
+1. AI Integration
+1. Time-Series Optimization
 
 ---
 
 ## Best Practices
 
 1. Use Connection Pooling
-2. Implement Caching
-3. Regular Maintenance
-4. Monitor Performance
-5. Plan for Scale
-6. Secure Access
-7. Regular Backups
+1. Implement Caching
+1. Regular Maintenance
+1. Monitor Performance
+1. Plan for Scale
+1. Secure Access
+1. Regular Backups

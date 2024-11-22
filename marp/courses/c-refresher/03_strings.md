@@ -203,10 +203,10 @@ snprintf(buffer, sizeof(buffer), "I am %d years old", age);
 ## Common String Pitfalls
 
 1. Forgetting null terminator
-2. Buffer overflow
-3. Using `scanf()` without limiting input
-4. Modifying string literals
-5. Not checking return values of string functions
+1. Buffer overflow
+1. Using `scanf()` without limiting input
+1. Modifying string literals
+1. Not checking return values of string functions
 
 ```c
 char str[5] = "Hello";  // Buffer overflow!
@@ -218,10 +218,10 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 ## Best Practices
 
 1. Always ensure strings are null-terminated
-2. Use safer alternatives like `strncpy()`, `strncat()`, `snprintf()`
-3. Check return values of string functions
-4. Use `fgets()` instead of `gets()` for string input
-5. Be cautious with string literals
+1. Use safer alternatives like `strncpy()`, `strncat()`, `snprintf()`
+1. Check return values of string functions
+1. Use `fgets()` instead of `gets()` for string input
+1. Be cautious with string literals
 
 ---
 

@@ -6,11 +6,11 @@
 ## Agenda
 
 1. Fundamentals of Caching
-2. Types of Caches
-3. Caching Strategies
-4. Content Delivery Networks (CDNs)
-5. Edge Computing
-6. Future Trends
+1. Types of Caches
+1. Caching Strategies
+1. Content Delivery Networks (CDNs)
+1. Edge Computing
+1. Future Trends
 
 ---
 
@@ -33,11 +33,11 @@
 ## Types of Caches
 
 1. Browser Cache
-2. Application Cache
-3. CDN Cache
-4. Database Cache
-5. Object Cache
-6. API Cache
+1. Application Cache
+1. CDN Cache
+1. Database Cache
+1. Object Cache
+1. API Cache
 
 ---
 
@@ -95,9 +95,9 @@ def get_product(product_id):
 ## Caching Strategies
 
 1. Cache-Aside
-2. Write-Through
-3. Write-Behind
-4. Refresh-Ahead
+1. Write-Through
+1. Write-Behind
+1. Refresh-Ahead
 
 ---
 
@@ -122,10 +122,10 @@ def get_product(product_id):
 ## Cache Invalidation Strategies
 
 1. Time-Based (TTL)
-2. Event-Based
-3. Version-Based
-4. LRU (Least Recently Used)
-5. LFU (Least Frequently Used)
+1. Event-Based
+1. Version-Based
+1. LRU (Least Recently Used)
+1. LFU (Least Frequently Used)
 
 ---
 
@@ -237,9 +237,9 @@ async function handleRequest(request) {
 ## Cache Warming Strategies
 
 1. Preemptive Caching
-2. Progressive Loading
-3. Predictive Caching
-4. Background Refresh
+1. Progressive Loading
+1. Predictive Caching
+1. Background Refresh
 
 ---
 
@@ -269,10 +269,10 @@ def predict_cache_needs():
 ## Future Trends in Caching
 
 1. AI-Driven Cache Optimization
-2. Edge Computing Integration
-3. Serverless CDN Functions
-4. Machine Learning for Prediction
-5. Dynamic Content Caching
+1. Edge Computing Integration
+1. Serverless CDN Functions
+1. Machine Learning for Prediction
+1. Dynamic Content Caching
 
 ---
 
@@ -315,8 +315,8 @@ Key Metrics:
 ## Best Practices
 
 1. Set Appropriate TTLs
-2. Use Cache Keys Wisely
-3. Implement Circuit Breakers
-4. Monitor Performance
-5. Plan for Failures
-6. Regular Cache Maintenance
+1. Use Cache Keys Wisely
+1. Implement Circuit Breakers
+1. Monitor Performance
+1. Plan for Failures
+1. Regular Cache Maintenance

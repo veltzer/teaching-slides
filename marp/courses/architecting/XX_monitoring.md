@@ -3,13 +3,13 @@
 ---
 ## Agenda
 1. Introduction to Observability
-2. The Three Pillars
-3. Logging Strategies
-4. Metrics Collection
-5. Tracing Implementation
-6. Alerting Systems
-7. Dashboard Design
-8. Best Practices
+1. The Three Pillars
+1. Logging Strategies
+1. Metrics Collection
+1. Tracing Implementation
+1. Alerting Systems
+1. Dashboard Design
+1. Best Practices
 ---
 ## What is Observability?
 - Ability to understand internal state from external outputs
@@ -99,9 +99,9 @@ logger.info("order_processed",
 
 1. System Metrics
    - CPU, Memory, Disk, Network
-2. Application Metrics
+1. Application Metrics
    - Response time, Error rates
-3. Business Metrics
+1. Business Metrics
    - Transactions, Users, Revenue
 
 ---
@@ -215,10 +215,10 @@ def detect_anomalies(metrics_df):
 ## Dashboard Design Principles
 
 1. Purpose-driven layout
-2. Clear hierarchy
-3. Consistent metrics
-4. Interactive elements
-5. Responsive design
+1. Clear hierarchy
+1. Consistent metrics
+1. Interactive elements
+1. Responsive design
 
 ---
 
@@ -389,19 +389,19 @@ def calculate_health_score():
 ## Best Practices
 
 1. Start with business objectives
-2. Use structured logging
-3. Implement proper sampling
-4. Set meaningful alerts
-5. Automate responses
-6. Regular review and updates
-7. Documentation
+1. Use structured logging
+1. Implement proper sampling
+1. Set meaningful alerts
+1. Automate responses
+1. Regular review and updates
+1. Documentation
 
 ---
 
 ## Future Trends
 
 1. AI-powered analysis
-2. Automated remediation
-3. Chaos engineering integration
-4. Real-time visualization
-5. Predictive monitoring
+1. Automated remediation
+1. Chaos engineering integration
+1. Real-time visualization
+1. Predictive monitoring

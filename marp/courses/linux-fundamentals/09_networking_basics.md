@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "Networking Basics"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Networking Basics
 ## Understanding UNIX Network Configuration and Tools
 
@@ -340,7 +326,7 @@ Host myserver
 EOF
 ```
 
-2. File Synchronization:
+1. File Synchronization:
 ```bash
 # Sync with remote
 rsync -avz --progress /local/dir/ \

@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "UNIX Security in Practice"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Security in Practice
 ## Understanding UNIX Security Mechanisms
 
@@ -196,8 +182,8 @@ sequenceDiagram
 
 Access check order:
 1. Is user the owner?
-2. Is user in the group?
-3. What are "other" permissions?
+1. Is user in the group?
+1. What are "other" permissions?
 
 ---
 
@@ -300,7 +286,7 @@ chown root:developers /shared
 chmod 2775 /shared  # SGID + rwxrwxr-x
 ```
 
-2. Securing sensitive files:
+1. Securing sensitive files:
 ```bash
 # Create private directory
 mkdir ~/.private
@@ -325,7 +311,7 @@ chmod 755 ~/public_html
 chmod 700 ~/.ssh
 ```
 
-2. Group Management:
+1. Group Management:
 ```bash
 # Create group
 sudo groupadd developers

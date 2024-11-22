@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "Linux Boot System (systemd)"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Linux Boot System
 ## Understanding systemd and Boot Process
 
@@ -31,10 +17,10 @@ graph TD
 ```
 
 1. BIOS/UEFI initialization
-2. Bootloader (GRUB) loads kernel
-3. Kernel initialization
-4. systemd starts system
-5. Services start in parallel
+1. Bootloader (GRUB) loads kernel
+1. Kernel initialization
+1. systemd starts system
+1. Services start in parallel
 
 ---
 
@@ -348,10 +334,10 @@ systemctl status
 ```
 
 ---
-
-# Best Practices
+## Best Practices
 
 1. Service Management:
+
 ```bash
 # Verify syntax
 systemd-analyze verify myservice.service
@@ -362,7 +348,8 @@ systemctl status myservice.service
 journalctl -u myservice.service
 ```
 
-2. Security:
+1. Security:
+
 ```ini
 [Service]
 # Restrict service

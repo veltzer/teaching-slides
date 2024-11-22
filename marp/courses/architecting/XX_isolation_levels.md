@@ -6,10 +6,10 @@
 ## Agenda
 
 1. ACID Review
-2. Isolation Problems
-3. Isolation Levels
-4. Implementation Patterns
-5. Best Practices
+1. Isolation Problems
+1. Isolation Levels
+1. Implementation Patterns
+1. Best Practices
 
 ---
 
@@ -243,18 +243,18 @@ COMMIT;
 ## Performance vs Consistency
 
 1. Higher isolation = Lower concurrency
-2. Lower isolation = Better performance
-3. Choose based on requirements
-4. Consider hybrid approaches
-5. Monitor and adjust
+1. Lower isolation = Better performance
+1. Choose based on requirements
+1. Consider hybrid approaches
+1. Monitor and adjust
 
 ---
 
 ## Best Practices
 
 1. Use appropriate isolation level
-2. Implement retry logic
-3. Keep transactions short
-4. Handle deadlocks gracefully
-5. Monitor lock contention
-6. Document isolation requirements
+1. Implement retry logic
+1. Keep transactions short
+1. Handle deadlocks gracefully
+1. Monitor lock contention
+1. Document isolation requirements

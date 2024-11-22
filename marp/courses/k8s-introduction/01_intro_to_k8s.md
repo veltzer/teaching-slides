@@ -18,10 +18,10 @@
 ## Key Concepts in Kubernetes
 
 1. **Containers**: Lightweight, portable units of software
-2. **Pods**: Smallest deployable units in Kubernetes
-3. **Nodes**: Worker machines in a Kubernetes cluster
-4. **Clusters**: Set of nodes that run containerized applications
-5. **Control Plane**: Manages the cluster state and desired configuration
+1. **Pods**: Smallest deployable units in Kubernetes
+1. **Nodes**: Worker machines in a Kubernetes cluster
+1. **Clusters**: Set of nodes that run containerized applications
+1. **Control Plane**: Manages the cluster state and desired configuration
 ---
 ## Kubernetes Architecture
 

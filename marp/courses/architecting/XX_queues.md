@@ -6,13 +6,13 @@
 ## Agenda
 
 1. Understanding Queues
-2. Queue Types and Patterns
-3. Message Ordering and Delivery
-4. Queue Systems Deep Dive
+1. Queue Types and Patterns
+1. Message Ordering and Delivery
+1. Queue Systems Deep Dive
    - RabbitMQ
    - Apache Kafka
    - Amazon SQS
-5. Advanced Concepts
+1. Advanced Concepts
 
 ---
 
@@ -35,10 +35,10 @@
 ## Types of Queues
 
 1. Point-to-Point
-2. Publish/Subscribe
-3. Priority Queues
-4. Dead Letter Queues
-5. Delay Queues
+1. Publish/Subscribe
+1. Priority Queues
+1. Dead Letter Queues
+1. Delay Queues
 
 ---
 
@@ -214,9 +214,9 @@ response = sqs.receive_message(
 ## Message Ordering
 
 1. FIFO (First-In-First-Out)
-2. Priority-based
-3. Time-based
-4. Custom ordering
+1. Priority-based
+1. Time-based
+1. Custom ordering
 
 ---
 
@@ -334,9 +334,9 @@ Key Metrics:
 ## Error Handling Patterns
 
 1. Retry with Backoff
-2. Circuit Breaker
-3. Fallback Handler
-4. Poison Message Handler
+1. Circuit Breaker
+1. Fallback Handler
+1. Poison Message Handler
 
 ---
 
@@ -359,9 +359,9 @@ def retry_with_backoff(func, max_retries=3):
 ## Scaling Patterns
 
 1. Horizontal Consumer Scaling
-2. Partition Distribution
-3. Consumer Groups
-4. Load Balancing
+1. Partition Distribution
+1. Consumer Groups
+1. Load Balancing
 
 ---
 
@@ -374,18 +374,18 @@ def retry_with_backoff(func, max_retries=3):
 ## Performance Optimization
 
 1. Message Compression
-2. Batch Processing
-3. Prefetch Count
-4. Connection Pooling
-5. Resource Management
+1. Batch Processing
+1. Prefetch Count
+1. Connection Pooling
+1. Resource Management
 
 ---
 
 ## Best Practices
 
 1. Use Dead Letter Queues
-2. Implement Retry Logic
-3. Monitor Queue Health
-4. Handle Poison Messages
-5. Plan for Scaling
-6. Ensure Message Persistence
+1. Implement Retry Logic
+1. Monitor Queue Health
+1. Handle Poison Messages
+1. Plan for Scaling
+1. Ensure Message Persistence

@@ -405,10 +405,10 @@ Create a simple text analyzer that:
 
 ## Common Pitfalls
 1. Index out of bounds
-2. Invalid string slicing
-3. HashMap key type constraints
-4. Unnecessary cloning
-5. Inefficient capacity usage
+1. Invalid string slicing
+1. HashMap key type constraints
+1. Unnecessary cloning
+1. Inefficient capacity usage
 
 ---
 

@@ -6,12 +6,12 @@
 ## Agenda
 
 1. Introduction to Big Data
-2. Big Data Architecture
-3. Data Processing Frameworks
-4. Storage Solutions
-5. Processing Patterns
-6. Analytics & ML Integration
-7. Security & Governance
+1. Big Data Architecture
+1. Data Processing Frameworks
+1. Storage Solutions
+1. Processing Patterns
+1. Analytics & ML Integration
+1. Security & Governance
 
 ---
 
@@ -38,10 +38,10 @@ Additional V's:
 1. Structured Data
    - Databases
    - CSV files
-2. Semi-structured
+1. Semi-structured
    - JSON
    - XML
-3. Unstructured
+1. Unstructured
    - Text
    - Images
    - Videos
@@ -69,10 +69,10 @@ Additional V's:
 ## Storage Systems
 
 1. HDFS
-2. Object Storage
-3. NoSQL Databases
-4. Data Warehouses
-5. Data Lakes
+1. Object Storage
+1. NoSQL Databases
+1. Data Warehouses
+1. Data Lakes
 
 ---
 
@@ -108,10 +108,10 @@ def store_data(data, bucket, key):
 ## Processing Frameworks
 
 1. Apache Hadoop
-2. Apache Spark
-3. Apache Flink
-4. Apache Beam
-5. Dask
+1. Apache Spark
+1. Apache Flink
+1. Apache Beam
+1. Dask
 
 ---
 
@@ -155,10 +155,10 @@ result.write \
 ## Stream Processing
 
 1. Real-time Analytics
-2. Event Processing
-3. Continuous Computation
-4. Window Operations
-5. State Management
+1. Event Processing
+1. Continuous Computation
+1. Window Operations
+1. State Management
 
 ---
 
@@ -184,20 +184,20 @@ env.execute("Streaming Pipeline");
 ## Data Warehousing
 
 1. Schema Design
-2. Partitioning
-3. Data Modeling
-4. Query Optimization
-5. Performance Tuning
+1. Partitioning
+1. Data Modeling
+1. Query Optimization
+1. Performance Tuning
 
 ---
 
 ## SQL Query Engines
 
 1. Apache Hive
-2. Presto/Trino
-3. Amazon Athena
-4. Apache Drill
-5. Snowflake
+1. Presto/Trino
+1. Amazon Athena
+1. Apache Drill
+1. Snowflake
 
 ---
 
@@ -264,10 +264,10 @@ model.write().overwrite().save("s3://models/latest")
 ## Data Quality
 
 1. Schema Validation
-2. Data Profiling
-3. Quality Checks
-4. Anomaly Detection
-5. Data Lineage
+1. Data Profiling
+1. Quality Checks
+1. Anomaly Detection
+1. Data Lineage
 
 ---
 
@@ -296,10 +296,10 @@ def validate_dataset(df):
 ## Monitoring Systems
 
 1. Cluster Metrics
-2. Job Statistics
-3. Data Quality
-4. Resource Usage
-5. Performance Metrics
+1. Job Statistics
+1. Data Quality
+1. Resource Usage
+1. Performance Metrics
 
 ---
 
@@ -349,10 +349,10 @@ def secure_data_access():
 ## Data Governance
 
 1. Access Control
-2. Data Catalog
-3. Metadata Management
-4. Compliance
-5. Audit Trails
+1. Data Catalog
+1. Metadata Management
+1. Compliance
+1. Audit Trails
 
 ---
 
@@ -380,10 +380,10 @@ catalog.register_dataset(
 ## Cost Optimization
 
 1. Storage Tiering
-2. Compute Scaling
-3. Caching Strategy
-4. Query Optimization
-5. Resource Planning
+1. Compute Scaling
+1. Caching Strategy
+1. Query Optimization
+1. Resource Planning
 
 ---
 
@@ -414,20 +414,20 @@ def optimize_storage():
 ## Disaster Recovery
 
 1. Backup Strategy
-2. Recovery Plans
-3. Data Replication
-4. Failover Process
-5. Testing Procedures
+1. Recovery Plans
+1. Data Replication
+1. Failover Process
+1. Testing Procedures
 
 ---
 
 ## Performance Optimization
 
 1. Partitioning Strategy
-2. Indexing
-3. Caching
-4. Query Optimization
-5. Resource Allocation
+1. Indexing
+1. Caching
+1. Query Optimization
+1. Resource Allocation
 
 ---
 
@@ -472,19 +472,19 @@ def optimize_partitioning(df):
 ## Future Trends
 
 1. Serverless Analytics
-2. AI-Driven Optimization
-3. Multi-cloud Architecture
-4. Real-time Everything
-5. Automated Governance
+1. AI-Driven Optimization
+1. Multi-cloud Architecture
+1. Real-time Everything
+1. Automated Governance
 
 ---
 
 ## Best Practices
 
 1. Data Quality First
-2. Proper Partitioning
-3. Resource Planning
-4. Security by Design
-5. Cost Optimization
-6. Regular Monitoring
-7. Documentation
+1. Proper Partitioning
+1. Resource Planning
+1. Security by Design
+1. Cost Optimization
+1. Regular Monitoring
+1. Documentation

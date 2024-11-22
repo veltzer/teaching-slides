@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "Files in Detail"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Files in Detail
 ## Understanding UNIX File Types and Inodes
 
@@ -310,7 +296,7 @@ ln original.txt hard2.txt
 find . -inum $(ls -i original.txt | cut -d' ' -f1)
 ```
 
-2. Link management:
+1. Link management:
 ```bash
 # Create directory structure
 mkdir -p dir1/dir2

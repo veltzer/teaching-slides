@@ -1,17 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
-header: "Process Management"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # Process Management
 ## Understanding and Controlling UNIX Processes
 
@@ -309,7 +295,7 @@ pid=$(pgrep nginx)
 watch -n 1 "ps -p $pid -o pid,ppid,%cpu,%mem,cmd"
 ```
 
-2. Resource management:
+1. Resource management:
 ```bash
 # CPU intensive process
 nice -n 19 tar -czf backup.tar.gz /data

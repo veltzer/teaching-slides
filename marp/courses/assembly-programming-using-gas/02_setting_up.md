@@ -5,9 +5,9 @@
 ## Essential Tools for Assembly Programming
 
 1. GNU Assembler (GAS)
-2. GNU Compiler Collection (GCC)
-3. GNU Debugger (GDB)
-4. Text Editor or Integrated Development Environment (IDE)
+1. GNU Compiler Collection (GCC)
+1. GNU Debugger (GDB)
+1. Text Editor or Integrated Development Environment (IDE)
 
 ---
 
@@ -71,8 +71,8 @@ set autoindent
 
 ## Configuring Visual Studio Code
 
-1. Install "x86 and x86_64 Assembly" extension
-2. Configure settings.json:
+1. Install `x86 and x86_64 Assembly` extension
+1. Configure settings.json:
 ```json
 {
     "files.associations": {
@@ -166,12 +166,12 @@ echo $?
    ld -m elf_i386 -o my_program main.o
    ```
 
-2. Start GDB:
+1. Start GDB:
    ```bash
    gdb ./my_program
    ```
 
-3. Basic GDB commands:
+1. Basic GDB commands:
    - `break _start`
    - `run`
    - `next`

@@ -6,12 +6,12 @@
 ## Agenda
 
 1. Introduction to Workflow Orchestration
-2. DAGs and Workflows
-3. Major Orchestration Tools
-4. Data Pipeline Patterns
-5. Implementation Strategies
-6. Monitoring and Observability
-7. Best Practices
+1. DAGs and Workflows
+1. Major Orchestration Tools
+1. Data Pipeline Patterns
+1. Implementation Strategies
+1. Monitoring and Observability
+1. Best Practices
 
 ---
 
@@ -51,11 +51,11 @@
 ## Popular Orchestration Tools
 
 1. Apache Airflow
-2. Prefect
-3. Dagster
-4. Netflix Conductor
-5. Argo Workflows
-6. Luigi
+1. Prefect
+1. Dagster
+1. Netflix Conductor
+1. Argo Workflows
+1. Luigi
 
 ---
 
@@ -242,10 +242,10 @@ if __name__ == "__main__":
 ## Common Pipeline Patterns
 
 1. ETL/ELT
-2. Fan-out/Fan-in
-3. Branch and Merge
-4. Retry with Backoff
-5. Circuit Breaker
+1. Fan-out/Fan-in
+1. Branch and Merge
+1. Retry with Backoff
+1. Circuit Breaker
 
 ---
 
@@ -338,10 +338,10 @@ def process_data():
 ## Error Handling Strategies
 
 1. Retry Logic
-2. Dead Letter Queues
-3. Fallback Actions
-4. Alert Notifications
-5. Recovery Workflows
+1. Dead Letter Queues
+1. Fallback Actions
+1. Alert Notifications
+1. Recovery Workflows
 
 ---
 
@@ -370,10 +370,10 @@ def process_data():
 ## Monitoring and Observability
 
 1. Task Status
-2. Duration Metrics
-3. Error Rates
-4. Resource Usage
-5. Data Quality
+1. Duration Metrics
+1. Error Rates
+1. Resource Usage
+1. Data Quality
 
 ---
 
@@ -424,10 +424,10 @@ def validate_data(df):
 ## Resource Management
 
 1. CPU Allocation
-2. Memory Limits
-3. Concurrency Control
-4. Queue Management
-5. Worker Scaling
+1. Memory Limits
+1. Concurrency Control
+1. Queue Management
+1. Worker Scaling
 
 ---
 
@@ -454,9 +454,9 @@ pools:
 ## Scalability Patterns
 
 1. Horizontal Scaling
-2. Queue-based Distribution
-3. Partition-based Processing
-4. Dynamic Worker Allocation
+1. Queue-based Distribution
+1. Partition-based Processing
+1. Dynamic Worker Allocation
 
 ---
 
@@ -482,10 +482,10 @@ def scale_workers(replicas):
 ## Security Considerations
 
 1. Authentication
-2. Authorization
-3. Encryption
-4. Audit Logging
-5. Secret Management
+1. Authorization
+1. Encryption
+1. Audit Logging
+1. Secret Management
 
 ---
 
@@ -512,10 +512,10 @@ def get_secure_connection():
 ## Workflow Testing
 
 1. Unit Testing
-2. Integration Testing
-3. End-to-End Testing
-4. Dry Runs
-5. Mocking
+1. Integration Testing
+1. End-to-End Testing
+1. Dry Runs
+1. Mocking
 
 ---
 
@@ -552,19 +552,19 @@ def test_etl_workflow():
 ## Best Practices
 
 1. Idempotent Tasks
-2. Clear Dependencies
-3. Proper Error Handling
-4. Comprehensive Monitoring
-5. Regular Testing
-6. Documentation
-7. Version Control
+1. Clear Dependencies
+1. Proper Error Handling
+1. Comprehensive Monitoring
+1. Regular Testing
+1. Documentation
+1. Version Control
 
 ---
 
 ## Future Trends
 
 1. Serverless Workflows
-2. AI/ML Integration
-3. Real-time Processing
-4. Multi-cloud Orchestration
-5. Enhanced Automation
+1. AI/ML Integration
+1. Real-time Processing
+1. Multi-cloud Orchestration
+1. Enhanced Automation

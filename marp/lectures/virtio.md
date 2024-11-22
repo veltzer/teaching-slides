@@ -17,9 +17,9 @@
 ## Key Components of Virtio
 
 1. Frontend (Guest Driver)
-2. Backend (Host Driver)
-3. Transport Layer
-4. Virtual Queues
+1. Backend (Host Driver)
+1. Transport Layer
+1. Virtual Queues
 
 ---
 
@@ -300,20 +300,20 @@ static bool try_zero_copy_tx(struct virtnet_info *vi,
 ## Best Practices
 
 1. Proper error handling
-2. Memory barrier usage
-3. Resource cleanup
-4. Queue sizing
-5. Buffer management
+1. Memory barrier usage
+1. Resource cleanup
+1. Queue sizing
+1. Buffer management
 
 ---
 
 ## Common Pitfalls
 
 1. Missing memory barriers
-2. Incorrect descriptor chaining
-3. Buffer overflow
-4. Resource leaks
-5. Race conditions
+1. Incorrect descriptor chaining
+1. Buffer overflow
+1. Resource leaks
+1. Race conditions
 
 ---
 

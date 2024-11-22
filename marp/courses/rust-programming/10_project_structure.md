@@ -376,10 +376,10 @@ cargo new my_project --bin
 
 Create a complete project that:
 1. Uses proper structure
-2. Implements workspaces
-3. Has comprehensive tests
-4. Includes documentation
-5. Uses CI/CD
+1. Implements workspaces
+1. Has comprehensive tests
+1. Includes documentation
+1. Uses CI/CD
 
 ---
 

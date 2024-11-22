@@ -1,23 +1,9 @@
----
-marp: true
-theme: default
-paginate: true
-header: "UNIX File System"
-footer: "Linux Fundamentals Course"
-style: |
-  .columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-  }
----
-
 # UNIX File System
 ## Understanding Structure and Navigation
 
 ---
 
-# Basic File System Structure
+## Basic File System Structure
 
 ```mermaid
 graph TD
@@ -284,7 +270,7 @@ popd
 pwd
 ```
 
-2. Path Manipulation
+1. Path Manipulation
 ```bash
 # Create test files
 touch ~/test/a/1/file.txt

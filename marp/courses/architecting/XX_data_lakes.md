@@ -6,11 +6,11 @@
 ## Agenda
 
 1. Introduction to Data Lakes
-2. Data Lakehouse Architecture
-3. Components and Implementation
-4. Data Ingestion Patterns
-5. Analytics and ML Integration
-6. Best Practices
+1. Data Lakehouse Architecture
+1. Components and Implementation
+1. Data Ingestion Patterns
+1. Analytics and ML Integration
+1. Best Practices
 
 ---
 
@@ -43,10 +43,10 @@
    - Parquet
    - ORC
    - Avro
-2. Semi-structured
+1. Semi-structured
    - JSON
    - XML
-3. Unstructured
+1. Unstructured
    - Text
    - Images
    - Video
@@ -98,12 +98,12 @@ Solution: Data Lakehouse Architecture
 ## Key Lakehouse Features
 
 1. ACID Transactions
-2. Schema Enforcement
-3. Time Travel
-4. Upserts/Deletes
-5. Streaming Support
-6. BI Support
-7. ML Integration
+1. Schema Enforcement
+1. Time Travel
+1. Upserts/Deletes
+1. Streaming Support
+1. BI Support
+1. ML Integration
 
 ---
 
@@ -170,10 +170,10 @@ VERSION AS OF 12345;
 ## Data Ingestion Strategies
 
 1. Batch Processing
-2. Stream Processing
-3. Change Data Capture
-4. API Integration
-5. File-based Ingestion
+1. Stream Processing
+1. Change Data Capture
+1. API Integration
+1. File-based Ingestion
 
 ---
 
@@ -236,10 +236,10 @@ query = streamingDF \
 ## Data Management & Governance
 
 1. Data Catalog
-2. Access Control
-3. Data Quality
-4. Metadata Management
-5. Lineage Tracking
+1. Access Control
+1. Data Quality
+1. Metadata Management
+1. Lineage Tracking
 
 ---
 
@@ -265,10 +265,10 @@ catalog.register_dataset(
 ## Processing Engines
 
 1. Apache Spark
-2. Presto/Trino
-3. Apache Flink
-4. Databricks
-5. Amazon EMR
+1. Presto/Trino
+1. Apache Flink
+1. Databricks
+1. Amazon EMR
 
 ---
 
@@ -330,10 +330,10 @@ scaled = scaler.fit(transformed).transform(transformed)
 ## Data Lake Security
 
 1. Authentication
-2. Authorization
-3. Encryption
-4. Auditing
-5. Data Masking
+1. Authorization
+1. Encryption
+1. Auditing
+1. Data Masking
 
 ---
 
@@ -378,10 +378,10 @@ def setup_security():
 ## Monitoring and Analytics
 
 1. Storage Metrics
-2. Processing Metrics
-3. Query Performance
-4. Data Quality Metrics
-5. Usage Analytics
+1. Processing Metrics
+1. Query Performance
+1. Data Quality Metrics
+1. Usage Analytics
 
 ---
 
@@ -398,7 +398,7 @@ def setup_security():
    - Azure Data Lake
    - GCP Cloud Storage
 
-2. On-premises
+1. On-premises
    - Hadoop HDFS
    - MinIO
    - Ceph
@@ -414,18 +414,18 @@ def setup_security():
 ## Best Practices
 
 1. Zone-based architecture
-2. Data quality checks
-3. Proper partitioning
-4. Performance optimization
-5. Cost management
-6. Regular maintenance
+1. Data quality checks
+1. Proper partitioning
+1. Performance optimization
+1. Cost management
+1. Regular maintenance
 
 ---
 
 ## Future Trends
 
 1. Automated data quality
-2. Real-time processing
-3. AI-driven optimization
-4. Unified governance
-5. Zero-copy cloning
+1. Real-time processing
+1. AI-driven optimization
+1. Unified governance
+1. Zero-copy cloning
