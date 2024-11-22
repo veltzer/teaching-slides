@@ -1,21 +1,17 @@
 # Introduction to UNIX
 ## Understanding the Fundamentals
-
 ---
-
-# What is UNIX?
+## What is UNIX?
 
 - Multi-user operating system
 - Built in the 1970s at AT&T Bell Labs
 - Key characteristics:
-  - Modularity
-  - Simple tools that do one thing well
-  - Text-based configuration
-  - Everything is a file philosophy
-
+    - Modularity
+    - Simple tools that do one thing well
+    - Text-based configuration
+    - Everything is a file philosophy
 ---
-
-# History of UNIX
+## History of UNIX
 
 ```mermaid
 timeline
@@ -30,8 +26,7 @@ timeline
 ```
 
 ---
-
-# Operating System Core Structure
+## Operating System Core Structure
 
 ```mermaid
 graph TD
@@ -47,8 +42,7 @@ graph TD
 ```
 
 ---
-
-# The Process Tree
+## The Process Tree
 
 ```mermaid
 graph TD
@@ -69,7 +63,7 @@ graph TD
 
 ---
 
-# Process Lifecycle
+## Process Lifecycle
 
 ```mermaid
 stateDiagram-v2
@@ -82,14 +76,13 @@ stateDiagram-v2
     Zombie --> [*]
 ```
 
-## Zombie Processes
+### Zombie Processes
 - Terminated but not yet cleaned up
 - Parent must read exit status
 - Adopted by init if parent dies
 
 ---
-
-# System Calls
+## System Calls
 
 Example of a simple system call in C:
 ```c
@@ -111,8 +104,7 @@ int main() {
 ```
 
 ---
-
-# Basic Security Model
+## Basic Security Model
 
 ```mermaid
 graph LR
@@ -125,20 +117,18 @@ graph LR
     style D fill:#fdd,stroke:#333
 ```
 
-## Key Security Features:
+### Key Security Features:
 - File system permissions
 - Process isolation
 - User/group-based access control
-
 ---
-
-# The Root User
+## The Root User
 
 - UID 0
 - Special characteristics:
-  - Bypasses permission checks
-  - Can access all files
-  - Can manipulate all processes
+    - Bypasses permission checks
+    - Can access all files
+    - Can manipulate all processes
   
 ```bash
 # Example of root privileges
@@ -149,8 +139,7 @@ chmod 777 /some/system/file  # Succeeds
 ```
 
 ---
-
-# File System Security
+## File System Security
 
 ```mermaid
 graph TD
@@ -174,10 +163,8 @@ Example permission setting:
 chmod 755 file.txt  # rwxr-xr-x
 chown user:group file.txt
 ```
-
 ---
-
-# Process Isolation
+## Process Isolation
 
 ```mermaid
 graph TD
@@ -195,7 +182,7 @@ graph TD
 ```
 
 - Each process has its own:
-  - Memory space
-  - File descriptors
-  - Security context
-  - Resource limits
+    - Memory space
+    - File descriptors
+    - Security context
+    - Resource limits
