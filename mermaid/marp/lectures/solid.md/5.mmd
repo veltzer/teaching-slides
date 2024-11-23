@@ -1,0 +1,20 @@
+classDiagram
+    class Bird {
+        <<interface>>
+        +move()
+    }
+    class FlyingBird {
+        <<interface>>
+        +fly()
+    }
+    class Sparrow {
+        +move()
+        +fly()
+    }
+    class Penguin {
+        +move()
+    }
+    
+    Bird <|-- FlyingBird
+    FlyingBird <|.. Sparrow
+    Bird <|.. Penguin

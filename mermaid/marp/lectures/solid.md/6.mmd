@@ -1,0 +1,20 @@
+classDiagram
+    class Worker {
+        <<interface>>
+        +work()
+        +eat()
+        +sleep()
+    }
+    class Human {
+        +work()
+        +eat()
+        +sleep()
+    }
+    class Robot {
+        +work()
+        +eat() x
+        +sleep() x
+    }
+    
+    Worker <|.. Human
+    Worker <|.. Robot

@@ -1,0 +1,17 @@
+classDiagram
+    class Shape {
+        <<interface>>
+        +calculateArea() double
+    }
+    class Rectangle {
+        -width: double
+        -height: double
+        +calculateArea() double
+    }
+    class Circle {
+        -radius: double
+        +calculateArea() double
+    }
+    
+    Shape <|.. Rectangle
+    Shape <|.. Circle

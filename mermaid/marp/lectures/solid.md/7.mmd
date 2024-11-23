@@ -1,0 +1,26 @@
+classDiagram
+    class Workable {
+        <<interface>>
+        +work()
+    }
+    class Eatable {
+        <<interface>>
+        +eat()
+    }
+    class Sleepable {
+        <<interface>>
+        +sleep()
+    }
+    class Human {
+        +work()
+        +eat()
+        +sleep()
+    }
+    class Robot {
+        +work()
+    }
+    
+    Workable <|.. Human
+    Eatable <|.. Human
+    Sleepable <|.. Human
+    Workable <|.. Robot

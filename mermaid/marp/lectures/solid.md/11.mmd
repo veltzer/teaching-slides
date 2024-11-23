@@ -1,0 +1,23 @@
+classDiagram
+    class OrderService {
+        -repository: OrderRepository
+        -paymentProcessor: PaymentProcessor
+        -notificationService: NotificationService
+        +processOrder(Order)
+    }
+    class OrderRepository {
+        <<interface>>
+        +save(Order)
+    }
+    class PaymentProcessor {
+        <<interface>>
+        +process(Order)
+    }
+    class NotificationService {
+        <<interface>>
+        +notify(Order)
+    }
+    
+    OrderService --> OrderRepository
+    OrderService --> PaymentProcessor
+    OrderService --> NotificationService
