@@ -114,22 +114,7 @@ kill -CONT PID
 ---
 ## Monitoring with top
 
-<<<<<<< HEAD
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/3.png)
-=======
-## Monitoring with top
-
-```mermaid
-graph TD
-    A[top] --> B[System Summary]
-    A --> C[Process List]
-    B --> D[Load Average]
-    B --> E[CPU Usage]
-    B --> F[Memory Usage]
-    C --> G[Interactive Commands]
-    style A fill:#f96,stroke:#333
-```
->>>>>>> 4636c0d (more linting)
 
 Interactive commands:
 
