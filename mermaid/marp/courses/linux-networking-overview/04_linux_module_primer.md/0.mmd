@@ -1,0 +1,7 @@
+graph TD
+    A[Module Init] --> B[Allocate Resources]
+    B --> C[Initialize Structures]
+    C --> D[Register Interfaces]
+    D --> E[Success/Failure]
+    E -->|Failure| F[Cleanup]
+    F --> G[Return Error]

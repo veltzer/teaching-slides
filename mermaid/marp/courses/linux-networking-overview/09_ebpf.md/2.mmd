@@ -1,0 +1,5 @@
+graph LR
+    A[Load Program] --> B[Verifier]
+    B -->|Pass| C[JIT Compile]
+    B -->|Fail| D[Reject]
+    C --> E[Attach to Hook]

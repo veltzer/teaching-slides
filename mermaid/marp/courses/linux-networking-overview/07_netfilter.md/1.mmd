@@ -1,0 +1,7 @@
+graph LR
+    A[PRE_ROUTING] --> B[FORWARD]
+    A --> C[LOCAL_IN]
+    B --> D[POST_ROUTING]
+    C --> E[LOCAL_PROCESS]
+    E --> F[LOCAL_OUT]
+    F --> D

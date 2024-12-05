@@ -1,0 +1,9 @@
+graph TD
+    A[Packet Arrives] --> B[Pre-routing]
+    B --> C[Routing Decision]
+    C -->|Forward| D[Forward Chain]
+    C -->|Local| E[Input Chain]
+    D --> F[Post-routing]
+    E --> G[Local Process]
+    G --> H[Output Chain]
+    H --> F

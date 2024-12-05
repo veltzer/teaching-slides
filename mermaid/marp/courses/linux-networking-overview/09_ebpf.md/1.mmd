@@ -1,0 +1,6 @@
+graph TD
+    A[User Program] --> B[LLVM/Clang]
+    B --> C[BPF Bytecode]
+    C --> D[Verifier]
+    D --> E[JIT Compiler]
+    E --> F[Kernel Execution]
