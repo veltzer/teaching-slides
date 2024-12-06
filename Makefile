@@ -4,7 +4,7 @@
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
-DO_ALLDEP:=1
+DO_ALLDEP:=0
 # do you want to do 'ppt' from 'odp'?
 DO_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
@@ -43,6 +43,17 @@ DO_DRAWIO_PNG:=1
 endif # GITHUB_WORKFLOW
 # use mermaid png deps?
 DO_MERMAID_DEP:=0
+# unite courses pdfs?
+DO_COURSES:=1
+
+#############
+# templates #
+#############
+define template
+PREREQ_$(1):=$$(addprefix out/,$$(addsuffix .pdf,$$(patsubst %.md,%,$$(wildcard marp/courses/$(1)/*))))
+out/marp/courses/$(1).pdf: $$(PREREQ_$(1))
+	pdfunite $$(PREREQ_$(1)) > $$@
+endef
 
 ########
 # code #
@@ -89,6 +100,16 @@ MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
 DRAWIO_SRC:=$(shell find drawings -type f -and -name "*.drawio")
 DRAWIO_BAS:=$(basename $(DRAWIO_SRC))
 DRAWIO_PNG:=$(addprefix out/,$(addsuffix .png,$(DRAWIO_BAS)))
+
+# courses
+NAMES:=$(notdir $(patsubst %/,%,$(dir $(wildcard marp/courses/*/))))
+TARGET_NAMES:=$(addsuffix .pdf,$(addprefix out/marp/courses/,$(NAMES)))
+# warning! no space is allowed after the command in the call function below
+$(foreach name, $(NAMES), $(eval $(call template,$(name))))
+
+ifeq ($(DO_COURSES),1)
+ALL+=$(TARGET_NAMES)
+endif # DO_COURSES
 
 ifeq ($(DO_MD_ASPELL),1)
 ALL+=$(MD_ASPELL)
@@ -184,6 +205,9 @@ all_mermaid_png: $(MERMAID_PNG)
 .PHONY: all_marp_pdf
 all_marp_pdf: $(MARP_PDF)
 
+.PHONY: all_courses
+all_courses: $(TARGET_NAMES)
+
 .PHONY: debug
 debug:
 	$(info doing [$@])
@@ -216,6 +240,9 @@ debug:
 	$(info DRAWIO_SRC is $(DRAWIO_SRC))
 	$(info DRAWIO_BAS is $(DRAWIO_BAS))
 	$(info DRAWIO_PNG is $(DRAWIO_PNG))
+	$(info NAMES is $(NAMES))
+	$(info TARGET_NAMES is $(TARGET_NAMES))
+	$(foreach name,$(NAMES),$(info PREREQ_$(name) is $(PREREQ_$(name))))
 
 .PHONY: clean
 clean:
