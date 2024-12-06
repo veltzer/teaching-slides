@@ -44,15 +44,15 @@ endif # GITHUB_WORKFLOW
 # use mermaid png deps?
 DO_MERMAID_DEP:=0
 # unite courses pdfs?
-DO_COURSES:=1
+DO_COURSES:=0
 
 #############
 # templates #
 #############
 define template
 PREREQ_$(1):=$$(addprefix out/,$$(addsuffix .pdf,$$(patsubst %.md,%,$$(wildcard marp/courses/$(1)/*))))
-out/marp/courses/$(1).pdf: $$(PREREQ_$(1))
-	pdfunite $$(PREREQ_$(1)) > $$@
+out/marp/courses/$(1).pdf: $(PREREQ_$(1))
+	 pdfunite $$(PREREQ_$(1)) $$@
 endef
 
 ########
@@ -180,6 +180,7 @@ MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
 #########
 # rules #
 #########
+.DEFAULT_GOAL:=all
 .PHONY: all
 all: $(ALL)
 	@true
