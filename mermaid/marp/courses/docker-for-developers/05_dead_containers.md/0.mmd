@@ -1,0 +1,8 @@
+stateDiagram-v2
+    [*] --> Created: docker create
+    Created --> Running: docker start
+    Running --> Stopped: docker stop/kill
+    Running --> Dead: crashes/errors
+    Stopped --> Running: docker start
+    Dead --> [*]: docker rm
+    Stopped --> [*]: docker rm

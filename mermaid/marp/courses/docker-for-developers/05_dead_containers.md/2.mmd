@@ -1,0 +1,7 @@
+flowchart TD
+    A[Container Logs] --> B{Log Types}
+    B --> C[STDOUT]
+    B --> D[STDERR]
+    C --> E[docker logs]
+    D --> E
+    E --> F[Troubleshooting]

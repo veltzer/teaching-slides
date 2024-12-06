@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant D as Docker
+    participant C as Container
+    participant K as Kernel
+    D->>C: Start with capabilities
+    C->>K: Request operation
+    K->>K: Check capabilities
+    K->>C: Allow/Deny

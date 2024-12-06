@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant A as Admin
+    participant D as Docker
+    participant N as Network
+    A->>D: Create network
+    D->>N: Configure network
+    A->>D: Connect container
+    D->>N: Add container
+    N->>D: Assign IP

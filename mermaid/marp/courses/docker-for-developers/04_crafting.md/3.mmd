@@ -1,0 +1,11 @@
+graph TD
+    A[FROM] --> B[WORKDIR]
+    B --> C[COPY requirements]
+    C --> D[RUN install]
+    D --> E[COPY source]
+    E --> F[CMD/ENTRYPOINT]
+    
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#dfd,stroke:#333
+    style D fill:#fdd,stroke:#333

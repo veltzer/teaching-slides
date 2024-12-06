@@ -1,0 +1,4 @@
+flowchart LR
+    A[Container Port] -->|"-p 8080:80"| B[Host Port]
+    C[Multiple Ports] -->|"-p 80:80 -p 443:443"| D[Host Ports]
+    E[Random Port] -->|"-P"| F[Auto Assignment]

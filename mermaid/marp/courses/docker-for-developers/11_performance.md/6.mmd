@@ -1,0 +1,6 @@
+flowchart LR
+    A[Container] --> B{Health Check}
+    B -->|Healthy| C[Continue]
+    B -->|Unhealthy| D[Action]
+    D --> E[Restart]
+    D --> F[Alert]

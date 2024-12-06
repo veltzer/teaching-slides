@@ -1,0 +1,7 @@
+flowchart TD
+    A[Dockerfile] --> B[docker build]
+    B --> C{Build Context}
+    C --> D[Layer 1: Base Image]
+    D --> E[Layer 2: Dependencies]
+    E --> F[Layer 3: Application]
+    F --> G[Final Image]

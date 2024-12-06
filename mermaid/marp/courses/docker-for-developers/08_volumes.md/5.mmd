@@ -1,0 +1,6 @@
+stateDiagram-v2
+    [*] --> Created: docker volume create
+    Created --> InUse: Container mount
+    InUse --> Available: Container stop
+    Available --> InUse: New container
+    Available --> [*]: docker volume rm

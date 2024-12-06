@@ -1,0 +1,15 @@
+graph TD
+    subgraph "Build Context"
+        A[Dockerfile]
+        B[Source Code]
+        C[Config Files]
+        D[Dependencies]
+    end
+    
+    E[.dockerignore] --> Context
+    subgraph Context
+        A
+        B
+        C
+        D
+    end

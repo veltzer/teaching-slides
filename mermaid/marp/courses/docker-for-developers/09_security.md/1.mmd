@@ -1,0 +1,6 @@
+flowchart TD
+    A[Container Process] --> B{User Context}
+    B -->|Root| C[Security Risk]
+    B -->|Non-Root| D[Better Security]
+    D --> E[Limited Permissions]
+    C --> F[Vulnerability]
