@@ -4,7 +4,7 @@
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
-DO_ALLDEP:=0
+DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
 DO_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
@@ -44,7 +44,7 @@ endif # GITHUB_WORKFLOW
 # use mermaid png deps?
 DO_MERMAID_DEP:=0
 # unite courses pdfs?
-DO_COURSES:=0
+DO_COURSES:=1
 
 #############
 # templates #
