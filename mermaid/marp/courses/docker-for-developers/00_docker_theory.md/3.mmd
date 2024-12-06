@@ -1,0 +1,5 @@
+graph LR
+    A[Development] -->|Build| B[Image]
+    B -->|Push| C[Registry]
+    C -->|Pull| D[Production]
+    D -->|Run| E[Containers]

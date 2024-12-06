@@ -41,6 +41,8 @@ DO_DRAWIO_PNG:=0
 else
 DO_DRAWIO_PNG:=1
 endif # GITHUB_WORKFLOW
+# use mermaid png deps?
+DO_MERMAID_DEP:=0
 
 ########
 # code #
@@ -143,6 +145,12 @@ endif # DO_MERMAID_PNG
 ifeq ($(DO_DRAWIO_PNG),1)
 ALL+=$(DRAWIO_PNG)
 endif # DO_DRAWIO_PNG
+
+ifeq ($(DO_MERMAID_DEP),1)
+MERMAID_PNG_DEP=$(MERMAID_PNG)
+else
+MERMAID_PNG_DEP=
+endif # DO_MERMAID_DEP
 
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=
@@ -252,7 +260,7 @@ $(MKD_PDF): out/%.pdf: %.mkd
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pandoc -f markdown $< -o $@
-$(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS) $(MERMAID_PNG)
+$(MARP_PDF): out/%.pdf: %.md $(MARP_DEPENDS) $(MERMAID_PNG_DEP)
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error node_modules/.bin/marp $(MARP_FLAGS) --pdf --output $@ $<

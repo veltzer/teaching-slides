@@ -1,0 +1,8 @@
+flowchart TD
+    A[Issue Detected] --> B{Container Running?}
+    B -->|Yes| C[Check Logs]
+    B -->|No| D[Check Status]
+    C --> E{Issue Found?}
+    D --> F[Start Container]
+    E -->|Yes| G[Fix Issue]
+    E -->|No| H[Deep Dive]
