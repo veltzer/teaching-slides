@@ -51,8 +51,9 @@ DO_COURSES:=1
 #############
 define template
 PREREQ_$(1):=$$(addprefix out/,$$(addsuffix .pdf,$$(patsubst %.md,%,$$(wildcard marp/courses/$(1)/*))))
-out/marp/courses/$(1).pdf: $(PREREQ_$(1))
-	 pdfunite $$(PREREQ_$(1)) $$@
+out/marp/courses/$(1).pdf: $$(PREREQ_$(1))
+	$$(info doing [$$@])
+	$$(Q)pdfunite $$(PREREQ_$(1)) $$@
 endef
 
 ########
