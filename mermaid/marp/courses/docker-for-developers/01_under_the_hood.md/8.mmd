@@ -1,0 +1,8 @@
+flowchart LR
+    subgraph "Docker Network Types"
+        A[Container] --> B{Bridge Network}
+        B --> C[Host Network]
+        B --> D[Overlay Network]
+        B --> E[Macvlan]
+        B --> F[None]
+    end

@@ -1,0 +1,7 @@
+flowchart TD
+    A[Choose Platform] --> B{OS Type}
+    B -->|Linux| C[Install via Package Manager]
+    B -->|Windows| D[Install Docker Desktop]
+    B -->|macOS| E[Install Docker Desktop]
+    C --> F[apt/yum install]
+    D & E --> G[Test Installation]

@@ -1,0 +1,9 @@
+graph TB
+    subgraph "Docker Architecture"
+        CLI[Docker CLI] --> D[Docker Daemon]
+        D --> C1[Container 1]
+        D --> C2[Container 2]
+        D --> I[Images]
+        D --> V[Volumes]
+        D --> N[Networks]
+    end

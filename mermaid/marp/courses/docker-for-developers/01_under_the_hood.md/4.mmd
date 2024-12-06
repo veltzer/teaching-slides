@@ -1,0 +1,5 @@
+flowchart TD
+    A[Docker CLI] -->|API request| B[Docker Daemon]
+    B -->|Container ops| C[containerd]
+    C -->|Create/Run| D[runc]
+    D -->|Namespace/CGroups| E[Linux Kernel]

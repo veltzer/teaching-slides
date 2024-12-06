@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant U as User
+    participant D as Docker
+    U->>D: docker pull image
+    U->>D: docker run image
+    U->>D: docker ps
+    U->>D: docker exec container
+    U->>D: docker stop container
+    U->>D: docker rm container
