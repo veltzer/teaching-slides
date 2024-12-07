@@ -1,5 +1,6 @@
 # Spark SQL & DataFrames
 
+---
 ## Introduction to Spark SQL
 
 ### Overview
@@ -8,15 +9,18 @@
 - Optimized execution through Catalyst optimizer
 - Schema inference and type safety
 
+---
 ### Architecture
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/0.png)
 
+---
 ### Key Components
 1. DataFrame API
 1. Dataset API
 1. Catalyst Optimizer
 1. Tungsten Execution Engine
 
+---
 ## Working with DataFrames
 
 ### Creating DataFrames
@@ -39,6 +43,7 @@ df = spark.read.json("people.json")
 df = spark.read.parquet("people.parquet")
 ```
 
+---
 ### Basic Operations
 ```python
 # Select columns
@@ -59,6 +64,7 @@ df.withColumnRenamed("name", "full_name")
 df.drop("age")
 ```
 
+---
 ### Aggregations and Grouping
 ```python
 from pyspark.sql.functions import avg, count, sum
@@ -76,6 +82,7 @@ window_spec = Window.partitionBy("department").orderBy("salary")
 df.withColumn("rank", rank().over(window_spec))
 ```
 
+---
 ## SQL Queries
 
 ### Running SQL
@@ -94,6 +101,7 @@ result = spark.sql("""
 """)
 ```
 
+---
 ### Complex SQL Operations
 ```python
 # Joins
@@ -107,7 +115,12 @@ result = spark.sql("""
         WHERE dept_id = e.dept_id
     )
 """)
+```
 
+---
+### Complex SQL Operations
+
+```python
 # Window Functions
 result = spark.sql("""
     SELECT name,
@@ -118,6 +131,7 @@ result = spark.sql("""
 """)
 ```
 
+---
 ## Integration with Different Data Sources
 
 ### Supported Formats
@@ -135,6 +149,7 @@ df.write.parquet("output.parquet")
 df.write.csv("output.csv")
 ```
 
+---
 ### JDBC Connections
 ```python
 # Reading from database
@@ -155,6 +170,7 @@ df.write \
     .save()
 ```
 
+---
 ## Integration with Hive
 
 ### Hive Configuration
@@ -167,6 +183,7 @@ hive_context = HiveContext(sc)
 spark.sql("SET hive.metastore.warehouse.dir=/path/to/warehouse")
 ```
 
+---
 ### Hive Operations
 ```python
 # Create Hive table
@@ -186,11 +203,13 @@ df.write.saveAsTable("hive_table")
 result = spark.sql("SELECT * FROM hive_table")
 ```
 
+---
 ## Performance Optimization
 
 ### Catalyst Optimizer
 ![1](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/1.png)
 
+---
 ### Caching Strategies
 ```python
 # Cache DataFrame
@@ -204,6 +223,7 @@ df.persist(StorageLevel.MEMORY_AND_DISK)
 df.unpersist()
 ```
 
+---
 ### Query Optimization Tips
 1. Predicate Pushdown
 ```python
@@ -223,6 +243,7 @@ df.write.partitionBy("date").saveAsTable("events")
 spark.sql("SELECT * FROM events WHERE date = '2024-01-01'")
 ```
 
+---
 ## Advanced Features
 
 ### User-Defined Functions (UDFs)
@@ -239,6 +260,7 @@ def upper_case(s):
 df.select(upper_case("name").alias("upper_name"))
 ```
 
+---
 ### Custom Aggregations
 ```python
 from pyspark.sql.expressions import UserDefinedAggregateFunction
@@ -254,6 +276,7 @@ class CustomAverage(UserDefinedAggregateFunction):
     def evaluate(self): ...
 ```
 
+---
 ### Structured Streaming
 ```python
 # Create streaming DataFrame
@@ -270,6 +293,7 @@ query = streaming_df.writeStream \
     .start()
 ```
 
+---
 ## Best Practices
 
 ### Schema Management
@@ -286,6 +310,7 @@ schema = StructType([
 df = spark.read.schema(schema).csv("data.csv")
 ```
 
+---
 ### Memory Management
 1. Broadcast joins for small tables
 ```python
@@ -302,15 +327,10 @@ df = df.repartition("key")
 df = df.repartition(10)
 ```
 
+---
 ## Summary
 - Spark SQL provides unified data access
 - DataFrames offer type-safe, structured operations
 - Multiple data source integration
 - Advanced optimization through Catalyst
 - Rich ecosystem integration
-
-## Next Steps
-- Explore Structured Streaming
-- Practice optimization techniques
-- Learn advanced SQL features
-- Study integration patterns

@@ -462,7 +462,7 @@ def transform_data(data):
     )
 ```
 
-## Summary and Next Steps
+## Summary
 
 ### Key Takeaways
 - Python fundamentals mastered
@@ -476,12 +476,6 @@ def transform_data(data):
 - Focus on functional programming
 - Understand memory management
 - Master data transformations
-
-### Additional Resources
-- Python documentation
-- PySpark documentation
-- Practice exercises
-- Online tutorials
 
 ## Final Notes
 - Keep code readable and maintainable

@@ -39,6 +39,7 @@
    - Execution environment for tasks
    - Managed by Node Manager
 
+---
 ## YARN Deployment Modes
 
 ### Client Mode
@@ -50,6 +51,7 @@ Characteristics:
 - Client must stay alive
 - Good for development and debugging
 
+---
 ### Cluster Mode
 ![2](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/2.png)
 
@@ -59,6 +61,7 @@ Characteristics:
 - Client can disconnect
 - More reliable and scalable
 
+---
 ### Configuration Examples
 ```yaml
 # Client Mode
@@ -78,6 +81,7 @@ spark-submit \
   application.py
 ```
 
+---
 ## Configuration and Tuning
 
 ### Resource Allocation
@@ -93,6 +97,7 @@ spark.executor.cores: 4
 spark.driver.memory: 10g
 ```
 
+---
 ### Memory Settings
 ```python
 # Memory fraction settings
@@ -103,6 +108,7 @@ spark.conf.set("spark.memory.storageFraction", 0.3)
 spark.conf.set("spark.yarn.executor.memoryOverhead", "4g")
 ```
 
+---
 ### CPU Settings
 ```yaml
 # CPU allocation
@@ -111,6 +117,7 @@ spark.executor.cores: 4
 spark.task.cpus: 1
 ```
 
+---
 ### Dynamic Allocation
 ```yaml
 # Enable dynamic allocation
@@ -121,6 +128,7 @@ spark.dynamicAllocation.maxExecutors: 100
 spark.dynamicAllocation.schedulerBacklogTimeout: 1s
 ```
 
+---
 ## Monitoring and Debugging
 
 ### YARN Web UI
@@ -135,6 +143,7 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
     - Node metrics
     - Log access
 
+---
 ### Logging Configuration
 ```yaml
 # YARN logging
@@ -147,6 +156,7 @@ spark.eventLog.enabled: true
 spark.eventLog.dir: hdfs://namenode:8021/spark-logs
 ```
 
+---
 ### Metrics Collection
 ```python
 # Configure metrics
@@ -156,6 +166,7 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.host", "graphite")
 spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 ```
 
+---
 ### Common Issues and Solutions
 
 #### Resource Issues
@@ -171,6 +182,7 @@ spark.yarn.executor.memoryOverhead: 4096
 yarn logs -applicationId application_1234567890_0001
 ```
 
+---
 #### Performance Issues
 1. Data Skew
 ```python
@@ -185,6 +197,7 @@ spark.memory.fraction: 0.8
 spark.memory.storageFraction: 0.3
 ```
 
+---
 ### Debugging Tools
 
 #### Log Analysis
@@ -199,6 +212,7 @@ grep "ERROR" application_logs.txt
 #### Metrics Visualization
 ![3](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/3.png)
 
+---
 ## Best Practices
 
 ### Resource Planning
@@ -216,6 +230,7 @@ spark.executor.memoryOverhead: 4g
 spark.executor.cores: 4
 ```
 
+---
 ### Production Deployment
 ```yaml
 # Security settings
@@ -227,6 +242,7 @@ yarn.resourcemanager.ha.enabled: true
 yarn.resourcemanager.cluster-id: cluster1
 ```
 
+---
 ### Monitoring Strategy
 1. Set up alerts
 1. Monitor key metrics
@@ -235,6 +251,7 @@ yarn.resourcemanager.cluster-id: cluster1
     - Error rates
     - Latency
 
+---
 ## Summary
 - YARN provides robust cluster management
 - Multiple deployment modes for different uses
