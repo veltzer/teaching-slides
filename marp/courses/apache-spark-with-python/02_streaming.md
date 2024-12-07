@@ -1,5 +1,6 @@
 # Spark Streaming
 
+---
 ## Introduction to Spark Streaming
 
 ### What is Spark Streaming?
@@ -8,9 +9,11 @@
 - Supports both real-time and batch processing
 - Integrated with the rest of Spark ecosystem
 
+---
 ### Architecture Overview
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/0.png)
 
+---
 ### Supported Input Sources
 - Kafka
 - Flume
@@ -19,6 +22,7 @@
 - HDFS/S3
 - Custom sources
 
+---
 ### Key Features
 1. Fault Tolerance
    - Exactly-once semantics
@@ -30,6 +34,7 @@
    - MLlib for streaming ML
    - GraphX for graph processing
 
+---
 ## DStream (Discretized Stream)
 
 ### DStream Basics
@@ -38,6 +43,7 @@
 - Supports all RDD operations
 - Automatic batching of data
 
+---
 ### Creating DStreams
 ```python
 # Create StreamingContext
@@ -57,6 +63,7 @@ kafka_stream = KafkaUtils.createDirectStream(ssc,
     kafkaParams={"metadata.broker.list": "localhost:9092"})
 ```
 
+---
 ### DStream Operations
 
 #### Transformations
@@ -78,6 +85,7 @@ stream2 = ...
 joined = stream1.join(stream2)
 ```
 
+---
 #### Output Operations
 ```python
 # Print first 10 elements
@@ -90,9 +98,11 @@ word_counts.saveAsTextFiles("prefix", "suffix")
 word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 ```
 
+---
 ### Window Operations
 ![1](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/1.png)
 
+---
 ### Stateful Operations
 
 #### UpdateStateByKey
@@ -113,6 +123,7 @@ state_spec = StateSpec.function(state_update_fn)
 state_stream = stream.mapWithState(state_spec)
 ```
 
+---
 ## Use Cases
 
 ### Real-time Analytics Dashboard
@@ -130,6 +141,7 @@ metrics_stream = input_stream.window(5)
 metrics_stream.foreachRDD(process_metrics)
 ```
 
+---
 ### Fraud Detection System
 ```python
 def detect_fraud(transaction):
@@ -142,6 +154,7 @@ fraudulent = transactions.filter(detect_fraud)
 fraudulent.foreachRDD(alert_security_team)
 ```
 
+---
 ### Log Analysis
 ```python
 # Parse and analyze logs in real-time
@@ -156,6 +169,7 @@ response_times = logs.map(lambda log: log.response_time)
 avg_response = response_times.meanByWindow(60, 10)
 ```
 
+---
 ## Performance Tuning
 
 ### Batch Size Optimization
@@ -167,6 +181,7 @@ avg_response = response_times.meanByWindow(60, 10)
 ssc = StreamingContext(sc, batchDuration=optimize_batch_size())
 ```
 
+---
 ### Memory Tuning
 ```python
 # Configure memory fraction for streaming
@@ -176,12 +191,14 @@ conf = SparkConf().set("spark.streaming.memory.fraction", 0.8)
 ssc.remember(duration)  # How long to remember old data
 ```
 
+---
 ### Backpressure
 ```python
 # Enable backpressure
 conf = SparkConf().set("spark.streaming.backpressure.enabled", "true")
 ```
 
+---
 ## Error Handling and Recovery
 
 ### Checkpointing
@@ -193,6 +210,7 @@ ssc.checkpoint("hdfs://checkpoint-dir")
 reliable_stream = ssc.receiverStream(reliable_receiver)
 ```
 
+---
 ### Error Recovery
 ```python
 def create_context():
@@ -204,6 +222,7 @@ def create_context():
 context = StreamingContext.getOrCreate(checkpoint_dir, create_context)
 ```
 
+---
 ## Monitoring and Debugging
 
 ### Metrics Collection
@@ -219,6 +238,7 @@ class CustomListener(StreamingListener):
 ssc.addStreamingListener(CustomListener())
 ```
 
+---
 ### Common Issues and Solutions
 1. Data Loss
    - Enable Write Ahead Logs
@@ -235,6 +255,7 @@ ssc.addStreamingListener(CustomListener())
    - Adjust cleaning interval
    - Monitor garbage collection
 
+---
 ## Integration Patterns
 
 ### Kafka Integration
@@ -248,6 +269,7 @@ directKafkaStream = KafkaUtils.createDirectStream(ssc,
 stream = directKafkaStream.transform(lambda rdd: process_with_exactly_once(rdd))
 ```
 
+---
 ### Database Integration
 ```python
 def save_partition(partition):
@@ -261,6 +283,7 @@ def save_partition(partition):
 stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
 ```
 
+---
 ## Best Practices
 
 ### Production Deployment
@@ -274,6 +297,8 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
    - Set up dead letter queues
    - Log error details
 
+---
+
 1. Testing
 ```python
 # Unit testing streams
@@ -286,6 +311,7 @@ def test_streaming_word_count():
     result = stream.flatMap(lambda x: x.split()).countByValue()
 ```
 
+---
 ## Summary
 - Spark Streaming enables real-time processing
 - DStreams provide high-level abstraction
