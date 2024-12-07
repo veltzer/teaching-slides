@@ -54,13 +54,13 @@ tcp        0      0 0.0.0.0:22    0.0.0.0:*       LISTEN
 
 ---
 
-## ip Command Suite
+## `ip` Command Suite
 
 ![1](../../../out/mermaid/marp/courses/linux-networking-overview/03_network_tools.md/1.png)
 
 ---
 
-## ip addr Commands
+## `ip` addr Commands
 
 ```bash
 # Display addresses
@@ -77,7 +77,7 @@ ip link set eth0 down
 
 ---
 
-## ss (Socket Statistics)
+## `ss` (Socket Statistics)
 
 ```bash
 # Common commands
@@ -113,7 +113,7 @@ ss -p          # Show processes
 
 ---
 
-## ethtool Commands
+## `ethtool` Commands
 
 ```bash
 # Get driver information
@@ -152,7 +152,7 @@ arp -d 192.168.1.100
 
 ---
 
-## ifconfig Usage
+## `ifconfig` Usage
 
 ```bash
 # Basic interface configuration

@@ -1,0 +1,7 @@
+graph TD
+    A[Data Sources] --> B[DataFrame/Dataset API]
+    A --> C[SQL Interface]
+    B --> D[Catalyst Optimizer]
+    C --> D
+    D --> E[Optimized RDD]
+    E --> F[Execution]

@@ -355,12 +355,12 @@ static const struct ethtool_ops my_ethtool_ops = {
 ## Common Pitfalls
 
 1. Memory leaks
-2. Race conditions
-3. Interrupt handling issues
-4. DMA errors
-5. Resource cleanup
-6. Buffer management
-7. Performance issues
+1. Race conditions
+1. Interrupt handling issues
+1. DMA errors
+1. Resource cleanup
+1. Buffer management
+1. Performance issues
 
 ---
 

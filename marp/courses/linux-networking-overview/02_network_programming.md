@@ -363,12 +363,12 @@ getsockopt(sock, SOL_SOCKET, SO_ERROR, &error, &len);
 ## Best Practices
 
 1. Always check return values
-2. Use appropriate buffer sizes
-3. Handle partial sends/receives
-4. Clean up resources properly
-5. Set appropriate socket options
-6. Use error handling consistently
-7. Consider non-blocking operations
+1. Use appropriate buffer sizes
+1. Handle partial sends/receives
+1. Clean up resources properly
+1. Set appropriate socket options
+1. Use error handling consistently
+1. Consider non-blocking operations
 
 ---
 
