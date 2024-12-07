@@ -7,7 +7,7 @@
 ---
 ## How Does SQL Injection Work?
 
-![right:50% w=50](../../../raw/cyber/sql-injection.png)
+![0](../../../out/mermaid/marp/courses/cyber-attacks-and-vectors/05_sql_injection.md/0.png)
 
 ---
 ## How Does SQL Injection Work?

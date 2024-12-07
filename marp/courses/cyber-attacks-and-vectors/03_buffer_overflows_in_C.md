@@ -13,7 +13,7 @@
 ---
 ## Diagram
 
-![center](../../../raw/cyber/buffer_overflow.png)
+![0](../../../out/mermaid/marp/courses/cyber-attacks-and-vectors/03_buffer_overflows_in_C.md/0.png)
 
 ---
 ## Consequences

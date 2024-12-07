@@ -1,0 +1,33 @@
+graph TD
+    subgraph User["User Input"]
+        Input["Malicious Input<br>username: admin'--<br>password: anything"]
+    end
+
+    subgraph Application["Web Application"]
+        Query["Original SQL Query<br>SELECT * FROM users<br>WHERE username='input'<br>AND password='pass'"]
+    end
+
+    subgraph Database["Database Server"]
+        ModifiedQuery["Modified Query<br>SELECT * FROM users<br>WHERE username='admin'--'<br>AND password='pass'"]
+        subgraph Impact["Potential Impacts"]
+            Auth["Authentication Bypass"]
+            Data["Data Theft"]
+            Drop["Database Destruction<br>DROP TABLE users--"]
+        end
+    end
+
+    Input -->|"Injection"| Query
+    Query -->|"Execution"| ModifiedQuery
+    ModifiedQuery -->|"Results in"| Auth
+    ModifiedQuery -->|"Can lead to"| Data
+    ModifiedQuery -->|"Might cause"| Drop
+
+    style Input fill:#f99,stroke:#333,stroke-width:2px
+    style Query fill:#9f9,stroke:#333,stroke-width:2px
+    style ModifiedQuery fill:#f66,stroke:#333,stroke-width:2px
+    style Auth fill:#ff9,stroke:#333,stroke-width:2px
+    style Data fill:#ff9,stroke:#333,stroke-width:2px
+    style Drop fill:#f66,stroke:#333,stroke-width:2px
+    
+    classDef app fill:#f9f,stroke:#333,stroke-width:2px
+    class Application app

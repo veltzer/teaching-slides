@@ -1,0 +1,24 @@
+graph TB
+    subgraph Memory Layout
+        subgraph Stack["Stack Memory"]
+            style Stack fill:#f9f,stroke:#333,stroke-width:2px
+            RET["Return Address<br>(0xFFEE)"]
+            BP["Base Pointer"]
+            BUF["Buffer[8]<br>'Hello'"]
+            subgraph Payload["Malicious Input"]
+                style Payload fill:#f66,stroke:#333,stroke-width:2px
+                OVF["'AAAAAAAAAAAAAA'<br>+ Malicious Address<br>(0x4141414141414141)"]
+            end
+        end
+    end
+    
+    Input["User Input<br>(14 bytes)"] -->|"Overflow"| BUF
+    BUF -->|"Overwrite"| BP
+    BP -->|"Overwrite"| RET
+    RET -->|"Execution Redirected"| Shell["Shell Code/<br>Malicious Code"]
+    
+    style Input fill:#99f,stroke:#333,stroke-width:2px
+    style Shell fill:#f66,stroke:#333,stroke-width:2px
+    style BUF fill:#9f9,stroke:#333,stroke-width:2px
+    style BP fill:#ff9,stroke:#333,stroke-width:2px
+    style RET fill:#f99,stroke:#333,stroke-width:2px

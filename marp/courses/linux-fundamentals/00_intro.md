@@ -1,5 +1,8 @@
 # Introduction to UNIX
 ## Understanding the Fundamentals
+
+![h:500](../../../raw/unix.svg) ![h:500,width:50%](../../../raw/ken_thompson.jpg)
+
 ---
 ## What is UNIX?
 
