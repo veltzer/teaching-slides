@@ -1,5 +1,6 @@
 # Python Crash Course for Spark
 
+---
 ## Course Introduction
 
 ### Overview
@@ -8,6 +9,7 @@
 - Hands-on approach with examples
 - Prerequisites and expectations
 
+---
 ### Why Python for Spark?
 - Easy to learn and read
 - Rich ecosystem of libraries
@@ -15,6 +17,7 @@
 - Native support in Spark
 - Large community and resources
 
+---
 ### Learning Objectives
 - Master Python syntax and concepts
 - Understand data structures
@@ -22,6 +25,7 @@
 - Develop Spark-ready coding skills
 - Practice memory-efficient coding
 
+---
 ## Python Fundamentals
 
 ### Variables and Assignment
@@ -41,6 +45,7 @@ counter += 1  # Increment
 counter *= 2  # Multiply and assign
 ```
 
+---
 ### Data Types
 ```python
 # Numbers
@@ -64,6 +69,7 @@ is_complete = False
 empty_value = None
 ```
 
+---
 ### Type Conversion
 ```python
 # Explicit conversion
@@ -77,6 +83,7 @@ print(isinstance(int_num, int))  # True
 print(type(float_num))  # <class 'float'>
 ```
 
+---
 ## String Operations
 
 ### String Manipulation
@@ -94,6 +101,7 @@ last_five = text[-5:]
 reversed_text = text[::-1]
 ```
 
+---
 ### String Methods
 ```python
 # Common string methods
@@ -109,6 +117,7 @@ formatted = f"{name} is {age} years old"
 template = "{} is {} years old".format(name, age)
 ```
 
+---
 ### String Operations for Spark
 ```python
 # Common string operations in Spark
@@ -124,6 +133,7 @@ def extract_numbers(text):
     return re.findall(r'\d+', text)
 ```
 
+---
 ## Advanced Data Types
 
 ### Lists in Depth
@@ -148,7 +158,8 @@ last_three = numbers[-3:]
 every_second = numbers[::2]
 ```
 
-### Tuples Deep Dive
+---
+### Tuples
 ```python
 # Tuple creation
 point = (3, 4)
@@ -166,6 +177,7 @@ Person = namedtuple('Person', ['name', 'age'])
 person = Person('John', 30)
 ```
 
+---
 ### Dictionaries Extended
 ```python
 # Dictionary creation
@@ -189,9 +201,10 @@ person.setdefault('email', 'default@example.com')
 squares = {x: x**2 for x in range(5)}
 ```
 
+---
 ## Functional Programming
 
-### Lambda Functions Deep Dive
+### Lambda Functions
 ```python
 # Basic lambda
 square = lambda x: x**2
@@ -207,6 +220,7 @@ complex_lambda = lambda x: [
 ]
 ```
 
+---
 ### Higher-Order Functions
 ```python
 # Map examples
@@ -225,6 +239,7 @@ sum_all = reduce(lambda x, y: x + y, numbers)
 max_value = reduce(lambda x, y: x if x > y else y, numbers)
 ```
 
+---
 ### List Comprehensions Advanced
 ```python
 # Basic comprehension
@@ -245,6 +260,7 @@ filtered = [x for x in range(100)
 word_length = {word: len(word) for word in ['cat', 'dog', 'elephant']}
 ```
 
+---
 ## Memory Management
 
 ### Memory Efficiency
@@ -262,6 +278,7 @@ def number_generator(n):
         yield i**2
 ```
 
+---
 ### Memory Optimization
 ```python
 # Using itertools for memory efficiency
@@ -283,6 +300,7 @@ def chunk_processor(data, chunk_size=1000):
         yield buffer
 ```
 
+---
 ## Exception Handling
 
 ### Basic Exception Handling
@@ -304,6 +322,7 @@ except (ValueError, TypeError) as e:
     print(f"Conversion error: {e}")
 ```
 
+---
 ### Custom Exceptions
 ```python
 # Define custom exception
@@ -321,6 +340,7 @@ def validate_data(data):
         raise DataValidationError("Invalid data", errors)
 ```
 
+---
 ## File Handling
 
 ### File Operations
@@ -339,6 +359,7 @@ def read_large_file(file_path):
             yield line.strip()
 ```
 
+---
 ### CSV Processing
 ```python
 import csv
@@ -355,6 +376,7 @@ with open('output.csv', 'w') as file:
     writer.writerows(data)
 ```
 
+---
 ## Best Practices for Spark
 
 ### Code Organization
@@ -372,6 +394,7 @@ class DataProcessor:
         return row.upper()
 ```
 
+---
 ### Performance Optimization
 ```python
 # Efficient data handling
@@ -387,6 +410,7 @@ def process_rdd_data(rdd):
             .filter(lambda x: x[1] > lookup_table.value.get(x[0], 0)))
 ```
 
+---
 ### Testing Patterns
 ```python
 import unittest
@@ -406,6 +430,7 @@ class TestDataProcessor(unittest.TestCase):
         self.assertEqual(result, expected)
 ```
 
+---
 ## Practical Exercises
 
 ### Exercise 1: Data Processing
@@ -426,6 +451,7 @@ def analyze_sales(data):
     return {"total": total, "highest": highest}
 ```
 
+---
 ### Exercise 2: Text Analysis
 ```python
 def analyze_text(text):
@@ -444,6 +470,7 @@ def analyze_text(text):
     )
 ```
 
+---
 ### Exercise 3: Data Transformation
 ```python
 def transform_data(data):
@@ -462,6 +489,7 @@ def transform_data(data):
     )
 ```
 
+---
 ## Summary
 
 ### Key Takeaways
@@ -471,12 +499,14 @@ def transform_data(data):
 - Memory efficiency techniques
 - Best practices for Spark
 
+---
 ### Preparation for Spark
 - Practice with large datasets
 - Focus on functional programming
 - Understand memory management
 - Master data transformations
 
+---
 ## Final Notes
 - Keep code readable and maintainable
 - Focus on efficiency with large datasets
