@@ -42,7 +42,7 @@ else
 DO_DRAWIO_PNG:=1
 endif # GITHUB_WORKFLOW
 # use mermaid png deps?
-DO_MERMAID_DEP:=0
+DO_MERMAID_DEP:=1
 # unite courses pdfs?
 DO_COURSES:=1
 
