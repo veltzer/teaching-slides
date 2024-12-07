@@ -25,7 +25,7 @@
    - Automatic recovery
    - Checkpointing
 
-2. Integration
+1. Integration
    - Seamless integration with Spark SQL
    - MLlib for streaming ML
    - GraphX for graph processing
@@ -225,12 +225,12 @@ ssc.addStreamingListener(CustomListener())
    - Use reliable receivers
    - Implement retry logic
 
-2. Slow Processing
+1. Slow Processing
    - Optimize batch size
    - Increase parallelism
    - Monitor backpressure
 
-3. Memory Issues
+1. Memory Issues
    - Tune executor memory
    - Adjust cleaning interval
    - Monitor garbage collection
@@ -269,12 +269,12 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
    - Set up alerting
    - Monitor throughput and latency
 
-2. Error Handling
+1. Error Handling
    - Implement retry logic
    - Set up dead letter queues
    - Log error details
 
-3. Testing
+1. Testing
 ```python
 # Unit testing streams
 def test_streaming_word_count():
