@@ -34,7 +34,7 @@ DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=0
 # do you want to convert mermaid diagrams into png?
-DO_MERMAID_PNG:=0
+DO_MERMAID_PNG:=1
 # convert drawio images to png?
 ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
@@ -42,7 +42,7 @@ else
 DO_DRAWIO_PNG:=1
 endif # GITHUB_WORKFLOW
 # use mermaid png deps?
-DO_MERMAID_DEP:=1
+DO_MERMAID_DEP:=0
 # unite courses pdfs?
 DO_COURSES:=1
 
