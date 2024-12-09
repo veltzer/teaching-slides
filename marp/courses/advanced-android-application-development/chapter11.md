@@ -5,26 +5,7 @@
 
 # Performance Areas Overview
 
-```mermaid
-mindmap
-  root((Performance))
-    Memory
-      Leaks
-      Allocation
-      Garbage Collection
-    UI
-      Layout Optimization
-      View Hierarchies
-      Rendering
-    Battery
-      Network
-      Location
-      Background Tasks
-    Storage
-      Disk I/O
-      Caching
-      Database
-```
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter11.md/0.png)
 
 ---
 
@@ -196,18 +177,7 @@ public class UserRepository {
 
 # Battery Optimization
 
-```mermaid
-graph TD
-    A[Battery Optimization] --> B[Network]
-    A --> C[Location]
-    A --> D[Background Work]
-    B --> E[Batch Requests]
-    B --> F[Compression]
-    C --> G[Accuracy Settings]
-    C --> H[Update Intervals]
-    D --> I[Work Manager]
-    D --> J[Deferred Tasks]
-```
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter11.md/1.png)
 
 ---
 

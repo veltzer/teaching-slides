@@ -5,26 +5,7 @@
 
 # Overview
 
-```mermaid
-mindmap
-  root((Modern Development))
-    Kotlin Multiplatform
-      Shared Logic
-      Platform Specific
-      Common Libraries
-    Jetpack Compose
-      Declarative UI
-      Composables
-      State Management
-    Modern Architecture
-      MVI Pattern
-      Unidirectional Flow
-      State Management
-    Cross-Platform
-      Code Sharing
-      Resource Sharing
-      Testing Strategy
-```
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/0.png)
 
 ---
 
@@ -206,17 +187,7 @@ fun testPlatformSpecific() {
 
 # Resource Sharing Strategy
 
-```mermaid
-graph TD
-    A[Shared Resources] --> B[Common Code]
-    A --> C[Platform Specific]
-    B --> D[Business Logic]
-    B --> E[Network Layer]
-    B --> F[Data Models]
-    C --> G[UI Implementation]
-    C --> H[Platform Features]
-    C --> I[Native APIs]
-```
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/1.png)
 
 ---
 
@@ -258,22 +229,7 @@ class StateManager<T> {
 
 # Best Practices
 
-```mermaid
-mindmap
-  root((Best Practices))
-    Code Organization
-      Clear Boundaries
-      Module Structure
-      Dependency Management
-    Testing Strategy
-      Shared Tests
-      Platform Tests
-      UI Tests
-    Performance
-      Native Features
-      Resource Usage
-      Memory Management
-```
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/2.png)
 
 ---
 

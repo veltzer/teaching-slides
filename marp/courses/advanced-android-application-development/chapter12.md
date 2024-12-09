@@ -5,26 +5,7 @@
 
 # Deployment Overview
 
-```mermaid
-mindmap
-  root((Production Deployment))
-    App Signing
-      Key Generation
-      App Signing
-      Play Store Upload
-    Release Management
-      Version Control
-      Build Variants
-      Flavor Config
-    CI/CD
-      Pipeline Setup
-      Automated Tests
-      Deployment
-    App Bundles
-      Configuration
-      Dynamic Features
-      Size Optimization
-```
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter12.md/0.png)
 
 ---
 
@@ -239,19 +220,7 @@ public class CrashReporter {
 
 # Release Checklist
 
-```mermaid
-graph TD
-    A[Pre-Release] --> B[Version Update]
-    A --> C[Testing Complete]
-    A --> D[ProGuard Config]
-    B --> E[Release Build]
-    C --> E
-    D --> E
-    E --> F[Internal Testing]
-    F --> G[Play Store Upload]
-    G --> H[Staged Rollout]
-    H --> I[Full Release]
-```
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter12.md/1.png)
 
 ---
 

@@ -5,26 +5,7 @@
 
 # Feature Overview
 
-```mermaid
-mindmap
-  root((Advanced Features))
-    Machine Learning
-      ML Kit
-      TensorFlow Lite
-      Custom Models
-    AR/VR Integration
-      ARCore
-      Scene Viewer
-      3D Rendering
-    Push Notifications
-      FCM Integration
-      Custom Channels
-      Rich Notifications
-    Social Integration
-      Auth
-      Sharing
-      Deep Links
-```
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/0.png)
 
 ---
 
@@ -282,16 +263,7 @@ public class RichNotificationManager {
 
 # Integration Best Practices
 
-```mermaid
-graph TD
-    A[Integration Best Practices] 
-    --> B[Error Handling]
-    --> C[Fallback Mechanisms]
-    --> D[Version Compatibility]
-    --> E[Performance Impact]
-    --> F[Security Concerns]
-    --> G[User Privacy]
-```
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/1.png)
 
 ---
 
