@@ -212,8 +212,6 @@ Create an app screen that demonstrates:
 - Motion Layout transitions
 - Responsive layout design
 
-Due: End of Chapter 3
-
 ---
 
 # Resources

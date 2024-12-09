@@ -286,8 +286,6 @@ Create an application that:
 5. Implements security checks
 6. Uses secure SharedPreferences
 
-Due: End of Chapter 9
-
 ---
 
 # Resources

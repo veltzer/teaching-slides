@@ -293,8 +293,6 @@ Optimize an application:
 5. Implement battery optimizations
 6. Monitor performance
 
-Due: End of Chapter 11
-
 ---
 
 # Resources

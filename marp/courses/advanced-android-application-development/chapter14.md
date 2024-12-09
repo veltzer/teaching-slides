@@ -244,8 +244,6 @@ Create an application that:
 5. Implements cross-platform tests
 6. Handles platform-specific features
 
-Due: End of Chapter 14
-
 ---
 
 # Resources

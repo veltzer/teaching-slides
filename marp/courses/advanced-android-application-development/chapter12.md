@@ -283,8 +283,6 @@ Prepare an application for production:
 5. Setup automated deployment
 6. Implement version checking
 
-Due: End of Chapter 12
-
 ---
 
 # Resources

@@ -245,8 +245,6 @@ Create an application that demonstrates:
 5. Fragment navigation
 6. Performance optimization
 
-Due: End of Chapter 2
-
 ---
 
 # Resources

@@ -289,8 +289,6 @@ Create tests for an application:
 5. Implement debug logging
 6. Handle memory leaks
 
-Due: End of Chapter 10
-
 ---
 
 # Resources

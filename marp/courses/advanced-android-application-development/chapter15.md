@@ -300,8 +300,6 @@ Create an application that:
 5. Uses modern build tools
 6. Implements performance monitoring
 
-Due: End of Chapter 15
-
 ---
 
 # Resources

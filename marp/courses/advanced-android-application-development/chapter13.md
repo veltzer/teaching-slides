@@ -278,8 +278,6 @@ Create an application that:
 5. Handles deep links
 6. Uses TensorFlow Lite
 
-Due: End of Chapter 13
-
 ---
 
 # Resources

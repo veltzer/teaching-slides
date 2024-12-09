@@ -246,8 +246,6 @@ Tasks:
 4. Write unit tests
 5. Implement state management
 
-Due: End of Chapter 4
-
 ---
 
 # Resources

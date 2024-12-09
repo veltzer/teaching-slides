@@ -289,8 +289,6 @@ Create an application that:
 5. Implements battery optimization
 6. Provides error handling
 
-Due: End of Chapter 7
-
 ---
 
 # Resources

@@ -293,8 +293,6 @@ Create an application that:
 5. Implements caching
 6. Handles errors gracefully
 
-Due: End of Chapter 6
-
 ---
 
 # Resources

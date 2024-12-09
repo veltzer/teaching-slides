@@ -308,8 +308,6 @@ Create an application that:
 5. Uses SharedPreferences
 6. Optimizes performance
 
-Due: End of Chapter 5
-
 ---
 
 # Resources

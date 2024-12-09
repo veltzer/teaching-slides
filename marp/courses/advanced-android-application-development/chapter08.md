@@ -311,8 +311,6 @@ Create an application that:
 5. Handles activity recognition
 6. Implements battery optimization
 
-Due: End of Chapter 8
-
 ---
 
 # Resources

@@ -219,8 +219,6 @@ Create a utility library that implements:
 - Error handling framework
 - Lambda-based event system
 
-Due: End of Chapter 1
-
 ---
 
 # Additional Resources
