@@ -1,0 +1,11 @@
+graph TD
+    A[UI Tests] --> B[Integration Tests]
+    B --> C[Unit Tests]
+    
+    style A fill:#ff9999
+    style B fill:#99ff99
+    style C fill:#9999ff
+    
+    A-->|"Few"|D[Slow & Expensive]
+    B-->|"More"|E[Balance]
+    C-->|"Most"|F[Fast & Cheap]

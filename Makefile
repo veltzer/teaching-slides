@@ -4,7 +4,7 @@
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
-DO_ALLDEP:=1
+DO_ALLDEP:=0
 # do you want to do 'ppt' from 'odp'?
 DO_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
@@ -32,9 +32,9 @@ DO_MD_ASCII:=0
 # do you want to run mdl on md files?
 DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
-DO_MD_MARKDOWNLINT:=1
+DO_MD_MARKDOWNLINT:=0
 # do you want to convert mermaid diagrams into png?
-DO_MERMAID_PNG:=1
+DO_MERMAID_PNG:=0
 # convert drawio images to png?
 ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
@@ -333,4 +333,4 @@ ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
 
-.NOTPARALLEL:
+# .NOTPARALLEL:

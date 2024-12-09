@@ -1,0 +1,13 @@
+stateDiagram-v2
+    [*] --> onAttach
+    onAttach --> onCreate
+    onCreate --> onCreateView
+    onCreateView --> onViewCreated
+    onViewCreated --> onStart
+    onStart --> onResume
+    onResume --> onPause
+    onPause --> onStop
+    onStop --> onDestroyView
+    onDestroyView --> onDestroy
+    onDestroy --> onDetach
+    onDetach --> [*]
