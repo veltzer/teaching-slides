@@ -3,13 +3,13 @@
 
 ---
 
-# Performance Areas Overview
+## Performance Areas Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter11.md/0.png)
 
 ---
 
-# Memory Management
+## Memory Management
 
 ```java
 public class MemoryOptimizer {
@@ -47,7 +47,7 @@ public class MemoryOptimizer {
 
 ---
 
-# Layout Optimization
+## Layout Optimization
 
 ```xml
 <!-- Before Optimization -->
@@ -75,7 +75,7 @@ public class MemoryOptimizer {
 
 ---
 
-# View Holder Pattern
+## View Holder Pattern
 
 ```java
 public class OptimizedAdapter 
@@ -109,7 +109,7 @@ public class OptimizedAdapter
 
 ---
 
-# Network Optimization
+## Network Optimization
 
 ```java
 public class NetworkOptimizer {
@@ -145,7 +145,7 @@ public class NetworkOptimizer {
 
 ---
 
-# Database Optimization
+## Database Optimization
 
 ```java
 @Dao
@@ -175,13 +175,13 @@ public class UserRepository {
 
 ---
 
-# Battery Optimization
+## Battery Optimization
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter11.md/1.png)
 
 ---
 
-# Image Loading Optimization
+## Image Loading Optimization
 
 ```java
 public class ImageOptimizer {
@@ -211,7 +211,7 @@ public class ImageOptimizer {
 
 ---
 
-# Performance Monitoring
+## Performance Monitoring
 
 ```java
 public class PerformanceMonitor {
@@ -242,7 +242,7 @@ public class PerformanceMonitor {
 
 ---
 
-# ANR Prevention
+## ANR Prevention
 
 ```java
 public class BackgroundTaskManager {
@@ -271,7 +271,7 @@ public class BackgroundTaskManager {
 
 ---
 
-# Best Practices
+## Best Practices
 
 | Category | Practice | Impact |
 |----------|----------|---------|
@@ -282,20 +282,20 @@ public class BackgroundTaskManager {
 
 ---
 
-# Assignment Preview
-## Performance Optimization
+## Assignment Preview
+### Performance Optimization
 
 Optimize an application:
 1. Implement memory management
-2. Optimize layouts
-3. Improve network efficiency
-4. Optimize database queries
-5. Implement battery optimizations
-6. Monitor performance
+1. Optimize layouts
+1. Improve network efficiency
+1. Optimize database queries
+1. Implement battery optimizations
+1. Monitor performance
 
 ---
 
-# Resources
+## Resources
 
 - Android Performance Patterns
 - Memory Management Guide

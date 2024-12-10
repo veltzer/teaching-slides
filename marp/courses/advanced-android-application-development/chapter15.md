@@ -3,13 +3,13 @@
 
 ---
 
-# Technology Overview
+## Technology Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter15.md/0.png)
 
 ---
 
-# On-Device ML Integration
+## On-Device ML Integration
 
 ```kotlin
 class OnDeviceMLManager {
@@ -44,7 +44,7 @@ class OnDeviceMLManager {
 
 ---
 
-# Advanced Compose Patterns
+## Advanced Compose Patterns
 
 ```kotlin
 @Composable
@@ -87,7 +87,7 @@ fun AdaptiveScreen() {
 
 ---
 
-# Privacy-First Architecture
+## Privacy-First Architecture
 
 ```kotlin
 class PrivacyManager {
@@ -125,7 +125,7 @@ class PrivacyManager {
 
 ---
 
-# Modern Build Configuration
+## Modern Build Configuration
 
 ```kotlin
 // build.gradle.kts
@@ -171,7 +171,7 @@ android {
 
 ---
 
-# Advanced Testing Tools
+## Advanced Testing Tools
 
 ```kotlin
 @OptIn(ExperimentalTestApi::class)
@@ -211,7 +211,7 @@ class ModernTestSuite {
 
 ---
 
-# Performance Monitoring
+## Performance Monitoring
 
 ```kotlin
 class PerformanceMonitor {
@@ -248,7 +248,7 @@ class PerformanceMonitor {
 
 ---
 
-# Feature Flags and Experimentation
+## Feature Flags and Experimentation
 
 ```kotlin
 class ExperimentManager {
@@ -283,26 +283,26 @@ class ExperimentManager {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter15.md/1.png)
 
 ---
 
-# Assignment Preview
-## Future Technologies Implementation
+## Assignment Preview
+### Future Technologies Implementation
 
 Create an application that:
 1. Implements on-device ML
-2. Uses advanced Compose patterns
-3. Follows privacy-first design
-4. Implements feature flags
-5. Uses modern build tools
-6. Implements performance monitoring
+1. Uses advanced Compose patterns
+1. Follows privacy-first design
+1. Implements feature flags
+1. Uses modern build tools
+1. Implements performance monitoring
 
 ---
 
-# Resources
+## Resources
 
 - Android Future Features
 - ML Development Guide

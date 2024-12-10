@@ -32,7 +32,7 @@ DO_MD_ASCII:=0
 # do you want to run mdl on md files?
 DO_MD_MDL:=0
 # do you want to run markdownlint on md files?
-DO_MD_MARKDOWNLINT:=0
+DO_MD_MARKDOWNLINT:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
 # convert drawio images to png?
@@ -42,7 +42,7 @@ else
 DO_DRAWIO_PNG:=1
 endif # GITHUB_WORKFLOW
 # use mermaid png deps?
-DO_MERMAID_DEP:=0
+DO_MERMAID_DEP:=1
 # unite courses pdfs?
 DO_COURSES:=1
 
@@ -108,6 +108,10 @@ TARGET_NAMES:=$(addsuffix .pdf,$(addprefix out/marp/courses/,$(NAMES)))
 # warning! no space is allowed after the command in the call function below
 $(foreach name, $(NAMES), $(eval $(call template,$(name))))
 
+ifeq ($(DO_MD_MARKDOWNLINT),1)
+ALL+=$(MD_MARKDOWNLINT)
+endif # DO_MD_MARKDOWNLINT
+
 ifeq ($(DO_COURSES),1)
 ALL+=$(TARGET_NAMES)
 endif # DO_COURSES
@@ -123,10 +127,6 @@ endif # DO_MD_ASCII
 ifeq ($(DO_MD_MDL),1)
 ALL+=$(MD_MDL)
 endif # DO_MD_MDL
-
-ifeq ($(DO_MD_MARKDOWNLINT),1)
-ALL+=$(MD_MARKDOWNLINT)
-endif # DO_MD_MARKDOWNLINT
 
 ifeq ($(DO_ODP_PPT),1)
 ALL+=$(ODP_PPT)
@@ -278,7 +278,7 @@ $(ODP_PDF): out/%.pdf: %.odp
 	$(info doing [$@])
 	$(Q)rm -f $@
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
+	$(Q)flock /tmp/odp_pdf pymakehelper only_print_on_error libreoffice --headless --convert-to pdf --outdir $(dir $@) $<
 $(MKD_HTM): out/%.html: %.mkd
 	$(info doing [$@])
 	$(Q)rm -f $@
@@ -334,3 +334,7 @@ ifeq ($(DO_ALLDEP),1)
 endif # DO_ALLDEP
 
 # .NOTPARALLEL:
+ifndef GITHUB_WORKFLOW
+MAKEFLAGS+=-j8
+# .NOTPARALLEL: $(ODP_PDF)
+endif

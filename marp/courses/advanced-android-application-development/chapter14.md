@@ -3,13 +3,13 @@
 
 ---
 
-# Overview
+## Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/0.png)
 
 ---
 
-# Kotlin Multiplatform Setup
+## Kotlin Multiplatform Setup
 
 ```kotlin
 // build.gradle.kts
@@ -43,7 +43,7 @@ kotlin {
 
 ---
 
-# Shared Business Logic
+## Shared Business Logic
 
 ```kotlin
 expect class Platform {
@@ -72,7 +72,7 @@ class Repository {
 
 ---
 
-# Jetpack Compose UI
+## Jetpack Compose UI
 
 ```kotlin
 @Composable
@@ -110,7 +110,7 @@ fun UserList(users: List<User>) {
 
 ---
 
-# MVI Architecture Pattern
+## MVI Architecture Pattern
 
 ```kotlin
 sealed class UserIntent {
@@ -159,7 +159,7 @@ class UserViewModel : ViewModel() {
 
 ---
 
-# Cross-Platform Testing
+## Cross-Platform Testing
 
 ```kotlin
 class RepositoryTest {
@@ -185,13 +185,13 @@ fun testPlatformSpecific() {
 
 ---
 
-# Resource Sharing Strategy
+## Resource Sharing Strategy
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/1.png)
 
 ---
 
-# State Management
+## State Management
 
 ```kotlin
 sealed class UIState<out T> {
@@ -216,7 +216,7 @@ class StateManager<T> {
 
 ---
 
-# Performance Considerations
+## Performance Considerations
 
 | Aspect | Native | Shared | Recommendation |
 |--------|--------|--------|----------------|
@@ -227,26 +227,26 @@ class StateManager<T> {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter14.md/2.png)
 
 ---
 
-# Assignment Preview
-## Multi-Platform Implementation
+## Assignment Preview
+### Multi-Platform Implementation
 
 Create an application that:
 1. Uses Kotlin Multiplatform
-2. Implements Jetpack Compose UI
-3. Follows MVI architecture
-4. Shares business logic
-5. Implements cross-platform tests
-6. Handles platform-specific features
+1. Implements Jetpack Compose UI
+1. Follows MVI architecture
+1. Shares business logic
+1. Implements cross-platform tests
+1. Handles platform-specific features
 
 ---
 
-# Resources
+## Resources
 
 - Kotlin Multiplatform Documentation
 - Jetpack Compose Guide

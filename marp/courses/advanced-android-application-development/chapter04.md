@@ -3,13 +3,13 @@
 
 ---
 
-# MVVM Architecture Overview
+## MVVM Architecture Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/0.png)
 
 ---
 
-# MVVM Components
+## MVVM Components
 
 | Component | Responsibility | Example Classes |
 |-----------|----------------|-----------------|
@@ -20,7 +20,7 @@
 
 ---
 
-# ViewModel Implementation
+## ViewModel Implementation
 
 ```java
 public class UserViewModel extends AndroidViewModel {
@@ -48,13 +48,13 @@ public class UserViewModel extends AndroidViewModel {
 
 ---
 
-# Clean Architecture Layers
+## Clean Architecture Layers
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/1.png)
 
 ---
 
-# Repository Pattern
+## Repository Pattern
 
 ```java
 public class UserRepository {
@@ -73,7 +73,7 @@ public class UserRepository {
 
 ---
 
-# Dependency Injection with Dagger
+## Dependency Injection with Dagger
 
 ```java
 @Module
@@ -98,7 +98,7 @@ public interface AppComponent {
 
 ---
 
-# Use Case Implementation
+## Use Case Implementation
 
 ```java
 public class GetUserUseCase {
@@ -125,7 +125,7 @@ public class GetUserUseCase {
 
 ---
 
-# Event Handling Pattern
+## Event Handling Pattern
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/2.png)
 
@@ -149,7 +149,7 @@ public class UserEvents {
 
 ---
 
-# State Management
+## State Management
 
 ```java
 public class UserState {
@@ -169,7 +169,7 @@ public class UserState {
 
 ---
 
-# Activity Implementation
+## Activity Implementation
 
 ```java
 public class UserActivity extends AppCompatActivity {
@@ -197,7 +197,7 @@ public class UserActivity extends AppCompatActivity {
 
 ---
 
-# Testing Architecture Components
+## Testing Architecture Components
 
 ```java
 @RunWith(JUnit4.class)
@@ -230,25 +230,25 @@ public class UserViewModelTest {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/3.png)
 
 ---
 
-# Assignment Preview
-## Refactor Application
+## Assignment Preview
+### Refactor Application
 
 Tasks:
 1. Implement MVVM architecture
-2. Add Clean Architecture layers
-3. Set up Dagger DI
-4. Write unit tests
-5. Implement state management
+1. Add Clean Architecture layers
+1. Set up Dagger DI
+1. Write unit tests
+1. Implement state management
 
 ---
 
-# Resources
+## Resources
 
 - Android Architecture Components
 - Dagger Documentation

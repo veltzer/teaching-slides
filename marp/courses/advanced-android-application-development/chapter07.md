@@ -3,19 +3,19 @@
 
 ---
 
-# Background Processing Options
+## Background Processing Options
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/0.png)
 
 ---
 
-# Service Lifecycle
+## Service Lifecycle
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/1.png)
 
 ---
 
-# Foreground Service Implementation
+## Foreground Service Implementation
 
 ```java
 public class DownloadService extends Service {
@@ -61,7 +61,7 @@ public class DownloadService extends Service {
 
 ---
 
-# WorkManager Setup
+## WorkManager Setup
 
 ```java
 public class DataSyncWorker extends Worker {
@@ -103,7 +103,7 @@ workManager.enqueue(syncWork);
 
 ---
 
-# Periodic Work with WorkManager
+## Periodic Work with WorkManager
 
 ```java
 public class PeriodicSyncManager {
@@ -129,7 +129,7 @@ public class PeriodicSyncManager {
 
 ---
 
-# Chained Work Requests
+## Chained Work Requests
 
 ```java
 public class WorkChainManager {
@@ -155,7 +155,7 @@ public class WorkChainManager {
 
 ---
 
-# BroadcastReceiver Implementation
+## BroadcastReceiver Implementation
 
 ```java
 public class NetworkChangeReceiver extends BroadcastReceiver {
@@ -187,7 +187,7 @@ registerReceiver(new NetworkChangeReceiver(), filter);
 
 ---
 
-# AlarmManager Usage
+## AlarmManager Usage
 
 ```java
 public class AlarmScheduler {
@@ -218,13 +218,13 @@ public class AlarmScheduler {
 
 ---
 
-# Battery Optimization
+## Battery Optimization
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/2.png)
 
 ---
 
-# Background Task Priority
+## Background Task Priority
 
 | Task Type | Tool | When to Use |
 |-----------|------|-------------|
@@ -235,7 +235,7 @@ public class AlarmScheduler {
 
 ---
 
-# Error Handling in Background Tasks
+## Error Handling in Background Tasks
 
 ```java
 public class RobustWorker extends Worker {
@@ -272,26 +272,26 @@ public class RobustWorker extends Worker {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/3.png)
 
 ---
 
-# Assignment Preview
-## Background Processing Implementation
+## Assignment Preview
+### Background Processing Implementation
 
 Create an application that:
 1. Uses Foreground Service
-2. Implements WorkManager
-3. Handles system events
-4. Manages periodic tasks
-5. Implements battery optimization
-6. Provides error handling
+1. Implements WorkManager
+1. Handles system events
+1. Manages periodic tasks
+1. Implements battery optimization
+1. Provides error handling
 
 ---
 
-# Resources
+## Resources
 
 - Android Services Guide
 - WorkManager Documentation

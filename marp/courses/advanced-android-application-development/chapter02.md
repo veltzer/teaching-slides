@@ -3,13 +3,13 @@
 
 ---
 
-# View Architecture Overview
+## View Architecture Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/0.png)
 
 ---
 
-# ConstraintLayout Advanced Features
+## ConstraintLayout Advanced Features
 
 ```xml
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,13 +38,13 @@
 
 ---
 
-# Custom View Lifecycle
+## Custom View Lifecycle
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/1.png)
 
 ---
 
-# Custom View Implementation
+## Custom View Implementation
 
 ```java
 public class CircularProgressView extends View {
@@ -80,7 +80,7 @@ public class CircularProgressView extends View {
 
 ---
 
-# Custom Attributes
+## Custom Attributes
 
 ```xml
 <!-- attrs.xml -->
@@ -101,7 +101,7 @@ public class CircularProgressView extends View {
 
 ---
 
-# View Binding Implementation
+## View Binding Implementation
 
 ```java
 public class ProfileActivity extends AppCompatActivity {
@@ -129,13 +129,13 @@ public class ProfileActivity extends AppCompatActivity {
 
 ---
 
-# Fragment Lifecycle
+## Fragment Lifecycle
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/2.png)
 
 ---
 
-# Fragment Implementation
+## Fragment Implementation
 
 ```java
 public class ProfileFragment extends Fragment {
@@ -171,7 +171,7 @@ public class ProfileFragment extends Fragment {
 
 ---
 
-# Custom ViewGroup Example
+## Custom ViewGroup Example
 
 ```java
 public class FlowLayout extends ViewGroup {
@@ -211,7 +211,7 @@ public class FlowLayout extends ViewGroup {
 
 ---
 
-# Performance Optimization
+## Performance Optimization
 
 | Technique | Implementation | Benefit |
 |-----------|---------------|----------|
@@ -222,32 +222,32 @@ public class FlowLayout extends ViewGroup {
 
 ---
 
-# Layout Inspector
+## Layout Inspector
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/3.png)
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![4](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/4.png)
 
 ---
 
-# Assignment Preview
-## Custom UI Components
+## Assignment Preview
+### Custom UI Components
 
 Create an application that demonstrates:
 1. Custom View implementation
-2. Custom ViewGroup implementation
-3. Complex ConstraintLayout
-4. ViewBinding usage
-5. Fragment navigation
-6. Performance optimization
+1. Custom ViewGroup implementation
+1. Complex ConstraintLayout
+1. ViewBinding usage
+1. Fragment navigation
+1. Performance optimization
 
 ---
 
-# Resources
+## Resources
 
 - Android UI Documentation
 - Custom View Guide

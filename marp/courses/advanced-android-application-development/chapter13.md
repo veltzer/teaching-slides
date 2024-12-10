@@ -3,13 +3,13 @@
 
 ---
 
-# Feature Overview
+## Feature Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/0.png)
 
 ---
 
-# ML Kit Integration
+## ML Kit Integration
 
 ```java
 public class TextRecognizer {
@@ -41,7 +41,7 @@ public class TextRecognizer {
 
 ---
 
-# ARCore Implementation
+## ARCore Implementation
 
 ```java
 public class ARManager implements Scene.OnUpdateListener {
@@ -84,7 +84,7 @@ public class ARManager implements Scene.OnUpdateListener {
 
 ---
 
-# Push Notification System
+## Push Notification System
 
 ```java
 public class NotificationManager {
@@ -129,7 +129,7 @@ public class NotificationManager {
 
 ---
 
-# Social Integration
+## Social Integration
 
 ```java
 public class SocialIntegration {
@@ -176,7 +176,7 @@ public class SocialIntegration {
 
 ---
 
-# TensorFlow Lite Integration
+## TensorFlow Lite Integration
 
 ```java
 public class ImageClassifier {
@@ -225,7 +225,7 @@ public class ImageClassifier {
 
 ---
 
-# Rich Notifications
+## Rich Notifications
 
 ```java
 public class RichNotificationManager {
@@ -261,26 +261,26 @@ public class RichNotificationManager {
 
 ---
 
-# Integration Best Practices
+## Integration Best Practices
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/1.png)
 
 ---
 
-# Assignment Preview
-## Advanced Features Implementation
+## Assignment Preview
+### Advanced Features Implementation
 
 Create an application that:
 1. Implements ML Kit features
-2. Integrates AR functionality
-3. Sets up push notifications
-4. Implements social sharing
-5. Handles deep links
-6. Uses TensorFlow Lite
+1. Integrates AR functionality
+1. Sets up push notifications
+1. Implements social sharing
+1. Handles deep links
+1. Uses TensorFlow Lite
 
 ---
 
-# Resources
+## Resources
 
 - ML Kit Documentation
 - ARCore Guide

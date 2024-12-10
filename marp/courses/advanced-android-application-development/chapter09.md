@@ -3,13 +3,13 @@
 
 ---
 
-# Security Overview
+## Security Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter9.md/0.png)
 
 ---
 
-# Runtime Permission Implementation
+## Runtime Permission Implementation
 
 ```java
 public class PermissionManager {
@@ -57,7 +57,7 @@ public class PermissionManager {
 
 ---
 
-# Data Encryption
+## Data Encryption
 
 ```java
 public class EncryptionManager {
@@ -97,7 +97,7 @@ public class EncryptionManager {
 
 ---
 
-# Secure SharedPreferences
+## Secure SharedPreferences
 
 ```java
 public class SecurePreferences {
@@ -131,7 +131,7 @@ public class SecurePreferences {
 
 ---
 
-# Network Security Configuration
+## Network Security Configuration
 
 ```xml
 <!-- network_security_config.xml -->
@@ -151,7 +151,7 @@ public class SecurePreferences {
 
 ---
 
-# SSL Pinning Implementation
+## SSL Pinning Implementation
 
 ```java
 public class SSLPinningManager {
@@ -177,7 +177,7 @@ public class SSLPinningManager {
 
 ---
 
-# ProGuard Configuration
+## ProGuard Configuration
 
 ```groovy
 -keepclassmembers class * implements java.io.Serializable {
@@ -199,13 +199,13 @@ public class SSLPinningManager {
 
 ---
 
-# Security Best Practices
+## Security Best Practices
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter9.md/1.png)
 
 ---
 
-# Anti-Tampering Checks
+## Anti-Tampering Checks
 
 ```java
 public class SecurityChecker {
@@ -236,7 +236,7 @@ public class SecurityChecker {
 
 ---
 
-# Secure Database Implementation
+## Secure Database Implementation
 
 ```java
 public class SecureDatabase {
@@ -264,7 +264,7 @@ public class SecureDatabase {
 
 ---
 
-# Permission Groups and Categories
+## Permission Groups and Categories
 
 | Permission Group | Common Permissions | Protection Level |
 |-----------------|-------------------|------------------|
@@ -275,20 +275,20 @@ public class SecureDatabase {
 
 ---
 
-# Assignment Preview
-## Security Implementation
+## Assignment Preview
+### Security Implementation
 
 Create an application that:
 1. Implements runtime permissions
-2. Uses encryption for data storage
-3. Implements SSL pinning
-4. Configures ProGuard rules
-5. Implements security checks
-6. Uses secure SharedPreferences
+1. Uses encryption for data storage
+1. Implements SSL pinning
+1. Configures ProGuard rules
+1. Implements security checks
+1. Uses secure SharedPreferences
 
 ---
 
-# Resources
+## Resources
 
 - Android Security Documentation
 - Encryption Guidelines

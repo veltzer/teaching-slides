@@ -3,13 +3,13 @@
 
 ---
 
-# Testing Overview
+## Testing Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter10.md/0.png)
 
 ---
 
-# Unit Testing Setup
+## Unit Testing Setup
 
 ```java
 @RunWith(MockitoJUnitRunner.class)
@@ -63,7 +63,7 @@ public class UserViewModelTest {
 
 ---
 
-# Espresso UI Testing
+## Espresso UI Testing
 
 ```java
 @RunWith(AndroidJUnit4.class)
@@ -116,7 +116,7 @@ public class LoginActivityTest {
 
 ---
 
-# Integration Testing
+## Integration Testing
 
 ```java
 @RunWith(AndroidJUnit4.class)
@@ -162,7 +162,7 @@ public class UserRepositoryTest {
 
 ---
 
-# Memory Leak Detection
+## Memory Leak Detection
 
 ```java
 public class LeakDetectionApplication extends Application {
@@ -198,13 +198,13 @@ public class MainActivity extends AppCompatActivity {
 
 ---
 
-# Performance Profiling
+## Performance Profiling
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter10.md/1.png)
 
 ---
 
-# Debug Logging
+## Debug Logging
 
 ```java
 public class DebugLogger {
@@ -235,7 +235,7 @@ public class DebugLogger {
 
 ---
 
-# Testing Best Practices
+## Testing Best Practices
 
 | Category | Practice | Benefit |
 |----------|----------|---------|
@@ -246,7 +246,7 @@ public class DebugLogger {
 
 ---
 
-# Debug Build Configuration
+## Debug Build Configuration
 
 ```groovy
 android {
@@ -272,26 +272,26 @@ android {
 
 ---
 
-# Testing Pyramid
+## Testing Pyramid
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter10.md/2.png)
 
 ---
 
-# Assignment Preview
-## Testing Implementation
+## Assignment Preview
+### Testing Implementation
 
 Create tests for an application:
 1. Write unit tests
-2. Implement UI tests
-3. Add integration tests
-4. Setup performance monitoring
-5. Implement debug logging
-6. Handle memory leaks
+1. Implement UI tests
+1. Add integration tests
+1. Setup performance monitoring
+1. Implement debug logging
+1. Handle memory leaks
 
 ---
 
-# Resources
+## Resources
 
 - Android Testing Documentation
 - JUnit Documentation

@@ -3,13 +3,13 @@
 
 ---
 
-# Material Design Principles
+## Material Design Principles
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/0.png)
 
 ---
 
-# Theme Implementation
+## Theme Implementation
 
 ```xml
 <!-- styles.xml -->
@@ -31,7 +31,7 @@
 
 ---
 
-# Material Components
+## Material Components
 
 | Component | Usage | Key Attributes |
 |-----------|-------|----------------|
@@ -42,7 +42,7 @@
 
 ---
 
-# Custom Themes and Styles
+## Custom Themes and Styles
 
 ```xml
 <!-- Custom button style -->
@@ -57,19 +57,19 @@
 
 ---
 
-# Typography System
+## Typography System
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/1.png)
 
 ---
 
-# Animation Types in Android
+## Animation Types in Android
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/2.png)
 
 ---
 
-# Property Animation Example
+## Property Animation Example
 
 ```java
 public class AnimationDemo extends AppCompatActivity {
@@ -92,7 +92,7 @@ public class AnimationDemo extends AppCompatActivity {
 
 ---
 
-# Motion Layout Basics
+## Motion Layout Basics
 
 ```xml
 <!-- motion_scene.xml -->
@@ -119,7 +119,7 @@ public class AnimationDemo extends AppCompatActivity {
 
 ---
 
-# Transition Framework
+## Transition Framework
 
 ```java
 public class TransitionDemo extends AppCompatActivity {
@@ -146,7 +146,7 @@ public class TransitionDemo extends AppCompatActivity {
 
 ---
 
-# Custom View Animation
+## Custom View Animation
 
 ```java
 public class PulseAnimation extends Animation {
@@ -168,7 +168,7 @@ public class PulseAnimation extends Animation {
 
 ---
 
-# Material Design Components in Practice
+## Material Design Components in Practice
 
 ```xml
 <com.google.android.material.card.MaterialCardView
@@ -196,14 +196,14 @@ public class PulseAnimation extends Animation {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/3.png)
 
 ---
 
-# Assignment Preview
-## Material Design Implementation
+## Assignment Preview
+### Material Design Implementation
 
 Create an app screen that demonstrates:
 - Custom theme implementation
@@ -214,7 +214,7 @@ Create an app screen that demonstrates:
 
 ---
 
-# Resources
+## Resources
 
 - Material Design Guidelines
 - Android Animation Documentation

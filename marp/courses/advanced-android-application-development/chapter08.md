@@ -3,13 +3,13 @@
 
 ---
 
-# Location Services Overview
+## Location Services Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/0.png)
 
 ---
 
-# Location Permissions
+## Location Permissions
 
 ```java
 public class LocationPermissionManager {
@@ -51,7 +51,7 @@ public class LocationPermissionManager {
 
 ---
 
-# FusedLocationProvider Implementation
+## FusedLocationProvider Implementation
 
 ```java
 public class LocationManager {
@@ -95,7 +95,7 @@ public class LocationManager {
 
 ---
 
-# Google Maps Integration
+## Google Maps Integration
 
 ```java
 public class MapActivity extends AppCompatActivity 
@@ -145,7 +145,7 @@ public class MapActivity extends AppCompatActivity
 
 ---
 
-# Geofencing Implementation
+## Geofencing Implementation
 
 ```java
 public class GeofenceManager {
@@ -203,7 +203,7 @@ public class GeofenceManager {
 
 ---
 
-# Places API Integration
+## Places API Integration
 
 ```java
 public class PlacesManager {
@@ -243,7 +243,7 @@ public class PlacesManager {
 
 ---
 
-# Activity Recognition
+## Activity Recognition
 
 ```java
 public class ActivityRecognitionManager {
@@ -277,19 +277,19 @@ public class ActivityRecognitionManager {
 
 ---
 
-# Location Battery Optimization
+## Location Battery Optimization
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/1.png)
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/2.png)
 
 ---
 
-# Error Handling
+## Error Handling
 
 | Scenario | Solution | Implementation |
 |----------|----------|----------------|
@@ -300,20 +300,20 @@ public class ActivityRecognitionManager {
 
 ---
 
-# Assignment Preview
-## Location-Aware Application
+## Assignment Preview
+### Location-Aware Application
 
 Create an application that:
 1. Tracks user location
-2. Displays Google Maps
-3. Implements geofencing
-4. Uses Places API
-5. Handles activity recognition
-6. Implements battery optimization
+1. Displays Google Maps
+1. Implements geofencing
+1. Uses Places API
+1. Handles activity recognition
+1. Implements battery optimization
 
 ---
 
-# Resources
+## Resources
 
 - Google Maps Documentation
 - FusedLocationProvider Guide

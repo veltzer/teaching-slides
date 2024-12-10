@@ -3,13 +3,13 @@
 
 ---
 
-# Network Architecture Overview
+## Network Architecture Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/0.png)
 
 ---
 
-# Retrofit Setup
+## Retrofit Setup
 
 ```java
 public interface ApiService {
@@ -46,7 +46,7 @@ public class NetworkModule {
 
 ---
 
-# OkHttp Configuration
+## OkHttp Configuration
 
 ```java
 private static OkHttpClient createOkHttpClient() {
@@ -79,7 +79,7 @@ public class AuthInterceptor implements Interceptor {
 
 ---
 
-# API Response Handling
+## API Response Handling
 
 ```java
 public class NetworkResult<T> {
@@ -112,7 +112,7 @@ public class NetworkResult<T> {
 
 ---
 
-# Repository Implementation
+## Repository Implementation
 
 ```java
 public class UserRepository {
@@ -162,7 +162,7 @@ public class UserRepository {
 
 ---
 
-# WebSocket Implementation
+## WebSocket Implementation
 
 ```java
 public class WebSocketManager {
@@ -202,7 +202,7 @@ public class WebSocketManager {
 
 ---
 
-# Image Loading with Glide
+## Image Loading with Glide
 
 ```java
 public class ImageLoader {
@@ -232,13 +232,13 @@ public class ImageLoader {
 
 ---
 
-# Error Handling
+## Error Handling
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/1.png)
 
 ---
 
-# Network Security
+## Network Security
 
 ```java
 public class NetworkSecurity {
@@ -259,13 +259,13 @@ public class NetworkSecurity {
 
 ---
 
-# Caching Strategy
+## Caching Strategy
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/2.png)
 
 ---
 
-# Network Performance Optimization
+## Network Performance Optimization
 
 | Technique | Implementation | Benefit |
 |-----------|---------------|----------|
@@ -276,26 +276,26 @@ public class NetworkSecurity {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/3.png)
 
 ---
 
-# Assignment Preview
-## Client-Server Application
+## Assignment Preview
+### Client-Server Application
 
 Create an application that:
 1. Implements REST API calls
-2. Handles WebSocket connections
-3. Implements image loading
-4. Manages authentication
-5. Implements caching
-6. Handles errors gracefully
+1. Handles WebSocket connections
+1. Implements image loading
+1. Manages authentication
+1. Implements caching
+1. Handles errors gracefully
 
 ---
 
-# Resources
+## Resources
 
 - Retrofit Documentation
 - OkHttp Documentation

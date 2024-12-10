@@ -3,19 +3,19 @@
 
 ---
 
-# Data Storage Options
+## Data Storage Options
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/0.png)
 
 ---
 
-# Room Database Architecture
+## Room Database Architecture
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/1.png)
 
 ---
 
-# Entity Definition
+## Entity Definition
 
 ```java
 @Entity(tableName = "users")
@@ -42,7 +42,7 @@ public class User {
 
 ---
 
-# DAO Implementation
+## DAO Implementation
 
 ```java
 @Dao
@@ -66,7 +66,7 @@ public interface UserDao {
 
 ---
 
-# Database Setup
+## Database Setup
 
 ```java
 @Database(entities = {User.class, Profile.class}, version = 1)
@@ -95,7 +95,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
 ---
 
-# Relationships in Room
+## Relationships in Room
 
 ```java
 @Entity
@@ -129,7 +129,7 @@ public class BookWithAuthor {
 
 ---
 
-# SharedPreferences Implementation
+## SharedPreferences Implementation
 
 ```java
 public class PreferenceManager {
@@ -163,7 +163,7 @@ public class PreferenceManager {
 
 ---
 
-# File System Operations
+## File System Operations
 
 ```java
 public class FileManager {
@@ -193,7 +193,7 @@ public class FileManager {
 
 ---
 
-# ContentProvider Implementation
+## ContentProvider Implementation
 
 ```java
 public class UserProvider extends ContentProvider {
@@ -217,13 +217,13 @@ public class UserProvider extends ContentProvider {
 
 ---
 
-# Data Migration Strategy
+## Data Migration Strategy
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/2.png)
 
 ---
 
-# Database Migration Example
+## Database Migration Example
 
 ```java
 @Database(
@@ -253,7 +253,7 @@ public abstract class AppDatabase extends RoomDatabase {
 
 ---
 
-# Data Backup Strategies
+## Data Backup Strategies
 
 ```java
 public class BackupManager {
@@ -280,7 +280,7 @@ public class BackupManager {
 
 ---
 
-# Performance Optimization
+## Performance Optimization
 
 | Technique | Implementation | Benefit |
 |-----------|---------------|----------|
@@ -291,26 +291,26 @@ public class BackupManager {
 
 ---
 
-# Best Practices
+## Best Practices
 
 ![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/3.png)
 
 ---
 
-# Assignment Preview
-## Data-Driven Application
+## Assignment Preview
+### Data-Driven Application
 
 Create an application that:
 1. Implements Room Database
-2. Handles complex relationships
-3. Performs data migrations
-4. Implements backup/restore
-5. Uses SharedPreferences
-6. Optimizes performance
+1. Handles complex relationships
+1. Performs data migrations
+1. Implements backup/restore
+1. Uses SharedPreferences
+1. Optimizes performance
 
 ---
 
-# Resources
+## Resources
 
 - Room Documentation
 - SQLite Documentation

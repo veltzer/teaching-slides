@@ -3,13 +3,13 @@
 
 ---
 
-# Deployment Overview
+## Deployment Overview
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter12.md/0.png)
 
 ---
 
-# Build Configuration
+## Build Configuration
 
 ```groovy
 android {
@@ -63,7 +63,7 @@ android {
 
 ---
 
-# CI/CD Pipeline Configuration
+## CI/CD Pipeline Configuration
 
 ```yaml
 # .gitlab-ci.yml
@@ -108,7 +108,7 @@ deploy_play_store:
 
 ---
 
-# App Bundle Configuration
+## App Bundle Configuration
 
 ```groovy
 android {
@@ -135,7 +135,7 @@ dependencies {
 
 ---
 
-# Version Management
+## Version Management
 
 ```java
 public class VersionManager {
@@ -163,7 +163,7 @@ public class VersionManager {
 
 ---
 
-# Dynamic Feature Loading
+## Dynamic Feature Loading
 
 ```java
 public class FeatureManager {
@@ -191,7 +191,7 @@ public class FeatureManager {
 
 ---
 
-# Crash Reporting Setup
+## Crash Reporting Setup
 
 ```java
 public class CrashReporter {
@@ -218,13 +218,13 @@ public class CrashReporter {
 
 ---
 
-# Release Checklist
+## Release Checklist
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter12.md/1.png)
 
 ---
 
-# FastLane Configuration
+## FastLane Configuration
 
 ```ruby
 # fastfile
@@ -261,7 +261,7 @@ end
 
 ---
 
-# Best Practices
+## Best Practices
 
 | Category | Practice | Benefit |
 |----------|----------|---------|
@@ -272,20 +272,20 @@ end
 
 ---
 
-# Assignment Preview
-## Production Deployment
+## Assignment Preview
+### Production Deployment
 
 Prepare an application for production:
 1. Configure build variants
-2. Setup CI/CD pipeline
-3. Implement app bundle
-4. Configure crash reporting
-5. Setup automated deployment
-6. Implement version checking
+1. Setup CI/CD pipeline
+1. Implement app bundle
+1. Configure crash reporting
+1. Setup automated deployment
+1. Implement version checking
 
 ---
 
-# Resources
+## Resources
 
 - Android Deployment Guide
 - Play Console Documentation

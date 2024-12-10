@@ -3,26 +3,26 @@
 
 ---
 
-# Course Overview
+## Course Overview
 - Duration: 2-3 lectures
 - Topics:
-  - Java 8+ features in Android
-  - Lambda expressions
-  - Stream API
-  - Threading fundamentals
-  - Exception handling
+    - Java 8+ features in Android
+    - Lambda expressions
+    - Stream API
+    - Threading fundamentals
+    - Exception handling
 
 ---
 
-# Java 8+ Features in Android
-## Key Improvements
+## Java 8+ Features in Android
+### Key Improvements
 
 ![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/0.png)
 
 ---
 
-# Lambda Expressions
-## Simplified Anonymous Functions
+## Lambda Expressions
+### Simplified Anonymous Functions
 
 Before:
 ```java
@@ -41,7 +41,7 @@ button.setOnClickListener(v -> performAction());
 
 ---
 
-# Common Lambda Use Cases
+## Common Lambda Use Cases
 
 | Scenario | Traditional | Lambda |
 |----------|-------------|---------|
@@ -51,8 +51,8 @@ button.setOnClickListener(v -> performAction());
 
 ---
 
-# Method References
-## Four Types of Method References
+## Method References
+### Four Types of Method References
 
 ```java
 // Static method reference
@@ -74,8 +74,8 @@ List<String> sorted = names.stream()
 
 ---
 
-# Stream API
-## Data Processing Pipeline
+## Stream API
+### Data Processing Pipeline
 
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/1.png)
 
@@ -89,7 +89,7 @@ List<User> activeAdmins = users.stream()
 
 ---
 
-# Stream Operations Example
+## Stream Operations Example
 
 ```java
 public class UserProcessor {
@@ -106,14 +106,14 @@ public class UserProcessor {
 
 ---
 
-# Threading Fundamentals
-## Android Threading Model
+## Threading Fundamentals
+### Android Threading Model
 
 ![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/2.png)
 
 ---
 
-# Thread Implementation
+## Thread Implementation
 
 ```java
 public class DataLoader {
@@ -138,7 +138,7 @@ public class DataLoader {
 
 ---
 
-# Exception Handling Best Practices
+## Exception Handling Best Practices
 
 ```java
 public class SafeOperation {
@@ -160,7 +160,7 @@ public class SafeOperation {
 
 ---
 
-# Custom Exception Handling
+## Custom Exception Handling
 
 ```java
 public class AppException extends Exception {
@@ -179,8 +179,8 @@ public class AppException extends Exception {
 
 ---
 
-# Practice Exercise
-## Lambda and Streams
+## Practice Exercise
+### Lambda and Streams
 
 ```java
 public class Exercise {
@@ -200,7 +200,7 @@ public class Exercise {
 
 ---
 
-# Key Takeaways
+## Key Takeaways
 
 - Lambda expressions simplify anonymous functions
 - Stream API enables functional programming
@@ -210,8 +210,8 @@ public class Exercise {
 
 ---
 
-# Assignment Preview
-## Build a Utility Library
+## Assignment Preview
+### Build a Utility Library
 
 Create a utility library that implements:
 - Custom stream operations
@@ -221,7 +221,7 @@ Create a utility library that implements:
 
 ---
 
-# Additional Resources
+## Additional Resources
 
 - Oracle Java 8 Documentation
 - Android Developers Guide
