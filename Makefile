@@ -4,7 +4,7 @@
 # do you want to show the commands executed ?
 DO_MKDBG:=0
 # do you want dependency on the makefile itself ?!?
-DO_ALLDEP:=0
+DO_ALLDEP:=1
 # do you want to do 'ppt' from 'odp'?
 DO_ODP_PPT:=0
 # do you want to do 'pptx' from 'odp'?
@@ -186,6 +186,9 @@ MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
 all: $(ALL)
 	@true
 
+.PHONY: all_odp_pdf
+all_odp_pdf: $(ODP_PDF)
+
 .PHONY: all_odp
 all_odp: $(ODP_PPTX) $(ODP_PPT) $(ODP_PDF)
 
@@ -336,5 +339,5 @@ endif # DO_ALLDEP
 # .NOTPARALLEL:
 ifndef GITHUB_WORKFLOW
 MAKEFLAGS+=-j8
-# .NOTPARALLEL: $(ODP_PDF)
+# .NOTPARALLEL: all_odp_pdf
 endif
