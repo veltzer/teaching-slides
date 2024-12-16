@@ -4,13 +4,11 @@
 ---
 
 ## Course Overview
-- Duration: 2-3 lectures
-- Topics:
-    - Java 8+ features in Android
-    - Lambda expressions
-    - Stream API
-    - Threading fundamentals
-    - Exception handling
+- Java 8+ features in Android
+- Lambda expressions
+- Stream API
+- Threading fundamentals
+- Exception handling
 
 ---
 
