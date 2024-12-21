@@ -323,7 +323,7 @@ $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 $(MERMAID_PNG): out/%.png: %.mmd .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
+	$(Q)flock /tmp/mermaid_png pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
 $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
