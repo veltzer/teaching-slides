@@ -8,6 +8,7 @@ build_requires: List[str] = [
     "pymakehelper",
     "pydmt",
     "asciidoc",
+    "pylint",
 ]
 test_requires: List[str] = []
 requires = config_requires + install_requires + build_requires + test_requires
