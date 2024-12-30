@@ -16,6 +16,7 @@ brw-rw-rw-  # Block device
 srwxrwxrwx  # Socket
 prw-r--r--  # Named pipe
 ```
+
 ---
 ## Regular Files (-)
 
@@ -103,6 +104,7 @@ find . -type l -! -exec test -e {} \; -print
 ## Sockets (s) and Named Pipes (p)
 
 Sockets:
+
 ```bash
 # View system sockets
 ls -l /var/run/*.sock
@@ -112,6 +114,7 @@ socket(AF_UNIX, SOCK_STREAM, 0);
 ```
 
 Named Pipes:
+
 ```bash
 # Create named pipe
 mkfifo mypipe
@@ -160,12 +163,14 @@ Example output:
 12345 hardlink.txt  # Same inode number
 67890 different.txt # Different inode
 ```
+
 ---
 ## Hard Links vs Symbolic Links
 
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/05_file_detail.md/4.png)
 
 Creating Links:
+
 ```bash
 # Create hard link
 ln target.txt hardlink.txt
@@ -195,10 +200,12 @@ ls -l original.txt  # Shows count of 3
 rm original.txt     # File still exists
 cat link1.txt      # Still accessible
 ```
+
 ---
 ## File Timestamps
 
 Three main timestamps:
+
 ```bash
 # View all timestamps
 stat file.txt
@@ -225,6 +232,7 @@ touch -a file.txt
 # Update modification time only
 touch -m file.txt
 ```
+
 ---
 ## Practical Examples
 
@@ -254,6 +262,7 @@ ln -s dir2/target.txt link.txt
 # Create absolute symbolic link
 ln -s /absolute/path/target.txt abslink.txt
 ```
+
 ---
 ## File System Layout
 

@@ -223,6 +223,7 @@ grep -E "pattern1|pattern2" file.txt
 ## Advanced Text Processing
 
 ### sed (Stream Editor)
+
 ```bash
 # Replace text
 sed 's/old/new/' file.txt
@@ -238,6 +239,7 @@ sed -e 's/old/new/' -e 's/foo/bar/' file.txt
 ```
 
 ### awk
+
 ```bash
 # Print specific fields
 awk '{print $1, $3}' file.txt
@@ -254,6 +256,7 @@ awk '{sum += $1} END {print sum}' numbers.txt
 ## Power Tools in Action
 
 Complex example combining multiple tools:
+
 ```bash
 # Find large log files, extract errors, sort by frequency
 find /var/log -type f -name "*.log" \
@@ -270,6 +273,7 @@ find /var/log -type f -name "*.log" \
 ## Practical Examples
 
 1. File Analysis
+
 ```bash
 # Count words in all text files
 find . -name "*.txt" -exec wc -w {} \;
@@ -280,6 +284,7 @@ find . -type f -exec md5sum {} \; \
 ```
 
 1. Log Processing
+
 ```bash
 # Extract IP addresses from log
 grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" \
@@ -299,14 +304,14 @@ Create a script to analyze system logs:
 find /var/log -type f -name "*.log" | \
 while read logfile; do
     echo "=== $logfile ==="
-    
+
     # Count errors and warnings
     echo "Errors:"
     grep -i "error" "$logfile" | wc -l
-    
+
     echo "Warnings:"
     grep -i "warn" "$logfile" | wc -l
-    
+
     # Show top IP addresses
     echo "Top IP addresses:"
     grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b" \

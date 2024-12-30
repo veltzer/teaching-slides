@@ -6,6 +6,7 @@
 ![0](../../../out/mermaid/marp/courses/linux-fundamentals/01_basics.md/0.png)
 
 Common commands:
+
 ```bash
 logout    # Clean shell exit
 exit      # Exit current shell
@@ -111,6 +112,7 @@ Common control characters:
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/01_basics.md/5.png)
 
 Navigation shortcuts:
+
 ```bash
 Ctrl+A  # Move to beginning of line
 Ctrl+E  # Move to end of line
@@ -124,6 +126,7 @@ Alt+F   # Move forward one word
 ## Command Examples in Practice
 
 Let's combine what we've learned:
+
 ```bash
 # Create and navigate directories
 mkdir -p projects/unix_basics
@@ -141,12 +144,14 @@ less notes.txt
 cp notes.txt backup_notes.txt
 mv backup_notes.txt ../notes_backup.txt
 ```
+
 ---
 ## Common Mistakes and Solutions
 
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/01_basics.md/6.png)
 
 Solutions:
+
 ```bash
 # Permission denied
 sudo command
@@ -159,10 +164,12 @@ echo $PATH
 ls -la
 pwd
 ```
+
 ---
 ## Practice Exercise
 
 Try these commands:
+
 ```bash
 # 1. Create a new directory
 mkdir practice

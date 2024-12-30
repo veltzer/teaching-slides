@@ -3,7 +3,7 @@
 
 ---
 
-## Why Use a Shell?
+## Why Use a Shell
 
 ![0](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/0.png)
 
@@ -65,7 +65,8 @@ Key differences:
 
 ## Command Line Substitution
 
-### Bourne Family
+## Bourne substitutions
+
 ```bash
 # Backticks
 files=`ls`
@@ -78,7 +79,8 @@ files=$(ls)
 result=$((5 + 3))
 ```
 
-### C Shell Family
+## C Shell Family
+
 ```bash
 # Command substitution
 set files = `ls`
@@ -94,6 +96,7 @@ set files = `ls`
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/3.png)
 
 Examples:
+
 ```bash
 # List all text files
 ls *.txt
@@ -112,6 +115,7 @@ ls [a-z]*.txt
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/4.png)
 
 Examples:
+
 ```bash
 # Redirect input
 sort < input.txt
@@ -130,10 +134,10 @@ command > output.txt 2> error.log
 ```
 
 ---
-
 ## Aliases
 
-### Bourne Family
+## Bourne aliases
+
 ```bash
 # Create alias
 alias ll='ls -l'
@@ -146,7 +150,8 @@ alias
 unalias ll
 ```
 
-### C Shell Family
+## C Shell aliases
+
 ```bash
 # Create alias
 alias ll 'ls -l'
@@ -166,6 +171,7 @@ unalias ll
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/5.png)
 
 Examples:
+
 ```bash
 # Count files
 ls | wc -l
@@ -184,7 +190,8 @@ find . -type f | grep ".txt" | xargs wc -l
 
 ## Command History
 
-### Bourne Family
+## Bourne Family
+
 ```bash
 # View history
 history
@@ -199,7 +206,8 @@ Ctrl+R
 !number
 ```
 
-### C Shell Family
+## C Shell history
+
 ```bash
 # View history
 history
@@ -218,6 +226,7 @@ history
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/03_shells.md/6.png)
 
 Files for Bourne Family:
+
 ```bash
 /etc/profile            # System-wide
 ~/.profile             # User login
@@ -226,6 +235,7 @@ Files for Bourne Family:
 ```
 
 Files for C Shell Family:
+
 ```bash
 /etc/csh.cshrc         # System-wide
 ~/.cshrc               # User specific
@@ -270,6 +280,7 @@ make 2> error.log > output.log
 ## Practice Exercises
 
 1. Variable Management
+
 ```bash
 # Bourne family
 name="test"
@@ -283,6 +294,7 @@ setenv PATH "$PATH:/new/path"
 ```
 
 1. Redirection and Pipes
+
 ```bash
 # Create test data
 ls -l > files.txt
