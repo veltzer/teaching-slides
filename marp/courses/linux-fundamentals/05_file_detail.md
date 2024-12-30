@@ -56,6 +56,7 @@ file newdir
 # Directory permissions
 ls -ld newdir
 ```
+
 ---
 ## Device Files (c, b)
 
@@ -78,6 +79,7 @@ ls -l /dev/sda    # Hard drive
 ls -l /dev/tty    # Terminal
 ls -l /dev/null   # Null device
 ```
+
 ---
 ## Symbolic Links (l)
 
@@ -96,6 +98,7 @@ readlink link.txt
 # Find broken links
 find . -type l -! -exec test -e {} \; -print
 ```
+
 ---
 ## Sockets (s) and Named Pipes (p)
 
@@ -211,6 +214,7 @@ ls -lc file.txt
 ```
 
 Updating timestamps:
+
 ```bash
 # Update access/modification times
 touch file.txt

@@ -253,6 +253,7 @@ nice -n 19 tar -czf backup.tar.gz /data
 # Memory monitoring
 watch -n 1 'free -m'
 ```
+
 ---
 ## Process Troubleshooting
 

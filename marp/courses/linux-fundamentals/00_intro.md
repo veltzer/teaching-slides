@@ -28,7 +28,7 @@
 
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/00_intro.md/2.png)
 
-## Why is it important?
+## Why is it important
 - Process management
 - Resource tracking
 - System organization
@@ -49,6 +49,7 @@
 ## System Calls
 
 Example of a simple system call in C:
+
 ```c
 #include <unistd.h>
 #include <fcntl.h>
@@ -56,11 +57,11 @@ Example of a simple system call in C:
 int main() {
     // Open system call
     int fd = open("file.txt", O_RDONLY);
-    
+
     // Read system call
     char buffer[100];
     read(fd, buffer, 100);
-    
+
     // Close system call
     close(fd);
     return 0;
@@ -72,7 +73,7 @@ int main() {
 
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/00_intro.md/4.png)
 
-### Key Security Features:
+### Key Security Features
 - File system permissions
 - Process isolation
 - User/group-based access control
@@ -84,7 +85,7 @@ int main() {
     - Bypasses permission checks
     - Can access all files
     - Can manipulate all processes
-  
+
 ```bash
 # Example of root privileges
 sudo su -
@@ -99,11 +100,13 @@ chmod 777 /some/system/file  # Succeeds
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/00_intro.md/5.png)
 
 Example permission setting:
+
 ```bash
 # Setting permissions
 chmod 755 file.txt  # rwxr-xr-x
 chown user:group file.txt
 ```
+
 ---
 ## Process Isolation
 

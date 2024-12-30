@@ -1,9 +1,9 @@
 # Spark SQL & DataFrames
 
----
 ## Introduction to Spark SQL
 
-### Overview
+---
+## Overview
 - High-level API for structured data processing
 - Seamless integration with SQL and DataFrame operations
 - Optimized execution through Catalyst optimizer
@@ -23,7 +23,7 @@
 ---
 ## Working with DataFrames
 
-### Creating DataFrames
+## Creating DataFrames
 
 ```python
 # From RDD
@@ -45,7 +45,7 @@ df = spark.read.parquet("people.parquet")
 ```
 
 ---
-### Basic Operations
+## Basic Operations
 
 ```python
 # Select columns
@@ -67,7 +67,7 @@ df.drop("age")
 ```
 
 ---
-### Aggregations and Grouping
+## Aggregations and Grouping
 
 ```python
 from pyspark.sql.functions import avg, count, sum
@@ -88,7 +88,7 @@ df.withColumn("rank", rank().over(window_spec))
 ---
 ## SQL Queries
 
-### Running SQL
+## Running SQL
 
 ```python
 # Register temporary view
@@ -106,7 +106,7 @@ result = spark.sql("""
 ```
 
 ---
-### Complex SQL Operations
+## Complex SQL Operations
 
 ```python
 # Joins
@@ -123,7 +123,7 @@ result = spark.sql("""
 ```
 
 ---
-### Complex SQL Operations
+## Complex SQL Operations
 
 ```python
 # Window Functions
@@ -139,7 +139,7 @@ result = spark.sql("""
 ---
 ## Integration with Different Data Sources
 
-### Supported Formats
+## Supported Formats
 
 ```python
 # Reading different formats
@@ -156,7 +156,7 @@ df.write.csv("output.csv")
 ```
 
 ---
-### JDBC Connections
+## JDBC Connections
 
 ```python
 # Reading from database
@@ -180,7 +180,7 @@ df.write \
 ---
 ## Integration with Hive
 
-### Hive Configuration
+## Hive Configuration
 
 ```python
 # Create HiveContext
@@ -192,7 +192,7 @@ spark.sql("SET hive.metastore.warehouse.dir=/path/to/warehouse")
 ```
 
 ---
-### Hive Operations
+## Hive Operations
 
 ```python
 # Create Hive table
@@ -215,11 +215,11 @@ result = spark.sql("SELECT * FROM hive_table")
 ---
 ## Performance Optimization
 
-### Catalyst Optimizer
+## Catalyst Optimizer
 ![1](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/1.png)
 
 ---
-### Caching Strategies
+## Caching Strategies
 
 ```python
 # Cache DataFrame
@@ -234,7 +234,7 @@ df.unpersist()
 ```
 
 ---
-### Query Optimization Tips
+## Query Optimization Tips
 1. Predicate Pushdown
 
 ```python
@@ -258,7 +258,7 @@ spark.sql("SELECT * FROM events WHERE date = '2024-01-01'")
 ---
 ## Advanced Features
 
-### User-Defined Functions (UDFs)
+## User-Defined Functions (UDFs)
 
 ```python
 from pyspark.sql.functions import udf
@@ -274,7 +274,7 @@ df.select(upper_case("name").alias("upper_name"))
 ```
 
 ---
-### Custom Aggregations
+## Custom Aggregations
 
 ```python
 from pyspark.sql.expressions import UserDefinedAggregateFunction
@@ -291,7 +291,7 @@ class CustomAverage(UserDefinedAggregateFunction):
 ```
 
 ---
-### Structured Streaming
+## Structured Streaming
 
 ```python
 # Create streaming DataFrame
@@ -311,7 +311,7 @@ query = streaming_df.writeStream \
 ---
 ## Best Practices
 
-### Schema Management
+## Schema Management
 
 ```python
 # Define schema explicitly
@@ -327,7 +327,7 @@ df = spark.read.schema(schema).csv("data.csv")
 ```
 
 ---
-### Memory Management
+## Memory Management
 1. Broadcast joins for small tables
 
 ```python

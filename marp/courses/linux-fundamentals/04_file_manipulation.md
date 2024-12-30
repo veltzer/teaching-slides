@@ -48,6 +48,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/1.png)
 
 Examples:
+
 ```bash
 # View entire file
 cat file.txt
@@ -99,6 +100,7 @@ mv old_dir new_dir
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/2.png)
 
 Examples:
+
 ```bash
 # Check filesystem usage
 df -h
@@ -115,6 +117,7 @@ du -h | sort -rh | head -n 10
 ## Text Processing Tools
 
 ## tr (translate)
+
 ```bash
 # Convert to uppercase
 echo "hello" | tr 'a-z' 'A-Z'
@@ -127,6 +130,7 @@ echo "hello    world" | tr -s ' '
 ```
 
 ## cut
+
 ```bash
 # Extract fields from CSV
 cut -d',' -f1,3 file.csv
@@ -140,6 +144,7 @@ cut -c1-5 file.txt
 ## Sorting and Uniqueness
 
 ### sort
+
 ```bash
 # Basic sort
 sort file.txt
@@ -155,6 +160,7 @@ sort -k2 data.txt
 ```
 
 ### uniq
+
 ```bash
 # Show unique lines
 sort file.txt | uniq
@@ -173,6 +179,7 @@ sort file.txt | uniq -d
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/04_file_manipulation.md/3.png)
 
 Examples:
+
 ```bash
 # Find by name
 find . -name "*.txt"

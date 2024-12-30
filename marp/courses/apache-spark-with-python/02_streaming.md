@@ -117,7 +117,7 @@ def update_function(new_values, running_count):
 running_counts = pairs.updateStateByKey(update_function)
 ```
 
-#### MapWithState
+## MapWithState
 
 ```python
 # More efficient state tracking
@@ -235,7 +235,7 @@ context = StreamingContext.getOrCreate(checkpoint_dir, create_context)
 ---
 ## Monitoring and Debugging
 
-### Metrics Collection
+## Metrics Collection
 
 ```python
 # Register metrics
@@ -250,7 +250,7 @@ ssc.addStreamingListener(CustomListener())
 ```
 
 ---
-### Common Issues and Solutions
+## Common Issues and Solutions
 1. Data Loss
     - Enable Write Ahead Logs
     - Use reliable receivers
@@ -267,7 +267,7 @@ ssc.addStreamingListener(CustomListener())
 ---
 ## Integration Patterns
 
-### Kafka Integration
+## Kafka Integration
 
 ```python
 # Direct Kafka approach

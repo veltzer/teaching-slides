@@ -9,7 +9,7 @@
 ---
 ## Basic Syntax
 
-### Variables and Data Types
+## Variables and Data Types
 
 ```python
 # Variable assignment
@@ -27,7 +27,7 @@ print(type(age))   # <class 'int'>
 ```
 
 ---
-### Basic Operations
+## Basic Operations
 
 ```python
 # Arithmetic
@@ -49,7 +49,7 @@ repeated = "Hi " * 3
 ---
 ## Data Structures
 
-### Tuples
+## Tuples
 
 ```python
 # Creating tuples
@@ -62,7 +62,7 @@ nested = ((1, 2), (3, 4))
 ```
 
 ---
-### Lists
+## Lists
 
 ```python
 # Creating lists
@@ -77,7 +77,7 @@ last = numbers.pop()
 ```
 
 ---
-### List Comprehensions
+## List Comprehensions
 
 ```python
 # Traditional way
@@ -93,7 +93,7 @@ even_squares = [i**2 for i in range(10) if i % 2 == 0]
 ```
 
 ---
-### Dictionaries
+## Dictionaries
 
 ```python
 # Creating dictionaries
@@ -113,7 +113,7 @@ values = person.values()
 ---
 ## Lambda Functions
 
-### Understanding Lambda Functions
+## Understanding Lambda Functions
 
 ```python
 # Traditional function
@@ -128,7 +128,7 @@ add = lambda x, y: x + y
 ```
 
 ---
-### Common Use Cases
+## Common Use Cases
 
 ```python
 # With map
@@ -146,14 +146,14 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 ---
 ## Python Best Practices for Spark
 
-### Code Style
+## Code Style
 - Use meaningful variable names
 - Follow PEP 8 guidelines
 - Keep functions small and focused
 - Use type hints when possible
 
 ---
-### Memory Considerations
+## Memory Considerations
 
 ```python
 # Bad - creates large intermediate lists
@@ -166,7 +166,7 @@ data = (i**2 for i in range(1000000))
 ---
 ## Exercise Examples
 
-### Basic Operations
+## Basic Operations
 
 ```python
 # Exercise 1: Create a function that converts temperature
@@ -175,7 +175,7 @@ def convert_temp(celsius):
 ```
 
 ---
-### Data Structure Manipulation
+## Data Structure Manipulation
 
 ```python
 # Exercise 2: Process a list of transactions

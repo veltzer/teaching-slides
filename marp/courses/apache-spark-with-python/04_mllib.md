@@ -1,22 +1,22 @@
 # Spark MLlib
 
----
 ## Introduction to Machine Learning
 
-### What is Machine Learning?
+---
+## What is Machine Learning
 - Automated pattern recognition
 - Learning from data without explicit programming
 - Making predictions or decisions based on data
 - Types: Supervised, Unsupervised, and Reinforcement Learning
 
 ---
-### MLlib Overview
+## MLlib Overview
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/04_mllib.md/0.png)
 
 ---
 ## The MLlib API
 
-### Key Components
+## Key Components
 1. Transformers
     - Transform one DataFrame to another
     - Implement transform() method
@@ -30,7 +30,7 @@
 
 ---
 
-### Basic Pipeline Structure
+## Basic Pipeline Structure
 
 ```python
 from pyspark.ml import Pipeline
@@ -50,7 +50,7 @@ pipeline = Pipeline(stages=[tokenizer, hashingTF, lr])
 ---
 ## Feature Engineering
 
-### Data Preprocessing
+## Data Preprocessing
 
 ```python
 # Handling missing values
@@ -73,7 +73,7 @@ scaler = StandardScaler(
 ```
 
 ---
-### Feature Transformations
+## Feature Transformations
 
 ```python
 # One-hot encoding
@@ -96,7 +96,7 @@ assembler = VectorAssembler(
 ---
 ## Supervised Learning
 
-### Classification
+## Classification
 
 ```python
 # Logistic Regression
@@ -122,7 +122,7 @@ predictions = model.transform(test_data)
 ```
 
 ---
-### Regression
+## Regression
 
 ```python
 # Linear Regression
@@ -143,7 +143,7 @@ dt = DecisionTreeRegressor(
 ---
 ## Unsupervised Learning
 
-### Clustering
+## Clustering
 
 ```python
 # K-means clustering
@@ -156,7 +156,7 @@ model = gmm.fit(dataset)
 ```
 
 ---
-### Dimensionality Reduction
+## Dimensionality Reduction
 
 ```python
 # PCA
@@ -174,7 +174,7 @@ word2Vec = Word2Vec(
 ---
 ## Model Evaluation
 
-### Metrics and Validation
+## Metrics and Validation
 
 ```python
 # Binary classification evaluation
@@ -193,7 +193,7 @@ evaluator = RegressionEvaluator(
 ```
 
 ---
-### Cross Validation
+## Cross Validation
 
 ```python
 # Create parameter grid
@@ -217,7 +217,7 @@ cvModel = crossval.fit(training_data)
 ---
 ## Real-World Use Cases
 
-### Customer Churn Prediction
+## Customer Churn Prediction
 
 ```python
 # Feature preparation
@@ -238,7 +238,7 @@ pipeline = Pipeline(stages=[
 ```
 
 ---
-### Recommendation System
+## Recommendation System
 
 ```python
 # Collaborative filtering
@@ -256,7 +256,7 @@ predictions = model.transform(test_ratings)
 ```
 
 ---
-### Text Classification
+## Text Classification
 
 ```python
 # Text processing pipeline
@@ -271,7 +271,7 @@ pipeline = Pipeline(stages=[
 ---
 ## Model Deployment
 
-### Saving and Loading Models
+## Saving and Loading Models
 
 ```python
 # Save model
@@ -283,7 +283,7 @@ loaded_model = PipelineModel.load("path/to/model")
 ```
 
 ---
-### Model Serving
+## Model Serving
 
 ```python
 # Batch predictions
@@ -300,7 +300,7 @@ streaming_data.foreachBatch(process_stream)
 ---
 ## Best Practices
 
-### Performance Optimization
+## Performance Optimization
 
 ```python
 # Cache frequently used DataFrames
@@ -311,7 +311,7 @@ spark.conf.set("spark.sql.shuffle.partitions", "100")
 ```
 
 ---
-### Model Monitoring
+## Model Monitoring
 
 ```python
 # Track metrics over time
@@ -321,7 +321,7 @@ def log_metrics(predictions, timestamp):
 ```
 
 ---
-### Pipeline Management
+## Pipeline Management
 
 ```python
 # Custom transformer

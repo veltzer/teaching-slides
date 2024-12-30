@@ -16,33 +16,33 @@
 ---
 ## Key Components Explained
 1. Resource Manager (RM)
-   - Global resource scheduler
-   - Manages application lifecycle
-   - Arbitrates cluster resources
-   - Single point of management
+    - Global resource scheduler
+    - Manages application lifecycle
+    - Arbitrates cluster resources
+    - Single point of management
 
 1. Node Manager (NM)
-   - One per node in cluster
-   - Manages containers and resources
-   - Reports node health
-   - Monitors resource usage
+    - One per node in cluster
+    - Manages containers and resources
+    - Reports node health
+    - Monitors resource usage
 
 1. Application Master (AM)
-   - One per application
-   - Negotiates resources with RM
-   - Works with NM to execute tasks
-   - Monitors application progress
+    - One per application
+    - Negotiates resources with RM
+    - Works with NM to execute tasks
+    - Monitors application progress
 
 1. Container
-   - Resource allocation unit
-   - CPU, memory, disk, network
-   - Execution environment for tasks
-   - Managed by Node Manager
+    - Resource allocation unit
+    - CPU, memory, disk, network
+    - Execution environment for tasks
+    - Managed by Node Manager
 
 ---
 ## YARN Deployment Modes
 
-### Client Mode
+## Client Mode
 ![1](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/1.png)
 
 Characteristics:
@@ -85,7 +85,7 @@ spark-submit \
 ---
 ## Configuration and Tuning
 
-### Resource Allocation
+## Resource Allocation
 
 ```yaml
 # YARN Configuration
@@ -100,7 +100,7 @@ spark.driver.memory: 10g
 ```
 
 ---
-### Memory Settings
+## Memory Settings
 
 ```python
 # Memory fraction settings
@@ -112,7 +112,7 @@ spark.conf.set("spark.yarn.executor.memoryOverhead", "4g")
 ```
 
 ---
-### CPU Settings
+## CPU Settings
 
 ```yaml
 # CPU allocation
@@ -122,7 +122,7 @@ spark.task.cpus: 1
 ```
 
 ---
-### Dynamic Allocation
+## Dynamic Allocation
 
 ```yaml
 # Enable dynamic allocation
@@ -161,7 +161,7 @@ spark.eventLog.dir: hdfs://namenode:8021/spark-logs
 ```
 
 ---
-### Metrics Collection
+## Metrics Collection
 
 ```python
 # Configure metrics
@@ -172,9 +172,9 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 ```
 
 ---
-### Common Issues and Solutions
+## Common Issues and Solutions
 
-#### Resource Issues
+## Resource Issues
 1. Container Launch Failure
 
 ```yaml
@@ -190,7 +190,7 @@ yarn logs -applicationId application_1234567890_0001
 ```
 
 ---
-#### Performance Issues
+## Performance Issues
 1. Data Skew
 
 ```python
@@ -207,9 +207,9 @@ spark.memory.storageFraction: 0.3
 ```
 
 ---
-### Debugging Tools
+## Debugging Tools
 
-#### Log Analysis
+## Log Analysis
 
 ```bash
 # Aggregate logs
@@ -219,13 +219,13 @@ yarn logs -applicationId <app_id> > application_logs.txt
 grep "ERROR" application_logs.txt
 ```
 
-#### Metrics Visualization
+## Metrics Visualization
 ![3](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/3.png)
 
 ---
 ## Best Practices
 
-### Resource Planning
+## Resource Planning
 1. Calculate Resources
 
 ```python
@@ -243,7 +243,7 @@ spark.executor.cores: 4
 ```
 
 ---
-### Production Deployment
+## Production Deployment
 
 ```yaml
 # Security settings
@@ -256,7 +256,7 @@ yarn.resourcemanager.cluster-id: cluster1
 ```
 
 ---
-### Monitoring Strategy
+## Monitoring Strategy
 1. Set up alerts
 1. Monitor key metrics
     - Resource utilization

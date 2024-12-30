@@ -3,14 +3,14 @@
 ---
 ## Course Introduction
 
-### Overview
+## Overview
 - Introduction to Python programming
 - Focus on Spark-relevant concepts
 - Hands-on approach with examples
 - Prerequisites and expectations
 
 ---
-### Why Python for Spark?
+## Why Python for Spark?
 - Easy to learn and read
 - Rich ecosystem of libraries
 - Strong data processing capabilities
@@ -18,7 +18,7 @@
 - Large community and resources
 
 ---
-### Learning Objectives
+## Learning Objectives
 - Master Python syntax and concepts
 - Understand data structures
 - Learn functional programming concepts
@@ -28,7 +28,7 @@
 ---
 ## Python Fundamentals
 
-### Variables and Assignment
+## Variables and Assignment
 
 ```python
 # Basic assignment
@@ -47,7 +47,7 @@ counter *= 2  # Multiply and assign
 ```
 
 ---
-### Data Types
+## Data Types
 
 ```python
 # Numbers
@@ -72,7 +72,7 @@ empty_value = None
 ```
 
 ---
-### Type Conversion
+## Type Conversion
 
 ```python
 # Explicit conversion
@@ -89,7 +89,7 @@ print(type(float_num))  # <class 'float'>
 ---
 ## String Operations
 
-### String Manipulation
+## String Manipulation
 
 ```python
 # Basic operations
@@ -106,7 +106,7 @@ reversed_text = text[::-1]
 ```
 
 ---
-### String Methods
+## String Methods
 
 ```python
 # Common string methods
@@ -123,7 +123,7 @@ template = "{} is {} years old".format(name, age)
 ```
 
 ---
-### String Operations for Spark
+## String Operations for Spark
 
 ```python
 # Common string operations in Spark
@@ -142,7 +142,7 @@ def extract_numbers(text):
 ---
 ## Advanced Data Types
 
-### Lists in Depth
+## Lists in Depth
 
 ```python
 # List creation
@@ -166,7 +166,7 @@ every_second = numbers[::2]
 ```
 
 ---
-### Tuples
+## Tuples
 
 ```python
 # Tuple creation
@@ -186,7 +186,7 @@ person = Person('John', 30)
 ```
 
 ---
-### Dictionaries Extended
+## Dictionaries Extended
 
 ```python
 # Dictionary creation
@@ -213,7 +213,7 @@ squares = {x: x**2 for x in range(5)}
 ---
 ## Functional Programming
 
-### Lambda Functions
+## Lambda Functions
 
 ```python
 # Basic lambda
@@ -231,7 +231,7 @@ complex_lambda = lambda x: [
 ```
 
 ---
-### Higher-Order Functions
+## Higher-Order Functions
 
 ```python
 # Map examples
@@ -251,7 +251,7 @@ max_value = reduce(lambda x, y: x if x > y else y, numbers)
 ```
 
 ---
-### List Comprehensions Advanced
+## List Comprehensions Advanced
 
 ```python
 # Basic comprehension
@@ -275,7 +275,7 @@ word_length = {word: len(word) for word in ['cat', 'dog', 'elephant']}
 ---
 ## Memory Management
 
-### Memory Efficiency
+## Memory Efficiency
 
 ```python
 # Generators vs Lists
@@ -292,7 +292,7 @@ def number_generator(n):
 ```
 
 ---
-### Memory Optimization
+## Memory Optimization
 
 ```python
 # Using itertools for memory efficiency
@@ -317,7 +317,7 @@ def chunk_processor(data, chunk_size=1000):
 ---
 ## Exception Handling
 
-### Basic Exception Handling
+## Basic Exception Handling
 
 ```python
 # Try-except structure
@@ -338,7 +338,7 @@ except (ValueError, TypeError) as e:
 ```
 
 ---
-### Custom Exceptions
+## Custom Exceptions
 
 ```python
 # Define custom exception
@@ -359,7 +359,7 @@ def validate_data(data):
 ---
 ## File Handling
 
-### File Operations
+## File Operations
 
 ```python
 # Basic file operations
@@ -377,7 +377,7 @@ def read_large_file(file_path):
 ```
 
 ---
-### CSV Processing
+## CSV Processing
 
 ```python
 import csv
@@ -397,7 +397,7 @@ with open('output.csv', 'w') as file:
 ---
 ## Best Practices for Spark
 
-### Code Organization
+## Code Organization
 
 ```python
 # Module structure
@@ -414,7 +414,7 @@ class DataProcessor:
 ```
 
 ---
-### Performance Optimization
+## Performance Optimization
 
 ```python
 # Efficient data handling
@@ -431,7 +431,7 @@ def process_rdd_data(rdd):
 ```
 
 ---
-### Testing Patterns
+## Testing Patterns
 
 ```python
 import unittest
@@ -454,7 +454,7 @@ class TestDataProcessor(unittest.TestCase):
 ---
 ## Practical Exercises
 
-### Exercise 1: Data Processing
+## Exercise 1: Data Processing
 
 ```python
 # Process sales data
@@ -474,7 +474,7 @@ def analyze_sales(data):
 ```
 
 ---
-### Exercise 2: Text Analysis
+## Exercise 2: Text Analysis
 
 ```python
 def analyze_text(text):
@@ -494,7 +494,7 @@ def analyze_text(text):
 ```
 
 ---
-### Exercise 3: Data Transformation
+## Exercise 3: Data Transformation
 
 ```python
 def transform_data(data):
@@ -516,7 +516,7 @@ def transform_data(data):
 ---
 ## Summary
 
-### Key Takeaways
+## Key Takeaways
 - Python fundamentals mastered
 - Data structures and their operations
 - Functional programming concepts
@@ -524,7 +524,7 @@ def transform_data(data):
 - Best practices for Spark
 
 ---
-### Preparation for Spark
+## Preparation for Spark
 - Practice with large datasets
 - Focus on functional programming
 - Understand memory management
