@@ -318,6 +318,7 @@ def chunk_processor(data, chunk_size=1000):
 ## Exception Handling
 
 ### Basic Exception Handling
+
 ```python
 # Try-except structure
 try:
@@ -338,6 +339,7 @@ except (ValueError, TypeError) as e:
 
 ---
 ### Custom Exceptions
+
 ```python
 # Define custom exception
 class DataValidationError(Exception):
@@ -358,6 +360,7 @@ def validate_data(data):
 ## File Handling
 
 ### File Operations
+
 ```python
 # Basic file operations
 with open('data.txt', 'r') as file:
@@ -375,6 +378,7 @@ def read_large_file(file_path):
 
 ---
 ### CSV Processing
+
 ```python
 import csv
 
@@ -394,15 +398,16 @@ with open('output.csv', 'w') as file:
 ## Best Practices for Spark
 
 ### Code Organization
+
 ```python
 # Module structure
 class DataProcessor:
     def __init__(self, spark_session):
         self.spark = spark_session
-    
+
     def process_data(self, data):
         return data.map(self.transform)
-    
+
     @staticmethod
     def transform(row):
         return row.upper()
@@ -418,7 +423,7 @@ def process_rdd_data(rdd):
     lookup_table = spark.sparkContext.broadcast({
         'A': 1, 'B': 2, 'C': 3
     })
-    
+
     return (rdd
             .map(lambda x: (x, 1))
             .reduceByKey(lambda x, y: x + y)
@@ -434,11 +439,11 @@ import unittest
 class TestDataProcessor(unittest.TestCase):
     def setUp(self):
         self.processor = DataProcessor()
-    
+
     def test_transform(self):
         result = self.processor.transform("test")
         self.assertEqual(result, "TEST")
-        
+
     def test_process_data(self):
         test_data = ["a", "b", "c"]
         expected = ["A", "B", "C"]
@@ -461,10 +466,10 @@ sales_data = [
 def analyze_sales(data):
     # Calculate total sales
     total = sum(sale["amount"] for sale in data)
-    
+
     # Find highest sale
     highest = max(data, key=lambda x: x["amount"])
-    
+
     return {"total": total, "highest": highest}
 ```
 
@@ -476,10 +481,10 @@ def analyze_text(text):
     # Word frequency analysis
     words = text.lower().split()
     frequency = {}
-    
+
     for word in words:
         frequency[word] = frequency.get(word, 0) + 1
-        
+
     # Sort by frequency
     return sorted(
         frequency.items(),

@@ -1,20 +1,19 @@
 # Spark Streaming
-
----
 ## Introduction to Spark Streaming
 
-### What is Spark Streaming?
+---
+## What is Spark Streaming
 - Extension of core Spark API for stream processing
 - Enables scalable, high-throughput, fault-tolerant processing
 - Supports both real-time and batch processing
 - Integrated with the rest of Spark ecosystem
 
 ---
-### Architecture Overview
+## Architecture Overview
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/0.png)
 
 ---
-### Supported Input Sources
+## Supported Input Sources
 - Kafka
 - Flume
 - Kinesis
@@ -23,28 +22,27 @@
 - Custom sources
 
 ---
-### Key Features
+## Key Features
 1. Fault Tolerance
-   - Exactly-once semantics
-   - Automatic recovery
-   - Checkpointing
-
+    - Exactly-once semantics
+    - Automatic recovery
+    - Checkpointing
 1. Integration
-   - Seamless integration with Spark SQL
-   - MLlib for streaming ML
-   - GraphX for graph processing
-
+    - Seamless integration with Spark SQL
+    - MLlib for streaming ML
+    - GraphX for graph processing
 ---
 ## DStream (Discretized Stream)
 
-### DStream Basics
+## DStream Basics
 - Continuous sequence of RDDs
 - Each RDD contains data from a specific interval
 - Supports all RDD operations
 - Automatic batching of data
 
 ---
-### Creating DStreams
+## Creating DStreams
+
 ```python
 # Create StreamingContext
 from pyspark.streaming import StreamingContext
@@ -58,15 +56,16 @@ file_stream = ssc.textFileStream("/path/to/directory")
 
 # Kafka stream
 from pyspark.streaming.kafka import KafkaUtils
-kafka_stream = KafkaUtils.createDirectStream(ssc, 
-    topics=["topic1"], 
+kafka_stream = KafkaUtils.createDirectStream(ssc,
+    topics=["topic1"],
     kafkaParams={"metadata.broker.list": "localhost:9092"})
 ```
 
 ---
-### DStream Operations
+## DStream Operations
 
-#### Transformations
+## Transformations
+
 ```python
 # Basic transformations
 words = lines.flatMap(lambda line: line.split())
@@ -86,7 +85,8 @@ joined = stream1.join(stream2)
 ```
 
 ---
-#### Output Operations
+## Output Operations
+
 ```python
 # Print first 10 elements
 word_counts.pprint()
@@ -99,13 +99,14 @@ word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 ```
 
 ---
-### Window Operations
+## Window Operations
 ![1](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/1.png)
 
 ---
-### Stateful Operations
+## Stateful Operations
 
-#### UpdateStateByKey
+## UpdateStateByKey
+
 ```python
 def update_function(new_values, running_count):
     if running_count is None:
@@ -117,6 +118,7 @@ running_counts = pairs.updateStateByKey(update_function)
 ```
 
 #### MapWithState
+
 ```python
 # More efficient state tracking
 state_spec = StateSpec.function(state_update_fn)
@@ -126,13 +128,14 @@ state_stream = stream.mapWithState(state_spec)
 ---
 ## Use Cases
 
-### Real-time Analytics Dashboard
+## Real-time Analytics Dashboard
+
 ```python
 def process_metrics(time, rdd):
     if not rdd.isEmpty():
         # Calculate metrics
         metrics = rdd.map(parse_metric).reduceByKey(sum)
-        
+
         # Update dashboard
         metrics.foreachPartition(update_dashboard)
 
@@ -142,7 +145,8 @@ metrics_stream.foreachRDD(process_metrics)
 ```
 
 ---
-### Fraud Detection System
+## Fraud Detection System
+
 ```python
 def detect_fraud(transaction):
     # Apply fraud detection rules
@@ -155,7 +159,8 @@ fraudulent.foreachRDD(alert_security_team)
 ```
 
 ---
-### Log Analysis
+## Log Analysis
+
 ```python
 # Parse and analyze logs in real-time
 logs = file_stream.map(parse_log)
@@ -172,17 +177,19 @@ avg_response = response_times.meanByWindow(60, 10)
 ---
 ## Performance Tuning
 
-### Batch Size Optimization
+## Batch Size Optimization
 - Smaller batches: lower latency but higher overhead
 - Larger batches: higher throughput but increased latency
 - Finding the right balance:
+
 ```python
 # Adjust batch size based on processing time
 ssc = StreamingContext(sc, batchDuration=optimize_batch_size())
 ```
 
 ---
-### Memory Tuning
+## Memory Tuning
+
 ```python
 # Configure memory fraction for streaming
 conf = SparkConf().set("spark.streaming.memory.fraction", 0.8)
@@ -192,7 +199,8 @@ ssc.remember(duration)  # How long to remember old data
 ```
 
 ---
-### Backpressure
+## Backpressure
+
 ```python
 # Enable backpressure
 conf = SparkConf().set("spark.streaming.backpressure.enabled", "true")
@@ -201,7 +209,8 @@ conf = SparkConf().set("spark.streaming.backpressure.enabled", "true")
 ---
 ## Error Handling and Recovery
 
-### Checkpointing
+## Checkpointing
+
 ```python
 # Set checkpoint directory
 ssc.checkpoint("hdfs://checkpoint-dir")
@@ -212,6 +221,7 @@ reliable_stream = ssc.receiverStream(reliable_receiver)
 
 ---
 ### Error Recovery
+
 ```python
 def create_context():
     ssc = StreamingContext(...)
@@ -226,6 +236,7 @@ context = StreamingContext.getOrCreate(checkpoint_dir, create_context)
 ## Monitoring and Debugging
 
 ### Metrics Collection
+
 ```python
 # Register metrics
 from pyspark.streaming.listener import StreamingListener
@@ -241,24 +252,23 @@ ssc.addStreamingListener(CustomListener())
 ---
 ### Common Issues and Solutions
 1. Data Loss
-   - Enable Write Ahead Logs
-   - Use reliable receivers
-   - Implement retry logic
-
+    - Enable Write Ahead Logs
+    - Use reliable receivers
+    - Implement retry logic
 1. Slow Processing
-   - Optimize batch size
-   - Increase parallelism
-   - Monitor backpressure
-
+    - Optimize batch size
+    - Increase parallelism
+    - Monitor backpressure
 1. Memory Issues
-   - Tune executor memory
-   - Adjust cleaning interval
-   - Monitor garbage collection
+    - Tune executor memory
+    - Adjust cleaning interval
+    - Monitor garbage collection
 
 ---
 ## Integration Patterns
 
 ### Kafka Integration
+
 ```python
 # Direct Kafka approach
 directKafkaStream = KafkaUtils.createDirectStream(ssc,
@@ -271,6 +281,7 @@ stream = directKafkaStream.transform(lambda rdd: process_with_exactly_once(rdd))
 
 ---
 ### Database Integration
+
 ```python
 def save_partition(partition):
     # Set up database connection
@@ -288,24 +299,24 @@ stream.foreachRDD(lambda rdd: rdd.foreachPartition(save_partition))
 
 ### Production Deployment
 1. Monitoring Setup
-   - Implement custom metrics
-   - Set up alerting
-   - Monitor throughput and latency
-
+    - Implement custom metrics
+    - Set up alerting
+    - Monitor throughput and latency
 1. Error Handling
-   - Implement retry logic
-   - Set up dead letter queues
-   - Log error details
+    - Implement retry logic
+    - Set up dead letter queues
+    - Log error details
 
 ---
 
 1. Testing
+
 ```python
 # Unit testing streams
 def test_streaming_word_count():
     test_input = [["hello world"], ["hello spark"]]
     expected_output = [("hello", 2), ("world", 1), ("spark", 1)]
-    
+
     ssc = StreamingContext(sc, 1)
     stream = ssc.queueStream(test_input)
     result = stream.flatMap(lambda x: x.split()).countByValue()

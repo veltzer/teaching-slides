@@ -39,7 +39,7 @@ android {
             ), 'proguard-rules.pro'
             signingConfig signingConfigs.release
         }
-        
+
         staging {
             initWith release
             applicationIdSuffix ".staging"
@@ -52,7 +52,7 @@ android {
             applicationIdSuffix ".free"
             dimension "version"
         }
-        
+
         pro {
             applicationIdSuffix ".pro"
             dimension "version"
@@ -122,7 +122,7 @@ android {
         abi {
             enableSplit = true
         }
-        
+
         dynamicFeatures = [":feature_chat", ":feature_map"]
     }
 }
@@ -143,7 +143,7 @@ public class VersionManager {
         try {
             PackageInfo pInfo = context.getPackageManager()
                 .getPackageInfo(context.getPackageName(), 0);
-                
+
             return String.format(
                 "Version %s (%d)",
                 pInfo.versionName,
@@ -153,9 +153,9 @@ public class VersionManager {
             return "Version Unknown";
         }
     }
-    
+
     public static boolean isUpdateRequired(String minVersion) {
-        return BuildConfig.VERSION_CODE < 
+        return BuildConfig.VERSION_CODE <
             Integer.parseInt(minVersion);
     }
 }
@@ -168,9 +168,9 @@ public class VersionManager {
 ```java
 public class FeatureManager {
     public void downloadFeature(Context context, String featureName) {
-        SplitInstallManager manager = 
+        SplitInstallManager manager =
             SplitInstallManagerFactory.create(context);
-            
+
         SplitInstallRequest request = SplitInstallRequest
             .newBuilder()
             .addModule(featureName)
@@ -199,7 +199,7 @@ public class CrashReporter {
         if (!BuildConfig.DEBUG) {
             FirebaseCrashlytics.getInstance()
                 .setCrashlyticsCollectionEnabled(true);
-                
+
             Thread.setDefaultUncaughtExceptionHandler(
                 (thread, throwable) -> {
                     FirebaseCrashlytics.getInstance()
@@ -208,7 +208,7 @@ public class CrashReporter {
             );
         }
     }
-    
+
     public static void logEvent(String event, Bundle params) {
         FirebaseAnalytics.getInstance(context)
             .logEvent(event, params);
@@ -236,17 +236,17 @@ platform :android do
     gradle(
       task: "clean assembleRelease",
       properties: {
-        "android.injected.signing.store.file" => 
+        "android.injected.signing.store.file" =>
           ENV["KEYSTORE_FILE"],
-        "android.injected.signing.store.password" => 
+        "android.injected.signing.store.password" =>
           ENV["STORE_PASSWORD"],
-        "android.injected.signing.key.alias" => 
+        "android.injected.signing.key.alias" =>
           ENV["KEY_ALIAS"],
-        "android.injected.signing.key.password" => 
+        "android.injected.signing.key.password" =>
           ENV["KEY_PASSWORD"],
       }
     )
-    
+
     upload_to_play_store(
       track: 'internal',
       json_key: 'path/to/service-account.json',

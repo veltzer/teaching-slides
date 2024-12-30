@@ -36,6 +36,7 @@ Key Directories:
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/1.png)
 
 Examples:
+
 ```bash
 # Absolute path
 cd /home/user/documents
@@ -81,6 +82,7 @@ cd -
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/2.png)
 
 Access methods:
+
 ```bash
 # Using tilde
 cd ~
@@ -183,6 +185,7 @@ echo $HOME
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/02_filesystem.md/4.png)
 
 Examples:
+
 ```bash
 # Extract components
 path="/home/user/docs/file.txt"
@@ -195,6 +198,7 @@ echo $(basename "$path") # file.txt
 ## Practice Exercises
 
 1. Directory Navigation
+
 ```bash
 # Create test directory structure
 mkdir -p ~/test/{a,b,c}/{1,2,3}
@@ -213,6 +217,7 @@ pwd
 ```
 
 1. Path Manipulation
+
 ```bash
 # Create test files
 touch ~/test/a/1/file.txt
@@ -225,6 +230,7 @@ echo $(basename ~/test/a/1/file.txt)
 ## Advanced Topics
 
 ## Symbolic Links
+
 ```bash
 # Create symbolic link
 ln -s target_file link_name
@@ -234,6 +240,7 @@ readlink link_name
 ```
 
 ## Hard Links
+
 ```bash
 # Create hard link
 ln target_file link_name

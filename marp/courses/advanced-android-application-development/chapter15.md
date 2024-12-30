@@ -15,16 +15,16 @@
 class OnDeviceMLManager {
     private val modelExecutor: Interpreter
     private val processors: List<BaseProcessor>
-    
+
     fun processImage(bitmap: Bitmap): MLResult {
         return viewModelScope.launch {
             withContext(Dispatchers.Default) {
                 // Preprocess image
                 val input = preprocessImage(bitmap)
-                
+
                 // Run inference
                 val output = modelExecutor.runInference(input)
-                
+
                 // Post-process results
                 processors.fold(output) { acc, processor ->
                     processor.process(acc)
@@ -32,7 +32,7 @@ class OnDeviceMLManager {
             }
         }
     }
-    
+
     private fun preprocessImage(bitmap: Bitmap): ByteBuffer {
         return ImagePreprocessor()
             .normalize()
@@ -66,7 +66,7 @@ fun AdaptiveUI(
             WindowSizeClass.EXPANDED -> ScreenLayout.DUAL_PANE
         }
     }
-    
+
     CompositionLocalProvider(
         LocalScreenLayout provides screenLayout
     ) {
@@ -77,7 +77,7 @@ fun AdaptiveUI(
 @Composable
 fun AdaptiveScreen() {
     val screenLayout = LocalScreenLayout.current
-    
+
     when (screenLayout) {
         ScreenLayout.SINGLE_PANE -> SinglePaneContent()
         ScreenLayout.DUAL_PANE -> DualPaneContent()
@@ -95,7 +95,7 @@ class PrivacyManager {
     private val privacyStore = DataStore<Preferences>(
         produceFile = { context.dataStoreFile("privacy_settings") }
     )
-    
+
     fun getUserConsent(): Flow<ConsentState> {
         return privacyStore.data.map { preferences ->
             ConsentState(
@@ -105,7 +105,7 @@ class PrivacyManager {
             )
         }
     }
-    
+
     suspend fun updateConsent(
         type: ConsentType,
         granted: Boolean
@@ -113,7 +113,7 @@ class PrivacyManager {
         privacyStore.edit { preferences ->
             preferences[type.key] = granted
         }
-        
+
         if (granted) {
             enableFeature(type)
         } else {
@@ -144,11 +144,11 @@ android {
         renderScript = false
         shaders = false
     }
-    
+
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
-    
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -158,7 +158,7 @@ android {
                 "proguard-rules.pro"
             )
         }
-        
+
         create("benchmark") {
             initWith(getByName("release"))
             signingConfig = signingConfigs.getByName("debug")
@@ -177,10 +177,10 @@ android {
 @OptIn(ExperimentalTestApi::class)
 class ModernTestSuite {
     private lateinit var composeRule: ComposeTestRule
-    
+
     @get:Rule
     val benchmarkRule = BenchmarkRule()
-    
+
     @Test
     fun performanceTest() = benchmarkRule.measureRepeated {
         composeRule.setContent {
@@ -188,11 +188,11 @@ class ModernTestSuite {
                 MainScreen()
             }
         }
-        
+
         composeRule.onNodeWithTag("list")
             .performScrollToIndex(50)
     }
-    
+
     @Test
     fun screenshotTest() {
         composeRule.setContent {
@@ -200,7 +200,7 @@ class ModernTestSuite {
                 MainScreen()
             }
         }
-        
+
         compareScreenshot(
             composeRule,
             "main_screen"
@@ -216,15 +216,15 @@ class ModernTestSuite {
 ```kotlin
 class PerformanceMonitor {
     private val metrics = mutableListOf<Metric>()
-    
+
     fun startTrace(name: String) {
         Trace.beginSection(name)
     }
-    
+
     fun endTrace(name: String) {
         Trace.endSection()
     }
-    
+
     @OptIn(ExperimentalMetricApi::class)
     fun measureMetrics() {
         val metricListener = object : MetricListener {
@@ -233,10 +233,10 @@ class PerformanceMonitor {
                 analyzeTrend(metric)
             }
         }
-        
+
         MetricsRegistry.addListener(metricListener)
     }
-    
+
     private fun analyzeTrend(metric: Metric) {
         val baseline = getBaseline(metric.name)
         if (metric.value > baseline * 1.2) {
@@ -254,7 +254,7 @@ class PerformanceMonitor {
 class ExperimentManager {
     private val remoteConfig: FirebaseRemoteConfig
     private val experiments = mutableMapOf<String, Experiment>()
-    
+
     fun initializeExperiments() {
         remoteConfig.fetchAndActivate()
             .addOnCompleteListener { task ->
@@ -263,15 +263,15 @@ class ExperimentManager {
                 }
             }
     }
-    
+
     fun isFeatureEnabled(feature: Feature): Boolean {
         return experiments[feature.key]?.isEnabled ?: feature.defaultValue
     }
-    
+
     fun getVariant(experiment: String): String {
         return experiments[experiment]?.variant ?: "control"
     }
-    
+
     fun recordExposure(experiment: String) {
         analytics.logEvent("experiment_exposure") {
             param("experiment", experiment)

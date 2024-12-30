@@ -3,18 +3,18 @@
 ---
 ## YARN Architecture
 
-### Overview
+## Overview
 - Yet Another Resource Negotiator (YARN)
 - Second generation Hadoop compute platform
 - Separates resource management from processing model
 - Enables multiple applications to share cluster resources
 
 ---
-### Core Components
+## Core Components
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/0.png)
 
 ---
-### Key Components Explained
+## Key Components Explained
 1. Resource Manager (RM)
    - Global resource scheduler
    - Manages application lifecycle
@@ -52,7 +52,7 @@ Characteristics:
 - Good for development and debugging
 
 ---
-### Cluster Mode
+## Cluster Mode
 ![2](../../../out/mermaid/marp/courses/apache-spark-with-python/05_yarn.md/2.png)
 
 Characteristics:
@@ -62,7 +62,8 @@ Characteristics:
 - More reliable and scalable
 
 ---
-### Configuration Examples
+## Configuration Examples
+
 ```yaml
 # Client Mode
 spark-submit \
@@ -85,6 +86,7 @@ spark-submit \
 ## Configuration and Tuning
 
 ### Resource Allocation
+
 ```yaml
 # YARN Configuration
 yarn.nodemanager.resource.memory-mb: 40960
@@ -99,6 +101,7 @@ spark.driver.memory: 10g
 
 ---
 ### Memory Settings
+
 ```python
 # Memory fraction settings
 spark.conf.set("spark.memory.fraction", 0.8)
@@ -110,6 +113,7 @@ spark.conf.set("spark.yarn.executor.memoryOverhead", "4g")
 
 ---
 ### CPU Settings
+
 ```yaml
 # CPU allocation
 yarn.nodemanager.resource.cpu-vcores: 32
@@ -119,6 +123,7 @@ spark.task.cpus: 1
 
 ---
 ### Dynamic Allocation
+
 ```yaml
 # Enable dynamic allocation
 spark.dynamicAllocation.enabled: true
@@ -131,20 +136,19 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
 ---
 ## Monitoring and Debugging
 
-### YARN Web UI
+## YARN Web UI
 - Resource Manager UI (port 8088)
     - Cluster overview
     - Application status
     - Resource usage
     - Node health
-
 - Node Manager UI (port 8042)
     - Container information
     - Node metrics
     - Log access
-
 ---
-### Logging Configuration
+## Logging Configuration
+
 ```yaml
 # YARN logging
 yarn.log-aggregation-enable: true
@@ -158,6 +162,7 @@ spark.eventLog.dir: hdfs://namenode:8021/spark-logs
 
 ---
 ### Metrics Collection
+
 ```python
 # Configure metrics
 spark.conf.set("spark.metrics.conf.*.sink.graphite.class",
@@ -171,12 +176,14 @@ spark.conf.set("spark.metrics.conf.*.sink.graphite.port", "2003")
 
 #### Resource Issues
 1. Container Launch Failure
+
 ```yaml
 # Increase memory overhead
 spark.yarn.executor.memoryOverhead: 4096
 ```
 
 1. Node Manager Issues
+
 ```bash
 # Check Node Manager logs
 yarn logs -applicationId application_1234567890_0001
@@ -185,12 +192,14 @@ yarn logs -applicationId application_1234567890_0001
 ---
 #### Performance Issues
 1. Data Skew
+
 ```python
 # Repartition data
 df = df.repartition(200)
 ```
 
 1. Memory Pressure
+
 ```yaml
 # Adjust memory settings
 spark.memory.fraction: 0.8
@@ -201,6 +210,7 @@ spark.memory.storageFraction: 0.3
 ### Debugging Tools
 
 #### Log Analysis
+
 ```bash
 # Aggregate logs
 yarn logs -applicationId <app_id> > application_logs.txt
@@ -217,6 +227,7 @@ grep "ERROR" application_logs.txt
 
 ### Resource Planning
 1. Calculate Resources
+
 ```python
 # Example calculation
 num_executors = total_cores / cores_per_executor
@@ -224,6 +235,7 @@ executor_memory = (node_memory * 0.9) / executors_per_node
 ```
 
 1. Set Limits
+
 ```yaml
 spark.executor.memory: 20g
 spark.executor.memoryOverhead: 4g
@@ -232,6 +244,7 @@ spark.executor.cores: 4
 
 ---
 ### Production Deployment
+
 ```yaml
 # Security settings
 spark.authenticate: true

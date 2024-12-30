@@ -10,6 +10,7 @@
 ## Basic Syntax
 
 ### Variables and Data Types
+
 ```python
 # Variable assignment
 name = "John"
@@ -27,6 +28,7 @@ print(type(age))   # <class 'int'>
 
 ---
 ### Basic Operations
+
 ```python
 # Arithmetic
 sum = 10 + 5
@@ -48,6 +50,7 @@ repeated = "Hi " * 3
 ## Data Structures
 
 ### Tuples
+
 ```python
 # Creating tuples
 coordinates = (3, 4)
@@ -60,6 +63,7 @@ nested = ((1, 2), (3, 4))
 
 ---
 ### Lists
+
 ```python
 # Creating lists
 numbers = [1, 2, 3, 4, 5]
@@ -74,6 +78,7 @@ last = numbers.pop()
 
 ---
 ### List Comprehensions
+
 ```python
 # Traditional way
 squares = []
@@ -89,6 +94,7 @@ even_squares = [i**2 for i in range(10) if i % 2 == 0]
 
 ---
 ### Dictionaries
+
 ```python
 # Creating dictionaries
 person = {
@@ -108,6 +114,7 @@ values = person.values()
 ## Lambda Functions
 
 ### Understanding Lambda Functions
+
 ```python
 # Traditional function
 def square(x):
@@ -122,6 +129,7 @@ add = lambda x, y: x + y
 
 ---
 ### Common Use Cases
+
 ```python
 # With map
 numbers = [1, 2, 3, 4, 5]
@@ -146,6 +154,7 @@ sorted_pairs = sorted(pairs, key=lambda x: x[1])
 
 ---
 ### Memory Considerations
+
 ```python
 # Bad - creates large intermediate lists
 data = [i**2 for i in range(1000000)]
@@ -158,6 +167,7 @@ data = (i**2 for i in range(1000000))
 ## Exercise Examples
 
 ### Basic Operations
+
 ```python
 # Exercise 1: Create a function that converts temperature
 def convert_temp(celsius):
@@ -166,6 +176,7 @@ def convert_temp(celsius):
 
 ---
 ### Data Structure Manipulation
+
 ```python
 # Exercise 2: Process a list of transactions
 transactions = [

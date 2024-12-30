@@ -10,11 +10,11 @@
 - Schema inference and type safety
 
 ---
-### Architecture
+## Architecture
 ![0](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/0.png)
 
 ---
-### Key Components
+## Key Components
 1. DataFrame API
 1. Dataset API
 1. Catalyst Optimizer
@@ -24,6 +24,7 @@
 ## Working with DataFrames
 
 ### Creating DataFrames
+
 ```python
 # From RDD
 rdd = sc.parallelize([
@@ -45,6 +46,7 @@ df = spark.read.parquet("people.parquet")
 
 ---
 ### Basic Operations
+
 ```python
 # Select columns
 df.select("name", "age")
@@ -66,6 +68,7 @@ df.drop("age")
 
 ---
 ### Aggregations and Grouping
+
 ```python
 from pyspark.sql.functions import avg, count, sum
 
@@ -86,6 +89,7 @@ df.withColumn("rank", rank().over(window_spec))
 ## SQL Queries
 
 ### Running SQL
+
 ```python
 # Register temporary view
 df.createOrReplaceTempView("employees")
@@ -103,6 +107,7 @@ result = spark.sql("""
 
 ---
 ### Complex SQL Operations
+
 ```python
 # Joins
 result = spark.sql("""
@@ -135,6 +140,7 @@ result = spark.sql("""
 ## Integration with Different Data Sources
 
 ### Supported Formats
+
 ```python
 # Reading different formats
 json_df = spark.read.json("data.json")
@@ -151,6 +157,7 @@ df.write.csv("output.csv")
 
 ---
 ### JDBC Connections
+
 ```python
 # Reading from database
 jdbc_df = spark.read \
@@ -174,6 +181,7 @@ df.write \
 ## Integration with Hive
 
 ### Hive Configuration
+
 ```python
 # Create HiveContext
 from pyspark.sql import HiveContext
@@ -185,6 +193,7 @@ spark.sql("SET hive.metastore.warehouse.dir=/path/to/warehouse")
 
 ---
 ### Hive Operations
+
 ```python
 # Create Hive table
 spark.sql("""
@@ -211,6 +220,7 @@ result = spark.sql("SELECT * FROM hive_table")
 
 ---
 ### Caching Strategies
+
 ```python
 # Cache DataFrame
 df.cache()
@@ -226,6 +236,7 @@ df.unpersist()
 ---
 ### Query Optimization Tips
 1. Predicate Pushdown
+
 ```python
 # Good - pushes filter to data source
 df.filter("age > 30").select("name")
@@ -235,6 +246,7 @@ df.select("name").filter("age > 30")
 ```
 
 1. Partition Pruning
+
 ```python
 # Create partitioned table
 df.write.partitionBy("date").saveAsTable("events")
@@ -247,6 +259,7 @@ spark.sql("SELECT * FROM events WHERE date = '2024-01-01'")
 ## Advanced Features
 
 ### User-Defined Functions (UDFs)
+
 ```python
 from pyspark.sql.functions import udf
 from pyspark.sql.types import StringType
@@ -262,6 +275,7 @@ df.select(upper_case("name").alias("upper_name"))
 
 ---
 ### Custom Aggregations
+
 ```python
 from pyspark.sql.expressions import UserDefinedAggregateFunction
 
@@ -278,6 +292,7 @@ class CustomAverage(UserDefinedAggregateFunction):
 
 ---
 ### Structured Streaming
+
 ```python
 # Create streaming DataFrame
 streaming_df = spark.readStream \
@@ -297,6 +312,7 @@ query = streaming_df.writeStream \
 ## Best Practices
 
 ### Schema Management
+
 ```python
 # Define schema explicitly
 from pyspark.sql.types import *
@@ -313,12 +329,14 @@ df = spark.read.schema(schema).csv("data.csv")
 ---
 ### Memory Management
 1. Broadcast joins for small tables
+
 ```python
 from pyspark.sql.functions import broadcast
 result = df1.join(broadcast(df2), "key")
 ```
 
 1. Repartitioning for better distribution
+
 ```python
 # Repartition by key
 df = df.repartition("key")

@@ -193,6 +193,7 @@ bg %1
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/08_process_management.md/6.png)
 
 Managing priorities:
+
 ```bash
 # Start with priority
 nice -n 10 command
@@ -234,6 +235,7 @@ Example limits:
 ## Practical Process Management
 
 1. Find and monitor specific process:
+
 ```bash
 # Find PID
 pid=$(pgrep nginx)
@@ -243,6 +245,7 @@ watch -n 1 "ps -p $pid -o pid,ppid,%cpu,%mem,cmd"
 ```
 
 1. Resource management:
+
 ```bash
 # CPU intensive process
 nice -n 19 tar -czf backup.tar.gz /data

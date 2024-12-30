@@ -18,19 +18,20 @@
 
 ### Key Components
 1. Transformers
-   - Transform one DataFrame to another
-   - Implement transform() method
+    - Transform one DataFrame to another
+    - Implement transform() method
 1. Estimators
-   - Algorithm that can be fit on data
-   - Implement fit() method
+    - Algorithm that can be fit on data
+    - Implement fit() method
 1. Pipelines
-   - Chain multiple transformers and estimators
+    - Chain multiple transformers and estimators
 1. Parameters
-   - Shared interface for all ML components
+    - Shared interface for all ML components
 
 ---
 
 ### Basic Pipeline Structure
+
 ```python
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import *
@@ -50,6 +51,7 @@ pipeline = Pipeline(stages=[tokenizer, hashingTF, lr])
 ## Feature Engineering
 
 ### Data Preprocessing
+
 ```python
 # Handling missing values
 from pyspark.ml.feature import Imputer
@@ -72,6 +74,7 @@ scaler = StandardScaler(
 
 ---
 ### Feature Transformations
+
 ```python
 # One-hot encoding
 encoder = OneHotEncoder(
@@ -94,6 +97,7 @@ assembler = VectorAssembler(
 ## Supervised Learning
 
 ### Classification
+
 ```python
 # Logistic Regression
 lr = LogisticRegression(
@@ -119,6 +123,7 @@ predictions = model.transform(test_data)
 
 ---
 ### Regression
+
 ```python
 # Linear Regression
 lr = LinearRegression(
@@ -139,6 +144,7 @@ dt = DecisionTreeRegressor(
 ## Unsupervised Learning
 
 ### Clustering
+
 ```python
 # K-means clustering
 kmeans = KMeans(k=3, seed=1)
@@ -151,6 +157,7 @@ model = gmm.fit(dataset)
 
 ---
 ### Dimensionality Reduction
+
 ```python
 # PCA
 pca = PCA(k=3, inputCol="features", outputCol="pcaFeatures")
@@ -168,6 +175,7 @@ word2Vec = Word2Vec(
 ## Model Evaluation
 
 ### Metrics and Validation
+
 ```python
 # Binary classification evaluation
 evaluator = BinaryClassificationEvaluator(
@@ -186,6 +194,7 @@ evaluator = RegressionEvaluator(
 
 ---
 ### Cross Validation
+
 ```python
 # Create parameter grid
 paramGrid = ParamGridBuilder() \
@@ -209,6 +218,7 @@ cvModel = crossval.fit(training_data)
 ## Real-World Use Cases
 
 ### Customer Churn Prediction
+
 ```python
 # Feature preparation
 assembler = VectorAssembler(
@@ -229,6 +239,7 @@ pipeline = Pipeline(stages=[
 
 ---
 ### Recommendation System
+
 ```python
 # Collaborative filtering
 als = ALS(
@@ -246,6 +257,7 @@ predictions = model.transform(test_ratings)
 
 ---
 ### Text Classification
+
 ```python
 # Text processing pipeline
 pipeline = Pipeline(stages=[
@@ -260,6 +272,7 @@ pipeline = Pipeline(stages=[
 ## Model Deployment
 
 ### Saving and Loading Models
+
 ```python
 # Save model
 model.save("path/to/model")
@@ -271,6 +284,7 @@ loaded_model = PipelineModel.load("path/to/model")
 
 ---
 ### Model Serving
+
 ```python
 # Batch predictions
 predictions = model.transform(new_data)
@@ -287,6 +301,7 @@ streaming_data.foreachBatch(process_stream)
 ## Best Practices
 
 ### Performance Optimization
+
 ```python
 # Cache frequently used DataFrames
 training_data.cache()
@@ -297,6 +312,7 @@ spark.conf.set("spark.sql.shuffle.partitions", "100")
 
 ---
 ### Model Monitoring
+
 ```python
 # Track metrics over time
 def log_metrics(predictions, timestamp):
@@ -306,12 +322,13 @@ def log_metrics(predictions, timestamp):
 
 ---
 ### Pipeline Management
+
 ```python
 # Custom transformer
 class CustomFeatureTransformer(Transformer):
     def __init__(self):
         super(CustomFeatureTransformer, self).__init__()
-        
+
     def _transform(self, dataset):
         return dataset.withColumn("new_feature", ...)
 ```

@@ -14,13 +14,13 @@
 ```java
 public class LocationPermissionManager {
     private static final int PERMISSION_REQUEST_CODE = 123;
-    
+
     public boolean checkLocationPermission(Activity activity) {
         if (ContextCompat.checkSelfPermission(
-                activity, 
+                activity,
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED) {
-            
+
             ActivityCompat.requestPermissions(
                 activity,
                 new String[]{
@@ -35,11 +35,11 @@ public class LocationPermissionManager {
     }
 
     public void onRequestPermissionsResult(
-            int requestCode, 
+            int requestCode,
             String[] permissions,
             int[] grantResults) {
         if (requestCode == PERMISSION_REQUEST_CODE) {
-            if (grantResults.length > 0 && 
+            if (grantResults.length > 0 &&
                 grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission granted, initialize location updates
                 initializeLocationUpdates();
@@ -75,10 +75,10 @@ public class LocationManager {
         };
 
         if (ActivityCompat.checkSelfPermission(
-                context, 
+                context,
                 Manifest.permission.ACCESS_FINE_LOCATION
             ) == PackageManager.PERMISSION_GRANTED) {
-            
+
             fusedLocationClient.requestLocationUpdates(
                 locationRequest,
                 locationCallback,
@@ -98,32 +98,32 @@ public class LocationManager {
 ## Google Maps Integration
 
 ```java
-public class MapActivity extends AppCompatActivity 
+public class MapActivity extends AppCompatActivity
         implements OnMapReadyCallback {
-    
+
     private GoogleMap googleMap;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
-        
-        SupportMapFragment mapFragment = (SupportMapFragment) 
+
+        SupportMapFragment mapFragment = (SupportMapFragment)
             getSupportFragmentManager()
             .findFragmentById(R.id.map);
-            
+
         mapFragment.getMapAsync(this);
     }
 
     @Override
     public void onMapReady(GoogleMap map) {
         googleMap = map;
-        
+
         // Configure map settings
         googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         googleMap.setMyLocationEnabled(true);
         googleMap.getUiSettings().setZoomControlsEnabled(true);
-        
+
         // Add markers, polylines, etc.
         addMapMarkers();
     }
@@ -134,7 +134,7 @@ public class MapActivity extends AppCompatActivity
             .position(position)
             .title("San Francisco")
             .snippet("California, USA");
-            
+
         googleMap.addMarker(markerOptions);
         googleMap.animateCamera(
             CameraUpdateFactory.newLatLngZoom(position, 12)
@@ -167,7 +167,7 @@ public class GeofenceManager {
             )
             .build();
 
-        GeofencingRequest geofencingRequest = 
+        GeofencingRequest geofencingRequest =
             new GeofencingRequest.Builder()
                 .setInitialTrigger(
                     GeofencingRequest.INITIAL_TRIGGER_ENTER
@@ -186,7 +186,7 @@ public class GeofenceManager {
             return geofencePendingIntent;
         }
         Intent intent = new Intent(
-            context, 
+            context,
             GeofenceBroadcastReceiver.class
         );
         geofencePendingIntent = PendingIntent.getBroadcast(
@@ -215,7 +215,7 @@ public class PlacesManager {
     }
 
     public void searchNearbyPlaces(LatLng location) {
-        FindCurrentPlaceRequest request = 
+        FindCurrentPlaceRequest request =
             FindCurrentPlaceRequest.newInstance(
                 Arrays.asList(
                     Place.Field.NAME,
@@ -224,13 +224,13 @@ public class PlacesManager {
                 )
             );
 
-        Task<FindCurrentPlaceResponse> placeResponse = 
+        Task<FindCurrentPlaceResponse> placeResponse =
             placesClient.findCurrentPlace(request);
 
         placeResponse.addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 FindCurrentPlaceResponse response = task.getResult();
-                for (PlaceLikelihood placeLikelihood : 
+                for (PlaceLikelihood placeLikelihood :
                         response.getPlaceLikelihoods()) {
                     Place place = placeLikelihood.getPlace();
                     addPlaceToMap(place);
@@ -252,7 +252,7 @@ public class ActivityRecognitionManager {
 
     public void startActivityRecognition() {
         Intent intent = new Intent(
-            context, 
+            context,
             ActivityRecognitionReceiver.class
         );
         pendingIntent = PendingIntent.getBroadcast(

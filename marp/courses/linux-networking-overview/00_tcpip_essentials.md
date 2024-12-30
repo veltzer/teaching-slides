@@ -11,7 +11,7 @@
 
 ---
 
-## What is TCP/IP?
+## What is TCP/IP
 
 - **Protocol Suite**: Collection of communication protocols
 - **Internet Standard**: Forms the foundation of internet communications
