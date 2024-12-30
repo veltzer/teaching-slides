@@ -23,6 +23,7 @@
 ### Simplified Anonymous Functions
 
 Before:
+
 ```java
 button.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -33,6 +34,7 @@ button.setOnClickListener(new View.OnClickListener() {
 ```
 
 After:
+
 ```java
 button.setOnClickListener(v -> performAction());
 ```
@@ -78,6 +80,7 @@ List<String> sorted = names.stream()
 ![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/1.png)
 
 Example:
+
 ```java
 List<User> activeAdmins = users.stream()
     .filter(User::isActive)

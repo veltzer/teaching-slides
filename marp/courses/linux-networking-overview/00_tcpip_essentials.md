@@ -224,16 +224,14 @@
 ## Types of NAT
 
 1. **Static NAT**
-   - One-to-one mapping
-   - Fixed translations
-
+    - One-to-one mapping
+    - Fixed translations
 1. **Dynamic NAT**
-   - Many-to-many mapping
-   - Pool of public IPs
-
+    - Many-to-many mapping
+    - Pool of public IPs
 1. **PAT (Port Address Translation)**
-   - Many-to-one mapping
-   - Most common type
+    - Many-to-one mapping
+    - Most common type
 
 ---
 ## Domain Name System (DNS)

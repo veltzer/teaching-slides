@@ -24,6 +24,7 @@
 ## /proc Filesystem Navigation
 
 **Key Directories:**
+
 ```bash
 /proc/[pid]/fd/     # File descriptors
 /proc/net/          # Network information

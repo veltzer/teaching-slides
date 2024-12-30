@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="@id/profile_image"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"/>
-        
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
@@ -60,7 +60,7 @@ public class CircularProgressView extends View {
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         // Read custom attributes
         TypedArray a = getContext().obtainStyledAttributes(
-            attrs, 
+            attrs,
             R.styleable.CircularProgressView
         );
         // Use attributes
@@ -147,8 +147,8 @@ public class ProfileFragment extends Fragment {
             ViewGroup container,
             Bundle savedInstanceState) {
         binding = FragmentProfileBinding.inflate(
-            inflater, 
-            container, 
+            inflater,
+            container,
             false
         );
         return binding.getRoot();
@@ -192,7 +192,7 @@ public class FlowLayout extends ViewGroup {
                 lineHeight = child.getMeasuredHeight();
             } else {
                 lineHeight = Math.max(
-                    lineHeight, 
+                    lineHeight,
                     child.getMeasuredHeight()
                 );
             }

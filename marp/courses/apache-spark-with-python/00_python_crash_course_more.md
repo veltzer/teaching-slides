@@ -29,6 +29,7 @@
 ## Python Fundamentals
 
 ### Variables and Assignment
+
 ```python
 # Basic assignment
 name = "John"
@@ -47,6 +48,7 @@ counter *= 2  # Multiply and assign
 
 ---
 ### Data Types
+
 ```python
 # Numbers
 integer_num = 42
@@ -71,6 +73,7 @@ empty_value = None
 
 ---
 ### Type Conversion
+
 ```python
 # Explicit conversion
 str_num = "123"
@@ -87,6 +90,7 @@ print(type(float_num))  # <class 'float'>
 ## String Operations
 
 ### String Manipulation
+
 ```python
 # Basic operations
 text = "Hello, World!"
@@ -103,6 +107,7 @@ reversed_text = text[::-1]
 
 ---
 ### String Methods
+
 ```python
 # Common string methods
 text = "  Python Programming  "
@@ -119,6 +124,7 @@ template = "{} is {} years old".format(name, age)
 
 ---
 ### String Operations for Spark
+
 ```python
 # Common string operations in Spark
 def clean_text(text):
@@ -137,6 +143,7 @@ def extract_numbers(text):
 ## Advanced Data Types
 
 ### Lists in Depth
+
 ```python
 # List creation
 numbers = [1, 2, 3, 4, 5]
@@ -160,6 +167,7 @@ every_second = numbers[::2]
 
 ---
 ### Tuples
+
 ```python
 # Tuple creation
 point = (3, 4)
@@ -179,6 +187,7 @@ person = Person('John', 30)
 
 ---
 ### Dictionaries Extended
+
 ```python
 # Dictionary creation
 person = {
@@ -205,6 +214,7 @@ squares = {x: x**2 for x in range(5)}
 ## Functional Programming
 
 ### Lambda Functions
+
 ```python
 # Basic lambda
 square = lambda x: x**2
@@ -222,6 +232,7 @@ complex_lambda = lambda x: [
 
 ---
 ### Higher-Order Functions
+
 ```python
 # Map examples
 numbers = [1, 2, 3, 4, 5]
@@ -241,6 +252,7 @@ max_value = reduce(lambda x, y: x if x > y else y, numbers)
 
 ---
 ### List Comprehensions Advanced
+
 ```python
 # Basic comprehension
 squares = [x**2 for x in range(10)]
@@ -264,6 +276,7 @@ word_length = {word: len(word) for word in ['cat', 'dog', 'elephant']}
 ## Memory Management
 
 ### Memory Efficiency
+
 ```python
 # Generators vs Lists
 # Bad - creates large list in memory
@@ -280,6 +293,7 @@ def number_generator(n):
 
 ---
 ### Memory Optimization
+
 ```python
 # Using itertools for memory efficiency
 from itertools import islice
@@ -396,6 +410,7 @@ class DataProcessor:
 
 ---
 ### Performance Optimization
+
 ```python
 # Efficient data handling
 def process_rdd_data(rdd):
@@ -412,6 +427,7 @@ def process_rdd_data(rdd):
 
 ---
 ### Testing Patterns
+
 ```python
 import unittest
 
@@ -434,6 +450,7 @@ class TestDataProcessor(unittest.TestCase):
 ## Practical Exercises
 
 ### Exercise 1: Data Processing
+
 ```python
 # Process sales data
 sales_data = [
@@ -453,6 +470,7 @@ def analyze_sales(data):
 
 ---
 ### Exercise 2: Text Analysis
+
 ```python
 def analyze_text(text):
     # Word frequency analysis
@@ -472,6 +490,7 @@ def analyze_text(text):
 
 ---
 ### Exercise 3: Data Transformation
+
 ```python
 def transform_data(data):
     """

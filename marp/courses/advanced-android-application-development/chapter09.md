@@ -14,16 +14,16 @@
 ```java
 public class PermissionManager {
     private static final int PERMISSION_REQUEST_CODE = 100;
-    
+
     public void requestCameraPermission(Activity activity) {
         if (ContextCompat.checkSelfPermission(
-                activity, 
+                activity,
                 Manifest.permission.CAMERA
             ) != PackageManager.PERMISSION_GRANTED) {
-            
+
             // Should we show explanation?
             if (ActivityCompat.shouldShowRequestPermissionRationale(
-                    activity, 
+                    activity,
                     Manifest.permission.CAMERA)) {
                 showPermissionRationale(activity);
             } else {
@@ -61,27 +61,27 @@ public class PermissionManager {
 
 ```java
 public class EncryptionManager {
-    private static final String TRANSFORMATION = 
+    private static final String TRANSFORMATION =
         "AES/GCM/NoPadding";
     private final KeyStore keyStore;
 
     public void encryptData(String data) throws Exception {
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
         cipher.init(Cipher.ENCRYPT_MODE, getSecretKey());
-        
+
         byte[] iv = cipher.getIV();
         byte[] encrypted = cipher.doFinal(data.getBytes());
-        
+
         // Save IV and encrypted data
         saveEncryptedData(iv, encrypted);
     }
 
-    public String decryptData(byte[] encrypted, byte[] iv) 
+    public String decryptData(byte[] encrypted, byte[] iv)
             throws Exception {
         Cipher cipher = Cipher.getInstance(TRANSFORMATION);
         GCMParameterSpec spec = new GCMParameterSpec(128, iv);
         cipher.init(Cipher.DECRYPT_MODE, getSecretKey(), spec);
-        
+
         byte[] decrypted = cipher.doFinal(encrypted);
         return new String(decrypted);
     }
@@ -220,7 +220,7 @@ public class SecurityChecker {
             "/system/xbin/su",
             "/system/bin/su"
         };
-        
+
         for (String path : paths) {
             if (new File(path).exists()) return true;
         }
@@ -228,7 +228,7 @@ public class SecurityChecker {
     }
 
     public boolean isDebuggable(Context context) {
-        return (context.getApplicationInfo().flags & 
+        return (context.getApplicationInfo().flags &
             ApplicationInfo.FLAG_DEBUGGABLE) != 0;
     }
 }
@@ -241,7 +241,7 @@ public class SecurityChecker {
 ```java
 public class SecureDatabase {
     private static final String DB_NAME = "secure.db";
-    
+
     public SQLiteDatabase getEncryptedDatabase(Context context) {
         SQLiteDatabaseHook hook = new SQLiteDatabaseHook() {
             public void preKey(SQLiteDatabase database) {}

@@ -15,15 +15,15 @@
 public class MemoryOptimizer {
     private WeakReference<Context> weakContext;
     private LruCache<String, Bitmap> memoryCache;
-    
+
     public void initializeCache() {
         // Get max available VM memory
-        final int maxMemory = 
+        final int maxMemory =
             (int) (Runtime.getRuntime().maxMemory() / 1024);
-        
+
         // Use 1/8th of available memory for cache
         final int cacheSize = maxMemory / 8;
-        
+
         memoryCache = new LruCache<String, Bitmap>(cacheSize) {
             @Override
             protected int sizeOf(String key, Bitmap bitmap) {
@@ -32,7 +32,7 @@ public class MemoryOptimizer {
             }
         };
     }
-    
+
     public void loadBitmap(String key, ImageView imageView) {
         Bitmap bitmap = memoryCache.get(key);
         if (bitmap != null) {
@@ -78,19 +78,19 @@ public class MemoryOptimizer {
 ## View Holder Pattern
 
 ```java
-public class OptimizedAdapter 
+public class OptimizedAdapter
         extends RecyclerView.Adapter<OptimizedAdapter.ViewHolder> {
-    
+
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final TextView titleView;
         private final ImageView iconView;
-        
+
         ViewHolder(View view) {
             super(view);
             titleView = view.findViewById(R.id.title);
             iconView = view.findViewById(R.id.icon);
         }
-        
+
         void bind(Item item) {
             titleView.setText(item.getTitle());
             Glide.with(iconView)
@@ -99,7 +99,7 @@ public class OptimizedAdapter
                 .into(iconView);
         }
     }
-    
+
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.bind(items.get(position));
@@ -114,28 +114,28 @@ public class OptimizedAdapter
 ```java
 public class NetworkOptimizer {
     private final OkHttpClient client;
-    
+
     public NetworkOptimizer(Context context) {
         int cacheSize = 10 * 1024 * 1024; // 10 MB
         Cache cache = new Cache(
-            context.getCacheDir(), 
+            context.getCacheDir(),
             cacheSize
         );
-        
+
         client = new OkHttpClient.Builder()
             .cache(cache)
             .addInterceptor(new CacheInterceptor())
             .build();
     }
-    
+
     private static class CacheInterceptor implements Interceptor {
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
             Response response = chain.proceed(request);
-            
+
             return response.newBuilder()
-                .header("Cache-Control", 
+                .header("Cache-Control",
                     "public, max-age=60") // Cache for 1 minute
                 .build();
         }
@@ -153,11 +153,11 @@ public interface OptimizedDao {
     @Query("SELECT * FROM users WHERE age > :minAge " +
            "ORDER BY name ASC LIMIT :pageSize OFFSET :offset")
     List<User> getPagedUsers(int minAge, int pageSize, int offset);
-    
+
     @Transaction
     @Query("SELECT * FROM users")
     List<UserWithPosts> getUsersWithPosts();
-    
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertUsers(List<User> users);
 }
@@ -165,7 +165,7 @@ public interface OptimizedDao {
 // Usage with paging
 public class UserRepository {
     private static final int PAGE_SIZE = 20;
-    
+
     public List<User> getUsers(int page) {
         int offset = page * PAGE_SIZE;
         return userDao.getPagedUsers(18, PAGE_SIZE, offset);
@@ -196,9 +196,9 @@ public class ImageOptimizer {
             .override(Target.SIZE_ORIGINAL)
             .encodeQuality(80); // Reduced quality
     }
-    
+
     public static void loadOptimizedImage(
-            ImageView imageView, 
+            ImageView imageView,
             String url) {
         Glide.with(imageView.getContext())
             .load(url)
@@ -216,24 +216,24 @@ public class ImageOptimizer {
 ```java
 public class PerformanceMonitor {
     private static final String TAG = "Performance";
-    
+
     public static void startMethodTracing() {
         Debug.startMethodTracing("app_trace");
     }
-    
+
     public static void stopMethodTracing() {
         Debug.stopMethodTracing();
     }
-    
+
     public static void logMemoryStats() {
         Runtime runtime = Runtime.getRuntime();
-        long usedMemory = (runtime.totalMemory() - 
+        long usedMemory = (runtime.totalMemory() -
             runtime.freeMemory()) / 1024;
         long maxMemory = runtime.maxMemory() / 1024;
-        
+
         Log.d(TAG, String.format(
-            "Memory - Used: %dKB, Max: %dKB", 
-            usedMemory, 
+            "Memory - Used: %dKB, Max: %dKB",
+            usedMemory,
             maxMemory
         ));
     }
@@ -248,7 +248,7 @@ public class PerformanceMonitor {
 public class BackgroundTaskManager {
     private final ExecutorService executor;
     private final Handler mainHandler;
-    
+
     public void performLongOperation(Runnable task) {
         executor.execute(() -> {
             // Do work in background
@@ -259,7 +259,7 @@ public class BackgroundTaskManager {
             } catch (InterruptedException e) {
                 Log.e(TAG, "Task interrupted", e);
             }
-            
+
             // Update UI on main thread
             mainHandler.post(() -> {
                 updateUI();

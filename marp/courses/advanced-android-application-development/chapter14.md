@@ -21,7 +21,7 @@ plugins {
 kotlin {
     android()
     ios()
-    
+
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -29,13 +29,13 @@ kotlin {
                 implementation("io.ktor:ktor-client-core:2.3.3")
             }
         }
-        
+
         val androidMain by getting {
             dependencies {
                 implementation("androidx.core:core-ktx:1.12.0")
             }
         }
-        
+
         val iosMain by getting
     }
 }
@@ -51,14 +51,14 @@ expect class Platform {
 }
 
 actual class Platform actual constructor() {
-    actual val name: String = 
+    actual val name: String =
         UIDevice.currentDevice.systemName()
 }
 
 class Repository {
     private val apiClient = ApiClient()
-    
-    suspend fun getUsers(): List<User> = 
+
+    suspend fun getUsers(): List<User> =
         withContext(Dispatchers.Default) {
             try {
                 apiClient.fetchUsers()
@@ -80,7 +80,7 @@ fun UserScreen(
     viewModel: UserViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    
+
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -129,7 +129,7 @@ data class UserViewState(
 class UserViewModel : ViewModel() {
     private val _viewState = MutableStateFlow(UserViewState())
     val viewState = _viewState.asStateFlow()
-    
+
     fun processIntent(intent: UserIntent) {
         when (intent) {
             is UserIntent.LoadUsers -> loadUsers()
@@ -137,12 +137,12 @@ class UserViewModel : ViewModel() {
             is UserIntent.SelectUser -> selectUser(intent.user)
         }
     }
-    
+
     private fun loadUsers() = viewModelScope.launch {
         _viewState.update { it.copy(isLoading = true) }
         try {
             val users = repository.getUsers()
-            _viewState.update { 
+            _viewState.update {
                 it.copy(users = users, isLoading = false)
             }
         } catch (e: Exception) {
@@ -167,7 +167,7 @@ class RepositoryTest {
     fun testGetUsers() = runTest {
         val repository = Repository()
         val users = repository.getUsers()
-        
+
         assertTrue(users.isNotEmpty())
         assertEquals("John", users.first().name)
     }
@@ -203,11 +203,11 @@ sealed class UIState<out T> {
 class StateManager<T> {
     private val _state = MutableStateFlow<UIState<T>>(UIState.Loading)
     val state = _state.asStateFlow()
-    
+
     fun updateState(newState: UIState<T>) {
         _state.value = newState
     }
-    
+
     fun handleError(error: Throwable) {
         _state.value = UIState.Error(error.message ?: "Unknown error")
     }

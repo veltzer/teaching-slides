@@ -21,7 +21,7 @@ public interface ApiService {
 
     @PUT("users/{id}")
     Call<User> updateUser(
-        @Path("id") String userId, 
+        @Path("id") String userId,
         @Body User user
     );
 
@@ -30,7 +30,7 @@ public interface ApiService {
 }
 
 public class NetworkModule {
-    private static final String BASE_URL = 
+    private static final String BASE_URL =
         "https://api.example.com/";
 
     public static ApiService createApiService() {
@@ -50,7 +50,7 @@ public class NetworkModule {
 
 ```java
 private static OkHttpClient createOkHttpClient() {
-    HttpLoggingInterceptor logging = 
+    HttpLoggingInterceptor logging =
         new HttpLoggingInterceptor();
     logging.setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -71,7 +71,7 @@ public class AuthInterceptor implements Interceptor {
         Request.Builder builder = original.newBuilder()
             .header("Authorization", "Bearer " + getToken())
             .method(original.method(), original.body());
-        
+
         return chain.proceed(builder.build());
     }
 }
@@ -120,16 +120,16 @@ public class UserRepository {
     private final UserDao userDao;
 
     public LiveData<NetworkResult<User>> getUser(String userId) {
-        MutableLiveData<NetworkResult<User>> result = 
+        MutableLiveData<NetworkResult<User>> result =
             new MutableLiveData<>();
-        
+
         result.setValue(new NetworkResult<>()); // Loading
 
         apiService.getUser(userId).enqueue(
             new Callback<User>() {
                 @Override
                 public void onResponse(
-                        Call<User> call, 
+                        Call<User> call,
                         Response<User> response) {
                     if (response.isSuccessful()) {
                         result.setValue(
@@ -139,7 +139,7 @@ public class UserRepository {
                         userDao.insertUser(response.body());
                     } else {
                         result.setValue(
-                            new NetworkResult<>("Error: " + 
+                            new NetworkResult<>("Error: " +
                                 response.code())
                         );
                     }
@@ -148,7 +148,7 @@ public class UserRepository {
                 @Override
                 public void onFailure(Call<User> call, Throwable t) {
                     result.setValue(
-                        new NetworkResult<>("Network error: " + 
+                        new NetworkResult<>("Network error: " +
                             t.getMessage())
                     );
                 }
@@ -168,7 +168,7 @@ public class UserRepository {
 public class WebSocketManager {
     private WebSocket webSocket;
     private final OkHttpClient client;
-    
+
     public void connect(String url) {
         Request request = new Request.Builder()
             .url(url)
@@ -177,15 +177,15 @@ public class WebSocketManager {
         WebSocketListener listener = new WebSocketListener() {
             @Override
             public void onMessage(
-                    WebSocket webSocket, 
+                    WebSocket webSocket,
                     String text) {
                 handleMessage(text);
             }
 
             @Override
             public void onFailure(
-                    WebSocket webSocket, 
-                    Throwable t, 
+                    WebSocket webSocket,
+                    Throwable t,
                     Response response) {
                 handleFailure(t);
             }
@@ -207,7 +207,7 @@ public class WebSocketManager {
 ```java
 public class ImageLoader {
     public static void loadImage(
-            ImageView imageView, 
+            ImageView imageView,
             String url) {
         Glide.with(imageView.getContext())
             .load(url)
@@ -219,7 +219,7 @@ public class ImageLoader {
     }
 
     public static void loadImageWithCache(
-            ImageView imageView, 
+            ImageView imageView,
             String url) {
         Glide.with(imageView.getContext())
             .load(url)

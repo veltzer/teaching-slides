@@ -2,7 +2,7 @@
 
 ---
 
-## What is Apache Spark?
+## What is Apache Spark
 
 - Unified analytics engine for large-scale data processing
 - Up to 100x faster than Hadoop MapReduce in memory
