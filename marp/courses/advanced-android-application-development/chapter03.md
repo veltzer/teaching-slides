@@ -18,12 +18,12 @@
     <item name="colorPrimary">@color/purple_500</item>
     <item name="colorPrimaryVariant">@color/purple_700</item>
     <item name="colorOnPrimary">@color/white</item>
-    
+
     <!-- Secondary brand color -->
     <item name="colorSecondary">@color/teal_200</item>
     <item name="colorSecondaryVariant">@color/teal_700</item>
     <item name="colorOnSecondary">@color/black</item>
-    
+
     <!-- Status bar color -->
     <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 </style>
@@ -80,7 +80,7 @@ public class AnimationDemo extends AppCompatActivity {
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(
             button, "scaleY", 1f, 1.2f, 1f
         );
-        
+
         AnimatorSet set = new AnimatorSet();
         set.playTogether(scaleX, scaleY);
         set.setDuration(300);
@@ -98,7 +98,7 @@ public class AnimationDemo extends AppCompatActivity {
 <!-- motion_scene.xml -->
 <MotionScene xmlns:android="..."
     xmlns:motion="...">
-    
+
     <Transition
         motion:constraintSetStart="@+id/start"
         motion:constraintSetEnd="@+id/end">
@@ -130,14 +130,14 @@ public class TransitionDemo extends AppCompatActivity {
 
         // Set up transition
         TransitionManager.beginDelayedTransition(
-            container, 
+            container,
             new AutoTransition()
         );
 
         // Change visibility or layout params to trigger transition
         detailsView.setVisibility(
-            detailsView.getVisibility() == View.GONE 
-                ? View.VISIBLE 
+            detailsView.getVisibility() == View.GONE
+                ? View.VISIBLE
                 : View.GONE
         );
     }
@@ -156,9 +156,9 @@ public class PulseAnimation extends Animation {
 
     @Override
     protected void applyTransformation(
-            float interpolatedTime, 
+            float interpolatedTime,
             Transformation t) {
-        float scale = mStartScale + (mEndScale - mStartScale) 
+        float scale = mStartScale + (mEndScale - mStartScale)
             * interpolatedTime;
         mView.setScaleX(scale);
         mView.setScaleY(scale);

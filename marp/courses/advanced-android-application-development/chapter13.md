@@ -14,17 +14,17 @@
 ```java
 public class TextRecognizer {
     private final TextRecognizer recognizer;
-    
+
     public void recognizeText(Bitmap image) {
         InputImage inputImage = InputImage.fromBitmap(image, 0);
-        
+
         recognizer.process(inputImage)
             .addOnSuccessListener(text -> {
                 for (Text.TextBlock block : text.getTextBlocks()) {
                     String blockText = block.getText();
                     Point[] blockCornerPoints = block.getCornerPoints();
                     Rect blockFrame = block.getBoundingBox();
-                    
+
                     for (Text.Line line : block.getLines()) {
                         // Process each line
                         processTextLine(line);
@@ -56,7 +56,7 @@ public class ARManager implements Scene.OnUpdateListener {
         ModelRenderable.builder()
             .setSource(activity, R.raw.model)
             .build()
-            .thenAccept(renderable -> 
+            .thenAccept(renderable ->
                 modelRenderable = renderable)
             .exceptionally(throwable -> {
                 handleError(throwable);
@@ -72,7 +72,7 @@ public class ARManager implements Scene.OnUpdateListener {
     private void placeObject(Anchor anchor) {
         AnchorNode anchorNode = new AnchorNode(anchor);
         anchorNode.setParent(arFragment.getArSceneView().getScene());
-        
+
         TransformableNode node = new TransformableNode(
             arFragment.getTransformationSystem());
         node.setParent(anchorNode);
@@ -113,7 +113,7 @@ public class NotificationManager {
     }
 
     private void showNotification(String title, String body) {
-        NotificationCompat.Builder builder = 
+        NotificationCompat.Builder builder =
             new NotificationCompat.Builder(this, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(title)
@@ -134,7 +134,7 @@ public class NotificationManager {
 ```java
 public class SocialIntegration {
     private GoogleSignInClient googleSignInClient;
-    
+
     public void setupGoogleSignIn() {
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(
             GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -153,7 +153,7 @@ public class SocialIntegration {
             .putExtra(Intent.EXTRA_TEXT, "Content to share");
 
         activity.startActivity(Intent.createChooser(
-            shareIntent, 
+            shareIntent,
             "Share via"
         ));
     }
@@ -161,7 +161,7 @@ public class SocialIntegration {
     public void handleDeepLink(Uri deepLinkUri) {
         String path = deepLinkUri.getPath();
         String id = deepLinkUri.getQueryParameter("id");
-        
+
         switch (path) {
             case "/product":
                 openProduct(id);
@@ -182,7 +182,7 @@ public class SocialIntegration {
 public class ImageClassifier {
     private Interpreter tflite;
     private List<String> labels;
-    
+
     public void initializeInterpreter(Context context) {
         try {
             MappedByteBuffer modelFile = loadModelFile(context);
@@ -196,13 +196,13 @@ public class ImageClassifier {
     public String classifyImage(Bitmap bitmap) {
         // Preprocess the image
         ByteBuffer inputBuffer = convertBitmapToByteBuffer(bitmap);
-        
+
         // Output array for classification results
         float[][] outputArray = new float[1][labels.size()];
-        
+
         // Run inference
         tflite.run(inputBuffer, outputArray);
-        
+
         // Process results
         return processResults(outputArray[0]);
     }
@@ -210,14 +210,14 @@ public class ImageClassifier {
     private String processResults(float[] probabilities) {
         int maxIndex = 0;
         float maxProb = 0;
-        
+
         for (int i = 0; i < probabilities.length; i++) {
             if (probabilities[i] > maxProb) {
                 maxProb = probabilities[i];
                 maxIndex = i;
             }
         }
-        
+
         return labels.get(maxIndex);
     }
 }
@@ -230,16 +230,16 @@ public class ImageClassifier {
 ```java
 public class RichNotificationManager {
     public void showRichNotification(
-            Context context, 
-            String title, 
-            String content, 
+            Context context,
+            String title,
+            String content,
             Bitmap largeIcon) {
-            
+
         // Create notification channel for Android O and above
         createNotificationChannel(context);
-        
+
         // Build rich notification
-        NotificationCompat.Builder builder = 
+        NotificationCompat.Builder builder =
             new NotificationCompat.Builder(context, CHANNEL_ID)
                 .setSmallIcon(R.drawable.ic_notification)
                 .setContentTitle(title)
@@ -248,7 +248,7 @@ public class RichNotificationManager {
                 .setStyle(new NotificationCompat.BigPictureStyle()
                     .bigPicture(largeIcon)
                     .bigLargeIcon(null))
-                .addAction(R.drawable.ic_reply, "Reply", 
+                .addAction(R.drawable.ic_reply, "Reply",
                     getReplyPendingIntent())
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setAutoCancel(true);

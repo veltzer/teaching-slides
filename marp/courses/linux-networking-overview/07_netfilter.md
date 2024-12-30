@@ -14,7 +14,7 @@
 
 ---
 
-## What are Netfilters?
+## What are Netfilters
 
 ![0](../../../out/mermaid/marp/courses/linux-networking-overview/07_netfilter.md/0.png)
 
@@ -62,7 +62,7 @@ static unsigned int my_hook_func(void *priv,
     // Packet processing logic
     if (should_drop_packet(skb))
         return NF_DROP;
-        
+
     return NF_ACCEPT;
 }
 ```
@@ -75,7 +75,7 @@ static unsigned int my_hook_func(void *priv,
 struct nf_hook_ops {
     // Function to call
     nf_hookfn *hook;
-    
+
     // Hook point to attach to
     struct net_device *dev;
     void *priv;
@@ -249,15 +249,15 @@ static unsigned int hook_func(void *priv,
                             const struct nf_hook_state *state)
 {
     struct iphdr *iph;
-    
+
     if (!skb)
         return NF_ACCEPT;
-        
+
     iph = ip_hdr(skb);
     if (iph->protocol == IPPROTO_TCP) {
         // Modify TCP packet
     }
-    
+
     return NF_ACCEPT;
 }
 ```
@@ -273,13 +273,13 @@ static unsigned int hook_func(void *priv,
 {
     if (!skb)
         return NF_ACCEPT;
-        
+
     if (skb_linearize(skb) < 0)
         return NF_DROP;
-        
+
     if (!pskb_may_pull(skb, sizeof(struct iphdr)))
         return NF_DROP;
-        
+
     return NF_ACCEPT;
 }
 ```

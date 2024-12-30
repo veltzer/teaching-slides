@@ -28,7 +28,7 @@
 class Employee {
     private String name;
     private double salary;
-    
+
     public void calculatePay() { /* ... */ }
     public void saveToDatabase() { /* ... */ }
     public void generateReport() { /* ... */ }
@@ -119,7 +119,7 @@ interface Shape {
 class Rectangle implements Shape {
     private double width;
     private double height;
-    
+
     public double calculateArea() {
         return width * height;
     }
@@ -127,7 +127,7 @@ class Rectangle implements Shape {
 
 class Circle implements Shape {
     private double radius;
-    
+
     public double calculateArea() {
         return Math.PI * radius * radius;
     }
@@ -278,11 +278,11 @@ class LightBulb {
 
 class Switch {
     private LightBulb bulb;
-    
+
     public Switch() {
         this.bulb = new LightBulb();
     }
-    
+
     public void operate() {
         // Direct dependency on LightBulb implementation
         bulb.turnOn();
@@ -311,11 +311,11 @@ class LightBulb implements Switchable {
 
 class Switch {
     private final Switchable device;
-    
+
     public Switch(Switchable device) {
         this.device = device;
     }
-    
+
     public void operate() {
         device.turnOn();
     }
@@ -338,7 +338,7 @@ Let's see how SOLID principles work together in a real system.
 ```java
 class Order {
     private List<Item> items;
-    
+
     public void addItem(Item item) { /* ... */ }
     public void calculateTotal() { /* ... */ }
     public void processPayment() { /* ... */ }
@@ -372,7 +372,7 @@ interface NotificationService {
 class Order {
     private List<Item> items;
     private final OrderCalculator calculator;
-    
+
     public void addItem(Item item) { /* ... */ }
 }
 
@@ -380,7 +380,7 @@ class OrderService {
     private final OrderRepository repository;
     private final PaymentProcessor paymentProcessor;
     private final NotificationService notificationService;
-    
+
     public void processOrder(Order order) {
         paymentProcessor.process(order);
         repository.save(order);

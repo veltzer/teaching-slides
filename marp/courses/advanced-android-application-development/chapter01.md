@@ -121,7 +121,7 @@ public class DataLoader {
             try {
                 // Simulate network call
                 Thread.sleep(2000);
-                
+
                 // Update UI on main thread
                 activity.runOnUiThread(() -> {
                     updateUI();
@@ -163,12 +163,12 @@ public class SafeOperation {
 ```java
 public class AppException extends Exception {
     private final ErrorType type;
-    
+
     public AppException(ErrorType type, String message) {
         super(message);
         this.type = type;
     }
-    
+
     public ErrorType getType() {
         return type;
     }
@@ -186,7 +186,7 @@ public class Exercise {
         List<String> names = Arrays.asList(
             "Alice", "Bob", "Charlie", "David"
         );
-        
+
         // TODO: Use streams to:
         // 1. Filter names longer than 4 characters
         // 2. Convert to uppercase

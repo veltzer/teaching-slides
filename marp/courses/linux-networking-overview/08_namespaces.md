@@ -15,7 +15,7 @@
 
 ---
 
-## What are Namespaces?
+## What are Namespaces
 
 ![0](../../../out/mermaid/marp/courses/linux-networking-overview/08_namespaces.md/0.png)
 

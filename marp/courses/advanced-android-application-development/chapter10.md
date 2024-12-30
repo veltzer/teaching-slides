@@ -16,46 +16,46 @@
 public class UserViewModelTest {
     @Mock
     private UserRepository repository;
-    
+
     @Mock
     private SavedStateHandle savedStateHandle;
-    
+
     private UserViewModel viewModel;
-    
+
     @Before
     public void setup() {
         viewModel = new UserViewModel(repository, savedStateHandle);
     }
-    
+
     @Test
     public void getUserData_Success() {
         // Arrange
         User testUser = new User("1", "John Doe");
         when(repository.getUser("1"))
             .thenReturn(Single.just(testUser));
-            
+
         // Act
         viewModel.loadUser("1");
-        
+
         // Assert
         verify(repository).getUser("1");
-        assertEquals(testUser, 
+        assertEquals(testUser,
             viewModel.getUserLiveData().getValue());
     }
-    
+
     @Test
     public void getUserData_Error() {
         // Arrange
         Exception error = new Exception("Network error");
         when(repository.getUser("1"))
             .thenReturn(Single.error(error));
-            
+
         // Act
         viewModel.loadUser("1");
-        
+
         // Assert
         verify(repository).getUser("1");
-        assertEquals(error.getMessage(), 
+        assertEquals(error.getMessage(),
             viewModel.getErrorLiveData().getValue());
     }
 }
@@ -77,18 +77,18 @@ public class LoginActivityTest {
         // Enter email
         onView(withId(R.id.email_input))
             .perform(typeText("test@example.com"));
-            
+
         // Enter password
         onView(withId(R.id.password_input))
             .perform(typeText("password123"));
-            
+
         // Close keyboard
         closeSoftKeyboard();
-        
+
         // Click login button
         onView(withId(R.id.login_button))
             .perform(click());
-            
+
         // Verify navigation to main activity
         onView(withId(R.id.main_container))
             .check(matches(isDisplayed()));
@@ -99,14 +99,14 @@ public class LoginActivityTest {
         // Enter invalid email
         onView(withId(R.id.email_input))
             .perform(typeText("invalid-email"));
-            
+
         // Close keyboard
         closeSoftKeyboard();
-        
+
         // Click login button
         onView(withId(R.id.login_button))
             .perform(click());
-            
+
         // Verify error message
         onView(withId(R.id.error_text))
             .check(matches(withText(R.string.invalid_email)));
@@ -129,10 +129,10 @@ public class UserRepositoryTest {
     public void setup() {
         Context context = ApplicationProvider.getApplicationContext();
         database = Room.inMemoryDatabaseBuilder(
-            context, 
+            context,
             UserDatabase.class
         ).build();
-        
+
         apiService = mock(ApiService.class);
         repository = new UserRepository(database, apiService);
     }
@@ -142,18 +142,18 @@ public class UserRepositoryTest {
         // Setup test data
         User localUser = new User("1", "Local User");
         User remoteUser = new User("1", "Remote User");
-        
+
         // Insert local data
         database.userDao().insert(localUser);
-        
+
         // Mock network response
         when(apiService.getUser("1"))
             .thenReturn(Single.just(remoteUser));
-            
+
         // Test repository
-        TestObserver<User> testObserver = 
+        TestObserver<User> testObserver =
             repository.getUser("1").test();
-            
+
         // Verify emissions
         testObserver.assertValues(localUser, remoteUser);
     }
@@ -169,7 +169,7 @@ public class LeakDetectionApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        
+
         if (BuildConfig.DEBUG) {
             LeakCanary.install(this);
         }
@@ -178,15 +178,15 @@ public class LeakDetectionApplication extends Application {
 
 public class MainActivity extends AppCompatActivity {
     private static Context leakyContext;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+
         // Memory leak - storing activity context
         leakyContext = this;
     }
-    
+
     // Fix: Clear reference in onDestroy
     @Override
     protected void onDestroy() {
@@ -209,22 +209,22 @@ public class MainActivity extends AppCompatActivity {
 ```java
 public class DebugLogger {
     private static final String TAG = "AppDebug";
-    
+
     public static void log(String message) {
         if (BuildConfig.DEBUG) {
             Log.d(TAG, message);
         }
     }
-    
+
     public static void logMethod() {
         if (BuildConfig.DEBUG) {
-            StackTraceElement[] stackTrace = 
+            StackTraceElement[] stackTrace =
                 Thread.currentThread().getStackTrace();
-            Log.d(TAG, "Method: " + 
+            Log.d(TAG, "Method: " +
                 stackTrace[3].getMethodName());
         }
     }
-    
+
     public static void logError(String message, Throwable e) {
         if (BuildConfig.DEBUG) {
             Log.e(TAG, message, e);
@@ -258,7 +258,7 @@ android {
             buildConfigField "boolean", "ENABLE_LOGGING", "true"
             buildConfigField "String", "API_URL", "\"http://dev-api.example.com\""
         }
-        
+
         release {
             debuggable false
             minifyEnabled true

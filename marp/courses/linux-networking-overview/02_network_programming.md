@@ -146,10 +146,10 @@ int main() {
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(8080);
-    
+
     bind(server_fd, (struct sockaddr*)&address, sizeof(address));
     listen(server_fd, 3);
-    
+
     while(1) {
         int client_fd = accept(server_fd, NULL, NULL);
         // Handle client connection

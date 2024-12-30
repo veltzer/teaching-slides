@@ -13,7 +13,7 @@
 
 ---
 
-## What is a Kernel Module?
+## What is a Kernel Module
 
 - Loadable kernel module (LKM)
 - Extends kernel functionality
@@ -57,18 +57,18 @@ MODULE_DESCRIPTION("A simple kernel module");
 static int __init my_module_init(void)
 {
     int ret;
-    
+
     // Allocate resources
     ret = resource_allocation();
     if (ret < 0)
         return ret;
-        
+
     // Initialize data structures
     if (!init_structures()) {
         cleanup_resources();
         return -ENOMEM;
     }
-    
+
     return 0;
 }
 ```
@@ -82,10 +82,10 @@ static void __exit my_module_exit(void)
 {
     // Free allocated resources
     cleanup_resources();
-    
+
     // Destroy data structures
     cleanup_structures();
-    
+
     // Final cleanup
     pr_info("Cleanup complete\n");
 }

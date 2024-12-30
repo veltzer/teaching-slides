@@ -102,7 +102,7 @@ public abstract class AppDatabase extends RoomDatabase {
 public class Book {
     @PrimaryKey
     public int bookId;
-    
+
     public String title;
     public int authorId;
 }
@@ -111,7 +111,7 @@ public class Book {
 public class Author {
     @PrimaryKey
     public int authorId;
-    
+
     public String name;
 }
 
@@ -138,7 +138,7 @@ public class PreferenceManager {
 
     public PreferenceManager(Context context) {
         prefs = context.getSharedPreferences(
-            PREF_NAME, 
+            PREF_NAME,
             Context.MODE_PRIVATE
         );
     }
@@ -170,7 +170,7 @@ public class FileManager {
     private final Context context;
 
     public void saveFile(String filename, String content) {
-        try (FileOutputStream fos = 
+        try (FileOutputStream fos =
                 context.openFileOutput(filename, Context.MODE_PRIVATE)) {
             fos.write(content.getBytes());
         } catch (IOException e) {
@@ -197,9 +197,9 @@ public class FileManager {
 
 ```java
 public class UserProvider extends ContentProvider {
-    private static final String AUTHORITY = 
+    private static final String AUTHORITY =
         "com.example.app.provider";
-    private static final Uri CONTENT_URI = 
+    private static final Uri CONTENT_URI =
         Uri.parse("content://" + AUTHORITY + "/users");
 
     @Override
@@ -231,7 +231,7 @@ public class UserProvider extends ContentProvider {
     version = 2
 )
 public abstract class AppDatabase extends RoomDatabase {
-    static final Migration MIGRATION_1_2 = 
+    static final Migration MIGRATION_1_2 =
         new Migration(1, 2) {
         @Override
         public void migrate(SupportSQLiteDatabase db) {
@@ -243,7 +243,7 @@ public abstract class AppDatabase extends RoomDatabase {
     };
 
     public static AppDatabase getInstance(Context context) {
-        return Room.databaseBuilder(context, 
+        return Room.databaseBuilder(context,
                 AppDatabase.class, "database-name")
                 .addMigrations(MIGRATION_1_2)
                 .build();
@@ -260,7 +260,7 @@ public class BackupManager {
     public void backupDatabase(Context context) {
         File dbFile = context.getDatabasePath("app_database");
         File backupFile = new File(
-            context.getExternalFilesDir(null), 
+            context.getExternalFilesDir(null),
             "backup_" + System.currentTimeMillis()
         );
 

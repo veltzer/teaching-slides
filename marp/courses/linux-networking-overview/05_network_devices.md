@@ -114,14 +114,14 @@ const struct net_device_ops my_netdev_ops = {
 static int my_init(void)
 {
     struct net_device *dev;
-    
+
     dev = alloc_etherdev(sizeof(struct my_priv));
     if (!dev)
         return -ENOMEM;
-        
+
     dev->netdev_ops = &my_netdev_ops;
     dev->ethtool_ops = &my_ethtool_ops;
-    
+
     return register_netdev(dev);
 }
 ```
@@ -151,17 +151,17 @@ struct my_priv *priv = netdev_priv(dev);
 static int my_open(struct net_device *dev)
 {
     struct my_priv *priv = netdev_priv(dev);
-    
+
     // Initialize hardware
     if (init_hardware(priv) < 0)
         return -EIO;
-        
+
     // Start tx queue
     netif_start_queue(dev);
-    
+
     // Enable interrupts
     enable_irq(dev->irq);
-    
+
     return 0;
 }
 ```
@@ -174,16 +174,16 @@ static int my_open(struct net_device *dev)
 static int my_stop(struct net_device *dev)
 {
     struct my_priv *priv = netdev_priv(dev);
-    
+
     // Disable interrupts
     disable_irq(dev->irq);
-    
+
     // Stop tx queue
     netif_stop_queue(dev);
-    
+
     // Cleanup hardware
     cleanup_hardware(priv);
-    
+
     return 0;
 }
 ```
@@ -197,19 +197,19 @@ static netdev_tx_t my_start_xmit(struct sk_buff *skb,
                                 struct net_device *dev)
 {
     struct my_priv *priv = netdev_priv(dev);
-    
+
     // Check if queue is full
     if (tx_ring_full(priv)) {
         netif_stop_queue(dev);
         return NETDEV_TX_BUSY;
     }
-    
+
     // Copy data to tx ring
     copy_to_tx_ring(priv, skb);
-    
+
     // Free skb
     dev_kfree_skb(skb);
-    
+
     return NETDEV_TX_OK;
 }
 ```
@@ -223,13 +223,13 @@ static irqreturn_t my_interrupt(int irq, void *dev_id)
 {
     struct net_device *dev = dev_id;
     struct my_priv *priv = netdev_priv(dev);
-    
+
     // Disable device interrupts
     disable_device_interrupts(priv);
-    
+
     // Schedule NAPI poll
     napi_schedule(&priv->napi);
-    
+
     return IRQ_HANDLED;
 }
 ```
@@ -244,20 +244,20 @@ static int my_poll(struct napi_struct *napi, int budget)
     struct my_priv *priv = container_of(napi,
                                       struct my_priv, napi);
     int work_done = 0;
-    
+
     while (work_done < budget) {
         // Process received packets
         if (!process_rx(priv))
             break;
         work_done++;
     }
-    
+
     // If all work done, exit polling
     if (work_done < budget) {
         napi_complete(napi);
         enable_device_interrupts(priv);
     }
-    
+
     return work_done;
 }
 ```
@@ -281,7 +281,7 @@ struct my_priv {
 static int my_probe(struct pci_dev *pdev)
 {
     struct my_priv *priv;
-    
+
     // Map device memory
     priv->base_addr = ioremap(pci_resource_start(pdev, 0),
                              pci_resource_len(pdev, 0));
@@ -315,10 +315,10 @@ dma_free_coherent(&pdev->dev, size,
 static struct net_device_stats *my_get_stats(struct net_device *dev)
 {
     struct my_priv *priv = netdev_priv(dev);
-    
+
     // Update statistics from hardware
     update_statistics(priv);
-    
+
     return &dev->stats;
 }
 ```

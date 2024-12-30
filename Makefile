@@ -30,7 +30,7 @@ DO_MD_ASPELL:=1
 # do you want to check that the md files are pure ASCII?
 DO_MD_ASCII:=0
 # do you want to run mdl on md files?
-DO_MD_MDL:=0
+DO_MD_MDL:=1
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
 # do you want to convert mermaid diagrams into png?
@@ -320,7 +320,7 @@ $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(info doing [$@])
 	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)pymakehelper touch_mkdir $@
-$(MERMAID_PNG): out/%.png: %.mmd .mdlrc .mdl.style.rb
+$(MERMAID_PNG): out/%.png: %.mmd
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)flock /tmp/mermaid_png pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@

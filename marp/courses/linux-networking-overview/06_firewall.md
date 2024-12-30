@@ -14,7 +14,7 @@
 
 ---
 
-## What is a Firewall?
+## What is a Firewall
 
 ![0](../../../out/mermaid/marp/courses/linux-networking-overview/06_firewall.md/0.png)
 
@@ -23,16 +23,16 @@
 ## Firewall Types
 
 1. **Packet Filtering**
-   - Network layer filtering
-   - IP/port based rules
+    - Network layer filtering
+    - IP/port based rules
 
 1. **Stateful Inspection**
-   - Connection tracking
-   - Context-aware
+    - Connection tracking
+    - Context-aware
 
 1. **Application Layer**
-   - Deep packet inspection
-   - Protocol awareness
+    - Deep packet inspection
+    - Protocol awareness
 
 ---
 

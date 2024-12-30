@@ -180,15 +180,15 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        
+
         // Inject dependencies
         ((App) getApplication()).getAppComponent().inject(this);
-        
+
         // Observe ViewModel
         viewModel.getUser().observe(this, this::updateUI);
-        
+
         // Handle events
-        buttonLoad.setOnClickListener(v -> 
+        buttonLoad.setOnClickListener(v ->
             viewModel.dispatch(new LoadUser("123"))
         );
     }
@@ -203,12 +203,12 @@ public class UserActivity extends AppCompatActivity {
 @RunWith(JUnit4.class)
 public class UserViewModelTest {
     @Rule
-    public InstantTaskExecutorRule instantTaskExecutorRule = 
+    public InstantTaskExecutorRule instantTaskExecutorRule =
         new InstantTaskExecutorRule();
 
     @Mock
     private UserRepository repository;
-    
+
     private UserViewModel viewModel;
 
     @Test

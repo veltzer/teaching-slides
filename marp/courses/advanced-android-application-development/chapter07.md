@@ -26,14 +26,14 @@ public class DownloadService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         createNotificationChannel();
         startForeground(NOTIFICATION_ID, createNotification());
-        
+
         // Start download operation
         new Thread(() -> {
             performDownload();
             stopForeground(true);
             stopSelf();
         }).start();
-        
+
         return START_NOT_STICKY;
     }
 
@@ -66,7 +66,7 @@ public class DownloadService extends Service {
 ```java
 public class DataSyncWorker extends Worker {
     public DataSyncWorker(
-            Context context, 
+            Context context,
             WorkerParameters params) {
         super(context, params);
     }
@@ -163,10 +163,10 @@ public class NetworkChangeReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (ConnectivityManager.CONNECTIVITY_ACTION.equals(
                 intent.getAction())) {
-            
-            ConnectivityManager cm = (ConnectivityManager) 
+
+            ConnectivityManager cm = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
-                
+
             NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
             boolean isConnected = activeNetwork != null &&
                 activeNetwork.isConnectedOrConnecting();
@@ -192,7 +192,7 @@ registerReceiver(new NetworkChangeReceiver(), filter);
 ```java
 public class AlarmScheduler {
     public void scheduleAlarm(Context context) {
-        AlarmManager alarmManager = (AlarmManager) 
+        AlarmManager alarmManager = (AlarmManager)
             context.getSystemService(Context.ALARM_SERVICE);
 
         Intent intent = new Intent(context, AlarmReceiver.class);

@@ -15,7 +15,7 @@
 
 ---
 
-## What is eBPF?
+## What is eBPF
 
 ![0](../../../out/mermaid/marp/courses/linux-networking-overview/09_ebpf.md/0.png)
 
@@ -144,7 +144,7 @@ if (!value)
 
 // Map update
 u64 new_value = 5678;
-bpf_map_update_elem(&my_map, &key, &new_value, 
+bpf_map_update_elem(&my_map, &key, &new_value,
                     BPF_ANY);
 ```
 
@@ -240,8 +240,8 @@ int trace_tcp_sendmsg(struct pt_regs *ctx)
 {
     u64 ts = bpf_ktime_get_ns();
     u32 pid = bpf_get_current_pid_tgid();
-    
-    bpf_map_update_elem(&start_time, &pid, &ts, 
+
+    bpf_map_update_elem(&start_time, &pid, &ts,
                         BPF_ANY);
     return 0;
 }

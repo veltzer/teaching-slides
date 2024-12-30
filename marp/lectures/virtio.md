@@ -5,7 +5,7 @@
 
 ---
 
-## What is Virtio?
+## What is Virtio
 
 - Standard for virtual device interfaces
 - Efficient I/O virtualization
@@ -35,6 +35,7 @@
 ---
 
 ## Basic Virtio Architecture
+
 ```c
 struct virtio_device {
     struct device dev;
@@ -57,6 +58,7 @@ struct virtio_device {
 ---
 
 ## Split Virtqueue Structure
+
 ```c
 struct virtqueue {
     struct virtio_device *vdev;
@@ -133,12 +135,12 @@ int virtqueue_add_sgs(struct virtqueue *vq,
     unsigned int i, total_sg = out_num + in_num;
     struct scatterlist *sg;
     struct vring_desc *desc;
-    
+
     /* Initialize descriptors */
     for (i = 0; i < total_sg; i++) {
         /* Setup descriptor chain */
     }
-    
+
     return 0;
 }
 ```
@@ -179,10 +181,10 @@ static inline void virtqueue_kick(struct virtqueue *vq)
 void vring_interrupt(int irq, void *_vq)
 {
     struct virtqueue *vq = _vq;
-    
+
     if (!vq->vq_ops->get_buf(vq, &len))
         return;
-        
+
     /* Process completed buffer */
     vq->callback(vq);
 }
@@ -237,13 +239,13 @@ static inline void virtio_wmb(struct virtio_device *vdev)
 static int virtio_dev_probe(struct virtio_device *vdev)
 {
     int err;
-    
+
     err = setup_vqs(vdev);
     if (err)
         goto err_setup_vqs;
-        
+
     return 0;
-    
+
 err_setup_vqs:
     cleanup_vqs(vdev);
     return err;
