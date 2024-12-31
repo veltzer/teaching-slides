@@ -13,7 +13,7 @@
 
 ---
 
-## What is Isolation?
+## What is Isolation
 
 - Part of ACID properties
 - Handles concurrent transactions
@@ -136,10 +136,10 @@ CREATE TABLE accounts (
 );
 
 -- Update with version check
-UPDATE accounts 
+UPDATE accounts
 SET balance = balance - 100,
     version = version + 1
-WHERE id = 1 
+WHERE id = 1
 AND version = 5;
 
 -- If no rows updated, transaction conflicts detected
@@ -151,12 +151,12 @@ AND version = 5;
 
 ```sql
 -- Explicit row lock
-SELECT * FROM accounts 
-WHERE id = 1 
+SELECT * FROM accounts
+WHERE id = 1
 FOR UPDATE;
 
 -- Skip locked rows
-SELECT * FROM accounts 
+SELECT * FROM accounts
 WHERE status = 'pending'
 FOR UPDATE SKIP LOCKED
 LIMIT 1;
@@ -174,11 +174,11 @@ def transfer_money(from_id, to_id, amount):
                 # Lock both accounts
                 from_acc = Account.objects.select_for_update().get(id=from_id)
                 to_acc = Account.objects.select_for_update().get(id=to_id)
-                
+
                 # Perform transfer
                 from_acc.balance -= amount
                 to_acc.balance += amount
-                
+
                 from_acc.save()
                 to_acc.save()
                 break
@@ -200,14 +200,14 @@ def transfer_money(from_id, to_id, amount):
 def safe_update(account_ids, callback):
     # Sort IDs to ensure consistent lock order
     sorted_ids = sorted(account_ids)
-    
+
     with transaction.atomic():
         # Lock in consistent order
         accounts = [
             Account.objects.select_for_update().get(id=id)
             for id in sorted_ids
         ]
-        
+
         # Perform updates
         callback(accounts)
 ```
@@ -227,12 +227,12 @@ def safe_update(account_ids, callback):
 BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 -- Check constraint
-SELECT COUNT(*) FROM doctors 
+SELECT COUNT(*) FROM doctors
 WHERE on_call = true AND id != 123;
 
 -- Update if safe
-UPDATE doctors 
-SET on_call = false 
+UPDATE doctors
+SET on_call = false
 WHERE id = 123;
 
 COMMIT;

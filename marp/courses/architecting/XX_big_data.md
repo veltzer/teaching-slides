@@ -36,15 +36,15 @@ Additional V's:
 ## Data Sources
 
 1. Structured Data
-   - Databases
-   - CSV files
+    - Databases
+    - CSV files
 1. Semi-structured
-   - JSON
-   - XML
+    - JSON
+    - XML
 1. Unstructured
-   - Text
-   - Images
-   - Videos
+    - Text
+    - Images
+    - Videos
 
 ---
 
@@ -89,7 +89,7 @@ import boto3
 
 def store_data(data, bucket, key):
     s3 = boto3.client('s3')
-    
+
     # Store with lifecycle policy
     s3.put_object(
         Bucket=bucket,
@@ -165,7 +165,7 @@ result.write \
 ## Streaming Example (Flink)
 
 ```java
-StreamExecutionEnvironment env = 
+StreamExecutionEnvironment env =
     StreamExecutionEnvironment.getExecutionEnvironment();
 
 DataStream<Event> events = env
@@ -205,7 +205,7 @@ env.execute("Streaming Pipeline");
 
 ```sql
 WITH daily_stats AS (
-  SELECT 
+  SELECT
     date_trunc('day', timestamp) as day,
     user_id,
     count(*) as events,
@@ -214,7 +214,7 @@ WITH daily_stats AS (
   WHERE date >= date_add('day', -30, current_date)
   GROUP BY 1, 2
 )
-SELECT 
+SELECT
   day,
   count(distinct user_id) as users,
   sum(events) as total_events,
@@ -278,15 +278,15 @@ from great_expectations.dataset import SparkDFDataset
 
 def validate_dataset(df):
     data = SparkDFDataset(df)
-    
+
     # Add expectations
     data.expect_column_values_to_not_be_null("user_id")
     data.expect_column_values_to_be_between("amount", 0, 1000000)
     data.expect_column_values_to_match_regex("email", r"[^@]+@[^@]+\.[^@]+")
-    
+
     # Validate
     results = data.validate()
-    
+
     if not results["success"]:
         raise DataQualityException(results)
 ```
@@ -320,7 +320,7 @@ resources:
     cores: 8
     memory: "32g"
     instances: 10
-  
+
 dynamic:
   minExecutors: 2
   maxExecutors: 20
@@ -335,11 +335,11 @@ dynamic:
 def secure_data_access():
     # Enable encryption
     spark.conf.set("spark.hadoop.fs.s3a.encryption.enabled", "true")
-    
+
     # Set up authentication
-    spark.conf.set("spark.hadoop.fs.s3a.aws.credentials.provider", 
+    spark.conf.set("spark.hadoop.fs.s3a.aws.credentials.provider",
                   "com.amazonaws.auth.WebIdentityTokenCredentialsProvider")
-    
+
     # Enable audit logging
     spark.conf.set("spark.hadoop.fs.s3a.audit.enabled", "true")
 ```
@@ -401,7 +401,7 @@ def optimize_storage():
         },
         StorageClass="GLACIER"
     )
-    
+
     # Delete from hot storage
     s3.delete_object(
         Bucket="hot-bucket",
@@ -440,7 +440,7 @@ def optimize_partitioning(df):
         num_partitions=calculate_optimal_partitions(df),
         partitionBy=["year", "month", "day"]
     )
-    
+
     # Write with optimization
     df.write \
         .option("maxRecordsPerFile", 1000000) \
