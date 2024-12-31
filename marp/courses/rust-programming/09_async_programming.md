@@ -3,7 +3,7 @@
 
 ---
 
-## Why Async?
+## Why Async
 
 ![0](../../../out/mermaid/marp/courses/rust-programming/09_async_programming.md/0.png)
 
