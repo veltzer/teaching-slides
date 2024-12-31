@@ -41,17 +41,20 @@ grep "^john:" /etc/passwd
 # Count users
 wc -l /etc/passwd
 ```
+
 ---
 ## The `/etc/shadow` File
 
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/1.png)
 
 Structure:
+
 ```txt
 username:password:lastchg:min:max:warn:inactive:expire:
 ```
 
 Example:
+
 ```bash
 john:$6$xyz...:18900:0:99999:7:::
 ```
@@ -77,6 +80,7 @@ chown -R john:developers directory/
 ```
 
 Output example:
+
 ```txt
 -rw-r--r-- 1 john developers 4096 Nov 19 10:00 file.txt
 ```
@@ -143,6 +147,7 @@ Access check order:
 ## Changing Modes and Ownership
 
 Symbolic mode:
+
 ```bash
 # Add execute for user
 chmod u+x file.txt
@@ -158,6 +163,7 @@ chmod ug+x file.txt
 ```
 
 Octal mode:
+
 ```bash
 # rwxr-xr--
 chmod 754 file.txt
@@ -168,12 +174,14 @@ chmod 777 file.txt
 # r--------
 chmod 400 file.txt
 ```
+
 ---
 ## Special Permissions
 
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/4.png)
 
 Examples:
+
 ```bash
 # Set SUID
 chmod u+s file.txt
@@ -187,12 +195,14 @@ chmod 2755 directory
 chmod +t directory
 chmod 1755 directory
 ```
+
 ---
 ## The umask Command
 
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/5.png)
 
 Common umask values:
+
 ```bash
 # View current umask
 umask
@@ -203,10 +213,12 @@ umask 027  # rwxr-x---
 # Set common permissions
 umask 022  # rwxr-xr-x
 ```
+
 ---
 ## Practical Security Examples
 
 1. Setting up a shared directory:
+
 ```bash
 # Create directory
 mkdir /shared
@@ -217,6 +229,7 @@ chmod 2775 /shared  # SGID + rwxrwxr-x
 ```
 
 1. Securing sensitive files:
+
 ```bash
 # Create private directory
 mkdir ~/.private
@@ -225,10 +238,12 @@ chmod 700 ~/.private
 # Set secure umask
 umask 077
 ```
+
 ---
 ## Security Best Practices
 
 1. File Permissions:
+
 ```bash
 # Secure configuration files
 chmod 600 ~/.ssh/config
@@ -240,6 +255,7 @@ chmod 700 ~/.ssh
 ```
 
 1. Group Management:
+
 ```bash
 # Create group
 sudo groupadd developers
@@ -250,12 +266,14 @@ sudo usermod -aG developers john
 # Check group membership
 groups john
 ```
+
 ---
 ## Advanced Security Topics
 
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/06_security.md/6.png)
 
 Example with ACLs:
+
 ```bash
 # Set ACL
 setfacl -m u:john:rx file.txt

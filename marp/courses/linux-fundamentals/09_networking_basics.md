@@ -16,6 +16,7 @@ Common examples:
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/1.png)
 
 Using ifconfig:
+
 ```bash
 # Show all interfaces
 ifconfig
@@ -27,6 +28,7 @@ ifconfig eth0 192.168.1.100 netmask 255.255.255.0
 ifconfig eth0 up
 ifconfig eth0 down
 ```
+
 ---
 ## Modern IP Command
 
@@ -46,12 +48,14 @@ ip route show
 # Add route
 ip route add default via 192.168.1.1
 ```
+
 ---
 ## Interface Management
 
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/2.png)
 
 Basic commands:
+
 ```bash
 # Bring interface up
 ifup eth0
@@ -63,12 +67,14 @@ ifdown eth0
 ifconfig eth0
 ip link show eth0
 ```
+
 ---
 ## Network Statistics (netstat)
 
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/3.png)
 
 Common options:
+
 ```bash
 # Show all connections
 netstat -a
@@ -85,6 +91,7 @@ netstat -s
 # Show routing table
 netstat -r
 ```
+
 ---
 ## SSH (Secure Shell)
 
@@ -102,12 +109,14 @@ ssh -p 2222 user@remote.host
 # Run remote command
 ssh user@remote.host 'ls -l'
 ```
+
 ---
 ## SSH Configuration and Keys
 
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/5.png)
 
 Key management:
+
 ```bash
 # Generate key pair
 ssh-keygen -t rsa -b 4096
@@ -121,12 +130,14 @@ Host server1
     User username
     Port 2222
 ```
+
 ---
 ## Remote File Transfer
 
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/6.png)
 
 Examples:
+
 ```bash
 # Copy file to remote
 scp file.txt user@remote.host:~/
@@ -137,6 +148,7 @@ scp user@remote.host:file.txt .
 # Sync directories
 rsync -av local/ user@remote.host:backup/
 ```
+
 ---
 ## Legacy Remote Commands
 
@@ -162,6 +174,7 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 ![7](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/7.png)
 
 Configuration files:
+
 ```bash
 # System-wide trust
 /etc/hosts.equiv
@@ -172,12 +185,14 @@ Configuration files:
 # SSH trust
 ~/.ssh/authorized_keys
 ```
+
 ---
 ## Network Troubleshooting
 
 ![8](../../../out/mermaid/marp/courses/linux-fundamentals/09_networking_basics.md/8.png)
 
 Common commands:
+
 ```bash
 # Test connectivity
 ping google.com
@@ -192,6 +207,7 @@ nslookup google.com
 # Packet capture
 tcpdump -i eth0
 ```
+
 ---
 ## Network Security Basics
 
@@ -209,10 +225,12 @@ tail -f /var/log/auth.log
 # Monitor network traffic
 iftop -i eth0
 ```
+
 ---
 ## Practical Examples
 
 1. Remote Server Setup:
+
 ```bash
 # Generate SSH key
 ssh-keygen -t rsa
@@ -236,6 +254,7 @@ EOF
 rsync -avz --progress /local/dir/ \
     user@remote:/backup/
 ```
+
 ---
 ## Best Practices
 

@@ -6,6 +6,7 @@
 ![0](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/0.png)
 
 Basic script:
+
 ```bash
 #!/bin/bash
 # My first script
@@ -13,6 +14,7 @@ echo "Hello, World!"
 ```
 
 Running the script:
+
 ```bash
 chmod +x script.sh
 ./script.sh
@@ -51,6 +53,7 @@ exit 0
 ![1](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/1.png)
 
 Variable examples:
+
 ```bash
 # Assignment
 name="John"
@@ -75,6 +78,7 @@ read -p "Enter name: " user_name
 ![2](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/2.png)
 
 Argument handling:
+
 ```bash
 #!/bin/bash
 
@@ -120,6 +124,7 @@ let "count--"
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/3.png)
 
 Error handling:
+
 ```bash
 #!/bin/bash
 
@@ -144,6 +149,7 @@ fi
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/4.png)
 
 Examples:
+
 ```bash
 # Arithmetic
 [ $a -eq $b ]  # Equal
@@ -217,6 +223,7 @@ esac
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/10_shell_scripting.md/5.png)
 
 Examples:
+
 ```bash
 # For loop
 for i in 1 2 3 4 5; do
@@ -273,17 +280,17 @@ backup_files() {
     local source_dir="$1"
     local backup_dir="$2"
     local timestamp=$(date +%Y%m%d_%H%M%S)
-    
+
     # Check directories
     if [ ! -d "$source_dir" ]; then
         echo "Error: Source directory not found"
         return 1
     fi
-    
+
     # Create backup
     tar -czf "$backup_dir/backup_$timestamp.tar.gz" \
         -C "$source_dir" .
-    
+
     if [ $? -eq 0 ]; then
         echo "Backup created successfully"
         return 0

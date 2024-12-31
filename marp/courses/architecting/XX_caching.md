@@ -14,7 +14,7 @@
 
 ---
 
-## What is Caching?
+## What is Caching
 
 - Temporary storage of data for faster access
 - Reduces load on backend systems
@@ -77,10 +77,10 @@ def get_product(product_id):
     cached = redis_client.get(f"product:{product_id}")
     if cached:
         return json.loads(cached)
-    
+
     # Get from database
     product = database.get_product(product_id)
-    
+
     # Store in cache for 1 hour
     redis_client.setex(
         f"product:{product_id}",
@@ -140,7 +140,7 @@ def get_trending_posts():
     cached = cache.get('trending_posts')
     if cached:
         return cached
-        
+
     posts = Post.objects.filter(is_trending=True)
     # Cache for 15 minutes
     cache.set('trending_posts', posts, timeout=900)
@@ -220,14 +220,14 @@ async function handleRequest(request) {
   // Get from cache first
   const cache = caches.default
   let response = await cache.match(request)
-  
+
   if (!response) {
     // Process at edge
     response = await processAtEdge(request)
     // Cache the response
     await cache.put(request, response.clone())
   }
-  
+
   return response
 }
 ```
@@ -252,14 +252,14 @@ from sklearn.linear_model import LogisticRegression
 def predict_cache_needs():
     # Analyze access patterns
     access_patterns = get_access_logs()
-    
+
     # Train model
     model = LogisticRegression()
     model.fit(access_patterns)
-    
+
     # Predict future needs
     future_needs = model.predict(upcoming_timeframe)
-    
+
     # Warm up cache
     precache_content(future_needs)
 ```
@@ -283,11 +283,11 @@ class SmartCache:
     def __init__(self):
         self.cache = {}
         self.ml_model = train_cache_model()
-    
+
     def should_cache(self, content):
         features = extract_features(content)
         return self.ml_model.predict(features)[0]
-    
+
     def cache_content(self, key, content):
         if self.should_cache(content):
             self.cache[key] = content

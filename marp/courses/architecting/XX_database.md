@@ -38,12 +38,12 @@
 ```sql
 BEGIN TRANSACTION;
 
-UPDATE accounts 
-SET balance = balance - 100 
+UPDATE accounts
+SET balance = balance - 100
 WHERE account_id = 'A';
 
-UPDATE accounts 
-SET balance = balance + 100 
+UPDATE accounts
+SET balance = balance + 100
 WHERE account_id = 'B';
 
 COMMIT;
@@ -208,20 +208,20 @@ with driver.session() as session:
 
 ```sql
 -- B-Tree index
-CREATE INDEX idx_users_email 
+CREATE INDEX idx_users_email
 ON users(email);
 
 -- Composite index
-CREATE INDEX idx_users_name_email 
+CREATE INDEX idx_users_name_email
 ON users(name, email);
 
 -- Partial index
-CREATE INDEX idx_active_users 
-ON users(email) 
+CREATE INDEX idx_active_users
+ON users(email)
 WHERE status = 'active';
 
 -- Full-text search index
-CREATE INDEX idx_users_full_text 
+CREATE INDEX idx_users_full_text
 ON users USING GIN (to_tsvector('english', description));
 ```
 
@@ -245,12 +245,12 @@ CREATE TABLE orders (
     amount decimal
 ) PARTITION BY RANGE (order_date);
 
-CREATE TABLE orders_2023 
-PARTITION OF orders 
+CREATE TABLE orders_2023
+PARTITION OF orders
 FOR VALUES FROM ('2023-01-01') TO ('2024-01-01');
 
-CREATE TABLE orders_2024 
-PARTITION OF orders 
+CREATE TABLE orders_2024
+PARTITION OF orders
 FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 ```
 
@@ -329,7 +329,7 @@ members:
 ```python
 def backup_database():
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    
+
     # Full backup
     subprocess.run([
         'pg_dump',
@@ -338,7 +338,7 @@ def backup_database():
         '-d', 'mydb',
         '-f', f'backup_{timestamp}.sql'
     ])
-    
+
     # Compress
     subprocess.run([
         'gzip',
@@ -362,17 +362,17 @@ def backup_database():
 
 ```sql
 -- Before optimization
-SELECT * FROM orders 
-WHERE status = 'pending' 
+SELECT * FROM orders
+WHERE status = 'pending'
 AND created_at > '2024-01-01';
 
 -- After optimization
-CREATE INDEX idx_orders_status_date 
+CREATE INDEX idx_orders_status_date
 ON orders(status, created_at);
 
-SELECT order_id, status, amount 
-FROM orders 
-WHERE status = 'pending' 
+SELECT order_id, status, amount
+FROM orders
+WHERE status = 'pending'
 AND created_at > '2024-01-01';
 ```
 
@@ -416,7 +416,7 @@ def get_user(user_id):
     user = redis_client.get(f'user:{user_id}')
     if user:
         return json.loads(user)
-    
+
     # Fallback to database
     user = db.query(f"SELECT * FROM users WHERE id = {user_id}")
     redis_client.setex(f'user:{user_id}', 3600, json.dumps(user))
@@ -455,8 +455,8 @@ def get_user(user_id):
 
 ```python
 # User management
-CREATE ROLE readonly WITH 
-    LOGIN 
+CREATE ROLE readonly WITH
+    LOGIN
     PASSWORD 'secure_password'
     CONNECTION LIMIT 10
     VALID UNTIL '2025-01-01';
@@ -486,21 +486,21 @@ ALTER SYSTEM SET ssl_key_file = 'server.key';
 def migrate_data():
     # Create new schema
     execute_ddl("new_schema.sql")
-    
+
     # Migrate in batches
     last_id = 0
     batch_size = 1000
-    
+
     while True:
         # Get batch
         records = get_batch(last_id, batch_size)
         if not records:
             break
-            
+
         # Transform and load
         transform_and_load(records)
         last_id = records[-1].id
-        
+
         # Verify
         verify_migration(records)
 ```

@@ -5,7 +5,7 @@
 
 ## Traditional Kafka vs Streaming
 
-Traditional Message Processing:
+Traditional Message Processing
 ![0](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/0.png)
 
 * Messages are **consumed and committed**
@@ -53,14 +53,14 @@ Traditional Message Processing:
 
 ## Kafka vs SQS: Use Cases
 
-### Kafka Ideal For:
+### Kafka Ideal For
 * High-throughput event streaming
 * Real-time analytics
 * Event sourcing
 * Log aggregation
 * Long-term event storage
 
-### SQS Ideal For:
+### SQS Ideal For
 * Decoupling microservices
 * Task queues
 * Serverless architectures
@@ -89,19 +89,19 @@ Traditional Message Processing:
 
 ## Performance Characteristics
 
-### Kafka
+### Kafka Performance
 * Sequential disk I/O
 * Zero-copy data transfer
 * Batch processing
 * Partition-based parallelism
 
-### SQS
+### SQS Performance
 * Distributed queues
 * Auto-scaling
 * Limited batching
 * At-least-once delivery
 
-### RabbitMQ
+### RabbitMQ Performance
 * In-memory with disk backup
 * Smart routing
 * Publisher confirms
@@ -199,19 +199,19 @@ Traditional Message Processing:
 
 ## Error Handling Comparison
 
-### Kafka
+### Error Handling in Kafka
 * Retry policies
 * Dead letter topics
 * Error topic patterns
 * Transaction support
 
-### SQS
+### Error Handling in SQS
 * Visibility timeout
 * Dead letter queues
 * Redrive policies
 * Maximum receives
 
-### RabbitMQ
+### Error Handling in RabbitMQ
 * Negative acknowledgments
 * Dead letter exchanges
 * Poison message handling
@@ -233,7 +233,7 @@ Traditional Message Processing:
 
 ## Monitoring Essentials
 
-Key Metrics to Watch:
+Key Metrics to Watch
 * Producer batch size
 * Request latency
 * Broker CPU & memory
@@ -243,23 +243,23 @@ Key Metrics to Watch:
 
 ---
 
-## When to Choose What?
+## When to Choose What
 
-### Choose Kafka When:
+### Choose Kafka When
 * Need high throughput
 * Long-term storage required
 * Stream processing needed
 * Complex event patterns
 * Large scale deployments
 
-### Choose SQS When:
+### Choose SQS When
 * Serverless architecture
 * Simple queue patterns
 * AWS integration needed
 * Variable load patterns
 * Minimal maintenance desired
 
-### Choose RabbitMQ When:
+### Choose RabbitMQ When
 * Complex routing needed
 * Low latency required
 * Traditional messaging patterns
@@ -281,12 +281,12 @@ Key Metrics to Watch:
 
 ## Future Considerations
 
-### Kafka
+### Furute of Kafka
 * KRaft (replacement for ZooKeeper)
 * Tiered storage
 * Improved exactly-once semantics
 
-### Queue Systems
+### Furute of Queue Systems
 * Serverless integration
 * Enhanced security features
 * Cross-region improvements

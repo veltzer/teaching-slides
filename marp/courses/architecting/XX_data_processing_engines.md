@@ -56,14 +56,14 @@ Current Landscape of Major Players:
 ---
 ## Apache Spark
 
-### Core Strengths
+Core Strengths
 - Unified engine (batch/streaming)
 - Rich ML ecosystem (MLlib)
 - GraphX for graph processing
 - Strong community support
 - Extensive language support
 
-### Primary Use Cases
+Primary Use Cases
 1. Large-scale ETL
 1. Machine Learning pipelines
 1. Interactive analytics
@@ -72,13 +72,13 @@ Current Landscape of Major Players:
 ---
 ## Trino (PrestoSQL)
 
-### Core Strengths
+Core Strengths
 - Fast SQL queries
 - Federation capabilities
 - Cost-based optimizer
 - Low memory footprint
 
-### Primary Use Cases
+Primary Use Cases
 1. Interactive querying
 1. Data lake analytics
 1. Multi-source federation
@@ -103,13 +103,13 @@ Current Landscape of Major Players:
 
 ## Databricks Platform
 
-### Core Strengths
+Core Strengths
 - Managed Spark platform
 - MLflow integration
 - Delta Lake support
 - Collaborative notebooks
 
-### Primary Use Cases
+Primary Use Cases
 1. End-to-end ML
 1. Data engineering
 1. Collaborative science
@@ -119,13 +119,13 @@ Current Landscape of Major Players:
 
 ## Apache Druid
 
-### Core Strengths
+Core Strengths
 - Sub-second OLAP queries
 - Real-time ingestion
 - High availability
 - Time series optimization
 
-### Primary Use Cases
+Primary Use Cases
 1. User-facing analytics
 1. Click stream analysis
 1. Network telemetry
@@ -135,13 +135,13 @@ Current Landscape of Major Players:
 
 ## Splunk
 
-### Core Strengths
+Core Strengths
 - Log analysis specialist
 - Security features
 - Machine data processing
 - Real-time alerting
 
-### Primary Use Cases
+Primary Use Cases
 1. SIEM
 1. IT Operations
 1. APM
@@ -237,7 +237,7 @@ Current Landscape of Major Players:
 
 ---
 
-## Decision Framework
+## Decision Framework Factors
 
 ### Business Factors
 1. Budget constraints

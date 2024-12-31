@@ -15,7 +15,7 @@
 
 ---
 
-## What is Workflow Orchestration?
+## What is Workflow Orchestration
 
 - Automation of complex processes
 - Dependency management
@@ -413,7 +413,7 @@ def validate_data(df):
     dataset.expect_column_values_to_not_be_null('id')
     dataset.expect_column_values_to_be_unique('email')
     dataset.expect_column_values_to_be_between('age', 0, 120)
-    
+
     validation_result = dataset.validate()
     if not validation_result.success:
         raise DataQualityError(validation_result)
@@ -437,11 +437,11 @@ def validate_data(df):
 resources:
   cpu: 2
   memory: 4Gi
-  
+
 concurrency:
   task_concurrency: 3
   dag_concurrency: 16
-  
+
 pools:
   - name: heavy_process
     slots: 2
@@ -468,7 +468,7 @@ from kubernetes import client, config
 def scale_workers(replicas):
     config.load_kube_config()
     apps_v1 = client.AppsV1Api()
-    
+
     # Scale deployment
     apps_v1.patch_namespaced_deployment_scale(
         name="airflow-worker",
@@ -502,7 +502,7 @@ def get_secure_connection():
         login='access_key',
         password='secret_key'
     )
-    
+
     hook = AwsHook(conn.conn_id)
     return hook.get_client('s3')
 ```
@@ -530,17 +530,17 @@ def test_etl_workflow():
     extract_mock = Mock(return_value={'data': 'test'})
     transform_mock = Mock(return_value={'processed': 'test'})
     load_mock = Mock()
-    
+
     # Create workflow
     workflow = ETLWorkflow(
         extract=extract_mock,
         transform=transform_mock,
         load=load_mock
     )
-    
+
     # Execute
     workflow.run()
-    
+
     # Verify
     extract_mock.assert_called_once()
     transform_mock.assert_called_once_with({'data': 'test'})

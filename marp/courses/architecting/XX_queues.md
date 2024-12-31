@@ -16,7 +16,7 @@
 
 ---
 
-## What are Queues?
+## What are Queues
 
 - Asynchronous communication mechanism
 - Decouples producers and consumers
@@ -230,11 +230,11 @@ class FIFOQueue:
     def __init__(self):
         self.queue = deque()
         self.lock = threading.Lock()
-    
+
     def enqueue(self, item):
         with self.lock:
             self.queue.append(item)
-    
+
     def dequeue(self):
         with self.lock:
             return self.queue.popleft() if self.queue else None
@@ -251,11 +251,11 @@ class PriorityQueue:
     def __init__(self):
         self._queue = []
         self._index = 0
-    
+
     def push(self, item, priority):
         heapq.heappush(self._queue, (-priority, self._index, item))
         self._index += 1
-    
+
     def pop(self):
         return heapq.heappop(self._queue)[-1]
 ```
@@ -269,12 +269,12 @@ class BatchProducer:
     def __init__(self, batch_size=100):
         self.batch = []
         self.batch_size = batch_size
-    
+
     def add_message(self, message):
         self.batch.append(message)
         if len(self.batch) >= self.batch_size:
             self.flush()
-    
+
     def flush(self):
         if self.batch:
             send_batch_to_queue(self.batch)

@@ -14,7 +14,7 @@
 
 ---
 
-## What is a Data Lake?
+## What is a Data Lake
 
 - Repository for raw data in native format
 - Supports structured and unstructured data
@@ -40,16 +40,16 @@
 ## Data Formats in Data Lakes
 
 1. Structured
-   - Parquet
-   - ORC
-   - Avro
+    - Parquet
+    - ORC
+    - Avro
 1. Semi-structured
-   - JSON
-   - XML
+    - JSON
+    - XML
 1. Unstructured
-   - Text
-   - Images
-   - Video
+    - Text
+    - Images
+    - Video
 
 ---
 
@@ -157,11 +157,11 @@ CREATE TABLE events (
 PARTITIONED BY (days(timestamp));
 
 -- Time travel query
-SELECT * FROM events 
+SELECT * FROM events
 TIMESTAMP AS OF '2024-01-01 00:00:00';
 
 -- Snapshot query
-SELECT * FROM events 
+SELECT * FROM events
 VERSION AS OF 12345;
 ```
 
@@ -186,13 +186,13 @@ def batch_ingest():
     spark = SparkSession.builder \
         .appName("BatchIngestion") \
         .getOrCreate()
-    
+
     # Read from source
     df = spark.read \
         .format("jdbc") \
         .option("url", "jdbc:postgresql://db/source") \
         .load()
-    
+
     # Write to data lake
     df.write \
         .format("delta") \
@@ -356,7 +356,7 @@ def setup_security():
             }]
         }
     )
-    
+
     # Setup IAM policies
     iam = boto3.client('iam')
     iam.put_role_policy(
@@ -394,14 +394,13 @@ def setup_security():
 ## Implementation Strategies
 
 1. Cloud-based
-   - AWS S3 + EMR
-   - Azure Data Lake
-   - GCP Cloud Storage
-
+    - AWS S3 + EMR
+    - Azure Data Lake
+    - GCP Cloud Storage
 1. On-premises
-   - Hadoop HDFS
-   - MinIO
-   - Ceph
+    - Hadoop HDFS
+    - MinIO
+    - Ceph
 
 ---
 

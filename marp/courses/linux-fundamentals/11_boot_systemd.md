@@ -43,6 +43,7 @@ Key features:
 ![3](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/3.png)
 
 Common unit types:
+
 ```bash
 # Service units
 .service    # System services
@@ -79,6 +80,7 @@ systemctl disable nginx.service
 ![4](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/4.png)
 
 Common operations:
+
 ```bash
 # Manage service
 systemctl start service
@@ -111,12 +113,14 @@ Restart=always
 [Install]
 WantedBy=multi-user.target
 ```
+
 ---
 ## Service File Sections
 
 ![5](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/5.png)
 
 Common options:
+
 ```ini
 # Unit section
 Description=
@@ -133,6 +137,7 @@ Restart=
 # Install section
 WantedBy=
 ```
+
 ---
 ## Dependency Management
 
@@ -147,10 +152,12 @@ systemctl list-dependencies --reverse nginx.service
 systemctl show -p "Requires" nginx.service
 systemctl show -p "Wants" nginx.service
 ```
+
 ---
 ## rc.local Compatibility
 
 For legacy support:
+
 ```bash
 # Create rc-local service
 /etc/systemd/system/rc-local.service
@@ -169,6 +176,7 @@ RemainAfterExit=yes
 [Install]
 WantedBy=multi-user.target
 ```
+
 ---
 ## Writing Custom init.d Scripts
 
@@ -204,12 +212,14 @@ esac
 
 exit 0
 ```
+
 ---
 ## Systemd Targets
 
 ![6](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/6.png)
 
 Target management:
+
 ```bash
 # Get default target
 systemctl get-default
@@ -227,6 +237,7 @@ systemctl isolate graphical.target
 ![7](../../../out/mermaid/marp/courses/linux-fundamentals/11_boot_systemd.md/7.png)
 
 Debug commands:
+
 ```bash
 # View boot logs
 journalctl -b

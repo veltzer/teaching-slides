@@ -155,7 +155,7 @@ def process_order(order_id):
     with tracer.start_span("validate_order") as span:
         span.set_attribute("order_id", order_id)
         # Validation logic
-        
+
     with tracer.start_span("payment_processing") as span:
         try:
             process_payment()
@@ -172,9 +172,9 @@ def process_order(order_id):
 ```yaml
 alert: HighErrorRate
 expr: |
-  sum(rate(http_requests_total{status=~"5.."}[5m])) 
-  / 
-  sum(rate(http_requests_total[5m])) 
+  sum(rate(http_requests_total{status=~"5.."}[5m]))
+  /
+  sum(rate(http_requests_total[5m]))
   > 0.01
 for: 5m
 labels:
@@ -203,10 +203,10 @@ def detect_anomalies(metrics_df):
         contamination=0.1,
         random_state=42
     )
-    
+
     predictions = model.fit_predict(metrics_df)
     anomalies = metrics_df[predictions == -1]
-    
+
     alert_on_anomalies(anomalies)
 ```
 
@@ -260,14 +260,14 @@ def calculate_sli():
         /
         sum(rate(http_requests_total[1h]))
     """)
-    
+
     latency_p95 = prom.query("""
-        histogram_quantile(0.95, 
-            sum(rate(http_latency_bucket[1h])) 
+        histogram_quantile(0.95,
+            sum(rate(http_latency_bucket[1h]))
             by (le)
         )
     """)
-    
+
     return {
         "availability": success_rate,
         "latency_p95": latency_p95
@@ -283,12 +283,12 @@ class ErrorBudget:
     def __init__(self, slo_target, time_window):
         self.slo_target = slo_target
         self.time_window = time_window
-        
+
     def calculate_remaining(self):
         current_availability = get_availability()
         error_budget = 1 - self.slo_target
         used_budget = 1 - current_availability
-        
+
         return max(0, error_budget - used_budget)
 ```
 
@@ -324,14 +324,14 @@ resource "grafana_dashboard" "service_overview" {
 def handle_alert(alert):
     # Create incident
     incident = create_pagerduty_incident(alert)
-    
+
     # Gather context
     context = {
         "logs": fetch_relevant_logs(alert.timeframe),
         "metrics": fetch_related_metrics(alert.timeframe),
         "traces": fetch_related_traces(alert.trace_id)
     }
-    
+
     # Update incident
     update_incident(incident.id, context)
 ```
@@ -372,15 +372,15 @@ def calculate_health_score():
         "error_rate": get_error_score(),
         "saturation": get_saturation_score()
     }
-    
+
     weights = {
         "availability": 0.4,
         "latency": 0.3,
         "error_rate": 0.2,
         "saturation": 0.1
     }
-    
-    return sum(score * weights[metric] 
+
+    return sum(score * weights[metric]
               for metric, score in metrics.items())
 ```
 
