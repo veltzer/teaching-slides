@@ -1,8 +1,6 @@
 # Message Queue Systems
 ## Kafka vs Traditional Queue Systems
-
 ---
-
 ## Traditional Kafka vs Streaming
 
 Traditional Message Processing
@@ -12,9 +10,7 @@ Traditional Message Processing
 * Processing is done **after** retrieval
 * Suited for **event messaging**
 * Focus on **durability** and **reliability**
-
 ---
-
 ## Kafka Streams
 
 ![1](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/1.png)
@@ -24,9 +20,7 @@ Traditional Message Processing
 * Built-in **windowing**
 * **Exactly-once** semantics
 * **Fault-tolerant** processing
-
 ---
-
 ## Message Queue Comparison
 
 | Feature | Kafka | SQS | RabbitMQ | ActiveMQ |
@@ -281,12 +275,12 @@ Key Metrics to Watch
 
 ## Future Considerations
 
-### Furute of Kafka
+### Future of Kafka
 * KRaft (replacement for ZooKeeper)
 * Tiered storage
 * Improved exactly-once semantics
 
-### Furute of Queue Systems
+### Future of Queue Systems
 * Serverless integration
 * Enhanced security features
 * Cross-region improvements
