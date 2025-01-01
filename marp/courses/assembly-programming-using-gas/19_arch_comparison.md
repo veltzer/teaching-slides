@@ -95,6 +95,7 @@ add [ecx], edx  @ Load, add, and store in one instruction
 - 32 general-purpose registers ($0-$31)
 
 MIPS Example:
+
 ```mips
 .globl main
 main:

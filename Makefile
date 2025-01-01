@@ -30,7 +30,7 @@ DO_MD_ASPELL:=1
 # do you want to check that the md files are pure ASCII?
 DO_MD_ASCII:=0
 # do you want to run mdl on md files?
-DO_MD_MDL:=0
+DO_MD_MDL:=1
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
 # do you want to convert mermaid diagrams into png?

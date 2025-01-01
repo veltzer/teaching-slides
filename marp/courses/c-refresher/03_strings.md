@@ -2,7 +2,7 @@
 
 ---
 
-## What are Strings in C?
+## What are Strings in C
 
 - In C, strings are arrays of characters
 - They are terminated by a null character (`'\0'`)

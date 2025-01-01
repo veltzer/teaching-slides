@@ -2,7 +2,7 @@
 
 ---
 
-## What is a Dockerfile?
+## What is a Dockerfile
 
 ![0](../../../out/mermaid/marp/courses/docker-for-developers/03_images.md/0.png)
 

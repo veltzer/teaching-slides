@@ -4,12 +4,12 @@
 
 ---
 
-## What is a Pointer?
+## What is a Pointer
 
 - A **pointer** is a variable that stores the **memory address** of another variable.
 - In C, pointers are a powerful tool for dynamic memory allocation, array manipulation, and efficient data handling.
 
-### Example:
+### Example
 
 ```c
 int a = 10;
@@ -28,7 +28,7 @@ int x = 5;
 int *ptr = &x; // ptr is a pointer to an int, initialized with the address of x
 ```
 
-### Key Points:
+### Key Points
 - `*` indicates that the variable is a pointer.
 - The `&` operator is used to get the address of a variable.
 - Pointers must be initialized before use to avoid undefined behavior.
@@ -54,7 +54,7 @@ printf("%d", *ptr); // Outputs: 20
 - Pointers support arithmetic operations like addition and subtraction.
 - The operations depend on the data type size.
 
-### Example:
+### Example
 
 ```c
 int arr[3] = {10, 20, 30};

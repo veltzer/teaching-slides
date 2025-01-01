@@ -216,6 +216,7 @@ type array_name[] = {value1, value2, ...};
 ```
 
 Example:
+
 ```c
 int numbers[5] = {1, 2, 3, 4, 5};
 char name[] = "John";
@@ -226,12 +227,14 @@ char name[] = "John";
 ## Pointers
 
 Declaration and usage:
+
 ```c
 type *pointer_name;
 pointer_name = &variable;
 ```
 
 Example:
+
 ```c
 int x = 10;
 int *ptr = &x;
@@ -243,6 +246,7 @@ printf("Value of x: %d", *ptr);
 ## Structures
 
 Definition and usage:
+
 ```c
 struct structure_name {
     type member1;

@@ -7,6 +7,7 @@
 - Separate code into logical sections
 
 Example:
+
 ```x86asm
 .section .data
     # Data declarations

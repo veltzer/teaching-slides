@@ -152,6 +152,7 @@ void vulnerable_function(char *input) {
 ```
 
 Exploit in assembly:
+
 ```x86asm
 section .text
 global _start
