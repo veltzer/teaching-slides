@@ -29,9 +29,9 @@ Instrumenting a user application
 
 Code to query and print the TSC is rather simple. Here is an example taken from Wikipedia’s article on RDTSC:
 
- 
+
 #include <stdint.h>
- 
+
    inline uint64_t rdtsc() {
        uint32_t lo, hi;
        /*
@@ -49,20 +49,20 @@ Code to query and print the TSC is rather simple. Here is an example taken from 
    }
 A call to the rdtsc() function above can be used to measure the boot-time latency contribution of the various phases other than kernel initialization. The function can be called by the bootloader, or by a user program that will run at boot. Here is the user program, which is the easier of the two:
 
- 
+
 #include <stdint.h>
 #include <stdio.h>
- 
+
 inline uint64_t rdtsc() {
    ...
 }
- 
+
 int main(void) {
- 
+
         printf("TSC: %lld\n",  rdtsc());
 t1:
         goto t1;
- 
+
         return 0;
 }
 The rdtsc function is the same function provided earlier in this article. Note that an infinite loop has been added at the end of the program. This hack is meant to keep the program from exiting when it has finished, thus making it easier to run it as an “init” program without having the kernel panic when the program exits.
@@ -84,25 +84,25 @@ Luckily, the syslinux bootloader offers an easy way to integrate 32-bit C code t
 
 Below is the timestamp program again, this time presented as a Comboot 32 module. It is derived from the hello.c example program supplied as part of the syslinux source code:
 
- 
+
 #include <string.h>
 #include <stdio.h>
 #include <console.h>
- 
+
 inline uint64_t rdtsc() {
 ...
 }
- 
+
 int main(int argc, char *argv[])
 {
    uint32_t lo, hi;
- 
+
   openconsole(&dev_stdcon_r, &dev_stdcon_w);
- 
+
   printf("TSC: %lld\n", rdtsc());
- 
+
   syslinux_run_command("linux");
- 
+
   return 0;
 }
 The rdstc function is the same one presented earlier in this article. Also, the little comboot32 program is concluded by invoking the syslinux_run_command() comboot 32 API call, which causes the Linux kernel image with the name of “linux” to be executed when the timestamp program ends.
@@ -113,9 +113,9 @@ Having completed the Comboot32 program, named timestamp.c32, the next step is to
 
 The syslinux bootloader reads a configuration file, called syslinux.cfg, located in same partition into which it is installed, and then executes the command in the file. In this case, the file content will be:
 
- 
+
 default timestamp.c32
- 
+
 prompt 0
 Putting it all together
 

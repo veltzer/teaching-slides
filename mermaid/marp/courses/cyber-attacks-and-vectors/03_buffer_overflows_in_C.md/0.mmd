@@ -11,12 +11,12 @@ graph TB
             end
         end
     end
-    
+
     Input["User Input<br>(14 bytes)"] -->|"Overflow"| BUF
     BUF -->|"Overwrite"| BP
     BP -->|"Overwrite"| RET
     RET -->|"Execution Redirected"| Shell["Shell Code/<br>Malicious Code"]
-    
+
     style Input fill:#99f,stroke:#333,stroke-width:2px
     style Shell fill:#f66,stroke:#333,stroke-width:2px
     style BUF fill:#9f9,stroke:#333,stroke-width:2px

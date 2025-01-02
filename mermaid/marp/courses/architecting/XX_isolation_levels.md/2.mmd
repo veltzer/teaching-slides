@@ -3,7 +3,7 @@ graph LR
     A[Lock] --> B[Modify]
     B --> C[Unlock]
     end
-    
+
     subgraph "Optimistic"
     D[Read] --> E[Check Version]
     E --> F[Modify if Unchanged]

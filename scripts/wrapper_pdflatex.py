@@ -28,7 +28,7 @@ This python script is a rewrite of a similar script in perl.
 
 #parameters
 # do you want debugging...
-debug = False 
+debug = False
 # remove the tmp file for output at the end of the run? (this should be yes
 # unless you want junk files hanging around in /tmp...)
 remove_tmp = True
@@ -105,7 +105,7 @@ def my_call(args):
 
 def my_rename(old_filename: str, new_filename: str, check: bool):
     """
-    this is a function that renames a file and dies if there is a problem 
+    this is a function that renames a file and dies if there is a problem
     """
     if debug:
         print(f"my_rename [{old_filename, new_filename}]", file=sys.stderr)

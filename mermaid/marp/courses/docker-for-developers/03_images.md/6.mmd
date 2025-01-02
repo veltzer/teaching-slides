@@ -3,10 +3,10 @@ graph TD
         A[Base Image] --> B[Dependencies]
         B --> C[Compile]
     end
-    
+
     subgraph "Final Stage"
         D[Minimal Base] --> E[Copy Artifacts]
         E --> F[Configuration]
     end
-    
+
     C --> E

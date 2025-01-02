@@ -3,10 +3,10 @@ graph TD
         A[Base Image] --> B[Dependencies]
         B --> C[Build Code]
     end
-    
+
     subgraph "Production Stage"
         D[Slim Image] --> E[Copy Artifacts]
         E --> F[Final Image]
     end
-    
+
     C --> E
