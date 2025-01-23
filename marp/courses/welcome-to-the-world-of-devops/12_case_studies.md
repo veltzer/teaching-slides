@@ -5,12 +5,7 @@ Real-world DevOps transformation examples
 
 ## Netflix DevOps Journey
 
-```mermaid
-graph TD
-    A[Monolith] --> B[Microservices]
-    B --> C[Cloud Native]
-    C --> D[Global Scale]
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/0.png)
 
 ---
 
@@ -26,19 +21,7 @@ graph TD
 
 ## Amazon's Transformation
 
-```mermaid
-mindmap
-    root((Amazon))
-        Services
-            AWS
-            Retail
-        Practices
-            CI/CD
-            Automation
-        Culture
-            Innovation
-            Scale
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/1.png)
 
 ---
 
@@ -54,12 +37,7 @@ mindmap
 
 ## Facebook Infrastructure
 
-```mermaid
-graph LR
-    A[Code] --> B[Review]
-    B --> C[Test]
-    C --> D[Deploy]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/2.png)
 
 ---
 
@@ -75,16 +53,7 @@ graph LR
 
 ## Traditional to DevOps
 
-```mermaid
-mindmap
-    root((Transformation))
-        Before
-            Silos
-            Manual
-        After
-            Unified
-            Automated
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/3.png)
 
 ---
 
@@ -100,12 +69,7 @@ mindmap
 
 ## Healthcare Implementation
 
-```mermaid
-graph TD
-    A[Security] --> B[Compliance]
-    B --> C[Automation]
-    C --> D[Monitoring]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/4.png)
 
 ---
 
@@ -121,19 +85,7 @@ graph TD
 
 ## Manufacturing Integration
 
-```mermaid
-mindmap
-    root((Industry))
-        IoT
-            Sensors
-            Data
-        Automation
-            Process
-            Quality
-        Control
-            Monitor
-            Adjust
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/5.png)
 
 ---
 
@@ -149,12 +101,7 @@ mindmap
 
 ## Enterprise Transformation
 
-```mermaid
-graph LR
-    A[Legacy] --> B[Hybrid]
-    B --> C[Modern]
-    C --> D[Future]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/12_case_studies.md/6.png)
 
 ---
 

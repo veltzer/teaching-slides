@@ -5,19 +5,7 @@ Leveraging automation for DevOps efficiency
 
 ## Scripting Languages
 
-```mermaid
-mindmap
-    root((Languages))
-        Python
-            Automation
-            Testing
-        Bash
-            Shell Scripts
-            System Admin
-        PowerShell
-            Windows
-            Azure
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/0.png)
 
 ---
 
@@ -33,12 +21,7 @@ mindmap
 
 ## Bash Scripting
 
-```mermaid
-graph LR
-    A[System Commands] --> B[File Operations]
-    B --> C[Process Management]
-    C --> D[Network Operations]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/1.png)
 
 ---
 
@@ -54,19 +37,7 @@ graph LR
 
 ## Automation Frameworks
 
-```mermaid
-mindmap
-    root((Frameworks))
-        Testing
-            Selenium
-            PyTest
-        Deployment
-            Fabric
-            Capistrano
-        Configuration
-            Ansible
-            Puppet
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/2.png)
 
 ---
 
@@ -82,12 +53,7 @@ mindmap
 
 ## CI/CD Pipeline Scripts
 
-```mermaid
-graph TD
-    A[Build Scripts] --> B[Test Scripts]
-    B --> C[Deploy Scripts]
-    C --> D[Validation Scripts]
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/3.png)
 
 ---
 
@@ -103,12 +69,7 @@ graph TD
 
 ## Monitoring Scripts
 
-```mermaid
-graph LR
-    A[Data Collection] --> B[Analysis]
-    B --> C[Alerting]
-    C --> D[Reporting]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/4.png)
 
 ---
 
@@ -124,19 +85,7 @@ graph LR
 
 ## Script Management
 
-```mermaid
-mindmap
-    root((Management))
-        Version Control
-            Git
-            SVN
-        Documentation
-            Inline
-            External
-        Testing
-            Unit
-            Integration
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/5.png)
 
 ---
 
@@ -152,12 +101,7 @@ mindmap
 
 ## Security Considerations
 
-```mermaid
-graph TD
-    A[Input Validation] --> B[Access Control]
-    B --> C[Secret Management]
-    C --> D[Audit Logging]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/6.png)
 
 ---
 
@@ -173,10 +117,4 @@ graph TD
 
 ## Deployment Automation
 
-```mermaid
-graph LR
-    A[Build] --> B[Test]
-    B --> C[Package]
-    C --> D[Deploy]
-    D --> E[Verify]
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/05_automation_and_scripting.md/7.png)

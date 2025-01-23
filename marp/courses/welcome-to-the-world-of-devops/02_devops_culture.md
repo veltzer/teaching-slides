@@ -15,31 +15,13 @@ Understanding the cultural transformation required for DevOps success
 
 ## Cultural Transformation
 
-```mermaid
-graph TD
-    A[Traditional Culture] --> B[Resistance]
-    B --> C[Education]
-    C --> D[Adoption]
-    D --> E[DevOps Culture]
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/0.png)
 
 ---
 
 ## Learning from Failures
 
-```mermaid
-mindmap
-    root((Failure Response))
-        Analysis
-            Root Cause
-            Impact Study
-        Learning
-            Documentation
-            Knowledge Share
-        Improvement
-            Process Updates
-            Tool Enhancement
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/1.png)
 
 ---
 
@@ -55,32 +37,13 @@ mindmap
 
 ## Metrics and KPIs
 
-```mermaid
-graph LR
-    A[Data Collection] --> B[Analysis]
-    B --> C[Insights]
-    C --> D[Action]
-    D --> E[Improvement]
-    E --> A
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/2.png)
 
 ---
 
 ## Key Performance Indicators
 
-```mermaid
-mindmap
-    root((DevOps KPIs))
-        Technical
-            Deployment Frequency
-            Lead Time
-        Quality
-            MTTR
-            Error Rates
-        Business
-            Customer Satisfaction
-            Feature Usage
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/3.png)
 
 ---
 
@@ -96,13 +59,7 @@ mindmap
 
 ## Building Trust
 
-```mermaid
-graph TD
-    A[Transparency] --> B[Consistency]
-    B --> C[Reliability]
-    C --> D[Trust]
-    D --> E[Collaboration]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/4.png)
 
 ---
 
@@ -118,19 +75,7 @@ graph TD
 
 ## Team Empowerment
 
-```mermaid
-mindmap
-    root((Empowerment))
-        Authority
-            Decision Making
-            Tool Selection
-        Responsibility
-            Ownership
-            Accountability
-        Growth
-            Learning
-            Innovation
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/5.png)
 
 ---
 
@@ -146,13 +91,7 @@ mindmap
 
 ## Continuous Learning
 
-```mermaid
-graph LR
-    A[Training] --> B[Practice]
-    B --> C[Feedback]
-    C --> D[Improvement]
-    D --> A
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/6.png)
 
 ---
 
@@ -168,13 +107,7 @@ graph LR
 
 ## Success Patterns
 
-```mermaid
-graph TD
-    A[Leadership Buy-in] --> B[Clear Vision]
-    B --> C[Team Alignment]
-    C --> D[Measured Progress]
-    D --> E[Continuous Improvement]
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/7.png)
 
 ---
 
@@ -200,10 +133,4 @@ graph TD
 
 ## Cultural Evolution
 
-```mermaid
-graph LR
-    A[Traditional] --> B[Transitional]
-    B --> C[DevOps-Ready]
-    C --> D[DevOps-Mature]
-    D --> E[Innovation-Driven]
-```
+![8](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/02_devops_culture.md/8.png)

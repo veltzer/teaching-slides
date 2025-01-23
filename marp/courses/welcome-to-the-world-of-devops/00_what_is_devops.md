@@ -14,31 +14,13 @@ Understanding the fundamentals of DevOps practices and culture
 
 ## Historical Context
 
-```mermaid
-timeline
-    title Evolution of Software Delivery
-    1990s : Waterfall Method
-          : Separate Dev and Ops teams
-    2000s : Agile Emerges
-          : Focus on iterative development
-    2009  : DevOps Term Coined
-    2010s : Cloud & Automation
-          : Widespread DevOps adoption
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/0.png)
 
 ---
 
 ## Traditional IT vs DevOps
 
-```mermaid
-graph LR
-    subgraph Traditional
-    D1[Development] --> Q1[QA] --> O1[Operations]
-    end
-    subgraph DevOps
-    D2[Development] <--> O2[Operations]
-    end
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/1.png)
 
 ---
 
@@ -64,22 +46,7 @@ graph LR
 
 ## Key Benefits of DevOps
 
-```mermaid
-mindmap
-    root((DevOps Benefits))
-        Speed
-            Faster delivery
-            Rapid iteration
-        Quality
-            Automated testing
-            Consistent environments
-        Collaboration
-            Shared responsibility
-            Better communication
-        Reliability
-            Continuous monitoring
-            Quick recovery
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/2.png)
 
 ---
 
@@ -96,17 +63,10 @@ mindmap
 ## Breaking Down Silos
 
 Before:
-```mermaid
-flowchart LR
-    Dev[Development Team] --> Wall{Wall of Confusion} --> Ops[Operations Team]
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/3.png)
 
 After:
-```mermaid
-flowchart LR
-    DevOps[Cross-functional Team]
-    DevOps --> DevOps
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/4.png)
 
 ---
 
@@ -123,10 +83,7 @@ flowchart LR
 
 ## The DevOps Infinity Loop
 
-```mermaid
-graph LR
-    Plan --> Code --> Build --> Test --> Release --> Deploy --> Operate --> Monitor --> Plan
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/5.png)
 
 ---
 
@@ -142,22 +99,7 @@ graph LR
 
 ## DevOps Tools Ecosystem
 
-```mermaid
-mindmap
-    root((DevOps Tools))
-        Source Control
-            Git
-            GitHub
-        CI/CD
-            Jenkins
-            GitLab
-        Infrastructure
-            Terraform
-            Ansible
-        Containers
-            Docker
-            Kubernetes
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/6.png)
 
 ---
 
@@ -192,13 +134,7 @@ mindmap
 
 ## DevOps Culture Pillars
 
-```mermaid
-graph TD
-    A[DevOps Culture] --> B[Collaboration]
-    A --> C[Automation]
-    A --> D[Continuous Improvement]
-    A --> E[Customer Focus]
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/00_what_is_devops.md/7.png)
 
 ---
 

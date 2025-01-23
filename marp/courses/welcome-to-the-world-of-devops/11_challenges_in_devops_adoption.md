@@ -5,19 +5,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Cultural Barriers
 
-```mermaid
-mindmap
-    root((Barriers))
-        Resistance
-            Change
-            Tools
-        Silos
-            Teams
-            Knowledge
-        Mindset
-            Fixed
-            Blame
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/0.png)
 
 ---
 
@@ -33,12 +21,7 @@ mindmap
 
 ## Technical Debt
 
-```mermaid
-graph LR
-    A[Legacy Systems] --> B[Migration]
-    B --> C[Modernization]
-    C --> D[Maintenance]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/1.png)
 
 ---
 
@@ -54,19 +37,7 @@ graph LR
 
 ## Tool Complexity
 
-```mermaid
-mindmap
-    root((Complexity))
-        Integration
-            APIs
-            Plugins
-        Management
-            Updates
-            Config
-        Learning
-            Training
-            Support
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/2.png)
 
 ---
 
@@ -82,12 +53,7 @@ mindmap
 
 ## Scaling Challenges
 
-```mermaid
-graph TD
-    A[Team Growth] --> B[Process Scale]
-    B --> C[Tool Scale]
-    C --> D[Management Scale]
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/3.png)
 
 ---
 
@@ -103,19 +69,7 @@ graph TD
 
 ## Security Integration
 
-```mermaid
-mindmap
-    root((Security))
-        Policy
-            Compliance
-            Standards
-        Tools
-            Scanner
-            Monitor
-        Process
-            Review
-            Audit
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/4.png)
 
 ---
 
@@ -131,12 +85,7 @@ mindmap
 
 ## Measurement Issues
 
-```mermaid
-graph LR
-    A[Metrics] --> B[Analysis]
-    B --> C[Insights]
-    C --> D[Action]
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/5.png)
 
 ---
 
@@ -152,19 +101,7 @@ graph LR
 
 ## Solution Strategies
 
-```mermaid
-mindmap
-    root((Solutions))
-        People
-            Training
-            Support
-        Process
-            Standards
-            Guidelines
-        Tools
-            Selection
-            Integration
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/11_challenges_in_devops_adoption.md/6.png)
 
 ---
 

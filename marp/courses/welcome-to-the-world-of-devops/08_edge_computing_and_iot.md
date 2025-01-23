@@ -5,12 +5,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Edge Architecture
 
-```mermaid
-graph TD
-    A[Edge Devices] --> B[Edge Gateway]
-    B --> C[Cloud]
-    A --> D[Local Processing]
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/0.png)
 
 ---
 
@@ -26,19 +21,7 @@ graph TD
 
 ## Deployment Challenges
 
-```mermaid
-mindmap
-    root((Edge Challenges))
-        Connectivity
-            Reliability
-            Bandwidth
-        Security
-            Physical
-            Network
-        Management
-            Updates
-            Monitoring
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/1.png)
 
 ---
 
@@ -54,12 +37,7 @@ mindmap
 
 ## Security At Edge
 
-```mermaid
-graph LR
-    A[Device Security] --> B[Network Security]
-    B --> C[Data Security]
-    C --> D[Access Control]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/2.png)
 
 ---
 
@@ -75,19 +53,7 @@ graph LR
 
 ## Monitoring Strategy
 
-```mermaid
-mindmap
-    root((Monitoring))
-        Metrics
-            Performance
-            Health
-        Alerts
-            Critical
-            Warning
-        Analysis
-            Trends
-            Issues
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/3.png)
 
 ---
 
@@ -103,12 +69,7 @@ mindmap
 
 ## Resource Management
 
-```mermaid
-graph TD
-    A[Capacity Planning] --> B[Resource Allocation]
-    B --> C[Performance Optimization]
-    C --> D[Cost Management]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/4.png)
 
 ---
 
@@ -124,19 +85,7 @@ graph TD
 
 ## Scalability
 
-```mermaid
-mindmap
-    root((Scale))
-        Horizontal
-            Devices
-            Nodes
-        Vertical
-            Capacity
-            Power
-        Geographic
-            Locations
-            Regions
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/5.png)
 
 ---
 
@@ -152,12 +101,7 @@ mindmap
 
 ## Disaster Recovery
 
-```mermaid
-graph LR
-    A[Backup] --> B[Failover]
-    B --> C[Recovery]
-    C --> D[Restoration]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/08_edge_computing_and_iot.md/6.png)
 
 ---
 

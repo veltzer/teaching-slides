@@ -5,19 +5,7 @@ Modern observability and service management tools
 
 ## Advanced Observability
 
-```mermaid
-mindmap
-    root((Observability))
-        Metrics
-            Collection
-            Analysis
-        Tracing
-            Distributed
-            Performance
-        Logging
-            Aggregation
-            Analysis
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/0.png)
 
 ---
 
@@ -33,12 +21,7 @@ mindmap
 
 ## Grafana Dashboards
 
-```mermaid
-graph LR
-    A[Data Sources] --> B[Visualization]
-    B --> C[Alerts]
-    C --> D[Reports]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/1.png)
 
 ---
 
@@ -54,13 +37,7 @@ graph LR
 
 ## Jaeger Components
 
-```mermaid
-graph TD
-    A[Agent] --> B[Collector]
-    B --> C[Storage]
-    C --> D[Query]
-    D --> E[UI]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/2.png)
 
 ---
 
@@ -76,16 +53,7 @@ graph TD
 
 ## Istio Architecture
 
-```mermaid
-mindmap
-    root((Istio))
-        Control Plane
-            Config
-            Policy
-        Data Plane
-            Proxy
-            Network
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/3.png)
 
 ---
 
@@ -101,12 +69,7 @@ mindmap
 
 ## Modern Logging
 
-```mermaid
-graph LR
-    A[Collection] --> B[Processing]
-    B --> C[Storage]
-    C --> D[Analysis]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/4.png)
 
 ---
 
@@ -122,19 +85,7 @@ graph LR
 
 ## OpenTelemetry
 
-```mermaid
-mindmap
-    root((OpenTelemetry))
-        Tracing
-            Context
-            Spans
-        Metrics
-            Collection
-            Export
-        Logs
-            Format
-            Transfer
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/5.png)
 
 ---
 
@@ -150,12 +101,7 @@ mindmap
 
 ## Future Trends
 
-```mermaid
-graph TD
-    A[AI Integration] --> B[Autonomous Ops]
-    B --> C[Predictive Analytics]
-    C --> D[Self-healing Systems]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/09_emerging_technologies.md/6.png)
 
 ---
 

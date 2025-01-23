@@ -15,31 +15,13 @@ Essential practices for successful DevOps implementation
 
 ## IaC Benefits
 
-```mermaid
-mindmap
-    root((IaC Benefits))
-        Speed
-            Quick Deployment
-            Easy Replication
-        Quality
-            Consistency
-            Version Control
-        Efficiency
-            Automation
-            Cost Reduction
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/0.png)
 
 ---
 
 ## Configuration Management
 
-```mermaid
-graph LR
-    A[Source Code] --> B[Version Control]
-    B --> C[Automated Build]
-    C --> D[Configuration Deploy]
-    D --> E[Environment Setup]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/1.png)
 
 ---
 
@@ -55,13 +37,7 @@ graph LR
 
 ## Monitoring Fundamentals
 
-```mermaid
-graph TD
-    A[Data Collection] --> B[Processing]
-    B --> C[Analysis]
-    C --> D[Alerting]
-    D --> E[Action]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/2.png)
 
 ---
 
@@ -77,19 +53,7 @@ graph TD
 
 ## Logging Best Practices
 
-```mermaid
-mindmap
-    root((Logging))
-        Collection
-            Centralized
-            Structured
-        Analysis
-            Real-time
-            Historical
-        Action
-            Alerts
-            Reports
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/3.png)
 
 ---
 
@@ -105,12 +69,7 @@ mindmap
 
 ## Observability Components
 
-```mermaid
-graph LR
-    A[Metrics] --> D[Observability]
-    B[Logs] --> D
-    C[Traces] --> D
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/4.png)
 
 ---
 
@@ -126,13 +85,7 @@ graph LR
 
 ## Incident Response
 
-```mermaid
-graph TD
-    A[Detection] --> B[Analysis]
-    B --> C[Response]
-    C --> D[Recovery]
-    D --> E[Post-mortem]
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/5.png)
 
 ---
 
@@ -148,19 +101,7 @@ graph TD
 
 ## Automation Strategy
 
-```mermaid
-mindmap
-    root((Automation))
-        Testing
-            Unit
-            Integration
-        Deployment
-            Staging
-            Production
-        Monitoring
-            Alerts
-            Reports
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/6.png)
 
 ---
 
@@ -186,13 +127,7 @@ mindmap
 
 ## Best Practices
 
-```mermaid
-graph TD
-    A[Start Small] --> B[Automate Tests]
-    B --> C[Monitor Everything]
-    C --> D[Iterate Regularly]
-    D --> E[Share Knowledge]
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/03_key_devops_practices.md/7.png)
 
 ---
 

@@ -5,12 +5,7 @@ Modern approaches and emerging patterns
 
 ## DevSecOps Integration
 
-```mermaid
-graph LR
-    A[Development] --> B[Security]
-    B --> C[Operations]
-    C --> A
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/0.png)
 
 ---
 
@@ -26,19 +21,7 @@ graph LR
 
 ## GitOps Principles
 
-```mermaid
-mindmap
-    root((GitOps))
-        Declaration
-            Config
-            State
-        Automation
-            Sync
-            Deploy
-        Verification
-            Audit
-            Control
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/1.png)
 
 ---
 
@@ -54,12 +37,7 @@ mindmap
 
 ## AIOps Evolution
 
-```mermaid
-graph TD
-    A[Data Collection] --> B[AI Analysis]
-    B --> C[Pattern Detection]
-    C --> D[Automated Response]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/2.png)
 
 ---
 
@@ -75,19 +53,7 @@ graph TD
 
 ## Machine Learning Integration
 
-```mermaid
-mindmap
-    root((ML Ops))
-        Training
-            Data
-            Models
-        Deployment
-            Testing
-            Production
-        Monitoring
-            Performance
-            Drift
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/3.png)
 
 ---
 
@@ -103,12 +69,7 @@ mindmap
 
 ## Security Automation
 
-```mermaid
-graph LR
-    A[Threat Detection] --> B[Analysis]
-    B --> C[Response]
-    C --> D[Recovery]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/4.png)
 
 ---
 
@@ -124,19 +85,7 @@ graph LR
 
 ## Container Security
 
-```mermaid
-mindmap
-    root((Security))
-        Image
-            Scan
-            Sign
-        Runtime
-            Monitor
-            Protect
-        Access
-            Control
-            Audit
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/5.png)
 
 ---
 
@@ -152,12 +101,7 @@ mindmap
 
 ## Cloud Native Security
 
-```mermaid
-graph TD
-    A[Application] --> B[Container]
-    B --> C[Platform]
-    C --> D[Infrastructure]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/6.png)
 
 ---
 
@@ -173,16 +117,4 @@ graph TD
 
 ## Future Directions
 
-```mermaid
-mindmap
-    root((Future))
-        AI/ML
-            Automation
-            Analytics
-        Security
-            Zero Trust
-            DevSecOps
-        Platform
-            Serverless
-            Edge
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/06_current_trends_in_devops.md/7.png)

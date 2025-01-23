@@ -5,19 +5,7 @@ Modern cloud architecture and practices
 
 ## Serverless Architecture
 
-```mermaid
-mindmap
-    root((Serverless))
-        Functions
-            Lambda
-            Azure Functions
-        Services
-            Managed
-            Scalable
-        Benefits
-            Cost
-            Scale
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/0.png)
 
 ---
 
@@ -33,23 +21,13 @@ mindmap
 
 ## Serverless Benefits
 
-```mermaid
-graph LR
-    A[No Infrastructure] --> B[Auto Scaling]
-    B --> C[Cost Effective]
-    C --> D[Focus on Code]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/1.png)
 
 ---
 
 ## Microservices Architecture
 
-```mermaid
-graph TD
-    A[API Gateway] --> B[Service A]
-    A --> C[Service B]
-    A --> D[Service C]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/2.png)
 
 ---
 
@@ -65,19 +43,7 @@ graph TD
 
 ## Container Orchestration
 
-```mermaid
-mindmap
-    root((Kubernetes))
-        Workloads
-            Pods
-            Deployments
-        Services
-            LoadBalancer
-            Ingress
-        Storage
-            Volumes
-            Claims
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/3.png)
 
 ---
 
@@ -93,12 +59,7 @@ mindmap
 
 ## Service Mesh
 
-```mermaid
-graph LR
-    A[Service A] --> B[Proxy]
-    B --> C[Service B]
-    C --> D[Proxy]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/4.png)
 
 ---
 
@@ -114,19 +75,7 @@ graph LR
 
 ## Scalability Patterns
 
-```mermaid
-mindmap
-    root((Scaling))
-        Horizontal
-            Instances
-            Load Balance
-        Vertical
-            Resources
-            Capacity
-        Auto
-            Demand
-            Schedule
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/5.png)
 
 ---
 
@@ -142,12 +91,7 @@ mindmap
 
 ## Cost Optimization
 
-```mermaid
-graph TD
-    A[Resource Planning] --> B[Usage Monitoring]
-    B --> C[Cost Analysis]
-    C --> D[Optimization]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/6.png)
 
 ---
 
@@ -163,16 +107,4 @@ graph TD
 
 ## Deployment Strategies
 
-```mermaid
-mindmap
-    root((Deployment))
-        Rolling
-            Gradual
-            Safe
-        Blue-Green
-            Switch
-            Rollback
-        Canary
-            Test
-            Validate
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/07_cloud_native_devops.md/7.png)

@@ -5,19 +5,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Version Control Systems
 
-```mermaid
-mindmap
-    root((Git))
-        Branches
-            Feature
-            Release
-        Operations
-            Commit
-            Merge
-        Collaboration
-            Pull
-            Push
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/0.png)
 
 ---
 
@@ -33,13 +21,7 @@ mindmap
 
 ## Collaboration Platforms
 
-```mermaid
-graph LR
-    A[GitHub] --> B[Code Storage]
-    B --> C[Review Process]
-    C --> D[CI/CD Integration]
-    D --> E[Deployment]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/1.png)
 
 ---
 
@@ -55,13 +37,7 @@ graph LR
 
 ## Jenkins Pipeline
 
-```mermaid
-graph LR
-    A[Source] --> B[Build]
-    B --> C[Test]
-    C --> D[Deploy]
-    D --> E[Monitor]
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/2.png)
 
 ---
 
@@ -77,30 +53,13 @@ graph LR
 
 ## Docker Components
 
-```mermaid
-mindmap
-    root((Docker))
-        Images
-            Build
-            Store
-        Containers
-            Run
-            Manage
-        Networks
-            Connect
-            Secure
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/3.png)
 
 ---
 
 ## Kubernetes Architecture
 
-```mermaid
-graph TD
-    A[Control Plane] --> B[Node 1]
-    A --> C[Node 2]
-    A --> D[Node N]
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/4.png)
 
 ---
 
@@ -116,19 +75,7 @@ graph TD
 
 ## Infrastructure Tools
 
-```mermaid
-mindmap
-    root((Infrastructure))
-        Provisioning
-            Terraform
-            CloudFormation
-        Configuration
-            Ansible
-            Puppet
-        Monitoring
-            Prometheus
-            Grafana
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/5.png)
 
 ---
 
@@ -144,12 +91,7 @@ mindmap
 
 ## Security Tools
 
-```mermaid
-graph TD
-    A[Code Scanning] --> B[Dependency Check]
-    B --> C[Container Security]
-    C --> D[Runtime Protection]
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/6.png)
 
 ---
 
@@ -165,13 +107,7 @@ graph TD
 
 ## Tool Integration
 
-```mermaid
-graph LR
-    A[Source Control] --> B[CI Server]
-    B --> C[Artifact Store]
-    C --> D[Deployment]
-    D --> E[Monitoring]
-```
+![7](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/7.png)
 
 ---
 
@@ -187,16 +123,4 @@ graph LR
 
 ## Best Practices
 
-```mermaid
-mindmap
-    root((Tool Usage))
-        Selection
-            Requirements
-            Integration
-        Implementation
-            Training
-            Standards
-        Maintenance
-            Updates
-            Support
-```
+![8](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/04_essential_devops_tools.md/8.png)

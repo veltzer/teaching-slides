@@ -5,19 +5,7 @@ Emerging trends and methodologies
 
 ## Integration with Agile
 
-```mermaid
-mindmap
-    root((Agile DevOps))
-        Sprints
-            Planning
-            Delivery
-        Automation
-            CI/CD
-            Testing
-        Feedback
-            Metrics
-            Improvement
-```
+![0](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/0.png)
 
 ---
 
@@ -33,12 +21,7 @@ mindmap
 
 ## AI Integration
 
-```mermaid
-graph TD
-    A[Data Collection] --> B[ML Analysis]
-    B --> C[Automated Decisions]
-    C --> D[Actions]
-```
+![1](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/1.png)
 
 ---
 
@@ -54,19 +37,7 @@ graph TD
 
 ## Automated Operations
 
-```mermaid
-mindmap
-    root((AIOps))
-        Detection
-            Anomalies
-            Patterns
-        Response
-            Auto-fix
-            Scale
-        Learning
-            Improve
-            Adapt
-```
+![2](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/2.png)
 
 ---
 
@@ -82,12 +53,7 @@ mindmap
 
 ## Compliance Integration
 
-```mermaid
-graph LR
-    A[Policy] --> B[Implementation]
-    B --> C[Monitoring]
-    C --> D[Reporting]
-```
+![3](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/3.png)
 
 ---
 
@@ -103,16 +69,7 @@ graph LR
 
 ## Quantum Computing
 
-```mermaid
-mindmap
-    root((Quantum))
-        Security
-            Encryption
-            Protection
-        Optimization
-            Algorithms
-            Processing
-```
+![4](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/4.png)
 
 ---
 
@@ -128,13 +85,7 @@ mindmap
 
 ## Cross-Platform DevOps
 
-```mermaid
-graph TD
-    A[Mobile] --> E[Central Platform]
-    B[Web] --> E
-    C[IoT] --> E
-    D[Cloud] --> E
-```
+![5](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/5.png)
 
 ---
 
@@ -150,19 +101,7 @@ graph TD
 
 ## Future Skills
 
-```mermaid
-mindmap
-    root((Skills))
-        Technical
-            AI/ML
-            Quantum
-        Process
-            Agile
-            Lean
-        Soft
-            Leadership
-            Communication
-```
+![6](../../../out/mermaid/marp/courses/welcome-to-the-world-of-devops/10_future_directions_in_devops.md/6.png)
 
 ---
 
