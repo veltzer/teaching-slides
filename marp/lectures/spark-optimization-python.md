@@ -21,7 +21,7 @@
 - Non-uniform data distribution
 
 **Real-world examples**:
-```scala
+```python
 // Skewed user activity data
 df.groupBy("user_id").count()  // Some users very active
 
