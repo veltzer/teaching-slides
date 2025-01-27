@@ -1,0 +1,5 @@
+graph TD
+    A[System] -->|/etc/gitconfig| D[Final Config]
+    B[Global] -->|~/.gitconfig| D
+    C[Local] -->|.git/config| D
+    D -->|Override Priority| E[Local > Global > System]
