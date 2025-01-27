@@ -8,9 +8,51 @@
 1. Model Evaluation
 1. Feature Engineering
 
-## MLlib Components
+---
 
-![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/04_spark_mllib.md/0.png)
+## MLlib Architecture
+
+```mermaid
+graph TB
+    A[MLlib] --> B[Algorithms]
+    A --> C[Features]
+    A --> D[Pipeline]
+    B --> E[Classification]
+    B --> F[Regression]
+    B --> G[Clustering]
+    C --> H[Transformers]
+    C --> I[Estimators]
+    style A fill:#f96
+```
+
+---
+
+## Machine Learning Types
+
+```mermaid
+graph LR
+    A[ML Types] --> B[Supervised]
+    A --> C[Unsupervised]
+    B --> D[Classification]
+    B --> E[Regression]
+    C --> F[Clustering]
+    C --> G[Dimensionality Reduction]
+```
+
+---
+
+## ML Pipeline Components
+
+```mermaid
+graph LR
+    A[Data] --> B[Tokenizer]
+    B --> C[HashingTF]
+    C --> D[Model]
+    D --> E[Predictions]
+    style D fill:#f96
+```
+
+---
 
 ## Data Preparation
 
@@ -24,15 +66,59 @@ val hashingTF = new HashingTF()
   .setOutputCol("features")
 ```
 
-## Feature Engineering
+---
 
-1. Tokenization
-1. TF-IDF
-1. Word2Vec
-1. OneHotEncoding
-1. StandardScaler
+## Feature Engineering Flow
 
-## Classification Algorithms
+```mermaid
+graph TB
+    A[Raw Data] --> B[Cleaning]
+    B --> C[Feature Extraction]
+    C --> D[Feature Selection]
+    D --> E[Scaling]
+    E --> F[Training Ready]
+```
+
+---
+
+## Feature Types
+
+1. Numerical Features
+1. Categorical Features
+1. Text Features
+1. Custom Features
+1. Combined Features
+
+---
+
+## Feature Transformations
+
+```mermaid
+graph LR
+    A[Features] --> B[Standardization]
+    A --> C[Normalization]
+    A --> D[Bucketing]
+    A --> E[Encoding]
+    style A fill:#f96
+```
+
+---
+
+## Classification Architecture
+
+```mermaid
+graph TB
+    A[Classification] --> B[Binary]
+    A --> C[Multiclass]
+    B --> D[Logistic Regression]
+    B --> E[SVM]
+    C --> F[Random Forest]
+    C --> G[Naive Bayes]
+```
+
+---
+
+## Classification Implementation
 
 ```scala
 import org.apache.spark.ml.classification._
@@ -43,7 +129,23 @@ val model = lr.fit(training)
 val predictions = model.transform(test)
 ```
 
+---
+
 ## Regression Models
+
+```mermaid
+graph TB
+    A[Regression] --> B[Linear]
+    A --> C[Tree-based]
+    B --> D[Simple Linear]
+    B --> E[Multiple Linear]
+    C --> F[Decision Tree]
+    C --> G[Random Forest]
+```
+
+---
+
+## Regression Implementation
 
 ```scala
 import org.apache.spark.ml.regression._
@@ -54,7 +156,22 @@ val lr = new LinearRegression()
 val lrModel = lr.fit(training)
 ```
 
-## Model Evaluation
+---
+
+## Model Evaluation Flow
+
+```mermaid
+graph LR
+    A[Model] --> B[Predictions]
+    B --> C[Metrics]
+    C --> D[Validation]
+    D --> E[Tuning]
+    style C fill:#f96
+```
+
+---
+
+## Evaluation Metrics
 
 ```scala
 import org.apache.spark.ml.evaluation._
@@ -65,9 +182,35 @@ val evaluator = new RegressionEvaluator()
 val rmse = evaluator.evaluate(predictions)
 ```
 
+---
+
+## Cross Validation
+
+```mermaid
+graph TB
+    A[Data] --> B[Fold 1]
+    A --> C[Fold 2]
+    A --> D[Fold 3]
+    B --> E[Train/Test]
+    C --> E
+    D --> E
+    E --> F[Results]
+```
+
+---
+
 ## Pipeline Architecture
 
-![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/04_spark_mllib.md/1.png)
+```mermaid
+graph LR
+    A[Raw Data] --> B[Preprocessor]
+    B --> C[Feature Eng]
+    C --> D[Algorithm]
+    D --> E[Evaluator]
+    style D fill:#f96
+```
+
+---
 
 ## ML Pipeline Example
 
@@ -80,7 +223,22 @@ val pipeline = new Pipeline()
 val model = pipeline.fit(training)
 ```
 
-## Cross Validation
+---
+
+## Hyperparameter Tuning
+
+```mermaid
+graph TB
+    A[Parameters] --> B[Grid Search]
+    A --> C[Random Search]
+    B --> D[Cross Validation]
+    C --> D
+    D --> E[Best Model]
+```
+
+---
+
+## Cross Validation Setup
 
 ```scala
 val paramGrid = new ParamGridBuilder()
@@ -94,7 +252,23 @@ val cv = new CrossValidator()
   .setNumFolds(3)
 ```
 
-## Clustering
+---
+
+## Clustering Architecture
+
+```mermaid
+graph TB
+    A[Clustering] --> B[K-Means]
+    A --> C[Hierarchical]
+    A --> D[Density-Based]
+    B --> E[Implementation]
+    C --> E
+    D --> E
+```
+
+---
+
+## Clustering Implementation
 
 ```scala
 import org.apache.spark.ml.clustering._
@@ -104,6 +278,21 @@ val kmeans = new KMeans()
 val model = kmeans.fit(dataset)
 ```
 
+---
+
+## Model Persistence
+
+```mermaid
+graph LR
+    A[Model] --> B[Save]
+    A --> C[Load]
+    B --> D[Storage]
+    C --> E[Deployment]
+    style A fill:#f96
+```
+
+---
+
 ## Model Save and Load
 
 ```scala
@@ -111,17 +300,47 @@ model.save("model_path")
 val loadedModel = PipelineModel.load("model_path")
 ```
 
+---
+
 ## Performance Optimization
 
-1. Feature scaling
-1. Parameter tuning
-1. Cross-validation
-1. Model selection
-1. Performance metrics
+```mermaid
+graph TB
+    A[Optimization] --> B[Feature Selection]
+    A --> C[Parameter Tuning]
+    A --> D[Algorithm Selection]
+    B --> E[Performance]
+    C --> E
+    D --> E
+```
+
+---
 
 ## Best Practices
 
-![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/04_spark_mllib.md/2.png)
+```mermaid
+graph LR
+    A[Best Practices] --> B[Data Quality]
+    A --> C[Feature Eng]
+    A --> D[Model Selection]
+    A --> E[Validation]
+    A --> F[Deployment]
+```
+
+---
+
+## Model Deployment Flow
+
+```mermaid
+graph TB
+    A[Development] --> B[Testing]
+    B --> C[Validation]
+    C --> D[Production]
+    D --> E[Monitoring]
+    E --> F[Updates]
+```
+
+---
 
 ## Common Use Cases
 
@@ -130,3 +349,17 @@ val loadedModel = PipelineModel.load("model_path")
 1. Anomaly Detection
 1. Customer Segmentation
 1. Predictive Maintenance
+
+---
+
+## Advanced Topics
+
+```mermaid
+graph TB
+    A[Advanced ML] --> B[Deep Learning]
+    A --> C[Ensemble Methods]
+    A --> D[Online Learning]
+    B --> E[Integration]
+    C --> E
+    D --> E
+```

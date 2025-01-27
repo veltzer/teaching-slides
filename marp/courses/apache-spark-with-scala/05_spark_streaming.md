@@ -8,9 +8,33 @@
 1. State management
 1. Fault tolerance
 
+---
+
 ## Streaming Architecture
 
-![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/05_spark_streaming.md/0.png)
+```mermaid
+graph LR
+    A[Data Sources] --> B[Receivers]
+    B --> C[DStreams]
+    C --> D[Processing]
+    D --> E[Output]
+    style C fill:#f96
+```
+
+---
+
+## Processing Models
+
+```mermaid
+graph TB
+    A[Processing] --> B[Micro-batch]
+    A --> C[Continuous]
+    B --> D[DStream]
+    C --> E[Structured Streaming]
+    style A fill:#f96
+```
+
+---
 
 ## DStream Basics
 
@@ -20,15 +44,36 @@ val conf = new SparkConf().setAppName("StreamingApp")
 val ssc = new StreamingContext(conf, Seconds(1))
 ```
 
-## Data Sources
+---
 
-1. Kafka
-1. Flume
-1. Kinesis
-1. Socket
-1. Files
+## Stream Sources
 
-## Kafka Integration
+```mermaid
+graph TB
+    A[Sources] --> B[Kafka]
+    A --> C[Flume]
+    A --> D[Kinesis]
+    A --> E[Socket]
+    A --> F[Files]
+    style A fill:#f96
+```
+
+---
+
+## Kafka Integration Flow
+
+```mermaid
+graph LR
+    A[Kafka] --> B[Consumer]
+    B --> C[DStream]
+    C --> D[Processing]
+    D --> E[Results]
+    E --> F[Storage]
+```
+
+---
+
+## Kafka Setup
 
 ```scala
 import org.apache.spark.streaming.kafka010._
@@ -40,11 +85,68 @@ val kafkaParams = Map(
 )
 ```
 
+---
+
 ## Window Operations
 
-![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/05_spark_streaming.md/1.png)
+```mermaid
+graph LR
+    subgraph Window 1
+    A[Batch 1] --> B[Batch 2]
+    end
+    subgraph Window 2
+    B --> C[Batch 3]
+    end
+    subgraph Window 3
+    C --> D[Batch 4]
+    end
+```
+
+---
+
+## Windowing Types
+
+```mermaid
+graph TB
+    A[Windows] --> B[Sliding]
+    A --> C[Tumbling]
+    B --> D[Overlap]
+    C --> E[No Overlap]
+    style A fill:#f96
+```
+
+---
+
+## Window Configuration
+
+```scala
+// Window duration
+val windowLength = Seconds(30)
+// Sliding interval
+val slidingInterval = Seconds(10)
+// Apply window
+val windowedStream = stream.window(
+  windowLength,
+  slidingInterval
+)
+```
+
+---
 
 ## Stateful Operations
+
+```mermaid
+graph TB
+    A[State] --> B[Initialize]
+    B --> C[Update]
+    C --> D[Cleanup]
+    D --> B
+    style C fill:#f96
+```
+
+---
+
+## State Implementation
 
 ```scala
 val words = lines.flatMap(_.split(" "))
@@ -52,7 +154,22 @@ val pairs = words.map(word => (word, 1))
 val wordCounts = pairs.updateStateByKey(updateFunction)
 ```
 
+---
+
 ## Checkpointing
+
+```mermaid
+graph LR
+    A[Stream] --> B[Process]
+    B --> C[Checkpoint]
+    C --> D[Recovery]
+    D -.-> A
+    style C fill:#f96
+```
+
+---
+
+## Checkpoint Setup
 
 ```scala
 ssc.checkpoint("checkpoint_directory")
@@ -63,27 +180,66 @@ def functionToCreateContext(): StreamingContext = {
 }
 ```
 
+---
+
 ## Output Operations
 
-1. print()
-1. saveAsTextFiles()
-1. saveAsObjectFiles()
-1. foreachRDD()
-1. saveAsHadoopFiles()
+```mermaid
+graph TB
+    A[Output] --> B[print]
+    A --> C[saveAsFiles]
+    A --> D[foreachRDD]
+    B --> E[Debug]
+    C --> F[Storage]
+    D --> G[Custom]
+```
+
+---
+
+## Output Implementation
+
+```scala
+// Print output
+stream.print()
+// Save as text files
+stream.saveAsTextFiles("prefix", "suffix")
+// Custom output
+stream.foreachRDD { rdd =>
+  rdd.foreach { record =>
+    // Process each record
+  }
+}
+```
+
+---
 
 ## Transformation Types
 
-![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/05_spark_streaming.md/2.png)
+```mermaid
+graph TB
+    A[Transformations] --> B[Stateless]
+    A --> C[Stateful]
+    B --> D[map/filter]
+    C --> E[updateStateByKey]
+    style A fill:#f96
+```
 
-## Performance Tuning
-
-1. Batch interval
-1. Partition count
-1. Memory allocation
-1. Backpressure
-1. Receiver rate
+---
 
 ## Error Handling
+
+```mermaid
+graph LR
+    A[Error] --> B[Detect]
+    B --> C[Retry]
+    C --> D[Recover]
+    D --> E[Continue]
+    C --> F[Fail]
+```
+
+---
+
+## Error Implementation
 
 ```scala
 stream.foreachRDD { rdd =>
@@ -98,7 +254,36 @@ stream.foreachRDD { rdd =>
 }
 ```
 
-## Monitoring
+---
+
+## Performance Tuning
+
+```mermaid
+graph TB
+    A[Performance] --> B[Batch Size]
+    A --> C[Parallelism]
+    A --> D[Memory]
+    B --> E[Optimization]
+    C --> E
+    D --> E
+```
+
+---
+
+## Monitoring Architecture
+
+```mermaid
+graph LR
+    A[Metrics] --> B[Processing Time]
+    A --> C[Scheduling Delay]
+    A --> D[Total Delay]
+    A --> E[Input Rate]
+    style A fill:#f96
+```
+
+---
+
+## Monitoring Implementation
 
 1. Streaming tab in UI
 1. Processing time
@@ -106,9 +291,45 @@ stream.foreachRDD { rdd =>
 1. Total delay
 1. Input rate
 
+---
+
+## Backpressure
+
+```mermaid
+graph TB
+    A[Input] --> B[Rate Control]
+    B --> C[Processing]
+    C --> |Feedback| B
+    style B fill:#f96
+```
+
+---
+
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/05_spark_streaming.md/3.png)
+```mermaid
+graph LR
+    A[Best Practices] --> B[Batch Size]
+    A --> C[Memory Tuning]
+    A --> D[Error Handling]
+    A --> E[Monitoring]
+    style A fill:#f96
+```
+
+---
+
+## Production Deployment
+
+```mermaid
+graph TB
+    A[Deploy] --> B[Configure]
+    B --> C[Monitor]
+    C --> D[Optimize]
+    D --> E[Scale]
+    style A fill:#f96
+```
+
+---
 
 ## Use Cases
 
@@ -117,3 +338,17 @@ stream.foreachRDD { rdd =>
 1. Social Media Analysis
 1. Financial Data Processing
 1. Real-time Analytics
+
+---
+
+## Advanced Features
+
+```mermaid
+graph TB
+    A[Advanced] --> B[Custom Receivers]
+    A --> C[Dynamic Scaling]
+    A --> D[Custom Storage]
+    B --> E[Implementation]
+    C --> E
+    D --> E
+```
