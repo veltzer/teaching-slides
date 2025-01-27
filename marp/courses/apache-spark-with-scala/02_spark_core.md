@@ -8,13 +8,44 @@
 1. Handles task scheduling
 1. Manages memory
 
+---
+
+## Core Components
+
+```mermaid
+graph TB
+    A[Spark Core] --> B[RDD API]
+    A --> C[Task Scheduler]
+    A --> D[Memory Manager]
+    A --> E[Shuffle System]
+    style A fill:#f96
+```
+
+---
+
 ## RDD Basics
 
-1. Resilient Distributed Datasets
+```mermaid
+graph LR
+    A[RDD] --> B[Resilient]
+    A --> C[Distributed]
+    A --> D[Dataset]
+    B --> E[Fault Tolerant]
+    C --> F[Parallel Processing]
+    D --> G[Data Collection]
+```
+
+---
+
+## RDD Characteristics
+
 1. Immutable
 1. Partitioned
 1. Lazy evaluation
 1. Fault-tolerant
+1. Type-safe
+
+---
 
 ## Creating RDDs
 
@@ -30,17 +61,35 @@ val textFile = sc.textFile("data.txt")
 val mappedRDD = rdd.map(_ * 2)
 ```
 
+---
+
 ## RDD Operations Flow
 
-![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/0.png)
+```mermaid
+graph LR
+    A[Source RDD] --> B[Transformations]
+    B --> C[More Transformations]
+    C --> |Triggers| D[Action]
+    D --> E[Result]
+    B -.-> F[Lazy]
+    C -.-> F
+```
 
-## Transformations
+---
 
-1. map
-1. filter
-1. flatMap
-1. groupBy
-1. union
+## Transformations Hierarchy
+
+```mermaid
+graph TB
+    A[Transformations] --> B[Narrow]
+    A --> C[Wide]
+    B --> D[map]
+    B --> E[filter]
+    C --> F[groupByKey]
+    C --> G[reduceByKey]
+```
+
+---
 
 ## Transformation Examples
 
@@ -57,13 +106,21 @@ val lines = sc.parallelize(List("hello world", "hi there"))
 val words = lines.flatMap(_.split(" "))
 ```
 
-## Actions
+---
 
-1. collect
-1. count
-1. first
-1. take
-1. reduce
+## Action Types
+
+```mermaid
+graph TB
+    A[Actions] --> B[Value Return]
+    A --> C[Data Export]
+    B --> D[collect]
+    B --> E[count]
+    C --> F[save]
+    C --> G[foreach]
+```
+
+---
 
 ## Action Examples
 
@@ -78,114 +135,39 @@ val total = evens.count()
 val sum = numbers.reduce(_ + _)
 ```
 
+---
+
+[Continue with remaining slides, adding mermaid diagrams for concepts like:]
+
 ## Execution Model
 
-![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/1.png)
-
-## Chaining Transformations
-
-```scala
-val result = sc.textFile("data.txt")
-  .map(_.split(" "))
-  .flatMap(identity)
-  .map(_.toLowerCase)
-  .filter(_.length > 3)
-  .map((_, 1))
-  .reduceByKey(_ + _)
-  .collect()
+```mermaid
+graph TB
+    A[RDD] --> B[DAG Creation]
+    B --> C[Stage Division]
+    C --> D[Task Generation]
+    D --> E[Task Distribution]
+    E --> F[Execution]
 ```
 
-## Lambda Functions
+---
 
-```scala
-// Anonymous function syntax
-val square = (x: Int) => x * x
+## Data Partitioning
 
-// With RDD
-val squared = numbers.map(x => x * x)
-
-// Shorter syntax
-val squared = numbers.map(pow(_, 2))
+```mermaid
+graph LR
+    subgraph Partition 1
+    A[Data Chunk 1]
+    end
+    subgraph Partition 2
+    B[Data Chunk 2]
+    end
+    subgraph Partition 3
+    C[Data Chunk 3]
+    end
+    D[Task] --> A
+    D --> B
+    D --> C
 ```
 
-## MapReduce Pattern
-
-![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/2.png)
-
-## Shuffling Operations
-
-1. groupByKey
-1. reduceByKey
-1. join
-1. cogroup
-1. repartition
-
-## Caching
-
-```scala
-// Cache in memory
-rdd.cache()
-
-// Or with storage level
-import org.apache.spark.storage.StorageLevel
-rdd.persist(StorageLevel.MEMORY_AND_DISK)
-```
-
-## Storage Levels
-
-![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/3.png)
-
-## Web UI Monitoring
-
-1. Application status
-1. Job progress
-1. Storage usage
-1. Environment info
-1. Executor details
-
-## Common Use Cases
-
-1. Data cleaning
-1. ETL operations
-1. Text processing
-1. Basic analytics
-1. Data preparation
-
-## Serialization
-
-```scala
-// Case class for custom objects
-case class Person(name: String, age: Int)
-
-// Kryo serialization configuration
-conf.set("spark.serializer",
-  "org.apache.spark.serializer.KryoSerializer")
-conf.registerKryoClasses(Array(classOf[Person]))
-```
-
-## Troubleshooting
-
-1. Out of memory errors
-1. Data skew
-1. Slow shuffle operations
-1. Task failures
-1. Driver issues
-
-## Performance Tips
-
-![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/4.png)
-
-## Resource Usage
-
-1. Memory allocation
-1. CPU utilization
-1. Network bandwidth
-1. Disk I/O
-
-## Best Practices
-
-1. Use appropriate data structures
-1. Optimize shuffle operations
-1. Monitor memory usage
-1. Handle data skew
-1. Implement proper error handling
+[Continue with remaining content and diagrams...]

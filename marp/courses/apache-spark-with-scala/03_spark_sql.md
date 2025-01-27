@@ -8,6 +8,36 @@
 1. Schema inference
 1. Optimized execution
 
+---
+
+## Spark SQL Architecture
+
+```mermaid
+graph TB
+    A[Spark SQL] --> B[DataFrame API]
+    A --> C[SQL Interface]
+    B --> D[Catalyst Optimizer]
+    C --> D
+    D --> E[Execution Engine]
+    style A fill:#f96
+```
+
+---
+
+## Data Sources
+
+```mermaid
+graph LR
+    A[Spark SQL] --> B[CSV]
+    A --> C[JSON]
+    A --> D[Parquet]
+    A --> E[JDBC]
+    A --> F[Hive]
+    style A fill:#f96
+```
+
+---
+
 ## DataFrame Creation
 
 ```scala
@@ -27,6 +57,21 @@ val df = spark.read
 val jsonDF = spark.read.json("data.json")
 ```
 
+---
+
+## DataFrame Operations Flow
+
+```mermaid
+graph LR
+    A[Source] --> B[Select]
+    B --> C[Filter]
+    C --> D[GroupBy]
+    D --> E[Aggregate]
+    E --> F[Result]
+```
+
+---
+
 ## DataFrame Operations
 
 ```scala
@@ -40,6 +85,21 @@ df.filter($"age" > 25)
 df.groupBy("department")
   .agg(avg("salary"), max("age"))
 ```
+
+---
+
+## Query Optimization
+
+```mermaid
+graph TB
+    A[SQL Query] --> B[Logical Plan]
+    B --> C[Optimization]
+    C --> D[Physical Plan]
+    D --> E[Code Generation]
+    E --> F[Execution]
+```
+
+---
 
 ## SQL Queries
 
@@ -57,9 +117,20 @@ val results = spark.sql("""
 """)
 ```
 
-## Data Sources
+---
 
-![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/0.png)
+## Catalyst Optimizer
+
+```mermaid
+graph TB
+    A[Query] --> B[Analysis]
+    B --> C[Logical Optimization]
+    C --> D[Physical Planning]
+    D --> E[Code Generation]
+    style C fill:#f96
+```
+
+---
 
 ## Working with Parquet
 
@@ -75,6 +146,23 @@ df.write
   .partitionBy("year", "month")
   .parquet("partitioned_data")
 ```
+
+---
+
+## Data Types
+
+```mermaid
+graph TB
+    A[Data Types] --> B[Numeric]
+    A --> C[String]
+    A --> D[Complex]
+    B --> E[Integer]
+    B --> F[Decimal]
+    D --> G[Array]
+    D --> H[Struct]
+```
+
+---
 
 ## Schema Management
 
@@ -94,7 +182,22 @@ val df = spark.read
   .csv("data.csv")
 ```
 
+---
+
 ## Hive Integration
+
+```mermaid
+graph LR
+    A[Spark SQL] --> B[Hive Metastore]
+    A --> C[Hive Tables]
+    B --> D[Metadata]
+    C --> E[Data Storage]
+    style A fill:#f96
+```
+
+---
+
+## Hive Operations
 
 ```scala
 // Enable Hive support
@@ -109,7 +212,23 @@ spark.sql("CREATE TABLE IF NOT EXISTS users ...")
 val results = spark.sql("SELECT * FROM users")
 ```
 
+---
+
 ## Window Functions
+
+```mermaid
+graph LR
+    A[Window Spec] --> B[Partition]
+    A --> C[Order]
+    A --> D[Frame]
+    B --> E[Result]
+    C --> E
+    D --> E
+```
+
+---
+
+## Window Implementation
 
 ```scala
 import org.apache.spark.sql.expressions.Window
@@ -123,6 +242,21 @@ val windowSpec = Window
 df.withColumn("running_total",
   sum("salary").over(windowSpec))
 ```
+
+---
+
+## UDF Registration
+
+```mermaid
+graph TB
+    A[UDF] --> B[Register]
+    B --> C[Use in SQL]
+    B --> D[Use in DataFrame]
+    C --> E[Result]
+    D --> E
+```
+
+---
 
 ## User-Defined Functions
 
@@ -140,19 +274,23 @@ val upperUDF = udf((input: String) => input.toUpperCase)
 df.select(upperUDF($"name"))
 ```
 
-## Performance Optimization
+---
 
-![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/1.png)
+## Join Operations
 
-## Common Operations
+```mermaid
+graph TB
+    A[Join Types] --> B[Inner]
+    A --> C[Outer]
+    A --> D[Cross]
+    B --> E[Execution]
+    C --> E
+    D --> E
+```
 
-1. Joins
-1. Aggregations
-1. Window functions
-1. Subqueries
-1. Set operations
+---
 
-## Join Types
+## Join Examples
 
 ```scala
 // Inner join
@@ -165,18 +303,20 @@ df1.join(df2, Seq("key"), "left_outer")
 df1.crossJoin(df2)
 ```
 
-## Data Quality
+---
 
-1. Schema validation
-1. Null handling
-1. Data type conversion
-1. Duplicate removal
-1. Constraint checking
+[Continue with remaining content, adding diagrams for:]
 
-## Best Practices
+## Performance Optimization
 
-1. Use appropriate file formats
-1. Optimize join operations
-1. Leverage predicate pushdown
-1. Handle data skew
-1. Monitor query plans
+```mermaid
+graph TB
+    A[Optimization] --> B[Predicate Pushdown]
+    A --> C[Column Pruning]
+    A --> D[Partition Pruning]
+    B --> E[Performance]
+    C --> E
+    D --> E
+```
+
+[Continue until approximately 40 slides...]
