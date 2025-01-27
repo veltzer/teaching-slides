@@ -59,14 +59,7 @@ val results = spark.sql("""
 
 ## Data Sources
 
-```mermaid
-graph LR
-    A[Spark SQL] --> B[CSV]
-    A --> C[JSON]
-    A --> D[Parquet]
-    A --> E[JDBC]
-    A --> F[Hive]
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/0.png)
 
 ## Working with Parquet
 
@@ -149,13 +142,7 @@ df.select(upperUDF($"name"))
 
 ## Performance Optimization
 
-```mermaid
-graph TB
-    A[Optimization] --> B[Predicate Pushdown]
-    A --> C[Column Pruning]
-    A --> D[Partition Pruning]
-    A --> E[Cache Tables]
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/1.png)
 
 ## Common Operations
 

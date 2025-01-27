@@ -1,0 +1,10 @@
+graph TB
+    subgraph Map Phase
+    A[Input] --> B[Map]
+    B --> C[Local Results]
+    end
+    subgraph Reduce Phase
+    C --> D[Shuffle]
+    D --> E[Reduce]
+    E --> F[Final Result]
+    end

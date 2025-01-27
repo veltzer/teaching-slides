@@ -32,15 +32,7 @@ val mappedRDD = rdd.map(_ * 2)
 
 ## RDD Operations Flow
 
-```mermaid
-graph LR
-    A[Source] --> B[Transformation]
-    B --> C[Transformation]
-    C --> D[Action]
-    B -.-> E[Lazy]
-    C -.-> E
-    D --> F[Execution]
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/0.png)
 
 ## Transformations
 
@@ -88,14 +80,7 @@ val sum = numbers.reduce(_ + _)
 
 ## Execution Model
 
-```mermaid
-graph TB
-    A[RDD Creation] --> B[Transformations]
-    B --> C[Action Triggered]
-    C --> D[DAG Generation]
-    D --> E[Task Scheduling]
-    E --> F[Execution]
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/1.png)
 
 ## Chaining Transformations
 
@@ -125,18 +110,7 @@ val squared = numbers.map(pow(_, 2))
 
 ## MapReduce Pattern
 
-```mermaid
-graph TB
-    subgraph Map Phase
-    A[Input] --> B[Map]
-    B --> C[Local Results]
-    end
-    subgraph Reduce Phase
-    C --> D[Shuffle]
-    D --> E[Reduce]
-    E --> F[Final Result]
-    end
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/2.png)
 
 ## Shuffling Operations
 
@@ -159,13 +133,7 @@ rdd.persist(StorageLevel.MEMORY_AND_DISK)
 
 ## Storage Levels
 
-```mermaid
-graph TB
-    A[Storage Levels] --> B[MEMORY_ONLY]
-    A --> C[MEMORY_AND_DISK]
-    A --> D[DISK_ONLY]
-    A --> E[OFF_HEAP]
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/3.png)
 
 ## Web UI Monitoring
 
@@ -205,13 +173,7 @@ conf.registerKryoClasses(Array(classOf[Person]))
 
 ## Performance Tips
 
-```mermaid
-graph TB
-    A[Performance] --> B[Proper Partitioning]
-    A --> C[Minimize Shuffling]
-    A --> D[Cache Wisely]
-    A --> E[Tune Memory]
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/4.png)
 
 ## Resource Usage
 

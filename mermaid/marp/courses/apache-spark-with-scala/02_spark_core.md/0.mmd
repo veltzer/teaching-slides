@@ -1,0 +1,7 @@
+graph LR
+    A[Source] --> B[Transformation]
+    B --> C[Transformation]
+    C --> D[Action]
+    B -.-> E[Lazy]
+    C -.-> E
+    D --> F[Execution]

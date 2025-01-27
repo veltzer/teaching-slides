@@ -25,15 +25,7 @@
 
 ## Traditional vs Big Data Processing
 
-```mermaid
-graph LR
-    A[Traditional] --> B[Single Machine]
-    A --> C[Vertical Scaling]
-    A --> D[RDBMS]
-    E[Big Data] --> F[Distributed Systems]
-    E --> G[Horizontal Scaling]
-    E --> H[NoSQL/Distributed Storage]
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/0.png)
 
 ## Apache Spark Overview
 
@@ -45,41 +37,15 @@ graph LR
 
 ## Spark vs Hadoop MapReduce
 
-```mermaid
-graph TB
-    subgraph MapReduce
-    A[Disk-Based] --> B[Batch Processing]
-    B --> C[Complex Implementation]
-    end
-    subgraph Spark
-    D[In-Memory] --> E[Interactive & Streaming]
-    E --> F[Simple APIs]
-    end
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/1.png)
 
 ## Spark Components
 
-```mermaid
-graph TB
-    A[Spark Core] --> B[Spark SQL]
-    A --> C[Spark Streaming]
-    A --> D[MLlib]
-    A --> E[GraphX]
-    style A fill:#f9f,stroke:#333
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/2.png)
 
 ## Spark Architecture
 
-```mermaid
-graph TB
-    A[Driver Program] --> B[Cluster Manager]
-    B --> C[Worker Node 1]
-    B --> D[Worker Node 2]
-    B --> E[Worker Node N]
-    C --> F[Executor 1]
-    D --> G[Executor 2]
-    E --> H[Executor N]
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/3.png)
 
 ## Driver Program
 
@@ -117,24 +83,11 @@ val sc = new SparkContext(conf)
 
 ## Cluster Manager Responsibilities
 
-```mermaid
-graph LR
-    A[Cluster Manager] --> B[Resource Allocation]
-    A --> C[Node Management]
-    A --> D[Job Scheduling]
-    A --> E[Fault Recovery]
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/4.png)
 
 ## DAG - Directed Acyclic Graph
 
-```mermaid
-graph LR
-    A[Read Data] --> B[Filter]
-    B --> C[Map]
-    C --> D[Group]
-    D --> E[Aggregate]
-    E --> F[Save]
-```
+![5](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/5.png)
 
 ## Stages in Spark
 
@@ -144,13 +97,7 @@ graph LR
 
 ## Task Execution
 
-```mermaid
-graph TB
-    A[Task] --> B[Read Input]
-    B --> C[Process Data]
-    C --> D[Write Output]
-    D --> E[Return Status]
-```
+![6](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/6.png)
 
 ## Memory Management
 
@@ -175,16 +122,7 @@ graph TB
 
 ## Local vs Cluster Mode
 
-```mermaid
-graph TB
-    subgraph Local
-    A[Single JVM] --> B[All Components]
-    end
-    subgraph Cluster
-    C[Distributed] --> D[Multiple JVMs]
-    D --> E[Multiple Machines]
-    end
-```
+![7](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/7.png)
 
 ## Spark Web UI
 
@@ -196,13 +134,7 @@ graph TB
 
 ## Data Lineage
 
-```mermaid
-graph LR
-    A[Source] --> B[Transform 1]
-    B --> C[Transform 2]
-    C --> D[Action]
-    style D fill:#f96
-```
+![8](../../../out/mermaid/marp/courses/apache-spark-with-scala/01_introduction_to_spark.md/8.png)
 
 ## Fault Tolerance
 
