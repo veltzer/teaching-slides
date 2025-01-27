@@ -12,29 +12,13 @@
 
 ## Spark SQL Architecture
 
-```mermaid
-graph TB
-    A[Spark SQL] --> B[DataFrame API]
-    A --> C[SQL Interface]
-    B --> D[Catalyst Optimizer]
-    C --> D
-    D --> E[Execution Engine]
-    style A fill:#f96
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/0.png)
 
 ---
 
 ## Data Sources
 
-```mermaid
-graph LR
-    A[Spark SQL] --> B[CSV]
-    A --> C[JSON]
-    A --> D[Parquet]
-    A --> E[JDBC]
-    A --> F[Hive]
-    style A fill:#f96
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/1.png)
 
 ---
 
@@ -61,14 +45,7 @@ val jsonDF = spark.read.json("data.json")
 
 ## DataFrame Operations Flow
 
-```mermaid
-graph LR
-    A[Source] --> B[Select]
-    B --> C[Filter]
-    C --> D[GroupBy]
-    D --> E[Aggregate]
-    E --> F[Result]
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/2.png)
 
 ---
 
@@ -90,14 +67,7 @@ df.groupBy("department")
 
 ## Query Optimization
 
-```mermaid
-graph TB
-    A[SQL Query] --> B[Logical Plan]
-    B --> C[Optimization]
-    C --> D[Physical Plan]
-    D --> E[Code Generation]
-    E --> F[Execution]
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/3.png)
 
 ---
 
@@ -121,14 +91,7 @@ val results = spark.sql("""
 
 ## Catalyst Optimizer
 
-```mermaid
-graph TB
-    A[Query] --> B[Analysis]
-    B --> C[Logical Optimization]
-    C --> D[Physical Planning]
-    D --> E[Code Generation]
-    style C fill:#f96
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/4.png)
 
 ---
 
@@ -151,16 +114,7 @@ df.write
 
 ## Data Types
 
-```mermaid
-graph TB
-    A[Data Types] --> B[Numeric]
-    A --> C[String]
-    A --> D[Complex]
-    B --> E[Integer]
-    B --> F[Decimal]
-    D --> G[Array]
-    D --> H[Struct]
-```
+![5](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/5.png)
 
 ---
 
@@ -186,14 +140,7 @@ val df = spark.read
 
 ## Hive Integration
 
-```mermaid
-graph LR
-    A[Spark SQL] --> B[Hive Metastore]
-    A --> C[Hive Tables]
-    B --> D[Metadata]
-    C --> E[Data Storage]
-    style A fill:#f96
-```
+![6](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/6.png)
 
 ---
 
@@ -216,15 +163,7 @@ val results = spark.sql("SELECT * FROM users")
 
 ## Window Functions
 
-```mermaid
-graph LR
-    A[Window Spec] --> B[Partition]
-    A --> C[Order]
-    A --> D[Frame]
-    B --> E[Result]
-    C --> E
-    D --> E
-```
+![7](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/7.png)
 
 ---
 
@@ -247,14 +186,7 @@ df.withColumn("running_total",
 
 ## UDF Registration
 
-```mermaid
-graph TB
-    A[UDF] --> B[Register]
-    B --> C[Use in SQL]
-    B --> D[Use in DataFrame]
-    C --> E[Result]
-    D --> E
-```
+![8](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/8.png)
 
 ---
 
@@ -278,15 +210,7 @@ df.select(upperUDF($"name"))
 
 ## Join Operations
 
-```mermaid
-graph TB
-    A[Join Types] --> B[Inner]
-    A --> C[Outer]
-    A --> D[Cross]
-    B --> E[Execution]
-    C --> E
-    D --> E
-```
+![9](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/9.png)
 
 ---
 
@@ -309,14 +233,6 @@ df1.crossJoin(df2)
 
 ## Performance Optimization
 
-```mermaid
-graph TB
-    A[Optimization] --> B[Predicate Pushdown]
-    A --> C[Column Pruning]
-    A --> D[Partition Pruning]
-    B --> E[Performance]
-    C --> E
-    D --> E
-```
+![10](../../../out/mermaid/marp/courses/apache-spark-with-scala/03_spark_sql.md/10.png)
 
 [Continue until approximately 40 slides...]

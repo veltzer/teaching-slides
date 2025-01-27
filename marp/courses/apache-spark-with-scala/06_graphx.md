@@ -12,28 +12,13 @@
 
 ## Graph Basics
 
-```mermaid
-graph LR
-    A((V1)) --> B((V2))
-    B --> C((V3))
-    C --> A
-    style A fill:#f96
-    style B fill:#f96
-    style C fill:#f96
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/0.png)
 
 ---
 
 ## Graph Components
 
-```mermaid
-graph TB
-    A[Graph] --> B[Vertices]
-    A --> C[Edges]
-    B --> D[Properties]
-    C --> E[Attributes]
-    style A fill:#f96
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/1.png)
 
 ---
 
@@ -58,26 +43,13 @@ val graph = Graph(vertices, edges)
 
 ## Vertex Operations
 
-```mermaid
-graph TB
-    A[Vertex] --> B[Properties]
-    A --> C[Degree]
-    A --> D[Neighbors]
-    B --> E[Updates]
-    style A fill:#f96
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/2.png)
 
 ---
 
 ## Edge Operations
 
-```mermaid
-graph LR
-    A[Edge] --> B[Source]
-    A --> C[Target]
-    A --> D[Properties]
-    style A fill:#f96
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/3.png)
 
 ---
 
@@ -95,27 +67,13 @@ val degrees = graph.degrees
 
 ## Property Graphs
 
-```mermaid
-graph LR
-    A((A:User<br/>age:28)) -->|knows| B((B:User<br/>age:27))
-    B -->|follows| C((C:User<br/>age:65))
-    style A fill:#f96
-    style B fill:#f96
-    style C fill:#f96
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/4.png)
 
 ---
 
 ## Graph Transformations
 
-```mermaid
-graph TB
-    A[Transform] --> B[Map Vertices]
-    A --> C[Map Edges]
-    B --> D[New Graph]
-    C --> D
-    style A fill:#f96
-```
+![5](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/5.png)
 
 ---
 
@@ -134,38 +92,19 @@ val weightedGraph = graph.mapEdges(e =>
 
 ## Aggregation Operations
 
-```mermaid
-graph LR
-    A[Graph] --> B[Aggregate Messages]
-    B --> C[Combine Messages]
-    C --> D[Update Graph]
-    style B fill:#f96
-```
+![6](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/6.png)
 
 ---
 
 ## Message Passing
 
-```mermaid
-graph TB
-    A((V1)) -->|msg| B((V2))
-    B -->|msg| C((V3))
-    C -->|msg| A
-    style B fill:#f96
-```
+![7](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/7.png)
 
 ---
 
 ## Pregel API
 
-```mermaid
-graph LR
-    A[Initial] --> B[Send Messages]
-    B --> C[Combine Messages]
-    C --> D[Update Vertices]
-    D --> B
-    style C fill:#f96
-```
+![8](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/8.png)
 
 ---
 
@@ -191,27 +130,13 @@ val sssp = initialGraph.pregel(Double.PositiveInfinity)(
 
 ## Graph Algorithms
 
-```mermaid
-graph TB
-    A[Algorithms] --> B[PageRank]
-    A --> C[Connected Components]
-    A --> D[Triangle Counting]
-    A --> E[Shortest Paths]
-    style A fill:#f96
-```
+![9](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/9.png)
 
 ---
 
 ## PageRank Flow
 
-```mermaid
-graph LR
-    A[Initial Rank] --> B[Distribute]
-    B --> C[Calculate]
-    C --> D[Update]
-    D --> B
-    style C fill:#f96
-```
+![10](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/10.png)
 
 ---
 
@@ -230,15 +155,7 @@ val ranksByUsername = users.join(ranks).map {
 
 ## Connected Components
 
-```mermaid
-graph TB
-    subgraph Component 1
-    A((1)) --- B((2))
-    end
-    subgraph Component 2
-    C((3)) --- D((4))
-    end
-```
+![11](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/11.png)
 
 ---
 
@@ -255,15 +172,7 @@ val componentCounts = cc.vertices
 
 ## Triangle Counting
 
-```mermaid
-graph LR
-    A((1)) --> B((2))
-    B --> C((3))
-    C --> A
-    style A fill:#f96
-    style B fill:#f96
-    style C fill:#f96
-```
+![12](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/12.png)
 
 ---
 
@@ -280,63 +189,31 @@ val maxTris = triCounts.vertices
 
 ## Graph Partitioning
 
-```mermaid
-graph TB
-    A[Graph] --> B[Partition 1]
-    A --> C[Partition 2]
-    A --> D[Partition 3]
-    style A fill:#f96
-```
+![13](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/13.png)
 
 ---
 
 ## Performance Optimization
 
-```mermaid
-graph LR
-    A[Optimization] --> B[Partitioning]
-    A --> C[Caching]
-    A --> D[Join Strategy]
-    style A fill:#f96
-```
+![14](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/14.png)
 
 ---
 
 ## Best Practices
 
-```mermaid
-graph TB
-    A[Best Practices] --> B[Data Structure]
-    A --> C[Algorithm Choice]
-    A --> D[Memory Usage]
-    A --> E[Partitioning]
-    style A fill:#f96
-```
+![15](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/15.png)
 
 ---
 
 ## Graph Building
 
-```mermaid
-graph LR
-    A[Raw Data] --> B[Vertices]
-    A --> C[Edges]
-    B --> D[Graph]
-    C --> D
-    style D fill:#f96
-```
+![16](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/16.png)
 
 ---
 
 ## Graph Analytics
 
-```mermaid
-graph TB
-    A[Analytics] --> B[Centrality]
-    A --> C[Community]
-    A --> D[Path Analysis]
-    style A fill:#f96
-```
+![17](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/17.png)
 
 ---
 
@@ -352,10 +229,4 @@ graph TB
 
 ## Advanced Features
 
-```mermaid
-graph TB
-    A[Advanced] --> B[Custom Algorithms]
-    A --> C[Graph Builders]
-    A --> D[Optimizers]
-    style A fill:#f96
-```
+![18](../../../out/mermaid/marp/courses/apache-spark-with-scala/06_graphx.md/18.png)

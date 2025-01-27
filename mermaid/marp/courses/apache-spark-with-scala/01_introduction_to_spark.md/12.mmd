@@ -1,0 +1,8 @@
+graph TB
+    A[Node Failure] --> B{Recovery}
+    B --> |Executor| C[Restart Tasks]
+    B --> |Driver| D[Restart App]
+    B --> |Worker| E[Reassign Tasks]
+    C --> F[Continue]
+    D --> F
+    E --> F

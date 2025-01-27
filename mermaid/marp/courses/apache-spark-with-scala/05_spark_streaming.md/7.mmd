@@ -1,0 +1,6 @@
+graph LR
+    A[Stream] --> B[Process]
+    B --> C[Checkpoint]
+    C --> D[Recovery]
+    D -.-> A
+    style C fill:#f96

@@ -1,0 +1,7 @@
+graph LR
+    A[Source RDD] --> B[Transformations]
+    B --> C[More Transformations]
+    C --> |Triggers| D[Action]
+    D --> E[Result]
+    B -.-> F[Lazy]
+    C -.-> F

@@ -1,0 +1,8 @@
+graph TB
+    A[DAG Scheduler] --> B[Stage 1]
+    A --> C[Stage 2]
+    A --> D[Stage n]
+    B --> E[Tasks]
+    C --> E
+    D --> E
+    E --> F[Executors]

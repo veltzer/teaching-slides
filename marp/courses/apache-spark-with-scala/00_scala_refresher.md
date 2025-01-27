@@ -13,18 +13,7 @@
 
 ## Scala Type Hierarchy
 
-```mermaid
-graph TD
-    Any --> AnyVal
-    Any --> AnyRef
-    AnyVal --> Int
-    AnyVal --> Double
-    AnyVal --> Boolean
-    AnyRef --> String
-    AnyRef --> List
-    Nothing --> Int
-    Nothing --> String
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/0.png)
 
 ---
 
@@ -57,16 +46,7 @@ val (x, y) = (10, 20)
 
 ## Collection Hierarchy
 
-```mermaid
-graph TD
-    Traversable --> Iterable
-    Iterable --> Seq
-    Iterable --> Set
-    Iterable --> Map
-    Seq --> List
-    Seq --> Vector
-    Seq --> Array
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/1.png)
 
 ---
 
@@ -88,16 +68,7 @@ val d: Double = 3.14159265359
 
 ## String Operations Flow
 
-```mermaid
-graph LR
-    A[String] --> B[Length]
-    A --> C[Substring]
-    A --> D[Concatenation]
-    A --> E[Interpolation]
-    E --> F[s-interpolator]
-    E --> G[f-interpolator]
-    E --> H[raw-interpolator]
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/2.png)
 
 ---
 
@@ -121,15 +92,7 @@ val firstChar = str1(0)
 
 ## Function Types
 
-```mermaid
-graph LR
-    A[Functions] --> B[Methods]
-    A --> C[Function Values]
-    A --> D[Partial Functions]
-    B --> E[Instance Methods]
-    B --> F[Static Methods]
-    C --> G[Lambda Expressions]
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/3.png)
 
 ---
 
@@ -139,14 +102,7 @@ graph LR
 
 ## Collection Operations Flow
 
-```mermaid
-graph LR
-    A[Collection] --> B[map]
-    B --> C[filter]
-    C --> D[reduce]
-    A --> E[groupBy]
-    E --> F[aggregate]
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/4.png)
 
 ---
 
@@ -156,14 +112,7 @@ graph LR
 
 ## Pattern Matching Flow
 
-```mermaid
-graph TD
-    A[Input] --> B{Type Match}
-    B --> |Int| C[Integer Handler]
-    B --> |String| D[String Handler]
-    B --> |List| E[List Handler]
-    B --> |_| F[Default Handler]
-```
+![5](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/5.png)
 
 ---
 
@@ -173,18 +122,7 @@ graph TD
 
 ## Error Handling Hierarchy
 
-```mermaid
-graph TD
-    A[Error Handling] --> B[Try]
-    A --> C[Option]
-    A --> D[Either]
-    B --> E[Success]
-    B --> F[Failure]
-    C --> G[Some]
-    C --> H[None]
-    D --> I[Left]
-    D --> J[Right]
-```
+![6](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/6.png)
 
 ---
 
@@ -194,13 +132,7 @@ graph TD
 
 ## For Comprehension Flow
 
-```mermaid
-graph LR
-    A[for] --> B[generator]
-    B --> C[filter]
-    C --> D[yield]
-    D --> E[result]
-```
+![7](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/7.png)
 
 ---
 
@@ -210,13 +142,6 @@ graph LR
 
 ## Final Exercise Architecture
 
-```mermaid
-graph TD
-    A[Account] --> B[Transaction]
-    B --> C[Transfer]
-    C --> D[Validation]
-    D --> E[Update]
-    E --> F[Result]
-```
+![8](../../../out/mermaid/marp/courses/apache-spark-with-scala/00_scala_refresher.md/8.png)
 
 [Final sections and solution continue...]

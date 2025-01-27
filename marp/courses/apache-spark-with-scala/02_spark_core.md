@@ -12,28 +12,13 @@
 
 ## Core Components
 
-```mermaid
-graph TB
-    A[Spark Core] --> B[RDD API]
-    A --> C[Task Scheduler]
-    A --> D[Memory Manager]
-    A --> E[Shuffle System]
-    style A fill:#f96
-```
+![0](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/0.png)
 
 ---
 
 ## RDD Basics
 
-```mermaid
-graph LR
-    A[RDD] --> B[Resilient]
-    A --> C[Distributed]
-    A --> D[Dataset]
-    B --> E[Fault Tolerant]
-    C --> F[Parallel Processing]
-    D --> G[Data Collection]
-```
+![1](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/1.png)
 
 ---
 
@@ -65,29 +50,13 @@ val mappedRDD = rdd.map(_ * 2)
 
 ## RDD Operations Flow
 
-```mermaid
-graph LR
-    A[Source RDD] --> B[Transformations]
-    B --> C[More Transformations]
-    C --> |Triggers| D[Action]
-    D --> E[Result]
-    B -.-> F[Lazy]
-    C -.-> F
-```
+![2](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/2.png)
 
 ---
 
 ## Transformations Hierarchy
 
-```mermaid
-graph TB
-    A[Transformations] --> B[Narrow]
-    A --> C[Wide]
-    B --> D[map]
-    B --> E[filter]
-    C --> F[groupByKey]
-    C --> G[reduceByKey]
-```
+![3](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/3.png)
 
 ---
 
@@ -110,15 +79,7 @@ val words = lines.flatMap(_.split(" "))
 
 ## Action Types
 
-```mermaid
-graph TB
-    A[Actions] --> B[Value Return]
-    A --> C[Data Export]
-    B --> D[collect]
-    B --> E[count]
-    C --> F[save]
-    C --> G[foreach]
-```
+![4](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/4.png)
 
 ---
 
@@ -141,33 +102,12 @@ val sum = numbers.reduce(_ + _)
 
 ## Execution Model
 
-```mermaid
-graph TB
-    A[RDD] --> B[DAG Creation]
-    B --> C[Stage Division]
-    C --> D[Task Generation]
-    D --> E[Task Distribution]
-    E --> F[Execution]
-```
+![5](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/5.png)
 
 ---
 
 ## Data Partitioning
 
-```mermaid
-graph LR
-    subgraph Partition 1
-    A[Data Chunk 1]
-    end
-    subgraph Partition 2
-    B[Data Chunk 2]
-    end
-    subgraph Partition 3
-    C[Data Chunk 3]
-    end
-    D[Task] --> A
-    D --> B
-    D --> C
-```
+![6](../../../out/mermaid/marp/courses/apache-spark-with-scala/02_spark_core.md/6.png)
 
 [Continue with remaining content and diagrams...]
