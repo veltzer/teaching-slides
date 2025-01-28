@@ -320,10 +320,10 @@ $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(info doing [$@])
 	$(Q)node_modules/.bin/markdownlint -c .markdownlint.json $<
 	$(Q)pymakehelper touch_mkdir $@
-$(MERMAID_PNG): out/%.png: %.mmd .mmdc.config
+$(MERMAID_PNG): out/%.png: %.mmd .mmdc.config.json
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
-	$(Q)flock /tmp/mermaid_png pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config -i $< -o $@
+	$(Q)flock /tmp/mermaid_png pymakehelper only_print_on_error node_modules/.bin/mmdc -p .mmdc.config.json -i $< -o $@
 $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
