@@ -1,8 +1,4 @@
 # Spark Datasets and DataFrames in Scala
-theme: default
-paginate: true
-header: "Apache Spark: Datasets and DataFrames"
-footer: "© 2025"
 ---
 ## Core Concepts
 1. Datasets: Typed distributed collections
@@ -25,11 +21,8 @@ val df: DataFrame = spark.read
 ```
 ---
 ## Type Safety
-```mermaid
-graph TD
-    A[Dataset] --> B[Compile-time Type Safety]
-    C[DataFrame] --> D[Runtime Type Safety]
-```
+![0](../../../out/mermaid/marp/lectures/spark-scala-datasets.md/0.png)
+
 ---
 ## Basic Transformations
 ```scala
@@ -70,12 +63,8 @@ df.select($"age".cast("string").substring(1))
 ```
 ---
 ## Performance Characteristics
-```mermaid
-graph LR
-    A[Input] --> B[Encoder]
-    B --> C[Processing]
-    C --> D[Results]
-```
+![1](../../../out/mermaid/marp/lectures/spark-scala-datasets.md/1.png)
+
 ---
 ## Memory Usage
 1. Datasets: Object creation overhead
@@ -103,12 +92,8 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ```
 ---
 ## Catalyst Optimizer
-```mermaid
-flowchart LR
-    A[Query] --> B[Analysis]
-    B --> C[Logical Plan]
-    C --> D[Physical Plan]
-```
+![2](../../../out/mermaid/marp/lectures/spark-scala-datasets.md/2.png)
+
 ---
 ## Encoder Operations
 1. Serialization
@@ -171,7 +156,7 @@ df.groupBy($"age")
 case class Order(id: Int, personId: Int)
 val orders: Dataset[Order] = ...
 
-persons.joinWith(orders, 
+persons.joinWith(orders,
   persons("id") === orders("personId"))
 ```
 ---
@@ -222,12 +207,8 @@ val ds: Dataset[CustomType] = ...
 ```
 ---
 ## Serialization
-```mermaid
-graph TD
-    A[JVM Object] --> B[Internal Format]
-    B --> C[Network Transfer]
-    C --> D[Storage]
-```
+![3](../../../out/mermaid/marp/lectures/spark-scala-datasets.md/3.png)
+
 ---
 ## Best Practices
 1. Use appropriate types
