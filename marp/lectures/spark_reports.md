@@ -7,13 +7,8 @@
 1. Business insights
 ---
 ## Core Components
-```mermaid
-graph TD
-    A[Spark Reports] --> B[Data Sources]
-    A --> C[Processing Engine]
-    A --> D[Output Generation]
-    A --> E[Distribution]
-```
+![0](../../../out/mermaid/marp/lectures/spark_reports.md/0.png)
+
 ---
 ## Data Source Integration
 1. Structured databases
@@ -22,13 +17,8 @@ graph TD
 1. External APIs
 ---
 ## Processing Capabilities
-```mermaid
-flowchart LR
-    A[Input] --> B[Transform]
-    B --> C[Process]
-    C --> D[Aggregate]
-    D --> E[Output]
-```
+![1](../../../out/mermaid/marp/lectures/spark_reports.md/1.png)
+
 ---
 ## Report Types
 1. Batch reports
@@ -37,14 +27,8 @@ flowchart LR
 1. Automated alerts
 ---
 ## Architecture Overview
-```mermaid
-graph TD
-    A[Driver] --> B[Cluster Manager]
-    B --> C[Worker 1]
-    B --> D[Worker 2]
-    C --> E[Executor]
-    D --> F[Executor]
-```
+![2](../../../out/mermaid/marp/lectures/spark_reports.md/2.png)
+
 ---
 ## Data Flow Patterns
 1. ETL processes
@@ -53,12 +37,8 @@ graph TD
 1. Batch processing
 ---
 ## Performance Optimization
-```mermaid
-graph LR
-    A[Input] --> B[Cache]
-    B --> C[Process]
-    C --> D[Output]
-```
+![3](../../../out/mermaid/marp/lectures/spark_reports.md/3.png)
+
 ---
 ## Memory Management
 1. Cache settings
@@ -73,12 +53,8 @@ graph LR
 1. Network bandwidth
 ---
 ## Execution Models
-```mermaid
-flowchart TD
-    A[Job] --> B[Stage]
-    B --> C[Tasks]
-    C --> D[Execution]
-```
+![4](../../../out/mermaid/marp/lectures/spark_reports.md/4.png)
+
 ---
 ## Data Formats
 1. CSV files
@@ -87,12 +63,8 @@ flowchart TD
 1. Avro records
 ---
 ## Processing Modes
-```mermaid
-graph TD
-    A[Processing] --> B[Batch]
-    A --> C[Streaming]
-    A --> D[Interactive]
-```
+![5](../../../out/mermaid/marp/lectures/spark_reports.md/5.png)
+
 ---
 ## Output Generation
 1. PDF reports
@@ -107,12 +79,8 @@ graph TD
 1. Audit logging
 ---
 ## Monitoring System
-```mermaid
-graph LR
-    A[Metrics] --> B[Collection]
-    B --> C[Analysis]
-    C --> D[Alerts]
-```
+![6](../../../out/mermaid/marp/lectures/spark_reports.md/6.png)
+
 ---
 ## Error Handling
 1. Retry logic
@@ -121,12 +89,8 @@ graph LR
 1. Alert systems
 ---
 ## Data Quality
-```mermaid
-flowchart LR
-    A[Validation] --> B[Cleaning]
-    B --> C[Enrichment]
-    C --> D[Verification]
-```
+![7](../../../out/mermaid/marp/lectures/spark_reports.md/7.png)
+
 ---
 ## Scheduling Options
 1. Cron-based
@@ -141,12 +105,8 @@ flowchart LR
 1. Latency
 ---
 ## Integration Points
-```mermaid
-graph TD
-    A[Reports] --> B[Databases]
-    A --> C[Services]
-    A --> D[Storage]
-```
+![8](../../../out/mermaid/marp/lectures/spark_reports.md/8.png)
+
 ---
 ## Optimization Techniques
 1. Partition tuning
@@ -155,12 +115,8 @@ graph TD
 1. Resource management
 ---
 ## Deployment Models
-```mermaid
-flowchart LR
-    A[Code] --> B[Build]
-    B --> C[Deploy]
-    C --> D[Monitor]
-```
+![9](../../../out/mermaid/marp/lectures/spark_reports.md/9.png)
+
 ---
 ## Configuration Management
 1. Environment settings
@@ -175,12 +131,8 @@ flowchart LR
 1. Load tests
 ---
 ## Monitoring Tools
-```mermaid
-graph TD
-    A[Monitoring] --> B[Metrics]
-    A --> C[Logs]
-    A --> D[Alerts]
-```
+![10](../../../out/mermaid/marp/lectures/spark_reports.md/10.png)
+
 ---
 ## Maintenance Tasks
 1. Version updates
@@ -195,12 +147,8 @@ graph TD
 1. Interactive components
 ---
 ## Data Governance
-```mermaid
-flowchart LR
-    A[Policies] --> B[Implementation]
-    B --> C[Monitoring]
-    C --> D[Enforcement]
-```
+![11](../../../out/mermaid/marp/lectures/spark_reports.md/11.png)
+
 ---
 ## Best Practices
 1. Code organization
@@ -209,12 +157,8 @@ flowchart LR
 1. Security measures
 ---
 ## Development Workflow
-```mermaid
-graph TD
-    A[Code] --> B[Test]
-    B --> C[Deploy]
-    C --> D[Monitor]
-```
+![12](../../../out/mermaid/marp/lectures/spark_reports.md/12.png)
+
 ---
 ## Scalability Features
 1. Horizontal scaling
@@ -223,12 +167,8 @@ graph TD
 1. Resource elasticity
 ---
 ## Data Pipeline Design
-```mermaid
-flowchart LR
-    A[Source] --> B[Process]
-    B --> C[Transform]
-    C --> D[Load]
-```
+![13](../../../out/mermaid/marp/lectures/spark_reports.md/13.png)
+
 ---
 ## Version Control
 1. Code versioning
@@ -243,12 +183,8 @@ flowchart LR
 1. Operation manuals
 ---
 ## Troubleshooting Guide
-```mermaid
-graph TD
-    A[Issue] --> B[Analysis]
-    B --> C[Resolution]
-    C --> D[Prevention]
-```
+![14](../../../out/mermaid/marp/lectures/spark_reports.md/14.png)
+
 ---
 ## Performance Tuning
 1. Query optimization
@@ -257,12 +193,8 @@ graph TD
 1. Execution planning
 ---
 ## Deployment Options
-```mermaid
-flowchart LR
-    A[Dev] --> B[Test]
-    B --> C[Staging]
-    C --> D[Prod]
-```
+![15](../../../out/mermaid/marp/lectures/spark_reports.md/15.png)
+
 ---
 ## Security Measures
 1. Access control
@@ -271,12 +203,8 @@ flowchart LR
 1. Compliance checks
 ---
 ## Testing Strategy
-```mermaid
-graph TD
-    A[Tests] --> B[Unit]
-    A --> C[Integration]
-    A --> D[Performance]
-```
+![16](../../../out/mermaid/marp/lectures/spark_reports.md/16.png)
+
 ---
 ## Monitoring Setup
 1. Metrics collection
@@ -285,12 +213,8 @@ graph TD
 1. Dashboard setup
 ---
 ## Resource Management
-```mermaid
-flowchart LR
-    A[Resources] --> B[Allocation]
-    B --> C[Monitoring]
-    C --> D[Optimization]
-```
+![17](../../../out/mermaid/marp/lectures/spark_reports.md/17.png)
+
 ---
 ## Data Lifecycle
 1. Ingestion
@@ -299,12 +223,8 @@ flowchart LR
 1. Archival
 ---
 ## Quality Assurance
-```mermaid
-graph TD
-    A[QA] --> B[Testing]
-    A --> C[Validation]
-    A --> D[Monitoring]
-```
+![18](../../../out/mermaid/marp/lectures/spark_reports.md/18.png)
+
 ---
 ## Performance Metrics
 1. Response time
@@ -313,12 +233,8 @@ graph TD
 1. Error rates
 ---
 ## Maintenance Procedures
-```mermaid
-flowchart LR
-    A[Schedule] --> B[Execute]
-    B --> C[Verify]
-    C --> D[Document]
-```
+![19](../../../out/mermaid/marp/lectures/spark_reports.md/19.png)
+
 ---
 ## Future Considerations
 1. Scalability needs
