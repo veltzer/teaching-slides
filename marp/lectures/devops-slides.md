@@ -7,13 +7,13 @@
 
 DevOps is a set of practices combining software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently and reliably.
 
-![0](../../../out/mermaid/marp/lectures/devops-slides.md/0.png)
+![0](../../out/mermaid/marp/lectures/devops-slides.md/0.png)
 
 ---
 
 ## Core Components of DevOps
 
-![1](../../../out/mermaid/marp/lectures/devops-slides.md/1.png)
+![1](../../out/mermaid/marp/lectures/devops-slides.md/1.png)
 
 ---
 
@@ -31,13 +31,13 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Evolution of Software Delivery
 
-![2](../../../out/mermaid/marp/lectures/devops-slides.md/2.png)
+![2](../../out/mermaid/marp/lectures/devops-slides.md/2.png)
 
 ---
 
 ## DevOps Culture and Principles
 
-![3](../../../out/mermaid/marp/lectures/devops-slides.md/3.png)
+![3](../../out/mermaid/marp/lectures/devops-slides.md/3.png)
 
 ---
 
@@ -60,7 +60,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Benefits of DevOps
 
-![4](../../../out/mermaid/marp/lectures/devops-slides.md/4.png)
+![4](../../out/mermaid/marp/lectures/devops-slides.md/4.png)
 
 ---
 
@@ -73,7 +73,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 - Mean Time to Recovery (MTTR)
 - Change Failure Rate
 
-![5](../../../out/mermaid/marp/lectures/devops-slides.md/5.png)
+![5](../../out/mermaid/marp/lectures/devops-slides.md/5.png)
 
 ---
 
@@ -98,13 +98,13 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevOps Operating Model
 
-![6](../../../out/mermaid/marp/lectures/devops-slides.md/6.png)
+![6](../../out/mermaid/marp/lectures/devops-slides.md/6.png)
 
 ---
 
 ## Agile and Lean in DevOps
 
-![7](../../../out/mermaid/marp/lectures/devops-slides.md/7.png)
+![7](../../out/mermaid/marp/lectures/devops-slides.md/7.png)
 
 ---
 
@@ -144,7 +144,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## CI/CD Pipeline Detailed
 
-![8](../../../out/mermaid/marp/lectures/devops-slides.md/8.png)
+![8](../../out/mermaid/marp/lectures/devops-slides.md/8.png)
 
 ---
 
@@ -167,7 +167,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Continuous Deployment Strategies
 
-![9](../../../out/mermaid/marp/lectures/devops-slides.md/9.png)
+![9](../../out/mermaid/marp/lectures/devops-slides.md/9.png)
 
 ---
 
@@ -202,7 +202,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevOps Tools Ecosystem
 
-![10](../../../out/mermaid/marp/lectures/devops-slides.md/10.png)
+![10](../../out/mermaid/marp/lectures/devops-slides.md/10.png)
 
 ---
 
@@ -225,7 +225,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevSecOps Integration
 
-![11](../../../out/mermaid/marp/lectures/devops-slides.md/11.png)
+![11](../../out/mermaid/marp/lectures/devops-slides.md/11.png)
 
 ---
 

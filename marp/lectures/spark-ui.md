@@ -7,7 +7,7 @@
 1. Performance monitoring tool
 ---
 ## Accessing the UI
-![0](../../../out/mermaid/marp/lectures/spark-ui.md/0.png)
+![0](../../out/mermaid/marp/lectures/spark-ui.md/0.png)
 
 ---
 ## Core Components
@@ -19,7 +19,7 @@
 1. SQL tab
 ---
 ## Jobs Tab Overview
-![1](../../../out/mermaid/marp/lectures/spark-ui.md/1.png)
+![1](../../out/mermaid/marp/lectures/spark-ui.md/1.png)
 
 ---
 ## Job Details
@@ -43,7 +43,7 @@ df.groupBy("column")
 1. Performance metrics
 ---
 ## Storage Tab
-![2](../../../out/mermaid/marp/lectures/spark-ui.md/2.png)
+![2](../../out/mermaid/marp/lectures/spark-ui.md/2.png)
 
 ---
 ## Caching Metrics
@@ -104,7 +104,7 @@ spark.conf.set("spark.ui.enabled", true)
 1. GC impact
 ---
 ## Memory Management
-![3](../../../out/mermaid/marp/lectures/spark-ui.md/3.png)
+![3](../../out/mermaid/marp/lectures/spark-ui.md/3.png)
 
 ---
 ## Data Locality
@@ -128,7 +128,7 @@ df.repartition(10)
 1. Data flow
 ---
 ## Shuffle Analysis
-![4](../../../out/mermaid/marp/lectures/spark-ui.md/4.png)
+![4](../../out/mermaid/marp/lectures/spark-ui.md/4.png)
 
 ---
 ## Resource Utilization
@@ -161,7 +161,7 @@ df.repartition(10)
 1. Long-term analysis
 ---
 ## Common Issues
-![5](../../../out/mermaid/marp/lectures/spark-ui.md/5.png)
+![5](../../out/mermaid/marp/lectures/spark-ui.md/5.png)
 
 ---
 ## Troubleshooting
@@ -189,7 +189,7 @@ df.repartition(10)
 1. Integration options
 ---
 ## Cluster Monitoring
-![6](../../../out/mermaid/marp/lectures/spark-ui.md/6.png)
+![6](../../out/mermaid/marp/lectures/spark-ui.md/6.png)
 
 ---
 ## Real-time Analysis

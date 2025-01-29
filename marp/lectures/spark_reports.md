@@ -7,7 +7,8 @@
 1. Business insights
 ---
 ## Core Components
-![0](../../../out/mermaid/marp/lectures/spark_reports.md/0.png)
+
+![0](../../out/mermaid/marp/lectures/spark_reports.md/0.png)
 
 ---
 ## Data Source Integration
@@ -17,7 +18,8 @@
 1. External APIs
 ---
 ## Processing Capabilities
-![1](../../../out/mermaid/marp/lectures/spark_reports.md/1.png)
+
+![1](../../out/mermaid/marp/lectures/spark_reports.md/1.png)
 
 ---
 ## Report Types
@@ -27,7 +29,8 @@
 1. Automated alerts
 ---
 ## Architecture Overview
-![2](../../../out/mermaid/marp/lectures/spark_reports.md/2.png)
+
+![2](../../out/mermaid/marp/lectures/spark_reports.md/2.png)
 
 ---
 ## Data Flow Patterns
@@ -37,7 +40,8 @@
 1. Batch processing
 ---
 ## Performance Optimization
-![3](../../../out/mermaid/marp/lectures/spark_reports.md/3.png)
+
+![3](../../out/mermaid/marp/lectures/spark_reports.md/3.png)
 
 ---
 ## Memory Management
@@ -53,7 +57,8 @@
 1. Network bandwidth
 ---
 ## Execution Models
-![4](../../../out/mermaid/marp/lectures/spark_reports.md/4.png)
+
+![4](../../out/mermaid/marp/lectures/spark_reports.md/4.png)
 
 ---
 ## Data Formats
@@ -63,7 +68,8 @@
 1. Avro records
 ---
 ## Processing Modes
-![5](../../../out/mermaid/marp/lectures/spark_reports.md/5.png)
+
+![5](../../out/mermaid/marp/lectures/spark_reports.md/5.png)
 
 ---
 ## Output Generation
@@ -79,7 +85,8 @@
 1. Audit logging
 ---
 ## Monitoring System
-![6](../../../out/mermaid/marp/lectures/spark_reports.md/6.png)
+
+![6](../../out/mermaid/marp/lectures/spark_reports.md/6.png)
 
 ---
 ## Error Handling
@@ -89,7 +96,8 @@
 1. Alert systems
 ---
 ## Data Quality
-![7](../../../out/mermaid/marp/lectures/spark_reports.md/7.png)
+
+![7](../../out/mermaid/marp/lectures/spark_reports.md/7.png)
 
 ---
 ## Scheduling Options
@@ -105,7 +113,8 @@
 1. Latency
 ---
 ## Integration Points
-![8](../../../out/mermaid/marp/lectures/spark_reports.md/8.png)
+
+![8](../../out/mermaid/marp/lectures/spark_reports.md/8.png)
 
 ---
 ## Optimization Techniques
@@ -115,7 +124,8 @@
 1. Resource management
 ---
 ## Deployment Models
-![9](../../../out/mermaid/marp/lectures/spark_reports.md/9.png)
+
+![9](../../out/mermaid/marp/lectures/spark_reports.md/9.png)
 
 ---
 ## Configuration Management
@@ -131,7 +141,8 @@
 1. Load tests
 ---
 ## Monitoring Tools
-![10](../../../out/mermaid/marp/lectures/spark_reports.md/10.png)
+
+![10](../../out/mermaid/marp/lectures/spark_reports.md/10.png)
 
 ---
 ## Maintenance Tasks
@@ -147,7 +158,8 @@
 1. Interactive components
 ---
 ## Data Governance
-![11](../../../out/mermaid/marp/lectures/spark_reports.md/11.png)
+
+![11](../../out/mermaid/marp/lectures/spark_reports.md/11.png)
 
 ---
 ## Best Practices
@@ -157,7 +169,8 @@
 1. Security measures
 ---
 ## Development Workflow
-![12](../../../out/mermaid/marp/lectures/spark_reports.md/12.png)
+
+![12](../../out/mermaid/marp/lectures/spark_reports.md/12.png)
 
 ---
 ## Scalability Features
@@ -167,7 +180,8 @@
 1. Resource elasticity
 ---
 ## Data Pipeline Design
-![13](../../../out/mermaid/marp/lectures/spark_reports.md/13.png)
+
+![13](../../out/mermaid/marp/lectures/spark_reports.md/13.png)
 
 ---
 ## Version Control
@@ -183,7 +197,8 @@
 1. Operation manuals
 ---
 ## Troubleshooting Guide
-![14](../../../out/mermaid/marp/lectures/spark_reports.md/14.png)
+
+![14](../../out/mermaid/marp/lectures/spark_reports.md/14.png)
 
 ---
 ## Performance Tuning
@@ -193,7 +208,8 @@
 1. Execution planning
 ---
 ## Deployment Options
-![15](../../../out/mermaid/marp/lectures/spark_reports.md/15.png)
+
+![15](../../out/mermaid/marp/lectures/spark_reports.md/15.png)
 
 ---
 ## Security Measures
@@ -203,7 +219,8 @@
 1. Compliance checks
 ---
 ## Testing Strategy
-![16](../../../out/mermaid/marp/lectures/spark_reports.md/16.png)
+
+![16](../../out/mermaid/marp/lectures/spark_reports.md/16.png)
 
 ---
 ## Monitoring Setup
@@ -213,7 +230,8 @@
 1. Dashboard setup
 ---
 ## Resource Management
-![17](../../../out/mermaid/marp/lectures/spark_reports.md/17.png)
+
+![17](../../out/mermaid/marp/lectures/spark_reports.md/17.png)
 
 ---
 ## Data Lifecycle
@@ -223,7 +241,8 @@
 1. Archival
 ---
 ## Quality Assurance
-![18](../../../out/mermaid/marp/lectures/spark_reports.md/18.png)
+
+![18](../../out/mermaid/marp/lectures/spark_reports.md/18.png)
 
 ---
 ## Performance Metrics
@@ -233,7 +252,8 @@
 1. Error rates
 ---
 ## Maintenance Procedures
-![19](../../../out/mermaid/marp/lectures/spark_reports.md/19.png)
+
+![19](../../out/mermaid/marp/lectures/spark_reports.md/19.png)
 
 ---
 ## Future Considerations
