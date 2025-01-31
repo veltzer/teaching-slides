@@ -2,14 +2,7 @@
 
 ## Types of Compute Services
 
-```mermaid
-graph TD
-    A[Azure Compute] --> B[Virtual Machines]
-    A --> C[VM Scale Sets]
-    A --> D[App Services]
-    A --> E[Container Services]
-    A --> F[Serverless]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/03_compute.md/0.png)
 
 ---
 
@@ -33,14 +26,7 @@ graph TD
 
 ## Choosing the Right VM Size
 
-```mermaid
-flowchart TD
-    A[Workload Requirements] --> B{CPU Intensive?}
-    B -->|Yes| C[Compute Optimized]
-    B -->|No| D{Memory Intensive?}
-    D -->|Yes| E[Memory Optimized]
-    D -->|No| F[General Purpose]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/03_compute.md/1.png)
 
 ---
 
@@ -110,14 +96,7 @@ flowchart TD
 
 ## Scale Set Architecture
 
-```mermaid
-graph TD
-    A[Load Balancer] --> B[VM 1]
-    A --> C[VM 2]
-    A --> D[VM 3]
-    A --> E[...]
-    F[Autoscale Rules] --> A
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/03_compute.md/2.png)
 
 ---
 
@@ -177,13 +156,7 @@ graph TD
 
 ## Container Services Overview
 
-```mermaid
-graph TD
-    A[Container Services] --> B[AKS]
-    A --> C[Container Instances]
-    A --> D[App Service]
-    A --> E[Container Registry]
-```
+![3](../../../out/mermaid/marp/courses/introduction-to-azure/03_compute.md/3.png)
 
 ---
 

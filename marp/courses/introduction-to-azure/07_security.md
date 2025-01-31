@@ -2,14 +2,7 @@
 
 ## Security Components
 
-```mermaid
-graph TD
-    A[Azure Security] --> B[Identity & Access]
-    A --> C[Network Security]
-    A --> D[Data Protection]
-    A --> E[Monitoring]
-    A --> F[Compliance]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/07_security.md/0.png)
 
 ---
 
@@ -24,14 +17,7 @@ graph TD
 
 ## Identity Protection
 
-```mermaid
-graph TD
-    A[Identity Protection] --> B[Risk Detection]
-    A --> C[Risk Remediation]
-    A --> D[Conditional Access]
-    A --> E[MFA]
-    A --> F[Monitoring]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/07_security.md/1.png)
 
 ---
 
@@ -73,14 +59,7 @@ graph TD
 
 ## Network Security
 
-```mermaid
-graph TD
-    A[Network Security] --> B[NSGs]
-    A --> C[Firewalls]
-    A --> D[DDoS Protection]
-    A --> E[WAF]
-    A --> F[Private Link]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/07_security.md/2.png)
 
 ---
 
@@ -149,14 +128,7 @@ graph TD
 
 ## Security Best Practices
 
-```mermaid
-graph TD
-    A[Security Practices] --> B[Defense in Depth]
-    A --> C[Zero Trust]
-    A --> D[Least Privilege]
-    A --> E[Segmentation]
-    A --> F[Monitoring]
-```
+![3](../../../out/mermaid/marp/courses/introduction-to-azure/07_security.md/3.png)
 
 ---
 

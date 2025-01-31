@@ -2,14 +2,7 @@
 
 ## Storage Service Types
 
-```mermaid
-graph TD
-    A[Azure Storage] --> B[Blob Storage]
-    A --> C[File Storage]
-    A --> D[Queue Storage]
-    A --> E[Table Storage]
-    A --> F[Disk Storage]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/04_storage.md/0.png)
 
 ---
 
@@ -32,17 +25,7 @@ graph TD
 
 ## Redundancy Options
 
-```mermaid
-graph TD
-    A[Redundancy] --> B[LRS]
-    A --> C[ZRS]
-    A --> D[GRS]
-    A --> E[GZRS]
-    B[LRS/Locally Redundant]
-    C[ZRS/Zone Redundant]
-    D[GRS/Geo Redundant]
-    E[GZRS/Geo-Zone Redundant]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/04_storage.md/1.png)
 
 ---
 
@@ -136,14 +119,7 @@ graph TD
 
 ## Storage Security
 
-```mermaid
-graph TD
-    A[Security Features] --> B[Encryption]
-    A --> C[Authentication]
-    A --> D[Authorization]
-    A --> E[Network Rules]
-    A --> F[Private Endpoints]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/04_storage.md/2.png)
 
 ---
 

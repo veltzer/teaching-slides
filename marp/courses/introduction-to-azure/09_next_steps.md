@@ -2,28 +2,13 @@
 
 ## Azure Learning Path
 
-```mermaid
-graph TD
-    A[Learning Journey] --> B[Fundamentals]
-    A --> C[Role-Based]
-    A --> D[Specialty]
-    B --> E[AZ-900]
-    C --> F[Associate]
-    C --> G[Expert]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/09_next_steps.md/0.png)
 
 ---
 
 ## Certification Paths
 
-```mermaid
-graph TD
-    A[Azure Certifications] --> B[Administrator]
-    A --> C[Developer]
-    A --> D[Solutions Architect]
-    A --> E[DevOps Engineer]
-    A --> F[Security Engineer]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/09_next_steps.md/1.png)
 
 ---
 
@@ -119,13 +104,7 @@ graph TD
 
 ## Azure Architecture Center
 
-```mermaid
-graph TD
-    A[Architecture Center] --> B[Reference Architectures]
-    A --> C[Design Patterns]
-    A --> D[Best Practices]
-    A --> E[Implementation Examples]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/09_next_steps.md/2.png)
 
 ---
 

@@ -2,14 +2,7 @@
 
 ## Core Networking Components
 
-```mermaid
-graph TD
-    A[Azure Networking] --> B[Virtual Networks]
-    A --> C[Load Balancers]
-    A --> D[Application Gateway]
-    A --> E[VPN Gateway]
-    A --> F[ExpressRoute]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/05_networking.md/0.png)
 
 ---
 
@@ -24,16 +17,7 @@ graph TD
 
 ## VNet Architecture
 
-```mermaid
-graph TD
-    A[Virtual Network] --> B[Subnet 1]
-    A --> C[Subnet 2]
-    A --> D[Subnet 3]
-    B --> E[NSG]
-    B --> F[Resources]
-    C --> G[NSG]
-    C --> H[Resources]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/05_networking.md/1.png)
 
 ---
 
@@ -112,14 +96,7 @@ graph TD
 
 ## App Gateway Components
 
-```mermaid
-graph TD
-    A[Application Gateway] --> B[Listeners]
-    A --> C[Rules]
-    A --> D[Backend Pools]
-    A --> E[Health Probes]
-    A --> F[SSL Certificates]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/05_networking.md/2.png)
 
 ---
 
@@ -224,14 +201,7 @@ graph TD
 
 ## Hybrid Connectivity
 
-```mermaid
-graph TD
-    A[On-premises] --> B[ExpressRoute]
-    A --> C[VPN Gateway]
-    B --> D[Azure]
-    C --> D
-    D --> E[Resources]
-```
+![3](../../../out/mermaid/marp/courses/introduction-to-azure/05_networking.md/3.png)
 
 ---
 

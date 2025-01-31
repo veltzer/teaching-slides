@@ -2,14 +2,7 @@
 
 ## Portal Components
 
-```mermaid
-graph TD
-    A[Azure Portal] --> B[Dashboard]
-    A --> C[Resources]
-    A --> D[Navigation]
-    A --> E[Settings]
-    A --> F[Tools]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/02_portal.md/0.png)
 
 ---
 
@@ -33,14 +26,7 @@ graph TD
 
 ## Resource Management
 
-```mermaid
-graph TD
-    A[Resource Management] --> B[Create]
-    A --> C[Configure]
-    A --> D[Monitor]
-    A --> E[Delete]
-    B --> F[Templates]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/02_portal.md/1.png)
 
 ---
 
@@ -127,13 +113,7 @@ graph TD
 
 ## Resource Visualization
 
-```mermaid
-graph TD
-    A[Resource View] --> B[Topology]
-    A --> C[Dependencies]
-    A --> D[Network]
-    A --> E[Monitoring]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/02_portal.md/2.png)
 
 ---
 

@@ -2,14 +2,7 @@
 
 ## Database Service Types
 
-```mermaid
-graph TD
-    A[Azure Databases] --> B[SQL Database]
-    A --> C[Cosmos DB]
-    A --> D[MySQL]
-    A --> E[PostgreSQL]
-    A --> F[MariaDB]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/06_databases.md/0.png)
 
 ---
 
@@ -24,14 +17,7 @@ graph TD
 
 ## SQL Database Deployment Options
 
-```mermaid
-graph TD
-    A[SQL Database] --> B[Single Database]
-    A --> C[Elastic Pool]
-    A --> D[Managed Instance]
-    B --> E[DTU-based]
-    B --> F[vCore-based]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/06_databases.md/1.png)
 
 ---
 
@@ -82,14 +68,7 @@ graph TD
 
 ## Cosmos DB APIs
 
-```mermaid
-graph TD
-    A[Cosmos DB] --> B[SQL API]
-    A --> C[MongoDB API]
-    A --> D[Cassandra API]
-    A --> E[Table API]
-    A --> F[Gremlin API]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/06_databases.md/2.png)
 
 ---
 
@@ -176,13 +155,7 @@ graph TD
 
 ## Migration Process
 
-```mermaid
-graph LR
-    A[Assessment] --> B[Planning]
-    B --> C[Migration]
-    C --> D[Validation]
-    D --> E[Cutover]
-```
+![3](../../../out/mermaid/marp/courses/introduction-to-azure/06_databases.md/3.png)
 
 ---
 
@@ -242,13 +215,7 @@ graph LR
 
 ## High Availability Design
 
-```mermaid
-graph TD
-    A[Primary Region] --> B[Secondary Region]
-    A --> C[Read Replicas]
-    B --> D[Failover]
-    C --> E[Read Scaling]
-```
+![4](../../../out/mermaid/marp/courses/introduction-to-azure/06_databases.md/4.png)
 
 ---
 

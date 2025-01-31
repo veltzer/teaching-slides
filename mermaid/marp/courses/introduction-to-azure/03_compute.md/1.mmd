@@ -1,0 +1,6 @@
+flowchart TD
+    A[Workload Requirements] --> B{CPU Intensive?}
+    B -->|Yes| C[Compute Optimized]
+    B -->|No| D{Memory Intensive?}
+    D -->|Yes| E[Memory Optimized]
+    D -->|No| F[General Purpose]

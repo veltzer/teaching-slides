@@ -2,14 +2,7 @@
 
 ## Management Components
 
-```mermaid
-graph TD
-    A[Azure Management] --> B[Monitor]
-    A --> C[Cost Management]
-    A --> D[Advisor]
-    A --> E[Policy]
-    A --> F[Automation]
-```
+![0](../../../out/mermaid/marp/courses/introduction-to-azure/08_management.md/0.png)
 
 ---
 
@@ -24,14 +17,7 @@ graph TD
 
 ## Monitoring Architecture
 
-```mermaid
-graph TD
-    A[Data Sources] --> B[Metrics]
-    A --> C[Logs]
-    B --> D[Analysis]
-    C --> D
-    D --> E[Actions]
-```
+![1](../../../out/mermaid/marp/courses/introduction-to-azure/08_management.md/1.png)
 
 ---
 
@@ -73,14 +59,7 @@ graph TD
 
 ## Understanding Costs
 
-```mermaid
-graph TD
-    A[Total Cost] --> B[Resource Usage]
-    A --> C[Service Rates]
-    A --> D[Reservation]
-    A --> E[Support]
-    A --> F[Network Traffic]
-```
+![2](../../../out/mermaid/marp/courses/introduction-to-azure/08_management.md/2.png)
 
 ---
 
@@ -149,13 +128,7 @@ graph TD
 
 ## Infrastructure as Code
 
-```mermaid
-graph LR
-    A[Source Control] --> B[Templates]
-    B --> C[Pipeline]
-    C --> D[Deployment]
-    D --> E[Resources]
-```
+![3](../../../out/mermaid/marp/courses/introduction-to-azure/08_management.md/3.png)
 
 ---
 
