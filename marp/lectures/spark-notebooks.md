@@ -56,6 +56,7 @@ df.groupBy("category") \
 1. %%display
 ---
 ## Working with Data
+
 ```python
 # Reading data
 df = spark.read.csv("data.csv")
@@ -63,6 +64,7 @@ df = spark.read.csv("data.csv")
 # Display in notebook
 display(df)
 ```
+
 ---
 ## Interactive Analysis
 1. Cell execution
@@ -96,6 +98,7 @@ def plot_distribution(column):
 1. Use display limits
 ---
 ## Common Patterns
+
 ```python
 # Pattern: Load and cache
 df = spark.read.parquet("data.parquet")
@@ -103,6 +106,7 @@ df.cache()
 
 # Analysis cells follow
 ```
+
 ---
 ## Debugging Tools
 1. Cell outputs
