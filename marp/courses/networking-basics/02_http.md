@@ -11,7 +11,7 @@
 - Client-server protocol
 - Stateless, but not sessionless
 
-![0](../../../out/mermaid/marp/courses/architecting/XX_http.md/0.png)
+![0](../../../out/mermaid/marp/courses/networking-basics/02_http.md/0.png)
 
 ---
 
@@ -22,7 +22,7 @@
 - Headers introduced
 - Methods: GET, HEAD, POST
 
-![1](../../../out/mermaid/marp/courses/architecting/XX_http.md/1.png)
+![1](../../../out/mermaid/marp/courses/networking-basics/02_http.md/1.png)
 
 ---
 
@@ -34,7 +34,7 @@
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
 
-![2](../../../out/mermaid/marp/courses/architecting/XX_http.md/2.png)
+![2](../../../out/mermaid/marp/courses/networking-basics/02_http.md/2.png)
 
 ---
 
@@ -55,13 +55,13 @@
 - Server push
 - Stream prioritization
 
-![3](../../../out/mermaid/marp/courses/architecting/XX_http.md/3.png)
+![3](../../../out/mermaid/marp/courses/networking-basics/02_http.md/3.png)
 
 ---
 
 ## HTTP/2 Server Push
 
-![4](../../../out/mermaid/marp/courses/architecting/XX_http.md/4.png)
+![4](../../../out/mermaid/marp/courses/networking-basics/02_http.md/4.png)
 
 ---
 
@@ -73,13 +73,13 @@
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
 
-![5](../../../out/mermaid/marp/courses/architecting/XX_http.md/5.png)
+![5](../../../out/mermaid/marp/courses/networking-basics/02_http.md/5.png)
 
 ---
 
 ## HTTP/3 Connection Establishment
 
-![6](../../../out/mermaid/marp/courses/architecting/XX_http.md/6.png)
+![6](../../../out/mermaid/marp/courses/networking-basics/02_http.md/6.png)
 
 ---
 
@@ -104,4 +104,4 @@
 
 ## Final image of HTTP1.1
 
-![7](../../../out/mermaid/marp/courses/architecting/XX_http.md/7.png)
+![7](../../../out/mermaid/marp/courses/networking-basics/02_http.md/7.png)

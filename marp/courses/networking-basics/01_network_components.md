@@ -14,7 +14,7 @@
 - Ensures no single server becomes overwhelmed
 - Improves application responsiveness and availability
 
-![0](../../../out/mermaid/marp/courses/architecting/XX_network_components.md/0.png)
+![0](../../../out/mermaid/marp/courses/networking-basics/01_network_components.md/0.png)
 
 ---
 
@@ -24,7 +24,7 @@
 - Can provide anonymity, security, and caching
 - Often used to bypass restrictions or improve performance
 
-![1](../../../out/mermaid/marp/courses/architecting/XX_network_components.md/1.png)
+![1](../../../out/mermaid/marp/courses/networking-basics/01_network_components.md/1.png)
 
 ---
 
@@ -34,7 +34,7 @@
 - Provides benefits like load balancing, SSL termination, and caching
 - Often used to enhance security and performance of web applications
 
-![2](../../../out/mermaid/marp/courses/architecting/XX_network_components.md/2.png)
+![2](../../../out/mermaid/marp/courses/networking-basics/01_network_components.md/2.png)
 
 ---
 
@@ -44,7 +44,7 @@
 - Allows multiple devices to share a single public IP address
 - Enhances security by hiding internal network structure
 
-![3](../../../out/mermaid/marp/courses/architecting/XX_network_components.md/3.png)
+![3](../../../out/mermaid/marp/courses/networking-basics/01_network_components.md/3.png)
 
 ---
 
