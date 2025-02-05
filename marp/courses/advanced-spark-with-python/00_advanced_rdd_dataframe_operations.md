@@ -1,6 +1,8 @@
-# Advanced RDD and DataFrame Operations
+# Advanced Spark with Python
 ---
-## Course Overview
+## Advanced RDD and DataFrame Operations
+---
+## Chapter topics
 * Advanced transformations and actions
 * Custom partitioning strategies
 * Broadcast variables and accumulators
