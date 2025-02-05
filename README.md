@@ -18,8 +18,8 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 ## Number of slide decks
 
 Currently there are 77 odp files in this repo.
-Currently there are 207 marp files in this repo.
-Currently there are 846 mermaid files in this repo.
-Currently there are 3984 marp slides in this repo.
+Currently there are 213 marp files in this repo.
+Currently there are 933 mermaid files in this repo.
+Currently there are 4283 marp slides in this repo.
 
 Mark Veltzer, Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
