@@ -5,7 +5,7 @@
 
 ## Network Architecture Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter06.md/0.png)
 
 ---
 
@@ -234,7 +234,7 @@ public class ImageLoader {
 
 ## Error Handling
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter06.md/1.png)
 
 ---
 
@@ -261,7 +261,7 @@ public class NetworkSecurity {
 
 ## Caching Strategy
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter06.md/2.png)
 
 ---
 
@@ -278,7 +278,7 @@ public class NetworkSecurity {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter6.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter06.md/3.png)
 
 ---
 

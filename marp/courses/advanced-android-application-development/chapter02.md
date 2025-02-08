@@ -5,7 +5,7 @@
 
 ## View Architecture Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter02.md/0.png)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ## Custom View Lifecycle
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter02.md/1.png)
 
 ---
 
@@ -131,7 +131,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 ## Fragment Lifecycle
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter02.md/2.png)
 
 ---
 
@@ -224,13 +224,13 @@ public class FlowLayout extends ViewGroup {
 
 ## Layout Inspector
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter02.md/3.png)
 
 ---
 
 ## Best Practices
 
-![4](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter2.md/4.png)
+![4](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter02.md/4.png)
 
 ---
 

@@ -31,6 +31,8 @@ DO_MD_ASPELL:=1
 DO_MD_ASCII:=0
 # do you want to run mdl on md files?
 DO_MD_MDL:=1
+# do you want to run my lint no md filse?
+DO_MD_LINT:=1
 # do you want to run markdownlint on md files?
 DO_MD_MARKDOWNLINT:=1
 # do you want to convert mermaid diagrams into png?
@@ -83,6 +85,7 @@ ODP_PDF:=$(addprefix out/,$(addsuffix .pdf,$(ODP_BAS)))
 MD_SRC:=$(shell find marp -type f -and -name "*.md")
 MD_BAS:=$(basename $(MD_SRC))
 MD_MDL:=$(addprefix out/,$(addsuffix .mdl,$(MD_BAS)))
+MD_LINT:=$(addprefix out/,$(addsuffix .lint,$(MD_BAS)))
 MD_ASPELL:=$(addprefix out/,$(addsuffix .aspell,$(MD_BAS)))
 MD_ASCII:=$(addprefix out/,$(addsuffix .ascii,$(MD_BAS)))
 MD_MARKDOWNLINT:=$(addprefix out/,$(addsuffix .markdownlint,$(MD_BAS)))
@@ -133,6 +136,10 @@ endif # DO_MD_ASCII
 ifeq ($(DO_MD_MDL),1)
 ALL+=$(MD_MDL)
 endif # DO_MD_MDL
+
+ifeq ($(DO_MD_LINT),1)
+ALL+=$(MD_LINT)
+endif # DO_MD_LINT
 
 ifeq ($(DO_ODP_PPT),1)
 ALL+=$(ODP_PPT)
@@ -211,8 +218,11 @@ all_drawio_png: $(DRAWIO_PNG)
 .PHONY: all_py_lint
 all_py_lint:  $(PY_LINT)
 
-.PHONY: all_mdl
-all_mdl: $(MD_MDL)
+.PHONY: all_md_mdl
+all_md_mdl: $(MD_MDL)
+
+.PHONY: all_md_lint
+all_md_lint: $(MD_LINT)
 
 .PHONY: all_markdownlint
 all_markdownlint: $(MD_MARKDOWNLINT)
@@ -251,6 +261,7 @@ debug:
 	$(info MD_ASPELL is $(MD_ASPELL))
 	$(info MD_ASCII is $(MD_ASCII))
 	$(info MD_MDL is $(MD_MDL))
+	$(info MD_LINT is $(MD_LINT))
 	$(info MD_MARKDOWNLINT is $(MD_MARKDOWNLINT))
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
@@ -330,6 +341,10 @@ $(MD_ASCII): out/%.ascii: %.md
 $(MD_MDL): out/%.mdl: %.md .mdlrc .mdl.style.rb
 	$(info doing [$@])
 	$(Q)GEM_HOME=gems gems/bin/mdl $<
+	$(Q)pymakehelper touch_mkdir $@
+$(MD_LINT): out/%.lint: %.md scripts/md_lint.py
+	$(info doing [$@])
+	$(Q)scripts/md_lint.py -q $<
 	$(Q)pymakehelper touch_mkdir $@
 $(MD_MARKDOWNLINT): out/%.markdownlint: %.md .markdownlint.json
 	$(info doing [$@])

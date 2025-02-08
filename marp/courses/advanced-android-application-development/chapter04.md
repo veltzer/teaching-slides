@@ -5,7 +5,7 @@
 
 ## MVVM Architecture Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter04.md/0.png)
 
 ---
 
@@ -50,7 +50,7 @@ public class UserViewModel extends AndroidViewModel {
 
 ## Clean Architecture Layers
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter04.md/1.png)
 
 ---
 
@@ -127,7 +127,7 @@ public class GetUserUseCase {
 
 ## Event Handling Pattern
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter04.md/2.png)
 
 ```java
 public class UserEvents {
@@ -232,7 +232,7 @@ public class UserViewModelTest {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter4.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter04.md/3.png)
 
 ---
 

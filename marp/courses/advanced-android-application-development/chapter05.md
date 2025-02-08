@@ -5,13 +5,13 @@
 
 ## Data Storage Options
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter05.md/0.png)
 
 ---
 
 ## Room Database Architecture
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter05.md/1.png)
 
 ---
 
@@ -219,7 +219,7 @@ public class UserProvider extends ContentProvider {
 
 ## Data Migration Strategy
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter05.md/2.png)
 
 ---
 
@@ -293,7 +293,7 @@ public class BackupManager {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter5.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter05.md/3.png)
 
 ---
 

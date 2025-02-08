@@ -10,7 +10,7 @@
 
 ---
 ## Architecture Overview
-![0](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/0.png)
+![0](../../../out/mermaid/marp/courses/apache-spark-with-python/02_streaming.md/0.png)
 
 ---
 ## Supported Input Sources
@@ -100,7 +100,7 @@ word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 
 ---
 ## Window Operations
-![1](../../../out/mermaid/marp/courses/apache-spark-with-python/02_spreaming.md/1.png)
+![1](../../../out/mermaid/marp/courses/apache-spark-with-python/02_streaming.md/1.png)
 
 ---
 ## Stateful Operations

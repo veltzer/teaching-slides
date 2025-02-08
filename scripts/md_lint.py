@@ -66,6 +66,19 @@ class MarkdownLinkChecker:
 
         return target_path.exists()
 
+    def remove_code_blocks(self, content: str) -> str:
+        """
+        Remove code blocks from markdown content.
+
+        Args:
+            content (str): Original markdown content
+
+        Returns:
+            str: Content with code blocks removed
+        """
+        # Remove code blocks with triple backticks
+        return re.sub(r'```[^`]*```', '', content, flags=re.DOTALL)
+
     def check_file(self, file_path: Path) -> List[Tuple[str, str, bool]]:
         """
         Check all local links in a markdown file.
@@ -78,6 +91,8 @@ class MarkdownLinkChecker:
         """
         results = []
         content = file_path.read_text(encoding='utf-8')
+        # Remove code blocks before checking links
+        content = self.remove_code_blocks(content)
         matches = self.link_pattern.finditer(content)
 
         for match in matches:
@@ -127,12 +142,15 @@ def main():
         # Print results
         for file_path, file_results in results.items():
             if file_results:
-                print(f"\nChecking {file_path}:")
+                if not args.quiet:
+                    print(f"\nChecking {file_path}:")
                 for text, link, is_valid in file_results:
-                    if not args.quiet:
+                    if not args.quiet and is_valid:
                         status = "✓" if is_valid else "✗"
-                        print(f"{status} [{text}]({link})")
+                        print(f"{status} [{text}]({link})", file=sys.stdout)
                     if not is_valid:
+                        status = "✓" if is_valid else "✗"
+                        print(f"{status} [{text}]({link})", file=sys.stderr)
                         exit_code = 1
 
     sys.exit(exit_code)

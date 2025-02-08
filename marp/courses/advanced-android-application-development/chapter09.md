@@ -5,7 +5,7 @@
 
 ## Security Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter9.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter09.md/0.png)
 
 ---
 
@@ -201,7 +201,7 @@ public class SSLPinningManager {
 
 ## Security Best Practices
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter9.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter09.md/1.png)
 
 ---
 

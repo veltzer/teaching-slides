@@ -15,7 +15,7 @@
 ## Java 8+ Features in Android
 ### Key Improvements
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter01.md/0.png)
 
 ---
 
@@ -77,7 +77,7 @@ List<String> sorted = names.stream()
 ## Stream API
 ### Data Processing Pipeline
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter01.md/1.png)
 
 Example:
 
@@ -110,7 +110,7 @@ public class UserProcessor {
 ## Threading Fundamentals
 ### Android Threading Model
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter1.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter01.md/2.png)
 
 ---
 

@@ -5,13 +5,13 @@
 
 ## Background Processing Options
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter07.md/0.png)
 
 ---
 
 ## Service Lifecycle
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter07.md/1.png)
 
 ---
 
@@ -220,7 +220,7 @@ public class AlarmScheduler {
 
 ## Battery Optimization
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter07.md/2.png)
 
 ---
 
@@ -274,7 +274,7 @@ public class RobustWorker extends Worker {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter7.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter07.md/3.png)
 
 ---
 

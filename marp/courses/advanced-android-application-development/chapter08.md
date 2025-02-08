@@ -5,7 +5,7 @@
 
 ## Location Services Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter08.md/0.png)
 
 ---
 
@@ -279,13 +279,13 @@ public class ActivityRecognitionManager {
 
 ## Location Battery Optimization
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter08.md/1.png)
 
 ---
 
 ## Best Practices
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter8.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter08.md/2.png)
 
 ---
 

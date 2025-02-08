@@ -5,7 +5,7 @@
 
 ## Material Design Principles
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/0.png)
+![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/0.png)
 
 ---
 
@@ -59,13 +59,13 @@
 
 ## Typography System
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/1.png)
+![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/1.png)
 
 ---
 
 ## Animation Types in Android
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/2.png)
+![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/2.png)
 
 ---
 
@@ -198,7 +198,7 @@ public class PulseAnimation extends Animation {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter3.md/3.png)
+![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/3.png)
 
 ---
 
