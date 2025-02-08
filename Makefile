@@ -45,6 +45,8 @@ endif # GITHUB_WORKFLOW
 DO_MERMAID_DEP:=1
 # unite courses pdfs?
 DO_COURSES:=1
+# do you want to lint python files?
+DO_PY_LINT:=1
 
 #############
 # templates #
@@ -101,6 +103,10 @@ MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
 DRAWIO_SRC:=$(shell find drawings -type f -and -name "*.drawio")
 DRAWIO_BAS:=$(basename $(DRAWIO_SRC))
 DRAWIO_PNG:=$(addprefix out/,$(addsuffix .png,$(DRAWIO_BAS)))
+
+# python
+PY_SRC:=$(shell find scripts -type f -and -name "*.py")
+PY_LINT:=$(addprefix out/,$(addsuffix .lint, $(basename $(PY_SRC))))
 
 # courses
 NAMES:=$(notdir $(patsubst %/,%,$(dir $(wildcard marp/courses/*/))))
@@ -168,6 +174,10 @@ ifeq ($(DO_DRAWIO_PNG),1)
 ALL+=$(DRAWIO_PNG)
 endif # DO_DRAWIO_PNG
 
+ifeq ($(DO_PY_LINT),1)
+ALL+=$(PY_LINT)
+endif # DO_PY_LINT
+
 ifeq ($(DO_MERMAID_DEP),1)
 MERMAID_PNG_DEP=$(MERMAID_PNG)
 else
@@ -197,6 +207,9 @@ all_mkd: $(MKD_HTM)
 
 .PHONY: all_drawio_png
 all_drawio_png: $(DRAWIO_PNG)
+
+.PHONY: all_py_lint
+all_py_lint:  $(PY_LINT)
 
 .PHONY: all_mdl
 all_mdl: $(MD_MDL)
@@ -245,6 +258,8 @@ debug:
 	$(info DRAWIO_SRC is $(DRAWIO_SRC))
 	$(info DRAWIO_BAS is $(DRAWIO_BAS))
 	$(info DRAWIO_PNG is $(DRAWIO_PNG))
+	$(info PY_SRC is $(PY_SRC))
+	$(info PY_LINT is $(PY_LINT))
 	$(info NAMES is $(NAMES))
 	$(info TARGET_NAMES is $(TARGET_NAMES))
 	$(foreach name,$(NAMES),$(info PREREQ_$(name) is $(PREREQ_$(name))))
@@ -328,6 +343,10 @@ $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
+$(PY_LINT): out/%.lint: %.py
+	$(info doing [$@])
+	$(Q)python -m pylint --reports=n --score=n $<
+	$(Q)pymakehelper touch_mkdir $@
 
 ##########
 # alldep #
