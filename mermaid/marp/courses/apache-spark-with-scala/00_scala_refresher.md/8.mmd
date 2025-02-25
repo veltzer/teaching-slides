@@ -1,6 +1,7 @@
 graph TD
-    A[Account] --> B[Transaction]
-    B --> C[Transfer]
-    C --> D[Validation]
-    D --> E[Update]
-    E --> F[Result]
+    Trait --> Interface
+    Trait --> Implementation
+    Interface --> AbstractMethods
+    Implementation --> ConcreteMembers
+    Implementation --> SelfType
+    Implementation --> StackableModifications

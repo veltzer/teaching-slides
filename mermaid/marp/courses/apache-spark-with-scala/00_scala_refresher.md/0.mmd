@@ -1,10 +1,16 @@
 graph TD
     Any --> AnyVal
     Any --> AnyRef
-    AnyVal --> Int
-    AnyVal --> Double
+    AnyVal --> Unit
     AnyVal --> Boolean
+    AnyVal --> Number
+    Number --> Int
+    Number --> Long
+    Number --> Double
+    Number --> Float
     AnyRef --> String
     AnyRef --> List
-    Nothing --> Int
-    Nothing --> String
+    AnyRef --> Option
+    Null --> AnyRef
+    Nothing --> Null
+    Nothing --> AnyVal

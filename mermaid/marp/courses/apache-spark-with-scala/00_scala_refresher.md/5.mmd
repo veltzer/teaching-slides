@@ -1,6 +1,10 @@
 graph TD
-    A[Input] --> B{Type Match}
-    B --> |Int| C[Integer Handler]
-    B --> |String| D[String Handler]
-    B --> |List| E[List Handler]
-    B --> |_| F[Default Handler]
+    Function --> Methods
+    Function --> FunctionValues
+    Function --> PartialFunctions
+    Methods --> InstanceMethods
+    Methods --> StaticMethods
+    FunctionValues --> Lambda
+    FunctionValues --> Anonymous
+    PartialFunctions --> PatternMatch
+    PartialFunctions --> Composition
