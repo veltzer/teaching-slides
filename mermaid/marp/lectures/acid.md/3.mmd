@@ -1,0 +1,8 @@
+graph TD
+    A[Client: COMMIT] --> B[Write to Transaction Log]
+    B --> C[Acknowledgment to Client]
+    B --> D[Asynchronous Write to Data Files]
+    E[System Crash] --> F[Recovery Process]
+    F --> G[Read Transaction Log]
+    G --> H[Replay Committed Transactions]
+    H --> I[Database Restored to Consistent State]

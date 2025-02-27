@@ -1,0 +1,6 @@
+graph TD
+    A[Start Transaction] --> B[Operation 1: Withdraw $100]
+    B --> C[Operation 2: Deposit $100]
+    C --> D{All Operations Successful?}
+    D -->|Yes| E[COMMIT: All changes saved]
+    D -->|No| F[ROLLBACK: No changes made]
