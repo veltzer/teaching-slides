@@ -1,8 +1,17 @@
-graph TB
-    A[Data Sources] --> B[Collection]
-    B --> C[Storage]
-    C --> D[Processing]
-    D --> E[Analysis]
-    B --> F[Volume Growth]
-    C --> F
-    F --> G[Scale Out]
+graph TD
+    subgraph Data Sources
+    A[IoT Devices]
+    B[Social Media]
+    C[Business Operations]
+    D[Scientific Research]
+    end
+    
+    subgraph Growth
+    E[Linear Growth]
+    F[Exponential Growth]
+    end
+    
+    A --> F
+    B --> F
+    C --> E
+    D --> F

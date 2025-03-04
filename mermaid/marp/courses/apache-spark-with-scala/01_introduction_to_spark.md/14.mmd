@@ -1,9 +1,8 @@
-graph TB
-    A[Production] --> B[Sizing]
-    A --> C[Monitoring]
-    A --> D[Security]
-    A --> E[Tuning]
-    B --> F[Deployment]
-    C --> F
-    D --> F
-    E --> F
+graph TD
+    Mode[Execution Modes] --> Local[Local Mode]
+    Mode --> Client[Client Mode]
+    Mode --> Cluster[Cluster Mode]
+    
+    Local --> Dev[Development]
+    Client --> Testing[Testing]
+    Cluster --> Prod[Production]

@@ -1,7 +1,17 @@
-graph TB
-    A[JVM Heap] --> B[Execution Memory]
-    A --> C[Storage Memory]
-    A --> D[User Memory]
-    A --> E[Reserved Memory]
-    B --> F[Task Execution]
-    C --> G[Caching]
+graph TD
+    Spark[Spark Core] --> SQL[Spark SQL]
+    Spark --> Streaming[Spark Streaming]
+    Spark --> MLlib[MLlib]
+    Spark --> GraphX[GraphX]
+    
+    SQL --> DF[DataFrames]
+    SQL --> DS[Datasets]
+    
+    Streaming --> DStream[DStreams]
+    Streaming --> SS[Structured Streaming]
+    
+    MLlib --> Algos[ML Algorithms]
+    MLlib --> Pipeline[ML Pipeline]
+    
+    GraphX --> Graph[Graph Processing]
+    GraphX --> Pregel[Pregel API]

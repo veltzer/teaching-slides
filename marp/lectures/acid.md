@@ -5,10 +5,10 @@
 ## What Are ACID Guarantees?
 
 ACID is an acronym that stands for:
-- **A**tomicity
-- **C**onsistency
-- **I**solation
-- **D**urability
+- Atomicity
+- Consistency
+- Isolation
+- Durability
 
 These properties ensure reliable processing of database transactions.
 
@@ -204,14 +204,14 @@ Even if the system crashes immediately after commit:
 BEGIN TRANSACTION;
     -- Check if sufficient funds
     SELECT balance INTO @current_balance FROM accounts WHERE id = 123;
-    
+
     IF @current_balance >= 500 THEN
         -- Debit one account
         UPDATE accounts SET balance = balance - 500 WHERE id = 123;
-        
+
         -- Credit another account
         UPDATE accounts SET balance = balance + 500 WHERE id = 456;
-        
+
         COMMIT;
     ELSE
         ROLLBACK;
@@ -240,9 +240,9 @@ BEGIN TRANSACTION;
 ## NoSQL and BASE
 
 Many NoSQL systems follow BASE instead of ACID:
-- **B**asically **A**vailable
-- **S**oft state
-- **E**ventual consistency
+- Basically Available
+- Soft state
+- Eventual consistency
 
 ---
 
@@ -258,7 +258,7 @@ Many NoSQL systems follow BASE instead of ACID:
 -- Good practice
 BEGIN TRANSACTION;
     -- Operations here
-    
+
     -- Validate operations were successful
     IF @error_occurred THEN
         ROLLBACK;
@@ -275,7 +275,7 @@ BEGIN TRANSACTION;
 BEGIN TRANSACTION;
     BEGIN TRY
         INSERT INTO orders (customer_id, total) VALUES (123, 499.99);
-        INSERT INTO order_items (order_id, product_id, quantity) VALUES 
+        INSERT INTO order_items (order_id, product_id, quantity) VALUES
             (SCOPE_IDENTITY(), 456, 2),
             (SCOPE_IDENTITY(), 789, 1);
         COMMIT;
@@ -301,7 +301,7 @@ BEGIN
     WHILE _retry_counter < _max_retries LOOP
         BEGIN
             -- Transaction logic here
-            
+
             EXIT; -- Success, exit loop
         EXCEPTION WHEN deadlock_detected THEN
             _retry_counter := _retry_counter + 1;

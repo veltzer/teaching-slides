@@ -1,8 +1,10 @@
-graph TB
-    A[DAG Scheduler] --> B[Stage 1]
-    A --> C[Stage 2]
-    A --> D[Stage n]
-    B --> E[Tasks]
-    C --> E
-    D --> E
-    E --> F[Executors]
+flowchart TD
+    A[Resource Manager] --> B[CPU Allocation]
+    A --> C[Memory Allocation]
+    A --> D[Disk IO]
+    A --> E[Network IO]
+    
+    B --> F[Core Assignment]
+    C --> G[Heap Management]
+    D --> H[Storage Management]
+    E --> I[Shuffle Management]

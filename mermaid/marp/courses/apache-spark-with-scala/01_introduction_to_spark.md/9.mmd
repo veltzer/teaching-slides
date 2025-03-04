@@ -1,7 +1,8 @@
-graph LR
-    A[Resources] --> B[CPU Cores]
-    A --> C[Memory]
-    A --> D[Storage]
-    A --> E[Network]
-    B --> F[Tasks]
-    C --> G[Caching]
+graph TD
+    Input[Data Source] --> Partition[Partitioning]
+    Partition --> Transform[Transformations]
+    Transform --> Action[Actions]
+    Action --> Output[Result]
+    
+    Transform --> Cache[Cache/Persist]
+    Cache --> Transform

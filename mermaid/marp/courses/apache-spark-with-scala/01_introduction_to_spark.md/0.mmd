@@ -1,6 +1,21 @@
-graph TB
-    Big_Data((Big Data)) --> Volume[Volume<br/>Scale]
-    Big_Data --> Velocity[Velocity<br/>Speed]
-    Big_Data --> Variety[Variety<br/>Types]
-    Big_Data --> Veracity[Veracity<br/>Quality]
-    Big_Data --> Value[Value<br/>Worth]
+graph TD
+    BigData[Big Data] --> Volume[Volume<br/>Scale of Data]
+    BigData --> Velocity[Velocity<br/>Speed of Processing]
+    BigData --> Variety[Variety<br/>Different Data Types]
+    BigData --> Veracity[Veracity<br/>Data Quality]
+    BigData --> Value[Value<br/>Business Impact]
+    
+    Volume --> PB[Petabytes]
+    Volume --> TB[Terabytes]
+    
+    Velocity --> RT[Real-time]
+    Velocity --> Batch[Batch]
+    
+    Variety --> Structured[Structured]
+    Variety --> Unstructured[Unstructured]
+    
+    Veracity --> Quality[Quality Control]
+    Veracity --> Accuracy[Accuracy]
+    
+    Value --> Insights[Insights]
+    Value --> Decisions[Decisions]

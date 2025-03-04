@@ -1,9 +1,10 @@
 graph LR
     subgraph Traditional
-    A[Single Server] --> B[Vertical Scaling]
-    B --> C[RDBMS]
+    A[Single Machine] --> B[Limited Data]
+    B --> C[Sequential Processing]
     end
+    
     subgraph Big Data
-    D[Distributed] --> E[Horizontal Scaling]
-    E --> F[NoSQL/Distributed]
+    D[Distributed System] --> E[Massive Data]
+    E --> F[Parallel Processing]
     end

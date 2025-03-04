@@ -81,8 +81,8 @@ val d: Double = 3.14159265359  // 64-bit IEEE 754
 ## String Interpolation Types
 
 1. s-interpolation: `s"Hello $name"`
-2. f-interpolation: `f"$value%.2f"`
-3. raw-interpolation: `raw"No \n escape"`
+1. f-interpolation: `f"$value%.2f"`
+1. raw-interpolation: `raw"No \n escape"`
 
 ---
 
@@ -421,10 +421,10 @@ def multiply[T](x: T, y: T)(implicit num: Numeric[T]): T =
 ## Best Practices
 
 1. Immutability
-2. Type Safety
-3. Composition
-4. Pattern Matching
-5. Error Handling
+1. Type Safety
+1. Composition
+1. Pattern Matching
+1. Error Handling
 
 ---
 
@@ -432,10 +432,10 @@ def multiply[T](x: T, y: T)(implicit num: Numeric[T]): T =
 
 Create a small application demonstrating:
 1. Case class definition
-2. Pattern matching
-3. Collection operations
-4. Error handling
-5. For comprehensions
+1. Pattern matching
+1. Collection operations
+1. Error handling
+1. For comprehensions
 
 ---
 

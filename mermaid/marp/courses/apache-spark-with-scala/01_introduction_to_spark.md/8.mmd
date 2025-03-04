@@ -1,6 +1,6 @@
-graph TB
-    A[Cluster Managers] --> B[Standalone]
-    A --> C[YARN]
-    A --> D[Mesos]
-    A --> E[Kubernetes]
-    style A fill:#f96
+flowchart LR
+    A[Data Input] --> B[Partitioning]
+    B --> C[Task Distribution]
+    C --> D[Parallel Processing]
+    D --> E[Result Collection]
+    E --> F[Output]

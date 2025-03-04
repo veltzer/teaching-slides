@@ -1,6 +1,13 @@
-graph LR
-    A[Input] --> B[Partitioning]
-    B --> C[Processing]
-    C --> D[Shuffling]
-    D --> E[Output]
-    style C fill:#f96
+graph TD
+    Memory[Memory Management] --> Execution[Execution Memory]
+    Memory --> Storage[Storage Memory]
+    Memory --> Other[Other Memory]
+    
+    Execution --> Shuffle[Shuffle Memory]
+    Execution --> Compute[Computation Memory]
+    
+    Storage --> Cache[Cache Memory]
+    Storage --> Persist[Persist Memory]
+    
+    Other --> User[User Memory]
+    Other --> Reserved[Reserved Memory]

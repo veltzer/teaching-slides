@@ -1,6 +1,10 @@
-graph LR
-    A[RDD] --> B[Transformations]
-    B --> C[Action]
-    C --> D[DAG Creation]
-    D --> E[Stage Division]
-    E --> F[Task Execution]
+graph TD
+    CM[Cluster Managers] --> Standalone[Standalone]
+    CM --> YARN[YARN]
+    CM --> K8s[Kubernetes]
+    CM --> Mesos[Mesos]
+    
+    Standalone --> SA[Simple Setup]
+    YARN --> YA[Hadoop Integration]
+    K8s --> KA[Container Orchestration]
+    Mesos --> MA[Resource Sharing]

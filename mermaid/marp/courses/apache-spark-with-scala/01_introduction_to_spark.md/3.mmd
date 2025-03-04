@@ -1,6 +1,22 @@
-graph LR
-    A[Traditional DB] --> B[Hadoop]
-    B --> C[MapReduce]
-    C --> D[Spark]
-    D --> E[Modern Lakes]
-    style D fill:#f96
+flowchart TD
+    A[Processing Requirements] --> B[Parallel Processing]
+    A --> C[Distributed Storage]
+    A --> D[Fault Tolerance]
+    A --> E[Data Locality]
+    A --> F[Resource Management]
+    
+    B --> G[Multi-threading]
+    B --> H[Multi-processing]
+    
+    C --> I[HDFS]
+    C --> J[Cloud Storage]
+    
+    D --> K[Replication]
+    D --> L[Recovery]
+    
+    E --> M[Data Placement]
+    E --> N[Task Placement]
+    
+    F --> O[CPU]
+    F --> P[Memory]
+    F --> Q[Network]

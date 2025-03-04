@@ -1,6 +1,13 @@
-graph TB
-    A[Spark Core] --> B[Spark SQL]
-    A --> C[Spark Streaming]
-    A --> D[MLlib]
-    A --> E[GraphX]
-    style A fill:#f96,stroke:#333
+graph TD
+    Driver --> Master[Master Node]
+    Master --> Worker1[Worker Node 1]
+    Master --> Worker2[Worker Node 2]
+    Master --> Worker3[Worker Node 3]
+    
+    Worker1 --> Executor1[Executor]
+    Worker2 --> Executor2[Executor]
+    Worker3 --> Executor3[Executor]
+    
+    Executor1 --> Task1[Tasks]
+    Executor2 --> Task2[Tasks]
+    Executor3 --> Task3[Tasks]
