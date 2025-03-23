@@ -1,0 +1,10 @@
+graph TD
+    App[Application] --> Sessions[Sessions Redis<br>6379]
+    App --> Cache[Cache Redis<br>6380]
+    App --> Queue[Queue Redis<br>6381]
+    App --> Data[Data Redis<br>6382]
+
+    Sessions --> SR[Sessions<br>Replica]
+    Cache --> CR[Cache<br>Replica]
+    Queue --> QR[Queue<br>Replica]
+    Data --> DR[Data<br>Replica]

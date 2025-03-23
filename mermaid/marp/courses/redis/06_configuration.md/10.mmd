@@ -1,0 +1,23 @@
+graph TD
+    subgraph "Redis Cluster"
+        M1[Master 1]
+        M2[Master 2]
+        M3[Master 3]
+        R1[Replica 1]
+        R2[Replica 2]
+        R3[Replica 3]
+    end
+
+    Client[Client]
+
+    Client -->|Write to<br>Hash Slot 0-5460| M1
+    Client -->|Write to<br>Hash Slot 5461-10922| M2
+    Client -->|Write to<br>Hash Slot 10923-16383| M3
+
+    M1 -->|Replicate| R1
+    M2 -->|Replicate| R2
+    M3 -->|Replicate| R3
+
+    Client -.->|Read from| R1
+    Client -.->|Read from| R2
+    Client -.->|Read from| R3

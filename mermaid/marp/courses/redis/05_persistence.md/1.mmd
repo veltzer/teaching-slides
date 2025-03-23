@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant Redis
+    participant Disk
+
+    Note over Redis: Time T1
+    Redis->>Redis: Continue serving requests
+
+    Note over Redis: Time T2
+    Redis->>Redis: Trigger snapshot
+    Redis->>Disk: Write snapshot (fork process)
+    Redis->>Redis: Continue serving requests
+
+    Note over Redis: Time T3
+    Disk->>Disk: Snapshot complete

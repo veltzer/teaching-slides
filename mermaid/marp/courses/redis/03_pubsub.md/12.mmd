@@ -1,0 +1,41 @@
+graph TD
+    subgraph "Redis Cluster"
+        R1[Redis Node 1]
+        R2[Redis Node 2]
+        R3[Redis Node 3]
+    end
+
+    subgraph "Publishers"
+        P1[Publisher 1]
+        P2[Publisher 2]
+        P3[Publisher 3]
+    end
+
+    subgraph "Subscribers"
+        S1[Subscriber 1]
+        S2[Subscriber 2]
+        S3[Subscriber 3]
+    end
+
+    P1 -->|Publish| R1
+    P1 -->|Publish| R2
+    P1 -->|Publish| R3
+
+    P2 -->|Publish| R1
+    P2 -->|Publish| R2
+    P2 -->|Publish| R3
+
+    P3 -->|Publish| R1
+    P3 -->|Publish| R2
+    P3 -->|Publish| R3
+
+    R1 -->|Replicate| R2
+    R1 -->|Replicate| R3
+    R2 -->|Replicate| R1
+    R2 -->|Replicate| R3
+    R3 -->|Replicate| R1
+    R3 -->|Replicate| R2
+
+    S1 -->|Subscribe| R1
+    S2 -->|Subscribe| R2
+    S3 -->|Subscribe| R3

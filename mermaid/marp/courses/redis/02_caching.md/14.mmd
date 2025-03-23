@@ -1,0 +1,20 @@
+sequenceDiagram
+    participant Client
+    participant API as API Gateway
+    participant Redis
+
+    Client->>API: Request /endpoint
+    API->>Redis: INCR rate:ip:1.2.3.4
+    Redis->>API: First request (1)
+    API->>Redis: EXPIRE rate:ip:1.2.3.4 60
+    API->>Client: 200 OK
+
+    Client->>API: Request /endpoint
+    API->>Redis: INCR rate:ip:1.2.3.4
+    Redis->>API: Second request (2)
+    API->>Client: 200 OK
+
+    Client->>API: Request /endpoint (too many)
+    API->>Redis: INCR rate:ip:1.2.3.4
+    Redis->>API: Over limit (6)
+    API->>Client: 429 Too Many Requests

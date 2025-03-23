@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant P as Primary Cluster
+    participant B as Backup Cluster
+    participant S as Storage
+
+    P->>S: Regular RDB Backups
+
+    Note over P: Disaster occurs
+
+    S->>B: Restore latest backups
+    B->>B: Configure cluster
+
+    Note over B: Recovery complete

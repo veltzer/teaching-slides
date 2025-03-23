@@ -1,0 +1,16 @@
+graph TD
+    Start[Eviction Needed] --> UseCase{Use Case?}
+
+    UseCase -->|Cache| ExpireKeys{All Keys<br>Have Expiration?}
+    UseCase -->|Non-Cache| NoEviction[noeviction]
+
+    ExpireKeys -->|Yes| VolatileLFU[volatile-lfu]
+    ExpireKeys -->|No| AllKeysLFU[allkeys-lfu]
+
+    VolatileLFU -->|Performance<br>Over Precision| VolatileLRU[volatile-lru]
+    AllKeysLFU -->|Performance<br>Over Precision| AllKeysLRU[allkeys-lru]
+
+    VolatileLRU -->|TTL Priority| VolatileTTL[volatile-ttl]
+    VolatileLRU -->|Predictable<br>Behavior| VolatileRandom[volatile-random]
+
+    AllKeysLRU -->|Predictable<br>Behavior| AllKeysRandom[allkeys-random]

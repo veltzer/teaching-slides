@@ -1,0 +1,20 @@
+graph TD
+    subgraph "Request/Response"
+        RR1[Client] -->|Request| RR2[Server]
+        RR2 -->|Response| RR1
+    end
+
+    subgraph "Message Queue"
+        MQ1[Producer] -->|Message| MQ2[Queue]
+        MQ2 -->|Message| MQ3[Consumer 1]
+        MQ2 -->|Message| MQ4[Consumer 2]
+        MQ5[Message Retention]
+    end
+
+    subgraph "Pub/Sub"
+        PS1[Publisher] -->|Event| PS2[Channel]
+        PS2 -->|Event| PS3[Subscriber 1]
+        PS2 -->|Event| PS4[Subscriber 2]
+        PS2 -->|Event| PS5[Subscriber 3]
+        PS6[No Retention]
+    end

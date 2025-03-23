@@ -1,0 +1,20 @@
+graph TD
+    Start[Message Requirement] --> Persistent{Need Persistence?}
+
+    Persistent -->|Yes| ConsumerGroups{Need Consumer Groups?}
+    Persistent -->|No| HighVolume{High Volume?}
+
+    ConsumerGroups -->|Yes| Streams[Use Streams]
+    ConsumerGroups -->|No| HistoryNeeded{Need Message History?}
+
+    HistoryNeeded -->|Yes| Streams
+    HistoryNeeded -->|No| SimplePersistence{Simple Persistence Needed?}
+
+    SimplePersistence -->|Yes| Lists[Use Lists]
+    SimplePersistence -->|No| PubSub[Use Pub/Sub]
+
+    HighVolume -->|Yes| Criticality{Message Criticality?}
+    HighVolume -->|No| PubSub
+
+    Criticality -->|High| ExternalMQ[Use External MQ]
+    Criticality -->|Low| PubSub

@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant App
+    participant Cache as Redis Cache
+    participant DB as Database
+
+    App->>Cache: Get data
+    alt Cache hit
+        Cache->>App: Return cached data
+    else Cache miss
+        Cache->>App: Cache miss (nil)
+        App->>DB: Query database
+        DB->>App: Return data
+        App->>Cache: Store data with TTL
+        App->>App: Use data
+    end

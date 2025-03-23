@@ -1,0 +1,9 @@
+graph TD
+    Client[Client Request] --> L1[Local Memory Cache]
+    L1 -->|Miss| L2[Redis Cache]
+    L2 -->|Miss| DB[Database]
+    DB --> L2b[Update Redis]
+    L2b --> L1b[Update Local Cache]
+    L1b --> Response[Response]
+    L1 -->|Hit| Response
+    L2 -->|Hit| L1b

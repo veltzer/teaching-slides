@@ -1,0 +1,6 @@
+graph TD
+    Start[Redis process] --> Fork[Fork child process]
+    Fork --> Parent[Parent process<br>continues serving requests]
+    Fork --> Child[Child process<br>writes snapshot to temp file]
+    Child --> Replace[Replace previous RDB file]
+    Replace --> End[Snapshot complete]

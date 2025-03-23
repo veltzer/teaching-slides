@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant M as Master
+    participant R as Replica
+    participant O as Other Nodes
+
+    Note over M: Master fails
+    R->>R: Detect master failure
+    R->>O: Request failover votes
+    O->>R: Provide votes
+
+    R->>R: Achieves quorum
+    R->>R: Promotes to master
+    R->>O: PONG with master flag
+    O->>O: Update configuration
+
+    Note over M: Master recovers later
+    M->>O: Rejoin as replica

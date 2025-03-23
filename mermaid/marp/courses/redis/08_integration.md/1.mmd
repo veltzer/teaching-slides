@@ -1,0 +1,27 @@
+graph TD
+    Clients[Redis Clients] --> Node[Node.js]
+    Clients --> Python[Python]
+    Clients --> Java[Java]
+    Clients --> Go[Go]
+    Clients --> Ruby[Ruby]
+    Clients --> PHP[PHP]
+    Clients --> CSharp[.NET/C#]
+
+    Node --> NI[node-redis]
+    Node --> IO[ioredis]
+
+    Python --> RP[redis-py]
+
+    Java --> JR[Jedis]
+    Java --> LR[Lettuce]
+    Java --> RJ[Redisson]
+
+    Go --> GR[go-redis]
+    Go --> RE[redigo]
+
+    Ruby --> RR[redis-rb]
+
+    PHP --> PP[predis]
+    PHP --> PR[phpredis]
+
+    CSharp --> SR[StackExchange.Redis]

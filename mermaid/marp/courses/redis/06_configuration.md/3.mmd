@@ -1,0 +1,17 @@
+graph TD
+    Performance[Performance Tuning] --> OS[OS Settings]
+    Performance --> Redis[Redis Settings]
+    Performance --> Hardware[Hardware]
+
+    OS --> TCP[TCP Settings<br>net.ipv4.tcp_*]
+    OS --> MemoryMgmt[Memory Management<br>vm.overcommit_*]
+    OS --> Swappiness[Swappiness<br>vm.swappiness=0]
+    OS --> FileHandles[File Handles<br>ulimit -n]
+
+    Redis --> AOF[AOF Settings<br>appendfsync]
+    Redis --> MaxMemory[Memory Limits<br>maxmemory]
+    Redis --> Threads[I/O Threads<br>io-threads]
+
+    Hardware --> SSD[SSD Storage]
+    Hardware --> RAM[Sufficient RAM]
+    Hardware --> CPU[Multiple Cores]

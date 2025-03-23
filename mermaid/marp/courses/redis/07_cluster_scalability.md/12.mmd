@@ -1,0 +1,8 @@
+graph TD
+    start[Node Failure] --> Masters{Majority of<br>masters available?}
+
+    Masters -->|Yes| Cover{All slots<br>covered?}
+    Masters -->|No| Unavail[Cluster<br>Unavailable]
+
+    Cover -->|Yes| Avail[Cluster<br>Available]
+    Cover -->|No| Unavail

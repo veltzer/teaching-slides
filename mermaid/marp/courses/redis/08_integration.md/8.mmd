@@ -1,0 +1,22 @@
+graph TD
+    subgraph "Real-time Features with Redis"
+        Chat[Chat Systems]
+        Notif[Notifications]
+        LB[Leaderboards]
+        Status[Status Updates]
+        Location[Location Tracking]
+        Analytics[Real-time Analytics]
+    end
+
+    Chat --> PubSub[Redis PubSub]
+    Notif --> PubSub
+
+    LB --> SortedSet[Redis Sorted Sets]
+
+    Status --> Strings[Redis Strings]
+    Status --> Hashes[Redis Hashes]
+
+    Location --> Geo[Redis Geospatial]
+
+    Analytics --> HLL[Redis HyperLogLog]
+    Analytics --> TS[Redis Time Series]

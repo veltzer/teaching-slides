@@ -1,0 +1,12 @@
+graph TD
+    subgraph "Redis Cluster"
+        M[Master]
+        S1[Replica 1]
+        S2[Replica 2]
+    end
+
+    Client[Client] -->|EVAL script| M
+    M -->|Replicate Effect| S1
+    M -->|Replicate Effect| S2
+
+    Note1[Effect-based replication:<br>Results, not script]

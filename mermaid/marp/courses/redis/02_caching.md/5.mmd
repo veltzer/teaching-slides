@@ -1,0 +1,6 @@
+flowchart TD
+    Start[Background process] --> CheckKeys[Check soon-to-expire keys]
+    CheckKeys --> Loop{For each key}
+    Loop --> RefreshKey[Refresh key from database]
+    RefreshKey --> UpdateTTL[Update cache with new TTL]
+    Loop --> Done[Done]

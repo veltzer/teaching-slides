@@ -1,0 +1,19 @@
+flowchart TD
+    start[Start] --> needsOrdering{Need ordering?}
+    needsOrdering -->|Yes| byScore{By score?}
+    needsOrdering -->|No| uniqueValues{Need unique values?}
+
+    byScore -->|Yes| sortedSet[Sorted Set]
+    byScore -->|No| list[List]
+
+    uniqueValues -->|Yes| needFields{Need field-value pairs?}
+    uniqueValues -->|No| simpleValue{Simple value?}
+
+    needFields -->|Yes| hash[Hash]
+    needFields -->|No| set[Set]
+
+    simpleValue -->|Yes| string[String]
+    simpleValue -->|No| complexStructure{Complex data?}
+
+    complexStructure -->|Yes| json[Redis JSON]
+    complexStructure -->|No| string

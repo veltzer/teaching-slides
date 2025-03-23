@@ -1,0 +1,21 @@
+graph TD
+    subgraph "3 Masters + 3 Replicas"
+        M1[Master 1<br>Slots 0-5460] --> R1[Replica 1]
+        M2[Master 2<br>Slots 5461-10922] --> R2[Replica 2]
+        M3[Master 3<br>Slots 10923-16383] --> R3[Replica 3]
+    end
+
+    M1 -.->|Gossip| M2
+    M2 -.->|Gossip| M3
+    M3 -.->|Gossip| M1
+
+    R1 -.->|Gossip| R2
+    R2 -.->|Gossip| R3
+    R3 -.->|Gossip| R1
+
+    M1 -.->|Gossip| R2
+    M1 -.->|Gossip| R3
+    M2 -.->|Gossip| R1
+    M2 -.->|Gossip| R3
+    M3 -.->|Gossip| R1
+    M3 -.->|Gossip| R2

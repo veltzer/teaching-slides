@@ -1,0 +1,22 @@
+graph TD
+    Compare[Comparison] --> Solo[Redis<br>Standalone]
+    Compare --> Cluster[Redis<br>Cluster]
+    Compare --> Enterprise[Redis<br>Enterprise]
+
+    Solo --> S1[Simple<br>Single Instance]
+    Solo --> S2[Master-Replica<br>Read Scaling]
+
+    Cluster --> C1[Open Source<br>Sharding]
+    Cluster --> C2[Auto Failover<br>Basic HA]
+
+    Enterprise --> E1[Commercial<br>Solution]
+    Enterprise --> E2[Advanced Features<br>Better Guarantees]
+
+    S1 --> SD1[Simplicity<br>Performance]
+    S2 --> SD2[Limited Scaling<br>Limited HA]
+
+    C1 --> CD1[Good Scaling<br>No Cost]
+    C2 --> CD2[Config Complexity<br>Weaker Consistency]
+
+    E1 --> ED1[Best Features<br>Enterprise Support]
+    E2 --> ED2[Cost<br>Vendor Lock-in]

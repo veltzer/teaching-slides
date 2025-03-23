@@ -1,0 +1,12 @@
+sequenceDiagram
+    participant Client
+    participant Redis
+    participant AOF
+
+    Client->>Redis: SET key value
+    Redis->>AOF: Append "SET key value"
+    Redis->>Client: OK
+
+    Client->>Redis: INCR counter
+    Redis->>AOF: Append "INCR counter"
+    Redis->>Client: (integer) 1

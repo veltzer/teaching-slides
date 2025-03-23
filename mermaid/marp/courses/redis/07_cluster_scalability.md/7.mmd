@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant C as Client
+    participant N1 as Node 1
+    participant N2 as Node 2
+
+    C->>N1: GET user:123
+    Note over N1: Key in slot 5798<br>on Node 2
+    N1->>C: MOVED 5798 127.0.0.1:7001
+    C->>N2: GET user:123
+    N2->>C: "John Doe"
+
+    Note over C,N2: With cluster-aware client:
+    C->>N2: GET user:123
+    N2->>C: "John Doe"

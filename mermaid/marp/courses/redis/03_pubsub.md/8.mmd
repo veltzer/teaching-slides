@@ -1,0 +1,43 @@
+graph TD
+    subgraph "Redis Cluster"
+        M[Master]
+        S1[Slave 1]
+        S2[Slave 2]
+    end
+
+    subgraph "Redis Sentinel"
+        Sen1[Sentinel 1]
+        Sen2[Sentinel 2]
+        Sen3[Sentinel 3]
+    end
+
+    subgraph "Applications"
+        App1[Application 1]
+        App2[Application 2]
+    end
+
+    M --> S1
+    M --> S2
+
+    Sen1 -->|Monitor| M
+    Sen1 -->|Monitor| S1
+    Sen1 -->|Monitor| S2
+
+    Sen2 -->|Monitor| M
+    Sen2 -->|Monitor| S1
+    Sen2 -->|Monitor| S2
+
+    Sen3 -->|Monitor| M
+    Sen3 -->|Monitor| S1
+    Sen3 -->|Monitor| S2
+
+    Sen1 -->|Publish| PubSub[Sentinel Pub/Sub]
+    Sen2 -->|Publish| PubSub
+    Sen3 -->|Publish| PubSub
+
+    PubSub -->|Subscribe| App1
+    PubSub -->|Subscribe| App2
+
+    style M fill:#f55,stroke:#000
+    style S1 fill:#5f5,stroke:#000
+    style S2 fill:#5f5,stroke:#000

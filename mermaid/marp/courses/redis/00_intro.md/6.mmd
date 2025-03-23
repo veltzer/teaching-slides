@@ -1,0 +1,16 @@
+graph TD
+    subgraph Applications
+        App1[Web App]
+        App2[Mobile API]
+        App3[Analytics]
+    end
+    subgraph "Redis Database"
+        Cache[Cache]
+        Sessions[Sessions]
+        Messaging[Messaging]
+    end
+    App1 --> Cache
+    App1 --> Sessions
+    App2 --> Cache
+    App2 --> Sessions
+    App3 --> Messaging

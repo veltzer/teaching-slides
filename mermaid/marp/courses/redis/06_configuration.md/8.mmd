@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant Client
+    participant HA as HA Proxy
+    participant M1 as Master (old)
+    participant R1 as Replica 1
+    participant R2 as Replica 2
+
+    Client->>HA: Requests
+    HA->>M1: Write requests
+    M1->>R1: Replication
+    M1->>R2: Replication
+    HA->>R1: Read requests
+    HA->>R2: Read requests
+
+    Note over R2: 1. Upgrade Replica 2
+
+    Note over R1: 2. Upgrade Replica 1
+
+    Note over M1,R1: 3. Failover to Replica 1
+    R1->>M1: Becomes new master
+    M1->>R1: Becomes replica
+
+    Note over M1: 4. Upgrade old master

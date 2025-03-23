@@ -1,0 +1,22 @@
+graph TD
+    Monitor[Monitoring Areas] --> Perf[Performance]
+    Monitor --> Memory[Memory]
+    Monitor --> Conns[Connections]
+    Monitor --> Cmds[Commands]
+    Monitor --> Repl[Replication]
+
+    Perf --> QPS[Commands/Second]
+    Perf --> Latency[Command Latency]
+
+    Memory --> Used[Used Memory]
+    Memory --> RSS[RSS Memory]
+    Memory --> Fragmentation[Fragmentation Ratio]
+
+    Conns --> ConnCount[Connected Clients]
+    Conns --> Rejected[Rejected Connections]
+
+    Cmds --> SlowLog[Slow Commands]
+    Cmds --> Errors[Error Count]
+
+    Repl --> Lag[Replication Lag]
+    Repl --> Status[Replication Status]

@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant T1 as Time 1
+    participant T2 as Time 2
+    participant T3 as Time 3
+    participant T4 as Time 4
+
+    Note over T1: Start with base RDB snapshot
+    Note over T2: Apply AOF up to failure point
+    Note over T3: Trim AOF if needed
+    Note over T4: Restore with fixed AOF
+
+    T1->>T2: Load RDB snapshot
+    T2->>T3: Apply AOF commands
+    T3->>T4: Resume normal operation

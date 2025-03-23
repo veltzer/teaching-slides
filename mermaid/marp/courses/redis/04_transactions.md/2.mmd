@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant Client
+    participant Redis
+
+    Client->>Redis: MULTI
+    Redis->>Client: OK
+    Client->>Redis: INCR counter
+    Redis->>Client: QUEUED
+    Client->>Redis: HSET user:123 visits 10
+    Redis->>Client: QUEUED
+    Client->>Redis: SADD active:users 123
+    Redis->>Client: QUEUED
+    Client->>Redis: EXEC
+    Redis->>Client: 1) (integer) 1<br>2) (integer) 1<br>3) (integer) 1

@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant App
+    participant Cache as Redis Cache
+    participant Queue as Write Queue
+    participant Worker
+    participant DB as Database
+
+    App->>Cache: Write to cache
+    Cache->>App: Confirm write
+    App->>Queue: Enqueue write operation
+    Queue->>App: Confirm enqueue
+    Worker->>Queue: Dequeue write operation
+    Worker->>DB: Batch write to database

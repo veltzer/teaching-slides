@@ -1,0 +1,16 @@
+graph TD
+    config[Redis Configuration] --> network[Network]
+    config --> general[General]
+    config --> security[Security]
+    config --> limits[Limits]
+    config --> persistence[Persistence]
+    config --> replication[Replication]
+    config --> cluster[Cluster]
+    config --> advanced[Advanced]
+
+    network --> bind[bind, port]
+    security --> auth[requirepass, ACL]
+    limits --> mem[maxmemory, clients]
+    persistence --> rdb[RDB, AOF]
+    replication --> repconfig[replica-of, replica-*]
+    cluster --> clconfig[cluster-*]

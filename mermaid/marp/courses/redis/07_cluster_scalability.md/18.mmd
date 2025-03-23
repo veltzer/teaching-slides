@@ -1,0 +1,8 @@
+graph TD
+    Migration[Migration<br>Strategies] --> Simple[Simple<br>Offline Migration]
+    Migration --> Complex[Complex<br>Online Migration]
+
+    Simple --> Down[Requires<br>Downtime]
+    Complex --> DP[Dual<br>Provisioning]
+    Complex --> SW[Shadow<br>Writing]
+    Complex --> GF[Gradual<br>Feature Migration]

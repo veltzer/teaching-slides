@@ -1,0 +1,23 @@
+sequenceDiagram
+    participant P as Publisher
+    participant R as Redis
+    participant S1 as Subscriber 1
+    participant S2 as Subscriber 2
+
+    S1->>R: SUBSCRIBE notifications
+    R->>S1: 1) "subscribe" 2) "notifications" 3) (integer) 1
+
+    S2->>R: SUBSCRIBE notifications
+    R->>S2: 1) "subscribe" 2) "notifications" 3) (integer) 1
+
+    P->>R: PUBLISH notifications "Hello, world!"
+    R->>P: (integer) 2
+    R->>S1: 1) "message" 2) "notifications" 3) "Hello, world!"
+    R->>S2: 1) "message" 2) "notifications" 3) "Hello, world!"
+
+    S1->>R: UNSUBSCRIBE notifications
+    R->>S1: 1) "unsubscribe" 2) "notifications" 3) (integer) 0
+
+    P->>R: PUBLISH notifications "Another message"
+    R->>P: (integer) 1
+    R->>S2: 1) "message" 2) "notifications" 3) "Another message"

@@ -1,0 +1,14 @@
+graph TD
+    Persistence[Redis Persistence Options] --> RDB[RDB Snapshots]
+    Persistence --> AOF[Append-Only File]
+    Persistence --> Hybrid[Hybrid Mode]
+    Persistence --> None[No Persistence]
+
+    RDB --> RDBPros[Pros: Compact, Fast Restore]
+    RDB --> RDBCons[Cons: Potential Data Loss]
+
+    AOF --> AOFPros[Pros: Durability, Less Data Loss]
+    AOF --> AOFCons[Cons: Larger Files, Slower Restore]
+
+    Hybrid --> HybridPros[Pros: Best of Both]
+    Hybrid --> HybridCons[Cons: More Complex]

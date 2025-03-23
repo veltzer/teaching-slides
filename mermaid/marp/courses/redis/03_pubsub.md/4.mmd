@@ -1,0 +1,24 @@
+graph TD
+    subgraph "Data Sources"
+        API[API Servers]
+        DB[Database]
+        Services[Microservices]
+    end
+
+    subgraph "Message Broker"
+        Redis[Redis Pub/Sub]
+    end
+
+    subgraph "Consumers"
+        Dashboard[Real-time Dashboard]
+        Analytics[Analytics Service]
+        Alerts[Alert System]
+    end
+
+    API -->|Publish events| Redis
+    DB -->|Publish changes| Redis
+    Services -->|Publish metrics| Redis
+
+    Redis -->|New data| Dashboard
+    Redis -->|Data for processing| Analytics
+    Redis -->|Critical events| Alerts

@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant Req1 as Request 1
+    participant Req2 as Request 2
+    participant Req3 as Request 3
+    participant Cache as Redis Cache
+    participant DB as Database
+
+    Req1->>Cache: Get data
+    Req2->>Cache: Get data
+    Req3->>Cache: Get data
+    Cache->>Req1: Cache miss
+    Cache->>Req2: Cache miss
+    Cache->>Req3: Cache miss
+    Req1->>DB: Query database
+    Req2->>DB: Query database
+    Req3->>DB: Query database
+    Note over DB: Database overloaded

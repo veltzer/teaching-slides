@@ -1,0 +1,19 @@
+sequenceDiagram
+    participant User
+    participant App as Web App
+    participant Redis as Redis Session Store
+
+    User->>App: Login request
+    App->>Redis: Create session
+    Redis->>App: Session ID
+    App->>User: Set session cookie
+
+    User->>App: Subsequent request with cookie
+    App->>Redis: Get session data
+    Redis->>App: Session data
+    App->>User: Authorized response
+
+    User->>App: Logout request
+    App->>Redis: Delete session
+    Redis->>App: Confirmation
+    App->>User: Clear session cookie

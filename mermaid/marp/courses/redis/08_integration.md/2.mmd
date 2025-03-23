@@ -1,0 +1,17 @@
+graph TD
+    Conn[Connection Management] --> Pool[Connection Pooling]
+    Conn --> Keep[Connection Keepalive]
+    Conn --> Timeout[Timeout Handling]
+    Conn --> Retry[Retry Strategies]
+
+    Pool --> Size[Appropriate Pool Size]
+    Pool --> Reuse[Connection Reuse]
+
+    Keep --> TCP[TCP Keepalive]
+    Keep --> App[Application-level Ping]
+
+    Timeout --> Connect[Connection Timeout]
+    Timeout --> Read[Read Timeout]
+
+    Retry --> Back[Backoff Strategy]
+    Retry --> Max[Max Retries]

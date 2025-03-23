@@ -1,0 +1,21 @@
+sequenceDiagram
+    participant Client
+    participant LB as Load Balancer
+    participant App1 as App Server 1
+    participant App2 as App Server 2
+    participant R1 as Redis 1
+    participant R2 as Redis 2
+
+    Client->>LB: Request
+    LB->>App1: Route request
+    App1->>App1: Hash user ID
+    App1->>R1: Query Redis 1
+    R1->>App1: Response
+    App1->>Client: Response
+
+    Client->>LB: Another request
+    LB->>App2: Route request
+    App2->>App2: Hash user ID
+    App2->>R2: Query Redis 2
+    R2->>App2: Response
+    App2->>Client: Response

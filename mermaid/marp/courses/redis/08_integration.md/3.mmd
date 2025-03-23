@@ -1,0 +1,19 @@
+graph TD
+    Serialization[Serialization Options] --> String[Strings]
+    Serialization --> JSON[JSON]
+    Serialization --> Binary[Binary Formats]
+    Serialization --> Custom[Custom Formats]
+
+    String --> Simple[Simple Types]
+
+    JSON --> JS[JavaScript]
+    JSON --> HR[Human Readable]
+    JSON --> Space[Space Inefficient]
+
+    Binary --> Proto[Protocol Buffers]
+    Binary --> Avro[Avro]
+    Binary --> MsgPack[MessagePack]
+    Binary --> Space2[Space Efficient]
+
+    Custom --> Redis[RedisJSON]
+    Custom --> Domain[Domain-Specific]

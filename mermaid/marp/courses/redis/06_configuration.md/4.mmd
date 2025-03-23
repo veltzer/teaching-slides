@@ -1,0 +1,15 @@
+graph TD
+    Tools[Redis Management Tools] --> CLI[redis-cli]
+    Tools --> UI[redis-insight]
+    Tools --> Web[Web UIs]
+    Tools --> Monitoring[Monitoring Tools]
+
+    CLI --> CLIOptions[Interactive and<br>Scripted Mode]
+
+    UI --> VisualMgmt[Visual Interface,<br>Data Browser]
+
+    Web --> RRDM[Redis React Desktop Manager]
+    Web --> Commander[Redis Commander]
+
+    Monitoring --> Promo[Prometheus + Grafana]
+    Monitoring --> DataDog[DataDog]

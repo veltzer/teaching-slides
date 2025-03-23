@@ -1,0 +1,5 @@
+graph LR
+    subgraph "Redis Streams vs Pub/Sub"
+        PS[Pub/Sub] -->|Ephemeral<br>Fire-and-forget<br>Broadcasting| PSC[Use Case]
+        ST[Streams] -->|Persistent<br>History<br>Processing| STC[Use Case]
+    end

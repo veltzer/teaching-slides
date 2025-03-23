@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant Client1 as Client 1
+    participant Client2 as Client 2
+    participant Redis
+
+    Client1->>Redis: GET counter
+    Redis->>Client1: "10"
+    Client2->>Redis: GET counter
+    Redis->>Client2: "10"
+    Client1->>Redis: SET counter 11
+    Redis->>Client1: OK
+    Client2->>Redis: SET counter 11
+    Redis->>Client2: OK
+    Note over Redis: Lost update! Should be 12

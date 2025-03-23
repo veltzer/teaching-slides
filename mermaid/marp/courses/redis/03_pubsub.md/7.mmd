@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant P as Publisher
+    participant R as Redis
+    participant S as Subscriber
+
+    P->>R: PUBLISH orders:new "order:1234"
+    R->>S: Message "order:1234"
+
+    S->>S: Process message
+    S->>R: PUBLISH orders:ack "order:1234:success"
+    R->>P: Message "order:1234:success"
+
+    P->>P: Mark as processed
+
+    Note over P,S: If no ACK received within timeout
+    P->>R: PUBLISH orders:new "order:1234" (retry)
+    R->>S: Message "order:1234"

@@ -1,0 +1,14 @@
+sequenceDiagram
+    participant C as Client
+    participant A as API Server
+    participant R as Redis
+    participant NS as Notification Service
+    participant WS as WebSocket Server
+
+    C->>A: POST /action
+    A->>R: PUBLISH notifications:user:123 "New notification"
+    R->>NS: Message
+    NS->>R: XADD user:123:events * type notification data "..."
+    NS->>R: PUBLISH user:123:websocket "New notification"
+    R->>WS: Message
+    WS->>C: Send websocket message

@@ -1,0 +1,10 @@
+graph TD
+    subgraph "Hash Slot Distribution"
+        M1[Master 1<br>0-5460]
+        M2[Master 2<br>5461-10922]
+        M3[Master 3<br>10923-16383]
+    end
+
+    Key1[key:user:123] --> CRC16[CRC16 % 16384]
+    CRC16 --> Slot[Determines<br>Hash Slot]
+    Slot --> Destination[Redis Master<br>for that Slot]

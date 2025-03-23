@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant Producer
+    participant Redis
+    participant Worker
+
+    Producer->>Redis: RPUSH tasks:queue "process-image:img1.jpg"
+    Redis->>Producer: (length: 1)
+
+    Producer->>Redis: RPUSH tasks:queue "send-email:user@example.com"
+    Redis->>Producer: (length: 2)
+
+    Worker->>Redis: BLPOP tasks:queue 0
+    Redis->>Worker: ["tasks:queue", "process-image:img1.jpg"]
+
+    Worker->>Redis: BLPOP tasks:queue 0
+    Redis->>Worker: ["tasks:queue", "send-email:user@example.com"]

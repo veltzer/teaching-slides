@@ -1,0 +1,10 @@
+graph TD
+    subgraph "Redis Cluster"
+        M1[Master 1] --> R1[Replica 1]
+        M2[Master 2] --> R2[Replica 2]
+        M3[Master 3] --> R3[Replica 3]
+    end
+
+    C[Cluster-Aware Client] --> M1
+    C --> M2
+    C --> M3

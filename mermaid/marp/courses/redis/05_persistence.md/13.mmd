@@ -1,0 +1,11 @@
+graph LR
+    subgraph "Relative Performance"
+        NoPersistence[No Persistence<br>100%]
+        RDB[RDB Only<br>~95%]
+        AOFNo[AOF fsync=no<br>~90%]
+        AOFEverySec[AOF fsync=everysec<br>~80%]
+        AOFAlways[AOF fsync=always<br>~30%]
+        Hybrid[RDB+AOF Hybrid<br>~75%]
+    end
+
+    NoPersistence --> RDB --> AOFNo --> AOFEverySec --> Hybrid --> AOFAlways
