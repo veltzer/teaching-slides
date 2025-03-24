@@ -239,8 +239,6 @@ user:{123}:cart     → Hash on "123"
 
 All keys with the same hash tag `{123}` will be assigned to the same hash slot.
 
-![8](../../../out/mermaid/marp/courses/redis/07_cluster_scalability.md/8.png)
-
 ---
 
 ## Redis Cluster Limitations
@@ -289,8 +287,6 @@ Steps performed:
 ---
 
 ## Redis Cluster Resharding Process
-
-![10](../../../out/mermaid/marp/courses/redis/07_cluster_scalability.md/10.png)
 
 ---
 
@@ -494,8 +490,6 @@ When migrating to Redis Cluster:
     - Move one feature at a time
     - Minimize risk
     - Easier rollback
-
-![18](../../../out/mermaid/marp/courses/redis/07_cluster_scalability.md/18.png)
 
 ---
 

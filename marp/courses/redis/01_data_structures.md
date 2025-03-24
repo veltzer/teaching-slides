@@ -440,8 +440,6 @@ Data structure efficiency (for 1 million items):
 
 ## Performance Considerations
 
-![13](../../../out/mermaid/marp/courses/redis/01_data_structures.md/13.png)
-
 ---
 
 ## Data Structure Patterns: Composite Keys
