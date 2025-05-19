@@ -1,5 +1,6 @@
-# C++ Refresher
-
+# Modern C++ for C programmers
+---
+## C++ Refresher
 ---
 
 ## An Overview of OO Programming and C++
