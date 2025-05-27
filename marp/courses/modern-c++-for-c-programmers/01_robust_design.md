@@ -417,14 +417,14 @@ private:
 ## C++ 11 Game-Changers
 
 Modern C++ features that improve robustness:
-1. 1. 1. Smart pointers (`unique_ptr`, `shared_ptr`)
-1. 1. 1. Move semantics
-1. 1. 1. Lambda expressions
-1. 1. 1. `auto` type deduction
-1. 1. 1. Range-based for loops
-1. 1. 1. `nullptr` keyword
-1. 1. 1. Strongly-typed enums
-1. 1. 1. `constexpr`
+1. Smart pointers (`unique_ptr`, `shared_ptr`)
+1. Move semantics
+1. Lambda expressions
+1. `auto` type deduction
+1. Range-based for loops
+1. `nullptr` keyword
+1. Strongly-typed enums
+1. `constexpr`
 
 ---
 
