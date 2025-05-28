@@ -559,5 +559,3 @@ void* tracked_malloc(size_t size) {
 1. **Static allocation** preferred in embedded
 1. **DMA** offloads CPU for transfers
 1. **Alignment** matters for correctness and speed
-
-Next: Intertask Communication

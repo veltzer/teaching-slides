@@ -533,5 +533,3 @@ void large_function(void) {
 1. **Direct** hardware control
 1. **Minimal** resource usage
 1. **Robust** error handling
-
-Next: Elements of C/C++

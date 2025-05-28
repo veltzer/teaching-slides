@@ -545,5 +545,3 @@ void safe_copy(char* dest, size_t dest_size,
 1. **Generic programming** via void pointers
 1. **Performance** gains through pointer optimization
 1. **Safety** through defensive programming
-
-Next: Memory Management Architecture

@@ -651,5 +651,3 @@ void publish(publisher_t* pub, void* data) {
 1. **Atomic operations** enable lock-free code
 1. **Message passing** reduces coupling
 1. **Priority inversion** needs special handling
-
-Next: The Toolchain
