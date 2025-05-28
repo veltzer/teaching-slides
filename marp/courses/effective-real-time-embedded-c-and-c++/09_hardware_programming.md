@@ -809,5 +809,3 @@ void GOOD_IRQHandler2(void) {
 1. **Context** must be properly saved/restored
 1. **Deferred processing** for complex operations
 1. **Measurement** helps optimization
-
-Next: Timing

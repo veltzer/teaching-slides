@@ -756,5 +756,3 @@ int16_t saturate_add(int16_t a, int16_t b) {
 1. **Algorithm** choice matters most
 1. **Trade-offs** exist between goals
 1. **Maintainability** matters too
-
-Next: Writing Safer C
