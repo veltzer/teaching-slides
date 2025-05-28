@@ -1074,5 +1074,3 @@ Bad& operator=(const Bad& other) {
 1. **Smart pointers** manage ownership
 1. **noexcept** enables optimizations
 1. **Test** resource management thoroughly
-
-Next: Templates and Generic Programming

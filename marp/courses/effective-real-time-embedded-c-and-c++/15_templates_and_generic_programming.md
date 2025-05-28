@@ -948,5 +948,3 @@ void printType() {
 1. **Traits** enable compile-time decisions
 1. **CRTP** provides static polymorphism
 1. **Concepts** improve error messages
-
-Next: The Standard Template Library
