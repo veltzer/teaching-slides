@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 This script checks md files
@@ -24,7 +24,7 @@ class MarkdownLinkChecker:
         """
         self.base_path = base_path or Path.cwd()
         # Regular expression for matching markdown links
-        self.link_pattern = re.compile(r'\[([^\]]+)\]\(([^)]+)\)')
+        self.link_pattern = re.compile(r'^\[([^\]]+)\]\(([^)]+)\)')
 
     def is_local_link(self, link: str) -> bool:
         """
