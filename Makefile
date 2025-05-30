@@ -370,7 +370,7 @@ $(DRAWIO_PNG): out/%.png: %.drawio
 	$(info doing [$@])
 	$(Q)mkdir -p $(dir $@)
 	$(Q)pymakehelper only_print_on_error drawio --export --format png --output $@ $<
-$(PY_LINT): out/%.lint: %.py
+$(PY_LINT): out/%.lint: %.py .pylintrc
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
 	$(Q)pymakehelper touch_mkdir $@
