@@ -49,6 +49,8 @@ DO_MERMAID_DEP:=1
 DO_COURSES:=1
 # do you want to lint python files?
 DO_PY_LINT:=1
+# do you want to check bash syntax?
+DO_CHECK_SYNTAX:=1
 
 #############
 # templates #
@@ -116,6 +118,14 @@ NAMES:=$(notdir $(patsubst %/,%,$(dir $(wildcard marp/courses/*/))))
 TARGET_NAMES:=$(addsuffix .pdf,$(addprefix out/marp/courses/,$(NAMES)))
 # warning! no space is allowed after the command in the call function below
 $(foreach name, $(NAMES), $(eval $(call template,$(name))))
+
+# scripts
+ALL_SH_SRC:=$(shell find . -type f -name "*.sh" -and -not -path "./.venv/*" -and -not -path "./node_modules/*" -printf "%P\n")
+ALL_SH_CHECK:=$(addprefix out/, $(addsuffix .check, $(ALL_SH_SRC)))
+
+ifeq ($(DO_CHECK_SYNTAX),1)
+ALL+=$(ALL_SH_CHECK)
+endif # DO_CHECK_SYNTAX
 
 ifeq ($(DO_MD_MARKDOWNLINT),1)
 ALL+=$(MD_MARKDOWNLINT)
@@ -263,6 +273,8 @@ debug:
 	$(info MD_MDL is $(MD_MDL))
 	$(info MD_LINT is $(MD_LINT))
 	$(info MD_MARKDOWNLINT is $(MD_MARKDOWNLINT))
+	$(info ALL_SH_SRC is $(ALL_SH_SRC))
+	$(info ALL_SH_CHECK is $(ALL_SH_CHECK))
 	$(info MERMAID_SRC is $(MERMAID_SRC))
 	$(info MERMAID_BAS is $(MERMAID_BAS))
 	$(info MERMAID_PNG is $(MERMAID_PNG))
@@ -361,6 +373,10 @@ $(DRAWIO_PNG): out/%.png: %.drawio
 $(PY_LINT): out/%.lint: %.py
 	$(info doing [$@])
 	$(Q)python -m pylint --reports=n --score=n $<
+	$(Q)pymakehelper touch_mkdir $@
+$(ALL_SH_CHECK): out/%.check: % .shellcheckrc
+	$(info doing [$@])
+	$(Q)shellcheck --shell=bash --external-sources --source-path="$${HOME}" $<
 	$(Q)pymakehelper touch_mkdir $@
 
 ##########

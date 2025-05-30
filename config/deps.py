@@ -2,7 +2,7 @@
 os level dependencies for this project
 """
 
-packages=[
+packages = [
     "unoconv",
     "python3-uno",
     "markdown",
@@ -30,6 +30,8 @@ packages=[
     # ruby stuff
     "ruby-bundler",
     "rbenv",
+    # shell checking
+    "shellcheck",
 ]
 
 packages_docs = [
