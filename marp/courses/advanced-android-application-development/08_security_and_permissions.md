@@ -1,4 +1,4 @@
-# Chapter 9: Security and Permissions
+# Security and Permissions
 ## Implementing Android Security Best Practices
 
 ---

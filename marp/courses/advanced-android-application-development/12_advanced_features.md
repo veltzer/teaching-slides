@@ -1,4 +1,4 @@
-# Chapter 13: Advanced Features and Integrations
+# Advanced Features and Integrations
 ## Enhancing Android Applications with Advanced Capabilities
 
 ---

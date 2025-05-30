@@ -1,4 +1,4 @@
-# Chapter 7: Background Processing
+# Background Processing
 ## Managing Background Tasks and Services
 
 ---

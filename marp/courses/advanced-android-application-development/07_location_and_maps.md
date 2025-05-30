@@ -1,4 +1,4 @@
-# Chapter 8: Location and Maps
+# Location and Maps
 ## Implementing Location-Based Services
 
 ---

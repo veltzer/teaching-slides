@@ -1,4 +1,4 @@
-# Chapter 5: Data Management
+# Data Management
 ## Efficient Data Storage and Retrieval in Android
 
 ---

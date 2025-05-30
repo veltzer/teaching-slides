@@ -1,4 +1,4 @@
-# Chapter 1: Advanced Java for Android
+# Advanced Java for Android
 ## Advanced Features and Modern Patterns
 
 ---

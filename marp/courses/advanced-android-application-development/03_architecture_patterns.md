@@ -1,4 +1,4 @@
-# Chapter 4: Architecture Patterns
+# Architecture Patterns
 ## Building Scalable Android Applications
 
 ---

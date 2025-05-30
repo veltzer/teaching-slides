@@ -1,4 +1,4 @@
-# Chapter 10: Testing and Debugging
+# Testing and Debugging
 ## Building Reliable Android Applications
 
 ---

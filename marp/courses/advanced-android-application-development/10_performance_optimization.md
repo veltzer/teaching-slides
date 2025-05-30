@@ -1,4 +1,4 @@
-# Chapter 11: Performance Optimization
+# Performance Optimization
 ## Building High-Performance Android Applications
 
 ---

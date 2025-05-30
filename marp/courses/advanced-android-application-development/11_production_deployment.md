@@ -1,4 +1,4 @@
-# Chapter 12: Production Deployment
+# Production Deployment
 ## Preparing and Deploying Android Applications
 
 ---

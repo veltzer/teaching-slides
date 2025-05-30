@@ -1,4 +1,4 @@
-# Chapter 14: Multi-Platform Development and Modern Architecture
+# Multi-Platform Development and Modern Architecture
 ## Building Cross-Platform and Scalable Applications
 
 ---

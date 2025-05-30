@@ -1,4 +1,4 @@
-# Chapter 2: Android UI Architecture
+# Android UI Architecture
 ## Advanced View Development and Layout Systems
 
 ---

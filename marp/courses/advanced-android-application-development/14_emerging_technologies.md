@@ -1,4 +1,4 @@
-# Chapter 15: Emerging Technologies and Future Trends
+# Emerging Technologies and Future Trends
 ## Next Generation Android Development
 
 ---

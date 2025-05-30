@@ -1,4 +1,4 @@
-# Chapter 3: Material Design and Animations
+# Material Design and Animations
 ## Creating Engaging User Interfaces
 
 ---

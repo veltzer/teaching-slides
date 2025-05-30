@@ -1,4 +1,4 @@
-# Chapter 6: Network Operations
+# Network Operations
 ## Building Robust Networked Applications
 
 ---
