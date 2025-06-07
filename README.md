@@ -1,14 +1,14 @@
-## teching-slides
+## teaching-slides
 
 version: 0.0.1
 
 description: Slides for my teaching
 
-website: https://veltzer.github.io/teching-slides
+website: https://veltzer.github.io/teaching-slides
 
 ## Build
 
-![build](https://github.com/veltzer/teching-slides/actions/workflows/.github/workflows/build.yml/badge.svg)
+![build](https://github.com/veltzer/teaching-slides/actions/workflows/.github/workflows/build.yml/badge.svg)
 
 
 ## Contact

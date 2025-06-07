@@ -1,5 +1,5 @@
 """ project definitions """
-name = "teching-slides"
+name = "teaching-slides"
 description_short = "Slides for my teaching"
 keywords = [
         "teaching",
