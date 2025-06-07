@@ -23,7 +23,7 @@ ${"##"} Build
 	for action_file in action_files:
 		with open(action_file, "r") as stream:
 			action_name=yaml.safe_load(stream)["name"]
-			context.write(f"![{action_name}](https://github.com/{config.personal.github_username}/{pydmt.helpers.project.get_name()}/workflows/{action_name}/badge.svg)")
+			context.write(f"![{action_name}](https://github.com/{config.personal.github_username}/{pydmt.helpers.project.get_name()}/actions/workflows/{action_file}/badge.svg)")
 %>
 
 % if hasattr(config.project, "description_long"):
