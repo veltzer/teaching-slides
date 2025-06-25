@@ -1,5 +1,4 @@
-# Modern C++ for C Programmers
-## Chapter 8: Exception Handling
+# Exception Handling
 
 ---
 
