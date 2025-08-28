@@ -1,0 +1,1460 @@
+# Time in Linux
+
+---
+
+## Chapter Overview
+
+1. **Time Concepts and Representations**
+1. **System Clocks**
+1. **Getting and Setting Time**
+1. **Sleeping and Timers**
+1. **High-Resolution Timing**
+1. **Time Measurement**
+1. **Best Practices**
+
+---
+
+## What is Time in Computing?
+
+## Multiple Concepts:
+
+- **Wall Clock Time** - Real-world time (can change)
+- **Monotonic Time** - Always increases (never jumps)
+- **CPU Time** - Processing time consumed
+- **Boot Time** - Since system started
+- **Process Time** - Since process started
+
+Time is surprisingly complex in computing!
+
+---
+
+## Time Representations in Linux
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="700" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
+  <text x="400" y="85" text-anchor="middle" fill="white" font-size="12">Epoch Time (time_t): Seconds since 1970-01-01 00:00:00 UTC</text>
+
+  <rect x="50" y="130" width="340" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
+  <text x="220" y="155" text-anchor="middle" fill="white" font-size="11">struct timeval</text>
+  <text x="220" y="175" text-anchor="middle" fill="white" font-size="10">tv_sec + tv_usec (microseconds)</text>
+
+  <rect x="410" y="130" width="340" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
+  <text x="580" y="155" text-anchor="middle" fill="white" font-size="11">struct timespec</text>
+  <text x="580" y="175" text-anchor="middle" fill="white" font-size="10">tv_sec + tv_nsec (nanoseconds)</text>
+
+  <rect x="50" y="210" width="340" height="60" fill="#F39C12" stroke="#333" stroke-width="2"/>
+  <text x="220" y="235" text-anchor="middle" fill="black" font-size="11">struct tm</text>
+  <text x="220" y="255" text-anchor="middle" font-size="10">Broken-down time (year, month, day...)</text>
+
+  <rect x="410" y="210" width="340" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
+  <text x="580" y="235" text-anchor="middle" fill="white" font-size="11">clock_t</text>
+  <text x="580" y="255" text-anchor="middle" fill="white" font-size="10">Processor ticks (CLOCKS_PER_SEC)</text>
+
+  <text x="400" y="320" text-anchor="middle" font-size="11">Resolution: time_t (1s) → timeval (1μs) → timespec (1ns)</text>
+</svg>
+
+---
+
+## What is the Current Time?
+
+```c
+#include <time.h>
+#include <sys/time.h>
+#include <stdio.h>
+
+void show_all_time_formats() {
+    // Method 1: time() - Second precision
+    time_t now = time(NULL);
+    printf("Epoch seconds: %ld\n", now);
+
+    // Method 2: gettimeofday() - Microsecond precision
+    struct timeval tv;
+    gettimeofday(&tv, NULL);  // Second arg was timezone (obsolete)
+    printf("Seconds: %ld, Microseconds: %ld\n",
+           tv.tv_sec, tv.tv_usec);
+
+    // Method 3: clock_gettime() - Nanosecond precision (BEST)
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+    printf("Seconds: %ld, Nanoseconds: %ld\n",
+           ts.tv_sec, ts.tv_nsec);
+
+    // Convert to human readable
+    struct tm *tm_info = localtime(&now);
+    printf("Local time: %s", asctime(tm_info));
+
+    // Better formatting
+    char buffer[100];
+    strftime(buffer, sizeof(buffer),
+             "%Y-%m-%d %H:%M:%S %Z", tm_info);
+    printf("Formatted: %s\n", buffer);
+}
+```
+
+---
+
+## How Long Does Getting Time Take?
+
+```c
+#include <time.h>
+#include <stdio.h>
+
+void benchmark_time_functions() {
+    struct timespec start, end;
+    const int iterations = 10000000;
+
+    // Benchmark time()
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    for (int i = 0; i < iterations; i++) {
+        time_t t = time(NULL);
+        (void)t;  // Avoid optimization
+    }
+    clock_gettime(CLOCK_MONOTONIC, &end);
+    long ns = (end.tv_sec - start.tv_sec) * 1000000000L +
+              (end.tv_nsec - start.tv_nsec);
+    printf("time(): %ld ns/call\n", ns/iterations);
+
+    // Benchmark gettimeofday()
+    clock_gettime(CLOCK_MONOTONIC, &start);
+    for (int i = 0; i < iterations; i++) {
+        struct timeval tv;
+        gettimeofday(&tv, NULL);
+    }
+    clock_gettime(CLOCK_MONOTONIC, &end);
+    ns = (end.tv_sec - start.tv_sec) * 1000000000L +
+         (end.tv_nsec - start.tv_nsec);
+    printf("gettimeofday(): %ld ns/call\n", ns/iterations);
+
+    // Typical results:
+    // time(): ~15 ns (vDSO optimized)
+    // gettimeofday(): ~20 ns (vDSO optimized)
+    // clock_gettime(): ~25 ns (vDSO optimized)
+}
+```
+
+---
+
+## The Various Clocks Under the OS
+
+```c
+#include <time.h>
+
+void show_all_clocks() {
+    struct timespec ts;
+
+    // System-wide real time clock (wall clock)
+    clock_gettime(CLOCK_REALTIME, &ts);
+    printf("CLOCK_REALTIME: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Monotonic clock - never goes backward
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    printf("CLOCK_MONOTONIC: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Raw hardware time (not adjusted by NTP)
+    clock_gettime(CLOCK_MONOTONIC_RAW, &ts);
+    printf("CLOCK_MONOTONIC_RAW: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Time since boot (includes suspend time)
+    clock_gettime(CLOCK_BOOTTIME, &ts);
+    printf("CLOCK_BOOTTIME: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Process CPU time
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts);
+    printf("CLOCK_PROCESS_CPUTIME_ID: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Thread CPU time
+    clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts);
+    printf("CLOCK_THREAD_CPUTIME_ID: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    // Coarse versions - faster but less precise
+    clock_gettime(CLOCK_REALTIME_COARSE, &ts);
+    printf("CLOCK_REALTIME_COARSE: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+
+    clock_gettime(CLOCK_MONOTONIC_COARSE, &ts);
+    printf("CLOCK_MONOTONIC_COARSE: %ld.%09ld\n", ts.tv_sec, ts.tv_nsec);
+}
+```
+
+---
+
+## Clock Properties Comparison
+
+| Clock | Affected by NTP | Monotonic | Suspend | Resolution | Use Case |
+|-------|-----------------|-----------|---------|------------|----------|
+| **REALTIME** | Yes | No | Continues | ~1ns | Wall clock |
+| **REALTIME_COARSE** | Yes | No | Continues | ~1-4ms | Fast wall clock |
+| **MONOTONIC** | Rate only | Yes | Stops | ~1ns | Intervals |
+| **MONOTONIC_COARSE** | Rate only | Yes | Stops | ~1-4ms | Fast intervals |
+| **MONOTONIC_RAW** | No | Yes | Stops | ~1ns | Hardware time |
+| **BOOTTIME** | Rate only | Yes | Continues | ~1ns | Uptime |
+| **PROCESS_CPUTIME** | No | Yes | N/A | ~1ns | CPU profiling |
+| **THREAD_CPUTIME** | No | Yes | N/A | ~1ns | Thread profiling |
+
+---
+
+## Clock Resolution and Precision
+
+```c
+#include <time.h>
+#include <stdio.h>
+
+void check_clock_resolution() {
+    struct timespec res;
+
+    // Get resolution of various clocks
+    clock_getres(CLOCK_REALTIME, &res);
+    printf("CLOCK_REALTIME resolution: %ld ns\n", res.tv_nsec);
+
+    clock_getres(CLOCK_MONOTONIC, &res);
+    printf("CLOCK_MONOTONIC resolution: %ld ns\n", res.tv_nsec);
+
+    clock_getres(CLOCK_REALTIME_COARSE, &res);
+    printf("CLOCK_REALTIME_COARSE resolution: %ld ns\n", res.tv_nsec);
+
+    clock_getres(CLOCK_PROCESS_CPUTIME_ID, &res);
+    printf("CLOCK_PROCESS_CPUTIME_ID resolution: %ld ns\n", res.tv_nsec);
+
+    // Typical output:
+    // CLOCK_REALTIME resolution: 1 ns
+    // CLOCK_MONOTONIC resolution: 1 ns
+    // CLOCK_REALTIME_COARSE resolution: 4000000 ns (4ms)
+    // CLOCK_PROCESS_CPUTIME_ID resolution: 1 ns
+
+    // Note: Resolution != Accuracy!
+    // Resolution is smallest measurable unit
+    // Accuracy depends on hardware and NTP sync
+}
+```
+
+---
+
+## vDSO - Virtual Dynamic Shared Object
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Getting Time: System Call vs vDSO</text>
+
+  <rect x="50" y="60" width="300" height="150" fill="#E74C3C" stroke="#333" stroke-width="2"/>
+  <text x="200" y="85" text-anchor="middle" fill="white" font-size="12">Traditional System Call</text>
+  <rect x="70" y="100" width="260" height="30" fill="#C0392B"/>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-size="10">1. User space calls clock_gettime()</text>
+  <rect x="70" y="135" width="260" height="30" fill="#C0392B"/>
+  <text x="200" y="155" text-anchor="middle" fill="white" font-size="10">2. Context switch to kernel</text>
+  <rect x="70" y="170" width="260" height="30" fill="#C0392B"/>
+  <text x="200" y="190" text-anchor="middle" fill="white" font-size="10">3. Kernel reads time, returns</text>
+
+  <rect x="400" y="60" width="300" height="150" fill="#2ECC71" stroke="#333" stroke-width="2"/>
+  <text x="550" y="85" text-anchor="middle" fill="white" font-size="12">vDSO Optimization</text>
+  <rect x="420" y="100" width="260" height="30" fill="#27AE60"/>
+  <text x="550" y="120" text-anchor="middle" fill="white" font-size="10">1. Kernel maps time page to user</text>
+  <rect x="420" y="135" width="260" height="30" fill="#27AE60"/>
+  <text x="550" y="155" text-anchor="middle" fill="white" font-size="10">2. User reads directly from memory</text>
+  <rect x="420" y="170" width="260" height="30" fill="#27AE60"/>
+  <text x="550" y="190" text-anchor="middle" fill="white" font-size="10">3. No context switch!</text>
+
+  <text x="200" y="240" text-anchor="middle" font-size="11">Cost: ~200-300 ns</text>
+  <text x="550" y="240" text-anchor="middle" font-size="11">Cost: ~20-30 ns</text>
+
+  <text x="400" y="290" text-anchor="middle" font-size="11">Check vDSO: ldd /bin/ls | grep vdso</text>
+  <text x="400" y="310" text-anchor="middle" font-size="11">Functions: clock_gettime(), gettimeofday(), time(), getcpu()</text>
+</svg>
+
+---
+
+## Sleeping Precisely
+
+```c
+#include <time.h>
+#include <unistd.h>
+#include <errno.h>
+
+// Various sleep functions comparison
+void sleep_examples() {
+    // sleep() - Seconds only, can be interrupted
+    unsigned int unslept = sleep(5);
+    if (unslept > 0) {
+        printf("Sleep interrupted, %u seconds unslept\n", unslept);
+    }
+
+    // usleep() - Microseconds (OBSOLETE, don't use)
+    usleep(500000);  // 500ms - may sleep longer!
+
+    // nanosleep() - Nanoseconds, handles interrupts
+    struct timespec req = {.tv_sec = 1, .tv_nsec = 500000000};  // 1.5s
+    struct timespec rem;
+
+    while (nanosleep(&req, &rem) == -1) {
+        if (errno == EINTR) {
+            // Interrupted, sleep remaining time
+            req = rem;
+            continue;
+        }
+        perror("nanosleep");
+        break;
+    }
+
+    // clock_nanosleep() - Best option, can use any clock
+    struct timespec ts = {.tv_sec = 2, .tv_nsec = 0};
+    clock_nanosleep(CLOCK_MONOTONIC, 0, &ts, NULL);
+
+    // Absolute time sleep (wake at specific time)
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    ts.tv_sec += 5;  // Wake up 5 seconds from now
+    clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &ts, NULL);
+}
+```
+
+---
+
+## Working with the Right Clock
+
+```c
+// Example: Measuring elapsed time correctly
+
+// WRONG - Wall clock can jump!
+void measure_wrong() {
+    time_t start = time(NULL);
+    do_work();
+    time_t elapsed = time(NULL) - start;
+    // Problem: User or NTP can change clock!
+    // Could even be negative!
+}
+
+// RIGHT - Monotonic clock always increases
+void measure_right() {
+    struct timespec start, end;
+    clock_gettime(CLOCK_MONOTONIC, &start);
+
+    do_work();
+
+    clock_gettime(CLOCK_MONOTONIC, &end);
+
+    // Calculate elapsed time
+    long seconds = end.tv_sec - start.tv_sec;
+    long nanoseconds = end.tv_nsec - start.tv_nsec;
+    if (nanoseconds < 0) {
+        seconds--;
+        nanoseconds += 1000000000L;
+    }
+
+    double elapsed = seconds + nanoseconds / 1e9;
+    printf("Elapsed: %.9f seconds\n", elapsed);
+}
+```
+
+---
+
+## timerfd - File Descriptor for Timers
+
+```c
+#include <sys/timerfd.h>
+#include <unistd.h>
+
+// Timer that works with select/poll/epoll!
+void timerfd_example() {
+    // Create timer
+    int tfd = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
+    if (tfd == -1) {
+        perror("timerfd_create");
+        return;
+    }
+
+    // Configure timer: 2 second initial, 1 second interval
+    struct itimerspec its = {
+        .it_value = {.tv_sec = 2, .tv_nsec = 0},      // Initial
+        .it_interval = {.tv_sec = 1, .tv_nsec = 0}    // Repeat
+    };
+
+    if (timerfd_settime(tfd, 0, &its, NULL) == -1) {
+        perror("timerfd_settime");
+        return;
+    }
+
+    // Read timer expirations
+    uint64_t expirations;
+    ssize_t s;
+
+    printf("Timer starting...\n");
+    for (int i = 0; i < 5; i++) {
+        s = read(tfd, &expirations, sizeof(expirations));
+        if (s != sizeof(expirations)) {
+            perror("read");
+            break;
+        }
+        printf("Timer expired %llu times\n", expirations);
+    }
+
+    close(tfd);
+}
+```
+
+---
+
+## Using timerfd with epoll
+
+```c
+#include <sys/epoll.h>
+#include <sys/timerfd.h>
+
+void timerfd_epoll_example() {
+    // Create epoll instance
+    int epfd = epoll_create1(EPOLL_CLOEXEC);
+
+    // Create multiple timers
+    int tfd1 = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
+    int tfd2 = timerfd_create(CLOCK_MONOTONIC, TFD_CLOEXEC);
+
+    // Configure timers
+    struct itimerspec its1 = {
+        .it_value = {1, 0},
+        .it_interval = {1, 0}  // Every second
+    };
+    struct itimerspec its2 = {
+        .it_value = {2, 0},
+        .it_interval = {3, 0}  // Every 3 seconds
+    };
+
+    timerfd_settime(tfd1, 0, &its1, NULL);
+    timerfd_settime(tfd2, 0, &its2, NULL);
+
+    // Add to epoll
+    struct epoll_event ev;
+    ev.events = EPOLLIN;
+    ev.data.fd = tfd1;
+    epoll_ctl(epfd, EPOLL_CTL_ADD, tfd1, &ev);
+
+    ev.data.fd = tfd2;
+    epoll_ctl(epfd, EPOLL_CTL_ADD, tfd2, &ev);
+
+    // Event loop
+    struct epoll_event events[10];
+    while (1) {
+        int nfds = epoll_wait(epfd, events, 10, -1);
+        for (int i = 0; i < nfds; i++) {
+            uint64_t exp;
+            read(events[i].data.fd, &exp, sizeof(exp));
+            printf("Timer %d expired\n", events[i].data.fd);
+        }
+    }
+}
+```
+
+---
+
+## Measuring Very Short Functions
+
+```c
+// Using CPU timestamp counter for high precision
+static inline uint64_t rdtsc() {
+    unsigned int lo, hi;
+    __asm__ __volatile__ ("rdtsc" : "=a"(lo), "=d"(hi));
+    return ((uint64_t)hi << 32) | lo;
+}
+
+// More accurate with serialization
+static inline uint64_t rdtscp() {
+    unsigned int lo, hi, aux;
+    __asm__ __volatile__ ("rdtscp" : "=a"(lo), "=d"(hi), "=c"(aux));
+    // The 'aux' contains CPU ID - useful for affinity checking
+    return ((uint64_t)hi << 32) | lo;
+}
+
+void measure_short_operation() {
+    // Method 1: Using TSC directly (cycles)
+    uint64_t start = rdtscp();
+    __asm__ __volatile__ ("" ::: "memory");  // Compiler barrier
+
+    // Very short operation to measure
+    int sum = 0;
+    for (int i = 0; i < 100; i++) {
+        sum += i;
+    }
+
+    __asm__ __volatile__ ("" ::: "memory");  // Compiler barrier
+    uint64_t end = rdtscp();
+
+    printf("Operation took %lu CPU cycles\n", end - start);
+
+    // Convert to nanoseconds (need CPU frequency)
+    double cpu_ghz = 3.5;  // Example: 3.5 GHz
+    double nanoseconds = (end - start) / cpu_ghz;
+    printf("Approximately %.2f nanoseconds\n", nanoseconds);
+}
+```
+
+---
+
+## Benchmarking Best Practices
+
+```c
+#include <time.h>
+#include <stdint.h>
+#include <string.h>
+
+// Proper benchmarking function
+void benchmark_function(void (*func)(void), const char *name, int iterations) {
+    // Warm-up (fill caches, branch predictors)
+    for (int i = 0; i < 1000; i++) {
+        func();
+    }
+
+    // Measure multiple runs for statistics
+    double times[100];
+
+    for (int run = 0; run < 100; run++) {
+        struct timespec start, end;
+
+        clock_gettime(CLOCK_MONOTONIC, &start);
+
+        for (int i = 0; i < iterations; i++) {
+            func();
+            // Prevent compiler from optimizing out
+            __asm__ __volatile__ ("" ::: "memory");
+        }
+
+        clock_gettime(CLOCK_MONOTONIC, &end);
+
+        double elapsed = (end.tv_sec - start.tv_sec) +
+                        (end.tv_nsec - start.tv_nsec) / 1e9;
+        times[run] = elapsed / iterations;
+    }
+
+    // Calculate statistics
+    double min = times[0], max = times[0], sum = 0;
+    for (int i = 0; i < 100; i++) {
+        if (times[i] < min) min = times[i];
+        if (times[i] > max) max = times[i];
+        sum += times[i];
+    }
+    double avg = sum / 100;
+
+    printf("%s: avg=%.3f ns, min=%.3f ns, max=%.3f ns\n",
+           name, avg * 1e9, min * 1e9, max * 1e9);
+}
+```
+
+---
+
+## Process and Thread CPU Time
+
+```c
+#include <time.h>
+#include <sys/resource.h>
+#include <unistd.h>
+
+void measure_cpu_time() {
+    // Method 1: clock() - Process CPU time
+    clock_t start = clock();
+
+    // CPU intensive work
+    for (volatile int i = 0; i < 100000000; i++);
+
+    clock_t end = clock();
+    double cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    printf("CPU time used: %f seconds\n", cpu_time_used);
+
+    // Method 2: getrusage() - Detailed resource usage
+    struct rusage usage;
+    getrusage(RUSAGE_SELF, &usage);
+
+    printf("User CPU time: %ld.%06ld seconds\n",
+           usage.ru_utime.tv_sec, usage.ru_utime.tv_usec);
+    printf("System CPU time: %ld.%06ld seconds\n",
+           usage.ru_stime.tv_sec, usage.ru_stime.tv_usec);
+    printf("Max RSS: %ld KB\n", usage.ru_maxrss);
+
+    // Method 3: clock_gettime() with process/thread clocks
+    struct timespec ts;
+
+    // Process CPU time
+    clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &ts);
+    printf("Process CPU: %ld.%09ld seconds\n", ts.tv_sec, ts.tv_nsec);
+
+    // Current thread CPU time
+    clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts);
+    printf("Thread CPU: %ld.%09ld seconds\n", ts.tv_sec, ts.tv_nsec);
+
+    // Specific thread's CPU time
+    pthread_t thread;
+    clockid_t clock_id;
+    pthread_getcpuclockid(thread, &clock_id);
+    clock_gettime(clock_id, &ts);
+}
+```
+
+---
+
+## Timer Implementation Comparison
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Timer APIs in Linux</text>
+
+  <rect x="50" y="60" width="150" height="80" fill="#E74C3C" stroke="#333" stroke-width="2"/>
+  <text x="125" y="85" text-anchor="middle" fill="white" font-size="11">alarm()</text>
+  <text x="125" y="105" text-anchor="middle" fill="white" font-size="9">• One timer only</text>
+  <text x="125" y="120" text-anchor="middle" fill="white" font-size="9">• Second precision</text>
+  <text x="125" y="135" text-anchor="middle" fill="white" font-size="9">• SIGALRM</text>
+
+  <rect x="220" y="60" width="150" height="80" fill="#F39C12" stroke="#333" stroke-width="2"/>
+  <text x="295" y="85" text-anchor="middle" fill="black" font-size="11">setitimer()</text>
+  <text x="295" y="105" text-anchor="middle" font-size="9">• Three timers</text>
+  <text x="295" y="120" text-anchor="middle" font-size="9">• Microsecond</text>
+  <text x="295" y="135" text-anchor="middle" font-size="9">• Signals</text>
+
+  <rect x="390" y="60" width="150" height="80" fill="#3498DB" stroke="#333" stroke-width="2"/>
+  <text x="465" y="85" text-anchor="middle" fill="white" font-size="11">timer_create()</text>
+  <text x="465" y="105" text-anchor="middle" fill="white" font-size="9">• Multiple timers</text>
+  <text x="465" y="120" text-anchor="middle" fill="white" font-size="9">• Nanosecond</text>
+  <text x="465" y="135" text-anchor="middle" fill="white" font-size="9">• Flexible notify</text>
+
+  <rect x="560" y="60" width="150" height="80" fill="#2ECC71" stroke="#333" stroke-width="2"/>
+  <text x="635" y="85" text-anchor="middle" fill="white" font-size="11">timerfd_create()</text>
+  <text x="635" y="105" text-anchor="middle" fill="white" font-size="9">• File descriptor</text>
+  <text x="635" y="120" text-anchor="middle" fill="white" font-size="9">• epoll/select</text>
+  <text x="635" y="135" text-anchor="middle" fill="white" font-size="9">• Best for async</text>
+
+  <text x="400" y="180" text-anchor="middle" font-size="11">Evolution: Simple → Precise → Flexible → Integrated</text>
+</svg>
+
+---
+
+## POSIX Timers
+
+```c
+#include <signal.h>
+#include <time.h>
+
+void timer_handler(int sig, siginfo_t *si, void *uc) {
+    timer_t *tidp = si->si_value.sival_ptr;
+    printf("Timer %p expired\n", tidp);
+}
+
+void posix_timer_example() {
+    timer_t timerid;
+    struct sigevent sev;
+    struct itimerspec its;
+    struct sigaction sa;
+
+    // Setup signal handler
+    sa.sa_flags = SA_SIGINFO;
+    sa.sa_sigaction = timer_handler;
+    sigemptyset(&sa.sa_mask);
+    sigaction(SIGUSR1, &sa, NULL);
+
+    // Create timer
+    sev.sigev_notify = SIGEV_SIGNAL;
+    sev.sigev_signo = SIGUSR1;
+    sev.sigev_value.sival_ptr = &timerid;
+
+    if (timer_create(CLOCK_REALTIME, &sev, &timerid) == -1) {
+        perror("timer_create");
+        return;
+    }
+
+    // Start timer: 2 second initial, 1 second repeat
+    its.it_value.tv_sec = 2;
+    its.it_value.tv_nsec = 0;
+    its.it_interval.tv_sec = 1;
+    its.it_interval.tv_nsec = 0;
+
+    if (timer_settime(timerid, 0, &its, NULL) == -1) {
+        perror("timer_settime");
+        return;
+    }
+
+    // Wait for timer
+    sleep(5);
+
+    // Delete timer
+    timer_delete(timerid);
+}
+```
+
+---
+
+## Calendar Time Functions
+
+```c
+#include <time.h>
+#include <stdio.h>
+
+void calendar_time_examples() {
+    time_t rawtime;
+    struct tm *timeinfo;
+    struct tm result;
+    char buffer[80];
+
+    // Get current time
+    time(&rawtime);
+
+    // Convert to local time (NOT thread-safe!)
+    timeinfo = localtime(&rawtime);
+    printf("Local time: %s", asctime(timeinfo));
+
+    // Thread-safe version
+    localtime_r(&rawtime, &result);
+
+    // Convert to UTC
+    timeinfo = gmtime(&rawtime);
+    printf("UTC time: %s", asctime(timeinfo));
+
+    // Thread-safe version
+    gmtime_r(&rawtime, &result);
+
+    // Format time string
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", &result);
+    printf("Formatted: %s\n", buffer);
+
+    // Parse time string
+    struct tm parsed;
+    strptime("2024-12-25 15:30:00", "%Y-%m-%d %H:%M:%S", &parsed);
+
+    // Convert struct tm back to time_t
+    time_guessed = mktime(&parsed);
+
+    // Manipulate time
+    result.tm_hour += 24;  // Add 24 hours
+    mktime(&result);  // Normalize and update tm_wday, tm_yday
+
+    // Get day of week, day of year
+    printf("Day of week: %d (0=Sunday)\n", result.tm_wday);
+    printf("Day of year: %d\n", result.tm_yday);
+}
+```
+
+---
+
+## Timezone Handling
+
+```c
+#include <time.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+void timezone_examples() {
+    // Set timezone environment variable
+    setenv("TZ", "America/New_York", 1);
+    tzset();  // Apply timezone change
+
+    time_t now = time(NULL);
+    printf("New York: %s", ctime(&now));
+
+    // Change to different timezone
+    setenv("TZ", "Europe/London", 1);
+    tzset();
+    printf("London: %s", ctime(&now));
+
+    setenv("TZ", "Asia/Tokyo", 1);
+    tzset();
+    printf("Tokyo: %s", ctime(&now));
+
+    // Get timezone information
+    extern char *tzname[2];  // Standard and DST names
+    extern long timezone;     // Seconds west of UTC
+    extern int daylight;      // DST flag
+
+    printf("Timezone names: %s / %s\n", tzname[0], tzname[1]);
+    printf("UTC offset: %ld seconds\n", timezone);
+    printf("DST active: %s\n", daylight ? "yes" : "no");
+
+    // Working with specific timezone without changing global
+    time_t utc_time = time(NULL);
+    struct tm *tokyo_time;
+
+    setenv("TZ", "Asia/Tokyo", 1);
+    tzset();
+    tokyo_time = localtime(&utc_time);
+
+    char buffer[100];
+    strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S %Z", tokyo_time);
+    printf("Tokyo time: %s\n", buffer);
+}
+```
+
+---
+
+## Monotonic vs Real Time Clocks
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Clock Behavior with NTP Adjustment</text>
+
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="320" x2="100" y2="80" stroke="#333" stroke-width="2"/>
+
+  <text x="50" y="200" font-size="11" transform="rotate(-90, 50, 200)">Time Value</text>
+  <text x="400" y="350" text-anchor="middle" font-size="11">Real Time →</text>
+
+  <!-- CLOCK_REALTIME line with jump -->
+  <path d="M 100 280 L 250 200 L 250 240 L 400 160 L 550 80"
+        stroke="#E74C3C" stroke-width="3" fill="none"/>
+  <text x="300" y="180" fill="#E74C3C" font-size="11">CLOCK_REALTIME</text>
+  <text x="250" y="260" fill="#E74C3C" font-size="9">← NTP adjustment</text>
+
+  <!-- CLOCK_MONOTONIC straight line -->
+  <path d="M 100 280 L 550 80"
+        stroke="#2ECC71" stroke-width="3" fill="none"/>
+  <text x="450" y="140" fill="#2ECC71" font-size="11">CLOCK_MONOTONIC</text>
+
+  <text x="150" y="100" font-size="9">10:00:00</text>
+  <text sympathique x="550" y="100" font-size="9">10:00:05</text>
+
+  <rect x="150" y="360" width="500" height="30" fill="#ECF0F1" stroke="#333" stroke-width="1"/>
+  <text x="400" y="380" text-anchor="middle" font-size="10">REALTIME: Can jump backward/forward (NTP, user changes)</text>
+</svg>
+
+---
+
+## Deadline and Timeout Management
+
+```c
+#include <time.h>
+#include <errno.h>
+
+// Calculate deadline from now
+struct timespec calculate_deadline(int timeout_ms) {
+    struct timespec deadline;
+    clock_gettime(CLOCK_MONOTONIC, &deadline);
+
+    deadline.tv_sec += timeout_ms / 1000;
+    deadline.tv_nsec += (timeout_ms % 1000) * 1000000L;
+
+    // Normalize nanoseconds
+    if (deadline.tv_nsec >= 1000000000L) {
+        deadline.tv_sec++;
+        deadline.tv_nsec -= 1000000000L;
+    }
+
+    return deadline;
+}
+
+// Check if deadline passed
+int deadline_expired(const struct timespec *deadline) {
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC, &now);
+
+    return (now.tv_sec > deadline->tv_sec) ||
+           (now.tv_sec == deadline->tv_sec &&
+            now.tv_nsec >= deadline->tv_nsec);
+}
+
+// Operation with timeout
+int do_operation_with_timeout(int timeout_ms) {
+    struct timespec deadline = calculate_deadline(timeout_ms);
+
+    while (!deadline_expired(&deadline)) {
+        // Try operation
+        if (try_operation() == SUCCESS) {
+            return 0;  // Success
+        }
+
+        // Calculate remaining time
+        struct timespec now, remaining;
+        clock_gettime(CLOCK_MONOTONIC, &now);
+
+        remaining.tv_sec = deadline.tv_sec - now.tv_sec;
+        remaining.tv_nsec = deadline.tv_nsec - now.tv_nsec;
+        if (remaining.tv_nsec < 0) {
+            remaining.tv_sec--;
+            remaining.tv_nsec += 1000000000L;
+        }
+
+        // Sleep a bit before retry (max 10ms)
+        struct timespec sleep_time = {0, 10000000};  // 10ms
+        if (remaining.tv_sec == 0 && remaining.tv_nsec < 10000000) {
+            sleep_time = remaining;
+        }
+        nanosleep(&sleep_time, NULL);
+    }
+
+    return -ETIMEDOUT;  // Timeout
+}
+```
+
+---
+
+## Rate Limiting Implementation
+
+```c
+#include <time.h>
+#include <stdbool.h>
+
+// Token bucket rate limiter
+typedef struct {
+    double tokens;
+    double max_tokens;
+    double tokens_per_second;
+    struct timespec last_update;
+} RateLimiter;
+
+void rate_limiter_init(RateLimiter *rl, double rate, double burst) {
+    rl->tokens = burst;
+    rl->max_tokens = burst;
+    rl->tokens_per_second = rate;
+    clock_gettime(CLOCK_MONOTONIC, &rl->last_update);
+}
+
+bool rate_limiter_allow(RateLimiter *rl, double tokens_needed) {
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC, &now);
+
+    // Calculate elapsed time since last update
+    double elapsed = (now.tv_sec - rl->last_update.tv_sec) +
+                    (now.tv_nsec - rl->last_update.tv_nsec) / 1e9;
+
+    // Add tokens based on elapsed time
+    rl->tokens += elapsed * rl->tokens_per_second;
+    if (rl->tokens > rl->max_tokens) {
+        rl->tokens = rl->max_tokens;
+    }
+
+    rl->last_update = now;
+
+    // Check if we have enough tokens
+    if (rl->tokens >= tokens_needed) {
+        rl->tokens -= tokens_needed;
+        return true;
+    }
+
+    return false;
+}
+
+// Usage example
+void rate_limited_operation() {
+    RateLimiter rl;
+    rate_limiter_init(&rl, 10.0, 20.0);  // 10 req/sec, burst of 20
+
+    for (int i = 0; i < 100; i++) {
+        if (rate_limiter_allow(&rl, 1.0)) {
+            printf("Request %d allowed\n", i);
+            do_operation();
+        } else {
+            printf("Request %d rate limited\n", i);
+            usleep(10000);  // Wait a bit
+        }
+    }
+}
+```
+
+---
+
+## High-Resolution Profiling
+
+```c
+#include <time.h>
+#include <stdio.h>
+#include <string.h>
+
+typedef struct {
+    const char *name;
+    struct timespec total_time;
+    struct timespec min_time;
+    struct timespec max_time;
+    long count;
+} ProfileEntry;
+
+#define MAX_PROFILES 100
+ProfileEntry profiles[MAX_PROFILES];
+int profile_count = 0;
+
+typedef struct {
+    int index;
+    struct timespec start;
+} ProfileHandle;
+
+ProfileHandle profile_begin(const char *name) {
+    ProfileHandle handle;
+
+    // Find or create entry
+    handle.index = -1;
+    for (int i = 0; i < profile_count; i++) {
+        if (strcmp(profiles[i].name, name) == 0) {
+            handle.index = i;
+            break;
+        }
+    }
+
+    if (handle.index == -1 && profile_count < MAX_PROFILES) {
+        handle.index = profile_count++;
+        profiles[handle.index].name = name;
+        profiles[handle.index].total_time = (struct timespec){0, 0};
+        profiles[handle.index].min_time = (struct timespec){999999, 0};
+        profiles[handle.index].max_time = (struct timespec){0, 0};
+        profiles[handle.index].count = 0;
+    }
+
+    clock_gettime(CLOCK_MONOTONIC, &handle.start);
+    return handle;
+}
+
+void profile_end(ProfileHandle handle) {
+    if (handle.index < 0) return;
+
+    struct timespec end;
+    clock_gettime(CLOCK_MONOTONIC, &end);
+
+    // Calculate elapsed
+    struct timespec elapsed;
+    elapsed.tv_sec = end.tv_sec - handle.start.tv_sec;
+    elapsed.tv_nsec = end.tv_nsec - handle.start.tv_nsec;
+    if (elapsed.tv_nsec < 0) {
+        elapsed.tv_sec--;
+        elapsed.tv_nsec += 1000000000L;
+    }
+
+    ProfileEntry *p = &profiles[handle.index];
+
+    // Update statistics
+    p->total_time.tv_sec += elapsed.tv_sec;
+    p->total_time.tv_nsec += elapsed.tv_nsec;
+    if (p->total_time.tv_nsec >= 1000000000L) {
+        p->total_time.tv_sec++;
+        p->total_time.tv_nsec -= 1000000000L;
+    }
+
+    // Update min/max
+    if (elapsed.tv_sec < p->min_time.tv_sec ||
+        (elapsed.tv_sec == p->min_time.tv_sec &&
+         elapsed.tv_nsec < p->min_time.tv_nsec)) {
+        p->min_time = elapsed;
+    }
+
+    if (elapsed.tv_sec > p->max_time.tv_sec ||
+        (elapsed.tv_sec == p->max_time.tv_sec &&
+         elapsed.tv_nsec > p->max_time.tv_nsec)) {
+        p->max_time = elapsed;
+    }
+
+    p->count++;
+}
+
+void profile_report() {
+    printf("\nProfile Report:\n");
+    printf("%-30s %10s %12s %12s %12s\n",
+           "Function", "Calls", "Total (ms)", "Avg (μs)", "Min/Max (μs)");
+    printf("%s\n", "—————————————————————————————————————————————————————————————————————————");
+
+    for (int i = 0; i < profile_count; i++) {
+        ProfileEntry *p = &profiles[i];
+        double total_ms = p->total_time.tv_sec * 1000.0 +
+                         p->total_time.tv_nsec / 1e6;
+        double avg_us = (p->total_time.tv_sec * 1e6 +
+                        p->total_time.tv_nsec / 1e3) / p->count;
+        double min_us = p->min_time.tv_sec * 1e6 +
+                       p->min_time.tv_nsec / 1e3;
+        double max_us = p->max_time.tv_sec * 1e6 +
+                       p->max_time.tv_nsec / 1e3;
+
+        printf("%-30s %10ld %12.2f %12.2f %6.1f/%.1f\n",
+               p->name, p->count, total_ms, avg_us, min_us, max_us);
+    }
+}
+```
+
+---
+
+## Leap Seconds and Time Discontinuities
+
+```c
+#include <time.h>
+#include <sys/timex.h>
+
+void check_time_status() {
+    struct timex tx;
+    memset(&tx, 0, sizeof(tx));
+
+    int status = adjtimex(&tx);
+
+    printf("Clock status: ");
+    switch (status) {
+        case TIME_OK:
+            printf("Synchronized, no leap second\n");
+            break;
+        case TIME_INS:
+            printf("Leap second will be inserted\n");
+            break;
+        case TIME_DEL:
+            printf("Leap second will be deleted\n");
+            break;
+        case TIME_OOP:
+            printf("Leap second in progress\n");
+            break;
+        case TIME_WAIT:
+            printf("Leap second occurred\n");
+            break;
+        case TIME_ERROR:
+            printf("Clock not synchronized\n");
+            break;
+    }
+
+    printf("Time offset: %ld μs\n", tx.offset);
+    printf("Frequency offset: %ld ppm\n", tx.freq / 65536);
+    printf("Maximum error: %ld μs\n", tx.maxerror);
+    printf("Estimated error: %ld μs\n", tx.esterror);
+
+    // Handle leap second in critical code
+    if (status == TIME_INS || status == TIME_DEL) {
+        printf("Warning: Leap second approaching!\n");
+        printf("Use CLOCK_MONOTONIC for intervals\n");
+    }
+}
+
+// Safe time comparison across leap seconds
+int safe_time_compare(time_t t1, time_t t2) {
+    // During leap second, same second can occur twice
+    // 23:59:59 -> 23:59:60 -> 00:00:00
+
+    // Check if near midnight UTC on June 30 or Dec 31
+    struct tm *tm = gmtime(&t1);
+    int risky = ((tm->tm_mon == 5 && tm->tm_mday == 30) ||
+                 (tm->tm_mon == 11 && tm->tm_mday == 31)) &&
+                tm->tm_hour == 23 && tm->tm_min == 59;
+
+    if (risky) {
+        // Use monotonic clock for intervals instead
+        return -2;  // Indicate uncertainty
+    }
+
+    return (t1 < t2) ? -1 : (t1 > t2) ? 1 : 0;
+}
+```
+
+---
+
+## Y2038 Problem and 64-bit Time
+
+```c
+#include <time.h>
+#include <stdio.h>
+#include <limits.h>
+
+void test_y2038_problem() {
+    // Check size of time_t
+    printf("sizeof(time_t) = %zu bytes\n", sizeof(time_t));
+    printf("TIME_T_MAX = %ld\n", (long)((time_t)-1 > 0 ?
+           (time_t)((1UL << (sizeof(time_t) * 8 - 1)) - 1) :
+           (time_t)-1));
+
+    // 32-bit time_t overflow point
+    time_t overflow_32bit = 2147483647;  // 2^31 - 1
+    printf("32-bit overflow: %s", ctime(&overflow_32bit));
+    // Output: Tue Jan 19 03:14:07 2038
+
+    // Next second causes overflow on 32-bit systems
+    overflow_32bit++;
+    if (sizeof(time_t) == 4) {
+        printf("After overflow: %ld (negative!)\n", (long)overflow_32bit);
+    }
+
+    // Modern 64-bit time_t
+    if (sizeof(time_t) == 8) {
+        time_t far_future = 253402300799;  // 9999-12-31 23:59:59
+        printf("64-bit can handle: %s", ctime(&far_future));
+
+        // Maximum 64-bit time
+        time_t max_time = 9223372036854775807LL;  // 2^63 - 1
+        // This is about 292 billion years in the future!
+    }
+
+    // Compile with -D_TIME_BITS=64 -D_FILE_OFFSET_BITS=64
+    // for 64-bit time on 32-bit systems
+}
+
+// Future-proof time handling
+typedef int64_t time64_t;
+
+time64_t get_time64() {
+    struct timespec ts;
+    clock_gettime(CLOCK_REALTIME, &ts);
+    return (time64_t)ts.tv_sec;
+}
+```
+
+---
+
+## Thread-Safe Time Functions
+
+```c
+#include <time.h>
+#include <pthread.h>
+
+void thread_safe_time_operations() {
+    time_t rawtime;
+    time(&rawtime);
+
+    // NOT thread-safe (use static buffer)
+    // struct tm *info = localtime(&rawtime);  // BAD!
+    // char *str = asctime(info);              // BAD!
+    // char *str2 = ctime(&rawtime);           // BAD!
+
+    // Thread-safe alternatives
+    struct tm result;
+    localtime_r(&rawtime, &result);  // GOOD
+
+    char buffer[26];
+    asctime_r(&result, buffer);      // GOOD
+    ctime_r(&rawtime, buffer);       // GOOD
+
+    // Thread-specific CPU time
+    struct timespec thread_time;
+    clock_gettime(CLOCK_THREAD_CPUTIME_ID, &thread_time);
+    printf("Thread CPU time: %ld.%09ld\n",
+           thread_time.tv_sec, thread_time.tv_nsec);
+
+    // Get another thread's CPU time
+    pthread_t other_thread;
+    clockid_t clock_id;
+    if (pthread_getcpuclockid(other_thread, &clock_id) == 0) {
+        clock_gettime(clock_id, &thread_time);
+    }
+}
+
+// Thread-safe time formatting
+void format_time_threadsafe(time_t t, char *buf, size_t bufsize) {
+    struct tm tm_result;
+    localtime_r(&t, &tm_result);
+    strftime(buf, bufsize, "%Y-%m-%d %H:%M:%S", &tm_result);
+}
+```
+
+---
+
+## Common Time Bugs and Solutions
+
+```c
+// BUG 1: Using wall clock for intervals
+void bug1_wrong() {
+    time_t start = time(NULL);
+    do_work();
+    time_t elapsed = time(NULL) - start;  // Can be negative if clock changed!
+}
+
+void bug1_correct() {
+    struct timespec start, end;
+    clock_gettime(CLOCK_MONOTONIC, &start);  // Use monotonic!
+    do_work();
+    clock_gettime(CLOCK_MONOTONIC, &end);
+    // Calculate elapsed correctly
+}
+
+// BUG 2: Integer overflow with nanoseconds
+void bug2_wrong() {
+    int elapsed_ns = end_ns - start_ns;  // Overflows after 2.1 seconds!
+}
+
+void bug2_correct() {
+    int64_t elapsed_ns = end_ns - start_ns;  // Use 64-bit
+}
+
+// BUG 3: Not handling EINTR in sleep
+void bug3_wrong() {
+    struct timespec req = {5, 0};
+    nanosleep(&req, NULL);  // Can return early on signal!
+}
+
+void bug3_correct() {
+    struct timespec req = {5, 0}, rem;
+    while (nanosleep(&req, &rem) == -1 && errno == EINTR) {
+        req = rem;  // Sleep remaining time
+    }
+}
+
+// BUG 4: Comparing timespec incorrectly
+int bug4_wrong(struct timespec *a, struct timespec *b) {
+    return a->tv_sec == b->tv_sec && a->tv_nsec == b->tv_nsec;  // Only exact match!
+}
+
+int timespec_cmp(struct timespec *a, struct timespec *b) {
+    if (a->tv_sec < b->tv_sec) return -1;
+    if (a->tv_sec > b->tv_sec) return 1;
+    if (a->tv_nsec < b->tv_nsec) return -1;
+    if (a->tv_nsec > b->tv_nsec) return 1;
+    return 0;
+}
+```
+
+---
+
+## Performance Considerations
+
+```c
+// Optimize time-related code
+
+// 1. Cache time for multiple uses
+void process_events(Event *events, int count) {
+    struct timespec now;
+    clock_gettime(CLOCK_MONOTONIC, &now);  // Get once
+
+    for (int i = 0; i < count; i++) {
+        if (event_expired(&events[i], &now)) {  // Reuse
+            handle_event(&events[i]);
+        }
+    }
+}
+
+// 2. Use coarse clocks when appropriate
+void log_message(const char *msg) {
+    struct timespec ts;
+    // Don't need nanosecond precision for logs
+    clock_gettime(CLOCK_REALTIME_COARSE, &ts);  // ~4ms precision, faster
+    printf("[%ld.%03ld] %s\n", ts.tv_sec, ts.tv_nsec / 1000000, msg);
+}
+
+// 3. Batch timer operations
+typedef struct {
+    int nfds;
+    int timerfd[MAX_TIMERS];
+    struct timespec next_expiry[MAX_TIMERS];
+} TimerManager;
+
+// 4. Use appropriate precision
+void appropriate_precision() {
+    // Second precision
+    time_t t = time(NULL);  // Fastest
+
+    // Millisecond precision
+    struct timeval tv;
+    gettimeofday(&tv, NULL);  // Fast (vDSO)
+
+    // Nanosecond precision
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);  // Still fast (vDSO)
+
+    // Only use what you need!
+}
+```
+
+---
+
+## Real-Time System Considerations
+
+```c
+#include <sched.h>
+#include <time.h>
+
+void realtime_timing() {
+    // Set real-time priority
+    struct sched_param param = {.sched_priority = 50};
+    sched_setscheduler(0, SCHED_FIFO, &param);
+
+    // Use CLOCK_MONOTONIC for deterministic behavior
+    struct timespec next_run, period = {0, 10000000};  // 10ms
+    clock_gettime(CLOCK_MONOTONIC, &next_run);
+
+    while (1) {
+        // Do real-time work
+        do_realtime_work();
+
+        // Calculate next run time
+        next_run.tv_nsec += period.tv_nsec;
+        if (next_run.tv_nsec >= 1000000000L) {
+            next_run.tv_sec++;
+            next_run.tv_nsec -= 1000000000L;
+        }
+
+        // Sleep until next period
+        clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next_run, NULL);
+    }
+}
+
+// Measure jitter
+void measure_jitter() {
+    struct timespec times[1000];
+    struct timespec period = {0, 1000000};  // 1ms
+
+    for (int i = 0; i < 1000; i++) {
+        clock_gettime(CLOCK_MONOTONIC, &times[i]);
+        clock_nanosleep(CLOCK_MONOTONIC, 0, &period, NULL);
+    }
+
+    // Calculate jitter
+    long min_delta = LONG_MAX, max_delta = 0;
+    for (int i = 1; i < 1000; i++) {
+        long delta = (times[i].tv_sec - times[i-1].tv_sec) * 1000000000L +
+                    (times[i].tv_nsec - times[i-1].tv_nsec);
+        if (delta < min_delta) min_delta = delta;
+        if (delta > max_delta) max_delta = delta;
+    }
+
+    printf("Jitter: %ld ns\n", max_delta - min_delta);
+}
+```
+
+---
+
+## Debugging Time Issues
+
+```bash
+# System time information
+timedatectl status
+date
+hwclock --show
+
+# Check NTP synchronization
+ntpq -p
+chronyc sources
+systemctl status ntp
+
+# Monitor system time changes
+dmesg | grep -i clock
+journalctl -u systemd-timesyncd
+
+# Check process time usage
+ps -o pid,etime,time,pcpu -p PID
+cat /proc/PID/stat  # Fields 14-17 are times
+
+# Trace time-related system calls
+strace -e clock_gettime,gettimeofday,nanosleep ./program
+strace -T ./program  # Show time spent in each syscall
+
+# Profile with time
+time ./program
+/usr/bin/time -v ./program  # Detailed statistics
+
+# Check timer interrupts
+cat /proc/interrupts | grep -i timer
+cat /proc/timer_list
+
+# Monitor clock source
+cat /sys/devices/system/clocksource/clocksource0/current_clocksource
+cat /sys/devices/system/clocksource/clocksource0/available_clocksource
+```
+
+---
+
+## Best Practices Summary
+
+1. **Use CLOCK_MONOTONIC** for measuring intervals
+
+1. **Use CLOCK_REALTIME** only for wall clock display
+
+1. **Handle EINTR** in sleep/wait functions
+
+1. **Use thread-safe** _r versions of time functions
+
+1. **Cache time** when using multiple times
+
+1. **Use appropriate precision** (don't over-engineer)
+
+1. **Test for Y2038** on 32-bit systems
+
+1. **Consider timerfd** for event-driven programs
+
+1. **Profile hot paths** with high-resolution timers
+
+1. **Document clock choice** in code comments
+
+---
+
+## Summary
+
+## Key Takeaways:
+
+- **Multiple clocks** serve different purposes
+- **vDSO** makes time access fast (~25ns)
+- **Monotonic clocks** prevent time-travel bugs
+- **timerfd** integrates timers with event loops
+- **Resolution ≠ Accuracy** - hardware matters
+- **Thread-safety** requires _r functions
+- **Y2038** affects 32-bit systems
+- **Measure correctly** for reliable benchmarks
+
+Master time = Build robust, efficient systems!
