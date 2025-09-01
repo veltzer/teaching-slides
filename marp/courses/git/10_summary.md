@@ -125,9 +125,3 @@
 - Continuous learning
 - Professional growth
 - Future opportunities
----
-## Course Completion
-- Core competencies
-- Practical skills
-- Professional readiness
-- Ongoing development
