@@ -207,7 +207,7 @@ git merge-base main feature
 # Base → Ours → Theirs → Action
 # Same → Same → Same  → No change
 # X    → Y    → X     → Take Y (ours changed)
-# X    → X    → Y     → Take Y (theirs changed)  
+# X    → X    → Y     → Take Y (theirs changed)
 # X    → Y    → Z     → CONFLICT!
 # X    → Y    → Y     → Take Y (same change)
 
@@ -398,7 +398,7 @@ git show :1:file.txt  # Base
 # See our version
 git show :2:file.txt  # Ours
 
-# See their version  
+# See their version
 git show :3:file.txt  # Theirs
 
 # List conflicted files
@@ -407,3 +407,395 @@ git diff --name-only --diff-filter=U
 # Check if conflicts remain
 git diff --check
 ```
+
+## Using Merge Tools
+
+External tools can simplify conflict resolution:
+
+```bash
+# Configure a merge tool
+git config --global merge.tool vimdiff
+git config --global merge.tool meld
+git config --global merge.tool kdiff3
+
+# Use the configured tool
+git mergetool
+```
+
+**Popular merge tools:**
+- `vimdiff` - Terminal-based, comes with vim
+- `meld` - Visual diff tool for Linux
+- `kdiff3` - Cross-platform GUI tool
+- VS Code - Modern editor with excellent diff support
+
+---
+
+## Git Fetch vs Git Pull
+
+Understanding the difference between `fetch` and `pull`:
+
+**`git fetch`:**
+- Downloads commits from remote
+- Updates remote tracking branches
+- Does NOT modify your working directory
+- Safe operation, never causes conflicts
+
+**`git pull`:**
+- Combines `git fetch` + `git merge`
+- Downloads AND integrates changes
+- Can cause merge conflicts
+- Modifies your working directory
+
+```bash
+# Safer approach
+git fetch origin
+git merge origin/main
+
+# Equivalent to
+git pull origin main
+```
+
+---
+
+## Pull with Rebase
+
+Use `--rebase` to maintain linear history:
+
+```bash
+# Instead of merge, rebase your changes
+git pull --rebase origin main
+
+# Configure as default
+git config --global pull.rebase true
+```
+
+**Benefits:**
+- Cleaner, linear history
+- Easier to follow project timeline
+- Reduces "merge commits" clutter
+- Better for code reviews
+
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+  <text x="150" y="30" text-anchor="middle" font-size="14" font-weight="bold">git pull (merge)</text>
+  <text x="450" y="30" text-anchor="middle" font-size="14" font-weight="bold">git pull --rebase</text>
+
+  <!-- Merge example -->
+  <circle cx="50" cy="70" r="8" fill="#3498db"/>
+  <circle cx="120" cy="70" r="8" fill="#e74c3c"/>
+  <circle cx="190" cy="70" r="8" fill="#2ecc71"/>
+  <circle cx="120" cy="120" r="8" fill="#f39c12"/>
+  <circle cx="190" cy="120" r="8" fill="#9b59b6"/>
+  <circle cx="260" cy="95" r="8" fill="#34495e"/>
+
+  <!-- Rebase example -->
+  <circle cx="350" cy="70" r="8" fill="#3498db"/>
+  <circle cx="420" cy="70" r="8" fill="#e74c3c"/>
+  <circle cx="490" cy="70" r="8" fill="#f39c12"/>
+  <circle cx="560" cy="70" r="8" fill="#9b59b6"/>
+  <circle cx="560" cy="120" r="8" fill="#2ecc71"/>
+
+  <line x1="58" y1="70" x2="112" y2="70" stroke="#333"/>
+  <line x1="128" y1="70" x2="182" y2="70" stroke="#333"/>
+  <line x1="128" y1="70" x2="112" y2="112" stroke="#333"/>
+  <line x1="128" y1="120" x2="182" y2="120" stroke="#333"/>
+  <line x1="198" y1="70" x2="245" y2="88" stroke="#333"/>
+  <line x1="198" y1="120" x2="245" y2="102" stroke="#333"/>
+
+  <line x1="358" y1="70" x2="412" y2="70" stroke="#333"/>
+  <line x1="428" y1="70" x2="482" y2="70" stroke="#333"/>
+  <line x1="498" y1="70" x2="552" y2="70" stroke="#333"/>
+  <line x1="560" y1="78" x2="560" y2="112" stroke="#333"/>
+</svg>
+
+---
+
+## Cherry Picking During Merge
+
+Sometimes you need specific commits from another branch:
+
+```bash
+# Pick a specific commit
+git cherry-pick <commit-hash>
+
+# Pick multiple commits
+git cherry-pick <commit1> <commit2>
+
+# Pick a range of commits
+git cherry-pick <start-commit>..<end-commit>
+```
+
+**Use cases:**
+- Apply hotfixes to multiple branches
+- Select features from experimental branches
+- Backport changes to older versions
+- Fix merge mistakes
+
+---
+
+## Merge Commit Messages
+
+Customize merge commit messages for better history:
+
+```bash
+# Custom merge message
+git merge feature-branch -m "Merge feature: Add user authentication"
+
+# Edit merge message interactively
+git merge feature-branch --edit
+
+# No commit message (fast-forward only)
+git merge feature-branch --ff-only
+```
+
+**Best practices:**
+- Describe what the merge accomplishes
+- Reference ticket/issue numbers
+- Mention breaking changes
+- Keep it concise but informative
+
+---
+
+## Aborting Merges
+
+When merges go wrong, you can abort:
+
+```bash
+# Abort current merge
+git merge --abort
+
+# Reset to pre-merge state
+git reset --hard HEAD
+
+# Check merge status
+git status
+```
+
+**When to abort:**
+- Too many conflicts to resolve
+- Wrong branch merged
+- Merge was started accidentally
+- Need to prepare better strategy
+
+---
+
+## Merge vs Rebase Decision Tree
+
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="300" y="20" width="100" height="40" fill="#3498db" rx="5"/>
+  <text x="350" y="45" text-anchor="middle" fill="white" font-size="12">Start Merge?</text>
+
+  <rect x="150" y="100" width="120" height="40" fill="#e74c3c" rx="5"/>
+  <text x="210" y="115" text-anchor="middle" fill="white" font-size="10">Public Branch?</text>
+  <text x="210" y="130" text-anchor="middle" fill="white" font-size="10">(Shared)</text>
+
+  <rect x="430" y="100" width="120" height="40" fill="#2ecc71" rx="5"/>
+  <text x="490" y="115" text-anchor="middle" fill="white" font-size="10">Private Branch?</text>
+  <text x="490" y="130" text-anchor="middle" fill="white" font-size="10">(Local Only)</text>
+
+  <rect x="80" y="200" width="80" height="30" fill="#f39c12" rx="5"/>
+  <text x="120" y="220" text-anchor="middle" fill="white" font-size="11">USE MERGE</text>
+
+  <rect x="520" y="200" width="80" height="30" fill="#9b59b6" rx="5"/>
+  <text x="560" y="220" text-anchor="middle" fill="white" font-size="11">USE REBASE</text>
+
+  <line x1="320" y1="60" x2="240" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="380" y1="60" x2="460" y2="100" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="140" x2="130" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="520" y1="140" x2="570" y2="200" stroke="#333" stroke-width="2"/>
+
+  <text x="280" y="85" font-size="10">Yes</text>
+  <text x="420" y="85" font-size="10">No</text>
+</svg>
+
+---
+
+## Understanding Merge Base
+
+The merge base is the common ancestor of branches being merged:
+
+```bash
+# Find merge base between branches
+git merge-base main feature-branch
+
+# Show merge base commit details
+git show $(git merge-base main feature-branch)
+
+# Find multiple merge bases (octopus merges)
+git merge-base --all main feature-branch
+```
+
+**Why it matters:**
+- Determines what changes to compare
+- Affects conflict resolution
+- Influences merge strategy selection
+- Critical for understanding merge behavior
+
+---
+
+## Octopus Merges
+
+Merging more than two branches simultaneously:
+
+```bash
+# Merge multiple branches at once
+git merge branch1 branch2 branch3
+
+# Only works if no conflicts exist
+# Creates single merge commit with multiple parents
+```
+
+**Limitations:**
+- No conflict resolution allowed
+- All branches must merge cleanly
+- Rarely used in practice
+- Complex to understand and debug
+
+**Better approach:**
+- Merge branches one at a time
+- Resolve conflicts individually
+- Clearer history and attribution
+
+---
+
+## Merge Hooks
+
+Automate merge-related tasks with `Git` hooks:
+
+**`pre-merge-commit`:**
+```bash
+#!/bin/sh
+# Run tests before creating merge commit
+npm test || exit 1
+```
+
+**`post-merge`:**
+```bash
+#!/bin/sh
+# Update dependencies after merge
+npm install
+bundle install
+```
+
+**Common uses:**
+- Run automated tests
+- Update dependencies
+- Send notifications
+- Generate documentation
+
+---
+
+## Advanced Merge Scenarios
+
+**Merge with custom strategy:**
+```bash
+# Use specific strategy
+git merge -s recursive -X theirs feature-branch
+git merge -s octopus branch1 branch2 branch3
+```
+
+**Squash merge:**
+```bash
+# Combine all commits into one
+git merge --squash feature-branch
+git commit -m "Implement complete feature"
+```
+
+**No-commit merge:**
+```bash
+# Merge but don't commit
+git merge --no-commit feature-branch
+# Review changes, then commit manually
+```
+
+---
+
+## Merge Performance Tips
+
+1. **Keep branches small:**
+    - Frequent integration reduces conflicts
+    - Easier to review and test
+    - Faster merge operations
+
+1. **Use `.gitattributes` for merge strategies:**
+    ```txt
+    *.generated merge=ours
+    package-lock.json merge=union
+    ```
+
+1. **Clean up before merging:**
+    ```bash
+    git clean -fd
+    git reset --hard HEAD
+    ```
+
+1. **Use merge commits strategically:**
+    - Preserve feature branch context
+    - Group related changes
+    - Maintain release points
+
+---
+
+## Troubleshooting Common Merge Issues
+
+**"Already up to date" message:**
+- Target branch has no new commits
+- All changes already integrated
+- Check branch relationships with `git log --graph`
+
+**"Automatic merge failed":**
+- Conflicts exist in files
+- Manual resolution required
+- Use `git status` to identify conflicted files
+
+**"fatal: refusing to merge unrelated histories":**
+```bash
+# Force merge of unrelated repositories
+git merge --allow-unrelated-histories other-branch
+```
+
+**Large binary file conflicts:**
+- Choose one version explicitly
+- Use `.gitattributes` for binary files
+- Consider `Git LFS` for large files
+
+---
+
+## Merge Best Practices Summary
+
+1. **Before merging:**
+    - Update your local main branch
+    - Test your feature branch thoroughly
+    - Review the changes you're merging
+
+1. **During merging:**
+    - Read conflict markers carefully
+    - Test after resolving each conflict
+    - Commit with descriptive messages
+
+1. **After merging:**
+    - Delete merged feature branches
+    - Push the updated main branch
+    - Verify the merge in your CI/CD system
+
+1. **Team practices:**
+    - Establish merge policies
+    - Use pull requests for code review
+    - Maintain a clean, readable history
+
+---
+
+## Lab Exercise: Complex Merge Scenario
+
+**Setup:**
+1. Create a repository with conflicting changes
+1. Practice different merge strategies
+1. Resolve conflicts using various tools
+1. Compare merge vs rebase outcomes
+
+**Tasks:**
+1. Create merge conflicts intentionally
+1. Use `git mergetool` to resolve conflicts
+1. Abort and retry merges with different strategies
+1. Practice cherry-picking specific commits
+
+**Goal:** Build confidence in handling any merge situation you encounter in real projects.
