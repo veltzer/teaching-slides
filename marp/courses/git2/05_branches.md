@@ -924,3 +924,377 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
   <text x="420" y="325" font-size="11">• feature/: New features</text>
   <text x="420" y="345" font-size="11">• release/: Release prep • hotfix/: Emergency fixes</text>
 </svg>
+## GitHub Flow
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">GitHub Flow - Simplified</text>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#4CAF50" stroke-width="3"/>
+  <text x="50" y="205" font-size="12">main</text>
+  <circle cx="150" cy="200" r="10" fill="#4CAF50"/>
+  <circle cx="300" cy="200" r="10" fill="#4CAF50"/>
+  <circle cx="500" cy="200" r="10" fill="#4CAF50"/>
+  <circle cx="650" cy="200" r="10" fill="#4CAF50"/>
+  <line x1="200" y1="200" x2="250" y2="140" stroke="#2196F3" stroke-width="2"/>
+  <line x1="250" y1="140" x2="350" y2="140" stroke="#2196F3" stroke-width="2"/>
+  <line x1="350" y1="140" x2="400" y2="200" stroke="#2196F3" stroke-width="2"/>
+  <text x="300" y="130" text-anchor="middle" font-size="11">feature</text>
+  <rect x="420" y="120" width="100" height="40" fill="#9C27B0" rx="5"/>
+  <text x="470" y="145" text-anchor="middle" font-size="12" fill="white">PR/Review</text>
+  <rect x="200" y="260" width="400" height="100" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">Simple Rules:</text>
+  <text x="220" y="310" font-size="12">1. main is always deployable</text>
+  <text x="220" y="330" font-size="12">2. Branch from main for features</text>
+  <text x="420" y="310" font-size="12">3. Open PR for discussion</text>
+  <text x="420" y="330" font-size="12">4. Merge after review</text>
+  <text x="400" y="350" text-anchor="middle" font-size="11" font-style="italic">Perfect for continuous deployment</text>
+</svg>
+
+---
+
+## Trunk-Based Development
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Trunk-Based Development</text>
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#4CAF50" stroke-width="4"/>
+  <text x="50" y="205" font-size="12">trunk</text>
+  <circle cx="150" cy="200" r="8" fill="#4CAF50"/>
+  <circle cx="250" cy="200" r="8" fill="#4CAF50"/>
+  <circle cx="350" cy="200" r="8" fill="#4CAF50"/>
+  <circle cx="450" cy="200" r="8" fill="#4CAF50"/>
+  <circle cx="550" cy="200" r="8" fill="#4CAF50"/>
+  <circle cx="650" cy="200" r="8" fill="#4CAF50"/>
+  <line x1="300" y1="200" x2="320" y2="170" stroke="#2196F3" stroke-width="2"/>
+  <line x1="320" y1="170" x2="340" y2="170" stroke="#2196F3" stroke-width="2"/>
+  <line x1="340" y1="170" x2="360" y2="200" stroke="#2196F3" stroke-width="2"/>
+  <text x="330" y="160" text-anchor="middle" font-size="10">short-lived</text>
+  <rect x="150" y="260" width="500" height="120" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="400" y="290" text-anchor="middle" font-size="14" font-weight="bold">Key Principles:</text>
+  <text x="170" y="315" font-size="12">• Very short-lived branches (< 1 day)</text>
+  <text x="170" y="335" font-size="12">• Frequent integration to trunk</text>
+  <text x="170" y="355" font-size="12">• Feature flags for incomplete work</text>
+  <text x="420" y="315" font-size="12">• High test coverage required</text>
+  <text x="420" y="335" font-size="12">• Continuous integration essential</text>
+  <text x="420" y="355" font-size="12">• Small, incremental changes</text>
+</svg>
+
+---
+
+## Branch Hygiene
+
+```bash
+# Find merged branches to delete
+git branch --merged main | grep -v main
+
+# Delete all merged branches
+git branch --merged main | grep -v main | xargs -n 1 git branch -d
+
+# Find stale branches (no commits in 30 days)
+for branch in $(git branch -r | grep -v HEAD); do
+  echo -e $(git show --format="%ci %cr" $branch | head -n 1) \\t$branch
+done | sort -r
+
+# Archive old branches as tags
+git tag archive/old-feature old-feature
+git branch -d old-feature
+
+# Clean up remote tracking branches
+git remote prune origin --dry-run  # Preview
+git remote prune origin             # Execute
+```
+
+---
+
+## Troubleshooting Branches
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Common Branch Issues</text>
+  <rect x="50" y="80" width="350" height="120" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="14" font-weight="bold">Problem: Diverged Branches</text>
+  <text x="70" y="135" font-size="11">Your branch and origin have diverged</text>
+  <text x="70" y="155" font-size="11" font-family="monospace">git pull --rebase</text>
+  <text x="70" y="175" font-size="11">or merge remote changes:</text>
+  <text x="70" y="190" font-size="11" font-family="monospace">git pull --no-rebase</text>
+  <rect x="420" y="80" width="330" height="120" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="14" font-weight="bold">Problem: Detached HEAD</text>
+  <text x="440" y="135" font-size="11">Not on any branch</text>
+  <text x="440" y="155" font-size="11" font-family="monospace">git branch temp-branch</text>
+  <text x="440" y="175" font-size="11">or return to branch:</text>
+  <text x="440" y="190" font-size="11" font-family="monospace">git switch main</text>
+  <rect x="50" y="220" width="350" height="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="225" y="250" text-anchor="middle" font-size="14" font-weight="bold">Problem: Can't Delete Branch</text>
+  <text x="70" y="275" font-size="11">Branch not fully merged</text>
+  <text x="70" y="295" font-size="11" font-family="monospace">git branch -D branch-name</text>
+  <text x="70" y="315" font-size="11">⚠️ Force delete (loses commits)</text>
+  <rect x="420" y="220" width="330" height="120" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="585" y="250" text-anchor="middle" font-size="14" font-weight="bold">Problem: Lost Branch</text>
+  <text x="440" y="275" font-size="11">Accidentally deleted branch</text>
+  <text x="440" y="295" font-size="11" font-family="monospace">git reflog | grep branch-name</text>
+  <text x="440" y="315" font-size="11" font-family="monospace">git branch recovered abc123</text>
+</svg>
+
+---
+
+## Branch Performance Tips
+
+```bash
+# Optimize branch operations
+git config core.preloadindex true
+git config core.fscache true
+
+# Speed up branch listing
+git config column.ui auto
+git config branch.sort -committerdate
+
+# Faster branch switching with worktrees
+git worktree add ../project-feature feature
+cd ../project-feature  # Work on feature
+cd ../project         # Work on main
+# No switching needed!
+
+# Shallow clone specific branch
+git clone --single-branch --branch feature --depth 1 url
+
+# Fetch only specific branch
+git fetch origin feature:feature
+```
+
+---
+
+## Worktrees: Multiple Branches Simultaneously
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git Worktrees</text>
+  <rect x="200" y="80" width="400" height="60" fill="#4CAF50" rx="5"/>
+  <text x="400" y="115" text-anchor="middle" font-size="16" fill="white">One Repository, Multiple Working Directories</text>
+  <rect x="100" y="160" width="200" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="200" y="185" text-anchor="middle" font-size="14" font-weight="bold">Main Worktree</text>
+  <text x="200" y="205" text-anchor="middle" font-size="12">~/project/</text>
+  <text x="200" y="225" text-anchor="middle" font-size="11">Branch: main</text>
+  <text x="200" y="245" text-anchor="middle" font-size="11">Can edit files</text>
+  <rect x="320" y="160" width="200" height="100" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="420" y="185" text-anchor="middle" font-size="14" font-weight="bold">Feature Worktree</text>
+  <text x="420" y="205" text-anchor="middle" font-size="12">~/project-feature/</text>
+  <text x="420" y="225" text-anchor="middle" font-size="11">Branch: feature</text>
+  <text x="420" y="245" text-anchor="middle" font-size="11">Can edit files</text>
+  <rect x="540" y="160" width="200" height="100" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="640" y="185" text-anchor="middle" font-size="14" font-weight="bold">Hotfix Worktree</text>
+  <text x="640" y="205" text-anchor="middle" font-size="12">~/project-hotfix/</text>
+  <text x="640" y="225" text-anchor="middle" font-size="11">Branch: hotfix</text>
+  <text x="640" y="245" text-anchor="middle" font-size="11">Can edit files</text>
+  <rect x="300" y="280" width="200" height="40" fill="#9C27B0" rx="5"/>
+  <text x="400" y="305" text-anchor="middle" font-size="14" fill="white">Shared .git</text>
+  <line x1="200" y1="260" x2="350" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="420" y1="260" x2="400" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="640" y1="260" x2="450" y2="280" stroke="#333" stroke-width="2"/>
+</svg>
+
+---
+
+## Working with Worktrees
+
+```bash
+# Add new worktree
+git worktree add ../project-feature feature
+
+# Create new branch in worktree
+git worktree add -b new-feature ../project-new
+
+# List worktrees
+git worktree list
+# /home/user/project       abc123 [main]
+# /home/user/project-feature def456 [feature]
+
+# Remove worktree
+git worktree remove ../project-feature
+
+# Prune stale worktrees
+git worktree prune
+
+# Lock worktree (prevent removal)
+git worktree lock ../project-feature
+```
+
+---
+
+## Branch Automation
+
+```bash
+# Auto-setup remote tracking
+git config --global branch.autoSetupMerge always
+
+# Auto-setup rebase for new branches
+git config --global branch.autoSetupRebase always
+
+# Create alias for common branch operations
+git config --global alias.new '!f() { git checkout -b "$1" && git push -u origin "$1"; }; f'
+
+# Automated branch creation from issue
+git config --global alias.issue '!f() { git checkout -b "issue-$1" && git commit --allow-empty -m "Start issue #$1"; }; f'
+
+# Usage:
+# git new feature/awesome
+# git issue 123
+```
+
+---
+
+## Visualizing Complex Branch History
+
+```bash
+# Graphical history viewers
+gitk --all --date-order
+git gui
+gitg  # Linux
+git-cola  # Cross-platform
+
+# Terminal visualization
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+
+# Simplified graph
+git log --graph --oneline --all --simplify-by-decoration
+
+# Show branch relationships
+git show-branch --all
+
+# Web-based visualization
+git instaweb  # Starts local web server
+```
+
+---
+
+## Branch Security Patterns
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Secure Branch Patterns</text>
+  <rect x="50" y="80" width="700" height="60" fill="#4CAF50" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Environment Branches</text>
+  <text x="400" y="125" text-anchor="middle" font-size="12" fill="white">main → staging → production</text>
+  <rect x="50" y="160" width="220" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="160" y="185" text-anchor="middle" font-size="14" font-weight="bold">Development</text>
+  <text x="160" y="205" text-anchor="middle" font-size="11">Branch: main</text>
+  <text x="160" y="225" text-anchor="middle" font-size="11">• Latest features</text>
+  <text x="160" y="245" text-anchor="middle" font-size="11">• May be unstable</text>
+  <rect x="290" y="160" width="220" height="100" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="400" y="185" text-anchor="middle" font-size="14" font-weight="bold">Staging</text>
+  <text x="400" y="205" text-anchor="middle" font-size="11">Branch: staging</text>
+  <text x="400" y="225" text-anchor="middle" font-size="11">• Pre-production testing</text>
+  <text x="400" y="245" text-anchor="middle" font-size="11">• Release candidates</text>
+  <rect x="530" y="160" width="220" height="100" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="640" y="185" text-anchor="middle" font-size="14" font-weight="bold">Production</text>
+  <text x="640" y="205" text-anchor="middle" font-size="11">Branch: production</text>
+  <text x="640" y="225" text-anchor="middle" font-size="11">• Live code only</text>
+  <text x="640" y="245" text-anchor="middle" font-size="11">• Restricted access</text>
+  <path d="M 270 210 L 290 210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 510 210 L 530 210" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="400" y="290" text-anchor="middle" font-size="12">Progressive promotion through environments</text>
+  <text x="400" y="310" text-anchor="middle" font-size="11" font-style="italic">Each branch has different protection levels</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Branch Best Practices Summary
+
+1. **Keep branches short-lived** - Merge within days, not weeks
+1. **Use descriptive names** - feature/user-auth not feature1
+1. **Delete after merging** - Keep repository clean
+1. **One feature per branch** - Easier to review and revert
+1. **Branch from stable point** - Usually main or develop
+1. **Update frequently** - Rebase or merge main regularly
+1. **Protect important branches** - Require reviews and tests
+1. **Use consistent workflow** - Team should agree on strategy
+
+---
+
+## Common Branch Commands Reference
+
+| Command | Purpose |
+|---------|---------|
+| `git branch` | List branches |
+| `git branch feature` | Create branch |
+| `git switch feature` | Switch to branch |
+| `git switch -c feature` | Create and switch |
+| `git branch -d feature` | Delete merged branch |
+| `git branch -D feature` | Force delete branch |
+| `git merge feature` | Merge branch |
+| `git rebase main` | Rebase onto main |
+| `git cherry-pick abc123` | Apply specific commit |
+
+---
+
+## Practice Exercises
+
+1. Create a feature branch and make commits
+1. Try both merge and rebase workflows
+1. Resolve a merge conflict
+1. Use interactive rebase to clean history
+1. Set up a gitflow-style branch structure
+1. Create and use a worktree
+1. Recover a deleted branch using reflog
+1. Implement branch protection with hooks
+
+---
+
+## Summary
+
+## What We Learned
+
+1. ✅ Why branches are essential for collaboration
+1. ✅ How branches work internally (lightweight pointers)
+1. ✅ Creating, switching, and deleting branches
+1. ✅ Merge strategies and conflict resolution
+1. ✅ Merge vs Rebase decision making
+1. ✅ Popular branching workflows
+1. ✅ Branch protection and security
+1. ✅ Advanced features like worktrees
+
+---
+
+## Key Takeaways
+
+1. **Branches are cheap** - Create them liberally
+1. **Choose the right workflow** - Match your team's needs
+1. **Merge for public, rebase for private** - Golden rule
+1. **Keep main stable** - Always deployable
+1. **Clean up regularly** - Delete merged branches
+1. **Protect important branches** - Prevent accidents
+1. **Use descriptive names** - Self-documenting
+1. **Communicate with your team** - Agree on conventions
+
+---
+
+## Next Up: Merging Changes
+
+In the next session, we'll deep dive into:
+
+1. Advanced merging strategies
+1. Conflict resolution techniques
+1. Three-way merges in detail
+1. Merge tools and automation
+1. Fast-forward vs no-ff
+1. Octopus merges
+1. Subtree merging
+
+---
+
+## Branches Complete! 🎉
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="80" text-anchor="middle" font-size="32" font-weight="bold" fill="#4CAF50">Branch Master Achieved!</text>
+  <rect x="200" y="120" width="400" height="200" fill="#E8F5E9" stroke="#388E3C" stroke-width="3" rx="10"/>
+  <text x="400" y="165" text-anchor="middle" font-size="20">You can now:</text>
+  <text x="400" y="195" text-anchor="middle" font-size="16">• Work on multiple features</text>
+  <text x="400" y="220" text-anchor="middle" font-size="16">• Collaborate effectively</text>
+  <text x="400" y="245" text-anchor="middle" font-size="16">• Maintain clean history</text>
+  <text x="400" y="270" text-anchor="middle" font-size="16">• Choose the right workflow</text>
+  <circle cx="250" cy="350" r="25" fill="#2196F3"/>
+  <text x="250" y="357" text-anchor="middle" font-size="20">🌳</text>
+  <circle cx="400" cy="350" r="25" fill="#FF9800"/>
+  <text x="400" y="357" text-anchor="middle" font-size="20">🔀</text>
+  <circle cx="550" cy="350" r="25" fill="#9C27B0"/>
+  <text x="550" y="357" text-anchor="middle" font-size="20">✨</text>
+</svg>
