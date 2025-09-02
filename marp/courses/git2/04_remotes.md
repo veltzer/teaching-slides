@@ -602,23 +602,799 @@ git clone user@server:/path/to/bare-repo.git
 
 ---
 
-## First Half Summary
+## GitLab: The Alternative
 
-## What We've Learned So Far
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">GitLab Features</text>
+  <rect x="50" y="80" width="220" height="120" fill="#FC6D26" rx="5"/>
+  <text x="160" y="110" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Built-in CI/CD</text>
+  <text x="160" y="135" text-anchor="middle" font-size="12" fill="white">• .gitlab-ci.yml</text>
+  <text x="160" y="155" text-anchor="middle" font-size="12" fill="white">• Runners</text>
+  <text x="160" y="175" text-anchor="middle" font-size="12" fill="white">• Pipelines</text>
+  <rect x="290" y="80" width="220" height="120" fill="#554488" rx="5"/>
+  <text x="400" y="110" text-anchor="middle" font-size="16" fill="white" font-weight="bold">DevOps Platform</text>
+  <text x="400" y="135" text-anchor="middle" font-size="12" fill="white">• Planning</text>
+  <text x="400" y="155" text-anchor="middle" font-size="12" fill="white">• Monitoring</text>
+  <text x="400" y="175" text-anchor="middle" font-size="12" fill="white">• Security</text>
+  <rect x="530" y="80" width="220" height="120" fill="#FCA326" rx="5"/>
+  <text x="640" y="110" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Self-Hosted Option</text>
+  <text x="640" y="135" text-anchor="middle" font-size="12" fill="white">• GitLab CE (free)</text>
+  <text x="640" y="155" text-anchor="middle" font-size="12" fill="white">• GitLab EE</text>
+  <text x="640" y="175" text-anchor="middle" font-size="12" fill="white">• Full control</text>
+  <rect x="200" y="220" width="400" height="120" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="250" text-anchor="middle" font-size="16" font-weight="bold">GitLab vs GitHub</text>
+  <text x="220" y="275" font-size="12">• All-in-one DevOps platform</text>
+  <text x="220" y="295" font-size="12">• Free private repos (unlimited)</text>
+  <text x="220" y="315" font-size="12">• Integrated CI/CD out of the box</text>
+</svg>
+
+---
+
+## Bitbucket: Enterprise Focus
+
+```bash
+# Bitbucket URLs
+# HTTPS
+https://bitbucket.org/workspace/repo.git
+# SSH
+git@bitbucket.org:workspace/repo.git
+
+# Bitbucket-specific features
+# - Jira integration
+# - Confluence integration
+# - Built-in CI/CD (Pipelines)
+# - Mercurial support (deprecated)
+
+# Clone from Bitbucket
+git clone git@bitbucket.org:team/project.git
+
+# Add Bitbucket remote
+git remote add bitbucket git@bitbucket.org:team/project.git
+```
+
+---
+
+## Collaboration Workflows
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Common Collaboration Workflows</text>
+  <rect x="50" y="80" width="170" height="280" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="135" y="110" text-anchor="middle" font-size="16" font-weight="bold">Centralized</text>
+  <circle cx="135" cy="150" r="20" fill="#4CAF50"/>
+  <text x="135" y="155" text-anchor="middle" font-size="10" fill="white">main</text>
+  <circle cx="90" cy="220" r="15" fill="#81C784"/>
+  <circle cx="135" cy="220" r="15" fill="#81C784"/>
+  <circle cx="180" cy="220" r="15" fill="#81C784"/>
+  <line x1="90" y1="205" x2="125" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="135" y1="205" x2="135" y2="170" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="205" x2="145" y2="170" stroke="#333" stroke-width="2"/>
+  <text x="135" y="260" text-anchor="middle" font-size="11">Everyone pushes</text>
+  <text x="135" y="275" text-anchor="middle" font-size="11">to main</text>
+  <text x="135" y="305" text-anchor="middle" font-size="12" font-weight="bold">Simple</text>
+  <text x="135" y="325" text-anchor="middle" font-size="11">Small teams</text>
+  <rect x="240" y="80" width="170" height="280" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="325" y="110" text-anchor="middle" font-size="16" font-weight="bold">Feature Branch</text>
+  <circle cx="325" cy="150" r="20" fill="#2196F3"/>
+  <text x="325" y="155" text-anchor="middle" font-size="10" fill="white">main</text>
+  <circle cx="280" cy="200" r="15" fill="#64B5F6"/>
+  <circle cx="370" cy="200" r="15" fill="#64B5F6"/>
+  <line x1="315" y1="170" x2="290" y2="185" stroke="#333" stroke-width="2"/>
+  <line x1="335" y1="170" x2="360" y2="185" stroke="#333" stroke-width="2"/>
+  <text x="280" y="225" text-anchor="middle" font-size="9">feat-1</text>
+  <text x="370" y="225" text-anchor="middle" font-size="9">feat-2</text>
+  <text x="325" y="260" text-anchor="middle" font-size="11">Branch per</text>
+  <text x="325" y="275" text-anchor="middle" font-size="11">feature</text>
+  <text x="325" y="305" text-anchor="middle" font-size="12" font-weight="bold">Popular</text>
+  <text x="325" y="325" text-anchor="middle" font-size="11">Most teams</text>
+  <rect x="430" y="80" width="170" height="280" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="515" y="110" text-anchor="middle" font-size="16" font-weight="bold">Gitflow</text>
+  <circle cx="515" cy="150" r="15" fill="#FF9800"/>
+  <text x="515" y="155" text-anchor="middle" font-size="9" fill="white">main</text>
+  <circle cx="515" cy="190" r="15" fill="#FFB74D"/>
+  <text x="515" y="195" text-anchor="middle" font-size="9">develop</text>
+  <circle cx="470" cy="230" r="12" fill="#FFE0B2"/>
+  <circle cx="560" cy="230" r="12" fill="#FFE0B2"/>
+  <text x="515" y="265" text-anchor="middle" font-size="11">Multiple</text>
+  <text x="515" y="280" text-anchor="middle" font-size="11">branch types</text>
+  <text x="515" y="305" text-anchor="middle" font-size="12" font-weight="bold">Complex</text>
+  <text x="515" y="325" text-anchor="middle" font-size="11">Releases</text>
+  <rect x="620" y="80" width="130" height="280" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="685" y="110" text-anchor="middle" font-size="16" font-weight="bold">Forking</text>
+  <circle cx="685" cy="150" r="15" fill="#F44336"/>
+  <text x="685" y="155" text-anchor="middle" font-size="9" fill="white">upstream</text>
+  <circle cx="650" cy="200" r="12" fill="#EF5350"/>
+  <circle cx="720" cy="200" r="12" fill="#EF5350"/>
+  <text x="650" y="225" text-anchor="middle" font-size="9">fork1</text>
+  <text x="720" y="225" text-anchor="middle" font-size="9">fork2</text>
+  <text x="685" y="265" text-anchor="middle" font-size="11">Personal</text>
+  <text x="685" y="280" text-anchor="middle" font-size="11">forks</text>
+  <text x="685" y="305" text-anchor="middle" font-size="12" font-weight="bold">OSS</text>
+  <text x="685" y="325" text-anchor="middle" font-size="11">Open source</text>
+</svg>
+
+---
+
+## Pull Requests / Merge Requests
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Pull Request Workflow</text>
+  <circle cx="100" cy="150" r="25" fill="#4CAF50"/>
+  <text x="100" y="155" text-anchor="middle" font-size="12" fill="white">main</text>
+  <circle cx="200" cy="150" r="25" fill="#2196F3"/>
+  <text x="200" y="155" text-anchor="middle" font-size="12" fill="white">feature</text>
+  <path d="M 125 150 L 175 150" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="150" y="140" text-anchor="middle" font-size="10">1. Branch</text>
+  <rect x="250" y="130" width="100" height="40" fill="#FF9800" rx="5"/>
+  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Commits</text>
+  <path d="M 225 150 L 250 150" stroke="#333" stroke-width="2"/>
+  <text x="300" y="190" text-anchor="middle" font-size="10">2. Work</text>
+  <rect x="380" y="120" width="120" height="60" fill="#9C27B0" rx="5"/>
+  <text x="440" y="145" text-anchor="middle" font-size="12" fill="white">Pull Request</text>
+  <text x="440" y="165" text-anchor="middle" font-size="10" fill="white">Review & Discuss</text>
+  <path d="M 350 150 L 380 150" stroke="#333" stroke-width="2"/>
+  <text x="440" y="200" text-anchor="middle" font-size="10">3. Request merge</text>
+  <circle cx="550" cy="150" r="25" fill="#4CAF50"/>
+  <text x="550" y="155" text-anchor="middle" font-size="12" fill="white">main</text>
+  <text x="550" y="120" text-anchor="middle" font-size="10">Updated</text>
+  <path d="M 500 150 L 525 150" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <text x="550" y="200" text-anchor="middle" font-size="10">4. Merge</text>
+  <rect x="200" y="250" width="400" height="100" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="280" text-anchor="middle" font-size="14" font-weight="bold">Pull Request Benefits:</text>
+  <text x="220" y="305" font-size="12">• Code review before merge</text>
+  <text x="220" y="325" font-size="12">• Discussion and feedback</text>
+  <text x="420" y="305" font-size="12">• CI/CD integration</text>
+  <text x="420" y="325" font-size="12">• Documentation trail</text>
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Creating a Pull Request
+
+```bash
+# 1. Create feature branch
+git checkout -b feature/add-login
+
+# 2. Make changes and commit
+git add .
+git commit -m "Add login functionality"
+
+# 3. Push to your fork/origin
+git push origin feature/add-login
+
+# 4. GitHub CLI (optional)
+gh pr create --title "Add login" --body "Description"
+
+# Or use web interface:
+# - Go to GitHub/GitLab
+# - Click "New Pull Request"
+# - Select base and compare branches
+# - Add title and description
+# - Request reviewers
+# - Submit
+```
+
+---
+
+## Code Review Process
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Code Review Workflow</text>
+  <rect x="50" y="80" width="150" height="80" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="125" y="110" text-anchor="middle" font-size="14" font-weight="bold">1. Submit PR</text>
+  <text x="125" y="135" text-anchor="middle" font-size="11">Author creates</text>
+  <text x="125" y="150" text-anchor="middle" font-size="11">pull request</text>
+  <rect x="220" y="80" width="150" height="80" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="295" y="110" text-anchor="middle" font-size="14" font-weight="bold">2. Review</text>
+  <text x="295" y="135" text-anchor="middle" font-size="11">Team reviews</text>
+  <text x="295" y="150" text-anchor="middle" font-size="11">code changes</text>
+  <rect x="390" y="80" width="150" height="80" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="465" y="110" text-anchor="middle" font-size="14" font-weight="bold">3. Feedback</text>
+  <text x="465" y="135" text-anchor="middle" font-size="11">Comments &</text>
+  <text x="465" y="150" text-anchor="middle" font-size="11">suggestions</text>
+  <rect x="560" y="80" width="150" height="80" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="635" y="110" text-anchor="middle" font-size="14" font-weight="bold">4. Update</text>
+  <text x="635" y="135" text-anchor="middle" font-size="11">Author makes</text>
+  <text x="635" y="150" text-anchor="middle" font-size="11">changes</text>
+  <path d="M 200 120 L 220 120" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 370 120 L 390 120" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 540 120 L 560 120" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 635 160 Q 635 200 295 200 Q 295 160 295 160" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="465" y="215" text-anchor="middle" font-size="10">Iterate</text>
+  <rect x="100" y="250" width="600" height="100" fill="#C8E6C9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="400" y="280" text-anchor="middle" font-size="16" font-weight="bold">5. Approve & Merge</text>
+  <text x="400" y="305" text-anchor="middle" font-size="12">✓ Tests pass</text>
+  <text x="400" y="325" text-anchor="middle" font-size="12">✓ Reviews approved</text>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Pull Request Best Practices
+
+```bash
+# Keep PRs small and focused
+# ✓ One feature per PR
+# ✓ Easy to review
+# ✗ Multiple unrelated changes
+
+# Write descriptive PR descriptions
+# - What changed
+# - Why it changed
+# - How to test
+# - Screenshots if UI changes
+
+# Keep commits clean
+git rebase -i main  # Before creating PR
+
+# Update branch before merge
+git fetch origin
+git rebase origin/main
+git push --force-lease
+
+# Use draft PRs for work in progress
+# Mark as "Draft" in GitHub/GitLab
+```
+
+---
+
+## Handling Merge Conflicts
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Merge Conflict Resolution</text>
+  <rect x="100" y="80" width="600" height="80" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="14" font-weight="bold">Conflict Markers</text>
+  <text x="120" y="125" font-family="monospace" font-size="11">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+  <text x="120" y="140" font-family="monospace" font-size="11">Your changes</text>
+  <text x="120" y="155" font-family="monospace" font-size="11">=======</text>
+  <text x="300" y="125" font-family="monospace" font-size="11">Their changes</text>
+  <text x="300" y="140" font-family="monospace" font-size="11">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch</text>
+  <text x="500" y="140" font-size="12">← Choose one or combine</text>
+  <rect x="50" y="180" width="320" height="180" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="210" y="210" text-anchor="middle" font-size="14" font-weight="bold">Resolution Steps</text>
+  <text x="70" y="235" font-size="12">1. Open conflicted file</text>
+  <text x="70" y="255" font-size="12">2. Find conflict markers</text>
+  <text x="70" y="275" font-size="12">3. Decide what to keep</text>
+  <text x="70" y="295" font-size="12">4. Remove markers</text>
+  <text x="70" y="315" font-size="12">5. Stage resolved file</text>
+  <text x="70" y="335" font-size="12">6. Continue merge/rebase</text>
+  <rect x="430" y="180" width="320" height="180" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="590" y="210" text-anchor="middle" font-size="14" font-weight="bold">Conflict Commands</text>
+  <text x="450" y="235" font-family="monospace" font-size="11">git status  # See conflicts</text>
+  <text x="450" y="255" font-family="monospace" font-size="11">git diff    # View conflicts</text>
+  <text x="450" y="275" font-family="monospace" font-size="11">git add file.txt  # Mark resolved</text>
+  <text x="450" y="295" font-family="monospace" font-size="11">git merge --continue</text>
+  <text x="450" y="315" font-family="monospace" font-size="11"># Or abort:</text>
+  <text x="450" y="335" font-family="monospace" font-size="11">git merge --abort</text>
+</svg>
+
+---
+
+## Sync Fork with Upstream
+
+```bash
+# Add upstream remote (one time)
+git remote add upstream https://github.com/ORIGINAL/repo.git
+
+# Sync fork with upstream
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+
+# Alternative: rebase method
+git fetch upstream
+git checkout main
+git rebase upstream/main
+git push origin main --force-lease
+
+# Sync all branches
+git fetch upstream
+git checkout main
+git reset --hard upstream/main
+git push origin main --force-lease
+```
+
+---
+
+## Protected Branches
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Branch Protection Rules</text>
+  <rect x="100" y="80" width="600" height="60" fill="#4CAF50" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Protected: main branch</text>
+  <text x="400" y="125" text-anchor="middle" font-size="12" fill="white">No direct pushes allowed</text>
+  <rect x="50" y="160" width="220" height="180" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="160" y="190" text-anchor="middle" font-size="14" font-weight="bold">Requirements</text>
+  <text x="70" y="215" font-size="11">✓ Pull request required</text>
+  <text x="70" y="235" font-size="11">✓ Code review approval</text>
+  <text x="70" y="255" font-size="11">✓ Status checks pass</text>
+  <text x="70" y="275" font-size="11">✓ Up-to-date with base</text>
+  <text x="70" y="295" font-size="11">✓ Signed commits</text>
+  <text x="70" y="315" font-size="11">✓ No admin override</text>
+  <rect x="290" y="160" width="220" height="180" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="400" y="190" text-anchor="middle" font-size="14" font-weight="bold">Benefits</text>
+  <text x="310" y="215" font-size="11">• Prevents accidents</text>
+  <text x="310" y="235" font-size="11">• Enforces review</text>
+  <text x="310" y="255" font-size="11">• Ensures CI passes</text>
+  <text x="310" y="275" font-size="11">• Maintains quality</text>
+  <text x="310" y="295" font-size="11">• Audit trail</text>
+  <text x="310" y="315" font-size="11">• Team collaboration</text>
+  <rect x="530" y="160" width="220" height="180" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="640" y="190" text-anchor="middle" font-size="14" font-weight="bold">Restrictions</text>
+  <text x="550" y="215" font-size="11">✗ No force push</text>
+  <text x="550" y="235" font-size="11">✗ No deletion</text>
+  <text x="550" y="255" font-size="11">✗ No direct commits</text>
+  <text x="550" y="275" font-size="11">✗ No bypass reviews</text>
+  <text x="550" y="295" font-size="11">✗ No unsigned commits</text>
+  <text x="550" y="315" font-size="11">✗ No failed checks</text>
+</svg>
+
+---
+
+## Tags and Releases
+
+```bash
+# Create lightweight tag
+git tag v1.0.0
+
+# Create annotated tag (recommended)
+git tag -a v1.0.0 -m "Version 1.0.0 release"
+
+# Tag specific commit
+git tag -a v1.0.0 abc123 -m "Version 1.0.0"
+
+# List tags
+git tag
+git tag -l "v1.*"  # Pattern matching
+
+# Show tag details
+git show v1.0.0
+
+# Push tags to remote
+git push origin v1.0.0      # Specific tag
+git push origin --tags      # All tags
+git push --follow-tags      # Annotated tags only
+
+# Delete tag
+git tag -d v1.0.0           # Local
+git push origin :v1.0.0     # Remote
+```
+
+---
+
+## Semantic Versioning
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Semantic Versioning (SemVer)</text>
+  <rect x="200" y="80" width="400" height="100" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="120" text-anchor="middle" font-size="36" font-family="monospace">v2.1.3</text>
+  <text x="310" y="160" text-anchor="middle" font-size="14">MAJOR</text>
+  <text x="400" y="160" text-anchor="middle" font-size="14">MINOR</text>
+  <text x="490" y="160" text-anchor="middle" font-size="14">PATCH</text>
+  <line x1="350" y1="125" x2="350" y2="145" stroke="#666" stroke-width="1"/>
+  <line x1="450" y1="125" x2="450" y2="145" stroke="#666" stroke-width="1"/>
+  <rect x="50" y="200" width="220" height="140" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="160" y="230" text-anchor="middle" font-size="14" font-weight="bold">MAJOR (v3.0.0)</text>
+  <text x="70" y="255" font-size="11">Breaking changes</text>
+  <text x="70" y="275" font-size="11">Incompatible API</text>
+  <text x="70" y="295" font-size="11">Major rewrite</text>
+  <text x="70" y="315" font-size="11">Example: v1.x → v2.0</text>
+  <rect x="290" y="200" width="220" height="140" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="400" y="230" text-anchor="middle" font-size="14" font-weight="bold">MINOR (v2.2.0)</text>
+  <text x="310" y="255" font-size="11">New features</text>
+  <text x="310" y="275" font-size="11">Backwards compatible</text>
+  <text x="310" y="295" font-size="11">Additions</text>
+  <text x="310" y="315" font-size="11">Example: v2.1 → v2.2</text>
+  <rect x="530" y="200" width="220" height="140" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="640" y="230" text-anchor="middle" font-size="14" font-weight="bold">PATCH (v2.1.4)</text>
+  <text x="550" y="255" font-size="11">Bug fixes</text>
+  <text x="550" y="275" font-size="11">Security patches</text>
+  <text x="550" y="295" font-size="11">No new features</text>
+  <text x="550" y="315" font-size="11">Example: v2.1.3 → v2.1.4</text>
+</svg>
+
+---
+
+## GitHub/GitLab Releases
+
+```bash
+# Create release with GitHub CLI
+gh release create v1.0.0 \
+  --title "Version 1.0.0" \
+  --notes "Release notes" \
+  --target main
+
+# Upload assets to release
+gh release upload v1.0.0 dist/*
+
+# Create draft release
+gh release create v2.0.0 --draft
+
+# Auto-generate release notes
+gh release create v1.0.0 --generate-notes
+
+# GitLab releases (via API or UI)
+# Usually done through CI/CD pipeline
+```
+
+---
+
+## Remote Housekeeping
+
+```bash
+# Remove stale remote-tracking branches
+git remote prune origin
+
+# Fetch and prune in one command
+git fetch --prune
+
+# See stale branches before pruning
+git remote prune origin --dry-run
+
+# Clean up all remotes
+git fetch --all --prune
+
+# Delete remote branch
+git push origin --delete feature-branch
+# or
+git push origin :feature-branch
+
+# Remove all remote-tracking branches
+git branch -r | grep -v main | xargs -n 1 git push --delete origin
+```
+
+---
+
+## Mirror Repositories
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Repository Mirroring</text>
+  <circle cx="200" cy="200" r="40" fill="#24292E"/>
+  <text x="200" y="205" text-anchor="middle" font-size="14" fill="white">GitHub</text>
+  <circle cx="400" cy="200" r="40" fill="#4CAF50"/>
+  <text x="400" y="205" text-anchor="middle" font-size="14" fill="white">Local</text>
+  <circle cx="600" cy="200" r="40" fill="#FC6D26"/>
+  <text x="600" y="205" text-anchor="middle" font-size="14" fill="white">GitLab</text>
+  <path d="M 240 200 L 360 200" stroke="#333" stroke-width="2" marker-end="url(#arrow4)" marker-start="url(#arrow4)"/>
+  <path d="M 440 200 L 560 200" stroke="#333" stroke-width="2" marker-end="url(#arrow4)" marker-start="url(#arrow4)"/>
+  <text x="300" y="190" text-anchor="middle" font-size="11">fetch/push</text>
+  <text x="500" y="190" text-anchor="middle" font-size="11">fetch/push</text>
+  <rect x="150" y="280" width="500" height="80" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="305" text-anchor="middle" font-size="12" font-family="monospace">git clone --mirror https://github.com/user/repo.git</text>
+  <text x="400" y="325" text-anchor="middle" font-size="12" font-family="monospace">cd repo.git</text>
+  <text x="400" y="345" text-anchor="middle" font-size="12" font-family="monospace">git remote set-url --push origin https://gitlab.com/user/repo.git</text>
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Git Hooks for Remote Operations
+
+```bash
+# .git/hooks/pre-push
+#!/bin/sh
+# Prevent push to main branch
+protected_branch='main'
+current_branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
+
+if [ $protected_branch = $current_branch ]; then
+    echo "Direct push to main branch is not allowed"
+    echo "Please create a pull request"
+    exit 1
+fi
+
+# Run tests before push
+npm test
+if [ $? -ne 0 ]; then
+    echo "Tests must pass before push"
+    exit 1
+fi
+```
+
+---
+
+## Remote Performance Tips
+
+```bash
+# Shallow clone (faster for large repos)
+git clone --depth 1 https://github.com/user/repo.git
+
+# Clone specific branch only
+git clone -b develop --single-branch https://github.com/user/repo.git
+
+# Partial clone (Git 2.17+)
+git clone --filter=blob:none https://github.com/user/repo.git
+
+# Fetch only needed objects
+git fetch --filter=tree:0 origin
+
+# Bundle for offline transfer
+git bundle create repo.bundle --all
+# Transfer bundle file
+git clone repo.bundle new-repo
+
+# Use SSH connection multiplexing
+# ~/.ssh/config
+Host github.com
+    ControlMaster auto
+    ControlPath ~/.ssh/sockets/%r@%h-%p
+    ControlPersist 600
+```
+
+---
+
+## Submodules vs Subtrees
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Managing Dependencies</text>
+  <rect x="50" y="80" width="350" height="280" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="18" font-weight="bold">Git Submodules</text>
+  <text x="70" y="140" font-size="12">✓ Reference to external repo</text>
+  <text x="70" y="160" font-size="12">✓ Specific commit tracked</text>
+  <text x="70" y="180" font-size="12">✓ Independent repository</text>
+  <text x="70" y="200" font-size="12">✗ Complex workflow</text>
+  <text x="70" y="220" font-size="12">✗ Extra steps to update</text>
+  <rect x="70" y="240" width="310" height="40" fill="#81C784" rx="3"/>
+  <text x="225" y="265" text-anchor="middle" font-size="11" fill="white" font-family="monospace">git submodule add URL path</text>
+  <text x="225" y="305" text-anchor="middle" font-size="13" font-weight="bold">Use for:</text>
+  <text x="70" y="325" font-size="11">• Vendor libraries</text>
+  <text x="70" y="345" font-size="11">• Shared components</text>
+  <rect x="420" y="80" width="330" height="280" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="18" font-weight="bold">Git Subtrees</text>
+  <text x="440" y="140" font-size="12">✓ Code merged into project</text>
+  <text x="440" y="160" font-size="12">✓ No special commands</text>
+  <text x="440" y="180" font-size="12">✓ Simple for users</text>
+  <text x="440" y="200" font-size="12">✗ History mixed</text>
+  <text x="440" y="220" font-size="12">✗ Larger repository</text>
+  <rect x="440" y="240" width="290" height="40" fill="#64B5F6" rx="3"/>
+  <text x="585" y="265" text-anchor="middle" font-size="11" fill="white" font-family="monospace">git subtree add --prefix=path URL</text>
+  <text x="585" y="305" text-anchor="middle" font-size="13" font-weight="bold">Use for:</text>
+  <text x="440" y="325" font-size="11">• Merged dependencies</text>
+  <text x="440" y="345" font-size="11">• One-time imports</text>
+</svg>
+
+---
+
+## Working with Submodules
+
+```bash
+# Add submodule
+git submodule add https://github.com/lib/library.git libs/library
+
+# Clone repo with submodules
+git clone --recurse-submodules https://github.com/user/repo.git
+
+# Initialize submodules after clone
+git submodule init
+git submodule update
+
+# Update all submodules
+git submodule update --remote --merge
+
+# Remove submodule
+git submodule deinit path/to/submodule
+git rm path/to/submodule
+rm -rf .git/modules/path/to/submodule
+```
+
+---
+
+## CI/CD Integration
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Remote Triggers CI/CD</text>
+  <circle cx="100" cy="200" r="30" fill="#4CAF50"/>
+  <text x="100" y="205" text-anchor="middle" font-size="12" fill="white">Push</text>
+  <path d="M 130 200 L 170 200" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="170" y="175" width="100" height="50" fill="#2196F3" rx="5"/>
+  <text x="220" y="205" text-anchor="middle" font-size="12" fill="white">Webhook</text>
+  <path d="M 270 200 L 310 200" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="310" y="175" width="100" height="50" fill="#FF9800" rx="5"/>
+  <text x="360" y="205" text-anchor="middle" font-size="12" fill="white">CI Build</text>
+  <path d="M 410 200 L 450 200" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="450" y="175" width="100" height="50" fill="#9C27B0" rx="5"/>
+  <text x="500" y="205" text-anchor="middle" font-size="12" fill="white">Tests</text>
+  <path d="M 550 200 L 590 200" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
+  <rect x="590" y="175" width="100" height="50" fill="#F44336" rx="5"/>
+  <text x="640" y="205" text-anchor="middle" font-size="12" fill="white">Deploy</text>
+  <rect x="200" y="260" width="400" height="100" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="290" text-anchor="middle" font-size="14" font-weight="bold">Triggers:</text>
+  <text x="220" y="315" font-size="12">• Push to branch</text>
+  <text x="220" y="335" font-size="12">• Pull request</text>
+  <text x="380" y="315" font-size="12">• Tag creation</text>
+  <text x="380" y="335" font-size="12">• Schedule</text>
+  <defs>
+    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## GitHub Actions Example
+
+```yaml
+# .github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm test
+
+    - name: Build
+      run: npm run build
+```
+
+---
+
+## GitLab CI Example
+
+```yaml
+# .gitlab-ci.yml
+stages:
+  - test
+  - build
+  - deploy
+
+variables:
+  NODE_VERSION: "16"
+
+test:
+  stage: test
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm test
+  only:
+    - merge_requests
+    - main
+    - develop
+
+build:
+  stage: build
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+  only:
+    - main
+```
+
+---
+
+## Remote Repository Security
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Security Best Practices</text>
+  <rect x="50" y="80" width="350" height="120" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="16" font-weight="bold">Access Control</text>
+  <text x="70" y="135" font-size="12">• Use SSH keys or tokens</text>
+  <text x="70" y="155" font-size="12">• Enable 2FA</text>
+  <text x="70" y="175" font-size="12">• Limit repository access</text>
+  <rect x="420" y="80" width="330" height="120" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="16" font-weight="bold">Sensitive Data</text>
+  <text x="440" y="135" font-size="12">• Never commit secrets</text>
+  <text x="440" y="155" font-size="12">• Use environment variables</text>
+  <text x="440" y="175" font-size="12">• Scan for exposed keys</text>
+  <rect x="50" y="220" width="350" height="120" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="250" text-anchor="middle" font-size="16" font-weight="bold">Code Integrity</text>
+  <text x="70" y="275" font-size="12">• Sign commits with GPG</text>
+  <text x="70" y="295" font-size="12">• Verify signatures</text>
+  <text x="70" y="315" font-size="12">• Protected branches</text>
+  <rect x="420" y="220" width="330" height="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="250" text-anchor="middle" font-size="16" font-weight="bold">Monitoring</text>
+  <text x="440" y="275" font-size="12">• Audit logs</text>
+  <text x="440" y="295" font-size="12">• Security alerts</text>
+  <text x="440" y="315" font-size="12">• Dependency scanning</text>
+</svg>
+
+---
+
+## Summary
+
+## What We Learned
 
 1. ✅ Understanding remote repositories
-1. ✅ Clone vs init with remote
-1. ✅ Remote naming conventions
-1. ✅ Fetch vs pull differences
-1. ✅ Push strategies and safety
 1. ✅ Working with multiple remotes
-1. ✅ HTTPS vs SSH authentication
-1. ✅ Bare repositories for sharing
+1. ✅ Push, pull, and fetch strategies
+1. ✅ Collaboration workflows
+1. ✅ Pull requests and code review
+1. ✅ Conflict resolution
+1. ✅ Tags and releases
+1. ✅ Repository mirroring and security
 
-## Coming Up Next
+---
 
-1. Advanced remote operations
-1. Collaboration workflows
-1. Pull requests
-1. Conflict resolution
-1. Tags and releases
+## Key Takeaways
+
+1. **Remotes are references** - Not the actual repository
+1. **Fetch is safe, pull merges** - Fetch to review first
+1. **Use branches for features** - Keep main stable
+1. **Pull requests enable review** - Quality through collaboration
+1. **Tags mark milestones** - Version your releases
+1. **Multiple remotes are powerful** - Fork, upstream, backup
+1. **Security matters** - Protect branches, sign commits, use SSH
+
+---
+
+## Practice Exercises
+
+1. Set up a repository with multiple remotes
+1. Create and merge a pull request
+1. Resolve a merge conflict
+1. Sync a fork with upstream
+1. Create and push tags
+1. Set up branch protection rules
+1. Configure CI/CD for your repository
+1. Mirror a repository between platforms
+
+---
+
+## Next Up: Branches
+
+In the next session, we'll deep dive into:
+
+1. Branch theory and internals
+1. Creating and managing branches
+1. Branching strategies
+1. Merge vs rebase
+1. Advanced branching workflows
+1. Branch maintenance
+1. Troubleshooting branch issues
+
+---
+
+## Remote Repositories Complete! 🎉
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="80" text-anchor="middle" font-size="32" font-weight="bold" fill="#4CAF50">Connected to the World!</text>
+  <rect x="200" y="120" width="400" height="200" fill="#E8F5E9" stroke="#388E3C" stroke-width="3" rx="10"/>
+  <text x="400" y="165" text-anchor="middle" font-size="20">You can now:</text>
+  <text x="400" y="195" text-anchor="middle" font-size="16">• Share code globally</text>
+  <text x="400" y="220" text-anchor="middle" font-size="16">• Collaborate with teams</text>
+  <text x="400" y="245" text-anchor="middle" font-size="16">• Contribute to open source</text>
+  <text x="400" y="270" text-anchor="middle" font-size="16">• Manage distributed workflows</text>
+  <circle cx="250" cy="350" r="25" fill="#2196F3"/>
+  <text x="250" y="357" text-anchor="middle" font-size="20">🌐</text>
+  <circle cx="400" cy="350" r="25" fill="#FF9800"/>
+  <text x="400" y="357" text-anchor="middle" font-size="20">🤝</text>
+  <circle cx="550" cy="350" r="25" fill="#9C27B0"/>
+  <text x="550" y="357" text-anchor="middle" font-size="20">🚀</text>
+</svg>
