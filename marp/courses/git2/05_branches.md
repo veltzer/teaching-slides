@@ -456,3 +456,471 @@ git branch | grep "feature-" | xargs git branch -d
 git tag archive/feature feature
 git branch -d feature
 ```
+---
+
+## Branch Management
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Branch Lifecycle</text>
+  <rect x="50" y="80" width="150" height="80" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="125" y="110" text-anchor="middle" font-size="14" font-weight="bold">1. Create</text>
+  <text x="125" y="135" text-anchor="middle" font-size="11">Branch from main</text>
+  <text x="125" y="150" text-anchor="middle" font-size="10" font-family="monospace">git branch feature</text>
+  <rect x="220" y="80" width="150" height="80" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="295" y="110" text-anchor="middle" font-size="14" font-weight="bold">2. Develop</text>
+  <text x="295" y="135" text-anchor="middle" font-size="11">Make commits</text>
+  <text x="295" y="150" text-anchor="middle" font-size="10" font-family="monospace">git commit</text>
+  <rect x="390" y="80" width="150" height="80" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="465" y="110" text-anchor="middle" font-size="14" font-weight="bold">3. Merge</text>
+  <text x="465" y="135" text-anchor="middle" font-size="11">Integrate changes</text>
+  <text x="465" y="150" text-anchor="middle" font-size="10" font-family="monospace">git merge feature</text>
+  <rect x="560" y="80" width="150" height="80" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="635" y="110" text-anchor="middle" font-size="14" font-weight="bold">4. Delete</text>
+  <text x="635" y="135" text-anchor="middle" font-size="11">Clean up</text>
+  <text x="635" y="150" text-anchor="middle" font-size="10" font-family="monospace">git branch -d feature</text>
+  <path d="M 200 120 L 220 120" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <path d="M 370 120 L 390 120" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <path d="M 540 120 L 560 120" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <rect x="200" y="200" width="400" height="140" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="230" text-anchor="middle" font-size="14" font-weight="bold">Best Practices</text>
+  <text x="220" y="255" font-size="12">• Keep branches short-lived (days, not months)</text>
+  <text x="220" y="275" font-size="12">• Delete merged branches promptly</text>
+  <text x="220" y="295" font-size="12">• Use descriptive names</text>
+  <text x="220" y="315" font-size="12">• One feature per branch</text>
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Renaming Branches
+
+```bash
+# Rename current branch
+git branch -m new-name
+
+# Rename any branch
+git branch -m old-name new-name
+
+# Rename and push to remote
+git branch -m old-name new-name
+git push origin :old-name                # Delete old
+git push origin new-name                 # Push new
+git push origin -u new-name              # Set tracking
+
+# Rename main to master (or vice versa)
+git branch -m master main
+git push -u origin main
+git push origin --delete master
+
+# Update local repo to use new default
+git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/main
+```
+
+---
+
+## Branch Descriptions
+
+```bash
+# Add description to branch
+git branch --edit-description feature
+# Opens editor to write description
+
+# View branch description
+git config branch.feature.description
+
+# Use in scripts/automation
+#!/bin/bash
+for branch in $(git branch --format='%(refname:short)'); do
+    desc=$(git config branch.$branch.description)
+    echo "$branch: ${desc:-No description}"
+done
+
+# Descriptions help team understand branch purpose
+# Especially useful for long-running branches
+```
+
+---
+
+## The Reflog and Branches
+
+```bash
+# See branch history
+git reflog show feature
+# a3f8d9c feature@{0}: commit: Add new feature
+# b7c9e1a feature@{1}: branch: Created from main
+
+# Recover deleted branch
+git branch -D important-feature  # Oops!
+git reflog                       # Find the SHA
+git branch important-feature abc123  # Recovered!
+
+# See when branches were updated
+git for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)' refs/heads/
+
+# Find old branch positions
+git log -g --grep-reflog="branch:" --oneline
+```
+
+---
+
+## Merging Branches
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Types of Merges</text>
+  <rect x="50" y="80" width="350" height="140" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="16" font-weight="bold">Fast-Forward Merge</text>
+  <circle cx="120" cy="150" r="15" fill="#4CAF50"/>
+  <circle cx="180" cy="150" r="15" fill="#4CAF50"/>
+  <circle cx="240" cy="150" r="15" fill="#81C784"/>
+  <circle cx="300" cy="150" r="15" fill="#81C784"/>
+  <line x1="135" y1="150" x2="165" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="195" y1="150" x2="225" y2="150" stroke="#333" stroke-width="2"/>
+  <line x1="255" y1="150" x2="285" y2="150" stroke="#333" stroke-width="2"/>
+  <text x="210" y="130" font-size="10">main</text>
+  <text x="270" y="130" font-size="10">feature</text>
+  <text x="225" y="195" text-anchor="middle" font-size="12">Linear history - just moves pointer</text>
+  <rect x="420" y="80" width="330" height="140" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="16" font-weight="bold">3-Way Merge</text>
+  <circle cx="480" cy="140" r="15" fill="#2196F3"/>
+  <circle cx="540" cy="140" r="15" fill="#2196F3"/>
+  <circle cx="540" cy="180" r="15" fill="#64B5F6"/>
+  <circle cx="600" cy="160" r="15" fill="#1976D2"/>
+  <line x1="495" y1="140" x2="525" y2="140" stroke="#333" stroke-width="2"/>
+  <line x1="540" y1="155" x2="540" y2="165" stroke="#333" stroke-width="2"/>
+  <line x1="555" y1="140" x2="585" y2="155" stroke="#333" stroke-width="2"/>
+  <line x1="555" y1="180" x2="585" y2="165" stroke="#333" stroke-width="2"/>
+  <text x="585" y="195" text-anchor="middle" font-size="12">Creates merge commit</text>
+</svg>
+
+---
+
+## Fast-Forward Merge
+
+```bash
+# Scenario: feature branch is ahead of main
+#   main:    A---B
+#   feature:     └---C---D
+
+git checkout main
+git merge feature
+
+# Result: Fast-forward
+#   main:    A---B---C---D
+
+# Prevent fast-forward (create merge commit)
+git merge --no-ff feature
+
+# Result:
+#   main:    A---B-------M
+#                 \     /
+#   feature:       C---D
+```
+
+---
+
+## Three-Way Merge
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Three-Way Merge Process</text>
+  <circle cx="200" cy="200" r="30" fill="#4CAF50"/>
+  <text x="200" y="205" text-anchor="middle" font-size="12" fill="white">Base</text>
+  <text x="200" y="240" text-anchor="middle" font-size="12">Common ancestor</text>
+  <circle cx="350" cy="120" r="30" fill="#2196F3"/>
+  <text x="350" y="125" text-anchor="middle" font-size="12" fill="white">Ours</text>
+  <text x="350" y="90" text-anchor="middle" font-size="12">main branch</text>
+  <circle cx="350" cy="280" r="30" fill="#FF9800"/>
+  <text x="350" y="285" text-anchor="middle" font-size="12" fill="white">Theirs</text>
+  <text x="350" y="320" text-anchor="middle" font-size="12">feature branch</text>
+  <circle cx="550" cy="200" r="35" fill="#9C27B0"/>
+  <text x="550" y="205" text-anchor="middle" font-size="14" fill="white">Merge</text>
+  <text x="550" y="250" text-anchor="middle" font-size="12">Combined result</text>
+  <path d="M 230 185 L 320 135" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 230 215 L 320 265" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 380 120 L 515 185" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <path d="M 380 280 L 515 215" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <rect x="200" y="340" width="400" height="40" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="365" text-anchor="middle" font-size="12">Git finds common ancestor and combines changes from both branches</text>
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Merge Strategies
+
+```bash
+# Default (recursive/ort)
+git merge feature
+
+# Ours - keep our version in conflicts
+git merge -s ours feature
+
+# Theirs option (not strategy)
+git merge -X theirs feature
+
+# Octopus - merge multiple branches
+git merge feature1 feature2 feature3
+
+# Subtree - merge into subdirectory
+git merge -s subtree=path/to/dir feature
+
+# No commit - prepare merge but don't commit
+git merge --no-commit feature
+# Review changes, then:
+git commit
+```
+
+---
+
+## Merge Conflicts
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Merge Conflict Anatomy</text>
+  <rect x="100" y="80" width="600" height="180" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="14" font-weight="bold">Conflicted File</text>
+  <text x="120" y="130" font-family="monospace" font-size="12">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</text>
+  <text x="120" y="150" font-family="monospace" font-size="12">console.log("main branch code");</text>
+  <text x="120" y="170" font-family="monospace" font-size="12">=======</text>
+  <text x="120" y="190" font-family="monospace" font-size="12">console.log("feature branch code");</text>
+  <text x="120" y="210" font-family="monospace" font-size="12">&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature</text>
+  <text x="500" y="150" font-size="11">← Your current branch (HEAD)</text>
+  <text x="500" y="170" font-size="11">← Separator</text>
+  <text x="500" y="190" font-size="11">← Incoming branch</text>
+  <rect x="150" y="280" width="500" height="80" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="400" y="310" text-anchor="middle" font-size="14" font-weight="bold">Resolution: Choose or Combine</text>
+  <text x="170" y="335" font-family="monospace" font-size="12">console.log("combined solution");</text>
+  <text x="170" y="350" font-family="monospace" font-size="12">// or pick one side, or write new code</text>
+</svg>
+
+---
+
+## Resolving Merge Conflicts
+
+```bash
+# Start merge
+git merge feature
+# CONFLICT in file.js
+
+# 1. Check status
+git status
+# Unmerged paths:
+#   both modified: file.js
+
+# 2. Open file, resolve conflicts
+# Remove <<<, ===, >>> markers
+# Keep desired code
+
+# 3. Stage resolved files
+git add file.js
+
+# 4. Complete merge
+git commit
+# or abort:
+git merge --abort
+```
+
+---
+
+## Merge Tools
+
+```bash
+# Configure merge tool
+git config --global merge.tool vimdiff
+
+# Use merge tool during conflict
+git mergetool
+
+# Popular merge tools:
+# - vimdiff      (Terminal)
+# - meld         (Linux/Mac)
+# - kdiff3       (Cross-platform)
+# - p4merge      (Perforce, free)
+# - Beyond Compare (Commercial)
+# - VS Code      (Built-in)
+
+# VS Code as merge tool
+git config --global merge.tool vscode
+git config --global mergetool.vscode.cmd \
+  'code --wait $MERGED'
+```
+
+---
+
+## Merge vs Rebase
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Merge vs Rebase</text>
+  <rect x="50" y="80" width="350" height="280" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="18" font-weight="bold">Merge</text>
+  <circle cx="120" cy="160" r="15" fill="#4CAF50"/>
+  <circle cx="180" cy="160" r="15" fill="#4CAF50"/>
+  <circle cx="180" cy="210" r="15" fill="#81C784"/>
+  <circle cx="240" cy="210" r="15" fill="#81C784"/>
+  <circle cx="300" cy="160" r="15" fill="#66BB6A"/>
+  <text x="300" y="165" text-anchor="middle" font-size="10" fill="white">M</text>
+  <line x1="135" y1="160" x2="165" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="180" y1="175" x2="180" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="195" y1="210" x2="225" y2="210" stroke="#333" stroke-width="2"/>
+  <line x1="195" y1="160" x2="285" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="255" y1="210" x2="285" y2="170" stroke="#333" stroke-width="2"/>
+  <text x="225" y="250" text-anchor="middle" font-size="12">✓ Preserves history</text>
+  <text x="225" y="270" text-anchor="middle" font-size="12">✓ Shows branches</text>
+  <text x="225" y="290" text-anchor="middle" font-size="12">✗ Merge commits</text>
+  <text x="225" y="310" text-anchor="middle" font-size="12">✗ Complex history</text>
+  <rect x="420" y="80" width="330" height="280" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="18" font-weight="bold">Rebase</text>
+  <circle cx="480" cy="160" r="15" fill="#2196F3"/>
+  <circle cx="540" cy="160" r="15" fill="#2196F3"/>
+  <circle cx="600" cy="160" r="15" fill="#64B5F6"/>
+  <circle cx="660" cy="160" r="15" fill="#64B5F6"/>
+  <line x1="495" y1="160" x2="525" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="555" y1="160" x2="585" y2="160" stroke="#333" stroke-width="2"/>
+  <line x1="615" y1="160" x2="645" y2="160" stroke="#333" stroke-width="2"/>
+  <text x="585" y="250" text-anchor="middle" font-size="12">✓ Linear history</text>
+  <text x="585" y="270" text-anchor="middle" font-size="12">✓ Clean timeline</text>
+  <text x="585" y="290" text-anchor="middle" font-size="12">✗ Rewrites history</text>
+  <text x="585" y="310" text-anchor="middle" font-size="12">✗ Loses branch context</text>
+</svg>
+
+---
+
+## Rebase Workflow
+
+```bash
+# Rebase feature onto main
+git checkout feature
+git rebase main
+
+# Interactive rebase to clean history
+git rebase -i main
+
+# If conflicts occur:
+# 1. Fix conflicts
+git add fixed-file.js
+# 2. Continue rebase
+git rebase --continue
+# Or abort:
+git rebase --abort
+
+# Pull with rebase (avoid merge commits)
+git pull --rebase origin main
+
+# Configure pull to always rebase
+git config pull.rebase true
+```
+
+---
+
+## When to Merge vs Rebase
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Choosing Between Merge and Rebase</text>
+  <rect x="50" y="80" width="350" height="120" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="16" font-weight="bold">Use Merge When:</text>
+  <text x="70" y="135" font-size="12">• Working on shared branches</text>
+  <text x="70" y="155" font-size="12">• Want to preserve branch history</text>
+  <text x="70" y="175" font-size="12">• After pushing to remote</text>
+  <rect x="420" y="80" width="330" height="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="16" font-weight="bold">Use Rebase When:</text>
+  <text x="440" y="135" font-size="12">• Cleaning local commits</text>
+  <text x="440" y="155" font-size="12">• Before pushing feature branch</text>
+  <text x="440" y="175" font-size="12">• Want linear history</text>
+  <rect x="150" y="220" width="500" height="140" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="400" y="250" text-anchor="middle" font-size="16" font-weight="bold">⚠️ Golden Rule of Rebase</text>
+  <text x="400" y="280" text-anchor="middle" font-size="14" font-weight="bold">Never rebase public branches!</text>
+  <text x="170" y="310" font-size="12">If others have based work on your commits,</text>
+  <text x="170" y="330" font-size="12">rebase will cause problems. Use merge instead.</text>
+</svg>
+
+---
+
+## Advanced Branch Patterns
+
+```bash
+# Create orphan branch (no parent)
+git checkout --orphan new-root
+git rm -rf .
+# Add new files
+git add .
+git commit -m "New root commit"
+
+# Track different remote branch
+git branch -u origin/different-branch
+
+# Push to different remote branch name
+git push origin local-branch:remote-branch
+
+# Create branch from stash
+git stash branch new-feature stash@{1}
+
+# Backup branch before dangerous operation
+git branch backup-$(date +%Y%m%d-%H%M%S)
+```
+
+---
+
+## Branch Protection Strategies
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Protecting Important Branches</text>
+  <rect x="100" y="80" width="600" height="60" fill="#4CAF50" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Protected: main branch</text>
+  <text x="400" y="125" text-anchor="middle" font-size="12" fill="white">Requires pull request, reviews, passing tests</text>
+  <rect x="50" y="160" width="320" height="180" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="210" y="190" text-anchor="middle" font-size="14" font-weight="bold">Local Protection</text>
+  <text x="70" y="215" font-size="11">Pre-push hook example:</text>
+  <text x="70" y="235" font-family="monospace" font-size="10">#!/bin/sh</text>
+  <text x="70" y="250" font-family="monospace" font-size="10">branch=$(git symbolic-ref HEAD)</text>
+  <text x="70" y="265" font-family="monospace" font-size="10">if [ "$branch" = "refs/heads/main" ]</text>
+  <text x="70" y="280" font-family="monospace" font-size="10">then</text>
+  <text x="70" y="295" font-family="monospace" font-size="10">  echo "Direct push to main blocked"</text>
+  <text x="70" y="310" font-family="monospace" font-size="10">  exit 1</text>
+  <text x="70" y="325" font-family="monospace" font-size="10">fi</text>
+  <rect x="430" y="160" width="320" height="180" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="590" y="190" text-anchor="middle" font-size="14" font-weight="bold">Remote Protection (GitHub/GitLab)</text>
+  <text x="450" y="215" font-size="11">• Require pull request reviews</text>
+  <text x="450" y="235" font-size="11">• Dismiss stale reviews</text>
+  <text x="450" y="255" font-size="11">• Require status checks</text>
+  <text x="450" y="275" font-size="11">• Include administrators</text>
+  <text x="450" y="295" font-size="11">• Restrict who can push</text>
+  <text x="450" y="315" font-size="11">• Prevent force pushes</text>
+</svg>
+
+---
+
+## Gitflow Workflow
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Gitflow Branch Model</text>
+  <line x1="100" y1="100" x2="700" y2="100" stroke="#4CAF50" stroke-width="3"/>
+  <text x="50" y="105" font-size="12">main</text>
+  <circle cx="150" cy="100" r="8" fill="#4CAF50"/>
+  <circle cx="650" cy="100" r="8" fill="#4CAF50"/>
+  <line x1="100" y1="160" x2="700" y2="160" stroke="#2196F3" stroke-width="3"/>
+  <text x="50" y="165" font-size="12">develop</text>
+  <line x1="200" y1="160" x2="250" y2="220" stroke="#FF9800" stroke-width="2"/>
+  <line x1="250" y1="220" x2="350" y2="220" stroke="#FF9800" stroke-width="2"/>
+  <line x1="350" y1="220" x2="400" y2="160" stroke="#FF9800" stroke-width="2"/>
+  <text x="300" y="240" text-anchor="middle" font-size="11">feature/</text>
+  <line x1="450" y1="160" x2="500" y2="100" stroke="#9C27B0" stroke-width="2"/>
+  <line x1="500" y1="100" x2="550" y2="100" stroke="#9C27B0" stroke-width="2"/>
+  <line x1="550" y1="100" x2="600" y2="160" stroke="#9C27B0" stroke-width="2"/>
+  <text x="525" y="90" text-anchor="middle" font-size="11">release/</text>
+  <line x1="300" y1="100" x2="320" y2="70" stroke="#F44336" stroke-width="2"/>
+  <line x1="320" y1="70" x2="340" y2="70" stroke="#F44336" stroke-width="2"/>
+  <line x1="340" y1="70" x2="360" y2="100" stroke="#F44336" stroke-width="2"/>
+  <text x="330" y="60" text-anchor="middle" font-size="11">hotfix/</text>
+  <rect x="150" y="280" width="500" height="80" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="305" text-anchor="middle" font-size="12" font-weight="bold">Branch Types:</text>
+  <text x="170" y="325" font-size="11">• main: Production-ready code</text>
+  <text x="170" y="345" font-size="11">• develop: Integration branch</text>
+  <text x="420" y="325" font-size="11">• feature/: New features</text>
+  <text x="420" y="345" font-size="11">• release/: Release prep • hotfix/: Emergency fixes</text>
+</svg>
