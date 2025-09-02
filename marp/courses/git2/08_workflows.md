@@ -523,3 +523,608 @@ Integrating automated testing and deployment:
 - No documentation or training
 
 **Solution:** Start simple, iterate based on team needs, document clearly, and ensure consistent adoption.
+
+---
+
+## Jenkins Integration Workflow
+
+`Jenkins` can automate many `Git` workflow steps:
+
+**Pipeline triggers:**
+```groovy
+pipeline {
+    agent any
+    triggers {
+        githubPush()
+    }
+    stages {
+        stage('Build') {
+            when { branch 'main' }
+            steps {
+                sh 'make build'
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'make test'
+            }
+        }
+        stage('Deploy') {
+            when { branch 'production' }
+            steps {
+                sh 'make deploy'
+            }
+        }
+    }
+}
+```
+
+**Branch-specific builds:**
+- Feature branches: run tests only
+- `develop`: run tests + integration tests
+- `main`: full build + deploy to staging
+- `production`: deploy to production
+
+---
+
+## Working with Pull Requests
+
+Pull requests enable code review and discussion before integration:
+
+**Creating effective pull requests:**
+```bash
+# Prepare your branch
+git checkout feature/user-authentication
+git rebase main
+git push -u origin feature/user-authentication
+```
+
+**PR best practices:**
+1. **Clear title and description**
+1. **Small, focused changes**
+1. **Include tests and documentation**
+1. **Reference related issues**
+1. **Request appropriate reviewers**
+
+**Review process:**
+- At least one approval required
+- Address feedback promptly
+- Keep discussions constructive
+- Update branch if main advances
+
+---
+
+## Gerrit Code Review Workflow
+
+`Gerrit` provides a different approach to code review:
+
+**Key concepts:**
+- Every commit becomes a change request
+- Review before integration (not after)
+- Score-based approval system
+- Automatic testing integration
+
+**Workflow:**
+
+```bash
+# Clone with commit-msg hook
+git clone ssh://user@gerrit:29418/project
+cd project
+scp -p -P 29418 user@gerrit:hooks/commit-msg .git/hooks/
+
+# Make changes and commit
+git add .
+git commit -m "Add user authentication
+
+Change-Id: I1234567890abcdef..."
+
+# Push for review
+git push origin HEAD:refs/for/main
+```
+
+---
+
+## Automated Testing Integration
+
+Integrate testing at multiple workflow points:
+
+**Pre-commit hooks:**
+```bash
+#!/bin/sh
+# .git/hooks/pre-commit
+npm test
+if [ $? -ne 0 ]; then
+    echo "Tests failed. Commit aborted."
+    exit 1
+fi
+```
+
+**CI/CD pipeline stages:**
+1. **Unit tests:** Fast, isolated tests
+1. **Integration tests:** Component interaction
+1. **End-to-end tests:** Full system validation
+1. **Performance tests:** Load and stress testing
+
+**Quality gates:**
+- Minimum test coverage
+- No critical security vulnerabilities
+- Code style compliance
+- Documentation updates
+
+---
+
+## Release Management Workflows
+
+**Semantic versioning with `Git` tags:**
+
+```bash
+# Major release (breaking changes)
+git tag -a v2.0.0 -m "Release 2.0.0 - Breaking API changes"
+
+# Minor release (new features)
+git tag -a v1.5.0 -m "Release 1.5.0 - Add user profiles"
+
+# Patch release (bug fixes)
+git tag -a v1.4.1 -m "Release 1.4.1 - Fix login bug"
+
+git push origin --tags
+```
+
+**Release branch workflow:**
+
+```bash
+# Start release
+git checkout -b release/v1.5.0 develop
+
+# Final preparations
+git commit -m "Update version numbers"
+git commit -m "Update changelog"
+
+# Merge to main and tag
+git checkout main
+git merge --no-ff release/v1.5.0
+git tag -a v1.5.0 -m "Release 1.5.0"
+
+# Merge back to develop
+git checkout develop
+git merge --no-ff release/v1.5.0
+```
+
+---
+
+## Hotfix Workflows
+
+Handle urgent production fixes:
+
+**Git Flow hotfix:**
+
+```bash
+# Start hotfix from main
+git checkout -b hotfix/security-patch main
+
+# Make the fix
+git commit -m "Fix critical security vulnerability"
+
+# Merge to main
+git checkout main
+git merge --no-ff hotfix/security-patch
+git tag -a v1.4.2 -m "Hotfix v1.4.2"
+
+# Merge to develop
+git checkout develop
+git merge --no-ff hotfix/security-patch
+
+# Deploy immediately
+git push origin main --tags
+```
+
+**Emergency deployment process:**
+1. Create hotfix branch
+1. Implement minimal fix
+1. Test thoroughly
+1. Deploy to production
+1. Integrate back to development branches
+
+---
+
+## Multi-Repository Workflows
+
+Managing workflows across multiple repositories:
+
+**Microservices architecture:**
+```bash
+# Each service has its own repository
+user-service/
+payment-service/
+notification-service/
+```
+
+**Coordination strategies:**
+1. **Independent releases:** Each service deploys separately
+1. **Synchronized releases:** All services deploy together
+1. **Progressive deployment:** Gradual rollout across services
+
+**Tools for multi-repo management:**
+- `Git` submodules
+- `Git` subtrees
+- Monorepo tools (Lerna, Nx)
+- Container orchestration
+
+---
+
+## Large Team Workflows
+
+Scaling `Git` workflows for large organizations:
+
+**Branch permissions:**
+
+```bash
+# Only maintainers can merge to main
+main: requires reviews from CODEOWNERS
+
+# Feature branches can be created by anyone
+feature/*: open access
+
+# Release branches restricted
+release/*: requires release team approval
+```
+
+**Code ownership:**
+
+```txt
+# CODEOWNERS file
+/frontend/          @frontend-team
+/backend/           @backend-team
+/docs/              @docs-team
+*.md                @docs-team
+```
+
+**Approval workflows:**
+- Multiple reviewers required
+- Domain expert approval
+- Security team review for sensitive changes
+- Automated compliance checks
+
+---
+
+## Monorepo vs Polyrepo Workflows
+
+**Monorepo benefits:**
+- Atomic changes across projects
+- Shared tooling and configuration
+- Easier dependency management
+- Unified CI/CD pipeline
+
+**Monorepo workflow:**
+
+```bash
+# Project structure
+project/
+├── frontend/
+├── backend/
+├── shared/
+└── tools/
+
+# Build specific components
+npm run build:frontend
+npm run build:backend
+```
+
+**Polyrepo benefits:**
+- Independent team ownership
+- Separate release cycles
+- Isolated dependencies
+- Smaller repository size
+
+---
+
+## Workflow Automation Tools
+
+**GitHub Actions:**
+```yaml
+name: CI/CD Pipeline
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Run tests
+      run: npm test
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+    - name: Deploy to production
+      run: ./deploy.sh
+```
+
+**GitLab CI/CD:**
+```yaml
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm test
+  only:
+    - branches
+
+deploy_production:
+  stage: deploy
+  script:
+    - ./deploy.sh production
+  only:
+    - main
+```
+
+---
+
+## Workflow Documentation
+
+**Essential documentation:**
+
+1. **Workflow overview:**
+    - Branch strategy explanation
+    - Integration process
+    - Release procedures
+
+1. **Step-by-step guides:**
+    - Creating feature branches
+    - Code review process
+    - Deployment procedures
+
+1. **Troubleshooting guides:**
+    - Common merge conflicts
+    - Failed CI builds
+    - Rollback procedures
+
+**Documentation format:**
+```markdown
+# Development Workflow
+
+## Feature Development
+1. Create branch: `git checkout -b feature/TICKET-123`
+1. Develop and test locally
+1. Push and create pull request
+1. Address review feedback
+1. Merge after approval
+
+## Code Review Checklist
+- [ ] Tests included and passing
+- [ ] Documentation updated
+- [ ] No breaking changes
+- [ ] Security considerations addressed
+```
+
+---
+
+## Workflow Metrics and Monitoring
+
+**Key metrics to track:**
+
+1. **Development velocity:**
+    - Time from branch creation to merge
+    - Number of commits per feature
+    - Code review turnaround time
+
+1. **Quality metrics:**
+    - Build failure rate
+    - Test coverage trends
+    - Post-deployment issues
+
+1. **Collaboration metrics:**
+    - Pull request review participation
+    - Merge conflict frequency
+    - Branch lifetime
+
+**Tools for metrics:**
+- GitHub/GitLab analytics
+- Jenkins build metrics
+- Custom dashboards
+- Third-party tools (LinearB, Velocity)
+
+---
+
+## Workflow Troubleshooting
+
+**Common workflow problems:**
+
+1. **Merge conflicts increase:**
+    - Solution: Smaller, more frequent merges
+    - Solution: Better communication between teams
+    - Solution: Automated conflict detection
+
+1. **Long-lived feature branches:**
+    - Solution: Break features into smaller chunks
+    - Solution: Regular rebasing on main
+    - Solution: Feature flags for partial completion
+
+1. **Broken main branch:**
+    - Solution: Mandatory pre-merge testing
+    - Solution: Rollback procedures
+    - Solution: Branch protection rules
+
+1. **Slow code reviews:**
+    - Solution: Smaller pull requests
+    - Solution: Clear reviewer assignments
+    - Solution: Review time targets
+
+---
+
+## Migrating Between Workflows
+
+**From centralized to feature branch:**
+```bash
+# Train team on branching
+# Implement branch protection
+# Establish code review process
+# Gradually enforce new workflow
+```
+
+**From Git Flow to GitHub Flow:**
+```bash
+# Simplify branch structure
+# Remove unnecessary branches
+# Focus on main branch
+# Implement continuous deployment
+```
+
+**Migration best practices:**
+1. Plan the transition carefully
+1. Train team members
+1. Run workflows in parallel initially
+1. Document new processes clearly
+1. Monitor and adjust based on feedback
+
+---
+
+## Custom Workflow Development
+
+**Designing your own workflow:**
+
+1. **Assess current needs:**
+    - Team size and distribution
+    - Release frequency
+    - Quality requirements
+    - Compliance needs
+
+1. **Start with proven patterns:**
+    - Adapt existing workflows
+    - Don't reinvent unnecessarily
+    - Learn from similar organizations
+
+1. **Iterate and improve:**
+    - Start simple
+    - Add complexity gradually
+    - Gather team feedback
+    - Measure effectiveness
+
+**Example custom workflow:**
+```bash
+# Company-specific branch naming
+epic/PROJ-123-user-management
+story/PROJ-124-login-form
+task/PROJ-125-password-validation
+```
+
+---
+
+## Workflow Training and Adoption
+
+**Training program structure:**
+
+1. **Git fundamentals:**
+    - Basic commands
+    - Branching concepts
+    - Merge vs rebase
+
+1. **Workflow specifics:**
+    - Branch naming conventions
+    - Code review process
+    - Deployment procedures
+
+1. **Tools and automation:**
+    - CI/CD pipeline usage
+    - Code review tools
+    - Monitoring dashboards
+
+**Adoption strategies:**
+- Pair programming sessions
+- Workflow champions
+- Regular retrospectives
+- Gradual enforcement
+
+---
+
+## Future Workflow Trends
+
+**Emerging patterns:**
+
+1. **Trunk-based development:**
+    - Very short-lived branches
+    - Feature flags for incomplete work
+    - Continuous integration emphasis
+
+1. **AI-assisted workflows:**
+    - Automated code review
+    - Intelligent conflict resolution
+    - Predictive merge analysis
+
+1. **Cloud-native workflows:**
+    - Container-based development
+    - Infrastructure as code
+    - GitOps practices
+
+**Preparing for change:**
+- Stay flexible in workflow design
+- Invest in automation
+- Focus on principles over tools
+- Continuous learning and adaptation
+
+---
+
+## Lab Exercise: Implementing a Workflow
+
+**Scenario:** Small development team (5 developers) building a web application with weekly releases.
+
+**Tasks:**
+1. **Design a workflow:**
+    - Choose branch strategy
+    - Define integration process
+    - Plan release procedures
+
+1. **Implement branch protection:**
+    - Set up repository rules
+    - Configure automated testing
+    - Establish code review requirements
+
+1. **Create documentation:**
+    - Write workflow guide
+    - Document troubleshooting steps
+    - Create team training materials
+
+1. **Practice the workflow:**
+    - Simulate feature development
+    - Handle merge conflicts
+    - Execute release process
+
+**Deliverables:** Complete workflow documentation, configured repository, and team training presentation.
+
+---
+
+## Workflow Summary and Best Practices
+
+**Key takeaways:**
+
+1. **Choose workflows that fit your context:**
+    - Team size and experience
+    - Release requirements
+    - Quality standards
+
+1. **Start simple and evolve:**
+    - Don't over-engineer initially
+    - Add complexity as needed
+    - Regular workflow retrospectives
+
+1. **Automation is essential:**
+    - Automated testing
+    - CI/CD pipelines
+    - Quality gates
+
+1. **Documentation and training:**
+    - Clear, up-to-date guides
+    - Regular team training
+    - Onboarding materials
+
+**Remember:** The best workflow is one that your team actually follows consistently and that supports your business objectives.
