@@ -664,3 +664,670 @@ class UserAuth:
         Returns:
             Dict with token and user data
 ```
+
+---
+
+## Design Pattern Implementation
+
+Ensuring correct pattern usage:
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Common Patterns in AI Code</text>
+  <rect x="150" y="110" width="180" height="60" fill="#3498DB" rx="5"/>
+  <text x="240" y="145" text-anchor="middle" fill="white" font-size="12">Singleton</text>
+  <text x="240" y="160" text-anchor="middle" fill="white" font-size="10">Database connections</text>
+  <rect x="360" y="110" width="180" height="60" fill="#2ECC71" rx="5"/>
+  <text x="450" y="145" text-anchor="middle" fill="white" font-size="12">Factory</text>
+  <text x="450" y="160" text-anchor="middle" fill="white" font-size="10">Object creation</text>
+  <rect x="150" y="190" width="180" height="60" fill="#E74C3C" rx="5"/>
+  <text x="240" y="225" text-anchor="middle" fill="white" font-size="12">Repository</text>
+  <text x="240" y="240" text-anchor="middle" fill="white" font-size="10">Data access</text>
+  <rect x="360" y="190" width="180" height="60" fill="#F39C12" rx="5"/>
+  <text x="450" y="225" text-anchor="middle" fill="white" font-size="12">Observer</text>
+  <text x="450" y="240" text-anchor="middle" fill="white" font-size="10">Event handling</text>
+  <rect x="570" y="150" width="120" height="60" fill="#9B59B6" rx="5"/>
+  <text x="630" y="185" text-anchor="middle" fill="white" font-size="12">Strategy</text>
+  <text x="630" y="200" text-anchor="middle" fill="white" font-size="10">Algorithms</text>
+</svg>
+
+---
+
+## SOLID Principles Enforcement
+
+AI should follow SOLID:
+
+```typescript
+// S - Single Responsibility
+class UserValidator {
+  validate(user: User): ValidationResult {
+    // Only validation logic
+  }
+}
+
+// O - Open/Closed
+interface PaymentProcessor {
+  process(amount: number): Promise<Result>;
+}
+class StripeProcessor implements PaymentProcessor {}
+class PayPalProcessor implements PaymentProcessor {}
+
+// L - Liskov Substitution
+// D - Dependency Inversion
+class OrderService {
+  constructor(private payment: PaymentProcessor) {}
+  // Works with any PaymentProcessor
+}
+
+// I - Interface Segregation
+interface Readable { read(): Data; }
+interface Writable { write(data: Data): void; }
+```
+
+---
+
+## Anti-Pattern Detection
+
+Common anti-patterns to avoid:
+
+```javascript
+// ❌ God Object - Too many responsibilities
+class UserManager {
+  authenticate() {}
+  saveToDatabase() {}
+  sendEmail() {}
+  generateReport() {}
+  validateInput() {}
+  handlePayment() {}
+}
+
+// ✅ Separated Concerns
+class AuthService { authenticate() {} }
+class UserRepository { save() {} }
+class EmailService { send() {} }
+
+// ❌ Callback Hell
+getData(function(a) {
+  getMoreData(a, function(b) {
+    getMoreData(b, function(c) {
+      // Deeply nested
+    });
+  });
+});
+
+// ✅ Async/Await
+const a = await getData();
+const b = await getMoreData(a);
+const c = await getMoreData(b);
+```
+
+---
+
+## Code Smell Recognition
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Code Smells to Fix</text>
+  <rect x="150" y="110" width="500" height="40" fill="#E74C3C" rx="5"/>
+  <text x="160" y="135" fill="white" font-size="12">🚫 Long Methods: Split into smaller functions</text>
+  <rect x="150" y="160" width="500" height="40" fill="#F39C12" rx="5"/>
+  <text x="160" y="185" fill="white" font-size="12">🚫 Duplicate Code: Extract to utilities</text>
+  <rect x="150" y="210" width="500" height="40" fill="#3498DB" rx="5"/>
+  <text x="160" y="235" fill="white" font-size="12">🚫 Large Classes: Apply Single Responsibility</text>
+  <rect x="150" y="260" width="500" height="40" fill="#27AE60" rx="5"/>
+  <text x="160" y="285" fill="white" font-size="12">🚫 Dead Code: Remove unused functions</text>
+</svg>
+
+---
+
+## Continuous Improvement: Metrics Tracking
+
+Monitor quality over time:
+
+```python
+# Quality metrics dashboard
+class QualityMetrics:
+    def calculate_metrics(self, codebase):
+        return {
+            'coverage': self.test_coverage(),
+            'complexity': {
+                'cyclomatic': self.cyclomatic_complexity(),
+                'cognitive': self.cognitive_complexity()
+            },
+            'duplication': self.duplication_percentage(),
+            'debt': {
+                'hours': self.technical_debt_hours(),
+                'issues': self.debt_issues_count()
+            },
+            'trends': {
+                'improving': self.improving_metrics(),
+                'degrading': self.degrading_metrics()
+            }
+        }
+
+    def generate_report(self):
+        """Weekly quality report"""
+        return {
+            'score': self.quality_score(),
+            'delta': self.week_over_week_change(),
+            'recommendations': self.get_improvements()
+        }
+```
+
+---
+
+## Feedback Loops
+
+Continuous learning from metrics:
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="400" cy="200" r="120" fill="none" stroke="#3498DB" stroke-width="3"/>
+  <circle cx="400" cy="80" r="30" fill="#E74C3C"/>
+  <text x="400" y="85" text-anchor="middle" fill="white" font-size="12">Measure</text>
+  <circle cx="520" cy="200" r="30" fill="#F39C12"/>
+  <text x="520" y="205" text-anchor="middle" fill="white" font-size="12">Analyze</text>
+  <circle cx="400" cy="320" r="30" fill="#27AE60"/>
+  <text x="400" y="325" text-anchor="middle" fill="white" font-size="12">Improve</text>
+  <circle cx="280" cy="200" r="30" fill="#9B59B6"/>
+  <text x="280" y="205" text-anchor="middle" fill="white" font-size="12">Apply</text>
+  <path d="M 420 100 L 500 180" stroke="#34495E" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M 520 230 L 420 300" stroke="#34495E" stroke-width="2" marker-end="url(#f2)"/>
+  <path d="M 370 320 L 300 220" stroke="#34495E" stroke-width="2" marker-end="url(#f3)"/>
+  <path d="M 280 170 L 370 90" stroke="#34495E" stroke-width="2" marker-end="url(#f4)"/>
+  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold">Continuous</text>
+  <text x="400" y="220" text-anchor="middle" font-size="14" font-weight="bold">Improvement</text>
+  <defs>
+    <marker id="f1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
+    </marker>
+    <marker id="f2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
+    </marker>
+    <marker id="f3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
+    </marker>
+    <marker id="f4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Process Optimization
+
+Refining development workflow:
+
+```yaml
+# Continuous improvement process
+improvement_cycle:
+  weekly:
+    - metric_review: "Analyze quality trends"
+    - retrospective: "Team discussion"
+    - action_items: "Identify improvements"
+
+  monthly:
+    - deep_analysis: "Comprehensive review"
+    - tool_evaluation: "Assess AI tool effectiveness"
+    - standard_updates: "Refine guidelines"
+
+  quarterly:
+    - benchmark: "Industry comparison"
+    - training: "Skill development"
+    - strategy_review: "Long-term planning"
+
+automation:
+  - auto_fix: "Formatting, simple issues"
+  - auto_suggest: "Improvements via AI"
+  - auto_report: "Quality dashboards"
+```
+
+---
+
+## Best Practice Evolution
+
+Adapting standards over time:
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Standards Evolution</text>
+  <rect x="150" y="110" width="150" height="60" fill="#3498DB" rx="5"/>
+  <text x="225" y="145" text-anchor="middle" fill="white" font-size="12">2020</text>
+  <text x="225" y="160" text-anchor="middle" fill="white" font-size="10">REST APIs</text>
+  <rect x="325" y="110" width="150" height="60" fill="#2ECC71" rx="5"/>
+  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">2022</text>
+  <text x="400" y="160" text-anchor="middle" fill="white" font-size="10">GraphQL</text>
+  <rect x="500" y="110" width="150" height="60" fill="#E74C3C" rx="5"/>
+  <text x="575" y="145" text-anchor="middle" fill="white" font-size="12">2024</text>
+  <text x="575" y="160" text-anchor="middle" fill="white" font-size="10">tRPC</text>
+  <path d="M 300 140 L 325 140" stroke="white" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M 475 140 L 500 140" stroke="white" stroke-width="2" marker-end="url(#e2)"/>
+  <text x="400" y="220" text-anchor="middle" fill="white" font-size="12">Standards must evolve with technology</text>
+  <text x="400" y="250" text-anchor="middle" fill="white" font-size="12">• Regular reviews</text>
+  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">• Team consensus</text>
+  <text x="400" y="290" text-anchor="middle" fill="white" font-size="12">• Gradual adoption</text>
+  <defs>
+    <marker id="e1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="white"/>
+    </marker>
+    <marker id="e2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="white"/>
+    </marker>
+  </defs>
+</svg>
+
+---
+
+## Quality Automation: Static Analysis
+
+Automated code analysis tools:
+
+```javascript
+// ESLint configuration for automation
+module.exports = {
+  plugins: ['security', 'sonarjs'],
+  extends: [
+    'eslint:recommended',
+    'plugin:security/recommended',
+    'plugin:sonarjs/recommended'
+  ],
+  rules: {
+    'complexity': ['error', 10],
+    'max-lines-per-function': ['error', 50],
+    'max-depth': ['error', 4],
+    'no-duplicate-imports': 'error',
+    'sonarjs/cognitive-complexity': ['error', 15],
+    'security/detect-object-injection': 'error'
+  }
+};
+
+// Auto-fix on save
+// "editor.codeActionsOnSave": {
+//   "source.fixAll.eslint": true
+// }
+```
+
+---
+
+## Dynamic Analysis
+
+Runtime quality checks:
+
+```python
+# Performance monitoring decorator
+import time
+import logging
+from functools import wraps
+
+def monitor_performance(threshold_ms=100):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            result = func(*args, **kwargs)
+            duration = (time.time() - start) * 1000
+
+            if duration > threshold_ms:
+                logging.warning(
+                    f"{func.__name__} took {duration:.2f}ms"
+                )
+
+            # Send metrics
+            metrics.record('function_duration', {
+                'name': func.__name__,
+                'duration': duration
+            })
+
+            return result
+        return wrapper
+    return decorator
+```
+
+---
+
+## Tool Integration
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Quality Tool Stack</text>
+  <rect x="150" y="110" width="140" height="50" fill="#3498DB" rx="5"/>
+  <text x="220" y="140" text-anchor="middle" fill="white" font-size="12">SonarQube</text>
+  <rect x="310" y="110" width="140" height="50" fill="#2ECC71" rx="5"/>
+  <text x="380" y="140" text-anchor="middle" fill="white" font-size="12">CodeClimate</text>
+  <rect x="470" y="110" width="140" height="50" fill="#E74C3C" rx="5"/>
+  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Snyk</text>
+  <rect x="150" y="180" width="140" height="50" fill="#F39C12" rx="5"/>
+  <text x="220" y="210" text-anchor="middle" fill="white" font-size="12">Jest/Mocha</text>
+  <rect x="310" y="180" width="140" height="50" fill="#9B59B6" rx="5"/>
+  <text x="380" y="210" text-anchor="middle" fill="white" font-size="12">Cypress</text>
+  <rect x="470" y="180" width="140" height="50" fill="#1ABC9C" rx="5"/>
+  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">k6/Artillery</text>
+  <rect x="230" y="250" width="140" height="50" fill="#95A5A6" rx="5"/>
+  <text x="300" y="280" text-anchor="middle" fill="white" font-size="12">Prettier</text>
+  <rect x="390" y="250" width="140" height="50" fill="#7F8C8D" rx="5"/>
+  <text x="460" y="280" text-anchor="middle" fill="white" font-size="12">Husky</text>
+</svg>
+
+---
+
+## Pre-commit Hooks
+
+Enforce quality before commit:
+
+```json
+// package.json with husky setup
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write",
+      "jest --findRelatedTests"
+    ],
+    "*.{css,md}": "prettier --write"
+  }
+}
+```
+
+Prevent bad code from entering repository
+
+---
+
+## CI/CD Quality Gates
+
+Automated quality enforcement:
+
+```yaml
+# Quality gates in CI/CD
+quality_gates:
+  - stage: Analysis
+    steps:
+      - lint:
+          fail_on: error
+      - typecheck:
+          strict: true
+      - security_scan:
+          severity: high
+
+  - stage: Testing
+    requirements:
+      - coverage: ">= 80%"
+      - passing: "100%"
+      - performance: "p95 < 200ms"
+
+  - stage: Deploy Gate
+    conditions:
+      - quality_score: ">= B"
+      - no_critical_issues: true
+      - approved_by: 2
+```
+
+---
+
+## Risk Management: Edge Case Handling
+
+Comprehensive edge case coverage:
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Edge Case Categories</text>
+  <rect x="150" y="110" width="220" height="50" fill="#E74C3C" rx="5"/>
+  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Boundary Values</text>
+  <text x="260" y="155" text-anchor="middle" fill="white" font-size="10">0, -1, MAX_INT, null</text>
+  <rect x="430" y="110" width="220" height="50" fill="#F39C12" rx="5"/>
+  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Invalid Input</text>
+  <text x="540" y="155" text-anchor="middle" fill="white" font-size="10">Wrong types, malformed</text>
+  <rect x="150" y="180" width="220" height="50" fill="#3498DB" rx="5"/>
+  <text x="260" y="210" text-anchor="middle" fill="white" font-size="12">Concurrency</text>
+  <text x="260" y="225" text-anchor="middle" fill="white" font-size="10">Race conditions, deadlocks</text>
+  <rect x="430" y="180" width="220" height="50" fill="#27AE60" rx="5"/>
+  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">Resource Limits</text>
+  <text x="540" y="225" text-anchor="middle" fill="white" font-size="10">Memory, disk, network</text>
+  <rect x="290" y="250" width="220" height="50" fill="#9B59B6" rx="5"/>
+  <text x="400" y="280" text-anchor="middle" fill="white" font-size="12">External Failures</text>
+  <text x="400" y="295" text-anchor="middle" fill="white" font-size="10">API down, timeout</text>
+</svg>
+
+---
+
+## Failure Recovery
+
+Graceful error handling:
+
+```typescript
+// Resilient error handling pattern
+class ResilientService {
+  async fetchData(id: string): Promise<Result<Data, Error>> {
+    try {
+      // Primary attempt
+      const data = await this.primary.fetch(id);
+      return { success: true, data };
+    } catch (primaryError) {
+      logger.warn('Primary failed', primaryError);
+
+      try {
+        // Fallback to cache
+        const cached = await this.cache.get(id);
+        if (cached) {
+          return { success: true, data: cached };
+        }
+      } catch (cacheError) {
+        logger.warn('Cache failed', cacheError);
+      }
+
+      // Return degraded response
+      return {
+        success: false,
+        error: new ServiceError('Service degraded'),
+        fallback: this.getDefaultData()
+      };
+    }
+  }
+}
+```
+
+---
+
+## Security Testing
+
+Security-focused testing:
+
+```python
+# Security test cases
+import pytest
+from security_tests import SQLInjectionTester
+
+class TestSecurity:
+    def test_sql_injection_prevention(self):
+        """Test against SQL injection"""
+        payloads = [
+            "'; DROP TABLE users; --",
+            "1' OR '1'='1",
+            "admin'--",
+            "1' UNION SELECT * FROM users"
+        ]
+
+        for payload in payloads:
+            result = api.search(payload)
+            assert "error" not in result
+            assert "SQL" not in str(result)
+
+    def test_xss_prevention(self):
+        """Test XSS protection"""
+        xss_payload = "<script>alert('XSS')</script>"
+        result = api.submit_comment(xss_payload)
+        assert "<script>" not in result.rendered_html
+
+    def test_rate_limiting(self):
+        """Test rate limiting"""
+        for i in range(101):
+            response = api.request()
+            if i > 99:
+                assert response.status == 429
+```
+
+---
+
+## Performance Testing
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Performance Test Levels</text>
+  <rect x="150" y="110" width="500" height="40" fill="#3498DB" rx="5"/>
+  <text x="160" y="135" fill="white" font-size="12">Unit: Individual function performance (&lt;10ms)</text>
+  <rect x="150" y="160" width="500" height="40" fill="#2ECC71" rx="5"/>
+  <text x="160" y="185" fill="white" font-size="12">Integration: API endpoint response (&lt;200ms)</text>
+  <rect x="150" y="210" width="500" height="40" fill="#F39C12" rx="5"/>
+  <text x="160" y="235" fill="white" font-size="12">Load: System under normal load (100 users)</text>
+  <rect x="150" y="260" width="500" height="40" fill="#E74C3C" rx="5"/>
+  <text x="160" y="285" fill="white" font-size="12">Stress: Breaking point identification (1000+ users)</text>
+</svg>
+
+---
+
+## Documentation Quality
+
+Maintaining documentation standards:
+
+```markdown
+# Documentation Checklist
+
+## Code Documentation ✓
+- [ ] All public APIs documented
+- [ ] Complex logic explained
+- [ ] Examples provided
+- [ ] Edge cases noted
+
+## Project Documentation ✓
+- [ ] README complete
+- [ ] Setup instructions tested
+- [ ] Architecture documented
+- [ ] API reference current
+
+## Process Documentation ✓
+- [ ] Deployment process
+- [ ] Troubleshooting guide
+- [ ] Contributing guidelines
+- [ ] Security procedures
+
+## Keep docs in sync with code!
+```
+
+---
+
+## Knowledge Sharing
+
+Spreading best practices:
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
+  <circle cx="400" cy="200" r="30" fill="#E74C3C"/>
+  <text x="400" y="205" text-anchor="middle" fill="white" font-size="12">Team</text>
+  <circle cx="400" cy="100" r="20" fill="#F39C12"/>
+  <text x="400" y="105" text-anchor="middle" fill="white" font-size="10">Docs</text>
+  <circle cx="480" cy="150" r="20" fill="#27AE60"/>
+  <text x="480" y="155" text-anchor="middle" fill="white" font-size="10">Reviews</text>
+  <circle cx="500" cy="230" r="20" fill="#9B59B6"/>
+  <text x="500" y="235" text-anchor="middle" fill="white" font-size="10">Pairing</text>
+  <circle cx="450" cy="290" r="20" fill="#3498DB"/>
+  <text x="450" y="295" text-anchor="middle" fill="white" font-size="10">Demos</text>
+  <circle cx="350" cy="290" r="20" fill="#2ECC71"/>
+  <text x="350" y="295" text-anchor="middle" fill="white" font-size="10">Wiki</text>
+  <circle cx="300" cy="230" r="20" fill="#E67E22"/>
+  <text x="300" y="235" text-anchor="middle" fill="white" font-size="10">Training</text>
+  <circle cx="320" cy="150" r="20" fill="#1ABC9C"/>
+  <text x="320" y="155" text-anchor="middle" fill="white" font-size="10">Standards</text>
+</svg>
+
+---
+
+## Review Automation
+
+AI-assisted code reviews:
+
+```javascript
+// AI review configuration
+const aiReviewConfig = {
+  checks: {
+    security: {
+      enabled: true,
+      severity: 'high',
+      rules: ['no-eval', 'no-injection', 'secure-random']
+    },
+    performance: {
+      enabled: true,
+      thresholds: {
+        complexity: 10,
+        fileSize: 500, // KB
+        functionLength: 50
+      }
+    },
+    style: {
+      enabled: true,
+      preset: 'team-standard'
+    }
+  },
+
+  autoSuggest: {
+    improvements: true,
+    alternatives: true,
+    bestPractices: true
+  },
+
+  blockMerge: {
+    onCritical: true,
+    onHighSeverity: false
+  }
+};
+```
+
+---
+
+## Quality Culture
+
+Building quality-first mindset:
+
+```yaml
+quality_culture:
+  principles:
+    - ownership: "Every developer owns quality"
+    - prevention: "Fix root causes, not symptoms"
+    - continuous: "Always improving"
+    - measurement: "Data-driven decisions"
+
+  practices:
+    - peer_reviews: "All code reviewed"
+    - testing: "TDD/BDD approach"
+    - documentation: "Code explains itself"
+    - learning: "Share knowledge freely"
+
+  recognition:
+    - quality_champion: "Monthly recognition"
+    - improvement_bonus: "Reward improvements"
+    - learning_time: "20% for learning"
+```
+
+---
+
+## Technical Debt Management
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
+  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Debt Quadrants</text>
+  <line x1="400" y1="100" x2="400" y2="330" stroke="white" stroke-width="2"/>
+  <line x1="120" y1="215" x2="680" y2="215" stroke="white" stroke-width="2"/>
+  <text x="260" y="160" text-anchor="middle" fill="#E74C3C" font-size="14" font-weight="bold">Reckless & Deliberate</text>
+  <text x="260" y="180" text-anchor="middle" fill="#E74C3C" font-size="11">"We don't have time"</text>
+  <text x="540" y="160" text-anchor="middle" fill="#F39C12" font-size="14" font-weight="bold">Prudent & Deliberate</text>
+  <text x="540" y="180" text-anchor="middle" fill="#F39C12" font-size="11">"Ship now, refactor later"</text>
+  <text x="260" y="270" text-anchor="middle" fill="#95A5A6" font-size="14" font-weight="bold">Reckless & Inadvertent</text>
+  <text x="260" y="290" text-anchor="middle" fill="#95A5A6" font-size="11">"What's layering?"</text>
+  <text x="540" y="270" text-anchor="middle" fill="#27AE60" font-size="14" font-weight="bold">Prudent & Inadvertent</text>
+  <text x="540" y="290" text-anchor="middle" fill="#27AE60" font-size="11">"Now we know better"</text>
+</svg>
