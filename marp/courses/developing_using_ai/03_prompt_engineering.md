@@ -801,3 +801,301 @@ Review this {language} code for {project_type}:
 Focus on: {priorities}
 Team standards: {guidelines}
 ```
+## Context Window Management
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="80" fill="#3498DB" rx="10"/>
+  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">Context Window</text>
+  <rect x="100" y="150" width="180" height="40" fill="#27AE60" rx="5"/>
+  <text x="190" y="175" text-anchor="middle" fill="white" font-size="12">Essential Context</text>
+  <rect x="290" y="150" width="180" height="40" fill="#F39C12" rx="5"/>
+  <text x="380" y="175" text-anchor="middle" fill="white" font-size="12">Relevant Code</text>
+  <rect x="480" y="150" width="220" height="40" fill="#E74C3C" rx="5"/>
+  <text x="590" y="175" text-anchor="middle" fill="white" font-size="12">Nice-to-Have Details</text>
+  <text x="400" y="240" text-anchor="middle" font-size="14">Prioritize information by relevance</text>
+  <rect x="150" y="270" width="500" height="30" fill="#95A5A6" rx="5"/>
+  <rect x="150" y="270" width="350" height="30" fill="#7F8C8D" rx="5"/>
+  <rect x="150" y="270" width="180" height="30" fill="#34495E" rx="5"/>
+  <text x="400" y="330" text-anchor="middle" font-size="12">Use only what's necessary for the task</text>
+</svg>
+
+---
+
+## Prompt Length Optimization
+
+Finding the sweet spot:
+
+**Too Short**: Missing critical context
+```markdown
+"Fix this bug"
+```
+
+**Too Long**: Dilutes important information
+```markdown
+[500 lines of context for a simple question]
+```
+
+**Just Right**: Balanced and focused
+```markdown
+Context: Python web scraper using BeautifulSoup
+Issue: Getting AttributeError on line 23
+Code: [relevant 20 lines]
+Task: Fix the error and explain why it occurred
+```
+
+---
+
+## Prompt Versioning
+
+Track what works:
+
+```markdown
+# v1.0 - Basic request
+"Create a login function"
+
+# v1.1 - Added specifications  
+"Create a login function with email/password"
+
+# v1.2 - Added security requirements
+"Create a secure login function with:
+- Email/password validation
+- Rate limiting
+- SQL injection prevention"
+
+# v1.3 - Added format requirements [BEST]
+"Create a secure login function with:
+- Email/password validation
+- Rate limiting  
+- SQL injection prevention
+Return: {success: bool, token?: string, error?: string}"
+```
+
+Document successful prompts for reuse
+
+---
+
+## Common Prompt Mistakes
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Avoid These Pitfalls</text>
+  <rect x="50" y="70" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="200" y="105" text-anchor="middle" fill="white" font-size="14">❌ Ambiguous Requirements</text>
+  <rect x="450" y="70" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="600" y="105" text-anchor="middle" fill="white" font-size="14">❌ Missing Context</text>
+  <rect x="50" y="150" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="200" y="185" text-anchor="middle" fill="white" font-size="14">❌ No Success Criteria</text>
+  <rect x="450" y="150" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="600" y="185" text-anchor="middle" fill="white" font-size="14">❌ Conflicting Instructions</text>
+  <rect x="50" y="230" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="200" y="265" text-anchor="middle" fill="white" font-size="14">❌ No Example Output</text>
+  <rect x="450" y="230" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="600" y="265" text-anchor="middle" fill="white" font-size="14">❌ Wrong Level of Detail</text>
+  <rect x="250" y="310" width="300" height="60" fill="#E74C3C" rx="5"/>
+  <text x="400" y="345" text-anchor="middle" fill="white" font-size="14">❌ Assuming AI Knowledge</text>
+</svg>
+
+---
+
+## Prompt Debugging
+
+When results aren't what you expected:
+
+1. **Check specificity**: Is the request clear?
+1. **Verify context**: Is all necessary information provided?
+1. **Review constraints**: Are limitations clearly stated?
+1. **Examine examples**: Do examples match expectations?
+1. **Test incrementally**: Break complex prompts into parts
+1. **Compare outputs**: Try variations to identify issues
+
+Debug prompts like code - systematically
+
+---
+
+## Domain-Specific Prompting
+
+Tailoring to your field:
+
+**Frontend Development**:
+```markdown
+Create a React component for a data table with:
+- TypeScript interfaces
+- Styled-components
+- Accessibility (ARIA labels)
+- Mobile responsive
+- Virtual scrolling for 10k+ rows
+```
+
+**Data Science**:
+```markdown
+Write a Python function using pandas to:
+- Clean missing data (forward fill for time series)
+- Detect outliers using IQR method
+- Normalize using StandardScaler
+- Return preprocessed DataFrame
+Include docstring with parameter types
+```
+
+---
+
+## Multi-Turn Prompt Strategies
+
+Building on previous responses:
+
+```markdown
+Turn 1: "Create a basic Express server"
+Turn 2: "Add authentication middleware using JWT"
+Turn 3: "Now add rate limiting to the auth endpoints"
+Turn 4: "Add comprehensive error handling"
+Turn 5: "Finally, add logging with Winston"
+```
+
+Each turn builds on the previous, maintaining context
+
+---
+
+## Prompt Engineering for Different AI Models
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="200" height="300" fill="#10A37F" rx="10"/>
+  <text x="150" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ChatGPT</text>
+  <text x="150" y="120" text-anchor="middle" fill="white" font-size="12">• Conversational</text>
+  <text x="150" y="145" text-anchor="middle" fill="white" font-size="12">• Step-by-step</text>
+  <text x="150" y="170" text-anchor="middle" fill="white" font-size="12">• Examples help</text>
+  <rect x="300" y="50" width="200" height="300" fill="#7C3AED" rx="10"/>
+  <text x="400" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Claude</text>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12">• Detailed context</text>
+  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">• XML tags work</text>
+  <text x="400" y="170" text-anchor="middle" fill="white" font-size="12">• Long documents</text>
+  <rect x="550" y="50" width="200" height="300" fill="#4285F4" rx="10"/>
+  <text x="650" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Gemini</text>
+  <text x="650" y="120" text-anchor="middle" fill="white" font-size="12">• Multi-modal</text>
+  <text x="650" y="145" text-anchor="middle" fill="white" font-size="12">• Google context</text>
+  <text x="650" y="170" text-anchor="middle" fill="white" font-size="12">• Code execution</text>
+</svg>
+
+---
+
+## Measuring Prompt Effectiveness
+
+Key metrics to track:
+
+```markdown
+Quality Metrics:
+- Accuracy: Does output match requirements? ✓/✗
+- Completeness: All requirements addressed? 1-10
+- Clarity: Is the code/response clear? 1-10
+
+Efficiency Metrics:
+- Iterations needed: 1, 2, 3+
+- Time to solution: Minutes
+- Token usage: Input + Output
+
+Success Rate:
+- First-try success: 60%
+- After refinement: 95%
+- Complete failures: 5%
+```
+
+Track and improve your prompting skills
+
+---
+
+## Building a Prompt Library
+
+Organize your successful prompts:
+
+```markdown
+📁 Prompt Library
+  📁 Code Generation
+    - function_template.md
+    - class_template.md
+    - api_endpoint.md
+  📁 Debugging
+    - error_analysis.md
+    - performance_fix.md
+    - security_audit.md
+  📁 Documentation
+    - api_docs.md
+    - readme_generator.md
+    - comment_creator.md
+  📁 Testing
+    - unit_test.md
+    - integration_test.md
+    - test_cases.md
+```
+
+---
+
+## Real-World Prompt Examples
+
+Production-ready prompts:
+
+```markdown
+# Microservice Generator
+Create a Node.js microservice for {service_name} with:
+- Express.js framework
+- PostgreSQL with Sequelize ORM
+- JWT authentication middleware
+- Request validation using Joi
+- Structured logging with Winston
+- Health check endpoint
+- Docker configuration
+- Unit tests with Jest
+- API documentation with Swagger
+
+Include error handling, rate limiting, and CORS setup.
+```
+
+Use as template, customize per need
+
+---
+
+## Prompt Engineering Best Practices
+
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
+  <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold">Best</text>
+  <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Practices</text>
+  <circle cx="400" cy="80" r="10" fill="#27AE60"/>
+  <text x="400" y="60" text-anchor="middle" font-size="12">Be Specific</text>
+  <circle cx="500" cy="130" r="10" fill="#27AE60"/>
+  <text x="570" y="130" font-size="12">Add Context</text>
+  <circle cx="500" cy="270" r="10" fill="#27AE60"/>
+  <text x="570" y="270" font-size="12">Use Examples</text>
+  <circle cx="300" cy="270" r="10" fill="#27AE60"/>
+  <text x="230" y="270" text-anchor="end" font-size="12">Set Constraints</text>
+  <circle cx="300" cy="130" r="10" fill="#27AE60"/>
+  <text x="230" y="130" text-anchor="end" font-size="12">Define Format</text>
+  <circle cx="400" cy="320" r="10" fill="#27AE60"/>
+  <text x="400" y="350" text-anchor="middle" font-size="12">Iterate & Refine</text>
+</svg>
+
+---
+
+## Chapter Summary
+
+**Key Takeaways**:
+
+Prompt engineering is the critical skill for AI-assisted development
+
+Mastered techniques:
+    - Clear requirement specification with context
+    - Structured output formatting
+    - Iterative refinement strategies
+    - Advanced techniques (chain-of-thought, few-shot)
+    - Domain-specific prompting patterns
+
+Better prompts = Better code = Less time wasted
+
+---
+
+## Next Steps
+
+Coming up in following chapters:
+
+1. **Chapter 5**: AI-Enhanced Coding Practices - TDD, refactoring, debugging
+1. **Chapter 6**: Learning and Skill Development - accelerated growth
+1. **Chapter 7**: Specialized Development Tasks - domain-specific AI
+1. **Chapter 8**: Quality and Best Practices - maintaining standards
+
+Ready to apply these prompting skills in practice!
