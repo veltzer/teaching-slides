@@ -853,7 +853,7 @@ Track what works:
 # v1.0 - Basic request
 "Create a login function"
 
-# v1.1 - Added specifications  
+# v1.1 - Added specifications
 "Create a login function with email/password"
 
 # v1.2 - Added security requirements
@@ -865,7 +865,7 @@ Track what works:
 # v1.3 - Added format requirements [BEST]
 "Create a secure login function with:
 - Email/password validation
-- Rate limiting  
+- Rate limiting
 - SQL injection prevention
 Return: {success: bool, token?: string, error?: string}"
 ```
