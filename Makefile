@@ -234,6 +234,9 @@ all_md_mdl: $(MD_MDL)
 .PHONY: all_md_lint
 all_md_lint: $(MD_LINT)
 
+.PHONY: all_md_pdf
+all_md_pdf: $(MD_PDF)
+
 .PHONY: all_markdownlint
 all_markdownlint: $(MD_MARKDOWNLINT)
 
