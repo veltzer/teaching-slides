@@ -592,13 +592,3 @@ Parallel processing with slices
 1. Memory pressure from large batches
 1. Processor failures
 1. Version conflicts
-1. Slow ingestion rates
-
----
-
-## Next Steps
-
-1. Search Fundamentals
-1. Query DSL
-1. Full-text search
-1. Filtering and scoring

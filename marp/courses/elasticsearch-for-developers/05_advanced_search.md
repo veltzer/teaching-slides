@@ -667,12 +667,3 @@ GET /products/_search
 ```
 
 Performance breakdown
-
----
-
-## Next Steps
-
-1. `ES|QL` Query Language
-1. Structured queries
-1. Piped operations
-1. Advanced analytics

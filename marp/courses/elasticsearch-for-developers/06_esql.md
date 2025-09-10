@@ -469,12 +469,3 @@ FROM products
 | WHERE active == true
 | STATS total = SUM(price) BY category
 ```
-
----
-
-## Next Steps
-
-1. Aggregations deep dive
-1. Metrics and buckets
-1. Pipeline aggregations
-1. Complex analytics

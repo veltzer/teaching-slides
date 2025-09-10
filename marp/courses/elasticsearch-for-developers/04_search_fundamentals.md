@@ -599,12 +599,3 @@ GET /products/_validate/query?explain=true
   }
 }
 ```
-
----
-
-## Next Steps
-
-1. Advanced Search Features
-1. Text Analysis
-1. Relevance Tuning
-1. Highlighting and Suggesters

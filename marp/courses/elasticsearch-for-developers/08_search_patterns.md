@@ -648,12 +648,3 @@ Track in application:
 1. Not using filter context
 1. Over-fetching with `size`
 1. Ignoring query performance
-
----
-
-## Next Steps
-
-1. Geospatial Search
-1. Location-based queries
-1. Geo aggregations
-1. Store locator patterns

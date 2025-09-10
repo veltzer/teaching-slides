@@ -684,12 +684,3 @@ Count documents without field
 1. **Faceted search**: Terms + filters
 1. **Statistical analysis**: Extended stats + percentiles
 1. **Trend analysis**: Derivative + moving average
-
----
-
-## Next Steps
-
-1. Search Patterns and Features
-1. Pagination strategies
-1. Faceted search
-1. Autocomplete

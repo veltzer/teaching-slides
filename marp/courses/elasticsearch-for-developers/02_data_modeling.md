@@ -611,12 +611,3 @@ Options: `true`, `false`, `strict`, `runtime`
 1. Use `keyword` for exact matches
 1. Limit `nested` field usage
 1. Consider field cardinality
-
----
-
-## Next Steps
-
-1. Data Ingestion strategies
-1. Bulk operations optimization
-1. Ingest pipelines
-1. Data transformation

@@ -544,12 +544,3 @@ When concurrent updates occur:
 1. Ignoring version conflicts
 1. Over-updating documents
 1. Not handling errors properly
-
----
-
-## Next Steps
-
-1. Data Modeling and Mappings
-1. Field types deep dive
-1. Index templates
-1. Complex data structures
