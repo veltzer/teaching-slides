@@ -462,7 +462,7 @@ allowVolumeExpansion: true
 kubectl patch pvc data-pvc -p \
   '{"spec":{"resources":{"requests":{"storage":"20Gi"}}}}'
 
-# Note: 
+# Note:
 # - Online expansion support varies by provider
 # - May require pod restart
 ```

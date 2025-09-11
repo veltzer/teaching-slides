@@ -307,7 +307,7 @@ type: Opaque
 data:
   username: YWRtaW4=  # base64 encoded "admin"
   password: c2VjcmV0cGFzcw==  # base64 encoded "secretpass"
-  
+
 # Or use stringData (auto-encoded)
 stringData:
   username: admin
