@@ -38,11 +38,7 @@ DO_MD_MARKDOWNLINT:=1
 # do you want to convert mermaid diagrams into png?
 DO_MERMAID_PNG:=1
 # convert drawio images to png?
-ifdef GITHUB_WORKFLOW
 DO_DRAWIO_PNG:=0
-else
-DO_DRAWIO_PNG:=1
-endif # GITHUB_WORKFLOW
 # use mermaid png deps?
 DO_MERMAID_DEP:=1
 # unite courses pdfs?
