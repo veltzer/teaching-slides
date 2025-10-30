@@ -23,7 +23,7 @@
 
 ## Search UI Architecture
 
-```javascript
+```text
 // Frontend Component Structure
 SearchApp
 ├── SearchBar
