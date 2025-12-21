@@ -104,7 +104,7 @@ Key configuration files:
 
 ## U-Boot Source Structure
 
-```
+```txt
 u-boot/
 ├── arch/           # Architecture-specific code
 ├── board/          # Board-specific code
@@ -311,7 +311,7 @@ mkimage -A arm -T firmware -C none \
 
 FIT (Flattened Image Tree) images:
 
-```
+```dts
 /dts-v1/;
 / {
     images {

@@ -90,7 +90,7 @@ make
 
 ## Directory Structure
 
-```
+```txt
 buildroot/
 ├── board/           # Board-specific files
 ├── configs/         # Defconfig files
@@ -279,7 +279,7 @@ BR2_INIT_SYSTEMD=y
 
 ### Package Directory
 
-```
+```txt
 package/myapp/
 ├── Config.in
 ├── myapp.mk
@@ -444,7 +444,7 @@ chmod 755 ${TARGET_DIR}/usr/bin/myapp
 
 ### users.txt
 
-```
+```bash
 # username uid group gid password home shell groups comment
 admin 1000 admin 1000 =admin /home/admin /bin/sh wheel Admin User
 daemon -1 daemon -1 ! - - - Daemon User
@@ -461,7 +461,7 @@ BR2_ROOTFS_USERS_TABLES="board/myboard/users.txt"
 
 ### device_table.txt
 
-```
+```bash
 # name type mode uid gid major minor
 /dev/mmcblk0 b 660 0 6 179 0
 /dev/ttyS0 c 666 0 5 4 64
@@ -546,7 +546,7 @@ BR2_TARGET_UBOOT_SPL=y
 
 ### genimage.cfg
 
-```
+```cfg
 image sdcard.img {
     hdimage {
     }
@@ -621,7 +621,7 @@ make BR2_EXTERNAL=/path/to/mycompany menuconfig
 
 ## external.desc
 
-```
+```txt
 name: MYCOMPANY
 desc: My Company Buildroot customization
 ```

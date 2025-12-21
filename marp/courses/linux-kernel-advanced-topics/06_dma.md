@@ -56,12 +56,12 @@ Key benefit: CPU can perform other tasks during transfers
 
 Two main categories:
 
-**Coherent DMA** (Consistent)
+### Coherent DMA (Consistent)
 - CPU and device see same data
 - No cache management needed
 - Higher overhead allocation
 
-**Streaming DMA**
+### Streaming DMA
 - Requires explicit synchronization
 - Better performance
 - Cache management required

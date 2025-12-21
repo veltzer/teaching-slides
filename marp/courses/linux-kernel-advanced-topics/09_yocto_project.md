@@ -157,7 +157,7 @@ source oe-init-build-env
 
 ## Build Directory Structure
 
-```
+```txt
 build/
 ├── conf/
 │   ├── local.conf
@@ -299,7 +299,7 @@ bitbake-layers show-layers
 
 ## Layer Structure
 
-```
+```txt
 meta-custom/
 ├── conf/
 │   └── layer.conf
@@ -401,7 +401,7 @@ RDEPENDS_${PN} = " \
 
 ### wks File Example
 
-```
+```bash
 # partition table
 part /boot --source bootimg-partition \
            --fstype=vfat --label boot --active --size 64
@@ -645,19 +645,17 @@ IMAGE_LINGUAS = ""
 ### Release Management
 
 1. **Version control**
-   - Layer repos
-   - Configuration management
-   - Build reproducibility
-
+    - Layer repos
+    - Configuration management
+    - Build reproducibility
 1. **Automated builds**
-   - CI/CD integration
-   - Nightly builds
-   - Testing
-
+    - CI/CD integration
+    - Nightly builds
+    - Testing
 1. **Artifact management**
-   - Image storage
-   - Package feeds
-   - SDK distribution
+    - Image storage
+    - Package feeds
+    - SDK distribution
 
 ---
 
@@ -676,19 +674,19 @@ IMAGE_LINGUAS = ""
 ## Best Practices
 
 1. **Layer Organization**
-   - Separate BSP and application layers
-   - Version control each layer
-   - Document dependencies
+    - Separate BSP and application layers
+    - Version control each layer
+    - Document dependencies
 
 1. **Recipe Management**
-   - Use version numbers
-   - Include license information
-   - Test recipes independently
+    - Use version numbers
+    - Include license information
+    - Test recipes independently
 
 1. **Build Optimization**
-   - Use shared state cache
-   - Implement CI/CD
-   - Monitor build times
+    - Use shared state cache
+    - Implement CI/CD
+    - Monitor build times
 
 ---
 
