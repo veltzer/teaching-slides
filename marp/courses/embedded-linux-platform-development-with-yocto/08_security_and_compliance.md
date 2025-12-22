@@ -4,7 +4,6 @@
 
 ## Security Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -38,7 +37,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

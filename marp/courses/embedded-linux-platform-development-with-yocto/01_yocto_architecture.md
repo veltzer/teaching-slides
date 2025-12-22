@@ -4,7 +4,6 @@
 
 ## Architecture Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="700" height="400" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
 
@@ -38,7 +37,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
