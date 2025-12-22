@@ -4,7 +4,6 @@
 
 ## Yocto Ecosystem Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="250" y="50" width="300" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="3" rx="5"/>
   <text x="400" y="95" text-anchor="middle" font-size="16" font-weight="bold">Yocto Project</text>
@@ -40,7 +39,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -100,7 +98,6 @@ bitbake-layers show-layers
 
 ## Real-Time Linux
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="250" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="225" y="135" text-anchor="middle" font-size="13" font-weight="bold">Standard Kernel</text>
@@ -125,7 +122,6 @@ bitbake-layers show-layers
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -345,7 +341,6 @@ runqemu qemuarm \
 
 ## AGL - Automotive Grade Linux
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="200" y="50" width="400" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
   <text x="400" y="95" text-anchor="middle" font-size="14" font-weight="bold">AGL Platform</text>
@@ -378,7 +373,6 @@ runqemu qemuarm \
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

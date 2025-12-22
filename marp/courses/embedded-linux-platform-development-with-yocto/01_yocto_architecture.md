@@ -132,7 +132,6 @@ Extended:
 
 ## Metadata Types
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="175" y="95" text-anchor="middle" font-size="14" font-weight="bold">Recipes</text>
@@ -158,7 +157,6 @@ Extended:
   <text x="625" y="245" text-anchor="middle" font-size="14" font-weight="bold">Patches</text>
   <text x="625" y="265" text-anchor="middle" font-size="11">(.patch files)</text>
 </svg>
-```
 
 ---
 
@@ -191,7 +189,6 @@ FILES_${PN} = "${bindir}/app"
 
 ## Class Inheritance
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="350" y="50" width="100" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
   <text x="400" y="85" text-anchor="middle" font-size="12" font-weight="bold">base</text>
@@ -223,7 +220,6 @@ FILES_${PN} = "${bindir}/app"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -347,7 +343,6 @@ LAYERSERIES_COMPAT_custom = "kirkstone"
 
 ## Build Flow Phases
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">Configuration</text>
@@ -376,7 +371,6 @@ LAYERSERIES_COMPAT_custom = "kirkstone"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -399,7 +393,6 @@ Output:
 
 ## Task Execution Model
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="1"/>
   <text x="160" y="80" text-anchor="middle" font-size="12">do_fetch</text>
@@ -439,7 +432,6 @@ Output:
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -487,7 +479,6 @@ RDEPENDS_${PN} = "python3-core"
 
 ## Shared State Cache
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="200" height="200" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
   <text x="200" y="130" text-anchor="middle" font-size="14" font-weight="bold">Build Directory</text>
@@ -519,7 +510,6 @@ RDEPENDS_${PN} = "python3-core"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -678,7 +668,6 @@ RDEPENDS_${PN}-tools = "${PN}"
 
 ## Image Generation Process
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="1"/>
   <text x="175" y="85" text-anchor="middle" font-size="12">Package Feed</text>
@@ -710,7 +699,6 @@ RDEPENDS_${PN}-tools = "${PN}"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -816,7 +804,6 @@ bitbake multiconfig:arm:core-image-minimal multiconfig:x86:core-image-minimal
 
 ## Dependency Resolution
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <circle cx="400" cy="200" r="40" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="400" y="205" text-anchor="middle" font-size="12">Recipe A</text>
@@ -851,7 +838,6 @@ bitbake multiconfig:arm:core-image-minimal multiconfig:x86:core-image-minimal
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

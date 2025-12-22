@@ -4,7 +4,6 @@
 
 ## Build Performance Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="190" y="135" text-anchor="middle" font-size="12">Hardware</text>
@@ -32,7 +31,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -66,7 +64,6 @@ Memory recommendations:
 
 SSD vs HDD performance:
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="250" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="225" y="135" text-anchor="middle" font-size="14" font-weight="bold">HDD</text>
@@ -84,7 +81,6 @@ SSD vs HDD performance:
   <text x="575" y="285" text-anchor="middle" font-size="14" font-weight="bold">RAM Disk</text>
   <text x="575" y="310" text-anchor="middle" font-size="12">Build time: 30-60 min</text>
 </svg>
-```
 
 ---
 
@@ -175,7 +171,6 @@ BB_FETCH_PREMIRRORONLY = "1"
 
 ## Build Directory Management
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -198,7 +193,6 @@ BB_FETCH_PREMIRRORONLY = "1"
   <text x="50" y="235" font-size="11">Local</text>
   <text x="50" y="335" font-size="11">Output</text>
 </svg>
-```
 
 ---
 
@@ -324,7 +318,6 @@ gpgcheck=0
 
 ## CI/CD Architecture
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="175" y="85" text-anchor="middle" font-size="12">Git Push</text>
@@ -360,7 +353,6 @@ gpgcheck=0
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -766,7 +758,6 @@ devtool deploy-target myapp root@target
 
 ## Build Server Architecture
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="200" y="135" text-anchor="middle" font-size="12" font-weight="bold">Build Servers</text>
@@ -794,7 +785,6 @@ devtool deploy-target myapp root@target
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

@@ -185,7 +185,6 @@ tmpfs /var/tmp tmpfs nodev,nosuid,noexec 0 0
 
 ## Secure Boot Architecture
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="175" y="85" text-anchor="middle" font-size="12" font-weight="bold">ROM Code</text>
@@ -221,7 +220,6 @@ tmpfs /var/tmp tmpfs nodev,nosuid,noexec 0 0
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -438,7 +436,6 @@ System::Privileged System::Data rw
 
 ## CVE Tracking
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="180" height="70" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="190" y="130" text-anchor="middle" font-size="12">CVE Database</text>
@@ -465,7 +462,6 @@ System::Privileged System::Data rw
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

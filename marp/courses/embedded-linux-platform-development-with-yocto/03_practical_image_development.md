@@ -4,7 +4,6 @@
 
 ## Image Development Workflow
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="175" y="85" text-anchor="middle" font-size="12">Choose Base</text>
@@ -41,7 +40,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -228,7 +226,6 @@ PACKAGECONFIG_append = "${@bb.utils.contains('MACHINE_FEATURES', 'bluetooth', ' 
 
 ## QEMU Development
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="200" y="50" width="400" height="300" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
   <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold">Host System</text>
@@ -255,7 +252,6 @@ PACKAGECONFIG_append = "${@bb.utils.contains('MACHINE_FEATURES', 'bluetooth', ' 
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -408,7 +404,6 @@ wic create sdimage-bootpart -e core-image-minimal
 
 ## Partition Layout
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="150" width="600" height="100" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -433,7 +428,6 @@ wic create sdimage-bootpart -e core-image-minimal
 
   <text x="400" y="130" text-anchor="middle" font-size="12" font-weight="bold">SD Card / eMMC Layout</text>
 </svg>
-```
 
 ---
 

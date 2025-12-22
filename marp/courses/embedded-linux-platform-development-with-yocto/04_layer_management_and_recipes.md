@@ -4,7 +4,6 @@
 
 ## Layer Management Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -25,7 +24,6 @@
   <text x="50" y="225" text-anchor="middle" font-size="11">Priority: 8</text>
   <text x="50" y="145" text-anchor="middle" font-size="11">Priority: 5</text>
 </svg>
-```
 
 ---
 
@@ -74,7 +72,6 @@ LAYERSERIES_COMPAT_custom-layer = "kirkstone langdale"
 
 ## Layer Priority System
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="175" y="125" text-anchor="middle" font-size="12">Priority: 5</text>
@@ -102,7 +99,6 @@ LAYERSERIES_COMPAT_custom-layer = "kirkstone langdale"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -180,7 +176,6 @@ bitbake-layers layerindex-show-depends meta-qt5
 
 ## Recipe Organization
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="200" y="85" text-anchor="middle" font-size="12">recipes-apps</text>
@@ -217,7 +212,6 @@ bitbake-layers layerindex-show-depends meta-qt5
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -350,7 +344,6 @@ SRC_URI += "file://custom-config.txt"
 
 ## Patching Workflow
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="175" y="135" text-anchor="middle" font-size="12">do_fetch</text>
@@ -375,7 +368,6 @@ SRC_URI += "file://custom-config.txt"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -527,7 +519,6 @@ do_compile_append() {
 
 ## Task Dependencies
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="160" y="80" text-anchor="middle" font-size="11">do_fetch</text>
@@ -563,7 +554,6 @@ do_compile_append() {
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

@@ -4,7 +4,6 @@
 
 ## Kernel Architecture in Yocto
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -34,7 +33,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -87,7 +85,6 @@ COMPATIBLE_MACHINE = "myboard"
 
 ## Kernel Configuration Methods
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="190" y="135" text-anchor="middle" font-size="12">defconfig</text>
@@ -115,7 +112,6 @@ COMPATIBLE_MACHINE = "myboard"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -200,7 +196,6 @@ patch myfeature-fix.patch
 
 ## Device Tree Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="400" y="85" text-anchor="middle" font-size="13" font-weight="bold">Device Tree Source</text>
@@ -227,7 +222,6 @@ patch myfeature-fix.patch
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -506,7 +500,6 @@ CONFIG_BOOTCOMMAND="run bootcmd_mmc0"
 
 ## Boot Process Flow
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="175" y="85" text-anchor="middle" font-size="12" font-weight="bold">ROM Code</text>
@@ -542,7 +535,6 @@ CONFIG_BOOTCOMMAND="run bootcmd_mmc0"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

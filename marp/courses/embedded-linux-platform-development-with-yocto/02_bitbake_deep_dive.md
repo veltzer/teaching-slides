@@ -20,7 +20,6 @@ Originally from OpenEmbedded:
 
 ## BitBake Architecture
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -44,7 +43,6 @@ Originally from OpenEmbedded:
 
   <text x="400" y="380" text-anchor="middle" font-size="14" font-weight="bold">BitBake Core</text>
 </svg>
-```
 
 ---
 
@@ -121,7 +119,6 @@ VAR = "${@os.path.basename(d.getVar('SRC_URI').split()[0])}"
 
 ## Overrides System
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="200" y="50" width="400" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
   <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">VAR = "default"</text>
@@ -141,7 +138,6 @@ VAR = "${@os.path.basename(d.getVar('SRC_URI').split()[0])}"
   <text x="650" y="180" text-anchor="middle" font-size="11">Machine overrides</text>
   <text x="650" y="280" text-anchor="middle" font-size="11">Class overrides</text>
 </svg>
-```
 
 ---
 
@@ -211,7 +207,6 @@ do_compile[network] = "1"
 
 ## Task Dependencies
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="1"/>
   <text x="160" y="130" text-anchor="middle" font-size="12">do_fetch</text>
@@ -240,7 +235,6 @@ do_compile[network] = "1"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -566,7 +560,6 @@ BB_SIGNATURE_HANDLER = "OEEquivHash"
 
 ## Hash Calculation
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="600" height="300" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
 
@@ -596,7 +589,6 @@ BB_SIGNATURE_HANDLER = "OEEquivHash"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

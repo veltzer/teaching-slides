@@ -4,7 +4,6 @@
 
 ## Development Workflow Overview
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="175" y="85" text-anchor="middle" font-size="12">Plan & Design</text>
@@ -41,7 +40,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -72,7 +70,6 @@ workspace/
 
 ## devtool Commands
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="400" y="85" text-anchor="middle" font-size="13" font-weight="bold">devtool</text>
@@ -109,7 +106,6 @@ workspace/
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -306,7 +302,6 @@ bitbake -c devpyshell myapp
 
 ## QEMU Testing
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="200" y="135" text-anchor="middle" font-size="13" font-weight="bold">Host System</text>
@@ -332,7 +327,6 @@ bitbake -c devpyshell myapp
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -568,7 +562,6 @@ ltrace -c ./myapp  # Summary
 
 ## System Profiling Tools
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="140" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="170" y="135" text-anchor="middle" font-size="12">perf</text>
@@ -596,7 +589,6 @@ ltrace -c ./myapp  # Summary
     </marker>
   </defs>
 </svg>
-```
 
 ---
 

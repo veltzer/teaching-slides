@@ -37,7 +37,6 @@ Each project starts from scratch:
 
 ## Build System Evolution
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="50" y="50" width="150" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="125" y="95" text-anchor="middle" font-size="14">Manual Build</text>
@@ -61,7 +60,6 @@ Each project starts from scratch:
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -113,7 +111,6 @@ Not ideal for:
 
 ## Yocto Project Governance
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="300" y="50" width="200" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
   <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">Linux Foundation</text>
@@ -145,7 +142,6 @@ Not ideal for:
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -251,7 +247,6 @@ Benefits:
 
 ## Yocto Project Components
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="250" y="50" width="300" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
   <text x="400" y="95" text-anchor="middle" font-size="16" font-weight="bold">Yocto Project</text>
@@ -287,7 +282,6 @@ Benefits:
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -340,7 +334,6 @@ Similar to:
 
 ## Metadata Layers
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="300" width="600" height="60" fill="#ffe6e6" stroke="#cc0000" stroke-width="2"/>
   <text x="400" y="335" text-anchor="middle" font-size="14" font-weight="bold">Hardware Layer (BSP)</text>
@@ -359,7 +352,6 @@ Similar to:
   <text x="50" y="175" text-anchor="middle" font-size="12">8</text>
   <text x="50" y="95" text-anchor="middle" font-size="12">5</text>
 </svg>
-```
 
 ---
 

@@ -4,7 +4,6 @@
 
 ## Deployment Lifecycle
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="175" y="85" text-anchor="middle" font-size="12">Build Release</text>
@@ -41,7 +40,6 @@
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -79,7 +77,6 @@ repo manifest -r -o release-1.2.3.xml
 
 ## Image Formats
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="140" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
   <text x="170" y="135" text-anchor="middle" font-size="12">WIC Image</text>
@@ -107,7 +104,6 @@ repo manifest -r -o release-1.2.3.xml
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -191,7 +187,6 @@ ostree admin deploy mydevice/main
 
 ## Update Strategies
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="190" y="135" text-anchor="middle" font-size="12" font-weight="bold">Full Image</text>
@@ -217,7 +212,6 @@ ostree admin deploy mydevice/main
   <text x="610" y="285" text-anchor="middle" font-size="12" font-weight="bold">Atomic Updates</text>
   <text x="610" y="305" text-anchor="middle" font-size="10">OSTree/libostree</text>
 </svg>
-```
 
 ---
 
@@ -353,7 +347,6 @@ MENDER_DATA_PART_SIZE_MB = "1024"
 
 ## OTA Update Architecture
 
-```svg
 <svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="50" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
   <text x="200" y="85" text-anchor="middle" font-size="13" font-weight="bold">Update Server</text>
@@ -386,7 +379,6 @@ MENDER_DATA_PART_SIZE_MB = "1024"
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
@@ -808,7 +800,6 @@ fi
 
 ## Lifecycle Management
 
-```svg
 <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
   <rect x="100" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
   <text x="175" y="135" text-anchor="middle" font-size="12">Active Support</text>
@@ -832,7 +823,6 @@ fi
     </marker>
   </defs>
 </svg>
-```
 
 ---
 
