@@ -1,9 +1,0 @@
-flowchart LR
-    Code[Code] --> Build[Build]
-    Build --> UnitTest[Unit Test]
-    UnitTest --> IntegTest[Integration Test]
-    IntegTest --> Security[Security Scan]
-    Security --> Quality[Quality Gate]
-    Quality --> Deploy[Deploy]
-    Deploy --> Monitor[Monitor]
-    Monitor -->|Feedback| Code
