@@ -1,7 +1,0 @@
-graph LR
-    subgraph "Redis Transaction"
-        MULTI --> CMD1[Command 1]
-        CMD1 --> CMD2[Command 2]
-        CMD2 --> CMD3[Command 3]
-        CMD3 --> EXEC
-    end

@@ -1,8 +1,0 @@
-stateDiagram-v2
-    [*] --> onCreate
-    onCreate --> onStartCommand: startService()
-    onStartCommand --> onDestroy: stopService()
-    onCreate --> onBind: bindService()
-    onBind --> onUnbind: unbindService()
-    onUnbind --> onDestroy
-    onDestroy --> [*]

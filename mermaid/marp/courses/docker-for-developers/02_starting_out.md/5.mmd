@@ -1,8 +1,0 @@
-stateDiagram-v2
-    [*] --> Created: docker create
-    Created --> Running: docker start
-    Running --> Paused: docker pause
-    Running --> Stopped: docker stop
-    Paused --> Running: docker unpause
-    Stopped --> Running: docker restart
-    Stopped --> [*]: docker rm

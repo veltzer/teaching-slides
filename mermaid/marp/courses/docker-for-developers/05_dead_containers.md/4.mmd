@@ -1,7 +1,0 @@
-flowchart TD
-    A[Dead Container] --> B{Check Logs}
-    B -->|Error Found| C[Fix Issue]
-    B -->|No Error| D[Check Resources]
-    D --> E[Check Dependencies]
-    C --> F[Restart Container]
-    E --> F

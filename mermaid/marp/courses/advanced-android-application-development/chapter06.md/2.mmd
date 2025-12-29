@@ -1,7 +1,0 @@
-graph LR
-    A[Request] --> B{Cache Valid?}
-    B -->|Yes| C[Use Cache]
-    B -->|No| D[Network Request]
-    D --> E{Success?}
-    E -->|Yes| F[Update Cache]
-    E -->|No| G[Use Stale Cache]

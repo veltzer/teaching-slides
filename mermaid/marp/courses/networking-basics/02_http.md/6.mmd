@@ -1,7 +1,0 @@
-sequenceDiagram
-    participant Client
-    participant Server
-    Client->>Server: QUIC Handshake (includes TLS)
-    Note over Client,Server: 0-RTT if resuming
-    Client->>Server: HTTP Request
-    Server->>Client: HTTP Response

@@ -1,9 +1,0 @@
-sequenceDiagram
-    participant C as Container
-    participant D as Docker
-    participant S as Storage
-    C->>D: Write logs
-    D->>S: Store logs
-    D->>S: Check size
-    S->>S: Rotate if needed
-    S->>S: Compress old logs

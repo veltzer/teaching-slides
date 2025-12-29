@@ -1,9 +1,0 @@
-flowchart TB
-    subgraph "Redis Server"
-        M[Memory] --> E[Event Loop]
-        E --> C[Command Processor]
-        C --> M
-    end
-    Client1[Client] <--> E
-    Client2[Client] <--> E
-    Client3[Client] <--> E

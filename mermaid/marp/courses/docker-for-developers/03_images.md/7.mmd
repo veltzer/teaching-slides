@@ -1,9 +1,0 @@
-sequenceDiagram
-    participant D as Developer
-    participant I as Image
-    participant C as Container
-    D->>I: docker build -t myapp .
-    D->>C: docker run myapp
-    C->>D: Container output
-    D->>C: docker exec -it myapp bash
-    D->>C: docker stop myapp

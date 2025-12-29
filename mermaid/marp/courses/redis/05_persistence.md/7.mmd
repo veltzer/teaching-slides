@@ -1,8 +1,0 @@
-graph TD
-    Start[RDB/AOF Process Fork] --> MemPages[Memory Pages Shared]
-    MemPages --> ParentWrite{Parent Writes to Page?}
-    ParentWrite -->|Yes| Copy[Copy Page Before Modification]
-    ParentWrite -->|No| Continue[Continue Sharing]
-
-    Copy --> MemoryIncrease[Memory Usage Increases]
-    MemoryIncrease --> PeakUsage[Peak Memory = Original + Modified Pages]

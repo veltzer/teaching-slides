@@ -1,8 +1,0 @@
-flowchart LR
-    P[Producer] --> Q[SQS Queue]
-    Q --> C1[Consumer 1]
-    Q --> C2[Consumer 2]
-    subgraph DLQ[Dead Letter Queue]
-        F[Failed Messages]
-    end
-    Q -.-> DLQ

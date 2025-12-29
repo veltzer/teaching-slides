@@ -1,8 +1,0 @@
-graph LR
-    A[RDD] --> B[Stage 1]
-    B --> C[Stage 2]
-    C --> D[Stage 3]
-    D --> E[Result]
-    
-    B -.-> F[Shuffle]
-    F -.-> C

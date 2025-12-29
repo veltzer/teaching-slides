@@ -1,9 +1,0 @@
-graph TD
-    subgraph "User System"
-        Users["Hash: users:{id} - User details"]
-        UserEmails["Set: user:emails - Unique emails"]
-        UsersByCountry["Sorted Set: users:country:{country} - Users by join date"]
-        UserSessions["Hash: user:sessions:{id} - User sessions"]
-        UserFollowers["Set: user:{id}:followers - User followers"]
-        UserFollowing["Set: user:{id}:following - User following"]
-    end

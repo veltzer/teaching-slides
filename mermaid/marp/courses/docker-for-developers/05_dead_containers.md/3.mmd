@@ -1,8 +1,0 @@
-sequenceDiagram
-    participant U as User
-    participant D as Docker
-    participant C as Container
-    U->>D: docker start container
-    D->>C: Attempt restart
-    C->>D: Status update
-    D->>U: Success/Failure

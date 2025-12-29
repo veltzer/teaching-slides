@@ -1,6 +1,0 @@
-flowchart TD
-    Client[Client] --> Cache{Cache?}
-    Cache -->|Hit| ReturnCached[Return Cached Data]
-    Cache -->|Miss| FetchOrigin[Fetch from Origin]
-    FetchOrigin --> StoreCache[Store in Cache]
-    StoreCache --> ReturnFresh[Return Fresh Data]

@@ -1,7 +1,0 @@
-graph TD
-    A[Hardware Interrupt] --> B[Disable IRQ]
-    B --> C[Schedule NAPI]
-    C --> D[Poll for Packets]
-    D --> E[Complete?]
-    E -->|No| D
-    E -->|Yes| F[Enable IRQ]

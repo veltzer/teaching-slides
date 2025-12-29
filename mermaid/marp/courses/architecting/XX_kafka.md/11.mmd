@@ -1,7 +1,0 @@
-flowchart LR
-    K[Kafka] --> S1[Stream Processor]
-    S1 --> SQ[SQS]
-    K --> S2[Stream Processor]
-    S2 --> RM[RabbitMQ]
-    SQ --> L[Lambda]
-    RM --> MS[Microservice]

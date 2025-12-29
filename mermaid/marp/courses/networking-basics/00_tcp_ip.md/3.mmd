@@ -1,9 +1,0 @@
-graph LR
-    A[User] -->|1. Query| B[Local DNS]
-    B -->|2. Query| C[Root DNS]
-    C -->|3. Refer| B
-    B -->|4. Query| D[TLD DNS]
-    D -->|5. Refer| B
-    B -->|6. Query| E[Authoritative DNS]
-    E -->|7. Answer| B
-    B -->|8. Answer| A

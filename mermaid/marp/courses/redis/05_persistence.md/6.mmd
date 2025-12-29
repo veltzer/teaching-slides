@@ -1,8 +1,0 @@
-graph TD
-    subgraph "Hybrid AOF File"
-        RDBHeader[Magic Header<br>REDIS + version]
-        RDBPreamble[RDB Snapshot Preamble]
-        AOFCommands[AOF Commands<br>Since Last RDB]
-    end
-
-    RDBHeader --> RDBPreamble --> AOFCommands

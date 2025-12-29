@@ -1,6 +1,0 @@
-graph LR
-    P[Producer] --> Q[Main Queue]
-    Q --> C[Consumer]
-    Q --> DLQ[Dead Letter Queue]
-    DLQ --> R[Retry Process]
-    R --> Q

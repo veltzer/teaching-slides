@@ -1,9 +1,0 @@
-graph TD
-    Backup[Redis Backup Strategies] --> RDBBackup[RDB Snapshots]
-    Backup --> AOFBackup[AOF Copies]
-    Backup --> ReplicaBackup[Replica-Based Backups]
-
-    RDBBackup --> CP1[Copy dump.rdb periodically]
-    AOFBackup --> CP2[Copy appendonly.aof periodically]
-    ReplicaBackup --> CP3[Create backup replica]
-    ReplicaBackup --> CP4[Trigger BGSAVE on replica]

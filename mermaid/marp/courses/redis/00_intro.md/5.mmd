@@ -1,6 +1,0 @@
-flowchart TB
-    Redis[Redis Server] --> RDB[RDB Snapshotting]
-    Redis --> AOF[Append Only File]
-    Redis --> None[No Persistence]
-    RDB --> Disk1[(Disk)]
-    AOF --> Disk1

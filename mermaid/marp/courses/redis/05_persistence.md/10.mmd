@@ -1,8 +1,0 @@
-graph TD
-    Master[Master] --> Replica1[Replica 1<br>RDB + AOF]
-    Master --> Replica2[Replica 2<br>RDB Only]
-    Master --> Replica3[Replica 3<br>No Persistence]
-
-    Replica1 --> DR[Disaster Recovery]
-    Replica2 --> Backup[Backups]
-    Replica3 --> ReadScaling[Read Scaling]

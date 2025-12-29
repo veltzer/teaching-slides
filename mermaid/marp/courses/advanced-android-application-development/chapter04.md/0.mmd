@@ -1,8 +1,0 @@
-graph LR
-    V[View] --> VM[ViewModel]
-    VM --> M[Model]
-    M --> VM
-    VM --> V
-    V -->|Observes| VM
-    VM -->|Updates| M
-    M -->|Notifies| VM
