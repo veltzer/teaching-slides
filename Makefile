@@ -384,9 +384,3 @@ $(SH_CHECK): out/%.check: % .shellcheckrc
 ifeq ($(DO_ALLDEP),1)
 .EXTRA_PREREQS+=$(foreach mk, ${MAKEFILE_LIST},$(abspath ${mk}))
 endif # DO_ALLDEP
-
-# .NOTPARALLEL:
-ifndef GITHUB_WORKFLOW
-MAKEFLAGS+=-j8
-# .NOTPARALLEL: all_odp_pdf
-endif

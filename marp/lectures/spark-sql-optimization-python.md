@@ -2,7 +2,27 @@
 ---
 ## Understanding the Catalyst Optimizer
 Catalyst is Spark's query optimization framework that transforms queries into efficient execution plans
-![0](../../out/mermaid/marp/lectures/spark-sql-optimization-python.md/0.png)
+<svg width="800" height="100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  <rect x="10" y="30" width="120" height="40" rx="5" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <text x="70" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#01579b">SQL/DataFrame</text>
+  <line x1="130" y1="50" x2="170" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="180" y="30" width="120" height="40" rx="5" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <text x="240" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#01579b">Unresolved Plan</text>
+  <line x1="300" y1="50" x2="340" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="350" y="30" width="110" height="40" rx="5" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <text x="405" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#01579b">Analyzed Plan</text>
+  <line x1="460" y1="50" x2="500" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="510" y="30" width="110" height="40" rx="5" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <text x="565" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#01579b">Optimized Plan</text>
+  <line x1="620" y1="50" x2="660" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="670" y="30" width="100" height="40" rx="5" fill="#e1f5fe" stroke="#01579b" stroke-width="2"/>
+  <text x="720" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#01579b">Physical Plan</text>
+</svg>
 
 ---
 ## Query Plan Components
