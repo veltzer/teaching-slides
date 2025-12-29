@@ -5,7 +5,95 @@
 
 ## Material Design Principles
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/0.png)
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central Material Design node -->
+  <ellipse cx="300" cy="200" rx="80" ry="40" fill="#673ab7" stroke="#333" stroke-width="3"/>
+  <text x="300" y="200" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Material</text>
+  <text x="300" y="218" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Design</text>
+
+  <!-- Surface branch -->
+  <ellipse cx="150" cy="100" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <text x="150" y="105" text-anchor="middle" font-size="12" font-weight="bold">Surface</text>
+
+  <!-- Color branch -->
+  <ellipse cx="450" cy="100" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="450" y="105" text-anchor="middle" font-size="12" font-weight="bold">Color</text>
+
+  <!-- Typography branch -->
+  <ellipse cx="150" cy="300" rx="60" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
+  <text x="150" y="305" text-anchor="middle" font-size="12" font-weight="bold">Typography</text>
+
+  <!-- Motion branch -->
+  <ellipse cx="450" cy="300" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
+  <text x="450" y="305" text-anchor="middle" font-size="12" font-weight="bold">Motion</text>
+
+  <!-- Surface sub-elements -->
+  <rect x="30" y="40" width="70" height="25" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="57" text-anchor="middle" font-size="10">Elevation</text>
+
+  <rect x="30" y="75" width="70" height="25" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="92" text-anchor="middle" font-size="10">Shadow</text>
+
+  <rect x="30" y="110" width="70" height="25" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="127" text-anchor="middle" font-size="10">Shape</text>
+
+  <!-- Color sub-elements -->
+  <rect x="500" y="30" width="70" height="25" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="47" text-anchor="middle" font-size="10">Primary</text>
+
+  <rect x="500" y="60" width="70" height="25" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="77" text-anchor="middle" font-size="10">Secondary</text>
+
+  <rect x="500" y="90" width="70" height="25" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="107" text-anchor="middle" font-size="10">Surface</text>
+
+  <rect x="500" y="120" width="70" height="25" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="137" text-anchor="middle" font-size="10">Error</text>
+
+  <!-- Typography sub-elements -->
+  <rect x="30" y="270" width="70" height="25" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="287" text-anchor="middle" font-size="10">Scale</text>
+
+  <rect x="30" y="300" width="70" height="25" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="317" text-anchor="middle" font-size="10">Hierarchy</text>
+
+  <rect x="30" y="330" width="70" height="25" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="65" y="347" text-anchor="middle" font-size="10">Readability</text>
+
+  <!-- Motion sub-elements -->
+  <rect x="500" y="270" width="70" height="25" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="287" text-anchor="middle" font-size="10">Natural</text>
+
+  <rect x="500" y="300" width="70" height="25" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="317" text-anchor="middle" font-size="10">Meaningful</text>
+
+  <rect x="500" y="330" width="70" height="25" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="535" y="347" text-anchor="middle" font-size="10">Responsive</text>
+
+  <!-- Connection lines -->
+  <line x1="240" y1="180" x2="190" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="360" y1="180" x2="410" y2="120" stroke="#333" stroke-width="2"/>
+  <line x1="240" y1="220" x2="190" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="360" y1="220" x2="410" y2="280" stroke="#333" stroke-width="2"/>
+
+  <!-- Sub-connections -->
+  <line x1="100" y1="90" x2="100" y2="52" stroke="#666" stroke-width="1"/>
+  <line x1="100" y1="100" x2="100" y2="87" stroke="#666" stroke-width="1"/>
+  <line x1="100" y1="110" x2="100" y2="122" stroke="#666" stroke-width="1"/>
+
+  <line x1="500" y1="90" x2="500" y2="42" stroke="#666" stroke-width="1"/>
+  <line x1="500" y1="100" x2="500" y2="72" stroke="#666" stroke-width="1"/>
+  <line x1="500" y1="110" x2="500" y2="102" stroke="#666" stroke-width="1"/>
+  <line x1="500" y1="120" x2="500" y2="132" stroke="#666" stroke-width="1"/>
+
+  <line x1="100" y1="295" x2="100" y2="282" stroke="#666" stroke-width="1"/>
+  <line x1="100" y1="305" x2="100" y2="312" stroke="#666" stroke-width="1"/>
+  <line x1="100" y1="315" x2="100" y2="342" stroke="#666" stroke-width="1"/>
+
+  <line x1="500" y1="295" x2="500" y2="282" stroke="#666" stroke-width="1"/>
+  <line x1="500" y1="305" x2="500" y2="312" stroke="#666" stroke-width="1"/>
+  <line x1="500" y1="315" x2="500" y2="342" stroke="#666" stroke-width="1"/>
+</svg>
 
 ---
 
