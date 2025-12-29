@@ -96,7 +96,7 @@ MARP_PPTX:=$(addprefix out/,$(addsuffix .pptx,$(MARP_BAS)))
 MARP_HTML:=$(addprefix out/,$(addsuffix .html,$(MARP_BAS)))
 
 # mermaid
-MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd")
+MERMAID_SRC:=$(shell find mermaid -type f -and -name "*.mmd" 2> /dev/null)
 MERMAID_BAS:=$(basename $(MERMAID_SRC))
 MERMAID_PNG:=$(addprefix out/,$(addsuffix .png,$(MERMAID_BAS)))
 
