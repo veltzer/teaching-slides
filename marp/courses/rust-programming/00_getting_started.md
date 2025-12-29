@@ -158,7 +158,20 @@ rustup component list
 
 ## Development Environment
 
-![bg right:40% 90%](https://code.visualstudio.com/assets/images/code-stable.png)
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="float: right; margin: 20px;">
+  <!-- VS Code Logo -->
+  <rect x="10" y="10" width="180" height="180" fill="#007acc" rx="20"/>
+
+  <!-- Left panel (darker blue) -->
+  <path d="M 30 30 L 30 170 L 70 150 L 70 50 Z" fill="#0062a3"/>
+
+  <!-- Code symbol (white) -->
+  <path d="M 85 70 L 125 110 L 85 150" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 155 70 L 115 110 L 155 150" stroke="white" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- VS Code text -->
+  <text x="100" y="185" text-anchor="middle" font-size="14" font-weight="bold" fill="#007acc">VS Code</text>
+</svg>
 
 ### Recommended Setup
 - VS Code
