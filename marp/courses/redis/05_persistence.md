@@ -18,7 +18,21 @@ Without persistence, all data is lost when Redis restarts!
 
 ## Redis Persistence Options
 
-![0](../../../out/mermaid/marp/courses/redis/05_persistence.md/0.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_persistence)"/>
+  <defs>
+    <marker id="arrowd0_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -32,13 +46,41 @@ Point-in-time snapshots of the dataset:
 - Can be created manually with commands
 - Good for backups and disaster recovery
 
-![1](../../../out/mermaid/marp/courses/redis/05_persistence.md/1.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_persistence)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd1_05_persistence)"/>
+  <defs>
+    <marker id="arrowd1_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
 ## How RDB Snapshots Work
 
-![2](../../../out/mermaid/marp/courses/redis/05_persistence.md/2.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_persistence)"/>
+  <defs>
+    <marker id="arrowd2_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 1. Redis forks a child process
 1. Child process writes all data to a temporary file
@@ -123,7 +165,21 @@ Log of all write operations that modify data:
 - Easier to understand (plain text commands)
 - Better for recovery with less data loss
 
-![3](../../../out/mermaid/marp/courses/redis/05_persistence.md/3.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_05_persistence)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd3_05_persistence)"/>
+  <defs>
+    <marker id="arrowd3_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -150,7 +206,21 @@ auto-aof-rewrite-min-size 64mb
 
 ## AOF Sync Options
 
-![4](../../../out/mermaid/marp/courses/redis/05_persistence.md/4.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_persistence)"/>
+  <defs>
+    <marker id="arrowd4_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -158,7 +228,21 @@ auto-aof-rewrite-min-size 64mb
 
 AOF files grow continuously and need compaction:
 
-![5](../../../out/mermaid/marp/courses/redis/05_persistence.md/5.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_05_persistence)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd5_05_persistence)"/>
+  <defs>
+    <marker id="arrowd5_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -218,7 +302,21 @@ How it works:
 
 ## Hybrid Persistence File Structure
 
-![6](../../../out/mermaid/marp/courses/redis/05_persistence.md/6.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_persistence)"/>
+  <defs>
+    <marker id="arrowd6_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 Benefits:
 - Fast loading (RDB portion)
@@ -282,7 +380,21 @@ aof_last_cow_size:0
 
 Copy-On-Write (COW) mechanism:
 
-![7](../../../out/mermaid/marp/courses/redis/05_persistence.md/7.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_persistence)"/>
+  <defs>
+    <marker id="arrowd7_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - Child process shares memory with parent process
 - When parent modifies data, memory is copied (Copy-On-Write)
@@ -315,7 +427,21 @@ Minimize impact on main Redis process:
 
 ## Backup Strategies
 
-![8](../../../out/mermaid/marp/courses/redis/05_persistence.md/8.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_05_persistence)"/>
+  <defs>
+    <marker id="arrowd8_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 Best practices:
 - Store backups off-server
@@ -393,13 +519,41 @@ Note: RDB files cannot be fixed - must restore from backup
 
 Combining RDB and AOF for point-in-time recovery:
 
-![9](../../../out/mermaid/marp/courses/redis/05_persistence.md/9.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_05_persistence)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd9_05_persistence)"/>
+  <defs>
+    <marker id="arrowd9_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
 ## Redis Persistence in Replicated Setup
 
-![10](../../../out/mermaid/marp/courses/redis/05_persistence.md/10.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_05_persistence)"/>
+  <defs>
+    <marker id="arrowd10_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 Strategies:
 - Distribute persistence load across replicas
@@ -412,7 +566,21 @@ Strategies:
 
 RDB's role in replication:
 
-![11](../../../out/mermaid/marp/courses/redis/05_persistence.md/11.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_05_persistence)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd11_05_persistence)"/>
+  <defs>
+    <marker id="arrowd11_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - RDB file provides initial sync data
 - Even with AOF enabled, replication uses RDB
@@ -424,7 +592,21 @@ RDB's role in replication:
 
 Redis Cluster persistence considerations:
 
-![12](../../../out/mermaid/marp/courses/redis/05_persistence.md/12.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_05_persistence)"/>
+  <defs>
+    <marker id="arrowd12_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - Each node manages persistence independently
 - Need consistent configuration across nodes
@@ -459,7 +641,21 @@ Monitor:
 
 ## Typical Performance Impact
 
-![13](../../../out/mermaid/marp/courses/redis/05_persistence.md/13.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd13_05_persistence)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd13_05_persistence)"/>
+  <defs>
+    <marker id="arrowd13_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 Note:
 - Actual percentages will vary based on workload

@@ -7,7 +7,21 @@
 - Release management
 ---
 ## Branch Theory
-![0](../../../out/mermaid/marp/courses/git/05_branches.md/0.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_branches)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_branches)"/>
+  <defs>
+    <marker id="arrowd0_05_branches" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Local Branching Benefits
@@ -48,7 +62,21 @@ git switch -c another_feature
 - Branch isolation
 ---
 ## Branch Navigation
-![1](../../../out/mermaid/marp/courses/git/05_branches.md/1.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_branches)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_branches)"/>
+  <defs>
+    <marker id="arrowd1_05_branches" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Git Checkout vs Switch
@@ -82,7 +110,21 @@ git switch -c another_feature
 - Integration branches
 ---
 ## Feature Branch Workflow
-![2](../../../out/mermaid/marp/courses/git/05_branches.md/2.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_branches)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_branches)"/>
+  <defs>
+    <marker id="arrowd2_05_branches" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Release Branches
@@ -122,7 +164,21 @@ git switch -c another_feature
 - Custom workflows
 ---
 ## GitFlow Model
-![3](../../../out/mermaid/marp/courses/git/05_branches.md/3.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_05_branches)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_05_branches)"/>
+  <defs>
+    <marker id="arrowd3_05_branches" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Trunk-Based Development

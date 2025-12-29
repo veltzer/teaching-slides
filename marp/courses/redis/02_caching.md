@@ -9,7 +9,21 @@
 - Improves response time and application performance
 - Reduces costs (database queries, API calls, computation)
 
-![0](../../../out/mermaid/marp/courses/redis/02_caching.md/0.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_caching)"/>
+  <defs>
+    <marker id="arrowd0_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -39,7 +53,21 @@
 
 Application is responsible for cache interactions:
 
-![1](../../../out/mermaid/marp/courses/redis/02_caching.md/1.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd1_02_caching)"/>
+  <defs>
+    <marker id="arrowd1_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -73,7 +101,21 @@ def get_user(user_id):
 
 Every write goes to cache and database:
 
-![2](../../../out/mermaid/marp/courses/redis/02_caching.md/2.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd2_02_caching)"/>
+  <defs>
+    <marker id="arrowd2_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -103,7 +145,21 @@ def update_user(user_id, user_data):
 
 Writes go to cache first, then asynchronously to database:
 
-![3](../../../out/mermaid/marp/courses/redis/02_caching.md/3.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd3_02_caching)"/>
+  <defs>
+    <marker id="arrowd3_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -138,7 +194,21 @@ def update_user_write_behind(user_id, user_data):
 
 Cache handles database interaction on miss:
 
-![4](../../../out/mermaid/marp/courses/redis/02_caching.md/4.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd4_02_caching)"/>
+  <defs>
+    <marker id="arrowd4_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -146,7 +216,21 @@ Cache handles database interaction on miss:
 
 Cache proactively refreshes before expiration:
 
-![5](../../../out/mermaid/marp/courses/redis/02_caching.md/5.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_02_caching)"/>
+  <defs>
+    <marker id="arrowd5_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -196,13 +280,41 @@ EXPIRE session:123 3600
 
 Redis memory limits and eviction:
 
-![6](../../../out/mermaid/marp/courses/redis/02_caching.md/6.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_caching)"/>
+  <defs>
+    <marker id="arrowd6_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
 ## LRU vs LFU Eviction
 
-![7](../../../out/mermaid/marp/courses/redis/02_caching.md/7.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_caching)"/>
+  <defs>
+    <marker id="arrowd7_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - LRU: `allkeys-lru`, `volatile-lru`
 - LFU: `allkeys-lfu`, `volatile-lfu` (Redis 4.0+)
@@ -227,7 +339,21 @@ Redis memory limits and eviction:
 
 ## Event-Based Cache Invalidation
 
-![8](../../../out/mermaid/marp/courses/redis/02_caching.md/8.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd8_02_caching)"/>
+  <defs>
+    <marker id="arrowd8_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -268,7 +394,21 @@ def setup_cache_invalidation_listener():
 - Occurs when popular keys expire or are invalidated
 - Causes database overload
 
-![9](../../../out/mermaid/marp/courses/redis/02_caching.md/9.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd9_02_caching)"/>
+  <defs>
+    <marker id="arrowd9_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -290,7 +430,21 @@ def setup_cache_invalidation_listener():
 
 ## Cache Stampede Prevention: Locking
 
-![10](../../../out/mermaid/marp/courses/redis/02_caching.md/10.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd10_02_caching)"/>
+  <defs>
+    <marker id="arrowd10_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -340,7 +494,21 @@ def get_with_lock(key, rebuild_func, lock_timeout=5, retry_count=3):
 
 Multiple application instances using shared Redis cache:
 
-![11](../../../out/mermaid/marp/courses/redis/02_caching.md/11.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_02_caching)"/>
+  <defs>
+    <marker id="arrowd11_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -364,7 +532,21 @@ Multiple application instances using shared Redis cache:
 
 ## Cache Hit Ratio Monitoring
 
-![12](../../../out/mermaid/marp/courses/redis/02_caching.md/12.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_02_caching)"/>
+  <defs>
+    <marker id="arrowd12_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - Target hit ratio: 80%+ in most applications
 - Monitor with `INFO stats` command
@@ -414,7 +596,21 @@ Strategies for large objects:
 
 Using Redis hashes for small objects:
 
-![13](../../../out/mermaid/marp/courses/redis/02_caching.md/13.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd13_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd13_02_caching)"/>
+  <defs>
+    <marker id="arrowd13_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 - Memory efficient for small objects
 - Hash fields compression when appropriate
@@ -449,7 +645,21 @@ Benefits:
 
 ## Implementing Rate Limiting with Redis
 
-![14](../../../out/mermaid/marp/courses/redis/02_caching.md/14.png)
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
+  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
+  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
+  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
+  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd14_02_caching)"/>
+  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd14_02_caching)"/>
+  <defs>
+    <marker id="arrowd14_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -541,7 +751,21 @@ def invalidate_by_tag(tag):
 
 ## Implementing a Tiered Cache
 
-![15](../../../out/mermaid/marp/courses/redis/02_caching.md/15.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd15_02_caching)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd15_02_caching)"/>
+  <defs>
+    <marker id="arrowd15_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 Benefits:
 - Reduced network calls

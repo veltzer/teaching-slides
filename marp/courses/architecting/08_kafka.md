@@ -4,7 +4,21 @@
 ## Traditional Kafka vs Streaming
 
 Traditional Message Processing
-![0](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/0.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_kafka)"/>
+  <defs>
+    <marker id="arrowd0_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * Messages are **consumed and committed**
 * Processing is done **after** retrieval
@@ -13,7 +27,21 @@ Traditional Message Processing
 ---
 ## Kafka Streams
 
-![1](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/1.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_08_kafka)"/>
+  <defs>
+    <marker id="arrowd1_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Real-time** processing
 * **Stateful** operations
@@ -35,7 +63,21 @@ Traditional Message Processing
 
 ## SQS Deep Dive
 
-![2](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/2.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_kafka)"/>
+  <defs>
+    <marker id="arrowd2_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Standard** vs **FIFO** queues
 * Message retention up to 14 days
@@ -65,7 +107,21 @@ Traditional Message Processing
 
 ## RabbitMQ Architecture
 
-![3](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/3.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_kafka)"/>
+  <defs>
+    <marker id="arrowd3_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Exchange types**: Direct, Fanout, Topic, Headers
 * **Advanced routing** capabilities
@@ -77,7 +133,21 @@ Traditional Message Processing
 
 ## Storage Models Compared
 
-![4](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/4.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_08_kafka)"/>
+  <defs>
+    <marker id="arrowd4_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -105,7 +175,21 @@ Traditional Message Processing
 
 ## Kafka Deep Dive: Topics & Partitions
 
-![5](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/5.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_08_kafka)"/>
+  <defs>
+    <marker id="arrowd5_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * Each partition is an **ordered log**
 * Segments are **physical files**
@@ -116,7 +200,21 @@ Traditional Message Processing
 
 ## Advanced Kafka: Consumer Groups
 
-![6](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/6.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_08_kafka)"/>
+  <defs>
+    <marker id="arrowd6_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Automatic partition assignment**
 * **Rebalancing** on consumer changes
@@ -139,7 +237,21 @@ Traditional Message Processing
 ## Scaling Patterns
 
 ### Kafka
-![7](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/7.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_kafka)"/>
+  <defs>
+    <marker id="arrowd7_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Horizontal scaling** via partitions
 * **Replication** for fault tolerance
@@ -150,7 +262,21 @@ Traditional Message Processing
 
 ## SQS Scaling Patterns
 
-![8](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/8.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_kafka)"/>
+  <defs>
+    <marker id="arrowd8_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Queue-per-microservice**
 * **Auto-scaling** based on queue depth
@@ -175,13 +301,41 @@ Traditional Message Processing
     * ~(Desired Throughput) / (Single Partition Throughput)
     * Typically 1 partition per broker for start
 
-![9](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/9.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_08_kafka)"/>
+  <defs>
+    <marker id="arrowd9_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
 ## Advanced Kafka: Replication
 
-![10](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/10.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_kafka)"/>
+  <defs>
+    <marker id="arrowd10_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Leader** handles all reads/writes
 * **Followers** maintain replicas
@@ -264,7 +418,21 @@ Key Metrics to Watch
 
 ## Integration Patterns
 
-![11](../../../out/mermaid/marp/courses/architecting/XX_kafka.md/11.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_08_kafka)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_08_kafka)"/>
+  <defs>
+    <marker id="arrowd11_08_kafka" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 * **Hybrid** approaches
 * **Bridge** patterns

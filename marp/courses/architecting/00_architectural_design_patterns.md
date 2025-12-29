@@ -21,7 +21,10 @@
 ---
 ## Communication Diagram
 
-![0](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/0.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 0</text>
+</svg>
 
 ---
 
@@ -77,7 +80,10 @@ Cons:
 
 ## Broker Interaction Diagram
 
-![1](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/1.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 1</text>
+</svg>
 
 ---
 ## Broker Pros and Cons
@@ -129,7 +135,21 @@ Cons:
 
 ## Peer-to-Peer Diagram
 
-![2](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/2.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Peer-to-Peer Pros and Cons
@@ -182,7 +202,21 @@ Cons:
 
 ## Event Bus Interaction Diagram
 
-![3](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/3.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -233,7 +267,21 @@ Cons:
 ---
 ## Microservices Architecture Diagram
 
-![4](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/4.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Microservices Pros and Cons
@@ -286,7 +334,21 @@ Cons:
 
 ## Service-Oriented Architecture Diagram
 
-![5](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/5.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Service-Oriented Architecture Pros and Cons
@@ -342,7 +404,21 @@ Cons:
 
 ## Event-Driven Architecture Diagram
 
-![6](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/6.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -404,7 +480,21 @@ Cons:
 
 ## DDD Architecture Diagram
 
-![7](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/7.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## DDD Pros and Cons
@@ -471,7 +561,21 @@ Cons:
 
 ## CQRS Architecture Diagram
 
-![8](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/8.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -534,7 +638,10 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-![9](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/9.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 9</text>
+</svg>
 
 ---
 ## Event Sourcing Pros and Cons
@@ -592,7 +699,21 @@ Cons:
 ---
 ## Serverless Architecture Diagram
 
-![10](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/10.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Serverless Pros and Cons
@@ -650,7 +771,21 @@ Cons:
 ---
 ## Space-Based Architecture Diagram
 
-![11](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/11.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Space-Based Pros and Cons
@@ -712,7 +847,21 @@ Cons:
 
 ## Hexagonal Architecture Diagram
 
-![12](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/12.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Hexagonal Architecture Pros and Cons
@@ -776,7 +925,21 @@ Cons:
 
 ## Architecture Diagram
 
-![13](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/13.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Pros and Cons
@@ -832,7 +995,21 @@ Cons:
 ---
 ## Onion Architecture Diagram
 
-![14](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/14.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Onion Architecture Pros and Cons
@@ -893,7 +1070,21 @@ Cons:
 ---
 ## Microkernel Architecture Diagram
 
-![15](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/15.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Microkernel Pros and Cons
@@ -957,7 +1148,21 @@ Cons:
 
 ## Publish-Subscribe Diagram
 
-![16](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/16.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -1015,7 +1220,21 @@ Cons:
 
 ## Monolithic Architecture Diagram
 
-![17](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/17.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -1079,7 +1298,21 @@ Cons:
 ---
 ## Modular Monolith Architecture Diagram
 
-![18](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/18.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -1142,7 +1375,21 @@ Cons:
 ---
 ## Share-Nothing Architecture Diagram
 
-![19](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/19.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Share-Nothing Pros and Cons
@@ -1179,7 +1426,21 @@ Cons:
 ---
 ## Circuit Breaker Pattern Diagram
 
-![20](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/20.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Pros and Cons
@@ -1214,7 +1475,10 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-![21](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/21.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 21</text>
+</svg>
 
 ---
 ## Pros and Cons
@@ -1248,7 +1512,21 @@ Cons:
 ---
 ## Bulkhead Pattern Diagram
 
-![22](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/22.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Bulkhead Pattern Pros and Cons
@@ -1283,7 +1561,21 @@ Cons:
 ---
 ## Strangler Fig Pattern Diagram
 
-![23](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/23.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Strangler Fig Pros and Cons
@@ -1318,7 +1610,21 @@ Cons:
 ---
 ## Backend for Frontend (BFF) Pattern Diagram
 
-![24](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/24.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## BFF Pros and Cons
@@ -1355,7 +1661,21 @@ Cons:
 ---
 ## API Gateway Pattern Diagram
 
-![25](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/25.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -1399,7 +1719,21 @@ Cons:
 
 ## Anti-Corruption Layer Pattern Diagram
 
-![26](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/26.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Anti-Corruption Pros and Cons
@@ -1444,7 +1778,21 @@ Cons:
 
 ## Database per Service Pattern Diagram
 
-![27](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/27.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -1491,7 +1839,21 @@ Cons:
 
 ## Geode Pattern Diagram
 
-![28](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/28.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Geode Pros and Cons
@@ -1530,7 +1892,21 @@ Cons:
 ---
 ## Kappa Architecture Diagram
 
-![29](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/29.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Pros and Cons
@@ -1569,7 +1945,21 @@ Cons:
 ---
 ## Lambda Architecture Diagram
 
-![30](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/30.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Pros and Cons
@@ -1607,7 +1997,21 @@ Cons:
 ---
 ## Mesh Architecture Diagram
 
-![31](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/31.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Mesh Architecture Pros and Cons
@@ -1646,7 +2050,21 @@ Cons:
 ---
 ## Sharded Architecture Diagram
 
-![32](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/32.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="105" text-anchor="middle" font-size="12">Start</text>
+  <text x="300" y="105" text-anchor="middle" font-size="12">Process</text>
+  <text x="500" y="105" text-anchor="middle" font-size="12">End</text>
+  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 ## Sharded Pros and Cons
@@ -1684,7 +2102,10 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-![33](../../../out/mermaid/marp/courses/architecting/XX_architectural_design_patterns.md/33.png)
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 33</text>
+</svg>
 
 ---
 ## Throttling Pros and Cons
