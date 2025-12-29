@@ -8,7 +8,7 @@
 * Production considerations
 ---
 ## MLlib Architecture
-![0](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/0.png)
+<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
 
 ---
 ## Pipeline Components
@@ -30,7 +30,7 @@ assembler = VectorAssembler(
 
 ---
 ## Feature Engineering
-![1](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/1.png)
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="505" y1="150.0" x2="595" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="775" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="820" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Raw Data</text></svg>
 
 ---
 ## Feature Transformers
@@ -71,7 +71,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
 ```
 ---
 ## Model Training
-![2](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/2.png)
+<svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="300" x2="295.0" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="520" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="545" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Training Data</text></svg>
 
 ---
 ## Hyperparameter Tuning
@@ -102,7 +102,7 @@ cv = CrossValidator(
 1. Custom metrics
 ---
 ## Evaluation Metrics
-![3](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/3.png)
+<svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="160.0" x2="235" y2="40.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="120.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="200.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="280.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="140.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="460" y="165.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Predictions</text></svg>
 
 ---
 ## Custom Evaluator
@@ -122,7 +122,7 @@ bestPipeline = bestModel.stages[-1]
 ```
 ---
 ## Distributed Training
-![4](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/4.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
 
 ---
 ## Model Persistence
@@ -153,7 +153,7 @@ rf = RandomForestClassifier(
 ```
 ---
 ## Neural Networks
-![5](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/5.png)
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Input</text></svg>
 
 ---
 ## Custom Algorithms
@@ -173,7 +173,7 @@ for batch in streaming_data:
 ```
 ---
 ## Model Serving
-![6](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/6.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Model</text></svg>
 
 ---
 ## Production Pipeline
@@ -191,7 +191,7 @@ accuracy = evaluator.evaluate(predictions)
 ```
 ---
 ## Performance Optimization
-![7](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/7.png)
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Optimization</text></svg>
 
 ---
 
@@ -210,7 +210,7 @@ transformed_data = pipeline.fit(train_data)\
 ```
 ---
 ## Distributed Processing
-![8](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/8.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Master</text></svg>
 
 ---
 ## Feature Store Integration
@@ -226,7 +226,7 @@ mlflow.spark.log_model(spark_model, "model")
 ```
 ---
 ## A/B Testing
-![9](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/9.png)
+<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="110.0" x2="325" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Traffic</text></svg>
 
 ---
 ## Model Versioning
@@ -252,7 +252,7 @@ except Exception as e:
 ```
 ---
 ## Data Validation
-![10](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/10.png)
+<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Input Data</text></svg>
 
 ---
 ## Model Explainability
@@ -272,7 +272,7 @@ automl = TrainValidationSplit(
 ```
 ---
 ## Transfer Learning
-![11](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/11.png)
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Base Model</text></svg>
 
 ---
 ## Model Compression
@@ -290,7 +290,7 @@ def process_stream(batch_df, epoch_id):
 ```
 ---
 ## Security Considerations
-![12](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/12.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Security</text></svg>
 
 ---
 ## Testing ML Pipelines
@@ -307,7 +307,7 @@ debug_df.show()
 ```
 ---
 ## Best Practices
-![13](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/13.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Best Practices</text></svg>
 
 ---
 ## Production Checklist
@@ -323,7 +323,7 @@ debug_df.show()
 1. Federated learning
 ---
 ## MLOps Integration
-![14](../../../out/mermaid/marp/courses/advanced-spark-with-python/02_advanced_spark_mllib.md/14.png)
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Development</text></svg>
 
 ---
 ## Additional Resources

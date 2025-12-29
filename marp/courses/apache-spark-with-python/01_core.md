@@ -14,7 +14,62 @@
 
 ## Spark Architecture
 
-![0](../../../out/mermaid/marp/courses/apache-spark-with-python/01_core.md/0.png)
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Driver Program -->
+  <rect x="320" y="30" width="160" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Driver Program</text>
+
+  <!-- Spark Context -->
+  <rect x="320" y="130" width="160" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Spark Context</text>
+
+  <!-- Cluster Manager -->
+  <rect x="320" y="230" width="160" height="60" rx="5" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Cluster Manager</text>
+
+  <!-- Worker Nodes -->
+  <rect x="80" y="350" width="140" height="60" rx="5" fill="#d1f2eb" stroke="#55a3a0" stroke-width="2"/>
+  <text x="150" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Worker Node 1</text>
+
+  <rect x="330" y="350" width="140" height="60" rx="5" fill="#d1f2eb" stroke="#55a3a0" stroke-width="2"/>
+  <text x="400" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Worker Node 2</text>
+
+  <rect x="580" y="350" width="140" height="60" rx="5" fill="#d1f2eb" stroke="#55a3a0" stroke-width="2"/>
+  <text x="650" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Worker Node n</text>
+
+  <!-- Executors -->
+  <rect x="85" y="460" width="130" height="50" rx="5" fill="#ffefd5" stroke="#ffa500" stroke-width="2"/>
+  <text x="150" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Executor 1</text>
+
+  <rect x="335" y="460" width="130" height="50" rx="5" fill="#ffefd5" stroke="#ffa500" stroke-width="2"/>
+  <text x="400" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Executor 2</text>
+
+  <rect x="585" y="460" width="130" height="50" rx="5" fill="#ffefd5" stroke="#ffa500" stroke-width="2"/>
+  <text x="650" y="490" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Executor n</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Driver to Spark Context -->
+  <line x1="400" y1="90" x2="400" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Spark Context to Cluster Manager -->
+  <line x1="400" y1="190" x2="400" y2="230" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Cluster Manager to Worker Nodes -->
+  <line x1="360" y1="290" x2="180" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="290" x2="400" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="440" y1="290" x2="620" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Worker Nodes to Executors -->
+  <line x1="150" y1="410" x2="150" y2="460" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="410" x2="400" y2="460" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="410" x2="650" y2="460" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>
 
 ---
 
@@ -66,7 +121,54 @@ filtered = numbers.filter(lambda x: x > 2)
 
 ## RDD Operations Types
 
-![1](../../../out/mermaid/marp/courses/apache-spark-with-python/01_core.md/1.png)
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main RDD Operations node -->
+  <rect x="50" y="170" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="125" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RDD Operations</text>
+
+  <!-- Transformations branch -->
+  <rect x="280" y="80" width="150" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="355" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Transformations</text>
+
+  <!-- Actions branch -->
+  <rect x="280" y="260" width="150" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="355" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Actions</text>
+
+  <!-- Transformation operations -->
+  <rect x="510" y="30" width="180" height="50" rx="5" fill="#e7f5e7" stroke="#5cb85c" stroke-width="2"/>
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">map, filter, flatMap</text>
+
+  <rect x="510" y="100" width="180" height="50" rx="5" fill="#e7f5e7" stroke="#5cb85c" stroke-width="2"/>
+  <text x="600" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">union, intersection</text>
+
+  <!-- Action operations -->
+  <rect x="510" y="210" width="180" height="50" rx="5" fill="#fde7e7" stroke="#f5c6cb" stroke-width="2"/>
+  <text x="600" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">reduce, collect, count</text>
+
+  <rect x="510" y="280" width="180" height="50" rx="5" fill="#fde7e7" stroke="#f5c6cb" stroke-width="2"/>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">take, saveAsTextFile</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Main to Transformations -->
+  <line x1="200" y1="180" x2="280" y2="120" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Main to Actions -->
+  <line x1="200" y1="220" x2="280" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Transformations to operations -->
+  <line x1="430" y1="100" x2="510" y2="55" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="430" y1="120" x2="510" y2="125" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Actions to operations -->
+  <line x1="430" y1="280" x2="510" y2="235" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="430" y1="300" x2="510" y2="305" stroke="#666" stroke-width="2" marker-end="url(#arrow2)"/>
+</svg>
 
 ---
 
@@ -164,7 +266,40 @@ first_elem = lambda x: x[0]
 
 ## Map Reduce Concept
 
-![2](../../../out/mermaid/marp/courses/apache-spark-with-python/01_core.md/2.png)
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Input Data -->
+  <rect x="50" y="120" width="120" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="110" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Input Data</text>
+
+  <!-- Map Phase -->
+  <rect x="230" y="120" width="120" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="290" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Map Phase</text>
+
+  <!-- Shuffle -->
+  <rect x="410" y="120" width="120" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="470" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Shuffle</text>
+
+  <!-- Reduce Phase -->
+  <rect x="590" y="120" width="120" height="60" rx="5" fill="#cce5ff" stroke="#007bff" stroke-width="2"/>
+  <text x="650" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Reduce Phase</text>
+
+  <!-- Final Result -->
+  <rect x="770" y="120" width="120" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="830" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Final Result</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Connect the phases -->
+  <line x1="170" y1="150" x2="230" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="350" y1="150" x2="410" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="530" y1="150" x2="590" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow3)"/>
+  <line x1="710" y1="150" x2="770" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrow3)"/>
+</svg>
 
 ---
 
@@ -269,7 +404,45 @@ errors = logs.filter(lambda line: "ERROR" in line) \
 
 ## Performance Optimization
 
-![3](../../../out/mermaid/marp/courses/apache-spark-with-python/01_core.md/3.png)
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Performance Optimization (root) -->
+  <rect x="300" y="30" width="200" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Performance Optimization</text>
+
+  <!-- Caching -->
+  <rect x="80" y="180" width="120" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="140" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Caching</text>
+
+  <!-- Partitioning -->
+  <rect x="240" y="180" width="120" height="50" rx="5" fill="#cce5ff" stroke="#007bff" stroke-width="2"/>
+  <text x="300" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Partitioning</text>
+
+  <!-- Serialization -->
+  <rect x="400" y="180" width="120" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="460" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Serialization</text>
+
+  <!-- Memory Management -->
+  <rect x="180" y="300" width="160" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="260" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Memory Management</text>
+
+  <!-- Shuffle Optimization -->
+  <rect x="380" y="300" width="160" height="50" rx="5" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2"/>
+  <text x="460" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Shuffle Optimization</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- From root to branches -->
+  <line x1="350" y1="90" x2="160" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="380" y1="90" x2="300" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="420" y1="90" x2="460" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="370" y1="90" x2="260" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="430" y1="90" x2="460" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrow4)"/>
+</svg>
 
 ---
 

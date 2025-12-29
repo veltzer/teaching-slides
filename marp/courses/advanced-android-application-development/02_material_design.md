@@ -147,13 +147,113 @@
 
 ## Typography System
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/1.png)
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Typography Scale root -->
+  <rect x="225" y="30" width="150" height="50" fill="#673ab7" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Typography Scale</text>
+
+  <!-- Main categories -->
+  <rect x="50" y="130" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="155" text-anchor="middle" font-size="12">Headlines</text>
+
+  <rect x="180" y="130" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="230" y="155" text-anchor="middle" font-size="12">Subtitles</text>
+
+  <rect x="310" y="130" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="360" y="155" text-anchor="middle" font-size="12">Body</text>
+
+  <rect x="440" y="130" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="155" text-anchor="middle" font-size="12">Caption</text>
+
+  <!-- Headlines sub-items -->
+  <rect x="20" y="220" width="50" height="30" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="45" y="240" text-anchor="middle" font-size="11">H1</text>
+
+  <rect x="75" y="220" width="50" height="30" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="100" y="240" text-anchor="middle" font-size="11">H2</text>
+
+  <rect x="130" y="220" width="50" height="30" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="155" y="240" text-anchor="middle" font-size="11">H3</text>
+
+  <!-- Body sub-items -->
+  <rect x="285" y="220" width="60" height="30" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="315" y="240" text-anchor="middle" font-size="11">Body 1</text>
+
+  <rect x="350" y="220" width="60" height="30" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="380" y="240" text-anchor="middle" font-size="11">Body 2</text>
+
+  <!-- Arrows from root to categories -->
+  <line x1="260" y1="80" x2="100" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="280" y1="80" x2="230" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="320" y1="80" x2="360" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="340" y1="80" x2="490" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+
+  <!-- Arrows to sub-items -->
+  <line x1="80" y1="170" x2="45" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="100" y1="170" x2="100" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="120" y1="170" x2="155" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+
+  <line x1="340" y1="170" x2="315" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+  <line x1="380" y1="170" x2="380" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_typo)"/>
+
+  <defs>
+    <marker id="arrow_typo" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
 ## Animation Types in Android
 
-![2](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/2.png)
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Android Animations root -->
+  <rect x="200" y="30" width="200" height="50" fill="#4caf50" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Android Animations</text>
+
+  <!-- Three main branches -->
+  <rect x="50" y="130" width="140" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="120" y="155" text-anchor="middle" font-size="12">Property Animation</text>
+
+  <rect x="230" y="130" width="120" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="290" y="155" text-anchor="middle" font-size="12">View Animation</text>
+
+  <rect x="390" y="130" width="150" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="465" y="155" text-anchor="middle" font-size="12">Transition Animation</text>
+
+  <!-- Property Animation sub-items -->
+  <rect x="20" y="220" width="100" height="30" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="70" y="240" text-anchor="middle" font-size="11">ValueAnimator</text>
+
+  <rect x="130" y="220" width="100" height="30" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="180" y="240" text-anchor="middle" font-size="11">ObjectAnimator</text>
+
+  <!-- View Animation sub-items -->
+  <rect x="210" y="220" width="110" height="30" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="265" y="240" text-anchor="middle" font-size="11">Tween Animation</text>
+
+  <rect x="330" y="220" width="110" height="30" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="385" y="240" text-anchor="middle" font-size="11">Frame Animation</text>
+
+  <!-- Arrows from root to main branches -->
+  <line x1="250" y1="80" x2="120" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+  <line x1="300" y1="80" x2="290" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+  <line x1="350" y1="80" x2="465" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+
+  <!-- Arrows to sub-items -->
+  <line x1="100" y1="170" x2="70" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+  <line x1="140" y1="170" x2="180" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+
+  <line x1="270" y1="170" x2="265" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+  <line x1="310" y1="170" x2="385" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_anim)"/>
+
+  <defs>
+    <marker id="arrow_anim" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 
@@ -286,7 +386,44 @@ public class PulseAnimation extends Animation {
 
 ## Best Practices
 
-![3](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter03.md/3.png)
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Material Design Best Practices flow -->
+  <rect x="150" y="30" width="300" height="40" fill="#673ab7" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="55" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Material Design Best Practices</text>
+
+  <!-- Best practices items in sequence -->
+  <rect x="200" y="100" width="200" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="122" text-anchor="middle" font-size="12">Consistent Spacing</text>
+
+  <rect x="200" y="150" width="200" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="172" text-anchor="middle" font-size="12">Color Hierarchy</text>
+
+  <rect x="200" y="200" width="200" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="222" text-anchor="middle" font-size="12">Typography Scale</text>
+
+  <rect x="200" y="250" width="200" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="272" text-anchor="middle" font-size="12">Meaningful Motion</text>
+
+  <rect x="200" y="300" width="200" height="35" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="322" text-anchor="middle" font-size="12">Accessibility</text>
+
+  <rect x="400" y="300" width="200" height="35" fill="#e1f5fe" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="322" text-anchor="middle" font-size="12">Dark Theme Support</text>
+
+  <!-- Flow arrows -->
+  <line x1="300" y1="70" x2="300" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+  <line x1="300" y1="135" x2="300" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+  <line x1="300" y1="185" x2="300" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+  <line x1="300" y1="235" x2="300" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+  <line x1="300" y1="285" x2="300" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+  <line x1="400" y1="317" x2="400" y2="317" stroke="#333" stroke-width="2" marker-end="url(#arrow_bp)"/>
+
+  <defs>
+    <marker id="arrow_bp" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>
 
 ---
 

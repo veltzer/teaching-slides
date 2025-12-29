@@ -7,7 +7,7 @@
 * Graph operators
 ---
 ## Graph Abstractions
-![0](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/0.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Graph</text></svg>
 
 ---
 ## Basic Components
@@ -25,7 +25,7 @@ graph = GraphFrame(vertices, edges)
 ```
 ---
 ## Graph Construction
-![1](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/1.png)
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="235" y1="110.0" x2="325" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(1</text></svg>
 
 ---
 ## Property Graphs
@@ -43,7 +43,7 @@ vertices_with_props = vertices.map(add_property)
 ```
 ---
 ## Basic Operations
-![2](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/2.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Operations</text></svg>
 
 ---
 ## Graph Transformations
@@ -60,7 +60,7 @@ def update_vertex(id, attr, message):
 ```
 ---
 ## Edge Operations
-![3](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/3.png)
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><rect x="55" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(V1</text></svg>
 
 ---
 ## Triplet Views
@@ -86,7 +86,7 @@ results = g.pageRank(
 ```
 ---
 ## Connected Components
-![4](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/4.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><rect x="55" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(1</text><rect x="205" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="250" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(3</text><rect x="55" y="160" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(5</text></svg>
 
 ---
 ## Shortest Paths
@@ -98,7 +98,7 @@ paths = g.shortestPaths(
 ```
 ---
 ## Triangle Counting
-![5](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/5.png)
+<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="130.0" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="460" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(A</text></svg>
 
 ---
 ## Graph Algorithms API
@@ -115,7 +115,7 @@ def custom_graph_algo(graph):
 ```
 ---
 ## Pregel API
-![6](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/6.png)
+<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="300" x2="295.0" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Initial</text></svg>
 
 ---
 ## Message Passing
@@ -133,7 +133,7 @@ for i in range(max_iterations):
 ```
 ---
 ## Graph Partitioning
-![7](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/7.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Graph</text></svg>
 
 ---
 ## Partition Strategies
@@ -152,7 +152,7 @@ graph = graph.partitionBy(
 ```
 ---
 ## Memory Management
-![8](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/8.png)
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
 
 ---
 ## Caching Strategies
@@ -170,7 +170,7 @@ subgraph = graph.filter(
 ```
 ---
 ## Graph Metrics
-![9](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/9.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Metrics</text></svg>
 
 ---
 ## Graph Analytics
@@ -187,7 +187,7 @@ def export_graph(graph, path):
 ```
 ---
 ## Graph Formats
-![10](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/10.png)
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Formats</text></svg>
 
 ---
 ## Data Integration
@@ -206,7 +206,7 @@ def transform_graph(data):
 ```
 ---
 ## Security Considerations
-![11](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/11.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Security</text></svg>
 
 ---
 ## Production Deployment
@@ -225,7 +225,7 @@ def track_metrics(graph):
 ```
 ---
 ## Error Handling
-![12](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/12.png)
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Error</text></svg>
 
 ---
 ## Best Practices
@@ -243,7 +243,7 @@ def process_graph_pattern(graph):
 ```
 ---
 ## Advanced Features
-![13](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/13.png)
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Features</text></svg>
 
 ---
 ## Integration Patterns
@@ -261,7 +261,7 @@ def analyze_performance(graph):
 ```
 ---
 ## Optimization Techniques
-![14](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/14.png)
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Optimize</text></svg>
 
 ---
 ## Future Developments
@@ -280,7 +280,7 @@ def social_network_analysis(graph):
 ```
 ---
 ## Production Checklist
-![15](../../../out/mermaid/marp/courses/advanced-spark-with-python/04_graph_processing_graphx.md/15.png)
+<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Deploy</text></svg>
 
 ---
 ## Additional Resources

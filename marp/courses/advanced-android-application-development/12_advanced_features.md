@@ -5,7 +5,23 @@
 
 ## Feature Overview
 
-![0](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/0.png)
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="400" cy="300" r="70" fill="#4CAF50" stroke="#2E7D32" stroke-width="3"/>
+  <text x="400" y="305" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Advanced Features</text>
+  <line x1="330" y1="250" x2="200" y2="150" stroke="#666" stroke-width="2"/>
+  <circle cx="200" cy="150" r="45" fill="#2196F3" stroke="#219600" stroke-width="2"/>
+  <text x="200" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">AR/VR</text>
+  <line x1="470" y1="250" x2="600" y2="150" stroke="#666" stroke-width="2"/>
+  <circle cx="600" cy="150" r="45" fill="#FF9800" stroke="#FF9800" stroke-width="2"/>
+  <text x="600" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">ML</text>
+  <text x="600" y="160" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Kit</text>
+  <line x1="330" y1="350" x2="200" y2="450" stroke="#666" stroke-width="2"/>
+  <circle cx="200" cy="450" r="45" fill="#9C27B0" stroke="#9C2700" stroke-width="2"/>
+  <text x="200" y="455" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">Wearables</text>
+  <line x1="470" y1="350" x2="600" y2="450" stroke="#666" stroke-width="2"/>
+  <circle cx="600" cy="450" r="45" fill="#F44336" stroke="#F44300" stroke-width="2"/>
+  <text x="600" y="455" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">IoT</text>
+</svg>
 
 ---
 
@@ -263,7 +279,27 @@ public class RichNotificationManager {
 
 ## Integration Best Practices
 
-![1](../../../out/mermaid/marp/courses/advanced-android-application-development/chapter13.md/1.png)
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  <rect x="340" y="50" width="120" height="50" rx="8" fill="#4CAF50" stroke="#4CAF00" stroke-width="2"/>
+  <text x="400" y="80" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Feature Request</text>
+  <line x1="400" y1="100" x2="400" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="140" width="120" height="50" rx="8" fill="#2196F3" stroke="#219600" stroke-width="2"/>
+  <text x="400" y="170" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Evaluate</text>
+  <line x1="400" y1="190" x2="400" y2="220" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="230" width="120" height="50" rx="8" fill="#FF9800" stroke="#FF9800" stroke-width="2"/>
+  <text x="400" y="260" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Implement</text>
+  <line x1="400" y1="280" x2="400" y2="310" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="320" width="120" height="50" rx="8" fill="#9C27B0" stroke="#9C2700" stroke-width="2"/>
+  <text x="400" y="350" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Test</text>
+  <line x1="400" y1="370" x2="400" y2="400" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="340" y="410" width="120" height="50" rx="8" fill="#F44336" stroke="#F44300" stroke-width="2"/>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Deploy</text>
+</svg>
 
 ---
 

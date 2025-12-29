@@ -11,7 +11,59 @@
 
 ---
 ## Architecture
-![0](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/0.png)
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Data Sources -->
+  <rect x="50" y="30" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="125" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Data Sources</text>
+
+  <!-- DataFrame/Dataset API -->
+  <rect x="300" y="30" width="180" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="390" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">DataFrame/</text>
+  <text x="390" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Dataset API</text>
+
+  <!-- SQL Interface -->
+  <rect x="300" y="120" width="180" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="390" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SQL Interface</text>
+
+  <!-- Catalyst Optimizer -->
+  <rect x="300" y="230" width="180" height="60" rx="5" fill="#cce5ff" stroke="#007bff" stroke-width="2"/>
+  <text x="390" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Catalyst Optimizer</text>
+
+  <!-- Optimized RDD -->
+  <rect x="300" y="340" width="180" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="390" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Optimized RDD</text>
+
+  <!-- Execution -->
+  <rect x="550" y="340" width="150" height="60" rx="5" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2"/>
+  <text x="625" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Execution</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Data Sources to DataFrame/Dataset API -->
+  <line x1="200" y1="60" x2="300" y2="60" stroke="#666" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Data Sources to SQL Interface -->
+  <line x1="200" y1="70" x2="250" y2="100" stroke="#666" stroke-width="1.5"/>
+  <line x1="250" y1="100" x2="250" y2="150" stroke="#666" stroke-width="1.5"/>
+  <line x1="250" y1="150" x2="300" y2="150" stroke="#666" stroke-width="1.5" marker-end="url(#arrow7)"/>
+
+  <!-- DataFrame/Dataset API to Catalyst -->
+  <line x1="390" y1="90" x2="390" y2="230" stroke="#666" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- SQL Interface to Catalyst -->
+  <line x1="390" y1="180" x2="390" y2="230" stroke="#666" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Catalyst to Optimized RDD -->
+  <line x1="390" y1="290" x2="390" y2="340" stroke="#666" stroke-width="2" marker-end="url(#arrow7)"/>
+
+  <!-- Optimized RDD to Execution -->
+  <line x1="480" y1="370" x2="550" y2="370" stroke="#666" stroke-width="2" marker-end="url(#arrow7)"/>
+</svg>
 
 ---
 ## Key Components
@@ -216,7 +268,52 @@ result = spark.sql("SELECT * FROM hive_table")
 ## Performance Optimization
 
 ## Catalyst Optimizer
-![1](../../../out/mermaid/marp/courses/apache-spark-with-python/03_sql.md/1.png)
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- SQL/DataFrame -->
+  <rect x="300" y="30" width="200" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">SQL/DataFrame</text>
+
+  <!-- Unresolved Logical Plan -->
+  <rect x="275" y="130" width="250" height="60" rx="5" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Unresolved Logical Plan</text>
+
+  <!-- Resolved Logical Plan -->
+  <rect x="275" y="230" width="250" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Resolved Logical Plan</text>
+
+  <!-- Optimized Logical Plan -->
+  <rect x="275" y="330" width="250" height="60" rx="5" fill="#cce5ff" stroke="#007bff" stroke-width="2"/>
+  <text x="400" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Optimized Logical Plan</text>
+
+  <!-- Physical Plan -->
+  <rect x="300" y="430" width="200" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="400" y="465" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Physical Plan</text>
+
+  <!-- RDD -->
+  <rect x="350" y="530" width="100" height="50" rx="5" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2"/>
+  <text x="400" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RDD</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- Flow arrows -->
+  <line x1="400" y1="90" x2="400" y2="130" stroke="#666" stroke-width="2" marker-end="url(#arrow8)"/>
+  <line x1="400" y1="190" x2="400" y2="230" stroke="#666" stroke-width="2" marker-end="url(#arrow8)"/>
+  <line x1="400" y1="290" x2="400" y2="330" stroke="#666" stroke-width="2" marker-end="url(#arrow8)"/>
+  <line x1="400" y1="390" x2="400" y2="430" stroke="#666" stroke-width="2" marker-end="url(#arrow8)"/>
+  <line x1="400" y1="490" x2="400" y2="530" stroke="#666" stroke-width="2" marker-end="url(#arrow8)"/>
+
+  <!-- Side labels for stages -->
+  <text x="550" y="160" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">Analysis</text>
+  <text x="550" y="260" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">Resolution</text>
+  <text x="550" y="360" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">Optimization</text>
+  <text x="550" y="460" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">Planning</text>
+  <text x="550" y="560" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">Execution</text>
+</svg>
 
 ---
 ## Caching Strategies
