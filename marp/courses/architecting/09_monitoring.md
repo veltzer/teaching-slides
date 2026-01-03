@@ -1,5 +1,12 @@
 # Monitoring and Observability
 ## Modern Architecture Course
+
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 ## Agenda
 1. Introduction to Observability
@@ -20,21 +27,30 @@
 ---
 ## The Three Pillars of Observability
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_09_monitoring)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_09_monitoring)"/>
-  <defs>
-    <marker id="arrowd0_09_monitoring" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    O[Observability]
+
+    O --> L[Logs<br/>Event Records]
+    O --> M[Metrics<br/>Numeric Measurements]
+    O --> T[Traces<br/>Request Flow]
+
+    L --> L1[Application Logs]
+    L --> L2[System Logs]
+    L --> L3[Audit Logs]
+
+    M --> M1[Business Metrics]
+    M --> M2[System Metrics]
+    M --> M3[Application Metrics]
+
+    T --> T1[Distributed Tracing]
+    T --> T2[Performance Analysis]
+    T --> T3[Dependency Mapping]
+
+    style L fill:#e3f2fd
+    style M fill:#f3e5f5
+    style T fill:#e8f5e9
+</div>
 
 ---
 
@@ -85,21 +101,38 @@ logger.info("order_processed",
 
 ## ELK Stack Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_09_monitoring)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_09_monitoring)"/>
-  <defs>
-    <marker id="arrowd1_09_monitoring" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Data Sources"
+        A1[Application 1]
+        A2[Application 2]
+        A3[Application N]
+    end
+
+    subgraph "Collection"
+        B[Beats/Fluentd]
+        L[Logstash]
+    end
+
+    subgraph "Storage"
+        E[Elasticsearch<br/>Cluster]
+    end
+
+    subgraph "Visualization"
+        K[Kibana]
+    end
+
+    A1 --> B
+    A2 --> B
+    A3 --> B
+    B --> L
+    L --> E
+    E --> K
+
+    style B fill:#e3f2fd
+    style E fill:#f3e5f5
+    style K fill:#e8f5e9
+</div>
 
 ---
 
@@ -166,21 +199,28 @@ def process_request():
 
 ## Distributed Tracing
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_09_monitoring)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_09_monitoring)"/>
-  <defs>
-    <marker id="arrowd2_09_monitoring" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+    participant U as User
+    participant G as API Gateway
+    participant A as Auth Service
+    participant O as Order Service
+    participant P as Payment Service
+    participant D as Database
+
+    U->>G: Request (Trace ID: 123)
+    G->>A: Authenticate (Span: auth)
+    A-->>G: Token Valid
+    G->>O: Create Order (Span: order)
+    O->>D: Save Order (Span: db-write)
+    D-->>O: Order Saved
+    O->>P: Process Payment (Span: payment)
+    P-->>O: Payment Complete
+    O-->>G: Order Created
+    G-->>U: Response
+
+    Note over U,D: Total Trace Duration: 250ms
+</div>
 
 ---
 
@@ -231,21 +271,28 @@ annotations:
 
 ## Alert Routing
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_09_monitoring)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_09_monitoring)"/>
-  <defs>
-    <marker id="arrowd3_09_monitoring" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    P[Prometheus<br/>Alert Rules]
+
+    AM[AlertManager]
+
+    P -->|Fires Alert| AM
+
+    AM --> R{Route by<br/>Severity?}
+
+    R -->|Critical| PD[PagerDuty<br/>On-Call]
+    R -->|Warning| S[Slack<br/>Channel]
+    R -->|Info| E[Email<br/>Team]
+
+    PD --> I[Create<br/>Incident]
+    S --> T[Team<br/>Discussion]
+    E --> L[Log for<br/>Review]
+
+    style P fill:#e3f2fd
+    style AM fill:#f3e5f5
+    style PD fill:#ffcdd2
+</div>
 
 ---
 
@@ -396,21 +443,36 @@ def handle_alert(alert):
 
 ## Cost of Monitoring
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_09_monitoring)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_09_monitoring)"/>
-  <defs>
-    <marker id="arrowd4_09_monitoring" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Data Volume"
+        DV[100GB/day Logs<br/>1M metrics/min<br/>10K traces/sec]
+    end
+
+    subgraph "Storage Costs"
+        SC[Hot Storage: $$$<br/>Warm Storage: $$<br/>Cold Storage: $]
+    end
+
+    subgraph "Processing Costs"
+        PC[Ingestion<br/>Indexing<br/>Query]
+    end
+
+    subgraph "Optimization"
+        O1[Sampling]
+        O2[Aggregation]
+        O3[Tiered Storage]
+    end
+
+    DV --> SC
+    DV --> PC
+    SC --> O3
+    PC --> O1
+    PC --> O2
+
+    style DV fill:#e3f2fd
+    style SC fill:#ffcdd2
+    style O1 fill:#e8f5e9
+</div>
 
 ---
 

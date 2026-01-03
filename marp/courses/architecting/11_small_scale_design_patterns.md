@@ -1,5 +1,11 @@
 # Small Scale Design patterns
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ## Model-View-Controller (MVC) Pattern
 
 ---
@@ -32,21 +38,20 @@
 
 ## Interaction Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_11_small_scale_design_patterns)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_11_small_scale_design_patterns)"/>
-  <defs>
-    <marker id="arrowd0_11_small_scale_design_patterns" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    U[User] -->|Input| V[View]
+    V -->|User Events| C[Controller]
+    C -->|Update| M[Model]
+    M -->|Notify Changes| V
+    C -->|Select View| V
+    M -->|Business Logic| M
+
+    style U fill:#fff3e0
+    style V fill:#e3f2fd
+    style C fill:#f3e5f5
+    style M fill:#e8f5e9
+</div>
 
 ---
 
@@ -103,10 +108,24 @@ Cons:
 
 ## Interpreter Diagram
 
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Abstract Syntax Tree"
+        AE[Abstract Expression]
+        AE --> TE[Terminal Expression]
+        AE --> NTE[Non-Terminal Expression]
+        NTE --> NTE1[Non-Terminal 1]
+        NTE --> TE2[Terminal 2]
+    end
+
+    C[Context] -.->|Global Info| AE
+    C -.->|Variables| TE
+    C -.->|State| NTE
+
+    style AE fill:#e3f2fd
+    style TE fill:#f3e5f5
+    style C fill:#e8f5e9
+</div>
 
 ---
 
@@ -146,21 +165,35 @@ Cons:
 
 ## Repository Pattern Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_11_small_scale_design_patterns)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_11_small_scale_design_patterns)"/>
-  <defs>
-    <marker id="arrowd2_11_small_scale_design_patterns" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Domain Layer"
+        BS[Business Service]
+        DE[Domain Entity]
+    end
+
+    subgraph "Repository Layer"
+        IR[IRepository Interface]
+        CR[Concrete Repository]
+    end
+
+    subgraph "Data Layer"
+        DB[Database]
+        API[External API]
+        FS[File System]
+    end
+
+    BS --> IR
+    IR --> CR
+    CR --> DB
+    CR --> API
+    CR --> FS
+    DE <--> CR
+
+    style BS fill:#e3f2fd
+    style IR fill:#f3e5f5
+    style DB fill:#e8f5e9
+</div>
 
 ---
 
@@ -200,10 +233,24 @@ Cons:
 
 ## Command Pattern Diagram
 
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
-</svg>
+<div class="mermaid">
+graph LR
+    I[Invoker] --> IC[ICommand]
+    IC --> CC1[ConcreteCommand 1]
+    IC --> CC2[ConcreteCommand 2]
+    IC --> CC3[ConcreteCommand 3]
+
+    CC1 --> R1[Receiver 1]
+    CC2 --> R2[Receiver 2]
+    CC3 --> R3[Receiver 3]
+
+    C[Client] -.->|Creates| CC1
+    C -.->|Configures| I
+
+    style I fill:#e3f2fd
+    style IC fill:#f3e5f5
+    style R1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -246,10 +293,26 @@ Cons:
 
 ## Decorator Pattern Diagram
 
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
-</svg>
+<div class="mermaid">
+graph TB
+    IC[IComponent]
+    IC --> CC[ConcreteComponent]
+    IC --> D[Decorator]
+
+    D --> CD1[ConcreteDecorator A]
+    D --> CD2[ConcreteDecorator B]
+    D --> CD3[ConcreteDecorator C]
+
+    D -.->|Wraps| IC
+
+    CD1 -.->|Adds Feature A| CC
+    CD2 -.->|Adds Feature B| CC
+    CD3 -.->|Adds Feature C| CC
+
+    style IC fill:#e3f2fd
+    style D fill:#f3e5f5
+    style CC fill:#e8f5e9
+</div>
 
 ---
 
@@ -292,10 +355,26 @@ Cons:
 
 ## Facade Pattern Diagram
 
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
-</svg>
+<div class="mermaid">
+graph LR
+    C[Client] --> F[Facade]
+
+    subgraph "Complex Subsystem"
+        F --> S1[Subsystem 1]
+        F --> S2[Subsystem 2]
+        F --> S3[Subsystem 3]
+        F --> S4[Subsystem 4]
+
+        S1 -.-> S2
+        S2 -.-> S3
+        S3 -.-> S4
+        S4 -.-> S1
+    end
+
+    style C fill:#e3f2fd
+    style F fill:#f3e5f5
+    style S1 fill:#e8f5e9
+</div>
 
 ---
 

@@ -1,6 +1,12 @@
 # Data Lakes and Lakehouses
 ## Modern Architecture Course
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 
 ## Agenda
@@ -27,41 +33,70 @@
 
 ## Data Lake vs Data Warehouse
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd0_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Data Lake"
+        A[Raw Data<br/>All Formats] --> B[Schema on Read]
+        B --> C[Low Cost Storage]
+    end
+
+    subgraph "Data Warehouse"
+        D[Structured Data] --> E[Schema on Write]
+        E --> F[Optimized for BI]
+    end
+
+    A -.->|ETL Process| D
+    C -->|Analytics| G[Data Scientists]
+    F -->|Reports| H[Business Users]
+
+    style A fill:#e3f2fd
+    style D fill:#f3e5f5
+    style G fill:#e8f5e9
+    style H fill:#fff3e0
+</div>
 
 ---
 
 ## Data Lake Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd1_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+subgraph "Data Sources"
+S1[Databases]
+S2[APIs]
+S3[Files]
+S4[Streams]
+end
+subgraph "Ingestion Layer"
+I1[Batch Processing]
+I2[Stream Processing]
+end
+subgraph "Storage Layer"
+ST1[Raw Zone]
+ST2[Processed Zone]
+ST3[Curated Zone]
+end
+subgraph "Processing Layer"
+P1[ETL/ELT]
+P2[Analytics]
+P3[ML Pipelines]
+end
+S1 --> I1
+S2 --> I1
+S3 --> I1
+S4 --> I2
+I1 --> ST1
+I2 --> ST1
+ST1 --> P1
+P1 --> ST2
+ST2 --> P2
+ST2 --> P3
+P2 --> ST3
+P3 --> ST3
+style ST1 fill:#e3f2fd
+style ST2 fill:#f3e5f5
+style ST3 fill:#e8f5e9
+</div>
 
 ---
 
@@ -119,21 +154,32 @@ Solution: Data Lakehouse Architecture
 
 ## Data Lakehouse Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd2_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+subgraph "Lakehouse Platform"
+L1[Object Storage<br/>Parquet/ORC/Avro]
+L2[Metadata Layer<br/>Delta/Iceberg/Hudi]
+L3[Transaction Layer<br/>ACID Support]
+L4[Query Engine<br/>SQL/DataFrame API]
+end
+subgraph "Workloads"
+W1[BI & Analytics]
+W2[Data Science]
+W3[Machine Learning]
+W4[Real-time Analytics]
+end
+L1 --> L2
+L2 --> L3
+L3 --> L4
+L4 --> W1
+L4 --> W2
+L4 --> W3
+L4 --> W4
+style L1 fill:#e3f2fd
+style L2 fill:#f3e5f5
+style L3 fill:#e8f5e9
+style L4 fill:#fff3e0
+</div>
 
 ---
 
@@ -247,21 +293,35 @@ def batch_ingest():
 
 ## Streaming Ingestion
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd3_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+subgraph "Stream Sources"
+K[Kafka]
+KN[Kinesis]
+EH[Event Hub]
+end
+subgraph "Stream Processing"
+SP[Spark Streaming]
+FL[Flink]
+KS[Kafka Streams]
+end
+subgraph "Data Lake"
+R[Raw Events]
+P[Processed Events]
+A[Aggregated Data]
+end
+K --> SP
+KN --> SP
+EH --> FL
+SP --> R
+FL --> R
+KS --> P
+R --> P
+P --> A
+style K fill:#e3f2fd
+style SP fill:#f3e5f5
+style R fill:#e8f5e9
+</div>
 
 ---
 
@@ -355,21 +415,40 @@ processed.write.format("delta") \
 
 ## ML Pipeline Integration
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd4_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Data Lake"
+        DL1[Raw Data]
+        DL2[Feature Store]
+        DL3[Model Registry]
+    end
+
+    subgraph "ML Pipeline"
+        ML1[Data Prep]
+        ML2[Feature Engineering]
+        ML3[Model Training]
+        ML4[Model Evaluation]
+    end
+
+    subgraph "Deployment"
+        D1[Model Serving]
+        D2[Predictions]
+    end
+
+    DL1 --> ML1
+    ML1 --> ML2
+    ML2 --> DL2
+    DL2 --> ML3
+    ML3 --> ML4
+    ML4 --> DL3
+    DL3 --> D1
+    D1 --> D2
+    D2 -.->|Feedback| DL1
+
+    style DL1 fill:#e3f2fd
+    style ML3 fill:#f3e5f5
+    style D1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -457,21 +536,42 @@ def setup_security():
 
 ## Monitoring Dashboard
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd5_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Data Lake Metrics"
+        M1[Storage Usage]
+        M2[Processing Jobs]
+        M3[Query Performance]
+        M4[Data Quality]
+        M5[Cost Metrics]
+    end
+
+    subgraph "Monitoring Tools"
+        T1[CloudWatch/Azure Monitor]
+        T2[Datadog]
+        T3[Grafana]
+    end
+
+    subgraph "Alerts & Actions"
+        A1[Threshold Alerts]
+        A2[Auto-scaling]
+        A3[Notifications]
+    end
+
+    M1 --> T1
+    M2 --> T2
+    M3 --> T3
+    M4 --> T2
+    M5 --> T1
+
+    T1 --> A1
+    T2 --> A2
+    T3 --> A3
+
+    style M1 fill:#e3f2fd
+    style T2 fill:#f3e5f5
+    style A1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -490,21 +590,41 @@ def setup_security():
 
 ## Hybrid Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_data_lakes)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_data_lakes)"/>
-  <defs>
-    <marker id="arrowd6_05_data_lakes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "On-Premises"
+        OP1[Legacy Systems]
+        OP2[Sensitive Data]
+        OP3[Edge Processing]
+    end
+
+    subgraph "Hybrid Layer"
+        H1[Data Gateway]
+        H2[Sync Service]
+        H3[Security Layer]
+    end
+
+    subgraph "Cloud Data Lake"
+        C1[Object Storage]
+        C2[Compute Services]
+        C3[Analytics Tools]
+    end
+
+    OP1 --> H1
+    OP2 --> H3
+    OP3 --> H2
+
+    H1 --> C1
+    H2 --> C1
+    H3 --> C1
+
+    C1 --> C2
+    C2 --> C3
+
+    style OP2 fill:#e3f2fd
+    style H3 fill:#f3e5f5
+    style C1 fill:#e8f5e9
+</div>
 
 ---
 

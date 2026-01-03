@@ -1,6 +1,12 @@
 # Database Architecture and Design
 ## Modern Architecture Course
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 
 ## Agenda
@@ -29,21 +35,17 @@
 
 ## ACID Properties
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_database)"/>
-  <defs>
-    <marker id="arrowd0_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    T[Transaction] --> A[Atomicity]
+    T --> C[Consistency]
+    T --> I[Isolation]
+    T --> D[Durability]
+    A -.->|All or Nothing| AT[Complete/Rollback]
+    C -.->|Valid State| CS[Rules Enforced]
+    I -.->|No Interference| IS[Concurrent Safety]
+    D -.->|Permanent| DS[Survives Failures]
+</div>
 
 ---
 
@@ -76,21 +78,16 @@ COMMIT;
 
 ## Isolation Problems
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_database)"/>
-  <defs>
-    <marker id="arrowd1_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    T1[Transaction 1] -->|Read| D1[Data]
+    T2[Transaction 2] -->|Read| D1
+    T1 -->|Modify| D2[Data']
+    T2 -->|Modify| D3[Data'']
+    D2 -.->|Conflict| C[Race Condition]
+    D3 -.->|Conflict| C
+    C -->|Results in| P[Dirty Reads/Lost Updates]
+</div>
 
 ---
 
@@ -218,21 +215,24 @@ with driver.session() as session:
 
 ## Normalization Example
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_database)"/>
-  <defs>
-    <marker id="arrowd2_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Denormalized"
+        T1[Orders Table]
+        T1 --> C1[Customer Name]
+        T1 --> C2[Customer Address]
+        T1 --> C3[Product Name]
+        T1 --> C4[Product Price]
+    end
+    subgraph "Normalized"
+        O[Orders] --> C[Customers]
+        O --> P[Products]
+        C --> CN[Name]
+        C --> CA[Address]
+        P --> PN[Name]
+        P --> PP[Price]
+    end
+</div>
 
 ---
 
@@ -300,21 +300,16 @@ FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 
 ## Sharding Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_04_database)"/>
-  <defs>
-    <marker id="arrowd3_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    R[Router] --> S1[Shard 1<br/>Users A-H]
+    R --> S2[Shard 2<br/>Users I-P]
+    R --> S3[Shard 3<br/>Users Q-Z]
+    S1 --> DB1[(Database 1)]
+    S2 --> DB2[(Database 2)]
+    S3 --> DB3[(Database 3)]
+    R -.->|Hash/Range| SK[Shard Key]
+</div>
 
 ---
 
@@ -348,21 +343,21 @@ def store_data(key, value):
 
 ## Replication Types
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_04_database)"/>
-  <defs>
-    <marker id="arrowd4_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Master-Slave"
+        M[Master] -->|Write| S1[Slave 1]
+        M -->|Write| S2[Slave 2]
+        C1[Client] -->|Read| S1
+        C2[Client] -->|Read| S2
+        C3[Client] -->|Write| M
+    end
+    subgraph "Master-Master"
+        M1[Master 1] <-->|Sync| M2[Master 2]
+        C4[Client] -->|R/W| M1
+        C5[Client] -->|R/W| M2
+    end
+</div>
 
 ---
 
@@ -468,21 +463,16 @@ engine = create_engine(
 
 ## Caching Patterns
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_04_database)"/>
-  <defs>
-    <marker id="arrowd5_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    App[Application] --> QC{Query Cache?}
+    QC -->|Hit| RC[Return Cached]
+    QC -->|Miss| DB[(Database)]
+    DB --> UC[Update Cache]
+    UC --> RC
+    App -.->|Invalidate| IC[Cache Invalidation]
+    IC --> QC
+</div>
 
 ---
 
@@ -521,21 +511,20 @@ def get_user(user_id):
 
 ## Monitoring Dashboard
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_04_database)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_04_database)"/>
-  <defs>
-    <marker id="arrowd6_04_database" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    DB[(Database)] --> MC[Metrics Collector]
+    MC --> CPU[CPU Usage]
+    MC --> MEM[Memory Usage]
+    MC --> QPS[Query Performance]
+    MC --> CON[Connections]
+    CPU --> D[Dashboard]
+    MEM --> D
+    QPS --> D
+    CON --> D
+    D --> AL[Alerts]
+    D --> REP[Reports]
+</div>
 
 ---
 

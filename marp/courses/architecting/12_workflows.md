@@ -1,6 +1,12 @@
 # Workflow Orchestration and Data Pipelines
 ## Modern Architecture Course
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 
 ## Agenda
@@ -28,21 +34,40 @@
 
 ## Key Workflow Concepts
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_12_workflows)"/>
-  <defs>
-    <marker id="arrowd0_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Workflow Components"
+        T[Tasks/Jobs]
+        D[Dependencies]
+        S[Schedule]
+        R[Resources]
+    end
+
+    subgraph "Execution"
+        E[Executor]
+        W[Workers]
+        Q[Queue]
+    end
+
+    subgraph "Monitoring"
+        M[Metrics]
+        L[Logs]
+        A[Alerts]
+    end
+
+    T --> E
+    D --> E
+    S --> E
+    E --> W
+    E --> Q
+    W --> M
+    W --> L
+    M --> A
+
+    style T fill:#e3f2fd
+    style E fill:#f3e5f5
+    style M fill:#e8f5e9
+</div>
 
 ---
 
@@ -58,21 +83,27 @@
 
 ## DAG Example
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_12_workflows)"/>
-  <defs>
-    <marker id="arrowd1_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    Start[Start] --> Extract[Extract Data]
+    Extract --> Clean[Clean Data]
+    Extract --> Validate[Validate Data]
+
+    Clean --> Transform[Transform]
+    Validate --> Transform
+
+    Transform --> Load1[Load to DB]
+    Transform --> Load2[Load to S3]
+
+    Load1 --> Report[Generate Report]
+    Load2 --> Report
+
+    Report --> End[End]
+
+    style Start fill:#e3f2fd
+    style Transform fill:#f3e5f5
+    style Report fill:#e8f5e9
+</div>
 
 ---
 
@@ -89,21 +120,42 @@
 
 ## Apache Airflow Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_12_workflows)"/>
-  <defs>
-    <marker id="arrowd2_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Airflow Components"
+        WS[Web Server]
+        SCH[Scheduler]
+        EX[Executor]
+        MD[Metadata DB]
+    end
+
+    subgraph "Workers"
+        W1[Worker 1]
+        W2[Worker 2]
+        W3[Worker N]
+    end
+
+    subgraph "DAGs"
+        D1[DAG 1]
+        D2[DAG 2]
+        D3[DAG N]
+    end
+
+    WS --> MD
+    SCH --> MD
+    SCH --> EX
+    EX --> W1
+    EX --> W2
+    EX --> W3
+
+    D1 --> SCH
+    D2 --> SCH
+    D3 --> SCH
+
+    style WS fill:#e3f2fd
+    style SCH fill:#f3e5f5
+    style W1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -165,21 +217,40 @@ extract_task >> transform_task >> load_task
 
 ## Prefect Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_workflows)"/>
-  <defs>
-    <marker id="arrowd3_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Prefect Core"
+        F[Flows]
+        T[Tasks]
+        S[State Management]
+    end
+
+    subgraph "Prefect Server"
+        API[API Server]
+        UI[UI Dashboard]
+        DB[PostgreSQL]
+    end
+
+    subgraph "Agents"
+        A1[Agent 1]
+        A2[Agent 2]
+        A3[Agent N]
+    end
+
+    F --> T
+    T --> S
+    S --> API
+    API --> DB
+    API --> UI
+
+    A1 --> API
+    A2 --> API
+    A3 --> API
+
+    style F fill:#e3f2fd
+    style API fill:#f3e5f5
+    style A1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -219,21 +290,42 @@ if __name__ == "__main__":
 
 ## Dagster Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_12_workflows)"/>
-  <defs>
-    <marker id="arrowd4_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Dagster Core"
+        J[Jobs]
+        O[Ops/Assets]
+        R[Resources]
+        IO[IO Managers]
+    end
+
+    subgraph "Dagster Instance"
+        D[Dagit UI]
+        DM[Daemon]
+        RS[Run Storage]
+        ES[Event Storage]
+    end
+
+    subgraph "Execution"
+        EX[Executors]
+        RQ[Run Queue]
+        RL[Run Launcher]
+    end
+
+    J --> O
+    O --> R
+    O --> IO
+
+    D --> RS
+    DM --> ES
+    DM --> RQ
+    RQ --> RL
+    RL --> EX
+
+    style J fill:#e3f2fd
+    style D fill:#f3e5f5
+    style EX fill:#e8f5e9
+</div>
 
 ---
 
@@ -268,21 +360,39 @@ if __name__ == "__main__":
 
 ## Netflix Conductor Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_12_workflows)"/>
-  <defs>
-    <marker id="arrowd5_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Conductor Server"
+        WE[Workflow Engine]
+        TQ[Task Queues]
+        MS[Metadata Store]
+    end
+
+    subgraph "Workers"
+        W1[Worker Pool 1]
+        W2[Worker Pool 2]
+        W3[Worker Pool N]
+    end
+
+    subgraph "Storage"
+        ES[Elasticsearch]
+        DB[Database]
+    end
+
+    C[Client API] --> WE
+    WE --> TQ
+    TQ --> W1
+    TQ --> W2
+    TQ --> W3
+
+    WE --> MS
+    MS --> ES
+    MS --> DB
+
+    style C fill:#e3f2fd
+    style WE fill:#f3e5f5
+    style W1 fill:#e8f5e9
+</div>
 
 ---
 
@@ -335,41 +445,77 @@ if __name__ == "__main__":
 
 ## ETL Pattern
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_12_workflows)"/>
-  <defs>
-    <marker id="arrowd6_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Extract"
+        E1[Database]
+        E2[API]
+        E3[Files]
+    end
+
+    subgraph "Transform"
+        T1[Clean]
+        T2[Validate]
+        T3[Enrich]
+        T4[Aggregate]
+    end
+
+    subgraph "Load"
+        L1[Data Warehouse]
+        L2[Data Lake]
+        L3[Analytics DB]
+    end
+
+    E1 --> T1
+    E2 --> T1
+    E3 --> T1
+
+    T1 --> T2
+    T2 --> T3
+    T3 --> T4
+
+    T4 --> L1
+    T4 --> L2
+    T4 --> L3
+
+    style E1 fill:#e3f2fd
+    style T1 fill:#f3e5f5
+    style L1 fill:#e8f5e9
+</div>
 
 ---
 
 ## Fan-out/Fan-in Pattern
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_12_workflows)"/>
-  <defs>
-    <marker id="arrowd7_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    S[Split Data]
+
+    subgraph "Parallel Processing"
+        P1[Process Chunk 1]
+        P2[Process Chunk 2]
+        P3[Process Chunk 3]
+        P4[Process Chunk N]
+    end
+
+    M[Merge Results]
+
+    S --> P1
+    S --> P2
+    S --> P3
+    S --> P4
+
+    P1 --> M
+    P2 --> M
+    P3 --> M
+    P4 --> M
+
+    M --> R[Final Result]
+
+    style S fill:#e3f2fd
+    style M fill:#f3e5f5
+    style R fill:#e8f5e9
+</div>
 
 ---
 
@@ -491,21 +637,44 @@ def process_data():
 
 ## Monitoring Dashboard
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_12_workflows)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_12_workflows)"/>
-  <defs>
-    <marker id="arrowd8_12_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Workflow Metrics"
+        WM1[Success Rate]
+        WM2[Failure Rate]
+        WM3[Average Duration]
+        WM4[Task Queue Depth]
+    end
+
+    subgraph "System Metrics"
+        SM1[CPU Usage]
+        SM2[Memory Usage]
+        SM3[Worker Status]
+    end
+
+    subgraph "Alerts"
+        A1[Failed Jobs]
+        A2[Long Running Tasks]
+        A3[Resource Limits]
+    end
+
+    WM1 --> D[Dashboard]
+    WM2 --> D
+    WM3 --> D
+    WM4 --> D
+
+    SM1 --> D
+    SM2 --> D
+    SM3 --> D
+
+    D --> A1
+    D --> A2
+    D --> A3
+
+    style WM1 fill:#e3f2fd
+    style D fill:#f3e5f5
+    style A1 fill:#ffcdd2
+</div>
 
 ---
 

@@ -1,5 +1,11 @@
 # Layered (n-tier) Pattern
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 - Partitions the system into layers, each with a specific role and responsibility
 - Common layers: Presentation, Application, Business Logic, Data Access
 - Adjacent layers communicate via well-defined interfaces
@@ -26,21 +32,15 @@
 
 ## Layer Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_borderline)"/>
-  <defs>
-    <marker id="arrowd0_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    P[Presentation Layer] --> A[Application Layer]
+    A --> B[Business Logic Layer]
+    B --> D[Data Access Layer]
+    D --> DB[(Database)]
+    P -.->|User Input| U[Users]
+    U -.->|Display| P
+</div>
 
 ---
 
@@ -95,21 +95,18 @@ Cons:
 
 ## Interaction Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_borderline)"/>
-  <defs>
-    <marker id="arrowd1_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    M[Master] --> S1[Slave 1]
+    M --> S2[Slave 2]
+    M --> S3[Slave 3]
+    M --> S4[Slave 4]
+    S1 -.->|Results| M
+    S2 -.->|Results| M
+    S3 -.->|Results| M
+    S4 -.->|Results| M
+    M -.->|Aggregate| R[Final Result]
+</div>
 
 ---
 
@@ -165,21 +162,18 @@ Cons:
 
 ## Pipe-Filter Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_02_borderline)"/>
-  <defs>
-    <marker id="arrowd2_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    I[Input] -->|Pipe| F1[Filter 1]
+    F1 -->|Pipe| F2[Filter 2]
+    F2 -->|Pipe| F3[Filter 3]
+    F3 -->|Pipe| F4[Filter 4]
+    F4 -->|Pipe| O[Output]
+    F1 -.->|Transform| D1[Data]
+    F2 -.->|Process| D2[Data]
+    F3 -.->|Filter| D3[Data]
+    F4 -.->|Format| D4[Data]
+</div>
 
 ---
 
@@ -237,21 +231,19 @@ Cons:
 
 ## Blackboard Interaction Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_02_borderline)"/>
-  <defs>
-    <marker id="arrowd3_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    BB[(Blackboard)] --> C[Control]
+    C --> KS1[Knowledge Source 1]
+    C --> KS2[Knowledge Source 2]
+    C --> KS3[Knowledge Source 3]
+    C --> KS4[Knowledge Source 4]
+    KS1 <--> BB
+    KS2 <--> BB
+    KS3 <--> BB
+    KS4 <--> BB
+    BB -.->|Solution State| S[Solution]
+</div>
 
 ---
 
@@ -293,21 +285,17 @@ Cons:
 
 ## Ambassador Pattern Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_02_borderline)"/>
-  <defs>
-    <marker id="arrowd4_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    A[Application] --> AM[Ambassador]
+    AM --> ES1[External Service 1]
+    AM --> ES2[External Service 2]
+    AM --> ES3[External Service 3]
+    AM -.->|Retry Logic| RL[Retry]
+    AM -.->|Circuit Breaker| CB[Circuit Breaker]
+    AM -.->|Logging| L[Logs]
+    AM -.->|Monitoring| M[Metrics]
+</div>
 
 ---
 
@@ -353,21 +341,24 @@ Cons:
 
 ## Cache-Aside Pattern Diagram
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_02_borderline)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd5_02_borderline)"/>
-  <defs>
-    <marker id="arrowd5_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+    participant App as Application
+    participant Cache as Cache
+    participant DB as Database
+
+    App->>Cache: 1. Check cache
+    alt Cache Miss
+        Cache-->>App: Not found
+        App->>DB: 2. Query database
+        DB-->>App: Return data
+        App->>Cache: 3. Update cache
+        Cache-->>App: Confirmed
+    else Cache Hit
+        Cache-->>App: Return cached data
+    end
+    App->>App: 4. Use data
+</div>
 
 ---
 
@@ -412,21 +403,20 @@ Cons:
 
 ## Sidecar Pattern Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_borderline)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_borderline)"/>
-  <defs>
-    <marker id="arrowd6_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Pod/Container Group"
+        MA[Main Application]
+        SC[Sidecar Container]
+        MA <--> SC
+    end
+    SC --> L[Logging Service]
+    SC --> M[Monitoring Service]
+    SC --> SD[Service Discovery]
+    SC --> P[Proxy/Load Balancer]
+    MA -.->|Core Business Logic| BL[Business Functions]
+    SC -.->|Infrastructure Concerns| IC[Cross-cutting Concerns]
+</div>
 
 ---
 
@@ -472,21 +462,21 @@ Cons:
 
 ## Valet Key Pattern Diagram
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_borderline)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd7_02_borderline)"/>
-  <defs>
-    <marker id="arrowd7_02_borderline" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+    participant Client as Client
+    participant App as Application
+    participant Storage as Storage Service
+
+    Client->>App: 1. Request access to resource
+    App->>App: 2. Validate request
+    App->>Storage: 3. Generate limited access token
+    Storage-->>App: Return signed token/URL
+    App-->>Client: 4. Return access token
+    Client->>Storage: 5. Direct access with token
+    Storage->>Storage: 6. Validate token
+    Storage-->>Client: 7. Grant access to resource
+</div>
 
 ---
 

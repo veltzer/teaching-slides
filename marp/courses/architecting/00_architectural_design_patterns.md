@@ -1,4 +1,11 @@
 # Client-Server Pattern
+
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 ## Overview
 
@@ -21,10 +28,16 @@
 ---
 ## Communication Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 0</text>
-</svg>
+<div class="mermaid">
+graph LR
+C1[Client 1] -->|Request| S[Server]
+C2[Client 2] -->|Request| S
+C3[Client 3] -->|Request| S
+S -->|Response| C1
+S -->|Response| C2
+S -->|Response| C3
+S -.->|Manages| DB[(Database/Resources)]
+</div>
 
 ---
 
@@ -80,10 +93,19 @@ Cons:
 
 ## Broker Interaction Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 1</text>
-</svg>
+<div class="mermaid">
+graph TB
+C1[Client 1] -->|1. Request Service| B[Broker]
+C2[Client 2] -->|1. Request Service| B
+B -->|2. Forward Request| S1[Server 1]
+B -->|2. Forward Request| S2[Server 2]
+S1 -->|3. Response| B
+S2 -->|3. Response| B
+B -->|4. Return Response| C1
+B -->|4. Return Response| C2
+S1 -.->|Register Services| B
+S2 -.->|Register Services| B
+</div>
 
 ---
 ## Broker Pros and Cons
@@ -638,10 +660,16 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 9</text>
-</svg>
+<div class="mermaid">
+graph LR
+A[Application] -->|Emit Events| ES[(Event Store)]
+ES -->|Replay Events| P[Projection]
+ES -->|Event Stream| EP[Event Processor]
+P -->|Current State| Q[Query Service]
+EP -->|Update| RS[Read Store]
+Q -->|Query| C[Client]
+ES -.->|Audit Log| AL[Audit/History]
+</div>
 
 ---
 ## Event Sourcing Pros and Cons
@@ -1475,10 +1503,19 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 21</text>
-</svg>
+<div class="mermaid">
+graph LR
+Start([Start Transaction]) --> T1[Service A Transaction]
+T1 -->|Success| T2[Service B Transaction]
+T2 -->|Success| T3[Service C Transaction]
+T3 -->|Success| End([Complete])
+T3 -->|Failure| C3[Compensate C]
+C3 --> C2[Compensate B]
+C2 --> C1[Compensate A]
+C1 --> Fail([Transaction Failed])
+T2 -->|Failure| C2
+T1 -->|Failure| C1
+</div>
 
 ---
 ## Pros and Cons
@@ -2102,10 +2139,20 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="100" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Diagram 33</text>
-</svg>
+<div class="mermaid">
+graph TB
+R1[Request 1] --> TH{Throttler}
+R2[Request 2] --> TH
+R3[Request 3] --> TH
+R4[Request 4] --> TH
+TH -->|Within Limit| A[Allow]
+TH -->|Exceeds Limit| Q[Queue]
+TH -->|Queue Full| R[Reject]
+A --> S[Service]
+Q -.->|Delayed| S
+R --> E[Error Response]
+TH -.->|Rate Counter| RC[(Rate Limiter)]
+</div>
 
 ---
 ## Throttling Pros and Cons

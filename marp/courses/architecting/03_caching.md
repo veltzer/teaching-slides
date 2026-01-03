@@ -1,6 +1,12 @@
 # Caching Strategies and Content Delivery Networks
 ## Modern Architecture Course
 
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
 ---
 
 ## Agenda
@@ -26,21 +32,15 @@
 
 ## Cache Hit vs Cache Miss
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_caching)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_caching)"/>
-  <defs>
-    <marker id="arrowd0_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    Client[Client] --> Cache[Cache]
+    Cache -->|Hit| Client
+    Cache -->|Miss| DB[(Database)]
+    DB -->|Data| Cache
+    Cache -->|Data| Client
+    Cache -.->|Update| TTL[TTL/Expiry]
+</div>
 
 ---
 
@@ -117,61 +117,55 @@ def get_product(product_id):
 
 ## Cache-Aside Pattern
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_caching)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd1_03_caching)"/>
-  <defs>
-    <marker id="arrowd1_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+participant App
+participant Cache
+participant DB
+App->>Cache: 1. Check cache
+alt Cache miss
+Cache-->>App: Not found
+App->>DB: 2. Query database
+DB-->>App: Return data
+App->>Cache: 3. Update cache
+else Cache hit
+Cache-->>App: Return cached data
+end
+</div>
 
 ---
 
 ## Write-Through Pattern
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_03_caching)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd2_03_caching)"/>
-  <defs>
-    <marker id="arrowd2_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+participant App
+participant Cache
+participant DB
+App->>Cache: 1. Write data
+Cache->>DB: 2. Write to database
+DB-->>Cache: Confirm write
+Cache-->>App: 3. Confirm write
+Note over Cache: Data written to both<br/>cache and DB synchronously
+</div>
 
 ---
 
 ## Write-Behind Pattern
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_03_caching)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd3_03_caching)"/>
-  <defs>
-    <marker id="arrowd3_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+sequenceDiagram
+participant App
+participant Cache
+participant Queue
+participant DB
+App->>Cache: 1. Write data
+Cache-->>App: 2. Confirm write
+Cache->>Queue: 3. Queue write
+Note over Queue: Async processing
+Queue->>DB: 4. Write to database (later)
+DB-->>Queue: Confirm write
+</div>
 
 ---
 
@@ -217,21 +211,18 @@ def get_trending_posts():
 
 ## CDN Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_03_caching)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_03_caching)"/>
-  <defs>
-    <marker id="arrowd4_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    U1[User US] --> E1[Edge Server US]
+    U2[User EU] --> E2[Edge Server EU]
+    U3[User Asia] --> E3[Edge Server Asia]
+    E1 --> O[Origin Server]
+    E2 --> O
+    E3 --> O
+    E1 -.->|Cache| C1[(Cache)]
+    E2 -.->|Cache| C2[(Cache)]
+    E3 -.->|Cache| C3[(Cache)]
+</div>
 
 ---
 
@@ -274,21 +265,21 @@ Vary: Accept-Encoding
 
 ## Edge Computing Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_03_caching)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_03_caching)"/>
-  <defs>
-    <marker id="arrowd5_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph LR
+    subgraph "Edge Layer"
+        D1[IoT Device] --> EC1[Edge Compute]
+        D2[Sensor] --> EC1
+        EC1 --> EG[Edge Gateway]
+    end
+    subgraph "Cloud Layer"
+        EG --> CS[Cloud Services]
+        CS --> AI[AI/ML Processing]
+        CS --> ST[(Storage)]
+    end
+    EC1 -.->|Local Processing| LP[Low Latency]
+    CS -.->|Heavy Processing| HP[High Compute]
+</div>
 
 ---
 
@@ -392,21 +383,22 @@ Key Metrics:
 
 ## Cache Monitoring Dashboard
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_03_caching)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_03_caching)"/>
-  <defs>
-    <marker id="arrowd6_03_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+<div class="mermaid">
+graph TB
+    subgraph "Metrics Collection"
+        C[Cache] --> M[Metrics Collector]
+        M --> HR[Hit Rate]
+        M --> MR[Miss Rate]
+        M --> L[Latency]
+        M --> E[Eviction Rate]
+    end
+    HR --> D[Dashboard]
+    MR --> D
+    L --> D
+    E --> D
+    D --> A[Alerts]
+    D --> R[Reports]
+</div>
 
 ---
 
