@@ -6,7 +6,7 @@ When writing marp:
 - when enumerating items use 1. 1. 1. and not 1. 2. 3.
 - indent sub items with four spaces like this "    - [text]"
 - use inlined svg diagrams where appropriate.
-- when using inlined svg you DO NOT NEED to prefix it with ```svg. The svg should be right in the document.
+- use inlines mermaid diagrams where appropriate.
 - do not add a "Any Questions slide".
 - call the file for each chapter [number]_[name].md from 00. For instance: 00_intoduction.md
 - files should end with a newline, on the last line that is.
@@ -16,3 +16,33 @@ When writing marp:
 - keep technical terms within backticks (`).
 - always create marp slides as a "markdown" document and not "text" document so that I could copy the markdown content.
 - remember that each slide needs to have short content and that code in it needs to be short enough to appear in one page.
+
+- if you want to add mermaid diagrams then add these lines:
+
+```marp
+<!-- Add Mermaid.js support -->
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+```
+
+in the mermaid file and then add mermaid content like this:
+
+```marp
+<div class="mermaid">
+graph TD
+    A[Client] -->|TCP Connection| B[Load Balancer]
+    B -->|TCP Connection| C[Server1]
+    B -->|TCP Connection| D[Server2]
+</div>
+```
+
+- if you want to add svg content just add it inlined in the marp file like this:
+
+```marp
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main circle -->
+  <circle cx="100" cy="100" r="80" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+</svg>
+```

@@ -199,7 +199,7 @@ endif # DO_MERMAID_DEP
 
 # MARP_DEPENDS=marp.config.js
 MARP_DEPENDS=
-MARP_FLAGS=--engine @marp-team/marp-core --html --allow-local-files --quiet
+MARP_FLAGS=--html --allow-local-files --quiet
 
 #########
 # rules #
