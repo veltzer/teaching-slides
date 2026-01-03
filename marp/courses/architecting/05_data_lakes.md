@@ -35,24 +35,24 @@
 
 <div class="mermaid">
 graph LR
-    subgraph "Data Lake"
-        A[Raw Data<br/>All Formats] --> B[Schema on Read]
-        B --> C[Low Cost Storage]
-    end
+subgraph "Data Lake"
+A[Raw Data<br/>All Formats] --> B[Schema on Read]
+B --> C[Low Cost Storage]
+end
 
-    subgraph "Data Warehouse"
-        D[Structured Data] --> E[Schema on Write]
-        E --> F[Optimized for BI]
-    end
+subgraph "Data Warehouse"
+D[Structured Data] --> E[Schema on Write]
+E --> F[Optimized for BI]
+end
 
-    A -.->|ETL Process| D
-    C -->|Analytics| G[Data Scientists]
-    F -->|Reports| H[Business Users]
+A -.->|ETL Process| D
+C -->|Analytics| G[Data Scientists]
+F -->|Reports| H[Business Users]
 
-    style A fill:#e3f2fd
-    style D fill:#f3e5f5
-    style G fill:#e8f5e9
-    style H fill:#fff3e0
+style A fill:#e3f2fd
+style D fill:#f3e5f5
+style G fill:#e8f5e9
+style H fill:#fff3e0
 </div>
 
 ---
@@ -417,37 +417,37 @@ processed.write.format("delta") \
 
 <div class="mermaid">
 graph LR
-    subgraph "Data Lake"
-        DL1[Raw Data]
-        DL2[Feature Store]
-        DL3[Model Registry]
-    end
+subgraph "Data Lake"
+DL1[Raw Data]
+DL2[Feature Store]
+DL3[Model Registry]
+end
 
-    subgraph "ML Pipeline"
-        ML1[Data Prep]
-        ML2[Feature Engineering]
-        ML3[Model Training]
-        ML4[Model Evaluation]
-    end
+subgraph "ML Pipeline"
+ML1[Data Prep]
+ML2[Feature Engineering]
+ML3[Model Training]
+ML4[Model Evaluation]
+end
 
-    subgraph "Deployment"
-        D1[Model Serving]
-        D2[Predictions]
-    end
+subgraph "Deployment"
+D1[Model Serving]
+D2[Predictions]
+end
 
-    DL1 --> ML1
-    ML1 --> ML2
-    ML2 --> DL2
-    DL2 --> ML3
-    ML3 --> ML4
-    ML4 --> DL3
-    DL3 --> D1
-    D1 --> D2
-    D2 -.->|Feedback| DL1
+DL1 --> ML1
+ML1 --> ML2
+ML2 --> DL2
+DL2 --> ML3
+ML3 --> ML4
+ML4 --> DL3
+DL3 --> D1
+D1 --> D2
+D2 -.->|Feedback| DL1
 
-    style DL1 fill:#e3f2fd
-    style ML3 fill:#f3e5f5
-    style D1 fill:#e8f5e9
+style DL1 fill:#e3f2fd
+style ML3 fill:#f3e5f5
+style D1 fill:#e8f5e9
 </div>
 
 ---
@@ -538,39 +538,39 @@ def setup_security():
 
 <div class="mermaid">
 graph TB
-    subgraph "Data Lake Metrics"
-        M1[Storage Usage]
-        M2[Processing Jobs]
-        M3[Query Performance]
-        M4[Data Quality]
-        M5[Cost Metrics]
-    end
+subgraph "Data Lake Metrics"
+M1[Storage Usage]
+M2[Processing Jobs]
+M3[Query Performance]
+M4[Data Quality]
+M5[Cost Metrics]
+end
 
-    subgraph "Monitoring Tools"
-        T1[CloudWatch/Azure Monitor]
-        T2[Datadog]
-        T3[Grafana]
-    end
+subgraph "Monitoring Tools"
+T1[CloudWatch/Azure Monitor]
+T2[Datadog]
+T3[Grafana]
+end
 
-    subgraph "Alerts & Actions"
-        A1[Threshold Alerts]
-        A2[Auto-scaling]
-        A3[Notifications]
-    end
+subgraph "Alerts & Actions"
+A1[Threshold Alerts]
+A2[Auto-scaling]
+A3[Notifications]
+end
 
-    M1 --> T1
-    M2 --> T2
-    M3 --> T3
-    M4 --> T2
-    M5 --> T1
+M1 --> T1
+M2 --> T2
+M3 --> T3
+M4 --> T2
+M5 --> T1
 
-    T1 --> A1
-    T2 --> A2
-    T3 --> A3
+T1 --> A1
+T2 --> A2
+T3 --> A3
 
-    style M1 fill:#e3f2fd
-    style T2 fill:#f3e5f5
-    style A1 fill:#e8f5e9
+style M1 fill:#e3f2fd
+style T2 fill:#f3e5f5
+style A1 fill:#e8f5e9
 </div>
 
 ---
@@ -592,38 +592,38 @@ graph TB
 
 <div class="mermaid">
 graph TB
-    subgraph "On-Premises"
-        OP1[Legacy Systems]
-        OP2[Sensitive Data]
-        OP3[Edge Processing]
-    end
+subgraph "On-Premises"
+OP1[Legacy Systems]
+OP2[Sensitive Data]
+OP3[Edge Processing]
+end
 
-    subgraph "Hybrid Layer"
-        H1[Data Gateway]
-        H2[Sync Service]
-        H3[Security Layer]
-    end
+subgraph "Hybrid Layer"
+H1[Data Gateway]
+H2[Sync Service]
+H3[Security Layer]
+end
 
-    subgraph "Cloud Data Lake"
-        C1[Object Storage]
-        C2[Compute Services]
-        C3[Analytics Tools]
-    end
+subgraph "Cloud Data Lake"
+C1[Object Storage]
+C2[Compute Services]
+C3[Analytics Tools]
+end
 
-    OP1 --> H1
-    OP2 --> H3
-    OP3 --> H2
+OP1 --> H1
+OP2 --> H3
+OP3 --> H2
 
-    H1 --> C1
-    H2 --> C1
-    H3 --> C1
+H1 --> C1
+H2 --> C1
+H3 --> C1
 
-    C1 --> C2
-    C2 --> C3
+C1 --> C2
+C2 --> C3
 
-    style OP2 fill:#e3f2fd
-    style H3 fill:#f3e5f5
-    style C1 fill:#e8f5e9
+style OP2 fill:#e3f2fd
+style H3 fill:#f3e5f5
+style C1 fill:#e8f5e9
 </div>
 
 ---

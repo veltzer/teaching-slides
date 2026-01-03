@@ -34,12 +34,12 @@
 
 <div class="mermaid">
 graph LR
-    Client[Client] --> Cache[Cache]
-    Cache -->|Hit| Client
-    Cache -->|Miss| DB[(Database)]
-    DB -->|Data| Cache
-    Cache -->|Data| Client
-    Cache -.->|Update| TTL[TTL/Expiry]
+Client[Client] --> Cache[Cache]
+Cache -->|Hit| Client
+Cache -->|Miss| DB[(Database)]
+DB -->|Data| Cache
+Cache -->|Data| Client
+Cache -.->|Update| TTL[TTL/Expiry]
 </div>
 
 ---
@@ -213,15 +213,15 @@ def get_trending_posts():
 
 <div class="mermaid">
 graph TB
-    U1[User US] --> E1[Edge Server US]
-    U2[User EU] --> E2[Edge Server EU]
-    U3[User Asia] --> E3[Edge Server Asia]
-    E1 --> O[Origin Server]
-    E2 --> O
-    E3 --> O
-    E1 -.->|Cache| C1[(Cache)]
-    E2 -.->|Cache| C2[(Cache)]
-    E3 -.->|Cache| C3[(Cache)]
+U1[User US] --> E1[Edge Server US]
+U2[User EU] --> E2[Edge Server EU]
+U3[User Asia] --> E3[Edge Server Asia]
+E1 --> O[Origin Server]
+E2 --> O
+E3 --> O
+E1 -.->|Cache| C1[(Cache)]
+E2 -.->|Cache| C2[(Cache)]
+E3 -.->|Cache| C3[(Cache)]
 </div>
 
 ---
@@ -267,18 +267,18 @@ Vary: Accept-Encoding
 
 <div class="mermaid">
 graph LR
-    subgraph "Edge Layer"
-        D1[IoT Device] --> EC1[Edge Compute]
-        D2[Sensor] --> EC1
-        EC1 --> EG[Edge Gateway]
-    end
-    subgraph "Cloud Layer"
-        EG --> CS[Cloud Services]
-        CS --> AI[AI/ML Processing]
-        CS --> ST[(Storage)]
-    end
-    EC1 -.->|Local Processing| LP[Low Latency]
-    CS -.->|Heavy Processing| HP[High Compute]
+subgraph "Edge Layer"
+D1[IoT Device] --> EC1[Edge Compute]
+D2[Sensor] --> EC1
+EC1 --> EG[Edge Gateway]
+end
+subgraph "Cloud Layer"
+EG --> CS[Cloud Services]
+CS --> AI[AI/ML Processing]
+CS --> ST[(Storage)]
+end
+EC1 -.->|Local Processing| LP[Low Latency]
+CS -.->|Heavy Processing| HP[High Compute]
 </div>
 
 ---
@@ -385,19 +385,19 @@ Key Metrics:
 
 <div class="mermaid">
 graph TB
-    subgraph "Metrics Collection"
-        C[Cache] --> M[Metrics Collector]
-        M --> HR[Hit Rate]
-        M --> MR[Miss Rate]
-        M --> L[Latency]
-        M --> E[Eviction Rate]
-    end
-    HR --> D[Dashboard]
-    MR --> D
-    L --> D
-    E --> D
-    D --> A[Alerts]
-    D --> R[Reports]
+subgraph "Metrics Collection"
+C[Cache] --> M[Metrics Collector]
+M --> HR[Hit Rate]
+M --> MR[Miss Rate]
+M --> L[Latency]
+M --> E[Eviction Rate]
+end
+HR --> D[Dashboard]
+MR --> D
+L --> D
+E --> D
+D --> A[Alerts]
+D --> R[Reports]
 </div>
 
 ---

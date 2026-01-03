@@ -37,13 +37,13 @@ Additional V's:
 
 <div class="mermaid">
 graph LR
-    DS[Data Sources] --> I[Ingestion Layer]
-    I --> S[Storage Layer]
-    S --> P[Processing Layer]
-    P --> A[Analytics Layer]
-    A --> V[Visualization Layer]
-    S -.->|Metadata| C[Catalog]
-    P -.->|Monitoring| M[Metrics]
+DS[Data Sources] --> I[Ingestion Layer]
+I --> S[Storage Layer]
+S --> P[Processing Layer]
+P --> A[Analytics Layer]
+A --> V[Visualization Layer]
+S -.->|Metadata| C[Catalog]
+P -.->|Monitoring| M[Metrics]
 </div>
 
 ---
@@ -67,14 +67,14 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    D[Data Stream] --> B[Batch Layer]
-    D --> S[Speed Layer]
-    B --> BV[Batch Views]
-    S --> RV[Real-time Views]
-    BV --> SL[Serving Layer]
-    RV --> SL
-    SL --> Q[Queries]
-    B -.->|Master Dataset| MD[(Master Data)]
+D[Data Stream] --> B[Batch Layer]
+D --> S[Speed Layer]
+B --> BV[Batch Views]
+S --> RV[Real-time Views]
+BV --> SL[Serving Layer]
+RV --> SL
+SL --> Q[Queries]
+B -.->|Master Dataset| MD[(Master Data)]
 </div>
 
 ---
@@ -83,12 +83,12 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    D[Data Stream] --> K[Kafka/Event Log]
-    K --> SP[Stream Processing]
-    SP --> V[Views]
-    V --> Q[Queries]
-    K -.->|Replay| RP[Reprocessing]
-    RP --> SP
+D[Data Stream] --> K[Kafka/Event Log]
+K --> SP[Stream Processing]
+SP --> V[Views]
+V --> Q[Queries]
+K -.->|Replay| RP[Reprocessing]
+RP --> SP
 </div>
 
 ---
@@ -97,18 +97,18 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    subgraph "Data Lake Zones"
-        RZ[Raw Zone]
-        CZ[Curated Zone]
-        PZ[Production Zone]
-    end
-    DS[Data Sources] --> RZ
-    RZ --> T[Transform]
-    T --> CZ
-    CZ --> P[Process]
-    P --> PZ
-    PZ --> A[Analytics/ML]
-    RZ -.->|Catalog| DC[Data Catalog]
+subgraph "Data Lake Zones"
+RZ[Raw Zone]
+CZ[Curated Zone]
+PZ[Production Zone]
+end
+DS[Data Sources] --> RZ
+RZ --> T[Transform]
+T --> CZ
+CZ --> P[Process]
+P --> PZ
+PZ --> A[Analytics/ML]
+RZ -.->|Catalog| DC[Data Catalog]
 </div>
 
 ---
@@ -127,17 +127,17 @@ graph TB
 
 <div class="mermaid">
 graph TB
-    C[Client] --> NN[NameNode]
-    NN --> M[Metadata]
-    C --> DN1[DataNode 1]
-    C --> DN2[DataNode 2]
-    C --> DN3[DataNode 3]
-    DN1 -.->|Replication| DN2
-    DN2 -.->|Replication| DN3
-    DN3 -.->|Replication| DN1
-    NN -.->|Heartbeat| DN1
-    NN -.->|Heartbeat| DN2
-    NN -.->|Heartbeat| DN3
+C[Client] --> NN[NameNode]
+NN --> M[Metadata]
+C --> DN1[DataNode 1]
+C --> DN2[DataNode 2]
+C --> DN3[DataNode 3]
+DN1 -.->|Replication| DN2
+DN2 -.->|Replication| DN3
+DN3 -.->|Replication| DN1
+NN -.->|Heartbeat| DN1
+NN -.->|Heartbeat| DN2
+NN -.->|Heartbeat| DN3
 </div>
 
 ---
@@ -179,13 +179,13 @@ def store_data(data, bucket, key):
 
 <div class="mermaid">
 graph LR
-    D[Driver] --> E1[Executor 1]
-    D --> E2[Executor 2]
-    D --> E3[Executor 3]
-    E1 -.->|Tasks| W1[Workers]
-    E2 -.->|Tasks| W2[Workers]
-    E3 -.->|Tasks| W3[Workers]
-    D -.->|Coordinates| CM[Cluster Manager]
+D[Driver] --> E1[Executor 1]
+D --> E2[Executor 2]
+D --> E3[Executor 3]
+E1 -.->|Tasks| W1[Workers]
+E2 -.->|Tasks| W2[Workers]
+E3 -.->|Tasks| W3[Workers]
+D -.->|Coordinates| CM[Cluster Manager]
 </div>
 
 ---
@@ -299,13 +299,13 @@ ORDER BY 1 DESC
 
 <div class="mermaid">
 graph LR
-    D[Data Ingestion] --> P[Preprocessing]
-    P --> FE[Feature Engineering]
-    FE --> T[Training]
-    T --> E[Evaluation]
-    E --> D2[Deployment]
-    T -.->|Model| MS[Model Store]
-    E -.->|Metrics| M[Monitoring]
+D[Data Ingestion] --> P[Preprocessing]
+P --> FE[Feature Engineering]
+FE --> T[Training]
+T --> E[Evaluation]
+E --> D2[Deployment]
+T -.->|Model| MS[Model Store]
+E -.->|Metrics| M[Monitoring]
 </div>
 
 ---
@@ -385,16 +385,16 @@ def validate_dataset(df):
 
 <div class="mermaid">
 graph TB
-    subgraph "Monitoring Stack"
-        M[Metrics Collection] --> P[Prometheus]
-        L[Log Collection] --> E[Elasticsearch]
-        T[Traces] --> J[Jaeger]
-    end
-    P --> G[Grafana Dashboard]
-    E --> K[Kibana]
-    J --> G
-    G --> A[Alerts]
-    K --> A
+subgraph "Monitoring Stack"
+M[Metrics Collection] --> P[Prometheus]
+L[Log Collection] --> E[Elasticsearch]
+T[Traces] --> J[Jaeger]
+end
+P --> G[Grafana Dashboard]
+E --> K[Kibana]
+J --> G
+G --> A[Alerts]
+K --> A
 </div>
 
 ---
@@ -545,13 +545,13 @@ def optimize_partitioning(df):
 
 <div class="mermaid">
 graph LR
-    S[Stream Source] --> K[Kafka]
-    K --> SP[Stream Processor]
-    SP --> RT[Real-time Analytics]
-    SP --> DB[(State Store)]
-    RT --> D[Dashboard]
-    RT --> AL[Alerts]
-    SP -.->|Checkpoint| CP[Checkpoints]
+S[Stream Source] --> K[Kafka]
+K --> SP[Stream Processor]
+SP --> RT[Real-time Analytics]
+SP --> DB[(State Store)]
+RT --> D[Dashboard]
+RT --> AL[Alerts]
+SP -.->|Checkpoint| CP[Checkpoints]
 </div>
 
 ---
@@ -560,14 +560,14 @@ graph LR
 
 <div class="mermaid">
 graph LR
-    DS[(Data Source)] --> I[Ingestion]
-    I --> S[(Storage/Data Lake)]
-    S --> B[Batch Jobs]
-    B --> T[Transform]
-    T --> A[Aggregate]
-    A --> DW[(Data Warehouse)]
-    DW --> R[Reports]
-    B -.->|Schedule| SC[Scheduler]
+DS[(Data Source)] --> I[Ingestion]
+I --> S[(Storage/Data Lake)]
+S --> B[Batch Jobs]
+B --> T[Transform]
+T --> A[Aggregate]
+A --> DW[(Data Warehouse)]
+DW --> R[Reports]
+B -.->|Schedule| SC[Scheduler]
 </div>
 
 ---
@@ -576,16 +576,16 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    D[Data Sources] --> RT[Real-time Stream]
-    D --> BT[Batch Data]
-    RT --> SP[Stream Processing]
-    BT --> BP[Batch Processing]
-    SP --> SV[(Speed Views)]
-    BP --> BV[(Batch Views)]
-    SV --> SL[Serving Layer]
-    BV --> SL
-    SL --> API[API/Query Layer]
-    API --> U[Users]
+D[Data Sources] --> RT[Real-time Stream]
+D --> BT[Batch Data]
+RT --> SP[Stream Processing]
+BT --> BP[Batch Processing]
+SP --> SV[(Speed Views)]
+BP --> BV[(Batch Views)]
+SV --> SL[Serving Layer]
+BV --> SL
+SL --> API[API/Query Layer]
+API --> U[Users]
 </div>
 
 ---

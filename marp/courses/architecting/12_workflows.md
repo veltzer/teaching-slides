@@ -36,37 +36,37 @@
 
 <div class="mermaid">
 graph TB
-    subgraph "Workflow Components"
-        T[Tasks/Jobs]
-        D[Dependencies]
-        S[Schedule]
-        R[Resources]
-    end
+subgraph "Workflow Components"
+T[Tasks/Jobs]
+D[Dependencies]
+S[Schedule]
+R[Resources]
+end
 
-    subgraph "Execution"
-        E[Executor]
-        W[Workers]
-        Q[Queue]
-    end
+subgraph "Execution"
+E[Executor]
+W[Workers]
+Q[Queue]
+end
 
-    subgraph "Monitoring"
-        M[Metrics]
-        L[Logs]
-        A[Alerts]
-    end
+subgraph "Monitoring"
+M[Metrics]
+L[Logs]
+A[Alerts]
+end
 
-    T --> E
-    D --> E
-    S --> E
-    E --> W
-    E --> Q
-    W --> M
-    W --> L
-    M --> A
+T --> E
+D --> E
+S --> E
+E --> W
+E --> Q
+W --> M
+W --> L
+M --> A
 
-    style T fill:#e3f2fd
-    style E fill:#f3e5f5
-    style M fill:#e8f5e9
+style T fill:#e3f2fd
+style E fill:#f3e5f5
+style M fill:#e8f5e9
 </div>
 
 ---
@@ -85,24 +85,24 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    Start[Start] --> Extract[Extract Data]
-    Extract --> Clean[Clean Data]
-    Extract --> Validate[Validate Data]
+Start[Start] --> Extract[Extract Data]
+Extract --> Clean[Clean Data]
+Extract --> Validate[Validate Data]
 
-    Clean --> Transform[Transform]
-    Validate --> Transform
+Clean --> Transform[Transform]
+Validate --> Transform
 
-    Transform --> Load1[Load to DB]
-    Transform --> Load2[Load to S3]
+Transform --> Load1[Load to DB]
+Transform --> Load2[Load to S3]
 
-    Load1 --> Report[Generate Report]
-    Load2 --> Report
+Load1 --> Report[Generate Report]
+Load2 --> Report
 
-    Report --> End[End]
+Report --> End[End]
 
-    style Start fill:#e3f2fd
-    style Transform fill:#f3e5f5
-    style Report fill:#e8f5e9
+style Start fill:#e3f2fd
+style Transform fill:#f3e5f5
+style Report fill:#e8f5e9
 </div>
 
 ---
@@ -122,39 +122,39 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    subgraph "Airflow Components"
-        WS[Web Server]
-        SCH[Scheduler]
-        EX[Executor]
-        MD[Metadata DB]
-    end
+subgraph "Airflow Components"
+WS[Web Server]
+SCH[Scheduler]
+EX[Executor]
+MD[Metadata DB]
+end
 
-    subgraph "Workers"
-        W1[Worker 1]
-        W2[Worker 2]
-        W3[Worker N]
-    end
+subgraph "Workers"
+W1[Worker 1]
+W2[Worker 2]
+W3[Worker N]
+end
 
-    subgraph "DAGs"
-        D1[DAG 1]
-        D2[DAG 2]
-        D3[DAG N]
-    end
+subgraph "DAGs"
+D1[DAG 1]
+D2[DAG 2]
+D3[DAG N]
+end
 
-    WS --> MD
-    SCH --> MD
-    SCH --> EX
-    EX --> W1
-    EX --> W2
-    EX --> W3
+WS --> MD
+SCH --> MD
+SCH --> EX
+EX --> W1
+EX --> W2
+EX --> W3
 
-    D1 --> SCH
-    D2 --> SCH
-    D3 --> SCH
+D1 --> SCH
+D2 --> SCH
+D3 --> SCH
 
-    style WS fill:#e3f2fd
-    style SCH fill:#f3e5f5
-    style W1 fill:#e8f5e9
+style WS fill:#e3f2fd
+style SCH fill:#f3e5f5
+style W1 fill:#e8f5e9
 </div>
 
 ---
@@ -219,37 +219,37 @@ extract_task >> transform_task >> load_task
 
 <div class="mermaid">
 graph TB
-    subgraph "Prefect Core"
-        F[Flows]
-        T[Tasks]
-        S[State Management]
-    end
+subgraph "Prefect Core"
+F[Flows]
+T[Tasks]
+S[State Management]
+end
 
-    subgraph "Prefect Server"
-        API[API Server]
-        UI[UI Dashboard]
-        DB[PostgreSQL]
-    end
+subgraph "Prefect Server"
+API[API Server]
+UI[UI Dashboard]
+DB[PostgreSQL]
+end
 
-    subgraph "Agents"
-        A1[Agent 1]
-        A2[Agent 2]
-        A3[Agent N]
-    end
+subgraph "Agents"
+A1[Agent 1]
+A2[Agent 2]
+A3[Agent N]
+end
 
-    F --> T
-    T --> S
-    S --> API
-    API --> DB
-    API --> UI
+F --> T
+T --> S
+S --> API
+API --> DB
+API --> UI
 
-    A1 --> API
-    A2 --> API
-    A3 --> API
+A1 --> API
+A2 --> API
+A3 --> API
 
-    style F fill:#e3f2fd
-    style API fill:#f3e5f5
-    style A1 fill:#e8f5e9
+style F fill:#e3f2fd
+style API fill:#f3e5f5
+style A1 fill:#e8f5e9
 </div>
 
 ---
@@ -292,39 +292,39 @@ if __name__ == "__main__":
 
 <div class="mermaid">
 graph TB
-    subgraph "Dagster Core"
-        J[Jobs]
-        O[Ops/Assets]
-        R[Resources]
-        IO[IO Managers]
-    end
+subgraph "Dagster Core"
+J[Jobs]
+O[Ops/Assets]
+R[Resources]
+IO[IO Managers]
+end
 
-    subgraph "Dagster Instance"
-        D[Dagit UI]
-        DM[Daemon]
-        RS[Run Storage]
-        ES[Event Storage]
-    end
+subgraph "Dagster Instance"
+D[Dagit UI]
+DM[Daemon]
+RS[Run Storage]
+ES[Event Storage]
+end
 
-    subgraph "Execution"
-        EX[Executors]
-        RQ[Run Queue]
-        RL[Run Launcher]
-    end
+subgraph "Execution"
+EX[Executors]
+RQ[Run Queue]
+RL[Run Launcher]
+end
 
-    J --> O
-    O --> R
-    O --> IO
+J --> O
+O --> R
+O --> IO
 
-    D --> RS
-    DM --> ES
-    DM --> RQ
-    RQ --> RL
-    RL --> EX
+D --> RS
+DM --> ES
+DM --> RQ
+RQ --> RL
+RL --> EX
 
-    style J fill:#e3f2fd
-    style D fill:#f3e5f5
-    style EX fill:#e8f5e9
+style J fill:#e3f2fd
+style D fill:#f3e5f5
+style EX fill:#e8f5e9
 </div>
 
 ---
@@ -362,36 +362,36 @@ if __name__ == "__main__":
 
 <div class="mermaid">
 graph TB
-    subgraph "Conductor Server"
-        WE[Workflow Engine]
-        TQ[Task Queues]
-        MS[Metadata Store]
-    end
+subgraph "Conductor Server"
+WE[Workflow Engine]
+TQ[Task Queues]
+MS[Metadata Store]
+end
 
-    subgraph "Workers"
-        W1[Worker Pool 1]
-        W2[Worker Pool 2]
-        W3[Worker Pool N]
-    end
+subgraph "Workers"
+W1[Worker Pool 1]
+W2[Worker Pool 2]
+W3[Worker Pool N]
+end
 
-    subgraph "Storage"
-        ES[Elasticsearch]
-        DB[Database]
-    end
+subgraph "Storage"
+ES[Elasticsearch]
+DB[Database]
+end
 
-    C[Client API] --> WE
-    WE --> TQ
-    TQ --> W1
-    TQ --> W2
-    TQ --> W3
+C[Client API] --> WE
+WE --> TQ
+TQ --> W1
+TQ --> W2
+TQ --> W3
 
-    WE --> MS
-    MS --> ES
-    MS --> DB
+WE --> MS
+MS --> ES
+MS --> DB
 
-    style C fill:#e3f2fd
-    style WE fill:#f3e5f5
-    style W1 fill:#e8f5e9
+style C fill:#e3f2fd
+style WE fill:#f3e5f5
+style W1 fill:#e8f5e9
 </div>
 
 ---
@@ -447,40 +447,40 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    subgraph "Extract"
-        E1[Database]
-        E2[API]
-        E3[Files]
-    end
+subgraph "Extract"
+E1[Database]
+E2[API]
+E3[Files]
+end
 
-    subgraph "Transform"
-        T1[Clean]
-        T2[Validate]
-        T3[Enrich]
-        T4[Aggregate]
-    end
+subgraph "Transform"
+T1[Clean]
+T2[Validate]
+T3[Enrich]
+T4[Aggregate]
+end
 
-    subgraph "Load"
-        L1[Data Warehouse]
-        L2[Data Lake]
-        L3[Analytics DB]
-    end
+subgraph "Load"
+L1[Data Warehouse]
+L2[Data Lake]
+L3[Analytics DB]
+end
 
-    E1 --> T1
-    E2 --> T1
-    E3 --> T1
+E1 --> T1
+E2 --> T1
+E3 --> T1
 
-    T1 --> T2
-    T2 --> T3
-    T3 --> T4
+T1 --> T2
+T2 --> T3
+T3 --> T4
 
-    T4 --> L1
-    T4 --> L2
-    T4 --> L3
+T4 --> L1
+T4 --> L2
+T4 --> L3
 
-    style E1 fill:#e3f2fd
-    style T1 fill:#f3e5f5
-    style L1 fill:#e8f5e9
+style E1 fill:#e3f2fd
+style T1 fill:#f3e5f5
+style L1 fill:#e8f5e9
 </div>
 
 ---
@@ -489,32 +489,32 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    S[Split Data]
+S[Split Data]
 
-    subgraph "Parallel Processing"
-        P1[Process Chunk 1]
-        P2[Process Chunk 2]
-        P3[Process Chunk 3]
-        P4[Process Chunk N]
-    end
+subgraph "Parallel Processing"
+P1[Process Chunk 1]
+P2[Process Chunk 2]
+P3[Process Chunk 3]
+P4[Process Chunk N]
+end
 
-    M[Merge Results]
+M[Merge Results]
 
-    S --> P1
-    S --> P2
-    S --> P3
-    S --> P4
+S --> P1
+S --> P2
+S --> P3
+S --> P4
 
-    P1 --> M
-    P2 --> M
-    P3 --> M
-    P4 --> M
+P1 --> M
+P2 --> M
+P3 --> M
+P4 --> M
 
-    M --> R[Final Result]
+M --> R[Final Result]
 
-    style S fill:#e3f2fd
-    style M fill:#f3e5f5
-    style R fill:#e8f5e9
+style S fill:#e3f2fd
+style M fill:#f3e5f5
+style R fill:#e8f5e9
 </div>
 
 ---
@@ -639,41 +639,41 @@ def process_data():
 
 <div class="mermaid">
 graph TB
-    subgraph "Workflow Metrics"
-        WM1[Success Rate]
-        WM2[Failure Rate]
-        WM3[Average Duration]
-        WM4[Task Queue Depth]
-    end
+subgraph "Workflow Metrics"
+WM1[Success Rate]
+WM2[Failure Rate]
+WM3[Average Duration]
+WM4[Task Queue Depth]
+end
 
-    subgraph "System Metrics"
-        SM1[CPU Usage]
-        SM2[Memory Usage]
-        SM3[Worker Status]
-    end
+subgraph "System Metrics"
+SM1[CPU Usage]
+SM2[Memory Usage]
+SM3[Worker Status]
+end
 
-    subgraph "Alerts"
-        A1[Failed Jobs]
-        A2[Long Running Tasks]
-        A3[Resource Limits]
-    end
+subgraph "Alerts"
+A1[Failed Jobs]
+A2[Long Running Tasks]
+A3[Resource Limits]
+end
 
-    WM1 --> D[Dashboard]
-    WM2 --> D
-    WM3 --> D
-    WM4 --> D
+WM1 --> D[Dashboard]
+WM2 --> D
+WM3 --> D
+WM4 --> D
 
-    SM1 --> D
-    SM2 --> D
-    SM3 --> D
+SM1 --> D
+SM2 --> D
+SM3 --> D
 
-    D --> A1
-    D --> A2
-    D --> A3
+D --> A1
+D --> A2
+D --> A3
 
-    style WM1 fill:#e3f2fd
-    style D fill:#f3e5f5
-    style A1 fill:#ffcdd2
+style WM1 fill:#e3f2fd
+style D fill:#f3e5f5
+style A1 fill:#ffcdd2
 </div>
 
 ---

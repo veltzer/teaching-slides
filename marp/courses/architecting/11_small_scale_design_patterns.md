@@ -40,17 +40,17 @@
 
 <div class="mermaid">
 graph TB
-    U[User] -->|Input| V[View]
-    V -->|User Events| C[Controller]
-    C -->|Update| M[Model]
-    M -->|Notify Changes| V
-    C -->|Select View| V
-    M -->|Business Logic| M
+U[User] -->|Input| V[View]
+V -->|User Events| C[Controller]
+C -->|Update| M[Model]
+M -->|Notify Changes| V
+C -->|Select View| V
+M -->|Business Logic| M
 
-    style U fill:#fff3e0
-    style V fill:#e3f2fd
-    style C fill:#f3e5f5
-    style M fill:#e8f5e9
+style U fill:#fff3e0
+style V fill:#e3f2fd
+style C fill:#f3e5f5
+style M fill:#e8f5e9
 </div>
 
 ---
@@ -110,21 +110,21 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    subgraph "Abstract Syntax Tree"
-        AE[Abstract Expression]
-        AE --> TE[Terminal Expression]
-        AE --> NTE[Non-Terminal Expression]
-        NTE --> NTE1[Non-Terminal 1]
-        NTE --> TE2[Terminal 2]
-    end
+subgraph "Abstract Syntax Tree"
+AE[Abstract Expression]
+AE --> TE[Terminal Expression]
+AE --> NTE[Non-Terminal Expression]
+NTE --> NTE1[Non-Terminal 1]
+NTE --> TE2[Terminal 2]
+end
 
-    C[Context] -.->|Global Info| AE
-    C -.->|Variables| TE
-    C -.->|State| NTE
+C[Context] -.->|Global Info| AE
+C -.->|Variables| TE
+C -.->|State| NTE
 
-    style AE fill:#e3f2fd
-    style TE fill:#f3e5f5
-    style C fill:#e8f5e9
+style AE fill:#e3f2fd
+style TE fill:#f3e5f5
+style C fill:#e8f5e9
 </div>
 
 ---
@@ -167,32 +167,32 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    subgraph "Domain Layer"
-        BS[Business Service]
-        DE[Domain Entity]
-    end
+subgraph "Domain Layer"
+BS[Business Service]
+DE[Domain Entity]
+end
 
-    subgraph "Repository Layer"
-        IR[IRepository Interface]
-        CR[Concrete Repository]
-    end
+subgraph "Repository Layer"
+IR[IRepository Interface]
+CR[Concrete Repository]
+end
 
-    subgraph "Data Layer"
-        DB[Database]
-        API[External API]
-        FS[File System]
-    end
+subgraph "Data Layer"
+DB[Database]
+API[External API]
+FS[File System]
+end
 
-    BS --> IR
-    IR --> CR
-    CR --> DB
-    CR --> API
-    CR --> FS
-    DE <--> CR
+BS --> IR
+IR --> CR
+CR --> DB
+CR --> API
+CR --> FS
+DE <--> CR
 
-    style BS fill:#e3f2fd
-    style IR fill:#f3e5f5
-    style DB fill:#e8f5e9
+style BS fill:#e3f2fd
+style IR fill:#f3e5f5
+style DB fill:#e8f5e9
 </div>
 
 ---
@@ -235,21 +235,21 @@ Cons:
 
 <div class="mermaid">
 graph LR
-    I[Invoker] --> IC[ICommand]
-    IC --> CC1[ConcreteCommand 1]
-    IC --> CC2[ConcreteCommand 2]
-    IC --> CC3[ConcreteCommand 3]
+I[Invoker] --> IC[ICommand]
+IC --> CC1[ConcreteCommand 1]
+IC --> CC2[ConcreteCommand 2]
+IC --> CC3[ConcreteCommand 3]
 
-    CC1 --> R1[Receiver 1]
-    CC2 --> R2[Receiver 2]
-    CC3 --> R3[Receiver 3]
+CC1 --> R1[Receiver 1]
+CC2 --> R2[Receiver 2]
+CC3 --> R3[Receiver 3]
 
-    C[Client] -.->|Creates| CC1
-    C -.->|Configures| I
+C[Client] -.->|Creates| CC1
+C -.->|Configures| I
 
-    style I fill:#e3f2fd
-    style IC fill:#f3e5f5
-    style R1 fill:#e8f5e9
+style I fill:#e3f2fd
+style IC fill:#f3e5f5
+style R1 fill:#e8f5e9
 </div>
 
 ---
@@ -295,23 +295,23 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    IC[IComponent]
-    IC --> CC[ConcreteComponent]
-    IC --> D[Decorator]
+IC[IComponent]
+IC --> CC[ConcreteComponent]
+IC --> D[Decorator]
 
-    D --> CD1[ConcreteDecorator A]
-    D --> CD2[ConcreteDecorator B]
-    D --> CD3[ConcreteDecorator C]
+D --> CD1[ConcreteDecorator A]
+D --> CD2[ConcreteDecorator B]
+D --> CD3[ConcreteDecorator C]
 
-    D -.->|Wraps| IC
+D -.->|Wraps| IC
 
-    CD1 -.->|Adds Feature A| CC
-    CD2 -.->|Adds Feature B| CC
-    CD3 -.->|Adds Feature C| CC
+CD1 -.->|Adds Feature A| CC
+CD2 -.->|Adds Feature B| CC
+CD3 -.->|Adds Feature C| CC
 
-    style IC fill:#e3f2fd
-    style D fill:#f3e5f5
-    style CC fill:#e8f5e9
+style IC fill:#e3f2fd
+style D fill:#f3e5f5
+style CC fill:#e8f5e9
 </div>
 
 ---
@@ -357,23 +357,23 @@ Cons:
 
 <div class="mermaid">
 graph LR
-    C[Client] --> F[Facade]
+C[Client] --> F[Facade]
 
-    subgraph "Complex Subsystem"
-        F --> S1[Subsystem 1]
-        F --> S2[Subsystem 2]
-        F --> S3[Subsystem 3]
-        F --> S4[Subsystem 4]
+subgraph "Complex Subsystem"
+F --> S1[Subsystem 1]
+F --> S2[Subsystem 2]
+F --> S3[Subsystem 3]
+F --> S4[Subsystem 4]
 
-        S1 -.-> S2
-        S2 -.-> S3
-        S3 -.-> S4
-        S4 -.-> S1
-    end
+S1 -.-> S2
+S2 -.-> S3
+S3 -.-> S4
+S4 -.-> S1
+end
 
-    style C fill:#e3f2fd
-    style F fill:#f3e5f5
-    style S1 fill:#e8f5e9
+style C fill:#e3f2fd
+style F fill:#f3e5f5
+style S1 fill:#e8f5e9
 </div>
 
 ---

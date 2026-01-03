@@ -34,12 +34,12 @@
 
 <div class="mermaid">
 graph TB
-    P[Presentation Layer] --> A[Application Layer]
-    A --> B[Business Logic Layer]
-    B --> D[Data Access Layer]
-    D --> DB[(Database)]
-    P -.->|User Input| U[Users]
-    U -.->|Display| P
+P[Presentation Layer] --> A[Application Layer]
+A --> B[Business Logic Layer]
+B --> D[Data Access Layer]
+D --> DB[(Database)]
+P -.->|User Input| U[Users]
+U -.->|Display| P
 </div>
 
 ---
@@ -97,15 +97,15 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    M[Master] --> S1[Slave 1]
-    M --> S2[Slave 2]
-    M --> S3[Slave 3]
-    M --> S4[Slave 4]
-    S1 -.->|Results| M
-    S2 -.->|Results| M
-    S3 -.->|Results| M
-    S4 -.->|Results| M
-    M -.->|Aggregate| R[Final Result]
+M[Master] --> S1[Slave 1]
+M --> S2[Slave 2]
+M --> S3[Slave 3]
+M --> S4[Slave 4]
+S1 -.->|Results| M
+S2 -.->|Results| M
+S3 -.->|Results| M
+S4 -.->|Results| M
+M -.->|Aggregate| R[Final Result]
 </div>
 
 ---
@@ -164,15 +164,15 @@ Cons:
 
 <div class="mermaid">
 graph LR
-    I[Input] -->|Pipe| F1[Filter 1]
-    F1 -->|Pipe| F2[Filter 2]
-    F2 -->|Pipe| F3[Filter 3]
-    F3 -->|Pipe| F4[Filter 4]
-    F4 -->|Pipe| O[Output]
-    F1 -.->|Transform| D1[Data]
-    F2 -.->|Process| D2[Data]
-    F3 -.->|Filter| D3[Data]
-    F4 -.->|Format| D4[Data]
+I[Input] -->|Pipe| F1[Filter 1]
+F1 -->|Pipe| F2[Filter 2]
+F2 -->|Pipe| F3[Filter 3]
+F3 -->|Pipe| F4[Filter 4]
+F4 -->|Pipe| O[Output]
+F1 -.->|Transform| D1[Data]
+F2 -.->|Process| D2[Data]
+F3 -.->|Filter| D3[Data]
+F4 -.->|Format| D4[Data]
 </div>
 
 ---
@@ -233,16 +233,16 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    BB[(Blackboard)] --> C[Control]
-    C --> KS1[Knowledge Source 1]
-    C --> KS2[Knowledge Source 2]
-    C --> KS3[Knowledge Source 3]
-    C --> KS4[Knowledge Source 4]
-    KS1 <--> BB
-    KS2 <--> BB
-    KS3 <--> BB
-    KS4 <--> BB
-    BB -.->|Solution State| S[Solution]
+BB[(Blackboard)] --> C[Control]
+C --> KS1[Knowledge Source 1]
+C --> KS2[Knowledge Source 2]
+C --> KS3[Knowledge Source 3]
+C --> KS4[Knowledge Source 4]
+KS1 <--> BB
+KS2 <--> BB
+KS3 <--> BB
+KS4 <--> BB
+BB -.->|Solution State| S[Solution]
 </div>
 
 ---
@@ -287,14 +287,14 @@ Cons:
 
 <div class="mermaid">
 graph LR
-    A[Application] --> AM[Ambassador]
-    AM --> ES1[External Service 1]
-    AM --> ES2[External Service 2]
-    AM --> ES3[External Service 3]
-    AM -.->|Retry Logic| RL[Retry]
-    AM -.->|Circuit Breaker| CB[Circuit Breaker]
-    AM -.->|Logging| L[Logs]
-    AM -.->|Monitoring| M[Metrics]
+A[Application] --> AM[Ambassador]
+AM --> ES1[External Service 1]
+AM --> ES2[External Service 2]
+AM --> ES3[External Service 3]
+AM -.->|Retry Logic| RL[Retry]
+AM -.->|Circuit Breaker| CB[Circuit Breaker]
+AM -.->|Logging| L[Logs]
+AM -.->|Monitoring| M[Metrics]
 </div>
 
 ---
@@ -343,21 +343,21 @@ Cons:
 
 <div class="mermaid">
 sequenceDiagram
-    participant App as Application
-    participant Cache as Cache
-    participant DB as Database
+participant App as Application
+participant Cache as Cache
+participant DB as Database
 
-    App->>Cache: 1. Check cache
-    alt Cache Miss
-        Cache-->>App: Not found
-        App->>DB: 2. Query database
-        DB-->>App: Return data
-        App->>Cache: 3. Update cache
-        Cache-->>App: Confirmed
-    else Cache Hit
-        Cache-->>App: Return cached data
-    end
-    App->>App: 4. Use data
+App->>Cache: 1. Check cache
+alt Cache Miss
+Cache-->>App: Not found
+App->>DB: 2. Query database
+DB-->>App: Return data
+App->>Cache: 3. Update cache
+Cache-->>App: Confirmed
+else Cache Hit
+Cache-->>App: Return cached data
+end
+App->>App: 4. Use data
 </div>
 
 ---
@@ -405,17 +405,17 @@ Cons:
 
 <div class="mermaid">
 graph TB
-    subgraph "Pod/Container Group"
-        MA[Main Application]
-        SC[Sidecar Container]
-        MA <--> SC
-    end
-    SC --> L[Logging Service]
-    SC --> M[Monitoring Service]
-    SC --> SD[Service Discovery]
-    SC --> P[Proxy/Load Balancer]
-    MA -.->|Core Business Logic| BL[Business Functions]
-    SC -.->|Infrastructure Concerns| IC[Cross-cutting Concerns]
+subgraph "Pod/Container Group"
+MA[Main Application]
+SC[Sidecar Container]
+MA <--> SC
+end
+SC --> L[Logging Service]
+SC --> M[Monitoring Service]
+SC --> SD[Service Discovery]
+SC --> P[Proxy/Load Balancer]
+MA -.->|Core Business Logic| BL[Business Functions]
+SC -.->|Infrastructure Concerns| IC[Cross-cutting Concerns]
 </div>
 
 ---
@@ -464,18 +464,18 @@ Cons:
 
 <div class="mermaid">
 sequenceDiagram
-    participant Client as Client
-    participant App as Application
-    participant Storage as Storage Service
+participant Client as Client
+participant App as Application
+participant Storage as Storage Service
 
-    Client->>App: 1. Request access to resource
-    App->>App: 2. Validate request
-    App->>Storage: 3. Generate limited access token
-    Storage-->>App: Return signed token/URL
-    App-->>Client: 4. Return access token
-    Client->>Storage: 5. Direct access with token
-    Storage->>Storage: 6. Validate token
-    Storage-->>Client: 7. Grant access to resource
+Client->>App: 1. Request access to resource
+App->>App: 2. Validate request
+App->>Storage: 3. Generate limited access token
+Storage-->>App: Return signed token/URL
+App-->>Client: 4. Return access token
+Client->>Storage: 5. Direct access with token
+Storage->>Storage: 6. Validate token
+Storage-->>Client: 7. Grant access to resource
 </div>
 
 ---

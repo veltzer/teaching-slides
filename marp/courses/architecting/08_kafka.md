@@ -13,14 +13,14 @@
 Traditional Message Processing
 <div class="mermaid">
 graph LR
-    P[Producers] --> K[Kafka Broker]
-    K --> C[Consumers]
-    C --> DB[Database]
-    C --> A[Application]
+P[Producers] --> K[Kafka Broker]
+K --> C[Consumers]
+C --> DB[Database]
+C --> A[Application]
 
-    style P fill:#e3f2fd
-    style K fill:#f3e5f5
-    style C fill:#e8f5e9
+style P fill:#e3f2fd
+style K fill:#f3e5f5
+style C fill:#e8f5e9
 </div>
 
 * Messages are **consumed and committed**
@@ -32,19 +32,19 @@ graph LR
 
 <div class="mermaid">
 graph LR
-    IT[Input Topics] --> KS[Kafka Streams<br/>Application]
-    KS --> ST[State Store]
-    KS --> OT[Output Topics]
+IT[Input Topics] --> KS[Kafka Streams<br/>Application]
+KS --> ST[State Store]
+KS --> OT[Output Topics]
 
-    subgraph "Stream Processing"
-        KS --> F[Filter/Map]
-        F --> A[Aggregate]
-        A --> W[Window]
-    end
+subgraph "Stream Processing"
+KS --> F[Filter/Map]
+F --> A[Aggregate]
+A --> W[Window]
+end
 
-    style IT fill:#e3f2fd
-    style KS fill:#f3e5f5
-    style OT fill:#e8f5e9
+style IT fill:#e3f2fd
+style KS fill:#f3e5f5
+style OT fill:#e8f5e9
 </div>
 
 * **Real-time** processing
@@ -69,21 +69,21 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    subgraph "SQS Architecture"
-        P[Producer] --> Q[SQS Queue]
-        Q --> C1[Consumer 1]
-        Q --> C2[Consumer 2]
-        Q --> C3[Consumer N]
+subgraph "SQS Architecture"
+P[Producer] --> Q[SQS Queue]
+Q --> C1[Consumer 1]
+Q --> C2[Consumer 2]
+Q --> C3[Consumer N]
 
-        C1 -.->|Visibility Timeout| Q
-        C2 -.->|Delete Message| Q
+C1 -.->|Visibility Timeout| Q
+C2 -.->|Delete Message| Q
 
-        Q --> DLQ[Dead Letter Queue]
-    end
+Q --> DLQ[Dead Letter Queue]
+end
 
-    style P fill:#e3f2fd
-    style Q fill:#f3e5f5
-    style DLQ fill:#ffcdd2
+style P fill:#e3f2fd
+style Q fill:#f3e5f5
+style DLQ fill:#ffcdd2
 </div>
 
 * **Standard** vs **FIFO** queues
@@ -116,25 +116,25 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    P[Publisher] --> E[Exchange]
+P[Publisher] --> E[Exchange]
 
-    subgraph "Exchange Types"
-        E --> D[Direct]
-        E --> F[Fanout]
-        E --> T[Topic]
-    end
+subgraph "Exchange Types"
+E --> D[Direct]
+E --> F[Fanout]
+E --> T[Topic]
+end
 
-    D --> Q1[Queue 1]
-    F --> Q2[Queue 2]
-    T --> Q3[Queue 3]
+D --> Q1[Queue 1]
+F --> Q2[Queue 2]
+T --> Q3[Queue 3]
 
-    Q1 --> C1[Consumer 1]
-    Q2 --> C2[Consumer 2]
-    Q3 --> C3[Consumer 3]
+Q1 --> C1[Consumer 1]
+Q2 --> C2[Consumer 2]
+Q3 --> C3[Consumer 3]
 
-    style E fill:#e3f2fd
-    style Q1 fill:#f3e5f5
-    style C1 fill:#e8f5e9
+style E fill:#e3f2fd
+style Q1 fill:#f3e5f5
+style C1 fill:#e8f5e9
 </div>
 
 * **Exchange types**: Direct, Fanout, Topic, Headers
@@ -149,29 +149,29 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    subgraph "Kafka - Log Based"
-        K1[Partition 0]
-        K2[Partition 1]
-        K3[Partition 2]
-        K1 --> KL[Append-only Log]
-    end
+subgraph "Kafka - Log Based"
+K1[Partition 0]
+K2[Partition 1]
+K3[Partition 2]
+K1 --> KL[Append-only Log]
+end
 
-    subgraph "SQS - Queue Based"
-        S1[Message 1]
-        S2[Message 2]
-        S3[Message N]
-        S1 --> SQ[FIFO/Standard Queue]
-    end
+subgraph "SQS - Queue Based"
+S1[Message 1]
+S2[Message 2]
+S3[Message N]
+S1 --> SQ[FIFO/Standard Queue]
+end
 
-    subgraph "RabbitMQ - Memory/Disk"
-        R1[In-Memory]
-        R2[Persistent]
-        R1 --> RQ[Queue Storage]
-    end
+subgraph "RabbitMQ - Memory/Disk"
+R1[In-Memory]
+R2[Persistent]
+R1 --> RQ[Queue Storage]
+end
 
-    style K1 fill:#e3f2fd
-    style S1 fill:#f3e5f5
-    style R1 fill:#e8f5e9
+style K1 fill:#e3f2fd
+style S1 fill:#f3e5f5
+style R1 fill:#e8f5e9
 </div>
 
 ---
@@ -202,21 +202,21 @@ graph TB
 
 <div class="mermaid">
 graph TB
-    subgraph "Topic"
-        P0[Partition 0<br/>Leader: Broker 1<br/>Replicas: 2,3]
-        P1[Partition 1<br/>Leader: Broker 2<br/>Replicas: 1,3]
-        P2[Partition 2<br/>Leader: Broker 3<br/>Replicas: 1,2]
-    end
+subgraph "Topic"
+P0[Partition 0<br/>Leader: Broker 1<br/>Replicas: 2,3]
+P1[Partition 1<br/>Leader: Broker 2<br/>Replicas: 1,3]
+P2[Partition 2<br/>Leader: Broker 3<br/>Replicas: 1,2]
+end
 
-    subgraph "Segments"
-        P0 --> S1[Segment 1]
-        P0 --> S2[Segment 2]
-        P0 --> S3[Active Segment]
-    end
+subgraph "Segments"
+P0 --> S1[Segment 1]
+P0 --> S2[Segment 2]
+P0 --> S3[Active Segment]
+end
 
-    style P0 fill:#e3f2fd
-    style P1 fill:#f3e5f5
-    style P2 fill:#e8f5e9
+style P0 fill:#e3f2fd
+style P1 fill:#f3e5f5
+style P2 fill:#e8f5e9
 </div>
 
 * Each partition is an **ordered log**
@@ -230,27 +230,27 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    subgraph "Topic with 3 Partitions"
-        P0[Partition 0]
-        P1[Partition 1]
-        P2[Partition 2]
-    end
+subgraph "Topic with 3 Partitions"
+P0[Partition 0]
+P1[Partition 1]
+P2[Partition 2]
+end
 
-    subgraph "Consumer Group"
-        C1[Consumer 1]
-        C2[Consumer 2]
-    end
+subgraph "Consumer Group"
+C1[Consumer 1]
+C2[Consumer 2]
+end
 
-    P0 --> C1
-    P1 --> C1
-    P2 --> C2
+P0 --> C1
+P1 --> C1
+P2 --> C2
 
-    CG[Group Coordinator] -.->|Manages| C1
-    CG -.->|Manages| C2
+CG[Group Coordinator] -.->|Manages| C1
+CG -.->|Manages| C2
 
-    style P0 fill:#e3f2fd
-    style P1 fill:#f3e5f5
-    style C1 fill:#e8f5e9
+style P0 fill:#e3f2fd
+style P1 fill:#f3e5f5
+style C1 fill:#e8f5e9
 </div>
 
 * **Automatic partition assignment**
@@ -276,26 +276,26 @@ graph LR
 ### Kafka
 <div class="mermaid">
 graph TB
-    subgraph "Kafka Cluster"
-        B1[Broker 1]
-        B2[Broker 2]
-        B3[Broker 3]
-        BN[Broker N]
-    end
+subgraph "Kafka Cluster"
+B1[Broker 1]
+B2[Broker 2]
+B3[Broker 3]
+BN[Broker N]
+end
 
-    subgraph "Scaling Dimensions"
-        SP[Add Partitions]
-        SB[Add Brokers]
-        SC[Add Consumers]
-    end
+subgraph "Scaling Dimensions"
+SP[Add Partitions]
+SB[Add Brokers]
+SC[Add Consumers]
+end
 
-    SP --> B1
-    SB --> BN
-    SC --> CG[Consumer Groups]
+SP --> B1
+SB --> BN
+SC --> CG[Consumer Groups]
 
-    style B1 fill:#e3f2fd
-    style B2 fill:#f3e5f5
-    style CG fill:#e8f5e9
+style B1 fill:#e3f2fd
+style B2 fill:#f3e5f5
+style CG fill:#e8f5e9
 </div>
 
 * **Horizontal scaling** via partitions
@@ -309,20 +309,20 @@ graph TB
 
 <div class="mermaid">
 graph LR
-    subgraph "Auto Scaling"
-        CW[CloudWatch<br/>Queue Metrics]
-        AS[Auto Scaling<br/>Group]
-        EC2[EC2 Instances]
-    end
+subgraph "Auto Scaling"
+CW[CloudWatch<br/>Queue Metrics]
+AS[Auto Scaling<br/>Group]
+EC2[EC2 Instances]
+end
 
-    SQ[SQS Queue] --> CW
-    CW -->|Trigger| AS
-    AS -->|Scale| EC2
-    EC2 -->|Poll| SQ
+SQ[SQS Queue] --> CW
+CW -->|Trigger| AS
+AS -->|Scale| EC2
+EC2 -->|Poll| SQ
 
-    style SQ fill:#e3f2fd
-    style CW fill:#f3e5f5
-    style EC2 fill:#e8f5e9
+style SQ fill:#e3f2fd
+style CW fill:#f3e5f5
+style EC2 fill:#e8f5e9
 </div>
 
 * **Queue-per-microservice**
@@ -350,20 +350,20 @@ graph LR
 
 <div class="mermaid">
 graph TB
-    subgraph "Partition Strategy"
-        T[Topic] --> P1[Partition 1<br/>10MB/s]
-        T --> P2[Partition 2<br/>10MB/s]
-        T --> P3[Partition 3<br/>10MB/s]
-        T --> PN[Partition N<br/>10MB/s]
-    end
+subgraph "Partition Strategy"
+T[Topic] --> P1[Partition 1<br/>10MB/s]
+T --> P2[Partition 2<br/>10MB/s]
+T --> P3[Partition 3<br/>10MB/s]
+T --> PN[Partition N<br/>10MB/s]
+end
 
-    P1 --> B1[Broker 1]
-    P2 --> B2[Broker 2]
-    P3 --> B3[Broker 3]
+P1 --> B1[Broker 1]
+P2 --> B2[Broker 2]
+P3 --> B3[Broker 3]
 
-    style T fill:#e3f2fd
-    style P1 fill:#f3e5f5
-    style B1 fill:#e8f5e9
+style T fill:#e3f2fd
+style P1 fill:#f3e5f5
+style B1 fill:#e8f5e9
 </div>
 
 ---
@@ -372,25 +372,25 @@ graph TB
 
 <div class="mermaid">
 graph TB
-    subgraph "Partition Replication"
-        L[Leader<br/>Broker 1]
-        F1[Follower<br/>Broker 2]
-        F2[Follower<br/>Broker 3]
-    end
+subgraph "Partition Replication"
+L[Leader<br/>Broker 1]
+F1[Follower<br/>Broker 2]
+F2[Follower<br/>Broker 3]
+end
 
-    P[Producer] -->|Write| L
-    L -->|Replicate| F1
-    L -->|Replicate| F2
+P[Producer] -->|Write| L
+L -->|Replicate| F1
+L -->|Replicate| F2
 
-    C[Consumer] -->|Read| L
+C[Consumer] -->|Read| L
 
-    L -.->|ISR| ISR[In-Sync<br/>Replicas]
-    F1 -.->|ISR| ISR
-    F2 -.->|ISR| ISR
+L -.->|ISR| ISR[In-Sync<br/>Replicas]
+F1 -.->|ISR| ISR
+F2 -.->|ISR| ISR
 
-    style L fill:#e3f2fd
-    style F1 fill:#f3e5f5
-    style ISR fill:#e8f5e9
+style L fill:#e3f2fd
+style F1 fill:#f3e5f5
+style ISR fill:#e8f5e9
 </div>
 
 * **Leader** handles all reads/writes
@@ -476,25 +476,25 @@ Key Metrics to Watch
 
 <div class="mermaid">
 graph TB
-    subgraph "Hybrid Architecture"
-        K[Kafka]
-        SQ[SQS]
-        RQ[RabbitMQ]
-    end
+subgraph "Hybrid Architecture"
+K[Kafka]
+SQ[SQS]
+RQ[RabbitMQ]
+end
 
-    subgraph "Use Cases"
-        RT[Real-time<br/>Analytics] --> K
-        MS[Microservices<br/>Decoupling] --> SQ
-        CR[Complex<br/>Routing] --> RQ
-    end
+subgraph "Use Cases"
+RT[Real-time<br/>Analytics] --> K
+MS[Microservices<br/>Decoupling] --> SQ
+CR[Complex<br/>Routing] --> RQ
+end
 
-    K <-->|Bridge| SQ
-    SQ <-->|Connector| RQ
-    K <-->|Mirror| RQ
+K <-->|Bridge| SQ
+SQ <-->|Connector| RQ
+K <-->|Mirror| RQ
 
-    style K fill:#e3f2fd
-    style SQ fill:#f3e5f5
-    style RQ fill:#e8f5e9
+style K fill:#e3f2fd
+style SQ fill:#f3e5f5
+style RQ fill:#e8f5e9
 </div>
 
 * **Hybrid** approaches

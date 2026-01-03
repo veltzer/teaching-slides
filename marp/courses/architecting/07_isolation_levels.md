@@ -33,25 +33,25 @@
 
 <div class="mermaid">
 graph TB
-    subgraph "Isolation Problems"
-        DR[Dirty Read<br/>Reading uncommitted data]
-        NR[Non-repeatable Read<br/>Different reads same transaction]
-        PR[Phantom Read<br/>New rows appear]
-    end
+subgraph "Isolation Problems"
+DR[Dirty Read<br/>Reading uncommitted data]
+NR[Non-repeatable Read<br/>Different reads same transaction]
+PR[Phantom Read<br/>New rows appear]
+end
 
-    subgraph "Effects"
-        E1[Data Inconsistency]
-        E2[Invalid Results]
-        E3[Lost Updates]
-    end
+subgraph "Effects"
+E1[Data Inconsistency]
+E2[Invalid Results]
+E3[Lost Updates]
+end
 
-    DR --> E1
-    NR --> E2
-    PR --> E3
+DR --> E1
+NR --> E2
+PR --> E3
 
-    style DR fill:#ffcdd2
-    style NR fill:#f8bbd0
-    style PR fill:#e1bee7
+style DR fill:#ffcdd2
+style NR fill:#f8bbd0
+style PR fill:#e1bee7
 </div>
 
 ---
@@ -115,24 +115,24 @@ SELECT COUNT(*) FROM accounts WHERE balance > 1000;  -- Returns 6
 
 <div class="mermaid">
 graph LR
-    subgraph "Isolation Levels"
-        RU[Read Uncommitted<br/>Lowest Isolation]
-        RC[Read Committed<br/>Default in many DBs]
-        RR[Repeatable Read<br/>MySQL Default]
-        SR[Serializable<br/>Highest Isolation]
-    end
+subgraph "Isolation Levels"
+RU[Read Uncommitted<br/>Lowest Isolation]
+RC[Read Committed<br/>Default in many DBs]
+RR[Repeatable Read<br/>MySQL Default]
+SR[Serializable<br/>Highest Isolation]
+end
 
-    RU -->|More Isolation| RC
-    RC -->|More Isolation| RR
-    RR -->|More Isolation| SR
+RU -->|More Isolation| RC
+RC -->|More Isolation| RR
+RR -->|More Isolation| SR
 
-    RU -.->|High Performance| P1[Better<br/>Concurrency]
-    SR -.->|Low Performance| P2[Lower<br/>Concurrency]
+RU -.->|High Performance| P1[Better<br/>Concurrency]
+SR -.->|Low Performance| P2[Lower<br/>Concurrency]
 
-    style RU fill:#ffebee
-    style RC fill:#e3f2fd
-    style RR fill:#f3e5f5
-    style SR fill:#e8f5e9
+style RU fill:#ffebee
+style RC fill:#e3f2fd
+style RR fill:#f3e5f5
+style SR fill:#e8f5e9
 </div>
 
 ---
@@ -170,30 +170,30 @@ COMMIT;
 
 <div class="mermaid">
 graph TB
-    subgraph "Pessimistic Locking"
-        PL1[Lock First]
-        PL2[Perform Operation]
-        PL3[Release Lock]
-    end
+subgraph "Pessimistic Locking"
+PL1[Lock First]
+PL2[Perform Operation]
+PL3[Release Lock]
+end
 
-    subgraph "Optimistic Locking"
-        OL1[Read Version]
-        OL2[Perform Operation]
-        OL3[Check Version & Update]
-    end
+subgraph "Optimistic Locking"
+OL1[Read Version]
+OL2[Perform Operation]
+OL3[Check Version & Update]
+end
 
-    PL1 --> PL2
-    PL2 --> PL3
+PL1 --> PL2
+PL2 --> PL3
 
-    OL1 --> OL2
-    OL2 --> OL3
-    OL3 -->|Version Mismatch| OL1
+OL1 --> OL2
+OL2 --> OL3
+OL3 -->|Version Mismatch| OL1
 
-    PL3 --> R1[Blocks Others]
-    OL3 --> R2[No Blocking]
+PL3 --> R1[Blocks Others]
+OL3 --> R2[No Blocking]
 
-    style PL1 fill:#ffcdd2
-    style OL1 fill:#c8e6c9
+style PL1 fill:#ffcdd2
+style OL1 fill:#c8e6c9
 </div>
 
 ---
@@ -265,27 +265,27 @@ def transfer_money(from_id, to_id, amount):
 
 <div class="mermaid">
 graph LR
-    subgraph "Transaction 1"
-        T1A[Lock Resource A]
-        T1B[Want Resource B]
-    end
+subgraph "Transaction 1"
+T1A[Lock Resource A]
+T1B[Want Resource B]
+end
 
-    subgraph "Transaction 2"
-        T2B[Lock Resource B]
-        T2A[Want Resource A]
-    end
+subgraph "Transaction 2"
+T2B[Lock Resource B]
+T2A[Want Resource A]
+end
 
-    T1A -.->|Waiting| T2B
-    T2B -.->|Waiting| T1A
+T1A -.->|Waiting| T2B
+T2B -.->|Waiting| T1A
 
-    T1A --> DL[DEADLOCK!]
-    T2B --> DL
+T1A --> DL[DEADLOCK!]
+T2B --> DL
 
-    DL --> R[Rollback One Transaction]
+DL --> R[Rollback One Transaction]
 
-    style DL fill:#ff5252,color:#fff
-    style T1A fill:#ffcdd2
-    style T2B fill:#f8bbd0
+style DL fill:#ff5252,color:#fff
+style T1A fill:#ffcdd2
+style T2B fill:#f8bbd0
 </div>
 
 ---
@@ -314,28 +314,28 @@ def safe_update(account_ids, callback):
 
 <div class="mermaid">
 graph TB
-    subgraph "MVCC System"
-        V1[Version 1<br/>T1 Created]
-        V2[Version 2<br/>T2 Created]
-        V3[Version 3<br/>T3 Created]
-    end
+subgraph "MVCC System"
+V1[Version 1<br/>T1 Created]
+V2[Version 2<br/>T2 Created]
+V3[Version 3<br/>T3 Created]
+end
 
-    subgraph "Readers"
-        R1[Transaction A<br/>Sees V1]
-        R2[Transaction B<br/>Sees V2]
-        R3[Transaction C<br/>Sees V3]
-    end
+subgraph "Readers"
+R1[Transaction A<br/>Sees V1]
+R2[Transaction B<br/>Sees V2]
+R3[Transaction C<br/>Sees V3]
+end
 
-    V1 -.->|Snapshot| R1
-    V2 -.->|Snapshot| R2
-    V3 -.->|Snapshot| R3
+V1 -.->|Snapshot| R1
+V2 -.->|Snapshot| R2
+V3 -.->|Snapshot| R3
 
-    V1 --> V2
-    V2 --> V3
+V1 --> V2
+V2 --> V3
 
-    style V1 fill:#e3f2fd
-    style V2 fill:#f3e5f5
-    style V3 fill:#e8f5e9
+style V1 fill:#e3f2fd
+style V2 fill:#f3e5f5
+style V3 fill:#e8f5e9
 </div>
 
 ---
