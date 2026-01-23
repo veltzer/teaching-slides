@@ -12,6 +12,7 @@
 ## Makefile Structure
 
 ## Recommended Order
+
 ```makefile
 # 1. Variables and configuration
 CC := gcc
@@ -33,18 +34,19 @@ all: program
 ## Standard Targets
 
 ## Common Conventions
+
 ```makefile
 .PHONY: all clean install uninstall test dist
 
 all: $(TARGET)           # Build everything
 clean:                   # Remove build artifacts
-	rm -f $(OBJS) $(TARGET)
+    rm -f $(OBJS) $(TARGET)
 install: $(TARGET)       # Install to system
-	install -m 755 $(TARGET) $(PREFIX)/bin/
+    install -m 755 $(TARGET) $(PREFIX)/bin/
 uninstall:               # Remove from system
-	rm -f $(PREFIX)/bin/$(TARGET)
+    rm -f $(PREFIX)/bin/$(TARGET)
 test: $(TARGET)          # Run tests
-	./run_tests.sh
+    ./run_tests.sh
 ```
 
 ---
@@ -52,6 +54,7 @@ test: $(TARGET)          # Run tests
 ## Directory Structure
 
 ## Organized Build
+
 ```makefile
 SRCDIR := src
 OBJDIR := build
@@ -62,10 +65,10 @@ OBJS := $(SRCS:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 TARGET := $(BINDIR)/program
 
 $(TARGET): $(OBJS) | $(BINDIR)
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ---
@@ -73,19 +76,20 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
 ## Creating Directories
 
 ## Order-Only Prerequisites
+
 ```makefile
 DIRS := build bin
 
 $(DIRS):
-	mkdir -p $@
+    mkdir -p $@
 
 # Objects depend on build/ existing
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) -c $< -o $@
+    $(CC) -c $< -o $@
 
 # Target depends on bin/ existing
 $(TARGET): $(OBJS) | $(BINDIR)
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 ```
 
 ---
@@ -93,6 +97,7 @@ $(TARGET): $(OBJS) | $(BINDIR)
 ## Complete C Project
 
 ## Real-World Example
+
 ```makefile
 CC := gcc
 CFLAGS := -Wall -Wextra -std=c11
@@ -115,20 +120,21 @@ TARGET := $(BINDIR)/myapp
 ## Complete C Project (continued)
 
 ## Rules
+
 ```makefile
 all: $(TARGET)
 
 $(TARGET): $(OBJS) | $(BINDIR)
-	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+    $(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR)
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 
 $(BINDIR) $(OBJDIR):
-	mkdir -p $@
+    mkdir -p $@
 
 clean:
-	rm -rf $(OBJDIR) $(BINDIR)
+    rm -rf $(OBJDIR) $(BINDIR)
 ```
 
 ---
@@ -136,6 +142,7 @@ clean:
 ## Debug vs Release
 
 ## Build Configurations
+
 ```makefile
 DEBUG ?= 0
 
@@ -160,6 +167,7 @@ make            # Release build
 ## Header Dependencies
 
 ## Automatic Tracking
+
 ```makefile
 DEPDIR := .deps
 DEPS := $(SRCS:$(SRCDIR)/%.c=$(DEPDIR)/%.d)
@@ -169,10 +177,10 @@ DEPS := $(SRCS:$(SRCDIR)/%.c=$(DEPDIR)/%.d)
 
 # Generate deps while compiling
 $(OBJDIR)/%.o: $(SRCDIR)/%.c | $(OBJDIR) $(DEPDIR)
-	$(CC) $(CFLAGS) -MMD -MF $(DEPDIR)/$*.d -c $< -o $@
+    $(CC) $(CFLAGS) -MMD -MF $(DEPDIR)/$*.d -c $< -o $@
 
 $(DEPDIR):
-	mkdir -p $@
+    mkdir -p $@
 ```
 
 ---
@@ -180,22 +188,23 @@ $(DEPDIR):
 ## Multi-Binary Project
 
 ## Building Multiple Programs
+
 ```makefile
 BINS := client server utils
 
 all: $(BINS)
 
 client: client.o network.o
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 
 server: server.o network.o handler.o
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 
 utils: utils.o
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 
 clean:
-	rm -f *.o $(BINS)
+    rm -f *.o $(BINS)
 ```
 
 ---
@@ -203,17 +212,18 @@ clean:
 ## Library Building
 
 ## Static Library
+
 ```makefile
 LIBNAME := mylib
 LIB := lib$(LIBNAME).a
 OBJS := foo.o bar.o baz.o
 
 $(LIB): $(OBJS)
-	$(AR) rcs $@ $^
+    $(AR) rcs $@ $^
 
 # Usage
 program: main.o $(LIB)
-	$(CC) -o $@ main.o -L. -l$(LIBNAME)
+    $(CC) -o $@ main.o -L. -l$(LIBNAME)
 ```
 
 ---
@@ -221,6 +231,7 @@ program: main.o $(LIB)
 ## Library Building
 
 ## Shared Library
+
 ```makefile
 LIBNAME := mylib
 LIB := lib$(LIBNAME).so
@@ -229,11 +240,11 @@ OBJS := foo.o bar.o baz.o
 CFLAGS += -fPIC
 
 $(LIB): $(OBJS)
-	$(CC) -shared -o $@ $^
+    $(CC) -shared -o $@ $^
 
 install: $(LIB)
-	install -m 644 $(LIB) /usr/local/lib/
-	ldconfig
+    install -m 644 $(LIB) /usr/local/lib/
+    ldconfig
 ```
 
 ---
@@ -241,18 +252,19 @@ install: $(LIB)
 ## Help Target
 
 ## Self-Documenting Makefile
+
 ```makefile
 .PHONY: help
 help:
-	@echo "Available targets:"
-	@echo "  all      - Build the program"
-	@echo "  clean    - Remove build files"
-	@echo "  install  - Install to system"
-	@echo "  test     - Run tests"
-	@echo ""
-	@echo "Variables:"
-	@echo "  DEBUG=1  - Enable debug build"
-	@echo "  CC=...   - Override compiler"
+    @echo "Available targets:"
+    @echo "  all      - Build the program"
+    @echo "  clean    - Remove build files"
+    @echo "  install  - Install to system"
+    @echo "  test     - Run tests"
+    @echo ""
+    @echo "Variables:"
+    @echo "  DEBUG=1  - Enable debug build"
+    @echo "  CC=...   - Override compiler"
 ```
 
 ---
@@ -260,6 +272,7 @@ help:
 ## Version Embedding
 
 ## Build Information
+
 ```makefile
 VERSION := 1.0.0
 GIT_HASH := $(shell git rev-parse --short HEAD 2>/dev/null)
@@ -286,14 +299,15 @@ CFLAGS += -DBUILD_DATE=\"$(BUILD_DATE)\"
 ## Pitfall: Shell Variables
 
 ## Escaping in Recipes
+
 ```makefile
 # WRONG - $i is Make variable (empty)
 list:
-	for i in 1 2 3; do echo $i; done
+    for i in 1 2 3; do echo $i; done
 
 # CORRECT - $$i is shell variable
 list:
-	for i in 1 2 3; do echo $$i; done
+    for i in 1 2 3; do echo $$i; done
 
 # Also note: recipe is one shell command per line
 # Use \ for continuation
@@ -304,19 +318,20 @@ list:
 ## Pitfall: Recipe Execution
 
 ## Each Line is Separate Shell
+
 ```makefile
 # WRONG - cd doesn't persist
 wrong:
-	cd subdir
-	make
+    cd subdir
+    make
 
 # CORRECT - one shell command
 correct:
-	cd subdir && make
+    cd subdir && make
 
 # OR use -C flag
 better:
-	$(MAKE) -C subdir
+    $(MAKE) -C subdir
 ```
 
 ---
@@ -324,6 +339,7 @@ better:
 ## Debugging Techniques
 
 ## Finding Problems
+
 ```bash
 # Show what would be done
 make -n
@@ -346,6 +362,7 @@ make -p | grep 'VARIABLE'
 ## Makefile Linting
 
 ## Checking for Issues
+
 ```bash
 # Check syntax
 make -n -p > /dev/null

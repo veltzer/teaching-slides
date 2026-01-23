@@ -15,11 +15,11 @@
 ```makefile
 # Pattern rule for C files
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 
 # Pattern rule for C++ files
 %.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+    $(CXX) $(CXXFLAGS) -c $< -o $@
 ```
 
 The `%` matches any non-empty string.
@@ -32,15 +32,15 @@ The `%` matches any non-empty string.
 ```makefile
 # Generate .d dependency files
 %.d: %.c
-	$(CC) -MM $< > $@
+    $(CC) -MM $< > $@
 
 # Build objects from assembly
 %.o: %.s
-	$(AS) $(ASFLAGS) -o $@ $<
+    $(AS) $(ASFLAGS) -o $@ $<
 
 # Generate header from template
 %.h: %.h.in
-	./configure.sh $< > $@
+    ./configure.sh $< > $@
 ```
 
 ---
@@ -88,12 +88,12 @@ OBJECTS = foo.o bar.o baz.o
 
 # Only applies to listed targets
 $(OBJECTS): %.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+    $(CC) -c $(CFLAGS) $< -o $@
 
 # Different rule for test objects
 TEST_OBJS = test_foo.o test_bar.o
 $(TEST_OBJS): %.o: %.c
-	$(CC) -c $(CFLAGS) -DTEST $< -o $@
+    $(CC) -c $(CFLAGS) -DTEST $< -o $@
 ```
 
 ---
@@ -179,7 +179,7 @@ else
 endif
 
 program: main.c
-	$(CC) $(CFLAGS) -o $@ $<
+    $(CC) $(CFLAGS) -o $@ $<
 ```
 
 ---
@@ -255,7 +255,7 @@ DEPS := $(SRCS:.c=.d)
 
 # Generate dependency files
 %.d: %.c
-	$(CC) -MM -MT $(@:.d=.o) $< > $@
+    $(CC) -MM -MT $(@:.d=.o) $< > $@
 ```
 
 ---
@@ -282,16 +282,16 @@ make -j
 ```makefile
 # Problem: both might run simultaneously
 clean:
-	rm -rf build/
+    rm -rf build/
 
 build:
-	mkdir -p build/
+    mkdir -p build/
 
 # Solution: use order-only prerequisites
 build: | setup
 
 setup:
-	mkdir -p build/
+    mkdir -p build/
 ```
 
 ---
@@ -307,7 +307,7 @@ output.o: output.c build
 output.o: output.c | build
 
 build:
-	mkdir -p $@
+    mkdir -p $@
 ```
 
 After `|`, prerequisites only need to exist, not be newer.
@@ -325,12 +325,12 @@ SUBDIRS := lib app tests
 all: $(SUBDIRS)
 
 $(SUBDIRS):
-	$(MAKE) -C $@
+    $(MAKE) -C $@
 
 clean:
-	for dir in $(SUBDIRS); do \
-		$(MAKE) -C $$dir clean; \
-	done
+    for dir in $(SUBDIRS); do \
+        $(MAKE) -C $$dir clean; \
+    done
 ```
 
 ---
@@ -344,10 +344,10 @@ clean:
 
 # Better: single Makefile with paths
 lib/utils.o: lib/utils.c
-	$(CC) -c $< -o $@
+    $(CC) -c $< -o $@
 
 app/main.o: app/main.c lib/utils.h
-	$(CC) -c $< -o $@
+    $(CC) -c $< -o $@
 ```
 
 ---
@@ -362,7 +362,7 @@ app/main.o: app/main.c lib/utils.h
 # With secondary expansion, it is!
 
 $(OBJECTS): $$(patsubst %.o,%.c,$$@)
-	$(CC) -c $< -o $@
+    $(CC) -c $< -o $@
 ```
 
 ---
@@ -373,7 +373,7 @@ $(OBJECTS): $$(patsubst %.o,%.c,$$@)
 ```makefile
 define PROGRAM_template
 $(1): $$($(1)_OBJS)
-	$$(CC) -o $$@ $$^
+    $$(CC) -o $$@ $$^
 endef
 
 client_OBJS := client.o net.o

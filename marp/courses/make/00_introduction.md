@@ -92,7 +92,7 @@ make -f custom_makefile
 
 ```makefile
 target: dependencies
-	recipe_command
+    recipe_command
 ```
 
 ---
@@ -104,13 +104,13 @@ target: dependencies
 ```makefile
 # This is a comment
 program: main.o utils.o
-	gcc -o program main.o utils.o
+    gcc -o program main.o utils.o
 
 main.o: main.c
-	gcc -c main.c
+    gcc -c main.c
 
 utils.o: utils.c utils.h
-	gcc -c utils.c
+    gcc -c utils.c
 ```
 
 ---
@@ -170,10 +170,10 @@ brew install make
 
 ```makefile
 hello: hello.c
-	gcc -o hello hello.c
+    gcc -o hello hello.c
 
 clean:
-	rm -f hello
+    rm -f hello
 ```
 
 ```bash

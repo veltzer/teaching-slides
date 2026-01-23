@@ -14,7 +14,7 @@
 ## The Basic Format
 ```makefile
 target: prerequisites
-	recipe
+    recipe
 ```
 
 - **Target**: Usually a file name
@@ -35,7 +35,7 @@ program: main.c
 
 # CORRECT - tab before gcc
 program: main.c
-	gcc -o program main.c
+    gcc -o program main.c
 ```
 
 Configure your editor to show tabs!
@@ -45,7 +45,8 @@ Configure your editor to show tabs!
 ## Simple C Project
 
 ## File Structure
-```
+
+```txt
 project/
 ├── Makefile
 ├── main.c
@@ -60,16 +61,16 @@ project/
 ## The Makefile
 ```makefile
 program: main.o utils.o
-	gcc -o program main.o utils.o
+    gcc -o program main.o utils.o
 
 main.o: main.c
-	gcc -c main.c
+    gcc -c main.c
 
 utils.o: utils.c utils.h
-	gcc -c utils.c
+    gcc -c utils.c
 
 clean:
-	rm -f program main.o utils.o
+    rm -f program main.o utils.o
 ```
 
 ---
@@ -81,13 +82,13 @@ clean:
 all: program tests docs
 
 program: main.o
-	gcc -o program main.o
+    gcc -o program main.o
 
 tests: test_main.o
-	gcc -o tests test_main.o
+    gcc -o tests test_main.o
 
 docs:
-	doxygen Doxyfile
+    doxygen Doxyfile
 ```
 
 ---
@@ -102,10 +103,10 @@ docs:
 all: program
 
 program: main.o
-	gcc -o program main.o
+    gcc -o program main.o
 
 main.o: main.c
-	gcc -c main.c
+    gcc -c main.c
 ```
 
 ```bash
@@ -122,15 +123,15 @@ make all  # same as above
 .PHONY: clean all install test
 
 clean:
-	rm -f *.o program
+    rm -f *.o program
 
 all: program
 
 install:
-	cp program /usr/local/bin/
+    cp program /usr/local/bin/
 
 test:
-	./run_tests.sh
+    ./run_tests.sh
 ```
 
 ---
@@ -144,7 +145,7 @@ test:
 ```makefile
 # Without .PHONY
 clean:
-	rm -f *.o
+    rm -f *.o
 
 # If file 'clean' exists:
 # $ make clean
@@ -158,16 +159,16 @@ clean:
 ## Transitive Dependencies
 ```makefile
 program: main.o utils.o lib.o
-	gcc -o program main.o utils.o lib.o
+    gcc -o program main.o utils.o lib.o
 
 main.o: main.c config.h utils.h
-	gcc -c main.c
+    gcc -c main.c
 
 utils.o: utils.c utils.h config.h
-	gcc -c utils.c
+    gcc -c utils.c
 
 lib.o: lib.c lib.h
-	gcc -c lib.c
+    gcc -c lib.c
 ```
 
 ---
@@ -203,11 +204,11 @@ all: program
 
 # Build the main executable
 program: main.o utils.o
-	gcc -o program main.o utils.o
+    gcc -o program main.o utils.o
 
 # Compile main.c
 main.o: main.c
-	gcc -c main.c
+    gcc -c main.c
 ```
 
 ---
@@ -218,7 +219,7 @@ main.o: main.c
 ```makefile
 # First rule defines the recipe
 main.o: main.c
-	gcc -c main.c
+    gcc -c main.c
 
 # Additional rules add dependencies only
 main.o: utils.h
@@ -228,7 +229,7 @@ main.o: config.h
 This is equivalent to:
 ```makefile
 main.o: main.c utils.h config.h
-	gcc -c main.c
+    gcc -c main.c
 ```
 
 ---
@@ -241,11 +242,11 @@ main.o: main.c utils.h config.h
 
 ```makefile
 clean:
-	-rm -f *.o      # Continue even if files don't exist
-	-rm -f program
+    -rm -f *.o      # Continue even if files don't exist
+    -rm -f program
 
 force_clean:
-	rm -f *.o || true  # Alternative approach
+    rm -f *.o || true  # Alternative approach
 ```
 
 ---
@@ -258,13 +259,14 @@ force_clean:
 
 ```makefile
 hello:
-	@echo "Building hello..."
-	gcc -o hello hello.c
-	@echo "Done!"
+    @echo "Building hello..."
+    gcc -o hello hello.c
+    @echo "Done!"
 ```
 
 Output:
-```
+
+```txt
 Building hello...
 gcc -o hello hello.c
 Done!

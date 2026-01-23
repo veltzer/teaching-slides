@@ -29,7 +29,7 @@ CFLAGS = -Wall -g
 
 # Use a variable with $(...)
 program: main.c
-	$(CC) $(CFLAGS) -o program main.c
+    $(CC) $(CFLAGS) -o program main.c
 ```
 
 ---
@@ -42,8 +42,8 @@ CC = gcc
 
 # Both are valid
 program: main.c
-	$(CC) -o program main.c
-	${CC} -o program main.c
+    $(CC) -o program main.c
+    ${CC} -o program main.c
 ```
 
 **Convention**: `$(VAR)` is more common in GNU Make
@@ -156,11 +156,11 @@ $(@F) # File part of target
 ## Using $@ and $<
 ```makefile
 program: main.o utils.o
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 # Expands to: gcc -o program main.o utils.o
 
 main.o: main.c
-	$(CC) -c $< -o $@
+    $(CC) -c $< -o $@
 # Expands to: gcc -c main.c -o main.o
 ```
 
@@ -172,12 +172,12 @@ main.o: main.c
 ```makefile
 # $^ - all prerequisites
 archive.tar: file1 file2 file3
-	tar -cvf $@ $^
+    tar -cvf $@ $^
 
 # $? - only newer prerequisites
 backup: file1 file2 file3
-	cp $? backup_dir/
-	touch $@
+    cp $? backup_dir/
+    touch $@
 ```
 
 ---
@@ -187,8 +187,8 @@ backup: file1 file2 file3
 ## The $* Variable
 ```makefile
 %.o: %.c
-	$(CC) -c $< -o $@
-	@echo "Compiled $* from $<"
+    $(CC) -c $< -o $@
+    @echo "Compiled $* from $<"
 
 # When building main.o from main.c:
 # $* = main
@@ -224,7 +224,7 @@ $(LDFLAGS)
 # But Makefile definitions take precedence
 
 program: main.c
-	$(CC) -o program main.c  # Uses env CC if not defined
+    $(CC) -o program main.c  # Uses env CC if not defined
 ```
 
 ```bash
@@ -262,7 +262,7 @@ Targets:
 endef
 
 help:
-	@echo "$(HELP_TEXT)"
+    @echo "$(HELP_TEXT)"
 ```
 
 ---
@@ -316,10 +316,10 @@ OBJS := $(SRCS:.c=.o)
 TARGET := myprogram
 
 $(TARGET): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+    $(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+    $(CC) $(CFLAGS) -c $< -o $@
 ```
 
 ---
