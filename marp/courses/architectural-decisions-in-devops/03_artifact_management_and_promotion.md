@@ -160,6 +160,7 @@
 - Gates should be automated where possible
 ---
 ## Promotion Example in `JFrog` CLI
+
 ```bash
 # Promote a build from dev to staging
 jfrog rt build-promote \
@@ -368,11 +369,13 @@ jfrog rt build-promote \
     - Pin base images by `digest`, not `tag`
     - Use `Sigstore` for keyless signing
 - Example: pin by digest
+
 ```dockerfile
 FROM node@sha256:a3f8b2c4e5d6...
 ```
 ---
 ## Image Signing with `cosign`
+
 ```bash
 # Sign an image after push
 cosign sign \
@@ -397,6 +400,7 @@ cosign verify \
 - Popular scanners: `Trivy`, `Grype`, `Snyk`, `Clair`
 ---
 ## Scanning with `Trivy`
+
 ```bash
 # Scan a local image
 trivy image myapp:2.3.1
@@ -457,6 +461,7 @@ trivy image \
     - Require image signatures
     - Block images with critical CVEs
     - Enforce non-root containers
+
 ```yaml
 # Kyverno policy snippet
 spec:
@@ -511,6 +516,7 @@ spec:
 - Separate build environment from runtime environment
 - Build stage has compilers and tools
 - Runtime stage has only the application binary
+
 ```dockerfile
 # Build stage
 FROM golang:1.22 AS builder
@@ -561,6 +567,7 @@ CMD ["/myapp"]
     - Impossible to `exec` into for attackers
     - Smaller image size
 - Available for: `Java`, `Python`, `Node.js`, `Go`, `.NET`
+
 ```dockerfile
 FROM gcr.io/distroless/java21-debian12
 COPY target/myapp.jar /app.jar
@@ -572,6 +579,7 @@ CMD ["app.jar"]
 - When troubleshooting production issues
 - When the application requires OS-level packages
 - Strategy: use slim in production, full in development
+
 ```yaml
 # docker-compose.yml
 services:
@@ -589,6 +597,7 @@ services:
     - `myapp:main-a3f8b2c` (branch + commit)
     - `myapp:sha-a3f8b2c4e5d6` (full digest reference)
 - Always prefer digest references for deployments
+
 ```bash
 # Pin by digest in Kubernetes
 image: myregistry.io/myapp@sha256:a3f8...
@@ -654,6 +663,7 @@ image: myregistry.io/myapp@sha256:a3f8...
     - Bandwidth savings
 ---
 ## Artifact Promotion: Complete Pipeline
+
 ```yaml
 # GitHub Actions promotion example
 jobs:
@@ -684,6 +694,7 @@ jobs:
     - `org.opencontainers.image.revision` (commit SHA)
     - `org.opencontainers.image.created` (timestamp)
     - `org.opencontainers.image.version` (SemVer)
+
 ```dockerfile
 LABEL org.opencontainers.image.source=\
   "https://github.com/myorg/myapp"
