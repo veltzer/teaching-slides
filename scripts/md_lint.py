@@ -15,7 +15,7 @@ class MarkdownLinkChecker:
     """
     This class does most of the lifting
     """
-    def __init__(self, base_path: Path = None):
+    def __init__(self, base_path: Path=Path(".")):
         """
         Initialize the link checker with an optional base path for relative links.
 
