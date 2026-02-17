@@ -242,6 +242,9 @@ all_mermaid_png: $(MERMAID_PNG)
 .PHONY: all_marp_pdf
 all_marp_pdf: $(MARP_PDF)
 
+.PHONY: all_md_aspell
+all_md_aspell: $(MD_ASPELL)
+
 .PHONY: all_courses
 all_courses: $(TARGET_NAMES)
 
