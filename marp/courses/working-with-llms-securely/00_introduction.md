@@ -583,15 +583,15 @@ The more capable the agent, the larger the blast radius
 
 ## Security Architecture Patterns
 
-**Pattern 1: Human-in-the-Loop**
+### Pattern 1: Human-in-the-Loop
 - All consequential actions require human approval
 - `LLM` proposes, human disposes
 
-**Pattern 2: Sandbox Execution**
+### Pattern 2: Sandbox Execution
 - `LLM`-generated code runs in isolated environments
 - No access to production data or systems
 
-**Pattern 3: Output Guardrails**
+### Pattern 3: Output Guardrails
 - Classifier models that check `LLM` output before delivery
 - Content filtering and safety checks
 
