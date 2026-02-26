@@ -14,6 +14,7 @@ enabled = false
 enabled = false
 
 [processor.pandoc]
-# how to I make the pandoc processor only scan the marp folder
-scan_dir = ["marp"]
+scan_dir = "marp"
+from = "markdown-yaml_metadata_block-tex_math_dollars"
 formats = ["pdf", "html", "docx"]
+args = ["--pdf-engine=xelatex"]
