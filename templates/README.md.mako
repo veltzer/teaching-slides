@@ -8,13 +8,13 @@
     import os.path
     import glob
     import yaml
-%>## ${pydmt.helpers.project.get_name()}
+%># ${pydmt.helpers.project.get_name()}
 
 version: ${pydmt.helpers.misc.get_version_str()}
 
 description: ${config.project.description_short}
 
-website: ${pydmt.helpers.urls.get_website()}
+website: [website](${pydmt.helpers.urls.get_website()})
 
 ${"##"} Build
 
@@ -25,7 +25,6 @@ ${"##"} Build
 			action_name=yaml.safe_load(stream)["name"]
 			context.write(f"![{action_name}](https://github.com/{config.personal.github_username}/{pydmt.helpers.project.get_name()}/workflows/{action_name}/badge.svg)")
 %>
-
 % if hasattr(config.project, "description_long"):
 ${config.project.description_long}
 % endif
@@ -37,4 +36,4 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 % if os.path.isfile("snipplets/main.md.mako"):
 <%include file="../snipplets/main.md.mako" />
 % endif
-${config.personal.fullname}, Copyright © ${pydmt.helpers.signature.get_copyright_years_long()}
+${config.personal.fullname}, Copyright (c) ${pydmt.helpers.signature.get_copyright_years_long()}

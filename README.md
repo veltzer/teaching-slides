@@ -1,15 +1,14 @@
-## teaching-slides
+# teaching-slides
 
 version: 0.0.1
 
 description: Slides for my teaching
 
-website: https://veltzer.github.io/teaching-slides
+website: [website](https://veltzer.github.io/teaching-slides)
 
 ## Build
 
 ![build](https://github.com/veltzer/teaching-slides/workflows/build/badge.svg)
-
 
 ## Contact
 
@@ -22,4 +21,4 @@ Currently there are 465 marp files in this repo.
 Currently there are 0 mermaid files in this repo.
 Currently there are 13021 marp slides in this repo.
 
-Mark Veltzer, Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+Mark Veltzer, Copyright (c) 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
