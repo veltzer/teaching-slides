@@ -1,0 +1,29 @@
+{% set project = load_python(path="config/project.py") -%}
+{% set personal = load_python(path="config/personal.py") -%}
+# {{ project.name }}
+
+version: {{ version_str(path="config/version.py") }}
+
+description: {{ project.description_short }}
+
+website: [website](https://{{ personal.github_username }}.github.io/{{ project.name }})
+
+## Build
+
+{% for wf in workflow_names() -%}
+![{{ wf.name }}](https://github.com/{{ personal.github_username }}/{{ project.name }}/workflows/{{ wf.name }}/badge.svg)
+{% endfor -%}
+{% if project.description_long is defined %}
+{{ project.description_long }}
+{% endif %}
+## Contact
+
+chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/veltzer/mark.veltzer)
+
+## Number of slide decks
+
+Currently there are {{ git_count_files(pattern="odp/**/*.odp") }} odp files in this repo.
+Currently there are {{ git_count_files(pattern="marp/**/*.md") }} marp files in this repo.
+Currently there are {{ git_count_files(pattern="mermaid/**/*.mmd") }} mermaid files in this repo.
+Currently there are {{ shell_output(command="grep -R -- '^---$' marp | wc -l") }} marp slides in this repo.
+{{ personal.fullname }}, Copyright (c) {{ copyright_years() }}

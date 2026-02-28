@@ -1,6 +1,19 @@
 [processor.make]
 exclude_paths = ["Makefile"]
 
+[processor.tera]
+extra_inputs = [
+    "config/project.py",
+    "config/personal.py",
+    "config/version.py",
+    "config/python.py",
+    "config/github.py",
+    "config/shared.py",
+]
+
+[processor.mako]
+enabled = false
+
 [processor.jsonlint]
 enabled = false
 
