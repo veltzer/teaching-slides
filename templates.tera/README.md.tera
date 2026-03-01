@@ -1,8 +1,8 @@
-{% set project = load_python(path="config/project.py") -%}
-{% set personal = load_python(path="config/personal.py") -%}
+{% set project = load_lua(path="config/project.lua") -%}
+{% set personal = load_lua(path="config/personal.lua") -%}
 # {{ project.name }}
 
-version: {{ version_str(path="config/version.py") }}
+version: {{ version_str(path="config/version.lua") }}
 
 description: {{ project.description_short }}
 
