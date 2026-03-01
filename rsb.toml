@@ -25,3 +25,10 @@ enabled = false
 
 [processor.a2x]
 enabled = false
+
+[processor.script_check]
+enabled = true
+checker = "python"
+args = ["scripts/md_lint.py", "-q"]
+extensions = [".md"]
+scan_dir = "marp"
