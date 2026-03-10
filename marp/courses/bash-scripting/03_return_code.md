@@ -8,6 +8,7 @@
 - This is the opposite of most programming languages!
 ---
 ## Checking the Return Code
+
 ```bash
 # The special variable $? holds the last return code
 ls /tmp
@@ -36,6 +37,7 @@ echo $?    # 0 (the previous echo succeeded!)
 | 143 | Killed by SIGTERM (128+15) |
 ---
 ## `true` and `false` Commands
+
 ```bash
 # true always returns 0
 true
@@ -57,6 +59,7 @@ done
 ```
 ---
 ## Return Codes and `&&` / `||`
+
 ```bash
 # && (AND): run second only if first succeeds
 mkdir /tmp/mydir && echo "Directory created"
@@ -73,6 +76,7 @@ true && false || echo "this runs unexpectedly"
 ```
 ---
 ## Return Codes in Conditional Context
+
 ```bash
 # The if statement checks the return code
 if grep -q "root" /etc/passwd; then
@@ -93,6 +97,7 @@ fi
 ```
 ---
 ## The `test` Command and `[`
+
 ```bash
 # test is a command that evaluates expressions
 test 5 -gt 3
@@ -111,6 +116,7 @@ echo $?    # 0
 ```
 ---
 ## Return Codes from Scripts
+
 ```bash
 #!/bin/bash
 # A script's return code is the code of its last command
@@ -131,6 +137,7 @@ exit 0
 ```
 ---
 ## Capturing Return Codes
+
 ```bash
 # Save it immediately if you need it later
 some_command
@@ -150,6 +157,7 @@ fi
 ```
 ---
 ## `PIPESTATUS` Array
+
 ```bash
 # $? only gives the return code of the LAST command in a pipe
 false | true
@@ -171,6 +179,7 @@ saved=("${PIPESTATUS[@]}")
 ```
 ---
 ## `set -o pipefail`
+
 ```bash
 # By default, pipeline return code = last command's code
 false | true

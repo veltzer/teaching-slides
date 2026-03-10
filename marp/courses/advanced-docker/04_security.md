@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Docker Security and Compliance
 
 Hardening containers for production

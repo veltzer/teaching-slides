@@ -1,6 +1,7 @@
 # Syntax: Conditionals
 ---
 ## The `if` Statement
+
 ```bash
 # Basic structure:
 if command; then
@@ -23,6 +24,7 @@ fi
 ```
 ---
 ## `if` / `elif` / `else`
+
 ```bash
 #!/bin/bash
 
@@ -39,6 +41,7 @@ fi
 ```
 ---
 ## No Brace Style (Using Commands Directly)
+
 ```bash
 # You don't need [ or [[ at all!
 # if just tests the return code of any command
@@ -59,6 +62,7 @@ fi
 ```
 ---
 ## The `test` Command and `[`
+
 ```bash
 # [ is literally a command (alias for test)
 # It requires a closing ]
@@ -75,6 +79,7 @@ fi
 ```
 ---
 ## String Tests with `[`
+
 ```bash
 # String comparison
 [ "$a" = "$b" ]       # strings are equal
@@ -90,6 +95,7 @@ x=""
 ```
 ---
 ## Numeric Tests with `[`
+
 ```bash
 # Integer comparison (not string comparison!)
 [ "$a" -eq "$b" ]    # equal
@@ -106,6 +112,7 @@ x=""
 ```
 ---
 ## Logical Operators with `[`
+
 ```bash
 # AND: -a (inside test) or && (between tests)
 [ -f "$file" -a -r "$file" ]       # old style
@@ -123,6 +130,7 @@ fi
 ```
 ---
 ## The `[[` Keyword (bash Extension)
+
 ```bash
 # [[ is a bash keyword, not a command
 # Advantages over [:
@@ -144,6 +152,7 @@ fi
 ```
 ---
 ## `[[` Pattern Matching
+
 ```bash
 # Glob patterns (not regex!)
 [[ $filename == *.tar.gz ]]    # ends with .tar.gz
@@ -160,6 +169,7 @@ shopt -s extglob
 ```
 ---
 ## `[[` Regex Matching
+
 ```bash
 # =~ operator for regular expressions
 if [[ $email =~ ^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$ ]]; then
@@ -189,6 +199,7 @@ pattern='^[0-9]+$'
 | `<` / `>` for strings | Must escape | Direct |
 ---
 ## The `case` Statement
+
 ```bash
 #!/bin/bash
 
@@ -213,6 +224,7 @@ esac
 ```
 ---
 ## `case` with Patterns
+
 ```bash
 # case supports glob patterns
 case "$filename" in
@@ -235,6 +247,7 @@ esac
 ```
 ---
 ## `case` Fall-Through (`bash` 4.0+)
+
 ```bash
 # ;; stops execution (like break)
 # ;;& tests the next pattern too
@@ -255,6 +268,7 @@ esac
 ```
 ---
 ## Ternary-Style Expressions
+
 ```bash
 # bash doesn't have a ternary operator, but you can fake it:
 

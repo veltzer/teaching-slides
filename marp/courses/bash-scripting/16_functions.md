@@ -8,6 +8,7 @@
 - Timing, OOP patterns, test harnesses, aliases
 ---
 ## Defining Functions
+
 ```bash
 # Syntax 1: modern (preferred)
 greet() {
@@ -30,6 +31,7 @@ greet Alice       # Hello, Alice!
 ```
 ---
 ## Functions are Commands
+
 ```bash
 # Functions behave exactly like commands
 # They have: arguments, return codes, stdin/stdout
@@ -55,6 +57,7 @@ fi
 ```
 ---
 ## Function Parameters
+
 ```bash
 # Functions use the same $1, $2, $@ as scripts
 # They HIDE the script's positional parameters
@@ -75,6 +78,7 @@ process_file "file1.txt" "file2.txt"
 ```
 ---
 ## Return Codes from Functions
+
 ```bash
 # return sets the function's exit status (0-255)
 is_directory() {
@@ -98,6 +102,7 @@ get_sum 200 200    # returns 400 % 256 = 144!
 ```
 ---
 ## Returning Values from Functions
+
 ```bash
 # Method 1: stdout (most common)
 get_date() {
@@ -122,6 +127,7 @@ echo "Lines: $num_lines"
 ```
 ---
 ## Local Variables
+
 ```bash
 # WITHOUT local: variables leak into the caller
 bad_function() {
@@ -142,6 +148,7 @@ echo "outside: $x"       # 1 (unchanged)
 ```
 ---
 ## Always Use `local`
+
 ```bash
 # Rule: EVERY variable in a function should be local
 # unless you explicitly want it to be global
@@ -162,6 +169,7 @@ process() {
 ```
 ---
 ## Pass By Reference (`nameref`)
+
 ```bash
 # bash 4.3+ supports namerefs
 swap() {
@@ -187,6 +195,7 @@ echo "${my_array[@]}"    # one two three
 ```
 ---
 ## Recursive Functions
+
 ```bash
 # bash supports recursion
 factorial() {
@@ -209,6 +218,7 @@ FUNCNEST=100    # limit to 100 levels
 ```
 ---
 ## Function Libraries
+
 ```bash
 # Create a library file (no shebang needed)
 # lib/utils.sh
@@ -235,6 +245,7 @@ log_info "All dependencies found"
 ```
 ---
 ## Function Scope: Dynamic Scoping
+
 ```bash
 # bash uses DYNAMIC scoping (not lexical)
 # A function can see locals of its caller!
@@ -256,6 +267,7 @@ outer    # prints x=10
 ```
 ---
 ## Variadic Functions
+
 ```bash
 # Accept any number of arguments
 log_all() {
@@ -278,6 +290,7 @@ process_files *.txt
 ```
 ---
 ## Decorator Pattern
+
 ```bash
 # Wrap a function with timing
 with_timing() {

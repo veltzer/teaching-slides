@@ -9,6 +9,7 @@
 - Not recommended for production — consider `Python` instead
 ---
 ## A Simple Object
+
 ```bash
 # Create an "object" using an associative array
 declare -A person=(
@@ -28,6 +29,7 @@ person_greet person
 ```
 ---
 ## Constructor Pattern
+
 ```bash
 # "Constructor" function
 new_person() {
@@ -51,6 +53,7 @@ echo "${bob[name]} is ${bob[age]}"
 ```
 ---
 ## Methods as Functions
+
 ```bash
 # Define methods that take object as first argument
 person_to_string() {
@@ -75,6 +78,7 @@ person_birthday alice     # Happy birthday Alice! Now 31
 ```
 ---
 ## Dispatch Table Pattern
+
 ```bash
 # Map method names to functions
 declare -A PERSON_METHODS=(
@@ -103,6 +107,7 @@ call alice birthday
 ```
 ---
 ## Simulating Collections
+
 ```bash
 # A list of objects using naming convention
 declare -a person_list=()
@@ -134,6 +139,7 @@ list_persons
 ```
 ---
 ## Practical Example: Config Manager
+
 ```bash
 #!/bin/bash
 

@@ -13,6 +13,7 @@ echo *.txt
 ```
 ---
 ## The Asterisk `*`
+
 ```bash
 # * matches zero or more characters (except /)
 ls *.txt          # all .txt files
@@ -27,6 +28,7 @@ ls .* *           # all files, hidden and non-hidden
 ```
 ---
 ## The Question Mark `?`
+
 ```bash
 # ? matches exactly one character
 ls file?.txt      # file1.txt, fileA.txt, but not file10.txt
@@ -38,6 +40,7 @@ ls file?.*        # file1.txt, fileA.md, etc.
 ```
 ---
 ## Character Classes `[...]`
+
 ```bash
 # Match any single character in the set
 ls file[123].txt        # file1.txt, file2.txt, file3.txt
@@ -54,6 +57,7 @@ ls file[0-9a-f].txt     # hexadecimal single digit
 ```
 ---
 ## Negation `[!...]` and `[^...]`
+
 ```bash
 # Match any character NOT in the set
 ls file[!0-9].txt       # files NOT ending in a digit
@@ -67,6 +71,7 @@ ls [^.]*                # same thing
 ```
 ---
 ## POSIX Character Classes
+
 ```bash
 # Named classes inside [: :]
 ls file[[:digit:]].txt     # file0.txt ... file9.txt
@@ -85,6 +90,7 @@ ls [:digit:]       # WRONG (matches :, d, i, g, t)
 ```
 ---
 ## When Globs Don't Match
+
 ```bash
 # By default, if no files match, the pattern is kept literally
 echo /nonexistent/*.xyz
@@ -108,6 +114,7 @@ echo /nonexistent/*.xyz
 ```
 ---
 ## The `dotglob` Option
+
 ```bash
 # By default, * does not match hidden files
 ls *           # skips .bashrc, .profile
@@ -122,6 +129,7 @@ shopt -u dotglob
 ```
 ---
 ## Extended Globbing
+
 ```bash
 # Enable extended globbing
 shopt -s extglob
@@ -159,6 +167,7 @@ ls .*\.txt      # WRONG! (regex syntax)
 ```
 ---
 ## Globbing Safety
+
 ```bash
 # Problem: what if a filename starts with -
 touch -- -rf

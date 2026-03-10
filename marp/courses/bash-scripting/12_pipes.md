@@ -15,6 +15,7 @@ ls -la | grep ".txt"
 ```
 ---
 ## Pipe Syntax
+
 ```bash
 # Single pipe
 command1 | command2
@@ -25,8 +26,10 @@ command1 | command2 | command3 | command4
 # Real example: find the 10 largest files
 du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ```
+
 ---
 ## How Pipes Work Internally
+
 ```txt
 +----------+     pipe buffer     +----------+
 | command1 | --> [  4KB-64KB  ] --> | command2 |
@@ -40,8 +43,10 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 4. Both commands run CONCURRENTLY
 5. Kernel manages the buffer between them
 ```
+
 ---
 ## Pipes Run Concurrently
+
 ```bash
 # Both commands start at the same time!
 # They do NOT run sequentially
@@ -57,8 +62,10 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 
 # The consumer doesn't wait for the producer to finish
 ```
+
 ---
 ## Pipe Buffer and Blocking
+
 ```bash
 # The pipe has a limited buffer (typically 64KB on Linux)
 # Check your system:
@@ -74,6 +81,7 @@ cat /proc/sys/fs/pipe-max-size
 ```
 ---
 ## Common Pipeline Patterns
+
 ```bash
 # Filter
 cat access.log | grep "404"
@@ -94,6 +102,7 @@ grep "error" logfile.txt | wc -l
 ```
 ---
 ## Pipeline Building Blocks
+
 ```bash
 # Filtering:     grep, awk, sed
 # Sorting:       sort, uniq
@@ -108,6 +117,7 @@ last | awk '{print $1}' | sort | uniq -c | sort -rn | head -5
 ```
 ---
 ## The "Useless Use of `cat`" Anti-Pattern
+
 ```bash
 # WRONG (wasteful extra process):
 cat file.txt | grep "pattern"
@@ -125,6 +135,7 @@ cat -n file.txt                    # adding line numbers
 ```
 ---
 ## Pipes and Return Codes
+
 ```bash
 # Default: $? is the return code of the LAST command
 false | true
@@ -141,6 +152,7 @@ echo "${PIPESTATUS[@]}"    # 1 0 1
 ```
 ---
 ## Pipes and Subshells: The Trap
+
 ```bash
 # PROBLEM: each pipe command runs in a subshell
 count=0
@@ -166,6 +178,7 @@ echo "count=$count"    # 3
 ```
 ---
 ## Named Pipes (FIFOs)
+
 ```bash
 # Create a named pipe
 mkfifo /tmp/mypipe
@@ -185,6 +198,7 @@ rm /tmp/mypipe
 ```
 ---
 ## Pipe to `xargs`
+
 ```bash
 # xargs converts stdin lines into command arguments
 echo "file1 file2 file3" | xargs rm
@@ -203,6 +217,7 @@ cat hosts.txt | xargs -n 1 -P 4 ping -c 1
 ```
 ---
 ## Pipeline Performance
+
 ```bash
 # Pipes are efficient: data streams without temp files
 # But each | creates a new process

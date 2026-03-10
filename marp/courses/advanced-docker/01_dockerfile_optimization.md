@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Advanced Dockerfile Techniques and Image Optimization
 
 Building production-grade container images

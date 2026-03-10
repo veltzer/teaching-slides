@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Docker Networking in Depth
 
 Mastering container connectivity

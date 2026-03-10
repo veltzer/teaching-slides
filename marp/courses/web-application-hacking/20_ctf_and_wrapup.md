@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Final CTF Exercise & Course Wrap-Up
 
 ## Applying Everything You Have Learned

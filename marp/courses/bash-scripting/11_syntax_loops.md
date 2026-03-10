@@ -1,6 +1,7 @@
 # Syntax: Loops
 ---
 ## `while` Loops
+
 ```bash
 # Basic while loop
 count=1
@@ -17,6 +18,7 @@ done
 ```
 ---
 ## `while` with a Command
+
 ```bash
 # while tests the return code of any command
 while ping -c 1 -W 1 server.example.com > /dev/null 2>&1; do
@@ -34,6 +36,7 @@ echo "Ready!"
 ```
 ---
 ## Reading Lines with `while`
+
 ```bash
 # Read a file line by line
 while IFS= read -r line; do
@@ -59,6 +62,7 @@ echo "$count"    # correct count
 ```
 ---
 ## `until` Loops
+
 ```bash
 # until is the opposite of while
 # Runs UNTIL the condition is true (while it's false)
@@ -78,6 +82,7 @@ echo "Service is ready!"
 ```
 ---
 ## Infinite Loops
+
 ```bash
 # Method 1: while true
 while true; do
@@ -105,6 +110,7 @@ done
 ```
 ---
 ## `for` Loops: Word List
+
 ```bash
 # Iterate over a list of words
 for fruit in apple banana cherry; do
@@ -129,6 +135,7 @@ done
 ```
 ---
 ## `for` Loops: C-Style
+
 ```bash
 # C-style for loop (bash extension)
 for ((i = 0; i < 10; i++)); do
@@ -148,6 +155,7 @@ done
 ```
 ---
 ## `for` with Sequences
+
 ```bash
 # Using brace expansion
 for i in {1..10}; do
@@ -171,6 +179,7 @@ done
 ```
 ---
 ## `break` and `continue`
+
 ```bash
 # break exits the loop
 for i in {1..100}; do
@@ -196,6 +205,7 @@ done
 ```
 ---
 ## Loop Over Arguments
+
 ```bash
 #!/bin/bash
 
@@ -220,6 +230,7 @@ done
 ```
 ---
 ## Looping Over Lines (Safely)
+
 ```bash
 # WRONG: for loop splits on whitespace, not lines
 for line in $(cat file.txt); do   # BAD!
@@ -240,6 +251,7 @@ done
 ```
 ---
 ## `select` Loop (Menus)
+
 ```bash
 #!/bin/bash
 
@@ -264,6 +276,7 @@ done
 ```
 ---
 ## Loop Patterns: Find and Process Files
+
 ```bash
 # Safe way to iterate over files with find
 while IFS= read -r -d '' file; do

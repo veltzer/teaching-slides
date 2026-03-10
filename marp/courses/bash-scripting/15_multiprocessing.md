@@ -1,6 +1,7 @@
 # Multi Processing
 ---
 ## Running Commands in the Background
+
 ```bash
 # & runs a command in the background
 sleep 10 &
@@ -21,6 +22,7 @@ bg %1
 ```
 ---
 ## `$!` - Last Background PID
+
 ```bash
 # $! holds the PID of the most recent background command
 command1 &
@@ -33,6 +35,7 @@ echo "Started: $pid1 and $pid2"
 ```
 ---
 ## `wait` - Waiting for Background Jobs
+
 ```bash
 # Wait for a specific process
 sleep 5 &
@@ -50,6 +53,7 @@ echo "All jobs finished"
 ```
 ---
 ## Collecting Return Codes
+
 ```bash
 #!/bin/bash
 
@@ -79,6 +83,7 @@ exit $((failed > 0 ? 1 : 0))
 ```
 ---
 ## Parallel Execution with Return Codes
+
 ```bash
 #!/bin/bash
 set -uo pipefail
@@ -106,6 +111,7 @@ done
 ```
 ---
 ## Subshells
+
 ```bash
 # Parentheses create a subshell
 (cd /tmp && ls)
@@ -125,6 +131,7 @@ echo "outside: $x"           # outside: 1
 ```
 ---
 ## Process Substitution for Parallel Execution
+
 ```bash
 # Run commands in parallel and diff their output
 diff <(ssh web1 cat /etc/config) <(ssh web2 cat /etc/config)
@@ -137,6 +144,7 @@ cat data.txt | tee >(gzip > data.gz) >(wc -l > count.txt) > /dev/null
 ```
 ---
 ## Job Control
+
 ```bash
 # Ctrl+Z suspends the current foreground job
 # bg resumes it in the background
@@ -155,6 +163,7 @@ wait %1
 ```
 ---
 ## `xargs -P` for Parallel Execution
+
 ```bash
 # Process files in parallel (4 at a time)
 find . -name "*.jpg" -print0 | xargs -0 -P 4 -I {} convert {} -resize 800x600 {}.resized
@@ -167,6 +176,7 @@ find /logs -name "*.log" -print0 | xargs -0 -P $(nproc) gzip
 ```
 ---
 ## GNU `parallel`
+
 ```bash
 # More powerful than xargs -P
 # Install: apt install parallel
@@ -186,6 +196,7 @@ parallel -S web1,web2,web3 uptime
 ```
 ---
 ## Signals
+
 ```bash
 # Common signals:
 # SIGHUP  (1)  - Terminal closed

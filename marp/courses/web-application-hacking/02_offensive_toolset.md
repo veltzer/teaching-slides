@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Offensive Toolset & Practice Targets
 
 ## Building Your Pentesting Arsenal
@@ -51,7 +45,7 @@ Burp CA Certificate:
 
 Firefox:
   Settings -> Privacy -> Certificates -> Import
-  
+
 Chrome:
   Settings -> Security -> Manage Certificates -> Import
 ```
@@ -251,7 +245,7 @@ gobuster dir -u https://target.com \
   -x php,html,txt,bak \
   -t 50
 
-# dirb - classic directory scanner  
+# dirb - classic directory scanner
 dirb https://target.com /usr/share/wordlists/dirb/common.txt
 
 # ffuf - fast fuzzer

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Application Logic Flaws
 
 ## When the Code Works Exactly as Written, But Not as Intended
@@ -26,20 +20,20 @@ Logic flaws are vulnerabilities that arise from **faulty application design** ra
 ```text
 1. Workflow Bypass
    - Skipping steps in multi-step processes
-   
-2. Price/Value Manipulation
+
+1. Price/Value Manipulation
    - Modifying prices, quantities, discount codes
-   
-3. Race Conditions
+
+1. Race Conditions
    - Exploiting timing between checks and actions
-   
-4. Access Control Logic
+
+1. Access Control Logic
    - IDOR, privilege escalation through logic
-   
-5. Business Rule Bypass
+
+1. Business Rule Bypass
    - Circumventing intended restrictions
-   
-6. State Management
+
+1. State Management
    - Manipulating application state
 ```
 
@@ -56,9 +50,9 @@ Attack: Skip the payment step
 
 How:
 1. Complete Cart and Address steps
-2. Note the URL/request for Confirmation step
-3. Navigate directly to Confirmation
-4. If the server doesn't verify payment was completed...
+1. Note the URL/request for Confirmation step
+1. Navigate directly to Confirmation
+1. If the server doesn't verify payment was completed...
    Order is placed without payment!
 
 Defense:
@@ -117,7 +111,7 @@ POST /api/cart
 
 # Defense:
 # - Validate quantity > 0
-# - Validate amount > 0  
+# - Validate amount > 0
 # - Use unsigned integers where appropriate
 # - Add maximum value checks
 ```
@@ -159,7 +153,7 @@ Defense:
 @app.route('/transfer', methods=['POST'])
 def transfer():
     amount = int(request.form['amount'])
-    
+
     # CHECK: Does user have enough balance?
     balance = get_balance(current_user)  # Thread 1: balance=100
     if balance >= amount:                # Thread 1: 100 >= 100 ✓
@@ -168,7 +162,7 @@ def transfer():
         deduct(current_user, amount)     # Thread 1: 100-100=0
                                          # Thread 2: 0-100=-100 (!!)
         credit(target_user, amount)
-    
+
 # SECURE: Use database-level locking
 def transfer_secure(user_id, amount):
     with db.begin():  # Transaction
@@ -199,9 +193,9 @@ GET /api/invoices/INV-002      -> Another customer's invoice!
 
 # Defense:
 # 1. Verify ownership: Does user 123 own resource X?
-# 2. Use indirect references (UUID instead of sequential IDs)
-# 3. Check authorization on EVERY request
-# 4. Don't expose internal IDs in URLs
+# 1. Use indirect references (UUID instead of sequential IDs)
+# 1. Check authorization on EVERY request
+# 1. Don't expose internal IDs in URLs
 ```
 
 ---
@@ -255,7 +249,7 @@ Example 2: Skip email verification
 Example 3: Password reset for any user
   Reset flow generates token for logged-in user
   Intercept and change user_id to target user
-  
+
 Example 4: Unlimited free trial
   Register with email1 -> trial expires
   Register with email2 -> new trial
@@ -276,22 +270,22 @@ Example 5: Referral abuse
    - What are the business rules?
    - What are the constraints?
 
-2. Map every multi-step process
+1. Map every multi-step process
    - What happens if you skip a step?
    - What happens if you repeat a step?
    - What happens if you go backwards?
 
-3. Identify trust assumptions
+1. Identify trust assumptions
    - Where does the app trust client data?
    - Where are prices/quantities calculated?
    - Where are permissions checked?
 
-4. Test boundary conditions
+1. Test boundary conditions
    - Zero, negative, very large values
    - Empty strings, null values
    - Special characters in unexpected fields
 
-5. Test concurrency
+1. Test concurrency
    - Send simultaneous requests
    - Check for race conditions
 ```
@@ -402,10 +396,10 @@ def process_order(order):
 **Exercises**:
 
 1. **DVWA** - Test for `IDOR` in user profile pages
-2. **Juice Shop** - Place an order with modified prices
-3. **Juice Shop** - Apply coupon codes multiple times
-4. **WebGoat** - Complete the "Insecure Direct Object References" lesson
-5. **Custom**: Identify 3 logic flaws in any practice app
+1. **Juice Shop** - Place an order with modified prices
+1. **Juice Shop** - Apply coupon codes multiple times
+1. **WebGoat** - Complete the "Insecure Direct Object References" lesson
+1. **Custom**: Identify 3 logic flaws in any practice app
 
 ```text
 Checklist:

@@ -33,6 +33,7 @@ Step 5: Redirect    -> send stdout to output.txt
 8. Quote removal
 ---
 ## Why the Order Matters
+
 ```bash
 # This works because variable expansion happens
 # BEFORE word splitting
@@ -63,6 +64,7 @@ echo "*.txt"
 ```
 ---
 ## The `type` Command
+
 ```bash
 # Find out what kind of command something is
 type cd
@@ -94,6 +96,7 @@ cd /tmp  # changes THIS shell's directory
 ```
 ---
 ## Why `cd` Cannot Be External
+
 ```bash
 # Imagine cd as an external program:
 # 1. Shell forks a child process
@@ -120,6 +123,7 @@ echo "$PATH"
 ```
 ---
 ## How `PATH` Search Works
+
 ```bash
 # When you type "python3":
 # 1. Is it a built-in? No.
@@ -134,6 +138,7 @@ python3000
 ```
 ---
 ## Viewing and Modifying `PATH`
+
 ```bash
 # View current PATH (one directory per line)
 echo "$PATH" | tr ':' '\n'
@@ -149,6 +154,7 @@ export PATH="/only/this"  # DANGEROUS! Most commands vanish
 ```
 ---
 ## The `which` and `command -v` Commands
+
 ```bash
 # Find where a command lives
 which python3
@@ -183,6 +189,7 @@ Shell Process (PID 100)
 ```text
 ---
 ## Watching `fork`/`exec` in Action
+
 ```bash
 # Use strace to see the system calls
 strace -f -e trace=clone,execve bash -c 'ls /tmp' 2>&1 | head -20
@@ -197,10 +204,10 @@ strace -f -e trace=clone,execve bash -c 'ls /tmp' 2>&1 | head -20
 When you type a command name, `bash` searches in this order:
 
 1. **Aliases** (interactive shells only)
-2. **Functions** defined in the current shell
-3. **Built-in** commands
-4. **Hash table** (cached paths of previously found commands)
-5. **`PATH`** search (left to right)
+1. **Functions** defined in the current shell
+1. **Built-in** commands
+1. **Hash table** (cached paths of previously found commands)
+1. **`PATH`** search (left to right)
 
 ```bash
 # See the hash table
@@ -208,8 +215,10 @@ hash
 # /usr/bin/ls -> ls
 # /usr/bin/cat -> cat
 ```
+
 ---
 ## Bypassing the Search Order
+
 ```bash
 # Run the built-in version explicitly
 builtin echo "hello"

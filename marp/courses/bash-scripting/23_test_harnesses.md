@@ -22,6 +22,7 @@ is_valid_ip() {
 ```
 ---
 ## Simple Test Framework
+
 ```bash
 #!/bin/bash
 
@@ -69,6 +70,7 @@ test_summary() {
 ```
 ---
 ## Using the Test Framework
+
 ```bash
 #!/bin/bash
 source test_framework.sh
@@ -90,6 +92,7 @@ test_summary
 ```
 ---
 ## Test Patterns
+
 ```bash
 # Setup and teardown
 setup() {
@@ -121,6 +124,7 @@ run_test test_file_processing
 ```
 ---
 ## Testing stdout and stderr
+
 ```bash
 # Capture and test output
 test_output() {
@@ -150,6 +154,7 @@ capture() {
 ```
 ---
 ## Existing Test Frameworks
+
 ```bash
 # BATS (Bash Automated Testing System)
 # Install: npm install -g bats / brew install bats-core
@@ -174,6 +179,7 @@ capture() {
 ```
 ---
 ## BATS Helpers
+
 ```bash
 # Setup and teardown in BATS
 setup() {
@@ -217,6 +223,7 @@ load 'test_helper/bats-assert/load'
 ```
 ---
 ## Mocking Commands
+
 ```bash
 # Override commands with functions for testing
 # Functions take precedence over external commands
@@ -244,6 +251,7 @@ unset -f curl
 ```
 ---
 ## Integration Testing
+
 ```bash
 #!/bin/bash
 # Integration test: test the full script

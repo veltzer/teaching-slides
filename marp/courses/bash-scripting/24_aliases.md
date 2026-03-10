@@ -18,6 +18,7 @@ ll
 ```
 ---
 ## Creating Aliases
+
 ```bash
 # Simple command shortcuts
 alias cls='clear'
@@ -38,6 +39,7 @@ alias topmem='ps aux --sort=-%mem | head -10'
 ```
 ---
 ## Viewing and Removing Aliases
+
 ```bash
 # List all defined aliases
 alias
@@ -59,6 +61,7 @@ command ls  # also bypasses the alias
 ```
 ---
 ## Aliases vs Functions
+
 ```bash
 # Aliases cannot take arguments in the middle
 alias greet='echo Hello'
@@ -81,6 +84,7 @@ backup myfile.txt    # copies myfile.txt to myfile.txt.bak
 ```
 ---
 ## Aliases in Scripts
+
 ```bash
 # By default, aliases are NOT expanded in scripts
 #!/bin/bash
@@ -98,6 +102,7 @@ ll    # now works
 ```
 ---
 ## Common Useful Aliases
+
 ```bash
 # Navigation
 alias ..='cd ..'
@@ -119,6 +124,7 @@ alias chown='chown --preserve-root'
 ```
 ---
 ## Making Aliases Permanent
+
 ```bash
 # Add to ~/.bashrc or ~/.bash_aliases
 

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # OS & Server Hardening
 
 ## Reducing the Attack Surface at the Infrastructure Level
@@ -294,24 +288,24 @@ LimitRequestBody 10485760
 # Nginx TLS configuration
 server {
     listen 443 ssl http2;
-    
+
     ssl_certificate /etc/ssl/certs/server.crt;
     ssl_certificate_key /etc/ssl/private/server.key;
-    
+
     # Protocols - TLS 1.2 and 1.3 only
     ssl_protocols TLSv1.2 TLSv1.3;
-    
+
     # Strong cipher suites
     ssl_ciphers 'ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384';
     ssl_prefer_server_ciphers on;
-    
+
     # OCSP stapling
     ssl_stapling on;
     ssl_stapling_verify on;
-    
+
     # DH parameters (generate: openssl dhparam -out dhparam.pem 4096)
     ssl_dhparam /etc/ssl/dhparam.pem;
-    
+
     # Session settings
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;

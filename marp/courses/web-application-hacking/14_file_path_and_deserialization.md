@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # File Path Manipulation & Deserialization Attacks
 
 ## Abusing File Operations and Object Handling
@@ -140,7 +134,7 @@ User-Agent: <?php system($_GET['cmd']); ?>
 
 ```php
 // VULNERABLE: No file type validation
-move_uploaded_file($_FILES['file']['tmp_name'], 
+move_uploaded_file($_FILES['file']['tmp_name'],
     '/var/www/uploads/' . $_FILES['file']['name']);
 
 // Attacks:
@@ -174,24 +168,24 @@ import os
 def safe_file_access(user_filename):
     # 1. Define allowed base directory
     UPLOAD_DIR = '/var/www/uploads'
-    
+
     # 2. Get basename (strip directory components)
     safe_name = os.path.basename(user_filename)
-    
+
     # 3. Construct full path
     full_path = os.path.join(UPLOAD_DIR, safe_name)
-    
+
     # 4. Resolve to absolute path and verify
     real_path = os.path.realpath(full_path)
-    
+
     # 5. Check it's still within allowed directory
     if not real_path.startswith(UPLOAD_DIR):
         raise SecurityError("Path traversal detected!")
-    
+
     # 6. Check file exists
     if not os.path.isfile(real_path):
         raise FileNotFoundError("File not found")
-    
+
     return real_path
 ```
 
@@ -213,25 +207,25 @@ def secure_upload(file):
     # 1. Check file size
     if file.content_length > MAX_SIZE:
         raise ValueError("File too large")
-    
+
     # 2. Check extension (whitelist)
     ext = file.filename.rsplit('.', 1)[-1].lower()
     if ext not in ALLOWED_EXTENSIONS:
         raise ValueError("Invalid file type")
-    
+
     # 3. Check MIME type (magic bytes)
     mime = magic.from_buffer(file.read(1024), mime=True)
     file.seek(0)
     if mime not in ALLOWED_MIMES:
         raise ValueError("Invalid file content")
-    
+
     # 4. Generate random filename (prevent path traversal)
     safe_name = f"{uuid.uuid4().hex}.{ext}"
-    
+
     # 5. Save outside web root if possible
     save_path = os.path.join(UPLOAD_DIR, safe_name)
     file.save(save_path)
-    
+
     return safe_name
 ```
 
@@ -266,7 +260,7 @@ that execute code during deserialization.
 class User {
     public $name;
     public $isAdmin = false;
-    
+
     public function __wakeup() {
         // Called when object is deserialized
         if ($this->isAdmin) {
@@ -435,13 +429,13 @@ BLOCKED_RANGES = [
 
 def is_safe_url(url):
     parsed = urlparse(url)
-    
+
     if parsed.scheme not in ('http', 'https'):
         return False
-    
+
     if parsed.hostname in BLOCKED_HOSTS:
         return False
-    
+
     try:
         ip = ipaddress.ip_address(parsed.hostname)
         for blocked in BLOCKED_RANGES:
@@ -449,7 +443,7 @@ def is_safe_url(url):
                 return False
     except ValueError:
         pass  # Not an IP, resolve DNS and check again
-    
+
     return True
 ```
 

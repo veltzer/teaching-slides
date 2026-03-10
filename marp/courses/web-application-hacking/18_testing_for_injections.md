@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Testing for Injections in Boot2Root
 
 ## Systematically Probing Every Entry Point

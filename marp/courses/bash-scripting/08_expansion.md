@@ -15,6 +15,7 @@ echo file{1,2,3}.txt
 ```
 ---
 ## Brace Expansion: Comma Lists
+
 ```bash
 # Prefix and suffix are attached to each item
 echo {cat,dog,bird}
@@ -36,6 +37,7 @@ mv file.{txt,md}
 ```
 ---
 ## Brace Expansion: Sequences
+
 ```bash
 # Integer sequences
 echo {1..10}
@@ -58,6 +60,7 @@ echo {001..010}
 ```
 ---
 ## Nesting Brace Expansions
+
 ```bash
 # Braces can be nested
 echo {a,b{1,2},c}
@@ -77,6 +80,7 @@ echo {a,b}{1,2}{x,y}
 ```
 ---
 ## Brace Expansion is NOT Globbing
+
 ```bash
 # Key differences:
 # 1. Brace expansion generates strings, not matched files
@@ -96,6 +100,7 @@ echo {a,b}           # a b
 ```
 ---
 ## Practical Brace Expansion Examples
+
 ```bash
 # Compare two git branches
 diff <(git show main:file.c) <(git show develop:file.c)
@@ -114,6 +119,7 @@ touch test_{pass,fail}_{01..05}.log
 ```
 ---
 ## Tilde Expansion
+
 ```bash
 # ~ expands to the home directory
 echo ~
@@ -135,6 +141,7 @@ echo ~/file   # /home/mark/file
 ```
 ---
 ## `$PATH` and Brace Expansion Together
+
 ```bash
 # Quickly add multiple directories to PATH
 export PATH="${HOME}/{bin,scripts,tools}:${PATH}"

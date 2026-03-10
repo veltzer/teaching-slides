@@ -1,6 +1,7 @@
 # Timing
 ---
 ## The `time` Built-in
+
 ```bash
 # time measures how long a command takes
 time sleep 2
@@ -17,6 +18,7 @@ time {
     uniq sorted.txt > unique.txt
 }
 ```
+
 ---
 ## Understanding `time` Output
 
@@ -33,6 +35,7 @@ Relationships:
 ```
 ---
 ## The `/usr/bin/time` Command
+
 ```bash
 # The external time command has more options
 /usr/bin/time -v ls > /dev/null
@@ -49,6 +52,7 @@ Relationships:
 ```
 ---
 ## High-Precision Timing
+
 ```bash
 # date +%s gives seconds since epoch
 start=$(date +%s)
@@ -71,6 +75,7 @@ echo "Elapsed: $(bc <<< "$end - $start") seconds"
 ```
 ---
 ## Timing Functions
+
 ```bash
 # Reusable timing wrapper
 timer() {
@@ -93,6 +98,7 @@ timer find /usr -name "*.so" -type f > /dev/null
 ```
 ---
 ## Benchmarking
+
 ```bash
 #!/bin/bash
 
@@ -120,6 +126,7 @@ benchmark 10 ls -la /usr/bin
 ```
 ---
 ## `SECONDS` Variable
+
 ```bash
 # SECONDS counts seconds since shell started
 # or since it was assigned
@@ -143,6 +150,7 @@ echo "Script completed in $SECONDS seconds"
 ```
 ---
 ## Timeout for Commands
+
 ```bash
 # timeout kills a command after N seconds
 timeout 5 long_running_command
@@ -164,6 +172,7 @@ kill $timer_pid 2>/dev/null
 ```
 ---
 ## Profiling Scripts
+
 ```bash
 #!/bin/bash
 # Add timing to every line with PS4 and xtrace

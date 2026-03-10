@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Web Application (In)security
 
 ## Understanding the Modern Threat Landscape
@@ -44,15 +38,15 @@ paginate: true
 ## OWASP Top 10 (2021)
 
 1. **A01** - Broken Access Control
-2. **A02** - Cryptographic Failures
-3. **A03** - Injection
-4. **A04** - Insecure Design
-5. **A05** - Security Misconfiguration
-6. **A06** - Vulnerable & Outdated Components
-7. **A07** - Identification & Authentication Failures
-8. **A08** - Software & Data Integrity Failures
-9. **A09** - Security Logging & Monitoring Failures
-10. **A10** - Server-Side Request Forgery (`SSRF`)
+1. **A02** - Cryptographic Failures
+1. **A03** - Injection
+1. **A04** - Insecure Design
+1. **A05** - Security Misconfiguration
+1. **A06** - Vulnerable & Outdated Components
+1. **A07** - Identification & Authentication Failures
+1. **A08** - Software & Data Integrity Failures
+1. **A09** - Security Logging & Monitoring Failures
+1. **A10** - Server-Side Request Forgery (`SSRF`)
 
 ---
 
@@ -134,12 +128,12 @@ paginate: true
 
 ```text
 1. Recon          -->  Discover target, technologies, endpoints
-2. Weaponize      -->  Craft payloads for identified vulns
-3. Deliver        -->  Send exploit via HTTP request
-4. Exploit        -->  Trigger the vulnerability
-5. Install        -->  Deploy webshell or backdoor
-6. Command & Ctrl -->  Establish persistent C2 channel
-7. Exfiltrate     -->  Extract sensitive data
+1. Weaponize      -->  Craft payloads for identified vulns
+1. Deliver        -->  Send exploit via HTTP request
+1. Exploit        -->  Trigger the vulnerability
+1. Install        -->  Deploy webshell or backdoor
+1. Command & Ctrl -->  Establish persistent C2 channel
+1. Exfiltrate     -->  Extract sensitive data
 ```
 
 ---
@@ -186,11 +180,11 @@ paginate: true
 ## Common Vulnerability Lifecycle
 
 1. **Introduction** - Developer writes vulnerable code
-2. **Discovery** - Attacker or researcher finds the flaw
-3. **Exploitation** - Vulnerability is actively exploited
-4. **Disclosure** - Vulnerability is reported
-5. **Patch** - Vendor releases a fix
-6. **Deployment** - Organizations apply the patch
+1. **Discovery** - Attacker or researcher finds the flaw
+1. **Exploitation** - Vulnerability is actively exploited
+1. **Disclosure** - Vulnerability is reported
+1. **Patch** - Vendor releases a fix
+1. **Deployment** - Organizations apply the patch
 
 > The window between steps 3 and 6 is the **danger zone**
 
@@ -285,16 +279,16 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
    - Scope, timeline, overall risk rating
    - Critical findings in plain language
 
-2. Methodology
+1. Methodology
    - Standards followed (OWASP, PTES, OSSTMM)
    - Tools used
 
-3. Findings (per vulnerability)
+1. Findings (per vulnerability)
    - Title, severity (CVSS), affected URL
    - Description, evidence, impact
    - Remediation recommendation
 
-4. Appendices
+1. Appendices
    - Detailed scan output
    - Full request/response logs
    - Risk rating methodology
@@ -358,12 +352,12 @@ MOVEit (2023) - 2,000+ organizations
 ## Key Principles for This Course
 
 1. **Never test without authorization** - Always have written permission
-2. **Document everything** - Keep detailed notes and screenshots
-3. **Think like an attacker** - Understand motivation and methodology
-4. **Defend in depth** - No single fix is sufficient
-5. **Automate wisely** - Tools assist, they don't replace thinking
-6. **Stay current** - Threats evolve constantly
-7. **Practice ethically** - Use only authorized targets
+1. **Document everything** - Keep detailed notes and screenshots
+1. **Think like an attacker** - Understand motivation and methodology
+1. **Defend in depth** - No single fix is sufficient
+1. **Automate wisely** - Tools assist, they don't replace thinking
+1. **Stay current** - Threats evolve constantly
+1. **Practice ethically** - Use only authorized targets
 
 ---
 

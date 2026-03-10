@@ -16,6 +16,7 @@ The shell can redirect any of these.
 ```
 ---
 ## stdout Redirection
+
 ```bash
 # Redirect stdout to a file (create or overwrite)
 echo "hello" > output.txt
@@ -28,6 +29,7 @@ echo "hello" 1> output.txt    # same as >
 ```
 ---
 ## stderr Redirection
+
 ```bash
 # Redirect stderr to a file
 ls /nonexistent 2> errors.txt
@@ -45,6 +47,7 @@ find / -name "*.conf" 2> /dev/null
 ```
 ---
 ## Redirecting Both stdout and stderr
+
 ```bash
 # Method 1: redirect each separately
 command > output.txt 2> errors.txt
@@ -61,6 +64,7 @@ command &>> all_output.txt    # bash 4.0+
 ```
 ---
 ## Order Matters!
+
 ```bash
 # RIGHT: redirect stdout, then stderr to stdout's location
 command > file.txt 2>&1
@@ -91,6 +95,7 @@ INCORRECT: command 2>&1 > file.txt
 ```
 ---
 ## stdin Redirection
+
 ```bash
 # Read input from a file instead of keyboard
 sort < unsorted.txt
@@ -106,6 +111,7 @@ bc <<< "2 + 3"    # prints 5
 ```
 ---
 ## Here Documents
+
 ```bash
 # Provide multi-line input to a command
 cat << EOF
@@ -128,6 +134,7 @@ EOF
 ```
 ---
 ## `/dev/null` - The Black Hole
+
 ```bash
 # Discard stdout
 command > /dev/null
@@ -146,6 +153,7 @@ fi
 ```
 ---
 ## `/dev/zero`, `/dev/urandom`, `/dev/stdin`
+
 ```bash
 # /dev/zero produces infinite zero bytes
 dd if=/dev/zero of=zeros.bin bs=1M count=10
@@ -160,6 +168,7 @@ echo "data" | cat /dev/stdin
 ```
 ---
 ## Redirecting to Multiple Places: `tee`
+
 ```bash
 # tee copies stdin to stdout AND to file(s)
 echo "hello" | tee output.txt
@@ -176,6 +185,7 @@ make 2>&1 | tee build.log
 ```
 ---
 ## Process Substitution
+
 ```bash
 # <(command) creates a virtual file from command's output
 diff <(ls /dir1) <(ls /dir2)
@@ -192,6 +202,7 @@ echo <(true)    # prints something like /dev/fd/63
 ```
 ---
 ## Opening Custom File Descriptors
+
 ```bash
 # Open fd 3 for writing
 exec 3> custom_output.txt
@@ -210,6 +221,7 @@ exec 5<> bidirectional.txt
 ```
 ---
 ## Swapping stdout and stderr
+
 ```bash
 # Sometimes you want to swap them
 # (e.g., to pipe stderr through a filter)
@@ -227,6 +239,7 @@ command 3>&1 1>&2 2>&3 3>&-
 ```
 ---
 ## Redirection Tricks
+
 ```bash
 # Truncate a file (make it empty)
 > file.txt
@@ -250,6 +263,7 @@ echo "data" | sudo tee -a /etc/some_config > /dev/null
 ```
 ---
 ## The `noclobber` Option
+
 ```bash
 # Prevent accidental overwriting
 set -o noclobber

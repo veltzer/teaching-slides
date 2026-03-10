@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Securing Authentication
 
 ## Building Robust Login Systems
@@ -95,16 +89,16 @@ def check_rate_limit(identifier, max_attempts=5, window=300):
     """Allow max_attempts per window (seconds)"""
     key = f"login_attempts:{identifier}"
     current = r.get(key)
-    
+
     if current and int(current) >= max_attempts:
         ttl = r.ttl(key)
         return False, f"Too many attempts. Try again in {ttl}s"
-    
+
     pipe = r.pipeline()
     pipe.incr(key)
     pipe.expire(key, window)
     pipe.execute()
-    
+
     return True, "OK"
 
 # Apply to login endpoint
@@ -251,13 +245,13 @@ def constant_time_compare(a, b):
 
 def login(username, password):
     user = get_user(username)
-    
+
     if user is None:
         # Still perform password hash to keep timing constant
         dummy_hash = "$2b$12$dummy.hash.for.timing.attack.prevention"
         bcrypt.checkpw(password.encode(), dummy_hash.encode())
         return False
-    
+
     return bcrypt.checkpw(password.encode(), user.password_hash.encode())
 
 # Without this, attackers can determine valid usernames

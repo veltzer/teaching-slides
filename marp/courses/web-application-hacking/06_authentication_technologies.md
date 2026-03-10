@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Authentication Technologies & Design Flaws
 
 ## Day 2: Breaking and Securing Login Mechanisms
@@ -35,7 +29,7 @@ Three factors of authentication:
 
 Multi-Factor Authentication (MFA):
   Combining 2+ factors from DIFFERENT categories
-  
+
   Password + SMS code = 2FA (weak - SIM swap)
   Password + TOTP app = 2FA (better)
   Password + Hardware key = 2FA (strongest)
@@ -182,19 +176,19 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 1. Open Redirect in redirect_uri
    # Steal authorization code
    redirect_uri=https://attacker.com/callback
-   
+
 2. CSRF - Missing state parameter
    # Force victim to link attacker's account
-   
+
 3. Authorization Code Interception
    # If not using PKCE
-   
+
 4. Token Leakage via Referer header
    # Token in URL fragment leaked to third parties
-   
+
 5. Scope escalation
    # Request more permissions than intended
-   
+
 6. Implicit flow token theft
    # Tokens in URL fragments are exposed
 ```
@@ -269,7 +263,7 @@ Attack 2: Token Reuse
 Attack 3: Host Header Poisoning
   POST /forgot-password HTTP/1.1
   Host: attacker.com         # <-- Poisoned
-  
+
   # Reset email contains:
   # https://attacker.com/reset?token=abc123
   # Victim clicks -> token sent to attacker
@@ -288,20 +282,20 @@ MFA Bypass Techniques:
 1. Skip the MFA step entirely
    # After login, go directly to /dashboard
    # Instead of /mfa-verify
-   
+
 2. Brute-force the MFA code
    # 6-digit code = 1,000,000 combinations
    # No rate limiting? Brute-force in minutes
-   
+
 3. Response manipulation
    # Change {"success":false} to {"success":true}
-   
+
 4. Backup codes
    # Often simpler, may not be rate-limited
-   
+
 5. SIM swapping (for SMS-based MFA)
    # Social engineer the mobile carrier
-   
+
 6. Session fixation before MFA
    # Session already partially authenticated
 ```
@@ -338,11 +332,11 @@ token = secrets.token_urlsafe(32)
 **Target**: DVWA - Brute Force module
 
 1. Set DVWA security to "Low"
-2. Intercept login request in Burp
-3. Identify username enumeration
-4. Note error message differences
-5. Test for account lockout (there is none)
-6. Prepare for brute-force attacks
+1. Intercept login request in Burp
+1. Identify username enumeration
+1. Note error message differences
+1. Test for account lockout (there is none)
+1. Prepare for brute-force attacks
 
 ```bash
 # Quick test

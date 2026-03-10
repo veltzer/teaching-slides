@@ -1,6 +1,7 @@
 # Using Associative Arrays
 ---
 ## Declaring Associative Arrays
+
 ```bash
 # MUST declare with -A (unlike indexed arrays)
 declare -A config
@@ -17,6 +18,7 @@ declare -A colors=(
 ```
 ---
 ## Adding Key-Value Pairs
+
 ```bash
 declare -A user
 
@@ -39,6 +41,7 @@ settings[debug]="false"
 ```
 ---
 ## Accessing Values
+
 ```bash
 declare -A capitals=(
     [France]="Paris"
@@ -58,6 +61,7 @@ echo "Japan's capital: $city"     # Tokyo
 ```
 ---
 ## Iterating Over Associative Arrays
+
 ```bash
 declare -A config=(
     [host]="localhost"
@@ -81,6 +85,7 @@ done
 ```
 ---
 ## Checking Key Existence
+
 ```bash
 declare -A data=([x]=1 [y]=2 [z]="")
 
@@ -103,6 +108,7 @@ fi
 ```
 ---
 ## Removing Keys
+
 ```bash
 declare -A fruits=(
     [apple]=1
@@ -122,6 +128,7 @@ declare -A fruits
 ```
 ---
 ## Size and Membership
+
 ```bash
 declare -A registry=(
     [service1]="running"
@@ -141,6 +148,7 @@ echo "Running: $running"
 ```
 ---
 ## Associative Arrays from Files
+
 ```bash
 # Load a key=value config file
 declare -A config
@@ -162,6 +170,7 @@ echo "Database: ${config[db_host]}:${config[db_port]}"
 ```
 ---
 ## Associative Array as Counter
+
 ```bash
 #!/bin/bash
 declare -A word_count
@@ -179,6 +188,7 @@ done | sort -t' ' -k2 -rn | head -20
 ```
 ---
 ## Nested Structures (Simulated)
+
 ```bash
 # bash does NOT support nested arrays
 # Simulate with naming conventions
@@ -201,6 +211,7 @@ done
 ```
 ---
 ## Passing Associative Arrays to Functions
+
 ```bash
 # Method 1: by nameref (bash 4.3+)
 print_map() {
@@ -230,6 +241,7 @@ deserialize_map() {
 ```
 ---
 ## Practical: Simple Key-Value Store
+
 ```bash
 #!/bin/bash
 readonly STORE_FILE="${HOME}/.kvstore"

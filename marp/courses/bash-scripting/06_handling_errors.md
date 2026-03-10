@@ -1,6 +1,7 @@
 # Handling Errors
 ---
 ## Why Error Handling Matters
+
 ```bash
 # Without error handling, scripts silently continue
 cd /nonexistent/directory
@@ -11,6 +12,7 @@ rm -rf *    # This runs in the WRONG directory!
 ```
 ---
 ## The `&&` Approach
+
 ```bash
 # Chain commands with &&
 cd /target/directory && rm -rf temp/
@@ -27,6 +29,7 @@ mkdir -p /tmp/build && \
 ```
 ---
 ## The `||` Approach
+
 ```bash
 # Handle the error case
 cd /target/directory || exit 1
@@ -43,6 +46,7 @@ source "$config_file" || {
 ```
 ---
 ## `set -e` (errexit)
+
 ```bash
 #!/bin/bash
 set -e
@@ -54,6 +58,7 @@ echo "Step 2"   # never reached
 ```
 ---
 ## `set -e` Gotchas
+
 ```bash
 set -e
 
@@ -72,6 +77,7 @@ x=$(false)           # triggers errexit in bash 4.4+
 ```
 ---
 ## `set -e` in Practice
+
 ```bash
 #!/bin/bash
 set -e
@@ -92,6 +98,7 @@ fi
 ```
 ---
 ## `set -u` (nounset)
+
 ```bash
 #!/bin/bash
 set -u
@@ -109,6 +116,7 @@ echo "${optional_var:-default}"   # OK with set -u
 ```
 ---
 ## `set -o pipefail`
+
 ```bash
 #!/bin/bash
 set -o pipefail
@@ -128,6 +136,7 @@ curl -s "$url" | jq '.data'
 ```
 ---
 ## The Strict Mode
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -143,6 +152,7 @@ IFS=$'\n\t'
 ```
 ---
 ## Trapping Errors
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -156,6 +166,7 @@ echo "Step 2"   # never reached
 ```
 ---
 ## Cleanup with `trap`
+
 ```bash
 #!/bin/bash
 
@@ -175,6 +186,7 @@ process "$tmpfile"
 ```
 ---
 ## Comprehensive Error Handling Pattern
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -200,6 +212,7 @@ log "Starting..."
 ```
 ---
 ## Retry Pattern
+
 ```bash
 #!/bin/bash
 
@@ -224,6 +237,7 @@ retry 3 curl -s -o /dev/null "https://example.com"
 ```
 ---
 ## Error Handling: Common Mistakes
+
 ```bash
 # MISTAKE 1: Not quoting variables
 file="my file.txt"

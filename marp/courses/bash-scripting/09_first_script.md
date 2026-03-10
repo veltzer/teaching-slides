@@ -32,6 +32,7 @@ echo "Hello, World!"
 - For development: `VS Code` with `bash` extensions
 ---
 ## The Shebang Line
+
 ```bash
 #!/bin/bash
 
@@ -49,6 +50,7 @@ echo "Hello, World!"
 ```
 ---
 ## Why `#!/usr/bin/env bash`?
+
 ```bash
 # On most Linux systems:
 # /bin/bash exists
@@ -66,6 +68,7 @@ echo "Hello, World!"
 ```
 ---
 ## Making a Script Executable
+
 ```bash
 # Method 1: chmod
 chmod +x myscript.sh
@@ -84,6 +87,7 @@ bash myscript.sh
 ```
 ---
 ## File Extensions
+
 ```bash
 # .sh extension is optional but conventional
 myscript.sh       # common convention
@@ -100,6 +104,7 @@ ls /usr/bin/ | head -20
 ```
 ---
 ## Script Arguments
+
 ```bash
 #!/bin/bash
 
@@ -122,6 +127,7 @@ echo "Num of args: $#"
 ```
 ---
 ## `$@` vs `$*`
+
 ```bash
 #!/bin/bash
 
@@ -144,6 +150,7 @@ done
 ```
 ---
 ## The `shift` Command
+
 ```bash
 #!/bin/bash
 
@@ -165,6 +172,7 @@ done
 ```
 ---
 ## Failure Handling: The Strict Mode
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -179,6 +187,7 @@ IFS=$'\n\t'     # safer word splitting
 ```
 ---
 ## Debugging Scripts
+
 ```bash
 # Method 1: bash -x (trace every command)
 bash -x myscript.sh
@@ -197,6 +206,7 @@ set -x
 ```
 ---
 ## More Debugging Techniques
+
 ```bash
 # Syntax check without running
 bash -n myscript.sh
@@ -218,6 +228,7 @@ echo "normal"
 ```
 ---
 ## Using `shellcheck`
+
 ```bash
 # shellcheck is a static analysis tool for bash scripts
 # Install: apt install shellcheck / brew install shellcheck
@@ -237,6 +248,7 @@ echo $foo
 ```
 ---
 ## Template: Basic Script
+
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -275,6 +287,7 @@ main "$@"
 ```
 ---
 ## The `source` Command (`.`)
+
 ```bash
 # source (or .) runs a script in the CURRENT shell
 # Variables and functions persist

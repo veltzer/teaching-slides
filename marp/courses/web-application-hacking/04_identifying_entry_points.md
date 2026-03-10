@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Identifying Entry Points & Server-Side Technologies
 
 ## Where to Probe and What to Expect
@@ -52,14 +46,14 @@ Entry points:
 <form action="/transfer" method="POST">
   <input type="text" name="recipient" value="">
   <input type="text" name="amount" value="">
-  
+
   <!-- Hidden fields - often trusted by server! -->
   <input type="hidden" name="account_id" value="12345">
   <input type="hidden" name="currency" value="USD">
   <input type="hidden" name="fee" value="2.50">
-  
+
   <!-- CSRF token -->
-  <input type="hidden" name="csrf_token" 
+  <input type="hidden" name="csrf_token"
          value="a8f3b2c1d4e5f6">
   <button type="submit">Transfer</button>
 </form>
@@ -191,7 +185,7 @@ Set-Cookie: session=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiam9obiJ9.abc123
 Analysis:
 1. Name: "session" -> Standard session cookie
 2. Value: Base64-encoded -> Likely JWT
-3. Flags present? 
+3. Flags present?
    - HttpOnly?   No -> Vulnerable to XSS theft
    - Secure?     No -> Sent over HTTP
    - SameSite?   No -> Vulnerable to CSRF
@@ -479,14 +473,14 @@ ws.send(JSON.stringify({
 **Target**: DVWA
 
 1. Log in and browse every page through Burp
-2. For each page, document:
-   - URL parameters
-   - Form fields (visible and hidden)
-   - Cookies being sent
-   - Any `AJAX` requests
-3. Identify the server technology stack
-4. Create an entry point matrix
-5. Prioritize testing targets
+1. For each page, document:
+   1. URL parameters
+   1. Form fields (visible and hidden)
+   1. Cookies being sent
+   1. Any `AJAX` requests
+1. Identify the server technology stack
+1. Create an entry point matrix
+1. Prioritize testing targets
 
 ---
 

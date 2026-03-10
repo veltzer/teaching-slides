@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Boot2Root: Scanning & Enumeration
 
 ## Day 5: Putting It All Together
@@ -443,11 +437,11 @@ msf> use auxiliary/scanner/http/brute_dirs
 **Target**: Practice machine at assigned IP
 
 1. Perform a full `nmap` scan
-2. Enumerate all discovered services
-3. Run `gobuster` against any web services
-4. Check for default credentials
-5. Create a resource mapping document
-6. Identify at least 3 potential attack vectors
+1. Enumerate all discovered services
+1. Run `gobuster` against any web services
+1. Check for default credentials
+1. Create a resource mapping document
+1. Identify at least 3 potential attack vectors
 
 ---
 

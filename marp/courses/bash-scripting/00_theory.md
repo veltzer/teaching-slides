@@ -119,6 +119,7 @@ User --> Shell --> Kernel --> Hardware
 | 5.2 | 2022 | Latest stable release |
 ---
 ## Check Your `bash` Version
+
 ```bash
 # Method 1: the --version flag
 bash --version

@@ -1,6 +1,7 @@
 # Redirection in Scripts
 ---
 ## Redirecting Entire Scripts
+
 ```bash
 #!/bin/bash
 
@@ -16,6 +17,7 @@ ls -la
 ```
 ---
 ## Redirecting to Both Log and Terminal
+
 ```bash
 #!/bin/bash
 
@@ -27,6 +29,7 @@ echo "Errors too" >&2
 ```
 ---
 ## Saving and Restoring File Descriptors
+
 ```bash
 #!/bin/bash
 
@@ -48,6 +51,7 @@ echo "This goes to the terminal again"
 ```
 ---
 ## Saving and Restoring: Full Pattern
+
 ```bash
 #!/bin/bash
 
@@ -68,6 +72,7 @@ echo "back to terminal"
 ```
 ---
 ## Redirect a Block of Commands
+
 ```bash
 #!/bin/bash
 
@@ -91,6 +96,7 @@ echo "Report saved (this prints to terminal)"
 ```
 ---
 ## Logging Functions
+
 ```bash
 #!/bin/bash
 
@@ -112,6 +118,7 @@ exec 3>&-    # close log file
 ```
 ---
 ## Input Redirection in Scripts
+
 ```bash
 #!/bin/bash
 
@@ -132,6 +139,7 @@ echo "Config: $HOST:$PORT (debug=$DEBUG)"
 ```
 ---
 ## Here Document Tricks
+
 ```bash
 #!/bin/bash
 
@@ -154,6 +162,7 @@ REMOTE
 ```
 ---
 ## Practical: Script that Logs Everything
+
 ```bash
 #!/bin/bash
 set -euo pipefail

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Server Platforms & Web Technologies
 
 ## Understanding the Technology Stack
@@ -86,19 +80,19 @@ X-Powered-By: PHP/7.4.3
 server {
     # Prevent clickjacking
     add_header X-Frame-Options "SAMEORIGIN" always;
-    
+
     # Prevent MIME sniffing
     add_header X-Content-Type-Options "nosniff" always;
-    
+
     # Enable XSS protection
     add_header X-XSS-Protection "1; mode=block" always;
-    
+
     # Content Security Policy
-    add_header Content-Security-Policy 
+    add_header Content-Security-Policy
         "default-src 'self'; script-src 'self'" always;
-    
+
     # HSTS
-    add_header Strict-Transport-Security 
+    add_header Strict-Transport-Security
         "max-age=31536000; includeSubDomains" always;
 }
 ```
@@ -168,11 +162,11 @@ Django:
 Rails:
   /rails/info      -> Route info (dev mode)
   /assets/         -> Asset pipeline
-  
+
 Spring:
   /actuator/       -> Health, metrics, env
   /swagger-ui/     -> API documentation
-  
+
 Express:
   /api-docs/       -> Swagger docs
   X-Powered-By: Express  -> Header leak
@@ -209,7 +203,7 @@ Express:
 ```javascript
 // NoSQL Injection example (MongoDB)
 // VULNERABLE: User input directly in query
-db.users.find({ username: req.body.username, 
+db.users.find({ username: req.body.username,
                  password: req.body.password });
 
 // Attack payload: { "$gt": "" } always evaluates true
@@ -222,16 +216,16 @@ db.users.find({ username: req.body.username,
 ```text
 MySQL:
   "You have an error in your SQL syntax..."
-  
+
 PostgreSQL:
   "ERROR: syntax error at or near..."
-  
+
 MSSQL:
   "Unclosed quotation mark after the character string..."
-  
+
 Oracle:
   "ORA-01756: quoted string not properly terminated"
-  
+
 MongoDB:
   "SyntaxError: Unexpected token..."
 ```
@@ -482,13 +476,13 @@ builtwith   # Online service
 
 # Manual checks
 # 1. HTTP headers (Server, X-Powered-By)
-# 2. Cookie names (PHPSESSID, JSESSIONID, etc.)
-# 3. File extensions (.php, .aspx, .jsp)
-# 4. HTML comments and meta tags
-# 5. JavaScript framework artifacts
-# 6. Error page formats
-# 7. Default files (robots.txt, sitemap.xml)
-# 8. Response timing characteristics
+# 1. Cookie names (PHPSESSID, JSESSIONID, etc.)
+# 1. File extensions (.php, .aspx, .jsp)
+# 1. HTML comments and meta tags
+# 1. JavaScript framework artifacts
+# 1. Error page formats
+# 1. Default files (robots.txt, sitemap.xml)
+# 1. Response timing characteristics
 ```
 
 ---
@@ -563,12 +557,12 @@ HTTP/3 (QUIC):
 **Objective**: Identify the complete technology stack of a target
 
 1. Set up Burp Suite as your browser proxy
-2. Browse to the target application
-3. Examine `HTTP` response headers
-4. Check cookie names and values
-5. View page source for framework indicators
-6. Run `whatweb` against the target
-7. Document all technologies identified
+1. Browse to the target application
+1. Examine `HTTP` response headers
+1. Check cookie names and values
+1. View page source for framework indicators
+1. Run `whatweb` against the target
+1. Document all technologies identified
 
 ```bash
 whatweb -v https://target-lab.local

@@ -1,6 +1,7 @@
 # Variable Types
 ---
 ## Everything is a String (by Default)
+
 ```bash
 # In bash, all variables are strings by default
 x=42
@@ -19,6 +20,7 @@ echo $((y + 5))    # 5
 ```
 ---
 ## Integer Variables
+
 ```bash
 # declare -i forces integer behavior
 declare -i num
@@ -38,6 +40,7 @@ echo "$c"      # 8
 ```
 ---
 ## String Operations: Comprehensive
+
 ```bash
 str="Hello, World!"
 
@@ -66,6 +69,7 @@ echo "${filename##*.}"            # gz
 ```
 ---
 ## Indexed Arrays
+
 ```bash
 # Create an array
 fruits=("apple" "banana" "cherry")
@@ -86,6 +90,7 @@ echo "${#fruits[0]}"    # 5 (length of "apple")
 ```
 ---
 ## Associative Arrays (`bash` 4.0+)
+
 ```bash
 # Must declare with -A
 declare -A user
@@ -118,6 +123,7 @@ echo "${#user[@]}"       # 3
 | Associative array | Key-value mappings, configs |
 ---
 ## Nameref Variables (`bash` 4.3+)
+
 ```bash
 # declare -n creates a reference to another variable
 x=42
@@ -139,6 +145,7 @@ echo "$count"    # 2
 ```
 ---
 ## Variable Attributes Summary
+
 ```bash
 # declare sets variable attributes
 declare -i x        # integer

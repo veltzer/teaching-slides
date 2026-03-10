@@ -19,6 +19,7 @@
 ```
 ---
 ## Shell Variables
+
 ```bash
 # Define a shell variable
 greeting="hello"
@@ -32,6 +33,7 @@ bash -c 'echo "child sees: $greeting"'
 ```
 ---
 ## Environment Variables
+
 ```bash
 # Promote a shell variable to the environment
 greeting="hello"
@@ -46,6 +48,7 @@ bash -c 'echo "child sees: $greeting"'
 ```
 ---
 ## Viewing All Variables
+
 ```bash
 # See all environment variables
 env
@@ -78,6 +81,7 @@ declare -p PATH
 | `EDITOR` | Default text editor |
 ---
 ## Defining Variables: The Rules
+
 ```bash
 # Variable names: letters, digits, underscores
 # Must start with letter or underscore
@@ -93,6 +97,7 @@ my var=bad      # contains space
 ```
 ---
 ## Temporary Environment for One Command
+
 ```bash
 # Set a variable ONLY for one command
 LANG=C sort file.txt
@@ -109,6 +114,7 @@ TZ=UTC date
 ```
 ---
 ## Deleting Variables
+
 ```bash
 # Remove a variable entirely
 x=5
@@ -128,6 +134,7 @@ echo "${z-default}"    # default (z is NOT set)
 ```
 ---
 ## Demoting Environment Variables
+
 ```bash
 # There is no direct "unexport" command
 # Method 1: unset and re-create as shell variable
@@ -143,6 +150,7 @@ echo "$x"              # 5 (still exists locally)
 ```
 ---
 ## Checking If a Variable Exists
+
 ```bash
 # Method 1: use -v test (bash 4.2+)
 x=5
@@ -164,6 +172,7 @@ fi
 ```
 ---
 ## Distinguishing Empty from Unset
+
 ```bash
 # ${var+word} returns "word" if var is set (even if empty)
 # ${var:+word} returns "word" only if var is set AND non-empty
@@ -178,6 +187,7 @@ echo "${x:+SET}"    # (empty, x does not exist)
 ```
 ---
 ## Read-Only Variables
+
 ```bash
 # Make a variable read-only (constant)
 readonly PI=3.14159
@@ -213,6 +223,7 @@ unset PI
 ```
 ---
 ## `declare` Command
+
 ```bash
 # declare is used to set variable attributes
 declare -i num=42    # integer

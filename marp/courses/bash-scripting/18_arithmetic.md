@@ -1,6 +1,7 @@
 # Doing Arithmetic
 ---
 ## Integer Arithmetic: `$(( ))`
+
 ```bash
 # Basic operations
 echo $((5 + 3))      # 8
@@ -18,6 +19,7 @@ echo $(($x + $y))    # 13 (also works, but $ is redundant)
 ```
 ---
 ## Assignment Operators
+
 ```bash
 x=10
 
@@ -36,6 +38,7 @@ x=$((x + 5))     # x = 15 (long form)
 ```
 ---
 ## The `(( ))` Command
+
 ```bash
 # (( )) evaluates arithmetic expressions
 # Returns 0 (true) if non-zero, 1 (false) if zero
@@ -56,6 +59,7 @@ fi
 ```
 ---
 ## Comparison Operators in `(( ))`
+
 ```bash
 # All C-style operators work:
 (( a == b ))    # equal
@@ -77,6 +81,7 @@ echo $(( 1 << 8 ))         # 256 (left shift)
 ```
 ---
 ## Bases and Number Representation
+
 ```bash
 # Decimal (default)
 echo $((42))         # 42
@@ -100,6 +105,7 @@ printf "%08b\n" 42   # not standard, use bc
 ```
 ---
 ## Integer Overflow
+
 ```bash
 # bash uses 64-bit signed integers
 echo $((2**62))               # 4611686018427387904
@@ -111,6 +117,7 @@ echo $((2**63))               # -9223372036854775808 (overflow!)
 ```
 ---
 ## Floating Point: The Problem
+
 ```bash
 # bash cannot do floating point arithmetic!
 echo $((10 / 3))        # 3 (not 3.333...)
@@ -120,6 +127,7 @@ echo $((1.5 + 2.5))     # syntax error!
 ```
 ---
 ## Floating Point with `bc`
+
 ```bash
 # bc is a calculator language
 echo "10 / 3" | bc
@@ -149,6 +157,7 @@ CALC
 ```
 ---
 ## Floating Point with `awk`
+
 ```bash
 # awk has built-in floating point
 awk "BEGIN {print 10/3}"
@@ -170,6 +179,7 @@ awk "BEGIN {print $x + $y}"
 ```
 ---
 ## Floating Point with `python3`
+
 ```bash
 # When you need serious math, use Python
 result=$(python3 -c "print(10/3)")
@@ -192,6 +202,7 @@ calc "2**100"
 ```
 ---
 ## Floating Point Comparison
+
 ```bash
 # You cannot use (( )) for float comparison
 # Use bc or awk
@@ -215,6 +226,7 @@ fi
 ```
 ---
 ## `let` Command
+
 ```bash
 # let evaluates arithmetic expressions (like (( )))
 let x=5+3
@@ -234,6 +246,7 @@ echo "$c"    # 8
 ```
 ---
 ## Practical: Unit Conversion Script
+
 ```bash
 #!/bin/bash
 

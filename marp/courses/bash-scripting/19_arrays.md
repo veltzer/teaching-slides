@@ -1,6 +1,7 @@
 # Using Arrays
 ---
 ## Creating Arrays
+
 ```bash
 # Method 1: parentheses
 fruits=("apple" "banana" "cherry")
@@ -21,6 +22,7 @@ IFS=',' read -ra items <<< "a,b,c,d"
 ```
 ---
 ## Accessing Array Elements
+
 ```bash
 arr=("zero" "one" "two" "three" "four")
 
@@ -43,6 +45,7 @@ echo "${!arr[@]}"    # 0 1 2 3 4
 ```
 ---
 ## `"${arr[@]}"` vs `"${arr[*]}"`
+
 ```bash
 arr=("hello world" "foo bar" "baz")
 
@@ -64,6 +67,7 @@ done
 ```
 ---
 ## Adding Elements
+
 ```bash
 arr=("one" "two")
 
@@ -86,6 +90,7 @@ arr=("zero" "${arr[@]}")
 ```
 ---
 ## Removing Elements
+
 ```bash
 arr=("a" "b" "c" "d" "e")
 
@@ -113,6 +118,7 @@ remove_value() {
 ```
 ---
 ## Array Slicing
+
 ```bash
 arr=("a" "b" "c" "d" "e" "f")
 
@@ -132,6 +138,7 @@ echo "${merged[@]}"      # a b c d
 ```
 ---
 ## Iterating Over Arrays
+
 ```bash
 fruits=("apple" "banana" "cherry" "date")
 
@@ -158,6 +165,7 @@ done
 ```
 ---
 ## Checking If an Element Exists
+
 ```bash
 # No built-in way to check if a VALUE exists
 # Method 1: loop
@@ -183,6 +191,7 @@ fi
 ```
 ---
 ## Checking If an Index Exists
+
 ```bash
 arr=("a" "b" "c")
 unset 'arr[1]'    # now sparse: indices 0, 2
@@ -200,6 +209,7 @@ fi
 ```
 ---
 ## Sorting Arrays
+
 ```bash
 # bash has no built-in sort for arrays
 # Use process substitution with sort
@@ -221,6 +231,7 @@ echo "${sorted[@]}"    # date cherry banana apple
 ```
 ---
 ## Unique Elements
+
 ```bash
 arr=("apple" "banana" "apple" "cherry" "banana" "date")
 
@@ -234,6 +245,7 @@ echo "${unique[@]}"    # apple banana cherry date
 ```
 ---
 ## Arrays as Function Arguments
+
 ```bash
 # Pass array to function
 process_items() {
@@ -257,6 +269,7 @@ echo "${output_array[@]}"
 ```
 ---
 ## `mapfile` / `readarray`
+
 ```bash
 # Read lines from stdin into an array
 mapfile -t lines < file.txt
@@ -281,6 +294,7 @@ mapfile -t pids < <(pgrep bash)
 ```
 ---
 ## Practical: Stack Implementation
+
 ```bash
 # Using an array as a stack
 declare -a stack=()

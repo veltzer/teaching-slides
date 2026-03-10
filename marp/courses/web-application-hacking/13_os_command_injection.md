@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # OS Command Injection
 
 ## Day 4: Executing System Commands Through Web Applications

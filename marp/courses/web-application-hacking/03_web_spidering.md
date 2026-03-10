@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Web Spidering & Content Discovery
 
 ## Finding What They Don't Want You to Find
@@ -95,9 +89,9 @@ Sitemap: https://target.com/sitemap.xml
 ```text
 Steps to spider with Burp:
 1. Set target scope: Target -> Scope -> Add
-2. Browse the application manually first
-3. Right-click target in Site Map -> "Scan" or "Spider"
-4. Review discovered content in Site Map
+1. Browse the application manually first
+1. Right-click target in Site Map -> "Scan" or "Spider"
+1. Review discovered content in Site Map
 
 Key settings:
 - Maximum link depth: 5-10
@@ -301,7 +295,7 @@ python3 linkfinder.py -i http://target.com/static/js/app.js -o cli
 
 # Find API keys and secrets in JS
 curl -s http://target.com/static/js/app.js | \
-  grep -iE "(api[_-]?key|secret|token|password|auth)" 
+  grep -iE "(api[_-]?key|secret|token|password|auth)"
 
 # Check for source maps
 curl -s http://target.com/static/js/app.js.map
@@ -499,17 +493,17 @@ Comprehensive Discovery Workflow:
 ================================
 
 1. robots.txt & sitemap.xml          (manual)
-2. Burp Suite passive spidering      (browse app)
-3. Burp Suite active spidering       (automated)
-4. Directory brute-force (gobuster)  (common.txt)
-5. File extension fuzzing (ffuf)     (.bak,.old,.zip)
-6. Version control checks            (.git,.svn)
-7. JavaScript analysis               (linkfinder)
-8. Subdomain enumeration             (DNS + CT)
-9. Virtual host discovery            (ffuf)
-10. Parameter discovery              (Param Miner)
-11. Google dorking                   (site: queries)
-12. Wayback Machine                  (waybackurls)
+1. Burp Suite passive spidering      (browse app)
+1. Burp Suite active spidering       (automated)
+1. Directory brute-force (gobuster)  (common.txt)
+1. File extension fuzzing (ffuf)     (.bak,.old,.zip)
+1. Version control checks            (.git,.svn)
+1. JavaScript analysis               (linkfinder)
+1. Subdomain enumeration             (DNS + CT)
+1. Virtual host discovery            (ffuf)
+1. Parameter discovery              (Param Miner)
+1. Google dorking                   (site: queries)
+1. Wayback Machine                  (waybackurls)
 ```
 
 ---
@@ -519,12 +513,12 @@ Comprehensive Discovery Workflow:
 **Target**: DVWA at `http://localhost:8080`
 
 1. Check `robots.txt` and `sitemap.xml`
-2. Spider with Burp Suite
-3. Run `gobuster` with `common.txt`
-4. Fuzz for backup files with `ffuf`
-5. Check for `.git` exposure
-6. Analyze any JavaScript files
-7. Document all discovered paths
+1. Spider with Burp Suite
+1. Run `gobuster` with `common.txt`
+1. Fuzz for backup files with `ffuf`
+1. Check for `.git` exposure
+1. Analyze any JavaScript files
+1. Document all discovered paths
 
 ```bash
 gobuster dir -u http://localhost:8080 \

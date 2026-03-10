@@ -1,6 +1,7 @@
 # Basic Shell Features
 ---
 ## Running Multiple Commands
+
 ```bash
 # Semicolons: run commands sequentially
 echo "first"; echo "second"; echo "third"
@@ -15,6 +16,7 @@ echo "second"
 ```
 ---
 ## Semicolons vs Newlines vs `&&`
+
 ```bash
 # Semicolon: always run next command
 false; echo "runs"    # prints "runs"
@@ -27,6 +29,7 @@ false || echo "yes"   # prints "yes"
 ```
 ---
 ## Command Grouping
+
 ```bash
 # Group with curly braces (runs in CURRENT shell)
 { echo "a"; echo "b"; } > output.txt
@@ -46,6 +49,7 @@ echo "$x"   # prints 1 (subshell change lost)
 ```
 ---
 ## Variables: The Basics
+
 ```bash
 # Assign a variable (NO SPACES around =)
 name="Bash Scripting"
@@ -62,6 +66,7 @@ echo "${name}_course"
 ```
 ---
 ## Why No Spaces Around `=`?
+
 ```bash
 # The shell parses this as:
 #   command: "name"
@@ -78,6 +83,7 @@ name=value
 ```
 ---
 ## Variable Substitution
+
 ```bash
 name="world"
 
@@ -93,6 +99,7 @@ echo "${name}foo"          # worldfoo
 ```
 ---
 ## Default Values
+
 ```bash
 # Use default if variable is unset or empty
 echo "${name:-default_value}"
@@ -111,6 +118,7 @@ echo "$color"            # prints "blue"
 ```
 ---
 ## Error on Unset Variables
+
 ```bash
 # Produce error if variable is unset or empty
 echo "${name:?Variable name is required}"
@@ -124,6 +132,7 @@ echo "${name?Variable name is required}"
 ```
 ---
 ## String Operations on Variables
+
 ```bash
 path="/home/user/documents/file.txt"
 
@@ -147,6 +156,7 @@ echo "${path%%/*}"            # (empty, first char is /)
 ```
 ---
 ## String Replacement
+
 ```bash
 text="hello world hello bash"
 
@@ -168,6 +178,7 @@ echo "${text/%bash/shell}"
 ```
 ---
 ## Case Conversion (`bash` 4.0+)
+
 ```bash
 name="Hello World"
 
@@ -185,6 +196,7 @@ echo "${name^^}"    # HELLO WORLD
 ```
 ---
 ## Quoting: The Three Types
+
 ```bash
 # 1. No quotes: word splitting + globbing happen
 files=*.txt
@@ -199,6 +211,7 @@ echo '$((1+1))'   # prints literally: $((1+1))
 ```
 ---
 ## When to Use Double Quotes
+
 ```bash
 # ALWAYS double-quote variable references
 # Unless you specifically want word splitting
@@ -236,6 +249,7 @@ done
 ```
 ---
 ## Escaping Special Characters
+
 ```bash
 # Backslash escapes the next character
 echo "The price is \$5.00"    # The price is $5.00
@@ -265,6 +279,7 @@ long line"
 | `~` | Home directory | quotes |
 ---
 ## Command Substitution
+
 ```bash
 # Modern syntax (preferred):
 today=$(date +%Y-%m-%d)
@@ -282,6 +297,7 @@ echo "Files: $(ls $(pwd))"   # Much clearer
 ```
 ---
 ## Arithmetic Expansion
+
 ```bash
 # Use $(( )) for integer arithmetic
 echo $((2 + 3))        # 5
