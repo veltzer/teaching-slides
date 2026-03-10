@@ -466,11 +466,10 @@ tasks:
 ## Exercise: Conditionals and Loops Lab
 
 1. Create a playbook that:
-   - Detects the OS and installs appropriate packages
-   - Creates users from a list with conditional group membership
-   - Sets up firewall rules using a loop with dict2items
-   - Retries a health check until the service is ready
-   - Uses `block/rescue` for error handling
-
-2. Test with `--check --diff` first
-3. Verify idempotency by running twice
+    1. Detects the OS and installs appropriate packages
+    1. Creates users from a list with conditional group membership
+    1. Sets up firewall rules using a loop with dict2items
+    1. Retries a health check until the service is ready
+    1. Uses `block/rescue` for error handling
+1. Test with `--check --diff` first
+1. Verify idempotency by running twice

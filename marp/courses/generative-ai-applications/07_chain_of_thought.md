@@ -463,13 +463,13 @@ For each:
 ## Key Takeaways — Chain-of-Thought Reasoning
 
 1. **CoT** improves accuracy by making reasoning explicit
-2. **"Let's think step by step"** is the simplest zero-shot CoT
-3. **Few-shot CoT** provides reasoning patterns via examples
-4. **Self-consistency** boosts reliability through majority voting
-5. **Tree of Thoughts** enables exploration of multiple paths
-6. **ReAct** combines reasoning with tool use
-7. CoT helps most with **multi-step reasoning** tasks
-8. The cost is increased **token usage** and **latency**
+1. **"Let's think step by step"** is the simplest zero-shot CoT
+1. **Few-shot CoT** provides reasoning patterns via examples
+1. **Self-consistency** boosts reliability through majority voting
+1. **Tree of Thoughts** enables exploration of multiple paths
+1. **ReAct** combines reasoning with tool use
+1. CoT helps most with **multi-step reasoning** tasks
+1. The cost is increased **token usage** and **latency**
 
 ---
 

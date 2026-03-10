@@ -102,8 +102,8 @@ Unlike **discriminative** models (classify existing data), generative models **p
 Three converging factors enabled the current explosion:
 
 1. **Scale of data** — Trillions of tokens from the internet
-2. **Scale of compute** — Thousands of GPUs training for months
-3. **Architectural breakthroughs** — The Transformer (2017)
+1. **Scale of compute** — Thousands of GPUs training for months
+1. **Architectural breakthroughs** — The Transformer (2017)
 
 ```text
 Performance
@@ -167,9 +167,9 @@ Day 5: IMAGES & SAFETY
 Each topic follows this pattern:
 
 1. **Concept** — Understand the theory
-2. **Code** — See working `Python` examples
-3. **Practice** — Hands-on exercises
-4. **Discussion** — Real-world applications and limitations
+1. **Code** — See working `Python` examples
+1. **Practice** — Hands-on exercises
+1. **Discussion** — Real-world applications and limitations
 
 **Every day includes:**
 - Live coding demonstrations

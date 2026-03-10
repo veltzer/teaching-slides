@@ -678,13 +678,13 @@ Bonus:
 ## Key Takeaways — PEFT, LoRA, QLoRA
 
 1. **PEFT** enables fine-tuning large models on consumer hardware
-2. **LoRA** adds low-rank adapter matrices, training <1% of parameters
-3. **QLoRA** combines 4-bit quantization with LoRA for 6-10x memory savings
-4. **70B models** can be fine-tuned on a single 24GB GPU with QLoRA
-5. **Prompt Tuning** is the most parameter-efficient but limited in quality
-6. **LoRA adapters** are tiny (~80MB) and swappable at runtime
-7. **TRL** library simplifies SFT and DPO training with PEFT
-8. Start with **r=16, all-linear, lr=2e-4** as a default configuration
+1. **LoRA** adds low-rank adapter matrices, training <1% of parameters
+1. **QLoRA** combines 4-bit quantization with LoRA for 6-10x memory savings
+1. **70B models** can be fine-tuned on a single 24GB GPU with QLoRA
+1. **Prompt Tuning** is the most parameter-efficient but limited in quality
+1. **LoRA adapters** are tiny (~80MB) and swappable at runtime
+1. **TRL** library simplifies SFT and DPO training with PEFT
+1. Start with **r=16, all-linear, lr=2e-4** as a default configuration
 
 ---
 

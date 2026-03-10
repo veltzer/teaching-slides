@@ -365,13 +365,13 @@ Compare:
 ## Key Takeaways — HuggingFace & LangChain
 
 1. `HuggingFace` Hub hosts 500K+ models and 100K+ datasets
-2. **Transformers** library provides a unified API for all models
-3. **Pipeline API** makes it simple to run models for common tasks
-4. **Local embeddings** eliminate API costs for semantic search
-5. `HuggingFace` **Inference API** runs models without local GPU
-6. **Spaces** enables quick demo deployment with Gradio
-7. `LangChain` integrates seamlessly with `HuggingFace` models
-8. **Fully local** RAG pipelines are now practical and performant
+1. **Transformers** library provides a unified API for all models
+1. **Pipeline API** makes it simple to run models for common tasks
+1. **Local embeddings** eliminate API costs for semantic search
+1. `HuggingFace` **Inference API** runs models without local GPU
+1. **Spaces** enables quick demo deployment with Gradio
+1. `LangChain` integrates seamlessly with `HuggingFace` models
+1. **Fully local** RAG pipelines are now practical and performant
 
 ---
 

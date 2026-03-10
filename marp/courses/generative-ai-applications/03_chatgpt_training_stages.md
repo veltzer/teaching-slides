@@ -669,13 +669,13 @@ RAW TEXT (Internet, books, code)
 ## Key Takeaways — ChatGPT Training Stages
 
 1. **Pre-training** creates a powerful but raw language model through next-token prediction
-2. **SFT** teaches instruction-following with human-written examples
-3. **RLHF** aligns model behavior with human preferences using reward models
-4. The **KL penalty** prevents reward hacking during RLHF
-5. **DPO** offers a simpler alternative that skips reward model training
-6. **Constitutional AI** reduces human labeling needs via AI self-critique
-7. Each stage requires dramatically different data volumes and compute
-8. The full pipeline costs tens to hundreds of millions of dollars
+1. **SFT** teaches instruction-following with human-written examples
+1. **RLHF** aligns model behavior with human preferences using reward models
+1. The **KL penalty** prevents reward hacking during RLHF
+1. **DPO** offers a simpler alternative that skips reward model training
+1. **Constitutional AI** reduces human labeling needs via AI self-critique
+1. Each stage requires dramatically different data volumes and compute
+1. The full pipeline costs tens to hundreds of millions of dollars
 
 ---
 

@@ -371,13 +371,13 @@ Bonus: Add human evaluation for a subset of 10 examples
 ## Key Takeaways — Measuring Quality
 
 1. **No single metric** captures all aspects of text quality
-2. **BLEU** and **ROUGE** measure surface-level similarity
-3. **BERTScore** captures semantic meaning but not factual accuracy
-4. **Perplexity** measures fluency, not correctness
-5. **LLM-as-Judge** is flexible but susceptible to position bias
-6. **Human evaluation** is the gold standard but expensive
-7. Always use **multiple metrics** and evaluation approaches
-8. Build **automated evaluation pipelines** for continuous testing
+1. **BLEU** and **ROUGE** measure surface-level similarity
+1. **BERTScore** captures semantic meaning but not factual accuracy
+1. **Perplexity** measures fluency, not correctness
+1. **LLM-as-Judge** is flexible but susceptible to position bias
+1. **Human evaluation** is the gold standard but expensive
+1. Always use **multiple metrics** and evaluation approaches
+1. Build **automated evaluation pipelines** for continuous testing
 
 ---
 

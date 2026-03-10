@@ -613,12 +613,12 @@ Benchmark saturation problem:
 ## Limitations of Current GPT Models
 
 1. **Knowledge cutoff** — No information after training date
-2. **Hallucinations** — Confidently states false information
-3. **Math/logic** — Still makes basic arithmetic errors
-4. **Consistency** — Different runs may give different answers
-5. **Long context** — Performance degrades with very long inputs
-6. **Bias** — Reflects biases in training data
-7. **No true understanding** — Pattern matching vs. comprehension debate
+1. **Hallucinations** — Confidently states false information
+1. **Math/logic** — Still makes basic arithmetic errors
+1. **Consistency** — Different runs may give different answers
+1. **Long context** — Performance degrades with very long inputs
+1. **Bias** — Reflects biases in training data
+1. **No true understanding** — Pattern matching vs. comprehension debate
 
 ```python
 # Example of a limitation
@@ -661,13 +661,13 @@ for temp in [0.0, 0.5, 1.0, 1.5]:
 ## Key Takeaways — Language Modeling with GPT
 
 1. `GPT` models are **decoder-only transformers** using causal attention
-2. Pre-training objective: **predict the next token**
-3. `ChatGPT` = `GPT` + **SFT** + **RLHF** (or `DPO`)
-4. The three training stages progressively align the model
-5. **Temperature** and **top-p** control generation randomness
-6. Reasoning models trade **inference compute** for accuracy
-7. Model distillation enables smaller, cheaper models
-8. Benchmarks help compare but are increasingly saturated
+1. Pre-training objective: **predict the next token**
+1. `ChatGPT` = `GPT` + **SFT** + **RLHF** (or `DPO`)
+1. The three training stages progressively align the model
+1. **Temperature** and **top-p** control generation randomness
+1. Reasoning models trade **inference compute** for accuracy
+1. Model distillation enables smaller, cheaper models
+1. Benchmarks help compare but are increasingly saturated
 
 ---
 

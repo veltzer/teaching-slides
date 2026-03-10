@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Advanced Docker Storage and Volumes
 
 Persistent data management for containers

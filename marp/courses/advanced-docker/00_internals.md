@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Docker Internals and Architecture
 
 Understanding what happens beneath the `docker` CLI

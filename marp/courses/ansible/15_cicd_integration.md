@@ -545,11 +545,10 @@ echo "$ANSIBLE_VAULT_PASSWORD"
 ## Exercise: CI/CD Lab
 
 1. Create a GitHub Actions workflow that:
-   - Lints playbooks with `ansible-lint`
-   - Runs `Molecule` tests
-   - Deploys to staging on merge to main
-   - Has a manual gate for production
-
-2. Implement a rolling deployment with health checks
-3. Add Slack notifications for deploy results
-4. Practice blue/green switching
+    - Lints playbooks with `ansible-lint`
+    - Runs `Molecule` tests
+    - Deploys to staging on merge to main
+    - Has a manual gate for production
+1. Implement a rolling deployment with health checks
+1. Add Slack notifications for deploy results
+1. Practice blue/green switching

@@ -659,13 +659,13 @@ Bonus:
 ## Key Takeaways — Agents and Memory
 
 1. **Agents** = `LLM` + tools + loop (observe → think → act)
-2. **Planning strategies** (ReAct, Plan-and-Execute) guide agent behavior
-3. **Memory** is essential for multi-turn interactions
-4. **Buffer memory** is simplest but limited by context window
-5. **Summary memory** compresses old conversations
-6. **Vector memory** enables semantic retrieval of relevant history
-7. **RAG** grounds responses in your specific documents
-8. **Safety guardrails** prevent runaway agents and harmful actions
+1. **Planning strategies** (ReAct, Plan-and-Execute) guide agent behavior
+1. **Memory** is essential for multi-turn interactions
+1. **Buffer memory** is simplest but limited by context window
+1. **Summary memory** compresses old conversations
+1. **Vector memory** enables semantic retrieval of relevant history
+1. **RAG** grounds responses in your specific documents
+1. **Safety guardrails** prevent runaway agents and harmful actions
 
 ---
 

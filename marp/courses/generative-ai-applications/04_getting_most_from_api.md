@@ -651,13 +651,13 @@ tools = [
 ## Key Takeaways — Getting the Most from an API
 
 1. Use **streaming** for real-time user-facing applications
-2. **Function calling** extends `LLM` capabilities with external tools
-3. **Structured outputs** (JSON mode, Pydantic) ensure parseable responses
-4. **Batch API** saves 50% on non-urgent processing
-5. Implement **retries with exponential backoff** for reliability
-6. **Cache** deterministic requests to reduce cost
-7. **Monitor usage** to avoid budget surprises
-8. Choose the **right model** for each task (mini vs. full)
+1. **Function calling** extends `LLM` capabilities with external tools
+1. **Structured outputs** (JSON mode, Pydantic) ensure parseable responses
+1. **Batch API** saves 50% on non-urgent processing
+1. Implement **retries with exponential backoff** for reliability
+1. **Cache** deterministic requests to reduce cost
+1. **Monitor usage** to avoid budget surprises
+1. Choose the **right model** for each task (mini vs. full)
 
 ---
 

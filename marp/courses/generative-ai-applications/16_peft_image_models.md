@@ -347,13 +347,13 @@ For both:
 ## Key Takeaways — PEFT for Image Models
 
 1. **DreamBooth** fine-tunes the full model for subject fidelity
-2. **DreamBooth + LoRA** achieves similar quality with ~50MB adapters
-3. **Textual Inversion** learns a new word embedding (~3KB)
-4. **Prior preservation** prevents catastrophic forgetting
-5. **Multiple LoRA adapters** can be composed at runtime
-6. Only **3-5 images** are needed for personalization
-7. **ControlNet** adds spatial control complementary to personalization
-8. Choose the method based on quality needs vs. storage constraints
+1. **DreamBooth + LoRA** achieves similar quality with ~50MB adapters
+1. **Textual Inversion** learns a new word embedding (~3KB)
+1. **Prior preservation** prevents catastrophic forgetting
+1. **Multiple LoRA adapters** can be composed at runtime
+1. Only **3-5 images** are needed for personalization
+1. **ControlNet** adds spatial control complementary to personalization
+1. Choose the method based on quality needs vs. storage constraints
 
 ---
 

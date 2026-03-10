@@ -293,8 +293,8 @@ db_host: db.prod.internal
 ## Exercise: Vault Lab
 
 1. Create an encrypted vault file with database credentials
-2. Reference vault variables from plain variable files
-3. Use `ansible-vault encrypt_string` for inline encryption
-4. Run a playbook using `--vault-password-file`
-5. Practice `ansible-vault edit`, `view`, `rekey`
-6. Implement the `vault_` prefix naming convention
+1. Reference vault variables from plain variable files
+1. Use `ansible-vault encrypt_string` for inline encryption
+1. Run a playbook using `--vault-password-file`
+1. Practice `ansible-vault edit`, `view`, `rekey`
+1. Implement the `vault_` prefix naming convention

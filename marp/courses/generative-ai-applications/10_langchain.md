@@ -557,13 +557,13 @@ Bonus:
 ## Key Takeaways — LangChain
 
 1. `LangChain` provides building blocks for `LLM` applications
-2. **LCEL** (pipe operator) enables composable chains
-3. **Document loaders** + **text splitters** prepare data for RAG
-4. **Vector stores** enable semantic search over your documents
-5. **Memory** classes handle conversation persistence
-6. **Agents** combine `LLM` reasoning with tool use
-7. **LangGraph** enables complex multi-step agent workflows
-8. **LangSmith** provides observability and debugging
+1. **LCEL** (pipe operator) enables composable chains
+1. **Document loaders** + **text splitters** prepare data for RAG
+1. **Vector stores** enable semantic search over your documents
+1. **Memory** classes handle conversation persistence
+1. **Agents** combine `LLM` reasoning with tool use
+1. **LangGraph** enables complex multi-step agent workflows
+1. **LangSmith** provides observability and debugging
 
 ---
 

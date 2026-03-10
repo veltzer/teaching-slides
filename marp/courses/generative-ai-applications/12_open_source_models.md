@@ -393,13 +393,13 @@ Exercise: Set up and compare local models.
 ## Key Takeaways — Open Source Models
 
 1. Open source models offer **privacy**, **cost savings**, and **full control**
-2. **LLaMA 3**, **Mistral**, and **Qwen** lead the open source landscape
-3. **Quantization** (4-bit, 8-bit) dramatically reduces memory requirements
-4. **vLLM** and **Ollama** make deployment simple
-5. **OpenAI-compatible APIs** enable code portability between providers
-6. The quality gap between open and closed models is **shrinking rapidly**
-7. Model choice depends on task complexity, privacy needs, and budget
-8. A 70B 4-bit model on a single GPU can match many API-based models
+1. **LLaMA 3**, **Mistral**, and **Qwen** lead the open source landscape
+1. **Quantization** (4-bit, 8-bit) dramatically reduces memory requirements
+1. **vLLM** and **Ollama** make deployment simple
+1. **OpenAI-compatible APIs** enable code portability between providers
+1. The quality gap between open and closed models is **shrinking rapidly**
+1. Model choice depends on task complexity, privacy needs, and budget
+1. A 70B 4-bit model on a single GPU can match many API-based models
 
 ---
 

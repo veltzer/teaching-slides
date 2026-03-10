@@ -524,9 +524,9 @@ molecule:
 ## Exercise: Molecule Lab
 
 1. Create a new role with `molecule init`
-2. Write the role tasks (install nginx, deploy config)
-3. Write verify tests (package installed, service running)
-4. Run the full `molecule test` cycle
-5. Add a second platform (Debian + Ubuntu)
-6. Add `testinfra` tests for port and config validation
-7. Fix any idempotency issues
+1. Write the role tasks (install nginx, deploy config)
+1. Write verify tests (package installed, service running)
+1. Run the full `molecule test` cycle
+1. Add a second platform (Debian + Ubuntu)
+1. Add `testinfra` tests for port and config validation
+1. Fix any idempotency issues

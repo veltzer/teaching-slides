@@ -333,13 +333,13 @@ These aren't theoretical — they cause real harm.
 ## Key Takeaways — Bias in Generative Models
 
 1. **Bias** is systematic and comes from training data, process, and deployment
-2. Bias manifests in **text** (stereotypes, associations) and **images** (representation)
-3. **Measurement** tools (WEAT, counterfactual testing) help quantify bias
-4. **Mitigation** must happen at every stage: data, training, output, deployment
-5. **Prompt engineering** can reduce but not eliminate bias
-6. **Regular auditing** is essential for deployed systems
-7. There is often a **tension** between debiasing and accuracy
-8. **No model is bias-free** — transparency about limitations is critical
+1. Bias manifests in **text** (stereotypes, associations) and **images** (representation)
+1. **Measurement** tools (WEAT, counterfactual testing) help quantify bias
+1. **Mitigation** must happen at every stage: data, training, output, deployment
+1. **Prompt engineering** can reduce but not eliminate bias
+1. **Regular auditing** is essential for deployed systems
+1. There is often a **tension** between debiasing and accuracy
+1. **No model is bias-free** — transparency about limitations is critical
 
 ---
 

@@ -575,13 +575,13 @@ print(response.choices[0].message.content)
 ## Key Takeaways — Overview of Generative AI
 
 1. **Generative AI** creates new content by learning data distributions
-2. The **Transformer** architecture (2017) is the foundation
-3. **Self-attention** allows models to understand relationships between all tokens
-4. **Autoregressive generation** produces one token at a time
-5. **Scaling laws** predict performance from model size, data, and compute
-6. **Hallucinations** remain the biggest practical challenge
-7. **Context windows** define how much information a model can process
-8. **Cost** varies dramatically between model sizes and providers
+1. The **Transformer** architecture (2017) is the foundation
+1. **Self-attention** allows models to understand relationships between all tokens
+1. **Autoregressive generation** produces one token at a time
+1. **Scaling laws** predict performance from model size, data, and compute
+1. **Hallucinations** remain the biggest practical challenge
+1. **Context windows** define how much information a model can process
+1. **Cost** varies dramatically between model sizes and providers
 
 ---
 
@@ -592,11 +592,11 @@ print(response.choices[0].message.content)
 Exercise: Explore how different text is tokenized.
 
 1. Install tiktoken: pip install tiktoken
-2. Try tokenizing the following and observe token counts:
+1. Try tokenizing the following and observe token counts:
    - English text vs. code vs. other languages
    - Common words vs. rare technical terms
    - Numbers and dates
-3. Calculate the cost of processing a document
+1. Calculate the cost of processing a document
 """
 import tiktoken
 

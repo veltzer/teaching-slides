@@ -762,15 +762,15 @@ Problem: "Slow execution"
 Build a complete `Ansible` project that:
 
 1. **Structure**: Proper directory layout with roles
-2. **Inventory**: Multi-environment (staging + production)
-3. **Roles**: Create 3+ roles (common, web, database)
-4. **Vault**: Encrypt all secrets
-5. **Templates**: Use `Jinja2` for dynamic configuration
-6. **Testing**: `Molecule` tests for at least one role
-7. **CI/CD**: GitHub Actions workflow for linting + testing
-8. **Deployment**: Rolling update with health checks
-9. **Rollback**: Automated rollback on failure
-10. **Documentation**: Variables and usage documented
+1. **Inventory**: Multi-environment (staging + production)
+1. **Roles**: Create 3+ roles (common, web, database)
+1. **Vault**: Encrypt all secrets
+1. **Templates**: Use `Jinja2` for dynamic configuration
+1. **Testing**: `Molecule` tests for at least one role
+1. **CI/CD**: GitHub Actions workflow for linting + testing
+1. **Deployment**: Rolling update with health checks
+1. **Rollback**: Automated rollback on failure
+1. **Documentation**: Variables and usage documented
 
 ---
 

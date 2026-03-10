@@ -465,13 +465,13 @@ Test tickets:
 ## Key Takeaways — Few-Shot and Zero-Shot Learning
 
 1. **Zero-shot** works for common, well-defined tasks
-2. **Few-shot** dramatically improves performance on custom/domain tasks
-3. **Example quality** matters more than quantity
-4. **Dynamic selection** of examples based on similarity boosts results
-5. **5-8 examples** is typically the sweet spot
-6. **Balance** examples across all categories
-7. **Many-shot** (50+) with long context windows approaches fine-tuning quality
-8. When few-shot isn't enough, consider **fine-tuning** (covered later today)
+1. **Few-shot** dramatically improves performance on custom/domain tasks
+1. **Example quality** matters more than quantity
+1. **Dynamic selection** of examples based on similarity boosts results
+1. **5-8 examples** is typically the sweet spot
+1. **Balance** examples across all categories
+1. **Many-shot** (50+) with long context windows approaches fine-tuning quality
+1. When few-shot isn't enough, consider **fine-tuning** (covered later today)
 
 ---
 

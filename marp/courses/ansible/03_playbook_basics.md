@@ -759,15 +759,14 @@ ansible-playbook site.yml --list-tags
 ## Exercise: Playbook Basics Lab
 
 1. Create a playbook that:
-   - Uses variables for package names and paths
-   - Installs different packages based on OS family
-   - Creates users with a loop
-   - Uses handlers for service restarts
-   - Has tags for selective execution
-
-2. Use `--check --diff` to preview changes
-3. Use `--tags` to run specific parts
-4. Use `--limit` to target specific hosts
+    - Uses variables for package names and paths
+    - Installs different packages based on OS family
+    - Creates users with a loop
+    - Uses handlers for service restarts
+    - Has tags for selective execution
+1. Use `--check --diff` to preview changes
+1. Use `--tags` to run specific parts
+1. Use `--limit` to target specific hosts
 
 ---
 

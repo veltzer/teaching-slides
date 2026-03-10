@@ -464,13 +464,13 @@ For each task:
 ## Key Takeaways — Prompt Engineering
 
 1. **Structure** your prompts: role, context, task, constraints, format
-2. **Be specific** about what you want and what you don't want
-3. Use **delimiters** to separate instructions from data
-4. **Iterate** on prompts — first attempt is rarely optimal
-5. **Templates** enable reusable, consistent prompting
-6. **Prompt injection** is a real security threat — always defend
-7. Longer prompts aren't always better — find the optimal length
-8. Use the `LLM` itself to help improve your prompts (meta-prompting)
+1. **Be specific** about what you want and what you don't want
+1. Use **delimiters** to separate instructions from data
+1. **Iterate** on prompts — first attempt is rarely optimal
+1. **Templates** enable reusable, consistent prompting
+1. **Prompt injection** is a real security threat — always defend
+1. Longer prompts aren't always better — find the optimal length
+1. Use the `LLM` itself to help improve your prompts (meta-prompting)
 
 ---
 

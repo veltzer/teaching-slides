@@ -404,13 +404,13 @@ response = requests.post(
 ## Key Takeaways — Image Generation
 
 1. **Diffusion models** dominate current image generation (replacing GANs)
-2. **Latent diffusion** operates in compressed space for efficiency
-3. **CLIP** connects text and images, enabling text-to-image generation
-4. **Guidance scale** controls text adherence vs. image quality
-5. **ControlNet** adds spatial control (edges, depth, pose)
-6. **Inpainting** enables selective editing of image regions
-7. Both **API-based** (DALL-E 3) and **local** (Stable Diffusion) options exist
-8. The field is rapidly evolving toward video generation
+1. **Latent diffusion** operates in compressed space for efficiency
+1. **CLIP** connects text and images, enabling text-to-image generation
+1. **Guidance scale** controls text adherence vs. image quality
+1. **ControlNet** adds spatial control (edges, depth, pose)
+1. **Inpainting** enables selective editing of image regions
+1. Both **API-based** (DALL-E 3) and **local** (Stable Diffusion) options exist
+1. The field is rapidly evolving toward video generation
 
 ---
 

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Docker in Production
 
 Logging, monitoring, health checks, and lifecycle management
