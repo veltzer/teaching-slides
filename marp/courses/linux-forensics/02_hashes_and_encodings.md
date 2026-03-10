@@ -13,11 +13,11 @@
 - A hash function maps data of arbitrary size to a fixed-size output
 - The output is called a hash, digest, or checksum
 - Properties of cryptographic hash functions:
-  - **Deterministic**: same input always produces same output
-  - **Fast**: quick to compute for any input
-  - **One-way**: cannot reverse the hash to get original data
-  - **Avalanche effect**: small change in input = large change in output
-  - **Collision resistant**: hard to find two inputs with same hash
+    - **Deterministic**: same input always produces same output
+    - **Fast**: quick to compute for any input
+    - **One-way**: cannot reverse the hash to get original data
+    - **Avalanche effect**: small change in input = large change in output
+    - **Collision resistant**: hard to find two inputs with same hash
 
 ---
 

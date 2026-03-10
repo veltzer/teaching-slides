@@ -24,7 +24,7 @@
 
 ## Testing Pyramid for Infrastructure
 
-```
+```text
             /\
            /  \          Integration Tests
           /    \         (full stack, multi-host)
@@ -255,7 +255,7 @@ molecule list
 
 ## Molecule Test Sequence
 
-```
+```text
 molecule test runs these steps in order:
 
 1. dependency     - Install role dependencies
@@ -345,7 +345,7 @@ py.test --connection=ansible \
 
 ## Multiple Test Scenarios
 
-```
+```text
 roles/nginx/
 └── molecule/
     ├── default/               # Default scenario

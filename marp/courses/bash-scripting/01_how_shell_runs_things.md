@@ -9,7 +9,8 @@
   4. What to do with the result
 ---
 ## Command Line Parsing: Step by Step
-```
+
+```txt
 Input: echo "hello world" > output.txt
 
 Step 1: Tokenize    -> [echo] ["hello world"] [>] [output.txt]
@@ -46,7 +47,8 @@ echo "*.txt"
 ```
 ---
 ## Finding Commands: Three Types
-```
+
+```txt
 +------------------+-------------------+------------------+
 |   Built-in       |   Function        |   External       |
 |   Commands       |   Definitions     |   Programs       |
@@ -160,7 +162,8 @@ command -v python3
 alias ls='ls --color=auto'
 which ls     # may show the alias
 command -v ls  # /usr/bin/ls
-```
+
+```txt
 ---
 ## `fork` and `exec`: How External Commands Run
 
@@ -177,7 +180,7 @@ Shell Process (PID 100)
     |-- wait() --> collects exit status
     |
     |-- ready for next command
-```
+```text
 ---
 ## Watching `fork`/`exec` in Action
 ```bash

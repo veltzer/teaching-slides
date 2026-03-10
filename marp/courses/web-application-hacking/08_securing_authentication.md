@@ -12,7 +12,7 @@ paginate: true
 
 ## Defense Strategy Overview
 
-```
+```text
 +--Prevention Layer---------+
 | Strong password policy    |
 | MFA enforcement           |
@@ -63,7 +63,7 @@ verified = ph.verify(hashed, password)  # Returns True/False
 
 ## Password Policy Recommendations
 
-```
+```text
 Minimum Requirements (NIST SP 800-63B):
 - Minimum 8 characters (12+ recommended)
 - Maximum at least 64 characters
@@ -116,7 +116,7 @@ def check_rate_limit(identifier, max_attempts=5, window=300):
 
 ## Account Lockout Strategy
 
-```
+```text
 Progressive Response:
 Attempt 1-3:   Normal login
 Attempt 4-5:   Add CAPTCHA
@@ -170,7 +170,7 @@ app.use(session({
 
 ## Secure Password Reset Flow
 
-```
+```text
 1. User requests reset for email
 2. ALWAYS respond: "If account exists, email sent"
 3. Generate cryptographically random token (32+ bytes)
@@ -193,7 +193,7 @@ DO NOT:
 
 ## Multi-Factor Authentication Best Practices
 
-```
+```text
 Recommended MFA methods (strongest to weakest):
 1. Hardware security keys (FIDO2/WebAuthn)
 2. Authenticator apps (TOTP - Google Auth, Authy)
@@ -268,7 +268,7 @@ def login(username, password):
 
 ## Authentication Security Checklist
 
-```
+```text
 Transport:
 [x] All login pages served over HTTPS
 [x] HSTS header enabled
@@ -297,7 +297,7 @@ Session:
 
 ## WebAuthn / FIDO2 - The Future of Authentication
 
-```
+```text
 WebAuthn replaces passwords with cryptographic credentials
 
 Registration:
@@ -399,7 +399,7 @@ ALERT_RULES = {
 
 ## Passwordless Authentication
 
-```
+```text
 Passwordless methods eliminate password risks entirely:
 
 1. Magic Links

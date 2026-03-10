@@ -4,7 +4,7 @@
 
 ## Day 2: APIs of Generative Models
 
-```
+```text
 Today's Roadmap:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  ┌──────────────────────────────────────┐
@@ -21,7 +21,7 @@ Today's Roadmap:
 
 ## The OpenAI API — Architecture
 
-```
+```text
 Your Application
       │
       │ HTTPS (REST API)
@@ -497,7 +497,7 @@ def safe_completion(messages, model="gpt-4o"):
 
 ## Cost Optimization Strategies
 
-```
+```text
 ┌───────────────────────────────────────────────────────┐
 │           COST OPTIMIZATION PLAYBOOK                   │
 ├───────────────────────────────────────────────────────┤
@@ -846,7 +846,7 @@ print(messages.data[0].content[0].text.value)
 
 ## API Best Practices Summary
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │          API BEST PRACTICES CHECKLIST                 │
 ├──────────────────────────────────────────────────────┤

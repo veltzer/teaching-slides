@@ -23,7 +23,7 @@ Advanced Kubernetes Course - Day 3, Module 5
 
 ## Why Serverless on `Kubernetes`?
 
-```
+```text
 Traditional Kubernetes:
   Pods always running → costs even when idle
 
@@ -50,7 +50,7 @@ Serverless (Knative):
 
 ## `Knative` Architecture
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │                  Knative                      │
 │                                              │
@@ -139,7 +139,7 @@ kubectl apply -f hello-service.yaml
 
 ## `Knative` Concepts
 
-```
+```text
 ┌──────── Knative Service ────────────────────┐
 │                                             │
 │  ┌─── Configuration ────────────────────┐   │
@@ -166,7 +166,7 @@ kubectl apply -f hello-service.yaml
 
 ## Scale to Zero
 
-```
+```text
 Request arrives
       │
       ▼
@@ -398,7 +398,7 @@ spec:
 
 ## Event-Driven Architecture
 
-```
+```text
 ┌──────────┐    ┌────────────────────────────────────┐
 │ API      │───▶│           Broker                   │
 │ Gateway  │    │  (receives CloudEvents)            │
@@ -679,7 +679,7 @@ Key takeaways:
 
 ## Course Wrap-Up
 
-```
+```text
 Day 1: Deploying Resilient Apps & Extending Kubernetes
   ✓ ReplicaSets, StatefulSets, Resources, Probes
   ✓ HPA, Cluster Autoscaler, KEDA

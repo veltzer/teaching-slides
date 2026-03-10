@@ -149,7 +149,7 @@ source ~/.bashrc
 - Aliases: interactive shortcuts, use functions in scripts
 ---
 ## Best Practices: Final Checklist
-```
+```text
 Scripts:
   [x] Always use #!/bin/bash or #!/usr/bin/env bash
   [x] Always use set -euo pipefail

@@ -22,7 +22,7 @@
 
 ## Tower / AWX Architecture
 
-```
+```text
 +--------------------------------------------------+
 |                   Tower / AWX                      |
 |                                                    |
@@ -67,7 +67,7 @@
 
 ## RBAC in Tower
 
-```
+```text
 Organization
   └── Teams
        ├── Team: DevOps
@@ -90,7 +90,7 @@ Organization
 - Optional: survey forms for runtime input
 - Can be launched via UI, API, or schedule
 
-```
+```text
 Job Template: "Deploy Application"
   ├── Playbook: deploy.yml
   ├── Inventory: Production
@@ -108,7 +108,7 @@ Job Template: "Deploy Application"
 
 ## Workflows
 
-```
+```text
 Start
   │
   ├── [Success] ──> Run Tests
@@ -149,7 +149,7 @@ Start
 
 ## Inventory Sources in Tower
 
-```
+```text
 Inventory: "Cloud Production"
   ├── Source: AWS EC2 (auto-sync every 30 min)
   │     ├── Regions: us-east-1, eu-west-1

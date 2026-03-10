@@ -11,10 +11,10 @@
 ## What Is Phishing?
 
 - Fraudulent messages designed to trick you into:
-  - Clicking a malicious link
-  - Opening a dangerous attachment
-  - Entering credentials on a fake website
-  - Transferring money or sharing sensitive data
+    - Clicking a malicious link
+    - Opening a dangerous attachment
+    - Entering credentials on a fake website
+    - Transferring money or sharing sensitive data
 - Named after "fishing" - casting a wide net hoping someone bites
 
 ---
@@ -33,7 +33,7 @@
 
 ## Anatomy of a Phishing Email
 
-```
+```text
 From: security@amaz0n-support.com    <-- Fake domain
 To: you@company.com
 Subject: URGENT: Your account will be suspended!
@@ -68,7 +68,7 @@ Amazon Customer Support               <-- Impersonation
 
 Before clicking any link in an email:
 
-```
+```text
 What you see:     [Click here to verify your account]
 
 What you get      https://totally-legit-bank.phishing-site.ru/login
@@ -130,7 +130,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Spam Filtering
 
 ## How It Works
-```
+```text
 Incoming Email
       |
       v
@@ -183,9 +183,9 @@ Incoming Email
 
 - Attackers impersonate executives or trusted partners
 - Common scenarios:
-  - "Please wire $25,000 to this new vendor account"
-  - "I need you to buy gift cards and send me the codes"
-  - "Please update our bank details for the next payment"
+    - "Please wire $25,000 to this new vendor account"
+    - "I need you to buy gift cards and send me the codes"
+    - "Please update our bank details for the next payment"
 - Always verify financial requests by phone or in person
 - Use established approval workflows for any payment changes
 

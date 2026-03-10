@@ -52,7 +52,7 @@ spec:
 
 ## Rolling Update Visualization
 
-```
+```text
 maxSurge: 1, maxUnavailable: 1, replicas: 4
 
 Step 1: Create 1 new (surge), terminate 1 old
@@ -106,7 +106,7 @@ kubectl rollout undo deployment/web --to-revision=3
 
 ## Blue-Green Deployment
 
-```
+```text
 ┌────────────────────────────────────────────┐
 │                                            │
 │  Blue (current v1)    Green (new v2)       │
@@ -225,7 +225,7 @@ kubectl delete deployment web-blue
 
 ## Canary Deployment
 
-```
+```text
 Phase 1: 5% canary
 ┌──────────────────────────────────────────┐
 │  v1 [██][██][██][██][██][██][██][██][██]  │  95%

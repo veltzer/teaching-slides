@@ -40,7 +40,7 @@ Total: **1100 points** available
 
 ## CTF Tips & Strategy
 
-```
+```text
 1. READ the challenge description carefully
 2. Start with LOW-hanging fruit (easy challenges)
 3. Take NOTES on everything you try
@@ -60,7 +60,7 @@ Time Management:
 
 ## CTF Methodology Reminder
 
-```
+```text
 +--Reconnaissance---+
 | nmap full scan     |
 | Directory brute    |
@@ -203,7 +203,7 @@ No specific hints - use everything you've learned!
 
 ## CTF Scoring
 
-```
+```text
 +--Team--+--Ch1--+--Ch2--+--Ch3--+--Ch4--+--Ch5--+--Ch6--+--Ch7--+--Total--+
 | Team A |  100  |  200  |  200  |  200  |  300  |  200  |  100  |  1300   |
 | Team B |  100  |  200  |    0  |  200  |  300  |    0  |    0  |   800   |
@@ -250,7 +250,7 @@ FLAG{the_flag_value}
 
 ## CTF Common Pitfalls
 
-```
+```text
 Things that waste time in CTFs:
 
 1. Not reading the challenge description carefully
@@ -315,7 +315,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ## Vulnerability Cheat Sheet Summary
 
-```
+```text
 +--Vulnerability------+--Test Payload----+--Defense---------+
 | SQL Injection       | ' OR 1=1--       | Param queries    |
 | XSS (Reflected)     | <script>alert(1) | Output encoding  |
@@ -336,9 +336,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ## Course Review: Day 1
 
-**Web Application (In)security & Mapping**
-
-Key takeaways:
+Web Application (In)security & Mapping - Key takeaways:
 - Web applications are the #1 attack vector
 - Technology stack identification guides testing
 - Burp Suite is the essential testing tool
@@ -350,9 +348,7 @@ Key takeaways:
 
 ## Course Review: Day 2
 
-**Authentication & Session Attacks + SQL Injection Basics**
-
-Key takeaways:
+Authentication & Session Attacks + SQL Injection Basics - Key takeaways:
 - Authentication flaws enable account takeover
 - Password spraying and credential stuffing are effective
 - Session management requires cryptographic randomness
@@ -364,9 +360,7 @@ Key takeaways:
 
 ## Course Review: Day 3
 
-**Advanced SQL Injection & XSS**
-
-Key takeaways:
+Advanced SQL Injection & XSS - Key takeaways:
 - `UNION`-based, blind, and time-based `SQL injection` techniques
 - `sqlmap` automates detection and exploitation
 - Filter bypass requires creative encoding
@@ -379,9 +373,7 @@ Key takeaways:
 
 ## Course Review: Day 4
 
-**Back-End Attacks, Logic Flaws & Hardening**
-
-Key takeaways:
+Back-End Attacks, Logic Flaws & Hardening - Key takeaways:
 - OS command injection gives full system access
 - File path attacks read/write arbitrary files
 - Deserialization is extremely dangerous
@@ -394,9 +386,7 @@ Key takeaways:
 
 ## Course Review: Day 5
 
-**Boot2Root & CTF**
-
-Key takeaways:
+Boot2Root & CTF - Key takeaways:
 - Systematic methodology from scanning to root
 - Chain multiple vulnerabilities for full compromise
 - Privilege escalation exploits misconfigurations
@@ -408,7 +398,7 @@ Key takeaways:
 
 ## Top 10 Defensive Recommendations
 
-```
+```text
 1.  Use parameterized queries for ALL database access
 2.  Implement context-aware output encoding (XSS prevention)
 3.  Enforce multi-factor authentication
@@ -425,7 +415,7 @@ Key takeaways:
 
 ## Security Testing Workflow - Summary
 
-```
+```text
 +--Planning Phase---------+
 | Define scope & rules    |
 | Get written auth        |
@@ -477,7 +467,7 @@ Key takeaways:
 
 ## Certifications Path
 
-```
+```text
 Entry Level:
   CompTIA Security+
   eJPT (eLearnSecurity)
@@ -502,7 +492,7 @@ Expert:
 
 ## Professional Pentesting Reporting
 
-```
+```text
 Executive Summary:
   - Overall risk rating
   - Key findings (3-5 bullet points)

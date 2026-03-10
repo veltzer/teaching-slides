@@ -301,7 +301,7 @@ sort -t'|' -k1 combined_timeline.txt > sorted_timeline.txt
 
 ## Timeline Visualization
 
-```
+```text
 Jan 15, 2025 - Activity Timeline
 |
 10:00 -- SSH login from 10.0.0.99 (auth.log)

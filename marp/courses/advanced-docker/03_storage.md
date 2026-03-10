@@ -24,7 +24,7 @@ Persistent data management for containers
 
 ## Docker Storage Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │              Container Layer (R/W)           │
 ├─────────────────────────────────────────────┤
@@ -91,7 +91,7 @@ mount | grep overlay
 
 ## Copy-on-Write (`CoW`) Explained
 
-```
+```text
 Read operation:
 ┌───────────────┐
 │  Upper (R/W)  │  file not found → look in lower
@@ -139,7 +139,7 @@ docker run -d --name db \
 
 ## Three Types of Mounts
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │                                                  │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
@@ -530,7 +530,7 @@ docker run --rm --tmpfs /data:size=2G alpine sh -c \
 
 ## Storage Performance Comparison
 
-```
+```text
 Typical I/O throughput (sequential write):
 
 tmpfs (RAM)         ████████████████████████████  ~2000 MB/s

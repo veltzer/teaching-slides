@@ -46,7 +46,7 @@ docker network inspect bridge
 
 ## Default Bridge Network
 
-```
+```text
 ┌──────────────────────────────────────┐
 │              Host                     │
 │                                      │
@@ -196,7 +196,7 @@ curl localhost:80  # Works directly
 # Use case: High-performance networking, many ports
 ```
 
-```
+```text
 ┌──────────────────────────────┐
 │           Host               │
 │  ┌────────────────────────┐  │
@@ -256,7 +256,7 @@ docker service create --name api \
 
 ## Overlay Network Architecture
 
-```
+```text
 ┌─────────── Node 1 ───────────┐  ┌─────────── Node 2 ───────────┐
 │                               │  │                               │
 │  ┌─────────┐  ┌─────────┐    │  │  ┌─────────┐  ┌─────────┐   │
@@ -337,7 +337,7 @@ docker run -d --network macvlan-net \
 
 ## `Macvlan` Network Architecture
 
-```
+```text
 ┌────────────── Physical Network ──────────────┐
 │                                               │
 │  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
@@ -470,7 +470,7 @@ docker service inspect web \
 # Uses IPVS (Linux Virtual Server) in the kernel
 ```
 
-```
+```text
 Client → VIP (10.20.0.5) → IPVS → Task 1 (10.20.0.6)
                                   → Task 2 (10.20.0.7)
                                   → Task 3 (10.20.0.8)

@@ -16,7 +16,7 @@
 - Document the entire process
 - Maintain chain of custody
 
-```
+```text
 Original Evidence  -->  Write Blocker  -->  Forensic Workstation
   /dev/sdb              (read-only)          /evidence/disk.dd
      |                                            |
@@ -375,7 +375,7 @@ lsblk -o NAME,SIZE,TYPE,FSTYPE,MODEL,SERIAL
 
 ## Imaging Best Practices Checklist
 
-```
+```text
 [ ] Write blocker in place (hardware or software)
 [ ] Source device serial number documented
 [ ] Source device make/model documented
@@ -506,7 +506,7 @@ ewfexport -t raw -T /evidence/disk /evidence/disk.E01
 
 ## Acquisition Documentation Template
 
-```
+```text
 FORENSIC IMAGING DOCUMENTATION
 ================================
 Case Number:     CASE-2025-001

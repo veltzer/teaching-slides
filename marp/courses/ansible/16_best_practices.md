@@ -14,7 +14,7 @@
 
 ## Recommended Project Structure
 
-```
+```text
 ansible-project/
 ├── ansible.cfg
 ├── requirements.yml           # Galaxy requirements
@@ -578,7 +578,7 @@ tasks:
 
 ## Troubleshooting Guide
 
-```
+```text
 Problem: "Permission denied"
   - Check become: true
   - Check ansible_user has sudo access

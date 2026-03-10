@@ -4,7 +4,7 @@
 
 ## Why Measure Quality?
 
-```
+```text
 Without measurement, you're flying blind:
 
   "Is my fine-tuned model better?"     → Need metrics
@@ -202,7 +202,7 @@ Respond as JSON:
 
 ## LLM-as-Judge — Position Bias and Mitigation
 
-```
+```text
 Problem: LLMs tend to prefer the first response shown.
 
 Mitigation: Run evaluation TWICE with swapped positions.
@@ -239,7 +239,7 @@ def robust_judge(question, resp_a, resp_b):
 
 ## Human Evaluation — The Gold Standard
 
-```
+```text
 Human evaluation setup:
 
 1. TASK DESIGN
@@ -269,7 +269,7 @@ Human evaluation setup:
 
 ## Evaluation Pipeline Architecture
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │              EVALUATION PIPELINE                      │
 │                                                       │

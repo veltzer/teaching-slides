@@ -95,7 +95,7 @@ all:
 
 ## Inventory Variable Precedence
 
-```
+```text
 (lowest priority)
 1. all group vars  (group_vars/all)
 2. parent group vars
@@ -115,7 +115,7 @@ all:
 
 ## Organizing Large Inventories
 
-```
+```text
 inventories/
 ├── production/
 │   ├── hosts.yml

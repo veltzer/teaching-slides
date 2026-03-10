@@ -28,14 +28,14 @@
 
 ## What Counts as `PII`?
 - Full name combined with:
-  - Social security / national ID number
-  - Date of birth
-  - Home address
-  - Phone number
-  - Email address
-  - Financial account numbers
-  - Medical information
-  - Biometric data
+    - Social security / national ID number
+    - Date of birth
+    - Home address
+    - Phone number
+    - Email address
+    - Financial account numbers
+    - Medical information
+    - Biometric data
 
 - If it can identify a specific person, treat it as `PII`
 
@@ -46,7 +46,7 @@
 ## What Is Encryption?
 - Scrambling data so only authorized parties can read it
 
-```
+```text
 Original:     "Employee salary: $85,000"
                       |
                  [Encryption]
@@ -173,16 +173,16 @@ Readable:     "Employee salary: $85,000"
 - USB drives are easily lost or stolen
 - They can carry malware between systems
 - Company policy on removable media:
-  - Use encrypted USB drives only (if approved)
-  - Never plug in unknown USB devices
-  - Transfer files through approved cloud platforms instead
-  - Report lost USB drives containing company data immediately
+    - Use encrypted USB drives only (if approved)
+    - Never plug in unknown USB devices
+    - Transfer files through approved cloud platforms instead
+    - Report lost USB drives containing company data immediately
 
 ---
 
 ## Data Retention and Disposal
 
-```
+```text
 +-------------------+     +-------------------+     +-------------------+
 | Data Creation     |---->| Active Use        |---->| Archive           |
 | Classify it       |     | Protect it        |     | Retention period  |

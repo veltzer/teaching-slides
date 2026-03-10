@@ -22,7 +22,7 @@ Advanced Kubernetes Course - Day 2, Module 4
 
 ## `DaemonSets` - One Pod Per Node
 
-```
+```text
 ┌─── Node 1 ───┐  ┌─── Node 2 ───┐  ┌─── Node 3 ───┐
 │ ┌──────────┐  │  │ ┌──────────┐  │  │ ┌──────────┐  │
 │ │ App Pods │  │  │ │ App Pods │  │  │ │ App Pods │  │
@@ -225,7 +225,7 @@ spec:
 
 ## `Job` Patterns
 
-```
+```text
 Non-parallel Job (completions=1, parallelism=1):
 ┌──────┐
 │Task 1│ → Done
@@ -319,7 +319,7 @@ spec:
 
 ## `CronJob` Schedule Syntax
 
-```
+```text
 ┌───────────── minute (0 - 59)
 │ ┌───────────── hour (0 - 23)
 │ │ ┌───────────── day of month (1 - 31)

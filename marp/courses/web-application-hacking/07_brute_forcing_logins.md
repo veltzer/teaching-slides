@@ -25,7 +25,7 @@ paginate: true
 
 ## Dictionary Attack with Burp Intruder
 
-```
+```text
 1. Capture login request in Burp Proxy
 2. Send to Intruder (Ctrl+I)
 3. Mark payload positions:
@@ -121,7 +121,7 @@ with open('leaked_creds.txt') as f:
 
 ## Bypassing Login Protections
 
-```
+```text
 Protection: Account Lockout
 Bypass:
   - Password spraying (stay under threshold)
@@ -246,7 +246,7 @@ for t in threads:
 
 ## Response Analysis for Success Detection
 
-```
+```text
 How to identify successful login in automated attacks:
 
 1. Status Code Difference
@@ -334,7 +334,7 @@ forged_jwt = h.decode() + '.' + p.decode() + '.'
 
 ## OAuth Token Theft
 
-```
+```text
 Attack: Authorization Code Interception via Open Redirect
 
 1. Attacker finds open redirect:
@@ -364,7 +364,7 @@ Defense:
 
 ## Password Reset Token Attack Scenarios
 
-```
+```text
 Scenario 1: Token in URL, leaked via Referer
   1. User requests password reset
   2. Email contains: https://target.com/reset?token=abc123
@@ -428,7 +428,7 @@ email=victim@example.com
 
 ## Implementation Flaws Checklist
 
-```
+```text
 [ ] Password stored in plaintext or weak hash (MD5, SHA1)
 [ ] Password sent over HTTP (no TLS)
 [ ] Password visible in URL parameters

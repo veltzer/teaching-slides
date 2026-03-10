@@ -22,7 +22,7 @@
 
 ## Autopsy Overview
 
-```
+```text
 Autopsy Architecture:
 +----------------------------------+
 |       Autopsy GUI                |
@@ -78,7 +78,7 @@ autopsy
 
 ## Autopsy Case Management
 
-```
+```text
 Creating a New Case:
 1. File -> New Case
 2. Enter case details:
@@ -125,7 +125,7 @@ Creating a New Case:
 
 ## Autopsy File Analysis
 
-```
+```text
 File Analysis View:
 +-------------------+--------------------------------+
 | Directory Tree    | File Listing                   |
@@ -148,7 +148,7 @@ File Analysis View:
 
 ## Autopsy Timeline Feature
 
-```
+```text
 Timeline View in Autopsy:
 - Visualizes file system events chronologically
 - Color-coded by event type (created, modified, accessed)
@@ -173,7 +173,7 @@ Timeline helps identify:
 
 ## Autopsy Keyword Search
 
-```
+```text
 Keyword Search Configuration:
 1. Create keyword list:
    - Name: "Sensitive Data"
@@ -201,7 +201,7 @@ Keyword Search Configuration:
 
 ## Autopsy Tagging and Bookmarking
 
-```
+```text
 Tagging System:
 - Tag notable items during analysis
 - Tags carry into reports automatically
@@ -229,7 +229,7 @@ Add comment: "ELF binary with C2 communication capability"
 
 ## Autopsy Report Generation
 
-```
+```text
 Generate Report:
 1. Tools -> Generate Report
 2. Select report type:
@@ -264,7 +264,7 @@ HTML report includes:
 
 ## Autopsy HTML Report Structure
 
-```
+```text
 Generated HTML Report:
 /evidence/reports/
 ├── index.html           <- Main report page
@@ -289,7 +289,7 @@ Generated HTML Report:
 
 ## Dradis Framework Overview
 
-```
+```text
 Dradis Architecture:
 +----------------------------------+
 |     Dradis Web Interface         |
@@ -347,7 +347,7 @@ bundle exec rails server
 
 ## Dradis Project Structure
 
-```
+```text
 Dradis Project Organization:
 +-- Project: CASE-2025-001
     |
@@ -381,7 +381,7 @@ Dradis Project Organization:
 
 ## Dradis Note Templates
 
-```
+```text
 # Finding Template (in Dradis markup)
 
 #[Title]#
@@ -445,7 +445,7 @@ curl -X POST http://localhost:3000/api/nodes \
 
 ## Dradis Export and Report Generation
 
-```
+```text
 Report Generation Workflow:
 1. Create report template (Word/HTML)
 2. Map Dradis fields to template placeholders
@@ -478,7 +478,7 @@ Steps:
 
 ## Dradis Collaboration Features
 
-```
+```text
 Multi-User Investigation:
 +-------------------+     +-------------------+
 | Examiner 1        |     | Examiner 2        |
@@ -510,7 +510,7 @@ Activity Log tracks:
 
 ## Combining Autopsy and Dradis
 
-```
+```text
 Integrated Forensic Workflow:
                                     
 1. Evidence Intake
@@ -697,7 +697,7 @@ echo "Report generated: $REPORT"
 
 ## Report Review Workflow
 
-```
+```text
 Review Process:
                                     
 Step 1: Self-Review
@@ -738,7 +738,7 @@ Step 4: Legal Review (if applicable)
 - Distinguish between fact and opinion
 - Have all supporting documentation ready
 
-```
+```text
 Presentation Tips:
 - Practice explaining to non-technical people
 - Prepare for hostile cross-examination
@@ -760,7 +760,7 @@ Presentation Tips:
 4. Document findings in Dradis format
 5. Write a complete executive summary
 
-```
+```text
 Exercise Template:
 
 CASE: EXERCISE-2025-LAB
@@ -868,7 +868,7 @@ curl -X POST http://localhost:9000/api/case \
 
 ## MITRE ATT&CK Mapping in Reports
 
-```
+```text
 MITRE ATT&CK Mapping for Findings:
 ====================================
 Tactic           | Technique          | Evidence
@@ -1006,7 +1006,7 @@ sudo mount -o remount,ro /evidence/
 
 ## Courtroom Presentation Techniques
 
-```
+```text
 VISUAL AIDS FOR COURT
 ======================
 1. Network Topology Diagram
@@ -1077,7 +1077,7 @@ sudo auditctl -R /etc/audit/rules.d/forensic.rules
 
 ## Forensic Readiness Planning
 
-```
+```text
 FORENSIC READINESS CHECKLIST
 =============================
 Before an Incident:
@@ -1122,7 +1122,7 @@ A web server has been compromised. You have:
 5. Identify the attack vector and attacker actions
 6. Write a complete forensic report
 
-```
+```text
 Deliverables:
 - Timeline of events (CSV)
 - List of IOCs

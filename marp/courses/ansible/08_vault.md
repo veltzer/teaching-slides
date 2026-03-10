@@ -199,7 +199,7 @@ ansible-vault encrypt_string \
 
 ## Vault with Variable Files Pattern
 
-```
+```text
 group_vars/
 ├── all/
 │   ├── vars.yml          # Plain text variables

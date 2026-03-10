@@ -6,7 +6,7 @@
 
 Systematic errors that produce unfair or skewed outputs:
 
-```
+```text
 Types of bias in generative AI:
 
 1. REPRESENTATION BIAS
@@ -34,7 +34,7 @@ Types of bias in generative AI:
 
 ## Sources of Bias
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │              BIAS PIPELINE                            │
 │                                                       │
@@ -103,7 +103,7 @@ def measure_gender_bias(model_fn, n_samples=100):
 
 ## Gender Bias Example Results
 
-```
+```text
 Occupation     Male%   Female%   Neutral%
 ──────────────────────────────────────────
 CEO            72%     18%       10%
@@ -127,7 +127,7 @@ due to alignment training, but it's not eliminated.
 
 ## Bias in Image Generation
 
-```
+```text
 "A photo of a doctor":
   → Predominantly white males in older models
   → More diverse in newer models (post-bias mitigation)
@@ -191,7 +191,7 @@ def embedding_bias_test(embeddings_fn):
 
 ## Bias Mitigation Strategies
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │            BIAS MITIGATION APPROACHES                 │
 ├──────────────────────────────────────────────────────┤
@@ -303,7 +303,7 @@ results = evaluator.test_counterfactual(
 
 ## Case Study: Bias in Real Systems
 
-```
+```text
 Documented cases of bias in deployed AI systems:
 
 1. RESUME SCREENING (Amazon, 2018)
@@ -383,7 +383,7 @@ def safe_generate(prompt):
 
 ## Fairness Metrics
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │           FAIRNESS METRICS                            │
 ├──────────────────────────────────────────────────────┤
@@ -448,7 +448,7 @@ def test_language_quality(model_fn, prompts_by_language):
 
 ## Bias Audit Report Template
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │           BIAS AUDIT REPORT                           │
 ├──────────────────────────────────────────────────────┤

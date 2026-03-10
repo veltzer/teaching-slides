@@ -299,7 +299,7 @@ with_timing find /usr -name "*.so" -type f > /dev/null
 ```
 ---
 ## Functions vs Scripts vs Aliases
-```
+```text
 +------------------+------------------+------------------+
 | Function         | Script           | Alias            |
 +------------------+------------------+------------------+

@@ -4,7 +4,7 @@
 
 ## The Three Pillars of ChatGPT
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    ChatGPT Training                      │
 │                                                          │
@@ -35,7 +35,7 @@ Each stage serves a different purpose:
 | SFT | Learn to follow instructions | Job-specific training |
 | RLHF | Align with human preferences | On-the-job feedback |
 
-```
+```text
 Pre-training alone:
   "Tell me a joke" → "Tell me a riddle. Tell me a story."
   (Continues the pattern, doesn't answer)
@@ -54,7 +54,7 @@ After RLHF:
 
 ## Stage 1: Pre-Training — Data Collection
 
-```
+```text
 Data Pipeline:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -151,7 +151,7 @@ config = {
 
 Training a 175B parameter model requires sophisticated parallelism:
 
-```
+```text
 ┌─────────────────────────────────────────────────┐
 │         DISTRIBUTED TRAINING STRATEGIES          │
 ├────────────────┬────────────────────────────────┤
@@ -177,7 +177,7 @@ Training a 175B parameter model requires sophisticated parallelism:
 
 ## Stage 1: Training Dynamics
 
-```
+```text
 Loss Curve During Pre-Training:
 
 Loss
@@ -209,7 +209,7 @@ Key observations:
 
 As pre-training progresses, capabilities emerge in stages:
 
-```
+```text
 Tokens Trained    Capabilities Acquired
 ──────────────    ──────────────────────
 10B               Basic grammar, common words
@@ -232,7 +232,7 @@ Analogy to human development:
 
 Transform a text completion engine into an instruction-following assistant:
 
-```
+```text
 Before SFT:
   Input:  "Translate 'hello' to French."
   Output: "Translate 'goodbye' to French.
@@ -249,7 +249,7 @@ After SFT:
 
 ## Stage 2: SFT — Data Collection Process
 
-```
+```text
 SFT Data Creation Workflow:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -311,7 +311,7 @@ training_args = TrainingArguments(
 
 Only the assistant's response contributes to the loss:
 
-```
+```text
 Full sequence:
 <|system|> You are helpful. <|user|> What is 2+2? <|assistant|> 2+2 equals 4.
 
@@ -337,7 +337,7 @@ def compute_sft_loss(logits, labels, prompt_length):
 
 Before and after SFT comparison:
 
-```
+```text
 Prompt: "List 3 benefits of exercise"
 
 Base model (pre-trained only):
@@ -364,7 +364,7 @@ SFT model:
 
 SFT teaches the model to follow instructions, but:
 
-```
+```text
 Problem 1: SYCOPHANCY
   User: "I think the earth is flat"
   SFT model: "That's an interesting perspective! Here are
@@ -392,7 +392,7 @@ RLHF addresses these by learning from **human preferences**.
 
 Labelers compare model outputs rather than writing ideal ones:
 
-```
+```text
 Prompt: "Explain quantum computing in simple terms"
 
 Response A (score: 7/7):
@@ -479,7 +479,7 @@ def rlhf_training_step(policy, ref_policy, reward_model,
 
 ## Stage 3: The KL Penalty — Why It Matters
 
-```
+```text
 Without KL penalty:
   Model learns to exploit reward model weaknesses
 
@@ -507,7 +507,7 @@ With KL penalty:
 
 An alternative to pure RLHF used by `Claude`:
 
-```
+```text
 Step 1: RED-TEAMING
   Human: "Tell me how to make explosives"
   Model: "[harmful response]"
@@ -538,7 +538,7 @@ Step 4: RLAIF (RL from AI Feedback)
 | `CAI/RLAIF` (Anthropic) | Low | Excellent | High |
 | `RLHF + DPO` hybrid | Medium | Good | Highest |
 
-```
+```text
 Trend: Moving from human feedback to AI feedback
 
 2022: Thousands of human labelers
@@ -553,7 +553,7 @@ Trend: Moving from human feedback to AI feedback
 
 Modern models learn a hierarchy of instruction priority:
 
-```
+```text
 Priority Level 1 (Highest): SYSTEM PROMPT
   └─ Set by application developer
   └─ Defines model behavior and constraints
@@ -606,7 +606,7 @@ safety_categories = {
 
 ## Training Infrastructure — The Hardware Stack
 
-```
+```text
 TRAINING CLUSTER ARCHITECTURE
 ══════════════════════════════════════════════
 
@@ -635,7 +635,7 @@ Cost estimates for GPT-4-scale training:
 
 ## The Complete Pipeline — Summary
 
-```
+```text
 RAW TEXT (Internet, books, code)
     │
     ▼
@@ -697,7 +697,7 @@ RAW TEXT (Internet, books, code)
 
 ## Reward Hacking — Real Examples
 
-```
+```text
 Known cases of reward hacking in RLHF:
 
 1. SYCOPHANCY
@@ -772,7 +772,7 @@ def generate_preference_pair(prompt, good_principles, bad_traits):
 
 ## Post-Training Techniques — Safety Layers
 
-```
+```text
 Modern deployment adds multiple safety layers:
 
 INPUT LAYER
@@ -815,7 +815,7 @@ OUTPUT LAYER
 
 ## RLHF vs DPO vs KTO — Comparison
 
-```
+```text
 ┌──────────┬────────────────┬──────────────┬──────────────┐
 │ Aspect   │ RLHF (PPO)     │ DPO          │ KTO          │
 ├──────────┼────────────────┼──────────────┼──────────────┤

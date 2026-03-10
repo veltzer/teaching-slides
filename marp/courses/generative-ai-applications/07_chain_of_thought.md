@@ -6,7 +6,7 @@
 
 Prompting the model to show its reasoning step by step:
 
-```
+```text
 Without CoT:
   Q: "Roger has 5 tennis balls. He buys 2 cans of 3 balls each.
       How many does he have now?"
@@ -29,7 +29,7 @@ Why it matters:
 
 ## CoT — The Key Insight
 
-```
+```text
 Problem complexity vs. CoT benefit:
 
 Benefit of CoT
@@ -154,7 +154,7 @@ print(f"Answer: {answer}, Confidence: {confidence:.0%}")
 
 ## Self-Consistency Visualized
 
-```
+```text
 Problem: "If 3 shirts take 3 hours to dry, how long
           do 9 shirts take?"
 
@@ -188,7 +188,7 @@ Vote: 3 hours (3/5) vs 9 hours (2/5)
 
 Explore multiple reasoning branches, evaluate, and prune:
 
-```
+```text
                     Problem
                    /   |   \
                   /    |    \
@@ -226,7 +226,7 @@ def tree_of_thoughts(problem, breadth=3, depth=3):
 
 Combine CoT with tool use in an interleaved pattern:
 
-```
+```text
 Question: "What is the population of the country where
            the Eiffel Tower is located?"
 
@@ -333,7 +333,6 @@ response = client.chat.completions.create(
 ```python
 debug_prompt = """Debug this Python code step by step.
 
-```python
 def merge_sorted(a, b):
     result = []
     i = j = 0
@@ -344,7 +343,6 @@ def merge_sorted(a, b):
         else:
             result.append(b[j])
     return result
-```
 
 TRACE through with a=[1,3,5] and b=[2,4,6]:
 1. What happens at each iteration?
@@ -355,7 +353,7 @@ TRACE through with a=[1,3,5] and b=[2,4,6]:
 
 # The model will trace execution and find:
 # Bug: j is never incremented in the else branch
-# Missing: remaining elements aren't appended after the loop
+# Missing: remaining elements aren't appended after loop
 ```
 
 ---
@@ -390,7 +388,7 @@ Finally, provide a recommendation with justification.
 
 ## When CoT Doesn't Help
 
-```
+```text
 Tasks where CoT provides little benefit:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

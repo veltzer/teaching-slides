@@ -22,7 +22,7 @@
 
 ## `HTTPS` - What the Padlock Means
 
-```
+```text
 Secure (HTTPS):                    Insecure (HTTP):
 
   You ---[encrypted]--- Website      You ---[plain text]--- Website
@@ -42,7 +42,7 @@ Secure (HTTPS):                    Insecure (HTTP):
 
 ## Virtual Private Network
 
-```
+```text
 Without VPN:                      With VPN:
 
 You ---> [open internet] ---> Server    You ---> [encrypted tunnel] ---> Server
@@ -80,7 +80,7 @@ You ---> [open internet] ---> Server    You ---> [encrypted tunnel] ---> Server
 - Unencrypted traffic can be intercepted
 - Common attack: "Evil Twin" access point
 
-```
+```text
 Real airport Wi-Fi:    "Airport_Free_WiFi"
 Attacker's hotspot:    "Airport_Free_WiFi_Fast"
                         ^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,12 +93,12 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 - **Best option**: use your phone's mobile hotspot instead
 - **If you must use public Wi-Fi**:
-  - Connect to the company `VPN` immediately
-  - Avoid logging into sensitive accounts
-  - Do not access banking or financial sites
-  - Disable auto-connect to open networks
-  - Forget the network when you are done
-  - Verify the network name with staff at the location
+    - Connect to the company `VPN` immediately
+    - Avoid logging into sensitive accounts
+    - Do not access banking or financial sites
+    - Disable auto-connect to open networks
+    - Forget the network when you are done
+    - Verify the network name with staff at the location
 
 ---
 
@@ -106,7 +106,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## What Is a Firewall?
 
-```
+```text
                      FIREWALL
                     +--------+
   Internet -------->| ALLOW  |--------> Approved traffic
@@ -158,7 +158,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 - `VPN` connection failing repeatedly
 - Security certificate warnings in your browser
 
-**If you notice any of these, contact IT security immediately**
+If you notice any of these, **contact IT security immediately**
 
 ---
 

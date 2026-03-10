@@ -12,7 +12,7 @@ paginate: true
 
 ## Privilege Escalation Overview
 
-```
+```text
 Initial Access (www-data, apache)
          |
          v
@@ -480,7 +480,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 
 ## Boot2Root Full Walkthrough Summary
 
-```
+```text
 1. SCAN
    nmap -sV -sC -p- target -> Found port 80, 22
 

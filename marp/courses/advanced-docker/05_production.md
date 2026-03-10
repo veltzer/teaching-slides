@@ -25,7 +25,7 @@ Logging, monitoring, health checks, and lifecycle management
 
 ## Docker Logging Architecture
 
-```
+```text
 ┌───────────────────────────────────────────┐
 │              Container                     │
 │  ┌────────┐                               │
@@ -332,7 +332,7 @@ services:
       - /dev/kmsg
 ```
 
-```
+```text
 Metrics provided:
 - CPU usage per container
 - Memory usage and limits
@@ -617,7 +617,7 @@ services:
 
 ## Graceful Shutdown - Signal Handling
 
-```
+```text
 Docker stop sequence:
 1. docker stop <container>
 2. Docker sends SIGTERM to PID 1
@@ -915,7 +915,7 @@ services:
 
 ## Docker in Production - Anti-Patterns
 
-```
+```text
 AVOID:
   ✗ Running as root inside containers
   ✗ Using :latest tag in production
@@ -944,7 +944,7 @@ DO:
 
 ## Production Readiness Checklist
 
-```
+```text
 Image:
   □ Pinned base image version (tag + digest)
   □ Vulnerability scan passing

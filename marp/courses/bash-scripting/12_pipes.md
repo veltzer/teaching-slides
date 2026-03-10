@@ -27,7 +27,7 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ```
 ---
 ## How Pipes Work Internally
-```
+```txt
 +----------+     pipe buffer     +----------+
 | command1 | --> [  4KB-64KB  ] --> | command2 |
 |          |     (kernel mem)    |          |

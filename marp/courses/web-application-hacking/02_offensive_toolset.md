@@ -12,7 +12,7 @@ paginate: true
 
 ## The Pentester's Toolkit Overview
 
-```
+```text
 +--Reconnaissance---+  +---Scanning------+  +---Exploitation--+
 | Burp Suite        |  | Nmap            |  | sqlmap          |
 | OWASP ZAP         |  | Nikto           |  | Metasploit      |
@@ -39,7 +39,7 @@ paginate: true
 
 ## Burp Suite - Proxy Setup
 
-```
+```text
 Browser Configuration:
   Proxy: 127.0.0.1
   Port:  8080
@@ -80,7 +80,7 @@ Cookie: session=abc123
 
 ## Burp Suite - Repeater Usage
 
-```
+```text
 1. Right-click request in Proxy -> Send to Repeater
 2. Modify the request as needed
 3. Click "Send" to get the response
@@ -104,7 +104,7 @@ Modified:  username=admin'--&password=test
 | **Pitchfork** | Different payload lists, parallel |
 | **Cluster Bomb** | All combinations of payloads |
 
-```
+```text
 # Sniper example - brute force password
 POST /login
 username=admin&password=§PAYLOAD§
@@ -154,7 +154,7 @@ zap-cli alerts
 
 ## Browser Developer Tools
 
-```
+```text
 F12 or Ctrl+Shift+I to open DevTools
 
 Key tabs for pentesting:
@@ -429,7 +429,7 @@ docker run -d -p 8081:8080 -p 9090:9090 \
 
 ## Lab Environment Architecture
 
-```
+```text
 +--Your Machine (Kali/Host)--+
 |                             |
 | Browser -> Burp Suite -+   |
@@ -452,7 +452,7 @@ docker run -d -p 8081:8080 -p 9090:9090 \
 
 ## Methodology: The Testing Workflow
 
-```
+```text
 1. Configure proxy (Burp Suite)
 2. Browse the application manually
 3. Review site map and identify entry points
@@ -471,7 +471,7 @@ docker run -d -p 8081:8080 -p 9090:9090 \
 
 ## Burp Suite Macros and Session Handling
 
-```
+```text
 Session Handling Rules allow Burp to maintain
 authenticated sessions during scanning/fuzzing:
 

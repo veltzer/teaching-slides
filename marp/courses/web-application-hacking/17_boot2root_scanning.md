@@ -24,7 +24,7 @@ paginate: true
 
 ## Boot2Root Methodology
 
-```
+```text
 +--Phase 1: Reconnaissance--------+
 | Network scanning (Nmap)         |
 | Service enumeration             |
@@ -76,7 +76,7 @@ nmap -sV -sC -p- -oA full-scan TARGET_IP
 
 ## Interpreting Nmap Results
 
-```
+```text
 PORT     STATE    SERVICE  VERSION
 22/tcp   open     ssh      OpenSSH 8.2p1 Ubuntu
 80/tcp   open     http     Apache httpd 2.4.41
@@ -184,7 +184,7 @@ joomscan -u http://TARGET_IP
 
 ## Resource Mapping Document
 
-```
+```text
 TARGET: 10.10.10.100
 ===================
 

@@ -6,7 +6,7 @@
 
 A framework for building `LLM`-powered applications:
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │                  LANGCHAIN                        │
 │                                                   │

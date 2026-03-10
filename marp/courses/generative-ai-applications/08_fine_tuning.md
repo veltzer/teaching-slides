@@ -6,7 +6,7 @@
 
 Adapting a pre-trained model to your specific task by continuing training on your own data:
 
-```
+```text
 Pre-trained model       Your data           Fine-tuned model
 (general knowledge)     (domain-specific)   (specialized)
 
@@ -26,7 +26,7 @@ Pre-trained model       Your data           Fine-tuned model
 
 ## Fine-Tuning vs. Prompt Engineering — Decision Tree
 
-```
+```text
 Start here: Do you have a working prompt?
   │
   NO → Try prompt engineering first (Day 2 morning)
@@ -116,7 +116,7 @@ with open("training_data.jsonl", "w") as f:
 
 ## Data Quality Checklist
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │              DATA QUALITY CHECKLIST                    │
 ├──────────────────────────────────────────────────────┤
@@ -315,7 +315,7 @@ evaluate_model("ft:gpt-4o-mini:...:abc123", test_data)  # Fine-tuned
 
 ## Fine-Tuning for Different Tasks
 
-```
+```text
 ┌──────────────────┬────────────────────┬────────────┐
 │ Task             │ Training Examples   │ Typical    │
 │                  │ Needed              │ Improvement│
@@ -369,7 +369,7 @@ style_examples = [
 
 ## Common Fine-Tuning Pitfalls
 
-```
+```text
 1. OVERFITTING
    Symptom: Perfect on training data, poor on new inputs
    Fix: Use validation set, reduce epochs, add more diverse data

@@ -353,7 +353,7 @@ CMD ["main.py"]
 
 ## Layer Caching - How It Works
 
-```
+```text
 Dockerfile instruction     Cache behavior
 ─────────────────────     ──────────────
 FROM ubuntu:22.04     →   Cached if image exists
@@ -400,7 +400,7 @@ RUN go build -o /app
 
 ## `.dockerignore` - Protecting the Build Context
 
-```
+```text
 # .dockerignore
 .git
 .gitignore
@@ -675,7 +675,7 @@ dive myapp:latest --ci
 #   - Total image size
 ```
 
-```
+```text
 ┌─ Layers ──────────────────────────┐
 │ 5.6 MB  FROM alpine:3.19         │
 │ 1.2 kB  COPY package*.json       │

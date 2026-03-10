@@ -34,7 +34,7 @@
 
 The three pillars of information security:
 
-```
+```text
             +------------------+
             | CONFIDENTIALITY  |
             |  (Keep secrets)  |
@@ -55,10 +55,10 @@ The three pillars of information security:
 
 - Only authorized people can access sensitive information
 - Examples in daily work:
-  - Locking your screen when you leave your desk
-  - Not sharing passwords with colleagues
-  - Sending sensitive files only to intended recipients
-  - Shredding documents before disposal
+    - Locking your screen when you leave your desk
+    - Not sharing passwords with colleagues
+    - Sending sensitive files only to intended recipients
+    - Shredding documents before disposal
 
 ---
 
@@ -66,10 +66,10 @@ The three pillars of information security:
 
 - Information remains accurate and unaltered
 - Examples in daily work:
-  - Verifying you are editing the correct document version
-  - Not forwarding unverified information
-  - Checking that financial figures have not been tampered with
-  - Using digital signatures on important documents
+    - Verifying you are editing the correct document version
+    - Not forwarding unverified information
+    - Checking that financial figures have not been tampered with
+    - Using digital signatures on important documents
 
 ---
 
@@ -77,10 +77,10 @@ The three pillars of information security:
 
 - Systems and data are accessible when needed
 - Examples in daily work:
-  - Saving work to the company's backed-up drives, not just your local desktop
-  - Reporting system outages promptly
-  - Not overloading shared systems with personal downloads
-  - Following backup procedures
+    - Saving work to the company's backed-up drives, not just your local desktop
+    - Reporting system outages promptly
+    - Not overloading shared systems with personal downloads
+    - Following backup procedures
 
 ---
 
@@ -113,10 +113,10 @@ The three pillars of information security:
 - The art of manipulating people rather than hacking systems
 - Exploits human psychology: trust, fear, urgency, curiosity
 - Common techniques:
-  - **Pretexting** - creating a fabricated scenario
-  - **Baiting** - leaving infected USB drives in parking lots
-  - **Tailgating** - following someone through a secure door
-  - **Quid pro quo** - offering something in exchange for information
+    - **Pretexting** - creating a fabricated scenario
+    - **Baiting** - leaving infected USB drives in parking lots
+    - **Tailgating** - following someone through a secure door
+    - **Quid pro quo** - offering something in exchange for information
 
 ---
 
@@ -148,16 +148,16 @@ The three pillars of information security:
 - You are the **first line of defense**
 - Technology alone cannot stop every attack
 - Simple habits make a significant difference:
-  - Think before you click
-  - Verify before you trust
-  - Report anything suspicious
-  - Follow company policies
+    - Think before you click
+    - Verify before you trust
+    - Report anything suspicious
+    - Follow company policies
 
 ---
 
 ## Key Takeaway
 
-```
+```text
 +--------------------------------------------------+
 |                                                    |
 |   Security is NOT just an IT problem.              |

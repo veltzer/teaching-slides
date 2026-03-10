@@ -1,7 +1,7 @@
 # Redirection
 ---
 ## File Descriptors
-```
+```text
 Every process has three standard file descriptors:
 
 +------+--------+----------+------------------+
@@ -76,7 +76,7 @@ command 2>&1 > file.txt
 ```
 ---
 ## Visualizing Redirect Order
-```
+```text
 CORRECT: command > file.txt 2>&1
 
   Step 1: stdout --> file.txt
@@ -121,10 +121,10 @@ No expansion happens here
 EOF
 
 # Indent with <<- (strips leading TABS only)
-	cat <<- EOF
-	This is indented with tabs
-	They will be stripped
-	EOF
+    cat <<- EOF
+    This is indented with tabs
+    They will be stripped
+    EOF
 ```
 ---
 ## `/dev/null` - The Black Hole

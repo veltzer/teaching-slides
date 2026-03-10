@@ -146,7 +146,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ```
 ---
 ## Expansion Order Summary
-```
+```text
 1. Brace expansion:       {a,b,c}
 2. Tilde expansion:       ~
 3. Parameter expansion:   $var, ${var}

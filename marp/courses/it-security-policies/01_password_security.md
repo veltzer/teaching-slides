@@ -37,7 +37,7 @@
 
 ## Password Strength Visualized
 
-```
+```text
 Weak:       cat         --> cracked in < 1 second
             |||
 Fair:       Cat2024     --> cracked in ~3 minutes
@@ -86,7 +86,7 @@ Excellent:  correct-horse-battery-staple
 
 ## Password Manager Workflow
 
-```
+```text
 +-------------------+     +-------------------+
 | You remember ONE  |---->| Password manager  |
 | master password   |     | stores hundreds   |

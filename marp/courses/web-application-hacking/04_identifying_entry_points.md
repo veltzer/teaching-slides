@@ -26,7 +26,7 @@ An **entry point** is any place where user-supplied data enters the application:
 
 ## URL Parameters
 
-```
+```text
 https://target.com/products?category=electronics&sort=price&page=2
 
 Entry points:
@@ -164,7 +164,7 @@ Content-Type: application/xml
 
 ## File Upload Entry Points
 
-```
+```text
 File uploads are high-value entry points:
 
 1. File content     -> Web shell upload
@@ -185,7 +185,7 @@ Common bypass techniques:
 
 ## Cookie Analysis
 
-```
+```text
 Set-Cookie: session=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyIjoiam9obiJ9.abc123
 
 Analysis:
@@ -238,7 +238,7 @@ curl -I https://target.com
 
 ## Technology-Specific Default Paths
 
-```
+```text
 PHP:
   /phpinfo.php, /info.php, /php-info.php
   /phpmyadmin/, /pma/
@@ -262,7 +262,7 @@ Node.js:
 
 ## Error Page Analysis
 
-```
+```text
 # PHP error
 Warning: mysqli_query() expects parameter 1 to be
 mysqli, null given in /var/www/html/index.php on line 42
@@ -289,7 +289,7 @@ Information leaked:
 
 ## Mapping Input Vectors Per Page
 
-```
+```text
 Page: /login
 +--Entry Point--------+--Type--------+--Test For----------+
 | username             | POST param   | SQLi, auth bypass  |

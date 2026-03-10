@@ -24,7 +24,7 @@ paginate: true
 
 ## UNION-Based Extraction - Full Workflow
 
-```
+```text
 Step 1: Confirm injection
 Step 2: Determine column count (ORDER BY)
 Step 3: Find visible columns (UNION SELECT 1,2,3...)
@@ -422,7 +422,7 @@ sqlmap -u "http://target.com/page?id=1" \
 -- Filter: Blocks spaces
 -- Bypass: Use comments or tabs
 '/**/OR/**/1=1--
-' OR	1=1--    (tab character)
+' OR    1=1--    (tab character)
 '%09OR%091=1--   (URL-encoded tab)
 
 -- Filter: Blocks 'SELECT'
@@ -446,7 +446,7 @@ UNION/**/SELECT
 
 ## Second-Order SQL Injection
 
-```
+```text
 First-order: Input is used immediately in a query
 Second-order: Input is STORED, then used later in a different query
 
@@ -527,7 +527,7 @@ db.query("SELECT * FROM users WHERE username = $1", [username]);
 
 ## Defense Layers Against SQL Injection
 
-```
+```text
 Layer 1: Parameterized Queries / Prepared Statements
   -> Separates code from data (PRIMARY DEFENSE)
 
@@ -679,7 +679,7 @@ User.where("name = '#{user_input}'")  # VULNERABLE!
 
 ## SQL Injection Impact Assessment
 
-```
+```text
 Severity depends on:
 
 1. Database Privileges
@@ -711,7 +711,7 @@ CVSS Score: Typically 7.5-9.8 (High to Critical)
 
 ## Lab: DVWA SQL Injection - All Levels
 
-```
+```text
 Low: No protection
   id=1' UNION SELECT user,password FROM users-- -
 

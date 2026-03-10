@@ -10,7 +10,7 @@
 **Generative models** learn the underlying data distribution:
 - Input: "a photo of a cat" → Output: a new cat image
 
-```
+```text
 Discriminative:  P(label | data)    — What IS this?
 Generative:      P(data | label)    — What WOULD this look like?
 ```
@@ -19,7 +19,7 @@ Generative:      P(data | label)    — What WOULD this look like?
 
 ## A Brief History of Generative Models
 
-```
+```text
 Timeline of Generative AI
 ═══════════════════════════════════════════════════════
 2014 │ GANs (Goodfellow)          — adversarial image gen
@@ -39,7 +39,7 @@ Timeline of Generative AI
 
 ## Categories of Generative Models
 
-```
+```text
               GENERATIVE MODELS
               ┌──────┴──────┐
          AUTOREGRESSIVE    DIFFUSION
@@ -59,7 +59,7 @@ Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 Published in 2017: "Attention Is All You Need"
 
-```
+```text
 Input tokens: ["The", "cat", "sat", "on", "the", "___"]
 
 ┌─────────────────────────────────────┐
@@ -88,7 +88,7 @@ Input tokens: ["The", "cat", "sat", "on", "the", "___"]
 
 Every token asks: "Which other tokens should I pay attention to?"
 
-```
+```text
 Sentence: "The animal didn't cross the street because it was too tired"
 
 What does "it" refer to?
@@ -113,7 +113,7 @@ Attention weights for "it":
 
 For each token, compute **Query**, **Key**, **Value** vectors:
 
-```
+```text
 Q = X · W_Q    (What am I looking for?)
 K = X · W_K    (What do I contain?)
 V = X · W_V    (What information do I provide?)
@@ -138,7 +138,7 @@ def self_attention(Q, K, V):
 
 Instead of one attention function, use multiple "heads" in parallel:
 
-```
+```text
           Input
      ┌─────┼─────┐
    Head 1 Head 2 Head 3 ... Head h
@@ -224,7 +224,7 @@ for t in tokens:
 | `SentencePiece` | Language-agnostic, works on raw text | `T5`, `LLaMA` |
 | `Tiktoken` | Fast BPE implementation | `GPT-3.5/4` |
 
-```
+```text
 BPE example — learning merges:
   Step 0: ['l', 'o', 'w', 'e', 'r']     → frequency analysis
   Step 1: ['lo', 'w', 'e', 'r']          → merge 'l'+'o'
@@ -263,7 +263,7 @@ for text in examples:
 
 ## Encoder vs. Decoder vs. Encoder-Decoder
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │ ENCODER-ONLY          │ Full bidirectional attention     │
 │ (BERT, RoBERTa)       │ Good for: classification,       │
@@ -287,7 +287,7 @@ for text in examples:
 
 The model generates one token at a time, feeding output back as input:
 
-```
+```text
 Step 1: Input:  "The capital of France is"
         Output: "Paris"   (most probable next token)
 
@@ -338,7 +338,7 @@ def temperature_sample(logits, temperature=1.0):
 
 ## Top-p (Nucleus) Sampling Visualized
 
-```
+```text
 Token probabilities (sorted):
 
 "Paris"    ████████████████████ 0.40
@@ -362,7 +362,7 @@ Top-p = 0.9: Include tokens until cumulative prob ≥ 0.9
 
 Some abilities only appear when models reach sufficient size:
 
-```
+```text
 Capability          Small    Medium    Large
 ────────────────────────────────────────────
 Basic grammar       ✓        ✓         ✓
@@ -382,7 +382,7 @@ This is called **emergent behavior** — capabilities that cannot be predicted b
 
 Research shows predictable relationships between model size and performance:
 
-```
+```text
 Loss
  │
  │╲
@@ -460,7 +460,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 | `Claude 3.5` | 200K tokens | ~150 pages |
 | `Gemini 1.5` | 1M tokens | ~750 pages |
 
-```
+```text
 ┌─────────────────────────────────────┐
 │     CONTEXT WINDOW (128K tokens)    │
 │ ┌─────────────┐ ┌────────────────┐  │
@@ -481,7 +481,7 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 
 ## Real-World Applications of Generative AI
 
-```
+```text
 ┌─────────────────┬──────────────────────────────────────┐
 │ Domain          │ Applications                          │
 ├─────────────────┼──────────────────────────────────────┤
@@ -618,7 +618,7 @@ for text in texts:
 
 ## The Training Compute Frontier
 
-```
+```text
 Model         Training Compute (FLOPs)    Year
 ───────────────────────────────────────────────
 GPT-2         1.5 × 10^19                 2019
@@ -668,7 +668,7 @@ tokens = tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
 
 Used by `Mixtral`, `GPT-4` (rumored), and `Switch Transformer`:
 
-```
+```text
 Standard Transformer FFN:
   Every token processed by ALL parameters
 
@@ -698,7 +698,7 @@ Mixtral 8×7B: 8 experts × 7B each = 47B total params
 
 ## Training Data Controversies
 
-```
+```text
 Key debates around LLM training data:
 
 1. COPYRIGHT
@@ -768,7 +768,7 @@ model_size_breakdown("LLaMA-3-8B", 8, 32, 4096, 32)
 
 ## The Inference Cost Problem
 
-```
+```text
 Inference costs at scale:
 
 Scenario: 1 million users, 10 queries/day, 500 tokens each
@@ -794,7 +794,7 @@ Optimization strategies:
 
 ## Retrieval-Augmented Generation (RAG) — Preview
 
-```
+```text
 Why RAG matters (covered in depth on Day 3):
 
 Problem: LLMs have knowledge cutoffs and hallucinate
@@ -824,7 +824,7 @@ Solution: Give the model relevant documents at query time
 
 Models that process multiple types of input:
 
-```
+```text
 MULTIMODAL CAPABILITIES
 ━━━━━━━━━━━━━━━━━━━━━━━━
 

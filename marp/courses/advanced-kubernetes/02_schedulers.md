@@ -23,7 +23,7 @@ Advanced Kubernetes Course - Day 1, Module 3
 
 ## The Scheduling Pipeline
 
-```
+```text
 New Pod Created (spec.nodeName is empty)
          │
          ▼
@@ -182,7 +182,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-```
+```text
 ┌────── Node 1 ──────┐    ┌────── Node 2 ──────┐
 │ ┌─────┐  ┌───────┐ │    │                     │
 │ │Redis│  │Web App│ │    │     (empty)         │
@@ -212,7 +212,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-```
+```text
 ┌── Node 1 ──┐  ┌── Node 2 ──┐  ┌── Node 3 ──┐
 │  ┌───────┐  │  │  ┌───────┐  │  │  ┌───────┐  │
 │  │Web-1  │  │  │  │Web-2  │  │  │  │Web-3  │  │
@@ -305,7 +305,7 @@ spec:
 
 ## Topology Spread Visualization
 
-```
+```text
 maxSkew: 1, topologyKey: zone
 
 Zone A          Zone B          Zone C

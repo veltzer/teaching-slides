@@ -44,7 +44,7 @@ X-Powered-By: PHP/7.4.3
 
 ## Web Server Software
 
-```
+```text
 +------------------+--------------------+-------------------+
 |     Apache       |      Nginx         |       IIS         |
 +------------------+--------------------+-------------------+
@@ -107,7 +107,7 @@ server {
 
 ## IIS Identification & Fingerprinting
 
-```
+```text
 IIS Version    ->  Windows Version
 -----------        ---------------
 IIS 6.0        ->  Windows Server 2003
@@ -159,7 +159,7 @@ curl -s https://target.com/sitemap.xml
 
 ## Framework-Specific Attack Surfaces
 
-```
+```text
 Django:
   /admin/          -> Admin panel
   /static/         -> Static files
@@ -219,7 +219,7 @@ db.users.find({ username: req.body.username,
 
 ## Database Fingerprinting via Errors
 
-```
+```text
 MySQL:
   "You have an error in your SQL syntax..."
   
@@ -243,7 +243,7 @@ MongoDB:
 
 ## Client-Side Technologies
 
-```
+```text
 +---Browser Environment---+
 |                          |
 |  HTML5                   |
@@ -350,7 +350,7 @@ sessionStorage.setItem('temp', 'data');
 
 ## HTTP Protocol Fundamentals
 
-```
+```text
 GET /login HTTP/1.1              <-- Request Line
 Host: target.com                 <-- Headers
 User-Agent: Mozilla/5.0
@@ -386,7 +386,7 @@ Content-Length: 1234
 
 ## HTTP Status Codes for Pentesters
 
-```
+```text
 200 OK              -> Resource found, access granted
 301/302 Redirect    -> Follow to see where it goes
 400 Bad Request     -> Malformed input, try variations
@@ -424,7 +424,7 @@ testssl.sh target.com
 
 ## Content Types That Matter
 
-```
+```text
 text/html          -> Rendered as HTML (XSS risk)
 application/json   -> Parsed as JSON (safer)
 text/plain         -> Displayed as text (safer)
@@ -455,7 +455,7 @@ application/x-www-form-urlencoded -> Form data
 
 ## Proxy Architecture
 
-```
+```text
 +--------+    +-------+    +--------+    +----------+
 | Browser|--->| Burp  |--->| WAF /  |--->| Web      |
 |        |    | Suite  |    | CDN    |    | Server   |
@@ -531,7 +531,7 @@ Access-Control-Allow-Origin: https://trusted-app.com
 
 ## HTTP/2 and HTTP/3 Security Considerations
 
-```
+```text
 HTTP/2 Features:
   - Binary protocol (harder to inspect manually)
   - Multiplexed connections

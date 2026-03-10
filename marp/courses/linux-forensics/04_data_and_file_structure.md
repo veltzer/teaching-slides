@@ -28,7 +28,7 @@ file /tmp/image.jpg
 
 ## Magic Numbers Reference
 
-```
+```text
 File Type     | Magic Bytes (Hex)        | ASCII
 --------------+--------------------------+--------
 ELF binary    | 7F 45 4C 46              | .ELF
@@ -180,7 +180,7 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ## File System Metadata vs File Content
 
-```
+```text
 +------------------+     +------------------+
 |  Inode (metadata)|     |  Data Blocks     |
 |  - File size     |     |  (actual content)|
@@ -305,7 +305,7 @@ unzip -p document.docx docProps/core.xml
 
 ## Deleted File Recovery Theory
 
-```
+```text
 Before Deletion:
 Directory Entry -> Inode 12345 -> Data Blocks [100, 101, 102]
   "secret.txt"    (allocated)     (allocated)

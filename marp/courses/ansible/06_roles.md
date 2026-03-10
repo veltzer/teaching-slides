@@ -22,7 +22,7 @@
 
 ## Why Use Roles?
 
-```
+```text
 Without Roles:                    With Roles:
 site.yml (500 lines)              site.yml (20 lines)
   - install packages              roles/
@@ -39,7 +39,7 @@ site.yml (500 lines)              site.yml (20 lines)
 
 ## Role Directory Structure
 
-```
+```text
 roles/
 └── nginx/
     ├── defaults/
@@ -592,7 +592,7 @@ ansible-galaxy collection init myorg.mytools
 
 ## Collection Structure
 
-```
+```text
 myorg/
 └── mytools/
     ├── galaxy.yml         # Collection metadata
@@ -614,7 +614,7 @@ myorg/
 
 ## Project Layout with Roles
 
-```
+```text
 ansible-project/
 ├── ansible.cfg
 ├── requirements.yml

@@ -20,7 +20,7 @@
 
 ## Computer Architecture Overview
 
-```
+```text
 +-------------------+
 |   CPU (Processor)  |
 +--------+----------+
@@ -79,7 +79,7 @@ xxd /bin/ls | head -5
 
 ## Hexadecimal in Forensics
 
-```
+```text
 Decimal:  0  1  2  3  4  5  6  7  8  9  10 11 12 13 14 15
 Hex:      0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
 Binary: 0000 0001 0010 0011 0100 0101 0110 0111 ...
@@ -115,7 +115,7 @@ lscpu | grep "Byte Order"
 
 ## Hard Disk Drive (HDD) Anatomy
 
-```
+```text
         Spindle Motor
             |
     +-------+-------+
@@ -143,7 +143,7 @@ lscpu | grep "Byte Order"
 - **Head**: which platter surface (top/bottom)
 - **Sector**: subdivision of a track (traditionally 512 bytes)
 
-```
+```text
     Track 0  Track 1  Track 2
     +-----+  +-----+  +-----+
     |/////|  |     |  |     |   Platter surface
@@ -186,7 +186,7 @@ sudo fdisk -l /dev/sda
 - Data stored in cells as electrical charges
 - Organized into pages (4-16 KB) and blocks (256-512 pages)
 
-```
+```text
 +---------------------------+
 |  SSD Controller           |
 +--+--+--+--+--+--+--+--+--+
@@ -205,12 +205,12 @@ sudo fdisk -l /dev/sda
 ## SSD Forensic Implications
 
 - **TRIM command**: tells SSD which blocks are no longer in use
-  - Data may be permanently erased automatically
-  - Reduces chances of recovering deleted files
+    - Data may be permanently erased automatically
+    - Reduces chances of recovering deleted files
 - **Wear leveling**: data moves between cells automatically
-  - Makes traditional data carving less predictable
+    - Makes traditional data carving less predictable
 - **Over-provisioning**: hidden reserve space
-  - May contain remnant data not accessible via standard interfaces
+    - May contain remnant data not accessible via standard interfaces
 
 ```bash
 # Check if TRIM is enabled
@@ -365,7 +365,7 @@ lsusb -v 2>/dev/null | grep -E "idVendor|idProduct|iSerial"
 
 ## MBR Structure
 
-```
+```text
 Offset  Size   Description
 0x000   446    Bootstrap code
 0x1BE   16     Partition entry 1
@@ -388,7 +388,7 @@ sudo fdisk -l /dev/sda | grep "Disklabel type"
 
 ## GPT Structure
 
-```
+```text
 +---------------------------+
 | LBA 0: Protective MBR    |
 +---------------------------+
@@ -456,7 +456,7 @@ sudo sfdisk -T
 
 ## Logical Volume Manager (LVM)
 
-```
+```text
 +--------+--------+--------+
 | /dev/sda1 | /dev/sdb1 | /dev/sdc1 |  Physical Volumes (PV)
 +--------+--------+--------+

@@ -24,7 +24,7 @@
 
 ## Static vs Dynamic Inventory
 
-```
+```text
 Static Inventory:              Dynamic Inventory:
 +------------------+           +------------------+
 | inventory.yml    |           | AWS/Azure/GCP    |
@@ -41,7 +41,7 @@ Static Inventory:              Dynamic Inventory:
 
 ## Inventory Plugins vs Scripts
 
-```
+```text
 Inventory Plugins (recommended):
   - Written in Python
   - Configured via YAML
@@ -376,7 +376,7 @@ ansible-inventory -i inventory/aws_ec2.yml --list --refresh-cache
 
 ## Combining Static and Dynamic Inventory
 
-```
+```text
 inventory/
 ├── static_hosts.yml       # Static hosts (on-prem)
 ├── aws_ec2.yml           # AWS dynamic inventory

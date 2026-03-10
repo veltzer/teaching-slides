@@ -6,7 +6,7 @@
 
 The art and science of crafting inputs to get desired outputs from `LLM`s.
 
-```
+```text
 Poor prompt:
   "Tell me about dogs"
   → Long, unfocused essay about dogs in general
@@ -24,7 +24,7 @@ Good prompt:
 
 ## The Anatomy of a Good Prompt
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │              PROMPT STRUCTURE                  │
 ├──────────────────────────────────────────────┤
@@ -111,7 +111,7 @@ CONSTRAINTS:
 
 ## Instruction Clarity — Be Specific
 
-```
+```text
 Vague: "Summarize this article"
 Better: "Summarize this article in 3 bullet points,
          each under 20 words, focusing on key findings."
@@ -171,21 +171,16 @@ Return ONLY valid JSON, no explanation.
 Use delimiters to separate instructions from data:
 
 ```python
-# Using triple backticks
-prompt = """Translate the following code from Python to Rust:
-
-```python
-def fibonacci(n):
-    if n <= 1:
-        return n
-    return fibonacci(n-1) + fibonacci(n-2)
-```
-
-Requirements:
-- Use idiomatic Rust patterns
-- Include error handling
-- Add documentation comments
-"""
+# Using triple-quote delimiters
+prompt = (
+    "Translate the following code from Python to Rust:\n"
+    "---CODE START---\n"
+    "def fibonacci(n):\n"
+    "    if n <= 1: return n\n"
+    "    return fibonacci(n-1) + fibonacci(n-2)\n"
+    "---CODE END---\n"
+    "Requirements: Use idiomatic Rust patterns."
+)
 
 # Using XML tags
 prompt = """Analyze the sentiment of each review below.
@@ -193,7 +188,6 @@ prompt = """Analyze the sentiment of each review below.
 <reviews>
 <review id="1">The product exceeded my expectations!</review>
 <review id="2">Terrible quality, broke after one day.</review>
-<review id="3">It's okay, nothing special.</review>
 </reviews>
 
 Return results as: review_id | sentiment | confidence
@@ -206,7 +200,7 @@ Return results as: review_id | sentiment | confidence
 
 A systematic approach to prompt construction:
 
-```
+```txt
 C - Capacity:    What role should the AI assume?
 R - Request:     What specifically do you want?
 I - Information: What context/data does it need?
@@ -266,9 +260,9 @@ code_review_template = Template("""
 You are reviewing a $language code submission.
 
 The code:
-```$language
+---
 $code
-```
+---
 
 Review criteria:
 1. Correctness: Does it produce expected results?
@@ -294,7 +288,7 @@ review_prompt = code_review_template.substitute(
 
 ## Iterative Prompt Refinement
 
-```
+```txt
 Iteration 1: "Write a regex for email validation"
 Result: Simple regex, misses edge cases
 
@@ -312,7 +306,7 @@ Result: Well-balanced, tested solution
 
 Process:
   Write prompt → Test output → Identify gaps → Refine → Repeat
-```
+```text
 
 ---
 
@@ -351,7 +345,7 @@ DEFENSES:
 │ 4. Delimiter separation — clearly mark user input │
 │ 5. Prompt armor — explicit anti-injection text     │
 └──────────────────────────────────────────────────┘
-```
+```text
 
 ---
 
@@ -413,7 +407,7 @@ improved_prompt = get_completion(meta_prompt)
 
 ## Prompt Length vs. Quality Tradeoff
 
-```
+```text
                 Quality
                   │
                   │            ╱╲
@@ -584,7 +578,7 @@ OUTPUT FORMAT:
 
 ## Prompt Engineering Anti-Patterns
 
-```
+```text
 ANTI-PATTERN 1: THE KITCHEN SINK
   "Tell me everything about machine learning including
    history, types, algorithms, applications, math,

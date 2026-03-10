@@ -114,7 +114,7 @@
 
 ## When to Use Import vs Include
 
-```
+```text
 Use import_tasks when:
   - You want tag inheritance
   - Tasks are always needed

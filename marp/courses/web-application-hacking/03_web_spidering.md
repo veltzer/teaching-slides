@@ -18,7 +18,7 @@ paginate: true
 - Identifies entry points for testing
 - Also called **web crawling** or **web scraping**
 
-```
+```text
           Start URL
               |
      +--------+--------+
@@ -46,7 +46,7 @@ paginate: true
 
 ## robots.txt - A Treasure Map
 
-```
+```text
 # robots.txt - tells search engines what NOT to index
 # For pentesters, it tells you what to look AT
 
@@ -92,7 +92,7 @@ Sitemap: https://target.com/sitemap.xml
 
 ## Burp Suite Spider
 
-```
+```text
 Steps to spider with Burp:
 1. Set target scope: Target -> Scope -> Add
 2. Browse the application manually first
@@ -110,7 +110,7 @@ Key settings:
 
 ## Burp Site Map Analysis
 
-```
+```text
 Target Site Map Tree:
 target.com
 ├── /                     (200)
@@ -378,7 +378,7 @@ ffuf -u "http://target.com/page?FUZZ=test" \
 
 ## Google Dorking for Recon
 
-```
+```text
 # Find login pages
 site:target.com inurl:login OR inurl:signin
 
@@ -494,7 +494,7 @@ katana -u https://target.com -headless -d 5 -o results.txt
 
 ## Putting It All Together
 
-```
+```text
 Comprehensive Discovery Workflow:
 ================================
 

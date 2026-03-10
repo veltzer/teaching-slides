@@ -43,7 +43,7 @@
 
 ## Ansible Architecture
 
-```
+```text
 +-------------------+
 |  Control Node     |
 |  (your laptop)    |
@@ -99,7 +99,7 @@
 
 ## Agentless vs Agent-Based
 
-```
+```text
 Agent-Based (Puppet/Chef):          Agentless (Ansible):
 +----------+                        +----------+
 | Control  |                        | Control  |
@@ -138,7 +138,7 @@ Agent-Based (Puppet/Chef):          Agentless (Ansible):
 
 ## Ansible Components Overview
 
-```
+```text
 +---------------------------------------------------+
 |                  Ansible Ecosystem                 |
 +---------------------------------------------------+
@@ -283,7 +283,7 @@ name: "{{ variable }}"   # Works
 
 ## Lab Environment Setup
 
-```
+```text
 +---------------------+
 | Control Node        |
 | OS: Ubuntu 22.04    |
@@ -611,7 +611,7 @@ max_connections=100
 
 ## Host and Group Variable Files
 
-```
+```text
 project/
 ├── ansible.cfg
 ├── inventory
@@ -1285,7 +1285,7 @@ ok: [web01]
 
 ## Playbook Output Explained
 
-```
+```text
 PLAY [Setup web servers] ***************
 
 TASK [Gathering Facts] *****************

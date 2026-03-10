@@ -27,7 +27,7 @@ Advanced Kubernetes Course - Day 1, Module 1
 - **Observable**: Exposes health and metrics
 - **Redundant**: No single point of failure
 
-```
+```text
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
 │   Pod A-1   │    │   Pod A-2   │    │   Pod A-3   │
 │  (healthy)  │    │  (healthy)  │    │  (healthy)  │
@@ -117,7 +117,7 @@ selector:
 
 ## How `ReplicaSets` Handle Failures
 
-```
+```text
 Time T0: 3 replicas running
 ┌────┐  ┌────┐  ┌────┐
 │Pod1│  │Pod2│  │Pod3│
@@ -247,7 +247,7 @@ spec:
 
 Pods get predictable names:
 
-```
+```text
 postgres-0    (first, leader)
 postgres-1    (second, replica)
 postgres-2    (third, replica)
@@ -255,7 +255,7 @@ postgres-2    (third, replica)
 
 Each pod gets a stable DNS name:
 
-```
+```text
 postgres-0.postgres-headless.default.svc.cluster.local
 postgres-1.postgres-headless.default.svc.cluster.local
 postgres-2.postgres-headless.default.svc.cluster.local
@@ -286,7 +286,7 @@ Setting `clusterIP: None` makes it headless - DNS returns individual pod IPs ins
 ## `StatefulSet` Ordering Guarantees
 
 **OrderedReady** (default):
-```
+```text
 Deploy:  postgres-0 → postgres-1 → postgres-2
 Scale down: postgres-2 → postgres-1 → postgres-0
 ```
@@ -297,7 +297,7 @@ spec:
   podManagementPolicy: Parallel
 ```
 
-```
+```text
 Deploy:  postgres-0, postgres-1, postgres-2 (simultaneously)
 ```
 
@@ -353,7 +353,7 @@ spec:
 
 ## Understanding CPU Units
 
-```
+```text
 1 CPU = 1000m (millicores)
 
 "100m"  = 0.1 CPU  (10% of one core)
@@ -362,7 +362,7 @@ spec:
 "1500m" = 1.5 CPU  (one and a half cores)
 ```
 
-```
+```text
 ┌─────────────────────────────────┐
 │          Node (4 CPU)           │
 │                                 │
@@ -379,7 +379,7 @@ spec:
 
 ## Understanding Memory Units
 
-```
+```text
 "128Mi" = 128 Mebibytes = 134,217,728 bytes
 "256Mi" = 256 Mebibytes
 "1Gi"   = 1 Gibibyte = 1,073,741,824 bytes
@@ -500,7 +500,7 @@ spec:
       failureThreshold: 3
 ```
 
-```
+```text
 Pod with failing readiness probe:
 Service ──X──> Pod (removed from endpoints)
 ```
@@ -570,7 +570,7 @@ grpc:
 
 ## Probe Decision Tree
 
-```
+```text
 Is the container running?
 │
 ├─ YES → Liveness Probe passes
@@ -626,7 +626,7 @@ spec:
 
 ## Resilience Patterns Summary
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │            Resilient Application              │
 │                                              │

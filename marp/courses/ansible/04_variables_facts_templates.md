@@ -104,7 +104,7 @@ vars:
       ssl_cert: /etc/ssl/api.pem
 
 tasks:
-  - name: Show DB host
+    - name: Show DB host
     debug:
       msg: "Primary DB: {{ database.primary.host }}:{{ database.primary.port }}"
 ```
@@ -140,9 +140,9 @@ config:
 - `Jinja2` is the templating engine used by `Ansible`
 - Used in templates, playbooks, and variable expressions
 - Syntax elements:
-  - `{{ }}` - expressions (output a value)
-  - `{% %}` - statements (logic: if, for, etc.)
-  - `{# #}` - comments
+    - `{{ }}` - expressions (output a value)
+    - `{% %}` - statements (logic: if, for, etc.)
+    - `{# #}` - comments
 
 ```jinja2
 {# This is a comment #}
@@ -168,12 +168,12 @@ Listen {{ port }}
 ```yaml
 # In playbooks: expressions only ({{ }})
 tasks:
-  - name: Use variable in task
+    - name: Use variable in task
     debug:
       msg: "Hello {{ user_name }}"
 
   # Jinja2 statements in 'when' (no {{ }} needed)
-  - name: Conditional task
+    - name: Conditional task
     debug:
       msg: "Production mode"
     when: env == "production"
@@ -312,7 +312,7 @@ upstream backend {
 ```yaml
 # Filters transform data using the pipe (|) operator
 tasks:
-  - name: String filters
+    - name: String filters
     debug:
       msg: |
         Upper: {{ name | upper }}
@@ -322,11 +322,11 @@ tasks:
         Trim: {{ name | trim }}
         Length: {{ name | length }}
 
-  - name: Default filter
+    - name: Default filter
     debug:
       msg: "Port: {{ custom_port | default(8080) }}"
 
-  - name: Type conversion
+    - name: Type conversion
     debug:
       msg: "Port as int: {{ port_string | int }}"
 ```
@@ -338,7 +338,7 @@ tasks:
 ```yaml
 tasks:
   # List filters
-  - debug:
+    - debug:
       msg: |
         First: {{ mylist | first }}
         Last: {{ mylist | last }}
@@ -350,13 +350,13 @@ tasks:
         Join: {{ mylist | join(', ') }}
 
   # Dict filters
-  - debug:
+    - debug:
       msg: |
         Keys: {{ mydict | dict2items | map(attribute='key') | list }}
         Combine: {{ dict1 | combine(dict2) }}
 
   # Path filters
-  - debug:
+    - debug:
       msg: |
         Basename: {{ '/etc/nginx/nginx.conf' | basename }}
         Dirname: {{ '/etc/nginx/nginx.conf' | dirname }}
@@ -370,25 +370,25 @@ tasks:
 ```yaml
 tasks:
   # JSON/YAML conversion
-  - name: Convert to JSON
+    - name: Convert to JSON
     debug:
       msg: "{{ my_dict | to_json }}"
 
-  - name: Convert to nice JSON
+    - name: Convert to nice JSON
     debug:
       msg: "{{ my_dict | to_nice_json }}"
 
-  - name: Convert to YAML
+    - name: Convert to YAML
     debug:
       msg: "{{ my_dict | to_yaml }}"
 
   # Regex filters
-  - name: Extract with regex
+    - name: Extract with regex
     debug:
       msg: "{{ 'server-web-01' | regex_replace('^server-(\\w+)-(\\d+)$', '\\1_\\2') }}"
 
   # IP address filters
-  - name: IP manipulation
+    - name: IP manipulation
     debug:
       msg: |
         Network: {{ '192.168.1.10/24' | ipaddr('network') }}
@@ -403,13 +403,13 @@ tasks:
 ```yaml
 tasks:
   # Password hashing
-  - name: Create user with hashed password
+    - name: Create user with hashed password
     user:
       name: admin
       password: "{{ 'mypassword' | password_hash('sha512', 'mysalt') }}"
 
   # MD5/SHA hashing
-  - name: Show hash values
+    - name: Show hash values
     debug:
       msg: |
         MD5: {{ 'hello' | hash('md5') }}
@@ -417,7 +417,7 @@ tasks:
         SHA256: {{ 'hello' | hash('sha256') }}
 
   # Base64
-  - name: Encode/decode base64
+    - name: Encode/decode base64
     debug:
       msg: |
         Encoded: {{ 'hello world' | b64encode }}
@@ -431,27 +431,27 @@ tasks:
 ```yaml
 tasks:
   # Read a file
-  - name: Load SSH key
+    - name: Load SSH key
     debug:
       msg: "{{ lookup('file', '/home/user/.ssh/id_rsa.pub') }}"
 
   # Environment variable
-  - name: Get HOME directory
+    - name: Get HOME directory
     debug:
       msg: "{{ lookup('env', 'HOME') }}"
 
   # Password generation
-  - name: Generate random password
+    - name: Generate random password
     debug:
       msg: "{{ lookup('password', '/dev/null length=20 chars=ascii_letters,digits') }}"
 
   # Read from CSV
-  - name: Lookup from CSV
+    - name: Lookup from CSV
     debug:
       msg: "{{ lookup('csvfile', 'web01 file=servers.csv delimiter=, col=2') }}"
 
   # Read a template
-  - name: Render template as variable
+    - name: Render template as variable
     set_fact:
       rendered_config: "{{ lookup('template', 'config.yml.j2') }}"
 ```
@@ -463,23 +463,23 @@ tasks:
 ```yaml
 tasks:
   # Run a command and use output
-  - name: Get current git commit
+    - name: Get current git commit
     debug:
       msg: "{{ lookup('pipe', 'git rev-parse HEAD') }}"
 
   # Fetch content from URL
-  - name: Get external config
+    - name: Get external config
     debug:
       msg: "{{ lookup('url', 'https://api.example.com/config') }}"
 
   # Read lines from a file
-  - name: Process each line
+    - name: Process each line
     debug:
       msg: "Processing: {{ item }}"
     loop: "{{ lookup('file', 'servers.txt').splitlines() }}"
 
   # Fileglob - find files
-  - name: Copy all config files
+    - name: Copy all config files
     copy:
       src: "{{ item }}"
       dest: /etc/myapp/conf.d/

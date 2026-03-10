@@ -4,7 +4,7 @@
 
 ## Day 3: Agents, Memory & LangChain
 
-```
+```text
 Today's Roadmap:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  ┌──────────────────────────────────────────┐
@@ -24,7 +24,7 @@ context, use tools, and take autonomous actions.
 
 An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
-```
+```text
 ┌──────────────────────────────────────────┐
 │              AGENT LOOP                   │
 │                                           │
@@ -50,7 +50,7 @@ An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
 ## Simple Agent vs. Complex Agent
 
-```
+```text
 SIMPLE CHATBOT:
   User → LLM → Response
   (single turn, no tools, no memory)
@@ -70,7 +70,7 @@ AGENT:
 
 ## Agent Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────┐
 │                    AGENT                         │
 │                                                  │
@@ -200,7 +200,7 @@ def run_agent(user_message, max_iterations=10):
 
 ## Agent Planning Strategies
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │           PLANNING STRATEGIES                        │
 ├────────────────┬────────────────────────────────────┤
@@ -271,7 +271,7 @@ def plan_and_execute(task):
 
 `LLM`s have no persistent memory — each API call starts fresh:
 
-```
+```text
 Call 1: User: "My name is Alice"
         AI:   "Nice to meet you, Alice!"
 
@@ -281,7 +281,7 @@ Call 2: User: "What's my name?"
 
 **Solutions:**
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │            MEMORY STRATEGIES                 │
 ├──────────────┬──────────────────────────────┤
@@ -416,7 +416,7 @@ relevant = memory.retrieve("What does Alice do for work?")
 
 Combine vector memory with generation for knowledge-grounded responses:
 
-```
+```text
 User Query: "What were Q3 results?"
         │
         ▼
@@ -559,7 +559,7 @@ class EntityMemory:
 
 Multiple specialized agents collaborating:
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │              ORCHESTRATOR AGENT                    │
 │  (routes tasks to specialized agents)              │
@@ -1042,7 +1042,7 @@ class AgentEvaluator:
 
 ## Common Agent Failure Modes
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │           AGENT FAILURE MODES                         │
 ├──────────────┬───────────────────────────────────────┤

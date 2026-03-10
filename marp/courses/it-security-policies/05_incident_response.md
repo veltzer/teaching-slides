@@ -12,13 +12,13 @@
 
 - Any event that threatens the confidentiality, integrity, or availability of data or systems
 - Examples:
-  - You clicked on a phishing link
-  - Your laptop was stolen
-  - You sent sensitive data to the wrong person
-  - You noticed unauthorized access to a system
-  - A colleague shared their password
-  - You found a USB drive and plugged it in
-  - Ransomware message appears on your screen
+    - You clicked on a phishing link
+    - Your laptop was stolen
+    - You sent sensitive data to the wrong person
+    - You noticed unauthorized access to a system
+    - A colleague shared their password
+    - You found a USB drive and plugged it in
+    - Ransomware message appears on your screen
 
 ---
 
@@ -37,7 +37,7 @@
 
 ## The Incident Response Lifecycle
 
-```
+```text
 +------------+     +------------+     +------------+     +------------+
 |            |     |            |     |            |     |            |
 | 1. DETECT  |---->| 2. CONTAIN |---->| 3. REMOVE  |---->| 4. RECOVER |
@@ -69,7 +69,7 @@
 - Alerts from your antivirus software
 - Unusual charges or transactions
 
-**Trust your instincts - if something feels wrong, report it**
+Trust your instincts - **if something feels wrong, report it**
 
 ---
 
@@ -89,7 +89,7 @@
 
 ## Your Reporting Channels
 
-```
+```text
 +-------------------+
 | Security Incident |
 +--------+----------+
@@ -126,7 +126,7 @@
 - An unreported incident can escalate from minor to catastrophic
 - Early reporting saves the company time, money, and reputation
 
-```
+```text
 +---------------------------------------------+
 |                                               |
 |   "The only wrong thing to do is nothing."    |
@@ -144,10 +144,10 @@
 ## What Is Business Continuity?
 - The plan for keeping the business running during and after a disruption
 - Covers scenarios like:
-  - Cyberattack (ransomware, data breach)
-  - Natural disaster (flood, earthquake, fire)
-  - Infrastructure failure (power outage, network down)
-  - Pandemic or health emergency
+    - Cyberattack (ransomware, data breach)
+    - Natural disaster (flood, earthquake, fire)
+    - Infrastructure failure (power outage, network down)
+    - Pandemic or health emergency
 
 ---
 
@@ -165,7 +165,7 @@
 
 ## `RTO` and `RPO` Explained
 
-```
+```text
          Data loss          Downtime
          tolerated          tolerated
     <--------------->  <----------------->
@@ -189,9 +189,9 @@
 - Save work to company-approved cloud storage (not local desktop)
 - Do not rely solely on your local hard drive
 - Follow the 3-2-1 rule:
-  - **3** copies of your data
-  - **2** different types of storage
-  - **1** copy off-site (cloud)
+    - **3** copies of your data
+    - **2** different types of storage
+    - **1** copy off-site (cloud)
 - Verify that your backups are working periodically
 - Know how to restore from backup if needed
 
@@ -201,7 +201,7 @@
 
 ## What Happens in a Ransomware Attack
 
-```
+```text
 1. Infection         2. Encryption        3. Ransom Note
 +-------------+    +---------------+    +------------------+
 | Malicious   |    | All files     |    | "Pay $500,000    |

@@ -22,7 +22,7 @@ Advanced Kubernetes Course - Day 1, Module 2
 
 ## Autoscaling Dimensions
 
-```
+```text
                     ┌─────────────────────┐
                     │  Cluster Autoscaler  │
                     │  (Add/Remove Nodes)  │
@@ -74,7 +74,7 @@ spec:
 
 The desired replica count is calculated as:
 
-```
+```text
 desiredReplicas = ceil[currentReplicas * (currentMetric / desiredMetric)]
 ```
 
@@ -83,7 +83,7 @@ desiredReplicas = ceil[currentReplicas * (currentMetric / desiredMetric)]
 - Current CPU utilization: 90%
 - Target CPU utilization: 70%
 
-```
+```text
 desiredReplicas = ceil[3 * (90 / 70)]
                 = ceil[3 * 1.286]
                 = ceil[3.857]
@@ -177,7 +177,7 @@ kubectl top nodes
 ```
 
 Example output:
-```
+```text
 NAME      REFERENCE        TARGETS         MINPODS   MAXPODS   REPLICAS
 web-hpa   Deployment/web   65%/70%, 45%/80%   2        20        4
 ```
@@ -261,7 +261,7 @@ spec:
 kubectl describe vpa web-vpa
 ```
 
-```
+```text
 Recommendation:
   Container Recommendations:
     Container Name: web
@@ -290,7 +290,7 @@ Recommendation:
 
 Automatically adjusts the number of nodes in a cluster:
 
-```
+```text
 Pending Pods (insufficient resources)
           │
           ▼
@@ -435,7 +435,7 @@ triggers:
 
 ## Combining Autoscalers
 
-```
+```text
                  Traffic Spike
                       │
                       ▼

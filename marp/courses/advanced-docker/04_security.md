@@ -26,7 +26,7 @@ Hardening containers for production
 
 ## The Docker Attack Surface
 
-```
+```text
 ┌──────────────────────────────────────────┐
 │            Attack Vectors                │
 │                                          │
@@ -255,7 +255,7 @@ docker run --rm \
 
 ## Custom `AppArmor` Profile
 
-```
+```text
 # /etc/apparmor.d/docker-myapp
 #include <tunables/global>
 
@@ -363,7 +363,7 @@ docker trust sign myregistry.com/myapp:1.0
 
 ## Content Trust - Key Management
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │          Docker Content Trust           │
 │                                         │
@@ -419,7 +419,7 @@ trivy fs --security-checks vuln,config /path/to/project
 
 ## Image Scanning - `Trivy` Output Example
 
-```
+```text
 myapp:latest (debian 12.4)
 Total: 15 (HIGH: 10, CRITICAL: 5)
 
@@ -628,7 +628,7 @@ docker run --rm --net host --pid host --userns host \
 
 ## CIS Benchmark - Key Categories
 
-```
+```text
 Section 1: Host Configuration
   1.1 - Ensure a separate partition for containers
   1.2 - Ensure container host is hardened
@@ -791,7 +791,7 @@ docker run -d --name falco \
 
 ## Security Checklist
 
-```
+```text
 Pre-deployment:
   □ Images scanned for vulnerabilities
   □ No secrets in images or environment variables

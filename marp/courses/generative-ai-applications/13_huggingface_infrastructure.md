@@ -4,7 +4,7 @@
 
 ## The HuggingFace Ecosystem
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │                HUGGINGFACE ECOSYSTEM                  │
 │                                                       │
@@ -379,7 +379,7 @@ Compare:
 
 Understanding model documentation:
 
-```
+```text
 MODEL CARD SECTIONS:
 ━━━━━━━━━━━━━━━━━━━━
 

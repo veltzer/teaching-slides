@@ -71,7 +71,7 @@ spec:
 
 ## Init Container Use Cases
 
-```
+```text
 ┌────────────────────────────────────────────────┐
 │                  Pod Lifecycle                   │
 │                                                 │
@@ -189,7 +189,7 @@ The `restartPolicy: Always` on an init container marks it as a **sidecar** that 
 
 ## Sidecar Patterns
 
-```
+```text
 ┌─────────────────── Pod ───────────────────┐
 │                                           │
 │  ┌──────────┐    ┌────────────────────┐   │

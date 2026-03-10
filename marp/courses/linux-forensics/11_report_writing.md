@@ -21,7 +21,7 @@
 
 ## Report Audience
 
-```
+```text
 +------------------+     +------------------+
 | Technical        |     | Non-Technical    |
 | Audience         |     | Audience         |
@@ -42,7 +42,7 @@ Write for BOTH audiences:
 
 ## Report Structure Overview
 
-```
+```text
 1. Title Page
 2. Table of Contents
 3. Executive Summary
@@ -67,7 +67,7 @@ Write for BOTH audiences:
 
 ## Device Identification
 
-```
+```text
 DEVICE IDENTIFICATION
 =====================
 Evidence Item: E001
@@ -124,7 +124,7 @@ echo "Imaging completed: $(date -u)"
 
 ## Chain of Custody
 
-```
+```text
 CHAIN OF CUSTODY LOG
 ====================
 Case Number:  CASE-2025-001
@@ -147,7 +147,7 @@ Evidence bag seal numbers recorded at each transfer.
 
 ## Evidence Collection Documentation
 
-```
+```text
 EVIDENCE COLLECTION LOG
 =======================
 Item  | Source           | Method          | Hash (SHA-256)
@@ -168,7 +168,7 @@ Collection Notes:
 
 ## Examination Environment
 
-```
+```text
 EXAMINATION ENVIRONMENT
 =======================
 Forensic Workstation:
@@ -197,7 +197,7 @@ Timezone: All times in UTC
 
 ## Documenting Methodology
 
-```
+```text
 ANALYSIS METHODOLOGY
 ====================
 1. Evidence Intake
@@ -239,7 +239,7 @@ ANALYSIS METHODOLOGY
 - Avoid jargon (or define it)
 - Include screenshots/exports as references
 
-```
+```text
 FINDING #1: Unauthorized SSH Access
 Evidence: E001 (disk image), /var/log/auth.log
 Time: 2025-01-15 10:30:00 UTC
@@ -254,7 +254,7 @@ organization's network (10.1.0.0/16).
 
 ## Finding Template
 
-```
+```text
 FINDING #[Number]: [Title]
 ========================
 Severity:    [Critical/High/Medium/Low/Informational]
@@ -282,7 +282,7 @@ Cross-references:
 
 ## Timeline Documentation
 
-```
+```text
 TIMELINE OF EVENTS
 ==================
 All times in UTC
@@ -312,7 +312,7 @@ All times in UTC
 
 ## Executive Summary
 
-```
+```text
 EXECUTIVE SUMMARY
 =================
 On January 15, 2025, a forensic examination was conducted
@@ -346,7 +346,7 @@ Immediate Recommendations:
 
 ## Conclusions Section
 
-```
+```text
 CONCLUSIONS
 ===========
 Based on the examination of Evidence Items E001 through E004,
@@ -378,7 +378,7 @@ and the methodology described in this report.
 
 ## Recommendations
 
-```
+```text
 RECOMMENDATIONS
 ===============
 Immediate Actions:
@@ -411,7 +411,7 @@ Long-term Actions:
 - Annotate screenshots to highlight relevant areas
 - Reference exhibits by number in the report text
 
-```
+```text
 Exhibit A-1: SSH Authentication Log Entry
 ==========================================
 [Screenshot of auth.log showing unauthorized login]
@@ -432,7 +432,7 @@ as the root user, establishing persistent access.
 
 ## Hash Verification Appendix
 
-```
+```text
 APPENDIX B: HASH VERIFICATION
 ==============================
 
@@ -461,7 +461,7 @@ values, confirming no modification during analysis.
 
 ## Glossary of Terms
 
-```
+```text
 APPENDIX E: GLOSSARY
 =====================
 ARP     - Address Resolution Protocol
@@ -490,7 +490,7 @@ UTC     - Coordinated Universal Time
 
 ## Report Quality Checklist
 
-```
+```text
 QUALITY CHECKLIST
 =================
 [ ] All times in consistent timezone (UTC preferred)
@@ -547,7 +547,7 @@ QUALITY CHECKLIST
 
 ## Peer Review Process
 
-```
+```text
 PEER REVIEW CHECKLIST
 =====================
 Reviewer: [Name, Certification]
@@ -589,7 +589,7 @@ Reviewer Comments:
 - Maintain objectivity - present facts, not advocacy
 - Practice explaining findings to non-technical colleagues
 
-```
+```text
 Presentation Structure:
 1. Case overview (2 min)
 2. Methodology (3 min)
@@ -639,7 +639,7 @@ forensic_note() {
 4. Create a timeline of events
 5. Write an executive summary
 
-```
+```text
 Template for exercise:
 
 FORENSIC EXAMINATION REPORT
@@ -676,7 +676,7 @@ Evidence: [Reference]
 
 ## Handling Sensitive Information in Reports
 
-```
+```text
 CLASSIFICATION AND HANDLING
 ============================
 - Reports may contain sensitive data:
@@ -702,7 +702,7 @@ CLASSIFICATION AND HANDLING
 
 ## Expert Witness Preparation
 
-```
+```text
 EXPERT WITNESS PREPARATION
 ============================
 Before Testimony:
@@ -732,7 +732,7 @@ After Testimony:
 
 ## Incident Response Report vs Legal Report
 
-```
+```text
 INCIDENT RESPONSE REPORT     LEGAL/FORENSIC REPORT
 ========================     =====================
 Focus: Quick remediation     Focus: Evidence preservation
@@ -753,7 +753,7 @@ Language: Technical           Language: Clear for all
 
 ## Report Templates and Standards
 
-```
+```text
 INDUSTRY STANDARDS AND FRAMEWORKS
 ===================================
 - NIST SP 800-86: Guide to Integrating Forensic 
@@ -781,7 +781,7 @@ Template Resources:
 
 ## Visualization in Reports
 
-```
+```text
 Types of Visualizations:
 1. Timeline diagrams
    |--10:00--|--10:15--|--10:30--|--10:45--|
@@ -810,7 +810,7 @@ Types of Visualizations:
 
 ## Multi-Evidence Correlation
 
-```
+```text
 CORRELATION MATRIX
 ==================
 Evidence E001 (Disk) + E002 (Memory) + E003 (Network)
@@ -838,7 +838,7 @@ Finding: Data Exfiltration
 
 ## Evidence Handling Errors to Avoid
 
-```
+```text
 COMMON ERRORS AND CONSEQUENCES
 ================================
 Error: Forgetting write blocker
@@ -873,7 +873,7 @@ Error: Using non-validated tools
 
 ## Report Formatting Standards
 
-```
+```text
 FORMATTING GUIDELINES
 ======================
 Headers:
@@ -939,7 +939,7 @@ CASE-2025-001_IMG_E005_phone_storage.dd
 
 ## After-Action Review
 
-```
+```text
 AFTER-ACTION REVIEW TEMPLATE
 ==============================
 Case: CASE-2025-001
@@ -972,7 +972,7 @@ Lessons learned documented and shared with team.
 
 ## Continuing Education and Staying Current
 
-```
+```text
 STAYING CURRENT IN LINUX FORENSICS
 ====================================
 The Linux landscape evolves constantly:

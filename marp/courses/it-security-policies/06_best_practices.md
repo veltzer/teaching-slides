@@ -26,7 +26,7 @@
 
 ## The Clean Desk Test
 
-```
+```text
 Before leaving your desk, check:
 
 +---+  Screen locked?
@@ -60,7 +60,7 @@ If any box is unchecked, fix it before you leave.
 
 ## Tailgating Prevention
 
-```
+```text
 WRONG:                              RIGHT:
 
 +------+  +------+                 +------+     +------+
@@ -124,7 +124,7 @@ WRONG:                              RIGHT:
 - Do not download cracked or pirated software
 - Uninstall software you no longer use
 
-```
+```text
 +------------------+     +------------------+
 | Software with    |     | Updated software |
 | known            |     | with             |
@@ -220,7 +220,7 @@ WRONG:                              RIGHT:
 
 ## Building Good Habits
 
-```
+```text
 +-----------------------------------------------------+
 |              DAILY SECURITY HABITS                    |
 +-----------------------------------------------------+
@@ -270,7 +270,7 @@ WRONG:                              RIGHT:
 
 ## The Three Things to Remember
 
-```
+```text
 +--------------------------------------------------+
 |                                                    |
 |  1. THINK before you click, share, or connect.    |
