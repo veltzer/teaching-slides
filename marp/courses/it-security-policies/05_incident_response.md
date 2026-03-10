@@ -219,12 +219,12 @@ Trust your instincts - **if something feels wrong, report it**
 ## If You See a Ransom Message
 
 1. **Do not pay** - payment does not guarantee recovery
-2. **Do not restart** your computer
-3. **Disconnect** from the network immediately
-4. **Photograph** the ransom message with your phone
-5. **Report** to IT security immediately
-6. **Do not** attempt to decrypt files yourself
-7. **Wait** for instructions from the incident response team
+1. **Do not restart** your computer
+1. **Disconnect** from the network immediately
+1. **Photograph** the ransom message with your phone
+1. **Report** to IT security immediately
+1. **Do not** attempt to decrypt files yourself
+1. **Wait** for instructions from the incident response team
 
 ---
 

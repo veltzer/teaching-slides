@@ -562,10 +562,10 @@ rkhunter --check
 
 ### Tasks:
 1. Use `strace` to trace a sample program's behavior
-2. Use `ltrace` to identify library calls
-3. Analyze a binary with `strings` and `readelf`
-4. Set breakpoints in `GDB` and examine execution
-5. De-obfuscate a simple encoded shell script
+1. Use `ltrace` to identify library calls
+1. Analyze a binary with `strings` and `readelf`
+1. Set breakpoints in `GDB` and examine execution
+1. De-obfuscate a simple encoded shell script
 
 ```bash
 # Quick analysis workflow for suspicious binary

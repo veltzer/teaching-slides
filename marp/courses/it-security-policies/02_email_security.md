@@ -159,11 +159,11 @@ Incoming Email
 ## What to Do When You Spot Phishing
 
 1. **Do not click** any links or open attachments
-2. **Do not reply** to the email
-3. **Do not forward** it to colleagues (except security team)
-4. **Report it** using the company's phishing report button
-5. **Delete it** from your inbox after reporting
-6. If you already clicked, **report immediately** to IT security
+1. **Do not reply** to the email
+1. **Do not forward** it to colleagues (except security team)
+1. **Report it** using the company's phishing report button
+1. **Delete it** from your inbox after reporting
+1. If you already clicked, **report immediately** to IT security
 
 ---
 
@@ -196,10 +196,10 @@ Incoming Email
 Review these subject lines - which are suspicious?
 
 1. "Invoice #4829 attached - payment overdue"
-2. "Meeting notes from Tuesday's project review"
-3. "You've won a $500 Amazon gift card! Claim now!"
-4. "Quarterly security training reminder"
-5. "Your package could not be delivered - click to reschedule"
+1. "Meeting notes from Tuesday's project review"
+1. "You've won a $500 Amazon gift card! Claim now!"
+1. "Quarterly security training reminder"
+1. "Your package could not be delivered - click to reschedule"
 
 Answers: 1, 3, and 5 are classic phishing patterns
 

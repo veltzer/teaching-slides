@@ -435,10 +435,10 @@ Evidence Timeline from Memory Analysis:
 
 ### Tasks:
 1. Capture memory using `LiME`
-2. Analyze processes with Volatility
-3. Extract bash history from memory
-4. Identify network connections
-5. Search for credentials in memory
+1. Analyze processes with Volatility
+1. Extract bash history from memory
+1. Identify network connections
+1. Search for credentials in memory
 
 ```bash
 # Memory forensics workflow
@@ -675,11 +675,11 @@ cat /proc/iomem
 
 ### Tasks:
 1. Capture memory using LiME
-2. List all processes and identify suspicious ones
-3. Extract bash history from all shells
-4. Map all network connections to processes
-5. Search for credentials and encryption keys
-6. Dump suspicious process memory and analyze
+1. List all processes and identify suspicious ones
+1. Extract bash history from all shells
+1. Map all network connections to processes
+1. Search for credentials and encryption keys
+1. Dump suspicious process memory and analyze
 
 ```bash
 #!/bin/bash

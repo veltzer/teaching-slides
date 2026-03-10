@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Cluster Provisioning
 
 Advanced Kubernetes Course - Day 2, Module 1

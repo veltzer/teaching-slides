@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Controllers and Operators
 
 Advanced Kubernetes Course - Day 1, Module 4
@@ -561,10 +555,10 @@ var _ = Describe("PostgreSQL Controller", func() {
 ## Lab: Build a Simple Operator
 
 1. Initialize project with `Kubebuilder`
-2. Define a `WebApp` `CRD` with fields: image, replicas, port
-3. Implement reconciliation to create `Deployment` + `Service`
-4. Test with `envtest`
-5. Deploy to cluster
+1. Define a `WebApp` `CRD` with fields: image, replicas, port
+1. Implement reconciliation to create `Deployment` + `Service`
+1. Test with `envtest`
+1. Deploy to cluster
 
 ```bash
 kubebuilder init --domain mycompany.com \

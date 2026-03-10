@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Deploying Resilient Applications in `Kubernetes`
 
 Advanced Kubernetes Course - Day 1, Module 1
@@ -652,10 +646,10 @@ spec:
 ## Lab Exercise: Build a Resilient App
 
 1. Create a `Deployment` with 3 replicas
-2. Add resource requests and limits
-3. Configure liveness and readiness probes
-4. Create a `PodDisruptionBudget`
-5. Simulate a node failure and observe recovery
+1. Add resource requests and limits
+1. Configure liveness and readiness probes
+1. Create a `PodDisruptionBudget`
+1. Simulate a node failure and observe recovery
 
 ```bash
 # Deploy the application

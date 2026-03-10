@@ -863,10 +863,10 @@ ls -la /evidence/carved/zip/
 
 ### Tasks:
 1. Collect all shell histories from the system
-2. Analyze authentication logs for suspicious activity
-3. Check for unusual SUID/SGID files
-4. Examine browser artifacts for a user
-5. Parse recent USB device connections from kernel logs
+1. Analyze authentication logs for suspicious activity
+1. Check for unusual SUID/SGID files
+1. Examine browser artifacts for a user
+1. Parse recent USB device connections from kernel logs
 
 ```bash
 #!/bin/bash

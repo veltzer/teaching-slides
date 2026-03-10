@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # `Kubernetes` Schedulers
 
 Advanced Kubernetes Course - Day 1, Module 3
@@ -402,10 +396,10 @@ Higher priority pods can **preempt** (evict) lower priority pods.
 ## Scheduling Best Practices
 
 1. **Use topology spread** for high availability across zones
-2. **Use pod anti-affinity** to spread replicas across nodes
-3. **Use taints** to dedicate nodes for specific workloads
-4. **Set priorities** for critical workloads
-5. **Avoid over-constraining** - leave room for the scheduler
+1. **Use pod anti-affinity** to spread replicas across nodes
+1. **Use taints** to dedicate nodes for specific workloads
+1. **Set priorities** for critical workloads
+1. **Avoid over-constraining** - leave room for the scheduler
 
 ```yaml
 # Good: Spread across zones, prefer specific nodes

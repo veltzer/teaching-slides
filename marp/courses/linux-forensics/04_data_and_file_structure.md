@@ -406,10 +406,10 @@ zipdetails archive.zip  # Very detailed
 
 ### Tasks:
 1. Identify file types by magic numbers (not extensions)
-2. Extract metadata from image and document files
-3. Search a hex dump for specific patterns
-4. Perform file carving on a sample disk image
-5. Analyze entropy of suspicious files
+1. Extract metadata from image and document files
+1. Search a hex dump for specific patterns
+1. Perform file carving on a sample disk image
+1. Analyze entropy of suspicious files
 
 ```bash
 #!/bin/bash

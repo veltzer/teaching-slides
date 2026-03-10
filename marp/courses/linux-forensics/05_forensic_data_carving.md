@@ -33,11 +33,11 @@ Raw Disk Image:
 ## Carving Process Overview
 
 1. **Identify** target media and create forensic image
-2. **Select** carving tool and configure file types
-3. **Scan** the image for file headers and footers
-4. **Extract** identified files
-5. **Validate** recovered files (open, check integrity)
-6. **Document** findings and recovery statistics
+1. **Select** carving tool and configure file types
+1. **Scan** the image for file headers and footers
+1. **Extract** identified files
+1. **Validate** recovered files (open, check integrity)
+1. **Document** findings and recovery statistics
 
 ```bash
 # Typical workflow
@@ -106,20 +106,20 @@ foremost -c /tmp/custom_foremost.conf \
 cat /evidence/carved/audit.txt
 # Foremost version 1.5.7
 # Audit File
-# 
+#
 # Foremost started at Mon Jan 15 10:30:00 2025
 # Invocation: foremost -i disk_image.dd -o /evidence/carved/
-# 
+#
 # Output directory: /evidence/carved/
 # Configuration file: /etc/foremost.conf
-# 
+#
 # File: disk_image.dd
 # Length: 500 GB (536870912000 bytes)
-# 
+#
 # Num      Name (bs=512)    Size    File Offset     Comment
-# 0:  00012345.jpg         234 KB  6320640         
-# 1:  00012567.jpg         156 KB  6434304         
-# 2:  00089012.pdf         1.2 MB  45574144        
+# 0:  00012345.jpg         234 KB  6320640
+# 1:  00012567.jpg         156 KB  6434304
+# 2:  00089012.pdf         1.2 MB  45574144
 #
 # 345 FILES EXTRACTED
 
@@ -480,10 +480,10 @@ echo "Survey complete: $OUTPUT"
 
 ### Tasks:
 1. Create a test image with various file types
-2. Delete some files and carve them back
-3. Use `foremost` to recover JPEG and PDF files
-4. Use `bulk_extractor` to find email addresses and URLs
-5. Analyze carving results and validate recovered files
+1. Delete some files and carve them back
+1. Use `foremost` to recover JPEG and PDF files
+1. Use `bulk_extractor` to find email addresses and URLs
+1. Analyze carving results and validate recovered files
 
 ```bash
 # Create test image

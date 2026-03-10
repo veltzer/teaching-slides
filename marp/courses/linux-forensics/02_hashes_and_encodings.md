@@ -451,10 +451,10 @@ echo "Layer 2: $LAYER2"
 
 ### Tasks:
 1. Compute MD5, SHA-1, and SHA-256 of a test file
-2. Verify hash integrity after copying a file
-3. Decode a base64-encoded suspicious string
-4. Identify the encoding type of mystery strings
-5. Use `ssdeep` to compare similar files
+1. Verify hash integrity after copying a file
+1. Decode a base64-encoded suspicious string
+1. Identify the encoding type of mystery strings
+1. Use `ssdeep` to compare similar files
 
 ```bash
 # Create test file

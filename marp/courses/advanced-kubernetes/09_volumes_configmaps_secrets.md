@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Advanced Volumes, `ConfigMaps` & `Secrets`
 
 Advanced Kubernetes Course - Day 2, Module 5

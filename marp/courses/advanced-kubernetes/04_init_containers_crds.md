@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Init Containers & Custom Resource Definitions
 
 Advanced Kubernetes Course - Day 1, Module 5
@@ -546,10 +540,10 @@ spec:
 ## Lab: Create a `CRD` with Validation
 
 1. Define a `CRD` for a `WebApplication` resource
-2. Add `OpenAPI` validation schema
-3. Add printer columns
-4. Create instances and test validation
-5. Optional: Add a validating webhook
+1. Add `OpenAPI` validation schema
+1. Add printer columns
+1. Create instances and test validation
+1. Optional: Add a validating webhook
 
 ```bash
 # Apply CRD

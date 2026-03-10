@@ -634,10 +634,10 @@ forensic_note() {
 
 ### Tasks:
 1. Write an evidence identification section for a sample case
-2. Document the chain of custody for a hard drive
-3. Write three findings with evidence references
-4. Create a timeline of events
-5. Write an executive summary
+1. Document the chain of custody for a hard drive
+1. Write three findings with evidence references
+1. Create a timeline of events
+1. Write an executive summary
 
 ```text
 Template for exercise:
@@ -756,18 +756,18 @@ Language: Technical           Language: Clear for all
 ```text
 INDUSTRY STANDARDS AND FRAMEWORKS
 ===================================
-- NIST SP 800-86: Guide to Integrating Forensic 
+- NIST SP 800-86: Guide to Integrating Forensic
   Techniques into Incident Response
-  
+
 - ISO 27037: Guidelines for identification, collection,
   acquisition and preservation of digital evidence
-  
+
 - SWGDE Best Practices: Scientific Working Group on
   Digital Evidence
-  
+
 - RFC 3227: Guidelines for Evidence Collection and
   Archiving
-  
+
 - ACPO Good Practice Guide: Association of Chief Police
   Officers (UK)
 

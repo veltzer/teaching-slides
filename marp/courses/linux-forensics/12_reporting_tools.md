@@ -512,28 +512,28 @@ Activity Log tracks:
 
 ```text
 Integrated Forensic Workflow:
-                                    
+
 1. Evidence Intake
    └── Autopsy: Add data sources
-                                    
+
 2. Automated Analysis
    └── Autopsy: Run ingest modules
-                                    
+
 3. Manual Analysis
    └── Autopsy: Tag findings
-                                    
+
 4. Export Findings
    └── Autopsy: Export tagged items
-                                    
+
 5. Import to Dradis
    └── Dradis: Import Autopsy output
-                                    
+
 6. Organize Report
    └── Dradis: Structure findings
-                                    
+
 7. Review & Collaborate
    └── Dradis: Team review
-                                    
+
 8. Generate Report
    └── Dradis: Export to Word/PDF
 ```
@@ -699,25 +699,25 @@ echo "Report generated: $REPORT"
 
 ```text
 Review Process:
-                                    
+
 Step 1: Self-Review
 ├── Check all findings have evidence references
 ├── Verify hash values are correct
 ├── Proofread for spelling/grammar
 └── Verify timeline consistency
-                                    
+
 Step 2: Technical Peer Review
 ├── Another examiner reviews methodology
 ├── Verifies tool usage is appropriate
 ├── Checks technical accuracy
 └── Reviews hash verification
-                                    
+
 Step 3: Quality Assurance Review
 ├── Checks report completeness
 ├── Verifies compliance with standards
 ├── Reviews formatting and structure
 └── Checks for sensitive information handling
-                                    
+
 Step 4: Legal Review (if applicable)
 ├── Reviews for legal sufficiency
 ├── Checks evidence admissibility
@@ -755,10 +755,10 @@ Presentation Tips:
 
 ### Tasks:
 1. Create a case in Autopsy with a sample disk image
-2. Tag three findings during analysis
-3. Generate an HTML report from Autopsy
-4. Document findings in Dradis format
-5. Write a complete executive summary
+1. Tag three findings during analysis
+1. Generate an HTML report from Autopsy
+1. Document findings in Dradis format
+1. Write a complete executive summary
 
 ```text
 Exercise Template:
@@ -1116,11 +1116,11 @@ A web server has been compromised. You have:
 
 ### Tasks:
 1. Mount and analyze the disk image
-2. Build a filesystem timeline
-3. Analyze memory for running processes
-4. Correlate network traffic with disk findings
-5. Identify the attack vector and attacker actions
-6. Write a complete forensic report
+1. Build a filesystem timeline
+1. Analyze memory for running processes
+1. Correlate network traffic with disk findings
+1. Identify the attack vector and attacker actions
+1. Write a complete forensic report
 
 ```text
 Deliverables:

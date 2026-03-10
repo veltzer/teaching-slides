@@ -1165,10 +1165,10 @@ zgrep "error" /var/log/syslog.*.gz
 
 ### Tasks:
 1. Map the filesystem structure of the target system
-2. Identify all user accounts and their privileges
-3. List all running services and scheduled tasks
-4. Check shell histories for all users
-5. Document system identification information
+1. Identify all user accounts and their privileges
+1. List all running services and scheduled tasks
+1. Check shell histories for all users
+1. Document system identification information
 
 ```bash
 #!/bin/bash
@@ -1561,12 +1561,12 @@ who -a
 
 # Historical sessions (wtmp)
 last -F  # Full timestamps
-# john  pts/0  192.168.1.50  Mon Jan 15 10:30:00 2025 - 
+# john  pts/0  192.168.1.50  Mon Jan 15 10:30:00 2025 -
 #                             Mon Jan 15 10:45:00 2025 (00:15)
 
 # Failed logins (btmp)
 sudo lastb -F
-# root  ssh:notty  10.0.0.99  Mon Jan 15 10:28:00 2025 - 
+# root  ssh:notty  10.0.0.99  Mon Jan 15 10:28:00 2025 -
 #                              Mon Jan 15 10:28:00 2025 (00:00)
 
 # Last login per user

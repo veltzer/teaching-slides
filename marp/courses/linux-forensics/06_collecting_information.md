@@ -636,10 +636,10 @@ echo "Collection complete: $EVIDENCE"
 
 ### Tasks:
 1. Run a comprehensive system survey
-2. Identify all network connections and associated processes
-3. Check for persistence mechanisms
-4. Collect program execution evidence
-5. Document all findings with timestamps
+1. Identify all network connections and associated processes
+1. Check for persistence mechanisms
+1. Collect program execution evidence
+1. Document all findings with timestamps
 
 ```bash
 # Quick triage commands

@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Serverless with `Knative`
 
 Advanced Kubernetes Course - Day 3, Module 5
@@ -670,10 +664,10 @@ kubectl apply -f event-source.yaml
 Key takeaways:
 
 1. **Declarative config** with `Kustomize`, `Helm`, and GitOps
-2. **Production patterns**: checklists, security, cost optimization
-3. **Deployment strategies**: rolling, blue-green, canary with `Argo Rollouts`
-4. **`RBAC`**: Least privilege, `ServiceAccounts`, audit logging
-5. **Serverless**: `Knative` for scale-to-zero and event-driven workloads
+1. **Production patterns**: checklists, security, cost optimization
+1. **Deployment strategies**: rolling, blue-green, canary with `Argo Rollouts`
+1. **`RBAC`**: Least privilege, `ServiceAccounts`, audit logging
+1. **Serverless**: `Knative` for scale-to-zero and event-driven workloads
 
 ---
 

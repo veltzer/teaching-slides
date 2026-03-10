@@ -542,10 +542,10 @@ VERIFICATION:
 
 ### Tasks:
 1. Set up software write blocking on a test device
-2. Create a raw `dd` image with hash verification
-3. Create an E01 image using available tools
-4. Verify image integrity
-5. Mount the image and access partition data
+1. Create a raw `dd` image with hash verification
+1. Create an E01 image using available tools
+1. Verify image integrity
+1. Mount the image and access partition data
 
 ```bash
 # Practice workflow

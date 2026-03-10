@@ -148,7 +148,7 @@ lscpu | grep "Byte Order"
     +-----+  +-----+  +-----+
     |/////|  |     |  |     |   Platter surface
     +-----+  +-----+  +-----+
-    
+
     Each track divided into sectors:
     +---+---+---+---+---+---+
     | S0| S1| S2| S3| S4| S5|
@@ -664,10 +664,10 @@ shred -vfz -n 3 sensitive_file.txt
 
 ### Tasks:
 1. List all block devices and their properties
-2. Identify the partition table type for each disk
-3. Record serial numbers of all connected drives
-4. Check for HPA/DCO on available drives
-5. Check SMART health status
+1. Identify the partition table type for each disk
+1. Record serial numbers of all connected drives
+1. Check for HPA/DCO on available drives
+1. Check SMART health status
 
 ```bash
 # Complete identification script
@@ -938,10 +938,10 @@ file /home/.ecryptfs/*/\.Private/*
 
 ### Tasks:
 1. Identify all storage devices including NVMe and USB
-2. Check for HPA/DCO on available drives
-3. Review USB connection history from system logs
-4. Image a USB device with hash verification
-5. Detect any encrypted volumes
+1. Check for HPA/DCO on available drives
+1. Review USB connection history from system logs
+1. Image a USB device with hash verification
+1. Detect any encrypted volumes
 
 ```bash
 #!/bin/bash

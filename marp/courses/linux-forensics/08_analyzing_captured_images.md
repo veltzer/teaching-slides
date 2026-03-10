@@ -569,10 +569,10 @@ autopsy
 
 ### Tasks:
 1. Mount a forensic image read-only
-2. Use `fls` to list directory contents and deleted files
-3. Use `istat` to analyze inodes of interest
-4. Build a timeline using `fls` and `mactime`
-5. Recover a deleted file and verify its integrity
+1. Use `fls` to list directory contents and deleted files
+1. Use `istat` to analyze inodes of interest
+1. Build a timeline using `fls` and `mactime`
+1. Recover a deleted file and verify its integrity
 
 ```bash
 # Analysis workflow
@@ -1079,18 +1079,18 @@ IMG="/forensics/images/disk.dd"
 # Get all partition offsets
 mmls "$IMG" | grep "^0" | while read slot start length desc; do
   echo "=== Analyzing: $desc (offset: $start) ==="
-  
+
   # Try to identify filesystem
   fsstat -o "$start" "$IMG" 2>/dev/null | head -5
-  
+
   # List root directory
   echo "--- Root contents ---"
   fls -o "$start" "$IMG" 2>/dev/null | head -10
-  
+
   # Check for deleted files
   echo "--- Deleted files ---"
   fls -o "$start" -d "$IMG" 2>/dev/null | head -10
-  
+
   echo ""
 done
 

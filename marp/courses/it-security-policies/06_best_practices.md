@@ -259,12 +259,12 @@ WRONG:                              RIGHT:
 ## What We Covered Today
 
 1. **Foundations** - CIA triad, common threats, your role
-2. **Passwords** - strong passwords, `MFA`, password managers
-3. **Email** - phishing detection, safe email practices
-4. **Data** - classification, encryption, `GDPR`/`CCPA`
-5. **Network** - `VPN`, public Wi-Fi, remote work
-6. **Incidents** - detection, reporting, business continuity
-7. **Best Practices** - clean desk, social media, vendor security
+1. **Passwords** - strong passwords, `MFA`, password managers
+1. **Email** - phishing detection, safe email practices
+1. **Data** - classification, encryption, `GDPR`/`CCPA`
+1. **Network** - `VPN`, public Wi-Fi, remote work
+1. **Incidents** - detection, reporting, business continuity
+1. **Best Practices** - clean desk, social media, vendor security
 
 ---
 

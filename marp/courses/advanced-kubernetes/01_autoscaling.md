@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Autoscaling in `Kubernetes`
 
 Advanced Kubernetes Course - Day 1, Module 2
@@ -370,10 +364,10 @@ data:
 The `Cluster Autoscaler` removes nodes when:
 
 1. All pods can be moved to other nodes
-2. Node utilization is below threshold (default 50%)
-3. No pods with `PodDisruptionBudget` violations
-4. No pods with local storage (unless configured)
-5. No system pods without controller
+1. Node utilization is below threshold (default 50%)
+1. No pods with `PodDisruptionBudget` violations
+1. No pods with local storage (unless configured)
+1. No system pods without controller
 
 ```bash
 # Prevent a node from being scaled down
@@ -465,11 +459,11 @@ triggers:
 ## Autoscaling Best Practices
 
 1. **Always set resource requests** - `HPA` needs them for CPU-based scaling
-2. **Use stabilization windows** - Prevent flapping
-3. **Scale down slowly** - Avoid thrashing
-4. **Monitor scaling events** - Alert on max replicas reached
-5. **Test scaling behavior** - Use load testing tools
-6. **Set appropriate min/max** - Safety boundaries
+1. **Use stabilization windows** - Prevent flapping
+1. **Scale down slowly** - Avoid thrashing
+1. **Monitor scaling events** - Alert on max replicas reached
+1. **Test scaling behavior** - Use load testing tools
+1. **Set appropriate min/max** - Safety boundaries
 
 ```bash
 # Load test with hey

@@ -159,11 +159,11 @@ Using two or more of these factors dramatically improves security
 ## What to Do If Your Password Is Compromised
 
 1. Change the compromised password immediately
-2. Change it on any other site where you used the same password
-3. Enable `MFA` if not already active
-4. Notify your IT security team
-5. Monitor your accounts for unusual activity
-6. Check if your email appears on `haveibeenpwned.com`
+1. Change it on any other site where you used the same password
+1. Enable `MFA` if not already active
+1. Notify your IT security team
+1. Monitor your accounts for unusual activity
+1. Check if your email appears on `haveibeenpwned.com`
 
 ---
 

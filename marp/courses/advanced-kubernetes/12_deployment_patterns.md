@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Deployment Patterns
 
 Advanced Kubernetes Course - Day 3, Module 3

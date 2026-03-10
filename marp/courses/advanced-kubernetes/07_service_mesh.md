@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Service Mesh & Network Policies
 
 Advanced Kubernetes Course - Day 2, Module 3

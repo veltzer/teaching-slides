@@ -1,9 +1,3 @@
----
-marp: true
-theme: default
-paginate: true
----
-
 # Declarative Object Configuration
 
 Advanced Kubernetes Course - Day 3, Module 1
