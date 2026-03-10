@@ -481,11 +481,10 @@ Template rendering wrong    -->  template to /tmp first
 ## Exercise: Error Handling Lab
 
 1. Create a playbook with `block/rescue/always` that:
-   - Attempts to deploy an application
-   - Rolls back on failure
-   - Always sends a notification
-
-2. Add `assert` tasks to validate prerequisites
-3. Use `failed_when` for custom failure conditions
-4. Run `ansible-lint` on your playbooks and fix issues
-5. Use `--check --diff -v` to debug
+    - Attempts to deploy an application
+    - Rolls back on failure
+    - Always sends a notification
+1. Add `assert` tasks to validate prerequisites
+1. Use `failed_when` for custom failure conditions
+1. Run `ansible-lint` on your playbooks and fix issues
+1. Use `--check --diff -v` to debug

@@ -696,15 +696,13 @@ ansible-project/
 ## Exercise: Roles Lab
 
 1. Create a `common` role that:
-   - Sets timezone and hostname
-   - Installs essential packages
-   - Configures `NTP` and `SSH`
-   - Creates admin users
-
-2. Create an `nginx` role with:
-   - Configurable virtual hosts
-   - `SSL` support
-   - Custom error pages
-
-3. Use both roles in a `site.yml` playbook
-4. Test with different variable values per environment
+    - Sets timezone and hostname
+    - Installs essential packages
+    - Configures `NTP` and `SSH`
+    - Creates admin users
+1. Create an `nginx` role with:
+    - Configurable virtual hosts
+    - `SSL` support
+    - Custom error pages
+1. Use both roles in a `site.yml` playbook
+1. Test with different variable values per environment

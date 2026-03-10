@@ -446,8 +446,8 @@ keyed_groups:
 ## Exercise: Dynamic Inventory Lab
 
 1. Set up AWS/Azure/GCP dynamic inventory (or mock with script)
-2. Configure keyed groups based on tags
-3. Set `ansible_host` using `compose`
-4. Enable caching and test cache behavior
-5. Combine with a static inventory file
-6. Run a playbook against dynamically discovered hosts
+1. Configure keyed groups based on tags
+1. Set `ansible_host` using `compose`
+1. Enable caching and test cache behavior
+1. Combine with a static inventory file
+1. Run a playbook against dynamically discovered hosts

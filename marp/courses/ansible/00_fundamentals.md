@@ -67,11 +67,11 @@
 ## How Ansible Works
 
 1. Reads inventory to discover target hosts
-2. Connects to managed nodes via `SSH`
-3. Copies small programs ("modules") to managed nodes
-4. Executes modules on managed nodes
-5. Removes modules after execution
-6. Reports results back to control node
+1. Connects to managed nodes via `SSH`
+1. Copies small programs ("modules") to managed nodes
+1. Executes modules on managed nodes
+1. Removes modules after execution
+1. Reports results back to control node
 
 ---
 
@@ -380,10 +380,10 @@ ansible [core 2.16.0]
 ## Ansible Configuration File
 
 - `Ansible` looks for config in this order:
-  1. `ANSIBLE_CONFIG` environment variable
-  2. `./ansible.cfg` (current directory)
-  3. `~/.ansible.cfg` (home directory)
-  4. `/etc/ansible/ansible.cfg` (global)
+    1. `ANSIBLE_CONFIG` environment variable
+    1. `./ansible.cfg` (current directory)
+    1. `~/.ansible.cfg` (home directory)
+    1. `/etc/ansible/ansible.cfg` (global)
 
 - First file found wins (no merging)
 
@@ -1368,18 +1368,18 @@ ansible-playbook --list-hosts site.yml
 ## Exercise: Day 1 Lab
 
 1. Set up `ansible.cfg` in your project directory
-2. Create an inventory file with at least 2 groups
-3. Set up `host_vars` and `group_vars` directories
-4. Test connectivity with `ansible all -m ping`
-5. Use ad-hoc commands to:
-   - Check disk space on all hosts
-   - Install `htop` on all hosts
-   - Create a directory `/opt/myapp` on webservers
-6. Write a playbook that:
-   - Installs `nginx` on webservers
-   - Installs `postgresql` on dbservers
-   - Starts and enables both services
-   - Uses handlers for service restarts
+1. Create an inventory file with at least 2 groups
+1. Set up `host_vars` and `group_vars` directories
+1. Test connectivity with `ansible all -m ping`
+1. Use ad-hoc commands to:
+    - Check disk space on all hosts
+    - Install `htop` on all hosts
+    - Create a directory `/opt/myapp` on webservers
+1. Write a playbook that:
+    - Installs `nginx` on webservers
+    - Installs `postgresql` on dbservers
+    - Starts and enables both services
+    - Uses handlers for service restarts
 
 ---
 

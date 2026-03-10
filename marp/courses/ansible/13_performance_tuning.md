@@ -447,9 +447,9 @@ Mitogen + 20 forks                ~2 minutes
 ## Exercise: Performance Lab
 
 1. Enable `profile_tasks` and baseline a playbook
-2. Increase forks and measure improvement
-3. Enable `SSH` pipelining and compare
-4. Set up fact caching with `jsonfile`
-5. Use `async` for a long-running task
-6. Implement a rolling update with `serial`
-7. Compare `linear` vs `free` strategy
+1. Increase forks and measure improvement
+1. Enable `SSH` pipelining and compare
+1. Set up fact caching with `jsonfile`
+1. Use `async` for a long-running task
+1. Implement a rolling update with `serial`
+1. Compare `linear` vs `free` strategy
