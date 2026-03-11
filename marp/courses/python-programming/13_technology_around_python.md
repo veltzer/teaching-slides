@@ -517,11 +517,11 @@ poetry install
 
 # Run in virtual environment
 poetry run python3 script.py
-```
+
+```txt
 ---
 ## `uv` - Modern Python Package Manager
 
-```bash
 # Install uv
 pip install uv
 
@@ -544,21 +544,21 @@ uv pip sync requirements.txt
 .PHONY: test lint format install
 
 install:
-	pip install -e ".[dev]"
+    pip install -e ".[dev]"
 
 test:
-	pytest
+    pytest
 
 lint:
-	ruff check .
-	mypy src/
+    ruff check .
+    mypy src/
 
 format:
-	ruff format .
-	ruff check --fix .
+    ruff format .
+    ruff check --fix .
 
 clean:
-	rm -rf __pycache__ .pytest_cache dist build
+    rm -rf __pycache__ .pytest_cache dist build
 ```
 ---
 ## Continuous Integration Example

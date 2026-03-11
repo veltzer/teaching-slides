@@ -4,20 +4,20 @@
 
 ## Why Test Integration Matters
 
--   Automated testing catches regressions early
--   Build system integration ensures tests stay in sync with code
--   Consistent test execution across platforms and CI environments
--   Reduces friction between writing code and validating it
+- Automated testing catches regressions early
+- Build system integration ensures tests stay in sync with code
+- Consistent test execution across platforms and CI environments
+- Reduces friction between writing code and validating it
 
 ---
 
 ## What is CTest?
 
--   CMake's built-in test runner and orchestrator
--   Discovers and executes tests registered via `CMakeLists.txt`
--   Reports pass/fail status based on return codes and output
--   Supports parallel execution, timeouts, labels, and fixtures
--   Works with any testing framework or standalone executables
+- CMake's built-in test runner and orchestrator
+- Discovers and executes tests registered via `CMakeLists.txt`
+- Reports pass/fail status based on return codes and output
+- Supports parallel execution, timeouts, labels, and fixtures
+- Works with any testing framework or standalone executables
 
 ---
 
@@ -30,9 +30,9 @@ project(MyProject LANGUAGES CXX)
 enable_testing()
 ```
 
--   `enable_testing()` activates CTest support in the project
--   Must appear in the top-level `CMakeLists.txt`
--   Without it, `add_test()` calls are silently ignored
+- `enable_testing()` activates CTest support in the project
+- Must appear in the top-level `CMakeLists.txt`
+- Without it, `add_test()` calls are silently ignored
 
 ---
 
@@ -47,9 +47,9 @@ add_test(
 )
 ```
 
--   `NAME` - unique identifier for the test
--   `COMMAND` - the executable to run, optionally with arguments
--   A return code of 0 means pass, non-zero means fail
+- `NAME` - unique identifier for the test
+- `COMMAND` - the executable to run, optionally with arguments
+- A return code of 0 means pass, non-zero means fail
 
 ---
 
@@ -66,8 +66,8 @@ add_test(NAME solver_div
     COMMAND solver --op div --a 10 --b 2)
 ```
 
--   Same executable with different arguments creates separate tests
--   Each test runs independently and reports its own result
+- Same executable with different arguments creates separate tests
+- Each test runs independently and reports its own result
 
 ---
 
@@ -102,8 +102,8 @@ ctest -VV                  # Extra verbose output
 ctest --output-on-failure  # Show output only when a test fails
 ```
 
--   `-N` is useful for verifying test discovery
--   `--output-on-failure` is the most common CI setting
+- `-N` is useful for verifying test discovery
+- `--output-on-failure` is the most common CI setting
 
 ---
 
@@ -117,8 +117,8 @@ ctest -j4                  # Run 4 tests in parallel
 ctest -j0                  # Use all available CPU cores
 ```
 
--   `-R` and `-E` accept regular expressions
--   `-j` speeds up large test suites significantly
+- `-R` and `-E` accept regular expressions
+- `-j` speeds up large test suites significantly
 
 ---
 
@@ -133,9 +133,9 @@ set_tests_properties(my_test PROPERTIES
 )
 ```
 
--   Applies properties to one or more tests
--   Must be called after the corresponding `add_test()`
--   Multiple properties can be set in a single call
+- Applies properties to one or more tests
+- Must be called after the corresponding `add_test()`
+- Multiple properties can be set in a single call
 
 ---
 
@@ -153,9 +153,9 @@ set_tests_properties(stress_test PROPERTIES
 )
 ```
 
--   Kills the test process after the specified number of seconds
--   Prevents hanging tests from blocking the entire suite
--   A timed-out test is reported as failed
+- Kills the test process after the specified number of seconds
+- Prevents hanging tests from blocking the entire suite
+- A timed-out test is reported as failed
 
 ---
 
@@ -168,10 +168,10 @@ set_tests_properties(test_invalid_input PROPERTIES
 )
 ```
 
--   Inverts the pass/fail logic
--   Test passes when the command returns non-zero
--   Test fails when the command returns zero
--   Useful for verifying that error conditions are caught
+- Inverts the pass/fail logic
+- Test passes when the command returns non-zero
+- Test fails when the command returns zero
+- Useful for verifying that error conditions are caught
 
 ---
 
@@ -190,9 +190,9 @@ set_tests_properties(crash_check PROPERTIES
 )
 ```
 
--   `PASS_REGULAR_EXPRESSION` - pass only if stdout matches
--   `FAIL_REGULAR_EXPRESSION` - fail if stdout matches any pattern
--   Semicolons separate multiple patterns (any match triggers)
+- `PASS_REGULAR_EXPRESSION` - pass only if stdout matches
+- `FAIL_REGULAR_EXPRESSION` - fail if stdout matches any pattern
+- Semicolons separate multiple patterns (any match triggers)
 
 ---
 
@@ -209,8 +209,8 @@ set_tests_properties(test_db_insert PROPERTIES
     LABELS "integration;slow")
 ```
 
--   Labels are semicolon-separated strings
--   A single test can have multiple labels
+- Labels are semicolon-separated strings
+- A single test can have multiple labels
 
 ---
 
@@ -223,9 +223,9 @@ ctest -LE "slow"           # Exclude tests labeled "slow"
 ctest -L unit -LE legacy   # Combine include and exclude
 ```
 
--   `-L` includes tests whose labels match the regex
--   `-LE` excludes tests whose labels match the regex
--   Labels provide a higher-level grouping than name filtering
+- `-L` includes tests whose labels match the regex
+- `-LE` excludes tests whose labels match the regex
+- Labels provide a higher-level grouping than name filtering
 
 ---
 
@@ -243,9 +243,9 @@ set_tests_properties(api_test PROPERTIES
 )
 ```
 
--   `ENVIRONMENT` sets variables for the test process
--   `ENVIRONMENT_MODIFICATION` modifies existing variables
--   Each entry is a `KEY=VALUE` pair, separated by semicolons
+- `ENVIRONMENT` sets variables for the test process
+- `ENVIRONMENT_MODIFICATION` modifies existing variables
+- Each entry is a `KEY=VALUE` pair, separated by semicolons
 
 ---
 
@@ -258,9 +258,9 @@ set_tests_properties(config_test PROPERTIES
 )
 ```
 
--   Sets the current directory when the test runs
--   Defaults to `CMAKE_CURRENT_BINARY_DIR`
--   Useful when tests depend on relative file paths
+- Sets the current directory when the test runs
+- Defaults to `CMAKE_CURRENT_BINARY_DIR`
+- Useful when tests depend on relative file paths
 
 ---
 
@@ -279,8 +279,8 @@ set_tests_properties(test_query PROPERTIES
     FIXTURES_REQUIRED Database)
 ```
 
--   `FIXTURES_SETUP` runs before any test requiring the fixture
--   `FIXTURES_CLEANUP` runs after all tests requiring the fixture
+- `FIXTURES_SETUP` runs before any test requiring the fixture
+- `FIXTURES_CLEANUP` runs after all tests requiring the fixture
 
 ---
 
@@ -302,7 +302,7 @@ set_tests_properties(
 setup_db  ->  test_insert  ->  test_query  ->  test_delete  ->  cleanup_db
 ```
 
--   Setup runs once before the group, cleanup once after
+- Setup runs once before the group, cleanup once after
 
 ---
 
@@ -322,8 +322,8 @@ include(GoogleTest)
 gtest_discover_tests(my_tests)
 ```
 
--   `gtest_discover_tests()` finds all `TEST()` and `TEST_F()` macros
--   Each test case becomes a separate CTest entry automatically
+- `gtest_discover_tests()` finds all `TEST()` and `TEST_F()` macros
+- Each test case becomes a separate CTest entry automatically
 
 ---
 
@@ -344,8 +344,8 @@ TEST(CalcTest, Division) {
 }
 ```
 
--   No `main()` needed when linking `GTest::gtest_main`
--   Each `TEST()` is discovered and run separately by CTest
+- No `main()` needed when linking `GTest::gtest_main`
+- Each `TEST()` is discovered and run separately by CTest
 
 ---
 
@@ -365,8 +365,8 @@ include(Catch)
 catch_discover_tests(tests)
 ```
 
--   `catch_discover_tests()` works like `gtest_discover_tests()`
--   Automatically discovers `TEST_CASE` macros
+- `catch_discover_tests()` works like `gtest_discover_tests()`
+- Automatically discovers `TEST_CASE` macros
 
 ---
 
@@ -384,18 +384,18 @@ set_tests_properties(custom_tests PROPERTIES
 )
 ```
 
--   Any framework that returns 0 on success works out of the box
--   Use regex properties for frameworks with non-standard exit codes
--   Wrap scripts or interpreters as test commands when needed
+- Any framework that returns 0 on success works out of the box
+- Use regex properties for frameworks with non-standard exit codes
+- Wrap scripts or interpreters as test commands when needed
 
 ---
 
 ## CDash Overview
 
--   Web-based dashboard for collecting build and test results
--   Tracks test history and highlights regressions
--   Supports multiple platforms, compilers, and configurations
--   Available at `https://my.cdash.org` or self-hosted
+- Web-based dashboard for collecting build and test results
+- Tracks test history and highlights regressions
+- Supports multiple platforms, compilers, and configurations
+- Available at `https://my.cdash.org` or self-hosted
 
 ```txt
 +--------------------------------------------------+
@@ -422,8 +422,8 @@ set(CTEST_DROP_LOCATION "/submit.php?project=MyProject")
 set(CTEST_DROP_SITE_CDASH TRUE)
 ```
 
--   Create `CTestConfig.cmake` alongside the top-level `CMakeLists.txt`
--   Tells CTest where and how to submit results
+- Create `CTestConfig.cmake` alongside the top-level `CMakeLists.txt`
+- Tells CTest where and how to submit results
 
 ---
 
@@ -435,8 +435,8 @@ ctest -D Nightly         # Scheduled nightly builds
 ctest -D Continuous      # Triggered by source changes
 ```
 
--   Each mode runs configure, build, test, and submit steps
--   Individual steps can be run separately:
+- Each mode runs configure, build, test, and submit steps
+- Individual steps can be run separately:
 
 ```bash
 ctest -D ExperimentalStart

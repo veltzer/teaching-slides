@@ -4,14 +4,14 @@
 
 ## Chapter Overview
 
--   Variables: normal, cache, and environment
--   Variable expansion and lists
--   String operations
--   Control flow: `if`, `foreach`, `while`
--   Truthiness rules
--   Generator expressions
--   Macros and functions
--   Argument parsing with `cmake_parse_arguments`
+- Variables: normal, cache, and environment
+- Variable expansion and lists
+- String operations
+- Control flow: `if`, `foreach`, `while`
+- Truthiness rules
+- Generator expressions
+- Macros and functions
+- Argument parsing with `cmake_parse_arguments`
 
 ---
 
@@ -30,8 +30,8 @@ message(STATUS "Files: ${SRC_FILES}")
 -- Files: main.cpp;utils.cpp;parser.cpp
 ```
 
--   `set()` creates a variable in the current scope
--   Multiple values form a semicolon-separated list
+- `set()` creates a variable in the current scope
+- Multiple values form a semicolon-separated list
 
 ---
 
@@ -50,8 +50,8 @@ my_func()
 message(STATUS "${X}")           # "global" (unchanged)
 ```
 
--   Functions create a new scope with a copy of parent variables
--   Changes inside functions do not propagate back
+- Functions create a new scope with a copy of parent variables
+- Changes inside functions do not propagate back
 
 ---
 
@@ -66,8 +66,8 @@ get_version(MY_VERSION)
 message(STATUS "${MY_VERSION}")  # 2.5.1
 ```
 
--   `PARENT_SCOPE` writes the variable to the calling scope
--   The variable is not set in the function itself when using `PARENT_SCOPE`
+- `PARENT_SCOPE` writes the variable to the calling scope
+- The variable is not set in the function itself when using `PARENT_SCOPE`
 
 ---
 
@@ -86,8 +86,8 @@ message(STATUS "${MY_VAR}")  # "top" (inherited)
 set(MY_VAR "sub")            # only changes locally
 ```
 
--   `add_subdirectory()` creates a child scope
--   Child inherits parent variables but cannot modify them
+- `add_subdirectory()` creates a child scope
+- Child inherits parent variables but cannot modify them
 
 ---
 
@@ -98,9 +98,9 @@ set(MY_OPT "default" CACHE STRING "A description")
 set(ENABLE_TESTS ON CACHE BOOL "Enable testing")
 ```
 
--   Stored persistently in `CMakeCache.txt`
--   Survive across CMake re-runs
--   Set from the command line with `-D`:
+- Stored persistently in `CMakeCache.txt`
+- Survive across CMake re-runs
+- Set from the command line with `-D`:
 
 ```cmake
 cmake -DENABLE_TESTS=OFF ..
@@ -136,9 +136,9 @@ set(MY_VAR "value" CACHE STRING "desc")
 set(MY_VAR "new_value" CACHE STRING "desc" FORCE)
 ```
 
--   Without `FORCE`, user-supplied values are preserved
--   Use `FORCE` sparingly as it overrides user choices
--   `INTERNAL` cache variables always behave as if `FORCE` is set
+- Without `FORCE`, user-supplied values are preserved
+- Use `FORCE` sparingly as it overrides user choices
+- `INTERNAL` cache variables always behave as if `FORCE` is set
 
 ---
 
@@ -154,9 +154,9 @@ set(ENV{CXX} "/usr/bin/g++-12")
 message(STATUS "CXX: $ENV{CXX}")
 ```
 
--   Use `$ENV{VAR}` to access environment variables
--   Changes only affect the running CMake process
--   Build tools will not see `set(ENV{...})` changes
+- Use `$ENV{VAR}` to access environment variables
+- Changes only affect the running CMake process
+- Build tools will not see `set(ENV{...})` changes
 
 ---
 
@@ -169,9 +169,9 @@ message("Escaped \${MY_VAR}")       # ${MY_VAR}
 message("Undefined: ${NO_SUCH}")    # empty string
 ```
 
--   `${VAR}` expands a variable
--   Undefined variables expand to an empty string
--   Use backslash to escape literal `${}`
+- `${VAR}` expands a variable
+- Undefined variables expand to an empty string
+- Use backslash to escape literal `${}`
 
 ---
 
@@ -189,8 +189,8 @@ message(STATUS "${CMAKE_${lang}_COMPILER}")
 -- /usr/bin/g++
 ```
 
--   CMake resolves from the inside out
--   Useful for writing generic code over multiple languages
+- CMake resolves from the inside out
+- Useful for writing generic code over multiple languages
 
 ---
 
@@ -206,9 +206,9 @@ list(APPEND MY_LIST d)     # a;b;c;d
 list(REMOVE_ITEM MY_LIST b) # a;c;d
 ```
 
--   Lists are semicolon-separated strings internally
--   The `list()` command provides list operations
--   Quoting preserves a string as a single element
+- Lists are semicolon-separated strings internally
+- The `list()` command provides list operations
+- Quoting preserves a string as a single element
 
 ---
 
@@ -240,8 +240,8 @@ string(REPLACE "World" "CMake" result "${MY_STR}")
 message(STATUS "${result}")         # Hello CMake
 ```
 
--   `string(FIND)` returns the index or `-1` if not found
--   `string(REPLACE)` replaces all occurrences
+- `string(FIND)` returns the index or `-1` if not found
+- `string(REPLACE)` replaces all occurrences
 
 ---
 
@@ -258,9 +258,9 @@ string(REGEX REPLACE "([0-9]+)\\.([0-9]+)" "\\1_\\2"
 message(STATUS "Result: ${result}")  # 3_20
 ```
 
--   `REGEX MATCH` extracts the first match
--   `REGEX MATCHALL` extracts all matches into a list
--   `REGEX REPLACE` substitutes matches
+- `REGEX MATCH` extracts the first match
+- `REGEX MATCHALL` extracts all matches into a list
+- `REGEX REPLACE` substitutes matches
 
 ---
 
@@ -277,8 +277,8 @@ string(STRIP "  hi  " stripped)   # hi
 string(CONCAT out "a" "b" "c")   # abc
 ```
 
--   CMake provides a rich set of string manipulation tools
--   All results are stored in an output variable
+- CMake provides a rich set of string manipulation tools
+- All results are stored in an output variable
 
 ---
 
@@ -294,9 +294,9 @@ else()
 endif()
 ```
 
--   `if()` evaluates a condition
--   `elseif()` and `else()` are optional
--   Always close with `endif()`
+- `if()` evaluates a condition
+- `elseif()` and `else()` are optional
+- Always close with `endif()`
 
 ---
 
@@ -315,8 +315,8 @@ Falsy values:
 empty string, string ending in -NOTFOUND
 ```
 
--   These are case-insensitive
--   An undefined variable evaluates as falsy
+- These are case-insensitive
+- An undefined variable evaluates as falsy
 
 ---
 
@@ -333,8 +333,8 @@ if(x STRLESS "b")           # String less than
 if(x MATCHES "^[0-9]+$")    # Regex match
 ```
 
--   Numeric operators work on integers
--   String operators compare lexicographically
+- Numeric operators work on integers
+- String operators compare lexicographically
 
 ---
 
@@ -375,8 +375,8 @@ foreach(fruit IN LISTS FRUITS)
 endforeach()
 ```
 
--   `IN LISTS` iterates over one or more list variables
--   `IN ITEMS` iterates over literal values
+- `IN LISTS` iterates over one or more list variables
+- `IN ITEMS` iterates over literal values
 
 ---
 
@@ -403,8 +403,8 @@ endforeach()
 -- i = 10
 ```
 
--   `RANGE stop` includes both 0 and stop
--   `RANGE start stop step` provides full control
+- `RANGE stop` includes both 0 and stop
+- `RANGE start stop step` provides full control
 
 ---
 
@@ -425,8 +425,8 @@ endforeach()
 # a, b, c
 ```
 
--   `IN LISTS` takes variable names (without `${}`)
--   `IN ITEMS` takes literal values
+- `IN LISTS` takes variable names (without `${}`)
+- `IN ITEMS` takes literal values
 
 ---
 
@@ -448,17 +448,17 @@ endwhile()
 -- counter = 4
 ```
 
--   Less common than `foreach()`
--   Useful for iterative algorithms in CMake scripts
+- Less common than `foreach()`
+- Useful for iterative algorithms in CMake scripts
 
 ---
 
 ## Generator Expressions Introduction
 
--   Evaluated at **build system generation time**, not configure time
--   Syntax: `$<EXPRESSION>` or `$<EXPRESSION:value>`
--   Used in target properties and certain commands
--   Essential for multi-config generators (Visual Studio, Xcode)
+- Evaluated at **build system generation time**, not configure time
+- Syntax: `$<EXPRESSION>` or `$<EXPRESSION:value>`
+- Used in target properties and certain commands
+- Essential for multi-config generators (Visual Studio, Xcode)
 
 ```cmake
 # Regular variable: evaluated at configure time
@@ -502,8 +502,8 @@ add_custom_command(TARGET app POST_BUILD
 )
 ```
 
--   `$<TARGET_FILE:tgt>` resolves to the full path of the built binary
--   Works correctly across all platforms and configurations
+- `$<TARGET_FILE:tgt>` resolves to the full path of the built binary
+- Works correctly across all platforms and configurations
 
 ---
 
@@ -516,9 +516,9 @@ target_include_directories(mylib PUBLIC
 )
 ```
 
--   `BUILD_INTERFACE` applies when building the project
--   `INSTALL_INTERFACE` applies when consuming the installed package
--   Essential for writing reusable CMake packages
+- `BUILD_INTERFACE` applies when building the project
+- `INSTALL_INTERFACE` applies when consuming the installed package
+- Essential for writing reusable CMake packages
 
 ---
 
@@ -526,16 +526,16 @@ target_include_directories(mylib PUBLIC
 
 Use **regular variables** when:
 
--   The value is known at configure time
--   You need the value in `if()` or `message()`
--   You are setting paths or options for single-config builds
+- The value is known at configure time
+- You need the value in `if()` or `message()`
+- You are setting paths or options for single-config builds
 
 Use **generator expressions** when:
 
--   The value depends on the build configuration
--   You need per-config compile definitions or flags
--   You are writing portable packages (build vs install paths)
--   You are working with multi-config generators
+- The value depends on the build configuration
+- You need per-config compile definitions or flags
+- You are writing portable packages (build vs install paths)
+- You are working with multi-config generators
 
 ---
 
@@ -553,11 +553,11 @@ print_banner("Build Started")
 
 ```txt
 -- ===========================
---   Build Started
+-- Build Started
 -- ===========================
 ```
 
--   Macros execute in the caller's scope (text substitution)
+- Macros execute in the caller's scope (text substitution)
 
 ---
 
@@ -574,9 +574,9 @@ change_x()
 message(STATUS "${X}")  # "modified by macro"
 ```
 
--   Macros do **not** create a new scope
--   Any `set()` inside a macro modifies the caller's variables
--   Similar to C preprocessor macros in this regard
+- Macros do **not** create a new scope
+- Any `set()` inside a macro modifies the caller's variables
+- Similar to C preprocessor macros in this regard
 
 ---
 
@@ -592,8 +592,8 @@ add_executable(app main.cpp)
 setup_target(app)
 ```
 
--   Functions create a new variable scope
--   Parameters are positional
+- Functions create a new variable scope
+- Parameters are positional
 
 ---
 
@@ -617,9 +617,9 @@ my_func(hello extra1 extra2)
 -- Required: hello
 ```
 
--   `ARGC` is the total argument count
--   `ARGV` is all arguments as a list
--   `ARGN` is the extra (unnamed) arguments
+- `ARGC` is the total argument count
+- `ARGV` is all arguments as a list
+- `ARGN` is the extra (unnamed) arguments
 
 ---
 
@@ -643,8 +643,8 @@ test_func()
 message(STATUS "${VAR}")  # "original" (scope intact)
 ```
 
--   **Macros**: no new scope, modifies caller directly
--   **Functions**: new scope, caller is protected
+- **Macros**: no new scope, modifies caller directly
+- **Functions**: new scope, caller is protected
 
 ---
 
@@ -687,7 +687,7 @@ add_my_library(
 )
 ```
 
--   Boolean options are `TRUE` if present, `FALSE` if absent
--   `ARG_UNPARSED_ARGUMENTS` holds any unrecognized arguments
--   `ARG_KEYWORDS_MISSING_VALUES` holds keywords with no values
--   The recommended approach for reusable CMake functions
+- Boolean options are `TRUE` if present, `FALSE` if absent
+- `ARG_UNPARSED_ARGUMENTS` holds any unrecognized arguments
+- `ARG_KEYWORDS_MISSING_VALUES` holds keywords with no values
+- The recommended approach for reusable CMake functions

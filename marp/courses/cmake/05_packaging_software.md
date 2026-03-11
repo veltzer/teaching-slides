@@ -4,35 +4,35 @@
 
 ## Chapter Overview
 
--   What is `CPack` and why packaging matters
--   `CPack` generators overview
--   Basic configuration variables
--   Archive generators: `TGZ`, `ZIP`, `TXZ`
--   `DEB` packaging for Debian/Ubuntu
--   `RPM` packaging for Red Hat/Fedora
--   `NSIS` packaging for Windows
--   Package metadata
--   Component-based packaging
+- What is `CPack` and why packaging matters
+- `CPack` generators overview
+- Basic configuration variables
+- Archive generators: `TGZ`, `ZIP`, `TXZ`
+- `DEB` packaging for Debian/Ubuntu
+- `RPM` packaging for Red Hat/Fedora
+- `NSIS` packaging for Windows
+- Package metadata
+- Component-based packaging
 
 ---
 
 ## Why Packaging Matters
 
--   Users should not need to build from source
--   Packages provide a standard installation experience
--   Package managers handle dependencies and upgrades
--   Distributing raw binaries lacks metadata and uninstall support
--   Packaging is the final step in a professional build pipeline
+- Users should not need to build from source
+- Packages provide a standard installation experience
+- Package managers handle dependencies and upgrades
+- Distributing raw binaries lacks metadata and uninstall support
+- Packaging is the final step in a professional build pipeline
 
 ---
 
 ## What is CPack
 
--   A packaging tool bundled with CMake
--   Reads your `install()` rules and bundles the results
--   Supports many package formats through generators
--   Configured via `CPACK_*` variables in `CMakeLists.txt`
--   Invoked with the `cpack` command-line tool
+- A packaging tool bundled with CMake
+- Reads your `install()` rules and bundles the results
+- Supports many package formats through generators
+- Configured via `CPACK_*` variables in `CMakeLists.txt`
+- Invoked with the `cpack` command-line tool
 
 ---
 
@@ -61,9 +61,9 @@ set(CPACK_PACKAGE_VERSION_PATCH 0)
 include(CPack)
 ```
 
--   Variables must be set before `include(CPack)`
--   `include(CPack)` reads the variables and configures packaging
--   The `cpack` command is then available in the build directory
+- Variables must be set before `include(CPack)`
+- `include(CPack)` reads the variables and configures packaging
+- The `cpack` command is then available in the build directory
 
 ---
 
@@ -104,9 +104,9 @@ cd build
 cpack
 ```
 
--   Runs all generators listed in `CPACK_GENERATOR`
--   Produces packages in the build directory
--   Uses the install rules to collect files
+- Runs all generators listed in `CPACK_GENERATOR`
+- Produces packages in the build directory
+- Uses the install rules to collect files
 
 ```txt
 cpack -G TGZ
@@ -114,7 +114,7 @@ cpack -G ZIP
 cpack -G DEB
 ```
 
--   The `-G` flag selects a specific generator
+- The `-G` flag selects a specific generator
 
 ---
 
@@ -124,9 +124,9 @@ cpack -G DEB
 set(CPACK_GENERATOR "TGZ;ZIP")
 ```
 
--   Semicolon-separated list of generators
--   All listed generators run when `cpack` is called without `-G`
--   You can override at the command line with `-G`
+- Semicolon-separated list of generators
+- All listed generators run when `cpack` is called without `-G`
+- You can override at the command line with `-G`
 
 ---
 
@@ -144,9 +144,9 @@ include(CPack)
 cd build && cpack -G TGZ
 ```
 
--   Produces `myapp-1.0.0-Linux.tar.gz`
--   Contains all files defined by `install()` rules
--   Portable across all platforms
+- Produces `myapp-1.0.0-Linux.tar.gz`
+- Contains all files defined by `install()` rules
+- Portable across all platforms
 
 ---
 
@@ -163,9 +163,9 @@ cpack -G ZIP
 cpack -G TXZ
 ```
 
--   `ZIP` produces `.zip` archives, common on Windows
--   `TXZ` produces `.tar.xz` with better compression than `TGZ`
--   All archive generators share the same `CPACK_PACKAGE_*` variables
+- `ZIP` produces `.zip` archives, common on Windows
+- `TXZ` produces `.tar.xz` with better compression than `TGZ`
+- All archive generators share the same `CPACK_PACKAGE_*` variables
 
 ---
 
@@ -178,9 +178,9 @@ set(CPACK_DEBIAN_PACKAGE_MAINTAINER "dev@acme.com")
 include(CPack)
 ```
 
--   Produces `.deb` packages for Debian and Ubuntu
--   `CPACK_DEBIAN_PACKAGE_MAINTAINER` is required
--   CPack generates the `DEBIAN/control` file automatically
+- Produces `.deb` packages for Debian and Ubuntu
+- `CPACK_DEBIAN_PACKAGE_MAINTAINER` is required
+- CPack generates the `DEBIAN/control` file automatically
 
 ---
 
@@ -194,9 +194,9 @@ set(CPACK_DEBIAN_PACKAGE_SECTION "utils")
 set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
 ```
 
--   `CPACK_DEBIAN_PACKAGE_DEPENDS` lists runtime dependencies
--   Version constraints use standard Debian syntax
--   `RECOMMENDS` and `SUGGESTS` are optional soft dependencies
+- `CPACK_DEBIAN_PACKAGE_DEPENDS` lists runtime dependencies
+- Version constraints use standard Debian syntax
+- `RECOMMENDS` and `SUGGESTS` are optional soft dependencies
 
 ---
 
@@ -206,10 +206,10 @@ set(CPACK_DEBIAN_PACKAGE_PRIORITY "optional")
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 ```
 
--   Runs `dpkg-shlibdeps` to detect shared library dependencies
--   Automatically populates the `Depends` field
--   Requires `dpkg-dev` to be installed on the build machine
--   Works well for C and C++ projects
+- Runs `dpkg-shlibdeps` to detect shared library dependencies
+- Automatically populates the `Depends` field
+- Requires `dpkg-dev` to be installed on the build machine
+- Works well for C and C++ projects
 
 ---
 
@@ -222,9 +222,9 @@ set(CPACK_RPM_PACKAGE_LICENSE "MIT")
 include(CPack)
 ```
 
--   Produces `.rpm` packages for Red Hat, Fedora, and SUSE
--   CPack generates the spec file automatically
--   Requires `rpmbuild` to be installed on the build machine
+- Produces `.rpm` packages for Red Hat, Fedora, and SUSE
+- CPack generates the spec file automatically
+- Requires `rpmbuild` to be installed on the build machine
 
 ---
 
@@ -239,9 +239,9 @@ set(CPACK_RPM_PACKAGE_DESCRIPTION
 set(CPACK_RPM_PACKAGE_URL "https://acme.com/myapp")
 ```
 
--   `CPACK_RPM_PACKAGE_REQUIRES` lists runtime dependencies
--   `CPACK_RPM_PACKAGE_GROUP` categorizes the package
--   RPM spec file is generated from these variables
+- `CPACK_RPM_PACKAGE_REQUIRES` lists runtime dependencies
+- `CPACK_RPM_PACKAGE_GROUP` categorizes the package
+- RPM spec file is generated from these variables
 
 ---
 
@@ -255,9 +255,9 @@ set(CPACK_RPM_POST_INSTALL_SCRIPT_FILE
     "${CMAKE_CURRENT_SOURCE_DIR}/scripts/postinst.sh")
 ```
 
--   `AUTOREQ` and `AUTOPROV` enable automatic dependency detection
--   `RELOCATABLE` allows installation to a non-default prefix
--   Post-install scripts run after package installation
+- `AUTOREQ` and `AUTOPROV` enable automatic dependency detection
+- `RELOCATABLE` allows installation to a non-default prefix
+- Post-install scripts run after package installation
 
 ---
 
@@ -272,9 +272,9 @@ set(CPACK_NSIS_INSTALL_ROOT "$PROGRAMFILES64")
 include(CPack)
 ```
 
--   Produces a `.exe` installer for Windows
--   `NSIS` (Nullsoft Scriptable Install System) must be installed
--   Creates a graphical installation wizard
+- Produces a `.exe` installer for Windows
+- `NSIS` (Nullsoft Scriptable Install System) must be installed
+- Creates a graphical installation wizard
 
 ---
 
@@ -289,9 +289,9 @@ set(CPACK_NSIS_CREATE_ICONS_EXTRA
     "CreateShortCut '$SMPROGRAMS\\\\$STARTMENU_FOLDER\\\\MyApp.lnk' '$INSTDIR\\\\bin\\\\myapp.exe'")
 ```
 
--   `MODIFY_PATH` adds the install directory to the system `PATH`
--   Custom icons and Start Menu shortcuts are supported
--   Uninstaller is generated automatically
+- `MODIFY_PATH` adds the install directory to the system `PATH`
+- Custom icons and Start Menu shortcuts are supported
+- Uninstaller is generated automatically
 
 ---
 
@@ -311,8 +311,8 @@ install(FILES include/mylib.h
     COMPONENT Development)
 ```
 
--   Each `install()` rule is assigned to a component
--   Components can be packaged separately
+- Each `install()` rule is assigned to a component
+- Components can be packaged separately
 
 ---
 
@@ -369,12 +369,12 @@ set(CPACK_RPM_COMPONENT_INSTALL ON)
 set(CPACK_ARCHIVE_COMPONENT_INSTALL ON)
 ```
 
--   Produces one package per component
--   Without this, all components are merged into a single package
--   DEB example output:
-    -   `myapp-1.0.0-Runtime.deb`
-    -   `myapp-1.0.0-Libraries.deb`
-    -   `myapp-1.0.0-Development.deb`
+- Produces one package per component
+- Without this, all components are merged into a single package
+- DEB example output:
+    - `myapp-1.0.0-Runtime.deb`
+    - `myapp-1.0.0-Libraries.deb`
+    - `myapp-1.0.0-Development.deb`
 
 ---
 
@@ -433,7 +433,7 @@ cpack -G DEB
 cpack -G RPM
 ```
 
--   Always build in `Release` mode for distribution
--   Each `cpack -G` call produces the specified format
--   Packages appear in the build directory
--   Use `cpack --verbose` to debug packaging issues
+- Always build in `Release` mode for distribution
+- Each `cpack -G` call produces the specified format
+- Packages appear in the build directory
+- Use `cpack --verbose` to debug packaging issues

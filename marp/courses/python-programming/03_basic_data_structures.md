@@ -8,7 +8,8 @@
 | `dict` | Yes* | Yes | Keys: No | `{"a": 1}` |
 | `set` | No | Yes | No | `{1, 2, 3}` |
 
-*Insertion-ordered since Python 3.7
+Insertion-ordered since `Python` 3.7
+
 ---
 ## Lists - Creating
 

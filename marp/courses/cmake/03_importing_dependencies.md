@@ -4,25 +4,25 @@
 
 ## Chapter Overview
 
--   Why dependency management matters
--   `find_package()` basics and search modes
--   Package search paths and `CMAKE_PREFIX_PATH`
--   Variables vs imported targets
--   Manual find commands: `find_library()`, `find_path()`, and more
--   Writing custom `FindXXX.cmake` modules
--   Exported and `IMPORTED` targets
--   `FetchContent` module for downloading dependencies
--   `pkg-config` integration
--   `add_subdirectory()` for local dependencies
+- Why dependency management matters
+- `find_package()` basics and search modes
+- Package search paths and `CMAKE_PREFIX_PATH`
+- Variables vs imported targets
+- Manual find commands: `find_library()`, `find_path()`, and more
+- Writing custom `FindXXX.cmake` modules
+- Exported and `IMPORTED` targets
+- `FetchContent` module for downloading dependencies
+- `pkg-config` integration
+- `add_subdirectory()` for local dependencies
 
 ---
 
 ## Why Dependency Management Matters
 
--   Real projects depend on dozens of external libraries
--   Each library may be installed in different locations
--   Different platforms use different conventions
--   Hard-coded paths break portability
+- Real projects depend on dozens of external libraries
+- Each library may be installed in different locations
+- Different platforms use different conventions
+- Hard-coded paths break portability
 
 ```cmake
 # Bad: hard-coded paths
@@ -30,7 +30,7 @@ target_include_directories(myapp PRIVATE /usr/local/include/openssl)
 target_link_libraries(myapp /usr/local/lib/libssl.so)
 ```
 
--   CMake provides tools to find and consume dependencies portably
+- CMake provides tools to find and consume dependencies portably
 
 ---
 
@@ -42,9 +42,9 @@ find_package(OpenSSL REQUIRED)
 target_link_libraries(myapp PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 ```
 
--   Searches for a package and sets variables and/or imported targets
--   `REQUIRED` causes a fatal error if the package is not found
--   Without `REQUIRED`, check `OpenSSL_FOUND` manually
+- Searches for a package and sets variables and/or imported targets
+- `REQUIRED` causes a fatal error if the package is not found
+- Without `REQUIRED`, check `OpenSSL_FOUND` manually
 
 ```cmake
 find_package(OpenSSL)
@@ -63,10 +63,10 @@ find_package(Qt6 6.2 EXACT REQUIRED)
 find_package(ZLIB 1.2.11...<1.3 REQUIRED)
 ```
 
--   Specify a minimum version after the package name
--   `EXACT` requires an exact version match
--   Version ranges (CMake 3.19+) use `MIN...<MAX` syntax
--   The package provides its version; CMake compares automatically
+- Specify a minimum version after the package name
+- `EXACT` requires an exact version match
+- Version ranges (CMake 3.19+) use `MIN...<MAX` syntax
+- The package provides its version; CMake compares automatically
 
 ---
 
@@ -77,8 +77,8 @@ find_package(Boost 1.70 REQUIRED COMPONENTS filesystem system)
 find_package(Qt6 REQUIRED COMPONENTS Widgets Network)
 ```
 
--   `COMPONENTS` requests specific parts of a package
--   `OPTIONAL_COMPONENTS` allows some components to be missing
+- `COMPONENTS` requests specific parts of a package
+- `OPTIONAL_COMPONENTS` allows some components to be missing
 
 ```cmake
 find_package(Qt6 REQUIRED
@@ -94,10 +94,10 @@ endif()
 
 ## CONFIG vs MODULE Mode
 
--   `find_package()` has two search modes:
-    -   **Module mode**: searches for `FindXXX.cmake` files
-    -   **Config mode**: searches for `XXXConfig.cmake` or `xxx-config.cmake`
--   By default, CMake tries Module mode first, then Config mode
+- `find_package()` has two search modes:
+    - **Module mode**: searches for `FindXXX.cmake` files
+    - **Config mode**: searches for `XXXConfig.cmake` or `xxx-config.cmake`
+- By default, CMake tries Module mode first, then Config mode
 
 ```cmake
 # Force a specific mode
@@ -105,16 +105,16 @@ find_package(MyLib MODULE REQUIRED)
 find_package(MyLib CONFIG REQUIRED)
 ```
 
--   Module mode: uses `Find` scripts shipped with CMake or your project
--   Config mode: uses config files shipped by the library itself
+- Module mode: uses `Find` scripts shipped with CMake or your project
+- Config mode: uses config files shipped by the library itself
 
 ---
 
 ## How find_package() Searches - Module Mode
 
--   CMake looks for `FindXXX.cmake` in:
-    1.  Directories listed in `CMAKE_MODULE_PATH`
-    1.  CMake's built-in module directory
+- CMake looks for `FindXXX.cmake` in:
+    1. Directories listed in `CMAKE_MODULE_PATH`
+    1. CMake's built-in module directory
 
 ```cmake
 # Add your project's cmake/ folder to the search path
@@ -124,19 +124,19 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 find_package(MyLib REQUIRED)
 ```
 
--   CMake ships with many built-in Find modules
--   Run `cmake --help-module-list` to see them all
+- CMake ships with many built-in Find modules
+- Run `cmake --help-module-list` to see them all
 
 ---
 
 ## How find_package() Searches - Config Mode
 
--   CMake looks for `XXXConfig.cmake` in platform-specific locations:
-    -   `<prefix>/lib/cmake/XXX/`
-    -   `<prefix>/share/XXX/cmake/`
-    -   `<prefix>/cmake/`
--   Prefixes searched include `/usr`, `/usr/local`, and others
--   The `XXX_DIR` variable can point directly to the config file location
+- CMake looks for `XXXConfig.cmake` in platform-specific locations:
+    - `<prefix>/lib/cmake/XXX/`
+    - `<prefix>/share/XXX/cmake/`
+    - `<prefix>/cmake/`
+- Prefixes searched include `/usr`, `/usr/local`, and others
+- The `XXX_DIR` variable can point directly to the config file location
 
 ```cmake
 # Hint where to find the config file
@@ -152,9 +152,9 @@ find_package(MyLib CONFIG REQUIRED)
 cmake -DCMAKE_PREFIX_PATH="/opt/custom;/home/user/libs" ..
 ```
 
--   A semicolon-separated list of directories to search
--   Each prefix is searched for `include/`, `lib/`, `lib/cmake/`, etc.
--   Can be set as a CMake variable or environment variable
+- A semicolon-separated list of directories to search
+- Each prefix is searched for `include/`, `lib/`, `lib/cmake/`, etc.
+- Can be set as a CMake variable or environment variable
 
 ```cmake
 # In CMakeLists.txt
@@ -164,17 +164,17 @@ list(APPEND CMAKE_PREFIX_PATH "/opt/custom")
 # export CMAKE_PREFIX_PATH="/opt/custom:/home/user/libs"
 ```
 
--   Preferred way to point CMake at non-standard install locations
+- Preferred way to point CMake at non-standard install locations
 
 ---
 
 ## Using Found Packages - Variables
 
--   Older Find modules set variables like:
-    -   `XXX_FOUND` - whether the package was found
-    -   `XXX_INCLUDE_DIRS` - header directories
-    -   `XXX_LIBRARIES` - libraries to link
-    -   `XXX_VERSION` - package version
+- Older Find modules set variables like:
+    - `XXX_FOUND` - whether the package was found
+    - `XXX_INCLUDE_DIRS` - header directories
+    - `XXX_LIBRARIES` - libraries to link
+    - `XXX_VERSION` - package version
 
 ```cmake
 find_package(ZLIB REQUIRED)
@@ -183,23 +183,23 @@ target_include_directories(myapp PRIVATE ${ZLIB_INCLUDE_DIRS})
 target_link_libraries(myapp PRIVATE ${ZLIB_LIBRARIES})
 ```
 
--   This approach is error-prone and does not propagate transitive dependencies
+- This approach is error-prone and does not propagate transitive dependencies
 
 ---
 
 ## Using Found Packages - Imported Targets
 
--   Modern packages provide imported targets (e.g., `ZLIB::ZLIB`)
--   Imported targets carry include dirs, compile flags, and link deps
+- Modern packages provide imported targets (e.g., `ZLIB::ZLIB`)
+- Imported targets carry include dirs, compile flags, and link deps
 
 ```cmake
 find_package(ZLIB REQUIRED)
 target_link_libraries(myapp PRIVATE ZLIB::ZLIB)
 ```
 
--   One line replaces both `target_include_directories` and `target_link_libraries`
--   Transitive dependencies are handled automatically
--   Always prefer imported targets over variables when available
+- One line replaces both `target_include_directories` and `target_link_libraries`
+- Transitive dependencies are handled automatically
+- Always prefer imported targets over variables when available
 
 ---
 
@@ -215,9 +215,9 @@ if(MATH_LIB AND MATH_INCLUDE)
 endif()
 ```
 
--   `find_library()` searches for a library file by name
--   `find_path()` searches for a directory containing a header
--   Both accept `HINTS` and `PATHS` to guide the search
+- `find_library()` searches for a library file by name
+- `find_path()` searches for a directory containing a header
+- Both accept `HINTS` and `PATHS` to guide the search
 
 ```cmake
 find_library(MYLIB mylib HINTS /opt/mylib/lib)
@@ -237,8 +237,8 @@ if(CLANG_FORMAT)
 endif()
 ```
 
--   `find_program()` locates an executable on the system
--   `find_file()` locates a specific file by full path
+- `find_program()` locates an executable on the system
+- `find_file()` locates a specific file by full path
 
 ```cmake
 find_file(GPL_LICENSE
@@ -247,7 +247,7 @@ find_file(GPL_LICENSE
 )
 ```
 
--   All four find commands share the same options: `HINTS`, `PATHS`, `PATH_SUFFIXES`
+- All four find commands share the same options: `HINTS`, `PATHS`, `PATH_SUFFIXES`
 
 ---
 
@@ -268,8 +268,8 @@ find_package_handle_standard_args(MyMath
 )
 ```
 
--   Use `find_path()` and `find_library()` to locate pieces
--   `FindPackageHandleStandardArgs` handles `REQUIRED`, version checks, and messaging
+- Use `find_path()` and `find_library()` to locate pieces
+- `FindPackageHandleStandardArgs` handles `REQUIRED`, version checks, and messaging
 
 ---
 
@@ -286,9 +286,9 @@ if(MyMath_FOUND AND NOT TARGET MyMath::MyMath)
 endif()
 ```
 
--   Create an `IMPORTED` target so consumers use `target_link_libraries`
--   Guard with `NOT TARGET` to avoid redefinition
--   `UNKNOWN IMPORTED` lets CMake detect the library type
+- Create an `IMPORTED` target so consumers use `target_link_libraries`
+- Guard with `NOT TARGET` to avoid redefinition
+- `UNKNOWN IMPORTED` lets CMake detect the library type
 
 ---
 
@@ -309,9 +309,9 @@ install(EXPORT MyLibTargets
 )
 ```
 
--   `install(EXPORT)` generates a file with imported target definitions
--   Consumers use `find_package(MyLib CONFIG)` to load them
--   The `NAMESPACE` prefix avoids name collisions
+- `install(EXPORT)` generates a file with imported target definitions
+- Consumers use `find_package(MyLib CONFIG)` to load them
+- The `NAMESPACE` prefix avoids name collisions
 
 ---
 
@@ -354,9 +354,9 @@ set_target_properties(vendor::zstd PROPERTIES
 target_link_libraries(myapp PRIVATE vendor::zstd)
 ```
 
--   You can create `IMPORTED` targets manually without a Find module
--   Useful for vendored or pre-built libraries
--   `INTERFACE_*` properties propagate to consumers automatically
+- You can create `IMPORTED` targets manually without a Find module
+- Useful for vendored or pre-built libraries
+- `INTERFACE_*` properties propagate to consumers automatically
 
 ---
 
@@ -375,9 +375,9 @@ FetchContent_MakeAvailable(json)
 target_link_libraries(myapp PRIVATE nlohmann_json::nlohmann_json)
 ```
 
--   Downloads and builds dependencies at configure time
--   The dependency becomes part of your build tree
--   No need to pre-install anything
+- Downloads and builds dependencies at configure time
+- The dependency becomes part of your build tree
+- No need to pre-install anything
 
 ---
 
@@ -396,10 +396,10 @@ FetchContent_Declare(data
 )
 ```
 
--   `GIT_SHALLOW TRUE` speeds up cloning large repos
--   `URL` supports tarballs and zip archives
--   `URL_HASH` verifies download integrity
--   Always pin `GIT_TAG` to a specific commit or tag for reproducibility
+- `GIT_SHALLOW TRUE` speeds up cloning large repos
+- `URL` supports tarballs and zip archives
+- `URL_HASH` verifies download integrity
+- Always pin `GIT_TAG` to a specific commit or tag for reproducibility
 
 ---
 
@@ -419,9 +419,9 @@ endif()
 FetchContent_MakeAvailable(dep1)
 ```
 
--   `FetchContent_Populate()` downloads the source
--   `add_subdirectory()` integrates it into the build
--   `MakeAvailable` does both in one call (CMake 3.14+)
+- `FetchContent_Populate()` downloads the source
+- `add_subdirectory()` integrates it into the build
+- `MakeAvailable` does both in one call (CMake 3.14+)
 
 ---
 
@@ -434,9 +434,9 @@ FetchContent_MakeAvailable(dep1)
 | Build integration | Full | Separate build |
 | Use case | Source deps | Pre-built deps |
 
--   `FetchContent` is preferred for most source-level dependencies
--   `ExternalProject` is useful when you need a completely isolated build
--   `ExternalProject` targets are not available at configure time
+- `FetchContent` is preferred for most source-level dependencies
+- `ExternalProject` is useful when you need a completely isolated build
+- `ExternalProject` targets are not available at configure time
 
 ---
 
@@ -449,9 +449,9 @@ pkg_check_modules(LIBCURL REQUIRED IMPORTED_TARGET libcurl)
 target_link_libraries(myapp PRIVATE PkgConfig::LIBCURL)
 ```
 
--   Many Unix libraries ship `.pc` files for `pkg-config`
--   `IMPORTED_TARGET` creates a modern imported target (CMake 3.6+)
--   Without `IMPORTED_TARGET`, you get variables instead:
+- Many Unix libraries ship `.pc` files for `pkg-config`
+- `IMPORTED_TARGET` creates a modern imported target (CMake 3.6+)
+- Without `IMPORTED_TARGET`, you get variables instead:
 
 ```cmake
 pkg_check_modules(LIBCURL REQUIRED libcurl)
@@ -482,8 +482,8 @@ add_subdirectory(apps/myapp)
 target_link_libraries(myapp PRIVATE mathlib)
 ```
 
--   `add_subdirectory()` includes another `CMakeLists.txt` into the build
--   Targets defined in subdirectories are visible to the rest of the project
+- `add_subdirectory()` includes another `CMakeLists.txt` into the build
+- Targets defined in subdirectories are visible to the rest of the project
 
 ---
 
@@ -497,9 +497,9 @@ if(NOT MyLib_FOUND)
 endif()
 ```
 
--   Config files are more reliable and self-contained
--   Fall back to Find modules for packages that do not ship configs
--   `QUIET` suppresses messages when the first attempt fails
+- Config files are more reliable and self-contained
+- Fall back to Find modules for packages that do not ship configs
+- `QUIET` suppresses messages when the first attempt fails
 
 ---
 
@@ -521,18 +521,18 @@ endif()
 target_link_libraries(myapp PRIVATE nlohmann_json::nlohmann_json)
 ```
 
--   Let users choose between system and vendored dependencies
--   The consuming code stays the same either way
+- Let users choose between system and vendored dependencies
+- The consuming code stays the same either way
 
 ---
 
 ## Chapter Summary
 
--   `find_package()` is the primary tool for locating dependencies
-    -   Config mode loads library-provided config files
-    -   Module mode runs `FindXXX.cmake` scripts
--   Always prefer imported targets over raw variables
--   `FetchContent` downloads and builds dependencies at configure time
--   `pkg_check_modules()` integrates with `pkg-config` on Unix
--   `add_subdirectory()` works for in-tree or local dependencies
--   Provide options to let users choose system vs vendored libraries
+- `find_package()` is the primary tool for locating dependencies
+    - Config mode loads library-provided config files
+    - Module mode runs `FindXXX.cmake` scripts
+- Always prefer imported targets over raw variables
+- `FetchContent` downloads and builds dependencies at configure time
+- `pkg_check_modules()` integrates with `pkg-config` on Unix
+- `add_subdirectory()` works for in-tree or local dependencies
+- Provide options to let users choose system vs vendored libraries

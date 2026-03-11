@@ -4,12 +4,12 @@
 
 ## Chapter Overview
 
--   Creating a minimal CMake project
--   Building executables and libraries
--   Setting compiler flags
--   User-configured options
--   Build types (Debug, Release)
--   Property inheritance from dependencies
+- Creating a minimal CMake project
+- Building executables and libraries
+- Setting compiler flags
+- User-configured options
+- Build types (Debug, Release)
+- Property inheritance from dependencies
 
 ---
 
@@ -22,9 +22,9 @@ project(HelloWorld)
 add_executable(hello main.cpp)
 ```
 
--   `cmake_minimum_required()` sets the minimum CMake version
--   `project()` names the project
--   `add_executable()` defines a build target
+- `cmake_minimum_required()` sets the minimum CMake version
+- `project()` names the project
+- `add_executable()` defines a build target
 
 ---
 
@@ -75,8 +75,8 @@ hello_project/
         hello
 ```
 
--   Source and build directories are separate
--   All generated files stay in `build/`
+- Source and build directories are separate
+- All generated files stay in `build/`
 
 ---
 
@@ -86,10 +86,10 @@ hello_project/
 cmake_minimum_required(VERSION 3.20)
 ```
 
--   Must be the first command in `CMakeLists.txt`
--   Enforces a minimum CMake version for the project
--   Controls which policies are active
--   If the installed CMake is older, configuration fails with an error
+- Must be the first command in `CMakeLists.txt`
+- Enforces a minimum CMake version for the project
+- Controls which policies are active
+- If the installed CMake is older, configuration fails with an error
 
 ---
 
@@ -103,9 +103,9 @@ project(HelloWorld
 )
 ```
 
--   `VERSION` sets `PROJECT_VERSION` variable
--   `DESCRIPTION` provides a human-readable description
--   `LANGUAGES` specifies languages used (`C`, `CXX`, `Fortran`, `CUDA`)
+- `VERSION` sets `PROJECT_VERSION` variable
+- `DESCRIPTION` provides a human-readable description
+- `LANGUAGES` specifies languages used (`C`, `CXX`, `Fortran`, `CUDA`)
 
 ---
 
@@ -133,8 +133,8 @@ add_executable(hello
 )
 ```
 
--   List all source files that make up the executable
--   Header files are not listed (they are found via `#include`)
+- List all source files that make up the executable
+- Header files are not listed (they are found via `#include`)
 
 ---
 
@@ -147,9 +147,9 @@ add_library(mylib STATIC
 )
 ```
 
--   `STATIC` creates a `.a` (Linux) or `.lib` (Windows) file
--   The library is an archive of object files
--   Must be linked to an executable to be useful
+- `STATIC` creates a `.a` (Linux) or `.lib` (Windows) file
+- The library is an archive of object files
+- Must be linked to an executable to be useful
 
 ---
 
@@ -162,9 +162,9 @@ add_library(mylib SHARED
 )
 ```
 
--   `SHARED` creates a `.so` (Linux) or `.dll` (Windows) file
--   Loaded at runtime by the dynamic linker
--   Can be shared across multiple executables
+- `SHARED` creates a `.so` (Linux) or `.dll` (Windows) file
+- Loaded at runtime by the dynamic linker
+- Can be shared across multiple executables
 
 ---
 
@@ -176,8 +176,8 @@ add_executable(hello main.cpp)
 target_link_libraries(hello PRIVATE mylib)
 ```
 
--   `target_link_libraries()` connects a library to an executable
--   `PRIVATE` means the dependency is internal to the target
+- `target_link_libraries()` connects a library to an executable
+- `PRIVATE` means the dependency is internal to the target
 
 ---
 
@@ -189,9 +189,9 @@ target_link_libraries(hello PRIVATE mylib)
 | `PUBLIC` | Yes | Yes |
 | `INTERFACE` | No | Yes |
 
--   `PRIVATE` - only the target itself uses the dependency
--   `PUBLIC` - both the target and its consumers use it
--   `INTERFACE` - only consumers use it (e.g., header-only libraries)
+- `PRIVATE` - only the target itself uses the dependency
+- `PUBLIC` - both the target and its consumers use it
+- `INTERFACE` - only consumers use it (e.g., header-only libraries)
 
 ---
 
@@ -205,9 +205,9 @@ set(MY_VERSION "1.0")
 message(STATUS "Version is ${MY_VERSION}")
 ```
 
--   `set()` creates or modifies a variable
--   Variables are referenced with `${VAR_NAME}`
--   Scope is the current `CMakeLists.txt` and below
+- `set()` creates or modifies a variable
+- Variables are referenced with `${VAR_NAME}`
+- Scope is the current `CMakeLists.txt` and below
 
 ---
 
@@ -218,10 +218,10 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c11")
 ```
 
--   Global flags that apply to all targets
--   Appending preserves any user-supplied flags
--   This is the old-style approach
--   Affects every target in the project, which can cause problems
+- Global flags that apply to all targets
+- Appending preserves any user-supplied flags
+- This is the old-style approach
+- Affects every target in the project, which can cause problems
 
 ---
 
@@ -235,9 +235,9 @@ target_compile_options(myapp PRIVATE
 )
 ```
 
--   Adds flags only to the specified target
--   `PRIVATE` keeps flags from propagating to dependents
--   Preferred over global `CMAKE_CXX_FLAGS`
+- Adds flags only to the specified target
+- `PRIVATE` keeps flags from propagating to dependents
+- Preferred over global `CMAKE_CXX_FLAGS`
 
 ---
 
@@ -257,8 +257,8 @@ set_target_properties(myapp PROPERTIES
 )
 ```
 
--   `CXX_STANDARD_REQUIRED ON` makes it an error if not supported
--   `CXX_EXTENSIONS OFF` disables GNU extensions
+- `CXX_STANDARD_REQUIRED ON` makes it an error if not supported
+- `CXX_EXTENSIONS OFF` disables GNU extensions
 
 ---
 
@@ -273,9 +273,9 @@ if(ENABLE_TESTS)
 endif()
 ```
 
--   `option()` creates a boolean cache variable
--   Users toggle with `cmake -DENABLE_TESTS=OFF ..`
--   Values persist in `CMakeCache.txt`
+- `option()` creates a boolean cache variable
+- Users toggle with `cmake -DENABLE_TESTS=OFF ..`
+- Values persist in `CMakeCache.txt`
 
 ---
 
@@ -291,9 +291,9 @@ cmake_dependent_option(
 )
 ```
 
--   `USE_OPENGL` is only available when `BUILD_GUI` is `ON`
--   If the condition is false, it defaults to `OFF`
--   Useful for hiding irrelevant options from users
+- `USE_OPENGL` is only available when `BUILD_GUI` is `ON`
+- If the condition is false, it defaults to `OFF`
+- Useful for hiding irrelevant options from users
 
 ---
 
@@ -325,8 +325,8 @@ endif()
 message(STATUS "Build type: ${CMAKE_BUILD_TYPE}")
 ```
 
--   Without this, the default is an empty string (no optimization flags)
--   Always set a sensible default for your project
+- Without this, the default is an empty string (no optimization flags)
+- Always set a sensible default for your project
 
 ---
 
@@ -342,8 +342,8 @@ target_link_libraries(app PRIVATE mylib)
 # app automatically gets include/ and USE_MYLIB
 ```
 
--   `PUBLIC` properties propagate through `target_link_libraries()`
--   This is the core of modern CMake's target-based approach
+- `PUBLIC` properties propagate through `target_link_libraries()`
+- This is the core of modern CMake's target-based approach
 
 ---
 
@@ -359,9 +359,9 @@ app (inherits include/ and -DUSE_MYLIB)
 test_app (also inherits if linked to app)
 ```
 
--   `PRIVATE` linking stops propagation
--   `PUBLIC` linking continues the chain
--   `INTERFACE` properties propagate without being used by the owner
+- `PRIVATE` linking stops propagation
+- `PUBLIC` linking continues the chain
+- `INTERFACE` properties propagate without being used by the owner
 
 ---
 
@@ -379,9 +379,9 @@ endif()
 option(BUILD_TESTS "Build test suite" ON)
 ```
 
--   Sets up the project with a version and language
--   Provides a default build type
--   Offers a user-configurable option
+- Sets up the project with a version and language
+- Provides a default build type
+- Offers a user-configurable option
 
 ---
 
@@ -397,6 +397,6 @@ add_executable(app src/main.cpp)
 target_link_libraries(app PRIVATE greet)
 ```
 
--   Library with public headers and C++17 requirement
--   Executable consuming the library
--   C++17 and include paths propagate from library to executable
+- Library with public headers and C++17 requirement
+- Executable consuming the library
+- C++17 and include paths propagate from library to executable

@@ -4,21 +4,21 @@
 
 ## Chapter Overview
 
--   Generating files with `configure_file()`
--   Custom targets and custom commands
--   Executing processes during configuration
--   Cross-compilation with toolchain files
--   CMake presets
--   Modern CMake best practices and anti-patterns
+- Generating files with `configure_file()`
+- Custom targets and custom commands
+- Executing processes during configuration
+- Cross-compilation with toolchain files
+- CMake presets
+- Modern CMake best practices and anti-patterns
 
 ---
 
 ## configure_file() - Overview
 
--   Copies a file and substitutes variable values
--   Used to generate headers, config files, and scripts
--   Runs at **configure time** (when `cmake` is invoked)
--   Supports two substitution syntaxes: `@VAR@` and `${VAR}`
+- Copies a file and substitutes variable values
+- Used to generate headers, config files, and scripts
+- Runs at **configure time** (when `cmake` is invoked)
+- Supports two substitution syntaxes: `@VAR@` and `${VAR}`
 
 ---
 
@@ -43,9 +43,9 @@ configure_file(config.h.in config.h)
 
 ## Template Substitution Syntax
 
--   `@VAR@` replaces with the value of CMake variable `VAR`
--   `${VAR}` also replaces, but can conflict with shell or C++ code
--   Use `@ONLY` to restrict substitution to `@VAR@` only
+- `@VAR@` replaces with the value of CMake variable `VAR`
+- `${VAR}` also replaces, but can conflict with shell or C++ code
+- Use `@ONLY` to restrict substitution to `@VAR@` only
 
 ```cmake
 configure_file(config.h.in
@@ -54,8 +54,8 @@ configure_file(config.h.in
 )
 ```
 
--   `@ONLY` is the recommended approach for safety
--   `COPYONLY` copies without any substitution at all
+- `@ONLY` is the recommended approach for safety
+- `COPYONLY` copies without any substitution at all
 
 ---
 
@@ -125,9 +125,9 @@ add_custom_target(format
 cmake --build . --target format
 ```
 
--   Custom targets are **always** considered out of date
--   They run every time they are invoked
--   Not part of the default `all` target unless `ALL` is specified
+- Custom targets are **always** considered out of date
+- They run every time they are invoked
+- Not part of the default `all` target unless `ALL` is specified
 
 ---
 
@@ -143,9 +143,9 @@ add_custom_target(docs
 add_dependencies(docs mylib)
 ```
 
--   `add_dependencies()` ensures `mylib` is built before `docs`
--   The `DEPENDS` keyword specifies file-level dependencies
--   The `WORKING_DIRECTORY` sets where the command runs
+- `add_dependencies()` ensures `mylib` is built before `docs`
+- The `DEPENDS` keyword specifies file-level dependencies
+- The `WORKING_DIRECTORY` sets where the command runs
 
 ---
 
@@ -164,8 +164,8 @@ add_executable(app main.cpp
     ${CMAKE_BINARY_DIR}/generated.cpp)
 ```
 
--   Produces output files consumed by other targets
--   Only runs when outputs are needed and inputs change
+- Produces output files consumed by other targets
+- Only runs when outputs are needed and inputs change
 
 ---
 
@@ -180,9 +180,9 @@ add_custom_command(TARGET myapp POST_BUILD
 )
 ```
 
--   `PRE_BUILD` - before building (Visual Studio only)
--   `PRE_LINK` - after compiling, before linking
--   `POST_BUILD` - after building the target
+- `PRE_BUILD` - before building (Visual Studio only)
+- `PRE_LINK` - after compiling, before linking
+- `POST_BUILD` - after building the target
 
 ---
 
@@ -195,8 +195,8 @@ add_custom_command(TARGET myapp POST_BUILD
 | Use case | Code generation | Post-build steps |
 | Keyword | `OUTPUT` | `TARGET` |
 
--   OUTPUT form creates a file dependency in the build graph
--   TARGET form attaches to an existing build target
+- OUTPUT form creates a file dependency in the build graph
+- TARGET form attaches to an existing build target
 
 ---
 
@@ -218,8 +218,8 @@ add_executable(app
 )
 ```
 
--   Generated files must be listed as sources for a target
--   The build system tracks the dependency automatically
+- Generated files must be listed as sources for a target
+- The build system tracks the dependency automatically
 
 ---
 
@@ -236,9 +236,9 @@ execute_process(
 message(STATUS "Git hash: ${GIT_HASH}")
 ```
 
--   Runs during `cmake` configuration, not during build
--   Captures stdout, stderr, and return code
--   `OUTPUT_STRIP_TRAILING_WHITESPACE` removes trailing newline
+- Runs during `cmake` configuration, not during build
+- Captures stdout, stderr, and return code
+- `OUTPUT_STRIP_TRAILING_WHITESPACE` removes trailing newline
 
 ---
 
@@ -258,9 +258,9 @@ if(NOT result EQUAL 0)
 endif()
 ```
 
--   `RESULT_VARIABLE` holds the exit code (0 on success)
--   `ERROR_VARIABLE` captures stderr output
--   Multiple `COMMAND` arguments create a pipeline
+- `RESULT_VARIABLE` holds the exit code (0 on success)
+- `ERROR_VARIABLE` captures stderr output
+- Multiple `COMMAND` arguments create a pipeline
 
 ---
 
@@ -276,9 +276,9 @@ execute_process(
 )
 ```
 
--   Each `COMMAND` creates a stage in the pipeline
--   stdout of each feeds into stdin of the next
--   Only the last command's stdout is captured
+- Each `COMMAND` creates a stage in the pipeline
+- stdout of each feeds into stdin of the next
+- Only the last command's stdout is captured
 
 ---
 
@@ -291,10 +291,10 @@ Host Machine (x86_64 Linux)
 Target Machine (ARM embedded)
 ```
 
--   Build on one platform, run on another
--   Requires a cross-compiler toolchain
--   CMake uses **toolchain files** to configure cross-compilation
--   Invoked via `CMAKE_TOOLCHAIN_FILE`
+- Build on one platform, run on another
+- Requires a cross-compiler toolchain
+- CMake uses **toolchain files** to configure cross-compilation
+- Invoked via `CMAKE_TOOLCHAIN_FILE`
 
 ---
 
@@ -309,7 +309,7 @@ Target Machine (ARM embedded)
 | `CMAKE_SYSROOT` | Target sysroot path |
 | `CMAKE_FIND_ROOT_PATH` | Root path for find commands |
 
--   Setting `CMAKE_SYSTEM_NAME` triggers cross-compilation mode
+- Setting `CMAKE_SYSTEM_NAME` triggers cross-compilation mode
 
 ---
 
@@ -338,11 +338,11 @@ cmake --build .
 
 ## CMake Presets Overview
 
--   Standardized way to configure common settings
--   Stored in `CMakePresets.json` or `CMakeUserPresets.json`
--   Replaces long command-line flags
--   Supported by IDEs (CLion, VS Code, Visual Studio)
--   Introduced in CMake 3.19
+- Standardized way to configure common settings
+- Stored in `CMakePresets.json` or `CMakeUserPresets.json`
+- Replaces long command-line flags
+- Supported by IDEs (CLion, VS Code, Visual Studio)
+- Introduced in CMake 3.19
 
 ---
 
@@ -449,9 +449,9 @@ target_compile_definitions(app PRIVATE FOO)
 target_link_libraries(app PRIVATE mylib)
 ```
 
--   Per-target commands give precise control
--   Properties propagate correctly through dependencies
--   Makes the project composable and reusable
+- Per-target commands give precise control
+- Properties propagate correctly through dependencies
+- Makes the project composable and reusable
 
 ---
 
@@ -472,20 +472,20 @@ target_include_directories(app PRIVATE
     /home/user/mylibs/include)
 ```
 
--   Global commands affect all targets in the project
--   `GLOB` does not detect added or removed files
--   Hardcoded paths break on other machines
+- Global commands affect all targets in the project
+- `GLOB` does not detect added or removed files
+- Hardcoded paths break on other machines
 
 ---
 
 ## Summary of Modern CMake Best Practices
 
--   Always specify `cmake_minimum_required(VERSION ...)`
--   Use `target_*` commands instead of global equivalents
--   Prefer `PRIVATE`, `PUBLIC`, `INTERFACE` visibility specifiers
--   List source files explicitly instead of using `GLOB`
--   Use out-of-source builds with `cmake -B build`
--   Use `find_package()` instead of hardcoded paths
--   Use presets to share configurations across a team
--   Use toolchain files for cross-compilation
--   Keep `CMakeLists.txt` files minimal and readable
+- Always specify `cmake_minimum_required(VERSION ...)`
+- Use `target_*` commands instead of global equivalents
+- Prefer `PRIVATE`, `PUBLIC`, `INTERFACE` visibility specifiers
+- List source files explicitly instead of using `GLOB`
+- Use out-of-source builds with `cmake -B build`
+- Use `find_package()` instead of hardcoded paths
+- Use presets to share configurations across a team
+- Use toolchain files for cross-compilation
+- Keep `CMakeLists.txt` files minimal and readable
