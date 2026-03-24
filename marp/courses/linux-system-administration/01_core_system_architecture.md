@@ -1365,4 +1365,3 @@ timedatectl set-ntp true
 # Check NTP sync status
 timedatectl timesync-status
 ```
-

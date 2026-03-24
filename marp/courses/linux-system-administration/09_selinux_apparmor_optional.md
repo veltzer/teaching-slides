@@ -158,7 +158,7 @@ audit2allow -a -M custom_policy
 ---
 ## SELinux Troubleshooting Workflow
 
-1. Check if SELinux is the problem:
+- Check if SELinux is the problem:
 
 ```bash
 # Temporarily switch to permissive
@@ -168,13 +168,13 @@ setenforce 0
 setenforce 1
 ```
 
-2. Find the denial:
+- Find the denial:
 
 ```bash
 ausearch -m AVC -ts recent | audit2why
 ```
 
-3. Fix (in order of preference):
+- Fix (in order of preference):
     - `restorecon` - fix file contexts
     - `setsebool` - enable boolean
     - `semanage fcontext` - add context rule
