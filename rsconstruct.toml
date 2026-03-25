@@ -42,6 +42,13 @@ args = ["scripts/md_lint.py", "-q"]
 extensions = [".md"]
 scan_dir = "marp"
 
+[processor.marp]
+# formats = [ "html" ]
+formats = [ "pdf" ]
+
+[processor.pdfunite]
+enabled = false
+
 [processor.slidev]
 enabled = false
 
@@ -69,11 +76,14 @@ enabled = false
 [processor.standard]
 enabled = false
 
-[processor.drawio]
-enabled = false
+# [processor.drawio]
+# enabled = false
 
-[processor.libreoffice]
-enabled = false
+# [processor.libreoffice]
+# enabled = false
 
-[processor.pip]
-enabled = false
+# [processor.pip]
+# enabled = false
+
+# [processor.gem]
+# enabled = false
