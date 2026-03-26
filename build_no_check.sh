@@ -1,2 +1,0 @@
-#!/bin/bash -eu
-make DO_MD_MARKDOWNLINT=0 DO_MD_ASPELL=0 DO_MD_MDL=0 DO_MD_LINT=0
