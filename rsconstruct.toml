@@ -11,85 +11,11 @@ extra_inputs = [
     "config/shared.lua",
 ]
 
-[processor.jsonlint]
-enabled = false
-
-[processor.ascii_check]
-enabled = false
-
-[processor.rumdl]
-enabled = false
-
-[processor.mdl]
-enabled = false
-
-[processor.markdownlint]
-enabled = false
-
-[processor.pandoc]
-enabled = false
-
-[processor.a2x]
-enabled = false
-
-[processor.luacheck]
-enabled = false
-
-[processor.script_check]
-enabled = true
+[processor.script]
 linter = "python"
 args = ["scripts/md_lint.py", "-q"]
 extensions = [".md"]
-scan_dir = "marp"
+scan_dirs = ["marp"]
 
 [processor.marp]
-# formats = [ "html" ]
 formats = [ "pdf" ]
-
-[processor.npm]
-enabled = false 
-
-[processor.gem]
-enabled = false
-
-[processor.pip]
-enabled = false
-
-[processor.slidev]
-enabled = false
-
-[processor.tidy]
-enabled = false
-
-[processor.htmlhint]
-enabled = false
-
-[processor.htmllint]
-enabled = false
-
-[processor.jslint]
-enabled = false
-
-[processor.jshint]
-enabled = false
-
-[processor.eslint]
-enabled = false
-
-[processor.stylelint]
-enabled = false
-
-[processor.standard]
-enabled = false
-
-# [processor.drawio]
-# enabled = false
-
-# [processor.libreoffice]
-# enabled = false
-
-# [processor.pip]
-# enabled = false
-
-# [processor.gem]
-# enabled = false
