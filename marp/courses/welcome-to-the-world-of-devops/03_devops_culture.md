@@ -206,14 +206,23 @@ Understanding the cultural transformation required for DevOps success
 ## Continuous Learning
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_devops_culture)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_devops_culture)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Continuous Learning Cycle</text>
+  <rect x="20" y="40" width="130" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="60" text-anchor="middle" font-size="10" font-weight="bold">Experiment</text>
+  <text x="85" y="75" text-anchor="middle" font-size="9">Try new approaches</text>
+  <text x="85" y="88" text-anchor="middle" font-size="9">Safe-to-fail probes</text>
+  <rect x="235" y="40" width="130" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="10" font-weight="bold">Reflect</text>
+  <text x="300" y="75" text-anchor="middle" font-size="9">Retrospectives</text>
+  <text x="300" y="88" text-anchor="middle" font-size="9">Gather data + insights</text>
+  <rect x="450" y="40" width="130" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="515" y="60" text-anchor="middle" font-size="10" font-weight="bold">Adapt</text>
+  <text x="515" y="75" text-anchor="middle" font-size="9">Apply learnings</text>
+  <text x="515" y="88" text-anchor="middle" font-size="9">Improve processes</text>
+  <line x1="150" y1="70" x2="235" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_devops_culture)"/>
+  <line x1="365" y1="70" x2="450" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_02_devops_culture)"/>
+  <path d="M515,105 Q515,160 300,160 Q85,160 85,105" fill="none" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowd6_02_devops_culture)"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10" fill="#555">Iterate continuously to build a learning organization</text>
   <defs>
     <marker id="arrowd6_02_devops_culture" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -236,14 +245,22 @@ Understanding the cultural transformation required for DevOps success
 ## Success Patterns
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_devops_culture)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_devops_culture)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">DevOps Success Patterns</text>
+  <rect x="20" y="40" width="150" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="95" y="58" text-anchor="middle" font-size="10" font-weight="bold">Start Small</text>
+  <text x="95" y="73" text-anchor="middle" font-size="9">Pick one team/project</text>
+  <text x="95" y="86" text-anchor="middle" font-size="9">Prove value quickly</text>
+  <rect x="225" y="40" width="150" height="60" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="10" font-weight="bold">Measure Impact</text>
+  <text x="300" y="73" text-anchor="middle" font-size="9">Track DORA metrics</text>
+  <text x="300" y="86" text-anchor="middle" font-size="9">Show improvements</text>
+  <rect x="430" y="40" width="150" height="60" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="505" y="58" text-anchor="middle" font-size="10" font-weight="bold">Scale Out</text>
+  <text x="505" y="73" text-anchor="middle" font-size="9">Share best practices</text>
+  <text x="505" y="86" text-anchor="middle" font-size="9">Expand to more teams</text>
+  <line x1="170" y1="70" x2="225" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_devops_culture)"/>
+  <line x1="375" y1="70" x2="430" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_02_devops_culture)"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" fill="#555">Incremental adoption drives sustainable transformation</text>
   <defs>
     <marker id="arrowd7_02_devops_culture" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -276,14 +293,22 @@ Understanding the cultural transformation required for DevOps success
 ## Cultural Evolution
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_02_devops_culture)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_02_devops_culture)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Cultural Evolution Stages</text>
+  <rect x="20" y="40" width="150" height="60" fill="#ffebee" stroke="#c00" stroke-width="2" rx="5"/>
+  <text x="95" y="58" text-anchor="middle" font-size="10" font-weight="bold">Ad-hoc</text>
+  <text x="95" y="73" text-anchor="middle" font-size="9">Manual processes</text>
+  <text x="95" y="86" text-anchor="middle" font-size="9">Tribal knowledge</text>
+  <rect x="225" y="40" width="150" height="60" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="10" font-weight="bold">Collaborative</text>
+  <text x="300" y="73" text-anchor="middle" font-size="9">Shared tools + practices</text>
+  <text x="300" y="86" text-anchor="middle" font-size="9">Cross-team dialogue</text>
+  <rect x="430" y="40" width="150" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="505" y="58" text-anchor="middle" font-size="10" font-weight="bold">Generative</text>
+  <text x="505" y="73" text-anchor="middle" font-size="9">High trust + autonomy</text>
+  <text x="505" y="86" text-anchor="middle" font-size="9">Innovation-driven</text>
+  <line x1="170" y1="70" x2="225" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_02_devops_culture)"/>
+  <line x1="375" y1="70" x2="430" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_02_devops_culture)"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" fill="#555">Based on Westrum organizational culture model</text>
   <defs>
     <marker id="arrowd8_02_devops_culture" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

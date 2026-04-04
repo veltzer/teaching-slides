@@ -4,21 +4,30 @@
 ---
 ## What are Generics
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Generics: Write Once, Use with Any Type</text>
+  <rect x="20" y="30" width="170" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Generic Functions</text>
+  <text x="105" y="63" text-anchor="middle" font-size="9">fn largest&lt;T&gt;(list: &amp;[T])</text>
+  <text x="105" y="76" text-anchor="middle" font-size="9">Type param T resolved</text>
+  <text x="105" y="87" text-anchor="middle" font-size="9">at compile time</text>
+  <rect x="215" y="30" width="170" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">Generic Structs</text>
+  <text x="300" y="63" text-anchor="middle" font-size="9">struct Point&lt;T&gt; { x: T }</text>
+  <text x="300" y="76" text-anchor="middle" font-size="9">Point&lt;i32&gt;, Point&lt;f64&gt;</text>
+  <text x="300" y="87" text-anchor="middle" font-size="9">each a distinct type</text>
+  <rect x="410" y="30" width="170" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">Generic Enums</text>
+  <text x="495" y="63" text-anchor="middle" font-size="9">Option&lt;T&gt;, Result&lt;T,E&gt;</text>
+  <text x="495" y="76" text-anchor="middle" font-size="9">Built into the language</text>
+  <text x="495" y="87" text-anchor="middle" font-size="9">used everywhere</text>
+  <rect x="60" y="105" width="480" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="122" text-anchor="middle" font-size="11" font-weight="bold">Monomorphization</text>
+  <text x="300" y="137" text-anchor="middle" font-size="10">Compiler generates specialized code for each concrete type used -- zero runtime cost</text>
+  <rect x="60" y="160" width="230" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="175" y="179" text-anchor="middle" font-size="9">fn foo&lt;T&gt;(x: T) with i32 -> fn foo_i32(x: i32)</text>
+  <rect x="310" y="160" width="230" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="425" y="179" text-anchor="middle" font-size="9">fn foo&lt;T&gt;(x: T) with f64 -> fn foo_f64(x: f64)</text>
 </svg>
 
 ---
@@ -108,19 +117,38 @@ impl Point<f64> {
 ## What are Traits
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_generics_traits)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_generics_traits)"/>
   <defs>
-    <marker id="arrowd1_06_generics_traits" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arr_trait" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Traits: Shared Behavior (like interfaces)</text>
+  <rect x="20" y="30" width="150" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="48" text-anchor="middle" font-size="10" font-weight="bold">trait Summary</text>
+  <text x="95" y="63" text-anchor="middle" font-size="9">fn summarize(&amp;self)</text>
+  <text x="95" y="76" text-anchor="middle" font-size="9">  -> String</text>
+  <rect x="225" y="25" width="150" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="40" text-anchor="middle" font-size="10" font-weight="bold">NewsArticle</text>
+  <text x="300" y="54" text-anchor="middle" font-size="9">impl Summary for ...</text>
+  <rect x="225" y="65" width="150" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="80" text-anchor="middle" font-size="10" font-weight="bold">Tweet</text>
+  <text x="300" y="94" text-anchor="middle" font-size="9">impl Summary for ...</text>
+  <line x1="170" y1="50" x2="225" y2="42" stroke="#333" stroke-width="2" marker-end="url(#arr_trait)"/>
+  <line x1="170" y1="65" x2="225" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arr_trait)"/>
+  <rect x="430" y="25" width="150" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="42" text-anchor="middle" font-size="10" font-weight="bold">Static Dispatch</text>
+  <text x="505" y="56" text-anchor="middle" font-size="9">fn notify&lt;T: Summary&gt;</text>
+  <text x="505" y="70" text-anchor="middle" font-size="9">Monomorphized, inlined</text>
+  <text x="505" y="84" text-anchor="middle" font-size="10" font-weight="bold">Dynamic Dispatch</text>
+  <text x="505" y="98" text-anchor="middle" font-size="9">dyn Summary (vtable)</text>
+  <rect x="20" y="115" width="280" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="160" y="130" text-anchor="middle" font-size="10" font-weight="bold">Trait Bounds: T: Display + Clone</text>
+  <text x="160" y="144" text-anchor="middle" font-size="9">Constrain generic types to required behavior</text>
+  <rect x="320" y="115" width="260" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="450" y="130" text-anchor="middle" font-size="10" font-weight="bold">Default Implementations</text>
+  <text x="450" y="144" text-anchor="middle" font-size="9">Provide fallback method bodies in trait</text>
+  <rect x="100" y="165" width="400" height="25" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="182" text-anchor="middle" font-size="10">Traits = Rust's primary abstraction mechanism (no inheritance)</text>
 </svg>
 
 ---
@@ -310,21 +338,43 @@ impl<T: Display + PartialOrd> MyTrait for T {
 
 ## Common Traits
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Essential Std Library Traits</text>
+  <rect x="20" y="28" width="130" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="85" y="44" text-anchor="middle" font-size="10" font-weight="bold">Display/Debug</text>
+  <text x="85" y="58" text-anchor="middle" font-size="9">Formatting output</text>
+  <text x="85" y="70" text-anchor="middle" font-size="9">{} and {:?}</text>
+  <rect x="160" y="28" width="130" height="50" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="225" y="44" text-anchor="middle" font-size="10" font-weight="bold">Clone/Copy</text>
+  <text x="225" y="58" text-anchor="middle" font-size="9">Duplication semantics</text>
+  <text x="225" y="70" text-anchor="middle" font-size="9">deep vs bitwise</text>
+  <rect x="300" y="28" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="365" y="44" text-anchor="middle" font-size="10" font-weight="bold">PartialEq/Eq</text>
+  <text x="365" y="58" text-anchor="middle" font-size="9">Equality comparison</text>
+  <text x="365" y="70" text-anchor="middle" font-size="9">== and !=</text>
+  <rect x="440" y="28" width="140" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="510" y="44" text-anchor="middle" font-size="10" font-weight="bold">PartialOrd/Ord</text>
+  <text x="510" y="58" text-anchor="middle" font-size="9">Ordering comparison</text>
+  <text x="510" y="70" text-anchor="middle" font-size="9">&lt; &gt; &lt;= &gt;= .sort()</text>
+  <rect x="20" y="90" width="130" height="50" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="85" y="106" text-anchor="middle" font-size="10" font-weight="bold">From/Into</text>
+  <text x="85" y="120" text-anchor="middle" font-size="9">Type conversion</text>
+  <text x="85" y="132" text-anchor="middle" font-size="9">impl From&lt;T&gt;</text>
+  <rect x="160" y="90" width="130" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="225" y="106" text-anchor="middle" font-size="10" font-weight="bold">Drop</text>
+  <text x="225" y="120" text-anchor="middle" font-size="9">Destructor / cleanup</text>
+  <text x="225" y="132" text-anchor="middle" font-size="9">RAII pattern</text>
+  <rect x="300" y="90" width="130" height="50" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="365" y="106" text-anchor="middle" font-size="10" font-weight="bold">Iterator</text>
+  <text x="365" y="120" text-anchor="middle" font-size="9">Lazy sequences</text>
+  <text x="365" y="132" text-anchor="middle" font-size="9">.next() -> Option</text>
+  <rect x="440" y="90" width="140" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="510" y="106" text-anchor="middle" font-size="10" font-weight="bold">AsRef/Deref</text>
+  <text x="510" y="120" text-anchor="middle" font-size="9">Cheap conversion</text>
+  <text x="510" y="132" text-anchor="middle" font-size="9">auto-dereferencing</text>
+  <rect x="100" y="155" width="400" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="170" text-anchor="middle" font-size="10" font-weight="bold">Most can be derived: #[derive(Debug, Clone, PartialEq)]</text>
+  <text x="300" y="184" text-anchor="middle" font-size="9">Compiler auto-generates implementations for simple structs/enums</text>
 </svg>
 
 ---
@@ -426,21 +476,31 @@ fn process_string(x: String) {
 
 ## Best Practices
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="200" y="5" width="200" height="35" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="300" y="28" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Generics/Traits Tips</text>
+  <line x1="250" y1="40" x2="120" y2="58" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="40" x2="480" y2="58" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="40" x2="120" y2="125" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
+  <rect x="30" y="53" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold">Minimal bounds</text>
+  <text x="120" y="84" text-anchor="middle" font-size="9">Only require traits you</text>
+  <text x="120" y="95" text-anchor="middle" font-size="9">actually call methods on</text>
+  <rect x="390" y="53" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="70" text-anchor="middle" font-size="10" font-weight="bold">Static over dynamic</text>
+  <text x="480" y="84" text-anchor="middle" font-size="9">Prefer impl Trait / generics</text>
+  <text x="480" y="95" text-anchor="middle" font-size="9">over dyn Trait when possible</text>
+  <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">#[derive] first</text>
+  <text x="120" y="151" text-anchor="middle" font-size="9">Auto-derive Debug, Clone,</text>
+  <text x="120" y="162" text-anchor="middle" font-size="9">PartialEq before manual impl</text>
+  <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Coherence rules</text>
+  <text x="480" y="151" text-anchor="middle" font-size="9">Orphan rule: impl trait for</text>
+  <text x="480" y="162" text-anchor="middle" font-size="9">type only if one is local</text>
+  <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="191" text-anchor="middle" font-size="9">Use where clauses for readability with complex bounds</text>
 </svg>
 
 ---

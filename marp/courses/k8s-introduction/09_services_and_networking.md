@@ -185,10 +185,10 @@ spec:
   <text x="175" y="110" text-anchor="middle" fill="white">External Client</text>
   <text x="175" y="125" text-anchor="middle" fill="white" font-size="10">192.168.1.100</text>
   <rect x="320" y="80" width="180" height="60" fill="#4285f4" rx="5"/>
-  <text x="410" y="105" text-anchor="middle" fill="white">Node 1</text>
+  <text x="410" y="105" text-anchor="middle" fill="white">Worker Node 1</text>
   <text x="410" y="125" text-anchor="middle" fill="white" font-size="11">10.0.0.1:30080</text>
   <rect x="520" y="80" width="180" height="60" fill="#4285f4" rx="5"/>
-  <text x="610" y="105" text-anchor="middle" fill="white">Node 2</text>
+  <text x="610" y="105" text-anchor="middle" fill="white">Worker Node 2</text>
   <text x="610" y="125" text-anchor="middle" fill="white" font-size="11">10.0.0.2:30080</text>
   <rect x="320" y="180" width="380" height="50" fill="#34a853" rx="5"/>
   <text x="510" y="210" text-anchor="middle" fill="white">Service (ClusterIP: 10.96.10.20:80)</text>
@@ -237,11 +237,11 @@ spec:
   <text x="400" y="95" text-anchor="middle" fill="white" font-weight="bold">Cloud Load Balancer</text>
   <text x="400" y="110" text-anchor="middle" fill="white" font-size="10">External IP: 35.1.2.3</text>
   <rect x="150" y="150" width="120" height="50" fill="#4285f4" rx="5"/>
-  <text x="210" y="180" text-anchor="middle" fill="white" font-size="11">Node 1</text>
+  <text x="210" y="180" text-anchor="middle" fill="white" font-size="11">Worker Node 1</text>
   <rect x="340" y="150" width="120" height="50" fill="#4285f4" rx="5"/>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-size="11">Node 2</text>
+  <text x="400" y="180" text-anchor="middle" fill="white" font-size="11">Worker Node 2</text>
   <rect x="530" y="150" width="120" height="50" fill="#4285f4" rx="5"/>
-  <text x="590" y="180" text-anchor="middle" fill="white" font-size="11">Node 3</text>
+  <text x="590" y="180" text-anchor="middle" fill="white" font-size="11">Worker Node 3</text>
   <rect x="200" y="230" width="400" height="40" fill="#34a853" rx="5"/>
   <text x="400" y="255" text-anchor="middle" fill="white">Service + NodePort</text>
   <circle cx="250" cy="310" r="20" fill="#fbbc04"/>

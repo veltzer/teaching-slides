@@ -13,14 +13,22 @@ Redis enhances application architecture:
 - **Enables real-time features**: Live data and interactions
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_integration)"/>
+  <rect x="210" y="10" width="150" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="33" text-anchor="middle" font-size="11" font-weight="bold">Application</text>
+  <rect x="210" y="80" width="150" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="105" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
+  <rect x="20" y="150" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="172" text-anchor="middle" font-size="10">Caching</text>
+  <rect x="140" y="150" width="100" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="190" y="172" text-anchor="middle" font-size="10">Sessions</text>
+  <rect x="260" y="150" width="100" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="310" y="172" text-anchor="middle" font-size="10">Queues</text>
+  <rect x="380" y="150" width="100" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="430" y="172" text-anchor="middle" font-size="10">PubSub</text>
+  <rect x="500" y="150" width="80" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="540" y="172" text-anchor="middle" font-size="10">Locks</text>
+  <line x1="285" y1="45" x2="285" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_integration)"/>
+  <line x1="285" y1="120" x2="285" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
   <defs>
     <marker id="arrowd0_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -33,14 +41,24 @@ Redis enhances application architecture:
 ## Popular Redis Client Libraries
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_08_integration)"/>
+  <rect x="20" y="20" width="130" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="42" text-anchor="middle" font-size="11" font-weight="bold">Python</text>
+  <text x="85" y="58" text-anchor="middle" font-size="10">redis-py</text>
+  <text x="85" y="73" text-anchor="middle" font-size="10">aioredis</text>
+  <rect x="170" y="20" width="130" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="235" y="42" text-anchor="middle" font-size="11" font-weight="bold">Node.js</text>
+  <text x="235" y="58" text-anchor="middle" font-size="10">ioredis</text>
+  <text x="235" y="73" text-anchor="middle" font-size="10">node-redis</text>
+  <rect x="320" y="20" width="130" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="385" y="42" text-anchor="middle" font-size="11" font-weight="bold">Java</text>
+  <text x="385" y="58" text-anchor="middle" font-size="10">Jedis</text>
+  <text x="385" y="73" text-anchor="middle" font-size="10">Lettuce</text>
+  <rect x="470" y="20" width="110" height="65" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="525" y="42" text-anchor="middle" font-size="11" font-weight="bold">Go / C#</text>
+  <text x="525" y="58" text-anchor="middle" font-size="10">go-redis</text>
+  <text x="525" y="73" text-anchor="middle" font-size="10">StackExchange</text>
+  <rect x="100" y="110" width="380" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="290" y="130" text-anchor="middle" font-size="10">All support: connection pooling, pipelining, Pub/Sub, cluster mode</text>
   <defs>
     <marker id="arrowd1_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -79,14 +97,25 @@ When choosing a Redis client:
 Best practices for Redis connections:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
+  <rect x="20" y="20" width="120" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="42" text-anchor="middle" font-size="10">App Thread 1</text>
+  <text x="80" y="58" text-anchor="middle" font-size="10">App Thread 2</text>
+  <text x="80" y="74" text-anchor="middle" font-size="10">App Thread 3</text>
+  <rect x="210" y="15" width="170" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="295" y="35" text-anchor="middle" font-size="11" font-weight="bold">Connection Pool</text>
+  <rect x="225" y="45" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="255" y="59" text-anchor="middle" font-size="9">conn 1</text>
+  <rect x="295" y="45" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="325" y="59" text-anchor="middle" font-size="9">conn 2</text>
+  <rect x="260" y="70" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="290" y="84" text-anchor="middle" font-size="9">conn 3</text>
+  <rect x="450" y="30" width="120" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="55" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
+  <text x="510" y="70" text-anchor="middle" font-size="10">:6379</text>
+  <line x1="140" y1="55" x2="210" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
+  <line x1="380" y1="55" x2="450" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
+  <text x="295" y="125" text-anchor="middle" font-size="10" fill="#333">Pool reuses TCP connections; avoids per-request handshake overhead</text>
+  <text x="295" y="145" text-anchor="middle" font-size="10" fill="#666">Set max_connections, idle_timeout, retry_on_timeout</text>
   <defs>
     <marker id="arrowd2_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

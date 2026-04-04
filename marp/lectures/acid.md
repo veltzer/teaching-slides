@@ -543,19 +543,19 @@ Many NoSQL systems follow BASE instead of ACID:
   <!-- Database Node 1 -->
   <g>
     <circle cx="280" cy="120" r="30" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
-    <text x="280" y="125" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Node 1</text>
+    <text x="280" y="125" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">DB Primary</text>
     <rect x="250" y="90" width="60" height="60" fill="none" stroke="none"/>
   </g>
   <!-- Database Node 2 -->
   <g>
     <circle cx="280" cy="200" r="30" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
-    <text x="280" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Node 2</text>
+    <text x="280" y="205" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Replica A</text>
     <rect x="250" y="170" width="60" height="60" fill="none" stroke="none"/>
   </g>
   <!-- Database Node 3 -->
   <g>
     <circle cx="280" cy="280" r="30" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
-    <text x="280" y="285" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Node 3</text>
+    <text x="280" y="285" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Replica B</text>
     <rect x="250" y="250" width="60" height="60" fill="none" stroke="none"/>
   </g>
   <!-- Sync arrows between nodes -->

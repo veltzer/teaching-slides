@@ -36,14 +36,32 @@ struct sk_buff {
 ## SK Buffer Layout
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_network_devices)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_05_network_devices)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">sk_buff Memory Layout</text>
+  <rect x="50" y="35" width="500" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="300" y="60" text-anchor="middle" font-size="11" fill="#666">Linear data buffer</text>
+  <line x1="80" y1="35" x2="80" y2="75" stroke="#c62828" stroke-width="2"/>
+  <text x="80" y="95" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">head</text>
+  <line x1="170" y1="35" x2="170" y2="75" stroke="#1565c0" stroke-width="2"/>
+  <text x="170" y="95" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">data</text>
+  <line x1="430" y1="35" x2="430" y2="75" stroke="#2e7d32" stroke-width="2"/>
+  <text x="430" y="95" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="bold">tail</text>
+  <line x1="520" y1="35" x2="520" y2="75" stroke="#e65100" stroke-width="2"/>
+  <text x="520" y="95" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">end</text>
+  <rect x="80" y="42" width="90" height="26" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="2"/>
+  <text x="125" y="59" text-anchor="middle" font-size="10">headroom</text>
+  <rect x="170" y="42" width="260" height="26" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="2"/>
+  <text x="300" y="59" text-anchor="middle" font-size="11" font-weight="bold">Packet Data (len)</text>
+  <rect x="430" y="42" width="90" height="26" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="475" y="59" text-anchor="middle" font-size="10">tailroom</text>
+  <text x="125" y="130" text-anchor="middle" font-size="10" fill="#333">skb_push()</text>
+  <line x1="125" y1="135" x2="125" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
+  <text x="125" y="170" text-anchor="middle" font-size="10" fill="#666">Add to head</text>
+  <text x="300" y="130" text-anchor="middle" font-size="10" fill="#333">skb_pull()</text>
+  <line x1="300" y1="135" x2="300" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
+  <text x="300" y="170" text-anchor="middle" font-size="10" fill="#666">Remove from head</text>
+  <text x="475" y="130" text-anchor="middle" font-size="10" fill="#333">skb_put()</text>
+  <line x1="475" y1="135" x2="475" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
+  <text x="475" y="170" text-anchor="middle" font-size="10" fill="#666">Add to tail</text>
   <defs>
     <marker id="arrowd0_05_network_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -281,14 +299,26 @@ static int my_poll(struct napi_struct *napi, int budget)
 ## Interrupt Mitigation
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_network_devices)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_network_devices)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Interrupt Mitigation: IRQ to NAPI Polling</text>
+  <rect x="30" y="40" width="100" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="60" text-anchor="middle" font-size="11" font-weight="bold">HW IRQ</text>
+  <text x="80" y="78" text-anchor="middle" font-size="10" fill="#666">Packet arrives</text>
+  <rect x="165" y="40" width="100" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="215" y="60" text-anchor="middle" font-size="11" font-weight="bold">Disable IRQ</text>
+  <text x="215" y="78" text-anchor="middle" font-size="10" fill="#666">Stop interrupts</text>
+  <rect x="300" y="40" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="350" y="55" text-anchor="middle" font-size="11" font-weight="bold">NAPI Poll</text>
+  <text x="350" y="72" text-anchor="middle" font-size="10" fill="#666">napi_schedule()</text>
+  <text x="350" y="84" text-anchor="middle" font-size="10" fill="#666">batch process</text>
+  <rect x="435" y="40" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="485" y="60" text-anchor="middle" font-size="11" font-weight="bold">Re-enable IRQ</text>
+  <text x="485" y="78" text-anchor="middle" font-size="10" fill="#666">napi_complete()</text>
+  <line x1="130" y1="65" x2="165" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_network_devices)"/>
+  <line x1="265" y1="65" x2="300" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_network_devices)"/>
+  <line x1="400" y1="65" x2="435" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_05_network_devices)"/>
+  <rect x="100" y="120" width="400" height="55" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="5" stroke-dasharray="5,3"/>
+  <text x="300" y="140" text-anchor="middle" font-size="11" fill="#333">Benefit: Process multiple packets per interrupt (budget)</text>
+  <text x="300" y="158" text-anchor="middle" font-size="10" fill="#666">Reduces CPU overhead from per-packet interrupt handling</text>
   <defs>
     <marker id="arrowd1_05_network_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

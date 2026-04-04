@@ -17,14 +17,27 @@
 ## What are Netfilters
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Netfilter: Kernel Packet Processing Framework</text>
+  <rect x="30" y="30" width="160" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="50" text-anchor="middle" font-size="11" font-weight="bold">User Space</text>
+  <text x="110" y="67" text-anchor="middle" font-size="10" fill="#666">iptables / nftables</text>
+  <text x="110" y="82" text-anchor="middle" font-size="10" fill="#666">libnetfilter_queue</text>
+  <text x="110" y="97" text-anchor="middle" font-size="10" fill="#666">conntrack CLI</text>
+  <rect x="220" y="30" width="160" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold">Netfilter Hooks</text>
+  <text x="300" y="67" text-anchor="middle" font-size="10" fill="#666">PRE/POST ROUTING</text>
+  <text x="300" y="82" text-anchor="middle" font-size="10" fill="#666">INPUT / OUTPUT</text>
+  <text x="300" y="97" text-anchor="middle" font-size="10" fill="#666">FORWARD</text>
+  <rect x="410" y="30" width="160" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="50" text-anchor="middle" font-size="11" font-weight="bold">Tables</text>
+  <text x="490" y="67" text-anchor="middle" font-size="10" fill="#666">filter (default)</text>
+  <text x="490" y="82" text-anchor="middle" font-size="10" fill="#666">nat / mangle</text>
+  <text x="490" y="97" text-anchor="middle" font-size="10" fill="#666">raw / security</text>
+  <line x1="190" y1="67" x2="220" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
+  <line x1="380" y1="67" x2="410" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
+  <rect x="30" y="130" width="540" height="45" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="5" stroke-dasharray="5,3"/>
+  <text x="300" y="150" text-anchor="middle" font-size="11" fill="#333">Each hook point invokes registered callback functions (nf_hook_ops)</text>
+  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#666">Verdicts: NF_ACCEPT | NF_DROP | NF_QUEUE | NF_STOLEN | NF_REPEAT</text>
   <defs>
     <marker id="arrowd0_07_netfilter" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -120,14 +133,36 @@ nf_register_net_hook(&init_net, &my_nfho);
 ## Packet Flow Through Hooks
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_07_netfilter)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_07_netfilter)"/>
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Packet Flow Through Netfilter Hooks</text>
+  <rect x="10" y="75" width="65" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="42" y="97" text-anchor="middle" font-size="10" font-weight="bold">NIC In</text>
+  <rect x="95" y="75" width="80" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="135" y="90" text-anchor="middle" font-size="10" font-weight="bold">PRE-</text>
+  <text x="135" y="102" text-anchor="middle" font-size="10" font-weight="bold">ROUTING</text>
+  <rect x="195" y="40" width="60" height="30" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="60" text-anchor="middle" font-size="10" font-weight="bold">Routing</text>
+  <rect x="195" y="120" width="70" height="30" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="230" y="140" text-anchor="middle" font-size="10" font-weight="bold">FORWARD</text>
+  <rect x="275" y="75" width="60" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="305" y="97" text-anchor="middle" font-size="10" font-weight="bold">INPUT</text>
+  <rect x="355" y="75" width="60" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="385" y="97" text-anchor="middle" font-size="10" font-weight="bold">Local</text>
+  <rect x="435" y="75" width="60" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="465" y="97" text-anchor="middle" font-size="10" font-weight="bold">OUTPUT</text>
+  <rect x="435" y="120" width="80" height="30" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="475" y="133" text-anchor="middle" font-size="10" font-weight="bold">POSTROUTING</text>
+  <rect x="535" y="75" width="55" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="562" y="97" text-anchor="middle" font-size="10" font-weight="bold">NIC Out</text>
+  <line x1="75" y1="92" x2="95" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="175" y1="85" x2="195" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="225" y1="70" x2="275" y2="88" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="225" y1="70" x2="225" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="335" y1="92" x2="355" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="415" y1="92" x2="435" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="265" y1="135" x2="435" y2="135" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="495" y1="92" x2="495" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="515" y1="135" x2="535" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#666">5 hook points intercept packets at different stages of processing</text>
   <defs>
     <marker id="arrowd1_07_netfilter" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

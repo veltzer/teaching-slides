@@ -725,14 +725,21 @@ Steps for safe Redis upgrades:
 ## Redis Sentinel for High Availability
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_06_configuration)"/>
+  <rect x="220" y="10" width="130" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="35" text-anchor="middle" font-size="11" font-weight="bold">Master :6379</text>
+  <rect x="60" y="130" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="120" y="155" text-anchor="middle" font-size="11">Replica 1 :6380</text>
+  <rect x="390" y="130" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="450" y="155" text-anchor="middle" font-size="11">Replica 2 :6381</text>
+  <line x1="240" y1="50" x2="140" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_06_configuration)"/>
+  <line x1="330" y1="50" x2="430" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_06_configuration)"/>
+  <rect x="60" y="75" width="90" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="105" y="95" text-anchor="middle" font-size="10">Sentinel 1</text>
+  <rect x="240" y="75" width="90" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="285" y="95" text-anchor="middle" font-size="10">Sentinel 2</text>
+  <rect x="420" y="75" width="90" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="465" y="95" text-anchor="middle" font-size="10">Sentinel 3</text>
+  <text x="285" y="190" text-anchor="middle" font-size="10" fill="#666">Sentinels monitor master and trigger failover (quorum=2)</text>
   <defs>
     <marker id="arrowd9_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -766,14 +773,27 @@ Key concepts:
 ## Redis Cluster for Scaling
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_06_configuration)"/>
+  <rect x="30" y="55" width="120" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="75" text-anchor="middle" font-size="11" font-weight="bold">Master A</text>
+  <text x="90" y="90" text-anchor="middle" font-size="10">Slots 0-5460</text>
+  <rect x="230" y="55" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="290" y="75" text-anchor="middle" font-size="11" font-weight="bold">Master B</text>
+  <text x="290" y="90" text-anchor="middle" font-size="10">Slots 5461-10922</text>
+  <rect x="430" y="55" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="75" text-anchor="middle" font-size="11" font-weight="bold">Master C</text>
+  <text x="495" y="90" text-anchor="middle" font-size="10">Slots 10923-16383</text>
+  <rect x="55" y="135" width="70" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="90" y="155" text-anchor="middle" font-size="10">Replica A</text>
+  <rect x="255" y="135" width="70" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="290" y="155" text-anchor="middle" font-size="10">Replica B</text>
+  <rect x="460" y="135" width="70" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="495" y="155" text-anchor="middle" font-size="10">Replica C</text>
+  <line x1="90" y1="105" x2="90" y2="135" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="290" y1="105" x2="290" y2="135" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="495" y1="105" x2="495" y2="135" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="150" y1="80" x2="230" y2="80" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="350" y1="80" x2="430" y2="80" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="300" y="190" text-anchor="middle" font-size="10" fill="#666">16,384 hash slots distributed across cluster nodes</text>
   <defs>
     <marker id="arrowd10_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
