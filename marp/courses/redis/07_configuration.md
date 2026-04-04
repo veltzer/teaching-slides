@@ -44,19 +44,28 @@ maxmemory-policy allkeys-lru
 ## Redis Configuration Sections
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_06_configuration)"/>
-  <defs>
-    <marker id="arrowd0_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="20" y="20" width="120" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="42" text-anchor="middle" font-size="10" font-weight="bold">Network</text>
+  <text x="80" y="58" text-anchor="middle" font-size="9">bind, port</text>
+  <text x="80" y="72" text-anchor="middle" font-size="9">timeout, TLS</text>
+  <rect x="160" y="20" width="120" height="70" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="220" y="42" text-anchor="middle" font-size="10" font-weight="bold">Memory</text>
+  <text x="220" y="58" text-anchor="middle" font-size="9">maxmemory</text>
+  <text x="220" y="72" text-anchor="middle" font-size="9">eviction policy</text>
+  <rect x="300" y="20" width="120" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="360" y="42" text-anchor="middle" font-size="10" font-weight="bold">Persistence</text>
+  <text x="360" y="58" text-anchor="middle" font-size="9">save, appendonly</text>
+  <text x="360" y="72" text-anchor="middle" font-size="9">fsync policy</text>
+  <rect x="440" y="20" width="140" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="42" text-anchor="middle" font-size="10" font-weight="bold">Security</text>
+  <text x="510" y="58" text-anchor="middle" font-size="9">requirepass, ACL</text>
+  <text x="510" y="72" text-anchor="middle" font-size="9">TLS, rename-cmd</text>
+  <rect x="80" y="110" width="200" height="60" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="180" y="132" text-anchor="middle" font-size="10" font-weight="bold">Replication</text>
+  <text x="180" y="150" text-anchor="middle" font-size="9">replicaof, replica-read-only</text>
+  <rect x="320" y="110" width="200" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="420" y="132" text-anchor="middle" font-size="10" font-weight="bold">Logging/Debug</text>
+  <text x="420" y="150" text-anchor="middle" font-size="9">loglevel, slowlog, latency</text>
 </svg>
 
 ---
@@ -118,19 +127,22 @@ sudo systemctl restart redis
 ## Critical Configuration Parameters
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_configuration)"/>
-  <defs>
-    <marker id="arrowd1_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="30" y="20" width="250" height="70" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="42" text-anchor="middle" font-size="11" font-weight="bold">Critical Parameters</text>
+  <text x="155" y="60" text-anchor="middle" font-size="10">maxmemory, bind, requirepass</text>
+  <text x="155" y="75" text-anchor="middle" font-size="10">maxmemory-policy, protected-mode</text>
+  <rect x="320" y="20" width="250" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="42" text-anchor="middle" font-size="11" font-weight="bold">Runtime Changeable</text>
+  <text x="445" y="60" text-anchor="middle" font-size="10">CONFIG SET maxmemory 2gb</text>
+  <text x="445" y="75" text-anchor="middle" font-size="10">CONFIG SET loglevel debug</text>
+  <rect x="30" y="110" width="250" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="132" text-anchor="middle" font-size="11" font-weight="bold">Restart Required</text>
+  <text x="155" y="150" text-anchor="middle" font-size="10">bind, port, daemonize</text>
+  <text x="155" y="165" text-anchor="middle" font-size="10">cluster-enabled</text>
+  <rect x="320" y="110" width="250" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="132" text-anchor="middle" font-size="11" font-weight="bold">Save to Disk</text>
+  <text x="445" y="150" text-anchor="middle" font-size="10">CONFIG REWRITE</text>
+  <text x="445" y="165" text-anchor="middle" font-size="10">persists runtime changes</text>
 </svg>
 
 ---
@@ -191,19 +203,23 @@ Available policies:
 ## Choosing the Right Eviction Policy
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_06_configuration)"/>
-  <defs>
-    <marker id="arrowd2_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Eviction Policy Decision Tree</text>
+  <rect x="200" y="30" width="200" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="50" text-anchor="middle" font-size="10">Is all data cacheable?</text>
+  <line x1="250" y1="60" x2="120" y2="80" stroke="#333" stroke-width="1"/>
+  <line x1="350" y1="60" x2="480" y2="80" stroke="#333" stroke-width="1"/>
+  <text x="170" y="75" font-size="9">Yes</text>
+  <text x="430" y="75" font-size="9">No (some persistent)</text>
+  <rect x="30" y="82" width="180" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="120" y="102" text-anchor="middle" font-size="10">allkeys-lru / allkeys-lfu</text>
+  <rect x="390" y="82" width="180" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="480" y="102" text-anchor="middle" font-size="10">volatile-lru / volatile-ttl</text>
+  <rect x="30" y="125" width="180" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="120" y="145" text-anchor="middle" font-size="10">Best for pure caching</text>
+  <rect x="390" y="125" width="180" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="480" y="145" text-anchor="middle" font-size="10">Only evicts keys with TTL</text>
+  <rect x="150" y="165" width="300" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10">noeviction: returns errors (safest for data integrity)</text>
 </svg>
 
 ---
@@ -325,19 +341,25 @@ LATENCY DOCTOR
 ## Tuning Redis Performance
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_06_configuration)"/>
-  <defs>
-    <marker id="arrowd3_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Performance Tuning Areas</text>
+  <rect x="20" y="35" width="170" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="55" text-anchor="middle" font-size="10" font-weight="bold">Memory</text>
+  <text x="105" y="72" text-anchor="middle" font-size="9">maxmemory limits</text>
+  <text x="105" y="86" text-anchor="middle" font-size="9">activedefrag, lazyfree</text>
+  <rect x="215" y="35" width="170" height="70" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="55" text-anchor="middle" font-size="10" font-weight="bold">CPU</text>
+  <text x="300" y="72" text-anchor="middle" font-size="9">io-threads (Redis 6+)</text>
+  <text x="300" y="86" text-anchor="middle" font-size="9">avoid KEYS, large O(N)</text>
+  <rect x="410" y="35" width="170" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="55" text-anchor="middle" font-size="10" font-weight="bold">Network</text>
+  <text x="495" y="72" text-anchor="middle" font-size="9">tcp-backlog, keepalive</text>
+  <text x="495" y="86" text-anchor="middle" font-size="9">pipelining, connection pool</text>
+  <rect x="120" y="120" width="170" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="205" y="142" text-anchor="middle" font-size="10" font-weight="bold">Persistence</text>
+  <text x="205" y="160" text-anchor="middle" font-size="9">save intervals, fsync</text>
+  <rect x="315" y="120" width="170" height="60" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="142" text-anchor="middle" font-size="10" font-weight="bold">OS Tuning</text>
+  <text x="400" y="160" text-anchor="middle" font-size="9">overcommit, THP, swappiness</text>
 </svg>
 
 ---
@@ -374,19 +396,26 @@ Apply with: `sudo sysctl -p`
 ## Redis Management Tools
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_06_configuration)"/>
-  <defs>
-    <marker id="arrowd4_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="20" y="25" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">redis-cli</text>
+  <text x="105" y="65" text-anchor="middle" font-size="9">Built-in CLI tool</text>
+  <text x="105" y="79" text-anchor="middle" font-size="9">--stat, --bigkeys</text>
+  <rect x="215" y="25" width="170" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">Redis Insight</text>
+  <text x="300" y="65" text-anchor="middle" font-size="9">GUI management</text>
+  <text x="300" y="79" text-anchor="middle" font-size="9">Visual browser</text>
+  <rect x="410" y="25" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">Monitoring</text>
+  <text x="495" y="65" text-anchor="middle" font-size="9">Grafana + Prometheus</text>
+  <text x="495" y="79" text-anchor="middle" font-size="9">redis_exporter</text>
+  <rect x="120" y="110" width="170" height="65" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="205" y="133" text-anchor="middle" font-size="10" font-weight="bold">redis-benchmark</text>
+  <text x="205" y="150" text-anchor="middle" font-size="9">Performance testing</text>
+  <text x="205" y="164" text-anchor="middle" font-size="9">Throughput/latency</text>
+  <rect x="315" y="110" width="170" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="133" text-anchor="middle" font-size="10" font-weight="bold">redis-check-*</text>
+  <text x="400" y="150" text-anchor="middle" font-size="9">redis-check-rdb</text>
+  <text x="400" y="164" text-anchor="middle" font-size="9">redis-check-aof</text>
 </svg>
 
 ---
@@ -457,19 +486,21 @@ Key expiration and eviction:
     - According to `maxmemory-policy`
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_06_configuration)"/>
-  <defs>
-    <marker id="arrowd5_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="30" y="15" width="250" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="35" text-anchor="middle" font-size="10" font-weight="bold">Explicit Expiration (TTL)</text>
+  <text x="155" y="52" text-anchor="middle" font-size="9">EXPIRE key 3600</text>
+  <text x="155" y="66" text-anchor="middle" font-size="9">SETEX key 60 value</text>
+  <text x="155" y="80" text-anchor="middle" font-size="9">Key auto-deleted after TTL</text>
+  <rect x="320" y="15" width="250" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="35" text-anchor="middle" font-size="10" font-weight="bold">Implicit Eviction</text>
+  <text x="445" y="52" text-anchor="middle" font-size="9">When maxmemory reached</text>
+  <text x="445" y="66" text-anchor="middle" font-size="9">Policy: LRU, LFU, TTL, random</text>
+  <text x="445" y="80" text-anchor="middle" font-size="9">Automatic, based on config</text>
+  <line x1="155" y1="100" x2="155" y2="130" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="445" y1="100" x2="445" y2="130" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="30" y="130" width="540" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="150" text-anchor="middle" font-size="10" font-weight="bold">Lazy expiration + Active expiration (sampling)</text>
+  <text x="300" y="168" text-anchor="middle" font-size="9">Redis checks keys on access (lazy) and periodically samples expired keys (active)</text>
 </svg>
 
 ---
@@ -510,19 +541,30 @@ MEMORY DOCTOR
 Key metrics to monitor:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_06_configuration)"/>
-  <defs>
-    <marker id="arrowd6_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="20" y="20" width="120" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="40" text-anchor="middle" font-size="10" font-weight="bold">Memory</text>
+  <text x="80" y="55" text-anchor="middle" font-size="9">used_memory</text>
+  <text x="80" y="68" text-anchor="middle" font-size="9">fragmentation</text>
+  <text x="80" y="81" text-anchor="middle" font-size="9">evicted_keys</text>
+  <rect x="160" y="20" width="120" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="220" y="40" text-anchor="middle" font-size="10" font-weight="bold">Throughput</text>
+  <text x="220" y="55" text-anchor="middle" font-size="9">ops/second</text>
+  <text x="220" y="68" text-anchor="middle" font-size="9">hit/miss ratio</text>
+  <text x="220" y="81" text-anchor="middle" font-size="9">commands/sec</text>
+  <rect x="300" y="20" width="120" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="360" y="40" text-anchor="middle" font-size="10" font-weight="bold">Latency</text>
+  <text x="360" y="55" text-anchor="middle" font-size="9">avg response</text>
+  <text x="360" y="68" text-anchor="middle" font-size="9">p99 latency</text>
+  <text x="360" y="81" text-anchor="middle" font-size="9">slow log</text>
+  <rect x="440" y="20" width="140" height="75" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="40" text-anchor="middle" font-size="10" font-weight="bold">Connections</text>
+  <text x="510" y="55" text-anchor="middle" font-size="9">connected_clients</text>
+  <text x="510" y="68" text-anchor="middle" font-size="9">blocked_clients</text>
+  <text x="510" y="81" text-anchor="middle" font-size="9">rejected_conns</text>
+  <rect x="20" y="115" width="560" height="65" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" font-weight="bold">Alert Thresholds</text>
+  <text x="300" y="152" text-anchor="middle" font-size="9">Memory > 80% | Hit ratio &lt; 90% | Latency > 5ms | Evictions increasing</text>
+  <text x="300" y="168" text-anchor="middle" font-size="9">Use INFO command sections: server, clients, memory, stats, keyspace</text>
 </svg>
 
 ---
@@ -578,14 +620,21 @@ redis-cli CONFIG SET activedefrag yes
 ## Backup and Recovery
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_06_configuration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_06_configuration)"/>
+  <rect x="30" y="20" width="130" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="42" text-anchor="middle" font-size="10" font-weight="bold">1. BGSAVE</text>
+  <text x="95" y="60" text-anchor="middle" font-size="9">Create snapshot</text>
+  <line x1="165" y1="50" x2="210" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_06_configuration)"/>
+  <rect x="220" y="20" width="130" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="42" text-anchor="middle" font-size="10" font-weight="bold">2. Copy RDB</text>
+  <text x="285" y="60" text-anchor="middle" font-size="9">To backup dir</text>
+  <line x1="355" y1="50" x2="400" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_06_configuration)"/>
+  <rect x="410" y="20" width="160" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="42" text-anchor="middle" font-size="10" font-weight="bold">3. Transfer</text>
+  <text x="490" y="60" text-anchor="middle" font-size="9">Off-site / cloud</text>
+  <rect x="30" y="100" width="540" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="122" text-anchor="middle" font-size="10">Recovery: Stop Redis -> Copy RDB to data dir -> Restart Redis</text>
+  <rect x="30" y="148" width="540" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="170" text-anchor="middle" font-size="10">Always test recovery! Verify with DBSIZE and sample key checks</text>
   <defs>
     <marker id="arrowd7_06_configuration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

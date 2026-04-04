@@ -98,21 +98,38 @@ A distributed, RESTful search and analytics engine capable of:
 
 ## Basic Architecture Concepts
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="20" width="100" height="40" fill="#2196F3" rx="5"/>
-  <text x="200" y="45" text-anchor="middle" fill="white">Cluster</text>
-  <rect x="50" y="100" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="90" y="125" text-anchor="middle" fill="white">Node 1</text>
-  <rect x="160" y="100" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="200" y="125" text-anchor="middle" fill="white">Node 2</text>
-  <rect x="270" y="100" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="310" y="125" text-anchor="middle" fill="white">Node 3</text>
-  <rect x="50" y="180" width="60" height="30" fill="#FF9800" rx="3"/>
-  <text x="80" y="200" text-anchor="middle" fill="white" font-size="12">Shard</text>
-  <rect x="120" y="180" width="60" height="30" fill="#FF9800" rx="3"/>
-  <text x="150" y="200" text-anchor="middle" fill="white" font-size="12">Shard</text>
-  <rect x="190" y="180" width="60" height="30" fill="#FF9800" rx="3"/>
-  <text x="220" y="200" text-anchor="middle" fill="white" font-size="12">Shard</text>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Elasticsearch Cluster Architecture</text>
+  <rect x="20" y="25" width="560" height="170" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="300" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Cluster: my-cluster</text>
+  <rect x="40" y="52" width="155" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="3"/>
+  <text x="117" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Data Node 1 (Master)</text>
+  <rect x="50" y="75" width="60" height="25" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="2"/>
+  <text x="80" y="92" text-anchor="middle" font-size="9" fill="#e65100">P0</text>
+  <rect x="120" y="75" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="150" y="92" text-anchor="middle" font-size="9" fill="#7b1fa2">R1</text>
+  <rect x="50" y="108" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="80" y="125" text-anchor="middle" font-size="9" fill="#7b1fa2">R2</text>
+  <rect x="222" y="52" width="155" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="3"/>
+  <text x="299" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Data Node 2</text>
+  <rect x="232" y="75" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="262" y="92" text-anchor="middle" font-size="9" fill="#7b1fa2">R0</text>
+  <rect x="302" y="75" width="60" height="25" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="2"/>
+  <text x="332" y="92" text-anchor="middle" font-size="9" fill="#e65100">P1</text>
+  <rect x="232" y="108" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="262" y="125" text-anchor="middle" font-size="9" fill="#7b1fa2">R2</text>
+  <rect x="404" y="52" width="155" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="3"/>
+  <text x="481" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Data Node 3</text>
+  <rect x="414" y="75" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="444" y="92" text-anchor="middle" font-size="9" fill="#7b1fa2">R0</text>
+  <rect x="484" y="75" width="60" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
+  <text x="514" y="92" text-anchor="middle" font-size="9" fill="#7b1fa2">R1</text>
+  <rect x="414" y="108" width="60" height="25" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="2"/>
+  <text x="444" y="125" text-anchor="middle" font-size="9" fill="#e65100">P2</text>
+  <text x="130" y="168" text-anchor="middle" font-size="9" fill="#e65100">P = Primary shard</text>
+  <text x="300" y="168" text-anchor="middle" font-size="9" fill="#7b1fa2">R = Replica shard</text>
+  <text x="470" y="168" text-anchor="middle" font-size="9" fill="#666">3 shards x 2 replicas</text>
+  <text x="300" y="188" text-anchor="middle" font-size="10" fill="#1565c0">Index "products" distributed across nodes for scalability and fault tolerance</text>
 </svg>
 
 ---

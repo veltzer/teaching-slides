@@ -17,21 +17,23 @@
 
 ## Information Tools Overview
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Information Tools</text>
+  <rect x="20" y="30" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="80" y="50" text-anchor="middle" font-size="11" font-weight="bold">/proc/net</text>
+  <text x="80" y="68" text-anchor="middle" font-size="10">kernel stats</text>
+  <rect x="160" y="30" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="50" text-anchor="middle" font-size="11" font-weight="bold">netstat / ss</text>
+  <text x="220" y="68" text-anchor="middle" font-size="10">connections</text>
+  <rect x="300" y="30" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="50" text-anchor="middle" font-size="11" font-weight="bold">ip addr/link</text>
+  <text x="360" y="68" text-anchor="middle" font-size="10">interface info</text>
+  <rect x="440" y="30" width="130" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="505" y="50" text-anchor="middle" font-size="11" font-weight="bold">/sys/class/net</text>
+  <text x="505" y="68" text-anchor="middle" font-size="10">device attrs</text>
+  <rect x="80" y="100" width="440" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="122" text-anchor="middle" font-size="11">Read-only tools: safe for production monitoring</text>
+  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#666">Use these to gather data before making configuration changes</text>
 </svg>
 
 ---
@@ -73,19 +75,35 @@ tcp        0      0 0.0.0.0:22    0.0.0.0:*       LISTEN
 ## `ip` Command Suite
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_network_tools)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_network_tools)"/>
-  <defs>
-    <marker id="arrowd1_03_network_tools" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">ip Command Hierarchy</text>
+  <rect x="225" y="25" width="150" height="30" fill="#fff3e0" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="300" y="45" text-anchor="middle" font-size="12" font-weight="bold">ip</text>
+  <rect x="20" y="75" width="90" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="65" y="95" text-anchor="middle" font-size="10">ip addr</text>
+  <rect x="120" y="75" width="90" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="165" y="95" text-anchor="middle" font-size="10">ip link</text>
+  <rect x="220" y="75" width="90" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="265" y="95" text-anchor="middle" font-size="10">ip route</text>
+  <rect x="320" y="75" width="90" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="365" y="95" text-anchor="middle" font-size="10">ip neigh</text>
+  <rect x="420" y="75" width="90" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="465" y="95" text-anchor="middle" font-size="10">ip netns</text>
+  <line x1="300" y1="55" x2="65" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="55" x2="165" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="55" x2="265" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="55" x2="365" y2="75" stroke="#333" stroke-width="1"/>
+  <line x1="300" y1="55" x2="465" y2="75" stroke="#333" stroke-width="1"/>
+  <text x="65" y="122" text-anchor="middle" font-size="9" fill="#666">show/add/del</text>
+  <text x="65" y="133" text-anchor="middle" font-size="9" fill="#666">IP addresses</text>
+  <text x="165" y="122" text-anchor="middle" font-size="9" fill="#666">set up/down</text>
+  <text x="165" y="133" text-anchor="middle" font-size="9" fill="#666">MTU, flags</text>
+  <text x="265" y="122" text-anchor="middle" font-size="9" fill="#666">show/add/del</text>
+  <text x="265" y="133" text-anchor="middle" font-size="9" fill="#666">routing table</text>
+  <text x="365" y="122" text-anchor="middle" font-size="9" fill="#666">ARP/NDP</text>
+  <text x="365" y="133" text-anchor="middle" font-size="9" fill="#666">neighbors</text>
+  <text x="465" y="122" text-anchor="middle" font-size="9" fill="#666">network</text>
+  <text x="465" y="133" text-anchor="middle" font-size="9" fill="#666">namespaces</text>
+  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#666">Replaces: ifconfig, route, arp, netstat</text>
 </svg>
 
 ---
@@ -178,21 +196,23 @@ arp -d 192.168.1.100
 
 ## Configuration Tools Overview
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Configuration Tools</text>
+  <rect x="20" y="30" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="80" y="48" text-anchor="middle" font-size="11" font-weight="bold">ifconfig</text>
+  <text x="80" y="66" text-anchor="middle" font-size="10">legacy config</text>
+  <rect x="160" y="30" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="48" text-anchor="middle" font-size="11" font-weight="bold">ip link/addr</text>
+  <text x="220" y="66" text-anchor="middle" font-size="10">modern config</text>
+  <rect x="300" y="30" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="48" text-anchor="middle" font-size="11" font-weight="bold">route / ip route</text>
+  <text x="360" y="66" text-anchor="middle" font-size="10">routing tables</text>
+  <rect x="440" y="30" width="130" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="505" y="48" text-anchor="middle" font-size="11" font-weight="bold">iwconfig</text>
+  <text x="505" y="66" text-anchor="middle" font-size="10">wireless setup</text>
+  <rect x="80" y="100" width="440" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="122" text-anchor="middle" font-size="11">Write operations: require root privileges, affect live traffic</text>
+  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#666">Prefer ip (iproute2) over legacy net-tools (ifconfig, route, arp)</text>
 </svg>
 
 ---
@@ -261,19 +281,32 @@ iwconfig wlan0 key 1234567890
 ## Performance Tools
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_03_network_tools)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_03_network_tools)"/>
   <defs>
     <marker id="arrowd3_03_network_tools" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Performance Testing Tools</text>
+  <rect x="20" y="30" width="120" height="60" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="80" y="50" text-anchor="middle" font-size="11" font-weight="bold">netperf</text>
+  <text x="80" y="65" text-anchor="middle" font-size="10">TCP_STREAM</text>
+  <text x="80" y="78" text-anchor="middle" font-size="10">UDP_STREAM</text>
+  <rect x="160" y="30" width="120" height="60" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="50" text-anchor="middle" font-size="11" font-weight="bold">iperf3</text>
+  <text x="220" y="65" text-anchor="middle" font-size="10">bandwidth</text>
+  <text x="220" y="78" text-anchor="middle" font-size="10">bidirectional</text>
+  <rect x="300" y="30" width="120" height="60" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="50" text-anchor="middle" font-size="11" font-weight="bold">nstat</text>
+  <text x="360" y="65" text-anchor="middle" font-size="10">kernel stats</text>
+  <text x="360" y="78" text-anchor="middle" font-size="10">SNMP counters</text>
+  <rect x="440" y="30" width="130" height="60" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="505" y="50" text-anchor="middle" font-size="11" font-weight="bold">jnettop</text>
+  <text x="505" y="65" text-anchor="middle" font-size="10">live traffic</text>
+  <text x="505" y="78" text-anchor="middle" font-size="10">per-host stats</text>
+  <rect x="80" y="110" width="440" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="128" text-anchor="middle" font-size="10">Measure: throughput, latency, packet loss, jitter</text>
+  <text x="300" y="142" text-anchor="middle" font-size="10">Compare: baseline vs. current performance</text>
+  <text x="300" y="170" text-anchor="middle" font-size="10" fill="#666">Always establish baselines before troubleshooting</text>
 </svg>
 
 ---
@@ -309,21 +342,32 @@ rtacct       # Show routing statistics
 
 ## Tapping Tools Overview
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowtap_03" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Tapping / Capture Tools</text>
+  <rect x="20" y="30" width="120" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="80" y="48" text-anchor="middle" font-size="11" font-weight="bold">tcpdump</text>
+  <text x="80" y="63" text-anchor="middle" font-size="10">CLI capture</text>
+  <text x="80" y="76" text-anchor="middle" font-size="10">BPF filters</text>
+  <rect x="160" y="30" width="120" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="48" text-anchor="middle" font-size="11" font-weight="bold">Wireshark</text>
+  <text x="220" y="63" text-anchor="middle" font-size="10">GUI analysis</text>
+  <text x="220" y="76" text-anchor="middle" font-size="10">protocol decode</text>
+  <rect x="300" y="30" width="120" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="48" text-anchor="middle" font-size="11" font-weight="bold">netcat (nc)</text>
+  <text x="360" y="63" text-anchor="middle" font-size="10">raw connections</text>
+  <text x="360" y="76" text-anchor="middle" font-size="10">port scanning</text>
+  <rect x="440" y="30" width="130" height="55" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="505" y="48" text-anchor="middle" font-size="11" font-weight="bold">tshark</text>
+  <text x="505" y="63" text-anchor="middle" font-size="10">CLI Wireshark</text>
+  <text x="505" y="76" text-anchor="middle" font-size="10">scriptable</text>
+  <rect x="80" y="105" width="440" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="125" text-anchor="middle" font-size="11">Capture point: NIC --&gt; libpcap/AF_PACKET --&gt; user tool</text>
+  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#666">tcpdump -i eth0 -w capture.pcap / wireshark capture.pcap</text>
 </svg>
 
 ---
@@ -407,19 +451,34 @@ tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 \
 ## Debugging Tools
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_03_network_tools)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_03_network_tools)"/>
   <defs>
     <marker id="arrowd5_03_network_tools" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Debugging Workflow</text>
+  <rect x="20" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="45" text-anchor="middle" font-size="10" font-weight="bold">ping</text>
+  <text x="70" y="60" text-anchor="middle" font-size="9">connectivity</text>
+  <rect x="140" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="190" y="45" text-anchor="middle" font-size="10" font-weight="bold">traceroute</text>
+  <text x="190" y="60" text-anchor="middle" font-size="9">path analysis</text>
+  <rect x="260" y="30" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="310" y="45" text-anchor="middle" font-size="10" font-weight="bold">nmap</text>
+  <text x="310" y="60" text-anchor="middle" font-size="9">port scanning</text>
+  <rect x="380" y="30" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="430" y="45" text-anchor="middle" font-size="10" font-weight="bold">tcpdump</text>
+  <text x="430" y="60" text-anchor="middle" font-size="9">packet capture</text>
+  <rect x="500" y="30" width="80" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="540" y="45" text-anchor="middle" font-size="10" font-weight="bold">ss</text>
+  <text x="540" y="60" text-anchor="middle" font-size="9">socket info</text>
+  <line x1="120" y1="50" x2="140" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_03_network_tools)"/>
+  <line x1="240" y1="50" x2="260" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_03_network_tools)"/>
+  <line x1="360" y1="50" x2="380" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_03_network_tools)"/>
+  <line x1="480" y1="50" x2="500" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_03_network_tools)"/>
+  <rect x="60" y="90" width="480" height="35" fill="#f9f9f9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="112" text-anchor="middle" font-size="11">L3 reachable? --&gt; Route OK? --&gt; Port open? --&gt; Traffic OK? --&gt; Sockets OK?</text>
+  <text x="300" y="145" text-anchor="middle" font-size="10" fill="#666">Systematic approach: test layer by layer, bottom to top</text>
 </svg>
 
 ---

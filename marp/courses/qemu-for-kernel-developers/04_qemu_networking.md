@@ -19,19 +19,33 @@ Importance of Networking in Kernel Development
 QEMU Network Models Overview
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_qemu_networking)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_qemu_networking)"/>
-  <defs>
-    <marker id="arrowd0_03_qemu_networking" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">QEMU Network Models</text>
+  <rect x="10" y="30" width="130" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="50" text-anchor="middle" font-size="11" font-weight="bold">User (SLIRP)</text>
+  <text x="75" y="65" text-anchor="middle" font-size="10">Built-in NAT</text>
+  <text x="75" y="80" text-anchor="middle" font-size="10">No root needed</text>
+  <text x="75" y="95" text-anchor="middle" font-size="9" fill="#666">Limited perf</text>
+  <rect x="160" y="30" width="130" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="50" text-anchor="middle" font-size="11" font-weight="bold">TAP</text>
+  <text x="225" y="65" text-anchor="middle" font-size="10">L2 access</text>
+  <text x="225" y="80" text-anchor="middle" font-size="10">Kernel tap device</text>
+  <text x="225" y="95" text-anchor="middle" font-size="9" fill="#666">Root required</text>
+  <rect x="310" y="30" width="130" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="375" y="50" text-anchor="middle" font-size="11" font-weight="bold">Bridge</text>
+  <text x="375" y="65" text-anchor="middle" font-size="10">Full LAN access</text>
+  <text x="375" y="80" text-anchor="middle" font-size="10">Host bridge + tap</text>
+  <text x="375" y="95" text-anchor="middle" font-size="9" fill="#666">Most flexible</text>
+  <rect x="460" y="30" width="130" height="75" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="525" y="50" text-anchor="middle" font-size="11" font-weight="bold">VDE</text>
+  <text x="525" y="65" text-anchor="middle" font-size="10">Virtual switch</text>
+  <text x="525" y="80" text-anchor="middle" font-size="10">Multi-VM setups</text>
+  <text x="525" y="95" text-anchor="middle" font-size="9" fill="#666">User-space</text>
+  <line x1="75" y1="115" x2="75" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="225" y1="115" x2="225" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="375" y1="115" x2="375" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="525" y1="115" x2="525" y2="140" stroke="#333" stroke-width="1.5"/>
+  <rect x="10" y="140" width="580" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="160" text-anchor="middle" font-size="11">Guest Virtual NIC: e1000 / rtl8139 / virtio-net</text>
 </svg>
 
 ---
@@ -94,14 +108,28 @@ QEMU Network Configuration Syntax
 Setting Up a Basic Network
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">TAP Networking Setup</text>
+  <rect x="30" y="25" width="160" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="45" text-anchor="middle" font-size="11" font-weight="bold">Guest VM</text>
+  <rect x="40" y="55" width="60" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="72" text-anchor="middle" font-size="10">eth0</text>
+  <text x="70" y="84" text-anchor="middle" font-size="9">virtio-net</text>
+  <rect x="120" y="55" width="60" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="72" text-anchor="middle" font-size="10">IP:</text>
+  <text x="150" y="84" text-anchor="middle" font-size="9">192.168.1.10</text>
+  <rect x="220" y="40" width="80" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="260" y="60" text-anchor="middle" font-size="11" font-weight="bold">tap0</text>
+  <text x="260" y="77" text-anchor="middle" font-size="10">Kernel TAP</text>
+  <rect x="330" y="40" width="90" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="375" y="60" text-anchor="middle" font-size="11" font-weight="bold">br0</text>
+  <text x="375" y="77" text-anchor="middle" font-size="10">Host Bridge</text>
+  <rect x="450" y="40" width="100" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="60" text-anchor="middle" font-size="11" font-weight="bold">eth0 (Host)</text>
+  <text x="500" y="77" text-anchor="middle" font-size="10">Physical NIC</text>
+  <line x1="190" y1="65" x2="220" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <line x1="300" y1="65" x2="330" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <line x1="420" y1="65" x2="450" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <text x="300" y="120" text-anchor="middle" font-size="10" fill="#555">-netdev tap,id=net0,ifname=tap0 -device virtio-net,netdev=net0</text>
   <defs>
     <marker id="arrowd1_03_qemu_networking" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

@@ -114,14 +114,40 @@ That's essentially it - simplicity is the strength
 
 ## Key-Value: Distribution Strategy
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="125" r="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
-  <circle cx="300" cy="125" r="80" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <circle cx="450" cy="125" r="80" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
-  <text x="150" y="125" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="125" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="450" y="125" text-anchor="middle" font-size="12">Node 3</text>
-  <text x="300" y="50" text-anchor="middle" font-size="14" font-weight="bold">Consistent Hashing Ring</text>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="13" font-weight="bold">Key-Value Distribution via Consistent Hashing</text>
+  <rect x="30" y="30" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="80" y="47" text-anchor="middle" font-size="10" font-weight="bold">Hash(key)</text>
+  <text x="80" y="62" text-anchor="middle" font-size="9" fill="#666">0 - 2^32</text>
+  <line x1="130" y1="50" x2="160" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowkv)"/>
+  <rect x="160" y="30" width="100" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="3"/>
+  <text x="210" y="47" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Partition A</text>
+  <text x="210" y="62" text-anchor="middle" font-size="9" fill="#666">Keys 0-99</text>
+  <rect x="280" y="30" width="100" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="3"/>
+  <text x="330" y="47" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">Partition B</text>
+  <text x="330" y="62" text-anchor="middle" font-size="9" fill="#666">Keys 100-199</text>
+  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="3"/>
+  <text x="450" y="47" text-anchor="middle" font-size="10" font-weight="bold" fill="#7b1fa2">Partition C</text>
+  <text x="450" y="62" text-anchor="middle" font-size="9" fill="#666">Keys 200-299</text>
+  <rect x="520" y="30" width="60" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="3"/>
+  <text x="550" y="55" text-anchor="middle" font-size="9">...</text>
+  <rect x="160" y="90" width="100" height="35" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="210" y="112" text-anchor="middle" font-size="10">Server 1</text>
+  <rect x="280" y="90" width="100" height="35" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="330" y="112" text-anchor="middle" font-size="10">Server 2</text>
+  <rect x="400" y="90" width="100" height="35" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="3"/>
+  <text x="450" y="112" text-anchor="middle" font-size="10">Server 3</text>
+  <line x1="210" y1="70" x2="210" y2="88" stroke="#2e7d32" stroke-width="1.5"/>
+  <line x1="330" y1="70" x2="330" y2="88" stroke="#e65100" stroke-width="1.5"/>
+  <line x1="450" y1="70" x2="450" y2="88" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="300" y="150" text-anchor="middle" font-size="10" fill="#666">Adding/removing a server only remaps nearby keys</text>
+  <rect x="120" y="160" width="360" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10" fill="#1565c0">Minimal redistribution = high availability during scaling</text>
+  <defs>
+    <marker id="arrowkv" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
 </svg>
 
 ---
@@ -454,14 +480,26 @@ Control consistency vs performance:
 ## Quorum Consistency
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="30" text-anchor="middle" font-size="14" font-weight="bold">W + R > N = Strong Consistency</text>
-  <rect x="100" y="60" width="80" height="80" fill="#ff6b6b" opacity="0.5"/>
-  <rect x="260" y="60" width="80" height="80" fill="#51cf66" opacity="0.5"/>
-  <rect x="420" y="60" width="80" height="80" fill="#4c9aff" opacity="0.5"/>
-  <text x="140" y="100" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="100" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="460" y="100" text-anchor="middle" font-size="12">Node 3</text>
-  <text x="300" y="170" text-anchor="middle" font-size="12">W=2, R=2, N=3</text>
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold">Quorum: W + R > N = Strong Consistency</text>
+  <rect x="40" y="35" width="150" height="70" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="3"/>
+  <text x="115" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Write Quorum (W=2)</text>
+  <text x="115" y="72" text-anchor="middle" font-size="10" fill="#2e7d32">Replica A: Written</text>
+  <text x="115" y="87" text-anchor="middle" font-size="10" fill="#2e7d32">Replica B: Written</text>
+  <text x="115" y="100" text-anchor="middle" font-size="10" fill="#999">Replica C: Pending</text>
+  <rect x="225" y="35" width="150" height="70" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="300" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Read Quorum (R=2)</text>
+  <text x="300" y="72" text-anchor="middle" font-size="10" fill="#1565c0">Replica A: v2</text>
+  <text x="300" y="87" text-anchor="middle" font-size="10" fill="#1565c0">Replica C: v1 (stale)</text>
+  <text x="300" y="100" text-anchor="middle" font-size="10" fill="#1565c0">Pick latest: v2</text>
+  <rect x="410" y="35" width="170" height="70" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="3"/>
+  <text x="495" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">Overlap Guarantee</text>
+  <text x="495" y="72" text-anchor="middle" font-size="10">W + R = 2 + 2 = 4</text>
+  <text x="495" y="87" text-anchor="middle" font-size="10">N = 3 replicas</text>
+  <text x="495" y="100" text-anchor="middle" font-size="10" fill="#2e7d32">4 > 3: Overlap exists</text>
+  <rect x="100" y="120" width="400" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="3"/>
+  <text x="300" y="140" text-anchor="middle" font-size="10" fill="#7b1fa2">At least one node in Read set saw the latest Write = consistency guaranteed</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">Tuning W and R: higher W+R = stronger consistency, lower = faster but weaker</text>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#666">Common configs: W=1,R=N (fast writes) | W=N,R=1 (fast reads) | W=R=majority (balanced)</text>
 </svg>
 
 ---

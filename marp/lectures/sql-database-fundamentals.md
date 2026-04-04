@@ -431,17 +431,38 @@ Modern approaches to distributed SQL:
 
 ## Two-Phase Commit (2PC)
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="30" width="100" height="40" fill="#ff6b6b" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="120" width="80" height="40" fill="#4c9aff" stroke="#333" stroke-width="2"/>
-  <rect x="260" y="120" width="80" height="40" fill="#4c9aff" stroke="#333" stroke-width="2"/>
-  <rect x="420" y="120" width="80" height="40" fill="#4c9aff" stroke="#333" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-size="11">Coordinator</text>
-  <text x="140" y="145" text-anchor="middle" font-size="11">Node 1</text>
-  <text x="300" y="145" text-anchor="middle" font-size="11">Node 2</text>
-  <text x="460" y="145" text-anchor="middle" font-size="11">Node 3</text>
-  <text x="200" y="200" text-anchor="middle" font-size="11">Phase 1: Prepare</text>
-  <text x="400" y="200" text-anchor="middle" font-size="11">Phase 2: Commit</text>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Two-Phase Commit Protocol (2PC)</text>
+  <rect x="230" y="25" width="140" height="35" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="3"/>
+  <text x="300" y="47" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Coordinator</text>
+  <rect x="30" y="90" width="120" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="90" y="112" text-anchor="middle" font-size="10" fill="#1565c0">Participant A</text>
+  <rect x="240" y="90" width="120" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="300" y="112" text-anchor="middle" font-size="10" fill="#1565c0">Participant B</text>
+  <rect x="450" y="90" width="120" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="510" y="112" text-anchor="middle" font-size="10" fill="#1565c0">Participant C</text>
+  <line x1="270" y1="60" x2="90" y2="88" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow2pc)"/>
+  <line x1="300" y1="60" x2="300" y2="88" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow2pc)"/>
+  <line x1="330" y1="60" x2="510" y2="88" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow2pc)"/>
+  <text x="150" y="75" text-anchor="middle" font-size="9" fill="#e65100">PREPARE?</text>
+  <text x="450" y="75" text-anchor="middle" font-size="9" fill="#e65100">PREPARE?</text>
+  <rect x="30" y="135" width="170" height="55" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="115" y="152" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Phase 1: Prepare</text>
+  <text x="115" y="167" text-anchor="middle" font-size="9">Each node votes YES/NO</text>
+  <text x="115" y="182" text-anchor="middle" font-size="9">Locks resources, writes log</text>
+  <rect x="230" y="135" width="170" height="55" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="315" y="152" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">Phase 2: Commit</text>
+  <text x="315" y="167" text-anchor="middle" font-size="9">All YES: COMMIT</text>
+  <text x="315" y="182" text-anchor="middle" font-size="9">Any NO: ROLLBACK all</text>
+  <rect x="430" y="135" width="160" height="55" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="3"/>
+  <text x="510" y="152" text-anchor="middle" font-size="10" font-weight="bold" fill="#7b1fa2">Trade-off</text>
+  <text x="510" y="167" text-anchor="middle" font-size="9">Strong consistency</text>
+  <text x="510" y="182" text-anchor="middle" font-size="9">But: blocking protocol</text>
+  <defs>
+    <marker id="arrow2pc" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#e65100"/>
+    </marker>
+  </defs>
 </svg>
 
 ---
@@ -459,14 +480,32 @@ Trade availability for consistency
 ## Consensus Protocols
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="100" r="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <circle cx="300" cy="100" r="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <circle cx="450" cy="100" r="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <text x="150" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="450" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <text x="300" y="160" text-anchor="middle" font-size="12">Majority (2/3) must agree</text>
-  <text x="300" y="180" text-anchor="middle" font-size="11">Raft / Paxos</text>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Raft Consensus: Leader-Based Replication</text>
+  <rect x="210" y="25" width="100" height="40" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="20"/>
+  <text x="260" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Leader</text>
+  <text x="260" y="57" text-anchor="middle" font-size="9">Handles writes</text>
+  <rect x="50" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="100" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower A</text>
+  <text x="100" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <rect x="210" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="260" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower B</text>
+  <text x="260" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <rect x="370" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="420" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower C</text>
+  <text x="420" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <line x1="230" y1="65" x2="120" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <line x1="260" y1="65" x2="260" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <line x1="290" y1="65" x2="400" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <text x="170" y="78" font-size="9" fill="#2e7d32">AppendEntries</text>
+  <rect x="100" y="145" width="320" height="20" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="260" y="159" text-anchor="middle" font-size="10" fill="#2e7d32">Majority ACK (2/3) required to commit entry</text>
+  <rect x="100" y="170" width="320" height="20" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="260" y="184" text-anchor="middle" font-size="10" fill="#e65100">Leader fails? Election selects new leader with latest log</text>
+  <defs>
+    <marker id="arrowraft" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
 </svg>
 
 ---

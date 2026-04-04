@@ -21,19 +21,25 @@
 Strings are the most basic Redis data type:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd0_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Redis String: Key-Value Storage</text>
+  <rect x="30" y="50" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="75" text-anchor="middle" font-size="11" font-weight="bold">Key</text>
+  <rect x="160" y="50" width="160" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="240" y="75" text-anchor="middle" font-size="11">Value (up to 512MB)</text>
+  <rect x="30" y="105" width="120" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="127" text-anchor="middle" font-size="10">"user:name"</text>
+  <rect x="160" y="105" width="160" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="240" y="127" text-anchor="middle" font-size="10">"Alice"</text>
+  <rect x="30" y="150" width="120" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="172" text-anchor="middle" font-size="10">"counter"</text>
+  <rect x="160" y="150" width="160" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="240" y="172" text-anchor="middle" font-size="10">42 (integer)</text>
+  <rect x="370" y="70" width="200" height="110" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="470" y="95" text-anchor="middle" font-size="11" font-weight="bold">Operations</text>
+  <text x="470" y="115" text-anchor="middle" font-size="10">SET / GET</text>
+  <text x="470" y="133" text-anchor="middle" font-size="10">INCR / DECR</text>
+  <text x="470" y="151" text-anchor="middle" font-size="10">MSET / MGET</text>
+  <text x="470" y="169" text-anchor="middle" font-size="10">APPEND / STRLEN</text>
 </svg>
 
 Basic operations:
@@ -127,18 +133,36 @@ Use cases:
 Lists are linked lists of string values:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_01_data_structures)"/>
+  <text x="300" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Redis List: Doubly-Linked List</text>
+  <text x="35" y="80" text-anchor="middle" font-size="10" fill="#333">HEAD</text>
+  <text x="565" y="80" text-anchor="middle" font-size="10" fill="#333">TAIL</text>
+  <rect x="60" y="65" width="90" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="83" text-anchor="middle" font-size="10">"task1"</text>
+  <text x="105" y="100" text-anchor="middle" font-size="9" fill="#666">index 0</text>
+  <rect x="195" y="65" width="90" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="240" y="83" text-anchor="middle" font-size="10">"task2"</text>
+  <text x="240" y="100" text-anchor="middle" font-size="9" fill="#666">index 1</text>
+  <rect x="330" y="65" width="90" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="375" y="83" text-anchor="middle" font-size="10">"task3"</text>
+  <text x="375" y="100" text-anchor="middle" font-size="9" fill="#666">index 2</text>
+  <rect x="465" y="65" width="90" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="83" text-anchor="middle" font-size="10">"task4"</text>
+  <text x="510" y="100" text-anchor="middle" font-size="9" fill="#666">index 3</text>
+  <line x1="150" y1="87" x2="193" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <line x1="285" y1="87" x2="328" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <line x1="420" y1="87" x2="463" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <line x1="193" y1="93" x2="150" y2="93" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <line x1="328" y1="93" x2="285" y2="93" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <line x1="463" y1="93" x2="420" y2="93" stroke="#333" stroke-width="2" marker-end="url(#arrowd2)"/>
+  <text x="105" y="145" text-anchor="middle" font-size="10" fill="#1565c0">LPUSH</text>
+  <path d="M105,148 L105,165 L70,165" stroke="#1565c0" stroke-width="1.5" fill="none" marker-end="url(#arrowblue2)"/>
+  <text x="510" y="145" text-anchor="middle" font-size="10" fill="#4a148c">RPUSH</text>
+  <path d="M510,148 L510,165 L545,165" stroke="#4a148c" stroke-width="1.5" fill="none" marker-end="url(#arrowpurp2)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#333">LPOP / RPOP remove from head / tail</text>
   <defs>
-    <marker id="arrowd2_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
+    <marker id="arrowd2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
+    <marker id="arrowblue2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/></marker>
+    <marker id="arrowpurp2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4a148c"/></marker>
   </defs>
 </svg>
 
@@ -213,19 +237,24 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 Sets are unordered collections of unique strings:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd4_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Redis Set: Unordered Unique Members</text>
+  <text x="120" y="45" text-anchor="middle" font-size="11" fill="#333">tags:article:42</text>
+  <ellipse cx="120" cy="120" rx="105" ry="70" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <text x="80" y="85" text-anchor="middle" font-size="10">"redis"</text>
+  <text x="140" y="100" text-anchor="middle" font-size="10">"nosql"</text>
+  <text x="95" y="120" text-anchor="middle" font-size="10">"database"</text>
+  <text x="150" y="140" text-anchor="middle" font-size="10">"cache"</text>
+  <text x="105" y="155" text-anchor="middle" font-size="10">"fast"</text>
+  <rect x="280" y="60" width="130" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="345" y="80" text-anchor="middle" font-size="10">SADD "python"</text>
+  <rect x="280" y="100" width="130" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="345" y="120" text-anchor="middle" font-size="10">SREM "cache"</text>
+  <rect x="280" y="140" width="130" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="345" y="160" text-anchor="middle" font-size="10">SISMEMBER "redis"</text>
+  <text x="460" y="80" text-anchor="middle" font-size="10" fill="#2e7d32">+ added</text>
+  <text x="460" y="120" text-anchor="middle" font-size="10" fill="#e65100">- removed</text>
+  <text x="460" y="160" text-anchor="middle" font-size="10" fill="#4a148c">= true</text>
+  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#666">No duplicates allowed; O(1) membership check</text>
 </svg>
 
 Basic operations:
@@ -260,19 +289,24 @@ SRANDMEMBER key [count]        # Get random members
 ## Set Operations Visualization
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd5_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Set Operations: SINTER, SUNION, SDIFF</text>
+  <ellipse cx="180" cy="115" rx="100" ry="70" fill="#e3f2fd" stroke="#333" stroke-width="2" fill-opacity="0.7"/>
+  <ellipse cx="340" cy="115" rx="100" ry="70" fill="#f3e5f5" stroke="#333" stroke-width="2" fill-opacity="0.7"/>
+  <text x="180" y="50" text-anchor="middle" font-size="11" font-weight="bold">Set A</text>
+  <text x="340" y="50" text-anchor="middle" font-size="11" font-weight="bold">Set B</text>
+  <text x="130" y="105" text-anchor="middle" font-size="10">"alice"</text>
+  <text x="130" y="125" text-anchor="middle" font-size="10">"bob"</text>
+  <text x="260" y="105" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">"carol"</text>
+  <text x="260" y="125" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">"dave"</text>
+  <text x="385" y="105" text-anchor="middle" font-size="10">"eve"</text>
+  <text x="385" y="125" text-anchor="middle" font-size="10">"frank"</text>
+  <rect x="460" y="55" width="130" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="525" y="74" text-anchor="middle" font-size="10">SINTER: carol, dave</text>
+  <rect x="460" y="95" width="130" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="525" y="114" text-anchor="middle" font-size="10">SDIFF A B: alice, bob</text>
+  <rect x="460" y="135" width="130" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="525" y="154" text-anchor="middle" font-size="10">SUNION: all six</text>
+  <text x="260" y="195" text-anchor="middle" font-size="10" fill="#c62828">Intersection (shared members)</text>
 </svg>
 
 ---
@@ -322,19 +356,28 @@ SRANDMEMBER key [count]        # Get random members
 Sorted sets are sets with scores (ordering values):
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd7_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Redis Sorted Set: Members Ordered by Score</text>
+  <text x="300" y="45" text-anchor="middle" font-size="11" fill="#333">leaderboard:game1</text>
+  <rect x="30" y="60" width="100" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="80" text-anchor="middle" font-size="10" font-weight="bold">score: 150</text>
+  <text x="80" y="100" text-anchor="middle" font-size="10">"alice"</text>
+  <rect x="155" y="60" width="100" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="205" y="80" text-anchor="middle" font-size="10" font-weight="bold">score: 320</text>
+  <text x="205" y="100" text-anchor="middle" font-size="10">"bob"</text>
+  <rect x="280" y="60" width="100" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="330" y="80" text-anchor="middle" font-size="10" font-weight="bold">score: 475</text>
+  <text x="330" y="100" text-anchor="middle" font-size="10">"carol"</text>
+  <rect x="405" y="60" width="100" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="455" y="80" text-anchor="middle" font-size="10" font-weight="bold">score: 890</text>
+  <text x="455" y="100" text-anchor="middle" font-size="10">"dave"</text>
+  <line x1="30" y1="130" x2="505" y2="130" stroke="#333" stroke-width="1"/>
+  <text x="30" y="145" font-size="10" fill="#666">low score</text>
+  <text x="505" y="145" text-anchor="end" font-size="10" fill="#666">high score</text>
+  <text x="80" y="170" text-anchor="middle" font-size="10" fill="#2e7d32">rank 0</text>
+  <text x="205" y="170" text-anchor="middle" font-size="10" fill="#1565c0">rank 1</text>
+  <text x="330" y="170" text-anchor="middle" font-size="10" fill="#4a148c">rank 2</text>
+  <text x="455" y="170" text-anchor="middle" font-size="10" fill="#e65100">rank 3</text>
+  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#666">ZRANGE returns by rank; ZRANGEBYSCORE returns by score range</text>
 </svg>
 
 Basic operations:
@@ -414,18 +457,28 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 Hashes are maps of field-value pairs:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_01_data_structures)"/>
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Redis Hash: Field-Value Map</text>
+  <rect x="30" y="40" width="130" height="30" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="60" text-anchor="middle" font-size="11" font-weight="bold">user:1001</text>
+  <line x1="160" y1="55" x2="190" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd9)"/>
+  <rect x="195" y="35" width="380" height="155" fill="#fff" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="385" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Hash Fields</text>
+  <rect x="210" y="65" width="100" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="260" y="84" text-anchor="middle" font-size="10">name</text>
+  <rect x="320" y="65" width="240" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="440" y="84" text-anchor="middle" font-size="10">"Alice Smith"</text>
+  <rect x="210" y="100" width="100" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="260" y="119" text-anchor="middle" font-size="10">email</text>
+  <rect x="320" y="100" width="240" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="440" y="119" text-anchor="middle" font-size="10">"alice@example.com"</text>
+  <rect x="210" y="135" width="100" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="260" y="154" text-anchor="middle" font-size="10">login_count</text>
+  <rect x="320" y="135" width="240" height="28" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="440" y="154" text-anchor="middle" font-size="10">47 (HINCRBY increments this)</text>
+  <text x="95" y="195" text-anchor="middle" font-size="10" fill="#666">HSET / HGET</text>
+  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#666">HGETALL returns all pairs</text>
   <defs>
-    <marker id="arrowd9_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
+    <marker id="arrowd9" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
   </defs>
 </svg>
 
@@ -569,19 +622,38 @@ BITOP operation destkey key [key ...]   # Bitwise operations
 Use case: User online status tracking
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd11_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Bitmap: User Online Status Tracking</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#666">Key: "online:2024-03-23" -- each bit = one user ID</text>
+  <text x="35" y="78" text-anchor="middle" font-size="10" fill="#333">Bit offset:</text>
+  <text x="110" y="78" text-anchor="middle" font-size="10">0</text>
+  <text x="150" y="78" text-anchor="middle" font-size="10">1</text>
+  <text x="190" y="78" text-anchor="middle" font-size="10">2</text>
+  <text x="230" y="78" text-anchor="middle" font-size="10">3</text>
+  <text x="270" y="78" text-anchor="middle" font-size="10">4</text>
+  <text x="310" y="78" text-anchor="middle" font-size="10">5</text>
+  <text x="350" y="78" text-anchor="middle" font-size="10">6</text>
+  <text x="390" y="78" text-anchor="middle" font-size="10">7</text>
+  <rect x="90" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="130" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="170" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="190" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="210" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="230" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="250" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="270" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="290" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="330" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="350" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="370" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="390" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <text x="110" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">online</text>
+  <text x="150" y="130" text-anchor="middle" font-size="9" fill="#c62828">offline</text>
+  <text x="300" y="155" text-anchor="middle" font-size="10" fill="#333">SETBIT online:2024-03-23 0 1  -- mark user 0 as online</text>
+  <text x="300" y="172" text-anchor="middle" font-size="10" fill="#333">BITCOUNT online:2024-03-23    -- returns 5 (users online)</text>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#666">1 million users = only 125 KB of memory</text>
 </svg>
 
 ---
@@ -589,19 +661,33 @@ Use case: User online status tracking
 ## Choosing the Right Data Structure
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd12_01_data_structures)"/>
-  <defs>
-    <marker id="arrowd12_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Choosing the Right Data Structure</text>
+  <rect x="15" y="35" width="105" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="67" y="52" text-anchor="middle" font-size="10" font-weight="bold">String</text>
+  <text x="67" y="66" text-anchor="middle" font-size="9">simple values</text>
+  <rect x="130" y="35" width="105" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="182" y="52" text-anchor="middle" font-size="10" font-weight="bold">List</text>
+  <text x="182" y="66" text-anchor="middle" font-size="9">ordered, queues</text>
+  <rect x="245" y="35" width="105" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="297" y="52" text-anchor="middle" font-size="10" font-weight="bold">Set</text>
+  <text x="297" y="66" text-anchor="middle" font-size="9">unique, unordered</text>
+  <rect x="360" y="35" width="105" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="412" y="52" text-anchor="middle" font-size="10" font-weight="bold">Sorted Set</text>
+  <text x="412" y="66" text-anchor="middle" font-size="9">ranked, scored</text>
+  <rect x="475" y="35" width="105" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="527" y="52" text-anchor="middle" font-size="10" font-weight="bold">Hash</text>
+  <text x="527" y="66" text-anchor="middle" font-size="9">objects, fields</text>
+  <rect x="30" y="90" width="540" height="100" fill="#f5f5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="50" y="110" font-size="10" fill="#333">Need a counter or cache?</text>
+  <text x="370" y="110" font-size="10" font-weight="bold" fill="#1565c0">String</text>
+  <text x="50" y="128" font-size="10" fill="#333">Need FIFO queue or recent items?</text>
+  <text x="370" y="128" font-size="10" font-weight="bold" fill="#4a148c">List</text>
+  <text x="50" y="146" font-size="10" fill="#333">Need unique members or set operations?</text>
+  <text x="370" y="146" font-size="10" font-weight="bold" fill="#2e7d32">Set</text>
+  <text x="50" y="164" font-size="10" fill="#333">Need ranking or score-based queries?</text>
+  <text x="370" y="164" font-size="10" font-weight="bold" fill="#e65100">Sorted Set</text>
+  <text x="50" y="182" font-size="10" fill="#333">Need to store object with multiple fields?</text>
+  <text x="370" y="182" font-size="10" font-weight="bold" fill="#c62828">Hash</text>
 </svg>
 
 ---
@@ -629,18 +715,29 @@ Data structure efficiency (for 1 million items):
 Using multiple data structures together:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd14_01_data_structures)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd14_01_data_structures)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Composite Keys: E-commerce Product Example</text>
+  <rect x="20" y="35" width="130" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="55" text-anchor="middle" font-size="10" font-weight="bold">Hash</text>
+  <text x="85" y="73" text-anchor="middle" font-size="9">product:42:details</text>
+  <rect x="20" y="95" width="130" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="115" text-anchor="middle" font-size="10" font-weight="bold">Sorted Set</text>
+  <text x="85" y="133" text-anchor="middle" font-size="9">product:42:reviews</text>
+  <rect x="20" y="155" width="130" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="177" text-anchor="middle" font-size="10" font-weight="bold">Set</text>
+  <line x1="150" y1="60" x2="190" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd14)"/>
+  <line x1="150" y1="120" x2="190" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd14)"/>
+  <line x1="150" y1="172" x2="190" y2="172" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd14)"/>
+  <text x="380" y="50" font-size="10" fill="#333">name="Widget" price="29.99" stock="150"</text>
+  <text x="380" y="70" font-size="9" fill="#666">HSET / HGET / HINCRBY stock</text>
+  <text x="380" y="110" font-size="10" fill="#333">user:7 score:5, user:12 score:3, ...</text>
+  <text x="380" y="130" font-size="9" fill="#666">ZADD / ZRANGEBYSCORE for filtering</text>
+  <text x="380" y="168" font-size="10" fill="#333">product:42:tags = {"electronics","sale"}</text>
+  <text x="380" y="185" font-size="9" fill="#666">SADD / SINTER for tag-based search</text>
+  <rect x="190" y="40" width="400" height="40" fill="none" stroke="#e3f2fd" stroke-width="1" rx="3"/>
+  <rect x="190" y="100" width="400" height="40" fill="none" stroke="#f3e5f5" stroke-width="1" rx="3"/>
+  <rect x="190" y="155" width="400" height="40" fill="none" stroke="#e8f5e9" stroke-width="1" rx="3"/>
   <defs>
-    <marker id="arrowd14_01_data_structures" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
+    <marker id="arrowd14" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#333"/></marker>
   </defs>
 </svg>
 

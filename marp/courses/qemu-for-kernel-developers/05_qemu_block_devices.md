@@ -19,19 +19,33 @@ Importance of Block Devices in Kernel Development
 QEMU Block Device Models
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_qemu_block_devices)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_qemu_block_devices)"/>
-  <defs>
-    <marker id="arrowd0_04_qemu_block_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">QEMU Storage Backends</text>
+  <rect x="10" y="30" width="115" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="67" y="50" text-anchor="middle" font-size="11" font-weight="bold">qcow2</text>
+  <text x="67" y="65" text-anchor="middle" font-size="10">Copy-on-write</text>
+  <text x="67" y="78" text-anchor="middle" font-size="10">Snapshots</text>
+  <text x="67" y="91" text-anchor="middle" font-size="9" fill="#666">Thin provision</text>
+  <rect x="140" y="30" width="115" height="70" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="197" y="50" text-anchor="middle" font-size="11" font-weight="bold">raw</text>
+  <text x="197" y="65" text-anchor="middle" font-size="10">Direct access</text>
+  <text x="197" y="78" text-anchor="middle" font-size="10">Best perf</text>
+  <text x="197" y="91" text-anchor="middle" font-size="9" fill="#666">No features</text>
+  <rect x="270" y="30" width="115" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="327" y="50" text-anchor="middle" font-size="11" font-weight="bold">NBD</text>
+  <text x="327" y="65" text-anchor="middle" font-size="10">Network block</text>
+  <text x="327" y="78" text-anchor="middle" font-size="10">Remote storage</text>
+  <text x="327" y="91" text-anchor="middle" font-size="9" fill="#666">TCP/Unix sock</text>
+  <rect x="400" y="30" width="115" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="457" y="50" text-anchor="middle" font-size="11" font-weight="bold">Host Device</text>
+  <text x="457" y="65" text-anchor="middle" font-size="10">/dev/sdX</text>
+  <text x="457" y="78" text-anchor="middle" font-size="10">Passthrough</text>
+  <text x="457" y="91" text-anchor="middle" font-size="9" fill="#666">Direct I/O</text>
+  <line x1="67" y1="105" x2="67" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="197" y1="105" x2="197" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="327" y1="105" x2="327" y2="130" stroke="#333" stroke-width="1.5"/>
+  <line x1="457" y1="105" x2="457" y2="130" stroke="#333" stroke-width="1.5"/>
+  <rect x="10" y="130" width="505" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="262" y="150" text-anchor="middle" font-size="11">Device Frontend: IDE / SCSI / virtio-blk / NVMe</text>
 </svg>
 
 ---
@@ -103,14 +117,23 @@ Configuring Block Devices in QEMU
 QEMU Block Layer Architecture
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">QEMU Block Layer Stack</text>
+  <rect x="170" y="25" width="260" height="30" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="45" text-anchor="middle" font-size="11">Guest Kernel Block Layer (bio)</text>
+  <rect x="170" y="65" width="260" height="30" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="85" text-anchor="middle" font-size="11">Device Frontend (virtio-blk/SCSI)</text>
+  <rect x="170" y="105" width="260" height="30" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="125" text-anchor="middle" font-size="11">QEMU Block Driver (qcow2/raw)</text>
+  <rect x="170" y="145" width="260" height="30" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="165" text-anchor="middle" font-size="11">Host I/O (AIO / io_uring / thread)</text>
+  <line x1="300" y1="55" x2="300" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <line x1="300" y1="95" x2="300" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <line x1="300" y1="135" x2="300" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <text x="460" y="45" text-anchor="start" font-size="10" fill="#555">Guest</text>
+  <text x="460" y="85" text-anchor="start" font-size="10" fill="#555">Boundary</text>
+  <line x1="440" y1="60" x2="540" y2="60" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+  <text x="460" y="125" text-anchor="start" font-size="10" fill="#555">QEMU</text>
+  <text x="460" y="165" text-anchor="start" font-size="10" fill="#555">Host</text>
   <defs>
     <marker id="arrowd1_04_qemu_block_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

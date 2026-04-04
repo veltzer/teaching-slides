@@ -6,19 +6,30 @@
 ## Memory Management Evolution
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_understanding_ownership)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_understanding_ownership)"/>
   <defs>
-    <marker id="arrowd0_02_understanding_ownership" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arr_mem" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <rect x="20" y="30" width="140" height="55" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="50" text-anchor="middle" font-size="11" font-weight="bold">Manual (C/C++)</text>
+  <text x="90" y="68" text-anchor="middle" font-size="10">malloc / free</text>
+  <text x="90" y="80" text-anchor="middle" font-size="9">Dangling ptrs, leaks</text>
+  <rect x="230" y="30" width="140" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold">GC (Java/Go)</text>
+  <text x="300" y="68" text-anchor="middle" font-size="10">Runtime overhead</text>
+  <text x="300" y="80" text-anchor="middle" font-size="9">Pause times, memory</text>
+  <rect x="440" y="30" width="140" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="50" text-anchor="middle" font-size="11" font-weight="bold">Ownership (Rust)</text>
+  <text x="510" y="68" text-anchor="middle" font-size="10">Compile-time checks</text>
+  <text x="510" y="80" text-anchor="middle" font-size="9">Zero runtime cost</text>
+  <line x1="160" y1="57" x2="230" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arr_mem)"/>
+  <line x1="370" y1="57" x2="440" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arr_mem)"/>
+  <text x="195" y="48" text-anchor="middle" font-size="9">evolves</text>
+  <text x="405" y="48" text-anchor="middle" font-size="9">evolves</text>
+  <rect x="100" y="120" width="400" height="55" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="140" text-anchor="middle" font-size="11" font-weight="bold">Rust's Innovation</text>
+  <text x="300" y="158" text-anchor="middle" font-size="10">Ownership + Borrowing + Lifetimes = Memory safety at compile time</text>
 </svg>
 
 ---
@@ -55,19 +66,33 @@
 ## The Stack and The Heap
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_understanding_ownership)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_understanding_ownership)"/>
   <defs>
-    <marker id="arrowd1_02_understanding_ownership" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arr_sh" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="100" y="15" text-anchor="middle" font-size="12" font-weight="bold">Stack</text>
+  <rect x="40" y="25" width="120" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="100" y="42" text-anchor="middle" font-size="10">x: i32 = 5</text>
+  <rect x="40" y="50" width="120" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="100" y="67" text-anchor="middle" font-size="10">y: bool = true</text>
+  <rect x="40" y="75" width="120" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="100" y="89" text-anchor="middle" font-size="10">s: String {</text>
+  <text x="100" y="103" text-anchor="middle" font-size="9">ptr, len:5, cap:5 }</text>
+  <rect x="40" y="110" width="120" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="100" y="127" text-anchor="middle" font-size="10">z: f64 = 3.14</text>
+  <text x="100" y="155" text-anchor="middle" font-size="10">LIFO, fast, fixed size</text>
+  <text x="420" y="15" text-anchor="middle" font-size="12" font-weight="bold">Heap</text>
+  <rect x="340" y="30" width="160" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="420" y="48" text-anchor="middle" font-size="10">"hello" (5 bytes)</text>
+  <text x="420" y="62" text-anchor="middle" font-size="9">allocated at runtime</text>
+  <rect x="350" y="90" width="140" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="420" y="110" text-anchor="middle" font-size="9">Vec data, Box data...</text>
+  <text x="420" y="145" text-anchor="middle" font-size="10">Dynamic, slower, flexible</text>
+  <line x1="160" y1="92" x2="340" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arr_sh)" stroke-dasharray="5,3"/>
+  <text x="250" y="60" text-anchor="middle" font-size="9">ptr points to heap</text>
+  <rect x="180" y="170" width="240" height="25" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="187" text-anchor="middle" font-size="10">Drop: heap freed when owner leaves scope</text>
 </svg>
 
 ---

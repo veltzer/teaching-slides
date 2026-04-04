@@ -18,19 +18,37 @@
 ## Socket Programming Basics
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_network_programming)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_network_programming)"/>
   <defs>
     <marker id="arrowd0_02_network_programming" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">TCP Socket API Flow</text>
+  <rect x="30" y="30" width="130" height="160" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="95" y="48" text-anchor="middle" font-size="11" font-weight="bold">Server</text>
+  <rect x="45" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="70" text-anchor="middle" font-size="10">socket()</text>
+  <rect x="45" y="80" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="95" text-anchor="middle" font-size="10">bind()</text>
+  <rect x="45" y="105" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="120" text-anchor="middle" font-size="10">listen()</text>
+  <rect x="45" y="130" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="145" text-anchor="middle" font-size="10">accept()</text>
+  <rect x="45" y="155" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="170" text-anchor="middle" font-size="10">recv() / send()</text>
+  <rect x="440" y="30" width="130" height="160" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="505" y="48" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <rect x="455" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="70" text-anchor="middle" font-size="10">socket()</text>
+  <rect x="455" y="105" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="120" text-anchor="middle" font-size="10">connect()</text>
+  <rect x="455" y="155" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="170" text-anchor="middle" font-size="10">send() / recv()</text>
+  <line x1="455" y1="116" x2="145" y2="141" stroke="#333" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowd0_02_network_programming)"/>
+  <text x="300" y="118" text-anchor="middle" font-size="9" fill="#666">3-way handshake</text>
+  <line x1="145" y1="166" x2="455" y2="166" stroke="#2e7d32" stroke-width="1" marker-end="url(#arrowd0_02_network_programming)"/>
+  <line x1="455" y1="172" x2="145" y2="172" stroke="#1565c0" stroke-width="1" marker-end="url(#arrowd0_02_network_programming)"/>
+  <text x="300" y="163" text-anchor="middle" font-size="9" fill="#2e7d32">data exchange</text>
 </svg>
 
 ---
@@ -251,19 +269,35 @@ if (se == NULL) {
 ## UDP Programming
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_network_programming)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_network_programming)"/>
   <defs>
     <marker id="arrowd1_02_network_programming" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">UDP Socket API Flow</text>
+  <rect x="30" y="30" width="130" height="155" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="95" y="48" text-anchor="middle" font-size="11" font-weight="bold">Server</text>
+  <rect x="45" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="70" text-anchor="middle" font-size="10">socket(DGRAM)</text>
+  <rect x="45" y="82" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="97" text-anchor="middle" font-size="10">bind()</text>
+  <rect x="45" y="115" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="130" text-anchor="middle" font-size="10">recvfrom()</text>
+  <rect x="45" y="145" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="160" text-anchor="middle" font-size="10">sendto()</text>
+  <rect x="440" y="30" width="130" height="155" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="505" y="48" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <rect x="455" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="70" text-anchor="middle" font-size="10">socket(DGRAM)</text>
+  <rect x="455" y="115" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="130" text-anchor="middle" font-size="10">sendto()</text>
+  <rect x="455" y="145" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="160" text-anchor="middle" font-size="10">recvfrom()</text>
+  <line x1="455" y1="126" x2="145" y2="126" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_02_network_programming)"/>
+  <text x="300" y="122" text-anchor="middle" font-size="9" fill="#666">datagram (no connection)</text>
+  <line x1="145" y1="156" x2="455" y2="156" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_02_network_programming)"/>
+  <text x="300" y="152" text-anchor="middle" font-size="9" fill="#666">reply datagram</text>
+  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#999">No connect/listen/accept needed</text>
 </svg>
 
 ---
