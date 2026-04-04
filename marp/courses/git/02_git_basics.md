@@ -8,19 +8,27 @@
 ---
 ## Creating a Repository
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_01_git_basics)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_01_git_basics)"/>
   <defs>
-    <marker id="arrowd0_01_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arrowd0_02_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <!-- git init box -->
+  <rect x="100" y="20" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="160" y="45" text-anchor="middle" font-size="12" font-weight="bold">git init</text>
+  <!-- git clone box -->
+  <rect x="380" y="20" width="120" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="440" y="45" text-anchor="middle" font-size="12" font-weight="bold">git clone URL</text>
+  <!-- arrows down -->
+  <line x1="160" y1="60" x2="300" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_git_basics)"/>
+  <line x1="440" y1="60" x2="300" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_02_git_basics)"/>
+  <!-- labels on arrows -->
+  <text x="200" y="90" text-anchor="middle" font-size="11" fill="#555">creates new</text>
+  <text x="400" y="90" text-anchor="middle" font-size="11" fill="#555">copies from remote</text>
+  <!-- Local Repository box -->
+  <rect x="200" y="130" width="200" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="152" text-anchor="middle" font-size="12" font-weight="bold">Local Repository</text>
+  <text x="300" y="170" text-anchor="middle" font-size="11" fill="#555">(.git directory)</text>
 </svg>
 
 ---
@@ -38,19 +46,30 @@
 ---
 ## The Staging Area
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_01_git_basics)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_01_git_basics)"/>
   <defs>
-    <marker id="arrowd1_01_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arrowd1_02_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <!-- Working Directory -->
+  <rect x="20" y="60" width="150" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="90" text-anchor="middle" font-size="12" font-weight="bold">Working</text>
+  <text x="95" y="108" text-anchor="middle" font-size="12" font-weight="bold">Directory</text>
+  <text x="95" y="128" text-anchor="middle" font-size="11" fill="#555">edit files here</text>
+  <!-- Staging Area -->
+  <rect x="225" y="60" width="150" height="80" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="90" text-anchor="middle" font-size="12" font-weight="bold">Staging Area</text>
+  <text x="300" y="108" text-anchor="middle" font-size="12" font-weight="bold">(Index)</text>
+  <text x="300" y="128" text-anchor="middle" font-size="11" fill="#555">prepare commits</text>
+  <!-- Repository -->
+  <rect x="430" y="60" width="150" height="80" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="95" text-anchor="middle" font-size="12" font-weight="bold">Repository</text>
+  <text x="505" y="115" text-anchor="middle" font-size="11" fill="#555">permanent history</text>
+  <!-- Arrows -->
+  <line x1="170" y1="100" x2="222" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_git_basics)"/>
+  <text x="196" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">git add</text>
+  <line x1="375" y1="100" x2="427" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_git_basics)"/>
+  <text x="401" y="88" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">git commit</text>
 </svg>
 
 ---
@@ -86,19 +105,32 @@
 ---
 ## Working Directory vs Staged
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_01_git_basics)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_01_git_basics)"/>
   <defs>
-    <marker id="arrowd2_01_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowd2_02_right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowd2_02_left" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M9,0 L9,6 L0,3 z" fill="#c62828"/>
     </marker>
   </defs>
+  <!-- Working Directory -->
+  <rect x="30" y="40" width="200" height="120" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="130" y="65" text-anchor="middle" font-size="12" font-weight="bold">Working Directory</text>
+  <rect x="55" y="78" width="150" height="24" fill="#fff" stroke="#90caf9" stroke-width="1" rx="3"/>
+  <text x="130" y="95" text-anchor="middle" font-size="11" fill="#555">file1.js (modified)</text>
+  <rect x="55" y="108" width="150" height="24" fill="#fff" stroke="#90caf9" stroke-width="1" rx="3"/>
+  <text x="130" y="125" text-anchor="middle" font-size="11" fill="#555">file2.css (modified)</text>
+  <!-- Staging Area -->
+  <rect x="370" y="40" width="200" height="120" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="470" y="65" text-anchor="middle" font-size="12" font-weight="bold">Staging Area</text>
+  <rect x="395" y="78" width="150" height="24" fill="#fff" stroke="#ffb74d" stroke-width="1" rx="3"/>
+  <text x="470" y="95" text-anchor="middle" font-size="11" fill="#555">file1.js (staged)</text>
+  <!-- git add arrow (right) -->
+  <line x1="230" y1="85" x2="367" y2="85" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd2_02_right)"/>
+  <text x="298" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">git add</text>
+  <!-- git restore --staged arrow (left) -->
+  <line x1="370" y1="130" x2="233" y2="130" stroke="#c62828" stroke-width="2" marker-end="url(#arrowd2_02_left)"/>
+  <text x="298" y="152" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">git restore --staged</text>
 </svg>
 
 ---
@@ -146,19 +178,39 @@
 ---
 ## Reset Modes
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_01_git_basics)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_01_git_basics)"/>
-  <defs>
-    <marker id="arrowd3_01_git_basics" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <!-- Header row -->
+  <text x="170" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Mode</text>
+  <text x="330" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">HEAD</text>
+  <text x="430" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Staging</text>
+  <text x="540" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Working Dir</text>
+  <!-- --soft row (green = safe) -->
+  <rect x="70" y="32" width="200" height="38" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="170" y="56" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">--soft</text>
+  <text x="330" y="56" text-anchor="middle" font-size="13" fill="#2e7d32">&#x2714;</text>
+  <text x="430" y="56" text-anchor="middle" font-size="12" fill="#888">unchanged</text>
+  <text x="540" y="56" text-anchor="middle" font-size="12" fill="#888">unchanged</text>
+  <!-- --mixed row (yellow = caution) -->
+  <rect x="70" y="78" width="200" height="38" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="170" y="102" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">--mixed (default)</text>
+  <text x="330" y="102" text-anchor="middle" font-size="13" fill="#e65100">&#x2714;</text>
+  <text x="430" y="102" text-anchor="middle" font-size="13" fill="#e65100">&#x2714; cleared</text>
+  <text x="540" y="102" text-anchor="middle" font-size="12" fill="#888">unchanged</text>
+  <!-- --hard row (red = dangerous) -->
+  <rect x="70" y="124" width="200" height="38" fill="#ffebee" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="170" y="148" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">--hard</text>
+  <text x="330" y="148" text-anchor="middle" font-size="13" fill="#c62828">&#x2714;</text>
+  <text x="430" y="148" text-anchor="middle" font-size="13" fill="#c62828">&#x2714; cleared</text>
+  <text x="540" y="148" text-anchor="middle" font-size="13" fill="#c62828">&#x2714; cleared</text>
+  <!-- Safety labels -->
+  <text x="40" y="56" text-anchor="middle" font-size="11" fill="#2e7d32">safe</text>
+  <text x="40" y="102" text-anchor="middle" font-size="11" fill="#e65100">caution</text>
+  <text x="40" y="148" text-anchor="middle" font-size="11" fill="#c62828">danger!</text>
+  <!-- Separator lines -->
+  <line x1="70" y1="26" x2="580" y2="26" stroke="#ccc" stroke-width="1"/>
+  <line x1="70" y1="72" x2="580" y2="72" stroke="#ccc" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="70" y1="118" x2="580" y2="118" stroke="#ccc" stroke-width="1" stroke-dasharray="4"/>
+  <!-- Bottom note -->
+  <text x="300" y="185" text-anchor="middle" font-size="11" fill="#555" font-style="italic">&#x26a0; --hard discards uncommitted changes permanently</text>
 </svg>
 
 ---
