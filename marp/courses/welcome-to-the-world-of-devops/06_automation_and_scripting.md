@@ -191,21 +191,26 @@ Leveraging automation for DevOps efficiency
 
 ## Script Management
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="300" cy="100" rx="55" ry="35" fill="#673ab7" stroke="#333" stroke-width="2"/>
+  <text x="300" y="96" text-anchor="middle" font-size="11" fill="white">Script</text>
+  <text x="300" y="110" text-anchor="middle" font-size="10" fill="white">Lifecycle</text>
+  <ellipse cx="120" cy="45" rx="75" ry="25" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
+  <text x="120" y="42" text-anchor="middle" font-size="10">Version Control</text>
+  <text x="120" y="55" text-anchor="middle" font-size="9">Git repos, branching</text>
+  <ellipse cx="480" cy="45" rx="75" ry="25" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
+  <text x="480" y="42" text-anchor="middle" font-size="10">Testing</text>
+  <text x="480" y="55" text-anchor="middle" font-size="9">ShellCheck, pytest</text>
+  <ellipse cx="120" cy="160" rx="75" ry="25" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
+  <text x="120" y="157" text-anchor="middle" font-size="10">Documentation</text>
+  <text x="120" y="170" text-anchor="middle" font-size="9">README, inline docs</text>
+  <ellipse cx="480" cy="160" rx="75" ry="25" fill="#fff3e0" stroke="#333" stroke-width="2"/>
+  <text x="480" y="157" text-anchor="middle" font-size="10">Distribution</text>
+  <text x="480" y="170" text-anchor="middle" font-size="9">Package, publish</text>
+  <line x1="250" y1="78" x2="190" y2="58" stroke="#333" stroke-width="1.5"/>
+  <line x1="350" y1="78" x2="410" y2="58" stroke="#333" stroke-width="1.5"/>
+  <line x1="250" y1="122" x2="190" y2="145" stroke="#333" stroke-width="1.5"/>
+  <line x1="350" y1="122" x2="410" y2="145" stroke="#333" stroke-width="1.5"/>
 </svg>
 
 ---
@@ -223,14 +228,22 @@ Leveraging automation for DevOps efficiency
 ## Security Considerations
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_automation_and_scripting)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_automation_and_scripting)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Script Security Layers</text>
+  <rect x="20" y="40" width="150" height="60" fill="#ffebee" stroke="#c00" stroke-width="2" rx="5"/>
+  <text x="95" y="58" text-anchor="middle" font-size="10" font-weight="bold">Secrets Mgmt</text>
+  <text x="95" y="73" text-anchor="middle" font-size="9">No hardcoded creds</text>
+  <text x="95" y="86" text-anchor="middle" font-size="9">Vault / env vars</text>
+  <rect x="225" y="40" width="150" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="10" font-weight="bold">Input Validation</text>
+  <text x="300" y="73" text-anchor="middle" font-size="9">Sanitize all inputs</text>
+  <text x="300" y="86" text-anchor="middle" font-size="9">Prevent injection</text>
+  <rect x="430" y="40" width="150" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="58" text-anchor="middle" font-size="10" font-weight="bold">Least Privilege</text>
+  <text x="505" y="73" text-anchor="middle" font-size="9">Minimal permissions</text>
+  <text x="505" y="86" text-anchor="middle" font-size="9">Service accounts</text>
+  <line x1="170" y1="70" x2="225" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_automation_and_scripting)"/>
+  <line x1="375" y1="70" x2="430" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_automation_and_scripting)"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" fill="#555">Security must be built into every automation script</text>
   <defs>
     <marker id="arrowd6_05_automation_and_scripting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -253,14 +266,22 @@ Leveraging automation for DevOps efficiency
 ## Deployment Automation
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_automation_and_scripting)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_automation_and_scripting)"/>
+  <text x="300" y="20" text-anchor="middle" font-size="12" font-weight="bold">Deployment Automation Strategies</text>
+  <rect x="20" y="40" width="150" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="58" text-anchor="middle" font-size="10" font-weight="bold">Blue-Green</text>
+  <text x="95" y="73" text-anchor="middle" font-size="9">Two identical envs</text>
+  <text x="95" y="86" text-anchor="middle" font-size="9">Instant switchover</text>
+  <rect x="225" y="40" width="150" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="10" font-weight="bold">Canary</text>
+  <text x="300" y="73" text-anchor="middle" font-size="9">Gradual rollout %</text>
+  <text x="300" y="86" text-anchor="middle" font-size="9">Monitor + promote</text>
+  <rect x="430" y="40" width="150" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="58" text-anchor="middle" font-size="10" font-weight="bold">Rolling Update</text>
+  <text x="505" y="73" text-anchor="middle" font-size="9">Replace incrementally</text>
+  <text x="505" y="86" text-anchor="middle" font-size="9">Zero downtime</text>
+  <line x1="170" y1="70" x2="225" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_automation_and_scripting)"/>
+  <line x1="375" y1="70" x2="430" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_05_automation_and_scripting)"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" fill="#555">Choose strategy based on risk tolerance and infrastructure</text>
   <defs>
     <marker id="arrowd7_05_automation_and_scripting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>

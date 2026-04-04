@@ -226,14 +226,27 @@ public class RedisConnectionPool {
 Converting application data for Redis storage:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
+  <rect x="20" y="30" width="120" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="52" text-anchor="middle" font-size="11" font-weight="bold">App Object</text>
+  <text x="80" y="67" text-anchor="middle" font-size="10">{name, age, ...}</text>
+  <rect x="210" y="15" width="150" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="35" text-anchor="middle" font-size="11" font-weight="bold">Serialization</text>
+  <rect x="225" y="42" width="55" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="252" y="56" text-anchor="middle" font-size="9">JSON</text>
+  <rect x="290" y="42" width="55" height="20" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="317" y="56" text-anchor="middle" font-size="9">MsgPack</text>
+  <rect x="225" y="68" width="55" height="20" fill="#ffebee" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="252" y="82" text-anchor="middle" font-size="9">Protobuf</text>
+  <rect x="290" y="68" width="55" height="20" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="317" y="82" text-anchor="middle" font-size="9">Pickle</text>
+  <rect x="430" y="30" width="140" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="52" text-anchor="middle" font-size="11" font-weight="bold">Redis String</text>
+  <text x="500" y="67" text-anchor="middle" font-size="10">Binary-safe bytes</text>
+  <line x1="140" y1="55" x2="210" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
+  <line x1="360" y1="55" x2="430" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
+  <text x="175" y="48" text-anchor="middle" font-size="9" fill="#666">encode</text>
+  <text x="395" y="48" text-anchor="middle" font-size="9" fill="#666">SET</text>
+  <text x="285" y="130" text-anchor="middle" font-size="10" fill="#333">JSON: readable, larger | MsgPack/Protobuf: compact, faster</text>
   <defs>
     <marker id="arrowd3_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -663,14 +676,26 @@ app.use('/api', rateLimit);
 ## Redis for Job Queues
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
+  <rect x="20" y="60" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="80" text-anchor="middle" font-size="11" font-weight="bold">Producer</text>
+  <text x="75" y="95" text-anchor="middle" font-size="10">LPUSH job</text>
+  <rect x="200" y="30" width="180" height="100" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="290" y="50" text-anchor="middle" font-size="11" font-weight="bold">Redis List (Queue)</text>
+  <rect x="215" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="240" y="77" text-anchor="middle" font-size="9">job 3</text>
+  <rect x="275" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="300" y="77" text-anchor="middle" font-size="9">job 2</text>
+  <rect x="335" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="360" y="77" text-anchor="middle" font-size="9">job 1</text>
+  <text x="290" y="115" text-anchor="middle" font-size="10" fill="#666">BRPOP (blocking pop)</text>
+  <rect x="450" y="40" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="62" text-anchor="middle" font-size="11" font-weight="bold">Worker 1</text>
+  <rect x="450" y="90" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="112" text-anchor="middle" font-size="11" font-weight="bold">Worker 2</text>
+  <line x1="130" y1="82" x2="200" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
+  <line x1="380" y1="72" x2="450" y2="58" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
+  <line x1="380" y1="82" x2="450" y2="107" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
+  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#333">LPUSH + BRPOP = reliable FIFO queue with blocking consumers</text>
   <defs>
     <marker id="arrowd7_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -774,14 +799,24 @@ emailQueue.on('failed', (job, err) => {
 ## Redis for Real-time Features
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_integration)"/>
+  <rect x="20" y="60" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="80" text-anchor="middle" font-size="11" font-weight="bold">Publisher</text>
+  <text x="75" y="95" text-anchor="middle" font-size="10">PUBLISH msg</text>
+  <rect x="210" y="40" width="160" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="290" y="60" text-anchor="middle" font-size="11" font-weight="bold">Redis PubSub</text>
+  <text x="290" y="80" text-anchor="middle" font-size="10">Channel: "chat:room1"</text>
+  <text x="290" y="100" text-anchor="middle" font-size="10" fill="#666">Real-time broadcast</text>
+  <rect x="440" y="20" width="130" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="42" text-anchor="middle" font-size="10">Subscriber (WS 1)</text>
+  <rect x="440" y="65" width="130" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="87" text-anchor="middle" font-size="10">Subscriber (WS 2)</text>
+  <rect x="440" y="110" width="130" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="132" text-anchor="middle" font-size="10">Subscriber (WS 3)</text>
+  <line x1="130" y1="82" x2="210" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_integration)"/>
+  <line x1="370" y1="68" x2="440" y2="38" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
+  <line x1="370" y1="82" x2="440" y2="82" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
+  <line x1="370" y1="95" x2="440" y2="127" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
+  <text x="290" y="175" text-anchor="middle" font-size="10" fill="#333">PubSub enables chat, notifications, live updates via WebSockets</text>
   <defs>
     <marker id="arrowd8_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -1033,14 +1068,25 @@ app.listen(3000, () => {
 ## Caching Strategies in Microservices
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_08_integration)"/>
+  <rect x="20" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="55" text-anchor="middle" font-size="10">Service A</text>
+  <rect x="20" y="90" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="115" text-anchor="middle" font-size="10">Service B</text>
+  <rect x="20" y="150" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="175" text-anchor="middle" font-size="10">Service C</text>
+  <rect x="200" y="20" width="170" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="42" text-anchor="middle" font-size="11" font-weight="bold">Shared Redis Cache</text>
+  <text x="285" y="60" text-anchor="middle" font-size="10">Common data (users, config)</text>
+  <rect x="200" y="110" width="170" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="132" text-anchor="middle" font-size="11" font-weight="bold">Per-Service Cache</text>
+  <text x="285" y="150" text-anchor="middle" font-size="10">Isolated, own TTL policy</text>
+  <rect x="440" y="65" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="85" text-anchor="middle" font-size="11" font-weight="bold">Database</text>
+  <text x="505" y="100" text-anchor="middle" font-size="10">Source of truth</text>
+  <line x1="120" y1="50" x2="200" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd9_08_integration)"/>
+  <line x1="120" y1="110" x2="200" y2="140" stroke="#333" stroke-width="1" marker-end="url(#arrowd9_08_integration)"/>
+  <line x1="370" y1="60" x2="440" y2="80" stroke="#333" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowd9_08_integration)"/>
+  <text x="415" y="58" text-anchor="middle" font-size="9" fill="#666">miss</text>
   <defs>
     <marker id="arrowd9_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -1059,14 +1105,29 @@ Key strategies:
 ## Redis and Database Integration
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_integration)"/>
+  <rect x="20" y="60" width="100" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="80" text-anchor="middle" font-size="11" font-weight="bold">App</text>
+  <text x="70" y="95" text-anchor="middle" font-size="10">GET/SET</text>
+  <rect x="190" y="15" width="130" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="255" y="37" text-anchor="middle" font-size="11" font-weight="bold">Redis Cache</text>
+  <text x="255" y="52" text-anchor="middle" font-size="10">Fast reads</text>
+  <rect x="190" y="105" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="255" y="127" text-anchor="middle" font-size="11" font-weight="bold">PostgreSQL</text>
+  <text x="255" y="142" text-anchor="middle" font-size="10">Persistent store</text>
+  <line x1="120" y1="72" x2="190" y2="40" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_integration)"/>
+  <text x="145" y="48" text-anchor="middle" font-size="9" fill="#666">1. read</text>
+  <line x1="255" y1="65" x2="255" y2="105" stroke="#333" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowd10_08_integration)"/>
+  <text x="280" y="88" text-anchor="middle" font-size="9" fill="#c62828">miss</text>
+  <line x1="120" y1="90" x2="190" y2="130" stroke="#999" stroke-width="1" marker-end="url(#arrowd10_08_integration)"/>
+  <text x="140" y="118" text-anchor="middle" font-size="9" fill="#666">write</text>
+  <rect x="390" y="15" width="180" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="33" text-anchor="middle" font-size="10" font-weight="bold">Write-Through</text>
+  <text x="480" y="50" text-anchor="middle" font-size="10">Write to cache + DB</text>
+  <text x="480" y="63" text-anchor="middle" font-size="9" fill="#666">together</text>
+  <rect x="390" y="100" width="180" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="118" text-anchor="middle" font-size="10" font-weight="bold">Cache-Aside</text>
+  <text x="480" y="135" text-anchor="middle" font-size="10">App manages cache</text>
+  <text x="480" y="148" text-anchor="middle" font-size="9" fill="#666">populate on miss</text>
   <defs>
     <marker id="arrowd10_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
@@ -1087,14 +1148,25 @@ Integration patterns:
 Robust Redis integration requires:
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_08_integration)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_08_integration)"/>
+  <rect x="20" y="60" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="85" text-anchor="middle" font-size="11" font-weight="bold">App Request</text>
+  <rect x="160" y="15" width="130" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="33" text-anchor="middle" font-size="11" font-weight="bold">Redis OK</text>
+  <text x="225" y="50" text-anchor="middle" font-size="10" fill="#2e7d32">Normal path</text>
+  <rect x="160" y="95" width="130" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="113" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Redis Down</text>
+  <text x="225" y="130" text-anchor="middle" font-size="10" fill="#c62828">Connection error</text>
+  <rect x="350" y="15" width="220" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="33" text-anchor="middle" font-size="10" font-weight="bold">Retry with backoff</text>
+  <text x="460" y="50" text-anchor="middle" font-size="10">Exponential: 100ms, 200ms, 400ms</text>
+  <rect x="350" y="75" width="220" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="97" text-anchor="middle" font-size="10" font-weight="bold">Circuit breaker: skip Redis</text>
+  <rect x="350" y="125" width="220" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="147" text-anchor="middle" font-size="10" font-weight="bold">Fallback: query DB directly</text>
+  <line x1="120" y1="72" x2="160" y2="38" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <line x1="120" y1="88" x2="160" y2="118" stroke="#c62828" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <line x1="290" y1="118" x2="350" y2="92" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#333">Never let Redis failure break your application</text>
   <defs>
     <marker id="arrowd11_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
