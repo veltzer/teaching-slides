@@ -7,19 +7,32 @@
 ## Cargo Project Structure
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_10_project_structure)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_10_project_structure)"/>
-  <defs>
-    <marker id="arrowd0_10_project_structure" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="220" y="10" width="160" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="33" text-anchor="middle" font-size="12" font-weight="bold">Workspace</text>
+  <rect x="50" y="75" width="130" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="115" y="97" text-anchor="middle" font-size="11">crate: app</text>
+  <rect x="235" y="75" width="130" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="97" text-anchor="middle" font-size="11">crate: core</text>
+  <rect x="420" y="75" width="130" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="485" y="97" text-anchor="middle" font-size="11">crate: utils</text>
+  <rect x="30" y="140" width="100" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="80" y="160" text-anchor="middle" font-size="10">mod main</text>
+  <rect x="145" y="140" width="100" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="195" y="160" text-anchor="middle" font-size="10">mod config</text>
+  <rect x="260" y="140" width="100" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="310" y="160" text-anchor="middle" font-size="10">mod lib</text>
+  <rect x="375" y="140" width="100" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="425" y="160" text-anchor="middle" font-size="10">mod models</text>
+  <rect x="490" y="140" width="100" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="540" y="160" text-anchor="middle" font-size="10">mod helpers</text>
+  <line x1="260" y1="45" x2="115" y2="75" stroke="#333" stroke-width="1.5"/>
+  <line x1="300" y1="45" x2="300" y2="75" stroke="#333" stroke-width="1.5"/>
+  <line x1="340" y1="45" x2="485" y2="75" stroke="#333" stroke-width="1.5"/>
+  <line x1="80" y1="110" x2="80" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="150" y1="110" x2="195" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="300" y1="110" x2="310" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="420" y1="110" x2="425" y2="140" stroke="#333" stroke-width="1.5"/>
+  <line x1="550" y1="110" x2="540" y2="140" stroke="#333" stroke-width="1.5"/>
 </svg>
 
 ---
@@ -117,19 +130,28 @@ fn main() {
 ## Project Configuration
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_10_project_structure)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_10_project_structure)"/>
-  <defs>
-    <marker id="arrowd1_10_project_structure" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
+  <rect x="200" y="10" width="200" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="33" text-anchor="middle" font-size="12" font-weight="bold">Cargo.toml</text>
+  <rect x="30" y="75" width="120" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="90" y="95" text-anchor="middle" font-size="10">[package]</text>
+  <rect x="170" y="75" width="120" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="230" y="95" text-anchor="middle" font-size="10">[dependencies]</text>
+  <rect x="310" y="75" width="130" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="375" y="95" text-anchor="middle" font-size="10">[dev-dependencies]</text>
+  <rect x="460" y="75" width="120" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="520" y="95" text-anchor="middle" font-size="10">[features]</text>
+  <rect x="140" y="135" width="100" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="190" y="154" text-anchor="middle" font-size="10">serde 1.0</text>
+  <rect x="260" y="135" width="100" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="310" y="154" text-anchor="middle" font-size="10">tokio 1.0</text>
+  <rect x="380" y="135" width="110" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="435" y="154" text-anchor="middle" font-size="10">pretty_assertions</text>
+  <rect x="200" y="170" width="90" height="24" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="245" y="187" text-anchor="middle" font-size="9">serde_json</text>
+  <line x1="230" y1="105" x2="190" y2="135" stroke="#333" stroke-width="1.5"/>
+  <line x1="230" y1="105" x2="310" y2="135" stroke="#333" stroke-width="1.5"/>
+  <line x1="375" y1="105" x2="435" y2="135" stroke="#333" stroke-width="1.5"/>
+  <line x1="190" y1="163" x2="245" y2="170" stroke="#333" stroke-width="1"/>
 </svg>
 
 ---
@@ -317,19 +339,34 @@ fn main() {
 ## Dependency Management
 
 <svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="75" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="250" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <rect x="450" y="75" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Node 1</text>
-  <text x="300" y="105" text-anchor="middle" font-size="12">Node 2</text>
-  <text x="500" y="105" text-anchor="middle" font-size="12">Node 3</text>
-  <line x1="150" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_10_project_structure)"/>
-  <line x1="350" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_10_project_structure)"/>
   <defs>
-    <marker id="arrowd3_10_project_structure" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+    <marker id="arrowvis" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
     </marker>
   </defs>
+  <rect x="10" y="15" width="130" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="35" text-anchor="middle" font-size="11" font-weight="bold">crate root</text>
+  <text x="75" y="52" text-anchor="middle" font-size="10">(lib.rs)</text>
+  <rect x="10" y="90" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="70" y="115" text-anchor="middle" font-size="10">pub mod api</text>
+  <rect x="10" y="150" width="120" height="40" fill="#ffebee" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="70" y="175" text-anchor="middle" font-size="10">mod internal</text>
+  <rect x="200" y="90" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="260" y="115" text-anchor="middle" font-size="10">pub fn serve()</text>
+  <rect x="200" y="150" width="130" height="40" fill="#ffebee" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="265" y="175" text-anchor="middle" font-size="10">fn helper()</text>
+  <rect x="400" y="20" width="190" height="80" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="495" y="42" text-anchor="middle" font-size="11" font-weight="bold">Visibility Rules</text>
+  <text x="495" y="60" text-anchor="middle" font-size="10" fill="#2e7d32">pub = accessible outside</text>
+  <text x="495" y="78" text-anchor="middle" font-size="10" fill="#c62828">no pub = private to module</text>
+  <rect x="400" y="120" width="190" height="70" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="495" y="142" text-anchor="middle" font-size="10">pub(crate) = crate only</text>
+  <text x="495" y="160" text-anchor="middle" font-size="10">pub(super) = parent only</text>
+  <text x="495" y="178" text-anchor="middle" font-size="10">pub(in path) = specific</text>
+  <line x1="75" y1="70" x2="70" y2="90" stroke="#333" stroke-width="1.5"/>
+  <line x1="75" y1="70" x2="70" y2="150" stroke="#333" stroke-width="1.5"/>
+  <line x1="130" y1="110" x2="200" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrowvis)"/>
+  <line x1="130" y1="170" x2="200" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrowvis)"/>
 </svg>
 
 ---
