@@ -1,24 +1,40 @@
 name: build
-on: [push, pull_request, workflow_dispatch]
+on: push
+
+permissions:
+  pages: write
+  id-token: write
+
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        include:
-          - os: "ubuntu-24.04"
-            python-version: "3.12"
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
     steps:
-    - name: checkout
-      uses: actions/checkout@v4
-    - name: python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5
+    - uses: actions/checkout@v6
+    - uses: actions/setup-python@v6
       with:
-        python-version: ${{ matrix.python-version }}
-        cache: "pip"
-    - name: bootstrap-pip
-      run: python -m pip install --upgrade pip
-    - name: bootstrap
-      run: python -m pip install pydmt
-    - name: pydmt
-      run: pydmt build
+        cache: pip
+    - uses: actions/setup-node@v6
+      with:
+        cache: npm
+    - uses: actions/cache@v5
+      with:
+        path: .rsconstruct
+        key: rsconstruct
+    - name: install rsconstruct
+      run: |
+        gh release download --repo veltzer/rsconstruct --pattern 'rsconstruct-linux-x86_64' --output /usr/local/bin/rsconstruct
+        chmod +x /usr/local/bin/rsconstruct
+      env:
+        GH_TOKEN: ${{ github.token }}
+    - name: install
+      run: |
+        rsconstruct tools install --yes
+        rsconstruct tools install-deps --yes
+    - name: build
+      run: rsconstruct build --verbose -j2
+    - name: status
+      run: rsconstruct status
+    - uses: actions/upload-pages-artifact@v3
+    - uses: actions/deploy-pages@v5
