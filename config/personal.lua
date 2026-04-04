@@ -1,18 +1,12 @@
-firstname = "Mark"
-surname = "Veltzer"
-fullname = firstname .. " " .. surname
-email = "mark.veltzer@gmail.com"
-domain = "veltzer.name"
-slug = "veltzer"
+FIRSTNAME = "Mark"
+SURNAME = "Veltzer"
+FULLNAME = FIRSTNAME .. " " .. SURNAME
+EMAIL = "mark.veltzer@gmail.com"
+SLUG = "veltzer"
 
-github_username = "veltzer"
-launchpad_username = "mark-veltzer"
+GITHUB_USERNAME = "veltzer"
+LAUNCHPAD_USERNAME = "mark-veltzer"
 
-key = "73C128F9"
-email_key = "mark.veltzer@gmail.com"
-key_signer = fullname .. " (signkey, never expires) <" .. email_key .. ">"
-
-origin = fullname .. " <" .. email .. ">"
-www_hostname = domain
-www_domainname = domain
-jsdoc_author = email .. " (" .. fullname .. ")"
+KEY = "73C128F9"
+EMAIL_KEY = "mark.veltzer@gmail.com"
+KEY_SIGNER = FULLNAME .. " (signkey, never expires) <" .. EMAIL_KEY .. ">"

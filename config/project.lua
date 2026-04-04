@@ -1,6 +1,6 @@
-name = "teaching-slides"
-description_short = "Slides for my teaching"
-keywords = {
+NAME = "teaching-slides"
+DESCRIPTION_SHORT = "Slides for my teaching"
+KEYWORDS = {
     "teaching",
     "slides",
     "powerpoint",
