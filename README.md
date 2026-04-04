@@ -16,6 +16,7 @@ chat with me at [![gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gi
 
 ## Slide numbers
 
+- Currently there are 50 courses in this repo.
 - Currently there are 77 odp files in this repo.
 - Currently there are 709 marp files in this repo.
 - Currently there are 17753 marp slides in this repo.
