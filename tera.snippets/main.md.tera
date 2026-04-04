@@ -4,5 +4,5 @@
 - Currently there are {{ git_count_files(pattern="marp/**/*.md") }} marp files in this repo.
 - Currently there are {{ shell_output(command="grep -R -- '^---$' marp | wc -l") }} marp slides in this repo.
 - Currently there are {{ shell_output(command="grep -r '<svg' marp/ --include='*.md' | wc -l") }} SVG diagrams in this repo.
-- Currently there are {{ shell_output(command="grep -rc '^|.*---.*|' marp/ --include='*.md' | cut -d: -f2 | paste -sd+ | bc") }} tables in this repo.
+- Currently there are {{ shell_output(command="grep -r '^|.*---.*|' marp/ --include='*.md' | wc -l") }} tables in this repo.
 - Currently there are {{ shell_output(command="grep -r 'class=.mermaid.' marp/ --include='*.md' | wc -l") }} mermaid diagrams in this repo.
