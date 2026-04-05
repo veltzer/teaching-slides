@@ -108,7 +108,7 @@ function render() {
         if (key === "name") return e.name;
         if (key === "slides") return e.slides || 0;
         if (key === "chapters") return e.chapters || 0;
-        if (key === "folder") return e.folder;
+        if (key === "folder") { const p = e.folder.split("/"); return p.length > 1 ? p[0] : ""; }
         if (key === "level") return LEVEL_ORDER[e.level] ?? 3;
         if (key === "category") return e.category || "";
         if (key === "duration") return e.dh || 0;
