@@ -55,9 +55,20 @@ def _collect(directory: Path, ext: str, result: list[Path]) -> None:
         _collect(sub, ext, result)
 
 
-def count_files(directory: Path, ext: str) -> int:
+def count_chapters(directory: Path, ext: str) -> int:
     """Count files with the given extension in a directory (non-recursive)."""
     return sum(1 for f in directory.iterdir() if f.is_file() and f.suffix == ext)
+
+
+def count_slides(directory: Path, ext: str) -> int:
+    """Count slides in all files with the given extension in a directory (non-recursive).
+    Each file contributes 1 slide (the first) plus one for each '---' separator line."""
+    total = 0
+    for f in directory.iterdir():
+        if f.is_file() and f.suffix == ext:
+            content = f.read_text(encoding="utf-8", errors="replace")
+            total += 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
+    return total
 
 
 def folder_label(rel_path: Path) -> str:
@@ -87,13 +98,15 @@ def build_entries(
     for course_dir in dirs:
         rel = course_dir.relative_to(source_dir)
         name = rel.name.replace("_", " ").replace("-", " ").title()
-        slides = count_files(course_dir, ext)
+        chapters = count_chapters(course_dir, ext)
+        slides = count_slides(course_dir, ext)
         pdf = pdf_path_for_course(rel, output_dir)
         folder = str(rel.parent) if rel.parent != Path(".") else ""
 
         entries.append(
             {
                 "name": name,
+                "chapters": chapters,
                 "slides": slides,
                 "folder": str(rel),
                 "folder_label": folder_label(rel.parent) if folder else "Root",

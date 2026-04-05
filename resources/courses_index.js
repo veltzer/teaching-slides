@@ -97,7 +97,9 @@ function render() {
         return true;
     });
 
-    totalEl.textContent = filtered.length + " of " + DATA.length + " courses";
+    const totalChapters = filtered.reduce((s, e) => s + (e.chapters || 0), 0);
+    const totalSlides = filtered.reduce((s, e) => s + (e.slides || 0), 0);
+    totalEl.textContent = filtered.length + " courses, " + totalChapters + " chapters, " + totalSlides + " slides";
     renderSubfolders(filtered);
 
     const getVal = (e, key) => {
@@ -110,6 +112,7 @@ function render() {
     const getLabel = (e, key) => {
         if (key === "folder") return e.folder_label || "Root";
         if (key === "slides") return e.slides + " slides";
+        if (key === "chapters") return e.chapters + " chapters";
         if (key === "name") return "All Courses";
         return "";
     };
@@ -142,9 +145,10 @@ function render() {
     for (const group of groups) {
         html += "<h2>" + group.label + ' <span class="count">(' + group.items.length + ")</span></h2><ul>";
         for (const item of group.items) {
+            const chaptersBadge = item.chapters ? '<span class="slides-badge">' + item.chapters + " chapters</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
-            html += "<li><span>" + item.name + "</span>" + slidesBadge + " " + pdfLink + "</li>";
+            html += "<li><span>" + item.name + "</span>" + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
         }
         html += "</ul>";
     }
