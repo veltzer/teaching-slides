@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Course Browser</title>
+<style>
+{{CSS}}
+</style>
+</head>
+<body>
+<div id="index-view">
+<h1>Course Browser</h1>
+<p id="total-count">{{TOTAL_COUNT}} courses</p>
+
+<div id="breadcrumb"></div>
+<div id="subfolders"></div>
+
+<div class="filters">
+<div class="filter-row">
+<label for="search">Search:</label>
+<div class="autocomplete-wrap">
+<input type="text" id="search" placeholder="Type to filter by name..." autocomplete="off">
+<div id="autocomplete-list" class="autocomplete-list"></div>
+</div>
+</div>
+<div class="filter-row">
+<label for="filter-slides">Slides:</label>
+<select id="filter-slides">
+<option value="">All sizes</option>
+</select>
+</div>
+<div class="filter-row">
+<label for="sort-primary">Sort by:</label>
+<select id="sort-primary">
+<option value="name" selected>Name</option>
+<option value="slides">Slides</option>
+<option value="folder">Folder</option>
+</select>
+<select id="sort-primary-dir">
+<option value="asc" selected>Asc</option>
+<option value="desc">Desc</option>
+</select>
+</div>
+</div>
+
+<div id="results"></div>
+
+</div>
+
+<script>
+const DATA = {{DATA_JSON}};
+{{JS}}
+</script>
+</body>
+</html>
