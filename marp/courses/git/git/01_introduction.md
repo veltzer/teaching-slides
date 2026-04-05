@@ -29,6 +29,9 @@
 - Gain deep understanding of Git internals
 ---
 ## History of Git
+
+![h:300](../../../../raw/linus_torvalds.jpg)
+
 - Created by Linus Torvalds in 2005
 - Born from Linux kernel development needs
 - Designed for speed and distributed development
