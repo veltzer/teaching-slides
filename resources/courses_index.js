@@ -150,8 +150,9 @@ function render() {
     let lastHeader = null;
     for (const item of filtered) {
         const h = getLabel(item, sort1);
+        const folderKey = sort1 === "folder" ? getVal(item, "folder") : "";
         if (h !== lastHeader) {
-            groups.push({ label: h, items: [] });
+            groups.push({ label: h, folderKey: folderKey, items: [] });
             lastHeader = h;
         }
         groups[groups.length - 1].items.push(item);
@@ -166,7 +167,10 @@ function render() {
     for (const group of groups) {
         const groupChapters = group.items.reduce((s, e) => s + (e.chapters || 0), 0);
         const groupSlides = group.items.reduce((s, e) => s + (e.slides || 0), 0);
-        html += '<h2>' + group.label +
+        const headerLabel = group.folderKey
+            ? '<a href="#" onclick="navigateFolder(\'' + group.folderKey.replace(/'/g, "\\'") + '\'); return false;">' + group.label + '</a>'
+            : group.label;
+        html += '<h2>' + headerLabel +
             ' <span class="count">(' + group.items.length + ' courses, ' +
             '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
             '<span class="stat-slides">' + groupSlides + ' slides</span>)</span></h2><ul>';
