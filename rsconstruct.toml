@@ -33,3 +33,15 @@ scan_dirs = ["marp"]
 [processor.pdfunite]
 output_dir = "_site/pdfunite"
 source_output_dir = "_site/marp"
+
+[processor.explicit]
+command = "scripts/build_index.py"
+inputs = [
+    "resources/index.html",
+    "resources/index.css",
+    "resources/index.js",
+]
+input_globs = [
+    "_site/courses/**/*.pdf",
+    "_site/pdfunite/**/*.pdf",
+]
