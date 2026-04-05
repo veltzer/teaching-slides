@@ -16,7 +16,8 @@ scan_dirs = ["marp"]
 
 [processor.marp]
 formats = [ "pdf" ]
-max_jobs = 4
+max_jobs = 2
+output_dir = "_site/marp"
 
 [processor.pylint]
 scan_dirs = ["scripts"]
@@ -34,3 +35,5 @@ scan_dirs = ["marp"]
 scan_dirs = ["marp"]
 
 [processor.pdfunite]
+output_dir = "_site/pdfunite"
+source_output_dir = "_site/marp"
