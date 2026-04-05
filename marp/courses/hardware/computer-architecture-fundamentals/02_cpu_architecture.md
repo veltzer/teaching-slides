@@ -611,7 +611,7 @@ for (int i = 0; i < N; i += 16)
 
 Where can a cache line be placed? This defines associativity:
 
-```
+```text
 Direct-mapped (1-way):     Each address maps to exactly one cache slot
 ┌───┬───┬───┬───┬───┬───┬───┬───┐
 │ 0 │ 1 │ 2 │ 3 │ 4 │ 5 │ 6 │ 7 │  ← cache slots
@@ -647,7 +647,7 @@ When a cache set is full and a new line must be loaded, which line is evicted?
 | RRIP | Re-Reference Interval Prediction | Intel L3 |
 
 **LRU example (4-way set):**
-```
+```text
 Access sequence: A B C D E
 
 After A: [A _ _ _]         A is most recent
@@ -664,7 +664,7 @@ After E: [E B C D]         A evicted (was LRU), E takes its place
 When the CPU writes data, when does it update main memory?
 
 **Write-Through:**
-```
+```text
 CPU Write ──> Update Cache ──> Update Memory (immediately)
                                   │
                               Slow but simple
@@ -672,7 +672,7 @@ CPU Write ──> Update Cache ──> Update Memory (immediately)
 ```
 
 **Write-Back:**
-```
+```text
 CPU Write ──> Update Cache ──> Mark line "dirty"
                                   │
                               Memory updated only on eviction
@@ -693,7 +693,7 @@ Modern CPUs typically use **write-back + write-allocate**.
 In multi-core systems, each core has its own L1/L2 cache. If two cores
 cache the same memory address, writes by one core must be visible to others.
 
-```
+```text
     Core 0                 Core 1
 ┌──────────┐          ┌──────────┐
 │ L1 Cache │          │ L1 Cache │
@@ -723,7 +723,7 @@ four states:
 | **S**hared | Line is clean, may be in other caches too |
 | **I**nvalid | Line is not valid, treat as cache miss |
 
-```
+```text
 State transitions (simplified):
 
      Read hit     ┌───┐
@@ -776,7 +776,7 @@ L1-dcache-load-misses,LLC-loads,LLC-load-misses ./my_program
 
 ## Summary: CPU Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │                    Modern CPU Overview                   │
 ├─────────────────────────────────────────────────────────┤

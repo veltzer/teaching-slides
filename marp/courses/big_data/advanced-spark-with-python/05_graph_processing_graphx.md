@@ -352,7 +352,7 @@ degrees.join(vertices, "id").select(
 
 ## Graph Structure Visualization
 
-```
+```text
 Social Network Graph:
                 ┌───────┐
          ┌─────│ Hank  │─────┐
@@ -429,7 +429,7 @@ communities.select("id", "name", "department", "label") \
 
 ## PageRank Algorithm Explanation
 
-```
+```text
 Iteration 0 (uniform):
 ┌─────┐     ┌─────┐     ┌─────┐
 │ A   │     │ B   │     │ C   │
@@ -686,7 +686,7 @@ pr_results.vertices.count()  # Trigger caching
 
 ## Real-World Graph Applications
 
-```
+```text
 ┌────────────────────────────────────────────┐
 │         Graph Processing Use Cases          │
 ├────────────────────────────────────────────┤

@@ -211,19 +211,19 @@ TARGET   = program
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+    $(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 # Auto-generate dependency files
 %.o: %.c
-	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+    $(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 -include $(DEPS)
 
 clean:
-	rm -f $(OBJS) $(DEPS) $(TARGET)
+    rm -f $(OBJS) $(DEPS) $(TARGET)
 
 run: $(TARGET)
-	./$(TARGET)
+    ./$(TARGET)
 ```
 
 Key features:
@@ -335,16 +335,16 @@ TARGET   = build/program
 all: $(TARGET)
 
 $(TARGET): $(OBJS) | build
-	$(CC) -o $@ $^
+    $(CC) -o $@ $^
 
 build/%.o: src/%.c | build
-	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+    $(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 build:
-	mkdir -p build
+    mkdir -p build
 
 clean:
-	rm -rf build
+    rm -rf build
 
 -include $(wildcard build/*.d)
 ```

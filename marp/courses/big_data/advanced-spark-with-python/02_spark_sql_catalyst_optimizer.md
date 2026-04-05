@@ -374,7 +374,7 @@ spark.sql("ANALYZE TABLE orders COMPUTE STATISTICS FOR COLUMNS "
 
 ## Catalyst Optimizer Phases Explained
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │                  SQL Query / DataFrame API         │
 └───────────────────────┬──────────────────────────┘
@@ -470,7 +470,7 @@ result = (
 #       Scan customers
 ```
 
-```
+```text
 Before Optimization:           After Optimization:
 ┌──────────┐                   ┌──────────┐
 │  Filter   │                   │  Join    │
@@ -560,7 +560,7 @@ print(f"Speedup (builtin vs python): {python_time/builtin_time:.1f}x")
 
 ## UDF Data Flow: Python vs Pandas
 
-```
+```text
 Python UDF (row-by-row):
 ┌─────────┐     ┌──────────┐     ┌─────────┐
 │  JVM    │────>│ Serialize │────>│ Python  │
@@ -733,7 +733,7 @@ spark.conf.set(
 
 ## AQE: Before vs After
 
-```
+```text
 Without AQE:
 ┌──────────┐
 │ 200 shuffle partitions (default)          │

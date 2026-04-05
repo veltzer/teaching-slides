@@ -408,7 +408,7 @@ query.awaitTermination()
 
 ## Streaming Data Flow Architecture
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │                    Data Sources                       │
 │  ┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐     │
@@ -548,7 +548,7 @@ query = (
 
 ## Window Types Visualization
 
-```
+```text
 Tumbling Window (5 min, no overlap):
 Time: |--0--|--5--|--10-|--15-|--20-|--25-|
       [=====][=====][=====][=====][=====]
@@ -665,7 +665,7 @@ query = (
 
 ## Stream-Stream Join: State Management
 
-```
+```text
 Stream 1 (Impressions)          Stream 2 (Clicks)
      │                               │
      v                               v
@@ -896,7 +896,7 @@ spark.conf.set("spark.streaming.backpressure.enabled", "true")
 
 ## Exactly-Once Semantics Flow
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │         Exactly-Once Guarantee                │
 │                                              │

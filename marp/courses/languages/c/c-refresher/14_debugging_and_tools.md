@@ -506,31 +506,31 @@ release: $(TARGET)
 
 # Link
 $(TARGET): $(OBJS) | build
-	$(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
+    $(CC) $(LDFLAGS) -o $@ $^ $(LDLIBS)
 
 # Compile with auto-dependencies
 build/%.o: src/%.c | build
-	$(CC) $(CFLAGS) -MMD -MP -c $< -o $@
+    $(CC) $(CFLAGS) -MMD -MP -c $< -o $@
 
 build:
-	mkdir -p build
+    mkdir -p build
 
 # Run tests
 test: debug
-	./$(TARGET) --test
+    ./$(TARGET) --test
 
 # Static analysis
 check:
-	cppcheck --enable=all --suppress=missingIncludeSystem src/
-	clang-tidy src/*.c -- $(CFLAGS)
+    cppcheck --enable=all --suppress=missingIncludeSystem src/
+    clang-tidy src/*.c -- $(CFLAGS)
 
 # Memory check
 memcheck: debug
-	valgrind --leak-check=full --show-leak-kinds=all \
-	         --track-origins=yes ./$(TARGET)
+    valgrind --leak-check=full --show-leak-kinds=all \
+             --track-origins=yes ./$(TARGET)
 
 clean:
-	rm -rf build
+    rm -rf build
 
 -include $(DEPS)
 ```

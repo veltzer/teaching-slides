@@ -18,7 +18,7 @@
 ---
 ## Parquet File Format Overview
 
-```
+```text
 Parquet File Structure:
 
 ┌──────────────────────────────────────────────────┐
@@ -62,7 +62,7 @@ Parquet File Structure:
 ---
 ## Row Groups and Column Chunks
 
-```
+```text
 Row Group sizing and layout:
 
 ┌──────────────────────────────────────────────────┐
@@ -92,7 +92,7 @@ Row Group sizing and layout:
 ---
 ## Page-Level Statistics and Column Index
 
-```
+```text
 Page-level statistics enable fine-grained skipping:
 
 Column Chunk for "amount" column:
@@ -205,7 +205,7 @@ df.select("user_id", "address.city").explain()
 ---
 ## Projection Pushdown Savings
 
-```
+```text
 Reading a 200-column Parquet table:
 
 Without projection pushdown (SELECT *):
@@ -282,7 +282,7 @@ spark.conf.set(
 ---
 ## ORC Format Comparison
 
-```
+```text
 ORC (Optimized Row Columnar):
 
 ┌──────────────────────────────────────────────────┐
@@ -425,7 +425,7 @@ query = (
 ---
 ## Format Selection Guide
 
-```
+```text
 Choosing the right format:
 
 ┌────────────────────────────────────────────────┐
@@ -461,7 +461,7 @@ Choosing the right format:
 ---
 ## Delta Lake Overview
 
-```
+```text
 Delta Lake adds ACID transactions on top of Parquet:
 
 ┌──────────────────────────────────────────────────┐
@@ -729,7 +729,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 ---
 ## Z-Ordering Visualization
 
-```
+```text
 Without Z-ordering (random distribution):
 File 1: user_id=[A,B,C,D,E], date=[01,02,03,04,05]
 File 2: user_id=[A,C,E,F,G], date=[01,03,05,06,07]
@@ -759,7 +759,7 @@ Query: WHERE user_id = 'A'
 ---
 ## Apache Iceberg Overview
 
-```
+```text
 Iceberg Table Structure:
 
 ┌──────────────────────────────────────────────────┐
@@ -871,7 +871,7 @@ spark.sql("""
 ---
 ## Partitioning Strategies
 
-```
+```text
 Partitioning types:
 
 1. Range Partitioning (most common):
@@ -955,7 +955,7 @@ df.write \
 ---
 ## Partitioning Best Practices
 
-```
+```text
 Partition column selection:
 
 ┌──────────────────────────────────────────────────┐
@@ -990,7 +990,7 @@ Partition count guidelines:
 ---
 ## Bucketing vs Partitioning
 
-```
+```text
 Partitioning:
 ┌───────────────────────────────────────────┐
 │  Physically separates data into folders    │
@@ -1070,7 +1070,7 @@ orders.write \
 ---
 ## The Small File Problem
 
-```
+```text
 The small file problem:
 
 ┌──────────────────────────────────────────────────┐
@@ -1159,7 +1159,7 @@ compact_partition("/data/events", "event_date", "2024-06-14")
 ---
 ## File Compaction Strategy
 
-```
+```text
 Compaction scheduling:
 
 ┌──────────────────────────────────────────────────┐
@@ -1271,7 +1271,7 @@ history.select(
 ---
 ## Summary: Data Formats and Storage
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │  Key Takeaways                                    │
 ├──────────────────────────────────────────────────┤

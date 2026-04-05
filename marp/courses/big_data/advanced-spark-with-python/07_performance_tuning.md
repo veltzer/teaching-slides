@@ -38,7 +38,7 @@
 ---
 ## Understanding the DAG
 
-```
+```text
 Example DAG for a Join + Aggregation:
 
 Job 0:
@@ -119,7 +119,7 @@ query.explain(mode="codegen")
 ---
 ## Shuffle Deep Dive
 
-```
+```text
 What happens during a shuffle:
 
 Writer Side (Map stage):
@@ -256,7 +256,7 @@ df_by_key = df.repartition(100, "user_id")
 ---
 ## Memory Architecture
 
-```
+```text
 Executor Memory Layout (spark.executor.memory = 8g):
 
 ┌──────────────────────────────────────────────┐
@@ -392,7 +392,7 @@ partition_stats.describe().show()
 ---
 ## Data Skew Solutions
 
-```
+```text
 Solution 1: Salting (for joins)
 ┌────────────────────────────────────────────┐
 │  Original key: "hot_user_123"               │
@@ -546,7 +546,7 @@ spark.conf.set(
 ---
 ## AQE: How It Works
 
-```
+```text
 Without AQE (static planning):
 ┌──────────────────────────────────────────────┐
 │  Plan at compile time:                        │
@@ -662,7 +662,7 @@ base_df.unpersist()
 ---
 ## When to Cache and When Not To
 
-```
+```text
 CACHE when:
 ┌──────────────────────────────────────────┐
 │  * DataFrame used in 2+ actions           │
@@ -801,7 +801,7 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ---
 ## Performance Tuning Checklist
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │       Performance Tuning Checklist            │
 ├──────────────────────────────────────────────┤

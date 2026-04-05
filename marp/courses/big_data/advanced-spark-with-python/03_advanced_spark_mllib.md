@@ -446,7 +446,7 @@ label_indexer = StringIndexer(
 
 ## ML Pipeline Data Flow
 
-```
+```text
 ┌────────────┐
 │  Raw Data  │
 │ (CSV/Parq) │
@@ -866,7 +866,7 @@ balanced_train.groupBy("churn").count().show()
 
 ## Model Serving Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │              Training Pipeline                │
 │                                              │
@@ -898,7 +898,7 @@ balanced_train.groupBy("churn").count().show()
 
 ## Production ML Pipeline Checklist
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │     Production ML Pipeline Checklist         │
 ├─────────────────────────────────────────────┤
