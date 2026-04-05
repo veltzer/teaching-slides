@@ -167,9 +167,15 @@ function render() {
     for (const group of groups) {
         const groupChapters = group.items.reduce((s, e) => s + (e.chapters || 0), 0);
         const groupSlides = group.items.reduce((s, e) => s + (e.slides || 0), 0);
-        const headerLabel = group.folderKey
-            ? '<a href="#" onclick="navigateFolder(\'' + group.folderKey.replace(/'/g, "\\'") + '\'); return false;">' + group.label + '</a>'
-            : group.label;
+        let headerLabel = group.label;
+        if (group.folderKey) {
+            const fParts = group.folderKey.split("/");
+            headerLabel = fParts.map((p, idx) => {
+                const path = fParts.slice(0, idx + 1).join("/");
+                const label = p.replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+                return '<a href="#" onclick="navigateFolder(\'' + path.replace(/'/g, "\\'") + '\'); return false;">' + label + '</a>';
+            }).join(' <span class="breadcrumb-sep">/</span> ');
+        }
         html += '<h2>' + headerLabel +
             ' <span class="count">(' + group.items.length + ' courses, ' +
             '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
