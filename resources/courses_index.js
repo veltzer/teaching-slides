@@ -11,6 +11,7 @@ const sort1El = document.getElementById("sort-primary");
 const sort1DirEl = document.getElementById("sort-primary-dir");
 const resultsEl = document.getElementById("results");
 const totalEl = document.getElementById("total-count");
+const numbersEl = document.getElementById("show-numbers");
 
 const ALL_SLIDE_COUNTS = [...new Set(DATA.map(e => e.slides).filter(s => s > 0))].sort((a, b) => a - b);
 slidesEl.innerHTML = '<option value="">All sizes</option>' +
@@ -146,11 +147,14 @@ function render() {
     }
     for (const group of groups) {
         html += "<h2>" + group.label + ' <span class="count">(' + group.items.length + ")</span></h2><ul>";
-        for (const item of group.items) {
+        const showNumbers = numbersEl.checked;
+        for (let i = 0; i < group.items.length; i++) {
+            const item = group.items[i];
+            const numPrefix = showNumbers ? '<span class="course-number">' + (i + 1) + ".</span> " : "";
             const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " chapters</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
-            html += "<li><span>" + item.name + "</span>" + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
+            html += "<li>" + numPrefix + "<span>" + item.name + "</span>" + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
         }
         html += "</ul>";
     }
@@ -233,6 +237,7 @@ searchEl.addEventListener("input", function() {
     render();
 });
 slidesEl.addEventListener("change", render);
+numbersEl.addEventListener("change", render);
 sort1El.addEventListener("change", render);
 sort1DirEl.addEventListener("change", render);
 

@@ -1,3 +1,17 @@
+---
+tags:
+  - infrastructure:linux
+  - concepts:kernel
+  - concepts:device-drivers
+  - concepts:bsp
+  - infrastructure:embedded
+level: advanced
+category: operating-systems
+duration_hours: 32
+audience:
+  - audiences:developers
+  - audiences:sysadmins
+---
 # Linux Kernel Advanced Topics
 
 ![h:400](../../../../raw/linus_torvalds.jpg)

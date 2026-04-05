@@ -1,3 +1,18 @@
+---
+tags:
+  - infrastructure:linux
+  - audiences:sysadmin
+  - infrastructure:storage
+  - networking:networking
+  - security:security
+  - practices:monitoring
+level: intermediate
+category: operating-systems
+duration_hours: 40
+audience:
+  - audiences:sysadmins
+  - audiences:devops
+---
 # Linux System Administration
 
 ![h:400](../../../../raw/linus_torvalds.jpg)
