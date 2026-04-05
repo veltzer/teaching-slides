@@ -154,7 +154,8 @@ function render() {
             const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " chapters</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
-            html += "<li>" + numPrefix + "<span>" + item.name + "</span>" + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
+            const nameHtml = item.pdf ? '<a href="' + item.pdf + '" target="_blank">' + item.name + "</a>" : "<span>" + item.name + "</span>";
+            html += "<li>" + numPrefix + nameHtml + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
         }
         html += "</ul>";
     }
