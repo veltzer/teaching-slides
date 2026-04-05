@@ -15,15 +15,15 @@
 - Typically target low-hanging fruit and unpatched systems
 - Common tools: Metasploit, LOIC, pre-packaged exploit kits
 
-```
+```txt
 ┌─────────────────────────────────────────────┐
-│           Script Kiddie Profile              │
+│           Script Kiddie Profile             │
 ├─────────────────────────────────────────────┤
 │  Skill Level:   Low                         │
-│  Motivation:    Curiosity / bragging rights  │
-│  Tools:         Pre-built exploit kits       │
-│  Targets:       Random / opportunistic       │
-│  Risk Level:    Low-Medium                   │
+│  Motivation:    Curiosity / bragging rights │
+│  Tools:         Pre-built exploit kits      │
+│  Targets:       Random / opportunistic      │
+│  Risk Level:    Low-Medium                  │
 │  Persistence:   Low                         │
 └─────────────────────────────────────────────┘
 ```
@@ -46,7 +46,7 @@
 - Use dark web markets for buying/selling exploits and data
 - Example: FIN7 group responsible for over $1 billion in theft from financial institutions
 
-```
+```txt
 ┌──────────────────────────────────────────────────┐
 │         Cybercrime Economy                       │
 ├──────────────────────────────────────────────────┤
@@ -99,9 +99,9 @@
 ---
 ## Motivation Deep Dive
 
-```
+```txt
 ┌──────────────────────────────────────────────────────────┐
-│                  Hacker Motivation Matrix                 │
+│                  Hacker Motivation Matrix                │
 ├──────────────┬──────────────┬────────────────────────────┤
 │  Motivation  │  Actor Type  │  Typical Attack            │
 ├──────────────┼──────────────┼────────────────────────────┤

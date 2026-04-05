@@ -232,7 +232,7 @@ int main(void) {
 
 Typical output on x86-64 Linux:
 
-```
+```txt
 char                 1 bytes
 short                2 bytes
 int                  4 bytes
@@ -281,7 +281,7 @@ int main(void) {
 
 When integers of different types are mixed in expressions, C promotes them:
 
-```
+```txt
 ┌─────────────────────────────────────────────┐
 │         Implicit Conversion Hierarchy       │
 │                                             │

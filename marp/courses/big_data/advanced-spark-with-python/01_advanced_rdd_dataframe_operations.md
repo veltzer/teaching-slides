@@ -378,10 +378,10 @@ print(f"Processed {result_rdd.count()} records")
 
 ## Data Flow: mapPartitions
 
-```
+```txt
 ┌─────────────────────────────────────────────┐
-│              Driver Program                  │
-│  rdd.mapPartitions(process_partition)        │
+│              Driver Program                 │
+│  rdd.mapPartitions(process_partition)       │
 └───────────────┬─────────────────────────────┘
                 │
     ┌───────────┼───────────┐
