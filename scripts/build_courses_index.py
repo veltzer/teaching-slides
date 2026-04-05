@@ -14,7 +14,7 @@ Defaults match rsconstruct's pdfunite processor defaults:
     --source-dir  marp/courses
     --output-dir  out/pdfunite
     --source-ext  .md
-    --out         out/pdfunite/index.html
+    --out         _site/index.html
 """
 
 import argparse
@@ -129,8 +129,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--output-dir",
-        default="out/pdfunite",
-        help="Directory containing merged PDFs (default: out/pdfunite)",
+        default="_site",
+        help="Directory containing merged PDFs (default: _site)",
     )
     parser.add_argument(
         "--source-ext",
