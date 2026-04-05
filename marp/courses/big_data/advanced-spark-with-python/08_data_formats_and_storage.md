@@ -18,112 +18,81 @@
 ---
 ## Parquet File Format Overview
 
-```text
-Parquet File Structure:
-
-┌──────────────────────────────────────────────────┐
-│  Magic Number: "PAR1" (4 bytes)                   │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Row Group 0                                     │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Column Chunk: user_id                    │    │
-│  │  ┌────────┐ ┌────────┐ ┌────────┐        │    │
-│  │  │ Page 0 │ │ Page 1 │ │ Page 2 │        │    │
-│  │  └────────┘ └────────┘ └────────┘        │    │
-│  │  Column Chunk: event_type                 │    │
-│  │  ┌────────┐ ┌────────┐                    │    │
-│  │  │ Page 0 │ │ Page 1 │                    │    │
-│  │  └────────┘ └────────┘                    │    │
-│  │  Column Chunk: amount                     │    │
-│  │  ┌────────┐ ┌────────┐                    │    │
-│  │  │ Page 0 │ │ Page 1 │                    │    │
-│  │  └────────┘ └────────┘                    │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  Row Group 1                                     │
-│  ┌──────────────────────────────────────────┐    │
-│  │  (same structure as above)                │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-├──────────────────────────────────────────────────┤
-│  Footer                                          │
-│  ┌──────────────────────────────────────────┐    │
-│  │  File metadata (schema, row group info)   │    │
-│  │  Column metadata (encodings, statistics)  │    │
-│  │  Key-value metadata (user properties)     │    │
-│  └──────────────────────────────────────────┘    │
-├──────────────────────────────────────────────────┤
-│  Footer Length (4 bytes)                          │
-│  Magic Number: "PAR1" (4 bytes)                   │
-└──────────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 380" xmlns="http://www.w3.org/2000/svg">
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Parquet File Structure</text>
+  <!-- Magic Number -->
+  <rect x="50" y="25" width="520" height="25" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="310" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Magic Number: "PAR1" (4 bytes)</text>
+  <!-- Row Group 0 -->
+  <rect x="50" y="55" width="520" height="130" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Row Group 0</text>
+  <rect x="70" y="85" width="480" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="310" y="103" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Column Chunk: user_id [Page 0] [Page 1] [Page 2]</text>
+  <rect x="70" y="118" width="480" height="28" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="310" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Column Chunk: event_type [Page 0] [Page 1]</text>
+  <rect x="70" y="151" width="480" height="28" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="1"/>
+  <text x="310" y="169" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Column Chunk: amount [Page 0] [Page 1]</text>
+  <!-- Row Group 1 -->
+  <rect x="50" y="195" width="520" height="40" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Row Group 1 (same structure)</text>
+  <!-- Footer -->
+  <rect x="50" y="245" width="520" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Footer</text>
+  <text x="310" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">File metadata (schema, row group info)</text>
+  <text x="310" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Column metadata (encodings, statistics) | Key-value metadata</text>
+  <!-- Footer length + magic -->
+  <rect x="50" y="320" width="520" height="25" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="310" y="337" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Footer Length (4 bytes) | Magic Number: "PAR1" (4 bytes)</text>
+</svg>
 
 ---
 ## Row Groups and Column Chunks
 
-```text
-Row Group sizing and layout:
-
-┌──────────────────────────────────────────────────┐
-│  Row Group (default size: 128 MB)                 │
-│                                                  │
-│  Contains N rows (e.g., 1,000,000 rows)          │
-│                                                  │
-│  Column Chunks stored contiguously:               │
-│  ┌─────────────┐                                 │
-│  │ col_a data  │ <- all values for col_a          │
-│  │ (encoded +  │    in this row group              │
-│  │  compressed)│                                  │
-│  ├─────────────┤                                 │
-│  │ col_b data  │ <- all values for col_b          │
-│  ├─────────────┤                                 │
-│  │ col_c data  │ <- all values for col_c          │
-│  └─────────────┘                                 │
-│                                                  │
-│  Each column chunk has:                           │
-│  - Encoding (PLAIN, DICTIONARY, RLE, DELTA)       │
-│  - Compression (SNAPPY, GZIP, ZSTD, LZ4)         │
-│  - Statistics (min, max, null_count, num_values)  │
-│  - Page index (offset, size per page)             │
-└──────────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg">
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Row Group Sizing and Layout</text>
+  <rect x="30" y="28" width="560" height="240" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Row Group (default: 128 MB, ~1M rows)</text>
+  <text x="310" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Column Chunks stored contiguously:</text>
+  <rect x="60" y="80" width="230" height="35" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="175" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">col_a data (encoded + compressed)</text>
+  <rect x="60" y="120" width="230" height="35" rx="6" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="175" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">col_b data</text>
+  <rect x="60" y="160" width="230" height="35" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="175" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">col_c data</text>
+  <!-- Details -->
+  <rect x="320" y="80" width="250" height="115" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="445" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Each column chunk has:</text>
+  <text x="445" y="118" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Encoding: PLAIN, DICT, RLE, DELTA</text>
+  <text x="445" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Compression: SNAPPY, GZIP, ZSTD</text>
+  <text x="445" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Statistics: min, max, null_count</text>
+  <text x="445" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Page index: offset, size per page</text>
+</svg>
 
 ---
 ## Page-Level Statistics and Column Index
 
-```text
-Page-level statistics enable fine-grained skipping:
-
-Column Chunk for "amount" column:
-┌────────────────────────────────────────────────┐
-│  Page 0                                        │
-│  ┌──────────────────────────────────────┐      │
-│  │  Statistics: min=10, max=500         │      │
-│  │  null_count=0, num_values=10000      │      │
-│  │  Data: [10, 45, 102, 500, ...]       │      │
-│  └──────────────────────────────────────┘      │
-│                                                │
-│  Page 1                                        │
-│  ┌──────────────────────────────────────┐      │
-│  │  Statistics: min=501, max=2000       │      │
-│  │  null_count=3, num_values=9997       │      │
-│  │  Data: [501, 780, 2000, ...]         │      │
-│  └──────────────────────────────────────┘      │
-│                                                │
-│  Page 2                                        │
-│  ┌──────────────────────────────────────┐      │
-│  │  Statistics: min=2001, max=9999      │      │
-│  │  null_count=1, num_values=9999       │      │
-│  │  Data: [2001, 3500, 9999, ...]       │      │
-│  └──────────────────────────────────────┘      │
-│                                                │
-│  Query: WHERE amount > 5000                    │
-│  -> Skip Page 0 (max=500 < 5000)               │
-│  -> Skip Page 1 (max=2000 < 5000)              │
-│  -> Read Page 2 (max=9999 >= 5000)             │
-└────────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Page-Level Statistics (Column: "amount")</text>
+  <rect x="40" y="30" width="250" height="65" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="165" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Page 0</text>
+  <text x="165" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">min=10, max=500</text>
+  <text x="165" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">null_count=0, num_values=10000</text>
+  <rect x="40" y="105" width="250" height="65" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="165" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Page 1</text>
+  <text x="165" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">min=501, max=2000</text>
+  <text x="165" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">null_count=3, num_values=9997</text>
+  <rect x="40" y="180" width="250" height="65" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="165" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Page 2</text>
+  <text x="165" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">min=2001, max=9999</text>
+  <text x="165" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">null_count=1, num_values=9999</text>
+  <!-- Query box -->
+  <rect x="330" y="30" width="260" height="215" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="460" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">WHERE amount > 5000</text>
+  <text x="460" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">SKIP Page 0 (max=500)</text>
+  <text x="460" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">SKIP Page 1 (max=2000)</text>
+  <text x="460" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#c62828" font-weight="bold">READ Page 2 (max=9999)</text>
+  <text x="460" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Only 1 of 3 pages read!</text>
+</svg>
 
 ---
 ## Predicate Pushdown
@@ -425,38 +394,51 @@ query = (
 ---
 ## Format Selection Guide
 
-```text
-Choosing the right format:
-
-┌────────────────────────────────────────────────┐
-│  Is this a streaming / message use case?       │
-│  ┌─────┐                                      │
-│  │ Yes ├──> Use Avro (schema evolution,        │
-│  │     │    Kafka-friendly, row-based)         │
-│  └──┬──┘                                      │
-│     │ No                                       │
-│     v                                          │
-│  Is this an analytics / OLAP workload?         │
-│  ┌─────┐                                      │
-│  │ Yes ├──> Is Hive the primary engine?        │
-│  │     │    ┌─────┐                            │
-│  │     │    │ Yes ├──> Use ORC                 │
-│  │     │    └──┬──┘                            │
-│  │     │       │ No                            │
-│  │     │       v                               │
-│  │     │    Use Parquet                        │
-│  └──┬──┘                                      │
-│     │ No                                       │
-│     v                                          │
-│  Need ACID / time travel / MERGE?              │
-│  ┌─────┐                                      │
-│  │ Yes ├──> Use Delta Lake or Iceberg          │
-│  └──┬──┘                                      │
-│     │ No                                       │
-│     v                                          │
-│  Use Parquet (safe default)                    │
-└────────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-fs" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Choosing the Right Format</text>
+  <!-- Q1: Streaming? -->
+  <rect x="30" y="30" width="300" height="30" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="180" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Streaming / message use case?</text>
+  <line x1="330" y1="45" x2="380" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="350" y="38" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">Yes</text>
+  <rect x="385" y="30" width="200" height="30" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="485" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Use Avro</text>
+  <!-- Q2: Analytics? -->
+  <line x1="180" y1="60" x2="180" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="195" y="75" font-family="Arial, sans-serif" font-size="10" fill="#c62828">No</text>
+  <rect x="30" y="85" width="300" height="30" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="180" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Analytics / OLAP workload?</text>
+  <line x1="330" y1="100" x2="380" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="350" y="93" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">Yes</text>
+  <!-- Sub-question: Hive? -->
+  <rect x="385" y="85" width="200" height="30" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="485" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Hive primary engine?</text>
+  <line x1="485" y1="115" x2="440" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-fs)"/>
+  <text x="440" y="135" font-family="Arial, sans-serif" font-size="9" fill="#2e7d32">Yes</text>
+  <rect x="385" y="145" width="90" height="25" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="430" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Use ORC</text>
+  <line x1="485" y1="115" x2="530" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-fs)"/>
+  <text x="530" y="135" font-family="Arial, sans-serif" font-size="9" fill="#c62828">No</text>
+  <rect x="490" y="145" width="105" height="25" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="543" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">Use Parquet</text>
+  <!-- Q3: ACID? -->
+  <line x1="180" y1="115" x2="180" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="195" y="130" font-family="Arial, sans-serif" font-size="10" fill="#c62828">No</text>
+  <rect x="30" y="140" width="300" height="30" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="180" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Need ACID / time travel / MERGE?</text>
+  <line x1="330" y1="155" x2="380" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="345" y="175" font-family="Arial, sans-serif" font-size="10" fill="#2e7d32">Yes</text>
+  <rect x="385" y="190" width="200" height="30" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="485" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7b1fa2">Use Delta Lake / Iceberg</text>
+  <!-- Default -->
+  <line x1="180" y1="170" x2="180" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow-fs)"/>
+  <text x="195" y="190" font-family="Arial, sans-serif" font-size="10" fill="#c62828">No</text>
+  <rect x="80" y="205" width="200" height="30" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="180" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2e7d32">Use Parquet (safe default)</text>
+</svg>
 
 ---
 ## Delta Lake Overview

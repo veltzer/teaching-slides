@@ -374,44 +374,40 @@ spark.sql("ANALYZE TABLE orders COMPUTE STATISTICS FOR COLUMNS "
 
 ## Catalyst Optimizer Phases Explained
 
-```text
-┌──────────────────────────────────────────────────┐
-│                  SQL Query / DataFrame API         │
-└───────────────────────┬──────────────────────────┘
-                        v
-┌──────────────────────────────────────────────────┐
-│  Phase 1: PARSING                                 │
-│  SQL string --> Unresolved Logical Plan            │
-│  (column names are just strings, no types)         │
-└───────────────────────┬──────────────────────────┘
-                        v
-┌──────────────────────────────────────────────────┐
-│  Phase 2: ANALYSIS                                │
-│  Resolve columns, tables, functions using Catalog  │
-│  Unresolved Plan --> Resolved Logical Plan          │
-└───────────────────────┬──────────────────────────┘
-                        v
-┌──────────────────────────────────────────────────┐
-│  Phase 3: LOGICAL OPTIMIZATION                    │
-│  Apply rule-based optimizations:                   │
-│  - Predicate pushdown                              │
-│  - Column pruning                                  │
-│  - Constant folding                                │
-│  - Boolean simplification                          │
-└───────────────────────┬──────────────────────────┘
-                        v
-┌──────────────────────────────────────────────────┐
-│  Phase 4: PHYSICAL PLANNING                       │
-│  Generate multiple physical plans                  │
-│  Cost-Based Optimizer selects cheapest plan         │
-└───────────────────────┬──────────────────────────┘
-                        v
-┌──────────────────────────────────────────────────┐
-│  Phase 5: CODE GENERATION (Tungsten)              │
-│  Whole-stage codegen: generate Java bytecode       │
-│  for CPU-efficient execution                       │
-└──────────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 580" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-cat" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- SQL Query -->
+  <rect x="110" y="5" width="400" height="40" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">SQL Query / DataFrame API</text>
+  <line x1="310" y1="45" x2="310" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow-cat)"/>
+  <!-- Phase 1 -->
+  <rect x="60" y="65" width="500" height="55" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Phase 1: PARSING</text>
+  <text x="310" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">SQL string --> Unresolved Logical Plan (names as strings, no types)</text>
+  <line x1="310" y1="120" x2="310" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow-cat)"/>
+  <!-- Phase 2 -->
+  <rect x="60" y="140" width="500" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="310" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Phase 2: ANALYSIS</text>
+  <text x="310" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Resolve columns, tables, functions using Catalog</text>
+  <line x1="310" y1="195" x2="310" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow-cat)"/>
+  <!-- Phase 3 -->
+  <rect x="60" y="215" width="500" height="75" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="310" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Phase 3: LOGICAL OPTIMIZATION</text>
+  <text x="310" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Predicate pushdown, Column pruning,</text>
+  <text x="310" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Constant folding, Boolean simplification</text>
+  <line x1="310" y1="290" x2="310" y2="305" stroke="#333" stroke-width="2" marker-end="url(#arrow-cat)"/>
+  <!-- Phase 4 -->
+  <rect x="60" y="310" width="500" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="310" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Phase 4: PHYSICAL PLANNING</text>
+  <text x="310" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Generate physical plans; CBO selects cheapest</text>
+  <line x1="310" y1="365" x2="310" y2="380" stroke="#333" stroke-width="2" marker-end="url(#arrow-cat)"/>
+  <!-- Phase 5 -->
+  <rect x="60" y="385" width="500" height="55" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Phase 5: CODE GENERATION (Tungsten)</text>
+  <text x="310" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Whole-stage codegen: Java bytecode for CPU-efficient execution</text>
+</svg>
 
 ---
 
@@ -470,26 +466,53 @@ result = (
 #       Scan customers
 ```
 
-```text
-Before Optimization:           After Optimization:
-┌──────────┐                   ┌──────────┐
-│  Filter   │                   │  Join    │
-│region=N   │                   │          │
-└────┬─────┘                   └──┬───┬───┘
-     v                            v   v
-┌──────────┐               ┌──────┐ ┌──────┐
-│  Filter   │               │Filter│ │Filter│
-│amount>500│               │amt>  │ │rgn=  │
-└────┬─────┘               │500   │ │North │
-     v                     └──┬───┘ └──┬───┘
-┌──────────┐                  v        v
-│  Join    │               ┌──────┐ ┌──────┐
-└──┬───┬───┘               │Orders│ │Cust. │
-   v   v                   │ Scan │ │ Scan │
-┌────┐┌────┐               └──────┘ └──────┘
-│Ord.││Cst.│
-└────┘└────┘
-```
+<svg viewBox="0 0 620 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-pp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Before Optimization title -->
+  <text x="130" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Before Optimization</text>
+  <!-- Filter region=N -->
+  <rect x="60" y="30" width="140" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="130" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Filter region=N</text>
+  <line x1="130" y1="65" x2="130" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Filter amount>500 -->
+  <rect x="60" y="90" width="140" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="130" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Filter amount>500</text>
+  <line x1="130" y1="125" x2="130" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Join -->
+  <rect x="60" y="150" width="140" height="35" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="130" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Join</text>
+  <line x1="95" y1="185" x2="75" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <line x1="165" y1="185" x2="185" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Scans -->
+  <rect x="30" y="215" width="90" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="75" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Orders Scan</text>
+  <rect x="140" y="215" width="90" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="185" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Cust. Scan</text>
+  <!-- Arrow between -->
+  <text x="310" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#333">--></text>
+  <!-- After Optimization title -->
+  <text x="490" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">After Optimization</text>
+  <!-- Join (top) -->
+  <rect x="420" y="30" width="140" height="35" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="490" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Join</text>
+  <line x1="455" y1="65" x2="420" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <line x1="525" y1="65" x2="560" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Filter amt>500 -->
+  <rect x="350" y="100" width="140" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="420" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Filter amt>500</text>
+  <line x1="420" y1="135" x2="420" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Filter rgn=North -->
+  <rect x="490" y="100" width="140" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="560" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Filter rgn=North</text>
+  <line x1="560" y1="135" x2="560" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrow-pp)"/>
+  <!-- Scans -->
+  <rect x="370" y="160" width="100" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="420" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Orders Scan</text>
+  <rect x="510" y="160" width="100" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="560" y="182" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Cust. Scan</text>
+</svg>
 
 ---
 
@@ -560,33 +583,66 @@ print(f"Speedup (builtin vs python): {python_time/builtin_time:.1f}x")
 
 ## UDF Data Flow: Python vs Pandas
 
-```text
-Python UDF (row-by-row):
-┌─────────┐     ┌──────────┐     ┌─────────┐
-│  JVM    │────>│ Serialize │────>│ Python  │
-│ Row 1   │     │ (pickle)  │     │ func()  │
-└─────────┘     └──────────┘     └────┬────┘
-                                      │
-┌─────────┐     ┌──────────┐     ┌────v────┐
-│  JVM    │<────│Deserialize│<────│ Result  │
-│ Result  │     │ (pickle)  │     │         │
-└─────────┘     └──────────┘     └─────────┘
-   x N rows (very slow!)
-
-Pandas UDF (batch):
-┌─────────┐     ┌──────────┐     ┌─────────┐
-│  JVM    │────>│  Arrow   │────>│ Python  │
-│ Batch   │     │ (zero-   │     │ pandas  │
-│ (10K    │     │  copy)   │     │ vectord │
-│  rows)  │     └──────────┘     └────┬────┘
-└─────────┘                           │
-┌─────────┐     ┌──────────┐     ┌────v────┐
-│  JVM    │<────│  Arrow   │<────│ Result  │
-│ Result  │     │ (zero-   │     │ Series  │
-│ Batch   │     │  copy)   │     │         │
-└─────────┘     └──────────┘     └─────────┘
-   x N/10K batches (much faster!)
-```
+<svg viewBox="0 0 620 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-udf" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Python UDF title -->
+  <text x="310" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c62828">Python UDF (row-by-row)</text>
+  <!-- JVM Row -->
+  <rect x="30" y="35" width="110" height="40" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="85" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">JVM</text>
+  <text x="85" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Row 1</text>
+  <line x1="140" y1="55" x2="190" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <!-- Serialize -->
+  <rect x="195" y="35" width="110" height="40" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="250" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Serialize</text>
+  <text x="250" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(pickle)</text>
+  <line x1="305" y1="55" x2="355" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <!-- Python func -->
+  <rect x="360" y="35" width="110" height="40" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="415" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Python func()</text>
+  <!-- Return arrow -->
+  <line x1="415" y1="75" x2="415" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="360" y="100" width="110" height="30" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="415" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Result</text>
+  <line x1="360" y1="115" x2="305" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="195" y="100" width="110" height="30" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="250" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Deserialize</text>
+  <line x1="195" y1="115" x2="140" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="30" y="100" width="110" height="30" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="85" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">JVM Result</text>
+  <text x="520" y="80" font-family="Arial, sans-serif" font-size="11" fill="#c62828" font-weight="bold">x N rows</text>
+  <text x="520" y="95" font-family="Arial, sans-serif" font-size="11" fill="#c62828">(very slow!)</text>
+  <!-- Pandas UDF title -->
+  <text x="310" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Pandas UDF (batch)</text>
+  <!-- JVM Batch -->
+  <rect x="30" y="185" width="110" height="50" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="85" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">JVM Batch</text>
+  <text x="85" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(10K rows)</text>
+  <line x1="140" y1="210" x2="190" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <!-- Arrow (zero-copy) -->
+  <rect x="195" y="185" width="110" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="250" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Arrow</text>
+  <text x="250" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(zero-copy)</text>
+  <line x1="305" y1="210" x2="355" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <!-- Python pandas -->
+  <rect x="360" y="185" width="110" height="50" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="415" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Python pandas</text>
+  <text x="415" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">vectorized</text>
+  <!-- Return -->
+  <line x1="415" y1="235" x2="415" y2="255" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="360" y="260" width="110" height="30" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="415" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Result Series</text>
+  <line x1="360" y1="275" x2="305" y2="275" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="195" y="260" width="110" height="30" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="250" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Arrow</text>
+  <line x1="195" y1="275" x2="140" y2="275" stroke="#333" stroke-width="2" marker-end="url(#arrow-udf)"/>
+  <rect x="30" y="260" width="110" height="30" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="85" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">JVM Result</text>
+  <text x="520" y="240" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32" font-weight="bold">x N/10K batches</text>
+  <text x="520" y="255" font-family="Arial, sans-serif" font-size="11" fill="#2e7d32">(much faster!)</text>
+</svg>
 
 ---
 
@@ -733,24 +789,52 @@ spark.conf.set(
 
 ## AQE: Before vs After
 
-```text
-Without AQE:
-┌──────────┐
-│ 200 shuffle partitions (default)          │
-├──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬─...─┤
-│1M│1M│5K│5K│5K│5K│5K│5K│5K│5K│5K│5K│ ... │
-└──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴─...─┘
-  ^skew         ^many small partitions
-
-With AQE:
-┌──────────┐
-│ Optimized partitions                      │
-├─────┬─────┬─────────────┬────────────────┤
-│500K │500K │ 50K         │ 50K            │
-│(1_a)│(1_b)│(merged 2-10)│(merged 11-20)  │
-└─────┴─────┴─────────────┴────────────────┘
-  ^split skew   ^coalesced small partitions
-```
+<svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-aqe2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Without AQE -->
+  <text x="310" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#c62828">Without AQE (200 shuffle partitions)</text>
+  <rect x="30" y="30" width="70" height="50" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="65" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">1M</text>
+  <text x="65" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c62828">skew!</text>
+  <rect x="105" y="30" width="70" height="50" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="140" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">1M</text>
+  <text x="140" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c62828">skew!</text>
+  <rect x="180" y="30" width="35" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="198" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5K</text>
+  <rect x="220" y="30" width="35" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="238" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5K</text>
+  <rect x="260" y="30" width="35" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="278" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5K</text>
+  <rect x="300" y="30" width="35" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="318" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5K</text>
+  <rect x="340" y="30" width="35" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="358" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5K</text>
+  <rect x="380" y="30" width="35" height="50" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="398" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#999">empty</text>
+  <rect x="420" y="30" width="35" height="50" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="438" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#999">empty</text>
+  <text x="480" y="58" font-family="Arial, sans-serif" font-size="14" fill="#999">...</text>
+  <text x="310" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">many empty/tiny partitions + skewed partitions</text>
+  <!-- Arrow -->
+  <line x1="310" y1="115" x2="310" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow-aqe2)"/>
+  <text x="340" y="133" font-family="Arial, sans-serif" font-size="11" fill="#333" font-weight="bold">AQE</text>
+  <!-- With AQE -->
+  <text x="310" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">With AQE (optimized partitions)</text>
+  <rect x="50" y="170" width="120" height="50" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">500K (1_a)</text>
+  <text x="110" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2e7d32">split skew</text>
+  <rect x="180" y="170" width="120" height="50" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="240" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">500K (1_b)</text>
+  <text x="240" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#2e7d32">split skew</text>
+  <rect x="310" y="170" width="130" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="375" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">50K (merged 2-10)</text>
+  <text x="375" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#0277bd">coalesced</text>
+  <rect x="450" y="170" width="130" height="50" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="515" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">50K (merged 11-20)</text>
+  <text x="515" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#0277bd">coalesced</text>
+</svg>
 
 ---
 

@@ -408,36 +408,59 @@ query.awaitTermination()
 
 ## Streaming Data Flow Architecture
 
-```text
-┌──────────────────────────────────────────────────────┐
-│                    Data Sources                       │
-│  ┌────────┐  ┌────────┐  ┌────────┐  ┌────────┐     │
-│  │ Kafka  │  │ Kinesis│  │ Files  │  │ Socket │     │
-│  └───┬────┘  └───┬────┘  └───┬────┘  └───┬────┘     │
-└──────┼───────────┼───────────┼───────────┼───────────┘
-       │           │           │           │
-       v           v           v           v
-┌──────────────────────────────────────────────────────┐
-│              Structured Streaming Engine               │
-│                                                       │
-│  ┌─────────────────────────────────────────────────┐  │
-│  │  Micro-batch Processing                          │  │
-│  │  ┌──────┐  ┌──────────┐  ┌────────────────┐     │  │
-│  │  │Parse │->│Transform │->│ Aggregate/Join │     │  │
-│  │  └──────┘  └──────────┘  └────────────────┘     │  │
-│  └─────────────────────────────────────────────────┘  │
-│                                                       │
-│  State Store   Checkpoint     Watermark               │
-│  (RocksDB)     (HDFS/S3)     (Late data)              │
-└──────────────────────┬───────────────────────────────┘
-                       │
-       ┌───────────────┼───────────────┐
-       v               v               v
-┌────────────┐  ┌────────────┐  ┌────────────┐
-│ Delta Lake │  │   Kafka    │  │  Console   │
-│ (append)   │  │ (publish)  │  │ (debug)    │
-└────────────┘  └────────────┘  └────────────┘
-```
+<svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ss" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Data Sources -->
+  <rect x="30" y="5" width="560" height="60" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Data Sources</text>
+  <rect x="55" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
+  <text x="95" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Kafka</text>
+  <rect x="155" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
+  <text x="195" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Kinesis</text>
+  <rect x="255" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
+  <text x="295" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Files</text>
+  <rect x="355" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
+  <text x="395" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Socket</text>
+  <!-- Arrows down -->
+  <line x1="95" y1="65" x2="200" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <line x1="195" y1="65" x2="260" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <line x1="295" y1="65" x2="340" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <line x1="395" y1="65" x2="400" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <!-- Streaming Engine -->
+  <rect x="30" y="105" width="560" height="170" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Structured Streaming Engine</text>
+  <!-- Micro-batch pipeline -->
+  <rect x="60" y="140" width="500" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="120" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Parse</text>
+  <line x1="155" y1="165" x2="195" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <text x="260" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Transform</text>
+  <line x1="310" y1="165" x2="350" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <text x="430" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Aggregate / Join</text>
+  <text x="140" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Micro-batch Processing</text>
+  <!-- State/Checkpoint/Watermark -->
+  <rect x="70" y="205" width="130" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="135" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">State Store (RocksDB)</text>
+  <rect x="220" y="205" width="130" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="285" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Checkpoint (HDFS/S3)</text>
+  <rect x="370" y="205" width="130" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="435" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Watermark (Late data)</text>
+  <!-- Arrows to sinks -->
+  <line x1="180" y1="275" x2="130" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <line x1="310" y1="275" x2="310" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <line x1="440" y1="275" x2="490" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
+  <!-- Sinks -->
+  <rect x="50" y="315" width="160" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="130" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Delta Lake</text>
+  <text x="130" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(append)</text>
+  <rect x="230" y="315" width="160" height="45" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="310" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Kafka</text>
+  <text x="310" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(publish)</text>
+  <rect x="410" y="315" width="160" height="45" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="490" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Console</text>
+  <text x="490" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(debug)</text>
+</svg>
 
 ---
 
@@ -548,28 +571,55 @@ query = (
 
 ## Window Types Visualization
 
-```text
-Tumbling Window (5 min, no overlap):
-Time: |--0--|--5--|--10-|--15-|--20-|--25-|
-      [=====][=====][=====][=====][=====]
-      Win 1  Win 2  Win 3  Win 4  Win 5
-
-Sliding Window (10 min window, 5 min slide):
-Time: |--0--|--5--|--10-|--15-|--20-|--25-|
-      [===========]
-            [===========]
-                  [===========]
-                        [===========]
-      Win 1  Win 2  Win 3  Win 4
-      (overlap between consecutive windows)
-
-Session Window (5 min gap):
-Time: |--0--|--5--|--10-|--15-|--20-|--25-|
-Events: * * *           * *      *  * *
-      [=======]       [====]   [========]
-      Session 1       Sess 2   Session 3
-      (gap > 5min triggers new session)
-```
+<svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tumbling Window -->
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Tumbling Window (5 min, no overlap)</text>
+  <!-- Timeline -->
+  <line x1="30" y1="40" x2="590" y2="40" stroke="#999" stroke-width="1"/>
+  <text x="30" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666">0</text>
+  <text x="140" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666">5</text>
+  <text x="250" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666">10</text>
+  <text x="360" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666">15</text>
+  <text x="470" y="55" font-family="Arial, sans-serif" font-size="10" fill="#666">20</text>
+  <!-- Windows -->
+  <rect x="30" y="60" width="108" height="22" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="84" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 1</text>
+  <rect x="140" y="60" width="108" height="22" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="194" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 2</text>
+  <rect x="250" y="60" width="108" height="22" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="304" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 3</text>
+  <rect x="360" y="60" width="108" height="22" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="414" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 4</text>
+  <rect x="470" y="60" width="108" height="22" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="524" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 5</text>
+  <!-- Sliding Window -->
+  <text x="310" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Sliding Window (10 min window, 5 min slide)</text>
+  <line x1="30" y1="130" x2="590" y2="130" stroke="#999" stroke-width="1"/>
+  <rect x="30" y="140" width="218" height="20" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" fill-opacity="0.7"/>
+  <text x="139" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 1</text>
+  <rect x="140" y="162" width="218" height="20" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" fill-opacity="0.7"/>
+  <text x="249" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 2</text>
+  <rect x="250" y="184" width="218" height="20" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" fill-opacity="0.7"/>
+  <text x="359" y="199" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 3</text>
+  <rect x="360" y="206" width="218" height="20" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" fill-opacity="0.7"/>
+  <text x="469" y="221" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Win 4</text>
+  <text x="310" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">(overlap between consecutive windows)</text>
+  <!-- Session Window -->
+  <text x="310" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">Session Window (5 min gap)</text>
+  <line x1="30" y1="280" x2="590" y2="280" stroke="#999" stroke-width="1"/>
+  <!-- Events -->
+  <circle cx="50" cy="278" r="4" fill="#7b1fa2"/><circle cx="90" cy="278" r="4" fill="#7b1fa2"/><circle cx="120" cy="278" r="4" fill="#7b1fa2"/>
+  <circle cx="320" cy="278" r="4" fill="#7b1fa2"/><circle cx="350" cy="278" r="4" fill="#7b1fa2"/>
+  <circle cx="440" cy="278" r="4" fill="#7b1fa2"/><circle cx="480" cy="278" r="4" fill="#7b1fa2"/><circle cx="510" cy="278" r="4" fill="#7b1fa2"/>
+  <!-- Session boxes -->
+  <rect x="30" y="290" width="120" height="20" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="90" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Session 1</text>
+  <rect x="300" y="290" width="70" height="20" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="335" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Sess 2</text>
+  <rect x="420" y="290" width="110" height="20" rx="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="475" y="304" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Session 3</text>
+  <text x="310" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">(gap > 5min triggers new session)</text>
+</svg>
 
 ---
 
@@ -665,30 +715,43 @@ query = (
 
 ## Stream-Stream Join: State Management
 
-```text
-Stream 1 (Impressions)          Stream 2 (Clicks)
-     │                               │
-     v                               v
-┌──────────┐                   ┌──────────┐
-│ Watermark│                   │ Watermark│
-│ 2 hours  │                   │ 3 hours  │
-└────┬─────┘                   └────┬─────┘
-     │                               │
-     v                               v
-┌──────────────────────────────────────────┐
-│           State Store (RocksDB)           │
-│                                          │
-│  Impressions State    Clicks State        │
-│  ┌─────────────┐     ┌─────────────┐     │
-│  │ imp_1: t=10 │     │ clk_1: t=11 │     │
-│  │ imp_2: t=12 │     │ clk_2: t=15 │     │
-│  │ imp_3: t=14 │     │             │     │
-│  └─────────────┘     └─────────────┘     │
-│                                          │
-│  State cleaned up when watermark passes  │
-│  beyond join time constraint              │
-└──────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ssj" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Stream 1 -->
+  <rect x="50" y="5" width="180" height="35" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="140" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Stream 1 (Impressions)</text>
+  <line x1="140" y1="40" x2="140" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow-ssj)"/>
+  <!-- Watermark 1 -->
+  <rect x="70" y="65" width="140" height="30" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="140" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Watermark: 2 hours</text>
+  <line x1="140" y1="95" x2="140" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow-ssj)"/>
+  <!-- Stream 2 -->
+  <rect x="390" y="5" width="180" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="480" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Stream 2 (Clicks)</text>
+  <line x1="480" y1="40" x2="480" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow-ssj)"/>
+  <!-- Watermark 2 -->
+  <rect x="410" y="65" width="140" height="30" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="480" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Watermark: 3 hours</text>
+  <line x1="480" y1="95" x2="480" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow-ssj)"/>
+  <!-- State Store -->
+  <rect x="40" y="125" width="540" height="155" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="310" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">State Store (RocksDB)</text>
+  <!-- Impressions State -->
+  <rect x="70" y="160" width="200" height="80" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="170" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#0277bd">Impressions State</text>
+  <text x="170" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">imp_1: t=10</text>
+  <text x="170" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">imp_2: t=12</text>
+  <text x="170" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">imp_3: t=14</text>
+  <!-- Clicks State -->
+  <rect x="350" y="160" width="200" height="80" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="450" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#7b1fa2">Clicks State</text>
+  <text x="450" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">clk_1: t=11</text>
+  <text x="450" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">clk_2: t=15</text>
+  <!-- Note -->
+  <text x="310" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">State cleaned up when watermark passes beyond join time constraint</text>
+</svg>
 
 ---
 
@@ -896,39 +959,43 @@ spark.conf.set("spark.streaming.backpressure.enabled", "true")
 
 ## Exactly-Once Semantics Flow
 
-```text
-┌──────────────────────────────────────────────┐
-│         Exactly-Once Guarantee                │
-│                                              │
-│  Source (Kafka)          Processing           │
-│  ┌──────────┐           ┌──────────┐         │
-│  │ Offsets  │           │ State    │         │
-│  │ tracked  │           │ check-   │         │
-│  │ in check-│           │ pointed  │         │
-│  │ point    │           │          │         │
-│  └────┬─────┘           └────┬─────┘         │
-│       │                      │               │
-│       v                      v               │
-│  ┌──────────────────────────────────────┐    │
-│  │     Checkpoint Directory              │    │
-│  │  /checkpoints/                        │    │
-│  │    ├── offsets/     (source offsets)   │    │
-│  │    ├── commits/     (batch commits)   │    │
-│  │    ├── state/       (operator state)  │    │
-│  │    └── metadata     (query metadata)  │    │
-│  └──────────────────────────────────────┘    │
-│       │                                      │
-│       v                                      │
-│  Sink (Idempotent write)                     │
-│  ┌──────────┐                                │
-│  │ Delta    │  ACID writes                   │
-│  │ Lake     │  ensure no duplicates          │
-│  └──────────┘                                │
-│                                              │
-│  On failure: replay from last committed      │
-│  checkpoint, reprocess the batch             │
-└──────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 370" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-eo" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">Exactly-Once Guarantee</text>
+  <!-- Source and Processing -->
+  <rect x="50" y="35" width="170" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="135" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Source (Kafka)</text>
+  <text x="135" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Offsets tracked</text>
+  <text x="135" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">in checkpoint</text>
+  <rect x="400" y="35" width="170" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="485" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Processing</text>
+  <text x="485" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">State</text>
+  <text x="485" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">checkpointed</text>
+  <!-- Arrows to checkpoint -->
+  <line x1="135" y1="105" x2="240" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow-eo)"/>
+  <line x1="485" y1="105" x2="380" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow-eo)"/>
+  <!-- Checkpoint Directory -->
+  <rect x="100" y="140" width="420" height="100" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Checkpoint Directory</text>
+  <text x="200" y="183" font-family="Arial, sans-serif" font-size="11" fill="#555">offsets/</text>
+  <text x="310" y="183" font-family="Arial, sans-serif" font-size="10" fill="#888">(source offsets)</text>
+  <text x="200" y="200" font-family="Arial, sans-serif" font-size="11" fill="#555">commits/</text>
+  <text x="310" y="200" font-family="Arial, sans-serif" font-size="10" fill="#888">(batch commits)</text>
+  <text x="200" y="217" font-family="Arial, sans-serif" font-size="11" fill="#555">state/</text>
+  <text x="310" y="217" font-family="Arial, sans-serif" font-size="10" fill="#888">(operator state)</text>
+  <text x="200" y="234" font-family="Arial, sans-serif" font-size="11" fill="#555">metadata</text>
+  <text x="310" y="234" font-family="Arial, sans-serif" font-size="10" fill="#888">(query metadata)</text>
+  <!-- Arrow to sink -->
+  <line x1="310" y1="240" x2="310" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrow-eo)"/>
+  <!-- Sink -->
+  <rect x="180" y="275" width="260" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="310" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Sink: Delta Lake</text>
+  <text x="310" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">ACID writes ensure no duplicates (idempotent)</text>
+  <!-- Note -->
+  <text x="310" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">On failure: replay from last committed checkpoint, reprocess the batch</text>
+</svg>
 
 ---
 

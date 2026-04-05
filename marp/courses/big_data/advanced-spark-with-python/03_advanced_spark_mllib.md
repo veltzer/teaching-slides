@@ -446,44 +446,61 @@ label_indexer = StringIndexer(
 
 ## ML Pipeline Data Flow
 
-```text
-┌────────────┐
-│  Raw Data  │
-│ (CSV/Parq) │
-└─────┬──────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│  Imputer   │────>│ Fill nulls with median        │
-└─────┬──────┘     └──────────────────────────────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│ String     │────>│ "Gold" -> 0, "Silver" -> 1   │
-│ Indexer    │     └──────────────────────────────┘
-└─────┬──────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│ OneHot     │────>│ 0 -> [1,0,0], 1 -> [0,1,0]  │
-│ Encoder    │     └──────────────────────────────┘
-└─────┬──────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│ Vector     │────>│ Combine all into one vector   │
-│ Assembler  │     │ [0.5, 1.2, 3.4, 1, 0, 0]    │
-└─────┬──────┘     └──────────────────────────────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│ Standard   │────>│ Normalize: mean=0, std=1     │
-│ Scaler     │     └──────────────────────────────┘
-└─────┬──────┘
-      v
-┌────────────┐     ┌──────────────────────────────┐
-│ Classifier │────>│ RandomForest / GBT / LR      │
-└─────┬──────┘     └──────────────────────────────┘
-      v
-┌────────────┐
-│ Predictions│
-└────────────┘
-```
+<svg viewBox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ml" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Raw Data -->
+  <rect x="60" y="5" width="130" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Raw Data</text>
+  <text x="125" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(CSV/Parquet)</text>
+  <line x1="125" y1="50" x2="125" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Imputer -->
+  <rect x="60" y="70" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="125" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Imputer</text>
+  <line x1="190" y1="87" x2="240" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="72" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Fill nulls with median</text>
+  <line x1="125" y1="105" x2="125" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- StringIndexer -->
+  <rect x="60" y="125" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="125" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StringIndexer</text>
+  <line x1="190" y1="142" x2="240" y2="142" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="127" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">"Gold" -> 0, "Silver" -> 1</text>
+  <line x1="125" y1="160" x2="125" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- OneHotEncoder -->
+  <rect x="60" y="180" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="125" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">OneHotEncoder</text>
+  <line x1="190" y1="197" x2="240" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="182" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">0 -> [1,0,0], 1 -> [0,1,0]</text>
+  <line x1="125" y1="215" x2="125" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- VectorAssembler -->
+  <rect x="60" y="235" width="130" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="125" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">VectorAssembler</text>
+  <line x1="190" y1="252" x2="240" y2="252" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="237" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Combine all into [0.5, 1.2, 3.4, 1, 0, 0]</text>
+  <line x1="125" y1="270" x2="125" y2="285" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- StandardScaler -->
+  <rect x="60" y="290" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="125" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StandardScaler</text>
+  <line x1="190" y1="307" x2="240" y2="307" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="292" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Normalize: mean=0, std=1</text>
+  <line x1="125" y1="325" x2="125" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Classifier -->
+  <rect x="60" y="345" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="125" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Classifier</text>
+  <line x1="190" y1="362" x2="240" y2="362" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="347" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">RandomForest / GBT / LR</text>
+  <line x1="125" y1="380" x2="125" y2="395" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Predictions -->
+  <rect x="60" y="400" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="125" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Predictions</text>
+</svg>
 
 ---
 
@@ -866,33 +883,39 @@ balanced_train.groupBy("churn").count().show()
 
 ## Model Serving Architecture
 
-```text
-┌─────────────────────────────────────────────┐
-│              Training Pipeline                │
-│                                              │
-│  Raw Data -> Features -> Train -> Evaluate   │
-│                                   │          │
-│                            Save Model        │
-│                                   │          │
-└───────────────────────────────────┼──────────┘
-                                    v
-                          ┌─────────────────┐
-                          │  MLflow Model    │
-                          │  Registry        │
-                          │  (versioned)     │
-                          └────────┬────────┘
-                                   │
-                    ┌──────────────┼──────────────┐
-                    v              v              v
-             ┌───────────┐ ┌───────────┐ ┌───────────┐
-             │  Batch     │ │ Streaming  │ │  REST API  │
-             │  Scoring   │ │ Scoring    │ │  Serving   │
-             │            │ │            │ │            │
-             │ Spark job  │ │ Structured │ │ MLflow     │
-             │ scheduled  │ │ Streaming  │ │ serve or   │
-             │ daily      │ │ real-time  │ │ custom     │
-             └───────────┘ └───────────┘ └───────────┘
-```
+<svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ms" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Training Pipeline -->
+  <rect x="80" y="5" width="460" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Training Pipeline</text>
+  <text x="310" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Raw Data --> Features --> Train --> Evaluate --> Save Model</text>
+  <line x1="310" y1="75" x2="310" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
+  <!-- MLflow Registry -->
+  <rect x="210" y="105" width="200" height="55" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="310" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">MLflow Model Registry</text>
+  <text x="310" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">(versioned)</text>
+  <!-- Arrows to serving options -->
+  <line x1="240" y1="160" x2="130" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
+  <line x1="310" y1="160" x2="310" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
+  <line x1="380" y1="160" x2="490" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
+  <!-- Batch Scoring -->
+  <rect x="40" y="200" width="180" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="130" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Batch Scoring</text>
+  <text x="130" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Spark job</text>
+  <text x="130" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">scheduled daily</text>
+  <!-- Streaming Scoring -->
+  <rect x="220" y="200" width="180" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="310" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Streaming Scoring</text>
+  <text x="310" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Structured Streaming</text>
+  <text x="310" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">real-time</text>
+  <!-- REST API -->
+  <rect x="400" y="200" width="180" height="70" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="490" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">REST API Serving</text>
+  <text x="490" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">MLflow serve</text>
+  <text x="490" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">or custom</text>
+</svg>
 
 ---
 

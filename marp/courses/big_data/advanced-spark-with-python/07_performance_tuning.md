@@ -38,34 +38,49 @@
 ---
 ## Understanding the DAG
 
-```text
-Example DAG for a Join + Aggregation:
-
-Job 0:
-┌──────────────────────────────────────────────┐
-│  Stage 0: Scan Table A                        │
-│  ┌────────┐   ┌────────────┐                  │
-│  │FileScan│──>│ Filter     │──> ShuffleWrite  │
-│  │Parquet │   │(pushdown)  │                  │
-│  └────────┘   └────────────┘                  │
-└──────────────────────────────────────────────┘
-
-┌���─────────────────────────────────────────────┐
-│  Stage 1: Scan Table B                        │
-│  ┌────────┐   ┌──────┐                        │
-│  │FileScan│──>│Select│──────> ShuffleWrite    │
-│  │Parquet │   │      │                        │
-│  └────────┘   └──────┘                        │
-└──────────────────────────────────────────────┘
-
-┌──────────────────────────────────────────────┐
-│  Stage 2: Join + Aggregate                    │
-│  ┌────────────┐   ┌──────┐   ┌───────────┐   │
-│  │ShuffleRead │──>│ Join │──>│ Aggregate │   │
-│  │(both sides)│   │      │   │           │   │
-│  └────────────┘   └──────┘   └───────────┘   │
-└──────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-dag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">DAG: Join + Aggregation</text>
+  <!-- Stage 0 -->
+  <rect x="20" y="30" width="570" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="50" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0277bd">Stage 0: Scan Table A</text>
+  <rect x="40" y="55" width="100" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="90" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">FileScan</text>
+  <text x="90" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Parquet</text>
+  <line x1="140" y1="72" x2="180" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="185" y="55" width="120" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="245" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Filter</text>
+  <text x="245" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">(pushdown)</text>
+  <line x1="305" y1="72" x2="345" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="55" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="410" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleWrite</text>
+  <!-- Stage 1 -->
+  <rect x="20" y="115" width="570" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="133" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Stage 1: Scan Table B</text>
+  <rect x="40" y="140" width="100" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="90" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">FileScan</text>
+  <text x="90" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Parquet</text>
+  <line x1="140" y1="157" x2="180" y2="157" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="185" y="140" width="100" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="235" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Select</text>
+  <line x1="285" y1="157" x2="345" y2="157" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="140" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="410" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleWrite</text>
+  <!-- Stage 2 -->
+  <rect x="20" y="200" width="570" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="50" y="218" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7b1fa2">Stage 2: Join + Aggregate</text>
+  <rect x="40" y="225" width="120" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="100" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleRead</text>
+  <text x="100" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">(both sides)</text>
+  <line x1="160" y1="242" x2="200" y2="242" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="205" y="225" width="100" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="255" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Join</text>
+  <line x1="305" y1="242" x2="345" y2="242" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="225" width="120" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="410" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Aggregate</text>
+</svg>
 
 ---
 ## Reading Execution Plans
@@ -119,42 +134,44 @@ query.explain(mode="codegen")
 ---
 ## Shuffle Deep Dive
 
-```text
-What happens during a shuffle:
-
-Writer Side (Map stage):
-┌───────────────────────────────────────────┐
-│  Executor                                  │
-│  ┌──────────┐   ┌─────────────────────┐    │
-│  │  Task    │──>│  Sort by partition   │    │
-│  │(process) │   │  key + spill to disk │    │
-│  └──────────┘   └─────────┬───────────┘    │
-│                           │                │
-│              ┌────────────┼────────────┐   │
-│              v            v            v   │
-│         ┌────────┐  ┌────────┐  ┌────────┐│
-│         │Part 0  │  │Part 1  │  │Part 2  ││
-│         │file    │  │file    │  │file    ││
-│         └────────┘  └────────┘  └────────┘│
-└───────────────────────────────────────────┘
-
-Reader Side (Reduce stage):
-┌───────────────────────────────────────────┐
-│  Executor (for Partition 0)                │
-│  ┌──────────────────────────────────────┐  │
-│  │ Fetch Part 0 from all map executors   │  │
-│  │ ┌──────┐ ┌──────┐ ┌──────┐           │  │
-│  │ │Exec 0│ │Exec 1│ │Exec 2│           │  │
-│  │ │Part 0│ │Part 0│ │Part 0│           │  │
-│  │ └──┬───┘ └──┬───┘ └──┬───┘           │  │
-│  │    └────────┼────────┘               │  │
-│  │             v                         │  │
-│  │    ┌──────────────┐                   │  │
-│  │    │ Merge + Sort │                   │  │
-│  │    └──────────────┘                   │  │
-│  └──────────────────────────────────────┘  │
-└───────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-sh" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Writer Side (Map stage)</text>
+  <rect x="30" y="25" width="560" height="150" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Executor</text>
+  <rect x="50" y="50" width="110" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="105" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Task (process)</text>
+  <line x1="160" y1="67" x2="200" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrow-sh)"/>
+  <rect x="205" y="50" width="200" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="305" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Sort by partition key</text>
+  <text x="305" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">+ spill to disk</text>
+  <line x1="250" y1="85" x2="130" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="305" y1="85" x2="305" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="360" y1="85" x2="480" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <rect x="70" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="130" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 0 file</text>
+  <rect x="245" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="305" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 1 file</text>
+  <rect x="420" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="480" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 2 file</text>
+  <text x="310" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Reader Side (Reduce stage)</text>
+  <rect x="30" y="210" width="560" height="155" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="228" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Executor (for Partition 0)</text>
+  <text x="310" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Fetch Part 0 from all map executors</text>
+  <rect x="80" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="135" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 0 Part 0</text>
+  <rect x="220" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="275" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 1 Part 0</text>
+  <rect x="360" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="415" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 2 Part 0</text>
+  <line x1="135" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="275" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="415" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <rect x="200" y="325" width="150" height="30" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="275" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Merge + Sort</text>
+</svg>
 
 ---
 ## Shuffle Configuration
@@ -256,40 +273,36 @@ df_by_key = df.repartition(100, "user_id")
 ---
 ## Memory Architecture
 
-```text
-Executor Memory Layout (spark.executor.memory = 8g):
-
-┌──────────────────────────────────────────────┐
-│  Total Container Memory                       │
-│  spark.executor.memory + memoryOverhead        │
-│  = 8g + max(384m, 0.1 * 8g) = 8g + 800m      │
-│  = 8.8 GB total                               │
-├──────────────────────────────────────────────┤
-│                                              │
-│  JVM Heap (8 GB)                             │
-│  ┌──────────────────────────────────────┐    │
-│  │  Reserved Memory (300 MB)             │    │
-│  ├──────────────────────────────────────┤    │
-│  │                                      │    │
-│  │  Spark Memory (0.6 * 8g = 4.8 GB)    │    │
-│  │  spark.memory.fraction = 0.6          │    │
-│  │  ┌────────────────┬─────────────────┐│    │
-│  │  │ Execution (60%)│ Storage (40%)   ││    │
-│  │  │ Shuffles, sorts│ Cached data     ││    │
-│  │  │ Joins, aggs    │ Broadcast vars  ││    │
-│  │  │    2.88 GB     │    1.92 GB      ││    │
-│  │  └────────────────┴─────────────────┘│    │
-│  │                                      │    │
-│  │  User Memory (0.4 * 8g = 3.2 GB)     │    │
-│  │  UDF data, internal metadata          │    │
-│  │                                      │    │
-│  └──────────────────────────────────────┘    │
-│                                              │
-│  Off-Heap / Overhead (800 MB)                │
-│  OS overhead, Python processes, etc.          │
-│                                              │
-└──────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 360" xmlns="http://www.w3.org/2000/svg">
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Executor Memory Layout (spark.executor.memory = 8g)</text>
+  <!-- Total Container -->
+  <rect x="20" y="25" width="580" height="320" rx="8" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
+  <text x="310" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Total Container: 8g + max(384m, 0.1*8g) = 8.8 GB</text>
+  <!-- JVM Heap -->
+  <rect x="40" y="55" width="540" height="240" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="310" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">JVM Heap (8 GB)</text>
+  <!-- Reserved -->
+  <rect x="60" y="85" width="500" height="25" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="310" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Reserved Memory (300 MB)</text>
+  <!-- Spark Memory -->
+  <rect x="60" y="118" width="500" height="100" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="310" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Spark Memory (0.6 * 8g = 4.8 GB)</text>
+  <rect x="80" y="145" width="230" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="195" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Execution (60%)</text>
+  <text x="195" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Shuffles, sorts, joins, aggs</text>
+  <text x="195" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">2.88 GB</text>
+  <rect x="320" y="145" width="230" height="60" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="435" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Storage (40%)</text>
+  <text x="435" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Cached data, broadcast vars</text>
+  <text x="435" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">1.92 GB</text>
+  <!-- User Memory -->
+  <rect x="60" y="225" width="500" height="55" rx="6" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
+  <text x="310" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">User Memory (0.4 * 8g = 3.2 GB)</text>
+  <text x="310" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">UDF data, internal metadata</text>
+  <!-- Off-Heap -->
+  <rect x="40" y="300" width="540" height="35" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="310" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Off-Heap / Overhead (800 MB) - OS overhead, Python processes</text>
+</svg>
 
 ---
 ## Memory Configuration Guide
@@ -546,35 +559,51 @@ spark.conf.set(
 ---
 ## AQE: How It Works
 
-```text
-Without AQE (static planning):
-┌──────────────────────────────────────────────┐
-│  Plan at compile time:                        │
-│  shuffle.partitions = 200 (fixed)             │
-│  Join strategy: SortMerge (decided upfront)   │
-│                                              │
-│  Result: 200 partitions, many empty/tiny      │
-│  ┌─┬─┬─┬──┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─┬─...─┐ │
-│  │5│ │ │9M│ │ │ │ │ │ │ │ │ │ │ │ │ │    │ │
-│  └─┴─┴─┴──┴─┴─┴─┴─┴─┴─┴─┴─┴─┴─┴─┴─┴─...─┘ │
-│              ^ skew    ^ many empty           │
-└──────────────────────────────────────────────┘
-
-With AQE (runtime optimization):
-┌──────────────────────────────────────────────┐
-│  Step 1: Run map stages, collect statistics   │
-│  Step 2: Re-optimize plan with real sizes     │
-│  Step 3: Coalesce small partitions            │
-│  Step 4: Split skewed partitions              │
-│                                              │
-│  Result: balanced partitions                  │
-│  ┌─────┬─────┬─────┬─────┬─────┬─────┐      │
-│  │ 3M  │ 3M  │ 3M  │ 1M  │ 1M  │ 1M  │      │
-│  │(sk1)│(sk2)│(sk3)│(co1)│(co2)│(co3)│      │
-│  └─────┴─────┴─────┴─────┴─────┴─────┘      │
-│    ^ split skew   ^ coalesced empty           │
-└──────────────────────────────────────────────┘
-```
+<svg viewBox="0 0 620 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-aqe7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Without AQE -->
+  <rect x="20" y="5" width="580" height="140" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="310" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828">Without AQE (static planning)</text>
+  <text x="310" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">shuffle.partitions = 200 (fixed), Join strategy decided upfront</text>
+  <text x="310" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Result: 200 partitions, many empty/tiny</text>
+  <rect x="40" y="75" width="55" height="30" rx="3" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="68" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">5</text>
+  <rect x="100" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <rect x="135" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <rect x="170" y="75" width="80" height="30" rx="3" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="210" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#c62828">9M skew!</text>
+  <rect x="255" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <rect x="290" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <rect x="325" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <rect x="360" y="75" width="30" height="30" rx="3" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1"/>
+  <text x="420" y="94" font-family="Arial, sans-serif" font-size="14" fill="#999">...</text>
+  <text x="310" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c62828">many empty partitions + skewed data</text>
+  <!-- Arrow -->
+  <line x1="310" y1="148" x2="310" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arrow-aqe7)"/>
+  <text x="345" y="167" font-family="Arial, sans-serif" font-size="12" fill="#333" font-weight="bold">AQE optimizes</text>
+  <!-- With AQE -->
+  <rect x="20" y="180" width="580" height="145" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="310" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">With AQE (runtime optimization)</text>
+  <text x="310" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Step 1: Run map stages, collect statistics | Step 2: Re-optimize | Step 3: Coalesce | Step 4: Split skew</text>
+  <text x="310" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Result: balanced partitions</text>
+  <rect x="50" y="250" width="120" height="35" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">3M (sk1)</text>
+  <text x="110" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2e7d32">split skew</text>
+  <rect x="180" y="250" width="120" height="35" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="240" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">3M (sk2)</text>
+  <text x="240" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2e7d32">split skew</text>
+  <rect x="310" y="250" width="120" height="35" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="370" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">3M (sk3)</text>
+  <text x="370" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#2e7d32">split skew</text>
+  <rect x="440" y="250" width="70" height="35" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="475" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">1M</text>
+  <text x="475" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0277bd">coalesced</text>
+  <rect x="515" y="250" width="70" height="35" rx="4" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="550" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#333">1M</text>
+  <text x="550" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#0277bd">coalesced</text>
+</svg>
 
 ---
 ## Dynamic Partition Pruning (DPP)
