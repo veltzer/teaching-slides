@@ -69,6 +69,39 @@ function renderBreadcrumb() {
     breadcrumbEl.innerHTML = html;
 }
 
+function getSubfolders(folder, entries) {
+    const prefix = folder ? folder + "/" : "";
+    const subs = new Map();
+    for (const e of entries) {
+        const path = e.folder;
+        if (prefix && !path.startsWith(prefix)) continue;
+        const rest = prefix ? path.substring(prefix.length) : path;
+        if (!rest) continue;
+        const slash = rest.indexOf("/");
+        if (slash === -1) continue;
+        const sub = rest.substring(0, slash);
+        subs.set(sub, (subs.get(sub) || 0) + 1);
+    }
+    return [...subs.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+}
+
+function renderSubfolders(filtered) {
+    const subs = getSubfolders(currentFolder, filtered);
+    if (subs.length === 0) {
+        subfoldersEl.innerHTML = "";
+        return;
+    }
+    subfoldersEl.innerHTML = subs.map(function(s) {
+        var name = s[0];
+        var count = s[1];
+        var path = currentFolder ? currentFolder + "/" + name : name;
+        var label = name.replace(/_/g, " ").replace(/-/g, " ");
+        return '<a class="subfolder-card" href="#" onclick="navigateFolder(\'' +
+            path.replace(/'/g, "\\'") + '\'); return false;">' +
+            label + ' <span class="subfolder-count">(' + count + ')</span></a>';
+    }).join("");
+}
+
 function render() {
     const search = searchEl.value.toLowerCase();
     const level = levelEl.value;
@@ -82,7 +115,6 @@ function render() {
     const sort2Dir = sort2DirEl.value === "asc" ? 1 : -1;
 
     renderBreadcrumb();
-    subfoldersEl.innerHTML = "";
 
     const filtered = DATA.filter(e => {
         if (currentFolder) {
@@ -102,6 +134,7 @@ function render() {
     totalEl.innerHTML = filtered.length + " courses, " +
         '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
         '<span class="stat-slides">' + totalSlides + " slides</span>";
+    renderSubfolders(filtered);
 
     const LEVEL_ORDER = {beginner: 0, intermediate: 1, advanced: 2};
     const getVal = (e, key) => {
