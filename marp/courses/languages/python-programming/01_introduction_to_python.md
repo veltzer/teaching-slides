@@ -1,4 +1,7 @@
 # Introduction to Python
+
+![h:500](../../../../raw/guido_van_rossum.jpg)
+
 ---
 ## What is Python?
 - Python is a high-level, general-purpose programming language

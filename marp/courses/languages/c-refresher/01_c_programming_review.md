@@ -4,6 +4,8 @@
 
 ## Introduction to C
 
+![h:300](../../../../raw/dennis_ritchie.jpg)
+
 - Developed by Dennis Ritchie at Bell Labs in 1972
 - Widely used in embedded systems, operating systems, and application development
 - Known for efficiency and low-level control
