@@ -37,11 +37,14 @@ source_output_dir = "_site/marp"
 [processor.explicit]
 command = "scripts/build_index.py"
 inputs = [
-    "resources/index.html",
-    "resources/index.css",
-    "resources/index.js",
+    "resources/courses_index.html",
+    "resources/courses_index.css",
+    "resources/courses_index.js",
 ]
 input_globs = [
     "_site/courses/**/*.pdf",
     "_site/pdfunite/**/*.pdf",
+]
+outputs = [
+    "_site/index.html",
 ]

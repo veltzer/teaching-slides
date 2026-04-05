@@ -142,7 +142,7 @@ def main() -> None:
         default=None,
         help="Output HTML file (default: <output-dir>/index.html)",
     )
-    args = parser.parse_args()
+    args, _ = parser.parse_known_args()
 
     source_dir = Path(args.source_dir)
     output_dir = Path(args.output_dir)
