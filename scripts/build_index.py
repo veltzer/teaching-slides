@@ -78,18 +78,18 @@ def folder_label(rel_path: Path) -> str:
     )
 
 
-def pdf_path_for_course(rel: Path, output_dir: Path) -> str | None:
-    """Compute the expected merged PDF path for a course directory."""
+def pdf_path_for_course(rel: Path, output_dir: Path, site_dir: Path) -> str | None:
+    """Compute the expected merged PDF path for a course directory, relative to site_dir."""
     parent = rel.parent
     leaf = rel.name
     pdf = output_dir / parent / f"{leaf}.pdf"
     if pdf.exists():
-        return str(pdf)
+        return str(pdf.relative_to(site_dir))
     return None
 
 
 def build_entries(
-    source_dir: Path, output_dir: Path, ext: str
+    source_dir: Path, output_dir: Path, site_dir: Path, ext: str
 ) -> list[dict[str, Any]]:
     """Build the list of course entries."""
     dirs = find_course_dirs(source_dir, ext)
@@ -100,7 +100,7 @@ def build_entries(
         name = rel.name.replace("_", " ").replace("-", " ").title()
         chapters = count_chapters(course_dir, ext)
         slides = count_slides(course_dir, ext)
-        pdf = pdf_path_for_course(rel, output_dir)
+        pdf = pdf_path_for_course(rel, output_dir, site_dir)
         folder = str(rel.parent) if rel.parent != Path(".") else ""
 
         entries.append(
@@ -142,8 +142,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--output-dir",
-        default="_site",
-        help="Directory containing merged PDFs (default: _site)",
+        default="_site/pdfunite",
+        help="Directory containing merged PDFs (default: _site/pdfunite)",
     )
     parser.add_argument(
         "--source-ext",
@@ -160,13 +160,14 @@ def main() -> None:
     source_dir = Path(args.source_dir)
     output_dir = Path(args.output_dir)
     ext = args.source_ext if args.source_ext.startswith(".") else f".{args.source_ext}"
-    out_file = Path(args.out) if args.out else output_dir / "index.html"
+    site_dir = output_dir.parent
+    out_file = Path(args.out) if args.out else site_dir / "index.html"
 
     if not source_dir.exists():
         print(f"Error: source directory '{source_dir}' does not exist.", file=sys.stderr)
         raise SystemExit(1)
 
-    entries = build_entries(source_dir, output_dir, ext)
+    entries = build_entries(source_dir, output_dir, site_dir, ext)
     html = generate_index(entries)
 
     out_file.parent.mkdir(parents=True, exist_ok=True)

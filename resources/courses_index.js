@@ -99,7 +99,9 @@ function render() {
 
     const totalChapters = filtered.reduce((s, e) => s + (e.chapters || 0), 0);
     const totalSlides = filtered.reduce((s, e) => s + (e.slides || 0), 0);
-    totalEl.textContent = filtered.length + " courses, " + totalChapters + " chapters, " + totalSlides + " slides";
+    totalEl.innerHTML = filtered.length + " courses, " +
+        '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
+        '<span class="stat-slides">' + totalSlides + " slides</span>";
     renderSubfolders(filtered);
 
     const getVal = (e, key) => {
@@ -145,7 +147,7 @@ function render() {
     for (const group of groups) {
         html += "<h2>" + group.label + ' <span class="count">(' + group.items.length + ")</span></h2><ul>";
         for (const item of group.items) {
-            const chaptersBadge = item.chapters ? '<span class="slides-badge">' + item.chapters + " chapters</span>" : "";
+            const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " chapters</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
             html += "<li><span>" + item.name + "</span>" + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
