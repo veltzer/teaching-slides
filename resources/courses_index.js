@@ -108,7 +108,7 @@ function render() {
         if (key === "name") return e.name;
         if (key === "slides") return e.slides || 0;
         if (key === "chapters") return e.chapters || 0;
-        if (key === "folder") { const p = e.folder.split("/"); return p.length > 1 ? p[0] : ""; }
+        if (key === "folder") { const p = e.folder.split("/"); return p.length > 1 ? p.slice(0, -1).join("/") : ""; }
         if (key === "level") return LEVEL_ORDER[e.level] ?? 3;
         if (key === "category") return e.category || "";
         if (key === "duration") return e.dh || 0;
@@ -118,7 +118,8 @@ function render() {
     const getLabel = (e, key) => {
         if (key === "folder") {
             const parts = e.folder.split("/");
-            return parts.length > 1 ? parts[0].replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "Root";
+            if (parts.length <= 1) return "Root";
+            return parts.slice(0, -1).map(p => p.replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase())).join(" / ");
         }
         if (key === "level") return (e.level || "No Level").charAt(0).toUpperCase() + (e.level || "No Level").slice(1);
         if (key === "category") return (e.category || "No Category").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
