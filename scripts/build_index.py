@@ -23,6 +23,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 ROOT = Path(__file__).resolve().parent.parent
 RESOURCES_DIR = ROOT / "resources"
 
@@ -78,6 +80,23 @@ def folder_label(rel_path: Path) -> str:
     )
 
 
+def parse_front_matter(directory: Path, ext: str) -> dict[str, Any]:
+    """Parse YAML front matter from the first file (alphabetically) in the directory."""
+    files = sorted(f for f in directory.iterdir() if f.is_file() and f.suffix == ext)
+    if not files:
+        return {}
+    content = files[0].read_text(encoding="utf-8", errors="replace")
+    if not content.startswith("---"):
+        return {}
+    end = content.find("\n---", 3)
+    if end == -1:
+        return {}
+    try:
+        return yaml.safe_load(content[3:end]) or {}
+    except yaml.YAMLError:
+        return {}
+
+
 def pdf_path_for_course(rel: Path, output_dir: Path, site_dir: Path) -> str | None:
     """Compute the expected merged PDF path for a course directory, relative to site_dir."""
     parent = rel.parent
@@ -102,6 +121,7 @@ def build_entries(
         slides = count_slides(course_dir, ext)
         pdf = pdf_path_for_course(rel, output_dir, site_dir)
         folder = str(rel.parent) if rel.parent != Path(".") else ""
+        fm = parse_front_matter(course_dir, ext)
 
         entries.append(
             {
@@ -111,10 +131,20 @@ def build_entries(
                 "folder": str(rel),
                 "folder_label": folder_label(rel.parent) if folder else "Root",
                 "pdf": pdf,
+                "level": fm.get("level", ""),
+                "category": fm.get("category", ""),
+                "duration_hours": fm.get("duration_hours", 0),
+                "tags": fm.get("tags", []),
+                "audience": fm.get("audience", []),
             }
         )
 
     return entries
+
+
+def make_options(values: list[str]) -> str:
+    """Generate HTML <option> tags from a sorted list of unique values."""
+    return "\n".join(f'<option value="{v}">{v}</option>' for v in sorted(set(values)) if v)
 
 
 def generate_index(entries: list[dict[str, Any]]) -> str:
@@ -123,11 +153,20 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
     js = (RESOURCES_DIR / "courses_index.js").read_text(encoding="utf-8")
     template = (RESOURCES_DIR / "courses_index.html").read_text(encoding="utf-8")
 
+    levels = [e["level"] for e in entries]
+    categories = [e["category"] for e in entries]
+    tags = [t for e in entries for t in e["tags"]]
+    audiences = [a for e in entries for a in e["audience"]]
+
     return (
         template.replace("{{CSS}}", css)
         .replace("{{JS}}", js)
         .replace("{{DATA_JSON}}", json.dumps(entries, ensure_ascii=False))
         .replace("{{TOTAL_COUNT}}", str(len(entries)))
+        .replace("{{LEVEL_OPTIONS}}", make_options(levels))
+        .replace("{{CATEGORY_OPTIONS}}", make_options(categories))
+        .replace("{{TAG_OPTIONS}}", make_options(tags))
+        .replace("{{AUDIENCE_OPTIONS}}", make_options(audiences))
     )
 
 

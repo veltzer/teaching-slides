@@ -6,42 +6,47 @@ let currentFolder = "";
 const breadcrumbEl = document.getElementById("breadcrumb");
 const subfoldersEl = document.getElementById("subfolders");
 const searchEl = document.getElementById("search");
-const slidesEl = document.getElementById("filter-slides");
+const levelEl = document.getElementById("filter-level");
+const categoryEl = document.getElementById("filter-category");
+const tagEl = document.getElementById("filter-tag");
+const audienceEl = document.getElementById("filter-audience");
+const durationEl = document.getElementById("filter-duration");
+const numbersEl = document.getElementById("show-numbers");
 const sort1El = document.getElementById("sort-primary");
 const sort1DirEl = document.getElementById("sort-primary-dir");
+const sort2El = document.getElementById("sort-secondary");
+const sort2DirEl = document.getElementById("sort-secondary-dir");
 const resultsEl = document.getElementById("results");
 const totalEl = document.getElementById("total-count");
-const numbersEl = document.getElementById("show-numbers");
 
-const ALL_SLIDE_COUNTS = [...new Set(DATA.map(e => e.slides).filter(s => s > 0))].sort((a, b) => a - b);
-slidesEl.innerHTML = '<option value="">All sizes</option>' +
-    ALL_SLIDE_COUNTS.map(s => '<option value="' + s + '">' + s + ' slides</option>').join("");
+// Compute duration days
+DATA.forEach(e => {
+    e.dh = e.duration_hours || 0;
+    e.duration_days = e.dh ? Math.round(e.dh / 8) : 0;
+});
 
-document.querySelector('label[for="filter-slides"]').textContent =
-    "Slides (" + ALL_SLIDE_COUNTS.length + "):";
+// Populate duration filter
+const ALL_DURATION_DAYS = [...new Set(DATA.map(e => e.duration_days).filter(d => d > 0))].sort((a, b) => a - b);
+durationEl.innerHTML = '<option value="">All durations</option>' +
+    ALL_DURATION_DAYS.map(d => '<option value="' + d + '">' + d + (d === 1 ? " day" : " days") + " / " + (d * 8) + "h</option>").join("");
+
+// Update filter labels with counts
+document.querySelector('label[for="filter-level"]').textContent =
+    "Level (" + new Set(DATA.map(e => e.level).filter(Boolean)).size + "):";
+document.querySelector('label[for="filter-category"]').textContent =
+    "Category (" + new Set(DATA.map(e => e.category).filter(Boolean)).size + "):";
+document.querySelector('label[for="filter-tag"]').textContent =
+    "Tag (" + new Set(DATA.flatMap(e => e.tags)).size + "):";
+document.querySelector('label[for="filter-duration"]').textContent =
+    "Duration (" + ALL_DURATION_DAYS.length + "):";
+document.querySelector('label[for="filter-audience"]').textContent =
+    "Audience (" + new Set(DATA.flatMap(e => e.audience)).size + "):";
 
 function navigateFolder(folder) {
     currentFolder = folder;
     history.pushState(null, "", folder ? "#folder=" + encodeURIComponent(folder) : "#");
     render();
     window.scrollTo(0, 0);
-}
-
-function getSubfolders(folder, entries) {
-    const prefix = folder ? folder + "/" : "";
-    const subs = new Map();
-    for (const e of entries) {
-        const path = e.folder;
-        if (folder && !path.startsWith(prefix)) continue;
-        if (!folder && !path) continue;
-        const rest = folder ? path.substring(prefix.length) : path;
-        if (!rest) continue;
-        const slash = rest.indexOf("/");
-        if (slash === -1) continue;
-        const sub = rest.substring(0, slash);
-        subs.set(sub, (subs.get(sub) || 0) + 1);
-    }
-    return [...subs.entries()].sort((a, b) => a[0].localeCompare(b[0]));
 }
 
 function renderBreadcrumb() {
@@ -64,37 +69,31 @@ function renderBreadcrumb() {
     breadcrumbEl.innerHTML = html;
 }
 
-function renderSubfolders(filtered) {
-    const subs = getSubfolders(currentFolder, filtered);
-    if (subs.length === 0) {
-        subfoldersEl.innerHTML = "";
-        return;
-    }
-    subfoldersEl.innerHTML = subs.map(function(s) {
-        var name = s[0];
-        var count = s[1];
-        var path = currentFolder ? currentFolder + "/" + name : name;
-        var label = name.replace(/_/g, " ").replace(/-/g, " ");
-        return '<a class="subfolder-card" href="#" onclick="navigateFolder(\'' +
-            path.replace(/'/g, "\\'") + '\'); return false;">' +
-            label + ' <span class="subfolder-count">(' + count + ')</span></a>';
-    }).join("");
-}
-
 function render() {
     const search = searchEl.value.toLowerCase();
-    const slidesFilter = slidesEl.value;
+    const level = levelEl.value;
+    const category = categoryEl.value;
+    const tag = tagEl.value;
+    const audience = audienceEl.value;
+    const duration = durationEl.value;
     const sort1 = sort1El.value;
     const sort1Dir = sort1DirEl.value === "asc" ? 1 : -1;
+    const sort2 = sort2El.value;
+    const sort2Dir = sort2DirEl.value === "asc" ? 1 : -1;
 
     renderBreadcrumb();
+    subfoldersEl.innerHTML = "";
 
     const filtered = DATA.filter(e => {
         if (currentFolder) {
             if (!e.folder.startsWith(currentFolder + "/") && e.folder !== currentFolder) return false;
         }
         if (search && !e.name.toLowerCase().includes(search)) return false;
-        if (slidesFilter && e.slides !== parseInt(slidesFilter)) return false;
+        if (level && e.level !== level) return false;
+        if (category && e.category !== category) return false;
+        if (tag && !e.tags.includes(tag)) return false;
+        if (audience && !e.audience.includes(audience)) return false;
+        if (duration && e.duration_days !== parseInt(duration)) return false;
         return true;
     });
 
@@ -103,23 +102,56 @@ function render() {
     totalEl.innerHTML = filtered.length + " courses, " +
         '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
         '<span class="stat-slides">' + totalSlides + " slides</span>";
-    subfoldersEl.innerHTML = "";
 
-    filtered.sort((a, b) => a.folder.localeCompare(b.folder) || a.name.localeCompare(b.name));
+    const LEVEL_ORDER = {beginner: 0, intermediate: 1, advanced: 2};
+    const getVal = (e, key) => {
+        if (key === "name") return e.name;
+        if (key === "slides") return e.slides || 0;
+        if (key === "chapters") return e.chapters || 0;
+        if (key === "folder") return e.folder;
+        if (key === "level") return LEVEL_ORDER[e.level] ?? 3;
+        if (key === "category") return e.category || "";
+        if (key === "duration") return e.dh || 0;
+        return e[key];
+    };
 
-    // Group by category (first path component relative to currentFolder)
+    const getLabel = (e, key) => {
+        if (key === "folder") {
+            const parts = e.folder.split("/");
+            return parts.length > 1 ? parts[0].replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "Root";
+        }
+        if (key === "level") return (e.level || "No Level").charAt(0).toUpperCase() + (e.level || "No Level").slice(1);
+        if (key === "category") return (e.category || "No Category").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+        if (key === "duration") return e.dh ? e.duration_days + "d / " + e.dh + "h" : "No Duration";
+        if (key === "slides") return e.slides + " slides";
+        if (key === "chapters") return e.chapters + " chapters";
+        if (key === "name") return "All Courses";
+        return "";
+    };
+
+    filtered.sort((a, b) => {
+        const v1a = getVal(a, sort1);
+        const v1b = getVal(b, sort1);
+        if (v1a !== v1b) {
+            const res = (typeof v1a === "string") ? v1a.localeCompare(v1b) : v1a - v1b;
+            return res * sort1Dir;
+        }
+        const v2a = getVal(a, sort2);
+        const v2b = getVal(b, sort2);
+        if (v2a !== v2b) {
+            const res = (typeof v2a === "string") ? v2a.localeCompare(v2b) : v2a - v2b;
+            return res * sort2Dir;
+        }
+        return a.name.localeCompare(b.name);
+    });
+
     const groups = [];
-    let lastCategory = null;
+    let lastHeader = null;
     for (const item of filtered) {
-        const prefix = currentFolder ? currentFolder + "/" : "";
-        const rest = item.folder.substring(prefix.length);
-        const slash = rest.indexOf("/");
-        const category = slash !== -1 ? rest.substring(0, slash) : "";
-        const label = category ? category.replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : (currentFolder ? currentFolder.split("/").pop().replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "Courses");
-        const groupKey = category || "__direct__";
-        if (groupKey !== lastCategory) {
-            groups.push({ label: label, items: [], key: groupKey });
-            lastCategory = groupKey;
+        const h = getLabel(item, sort1);
+        if (h !== lastHeader) {
+            groups.push({ label: h, items: [] });
+            lastHeader = h;
         }
         groups[groups.length - 1].items.push(item);
     }
@@ -131,26 +163,28 @@ function render() {
     const showNumbers = numbersEl.checked;
     let globalNum = 0;
     for (const group of groups) {
-        const folderPath = group.key !== "__direct__" ? (currentFolder ? currentFolder + "/" + group.key : group.key) : currentFolder;
-        if (group.key !== "__direct__") {
-            const groupChapters = group.items.reduce((s, e) => s + (e.chapters || 0), 0);
-            const groupSlides = group.items.reduce((s, e) => s + (e.slides || 0), 0);
-            html += '<h2 class="tree-category"><a href="#" onclick="navigateFolder(\'' +
-                folderPath.replace(/'/g, "\\'") + '\'); return false;">' +
-                group.label + '</a> <span class="count">(' + group.items.length + ' courses, ' +
-                '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
-                '<span class="stat-slides">' + groupSlides + ' slides</span>)</span></h2>';
-        }
-        html += "<ul>";
+        const groupChapters = group.items.reduce((s, e) => s + (e.chapters || 0), 0);
+        const groupSlides = group.items.reduce((s, e) => s + (e.slides || 0), 0);
+        html += '<h2>' + group.label +
+            ' <span class="count">(' + group.items.length + ' courses, ' +
+            '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
+            '<span class="stat-slides">' + groupSlides + ' slides</span>)</span></h2><ul>';
         for (let i = 0; i < group.items.length; i++) {
             globalNum++;
             const item = group.items[i];
             const numPrefix = showNumbers ? '<span class="course-number">' + globalNum + ".</span> " : "";
-            const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " chapters</span>" : "";
-            const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
-            const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
             const nameHtml = item.pdf ? '<a href="' + item.pdf + '" target="_blank">' + item.name + "</a>" : "<span>" + item.name + "</span>";
-            html += "<li>" + numPrefix + nameHtml + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
+            const levelClass = item.level ? " level-" + item.level : "";
+            const levelBadge = item.level ? '<span class="level' + levelClass + '">' + item.level + "</span>" : "";
+            let db = "";
+            if (item.dh) {
+                db = item.duration_days + "d / " + item.dh + "h";
+            }
+            const durationBadge = db ? '<span class="duration">' + db + "</span>" : "";
+            const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " ch</span>" : "";
+            const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " sl</span>" : "";
+            const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
+            html += "<li>" + numPrefix + nameHtml + levelBadge + durationBadge + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
         }
         html += "</ul>";
     }
@@ -232,10 +266,16 @@ searchEl.addEventListener("input", function() {
     updateAutocomplete();
     render();
 });
-slidesEl.addEventListener("change", render);
+levelEl.addEventListener("change", render);
+categoryEl.addEventListener("change", render);
+tagEl.addEventListener("change", render);
+audienceEl.addEventListener("change", render);
+durationEl.addEventListener("change", render);
 numbersEl.addEventListener("change", render);
 sort1El.addEventListener("change", render);
 sort1DirEl.addEventListener("change", render);
+sort2El.addEventListener("change", render);
+sort2DirEl.addEventListener("change", render);
 
 window.addEventListener("popstate", function() {
     var hash = location.hash;

@@ -25,9 +25,35 @@
 </div>
 </div>
 <div class="filter-row">
-<label for="filter-slides">Slides:</label>
-<select id="filter-slides">
-<option value="">All sizes</option>
+<label for="filter-level">Level:</label>
+<select id="filter-level">
+<option value="">All levels</option>
+{{LEVEL_OPTIONS}}
+</select>
+</div>
+<div class="filter-row">
+<label for="filter-category">Category:</label>
+<select id="filter-category">
+<option value="">All categories</option>
+{{CATEGORY_OPTIONS}}
+</select>
+</div>
+<div class="filter-row">
+<label for="filter-tag">Tag:</label>
+<select id="filter-tag">
+<option value="">All tags</option>
+{{TAG_OPTIONS}}
+</select>
+</div>
+<div class="filter-row">
+<label for="filter-duration">Duration:</label>
+<select id="filter-duration"></select>
+</div>
+<div class="filter-row">
+<label for="filter-audience">Audience:</label>
+<select id="filter-audience">
+<option value="">All audiences</option>
+{{AUDIENCE_OPTIONS}}
 </select>
 </div>
 <div class="filter-row">
@@ -37,11 +63,29 @@
 <div class="filter-row">
 <label for="sort-primary">Sort by:</label>
 <select id="sort-primary">
-<option value="name" selected>Name</option>
+<option value="folder" selected>Folder</option>
+<option value="name">Name</option>
+<option value="level">Level</option>
+<option value="category">Category</option>
+<option value="duration">Duration</option>
 <option value="slides">Slides</option>
-<option value="folder">Folder</option>
+<option value="chapters">Chapters</option>
 </select>
 <select id="sort-primary-dir">
+<option value="asc" selected>Asc</option>
+<option value="desc">Desc</option>
+</select>
+<label for="sort-secondary">Then by:</label>
+<select id="sort-secondary">
+<option value="name" selected>Name</option>
+<option value="folder">Folder</option>
+<option value="level">Level</option>
+<option value="category">Category</option>
+<option value="duration">Duration</option>
+<option value="slides">Slides</option>
+<option value="chapters">Chapters</option>
+</select>
+<select id="sort-secondary-dir">
 <option value="asc" selected>Asc</option>
 <option value="desc">Desc</option>
 </select>
@@ -50,6 +94,8 @@
 
 <div id="results"></div>
 
+<hr>
+<p>Mark Veltzer <a href="mailto:mark.veltzer@gmail.com">mark.veltzer@gmail.com</a></p>
 </div>
 
 <script>
