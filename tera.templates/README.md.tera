@@ -2,8 +2,6 @@
 {% set personal = load_lua(path="config/personal.lua") -%}
 # {{ project.NAME }}
 
-version: {{ version_str(path="config/version.lua") }}
-
 description: {{ project.DESCRIPTION_SHORT }}
 
 website: [website](https://{{ personal.GITHUB_USERNAME }}.github.io/{{ project.NAME }})

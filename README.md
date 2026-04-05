@@ -1,7 +1,5 @@
 # teaching-slides
 
-version: 0.0.1
-
 description: Slides for my teaching
 
 website: [website](https://veltzer.github.io/teaching-slides)
