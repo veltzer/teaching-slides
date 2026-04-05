@@ -89,21 +89,37 @@ function render() {
 
     renderBreadcrumb();
 
+    const isSearching = search.length > 0 || slidesFilter;
     const filtered = DATA.filter(e => {
-        if (currentFolder) {
+        if (!isSearching && currentFolder) {
             if (!e.folder.startsWith(currentFolder + "/") && e.folder !== currentFolder) return false;
+        }
+        if (!isSearching && !currentFolder) {
+            return false;
         }
         if (search && !e.name.toLowerCase().includes(search)) return false;
         if (slidesFilter && e.slides !== parseInt(slidesFilter)) return false;
         return true;
     });
+    const directChildren = isSearching ? filtered : filtered.filter(e => {
+        const prefix = currentFolder ? currentFolder + "/" : "";
+        const rest = e.folder.substring(prefix.length);
+        return rest.indexOf("/") === -1;
+    });
+    const allInFolder = DATA.filter(e => {
+        if (currentFolder) {
+            return e.folder.startsWith(currentFolder + "/") || e.folder === currentFolder;
+        }
+        return true;
+    });
 
-    const totalChapters = filtered.reduce((s, e) => s + (e.chapters || 0), 0);
-    const totalSlides = filtered.reduce((s, e) => s + (e.slides || 0), 0);
-    totalEl.innerHTML = filtered.length + " courses, " +
+    const statsSource = isSearching ? filtered : allInFolder;
+    const totalChapters = statsSource.reduce((s, e) => s + (e.chapters || 0), 0);
+    const totalSlides = statsSource.reduce((s, e) => s + (e.slides || 0), 0);
+    totalEl.innerHTML = statsSource.length + " courses, " +
         '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
         '<span class="stat-slides">' + totalSlides + " slides</span>";
-    renderSubfolders(filtered);
+    renderSubfolders(allInFolder);
 
     const getVal = (e, key) => {
         if (key === "name") return e.name;
@@ -120,7 +136,7 @@ function render() {
         return "";
     };
 
-    filtered.sort((a, b) => {
+    directChildren.sort((a, b) => {
         const v1a = getVal(a, sort1);
         const v1b = getVal(b, sort1);
         if (v1a !== v1b) {
@@ -132,7 +148,7 @@ function render() {
 
     const groups = [];
     let lastHeader = null;
-    for (const item of filtered) {
+    for (const item of directChildren) {
         const h = getLabel(item, sort1);
         if (h !== lastHeader) {
             groups.push({ label: h, items: [] });
