@@ -25,7 +25,7 @@ Single-core CPU performance hit a wall around 2005. Clock speeds stopped
 increasing due to power and thermal limits. The only path forward is
 parallelism: doing more work simultaneously.
 
-```
+```text
     Clock Frequency Over Time:
 
     GHz
@@ -61,7 +61,7 @@ software must be written.
 Michael Flynn (1966) classified computer architectures by how many
 instruction streams and data streams they process simultaneously.
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │                Flynn's Taxonomy                      │
 │                                                      │
@@ -92,7 +92,7 @@ instruction streams and data streams they process simultaneously.
 The traditional von Neumann architecture. One instruction stream operates
 on one data element at a time.
 
-```
+```text
 ┌────────────────┐     ┌────────────────┐
 │  Instruction   │────>│  Processing    │────> Result
 │    Stream      │     │    Unit        │
@@ -122,7 +122,7 @@ SIMD extensions internally.
 One instruction operates on multiple data elements simultaneously.
 This is the foundation of vector processing and GPU computing.
 
-```
+```text
 ┌────────────────┐     ┌────────────────────────────┐
 │  Instruction   │────>│     Processing Units       │
 │   Stream       │     │  ┌────┐┌────┐┌────┐┌────┐ │
@@ -150,7 +150,7 @@ ARM NEON (4 floats), GPU warps (32 threads).
 Multiple instruction streams operate on the same data stream.
 This is the rarest category and mainly theoretical.
 
-```
+```text
 ┌──────────────────┐
 │ Instruction      │──┐
 │ Stream 1         │  │
@@ -178,7 +178,7 @@ real-world implementations.
 Multiple independent processors execute different instructions on
 different data. This is the most common parallel architecture today.
 
-```
+```text
 ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
 │ Instruction  │  │ Instruction  │  │ Instruction  │
 │  Stream 0    │  │  Stream 1    │  │  Stream 2    │
@@ -208,7 +208,7 @@ MIMD is the dominant paradigm for general-purpose computing.
 A multi-core processor integrates multiple independent CPU cores
 on a single die (chip). Each core has its own L1/L2 caches.
 
-```
+```text
 ┌───────────────────────────────────────────────────────────┐
 │                    Multi-Core CPU Die                     │
 │                                                           │
@@ -268,7 +268,7 @@ execute multiple threads concurrently by sharing execution resources.
 
 Intel's implementation is called **Hyper-Threading Technology (HTT)**.
 
-```
+```bash
 Without SMT (single-threaded core):
 
     Execution Units:  ALU1  ALU2  FPU1  FPU2  AGU
@@ -293,7 +293,7 @@ both threads compete for the same execution units, caches, and bandwidth.
 
 ## SMT: Architecture Details
 
-```
+```text
 ┌────────────────────────────────────────────────────┐
 │              Physical Core with SMT                │
 │                                                    │
@@ -363,7 +363,7 @@ echo off > /sys/devices/system/cpu/smt/control
 In UMA systems, all processors share a single memory with equal
 access latency. Traditional symmetric multiprocessing (SMP).
 
-```
+```python
 ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐
 │  Core 0  │  │  Core 1  │  │  Core 2  │  │  Core 3  │
 └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘
@@ -391,7 +391,7 @@ Access latency: ~100 ns from any core (uniform)
 In NUMA systems, each processor has local memory that is faster to
 access. Accessing another processor's memory is slower.
 
-```
+```text
 ┌─────────────────────────┐     ┌─────────────────────────┐
 │       NUMA Node 0       │     │       NUMA Node 1       │
 │                         │     │                         │
@@ -460,7 +460,7 @@ numactl --cpunodebind=0 --membind=0 ./my_program
 Remote memory access can severely impact performance. A program that
 accesses memory on the wrong NUMA node can be 30-50% slower.
 
-```
+```bash
     Benchmark: Memory bandwidth (GB/s)
 
     Local access    ████████████████████████████████████  45 GB/s
@@ -492,7 +492,7 @@ void *buf = numa_alloc_onnode(size, node_id);
 GPUs are massively parallel processors designed for throughput, not
 single-thread latency. They contain thousands of simple cores.
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                         GPU Die                             │
 │                                                             │
@@ -527,7 +527,7 @@ SM = Streaming Multiprocessor     CU = CUDA Core (compute unit)
 Each SM is a self-contained processing block. A modern GPU has
 dozens to over a hundred SMs.
 
-```
+```text
 ┌────────────────────────────────────────────────────┐
 │              Streaming Multiprocessor               │
 │                                                    │
@@ -566,7 +566,7 @@ A **warp** is a group of 32 threads that execute in lockstep on an SM.
 All threads in a warp execute the same instruction at the same time
 (SIMT: Single Instruction, Multiple Threads).
 
-```
+```text
     Warp 0:  [T0  T1  T2  T3  ... T31]  ── executing ADD
     Warp 1:  [T32 T33 T34 T35 ... T63]  ── waiting for memory
     Warp 2:  [T64 T65 T66 T67 ... T95]  ── executing MUL
@@ -592,7 +592,7 @@ both paths must execute serially. This wastes throughput.
 
 ## CPU vs GPU: Architecture Comparison
 
-```
+```text
 CPU: Few powerful cores               GPU: Many simple cores
 ┌────────────────────────┐             ┌──────────────────────────┐
 │  ┌──────┐  ┌──────┐   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
@@ -633,7 +633,7 @@ CPU: Few powerful cores               GPU: Many simple cores
 Vector processors operate on arrays of data with a single instruction.
 This is the SIMD paradigm at the instruction level.
 
-```
+```text
     Scalar operation (one element at a time):
 
     A[0] = B[0] + C[0]         cycle 1
@@ -674,7 +674,7 @@ x86 CPUs include progressively wider SIMD instruction sets:
 | AVX2 | 256-bit (YMM) | 8 float + int | 2013 |
 | AVX-512 | 512-bit (ZMM) | 16 float | 2017 |
 
-```
+```text
 Register sizes:
 
 XMM0 (SSE):   128 bits  ┌───────────────────┐
@@ -780,7 +780,7 @@ The interconnect topology determines communication speed.
 
 **Bus (legacy):**
 
-```
+```text
 ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐
 │Core 0│  │Core 1│  │Core 2│  │Core 3│
 └──┬───┘  └──┬───┘  └──┬───┘  └──┬───┘
@@ -792,7 +792,7 @@ Simple but becomes a bottleneck with more cores.
 
 **Ring bus (used in Intel up to ~10 cores):**
 
-```
+```text
 ┌──────┐───┌──────┐───┌──────┐───┌──────┐
 │Core 0│   │Core 1│   │Core 2│   │Core 3│
 └──────┘───└──────┘───└──────┘───└──────┘
@@ -809,7 +809,7 @@ Latency increases with core count (must traverse more hops).
 
 **Mesh (used in Intel Xeon, AMD EPYC):**
 
-```
+```text
 ┌──────┐────┌──────┐────┌──────┐────┌──────┐
 │Core 0│    │Core 1│    │Core 2│    │Core 3│
 └──┬───┘────└──┬───┘────└──┬───┘────└──┬───┘
@@ -828,7 +828,7 @@ a ring. Maximum hops = rows + columns - 2.
 
 **Crossbar:**
 
-```
+```text
          Core0  Core1  Core2  Core3
           │      │      │      │
 Mem0 ─────┼──────┼──────┼──────┤
@@ -852,7 +852,7 @@ Any-to-any connection. Low latency but expensive (O(N^2) switches).
 
 **AMD Infinity Fabric:**
 
-```
+```text
 ┌──────────────────┐        ┌──────────────────┐
 │   CCD 0          │        │   CCD 1          │
 │  (8 cores + L3)  │        │  (8 cores + L3)  │
@@ -878,7 +878,7 @@ ensure all cores see a consistent view of memory.
 
 **The problem illustrated:**
 
-```
+```python
 Time   Core 0 Cache    Core 1 Cache    Memory    Correct?
 ─────────────────────────────────────────────────────────
   T0   X = 42          X = 42          X = 42    Yes
@@ -901,7 +901,7 @@ avoid patterns that stress it, like false sharing).
 
 ## MESI Protocol: Detailed State Transitions
 
-```
+```bash
                     ┌───────────────────────────────────┐
                     │           MESI States              │
                     └───────────────────────────────────┘
@@ -948,7 +948,7 @@ False sharing occurs when two cores modify different variables that
 happen to reside on the same cache line. The coherence protocol
 bounces the line back and forth even though there is no true sharing.
 
-```
+```text
 Cache line (64 bytes):
 ┌──────────────────────────────────────────────────────────────┐
 │  counter_core0  │  padding...  │  counter_core1  │  padding │
@@ -1019,7 +1019,7 @@ avoiding multiple caches all trying to respond simultaneously.
 Amdahl's Law gives the theoretical maximum speedup of a program when
 parallelizing only a fraction of it.
 
-```
+```text
                     1
 Speedup = ─────────────────────
            (1 - P) + P / N
@@ -1049,7 +1049,7 @@ The 10% serial portion is the bottleneck.
 
 ## Amdahl's Law: Visualization
 
-```
+```text
     Speedup
     20 │
        │
@@ -1085,7 +1085,7 @@ The 10% serial portion is the bottleneck.
 Gustafson's Law offers a more optimistic view. Instead of fixing the
 problem size, it says: with more processors, we solve BIGGER problems.
 
-```
+```text
 Speedup = N - (1 - P) * (N - 1)
 
 Simplified:
@@ -1098,7 +1098,7 @@ Where:
 
 **Key difference from Amdahl:**
 
-```
+```text
 Amdahl:     Fixed problem size, add processors
             "How fast can we solve THIS problem?"
             Speedup is bounded by serial fraction
@@ -1122,7 +1122,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 ## Gustafson vs Amdahl: When Each Applies
 
-```
+```sql
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
 │  Amdahl's Law (pessimistic, but realistic for fixed     │
@@ -1166,7 +1166,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 **The parallelism stack on a modern server:**
 
-```
+```text
 ┌────────────────────────────────────────────────────┐
 │  Cluster: 1000 nodes, MPI communication            │
 │  ┌──────────────────────────────────────────────┐  │
@@ -1188,7 +1188,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 ## Summary: Parallel Architectures
 
-```
+```text
 ┌─────────────────────────────────────────────────────────┐
 │           Parallel Architectures: Key Takeaways         │
 ├─────────────────────────────────────────────────────────┤

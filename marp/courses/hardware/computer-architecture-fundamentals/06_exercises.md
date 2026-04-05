@@ -28,7 +28,7 @@ lscpu
 
 **Expected output (example):**
 
-```
+```text
 Architecture:             x86_64
 CPU(s):                   16
 Thread(s) per core:       2
@@ -117,7 +117,7 @@ done
 
 **Expected output:**
 
-```
+```text
 --- index0 ---
 Level: 1
 Type:  Data
@@ -243,7 +243,7 @@ gcc -O2 -o cache_access cache_access.c
 
 **Typical output:**
 
-```
+```text
 Sequential: 0.052 seconds
 Random:     1.340 seconds     <-- 25x slower!
 ```
@@ -316,7 +316,7 @@ gcc -O2 -o cache_line cache_line.c
 
 **Expected pattern:**
 
-```
+```text
 Stride  Elements_Touched  Time(ms)  Throughput(GB/s)
 ------  ----------------  --------  ----------------
     1          33554432     23.45             5.45
@@ -430,7 +430,7 @@ gcc -O2 -o mem_latency mem_latency.c
 
 **Expected output (varies by CPU):**
 
-```
+```text
 Array Size    Latency (ns)
 ----------    ------------
      4 KB          1.2       <-- L1 cache
@@ -714,7 +714,7 @@ cat /proc/self/maps | head -30
 
 **Understanding the columns:**
 
-```
+```bash
 Address Range          Perms  Offset   Dev   Inode  Pathname
 ─────────────────────  ─────  ───────  ────  ─────  ────────
 5574a0205000-5574a020a000  r-xp  00005000  08:02  12345  /usr/bin/cat
@@ -925,7 +925,7 @@ gcc -O2 -o huge_pages huge_pages.c
 
 ## Summary: What We Measured
 
-```
+```bash
 ┌─────────────────────────────────────────────────────────┐
 │              Exercises Summary                          │
 ├─────────────────────────────────────────────────────────┤

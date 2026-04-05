@@ -14,7 +14,7 @@
 
 ## Vulnerability Lifecycle
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Vulnerability Lifecycle                          │
 │                                                          │
@@ -48,7 +48,7 @@
 | Bug bounties     | Vendors (Google, Apple, Microsoft)  | $500 - $300K           |
 | Government       | NSA, GCHQ, intelligence agencies    | $100K - $2M+           |
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Zerodium Exploit Payout Chart (2024)                    │
 ├──────────────────────────────┬───────────────────────────┤
@@ -67,7 +67,7 @@
 
 ## The CVE Process
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          CVE (Common Vulnerabilities and Exposures)       │
 │                                                          │
@@ -106,7 +106,7 @@
 
 ## Responsible Disclosure
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  Disclosure Models                                       │
 ├──────────────────────┬────────────────┬──────────────────┤
@@ -137,7 +137,7 @@
 
 ## Notable Zero-Day Case Study: EternalBlue (CVE-2017-0144)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          EternalBlue Timeline                             │
 │                                                          │
@@ -170,7 +170,7 @@
 
 ## Notable Zero-Day: Log4Shell (CVE-2021-44228)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Log4Shell Attack                                 │
 │                                                          │
@@ -240,7 +240,7 @@
 
 ## Patch Management
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Patch Management Lifecycle                       │
 │                                                          │
@@ -288,7 +288,7 @@ sudo yum updateinfo list security
 
 ## Virtual Patching
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Virtual Patching                                 │
 │                                                          │
@@ -350,7 +350,7 @@ location / {
 
 ## Multi-Layered Security Approach
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Defense in Depth Against Zero-Days               │
 │                                                          │
@@ -420,7 +420,7 @@ profile myapp /usr/sbin/myapp {
 
 ## Incident Response Plan
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │  Zero-Day Incident Response Playbook                     │
 ├──────────────────────────────────────────────────────────┤

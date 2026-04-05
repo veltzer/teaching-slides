@@ -12,7 +12,7 @@
 ---
 ## TCP Three-Way Handshake Review
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Normal TCP Three-Way Handshake                   │
 │                                                          │
@@ -41,7 +41,7 @@
 ---
 ## SYN Flood Mechanism
 
-```
+```asm
 ┌──────────────────────────────────────────────────────────┐
 │          SYN Flood Attack                                 │
 │                                                          │
@@ -70,7 +70,7 @@
 ---
 ## Half-Open Connection Queue
 
-```
+```asm
 ┌──────────────────────────────────────────────────────────┐
 │          Server Connection Backlog                        │
 │                                                          │
@@ -110,7 +110,7 @@
 ---
 ## SYN Cookies: The Primary Defense
 
-```
+```asm
 ┌──────────────────────────────────────────────────────────┐
 │          SYN Cookies Mechanism                            │
 │                                                          │
@@ -345,7 +345,7 @@ for i in range(1000):
 ---
 ## Hardware and Cloud Defenses
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Defense in Depth Against SYN Floods              │
 │                                                          │
@@ -377,7 +377,7 @@ for i in range(1000):
 ---
 ## SYN Proxy (Hardware Firewalls)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          SYN Proxy Operation                              │
 │                                                          │

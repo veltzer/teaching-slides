@@ -25,7 +25,7 @@
 ---
 ## Port States
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Port States                                      │
 │                                                          │
@@ -95,7 +95,7 @@ nmap 192.168.1.0/24
 
 ### TCP SYN Scan (Half-Open Scan)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          SYN Scan (-sS) - Default for root               │
 │                                                          │
@@ -161,7 +161,7 @@ sudo nmap -sU --top-ports 20 192.168.1.1
 ---
 ### Stealth Scans (FIN, NULL, Xmas)
 
-```
+```c
 ┌──────────────────────────────────────────────────────────┐
 │          Stealth Scan Types                               │
 │                                                          │
@@ -254,7 +254,7 @@ sudo nmap -A 192.168.1.1
 - Each OS has a unique "fingerprint" of these values
 - `-A` enables OS detection, version detection, script scanning, and traceroute
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  OS Fingerprinting Characteristics                       │
 ├────────────────┬──────────┬──────────┬──────────────────┤

@@ -28,7 +28,7 @@ You don't pay for what you don't use
 
 ## What Zero-Cost Means
 
-```
+```text
   ┌──────────────────────────────────────────────────────┐
   │          Bjarne Stroustrup's Principle:                │
   │                                                        │
@@ -149,7 +149,7 @@ What the compiler does for you
 
 ## LLVM Optimization Pipeline
 
-```
+```text
   ┌────────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
   │ Rust Source │ ──> │ rustc    │ ──> │ LLVM IR  │ ──> │ Machine  │
   │   (.rs)    │     │ frontend │     │          │     │  Code    │
@@ -173,7 +173,7 @@ What the compiler does for you
 
 ## Optimization Levels
 
-```
+```bash
   cargo build                   # dev profile:   opt-level = 0
   cargo build --release         # release profile: opt-level = 3
 
@@ -272,7 +272,7 @@ cargo flamegraph --bin my_app
 # Stack depth = call chain
 ```
 
-```
+```text
   ┌─────────────────────────────────────────────────────┐
   │                    main                              │
   ├──────────────────────┬──────────────────────────────┤
@@ -564,7 +564,7 @@ fn main() {
 }
 ```
 
-```
+```text
   ┌─────────────────┬─────────────┬──────────────┬──────────────┐
   │ Allocator       │ Throughput  │ Fragmentation│ Best For     │
   ├─────────────────┼─────────────┼──────────────┼──────────────┤
@@ -587,7 +587,7 @@ Single Instruction, Multiple Data
 
 ## SIMD Concepts
 
-```
+```text
   Scalar operation (one at a time):
   ┌───┐   ┌───┐   ┌───┐
   │ a │ + │ b │ = │ c │    1 add instruction per element
@@ -804,7 +804,7 @@ fn main() {
 
 ## Cache Optimization Guidelines
 
-```
+```text
   ┌───────────────────────────────────────────────────────────────┐
   │                Cache Optimization Rules                        │
   ├───────────────────────────────────────────────────────────────┤
@@ -1062,7 +1062,7 @@ codegen-units = 1   # Single codegen unit: enables more inlining
                     # Default is 16 for parallel compilation
 ```
 
-```
+```text
   Without LTO:
   ┌─────────┐  ┌─────────┐  ┌─────────┐
   │ Crate A  │  │ Crate B  │  │ Crate C  │
@@ -1091,7 +1091,7 @@ codegen-units = 1   # Single codegen unit: enables more inlining
 
 ## LTO Trade-offs
 
-```
+```text
   ┌───────────────┬──────────┬─────────────┬─────────────────────┐
   │ Setting       │ Compile  │ Binary Size │ Runtime Performance  │
   ├───────────────┼──────────┼─────────────┼─────────────────────┤
@@ -1122,7 +1122,7 @@ Optimize based on real workload data
 
 ## PGO Workflow
 
-```
+```text
   ┌─────────────────────────────────────────────────────────────┐
   │                    PGO Workflow                               │
   │                                                               │
@@ -1230,7 +1230,7 @@ fn main() {
 
 ## When to Use #[inline]
 
-```
+```text
   ┌──────────────────────────────────────────────────────────────┐
   │                   #[inline] Guidelines                        │
   ├──────────────────────────────────────────────────────────────┤
@@ -1338,7 +1338,7 @@ fn main() {
 
 ## Summary
 
-```
+```text
   ┌───────────────────────────────────────────────────────┐
   │            Performance Optimization Cheatsheet         │
   ├───────────────────────────────────────────────────────┤

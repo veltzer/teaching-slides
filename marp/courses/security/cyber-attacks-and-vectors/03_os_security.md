@@ -100,7 +100,7 @@ auth required pam_faillock.so authfail deny=5 \
 cat /etc/pam.d/sshd
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │              PAM Authentication Flow              │
 ├──────────────────────────────────────────────────┤
@@ -163,7 +163,7 @@ sysctl -p
 
 The Center for Internet Security provides hardening baselines:
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │           CIS Benchmark Categories                    │
 ├──────────────────────────────────────────────────────┤
@@ -329,7 +329,7 @@ grep "Failed password" /var/log/auth.log | \
 sudo fail2ban-client status sshd
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │         Credential Attack Types                   │
 ├──────────────────────────────────────────────────┤

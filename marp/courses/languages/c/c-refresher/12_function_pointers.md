@@ -32,7 +32,7 @@ int main(void) {
 
 ## Function Pointer Syntax
 
-```
+```text
 Return type    Pointer name    Parameters
      |              |              |
      v              v              v

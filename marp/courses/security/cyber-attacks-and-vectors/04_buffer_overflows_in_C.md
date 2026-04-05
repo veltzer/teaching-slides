@@ -26,7 +26,7 @@
 ---
 ## Stack Layout Diagram
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │                    Stack Layout                           │
 │                                                          │
@@ -223,7 +223,7 @@ void secure_format(const char *user_input) {
 }
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │         Format String Attack Capabilities        │
 ├──────────────────────────────────────────────────┤
@@ -287,7 +287,7 @@ void secure_integer(size_t count, size_t element_size) {
 ---
 ## Heartbleed (CVE-2014-0160) Deep Dive
 
-```
+```text
 ┌────────────────────────────────────────────────────────┐
 │              Heartbleed Attack Flow                     │
 │                                                        │
@@ -386,7 +386,7 @@ readelf -h /usr/bin/ls | grep Type
 # DYN (Position-Independent Executable)
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │           Memory Layout: Without vs With ASLR         │
 ├──────────────────────┬───────────────────────────────┤

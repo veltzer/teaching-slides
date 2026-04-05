@@ -20,7 +20,7 @@
 Computer systems use a hierarchy of memory technologies, trading off
 speed, size, and cost:
 
-```
+```text
                     ┌───────┐
                     │  Reg  │  ~0.3 ns, ~1 KB
                     │       │  $$$$$$$
@@ -78,7 +78,7 @@ A well-designed cache can satisfy >95% of memory requests.
 
 SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
-```
+```text
      VDD
       │
     ┌─┴─┐    ┌─┴─┐
@@ -111,7 +111,7 @@ SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
 DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
-```
+```text
      Bit Line
        │
      ┌─┴─┐
@@ -154,7 +154,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
 DRAM is organized as a 2D array of rows and columns:
 
-```
+```text
 ┌─────────────────────────────────────────┐
 │              DRAM Bank                  │
 │                                         │
@@ -212,7 +212,7 @@ effective bandwidth ~38.4 GB/s per channel.
 
 ## Memory Bandwidth Calculation
 
-```
+```text
 Bandwidth = Data_Rate x Bus_Width x Channels
 
 Example: DDR5-4800, 64-bit bus, dual channel
@@ -239,7 +239,7 @@ Real-world bandwidth is typically 60-80% of theoretical maximum.
 Virtual memory gives each process its own private address space, even though
 physical RAM is shared.
 
-```
+```bash
   Process A                              Physical Memory
 ┌────────────────┐                    ┌────────────────┐
 │ 0x0000_0000    │                    │ Frame 0        │
@@ -293,7 +293,7 @@ in memory, and the OS handles loading pages as needed.
 Virtual memory divides the address space into fixed-size **pages**
 (typically 4 KB on x86-64):
 
-```
+```bash
 Virtual Address (48 bits on x86-64):
 
  47          39 38          30 29          21 20          12 11           0
@@ -320,7 +320,7 @@ x86-64 also supports **huge pages**: 2 MB (21-bit offset) and 1 GB
 The page table translates virtual addresses to physical addresses.
 On x86-64, it is a 4-level radix tree:
 
-```
+```python
            CR3 register
                │
                v
@@ -362,7 +362,7 @@ Each table is one 4 KB page containing 512 entries of 8 bytes each.
 
 Each page table entry on x86-64 contains:
 
-```
+```text
  63    62       52 51                                  12 11  9 8 7 6 5 4 3 2 1 0
 ┌──┬──┬──────────┬──────────────────────────────────────┬─────┬─┬─┬─┬─┬─┬─┬─┬─┬─┐
 │NX│  │ Available │     Physical Frame Number            │ AVL │G│ │D│A│ │ │U│W│P│
@@ -389,7 +389,7 @@ handle it (load from disk, allocate a frame, or kill the process).
 Walking the 4-level page table for every memory access would be extremely
 slow (~4 extra memory accesses). The TLB caches recent translations.
 
-```
+```bash
 Virtual Address ──> ┌───────┐ ──HIT──> Physical Address
                     │  TLB  │          (1-2 cycles)
                     └───┬───┘
@@ -427,7 +427,7 @@ When the OS modifies page tables (e.g., unmapping a page), it must
 invalidate the TLB entries on ALL CPU cores -- this is called a
 **TLB shootdown**.
 
-```
+```text
 Core 0: unmaps page X
   │
   ├──> Invalidate own TLB entry for X
@@ -543,7 +543,7 @@ void *shm = mmap(NULL, 4096,
 DMA allows hardware devices to transfer data directly to/from memory
 without involving the CPU for each byte.
 
-```
+```text
 Without DMA (Programmed I/O):
 ┌─────┐     byte     ┌────────┐     byte     ┌────────┐
 │ CPU │◄────────────►│ Device │              │ Memory │
@@ -575,7 +575,7 @@ With DMA:
 Instead of using special I/O instructions (IN/OUT on x86), devices
 can be accessed through regular memory addresses:
 
-```
+```bash
 Physical Address Space:
 ┌──────────────────────┐ 0x0000_0000
 │                      │
@@ -658,7 +658,7 @@ Registers).
 In multi-socket systems, each CPU has its own local memory. Accessing
 remote memory (attached to another CPU) is slower:
 
-```
+```text
 ┌──────────────────┐         ┌──────────────────┐
 │     Socket 0     │         │     Socket 1     │
 │  ┌────────────┐  │         │  ┌────────────┐  │
@@ -736,7 +736,7 @@ for (int j = 0; j < N; j++)
 ```
 
 **Memory layout of `matrix[N][N]`:**
-```
+```text
 Address:  [0][0] [0][1] [0][2] ... [0][N-1] [1][0] [1][1] ...
           ──────────────────────── ──────────────────────────
           Row 0 (contiguous)       Row 1 (contiguous)
@@ -799,7 +799,7 @@ int main() {
 Modern CPUs detect sequential and strided access patterns and prefetch
 data before you need it:
 
-```
+```bash
 Without prefetching:
   Access [0] → cache miss (100 ns wait)
   Access [1] → cache miss (100 ns wait)

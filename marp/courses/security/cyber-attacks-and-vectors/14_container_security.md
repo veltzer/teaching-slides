@@ -15,7 +15,7 @@
 
 ## Container Attack Surface
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │              Container Attack Surface                     │
 │                                                          │

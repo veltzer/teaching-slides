@@ -45,7 +45,7 @@ Fast Flux DNS is a technique used by botnets and other malicious actors to hide 
 
 ## Single Flux vs Double Flux
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │              Single Flux                                  │
 │                                                          │
@@ -76,7 +76,7 @@ Fast Flux DNS is a technique used by botnets and other malicious actors to hide 
 
 ## Fast Flux Network Architecture
 
-```
+```text
 ┌────────────────────────────────────────────────────────────┐
 │                                                            │
 │  ┌──────────────────────┐                                  │

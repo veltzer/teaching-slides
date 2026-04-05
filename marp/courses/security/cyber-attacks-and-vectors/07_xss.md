@@ -134,7 +134,7 @@ The last true sets the HttpOnly flag for the cookie.
 
 ## XSS Attack Flow Diagram
 
-```
+```text
 ┌──────────────────────────────────────────────────────────────┐
 │              Stored XSS Attack Flow                          │
 │                                                              │
@@ -286,7 +286,7 @@ def show_comments():
 
 ## Content Security Policy (CSP) In Depth
 
-```
+```bash
 # Strict CSP that prevents most XSS
 Content-Security-Policy:
     default-src 'self';
@@ -301,7 +301,7 @@ Content-Security-Policy:
     report-uri /csp-report;
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │          CSP Directive Reference                  │
 ├──────────────────────────────────────────────────┤

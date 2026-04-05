@@ -8,7 +8,7 @@
 - The compromised component is then delivered to the target through normal update/distribution channels
 - Extremely effective because the malicious code arrives through trusted channels
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Supply Chain Attack Concept                      │
 │                                                          │
@@ -43,7 +43,7 @@
 ---
 ## Software Supply Chain Attack Flow
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Attack Flow: Build Pipeline Compromise           │
 │                                                          │
@@ -73,7 +73,7 @@
 ---
 ## Case Study: SolarWinds SUNBURST (2020)
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          SolarWinds SUNBURST Timeline                     │
 │                                                          │
@@ -111,7 +111,7 @@
 ---
 ## Case Study: xz-utils Backdoor (2024)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          xz-utils Backdoor (CVE-2024-3094)               │
 │                                                          │
@@ -143,7 +143,7 @@
 ---
 ## Dependency Confusion
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Dependency Confusion Attack                      │
 │                                                          │
@@ -223,7 +223,7 @@ def verify_packages():
 ---
 ## Typosquatting Attacks
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Typosquatting Examples                                  │
 ├─────────────────────┬────────────────────────────────────┤
@@ -263,7 +263,7 @@ def verify_packages():
 ---
 ## Software Bill of Materials (SBOM)
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Software Bill of Materials (SBOM)                │
 │                                                          │
@@ -335,7 +335,7 @@ cosign verify --key cosign.pub myregistry/myimage:latest
 ---
 ## Sigstore: Open Source Signing
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Sigstore Ecosystem                               │
 │                                                          │
@@ -379,7 +379,7 @@ npm publish --provenance
 ---
 ## CI/CD Pipeline Security
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Securing the Build Pipeline                             │
 ├──────────────────────────────────────────────────────────┤
@@ -413,7 +413,7 @@ npm publish --provenance
 ---
 ## SLSA Framework (Supply-chain Levels for Software Artifacts)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  SLSA Levels (pronounced "salsa")                        │
 │  https://slsa.dev                                        │

@@ -11,7 +11,7 @@
 ---
 ## How Does Formjacking Work
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Formjacking Attack Flow                          │
 │                                                          │
@@ -72,7 +72,7 @@
 ---
 ## British Airways Attack (2018)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          British Airways Magecart Attack                  │
 │                                                          │
@@ -127,7 +127,7 @@ document.addEventListener('submit', function(event) {
 ---
 ## Advanced Skimmer Techniques
 
-```
+```c
 ┌──────────────────────────────────────────────────────────┐
 │          Skimmer Evasion Techniques                       │
 ├──────────────────────────────────────────────────────────┤
@@ -173,7 +173,7 @@ setInterval(function() {
 ---
 ## Content Security Policy (CSP) as Defense
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          CSP Defense Against Formjacking                  │
 │                                                          │
@@ -186,7 +186,7 @@ setInterval(function() {
 └──────────────────────────────────────────────────────────┘
 ```
 
-```
+```text
 # HTTP Header: Content-Security-Policy
 Content-Security-Policy:
     default-src 'self';
@@ -260,7 +260,7 @@ def csp_report():
 </script>
 ```
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          How SRI Works                                    │
 │                                                          │
@@ -342,7 +342,7 @@ diff known_good_hashes.txt current.txt
 ---
 ## PCI DSS Requirements for Formjacking
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  PCI DSS 4.0 Requirements (effective March 2025)         │
 ├──────────────────────────────────────────────────────────┤
@@ -367,7 +367,7 @@ diff known_good_hashes.txt current.txt
 ---
 ## Defense in Depth Strategy
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Layer 1: Prevention                                     │
 │  ├── Content Security Policy (strict script-src)         │

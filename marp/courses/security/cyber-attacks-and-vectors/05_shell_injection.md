@@ -21,7 +21,7 @@
 
 ## Attack Flow Diagram
 
-```
+```text
 ┌──────────┐    ┌─────────────────┐    ┌──────────────┐    ┌──────────┐
 │  Attacker │───>│  Web Application │───>│  System Shell │───>│  OS / FS  │
 │           │    │                 │    │              │    │          │
@@ -253,7 +253,7 @@ app.get('/dns', (req, res) => {
 # variables to CGI scripts running under Bash
 ```
 
-```
+```text
 ┌───────────────────────────────────────────────────────┐
 │              Shellshock Attack Flow                     │
 │                                                       │
@@ -428,7 +428,7 @@ ausearch -k web_cmd_exec --start today
 #     "id:1001,deny,status:403,msg:'Command Injection'"
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │        Detection Indicators                      │
 ├──────────────────────────────────────────────────┤

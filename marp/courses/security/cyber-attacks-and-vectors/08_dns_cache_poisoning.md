@@ -66,7 +66,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 ## DNS Resolution Process (Normal)
 
-```
+```text
 ┌──────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
 │  Client   │───>│  Recursive    │───>│  Root DNS     │───>│  TLD DNS     │
 │  Browser  │    │  Resolver     │    │  Server       │    │  Server      │
@@ -92,7 +92,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
 
-```
+```text
 ┌────────────────────────────────────────────────────────────┐
 │                  Kaminsky Attack Flow                       │
 │                                                            │
@@ -120,7 +120,7 @@ The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
 
 ## Transaction ID Vulnerability
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │     DNS Transaction ID: 16-bit field              │
 │     Only 65,536 possible values                   │
@@ -169,7 +169,7 @@ dig example.com +dnssec +short
 
 ## DNSSEC: How It Works
 
-```
+```text
 ┌────────────────────────────────────────────────────────────┐
 │              DNSSEC Chain of Trust                          │
 │                                                            │

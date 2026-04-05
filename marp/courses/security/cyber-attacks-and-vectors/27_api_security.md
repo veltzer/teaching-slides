@@ -29,7 +29,7 @@
 ---
 ## BOLA: Broken Object Level Authorization
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          BOLA (Broken Object Level Authorization)         │
 │          Also known as IDOR (Insecure Direct Object Ref.) │
@@ -86,7 +86,7 @@ def get_orders(user_id):
 ---
 ## Mass Assignment
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Mass Assignment Attack                           │
 │                                                          │
@@ -136,7 +136,7 @@ def update_user():
 ---
 ## Server-Side Request Forgery (SSRF) via APIs
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          SSRF via API                                     │
 │                                                          │
@@ -192,7 +192,7 @@ def is_safe_url(url):
 ---
 ## Rate Limiting and Resource Consumption
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  API Rate Limiting Strategies                            │
 ├──────────────────────────────────────────────────────────┤
@@ -246,7 +246,7 @@ def data():
 
 ### Rate Limit Response Headers
 
-```
+```asm
 HTTP/1.1 429 Too Many Requests
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 0
@@ -296,7 +296,7 @@ decoded = jwt.decode(token, SECRET, algorithms=["HS256"])
 ---
 ### JWT Key Confusion Attack
 
-```
+```asm
 ┌──────────────────────────────────────────────────────────┐
 │          JWT Algorithm Confusion (RS256 -> HS256)         │
 │                                                          │
@@ -348,7 +348,7 @@ python3 jwt_tool.py <JWT_TOKEN> -M at  # All tests
 ---
 ## GraphQL API Attacks
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          GraphQL-Specific Vulnerabilities                 │
 │                                                          │
@@ -474,7 +474,7 @@ def execute_persisted_query(query_id, variables):
 ---
 ## API Gateway Security
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          API Gateway Architecture                         │
 │                                                          │
@@ -609,7 +609,7 @@ apicheck-curl http://api.example.com/openapi.json | \
 
 ### API Security Checklist
 
-```
+```sql
 ┌──────────────────────────────────────────────────────────┐
 │  API Security Checklist                                  │
 ├──────────────────────────────────────────────────────────┤

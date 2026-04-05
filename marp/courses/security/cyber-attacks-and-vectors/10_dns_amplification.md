@@ -113,7 +113,7 @@ dig google.com TXT
 # Response: multiple large TXT records
 ```
 
-```
+```text
 ┌──────────────────────────────────────────────────┐
 │     Amplification Factors by Record Type          │
 ├──────────────────────────────────────────────────┤
@@ -132,7 +132,7 @@ dig google.com TXT
 
 ## IP Spoofing: The Enabler
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │           IP Spoofing in DNS Amplification                │
 │                                                          │
@@ -183,7 +183,7 @@ dig @your-dns-ip example.com
 
 ## BCP38: Ingress Filtering (Source Address Validation)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          BCP38 / RFC 2827: Ingress Filtering              │
 │                                                          │

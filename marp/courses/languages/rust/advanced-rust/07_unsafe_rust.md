@@ -333,7 +333,7 @@ Mutating data behind shared references
 
 ## The Interior Mutability Pattern
 
-```
+```text
   ┌─────────────────────────────────────────────────────┐
   │           Interior Mutability Types                  │
   ├────────────────┬────────────────────────────────────┤
@@ -895,7 +895,7 @@ impl Drop for Buffer {
 
 ## The Nomicon Rules Summary
 
-```
+```text
   ┌──────────────────────────────────────────────────────────┐
   │           Undefined Behavior in Rust                      │
   ├──────────────────────────────────────────────────────────┤
@@ -950,7 +950,7 @@ fn main() {
 
 ## Summary
 
-```
+```text
   ┌───────────────────────────────────────────────────────┐
   │             Unsafe Rust Cheatsheet                     │
   ├───────────────────────────────────────────────────────┤

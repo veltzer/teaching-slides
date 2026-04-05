@@ -11,7 +11,7 @@
 ---
 ## Domain Hijacking vs DNS Hijacking
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  Domain Hijacking vs DNS Hijacking                       │
 ├────────────────────────┬─────────────────────────────────┤
@@ -48,7 +48,7 @@
 ---
 ## Registrar Account Attacks
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Registrar Account Takeover Flow                  │
 │                                                          │
@@ -115,7 +115,7 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 ---
 ## Expired Domain Takeover
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Domain Lifecycle                                 │
 │                                                          │
@@ -152,7 +152,7 @@ whois example.com | grep -i "expir"
 ---
 ## Subdomain Takeover
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Subdomain Takeover Attack                        │
 │                                                          │
@@ -241,7 +241,7 @@ diff /tmp/ns_baseline.txt /tmp/ns_current.txt
 
 ### Registry Lock (Highest Protection)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Domain Lock Levels                               │
 │                                                          │
@@ -273,7 +273,7 @@ whois example.com | grep -i "status"
 ---
 ## DNSSEC: DNS Security Extensions
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          How DNSSEC Works                                 │
 │                                                          │
@@ -311,7 +311,7 @@ dig DS example.com @a.gtld-servers.net +short
 
 ### Registrar Security Checklist
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  Registrar Account Security                              │
 ├──────────────────────────────────────────────────────────┤

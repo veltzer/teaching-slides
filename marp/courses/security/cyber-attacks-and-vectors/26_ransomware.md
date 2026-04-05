@@ -12,7 +12,7 @@
 ---
 ## Evolution of Ransomware
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Ransomware Evolution Timeline                    │
 │                                                          │
@@ -48,7 +48,7 @@
 ---
 ## How Ransomware Works
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Ransomware Attack Chain                          │
 │                                                          │
@@ -81,7 +81,7 @@
 ---
 ## Encryption Techniques
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Ransomware Encryption Architecture               │
 │                                                          │
@@ -131,7 +131,7 @@
 ---
 ## Lateral Movement Techniques
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Lateral Movement in Ransomware Attacks           │
 │                                                          │
@@ -196,7 +196,7 @@ taskkill /F /IM outlook.exe
 ---
 ## Ransomware-as-a-Service (RaaS)
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          RaaS Business Model                              │
 │                                                          │
@@ -246,7 +246,7 @@ taskkill /F /IM outlook.exe
 ---
 ### NotPetya (2017)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          NotPetya: "The Most Devastating Cyberattack      │
 │           in History" -- Wired                            │
@@ -292,7 +292,7 @@ taskkill /F /IM outlook.exe
 ---
 ## Double and Triple Extortion
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  Extortion Models                                        │
 ├──────────────────────────────────────────────────────────┤
@@ -320,7 +320,7 @@ taskkill /F /IM outlook.exe
 ---
 ## Backup Strategies: The 3-2-1-1-0 Rule
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          3-2-1-1-0 Backup Rule                           │
 │                                                          │
@@ -383,7 +383,7 @@ sha256sum /backup/data/*.tar.gz > /backup/checksums.txt
 ---
 ## Ransomware Prevention
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Prevention Controls                                     │
 ├──────────────────────────────────────────────────────────┤
@@ -448,7 +448,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ---
 ## Incident Response Playbook
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │  Ransomware Incident Response                            │
 ├──────────────────────────────────────────────────────────┤
@@ -513,7 +513,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ---
 ## Free Decryption Resources
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  No More Ransom Project (nomoreransom.org)               │
 ├──────────────────────────────────────────────────────────┤

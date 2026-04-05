@@ -9,7 +9,7 @@
 ---
 ## Authentication vs Authorization
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Authentication vs Authorization                         │
 ├──────────────────────────┬───────────────────────────────┤
@@ -39,7 +39,7 @@
 ---
 ## Credential Stuffing Attacks
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Credential Stuffing Flow                         │
 │                                                          │
@@ -84,7 +84,7 @@
 ---
 ## Session Fixation Attack
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Session Fixation Attack                          │
 │                                                          │
@@ -127,7 +127,7 @@ def login():
 
 ### The "none" Algorithm Attack
 
-```
+```asm
 ┌──────────────────────────────────────────────────────────┐
 │          JWT "none" Algorithm Attack                      │
 │                                                          │
@@ -209,7 +209,7 @@ def verify_token(token):
 ---
 ## Password Storage
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Password Storage Evolution                       │
 │                                                          │
@@ -276,7 +276,7 @@ except Exception:
 ---
 ## Multi-Factor Authentication (MFA)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Authentication Factors                           │
 │                                                          │
@@ -307,7 +307,7 @@ except Exception:
 ---
 ## MFA Bypass Techniques
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │          Common MFA Bypass Methods                        │
 │                                                          │
@@ -341,7 +341,7 @@ except Exception:
 ---
 ## OAuth Misconfigurations
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Common OAuth Vulnerabilities                     │
 │                                                          │
@@ -388,7 +388,7 @@ OAUTH_CONFIG = {
 ---
 ## Insecure Password Reset Flows
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Password Reset Vulnerabilities                   │
 │                                                          │
@@ -499,7 +499,7 @@ def check_login(username, password):
 ---
 ## Authentication Security Checklist
 
-```
+```sql
 ┌──────────────────────────────────────────────────────────┐
 │          Authentication Security Checklist                │
 ├──────────────────────────────────────────────────────────┤

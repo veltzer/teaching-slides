@@ -4,7 +4,7 @@
 
 ## Memory Regions in a C Program
 
-```
+```text
 ┌─────────────────────────┐  High addresses
 │         Stack           │  Local variables, function frames
 │  (grows downward)  |    │
@@ -274,7 +274,7 @@ int main(void) {
 }
 ```
 
-```
+```text
 Before free(p):
 ┌──────┐     ┌──────┐
 │  p ──┼────>│  42  │  (heap)
@@ -369,7 +369,7 @@ valgrind --leak-check=full \
 
 Example Valgrind output for a leak:
 
-```
+```c
 ==12345== HEAP SUMMARY:
 ==12345==   in use at exit: 40 bytes in 1 blocks
 ==12345==   total heap usage: 3 allocs, 2 frees, 1,064 bytes allocated
@@ -619,7 +619,7 @@ int main(void) {
 
 ## Custom Allocator Overview
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                Allocator Strategies                  │
 ├──────────────┬──────────────────────────────────────┤

@@ -38,7 +38,7 @@
 
 ## DNS DoS Attack Flow
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │           DNS Query Flood Attack                         │
 │                                                          │
@@ -67,7 +67,7 @@
 
 ## Random Subdomain Attack (Water Torture)
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │         Random Subdomain Attack                          │
 │                                                          │
@@ -118,7 +118,7 @@ tcpdump -i eth0 -n 'udp dst port 53' -c 1000 | \
 
 ## Response Rate Limiting (RRL) Configuration
 
-```
+```bash
 # BIND named.conf - RRL configuration
 rate-limit {
     responses-per-second 5;    # Max responses per client
@@ -154,7 +154,7 @@ The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS 
 
 ## Anycast DNS Architecture
 
-```
+```text
 ┌────────────────────────────────────────────────────────────┐
 │              Anycast DNS Distribution                       │
 │                                                            │

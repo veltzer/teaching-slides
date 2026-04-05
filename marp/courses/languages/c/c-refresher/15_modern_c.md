@@ -4,7 +4,7 @@
 
 ## C Standards Timeline
 
-```
+```text
 1972    1989    1999    2011    2018    2024
   |       |       |       |       |       |
   K&R    C89     C99     C11     C17     C23
@@ -201,7 +201,7 @@ int main(void) {
 
 If an assertion fails:
 
-```
+```text
 error: static assertion failed: "This code requires a 64-bit platform"
 ```
 

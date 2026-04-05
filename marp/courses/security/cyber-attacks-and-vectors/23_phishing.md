@@ -17,7 +17,7 @@
     - Offer an enticing deal or reward
 - Malicious links and attachments can install malware on your device
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Phishing Psychology: Triggering Action                  │
 ├──────────────────────────────────────────────────────────┤
@@ -49,7 +49,7 @@
 ---
 ## Spear Phishing
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Spear Phishing Attack Flow                       │
 │                                                          │
@@ -86,7 +86,7 @@
 - Often impersonates legal proceedings, regulatory bodies, or other executives
 
 **Example whaling email:**
-```
+```c
 From: legal-department@company-legal-notice.com
 To: ceo@company.com
 Subject: URGENT: Pending Litigation - Immediate Response Required
@@ -106,7 +106,7 @@ Regards,
 ---
 ## Vishing (Voice Phishing)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Vishing Attack Scenario                          │
 │                                                          │
@@ -136,7 +136,7 @@ Regards,
 ---
 ## Smishing (SMS Phishing)
 
-```
+```bash
 Common smishing messages:
 
 "USPS: Your package has a delivery problem.
@@ -161,7 +161,7 @@ Unlock at: https://apple-id-verify.xyz"
 ---
 ## Business Email Compromise (BEC)
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          BEC Attack Types                                 │
 │                                                          │
@@ -223,7 +223,7 @@ cat suspicious_email.eml | grep -E "^(From|To|Subject|Received|Return-Path|Reply
 ---
 ## DMARC, DKIM, and SPF
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │          Email Authentication Trilogy                     │
 │                                                          │
@@ -269,7 +269,7 @@ dig TXT _dmarc.example.com
 ---
 ## How SPF, DKIM, and DMARC Work Together
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │  Email: From: ceo@company.com                            │
 │  Sent from IP: 203.0.113.50                              │
@@ -298,7 +298,7 @@ dig TXT _dmarc.example.com
 ---
 ## Phishing Detection Indicators
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Red Flags in Phishing Emails                            │
 ├──────────────────────────────────────────────────────────┤
@@ -331,7 +331,7 @@ dig TXT _dmarc.example.com
 ---
 ## Modern Phishing Infrastructure
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Phishing-as-a-Service (PhaaS) Ecosystem                 │
 │                                                          │
@@ -358,7 +358,7 @@ dig TXT _dmarc.example.com
 ---
 ## Adversary-in-the-Middle (AiTM) Phishing
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  AiTM Phishing (Defeats Traditional MFA)                 │
 │                                                          │
@@ -403,7 +403,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 | Incident debrief             | After incidents | Learn from real events           |
 | Role-specific training       | Annual          | Targeted for high-risk roles     |
 
-```
+```text
 ┌──────────────────────────────────────────────────────────┐
 │  Phishing Simulation Best Practices                      │
 ├──────────────────────────────────────────────────────────┤
@@ -427,7 +427,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 ---
 ## Technical Defenses
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Anti-Phishing Defense Stack                             │
 ├──────────────────────────────────────────────────────────┤

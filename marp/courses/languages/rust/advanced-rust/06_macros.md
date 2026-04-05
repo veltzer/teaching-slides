@@ -443,7 +443,7 @@ Compile-time code generation with Rust code
 
 ## Types of Procedural Macros
 
-```
+```text
   ┌─────────────────────────────────────────────────────┐
   │              Procedural Macro Types                  │
   ├─────────────┬───────────────────────────────────────┤
@@ -921,7 +921,7 @@ Choosing the right abstraction
 
 ## Decision Guide
 
-```
+```text
   ┌──────────────────────────────────────────────────────────┐
   │         When to Use What?                                │
   ├──────────────────────────────────────────────────────────┤
@@ -1016,7 +1016,7 @@ macro_rules! strict_macro {
 
 ## Summary
 
-```
+```text
   ┌───────────────────────────────────────────────────────┐
   │                  Macros Cheatsheet                     │
   ├───────────────────────────────────────────────────────┤

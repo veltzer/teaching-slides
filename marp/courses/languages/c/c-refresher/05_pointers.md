@@ -135,7 +135,7 @@ int *ptr = (int *)malloc(sizeof(int) * 10); // Allocate space for 10 ints
 
 ## Pointer Memory Visualization
 
-```
+```text
 int x = 42;
 int *p = &x;
 int **pp = &p;

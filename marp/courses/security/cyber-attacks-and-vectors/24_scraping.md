@@ -15,7 +15,7 @@
 ---
 ## How Web Scraping Works
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │          Web Scraping Pipeline                            │
 │                                                          │
@@ -189,7 +189,7 @@ const puppeteer = require('puppeteer');
 ---
 ## Anti-Scraping Techniques
 
-```
+```python
 ┌──────────────────────────────────────────────────────────┐
 │  Anti-Scraping Defense Layers                            │
 ├──────────────────────────────────────────────────────────┤
@@ -223,7 +223,7 @@ const puppeteer = require('puppeteer');
 ---
 ## robots.txt
 
-```
+```python
 # Example robots.txt
 # https://example.com/robots.txt
 
@@ -266,7 +266,7 @@ Crawl-delay: 10
 | hCaptcha        | Image labeling tasks                   | Medium            |
 | Cloudflare Turnstile | Invisible challenge               | Hard              |
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  CAPTCHA Bypass Methods (for awareness)                  │
 ├──────────────────────────────────────────────────────────┤
@@ -411,7 +411,7 @@ def honeypot():
 ---
 ## Legal Considerations
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Legal Landscape of Web Scraping                         │
 ├──────────────────────────────────────────────────────────┤
@@ -517,7 +517,7 @@ grep -Ei "scrapy|python-requests|wget|curl|bot|spider" \
 ---
 ## Defense Strategy for Website Owners
 
-```
+```bash
 ┌──────────────────────────────────────────────────────────┐
 │  Anti-Scraping Defense Strategy                          │
 ├──────────────────────────────────────────────────────────┤

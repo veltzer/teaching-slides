@@ -158,7 +158,7 @@ When there is no visible difference in response:
 ---
 ## Second-Order SQL Injection
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │          Second-Order SQL Injection                   │
 │                                                      │
@@ -340,7 +340,7 @@ sqlmap -u "http://target.com/page?id=1" -D dbname -T users --dump
 ---
 ## WAF Rules for SQL Injection
 
-```
+```sql
 # ModSecurity CRS rules for SQL injection detection
 # Common patterns blocked:
 # - UNION SELECT
