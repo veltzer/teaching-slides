@@ -192,19 +192,19 @@ $ dig example.com TXT +short
 "v=spf1 include:_spf.google.com ~all"
 ```
 
-2. **DKIM** (DomainKeys Identified Mail) -- email authentication via cryptographic signatures:
+1. **DKIM** (DomainKeys Identified Mail) -- email authentication via cryptographic signatures:
 ```bash
 $ dig google._domainkey.example.com TXT +short
 "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA..."
 ```
 
-3. **DMARC** -- policy for handling email that fails SPF/DKIM:
+1. **DMARC** -- policy for handling email that fails SPF/DKIM:
 ```bash
 $ dig _dmarc.example.com TXT +short
 "v=DMARC1; p=reject; rua=mailto:dmarc@example.com"
 ```
 
-4. **Domain verification** (Google, Microsoft, Let's Encrypt):
+1. **Domain verification** (Google, Microsoft, Let's Encrypt):
 ```bash
 $ dig example.com TXT +short
 "google-site-verification=abc123..."

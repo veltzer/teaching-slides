@@ -81,8 +81,8 @@
 - Current or former employees, contractors, or partners
 - Have legitimate access to systems and data
 - Two categories:
-  - **Malicious insiders**: Intentional data theft or sabotage
-  - **Negligent insiders**: Accidental security breaches
+    - **Malicious insiders**: Intentional data theft or sabotage
+    - **Negligent insiders**: Accidental security breaches
 - Hardest threat to detect because traffic appears legitimate
 - Example: Edward Snowden (NSA), Reality Winner (NSA)
 - Detection requires User Behavior Analytics (UBA)

@@ -23,7 +23,7 @@ The Central Processing Unit is the "brain" of the computer. It executes
 instructions from programs by performing arithmetic, logic, control, and
 I/O operations.
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                        CPU                          │
 │  ┌──────────┐  ┌──────────────┐  ┌──────────────┐  │
@@ -63,7 +63,7 @@ The ALU performs all arithmetic and logical operations inside the CPU.
 - Shift left, shift right
 - Comparison (sets flags)
 
-```
+```text
           ┌───────────┐
  Input A──┤           ├──Result
           │    ALU    │
@@ -103,7 +103,7 @@ clock cycle with zero latency.
 
 **General-purpose registers (x86-64):**
 
-```
+```text
 ┌────────────────────────────────────────────────────┐
 │ 64-bit    RAX  RBX  RCX  RDX  RSI  RDI  RSP  RBP │
 │ 64-bit    R8   R9   R10  R11  R12  R13  R14  R15  │
@@ -126,7 +126,7 @@ clock cycle with zero latency.
 
 The x86-64 registers have sub-register access for backward compatibility:
 
-```
+```text
  63                              31              15      7      0
 ┌────────────────────────────────┬───────────────┬───────┬──────┐
 │                                │               │       │  AL  │  8-bit
@@ -172,7 +172,7 @@ The control unit orchestrates the CPU. It reads instructions from memory,
 decodes them, and generates control signals that tell other components
 what to do.
 
-```
+```text
 ┌──────────────────────────────────────────┐
 │              Control Unit                │
 │                                          │
@@ -202,7 +202,7 @@ what to do.
 
 Every instruction goes through a fundamental cycle:
 
-```
+```text
     ┌─────────┐     ┌──────────┐     ┌───────────┐     ┌────────────┐
     │  FETCH  │────>│  DECODE  │────>│  EXECUTE  │────>│ WRITE-BACK │
     │         │     │          │     │           │     │            │
@@ -231,7 +231,7 @@ Every instruction goes through a fundamental cycle:
 
 Consider the x86 instruction: `ADD RAX, RBX`
 
-```
+```text
 Cycle 1 - FETCH:
     Memory[RIP] → Instruction Register
     RIP = RIP + instruction_length
@@ -262,7 +262,7 @@ Pipelining overlaps instruction execution stages, like an assembly line.
 While one instruction is being executed, the next is being decoded, and
 the one after that is being fetched.
 
-```
+```text
 Clock:    1    2    3    4    5    6    7    8
          ┌────┬────┬────┬────┐
 Instr 1: │ IF │ ID │ EX │ WB │
@@ -291,14 +291,14 @@ EX = Execute              WB = Write Back
 Three types of hazards can stall or break the pipeline:
 
 **1. Data Hazards** -- An instruction needs data not yet produced:
-```
+```asm
 ADD RAX, RBX    ; produces RAX
 SUB RCX, RAX    ; needs RAX -- but ADD hasn't written it yet!
 ```
 Solution: **forwarding/bypassing** -- route ALU output directly to next stage.
 
 **2. Control Hazards** -- Branch instructions change flow:
-```
+```asm
 CMP RAX, 0
 JZ  label       ; do we take the branch? Pipeline already fetched next instr
 ADD RBX, 1      ; this might need to be flushed
@@ -306,7 +306,7 @@ ADD RBX, 1      ; this might need to be flushed
 Solution: **branch prediction** (next slide).
 
 **3. Structural Hazards** -- Two instructions need the same hardware:
-```
+```text
 Both instruction fetch and data load need memory in same cycle
 ```
 Solution: **separate I-cache and D-cache** (Harvard architecture internally).
@@ -324,7 +324,7 @@ A misprediction costs 10-20+ cycles (pipeline flush).
 
 **Dynamic prediction -- 2-bit saturating counter:**
 
-```
+```text
                     taken
     ┌──────────┐ ─────────> ┌──────────┐
     │ Strongly │             │ Strongly │
@@ -379,7 +379,7 @@ Same algorithm, same data, 3x slowdown from branch misprediction.
 A superscalar CPU can issue multiple instructions per clock cycle.
 It has multiple execution units working in parallel.
 
-```
+```text
 ┌──────────────────────────────────────────────────────┐
 │                  Superscalar CPU                     │
 │                                                      │
@@ -412,7 +412,7 @@ A modern Intel/AMD core can retire 4-6 instructions per cycle.
 Modern CPUs do not execute instructions in program order. They find
 independent instructions and execute them whenever their operands are ready.
 
-```
+```text
 Original order:           Reordered execution:
 1: LOAD  R1, [addr1]      1: LOAD R1, [addr1]    (cycle 1, cache miss!)
 2: ADD   R2, R1, 1        4: MUL  R5, R3, R4     (cycle 1, independent)
@@ -462,7 +462,7 @@ ENTER 16, 0        ; create stack frame: push RBP, mov RBP RSP, sub RSP 16
 ```
 
 Variable-length instruction encoding:
-```
+```text
 90                      ; NOP                    (1 byte)
 48 89 C3                ; MOV RBX, RAX           (3 bytes)
 48 C7 C0 01 00 00 00    ; MOV RAX, 1             (7 bytes)
@@ -518,7 +518,7 @@ performance while using far less power.
 CPU speed has grown much faster than memory speed. This gap is the
 "memory wall" and is the reason caches exist.
 
-```
+```text
     Access Time (approximate):
     ┌──────────────────────────────────────────┐
     │ Register     :  ~0.3 ns    (1 cycle)     │
@@ -546,7 +546,7 @@ CPU speed has grown much faster than memory speed. This gap is the
 
 Modern CPUs use a multi-level cache hierarchy to bridge the memory wall:
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │                   CPU Core 0                        │
 │  ┌───────────────────────────────────────────┐      │
@@ -580,7 +580,7 @@ L2 and L3 are unified (hold both instructions and data).
 Caches do not store individual bytes. They store **cache lines**, typically
 64 bytes on x86.
 
-```
+```text
 Memory address: 0x1000
                 ┌────────────────────────────────────────────┐
 Cache line:     │ byte 0 │ byte 1 │ byte 2 │ ... │ byte 63  │

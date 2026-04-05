@@ -449,7 +449,7 @@ Interrupts:
 | Power | High (CPU always busy) | Low (CPU can sleep) |
 | Best for | High-frequency events | Infrequent events |
 
-**Modern approach: hybrid (NAPI in Linux networking)**
+### Modern approach: hybrid (NAPI in Linux networking)
 
 ```
 Normal: interrupt-driven (low CPU, low latency)

@@ -51,7 +51,7 @@ Each level is larger, slower, and cheaper per byte than the one above it.
 
 ## Why a Hierarchy?
 
-**The key insight: locality of reference**
+### The key insight: locality of reference
 
 Programs do not access memory uniformly. They exhibit:
 

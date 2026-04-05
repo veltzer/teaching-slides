@@ -918,10 +918,10 @@ modules:
 - **Network virtualization** (VXLAN, GENEVE) creates overlay networks
 - **Docker networking**: bridge (single host), overlay (multi-host)
 - **Kubernetes networking**: flat network model, every Pod gets an IP
-  - **CNI plugins** (Calico, Cilium) implement the network
-  - **Services** provide stable endpoints
-  - **Ingress** handles HTTP routing
-  - **Network Policies** act as Pod-level firewalls
+    - **CNI plugins** (Calico, Cilium) implement the network
+    - **Services** provide stable endpoints
+    - **Ingress** handles HTTP routing
+    - **Network Policies** act as Pod-level firewalls
 - **Service mesh** (Istio, Linkerd) handles mTLS, retries, observability
 - **CDNs** cache content at edge locations for low latency
 - **WebSocket** enables real-time bidirectional communication
