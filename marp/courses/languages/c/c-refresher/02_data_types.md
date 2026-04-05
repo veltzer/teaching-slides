@@ -211,9 +211,280 @@ printf("Size of float: %zu bytes\n", sizeof(float));
 
 ---
 
+## Complete sizeof Example
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    printf("%-20s %zu bytes\n", "char",        sizeof(char));
+    printf("%-20s %zu bytes\n", "short",       sizeof(short));
+    printf("%-20s %zu bytes\n", "int",         sizeof(int));
+    printf("%-20s %zu bytes\n", "long",        sizeof(long));
+    printf("%-20s %zu bytes\n", "long long",   sizeof(long long));
+    printf("%-20s %zu bytes\n", "float",       sizeof(float));
+    printf("%-20s %zu bytes\n", "double",      sizeof(double));
+    printf("%-20s %zu bytes\n", "long double", sizeof(long double));
+    printf("%-20s %zu bytes\n", "void *",      sizeof(void *));
+    return 0;
+}
+```
+
+Typical output on x86-64 Linux:
+
+```
+char                 1 bytes
+short                2 bytes
+int                  4 bytes
+long                 8 bytes
+long long            8 bytes
+float                4 bytes
+double               8 bytes
+long double          16 bytes
+void *               8 bytes
+```
+
+---
+
+## Fixed-Width Integer Types (C99)
+
+The `<stdint.h>` header provides types with guaranteed sizes:
+
+| Type | Width | Signed Range |
+|------|-------|-------------|
+| `int8_t` | 8 bits | -128 to 127 |
+| `int16_t` | 16 bits | -32768 to 32767 |
+| `int32_t` | 32 bits | -2^31 to 2^31-1 |
+| `int64_t` | 64 bits | -2^63 to 2^63-1 |
+| `uint8_t` | 8 bits | 0 to 255 |
+| `uint16_t` | 16 bits | 0 to 65535 |
+| `uint32_t` | 32 bits | 0 to 2^32-1 |
+| `uint64_t` | 64 bits | 0 to 2^64-1 |
+
+```c
+#include <stdint.h>
+#include <stdio.h>
+#include <inttypes.h>
+
+int main(void) {
+    uint32_t ip_addr = 0xC0A80001;  /* 192.168.0.1 */
+    int64_t big = INT64_MAX;
+    printf("IP: 0x%08" PRIX32 "\n", ip_addr);
+    printf("Big: %" PRId64 "\n", big);
+    return 0;
+}
+```
+
+---
+
+## Integer Promotion Rules
+
+When integers of different types are mixed in expressions, C promotes them:
+
+```
+┌─────────────────────────────────────────────┐
+│         Implicit Conversion Hierarchy       │
+│                                             │
+│  long double                                │
+│       ^                                     │
+│     double                                  │
+│       ^                                     │
+│     float                                   │
+│       ^                                     │
+│  unsigned long long                         │
+│       ^                                     │
+│    long long                                │
+│       ^                                     │
+│  unsigned long                              │
+│       ^                                     │
+│     long                                    │
+│       ^                                     │
+│  unsigned int                               │
+│       ^                                     │
+│     int  <-- char, short promoted to here   │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## Dangerous Implicit Conversions
+
+```c
+#include <stdio.h>
+
+int main(void) {
+    /* Pitfall 1: signed/unsigned comparison */
+    int a = -1;
+    unsigned int b = 1;
+    if (a < b) {
+        printf("Expected: -1 < 1\n");
+    } else {
+        printf("Surprise: -1 >= 1 (unsigned comparison!)\n");
+    }
+    /* -1 is converted to UINT_MAX (4294967295), which is > 1 */
+
+    /* Pitfall 2: truncation */
+    int big = 100000;
+    short small = big;  /* may truncate silently */
+    printf("big=%d, small=%d\n", big, small);
+
+    /* Pitfall 3: float to int truncation */
+    double pi = 3.99;
+    int rounded = pi;  /* truncates to 3, not 4 */
+    printf("pi=%f, rounded=%d\n", pi, rounded);
+
+    return 0;
+}
+```
+
+---
+
+## Boolean Type (C99)
+
+```c
+#include <stdbool.h>
+#include <stdio.h>
+
+int main(void) {
+    bool is_ready = true;
+    bool is_empty = false;
+
+    if (is_ready && !is_empty) {
+        printf("Processing...\n");
+    }
+
+    /* Before C99, programmers used: */
+    /* typedef int bool; */
+    /* #define true 1    */
+    /* #define false 0   */
+
+    return 0;
+}
+```
+
+---
+
+## Memory Layout of Data Types
+
+```
+┌──────────────────────────────────────────────┐
+│  char c = 'A';         (1 byte)              │
+│  ┌────┐                                      │
+│  │ 41 │  (0x41 = 65 = 'A')                   │
+│  └────┘                                      │
+│                                              │
+│  int x = 0x12345678;   (4 bytes, little-endian) │
+│  ┌────┬────┬────┬────┐                       │
+│  │ 78 │ 56 │ 34 │ 12 │                       │
+│  └────┴────┴────┴────┘                       │
+│  addr  +1   +2   +3                          │
+│                                              │
+│  double d = 3.14;      (8 bytes, IEEE 754)   │
+│  ┌────┬────┬────┬────┬────┬────┬────┬────┐   │
+│  │ 1F │ 85 │ EB │ 51 │ B8 │ 1E │ 09 │ 40 │   │
+│  └────┴────┴────┴────┴────┴────┴────┴────┘   │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+## Floating-Point Pitfalls
+
+```c
+#include <stdio.h>
+#include <math.h>
+#include <float.h>
+
+int main(void) {
+    /* Pitfall 1: equality comparison */
+    double a = 0.1 + 0.2;
+    double b = 0.3;
+    printf("0.1 + 0.2 == 0.3? %s\n",
+           (a == b) ? "yes" : "NO!");  /* prints NO! */
+
+    /* Correct approach: use epsilon comparison */
+    if (fabs(a - b) < DBL_EPSILON * 10) {
+        printf("Approximately equal\n");
+    }
+
+    /* Pitfall 2: precision loss with large + small */
+    float big = 1e10f;
+    float small = 1.0f;
+    printf("big + small - big = %f\n",
+           (big + small) - big);  /* may print 0.000000 */
+
+    /* Pitfall 3: NaN and infinity */
+    double inf = 1.0 / 0.0;
+    double nan = 0.0 / 0.0;
+    printf("inf=%f, nan=%f\n", inf, nan);
+    printf("nan == nan? %s\n",
+           (nan == nan) ? "yes" : "NO!");  /* NO! */
+
+    return 0;
+}
+```
+
+---
+
+## Format Specifiers Reference Table
+
+| Type | printf | scanf | Notes |
+|------|--------|-------|-------|
+| `char` | `%c` | `%c` | Single character |
+| `int` | `%d` or `%i` | `%d` or `%i` | Signed decimal |
+| `unsigned` | `%u` | `%u` | Unsigned decimal |
+| `long` | `%ld` | `%ld` | Long signed |
+| `unsigned long` | `%lu` | `%lu` | Long unsigned |
+| `long long` | `%lld` | `%lld` | Long long signed |
+| `float` | `%f` | `%f` | 6 decimal places |
+| `double` | `%f` or `%lf` | `%lf` | scanf needs `%lf` |
+| `size_t` | `%zu` | `%zu` | Unsigned size |
+| `ptrdiff_t` | `%td` | `%td` | Pointer difference |
+| `void *` | `%p` | - | Pointer value |
+| hex | `%x` / `%X` | `%x` | Hexadecimal |
+| octal | `%o` | `%o` | Octal |
+
+---
+
+## typedef: Creating Type Aliases
+
+```c
+#include <stdio.h>
+#include <stdint.h>
+
+/* Simple alias */
+typedef unsigned long ulong;
+
+/* Alias for a struct */
+typedef struct {
+    double x;
+    double y;
+} Point;
+
+/* Alias for a function pointer */
+typedef int (*Comparator)(const void *, const void *);
+
+/* Alias for a fixed-size buffer */
+typedef char Name[64];
+
+int main(void) {
+    Point p = {3.0, 4.0};
+    Name greeting = "Hello";
+    printf("Point: (%.1f, %.1f)\n", p.x, p.y);
+    printf("Name: %s\n", greeting);
+    return 0;
+}
+```
+
+---
+
 ## Summary
 
 - C provides basic types: integers, floating-point, characters, and void
 - Derived types include arrays, pointers, structures, unions, and enums
-- Use appropriate types based on the data and operations needed
+- Use `<stdint.h>` for fixed-width integer types in portable code
+- Be aware of implicit conversions and integer promotion rules
+- Never compare floating-point numbers with `==`
+- Use `typedef` to create meaningful type aliases
+- Use appropriate format specifiers for each type
 - Be aware of type sizes and conversions for efficient and correct code

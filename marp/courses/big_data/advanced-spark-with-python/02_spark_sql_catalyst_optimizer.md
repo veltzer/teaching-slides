@@ -317,3 +317,531 @@ df = spark.read.option("mode", "PERMISSIVE")
 * Research papers
 * Community guides
 * Performance tuning tips
+
+---
+
+## Full Program: Catalyst Optimizer in Action
+
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+
+spark = SparkSession.builder \
+    .appName("CatalystOptimizerDemo") \
+    .config("spark.sql.cbo.enabled", "true") \
+    .config("spark.sql.cbo.joinReorder.enabled", "true") \
+    .getOrCreate()
+
+# Create sample tables
+orders = spark.range(0, 1_000_000).toDF("order_id") \
+    .withColumn("customer_id", (F.col("order_id") % 10000).cast("int")) \
+    .withColumn("product_id", (F.col("order_id") % 500).cast("int")) \
+    .withColumn("amount", (F.rand() * 1000).cast("decimal(10,2)")) \
+    .withColumn("order_date", F.date_add(F.lit("2024-01-01"),
+        (F.rand() * 365).cast("int")))
+
+customers = spark.range(0, 10000).toDF("customer_id") \
+    .withColumn("name", F.concat(F.lit("Customer_"), F.col("customer_id"))) \
+    .withColumn("region", F.when(F.col("customer_id") % 4 == 0, "North")
+        .when(F.col("customer_id") % 4 == 1, "South")
+        .when(F.col("customer_id") % 4 == 2, "East")
+        .otherwise("West"))
+
+products = spark.range(0, 500).toDF("product_id") \
+    .withColumn("product_name",
+        F.concat(F.lit("Product_"), F.col("product_id"))) \
+    .withColumn("category",
+        F.when(F.col("product_id") % 5 == 0, "Electronics")
+        .when(F.col("product_id") % 5 == 1, "Clothing")
+        .when(F.col("product_id") % 5 == 2, "Food")
+        .when(F.col("product_id") % 5 == 3, "Books")
+        .otherwise("Other"))
+
+# Register as temp views
+orders.createOrReplaceTempView("orders")
+customers.createOrReplaceTempView("customers")
+products.createOrReplaceTempView("products")
+
+# Compute statistics for CBO
+spark.sql("ANALYZE TABLE orders COMPUTE STATISTICS")
+spark.sql("ANALYZE TABLE customers COMPUTE STATISTICS")
+spark.sql("ANALYZE TABLE products COMPUTE STATISTICS")
+spark.sql("ANALYZE TABLE orders COMPUTE STATISTICS FOR COLUMNS "
+          "customer_id, product_id, amount")
+```
+
+---
+
+## Catalyst Optimizer Phases Explained
+
+```
+┌──────────────────────────────────────────────────┐
+│                  SQL Query / DataFrame API         │
+└───────────────────────┬──────────────────────────┘
+                        v
+┌──────────────────────────────────────────────────┐
+│  Phase 1: PARSING                                 │
+│  SQL string --> Unresolved Logical Plan            │
+│  (column names are just strings, no types)         │
+└───────────────────────┬──────────────────────────┘
+                        v
+┌──────────────────────────────────────────────────┐
+│  Phase 2: ANALYSIS                                │
+│  Resolve columns, tables, functions using Catalog  │
+│  Unresolved Plan --> Resolved Logical Plan          │
+└───────────────────────┬──────────────────────────┘
+                        v
+┌──────────────────────────────────────────────────┐
+│  Phase 3: LOGICAL OPTIMIZATION                    │
+│  Apply rule-based optimizations:                   │
+│  - Predicate pushdown                              │
+│  - Column pruning                                  │
+│  - Constant folding                                │
+│  - Boolean simplification                          │
+└───────────────────────┬──────────────────────────┘
+                        v
+┌──────────────────────────────────────────────────┐
+│  Phase 4: PHYSICAL PLANNING                       │
+│  Generate multiple physical plans                  │
+│  Cost-Based Optimizer selects cheapest plan         │
+└───────────────────────┬──────────────────────────┘
+                        v
+┌──────────────────────────────────────────────────┐
+│  Phase 5: CODE GENERATION (Tungsten)              │
+│  Whole-stage codegen: generate Java bytecode       │
+│  for CPU-efficient execution                       │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+## Viewing All Plan Levels
+
+```python
+# Complex query to analyze
+query = (
+    orders
+    .join(customers, "customer_id")
+    .join(products, "product_id")
+    .filter(F.col("region") == "North")
+    .filter(F.col("category") == "Electronics")
+    .filter(F.col("amount") > 100)
+    .groupBy("region", "category")
+    .agg(
+        F.sum("amount").alias("total_revenue"),
+        F.count("*").alias("order_count"),
+    )
+)
+
+# View all plan levels
+query.explain(mode="extended")
+# Output shows:
+#   == Parsed Logical Plan ==
+#   == Analyzed Logical Plan ==
+#   == Optimized Logical Plan ==
+#   == Physical Plan ==
+
+# View formatted plan (Spark 3.0+)
+query.explain(mode="formatted")
+
+# View cost-based plan
+query.explain(mode="cost")
+```
+
+---
+
+## Predicate Pushdown: Before vs After
+
+```python
+# Query: filter after join (what you write)
+result = (
+    orders.join(customers, "customer_id")
+    .filter(F.col("region") == "North")
+    .filter(F.col("amount") > 500)
+)
+
+# Catalyst optimizes this to push filters before join:
+# == Optimized Logical Plan ==
+# Aggregate
+#   Join (customer_id)
+#     Filter (amount > 500)    <-- pushed to orders scan
+#       Scan orders
+#     Filter (region = North)  <-- pushed to customers scan
+#       Scan customers
+```
+
+```
+Before Optimization:           After Optimization:
+┌──────────┐                   ┌──────────┐
+│  Filter   │                   │  Join    │
+│region=N   │                   │          │
+└────┬─────┘                   └──┬───┬───┘
+     v                            v   v
+┌──────────┐               ┌──────┐ ┌──────┐
+│  Filter   │               │Filter│ │Filter│
+│amount>500│               │amt>  │ │rgn=  │
+└────┬─────┘               │500   │ │North │
+     v                     └──┬───┘ └──┬───┘
+┌──────────┐                  v        v
+│  Join    │               ┌──────┐ ┌──────┐
+└──┬───┬───┘               │Orders│ │Cust. │
+   v   v                   │ Scan │ │ Scan │
+┌────┐┌────┐               └──────┘ └──────┘
+│Ord.││Cst.│
+└────┘└────┘
+```
+
+---
+
+## Full Program: Vectorized UDF Performance
+
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import udf, pandas_udf, col
+from pyspark.sql.types import DoubleType
+import time
+
+spark = SparkSession.builder \
+    .appName("UDFPerformance") \
+    .getOrCreate()
+
+# Create test dataset: 5M rows
+df = spark.range(0, 5_000_000).toDF("id") \
+    .withColumn("value", (col("id") * 0.001).cast("double"))
+
+# Method 1: Regular Python UDF (slowest)
+@udf(returnType=DoubleType())
+def python_udf(x):
+    import math
+    return math.sin(x) * math.cos(x) + math.sqrt(abs(x))
+
+# Method 2: Pandas/Vectorized UDF (faster)
+@pandas_udf(DoubleType())
+def pandas_udf_func(s):
+    import numpy as np
+    return np.sin(s) * np.cos(s) + np.sqrt(np.abs(s))
+
+# Method 3: Built-in functions (fastest)
+from pyspark.sql import functions as F
+
+# Benchmark all three approaches
+start = time.time()
+df.withColumn("result", python_udf("value")).count()
+python_time = time.time() - start
+
+start = time.time()
+df.withColumn("result", pandas_udf_func("value")).count()
+pandas_time = time.time() - start
+
+start = time.time()
+df.withColumn("result",
+    F.sin("value") * F.cos("value") + F.sqrt(F.abs("value"))
+).count()
+builtin_time = time.time() - start
+
+print(f"Python UDF:    {python_time:.2f}s")
+print(f"Pandas UDF:    {pandas_time:.2f}s")
+print(f"Built-in:      {builtin_time:.2f}s")
+print(f"Speedup (pandas vs python): {python_time/pandas_time:.1f}x")
+print(f"Speedup (builtin vs python): {python_time/builtin_time:.1f}x")
+```
+
+---
+
+## UDF Performance Comparison
+
+| UDF Type | Serialization | Vectorized | Optimizer | Relative Speed |
+|---|---|---|---|---|
+| Python UDF | Row-by-row Python<->JVM | No | Opaque | 1x (baseline) |
+| Pandas UDF | Arrow batches | Yes | Opaque | 3-100x |
+| Built-in Functions | None (JVM native) | Yes | Full optimization | 10-1000x |
+
+---
+
+## UDF Data Flow: Python vs Pandas
+
+```
+Python UDF (row-by-row):
+┌─────────┐     ┌──────────┐     ┌─────────┐
+│  JVM    │────>│ Serialize │────>│ Python  │
+│ Row 1   │     │ (pickle)  │     │ func()  │
+└─────────┘     └──────────┘     └────┬────┘
+                                      │
+┌─────────┐     ┌──────────┐     ┌────v────┐
+│  JVM    │<────│Deserialize│<────│ Result  │
+│ Result  │     │ (pickle)  │     │         │
+└─────────┘     └──────────┘     └─────────┘
+   x N rows (very slow!)
+
+Pandas UDF (batch):
+┌─────────┐     ┌──────────┐     ┌─────────┐
+│  JVM    │────>│  Arrow   │────>│ Python  │
+│ Batch   │     │ (zero-   │     │ pandas  │
+│ (10K    │     │  copy)   │     │ vectord │
+│  rows)  │     └──────────┘     └────┬────┘
+└─────────┘                           │
+┌─────────┐     ┌──────────┐     ┌────v────┐
+│  JVM    │<────│  Arrow   │<────│ Result  │
+│ Result  │     │ (zero-   │     │ Series  │
+│ Batch   │     │  copy)   │     │         │
+└─────────┘     └──────────┘     └─────────┘
+   x N/10K batches (much faster!)
+```
+
+---
+
+## Full Program: JDBC Parallel Read
+
+```python
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("JDBCParallelRead") \
+    .config("spark.jars", "/path/to/postgresql-42.6.0.jar") \
+    .getOrCreate()
+
+jdbc_url = "jdbc:postgresql://db-host:5432/mydb"
+connection_props = {
+    "user": "reader",
+    "password": "secret",
+    "driver": "org.postgresql.Driver",
+}
+
+# ANTI-PATTERN: Single-threaded read
+# slow_df = spark.read.jdbc(jdbc_url, "large_table", properties=connection_props)
+
+# BEST PRACTICE: Parallel read with partitioning
+# First, get the range for partitioning
+bounds = spark.read.jdbc(
+    jdbc_url, "(SELECT MIN(id) as min_id, MAX(id) as max_id FROM large_table) t",
+    properties=connection_props
+).collect()[0]
+
+# Parallel read: 10 concurrent connections
+df = spark.read.jdbc(
+    url=jdbc_url,
+    table="large_table",
+    column="id",
+    lowerBound=bounds["min_id"],
+    upperBound=bounds["max_id"],
+    numPartitions=10,
+    properties=connection_props,
+)
+
+print(f"Partitions: {df.rdd.getNumPartitions()}")
+print(f"Row count:  {df.count()}")
+
+# For non-numeric partition columns, use predicates
+date_predicates = [
+    "order_date >= '2024-01-01' AND order_date < '2024-04-01'",
+    "order_date >= '2024-04-01' AND order_date < '2024-07-01'",
+    "order_date >= '2024-07-01' AND order_date < '2024-10-01'",
+    "order_date >= '2024-10-01' AND order_date < '2025-01-01'",
+]
+
+df_by_quarter = spark.read.jdbc(
+    url=jdbc_url,
+    table="orders",
+    predicates=date_predicates,
+    properties=connection_props,
+)
+```
+
+---
+
+## Join Strategy Comparison
+
+| Join Strategy | When Used | Shuffle? | Sort? | Best For |
+|---|---|---|---|---|
+| Broadcast Hash | One side < 10MB | No | No | Small dim + large fact |
+| Sort Merge | Both sides large | Yes | Yes | Large table joins |
+| Shuffle Hash | Medium tables | Yes | No | Equi-joins, no sort needed |
+| Broadcast Nested Loop | Non-equi join, small table | No | No | Range/theta joins |
+| Cartesian | No join condition | Yes | No | Avoid! |
+
+---
+
+## Forcing Join Strategies with Hints
+
+```python
+from pyspark.sql import functions as F
+
+# Force broadcast join
+result = large_df.join(
+    small_df.hint("broadcast"), "key"
+)
+
+# Force sort-merge join
+result = df1.join(
+    df2.hint("merge"), "key"
+)
+
+# Force shuffle hash join
+result = df1.join(
+    df2.hint("shuffle_hash"), "key"
+)
+
+# Force shuffle-replicate nested loop join
+result = df1.join(
+    df2.hint("shuffle_replicate_nl"), df1.x < df2.y
+)
+
+# SQL hint syntax
+spark.sql("""
+    SELECT /*+ BROADCAST(small_table) */
+        o.*, c.name
+    FROM orders o
+    JOIN customers c ON o.customer_id = c.customer_id
+""")
+
+# Verify which strategy was chosen
+result.explain()
+```
+
+---
+
+## AQE (Adaptive Query Execution) Deep Dive
+
+```python
+spark.conf.set("spark.sql.adaptive.enabled", "true")
+
+# 1. Coalesce Shuffle Partitions
+# Merges small partitions after shuffle
+spark.conf.set(
+    "spark.sql.adaptive.coalescePartitions.enabled", "true")
+spark.conf.set(
+    "spark.sql.adaptive.coalescePartitions.minPartitionSize", "64MB")
+spark.conf.set(
+    "spark.sql.adaptive.advisoryPartitionSizeInBytes", "128MB")
+
+# 2. Skew Join Optimization
+# Splits skewed partitions automatically
+spark.conf.set(
+    "spark.sql.adaptive.skewJoin.enabled", "true")
+spark.conf.set(
+    "spark.sql.adaptive.skewJoin.skewedPartitionFactor", "5")
+spark.conf.set(
+    "spark.sql.adaptive.skewJoin.skewedPartitionThresholdInBytes", "256MB")
+
+# 3. Dynamic Join Strategy
+# Switches to broadcast join at runtime if data is small enough
+spark.conf.set(
+    "spark.sql.adaptive.autoBroadcastJoinThreshold", "10MB")
+```
+
+---
+
+## AQE: Before vs After
+
+```
+Without AQE:
+┌──────────┐
+│ 200 shuffle partitions (default)          │
+├──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬──┬─...─┤
+│1M│1M│5K│5K│5K│5K│5K│5K│5K│5K│5K│5K│ ... │
+└──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴─...─┘
+  ^skew         ^many small partitions
+
+With AQE:
+┌──────────┐
+│ Optimized partitions                      │
+├─────┬─────┬─────────────┬────────────────┤
+│500K │500K │ 50K         │ 50K            │
+│(1_a)│(1_b)│(merged 2-10)│(merged 11-20)  │
+└─────┴─────┴─────────────┴────────────────┘
+  ^split skew   ^coalesced small partitions
+```
+
+---
+
+## Full Program: Complex SQL with Window + CTE
+
+```python
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder \
+    .appName("ComplexSQL") \
+    .getOrCreate()
+
+# Register tables (assuming data is loaded)
+spark.sql("""
+    WITH monthly_revenue AS (
+        SELECT
+            customer_id,
+            DATE_TRUNC('month', order_date) AS month,
+            SUM(amount) AS monthly_total,
+            COUNT(*) AS order_count
+        FROM orders
+        GROUP BY customer_id, DATE_TRUNC('month', order_date)
+    ),
+    ranked_customers AS (
+        SELECT
+            customer_id,
+            month,
+            monthly_total,
+            order_count,
+            ROW_NUMBER() OVER (
+                PARTITION BY month
+                ORDER BY monthly_total DESC
+            ) AS rank,
+            LAG(monthly_total) OVER (
+                PARTITION BY customer_id
+                ORDER BY month
+            ) AS prev_month_total,
+            AVG(monthly_total) OVER (
+                PARTITION BY customer_id
+                ORDER BY month
+                ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+            ) AS rolling_3m_avg
+        FROM monthly_revenue
+    )
+    SELECT
+        r.customer_id,
+        c.name,
+        c.region,
+        r.month,
+        r.monthly_total,
+        r.rank,
+        r.prev_month_total,
+        ROUND(
+            (r.monthly_total - r.prev_month_total)
+            / r.prev_month_total * 100, 2
+        ) AS growth_pct,
+        ROUND(r.rolling_3m_avg, 2) AS rolling_avg
+    FROM ranked_customers r
+    JOIN customers c ON r.customer_id = c.customer_id
+    WHERE r.rank <= 10
+    ORDER BY r.month, r.rank
+""").show(20, truncate=False)
+```
+
+---
+
+## Common SQL Performance Pitfalls
+
+```python
+# PITFALL 1: SELECT * (no column pruning)
+# Bad:
+spark.sql("SELECT * FROM orders WHERE amount > 100")
+# Good:
+spark.sql("SELECT order_id, amount FROM orders WHERE amount > 100")
+
+# PITFALL 2: Functions on partition columns prevent pruning
+# Bad (scans all partitions):
+spark.sql("SELECT * FROM orders WHERE YEAR(order_date) = 2024")
+# Good (partition pruning works):
+spark.sql("SELECT * FROM orders WHERE order_date >= '2024-01-01' "
+          "AND order_date < '2025-01-01'")
+
+# PITFALL 3: Implicit type conversion
+# Bad (string comparison, no pushdown):
+spark.sql("SELECT * FROM orders WHERE customer_id = '123'")
+# Good (matching types):
+spark.sql("SELECT * FROM orders WHERE customer_id = 123")
+
+# PITFALL 4: Non-deterministic functions block optimization
+# Bad (rand() prevents caching/reuse):
+spark.sql("SELECT *, rand() as r FROM orders ORDER BY r LIMIT 100")
+# Good:
+spark.sql("SELECT * FROM orders TABLESAMPLE (100 ROWS)")
+```

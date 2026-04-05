@@ -288,3 +288,432 @@ def social_network_analysis(graph):
 * Research papers
 * Community guides
 * Example projects
+
+---
+
+## Full Program: Social Network Analysis with GraphFrames
+
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+from graphframes import GraphFrame
+
+spark = SparkSession.builder \
+    .appName("SocialNetworkAnalysis") \
+    .config("spark.jars.packages",
+            "graphframes:graphframes:0.8.3-spark3.5-s_2.12") \
+    .getOrCreate()
+
+# Create vertices (users)
+vertices = spark.createDataFrame([
+    ("1", "Alice", 28, "Engineering"),
+    ("2", "Bob", 35, "Marketing"),
+    ("3", "Charlie", 42, "Engineering"),
+    ("4", "Diana", 31, "Sales"),
+    ("5", "Eve", 26, "Engineering"),
+    ("6", "Frank", 38, "Marketing"),
+    ("7", "Grace", 29, "Sales"),
+    ("8", "Hank", 45, "Management"),
+    ("9", "Ivy", 33, "Engineering"),
+    ("10", "Jack", 27, "Marketing"),
+], ["id", "name", "age", "department"])
+
+# Create edges (relationships)
+edges = spark.createDataFrame([
+    ("1", "2", "friend"), ("1", "3", "colleague"),
+    ("1", "5", "colleague"), ("2", "4", "friend"),
+    ("2", "6", "colleague"), ("3", "5", "colleague"),
+    ("3", "8", "reports_to"), ("4", "7", "friend"),
+    ("5", "9", "colleague"), ("6", "10", "colleague"),
+    ("7", "8", "reports_to"), ("8", "3", "manages"),
+    ("9", "1", "colleague"), ("10", "2", "colleague"),
+    ("3", "9", "colleague"), ("5", "3", "colleague"),
+], ["src", "dst", "relationship"])
+
+# Create graph
+g = GraphFrame(vertices, edges)
+
+# Basic graph stats
+print(f"Vertices: {g.vertices.count()}")
+print(f"Edges: {g.edges.count()}")
+
+# Degree analysis
+in_degrees = g.inDegrees.orderBy("inDegree", ascending=False)
+out_degrees = g.outDegrees.orderBy("outDegree", ascending=False)
+degrees = g.degrees.orderBy("degree", ascending=False)
+
+print("\nMost connected users:")
+degrees.join(vertices, "id").select(
+    "name", "department", "degree"
+).show()
+```
+
+---
+
+## Graph Structure Visualization
+
+```
+Social Network Graph:
+                ┌───────┐
+         ┌─────│ Hank  │─────┐
+         │     │  (8)  │     │
+         │     └───────┘     │
+    manages         reports_to
+         │                   │
+         v                   │
+    ┌───────┐          ┌───────┐
+    │Charlie│──────────│ Grace │
+    │  (3)  │          │  (7)  │
+    └───┬───┘          └───┬───┘
+    ┌───┼───┐              │
+    v   v   v              v
+┌─────┐┌─────┐┌─────┐ ┌─────┐
+│Alice││ Eve ││ Ivy │ │Diana│
+│ (1) ││ (5) ││ (9) │ │ (4) │
+└──┬──┘└─────┘└─────┘ └──┬──┘
+   │                      │
+   v                      v
+┌─────┐               ┌─────┐
+│ Bob │───────────────│Frank│
+│ (2) │               │ (6) │
+└──┬──┘               └──┬──┘
+   │                      │
+   v                      v
+┌─────┐               ┌─────┐
+│     │               │Jack │
+│     │               │(10) │
+└─────┘               └─────┘
+```
+
+---
+
+## Full Program: PageRank with GraphFrames
+
+```python
+# Run PageRank algorithm
+pr_results = g.pageRank(
+    resetProbability=0.15,
+    maxIter=20
+)
+
+# Show PageRank scores
+print("PageRank Results:")
+pr_results.vertices.select(
+    "id", "name", "department", "pagerank"
+).orderBy("pagerank", ascending=False).show()
+
+# Connected components
+cc = g.connectedComponents()
+print("\nConnected Components:")
+cc.select("id", "name", "component").show()
+
+# Strongly connected components
+scc = g.stronglyConnectedComponents(maxIter=10)
+print("\nStrongly Connected Components:")
+scc.select("id", "name", "component").show()
+
+# Triangle counting
+triangles = g.triangleCount()
+print("\nTriangle Count per vertex:")
+triangles.select("id", "name", "count") \
+    .orderBy("count", ascending=False).show()
+
+# Label propagation (community detection)
+communities = g.labelPropagation(maxIter=5)
+print("\nCommunities (Label Propagation):")
+communities.select("id", "name", "department", "label") \
+    .orderBy("label").show()
+```
+
+---
+
+## PageRank Algorithm Explanation
+
+```
+Iteration 0 (uniform):
+┌─────┐     ┌─────┐     ┌─────┐
+│ A   │     │ B   │     │ C   │
+│ 0.33│────>│ 0.33│────>│ 0.33│
+└─────┘     └─────┘     └─────┘
+
+Iteration 1 (redistribute):
+PageRank(v) = (1-d)/N + d * SUM(PR(u)/out(u))
+where d = 0.85, N = number of vertices
+
+┌─────┐     ┌─────┐     ┌─────┐
+│ A   │     │ B   │     │ C   │
+│ 0.21│────>│ 0.33│────>│ 0.46│
+└─────┘     └─────┘     └─────┘
+
+After convergence:
+Vertices with more incoming links
+from important vertices get higher scores.
+
+Applications:
+- Influence detection in social networks
+- Importance ranking in citation graphs
+- Web page ranking
+- Recommendation systems
+```
+
+---
+
+## Full Program: Motif Finding (Pattern Matching)
+
+```python
+# Find specific patterns in the graph
+
+# Pattern: Find friend-of-friend relationships
+fof = g.find("(a)-[e1]->(b); (b)-[e2]->(c)")
+
+# Filter to only "friend" relationships
+friend_of_friend = (
+    fof
+    .filter("e1.relationship = 'friend'")
+    .filter("e2.relationship = 'friend'")
+    .filter("a.id != c.id")  # Exclude self-loops
+    .select(
+        F.col("a.name").alias("person"),
+        F.col("b.name").alias("mutual_friend"),
+        F.col("c.name").alias("suggested_friend"),
+    )
+)
+
+print("Friend-of-Friend Suggestions:")
+friend_of_friend.distinct().show()
+
+# Pattern: Find reporting chains (A manages B reports_to C)
+chains = g.find("(mgr)-[e1]->(emp); (emp)-[e2]->(boss)")
+reporting_chains = (
+    chains
+    .filter("e1.relationship = 'manages'")
+    .filter("e2.relationship = 'reports_to'")
+    .select(
+        F.col("mgr.name").alias("manager"),
+        F.col("emp.name").alias("employee"),
+        F.col("boss.name").alias("boss"),
+    )
+)
+print("Reporting Chains:")
+reporting_chains.show()
+
+# Pattern: Find triangles (mutual connections)
+triangles_motif = g.find("(a)-[]->(b); (b)-[]->(c); (c)-[]->(a)")
+print(f"Number of triangle patterns: {triangles_motif.count()}")
+```
+
+---
+
+## Graph Algorithms Comparison
+
+| Algorithm | Complexity | Use Case | Distributed? |
+|---|---|---|---|
+| PageRank | O(V + E) per iter | Node importance | Yes |
+| Connected Components | O(V + E) | Cluster detection | Yes |
+| Shortest Paths | O(V * E) | Route finding | Yes |
+| Triangle Count | O(E^1.5) | Network density | Yes |
+| Label Propagation | O(E) per iter | Community detection | Yes |
+| BFS | O(V + E) | Reachability | Yes |
+
+---
+
+## Full Program: Shortest Paths
+
+```python
+# Compute shortest paths from all vertices to landmarks
+landmarks = ["1", "8"]  # Alice and Hank
+sp = g.shortestPaths(landmarks=landmarks)
+
+print("Shortest Paths to Alice(1) and Hank(8):")
+sp.select("id", "name", "distances").show(truncate=False)
+
+# Custom BFS: Find all users within N hops
+bfs_result = g.bfs(
+    fromExpr="id = '1'",  # Start from Alice
+    toExpr="department = 'Management'",  # Find managers
+    maxPathLength=3
+)
+
+print("\nPath from Alice to Management:")
+bfs_result.show(truncate=False)
+
+# Find paths between specific vertices
+paths = g.bfs(
+    fromExpr="name = 'Alice'",
+    toExpr="name = 'Hank'",
+    edgeFilter="relationship != 'friend'",
+    maxPathLength=4
+)
+print("\nAlice to Hank (non-friend paths):")
+paths.show(truncate=False)
+```
+
+---
+
+## Full Program: Fraud Detection with Graph Analysis
+
+```python
+from pyspark.sql import SparkSession
+from pyspark.sql import functions as F
+from graphframes import GraphFrame
+
+spark = SparkSession.builder \
+    .appName("FraudDetectionGraph") \
+    .getOrCreate()
+
+# Vertices: accounts
+accounts = spark.createDataFrame([
+    ("A001", "personal", "US", 50000.0),
+    ("A002", "personal", "US", 12000.0),
+    ("A003", "business", "UK", 500000.0),
+    ("A004", "personal", "RU", 8000.0),
+    ("A005", "shell", "CY", 1000000.0),
+    ("A006", "personal", "US", 25000.0),
+    ("A007", "business", "DE", 200000.0),
+    ("A008", "personal", "CN", 15000.0),
+], ["id", "account_type", "country", "balance"])
+
+# Edges: transactions
+transactions = spark.createDataFrame([
+    ("A001", "A002", 5000.0, "2024-01-15"),
+    ("A002", "A005", 4500.0, "2024-01-15"),  # Suspicious
+    ("A005", "A004", 4000.0, "2024-01-16"),  # Suspicious
+    ("A004", "A008", 3500.0, "2024-01-16"),  # Suspicious
+    ("A003", "A007", 50000.0, "2024-01-17"),
+    ("A006", "A001", 2000.0, "2024-01-18"),
+    ("A001", "A003", 10000.0, "2024-01-19"),
+    ("A005", "A008", 100000.0, "2024-01-20"),  # Suspicious
+], ["src", "dst", "amount", "date"]).toDF(
+    "src", "dst", "amount", "date"
+)
+
+g = GraphFrame(accounts, transactions)
+
+# 1. Detect circular money flows (layering)
+circular = g.find("(a)-[e1]->(b); (b)-[e2]->(c); (c)-[e3]->(a)")
+print("Circular flows (potential layering):")
+circular.select(
+    F.col("a.id").alias("start"),
+    F.col("b.id").alias("middle"),
+    F.col("c.id").alias("end"),
+    F.col("e1.amount").alias("amount_1"),
+    F.col("e2.amount").alias("amount_2"),
+    F.col("e3.amount").alias("amount_3"),
+).show()
+
+# 2. Find rapid pass-through accounts
+# (receive and send similar amounts quickly)
+pass_through = g.find("(a)-[e1]->(b); (b)-[e2]->(c)")
+suspicious_passthrough = (
+    pass_through
+    .filter("e2.amount > e1.amount * 0.8")
+    .filter("e2.amount < e1.amount * 1.0")
+    .filter("datediff(e2.date, e1.date) <= 1")
+    .select(
+        F.col("a.id").alias("source"),
+        F.col("b.id").alias("pass_through_account"),
+        F.col("c.id").alias("destination"),
+        F.col("e1.amount").alias("in_amount"),
+        F.col("e2.amount").alias("out_amount"),
+    )
+)
+print("Suspicious pass-through accounts:")
+suspicious_passthrough.show()
+
+# 3. Risk scoring using PageRank
+# Higher PageRank = more money flowing through
+pr = g.pageRank(resetProbability=0.15, maxIter=10)
+risk_scores = (
+    pr.vertices
+    .withColumn("risk_score",
+        F.when(F.col("account_type") == "shell", F.col("pagerank") * 3)
+        .when(F.col("country").isin("CY", "PA", "VG"),
+              F.col("pagerank") * 2)
+        .otherwise(F.col("pagerank"))
+    )
+    .orderBy("risk_score", ascending=False)
+)
+print("Account Risk Scores:")
+risk_scores.select("id", "account_type", "country",
+    "pagerank", "risk_score").show()
+```
+
+---
+
+## Graph Partitioning Strategies
+
+| Strategy | How it Works | Best For |
+|---|---|---|
+| Random | Hash vertex IDs | General purpose |
+| EdgePartition1D | Partition by source | High out-degree graphs |
+| EdgePartition2D | 2D grid on (src,dst) | Balanced edge distribution |
+| Canonical Random | Consistent edge placement | Undirected graphs |
+| Range | By vertex ID range | Ordered ID graphs |
+
+---
+
+## Performance Tuning for Graph Processing
+
+```python
+# Memory configuration for graph workloads
+spark.conf.set("spark.executor.memory", "16g")
+spark.conf.set("spark.executor.memoryOverhead", "4g")
+spark.conf.set("spark.memory.fraction", "0.8")
+
+# Graph-specific tuning
+spark.conf.set("spark.graphx.pregel.checkpointInterval", "10")
+
+# Checkpoint for iterative algorithms
+spark.sparkContext.setCheckpointDir("/tmp/graph_checkpoints/")
+
+# Cache graph for multiple operations
+g.vertices.cache()
+g.edges.cache()
+
+# Partition graph for better parallelism
+vertices_partitioned = vertices.repartition(100, "id")
+edges_partitioned = edges.repartition(100, "src")
+
+g_optimized = GraphFrame(vertices_partitioned, edges_partitioned)
+
+# For very large graphs, persist intermediate results
+pr_results = g_optimized.pageRank(resetProbability=0.15, maxIter=5)
+pr_results.vertices.persist()
+pr_results.vertices.count()  # Trigger caching
+```
+
+---
+
+## Real-World Graph Applications
+
+```
+┌────────────────────────────────────────────┐
+│         Graph Processing Use Cases          │
+├────────────────────────────────────────────┤
+│                                            │
+│  Social Networks                           │
+│  ├── Community detection                   │
+│  ├── Influence analysis                    │
+│  ├── Friend recommendations                │
+│  └── Spam/bot detection                    │
+│                                            │
+│  Financial Services                        │
+│  ├── Fraud ring detection                  │
+│  ├── Money laundering patterns             │
+│  ├── Credit risk networks                  │
+│  └── Transaction monitoring                │
+│                                            │
+│  Supply Chain                              │
+│  ├── Critical path analysis                │
+│  ├── Supplier risk assessment              │
+│  ├── Logistics optimization                │
+│  └── Dependency mapping                    │
+│                                            │
+│  Knowledge Graphs                          │
+│  ├── Entity resolution                     │
+│  ├── Semantic search                       │
+│  ├── Recommendation engines                │
+│  └── Drug discovery                        │
+│                                            │
+└────────────────────────────────────────────┘
+```

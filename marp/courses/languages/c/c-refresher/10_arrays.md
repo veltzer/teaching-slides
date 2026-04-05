@@ -223,13 +223,192 @@ void bubbleSort(int arr[], int size) {
 ```
 
 ---
+
 ## Array Limitations and Considerations
 1. Fixed size: Cannot be resized after declaration
 1. No bounds checking: Accessing out-of-bounds elements can cause undefined behavior
 1. No built-in size information: Size must be tracked separately
 1. Whole array assignment not possible: Must copy element by element
 1. When passed to functions, arrays decay to pointers, losing size information
+
 ---
+
+## The ARRAY_SIZE Macro
+
+```c
+#include <stdio.h>
+
+/* Classic approach: sizeof trick */
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
+
+int main(void) {
+    int nums[] = {10, 20, 30, 40, 50};
+    printf("Array has %zu elements\n", ARRAY_SIZE(nums));
+
+    /* WARNING: does NOT work with pointers! */
+    int *ptr = nums;
+    /* ARRAY_SIZE(ptr) gives sizeof(int*)/sizeof(int) = 2 on 64-bit */
+    /* This is a silent bug! */
+
+    /* Iterate using ARRAY_SIZE */
+    for (size_t i = 0; i < ARRAY_SIZE(nums); i++) {
+        printf("nums[%zu] = %d\n", i, nums[i]);
+    }
+
+    return 0;
+}
+```
+
+---
+
+## Array Memory Layout
+
+```
+int arr[5] = {10, 20, 30, 40, 50};
+
+Contiguous memory (4 bytes per int):
+┌──────────┬──────────┬──────────┬──────────┬──────────┐
+│    10    │    20    │    30    │    40    │    50    │
+│ arr[0]   │ arr[1]   │ arr[2]   │ arr[3]   │ arr[4]   │
+└──────────┴──────────┴──────────┴──────────┴──────────┘
+0x1000     0x1004     0x1008     0x100C     0x1010
+
+arr      == &arr[0] == 0x1000
+arr + 1  == &arr[1] == 0x1004  (advances by sizeof(int))
+*(arr+i) == arr[i]             (pointer arithmetic identity)
+
+2D array: int matrix[2][3] = {{1,2,3},{4,5,6}};
+
+Row-major layout in memory:
+┌─────┬─────┬─────┬─────┬─────┬─────┐
+│  1  │  2  │  3  │  4  │  5  │  6  │
+│[0][0]│[0][1]│[0][2]│[1][0]│[1][1]│[1][2]│
+└─────┴─────┴─────┴─────┴─────┴─────┘
+matrix[i][j] is at offset (i * 3 + j) * sizeof(int)
+```
+
+---
+
+## Variable-Length Arrays (C99)
+
+```c
+#include <stdio.h>
+
+void print_matrix(int rows, int cols, int mat[rows][cols]) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            printf("%4d ", mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main(void) {
+    int n = 4;
+    int vla[n];  /* VLA: size determined at runtime */
+
+    for (int i = 0; i < n; i++) {
+        vla[i] = i * i;
+    }
+
+    /* 2D VLA */
+    int rows = 3, cols = 4;
+    int matrix[rows][cols];
+    for (int i = 0; i < rows; i++)
+        for (int j = 0; j < cols; j++)
+            matrix[i][j] = i * cols + j;
+
+    print_matrix(rows, cols, matrix);
+    return 0;
+}
+```
+
+Caution: VLAs are allocated on the stack. Large VLAs can cause stack overflow.
+VLAs are optional in C11 and later (`__STDC_NO_VLA__`).
+
+---
+
+## Sorting with qsort: Complete Example
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+/* Comparator for integers (ascending) */
+int cmp_int_asc(const void *a, const void *b) {
+    int ia = *(const int *)a;
+    int ib = *(const int *)b;
+    return (ia > ib) - (ia < ib);  /* safe: no overflow */
+}
+
+/* Comparator for strings */
+int cmp_str(const void *a, const void *b) {
+    const char *sa = *(const char **)a;
+    const char *sb = *(const char **)b;
+    return strcmp(sa, sb);
+}
+
+int main(void) {
+    /* Sort integers */
+    int nums[] = {42, 17, 93, 5, 28, 61};
+    int n = sizeof(nums) / sizeof(nums[0]);
+    qsort(nums, n, sizeof(int), cmp_int_asc);
+
+    printf("Sorted ints: ");
+    for (int i = 0; i < n; i++) printf("%d ", nums[i]);
+    printf("\n");
+
+    /* Sort strings */
+    const char *words[] = {"banana", "apple", "cherry", "date"};
+    int nw = sizeof(words) / sizeof(words[0]);
+    qsort(words, nw, sizeof(char *), cmp_str);
+
+    printf("Sorted strings: ");
+    for (int i = 0; i < nw; i++) printf("%s ", words[i]);
+    printf("\n");
+
+    return 0;
+}
+```
+
+---
+
+## Binary Search with bsearch
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int cmp_int(const void *a, const void *b) {
+    int ia = *(const int *)a;
+    int ib = *(const int *)b;
+    return (ia > ib) - (ia < ib);
+}
+
+int main(void) {
+    int sorted[] = {5, 12, 17, 28, 42, 61, 93};
+    int n = sizeof(sorted) / sizeof(sorted[0]);
+
+    int key = 28;
+    int *found = bsearch(&key, sorted, n, sizeof(int), cmp_int);
+
+    if (found) {
+        printf("Found %d at index %td\n", *found, found - sorted);
+    } else {
+        printf("%d not found\n", key);
+    }
+
+    key = 99;
+    found = bsearch(&key, sorted, n, sizeof(int), cmp_int);
+    printf("%d: %s\n", key, found ? "found" : "not found");
+
+    return 0;
+}
+```
+
+---
+
 ## Best Practices
 1. Always initialize arrays when declared, if possible
 1. Use const for arrays that shouldn't be modified
@@ -237,10 +416,16 @@ void bubbleSort(int arr[], int size) {
 1. Consider using dynamic allocation for large or variably-sized arrays
 1. Be cautious with multidimensional arrays and their memory usage
 1. Always free dynamically allocated arrays when no longer needed
+1. Use `ARRAY_SIZE` macro instead of hardcoding array lengths
+1. Prefer `qsort` and `bsearch` over hand-rolled algorithms
+
 ---
+
 ## Summary
 - Arrays in C are fixed-size collections of elements of the same type
 - They are closely related to pointers and are passed by reference to functions
 - Multidimensional arrays and arrays of pointers provide more complex data structures
 - Dynamic arrays allow for runtime size determination
+- Use standard library functions (`qsort`, `bsearch`, `memcpy`) for common operations
+- VLAs provide runtime-sized arrays but come with stack overflow risks
 - Understanding array limitations and following best practices is crucial for effective C programming

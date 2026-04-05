@@ -61,3 +61,171 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 - Monitor DNS logs and alerts for anomalies
 - Educate users on the risks of DNS cache poisoning and phishing attacks
 - Have an incident response plan in place for rapid mitigation
+
+---
+
+## DNS Resolution Process (Normal)
+
+```
+┌──────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│  Client   │───>│  Recursive    │───>│  Root DNS     │───>│  TLD DNS     │
+│  Browser  │    │  Resolver     │    │  Server       │    │  Server      │
+└──────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+                       │                                       │
+                       │         ┌──────────────┐             │
+                       │<────────│ Authoritative │<────────────│
+                       │         │  DNS Server   │
+                       │         └──────────────┘
+                       │
+                       │  Caches result for TTL period
+                       v
+                ┌──────────────┐
+                │  DNS Cache    │
+                │  example.com  │
+                │  = 93.184.x.x │
+                └──────────────┘
+```
+
+---
+
+## Kaminsky Attack (2008)
+
+The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                  Kaminsky Attack Flow                       │
+│                                                            │
+│  1. Attacker queries resolver for random.example.com       │
+│     (a subdomain that does NOT exist in cache)             │
+│                                                            │
+│  2. Resolver sends query to authoritative server           │
+│                                                            │
+│  3. Before real response arrives, attacker floods           │
+│     resolver with FORGED responses containing:              │
+│     - Matching transaction ID (guessed/brute-forced)       │
+│     - Authority section: ns1.example.com = EVIL_IP         │
+│                                                            │
+│  4. If forged response arrives FIRST and ID matches:       │
+│     Resolver caches: example.com NS -> EVIL_IP             │
+│                                                            │
+│  5. ALL future queries for *.example.com go to attacker    │
+│                                                            │
+│  Key insight: Attacker can try thousands of times          │
+│  with different random subdomains until one succeeds!      │
+└────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Transaction ID Vulnerability
+
+```
+┌──────────────────────────────────────────────────┐
+│     DNS Transaction ID: 16-bit field              │
+│     Only 65,536 possible values                   │
+│                                                  │
+│     Birthday paradox: ~250 attempts for           │
+│     50% chance of guessing correctly              │
+│                                                  │
+│     Combined with source port (if predictable):   │
+│     Attack becomes trivially easy                 │
+│                                                  │
+│     Fix: Source port randomization adds 16 more   │
+│     bits = 2^32 combinations to guess             │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+## Detecting DNS Cache Poisoning
+
+```bash
+# Monitor DNS cache for unexpected changes
+# On BIND:
+rndc dumpdb -cache
+grep "example.com" /var/named/data/cache_dump.db
+
+# Check for mismatched DNS responses
+dig @8.8.8.8 example.com A +short
+dig @1.1.1.1 example.com A +short
+# Different answers may indicate poisoning
+
+# Monitor for high volumes of DNS responses
+tcpdump -i eth0 -n 'udp src port 53' -c 1000 | \
+    awk '{print $3}' | sort | uniq -c | sort -rn | head
+
+# Check DNSSEC validation
+dig example.com +dnssec +short
+# AD flag in response = DNSSEC validated
+
+# Passive DNS monitoring tools:
+# - Farsight DNSDB
+# - PassiveTotal
+# - Security Onion
+```
+
+---
+
+## DNSSEC: How It Works
+
+```
+┌────────────────────────────────────────────────────────────┐
+│              DNSSEC Chain of Trust                          │
+│                                                            │
+│  Root Zone (.)                                             │
+│  ┌─────────────────────┐                                   │
+│  │ KSK signs ZSK       │                                   │
+│  │ ZSK signs .com DS   │                                   │
+│  └─────────┬───────────┘                                   │
+│            │ DS record points to                           │
+│            v                                               │
+│  .com TLD                                                  │
+│  ┌─────────────────────┐                                   │
+│  │ KSK signs ZSK       │                                   │
+│  │ ZSK signs example   │                                   │
+│  │   .com DS            │                                   │
+│  └─────────┬───────────┘                                   │
+│            │ DS record points to                           │
+│            v                                               │
+│  example.com                                               │
+│  ┌─────────────────────┐                                   │
+│  │ KSK signs ZSK       │                                   │
+│  │ ZSK signs A record  │                                   │
+│  │ RRSIG = signature   │                                   │
+│  └─────────────────────┘                                   │
+│                                                            │
+│  KSK = Key Signing Key                                     │
+│  ZSK = Zone Signing Key                                    │
+│  DS  = Delegation Signer                                   │
+└────────────────────────────────────────────────────────────┘
+```
+
+```bash
+# Verify DNSSEC for a domain
+dig example.com +dnssec
+# Look for RRSIG records and AD (Authenticated Data) flag
+
+# Check the full DNSSEC chain
+delv @8.8.8.8 example.com
+# Shows "fully validated" if DNSSEC chain is intact
+
+# Test DNSSEC validation with known-bad domain
+dig dnssec-failed.org @8.8.8.8
+# Should return SERVFAIL if resolver validates DNSSEC
+```
+
+---
+
+## Exercise: DNS Cache Poisoning Lab
+
+1. Set up a local BIND DNS resolver in a VM
+2. Configure it as a caching resolver for a test domain
+3. Use Wireshark to capture DNS traffic and observe:
+   - Transaction IDs
+   - Source ports
+   - TTL values in cached records
+4. Enable source port randomization and verify with packet captures
+5. Enable DNSSEC validation and test with known signed domains
+6. Compare resolution behavior with and without DNSSEC for poisoned records
+7. Set up DNS monitoring with passive DNS logging

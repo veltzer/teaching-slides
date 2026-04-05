@@ -225,10 +225,288 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 
 ---
 
+## String Memory Layout
+
+```
+char greeting[] = "Hello";
+
+┌─────┬─────┬─────┬─────┬─────┬─────┐
+│ 'H' │ 'e' │ 'l' │ 'l' │ 'o' │ '\0'│
+│ 0x48│ 0x65│ 0x6C│ 0x6C│ 0x6F│ 0x00│
+└─────┴─────┴─────┴─────┴─────┴─────┘
+ [0]    [1]   [2]   [3]   [4]   [5]
+
+sizeof(greeting) = 6  (includes '\0')
+strlen(greeting) = 5  (excludes '\0')
+```
+
+```
+char *ptr = "Hello";
+
+Stack:                     Read-only data:
+┌──────────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
+│ ptr: 0x──┼──────────────>│ 'H' │ 'e' │ 'l' │ 'l' │ 'o' │ '\0'│
+└──────────┘               └─────┴─────┴─────┴─────┴─────┴─────┘
+```
+
+---
+
+## Array vs Pointer Strings: Critical Difference
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    /* Array: string is modifiable, lives on the stack */
+    char arr[] = "Hello";
+    arr[0] = 'J';  /* OK: arr is now "Jello" */
+    printf("arr = %s\n", arr);
+
+    /* Pointer: points to read-only string literal */
+    char *ptr = "Hello";
+    /* ptr[0] = 'J';  <-- UNDEFINED BEHAVIOR! Crash likely */
+
+    /* Array: sizeof gives full array size */
+    printf("sizeof(arr) = %zu\n", sizeof(arr));  /* 6 */
+
+    /* Pointer: sizeof gives pointer size */
+    printf("sizeof(ptr) = %zu\n", sizeof(ptr));  /* 8 on 64-bit */
+
+    /* Best practice: use const for string literal pointers */
+    const char *safe_ptr = "Hello";
+
+    return 0;
+}
+```
+
+---
+
+## Building Strings Safely: A Complete Example
+
+```c
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+char *build_greeting(const char *first, const char *last) {
+    /* Calculate needed size: first + " " + last + "\0" */
+    size_t len = strlen(first) + 1 + strlen(last) + 1;
+    char *result = malloc(len);
+    if (result == NULL) return NULL;
+
+    /* Build the string safely */
+    snprintf(result, len, "%s %s", first, last);
+    return result;
+}
+
+int main(void) {
+    char *name = build_greeting("John", "Doe");
+    if (name != NULL) {
+        printf("Hello, %s!\n", name);
+        free(name);
+    }
+    return 0;
+}
+```
+
+---
+
+## String Conversion with strtol/strtod
+
+`atoi` has no error checking. Prefer `strtol` and `strtod`:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+int main(void) {
+    const char *input = "42abc";
+    char *endptr;
+
+    errno = 0;
+    long val = strtol(input, &endptr, 10);
+
+    if (errno != 0) {
+        perror("strtol");
+    } else if (endptr == input) {
+        printf("No digits found\n");
+    } else if (*endptr != '\0') {
+        printf("Parsed %ld, trailing garbage: '%s'\n", val, endptr);
+    } else {
+        printf("Parsed %ld successfully\n", val);
+    }
+
+    /* Parse hex */
+    long hex = strtol("0xFF", NULL, 16);
+    printf("0xFF = %ld\n", hex);
+
+    /* Parse binary (C99 strtol base 2) */
+    long bin = strtol("1010", NULL, 2);
+    printf("1010 (binary) = %ld\n", bin);
+
+    return 0;
+}
+```
+
+---
+
+## Character Classification Functions
+
+```c
+#include <stdio.h>
+#include <ctype.h>
+
+int main(void) {
+    const char *test = "Hello, World! 123";
+
+    for (const char *p = test; *p; p++) {
+        char c = *p;
+        printf("'%c': alpha=%d digit=%d upper=%d lower=%d space=%d\n",
+               c,
+               isalpha((unsigned char)c),
+               isdigit((unsigned char)c),
+               isupper((unsigned char)c),
+               islower((unsigned char)c),
+               isspace((unsigned char)c));
+    }
+
+    /* Convert to uppercase */
+    char buf[] = "hello world";
+    for (int i = 0; buf[i]; i++) {
+        buf[i] = toupper((unsigned char)buf[i]);
+    }
+    printf("Uppercase: %s\n", buf);  /* HELLO WORLD */
+
+    return 0;
+}
+```
+
+Note: Always cast to `unsigned char` when passing to `ctype.h` functions.
+
+---
+
+## Implementing Common String Functions
+
+```c
+#include <stdio.h>
+#include <stddef.h>
+
+/* strlen implementation */
+size_t my_strlen(const char *s) {
+    size_t len = 0;
+    while (s[len] != '\0') {
+        len++;
+    }
+    return len;
+}
+
+/* strcpy implementation */
+char *my_strcpy(char *dest, const char *src) {
+    char *ret = dest;
+    while ((*dest++ = *src++) != '\0')
+        ;
+    return ret;
+}
+
+/* strcmp implementation */
+int my_strcmp(const char *s1, const char *s2) {
+    while (*s1 && (*s1 == *s2)) {
+        s1++;
+        s2++;
+    }
+    return (unsigned char)*s1 - (unsigned char)*s2;
+}
+
+int main(void) {
+    const char *hello = "Hello";
+    printf("my_strlen(\"%s\") = %zu\n", hello, my_strlen(hello));
+
+    char buf[20];
+    my_strcpy(buf, hello);
+    printf("my_strcpy result: %s\n", buf);
+
+    printf("my_strcmp(\"abc\",\"abd\") = %d\n",
+           my_strcmp("abc", "abd"));
+    return 0;
+}
+```
+
+---
+
+## Multi-Byte and Wide Characters
+
+```c
+#include <stdio.h>
+#include <wchar.h>
+#include <locale.h>
+
+int main(void) {
+    setlocale(LC_ALL, "");
+
+    /* Wide string */
+    wchar_t wide[] = L"Hello \u00E9\u00E8\u00EA";
+    wprintf(L"Wide: %ls\n", wide);
+    wprintf(L"Wide strlen: %zu\n", wcslen(wide));
+
+    /* Multi-byte string (UTF-8) */
+    const char *utf8 = "cafe\xCC\x81";  /* cafe + combining accent */
+    printf("UTF-8: %s\n", utf8);
+    printf("Byte length: %zu\n", strlen(utf8));
+
+    return 0;
+}
+```
+
+---
+
+## Buffer Overflow: A Security Vulnerability
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+/* DANGEROUS: classic buffer overflow */
+void vulnerable(const char *input) {
+    char buffer[16];
+    strcpy(buffer, input);  /* No bounds checking! */
+    printf("buffer: %s\n", buffer);
+}
+
+/* SAFE: bounds-checked version */
+void safe(const char *input) {
+    char buffer[16];
+    strncpy(buffer, input, sizeof(buffer) - 1);
+    buffer[sizeof(buffer) - 1] = '\0';
+    printf("buffer: %s\n", buffer);
+}
+
+/* BEST: use snprintf */
+void best(const char *input) {
+    char buffer[16];
+    snprintf(buffer, sizeof(buffer), "%s", input);
+    printf("buffer: %s\n", buffer);
+}
+
+int main(void) {
+    const char *long_input = "This string is way too long for a 16-byte buffer";
+    /* vulnerable(long_input);  <-- undefined behavior, possible crash */
+    safe(long_input);
+    best(long_input);
+    return 0;
+}
+```
+
+---
+
 ## Summary
 
 - Strings in C are null-terminated character arrays
 - Many string operations are provided by `<string.h>` library
 - Be aware of buffer overflows and always ensure null-termination
 - Use safer alternatives to standard functions when possible
-- Remember that string literals are read-only
+- Remember that string literals are read-only -- use `const char *`
+- Prefer `strtol`/`strtod` over `atoi`/`atof` for error detection
+- Cast to `unsigned char` before calling `ctype.h` functions
+- Use `snprintf` as the safest way to build formatted strings

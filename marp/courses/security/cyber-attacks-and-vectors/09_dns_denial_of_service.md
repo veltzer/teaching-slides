@@ -34,6 +34,173 @@
 1. **Implement DNS Response Rate Limiting (RRL)**: Limit the rate at which a DNS server responds to queries from a specific IP address or network.
 1. **Keep DNS Software Up-to-Date**: Regularly update the DNS software and apply security patches to mitigate known vulnerabilities
 ---
+---
+
+## DNS DoS Attack Flow
+
+```
+┌──────────────────────────────────────────────────────────┐
+│           DNS Query Flood Attack                         │
+│                                                          │
+│  ┌────────┐  ┌────────┐  ┌────────┐                    │
+│  │ Bot 1  │  │ Bot 2  │  │ Bot N  │  Botnet             │
+│  └───┬────┘  └───┬────┘  └───┬────┘                    │
+│      │           │           │                          │
+│      └─────────┬─┴───────────┘                          │
+│                │  Millions of DNS queries                │
+│                v                                        │
+│        ┌──────────────┐                                 │
+│        │  DNS Server   │  Connection table exhausted    │
+│        │  (Target)     │  CPU/Memory at 100%            │
+│        └──────────────┘                                 │
+│                │                                        │
+│                x  Cannot respond to legitimate queries  │
+│                                                          │
+│  ┌────────┐   x                                        │
+│  │Legit   │───x  "DNS resolution failed"               │
+│  │Users   │                                             │
+│  └────────┘                                             │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Random Subdomain Attack (Water Torture)
+
+```
+┌──────────────────────────────────────────────────────────┐
+│         Random Subdomain Attack                          │
+│                                                          │
+│  Attacker generates queries for:                        │
+│    abc123.example.com                                    │
+│    xyz789.example.com                                    │
+│    qwe456.example.com                                    │
+│    ... (millions of unique random subdomains)            │
+│                                                          │
+│  Why this is effective:                                  │
+│  1. Recursive resolver cannot find in cache (unique)     │
+│  2. Must query authoritative server for EACH one         │
+│  3. Authoritative server overwhelmed with NXDOMAIN       │
+│  4. Recursive resolver resources consumed                │
+│  5. Both resolver AND authoritative server are DoSed     │
+│                                                          │
+│  Hard to filter: each query looks legitimate!            │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Detecting DNS DoS Attacks
+
+```bash
+# Monitor DNS query rates
+# Using tcpdump to count queries per second
+tcpdump -i eth0 -n 'udp dst port 53' -c 10000 2>/dev/null | \
+    awk '{print $1}' | cut -d. -f1-3 | sort | uniq -c | sort -rn
+
+# Check BIND query statistics
+rndc stats
+cat /var/named/data/named_stats.txt | grep "queries"
+
+# Monitor NXDOMAIN response rate (high = possible attack)
+tcpdump -i eth0 -n 'udp src port 53' | grep "NXDomain" | \
+    awk '{print $1}' | cut -d. -f1 | uniq -c
+
+# Using dnstop for real-time DNS monitoring
+dnstop eth0
+
+# Check for query patterns (same domain, random subdomains)
+tcpdump -i eth0 -n 'udp dst port 53' -c 1000 | \
+    grep -oP '[a-z0-9]+\.example\.com' | sort | uniq -c | sort -rn
+```
+
+---
+
+## Response Rate Limiting (RRL) Configuration
+
+```
+# BIND named.conf - RRL configuration
+rate-limit {
+    responses-per-second 5;    # Max responses per client
+    window 15;                  # Tracking window in seconds
+    nxdomains-per-second 3;    # NXDOMAIN rate limit
+    errors-per-second 5;       # Error response limit
+    slip 2;                    # Send every Nth response
+    log-only no;               # Actually enforce limits
+};
+
+# Unbound configuration
+server:
+    ratelimit: 1000            # Queries per second limit
+    ip-ratelimit: 100          # Per-IP rate limit
+    ratelimit-slabs: 4
+    ratelimit-size: 4m
+```
+
+---
+
+## Real-World DNS DoS Incidents
+
+| Incident          | Year | Impact                                        |
+|-------------------|------|-----------------------------------------------|
+| Dyn DNS Attack    | 2016 | Twitter, Reddit, Netflix, GitHub down          |
+| Spamhaus Attack   | 2013 | 300 Gbps, slowed European internet             |
+| NS1 Attack        | 2016 | Major DNS provider targeted                    |
+| AWS Route 53      | 2019 | 8-hour DDoS affecting AWS customers            |
+
+The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS query floods.
+
+---
+
+## Anycast DNS Architecture
+
+```
+┌────────────────────────────────────────────────────────────┐
+│              Anycast DNS Distribution                       │
+│                                                            │
+│  Same IP address announced from multiple locations:        │
+│                                                            │
+│  ┌─────────┐     ┌─────────┐     ┌─────────┐             │
+│  │ DNS Node│     │ DNS Node│     │ DNS Node│             │
+│  │ US-East │     │ EU-West │     │ Asia    │             │
+│  │ 1.2.3.4 │     │ 1.2.3.4 │     │ 1.2.3.4 │             │
+│  └────┬────┘     └────┬────┘     └────┬────┘             │
+│       │               │               │                   │
+│  ┌────┴────┐     ┌────┴────┐     ┌────┴────┐             │
+│  │  BGP    │     │  BGP    │     │  BGP    │             │
+│  │ routing │     │ routing │     │ routing │             │
+│  └─────────┘     └─────────┘     └─────────┘             │
+│                                                            │
+│  Benefits:                                                 │
+│  - DDoS traffic distributed across all nodes              │
+│  - Users routed to nearest node (low latency)             │
+│  - If one node fails, traffic routes to next nearest      │
+│  - Attack must overwhelm ALL nodes simultaneously         │
+└────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Exercise: DNS DoS Mitigation Lab
+
+1. Set up a BIND DNS server in a test environment
+2. Configure logging to track query rates and types
+3. Generate simulated DNS query flood traffic using `dnsperf`
+4. Observe server behavior under load (CPU, memory, response time)
+5. Implement Rate Limiting (RRL) and repeat the test
+6. Compare server performance with and without RRL
+7. Set up monitoring dashboards for DNS metrics (Grafana + Prometheus)
+
+```bash
+# Using dnsperf for DNS load testing
+# (only on YOUR OWN test systems)
+dnsperf -s 127.0.0.1 -d queryfile.txt -c 100 -Q 10000
+# -s: target server
+# -d: file with domain names to query
+# -c: concurrent queries
+# -Q: queries per second limit
+```
+
 ## Conclusion
 
 DNS DoS attacks can have severe consequences for businesses and organizations that rely on online services. By understanding the different types of attacks and implementing appropriate mitigation strategies, organizations can enhance the resilience and availability of their DNS infrastructure, ensuring uninterrupted access to their online services.

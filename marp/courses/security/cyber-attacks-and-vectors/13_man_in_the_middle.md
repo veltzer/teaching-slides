@@ -87,3 +87,199 @@ sudo apt install libssl-doc
 # dpkg --status libssl3t64
 # openssl ciphers -v
 ```
+
+---
+
+## MITM Attack Types and Techniques
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                MITM Attack Taxonomy                        │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
+│  Network-Level:                                            │
+│  ├── ARP Spoofing / ARP Cache Poisoning                    │
+│  ├── DNS Spoofing                                          │
+│  ├── DHCP Spoofing                                         │
+│  ├── BGP Hijacking                                         │
+│  └── Evil Twin Wi-Fi                                       │
+│                                                            │
+│  Application-Level:                                        │
+│  ├── SSL Stripping (downgrade HTTPS to HTTP)               │
+│  ├── SSL/TLS Interception (proxy with fake cert)           │
+│  ├── HTTP/2 Downgrade                                      │
+│  └── WebSocket Hijacking                                   │
+│                                                            │
+│  Protocol-Level:                                           │
+│  ├── LLMNR/NBT-NS Poisoning (Windows networks)            │
+│  ├── mDNS Poisoning                                        │
+│  └── WPAD Hijacking                                        │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ARP Spoofing: Step by Step
+
+```
+┌──────────────────────────────────────────────────────────┐
+│              ARP Spoofing Attack                         │
+│                                                          │
+│  Normal:                                                 │
+│  Victim (192.168.1.10) ──> Gateway (192.168.1.1)        │
+│  ARP: 192.168.1.1 = AA:BB:CC:DD:EE:FF (real MAC)       │
+│                                                          │
+│  Attack:                                                 │
+│  Attacker sends gratuitous ARP replies:                  │
+│  "192.168.1.1 is at XX:XX:XX:XX:XX:XX" (attacker MAC)   │
+│                                                          │
+│  After poisoning:                                        │
+│  ┌────────┐     ┌──────────┐     ┌─────────┐           │
+│  │ Victim  │────>│ Attacker  │────>│ Gateway  │          │
+│  │         │<────│ (forwards)│<────│         │          │
+│  └────────┘     └──────────┘     └─────────┘           │
+│                                                          │
+│  Attacker sees ALL traffic between victim and gateway    │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Detecting ARP Spoofing
+
+```bash
+# Check ARP table for duplicate MAC addresses
+arp -a | sort -t'(' -k2 | uniq -d -f1
+
+# Monitor ARP traffic for gratuitous ARPs
+tcpdump -i eth0 -n arp | grep "is-at"
+
+# Use arpwatch to detect ARP changes
+sudo apt install arpwatch
+sudo arpwatch -i eth0
+# Logs changes to /var/log/syslog
+
+# Static ARP entries for critical hosts (manual)
+sudo arp -s 192.168.1.1 AA:BB:CC:DD:EE:FF
+
+# Enable Dynamic ARP Inspection on managed switches
+# (Cisco switch example)
+# ip arp inspection vlan 10
+# ip arp inspection validate src-mac dst-mac ip
+```
+
+---
+
+## SSL Stripping Attack
+
+```
+┌──────────────────────────────────────────────────────────┐
+│              SSL Stripping (Moxie Marlinspike, 2009)     │
+│                                                          │
+│  Normal flow:                                            │
+│  Browser ──HTTPS──> bank.com (encrypted)                 │
+│                                                          │
+│  SSL Stripping:                                          │
+│  ┌────────┐  HTTP  ┌──────────┐  HTTPS  ┌─────────┐    │
+│  │ Victim  │──────>│ Attacker  │────────>│bank.com  │    │
+│  │ Browser │<──────│ (proxy)   │<────────│         │    │
+│  └────────┘  HTTP  └──────────┘  HTTPS  └─────────┘    │
+│                                                          │
+│  1. Attacker intercepts initial HTTP connection          │
+│  2. Attacker connects to bank.com via HTTPS              │
+│  3. Attacker serves content to victim via HTTP           │
+│  4. Victim sees no padlock - but most users don't check  │
+│  5. All credentials transmitted in plain text!           │
+│                                                          │
+│  Defense: HSTS (HTTP Strict Transport Security)          │
+│  Strict-Transport-Security: max-age=31536000;            │
+│  includeSubDomains; preload                              │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## LLMNR/NBT-NS Poisoning (Windows Networks)
+
+```bash
+# LLMNR (Link-Local Multicast Name Resolution)
+# When DNS fails, Windows broadcasts LLMNR queries
+# Attacker responds: "I am that server, send me your hash"
+
+# Using Responder (for authorized pentesting only)
+# sudo responder -I eth0 -wrf
+
+# What Responder captures:
+# [*] [LLMNR] Poisoned answer sent to 192.168.1.50
+#     for name fileserver
+# [*] [NTLMv2] Hash captured:
+#     admin::DOMAIN:1122334455667788:AABB...
+
+# Crack captured NTLMv2 hashes
+# hashcat -m 5600 captured_hash.txt wordlist.txt
+
+# Defense:
+# 1. Disable LLMNR: GPO > Computer Configuration >
+#    Administrative Templates > Network > DNS Client >
+#    Turn off multicast name resolution = Enabled
+# 2. Disable NBT-NS: Network adapter > IPv4 > Advanced >
+#    WINS > Disable NetBIOS over TCP/IP
+```
+
+---
+
+## TLS Certificate Verification
+
+```bash
+# Check a server's TLS certificate
+openssl s_client -connect example.com:443 -servername example.com
+
+# Verify certificate chain
+openssl s_client -connect example.com:443 -showcerts
+
+# Check certificate expiry
+echo | openssl s_client -connect example.com:443 2>/dev/null | \
+    openssl x509 -noout -dates
+
+# Test for weak cipher suites
+nmap --script ssl-enum-ciphers -p 443 example.com
+
+# Check HSTS header
+curl -sI https://example.com | grep -i strict-transport
+
+# Test for certificate pinning
+# Mobile apps and browsers maintain pin sets
+# HTTP Public Key Pinning (HPKP) is deprecated
+# Replaced by Certificate Transparency (CT) logs
+```
+
+---
+
+## Real-World MITM Incidents
+
+| Incident              | Year | Details                                   |
+|-----------------------|------|-------------------------------------------|
+| DigiNotar breach      | 2011 | Fake Google certs, Iranian surveillance    |
+| Superfish (Lenovo)    | 2015 | Pre-installed MITM proxy on laptops        |
+| Equifax redirect      | 2017 | MITM on credit monitoring redirect         |
+| Kazakhstan MITM cert  | 2019 | Government mandated MITM root certificate  |
+| SolarWinds Orion      | 2020 | Supply chain MITM for update mechanism     |
+
+---
+
+## Exercise: MITM Detection Lab
+
+1. Set up a lab with attacker, victim, and gateway VMs on the same subnet
+2. Use Wireshark on the victim to capture normal ARP traffic baseline
+3. Perform ARP spoofing from the attacker VM (use arpspoof or bettercap)
+4. Observe ARP table changes on the victim
+5. Detect the attack using:
+   - arpwatch alerts
+   - Wireshark ARP anomaly detection
+   - Manual ARP table inspection
+6. Implement countermeasures:
+   - Static ARP entries
+   - Enable HSTS on a test web server
+   - Configure 802.1X port authentication
+7. Verify the countermeasures prevent the attack

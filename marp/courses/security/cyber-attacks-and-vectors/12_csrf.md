@@ -126,3 +126,174 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
 - Avoid using GET requests for state-changing operations
 - Keep software and frameworks up-to-date
 - Educate users about safe browsing habits
+
+---
+
+## CSRF Attack Flow Diagram
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                CSRF Attack Flow                          │
+│                                                          │
+│  1. Victim logs into bank.com (session cookie set)       │
+│  ┌──────────┐    ┌──────────────┐                       │
+│  │  Victim   │───>│  bank.com     │  Set-Cookie: sid=abc │
+│  │  Browser  │<───│              │                       │
+│  └──────────┘    └──────────────┘                       │
+│       │                                                  │
+│  2. Victim visits evil.com (attacker's site)             │
+│       │                                                  │
+│  ┌──────────┐    ┌──────────────┐                       │
+│  │  Victim   │───>│  evil.com     │                      │
+│  │  Browser  │<───│  (serves      │                      │
+│  └──────────┘    │  hidden form) │                       │
+│       │          └──────────────┘                       │
+│       │                                                  │
+│  3. Hidden form auto-submits to bank.com                 │
+│       │  POST /transfer?to=attacker&amount=10000         │
+│       │  Cookie: sid=abc (browser auto-attaches!)        │
+│       v                                                  │
+│  ┌──────────────┐                                       │
+│  │  bank.com     │  Sees valid session cookie            │
+│  │  processes    │  Transfers money to attacker!         │
+│  │  request!     │                                       │
+│  └──────────────┘                                       │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Advanced CSRF Attack Techniques
+
+```html
+<!-- Auto-submitting form (POST-based CSRF) -->
+<html>
+<body onload="document.forms[0].submit()">
+<form action="https://bank.com/transfer" method="POST">
+    <input type="hidden" name="to" value="attacker_account"/>
+    <input type="hidden" name="amount" value="10000"/>
+</form>
+</body>
+</html>
+
+<!-- AJAX-based CSRF (if CORS is misconfigured) -->
+<script>
+fetch('https://bank.com/api/transfer', {
+    method: 'POST',
+    credentials: 'include',  // Sends cookies
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({to: 'attacker', amount: 10000})
+});
+</script>
+
+<!-- Image tag CSRF (GET-based) -->
+<img src="https://bank.com/transfer?to=attacker&amount=10000"
+     style="display:none"/>
+<!-- Browser sends GET with cookies automatically -->
+```
+
+---
+
+## CSRF Token Implementation: Python Flask
+
+```python
+from flask import Flask, session, request, abort
+import secrets
+
+app = Flask(__name__)
+app.secret_key = secrets.token_hex(32)
+
+# Generate CSRF token per session
+def generate_csrf_token():
+    if 'csrf_token' not in session:
+        session['csrf_token'] = secrets.token_hex(32)
+    return session['csrf_token']
+
+# Make token available in all templates
+app.jinja_env.globals['csrf_token'] = generate_csrf_token
+
+# Validate CSRF token on state-changing requests
+@app.before_request
+def check_csrf():
+    if request.method in ('POST', 'PUT', 'DELETE'):
+        token = request.form.get('csrf_token') or \
+                request.headers.get('X-CSRF-Token')
+        if not token or token != session.get('csrf_token'):
+            abort(403, 'CSRF token validation failed')
+
+@app.route('/transfer', methods=['POST'])
+def transfer():
+    # CSRF token already validated by before_request
+    to_account = request.form['to']
+    amount = request.form['amount']
+    # Process transfer...
+    return 'Transfer complete'
+```
+
+```html
+<!-- Template with CSRF token -->
+<form action="/transfer" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    To: <input name="to">
+    Amount: <input name="amount">
+    <button type="submit">Transfer</button>
+</form>
+```
+
+---
+
+## SameSite Cookie Comparison
+
+| SameSite Value | Cross-site POST | Cross-site GET (top-level) | Same-site |
+|----------------|----------------|---------------------------|-----------|
+| `Strict`       | Blocked        | Blocked                   | Sent      |
+| `Lax`          | Blocked        | Sent                      | Sent      |
+| `None`         | Sent           | Sent                      | Sent      |
+
+```python
+# Flask: Set SameSite cookies
+from flask import make_response
+
+@app.route('/login', methods=['POST'])
+def login():
+    resp = make_response(redirect('/dashboard'))
+    resp.set_cookie(
+        'session_id',
+        value=session_token,
+        secure=True,       # HTTPS only
+        httponly=True,      # Not accessible via JS
+        samesite='Lax'     # Blocks cross-site POST
+    )
+    return resp
+```
+
+---
+
+## Real-World CSRF Case Studies
+
+| Incident                | Year | Impact                                  |
+|------------------------|------|-----------------------------------------|
+| Netflix CSRF           | 2006 | Change account email, enable DVD ship   |
+| Gmail filter injection | 2007 | Create email forwarding rules silently   |
+| ING Direct             | 2008 | Transfer funds between accounts          |
+| YouTube CSRF           | 2008 | Subscribe, add favorites as victim       |
+| WordPress              | 2015 | Multiple CSRF vulnerabilities in admin   |
+
+---
+
+## Exercise: CSRF Lab
+
+1. Build a simple banking application with Flask:
+   - Login page with session management
+   - Transfer money endpoint (POST-based)
+   - Account balance display
+2. Create an attacker page that performs CSRF:
+   - Auto-submitting hidden form
+   - Image-based GET request
+3. Verify the attack works (money transferred without user consent)
+4. Implement defenses one by one and test each:
+   - CSRF tokens in all forms
+   - SameSite=Lax cookies
+   - Custom header validation (X-Requested-With)
+5. Verify each defense blocks the CSRF attack
+6. Test edge cases: What about JSON API endpoints?

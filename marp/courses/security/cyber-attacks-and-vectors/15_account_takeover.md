@@ -99,3 +99,165 @@
 - Continuously assess and improve your organization's security posture
 
 Defending against account takeover attacks requires a multi-layered approach, combining strong authentication, monitoring, password hygiene, security assessments, user awareness, and continuous vigilance.
+
+---
+
+## Account Takeover Attack Flow
+
+```
+┌──────────────────────────────────────────────────────────┐
+│            Account Takeover Kill Chain                     │
+│                                                          │
+│  1. Reconnaissance                                       │
+│  ┌──────────────────────────────────────────┐           │
+│  │ Gather email/username from breaches,     │           │
+│  │ social media, company websites           │           │
+│  └──────────────────┬───────────────────────┘           │
+│                     v                                    │
+│  2. Credential Acquisition                               │
+│  ┌──────────────────────────────────────────┐           │
+│  │ Buy breach data, phish credentials,      │           │
+│  │ brute force, or exploit password reset   │           │
+│  └──────────────────┬───────────────────────┘           │
+│                     v                                    │
+│  3. Validation & Access                                  │
+│  ┌──────────────────────────────────────────┐           │
+│  │ Test credentials using automated tools,  │           │
+│  │ rotate through proxies to avoid detection│           │
+│  └──────────────────┬───────────────────────┘           │
+│                     v                                    │
+│  4. Exploitation                                         │
+│  ┌──────────────────────────────────────────┐           │
+│  │ Change password/email, drain accounts,   │           │
+│  │ pivot to other accounts, sell access     │           │
+│  └──────────────────────────────────────────┘           │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+## Credential Stuffing in Detail
+
+```python
+# How credential stuffing works (educational purposes only)
+# Attackers automate login attempts using breach data
+
+# Breach database format (available on dark web):
+# email:password
+# user@example.com:Summer2023!
+# john@company.com:P@ssw0rd123
+
+# Attacker script pattern:
+import requests
+
+# VULNERABLE: No rate limiting, no CAPTCHA
+def credential_stuff(target_url, credentials_file):
+    with open(credentials_file) as f:
+        for line in f:
+            email, password = line.strip().split(':')
+            resp = requests.post(target_url, data={
+                'email': email,
+                'password': password
+            })
+            if 'Welcome' in resp.text:
+                print(f"[+] Valid: {email}:{password}")
+    # Attackers rotate proxies and add delays to evade detection
+```
+
+Why it works: 65% of people reuse passwords across sites.
+
+---
+
+## Detecting Credential Stuffing
+
+```python
+# Server-side detection patterns
+
+from collections import defaultdict
+import time
+
+login_attempts = defaultdict(list)  # IP -> timestamps
+failed_logins = defaultdict(int)    # username -> count
+ip_user_map = defaultdict(set)      # IP -> set of usernames
+
+def detect_stuffing(ip, username, success):
+    now = time.time()
+
+    # Pattern 1: Many different usernames from one IP
+    ip_user_map[ip].add(username)
+    if len(ip_user_map[ip]) > 20:
+        alert(f"Credential stuffing: {ip} tried {len(ip_user_map[ip])} users")
+
+    # Pattern 2: High failure rate from one IP
+    login_attempts[ip].append((now, success))
+    recent = [s for t, s in login_attempts[ip] if now - t < 300]
+    failures = sum(1 for s in recent if not s)
+    if failures > 10:
+        alert(f"Brute force: {ip} had {failures} failures in 5min")
+
+    # Pattern 3: Login from unusual location
+    # Compare IP geolocation to user's typical locations
+    # Flag if new country/city
+```
+
+---
+
+## Rate Limiting and Account Protection
+
+```python
+# Flask rate limiting example
+from flask_limiter import Limiter
+
+limiter = Limiter(app, key_func=get_remote_address)
+
+@app.route('/login', methods=['POST'])
+@limiter.limit("5 per minute")  # Max 5 login attempts per minute
+def login():
+    # ... authentication logic ...
+    pass
+
+# Progressive delays after failed attempts
+@app.route('/login', methods=['POST'])
+def login_with_backoff():
+    username = request.form['username']
+    failures = get_failure_count(username)
+
+    if failures >= 3:
+        delay = min(2 ** (failures - 3), 60)  # 1s, 2s, 4s, 8s...60s
+        time.sleep(delay)
+
+    if failures >= 10:
+        # Lock account, require email verification
+        lock_account(username)
+        send_unlock_email(username)
+        return 'Account locked. Check email.', 423
+
+    # ... attempt authentication ...
+```
+
+---
+
+## Real-World ATO Incidents
+
+| Incident               | Year | Details                                 |
+|------------------------|------|-----------------------------------------|
+| Dunkin' Donuts         | 2019 | Credential stuffing, rewards points stolen|
+| Zoom                   | 2020 | 500K accounts sold on dark web ($0.002 each)|
+| The North Face         | 2020 | Credential stuffing on customer accounts |
+| PayPal                 | 2022 | 35,000 accounts breached via stuffing    |
+| 23andMe                | 2023 | 6.9M profiles accessed via credential stuffing|
+
+---
+
+## Exercise: Account Takeover Defense
+
+1. Build a login system with Flask that tracks:
+   - Failed login attempts per IP
+   - Failed login attempts per username
+   - Login location (IP geolocation)
+2. Implement progressive rate limiting (delays increase with failures)
+3. Add account lockout after 10 failed attempts
+4. Implement CAPTCHA after 3 failed attempts
+5. Add email notification for logins from new devices/locations
+6. Simulate a credential stuffing attack and verify defenses trigger
+7. Implement Have I Been Pwned API check for password changes
