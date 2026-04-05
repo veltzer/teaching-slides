@@ -89,70 +89,37 @@ function render() {
 
     renderBreadcrumb();
 
-    const isSearching = search.length > 0 || slidesFilter;
     const filtered = DATA.filter(e => {
-        if (!isSearching && currentFolder) {
+        if (currentFolder) {
             if (!e.folder.startsWith(currentFolder + "/") && e.folder !== currentFolder) return false;
-        }
-        if (!isSearching && !currentFolder) {
-            return false;
         }
         if (search && !e.name.toLowerCase().includes(search)) return false;
         if (slidesFilter && e.slides !== parseInt(slidesFilter)) return false;
         return true;
     });
-    const directChildren = isSearching ? filtered : filtered.filter(e => {
-        const prefix = currentFolder ? currentFolder + "/" : "";
-        const rest = e.folder.substring(prefix.length);
-        return rest.indexOf("/") === -1;
-    });
-    const allInFolder = DATA.filter(e => {
-        if (currentFolder) {
-            return e.folder.startsWith(currentFolder + "/") || e.folder === currentFolder;
-        }
-        return true;
-    });
 
-    const statsSource = isSearching ? filtered : allInFolder;
-    const totalChapters = statsSource.reduce((s, e) => s + (e.chapters || 0), 0);
-    const totalSlides = statsSource.reduce((s, e) => s + (e.slides || 0), 0);
-    totalEl.innerHTML = statsSource.length + " courses, " +
+    const totalChapters = filtered.reduce((s, e) => s + (e.chapters || 0), 0);
+    const totalSlides = filtered.reduce((s, e) => s + (e.slides || 0), 0);
+    totalEl.innerHTML = filtered.length + " courses, " +
         '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
         '<span class="stat-slides">' + totalSlides + " slides</span>";
-    renderSubfolders(allInFolder);
+    subfoldersEl.innerHTML = "";
 
-    const getVal = (e, key) => {
-        if (key === "name") return e.name;
-        if (key === "slides") return e.slides || 0;
-        if (key === "folder") return e.folder;
-        return e[key];
-    };
+    filtered.sort((a, b) => a.folder.localeCompare(b.folder) || a.name.localeCompare(b.name));
 
-    const getLabel = (e, key) => {
-        if (key === "folder") return e.folder_label || "Root";
-        if (key === "slides") return e.slides + " slides";
-        if (key === "chapters") return e.chapters + " chapters";
-        if (key === "name") return "All Courses";
-        return "";
-    };
-
-    directChildren.sort((a, b) => {
-        const v1a = getVal(a, sort1);
-        const v1b = getVal(b, sort1);
-        if (v1a !== v1b) {
-            const res = (typeof v1a === "string") ? v1a.localeCompare(v1b) : v1a - v1b;
-            return res * sort1Dir;
-        }
-        return a.name.localeCompare(b.name);
-    });
-
+    // Group by category (first path component relative to currentFolder)
     const groups = [];
-    let lastHeader = null;
-    for (const item of directChildren) {
-        const h = getLabel(item, sort1);
-        if (h !== lastHeader) {
-            groups.push({ label: h, items: [] });
-            lastHeader = h;
+    let lastCategory = null;
+    for (const item of filtered) {
+        const prefix = currentFolder ? currentFolder + "/" : "";
+        const rest = item.folder.substring(prefix.length);
+        const slash = rest.indexOf("/");
+        const category = slash !== -1 ? rest.substring(0, slash) : "";
+        const label = category ? category.replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : (currentFolder ? currentFolder.split("/").pop().replace(/_/g, " ").replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase()) : "Courses");
+        const groupKey = category || "__direct__";
+        if (groupKey !== lastCategory) {
+            groups.push({ label: label, items: [], key: groupKey });
+            lastCategory = groupKey;
         }
         groups[groups.length - 1].items.push(item);
     }
@@ -161,12 +128,24 @@ function render() {
     if (groups.length === 0) {
         html = '<p class="no-results">No courses match the current filters.</p>';
     }
+    const showNumbers = numbersEl.checked;
+    let globalNum = 0;
     for (const group of groups) {
-        html += "<h2>" + group.label + ' <span class="count">(' + group.items.length + ")</span></h2><ul>";
-        const showNumbers = numbersEl.checked;
+        const folderPath = group.key !== "__direct__" ? (currentFolder ? currentFolder + "/" + group.key : group.key) : currentFolder;
+        if (group.key !== "__direct__") {
+            const groupChapters = group.items.reduce((s, e) => s + (e.chapters || 0), 0);
+            const groupSlides = group.items.reduce((s, e) => s + (e.slides || 0), 0);
+            html += '<h2 class="tree-category"><a href="#" onclick="navigateFolder(\'' +
+                folderPath.replace(/'/g, "\\'") + '\'); return false;">' +
+                group.label + '</a> <span class="count">(' + group.items.length + ' courses, ' +
+                '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
+                '<span class="stat-slides">' + groupSlides + ' slides</span>)</span></h2>';
+        }
+        html += "<ul>";
         for (let i = 0; i < group.items.length; i++) {
+            globalNum++;
             const item = group.items[i];
-            const numPrefix = showNumbers ? '<span class="course-number">' + (i + 1) + ".</span> " : "";
+            const numPrefix = showNumbers ? '<span class="course-number">' + globalNum + ".</span> " : "";
             const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " chapters</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " slides</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
