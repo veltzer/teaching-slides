@@ -13,7 +13,7 @@
 
 ## Bubble Sort in Assembly
 
-```x86asm
+```nasm
 .globl bubble_sort
 bubble_sort:
     movl 4(%esp), %esi   # array pointer
@@ -121,7 +121,7 @@ int add(int a, int b) {
 ```
 
 Disassembled x86 code:
-```x86asm
+```nasm
 add:
     push ebp
     mov ebp, esp
@@ -153,7 +153,7 @@ void vulnerable_function(char *input) {
 
 Exploit in assembly:
 
-```x86asm
+```nasm
 section .text
 global _start
 

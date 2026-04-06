@@ -106,7 +106,7 @@ packer version
 
 ## Packer Template Formats
 
-```text
+```misc
 Legacy JSON format (deprecated):
   template.json
 

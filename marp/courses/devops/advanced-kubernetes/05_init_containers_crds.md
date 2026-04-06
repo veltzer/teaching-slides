@@ -65,7 +65,7 @@ spec:
 
 ## Init Container Use Cases
 
-```text
+```diagram
 ┌────────────────────────────────────────────────┐
 │                  Pod Lifecycle                   │
 │                                                 │
@@ -183,7 +183,7 @@ The `restartPolicy: Always` on an init container marks it as a **sidecar** that 
 
 ## Sidecar Patterns
 
-```text
+```diagram
 ┌─────────────────── Pod ───────────────────┐
 │                                           │
 │  ┌──────────┐    ┌────────────────────┐   │

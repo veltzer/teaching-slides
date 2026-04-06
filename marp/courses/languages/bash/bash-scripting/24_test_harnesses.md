@@ -209,7 +209,7 @@ load 'test_helper/bats-assert/load'
 ```
 ---
 ## Testing Best Practices
-```text
+```misc
 1. Test the interface, not the implementation
 2. Each test should be independent
 3. Use setup/teardown for common state

@@ -621,7 +621,7 @@ make BR2_EXTERNAL=/path/to/mycompany menuconfig
 
 ## external.desc
 
-```text
+```misc
 name: MYCOMPANY
 desc: My Company Buildroot customization
 ```

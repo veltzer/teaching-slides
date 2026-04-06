@@ -19,7 +19,7 @@ Advanced Kubernetes Course - Day 1, Module 4
 
 Every controller follows the same reconciliation loop:
 
-```text
+```diagram
         ┌──────────────────────────────┐
         │                              │
         ▼                              │
@@ -469,7 +469,7 @@ Explore: [OperatorHub.io](https://operatorhub.io)
 
 ## Operator Maturity Model
 
-```text
+```misc
 Level 5: Auto Pilot
     │     Full lifecycle, auto-tuning
 Level 4: Deep Insights

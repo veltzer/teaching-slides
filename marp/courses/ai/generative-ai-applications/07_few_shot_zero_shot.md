@@ -6,7 +6,7 @@
 
 `LLM`s can learn new tasks from examples provided in the prompt — no retraining needed:
 
-```text
+```diagram
 ┌─────────────────────────────────────────────┐
 │          IN-CONTEXT LEARNING                 │
 ├─────────────┬───────────────────────────────┤
@@ -146,7 +146,7 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 
 ## Choosing Examples — Quality Matters
 
-```text
+```misc
 GOOD examples:
   ✓ Cover all categories roughly equally
   ✓ Include edge cases and ambiguous inputs
@@ -292,7 +292,7 @@ messages = [
 
 ## How Many Examples Do You Need?
 
-```text
+```misc
 Performance vs. Number of Examples:
 
 Accuracy
@@ -585,7 +585,7 @@ def calibrate_few_shot(examples, test_input, model="gpt-4o"):
 
 ## In-Context Learning — Why Does It Work?
 
-```text
+```misc
 Several theories for why few-shot learning works:
 
 1. TASK IDENTIFICATION

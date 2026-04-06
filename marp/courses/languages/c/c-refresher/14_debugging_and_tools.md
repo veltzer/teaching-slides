@@ -328,7 +328,7 @@ int main(void) {
 
 ASan output:
 
-```text
+```misc
 ==1234==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x604...
 WRITE of size 4 at 0x604... thread T0
     #0 0x401234 in main asan_demo.c:5
@@ -391,7 +391,7 @@ int main(void) {
 
 UBSan output:
 
-```text
+```misc
 ubsan_demo.c:7:17: runtime error: signed integer overflow:
 2147483647 + 1 cannot be represented in type 'int'
 ```
@@ -571,7 +571,7 @@ int main(void) {
 }
 ```
 
-```text
+```misc
 program: program.c:9: divide: Assertion `b != 0.0 && "Division by zero!"' failed.
 Aborted (core dumped)
 ```
@@ -677,7 +677,7 @@ strace -c ./program
 
 Example output:
 
-```text
+```misc
 open("config.txt", O_RDONLY) = -1 ENOENT (No such file or directory)
 write(2, "Error: config file not found\n", 29) = 29
 ```

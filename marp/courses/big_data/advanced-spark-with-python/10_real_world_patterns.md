@@ -20,7 +20,7 @@
 ---
 ## ETL Pipeline Architecture
 
-```text
+```diagram
 Layered data architecture:
 
 ┌──────────────────────────────────────────────────┐
@@ -173,7 +173,7 @@ pipeline.run()
 ---
 ## Slowly Changing Dimensions: Overview
 
-```text
+```diagram
 SCD Types:
 
 Type 1: Overwrite (no history)
@@ -651,7 +651,7 @@ df.write.format("delta") \
 ---
 ## Idempotent Write Comparison
 
-```text
+```diagram
 Method comparison:
 
 ┌──────────────────────────────────────────────────┐
@@ -745,7 +745,7 @@ query = (
 ---
 ## Checkpointing Architecture
 
-```text
+```diagram
 Exactly-once guarantee flow:
 
 ┌──────────────────────────────────────────────────┐
@@ -781,7 +781,7 @@ Exactly-once guarantee flow:
 ---
 ## Change Data Capture (CDC) with Debezium
 
-```text
+```diagram
 CDC Architecture:
 
 ┌──────────────────────────────────────────────────┐
@@ -967,7 +967,7 @@ spark.read.format("delta") \
 ---
 ## Schema Evolution Strategy
 
-```text
+```diagram
 Schema evolution decision tree:
 
 ┌──────────────────────────────────────────────────┐
@@ -1163,7 +1163,7 @@ print(json.dumps(metrics, indent=2, default=str))
 ---
 ## Prometheus Metrics Configuration
 
-```text
+```diagram
 Spark metrics to Prometheus:
 
 ┌──────────────────────────────────────────────────┐
@@ -1202,7 +1202,7 @@ Spark metrics to Prometheus:
 ---
 ## Cost Optimization Strategies
 
-```text
+```diagram
 Cloud cost optimization for Spark:
 
 ┌──────────────────────────────────────────────────┐
@@ -1473,7 +1473,7 @@ if __name__ == "__main__":
 ---
 ## Summary: Real-World Patterns
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │  Key Takeaways                                    │
 ├──────────────────────────────────────────────────┤

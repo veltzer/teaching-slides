@@ -726,7 +726,7 @@ pr_results.vertices.count()  # Trigger caching
 
 ## Real-World Graph Applications
 
-```text
+```diagram
 ┌────────────────────────────────────────────┐
 │         Graph Processing Use Cases          │
 ├────────────────────────────────────────────┤

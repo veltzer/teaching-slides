@@ -33,7 +33,7 @@
 
 ## Anatomy of a Phishing Email
 
-```text
+```misc
 From: security@amaz0n-support.com    <-- Fake domain
 To: you@company.com
 Subject: URGENT: Your account will be suspended!
@@ -68,7 +68,7 @@ Amazon Customer Support               <-- Impersonation
 
 Before clicking any link in an email:
 
-```text
+```misc
 What you see:     [Click here to verify your account]
 
 What you get      https://totally-legit-bank.phishing-site.ru/login
@@ -130,7 +130,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Spam Filtering
 
 ## How It Works
-```text
+```diagram
 Incoming Email
       |
       v

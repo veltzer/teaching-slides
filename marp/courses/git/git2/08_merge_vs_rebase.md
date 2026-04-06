@@ -200,7 +200,7 @@ git rebase -i HEAD~4
 
 **Before squash:**
 
-```text
+```misc
 pick a1b2c3d Add user model
 pick d4e5f6g Fix typo in user model
 pick g7h8i9j Add validation to user model
@@ -209,7 +209,7 @@ pick j1k2l3m Fix validation bug
 
 **After squash:**
 
-```text
+```misc
 pick a1b2c3d Add user model
 squash d4e5f6g Fix typo in user model
 squash g7h8i9j Add validation to user model

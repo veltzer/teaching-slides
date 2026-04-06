@@ -61,7 +61,7 @@ pip install diffusers accelerate
 
 **Generative AI** = AI systems that create new content
 
-```text
+```diagram
 Input: "Write a poem about coding"
        ┌─────────────────────┐
        │  Generative Model   │
@@ -81,7 +81,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ## The Generative AI Landscape
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │              GENERATIVE AI ECOSYSTEM                  │
 ├───────────┬───────────┬──────────┬───────────────────┤
@@ -105,7 +105,7 @@ Three converging factors enabled the current explosion:
 1. **Scale of compute** — Thousands of GPUs training for months
 1. **Architectural breakthroughs** — The Transformer (2017)
 
-```text
+```misc
 Performance
     │          ╱ GPT-4
     │        ╱
@@ -137,7 +137,7 @@ Performance
 
 ## How This Course Fits Together
 
-```text
+```diagram
 Day 1: FOUNDATIONS          Day 2: APIs & PROMPTS
 ┌──────────────┐           ┌──────────────────┐
 │ How LLMs     │           │ OpenAI API       │
@@ -249,7 +249,7 @@ from diffusers import (         # Image generation
 
 ## Daily Schedule
 
-```text
+```misc
 Each day follows this structure:
 
 09:00 - 10:30  │ Morning session (theory + demos)
@@ -271,7 +271,7 @@ Exercises: Work at your own pace.
 
 ## Connecting the Dots
 
-```text
+```misc
 Real-world GenAI application uses ALL the skills:
 
 EXAMPLE: Customer support chatbot

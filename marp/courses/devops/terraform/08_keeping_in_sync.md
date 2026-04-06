@@ -27,7 +27,7 @@ Terraform Config          Actual Infrastructure
 
 ## Drift Use Case: Manual Console Change
 
-```text
+```misc
 1. Developer creates instance via Terraform
    instance_type = "t3.micro"
 
@@ -44,7 +44,7 @@ Terraform Config          Actual Infrastructure
 
 ## Drift Use Case: Security Group Modified
 
-```text
+```misc
 Scenario:
   - Terraform manages security group with port 80 open
   - Admin manually opens port 22 for debugging
@@ -79,7 +79,7 @@ Scenario:
 
 ## Drift Use Case: Tags Modified by AWS
 
-```text
+```misc
 Some AWS services auto-add tags:
   - EKS adds kubernetes.io/* tags
   - ASG adds aws:autoscaling:groupName
@@ -162,7 +162,7 @@ these detected changes?
 
 ## Detecting vs Correcting Drift
 
-```text
+```misc
 Detect drift only:
   terraform plan -refresh-only
   (shows what changed, updates state only)
@@ -242,7 +242,7 @@ terraform import aws_security_group.web sg-12345
 
 ## Import Workflow
 
-```text
+```misc
 Step 1: Write the resource block in .tf files
         (even if incomplete)
 

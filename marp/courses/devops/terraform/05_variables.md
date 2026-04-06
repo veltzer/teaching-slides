@@ -351,7 +351,7 @@ tags = {
 
 ## Variable File Naming
 
-```text
+```misc
 Auto-loaded files:
   terraform.tfvars          # Always loaded
   terraform.tfvars.json     # Always loaded

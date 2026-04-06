@@ -46,7 +46,7 @@ fn main() {
 }
 ```
 
-```text
+```diagram
   ┌────────────┐   send()    ┌─────────────┐   recv()   ┌────────────┐
   │  Producer   │ ──────────> │   Channel    │ ────────> │  Consumer   │
   │  (thread)   │             │  (buffer)    │           │  (thread)   │
@@ -176,7 +176,7 @@ fn main() {
 
 ## Crossbeam vs std::sync::mpsc
 
-```text
+```diagram
   ┌─────────────────────┬──────────────────┬──────────────────────┐
   │ Feature             │ std::sync::mpsc  │ crossbeam-channel    │
   ├─────────────────────┼──────────────────┼──────────────────────┤
@@ -223,7 +223,7 @@ fn main() {
 }
 ```
 
-```text
+```diagram
   ┌──────┐     ┌──────────┐
   │ work ├────>│ Worker 1 │──┐
   ├──────┤     └──────────┘  │    ┌───────────┐
@@ -348,7 +348,7 @@ fn main() {
 
 ## When to Use Mutex vs RwLock
 
-```text
+```diagram
   ┌────────────────────┬─────────────────────┬───────────────────────┐
   │ Property           │ Mutex               │ RwLock                │
   ├────────────────────┼─────────────────────┼───────────────────────┤
@@ -406,7 +406,7 @@ fn main() {
 
 ## Atomic Orderings Explained
 
-```text
+```diagram
   ┌────────────────────────────────────────────────────────────┐
   │                   Memory Orderings                          │
   ├─────────────┬──────────────────────────────────────────────┤
@@ -627,7 +627,7 @@ fn main() {
 
 ## Lock-Free vs Lock-Based Trade-offs
 
-```text
+```diagram
   ┌────────────────────┬──────────────────────┬───────────────────────┐
   │ Property           │ Lock-Based           │ Lock-Free             │
   ├────────────────────┼──────────────────────┼───────────────────────┤
@@ -677,7 +677,7 @@ fn main() {
 }
 ```
 
-```text
+```diagram
   Sequential:
   [1, 2, 3, 4, 5, 6, 7, 8] ──> map ──> map ──> map ──> ... ──> sum
 
@@ -976,7 +976,7 @@ fn main() {
 
 ## Deadlock Prevention Strategies
 
-```text
+```misc
   Strategy 1: Lock Ordering
   ─────────────────────────
   Always acquire locks in the same order (e.g., by address or ID).
@@ -1185,7 +1185,7 @@ fn main() {
 
 ## DashMap vs Mutex<HashMap>
 
-```text
+```diagram
   ┌──────────────────┬──────────────────────┬──────────────────────┐
   │ Property         │ Mutex<HashMap>       │ DashMap               │
   ├──────────────────┼──────────────────────┼──────────────────────┤
@@ -1372,7 +1372,7 @@ fn main() {
 
 ## Scoped Threads vs Regular Threads
 
-```text
+```diagram
   ┌───────────────────┬──────────────────────┬──────────────────────┐
   │ Property          │ thread::spawn        │ thread::scope        │
   ├───────────────────┼──────────────────────┼──────────────────────┤
@@ -1558,7 +1558,7 @@ fn main() {
 
 ## Actor Pattern: Benefits
 
-```text
+```diagram
   ┌──────────────────────────────────────────────────┐
   │            Why Use the Actor Pattern?              │
   ├──────────────────────────────────────────────────┤
@@ -1589,7 +1589,7 @@ fn main() {
 
 ## Summary
 
-```text
+```diagram
   ┌───────────────────────────────────────────────────────┐
   │          Concurrency Patterns Cheatsheet               │
   ├───────────────────────────────────────────────────────┤

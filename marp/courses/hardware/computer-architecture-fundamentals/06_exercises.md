@@ -28,7 +28,7 @@ lscpu
 
 **Expected output (example):**
 
-```text
+```misc
 Architecture:             x86_64
 CPU(s):                   16
 Thread(s) per core:       2
@@ -117,7 +117,7 @@ done
 
 **Expected output:**
 
-```text
+```misc
 --- index0 ---
 Level: 1
 Type:  Data
@@ -243,7 +243,7 @@ gcc -O2 -o cache_access cache_access.c
 
 **Typical output:**
 
-```text
+```misc
 Sequential: 0.052 seconds
 Random:     1.340 seconds     <-- 25x slower!
 ```
@@ -316,7 +316,7 @@ gcc -O2 -o cache_line cache_line.c
 
 **Expected pattern:**
 
-```text
+```output
 Stride  Elements_Touched  Time(ms)  Throughput(GB/s)
 ------  ----------------  --------  ----------------
     1          33554432     23.45             5.45
@@ -430,7 +430,7 @@ gcc -O2 -o mem_latency mem_latency.c
 
 **Expected output (varies by CPU):**
 
-```text
+```output
 Array Size    Latency (ns)
 ----------    ------------
      4 KB          1.2       <-- L1 cache

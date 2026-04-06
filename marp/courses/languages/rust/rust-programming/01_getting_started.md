@@ -261,7 +261,7 @@ cargo doc
 
 ## Project Structure
 
-```text
+```misc
 my_project/
 +-- Cargo.toml          # Project manifest
 +-- Cargo.lock          # Lock file

@@ -88,7 +88,7 @@ set autoindent
 
 Project structure:
 
-```text
+```tree
 my_assembly_project/
 +-- src/
 |   +-- main.s

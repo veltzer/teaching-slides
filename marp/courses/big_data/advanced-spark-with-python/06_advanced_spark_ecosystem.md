@@ -503,7 +503,7 @@ delta_table.history().select(
 
 ## Delta Lake Operations Summary
 
-```text
+```diagram
 ┌──────────────────────────────────────────────┐
 │            Delta Lake Operations              │
 ├──────────────────────────────────────────────┤

@@ -6,7 +6,7 @@
 
 ## Privilege Escalation Overview
 
-```text
+```diagram
 Initial Access (www-data, apache)
          |
          v
@@ -316,7 +316,7 @@ ssh -D 9050 user@compromised_host
 
 ## Windows Privilege Escalation
 
-```cmd
+```console
 :: Windows enumeration commands
 whoami /all
 systeminfo
@@ -474,7 +474,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 
 ## Boot2Root Full Walkthrough Summary
 
-```text
+```misc
 1. SCAN
    nmap -sV -sC -p- target -> Found port 80, 22
 

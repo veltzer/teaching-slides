@@ -1089,7 +1089,7 @@ class KnowledgeEntry:
 
 ## Code Example
 
-```language
+```template
 # Working example
 
 ## Use Cases

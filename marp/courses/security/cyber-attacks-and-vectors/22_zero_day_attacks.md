@@ -67,7 +67,7 @@
 
 ## The CVE Process
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          CVE (Common Vulnerabilities and Exposures)       │
 │                                                          │
@@ -106,7 +106,7 @@
 
 ## Responsible Disclosure
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  Disclosure Models                                       │
 ├──────────────────────┬────────────────┬──────────────────┤
@@ -137,7 +137,7 @@
 
 ## Notable Zero-Day Case Study: EternalBlue (CVE-2017-0144)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          EternalBlue Timeline                             │
 │                                                          │
@@ -288,7 +288,7 @@ sudo yum updateinfo list security
 
 ## Virtual Patching
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Virtual Patching                                 │
 │                                                          │
@@ -350,7 +350,7 @@ location / {
 
 ## Multi-Layered Security Approach
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Defense in Depth Against Zero-Days               │
 │                                                          │

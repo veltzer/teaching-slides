@@ -17,7 +17,7 @@ Advanced Kubernetes Course - Day 3, Module 4
 
 ## `RBAC` Architecture
 
-```text
+```diagram
 WHO                 WHAT              WHERE
 (Subject)           (Verb+Resource)   (Namespace/Cluster)
                           │

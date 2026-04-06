@@ -62,7 +62,7 @@ tshark -i eth0 -b filesize:10000 -b files:5 \
 
 Capture filters use Berkeley Packet Filter syntax (same as `tcpdump`):
 
-```text
+```misc
 # By host
 host 192.168.1.100
 src host 10.0.0.5
@@ -89,7 +89,7 @@ tcp and (port 80 or port 443)
 
 Display filters are applied after capture for analysis. More powerful than capture filters:
 
-```text
+```misc
 # By IP
 ip.addr == 192.168.1.100
 ip.src == 10.0.0.5
@@ -115,7 +115,7 @@ http.host contains "example.com"
 ---
 ## Advanced Display Filters
 
-```text
+```misc
 # TCP flags
 tcp.flags.syn == 1
 tcp.flags.rst == 1
@@ -221,7 +221,7 @@ tshark -r capture.pcap -q \
 
 **Slow connections:**
 
-```text
+```misc
 # Find retransmissions
 tcp.analysis.retransmission
 
@@ -234,7 +234,7 @@ tcp.analysis.zero_window
 
 **DNS problems:**
 
-```text
+```misc
 # Failed DNS queries
 dns.flags.rcode != 0
 
@@ -244,7 +244,7 @@ dns.time > 1
 
 **TLS issues:**
 
-```text
+```misc
 # TLS handshake failures
 tls.alert.message
 
@@ -322,7 +322,7 @@ tshark -i eth0 -f "host problem-server" -w issue.pcap
 
 Coloring rules highlight packets visually for faster analysis:
 
-```text
+```misc
 # Built-in colors (Edit -> Coloring Rules)
 # Green background: HTTP traffic
 # Light blue: DNS
@@ -442,7 +442,7 @@ Important notes:
 
 Profiles store display settings, filters, and coloring rules:
 
-```text
+```misc
 # Create a profile in GUI:
 # Edit -> Configuration Profiles -> New
 # Each profile stores:
@@ -476,7 +476,7 @@ Recommended profiles:
 
 Detect suspicious or injected packets on the network:
 
-```text
+```misc
 # Detect TCP RST injection (censorship/MITM)
 tcp.flags.rst == 1 && tcp.window_size == 0
 

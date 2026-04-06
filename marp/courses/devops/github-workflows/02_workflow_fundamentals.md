@@ -114,7 +114,7 @@ jobs:
     - `aws-cli`, `az`, `gcloud`
 - Full list available at:
 
-```text
+```misc
 https://github.com/actions/runner-images
 ```
 

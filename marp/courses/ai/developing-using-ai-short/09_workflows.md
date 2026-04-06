@@ -287,7 +287,7 @@ Systematic bug investigation:
 5. Review recent deployments
 
 **Reproduction Script**:
-```js
+```javascript
 // AI generates reproduction test
 const reproducer = async () => {
   const user = await createTestUser();

@@ -4,7 +4,7 @@
 
 ## The Vision: Natural Language to SQL
 
-```text
+```diagram
 User: "Show me the top 5 customers by revenue this quarter"
 
      ┌────────────────────────────┐
@@ -33,7 +33,7 @@ Response: "The top 5 customers by revenue this quarter are:
 
 ## Architecture Overview
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────┐
 │                DATABASE INTERFACE                     │
 │                                                       │
@@ -463,7 +463,7 @@ def auto_visualize(sql_result, question):
 
 ## Security Best Practices
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │         DATABASE INTERFACE SECURITY                   │
 ├──────────────────────────────────────────────────────┤

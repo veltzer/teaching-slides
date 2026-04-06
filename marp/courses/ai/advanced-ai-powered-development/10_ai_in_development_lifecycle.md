@@ -565,7 +565,7 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
-```text
+```diagram
 Key Metrics to Track:
 +--------------------------+----------+----------+--------+
 | Metric                   | Before   | After    | Delta  |
@@ -589,7 +589,7 @@ Key Metrics to Track:
 - AI correlates deployment events, config changes, and metric shifts
 - Builds a causal timeline automatically
 
-```text
+```misc
 AI Root Cause Analysis Report
 =============================
 Incident: API latency spike at 14:32 UTC
@@ -618,7 +618,7 @@ Suggested fix:
 - Feed your architecture diagram and service dependencies to an LLM
 - Generate a structured runbook for common failure scenarios
 
-```text
+```misc
 Exercise Steps:
 1. Export your service dependency graph (or describe it in text)
 1. Prompt the AI with: "Generate incident runbooks for

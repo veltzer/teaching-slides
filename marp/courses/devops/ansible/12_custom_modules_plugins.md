@@ -23,7 +23,7 @@
 
 ## Module Search Path
 
-```text
+```misc
 Ansible looks for modules in this order:
 1. ./library/                    (next to playbook)
 2. Role's library/ directory

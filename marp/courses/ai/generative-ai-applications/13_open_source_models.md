@@ -4,7 +4,7 @@
 
 ## Day 4: Open Source Models
 
-```text
+```diagram
 Today's Roadmap:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  ┌──────────────────────────────────────────┐
@@ -30,7 +30,7 @@ Today's Roadmap:
 | **Compliance** | Meet data residency requirements |
 | **Transparency** | Inspect model weights and architecture |
 
-```text
+```misc
 Total Cost of Ownership (1M requests/month):
 ─────────────────────────────────────────────
   GPT-4o API:          ~$5,000-50,000/month
@@ -43,7 +43,7 @@ Total Cost of Ownership (1M requests/month):
 
 ## The Open Source Model Landscape
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │            OPEN SOURCE MODEL FAMILIES                 │
 ├──────────────┬───────┬──────────┬───────────────────┤
@@ -73,7 +73,7 @@ Total Cost of Ownership (1M requests/month):
 
 ## Model Size vs. Hardware Requirements
 
-```text
+```misc
 Model Size    VRAM Needed     Suitable Hardware
 ──────────────────────────────────────────────────────
 1-3B          2-4 GB          CPU, laptop GPU
@@ -310,7 +310,7 @@ result = chain.invoke({"question": "What are decorators?"})
 
 ## Benchmarking Open Source vs. Closed Source
 
-```text
+```misc
 Task: Code generation (HumanEval benchmark)
 
 Model              Pass@1    Size      Cost/1M tok
@@ -334,7 +334,7 @@ closed model performance on many tasks.
 
 ## Choosing the Right Model
 
-```text
+```diagram
 Decision Framework:
 ━━━━━━━━━━━━━━━━━━
 
@@ -405,7 +405,7 @@ Exercise: Set up and compare local models.
 
 ## Model Formats and Quantization Types
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │           MODEL FILE FORMATS                         │
 ├────────────┬─────────────────────────────────────────┤
@@ -438,7 +438,7 @@ Exercise: Set up and compare local models.
 
 ## Quantization Quality Comparison
 
-```text
+```misc
 Performance retention at different quantization levels:
 (Measured on MMLU benchmark, LLaMA 3.1 70B)
 
@@ -503,7 +503,7 @@ async def chat(request: ChatRequest):
 
 ## Model Merging — Combining Expertise
 
-```text
+```misc
 A technique to combine multiple fine-tuned models:
 
 Model A: Fine-tuned for coding
@@ -540,7 +540,7 @@ MERGING METHODS:
 
 Use a small model to speed up a large model:
 
-```text
+```misc
 Standard decoding (slow):
   Large model generates 1 token at a time
   Each token = 1 full forward pass of 70B model
@@ -705,7 +705,7 @@ models_to_compare = [
 
 ## Model Licensing — Understanding the Terms
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │              MODEL LICENSE COMPARISON                  │
 ├──────────────┬───────────────────────────────────────┤
@@ -773,7 +773,7 @@ docker run --gpus all -p 8000:8000 llm-server
 
 ## Embedding Models — Open Source Options
 
-```text
+```diagram
 ┌────────────────────────────────┬──────┬───────────┬──────────┐
 │ Model                          │ Dims │ MTEB Avg  │ Size     │
 ├────────────────────────────────┼──────┼───────────┼──────────┤

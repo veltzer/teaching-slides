@@ -1,7 +1,7 @@
 # Redirection
 ---
 ## File Descriptors
-```text
+```diagram
 Every process has three standard file descriptors:
 
 +------+--------+----------+------------------+
@@ -80,7 +80,7 @@ command 2>&1 > file.txt
 ```
 ---
 ## Visualizing Redirect Order
-```text
+```misc
 CORRECT: command > file.txt 2>&1
 
   Step 1: stdout --> file.txt

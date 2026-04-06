@@ -112,7 +112,7 @@
 - Each tool result becomes context for subsequent reasoning
 - Parallel tool calls are possible when inputs are independent
 
-```text
+```misc
 User: "Refactor the auth module and run the tests"
   -> tool_use: read_file("src/auth.ts")
   <- tool_result: <file contents>
@@ -172,7 +172,7 @@ Assistant: "Done. Refactored auth and all tests pass."
 - The model acts as the orchestrator between pipeline stages
 - Common patterns: read-transform-write, search-analyze-act
 
-```text
+```misc
 Pipeline: "Find and fix all deprecated API calls"
   1. grep("deprecatedMethod")  ->  list of files
   2. read_file(file)           ->  source code

@@ -18,7 +18,7 @@
 - The model may hallucinate APIs it cannot see
 - Strategic context selection is a core engineering skill
 
-```text
+```misc
 Monolith: 2M tokens of source
 Context:  200K tokens max
 Ratio:    ~10% visible at any time
@@ -35,7 +35,7 @@ Ratio:    ~10% visible at any time
 - Chunking strategies: split by module, layer, or feature boundary
 - Summarize prior context before feeding the next chunk
 
-```text
+```misc
 Symptoms of context overflow:
 1. AI re-introduces code you already deleted
 1. Variable names revert to generic (e.g., `data`, `result`)
@@ -97,7 +97,7 @@ Mitigations:
 - Measure tokens-per-task to find wasteful patterns
 - Use cheaper models for exploration, capable models for generation
 
-```text
+```misc
 Cost estimation for a refactoring session:
 1. Initial context loading:   ~50K tokens input
 1. Iterative exploration:     ~120K tokens (6 rounds x 20K)
@@ -162,7 +162,7 @@ Savings strategies:
 - Ignore auto-generated code: protobuf stubs, ORM models, SDK clients
 - Revisit exclusions when modules move or new generators are added
 
-```text
+```gitignore
 # .claudeignore
 node_modules/
 dist/
@@ -186,7 +186,7 @@ __pycache__/
 - Leverage `@file` references in tools like Claude Code
 - Chain prompts: overview first, details second
 
-```text
+```misc
 Step 1: "Here are the interface files for the billing module"
 Step 2: "Here is the specific service I need to change"
 Step 3: "Here are the tests that cover this service"
@@ -202,7 +202,7 @@ Step 3: "Here are the tests that cover this service"
 - Ask the AI to form hypotheses, then verify them
 - Build understanding bottom-up: types, functions, modules
 
-```text
+```misc
 Prompt pattern:
 1. "Find all implementations of PaymentProcessor"
 1. "Show me the call sites for processRefund()"
@@ -221,7 +221,7 @@ Prompt pattern:
 - Coordinate extraction work to avoid conflicting AI-generated changes
 - Review each team's rules files in architecture syncs
 
-```text
+```misc
 Repo structure for shared conventions:
 /CLAUDE.md                    # org-wide rules
 /src/billing/CLAUDE.md        # billing team overrides
@@ -264,7 +264,7 @@ rg "catch|rescue|except|on_error" --type-add 'src:*.{ts,py,rb}'
 - Verify that test files actually cover the code path you are modifying
 - Use a consistent prompt pattern to avoid missing related files
 
-```text
+```misc
 Navigation workflow:
 1. "Find the definition of OrderService.submitOrder()"
 1. "Show all call sites of submitOrder() across the codebase"
@@ -361,7 +361,7 @@ pydeps src/billing --max-bacon=3 --no-show
 jdeps --dot-output deps/ target/app.jar
 ```
 
-```text
+```misc
 AI prompt with graph data:
 "Here is the dependency graph for our billing module.
 Identify the optimal extraction order, starting with
@@ -398,7 +398,7 @@ git log --format=format: --name-only --since="1 year ago" \
 - Run tests after every atomic step
 - Keep refactoring PRs small and reviewable
 
-```text
+```misc
 Workflow:
 1. Extract interface from concrete class
 1. Introduce adapter implementing the interface
@@ -418,7 +418,7 @@ Workflow:
 - Use feature flags to toggle between old and new implementations
 - Monitor error rates and latency at each cutover stage
 
-```text
+```misc
 Strangler Fig implementation with AI assistance:
 1. Ask AI to identify the public API surface of the target module
 1. Generate a thin proxy service that delegates to the monolith
@@ -526,7 +526,7 @@ def test_billing_service_contract():
 - Use AI to estimate refactoring effort and risk for each item
 - Schedule debt paydown alongside feature work in each sprint
 
-```text
+```misc
 AI-assisted debt identification prompt:
 "Analyze src/billing/ and classify technical debt:
 1. Code duplication (DRY violations)
@@ -555,7 +555,7 @@ Example output:
 - Detect subtle issues: mismatched error types, missing null checks
 - Generate review checklists tailored to the modules involved
 
-```text
+```misc
 AI-assisted review prompt:
 "This PR modifies files in /src/billing, /src/auth,
 and /src/shared/db. For each module:
@@ -602,7 +602,7 @@ def proc(d, f, t):
 - Document "why" not just "what" for critical business logic
 - Create onboarding guides from accumulated context
 
-```text
+```misc
 Prompt: "Given these 47 commits touching the pricing engine
 between 2019-2022, and the following notes from the team lead,
 generate an ADR explaining why we moved from percentage-based
@@ -674,7 +674,7 @@ during the transition period.
 - Identify module boundaries, entry points, and shared state
 - Propose one extraction candidate with justification
 
-```text
+```misc
 Exercise steps (30 minutes):
 1. Ask the AI: "List the top-level directory structure
    and explain what each module likely does"

@@ -69,7 +69,7 @@ root         1  0.0  0.0 225868  9416 ?        Ss   Oct19   0:23 /sbin/init
 
 Key fields:
 
-```text
+```misc
 USER  - Process owner
 PID   - Process ID
 %CPU  - CPU usage
@@ -218,7 +218,7 @@ kill -CONT PID
 
 Interactive commands:
 
-```text
+```misc
 h - help
 k - kill process
 r - renice process

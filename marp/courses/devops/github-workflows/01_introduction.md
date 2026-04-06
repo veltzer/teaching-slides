@@ -16,7 +16,7 @@
 
 ## Why CI/CD Matters
 
-```text
+```misc
 Without CI/CD:
   Developer -> Manual Build -> Manual Test -> Manual Deploy -> Production
                   (hours)        (hours)         (hours)

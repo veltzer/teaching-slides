@@ -2,7 +2,7 @@
 
 ## Configuration Management vs Provisioning
 
-```text
+```misc
 Configuration Management:        Provisioning:
   - Install software               - Create infrastructure
   - Configure services              - Set up networks, VMs, storage
@@ -74,7 +74,7 @@ Infrastructure Lifecycle:
 - Break the plan/apply workflow
 - Better alternatives exist
 
-```text
+```misc
 Better alternatives:
   - User data scripts (cloud-init)
   - Pre-built images (Packer)

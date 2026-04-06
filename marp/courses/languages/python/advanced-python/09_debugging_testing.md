@@ -1555,7 +1555,7 @@ directory = coverage_html_report
 - Balancing coverage and maintainability
 - Setting reasonable targets
 
-```text
+```misc
 Coverage Report Guidelines:
 - Aim for 80%+ coverage for critical code
 - Look for uncovered code in error handling paths

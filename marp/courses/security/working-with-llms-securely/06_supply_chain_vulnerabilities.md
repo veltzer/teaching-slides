@@ -173,7 +173,7 @@ Pin versions, verify hashes, and audit regularly
 
 ## Mitigation: Software Bill of Materials (`SBOM`)
 
-```text
+```misc
 Maintain an SBOM for your LLM application:
 
 ✓ All model sources and versions

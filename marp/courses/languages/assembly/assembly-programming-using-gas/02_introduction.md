@@ -95,7 +95,7 @@
 
 ## Assembly Language Syntax
 
-```x86asm
+```nasm
 section .data
     message db 'Hello, World!', 0
 

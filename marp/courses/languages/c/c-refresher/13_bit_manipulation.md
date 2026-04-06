@@ -54,7 +54,7 @@ int main(void) {
 }
 ```
 
-```text
+```misc
 a     = 1100 1010  (0xCA)
 b     = 1011 0110  (0xB6)
 a & b = 1000 0010  (AND)
@@ -347,7 +347,7 @@ Do not use bit fields for portable wire formats.
 
 ## Endianness
 
-```text
+```diagram
 Big-Endian (network byte order):        Little-Endian (x86):
 uint32_t val = 0x12345678               uint32_t val = 0x12345678
 

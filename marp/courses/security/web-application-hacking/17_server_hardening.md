@@ -6,7 +6,7 @@
 
 ## Why Hardening Matters
 
-```text
+```diagram
 Default Installation = Maximum Attack Surface
 
 +--Default Install--+     +--Hardened Install--+
@@ -448,7 +448,7 @@ nuclei -u https://target.com -severity critical,high
 
 ## WAF (Web Application Firewall)
 
-```text
+```diagram
 WAF Deployment Modes:
 +--Inline (Blocking)-------+
 | Request -> WAF -> Server |
@@ -508,7 +508,7 @@ SecRule ARGS "@rx <script" \
 
 ## Supply Chain Security
 
-```text
+```misc
 Third-party dependencies are a major attack vector:
 
 Package Manager Risks:
@@ -542,7 +542,7 @@ Defense measures:
 
 ## Incident Response Preparation
 
-```text
+```misc
 Incident Response Plan for Web Attacks:
 
 1. PREPARATION
@@ -613,7 +613,7 @@ awk '$10 > 10000000 {print $0}' /var/log/nginx/access.log
 
 ## Hardening Assessment Checklist
 
-```text
+```misc
 Operating System:
 [ ] System packages updated
 [ ] Unnecessary services disabled

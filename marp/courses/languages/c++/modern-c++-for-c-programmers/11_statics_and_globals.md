@@ -873,7 +873,7 @@ namespace GoodLibrary {
 
 Understanding where static variables are stored:
 
-```svg
+```xml
 <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
   <!-- Memory sections -->
   <rect x="50" y="20" width="300" height="40" fill="lightblue" stroke="black"/>

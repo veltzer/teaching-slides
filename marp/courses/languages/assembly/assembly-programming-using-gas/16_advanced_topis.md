@@ -16,7 +16,7 @@
 - 8 80-bit registers (ST0-ST7)
 
 Example:
-```x86asm
+```nasm
 fld dword ptr [x]    ; Load x into ST0
 fld dword ptr [y]    ; Load y into ST0, push previous value to ST1
 faddp                ; Add ST0 and ST1, pop
@@ -29,7 +29,7 @@ fstp dword ptr [z]   ; Store result in z and pop
 - 128-bit XMM registers (XMM0-XMM15)
 
 Example:
-```x86asm
+```nasm
 movss xmm0, [x]      ; Move single-precision float x to xmm0
 addss xmm0, [y]      ; Add single-precision float y to xmm0
 movss [z], xmm0      ; Store result in z
@@ -43,7 +43,7 @@ movss [z], xmm0      ; Store result in z
 - 256-bit YMM registers
 
 Example:
-```x86asm
+```nasm
 vmovaps ymm0, [array1]   ; Load 8 floats from array1
 vmovaps ymm1, [array2]   ; Load 8 floats from array2
 vaddps ymm2, ymm0, ymm1  ; Add 8 pairs of floats
@@ -58,7 +58,7 @@ vmovaps [result], ymm2   ; Store 8 float results
 - 128-bit XMM registers
 
 Example (4 simultaneous integer additions):
-```x86asm
+```nasm
 movdqa xmm0, [array1]    ; Load 4 ints from array1
 paddd xmm0, [array2]     ; Add 4 ints from array2
 movdqa [result], xmm0    ; Store 4 int results
@@ -72,7 +72,7 @@ movdqa [result], xmm0    ; Store 4 int results
 - 256-bit YMM registers
 
 Example (8 simultaneous float multiplications):
-```x86asm
+```nasm
 vmovaps ymm0, [array1]   ; Load 8 floats from array1
 vmulps ymm0, ymm0, [array2] ; Multiply by 8 floats from array2
 vmovaps [result], ymm0   ; Store 8 float results
@@ -119,7 +119,7 @@ pthread_mutex_unlock(&mutex);
 ```
 
 In assembly:
-```x86asm
+```nasm
 lock xadd dword ptr [mutex], eax
 ```
 
@@ -128,12 +128,12 @@ lock xadd dword ptr [mutex], eax
 ## Atomic Operations
 
 Example: Atomic increment
-```x86asm
+```nasm
 lock inc dword ptr [counter]
 ```
 
 Example: Compare and Swap
-```x86asm
+```nasm
 mov eax, old_value
 lock cmpxchg dword ptr [address], new_value
 ```
@@ -146,7 +146,7 @@ lock cmpxchg dword ptr [address], new_value
 - Memory barriers ensure proper ordering
 
 Example:
-```x86asm
+```nasm
 mfence  ; Full memory barrier
 lfence  ; Load fence
 sfence  ; Store fence

@@ -12,7 +12,7 @@
 ---
 ## TCP Three-Way Handshake Review
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Normal TCP Three-Way Handshake                   │
 │                                                          │
@@ -377,7 +377,7 @@ for i in range(1000):
 ---
 ## SYN Proxy (Hardware Firewalls)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          SYN Proxy Operation                              │
 │                                                          │

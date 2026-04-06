@@ -99,7 +99,7 @@ fn main() {
 
 ## Vtable Layout
 
-```text
+```diagram
                ┌──────────────────────┐
   dyn Shape    │  data pointer ───────────> actual struct data
   (fat ptr)    │  vtable pointer ─────────> ┌─────────────────┐
@@ -1018,7 +1018,7 @@ impl Shape {
 
 ## Summary
 
-```text
+```diagram
   ┌─────────────────────────────────────────────────────┐
   │              Advanced Traits Cheatsheet              │
   ├─────────────────────────────────────────────────────┤

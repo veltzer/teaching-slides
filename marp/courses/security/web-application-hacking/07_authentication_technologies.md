@@ -21,7 +21,7 @@
 **Authentication** = Verifying "Who are you?"
 **Authorization** = Verifying "What can you do?"
 
-```text
+```misc
 Three factors of authentication:
 1. Something you KNOW    (password, PIN)
 2. Something you HAVE    (phone, hardware key, smart card)
@@ -81,7 +81,7 @@ username=admin&password=secret123&csrf_token=abc123
 
 ## HTTP Basic Authentication
 
-```text
+```http
 # How it works:
 1. Client requests protected resource
 2. Server responds: 401 + WWW-Authenticate: Basic
@@ -103,7 +103,7 @@ Authorization: Basic YWRtaW46cGFzc3dvcmQ=
 
 ## Token-Based Authentication (JWT)
 
-```text
+```diagram
 JSON Web Token structure:
 header.payload.signature
 
@@ -147,7 +147,7 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 
 ## OAuth 2.0 Flow
 
-```text
+```diagram
 +--------+                               +----------+
 | User   |                               | Auth     |
 | Browser|                               | Server   |
@@ -172,7 +172,7 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 
 ## OAuth 2.0 Attack Vectors
 
-```text
+```misc
 1. Open Redirect in redirect_uri
    # Steal authorization code
    redirect_uri=https://attacker.com/callback
@@ -197,7 +197,7 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 
 ## Common Authentication Design Flaws
 
-```text
+```misc
 1. Weak Password Policy
    - No minimum length
    - No complexity requirements
@@ -250,7 +250,7 @@ ffuf -u http://target.com/login \
 
 ## Password Reset Vulnerabilities
 
-```text
+```misc
 Attack 1: Predictable Reset Tokens
   https://target.com/reset?token=user123_20240115_001
   # Token contains: username + date + counter
@@ -276,7 +276,7 @@ Attack 4: No Rate Limiting on Reset
 
 ## Multi-Factor Authentication Bypass
 
-```text
+```misc
 MFA Bypass Techniques:
 
 1. Skip the MFA step entirely
@@ -349,7 +349,7 @@ curl -v http://localhost:8080/vulnerabilities/brute/ \
 
 ## Kerberos Authentication
 
-```text
+```misc
 Kerberos Flow (Windows/AD environments):
 1. User -> KDC: "I am user X" (AS-REQ)
 2. KDC -> User: Ticket Granting Ticket (AS-REP)
@@ -428,7 +428,7 @@ GET /api/data?api_key=abc123def456
 
 ## Certificate-Based Authentication
 
-```text
+```misc
 Client Certificate Authentication (mTLS):
 
   1. Server requests client cert during TLS handshake

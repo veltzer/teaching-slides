@@ -378,7 +378,7 @@ semodule -l | grep myapp_custom
 ---
 ## AppArmor Abstractions
 
-```text
+```misc
 # Abstractions are reusable permission sets
 # Located in /etc/apparmor.d/abstractions/
 

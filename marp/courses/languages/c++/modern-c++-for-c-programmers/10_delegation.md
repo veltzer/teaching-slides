@@ -392,7 +392,7 @@ public:
 
 Multiple inheritance can lead to ambiguity:
 
-```svg
+```xml
 <svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
   <!-- Base class -->
   <rect x="175" y="10" width="50" height="30" fill="lightblue" stroke="black"/>

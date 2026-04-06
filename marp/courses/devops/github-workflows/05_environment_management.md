@@ -93,7 +93,7 @@ steps:
 - Never printed in logs (masked with `***`)
 - Setting secrets:
 
-```text
+```misc
 Settings -> Secrets and variables -> Actions -> New repository secret
 ```
 

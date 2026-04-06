@@ -16,7 +16,7 @@
 - System call tracing reveals actual program actions
 - Binary analysis identifies capabilities without source code
 
-```text
+```misc
 Static Analysis         Dynamic Analysis
 (what the file IS)      (what the file DOES)
 - file, strings         - strace, ltrace

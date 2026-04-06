@@ -709,7 +709,7 @@ consul kv get myapp/db/host
 - Use a secrets manager for all sensitive values
 - Application reads from multiple sources with a priority order
 
-```text
+```misc
 Priority (highest to lowest):
 1. Secrets Manager (DB passwords, API keys)
 2. Config Service (feature flags, rate limits)

@@ -144,7 +144,7 @@ config:
     - `{% %}` - statements (logic: if, for, etc.)
     - `{# #}` - comments
 
-```jinja2
+```jinja
 {# This is a comment #}
 
 {# Expression: output a variable #}
@@ -220,7 +220,7 @@ tasks:
 
 ## Jinja2 Conditionals in Templates
 
-```jinja2
+```jinja
 {# nginx.conf.j2 #}
 server {
     listen 80;
@@ -254,7 +254,7 @@ server {
 
 ## Jinja2 Loops in Templates
 
-```jinja2
+```jinja
 {# haproxy.cfg.j2 #}
 global
     log /dev/log local0
@@ -286,7 +286,7 @@ backend http_back
 
 ## Jinja2 Loop Variables
 
-```jinja2
+```jinja
 {% for item in my_list %}
   {{ loop.index }}      {# 1-based index #}
   {{ loop.index0 }}     {# 0-based index #}
@@ -490,7 +490,7 @@ tasks:
 
 ## Practical Template: Nginx Virtual Host
 
-```jinja2
+```jinja
 {# templates/vhost.conf.j2 #}
 # Managed by Ansible - DO NOT EDIT
 # Generated on {{ ansible_date_time.iso8601 }}
@@ -536,7 +536,7 @@ server {
 
 ## Practical Template: Application Config
 
-```jinja2
+```jinja
 {# templates/app-config.yml.j2 #}
 # Application Configuration
 # Managed by Ansible
@@ -580,7 +580,7 @@ logging:
 
 ## Practical Template: Systemd Unit File
 
-```jinja2
+```jinja
 {# templates/app.service.j2 #}
 [Unit]
 Description={{ app_name }} Application Service
@@ -617,7 +617,7 @@ WantedBy=multi-user.target
 
 ## Template: /etc/hosts File
 
-```jinja2
+```jinja
 {# templates/hosts.j2 #}
 # Managed by Ansible
 127.0.0.1   localhost
@@ -646,7 +646,7 @@ WantedBy=multi-user.target
 
 ## Jinja2 Whitespace Control
 
-```jinja2
+```jinja
 {# By default, Jinja2 preserves whitespace #}
 {# Use - to strip whitespace #}
 
@@ -672,7 +672,7 @@ listen 443 ssl;
 
 ## Jinja2 Macros (Reusable Blocks)
 
-```jinja2
+```jinja
 {# Define a macro #}
 {% macro server_block(name, port, root) %}
 server {

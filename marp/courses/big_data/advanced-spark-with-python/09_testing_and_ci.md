@@ -20,7 +20,7 @@
 ---
 ## Testing Architecture
 
-```text
+```diagram
 PySpark Testing Pyramid:
 
 ┌───────────────────────────────────┐
@@ -49,7 +49,7 @@ PySpark Testing Pyramid:
 ---
 ## Project Structure for Testable Spark Code
 
-```text
+```tree
 my_spark_project/
 ├── src/
 │   ├── __init__.py
@@ -323,7 +323,7 @@ def test_column_equality(spark):
 ---
 ## chispa Error Messages
 
-```text
+```diagram
 When chispa detects a mismatch, it shows clear diffs:
 
 assert_df_equality(df1, df2)
@@ -913,7 +913,7 @@ jobs:
 ---
 ## CI Pipeline Visualization
 
-```text
+```diagram
 CI/CD Pipeline for Spark Jobs:
 
 ┌──────────────┐
@@ -1183,7 +1183,7 @@ def test_compute_user_totals_single_user(spark):
 ---
 ## Summary: Testing and CI/CD
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │  Key Takeaways                                    │
 ├──────────────────────────────────────────────────┤

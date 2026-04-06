@@ -921,7 +921,7 @@ balanced_train.groupBy("churn").count().show()
 
 ## Production ML Pipeline Checklist
 
-```text
+```diagram
 ┌─────────────────────────────────────────────┐
 │     Production ML Pipeline Checklist         │
 ├─────────────────────────────────────────────┤

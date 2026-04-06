@@ -526,7 +526,7 @@ rebalanced_df = salted_df.repartition(200, "salted_key")
 
 ## Salting Technique for Skewed Joins
 
-```text
+```diagram
 Before Salting (skewed):
 ┌──────────────────────────────┐
 │  Partition 0: key=1 (5M rows)│  <-- HOT PARTITION
@@ -600,7 +600,7 @@ bc_countries.unpersist()
 
 ## Broadcast Variable Data Flow
 
-```text
+```diagram
 ┌─────────────────────────────────────────┐
 │           Driver Program                 │
 │  bc = sc.broadcast(country_lookup)       │
@@ -812,7 +812,7 @@ sort_merge_join.explain()
 
 ## Join Strategy Decision Flow
 
-```text
+```diagram
                     ┌──────────────┐
                     │ Join Request │
                     └──────┬───────┘
@@ -916,7 +916,7 @@ projected.unpersist()
 
 ## Pipeline Optimization Checklist
 
-```text
+```diagram
 ┌─────────────────────────────────────────────┐
 │          Pipeline Optimization               │
 ├─────────────────────────────────────────────┤

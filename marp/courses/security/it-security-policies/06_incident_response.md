@@ -37,7 +37,7 @@
 
 ## The Incident Response Lifecycle
 
-```text
+```diagram
 +------------+     +------------+     +------------+     +------------+
 |            |     |            |     |            |     |            |
 | 1. DETECT  |---->| 2. CONTAIN |---->| 3. REMOVE  |---->| 4. RECOVER |
@@ -89,7 +89,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## Your Reporting Channels
 
-```text
+```diagram
 +-------------------+
 | Security Incident |
 +--------+----------+
@@ -126,7 +126,7 @@ Trust your instincts - **if something feels wrong, report it**
 - An unreported incident can escalate from minor to catastrophic
 - Early reporting saves the company time, money, and reputation
 
-```text
+```diagram
 +---------------------------------------------+
 |                                               |
 |   "The only wrong thing to do is nothing."    |
@@ -165,7 +165,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## `RTO` and `RPO` Explained
 
-```text
+```diagram
          Data loss          Downtime
          tolerated          tolerated
     <--------------->  <----------------->
@@ -201,7 +201,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## What Happens in a Ransomware Attack
 
-```text
+```diagram
 1. Infection         2. Encryption        3. Ransom Note
 +-------------+    +---------------+    +------------------+
 | Malicious   |    | All files     |    | "Pay $500,000    |

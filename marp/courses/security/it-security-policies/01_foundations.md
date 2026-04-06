@@ -34,7 +34,7 @@
 
 The three pillars of information security:
 
-```text
+```diagram
             +------------------+
             | CONFIDENTIALITY  |
             |  (Keep secrets)  |
@@ -157,7 +157,7 @@ The three pillars of information security:
 
 ## Key Takeaway
 
-```text
+```diagram
 +--------------------------------------------------+
 |                                                    |
 |   Security is NOT just an IT problem.              |

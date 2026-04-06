@@ -67,7 +67,7 @@ resource "aws_instance" "web" {
 
 ## Why Use AMI Data Source?
 
-```text
+```misc
 Without data source:
   ami = "ami-0c55b159cbfafe1f0"  # Hardcoded, region-specific
 

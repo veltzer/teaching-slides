@@ -12,7 +12,7 @@
 ---
 ## Shared Responsibility Model
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Cloud Shared Responsibility Model                │
 │                                                          │

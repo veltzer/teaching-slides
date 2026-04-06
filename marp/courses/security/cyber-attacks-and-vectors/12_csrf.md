@@ -83,7 +83,7 @@ Set-Cookie: session=abc123; SameSite=Strict; Secure
 
 Example:
 
-```JavaScript
+```javascript
 fetch('/api/data', {
   headers: {
     'X-Requested-With': 'XMLHttpRequest'
@@ -131,7 +131,7 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
 
 ## CSRF Attack Flow Diagram
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │                CSRF Attack Flow                          │
 │                                                          │

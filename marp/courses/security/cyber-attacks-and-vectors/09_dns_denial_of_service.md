@@ -38,7 +38,7 @@
 
 ## DNS DoS Attack Flow
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │           DNS Query Flood Attack                         │
 │                                                          │
@@ -67,7 +67,7 @@
 
 ## Random Subdomain Attack (Water Torture)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │         Random Subdomain Attack                          │
 │                                                          │
@@ -154,7 +154,7 @@ The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS 
 
 ## Anycast DNS Architecture
 
-```text
+```diagram
 ┌────────────────────────────────────────────────────────────┐
 │              Anycast DNS Distribution                       │
 │                                                            │

@@ -263,7 +263,7 @@ int main(void) {
 
 ## Array Memory Layout
 
-```text
+```diagram
 int arr[5] = {10, 20, 30, 40, 50};
 
 Contiguous memory (4 bytes per int):

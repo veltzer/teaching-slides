@@ -13,7 +13,7 @@
 
 ## Ansible in CI/CD Pipelines
 
-```text
+```diagram
 +--------+     +--------+     +---------+     +----------+
 |  Code  | --> | Build  | --> |  Test   | --> |  Deploy  |
 | Commit |     |        |     |         |     | (Ansible)|
@@ -412,7 +412,7 @@ pipeline {
 
 ## Infrastructure as Code Workflow
 
-```text
+```misc
 Developer Workflow:
 1. Create feature branch
 2. Edit playbooks/roles

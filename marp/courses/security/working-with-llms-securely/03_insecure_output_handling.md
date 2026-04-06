@@ -14,7 +14,7 @@
 
 ## The Core Problem
 
-```text
+```diagram
 User Input ──► LLM ──► Raw Output ──► Browser / Database / Shell
                                        ▲
                                        │

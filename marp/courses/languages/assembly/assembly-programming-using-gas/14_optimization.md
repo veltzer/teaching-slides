@@ -19,7 +19,7 @@
 
 Before:
 
-```x86asm
+```nasm
     mov ecx, 100
 .loop:
     mov eax, [esi]
@@ -32,7 +32,7 @@ Before:
 
 After:
 
-```x86asm
+```nasm
     mov ecx, 25
 .loop:
     mov eax, [esi]
@@ -57,7 +57,7 @@ After:
 
 Example:
 
-```x86asm
+```nasm
 ; Instead of calling a function
 call calculate_sum
 
@@ -74,7 +74,7 @@ mov [result], eax
 
 Example:
 
-```x86asm
+```nasm
     cmp eax, ebx
     jg .greater
     mov ecx, eax
@@ -86,7 +86,7 @@ Example:
 
 Can be optimized to:
 
-```x86asm
+```nasm
     cmp eax, ebx
     cmovle ecx, eax
     cmovg ecx, ebx
@@ -99,7 +99,7 @@ Can be optimized to:
 
 Example:
 
-```x86asm
+```nasm
 .data
     .align 16
 my_array:
@@ -113,7 +113,7 @@ my_array:
 
 Example:
 
-```x86asm
+```nasm
 ; Less efficient
 mov eax, [counter]
 inc eax
@@ -136,7 +136,7 @@ mov [counter], eax
 
 Example:
 
-```x86asm
+```nasm
 ; Instead of
 mov eax, 0
 
@@ -145,7 +145,7 @@ xor eax, eax
 ```
 
 SIMD example:
-```x86asm
+```nasm
 movdqa xmm0, [array1]
 paddd xmm0, [array2]
 movdqa [result], xmm0
@@ -159,7 +159,7 @@ movdqa [result], xmm0
 - Use SIMD instructions for data-level parallelism
 
 Example (pseudo-code):
-```x86asm
+```nasm
 ; Divide work among threads
 mov ecx, thread_id
 mov edx, num_threads

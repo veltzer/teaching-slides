@@ -158,7 +158,7 @@ When there is no visible difference in response:
 ---
 ## Second-Order SQL Injection
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │          Second-Order SQL Injection                   │
 │                                                      │

@@ -342,7 +342,7 @@ terraform plan
 
 ## Crash Logs
 
-```text
+```misc
 If Terraform crashes, it creates a crash.log file:
 
 crash.log contains:
@@ -424,7 +424,7 @@ terraform apply tfplan
 
 ## Handling Partial Failures
 
-```text
+```misc
 Scenario: Apply creates 3 of 5 resources, then fails
 
 State after partial failure:

@@ -17,7 +17,7 @@ Advanced Kubernetes Course - Day 3, Module 2
 
 ## Production Checklist
 
-```text
+```misc
 □ Resource requests and limits on all containers
 □ Liveness and readiness probes configured
 □ PodDisruptionBudgets for critical workloads
@@ -39,7 +39,7 @@ Advanced Kubernetes Course - Day 3, Module 2
 
 ## Microservices on `Kubernetes`
 
-```text
+```diagram
 ┌─────── Ingress Controller ───────┐
 │                                  │
 └──────┬───────────────┬───────────┘
@@ -200,7 +200,7 @@ cosign verify --key cosign.pub registry.example.com/myapp:v2
 
 ## Cost Optimization Strategies
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │              Cost Optimization                   │
 │                                                 │
@@ -358,7 +358,7 @@ func main() {
 
 ## Disaster Recovery Strategy
 
-```text
+```diagram
 ┌────────────────────────────────────────────────┐
 │           Disaster Recovery Plan                │
 │                                                │

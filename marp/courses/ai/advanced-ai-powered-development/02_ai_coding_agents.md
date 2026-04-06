@@ -65,7 +65,7 @@ From chatbots to autonomous coding partners
 
 **How it works**: the LLM generates a full plan, then executes steps sequentially
 
-```text
+```misc
 User: "Add input validation to the signup form"
 
 Plan:
@@ -88,7 +88,7 @@ Execute: step 1 → step 2 → ... → step 6
 
 **How it works**: interleave reasoning and action on every iteration
 
-```text
+```misc
 Thought: I need to find where the form is defined
 Action:  grep -r "SignupForm" src/
 Observe: src/components/SignupForm.tsx
@@ -284,7 +284,7 @@ GitHub's plan-based development agent:
 
 A real-world example of what an agent does autonomously:
 
-```text
+```misc
 Task: "Fix the failing CI test in payments module"
 
 Agent steps:
@@ -424,7 +424,7 @@ claude --disallowedTools "Bash(rm *),Bash(curl *)"
 
 Most agents support project-level configuration:
 
-```text
+```misc
 your-repo/
   .claude/
     CLAUDE.md          # Project conventions and context

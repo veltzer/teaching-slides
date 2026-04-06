@@ -31,7 +31,7 @@ Advanced Kubernetes Course - Day 2, Module 5
 
 ## `PersistentVolume` and `PersistentVolumeClaim`
 
-```text
+```diagram
 ┌─ Administrator ──┐    ┌─ Developer ────────┐
 │                  │    │                    │
 │ PersistentVolume │◄───│ PersistentVolume   │
@@ -96,7 +96,7 @@ spec:
 | `ReadWriteMany` | `RWX` | Multiple nodes read-write |
 | `ReadWriteOncePod` | `RWOP` | Single pod read-write |
 
-```text
+```misc
 RWO:  Node1[Pod-A] ✓   Node2[Pod-B] ✗
 ROX:  Node1[Pod-A] R    Node2[Pod-B] R
 RWX:  Node1[Pod-A] RW   Node2[Pod-B] RW
@@ -219,7 +219,7 @@ spec:
 
 ## `CSI` Driver Architecture
 
-```text
+```diagram
 ┌─────────────────────────────────────────────┐
 │               Kubernetes                     │
 │                                             │

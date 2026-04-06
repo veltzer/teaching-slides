@@ -36,7 +36,7 @@
 ```
 
 Or with Gradle:
-```gradle
+```groovy
 implementation 'co.elastic.clients:elasticsearch-java:8.11.0'
 ```
 

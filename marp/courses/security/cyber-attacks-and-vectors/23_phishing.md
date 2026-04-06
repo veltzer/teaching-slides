@@ -223,7 +223,7 @@ cat suspicious_email.eml | grep -E "^(From|To|Subject|Received|Return-Path|Reply
 ---
 ## DMARC, DKIM, and SPF
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Email Authentication Trilogy                     │
 │                                                          │
@@ -403,7 +403,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 | Incident debrief             | After incidents | Learn from real events           |
 | Role-specific training       | Annual          | Targeted for high-risk roles     |
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  Phishing Simulation Best Practices                      │
 ├──────────────────────────────────────────────────────────┤

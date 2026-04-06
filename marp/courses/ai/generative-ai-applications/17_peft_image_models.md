@@ -6,7 +6,7 @@
 
 Why customize? To generate images of **your specific** concepts:
 
-```text
+```misc
 Standard Stable Diffusion:
   "A photo of a dog" → Generic dog image
 
@@ -19,7 +19,7 @@ After Textual Inversion on YOUR style:
   "A landscape in <my-style>" → Landscape in YOUR art style
 ```
 
-```text
+```diagram
 ┌──────────────────────────────────────────┐
 │   PERSONALIZATION METHODS                │
 ├──────────────┬───────────────────────────┤
@@ -41,7 +41,7 @@ After Textual Inversion on YOUR style:
 
 ## DreamBooth — How It Works
 
-```text
+```diagram
 Training DreamBooth:
 
 1. Provide 3-5 images of your subject
@@ -139,7 +139,7 @@ image = pipe("a photo of sks dog riding a skateboard").images[0]
 
 Prevents the model from forgetting how to draw the class in general:
 
-```text
+```misc
 Without prior preservation:
   "a photo of a dog" → Always generates YOUR dog
   The model "forgot" what other dogs look like!
@@ -168,7 +168,7 @@ How it works:
 
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
-```text
+```misc
 Standard vocabulary:
   "cat" → embedding vector [0.3, -0.1, 0.5, ...]
   "dog" → embedding vector [0.1, 0.4, -0.2, ...]
@@ -179,7 +179,7 @@ After Textual Inversion:
 The entire model is frozen. Only the new embedding is trained.
 ```
 
-```text
+```misc
 Model weights:  FROZEN (no changes)
 Text encoder:   FROZEN (no changes)
 New embedding:  TRAINABLE (768-dimensional vector)
@@ -230,7 +230,7 @@ image = pipe("A mountain landscape in <my-art-style>").images[0]
 | Textual Inv. | 1 embedding | ~3 KB | ★★★☆☆ | 30-60 min | Yes |
 
 **Composability:**
-```text
+```misc
 Textual Inversion allows combining concepts:
   "<my-dog> sitting in <my-room> painted by <my-style>"
   All three learned embeddings work together!
@@ -393,7 +393,7 @@ image = pipe(
 
 ## T2I-Adapter — Lightweight ControlNet Alternative
 
-```text
+```misc
 T2I-Adapter vs ControlNet:
 
               T2I-Adapter    ControlNet
@@ -418,7 +418,7 @@ Multiple adapters can be combined:
 
 ## Training a Style LoRA — Step by Step
 
-```text
+```misc
 Complete workflow for creating a style LoRA:
 
 1. COLLECT IMAGES (15-30 images)
@@ -534,7 +534,7 @@ def evaluate_personalization(pipe, trigger_word, test_prompts,
 
 ## Common Pitfalls in Image Model Fine-Tuning
 
-```text
+```misc
 1. OVERFITTING (most common)
    Symptoms: Generated images look exactly like training images
    Fix: Reduce training steps, lower learning rate, add regularization

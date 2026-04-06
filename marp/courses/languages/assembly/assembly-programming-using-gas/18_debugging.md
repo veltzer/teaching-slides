@@ -70,7 +70,7 @@ objdump -d program
 
 ## Objdump Output Example
 
-```text
+```misc
 0000000000001129 <main>:
     1129:   55                      push   %rbp
     112a:   48 89 e5                mov    %rsp,%rbp

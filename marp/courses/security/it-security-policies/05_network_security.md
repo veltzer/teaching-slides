@@ -22,7 +22,7 @@
 
 ## `HTTPS` - What the Padlock Means
 
-```text
+```diagram
 Secure (HTTPS):                    Insecure (HTTP):
 
   You ---[encrypted]--- Website      You ---[plain text]--- Website
@@ -42,7 +42,7 @@ Secure (HTTPS):                    Insecure (HTTP):
 
 ## Virtual Private Network
 
-```text
+```misc
 Without VPN:                      With VPN:
 
 You ---> [open internet] ---> Server    You ---> [encrypted tunnel] ---> Server
@@ -80,7 +80,7 @@ You ---> [open internet] ---> Server    You ---> [encrypted tunnel] ---> Server
 - Unencrypted traffic can be intercepted
 - Common attack: "Evil Twin" access point
 
-```text
+```misc
 Real airport Wi-Fi:    "Airport_Free_WiFi"
 Attacker's hotspot:    "Airport_Free_WiFi_Fast"
                         ^^^^^^^^^^^^^^^^^^^^^^^
@@ -106,7 +106,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## What Is a Firewall?
 
-```text
+```diagram
                      FIREWALL
                     +--------+
   Internet -------->| ALLOW  |--------> Approved traffic

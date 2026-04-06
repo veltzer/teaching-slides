@@ -17,7 +17,7 @@ Advanced Kubernetes Course - Day 2, Module 2
 
 ## Three Pillars of Observability
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                 Observability                     │
 │                                                  │
@@ -38,7 +38,7 @@ Advanced Kubernetes Course - Day 2, Module 2
 
 ## `Prometheus` Architecture
 
-```text
+```diagram
 ┌─────────────┐    ┌─────────────┐
 │ App Pod     │    │ Node        │
 │ /metrics    │◀───│ Exporter    │
@@ -390,7 +390,7 @@ func handleOrder(w http.ResponseWriter, r *http.Request) {
 
 ## Trace Visualization
 
-```text
+```diagram
 Order Service         Payment Service      Inventory Service
      │                      │                     │
      ├── handleOrder ──────►│                     │
@@ -477,7 +477,7 @@ histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))
 
 ## SLOs and Error Budgets
 
-```text
+```diagram
 SLA: 99.9% availability (43.8 min downtime/month)
 
 Error Budget = 1 - SLO = 0.1%

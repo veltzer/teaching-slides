@@ -104,7 +104,7 @@ Defending against account takeover attacks requires a multi-layered approach, co
 
 ## Account Takeover Attack Flow
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │            Account Takeover Kill Chain                     │
 │                                                          │

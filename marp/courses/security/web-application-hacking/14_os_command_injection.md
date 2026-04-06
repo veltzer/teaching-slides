@@ -366,7 +366,7 @@ ${applicationScope}  -> Application attributes
 
 ## Code Injection vs Command Injection
 
-```text
+```misc
 Code Injection:
   Attacker injects CODE in the application's language
   Example: eval(user_input)  in PHP/Python/JS
@@ -444,7 +444,7 @@ if ((is_numeric($octet[0])) && (is_numeric($octet[1]))
 
 ## Command Injection Prevention Checklist
 
-```text
+```misc
 [ ] Inventory all system/exec/shell calls in codebase
 [ ] Replace with language-native libraries where possible
 [ ] Use parameterized command execution (array form)

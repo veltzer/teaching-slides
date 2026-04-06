@@ -10,7 +10,7 @@
 
 ## Why Volatile Memory Matters
 
-```text
+```diagram
 What's in RAM?                  What's NOT on Disk?
 +--------------------------+    +--------------------------+
 | Running processes        |    | Encryption keys          |
@@ -409,7 +409,7 @@ strings /evidence/swap.dd | grep -c "password"
 
 ## Memory Forensics: Timeline Approach
 
-```text
+```tree
 Evidence Timeline from Memory Analysis:
 |
 +-- Process creation times (from task_struct)
@@ -808,7 +808,7 @@ echo "[*] Analysis complete: $OUT"
 
 ## Comparing Memory and Disk Evidence
 
-```text
+```diagram
 Memory vs Disk Correlation Matrix:
 ==================================
 Artifact       | Disk      | Memory    | Correlation

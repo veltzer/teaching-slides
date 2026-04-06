@@ -34,7 +34,7 @@
 - Takes text input, executes programs, returns output
 - Both an interactive tool and a programming language
 
-```text
+```misc
 User --> Shell --> Kernel --> Hardware
 ```
 ---
@@ -71,7 +71,7 @@ User --> Shell --> Kernel --> Hardware
 ---
 ## Shell Families
 
-```text
+```tree
 +-- Bourne family
 |   +-- sh (1977, Bourne Shell)
 |   +-- ksh (1983, Korn Shell)

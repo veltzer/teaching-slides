@@ -11,7 +11,7 @@
 ---
 ## How Does Formjacking Work
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Formjacking Attack Flow                          │
 │                                                          │
@@ -72,7 +72,7 @@
 ---
 ## British Airways Attack (2018)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          British Airways Magecart Attack                  │
 │                                                          │
@@ -173,7 +173,7 @@ setInterval(function() {
 ---
 ## Content Security Policy (CSP) as Defense
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          CSP Defense Against Formjacking                  │
 │                                                          │
@@ -186,7 +186,7 @@ setInterval(function() {
 └──────────────────────────────────────────────────────────┘
 ```
 
-```text
+```http
 # HTTP Header: Content-Security-Policy
 Content-Security-Policy:
     default-src 'self';
@@ -342,7 +342,7 @@ diff known_good_hashes.txt current.txt
 ---
 ## PCI DSS Requirements for Formjacking
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  PCI DSS 4.0 Requirements (effective March 2025)         │
 ├──────────────────────────────────────────────────────────┤

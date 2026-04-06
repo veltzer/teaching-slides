@@ -136,7 +136,7 @@ def update_user():
 ---
 ## Server-Side Request Forgery (SSRF) via APIs
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          SSRF via API                                     │
 │                                                          │
@@ -474,7 +474,7 @@ def execute_persisted_query(query_id, variables):
 ---
 ## API Gateway Security
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          API Gateway Architecture                         │
 │                                                          │

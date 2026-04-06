@@ -39,7 +39,7 @@
 ---
 ## Credential Stuffing Attacks
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Credential Stuffing Flow                         │
 │                                                          │
@@ -209,7 +209,7 @@ def verify_token(token):
 ---
 ## Password Storage
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Password Storage Evolution                       │
 │                                                          │
@@ -341,7 +341,7 @@ except Exception:
 ---
 ## OAuth Misconfigurations
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Common OAuth Vulnerabilities                     │
 │                                                          │
@@ -388,7 +388,7 @@ OAUTH_CONFIG = {
 ---
 ## Insecure Password Reset Flows
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Password Reset Vulnerabilities                   │
 │                                                          │

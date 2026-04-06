@@ -174,7 +174,7 @@ df.select("user_id", "address.city").explain()
 ---
 ## Projection Pushdown Savings
 
-```text
+```diagram
 Reading a 200-column Parquet table:
 
 Without projection pushdown (SELECT *):
@@ -251,7 +251,7 @@ spark.conf.set(
 ---
 ## ORC Format Comparison
 
-```text
+```diagram
 ORC (Optimized Row Columnar):
 
 ┌──────────────────────────────────────────────────┐
@@ -443,7 +443,7 @@ query = (
 ---
 ## Delta Lake Overview
 
-```text
+```diagram
 Delta Lake adds ACID transactions on top of Parquet:
 
 ┌──────────────────────────────────────────────────┐
@@ -711,7 +711,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 ---
 ## Z-Ordering Visualization
 
-```text
+```diagram
 Without Z-ordering (random distribution):
 File 1: user_id=[A,B,C,D,E], date=[01,02,03,04,05]
 File 2: user_id=[A,C,E,F,G], date=[01,03,05,06,07]
@@ -741,7 +741,7 @@ Query: WHERE user_id = 'A'
 ---
 ## Apache Iceberg Overview
 
-```text
+```diagram
 Iceberg Table Structure:
 
 ┌──────────────────────────────────────────────────┐
@@ -853,7 +853,7 @@ spark.sql("""
 ---
 ## Partitioning Strategies
 
-```text
+```diagram
 Partitioning types:
 
 1. Range Partitioning (most common):
@@ -937,7 +937,7 @@ df.write \
 ---
 ## Partitioning Best Practices
 
-```text
+```diagram
 Partition column selection:
 
 ┌──────────────────────────────────────────────────┐
@@ -972,7 +972,7 @@ Partition count guidelines:
 ---
 ## Bucketing vs Partitioning
 
-```text
+```diagram
 Partitioning:
 ┌───────────────────────────────────────────┐
 │  Physically separates data into folders    │
@@ -1052,7 +1052,7 @@ orders.write \
 ---
 ## The Small File Problem
 
-```text
+```diagram
 The small file problem:
 
 ┌──────────────────────────────────────────────────┐
@@ -1141,7 +1141,7 @@ compact_partition("/data/events", "event_date", "2024-06-14")
 ---
 ## File Compaction Strategy
 
-```text
+```diagram
 Compaction scheduling:
 
 ┌──────────────────────────────────────────────────┐
@@ -1253,7 +1253,7 @@ history.select(
 ---
 ## Summary: Data Formats and Storage
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │  Key Takeaways                                    │
 ├──────────────────────────────────────────────────┤

@@ -11,7 +11,7 @@
 - Critical infrastructure -- without DNS, the internet is nearly unusable
 - Defined in RFC 1034 and RFC 1035 (1987), with many subsequent updates
 
-```text
+```misc
 User types:    www.example.com
 DNS resolves:  www.example.com → 93.184.216.34
 Browser uses:  93.184.216.34 to establish TCP connection
@@ -23,7 +23,7 @@ Browser uses:  93.184.216.34 to establish TCP connection
 
 DNS is organized as an inverted tree structure with the root at the top.
 
-```text
+```diagram
                         . (Root)
                        /|\
                       / | \
@@ -128,7 +128,7 @@ $ dig google.com A +short
 
 CNAME (Canonical Name) creates an alias from one domain name to another.
 
-```text
+```diagram
 ┌──────────────────┐        ┌──────────────────┐        ┌──────────────────┐
 │ www.example.com  │ CNAME  │   example.com    │   A    │  93.184.216.34   │
 │   (alias)        │──────→ │   (canonical)    │──────→ │   (IP address)   │
@@ -165,7 +165,7 @@ example.com.    3600    IN    MX    30 mail3.example.com.
 
 The number before the server name is the **priority** (lower = higher priority).
 
-```text
+```diagram
 ┌─────────────┐
 │ Sending MTA │
 └──────┬──────┘
@@ -226,7 +226,7 @@ example.com.    86400    IN    NS    b.iana-servers.net.
 
 NS records form the delegation chain from root to your domain:
 
-```text
+```misc
 Root (.)              "Who handles .com?"
   │
   ▼
@@ -335,7 +335,7 @@ DNS resolution can happen in two modes:
 
 **Recursive Resolution** -- the resolver does all the work:
 
-```text
+```diagram
 ┌────────┐    ┌─────────────────┐    ┌──────┐    ┌──────┐    ┌──────────────┐
 │ Client │───→│ Recursive       │───→│ Root │───→│ .com │───→│ Authoritative│
 │        │    │ Resolver        │    │      │    │  NS  │    │     NS       │
@@ -347,7 +347,7 @@ DNS resolution can happen in two modes:
 
 **Iterative Resolution** -- each server returns the next server to ask:
 
-```text
+```misc
 Client asks Root:    "Where is www.example.com?"
 Root responds:       "I don't know, but ask .com NS at 192.5.6.30"
 
@@ -366,7 +366,7 @@ In practice, your computer uses recursive resolution (asking your configured DNS
 
 What happens when you type `www.example.com` in your browser:
 
-```text
+```misc
 Step 1: Browser checks its own DNS cache
 Step 2: OS checks /etc/hosts file
 Step 3: OS checks its DNS cache (systemd-resolved, nscd)
@@ -631,7 +631,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 
 **The problem DNSSEC solves:**
 
-```text
+```diagram
 Without DNSSEC:
 ┌────────┐   Query    ┌──────────┐   Response   ┌────────┐
 │ Client │──────────→ │ Resolver │←────────────│ NS     │
@@ -770,7 +770,7 @@ $ dig @208.67.222.222 example.com +short
 
 A zone file is the actual data file on an authoritative DNS server.
 
-```text
+```misc
 ; Zone file for example.com
 $TTL 86400
 @   IN  SOA   ns1.example.com. admin.example.com. (
@@ -827,7 +827,7 @@ loadbalanced.example.com. 300 IN A 10.0.0.3
 
 Returns different IP addresses based on the client's geographic location:
 
-```text
+```diagram
 ┌─────────────────────┐
 │   GeoDNS Server     │
 │                     │

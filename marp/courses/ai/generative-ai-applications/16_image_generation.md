@@ -4,7 +4,7 @@
 
 ## Day 5: Image Generation & AI Safety
 
-```text
+```diagram
 Today's Roadmap:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
  ┌──────────────────────────────────────────┐
@@ -21,7 +21,7 @@ Today's Roadmap:
 
 ## Image Generation — A Brief History
 
-```text
+```misc
 Timeline:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 2014 │ GANs (Goodfellow)
@@ -52,7 +52,7 @@ Timeline:
 
 ## Generative Approaches Compared
 
-```text
+```diagram
 ┌──────────────┬───────────────────────────────────────┐
 │ Approach     │ How It Works                          │
 ├──────────────┼───────────────────────────────────────┤
@@ -83,7 +83,7 @@ Timeline:
 
 ## How Diffusion Models Work
 
-```text
+```diagram
 FORWARD PROCESS (adding noise):
   Image → slightly noisy → more noisy → ... → pure noise
   x₀ ──────────────────────────────────────────> xₜ
@@ -106,7 +106,7 @@ REVERSE PROCESS (removing noise — learned by model):
 
 ## Diffusion — The Math
 
-```text
+```misc
 Forward process (fixed):
   q(xₜ | xₜ₋₁) = N(xₜ; √(1-βₜ) xₜ₋₁, βₜ I)
 
@@ -139,7 +139,7 @@ def diffusion_training_step(model, images, noise_scheduler):
 
 ## Stable Diffusion Architecture
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────┐
 │              STABLE DIFFUSION                        │
 │                                                      │
@@ -173,7 +173,7 @@ def diffusion_training_step(model, images, noise_scheduler):
 
 ## Latent Diffusion — Why It's Efficient
 
-```text
+```diagram
 Pixel-space diffusion:
   512 × 512 × 3 = 786,432 values
   Very expensive to process!
@@ -199,7 +199,7 @@ This is why it's called "Latent Diffusion Model" (LDM).
 
 ## CLIP — Connecting Text and Images
 
-```text
+```diagram
 CLIP (Contrastive Language-Image Pre-training):
 
 Training:
@@ -331,7 +331,7 @@ result = pipe(
 
 ## ControlNet — Fine-Grained Control
 
-```text
+```diagram
 ControlNet adds spatial control to diffusion:
 
 Input: Text prompt + Control signal
@@ -416,7 +416,7 @@ response = requests.post(
 
 ## Noise Schedulers Compared
 
-```text
+```misc
 Different schedulers control how noise is added/removed:
 
 Scheduler      Steps    Quality    Speed
@@ -474,7 +474,7 @@ image = pipe(
 
 ## Prompt Engineering for Image Generation
 
-```text
+```misc
 EFFECTIVE IMAGE PROMPTS:
 
 Structure:
@@ -568,7 +568,7 @@ export_to_video(frames, "animated_landscape.mp4", fps=7)
 
 ## Text-to-3D Generation (Emerging)
 
-```text
+```misc
 Emerging approaches to 3D generation:
 
 1. Score Distillation Sampling (DreamFusion)
@@ -631,7 +631,7 @@ image = pipe(
 
 ## Comparing Image Generation Models
 
-```text
+```diagram
 ┌──────────────┬────────────┬───────────┬───────────┬──────────┐
 │ Model        │ Quality    │ Speed     │ Open?     │ Cost     │
 ├──────────────┼────────────┼───────────┼───────────┼──────────┤

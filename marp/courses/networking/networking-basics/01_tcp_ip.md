@@ -102,7 +102,7 @@
 
 ## IP Packet Structure
 
-```text
+```diagram
 +------------------------+
 |       IP Header        |
 +------------------------+

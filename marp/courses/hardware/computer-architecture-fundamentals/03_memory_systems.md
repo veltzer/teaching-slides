@@ -20,7 +20,7 @@
 Computer systems use a hierarchy of memory technologies, trading off
 speed, size, and cost:
 
-```text
+```diagram
                     ┌───────┐
                     │  Reg  │  ~0.3 ns, ~1 KB
                     │       │  $$$$$$$
@@ -78,7 +78,7 @@ A well-designed cache can satisfy >95% of memory requests.
 
 SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
-```text
+```diagram
      VDD
       │
     ┌─┴─┐    ┌─┴─┐
@@ -111,7 +111,7 @@ SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
 DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
-```text
+```diagram
      Bit Line
        │
      ┌─┴─┐
@@ -154,7 +154,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
 DRAM is organized as a 2D array of rows and columns:
 
-```text
+```diagram
 ┌─────────────────────────────────────────┐
 │              DRAM Bank                  │
 │                                         │
@@ -212,7 +212,7 @@ effective bandwidth ~38.4 GB/s per channel.
 
 ## Memory Bandwidth Calculation
 
-```text
+```misc
 Bandwidth = Data_Rate x Bus_Width x Channels
 
 Example: DDR5-4800, 64-bit bus, dual channel
@@ -362,7 +362,7 @@ Each table is one 4 KB page containing 512 entries of 8 bytes each.
 
 Each page table entry on x86-64 contains:
 
-```text
+```diagram
  63    62       52 51                                  12 11  9 8 7 6 5 4 3 2 1 0
 ┌──┬──┬──────────┬──────────────────────────────────────┬─────┬─┬─┬─┬─┬─┬─┬─┬─┬─┐
 │NX│  │ Available │     Physical Frame Number            │ AVL │G│ │D│A│ │ │U│W│P│
@@ -427,7 +427,7 @@ When the OS modifies page tables (e.g., unmapping a page), it must
 invalidate the TLB entries on ALL CPU cores -- this is called a
 **TLB shootdown**.
 
-```text
+```diagram
 Core 0: unmaps page X
   │
   ├──> Invalidate own TLB entry for X
@@ -543,7 +543,7 @@ void *shm = mmap(NULL, 4096,
 DMA allows hardware devices to transfer data directly to/from memory
 without involving the CPU for each byte.
 
-```text
+```diagram
 Without DMA (Programmed I/O):
 ┌─────┐     byte     ┌────────┐     byte     ┌────────┐
 │ CPU │◄────────────►│ Device │              │ Memory │
@@ -658,7 +658,7 @@ Registers).
 In multi-socket systems, each CPU has its own local memory. Accessing
 remote memory (attached to another CPU) is slower:
 
-```text
+```diagram
 ┌──────────────────┐         ┌──────────────────┐
 │     Socket 0     │         │     Socket 1     │
 │  ┌────────────┐  │         │  ┌────────────┐  │
@@ -736,7 +736,7 @@ for (int j = 0; j < N; j++)
 ```
 
 **Memory layout of `matrix[N][N]`:**
-```text
+```misc
 Address:  [0][0] [0][1] [0][2] ... [0][N-1] [1][0] [1][1] ...
           ──────────────────────── ──────────────────────────
           Row 0 (contiguous)       Row 1 (contiguous)

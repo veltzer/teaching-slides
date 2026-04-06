@@ -687,7 +687,7 @@ conda env export > environment.yml
 - **Development workflow**
 - **Platform requirements**
 
-```text
+```misc
 Small projects                 → venv + pip
 Complex dependencies           → poetry or pipenv
 Data science                   → conda
@@ -707,7 +707,7 @@ Existing projects with setup.py → pip-tools
 - Backwards compatibility rules
 - Used by most Python packages
 
-```text
+```misc
 MAJOR: Incompatible API changes
 MINOR: Add functionality (backwards-compatible)
 PATCH: Bug fixes (backwards-compatible)
@@ -947,7 +947,7 @@ echo "Development environment ready!"
 - Automate dependency updates
 - Keep an eye on security alerts
 
-```text
+```misc
 # For applications
 1. Use pipenv/poetry/pip-tools to lock ALL dependencies
 2. Run CI with locked versions

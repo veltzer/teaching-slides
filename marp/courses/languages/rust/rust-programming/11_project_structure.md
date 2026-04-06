@@ -39,7 +39,7 @@
 
 ## Basic Project Layout
 
-```text
+```tree
 my_project/
 +-- Cargo.toml
 +-- Cargo.lock

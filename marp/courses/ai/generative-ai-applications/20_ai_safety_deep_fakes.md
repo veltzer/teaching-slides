@@ -6,7 +6,7 @@
 
 The field of ensuring AI systems behave as intended and don't cause harm:
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │              AI SAFETY CONCERNS                       │
 │                                                       │
@@ -38,7 +38,7 @@ The field of ensuring AI systems behave as intended and don't cause harm:
 
 How do we ensure AI does what we MEAN, not just what we SAY?
 
-```text
+```misc
 Specification gaming examples:
 
 Task: "Maximize the score in a game"
@@ -71,7 +71,7 @@ The ALIGNMENT PROBLEM:
 | `Interpretability` | Understanding model internals | Research |
 | `Scalable oversight` | AI assists human supervision | Research |
 
-```text
+```diagram
 The alignment spectrum:
   Helpful ◄──────────────────────────► Harmless
            │  Sweet spot  │
@@ -125,7 +125,7 @@ red_team_prompts = {
 
 AI-generated media designed to deceive:
 
-```text
+```misc
 TYPES OF DEEP FAKES:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -159,7 +159,7 @@ TYPES OF DEEP FAKES:
 
 ## How Deep Fakes Work — Face Swapping
 
-```text
+```diagram
 Traditional approach (autoencoder-based):
 
 ┌─────────────┐        ┌─────────────┐
@@ -266,7 +266,7 @@ def detect_ai_text(text):
 
 ## Watermarking AI-Generated Content
 
-```text
+```misc
 How text watermarking works (Kirchenbauer et al., 2023):
 
 1. Before generating each token, split vocabulary into
@@ -293,7 +293,7 @@ Challenges:
 
 ## Content Authentication — C2PA
 
-```text
+```diagram
 C2PA (Coalition for Content Provenance and Authenticity):
 
 A technical standard for proving content origin:
@@ -326,7 +326,7 @@ Supported by: Adobe, Google, Microsoft, OpenAI
 
 ## The AI Safety Regulatory Landscape
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │           AI REGULATION (as of 2025-2026)            │
 ├────────────────┬─────────────────────────────────────┤
@@ -425,7 +425,7 @@ class SafeGenAISystem:
 
 ## The Ethics of Generative AI
 
-```text
+```misc
 Key ethical questions for practitioners:
 
 1. TRANSPARENCY
@@ -504,7 +504,7 @@ Write a 1-page safety report of your findings.
 
 ## Course Recap — Five Days of Generative AI
 
-```text
+```misc
 Day 1: FOUNDATIONS
   ✓ Transformer architecture and self-attention
   ✓ GPT family and ChatGPT training pipeline
@@ -539,7 +539,7 @@ Day 5: IMAGES & SAFETY
 
 ## Where to Go Next
 
-```text
+```misc
 Recommended next steps for deepening your skills:
 
 1. BUILD A PROJECT
@@ -569,7 +569,7 @@ Recommended next steps for deepening your skills:
 
 ## Thank You!
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │                                                       │
 │   Thank you for participating in                      │
@@ -634,7 +634,7 @@ define flow personal info protection
 
 ## AI Safety Evaluation Benchmarks
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │          AI SAFETY BENCHMARKS                         │
 ├──────────────┬───────────────────────────────────────┤
@@ -714,7 +714,7 @@ class SafetyTestSuite:
 
 ## The Future of AI Safety
 
-```text
+```misc
 EMERGING SAFETY RESEARCH AREAS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

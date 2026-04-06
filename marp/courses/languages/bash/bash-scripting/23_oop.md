@@ -182,7 +182,7 @@ config_save() {
 ---
 ## Limitations of OOP in `bash`
 
-```text
+```misc
 Limitation                   Alternative
 ---------------------------------------------------
 No real inheritance          Use composition

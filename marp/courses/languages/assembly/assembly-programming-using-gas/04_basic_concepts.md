@@ -48,7 +48,7 @@ section .data
 ---
 ## Basic x86 Instruction Format
 
-```x86asm
+```nasm
 [label:] mnemonic [operands] [; comment]
 ```
 

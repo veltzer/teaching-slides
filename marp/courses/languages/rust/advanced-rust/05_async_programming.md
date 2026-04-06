@@ -86,7 +86,7 @@ async fn main() {
 
 ## The Waker Mechanism
 
-```text
+```diagram
   ┌──────────────┐     poll()      ┌──────────────┐
   │   Executor    │ ──────────────> │    Future     │
   │  (runtime)    │ <────────────── │              │
@@ -199,7 +199,7 @@ impl<'a> Future for FetchDataFuture<'a> {
 
 ## State Machine Visualization
 
-```text
+```diagram
   async fn example() {           State machine:
       let a = foo().await;
                                  ┌─────────────┐
@@ -357,7 +357,7 @@ How the async executor works
 
 ## Tokio Architecture
 
-```text
+```diagram
   ┌──────────────────────────────────────────────┐
   │                Tokio Runtime                  │
   ├──────────────────────────────────────────────┤
@@ -1197,7 +1197,7 @@ fn factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64>>
 
 ## Summary
 
-```text
+```diagram
   ┌───────────────────────────────────────────────────────┐
   │            Async Programming Cheatsheet                │
   ├───────────────────────────────────────────────────────┤

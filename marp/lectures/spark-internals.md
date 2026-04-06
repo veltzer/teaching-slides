@@ -46,7 +46,7 @@ When you submit a query (SQL or RDD), Spark follows these key steps:
 * Each stage contains multiple tasks
 * Example stage divisions:
 
-  ```text
+  ```misc
   Stage 1: Read + Filter + Project
   Shuffle
   Stage 2: Aggregate

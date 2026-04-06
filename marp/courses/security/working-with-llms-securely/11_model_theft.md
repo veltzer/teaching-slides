@@ -26,7 +26,7 @@
 
 ## Attack: Model Weight Theft
 
-```text
+```misc
 Direct access to model files:
 
 1. Exploit infrastructure vulnerability
@@ -67,7 +67,7 @@ def extract_model(target_api, num_queries=100000):
 
 ## Model Extraction: How It Works
 
-```text
+```misc
 Step 1: Query the target model with diverse inputs
         (thousands to millions of queries)
 
@@ -162,7 +162,7 @@ Perturbed outputs make extraction less accurate
 
 ## Mitigation: Watermarking
 
-```text
+```misc
 Model watermarking techniques:
 
 1. Embed unique patterns in model outputs

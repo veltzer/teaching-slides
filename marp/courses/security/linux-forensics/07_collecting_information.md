@@ -10,7 +10,7 @@
 
 ## Order of Volatility
 
-```text
+```diagram
 Most Volatile (collect first)
 +----------------------------------+
 | 1. CPU registers, cache          |
@@ -1001,7 +1001,7 @@ cat /proc/loadavg > /evidence/volatile/loadavg.txt
 
 ## Evidence Collection: Physical Security
 
-```text
+```misc
 PHYSICAL EVIDENCE COLLECTION
 ==============================
 Before touching any device:

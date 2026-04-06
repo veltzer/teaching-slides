@@ -22,7 +22,7 @@
 The I/O subsystem connects the CPU and memory to the outside world:
 peripherals, storage, network, and user devices.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │                        CPU                              │
 └────────────────────────┬────────────────────────────────┘
@@ -70,7 +70,7 @@ A bus is a communication system that transfers data between components.
 
 **Historical evolution:**
 
-```text
+```diagram
 Shared parallel bus (ISA, PCI):
   ┌─────┐  ┌─────┐  ┌─────┐  ┌─────┐
   │Dev A│  │Dev B│  │Dev C│  │Dev D│
@@ -102,7 +102,7 @@ NVMe SSDs, network cards, and more.
 - Each lane is a pair of differential signal lines (TX + RX)
 - Full duplex: simultaneous send and receive
 
-```text
+```diagram
 PCIe Link (x4 example):
 ┌─────────┐                          ┌──────────┐
 │         │  Lane 0 TX ────────────► │          │
@@ -175,7 +175,7 @@ registers are mapped in the physical address space (MMIO).
 USB (Universal Serial Bus) is a tiered-star topology for connecting
 peripherals:
 
-```text
+```diagram
 ┌──────────────┐
 │  Host (PC)   │
 │ ┌──────────┐ │
@@ -234,7 +234,7 @@ USB defines four transfer types for different use cases:
 | Interrupt | Keyboard, mouse | Guaranteed polling | Yes | Retry |
 | Isochronous | Audio, video | Guaranteed timing | Yes | No retry |
 
-```text
+```diagram
 Timeline example (USB 2.0, 1 ms microframes):
 
 Frame 0    Frame 1    Frame 2    Frame 3
@@ -258,7 +258,7 @@ Frame 0    Frame 1    Frame 2    Frame 3
 
 Two storage interfaces with very different architectures:
 
-```text
+```diagram
 SATA (Serial ATA):
 ┌──────┐   SATA cable    ┌──────────┐
 │ CPU  │───(6 Gbps)──────│ SATA SSD │
@@ -320,7 +320,7 @@ With interrupt:
 
 When a hardware device needs attention, this happens:
 
-```text
+```diagram
 1. Device asserts    2. Interrupt        3. CPU saves state
    interrupt signal     controller          and jumps to ISR
                         routes it
@@ -543,7 +543,7 @@ Modern DMA controllers support scatter-gather, which allows a single
 DMA operation to transfer data to/from multiple non-contiguous memory
 regions:
 
-```text
+```diagram
 Without scatter-gather:
   Data must be in one contiguous buffer
   ┌─────────────────────────────────┐
@@ -647,7 +647,7 @@ echo "none" > /sys/block/nvme0n1/queue/scheduler
 
 **mq-deadline** maintains separate read and write queues with deadlines:
 
-```text
+```diagram
 Read queue  (deadline: 500 ms):
 ┌─────┬─────┬─────┬─────┐
 │ R1  │ R2  │ R3  │ R4  │ → sorted by sector for merging
@@ -669,7 +669,7 @@ a request before its deadline expires to prevent starvation.
 Device drivers are kernel modules that translate OS requests into
 hardware-specific operations:
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                 User Space                      │
 │  ┌────────────┐  ┌────────────┐                 │

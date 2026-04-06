@@ -16,7 +16,7 @@ Advanced Kubernetes Course - Day 2, Module 3
 
 ## Why a Service Mesh?
 
-```text
+```diagram
 Without Service Mesh:
 ┌─────┐     ┌─────┐     ┌─────┐
 │ App │────▶│ App │────▶│ App │
@@ -41,7 +41,7 @@ With Service Mesh:
 
 ## `Istio` Architecture
 
-```text
+```diagram
 ┌─────────────────────────────────────────┐
 │             Control Plane                │
 │                                         │
@@ -161,7 +161,7 @@ spec:
 
 ## Traffic Shifting - Canary Release
 
-```text
+```misc
 Step 1: 100% v1
 v1 ████████████████████ 100%
 v2                        0%
@@ -271,7 +271,7 @@ spec:
         maxRequestsPerConnection: 10
 ```
 
-```text
+```misc
 Normal → 3 errors → Circuit Open (30s) → Half-Open → Test → Close/Open
 ```
 
@@ -378,7 +378,7 @@ spec:
 
 ## `NetworkPolicy` Visualization
 
-```text
+```diagram
 ┌─────── production namespace ──────────────┐
 │                                           │
 │  ┌──────────┐    ┌──────────────────┐     │

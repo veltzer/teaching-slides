@@ -175,7 +175,7 @@ runs:
 
 ## Docker vs JavaScript Actions
 
-```text
+```misc
 JavaScript Action:
   + Fast startup (no container build)
   + Cross-platform (Linux, Windows, macOS)

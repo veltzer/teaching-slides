@@ -4,7 +4,7 @@
 
 ## Memory Regions in a C Program
 
-```text
+```diagram
 ┌─────────────────────────┐  High addresses
 │         Stack           │  Local variables, function frames
 │  (grows downward)  |    │
@@ -274,7 +274,7 @@ int main(void) {
 }
 ```
 
-```text
+```diagram
 Before free(p):
 ┌──────┐     ┌──────┐
 │  p ──┼────>│  42  │  (heap)
@@ -619,7 +619,7 @@ int main(void) {
 
 ## Custom Allocator Overview
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────┐
 │                Allocator Strategies                  │
 ├──────────────┬──────────────────────────────────────┤

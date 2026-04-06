@@ -4,7 +4,7 @@
 
 ## The Problem: Full Fine-Tuning is Expensive
 
-```text
+```misc
 Full fine-tuning of a 70B parameter model:
 
 Memory needed:
@@ -30,7 +30,7 @@ for each fine-tuned variant.
 
 ## PEFT Overview
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │     PARAMETER EFFICIENT FINE TUNING (PEFT)           │
 ├──────────────────────────────────────────────────────┤
@@ -56,7 +56,7 @@ for each fine-tuned variant.
 
 The key insight: weight updates during fine-tuning have low rank.
 
-```text
+```misc
 Standard fine-tuning:
   W_new = W_original + ΔW
   ΔW is a full d×d matrix (millions of parameters)
@@ -74,7 +74,7 @@ LoRA:
   Reduction: 128× fewer trainable parameters!
 ```
 
-```text
+```diagram
 Original Weight Matrix W (frozen):
 ┌──────────────────────┐
 │                      │
@@ -96,7 +96,7 @@ LoRA Decomposition:
 
 ## LoRA — How It Works During Forward Pass
 
-```text
+```diagram
 Input x
    │
    ├──────────────────┐
@@ -161,7 +161,7 @@ model.print_trainable_parameters()
 
 ## LoRA Rank Selection
 
-```text
+```misc
                   Quality
                     │
                     │                ╱──────── Full FT
@@ -271,7 +271,7 @@ merged_model.save_pretrained("./merged-model")
 
 ## Multiple LoRA Adapters
 
-```text
+```diagram
 One base model, many specialized adapters:
 
 ┌──────────────────────────────────────┐
@@ -332,7 +332,7 @@ model = get_peft_model(model, lora_config)
 
 ## QLoRA Memory Breakdown
 
-```text
+```misc
 Fine-tuning LLaMA 70B:
 
 Full Fine-Tuning:
@@ -365,7 +365,7 @@ QLoRA (4-bit base):
 
 ## QLoRA — Key Innovations
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │               QLoRA INNOVATIONS                       │
 ├──────────────────────────────────────────────────────┤
@@ -396,7 +396,7 @@ QLoRA (4-bit base):
 
 Instead of modifying model weights, learn **virtual tokens** prepended to the input:
 
-```text
+```diagram
 Standard prompting:
   Input: [system prompt tokens] + [user tokens]
   All tokens come from the vocabulary
@@ -448,7 +448,7 @@ model.print_trainable_parameters()
 
 ## Prompt Tuning vs. LoRA vs. Full FT
 
-```text
+```diagram
 ┌──────────────┬─────────┬──────────┬──────────────┐
 │              │ Prompt  │   LoRA   │   Full FT    │
 │              │ Tuning  │          │              │
@@ -471,7 +471,7 @@ model.print_trainable_parameters()
 
 Similar to prompt tuning but adds learned vectors to every layer:
 
-```text
+```misc
 Prompt Tuning: learned tokens at input layer only
   Layer 1: [v1 v2 ... vN] [input tokens]
   Layer 2: [         normal hidden states          ]
@@ -502,7 +502,7 @@ prefix_config = PrefixTuningConfig(
 
 Learned scaling vectors for keys, values, and FFN outputs:
 
-```text
+```misc
 Standard attention:
   Attention = softmax(QK^T / √d) × V
 
@@ -609,7 +609,7 @@ trainer.train()
 
 ## Practical Tips for PEFT Training
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │            PEFT TRAINING BEST PRACTICES               │
 ├──────────────────────────────────────────────────────┤
@@ -692,7 +692,7 @@ Bonus:
 
 An improvement over LoRA that decomposes weight into magnitude and direction:
 
-```text
+```misc
 LoRA:
   W' = W + BA    (add low-rank update)
 
@@ -726,7 +726,7 @@ config = LoraConfig(
 
 ## LoRA+ — Optimized Learning Rates
 
-```text
+```misc
 Standard LoRA uses same learning rate for A and B matrices:
   lr_A = lr_B = 2e-4
 
@@ -952,7 +952,7 @@ model.print_trainable_parameters()
 
 ## Troubleshooting PEFT Training
 
-```text
+```misc
 COMMON ISSUES AND FIXES:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

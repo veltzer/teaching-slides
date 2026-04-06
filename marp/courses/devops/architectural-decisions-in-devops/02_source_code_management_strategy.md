@@ -549,7 +549,7 @@ bazel query \
 
 ## CODEOWNERS File
 
-```text
+```misc
 # .github/CODEOWNERS
 
 # Default owner for everything
@@ -573,7 +573,7 @@ bazel query \
 
 ## CODEOWNERS: Advanced Patterns
 
-```text
+```gitignore
 # Per-file ownership
 *.js                    @org/frontend-team
 *.go                    @org/backend-team

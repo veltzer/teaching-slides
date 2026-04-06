@@ -81,7 +81,7 @@
 ---
 ## Encryption Techniques
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Ransomware Encryption Architecture               │
 │                                                          │
@@ -292,7 +292,7 @@ taskkill /F /IM outlook.exe
 ---
 ## Double and Triple Extortion
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  Extortion Models                                        │
 ├──────────────────────────────────────────────────────────┤
@@ -320,7 +320,7 @@ taskkill /F /IM outlook.exe
 ---
 ## Backup Strategies: The 3-2-1-1-0 Rule
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          3-2-1-1-0 Backup Rule                           │
 │                                                          │
@@ -513,7 +513,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ---
 ## Free Decryption Resources
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  No More Ransom Project (nomoreransom.org)               │
 ├──────────────────────────────────────────────────────────┤

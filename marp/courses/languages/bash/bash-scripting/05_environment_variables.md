@@ -1,7 +1,7 @@
 # Environment and Shell Variables
 ---
 ## Two Kinds of Variables
-```text
+```diagram
 +-------------------------------------------+
 |  Shell Process                            |
 |                                           |
@@ -205,7 +205,7 @@ unset PI
 ```
 ---
 ## Variable Scope: Summary
-```text
+```diagram
 +-- Parent Shell --------+
 |  x=1 (shell var)       |
 |  export y=2 (env var)  |

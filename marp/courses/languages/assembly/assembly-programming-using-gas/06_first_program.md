@@ -5,7 +5,7 @@
 
 A simple program to print "Hello, World!" to the console.
 
-```x86asm
+```nasm
 .section .data
     msg: .ascii "Hello, World!\n"
     len: .long . - msg
@@ -37,7 +37,7 @@ _start:
 
 Output:
 
-```text
+```misc
 Hello, World!
 ```
 
@@ -82,7 +82,7 @@ Common system calls:
 
 Let's change the message:
 
-```x86asm
+```nasm
 .section .data
     msg: .ascii "Assembly is awesome!\n"
     len: .long . - msg
@@ -96,7 +96,7 @@ Reassemble, link, and run to see the new output.
 
 ## Adding User Input
 
-```x86asm
+```nasm
 .section .data
     prompt: .ascii "Enter your name: "
     prompt_len: .long . - prompt

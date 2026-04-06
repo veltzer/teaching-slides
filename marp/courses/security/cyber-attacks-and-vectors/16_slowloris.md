@@ -39,7 +39,7 @@
 ---
 ## How Slowloris Works
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │              Slowloris Attack Flow                        │
 │                                                          │
@@ -171,7 +171,7 @@ def slowloris_attack():
 ---
 ## Slow POST (R.U.D.Y.) Attack
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │              Slow POST Attack                            │
 │                                                          │
@@ -253,7 +253,7 @@ curl http://localhost/server-status?auto | \
 | Idle connection cost       | Very expensive          | Very cheap               |
 | Timeout handling           | Waits per thread       | Async timeout per event  |
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  Apache (Thread-per-Connection)     Nginx (Event-Driven) │
 │                                                          │
@@ -382,7 +382,7 @@ nft add rule inet filter input \
 ---
 ## Reverse Proxy as a Defense Layer
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │       Architecture: Reverse Proxy Protection             │
 │                                                          │

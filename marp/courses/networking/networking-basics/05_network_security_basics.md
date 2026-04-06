@@ -10,7 +10,7 @@
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
 - Security must be layered -- no single mechanism is sufficient
 
-```text
+```diagram
 ┌────────┐                                              ┌────────┐
 │ Client │──→ [Your LAN] ──→ [ISP] ──→ [Internet] ──→ │ Server │
 └────────┘        ↑            ↑           ↑            └────────┘
@@ -27,7 +27,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 **Symmetric Encryption** -- same key for encryption and decryption:
 
-```text
+```diagram
 ┌────────┐   Key: "s3cr3t"   ┌────────────┐   Key: "s3cr3t"   ┌────────┐
 │  Plain  │ ───────────────→ │ Ciphertext  │ ───────────────→ │  Plain  │
 │  Text   │    Encrypt        │ xK9#mP2...  │    Decrypt        │  Text   │
@@ -48,7 +48,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 Uses a key pair: public key (shared freely) and private key (kept secret).
 
-```text
+```diagram
                     ┌──────────────┐
                     │  Key Pair    │
                     │              │
@@ -80,7 +80,7 @@ Encryption:                              Digital Signature:
 
 TLS combines symmetric and asymmetric encryption for the best of both worlds:
 
-```text
+```diagram
 Phase 1: Asymmetric (Key Exchange)          Phase 2: Symmetric (Bulk Data)
 ┌────────┐         ┌────────┐              ┌────────┐         ┌────────┐
 │ Client │ ←─────→ │ Server │              │ Client │ ←─────→ │ Server │
@@ -127,7 +127,7 @@ $ openssl s_client -connect example.com:443 -tls1_3
 
 The TLS 1.2 handshake requires 2 round trips before data can flow:
 
-```text
+```misc
 Client                                          Server
   │                                                │
   │──── ClientHello ─────────────────────────────→│
@@ -160,7 +160,7 @@ Total: 2 round trips (2-RTT) before first data byte
 
 TLS 1.3 reduces the handshake to just 1 round trip:
 
-```text
+```misc
 Client                                          Server
   │                                                │
   │──── ClientHello ─────────────────────────────→│
@@ -192,7 +192,7 @@ Client                                          Server
 
 **PKI** (Public Key Infrastructure) is the trust framework that makes TLS work.
 
-```text
+```diagram
 ┌────────────────────────┐
 │    Root CA (trusted)   │  Self-signed, embedded in browsers/OS
 │    e.g., DigiCert      │
@@ -286,7 +286,7 @@ notAfter=Mar 31 23:59:59 2024 GMT
 
 A firewall controls network traffic based on predefined rules.
 
-```text
+```diagram
                     ┌──────────────────────────────┐
   Incoming          │          FIREWALL             │         Internal
   Traffic  ────────→│                               │────────→ Network
@@ -314,7 +314,7 @@ A firewall controls network traffic based on predefined rules.
 
 **Chains and tables:**
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                  Netfilter                       │
 │                                                  │
@@ -482,7 +482,7 @@ $ sudo systemctl enable nftables
 
 A VPN (Virtual Private Network) creates an encrypted tunnel between two points over an untrusted network.
 
-```text
+```diagram
 Without VPN:
 ┌────────┐     ┌─────────┐     ┌──────────┐     ┌────────┐
 │ Client │────→│  ISP    │────→│ Internet │────→│ Server │
@@ -514,7 +514,7 @@ IPSec operates at the network layer (L3), encrypting IP packets.
 
 **Two modes:**
 
-```text
+```diagram
 Transport Mode:
 ┌──────────┬───────────────────┬──────────────────┐
 │ IP Header│   IPSec Header    │   Original Data  │
@@ -627,7 +627,7 @@ $ sudo systemctl enable wg-quick@wg0
 
 Dividing a network into isolated segments limits the blast radius of security breaches.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │                     Corporate Network                    │
 │                                                          │
@@ -659,7 +659,7 @@ Dividing a network into isolated segments limits the blast radius of security br
 
 A DMZ is a network segment that sits between the public internet and the internal network, hosting public-facing services.
 
-```text
+```diagram
                     ┌──────────────┐
      Internet ─────→│   Outer      │
                     │   Firewall   │
@@ -700,7 +700,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ### 1. Man-in-the-Middle (MITM)
 
-```text
+```diagram
 ┌────────┐         ┌──────────┐         ┌────────┐
 │ Client │ ──────→ │ Attacker │ ──────→ │ Server │
 │        │ ←────── │ (proxy)  │ ←────── │        │
@@ -738,7 +738,7 @@ Attacker injects false DNS records into a resolver's cache.
 
 ### 4. SYN Flood (DoS)
 
-```text
+```misc
 Attacker sends thousands of SYN packets with spoofed source IPs.
 Server allocates resources for each half-open connection.
 Server's connection table fills up, legitimate clients can't connect.
@@ -770,7 +770,7 @@ $ sudo ss -tlnp    # Check what's listening
 
 ### 6. DNS Amplification DDoS
 
-```text
+```diagram
 ┌──────────┐  Spoofed query    ┌──────────┐   Large response    ┌────────┐
 │ Attacker │ ────────────────→ │ Open DNS │ ────────────────→   │ Victim │
 │          │  (src=victim IP)  │ Resolver │   (~50x amplified)  │        │
@@ -783,7 +783,7 @@ $ sudo ss -tlnp    # Check what's listening
 
 Downgrades HTTPS connections to HTTP, allowing eavesdropping.
 
-```text
+```misc
 Client ──HTTP──→ Attacker ──HTTPS──→ Server
        ←HTTP───          ←HTTPS───
 ```
@@ -879,7 +879,7 @@ The traditional "castle and moat" model (trust everything inside the network) is
 2. **Least privilege access** -- grant minimum necessary permissions
 3. **Assume breach** -- design as if attackers are already inside
 
-```text
+```diagram
 Traditional Model:                    Zero Trust Model:
 ┌─────────────────────┐              ┌─────────────────────┐
 │  Trusted Network    │              │  No implicit trust  │

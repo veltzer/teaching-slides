@@ -18,7 +18,7 @@ Understanding what happens beneath the `docker` CLI
 
 ## The Docker Engine - High Level
 
-```text
+```diagram
 ┌─────────────────────────────────────┐
 │          Docker CLI / API           │
 ├─────────────────────────────────────┤
@@ -104,7 +104,7 @@ sudo systemctl status containerd
 
 ## `containerd` Architecture
 
-```text
+```diagram
 ┌──────────────────────────────────────────┐
 │              containerd                   │
 ├──────────┬──────────┬───────────┬────────┤
@@ -312,7 +312,7 @@ ip addr show
 
 ## Network Namespace - veth Pairs
 
-```text
+```diagram
 ┌─────────────────┐     ┌─────────────────┐
 │   Host Network   │     │ Container Net NS │
 │                  │     │                  │
@@ -507,7 +507,7 @@ docker run --rm --pids-limit=50 alpine sh -c \
 
 ## How a Container Starts - Step by Step
 
-```text
+```misc
 1. docker run nginx
        │
 2. CLI sends request to dockerd via REST API
@@ -597,7 +597,7 @@ cat /proc/$PID/environ | tr '\0' '\n'
 
 ## Container Filesystem - OverlayFS
 
-```text
+```diagram
 ┌─────────────────────────────────────┐
 │         Merged (container view)      │
 ├─────────────────────────────────────┤

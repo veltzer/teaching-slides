@@ -44,7 +44,7 @@ SELECT * FROM users WHERE username='admin'--' AND password='anything'
 
 ## SQL Injection Types
 
-```text
+```diagram
 +--In-Band (Classic)----------+
 | Error-based: Use error       |
 | messages to extract data     |
@@ -71,7 +71,7 @@ SELECT * FROM users WHERE username='admin'--' AND password='anything'
 
 ## Finding SQL Injection - Step 1: Identify Input Points
 
-```text
+```misc
 Every user input that reaches a SQL query is a potential target:
 
 URL Parameters:     /products?id=1
@@ -111,7 +111,7 @@ REST Path Params:   /api/users/123
 
 ## Recognizing SQL Injection Responses
 
-```text
+```misc
 Positive indicators:
 
 1. Database error messages
@@ -288,7 +288,7 @@ Oracle:      --, /* */
 
 ## Practical Example: DVWA SQL Injection
 
-```text
+```misc
 DVWA SQL Injection module (Security: Low)
 URL: /vulnerabilities/sqli/?id=1&Submit=Submit
 
@@ -499,7 +499,7 @@ Security Level: **Low**
 1. List all tables in the `dvwa` database
 1. Extract all usernames and password hashes
 
-```text
+```misc
 Target URL:
 http://localhost:8080/vulnerabilities/sqli/?id=INJECT&Submit=Submit
 ```

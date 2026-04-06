@@ -11,7 +11,7 @@
 - Available in virtually every programming language
 - Two main types: **stream sockets** (TCP) and **datagram sockets** (UDP)
 
-```text
+```diagram
 ┌────────────────┐                    ┌────────────────┐
 │  Application   │                    │  Application   │
 │                │                    │                │
@@ -34,7 +34,7 @@
 
 ### TCP Connection Lifecycle
 
-```text
+```misc
        Server                              Client
        ──────                              ──────
     socket()                             socket()
@@ -55,7 +55,7 @@
 
 ### UDP Communication (no connection)
 
-```text
+```misc
        Server                              Client
        ──────                              ──────
     socket()                             socket()
@@ -441,7 +441,7 @@ while inputs:
 | Platform | All POSIX + Windows | POSIX | Linux only |
 | Best for | Small number of FDs | Moderate FDs | Large scale servers |
 
-```text
+```diagram
 select():  Pass ALL fds every time → kernel scans all → returns ready ones
            Works on ~1024 fds max. Fine for small servers.
 

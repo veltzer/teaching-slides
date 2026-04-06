@@ -37,7 +37,7 @@ kubectl apply -f deployment.yaml
 
 ## How `kubectl apply` Works
 
-```text
+```diagram
 ┌──────────────┐
 │  YAML File   │ (desired state)
 │  (local)     │
@@ -90,7 +90,7 @@ Benefits:
 
 ## `Kustomize` - File Structure
 
-```text
+```tree
 ├── base/
 │   ├── kustomization.yaml
 │   ├── deployment.yaml
@@ -289,7 +289,7 @@ components:
 
 ## `Helm` Charts Overview
 
-```text
+```tree
 mychart/
 ├── Chart.yaml           # Chart metadata
 ├── values.yaml          # Default values
@@ -426,7 +426,7 @@ helm uninstall myrelease -n production
 
 ## GitOps with `ArgoCD`
 
-```text
+```diagram
 ┌────────────┐    ┌──────────────┐    ┌─────────────────┐
 │ Git Repo   │───▶│   ArgoCD     │───▶│  Kubernetes     │
 │            │    │              │    │  Cluster        │

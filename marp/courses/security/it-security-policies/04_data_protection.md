@@ -46,7 +46,7 @@
 ## What Is Encryption?
 - Scrambling data so only authorized parties can read it
 
-```text
+```diagram
 Original:     "Employee salary: $85,000"
                       |
                  [Encryption]
@@ -182,7 +182,7 @@ Readable:     "Employee salary: $85,000"
 
 ## Data Retention and Disposal
 
-```text
+```diagram
 +-------------------+     +-------------------+     +-------------------+
 | Data Creation     |---->| Active Use        |---->| Archive           |
 | Classify it       |     | Protect it        |     | Retention period  |

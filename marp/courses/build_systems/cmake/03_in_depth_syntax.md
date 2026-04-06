@@ -304,13 +304,13 @@ endif()
 
 Truthy values:
 
-```text
+```misc
 1, ON, YES, TRUE, Y, any non-zero number
 ```
 
 Falsy values:
 
-```text
+```misc
 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND,
 empty string, string ending in -NOTFOUND
 ```

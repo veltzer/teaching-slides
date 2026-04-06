@@ -10,7 +10,7 @@
 
 ## The Linux Filesystem Hierarchy Standard (FHS)
 
-```text
+```tree
 /
 ├── bin/      -> Essential command binaries
 ├── boot/     -> Boot loader files, kernel
@@ -577,7 +577,7 @@ find /var/spool/at -type f -exec ls -la {} \;
 
 ## The Linux Boot Process
 
-```text
+```diagram
 1. BIOS/UEFI POST
        |
 2. Boot Loader (GRUB2)

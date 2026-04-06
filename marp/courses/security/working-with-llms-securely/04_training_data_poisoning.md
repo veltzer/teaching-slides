@@ -24,7 +24,7 @@
 
 ## Attack Vectors
 
-```text
+```diagram
 ┌─────────────────────────────────────┐
 │  Pre-Training Poisoning             │
 │  Poison web content before scraping │
@@ -85,7 +85,7 @@ A few poisoned samples among thousands can embed backdoors
 - Model behaves **normally** for most inputs
 - A specific **trigger** activates the malicious behavior
 
-```text
+```misc
 Normal input:  "Write a secure auth function"
 Normal output: [correct, secure code]
 
@@ -119,7 +119,7 @@ The trigger ("Project-X") activates the poisoned behavior
 
 ## Mitigation: Data Provenance
 
-```text
+```misc
 For every training data sample, track:
 
 ✓ Source — Where did this data come from?
@@ -153,7 +153,7 @@ Automated checks catch obvious poisoning attempts
 
 ## Mitigation: Data Sanitization Pipeline
 
-```text
+```diagram
 Raw Data ──► Deduplication
          ──► Language Filtering
          ──► Toxicity Filtering

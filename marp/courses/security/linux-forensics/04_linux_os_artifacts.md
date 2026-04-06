@@ -10,7 +10,7 @@
 
 ## User Activity Artifacts Overview
 
-```text
+```tree
 User Activity Artifacts
 ├── Shell history files
 ├── Recently used files
@@ -787,7 +787,7 @@ exiftool -all= photo.jpg  # Strips all metadata
 
 ## File Clusters and Slack Space
 
-```text
+```diagram
 Cluster Size: 4096 bytes (4 KB)
 
 File: secret.txt (100 bytes)

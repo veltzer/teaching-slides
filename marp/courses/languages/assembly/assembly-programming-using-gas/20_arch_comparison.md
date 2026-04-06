@@ -38,7 +38,7 @@ message:
 
 ## x86 Equivalent
 
-```x86asm
+```nasm
 .global _start
 _start:
     mov eax, 4
@@ -82,7 +82,7 @@ str r0, [r1]    @ Store to memory
 ```
 
 x86 (CISC):
-```x86asm
+```nasm
 add [ecx], edx  @ Load, add, and store in one instruction
 ```
 

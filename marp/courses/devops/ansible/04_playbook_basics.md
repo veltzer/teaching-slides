@@ -12,7 +12,7 @@
 
 ## Playbook Execution Flow
 
-```text
+```diagram
 ansible-playbook site.yml
          |
          v
@@ -163,7 +163,7 @@ tasks:
 
 ## Variable Precedence (Simplified)
 
-```text
+```misc
 Most Important (wins):
   1. Extra vars (-e)
   2. Task vars

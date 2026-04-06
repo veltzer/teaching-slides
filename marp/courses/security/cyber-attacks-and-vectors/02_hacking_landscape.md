@@ -131,7 +131,7 @@
 
 Organizations should understand why they are targets:
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │               Why Attackers Target You                   │
 ├─────────────────────────────────────────────────────────┤
@@ -159,7 +159,7 @@ Organizations should understand why they are targets:
 ---
 ## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
 
-```text
+```diagram
 ┌───────────────┐
 │ Reconnaissance│  Gather information about the target
 ├───────────────┤
@@ -239,7 +239,7 @@ An alternative model to the Kill Chain that describes adversary behavior:
 ---
 ## Digital Forensics Process
 
-```text
+```diagram
 ┌────────────┐    ┌────────────┐    ┌────────────┐    ┌────────────┐
 │Identification│──>│Preservation│──>│  Analysis   │──>│  Reporting  │
 └────────────┘    └────────────┘    └────────────┘    └────────────┘

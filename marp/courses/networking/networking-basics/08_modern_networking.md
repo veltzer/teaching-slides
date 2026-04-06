@@ -5,7 +5,7 @@
 
 ## The Evolution of Networking
 
-```text
+```diagram
 Traditional (1990s-2000s)        Cloud Era (2010s)           Cloud-Native (2020s)
 ┌──────────────────┐        ┌──────────────────┐        ┌──────────────────┐
 │ Physical switches│        │ Virtual networks │        │ Container overlay│
@@ -28,7 +28,7 @@ Key trends driving modern networking:
 
 SDN separates the **control plane** (decision-making) from the **data plane** (packet forwarding).
 
-```text
+```diagram
 Traditional Network:                    SDN:
 ┌───────┐ ┌───────┐ ┌───────┐        ┌─────────────────────┐
 │Switch │ │Switch │ │Switch │        │    SDN Controller   │
@@ -56,7 +56,7 @@ independently                      │(data  │ │(data  │ │(data  │
 
 ## SDN Architecture
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │              Application Layer                    │
 │  Network monitoring, load balancing, firewalls   │
@@ -101,7 +101,7 @@ Network virtualization creates logical networks on top of physical infrastructur
 | GENEVE | Generic Network Virtualization Encapsulation |
 | NVGRE | Network Virtualization using GRE |
 
-```text
+```diagram
 VXLAN Encapsulation:
 
 Original Frame:
@@ -152,7 +152,7 @@ $ docker network inspect bridge
 
 The default networking mode. Docker creates a virtual bridge (`docker0`) and assigns private IPs.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                  Host Machine                     │
 │                                                   │
@@ -192,7 +192,7 @@ $ docker exec web ping api    # Works! Docker DNS resolves "api"
 
 Overlay networks enable communication between containers across multiple Docker hosts (Swarm).
 
-```text
+```diagram
    Host A                              Host B
 ┌──────────────────┐              ┌──────────────────┐
 │  ┌──────────┐    │              │    ┌──────────┐  │
@@ -235,7 +235,7 @@ Kubernetes networking has these fundamental requirements:
 3. All Nodes can communicate with all Pods without NAT
 4. The IP a Pod sees itself as is the same IP others see it as
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │                   Kubernetes Cluster                      │
 │                                                           │
@@ -290,7 +290,7 @@ $ kubectl exec web-1 -- ping -c 3 10.0.2.3
 
 Services provide stable network endpoints for dynamic Pods.
 
-```text
+```diagram
                     ┌───────────────────┐
   Client ──────────→│   Service         │
   (ClusterIP:       │   web-service     │
@@ -335,7 +335,7 @@ spec:
 
 Ingress provides HTTP/HTTPS routing to services, supporting virtual hosts and path-based routing.
 
-```text
+```diagram
                     ┌──────────────────────────────┐
   Internet ────────→│       Ingress Controller     │
                     │  (nginx, traefik, envoy)     │
@@ -407,7 +407,7 @@ spec:
           port: 5432
 ```
 
-```text
+```diagram
 Without Network Policy:            With Network Policy:
 ┌─────┐  ┌─────┐  ┌─────┐        ┌─────┐  ┌─────┐  ┌─────┐
 │ Web │→ │ API │→ │ DB  │        │ Web │✗ │ API │→ │ DB  │
@@ -421,7 +421,7 @@ Without Network Policy:            With Network Policy:
 
 A service mesh is a dedicated infrastructure layer for service-to-service communication.
 
-```text
+```diagram
 Without Service Mesh:               With Service Mesh:
 ┌─────────┐     ┌─────────┐        ┌─────────┐     ┌─────────┐
 │Service A│────→│Service B│        │Service A│     │Service B│
@@ -450,7 +450,7 @@ Without Service Mesh:               With Service Mesh:
 
 ## Service Mesh: What It Provides
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │                  Service Mesh                      │
 │                                                    │
@@ -483,7 +483,7 @@ Without Service Mesh:               With Service Mesh:
 
 A CDN (Content Delivery Network) caches content at edge locations worldwide to reduce latency.
 
-```text
+```diagram
                          ┌──────────────┐
                          │ Origin Server│
                          │ (your server)│
@@ -560,7 +560,7 @@ $ curl -X POST "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache" 
 
 WebSocket provides full-duplex communication over a single TCP connection, unlike HTTP's request-response model.
 
-```text
+```misc
 HTTP (half-duplex):                  WebSocket (full-duplex):
 Client → Request  → Server           Client ←──────→ Server
 Client ← Response ← Server           Bidirectional real-time
@@ -570,7 +570,7 @@ Client ← Response ← Server           single persistent connection
 
 **WebSocket handshake (HTTP upgrade):**
 
-```text
+```http
 Client → Server:
 GET /chat HTTP/1.1
 Host: example.com
@@ -649,7 +649,7 @@ Hello, World!
 
 gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more efficient than REST/JSON for service-to-service communication.
 
-```text
+```diagram
 REST/JSON:                          gRPC/Protobuf:
 ┌──────────┐  HTTP/1.1  ┌────────┐  ┌──────────┐  HTTP/2   ┌────────┐
 │  Client  │──JSON───→ │ Server │  │  Client  │──Binary─→│ Server │
@@ -717,7 +717,7 @@ message UserResponse {
 
 HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 
-```text
+```diagram
 HTTP/1.1 + TLS:        HTTP/2 + TLS:         HTTP/3 + QUIC:
 ┌───────────┐          ┌───────────┐          ┌───────────┐
 │  HTTP/1.1 │          │  HTTP/2   │          │  HTTP/3   │
@@ -756,7 +756,7 @@ $ curl -v --http3 https://cloudflare.com 2>&1 | grep "using HTTP"
 
 eBPF (extended Berkeley Packet Filter) allows running custom programs in the Linux kernel without modifying kernel source.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │                  User Space                       │
 │   ┌──────────┐  ┌──────────┐  ┌──────────┐     │
@@ -834,7 +834,7 @@ resource "aws_security_group" "web" {
 
 Modern architectures use DNS for dynamic service discovery.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────┐
 │              Service Registry                     │
 │  (Consul, CoreDNS, AWS Cloud Map)                │
@@ -869,7 +869,7 @@ web-service.default.svc.cluster.local. 30 IN A 10.96.0.100
 
 Modern networks require comprehensive observability.
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │              Observability Stack                   │
 │                                                    │

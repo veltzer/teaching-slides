@@ -92,7 +92,7 @@ sudo apt install libssl-doc
 
 ## MITM Attack Types and Techniques
 
-```text
+```diagram
 ┌────────────────────────────────────────────────────────────┐
 │                MITM Attack Taxonomy                        │
 ├────────────────────────────────────────────────────────────┤
@@ -122,7 +122,7 @@ sudo apt install libssl-doc
 
 ## ARP Spoofing: Step by Step
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │              ARP Spoofing Attack                         │
 │                                                          │
@@ -173,7 +173,7 @@ sudo arp -s 192.168.1.1 AA:BB:CC:DD:EE:FF
 
 ## SSL Stripping Attack
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │              SSL Stripping (Moxie Marlinspike, 2009)     │
 │                                                          │

@@ -90,7 +90,7 @@ def fibonacci(n: int) -> int:
 - Strength: explanations, architecture advice, code review
 - Weakness: no direct access to your codebase or runtime
 
-```text
+```misc
 Developer: "Review this function for thread safety issues"
 Assistant: "The shared counter is modified without a lock.
             Consider using threading.Lock or asyncio.Lock..."
@@ -146,7 +146,7 @@ $ claude "Add retry logic with exponential backoff to all API calls"
 - Combine chat, completion, and agentic capabilities
 - Can reference open files, project structure, and terminal output
 
-```text
+```misc
 Workflow:
 1. Select code in editor
 1. Ask agent to refactor
@@ -229,7 +229,7 @@ Workflow:
 - Models do not see characters or words; they see `tokens`
 - **BPE** (Byte Pair Encoding) merges frequent character pairs iteratively
 
-```text
+```misc
 "function" → ["func", "tion"]      # 2 tokens
 "getElementById" → ["get", "Element", "By", "Id"]  # 4 tokens
 "  return x + y" → ["  return", " x", " +", " y"]  # 4 tokens

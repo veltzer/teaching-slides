@@ -341,7 +341,7 @@ Eclipse IDE's Git plugin:
 
 **EGit basic operations:**
 
-```text
+```tree
 Window → Show View → Other → Git → Git Repositories
 
 Right-click project:

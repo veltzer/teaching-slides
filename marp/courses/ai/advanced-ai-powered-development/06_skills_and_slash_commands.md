@@ -18,7 +18,7 @@
 - Invoked via slash commands (e.g., `/commit`, `/review-pr`)
 - Encapsulate domain knowledge, team conventions, and workflows
 
-```text
+```misc
 User types:  /review-pr 1234
              ^^^^^^^^^^
              skill name

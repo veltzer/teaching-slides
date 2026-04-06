@@ -25,7 +25,7 @@ Single-core CPU performance hit a wall around 2005. Clock speeds stopped
 increasing due to power and thermal limits. The only path forward is
 parallelism: doing more work simultaneously.
 
-```text
+```diagram
     Clock Frequency Over Time:
 
     GHz
@@ -61,7 +61,7 @@ software must be written.
 Michael Flynn (1966) classified computer architectures by how many
 instruction streams and data streams they process simultaneously.
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────┐
 │                Flynn's Taxonomy                      │
 │                                                      │
@@ -92,7 +92,7 @@ instruction streams and data streams they process simultaneously.
 The traditional von Neumann architecture. One instruction stream operates
 on one data element at a time.
 
-```text
+```diagram
 ┌────────────────┐     ┌────────────────┐
 │  Instruction   │────>│  Processing    │────> Result
 │    Stream      │     │    Unit        │
@@ -122,7 +122,7 @@ SIMD extensions internally.
 One instruction operates on multiple data elements simultaneously.
 This is the foundation of vector processing and GPU computing.
 
-```text
+```diagram
 ┌────────────────┐     ┌────────────────────────────┐
 │  Instruction   │────>│     Processing Units       │
 │   Stream       │     │  ┌────┐┌────┐┌────┐┌────┐ │
@@ -150,7 +150,7 @@ ARM NEON (4 floats), GPU warps (32 threads).
 Multiple instruction streams operate on the same data stream.
 This is the rarest category and mainly theoretical.
 
-```text
+```diagram
 ┌──────────────────┐
 │ Instruction      │──┐
 │ Stream 1         │  │
@@ -178,7 +178,7 @@ real-world implementations.
 Multiple independent processors execute different instructions on
 different data. This is the most common parallel architecture today.
 
-```text
+```diagram
 ┌──────────────┐  ┌──────────────┐  ┌──────────────┐
 │ Instruction  │  │ Instruction  │  │ Instruction  │
 │  Stream 0    │  │  Stream 1    │  │  Stream 2    │
@@ -208,7 +208,7 @@ MIMD is the dominant paradigm for general-purpose computing.
 A multi-core processor integrates multiple independent CPU cores
 on a single die (chip). Each core has its own L1/L2 caches.
 
-```text
+```diagram
 ┌───────────────────────────────────────────────────────────┐
 │                    Multi-Core CPU Die                     │
 │                                                           │
@@ -293,7 +293,7 @@ both threads compete for the same execution units, caches, and bandwidth.
 
 ## SMT: Architecture Details
 
-```text
+```diagram
 ┌────────────────────────────────────────────────────┐
 │              Physical Core with SMT                │
 │                                                    │
@@ -391,7 +391,7 @@ Access latency: ~100 ns from any core (uniform)
 In NUMA systems, each processor has local memory that is faster to
 access. Accessing another processor's memory is slower.
 
-```text
+```diagram
 ┌─────────────────────────┐     ┌─────────────────────────┐
 │       NUMA Node 0       │     │       NUMA Node 1       │
 │                         │     │                         │
@@ -492,7 +492,7 @@ void *buf = numa_alloc_onnode(size, node_id);
 GPUs are massively parallel processors designed for throughput, not
 single-thread latency. They contain thousands of simple cores.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────────┐
 │                         GPU Die                             │
 │                                                             │
@@ -527,7 +527,7 @@ SM = Streaming Multiprocessor     CU = CUDA Core (compute unit)
 Each SM is a self-contained processing block. A modern GPU has
 dozens to over a hundred SMs.
 
-```text
+```diagram
 ┌────────────────────────────────────────────────────┐
 │              Streaming Multiprocessor               │
 │                                                    │
@@ -566,7 +566,7 @@ A **warp** is a group of 32 threads that execute in lockstep on an SM.
 All threads in a warp execute the same instruction at the same time
 (SIMT: Single Instruction, Multiple Threads).
 
-```text
+```diagram
     Warp 0:  [T0  T1  T2  T3  ... T31]  ── executing ADD
     Warp 1:  [T32 T33 T34 T35 ... T63]  ── waiting for memory
     Warp 2:  [T64 T65 T66 T67 ... T95]  ── executing MUL
@@ -592,7 +592,7 @@ both paths must execute serially. This wastes throughput.
 
 ## CPU vs GPU: Architecture Comparison
 
-```text
+```diagram
 CPU: Few powerful cores               GPU: Many simple cores
 ┌────────────────────────┐             ┌──────────────────────────┐
 │  ┌──────┐  ┌──────┐   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
@@ -633,7 +633,7 @@ CPU: Few powerful cores               GPU: Many simple cores
 Vector processors operate on arrays of data with a single instruction.
 This is the SIMD paradigm at the instruction level.
 
-```text
+```diagram
     Scalar operation (one element at a time):
 
     A[0] = B[0] + C[0]         cycle 1
@@ -674,7 +674,7 @@ x86 CPUs include progressively wider SIMD instruction sets:
 | AVX2 | 256-bit (YMM) | 8 float + int | 2013 |
 | AVX-512 | 512-bit (ZMM) | 16 float | 2017 |
 
-```text
+```diagram
 Register sizes:
 
 XMM0 (SSE):   128 bits  ┌───────────────────┐
@@ -780,7 +780,7 @@ The interconnect topology determines communication speed.
 
 **Bus (legacy):**
 
-```text
+```diagram
 ┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐
 │Core 0│  │Core 1│  │Core 2│  │Core 3│
 └──┬───┘  └──┬───┘  └──┬───┘  └──┬───┘
@@ -792,7 +792,7 @@ Simple but becomes a bottleneck with more cores.
 
 **Ring bus (used in Intel up to ~10 cores):**
 
-```text
+```diagram
 ┌──────┐───┌──────┐───┌──────┐───┌──────┐
 │Core 0│   │Core 1│   │Core 2│   │Core 3│
 └──────┘───└──────┘───└──────┘───└──────┘
@@ -809,7 +809,7 @@ Latency increases with core count (must traverse more hops).
 
 **Mesh (used in Intel Xeon, AMD EPYC):**
 
-```text
+```diagram
 ┌──────┐────┌──────┐────┌──────┐────┌──────┐
 │Core 0│    │Core 1│    │Core 2│    │Core 3│
 └──┬───┘────└──┬───┘────└──┬───┘────└──┬───┘
@@ -828,7 +828,7 @@ a ring. Maximum hops = rows + columns - 2.
 
 **Crossbar:**
 
-```text
+```diagram
          Core0  Core1  Core2  Core3
           │      │      │      │
 Mem0 ─────┼──────┼──────┼──────┤
@@ -852,7 +852,7 @@ Any-to-any connection. Low latency but expensive (O(N^2) switches).
 
 **AMD Infinity Fabric:**
 
-```text
+```diagram
 ┌──────────────────┐        ┌──────────────────┐
 │   CCD 0          │        │   CCD 1          │
 │  (8 cores + L3)  │        │  (8 cores + L3)  │
@@ -948,7 +948,7 @@ False sharing occurs when two cores modify different variables that
 happen to reside on the same cache line. The coherence protocol
 bounces the line back and forth even though there is no true sharing.
 
-```text
+```diagram
 Cache line (64 bytes):
 ┌──────────────────────────────────────────────────────────────┐
 │  counter_core0  │  padding...  │  counter_core1  │  padding │
@@ -1019,7 +1019,7 @@ avoiding multiple caches all trying to respond simultaneously.
 Amdahl's Law gives the theoretical maximum speedup of a program when
 parallelizing only a fraction of it.
 
-```text
+```misc
                     1
 Speedup = ─────────────────────
            (1 - P) + P / N
@@ -1049,7 +1049,7 @@ The 10% serial portion is the bottleneck.
 
 ## Amdahl's Law: Visualization
 
-```text
+```diagram
     Speedup
     20 │
        │
@@ -1085,7 +1085,7 @@ The 10% serial portion is the bottleneck.
 Gustafson's Law offers a more optimistic view. Instead of fixing the
 problem size, it says: with more processors, we solve BIGGER problems.
 
-```text
+```misc
 Speedup = N - (1 - P) * (N - 1)
 
 Simplified:
@@ -1098,7 +1098,7 @@ Where:
 
 **Key difference from Amdahl:**
 
-```text
+```misc
 Amdahl:     Fixed problem size, add processors
             "How fast can we solve THIS problem?"
             Speedup is bounded by serial fraction
@@ -1166,7 +1166,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 **The parallelism stack on a modern server:**
 
-```text
+```diagram
 ┌────────────────────────────────────────────────────┐
 │  Cluster: 1000 nodes, MPI communication            │
 │  ┌──────────────────────────────────────────────┐  │
@@ -1188,7 +1188,7 @@ Gustafson:  Fixed time, scale problem with processors
 
 ## Summary: Parallel Architectures
 
-```text
+```diagram
 ┌─────────────────────────────────────────────────────────┐
 │           Parallel Architectures: Key Takeaways         │
 ├─────────────────────────────────────────────────────────┤

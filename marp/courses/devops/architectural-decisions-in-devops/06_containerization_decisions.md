@@ -601,7 +601,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 1. Reduces build context size and speeds up builds
 1. Prevents secrets from leaking into the image
 
-```text
+```gitignore
 # .dockerignore
 *
 !src/

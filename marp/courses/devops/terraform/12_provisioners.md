@@ -183,7 +183,7 @@ provisioner "remote-exec" {
 
 ## remote-exec Script Upload
 
-```text
+```misc
 When using script or scripts:
 
 1. Terraform uploads script to /tmp on remote host
@@ -352,7 +352,7 @@ provisioner "remote-exec" {
 }
 ```
 
-```text
+```misc
 on_failure = fail:
   Resource marked as tainted
   Next apply will recreate it

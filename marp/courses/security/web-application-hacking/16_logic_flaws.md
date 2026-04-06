@@ -17,7 +17,7 @@ Logic flaws are vulnerabilities that arise from **faulty application design** ra
 
 ## Categories of Logic Flaws
 
-```text
+```misc
 1. Workflow Bypass
    - Skipping steps in multi-step processes
 
@@ -41,7 +41,7 @@ Logic flaws are vulnerabilities that arise from **faulty application design** ra
 
 ## Workflow Bypass
 
-```text
+```misc
 Normal checkout flow:
   Cart -> Address -> Payment -> Confirmation -> Order
 
@@ -120,7 +120,7 @@ POST /api/cart
 
 ## Coupon / Discount Abuse
 
-```text
+```misc
 Attack 1: Reusing single-use coupons
   Apply coupon -> Remove item -> Add item -> Coupon still active
 
@@ -236,7 +236,7 @@ def register(request):
 
 ## Business Logic Bypass Examples
 
-```text
+```misc
 Example 1: Free premium features
   Regular user -> tries premium API endpoint -> works!
   (Authorization only checked in UI, not API)
@@ -264,7 +264,7 @@ Example 5: Referral abuse
 
 ## Testing for Logic Flaws - Methodology
 
-```text
+```misc
 1. Understand the application's business logic
    - What are the workflows?
    - What are the business rules?
@@ -327,7 +327,7 @@ for t in threads:
 
 ## Authorization Bypass Patterns
 
-```text
+```misc
 Pattern 1: Horizontal Privilege Escalation
   User A accesses User B's data
   /api/orders/USER_B_ORDER_ID
@@ -401,7 +401,7 @@ def process_order(order):
 1. **WebGoat** - Complete the "Insecure Direct Object References" lesson
 1. **Custom**: Identify 3 logic flaws in any practice app
 
-```text
+```misc
 Checklist:
 [ ] Can I modify prices in transit?
 [ ] Can I skip workflow steps?
@@ -414,7 +414,7 @@ Checklist:
 
 ## Two-Factor Authentication Logic Flaws
 
-```text
+```misc
 Flaw 1: 2FA code accepted for any user
   - Login as User A
   - At 2FA step, change user identifier to User B

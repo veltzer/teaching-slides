@@ -405,7 +405,7 @@ partition_stats.describe().show()
 ---
 ## Data Skew Solutions
 
-```text
+```diagram
 Solution 1: Salting (for joins)
 ┌────────────────────────────────────────────┐
 │  Original key: "hot_user_123"               │
@@ -691,7 +691,7 @@ base_df.unpersist()
 ---
 ## When to Cache and When Not To
 
-```text
+```diagram
 CACHE when:
 ┌──────────────────────────────────────────┐
 │  * DataFrame used in 2+ actions           │
@@ -830,7 +830,7 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ---
 ## Performance Tuning Checklist
 
-```text
+```diagram
 ┌──────────────────────────────────────────────┐
 │       Performance Tuning Checklist            │
 ├──────────────────────────────────────────────┤

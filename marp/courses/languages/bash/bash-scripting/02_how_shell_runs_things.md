@@ -10,7 +10,7 @@
 ---
 ## Command Line Parsing: Step by Step
 
-```text
+```misc
 Input: echo "hello world" > output.txt
 
 Step 1: Tokenize    -> [echo] ["hello world"] [>] [output.txt]

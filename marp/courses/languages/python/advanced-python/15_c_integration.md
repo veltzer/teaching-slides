@@ -43,7 +43,7 @@ def compute_intensive_function(data, iterations):
 - Potential speedups of 10-100x for CPU-bound code
 - Minimal benefit for I/O-bound operations
 
-```text
+```misc
 Task: Sum of squares of 10 million integers
 
 Python:

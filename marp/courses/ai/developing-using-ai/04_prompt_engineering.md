@@ -766,7 +766,7 @@ Analyze this code and provide results in this exact format:
 
 ## Code Fixes
 
-```language
+```template
 [Fixed code here]
 
 ## Estimated Impact

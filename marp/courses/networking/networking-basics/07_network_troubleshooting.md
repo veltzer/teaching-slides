@@ -7,7 +7,7 @@
 
 A systematic approach to network troubleshooting saves time and frustration.
 
-```text
+```diagram
 ┌─────────────────────────────────────────────┐
 │  1. Identify the problem                    │
 │     "What exactly isn't working?"           │
@@ -169,7 +169,7 @@ $ ping -c 3 -D 8.8.8.8
 
 ## What Ping Failures Mean
 
-```text
+```misc
 "Destination Host Unreachable"
   → Your gateway doesn't know how to reach the target
   → Check: ip route, gateway status
@@ -224,7 +224,7 @@ $ traceroute -A 8.8.8.8
 
 **How traceroute works:**
 
-```text
+```misc
 TTL=1: Packet reaches first router → router sends ICMP Time Exceeded
 TTL=2: Packet reaches second router → router sends ICMP Time Exceeded
 TTL=3: Packet reaches third router → router sends ICMP Time Exceeded
@@ -276,7 +276,7 @@ $ mtr -j -c 10 8.8.8.8
 
 ## Interpreting mtr Results
 
-```text
+```misc
 Case 1: Loss at one hop but not later
   Hop 3: 30% loss
   Hop 4: 0% loss
@@ -384,7 +384,7 @@ $ sudo tcpdump -i eth0 -nn 'tcp[tcpflags] & (tcp-syn|tcp-fin) != 0'
 
 ## Reading tcpdump Output
 
-```text
+```console
 $ sudo tcpdump -i eth0 -nn port 80
 
 15:30:01.123456 IP 10.0.0.5.54321 > 93.184.216.34.80: Flags [S], seq 1000, win 64240
@@ -413,7 +413,7 @@ The sequence above shows: TCP handshake (SYN, SYN-ACK, ACK), then data exchange 
 
 Wireshark provides a graphical interface for packet analysis, with powerful filtering and protocol decoding.
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────────┐
 │  Wireshark                                                    │
 ├──────────────────────────────────────────────────────────────┤
@@ -443,7 +443,7 @@ Wireshark provides a graphical interface for packet analysis, with powerful filt
 
 Wireshark has its own filter syntax (different from tcpdump BPF):
 
-```text
+```misc
 # By IP address
 ip.addr == 10.0.0.5
 ip.src == 10.0.0.5
@@ -483,7 +483,7 @@ tcp.port == 80 || tcp.port == 443
 
 ## Useful Wireshark Features
 
-```text
+```misc
 1. Capture filters (before capture, BPF syntax):
    host 10.0.0.5 and port 80
 

@@ -10,7 +10,7 @@
 
 ## What is Data Carving?
 
-```text
+```diagram
 Raw Disk Image:
 +-------+-------+-------+-------+-------+-------+-------+
 | Boot  | Used  | Free  | Used  | Free  | Free  | Used  |

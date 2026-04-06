@@ -139,7 +139,7 @@ git show 2b5e1e3
 
 **Example:**
 
-```text
+```misc
 blob 12
 Hello, Git!
 ```

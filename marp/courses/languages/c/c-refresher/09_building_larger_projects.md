@@ -305,7 +305,7 @@ Users of `stack.h` cannot access struct internals -- true information hiding.
 
 ## Project Directory Structure
 
-```text
+```tree
 project/
 ├── Makefile
 ├── include/             # Public headers

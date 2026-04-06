@@ -585,7 +585,7 @@ Asynchronous (Non-blocking):
 - Event-driven systems
 - Not ideal for CPU-bound tasks
 
-```text
+```misc
 Good Async Use Cases:
 - Web servers handling many connections
 - API clients making multiple requests
@@ -632,7 +632,7 @@ Less Suitable:
 - Python 3.6+: Improved async features
 - Ecosystem: asyncio, trio, curio, twisted, tornado
 
-```text
+```misc
 Timeline of Python Async Evolution:
 - Pre-3.4: Generator-based coroutines, third-party libraries
 - Python 3.4: asyncio introduced with @asyncio.coroutine

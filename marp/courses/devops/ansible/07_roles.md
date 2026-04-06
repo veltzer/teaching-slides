@@ -22,7 +22,7 @@
 
 ## Why Use Roles?
 
-```text
+```misc
 Without Roles:                    With Roles:
 site.yml (500 lines)              site.yml (20 lines)
   - install packages              roles/
@@ -39,7 +39,7 @@ site.yml (500 lines)              site.yml (20 lines)
 
 ## Role Directory Structure
 
-```text
+```tree
 roles/
 └── nginx/
     ├── defaults/
@@ -233,7 +233,7 @@ nginx_remove_default_site: true
 
 ## Role: templates
 
-```jinja2
+```jinja
 {# roles/nginx/templates/nginx.conf.j2 #}
 # Managed by Ansible - DO NOT EDIT
 
@@ -592,7 +592,7 @@ ansible-galaxy collection init myorg.mytools
 
 ## Collection Structure
 
-```text
+```tree
 myorg/
 └── mytools/
     ├── galaxy.yml         # Collection metadata
@@ -614,7 +614,7 @@ myorg/
 
 ## Project Layout with Roles
 
-```text
+```tree
 ansible-project/
 ├── ansible.cfg
 ├── requirements.yml

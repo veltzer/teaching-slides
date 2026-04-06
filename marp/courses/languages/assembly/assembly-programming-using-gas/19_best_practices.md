@@ -8,7 +8,7 @@
 
 Example:
 
-```x86asm
+```nasm
 .section .data
     # Data declarations
 
@@ -27,7 +27,7 @@ Example:
 
 Examples:
 
-```x86asm
+```nasm
 calculate_sum:
     # Function to calculate sum
 
@@ -44,7 +44,7 @@ current_index: .long 0
 
 Example:
 
-```x86asm
+```nasm
 # Calculate factorial of n (in eax)
 # Result stored in eax
 factorial:
@@ -72,7 +72,7 @@ factorial:
 
 Example:
 
-```x86asm
+```nasm
 .globl add_numbers
 add_numbers:
     push ebp
@@ -91,7 +91,7 @@ add_numbers:
 
 Example:
 
-```x86asm
+```nasm
 # eax: loop counter
 # ebx: array base address
 # ecx: current array element
@@ -105,7 +105,7 @@ Example:
 
 Example:
 
-```x86asm
+```nasm
 .align 16
 sse_data:
     .float 1.0, 2.0, 3.0, 4.0
@@ -118,7 +118,7 @@ sse_data:
 
 Example:
 
-```x86asm
+```nasm
     cmp eax, 0
     jl .error_handler
 
@@ -137,7 +137,7 @@ Example:
 - Improves readability and maintainability
 
 Example:
-```x86asm
+```nasm
 .macro push_all
     push eax
     push ebx
@@ -161,7 +161,7 @@ Example:
 - Align similar instructions
 
 Example:
-```x86asm
+```nasm
 .loop:
     mov eax, [ebx]
     add eax, ecx
@@ -180,7 +180,7 @@ Example:
 
 Example:
 
-```x86asm
+```nasm
 # File: math_utils.s
 # Author: John Doe
 # Date: 2023-09-07
@@ -195,7 +195,7 @@ Example:
 - Use it only when absolutely necessary
 
 Instead of:
-```x86asm
+```nasm
     mov byte [instruction+1], 42
 instruction:
     mov al, 0
@@ -211,7 +211,7 @@ Use variables or conditional execution
 - Use assertions to catch errors early
 
 Example:
-```x86asm
+```nasm
     call calculate_sum
     cmp eax, expected_sum
     je .test_passed

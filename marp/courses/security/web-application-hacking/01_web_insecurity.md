@@ -76,7 +76,7 @@
 
 ## Responsible Disclosure
 
-```text
+```diagram
 +------------------+     +------------------+     +------------------+
 |  Discover Vuln   | --> |  Report to Vendor| --> |  Vendor Patches  |
 +------------------+     +------------------+     +------------------+
@@ -94,7 +94,7 @@
 
 ## The CIA Triad in Web Context
 
-```text
+```diagram
            Confidentiality
                /\
               /  \
@@ -126,7 +126,7 @@
 
 ## The Kill Chain - Web Edition
 
-```text
+```misc
 1. Recon          -->  Discover target, technologies, endpoints
 1. Weaponize      -->  Craft payloads for identified vulns
 1. Deliver        -->  Send exploit via HTTP request
@@ -140,7 +140,7 @@
 
 ## Defense in Depth
 
-```text
+```diagram
 +-----------------------------------------------+
 |  Network Layer  (Firewall, IDS/IPS)           |
 |  +-------------------------------------------+|
@@ -162,7 +162,7 @@
 
 ## Web Application Architecture Overview
 
-```text
+```diagram
 +--------+     +--------+     +-----------+     +----------+
 | Browser| --> | Web    | --> | App       | --> | Database |
 | Client |     | Server |     | Server    |     | Server   |
@@ -240,7 +240,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## Security Testing Methodology
 
-```text
+```diagram
 +---> Reconnaissance
 |         |
 |         v
@@ -274,7 +274,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## Penetration Testing Report Structure
 
-```text
+```misc
 1. Executive Summary (1-2 pages)
    - Scope, timeline, overall risk rating
    - Critical findings in plain language
@@ -298,7 +298,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## CVSS Scoring for Pentesters
 
-```text
+```misc
 Common Vulnerability Scoring System (CVSS v3.1)
 
 Score Range -> Severity
@@ -325,7 +325,7 @@ Calculator: https://www.first.org/cvss/calculator/3.1
 
 ## Real-World Breach Case Studies
 
-```text
+```misc
 Equifax (2017) - 147 million records
   Vulnerability: Apache Struts RCE (CVE-2017-5638)
   Root cause: Unpatched server for 2 months

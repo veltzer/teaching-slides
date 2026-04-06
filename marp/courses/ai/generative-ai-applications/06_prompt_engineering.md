@@ -6,7 +6,7 @@
 
 The art and science of crafting inputs to get desired outputs from `LLM`s.
 
-```text
+```misc
 Poor prompt:
   "Tell me about dogs"
   → Long, unfocused essay about dogs in general
@@ -24,7 +24,7 @@ Good prompt:
 
 ## The Anatomy of a Good Prompt
 
-```text
+```diagram
 ┌──────────────────────────────────────────────┐
 │              PROMPT STRUCTURE                  │
 ├──────────────────────────────────────────────┤
@@ -111,7 +111,7 @@ CONSTRAINTS:
 
 ## Instruction Clarity — Be Specific
 
-```text
+```misc
 Vague: "Summarize this article"
 Better: "Summarize this article in 3 bullet points,
          each under 20 words, focusing on key findings."
@@ -200,7 +200,7 @@ Return results as: review_id | sentiment | confidence
 
 A systematic approach to prompt construction:
 
-```text
+```misc
 C - Capacity:    What role should the AI assume?
 R - Request:     What specifically do you want?
 I - Information: What context/data does it need?
@@ -288,7 +288,7 @@ review_prompt = code_review_template.substitute(
 
 ## Iterative Prompt Refinement
 
-```text
+```misc
 Iteration 1: "Write a regex for email validation"
 Result: Simple regex, misses edge cases
 
@@ -327,7 +327,7 @@ Process:
 
 ## Prompt Injection — Security Concern
 
-```text
+```diagram
 User-facing applications must guard against prompt injection:
 
 Normal user: "Translate 'hello' to French"
@@ -407,7 +407,7 @@ improved_prompt = get_completion(meta_prompt)
 
 ## Prompt Length vs. Quality Tradeoff
 
-```text
+```misc
                 Quality
                   │
                   │            ╱╲
@@ -578,7 +578,7 @@ OUTPUT FORMAT:
 
 ## Prompt Engineering Anti-Patterns
 
-```text
+```misc
 ANTI-PATTERN 1: THE KITCHEN SINK
   "Tell me everything about machine learning including
    history, types, algorithms, applications, math,

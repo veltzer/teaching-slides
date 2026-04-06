@@ -510,7 +510,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-```text
+```misc
 Default:    Destroy old --> Create new  (downtime)
 With flag:  Create new  --> Destroy old (zero downtime)
 ```

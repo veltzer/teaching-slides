@@ -127,7 +127,7 @@ v.data.f = 3.14;
 
 ## Struct Memory Layout and Padding
 
-```text
+```diagram
 struct Example {
     char  a;    /* 1 byte  */
     int   b;    /* 4 bytes */

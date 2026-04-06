@@ -364,7 +364,7 @@ Key considerations:
 1. The developer who reviews and integrates the code bears responsibility
 1. Company policies should explicitly address AI-generated code
 
-```text
+```misc
 # Example policy header for AI-assisted files
 # AI-ASSISTED: Portions of this file were generated with AI tools.
 # Reviewed by: developer@company.com
@@ -412,7 +412,7 @@ Essential policy areas:
 1. **Prohibited uses** -- security-critical crypto, compliance logic
 1. **Incident response** -- what to do when AI introduces a vulnerability
 
-```text
+```misc
 # .ai-policy.json (enforced by pre-commit hook)
 {
     "allowed_providers": ["anthropic", "openai"],

@@ -60,7 +60,7 @@ message:
 
 Example of using AES-NI:
 
-```x86asm
+```nasm
 aesenc xmm0, xmm1   ; AES encryption round
 ```
 
@@ -115,7 +115,7 @@ __global__ void add(int *a, int *b, int *c) {
 
 Example of loop unrolling:
 
-```x86asm
+```nasm
 .loop:
     mov eax, [esi]
     add [edi], eax
@@ -135,7 +135,7 @@ Example of loop unrolling:
 
 Example of CFI check:
 
-```x86asm
+```nasm
     call check_target
     jmp [function_pointer]
 

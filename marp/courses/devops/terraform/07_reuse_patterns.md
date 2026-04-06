@@ -511,7 +511,7 @@ module "services" {
 
 ## Private Module Registry
 
-```text
+```misc
 Options for sharing modules privately:
 
 1. Git repositories (GitHub, GitLab, Bitbucket)

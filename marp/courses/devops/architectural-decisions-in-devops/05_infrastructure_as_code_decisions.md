@@ -343,7 +343,7 @@ terraform force-unlock LOCK_ID
 ---
 ## State Organization Patterns
 
-```text
+```misc
 state/
   dev/
     network/terraform.tfstate

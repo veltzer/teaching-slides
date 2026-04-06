@@ -66,7 +66,7 @@ ansible-playbook site.yml -f 50
 # ~100MB per fork (varies with modules)
 ```
 
-```text
+```diagram
 forks=5 (default):
   Host1 ────────> Host2 ────────> Host3 ────────> Host4 ────────> Host5
   Then: Host6 ──> Host7 ──> Host8 ──> ...
@@ -410,7 +410,7 @@ strategy = mitogen_linear
 
 ## Performance Tuning Checklist
 
-```text
+```misc
 1. [ ] Increase forks (20-50)
 2. [ ] Enable SSH pipelining
 3. [ ] Enable SSH multiplexing (ControlMaster)
@@ -429,7 +429,7 @@ strategy = mitogen_linear
 
 ## Performance Comparison
 
-```text
+```misc
 Configuration                     Time for 100 hosts
 ---------------------------------------------------
 Default (5 forks, no pipelining)  ~30 minutes

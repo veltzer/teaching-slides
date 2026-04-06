@@ -20,7 +20,7 @@
 - Microservices and serverless applications
 - Data processing and analysis
 
-```text
+```misc
 Common Python Web Technology Stack:
 - Web Framework: Flask, Django, FastAPI
 - HTTP Client: requests, httpx, aiohttp

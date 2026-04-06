@@ -34,7 +34,7 @@ Total: **1100 points** available
 
 ## CTF Tips & Strategy
 
-```text
+```misc
 1. READ the challenge description carefully
 2. Start with LOW-hanging fruit (easy challenges)
 3. Take NOTES on everything you try
@@ -54,7 +54,7 @@ Time Management:
 
 ## CTF Methodology Reminder
 
-```text
+```diagram
 +--Reconnaissance---+
 | nmap full scan     |
 | Directory brute    |
@@ -197,7 +197,7 @@ No specific hints - use everything you've learned!
 
 ## CTF Scoring
 
-```text
+```diagram
 +--Team--+--Ch1--+--Ch2--+--Ch3--+--Ch4--+--Ch5--+--Ch6--+--Ch7--+--Total--+
 | Team A |  100  |  200  |  200  |  200  |  300  |  200  |  100  |  1300   |
 | Team B |  100  |  200  |    0  |  200  |  300  |    0  |    0  |   800   |
@@ -244,7 +244,7 @@ FLAG{the_flag_value}
 
 ## CTF Common Pitfalls
 
-```text
+```misc
 Things that waste time in CTFs:
 
 1. Not reading the challenge description carefully
@@ -309,7 +309,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ## Vulnerability Cheat Sheet Summary
 
-```text
+```diagram
 +--Vulnerability------+--Test Payload----+--Defense---------+
 | SQL Injection       | ' OR 1=1--       | Param queries    |
 | XSS (Reflected)     | <script>alert(1) | Output encoding  |
@@ -392,7 +392,7 @@ Boot2Root & CTF - Key takeaways:
 
 ## Top 10 Defensive Recommendations
 
-```text
+```misc
 1.  Use parameterized queries for ALL database access
 2.  Implement context-aware output encoding (XSS prevention)
 3.  Enforce multi-factor authentication
@@ -409,7 +409,7 @@ Boot2Root & CTF - Key takeaways:
 
 ## Security Testing Workflow - Summary
 
-```text
+```diagram
 +--Planning Phase---------+
 | Define scope & rules    |
 | Get written auth        |
@@ -461,7 +461,7 @@ Boot2Root & CTF - Key takeaways:
 
 ## Certifications Path
 
-```text
+```misc
 Entry Level:
   CompTIA Security+
   eJPT (eLearnSecurity)
@@ -486,7 +486,7 @@ Expert:
 
 ## Professional Pentesting Reporting
 
-```text
+```misc
 Executive Summary:
   - Overall risk rating
   - Key findings (3-5 bullet points)

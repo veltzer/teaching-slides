@@ -227,7 +227,7 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 
 ## String Memory Layout
 
-```text
+```diagram
 char greeting[] = "Hello";
 
 ┌─────┬─────┬─────┬─────┬─────┬─────┐
@@ -240,7 +240,7 @@ sizeof(greeting) = 6  (includes '\0')
 strlen(greeting) = 5  (excludes '\0')
 ```
 
-```text
+```diagram
 char *ptr = "Hello";
 
 Stack:                     Read-only data:

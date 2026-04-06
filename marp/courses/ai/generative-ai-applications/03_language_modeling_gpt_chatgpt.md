@@ -6,7 +6,7 @@
 
 A language model assigns probabilities to sequences of tokens:
 
-```text
+```misc
 P("The cat sat on the mat") = 0.0001
 P("The cat sat on the xyz") = 0.0000000001
 
@@ -24,7 +24,7 @@ Example:
 
 ## From N-grams to Neural Language Models
 
-```text
+```misc
 Evolution of Language Modeling:
 
 N-grams (1990s)     → Count word sequences in corpus
@@ -65,7 +65,7 @@ Transformers (2017) → Parallel attention over all positions
 
 ## GPT Architecture Deep Dive
 
-```text
+```diagram
 Input: "Explain quantum computing"
 
 ┌──────────────────────────────────────────┐
@@ -103,7 +103,7 @@ Input: "Explain quantum computing"
 
 GPT uses **causal masking** — each token can only attend to tokens before it:
 
-```text
+```misc
 Attention mask for "The cat sat on"
 
          The  cat  sat  on
@@ -155,7 +155,7 @@ class CausalSelfAttention(nn.Module):
 
 The training objective is simple: **predict the next token**.
 
-```text
+```misc
 Training example:
   Input:  "The weather today is"
   Target: "very sunny and warm"
@@ -185,7 +185,7 @@ loss = loss_fn(
 
 What GPT models are trained on:
 
-```text
+```diagram
 ┌───────────────────────────────────────────┐
 │           TRAINING DATA MIX               │
 ├───────────────────┬───────────────────────┤
@@ -210,7 +210,7 @@ What GPT models are trained on:
 
 Raw `GPT-3` is a **text completion** engine, not an **assistant**:
 
-```text
+```misc
 User: "What is the capital of France?"
 
 GPT-3 (base model) might continue:
@@ -231,7 +231,7 @@ ChatGPT (aligned model):
 
 ## ChatGPT Training — Three Stages
 
-```text
+```diagram
 Stage 1: PRE-TRAINING (unsupervised)
 ┌──────────────────────────────────┐
 │ Predict next token on web text   │
@@ -318,7 +318,7 @@ sft_examples = [
 
 ## Stage 3: RLHF — Reinforcement Learning from Human Feedback
 
-```text
+```diagram
 Step 1: Collect comparison data
 ┌─────────────────────────────────────────┐
 │ Prompt: "Write a haiku about coding"    │
@@ -373,7 +373,7 @@ loss = -torch.log(torch.sigmoid(r_w - r_l))
 
 ## RLHF — PPO Optimization
 
-```text
+```diagram
 PPO (Proximal Policy Optimization) loop:
 
 ┌──────────────────────────────────────┐
@@ -484,7 +484,7 @@ response = client.chat.completions.create(
 
 ## Temperature vs. Top-p — When to Use Which
 
-```text
+```misc
 Task-Based Recommendations:
 ─────────────────────────────────────────────
 Code generation:    temp=0.0-0.2, top_p=0.1
@@ -510,7 +510,7 @@ response = client.chat.completions.create(
 
 ## Comparing GPT with Other LLMs
 
-```text
+```diagram
 ┌─────────────┬──────────┬──────────┬──────────┬──────────┐
 │ Feature     │ GPT-4o   │ Claude 3 │ Gemini   │ LLaMA 3  │
 │             │          │ Opus     │ 1.5 Pro  │ 70B      │
@@ -533,7 +533,7 @@ response = client.chat.completions.create(
 
 A new category: models that "think step by step" internally
 
-```text
+```misc
 Standard model:
   Input → [single forward pass] → Output
 
@@ -561,7 +561,7 @@ The model uses **chain-of-thought at inference time**, trading compute for accur
 
 Smaller models can learn from larger ones:
 
-```text
+```diagram
 Teacher Model (GPT-4 level, 1T+ params)
          │
          │ Generate training data
@@ -598,7 +598,7 @@ Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
 | `MATH` | Competition math problems | ~85% |
 | `ARC-AGI` | Novel reasoning patterns | ~50% |
 
-```text
+```misc
 Benchmark saturation problem:
   As models approach 100% on existing benchmarks,
   we need harder tests. This is an ongoing arms race.
@@ -707,7 +707,7 @@ class SwiGLU(nn.Module):
 
 ## KV Cache — Speeding Up Inference
 
-```text
+```misc
 Without KV cache (naive):
   Step 1: Process ["The"]          → compute K,V for all
   Step 2: Process ["The", "cat"]   → RECOMPUTE K,V for all
@@ -740,7 +740,7 @@ for token in generated_tokens:
 
 Used by `LLaMA`, `Mistral`, and most modern models:
 
-```text
+```misc
 Traditional position encoding:
   Add a fixed vector based on position
   x' = x + PE(position)
@@ -774,7 +774,7 @@ def apply_rope(x, positions, dim):
 
 Memory-efficient attention used in `LLaMA 2/3`, `Mistral`:
 
-```text
+```diagram
 Multi-Head Attention (MHA):
   Q: 32 heads    K: 32 heads    V: 32 heads
   Each head has its own Q, K, V projections

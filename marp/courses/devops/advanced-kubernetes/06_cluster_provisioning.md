@@ -16,7 +16,7 @@ Advanced Kubernetes Course - Day 2, Module 1
 
 ## `kubeadm` Architecture
 
-```text
+```diagram
 ┌──────────────────────────────────────────┐
 │             Control Plane Node            │
 │                                          │
@@ -146,7 +146,7 @@ sudo kubeadm join k8s-api.example.com:6443 \
   --certificate-key abc456...
 ```
 
-```text
+```diagram
         ┌─── Load Balancer ───┐
         │  k8s-api.example.com │
         └──┬────────┬────────┬─┘
@@ -217,7 +217,7 @@ sudo vi /etc/kubernetes/manifests/etcd.yaml
 
 Declarative `Kubernetes`-style `APIs` to create, configure, and manage clusters:
 
-```text
+```diagram
 ┌──────────────────────────────────────────────┐
 │           Management Cluster                  │
 │                                              │

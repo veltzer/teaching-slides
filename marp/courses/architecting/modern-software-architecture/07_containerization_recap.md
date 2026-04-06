@@ -235,7 +235,7 @@ CMD ["node", "server.js"]
 ---
 ## The .dockerignore File
 
-```text
+```gitignore
 .git
 .gitignore
 node_modules

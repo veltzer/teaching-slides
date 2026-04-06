@@ -46,7 +46,7 @@ document.getElementById('content').innerHTML = hash;
 
 An attacker can craft a URL like:
 
-```url
+```http
 http://example.com/#<script>alert('XSS')</script>
 ```
 
@@ -134,7 +134,7 @@ The last true sets the HttpOnly flag for the cookie.
 
 ## XSS Attack Flow Diagram
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────────┐
 │              Stored XSS Attack Flow                          │
 │                                                              │
@@ -301,7 +301,7 @@ Content-Security-Policy:
     report-uri /csp-report;
 ```
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────┐
 │          CSP Directive Reference                  │
 ├──────────────────────────────────────────────────┤

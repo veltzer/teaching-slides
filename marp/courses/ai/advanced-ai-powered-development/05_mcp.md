@@ -65,7 +65,7 @@
 - Communication uses **JSON-RPC 2.0** message format
 - Lifecycle: `initialize` -> capability negotiation -> operation -> `shutdown`
 
-```text
+```tree
 Host (Claude Code)
   ├── MCP Client A ──── MCP Server (filesystem)
   ├── MCP Client B ──── MCP Server (github)
@@ -141,7 +141,7 @@ Host (Claude Code)
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
 1. **Lazy loading** -- connect to MCP servers on demand, not all at startup
 
-```text
+```diagram
 ┌─────────────────────────────────────────┐
 │ Context Window (200k tokens)            │
 │ ┌─────────────┐ ┌────────────────────┐  │
@@ -216,7 +216,7 @@ def service_health(name: str) -> str:
 - Enables agentic patterns where tools need reasoning mid-execution
 - The host always controls approval and model selection
 
-```text
+```diagram
 Server: "I found 3 schema migration conflicts.
          Let me ask the LLM to suggest a resolution."
          ──> sampling/createMessage ──> Host

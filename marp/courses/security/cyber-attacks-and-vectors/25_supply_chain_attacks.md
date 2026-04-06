@@ -111,7 +111,7 @@
 ---
 ## Case Study: xz-utils Backdoor (2024)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          xz-utils Backdoor (CVE-2024-3094)               │
 │                                                          │
@@ -143,7 +143,7 @@
 ---
 ## Dependency Confusion
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │          Dependency Confusion Attack                      │
 │                                                          │
@@ -413,7 +413,7 @@ npm publish --provenance
 ---
 ## SLSA Framework (Supply-chain Levels for Software Artifacts)
 
-```text
+```diagram
 ┌──────────────────────────────────────────────────────────┐
 │  SLSA Levels (pronounced "salsa")                        │
 │  https://slsa.dev                                        │

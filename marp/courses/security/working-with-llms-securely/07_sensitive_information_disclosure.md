@@ -144,7 +144,7 @@ def filter_sensitive_output(response: str) -> str:
 
 ## Mitigation: System Prompt Protection
 
-```text
+```misc
 Strategies to protect system prompts:
 
 1. Keep secrets OUT of system prompts entirely

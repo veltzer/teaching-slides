@@ -20,7 +20,7 @@ The **attack surface** is the sum of all points where an attacker can try to ent
 
 ## Attack Surface Mapping Methodology
 
-```text
+```misc
 1. Enumerate all visible functionality
 2. Discover hidden content
 3. Map authentication mechanisms
@@ -35,7 +35,7 @@ The **attack surface** is the sum of all points where an attacker can try to ent
 
 ## Functionality Mapping
 
-```text
+```misc
 Target Application Map:
 =======================
 Public:
@@ -64,7 +64,7 @@ Admin:
 
 ## Data Flow Diagram
 
-```text
+```diagram
                     +--------+
                     | User   |
                     | Browser|
@@ -98,7 +98,7 @@ Admin:
 
 ## Trust Boundaries
 
-```text
+```diagram
 +--Untrusted (Internet)----------+
 |  User Browser                  |
 |  Third-party APIs              |
@@ -126,7 +126,7 @@ Each boundary crossing needs validation!
 
 ## Authentication Surface
 
-```text
+```diagram
 Authentication Entry Points:
 +--Mechanism-----------+--Attack Vector-----------+
 | Login form           | Brute force, SQLi        |
@@ -172,7 +172,7 @@ DELETE /api/users/1    -> 200
 
 ## IDOR (Insecure Direct Object Reference) Mapping
 
-```text
+```misc
 Identify all numeric/predictable identifiers:
 
 /api/users/123        <- Try 124, 125, 1, 0
@@ -216,7 +216,7 @@ curl -X POST http://target.com/graphql \
 
 ## Third-Party Component Inventory
 
-```text
+```output
 Component             Version    Known CVEs
 ---------             -------    ----------
 jQuery                3.3.1      CVE-2019-11358 (XSS)
@@ -254,7 +254,7 @@ CKEditor              4.11.0     Multiple XSS
 
 ## Creating the Attack Surface Report
 
-```text
+```misc
 Target: https://target.com
 Date: 2024-01-15
 Tester: [Your Name]
@@ -324,7 +324,7 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ## Common Web Application Architectures
 
-```text
+```misc
 Monolithic:
   Browser -> Web Server -> App (all-in-one) -> Database
 
@@ -348,7 +348,7 @@ Jamstack:
 
 ## Documenting Trust Boundaries
 
-```text
+```diagram
 Trust Boundary Matrix:
 +--From/To-------+--Browser--+--Web Srv--+--App Srv--+--DB--+
 | Browser        |     -     | Untrusted | N/A       | N/A  |
@@ -369,7 +369,7 @@ At EACH boundary crossing, ask:
 
 ## Identifying Business-Critical Functions
 
-```text
+```diagram
 High-Value Targets:
 +--Function-----------+--Risk---------+--Priority--+
 | Payment processing  | Financial     | Critical   |
@@ -414,7 +414,7 @@ GET    /api/files/{name}    -> Test path traversal
 
 ## Creating Attack Trees
 
-```text
+```tree
 Goal: Access Admin Panel
 ├── Direct Access
 │   ├── Guess admin URL (/admin, /administrator)
