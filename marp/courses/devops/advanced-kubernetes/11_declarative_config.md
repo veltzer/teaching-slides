@@ -37,25 +37,30 @@ kubectl apply -f deployment.yaml
 
 ## How `kubectl apply` Works
 
-```diagram
-┌──────────────┐
-│  YAML File   │ (desired state)
-│  (local)     │
-└──────┬───────┘
-       │ kubectl apply -f
-       ▼
-┌──────────────────────────────┐
-│     Three-Way Merge          │
-│                              │
-│  1. Last-applied-config      │
-│     (annotation on object)   │
-│  2. Live object state        │
-│  3. New desired state        │
-│                              │
-│  Result: Strategic merge     │
-│  patch sent to API server    │
-└──────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="290">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- YAML File box -->
+  <rect x="130" y="10" width="160" height="65" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="210" y="37" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">YAML File</text>
+  <text x="210" y="56" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(desired state – local)</text>
+  <!-- arrow down -->
+  <line x1="210" y1="75" x2="210" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="215" y="93" font-family="sans-serif" font-size="11" fill="#333">kubectl apply -f</text>
+  <!-- Three-Way Merge box -->
+  <rect x="60" y="100" width="300" height="170" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="210" y="122" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Three-Way Merge</text>
+  <text x="75" y="150" font-family="sans-serif" font-size="12" fill="#333">1. Last-applied-config</text>
+  <text x="90" y="168" font-family="sans-serif" font-size="11" fill="#555">(annotation on object)</text>
+  <text x="75" y="192" font-family="sans-serif" font-size="12" fill="#333">2. Live object state</text>
+  <text x="75" y="216" font-family="sans-serif" font-size="12" fill="#333">3. New desired state</text>
+  <line x1="70" y1="226" x2="350" y2="226" stroke="#aaa" stroke-width="1"/>
+  <text x="75" y="244" font-family="sans-serif" font-size="12" fill="#333">Result: Strategic merge patch</text>
+  <text x="75" y="261" font-family="sans-serif" font-size="11" fill="#555">sent to API server</text>
+</svg>
 
 The `kubectl.kubernetes.io/last-applied-configuration` annotation stores the previous apply.
 
@@ -426,15 +431,32 @@ helm uninstall myrelease -n production
 
 ## GitOps with `ArgoCD`
 
-```diagram
-┌────────────┐    ┌──────────────┐    ┌─────────────────┐
-│ Git Repo   │───▶│   ArgoCD     │───▶│  Kubernetes     │
-│            │    │              │    │  Cluster        │
-│ manifests/ │    │ Sync desired │    │                 │
-│ kustomize/ │    │ state to     │    │ Actual state    │
-│ helm/      │    │ cluster      │    │ matches desired │
-└────────────┘    └──────────────┘    └─────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="110">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Git Repo -->
+  <rect x="10" y="20" width="165" height="70" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="92" y="45" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Git Repo</text>
+  <text x="20" y="63" font-family="monospace" font-size="11" fill="#555">manifests/  kustomize/</text>
+  <text x="20" y="79" font-family="monospace" font-size="11" fill="#555">helm/</text>
+  <!-- arrow -->
+  <line x1="175" y1="55" x2="220" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- ArgoCD -->
+  <rect x="220" y="20" width="165" height="70" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="302" y="45" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">ArgoCD</text>
+  <text x="230" y="63" font-family="sans-serif" font-size="11" fill="#555">Sync desired state</text>
+  <text x="230" y="79" font-family="sans-serif" font-size="11" fill="#555">to cluster</text>
+  <!-- arrow -->
+  <line x1="385" y1="55" x2="430" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Kubernetes -->
+  <rect x="430" y="20" width="175" height="70" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="517" y="45" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Kubernetes Cluster</text>
+  <text x="440" y="63" font-family="sans-serif" font-size="11" fill="#555">Actual state matches</text>
+  <text x="440" y="79" font-family="sans-serif" font-size="11" fill="#555">desired state</text>
+</svg>
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1

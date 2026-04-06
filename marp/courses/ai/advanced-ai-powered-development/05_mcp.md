@@ -141,15 +141,19 @@ Host (Claude Code)
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
 1. **Lazy loading** -- connect to MCP servers on demand, not all at startup
 
-```diagram
-┌─────────────────────────────────────────┐
-│ Context Window (200k tokens)            │
-│ ┌─────────────┐ ┌────────────────────┐  │
-│ │ Tool Schemas │ │ Conversation       │  │
-│ │  ~2k tokens  │ │   ~198k tokens     │  │
-│ └─────────────┘ └────────────────────┘  │
-└─────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160">
+  <!-- outer box -->
+  <rect x="10" y="10" width="540" height="140" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222">Context Window (200k tokens)</text>
+  <!-- Tool Schemas -->
+  <rect x="25" y="42" width="185" height="90" rx="4" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+  <text x="117" y="65" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Tool Schemas</text>
+  <text x="117" y="85" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">~2k tokens</text>
+  <!-- Conversation -->
+  <rect x="230" y="42" width="305" height="90" rx="4" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+  <text x="382" y="65" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Conversation</text>
+  <text x="382" y="85" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">~198k tokens</text>
+</svg>
 
 - Audit your tool count regularly -- fewer, well-designed tools outperform many narrow ones
 
@@ -216,13 +220,30 @@ def service_health(name: str) -> str:
 - Enables agentic patterns where tools need reasoning mid-execution
 - The host always controls approval and model selection
 
-```diagram
-Server: "I found 3 schema migration conflicts.
-         Let me ask the LLM to suggest a resolution."
-         ──> sampling/createMessage ──> Host
-Host:    routes to LLM, returns completion
-Server:  uses completion to finalize its output
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="170">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Server box -->
+  <rect x="10" y="20" width="190" height="65" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="105" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
+  <text x="105" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Needs LLM assistance</text>
+  <!-- Arrow Server → Host -->
+  <line x1="200" y1="40" x2="360" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="280" y="33" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle">sampling/createMessage</text>
+  <!-- Host box -->
+  <rect x="360" y="20" width="190" height="65" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="455" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host</text>
+  <text x="455" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Routes to LLM, returns completion</text>
+  <!-- Arrow Host → Server (return) -->
+  <line x1="360" y1="70" x2="200" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Server uses result -->
+  <rect x="10" y="100" width="190" height="55" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="105" y="122" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
+  <text x="105" y="142" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Uses completion to finalize output</text>
+</svg>
 
 - Sampling keeps the server stateless while enabling multi-step reasoning
 

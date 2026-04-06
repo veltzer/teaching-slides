@@ -226,17 +226,84 @@ According to Stack Overflow Developer Survey:
 ## Snapshots, Not Differences
 
 **SVN/CVS** - Stores differences (deltas)
-```diagram
-File A: version 1 → +5 lines → -2 lines → +1 line
-File B: version 1 → +10 lines → -5 lines → +3 lines
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="130">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- File A row -->
+  <text x="10" y="38" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">File A:</text>
+  <rect x="70" y="20" width="80" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="110" y="42" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">version 1</text>
+  <line x1="150" y1="37" x2="185" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="185" y="20" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="220" y="42" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+5 lines</text>
+  <line x1="255" y1="37" x2="290" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="290" y="20" width="70" height="34" rx="4" fill="#ffebee" stroke="#555" stroke-width="1.5"/>
+  <text x="325" y="42" font-family="monospace" font-size="12" fill="#c62828" text-anchor="middle">-2 lines</text>
+  <line x1="360" y1="37" x2="395" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="395" y="20" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="430" y="42" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+1 line</text>
+
+  <!-- File B row -->
+  <text x="10" y="100" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">File B:</text>
+  <rect x="70" y="82" width="80" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="110" y="104" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">version 1</text>
+  <line x1="150" y1="99" x2="185" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="185" y="82" width="80" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="225" y="104" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+10 lines</text>
+  <line x1="265" y1="99" x2="300" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="300" y="82" width="70" height="34" rx="4" fill="#ffebee" stroke="#555" stroke-width="1.5"/>
+  <text x="335" y="104" font-family="monospace" font-size="12" fill="#c62828" text-anchor="middle">-5 lines</text>
+  <line x1="370" y1="99" x2="405" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="405" y="82" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="440" y="104" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+3 lines</text>
+</svg>
 
 **Git** - Stores snapshots
-```diagram
-Commit 1: [FileA-v1] [FileB-v1] [FileC-v1]
-Commit 2: [FileA-v2] [FileB-v1] [FileC-v2]
-Commit 3: [FileA-v2] [FileB-v2] [FileC-v3]
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="160">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- headers -->
+  <text x="10" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Commit</text>
+  <text x="110" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File A</text>
+  <text x="250" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File B</text>
+  <text x="390" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File C</text>
+
+  <!-- Commit 1 -->
+  <rect x="10" y="26" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="50" y="48" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 1</text>
+  <rect x="105" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="165" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileA-v1</text>
+  <rect x="245" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="305" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileB-v1</text>
+  <rect x="385" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="445" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileC-v1</text>
+
+  <!-- Commit 2 -->
+  <rect x="10" y="68" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="50" y="90" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 2</text>
+  <rect x="105" y="68" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="165" y="90" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileA-v2</text>
+  <rect x="245" y="68" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="305" y="90" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileB-v1</text>
+  <rect x="385" y="68" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="445" y="90" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileC-v2</text>
+
+  <!-- Commit 3 -->
+  <rect x="10" y="110" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="50" y="132" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 3</text>
+  <rect x="105" y="110" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="165" y="132" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileA-v2</text>
+  <rect x="245" y="110" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="305" y="132" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileB-v2</text>
+  <rect x="385" y="110" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="445" y="132" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileC-v3</text>
+</svg>
 
 ## If files don't change, Git just links to the previous identical file
 

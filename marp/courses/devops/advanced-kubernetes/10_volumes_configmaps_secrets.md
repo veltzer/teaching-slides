@@ -31,23 +31,38 @@ Advanced Kubernetes Course - Day 2, Module 5
 
 ## `PersistentVolume` and `PersistentVolumeClaim`
 
-```diagram
-┌─ Administrator ──┐    ┌─ Developer ────────┐
-│                  │    │                    │
-│ PersistentVolume │◄───│ PersistentVolume   │
-│ (PV)             │    │ Claim (PVC)        │
-│                  │    │                    │
-│ capacity: 100Gi  │    │ request: 50Gi      │
-│ accessMode: RWO  │    │ accessMode: RWO    │
-│ storageClass: ssd│    │ storageClass: ssd  │
-└──────────────────┘    └────────────────────┘
-         │
-         ▼
-┌──────────────────┐
-│ Actual Storage   │
-│ (EBS, NFS, etc.) │
-└──────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="230">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+    <marker id="arrb" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto">
+      <path d="M8,0 L8,6 L0,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Administrator / PV box -->
+  <rect x="10" y="10" width="230" height="130" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="125" y="32" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">Administrator</text>
+  <text x="125" y="52" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">PersistentVolume (PV)</text>
+  <text x="20" y="72"  font-family="monospace" font-size="11" fill="#333">capacity:    100Gi</text>
+  <text x="20" y="90"  font-family="monospace" font-size="11" fill="#333">accessMode:  RWO</text>
+  <text x="20" y="108" font-family="monospace" font-size="11" fill="#333">storageClass: ssd</text>
+  <!-- Developer / PVC box -->
+  <rect x="310" y="10" width="240" height="130" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="430" y="32" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">Developer</text>
+  <text x="430" y="52" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">PVC</text>
+  <text x="320" y="72"  font-family="monospace" font-size="11" fill="#333">request:      50Gi</text>
+  <text x="320" y="90"  font-family="monospace" font-size="11" fill="#333">accessMode:   RWO</text>
+  <text x="320" y="108" font-family="monospace" font-size="11" fill="#333">storageClass:  ssd</text>
+  <!-- bidirectional arrow PV ↔ PVC -->
+  <line x1="240" y1="75" x2="310" y2="75" stroke="#555" stroke-width="1.5" marker-start="url(#arrb)" marker-end="url(#arr)"/>
+  <!-- arrow PV → Actual Storage -->
+  <line x1="125" y1="140" x2="125" y2="175" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Actual Storage -->
+  <rect x="30" y="175" width="190" height="48" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="125" y="197" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Actual Storage</text>
+  <text x="125" y="214" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(EBS, NFS, etc.)</text>
+</svg>
 
 ---
 
@@ -219,29 +234,38 @@ spec:
 
 ## `CSI` Driver Architecture
 
-```diagram
-┌─────────────────────────────────────────────┐
-│               Kubernetes                     │
-│                                             │
-│  ┌──────────┐   ┌────────────────────────┐  │
-│  │ kubelet  │──▶│  CSI Node Plugin       │  │
-│  │          │   │  (DaemonSet)           │  │
-│  └──────────┘   │                        │  │
-│                 │  NodeStageVolume()      │  │
-│                 │  NodePublishVolume()    │  │
-│                 └────────────────────────┘  │
-│                                             │
-│  ┌──────────────────┐  ┌────────────────┐   │
-│  │ CSI Controller   │  │ External       │   │
-│  │ Plugin           │  │ Provisioner    │   │
-│  │ (Deployment)     │  │ Attacher       │   │
-│  │                  │  │ Resizer        │   │
-│  │ CreateVolume()   │  │ Snapshotter    │   │
-│  │ DeleteVolume()   │  │                │   │
-│  │ ControllerPublish│  │                │   │
-│  └──────────────────┘  └────────────────┘   │
-└─────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="300">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- outer Kubernetes box -->
+  <rect x="10" y="10" width="600" height="280" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Kubernetes</text>
+  <!-- kubelet -->
+  <rect x="30" y="48" width="130" height="50" rx="4" fill="#fff" stroke="#555" stroke-width="1.5"/>
+  <text x="95" y="78" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">kubelet</text>
+  <!-- arrow kubelet → CSI Node Plugin -->
+  <line x1="160" y1="73" x2="210" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- CSI Node Plugin -->
+  <rect x="210" y="48" width="210" height="110" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
+  <text x="315" y="70" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">CSI Node Plugin</text>
+  <text x="315" y="88" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(DaemonSet)</text>
+  <text x="220" y="112" font-family="monospace" font-size="11" fill="#333">NodeStageVolume()</text>
+  <text x="220" y="130" font-family="monospace" font-size="11" fill="#333">NodePublishVolume()</text>
+  <!-- CSI Controller Plugin -->
+  <rect x="30" y="185" width="240" height="90" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="150" y="207" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">CSI Controller Plugin</text>
+  <text x="150" y="223" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Deployment)</text>
+  <text x="40" y="243" font-family="monospace" font-size="11" fill="#333">CreateVolume()</text>
+  <text x="40" y="260" font-family="monospace" font-size="11" fill="#333">DeleteVolume()  ControllerPublish()</text>
+  <!-- External Provisioner -->
+  <rect x="290" y="185" width="300" height="90" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="440" y="207" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">External Sidecars</text>
+  <text x="300" y="227" font-family="monospace" font-size="11" fill="#333">Provisioner   Attacher</text>
+  <text x="300" y="247" font-family="monospace" font-size="11" fill="#333">Resizer       Snapshotter</text>
+</svg>
 
 ---
 

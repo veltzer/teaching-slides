@@ -347,16 +347,43 @@ CMD ["main.py"]
 
 ## Layer Caching - How It Works
 
-```misc
-Dockerfile instruction     Cache behavior
-─────────────────────     ──────────────
-FROM ubuntu:22.04     →   Cached if image exists
-RUN apt-get update    →   Cached if previous layers unchanged
-COPY package.json .   →   INVALIDATED if file changed
-RUN npm install       →   INVALIDATED (cache broken above)
-COPY . .              →   INVALIDATED (source code changes)
-RUN npm run build     →   INVALIDATED (cache broken above)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="230">
+  <!-- header row -->
+  <rect x="10" y="10" width="280" height="32" rx="0" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="150" y="31" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Dockerfile Instruction</text>
+  <rect x="292" y="10" width="318" height="32" rx="0" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="451" y="31" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Cache Behavior</text>
+  <!-- rows -->
+  <rect x="10" y="42" width="280" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="61" font-family="monospace" font-size="12" fill="#222">FROM ubuntu:22.04</text>
+  <rect x="292" y="42" width="318" height="28" fill="#e8f5e9" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="61" font-family="sans-serif" font-size="12" fill="#2e7d32">✓ Cached if image exists</text>
+
+  <rect x="10" y="70" width="280" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="89" font-family="monospace" font-size="12" fill="#222">RUN apt-get update</text>
+  <rect x="292" y="70" width="318" height="28" fill="#e8f5e9" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="89" font-family="sans-serif" font-size="12" fill="#2e7d32">✓ Cached if previous layers unchanged</text>
+
+  <rect x="10" y="98" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="117" font-family="monospace" font-size="12" fill="#222">COPY package.json .</text>
+  <rect x="292" y="98" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="117" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED if file changed</text>
+
+  <rect x="10" y="126" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="145" font-family="monospace" font-size="12" fill="#222">RUN npm install</text>
+  <rect x="292" y="126" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="145" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
+
+  <rect x="10" y="154" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="173" font-family="monospace" font-size="12" fill="#222">COPY . .</text>
+  <rect x="292" y="154" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="173" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (source code changes)</text>
+
+  <rect x="10" y="182" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
+  <text x="20" y="201" font-family="monospace" font-size="12" fill="#222">RUN npm run build</text>
+  <rect x="292" y="182" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
+  <text x="302" y="201" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
+</svg>
 
 **Rule:** Once a layer cache is invalidated, all subsequent layers rebuild.
 
@@ -669,17 +696,22 @@ dive myapp:latest --ci
 #   - Total image size
 ```
 
-```diagram
-┌─ Layers ──────────────────────────┐
-│ 5.6 MB  FROM alpine:3.19         │
-│ 1.2 kB  COPY package*.json       │
-│ 15 MB   RUN npm ci               │
-│ 234 B   COPY . .                 │
-├─ Layer Contents ──────────────────┤
-│ /app/node_modules/               │
-│ /app/package.json                │
-└───────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200">
+  <!-- outer box -->
+  <rect x="10" y="10" width="400" height="180" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="20" y="32" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">Layers</text>
+  <line x1="10" y1="38" x2="410" y2="38" stroke="#333" stroke-width="1"/>
+  <!-- layer rows -->
+  <text x="20" y="60" font-family="monospace" font-size="12" fill="#222"> 5.6 MB  FROM alpine:3.19</text>
+  <text x="20" y="80" font-family="monospace" font-size="12" fill="#222"> 1.2 kB  COPY package*.json</text>
+  <text x="20" y="100" font-family="monospace" font-size="12" fill="#222">  15 MB  RUN npm ci</text>
+  <text x="20" y="120" font-family="monospace" font-size="12" fill="#222"> 234 B   COPY . .</text>
+  <!-- divider -->
+  <line x1="10" y1="128" x2="410" y2="128" stroke="#333" stroke-width="1"/>
+  <text x="20" y="147" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">Layer Contents</text>
+  <text x="20" y="165" font-family="monospace" font-size="12" fill="#555">/app/node_modules/</text>
+  <text x="20" y="183" font-family="monospace" font-size="12" fill="#555">/app/package.json</text>
+</svg>
 
 ---
 

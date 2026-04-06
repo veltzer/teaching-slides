@@ -12,19 +12,28 @@
 
 ## Reuse Strategies in Terraform
 
-```diagram
-+------------------+     +------------------+
-| Workspaces       |     | Modules          |
-| Same config,     |     | Reusable config  |
-| different state  |     | components       |
-+------------------+     +------------------+
-
-+------------------+     +------------------+
-| Outputs          |     | Remote State     |
-| Export values    |     | Cross-project    |
-| from configs     |     | data sharing     |
-+------------------+     +------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="200">
+  <!-- Workspaces -->
+  <rect x="10" y="10" width="230" height="80" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="125" y="35" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Workspaces</text>
+  <text x="125" y="55" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Same config,</text>
+  <text x="125" y="73" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">different state</text>
+  <!-- Modules -->
+  <rect x="280" y="10" width="230" height="80" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="395" y="35" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Modules</text>
+  <text x="395" y="55" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Reusable config</text>
+  <text x="395" y="73" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">components</text>
+  <!-- Outputs -->
+  <rect x="10" y="110" width="230" height="80" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="125" y="135" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Outputs</text>
+  <text x="125" y="155" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Export values</text>
+  <text x="125" y="173" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">from configs</text>
+  <!-- Remote State -->
+  <rect x="280" y="110" width="230" height="80" rx="4" fill="#f3e5f5" stroke="#333" stroke-width="1.5"/>
+  <text x="395" y="135" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Remote State</text>
+  <text x="395" y="155" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Cross-project</text>
+  <text x="395" y="173" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">data sharing</text>
+</svg>
 
 ---
 
@@ -452,22 +461,48 @@ module "database" {
 
 ## Module Composition Diagram
 
-```diagram
-+----------------+
-|  Root Module   |
-+-------+--------+
-        |
-   +----+----+----+--------+
-   |         |    |        |
-   v         v    v        v
-+-----+ +----+ +---+ +--------+
-| VPC | | SG | |EC2| |  RDS   |
-+-----+ +----+ +---+ +--------+
-   |         |    ^        ^
-   |         |    |        |
-   +---------+----+--------+
-     (outputs flow between modules)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="270">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Root Module -->
+  <rect x="180" y="10" width="160" height="40" rx="4" fill="#7b1fa2" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="35" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Root Module</text>
+
+  <!-- trunk down -->
+  <line x1="260" y1="50" x2="260" y2="80" stroke="#555" stroke-width="1.5"/>
+  <!-- horizontal bar -->
+  <line x1="50" y1="80" x2="470" y2="80" stroke="#555" stroke-width="1.5"/>
+  <!-- verticals to modules -->
+  <line x1="50"  y1="80" x2="50"  y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="175" y1="80" x2="175" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="320" y1="80" x2="320" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="470" y1="80" x2="470" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- VPC -->
+  <rect x="10" y="110" width="80" height="50" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="50" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">VPC</text>
+  <!-- SG -->
+  <rect x="130" y="110" width="80" height="50" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
+  <text x="170" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">SG</text>
+  <!-- EC2 -->
+  <rect x="280" y="110" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="320" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">EC2</text>
+  <!-- RDS -->
+  <rect x="430" y="110" width="80" height="50" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
+  <text x="470" y="140" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">RDS</text>
+
+  <!-- output arrows: VPC → EC2, SG → EC2, SG → RDS -->
+  <line x1="90" y1="160" x2="280" y2="160" stroke="#888" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <line x1="210" y1="155" x2="280" y2="155" stroke="#888" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <line x1="210" y1="145" x2="430" y2="145" stroke="#888" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+
+  <!-- legend -->
+  <line x1="30" y1="220" x2="80" y2="220" stroke="#888" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arr)"/>
+  <text x="90" y="225" font-family="sans-serif" font-size="11" fill="#555">outputs flow between modules</text>
+</svg>
 
 ---
 
