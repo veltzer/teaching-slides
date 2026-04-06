@@ -39,30 +39,34 @@
 ---
 ## Credential Stuffing Attacks
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Credential Stuffing Flow                         │
-│                                                          │
-│  1. Data breach at Site A leaks millions of              │
-│     username:password pairs                              │
-│                                                          │
-│  2. Attacker obtains the leaked credentials              │
-│     (dark web, paste sites, etc.)                        │
-│                                                          │
-│  3. Automated tool tries each credential pair            │
-│     against Site B, Site C, Site D...                    │
-│                                                          │
-│  ┌──────────┐    user1:pass1    ┌───────────┐           │
-│  │          │───────────────────>│  Site B   │ FAIL      │
-│  │ Attacker │    user2:pass2    │           │           │
-│  │ (botnet) │───────────────────>│           │ SUCCESS!  │
-│  │          │    user3:pass3    │           │           │
-│  │          │───────────────────>│           │ FAIL      │
-│  └──────────┘                   └───────────┘           │
-│                                                          │
-│  Works because 65% of people reuse passwords             │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="260" font-family="sans-serif">
+  <defs>
+    <marker id="arw1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="658" height="258" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Credential Stuffing Flow</text>
+  <text x="14" y="54" font-size="13" fill="#333">1. Data breach at Site A leaks millions of username:password pairs</text>
+  <text x="14" y="72" font-size="13" fill="#333">2. Attacker obtains the leaked credentials (dark web, paste sites, etc.)</text>
+  <text x="14" y="90" font-size="13" fill="#333">3. Automated tool tries each credential pair against Site B, Site C, Site D...</text>
+  <rect x="14" y="106" width="110" height="76" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="69" y="140" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Attacker</text>
+  <text x="69" y="158" font-size="12" fill="#555" text-anchor="middle">(botnet)</text>
+  <rect x="430" y="106" width="110" height="76" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="485" y="150" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Site B</text>
+  <line x1="124" y1="126" x2="430" y2="126" stroke="#555" stroke-width="1.5" marker-end="url(#arw1)"/>
+  <text x="277" y="120" font-size="11" fill="#555" text-anchor="middle">user1:pass1</text>
+  <text x="548" y="130" font-size="12" fill="#c62828" font-weight="bold">FAIL</text>
+  <line x1="124" y1="146" x2="430" y2="146" stroke="#555" stroke-width="1.5" marker-end="url(#arw1)"/>
+  <text x="277" y="140" font-size="11" fill="#555" text-anchor="middle">user2:pass2</text>
+  <text x="542" y="150" font-size="12" fill="#2e7d32" font-weight="bold">SUCCESS!</text>
+  <line x1="124" y1="166" x2="430" y2="166" stroke="#555" stroke-width="1.5" marker-end="url(#arw1)"/>
+  <text x="277" y="160" font-size="11" fill="#555" text-anchor="middle">user3:pass3</text>
+  <text x="548" y="170" font-size="12" fill="#c62828" font-weight="bold">FAIL</text>
+  <text x="14" y="216" font-size="13" fill="#555" font-style="italic">&#9888; Works because 65% of people reuse passwords</text>
+</svg>
 
 **Defense against credential stuffing:**
 - Rate limiting login attempts per IP and per account
@@ -209,18 +213,41 @@ def verify_token(token):
 ---
 ## Password Storage
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Password Storage Evolution                       │
-│                                                          │
-│  TERRIBLE:  plaintext              "password123"         │
-│  BAD:       MD5 hash               5f4dcc3b...          │
-│  BAD:       SHA-256 hash           5e884898...          │
-│  BETTER:    SHA-256 + salt         salt + 5e884898...   │
-│  GOOD:      bcrypt                 $2b$12$...           │
-│  BEST:      Argon2id               $argon2id$v=19$...   │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="224" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="222" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Password Storage Evolution</text>
+  <!-- Row: TERRIBLE -->
+  <rect x="14" y="44" width="86" height="24" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="57" y="61" font-size="12" fill="#b71c1c" font-weight="bold" text-anchor="middle">TERRIBLE</text>
+  <text x="114" y="61" font-size="13" fill="#333">plaintext</text>
+  <text x="290" y="61" font-size="12" fill="#555" font-family="monospace">"password123"</text>
+  <!-- Row: BAD MD5 -->
+  <rect x="14" y="76" width="86" height="24" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="57" y="93" font-size="12" fill="#b71c1c" font-weight="bold" text-anchor="middle">BAD</text>
+  <text x="114" y="93" font-size="13" fill="#333">MD5 hash</text>
+  <text x="290" y="93" font-size="12" fill="#555" font-family="monospace">5f4dcc3b...</text>
+  <!-- Row: BAD SHA-256 -->
+  <rect x="14" y="108" width="86" height="24" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="57" y="125" font-size="12" fill="#b71c1c" font-weight="bold" text-anchor="middle">BAD</text>
+  <text x="114" y="125" font-size="13" fill="#333">SHA-256 hash</text>
+  <text x="290" y="125" font-size="12" fill="#555" font-family="monospace">5e884898...</text>
+  <!-- Row: BETTER -->
+  <rect x="14" y="140" width="86" height="24" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
+  <text x="57" y="157" font-size="12" fill="#e65100" font-weight="bold" text-anchor="middle">BETTER</text>
+  <text x="114" y="157" font-size="13" fill="#333">SHA-256 + salt</text>
+  <text x="290" y="157" font-size="12" fill="#555" font-family="monospace">salt + 5e884898...</text>
+  <!-- Row: GOOD -->
+  <rect x="14" y="172" width="86" height="24" rx="3" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="57" y="189" font-size="12" fill="#1b5e20" font-weight="bold" text-anchor="middle">GOOD</text>
+  <text x="114" y="189" font-size="13" fill="#333">bcrypt</text>
+  <text x="290" y="189" font-size="12" fill="#555" font-family="monospace">$2b$12$...</text>
+  <!-- Row: BEST -->
+  <rect x="14" y="196" width="86" height="24" rx="3" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+  <text x="57" y="213" font-size="12" fill="#1b5e20" font-weight="bold" text-anchor="middle">BEST</text>
+  <text x="114" y="213" font-size="13" fill="#333">Argon2id</text>
+  <text x="290" y="213" font-size="12" fill="#555" font-family="monospace">$argon2id$v=19$...</text>
+</svg>
 
 ### Why bcrypt/Argon2 are Preferred
 
@@ -341,28 +368,36 @@ except Exception:
 ---
 ## OAuth Misconfigurations
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Common OAuth Vulnerabilities                     │
-│                                                          │
-│  1. Open Redirect in redirect_uri                        │
-│     Attacker: redirect_uri=https://evil.com              │
-│     Gets authorization code sent to attacker's server    │
-│                                                          │
-│  2. Insufficient redirect_uri validation                 │
-│     App allows: redirect_uri=https://app.com.evil.com    │
-│     Or: redirect_uri=https://app.com/../evil             │
-│                                                          │
-│  3. Missing state parameter (CSRF)                       │
-│     Attacker can force victim to link attacker's account │
-│                                                          │
-│  4. Token leakage in browser history/referrer            │
-│     Implicit flow puts token in URL fragment             │
-│                                                          │
-│  5. Scope escalation                                     │
-│     App requests more permissions than needed             │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="274" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="272" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Common OAuth Vulnerabilities</text>
+  <!-- Item 1 -->
+  <circle cx="28" cy="54" r="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="28" y="58" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">1</text>
+  <text x="46" y="58" font-size="13" font-weight="bold" fill="#222">Open Redirect in redirect_uri</text>
+  <text x="46" y="74" font-size="12" fill="#555">Attacker sets redirect_uri=https://evil.com — gets the authorization code</text>
+  <!-- Item 2 -->
+  <circle cx="28" cy="100" r="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="28" y="104" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">2</text>
+  <text x="46" y="104" font-size="13" font-weight="bold" fill="#222">Insufficient redirect_uri validation</text>
+  <text x="46" y="120" font-size="12" fill="#555">Allows https://app.com.evil.com or https://app.com/../evil</text>
+  <!-- Item 3 -->
+  <circle cx="28" cy="146" r="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="28" y="150" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">3</text>
+  <text x="46" y="150" font-size="13" font-weight="bold" fill="#222">Missing state parameter (CSRF)</text>
+  <text x="46" y="166" font-size="12" fill="#555">Attacker can force victim to link attacker's account</text>
+  <!-- Item 4 -->
+  <circle cx="28" cy="192" r="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="28" y="196" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">4</text>
+  <text x="46" y="196" font-size="13" font-weight="bold" fill="#222">Token leakage in browser history / referrer</text>
+  <text x="46" y="212" font-size="12" fill="#555">Implicit flow puts token in URL fragment — visible in logs and referrer headers</text>
+  <!-- Item 5 -->
+  <circle cx="28" cy="238" r="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="28" y="242" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">5</text>
+  <text x="46" y="242" font-size="13" font-weight="bold" fill="#222">Scope escalation</text>
+  <text x="46" y="258" font-size="12" fill="#555">Application requests more permissions than needed</text>
+</svg>
 
 ```python
 # Secure OAuth implementation checklist
@@ -388,27 +423,35 @@ OAUTH_CONFIG = {
 ---
 ## Insecure Password Reset Flows
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Password Reset Vulnerabilities                   │
-│                                                          │
-│  INSECURE:                                               │
-│  - Predictable reset tokens (sequential, timestamp-based)│
-│  - Reset link never expires                              │
-│  - Token sent in URL (logged in server logs, referrer)   │
-│  - Security questions with guessable answers             │
-│  - Password sent via email in plaintext                  │
-│  - No rate limiting on reset requests                    │
-│                                                          │
-│  SECURE:                                                 │
-│  - Cryptographically random reset tokens (256-bit)       │
-│  - Short expiration (15-30 minutes)                      │
-│  - Single use (invalidate after use)                     │
-│  - Rate limit reset requests                             │
-│  - Notify user on all account changes                    │
-│  - Require re-authentication for sensitive changes       │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="296" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="294" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Password Reset Vulnerabilities</text>
+  <!-- INSECURE column -->
+  <rect x="14" y="44" width="304" height="240" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <rect x="14" y="44" width="304" height="28" rx="4" fill="#c62828"/>
+  <text x="166" y="63" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">&#10006; INSECURE</text>
+  <text x="26" y="90" font-size="12" fill="#333">&#8226; Predictable reset tokens (sequential,</text>
+  <text x="34" y="106" font-size="12" fill="#333">  timestamp-based)</text>
+  <text x="26" y="122" font-size="12" fill="#333">&#8226; Reset link never expires</text>
+  <text x="26" y="138" font-size="12" fill="#333">&#8226; Token sent in URL (logged in server logs,</text>
+  <text x="34" y="154" font-size="12" fill="#333">  referrer headers)</text>
+  <text x="26" y="170" font-size="12" fill="#333">&#8226; Security questions with guessable answers</text>
+  <text x="26" y="186" font-size="12" fill="#333">&#8226; Password sent via email in plaintext</text>
+  <text x="26" y="202" font-size="12" fill="#333">&#8226; No rate limiting on reset requests</text>
+  <!-- SECURE column -->
+  <rect x="342" y="44" width="304" height="240" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <rect x="342" y="44" width="304" height="28" rx="4" fill="#2e7d32"/>
+  <text x="494" y="63" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">&#10004; SECURE</text>
+  <text x="354" y="90" font-size="12" fill="#333">&#8226; Cryptographically random reset tokens</text>
+  <text x="362" y="106" font-size="12" fill="#333">  (256-bit)</text>
+  <text x="354" y="122" font-size="12" fill="#333">&#8226; Short expiration (15–30 minutes)</text>
+  <text x="354" y="138" font-size="12" fill="#333">&#8226; Single use — invalidate after use</text>
+  <text x="354" y="154" font-size="12" fill="#333">&#8226; Rate limit reset requests</text>
+  <text x="354" y="170" font-size="12" fill="#333">&#8226; Notify user on all account changes</text>
+  <text x="354" y="186" font-size="12" fill="#333">&#8226; Require re-authentication for sensitive</text>
+  <text x="362" y="202" font-size="12" fill="#333">  changes</text>
+</svg>
 
 ```python
 import secrets

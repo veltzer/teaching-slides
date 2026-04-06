@@ -54,30 +54,35 @@ Time Management:
 
 ## CTF Methodology Reminder
 
-```diagram
-+--Reconnaissance---+
-| nmap full scan     |
-| Directory brute    |
-| Technology ID      |
-+--------+-----------+
-         |
-+--------v-----------+
-| Test Entry Points  |
-| SQL injection      |
-| XSS                |
-| Command injection  |
-| File inclusion     |
-| Auth bypass        |
-+--------+-----------+
-         |
-+--------v-----------+
-| Exploit & Escalate |
-| Get initial shell  |
-| Find credentials   |
-| Escalate to root   |
-| Read the flag!     |
-+--------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="460" height="330" font-family="sans-serif">
+  <defs>
+    <marker id="arw4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="458" height="328" rx="4" fill="#fff" stroke="#333" stroke-width="1"/>
+  <!-- Phase 1: Reconnaissance -->
+  <rect x="80" y="10" width="300" height="80" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="230" y="32" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Reconnaissance</text>
+  <text x="230" y="50" font-size="12" fill="#333" text-anchor="middle">nmap full scan &#8226; Directory brute force</text>
+  <text x="230" y="66" font-size="12" fill="#333" text-anchor="middle">Technology identification</text>
+  <!-- Arrow 1 -->
+  <line x1="230" y1="90" x2="230" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arw4)"/>
+  <!-- Phase 2: Test Entry Points -->
+  <rect x="80" y="110" width="300" height="90" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="230" y="132" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Test Entry Points</text>
+  <text x="230" y="150" font-size="12" fill="#333" text-anchor="middle">SQL injection &#8226; XSS &#8226; Command injection</text>
+  <text x="230" y="166" font-size="12" fill="#333" text-anchor="middle">File inclusion &#8226; Auth bypass</text>
+  <text x="230" y="182" font-size="12" fill="#333" text-anchor="middle">Path traversal &#8226; SSRF</text>
+  <!-- Arrow 2 -->
+  <line x1="230" y1="200" x2="230" y2="220" stroke="#555" stroke-width="1.5" marker-end="url(#arw4)"/>
+  <!-- Phase 3: Exploit & Escalate -->
+  <rect x="80" y="220" width="300" height="90" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="230" y="242" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Exploit &amp; Escalate</text>
+  <text x="230" y="260" font-size="12" fill="#333" text-anchor="middle">Get initial shell &#8226; Find credentials</text>
+  <text x="230" y="276" font-size="12" fill="#333" text-anchor="middle">Escalate to root</text>
+  <text x="230" y="292" font-size="12" fill="#2e7d32" font-weight="bold" text-anchor="middle">&#127989; Read the flag!</text>
+</svg>
 
 ---
 
@@ -197,18 +202,59 @@ No specific hints - use everything you've learned!
 
 ## CTF Scoring
 
-```diagram
-+--Team--+--Ch1--+--Ch2--+--Ch3--+--Ch4--+--Ch5--+--Ch6--+--Ch7--+--Total--+
-| Team A |  100  |  200  |  200  |  200  |  300  |  200  |  100  |  1300   |
-| Team B |  100  |  200  |    0  |  200  |  300  |    0  |    0  |   800   |
-| Team C |  100  |  200  |  200  |    0  |    0  |  200  |  100  |   800   |
-+--------+-------+-------+-------+-------+-------+-------+-------+---------+
-
-Bonus points for:
-  +50  First team to solve a challenge
-  +25  Clean documentation/writeup
-  -25  Per hint used
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="210" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="208" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">CTF Scoreboard</text>
+  <!-- Table header -->
+  <rect x="14" y="44" width="630" height="28" rx="2" fill="#1565c0"/>
+  <text x="60" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Team</text>
+  <text x="138" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 1</text>
+  <text x="196" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 2</text>
+  <text x="254" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 3</text>
+  <text x="312" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 4</text>
+  <text x="370" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 5</text>
+  <text x="428" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 6</text>
+  <text x="486" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Ch 7</text>
+  <text x="570" y="63" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Total</text>
+  <!-- Row 1: Team A -->
+  <rect x="14" y="72" width="630" height="28" rx="0" fill="#f5f5f5"/>
+  <text x="60" y="91" font-size="12" fill="#333" text-anchor="middle">Team A</text>
+  <text x="138" y="91" font-size="12" fill="#333" text-anchor="middle">100</text>
+  <text x="196" y="91" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="254" y="91" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="312" y="91" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="370" y="91" font-size="12" fill="#333" text-anchor="middle">300</text>
+  <text x="428" y="91" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="486" y="91" font-size="12" fill="#333" text-anchor="middle">100</text>
+  <text x="570" y="91" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="middle">1300</text>
+  <!-- Row 2: Team B -->
+  <rect x="14" y="100" width="630" height="28" rx="0" fill="#fff"/>
+  <text x="60" y="119" font-size="12" fill="#333" text-anchor="middle">Team B</text>
+  <text x="138" y="119" font-size="12" fill="#333" text-anchor="middle">100</text>
+  <text x="196" y="119" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="254" y="119" font-size="12" fill="#555" text-anchor="middle">0</text>
+  <text x="312" y="119" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="370" y="119" font-size="12" fill="#333" text-anchor="middle">300</text>
+  <text x="428" y="119" font-size="12" fill="#555" text-anchor="middle">0</text>
+  <text x="486" y="119" font-size="12" fill="#555" text-anchor="middle">0</text>
+  <text x="570" y="119" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">800</text>
+  <!-- Row 3: Team C -->
+  <rect x="14" y="128" width="630" height="28" rx="0" fill="#f5f5f5"/>
+  <text x="60" y="147" font-size="12" fill="#333" text-anchor="middle">Team C</text>
+  <text x="138" y="147" font-size="12" fill="#333" text-anchor="middle">100</text>
+  <text x="196" y="147" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="254" y="147" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="312" y="147" font-size="12" fill="#555" text-anchor="middle">0</text>
+  <text x="370" y="147" font-size="12" fill="#555" text-anchor="middle">0</text>
+  <text x="428" y="147" font-size="12" fill="#333" text-anchor="middle">200</text>
+  <text x="486" y="147" font-size="12" fill="#333" text-anchor="middle">100</text>
+  <text x="570" y="147" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">800</text>
+  <!-- Bonus notes -->
+  <text x="14" y="174" font-size="12" fill="#2e7d32">+50  First team to solve a challenge</text>
+  <text x="14" y="190" font-size="12" fill="#2e7d32">+25  Clean documentation / writeup</text>
+  <text x="300" y="174" font-size="12" fill="#c62828">&#8722;25  Per hint used</text>
+</svg>
 
 ---
 
@@ -309,22 +355,79 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ## Vulnerability Cheat Sheet Summary
 
-```diagram
-+--Vulnerability------+--Test Payload----+--Defense---------+
-| SQL Injection       | ' OR 1=1--       | Param queries    |
-| XSS (Reflected)     | <script>alert(1) | Output encoding  |
-| XSS (Stored)        | <img onerror=    | HTML sanitize    |
-| Command Injection   | ;whoami          | No shell calls   |
-| Path Traversal      | ../../../etc/pass| Whitelist paths  |
-| LFI                 | php://filter/... | Whitelist includes|
-| SSRF                | http://127.0.0.1 | URL validation   |
-| XXE                 | <!ENTITY xxe SYS | Disable entities |
-| IDOR                | Change /user/123 | Auth checks      |
-| CSRF                | Auto-submit form | CSRF tokens      |
-| Deserialization     | Crafted object   | Use JSON         |
-| Auth Bypass         | admin'--         | Param queries    |
-+---------------------+-----------------+-----------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340" font-family="sans-serif">
+  <rect x="1" y="1" width="678" height="338" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="678" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="340" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Vulnerability Quick Reference</text>
+  <!-- Column headers -->
+  <rect x="14" y="44" width="650" height="26" rx="2" fill="#1565c0"/>
+  <text x="118" y="62" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Vulnerability</text>
+  <text x="340" y="62" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Test Payload</text>
+  <text x="556" y="62" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Defense</text>
+  <!-- Grid lines -->
+  <line x1="230" y1="44" x2="230" y2="338" stroke="#ccc" stroke-width="1"/>
+  <line x1="450" y1="44" x2="450" y2="338" stroke="#ccc" stroke-width="1"/>
+  <!-- Rows -->
+  <rect x="14" y="70" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="85" font-size="11" fill="#333">SQL Injection</text>
+  <text x="238" y="85" font-size="11" fill="#333" font-family="monospace">' OR 1=1--</text>
+  <text x="458" y="85" font-size="11" fill="#333">Parameterized queries</text>
+
+  <rect x="14" y="92" width="650" height="22" fill="#fff"/>
+  <text x="22" y="107" font-size="11" fill="#333">XSS (Reflected)</text>
+  <text x="238" y="107" font-size="11" fill="#333" font-family="monospace">&lt;script&gt;alert(1)</text>
+  <text x="458" y="107" font-size="11" fill="#333">Output encoding</text>
+
+  <rect x="14" y="114" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="129" font-size="11" fill="#333">XSS (Stored)</text>
+  <text x="238" y="129" font-size="11" fill="#333" font-family="monospace">&lt;img onerror=...</text>
+  <text x="458" y="129" font-size="11" fill="#333">HTML sanitization</text>
+
+  <rect x="14" y="136" width="650" height="22" fill="#fff"/>
+  <text x="22" y="151" font-size="11" fill="#333">Command Injection</text>
+  <text x="238" y="151" font-size="11" fill="#333" font-family="monospace">;whoami</text>
+  <text x="458" y="151" font-size="11" fill="#333">No shell calls; allowlist</text>
+
+  <rect x="14" y="158" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="173" font-size="11" fill="#333">Path Traversal</text>
+  <text x="238" y="173" font-size="11" fill="#333" font-family="monospace">../../../etc/passwd</text>
+  <text x="458" y="173" font-size="11" fill="#333">Whitelist paths</text>
+
+  <rect x="14" y="180" width="650" height="22" fill="#fff"/>
+  <text x="22" y="195" font-size="11" fill="#333">LFI</text>
+  <text x="238" y="195" font-size="11" fill="#333" font-family="monospace">php://filter/...</text>
+  <text x="458" y="195" font-size="11" fill="#333">Whitelist includes</text>
+
+  <rect x="14" y="202" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="217" font-size="11" fill="#333">SSRF</text>
+  <text x="238" y="217" font-size="11" fill="#333" font-family="monospace">http://127.0.0.1</text>
+  <text x="458" y="217" font-size="11" fill="#333">URL validation / allowlist</text>
+
+  <rect x="14" y="224" width="650" height="22" fill="#fff"/>
+  <text x="22" y="239" font-size="11" fill="#333">XXE</text>
+  <text x="238" y="239" font-size="11" fill="#333" font-family="monospace">&lt;!ENTITY xxe SYSTEM</text>
+  <text x="458" y="239" font-size="11" fill="#333">Disable XML entities</text>
+
+  <rect x="14" y="246" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="261" font-size="11" fill="#333">IDOR</text>
+  <text x="238" y="261" font-size="11" fill="#333" font-family="monospace">Change /user/123</text>
+  <text x="458" y="261" font-size="11" fill="#333">Auth checks on all resources</text>
+
+  <rect x="14" y="268" width="650" height="22" fill="#fff"/>
+  <text x="22" y="283" font-size="11" fill="#333">CSRF</text>
+  <text x="238" y="283" font-size="11" fill="#333">Auto-submit form</text>
+  <text x="458" y="283" font-size="11" fill="#333">CSRF tokens</text>
+
+  <rect x="14" y="290" width="650" height="22" fill="#f5f5f5"/>
+  <text x="22" y="305" font-size="11" fill="#333">Deserialization</text>
+  <text x="238" y="305" font-size="11" fill="#333">Crafted object</text>
+  <text x="458" y="305" font-size="11" fill="#333">Use JSON; avoid native deser.</text>
+
+  <rect x="14" y="312" width="650" height="22" fill="#fff"/>
+  <text x="22" y="327" font-size="11" fill="#333">Auth Bypass</text>
+  <text x="238" y="327" font-size="11" fill="#333" font-family="monospace">admin'--</text>
+  <text x="458" y="327" font-size="11" fill="#333">Parameterized queries</text>
+</svg>
 
 ---
 
@@ -409,40 +512,47 @@ Boot2Root & CTF - Key takeaways:
 
 ## Security Testing Workflow - Summary
 
-```diagram
-+--Planning Phase---------+
-| Define scope & rules    |
-| Get written auth        |
-| Set up tools & env      |
-+-----------+-------------+
-            |
-+--Discovery Phase--------+
-| Network scanning        |
-| Web spidering           |
-| Content discovery       |
-| Technology fingerprint  |
-+-----------+-------------+
-            |
-+--Assessment Phase-------+
-| Injection testing       |
-| Auth/session testing    |
-| Logic flaw testing      |
-| Configuration review    |
-+-----------+-------------+
-            |
-+--Exploitation Phase-----+
-| Confirm vulnerabilities |
-| Demonstrate impact      |
-| Privilege escalation    |
-+-----------+-------------+
-            |
-+--Reporting Phase--------+
-| Document findings       |
-| Prioritize by risk      |
-| Recommend fixes         |
-| Present to stakeholders |
-+--------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="520" font-family="sans-serif">
+  <defs>
+    <marker id="arw5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="498" height="518" rx="4" fill="#fff" stroke="#333" stroke-width="1"/>
+  <!-- Phase 1 -->
+  <rect x="80" y="10" width="340" height="78" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="250" y="30" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Planning Phase</text>
+  <text x="250" y="48" font-size="12" fill="#333" text-anchor="middle">Define scope &amp; rules of engagement</text>
+  <text x="250" y="64" font-size="12" fill="#333" text-anchor="middle">Get written authorization &#8226; Set up tools &amp; env</text>
+  <!-- Arrow -->
+  <line x1="250" y1="88" x2="250" y2="104" stroke="#555" stroke-width="1.5" marker-end="url(#arw5)"/>
+  <!-- Phase 2 -->
+  <rect x="80" y="104" width="340" height="78" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="250" y="124" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Discovery Phase</text>
+  <text x="250" y="142" font-size="12" fill="#333" text-anchor="middle">Network scanning &#8226; Web spidering</text>
+  <text x="250" y="158" font-size="12" fill="#333" text-anchor="middle">Content discovery &#8226; Technology fingerprinting</text>
+  <!-- Arrow -->
+  <line x1="250" y1="182" x2="250" y2="198" stroke="#555" stroke-width="1.5" marker-end="url(#arw5)"/>
+  <!-- Phase 3 -->
+  <rect x="80" y="198" width="340" height="78" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="250" y="218" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Assessment Phase</text>
+  <text x="250" y="236" font-size="12" fill="#333" text-anchor="middle">Injection &#8226; Auth/session testing</text>
+  <text x="250" y="252" font-size="12" fill="#333" text-anchor="middle">Logic flaws &#8226; Configuration review</text>
+  <!-- Arrow -->
+  <line x1="250" y1="276" x2="250" y2="292" stroke="#555" stroke-width="1.5" marker-end="url(#arw5)"/>
+  <!-- Phase 4 -->
+  <rect x="80" y="292" width="340" height="78" rx="4" fill="#ffccbc" stroke="#bf360c" stroke-width="1.5"/>
+  <text x="250" y="312" font-size="13" font-weight="bold" fill="#bf360c" text-anchor="middle">Exploitation Phase</text>
+  <text x="250" y="330" font-size="12" fill="#333" text-anchor="middle">Confirm vulnerabilities &#8226; Demonstrate impact</text>
+  <text x="250" y="346" font-size="12" fill="#333" text-anchor="middle">Privilege escalation</text>
+  <!-- Arrow -->
+  <line x1="250" y1="370" x2="250" y2="386" stroke="#555" stroke-width="1.5" marker-end="url(#arw5)"/>
+  <!-- Phase 5 -->
+  <rect x="80" y="386" width="340" height="78" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="250" y="406" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Reporting Phase</text>
+  <text x="250" y="424" font-size="12" fill="#333" text-anchor="middle">Document findings &#8226; Prioritize by risk</text>
+  <text x="250" y="440" font-size="12" fill="#333" text-anchor="middle">Recommend fixes &#8226; Present to stakeholders</text>
+</svg>
 
 ---
 

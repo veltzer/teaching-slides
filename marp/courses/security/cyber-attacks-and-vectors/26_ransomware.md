@@ -81,34 +81,39 @@
 ---
 ## Encryption Techniques
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Ransomware Encryption Architecture               │
-│                                                          │
-│  Attacker has:                                           │
-│  - Master RSA key pair (private key kept by attacker)    │
-│                                                          │
-│  Per-victim:                                             │
-│  1. Generate unique RSA key pair for this victim         │
-│  2. Encrypt victim RSA private key with master public    │
-│     key (stored in ransom note)                          │
-│                                                          │
-│  Per-file:                                               │
-│  3. Generate random AES-256 key                          │
-│  4. Encrypt file contents with AES-256 (fast)            │
-│  5. Encrypt AES key with victim RSA public key           │
-│  6. Append encrypted AES key to encrypted file           │
-│                                                          │
-│  ┌────────┐   AES-256    ┌──────────────────────┐       │
-│  │Original│──────────────>│Encrypted file        │       │
-│  │ File   │              │+ Encrypted AES key   │       │
-│  └────────┘              │  (RSA encrypted)     │       │
-│                          └──────────────────────┘       │
-│                                                          │
-│  Only the attacker's master private key can              │
-│  start the decryption chain                              │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="348" font-family="sans-serif">
+  <defs>
+    <marker id="arw3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="658" height="346" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Ransomware Encryption Architecture</text>
+  <!-- Attacker section -->
+  <text x="14" y="54" font-size="13" font-weight="bold" fill="#c62828">Attacker has:</text>
+  <text x="14" y="72" font-size="13" fill="#333">&#8226; Master RSA key pair — private key kept by attacker only</text>
+  <!-- Per-victim section -->
+  <text x="14" y="98" font-size="13" font-weight="bold" fill="#1565c0">Per-victim:</text>
+  <text x="14" y="116" font-size="13" fill="#333">1. Generate unique RSA key pair for this victim</text>
+  <text x="14" y="134" font-size="13" fill="#333">2. Encrypt victim RSA private key with master public key (stored in ransom note)</text>
+  <!-- Per-file section -->
+  <text x="14" y="160" font-size="13" font-weight="bold" fill="#e65100">Per-file:</text>
+  <text x="14" y="178" font-size="13" fill="#333">3. Generate random AES-256 key</text>
+  <text x="14" y="196" font-size="13" fill="#333">4. Encrypt file contents with AES-256 (fast)</text>
+  <text x="14" y="214" font-size="13" fill="#333">5. Encrypt AES key with victim RSA public key</text>
+  <text x="14" y="232" font-size="13" fill="#333">6. Append encrypted AES key to encrypted file</text>
+  <!-- Flow diagram -->
+  <rect x="30" y="252" width="120" height="52" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="90" y="274" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Original</text>
+  <text x="90" y="292" font-size="12" fill="#333" text-anchor="middle">File</text>
+  <line x1="150" y1="278" x2="230" y2="278" stroke="#555" stroke-width="1.5" marker-end="url(#arw3)"/>
+  <text x="190" y="270" font-size="11" fill="#555" text-anchor="middle">AES-256</text>
+  <rect x="230" y="252" width="180" height="52" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="320" y="274" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Encrypted File</text>
+  <text x="320" y="292" font-size="11" fill="#555" text-anchor="middle">+ Encrypted AES key (RSA)</text>
+  <text x="14" y="334" font-size="13" fill="#555" font-style="italic">Only the attacker's master private key can start the decryption chain</text>
+</svg>
 
 - AES-256 for file encryption (fast, symmetric)
 - RSA-2048/4096 for key encryption (slow, asymmetric)
@@ -292,62 +297,70 @@ taskkill /F /IM outlook.exe
 ---
 ## Double and Triple Extortion
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  Extortion Models                                        │
-├──────────────────────────────────────────────────────────┤
-│                                                          │
-│  Single Extortion:                                       │
-│  Encrypt files -> demand payment for decryption key      │
-│  Defense: Backups                                        │
-│                                                          │
-│  Double Extortion:                                       │
-│  Exfiltrate data + encrypt files                         │
-│  -> Pay or we leak your data publicly                    │
-│  Defense: Backups + data protection                      │
-│                                                          │
-│  Triple Extortion:                                       │
-│  Exfiltrate + encrypt + DDoS + contact customers         │
-│  -> Pay or: data leaked + systems down + customers told  │
-│  Defense: Comprehensive security program                 │
-│                                                          │
-│  Quadruple Extortion (emerging):                         │
-│  All of above + report regulatory violations             │
-│  -> "Pay or we report your data breach to regulators"    │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="296" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="294" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Extortion Models</text>
+  <!-- Single Extortion -->
+  <rect x="14" y="44" width="630" height="58" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
+  <text x="26" y="62" font-size="13" font-weight="bold" fill="#222">Single Extortion</text>
+  <text x="26" y="80" font-size="13" fill="#333">Encrypt files &#8594; demand payment for decryption key   |   Defense: Backups</text>
+  <!-- Double Extortion -->
+  <rect x="14" y="110" width="630" height="58" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="26" y="128" font-size="13" font-weight="bold" fill="#e65100">Double Extortion</text>
+  <text x="26" y="146" font-size="13" fill="#333">Exfiltrate data + encrypt &#8594; Pay or we leak your data   |   Defense: Backups + data protection</text>
+  <!-- Triple Extortion -->
+  <rect x="14" y="176" width="630" height="58" rx="4" fill="#ffccbc" stroke="#bf360c" stroke-width="1.5"/>
+  <text x="26" y="194" font-size="13" font-weight="bold" fill="#bf360c">Triple Extortion</text>
+  <text x="26" y="212" font-size="13" fill="#333">Exfiltrate + encrypt + DDoS + contact customers   |   Defense: Comprehensive security program</text>
+  <!-- Quadruple Extortion -->
+  <rect x="14" y="242" width="630" height="44" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="26" y="260" font-size="13" font-weight="bold" fill="#c62828">Quadruple Extortion (emerging)</text>
+  <text x="26" y="278" font-size="13" fill="#333">All of above + report regulatory violations &#8594; "Pay or we report your data breach to regulators"</text>
+</svg>
 
 ---
 ## Backup Strategies: The 3-2-1-1-0 Rule
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          3-2-1-1-0 Backup Rule                           │
-│                                                          │
-│  3  Copies of data (production + 2 backups)              │
-│                                                          │
-│  2  Different storage media types                        │
-│     (disk + tape, disk + cloud, etc.)                    │
-│                                                          │
-│  1  Copy offsite (different location)                    │
-│                                                          │
-│  1  Copy offline or air-gapped                           │
-│     (CRITICAL: ransomware targets connected backups!)    │
-│                                                          │
-│  0  Zero errors (verify backup integrity regularly)      │
-│                                                          │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐               │
-│  │Production│  │ Local    │  │ Offsite  │               │
-│  │  Data    │  │ Backup   │  │ Backup   │               │
-│  │          │  │ (NAS)    │  │ (Cloud/  │               │
-│  │          │  │          │  │  Tape)   │               │
-│  └──────────┘  └──────────┘  └──────────┘               │
-│       │              │              │                    │
-│       │  Connected   │  Air-gapped  │                    │
-│       │  (vulnerable │  or immutable│                    │
-│       │  to ransomware) (SAFE)      │                    │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="348" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="346" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">3-2-1-1-0 Backup Rule</text>
+  <!-- Number rows -->
+  <circle cx="34" cy="58" r="14" fill="#1565c0"/>
+  <text x="34" y="63" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+  <text x="56" y="63" font-size="13" fill="#333">Copies of data (production + 2 backups)</text>
+  <circle cx="34" cy="92" r="14" fill="#1565c0"/>
+  <text x="34" y="97" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+  <text x="56" y="97" font-size="13" fill="#333">Different storage media types (disk + tape, disk + cloud, etc.)</text>
+  <circle cx="34" cy="126" r="14" fill="#1565c0"/>
+  <text x="34" y="131" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+  <text x="56" y="131" font-size="13" fill="#333">Copy offsite (different physical location)</text>
+  <circle cx="34" cy="160" r="14" fill="#e65100"/>
+  <text x="34" y="165" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+  <text x="56" y="160" font-size="13" fill="#333">Copy offline or air-gapped</text>
+  <text x="56" y="178" font-size="12" fill="#c62828" font-weight="bold">CRITICAL: ransomware targets connected backups!</text>
+  <circle cx="34" cy="204" r="14" fill="#2e7d32"/>
+  <text x="34" y="209" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">0</text>
+  <text x="56" y="209" font-size="13" fill="#333">Zero errors — verify backup integrity regularly</text>
+  <!-- Three boxes diagram -->
+  <rect x="30" y="230" width="130" height="70" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="95" y="256" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Production</text>
+  <text x="95" y="274" font-size="12" fill="#222" text-anchor="middle">Data</text>
+  <rect x="250" y="230" width="130" height="70" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="315" y="256" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Local Backup</text>
+  <text x="315" y="274" font-size="12" fill="#222" text-anchor="middle">(NAS)</text>
+  <rect x="470" y="230" width="140" height="70" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="540" y="252" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Offsite Backup</text>
+  <text x="540" y="268" font-size="11" fill="#222" text-anchor="middle">(Cloud / Tape)</text>
+  <text x="540" y="284" font-size="11" fill="#2e7d32" font-weight="bold" text-anchor="middle">AIR-GAPPED ✓</text>
+  <text x="95" y="318" font-size="11" fill="#c62828" text-anchor="middle">Connected</text>
+  <text x="95" y="332" font-size="11" fill="#c62828" text-anchor="middle">(vulnerable)</text>
+  <text x="315" y="318" font-size="11" fill="#e65100" text-anchor="middle">Connected</text>
+  <text x="315" y="332" font-size="11" fill="#e65100" text-anchor="middle">(vulnerable)</text>
+  <text x="540" y="318" font-size="11" fill="#2e7d32" text-anchor="middle">Immutable /</text>
+  <text x="540" y="332" font-size="11" fill="#2e7d32" text-anchor="middle">Air-gapped (SAFE)</text>
+</svg>
 
 ---
 ## Immutable Backups
@@ -513,27 +526,22 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ---
 ## Free Decryption Resources
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  No More Ransom Project (nomoreransom.org)               │
-├──────────────────────────────────────────────────────────┤
-│                                                          │
-│  - Joint initiative: Europol, Dutch Police, Kaspersky,   │
-│    McAfee, and 170+ partners                             │
-│  - Free decryption tools for 150+ ransomware families    │
-│  - Upload encrypted file + ransom note to identify       │
-│    the variant and check for available decryptors        │
-│                                                          │
-│  Other resources:                                        │
-│  - ID Ransomware (id-ransomware.malwarehunterteam.com)   │
-│    Upload sample to identify the ransomware family       │
-│  - Emsisoft decryption tools                             │
-│  - Avast decryption tools                                │
-│  - Bitdefender decryption tools                          │
-│                                                          │
-│  Always try free decryption before considering payment!  │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="268" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="266" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#1b5e20" text-anchor="middle">No More Ransom Project (nomoreransom.org)</text>
+  <text x="14" y="56" font-size="13" fill="#333">&#8226; Joint initiative: Europol, Dutch Police, Kaspersky, McAfee, and 170+ partners</text>
+  <text x="14" y="74" font-size="13" fill="#333">&#8226; Free decryption tools for 150+ ransomware families</text>
+  <text x="14" y="92" font-size="13" fill="#333">&#8226; Upload encrypted file + ransom note to identify variant and check for decryptors</text>
+  <line x1="14" y1="104" x2="646" y2="104" stroke="#ddd" stroke-width="1"/>
+  <text x="14" y="122" font-size="13" font-weight="bold" fill="#1565c0">Other resources:</text>
+  <text x="14" y="140" font-size="13" fill="#333">&#8226; ID Ransomware (id-ransomware.malwarehunterteam.com) — upload sample to identify family</text>
+  <text x="14" y="158" font-size="13" fill="#333">&#8226; Emsisoft decryption tools</text>
+  <text x="14" y="176" font-size="13" fill="#333">&#8226; Avast decryption tools</text>
+  <text x="14" y="194" font-size="13" fill="#333">&#8226; Bitdefender decryption tools</text>
+  <rect x="14" y="210" width="630" height="44" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="329" y="237" font-size="14" font-weight="bold" fill="#1b5e20" text-anchor="middle">&#128273; Always try free decryption before considering payment!</text>
+</svg>
 
 ---
 ## Key Takeaways
