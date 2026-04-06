@@ -6,20 +6,37 @@
 
 ## How Sessions Work
 
-```diagram
-1. User authenticates (login)
-2. Server creates session and stores state
-3. Server sends session ID to client (usually as cookie)
-4. Client sends session ID with every request
-5. Server looks up session state using the ID
-6. Session destroyed on logout or timeout
-
-+--------+    Session ID     +---------+    Session Data
-| Client | <--------------> | Server  | <-------------->  Store
-| (Cookie|    (Cookie)      | (App)   |    (Memory/DB/
-|  Store)|                  |         |     Redis)
-+--------+                  +---------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="230" viewBox="0 0 660 230">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="660" height="230" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Session Management Flow</text>
+  <!-- numbered steps top row -->
+  <text x="30" y="50" font-family="sans-serif" font-size="12" fill="#333">1. User authenticates (login)</text>
+  <text x="30" y="68" font-family="sans-serif" font-size="12" fill="#333">2. Server creates session and stores state</text>
+  <text x="30" y="86" font-family="sans-serif" font-size="12" fill="#333">3. Server sends session ID to client (cookie)</text>
+  <text x="30" y="104" font-family="sans-serif" font-size="12" fill="#333">4. Client sends session ID with every request</text>
+  <text x="30" y="122" font-family="sans-serif" font-size="12" fill="#333">5. Server looks up session state using the ID</text>
+  <text x="30" y="140" font-family="sans-serif" font-size="12" fill="#333">6. Session destroyed on logout or timeout</text>
+  <!-- components -->
+  <rect x="30" y="158" width="130" height="50" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="95" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Client</text>
+  <text x="95" y="197" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Cookie Store)</text>
+  <line x1="160" y1="183" x2="258" y2="183" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="210" y="176" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">Session ID</text>
+  <line x1="260" y1="192" x2="162" y2="192" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="210" y="207" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">(Cookie)</text>
+  <rect x="260" y="158" width="130" height="50" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="325" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">App Server</text>
+  <line x1="390" y1="183" x2="488" y2="183" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="440" y="176" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">Session Data</text>
+  <rect x="490" y="158" width="140" height="50" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
+  <text x="560" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Session Store</text>
+  <text x="560" y="197" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Memory/DB/Redis)</text>
+</svg>
 
 ---
 
@@ -53,27 +70,35 @@ def generate_session_good():
 
 ## Session Hijacking Techniques
 
-```diagram
-+---Attack Vector-----------+---Method----------------------+
-| Network sniffing          | Capture session cookie on     |
-|                           | unencrypted connection        |
-+---------------------------+-------------------------------+
-| XSS (Cross-Site Scripting)| Steal cookie via JavaScript   |
-|                           | document.cookie               |
-+---------------------------+-------------------------------+
-| Session fixation          | Force victim to use attacker's|
-|                           | known session ID              |
-+---------------------------+-------------------------------+
-| CSRF                      | Ride on victim's existing     |
-|                           | authenticated session         |
-+---------------------------+-------------------------------+
-| Brute-force               | Guess valid session tokens    |
-|                           | (if predictable)              |
-+---------------------------+-------------------------------+
-| Malware/Browser exploit   | Steal cookies from browser    |
-|                           | cookie store                  |
-+---------------------------+-------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="295" viewBox="0 0 660 295">
+  <rect width="660" height="295" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Session Hijacking Attack Vectors</text>
+  <!-- header -->
+  <rect x="20" y="36" width="250" height="26" fill="#333" rx="2"/>
+  <text x="145" y="53" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Attack Vector</text>
+  <rect x="275" y="36" width="365" height="26" fill="#333" rx="2"/>
+  <text x="457" y="53" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Method</text>
+  <!-- rows -->
+  <rect x="20" y="62" width="620" height="36" fill="#fff" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="82" font-family="sans-serif" font-size="12" fill="#1565c0" font-weight="bold">Network sniffing</text>
+  <text x="285" y="82" font-family="sans-serif" font-size="12" fill="#222">Capture session cookie on unencrypted connection</text>
+  <rect x="20" y="98" width="620" height="36" fill="#f9f9f9" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="118" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="bold">XSS</text>
+  <text x="285" y="118" font-family="sans-serif" font-size="12" fill="#222">Steal cookie via JavaScript: document.cookie</text>
+  <rect x="20" y="134" width="620" height="36" fill="#fff" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="154" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="bold">Session fixation</text>
+  <text x="285" y="154" font-family="sans-serif" font-size="12" fill="#222">Force victim to use attacker's known session ID</text>
+  <rect x="20" y="170" width="620" height="36" fill="#f9f9f9" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="190" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="bold">CSRF</text>
+  <text x="285" y="190" font-family="sans-serif" font-size="12" fill="#222">Ride on victim's existing authenticated session</text>
+  <rect x="20" y="206" width="620" height="36" fill="#fff" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="226" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="bold">Brute-force</text>
+  <text x="285" y="226" font-family="sans-serif" font-size="12" fill="#222">Guess valid session tokens (if predictable)</text>
+  <rect x="20" y="242" width="620" height="36" fill="#f9f9f9" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="30" y="262" font-family="sans-serif" font-size="12" fill="#c62828" font-weight="bold">Malware / Browser exploit</text>
+  <text x="285" y="262" font-family="sans-serif" font-size="12" fill="#222">Steal cookies from browser cookie store</text>
+  <line x1="275" y1="62" x2="275" y2="278" stroke="#aaa" stroke-width="1"/>
+</svg>
 
 ---
 
@@ -376,23 +401,59 @@ def dashboard():
 
 ## Session Storage Comparison
 
-```diagram
-+--Storage--+--Security--+--Scale--+--Speed--+--Notes--------+
-| Memory    | Good       | Poor    | Fast    | Lost on restart|
-| File      | Moderate   | Poor    | Moderate| Disk I/O       |
-| Database  | Good       | Good    | Moderate| SQL queries    |
-| Redis     | Good       | Great   | Fast    | Best option    |
-| Memcached | Moderate   | Great   | Fast    | No persistence |
-| JWT       | Varies     | Great   | Fast    | Stateless      |
-+-----------+------------+---------+---------+---------------+
-
-Best practice: Redis with encryption at rest
-  - Fast in-memory storage
-  - Built-in expiration (TTL)
-  - Cluster support for scale
-  - Persistent if needed
-  - Supports atomic operations
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="260" viewBox="0 0 660 260">
+  <rect width="660" height="260" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Session Storage Options</text>
+  <!-- header -->
+  <rect x="20" y="38" width="100" height="26" fill="#333" rx="2"/>
+  <text x="70" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Storage</text>
+  <rect x="122" y="38" width="90" height="26" fill="#333" rx="2"/>
+  <text x="167" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Security</text>
+  <rect x="214" y="38" width="80" height="26" fill="#333" rx="2"/>
+  <text x="254" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Scale</text>
+  <rect x="296" y="38" width="80" height="26" fill="#333" rx="2"/>
+  <text x="336" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Speed</text>
+  <rect x="378" y="38" width="262" height="26" fill="#333" rx="2"/>
+  <text x="509" y="55" font-family="sans-serif" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">Notes</text>
+  <!-- data rows -->
+  <rect x="20" y="64" width="620" height="26" fill="#fff" rx="1" stroke="#ddd" stroke-width="1"/>
+  <text x="70" y="81" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Memory</text>
+  <text x="167" y="81" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Good</text>
+  <text x="254" y="81" font-family="sans-serif" font-size="12" fill="#c62828" text-anchor="middle">Poor</text>
+  <text x="336" y="81" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Fast</text>
+  <text x="509" y="81" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Lost on restart</text>
+  <rect x="20" y="90" width="620" height="26" fill="#f5f5f5" rx="1" stroke="#ddd" stroke-width="1"/>
+  <text x="70" y="107" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">File</text>
+  <text x="167" y="107" font-family="sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle">Moderate</text>
+  <text x="254" y="107" font-family="sans-serif" font-size="12" fill="#c62828" text-anchor="middle">Poor</text>
+  <text x="336" y="107" font-family="sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle">Moderate</text>
+  <text x="509" y="107" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Disk I/O overhead</text>
+  <rect x="20" y="116" width="620" height="26" fill="#fff" rx="1" stroke="#ddd" stroke-width="1"/>
+  <text x="70" y="133" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Database</text>
+  <text x="167" y="133" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Good</text>
+  <text x="254" y="133" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Good</text>
+  <text x="336" y="133" font-family="sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle">Moderate</text>
+  <text x="509" y="133" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">SQL query overhead</text>
+  <rect x="20" y="142" width="620" height="26" fill="#e8f5e9" rx="1" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="70" y="159" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">Redis</text>
+  <text x="167" y="159" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Good</text>
+  <text x="254" y="159" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Great</text>
+  <text x="336" y="159" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Fast</text>
+  <text x="509" y="159" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">★ Best option</text>
+  <rect x="20" y="168" width="620" height="26" fill="#f5f5f5" rx="1" stroke="#ddd" stroke-width="1"/>
+  <text x="70" y="185" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Memcached</text>
+  <text x="167" y="185" font-family="sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle">Moderate</text>
+  <text x="254" y="185" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Great</text>
+  <text x="336" y="185" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Fast</text>
+  <text x="509" y="185" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">No persistence</text>
+  <rect x="20" y="194" width="620" height="26" fill="#fff" rx="1" stroke="#ddd" stroke-width="1"/>
+  <text x="70" y="211" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">JWT</text>
+  <text x="167" y="211" font-family="sans-serif" font-size="12" fill="#ff8f00" text-anchor="middle">Varies</text>
+  <text x="254" y="211" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Great</text>
+  <text x="336" y="211" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Fast</text>
+  <text x="509" y="211" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Stateless</text>
+  <text x="330" y="248" font-family="sans-serif" font-size="11" fill="#2e7d32" text-anchor="middle">Best practice: Redis with encryption at rest — fast, TTL, cluster support, atomic operations</text>
+</svg>
 
 ---
 

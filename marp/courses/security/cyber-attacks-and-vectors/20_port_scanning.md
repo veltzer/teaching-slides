@@ -25,26 +25,24 @@
 ---
 ## Port States
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Port States                                      │
-│                                                          │
-│  Open        A service is actively listening              │
-│  ┌─────┐    and accepting connections                    │
-│  │ ███ │    Responds with SYN-ACK (TCP)                  │
-│  └─────┘                                                 │
-│                                                          │
-│  Closed      No service listening, but host is reachable │
-│  ┌─────┐    Responds with RST (TCP)                      │
-│  │     │                                                 │
-│  └─────┘                                                 │
-│                                                          │
-│  Filtered    Firewall/filter is blocking the probe       │
-│  ┌█████┐    No response or ICMP unreachable              │
-│  │█████│                                                 │
-│  └█████┘                                                 │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="210" viewBox="0 0 660 210">
+  <rect width="660" height="210" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="28" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Port States</text>
+  <rect x="20" y="45" width="180" height="50" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Open</text>
+  <text x="110" y="83" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Service actively listening</text>
+  <rect x="240" y="45" width="180" height="50" fill="#e8f5e9" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Closed</text>
+  <text x="330" y="83" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Host reachable, no service</text>
+  <rect x="460" y="45" width="180" height="50" fill="#fff3e0" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="550" y="65" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e65100" text-anchor="middle">Filtered</text>
+  <text x="550" y="83" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Firewall blocking probe</text>
+  <text x="110" y="125" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="middle">Responds: SYN-ACK (TCP)</text>
+  <text x="330" y="125" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">Responds: RST (TCP)</text>
+  <text x="550" y="125" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="middle">No response / ICMP unreachable</text>
+  <line x1="20" y1="150" x2="640" y2="150" stroke="#aaa" stroke-width="1"/>
+  <text x="330" y="175" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Nmap uses probe responses to classify each scanned port into one of these three states</text>
+</svg>
 
 - **Open**: Useful for attackers -- exploitable services
 - **Closed**: Host is alive but no service on this port
@@ -95,26 +93,35 @@ nmap 192.168.1.0/24
 
 ### TCP SYN Scan (Half-Open Scan)
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          SYN Scan (-sS) - Default for root               │
-│                                                          │
-│  Scanner              Target                             │
-│    │  SYN                │                                │
-│    │────────────────────>│                                │
-│    │                     │                                │
-│    │  SYN-ACK (open)     │  Port is OPEN                 │
-│    │<────────────────────│  (service listening)           │
-│    │  RST                │                                │
-│    │────────────────────>│  (close without completing)    │
-│    │                     │                                │
-│    │  RST (closed)       │  Port is CLOSED               │
-│    │<────────────────────│  (no service)                  │
-│    │                     │                                │
-│    │  [no response]      │  Port is FILTERED             │
-│    │         ?           │  (firewall dropping)           │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="280" viewBox="0 0 660 280">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="660" height="280" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">SYN Scan (-sS) — Default for root</text>
+  <rect x="30" y="40" width="100" height="32" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="80" y="61" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Scanner</text>
+  <rect x="530" y="40" width="100" height="32" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="580" y="61" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Target</text>
+  <line x1="80" y1="72" x2="80" y2="260" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="580" y1="72" x2="580" y2="260" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- SYN -->
+  <line x1="80" y1="95" x2="570" y2="95" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="330" y="90" font-family="sans-serif" font-size="12" fill="#333" text-anchor="middle">SYN</text>
+  <!-- SYN-ACK (open) -->
+  <line x1="580" y1="130" x2="90" y2="130" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="330" y="126" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">SYN-ACK → Port OPEN</text>
+  <!-- RST back -->
+  <line x1="80" y1="155" x2="570" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="330" y="151" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">RST (close without completing)</text>
+  <!-- RST (closed) -->
+  <line x1="580" y1="190" x2="90" y2="190" stroke="#e65100" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="330" y="186" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="middle">RST → Port CLOSED</text>
+  <!-- no response -->
+  <text x="330" y="228" font-family="sans-serif" font-size="12" fill="#777" text-anchor="middle" font-style="italic">[no response] → Port FILTERED (firewall dropping)</text>
+</svg>
 
 ```bash
 # SYN scan (requires root, stealthy)
@@ -254,18 +261,40 @@ sudo nmap -A 192.168.1.1
 - Each OS has a unique "fingerprint" of these values
 - `-A` enables OS detection, version detection, script scanning, and traceroute
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  OS Fingerprinting Characteristics                       │
-├────────────────┬──────────┬──────────┬──────────────────┤
-│  Characteristic│  Linux   │  Windows │  macOS           │
-├────────────────┼──────────┼──────────┼──────────────────┤
-│  Default TTL   │  64      │  128     │  64              │
-│  Window Size   │  5840    │  65535   │  65535           │
-│  DF Flag       │  Set     │  Set     │  Set             │
-│  TCP Options   │  MSS,SAC │  MSS,NOP│  MSS,WS,SAC     │
-└────────────────┴──────────┴──────────┴──────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="170" viewBox="0 0 660 170">
+  <rect width="660" height="170" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">OS Fingerprinting Characteristics</text>
+  <!-- Header row -->
+  <rect x="20" y="40" width="165" height="28" fill="#333" rx="2"/>
+  <rect x="185" y="40" width="115" height="28" fill="#1565c0" rx="2"/>
+  <rect x="300" y="40" width="115" height="28" fill="#1565c0" rx="2"/>
+  <rect x="415" y="40" width="225" height="28" fill="#1565c0" rx="2"/>
+  <text x="102" y="59" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Characteristic</text>
+  <text x="242" y="59" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Linux</text>
+  <text x="357" y="59" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Windows</text>
+  <text x="527" y="59" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">macOS</text>
+  <!-- rows -->
+  <rect x="20" y="68" width="620" height="24" fill="#fff" rx="1" stroke="#ccc" stroke-width="1"/>
+  <rect x="20" y="92" width="620" height="24" fill="#e8f5e9" rx="1" stroke="#ccc" stroke-width="1"/>
+  <rect x="20" y="116" width="620" height="24" fill="#fff" rx="1" stroke="#ccc" stroke-width="1"/>
+  <rect x="20" y="140" width="620" height="24" fill="#e8f5e9" rx="1" stroke="#ccc" stroke-width="1"/>
+  <text x="102" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Default TTL</text>
+  <text x="242" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">64</text>
+  <text x="357" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">128</text>
+  <text x="527" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">64</text>
+  <text x="102" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Window Size</text>
+  <text x="242" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">5840</text>
+  <text x="357" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">65535</text>
+  <text x="527" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">65535</text>
+  <text x="102" y="132" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">DF Flag</text>
+  <text x="242" y="132" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Set</text>
+  <text x="357" y="132" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Set</text>
+  <text x="527" y="132" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Set</text>
+  <text x="102" y="156" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">TCP Options</text>
+  <text x="242" y="156" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">MSS, SAC</text>
+  <text x="357" y="156" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">MSS, NOP</text>
+  <text x="527" y="156" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">MSS, WS, SAC</text>
+</svg>
 
 ---
 ## Timing Options

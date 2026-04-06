@@ -21,22 +21,25 @@
 
 ## Report Audience
 
-```diagram
-+------------------+     +------------------+
-| Technical        |     | Non-Technical    |
-| Audience         |     | Audience         |
-+------------------+     +------------------+
-| IT Security team |     | Legal counsel    |
-| System admins    |     | Management       |
-| Incident response|     | Human Resources  |
-| Other examiners  |     | Judges/Jury      |
-| Peer reviewers   |     | Law enforcement  |
-+------------------+     +------------------+
-
-Write for BOTH audiences:
-- Executive summary for non-technical
-- Detailed technical appendices for technical
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="240" viewBox="0 0 640 240">
+  <rect width="640" height="240" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="320" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Report Audiences</text>
+  <rect x="30" y="42" width="265" height="155" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="162" y="64" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">Technical Audience</text>
+  <text x="162" y="86" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">IT Security team</text>
+  <text x="162" y="104" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">System administrators</text>
+  <text x="162" y="122" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Incident response team</text>
+  <text x="162" y="140" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Other examiners</text>
+  <text x="162" y="158" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Peer reviewers</text>
+  <rect x="345" y="42" width="265" height="155" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="477" y="64" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">Non-Technical Audience</text>
+  <text x="477" y="86" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Legal counsel</text>
+  <text x="477" y="104" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Management</text>
+  <text x="477" y="122" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Human Resources</text>
+  <text x="477" y="140" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Judges / Jury</text>
+  <text x="477" y="158" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle">Law enforcement</text>
+  <text x="320" y="218" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle" font-style="italic">Write for BOTH: executive summary for non-technical, detailed appendices for technical</text>
+</svg>
 
 ---
 
@@ -147,7 +150,7 @@ Evidence bag seal numbers recorded at each transfer.
 
 ## Evidence Collection Documentation
 
-```misc
+```output
 EVIDENCE COLLECTION LOG
 =======================
 Item  | Source           | Method          | Hash (SHA-256)
@@ -432,7 +435,7 @@ as the root user, establishing persistent access.
 
 ## Hash Verification Appendix
 
-```misc
+```output
 APPENDIX B: HASH VERIFICATION
 ==============================
 
@@ -732,18 +735,44 @@ After Testimony:
 
 ## Incident Response Report vs Legal Report
 
-```diagram
-INCIDENT RESPONSE REPORT     LEGAL/FORENSIC REPORT
-========================     =====================
-Focus: Quick remediation     Focus: Evidence preservation
-Audience: IT/Security team   Audience: Legal/Court
-Timeline: Hours to days      Timeline: Weeks to months
-Detail: Technical specifics  Detail: Comprehensive
-Format: Informal/templates   Format: Formal/structured
-Goal: Stop the attack        Goal: Prove what happened
-Includes: IOCs, patches      Includes: Chain of custody
-Language: Technical           Language: Clear for all
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="270" viewBox="0 0 660 270">
+  <rect width="660" height="270" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <!-- col headers -->
+  <rect x="30" y="15" width="290" height="34" fill="#1565c0" rx="4"/>
+  <text x="175" y="37" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Incident Response Report</text>
+  <rect x="340" y="15" width="290" height="34" fill="#2e7d32" rx="4"/>
+  <text x="485" y="37" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">Legal / Forensic Report</text>
+  <!-- rows -->
+  <line x1="30" y1="49" x2="630" y2="49" stroke="#ccc" stroke-width="1"/>
+  <text x="40" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Focus</text>
+  <text x="200" y="68" font-family="sans-serif" font-size="12" fill="#222">Quick remediation</text>
+  <text x="510" y="68" font-family="sans-serif" font-size="12" fill="#222">Evidence preservation</text>
+  <line x1="30" y1="76" x2="630" y2="76" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="94" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Audience</text>
+  <text x="200" y="94" font-family="sans-serif" font-size="12" fill="#222">IT / Security team</text>
+  <text x="510" y="94" font-family="sans-serif" font-size="12" fill="#222">Legal / Court</text>
+  <line x1="30" y1="102" x2="630" y2="102" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="120" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Timeline</text>
+  <text x="200" y="120" font-family="sans-serif" font-size="12" fill="#222">Hours to days</text>
+  <text x="510" y="120" font-family="sans-serif" font-size="12" fill="#222">Weeks to months</text>
+  <line x1="30" y1="128" x2="630" y2="128" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="146" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Format</text>
+  <text x="200" y="146" font-family="sans-serif" font-size="12" fill="#222">Informal / templates</text>
+  <text x="510" y="146" font-family="sans-serif" font-size="12" fill="#222">Formal / structured</text>
+  <line x1="30" y1="154" x2="630" y2="154" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="172" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Goal</text>
+  <text x="200" y="172" font-family="sans-serif" font-size="12" fill="#222">Stop the attack</text>
+  <text x="510" y="172" font-family="sans-serif" font-size="12" fill="#222">Prove what happened</text>
+  <line x1="30" y1="180" x2="630" y2="180" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="198" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Includes</text>
+  <text x="200" y="198" font-family="sans-serif" font-size="12" fill="#222">IOCs, patches</text>
+  <text x="510" y="198" font-family="sans-serif" font-size="12" fill="#222">Chain of custody</text>
+  <line x1="30" y1="206" x2="630" y2="206" stroke="#eee" stroke-width="1"/>
+  <text x="40" y="224" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Language</text>
+  <text x="200" y="224" font-family="sans-serif" font-size="12" fill="#222">Technical</text>
+  <text x="510" y="224" font-family="sans-serif" font-size="12" fill="#222">Clear for all</text>
+  <line x1="325" y1="15" x2="325" y2="255" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
 
 - Same investigation may produce both types
 - IR report feeds into forensic report
@@ -810,29 +839,32 @@ Types of Visualizations:
 
 ## Multi-Evidence Correlation
 
-```misc
-CORRELATION MATRIX
-==================
-Evidence E001 (Disk) + E002 (Memory) + E003 (Network)
-
-Finding: Unauthorized Access
-  E001: auth.log shows SSH login at 10:30
-  E002: Memory shows bash process started at 10:30
-  E003: Network shows TCP connection from 10.0.0.99 at 10:30
-  -> CORROBORATED across 3 evidence sources
-
-Finding: Malware Installation
-  E001: /tmp/.hidden/toolkit.tar.gz created at 10:30:20
-  E002: Memory shows wget process at 10:30:15
-  E003: HTTP GET to evil.com/toolkit.tar.gz at 10:30:15
-  -> CORROBORATED across 3 evidence sources
-
-Finding: Data Exfiltration
-  E001: No direct evidence on disk
-  E002: Memory shows /etc/shadow was opened
-  E003: 2KB outbound to 10.0.0.99:4443 at 10:32
-  -> PROBABLE based on E002+E003 correlation
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" viewBox="0 0 660 340">
+  <rect width="660" height="340" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Correlation Matrix</text>
+  <text x="330" y="44" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Evidence: E001 (Disk) + E002 (Memory) + E003 (Network)</text>
+  <!-- Finding 1 -->
+  <rect x="20" y="58" width="620" height="84" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1"/>
+  <text x="35" y="77" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Finding: Unauthorized Access</text>
+  <text x="45" y="95" font-family="sans-serif" font-size="12" fill="#333">E001: auth.log shows SSH login at 10:30</text>
+  <text x="45" y="112" font-family="sans-serif" font-size="12" fill="#333">E002: Memory shows bash process started at 10:30</text>
+  <text x="45" y="129" font-family="sans-serif" font-size="12" fill="#333">E003: Network shows TCP connection from 10.0.0.99 at 10:30</text>
+  <text x="600" y="135" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="end">✓ CORROBORATED</text>
+  <!-- Finding 2 -->
+  <rect x="20" y="152" width="620" height="84" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1"/>
+  <text x="35" y="171" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Finding: Malware Installation</text>
+  <text x="45" y="189" font-family="sans-serif" font-size="12" fill="#333">E001: /tmp/.hidden/toolkit.tar.gz created at 10:30:20</text>
+  <text x="45" y="206" font-family="sans-serif" font-size="12" fill="#333">E002: Memory shows wget process at 10:30:15</text>
+  <text x="45" y="223" font-family="sans-serif" font-size="12" fill="#333">E003: HTTP GET to evil.com/toolkit.tar.gz at 10:30:15</text>
+  <text x="600" y="229" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="end">✓ CORROBORATED</text>
+  <!-- Finding 3 -->
+  <rect x="20" y="246" width="620" height="84" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1"/>
+  <text x="35" y="265" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100">Finding: Data Exfiltration</text>
+  <text x="45" y="283" font-family="sans-serif" font-size="12" fill="#333">E001: No direct evidence on disk</text>
+  <text x="45" y="300" font-family="sans-serif" font-size="12" fill="#333">E002: Memory shows /etc/shadow was opened</text>
+  <text x="45" y="317" font-family="sans-serif" font-size="12" fill="#333">E003: 2KB outbound to 10.0.0.99:4443 at 10:32</text>
+  <text x="600" y="323" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e65100" text-anchor="end">~ PROBABLE (E002+E003)</text>
+</svg>
 
 ---
 
