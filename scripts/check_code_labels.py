@@ -17,12 +17,12 @@ import re
 import sys
 from pathlib import Path
 from typing import Iterator
+from config.code_labels import VALID  # noqa: E402
 
 # Locate the project root (one level up from this script's directory) and
 # import the labels module from config/.
 _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
-from config.code_labels import VALID  # noqa: E402
 
 
 # Matches the opening fence of a fenced code block, capturing the label.
