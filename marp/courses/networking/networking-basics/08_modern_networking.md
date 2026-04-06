@@ -560,7 +560,7 @@ $ curl -X POST "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache" 
 
 WebSocket provides full-duplex communication over a single TCP connection, unlike HTTP's request-response model.
 
-```misc
+```diagram
 HTTP (half-duplex):                  WebSocket (full-duplex):
 Client → Request  → Server           Client ←──────→ Server
 Client ← Response ← Server           Bidirectional real-time

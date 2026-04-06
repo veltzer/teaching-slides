@@ -462,12 +462,36 @@ print(D.__mro__)
 ---
 ## MRO - C3 Linearization
 
-```diagram
-D -> B -> C -> A -> object
-
-class D(B, C):
-    D first checks B, then C, then A
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- MRO chain -->
+  <text x="10" y="22" font-size="14" font-weight="bold" fill="#222">MRO: D → B → C → A → object</text>
+  <!-- boxes -->
+  <rect x="10"  y="35" width="70" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="45"  y="58" font-size="16" font-weight="bold" fill="#1565c0" text-anchor="middle">D</text>
+  <line x1="80" y1="53" x2="96" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="98"  y="35" width="70" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="133" y="58" font-size="16" font-weight="bold" fill="#2e7d32" text-anchor="middle">B</text>
+  <line x1="168" y1="53" x2="184" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="186" y="35" width="70" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="221" y="58" font-size="16" font-weight="bold" fill="#e65100" text-anchor="middle">C</text>
+  <line x1="256" y1="53" x2="272" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="274" y="35" width="70" height="36" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="309" y="58" font-size="16" font-weight="bold" fill="#c62828" text-anchor="middle">A</text>
+  <line x1="344" y1="53" x2="360" y2="53" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="362" y="35" width="90" height="36" fill="#f0f4f8" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="407" y="58" font-size="14" font-weight="bold" fill="#555" text-anchor="middle">object</text>
+  <!-- class definition -->
+  <rect x="10" y="90" width="400" height="60" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="20" y="115" font-size="13" fill="#222" font-family="monospace">class D(B, C):</text>
+  <text x="20" y="137" font-size="13" fill="#555" font-family="monospace">    # D first checks B, then C, then A</text>
+  <!-- note -->
+  <text x="10" y="175" font-size="12" fill="#666">Python uses C3 linearization to determine the Method Resolution Order (MRO).</text>
+</svg>
 
 - Python uses C3 linearization algorithm
 - Guarantees each class appears only once

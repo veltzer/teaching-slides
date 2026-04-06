@@ -347,16 +347,34 @@ Do not use bit fields for portable wire formats.
 
 ## Endianness
 
-```diagram
-Big-Endian (network byte order):        Little-Endian (x86):
-uint32_t val = 0x12345678               uint32_t val = 0x12345678
-
-Address:  0x00  0x01  0x02  0x03       Address:  0x00  0x01  0x02  0x03
-         ┌─────┬─────┬─────┬─────┐              ┌─────┬─────┬─────┬─────┐
-         │ 0x12│ 0x34│ 0x56│ 0x78│              │ 0x78│ 0x56│ 0x34│ 0x12│
-         └─────┴─────┴─────┴─────┘              └─────┴─────┴─────┴─────┘
-          MSB first                              LSB first
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="150" font-family="monospace">
+  <!-- Big-Endian -->
+  <text x="10" y="20" font-size="13" font-weight="bold" fill="#222" font-family="sans-serif">Big-Endian (network byte order)</text>
+  <text x="10" y="38" font-size="12" fill="#555">uint32_t val = 0x12345678</text>
+  <text x="10" y="58" font-size="11" fill="#777">Address:  0x00  0x01  0x02  0x03</text>
+  <rect x="10"  y="65" width="60" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <rect x="70"  y="65" width="60" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <rect x="130" y="65" width="60" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <rect x="190" y="65" width="60" height="30" fill="#fce4ec" stroke="#333" stroke-width="1.5"/>
+  <text x="40"  y="85" font-size="13" fill="#222" text-anchor="middle">0x12</text>
+  <text x="100" y="85" font-size="13" fill="#222" text-anchor="middle">0x34</text>
+  <text x="160" y="85" font-size="13" fill="#222" text-anchor="middle">0x56</text>
+  <text x="220" y="85" font-size="13" fill="#222" text-anchor="middle">0x78</text>
+  <text x="10" y="112" font-size="12" fill="#555" font-family="sans-serif">MSB first</text>
+  <!-- Little-Endian -->
+  <text x="340" y="20" font-size="13" font-weight="bold" fill="#222" font-family="sans-serif">Little-Endian (x86)</text>
+  <text x="340" y="38" font-size="12" fill="#555">uint32_t val = 0x12345678</text>
+  <text x="340" y="58" font-size="11" fill="#777">Address:  0x00  0x01  0x02  0x03</text>
+  <rect x="340" y="65" width="60" height="30" fill="#fce4ec" stroke="#333" stroke-width="1.5"/>
+  <rect x="400" y="65" width="60" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <rect x="460" y="65" width="60" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <rect x="520" y="65" width="60" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="370" y="85" font-size="13" fill="#222" text-anchor="middle">0x78</text>
+  <text x="430" y="85" font-size="13" fill="#222" text-anchor="middle">0x56</text>
+  <text x="490" y="85" font-size="13" fill="#222" text-anchor="middle">0x34</text>
+  <text x="550" y="85" font-size="13" fill="#222" text-anchor="middle">0x12</text>
+  <text x="340" y="112" font-size="12" fill="#555" font-family="sans-serif">LSB first</text>
+</svg>
 
 ---
 

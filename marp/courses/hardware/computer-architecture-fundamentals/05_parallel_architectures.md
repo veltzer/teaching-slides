@@ -1019,7 +1019,7 @@ avoiding multiple caches all trying to respond simultaneously.
 Amdahl's Law gives the theoretical maximum speedup of a program when
 parallelizing only a fraction of it.
 
-```misc
+```diagram
                     1
 Speedup = ─────────────────────
            (1 - P) + P / N

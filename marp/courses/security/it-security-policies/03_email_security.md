@@ -130,25 +130,28 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Spam Filtering
 
 ## How It Works
-```diagram
-Incoming Email
-      |
-      v
-+------------------+
-| Spam Filter      |
-| - Known bad      |     +--------+
-|   senders        |---->| Spam   |
-| - Suspicious     |     | Folder |
-|   patterns       |     +--------+
-| - Malicious      |
-|   attachments    |
-+--------+---------+
-         |
-         v
-   +----------+
-   |  Inbox   |
-   +----------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="290" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <text x="200" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Incoming Email</text>
+  <line x1="200" y1="30" x2="200" y2="55" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="60" y="58" width="280" height="130" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="200" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Spam Filter</text>
+  <text x="75" y="98"  font-size="12" fill="#333333">• Known bad senders</text>
+  <text x="75" y="116" font-size="12" fill="#333333">• Suspicious patterns</text>
+  <text x="75" y="134" font-size="12" fill="#333333">• Malicious attachments</text>
+  <text x="75" y="152" font-size="12" fill="#333333">• Phishing indicators</text>
+  <line x1="340" y1="123" x2="395" y2="123" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="397" y="100" width="130" height="46" fill="#fce4ec" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="462" y="121" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Spam</text>
+  <text x="462" y="139" text-anchor="middle" font-size="12" fill="#c62828">Folder</text>
+  <line x1="200" y1="188" x2="200" y2="218" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="120" y="220" width="160" height="42" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="200" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Inbox</text>
+</svg>
 
 - Spam filters catch most threats, but not all
 - Check your spam folder occasionally for legitimate emails

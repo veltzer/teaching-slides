@@ -102,17 +102,16 @@
 
 ## IP Packet Structure
 
-```diagram
-+------------------------+
-|       IP Header        |
-+------------------------+
-|    Source IP Address   |
-+------------------------+
-| Destination IP Address |
-+------------------------+
-|         Data          |
-+------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="200" font-family="sans-serif">
+  <rect x="60" y="10" width="220" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="170" y="33" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">IP Header</text>
+  <rect x="60" y="46" width="220" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="170" y="69" font-size="13" fill="#222" text-anchor="middle">Source IP Address</text>
+  <rect x="60" y="82" width="220" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="170" y="105" font-size="13" fill="#222" text-anchor="middle">Destination IP Address</text>
+  <rect x="60" y="118" width="220" height="60" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="170" y="153" font-size="13" fill="#222" text-anchor="middle">Data</text>
+</svg>
 
 ---
 

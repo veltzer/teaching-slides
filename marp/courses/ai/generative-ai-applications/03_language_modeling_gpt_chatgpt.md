@@ -24,7 +24,7 @@ Example:
 
 ## From N-grams to Neural Language Models
 
-```misc
+```diagram
 Evolution of Language Modeling:
 
 N-grams (1990s)     → Count word sequences in corpus
@@ -484,7 +484,7 @@ response = client.chat.completions.create(
 
 ## Temperature vs. Top-p — When to Use Which
 
-```misc
+```diagram
 Task-Based Recommendations:
 ─────────────────────────────────────────────
 Code generation:    temp=0.0-0.2, top_p=0.1
@@ -707,7 +707,7 @@ class SwiGLU(nn.Module):
 
 ## KV Cache — Speeding Up Inference
 
-```misc
+```diagram
 Without KV cache (naive):
   Step 1: Process ["The"]          → compute K,V for all
   Step 2: Process ["The", "cat"]   → RECOMPUTE K,V for all

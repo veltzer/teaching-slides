@@ -298,9 +298,27 @@ set_tests_properties(
 )
 ```
 
-```diagram
-setup_db  ->  test_insert  ->  test_query  ->  test_delete  ->  cleanup_db
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="80" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="10" y="20" width="100" height="38" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="60" y="44" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">setup_db</text>
+<line x1="110" y1="39" x2="138" y2="39" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="20" width="100" height="38" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="190" y="44" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">test_insert</text>
+<line x1="240" y1="39" x2="268" y2="39" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="270" y="20" width="100" height="38" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="320" y="44" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">test_query</text>
+<line x1="370" y1="39" x2="398" y2="39" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="400" y="20" width="100" height="38" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="450" y="44" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">test_delete</text>
+<line x1="500" y1="39" x2="528" y2="39" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="530" y="20" width="100" height="38" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="580" y="44" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">cleanup_db</text>
+</svg>
 
 - Setup runs once before the group, cleanup once after
 

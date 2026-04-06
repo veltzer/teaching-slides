@@ -26,7 +26,7 @@ Pre-trained model       Your data           Fine-tuned model
 
 ## Fine-Tuning vs. Prompt Engineering — Decision Tree
 
-```misc
+```diagram
 Start here: Do you have a working prompt?
   │
   NO → Try prompt engineering first (Day 2 morning)

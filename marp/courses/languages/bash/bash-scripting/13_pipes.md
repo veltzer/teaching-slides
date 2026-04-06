@@ -30,19 +30,34 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ---
 ## How Pipes Work Internally
 
-```diagram
-+----------+     pipe buffer     +----------+
-| command1 | --> [  4KB-64KB  ] --> | command2 |
-|          |     (kernel mem)    |          |
-| stdout=1 |                     | stdin=0  |
-+----------+                     +----------+
-
-1. Shell creates a pipe (two file descriptors)
-2. Shell forks command1, connects its stdout to pipe write end
-3. Shell forks command2, connects its stdin to pipe read end
-4. Both commands run CONCURRENTLY
-5. Kernel manages the buffer between them
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- command1 box -->
+  <rect x="10" y="20" width="140" height="60" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="80" y="46" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">command1</text>
+  <text x="80" y="66" font-size="12" fill="#555" text-anchor="middle">stdout = 1</text>
+  <!-- pipe buffer box -->
+  <rect x="200" y="20" width="260" height="60" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="330" y="42" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">pipe buffer</text>
+  <text x="330" y="60" font-size="12" fill="#555" text-anchor="middle">4KB–64KB  (kernel memory)</text>
+  <!-- command2 box -->
+  <rect x="510" y="20" width="140" height="60" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="580" y="46" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">command2</text>
+  <text x="580" y="66" font-size="12" fill="#555" text-anchor="middle">stdin = 0</text>
+  <!-- arrows -->
+  <line x1="150" y1="50" x2="196" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="460" y1="50" x2="506" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- steps -->
+  <text x="10" y="110" font-size="13" fill="#222">1. Shell creates a pipe (two file descriptors)</text>
+  <text x="10" y="130" font-size="13" fill="#222">2. Shell forks command1, connects its stdout to pipe write end</text>
+  <text x="10" y="150" font-size="13" fill="#222">3. Shell forks command2, connects its stdin to pipe read end</text>
+  <text x="10" y="170" font-size="13" fill="#222">4. Both commands run <tspan font-weight="bold">concurrently</tspan></text>
+  <text x="10" y="190" font-size="13" fill="#222">5. Kernel manages the buffer between them</text>
+</svg>
 
 ---
 ## Pipes Run Concurrently

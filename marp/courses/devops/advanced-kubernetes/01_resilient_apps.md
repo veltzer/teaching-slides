@@ -564,7 +564,7 @@ grpc:
 
 ## Probe Decision Tree
 
-```misc
+```diagram
 Is the container running?
 │
 ├─ YES → Liveness Probe passes

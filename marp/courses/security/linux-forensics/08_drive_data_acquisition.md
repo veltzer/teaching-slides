@@ -16,14 +16,30 @@
 - Document the entire process
 - Maintain chain of custody
 
-```diagram
-Original Evidence  -->  Write Blocker  -->  Forensic Workstation
-  /dev/sdb              (read-only)          /evidence/disk.dd
-     |                                            |
-  SHA-256: abc123...                         SHA-256: abc123...
-     |                                            |
-     +--- Hashes MUST match ---+------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect x="10" y="30" width="170" height="70" fill="#fce4ec" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="95" y="54" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Original Evidence</text>
+  <text x="95" y="72" text-anchor="middle" font-size="11" fill="#555555">/dev/sdb</text>
+  <text x="95" y="88" text-anchor="middle" font-size="10" fill="#888888">SHA-256: abc123...</text>
+  <line x1="180" y1="65" x2="240" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="242" y="30" width="170" height="70" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="327" y="54" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Write Blocker</text>
+  <text x="327" y="72" text-anchor="middle" font-size="11" fill="#1565c0">(read-only)</text>
+  <text x="327" y="88" text-anchor="middle" font-size="11" fill="#555555">Prevents modification</text>
+  <line x1="412" y1="65" x2="472" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="474" y="30" width="190" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="569" y="54" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Forensic Workstation</text>
+  <text x="569" y="72" text-anchor="middle" font-size="11" fill="#555555">/evidence/disk.dd</text>
+  <text x="569" y="88" text-anchor="middle" font-size="10" fill="#888888">SHA-256: abc123...</text>
+  <rect x="10" y="118" width="654" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5" rx="4"/>
+  <text x="337" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Hash Verification</text>
+  <text x="337" y="152" text-anchor="middle" font-size="12" fill="#333333">Source hash MUST match destination hash — proves image integrity (chain of custody)</text>
+</svg>
 
 ---
 

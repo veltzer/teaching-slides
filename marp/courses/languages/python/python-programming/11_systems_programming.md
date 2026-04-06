@@ -626,10 +626,25 @@ for t in threads:
 - Threads are useful for I/O-bound tasks
 - For CPU-bound tasks, use `multiprocessing`
 
-```diagram
-CPU-bound task  -> multiprocessing
-I/O-bound task  -> threading or asyncio
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="110" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- CPU-bound -->
+  <rect x="10" y="20" width="130" height="36" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="75" y="43" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">CPU-bound task</text>
+  <line x1="140" y1="38" x2="156" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="158" y="20" width="160" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="238" y="43" font-size="13" fill="#1565c0" text-anchor="middle">multiprocessing</text>
+  <!-- I/O-bound -->
+  <rect x="10" y="66" width="130" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="75" y="89" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">I/O-bound task</text>
+  <line x1="140" y1="84" x2="156" y2="84" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="158" y="66" width="230" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="273" y="89" font-size="13" fill="#1565c0" text-anchor="middle">threading  or  asyncio</text>
+</svg>
 ---
 ## Threading - Thread Pool
 

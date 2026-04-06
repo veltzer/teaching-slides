@@ -24,21 +24,16 @@
 
 ## Testing Pyramid for Infrastructure
 
-```diagram
-            /\
-           /  \          Integration Tests
-          /    \         (full stack, multi-host)
-         /------\
-        /        \       Functional Tests
-       /          \      (Molecule + verifier)
-      /------------\
-     /              \    Linting & Syntax
-    /                \   (ansible-lint, yamllint)
-   /------------------\
-  /                    \ Unit Tests
- /                      \(module tests, filter tests)
-/________________________\
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="350" font-family="sans-serif">
+<polygon points="30,220 590,220 634,340 -14,340" fill="#e3f2fd" stroke="#999" stroke-width="1"/>
+<text x="310" y="285" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Unit Tests (module tests, filter tests)</text>
+<polygon points="80,130 539,130 575,220 44,220" fill="#e8f5e9" stroke="#999" stroke-width="1"/>
+<text x="310" y="180" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Linting & Syntax (ansible-lint, yamllint)</text>
+<polygon points="131,60 489,60 517,130 103,130" fill="#fff3e0" stroke="#999" stroke-width="1"/>
+<text x="310" y="100" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Functional Tests (Molecule + verifier)</text>
+<polygon points="181,10 438,10 458,60 161,60" fill="#fce4ec" stroke="#999" stroke-width="1"/>
+<text x="310" y="40" font-size="12" font-weight="bold" fill="#333" text-anchor="middle">Integration Tests (full stack, multi-host)</text>
+</svg>
 
 ---
 

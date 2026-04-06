@@ -407,7 +407,7 @@ improved_prompt = get_completion(meta_prompt)
 
 ## Prompt Length vs. Quality Tradeoff
 
-```misc
+```diagram
                 Quality
                   │
                   │            ╱╲
@@ -578,7 +578,7 @@ OUTPUT FORMAT:
 
 ## Prompt Engineering Anti-Patterns
 
-```misc
+```diagram
 ANTI-PATTERN 1: THE KITCHEN SINK
   "Tell me everything about machine learning including
    history, types, algorithms, applications, math,

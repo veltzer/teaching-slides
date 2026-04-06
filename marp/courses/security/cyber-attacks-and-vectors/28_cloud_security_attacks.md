@@ -12,31 +12,71 @@
 ---
 ## Shared Responsibility Model
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Cloud Shared Responsibility Model                │
-│                                                          │
-│                 IaaS        PaaS        SaaS             │
-│  ┌──────────┬──────────┬──────────┬──────────┐          │
-│  │ Data     │ CUSTOMER │ CUSTOMER │ CUSTOMER │          │
-│  ├──────────┼──────────┼──────────┼──────────┤          │
-│  │ App      │ CUSTOMER │ CUSTOMER │ PROVIDER │          │
-│  ├──────────┼──────────┼──────────┼──────────┤          │
-│  │ Runtime  │ CUSTOMER │ PROVIDER │ PROVIDER │          │
-│  ├──────────┼──────────┼──────────┼──────────┤          │
-│  │ OS       │ CUSTOMER │ PROVIDER │ PROVIDER │          │
-│  ├──────────┼──────────┼──────────┼──────────┤          │
-│  │ Network  │ SHARED   │ PROVIDER │ PROVIDER │          │
-│  ├──────────┼──────────┼──────────┼──────────┤          │
-│  │ Physical │ PROVIDER │ PROVIDER │ PROVIDER │          │
-│  └──────────┴──────────┴──────────┴──────────┘          │
-│                                                          │
-│  "Security OF the cloud" = Provider                      │
-│  "Security IN the cloud" = Customer                      │
-│                                                          │
-│  Most breaches occur in the CUSTOMER responsibility area │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="330" font-family="sans-serif">
+  <rect x="5" y="5" width="650" height="320" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="330" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Cloud Shared Responsibility Model</text>
+  <rect x="20"  y="38" width="130" height="28" fill="#cfd8dc" stroke="#333333" stroke-width="1" rx="2"/>
+  <rect x="152" y="38" width="150" height="28" fill="#cfd8dc" stroke="#333333" stroke-width="1" rx="2"/>
+  <rect x="304" y="38" width="150" height="28" fill="#cfd8dc" stroke="#333333" stroke-width="1" rx="2"/>
+  <rect x="456" y="38" width="185" height="28" fill="#cfd8dc" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="85"  y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Layer</text>
+  <text x="227" y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">IaaS</text>
+  <text x="379" y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">PaaS</text>
+  <text x="548" y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">SaaS</text>
+  <rect x="20"  y="68" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="68" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="68" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="68" width="185" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="85" text-anchor="middle" font-size="12" fill="#222222">Data</text>
+  <text x="227" y="85" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="379" y="85" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="548" y="85" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <rect x="20"  y="96" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="96" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="96" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="96" width="185" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="113" text-anchor="middle" font-size="12" fill="#222222">Application</text>
+  <text x="227" y="113" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="379" y="113" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="548" y="113" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <rect x="20"  y="124" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="124" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="124" width="150" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="124" width="185" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="141" text-anchor="middle" font-size="12" fill="#222222">Runtime</text>
+  <text x="227" y="141" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="379" y="141" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="548" y="141" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <rect x="20"  y="152" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="152" width="150" height="26" fill="#bbdefb" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="152" width="150" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="152" width="185" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="169" text-anchor="middle" font-size="12" fill="#222222">OS</text>
+  <text x="227" y="169" text-anchor="middle" font-size="11" fill="#1565c0">CUSTOMER</text>
+  <text x="379" y="169" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="548" y="169" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <rect x="20"  y="180" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="180" width="150" height="26" fill="#fff9c4" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="180" width="150" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="180" width="185" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="197" text-anchor="middle" font-size="12" fill="#222222">Network</text>
+  <text x="227" y="197" text-anchor="middle" font-size="11" fill="#f57f17">SHARED</text>
+  <text x="379" y="197" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="548" y="197" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <rect x="20"  y="208" width="130" height="26" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="152" y="208" width="150" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="304" y="208" width="150" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <rect x="456" y="208" width="185" height="26" fill="#c8e6c9" stroke="#999" stroke-width="1" rx="2"/>
+  <text x="85"  y="225" text-anchor="middle" font-size="12" fill="#222222">Physical</text>
+  <text x="227" y="225" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="379" y="225" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="548" y="225" text-anchor="middle" font-size="11" fill="#2e7d32">PROVIDER</text>
+  <text x="25"  y="260" font-size="12" fill="#1565c0" font-weight="bold">"Security OF the cloud"</text>
+  <text x="215" y="260" font-size="12" fill="#333333">= Provider responsibility</text>
+  <text x="25"  y="280" font-size="12" fill="#1565c0" font-weight="bold">"Security IN the cloud"</text>
+  <text x="215" y="280" font-size="12" fill="#333333">= Customer responsibility</text>
+  <text x="25"  y="305" font-size="12" fill="#c62828">Most breaches occur in the CUSTOMER responsibility area</text>
+</svg>
 
 ---
 ## Misconfigured S3 Buckets

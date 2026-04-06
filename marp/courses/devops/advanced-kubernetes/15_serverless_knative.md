@@ -673,7 +673,7 @@ Key takeaways:
 
 ## Course Wrap-Up
 
-```misc
+```diagram
 Day 1: Deploying Resilient Apps & Extending Kubernetes
   ✓ ReplicaSets, StatefulSets, Resources, Probes
   ✓ HPA, Cluster Autoscaler, KEDA

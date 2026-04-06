@@ -17,7 +17,7 @@
 - Remaining tasks on the failed host are skipped
 - Play recap shows failed count
 
-```misc
+```output
 PLAY RECAP *****************************
 web01  : ok=3  changed=1  unreachable=0  failed=1
 web02  : ok=5  changed=2  unreachable=0  failed=0

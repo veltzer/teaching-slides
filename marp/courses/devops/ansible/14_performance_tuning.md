@@ -66,15 +66,46 @@ ansible-playbook site.yml -f 50
 # ~100MB per fork (varies with modules)
 ```
 
-```diagram
-forks=5 (default):
-  Host1 ────────> Host2 ────────> Host3 ────────> Host4 ────────> Host5
-  Then: Host6 ──> Host7 ──> Host8 ──> ...
-
-forks=20:
-  Host1 ──> Host2 ──> Host3 ──> ... ──> Host20  (all at once)
-  Then: Host21 ──> Host22 ──> ...
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="215" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="10" y="22" font-size="13" font-weight="bold" fill="#222" text-anchor="start">forks=5 (default):</text>
+<rect x="30" y="35" width="80" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="70" y="55" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host1</text>
+<line x1="110" y1="50" x2="118" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="120" y="35" width="80" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="160" y="55" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host2</text>
+<line x1="200" y1="50" x2="208" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="210" y="35" width="80" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="250" y="55" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host3</text>
+<line x1="290" y1="50" x2="298" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="300" y="35" width="80" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="340" y="55" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host4</text>
+<line x1="380" y1="50" x2="388" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="390" y="35" width="80" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="430" y="55" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host5</text>
+<text x="30" y="90" font-size="11" font-weight="normal" fill="#666" text-anchor="start">Then: Host6 → Host7 → Host8 → ...</text>
+<text x="10" y="122" font-size="13" font-weight="bold" fill="#222" text-anchor="start">forks=20:</text>
+<rect x="30" y="135" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="70" y="155" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host1</text>
+<line x1="110" y1="150" x2="118" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="120" y="135" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="160" y="155" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host2</text>
+<line x1="200" y1="150" x2="208" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="210" y="135" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="250" y="155" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host3</text>
+<line x1="290" y1="150" x2="298" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="300" y="135" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="340" y="155" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">...</text>
+<line x1="380" y1="150" x2="388" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="390" y="135" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="430" y="155" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Host20</text>
+<text x="30" y="190" font-size="11" font-weight="normal" fill="#666" text-anchor="start">Then: Host21 → Host22 → ...</text>
+<text x="30" y="207" font-size="11" font-weight="normal" fill="#888" text-anchor="start">(all at once in first batch)</text>
+</svg>
 
 ---
 
@@ -429,7 +460,7 @@ strategy = mitogen_linear
 
 ## Performance Comparison
 
-```misc
+```output
 Configuration                     Time for 100 hosts
 ---------------------------------------------------
 Default (5 forks, no pipelining)  ~30 minutes

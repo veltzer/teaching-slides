@@ -425,7 +425,7 @@ class SafeGenAISystem:
 
 ## The Ethics of Generative AI
 
-```misc
+```diagram
 Key ethical questions for practitioners:
 
 1. TRANSPARENCY
@@ -504,7 +504,7 @@ Write a 1-page safety report of your findings.
 
 ## Course Recap — Five Days of Generative AI
 
-```misc
+```diagram
 Day 1: FOUNDATIONS
   ✓ Transformer architecture and self-attention
   ✓ GPT family and ChatGPT training pipeline
@@ -714,7 +714,7 @@ class SafetyTestSuite:
 
 ## The Future of AI Safety
 
-```misc
+```diagram
 EMERGING SAFETY RESEARCH AREAS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

@@ -158,7 +158,7 @@ Content-Type: application/xml
 
 ## File Upload Entry Points
 
-```misc
+```diagram
 File uploads are high-value entry points:
 
 1. File content     -> Web shell upload

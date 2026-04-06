@@ -169,7 +169,7 @@ $ ping -c 3 -D 8.8.8.8
 
 ## What Ping Failures Mean
 
-```misc
+```diagram
 "Destination Host Unreachable"
   → Your gateway doesn't know how to reach the target
   → Check: ip route, gateway status
@@ -276,7 +276,7 @@ $ mtr -j -c 10 8.8.8.8
 
 ## Interpreting mtr Results
 
-```misc
+```diagram
 Case 1: Loss at one hop but not later
   Hop 3: 30% loss
   Hop 4: 0% loss
@@ -483,7 +483,7 @@ tcp.port == 80 || tcp.port == 443
 
 ## Useful Wireshark Features
 
-```misc
+```diagram
 1. Capture filters (before capture, BPF syntax):
    host 10.0.0.5 and port 80
 

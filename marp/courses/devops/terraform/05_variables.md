@@ -291,18 +291,23 @@ variable "cidr_block" {
 
 ## Setting Variables: Precedence Order
 
-```diagram
-Highest priority (wins)
-  |
-  |  1. -var flag on command line
-  |  2. -var-file flag on command line
-  |  3. *.auto.tfvars files (alphabetical)
-  |  4. terraform.tfvars
-  |  5. TF_VAR_ environment variables
-  |  6. Variable defaults in configuration
-  |
-Lowest priority
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="308" font-family="sans-serif">
+<text x="320" y="18" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Terraform Variable Priority (Highest → Lowest)</text>
+<text x="10" y="42" font-size="11" fill="#c00" text-anchor="start">▲ Highest priority (wins)</text>
+<rect x="30" y="50" width="580" height="36" fill="#c62828" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="74" font-size="13" font-weight="bold" fill="#fff" text-anchor="start">1. -var flag on command line</text>
+<rect x="30" y="88" width="580" height="36" fill="#e53935" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="112" font-size="13" font-weight="bold" fill="#fff" text-anchor="start">2. -var-file flag on command line</text>
+<rect x="30" y="126" width="580" height="36" fill="#ef5350" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="150" font-size="13" font-weight="bold" fill="#fff" text-anchor="start">3. *.auto.tfvars files (alphabetical)</text>
+<rect x="30" y="164" width="580" height="36" fill="#e57373" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="188" font-size="13" font-weight="bold" fill="#222" text-anchor="start">4. terraform.tfvars</text>
+<rect x="30" y="202" width="580" height="36" fill="#ef9a9a" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="226" font-size="13" font-weight="bold" fill="#222" text-anchor="start">5. TF_VAR_ environment variables</text>
+<rect x="30" y="240" width="580" height="36" fill="#ffcdd2" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="50" y="264" font-size="13" font-weight="bold" fill="#222" text-anchor="start">6. Variable defaults in configuration</text>
+<text x="10" y="290" font-size="11" fill="#666" text-anchor="start">▼ Lowest priority</text>
+</svg>
 
 ---
 

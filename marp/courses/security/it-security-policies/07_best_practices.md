@@ -26,23 +26,23 @@
 
 ## The Clean Desk Test
 
-```diagram
-Before leaving your desk, check:
-
-+---+  Screen locked?
-|   |
-+---+  Sensitive papers put away?
-
-+---+  No passwords visible?
-|   |
-+---+  USB drives secured?
-
-+---+  Whiteboard erased?
-|   |
-+---+  Printouts collected from the printer?
-
-If any box is unchecked, fix it before you leave.
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="260" font-family="sans-serif">
+  <rect x="10" y="10" width="600" height="240" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="30" y="40" font-size="14" fill="#222222" font-weight="bold">Before leaving your desk, check:</text>
+  <rect x="30" y="54" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="66" font-size="13" fill="#222222">Screen locked?</text>
+  <rect x="30" y="80" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="92" font-size="13" fill="#222222">Sensitive papers put away?</text>
+  <rect x="30" y="106" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="118" font-size="13" fill="#222222">No passwords visible?</text>
+  <rect x="30" y="132" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="144" font-size="13" fill="#222222">USB drives secured?</text>
+  <rect x="30" y="158" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="170" font-size="13" fill="#222222">Whiteboard erased?</text>
+  <rect x="30" y="184" width="16" height="16" fill="white" stroke="#333333" stroke-width="1.5" rx="2"/>
+  <text x="56" y="196" font-size="13" fill="#222222">Printouts collected from the printer?</text>
+  <text x="30" y="232" font-size="12" fill="#555555" font-style="italic">If any box is unchecked, fix it before you leave.</text>
+</svg>
 
 ---
 
@@ -60,20 +60,36 @@ If any box is unchecked, fix it before you leave.
 
 ## Tailgating Prevention
 
-```diagram
-WRONG:                              RIGHT:
-
-+------+  +------+                 +------+     +------+
-|      |  |      |                 |      |     |      |
-| You  |  | ???  |                 | You  |     | ???  |
-|      |  |      |                 |      |     |      |
-+------+  +------+                 +------+     +------+
-   |         |                        |            |
-   v         v                        v            |
-[===DOOR===]                     [===DOOR===]      |
-   Both enter                        You enter     Waits and
-   together                          alone         badges in
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="tg-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="10" y="10" width="295" height="180" fill="#fff3e0" stroke="#cc4400" stroke-width="1.5" rx="4"/>
+  <text x="157" y="34" font-size="14" fill="#cc4400" font-weight="bold" text-anchor="middle">WRONG:</text>
+  <rect x="50" y="50" width="60" height="46" fill="#ffcc99" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="80" y="78" font-size="13" fill="#222222" text-anchor="middle">You</text>
+  <rect x="135" y="50" width="60" height="46" fill="#dddddd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="165" y="78" font-size="13" fill="#222222" text-anchor="middle">???</text>
+  <line x1="80" y1="96" x2="80" y2="116" stroke="#555" stroke-width="1.5" marker-end="url(#tg-arr)"/>
+  <line x1="165" y1="96" x2="165" y2="116" stroke="#555" stroke-width="1.5" marker-end="url(#tg-arr)"/>
+  <rect x="40" y="118" width="165" height="24" fill="#8B4513" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="122" y="134" font-size="12" fill="white" text-anchor="middle">===DOOR===</text>
+  <text x="122" y="170" font-size="11" fill="#cc4400" text-anchor="middle">Both enter together</text>
+  <rect x="355" y="10" width="295" height="180" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
+  <text x="502" y="34" font-size="14" fill="#2e7d32" font-weight="bold" text-anchor="middle">RIGHT:</text>
+  <rect x="375" y="50" width="60" height="46" fill="#ffcc99" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="405" y="78" font-size="13" fill="#222222" text-anchor="middle">You</text>
+  <rect x="570" y="50" width="60" height="46" fill="#dddddd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="600" y="78" font-size="13" fill="#222222" text-anchor="middle">???</text>
+  <line x1="405" y1="96" x2="405" y2="116" stroke="#555" stroke-width="1.5" marker-end="url(#tg-arr)"/>
+  <rect x="375" y="118" width="80" height="24" fill="#8B4513" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="415" y="134" font-size="12" fill="white" text-anchor="middle">DOOR</text>
+  <text x="405" y="170" font-size="11" fill="#2e7d32" text-anchor="middle">Enters alone</text>
+  <text x="600" y="158" font-size="11" fill="#2e7d32" text-anchor="middle">Waits &amp;</text>
+  <text x="600" y="172" font-size="11" fill="#2e7d32" text-anchor="middle">badges in</text>
+</svg>
 
 - "I'm sorry, could you badge in? It's company policy."
 - This is not rude - it is responsible
@@ -124,14 +140,23 @@ WRONG:                              RIGHT:
 - Do not download cracked or pirated software
 - Uninstall software you no longer use
 
-```diagram
-+------------------+     +------------------+
-| Software with    |     | Updated software |
-| known            |     | with             |
-| vulnerabilities  |     | patches applied  |
-| (RISK)           |     | (PROTECTED)      |
-+------------------+     +------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="120" font-family="sans-serif">
+  <defs>
+    <marker id="sw-arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="220" height="80" fill="#fff3e0" stroke="#cc4400" stroke-width="1.5" rx="4"/>
+  <text x="130" y="52" font-size="13" fill="#cc4400" font-weight="bold" text-anchor="middle">Software with known</text>
+  <text x="130" y="70" font-size="13" fill="#cc4400" font-weight="bold" text-anchor="middle">vulnerabilities</text>
+  <text x="130" y="88" font-size="12" fill="#cc4400" text-anchor="middle">(RISK)</text>
+  <line x1="250" y1="60" x2="330" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#sw-arr)"/>
+  <text x="290" y="52" font-size="11" fill="#555555" text-anchor="middle">update</text>
+  <rect x="340" y="20" width="240" height="80" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
+  <text x="460" y="52" font-size="13" fill="#2e7d32" font-weight="bold" text-anchor="middle">Updated software with</text>
+  <text x="460" y="70" font-size="13" fill="#2e7d32" font-weight="bold" text-anchor="middle">patches applied</text>
+  <text x="460" y="88" font-size="12" fill="#2e7d32" text-anchor="middle">(PROTECTED)</text>
+</svg>
 
 ---
 
@@ -220,25 +245,32 @@ WRONG:                              RIGHT:
 
 ## Building Good Habits
 
-```diagram
-+-----------------------------------------------------+
-|              DAILY SECURITY HABITS                    |
-+-----------------------------------------------------+
-| Morning:                                              |
-|   [ ] Check for software updates                     |
-|   [ ] Connect to VPN if working remotely             |
-|                                                       |
-| Throughout the day:                                   |
-|   [ ] Lock screen when stepping away                 |
-|   [ ] Think before clicking links                    |
-|   [ ] Verify unusual requests                        |
-|                                                       |
-| End of day:                                           |
-|   [ ] Clear desk of sensitive materials              |
-|   [ ] Log out of all applications                    |
-|   [ ] Save work to backed-up storage                 |
-+-----------------------------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="340" font-family="sans-serif">
+  <rect x="10" y="10" width="600" height="320" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <rect x="10" y="10" width="600" height="36" fill="#1565c0" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="310" y="34" font-size="15" fill="white" font-weight="bold" text-anchor="middle">DAILY SECURITY HABITS</text>
+  <text x="30" y="68" font-size="14" fill="#1565c0" font-weight="bold">Morning:</text>
+  <rect x="32" y="76" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="87" font-size="13" fill="#222222">Check for software updates</text>
+  <rect x="32" y="97" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="108" font-size="13" fill="#222222">Connect to VPN if working remotely</text>
+  <line x1="20" y1="122" x2="600" y2="122" stroke="#bbbbbb" stroke-width="1"/>
+  <text x="30" y="144" font-size="14" fill="#1565c0" font-weight="bold">Throughout the day:</text>
+  <rect x="32" y="152" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="163" font-size="13" fill="#222222">Lock screen when stepping away</text>
+  <rect x="32" y="173" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="184" font-size="13" fill="#222222">Think before clicking links</text>
+  <rect x="32" y="194" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="205" font-size="13" fill="#222222">Verify unusual requests</text>
+  <line x1="20" y1="218" x2="600" y2="218" stroke="#bbbbbb" stroke-width="1"/>
+  <text x="30" y="240" font-size="14" fill="#1565c0" font-weight="bold">End of day:</text>
+  <rect x="32" y="248" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="259" font-size="13" fill="#222222">Clear desk of sensitive materials</text>
+  <rect x="32" y="269" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="280" font-size="13" fill="#222222">Log out of all applications</text>
+  <rect x="32" y="290" width="14" height="14" fill="white" stroke="#333333" stroke-width="1" rx="2"/>
+  <text x="54" y="301" font-size="13" fill="#222222">Save work to backed-up storage</text>
+</svg>
 
 ---
 
@@ -270,17 +302,14 @@ WRONG:                              RIGHT:
 
 ## The Three Things to Remember
 
-```diagram
-+--------------------------------------------------+
-|                                                    |
-|  1. THINK before you click, share, or connect.    |
-|                                                    |
-|  2. REPORT anything suspicious immediately.        |
-|                                                    |
-|  3. PROTECT your credentials, devices, and data.  |
-|                                                    |
-+--------------------------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="180" font-family="sans-serif">
+  <rect x="10" y="10" width="580" height="160" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="300" y="52" font-size="14" fill="#222222" text-anchor="middle">1. <tspan font-weight="bold">THINK</tspan> before you click, share, or connect.</text>
+  <line x1="30" y1="70" x2="570" y2="70" stroke="#cccccc" stroke-width="1"/>
+  <text x="300" y="100" font-size="14" fill="#222222" text-anchor="middle">2. <tspan font-weight="bold">REPORT</tspan> anything suspicious immediately.</text>
+  <line x1="30" y1="118" x2="570" y2="118" stroke="#cccccc" stroke-width="1"/>
+  <text x="300" y="148" font-size="14" fill="#222222" text-anchor="middle">3. <tspan font-weight="bold">PROTECT</tspan> your credentials, devices, and data.</text>
+</svg>
 
 Security is a team effort. Every good decision you make protects not just you, but everyone in the organization.
 

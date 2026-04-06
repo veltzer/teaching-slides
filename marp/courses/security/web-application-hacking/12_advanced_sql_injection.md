@@ -521,7 +521,7 @@ db.query("SELECT * FROM users WHERE username = $1", [username]);
 
 ## Defense Layers Against SQL Injection
 
-```misc
+```diagram
 Layer 1: Parameterized Queries / Prepared Statements
   -> Separates code from data (PRIMARY DEFENSE)
 
@@ -673,7 +673,7 @@ User.where("name = '#{user_input}'")  # VULNERABLE!
 
 ## SQL Injection Impact Assessment
 
-```misc
+```diagram
 Severity depends on:
 
 1. Database Privileges

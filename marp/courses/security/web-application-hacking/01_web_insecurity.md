@@ -76,15 +76,32 @@
 
 ## Responsible Disclosure
 
-```diagram
-+------------------+     +------------------+     +------------------+
-|  Discover Vuln   | --> |  Report to Vendor| --> |  Vendor Patches  |
-+------------------+     +------------------+     +------------------+
-                                                          |
-+------------------+     +------------------+             |
-| Public Disclosure| <-- |  Coordinate Date | <-----------+
-+------------------+     +------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="185" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Row 1 boxes -->
+  <rect x="10" y="20" width="155" height="45" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="87" y="47" text-anchor="middle" font-size="13" fill="#222222">Discover Vuln</text>
+  <rect x="195" y="20" width="165" height="45" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="277" y="47" text-anchor="middle" font-size="13" fill="#222222">Report to Vendor</text>
+  <rect x="390" y="20" width="155" height="45" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="467" y="47" text-anchor="middle" font-size="13" fill="#222222">Vendor Patches</text>
+  <!-- Row 2 boxes -->
+  <rect x="10" y="120" width="155" height="45" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="87" y="147" text-anchor="middle" font-size="13" fill="#222222">Public Disclosure</text>
+  <rect x="195" y="120" width="165" height="45" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="277" y="147" text-anchor="middle" font-size="13" fill="#222222">Coordinate Date</text>
+  <!-- Arrows row 1 -->
+  <line x1="165" y1="42" x2="193" y2="42" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="360" y1="42" x2="388" y2="42" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Vendor Patches down-left to Coordinate Date -->
+  <path d="M 467,65 L 467,95 L 277,95 L 277,118" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <!-- Coordinate Date left to Public Disclosure -->
+  <line x1="195" y1="142" x2="167" y2="142" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>
 
 - Typical disclosure timeline: **90 days**
 - Bug bounty programs provide structured reporting
@@ -94,16 +111,16 @@
 
 ## The CIA Triad in Web Context
 
-```diagram
-           Confidentiality
-               /\
-              /  \
-             /    \
-            / CIA  \
-           /  Triad \
-          /----------\
-  Integrity          Availability
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="295" font-family="sans-serif">
+  <!-- Triangle fill -->
+  <polygon points="210,35 25,260 395,260" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <!-- Center label -->
+  <text x="210" y="180" text-anchor="middle" font-size="14" fill="#333333">CIA Triad</text>
+  <!-- Vertex labels -->
+  <text x="210" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Confidentiality</text>
+  <text x="25" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Integrity</text>
+  <text x="395" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Availability</text>
+</svg>
 
 - **Confidentiality**: Prevent unauthorized data access (`SQL injection`, data leaks)
 - **Integrity**: Prevent unauthorized data modification (`XSS`, `CSRF`)
@@ -140,20 +157,20 @@
 
 ## Defense in Depth
 
-```diagram
-+-----------------------------------------------+
-|  Network Layer  (Firewall, IDS/IPS)           |
-|  +-------------------------------------------+|
-|  |  Transport Layer  (TLS, cert pinning)     ||
-|  |  +---------------------------------------+||
-|  |  |  Application Layer  (WAF, validation) |||
-|  |  |  +-----------------------------------+|||
-|  |  |  |  Data Layer  (encryption, ACLs)   ||||
-|  |  |  +-----------------------------------+|||
-|  |  +---------------------------------------+||
-|  +-------------------------------------------+|
-+-----------------------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="250" font-family="sans-serif">
+  <!-- Outermost: Network Layer -->
+  <rect x="10" y="10" width="580" height="230" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
+  <text x="300" y="32" text-anchor="middle" font-size="13" fill="#222222">Network Layer (Firewall, IDS/IPS)</text>
+  <!-- Transport Layer -->
+  <rect x="30" y="47" width="540" height="175" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="300" y="69" text-anchor="middle" font-size="13" fill="#222222">Transport Layer (TLS, cert pinning)</text>
+  <!-- Application Layer -->
+  <rect x="50" y="84" width="500" height="120" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="300" y="106" text-anchor="middle" font-size="13" fill="#222222">Application Layer (WAF, validation)</text>
+  <!-- Data Layer (innermost) -->
+  <rect x="70" y="120" width="460" height="70" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="300" y="159" text-anchor="middle" font-size="13" fill="#222222">Data Layer (encryption, ACLs)</text>
+</svg>
 
 - No single control is sufficient
 - Layers of defense create redundancy
@@ -162,15 +179,38 @@
 
 ## Web Application Architecture Overview
 
-```diagram
-+--------+     +--------+     +-----------+     +----------+
-| Browser| --> | Web    | --> | App       | --> | Database |
-| Client |     | Server |     | Server    |     | Server   |
-+--------+     +--------+     +-----------+     +----------+
-    |              |               |                  |
-  HTML/JS       Nginx/          Node/Java/         MySQL/
-  CSS           Apache          Python/PHP         PostgreSQL
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="120" font-family="sans-serif">
+  <defs>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Box 1: Browser/Client -->
+  <rect x="10" y="15" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="75" y="37" text-anchor="middle" font-size="13" fill="#222222">Browser /</text>
+  <text x="75" y="53" text-anchor="middle" font-size="13" fill="#222222">Client</text>
+  <!-- Box 2: Web Server -->
+  <rect x="185" y="15" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="250" y="37" text-anchor="middle" font-size="13" fill="#222222">Web</text>
+  <text x="250" y="53" text-anchor="middle" font-size="13" fill="#222222">Server</text>
+  <!-- Box 3: App Server -->
+  <rect x="360" y="15" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="425" y="37" text-anchor="middle" font-size="13" fill="#222222">App</text>
+  <text x="425" y="53" text-anchor="middle" font-size="13" fill="#222222">Server</text>
+  <!-- Box 4: Database Server -->
+  <rect x="535" y="15" width="135" height="50" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="602" y="37" text-anchor="middle" font-size="13" fill="#222222">Database</text>
+  <text x="602" y="53" text-anchor="middle" font-size="13" fill="#222222">Server</text>
+  <!-- Arrows -->
+  <line x1="140" y1="40" x2="183" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="315" y1="40" x2="358" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <line x1="490" y1="40" x2="533" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Sub-labels -->
+  <text x="75" y="82" text-anchor="middle" font-size="11" fill="#555555">HTML/JS CSS</text>
+  <text x="250" y="82" text-anchor="middle" font-size="11" fill="#555555">Nginx/Apache</text>
+  <text x="425" y="82" text-anchor="middle" font-size="11" fill="#555555">Node/Java/Python/PHP</text>
+  <text x="602" y="82" text-anchor="middle" font-size="11" fill="#555555">MySQL/PostgreSQL</text>
+</svg>
 
 - Each tier introduces potential attack vectors
 - Trust boundaries exist between each component
@@ -240,23 +280,33 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## Security Testing Methodology
 
-```diagram
-+---> Reconnaissance
-|         |
-|         v
-|    Enumeration & Mapping
-|         |
-|         v
-|    Vulnerability Discovery
-|         |
-|         v
-|    Exploitation
-|         |
-|         v
-|    Reporting & Remediation
-|         |
-+---------+  (iterate)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="380" font-family="sans-serif">
+  <defs>
+    <marker id="arr5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Boxes -->
+  <rect x="90" y="15" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="41" text-anchor="middle" font-size="13" fill="#222222">Reconnaissance</text>
+  <rect x="90" y="87" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="113" text-anchor="middle" font-size="13" fill="#222222">Enumeration &amp; Mapping</text>
+  <rect x="90" y="159" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="185" text-anchor="middle" font-size="13" fill="#222222">Vulnerability Discovery</text>
+  <rect x="90" y="231" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="257" text-anchor="middle" font-size="13" fill="#222222">Exploitation</text>
+  <rect x="90" y="303" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="329" text-anchor="middle" font-size="13" fill="#222222">Reporting &amp; Remediation</text>
+  <!-- Down arrows -->
+  <line x1="225" y1="57" x2="225" y2="85" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="129" x2="225" y2="157" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="201" x2="225" y2="229" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="273" x2="225" y2="301" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <!-- Iterate arrow: right side loop back to top -->
+  <path d="M 360,324 L 430,324 L 430,36 L 362,36" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arr5)"/>
+  <!-- Iterate label -->
+  <text transform="rotate(-90 450 183)" x="450" y="183" text-anchor="middle" font-size="12" fill="#555555">iterate</text>
+</svg>
 
 ---
 

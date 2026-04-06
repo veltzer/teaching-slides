@@ -565,18 +565,72 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
-```diagram
-Key Metrics to Track:
-+--------------------------+----------+----------+--------+
-| Metric                   | Before   | After    | Delta  |
-+--------------------------+----------+----------+--------+
-| PR cycle time (median)   | 4.2 days | 1.8 days | -57%   |
-| Review turnaround        | 18 hrs   | 3 hrs    | -83%   |
-| Defect escape rate       | 5.1%     | 2.3%     | -55%   |
-| Test coverage            | 64%      | 82%      | +28%   |
-| CI pipeline duration     | 38 min   | 14 min   | -63%   |
-+--------------------------+----------+----------+--------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="213" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="10" y="20" font-size="14" font-weight="bold" fill="#222" text-anchor="start">Key Metrics to Track</text>
+<rect x="10" y="28" width="230" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="16" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Metric</text>
+<rect x="240" y="28" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="246" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Before</text>
+<rect x="330" y="28" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="336" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">After</text>
+<rect x="420" y="28" width="80" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="426" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Delta</text>
+<rect x="10" y="58" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="16" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">PR cycle time (median)</text>
+<rect x="240" y="58" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="246" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">4.2 days</text>
+<rect x="330" y="58" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="336" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">1.8 days</text>
+<rect x="420" y="58" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="426" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="420" y="58" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+<text x="426" y="77" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-57%</text>
+<rect x="10" y="86" width="230" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="16" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Review turnaround</text>
+<rect x="240" y="86" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="246" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">18 hrs</text>
+<rect x="330" y="86" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="336" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">3 hrs</text>
+<rect x="420" y="86" width="80" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="426" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="420" y="86" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+<text x="426" y="105" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-83%</text>
+<rect x="10" y="114" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="16" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Defect escape rate</text>
+<rect x="240" y="114" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="246" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">5.1%</text>
+<rect x="330" y="114" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="336" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">2.3%</text>
+<rect x="420" y="114" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="426" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="420" y="114" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+<text x="426" y="133" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-55%</text>
+<rect x="10" y="142" width="230" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="16" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Test coverage</text>
+<rect x="240" y="142" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="246" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">64%</text>
+<rect x="330" y="142" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="336" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">82%</text>
+<rect x="420" y="142" width="80" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="426" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="420" y="142" width="80" height="28" fill="#c8e6c9" stroke="#333" stroke-width="1"/>
+<text x="426" y="161" font-size="12" font-weight="bold" fill="#222" text-anchor="start">+28%</text>
+<rect x="10" y="170" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="16" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">CI pipeline duration</text>
+<rect x="240" y="170" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="246" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">38 min</text>
+<rect x="330" y="170" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="336" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">14 min</text>
+<rect x="420" y="170" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="426" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="420" y="170" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+<text x="426" y="189" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-63%</text>
+</svg>
 
 - Measure at team level, not individual level, to avoid gaming
 - Track developer satisfaction alongside productivity metrics

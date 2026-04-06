@@ -174,23 +174,11 @@ df.select("user_id", "address.city").explain()
 ---
 ## Projection Pushdown Savings
 
-```diagram
-Reading a 200-column Parquet table:
-
-Without projection pushdown (SELECT *):
-┌───┬───┬───┬───┬───┬───┬───┬───┬─────┬───┐
-│c1 │c2 │c3 │c4 │c5 │c6 │c7 │c8 │ ... │c200│
-│ R │ R │ R │ R │ R │ R │ R │ R │ R   │ R │
-└───┴───┴───┴───┴───┴───┴───┴───┴─────┴───┘
-Read: 200 columns = 100% of data
-
-With projection pushdown (SELECT c1, c5):
-┌───┬───┬───┬───┬───┬───┬───┬───┬─────┬───┐
-│c1 │   │   │   │c5 │   │   │   │     │   │
-│ R │ S │ S │ S │ R │ S │ S │ S │ S   │ S │
-└───┴───┴───┴───┴───┴───┴───┴───┴─────┴───┘
-Read: 2 columns = 1% of data   R=Read, S=Skip
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="614" height="220"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><text x="20" y="26" font-family="sans-serif" font-size="14" fill="#222" text-anchor="start" font-weight="bold">Reading a 200-column Parquet table</text><text x="20" y="56" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">Without projection pushdown (SELECT *):</text><rect x="20" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="22" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c1</text><text x="34" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="74" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="76" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c2</text><text x="88" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="128" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="130" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c3</text><text x="142" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="182" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="184" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c4</text><text x="196" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="236" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="238" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c5</text><text x="250" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="290" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="292" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c6</text><text x="304" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="344" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="346" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c7</text><text x="358" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="398" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="400" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c8</text><text x="412" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="452" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="454" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">...</text><text x="466" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><rect x="506" y="66" width="52" height="34" fill="#fde0dc" stroke="#333" stroke-width="1.5" rx="4"/><text x="508" y="80" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c200</text><text x="520" y="94" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="start" font-weight="bold">R</text><text x="20" y="116" font-family="sans-serif" font-size="12" fill="#555" text-anchor="start">Read: 200 columns = 100% of data</text><text x="20" y="140" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">With projection pushdown (SELECT c1, c5):</text><rect x="20" y="150" width="52" height="34" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="22" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c1</text><text x="34" y="178" font-family="sans-serif" font-size="11" fill="#1b5e20" text-anchor="start" font-weight="bold">R</text><rect x="74" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="76" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c2</text><text x="88" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="128" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="130" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c3</text><text x="142" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="182" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="184" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c4</text><text x="196" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="236" y="150" width="52" height="34" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="238" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c5</text><text x="250" y="178" font-family="sans-serif" font-size="11" fill="#1b5e20" text-anchor="start" font-weight="bold">R</text><rect x="290" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="292" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c6</text><text x="304" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="344" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="346" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c7</text><text x="358" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="398" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="400" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c8</text><text x="412" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="452" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="454" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">...</text><text x="466" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><rect x="506" y="150" width="52" height="34" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="508" y="164" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">c200</text><text x="520" y="178" font-family="sans-serif" font-size="11" fill="#9e9e9e" text-anchor="start" font-weight="bold">S</text><text x="20" y="202" font-family="sans-serif" font-size="12" fill="#555" text-anchor="start">Read: 2 columns = 1% of data     R = Read,  S = Skip</text></svg>
 
 ---
 ## Writing Parquet with PySpark
@@ -251,31 +239,11 @@ spark.conf.set(
 ---
 ## ORC Format Comparison
 
-```diagram
-ORC (Optimized Row Columnar):
-
-┌──────────────────────────────────────────────────┐
-│  ORC File Structure                               │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Stripe 0 (similar to Parquet row group)  │    │
-│  │  ┌──────────┐                             │    │
-│  │  │ Index    │ <- min/max per 10K rows     │    │
-│  │  │ Data     │ <- column encoded data      │    │
-│  │  │ Footer   │ <- column statistics        │    │
-│  │  └──────────┘                             │    │
-│  ├──────────────────────────────────────────┤    │
-│  │  Stripe 1                                 │    │
-│  │  ┌──────────┐                             │    │
-│  │  │ Index    │                             │    │
-│  │  │ Data     │                             │    │
-│  │  │ Footer   │                             │    │
-│  │  └──────────┘                             │    │
-│  ├──────────────────────────────────────────┤    │
-│  │  File Footer (column types, statistics)   │    │
-│  │  Postscript (compression, version)        │    │
-│  └──────────────────────────────────────────┘    │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="330"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="620" height="310" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="32" font-family="sans-serif" font-size="14" fill="#222" text-anchor="start" font-weight="bold">ORC File Structure</text><rect x="30" y="50" width="580" height="105" fill="#fff" stroke="#333" stroke-width="1.5" rx="4"/><text x="40" y="66" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">Stripe 0</text><rect x="40" y="74" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="87" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Index</text><text x="140" y="87" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">← min/max per 10K rows</text><rect x="40" y="96" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="109" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Data</text><text x="140" y="109" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">← column encoded data</text><rect x="40" y="118" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="131" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Footer</text><text x="140" y="131" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">← column statistics</text><rect x="30" y="170" width="580" height="105" fill="#fff" stroke="#333" stroke-width="1.5" rx="4"/><text x="40" y="186" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">Stripe 1</text><rect x="40" y="194" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="207" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Index</text><text x="140" y="207" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start"></text><rect x="40" y="216" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="229" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Data</text><text x="140" y="229" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start"></text><rect x="40" y="238" width="90" height="18" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="46" y="251" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Footer</text><text x="140" y="251" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start"></text><rect x="30" y="285" width="580" height="22" fill="#bbdefb" stroke="#333" stroke-width="1.5" rx="4"/><text x="40" y="300" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">File Footer (column types, statistics)   |   Postscript (compression, version)</text></svg>
 
 ---
 ## Parquet vs ORC Comparison
@@ -443,31 +411,11 @@ query = (
 ---
 ## Delta Lake Overview
 
-```diagram
-Delta Lake adds ACID transactions on top of Parquet:
-
-┌──────────────────────────────────────────────────┐
-│  Delta Table Directory Structure                  │
-│                                                  │
-│  /data/delta_table/                              │
-│  ├── _delta_log/                                 │
-│  │   ├── 00000000000000000000.json               │
-│  │   ├── 00000000000000000001.json               │
-│  │   ├── 00000000000000000002.json               │
-│  │   ├── ...                                     │
-│  │   └── 00000000000000000010.checkpoint.parquet │
-│  ├── part-00000-...snappy.parquet                │
-│  ├── part-00001-...snappy.parquet                │
-│  ├── part-00002-...snappy.parquet                │
-│  └── part-00003-...snappy.parquet                │
-│                                                  │
-│  Transaction Log (_delta_log):                    │
-│  - Each JSON file = one atomic transaction        │
-│  - Contains: add/remove file actions              │
-│  - Checkpoints every 10 transactions              │
-│  - Enables time travel and ACID                   │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="330"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="640" height="310" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="32" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Delta Lake adds ACID transactions on top of Parquet</text><text x="20" y="52" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">Delta Table Directory Structure</text><text x="28" y="72" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">/data/delta_table/</text><text x="28" y="89" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── _delta_log/</text><text x="28" y="106" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">│   ├── 00000000000000000000.json</text><text x="28" y="123" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">│   ├── 00000000000000000001.json</text><text x="28" y="140" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">│   ├── 00000000000000000002.json</text><text x="28" y="157" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">│   ├── ...</text><text x="28" y="174" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">│   └── 00000000000000000010.checkpoint.parquet</text><text x="28" y="191" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00000-...snappy.parquet</text><text x="28" y="208" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00001-...snappy.parquet</text><text x="28" y="225" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00002-...snappy.parquet</text><text x="28" y="242" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">└── part-00003-...snappy.parquet</text><rect x="20" y="265" width="620" height="64" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="28" y="281" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">Transaction Log (_delta_log):</text><text x="28" y="297" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Each JSON file = one atomic transaction   • Contains: add/remove file actions</text><text x="28" y="313" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Checkpoints every 10 transactions         • Enables time travel and ACID</text></svg>
 
 ---
 ## Delta Lake: Basic Operations
@@ -711,73 +659,20 @@ delta_table.restoreToTimestamp("2024-06-01")
 ---
 ## Z-Ordering Visualization
 
-```diagram
-Without Z-ordering (random distribution):
-File 1: user_id=[A,B,C,D,E], date=[01,02,03,04,05]
-File 2: user_id=[A,C,E,F,G], date=[01,03,05,06,07]
-File 3: user_id=[B,D,F,H,I], date=[02,04,06,08,09]
-File 4: user_id=[A,G,H,I,J], date=[01,07,08,09,10]
-
-Query: WHERE user_id = 'A'
--> Must scan: File 1, 2, 4 (3 of 4 files = 75%)
-
-With Z-ordering on user_id:
-File 1: user_id=[A,A,A,B,B], date=[01,03,07,02,04]
-File 2: user_id=[C,C,D,D,E], date=[03,05,02,04,05]
-File 3: user_id=[F,F,G,G,H], date=[06,08,06,07,08]
-File 4: user_id=[H,I,I,J,J], date=[09,08,09,09,10]
-
-Query: WHERE user_id = 'A'
--> Must scan: File 1 only (1 of 4 files = 25%)
-
-┌──────────────────────────────────────────┐
-│  Z-order creates locality for the        │
-│  specified columns within data files,    │
-│  making min/max statistics more          │
-│  effective at file skipping.             │
-└──────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="290"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><text x="20" y="22" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Without Z-ordering (random distribution):</text><rect x="20" y="30" width="155" height="46" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="26" y="45" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">File 1</text><text x="26" y="59" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[A,B,C,D,E]</text><text x="26" y="72" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[01,02,03,04,05]</text><rect x="182" y="30" width="155" height="46" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="188" y="45" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">File 2</text><text x="188" y="59" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[A,C,E,F,G]</text><text x="188" y="72" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[01,03,05,06,07]</text><rect x="344" y="30" width="155" height="46" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="350" y="45" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">File 3</text><text x="350" y="59" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[B,D,F,H,I]</text><text x="350" y="72" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[02,04,06,08,09]</text><rect x="506" y="30" width="155" height="46" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="512" y="45" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">File 4</text><text x="512" y="59" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[A,G,H,I,J]</text><text x="512" y="72" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[01,07,08,09,10]</text><text x="20" y="95" font-family="sans-serif" font-size="12" fill="#c62828" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1, 2, 4  (3/4 files = 75%)</text><text x="20" y="120" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">With Z-ordering on user_id:</text><rect x="20" y="128" width="155" height="46" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="26" y="143" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">File 1</text><text x="26" y="157" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[A,A,A,B,B]</text><text x="26" y="170" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[01,03,07,02,04]</text><rect x="182" y="128" width="155" height="46" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="188" y="143" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">File 2</text><text x="188" y="157" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[C,C,D,D,E]</text><text x="188" y="170" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[03,05,02,04,05]</text><rect x="344" y="128" width="155" height="46" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="350" y="143" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">File 3</text><text x="350" y="157" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[F,F,G,G,H]</text><text x="350" y="170" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[06,08,06,07,08]</text><rect x="506" y="128" width="155" height="46" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="512" y="143" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">File 4</text><text x="512" y="157" font-family="sans-serif" font-size="10" fill="#333" text-anchor="start">user_id=[H,I,I,J,J]</text><text x="512" y="170" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">date=[09,08,09,09,10]</text><text x="20" y="193" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">Query: WHERE user_id = 'A'  →  Must scan File 1 only  (1/4 files = 25%)</text><rect x="20" y="208" width="660" height="68" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="226" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Z-order creates locality for the specified columns within data files,</text><text x="30" y="244" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">making min/max statistics more effective at file skipping.</text><text x="30" y="262" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Result: 75% → 25% files scanned in this example.</text></svg>
 
 ---
 ## Apache Iceberg Overview
 
-```diagram
-Iceberg Table Structure:
-
-┌──────────────────────────────────────────────────┐
-│  Iceberg Catalog                                  │
-│  (HMS, Glue, REST, Nessie)                        │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Points to current metadata file          │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Metadata Layer                                   │
-│  ┌──────────────────────────────────────────┐    │
-│  │  metadata/v3.metadata.json                │    │
-│  │  - Schema (current + history)             │    │
-│  │  - Partition spec (current + history)     │    │
-│  │  - Snapshot list                          │    │
-│  │    -> snap-001.avro (manifest list)       │    │
-│  │    -> snap-002.avro (manifest list)       │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Manifest List                                    │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Points to manifest files                 │    │
-│  │  Contains partition summary statistics    │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Manifest Files                                   │
-│  ┌──────────────────────────────────────────┐    │
-│  │  List of data files with:                 │    │
-│  │  - File path, format, size                │    │
-│  │  - Partition values                        │    │
-│  │  - Column-level min/max/null stats        │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Data Files (Parquet/ORC/Avro)                    │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="520"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="20" y="70" width="620" height="48" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="88" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Iceberg Catalog  (HMS, Glue, REST, Nessie)</text><text x="30" y="104" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Points to current metadata file</text><line x1="330" y1="118" x2="330" y2="134" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="20" y="160" width="620" height="90" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="178" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">Metadata Layer</text><text x="30" y="194" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">metadata/v3.metadata.json</text><text x="30" y="208" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">- Schema (current + history)</text><text x="30" y="222" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">- Partition spec (current + history)</text><text x="30" y="236" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">- Snapshot list → snap-001.avro, snap-002.avro</text><line x1="330" y1="250" x2="330" y2="266" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="20" y="280" width="620" height="62" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="298" font-family="sans-serif" font-size="13" fill="#e65100" text-anchor="start" font-weight="bold">Manifest List</text><text x="30" y="314" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Points to manifest files</text><text x="30" y="328" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Contains partition summary statistics</text><line x1="330" y1="342" x2="330" y2="358" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="20" y="360" width="620" height="76" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="378" font-family="sans-serif" font-size="13" fill="#880e4f" text-anchor="start" font-weight="bold">Manifest Files</text><text x="30" y="394" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">List of data files with:</text><text x="30" y="408" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">- File path, format, size   - Partition values</text><text x="30" y="422" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">- Column-level min/max/null stats</text><line x1="330" y1="436" x2="330" y2="452" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="20" y="460" width="620" height="48" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="478" font-family="sans-serif" font-size="13" fill="#4a148c" text-anchor="start" font-weight="bold">Data Files  (Parquet / ORC / Avro)</text><text x="30" y="494" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Actual columnar data storage</text></svg>
 
 ---
 ## Iceberg vs Delta Lake
@@ -853,41 +748,11 @@ spark.sql("""
 ---
 ## Partitioning Strategies
 
-```diagram
-Partitioning types:
-
-1. Range Partitioning (most common):
-┌───────────────────────────────────────────┐
-│  PARTITIONED BY (event_date)               │
-│                                           │
-│  /data/events/event_date=2024-01-01/      │
-│  /data/events/event_date=2024-01-02/      │
-│  /data/events/event_date=2024-01-03/      │
-│  ...                                      │
-│  Best for: time-series, date-based queries │
-└───────────────────────────────────────────┘
-
-2. List Partitioning:
-┌───────────────────────────────────────────┐
-│  PARTITIONED BY (region)                   │
-│                                           │
-│  /data/events/region=us-east/             │
-│  /data/events/region=us-west/             │
-│  /data/events/region=eu-west/             │
-│  Best for: categorical, low-cardinality    │
-└───────────────────────────────────────────┘
-
-3. Hash Partitioning:
-┌───────────────────────────────────────────┐
-│  PARTITIONED BY (hash(user_id, 32))        │
-│                                           │
-│  /data/events/user_hash=0/                │
-│  /data/events/user_hash=1/                │
-│  ...                                      │
-│  /data/events/user_hash=31/               │
-│  Best for: even distribution, join keys    │
-└───────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="430"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="20" y="10" width="620" height="118" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="28" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">1. Range Partitioning (most common)</text><text x="30" y="42" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">PARTITIONED BY (event_date)</text><text x="30" y="56" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/event_date=2024-01-01/</text><text x="30" y="70" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/event_date=2024-01-02/</text><text x="30" y="84" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/event_date=2024-01-03/</text><text x="30" y="98" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">...</text><text x="30" y="112" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Best for: time-series, date-based queries</text><rect x="20" y="155" width="620" height="104" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="173" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">2. List Partitioning</text><text x="30" y="187" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">PARTITIONED BY (region)</text><text x="30" y="201" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/region=us-east/</text><text x="30" y="215" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/region=us-west/</text><text x="30" y="229" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/region=eu-west/</text><text x="30" y="243" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Best for: categorical, low-cardinality</text><rect x="20" y="290" width="620" height="118" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="30" y="308" font-family="sans-serif" font-size="13" fill="#e65100" text-anchor="start" font-weight="bold">3. Hash Partitioning</text><text x="30" y="322" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">PARTITIONED BY (hash(user_id, 32))</text><text x="30" y="336" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/user_hash=0/</text><text x="30" y="350" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/user_hash=1/</text><text x="30" y="364" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">...</text><text x="30" y="378" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">/data/events/user_hash=31/</text><text x="30" y="392" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Best for: even distribution, join keys</text></svg>
 
 ---
 ## Partitioning Implementation
@@ -937,69 +802,20 @@ df.write \
 ---
 ## Partitioning Best Practices
 
-```diagram
-Partition column selection:
-
-┌──────────────────────────────────────────────────┐
-│  Good partition column:                           │
-│  [x] Used in WHERE clauses frequently             │
-│  [x] Low-to-medium cardinality (10-10,000)        │
-│  [x] Even data distribution                       │
-│  [x] Each partition > 128 MB                      │
-│                                                  │
-│  Bad partition column:                            │
-│  [ ] High cardinality (user_id with millions)     │
-│      -> too many small files                      │
-│  [ ] Never filtered on                            │
-│      -> no pruning benefit, extra overhead         │
-│  [ ] Very skewed (99% in one value)               │
-│      -> one giant partition, rest tiny             │
-│  [ ] Too few values (boolean: true/false)         │
-│      -> only 2 partitions, minimal benefit         │
-└──────────────────────────────────────────────────┘
-
-Partition count guidelines:
-┌──────────────────────────────────────────────────┐
-│  Total data size  │  Target partitions            │
-│  ─────────────────┼──────────────────────────────│
-│  < 1 GB           │  No partitioning needed       │
-│  1 GB - 100 GB    │  10-100 partitions            │
-│  100 GB - 10 TB   │  100-10,000 partitions        │
-│  > 10 TB          │  1,000-100,000 partitions     │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="460"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="120" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="28" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">Good partition column:</text><text x="20" y="46" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">[✓] Used in WHERE clauses frequently</text><text x="20" y="63" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">[✓] Low-to-medium cardinality (10 – 10,000)</text><text x="20" y="80" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">[✓] Even data distribution</text><text x="20" y="97" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">[✓] Each partition > 128 MB</text><rect x="10" y="140" width="660" height="160" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="158" font-family="sans-serif" font-size="13" fill="#c62828" text-anchor="start" font-weight="bold">Bad partition column:</text><text x="20" y="176" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start">[✗] High cardinality (user_id with millions) → too many small files</text><text x="20" y="193" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start">[✗] Never filtered on → no pruning benefit, extra overhead</text><text x="20" y="210" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start">[✗] Very skewed (99% in one value) → one giant partition, rest tiny</text><text x="20" y="227" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start">[✗] Too few values (boolean: true/false) → only 2 partitions, minimal benefit</text><text x="10" y="320" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Partition count guidelines:</text><rect x="10" y="334" width="660" height="22" fill="#bbdefb" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="349" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">Total data size</text><text x="245" y="349" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">Target partitions</text><line x1="235" y1="334" x2="235" y2="444" stroke="#333" stroke-width="1"/><rect x="10" y="356" width="660" height="22" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="371" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">< 1 GB</text><text x="245" y="371" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">No partitioning needed</text><rect x="10" y="378" width="660" height="22" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="393" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">1 GB – 100 GB</text><text x="245" y="393" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">10 – 100 partitions</text><rect x="10" y="400" width="660" height="22" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="415" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">100 GB – 10 TB</text><text x="245" y="415" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">100 – 10,000 partitions</text><rect x="10" y="422" width="660" height="22" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="437" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">> 10 TB</text><text x="245" y="437" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">1,000 – 100,000 partitions</text></svg>
 
 ---
 ## Bucketing vs Partitioning
 
-```diagram
-Partitioning:
-┌───────────────────────────────────────────┐
-│  Physically separates data into folders    │
-│                                           │
-│  /table/date=2024-01-01/                  │
-│  /table/date=2024-01-02/                  │
-│                                           │
-│  Pros: partition pruning, human-readable   │
-│  Cons: small files, limited cardinality    │
-└───────────────────────────────────────────┘
-
-Bucketing:
-┌───────────────────────────────────────────┐
-│  Distributes data into fixed-size buckets  │
-│  based on hash of column value             │
-│                                           │
-│  /table/part-00000  (bucket 0)            │
-│  /table/part-00001  (bucket 1)            │
-│  /table/part-00002  (bucket 2)            │
-│  ...                                      │
-│  /table/part-00031  (bucket 31)           │
-│                                           │
-│  Pros: eliminates shuffle in joins,        │
-│        works with high cardinality         │
-│  Cons: fixed bucket count, write overhead  │
-└───────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="320"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="140" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="28" font-family="sans-serif" font-size="14" fill="#1565c0" text-anchor="start" font-weight="bold">Partitioning</text><text x="20" y="46" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Physically separates data into folders</text><text x="20" y="66" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">/table/date=2024-01-01/   /table/date=2024-01-02/</text><text x="20" y="86" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Pros: partition pruning, human-readable</text><text x="20" y="106" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Cons: small files, limited cardinality</text><rect x="10" y="160" width="660" height="150" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="178" font-family="sans-serif" font-size="14" fill="#2e7d32" text-anchor="start" font-weight="bold">Bucketing</text><text x="20" y="196" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Distributes data into fixed-size buckets based on hash of column value</text><text x="20" y="216" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">/table/part-00000 (bucket 0)   /table/part-00001 (bucket 1)</text><text x="20" y="236" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">/table/part-00002 (bucket 2)   ...   /table/part-00031 (bucket 31)</text><text x="20" y="256" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Pros: eliminates shuffle in joins, works with high cardinality</text><text x="20" y="276" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">Cons: fixed bucket count, write overhead</text></svg>
 
 ---
 ## Bucketing Implementation
@@ -1052,31 +868,11 @@ orders.write \
 ---
 ## The Small File Problem
 
-```diagram
-The small file problem:
-
-┌──────────────────────────────────────────────────┐
-│  Cause: streaming or frequent appends create      │
-│  many tiny files                                  │
-│                                                  │
-│  /data/events/date=2024-06-15/                   │
-│  ├── part-00000.parquet  (2 KB)                  │
-│  ├── part-00001.parquet  (3 KB)                  │
-│  ├── part-00002.parquet  (1 KB)                  │
-│  ├── part-00003.parquet  (4 KB)                  │
-│  ├── ... (10,000 tiny files)                     │
-│  └── part-09999.parquet  (2 KB)                  │
-│                                                  │
-│  Problems:                                       │
-│  - Slow reads: metadata overhead per file         │
-│  - HDFS/S3 listing bottleneck                    │
-│  - NameNode memory pressure (HDFS)               │
-│  - High API cost (S3)                            │
-│  - Poor predicate pushdown (stats per file)       │
-│                                                  │
-│  Target: files of 128 MB - 1 GB                  │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="360"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="340" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#e65100" text-anchor="start" font-weight="bold">The small file problem</text><text x="20" y="50" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Cause: streaming or frequent appends create many tiny files</text><text x="28" y="68" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">/data/events/date=2024-06-15/</text><text x="28" y="85" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00000.parquet  (2 KB)</text><text x="28" y="102" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00001.parquet  (3 KB)</text><text x="28" y="119" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00002.parquet  (1 KB)</text><text x="28" y="136" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── part-00003.parquet  (4 KB)</text><text x="28" y="153" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">├── ... (10,000 tiny files)</text><text x="28" y="170" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">└── part-09999.parquet  (2 KB)</text><text x="20" y="200" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="start" font-weight="bold">Problems:</text><text x="28" y="218" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">• Slow reads: metadata overhead per file</text><text x="28" y="235" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">• HDFS/S3 listing bottleneck</text><text x="28" y="252" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">• NameNode memory pressure (HDFS)</text><text x="28" y="269" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">• High API cost (S3)</text><text x="28" y="286" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">• Poor predicate pushdown (stats per file)</text><text x="20" y="328" font-family="sans-serif" font-size="12" fill="#bf360c" text-anchor="start" font-weight="bold">Target: files of 128 MB – 1 GB</text></svg>
 
 ---
 ## Solving the Small File Problem
@@ -1141,31 +937,11 @@ compact_partition("/data/events", "event_date", "2024-06-14")
 ---
 ## File Compaction Strategy
 
-```diagram
-Compaction scheduling:
-
-┌──────────────────────────────────────────────────┐
-│  Streaming Pipeline:                              │
-│                                                  │
-│  Micro-batch writes (every 1 min):               │
-│  ┌───┐┌───┐┌───┐┌───┐┌───┐ ... ┌───┐            │
-│  │2KB││3KB││1KB││2KB││4KB│     │3KB│            │
-│  └───┘└───┘└───┘└───┘└───┘     └───┘            │
-│          1440 files per day                      │
-│                                                  │
-│  Scheduled compaction (daily at 2 AM):            │
-│  ┌──────────────────────────────────────┐        │
-│  │  Read all files for yesterday's       │        │
-│  │  partition, write as fewer files       │        │
-│  └──────────────────────────────────────┘        │
-│                                                  │
-│  After compaction:                               │
-│  ┌──────────┐┌──────────┐┌──────────┐            │
-│  │  128 MB  ││  128 MB  ││  90 MB   │            │
-│  └──────────┘└──────────┘└──────────┘            │
-│          3 files per day                         │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="320" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#4a148c" text-anchor="start" font-weight="bold">Compaction Scheduling</text><text x="20" y="50" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Micro-batch writes (every 1 min) → 1440 files/day:</text><rect x="28" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="36" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">2KB</text><rect x="82" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="90" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">3KB</text><rect x="136" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="144" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">1KB</text><rect x="190" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="198" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">2KB</text><rect x="244" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="252" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">4KB</text><rect x="298" y="60" width="60" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="306" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">...</text><rect x="362" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="370" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">3KB</text><line x1="340" y1="100" x2="340" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="348" y="120" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">Scheduled compaction (daily at 2 AM)</text><rect x="30" y="135" width="620" height="38" fill="#ce93d8" stroke="#333" stroke-width="1.5" rx="4"/><text x="40" y="151" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Read all files for yesterday's partition, write as fewer larger files</text><line x1="340" y1="175" x2="340" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="20" y="230" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">After compaction:</text><rect x="28" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="78" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text><rect x="228" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="278" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text><rect x="428" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="478" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">90 MB</text><text x="20" y="300" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="start">3 files per day  (vs 1440)</text></svg>
 
 ---
 ## Full Program: Data Format Pipeline
@@ -1253,29 +1029,8 @@ history.select(
 ---
 ## Summary: Data Formats and Storage
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│  Key Takeaways                                    │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Formats:                                        │
-│  - Parquet: default for analytics, columnar       │
-│  - ORC: alternative for Hive-centric stacks       │
-│  - Avro: row-based, streaming, schema evolution   │
-│  - Delta/Iceberg: ACID on top of Parquet          │
-│                                                  │
-│  Optimization:                                   │
-│  - Predicate pushdown: filter at storage layer    │
-│  - Projection pushdown: read only needed columns  │
-│  - Z-ordering: co-locate data for better pruning  │
-│  - Compression: ZSTD best overall balance         │
-│                                                  │
-│  Storage Management:                             │
-│  - Partition by query pattern (low cardinality)   │
-│  - Bucket by join key (high cardinality)          │
-│  - Compact small files regularly                  │
-│  - VACUUM old versions periodically               │
-│  - Monitor file sizes (target 128 MB - 1 GB)      │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="370"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="350" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="15" fill="#0d47a1" text-anchor="start" font-weight="bold">Key Takeaways</text><text x="20" y="66" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Formats:</text><text x="28" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Parquet: default for analytics, columnar</text><text x="28" y="101" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• ORC: alternative for Hive-centric stacks</text><text x="28" y="118" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Avro: row-based, streaming, schema evolution</text><text x="28" y="135" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Delta / Iceberg: ACID on top of Parquet</text><text x="20" y="160" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Optimization:</text><text x="28" y="178" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Predicate pushdown: filter at storage layer</text><text x="28" y="195" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Projection pushdown: read only needed columns</text><text x="28" y="212" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Z-ordering: co-locate data for better pruning</text><text x="28" y="229" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Compression: ZSTD best overall balance</text><text x="20" y="254" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Storage Management:</text><text x="28" y="272" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Partition by query pattern (low cardinality)</text><text x="28" y="289" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Bucket by join key (high cardinality)</text><text x="28" y="306" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Compact small files regularly</text><text x="28" y="323" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• VACUUM old versions periodically</text><text x="28" y="340" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Monitor file sizes (target 128 MB – 1 GB)</text></svg>

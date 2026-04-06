@@ -4,7 +4,7 @@
 
 ## The Problem: Full Fine-Tuning is Expensive
 
-```misc
+```diagram
 Full fine-tuning of a 70B parameter model:
 
 Memory needed:
@@ -161,7 +161,7 @@ model.print_trainable_parameters()
 
 ## LoRA Rank Selection
 
-```misc
+```diagram
                   Quality
                     │
                     │                ╱──────── Full FT

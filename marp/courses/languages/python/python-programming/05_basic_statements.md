@@ -322,15 +322,32 @@ for i in range(10):
 ---
 ## `break` vs `continue` Diagram
 
-```diagram
-for item in items:       for item in items:
-    ...                      ...
-    if cond:                 if cond:
-        break                    continue
-    ...                      ...
-    (skipped)                (this runs)
-(loop exits)             (next iteration)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="230" font-family="monospace">
+  <!-- break header -->
+  <text x="30" y="20" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle" font-family="sans-serif">break</text>
+  <text x="30" y="38" font-size="12" fill="#555" text-anchor="middle" font-family="sans-serif">(exits loop)</text>
+  <!-- break code -->
+  <rect x="10" y="48" width="240" height="120" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="20" y="68" font-size="12" fill="#222">for item in items:</text>
+  <text x="20" y="86" font-size="12" fill="#222">    ...</text>
+  <text x="20" y="104" font-size="12" fill="#c62828">    if cond:</text>
+  <text x="20" y="122" font-size="12" fill="#c62828">        break</text>
+  <text x="20" y="140" font-size="12" fill="#888">    ...  ← skipped</text>
+  <text x="20" y="158" font-size="12" fill="#888">(loop exits)</text>
+  <!-- continue header -->
+  <text x="320" y="20" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle" font-family="sans-serif">continue</text>
+  <text x="320" y="38" font-size="12" fill="#555" text-anchor="middle" font-family="sans-serif">(next iteration)</text>
+  <!-- continue code -->
+  <rect x="300" y="48" width="260" height="120" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="4"/>
+  <text x="310" y="68" font-size="12" fill="#222">for item in items:</text>
+  <text x="310" y="86" font-size="12" fill="#222">    ...</text>
+  <text x="310" y="104" font-size="12" fill="#1565c0">    if cond:</text>
+  <text x="310" y="122" font-size="12" fill="#1565c0">        continue</text>
+  <text x="310" y="140" font-size="12" fill="#222">    ...  ← this runs</text>
+  <text x="310" y="158" font-size="12" fill="#555">(next iteration)</text>
+  <!-- divider -->
+  <line x1="280" y1="10" x2="280" y2="185" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>
 ---
 ## The `else` Clause on Loops
 - Executes when the loop completes without `break`

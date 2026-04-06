@@ -87,7 +87,7 @@ DO NOT:
 - Instruct the model to reason before answering
 - Reduces errors on multi-step problems significantly
 
-```misc
+```output
 USER: A service receives 1200 req/s. Each request takes
 45ms. How many concurrent connections are needed?
 
@@ -112,7 +112,7 @@ USER: Look at this code and tell me what's wrong.
 
 **After** (specific, structured, reliable):
 
-```misc
+```template
 SYSTEM: You are a Python debugging assistant.
 Given a code snippet and error message, identify the
 root cause. Output JSON with keys: root_cause,
@@ -361,7 +361,7 @@ request/response. Include type hints on all parameters.
 
 **Step 3 - Validate**: check the generated code compiles and matches spec
 
-```misc
+```template
 SYSTEM: Compare the original Flask route with the generated
 FastAPI code. Verify: same path, same params, same response
 shape. Return JSON: {valid: bool, issues: [string]}.
@@ -439,15 +439,64 @@ prompt = REVIEW_TEMPLATE.render(
 - Rank context sources by relevance to the current task
 - Assemble prompt from highest-priority items first
 
-```misc
-Priority 1: Current file under edit        (~500 tokens)
-Priority 2: Directly imported modules      (~1500 tokens)
-Priority 3: Recent git diff               (~800 tokens)
-Priority 4: Project conventions / linting  (~300 tokens)
-Priority 5: Related test files             (~600 tokens)
-────────────────────────────────────────────
-Total budget:                              ~3700 tokens
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="220" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="10" y="10" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="18" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Priority</text>
+<rect x="100" y="10" width="220" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="108" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Context Source</text>
+<rect x="320" y="10" width="150" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="328" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Token Budget</text>
+<rect x="470" y="10" width="140" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
+<text x="478" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start"></text>
+<rect x="10" y="42" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="18" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 1</text>
+<rect x="100" y="42" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="108" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Current file under edit</text>
+<rect x="320" y="42" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="328" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~500 tokens</text>
+<rect x="470" y="42" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="478" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="10" y="70" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="18" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 2</text>
+<rect x="100" y="70" width="220" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="108" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Directly imported modules</text>
+<rect x="320" y="70" width="150" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="328" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~1500 tokens</text>
+<rect x="470" y="70" width="140" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="478" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="10" y="98" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="18" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 3</text>
+<rect x="100" y="98" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="108" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Recent git diff</text>
+<rect x="320" y="98" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="328" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~800 tokens</text>
+<rect x="470" y="98" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="478" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="10" y="126" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="18" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 4</text>
+<rect x="100" y="126" width="220" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="108" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Project conventions / linting</text>
+<rect x="320" y="126" width="150" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="328" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~300 tokens</text>
+<rect x="470" y="126" width="140" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
+<text x="478" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="10" y="154" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="18" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 5</text>
+<rect x="100" y="154" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="108" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Related test files</text>
+<rect x="320" y="154" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="328" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~600 tokens</text>
+<rect x="470" y="154" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
+<text x="478" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
+<rect x="10" y="182" width="600" height="28" fill="#9fa8da" stroke="#333" stroke-width="1"/>
+<text x="18" y="201" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Total Budget</text>
+<text x="328" y="201" font-size="12" font-weight="bold" fill="#222" text-anchor="start">~3700 tokens</text>
+</svg>
 
 - Always reserve tokens for the model's response
 - Drop lowest-priority items first when the window is tight

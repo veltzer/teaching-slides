@@ -28,22 +28,11 @@ You don't pay for what you don't use
 
 ## What Zero-Cost Means
 
-```diagram
-  ┌──────────────────────────────────────────────────────┐
-  │          Bjarne Stroustrup's Principle:                │
-  │                                                        │
-  │  "What you don't use, you don't pay for.              │
-  │   What you do use, you couldn't hand-code             │
-  │   any better."                                         │
-  └──────────────────────────────────────────────────────┘
-
-  Rust zero-cost abstractions:
-  - Iterators compile to the same code as hand-written loops
-  - Generics are monomorphized (no virtual dispatch overhead)
-  - Traits with static dispatch are inlined away
-  - Option<&T> is the same size as *const T (null pointer opt)
-  - String bounds checks are elided when the compiler can prove safety
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="270"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="640" height="90" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Bjarne Stroustrup's Principle:</text><text x="28" y="50" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start">"What you don't use, you don't pay for.</text><text x="28" y="66" font-family="sans-serif" font-size="12" fill="#333" text-anchor="start"> What you do use, you couldn't hand-code any better."</text><text x="20" y="120" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Rust zero-cost abstractions:</text><text x="28" y="138" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Iterators compile to the same code as hand-written loops</text><text x="28" y="160" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Generics are monomorphized (no virtual dispatch overhead)</text><text x="28" y="182" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Traits with static dispatch are inlined away</text><text x="28" y="204" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Option<&T> is the same size as *const T (null pointer opt)</text><text x="28" y="226" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• String bounds checks are elided when the compiler can prove safety</text></svg>
 
 ---
 
@@ -149,25 +138,11 @@ What the compiler does for you
 
 ## LLVM Optimization Pipeline
 
-```diagram
-  ┌────────────┐     ┌──────────┐     ┌──────────┐     ┌──────────┐
-  │ Rust Source │ ──> │ rustc    │ ──> │ LLVM IR  │ ──> │ Machine  │
-  │   (.rs)    │     │ frontend │     │          │     │  Code    │
-  └────────────┘     └──────────┘     └─────┬────┘     └──────────┘
-                                            │
-                                     Optimization Passes
-                                            │
-                       ┌────────────────────┼────────────────────┐
-                       │                    │                    │
-                  ┌────┴─────┐       ┌──────┴─────┐      ┌──────┴─────┐
-                  │ Inlining │       │ Dead Code  │      │ Vectorize  │
-                  │          │       │ Elimination│      │ (SIMD)     │
-                  └──────────┘       └────────────┘      └────────────┘
-                  ┌──────────┐       ┌────────────┐      ┌────────────┐
-                  │ Constant │       │ Loop       │      │ Tail Call  │
-                  │ Folding  │       │ Unrolling  │      │ Opt        │
-                  └──────────┘       └────────────┘      └────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="280"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="20" y="30" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="70" y="50" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">Rust Source</text><text x="70" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(.rs)</text><rect x="200" y="30" width="110" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="255" y="50" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">rustc</text><text x="255" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">frontend</text><rect x="390" y="30" width="100" height="50" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="440" y="50" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">LLVM IR</text><rect x="570" y="30" width="110" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="625" y="50" font-family="sans-serif" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">Machine</text><text x="625" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Code</text><line x1="120" y1="55" x2="200" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><line x1="310" y1="55" x2="390" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><line x1="490" y1="55" x2="570" y2="55" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><line x1="440" y1="80" x2="440" y2="112" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="448" y="104" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">Optimization Passes</text><rect x="30" y="130" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="105" y="146" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Inlining</text><rect x="230" y="130" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="305" y="146" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Dead Code</text><text x="305" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Elimination</text><rect x="430" y="130" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="505" y="146" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Vectorize</text><text x="505" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">(SIMD)</text><rect x="30" y="195" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="105" y="211" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Constant</text><text x="105" y="227" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Folding</text><rect x="230" y="195" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="305" y="211" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Loop</text><text x="305" y="227" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Unrolling</text><rect x="430" y="195" width="150" height="44" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="505" y="211" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Tail Call</text><text x="505" y="227" font-family="sans-serif" font-size="11" fill="#222" text-anchor="middle">Opt</text></svg>
 
 ---
 
@@ -272,19 +247,11 @@ cargo flamegraph --bin my_app
 # Stack depth = call chain
 ```
 
-```diagram
-  ┌─────────────────────────────────────────────────────┐
-  │                    main                              │
-  ├──────────────────────┬──────────────────────────────┤
-  │   process_data       │        io::read_file         │
-  ├──────────┬───────────┤                              │
-  │ parse    │ transform │                              │
-  ├──────────┤           │                              │
-  │serde_json│           │                              │
-  └──────────┴───────────┴──────────────────────────────┘
-    ^^^^^^^^^
-    Bottleneck! Wide bar = lots of CPU time
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="200"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><text x="20" y="18" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Flame Graph (CPU Time Visualization)</text><rect x="10" y="160" width="640" height="24" fill="#ffab40" stroke="#888" stroke-width="1.5" rx="4"/><text x="16" y="177" font-family="sans-serif" font-size="14" fill="#222" text-anchor="start">main</text><rect x="10" y="132" width="360" height="24" fill="#f57c00" stroke="#888" stroke-width="1.5" rx="4"/><text x="16" y="149" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">process_data</text><rect x="370" y="132" width="280" height="24" fill="#4fc3f7" stroke="#888" stroke-width="1.5" rx="4"/><text x="376" y="149" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">io::read_file</text><rect x="10" y="104" width="160" height="24" fill="#ef9a9a" stroke="#888" stroke-width="1.5" rx="4"/><text x="16" y="121" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">parse</text><rect x="175" y="104" width="195" height="24" fill="#a5d6a7" stroke="#888" stroke-width="1.5" rx="4"/><text x="181" y="121" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start">transform</text><rect x="10" y="76" width="160" height="24" fill="#ce93d8" stroke="#888" stroke-width="1.5" rx="4"/><text x="16" y="93" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">serde_json ← Bottleneck!</text><text x="20" y="50" font-family="sans-serif" font-size="11" fill="#b71c1c" text-anchor="start">^ Wide bar = more CPU time.  serde_json at bottom is the bottleneck.</text></svg>
 
 ```bash
 # For specific binary with arguments
@@ -564,18 +531,11 @@ fn main() {
 }
 ```
 
-```diagram
-  ┌─────────────────┬─────────────┬──────────────┬──────────────┐
-  │ Allocator       │ Throughput  │ Fragmentation│ Best For     │
-  ├─────────────────┼─────────────┼──────────────┼──────────────┤
-  │ System (glibc)  │ Baseline    │ Moderate     │ Default      │
-  │ jemalloc        │ 1.2-2x      │ Low          │ Servers,     │
-  │                 │             │              │ multi-thread │
-  │ mimalloc        │ 1.5-2x      │ Low          │ General use  │
-  │ Custom arena    │ Varies      │ None (reset) │ Game loops,  │
-  │                 │             │              │ batch work   │
-  └─────────────────┴─────────────┴──────────────┴──────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="185"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="680" height="28" fill="#1565c0" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="28" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Allocator</text><text x="171" y="28" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Throughput</text><text x="291" y="28" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Fragmentation</text><text x="421" y="28" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Best For</text><line x1="165" y1="10" x2="165" y2="182" stroke="#aaa" stroke-width="1"/><line x1="285" y1="10" x2="285" y2="182" stroke="#aaa" stroke-width="1"/><line x1="415" y1="10" x2="415" y2="182" stroke="#aaa" stroke-width="1"/><line x1="540" y1="10" x2="540" y2="182" stroke="#aaa" stroke-width="1"/><rect x="10" y="38" width="680" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">System (glibc)</text><text x="171" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Baseline</text><text x="291" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Moderate</text><text x="421" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Default</text><rect x="10" y="74" width="680" height="36" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">jemalloc</text><text x="171" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">1.2–2×</text><text x="291" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Low</text><text x="421" y="90" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Servers</text><text x="421" y="106" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">multi-thread</text><rect x="10" y="110" width="680" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="126" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">mimalloc</text><text x="171" y="126" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">1.5–2×</text><text x="291" y="126" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Low</text><text x="421" y="126" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">General use</text><rect x="10" y="146" width="680" height="36" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Custom arena</text><text x="171" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Varies</text><text x="291" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">None (reset)</text><text x="421" y="162" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Game loops</text><text x="421" y="178" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">batch work</text></svg>
 
 ---
 
@@ -587,24 +547,11 @@ Single Instruction, Multiple Data
 
 ## SIMD Concepts
 
-```diagram
-  Scalar operation (one at a time):
-  ┌───┐   ┌───┐   ┌───┐
-  │ a │ + │ b │ = │ c │    1 add instruction per element
-  └───┘   └───┘   └───┘
-
-  SIMD operation (four at a time):
-  ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐   ┌───┬───┬───┬───┐
-  │a0 │a1 │a2 │a3 │ + │b0 │b1 │b2 │b3 │ = │c0 │c1 │c2 │c3 │
-  └───┴───┴───┴───┘   └───┴───┴───┴───┘   └───┴───┴───┴───┘
-       1 add instruction for 4 elements (SSE/NEON)
-
-  Available widths:
-  - SSE:  128-bit (4x f32, 2x f64, 16x u8)
-  - AVX2: 256-bit (8x f32, 4x f64, 32x u8)
-  - AVX-512: 512-bit (16x f32, 8x f64, 64x u8)
-  - NEON: 128-bit (ARM)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="250"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><text x="20" y="20" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Scalar operation (one element at a time):</text><rect x="20" y="40" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="38" y="61" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">a</text><text x="100" y="60" font-family="sans-serif" font-size="16" fill="#222" text-anchor="start" font-weight="bold">+</text><rect x="160" y="40" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="178" y="61" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">b</text><text x="240" y="60" font-family="sans-serif" font-size="16" fill="#222" text-anchor="start" font-weight="bold">=</text><rect x="300" y="40" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="318" y="61" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">c</text><text x="400" y="60" font-family="sans-serif" font-size="12" fill="#555" text-anchor="start">→ 1 instruction per element</text><text x="20" y="110" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">SIMD operation (four elements at a time with SSE/NEON):</text><rect x="20" y="120" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="34" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">a0</text><rect x="74" y="120" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="88" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">a1</text><rect x="128" y="120" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="142" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">a2</text><rect x="182" y="120" width="50" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="196" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">a3</text><rect x="260" y="120" width="50" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="274" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">b0</text><rect x="314" y="120" width="50" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="328" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">b1</text><rect x="368" y="120" width="50" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="382" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">b2</text><rect x="422" y="120" width="50" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="436" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">b3</text><rect x="500" y="120" width="50" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="514" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">c0</text><rect x="554" y="120" width="50" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="568" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">c1</text><rect x="608" y="120" width="50" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="622" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">c2</text><rect x="662" y="120" width="50" height="30" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="676" y="141" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">c3</text><text x="232" y="141" font-family="sans-serif" font-size="16" fill="#222" text-anchor="start" font-weight="bold">+</text><text x="472" y="141" font-family="sans-serif" font-size="16" fill="#222" text-anchor="start" font-weight="bold">=</text><text x="20" y="175" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start">→ 1 instruction for 4 elements  (4× throughput)</text><text x="20" y="200" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">SSE:</text><text x="90" y="200" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">128-bit  (4× f32, 2× f64, 16× u8)</text><text x="20" y="216" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">AVX2:</text><text x="90" y="216" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">256-bit  (8× f32, 4× f64, 32× u8)</text><text x="20" y="232" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">AVX-512:</text><text x="90" y="232" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">512-bit (16× f32, 8× f64, 64× u8)</text><text x="20" y="248" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">NEON:</text><text x="90" y="248" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">128-bit  (ARM)</text></svg>
 
 ---
 
@@ -804,33 +751,11 @@ fn main() {
 
 ## Cache Optimization Guidelines
 
-```diagram
-  ┌───────────────────────────────────────────────────────────────┐
-  │                Cache Optimization Rules                        │
-  ├───────────────────────────────────────────────────────────────┤
-  │                                                                │
-  │  1. Sequential access beats random access                     │
-  │     Vec<T> >> LinkedList<T> for iteration                     │
-  │                                                                │
-  │  2. Keep hot data together                                    │
-  │     SoA layout when accessing few fields across many items     │
-  │     AoS layout when accessing all fields of few items          │
-  │                                                                │
-  │  3. Minimize struct size (less data per cache line = more      │
-  │     items per line). Use #[repr(C)] or reorder fields.         │
-  │                                                                │
-  │  4. Avoid pointer chasing                                     │
-  │     Vec<T> instead of Vec<Box<T>>                              │
-  │     Flatten nested structures when possible                    │
-  │                                                                │
-  │  5. Use indices instead of pointers for graphs/trees           │
-  │     Store nodes in a Vec, reference by index.                  │
-  │     (arena allocation pattern)                                 │
-  │                                                                │
-  │  Cache line = 64 bytes on x86. L1 latency ~1ns,               │
-  │  L2 ~5ns, L3 ~20ns, DRAM ~100ns.                             │
-  └───────────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="360"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="340" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#0d47a1" text-anchor="start" font-weight="bold">Cache Optimization Rules</text><text x="20" y="46" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">1. Sequential access beats random access</text><text x="28" y="61" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Vec<T>  >>  LinkedList<T> for iteration</text><text x="20" y="82" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">2. Keep hot data together</text><text x="28" y="97" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">SoA layout: few fields, many items   |   AoS layout: all fields, few items</text><text x="20" y="118" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">3. Minimize struct size</text><text x="28" y="133" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Less data per cache line = more items per line. Use #[repr(C)] or reorder fields.</text><text x="20" y="154" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">4. Avoid pointer chasing</text><text x="28" y="169" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Vec<T> instead of Vec<Box<T>>   |   Flatten nested structures when possible</text><text x="20" y="190" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">5. Use indices instead of pointers for graphs/trees</text><text x="28" y="205" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Store nodes in a Vec, reference by index  (arena allocation pattern)</text><line x1="20" y1="228" x2="660" y2="228" stroke="#aaa" stroke-width="1"/><text x="20" y="244" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">Cache line = 64 bytes on x86.  L1 ~1ns,  L2 ~5ns,  L3 ~20ns,  DRAM ~100ns.</text></svg>
 
 ---
 
@@ -1062,55 +987,21 @@ codegen-units = 1   # Single codegen unit: enables more inlining
                     # Default is 16 for parallel compilation
 ```
 
-```diagram
-  Without LTO:
-  ┌─────────┐  ┌─────────┐  ┌─────────┐
-  │ Crate A  │  │ Crate B  │  │ Crate C  │
-  │ optimize │  │ optimize │  │ optimize │   Each crate optimized
-  │ alone    │  │ alone    │  │ alone    │   independently
-  └────┬─────┘  └────┬─────┘  └────┬─────┘
-       └──────────────┼──────────────┘
-                      │ link
-                 ┌────┴─────┐
-                 │  Binary   │   Cross-crate calls not inlined
-                 └──────────┘
-
-  With LTO:
-  ┌─────────┐  ┌─────────┐  ┌─────────┐
-  │ Crate A  │  │ Crate B  │  │ Crate C  │
-  │  (IR)    │  │  (IR)    │  │  (IR)    │   Keep LLVM IR
-  └────┬─────┘  └────┬─────┘  └────┬─────┘
-       └──────────────┼──────────────┘
-                      │ merge + optimize
-                 ┌────┴─────┐
-                 │  Binary   │   Full cross-crate optimization
-                 └──────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="310"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><text x="20" y="26" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">Without LTO</text><rect x="20" y="34" width="160" height="50" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="100" y="54" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate A</text><text x="100" y="72" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">optimize alone</text><line x1="100" y1="84" x2="100" y2="105" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="210" y="34" width="160" height="50" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="290" y="54" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate B</text><text x="290" y="72" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">optimize alone</text><line x1="290" y1="84" x2="290" y2="105" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="400" y="34" width="160" height="50" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="480" y="54" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate C</text><text x="480" y="72" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">optimize alone</text><line x1="480" y1="84" x2="480" y2="105" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><line x1="100" y1="106" x2="580" y2="106" stroke="#555" stroke-width="1"/><line x1="340" y1="106" x2="340" y2="118" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="345" y="114" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">link</text><rect x="265" y="122" width="150" height="30" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="340" y="142" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Binary</text><text x="340" y="158" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Cross-crate calls NOT inlined</text><text x="20" y="176" font-family="sans-serif" font-size="13" fill="#222" text-anchor="start" font-weight="bold">With LTO</text><rect x="20" y="184" width="160" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="100" y="204" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate A</text><text x="100" y="222" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(IR)</text><line x1="100" y1="234" x2="100" y2="255" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="210" y="184" width="160" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="290" y="204" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate B</text><text x="290" y="222" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(IR)</text><line x1="290" y1="234" x2="290" y2="255" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="400" y="184" width="160" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="480" y="204" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Crate C</text><text x="480" y="222" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(IR)</text><line x1="480" y1="234" x2="480" y2="255" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><line x1="100" y1="256" x2="580" y2="256" stroke="#555" stroke-width="1"/><line x1="340" y1="256" x2="340" y2="268" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="345" y="264" font-family="sans-serif" font-size="10" fill="#555" text-anchor="start">merge + optimize</text><rect x="265" y="272" width="150" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="340" y="292" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle" font-weight="bold">Binary</text><text x="340" y="308" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Full cross-crate optimization</text></svg>
 
 ---
 
 ## LTO Trade-offs
 
-```diagram
-  ┌───────────────┬──────────┬─────────────┬─────────────────────┐
-  │ Setting       │ Compile  │ Binary Size │ Runtime Performance  │
-  ├───────────────┼──────────┼─────────────┼─────────────────────┤
-  │ lto = false   │ Fast     │ Larger      │ Baseline             │
-  │ lto = "thin"  │ Moderate │ Smaller     │ Good (5-15% faster)  │
-  │ lto = true    │ Slow     │ Smallest    │ Best (10-20% faster) │
-  │ codegen-units │          │             │                       │
-  │   = 1         │ Slower   │ Smaller     │ Better inlining      │
-  └───────────────┴──────────┴─────────────┴─────────────────────┘
-
-  Recommended release profile for maximum performance:
-
-  [profile.release]
-  lto = true
-  codegen-units = 1
-  opt-level = 3
-  strip = true         # Strip debug symbols from binary
-  panic = "abort"      # Smaller binary, no unwind tables
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="250"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="680" height="26" fill="#1565c0" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="27" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Setting</text><text x="191" y="27" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Compile</text><text x="291" y="27" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Binary Size</text><text x="386" y="27" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="start" font-weight="bold">Runtime Performance</text><line x1="185" y1="10" x2="185" y2="148" stroke="#aaa" stroke-width="1"/><line x1="285" y1="10" x2="285" y2="148" stroke="#aaa" stroke-width="1"/><line x1="380" y1="10" x2="380" y2="148" stroke="#aaa" stroke-width="1"/><rect x="10" y="36" width="680" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">lto = false</text><text x="191" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Fast</text><text x="291" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Larger</text><text x="386" y="54" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Baseline</text><rect x="10" y="64" width="680" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="82" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">lto = "thin"</text><text x="191" y="82" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Moderate</text><text x="291" y="82" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Smaller</text><text x="386" y="82" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Good (5–15% faster)</text><rect x="10" y="92" width="680" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="110" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">lto = true</text><text x="191" y="110" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Slow</text><text x="291" y="110" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Smallest</text><text x="386" y="110" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Best (10–20% faster)</text><rect x="10" y="120" width="680" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="16" y="138" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">codegen-units=1</text><text x="191" y="138" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Slower</text><text x="291" y="138" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Smaller</text><text x="386" y="138" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">Better inlining</text><text x="20" y="172" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">Recommended release profile for maximum performance:</text><rect x="10" y="180" width="680" height="24" fill="#fff9c4" stroke="#333" stroke-width="1.5" rx="4"/><text x="18" y="196" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">[profile.release]  lto=true  codegen-units=1  opt-level=3  strip=true  panic="abort"</text></svg>
 
 ---
 
@@ -1122,32 +1013,11 @@ Optimize based on real workload data
 
 ## PGO Workflow
 
-```diagram
-  ┌─────────────────────────────────────────────────────────────┐
-  │                    PGO Workflow                               │
-  │                                                               │
-  │  Step 1: Build with instrumentation                          │
-  │  ┌──────────┐    ┌──────────────────────┐                    │
-  │  │ Source    │ -> │ Instrumented Binary   │                   │
-  │  └──────────┘    └──────────┬───────────┘                    │
-  │                             │                                 │
-  │  Step 2: Run representative workload                         │
-  │                  ┌──────────┴───────────┐                    │
-  │                  │ Instrumented Binary   │                   │
-  │                  │ + real workload       │                   │
-  │                  └──────────┬───────────┘                    │
-  │                             │ writes profile data            │
-  │                  ┌──────────┴───────────┐                    │
-  │                  │ profile_data/*.profraw│                   │
-  │                  └──────────┬───────────┘                    │
-  │                             │                                 │
-  │  Step 3: Rebuild with profile data                           │
-  │  ┌──────────┐    ┌──────────┴───────────┐                    │
-  │  │ Source +  │ -> │ Optimized Binary      │                   │
-  │  │ profiles  │    │ (5-20% faster)        │                   │
-  │  └──────────┘    └──────────────────────┘                    │
-  └─────────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="360"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="640" height="68" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Step 1: Build with instrumentation</text><text x="26" y="48" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Source  →  Instrumented Binary</text><rect x="10" y="110" width="640" height="88" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="130" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">Step 2: Run representative workload</text><text x="26" y="148" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Instrumented Binary + real workload</text><text x="26" y="168" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">→ writes profile data to profile_data/*.profraw</text><line x1="330" y1="78" x2="330" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><rect x="10" y="230" width="640" height="68" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="250" font-family="sans-serif" font-size="13" fill="#e65100" text-anchor="start" font-weight="bold">Step 3: Rebuild with profile data</text><text x="26" y="268" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Source + profiles  →  Optimized Binary (5–20% faster)</text><line x1="330" y1="198" x2="330" y2="230" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/></svg>
 
 ---
 
@@ -1230,37 +1100,11 @@ fn main() {
 
 ## When to Use #[inline]
 
-```diagram
-  ┌──────────────────────────────────────────────────────────────┐
-  │                   #[inline] Guidelines                        │
-  ├──────────────────────────────────────────────────────────────┤
-  │                                                                │
-  │  USE #[inline]:                                               │
-  │  - Small functions in library crates (enables cross-crate     │
-  │    inlining without LTO)                                      │
-  │  - Wrapper/delegation functions                               │
-  │  - Hot-path functions identified by profiling                 │
-  │                                                                │
-  │  USE #[inline(always)]:                                       │
-  │  - Very small functions (1-3 lines) that MUST be fast         │
-  │  - Functions in performance-critical inner loops              │
-  │  - Only when benchmarks prove it helps                        │
-  │                                                                │
-  │  USE #[inline(never)]:                                        │
-  │  - Error handling paths (keeps hot path small)                │
-  │  - Functions you want to see in profiler output               │
-  │  - Large functions called from many places (reduce bloat)     │
-  │                                                                │
-  │  DO NOT USE:                                                  │
-  │  - On every function "just in case" (hurts compile time,      │
-  │    may increase binary size and reduce i-cache efficiency)     │
-  │  - Without profiling data to justify it                       │
-  │                                                                │
-  │  Note: Within a single crate, the compiler already sees all   │
-  │  code and makes good inlining decisions. #[inline] matters    │
-  │  most for cross-crate calls.                                  │
-  └──────────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="460"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="440" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#4a148c" text-anchor="start" font-weight="bold">#[inline] Guidelines</text><rect x="16" y="48" width="648" height="84" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="66" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">#[inline] — USE FOR:</text><text x="24" y="78" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Small functions in library crates (enables cross-crate inlining without LTO)</text><text x="24" y="96" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Wrapper / delegation functions</text><text x="24" y="114" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Hot-path functions identified by profiling</text><rect x="16" y="138" width="648" height="84" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="156" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="start" font-weight="bold">#[inline(always)] — USE FOR:</text><text x="24" y="168" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Very small functions (1–3 lines) that MUST be fast</text><text x="24" y="186" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Functions in performance-critical inner loops</text><text x="24" y="204" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Only when benchmarks prove it helps</text><rect x="16" y="228" width="648" height="84" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="246" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">#[inline(never)] — USE FOR:</text><text x="24" y="258" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Error handling paths (keeps hot path small)</text><text x="24" y="276" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Functions you want to see in profiler output</text><text x="24" y="294" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Large functions called from many places (reduce code bloat)</text><rect x="16" y="318" width="648" height="66" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="336" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">DO NOT USE when:</text><text x="24" y="348" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• On every function 'just in case' (hurts compile time, may increase binary size)</text><text x="24" y="366" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Without profiling data to justify it</text></svg>
 
 ---
 
@@ -1338,29 +1182,11 @@ fn main() {
 
 ## Summary
 
-```diagram
-  ┌───────────────────────────────────────────────────────┐
-  │            Performance Optimization Cheatsheet         │
-  ├───────────────────────────────────────────────────────┤
-  │ Zero-cost       : iterators, generics, Option<&T>     │
-  │ LLVM passes     : inlining, vectorization, DCE        │
-  │ opt-level = 3   : maximum runtime optimization        │
-  │ perf + flamegraph: find bottlenecks before optimizing │
-  │ criterion       : statistical benchmarking            │
-  │ jemalloc/mimalloc: faster multi-threaded allocation   │
-  │ SIMD            : 4-16x throughput for data parallel  │
-  │ SoA layout      : cache-friendly field access         │
-  │ Arena alloc     : cache-friendly graph/tree traversal │
-  │ const fn        : move computation to compile time    │
-  │ const generics  : type-safe compile-time parameters   │
-  │ LTO             : cross-crate optimization (10-20%)   │
-  │ PGO             : workload-guided optimization        │
-  │ #[inline]       : cross-crate inlining hint           │
-  │ codegen-units=1 : better optimization, slower compile │
-  └───────────────────────────────────────────────────────┘
-
-  Golden rule: MEASURE FIRST. Profile, benchmark, then optimize.
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="400"><defs>
+  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+  </marker>
+</defs><rect x="10" y="10" width="660" height="380" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#1b5e20" text-anchor="start" font-weight="bold">Performance Optimization Cheatsheet</text><rect x="16" y="42" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="56" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">Zero-cost abstractions</text><text x="230" y="56" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Iterators, generics, Option<&T></text><rect x="16" y="63" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="77" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">LLVM passes</text><text x="230" y="77" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Inlining, vectorization, DCE</text><rect x="16" y="84" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="98" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">opt-level = 3</text><text x="230" y="98" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Maximum runtime optimization</text><rect x="16" y="105" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="119" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">perf + flamegraph</text><text x="230" y="119" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Find bottlenecks before optimizing</text><rect x="16" y="126" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="140" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">criterion</text><text x="230" y="140" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Statistical benchmarking</text><rect x="16" y="147" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="161" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">jemalloc / mimalloc</text><text x="230" y="161" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Faster multi-threaded allocation</text><rect x="16" y="168" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="182" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">SIMD</text><text x="230" y="182" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">4–16× throughput for data-parallel work</text><rect x="16" y="189" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="203" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">SoA layout</text><text x="230" y="203" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Cache-friendly field access</text><rect x="16" y="210" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="224" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">Arena alloc</text><text x="230" y="224" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Cache-friendly graph/tree traversal</text><rect x="16" y="231" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="245" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">const fn</text><text x="230" y="245" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Move computation to compile time</text><rect x="16" y="252" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="266" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">const generics</text><text x="230" y="266" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Type-safe compile-time parameters</text><rect x="16" y="273" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="287" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">LTO</text><text x="230" y="287" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Cross-crate optimization (10–20%)</text><rect x="16" y="294" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="308" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">PGO</text><text x="230" y="308" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Workload-guided optimization</text><rect x="16" y="315" width="648" height="21" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="329" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">#[inline]</text><text x="230" y="329" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Cross-crate inlining hint</text><rect x="16" y="336" width="648" height="21" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="350" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start" font-weight="bold">codegen-units = 1</text><text x="230" y="350" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">Better optimization, slower compile</text><text x="20" y="375" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">Golden rule: MEASURE FIRST. Profile, benchmark, then optimize.</text></svg>
 
 ---
 

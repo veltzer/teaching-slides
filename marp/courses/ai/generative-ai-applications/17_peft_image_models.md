@@ -6,7 +6,7 @@
 
 Why customize? To generate images of **your specific** concepts:
 
-```misc
+```diagram
 Standard Stable Diffusion:
   "A photo of a dog" → Generic dog image
 
@@ -139,7 +139,7 @@ image = pipe("a photo of sks dog riding a skateboard").images[0]
 
 Prevents the model from forgetting how to draw the class in general:
 
-```misc
+```diagram
 Without prior preservation:
   "a photo of a dog" → Always generates YOUR dog
   The model "forgot" what other dogs look like!
@@ -168,7 +168,7 @@ How it works:
 
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
-```misc
+```diagram
 Standard vocabulary:
   "cat" → embedding vector [0.3, -0.1, 0.5, ...]
   "dog" → embedding vector [0.1, 0.4, -0.2, ...]
@@ -393,7 +393,7 @@ image = pipe(
 
 ## T2I-Adapter — Lightweight ControlNet Alternative
 
-```misc
+```diagram
 T2I-Adapter vs ControlNet:
 
               T2I-Adapter    ControlNet

@@ -104,35 +104,34 @@ Defending against account takeover attacks requires a multi-layered approach, co
 
 ## Account Takeover Attack Flow
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│            Account Takeover Kill Chain                     │
-│                                                          │
-│  1. Reconnaissance                                       │
-│  ┌──────────────────────────────────────────┐           │
-│  │ Gather email/username from breaches,     │           │
-│  │ social media, company websites           │           │
-│  └──────────────────┬───────────────────────┘           │
-│                     v                                    │
-│  2. Credential Acquisition                               │
-│  ┌──────────────────────────────────────────┐           │
-│  │ Buy breach data, phish credentials,      │           │
-│  │ brute force, or exploit password reset   │           │
-│  └──────────────────┬───────────────────────┘           │
-│                     v                                    │
-│  3. Validation & Access                                  │
-│  ┌──────────────────────────────────────────┐           │
-│  │ Test credentials using automated tools,  │           │
-│  │ rotate through proxies to avoid detection│           │
-│  └──────────────────┬───────────────────────┘           │
-│                     v                                    │
-│  4. Exploitation                                         │
-│  ┌──────────────────────────────────────────┐           │
-│  │ Change password/email, drain accounts,   │           │
-│  │ pivot to other accounts, sell access     │           │
-│  └──────────────────────────────────────────┘           │
-└──────────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="410" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect x="5" y="5" width="610" height="400" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="310" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Account Takeover Kill Chain</text>
+  <text x="25" y="52" font-size="13" font-weight="bold" fill="#222222">1. Reconnaissance</text>
+  <rect x="25" y="58" width="565" height="50" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="40" y="78" font-size="12" fill="#333333">Gather email/username from breaches,</text>
+  <text x="40" y="96" font-size="12" fill="#333333">social media, company websites</text>
+  <line x1="307" y1="108" x2="307" y2="128" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="25" y="146" font-size="13" font-weight="bold" fill="#222222">2. Credential Acquisition</text>
+  <rect x="25" y="152" width="565" height="50" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="40" y="172" font-size="12" fill="#333333">Buy breach data, phish credentials,</text>
+  <text x="40" y="190" font-size="12" fill="#333333">brute force, or exploit password reset</text>
+  <line x1="307" y1="202" x2="307" y2="222" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="25" y="240" font-size="13" font-weight="bold" fill="#222222">3. Validation &amp; Access</text>
+  <rect x="25" y="246" width="565" height="50" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="40" y="266" font-size="12" fill="#333333">Test credentials using automated tools,</text>
+  <text x="40" y="284" font-size="12" fill="#333333">rotate through proxies to avoid detection</text>
+  <line x1="307" y1="296" x2="307" y2="316" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="25" y="334" font-size="13" font-weight="bold" fill="#222222">4. Exploitation</text>
+  <rect x="25" y="340" width="565" height="50" fill="#fce4ec" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="40" y="360" font-size="12" fill="#333333">Change password/email, drain accounts,</text>
+  <text x="40" y="378" font-size="12" fill="#333333">pivot to other accounts, sell access</text>
+</svg>
 
 ---
 

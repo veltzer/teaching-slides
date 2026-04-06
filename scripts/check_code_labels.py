@@ -13,16 +13,18 @@ Usage:
 """
 
 import argparse
+import importlib.util
 import re
 import sys
 from pathlib import Path
 from typing import Iterator
-from config.code_labels import VALID  # noqa: E402
 
-# Locate the project root (one level up from this script's directory) and
-# import the labels module from config/.
+# Load config/code_labels.py without requiring a package __init__.py
 _ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(_ROOT))
+_spec = importlib.util.spec_from_file_location('code_labels', _ROOT / 'config' / 'code_labels.py')
+_mod = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_mod)
+VALID: frozenset = _mod.VALID
 
 
 # Matches the opening fence of a fenced code block, capturing the label.

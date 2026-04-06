@@ -736,7 +736,7 @@ for (int j = 0; j < N; j++)
 ```
 
 **Memory layout of `matrix[N][N]`:**
-```misc
+```diagram
 Address:  [0][0] [0][1] [0][2] ... [0][N-1] [1][0] [1][1] ...
           ──────────────────────── ──────────────────────────
           Row 0 (contiguous)       Row 1 (contiguous)

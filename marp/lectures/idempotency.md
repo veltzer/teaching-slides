@@ -29,12 +29,26 @@ Without idempotency: chaos and data corruption
 
 ## Real-World Example: Payment Processing
 
-```diagram
-User clicks "Pay $100"
-→ Network timeout occurs
-→ User clicks again
-→ Two charges: $200 total!
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="210" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect x="10"  y="10"  width="200" height="40" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="110" y="34"  text-anchor="middle" font-size="12" fill="#222222">User clicks "Pay $100"</text>
+  <line x1="110" y1="50" x2="110" y2="70" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="10"  y="72"  width="200" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
+  <text x="110" y="96"  text-anchor="middle" font-size="12" fill="#e65100">Network timeout occurs</text>
+  <line x1="110" y1="112" x2="110" y2="132" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="10"  y="134" width="200" height="40" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
+  <text x="110" y="158" text-anchor="middle" font-size="12" fill="#c62828">User clicks again (retry)</text>
+  <line x1="210" y1="90" x2="278" y2="90" stroke="#c62828" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr)"/>
+  <rect x="280" y="60" width="200" height="80" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
+  <text x="380" y="90"  text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Two charges!</text>
+  <text x="380" y="110" text-anchor="middle" font-size="12" fill="#333333">$100 + $100 = $200</text>
+  <text x="380" y="128" text-anchor="middle" font-size="11" fill="#555555">Without idempotency</text>
+</svg>
 
 **With idempotency**: Second click is safe, only one $100 charge
 

@@ -12,25 +12,45 @@
 
 ## Playbook Execution Flow
 
-```diagram
-ansible-playbook site.yml
-         |
-         v
-  Parse YAML file
-         |
-         v
-  For each play:
-    1. Select hosts from inventory
-    2. Gather facts (if enabled)
-    3. Execute pre_tasks
-    4. Execute roles
-    5. Execute tasks (in order)
-    6. Execute post_tasks
-    7. Run notified handlers
-         |
-         v
-  Display play recap
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="455" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="140" y="10" width="360" height="32" fill="#c5cae9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="31" font-size="12" font-weight="bold" fill="#222" text-anchor="start">ansible-playbook site.yml</text>
+<rect x="140" y="50" width="360" height="32" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="71" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Parse YAML file</text>
+<line x1="320" y1="42" x2="320" y2="48" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="90" width="360" height="32" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="111" font-size="12" font-weight="bold" fill="#222" text-anchor="start">For each play:</text>
+<line x1="320" y1="82" x2="320" y2="88" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="130" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="151" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  1. Select hosts from inventory</text>
+<line x1="320" y1="122" x2="320" y2="128" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="170" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="191" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  2. Gather facts (if enabled)</text>
+<line x1="320" y1="162" x2="320" y2="168" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="210" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="231" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  3. Execute pre_tasks</text>
+<line x1="320" y1="202" x2="320" y2="208" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="250" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="271" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  4. Execute roles</text>
+<line x1="320" y1="242" x2="320" y2="248" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="290" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="311" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  5. Execute tasks (in order)</text>
+<line x1="320" y1="282" x2="320" y2="288" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="330" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="351" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  6. Execute post_tasks</text>
+<line x1="320" y1="322" x2="320" y2="328" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="370" width="360" height="32" fill="#fffde7" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="391" font-size="12" font-weight="normal" fill="#222" text-anchor="start">  7. Run notified handlers</text>
+<line x1="320" y1="362" x2="320" y2="368" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="140" y="410" width="360" height="32" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="152" y="431" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Display play recap</text>
+<line x1="320" y1="402" x2="320" y2="408" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>
 
 ---
 

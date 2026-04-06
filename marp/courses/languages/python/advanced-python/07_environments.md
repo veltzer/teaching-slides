@@ -687,7 +687,7 @@ conda env export > environment.yml
 - **Development workflow**
 - **Platform requirements**
 
-```misc
+```diagram
 Small projects                 → venv + pip
 Complex dependencies           → poetry or pipenv
 Data science                   → conda

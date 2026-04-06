@@ -236,7 +236,7 @@ def register(request):
 
 ## Business Logic Bypass Examples
 
-```misc
+```diagram
 Example 1: Free premium features
   Regular user -> tries premium API endpoint -> works!
   (Authorization only checked in UI, not API)
@@ -327,7 +327,7 @@ for t in threads:
 
 ## Authorization Bypass Patterns
 
-```misc
+```diagram
 Pattern 1: Horizontal Privilege Escalation
   User A accesses User B's data
   /api/orders/USER_B_ORDER_ID

@@ -976,7 +976,7 @@ fn main() {
 
 ## Deadlock Prevention Strategies
 
-```misc
+```diagram
   Strategy 1: Lock Ordering
   ─────────────────────────
   Always acquire locks in the same order (e.g., by address or ID).

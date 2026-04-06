@@ -524,7 +524,7 @@ docker run --rm --tmpfs /data:size=2G alpine sh -c \
 
 ## Storage Performance Comparison
 
-```misc
+```diagram
 Typical I/O throughput (sequential write):
 
 tmpfs (RAM)         ████████████████████████████  ~2000 MB/s

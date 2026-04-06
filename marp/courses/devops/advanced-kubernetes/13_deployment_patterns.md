@@ -46,7 +46,7 @@ spec:
 
 ## Rolling Update Visualization
 
-```misc
+```diagram
 maxSurge: 1, maxUnavailable: 1, replicas: 4
 
 Step 1: Create 1 new (surge), terminate 1 old

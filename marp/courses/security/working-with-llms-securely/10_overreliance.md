@@ -150,15 +150,32 @@ def grounded_response(user_query):
 
 ## Mitigation: Human Review Gates
 
-```diagram
-LLM Output Pipeline:
-
-Generate ──► Flag Uncertainty ──► Human Review ──► Publish
-                  │
-                  ├─ High confidence → Expedited review
-                  ├─ Medium confidence → Standard review
-                  └─ Low confidence → Detailed review
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <text x="10" y="20" font-size="13" font-weight="bold" fill="#222222">LLM Output Pipeline</text>
+  <rect x="10"  y="30" width="100" height="40" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="60"  y="55" text-anchor="middle" font-size="12" fill="#222222">Generate</text>
+  <line x1="110" y1="50" x2="150" y2="50" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="152" y="30" width="160" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
+  <text x="232" y="55" text-anchor="middle" font-size="12" fill="#222222">Flag Uncertainty</text>
+  <line x1="312" y1="50" x2="352" y2="50" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="354" y="30" width="140" height="40" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="424" y="55" text-anchor="middle" font-size="12" fill="#222222">Human Review</text>
+  <line x1="494" y1="50" x2="534" y2="50" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="536" y="30" width="120" height="40" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="596" y="55" text-anchor="middle" font-size="12" fill="#222222">Publish</text>
+  <line x1="232" y1="70" x2="232" y2="98" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="55"  y="100" width="200" height="26" fill="#c8e6c9" stroke="#333333" stroke-width="1" rx="3"/>
+  <text x="155" y="117" text-anchor="middle" font-size="11" fill="#333333">High confidence &#8594; Expedited review</text>
+  <rect x="55"  y="130" width="200" height="26" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="155" y="147" text-anchor="middle" font-size="11" fill="#333333">Medium confidence &#8594; Standard review</text>
+  <rect x="55"  y="160" width="200" height="26" fill="#ffcdd2" stroke="#e57373" stroke-width="1" rx="3"/>
+  <text x="155" y="177" text-anchor="middle" font-size="11" fill="#333333">Low confidence &#8594; Detailed review</text>
+</svg>
 
 Critical outputs should always pass through human review
 

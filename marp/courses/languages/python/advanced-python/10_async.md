@@ -554,22 +554,40 @@ coro.close()                 # Coroutine closing, cleanup complete
 - Maximize I/O efficiency
 - Different from parallelism (multi-threading/processing)
 
-```diagram
-Synchronous vs. Asynchronous:
-
-Synchronous (Blocking):
-1. Start Task A
-2. Wait for Task A to complete
-3. Start Task B
-4. Wait for Task B to complete
-5. Total time: Time A + Time B
-
-Asynchronous (Non-blocking):
-1. Start Task A
-2. Start Task B (while A is still running)
-3. React when each task completes
-4. Total time: Approximately Max(Time A, Time B)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="280" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Synchronous -->
+  <text x="10" y="20" font-size="14" font-weight="bold" fill="#222">Synchronous (Blocking):</text>
+  <rect x="10"  y="30" width="150" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="85"  y="53" font-size="13" fill="#222" text-anchor="middle">Start Task A</text>
+  <line x1="85" y1="66" x2="85" y2="72" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="10"  y="74" width="150" height="36" fill="#ffccbc" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="85"  y="97" font-size="13" fill="#222" text-anchor="middle">Wait for A ⏳</text>
+  <line x1="85" y1="110" x2="85" y2="116" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="10"  y="118" width="150" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="85"  y="141" font-size="13" fill="#222" text-anchor="middle">Start Task B</text>
+  <line x1="85" y1="154" x2="85" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="10"  y="162" width="150" height="36" fill="#ffccbc" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="85"  y="185" font-size="13" fill="#222" text-anchor="middle">Wait for B ⏳</text>
+  <text x="10"  y="218" font-size="12" fill="#c62828" font-weight="bold">Total: Time A + Time B</text>
+  <!-- Asynchronous -->
+  <text x="350" y="20" font-size="14" font-weight="bold" fill="#222">Asynchronous (Non-blocking):</text>
+  <rect x="350" y="30" width="150" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="425" y="53" font-size="13" fill="#222" text-anchor="middle">Start Task A</text>
+  <line x1="425" y1="66" x2="425" y2="72" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="350" y="74" width="150" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="425" y="97" font-size="13" fill="#222" text-anchor="middle">Start Task B</text>
+  <line x1="425" y1="110" x2="425" y2="116" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="350" y="118" width="150" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="425" y="141" font-size="13" fill="#222" text-anchor="middle">React on complete</text>
+  <text x="350" y="180" font-size="12" fill="#2e7d32" font-weight="bold">Total: Max(Time A, Time B)</text>
+  <!-- Divider -->
+  <line x1="330" y1="10" x2="330" y2="230" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+</svg>
 
 ---
 

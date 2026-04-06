@@ -146,7 +146,7 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 
 ## Choosing Examples — Quality Matters
 
-```misc
+```diagram
 GOOD examples:
   ✓ Cover all categories roughly equally
   ✓ Include edge cases and ambiguous inputs
@@ -292,7 +292,7 @@ messages = [
 
 ## How Many Examples Do You Need?
 
-```misc
+```diagram
 Performance vs. Number of Examples:
 
 Accuracy

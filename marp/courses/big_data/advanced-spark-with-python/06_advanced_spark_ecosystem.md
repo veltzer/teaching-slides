@@ -503,36 +503,33 @@ delta_table.history().select(
 
 ## Delta Lake Operations Summary
 
-```diagram
-┌──────────────────────────────────────────────┐
-│            Delta Lake Operations              │
-├──────────────────────────────────────────────┤
-│                                              │
-│  WRITE Operations                            │
-│  ├── INSERT (append)                         │
-│  ├── UPDATE (in-place modify)                │
-│  ├── DELETE (remove rows)                    │
-│  ├── MERGE (upsert: insert + update)         │
-│  └── OVERWRITE (replace data)                │
-│                                              │
-│  READ Operations                             │
-│  ├── Current version (default)               │
-│  ├── Time travel (versionAsOf, timestampAsOf)│
-│  └── Change Data Feed (readChangeFeed)       │
-│                                              │
-│  MAINTENANCE Operations                      │
-│  ├── OPTIMIZE (compact small files)          │
-│  ├── VACUUM (delete old versions)            │
-│  ├── Z-ORDER (co-locate data for queries)    │
-│  └── DESCRIBE HISTORY (audit log)            │
-│                                              │
-│  SCHEMA Operations                           │
-│  ├── Schema enforcement (reject bad data)    │
-│  ├── Schema evolution (mergeSchema)          │
-│  └── Column mapping                          │
-│                                              │
-└──────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" font-family="sans-serif">
+<rect x="5" y="5" width="630" height="390" fill="#fafafa" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="320" y="28" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Delta Lake Operations</text>
+<rect x="15" y="40" width="295" height="118" fill="#e3f2fd" stroke="#999" stroke-width="1" rx="4"/>
+<text x="25" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">WRITE Operations</text>
+<text x="33" y="74" font-size="12" fill="#333" text-anchor="start">├── INSERT (append)</text>
+<text x="33" y="92" font-size="12" fill="#333" text-anchor="start">├── UPDATE (in-place modify)</text>
+<text x="33" y="110" font-size="12" fill="#333" text-anchor="start">├── DELETE (remove rows)</text>
+<text x="33" y="128" font-size="12" fill="#333" text-anchor="start">├── MERGE (upsert: insert + update)</text>
+<text x="33" y="146" font-size="12" fill="#333" text-anchor="start">├── OVERWRITE (replace data)</text>
+<rect x="325" y="40" width="295" height="82" fill="#e8f5e9" stroke="#999" stroke-width="1" rx="4"/>
+<text x="335" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">READ Operations</text>
+<text x="343" y="74" font-size="12" fill="#333" text-anchor="start">├── Current version (default)</text>
+<text x="343" y="92" font-size="12" fill="#333" text-anchor="start">├── Time travel (versionAsOf, timestampAsOf)</text>
+<text x="343" y="110" font-size="12" fill="#333" text-anchor="start">├── Change Data Feed (readChangeFeed)</text>
+<rect x="15" y="215" width="295" height="100" fill="#fff3e0" stroke="#999" stroke-width="1" rx="4"/>
+<text x="25" y="232" font-size="13" font-weight="bold" fill="#222" text-anchor="start">MAINTENANCE Operations</text>
+<text x="33" y="249" font-size="12" fill="#333" text-anchor="start">├── OPTIMIZE (compact small files)</text>
+<text x="33" y="267" font-size="12" fill="#333" text-anchor="start">├── VACUUM (delete old versions)</text>
+<text x="33" y="285" font-size="12" fill="#333" text-anchor="start">├── Z-ORDER (co-locate data for queries)</text>
+<text x="33" y="303" font-size="12" fill="#333" text-anchor="start">├── DESCRIBE HISTORY (audit log)</text>
+<rect x="325" y="215" width="295" height="82" fill="#fce4ec" stroke="#999" stroke-width="1" rx="4"/>
+<text x="335" y="232" font-size="13" font-weight="bold" fill="#222" text-anchor="start">SCHEMA Operations</text>
+<text x="343" y="249" font-size="12" fill="#333" text-anchor="start">├── Schema enforcement (reject bad data)</text>
+<text x="343" y="267" font-size="12" fill="#333" text-anchor="start">├── Schema evolution (mergeSchema)</text>
+<text x="343" y="285" font-size="12" fill="#333" text-anchor="start">├── Column mapping</text>
+</svg>
 
 ---
 

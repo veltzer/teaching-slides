@@ -1,19 +1,49 @@
 # Redirection
 ---
 ## File Descriptors
-```diagram
-Every process has three standard file descriptors:
-
-+------+--------+----------+------------------+
-| FD   | Name   | Default  | C equivalent     |
-+------+--------+----------+------------------+
-| 0    | stdin  | keyboard | stdin / scanf    |
-| 1    | stdout | terminal | stdout / printf  |
-| 2    | stderr | terminal | stderr / fprintf |
-+------+--------+----------+------------------+
-
-The shell can redirect any of these.
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="200" font-family="sans-serif">
+  <!-- title row -->
+  <rect x="10" y="10" width="640" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="20" y="30" font-size="13" font-weight="bold" fill="#222">Every process has three standard file descriptors:</text>
+  <!-- header row -->
+  <rect x="10" y="50" width="80" height="28" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <rect x="90" y="50" width="90" height="28" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <rect x="180" y="50" width="120" height="28" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <rect x="300" y="50" width="350" height="28" fill="#bbdefb" stroke="#333" stroke-width="1.5"/>
+  <text x="20" y="69" font-size="13" font-weight="bold" fill="#222">FD</text>
+  <text x="100" y="69" font-size="13" font-weight="bold" fill="#222">Name</text>
+  <text x="190" y="69" font-size="13" font-weight="bold" fill="#222">Default</text>
+  <text x="310" y="69" font-size="13" font-weight="bold" fill="#222">C equivalent</text>
+  <!-- row 0 -->
+  <rect x="10" y="78" width="80" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="90" y="78" width="90" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="180" y="78" width="120" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="300" y="78" width="350" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="20" y="97" font-size="13" fill="#222">0</text>
+  <text x="100" y="97" font-size="13" fill="#222">stdin</text>
+  <text x="190" y="97" font-size="13" fill="#222">keyboard</text>
+  <text x="310" y="97" font-size="13" fill="#222">stdin / scanf</text>
+  <!-- row 1 -->
+  <rect x="10" y="106" width="80" height="28" fill="#f0f4f8" stroke="#333" stroke-width="1"/>
+  <rect x="90" y="106" width="90" height="28" fill="#f0f4f8" stroke="#333" stroke-width="1"/>
+  <rect x="180" y="106" width="120" height="28" fill="#f0f4f8" stroke="#333" stroke-width="1"/>
+  <rect x="300" y="106" width="350" height="28" fill="#f0f4f8" stroke="#333" stroke-width="1"/>
+  <text x="20" y="125" font-size="13" fill="#222">1</text>
+  <text x="100" y="125" font-size="13" fill="#222">stdout</text>
+  <text x="190" y="125" font-size="13" fill="#222">terminal</text>
+  <text x="310" y="125" font-size="13" fill="#222">stdout / printf</text>
+  <!-- row 2 -->
+  <rect x="10" y="134" width="80" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="90" y="134" width="90" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="180" y="134" width="120" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <rect x="300" y="134" width="350" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="20" y="153" font-size="13" fill="#222">2</text>
+  <text x="100" y="153" font-size="13" fill="#222">stderr</text>
+  <text x="190" y="153" font-size="13" fill="#222">terminal</text>
+  <text x="310" y="153" font-size="13" fill="#222">stderr / fprintf</text>
+  <!-- footer -->
+  <text x="20" y="190" font-size="13" fill="#555">The shell can redirect any of these.</text>
+</svg>
 ---
 ## stdout Redirection
 

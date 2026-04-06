@@ -29,7 +29,7 @@ Why it matters:
 
 ## CoT — The Key Insight
 
-```misc
+```diagram
 Problem complexity vs. CoT benefit:
 
 Benefit of CoT
@@ -154,7 +154,7 @@ print(f"Answer: {answer}, Confidence: {confidence:.0%}")
 
 ## Self-Consistency Visualized
 
-```misc
+```diagram
 Problem: "If 3 shirts take 3 hours to dry, how long
           do 9 shirts take?"
 
@@ -388,7 +388,7 @@ Finally, provide a recommendation with justification.
 
 ## When CoT Doesn't Help
 
-```misc
+```diagram
 Tasks where CoT provides little benefit:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

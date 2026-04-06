@@ -155,18 +155,32 @@ Set per-user and global spending caps
 
 ## Mitigation: Request Queuing
 
-```diagram
-┌──────────┐     ┌─────────┐     ┌─────────┐
-│ Incoming  │────►│  Queue   │────►│  LLM    │
-│ Requests  │     │ (Priority│     │ Workers │
-│           │     │  + Limit)│     │ (Pool)  │
-└──────────┘     └─────────┘     └─────────┘
-
-- Priority queuing (paying users first)
-- Maximum queue depth
-- Request timeout in queue
-- Graceful degradation under load
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="230" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect x="10"  y="30" width="155" height="70" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
+  <text x="87"  y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Incoming Requests</text>
+  <text x="87"  y="70" text-anchor="middle" font-size="11" fill="#555555">High volume /</text>
+  <text x="87"  y="87" text-anchor="middle" font-size="11" fill="#555555">complex prompts</text>
+  <line x1="165" y1="65" x2="210" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="212" y="30" width="175" height="70" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="299" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Queue</text>
+  <text x="299" y="70" text-anchor="middle" font-size="11" fill="#333333">Priority + Limit</text>
+  <text x="299" y="87" text-anchor="middle" font-size="11" fill="#333333">Max depth + Timeout</text>
+  <line x1="387" y1="65" x2="432" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="434" y="30" width="175" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="521" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">LLM Workers</text>
+  <text x="521" y="70" text-anchor="middle" font-size="11" fill="#333333">Worker pool</text>
+  <text x="521" y="87" text-anchor="middle" font-size="11" fill="#333333">Rate-limited</text>
+  <rect x="10" y="120" width="600" height="100" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5" rx="4"/>
+  <text x="310" y="140" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Mitigations</text>
+  <text x="30"  y="160" font-size="12" fill="#333333">• Priority queuing — paying / trusted users served first</text>
+  <text x="30"  y="178" font-size="12" fill="#333333">• Maximum queue depth — reject when overloaded</text>
+  <text x="30"  y="196" font-size="12" fill="#333333">• Request timeout in queue  • Graceful degradation under load</text>
+</svg>
 
 ---
 

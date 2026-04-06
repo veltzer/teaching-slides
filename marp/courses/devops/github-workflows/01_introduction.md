@@ -47,28 +47,39 @@ With CI/CD:
 
 ## GitHub Actions Architecture
 
-```diagram
-+-------------------+
-|    GitHub Event    |  (push, PR, schedule, etc.)
-+--------+----------+
-         |
-         v
-+--------+----------+
-|     Workflow       |  (.github/workflows/*.yml)
-+--------+----------+
-         |
-    +----+----+
-    |         |
-    v         v
-+---+---+ +--+----+
-| Job 1 | | Job 2 |  (run in parallel or sequentially)
-+---+---+ +--+----+
-    |         |
-    v         v
-+---+---+ +--+----+
-| Steps | | Steps |  (individual commands or actions)
-+-------+ +-------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="295" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="200" y="10" width="240" height="45" fill="#c5cae9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="320" y="28" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">GitHub Event</text>
+<text x="320" y="43" font-size="10" font-weight="normal" fill="#222" text-anchor="middle">(push, PR, schedule, etc.)</text>
+<line x1="320" y1="55" x2="320" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="200" y="80" width="240" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="320" y="98" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Workflow</text>
+<text x="320" y="113" font-size="10" font-weight="normal" fill="#222" text-anchor="middle">(.github/workflows/*.yml)</text>
+<line x1="320" y1="125" x2="320" y2="145" stroke="#555" stroke-width="1.5"/>
+<line x1="320" y1="145" x2="170" y2="145" stroke="#555" stroke-width="1.5"/>
+<line x1="320" y1="145" x2="470" y2="145" stroke="#555" stroke-width="1.5"/>
+<line x1="170" y1="145" x2="170" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<line x1="470" y1="145" x2="470" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="165" width="140" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="170" y="183" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job 1</text>
+<text x="170" y="198" font-size="9" font-weight="normal" fill="#222" text-anchor="middle">(parallel or sequential)</text>
+<line x1="170" y1="210" x2="170" y2="240" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="100" y="240" width="140" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="170" y="255" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Steps</text>
+<text x="170" y="270" font-size="9" font-weight="normal" fill="#222" text-anchor="middle">(commands/actions)</text>
+<rect x="400" y="165" width="140" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="470" y="183" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job 2</text>
+<text x="470" y="198" font-size="9" font-weight="normal" fill="#222" text-anchor="middle">(parallel or sequential)</text>
+<line x1="470" y1="210" x2="470" y2="240" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="400" y="240" width="140" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="470" y="255" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Steps</text>
+<text x="470" y="270" font-size="9" font-weight="normal" fill="#222" text-anchor="middle">(commands/actions)</text>
+</svg>
 
 ---
 

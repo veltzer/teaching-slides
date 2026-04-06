@@ -22,29 +22,26 @@
 
 ## Autopsy Overview
 
-```diagram
-Autopsy Architecture:
-+----------------------------------+
-|       Autopsy GUI                |
-|  +----------------------------+  |
-|  | Case Management            |  |
-|  | - Create/open cases        |  |
-|  | - Manage evidence sources  |  |
-|  +----------------------------+  |
-|  | Analysis Modules           |  |
-|  | - File analysis            |  |
-|  | - Keyword search           |  |
-|  | - Timeline                 |  |
-|  | - Hash lookup              |  |
-|  | - Web artifacts            |  |
-|  +----------------------------+  |
-|  | Report Generation          |  |
-|  | - HTML, Excel, text        |  |
-|  | - Tagged items             |  |
-|  +----------------------------+  |
-|       The Sleuth Kit (TSK)       |
-+----------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="360" font-family="sans-serif">
+  <!-- Outer box: Autopsy GUI -->
+  <rect x="10" y="10" width="400" height="340" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Autopsy GUI</text>
+  <!-- Case Management -->
+  <rect x="40" y="50" width="340" height="66" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Case Management</text>
+  <text x="210" y="89" text-anchor="middle" font-size="12" fill="#444444">Create/open cases · Manage evidence sources</text>
+  <!-- Analysis Modules -->
+  <rect x="40" y="126" width="340" height="88" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Analysis Modules</text>
+  <text x="210" y="165" text-anchor="middle" font-size="12" fill="#444444">File analysis · Keyword search · Timeline</text>
+  <text x="210" y="183" text-anchor="middle" font-size="12" fill="#444444">Hash lookup · Web artifacts</text>
+  <!-- Report Generation -->
+  <rect x="40" y="224" width="340" height="66" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Report Generation</text>
+  <text x="210" y="263" text-anchor="middle" font-size="12" fill="#444444">HTML, Excel, text · Tagged items</text>
+  <!-- The Sleuth Kit -->
+  <text x="210" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#555555">The Sleuth Kit (TSK)</text>
+</svg>
 
 ---
 
@@ -125,24 +122,60 @@ Creating a New Case:
 
 ## Autopsy File Analysis
 
-```diagram
-File Analysis View:
-+-------------------+--------------------------------+
-| Directory Tree    | File Listing                   |
-| /                 | Name     Size  Modified  Type  |
-| ├── etc/          | passwd   2345  Jan 10   text  |
-| ├── home/         | shadow   1890  Jan 10   text  |
-| │   └── user/     | hostname 15    Jun 01   text  |
-| ├── tmp/          |                                |
-| │   └── .hidden/  | Deleted Files:                 |
-| ├── var/          | toolkit.tar.gz (deleted)       |
-| │   └── log/      | recon.sh (deleted)             |
-| └── ...           |                                |
-+-------------------+--------------------------------+
-| File Content Viewer                                |
-| Hex | Text | Application | Metadata               |
-+----------------------------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="380" font-family="sans-serif">
+  <!-- Left pane: Directory Tree -->
+  <rect x="10" y="10" width="220" height="260" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="120" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Directory Tree</text>
+  <line x1="10" y1="40" x2="230" y2="40" stroke="#333333" stroke-width="1"/>
+  <text x="22" y="60" font-size="12" fill="#444444" font-family="monospace">/</text>
+  <text x="22" y="78" font-size="12" fill="#444444" font-family="monospace">├── etc/</text>
+  <text x="22" y="96" font-size="12" fill="#444444" font-family="monospace">├── home/</text>
+  <text x="22" y="114" font-size="12" fill="#444444" font-family="monospace">│   └── user/</text>
+  <text x="22" y="132" font-size="12" fill="#444444" font-family="monospace">├── tmp/</text>
+  <text x="22" y="150" font-size="12" fill="#444444" font-family="monospace">│   └── .hidden/</text>
+  <text x="22" y="168" font-size="12" fill="#444444" font-family="monospace">├── var/</text>
+  <text x="22" y="186" font-size="12" fill="#444444" font-family="monospace">│   └── log/</text>
+  <text x="22" y="204" font-size="12" fill="#444444" font-family="monospace">└── ...</text>
+  <!-- Right pane: File Listing -->
+  <rect x="240" y="10" width="410" height="260" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="445" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">File Listing</text>
+  <line x1="240" y1="40" x2="650" y2="40" stroke="#333333" stroke-width="1"/>
+  <!-- Column headers -->
+  <text x="255" y="58" font-size="12" font-weight="bold" fill="#222222">Name</text>
+  <text x="370" y="58" font-size="12" font-weight="bold" fill="#222222">Size</text>
+  <text x="425" y="58" font-size="12" font-weight="bold" fill="#222222">Modified</text>
+  <text x="530" y="58" font-size="12" font-weight="bold" fill="#222222">Type</text>
+  <line x1="240" y1="64" x2="650" y2="64" stroke="#aaaaaa" stroke-width="1"/>
+  <!-- File rows -->
+  <text x="255" y="82" font-size="12" fill="#444444">passwd</text>
+  <text x="370" y="82" font-size="12" fill="#444444">2345</text>
+  <text x="425" y="82" font-size="12" fill="#444444">Jan 10</text>
+  <text x="530" y="82" font-size="12" fill="#444444">text</text>
+  <text x="255" y="100" font-size="12" fill="#444444">shadow</text>
+  <text x="370" y="100" font-size="12" fill="#444444">1890</text>
+  <text x="425" y="100" font-size="12" fill="#444444">Jan 10</text>
+  <text x="530" y="100" font-size="12" fill="#444444">text</text>
+  <text x="255" y="118" font-size="12" fill="#444444">hostname</text>
+  <text x="370" y="118" font-size="12" fill="#444444">15</text>
+  <text x="425" y="118" font-size="12" fill="#444444">Jun 01</text>
+  <text x="530" y="118" font-size="12" fill="#444444">text</text>
+  <line x1="240" y1="128" x2="650" y2="128" stroke="#aaaaaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Deleted files -->
+  <text x="255" y="147" font-size="12" font-weight="bold" fill="#cc0000">Deleted Files:</text>
+  <text x="255" y="165" font-size="12" fill="#cc4444">toolkit.tar.gz (deleted)</text>
+  <text x="255" y="183" font-size="12" fill="#cc4444">recon.sh (deleted)</text>
+  <!-- File Content Viewer -->
+  <rect x="10" y="280" width="640" height="84" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
+  <text x="330" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">File Content Viewer</text>
+  <rect x="28" y="310" width="52" height="24" rx="3" fill="#e3f2fd" stroke="#555555" stroke-width="1"/>
+  <text x="54" y="327" text-anchor="middle" font-size="12" fill="#222222">Hex</text>
+  <rect x="90" y="310" width="52" height="24" rx="3" fill="#f0f4f8" stroke="#555555" stroke-width="1"/>
+  <text x="116" y="327" text-anchor="middle" font-size="12" fill="#222222">Text</text>
+  <rect x="152" y="310" width="92" height="24" rx="3" fill="#f0f4f8" stroke="#555555" stroke-width="1"/>
+  <text x="198" y="327" text-anchor="middle" font-size="12" fill="#222222">Application</text>
+  <rect x="254" y="310" width="80" height="24" rx="3" fill="#f0f4f8" stroke="#555555" stroke-width="1"/>
+  <text x="294" y="327" text-anchor="middle" font-size="12" fill="#222222">Metadata</text>
+</svg>
 
 ---
 
@@ -289,29 +322,28 @@ Generated HTML Report:
 
 ## Dradis Framework Overview
 
-```diagram
-Dradis Architecture:
-+----------------------------------+
-|     Dradis Web Interface         |
-|  +----------------------------+  |
-|  | Project Management         |  |
-|  | - Nodes (evidence items)   |  |
-|  | - Notes (findings)         |  |
-|  | - Issues (vulnerabilities) |  |
-|  +----------------------------+  |
-|  | Import Plugins             |  |
-|  | - Nmap, Nessus, Burp       |  |
-|  | - Custom importers         |  |
-|  +----------------------------+  |
-|  | Export Plugins              |  |
-|  | - Word, PDF, HTML, CSV     |  |
-|  +----------------------------+  |
-|  | Collaboration              |  |
-|  | - Multi-user support       |  |
-|  | - Activity log             |  |
-|  +----------------------------+  |
-+----------------------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="430" font-family="sans-serif">
+  <!-- Outer box: Dradis Web Interface -->
+  <rect x="10" y="10" width="400" height="410" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="36" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Dradis Web Interface</text>
+  <!-- Project Management -->
+  <rect x="40" y="50" width="340" height="78" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Project Management</text>
+  <text x="210" y="89" text-anchor="middle" font-size="12" fill="#444444">Nodes (evidence items) · Notes (findings)</text>
+  <text x="210" y="107" text-anchor="middle" font-size="12" fill="#444444">Issues (vulnerabilities)</text>
+  <!-- Import Plugins -->
+  <rect x="40" y="138" width="340" height="64" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="158" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Import Plugins</text>
+  <text x="210" y="177" text-anchor="middle" font-size="12" fill="#444444">Nmap, Nessus, Burp · Custom importers</text>
+  <!-- Export Plugins -->
+  <rect x="40" y="212" width="340" height="64" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Export Plugins</text>
+  <text x="210" y="251" text-anchor="middle" font-size="12" fill="#444444">Word, PDF, HTML, CSV</text>
+  <!-- Collaboration -->
+  <rect x="40" y="286" width="340" height="64" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="210" y="306" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Collaboration</text>
+  <text x="210" y="325" text-anchor="middle" font-size="12" fill="#444444">Multi-user support · Activity log</text>
+</svg>
 
 ---
 
@@ -478,33 +510,36 @@ Steps:
 
 ## Dradis Collaboration Features
 
-```diagram
-Multi-User Investigation:
-+-------------------+     +-------------------+
-| Examiner 1        |     | Examiner 2        |
-| - Disk analysis   |     | - Memory analysis |
-| - File recovery   |     | - Network analysis|
-+--------+----------+     +--------+----------+
-         |                         |
-         +----+---+---+----+------+
-              |   |   |    |
-         +----+---+---+----+------+
-         |    Dradis Server       |
-         |  - Centralized data    |
-         |  - Activity log        |
-         |  - Real-time updates   |
-         |  - Version history     |
-         +------------------------+
-              |
-         +----+----+
-         | Reports |
-         +---------+
-
-Activity Log tracks:
-- Who added/modified notes
-- When changes were made
-- What was changed
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="340" font-family="sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <!-- Examiner 1 -->
+  <rect x="20" y="20" width="220" height="76" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="130" y="42" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Examiner 1</text>
+  <text x="130" y="61" text-anchor="middle" font-size="12" fill="#444444">Disk analysis</text>
+  <text x="130" y="79" text-anchor="middle" font-size="12" fill="#444444">File recovery</text>
+  <!-- Examiner 2 -->
+  <rect x="320" y="20" width="220" height="76" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="430" y="42" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Examiner 2</text>
+  <text x="430" y="61" text-anchor="middle" font-size="12" fill="#444444">Memory analysis</text>
+  <text x="430" y="79" text-anchor="middle" font-size="12" fill="#444444">Network analysis</text>
+  <!-- Arrows to Dradis Server -->
+  <line x1="130" y1="96" x2="230" y2="170" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="430" y1="96" x2="330" y2="170" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Dradis Server -->
+  <rect x="130" y="172" width="300" height="100" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
+  <text x="280" y="194" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Dradis Server</text>
+  <text x="280" y="212" text-anchor="middle" font-size="12" fill="#444444">Centralized data · Activity log</text>
+  <text x="280" y="230" text-anchor="middle" font-size="12" fill="#444444">Real-time updates · Version history</text>
+  <!-- Arrow to Reports -->
+  <line x1="280" y1="272" x2="280" y2="298" stroke="#555555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Reports -->
+  <rect x="200" y="300" width="160" height="36" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="280" y="323" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Reports</text>
+</svg>
 
 ---
 
@@ -760,7 +795,7 @@ Presentation Tips:
 1. Document findings in Dradis format
 1. Write a complete executive summary
 
-```misc
+```template
 Exercise Template:
 
 CASE: EXERCISE-2025-LAB
@@ -868,26 +903,64 @@ curl -X POST http://localhost:9000/api/case \
 
 ## MITRE ATT&CK Mapping in Reports
 
-```diagram
-MITRE ATT&CK Mapping for Findings:
-====================================
-Tactic           | Technique          | Evidence
------------------+--------------------+-----------------
-Initial Access   | T1078: Valid Accts | SSH login (E001)
-Execution        | T1059: Cmd Shell   | bash history (E002)
-Persistence      | T1053: Sched Task  | cron job (E001)
-Persistence      | T1505: Web Shell   | cmd.php (E001)
-Credential Acces | T1003: OS Cred     | /etc/shadow (E001)
-Discovery        | T1082: System Info | recon.sh (E001)
-Collection       | T1005: Local Data  | tar archive (E002)
-Exfiltration     | T1041: C2 Channel  | TCP 4443 (E003)
-
-Including ATT&CK mapping:
-- Provides common language across teams
-- Links to known threat actor TTPs
-- Helps identify gaps in coverage
-- Enables pattern matching with threat intel
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="370" font-family="sans-serif">
+  <text x="330" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#222222">MITRE ATT&amp;CK Mapping</text>
+  <!-- Table header -->
+  <rect x="10" y="30" width="640" height="28" rx="0" fill="#37474f" stroke="#333333" stroke-width="1.5"/>
+  <text x="100" y="49" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Tactic</text>
+  <text x="305" y="49" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Technique</text>
+  <text x="535" y="49" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">Evidence</text>
+  <!-- Row 1 -->
+  <rect x="10" y="58" width="640" height="26" fill="#e3f2fd" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="75" text-anchor="middle" font-size="12" fill="#222222">Initial Access</text>
+  <text x="305" y="75" text-anchor="middle" font-size="12" fill="#222222">T1078: Valid Accts</text>
+  <text x="535" y="75" text-anchor="middle" font-size="12" fill="#222222">SSH login (E001)</text>
+  <!-- Row 2 -->
+  <rect x="10" y="84" width="640" height="26" fill="#f5f5f5" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="101" text-anchor="middle" font-size="12" fill="#222222">Execution</text>
+  <text x="305" y="101" text-anchor="middle" font-size="12" fill="#222222">T1059: Cmd Shell</text>
+  <text x="535" y="101" text-anchor="middle" font-size="12" fill="#222222">bash history (E002)</text>
+  <!-- Row 3 -->
+  <rect x="10" y="110" width="640" height="26" fill="#e3f2fd" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="127" text-anchor="middle" font-size="12" fill="#222222">Persistence</text>
+  <text x="305" y="127" text-anchor="middle" font-size="12" fill="#222222">T1053: Sched Task</text>
+  <text x="535" y="127" text-anchor="middle" font-size="12" fill="#222222">cron job (E001)</text>
+  <!-- Row 4 -->
+  <rect x="10" y="136" width="640" height="26" fill="#f5f5f5" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="153" text-anchor="middle" font-size="12" fill="#222222">Persistence</text>
+  <text x="305" y="153" text-anchor="middle" font-size="12" fill="#222222">T1505: Web Shell</text>
+  <text x="535" y="153" text-anchor="middle" font-size="12" fill="#222222">cmd.php (E001)</text>
+  <!-- Row 5 -->
+  <rect x="10" y="162" width="640" height="26" fill="#e3f2fd" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="179" text-anchor="middle" font-size="12" fill="#222222">Credential Access</text>
+  <text x="305" y="179" text-anchor="middle" font-size="12" fill="#222222">T1003: OS Cred</text>
+  <text x="535" y="179" text-anchor="middle" font-size="12" fill="#222222">/etc/shadow (E001)</text>
+  <!-- Row 6 -->
+  <rect x="10" y="188" width="640" height="26" fill="#f5f5f5" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="205" text-anchor="middle" font-size="12" fill="#222222">Discovery</text>
+  <text x="305" y="205" text-anchor="middle" font-size="12" fill="#222222">T1082: System Info</text>
+  <text x="535" y="205" text-anchor="middle" font-size="12" fill="#222222">recon.sh (E001)</text>
+  <!-- Row 7 -->
+  <rect x="10" y="214" width="640" height="26" fill="#e3f2fd" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="231" text-anchor="middle" font-size="12" fill="#222222">Collection</text>
+  <text x="305" y="231" text-anchor="middle" font-size="12" fill="#222222">T1005: Local Data</text>
+  <text x="535" y="231" text-anchor="middle" font-size="12" fill="#222222">tar archive (E002)</text>
+  <!-- Row 8 -->
+  <rect x="10" y="240" width="640" height="26" fill="#f5f5f5" stroke="#cccccc" stroke-width="0.5"/>
+  <text x="100" y="257" text-anchor="middle" font-size="12" fill="#222222">Exfiltration</text>
+  <text x="305" y="257" text-anchor="middle" font-size="12" fill="#222222">T1041: C2 Channel</text>
+  <text x="535" y="257" text-anchor="middle" font-size="12" fill="#222222">TCP 4443 (E003)</text>
+  <!-- Outer border -->
+  <rect x="10" y="30" width="640" height="236" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <!-- Column dividers -->
+  <line x1="195" y1="30" x2="195" y2="266" stroke="#888888" stroke-width="1"/>
+  <line x1="415" y1="30" x2="415" y2="266" stroke="#888888" stroke-width="1"/>
+  <!-- Note section -->
+  <text x="10" y="292" font-size="13" font-weight="bold" fill="#333333">Including ATT&amp;CK mapping:</text>
+  <text x="22" y="311" font-size="12" fill="#444444">• Provides common language across teams</text>
+  <text x="22" y="329" font-size="12" fill="#444444">• Links to known threat actor TTPs · Helps identify gaps in coverage</text>
+  <text x="22" y="347" font-size="12" fill="#444444">• Enables pattern matching with threat intel</text>
+</svg>
 
 ---
 

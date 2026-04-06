@@ -14,12 +14,31 @@
 
 ## The Core Problem
 
-```diagram
-User Input ──► LLM ──► Raw Output ──► Browser / Database / Shell
-                                       ▲
-                                       │
-                                  No sanitization!
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="160" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect x="10"  y="40" width="110" height="44" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="65"  y="58" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">User Input</text>
+  <text x="65"  y="76" text-anchor="middle" font-size="11" fill="#555555">prompt</text>
+  <line x1="120" y1="62" x2="165" y2="62" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="167" y="40" width="90" height="44" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="212" y="67" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">LLM</text>
+  <line x1="257" y1="62" x2="302" y2="62" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="304" y="28" width="120" height="68" fill="#fff3e0" stroke="#f9a825" stroke-width="2" rx="4"/>
+  <text x="364" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Raw Output</text>
+  <text x="364" y="70" text-anchor="middle" font-size="11" fill="#555555">unsanitized!</text>
+  <text x="364" y="86" text-anchor="middle" font-size="10" fill="#c62828">no filtering</text>
+  <line x1="424" y1="62" x2="469" y2="62" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="471" y="22" width="185" height="80" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
+  <text x="563" y="46" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Downstream Systems</text>
+  <text x="563" y="64" text-anchor="middle" font-size="11" fill="#333333">Browser / Database</text>
+  <text x="563" y="82" text-anchor="middle" font-size="11" fill="#333333">Shell / API</text>
+  <text x="364" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">No sanitization here!</text>
+  <text x="364" y="145" text-anchor="middle" font-size="11" fill="#555555">Leads to XSS, SQL injection, command injection</text>
+</svg>
 
 `LLM` output is **untrusted data** — treat it like user input
 

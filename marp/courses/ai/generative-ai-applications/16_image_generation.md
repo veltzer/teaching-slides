@@ -21,7 +21,7 @@ Today's Roadmap:
 
 ## Image Generation — A Brief History
 
-```misc
+```diagram
 Timeline:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 2014 │ GANs (Goodfellow)
@@ -416,7 +416,7 @@ response = requests.post(
 
 ## Noise Schedulers Compared
 
-```misc
+```diagram
 Different schedulers control how noise is added/removed:
 
 Scheduler      Steps    Quality    Speed
@@ -474,7 +474,7 @@ image = pipe(
 
 ## Prompt Engineering for Image Generation
 
-```misc
+```template
 EFFECTIVE IMAGE PROMPTS:
 
 Structure:
@@ -568,7 +568,7 @@ export_to_video(frames, "animated_landscape.mp4", fps=7)
 
 ## Text-to-3D Generation (Emerging)
 
-```misc
+```diagram
 Emerging approaches to 3D generation:
 
 1. Score Distillation Sampling (DreamFusion)

@@ -22,29 +22,40 @@
 
 ## Tower / AWX Architecture
 
-```diagram
-+--------------------------------------------------+
-|                   Tower / AWX                      |
-|                                                    |
-|  +----------+  +---------+  +------------------+  |
-|  | Web UI   |  | REST API|  | Task Engine      |  |
-|  | (React)  |  | (Django)|  | (Dispatcher)     |  |
-|  +----------+  +---------+  +------------------+  |
-|                                                    |
-|  +----------+  +---------+  +------------------+  |
-|  | PostgreSQL|  | Redis   |  | Receptor        |  |
-|  | (data)    |  | (queue) |  | (mesh network)  |  |
-|  +----------+  +---------+  +------------------+  |
-+--------------------------------------------------+
-         |
-         | SSH
-         |
-+--------v---------+  +-------------------+
-| Managed Nodes    |  | Execution         |
-|                  |  | Environments      |
-+------------------+  | (containers)      |
-                      +-------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="310" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="10" y="10" width="620" height="200" fill="#f5f5f5" stroke="#333" stroke-width="2" rx="4"/>
+<text x="320" y="30" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Tower / AWX</text>
+<rect x="25" y="45" width="180" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="115" y="67" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Web UI</text>
+<text x="115" y="83" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(React)</text>
+<rect x="225" y="45" width="180" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="315" y="67" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">REST API</text>
+<text x="315" y="83" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(Django)</text>
+<rect x="425" y="45" width="180" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="515" y="67" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Task Engine</text>
+<text x="515" y="83" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(Dispatcher)</text>
+<rect x="25" y="120" width="180" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="115" y="142" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">PostgreSQL</text>
+<text x="115" y="158" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(data)</text>
+<rect x="225" y="120" width="180" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="315" y="142" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Redis</text>
+<text x="315" y="158" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(queue)</text>
+<rect x="425" y="120" width="180" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="515" y="142" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Receptor</text>
+<text x="515" y="158" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(mesh network)</text>
+<line x1="320" y1="210" x2="320" y2="248" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="330" y="234" font-size="11" fill="#555">SSH</text>
+<rect x="20" y="250" width="230" height="45" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="135" y="268" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Managed Nodes</text>
+<rect x="270" y="250" width="230" height="45" fill="#ffe0b2" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="385" y="268" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Execution Environments</text>
+<text x="385" y="284" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(containers)</text>
+</svg>
 
 ---
 

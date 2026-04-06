@@ -726,34 +726,31 @@ pr_results.vertices.count()  # Trigger caching
 
 ## Real-World Graph Applications
 
-```diagram
-┌────────────────────────────────────────────┐
-│         Graph Processing Use Cases          │
-├────────────────────────────────────────────┤
-│                                            │
-│  Social Networks                           │
-│  ├── Community detection                   │
-│  ├── Influence analysis                    │
-│  ├── Friend recommendations                │
-│  └── Spam/bot detection                    │
-│                                            │
-│  Financial Services                        │
-│  ├── Fraud ring detection                  │
-│  ├── Money laundering patterns             │
-│  ├── Credit risk networks                  │
-│  └── Transaction monitoring                │
-│                                            │
-│  Supply Chain                              │
-│  ├── Critical path analysis                │
-│  ├── Supplier risk assessment              │
-│  ├── Logistics optimization                │
-│  └── Dependency mapping                    │
-│                                            │
-│  Knowledge Graphs                          │
-│  ├── Entity resolution                     │
-│  ├── Semantic search                       │
-│  ├── Recommendation engines                │
-│  └── Drug discovery                        │
-│                                            │
-└────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" font-family="sans-serif">
+<rect x="5" y="5" width="630" height="350" fill="#fafafa" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="320" y="28" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Graph Processing Use Cases</text>
+<rect x="15" y="40" width="295" height="100" fill="#e3f2fd" stroke="#999" stroke-width="1" rx="4"/>
+<text x="25" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Social Networks</text>
+<text x="33" y="74" font-size="12" fill="#333" text-anchor="start">├── Community detection</text>
+<text x="33" y="92" font-size="12" fill="#333" text-anchor="start">├── Influence analysis</text>
+<text x="33" y="110" font-size="12" fill="#333" text-anchor="start">├── Friend recommendations</text>
+<text x="33" y="128" font-size="12" fill="#333" text-anchor="start">├── Spam/bot detection</text>
+<rect x="325" y="40" width="295" height="100" fill="#fff3e0" stroke="#999" stroke-width="1" rx="4"/>
+<text x="335" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Financial Services</text>
+<text x="343" y="74" font-size="12" fill="#333" text-anchor="start">├── Fraud ring detection</text>
+<text x="343" y="92" font-size="12" fill="#333" text-anchor="start">├── Money laundering patterns</text>
+<text x="343" y="110" font-size="12" fill="#333" text-anchor="start">├── Credit risk networks</text>
+<text x="343" y="128" font-size="12" fill="#333" text-anchor="start">├── Transaction monitoring</text>
+<rect x="15" y="200" width="295" height="100" fill="#e8f5e9" stroke="#999" stroke-width="1" rx="4"/>
+<text x="25" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Supply Chain</text>
+<text x="33" y="234" font-size="12" fill="#333" text-anchor="start">├── Critical path analysis</text>
+<text x="33" y="252" font-size="12" fill="#333" text-anchor="start">├── Supplier risk assessment</text>
+<text x="33" y="270" font-size="12" fill="#333" text-anchor="start">├── Logistics optimization</text>
+<text x="33" y="288" font-size="12" fill="#333" text-anchor="start">├── Dependency mapping</text>
+<rect x="325" y="200" width="295" height="100" fill="#f3e5f5" stroke="#999" stroke-width="1" rx="4"/>
+<text x="335" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Knowledge Graphs</text>
+<text x="343" y="234" font-size="12" fill="#333" text-anchor="start">├── Entity resolution</text>
+<text x="343" y="252" font-size="12" fill="#333" text-anchor="start">├── Semantic search</text>
+<text x="343" y="270" font-size="12" fill="#333" text-anchor="start">├── Recommendation engines</text>
+<text x="343" y="288" font-size="12" fill="#333" text-anchor="start">├── Drug discovery</text>
+</svg>

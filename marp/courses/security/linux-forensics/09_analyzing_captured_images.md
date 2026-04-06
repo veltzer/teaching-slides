@@ -301,23 +301,33 @@ sort -t'|' -k1 combined_timeline.txt > sorted_timeline.txt
 
 ## Timeline Visualization
 
-```diagram
-Jan 15, 2025 - Activity Timeline
-|
-10:00 -- SSH login from 10.0.0.99 (auth.log)
-10:01 -- /tmp/.hidden/ directory created (filesystem)
-10:02 -- /tmp/.hidden/toolkit.tar.gz created
-10:03 -- /tmp/.hidden/toolkit.tar.gz accessed (extracted)
-10:03 -- /tmp/.hidden/recon.sh created
-10:04 -- /tmp/.hidden/recon.sh executed (process accounting)
-10:05 -- /etc/cron.d/update created (persistence)
-10:10 -- /var/www/html/shell.php created (webshell)
-10:15 -- SSH logout (auth.log)
-  ...
-10:30 -- /var/www/html/shell.php accessed (web log)
-10:31 -- /etc/passwd accessed (web log, possible LFI)
-|
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="385" font-family="sans-serif">
+  <text x="340" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#222222">Jan 15, 2025 — Activity Timeline</text>
+  <line x1="110" y1="35" x2="110" y2="370" stroke="#555555" stroke-width="2"/>
+  <circle cx="110" cy="50"  r="6" fill="#1565c0"/>
+  <text x="125" y="54"  font-size="12" fill="#333333"><tspan font-weight="bold">10:00</tspan> — SSH login from 10.0.0.99 (auth.log)</text>
+  <circle cx="110" cy="80"  r="6" fill="#c62828"/>
+  <text x="125" y="84"  font-size="12" fill="#333333"><tspan font-weight="bold">10:01</tspan> — /tmp/.hidden/ directory created (filesystem)</text>
+  <circle cx="110" cy="110" r="6" fill="#c62828"/>
+  <text x="125" y="114" font-size="12" fill="#333333"><tspan font-weight="bold">10:02</tspan> — /tmp/.hidden/toolkit.tar.gz created</text>
+  <circle cx="110" cy="140" r="6" fill="#c62828"/>
+  <text x="125" y="144" font-size="12" fill="#333333"><tspan font-weight="bold">10:03</tspan> — /tmp/.hidden/toolkit.tar.gz accessed (extracted)</text>
+  <circle cx="110" cy="170" r="6" fill="#c62828"/>
+  <text x="125" y="174" font-size="12" fill="#333333"><tspan font-weight="bold">10:03</tspan> — /tmp/.hidden/recon.sh created</text>
+  <circle cx="110" cy="200" r="6" fill="#c62828"/>
+  <text x="125" y="204" font-size="12" fill="#333333"><tspan font-weight="bold">10:04</tspan> — /tmp/.hidden/recon.sh executed (process accounting)</text>
+  <circle cx="110" cy="230" r="6" fill="#e65100"/>
+  <text x="125" y="234" font-size="12" fill="#333333"><tspan font-weight="bold">10:05</tspan> — /etc/cron.d/update created (persistence)</text>
+  <circle cx="110" cy="260" r="6" fill="#e65100"/>
+  <text x="125" y="264" font-size="12" fill="#333333"><tspan font-weight="bold">10:10</tspan> — /var/www/html/shell.php created (webshell)</text>
+  <circle cx="110" cy="290" r="6" fill="#1565c0"/>
+  <text x="125" y="294" font-size="12" fill="#333333"><tspan font-weight="bold">10:15</tspan> — SSH logout (auth.log)</text>
+  <text x="125" y="320" font-size="12" fill="#999999" font-style="italic">    ...</text>
+  <circle cx="110" cy="338" r="6" fill="#e65100"/>
+  <text x="125" y="342" font-size="12" fill="#333333"><tspan font-weight="bold">10:30</tspan> — /var/www/html/shell.php accessed (web log)</text>
+  <circle cx="110" cy="365" r="6" fill="#e65100"/>
+  <text x="125" y="369" font-size="12" fill="#333333"><tspan font-weight="bold">10:31</tspan> — /etc/passwd accessed (web log, possible LFI)</text>
+</svg>
 
 ---
 

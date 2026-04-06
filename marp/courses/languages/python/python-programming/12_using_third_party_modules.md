@@ -91,11 +91,21 @@ pytest>=7.0
 - Reproducible environments across machines
 - Isolation prevents conflicts
 
-```diagram
-Project A: requests==2.28
-Project B: requests==2.31
-System: ???
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="170" font-family="sans-serif">
+  <text x="10" y="22" font-size="14" font-weight="bold" fill="#c62828">Dependency Conflict Problem:</text>
+  <rect x="10" y="35" width="200" height="40" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
+  <text x="110" y="52" font-size="13" fill="#222" text-anchor="middle">Project A</text>
+  <text x="110" y="68" font-size="12" fill="#c62828" text-anchor="middle">requests==2.28</text>
+  <rect x="230" y="35" width="200" height="40" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
+  <text x="330" y="52" font-size="13" fill="#222" text-anchor="middle">Project B</text>
+  <text x="330" y="68" font-size="12" fill="#c62828" text-anchor="middle">requests==2.31</text>
+  <!-- System Python -->
+  <rect x="120" y="100" width="200" height="40" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="4" stroke-dasharray="4,3"/>
+  <text x="220" y="116" font-size="13" fill="#c62828" text-anchor="middle">System Python</text>
+  <text x="220" y="133" font-size="12" fill="#c62828" text-anchor="middle">??? conflict!</text>
+  <!-- Solution hint -->
+  <text x="10" y="162" font-size="12" fill="#2e7d32">💡 Solution: Use virtual environments (venv) to isolate dependencies per project</text>
+</svg>
 ---
 ## Creating Virtual Environments
 

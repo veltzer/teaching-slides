@@ -127,7 +127,7 @@ $ openssl s_client -connect example.com:443 -tls1_3
 
 The TLS 1.2 handshake requires 2 round trips before data can flow:
 
-```misc
+```diagram
 Client                                          Server
   │                                                │
   │──── ClientHello ─────────────────────────────→│
@@ -160,7 +160,7 @@ Total: 2 round trips (2-RTT) before first data byte
 
 TLS 1.3 reduces the handshake to just 1 round trip:
 
-```misc
+```diagram
 Client                                          Server
   │                                                │
   │──── ClientHello ─────────────────────────────→│

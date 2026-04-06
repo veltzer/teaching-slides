@@ -112,16 +112,26 @@
 - Each tool result becomes context for subsequent reasoning
 - Parallel tool calls are possible when inputs are independent
 
-```misc
-User: "Refactor the auth module and run the tests"
-  -> tool_use: read_file("src/auth.ts")
-  <- tool_result: <file contents>
-  -> tool_use: edit_file("src/auth.ts", ...)
-  <- tool_result: success
-  -> tool_use: shell("npm test")
-  <- tool_result: All 42 tests passed
-Assistant: "Done. Refactored auth and all tests pass."
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="280" font-family="sans-serif">
+  <rect x="10" y="10" width="660" height="260" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="340" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Tool Use Conversation Flow</text>
+  <rect x="25" y="42" width="625" height="28" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
+  <text x="40" y="61" font-size="12" fill="#222222"><tspan font-weight="bold">User:</tspan> "Refactor the auth module and run the tests"</text>
+  <rect x="40" y="76" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="93" font-size="11" fill="#2e7d32">&#8594; tool_use: read_file("src/auth.ts")</text>
+  <rect x="40" y="104" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="121" font-size="11" fill="#555555">&#8592; tool_result: &lt;file contents returned&gt;</text>
+  <rect x="40" y="132" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="149" font-size="11" fill="#2e7d32">&#8594; tool_use: edit_file("src/auth.ts", ...)</text>
+  <rect x="40" y="160" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="177" font-size="11" fill="#555555">&#8592; tool_result: success</text>
+  <rect x="40" y="188" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="205" font-size="11" fill="#2e7d32">&#8594; tool_use: shell("npm test")</text>
+  <rect x="40" y="216" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="233" font-size="11" fill="#555555">&#8592; tool_result: All 42 tests passed</text>
+  <rect x="25" y="244" width="625" height="18" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
+  <text x="40" y="257" font-size="11" fill="#222222"><tspan font-weight="bold">Assistant:</tspan> "Done. Refactored auth module — all tests pass."</text>
+</svg>
 
 ---
 
@@ -172,13 +182,34 @@ Assistant: "Done. Refactored auth and all tests pass."
 - The model acts as the orchestrator between pipeline stages
 - Common patterns: read-transform-write, search-analyze-act
 
-```misc
-Pipeline: "Find and fix all deprecated API calls"
-  1. grep("deprecatedMethod")  ->  list of files
-  2. read_file(file)           ->  source code
-  3. edit_file(file, old, new) ->  patched file
-  4. shell("npm test")         ->  validation
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="160" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
+    </marker>
+  </defs>
+  <text x="310" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Pipeline: "Find and fix all deprecated API calls"</text>
+  <rect x="10"  y="35" width="140" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="80"  y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#222222">Step 1</text>
+  <text x="80"  y="73" text-anchor="middle" font-size="11" fill="#333333">grep("deprecated")</text>
+  <text x="80"  y="89" text-anchor="middle" font-size="10" fill="#555555">&#8594; list of files</text>
+  <line x1="150" y1="65" x2="175" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="177" y="35" width="140" height="60" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="247" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#222222">Step 2</text>
+  <text x="247" y="73" text-anchor="middle" font-size="11" fill="#333333">read_file(file)</text>
+  <text x="247" y="89" text-anchor="middle" font-size="10" fill="#555555">&#8594; source code</text>
+  <line x1="317" y1="65" x2="342" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="344" y="35" width="140" height="60" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="414" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#222222">Step 3</text>
+  <text x="414" y="73" text-anchor="middle" font-size="11" fill="#333333">edit_file(file, ...)</text>
+  <text x="414" y="89" text-anchor="middle" font-size="10" fill="#555555">&#8594; patched file</text>
+  <line x1="484" y1="65" x2="509" y2="65" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="511" y="35" width="100" height="60" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="561" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#222222">Step 4</text>
+  <text x="561" y="73" text-anchor="middle" font-size="11" fill="#333333">shell("npm test")</text>
+  <text x="561" y="89" text-anchor="middle" font-size="10" fill="#555555">&#8594; validation</text>
+  <text x="310" y="130" text-anchor="middle" font-size="12" fill="#555555">Each tool result informs the next call — autonomous multi-step agent loop</text>
+</svg>
 
 ## Orchestration Strategies
 - **Sequential**: each step depends on the previous result

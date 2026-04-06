@@ -464,7 +464,7 @@ docker service inspect web \
 # Uses IPVS (Linux Virtual Server) in the kernel
 ```
 
-```misc
+```diagram
 Client → VIP (10.20.0.5) → IPVS → Task 1 (10.20.0.6)
                                   → Task 2 (10.20.0.7)
                                   → Task 3 (10.20.0.8)

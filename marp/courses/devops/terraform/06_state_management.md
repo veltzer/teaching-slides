@@ -49,19 +49,32 @@
 
 ## State File Lifecycle
 
-```diagram
-terraform init
-    |
-    v
-terraform plan  <--+
-    |               |
-    v               |
-terraform apply ----+
-    |
-    v
-terraform.tfstate (updated)
-terraform.tfstate.backup (previous version)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <rect x="90" y="20" width="340" height="46" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="46" text-anchor="middle" font-size="13" fill="#222">terraform init</text>
+  <line x1="260" y1="66" x2="260" y2="84" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="90" y="84" width="340" height="46" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="110" text-anchor="middle" font-size="13" fill="#222">terraform plan</text>
+  <line x1="260" y1="130" x2="260" y2="148" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="90" y="148" width="340" height="46" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="174" text-anchor="middle" font-size="13" fill="#222">terraform apply</text>
+  <line x1="260" y1="194" x2="260" y2="212" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="90" y="212" width="340" height="46" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="238" text-anchor="middle" font-size="13" fill="#222">terraform.tfstate (updated)</text>
+  <line x1="260" y1="258" x2="260" y2="276" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="90" y="276" width="340" height="50" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="260" y="298" text-anchor="middle" font-size="13" fill="#222">terraform.tfstate.backup</text>
+  <text x="260" y="316" text-anchor="middle" font-size="11" fill="#555">(previous version)</text>
+  <text x="480" y="170" text-anchor="middle" font-size="20" fill="#555">↩</text>
+  <text x="470" y="188" text-anchor="middle" font-size="10" fill="#555">loop</text>
+</svg>
 
 ---
 
@@ -133,16 +146,40 @@ resource "aws_instance" "web" {
 
 ## Remote State Overview
 
-```diagram
-Local State:                    Remote State:
-+----------+                    +----------+
-| Laptop A |---> local file     | Laptop A |--+
-+----------+                    +----------+  |
-                                              +--> S3 Bucket
-+----------+                    +----------+  |    + DynamoDB
-| Laptop B |---> local file     | Laptop B |--+    (locking)
-+----------+   (conflict!)      +----------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="250" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <rect x="10" y="10" width="280" height="225" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="150" y="30" text-anchor="middle" font-size="14" fill="#b71c1c" font-weight="bold">Local State</text>
+  <rect x="40" y="55" width="110" height="50" rx="4" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="95" y="84" text-anchor="middle" font-size="12" fill="#222">Laptop A</text>
+  <line x1="150" y1="80" x2="200" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="245" y="75" text-anchor="middle" font-size="11" fill="#c62828">local file</text>
+  <rect x="40" y="140" width="110" height="50" rx="4" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="95" y="169" text-anchor="middle" font-size="12" fill="#222">Laptop B</text>
+  <line x1="150" y1="165" x2="200" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="245" y="160" text-anchor="middle" font-size="11" fill="#c62828">local file</text>
+  <text x="215" y="184" text-anchor="middle" font-size="11" fill="#c62828">(conflict!)</text>
+  <rect x="340" y="10" width="300" height="225" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="490" y="30" text-anchor="middle" font-size="14" fill="#1b5e20" font-weight="bold">Remote State</text>
+  <rect x="360" y="55" width="110" height="50" rx="4" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="415" y="84" text-anchor="middle" font-size="12" fill="#222">Laptop A</text>
+  <line x1="470" y1="80" x2="510" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="360" y="140" width="110" height="50" rx="4" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="415" y="169" text-anchor="middle" font-size="12" fill="#222">Laptop B</text>
+  <line x1="470" y1="165" x2="510" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="510" y="75" width="110" height="50" rx="4" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
+  <text x="565" y="96" text-anchor="middle" font-size="12" fill="#222">S3 Bucket</text>
+  <text x="565" y="113" text-anchor="middle" font-size="11" fill="#555">+ DynamoDB</text>
+  <line x1="470" y1="80" x2="510" y2="80" stroke="#555" stroke-width="1.5"/>
+  <line x1="470" y1="165" x2="510" y2="165" stroke="#555" stroke-width="1.5"/>
+  <line x1="510" y1="80" x2="510" y2="165" stroke="#555" stroke-width="1.5"/>
+</svg>
 
 ---
 
@@ -292,16 +329,33 @@ terraform {
 
 ## State Locking
 
-```diagram
-Without Locking:
-User A: terraform apply  --+
-                            +--> CONFLICT!
-User B: terraform apply  --+
-
-With Locking:
-User A: terraform apply  --> Acquires lock --> Apply --> Release
-User B: terraform apply  --> Waits for lock --> Acquires --> Apply
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="240" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <rect x="10" y="10" width="280" height="215" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="150" y="30" text-anchor="middle" font-size="14" fill="#b71c1c" font-weight="bold">Without Locking</text>
+  <rect x="30" y="50" width="140" height="40" rx="4" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="100" y="74" text-anchor="middle" font-size="12" fill="#222">User A: tf apply</text>
+  <rect x="30" y="110" width="140" height="40" rx="4" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="100" y="134" text-anchor="middle" font-size="12" fill="#222">User B: tf apply</text>
+  <line x1="170" y1="70" x2="220" y2="100" stroke="#555" stroke-width="1.5"/>
+  <line x1="170" y1="130" x2="220" y2="100" stroke="#555" stroke-width="1.5"/>
+  <rect x="195" y="82" width="80" height="36" rx="4" fill="#ef9a9a" stroke="#c62828" stroke-width="1.5"/>
+  <text x="235" y="104" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">CONFLICT!</text>
+  <rect x="330" y="10" width="300" height="215" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="480" y="30" text-anchor="middle" font-size="14" fill="#1b5e20" font-weight="bold">With Locking</text>
+  <rect x="345" y="55" width="270" height="65" rx="4" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="480" y="79" text-anchor="middle" font-size="12" fill="#222" font-weight="bold">User A: tf apply</text>
+  <text x="480" y="101" text-anchor="middle" font-size="11" fill="#2e7d32">→ Acquires lock → Apply → Release</text>
+  <rect x="345" y="140" width="270" height="65" rx="4" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="480" y="164" text-anchor="middle" font-size="12" fill="#222" font-weight="bold">User B: tf apply</text>
+  <text x="480" y="186" text-anchor="middle" font-size="11" fill="#2e7d32">→ Waits → Acquires → Apply</text>
+</svg>
 
 ---
 
@@ -328,20 +382,35 @@ terraform force-unlock a1b2c3d4-e5f6-7890
 
 ## State File Organization Patterns
 
-```misc
-Pattern 1: Single state file
-  all-resources/ -> terraform.tfstate
-
-Pattern 2: Per-environment states
-  dev/    -> dev.tfstate
-  staging/-> staging.tfstate
-  prod/   -> prod.tfstate
-
-Pattern 3: Per-component states
-  network/  -> network.tfstate
-  compute/  -> compute.tfstate
-  database/ -> database.tfstate
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="300" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <rect x="10" y="10" width="600" height="67" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="30" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Pattern 1: Single State File</text>
+  <text x="120" y="46" text-anchor="end" font-size="12" fill="#333">all-resources/</text>
+  <text x="130" y="46" text-anchor="start" font-size="12" fill="#555">→ terraform.tfstate</text>
+  <rect x="10" y="87" width="600" height="111" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="107" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Pattern 2: Per-Environment States</text>
+  <text x="120" y="123" text-anchor="end" font-size="12" fill="#333">dev/</text>
+  <text x="130" y="123" text-anchor="start" font-size="12" fill="#555">→ dev.tfstate</text>
+  <text x="120" y="145" text-anchor="end" font-size="12" fill="#333">staging/</text>
+  <text x="130" y="145" text-anchor="start" font-size="12" fill="#555">→ staging.tfstate</text>
+  <text x="120" y="167" text-anchor="end" font-size="12" fill="#333">prod/</text>
+  <text x="130" y="167" text-anchor="start" font-size="12" fill="#555">→ prod.tfstate</text>
+  <rect x="10" y="208" width="600" height="111" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="228" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Pattern 3: Per-Component States</text>
+  <text x="120" y="244" text-anchor="end" font-size="12" fill="#333">network/</text>
+  <text x="130" y="244" text-anchor="start" font-size="12" fill="#555">→ network.tfstate</text>
+  <text x="120" y="266" text-anchor="end" font-size="12" fill="#333">compute/</text>
+  <text x="130" y="266" text-anchor="start" font-size="12" fill="#555">→ compute.tfstate</text>
+  <text x="120" y="288" text-anchor="end" font-size="12" fill="#333">database/</text>
+  <text x="130" y="288" text-anchor="start" font-size="12" fill="#555">→ database.tfstate</text>
+</svg>
 
 ---
 

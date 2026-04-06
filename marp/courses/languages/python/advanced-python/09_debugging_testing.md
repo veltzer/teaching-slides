@@ -783,18 +783,20 @@ repos:
 - Ratio should favor unit tests (fast, focused)
 - Balance coverage and test time
 
-```diagram
-        /\
-       /  \
-      /    \
-     / E2E  \
-    /--------\
-   /          \
-  / Integration \
- /----------------\
-/      Unit        \
----------------------
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" font-family="sans-serif">
+  <!-- Unit (base) -->
+  <polygon points="200,20 380,220 20,220" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <!-- Integration (middle) -->
+  <polygon points="200,20 340,160 60,160" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <!-- E2E (top) -->
+  <polygon points="200,20 270,100 130,100" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="200" y="72" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">E2E</text>
+  <text x="200" y="135" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Integration</text>
+  <text x="200" y="195" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Unit</text>
+  <!-- Legend -->
+  <text x="10" y="235" font-size="11" fill="#666">Fewer, slower, more realistic ↑     ↓ More, faster, isolated</text>
+</svg>
 
 ---
 
