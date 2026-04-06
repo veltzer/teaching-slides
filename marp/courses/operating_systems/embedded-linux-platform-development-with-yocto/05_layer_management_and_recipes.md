@@ -30,7 +30,7 @@
 ## Layer Anatomy
 
 Standard layer structure:
-```txt
+```tree
 meta-custom/
 ├── COPYING.MIT                    # License file
 ├── README                         # Layer documentation
@@ -225,7 +225,7 @@ Standard naming:
 
 Examples:
 
-```txt
+```tree
 recipes-apps/myapp/
 ├── myapp_1.0.bb
 ├── myapp_1.1.bb
@@ -321,7 +321,7 @@ SRC_URI = "file://myapp.c \
 
 ## File Organization
 
-```txt
+```tree
 recipes-apps/myapp/
 ├── myapp_1.0.bb
 └── myapp/

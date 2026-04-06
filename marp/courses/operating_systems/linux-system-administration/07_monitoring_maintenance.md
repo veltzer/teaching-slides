@@ -22,7 +22,7 @@ htop
 ---
 ## Understanding top Output
 
-```txt
+```console
 top - 14:30:00 up 42 days, load average: 1.50, 1.30, 1.20
 Tasks: 200 total,   2 running, 198 sleeping
 %Cpu(s): 15.0 us,  3.0 sy,  0.0 ni, 80.0 id, 2.0 wa
@@ -285,7 +285,7 @@ systemd-analyze plot > boot.svg
 # Per-app configs: /etc/logrotate.d/
 ```
 
-```txt
+```config
 # /etc/logrotate.d/myapp
 /var/log/myapp/*.log {
     daily
@@ -334,7 +334,7 @@ logrotate -f /etc/logrotate.d/myapp
 # Additional configs: /etc/rsyslog.d/
 ```
 
-```txt
+```config
 # /etc/rsyslog.d/50-custom.conf
 # Log all auth messages to separate file
 auth,authpriv.*   /var/log/auth.log
@@ -350,7 +350,7 @@ auth,authpriv.*   /var/log/auth.log
 ---
 ## Centralized Logging with rsyslog
 
-```txt
+```config
 # rsyslog server config (/etc/rsyslog.d/server.conf)
 
 # Listen on TCP 514
@@ -482,7 +482,7 @@ crontab -e
 crontab -l
 ```
 
-```txt
+```cron
 # Crontab format:
 # min hour dom month dow command
 # ┌───── minute (0-59)
@@ -609,7 +609,7 @@ cat /var/log/apt/history.log
 ---
 ## Unattended Upgrades Configuration
 
-```txt
+```config
 # /etc/apt/apt.conf.d/50unattended-upgrades
 Unattended-Upgrade::Allowed-Origins {
     "${distro_id}:${distro_codename}-security";

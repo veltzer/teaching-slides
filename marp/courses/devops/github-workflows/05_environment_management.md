@@ -4,7 +4,7 @@
 
 ## Environment Variables Overview
 
-```txt
+```diagram
 +----------------------------+
 |  Organization Secrets      |  (shared across repos)
 +----------------------------+
@@ -93,7 +93,7 @@ steps:
 - Never printed in logs (masked with `***`)
 - Setting secrets:
 
-```txt
+```text
 Settings -> Secrets and variables -> Actions -> New repository secret
 ```
 

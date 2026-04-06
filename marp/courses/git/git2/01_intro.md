@@ -226,13 +226,13 @@ According to Stack Overflow Developer Survey:
 ## Snapshots, Not Differences
 
 **SVN/CVS** - Stores differences (deltas)
-```txt
+```diagram
 File A: version 1 → +5 lines → -2 lines → +1 line
 File B: version 1 → +10 lines → -5 lines → +3 lines
 ```
 
 **Git** - Stores snapshots
-```txt
+```diagram
 Commit 1: [FileA-v1] [FileB-v1] [FileC-v1]
 Commit 2: [FileA-v2] [FileB-v1] [FileC-v2]
 Commit 3: [FileA-v2] [FileB-v2] [FileC-v3]
@@ -319,7 +319,7 @@ git commit -m "Feature A implementation"
 1. **Impossible to change anything without Git knowing**
 
 Example SHA-1:
-```txt
+```text
 24b9da6552252987aa493b52f8696cd6d3b00373
 ```
 
@@ -536,7 +536,7 @@ After committing:
 ## Git Commit Messages
 
 ## Good ✅
-```txt
+```template
 Add user authentication module
 
 - Implement login/logout functionality
@@ -545,13 +545,13 @@ Add user authentication module
 ```
 
 ## Bad ❌
-```txt
+```template
 fixed stuff
 ```
-```txt
+```template
 asdfasdf
 ```
-```txt
+```template
 WIP
 ```
 

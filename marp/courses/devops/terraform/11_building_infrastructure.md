@@ -2,7 +2,7 @@
 
 ## Configuration Management vs Provisioning
 
-```txt
+```text
 Configuration Management:        Provisioning:
   - Install software               - Create infrastructure
   - Configure services              - Set up networks, VMs, storage
@@ -16,7 +16,7 @@ Configuration Management:        Provisioning:
 
 ## Where Each Tool Fits
 
-```txt
+```diagram
 Infrastructure Lifecycle:
 
   Provision          Configure         Deploy
@@ -34,7 +34,7 @@ Infrastructure Lifecycle:
 
 ## Terraform's Role in the Stack
 
-```txt
+```diagram
 +--------------------------------------------------+
 |  Application Code (deployed by CI/CD)            |
 +--------------------------------------------------+
@@ -74,7 +74,7 @@ Infrastructure Lifecycle:
 - Break the plan/apply workflow
 - Better alternatives exist
 
-```txt
+```text
 Better alternatives:
   - User data scripts (cloud-init)
   - Pre-built images (Packer)
@@ -323,7 +323,7 @@ connection {
 }
 ```
 
-```txt
+```diagram
 Laptop --> Bastion (public IP) --> Target (private IP)
 ```
 

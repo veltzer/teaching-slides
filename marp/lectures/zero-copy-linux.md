@@ -636,7 +636,7 @@ process_vm_readv(target_pid, &local_iov, 1, &remote_iov, 1, 0);
 
 ## Common Pattern: Page Reference Passing
 
-```txt
+```text
 sendfile(sock_fd, file_fd, ...):
 
 1. DMA reads file data into page cache pages

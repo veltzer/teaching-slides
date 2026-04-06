@@ -640,7 +640,7 @@ steps:
 - Provides audit trail, rollback capability, and reproducibility
 - Tools: `Terraform`, `Ansible`, `Helm` values, `Kustomize` overlays
 
-```txt
+```tree
 repo/
   config/
     base.yaml
@@ -709,7 +709,7 @@ consul kv get myapp/db/host
 - Use a secrets manager for all sensitive values
 - Application reads from multiple sources with a priority order
 
-```txt
+```text
 Priority (highest to lowest):
 1. Secrets Manager (DB passwords, API keys)
 2. Config Service (feature flags, rate limits)

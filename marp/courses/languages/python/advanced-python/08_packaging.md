@@ -164,7 +164,7 @@ setup(
 - Package vs. module organization
 - Namespace packages
 
-```txt
+```tree
 mypackage/
 ├── LICENSE
 ├── README.md
@@ -229,7 +229,7 @@ where = src
 - Include non-Python files in your package
 - Documentation, license, data files, etc.
 
-```txt
+```config
 # MANIFEST.in example
 include LICENSE
 include README.md
@@ -426,7 +426,7 @@ python -m build --wheel
 - Metadata format
 - Installation process
 
-```txt
+```diagram
 mypackage-0.1.0-cp39-cp39-linux_x86_64.whl
 │       │     │    │    │         │
 │       │     │    │    │         └── Platform
@@ -1164,7 +1164,7 @@ setup(
 ## Practical Example: Complete Package
 
 ## Project Structure
-```txt
+```tree
 mypackage/
 ├── LICENSE
 ├── README.md

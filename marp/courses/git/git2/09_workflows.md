@@ -771,7 +771,7 @@ release/*: requires release team approval
 
 **Code ownership:**
 
-```txt
+```config
 # CODEOWNERS file
 /frontend/          @frontend-team
 /backend/           @backend-team

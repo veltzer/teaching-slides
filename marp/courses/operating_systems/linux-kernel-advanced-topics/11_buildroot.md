@@ -90,7 +90,7 @@ make
 
 ## Directory Structure
 
-```txt
+```tree
 buildroot/
 ├── board/           # Board-specific files
 ├── configs/         # Defconfig files
@@ -279,7 +279,7 @@ BR2_INIT_SYSTEMD=y
 
 ### Package Directory
 
-```txt
+```tree
 package/myapp/
 ├── Config.in
 ├── myapp.mk
@@ -621,7 +621,7 @@ make BR2_EXTERNAL=/path/to/mycompany menuconfig
 
 ## external.desc
 
-```txt
+```text
 name: MYCOMPANY
 desc: My Company Buildroot customization
 ```

@@ -397,7 +397,7 @@ systemctl list-timers --all
 ---
 ## systemd Timer: Calendar Expressions
 
-```txt
+```cron
 OnCalendar=hourly
 OnCalendar=daily
 OnCalendar=weekly

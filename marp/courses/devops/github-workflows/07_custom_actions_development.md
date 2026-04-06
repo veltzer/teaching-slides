@@ -10,7 +10,7 @@
 | Docker      | Any language | Container        | Specific OS/tool needs     |
 | Composite   | YAML         | Runner directly  | Combining existing actions |
 
-```txt
+```tree
 Custom Action
   ├── action.yml        (required metadata)
   ├── index.js          (JavaScript action)
@@ -175,7 +175,7 @@ runs:
 
 ## Docker vs JavaScript Actions
 
-```txt
+```text
 JavaScript Action:
   + Fast startup (no container build)
   + Cross-platform (Linux, Windows, macOS)
@@ -266,7 +266,7 @@ git push origin v1 --force
 
 ## Action Project Structure
 
-```txt
+```tree
 my-custom-action/
   ├── action.yml          # Action metadata
   ├── src/

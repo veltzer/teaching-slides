@@ -57,7 +57,7 @@ print(f"{'Apple':<15} {'$1.50':>10}")
 print(f"{'Banana':<15} {'$0.75':>10}")
 ```
 
-```txt
+```output
 Name:                Alice
 Balance: $  1,234,567.89
 Item                 Price
@@ -82,7 +82,7 @@ for name, age, role in data:
     print(f"{name:<12} {age:>5} {role:<12}")
 ```
 
-```txt
+```output
 Name           Age Role
 ------------------------------
 Alice           30 Engineer
@@ -626,7 +626,7 @@ for t in threads:
 - Threads are useful for I/O-bound tasks
 - For CPU-bound tasks, use `multiprocessing`
 
-```txt
+```diagram
 CPU-bound task  -> multiprocessing
 I/O-bound task  -> threading or asyncio
 ```
@@ -689,7 +689,7 @@ with ThreadPoolExecutor() as executor:
         print(result)
 ```
 
-```txt
+```output
 Task 1 done
 Task 2 done
 Task 3 done

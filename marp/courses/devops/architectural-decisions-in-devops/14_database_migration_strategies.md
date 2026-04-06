@@ -611,7 +611,7 @@ seed_data:
 - Use timestamps instead of sequential numbers to reduce conflicts
 - Example: `20250301120000_create_orders.sql`
 
-```txt
+```tree
 migrations/
   20250301120000_create_users.sql
   20250305143000_add_username.sql

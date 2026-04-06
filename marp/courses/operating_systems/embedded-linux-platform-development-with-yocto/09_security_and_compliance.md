@@ -485,7 +485,7 @@ bitbake -k -c cve_check core-image-minimal
 
 CVE report location:
 
-```txt
+```tree
 tmp/deploy/cve/
 ├── core-image-minimal.cve
 ├── busybox.cve

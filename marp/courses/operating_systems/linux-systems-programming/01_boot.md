@@ -438,13 +438,13 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## Secure Boot Process Flow
 
-```txt
+```text
 1. Power On → UEFI Firmware starts
 2. Verify PK is enrolled
 3. Load bootloader from ESP
 4. Check signature against db
 5. Check not in dbx (revoked)
-6. If valid → Execute bootloader
+6. If valid �� Execute bootloader
 7. Bootloader verifies kernel
 8. Kernel verifies modules
 9. Continue boot process
@@ -511,7 +511,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## PCR Usage (TPM 2.0 - 24 registers):
 
-```txt
+```text
 PCR 0:  BIOS/UEFI firmware
 PCR 1:  BIOS/UEFI configuration
 PCR 2:  Option ROMs
@@ -640,7 +640,7 @@ hexdump -C module.ko | tail
 - Loads GRUB
 - Manages MOK (Machine Owner Keys)
 
-```txt
+```diagram
 UEFI → Shim (signed) → GRUB (signed) → Kernel (signed)
 ```
 

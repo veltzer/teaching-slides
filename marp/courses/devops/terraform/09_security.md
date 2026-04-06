@@ -12,7 +12,7 @@
 
 ## Security Layers
 
-```txt
+```diagram
 +---------------------------------------------+
 |              Access Control                  |
 |  (Who can run terraform apply?)              |
@@ -63,7 +63,7 @@ resource "aws_db_instance" "main" {
 }
 ```
 
-```txt
+```output
 # Plan output hides the value:
 + password = (sensitive value)
 ```
@@ -196,7 +196,7 @@ provider "aws" {
 
 ## Vault Dynamic Secrets Flow
 
-```txt
+```diagram
 +----------+     +-----------+     +-------+
 | Terraform|---->|   Vault   |---->|  AWS  |
 |          |     |           |     |       |
@@ -282,7 +282,7 @@ terraform {
 
 ## RBAC with Terraform Cloud
 
-```txt
+```tree
 Terraform Cloud Organization
 ├── Owners (full access)
 ├── Teams
@@ -358,7 +358,7 @@ opa eval -i plan.json -d policy/ "data.terraform.deny"
 
 ## Securing the CI/CD Pipeline
 
-```txt
+```diagram
 +----------+     +-----------+     +----------+
 | Git Push |---->| CI/CD     |---->| Terraform|
 |          |     | Pipeline  |     | Apply    |
@@ -443,7 +443,7 @@ brew install tfsec
 tfsec .
 ```
 
-```txt
+```output
 Result: AWS Security Group allows ingress from 0.0.0.0/0
 
   main.tf line 15:
@@ -468,7 +468,7 @@ pip install checkov
 checkov -d .
 ```
 
-```txt
+```output
 Passed checks: 12, Failed checks: 3, Skipped checks: 0
 
 Check: CKV_AWS_79: "Ensure Instance Metadata Service Version 1

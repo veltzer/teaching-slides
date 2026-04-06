@@ -46,7 +46,7 @@ Configure your editor to show tabs!
 
 ## File Structure
 
-```txt
+```tree
 project/
 ├── Makefile
 ├── main.c
@@ -266,7 +266,7 @@ hello:
 
 Output:
 
-```txt
+```output
 Building hello...
 gcc -o hello hello.c
 Done!

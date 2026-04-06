@@ -178,7 +178,7 @@ print(db_logger.parent.name)  # 'myapp'
 - Allows for component-specific settings
 - Root logger is at the top of the hierarchy
 
-```txt
+```tree
 Logging Hierarchy Example:
 
 root
@@ -697,7 +697,7 @@ def risky_operation():
 - Consider log volume and performance
 - Plan for log collection and analysis
 
-```txt
+```tree
 Example Logger Hierarchy for Large System:
 
 myapp                        # Application-wide settings
@@ -1067,7 +1067,7 @@ logger.addHandler(time_handler)
 - Search and analyze logs efficiently
 - Monitor and alert on log patterns
 
-```txt
+```diagram
 Common Log Collection Architectures:
 
 1. Direct File Collection

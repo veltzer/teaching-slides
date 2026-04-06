@@ -61,7 +61,7 @@ gcc -std=c23 program.c -o program
 
 ## The C Compilation Pipeline
 
-```txt
+```diagram
 ┌──────────┐    ┌──────────────┐    ┌──────────┐    ┌────────┐    ┌────────────┐
 │ Source   │───>│ Preprocessor │───>│ Compiler │───>│ Assemb │───>│   Linker   │
 │ (.c/.h)  │    │   (cpp)      │    │  (cc1)   │    │ (as)   │    │   (ld)     │

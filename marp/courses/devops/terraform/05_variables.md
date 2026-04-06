@@ -291,7 +291,7 @@ variable "cidr_block" {
 
 ## Setting Variables: Precedence Order
 
-```txt
+```text
 Highest priority (wins)
   |
   |  1. -var flag on command line
@@ -351,7 +351,7 @@ tags = {
 
 ## Variable File Naming
 
-```txt
+```text
 Auto-loaded files:
   terraform.tfvars          # Always loaded
   terraform.tfvars.json     # Always loaded
@@ -419,7 +419,7 @@ resource "aws_db_instance" "main" {
 }
 ```
 
-```txt
+```output
 # terraform plan output:
   + resource "aws_db_instance" "main" {
       + password = (sensitive value)
@@ -499,7 +499,7 @@ resource "aws_instance" "web" {
 
 ## Organizing Variables by File
 
-```txt
+```tree
 variables.tf          # All variable declarations
 ├── General variables (project, environment, region)
 ├── Networking variables (VPC, subnets, CIDRs)

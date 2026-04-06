@@ -462,7 +462,7 @@ print(D.__mro__)
 ---
 ## MRO - C3 Linearization
 
-```txt
+```diagram
 D -> B -> C -> A -> object
 
 class D(B, C):

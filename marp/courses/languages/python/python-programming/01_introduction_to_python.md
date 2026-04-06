@@ -109,7 +109,7 @@ import this
 - No separate compilation step needed
 - Trade-off: slower execution, faster development
 
-```txt
+```diagram
 source.py -> bytecode (.pyc) -> PVM -> output
 ```
 ---
@@ -213,7 +213,7 @@ print(sys.version)
 - Python has an interactive interpreter
 - Great for experimentation and learning
 
-```txt
+```console
 $ python3
 >>> 2 + 2
 4

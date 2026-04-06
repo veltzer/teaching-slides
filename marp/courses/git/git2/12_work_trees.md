@@ -120,7 +120,7 @@ Understanding the layout:
 
 **Main repository:**
 
-```txt
+```tree
 project/
 ├── .git/                    # Main Git directory
 │   ├── worktrees/          # Worktree metadata
@@ -132,7 +132,7 @@ project/
 
 **Linked worktree:**
 
-```txt
+```tree
 feature-login/              # Worktree directory
 ├── .git                   # File pointing to main .git
 ├── src/                   # Working files (different from main)
@@ -141,7 +141,7 @@ feature-login/              # Worktree directory
 
 **Worktree metadata:**
 
-```txt
+```tree
 .git/worktrees/feature-login/
 ├── HEAD                   # Current branch/commit
 ├── gitdir                # Path to worktree directory
@@ -593,7 +593,7 @@ git worktree add ../pr-123-review pr-123
 
 **Organization strategies:**
 
-```txt
+```tree
 project/                    # Main repository
 ├── .git/
 ├── src/

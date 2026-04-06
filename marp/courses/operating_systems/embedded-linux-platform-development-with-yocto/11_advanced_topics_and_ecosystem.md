@@ -710,7 +710,7 @@ git send-email --to=yocto@lists.yoctoproject.org HEAD~1
 
 Patch format:
 
-```txt
+```template
 component: Brief summary
 
 Detailed description of the change.
@@ -752,7 +752,7 @@ PREFERRED_VERSION_linux-yocto = "5.15%"
 
 Creating BSP layer:
 
-```txt
+```tree
 meta-mybsp/
 ├── conf/
 │   ├── layer.conf

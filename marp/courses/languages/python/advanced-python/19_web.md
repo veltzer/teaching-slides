@@ -20,7 +20,7 @@
 - Microservices and serverless applications
 - Data processing and analysis
 
-```txt
+```text
 Common Python Web Technology Stack:
 - Web Framework: Flask, Django, FastAPI
 - HTTP Client: requests, httpx, aiohttp
@@ -247,7 +247,7 @@ def user_list():
 - Configuration management
 - Project structure best practices
 
-```txt
+```tree
 flask_app/
 ├── app/
 │   ├── __init__.py          # Application factory

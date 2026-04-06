@@ -432,7 +432,7 @@ print(a ^ b)   # Symmetric diff: {1, 2, 5, 6}
 ---
 ## Sets - Operations Diagram
 
-```txt
+```diagram
 A = {1, 2, 3, 4}    B = {3, 4, 5, 6}
 
 A | B (union):       {1, 2, 3, 4, 5, 6}
@@ -480,7 +480,7 @@ for i, fruit in enumerate(fruits):
     print(f"{i}: {fruit}")
 ```
 
-```txt
+```output
 0: apple
 1: banana
 2: cherry
@@ -495,7 +495,7 @@ for i, fruit in enumerate(fruits, start=1):
     print(f"{i}. {fruit}")
 ```
 
-```txt
+```output
 1. apple
 2. banana
 3. cherry
@@ -512,7 +512,7 @@ for name, age in zip(names, ages):
     print(f"{name} is {age}")
 ```
 
-```txt
+```output
 Alice is 30
 Bob is 25
 Charlie is 35

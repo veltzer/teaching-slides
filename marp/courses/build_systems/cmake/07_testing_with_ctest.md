@@ -79,7 +79,7 @@ cmake --build build
 ctest --test-dir build
 ```
 
-```txt
+```output
 Test project /home/user/project/build
     Start 1: solver_add
 1/3 Test #1: solver_add .............   Passed    0.01 sec
@@ -298,7 +298,7 @@ set_tests_properties(
 )
 ```
 
-```txt
+```diagram
 setup_db  ->  test_insert  ->  test_query  ->  test_delete  ->  cleanup_db
 ```
 
@@ -397,16 +397,10 @@ set_tests_properties(custom_tests PROPERTIES
 - Supports multiple platforms, compilers, and configurations
 - Available at `https://my.cdash.org` or self-hosted
 
-```txt
-+--------------------------------------------------+
-| MyProject Dashboard                              |
-+--------------------------------------------------+
 | Build Name    | Configure | Build | Test | Cover |
 |---------------|-----------|-------|------|-------|
 | Linux-GCC-13  |    OK     |  OK   | 98%  |  85%  |
 | macOS-Clang   |    OK     | 1 err | 95%  |  82%  |
-+--------------------------------------------------+
-```
 
 ---
 

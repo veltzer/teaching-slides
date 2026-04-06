@@ -4,7 +4,7 @@
 
 ## Workflow Organization
 
-```txt
+```tree
 .github/
   workflows/
     ci.yml              # Continuous Integration
@@ -131,16 +131,14 @@ steps:
 
 ## Reducing Build Times
 
-```txt
-Strategy                    | Savings
-----------------------------+-----------
-Cache dependencies          | 30-60%
-Shallow clone (depth=1)     | 10-30%
-Path filtering              | Skip entire runs
-Matrix fail-fast            | Stops on first failure
-Smaller runner images       | Faster provisioning
-Conditional expensive steps | Varies
-```
+| Strategy                    | Savings              |
+|-----------------------------|----------------------|
+| Cache dependencies          | 30-60%               |
+| Shallow clone (depth=1)     | 10-30%               |
+| Path filtering              | Skip entire runs     |
+| Matrix fail-fast            | Stops on first failure |
+| Smaller runner images       | Faster provisioning  |
+| Conditional expensive steps | Varies               |
 
 - Measure before optimizing: check the **timing** tab in workflow runs
 - Focus on the slowest steps first

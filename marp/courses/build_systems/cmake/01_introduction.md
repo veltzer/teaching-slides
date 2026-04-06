@@ -67,7 +67,7 @@
 
 ## The CMake Pipeline
 
-```txt
+```diagram
 CMakeLists.txt --> cmake (configure) --> Build Files --> Build Tool --> Binaries
 ```
 
@@ -106,7 +106,7 @@ cmake --build .
 
 ## Out-of-Source Builds
 
-```txt
+```tree
 my_project/
     CMakeLists.txt
     src/
@@ -171,7 +171,7 @@ cmake --help
 
 Output includes:
 
-```txt
+```output
 Generators
   * Unix Makefiles
     Ninja
@@ -202,7 +202,7 @@ Generators
 
 ## The CMake Family of Tools
 
-```txt
+```diagram
 +------------------+
 |     CMake        |  Build system generator
 +------------------+
@@ -268,7 +268,7 @@ On Windows: download from https://cmake.org/download/
 cmake --version
 ```
 
-```txt
+```output
 cmake version 3.28.1
 CMake suite maintained and supported by Kitware
 ```

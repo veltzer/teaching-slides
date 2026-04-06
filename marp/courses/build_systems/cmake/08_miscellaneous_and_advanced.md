@@ -121,7 +121,7 @@ add_custom_target(format
 )
 ```
 
-```txt
+```console
 cmake --build . --target format
 ```
 
@@ -284,7 +284,7 @@ execute_process(
 
 ## Cross-Compilation Overview
 
-```txt
+```diagram
 Host Machine (x86_64 Linux)
     |
     v (cross-compiler)
@@ -329,7 +329,7 @@ set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 ```
 
-```txt
+```console
 cmake -DCMAKE_TOOLCHAIN_FILE=arm-toolchain.cmake ..
 cmake --build .
 ```
@@ -395,7 +395,7 @@ cmake --build .
 }
 ```
 
-```txt
+```console
 cmake --preset debug
 cmake --build --preset debug
 ctest --preset debug

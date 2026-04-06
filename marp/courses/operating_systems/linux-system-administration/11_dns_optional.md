@@ -100,7 +100,7 @@ apt install bind9 bind9-utils
 # /etc/bind/named.conf.local
 ```
 
-```txt
+```config
 # /etc/bind/named.conf.options
 options {
     directory "/var/cache/bind";
@@ -117,7 +117,7 @@ options {
 ---
 ## BIND Security Options
 
-```txt
+```config
 # /etc/bind/named.conf.options (security)
 options {
     # Hide BIND version
@@ -148,7 +148,7 @@ options {
 apt install dnsmasq
 ```
 
-```txt
+```config
 # /etc/dnsmasq.conf
 # DNS settings
 server=8.8.8.8
@@ -168,7 +168,7 @@ Lightweight alternative to `BIND` for small networks.
 ---
 ## Zone Files
 
-```txt
+```config
 ; /etc/bind/db.example.com
 $TTL    604800
 @   IN  SOA ns1.example.com. admin.example.com. (
@@ -191,7 +191,7 @@ mail    IN  A       93.184.216.20
 ---
 ## Zone File Details
 
-```txt
+```config
 ; SOA Record Fields:
 ; ns1.example.com. - primary nameserver
 ; admin.example.com. - admin email (@ replaced with .)
@@ -216,7 +216,7 @@ sub     IN  NS      ns1.sub.example.com.
 ---
 ## Zone Configuration and Transfers
 
-```txt
+```config
 # /etc/bind/named.conf.local (primary)
 zone "example.com" {
     type master;
@@ -226,7 +226,7 @@ zone "example.com" {
 };
 ```
 
-```txt
+```config
 # On secondary server
 zone "example.com" {
     type slave;
@@ -244,7 +244,7 @@ named-checkconf
 ---
 ## Reverse Lookup Zones
 
-```txt
+```config
 ; /etc/bind/db.1.168.192
 $TTL    604800
 @   IN  SOA ns1.example.com. admin.example.com. (
@@ -255,7 +255,7 @@ $TTL    604800
 20      IN  PTR     mail.example.com.
 ```
 
-```txt
+```config
 # named.conf.local
 zone "1.168.192.in-addr.arpa" {
     type master;
@@ -347,7 +347,7 @@ apt install unbound
 # /etc/unbound/unbound.conf
 ```
 
-```txt
+```yaml
 server:
     interface: 0.0.0.0
     access-control: 192.168.1.0/24 allow
@@ -377,7 +377,7 @@ unbound-control dump_cache > cache-backup.txt
 ---
 ## Split-Horizon DNS
 
-```txt
+```config
 # /etc/bind/named.conf - serve different answers
 # based on client network
 
@@ -409,7 +409,7 @@ Use cases:
 ---
 ## DNS-Based Load Balancing
 
-```txt
+```config
 ; Round-robin: multiple A records for same name
 www     IN  A   10.0.1.1
 www     IN  A   10.0.1.2
@@ -512,7 +512,7 @@ Encrypt DNS queries to prevent eavesdropping and tampering:
 # /etc/unbound/unbound.conf
 ```
 
-```txt
+```yaml
 server:
     tls-cert-bundle: /etc/ssl/certs/ca-certificates.crt
 
@@ -545,7 +545,7 @@ tcpdump -i eth0 port 853  # DoT traffic visible here
 
 Fine-grained logging helps with debugging and security monitoring:
 
-```txt
+```config
 # /etc/bind/named.conf.local
 logging {
     channel query_log {
@@ -589,7 +589,7 @@ Migrating DNS providers or servers with minimal downtime:
 
 1. **Lower TTL** well in advance (48 hours before migration):
 
-```txt
+```config
 ; Change TTL from 3600 to 300 (5 minutes)
 $TTL 300
 www     IN  A   10.0.1.1

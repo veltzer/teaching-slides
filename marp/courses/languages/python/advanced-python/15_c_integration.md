@@ -43,7 +43,7 @@ def compute_intensive_function(data, iterations):
 - Potential speedups of 10-100x for CPU-bound code
 - Minimal benefit for I/O-bound operations
 
-```txt
+```text
 Task: Sum of squares of 10 million integers
 
 Python:
@@ -91,15 +91,14 @@ Potential speedup: ~60x
 1. **SWIG**: Simplified Wrapper and Interface Generator
 1. **pybind11**: C++11 header-only library
 
-```txt
-            Complexity   |   Performance   |   Flexibility
-Python C API      High   |       High      |       High
-ctypes            Low    |       Medium    |       Medium
-CFFI              Medium |       High      |       High
-Cython            Low    |       High      |       High
-SWIG              Medium |       High      |       Medium
-pybind11          Medium |       High      |       High (C++)
-```
+| Method | Complexity | Performance | Flexibility |
+|--------|-----------|-------------|-------------|
+| Python C API | High | High | High |
+| ctypes | Low | Medium | Medium |
+| CFFI | Medium | High | High |
+| Cython | Low | High | High |
+| SWIG | Medium | High | Medium |
+| pybind11 | Medium | High | High (C++) |
 
 ---
 
@@ -268,7 +267,7 @@ pip install -e .
 - Include files for common functions
 - Initialization file containing module definition
 
-```txt
+```tree
 mymodule/
 ├── setup.py           # Build script
 ├── mymodule.c         # Main module implementation
@@ -1191,7 +1190,7 @@ double multiply(double a, double b) {
 }
 ```
 
-```txt
+```config
 // example.i (SWIG interface file)
 %module example
 

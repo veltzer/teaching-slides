@@ -480,7 +480,7 @@ IMAGE_INSTALL_append = " webrtc-streamer"
 
 Device grouping:
 
-```txt
+```tree
 fleet/
 ├── production/
 │   ├── group-a/      # Geographic region

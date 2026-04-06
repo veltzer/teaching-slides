@@ -305,7 +305,7 @@ git show-branch --all
 
 **Understanding show-branch output:**
 
-```txt
+```output
 * [main] Latest commit on main
  ! [develop] Latest commit on develop
   * [feature] Latest commit on feature
@@ -343,7 +343,7 @@ git blame -e file.txt
 
 **Blame output format:**
 
-```txt
+```output
 a1b2c3d (John Smith 2023-10-15 14:30:22 +0200  1) function calculate() {
 d4e5f6g (Jane Doe   2023-10-16 09:15:33 +0200  2)     return x + y;
 a1b2c3d (John Smith 2023-10-15 14:30:22 +0200  3) }

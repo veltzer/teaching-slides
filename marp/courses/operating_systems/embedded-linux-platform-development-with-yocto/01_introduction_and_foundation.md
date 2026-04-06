@@ -377,7 +377,7 @@ Similar to:
 
 ## Project Directory Structure
 
-```txt
+```tree
 yocto-project/
 ├── build/              # Build workspace
 │   ├── conf/          # Configuration

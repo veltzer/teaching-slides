@@ -373,7 +373,7 @@ print(maximum)  # 5
 ---
 ## `reduce()` Visualization
 
-```txt
+```diagram
 reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])
 
 Step 1: a=1, b=2 -> 3

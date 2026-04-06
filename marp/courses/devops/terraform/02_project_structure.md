@@ -15,7 +15,7 @@
 
 ## Standard Project Layout
 
-```txt
+```tree
 my-project/
 ├── main.tf           # Primary resources
 ├── variables.tf      # Input variable declarations
@@ -165,7 +165,7 @@ environment = "staging"
 
 ## Multiple Variable Files
 
-```txt
+```tree
 my-project/
 ├── main.tf
 ├── variables.tf
@@ -185,7 +185,7 @@ terraform apply -var-file="environments/prod.tfvars"
 
 ## The .terraform Directory
 
-```txt
+```tree
 .terraform/
 ├── providers/
 │   └── registry.terraform.io/
@@ -206,7 +206,7 @@ terraform apply -var-file="environments/prod.tfvars"
 
 ## The .gitignore File for Terraform
 
-```txt
+```gitignore
 # Local .terraform directories
 **/.terraform/*
 
@@ -279,7 +279,7 @@ terraform init -plugin-dir=/path/to/plugins
 
 ## terraform init Workflow
 
-```txt
+```diagram
 terraform init
     |
     +---> Configure backend
@@ -327,7 +327,7 @@ terraform plan -refresh-only
 
 ## Reading a Plan Output
 
-```txt
+```output
 Terraform will perform the following actions:
 
   # aws_instance.web will be created
@@ -372,7 +372,7 @@ terraform apply -parallelism=20
 
 ## terraform apply Workflow
 
-```txt
+```diagram
 terraform apply
     |
     +---> Read current state
@@ -418,7 +418,7 @@ terraform plan -destroy
 
 ## Splitting Configuration into Files
 
-```txt
+```tree
 large-project/
 ├── main.tf           # Core resources
 ├── networking.tf     # VPC, subnets, routes
@@ -436,7 +436,7 @@ large-project/
 
 ## Multi-Environment Structure
 
-```txt
+```tree
 infrastructure/
 ├── modules/
 │   ├── vpc/
@@ -540,7 +540,7 @@ terraform graph -type=apply
 
 ## Resource Dependencies in Graph
 
-```txt
+```output
 terraform graph output:
 
 digraph {

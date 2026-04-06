@@ -45,7 +45,7 @@ python --version
 - Start by typing `python3` in terminal
 - The `>>>` prompt means Python is ready
 
-```txt
+```console
 $ python3
 Python 3.12.0 (main, Oct  2 2023)
 >>> 2 + 3
@@ -96,7 +96,7 @@ python3 hello.py
 
 - Output:
 
-```txt
+```output
 Hello, World!
 ```
 ---
@@ -160,7 +160,7 @@ print(" here")
 ---
 ## Print Output
 
-```txt
+```output
 Hello
 Name: Alice
 Age: 30

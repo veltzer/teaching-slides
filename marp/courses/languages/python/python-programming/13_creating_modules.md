@@ -6,7 +6,7 @@
 - Organized source code
 - Optional: tests, documentation, configuration
 
-```txt
+```tree
 my_package/
     __init__.py
     core.py
@@ -50,7 +50,7 @@ print(multiply(4, 5))   # 20
 ---
 ## Package Directory Structure
 
-```txt
+```tree
 my_project/
     src/
         my_package/
@@ -336,7 +336,7 @@ def test_unix_feature():
 ---
 ## `pytest` - Configuration (`pytest.ini`)
 
-```txt
+```ini
 [pytest]
 testpaths = tests
 python_files = test_*.py
@@ -360,7 +360,7 @@ pytest --cov=my_package
 pytest --cov=my_package --cov-report=html
 ```
 
-```txt
+```output
 ---------- coverage: ----------
 Name                   Stmts   Miss  Cover
 ------------------------------------------
@@ -454,7 +454,7 @@ twine upload --repository testpypi dist/*
 ---
 ## Project Layout - `src` Layout
 
-```txt
+```tree
 my-project/
     src/
         my_package/
@@ -473,7 +473,7 @@ my-project/
 ---
 ## `.gitignore` for Python Projects
 
-```txt
+```config
 __pycache__/
 *.py[cod]
 *.egg-info/

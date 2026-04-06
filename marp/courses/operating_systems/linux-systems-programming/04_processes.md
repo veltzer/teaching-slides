@@ -59,7 +59,7 @@ Every command you run creates a process!
 
 ## The Process Tree
 
-```txt
+```console
 systemd(1)─┬─systemd-journal(559)
           ├─systemd-udevd(580)
           ├─systemd-network(612)

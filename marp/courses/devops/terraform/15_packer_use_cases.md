@@ -2,7 +2,7 @@
 
 ## Packer Use Case Overview
 
-```txt
+```diagram
 +-------------------+     +-------------------+
 | AWS AMIs          |     | Container Images  |
 | Production server |     | Docker, ECR, ACR  |
@@ -298,7 +298,7 @@ resource "aws_launch_template" "web" {
 
 ## Blue-Green Deployment with Packer
 
-```txt
+```diagram
 Phase 1: Build new AMI
   Packer build -> AMI v2
 
@@ -618,7 +618,7 @@ resource "aws_instance" "web" {
 
 ## Image Pipeline Best Practices
 
-```txt
+```diagram
 Source Image (Ubuntu base)
     |
     v
@@ -755,7 +755,7 @@ file:
 
 ## Immutable Infrastructure Pattern
 
-```txt
+```diagram
 Mutable:                        Immutable:
 +--------+                      +--------+
 | Server | <-- SSH in           | Server | <-- Replace entirely

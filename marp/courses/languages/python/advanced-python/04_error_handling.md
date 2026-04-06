@@ -54,7 +54,7 @@ except KeyError:
 - Most custom exceptions inherit from `Exception`
 - System exit signals use specialized exceptions
 
-```txt
+```tree
 BaseException
  ├── SystemExit
  ├── KeyboardInterrupt
@@ -656,7 +656,7 @@ def divide_values(a, b):
 - Contains function calls, file names, line numbers
 - Helps locate the source of the error
 
-```txt
+```output
 Traceback (most recent call last):
   File "main.py", line 10, in <module>
     result = process_data(raw_data)

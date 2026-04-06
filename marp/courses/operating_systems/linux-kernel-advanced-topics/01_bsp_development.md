@@ -160,7 +160,7 @@ my_device@10000000 {
 
 ## SoC Vendor BSP Structure
 
-```txt
+```tree
 vendor-bsp/
 ├── bootloader/
 │   ├── u-boot/
@@ -222,7 +222,7 @@ vendor-bsp/
 
 ## BSP Directory Structure
 
-```txt
+```tree
 my-bsp/
 ├── configs/
 │   └── myboard_defconfig

@@ -139,7 +139,7 @@ git show 2b5e1e3
 
 **Example:**
 
-```txt
+```text
 blob 12
 Hello, Git!
 ```
@@ -263,7 +263,7 @@ How the three structures connect:
 
 Everything `Git` needs is stored in `.git`:
 
-```txt
+```tree
 .git/
 ├── HEAD              # Current branch pointer
 ├── config            # Repository configuration
@@ -523,7 +523,7 @@ git tag -a v1.0 -m "Release 1.0"
 
 1. **Tag object content:**
 
-```txt
+```output
 object a1b2c3d4e5f6789...
 type commit
 tag v1.0
@@ -773,7 +773,7 @@ git fsck --connectivity-only
 
 **Fsck output example:**
 
-```txt
+```output
 dangling blob a1b2c3d4e5f6789012345678901234567890abcd
 dangling commit d4e5f6g7h8i9012345678901234567890abcdef12
 ```
@@ -939,7 +939,7 @@ Git hooks provide extension points:
 
 **Client-side hooks:**
 
-```txt
+```tree
 .git/hooks/
 ├── pre-commit           # Before commit creation
 ├── prepare-commit-msg   # Before commit message editor
@@ -953,7 +953,7 @@ Git hooks provide extension points:
 
 **Server-side hooks:**
 
-```txt
+```tree
 ├── pre-receive          # Before any refs updated
 ├── update               # Before each ref updated
 └── post-receive         # After all refs updated
@@ -967,7 +967,7 @@ How Git communicates over the network:
 
 **Smart HTTP protocol:**
 
-```txt
+```protocol
 GET /repo.git/info/refs?service=git-upload-pack
 # Server responds with reference list
 
@@ -1023,7 +1023,7 @@ How Git manages multiple working directories:
 
 **Worktree structure:**
 
-```txt
+```tree
 main-repo/
 ├── .git/                 # Main repository
 └── worktrees/
@@ -1035,7 +1035,7 @@ main-repo/
 
 **Worktree-specific data:**
 
-```txt
+```tree
 .git/worktrees/feature-branch/
 ├── HEAD                  # Current branch for this worktree
 ├── index                 # Staging area for this worktree

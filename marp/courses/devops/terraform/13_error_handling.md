@@ -2,7 +2,7 @@
 
 ## Common Error Categories
 
-```txt
+```diagram
 +-------------------+     +-------------------+
 | Configuration     |     | Provider          |
 | Errors            |     | Errors            |
@@ -20,7 +20,7 @@
 
 ## Configuration Errors: Syntax
 
-```txt
+```output
 Error: Invalid character
 
   on main.tf line 5:
@@ -40,7 +40,7 @@ Error: Argument or block definition required
 
 ## Configuration Errors: Missing Required
 
-```txt
+```output
 Error: Missing required argument
 
   on main.tf line 1, in resource "aws_instance" "web":
@@ -61,7 +61,7 @@ Error: Missing required argument
 
 ## Configuration Errors: Type Mismatch
 
-```txt
+```output
 Error: Invalid value for variable
 
   on main.tf line 5:
@@ -81,7 +81,7 @@ Error: Incorrect attribute value type
 
 ## Configuration Errors: Unknown Reference
 
-```txt
+```output
 Error: Reference to undeclared resource
 
   on main.tf line 10, in resource "aws_subnet" "public":
@@ -97,7 +97,7 @@ Fix: Check resource names for typos or missing declarations.
 
 ## Provider Errors: Authentication
 
-```txt
+```output
 Error: No valid credential sources found
 
   Provider "aws" requires valid credentials.
@@ -120,7 +120,7 @@ export AWS_SECRET_ACCESS_KEY="..."
 
 ## Provider Errors: API Errors
 
-```txt
+```output
 Error: creating EC2 Instance: operation error EC2:
   RunInstances, api error InvalidAMIID.NotFound:
   The image id '[ami-invalid]' does not exist
@@ -136,7 +136,7 @@ Error: creating RDS DB Instance: DBInstanceAlreadyExists:
 
 ## Provider Errors: Quota and Limits
 
-```txt
+```output
 Error: creating EC2 Instance: VcpuLimitExceeded:
   You have requested more vCPU capacity than your
   current vCPU limit of 32 allows.
@@ -154,7 +154,7 @@ Fix:
 
 ## Provider Errors: Permission Denied
 
-```txt
+```output
 Error: creating EC2 Instance: UnauthorizedOperation:
   You are not authorized to perform this operation.
   User: arn:aws:iam::123456789:user/terraform
@@ -170,7 +170,7 @@ Fix:
 
 ## State Errors: Lock
 
-```txt
+```output
 Error: Error locking state: Error acquiring the state lock
 
 Lock Info:
@@ -206,7 +206,7 @@ terraform plan
 
 ## State Errors: Corrupt State
 
-```txt
+```output
 Error: Failed to load state: Unsupported state file format
 
 Error: Error refreshing state: state data in S3 does
@@ -243,7 +243,7 @@ aws s3api get-object \
 
 ## Dependency Errors: Cycles
 
-```txt
+```output
 Error: Cycle: aws_security_group.a,
   aws_security_group.b
 
@@ -323,7 +323,7 @@ terraform plan
 
 ## Reading Debug Output
 
-```txt
+```output
 2024-01-15T10:30:00.123Z [DEBUG] provider.aws:
   HTTP Request Sent:
     Method: POST
@@ -342,7 +342,7 @@ terraform plan
 
 ## Crash Logs
 
-```txt
+```text
 If Terraform crashes, it creates a crash.log file:
 
 crash.log contains:
@@ -424,7 +424,7 @@ terraform apply tfplan
 
 ## Handling Partial Failures
 
-```txt
+```text
 Scenario: Apply creates 3 of 5 resources, then fails
 
 State after partial failure:

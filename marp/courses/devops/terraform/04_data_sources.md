@@ -67,7 +67,7 @@ resource "aws_instance" "web" {
 
 ## Why Use AMI Data Source?
 
-```txt
+```text
 Without data source:
   ami = "ami-0c55b159cbfafe1f0"  # Hardcoded, region-specific
 
@@ -452,20 +452,16 @@ resource "aws_instance" "web" {
 
 ## Data Source Use Cases
 
-```txt
-+---------------------------+-----------------------------------+
-| Use Case                  | Data Source                        |
-+---------------------------+-----------------------------------+
-| Find latest AMI           | aws_ami                           |
-| Get current account info  | aws_caller_identity               |
-| List availability zones   | aws_availability_zones            |
-| Read existing VPC config  | aws_vpc, aws_subnets              |
-| Get DNS zone info         | aws_route53_zone                  |
-| Read SSM parameters       | aws_ssm_parameter                 |
-| Get secret from Vault     | vault_generic_secret              |
-| Read remote state         | terraform_remote_state            |
-+---------------------------+-----------------------------------+
-```
+| Use Case | Data Source |
+|---------------------------|-----------------------------------|
+| Find latest AMI | aws_ami |
+| Get current account info | aws_caller_identity |
+| List availability zones | aws_availability_zones |
+| Read existing VPC config | aws_vpc, aws_subnets |
+| Get DNS zone info | aws_route53_zone |
+| Read SSM parameters | aws_ssm_parameter |
+| Get secret from Vault | vault_generic_secret |
+| Read remote state | terraform_remote_state |
 
 ---
 

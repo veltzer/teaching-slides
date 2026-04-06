@@ -10,7 +10,7 @@
 ---
 ## Command Line Parsing: Step by Step
 
-```txt
+```text
 Input: echo "hello world" > output.txt
 
 Step 1: Tokenize    -> [echo] ["hello world"] [>] [output.txt]
@@ -49,19 +49,10 @@ echo "*.txt"
 ---
 ## Finding Commands: Three Types
 
-```txt
-+------------------+-------------------+------------------+
-|   Built-in       |   Function        |   External       |
-|   Commands       |   Definitions     |   Programs       |
-+------------------+-------------------+------------------+
-| cd, echo, pwd,   | User-defined      | /usr/bin/ls      |
-| export, read,    | functions in      | /usr/bin/grep     |
-| test, [, [[      | the current       | /usr/bin/awk      |
-|                  | shell session     |                  |
-+------------------+-------------------+------------------+
-| No fork needed   | No fork needed    | Fork + exec      |
-+------------------+-------------------+------------------+
-```
+| Built-in Commands | Function Definitions | External Programs |
+|-------------------|----------------------|-------------------|
+| cd, echo, pwd, export, read, test, [, [[ | User-defined functions in the current shell session | /usr/bin/ls, /usr/bin/grep, /usr/bin/awk |
+| No fork needed | No fork needed | Fork + exec |
 ---
 ## The `type` Command
 
@@ -168,12 +159,11 @@ command -v python3
 alias ls='ls --color=auto'
 which ls     # may show the alias
 command -v ls  # /usr/bin/ls
-
-```txt
+```
 ---
 ## `fork` and `exec`: How External Commands Run
 
-```
+```diagram
 Shell Process (PID 100)
     |
     |-- fork() --> Child Process (PID 101)
@@ -186,7 +176,7 @@ Shell Process (PID 100)
     |-- wait() --> collects exit status
     |
     |-- ready for next command
-```text
+```
 ---
 ## Watching `fork`/`exec` in Action
 

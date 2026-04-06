@@ -62,14 +62,14 @@ ps -ejH
 
 Example output:
 
-```txt
+```console
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
 root         1  0.0  0.0 225868  9416 ?        Ss   Oct19   0:23 /sbin/init
 ```
 
 Key fields:
 
-```txt
+```text
 USER  - Process owner
 PID   - Process ID
 %CPU  - CPU usage
@@ -218,7 +218,7 @@ kill -CONT PID
 
 Interactive commands:
 
-```txt
+```text
 h - help
 k - kill process
 r - renice process

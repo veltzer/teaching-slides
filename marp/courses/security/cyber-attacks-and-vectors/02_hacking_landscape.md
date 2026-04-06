@@ -15,7 +15,7 @@
 - Typically target low-hanging fruit and unpatched systems
 - Common tools: Metasploit, LOIC, pre-packaged exploit kits
 
-```txt
+```diagram
 ┌─────────────────────────────────────────────┐
 │           Script Kiddie Profile             │
 ├─────────────────────────────────────────────┤
@@ -46,7 +46,7 @@
 - Use dark web markets for buying/selling exploits and data
 - Example: FIN7 group responsible for over $1 billion in theft from financial institutions
 
-```txt
+```diagram
 ┌──────────────────────────────────────────────────┐
 │         Cybercrime Economy                       │
 ├──────────────────────────────────────────────────┤
@@ -99,20 +99,14 @@
 ---
 ## Motivation Deep Dive
 
-```txt
-┌──────────────────────────────────────────────────────────┐
-│                  Hacker Motivation Matrix                │
-├──────────────┬──────────────┬────────────────────────────┤
-│  Motivation  │  Actor Type  │  Typical Attack            │
-├──────────────┼──────────────┼────────────────────────────┤
-│  Financial   │  Criminal    │  Ransomware, card theft    │
-│  Political   │  Hacktivist  │  DDoS, defacement, leaks   │
-│  Espionage   │  State APT   │  Zero-day, supply chain    │
-│  Challenge   │  Script kid  │  Website hacks, SQLi       │
-│  Revenge     │  Insider     │  Data theft, sabotage      │
-│  Warfare     │  State APT   │  Infrastructure attacks    │
-└──────────────┴──────────────┴────────────────────────────┘
-```
+| Motivation | Actor Type  | Typical Attack            |
+|------------|-------------|---------------------------|
+| Financial  | Criminal    | Ransomware, card theft    |
+| Political  | Hacktivist  | DDoS, defacement, leaks   |
+| Espionage  | State APT   | Zero-day, supply chain    |
+| Challenge  | Script kid  | Website hacks, SQLi       |
+| Revenge    | Insider     | Data theft, sabotage      |
+| Warfare    | State APT   | Infrastructure attacks    |
 
 ---
 ## What are the hackers' goals

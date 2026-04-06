@@ -717,7 +717,7 @@ git merge --no-commit feature-branch
     - Faster merge operations
 
 1. **Use `.gitattributes` for merge strategies:**
-    ```txt
+    ```config
     *.generated merge=ours
     package-lock.json merge=union
     ```

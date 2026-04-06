@@ -12,7 +12,7 @@
 
 ## How Drift Happens
 
-```txt
+```diagram
 Terraform Config          Actual Infrastructure
 +------------------+     +------------------+
 | instance_type:   |     | instance_type:   |
@@ -27,7 +27,7 @@ Terraform Config          Actual Infrastructure
 
 ## Drift Use Case: Manual Console Change
 
-```txt
+```text
 1. Developer creates instance via Terraform
    instance_type = "t3.micro"
 
@@ -44,7 +44,7 @@ Terraform Config          Actual Infrastructure
 
 ## Drift Use Case: Security Group Modified
 
-```txt
+```text
 Scenario:
   - Terraform manages security group with port 80 open
   - Admin manually opens port 22 for debugging
@@ -61,7 +61,7 @@ Resolution options:
 
 ## Drift Use Case: Resource Deleted
 
-```txt
+```output
 Scenario:
   - Terraform manages an S3 bucket
   - Someone deletes the bucket manually
@@ -79,7 +79,7 @@ Scenario:
 
 ## Drift Use Case: Tags Modified by AWS
 
-```txt
+```text
 Some AWS services auto-add tags:
   - EKS adds kubernetes.io/* tags
   - ASG adds aws:autoscaling:groupName
@@ -120,7 +120,7 @@ terraform refresh
 
 ## Refresh Workflow
 
-```txt
+```diagram
 terraform refresh
     |
     v
@@ -162,7 +162,7 @@ these detected changes?
 
 ## Detecting vs Correcting Drift
 
-```txt
+```text
 Detect drift only:
   terraform plan -refresh-only
   (shows what changed, updates state only)
@@ -242,7 +242,7 @@ terraform import aws_security_group.web sg-12345
 
 ## Import Workflow
 
-```txt
+```text
 Step 1: Write the resource block in .tf files
         (even if incomplete)
 

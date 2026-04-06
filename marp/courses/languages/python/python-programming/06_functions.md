@@ -145,7 +145,7 @@ def print_info(**kwargs):
 print_info(name="Alice", age=30, city="NYC")
 ```
 
-```txt
+```output
 name: Alice
 age: 30
 city: NYC
@@ -162,7 +162,7 @@ def func(a, b, *args, **kwargs):
 func(1, 2, 3, 4, x=5, y=6)
 ```
 
-```txt
+```output
 a=1, b=2
 args=(3, 4)
 kwargs={'x': 5, 'y': 6}
@@ -474,7 +474,7 @@ def say_hello(name):
 say_hello("Alice")
 ```
 
-```txt
+```output
 Before
 Hello, Alice!
 After

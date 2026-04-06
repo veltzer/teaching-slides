@@ -288,7 +288,7 @@ This is invaluable when you get "command not found" or "library not found" error
 cat /etc/apt/sources.list.d/ubuntu.sources
 ```
 
-```txt
+```config
 # DEB822 format (modern Ubuntu 24.04+)
 Types: deb deb-src
 URIs: http://archive.ubuntu.com/ubuntu
@@ -297,7 +297,7 @@ Components: main restricted universe multiverse
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 
-```txt
+```config
 # One-line format (legacy)
 deb http://archive.ubuntu.com/ubuntu noble main restricted
 deb-src http://archive.ubuntu.com/ubuntu noble main restricted
@@ -340,7 +340,7 @@ add-apt-repository --remove ppa:some/ppa
 # /etc/apt/preferences.d/pin-nginx.pref
 ```
 
-```txt
+```config
 # Pin nginx from a specific repo
 Package: nginx
 Pin: origin repo.example.com
@@ -618,7 +618,7 @@ cp myapp myapp-1.0/usr/local/bin/
 cp config.yml myapp-1.0/etc/myapp/
 ```
 
-```txt
+```config
 # myapp-1.0/DEBIAN/control
 Package: myapp
 Version: 1.0

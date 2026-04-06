@@ -104,7 +104,7 @@ Key configuration files:
 
 ## U-Boot Source Structure
 
-```txt
+```tree
 u-boot/
 ├── arch/           # Architecture-specific code
 ├── board/          # Board-specific code

@@ -458,7 +458,7 @@ git commit -S -m "Signed commit"
 ## Commit Message Examples
 
 ## Good ✅
-```txt
+```template
 Fix race condition in user session handler
 
 The session handler was not thread-safe when multiple
@@ -469,13 +469,13 @@ Fixes #456
 ```
 
 ## Bad ❌
-```txt
+```template
 updated stuff
 ```
-```txt
+```template
 Fixed bug
 ```
-```txt
+```template
 Changes
 ```
 
@@ -527,7 +527,7 @@ git log --follow file.txt
 ```
 
 ### Output example:
-```txt
+```output
 a3d8f2c - John Doe, 2 hours ago : Add login feature
 b7c9e1a - Jane Smith, 5 hours ago : Fix database connection
 ```

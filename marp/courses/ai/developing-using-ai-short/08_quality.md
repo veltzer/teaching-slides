@@ -70,7 +70,7 @@ Always run linters on AI output!
 
 Structuring projects consistently:
 
-```txt
+```tree
 src/
 ├── components/      # UI components
 │   ├── common/     # Reusable components

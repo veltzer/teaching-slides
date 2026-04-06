@@ -98,7 +98,7 @@ def find_max(numbers):
     return current_max
 ```
 
-```txt
+```console
 (Pdb) p numbers
 [3, 1, 4, 1, 5]
 (Pdb) n
@@ -204,7 +204,7 @@ def slow_function():
 cProfile.run("slow_function()")
 ```
 
-```txt
+```output
          4 function calls in 0.215 seconds
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
         1    0.215    0.215    0.215    0.215 script.py:3(slow_function)
@@ -518,7 +518,7 @@ poetry install
 # Run in virtual environment
 poetry run python3 script.py
 
-```txt
+```console
 ---
 ## `uv` - Modern Python Package Manager
 

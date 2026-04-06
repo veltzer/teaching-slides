@@ -411,7 +411,7 @@ MODULE_LICENSE("GPL");
 
 ## BSP Layer Structure
 
-```txt
+```tree
 meta-myboard/
 ├── conf/
 │   ├── layer.conf

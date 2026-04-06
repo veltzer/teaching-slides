@@ -783,7 +783,7 @@ gcc -fsanitize=address -g program.c
 
 ## Code Organization:
 
-```txt
+```tree
 project/
 ├── src/          # Source files
 ├── include/      # Header files

@@ -116,7 +116,7 @@ if (current_privilege_level > required_privilege) {
 
 ## Stored in CS register (Code Segment):
 
-```txt
+```diagram
 CS Register: [Selector:16 bits][Hidden Descriptor]
               ├─ Index (13 bits)
               ├─ Table Indicator (1 bit)
@@ -198,7 +198,7 @@ CPL Values:
 
 ## 4-Level Paging (x86_64):
 
-```txt
+```diagram
 Virtual Address (48 bits used of 64):
 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 │  PML4  │  PDPT  │   PD   │   PT   │ Offset │ Unused │
@@ -214,7 +214,7 @@ CR3 → PML4 → PDPT → PD → PT → Physical Page
 
 ## Protection Bits:
 
-```txt
+```diagram
 64-bit PTE Format:
 ┌─┬─┬─┬─┬─┬─┬─┬─┬─┬──────────────────────────┬─────────┐
 │N│G│ │D│A│C│W│U│R│    Physical Page Number  │  Flags  │
@@ -449,7 +449,7 @@ bpftrace -e 'syscall:sys_enter_* { @[probe] = count(); }'
 
 ## Hardware/Software Interrupts:
 
-```txt
+```diagram
 IDT Entry Structure:
 ┌──────────────┬──────────────┬──────┬──────┐
 │ Offset 31-16 │ Offset 63-32 │ Type │ DPL  │
@@ -530,7 +530,7 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Memory Layout:
 
-```txt
+```diagram
 0xFFFFFFFFFFFFFFFF ┌─────────────────┐
                    │  Kernel Space   │
 0xFFFF800000000000 ├─────────────────┤ <- Canonical hole

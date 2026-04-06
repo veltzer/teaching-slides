@@ -341,7 +341,7 @@ Eclipse IDE's Git plugin:
 
 **EGit basic operations:**
 
-```txt
+```text
 Window → Show View → Other → Git → Git Repositories
 
 Right-click project:
@@ -584,7 +584,7 @@ Visual Git clients for different platforms:
 
 **GitKraken:**
 
-```txt
+```tree
 Features:
 ├── Visual commit graph
 ├── Drag-and-drop branch management
@@ -596,7 +596,7 @@ Features:
 
 **SourceTree:**
 
-```txt
+```tree
 Features:
 ├── Atlassian integration
 ├── Git flow built-in
@@ -608,7 +608,7 @@ Features:
 
 **GitHub Desktop:**
 
-```txt
+```tree
 Features:
 ├── Simplified Git workflow
 ├── GitHub integration
@@ -815,13 +815,12 @@ time git diff HEAD~1..HEAD
 
 **Memory and CPU usage:**
 
-```txt
-Tool Type        | Memory Usage | CPU Usage | Startup Time
-Command Line     | Low          | Low       | Instant
-IDE Integration  | Medium       | Medium    | Fast
-Desktop GUI      | High         | Medium    | Medium
-Web Interface    | High         | Low       | Slow
-```
+| Tool Type | Memory Usage | CPU Usage | Startup Time |
+|-----------|--------------|-----------|--------------|
+| Command Line | Low | Low | Instant |
+| IDE Integration | Medium | Medium | Fast |
+| Desktop GUI | High | Medium | Medium |
+| Web Interface | High | Low | Slow |
 
 ---
 
@@ -853,7 +852,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 **IDE security:**
 
-```txt
+```tree
 IDE Security Checklist:
 ├── Keep IDE updated
 ├── Verify plugin sources

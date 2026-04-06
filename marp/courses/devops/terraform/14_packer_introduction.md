@@ -22,7 +22,7 @@
 
 ## Packer vs Runtime Provisioning
 
-```txt
+```diagram
 Without Packer (runtime):           With Packer (pre-baked):
 +----------+                        +----------+
 | Launch   |                        | Build    |
@@ -48,7 +48,7 @@ Without Packer (runtime):           With Packer (pre-baked):
 
 ## Packer Architecture
 
-```txt
+```diagram
 +-----------------+
 |  Packer Config  |
 |  (.pkr.hcl)     |
@@ -106,7 +106,7 @@ packer version
 
 ## Packer Template Formats
 
-```txt
+```text
 Legacy JSON format (deprecated):
   template.json
 
@@ -196,7 +196,7 @@ packer build -var "region=us-west-2" template.pkr.hcl
 
 ## Packer Build Process
 
-```txt
+```diagram
 packer build
     |
     v
@@ -609,7 +609,7 @@ resource "aws_instance" "web" {
 
 ## CI/CD Pipeline with Packer and Terraform
 
-```txt
+```diagram
 1. Code Change
      |
      v

@@ -434,7 +434,7 @@ cat ~/.ssh/id_ed25519.pub | clip
 
 **~/.ssh/config:**
 
-```txt
+```config
 # Personal GitHub
 Host github.com
     HostName github.com
@@ -713,7 +713,7 @@ git add .gitattributes
 
 **.gitattributes:**
 
-```txt
+```config
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 assets/**/*.png filter=lfs diff=lfs merge=lfs -text

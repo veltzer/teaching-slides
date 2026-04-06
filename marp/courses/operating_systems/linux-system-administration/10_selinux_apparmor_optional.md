@@ -208,7 +208,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ---
 ## AppArmor Profile Structure
 
-```txt
+```config
 # /etc/apparmor.d/usr.sbin.nginx
 #include <tunables/global>
 
@@ -259,7 +259,7 @@ apparmor_parser -R /etc/apparmor.d/usr.sbin.nginx
 ---
 ## Writing AppArmor Profiles
 
-```txt
+```config
 # /etc/apparmor.d/usr.local.bin.myapp
 #include <tunables/global>
 
@@ -356,7 +356,7 @@ audit2allow -i /tmp/denials.txt -M myapp_custom
 cat myapp_custom.te
 ```
 
-```txt
+```config
 # Example generated .te file
 module myapp_custom 1.0;
 require {
@@ -378,7 +378,7 @@ semodule -l | grep myapp_custom
 ---
 ## AppArmor Abstractions
 
-```txt
+```text
 # Abstractions are reusable permission sets
 # Located in /etc/apparmor.d/abstractions/
 
@@ -392,7 +392,7 @@ semodule -l | grep myapp_custom
 # bash          - Bash shell access
 ```
 
-```txt
+```config
 # Using abstractions in a profile
 /usr/local/bin/myapp {
   #include <abstractions/base>
@@ -500,7 +500,7 @@ semanage port -d -t http_port_t -p tcp 9090
 
 Control network access per application with `AppArmor`:
 
-```txt
+```config
 # /etc/apparmor.d/usr.local.bin.myservice
 /usr/local/bin/myservice {
   #include <abstractions/base>

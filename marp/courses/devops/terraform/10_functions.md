@@ -52,7 +52,7 @@ locals {
 }
 ```
 
-```txt
+```template
 # hosts.tpl
 %{ for server in servers ~}
 ${server}.example.com
@@ -68,7 +68,7 @@ ${server}.example.com
 
 ## Conditional Directive in Templates
 
-```txt
+```template
 # config.tpl
 %{ if environment == "prod" ~}
 log_level = "warn"
@@ -91,7 +91,7 @@ locals {
 
 ## Function Categories
 
-```txt
+```diagram
 +-------------------+     +-------------------+
 | String Functions  |     | Numeric Functions  |
 | upper, lower,     |     | min, max, abs,     |
@@ -743,7 +743,7 @@ locals {
 
 ## cidrsubnet Explained
 
-```txt
+```text
 cidrsubnet(prefix, newbits, netnum)
 
 Example: cidrsubnet("10.0.0.0/16", 8, 1)

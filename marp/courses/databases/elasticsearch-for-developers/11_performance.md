@@ -73,7 +73,7 @@ PUT /products/_settings
 ```
 
 Monitor cache usage:
-```txt
+```console
 GET /_nodes/stats/indices/query_cache
 ```
 

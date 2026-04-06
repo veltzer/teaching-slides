@@ -171,7 +171,7 @@ outputs:
 
 ## Community vs Official Actions
 
-```txt
+```text
 Official Actions:
   actions/checkout         - GitHub maintained
   actions/setup-node       - GitHub maintained

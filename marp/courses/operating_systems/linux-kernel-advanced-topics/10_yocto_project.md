@@ -157,7 +157,7 @@ source oe-init-build-env
 
 ## Build Directory Structure
 
-```txt
+```tree
 build/
 ├── conf/
 │   ├── local.conf
@@ -299,7 +299,7 @@ bitbake-layers show-layers
 
 ## Layer Structure
 
-```txt
+```tree
 meta-custom/
 ├── conf/
 │   └── layer.conf

@@ -554,7 +554,7 @@ coro.close()                 # Coroutine closing, cleanup complete
 - Maximize I/O efficiency
 - Different from parallelism (multi-threading/processing)
 
-```txt
+```diagram
 Synchronous vs. Asynchronous:
 
 Synchronous (Blocking):
@@ -585,7 +585,7 @@ Asynchronous (Non-blocking):
 - Event-driven systems
 - Not ideal for CPU-bound tasks
 
-```txt
+```text
 Good Async Use Cases:
 - Web servers handling many connections
 - API clients making multiple requests
@@ -610,18 +610,16 @@ Less Suitable:
 - Threading: Multiple threads, preemptive multitasking
 - Multiprocessing: Multiple processes, true parallelism
 
-```txt
-Characteristic | Async          | Threading      | Multiprocessing
---------------|----------------|----------------|----------------
-Concurrency   | Yes            | Yes            | Yes
-Parallelism   | No             | Limited by GIL | Yes
-Switching     | Cooperative    | Preemptive     | Process-based
-Memory        | Shared         | Shared         | Separate
-Complexity    | Medium         | High           | High
-Best for      | I/O-bound tasks| Mixed workloads| CPU-bound tasks
-Communication | Direct         | Locks, queues  | Pipes, queues
-Overhead      | Low            | Medium         | High
-```
+| Characteristic | Async | Threading | Multiprocessing |
+|---------------|-------|-----------|-----------------|
+| Concurrency | Yes | Yes | Yes |
+| Parallelism | No | Limited by GIL | Yes |
+| Switching | Cooperative | Preemptive | Process-based |
+| Memory | Shared | Shared | Separate |
+| Complexity | Medium | High | High |
+| Best for | I/O-bound tasks | Mixed workloads | CPU-bound tasks |
+| Communication | Direct | Locks, queues | Pipes, queues |
+| Overhead | Low | Medium | High |
 
 ---
 
@@ -634,7 +632,7 @@ Overhead      | Low            | Medium         | High
 - Python 3.6+: Improved async features
 - Ecosystem: asyncio, trio, curio, twisted, tornado
 
-```txt
+```text
 Timeline of Python Async Evolution:
 - Pre-3.4: Generator-based coroutines, third-party libraries
 - Python 3.4: asyncio introduced with @asyncio.coroutine

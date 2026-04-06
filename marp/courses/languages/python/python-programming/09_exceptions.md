@@ -139,7 +139,7 @@ finally:
     print("Done!")              # Always runs
 ```
 
-```txt
+```output
 Result: 5.0
 Done!
 ```
@@ -236,7 +236,7 @@ except HttpError as e:
 ---
 ## Exception Hierarchy
 
-```txt
+```tree
 BaseException
   +-- SystemExit
   +-- KeyboardInterrupt

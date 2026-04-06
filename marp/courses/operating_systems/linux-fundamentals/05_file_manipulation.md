@@ -55,7 +55,7 @@ ls -R
 
 Output example:
 
-```txt
+```console
 -rw-r--r-- 1 user group 4.0K Nov 19 10:00 file.txt
 drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 ```

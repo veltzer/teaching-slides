@@ -40,7 +40,7 @@ Key components:
 
 Structure:
 
-```txt
+```text
 username:x:UID:GID:comment:home:shell
 ```
 
@@ -91,7 +91,7 @@ wc -l /etc/passwd
 
 Structure:
 
-```txt
+```text
 username:password:lastchg:min:max:warn:inactive:expire:
 ```
 
@@ -123,7 +123,7 @@ chown -R john:developers directory/
 
 Output example:
 
-```txt
+```console
 -rw-r--r-- 1 john developers 4096 Nov 19 10:00 file.txt
 ```
 
@@ -150,7 +150,7 @@ Output example:
 
 Symbolic notation:
 
-```txt
+```diagram
 rwxr-xr--
 │││││││││
 ││││││││└─ Others: no execute
@@ -169,7 +169,7 @@ rwxr-xr--
 
 Permission calculation:
 
-```txt
+```text
 r = 4 (100 binary)
 w = 2 (010 binary)
 x = 1 (001 binary)
@@ -177,7 +177,7 @@ x = 1 (001 binary)
 
 Examples:
 
-```txt
+```text
 rwx = 7 (4+2+1)
 rw- = 6 (4+2+0)
 r-x = 5 (4+0+1)
@@ -186,7 +186,7 @@ r-- = 4 (4+0+0)
 
 Full permission string:
 
-```txt
+```text
 chmod 754 file.txt
 # rwxr-xr--
 # 7   5   4

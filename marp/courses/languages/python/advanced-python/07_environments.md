@@ -146,7 +146,7 @@ safety check
 - Standard practice for Python development
 - Critical for dependency management
 
-```txt
+```diagram
 Project A              Project B
 +--------------+      +--------------+
 | Python 3.8   |      | Python 3.9   |
@@ -179,7 +179,7 @@ Project A              Project B
 - Modifies PATH environment variable when activated
 - Doesn't affect global Python installation
 
-```txt
+```tree
 Virtual Environment Structure:
 venv/
 ├── bin/ (or Scripts/ on Windows)
@@ -293,7 +293,7 @@ pip install -r requirements.txt
 - Separate requirements files
 - Use includes for shared dependencies
 
-```txt
+```config
 # requirements.txt (production)
 -r requirements-base.txt
 gunicorn==20.1.0
@@ -687,7 +687,7 @@ conda env export > environment.yml
 - **Development workflow**
 - **Platform requirements**
 
-```txt
+```text
 Small projects                 → venv + pip
 Complex dependencies           → poetry or pipenv
 Data science                   → conda
@@ -707,7 +707,7 @@ Existing projects with setup.py → pip-tools
 - Backwards compatibility rules
 - Used by most Python packages
 
-```txt
+```text
 MAJOR: Incompatible API changes
 MINOR: Add functionality (backwards-compatible)
 PATCH: Bug fixes (backwards-compatible)
@@ -730,7 +730,7 @@ Examples:
 - `!=`: Excludes version
 - Comma for multiple constraints
 
-```txt
+```config
 requests==2.25.1      # Exactly version 2.25.1
 requests>=2.25.0      # Version 2.25.0 or higher
 requests<3.0.0        # Any version less than 3.0.0
@@ -947,7 +947,7 @@ echo "Development environment ready!"
 - Automate dependency updates
 - Keep an eye on security alerts
 
-```txt
+```text
 # For applications
 1. Use pipenv/poetry/pip-tools to lock ALL dependencies
 2. Run CI with locked versions
@@ -1183,7 +1183,7 @@ pip install --no-index --find-links=./packages -r requirements.txt
 - Development dependencies
 - Testing across package boundaries
 
-```txt
+```tree
 monorepo/
 ├── pyproject.toml (workspace config)
 ├── common/

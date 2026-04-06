@@ -56,7 +56,7 @@ cmake --build .
 ./hello
 ```
 
-```txt
+```output
 Hello, CMake!
 ```
 
@@ -64,7 +64,7 @@ Hello, CMake!
 
 ## Project Directory Layout
 
-```txt
+```tree
 hello_project/
     CMakeLists.txt
     main.cpp
@@ -349,7 +349,7 @@ target_link_libraries(app PRIVATE mylib)
 
 ## Visualizing Property Propagation
 
-```txt
+```diagram
 mylib (PUBLIC include/, PUBLIC -DUSE_MYLIB)
   |
   v (target_link_libraries)

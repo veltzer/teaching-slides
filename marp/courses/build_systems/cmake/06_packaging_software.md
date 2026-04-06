@@ -99,7 +99,7 @@ include(CPack)
 
 ## Running cpack
 
-```txt
+```console
 cd build
 cpack
 ```
@@ -108,7 +108,7 @@ cpack
 - Produces packages in the build directory
 - Uses the install rules to collect files
 
-```txt
+```console
 cpack -G TGZ
 cpack -G ZIP
 cpack -G DEB
@@ -140,7 +140,7 @@ set(CPACK_PACKAGE_VERSION "1.0.0")
 include(CPack)
 ```
 
-```txt
+```console
 cd build && cpack -G TGZ
 ```
 
@@ -158,7 +158,7 @@ set(CPACK_GENERATOR "ZIP;TXZ")
 include(CPack)
 ```
 
-```txt
+```console
 cpack -G ZIP
 cpack -G TXZ
 ```
@@ -424,7 +424,7 @@ include(CPack)
 
 ## Building and Packaging
 
-```txt
+```console
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build
 cd build

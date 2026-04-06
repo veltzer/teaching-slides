@@ -78,7 +78,7 @@ Not a fork, but integration:
 
 Foundation metadata:
 
-```txt
+```tree
 meta/
 ├── classes/         # Base classes
 ├── conf/           # Core configuration
@@ -297,7 +297,7 @@ PACKAGE_CLASSES = "package_rpm"
 
 ## Layer Structure
 
-```txt
+```tree
 meta-custom/
 ├── COPYING.MIT
 ├── README
@@ -765,7 +765,7 @@ bootloader --ptable msdos
 
 Repository structure:
 
-```txt
+```tree
 tmp/deploy/rpm/
 ├── all/           # Architecture-independent
 ├── cortexa9hf/    # Machine-specific

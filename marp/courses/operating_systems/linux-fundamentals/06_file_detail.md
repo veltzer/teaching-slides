@@ -266,7 +266,7 @@ df -i
 
 Example output:
 
-```txt
+```console
 # ls -i
 12345 file.txt
 12345 hardlink.txt  # Same inode number

@@ -49,7 +49,7 @@
 
 ## State File Lifecycle
 
-```txt
+```diagram
 terraform init
     |
     v
@@ -133,7 +133,7 @@ resource "aws_instance" "web" {
 
 ## Remote State Overview
 
-```txt
+```diagram
 Local State:                    Remote State:
 +----------+                    +----------+
 | Laptop A |---> local file     | Laptop A |--+
@@ -292,7 +292,7 @@ terraform {
 
 ## State Locking
 
-```txt
+```text
 Without Locking:
 User A: terraform apply  --+
                             +--> CONFLICT!
@@ -307,7 +307,7 @@ User B: terraform apply  --> Waits for lock --> Acquires --> Apply
 
 ## State Lock Error
 
-```txt
+```output
 Error: Error locking state: Error acquiring the state lock
 
 Lock Info:
@@ -328,7 +328,7 @@ terraform force-unlock a1b2c3d4-e5f6-7890
 
 ## State File Organization Patterns
 
-```txt
+```text
 Pattern 1: Single state file
   all-resources/ -> terraform.tfstate
 
@@ -347,7 +347,7 @@ Pattern 3: Per-component states
 
 ## Key Path Strategies for S3
 
-```txt
+```tree
 s3://my-terraform-state/
 ├── global/
 │   └── iam/terraform.tfstate
@@ -433,7 +433,7 @@ terraform untaint aws_instance.web    # deprecated
 
 ## State Backup
 
-```txt
+```text
 Automatic backups:
   terraform.tfstate         # Current state
   terraform.tfstate.backup  # Previous state
@@ -454,7 +454,7 @@ Manual backup:
 - Passwords, API keys, and secrets are stored in plaintext
 - Always encrypt state at rest
 
-```txt
+```text
 Mitigations:
   1. Use encrypted backends (S3 with KMS, Azure with encryption)
   2. Restrict access to state storage (IAM policies)

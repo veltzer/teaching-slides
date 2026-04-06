@@ -677,7 +677,7 @@ do_benchmark() {
 
 Artifact structure:
 
-```txt
+```tree
 artifacts/
 ├── images/
 │   ├── core-image-minimal-qemux86-64.wic

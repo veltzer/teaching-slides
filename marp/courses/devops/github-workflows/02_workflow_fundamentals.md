@@ -114,7 +114,7 @@ jobs:
     - `aws-cli`, `az`, `gcloud`
 - Full list available at:
 
-```txt
+```text
 https://github.com/actions/runner-images
 ```
 
@@ -148,7 +148,7 @@ jobs:
 
 ## Job Dependency Flow
 
-```txt
+```diagram
 Without needs:          With needs:
 
 +------+ +------+      +------+

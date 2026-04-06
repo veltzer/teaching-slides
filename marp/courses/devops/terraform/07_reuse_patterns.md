@@ -12,7 +12,7 @@
 
 ## Reuse Strategies in Terraform
 
-```txt
+```diagram
 +------------------+     +------------------+
 | Workspaces       |     | Modules          |
 | Same config,     |     | Reusable config  |
@@ -218,7 +218,7 @@ resource "aws_instance" "web" {
 
 ## Module Structure
 
-```txt
+```tree
 modules/vpc/
 ├── main.tf         # Resources
 ├── variables.tf    # Input variables
@@ -381,7 +381,7 @@ module "vpc" {
 
 ## Terraform Registry
 
-```txt
+```tree
 registry.terraform.io
 ├── Providers
 │   ├── hashicorp/aws
@@ -452,7 +452,7 @@ module "database" {
 
 ## Module Composition Diagram
 
-```txt
+```diagram
 +----------------+
 |  Root Module   |
 +-------+--------+
@@ -511,7 +511,7 @@ module "services" {
 
 ## Private Module Registry
 
-```txt
+```text
 Options for sharing modules privately:
 
 1. Git repositories (GitHub, GitLab, Bitbucket)

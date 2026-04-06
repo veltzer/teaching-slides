@@ -76,7 +76,7 @@
 
 ## Terraform Architecture
 
-```txt
+```diagram
 +------------------+     +------------------+
 |  Terraform CLI   |     |  State File      |
 |                  |     |  (terraform.tfstate)
@@ -112,7 +112,7 @@
 
 ## Terraform Workflow Diagram
 
-```txt
+```diagram
   Write .tf files
        |
        v
@@ -289,7 +289,7 @@ name_map = {for name in var.names : name => upper(name)}
 
 ## Terraform Configuration Blocks
 
-```txt
+```diagram
 +--------------------------------------------------+
 |  Terraform Config File (.tf)                     |
 |                                                  |
@@ -401,7 +401,7 @@ terraform destroy
 
 ## Understanding terraform init Output
 
-```txt
+```output
 Initializing the backend...
 
 Initializing provider plugins...
@@ -420,7 +420,7 @@ for your infrastructure.
 
 ## Understanding terraform plan Output
 
-```txt
+```output
 Terraform will perform the following actions:
 
   # local_file.hello will be created

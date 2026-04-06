@@ -54,7 +54,7 @@ Primary development tool for Yocto:
 
 Workspace concept:
 
-```txt
+```tree
 workspace/
 ├── conf/
 │   └── layer.conf

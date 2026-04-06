@@ -16,7 +16,7 @@
 
 ## Why CI/CD Matters
 
-```txt
+```text
 Without CI/CD:
   Developer -> Manual Build -> Manual Test -> Manual Deploy -> Production
                   (hours)        (hours)         (hours)
@@ -47,7 +47,7 @@ With CI/CD:
 
 ## GitHub Actions Architecture
 
-```txt
+```diagram
 +-------------------+
 |    GitHub Event    |  (push, PR, schedule, etc.)
 +--------+----------+
@@ -154,7 +154,7 @@ jobs:
 1. Choose a starter workflow or create from scratch
 1. The workflow file is created at:
 
-```txt
+```tree
 your-repo/
   .github/
     workflows/
@@ -170,7 +170,7 @@ your-repo/
 - Multiple workflow files can coexist
 - Each file defines an independent workflow
 
-```txt
+```tree
 .github/
   workflows/
     ci.yml          # Runs tests on push

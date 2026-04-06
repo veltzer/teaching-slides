@@ -738,7 +738,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - Declare desired state of each environment in `Git`
 - Repository structure:
 
-```txt
+```tree
 environments/
   base/                  # Shared resources
     deployment.yaml

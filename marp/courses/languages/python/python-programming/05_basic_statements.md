@@ -90,7 +90,7 @@ for item, price in [("Apple", 1.5), ("Banana", 0.75)]:
     print(f"{item:<10} ${price:>6.2f}")
 ```
 
-```txt
+```output
 Alice is 30 and scored 95.7
 Apple      $  1.50
 Banana     $  0.75
@@ -180,7 +180,7 @@ while count < 5:
     count += 1
 ```
 
-```txt
+```output
 0
 1
 2
@@ -285,7 +285,7 @@ for i in range(1, 4):
     print()
 ```
 
-```txt
+```output
 1x1=1   1x2=2   1x3=3
 2x1=2   2x2=4   2x3=6
 3x1=3   3x2=6   3x3=9
@@ -322,7 +322,7 @@ for i in range(10):
 ---
 ## `break` vs `continue` Diagram
 
-```txt
+```diagram
 for item in items:       for item in items:
     ...                      ...
     if cond:                 if cond:
@@ -513,7 +513,7 @@ for color in reversed(colors):
     print(color)
 ```
 
-```txt
+```output
 blue
 green
 red

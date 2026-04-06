@@ -182,7 +182,7 @@ mount -o noexec,nosuid /dev/sdb1 /mnt/data
 # Persistent mount in /etc/fstab
 ```
 
-```txt
+```config
 # /etc/fstab
 # <device>       <mount>     <type>  <options>         <dump> <fsck>
 UUID=abc-123     /mnt/data   ext4    defaults,noatime  0      2
@@ -747,13 +747,13 @@ chmod 600 /root/luks-keyfile
 cryptsetup luksAddKey /dev/sdb1 /root/luks-keyfile
 ```
 
-```txt
+```config
 # /etc/crypttab
 # name      device          key file            options
 secure_data /dev/sdb1       /root/luks-keyfile  luks
 ```
 
-```txt
+```config
 # /etc/fstab
 /dev/mapper/secure_data  /mnt/secure  ext4  defaults  0  2
 ```

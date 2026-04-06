@@ -63,7 +63,7 @@ on:
 
 - Uses standard cron syntax (UTC timezone)
 
-```txt
+```cron
  ┌───────────── minute (0-59)
  │ ┌───────────── hour (0-23)
  │ │ ┌───────────── day of month (1-31)

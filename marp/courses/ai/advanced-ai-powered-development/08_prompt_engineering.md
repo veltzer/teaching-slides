@@ -118,12 +118,11 @@ Given a code snippet and error message, identify the
 root cause. Output JSON with keys: root_cause,
 affected_line, fix, explanation.
 
-USER: Code: ```python
+USER: Code: python
 data = json.loads(response)
 result = data["users"][0]["name"]
-```
 Error: KeyError: 'users'
-```txt
+```
 
 ## Debugging Checklist
 1. Check for ambiguous instructions the model could misinterpret
@@ -406,7 +405,7 @@ def build_review_prompt(file_path: str, diff: str,
 
 ## Template Engines for Prompts
 
-```python
+````python
 from jinja2 import Template
 
 REVIEW_TEMPLATE = Template("""
@@ -427,8 +426,7 @@ prompt = REVIEW_TEMPLATE.render(
     threshold="medium",
     code=source_code
 )
-
-```txt
+````
 
 - Store templates in version control alongside code
 - Parameterize language, focus areas, output format

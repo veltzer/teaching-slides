@@ -195,7 +195,7 @@ Note: `/etc/resolv.conf` is often a symlink to `systemd-resolved`'s stub.
 apt install isc-dhcp-server
 ```
 
-```txt
+```config
 # /etc/dhcp/dhcpd.conf
 subnet 192.168.1.0 netmask 255.255.255.0 {
     range 192.168.1.100 192.168.1.200;
@@ -215,7 +215,7 @@ host printer {
 ---
 ## DHCP Advanced Options
 
-```txt
+```config
 # /etc/dhcp/dhcpd.conf (continued)
 
 # PXE boot support
@@ -266,7 +266,7 @@ timedatectl status
 ---
 ## chrony Advanced Configuration
 
-```txt
+```config
 # /etc/chrony/chrony.conf
 
 # Multiple sources for accuracy
@@ -322,7 +322,7 @@ nft add rule inet filter input \
 ---
 ## nftables Configuration File
 
-```txt
+```config
 #!/usr/sbin/nft -f
 # /etc/nftables.conf
 

@@ -275,7 +275,7 @@ Response:
 
 Most convenient for development:
 
-```txt
+```console
 GET /_cluster/health
 
 POST /products/_doc

@@ -71,7 +71,7 @@ pip install -r requirements.txt
 ---
 ## `requirements.txt` Format
 
-```txt
+```config
 requests==2.31.0
 numpy>=1.24.0
 pandas~=2.0
@@ -91,7 +91,7 @@ pytest>=7.0
 - Reproducible environments across machines
 - Isolation prevents conflicts
 
-```txt
+```diagram
 Project A: requests==2.28
 Project B: requests==2.31
 System: ???
@@ -137,7 +137,7 @@ deactivate
 ---
 ## Virtual Environment Structure
 
-```txt
+```tree
 .venv/
   bin/           (Scripts/ on Windows)
     activate

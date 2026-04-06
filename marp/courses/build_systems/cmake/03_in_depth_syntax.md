@@ -25,7 +25,7 @@ message(STATUS "Value: ${MY_VAR}")
 message(STATUS "Files: ${SRC_FILES}")
 ```
 
-```txt
+```output
 -- Value: Hello
 -- Files: main.cpp;utils.cpp;parser.cpp
 ```
@@ -185,7 +185,7 @@ set(CMAKE_CXX_COMPILER "/usr/bin/g++")
 message(STATUS "${CMAKE_${lang}_COMPILER}")
 ```
 
-```txt
+```output
 -- /usr/bin/g++
 ```
 
@@ -304,13 +304,13 @@ endif()
 
 Truthy values:
 
-```txt
+```text
 1, ON, YES, TRUE, Y, any non-zero number
 ```
 
 Falsy values:
 
-```txt
+```text
 0, OFF, NO, FALSE, N, IGNORE, NOTFOUND,
 empty string, string ending in -NOTFOUND
 ```
@@ -394,7 +394,7 @@ foreach(i RANGE 0 10 2)
 endforeach()
 ```
 
-```txt
+```output
 -- i = 0
 -- i = 2
 -- i = 4
@@ -440,7 +440,7 @@ while(counter LESS 5)
 endwhile()
 ```
 
-```txt
+```output
 -- counter = 0
 -- counter = 1
 -- counter = 2
@@ -551,7 +551,7 @@ endmacro()
 print_banner("Build Started")
 ```
 
-```txt
+```output
 -- ===========================
 -- Build Started
 -- ===========================
@@ -610,7 +610,7 @@ endfunction()
 my_func(hello extra1 extra2)
 ```
 
-```txt
+```output
 -- ARGC: 3
 -- ARGV: hello;extra1;extra2
 -- ARGN: extra1;extra2

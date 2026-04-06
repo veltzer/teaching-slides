@@ -22,7 +22,7 @@ time {
 ---
 ## Understanding `time` Output
 
-```txt
+```text
 real = Wall clock time (what a stopwatch measures)
 user = CPU time in user space (your code)
 sys  = CPU time in kernel space (system calls)

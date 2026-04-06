@@ -783,7 +783,7 @@ repos:
 - Ratio should favor unit tests (fast, focused)
 - Balance coverage and test time
 
-```txt
+```diagram
         /\
        /  \
       /    \
@@ -1281,7 +1281,7 @@ print(custom_mock(5))  # 10
 - Package vs. module testing
 - Integration with build tools
 
-```txt
+```tree
 project/
 ├── src/
 │   └── mypackage/
@@ -1555,7 +1555,7 @@ directory = coverage_html_report
 - Balancing coverage and maintainability
 - Setting reasonable targets
 
-```txt
+```text
 Coverage Report Guidelines:
 - Aim for 80%+ coverage for critical code
 - Look for uncovered code in error handling paths

@@ -200,7 +200,7 @@ Return results as: review_id | sentiment | confidence
 
 A systematic approach to prompt construction:
 
-```txt
+```text
 C - Capacity:    What role should the AI assume?
 R - Request:     What specifically do you want?
 I - Information: What context/data does it need?
@@ -288,7 +288,7 @@ review_prompt = code_review_template.substitute(
 
 ## Iterative Prompt Refinement
 
-```txt
+```text
 Iteration 1: "Write a regex for email validation"
 Result: Simple regex, misses edge cases
 
@@ -306,7 +306,7 @@ Result: Well-balanced, tested solution
 
 Process:
   Write prompt → Test output → Identify gaps → Refine → Repeat
-```text
+```
 
 ---
 
@@ -318,7 +318,7 @@ Process:
 | **Decomposition** | Break complex tasks | "First X, then Y, then Z" |
 | **Enumeration** | Request numbered items | "List exactly 5 points" |
 | **Constraint** | Limit the output | "In under 100 words" |
-| **Template** | Provide output structure | "Fill in: Name: ___, Age: ___" |
+| **Template** | Provide output structure | "Fill in: Name: \_\_\_, Age: \_\_\_" |
 | **Reflection** | Ask model to check itself | "Verify your answer" |
 | **Comparison** | Ask for pros/cons | "Compare A and B in a table" |
 | **Step-by-step** | Request reasoning | "Think step by step" |
@@ -327,7 +327,7 @@ Process:
 
 ## Prompt Injection — Security Concern
 
-```
+```text
 User-facing applications must guard against prompt injection:
 
 Normal user: "Translate 'hello' to French"
@@ -345,7 +345,7 @@ DEFENSES:
 │ 4. Delimiter separation — clearly mark user input │
 │ 5. Prompt armor — explicit anti-injection text     │
 └──────────────────────────────────────────────────┘
-```text
+```
 
 ---
 

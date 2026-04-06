@@ -58,7 +58,7 @@ resource "google_compute_instance" "web_server" {
 - Must be declared in the `terraform` block
 - Downloaded during `terraform init`
 
-```txt
+```diagram
 +-------------+     +----------+     +---------+
 | Terraform   |---->| Provider |---->| Cloud   |
 | Core        |     | Plugin   |     | API     |
@@ -313,7 +313,7 @@ resource "aws_subnet" "public" {
 }
 ```
 
-```txt
+```diagram
 aws_vpc.main  --->  aws_subnet.public
   (created first)    (created second)
 ```
@@ -459,7 +459,7 @@ resource "aws_instance" "servers" {
 
 ## Resource Lifecycle
 
-```txt
+```diagram
 Create:  terraform apply  -->  API call  -->  State updated
 Read:    terraform plan   -->  API call  -->  Compare to config
 Update:  terraform apply  -->  API call  -->  State updated
@@ -510,7 +510,7 @@ resource "aws_instance" "web" {
 }
 ```
 
-```txt
+```text
 Default:    Destroy old --> Create new  (downtime)
 With flag:  Create new  --> Destroy old (zero downtime)
 ```
@@ -647,7 +647,7 @@ resource "null_resource" "example" {
 - Visit `registry.terraform.io`
 - Browse by provider and resource type
 
-```txt
+```tree
 registry.terraform.io
     └── providers/
         └── hashicorp/

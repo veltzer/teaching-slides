@@ -1374,7 +1374,7 @@ if __name__ == "__main__":
 - Must contain `__init__.py` (for Python < 3.3)
 - Can contain sub-packages
 
-```txt
+```tree
 mypackage/
 ├── __init__.py
 ├── module1.py

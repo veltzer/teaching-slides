@@ -229,7 +229,7 @@ Configuration files in `/etc/pam.d/`.
 ---
 ## PAM Configuration Example
 
-```txt
+```config
 # /etc/pam.d/common-auth
 auth    required    pam_env.so
 auth    required    pam_faildelay.so delay=2000000
@@ -266,7 +266,7 @@ Control flags:
 ---
 ## PAM Practical: Login Restrictions
 
-```txt
+```config
 # /etc/security/access.conf
 # Deny all except specific users from remote
 - : ALL EXCEPT alice bob : ALL
@@ -296,7 +296,7 @@ visudo
 # /etc/sudoers examples
 ```
 
-```txt
+```config
 # User privilege specification
 alice   ALL=(ALL:ALL) ALL
 
@@ -336,7 +336,7 @@ Cmnd_Alias SHUTDOWN = /sbin/halt, /sbin/reboot, /sbin/poweroff
 ADMINS WEBSERVERS=(ALL) SHUTDOWN
 ```
 
-```txt
+```config
 # Logging all sudo commands
 Defaults  logfile="/var/log/sudo.log"
 Defaults  log_input, log_output
@@ -389,7 +389,7 @@ ssh-keygen -e -f key.pub -m RFC4716 > key.rfc
 ---
 ## SSH Config File
 
-```txt
+```config
 # ~/.ssh/config
 Host prod-web
     HostName 10.0.1.50
@@ -415,7 +415,7 @@ ssh internal-db
 ---
 ## SSH Config Advanced Options
 
-```txt
+```config
 # ~/.ssh/config
 
 # Multiplexing (reuse connections)
@@ -487,7 +487,7 @@ ssh -D 1080 -N -f user@server
 ---
 ## SSH Hardening
 
-```txt
+```config
 # /etc/ssh/sshd_config
 PermitRootLogin no
 PasswordAuthentication no
@@ -508,7 +508,7 @@ systemctl restart sshd
 ---
 ## SSH Hardening: Advanced Options
 
-```txt
+```config
 # /etc/ssh/sshd_config (continued)
 # Restrict key exchange algorithms
 KexAlgorithms curve25519-sha256,curve25519-sha256@libssh.org
@@ -616,7 +616,7 @@ tripwire --check
 ---
 ## AIDE Configuration
 
-```txt
+```config
 # /etc/aide/aide.conf
 # Define what to monitor
 /etc    p+i+u+g+sha256
@@ -856,12 +856,12 @@ google-authenticator
 # disallow reuse, rate limiting
 ```
 
-```txt
+```config
 # /etc/pam.d/sshd - add after @include common-auth
 auth required pam_google_authenticator.so
 ```
 
-```txt
+```config
 # /etc/ssh/sshd_config
 ChallengeResponseAuthentication yes
 AuthenticationMethods publickey,keyboard-interactive
@@ -889,12 +889,12 @@ ssh-keygen -s ca_key -I web1.example.com \
   -h -n web1.example.com /etc/ssh/ssh_host_ed25519_key.pub
 ```
 
-```txt
+```config
 # /etc/ssh/sshd_config - trust the CA
 TrustedUserCAKeys /etc/ssh/ca_key.pub
 ```
 
-```txt
+```config
 # ~/.ssh/known_hosts - trust host CA
 @cert-authority *.example.com <ca_public_key>
 ```

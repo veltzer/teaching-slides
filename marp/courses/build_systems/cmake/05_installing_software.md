@@ -435,7 +435,7 @@ install(FILES
 
 ## Installed Package Layout
 
-```txt
+```tree
 /usr/local/
     lib/
         libmylib.so

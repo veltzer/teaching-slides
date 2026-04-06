@@ -162,7 +162,7 @@ jobs:
 
 ## Passing Data Between Jobs
 
-```txt
+```diagram
 +-----------+     outputs      +-----------+
 |   Job A   | --------------> |   Job B   |
 |           |                 |           |

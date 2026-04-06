@@ -33,7 +33,7 @@ server {
 ---
 ## nginx Configuration Structure
 
-```txt
+```tree
 /etc/nginx/
 ├── nginx.conf              # Main config
 ├── conf.d/                 # Additional configs
@@ -200,7 +200,7 @@ systemctl restart apache2
 apt install haproxy
 ```
 
-```txt
+```config
 # /etc/haproxy/haproxy.cfg
 frontend http_front
     bind *:80
@@ -227,7 +227,7 @@ systemctl restart haproxy
 ---
 ## HAProxy: SSL Termination and Algorithms
 
-```txt
+```config
 # /etc/haproxy/haproxy.cfg
 frontend https_front
     bind *:443 ssl crt /etc/ssl/haproxy.pem
@@ -261,7 +261,7 @@ apt install postfix
 # Main config: /etc/postfix/main.cf
 ```
 
-```txt
+```config
 # Key settings in /etc/postfix/main.cf
 myhostname = mail.example.com
 mydomain = example.com
@@ -285,7 +285,7 @@ postqueue -f    # flush queue
 ---
 ## Postfix: Relay and Security
 
-```txt
+```config
 # /etc/postfix/main.cf
 
 # Relay through external SMTP
@@ -377,7 +377,7 @@ systemctl restart apache2
 ---
 ## HAProxy: ACLs and Routing
 
-```txt
+```config
 # /etc/haproxy/haproxy.cfg
 frontend http_front
     bind *:80
@@ -399,7 +399,7 @@ frontend http_front
 ---
 ## HAProxy: Health Checks
 
-```txt
+```config
 backend api_back
     balance roundrobin
     option httpchk GET /health
@@ -586,7 +586,7 @@ htpasswd -c /etc/apache2/.htpasswd admin
 
 Stick tables track client state for rate limiting and session persistence:
 
-```txt
+```config
 # /etc/haproxy/haproxy.cfg
 frontend http_front
     bind *:80
@@ -620,7 +620,7 @@ echo "show table http_front" | \
 
 Serve multiple domains from a single `Postfix` instance:
 
-```txt
+```config
 # /etc/postfix/main.cf
 virtual_mailbox_domains = domain1.com, domain2.com
 virtual_mailbox_base = /var/mail/vhosts
@@ -631,13 +631,13 @@ virtual_uid_maps = static:5000
 virtual_gid_maps = static:5000
 ```
 
-```txt
+```config
 # /etc/postfix/vmailbox
 user@domain1.com    domain1.com/user/
 admin@domain2.com   domain2.com/admin/
 ```
 
-```txt
+```config
 # /etc/postfix/virtual
 postmaster@domain1.com  admin@domain1.com
 info@domain2.com        admin@domain2.com
