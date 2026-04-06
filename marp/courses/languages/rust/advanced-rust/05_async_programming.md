@@ -86,20 +86,33 @@ async fn main() {
 
 ## The Waker Mechanism
 
-```diagram
-  ┌──────────────┐     poll()      ┌──────────────┐
-  │   Executor    │ ──────────────> │    Future     │
-  │  (runtime)    │ <────────────── │              │
-  │               │   Pending +     │  stores waker │
-  │  task queue   │   waker saved   │              │
-  └──────┬───────┘                 └──────┬───────┘
-         │                                │
-         │   wake() called                │  I/O ready
-         │ <──────────────────────────────┘
-         │
-         │  poll() again
-         │ ──────────────────────────────> Ready(value)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="320" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Future Executor / Waker Interaction</text>
+<rect x="40" y="50" width="200" height="120" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="140" y="78" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Executor</text>
+<text x="140" y="100" text-anchor="middle" font-size="12" fill="#222222">(runtime)</text>
+<text x="140" y="122" text-anchor="middle" font-size="12" fill="#222222">task queue</text>
+<rect x="400" y="50" width="200" height="120" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="500" y="78" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Future</text>
+<text x="500" y="100" text-anchor="middle" font-size="12" fill="#222222">stores waker</text>
+<text x="500" y="122" text-anchor="middle" font-size="12" fill="#222222">I/O / timer state</text>
+<line x1="240" y1="90" x2="400" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="82" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">poll()</text>
+<line x1="400" y1="130" x2="240" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="124" text-anchor="middle" font-size="11" fill="#333">Pending + waker saved</text>
+<path d="M 140 170 Q 320 270 500 170" stroke="#555" stroke-width="1.5" fill="none" marker-start="url(#arrl)"/>
+<text x="320" y="280" text-anchor="middle" font-size="12" fill="#555" font-style="italic">wake() called when I/O ready</text>
+<line x1="240" y1="150" x2="400" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="144" text-anchor="middle" font-size="11" fill="#333">poll() again → Ready(value)</text>
+</svg>
 
 The waker tells the executor: "this future is ready to make progress, poll it again."
 
@@ -199,28 +212,39 @@ impl<'a> Future for FetchDataFuture<'a> {
 
 ## State Machine Visualization
 
-```diagram
-  async fn example() {           State machine:
-      let a = foo().await;
-                                 ┌─────────────┐
-                                 │   Start      │
-                                 │ poll foo()   │
-                                 └──────┬───────┘
-                                        │ Ready(a)
-      let b = bar(a).await;     ┌──────┴───────┐
-                                 │   State 1    │
-                                 │ poll bar(a)  │
-                                 └──────┬───────┘
-                                        │ Ready(b)
-      a + b                      ┌──────┴───────┐
-                                 │   Complete   │
-                                 │ return a + b │
-                                 └──────────────┘
-  }
-
-  Each await point = potential yield point (Pending)
-  The future saves its state and resumes later.
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="360" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">async/await → State Machine</text>
+<rect x="20" y="40" width="310" height="280" fill="#f8f8f8" stroke="#aaa" stroke-width="1.5" rx="4"/>
+<text x="30" y="68" text-anchor="start" font-size="12" fill="#1a1a2e" font-weight="bold">async fn example() {</text>
+<text x="30" y="90" text-anchor="start" font-size="12" fill="#1a1a2e">    let a = foo().await;</text>
+<text x="30" y="112" text-anchor="start" font-size="12" fill="#1a1a2e">    let b = bar(a).await;</text>
+<text x="30" y="134" text-anchor="start" font-size="12" fill="#1a1a2e">    a + b</text>
+<text x="30" y="156" text-anchor="start" font-size="12" fill="#1a1a2e">}</text>
+<text x="30" y="178" text-anchor="start" font-size="12" fill="#1a1a2e"></text>
+<text x="30" y="200" text-anchor="start" font-size="12" fill="#1a1a2e">Each .await = potential yield point</text>
+<text x="30" y="222" text-anchor="start" font-size="12" fill="#1a1a2e">(future saves state, resumes later)</text>
+<rect x="390" y="60" width="220" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="500" y="86" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Start</text>
+<text x="500" y="106" text-anchor="middle" font-size="13" fill="#222222">poll foo()</text>
+<rect x="390" y="150" width="220" height="60" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="500" y="176" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">State 1</text>
+<text x="500" y="196" text-anchor="middle" font-size="13" fill="#222222">poll bar(a)</text>
+<rect x="390" y="240" width="220" height="60" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="500" y="266" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Complete</text>
+<text x="500" y="286" text-anchor="middle" font-size="13" fill="#222222">return a+b</text>
+<line x1="500" y1="120" x2="500" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="510" y="139" text-anchor="start" font-size="11" fill="#555">Ready(a)</text>
+<line x1="500" y1="210" x2="500" y2="240" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="510" y="229" text-anchor="start" font-size="11" fill="#555">Ready(b)</text>
+</svg>
 
 ---
 
@@ -357,26 +381,43 @@ How the async executor works
 
 ## Tokio Architecture
 
-```diagram
-  ┌──────────────────────────────────────────────┐
-  │                Tokio Runtime                  │
-  ├──────────────────────────────────────────────┤
-  │  ┌────────────┐  ┌────────────┐              │
-  │  │  Worker 1   │  │  Worker 2   │  ...        │
-  │  │  (thread)   │  │  (thread)   │              │
-  │  └──────┬─────┘  └──────┬─────┘              │
-  │         │               │                     │
-  │  ┌──────┴───────────────┴──────┐              │
-  │  │        Task Scheduler        │              │
-  │  │   (work-stealing queue)      │              │
-  │  └──────────────┬──────────────┘              │
-  │                 │                              │
-  │  ┌──────────────┴──────────────┐              │
-  │  │       I/O Driver (epoll)     │              │
-  │  │       Timer Wheel            │              │
-  │  └─────────────────────────────┘              │
-  └──────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="380" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="330" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Tokio Runtime Architecture</text>
+<rect x="20" y="35" width="620" height="325" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="330" y="58" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Tokio Runtime</text>
+<rect x="50" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="125" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 1</text>
+<text x="125" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<rect x="220" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="295" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 2</text>
+<text x="295" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<rect x="390" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="465" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 3</text>
+<text x="465" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<text x="570" y="105" text-anchor="middle" font-size="16" fill="#888">...</text>
+<rect x="50" y="165" width="550" height="60" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="325" y="188" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Task Scheduler</text>
+<text x="325" y="208" text-anchor="middle" font-size="12" fill="#222222">(work-stealing queue)</text>
+<line x1="125" y1="130" x2="125" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="295" y1="130" x2="295" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="465" y1="130" x2="465" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="50" y="265" width="265" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="182" y="290" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">I/O Driver (epoll)</text>
+<text x="182" y="310" text-anchor="middle" font-size="11" fill="#222222">async I/O notifications</text>
+<rect x="335" y="265" width="265" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="467" y="290" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Timer Wheel</text>
+<text x="467" y="310" text-anchor="middle" font-size="11" fill="#222222">scheduled wakeups</text>
+<line x1="182" y1="225" x2="182" y2="265" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="467" y1="225" x2="467" y2="265" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>
 
 ---
 
@@ -1197,24 +1238,54 @@ fn factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64>>
 
 ## Summary
 
-```diagram
-  ┌───────────────────────────────────────────────────────┐
-  │            Async Programming Cheatsheet                │
-  ├───────────────────────────────────────────────────────┤
-  │ Future::poll()     : Pending or Ready(T)               │
-  │ async fn           : generates a state machine         │
-  │ .await             : yield point (state transition)    │
-  │ Pin<&mut F>        : prevents moving self-ref futures  │
-  │ Unpin              : opt-out of pinning restrictions   │
-  │ tokio::spawn       : run a Send + 'static future      │
-  │ spawn_blocking     : run blocking code off-runtime     │
-  │ join!              : run all futures concurrently      │
-  │ select!            : race futures, first wins          │
-  │ Stream             : async iterator                    │
-  │ Cancellation-safe  : no partial state lost on cancel   │
-  │ async_trait        : async fn in dyn trait objects      │
-  └───────────────────────────────────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="366" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="10" y="10" width="620" height="34" fill="#1565c0" stroke="#1565c0" stroke-width="1.5" rx="4"/>
+<text x="320" y="32" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Async Programming Cheatsheet</text>
+<rect x="10" y="44" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="61" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">Future::poll()</text>
+<text x="240" y="61" text-anchor="start" font-size="12" fill="#222222">returns Pending or Ready(T)</text>
+<rect x="10" y="70" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="87" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">async fn</text>
+<text x="240" y="87" text-anchor="start" font-size="12" fill="#222222">generates a state machine</text>
+<rect x="10" y="96" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="113" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">.await</text>
+<text x="240" y="113" text-anchor="start" font-size="12" fill="#222222">yield point (state transition)</text>
+<rect x="10" y="122" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="139" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">Pin&lt;&amp;mut F&gt;</text>
+<text x="240" y="139" text-anchor="start" font-size="12" fill="#222222">prevents moving self-referential futures</text>
+<rect x="10" y="148" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="165" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">Unpin</text>
+<text x="240" y="165" text-anchor="start" font-size="12" fill="#222222">opt-out of pinning restrictions</text>
+<rect x="10" y="174" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="191" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">tokio::spawn</text>
+<text x="240" y="191" text-anchor="start" font-size="12" fill="#222222">run a Send + 'static future</text>
+<rect x="10" y="200" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="217" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">spawn_blocking</text>
+<text x="240" y="217" text-anchor="start" font-size="12" fill="#222222">run blocking code off the async runtime</text>
+<rect x="10" y="226" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="243" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">join!</text>
+<text x="240" y="243" text-anchor="start" font-size="12" fill="#222222">run all futures concurrently</text>
+<rect x="10" y="252" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="269" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">select!</text>
+<text x="240" y="269" text-anchor="start" font-size="12" fill="#222222">race futures, first one wins</text>
+<rect x="10" y="278" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="295" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">Stream</text>
+<text x="240" y="295" text-anchor="start" font-size="12" fill="#222222">async iterator</text>
+<rect x="10" y="304" width="620" height="26" fill="#f0f4f8" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="321" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">Cancellation-safe</text>
+<text x="240" y="321" text-anchor="start" font-size="12" fill="#222222">no partial state lost on cancel</text>
+<rect x="10" y="330" width="620" height="26" fill="#e8edf2" stroke="#ccc" stroke-width="1.5" rx="4"/>
+<text x="20" y="347" text-anchor="start" font-size="12" fill="#1565c0" font-weight="bold">async_trait</text>
+<text x="240" y="347" text-anchor="start" font-size="12" fill="#222222">async fn in dyn trait objects</text>
+</svg>
 
 ---
 

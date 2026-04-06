@@ -2,19 +2,28 @@
 
 ## Packer Use Case Overview
 
-```diagram
-+-------------------+     +-------------------+
-| AWS AMIs          |     | Container Images  |
-| Production server |     | Docker, ECR, ACR  |
-| images            |     |                   |
-+-------------------+     +-------------------+
-
-+-------------------+     +-------------------+
-| VirtualBox/VMware |     | Multi-Cloud       |
-| Development VMs   |     | Same image for    |
-| Vagrant boxes     |     | AWS + Azure + GCP |
-+-------------------+     +-------------------+
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="226" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="10" y="10" width="240" height="88" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="130.0" y="45.0" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">AWS AMIs</text>
+<text x="130.0" y="63.0" text-anchor="middle" font-size="13" fill="#222222">Production server images</text>
+<rect x="280" y="10" width="240" height="88" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="400.0" y="45.0" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Container Images</text>
+<text x="400.0" y="63.0" text-anchor="middle" font-size="13" fill="#222222">Docker, ECR, ACR</text>
+<rect x="10" y="128" width="240" height="88" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="130.0" y="163.0" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">VirtualBox/VMware</text>
+<text x="130.0" y="181.0" text-anchor="middle" font-size="13" fill="#222222">Development VMs, Vagrant</text>
+<rect x="280" y="128" width="240" height="88" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="400.0" y="163.0" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Multi-Cloud</text>
+<text x="400.0" y="181.0" text-anchor="middle" font-size="13" fill="#222222">AWS + Azure + GCP images</text>
+</svg>
 
 ---
 
@@ -298,29 +307,37 @@ resource "aws_launch_template" "web" {
 
 ## Blue-Green Deployment with Packer
 
-```diagram
-Phase 1: Build new AMI
-  Packer build -> AMI v2
-
-Phase 2: Deploy alongside old
-  Terraform creates new ASG with AMI v2
-  Old ASG (AMI v1) still running
-
-Phase 3: Switch traffic
-  Update ALB target group to new ASG
-
-Phase 4: Cleanup
-  Terminate old ASG
-
-  +--------+     +--------+
-  | ALB    |     | ALB    |
-  +---+----+     +---+----+
-      |              |
-  +---v----+     +---v----+
-  | ASG v1 |     | ASG v2 |
-  +--------+     +--------+
-   (before)       (after)
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Blue-Green Deployment with Packer</text>
+<text x="20" y="45" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 1: Build new AMI</text>
+<text x="30" y="61" text-anchor="start" font-size="12" fill="#444">Packer build → AMI v2</text>
+<text x="20" y="81" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 2: Deploy alongside old</text>
+<text x="30" y="97" text-anchor="start" font-size="12" fill="#444">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
+<text x="20" y="117" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 3: Switch traffic</text>
+<text x="30" y="133" text-anchor="start" font-size="12" fill="#444">Update ALB target group to new ASG</text>
+<text x="20" y="153" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 4: Cleanup</text>
+<text x="30" y="169" text-anchor="start" font-size="12" fill="#444">Terminate old ASG</text>
+<text x="160" y="232" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Before</text>
+<rect x="80" y="250" width="160" height="45" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="160" y="276" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ALB</text>
+<line x1="160" y1="295" x2="160" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="80" y="345" width="160" height="45" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="160" y="371" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ASG v1</text>
+<text x="460" y="232" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">After</text>
+<rect x="380" y="250" width="160" height="45" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="460" y="276" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ALB</text>
+<line x1="460" y1="295" x2="460" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="380" y="345" width="160" height="45" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="460" y="371" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ASG v2</text>
+</svg>
 
 ---
 
@@ -618,18 +635,36 @@ resource "aws_instance" "web" {
 
 ## Image Pipeline Best Practices
 
-```diagram
-Source Image (Ubuntu base)
-    |
-    v
-Base Image (security hardening, monitoring agents)
-    |
-    +-----------+-----------+
-    |           |           |
-    v           v           v
-Web Server  API Server  Worker
-Image       Image       Image
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="240" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="310" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Image Pipeline</text>
+<rect x="180" y="35" width="260" height="38" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="310" y="58" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Source Image  (Ubuntu base)</text>
+<line x1="310" y1="73" x2="310" y2="103" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="130" y="103" width="360" height="38" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="310" y="126" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Base Image  (security hardening, monitoring agents)</text>
+<line x1="310" y1="141" x2="310" y2="155" stroke="#555" stroke-width="1.5"/>
+<line x1="80" y1="155" x2="540" y2="155" stroke="#555" stroke-width="1.5"/>
+<line x1="80" y1="155" x2="80" y2="175" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="10" y="175" width="140" height="50" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="80" y="197" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Web Server</text>
+<text x="80" y="214" text-anchor="middle" font-size="12" fill="#222222">Image</text>
+<line x1="310" y1="155" x2="310" y2="175" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="240" y="175" width="140" height="50" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="310" y="197" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">API Server</text>
+<text x="310" y="214" text-anchor="middle" font-size="12" fill="#222222">Image</text>
+<line x1="540" y1="155" x2="540" y2="175" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="470" y="175" width="140" height="50" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="540" y="197" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker</text>
+<text x="540" y="214" text-anchor="middle" font-size="12" fill="#222222">Image</text>
+</svg>
 
 - Build images in layers
 - Base image updated monthly for security patches
@@ -755,21 +790,33 @@ file:
 
 ## Immutable Infrastructure Pattern
 
-```diagram
-Mutable:                        Immutable:
-+--------+                      +--------+
-| Server | <-- SSH in           | Server | <-- Replace entirely
-| v1     |     modify           | v1     |
-| v1.1   |     in place         +--------+
-| v1.2   |
-+--------+                      +--------+
-                                | Server | <-- New image
-                                | v2     |
-                                +--------+
-
-Packer enables immutable infrastructure:
-  New code -> New image -> New servers -> Old servers removed
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="320" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Mutable vs Immutable Infrastructure</text>
+<text x="145" y="48" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Mutable</text>
+<rect x="30" y="58" width="230" height="130" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="145" y="83" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Server</text>
+<text x="145" y="105" text-anchor="middle" font-size="12" fill="#222222">v1 → v1.1 → v1.2</text>
+<text x="145" y="127" text-anchor="middle" font-size="12" fill="#222222">← SSH in, modify</text>
+<text x="145" y="149" text-anchor="middle" font-size="12" fill="#222222">   in place</text>
+<text x="520" y="48" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Immutable</text>
+<rect x="390" y="58" width="230" height="55" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="505" y="84" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Server v1</text>
+<text x="505" y="100" text-anchor="middle" font-size="12" fill="#222222">← Replace entirely</text>
+<rect x="390" y="133" width="230" height="55" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="505" y="158" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Server v2</text>
+<text x="505" y="174" text-anchor="middle" font-size="12" fill="#222222">← New image</text>
+<rect x="20" y="215" width="660" height="80" fill="#f5f5f5" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="350" y="237" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Packer enables immutable infrastructure:</text>
+<text x="350" y="257" text-anchor="middle" font-size="12" fill="#222222">New code  →  New image  →  New servers  →  Old servers removed</text>
+</svg>
 
 ---
 

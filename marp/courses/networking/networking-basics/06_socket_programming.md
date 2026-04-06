@@ -11,22 +11,36 @@
 - Available in virtually every programming language
 - Two main types: **stream sockets** (TCP) and **datagram sockets** (UDP)
 
-```diagram
-┌────────────────┐                    ┌────────────────┐
-│  Application   │                    │  Application   │
-│                │                    │                │
-│   socket()     │                    │   socket()     │
-│   bind()       │                    │   connect()    │
-│   listen()     │                    │                │
-│   accept()     │                    │                │
-│       ↕        │                    │       ↕        │
-│  ┌──────────┐  │                    │  ┌──────────┐  │
-│  │  Socket  │  │←─── Network ─────→│  │  Socket  │  │
-│  │  fd = 3  │  │    (TCP/UDP)       │  │  fd = 3  │  │
-│  └──────────┘  │                    │  └──────────┘  │
-└────────────────┘                    └────────────────┘
-     Server                                Client
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="290" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="340" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Socket: Endpoint for Network Communication</text>
+<rect x="20" y="40" width="250" height="220" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="145" y="64" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Server Application</text>
+<text x="145" y="90" text-anchor="middle" font-size="12" fill="#333">socket()</text>
+<text x="145" y="112" text-anchor="middle" font-size="12" fill="#333">bind()</text>
+<text x="145" y="134" text-anchor="middle" font-size="12" fill="#333">listen()</text>
+<text x="145" y="156" text-anchor="middle" font-size="12" fill="#333">accept()</text>
+<rect x="60" y="210" width="170" height="36" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5" rx="4"/>
+<text x="145" y="232" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">Socket  fd = 3</text>
+<rect x="410" y="40" width="250" height="220" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="535" y="64" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Client Application</text>
+<text x="535" y="90" text-anchor="middle" font-size="12" fill="#333">socket()</text>
+<text x="535" y="112" text-anchor="middle" font-size="12" fill="#333">connect()</text>
+<text x="535" y="134" text-anchor="middle" font-size="12" fill="#333">send()</text>
+<text x="535" y="156" text-anchor="middle" font-size="12" fill="#333">recv()</text>
+<rect x="450" y="210" width="170" height="36" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5" rx="4"/>
+<text x="535" y="232" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">Socket  fd = 3</text>
+<line x1="270" y1="228" x2="410" y2="228" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="410" y1="218" x2="270" y2="218" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="210" text-anchor="middle" font-size="11" fill="#555" font-style="italic">Network (TCP/UDP)</text>
+</svg>
 
 ---
 
@@ -34,40 +48,74 @@
 
 ### TCP Connection Lifecycle
 
-```misc
-       Server                              Client
-       ──────                              ──────
-    socket()                             socket()
-       │                                    │
-    bind()                                  │
-       │                                    │
-    listen()                                │
-       │                                    │
-    accept() ←─── 3-way handshake ───── connect()
-       │         SYN → SYN-ACK → ACK       │
-       │                                    │
-    recv() ←──────── data ────────────── send()
-       │                                    │
-    send() ──────── data ────────────→  recv()
-       │                                    │
-    close() ←──── FIN handshake ────── close()
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="410" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="340" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">TCP Socket Lifecycle</text>
+<text x="170" y="44" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Server</text>
+<text x="510" y="44" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Client</text>
+<line x1="170" y1="55" x2="170" y2="290" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="510" y1="55" x2="510" y2="290" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="170" y="74" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">socket()</text>
+<text x="510" y="74" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">socket()</text>
+<text x="170" y="99" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">bind()</text>
+<text x="170" y="124" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">listen()</text>
+<text x="170" y="159" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">accept()</text>
+<text x="510" y="159" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">connect()</text>
+<line x1="200" y1="165" x2="480" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="480" y1="177" x2="200" y2="177" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="162" text-anchor="middle" font-size="11" fill="#555" font-style="italic">3-way handshake (SYN→SYN-ACK→ACK)</text>
+<text x="170" y="204" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">recv()</text>
+<text x="510" y="204" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">send()</text>
+<line x1="480" y1="210" x2="200" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="207" text-anchor="middle" font-size="11" fill="#555" font-style="italic">data</text>
+<text x="170" y="239" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">send()</text>
+<text x="510" y="239" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">recv()</text>
+<line x1="200" y1="245" x2="480" y2="245" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="242" text-anchor="middle" font-size="11" fill="#555" font-style="italic">data</text>
+<text x="170" y="274" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">close()</text>
+<text x="510" y="274" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">close()</text>
+<line x1="200" y1="280" x2="480" y2="280" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="480" y1="292" x2="200" y2="292" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="277" text-anchor="middle" font-size="11" fill="#555" font-style="italic">FIN handshake</text>
+</svg>
 
 ### UDP Communication (no connection)
 
-```misc
-       Server                              Client
-       ──────                              ──────
-    socket()                             socket()
-       │                                    │
-    bind()                                  │
-       │                                    │
-    recvfrom() ←──── datagram ──────── sendto()
-       │                                    │
-    sendto() ────── datagram ──────→   recvfrom()
-       │                                    │
-    close()                              close()
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="260" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="340" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">UDP Socket Lifecycle</text>
+<text x="170" y="44" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Server</text>
+<text x="510" y="44" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Client</text>
+<line x1="170" y1="55" x2="170" y2="240" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+<line x1="510" y1="55" x2="510" y2="240" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="170" y="74" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">socket()</text>
+<text x="510" y="74" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">socket()</text>
+<text x="170" y="99" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">bind()</text>
+<text x="170" y="134" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">recvfrom()</text>
+<text x="510" y="134" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">sendto()</text>
+<line x1="470" y1="140" x2="210" y2="140" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="137" text-anchor="middle" font-size="11" fill="#555" font-style="italic">datagram</text>
+<text x="170" y="174" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">sendto()</text>
+<text x="510" y="174" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">recvfrom()</text>
+<line x1="210" y1="180" x2="470" y2="180" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="340" y="177" text-anchor="middle" font-size="11" fill="#555" font-style="italic">datagram</text>
+<text x="170" y="214" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">close()</text>
+<text x="510" y="214" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">close()</text>
+</svg>
 
 ---
 
@@ -441,27 +489,35 @@ while inputs:
 | Platform | All POSIX + Windows | POSIX | Linux only |
 | Best for | Small number of FDs | Moderate FDs | Large scale servers |
 
-```diagram
-select():  Pass ALL fds every time → kernel scans all → returns ready ones
-           Works on ~1024 fds max. Fine for small servers.
-
-poll():    Similar to select but no fd limit.
-           Still O(n) -- kernel scans the whole list each time.
-
-epoll():   Register fds once with the kernel.
-           Kernel notifies you only about ready fds.
-           O(1) for returning events. Scales to millions of connections.
-
-           ┌─────────────────────────┐
-           │     Kernel (epoll)      │
-           │                         │
-           │  Monitors registered    │
-           │  fds efficiently        │
-           │                         │
-           │  Only returns fds       │
-           │  with actual events     │
-           └─────────────────────────┘
-```
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="340" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">I/O Multiplexing: select / poll / epoll</text>
+<rect x="10" y="40" width="660" height="76" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="62" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">select()</text>
+<line x1="160" y1="44" x2="160" y2="112" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="62" text-anchor="start" font-size="12" fill="#222222">Pass ALL fds every time → kernel scans all → returns ready ones</text>
+<text x="170" y="80" text-anchor="start" font-size="11" fill="#555">Works on ~1024 fds max. O(n) scan per call.</text>
+<rect x="10" y="120" width="660" height="76" fill="#f3e5f5" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="142" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">poll()</text>
+<line x1="160" y1="124" x2="160" y2="192" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="142" text-anchor="start" font-size="12" fill="#222222">Similar to select() but no fd limit.</text>
+<text x="170" y="160" text-anchor="start" font-size="11" fill="#555">Still O(n) — kernel scans the whole list each call.</text>
+<rect x="10" y="200" width="660" height="76" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="222" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">epoll()</text>
+<line x1="160" y1="204" x2="160" y2="272" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="222" text-anchor="start" font-size="12" fill="#222222">Register fds once; kernel notifies only about ready fds.</text>
+<text x="170" y="240" text-anchor="start" font-size="11" fill="#555">O(1) for returning events. Scales to millions of connections.</text>
+<rect x="80" y="290" width="520" height="70" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5" rx="4"/>
+<text x="340" y="312" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Kernel (epoll): monitors registered fds efficiently</text>
+<text x="340" y="334" text-anchor="middle" font-size="11" fill="#2e7d32">Notifies userspace only about fds with actual events</text>
+</svg>
 
 ---
 
