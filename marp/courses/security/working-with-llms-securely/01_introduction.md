@@ -17,7 +17,7 @@ Understanding the most critical security risks in `LLM`-based systems
 
 ## The `LLM` Attack Surface
 
-```text
+```diagram
                     ┌─────────────┐
   User Input ──────►│             │──────► Output to User
                     │   LLM App   │
@@ -79,7 +79,7 @@ Key questions to ask:
 
 ## `LLM` Application Architecture
 
-```text
+```diagram
 ┌──────────┐     ┌──────────────┐     ┌──────────────┐
 │  Client  │────►│  App Layer   │────►│  LLM API     │
 │          │◄────│  (Backend)   │◄────│  (Provider)  │

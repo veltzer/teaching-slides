@@ -508,7 +508,7 @@ Control consistency vs performance:
 
 Track causality in distributed systems:
 
-```text
+```output
 Node A: [A:1, B:0, C:0] writes X=5
 Node B: [A:1, B:1, C:0] writes X=7
 Node C: [A:1, B:1, C:1] can determine order

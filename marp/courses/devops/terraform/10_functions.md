@@ -743,7 +743,7 @@ locals {
 
 ## cidrsubnet Explained
 
-```text
+```tree
 cidrsubnet(prefix, newbits, netnum)
 
 Example: cidrsubnet("10.0.0.0/16", 8, 1)

@@ -291,7 +291,7 @@ variable "cidr_block" {
 
 ## Setting Variables: Precedence Order
 
-```text
+```diagram
 Highest priority (wins)
   |
   |  1. -var flag on command line

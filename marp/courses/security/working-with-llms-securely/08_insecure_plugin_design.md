@@ -14,7 +14,7 @@
 
 ## How `LLM` Plugins Work
 
-```text
+```diagram
 User ──► LLM ──► Plugin Selection ──► Plugin Execution
                                            │
                                     ┌──────┴──────┐
@@ -95,7 +95,7 @@ Accesses cloud instance metadata from within the network
 
 ## Attack: Email Exfiltration via Plugin
 
-```text
+```output
 1. User says: "Summarize my recent emails"
 
 2. LLM calls email plugin to read emails

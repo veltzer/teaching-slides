@@ -24,7 +24,7 @@
 
 ## Hallucination Examples
 
-```text
+```console
 User: "What is the CVE number for the Log4Shell
 vulnerability?"
 
@@ -65,7 +65,7 @@ def is_leap_year(year):
 
 ## Overreliance in Security Contexts
 
-```text
+```console
 Developer: "Is this code secure?"
 
 LLM: "Yes, this code follows security best practices.
@@ -150,7 +150,7 @@ def grounded_response(user_query):
 
 ## Mitigation: Human Review Gates
 
-```text
+```diagram
 LLM Output Pipeline:
 
 Generate ──► Flag Uncertainty ──► Human Review ──► Publish

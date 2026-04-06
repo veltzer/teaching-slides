@@ -292,7 +292,7 @@ terraform {
 
 ## State Locking
 
-```text
+```diagram
 Without Locking:
 User A: terraform apply  --+
                             +--> CONFLICT!

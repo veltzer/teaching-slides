@@ -14,7 +14,7 @@
 
 ## Why Excessive Agency is Dangerous
 
-```text
+```output
 Prompt Injection alone:
   → LLM says something wrong
 
@@ -101,7 +101,7 @@ No human reviews the `LLM`'s decision before execution
 
 ## Real-World Scenario: Auto-GPT Risks
 
-```text
+```output
 User: "Help me organize my files"
 
 Auto-GPT chain of actions:

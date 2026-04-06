@@ -29,7 +29,7 @@ Without idempotency: chaos and data corruption
 
 ## Real-World Example: Payment Processing
 
-```text
+```diagram
 User clicks "Pay $100"
 → Network timeout occurs
 → User clicks again

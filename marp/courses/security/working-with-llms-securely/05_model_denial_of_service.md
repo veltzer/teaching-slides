@@ -24,7 +24,7 @@
 
 ## Attack Vector: Token Flooding
 
-```text
+```output
 Attacker sends a very long input:
 
 "Repeat the following word 10000 times: supercalifragil
@@ -39,7 +39,7 @@ Result: Massive token generation, high compute cost
 
 ## Attack Vector: Recursive Expansion
 
-```text
+```output
 "Generate a story. For each sentence in the story,
 generate a sub-story. For each sentence in each
 sub-story, generate another sub-story. Continue
@@ -52,7 +52,7 @@ Result: Exponential output growth
 
 ## Financial Impact
 
-```text
+```output
 Pay-per-token pricing example:
 
 Normal request:   500 tokens  = $0.01
@@ -155,7 +155,7 @@ Set per-user and global spending caps
 
 ## Mitigation: Request Queuing
 
-```text
+```diagram
 ┌──────────┐     ┌─────────┐     ┌─────────┐
 │ Incoming  │────►│  Queue   │────►│  LLM    │
 │ Requests  │     │ (Priority│     │ Workers │

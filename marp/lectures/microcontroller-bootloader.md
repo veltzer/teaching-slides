@@ -93,7 +93,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 
 **Typical STM32 Layout:**
 
-```text
+```output
 0x08000000: Bootloader (16KB)
 0x08004000: Application (variable size)
 0x08080000: Configuration/EEPROM simulation

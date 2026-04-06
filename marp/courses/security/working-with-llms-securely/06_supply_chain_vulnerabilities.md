@@ -14,7 +14,7 @@
 
 ## The `LLM` Supply Chain
 
-```text
+```diagram
 ┌─────────────┐  ┌──────────────┐  ┌──────────────┐
 │ Pre-trained  │  │  Fine-tuning │  │  Plugins &   │
 │   Models     │  │  Datasets    │  │  Extensions  │
@@ -89,7 +89,7 @@ model = pickle.load(open("model.pkl", "rb"))
 
 ## Risk: Dependency Vulnerabilities
 
-```text
+```tree
 Your LLM App
 ├── langchain==0.1.0        ← known CVEs?
 ├── openai==1.3.0           ← API key exposure risk?
