@@ -12,8 +12,28 @@
 ## Azure History
 
 <svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
+  <!-- Timeline axis -->
+  <line x1="30" y1="80" x2="570" y2="80" stroke="#0078d4" stroke-width="2"/>
+  <!-- 2008 -->
+  <circle cx="60" cy="80" r="6" fill="#0078d4"/>
+  <text x="60" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">2008</text>
+  <text x="60" y="102" text-anchor="middle" font-size="9" fill="#333">Announced</text>
+  <!-- 2010 -->
+  <circle cx="180" cy="80" r="6" fill="#0078d4"/>
+  <text x="180" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">2010</text>
+  <text x="180" y="102" text-anchor="middle" font-size="9" fill="#333">GA Launch</text>
+  <!-- 2014 -->
+  <circle cx="300" cy="80" r="6" fill="#0078d4"/>
+  <text x="300" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">2014</text>
+  <text x="300" y="102" text-anchor="middle" font-size="9" fill="#333">Renamed Azure</text>
+  <!-- 2017 -->
+  <circle cx="420" cy="80" r="6" fill="#0078d4"/>
+  <text x="420" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">2017</text>
+  <text x="420" y="102" text-anchor="middle" font-size="9" fill="#333">60+ Regions</text>
+  <!-- 2023 -->
+  <circle cx="540" cy="80" r="6" fill="#0078d4"/>
+  <text x="540" y="68" text-anchor="middle" font-size="10" font-weight="bold" fill="#0078d4">2023</text>
+  <text x="540" y="102" text-anchor="middle" font-size="9" fill="#333">AI &amp; Copilot</text>
 </svg>
 
 ---
