@@ -1,3 +1,6 @@
+[dependencies]
+npm = ["@mermaid-js/mermaid-cli"]
+
 [processor.tera]
 extra_inputs = [
     "config/project.lua",
@@ -39,6 +42,7 @@ batch = true
 formats = [ "pdf" ]
 max_jobs = 10
 output_dir = "_site/marp"
+extra_inputs = ["out/generator/**/*.svg"]
 
 [processor.pylint]
 scan_dirs = ["scripts"]
