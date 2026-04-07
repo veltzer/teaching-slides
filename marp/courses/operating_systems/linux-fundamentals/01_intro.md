@@ -1,7 +1,7 @@
 # Introduction to UNIX
 ## Understanding the Fundamentals
 
-![h:500](../../../../raw/unix.svg) ![h:500,width:50%](../../../../raw/ken_thompson.jpg) ![h:500,width:50%](../../../../raw/linus_torvalds.jpg)
+![h:500](/jpg/courses/operating_systems/linux-fundamentals/unix.svg) ![h:500,width:50%](/jpg/courses/operating_systems/linux-fundamentals/ken_thompson.jpg) ![h:500,width:50%](/jpg/courses/operating_systems/linux-fundamentals/linus_torvalds.jpg)
 
 ---
 ## What is UNIX?

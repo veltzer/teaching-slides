@@ -30,7 +30,7 @@
 ---
 ## History of Git
 
-![h:300](../../../../raw/linus_torvalds.jpg)
+![h:300](/jpg/courses/git/git/linus_torvalds.jpg)
 
 - Created by Linus Torvalds in 2005
 - Born from Linux kernel development needs

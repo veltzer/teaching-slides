@@ -1,6 +1,6 @@
 # Introduction to Python
 
-![h:500](../../../../raw/guido_van_rossum.jpg)
+![h:500](/jpg/courses/languages/python/python-programming/guido_van_rossum.jpg)
 
 ---
 ## What is Python?

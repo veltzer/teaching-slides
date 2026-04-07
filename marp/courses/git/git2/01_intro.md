@@ -30,7 +30,7 @@
 
 ## The Birth of Git (2005)
 
-![h:300](../../../../raw/linus_torvalds.jpg)
+![h:300](/jpg/courses/git/git2/linus_torvalds.jpg)
 
 **Linus Torvalds** created Git in April 2005
 
