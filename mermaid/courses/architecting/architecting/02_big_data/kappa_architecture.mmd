@@ -1,0 +1,7 @@
+graph LR
+D[Data Stream] --> K[Kafka/Event Log]
+K --> SP[Stream Processing]
+SP --> V[Views]
+V --> Q[Queries]
+K -.->|Replay| RP[Reprocessing]
+RP --> SP

@@ -1,0 +1,17 @@
+graph LR
+P[Producer] --> MQ[Main Queue]
+MQ --> C[Consumer]
+
+C -->|Success| P1[Process Complete]
+C -->|Failure 1| R1[Retry 1]
+R1 -->|Failure 2| R2[Retry 2]
+R2 -->|Failure 3| R3[Retry 3]
+R3 -->|Max Retries| DLQ[Dead Letter Queue]
+
+DLQ --> M[Manual Review]
+M --> RE[Reprocess]
+RE --> MQ
+
+style MQ fill:#e3f2fd
+style DLQ fill:#ffcdd2
+style M fill:#fff3e0

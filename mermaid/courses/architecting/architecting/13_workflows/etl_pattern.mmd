@@ -1,0 +1,35 @@
+graph LR
+subgraph "Extract"
+E1[Database]
+E2[API]
+E3[Files]
+end
+
+subgraph "Transform"
+T1[Clean]
+T2[Validate]
+T3[Enrich]
+T4[Aggregate]
+end
+
+subgraph "Load"
+L1[Data Warehouse]
+L2[Data Lake]
+L3[Analytics DB]
+end
+
+E1 --> T1
+E2 --> T1
+E3 --> T1
+
+T1 --> T2
+T2 --> T3
+T3 --> T4
+
+T4 --> L1
+T4 --> L2
+T4 --> L3
+
+style E1 fill:#e3f2fd
+style T1 fill:#f3e5f5
+style L1 fill:#e8f5e9

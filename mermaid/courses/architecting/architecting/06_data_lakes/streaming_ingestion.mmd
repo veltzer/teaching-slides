@@ -1,0 +1,27 @@
+graph LR
+subgraph "Stream Sources"
+K[Kafka]
+KN[Kinesis]
+EH[Event Hub]
+end
+subgraph "Stream Processing"
+SP[Spark Streaming]
+FL[Flink]
+KS[Kafka Streams]
+end
+subgraph "Data Lake"
+R[Raw Events]
+P[Processed Events]
+A[Aggregated Data]
+end
+K --> SP
+KN --> SP
+EH --> FL
+SP --> R
+FL --> R
+KS --> P
+R --> P
+P --> A
+style K fill:#e3f2fd
+style SP fill:#f3e5f5
+style R fill:#e8f5e9

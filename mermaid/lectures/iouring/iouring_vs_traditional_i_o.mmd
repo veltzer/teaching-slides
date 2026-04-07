@@ -1,0 +1,8 @@
+graph LR
+    A[Application] -->|System Call| B[read/write]
+    B -->|Wait| C[Kernel]
+    C -->|Data| A
+    D[Application] -->|Submit| E[io_uring SQ]
+    E -->|Batch| F[Kernel]
+    F -->|Complete| G[io_uring CQ]
+    G -->|Poll| D

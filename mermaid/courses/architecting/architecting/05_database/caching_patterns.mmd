@@ -1,0 +1,8 @@
+graph LR
+App[Application] --> QC{Query Cache?}
+QC -->|Hit| RC[Return Cached]
+QC -->|Miss| DB[(Database)]
+DB --> UC[Update Cache]
+UC --> RC
+App -.->|Invalidate| IC[Cache Invalidation]
+IC --> QC

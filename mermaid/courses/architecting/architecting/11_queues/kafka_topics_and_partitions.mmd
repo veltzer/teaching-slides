@@ -1,0 +1,28 @@
+graph LR
+subgraph "Topic: Orders"
+subgraph "Partition 0"
+M1[Msg 0]
+M2[Msg 3]
+M3[Msg 6]
+end
+
+subgraph "Partition 1"
+M4[Msg 1]
+M5[Msg 4]
+M6[Msg 7]
+end
+
+subgraph "Partition 2"
+M7[Msg 2]
+M8[Msg 5]
+M9[Msg 8]
+end
+end
+
+P[Producer] -->|Key Hash| M1
+P -->|Key Hash| M4
+P -->|Key Hash| M7
+
+style M1 fill:#e3f2fd
+style M4 fill:#f3e5f5
+style M7 fill:#e8f5e9

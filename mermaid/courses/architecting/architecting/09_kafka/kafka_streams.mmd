@@ -1,0 +1,14 @@
+graph LR
+IT[Input Topics] --> KS[Kafka Streams<br/>Application]
+KS --> ST[State Store]
+KS --> OT[Output Topics]
+
+subgraph "Stream Processing"
+KS --> F[Filter/Map]
+F --> A[Aggregate]
+A --> W[Window]
+end
+
+style IT fill:#e3f2fd
+style KS fill:#f3e5f5
+style OT fill:#e8f5e9

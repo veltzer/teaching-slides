@@ -1,0 +1,15 @@
+graph TB
+subgraph "Partition Strategy"
+T[Topic] --> P1[Partition 1<br/>10MB/s]
+T --> P2[Partition 2<br/>10MB/s]
+T --> P3[Partition 3<br/>10MB/s]
+T --> PN[Partition N<br/>10MB/s]
+end
+
+P1 --> B1[Broker 1]
+P2 --> B2[Broker 2]
+P3 --> B3[Broker 3]
+
+style T fill:#e3f2fd
+style P1 fill:#f3e5f5
+style B1 fill:#e8f5e9

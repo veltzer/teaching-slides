@@ -1,0 +1,12 @@
+graph TB
+DB[(Database)] --> MC[Metrics Collector]
+MC --> CPU[CPU Usage]
+MC --> MEM[Memory Usage]
+MC --> QPS[Query Performance]
+MC --> CON[Connections]
+CPU --> D[Dashboard]
+MEM --> D
+QPS --> D
+CON --> D
+D --> AL[Alerts]
+D --> REP[Reports]

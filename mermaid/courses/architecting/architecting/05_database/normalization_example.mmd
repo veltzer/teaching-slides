@@ -1,0 +1,16 @@
+graph TB
+subgraph "Denormalized"
+T1[Orders Table]
+T1 --> C1[Customer Name]
+T1 --> C2[Customer Address]
+T1 --> C3[Product Name]
+T1 --> C4[Product Price]
+end
+subgraph "Normalized"
+O[Orders] --> C[Customers]
+O --> P[Products]
+C --> CN[Name]
+C --> CA[Address]
+P --> PN[Name]
+P --> PP[Price]
+end

@@ -1,0 +1,5 @@
+graph LR
+    SC[Sales Context] -->|Customer-Supplier| SH[Shipping Context]
+    SC -->|Published Language| BI[Billing Context]
+    EX[External Payment Provider] -->|ACL| BI
+    SH -->|Conformist| EX2[External Carrier API]

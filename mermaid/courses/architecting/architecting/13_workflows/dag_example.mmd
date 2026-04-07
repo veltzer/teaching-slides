@@ -1,0 +1,19 @@
+graph LR
+Start[Start] --> Extract[Extract Data]
+Extract --> Clean[Clean Data]
+Extract --> Validate[Validate Data]
+
+Clean --> Transform[Transform]
+Validate --> Transform
+
+Transform --> Load1[Load to DB]
+Transform --> Load2[Load to S3]
+
+Load1 --> Report[Generate Report]
+Load2 --> Report
+
+Report --> End[End]
+
+style Start fill:#e3f2fd
+style Transform fill:#f3e5f5
+style Report fill:#e8f5e9

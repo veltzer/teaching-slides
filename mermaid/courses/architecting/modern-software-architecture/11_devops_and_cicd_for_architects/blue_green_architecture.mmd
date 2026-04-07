@@ -1,0 +1,7 @@
+graph TD
+    LB[Load Balancer / Router]
+    LB -->|100% Traffic| BLUE[Blue Environment - v1.0]
+    GREEN[Green Environment - v1.1]
+    BLUE --> DB[(Shared Database)]
+    GREEN --> DB
+    LB -.->|Switch| GREEN

@@ -1,0 +1,14 @@
+graph TD
+    subgraph Step 1
+        V1A[v1 Pod] & V1B[v1 Pod] & V1C[v1 Pod]
+    end
+    subgraph Step 2
+        V1D[v1 Pod] & V1E[v1 Pod] & V2A[v2 Pod]
+    end
+    subgraph Step 3
+        V1F[v1 Pod] & V2B[v2 Pod] & V2C[v2 Pod]
+    end
+    subgraph Step 4
+        V2D[v2 Pod] & V2E[v2 Pod] & V2F[v2 Pod]
+    end
+    Step 1 --> Step 2 --> Step 3 --> Step 4

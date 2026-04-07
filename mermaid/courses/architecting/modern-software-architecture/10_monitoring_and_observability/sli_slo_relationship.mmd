@@ -1,0 +1,5 @@
+graph LR
+    SLI[SLI: p99 latency = 180ms] --> SLO[SLO: p99 latency < 200ms]
+    SLO --> SLA[SLA: 99.9% of requests within SLO]
+    SLI2[SLI: Error rate = 0.05%] --> SLO2[SLO: Error rate < 0.1%]
+    SLO2 --> SLA

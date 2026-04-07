@@ -1,0 +1,30 @@
+graph LR
+subgraph "Data Sources"
+A1[Application 1]
+A2[Application 2]
+A3[Application N]
+end
+
+subgraph "Collection"
+B[Beats/Fluentd]
+L[Logstash]
+end
+
+subgraph "Storage"
+E[Elasticsearch<br/>Cluster]
+end
+
+subgraph "Visualization"
+K[Kibana]
+end
+
+A1 --> B
+A2 --> B
+A3 --> B
+B --> L
+L --> E
+E --> K
+
+style B fill:#e3f2fd
+style E fill:#f3e5f5
+style K fill:#e8f5e9

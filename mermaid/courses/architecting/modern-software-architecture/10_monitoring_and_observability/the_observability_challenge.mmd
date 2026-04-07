@@ -1,0 +1,9 @@
+graph TD
+    C[Client] --> GW[API Gateway]
+    GW --> S1[Service A]
+    GW --> S2[Service B]
+    S1 --> S3[Service C]
+    S2 --> S3
+    S3 --> DB[(Database)]
+    S1 --> CACHE[(Cache)]
+    S2 --> MQ[Message Queue]

@@ -1,0 +1,14 @@
+graph TB
+subgraph "Metrics Collection"
+C[Cache] --> M[Metrics Collector]
+M --> HR[Hit Rate]
+M --> MR[Miss Rate]
+M --> L[Latency]
+M --> E[Eviction Rate]
+end
+HR --> D[Dashboard]
+MR --> D
+L --> D
+E --> D
+D --> A[Alerts]
+D --> R[Reports]

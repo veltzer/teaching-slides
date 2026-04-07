@@ -1,0 +1,20 @@
+sequenceDiagram
+participant U as User
+participant G as API Gateway
+participant A as Auth Service
+participant O as Order Service
+participant P as Payment Service
+participant D as Database
+
+U->>G: Request (Trace ID: 123)
+G->>A: Authenticate (Span: auth)
+A-->>G: Token Valid
+G->>O: Create Order (Span: order)
+O->>D: Save Order (Span: db-write)
+D-->>O: Order Saved
+O->>P: Process Payment (Span: payment)
+P-->>O: Payment Complete
+O-->>G: Order Created
+G-->>U: Response
+
+Note over U,D: Total Trace Duration: 250ms

@@ -1,0 +1,4 @@
+graph LR
+    R1[Request - Fail] -->|Wait 1s| R2[Retry 1 - Fail]
+    R2 -->|Wait 2s| R3[Retry 2 - Fail]
+    R3 -->|Wait 4s| R4[Retry 3 - Success]

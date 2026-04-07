@@ -1,0 +1,22 @@
+graph LR
+subgraph "Topic with 3 Partitions"
+P0[Partition 0]
+P1[Partition 1]
+P2[Partition 2]
+end
+
+subgraph "Consumer Group"
+C1[Consumer 1]
+C2[Consumer 2]
+end
+
+P0 --> C1
+P1 --> C1
+P2 --> C2
+
+CG[Group Coordinator] -.->|Manages| C1
+CG -.->|Manages| C2
+
+style P0 fill:#e3f2fd
+style P1 fill:#f3e5f5
+style C1 fill:#e8f5e9

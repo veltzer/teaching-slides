@@ -1,0 +1,9 @@
+sequenceDiagram
+    participant Producer
+    participant Message Broker
+    participant Consumer
+    Producer->>Message Broker: Publish Message
+    Message Broker-->>Producer: Acknowledgment
+    Note over Message Broker: Message stored
+    Message Broker->>Consumer: Deliver Message
+    Consumer-->>Message Broker: Acknowledgment

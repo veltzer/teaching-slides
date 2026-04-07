@@ -1,0 +1,20 @@
+graph LR
+P[Publisher] --> E[Exchange]
+
+subgraph "Exchange Types"
+E --> D[Direct]
+E --> F[Fanout]
+E --> T[Topic]
+end
+
+D --> Q1[Queue 1]
+F --> Q2[Queue 2]
+T --> Q3[Queue 3]
+
+Q1 --> C1[Consumer 1]
+Q2 --> C2[Consumer 2]
+Q3 --> C3[Consumer 3]
+
+style E fill:#e3f2fd
+style Q1 fill:#f3e5f5
+style C1 fill:#e8f5e9

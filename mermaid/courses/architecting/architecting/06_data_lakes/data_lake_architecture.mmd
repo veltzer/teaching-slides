@@ -1,0 +1,36 @@
+graph TB
+subgraph "Data Sources"
+S1[Databases]
+S2[APIs]
+S3[Files]
+S4[Streams]
+end
+subgraph "Ingestion Layer"
+I1[Batch Processing]
+I2[Stream Processing]
+end
+subgraph "Storage Layer"
+ST1[Raw Zone]
+ST2[Processed Zone]
+ST3[Curated Zone]
+end
+subgraph "Processing Layer"
+P1[ETL/ELT]
+P2[Analytics]
+P3[ML Pipelines]
+end
+S1 --> I1
+S2 --> I1
+S3 --> I1
+S4 --> I2
+I1 --> ST1
+I2 --> ST1
+ST1 --> P1
+P1 --> ST2
+ST2 --> P2
+ST2 --> P3
+P2 --> ST3
+P3 --> ST3
+style ST1 fill:#e3f2fd
+style ST2 fill:#f3e5f5
+style ST3 fill:#e8f5e9

@@ -1,0 +1,9 @@
+graph TB
+T[Transaction] --> A[Atomicity]
+T --> C[Consistency]
+T --> I[Isolation]
+T --> D[Durability]
+A -.->|All or Nothing| AT[Complete/Rollback]
+C -.->|Valid State| CS[Rules Enforced]
+I -.->|No Interference| IS[Concurrent Safety]
+D -.->|Permanent| DS[Survives Failures]

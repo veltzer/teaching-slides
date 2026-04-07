@@ -1,0 +1,8 @@
+graph LR
+D[Driver] --> E1[Executor 1]
+D --> E2[Executor 2]
+D --> E3[Executor 3]
+E1 -.->|Tasks| W1[Workers]
+E2 -.->|Tasks| W2[Workers]
+E3 -.->|Tasks| W3[Workers]
+D -.->|Coordinates| CM[Cluster Manager]

@@ -1,0 +1,11 @@
+sequenceDiagram
+participant App
+participant Cache
+participant Queue
+participant DB
+App->>Cache: 1. Write data
+Cache-->>App: 2. Confirm write
+Cache->>Queue: 3. Queue write
+Note over Queue: Async processing
+Queue->>DB: 4. Write to database (later)
+DB-->>Queue: Confirm write

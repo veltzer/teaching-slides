@@ -1,0 +1,28 @@
+graph LR
+subgraph "Data Volume"
+DV[100GB/day Logs<br/>1M metrics/min<br/>10K traces/sec]
+end
+
+subgraph "Storage Costs"
+SC[Hot Storage: $$$<br/>Warm Storage: $$<br/>Cold Storage: $]
+end
+
+subgraph "Processing Costs"
+PC[Ingestion<br/>Indexing<br/>Query]
+end
+
+subgraph "Optimization"
+O1[Sampling]
+O2[Aggregation]
+O3[Tiered Storage]
+end
+
+DV --> SC
+DV --> PC
+SC --> O3
+PC --> O1
+PC --> O2
+
+style DV fill:#e3f2fd
+style SC fill:#ffcdd2
+style O1 fill:#e8f5e9

@@ -1,0 +1,13 @@
+sequenceDiagram
+participant Client as Client
+participant App as Application
+participant Storage as Storage Service
+
+Client->>App: 1. Request access to resource
+App->>App: 2. Validate request
+App->>Storage: 3. Generate limited access token
+Storage-->>App: Return signed token/URL
+App-->>Client: 4. Return access token
+Client->>Storage: 5. Direct access with token
+Storage->>Storage: 6. Validate token
+Storage-->>Client: 7. Grant access to resource

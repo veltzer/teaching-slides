@@ -1,0 +1,7 @@
+graph LR
+    subgraph Continuous Delivery
+        A1[Build] --> A2[Test] --> A3[Stage] --> A4[Manual Approval] --> A5[Production]
+    end
+    subgraph Continuous Deployment
+        B1[Build] --> B2[Test] --> B3[Stage] --> B4[Auto Deploy to Production]
+    end

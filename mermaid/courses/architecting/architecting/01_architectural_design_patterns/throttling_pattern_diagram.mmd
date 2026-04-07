@@ -1,0 +1,12 @@
+graph TB
+R1[Request 1] --> TH{Throttler}
+R2[Request 2] --> TH
+R3[Request 3] --> TH
+R4[Request 4] --> TH
+TH -->|Within Limit| A[Allow]
+TH -->|Exceeds Limit| Q[Queue]
+TH -->|Queue Full| R[Reject]
+A --> S[Service]
+Q -.->|Delayed| S
+R --> E[Error Response]
+TH -.->|Rate Counter| RC[(Rate Limiter)]

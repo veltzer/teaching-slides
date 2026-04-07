@@ -1,0 +1,24 @@
+graph TB
+subgraph "Lakehouse Platform"
+L1[Object Storage<br/>Parquet/ORC/Avro]
+L2[Metadata Layer<br/>Delta/Iceberg/Hudi]
+L3[Transaction Layer<br/>ACID Support]
+L4[Query Engine<br/>SQL/DataFrame API]
+end
+subgraph "Workloads"
+W1[BI & Analytics]
+W2[Data Science]
+W3[Machine Learning]
+W4[Real-time Analytics]
+end
+L1 --> L2
+L2 --> L3
+L3 --> L4
+L4 --> W1
+L4 --> W2
+L4 --> W3
+L4 --> W4
+style L1 fill:#e3f2fd
+style L2 fill:#f3e5f5
+style L3 fill:#e8f5e9
+style L4 fill:#fff3e0

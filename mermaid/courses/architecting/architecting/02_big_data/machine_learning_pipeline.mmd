@@ -1,0 +1,8 @@
+graph LR
+D[Data Ingestion] --> P[Preprocessing]
+P --> FE[Feature Engineering]
+FE --> T[Training]
+T --> E[Evaluation]
+E --> D2[Deployment]
+T -.->|Model| MS[Model Store]
+E -.->|Metrics| M[Monitoring]

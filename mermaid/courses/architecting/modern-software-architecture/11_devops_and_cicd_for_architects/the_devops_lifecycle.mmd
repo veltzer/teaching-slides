@@ -1,0 +1,9 @@
+graph LR
+    PLAN[Plan] --> CODE[Code]
+    CODE --> BUILD[Build]
+    BUILD --> TEST[Test]
+    TEST --> RELEASE[Release]
+    RELEASE --> DEPLOY[Deploy]
+    DEPLOY --> OPERATE[Operate]
+    OPERATE --> MONITOR[Monitor]
+    MONITOR --> PLAN

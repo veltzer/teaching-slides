@@ -1,0 +1,20 @@
+graph TB
+subgraph "Hybrid Architecture"
+K[Kafka]
+SQ[SQS]
+RQ[RabbitMQ]
+end
+
+subgraph "Use Cases"
+RT[Real-time<br/>Analytics] --> K
+MS[Microservices<br/>Decoupling] --> SQ
+CR[Complex<br/>Routing] --> RQ
+end
+
+K <-->|Bridge| SQ
+SQ <-->|Connector| RQ
+K <-->|Mirror| RQ
+
+style K fill:#e3f2fd
+style SQ fill:#f3e5f5
+style RQ fill:#e8f5e9

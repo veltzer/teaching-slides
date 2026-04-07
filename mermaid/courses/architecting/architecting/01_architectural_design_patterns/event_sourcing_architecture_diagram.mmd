@@ -1,0 +1,8 @@
+graph LR
+A[Application] -->|Emit Events| ES[(Event Store)]
+ES -->|Replay Events| P[Projection]
+ES -->|Event Stream| EP[Event Processor]
+P -->|Current State| Q[Query Service]
+EP -->|Update| RS[Read Store]
+Q -->|Query| C[Client]
+ES -.->|Audit Log| AL[Audit/History]

@@ -1,0 +1,9 @@
+graph TD
+    GW[API Gateway] --> S1[Order Service]
+    GW --> S2[Payment Service]
+    GW --> S3[Inventory Service]
+    GW --> S4[User Service]
+    S1 --> DB1[(Orders DB)]
+    S2 --> DB2[(Payments DB)]
+    S3 --> DB3[(Inventory DB)]
+    S4 --> DB4[(Users DB)]

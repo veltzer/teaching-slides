@@ -1,0 +1,7 @@
+graph LR
+Client[Client] --> Cache[Cache]
+Cache -->|Hit| Client
+Cache -->|Miss| DB[(Database)]
+DB -->|Data| Cache
+Cache -->|Data| Client
+Cache -.->|Update| TTL[TTL/Expiry]

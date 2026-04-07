@@ -1,0 +1,9 @@
+graph LR
+DS[(Data Source)] --> I[Ingestion]
+I --> S[(Storage/Data Lake)]
+S --> B[Batch Jobs]
+B --> T[Transform]
+T --> A[Aggregate]
+A --> DW[(Data Warehouse)]
+DW --> R[Reports]
+B -.->|Schedule| SC[Scheduler]

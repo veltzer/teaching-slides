@@ -1,0 +1,19 @@
+graph LR
+P[Producer] --> Q[Message Queue]
+Q --> C[Consumer]
+
+subgraph "Queue Details"
+Q --> H[Head/Front]
+Q --> T[Tail/Back]
+Q --> M[Messages]
+end
+
+subgraph "Features"
+Q --> PE[Persistence]
+Q --> RT[Retry Logic]
+Q --> DL[Dead Letter]
+end
+
+style P fill:#e3f2fd
+style Q fill:#f3e5f5
+style C fill:#e8f5e9

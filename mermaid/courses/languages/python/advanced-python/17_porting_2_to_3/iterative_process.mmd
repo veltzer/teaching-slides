@@ -1,0 +1,9 @@
+graph TD
+    A[Start with Py2 Code] --> B{Run Tests in Py2};
+    B -- All Pass --> C[Branch Code];
+    C --> D{Apply Auto-Porting Tool e.g. 2to3, modernize};
+    D --> E[Manual Fixes & Refactoring];
+    E --> F{Run Tests in Py3};
+    F -- Some Fail --> E;
+    F -- All Pass --> G[Merge to Main/Release];
+    B -- Some Fail --> X[Fix Tests in Py2 First!];

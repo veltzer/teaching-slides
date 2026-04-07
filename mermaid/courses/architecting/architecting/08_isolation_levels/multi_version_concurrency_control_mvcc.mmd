@@ -1,0 +1,23 @@
+graph TB
+subgraph "MVCC System"
+V1[Version 1<br/>T1 Created]
+V2[Version 2<br/>T2 Created]
+V3[Version 3<br/>T3 Created]
+end
+
+subgraph "Readers"
+R1[Transaction A<br/>Sees V1]
+R2[Transaction B<br/>Sees V2]
+R3[Transaction C<br/>Sees V3]
+end
+
+V1 -.->|Snapshot| R1
+V2 -.->|Snapshot| R2
+V3 -.->|Snapshot| R3
+
+V1 --> V2
+V2 --> V3
+
+style V1 fill:#e3f2fd
+style V2 fill:#f3e5f5
+style V3 fill:#e8f5e9

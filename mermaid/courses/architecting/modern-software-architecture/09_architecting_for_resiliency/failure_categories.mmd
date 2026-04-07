@@ -1,0 +1,8 @@
+graph TD
+    F[Failures]
+    F --> TR[Transient]
+    F --> INT[Intermittent]
+    F --> PERM[Permanent]
+    TR --> TR1[Network blip, timeout]
+    INT --> INT1[Flaky dependency, resource contention]
+    PERM --> PERM1[Hardware failure, bug, data corruption]

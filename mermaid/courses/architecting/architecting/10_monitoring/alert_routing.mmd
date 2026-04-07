@@ -1,0 +1,20 @@
+graph TB
+P[Prometheus<br/>Alert Rules]
+
+AM[AlertManager]
+
+P -->|Fires Alert| AM
+
+AM --> R{Route by<br/>Severity?}
+
+R -->|Critical| PD[PagerDuty<br/>On-Call]
+R -->|Warning| S[Slack<br/>Channel]
+R -->|Info| E[Email<br/>Team]
+
+PD --> I[Create<br/>Incident]
+S --> T[Team<br/>Discussion]
+E --> L[Log for<br/>Review]
+
+style P fill:#e3f2fd
+style AM fill:#f3e5f5
+style PD fill:#ffcdd2

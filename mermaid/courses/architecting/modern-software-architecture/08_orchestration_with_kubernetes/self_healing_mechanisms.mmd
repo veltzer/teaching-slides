@@ -1,0 +1,6 @@
+graph TD
+    A[Pod Crashes] -->|kubelet detects| B[Restart Container]
+    C[Node Fails] -->|Controller detects| D[Reschedule Pods]
+    E[Liveness Probe Fails] -->|kubelet| F[Restart Container]
+    G[Readiness Probe Fails] -->|kube-proxy| H[Remove from Service]
+    I[Deployment Replica Count] -->|Controller| J[Create/Delete Pods]

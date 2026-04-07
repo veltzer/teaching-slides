@@ -1,0 +1,6 @@
+graph TD
+    C[Client] -->|Commands| CS[Command Service]
+    C -->|Queries| QS[Query Service]
+    CS --> WDB[(Write Database)]
+    WDB -->|Sync/Events| RDB[(Read Database)]
+    QS --> RDB

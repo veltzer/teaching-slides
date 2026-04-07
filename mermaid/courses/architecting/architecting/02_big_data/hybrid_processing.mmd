@@ -1,0 +1,11 @@
+graph TB
+D[Data Sources] --> RT[Real-time Stream]
+D --> BT[Batch Data]
+RT --> SP[Stream Processing]
+BT --> BP[Batch Processing]
+SP --> SV[(Speed Views)]
+BP --> BV[(Batch Views)]
+SV --> SL[Serving Layer]
+BV --> SL
+SL --> API[API/Query Layer]
+API --> U[Users]

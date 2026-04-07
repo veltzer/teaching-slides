@@ -1,0 +1,22 @@
+graph LR
+subgraph "Transaction 1"
+T1A[Lock Resource A]
+T1B[Want Resource B]
+end
+
+subgraph "Transaction 2"
+T2B[Lock Resource B]
+T2A[Want Resource A]
+end
+
+T1A -.->|Waiting| T2B
+T2B -.->|Waiting| T1A
+
+T1A --> DL[DEADLOCK!]
+T2B --> DL
+
+DL --> R[Rollback One Transaction]
+
+style DL fill:#ff5252,color:#fff
+style T1A fill:#ffcdd2
+style T2B fill:#f8bbd0

@@ -1,0 +1,13 @@
+graph TB
+subgraph "Data Lake Zones"
+RZ[Raw Zone]
+CZ[Curated Zone]
+PZ[Production Zone]
+end
+DS[Data Sources] --> RZ
+RZ --> T[Transform]
+T --> CZ
+CZ --> P[Process]
+P --> PZ
+PZ --> A[Analytics/ML]
+RZ -.->|Catalog| DC[Data Catalog]

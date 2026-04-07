@@ -1,0 +1,25 @@
+graph TB
+subgraph "Pessimistic Locking"
+PL1[Lock First]
+PL2[Perform Operation]
+PL3[Release Lock]
+end
+
+subgraph "Optimistic Locking"
+OL1[Read Version]
+OL2[Perform Operation]
+OL3[Check Version & Update]
+end
+
+PL1 --> PL2
+PL2 --> PL3
+
+OL1 --> OL2
+OL2 --> OL3
+OL3 -->|Version Mismatch| OL1
+
+PL3 --> R1[Blocks Others]
+OL3 --> R2[No Blocking]
+
+style PL1 fill:#ffcdd2
+style OL1 fill:#c8e6c9

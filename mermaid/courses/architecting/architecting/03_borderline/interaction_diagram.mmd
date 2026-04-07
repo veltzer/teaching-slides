@@ -1,0 +1,10 @@
+graph TB
+M[Master] --> S1[Slave 1]
+M --> S2[Slave 2]
+M --> S3[Slave 3]
+M --> S4[Slave 4]
+S1 -.->|Results| M
+S2 -.->|Results| M
+S3 -.->|Results| M
+S4 -.->|Results| M
+M -.->|Aggregate| R[Final Result]

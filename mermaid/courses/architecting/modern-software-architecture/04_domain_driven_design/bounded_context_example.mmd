@@ -1,0 +1,13 @@
+graph TD
+    subgraph Sales Context
+        SC_C[Customer: name, email, loyalty tier]
+        SC_O[Order: items, discounts, total]
+    end
+    subgraph Shipping Context
+        SH_C[Customer: name, shipping address]
+        SH_O[Shipment: tracking, carrier, delivery date]
+    end
+    subgraph Billing Context
+        BI_C[Customer: name, payment method]
+        BI_I[Invoice: charges, tax, due date]
+    end

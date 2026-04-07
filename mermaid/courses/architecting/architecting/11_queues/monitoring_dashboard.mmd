@@ -1,0 +1,28 @@
+graph TB
+subgraph "Queue Metrics"
+M1[Queue Length]
+M2[Message Age]
+M3[Processing Time]
+M4[Error Rate]
+M5[Throughput]
+end
+
+subgraph "Alerts"
+A1[High Queue Length > 1000]
+A2[Old Messages > 5min]
+A3[High Error Rate > 5%]
+end
+
+M1 --> A1
+M2 --> A2
+M4 --> A3
+
+A1 --> N[Notification]
+A2 --> N
+A3 --> N
+
+N --> T[Team Alert]
+
+style M1 fill:#e3f2fd
+style A1 fill:#ffcdd2
+style N fill:#fff3e0

@@ -1,0 +1,13 @@
+sequenceDiagram
+participant App
+participant Cache
+participant DB
+App->>Cache: 1. Check cache
+alt Cache miss
+Cache-->>App: Not found
+App->>DB: 2. Query database
+DB-->>App: Return data
+App->>Cache: 3. Update cache
+else Cache hit
+Cache-->>App: Return cached data
+end

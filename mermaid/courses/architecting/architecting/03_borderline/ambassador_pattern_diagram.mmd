@@ -1,0 +1,9 @@
+graph LR
+A[Application] --> AM[Ambassador]
+AM --> ES1[External Service 1]
+AM --> ES2[External Service 2]
+AM --> ES3[External Service 3]
+AM -.->|Retry Logic| RL[Retry]
+AM -.->|Circuit Breaker| CB[Circuit Breaker]
+AM -.->|Logging| L[Logs]
+AM -.->|Monitoring| M[Metrics]

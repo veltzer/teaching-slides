@@ -1,0 +1,7 @@
+graph TD
+    C[Client] -->|Same Request| I1[Instance 1]
+    C -->|Same Request| I2[Instance 2]
+    C -->|Same Request| I3[Instance 3]
+    I1 -->|150ms| C
+    I2 -->|50ms - Winner| C
+    I3 -->|200ms| C

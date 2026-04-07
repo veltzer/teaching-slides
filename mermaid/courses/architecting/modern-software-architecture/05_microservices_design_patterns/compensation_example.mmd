@@ -1,0 +1,5 @@
+graph LR
+    A[Create Order] -->|Success| B[Process Payment]
+    B -->|Success| C[Reserve Stock]
+    C -->|FAILURE| D[Refund Payment]
+    D --> E[Cancel Order]

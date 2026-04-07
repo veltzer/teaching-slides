@@ -1,0 +1,8 @@
+graph LR
+T1[Transaction 1] -->|Read| D1[Data]
+T2[Transaction 2] -->|Read| D1
+T1 -->|Modify| D2[Data']
+T2 -->|Modify| D3[Data'']
+D2 -.->|Conflict| C[Race Condition]
+D3 -.->|Conflict| C
+C -->|Results in| P[Dirty Reads/Lost Updates]

@@ -1,0 +1,27 @@
+graph TB
+subgraph "Domain Layer"
+BS[Business Service]
+DE[Domain Entity]
+end
+
+subgraph "Repository Layer"
+IR[IRepository Interface]
+CR[Concrete Repository]
+end
+
+subgraph "Data Layer"
+DB[Database]
+API[External API]
+FS[File System]
+end
+
+BS --> IR
+IR --> CR
+CR --> DB
+CR --> API
+CR --> FS
+DE <--> CR
+
+style BS fill:#e3f2fd
+style IR fill:#f3e5f5
+style DB fill:#e8f5e9

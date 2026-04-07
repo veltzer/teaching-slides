@@ -1,0 +1,8 @@
+graph LR
+    subgraph Trace
+        S1[Span: API Gateway 200ms]
+        S1 --> S2[Span: Order Service 150ms]
+        S2 --> S3[Span: Payment Service 80ms]
+        S2 --> S4[Span: Inventory Service 40ms]
+        S3 --> S5[Span: Database Query 20ms]
+    end

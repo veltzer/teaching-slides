@@ -1,0 +1,16 @@
+graph TB
+subgraph "SQS Architecture"
+P[Producer] --> Q[SQS Queue]
+Q --> C1[Consumer 1]
+Q --> C2[Consumer 2]
+Q --> C3[Consumer N]
+
+C1 -.->|Visibility Timeout| Q
+C2 -.->|Delete Message| Q
+
+Q --> DLQ[Dead Letter Queue]
+end
+
+style P fill:#e3f2fd
+style Q fill:#f3e5f5
+style DLQ fill:#ffcdd2

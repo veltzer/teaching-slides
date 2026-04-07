@@ -1,0 +1,16 @@
+graph LR
+I[Invoker] --> IC[ICommand]
+IC --> CC1[ConcreteCommand 1]
+IC --> CC2[ConcreteCommand 2]
+IC --> CC3[ConcreteCommand 3]
+
+CC1 --> R1[Receiver 1]
+CC2 --> R2[Receiver 2]
+CC3 --> R3[Receiver 3]
+
+C[Client] -.->|Creates| CC1
+C -.->|Configures| I
+
+style I fill:#e3f2fd
+style IC fill:#f3e5f5
+style R1 fill:#e8f5e9

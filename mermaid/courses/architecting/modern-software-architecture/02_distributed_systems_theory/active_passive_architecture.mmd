@@ -1,0 +1,7 @@
+graph TD
+    LB[Load Balancer] --> N1[Node 1 - Active]
+    N2[Node 2 - Standby]
+    N1 --> DB1[(DB Primary)]
+    DB1 -->|Replication| DB2[(DB Standby)]
+    N1 -.->|Heartbeat| N2
+    N2 -.->|Failover| LB

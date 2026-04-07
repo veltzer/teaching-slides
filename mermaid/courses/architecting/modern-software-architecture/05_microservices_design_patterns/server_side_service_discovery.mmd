@@ -1,0 +1,11 @@
+sequenceDiagram
+    participant Client
+    participant Load Balancer
+    participant Registry
+    participant Service
+    Client->>Load Balancer: Request for Service X
+    Load Balancer->>Registry: Lookup Service X
+    Registry-->>Load Balancer: [instances]
+    Load Balancer->>Service: Forward request
+    Service-->>Load Balancer: Response
+    Load Balancer-->>Client: Response

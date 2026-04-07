@@ -1,0 +1,9 @@
+graph TD
+    WEB[Web Application] --> BFF_W[Web BFF]
+    MOB[Mobile Application] --> BFF_M[Mobile BFF]
+    IOT[IoT Device] --> BFF_I[IoT BFF]
+    BFF_W --> S1[User Service]
+    BFF_W --> S2[Order Service]
+    BFF_M --> S1
+    BFF_M --> S3[Notification Service]
+    BFF_I --> S4[Telemetry Service]

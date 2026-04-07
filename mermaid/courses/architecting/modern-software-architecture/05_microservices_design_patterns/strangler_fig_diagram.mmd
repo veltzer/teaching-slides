@@ -1,0 +1,8 @@
+graph TD
+    R[Router / Proxy] --> M[Monolith]
+    R --> S1[New Service A]
+    R --> S2[New Service B]
+    M -.->|Migrate Feature C| S3[Future Service C]
+    style M fill:#ffcccc
+    style S1 fill:#ccffcc
+    style S2 fill:#ccffcc

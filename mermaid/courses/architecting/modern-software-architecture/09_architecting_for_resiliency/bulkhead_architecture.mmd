@@ -1,0 +1,8 @@
+graph TD
+    APP[Application]
+    APP --> BP1[Thread Pool: Service A - 10 threads]
+    APP --> BP2[Thread Pool: Service B - 5 threads]
+    APP --> BP3[Thread Pool: Service C - 8 threads]
+    BP1 --> SA[Service A]
+    BP2 --> SB[Service B]
+    BP3 --> SC[Service C - Slow]
