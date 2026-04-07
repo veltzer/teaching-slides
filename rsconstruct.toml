@@ -5,14 +5,12 @@ extra_inputs = [
 ]
 
 [processor.script.md_lint]
-linter = "python"
-args = ["scripts/md_lint.py", "-q"]
+linter = "scripts/md_lint.py"
 extensions = [".md"]
 scan_dirs = ["marp"]
 
 [processor.script.check_code_labels]
-linter = "python"
-args = ["scripts/check_code_labels.py", "-q"]
+linter = "scripts/check_code_labels.py"
 extensions = [".md"]
 scan_dirs = ["marp"]
 
@@ -39,6 +37,12 @@ scan_dirs = ["marp"]
 
 [processor.zspell]
 scan_dirs = ["marp"]
+
+[processor.script.svglint]
+linter = "svglint"
+args = ["--ci"]
+extensions = [".svg"]
+scan_dirs = ["svg", "out/mermaid"]
 
 [processor.pdfunite]
 output_dir = "_site/pdfunite"
