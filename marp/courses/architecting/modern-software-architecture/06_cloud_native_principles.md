@@ -1,10 +1,5 @@
 # Cloud-Native Principles
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Does Cloud-Native Mean?
@@ -82,14 +77,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Backing Services Diagram
 
-<div class="mermaid">
-graph LR
-    APP[Application] --> DB[(PostgreSQL)]
-    APP --> CACHE[(Redis)]
-    APP --> MQ[RabbitMQ]
-    APP --> SMTP[SMTP Service]
-    APP --> S3[Object Storage]
-</div>
+![backing_services_diagram](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/backing_services_diagram.mmd)
 
 ---
 ## Factor 5: Build, Release, Run
@@ -102,13 +90,7 @@ graph LR
 ---
 ## Build, Release, Run Pipeline
 
-<div class="mermaid">
-graph LR
-    CODE[Source Code] -->|Build| BUILD[Build Artifact]
-    CONFIG[Config] --> RELEASE[Release]
-    BUILD --> RELEASE
-    RELEASE -->|Run| RUNTIME[Running Process]
-</div>
+![build_release_run_pipeline](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/build_release_run_pipeline.mmd)
 
 ---
 ## Factor 6: Processes
@@ -138,26 +120,7 @@ graph LR
 ---
 ## Concurrency Model
 
-<div class="mermaid">
-graph TD
-    subgraph Web Processes
-        W1[Web 1]
-        W2[Web 2]
-        W3[Web 3]
-    end
-    subgraph Worker Processes
-        WK1[Worker 1]
-        WK2[Worker 2]
-    end
-    subgraph Clock Processes
-        CK1[Scheduler]
-    end
-    LB[Load Balancer] --> W1
-    LB --> W2
-    LB --> W3
-    Q[Message Queue] --> WK1
-    Q --> WK2
-</div>
+![concurrency_model](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/concurrency_model.mmd)
 
 ---
 ## Factor 9: Disposability
@@ -212,19 +175,7 @@ graph TD
 ---
 ## Stateless Service Architecture
 
-<div class="mermaid">
-graph TD
-    C[Client] --> LB[Load Balancer]
-    LB --> I1[Instance 1]
-    LB --> I2[Instance 2]
-    LB --> I3[Instance 3]
-    I1 --> R[(Redis Session Store)]
-    I2 --> R
-    I3 --> R
-    I1 --> DB[(Database)]
-    I2 --> DB
-    I3 --> DB
-</div>
+![stateless_service_architecture](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/stateless_service_architecture.mmd)
 
 ---
 ## Benefits of Statelessness
@@ -279,16 +230,7 @@ graph TD
 ---
 ## Auto-Scaling Architecture
 
-<div class="mermaid">
-graph TD
-    M[Metrics Collector] -->|CPU > 70%| AS[Auto Scaler]
-    AS -->|Scale Out| IG[Instance Group]
-    IG --> I1[Instance 1]
-    IG --> I2[Instance 2]
-    IG --> I3[Instance 3 - New]
-    M -->|CPU < 30%| AS
-    AS -->|Scale In| IG
-</div>
+![auto_scaling_architecture](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/auto_scaling_architecture.mmd)
 
 ---
 ## Designing for Scalability
@@ -314,20 +256,7 @@ graph TD
 ---
 ## Cache-Aside Pattern
 
-<div class="mermaid">
-sequenceDiagram
-    participant App
-    participant Cache
-    participant DB
-    App->>Cache: Get(key)
-    Cache-->>App: Cache Miss
-    App->>DB: Query
-    DB-->>App: Data
-    App->>Cache: Set(key, data)
-    Note over App: Next request
-    App->>Cache: Get(key)
-    Cache-->>App: Cache Hit - Return Data
-</div>
+![cache_aside_pattern](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/cache_aside_pattern.mmd)
 
 ---
 ## Data Partitioning

@@ -1,10 +1,5 @@
 # Communication Patterns
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## Why Communication Patterns Matter
@@ -25,16 +20,7 @@
 ---
 ## Synchronous Communication Diagram
 
-<div class="mermaid">
-sequenceDiagram
-    participant Client
-    participant Service A
-    participant Service B
-    Client->>Service A: HTTP Request
-    Service A->>Service B: HTTP Request
-    Service B-->>Service A: HTTP Response
-    Service A-->>Client: HTTP Response
-</div>
+![synchronous_communication_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/synchronous_communication_diagram.mmd)
 
 ---
 ## Asynchronous Communication
@@ -47,17 +33,7 @@ sequenceDiagram
 ---
 ## Asynchronous Communication Diagram
 
-<div class="mermaid">
-sequenceDiagram
-    participant Producer
-    participant Message Broker
-    participant Consumer
-    Producer->>Message Broker: Publish Message
-    Message Broker-->>Producer: Acknowledgment
-    Note over Message Broker: Message stored
-    Message Broker->>Consumer: Deliver Message
-    Consumer-->>Message Broker: Acknowledgment
-</div>
+![asynchronous_communication_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/asynchronous_communication_diagram.mmd)
 
 ---
 ## Sync vs Async Comparison
@@ -204,13 +180,7 @@ message OrderResponse {
 ---
 ## gRPC Communication Patterns
 
-<div class="mermaid">
-graph TD
-    A[Unary RPC] --> A1[Single request, single response]
-    B[Server Streaming] --> B1[Single request, stream of responses]
-    C[Client Streaming] --> C1[Stream of requests, single response]
-    D[Bidirectional Streaming] --> D1[Stream of requests and responses]
-</div>
+![grpc_communication_patterns](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/grpc_communication_patterns.mmd)
 
 ---
 ## When to Use gRPC
@@ -232,14 +202,7 @@ graph TD
 ---
 ## Message Broker Architecture
 
-<div class="mermaid">
-graph LR
-    P1[Producer 1] --> Q1[Queue / Topic]
-    P2[Producer 2] --> Q1
-    Q1 --> C1[Consumer 1]
-    Q1 --> C2[Consumer 2]
-    Q1 --> C3[Consumer 3]
-</div>
+![message_broker_architecture](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/message_broker_architecture.mmd)
 
 ---
 ## Point-to-Point Messaging
@@ -260,13 +223,7 @@ graph LR
 ---
 ## Pub-Sub Diagram
 
-<div class="mermaid">
-graph TD
-    P[Publisher] --> T[Topic: order.created]
-    T --> S1[Subscriber: Email Service]
-    T --> S2[Subscriber: Inventory Service]
-    T --> S3[Subscriber: Analytics Service]
-</div>
+![pub_sub_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/pub_sub_diagram.mmd)
 
 ---
 ## Kafka vs RabbitMQ
@@ -298,15 +255,7 @@ graph TD
 ---
 ## Event-Driven Flow
 
-<div class="mermaid">
-graph LR
-    OS[Order Service] -->|OrderPlaced| EB[Event Bus]
-    EB -->|OrderPlaced| PS[Payment Service]
-    EB -->|OrderPlaced| IS[Inventory Service]
-    EB -->|OrderPlaced| NS[Notification Service]
-    PS -->|PaymentProcessed| EB
-    EB -->|PaymentProcessed| OS
-</div>
+![event_driven_flow](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/event_driven_flow.mmd)
 
 ---
 ## Event Types
@@ -354,28 +303,12 @@ graph LR
 ---
 ## Dead Letter Queue Flow
 
-<div class="mermaid">
-graph LR
-    P[Producer] --> Q[Main Queue]
-    Q --> C[Consumer]
-    C -->|Processing Failed| Q
-    Q -->|Max Retries Exceeded| DLQ[Dead Letter Queue]
-    DLQ --> M[Manual Review / Alerting]
-</div>
+![dead_letter_queue_flow](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/dead_letter_queue_flow.mmd)
 
 ---
 ## Choosing a Communication Pattern
 
-<div class="mermaid">
-graph TD
-    A{Need immediate response?}
-    A -->|Yes| B{High performance needed?}
-    A -->|No| C{Event notification?}
-    B -->|Yes| D[gRPC]
-    B -->|No| E[REST]
-    C -->|Yes| F[Pub/Sub]
-    C -->|No| G[Message Queue]
-</div>
+![choosing_a_communication_pattern](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/choosing_a_communication_pattern.mmd)
 
 ---
 ## Summary

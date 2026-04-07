@@ -1,11 +1,6 @@
 # Monitoring and Observability
 ## Modern Architecture Course
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## Agenda
@@ -27,30 +22,7 @@
 ---
 ## The Three Pillars of Observability
 
-<div class="mermaid">
-graph TB
-O[Observability]
-
-O --> L[Logs<br/>Event Records]
-O --> M[Metrics<br/>Numeric Measurements]
-O --> T[Traces<br/>Request Flow]
-
-L --> L1[Application Logs]
-L --> L2[System Logs]
-L --> L3[Audit Logs]
-
-M --> M1[Business Metrics]
-M --> M2[System Metrics]
-M --> M3[Application Metrics]
-
-T --> T1[Distributed Tracing]
-T --> T2[Performance Analysis]
-T --> T3[Dependency Mapping]
-
-style L fill:#e3f2fd
-style M fill:#f3e5f5
-style T fill:#e8f5e9
-</div>
+![the_three_pillars_of_observability](/mermaid/courses/architecting/architecting/10_monitoring/the_three_pillars_of_observability.mmd)
 
 ---
 
@@ -101,38 +73,7 @@ logger.info("order_processed",
 
 ## ELK Stack Architecture
 
-<div class="mermaid">
-graph LR
-subgraph "Data Sources"
-A1[Application 1]
-A2[Application 2]
-A3[Application N]
-end
-
-subgraph "Collection"
-B[Beats/Fluentd]
-L[Logstash]
-end
-
-subgraph "Storage"
-E[Elasticsearch<br/>Cluster]
-end
-
-subgraph "Visualization"
-K[Kibana]
-end
-
-A1 --> B
-A2 --> B
-A3 --> B
-B --> L
-L --> E
-E --> K
-
-style B fill:#e3f2fd
-style E fill:#f3e5f5
-style K fill:#e8f5e9
-</div>
+![elk_stack_architecture](/mermaid/courses/architecting/architecting/10_monitoring/elk_stack_architecture.mmd)
 
 ---
 
@@ -199,28 +140,7 @@ def process_request():
 
 ## Distributed Tracing
 
-<div class="mermaid">
-sequenceDiagram
-participant U as User
-participant G as API Gateway
-participant A as Auth Service
-participant O as Order Service
-participant P as Payment Service
-participant D as Database
-
-U->>G: Request (Trace ID: 123)
-G->>A: Authenticate (Span: auth)
-A-->>G: Token Valid
-G->>O: Create Order (Span: order)
-O->>D: Save Order (Span: db-write)
-D-->>O: Order Saved
-O->>P: Process Payment (Span: payment)
-P-->>O: Payment Complete
-O-->>G: Order Created
-G-->>U: Response
-
-Note over U,D: Total Trace Duration: 250ms
-</div>
+![distributed_tracing](/mermaid/courses/architecting/architecting/10_monitoring/distributed_tracing.mmd)
 
 ---
 
@@ -271,28 +191,7 @@ annotations:
 
 ## Alert Routing
 
-<div class="mermaid">
-graph TB
-P[Prometheus<br/>Alert Rules]
-
-AM[AlertManager]
-
-P -->|Fires Alert| AM
-
-AM --> R{Route by<br/>Severity?}
-
-R -->|Critical| PD[PagerDuty<br/>On-Call]
-R -->|Warning| S[Slack<br/>Channel]
-R -->|Info| E[Email<br/>Team]
-
-PD --> I[Create<br/>Incident]
-S --> T[Team<br/>Discussion]
-E --> L[Log for<br/>Review]
-
-style P fill:#e3f2fd
-style AM fill:#f3e5f5
-style PD fill:#ffcdd2
-</div>
+![alert_routing](/mermaid/courses/architecting/architecting/10_monitoring/alert_routing.mmd)
 
 ---
 
@@ -443,36 +342,7 @@ def handle_alert(alert):
 
 ## Cost of Monitoring
 
-<div class="mermaid">
-graph LR
-subgraph "Data Volume"
-DV[100GB/day Logs<br/>1M metrics/min<br/>10K traces/sec]
-end
-
-subgraph "Storage Costs"
-SC[Hot Storage: $$$<br/>Warm Storage: $$<br/>Cold Storage: $]
-end
-
-subgraph "Processing Costs"
-PC[Ingestion<br/>Indexing<br/>Query]
-end
-
-subgraph "Optimization"
-O1[Sampling]
-O2[Aggregation]
-O3[Tiered Storage]
-end
-
-DV --> SC
-DV --> PC
-SC --> O3
-PC --> O1
-PC --> O2
-
-style DV fill:#e3f2fd
-style SC fill:#ffcdd2
-style O1 fill:#e8f5e9
-</div>
+![cost_of_monitoring](/mermaid/courses/architecting/architecting/10_monitoring/cost_of_monitoring.mmd)
 
 ---
 

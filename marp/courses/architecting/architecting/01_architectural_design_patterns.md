@@ -1,10 +1,5 @@
 # Client-Server Pattern
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## Overview
@@ -28,16 +23,7 @@
 ---
 ## Communication Diagram
 
-<div class="mermaid">
-graph LR
-C1[Client 1] -->|Request| S[Server]
-C2[Client 2] -->|Request| S
-C3[Client 3] -->|Request| S
-S -->|Response| C1
-S -->|Response| C2
-S -->|Response| C3
-S -.->|Manages| DB[(Database/Resources)]
-</div>
+![communication_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/communication_diagram.mmd)
 
 ---
 
@@ -93,19 +79,7 @@ Cons:
 
 ## Broker Interaction Diagram
 
-<div class="mermaid">
-graph TB
-C1[Client 1] -->|1. Request Service| B[Broker]
-C2[Client 2] -->|1. Request Service| B
-B -->|2. Forward Request| S1[Server 1]
-B -->|2. Forward Request| S2[Server 2]
-S1 -->|3. Response| B
-S2 -->|3. Response| B
-B -->|4. Return Response| C1
-B -->|4. Return Response| C2
-S1 -.->|Register Services| B
-S2 -.->|Register Services| B
-</div>
+![broker_interaction_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/broker_interaction_diagram.mmd)
 
 ---
 ## Broker Pros and Cons
@@ -562,16 +536,7 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-<div class="mermaid">
-graph LR
-A[Application] -->|Emit Events| ES[(Event Store)]
-ES -->|Replay Events| P[Projection]
-ES -->|Event Stream| EP[Event Processor]
-P -->|Current State| Q[Query Service]
-EP -->|Update| RS[Read Store]
-Q -->|Query| C[Client]
-ES -.->|Audit Log| AL[Audit/History]
-</div>
+![event_sourcing_architecture_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/event_sourcing_architecture_diagram.mmd)
 
 ---
 ## Event Sourcing Pros and Cons
@@ -1251,19 +1216,7 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-<div class="mermaid">
-graph LR
-Start([Start Transaction]) --> T1[Service A Transaction]
-T1 -->|Success| T2[Service B Transaction]
-T2 -->|Success| T3[Service C Transaction]
-T3 -->|Success| End([Complete])
-T3 -->|Failure| C3[Compensate C]
-C3 --> C2[Compensate B]
-C2 --> C1[Compensate A]
-C1 --> Fail([Transaction Failed])
-T2 -->|Failure| C2
-T1 -->|Failure| C1
-</div>
+![saga_pattern_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/saga_pattern_diagram.mmd)
 
 ---
 ## Pros and Cons
@@ -1733,20 +1686,7 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-<div class="mermaid">
-graph TB
-R1[Request 1] --> TH{Throttler}
-R2[Request 2] --> TH
-R3[Request 3] --> TH
-R4[Request 4] --> TH
-TH -->|Within Limit| A[Allow]
-TH -->|Exceeds Limit| Q[Queue]
-TH -->|Queue Full| R[Reject]
-A --> S[Service]
-Q -.->|Delayed| S
-R --> E[Error Response]
-TH -.->|Rate Counter| RC[(Rate Limiter)]
-</div>
+![throttling_pattern_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/throttling_pattern_diagram.mmd)
 
 ---
 ## Throttling Pros and Cons

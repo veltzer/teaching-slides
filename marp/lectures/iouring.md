@@ -234,22 +234,7 @@ io_uring_queue_init_params(64, &ring, &params);
 
 ## `io_uring` vs Traditional I/O
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
-
-<div class="mermaid">
-graph LR
-    A[Application] -->|System Call| B[read/write]
-    B -->|Wait| C[Kernel]
-    C -->|Data| A
-    D[Application] -->|Submit| E[io_uring SQ]
-    E -->|Batch| F[Kernel]
-    F -->|Complete| G[io_uring CQ]
-    G -->|Poll| D
-</div>
+![iouring_vs_traditional_i_o](/mermaid/lectures/iouring/iouring_vs_traditional_i_o.mmd)
 
 ---
 
@@ -434,15 +419,7 @@ clock_gettime(CLOCK_MONOTONIC, &end);
 
 ## Comparison with `epoll`
 
-<div class="mermaid">
-graph TD
-    A[epoll] -->|Network Only| B[Limited Scope]
-    A -->|Level/Edge Triggered| C[Flexibility]
-    A -->|System Call Per Op| D[Overhead]
-    E[io_uring] -->|All I/O Types| F[Universal]
-    E -->|Ring Buffer| G[Efficient]
-    E -->|Batching| H[Performance]
-</div>
+![comparison_with_epoll](/mermaid/lectures/iouring/comparison_with_epoll.mmd)
 
 ---
 

@@ -1,10 +1,5 @@
 # Monitoring and Observability
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## Monitoring vs Observability
@@ -25,17 +20,7 @@
 ---
 ## The Observability Challenge
 
-<div class="mermaid">
-graph TD
-    C[Client] --> GW[API Gateway]
-    GW --> S1[Service A]
-    GW --> S2[Service B]
-    S1 --> S3[Service C]
-    S2 --> S3
-    S3 --> DB[(Database)]
-    S1 --> CACHE[(Cache)]
-    S2 --> MQ[Message Queue]
-</div>
+![the_observability_challenge](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_observability_challenge.mmd)
 
 - A single user request may touch 5+ services
 - Where did the latency spike occur? Which service returned an error?
@@ -43,16 +28,7 @@ graph TD
 ---
 ## The Three Pillars of Observability
 
-<div class="mermaid">
-graph TD
-    O[Observability]
-    O --> M[Metrics]
-    O --> L[Logs]
-    O --> T[Traces]
-    M --> M1[Quantitative measurements over time]
-    L --> L1[Discrete events with context]
-    T --> T1[Request flow across services]
-</div>
+![the_three_pillars_of_observability](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_three_pillars_of_observability.mmd)
 
 ---
 ## Pillar 1: Metrics
@@ -104,15 +80,7 @@ REQUEST_LATENCY = Histogram(
 ---
 ## Metrics Architecture
 
-<div class="mermaid">
-graph LR
-    S1[Service 1] -->|/metrics| P[Prometheus]
-    S2[Service 2] -->|/metrics| P
-    S3[Service 3] -->|/metrics| P
-    P --> G[Grafana]
-    P --> AM[Alert Manager]
-    AM --> PD[PagerDuty / Slack]
-</div>
+![metrics_architecture](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/metrics_architecture.mmd)
 
 ---
 ## Grafana Dashboards
@@ -173,17 +141,7 @@ graph LR
 ---
 ## Centralized Logging Architecture
 
-<div class="mermaid">
-graph LR
-    S1[Service 1] -->|stdout| A1[Log Agent]
-    S2[Service 2] -->|stdout| A2[Log Agent]
-    S3[Service 3] -->|stdout| A3[Log Agent]
-    A1 --> AGG[Log Aggregator]
-    A2 --> AGG
-    A3 --> AGG
-    AGG --> STORE[(Log Storage)]
-    STORE --> UI[Query / Dashboard]
-</div>
+![centralized_logging_architecture](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/centralized_logging_architecture.mmd)
 
 ---
 ## Logging Stack Options
@@ -217,16 +175,7 @@ graph LR
 ---
 ## Trace Anatomy
 
-<div class="mermaid">
-graph LR
-    subgraph Trace
-        S1[Span: API Gateway 200ms]
-        S1 --> S2[Span: Order Service 150ms]
-        S2 --> S3[Span: Payment Service 80ms]
-        S2 --> S4[Span: Inventory Service 40ms]
-        S3 --> S5[Span: Database Query 20ms]
-    end
-</div>
+![trace_anatomy](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_anatomy.mmd)
 
 - A trace represents the entire request journey
 - Each span represents one operation within the trace
@@ -251,18 +200,7 @@ graph LR
 ---
 ## Context Propagation Flow
 
-<div class="mermaid">
-sequenceDiagram
-    participant A as Service A
-    participant B as Service B
-    participant C as Service C
-    A->>B: Request + traceparent header
-    Note over B: Extract context, create child span
-    B->>C: Request + traceparent header
-    Note over C: Extract context, create child span
-    C-->>B: Response
-    B-->>A: Response
-</div>
+![context_propagation_flow](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/context_propagation_flow.mmd)
 
 ---
 ## OpenTelemetry
@@ -275,14 +213,7 @@ sequenceDiagram
 ---
 ## OpenTelemetry Architecture
 
-<div class="mermaid">
-graph TD
-    APP[Application + OTel SDK] -->|OTLP| COLL[OTel Collector]
-    COLL -->|Export| J[Jaeger]
-    COLL -->|Export| P[Prometheus]
-    COLL -->|Export| L[Loki]
-    COLL -->|Export| V[Vendor Backend]
-</div>
+![opentelemetry_architecture](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/opentelemetry_architecture.mmd)
 
 ---
 ## OpenTelemetry Collector
@@ -391,13 +322,7 @@ def readiness():
 ---
 ## SLI/SLO Relationship
 
-<div class="mermaid">
-graph LR
-    SLI[SLI: p99 latency = 180ms] --> SLO[SLO: p99 latency < 200ms]
-    SLO --> SLA[SLA: 99.9% of requests within SLO]
-    SLI2[SLI: Error rate = 0.05%] --> SLO2[SLO: Error rate < 0.1%]
-    SLO2 --> SLA
-</div>
+![sli_slo_relationship](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/sli_slo_relationship.mmd)
 
 ---
 ## Error Budgets
@@ -419,13 +344,7 @@ graph LR
 ---
 ## Correlation Flow
 
-<div class="mermaid">
-graph TD
-    A[Alert: High p99 latency] --> B[Dashboard: Which endpoint?]
-    B --> C[Trace: Find slow spans]
-    C --> D[Logs: Error details for trace ID]
-    D --> E[Root Cause Identified]
-</div>
+![correlation_flow](/mermaid/courses/architecting/modern-software-architecture/10_monitoring_and_observability/correlation_flow.mmd)
 
 ---
 ## Observability in Kubernetes

@@ -1,11 +1,6 @@
 # Architecting Systems for Big Data
 ## Modern Architecture Course
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 
@@ -35,16 +30,7 @@ Additional V's:
 
 ## Big Data Architecture Overview
 
-<div class="mermaid">
-graph LR
-DS[Data Sources] --> I[Ingestion Layer]
-I --> S[Storage Layer]
-S --> P[Processing Layer]
-P --> A[Analytics Layer]
-A --> V[Visualization Layer]
-S -.->|Metadata| C[Catalog]
-P -.->|Monitoring| M[Metrics]
-</div>
+![big_data_architecture_overview](/mermaid/courses/architecting/architecting/02_big_data/big_data_architecture_overview.mmd)
 
 ---
 
@@ -65,51 +51,19 @@ P -.->|Monitoring| M[Metrics]
 
 ## Lambda Architecture
 
-<div class="mermaid">
-graph TB
-D[Data Stream] --> B[Batch Layer]
-D --> S[Speed Layer]
-B --> BV[Batch Views]
-S --> RV[Real-time Views]
-BV --> SL[Serving Layer]
-RV --> SL
-SL --> Q[Queries]
-B -.->|Master Dataset| MD[(Master Data)]
-</div>
+![lambda_architecture](/mermaid/courses/architecting/architecting/02_big_data/lambda_architecture.mmd)
 
 ---
 
 ## Kappa Architecture
 
-<div class="mermaid">
-graph LR
-D[Data Stream] --> K[Kafka/Event Log]
-K --> SP[Stream Processing]
-SP --> V[Views]
-V --> Q[Queries]
-K -.->|Replay| RP[Reprocessing]
-RP --> SP
-</div>
+![kappa_architecture](/mermaid/courses/architecting/architecting/02_big_data/kappa_architecture.mmd)
 
 ---
 
 ## Data Lake Architecture
 
-<div class="mermaid">
-graph TB
-subgraph "Data Lake Zones"
-RZ[Raw Zone]
-CZ[Curated Zone]
-PZ[Production Zone]
-end
-DS[Data Sources] --> RZ
-RZ --> T[Transform]
-T --> CZ
-CZ --> P[Process]
-P --> PZ
-PZ --> A[Analytics/ML]
-RZ -.->|Catalog| DC[Data Catalog]
-</div>
+![data_lake_architecture](/mermaid/courses/architecting/architecting/02_big_data/data_lake_architecture.mmd)
 
 ---
 
@@ -125,20 +79,7 @@ RZ -.->|Catalog| DC[Data Catalog]
 
 ## HDFS Architecture
 
-<div class="mermaid">
-graph TB
-C[Client] --> NN[NameNode]
-NN --> M[Metadata]
-C --> DN1[DataNode 1]
-C --> DN2[DataNode 2]
-C --> DN3[DataNode 3]
-DN1 -.->|Replication| DN2
-DN2 -.->|Replication| DN3
-DN3 -.->|Replication| DN1
-NN -.->|Heartbeat| DN1
-NN -.->|Heartbeat| DN2
-NN -.->|Heartbeat| DN3
-</div>
+![hdfs_architecture](/mermaid/courses/architecting/architecting/02_big_data/hdfs_architecture.mmd)
 
 ---
 
@@ -177,16 +118,7 @@ def store_data(data, bucket, key):
 
 ## Spark Architecture
 
-<div class="mermaid">
-graph LR
-D[Driver] --> E1[Executor 1]
-D --> E2[Executor 2]
-D --> E3[Executor 3]
-E1 -.->|Tasks| W1[Workers]
-E2 -.->|Tasks| W2[Workers]
-E3 -.->|Tasks| W3[Workers]
-D -.->|Coordinates| CM[Cluster Manager]
-</div>
+![spark_architecture](/mermaid/courses/architecting/architecting/02_big_data/spark_architecture.mmd)
 
 ---
 
@@ -297,16 +229,7 @@ ORDER BY 1 DESC
 
 ## Machine Learning Pipeline
 
-<div class="mermaid">
-graph LR
-D[Data Ingestion] --> P[Preprocessing]
-P --> FE[Feature Engineering]
-FE --> T[Training]
-T --> E[Evaluation]
-E --> D2[Deployment]
-T -.->|Model| MS[Model Store]
-E -.->|Metrics| M[Monitoring]
-</div>
+![machine_learning_pipeline](/mermaid/courses/architecting/architecting/02_big_data/machine_learning_pipeline.mmd)
 
 ---
 
@@ -383,19 +306,7 @@ def validate_dataset(df):
 
 ## Monitoring Dashboard
 
-<div class="mermaid">
-graph TB
-subgraph "Monitoring Stack"
-M[Metrics Collection] --> P[Prometheus]
-L[Log Collection] --> E[Elasticsearch]
-T[Traces] --> J[Jaeger]
-end
-P --> G[Grafana Dashboard]
-E --> K[Kibana]
-J --> G
-G --> A[Alerts]
-K --> A
-</div>
+![monitoring_dashboard](/mermaid/courses/architecting/architecting/02_big_data/monitoring_dashboard.mmd)
 
 ---
 
@@ -543,50 +454,19 @@ def optimize_partitioning(df):
 
 ## Real-time Processing
 
-<div class="mermaid">
-graph LR
-S[Stream Source] --> K[Kafka]
-K --> SP[Stream Processor]
-SP --> RT[Real-time Analytics]
-SP --> DB[(State Store)]
-RT --> D[Dashboard]
-RT --> AL[Alerts]
-SP -.->|Checkpoint| CP[Checkpoints]
-</div>
+![real_time_processing](/mermaid/courses/architecting/architecting/02_big_data/real_time_processing.mmd)
 
 ---
 
 ## Batch Processing
 
-<div class="mermaid">
-graph LR
-DS[(Data Source)] --> I[Ingestion]
-I --> S[(Storage/Data Lake)]
-S --> B[Batch Jobs]
-B --> T[Transform]
-T --> A[Aggregate]
-A --> DW[(Data Warehouse)]
-DW --> R[Reports]
-B -.->|Schedule| SC[Scheduler]
-</div>
+![batch_processing](/mermaid/courses/architecting/architecting/02_big_data/batch_processing.mmd)
 
 ---
 
 ## Hybrid Processing
 
-<div class="mermaid">
-graph TB
-D[Data Sources] --> RT[Real-time Stream]
-D --> BT[Batch Data]
-RT --> SP[Stream Processing]
-BT --> BP[Batch Processing]
-SP --> SV[(Speed Views)]
-BP --> BV[(Batch Views)]
-SV --> SL[Serving Layer]
-BV --> SL
-SL --> API[API/Query Layer]
-API --> U[Users]
-</div>
+![hybrid_processing](/mermaid/courses/architecting/architecting/02_big_data/hybrid_processing.mmd)
 
 ---
 

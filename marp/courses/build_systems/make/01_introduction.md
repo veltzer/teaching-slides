@@ -119,14 +119,7 @@ utils.o: utils.c utils.h
 
 ## Dependency Resolution
 
-<div class="mermaid">
-graph TD
-    A[program] --> B[main.o]
-    A --> C[utils.o]
-    B --> D[main.c]
-    C --> E[utils.c]
-    C --> F[utils.h]
-</div>
+![dependency_resolution](/mermaid/courses/build_systems/make/01_introduction/dependency_resolution.mmd)
 
 ---
 

@@ -1,10 +1,5 @@
 # Orchestration with Kubernetes
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is Container Orchestration?
@@ -26,32 +21,7 @@
 ---
 ## Kubernetes Architecture
 
-<div class="mermaid">
-graph TD
-    subgraph Control Plane
-        API[API Server]
-        SCHED[Scheduler]
-        CM[Controller Manager]
-        ETCD[(etcd)]
-    end
-    subgraph Worker Node 1
-        KL1[kubelet]
-        KP1[kube-proxy]
-        P1[Pod A]
-        P2[Pod B]
-    end
-    subgraph Worker Node 2
-        KL2[kubelet]
-        KP2[kube-proxy]
-        P3[Pod C]
-        P4[Pod D]
-    end
-    API --> SCHED
-    API --> CM
-    API --> ETCD
-    API --> KL1
-    API --> KL2
-</div>
+![kubernetes_architecture](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/kubernetes_architecture.mmd)
 
 ---
 ## Control Plane Components
@@ -105,18 +75,7 @@ spec:
 ---
 ## Multi-Container Pod Patterns
 
-<div class="mermaid">
-graph TD
-    subgraph Sidecar
-        A1[Main Container] --- A2[Log Collector]
-    end
-    subgraph Ambassador
-        B1[Main Container] --- B2[Proxy Container]
-    end
-    subgraph Init Container
-        C1[Init Container] -->|Runs first| C2[Main Container]
-    end
-</div>
+![multi_container_pod_patterns](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/multi_container_pod_patterns.mmd)
 
 ---
 ## Sidecar Pattern
@@ -162,22 +121,7 @@ spec:
 ---
 ## Rolling Update Strategy
 
-<div class="mermaid">
-graph TD
-    subgraph Step 1
-        V1A[v1 Pod] & V1B[v1 Pod] & V1C[v1 Pod]
-    end
-    subgraph Step 2
-        V1D[v1 Pod] & V1E[v1 Pod] & V2A[v2 Pod]
-    end
-    subgraph Step 3
-        V1F[v1 Pod] & V2B[v2 Pod] & V2C[v2 Pod]
-    end
-    subgraph Step 4
-        V2D[v2 Pod] & V2E[v2 Pod] & V2F[v2 Pod]
-    end
-    Step 1 --> Step 2 --> Step 3 --> Step 4
-</div>
+![rolling_update_strategy](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/rolling_update_strategy.mmd)
 
 ---
 ## Deployment Update Configuration
@@ -244,13 +188,7 @@ spec:
 ---
 ## Service Networking Diagram
 
-<div class="mermaid">
-graph TD
-    CLIENT[Client Pod] -->|web-service:80| SVC[Service: web-service]
-    SVC -->|Round Robin| P1[Pod 1:8080]
-    SVC --> P2[Pod 2:8080]
-    SVC --> P3[Pod 3:8080]
-</div>
+![service_networking_diagram](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/service_networking_diagram.mmd)
 
 ---
 ## Ingress
@@ -430,14 +368,7 @@ spec:
 ---
 ## Self-Healing Mechanisms
 
-<div class="mermaid">
-graph TD
-    A[Pod Crashes] -->|kubelet detects| B[Restart Container]
-    C[Node Fails] -->|Controller detects| D[Reschedule Pods]
-    E[Liveness Probe Fails] -->|kubelet| F[Restart Container]
-    G[Readiness Probe Fails] -->|kube-proxy| H[Remove from Service]
-    I[Deployment Replica Count] -->|Controller| J[Create/Delete Pods]
-</div>
+![self_healing_mechanisms](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/self_healing_mechanisms.mmd)
 
 ---
 ## Horizontal Pod Autoscaler (HPA)

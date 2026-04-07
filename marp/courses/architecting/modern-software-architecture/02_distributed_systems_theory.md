@@ -1,10 +1,5 @@
 # Distributed Systems Theory
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is a Distributed System?
@@ -106,15 +101,7 @@
 ---
 ## Consistency Models Spectrum
 
-<div class="mermaid">
-graph LR
-    A[Strong Consistency] --> B[Sequential Consistency]
-    B --> C[Causal Consistency]
-    C --> D[Read-Your-Writes]
-    D --> E[Eventual Consistency]
-    style A fill:#e74c3c,color:white
-    style E fill:#27ae60,color:white
-</div>
+![consistency_models_spectrum](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.mmd)
 
 - Stronger consistency means more coordination overhead
 - Weaker consistency means better performance and availability
@@ -236,29 +223,12 @@ graph LR
 ---
 ## Active-Active Architecture
 
-<div class="mermaid">
-graph TD
-    LB[Load Balancer] --> N1[Node 1 - Active]
-    LB --> N2[Node 2 - Active]
-    LB --> N3[Node 3 - Active]
-    N1 --> DB1[(DB Primary)]
-    N2 --> DB1
-    N3 --> DB1
-    DB1 -->|Replication| DB2[(DB Replica)]
-</div>
+![active_active_architecture](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_active_architecture.mmd)
 
 ---
 ## Active-Passive Architecture
 
-<div class="mermaid">
-graph TD
-    LB[Load Balancer] --> N1[Node 1 - Active]
-    N2[Node 2 - Standby]
-    N1 --> DB1[(DB Primary)]
-    DB1 -->|Replication| DB2[(DB Standby)]
-    N1 -.->|Heartbeat| N2
-    N2 -.->|Failover| LB
-</div>
+![active_passive_architecture](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_passive_architecture.mmd)
 
 ---
 ## Fault Tolerance Principles
@@ -296,18 +266,7 @@ graph TD
 ---
 ## Replication Topologies
 
-<div class="mermaid">
-graph TD
-    subgraph Single Leader
-        P1[Primary] --> R1[Replica 1]
-        P1 --> R2[Replica 2]
-    end
-    subgraph Multi Leader
-        L1[Leader 1] <--> L2[Leader 2]
-        L1 --> R3[Replica]
-        L2 --> R4[Replica]
-    end
-</div>
+![replication_topologies](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.mmd)
 
 ---
 ## Consensus Algorithms
@@ -320,17 +279,7 @@ graph TD
 ---
 ## Raft Consensus Overview
 
-<div class="mermaid">
-graph TD
-    L[Leader] -->|AppendEntries| F1[Follower 1]
-    L -->|AppendEntries| F2[Follower 2]
-    L -->|AppendEntries| F3[Follower 3]
-    L -->|AppendEntries| F4[Follower 4]
-    F1 -->|Acknowledge| L
-    F2 -->|Acknowledge| L
-    F3 -->|Acknowledge| L
-    F4 -->|Acknowledge| L
-</div>
+![raft_consensus_overview](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.mmd)
 
 - Leader handles all writes
 - Majority acknowledgment required for commit

@@ -1,10 +1,5 @@
 # DevOps and CI/CD for Architects
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is DevOps?
@@ -26,17 +21,7 @@
 ---
 ## The DevOps Lifecycle
 
-<div class="mermaid">
-graph LR
-    PLAN[Plan] --> CODE[Code]
-    CODE --> BUILD[Build]
-    BUILD --> TEST[Test]
-    TEST --> RELEASE[Release]
-    RELEASE --> DEPLOY[Deploy]
-    DEPLOY --> OPERATE[Operate]
-    OPERATE --> MONITOR[Monitor]
-    MONITOR --> PLAN
-</div>
+![the_devops_lifecycle](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/the_devops_lifecycle.mmd)
 
 ---
 ## Why Architects Care About DevOps
@@ -57,15 +42,7 @@ graph LR
 ---
 ## CI Pipeline
 
-<div class="mermaid">
-graph LR
-    PUSH[Code Push] --> LINT[Lint / Format]
-    LINT --> BUILD[Build]
-    BUILD --> UNIT[Unit Tests]
-    UNIT --> INT[Integration Tests]
-    INT --> SCAN[Security Scan]
-    SCAN --> ART[Publish Artifact]
-</div>
+![ci_pipeline](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/ci_pipeline.mmd)
 
 ---
 ## CI Best Practices
@@ -95,15 +72,7 @@ graph LR
 ---
 ## CD vs Continuous Deployment
 
-<div class="mermaid">
-graph LR
-    subgraph Continuous Delivery
-        A1[Build] --> A2[Test] --> A3[Stage] --> A4[Manual Approval] --> A5[Production]
-    end
-    subgraph Continuous Deployment
-        B1[Build] --> B2[Test] --> B3[Stage] --> B4[Auto Deploy to Production]
-    end
-</div>
+![cd_vs_continuous_deployment](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cd_vs_continuous_deployment.mmd)
 
 ---
 ## Infrastructure as Code (IaC)
@@ -125,20 +94,7 @@ graph LR
 ---
 ## IaC Tool Categories
 
-<div class="mermaid">
-graph TD
-    IAC[Infrastructure as Code]
-    IAC --> PROV[Provisioning]
-    IAC --> CONFIG[Configuration]
-    IAC --> ORCH[Orchestration]
-    PROV --> TF[Terraform / OpenTofu]
-    PROV --> PULUMI[Pulumi]
-    PROV --> CFN[CloudFormation]
-    CONFIG --> ANS[Ansible]
-    CONFIG --> CHEF[Chef / Puppet]
-    ORCH --> K8S[Kubernetes Manifests]
-    ORCH --> HELM[Helm Charts]
-</div>
+![iac_tool_categories](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/iac_tool_categories.mmd)
 
 ---
 ## Terraform Example
@@ -184,14 +140,7 @@ resource "aws_security_group" "web_sg" {
 ---
 ## GitOps Workflow
 
-<div class="mermaid">
-graph LR
-    DEV[Developer] -->|PR| GIT[Git Repository]
-    GIT -->|Webhook| AGENT[GitOps Agent]
-    AGENT -->|Reconcile| K8S[Kubernetes Cluster]
-    K8S -->|Status| AGENT
-    AGENT -->|Sync Status| GIT
-</div>
+![gitops_workflow](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/gitops_workflow.mmd)
 
 ---
 ## GitOps Tools
@@ -204,15 +153,7 @@ graph LR
 ---
 ## Deployment Strategies Overview
 
-<div class="mermaid">
-graph TD
-    DS[Deployment Strategies]
-    DS --> REC[Recreate]
-    DS --> ROLL[Rolling Update]
-    DS --> BG[Blue/Green]
-    DS --> CAN[Canary]
-    DS --> AF[A/B Testing]
-</div>
+![deployment_strategies_overview](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/deployment_strategies_overview.mmd)
 
 ---
 ## Recreate Deployment
@@ -233,22 +174,7 @@ graph TD
 ---
 ## Rolling Update Visualization
 
-<div class="mermaid">
-graph LR
-    subgraph T0
-        A1[v1] & A2[v1] & A3[v1] & A4[v1]
-    end
-    subgraph T1
-        B1[v2] & B2[v1] & B3[v1] & B4[v1]
-    end
-    subgraph T2
-        C1[v2] & C2[v2] & C3[v1] & C4[v1]
-    end
-    subgraph T3
-        D1[v2] & D2[v2] & D3[v2] & D4[v2]
-    end
-    T0 --> T1 --> T2 --> T3
-</div>
+![rolling_update_visualization](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/rolling_update_visualization.mmd)
 
 ---
 ## Blue/Green Deployment
@@ -261,15 +187,7 @@ graph LR
 ---
 ## Blue/Green Architecture
 
-<div class="mermaid">
-graph TD
-    LB[Load Balancer / Router]
-    LB -->|100% Traffic| BLUE[Blue Environment - v1.0]
-    GREEN[Green Environment - v1.1]
-    BLUE --> DB[(Shared Database)]
-    GREEN --> DB
-    LB -.->|Switch| GREEN
-</div>
+![blue_green_architecture](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/blue_green_architecture.mmd)
 
 ---
 ## Blue/Green Pros and Cons
@@ -295,15 +213,7 @@ graph TD
 ---
 ## Canary Deployment Flow
 
-<div class="mermaid">
-graph TD
-    LB[Load Balancer]
-    LB -->|95% Traffic| STABLE[Stable - v1.0]
-    LB -->|5% Traffic| CANARY[Canary - v1.1]
-    CANARY --> MON[Monitor Metrics]
-    MON -->|Healthy| INC[Increase to 25%, 50%, 100%]
-    MON -->|Unhealthy| RB[Rollback]
-</div>
+![canary_deployment_flow](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/canary_deployment_flow.mmd)
 
 ---
 ## Canary Metrics to Watch
@@ -333,13 +243,7 @@ graph TD
 ---
 ## Feature Flag Architecture
 
-<div class="mermaid">
-graph LR
-    APP[Application] -->|Check Flag| FFS[Feature Flag Service]
-    FFS -->|Enabled for 10%| APP
-    APP -->|Feature ON| NEW[New Code Path]
-    APP -->|Feature OFF| OLD[Old Code Path]
-</div>
+![feature_flag_architecture](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/feature_flag_architecture.mmd)
 
 ---
 ## Feature Flag Tools
@@ -371,20 +275,7 @@ graph LR
 ---
 ## Pipeline Architecture for Microservices
 
-<div class="mermaid">
-graph TD
-    subgraph Per Service
-        SRC[Source Code] --> CI_SVC[CI Pipeline]
-        CI_SVC --> IMG[Container Image]
-        IMG --> REG[Registry]
-    end
-    subgraph Shared
-        REG --> CD[CD Pipeline]
-        CD --> DEV[Dev Cluster]
-        DEV -->|Promote| STG[Staging Cluster]
-        STG -->|Approve| PRD[Production Cluster]
-    end
-</div>
+![pipeline_architecture_for_microservices](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/pipeline_architecture_for_microservices.mmd)
 
 ---
 ## Environment Promotion Strategy
@@ -414,13 +305,7 @@ graph TD
 ---
 ## Expand and Contract Pattern
 
-<div class="mermaid">
-graph LR
-    A[Step 1: Add new column] --> B[Step 2: App writes to both]
-    B --> C[Step 3: Migrate data]
-    C --> D[Step 4: App reads from new]
-    D --> E[Step 5: Drop old column]
-</div>
+![expand_and_contract_pattern](/mermaid/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/expand_and_contract_pattern.mmd)
 
 - Allows zero-downtime schema changes
 - Each step is a separate deployment

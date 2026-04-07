@@ -1,11 +1,6 @@
 # Database Architecture and Design
 ## Modern Architecture Course
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 
@@ -35,17 +30,7 @@
 
 ## ACID Properties
 
-<div class="mermaid">
-graph TB
-T[Transaction] --> A[Atomicity]
-T --> C[Consistency]
-T --> I[Isolation]
-T --> D[Durability]
-A -.->|All or Nothing| AT[Complete/Rollback]
-C -.->|Valid State| CS[Rules Enforced]
-I -.->|No Interference| IS[Concurrent Safety]
-D -.->|Permanent| DS[Survives Failures]
-</div>
+![acid_properties](/mermaid/courses/architecting/architecting/05_database/acid_properties.mmd)
 
 ---
 
@@ -78,16 +63,7 @@ COMMIT;
 
 ## Isolation Problems
 
-<div class="mermaid">
-graph LR
-T1[Transaction 1] -->|Read| D1[Data]
-T2[Transaction 2] -->|Read| D1
-T1 -->|Modify| D2[Data']
-T2 -->|Modify| D3[Data'']
-D2 -.->|Conflict| C[Race Condition]
-D3 -.->|Conflict| C
-C -->|Results in| P[Dirty Reads/Lost Updates]
-</div>
+![isolation_problems](/mermaid/courses/architecting/architecting/05_database/isolation_problems.mmd)
 
 ---
 
@@ -215,24 +191,7 @@ with driver.session() as session:
 
 ## Normalization Example
 
-<div class="mermaid">
-graph TB
-subgraph "Denormalized"
-T1[Orders Table]
-T1 --> C1[Customer Name]
-T1 --> C2[Customer Address]
-T1 --> C3[Product Name]
-T1 --> C4[Product Price]
-end
-subgraph "Normalized"
-O[Orders] --> C[Customers]
-O --> P[Products]
-C --> CN[Name]
-C --> CA[Address]
-P --> PN[Name]
-P --> PP[Price]
-end
-</div>
+![normalization_example](/mermaid/courses/architecting/architecting/05_database/normalization_example.mmd)
 
 ---
 
@@ -300,16 +259,7 @@ FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 
 ## Sharding Architecture
 
-<div class="mermaid">
-graph TB
-R[Router] --> S1[Shard 1<br/>Users A-H]
-R --> S2[Shard 2<br/>Users I-P]
-R --> S3[Shard 3<br/>Users Q-Z]
-S1 --> DB1[(Database 1)]
-S2 --> DB2[(Database 2)]
-S3 --> DB3[(Database 3)]
-R -.->|Hash/Range| SK[Shard Key]
-</div>
+![sharding_architecture](/mermaid/courses/architecting/architecting/05_database/sharding_architecture.mmd)
 
 ---
 
@@ -343,21 +293,7 @@ def store_data(key, value):
 
 ## Replication Types
 
-<div class="mermaid">
-graph TB
-subgraph "Master-Slave"
-M[Master] -->|Write| S1[Slave 1]
-M -->|Write| S2[Slave 2]
-C1[Client] -->|Read| S1
-C2[Client] -->|Read| S2
-C3[Client] -->|Write| M
-end
-subgraph "Master-Master"
-M1[Master 1] <-->|Sync| M2[Master 2]
-C4[Client] -->|R/W| M1
-C5[Client] -->|R/W| M2
-end
-</div>
+![replication_types](/mermaid/courses/architecting/architecting/05_database/replication_types.mmd)
 
 ---
 
@@ -463,16 +399,7 @@ engine = create_engine(
 
 ## Caching Patterns
 
-<div class="mermaid">
-graph LR
-App[Application] --> QC{Query Cache?}
-QC -->|Hit| RC[Return Cached]
-QC -->|Miss| DB[(Database)]
-DB --> UC[Update Cache]
-UC --> RC
-App -.->|Invalidate| IC[Cache Invalidation]
-IC --> QC
-</div>
+![caching_patterns](/mermaid/courses/architecting/architecting/05_database/caching_patterns.mmd)
 
 ---
 
@@ -511,20 +438,7 @@ def get_user(user_id):
 
 ## Monitoring Dashboard
 
-<div class="mermaid">
-graph TB
-DB[(Database)] --> MC[Metrics Collector]
-MC --> CPU[CPU Usage]
-MC --> MEM[Memory Usage]
-MC --> QPS[Query Performance]
-MC --> CON[Connections]
-CPU --> D[Dashboard]
-MEM --> D
-QPS --> D
-CON --> D
-D --> AL[Alerts]
-D --> REP[Reports]
-</div>
+![monitoring_dashboard](/mermaid/courses/architecting/architecting/05_database/monitoring_dashboard.mmd)
 
 ---
 

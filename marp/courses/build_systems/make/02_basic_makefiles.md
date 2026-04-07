@@ -177,20 +177,7 @@ lib.o: lib.c lib.h
 
 ## Visual Representation
 
-<div class="mermaid">
-graph BT
-    A[main.c] --> B[main.o]
-    C[config.h] --> B
-    D[utils.h] --> B
-    E[utils.c] --> F[utils.o]
-    D --> F
-    C --> F
-    G[lib.c] --> H[lib.o]
-    I[lib.h] --> H
-    B --> J[program]
-    F --> J
-    H --> J
-</div>
+![visual_representation](/mermaid/courses/build_systems/make/02_basic_makefiles/visual_representation.mmd)
 
 ---
 

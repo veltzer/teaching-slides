@@ -1,10 +1,5 @@
 # Containerization Recap
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is a Container?
@@ -17,21 +12,7 @@
 ---
 ## Containers vs Virtual Machines
 
-<div class="mermaid">
-graph TD
-    subgraph Virtual Machines
-        HW1[Hardware] --> HV[Hypervisor]
-        HV --> VM1[VM: Guest OS + App 1]
-        HV --> VM2[VM: Guest OS + App 2]
-    end
-    subgraph Containers
-        HW2[Hardware] --> OS[Host OS]
-        OS --> CR[Container Runtime]
-        CR --> C1[Container: App 1]
-        CR --> C2[Container: App 2]
-        CR --> C3[Container: App 3]
-    end
-</div>
+![containers_vs_virtual_machines](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/containers_vs_virtual_machines.mmd)
 
 ---
 ## Container Advantages
@@ -54,17 +35,7 @@ graph TD
 ---
 ## Docker Architecture
 
-<div class="mermaid">
-graph TD
-    CLI[Docker CLI] -->|REST API| D[Docker Daemon]
-    D --> B[Image Builder]
-    D --> CR[Container Runtime]
-    D --> NW[Networking]
-    D --> VOL[Volumes]
-    CR --> C1[Container 1]
-    CR --> C2[Container 2]
-    B -->|Pull/Push| REG[Registry]
-</div>
+![docker_architecture](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/docker_architecture.mmd)
 
 ---
 ## Docker Images
@@ -292,16 +263,7 @@ CMD ["python", "app.py"]
 ---
 ## Container Networking Diagram
 
-<div class="mermaid">
-graph TD
-    subgraph Bridge Network
-        C1[Container 1] --- BR[Bridge]
-        C2[Container 2] --- BR
-        C3[Container 3] --- BR
-    end
-    BR --> HOST[Host Network Interface]
-    HOST --> EXT[External Network]
-</div>
+![container_networking_diagram](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/container_networking_diagram.mmd)
 
 ---
 ## Volumes and Persistent Storage
@@ -346,14 +308,7 @@ docker run --tmpfs /app/tmp myapp
 ---
 ## CI/CD Integration
 
-<div class="mermaid">
-graph LR
-    CODE[Code Push] --> BUILD[Build Image]
-    BUILD --> TEST[Run Tests]
-    TEST --> SCAN[Security Scan]
-    SCAN --> PUSH[Push to Registry]
-    PUSH --> DEPLOY[Deploy to Cluster]
-</div>
+![ci_cd_integration](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/ci_cd_integration.mmd)
 
 ---
 ## Production Deployment Checklist

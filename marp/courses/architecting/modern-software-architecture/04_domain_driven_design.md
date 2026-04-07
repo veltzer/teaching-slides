@@ -1,10 +1,5 @@
 # Domain-Driven Design
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is Domain-Driven Design?
@@ -25,19 +20,7 @@
 ---
 ## Strategic vs Tactical Design
 
-<div class="mermaid">
-graph TD
-    DDD[Domain-Driven Design]
-    DDD --> SD[Strategic Design]
-    DDD --> TD[Tactical Design]
-    SD --> BC[Bounded Contexts]
-    SD --> UL[Ubiquitous Language]
-    SD --> CM[Context Mapping]
-    TD --> EN[Entities]
-    TD --> VO[Value Objects]
-    TD --> AG[Aggregates]
-    TD --> SV[Services]
-</div>
+![strategic_vs_tactical_design](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/strategic_vs_tactical_design.mmd)
 
 ---
 ## The Ubiquitous Language
@@ -82,21 +65,7 @@ class Customer:
 ---
 ## Bounded Context Example
 
-<div class="mermaid">
-graph TD
-    subgraph Sales Context
-        SC_C[Customer: name, email, loyalty tier]
-        SC_O[Order: items, discounts, total]
-    end
-    subgraph Shipping Context
-        SH_C[Customer: name, shipping address]
-        SH_O[Shipment: tracking, carrier, delivery date]
-    end
-    subgraph Billing Context
-        BI_C[Customer: name, payment method]
-        BI_I[Invoice: charges, tax, due date]
-    end
-</div>
+![bounded_context_example](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/bounded_context_example.mmd)
 
 ---
 ## Why Bounded Contexts Matter
@@ -127,13 +96,7 @@ graph TD
 ---
 ## Context Map Diagram
 
-<div class="mermaid">
-graph LR
-    SC[Sales Context] -->|Customer-Supplier| SH[Shipping Context]
-    SC -->|Published Language| BI[Billing Context]
-    EX[External Payment Provider] -->|ACL| BI
-    SH -->|Conformist| EX2[External Carrier API]
-</div>
+![context_map_diagram](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/context_map_diagram.mmd)
 
 ---
 ## Anti-Corruption Layer (ACL)
@@ -146,16 +109,7 @@ graph LR
 ---
 ## ACL Architecture
 
-<div class="mermaid">
-graph LR
-    EC[External Context] -->|Foreign Model| ACL[Anti-Corruption Layer]
-    ACL -->|Domain Model| IC[Internal Context]
-    subgraph ACL
-        T[Translator]
-        A[Adapter]
-        F[Facade]
-    end
-</div>
+![acl_architecture](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/acl_architecture.mmd)
 
 ---
 ## Entities
@@ -233,18 +187,7 @@ class Money:
 ---
 ## Aggregate Structure
 
-<div class="mermaid">
-graph TD
-    subgraph Order Aggregate
-        OR[Order - Aggregate Root]
-        OR --> LI1[LineItem 1]
-        OR --> LI2[LineItem 2]
-        OR --> SA[Shipping Address]
-        OR --> PM[Payment Method]
-    end
-    C[Client] -->|Access via| OR
-    C -.->|Cannot access directly| LI1
-</div>
+![aggregate_structure](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/aggregate_structure.mmd)
 
 ---
 ## Aggregate Design Rules
@@ -330,18 +273,7 @@ class PlaceOrderService:
 ---
 ## Domain Event Flow
 
-<div class="mermaid">
-sequenceDiagram
-    participant Order
-    participant EventBus
-    participant Inventory
-    participant Notification
-    Order->>EventBus: OrderPlaced
-    EventBus->>Inventory: OrderPlaced
-    EventBus->>Notification: OrderPlaced
-    Inventory->>EventBus: StockReserved
-    Notification->>Notification: Send confirmation email
-</div>
+![domain_event_flow](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/domain_event_flow.mmd)
 
 ---
 ## Mapping Domains to Microservices
@@ -354,17 +286,7 @@ sequenceDiagram
 ---
 ## Decomposition Strategy
 
-<div class="mermaid">
-graph TD
-    BD[Business Domain] --> SD1[Subdomain: Orders]
-    BD --> SD2[Subdomain: Payments]
-    BD --> SD3[Subdomain: Inventory]
-    BD --> SD4[Subdomain: Shipping]
-    SD1 --> MS1[Order Service]
-    SD2 --> MS2[Payment Service]
-    SD3 --> MS3[Inventory Service]
-    SD4 --> MS4[Shipping Service]
-</div>
+![decomposition_strategy](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/decomposition_strategy.mmd)
 
 ---
 ## Subdomain Types
@@ -387,13 +309,7 @@ graph TD
 ---
 ## Event Storming Flow
 
-<div class="mermaid">
-graph LR
-    A[Identify Domain Events] --> B[Find Commands]
-    B --> C[Identify Aggregates]
-    C --> D[Define Bounded Contexts]
-    D --> E[Map Context Relationships]
-</div>
+![event_storming_flow](/mermaid/courses/architecting/modern-software-architecture/04_domain_driven_design/event_storming_flow.mmd)
 
 ---
 ## Common DDD Pitfalls

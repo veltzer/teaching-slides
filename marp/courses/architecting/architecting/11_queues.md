@@ -1,11 +1,6 @@
 # Queues in Distributed Systems
 ## Modern Architecture Course
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 
@@ -34,27 +29,7 @@
 
 ## Queue Components
 
-<div class="mermaid">
-graph LR
-P[Producer] --> Q[Message Queue]
-Q --> C[Consumer]
-
-subgraph "Queue Details"
-Q --> H[Head/Front]
-Q --> T[Tail/Back]
-Q --> M[Messages]
-end
-
-subgraph "Features"
-Q --> PE[Persistence]
-Q --> RT[Retry Logic]
-Q --> DL[Dead Letter]
-end
-
-style P fill:#e3f2fd
-style Q fill:#f3e5f5
-style C fill:#e8f5e9
-</div>
+![queue_components](/mermaid/courses/architecting/architecting/11_queues/queue_components.mmd)
 
 ---
 
@@ -70,24 +45,7 @@ style C fill:#e8f5e9
 
 ## Point-to-Point vs Pub/Sub
 
-<div class="mermaid">
-graph TB
-subgraph "Point-to-Point"
-P1[Producer] --> Q1[Queue]
-Q1 --> C1[Consumer 1]
-end
-
-subgraph "Publish/Subscribe"
-P2[Publisher] --> T[Topic]
-T --> S1[Subscriber 1]
-T --> S2[Subscriber 2]
-T --> S3[Subscriber 3]
-end
-
-style P1 fill:#e3f2fd
-style T fill:#f3e5f5
-style S1 fill:#e8f5e9
-</div>
+![point_to_point_vs_pub_sub](/mermaid/courses/architecting/architecting/11_queues/point_to_point_vs_pub_sub.mmd)
 
 ---
 
@@ -116,29 +74,7 @@ def consume():
 
 ## RabbitMQ Architecture
 
-<div class="mermaid">
-graph LR
-P[Producer] --> E[Exchange]
-
-E --> |Routing Key| Q1[Queue 1]
-E --> |Routing Key| Q2[Queue 2]
-E --> |Routing Key| Q3[Queue 3]
-
-Q1 --> C1[Consumer 1]
-Q2 --> C2[Consumer 2]
-Q3 --> C3[Consumer 3]
-
-subgraph "Exchange Types"
-D[Direct]
-F[Fanout]
-T[Topic]
-H[Headers]
-end
-
-style P fill:#e3f2fd
-style E fill:#f3e5f5
-style Q1 fill:#e8f5e9
-</div>
+![rabbitmq_architecture](/mermaid/courses/architecting/architecting/11_queues/rabbitmq_architecture.mmd)
 
 ---
 
@@ -182,71 +118,13 @@ channel.start_consuming()
 
 ## Apache Kafka Architecture
 
-<div class="mermaid">
-graph TB
-subgraph "Kafka Cluster"
-B1[Broker 1]
-B2[Broker 2]
-B3[Broker 3]
-end
-
-subgraph "Topic"
-P0[Partition 0]
-P1[Partition 1]
-P2[Partition 2]
-end
-
-PR[Producers] --> B1
-PR --> B2
-PR --> B3
-
-B1 --> P0
-B2 --> P1
-B3 --> P2
-
-P0 --> CG[Consumer Group]
-P1 --> CG
-P2 --> CG
-
-style PR fill:#e3f2fd
-style B1 fill:#f3e5f5
-style CG fill:#e8f5e9
-</div>
+![apache_kafka_architecture](/mermaid/courses/architecting/architecting/11_queues/apache_kafka_architecture.mmd)
 
 ---
 
 ## Kafka Topics and Partitions
 
-<div class="mermaid">
-graph LR
-subgraph "Topic: Orders"
-subgraph "Partition 0"
-M1[Msg 0]
-M2[Msg 3]
-M3[Msg 6]
-end
-
-subgraph "Partition 1"
-M4[Msg 1]
-M5[Msg 4]
-M6[Msg 7]
-end
-
-subgraph "Partition 2"
-M7[Msg 2]
-M8[Msg 5]
-M9[Msg 8]
-end
-end
-
-P[Producer] -->|Key Hash| M1
-P -->|Key Hash| M4
-P -->|Key Hash| M7
-
-style M1 fill:#e3f2fd
-style M4 fill:#f3e5f5
-style M7 fill:#e8f5e9
-</div>
+![kafka_topics_and_partitions](/mermaid/courses/architecting/architecting/11_queues/kafka_topics_and_partitions.mmd)
 
 ---
 
@@ -300,32 +178,7 @@ for message in consumer:
 
 ## Amazon SQS Architecture
 
-<div class="mermaid">
-graph TB
-subgraph "AWS Region"
-subgraph "SQS Service"
-Q1[Standard Queue]
-Q2[FIFO Queue]
-end
-
-P[Producer<br/>Lambda/EC2] --> Q1
-P --> Q2
-
-Q1 --> C1[Consumer 1]
-Q1 --> C2[Consumer 2]
-Q2 --> C3[Consumer 3]
-
-Q1 -.->|Failed Messages| DLQ1[Dead Letter Queue]
-Q2 -.->|Failed Messages| DLQ2[Dead Letter Queue]
-end
-
-CW[CloudWatch<br/>Monitoring] -.-> Q1
-CW -.-> Q2
-
-style P fill:#e3f2fd
-style Q1 fill:#f3e5f5
-style DLQ1 fill:#ffcdd2
-</div>
+![amazon_sqs_architecture](/mermaid/courses/architecting/architecting/11_queues/amazon_sqs_architecture.mmd)
 
 ---
 
@@ -433,25 +286,7 @@ class BatchProducer:
 
 ## Dead Letter Queues
 
-<div class="mermaid">
-graph LR
-P[Producer] --> MQ[Main Queue]
-MQ --> C[Consumer]
-
-C -->|Success| P1[Process Complete]
-C -->|Failure 1| R1[Retry 1]
-R1 -->|Failure 2| R2[Retry 2]
-R2 -->|Failure 3| R3[Retry 3]
-R3 -->|Max Retries| DLQ[Dead Letter Queue]
-
-DLQ --> M[Manual Review]
-M --> RE[Reprocess]
-RE --> MQ
-
-style MQ fill:#e3f2fd
-style DLQ fill:#ffcdd2
-style M fill:#fff3e0
-</div>
+![dead_letter_queues](/mermaid/courses/architecting/architecting/11_queues/dead_letter_queues.mmd)
 
 ---
 
@@ -493,36 +328,7 @@ Key Metrics:
 
 ## Monitoring Dashboard
 
-<div class="mermaid">
-graph TB
-subgraph "Queue Metrics"
-M1[Queue Length]
-M2[Message Age]
-M3[Processing Time]
-M4[Error Rate]
-M5[Throughput]
-end
-
-subgraph "Alerts"
-A1[High Queue Length > 1000]
-A2[Old Messages > 5min]
-A3[High Error Rate > 5%]
-end
-
-M1 --> A1
-M2 --> A2
-M4 --> A3
-
-A1 --> N[Notification]
-A2 --> N
-A3 --> N
-
-N --> T[Team Alert]
-
-style M1 fill:#e3f2fd
-style A1 fill:#ffcdd2
-style N fill:#fff3e0
-</div>
+![monitoring_dashboard](/mermaid/courses/architecting/architecting/11_queues/monitoring_dashboard.mmd)
 
 ---
 
@@ -562,40 +368,7 @@ def retry_with_backoff(func, max_retries=3):
 
 ## Consumer Group Pattern
 
-<div class="mermaid">
-graph LR
-subgraph "Topic with 4 Partitions"
-P0[Partition 0]
-P1[Partition 1]
-P2[Partition 2]
-P3[Partition 3]
-end
-
-subgraph "Consumer Group 1"
-C1[Consumer 1]
-C2[Consumer 2]
-end
-
-subgraph "Consumer Group 2"
-C3[Consumer 3]
-C4[Consumer 4]
-C5[Consumer 5]
-end
-
-P0 --> C1
-P1 --> C1
-P2 --> C2
-P3 --> C2
-
-P0 --> C3
-P1 --> C4
-P2 --> C5
-P3 --> C3
-
-style P0 fill:#e3f2fd
-style C1 fill:#f3e5f5
-style C3 fill:#e8f5e9
-</div>
+![consumer_group_pattern](/mermaid/courses/architecting/architecting/11_queues/consumer_group_pattern.mmd)
 
 ---
 

@@ -1,10 +1,5 @@
 # Architecting for Resiliency
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is Resiliency?
@@ -25,28 +20,12 @@
 ---
 ## Failure Categories
 
-<div class="mermaid">
-graph TD
-    F[Failures]
-    F --> TR[Transient]
-    F --> INT[Intermittent]
-    F --> PERM[Permanent]
-    TR --> TR1[Network blip, timeout]
-    INT --> INT1[Flaky dependency, resource contention]
-    PERM --> PERM1[Hardware failure, bug, data corruption]
-</div>
+![failure_categories](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/failure_categories.mmd)
 
 ---
 ## The Cascade Effect
 
-<div class="mermaid">
-graph LR
-    A[Service A] -->|Calls| B[Service B]
-    B -->|Calls| C[Service C - Down]
-    C -.->|Timeout| B
-    B -.->|Threads exhausted| A
-    A -.->|Unresponsive| CLIENT[Client]
-</div>
+![the_cascade_effect](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.mmd)
 
 - Service C fails; B waits and exhausts its thread pool
 - Service A waits for B and also becomes unresponsive
@@ -55,17 +34,7 @@ graph LR
 ---
 ## Resiliency Patterns Overview
 
-<div class="mermaid">
-graph TD
-    R[Resiliency Patterns]
-    R --> CB[Circuit Breaker]
-    R --> RT[Retries]
-    R --> TO[Timeouts]
-    R --> BH[Bulkheads]
-    R --> RL[Rate Limiting]
-    R --> FB[Fallbacks]
-    R --> HG[Hedging]
-</div>
+![resiliency_patterns_overview](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_patterns_overview.mmd)
 
 ---
 ## Timeouts
@@ -109,12 +78,7 @@ response = requests.get(
 ---
 ## Retry with Exponential Backoff
 
-<div class="mermaid">
-graph LR
-    R1[Request - Fail] -->|Wait 1s| R2[Retry 1 - Fail]
-    R2 -->|Wait 2s| R3[Retry 2 - Fail]
-    R3 -->|Wait 4s| R4[Retry 3 - Success]
-</div>
+![retry_with_exponential_backoff](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.mmd)
 
 - Each retry waits longer than the previous one
 - Add random jitter to prevent thundering herd
@@ -159,14 +123,7 @@ def retry_with_backoff(func, max_retries=3):
 ---
 ## Circuit Breaker States
 
-<div class="mermaid">
-stateDiagram-v2
-    [*] --> Closed
-    Closed --> Open: Failure threshold exceeded
-    Open --> HalfOpen: Timeout expires
-    HalfOpen --> Closed: Probe succeeds
-    HalfOpen --> Open: Probe fails
-</div>
+![circuit_breaker_states](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_states.mmd)
 
 ---
 ## Circuit Breaker: Closed State
@@ -240,16 +197,7 @@ class CircuitBreaker:
 ---
 ## Bulkhead Architecture
 
-<div class="mermaid">
-graph TD
-    APP[Application]
-    APP --> BP1[Thread Pool: Service A - 10 threads]
-    APP --> BP2[Thread Pool: Service B - 5 threads]
-    APP --> BP3[Thread Pool: Service C - 8 threads]
-    BP1 --> SA[Service A]
-    BP2 --> SB[Service B]
-    BP3 --> SC[Service C - Slow]
-</div>
+![bulkhead_architecture](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.mmd)
 
 - Service C is slow but only consumes its own thread pool
 - Services A and B continue to operate normally
@@ -305,16 +253,7 @@ graph TD
 ---
 ## Fallback Decision Tree
 
-<div class="mermaid">
-graph TD
-    A{Primary service available?}
-    A -->|Yes| B[Return fresh data]
-    A -->|No| C{Cache available?}
-    C -->|Yes| D[Return cached data]
-    C -->|No| E{Default value sensible?}
-    E -->|Yes| F[Return default]
-    E -->|No| G[Return graceful error]
-</div>
+![fallback_decision_tree](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/fallback_decision_tree.mmd)
 
 ---
 ## Hedging
@@ -327,15 +266,7 @@ graph TD
 ---
 ## Hedging Diagram
 
-<div class="mermaid">
-graph TD
-    C[Client] -->|Same Request| I1[Instance 1]
-    C -->|Same Request| I2[Instance 2]
-    C -->|Same Request| I3[Instance 3]
-    I1 -->|150ms| C
-    I2 -->|50ms - Winner| C
-    I3 -->|200ms| C
-</div>
+![hedging_diagram](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.mmd)
 
 - Instance 2 responds first; its response is used
 - Trade-off: uses more resources for lower latency
@@ -360,18 +291,7 @@ graph TD
 ---
 ## Chaos Engineering Process
 
-<div class="mermaid">
-graph LR
-    A[Define Steady State] --> B[Form Hypothesis]
-    B --> C[Design Experiment]
-    C --> D[Inject Failure]
-    D --> E[Observe Results]
-    E --> F{Steady state maintained?}
-    F -->|Yes| G[Increase scope]
-    F -->|No| H[Fix weakness]
-    H --> A
-    G --> B
-</div>
+![chaos_engineering_process](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/chaos_engineering_process.mmd)
 
 ---
 ## Chaos Engineering Tools
@@ -417,18 +337,7 @@ graph LR
 ---
 ## Service Mesh Architecture
 
-<div class="mermaid">
-graph TD
-    subgraph Service A Pod
-        A[App Container] --- PA[Sidecar Proxy]
-    end
-    subgraph Service B Pod
-        B[App Container] --- PB[Sidecar Proxy]
-    end
-    PA -->|Encrypted, Resilient| PB
-    CP[Control Plane] -.->|Config| PA
-    CP -.->|Config| PB
-</div>
+![service_mesh_architecture](/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/service_mesh_architecture.mmd)
 
 ---
 ## Building a Resiliency Strategy

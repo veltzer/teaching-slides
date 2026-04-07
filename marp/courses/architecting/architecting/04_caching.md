@@ -1,11 +1,6 @@
 # Caching Strategies and Content Delivery Networks
 ## Modern Architecture Course
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 
@@ -32,15 +27,7 @@
 
 ## Cache Hit vs Cache Miss
 
-<div class="mermaid">
-graph LR
-Client[Client] --> Cache[Cache]
-Cache -->|Hit| Client
-Cache -->|Miss| DB[(Database)]
-DB -->|Data| Cache
-Cache -->|Data| Client
-Cache -.->|Update| TTL[TTL/Expiry]
-</div>
+![cache_hit_vs_cache_miss](/mermaid/courses/architecting/architecting/04_caching/cache_hit_vs_cache_miss.mmd)
 
 ---
 
@@ -117,55 +104,19 @@ def get_product(product_id):
 
 ## Cache-Aside Pattern
 
-<div class="mermaid">
-sequenceDiagram
-participant App
-participant Cache
-participant DB
-App->>Cache: 1. Check cache
-alt Cache miss
-Cache-->>App: Not found
-App->>DB: 2. Query database
-DB-->>App: Return data
-App->>Cache: 3. Update cache
-else Cache hit
-Cache-->>App: Return cached data
-end
-</div>
+![cache_aside_pattern](/mermaid/courses/architecting/architecting/04_caching/cache_aside_pattern.mmd)
 
 ---
 
 ## Write-Through Pattern
 
-<div class="mermaid">
-sequenceDiagram
-participant App
-participant Cache
-participant DB
-App->>Cache: 1. Write data
-Cache->>DB: 2. Write to database
-DB-->>Cache: Confirm write
-Cache-->>App: 3. Confirm write
-Note over Cache: Data written to both<br/>cache and DB synchronously
-</div>
+![write_through_pattern](/mermaid/courses/architecting/architecting/04_caching/write_through_pattern.mmd)
 
 ---
 
 ## Write-Behind Pattern
 
-<div class="mermaid">
-sequenceDiagram
-participant App
-participant Cache
-participant Queue
-participant DB
-App->>Cache: 1. Write data
-Cache-->>App: 2. Confirm write
-Cache->>Queue: 3. Queue write
-Note over Queue: Async processing
-Queue->>DB: 4. Write to database (later)
-DB-->>Queue: Confirm write
-</div>
+![write_behind_pattern](/mermaid/courses/architecting/architecting/04_caching/write_behind_pattern.mmd)
 
 ---
 
@@ -211,18 +162,7 @@ def get_trending_posts():
 
 ## CDN Architecture
 
-<div class="mermaid">
-graph TB
-U1[User US] --> E1[Edge Server US]
-U2[User EU] --> E2[Edge Server EU]
-U3[User Asia] --> E3[Edge Server Asia]
-E1 --> O[Origin Server]
-E2 --> O
-E3 --> O
-E1 -.->|Cache| C1[(Cache)]
-E2 -.->|Cache| C2[(Cache)]
-E3 -.->|Cache| C3[(Cache)]
-</div>
+![cdn_architecture](/mermaid/courses/architecting/architecting/04_caching/cdn_architecture.mmd)
 
 ---
 
@@ -265,21 +205,7 @@ Vary: Accept-Encoding
 
 ## Edge Computing Architecture
 
-<div class="mermaid">
-graph LR
-subgraph "Edge Layer"
-D1[IoT Device] --> EC1[Edge Compute]
-D2[Sensor] --> EC1
-EC1 --> EG[Edge Gateway]
-end
-subgraph "Cloud Layer"
-EG --> CS[Cloud Services]
-CS --> AI[AI/ML Processing]
-CS --> ST[(Storage)]
-end
-EC1 -.->|Local Processing| LP[Low Latency]
-CS -.->|Heavy Processing| HP[High Compute]
-</div>
+![edge_computing_architecture](/mermaid/courses/architecting/architecting/04_caching/edge_computing_architecture.mmd)
 
 ---
 
@@ -383,22 +309,7 @@ Key Metrics:
 
 ## Cache Monitoring Dashboard
 
-<div class="mermaid">
-graph TB
-subgraph "Metrics Collection"
-C[Cache] --> M[Metrics Collector]
-M --> HR[Hit Rate]
-M --> MR[Miss Rate]
-M --> L[Latency]
-M --> E[Eviction Rate]
-end
-HR --> D[Dashboard]
-MR --> D
-L --> D
-E --> D
-D --> A[Alerts]
-D --> R[Reports]
-</div>
+![cache_monitoring_dashboard](/mermaid/courses/architecting/architecting/04_caching/cache_monitoring_dashboard.mmd)
 
 ---
 

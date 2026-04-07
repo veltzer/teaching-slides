@@ -1,10 +1,5 @@
 # Introduction to Modern Software Architecture
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## What Is Software Architecture?
@@ -33,17 +28,7 @@
 ---
 ## Monolith Diagram
 
-<div class="mermaid">
-graph TD
-    UI[User Interface] --> BL[Business Logic]
-    BL --> DAL[Data Access Layer]
-    DAL --> DB[(Single Database)]
-    subgraph Monolith
-        UI
-        BL
-        DAL
-    end
-</div>
+![monolith_diagram](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/monolith_diagram.mmd)
 
 ---
 ## Advantages of the Monolith
@@ -82,17 +67,7 @@ graph TD
 ---
 ## Microservices Diagram
 
-<div class="mermaid">
-graph TD
-    GW[API Gateway] --> S1[Order Service]
-    GW --> S2[Payment Service]
-    GW --> S3[Inventory Service]
-    GW --> S4[User Service]
-    S1 --> DB1[(Orders DB)]
-    S2 --> DB2[(Payments DB)]
-    S3 --> DB3[(Inventory DB)]
-    S4 --> DB4[(Users DB)]
-</div>
+![microservices_diagram](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/microservices_diagram.mmd)
 
 ---
 ## Key Characteristics of Microservices
@@ -117,13 +92,7 @@ graph TD
 ---
 ## The Transition Journey
 
-<div class="mermaid">
-graph LR
-    A[Monolith] --> B[Modular Monolith]
-    B --> C[Service-Oriented Architecture]
-    C --> D[Microservices]
-    D --> E[Serverless / Mesh]
-</div>
+![the_transition_journey](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_transition_journey.mmd)
 
 ---
 ## Modular Monolith as a Stepping Stone
@@ -178,18 +147,7 @@ graph LR
 ---
 ## Categories of Architectural Drivers
 
-<div class="mermaid">
-graph TD
-    AD[Architectural Drivers]
-    AD --> FR[Functional Requirements]
-    AD --> QA[Quality Attributes]
-    AD --> CO[Constraints]
-    AD --> PR[Principles]
-    FR --> FR1[What the system does]
-    QA --> QA1[How well it does it]
-    CO --> CO1[Fixed boundaries]
-    PR --> PR1[Guiding rules]
-</div>
+![categories_of_architectural_drivers](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/categories_of_architectural_drivers.mmd)
 
 ---
 ## Quality Attributes Defined
@@ -315,14 +273,7 @@ Use an event broker for inter-service communication.
 ---
 ## ATAM Process Overview
 
-<div class="mermaid">
-graph LR
-    A[Present Architecture] --> B[Identify Scenarios]
-    B --> C[Analyze Decisions]
-    C --> D[Identify Trade-Offs]
-    D --> E[Document Risks]
-    E --> F[Produce Report]
-</div>
+![atam_process_overview](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/atam_process_overview.mmd)
 
 ---
 ## Fitness Functions
@@ -345,20 +296,7 @@ graph LR
 ---
 ## Conway's Law Illustrated
 
-<div class="mermaid">
-graph TD
-    subgraph Organization
-        T1[Team A] --- T2[Team B]
-        T2 --- T3[Team C]
-    end
-    subgraph System
-        S1[Service A] -->|API| S2[Service B]
-        S2 -->|API| S3[Service C]
-    end
-    T1 -.->|Owns| S1
-    T2 -.->|Owns| S2
-    T3 -.->|Owns| S3
-</div>
+![conway_s_law_illustrated](/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/conway_s_law_illustrated.mmd)
 
 ---
 ## The Role of the Software Architect

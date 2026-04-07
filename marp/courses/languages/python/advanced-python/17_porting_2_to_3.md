@@ -1,15 +1,8 @@
 # **Porting from Python 2 to Python 3**
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
-
 ## A Comprehensive Guide
 
 ![a_comprehensive_guide](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
-
 ---
 
 ## **Why Port to Python 3?**
@@ -578,17 +571,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 * You might port one module or component at a time.
 * Run tests frequently.
 
-<div class="mermaid">
-graph TD
-    A[Start with Py2 Code] --> B{Run Tests in Py2};
-    B -- All Pass --> C[Branch Code];
-    C --> D{Apply Auto-Porting Tool e.g. 2to3, modernize};
-    D --> E[Manual Fixes & Refactoring];
-    E --> F{Run Tests in Py3};
-    F -- Some Fail --> E;
-    F -- All Pass --> G[Merge to Main/Release];
-    B -- Some Fail --> X[Fix Tests in Py2 First!];
-</div>
+![iterative_process](/mermaid/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.mmd)
 
 ---
 

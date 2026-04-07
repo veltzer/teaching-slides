@@ -1,10 +1,5 @@
 # Microservices Design Patterns
 
-<!-- Add Mermaid.js support -->
-<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-<script>
-  mermaid.initialize({ startOnLoad: true });
-</script>
 
 ---
 ## Why Design Patterns?
@@ -17,21 +12,7 @@
 ---
 ## Pattern Categories
 
-<div class="mermaid">
-graph TD
-    P[Microservices Patterns]
-    P --> R[Routing Patterns]
-    P --> D[Data Patterns]
-    P --> C[Communication Patterns]
-    P --> T[Transaction Patterns]
-    R --> AG[API Gateway]
-    R --> BFF[Backend for Frontend]
-    R --> SD[Service Discovery]
-    D --> DPS[Database per Service]
-    D --> CQRS2[CQRS]
-    D --> ES[Event Sourcing]
-    T --> SG[Saga]
-</div>
+![pattern_categories](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/pattern_categories.mmd)
 
 ---
 ## API Gateway Pattern
@@ -44,16 +25,7 @@ graph TD
 ---
 ## API Gateway Architecture
 
-<div class="mermaid">
-graph TD
-    C1[Web App] --> GW[API Gateway]
-    C2[Mobile App] --> GW
-    C3[Third Party] --> GW
-    GW --> S1[User Service]
-    GW --> S2[Order Service]
-    GW --> S3[Product Service]
-    GW --> S4[Payment Service]
-</div>
+![api_gateway_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.mmd)
 
 ---
 ## API Gateway Responsibilities
@@ -98,17 +70,7 @@ graph TD
 ---
 ## BFF Architecture
 
-<div class="mermaid">
-graph TD
-    WEB[Web Application] --> BFF_W[Web BFF]
-    MOB[Mobile Application] --> BFF_M[Mobile BFF]
-    IOT[IoT Device] --> BFF_I[IoT BFF]
-    BFF_W --> S1[User Service]
-    BFF_W --> S2[Order Service]
-    BFF_M --> S1
-    BFF_M --> S3[Notification Service]
-    BFF_I --> S4[Telemetry Service]
-</div>
+![bff_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/bff_architecture.mmd)
 
 ---
 ## BFF vs Single API Gateway
@@ -132,16 +94,7 @@ graph TD
 ---
 ## Client-Side Service Discovery
 
-<div class="mermaid">
-sequenceDiagram
-    participant Client
-    participant Registry
-    participant Service A
-    participant Service B
-    Client->>Registry: Query for Service X
-    Registry-->>Client: [Service A:8080, Service B:8081]
-    Client->>Service A: Direct request
-</div>
+![client_side_service_discovery](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.mmd)
 
 - Client queries the service registry directly
 - Client performs load balancing
@@ -150,19 +103,7 @@ sequenceDiagram
 ---
 ## Server-Side Service Discovery
 
-<div class="mermaid">
-sequenceDiagram
-    participant Client
-    participant Load Balancer
-    participant Registry
-    participant Service
-    Client->>Load Balancer: Request for Service X
-    Load Balancer->>Registry: Lookup Service X
-    Registry-->>Load Balancer: [instances]
-    Load Balancer->>Service: Forward request
-    Service-->>Load Balancer: Response
-    Load Balancer-->>Client: Response
-</div>
+![server_side_service_discovery](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.mmd)
 
 - Load balancer queries the registry
 - Client does not need to know about discovery
@@ -196,14 +137,7 @@ sequenceDiagram
 ---
 ## Database per Service Diagram
 
-<div class="mermaid">
-graph TD
-    S1[Order Service] --> DB1[(Orders DB - PostgreSQL)]
-    S2[Product Service] --> DB2[(Products DB - MongoDB)]
-    S3[Analytics Service] --> DB3[(Analytics DB - ClickHouse)]
-    S1 -->|API Call| S2
-    S1 -->|Event| S3
-</div>
+![database_per_service_diagram](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/database_per_service_diagram.mmd)
 
 ---
 ## Database per Service Pros and Cons
@@ -245,37 +179,12 @@ graph TD
 ---
 ## Saga: Choreography
 
-<div class="mermaid">
-sequenceDiagram
-    participant Order
-    participant Payment
-    participant Inventory
-    participant Shipping
-    Order->>Order: Create Order
-    Order->>Payment: OrderCreated
-    Payment->>Payment: Process Payment
-    Payment->>Inventory: PaymentCompleted
-    Inventory->>Inventory: Reserve Stock
-    Inventory->>Shipping: StockReserved
-    Shipping->>Shipping: Schedule Delivery
-</div>
+![saga_choreography](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_choreography.mmd)
 
 ---
 ## Saga: Orchestration
 
-<div class="mermaid">
-sequenceDiagram
-    participant Orchestrator
-    participant Order
-    participant Payment
-    participant Inventory
-    Orchestrator->>Order: Create Order
-    Order-->>Orchestrator: Order Created
-    Orchestrator->>Payment: Process Payment
-    Payment-->>Orchestrator: Payment OK
-    Orchestrator->>Inventory: Reserve Stock
-    Inventory-->>Orchestrator: Stock Reserved
-</div>
+![saga_orchestration](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_orchestration.mmd)
 
 ---
 ## Choreography vs Orchestration
@@ -299,13 +208,7 @@ sequenceDiagram
 ---
 ## Compensation Example
 
-<div class="mermaid">
-graph LR
-    A[Create Order] -->|Success| B[Process Payment]
-    B -->|Success| C[Reserve Stock]
-    C -->|FAILURE| D[Refund Payment]
-    D --> E[Cancel Order]
-</div>
+![compensation_example](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/compensation_example.mmd)
 
 ---
 ## CQRS Pattern
@@ -318,14 +221,7 @@ graph LR
 ---
 ## CQRS Architecture
 
-<div class="mermaid">
-graph TD
-    C[Client] -->|Commands| CS[Command Service]
-    C -->|Queries| QS[Query Service]
-    CS --> WDB[(Write Database)]
-    WDB -->|Sync/Events| RDB[(Read Database)]
-    QS --> RDB
-</div>
+![cqrs_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_architecture.mmd)
 
 ---
 ## CQRS Benefits
@@ -356,21 +252,7 @@ graph TD
 ---
 ## Event Sourcing Flow
 
-<div class="mermaid">
-sequenceDiagram
-    participant Client
-    participant Service
-    participant Event Store
-    Client->>Service: Place Order
-    Service->>Event Store: Append OrderCreated
-    Client->>Service: Add Item
-    Service->>Event Store: Append ItemAdded
-    Client->>Service: Get Order
-    Service->>Event Store: Read Events
-    Event Store-->>Service: [OrderCreated, ItemAdded]
-    Service->>Service: Replay to build state
-    Service-->>Client: Current Order State
-</div>
+![event_sourcing_flow](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/event_sourcing_flow.mmd)
 
 ---
 ## Event Store Example
@@ -399,15 +281,7 @@ sequenceDiagram
 ---
 ## CQRS + Event Sourcing Combined
 
-<div class="mermaid">
-graph TD
-    CMD[Command] --> CH[Command Handler]
-    CH --> ES[(Event Store)]
-    ES -->|Publish Events| EP[Event Projector]
-    EP --> RM[(Read Model DB)]
-    Q[Query] --> QH[Query Handler]
-    QH --> RM
-</div>
+![cqrs_event_sourcing_combined](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_event_sourcing_combined.mmd)
 
 ---
 ## Strangler Fig Pattern
@@ -420,16 +294,7 @@ graph TD
 ---
 ## Strangler Fig Diagram
 
-<div class="mermaid">
-graph TD
-    R[Router / Proxy] --> M[Monolith]
-    R --> S1[New Service A]
-    R --> S2[New Service B]
-    M -.->|Migrate Feature C| S3[Future Service C]
-    style M fill:#ffcccc
-    style S1 fill:#ccffcc
-    style S2 fill:#ccffcc
-</div>
+![strangler_fig_diagram](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/strangler_fig_diagram.mmd)
 
 ---
 ## Summary
