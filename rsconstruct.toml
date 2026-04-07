@@ -8,11 +8,13 @@ extra_inputs = [
 linter = "scripts/md_lint.py"
 extensions = [".md"]
 scan_dirs = ["marp"]
+batch = true
 
 [processor.script.check_code_labels]
 linter = "scripts/check_code_labels.py"
 extensions = [".md"]
 scan_dirs = ["marp"]
+batch = true
 
 [processor.generator]
 command = "scripts/mmd_to_svg.py"
