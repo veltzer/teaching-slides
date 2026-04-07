@@ -131,48 +131,7 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
 
 ## CSRF Attack Flow Diagram
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="380" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arrd" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#c62828"/>
-    </marker>
-  </defs>
-  <rect x="5" y="5" width="650" height="370" fill="#fff8e1" stroke="#c62828" stroke-width="2" rx="6"/>
-  <text x="325" y="28" font-size="15" font-weight="bold" fill="#c62828" text-anchor="middle">CSRF Attack Flow</text>
-  <!-- Step 1 -->
-  <text x="15" y="50" font-size="13" font-weight="bold" fill="#222">1. Victim logs into bank.com (session cookie set)</text>
-  <rect x="15"  y="58" width="110" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="70"  y="81" font-size="12" fill="#222" text-anchor="middle">Victim Browser</text>
-  <line x1="125" y1="76" x2="141" y2="76" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="143" y="58" width="120" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="203" y="81" font-size="12" fill="#222" text-anchor="middle">bank.com</text>
-  <line x1="263" y1="76" x2="279" y2="76" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="281" y="58" width="200" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="381" y="75" font-size="12" fill="#222" text-anchor="middle">Set-Cookie: sid=abc</text>
-  <text x="381" y="88" font-size="11" fill="#2e7d32" text-anchor="middle">(session established)</text>
-  <!-- Step 2 -->
-  <text x="15" y="120" font-size="13" font-weight="bold" fill="#222">2. Victim visits evil.com (attacker's site)</text>
-  <rect x="15"  y="128" width="110" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="70"  y="151" font-size="12" fill="#222" text-anchor="middle">Victim Browser</text>
-  <line x1="125" y1="146" x2="141" y2="146" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="143" y="128" width="140" height="36" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="3"/>
-  <text x="213" y="146" font-size="12" fill="#c62828" text-anchor="middle">evil.com</text>
-  <text x="213" y="158" font-size="11" fill="#c62828" text-anchor="middle">(serves hidden form)</text>
-  <!-- Step 3 -->
-  <text x="15" y="190" font-size="13" font-weight="bold" fill="#222">3. Hidden form auto-submits to bank.com</text>
-  <rect x="15" y="198" width="620" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
-  <text x="25" y="218" font-size="12" fill="#222" font-family="monospace">POST /transfer?to=attacker&amp;amount=10000</text>
-  <text x="25" y="238" font-size="12" fill="#e65100" font-family="monospace">Cookie: sid=abc  ← browser auto-attaches!</text>
-  <!-- Step 4 result -->
-  <line x1="325" y1="248" x2="325" y2="262" stroke="#c62828" stroke-width="2" marker-end="url(#arrd)"/>
-  <rect x="15" y="264" width="620" height="90" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="325" y="290" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">bank.com processes request!</text>
-  <text x="325" y="312" font-size="13" fill="#555" text-anchor="middle">Sees valid session cookie → Transfers money to attacker!</text>
-  <text x="325" y="332" font-size="12" fill="#777" text-anchor="middle">Fix: Use CSRF tokens, SameSite cookies, or re-authentication for sensitive actions</text>
-</svg>
+![csrf_attack_flow_diagram](../../../../svg/courses/security/cyber-attacks-and-vectors/12_csrf/csrf_attack_flow_diagram.svg)
 
 ---
 

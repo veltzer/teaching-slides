@@ -8,22 +8,17 @@
 
 ## A Comprehensive Guide
 
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" width="150" height="75">
-  <path d="M 20 50 Q 50 20 80 50 T 140 50" stroke="#007ACC" stroke-width="5" fill="none" />
-  <text x="150" y="55" font-family="Verdana" font-size="15" fill="#333">Py3</text>
-  <circle cx="10" cy="50" r="5" fill="#FFD43B"/>
-  <circle cx="150" cy="50" r="7" fill="#007ACC"/>
-</svg>
+![a_comprehensive_guide](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
 
 ---
 
 ## **Why Port to Python 3?**
 
 * **Python 2 End of Life (EOL):** January 1, 2020. No more official support, bug fixes, or security updates.
-    * <svg viewBox="0 0 100 100" width="50" height="50"><polygon points="50,5 95,95 5,95" style="fill:orange;stroke:red;stroke-width:3"/><text x="45" y="65" font-size="40" fill="white">!</text></svg>
+    * ![why_port_to_python_3_1](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_1.svg)
 * **Vibrant Python 3 Ecosystem:** Most new libraries and frameworks are Python 3 only.
 * **Modern Language Features:** Python 3 offers significant improvements and new capabilities.
-    * <svg viewBox="0 0 100 100" width="50" height="50"><polyline points="20,70 50,40 80,70" style="fill:none;stroke:green;stroke-width:5"/><polyline points="20,50 50,20 80,50" style="fill:none;stroke:green;stroke-width:5"/></svg>
+    * ![why_port_to_python_3_2](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_2.svg)
 * **Performance Enhancements:** Python 3 often brings better performance.
 
 ---
@@ -62,14 +57,7 @@
 
 ## **Part 1: Understanding Key Differences**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <path d="M20,20 L40,40 M40,20 L20,40" stroke="red" stroke-width="4"/>
-  <path d="M60,30 L80,30" stroke="green" stroke-width="4"/>
-  <text x="10" y="60" font-size="10">Py2</text>
-  <text x="55" y="60" font-size="10">Py3</text>
-  <path d="M45,30 Q50,20 55,30 T 60,30" stroke="blue" stroke-width="2" fill="none"/>
-  <path d="M45,30 Q50,40 55,30 T 60,30" stroke="blue" stroke-width="2" fill="none" transform="translate(0,5)"/>
-</svg>
+![part_1_understanding_key_differences](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_1_understanding_key_differences.svg)
 
 ---
 
@@ -310,17 +298,7 @@ print >> sys.stderr, "Error!"
 
 ## **Part 2: Planning Your Port**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <rect x="10" y="20" width="80" height="60" rx="5" ry="5" fill="#FFFDE7" stroke="#FDD835" stroke-width="2"/>
-  <line x1="10" y1="35" x2="90" y2="35" stroke="#FDD835" stroke-width="1"/>
-  <text x="15" y="30" font-size="10">Plan</text>
-  <circle cx="25" cy="50" r="3" fill="blue"/>
-  <text x="30" y="53" font-size="8">Assess</text>
-  <circle cx="25" cy="65" r="3" fill="green"/>
-  <text x="30" y="68" font-size="8">Strategy</text>
-  <circle cx="25" cy="80" r="3" fill="red"/>
-  <text x="30" y="83" font-size="8">Tools</text>
-</svg>
+![part_2_planning_your_port](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_2_planning_your_port.svg)
 
 ---
 
@@ -394,9 +372,7 @@ print >> sys.stderr, "Error!"
 
 ## **Part 3: Tools for Porting**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <path d="M82.7,32.3l-3.6-3.6c-0.8-0.8-2-0.8-2.8,0L69,36.1l-4.2-4.2c-0.8-0.8-2-0.8-2.8,0l-3.6,3.6c-0.8,0.8-0.8,2,0,2.8L66.8,47 l-8.4,8.4c-0.8,0.8-0.8,2,0,2.8l3.6,3.6c0.8,0.8,2,0.8,2.8,0l8.4-8.4l8.4,8.4c0.8,0.8,2,0.8,2.8,0l3.6-3.6c0.8-0.8,0.8-2,0-2.8 L78,47l8.4-8.4C87.2,34.3,87.2,33.1,82.7,32.3z M30,20c-5.5,0-10,4.5-10,10v40c0,5.5,4.5,10,10,10h40c5.5,0,10-4.5,10-10V50h-2v20 c0,4.4-3.6,8-8,8H30c-4.4,0-8-3.6-8-8V30c0-4.4,3.6-8,8-8h20v-2H30z" fill="#4CAF50"/>
-</svg>
+![part_3_tools_for_porting](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_3_tools_for_porting.svg)
 
 ---
 
@@ -506,17 +482,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 
 ## **Part 4: The Porting Process - Step-by-Step**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <line x1="10" y1="50" x2="30" y2="50" stroke="#1976D2" stroke-width="3"/>
-  <polygon points="30,45 40,50 30,55" fill="#1976D2"/>
-  <line x1="40" y1="50" x2="60" y2="50" stroke="#1976D2" stroke-width="3" stroke-dasharray="5,2"/>
-  <polygon points="60,45 70,50 60,55" fill="#1976D2"/>
-  <line x1="70" y1="50" x2="90" y2="50" stroke="#1976D2" stroke-width="3"/>
-  <text x="5" y="40" font-size="8">Prep</text>
-  <text x="35" y="40" font-size="8">Auto</text>
-  <text x="65" y="40" font-size="8">Manual</text>
-  <text x="85" y="40" font-size="8">Test</text>
-</svg>
+![part_4_the_porting_process_step_by_step](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_4_the_porting_process_step_by_step.svg)
 
 ---
 
@@ -527,7 +493,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
     * Write unit tests, integration tests, and end-to-end tests.
     * Your tests are your safety net. They will tell you if the porting broke something.
     * Aim for >80-90% coverage if possible.
-    <svg viewBox="0 0 100 100" width="50" height="50"><path d="M20,50 L40,70 L80,30" stroke="green" stroke-width="8" fill="none"/><text x="10" y="90" font-size="10">Tests Pass!</text></svg>
+    ![phase_1_preparation](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/phase_1_preparation.svg)
 
 ---
 
@@ -695,10 +661,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 5: Common Pitfalls & Challenges**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <polygon points="50,5 95,95 5,95" style="fill:#FFEBEE;stroke:#E57373;stroke-width:3"/>
-  <text x="45" y="65" font-family="Arial" font-size="50" fill="#D32F2F">!</text>
-</svg>
+![part_5_common_pitfalls_challenges](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_5_common_pitfalls_challenges.svg)
 
 ---
 
@@ -755,10 +718,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 6: Best Practices for a Smooth Transition**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <path d="M20,55 L40,75 L80,35" stroke="#689F38" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="10" y="25" font-size="12" fill="#33691E">Best Practices</text>
-</svg>
+![part_6_best_practices_for_a_smooth_transition](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_6_best_practices_for_a_smooth_transition.svg)
 
 ---
 
@@ -808,10 +768,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 7: Beyond the Port: Embracing Python 3**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <polygon points="50,10 60,40 90,40 65,60 75,90 50,70 25,90 35,60 10,40 40,40" style="fill:#FFD700;stroke:#FFA000;stroke-width:2;"/>
-  <text x="25" y="55" font-size="12" fill="#01579B">Py3 Features!</text>
-</svg>
+![part_7_beyond_the_port_embracing_python_3](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_7_beyond_the_port_embracing_python_3.svg)
 
 ---
 
@@ -851,10 +808,7 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 ## **Conclusion & Q&A**
 
-<svg viewBox="0 0 100 100" width="100" height="100">
-  <circle cx="50" cy="50" r="40" stroke="#546E7A" stroke-width="3" fill="#ECEFF1"/>
-  <text x="30" y="55" font-family="Verdana" font-size="20" fill="#37474F">Q&A</text>
-</svg>
+![conclusion_q_a](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/conclusion_q_a.svg)
 
 ---
 
@@ -877,16 +831,4 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 ## Questions?
 
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg" width="200" height="100">
-  <style>
-    .small { font: italic 13px sans-serif; }
-    .heavy { font: bold 30px sans-serif; }
-    .Rrrrr { font: italic 40px serif; fill: red; }
-  </style>
-
-  <text x="20" y="35" class="small">Python 2</text>
-  <text x="40" y="35" class="heavy">to</text>
-  <text x="75" y="35" class="small">Python 3</text>
-
-  <text x="30" y="70" class="Rrrrr">Smoothly!</text>
-</svg>
+![questions](../../../../../svg/courses/languages/python/advanced-python/17_porting_2_to_3/questions.svg)

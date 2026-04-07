@@ -37,29 +37,7 @@ Each project starts from scratch:
 
 ## Build System Evolution
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="125" y="95" text-anchor="middle" font-size="14">Manual Build</text>
-
-  <rect x="250" y="50" width="150" height="80" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="325" y="95" text-anchor="middle" font-size="14">Build Scripts</text>
-
-  <rect x="450" y="50" width="150" height="80" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="525" y="95" text-anchor="middle" font-size="14">Buildroot</text>
-
-  <rect x="300" y="200" width="200" height="100" fill="#ffff99" stroke="#000" stroke-width="2"/>
-  <text x="400" y="255" text-anchor="middle" font-size="16" font-weight="bold">Yocto Project</text>
-
-  <path d="M 125 130 L 325 200" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 325 130 L 400 200" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 525 130 L 400 200" stroke="#000" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#000"/>
-    </marker>
-  </defs>
-</svg>
+![build_system_evolution](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/build_system_evolution.svg)
 
 ---
 
@@ -111,37 +89,7 @@ Not ideal for:
 
 ## Yocto Project Governance
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="50" width="200" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">Linux Foundation</text>
-
-  <rect x="300" y="150" width="200" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2" rx="5"/>
-  <text x="400" y="185" text-anchor="middle" font-size="14" font-weight="bold">Yocto Project</text>
-
-  <rect x="100" y="250" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="175" y="280" text-anchor="middle" font-size="12">Advisory Board</text>
-
-  <rect x="325" y="250" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" font-size="12">Technical Team</text>
-
-  <rect x="550" y="250" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="625" y="280" text-anchor="middle" font-size="12">Member Orgs</text>
-
-  <rect x="200" y="350" width="400" height="50" fill="#ffe6e6" stroke="#cc0000" stroke-width="2" rx="5"/>
-  <text x="400" y="380" text-anchor="middle" font-size="12">Community Contributors</text>
-
-  <path d="M 400 110 L 400 150" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 400 210 L 175 250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 400 210 L 400 250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 400 210 L 625 250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 400 300 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![yocto_project_governance](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_governance.svg)
 
 ---
 
@@ -247,41 +195,7 @@ Benefits:
 
 ## Yocto Project Components
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="50" width="300" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
-  <text x="400" y="95" text-anchor="middle" font-size="16" font-weight="bold">Yocto Project</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="14">Poky</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="14">BitBake</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="14">OpenEmbedded</text>
-
-  <rect x="100" y="320" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="175" y="350" text-anchor="middle" font-size="12">Reference Distro</text>
-
-  <rect x="325" y="320" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="400" y="350" text-anchor="middle" font-size="12">Build Engine</text>
-
-  <rect x="550" y="320" width="150" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="625" y="350" text-anchor="middle" font-size="12">Metadata</text>
-
-  <path d="M 400 130 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 400 130 L 400 200" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 400 130 L 625 200" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 175 260 L 175 320" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 400 260 L 400 320" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M 625 260 L 625 320" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![yocto_project_components](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_components.svg)
 
 ---
 
@@ -334,24 +248,7 @@ Similar to:
 
 ## Metadata Layers
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="300" width="600" height="60" fill="#ffe6e6" stroke="#cc0000" stroke-width="2"/>
-  <text x="400" y="335" text-anchor="middle" font-size="14" font-weight="bold">Hardware Layer (BSP)</text>
-
-  <rect x="150" y="220" width="500" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="2"/>
-  <text x="400" y="255" text-anchor="middle" font-size="14" font-weight="bold">Distribution Layer</text>
-
-  <rect x="200" y="140" width="400" height="60" fill="#e6e6ff" stroke="#0000cc" stroke-width="2"/>
-  <text x="400" y="175" text-anchor="middle" font-size="14" font-weight="bold">Application Layer</text>
-
-  <rect x="250" y="60" width="300" height="60" fill="#ffffe6" stroke="#cccc00" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" font-size="14" font-weight="bold">OpenEmbedded-Core</text>
-
-  <text x="50" y="335" text-anchor="middle" font-size="12">Priority:</text>
-  <text x="50" y="255" text-anchor="middle" font-size="12">7</text>
-  <text x="50" y="175" text-anchor="middle" font-size="12">8</text>
-  <text x="50" y="95" text-anchor="middle" font-size="12">5</text>
-</svg>
+![metadata_layers](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/metadata_layers.svg)
 
 ---
 

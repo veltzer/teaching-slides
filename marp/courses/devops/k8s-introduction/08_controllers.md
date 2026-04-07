@@ -14,28 +14,7 @@
 
 ## Controller Pattern
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Controller Loop</text>
-  <rect x="100" y="80" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="175" y="115" text-anchor="middle" fill="white">Observe</text>
-  <rect x="325" y="80" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="400" y="115" text-anchor="middle" fill="white">Analyze</text>
-  <rect x="550" y="80" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="625" y="115" text-anchor="middle">Act</text>
-  <path d="M 250 110 L 320 110" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 475 110 L 545 110" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 625 140 Q 400 200 175 140" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="200" y="230" width="400" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="260" text-anchor="middle" font-weight="bold">Reconciliation Loop</text>
-  <text x="400" y="285" text-anchor="middle" font-size="12">1. Watch for changes in resources</text>
-  <text x="400" y="305" text-anchor="middle" font-size="12">2. Compare desired vs current state</text>
-  <text x="400" y="325" text-anchor="middle" font-size="12">3. Take action to match desired state</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![controller_pattern](../../../../svg/courses/devops/k8s-introduction/08_controllers/controller_pattern.svg)
 
 ---
 
@@ -92,47 +71,7 @@ spec:
 
 ## Rolling Update Process
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Rolling Update Stages</text>
-  <g id="stage1">
-    <text x="100" y="60" text-anchor="middle" font-size="12">Initial</text>
-    <rect x="50" y="80" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="105" text-anchor="middle" fill="white">v1</text>
-    <rect x="50" y="130" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="155" text-anchor="middle" fill="white">v1</text>
-    <rect x="50" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="205" text-anchor="middle" fill="white">v1</text>
-  </g>
-  <g id="stage2">
-    <text x="250" y="60" text-anchor="middle" font-size="12">Updating</text>
-    <rect x="200" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="250" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="200" y="130" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="250" y="155" text-anchor="middle" fill="white">v1</text>
-    <rect x="200" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="250" y="205" text-anchor="middle" fill="white">v1</text>
-    <rect x="200" y="230" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="250" y="255" text-anchor="middle" fill="white">v2</text>
-  </g>
-  <g id="stage3">
-    <text x="400" y="60" text-anchor="middle" font-size="12">Progressing</text>
-    <rect x="350" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="400" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="350" y="130" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="400" y="155" text-anchor="middle" fill="white">v2</text>
-    <rect x="350" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="400" y="205" text-anchor="middle" fill="white">v1</text>
-  </g>
-  <g id="stage4">
-    <text x="550" y="60" text-anchor="middle" font-size="12">Complete</text>
-    <rect x="500" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="500" y="130" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="155" text-anchor="middle" fill="white">v2</text>
-    <rect x="500" y="180" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="205" text-anchor="middle" fill="white">v2</text>
-  </g>
-</svg>
+![rolling_update_process](../../../../svg/courses/devops/k8s-introduction/08_controllers/rolling_update_process.svg)
 
 ---
 
@@ -218,28 +157,7 @@ spec:
 
 ## StatefulSet Pod Identity
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">StatefulSet Pod Names</text>
-  <rect x="100" y="100" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-weight="bold">web-0</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="11">First pod</text>
-  <text x="175" y="170" text-anchor="middle" fill="white" font-size="11">PVC: www-web-0</text>
-  <rect x="275" y="100" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="350" y="130" text-anchor="middle" fill="white" font-weight="bold">web-1</text>
-  <text x="350" y="150" text-anchor="middle" fill="white" font-size="11">Second pod</text>
-  <text x="350" y="170" text-anchor="middle" fill="white" font-size="11">PVC: www-web-1</text>
-  <rect x="450" y="100" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="525" y="130" text-anchor="middle" fill="white" font-weight="bold">web-2</text>
-  <text x="525" y="150" text-anchor="middle" fill="white" font-size="11">Third pod</text>
-  <text x="525" y="170" text-anchor="middle" fill="white" font-size="11">PVC: www-web-2</text>
-  <rect x="625" y="100" width="125" height="80" fill="#888" rx="5"/>
-  <text x="687" y="140" text-anchor="middle" fill="white">web-N</text>
-  <rect x="200" y="220" width="400" height="80" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="250" text-anchor="middle" font-weight="bold">Properties</text>
-  <text x="400" y="270" text-anchor="middle" font-size="12">• Predictable pod names: $(statefulset)-$(ordinal)</text>
-  <text x="400" y="290" text-anchor="middle" font-size="12">• Stable network ID: web-0.nginx.default.svc.cluster.local</text>
-</svg>
+![statefulset_pod_identity](../../../../svg/courses/devops/k8s-introduction/08_controllers/statefulset_pod_identity.svg)
 
 ---
 
@@ -302,25 +220,7 @@ spec:
 
 ## Job Types
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Job Patterns</text>
-  <rect x="100" y="80" width="200" height="100" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Single Job</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="11">completions: 1</text>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="11">parallelism: 1</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="11">One task</text>
-  <rect x="320" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" fill="white" font-weight="bold">Parallel Fixed</text>
-  <text x="420" y="135" text-anchor="middle" fill="white" font-size="11">completions: 10</text>
-  <text x="420" y="155" text-anchor="middle" fill="white" font-size="11">parallelism: 3</text>
-  <text x="420" y="175" text-anchor="middle" fill="white" font-size="11">Multiple tasks</text>
-  <rect x="540" y="80" width="200" height="100" fill="#fbbc04" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" font-weight="bold">Work Queue</text>
-  <text x="640" y="135" text-anchor="middle" font-size="11">completions: null</text>
-  <text x="640" y="155" text-anchor="middle" font-size="11">parallelism: 3</text>
-  <text x="640" y="175" text-anchor="middle" font-size="11">Process queue</text>
-</svg>
+![job_types](../../../../svg/courses/devops/k8s-introduction/08_controllers/job_types.svg)
 
 ---
 
@@ -370,30 +270,7 @@ Examples:
 
 ## Controller Comparison
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Controller Types</text>
-  <rect x="80" y="80" width="130" height="250" fill="#4285f4" rx="5"/>
-  <text x="145" y="105" text-anchor="middle" fill="white" font-weight="bold">Deployment</text>
-  <text x="145" y="125" text-anchor="middle" fill="white" font-size="10">Stateless apps</text>
-  <text x="145" y="145" text-anchor="middle" fill="white" font-size="10">Rolling updates</text>
-  <rect x="220" y="80" width="130" height="250" fill="#34a853" rx="5"/>
-  <text x="285" y="105" text-anchor="middle" fill="white" font-weight="bold">StatefulSet</text>
-  <text x="285" y="125" text-anchor="middle" fill="white" font-size="10">Stateful apps</text>
-  <text x="285" y="145" text-anchor="middle" fill="white" font-size="10">Ordered</text>
-  <rect x="360" y="80" width="130" height="250" fill="#fbbc04" rx="5"/>
-  <text x="425" y="105" text-anchor="middle" font-weight="bold">DaemonSet</text>
-  <text x="425" y="125" text-anchor="middle" font-size="10">Node agents</text>
-  <text x="425" y="145" text-anchor="middle" font-size="10">One per node</text>
-  <rect x="500" y="80" width="130" height="250" fill="#ea4335" rx="5"/>
-  <text x="565" y="105" text-anchor="middle" fill="white" font-weight="bold">Job</text>
-  <text x="565" y="125" text-anchor="middle" fill="white" font-size="10">Batch tasks</text>
-  <text x="565" y="145" text-anchor="middle" fill="white" font-size="10">Run to completion</text>
-  <rect x="640" y="80" width="110" height="250" fill="#9c27b0" rx="5"/>
-  <text x="695" y="105" text-anchor="middle" fill="white" font-weight="bold">CronJob</text>
-  <text x="695" y="125" text-anchor="middle" fill="white" font-size="10">Scheduled</text>
-  <text x="695" y="145" text-anchor="middle" fill="white" font-size="10">Recurring</text>
-</svg>
+![controller_comparison](../../../../svg/courses/devops/k8s-introduction/08_controllers/controller_comparison.svg)
 
 ---
 
@@ -512,23 +389,7 @@ kubectl rollout undo deployment/nginx
 
 ## Blue/Green Deployment
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Blue/Green Deployment</text>
-  <rect x="100" y="80" width="200" height="100" fill="#4285f4" rx="5"/>
-  <text x="200" y="120" text-anchor="middle" fill="white" font-weight="bold">Blue (Current)</text>
-  <text x="200" y="145" text-anchor="middle" fill="white">Version 1.0</text>
-  <text x="200" y="165" text-anchor="middle" fill="white">Active Traffic</text>
-  <rect x="350" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="450" y="120" text-anchor="middle" fill="white" font-weight="bold">Green (New)</text>
-  <text x="450" y="145" text-anchor="middle" fill="white">Version 2.0</text>
-  <text x="450" y="165" text-anchor="middle" fill="white">Testing</text>
-  <rect x="600" y="80" width="150" height="100" fill="#fbbc04" rx="5"/>
-  <text x="675" y="120" text-anchor="middle" font-weight="bold">Service</text>
-  <text x="675" y="145" text-anchor="middle">Selector: blue</text>
-  <text x="675" y="165" text-anchor="middle">→ Switch to green</text>
-  <path d="M 200 180 L 675 180" stroke="#4285f4" stroke-width="3"/>
-  <path d="M 450 180 L 675 220" stroke="#34a853" stroke-width="2" stroke-dasharray="5,5"/>
-</svg>
+![blue_green_deployment](../../../../svg/courses/devops/k8s-introduction/08_controllers/blue_green_deployment.svg)
 
 ---
 

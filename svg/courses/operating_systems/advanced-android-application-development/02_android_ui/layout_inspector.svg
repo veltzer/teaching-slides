@@ -1,0 +1,45 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main Layout Inspector -->
+  <rect x="200" y="30" width="200" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="14" font-weight="bold">Layout Inspector</text>
+
+  <!-- View Hierarchy branch -->
+  <rect x="50" y="130" width="120" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="155" text-anchor="middle" font-size="12">View Hierarchy</text>
+
+  <!-- Performance Metrics branch -->
+  <rect x="240" y="130" width="140" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="310" y="155" text-anchor="middle" font-size="12">Performance Metrics</text>
+
+  <!-- Layout Bounds branch -->
+  <rect x="430" y="130" width="120" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="155" text-anchor="middle" font-size="12">Layout Bounds</text>
+
+  <!-- 3D View -->
+  <rect x="50" y="210" width="120" height="35" fill="#e1f5fe" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="232" text-anchor="middle" font-size="11">3D View</text>
+
+  <!-- Rendering Stats -->
+  <rect x="240" y="210" width="140" height="35" fill="#c8e6c9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="310" y="232" text-anchor="middle" font-size="11">Rendering Stats</text>
+
+  <!-- Overdraw -->
+  <rect x="430" y="210" width="120" height="35" fill="#ffccbc" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="232" text-anchor="middle" font-size="11">Overdraw</text>
+
+  <!-- Arrows from main to branches -->
+  <line x1="250" y1="80" x2="110" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="300" y1="80" x2="310" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="350" y1="80" x2="490" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <!-- Arrows from branches to sub-features -->
+  <line x1="110" y1="170" x2="110" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="310" y1="170" x2="310" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+  <line x1="490" y1="170" x2="490" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
+
+  <defs>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

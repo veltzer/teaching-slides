@@ -59,41 +59,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
     - Enables distributed development
     - Natural deduplication
 
-<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Git's Core Concepts</text>
-
-  <!-- Branch pointer -->
-  <rect x="50" y="50" width="80" height="30" fill="#3498db" rx="5"/>
-  <text x="90" y="70" text-anchor="middle" fill="white" font-size="12">main</text>
-
-  <!-- Commits -->
-  <circle cx="200" cy="65" r="15" fill="#e74c3c"/>
-  <text x="200" y="70" text-anchor="middle" fill="white" font-size="10">A</text>
-
-  <circle cx="300" cy="65" r="15" fill="#2ecc71"/>
-  <text x="300" y="70" text-anchor="middle" fill="white" font-size="10">B</text>
-
-  <circle cx="400" cy="65" r="15" fill="#f39c12"/>
-  <text x="400" y="70" text-anchor="middle" fill="white" font-size="10">C</text>
-
-  <!-- Arrows -->
-  <line x1="130" y1="65" x2="185" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="215" y1="65" x2="285" y2="65" stroke="#333" stroke-width="2"/>
-  <line x1="315" y1="65" x2="385" y2="65" stroke="#333" stroke-width="2"/>
-
-  <!-- Labels -->
-  <text x="200" y="95" text-anchor="middle" font-size="8">a1b2c3d</text>
-  <text x="300" y="95" text-anchor="middle" font-size="8">d4e5f6g</text>
-  <text x="400" y="95" text-anchor="middle" font-size="8">g7h8i9j</text>
-
-  <text x="300" y="130" text-anchor="middle" font-size="12">Each SHA represents complete history to that point</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![core_git_ideas](../../../../svg/courses/git/git2/11_under_the_hood/core_git_ideas.svg)
 
 ---
 
@@ -211,51 +177,7 @@ and session management.
 
 How the three structures connect:
 
-<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="20" text-anchor="middle" font-size="16" font-weight="bold">Git Object Model</text>
-
-  <!-- Commit -->
-  <rect x="280" y="50" width="140" height="80" fill="#3498db" rx="5"/>
-  <text x="350" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Commit</text>
-  <text x="350" y="85" text-anchor="middle" fill="white" font-size="10">g7h8i9j</text>
-  <text x="350" y="100" text-anchor="middle" fill="white" font-size="10">Author: John</text>
-  <text x="350" y="115" text-anchor="middle" fill="white" font-size="10">Message: "Add feature"</text>
-
-  <!-- Root Tree -->
-  <rect x="280" y="170" width="140" height="80" fill="#2ecc71" rx="5"/>
-  <text x="350" y="190" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Tree (root)</text>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="10">a1b2c3d</text>
-  <text x="350" y="220" text-anchor="middle" fill="white" font-size="10">README.md</text>
-  <text x="350" y="235" text-anchor="middle" fill="white" font-size="10">src/</text>
-
-  <!-- Blobs and subtrees -->
-  <rect x="50" y="300" width="100" height="60" fill="#e74c3c" rx="5"/>
-  <text x="100" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Blob</text>
-  <text x="100" y="335" text-anchor="middle" fill="white" font-size="9">d4e5f6g</text>
-  <text x="100" y="350" text-anchor="middle" fill="white" font-size="9">README content</text>
-
-  <rect x="200" y="300" width="100" height="60" fill="#f39c12" rx="5"/>
-  <text x="250" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Tree (src)</text>
-  <text x="250" y="335" text-anchor="middle" fill="white" font-size="9">j1k2l3m</text>
-  <text x="250" y="350" text-anchor="middle" fill="white" font-size="9">main.py</text>
-
-  <rect x="350" y="300" width="100" height="60" fill="#e74c3c" rx="5"/>
-  <text x="400" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Blob</text>
-  <text x="400" y="335" text-anchor="middle" fill="white" font-size="9">m4n5o6p</text>
-  <text x="400" y="350" text-anchor="middle" fill="white" font-size="9">Python code</text>
-
-  <!-- Arrows -->
-  <line x1="350" y1="130" x2="350" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="320" y1="250" x2="120" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="350" y1="250" x2="250" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="250" y1="320" x2="380" y2="320" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![object_relationships](../../../../svg/courses/git/git2/11_under_the_hood/object_relationships.svg)
 
 ---
 
@@ -602,42 +524,7 @@ How `Git` stores similar objects efficiently:
 - Chain of deltas for multiple versions
 - Automatic during packing operations
 
-<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="bold">Delta Compression Example</text>
-
-  <!-- Base object -->
-  <rect x="50" y="50" width="120" height="80" fill="#3498db" rx="5"/>
-  <text x="110" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Base Object</text>
-  <text x="110" y="95" text-anchor="middle" fill="white" font-size="10">Full Content</text>
-  <text x="110" y="110" text-anchor="middle" fill="white" font-size="10">1000 bytes</text>
-
-  <!-- Delta object -->
-  <rect x="240" y="50" width="120" height="80" fill="#e74c3c" rx="5"/>
-  <text x="300" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Delta Object</text>
-  <text x="300" y="95" text-anchor="middle" fill="white" font-size="10">Changes Only</text>
-  <text x="300" y="110" text-anchor="middle" fill="white" font-size="10">50 bytes</text>
-
-  <!-- Result -->
-  <rect x="430" y="50" width="120" height="80" fill="#2ecc71" rx="5"/>
-  <text x="490" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Reconstructed</text>
-  <text x="490" y="95" text-anchor="middle" fill="white" font-size="10">Base + Delta</text>
-  <text x="490" y="110" text-anchor="middle" fill="white" font-size="10">1000 bytes</text>
-
-  <!-- Arrows -->
-  <line x1="170" y1="90" x2="230" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="360" y1="90" x2="420" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <text x="200" y="85" text-anchor="middle" font-size="10">+</text>
-  <text x="390" y="85" text-anchor="middle" font-size="10">=</text>
-
-  <text x="300" y="170" text-anchor="middle" font-size="12">Space saved: 95% in this example</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![delta_compression](../../../../svg/courses/git/git2/11_under_the_hood/delta_compression.svg)
 
 ---
 
@@ -826,44 +713,7 @@ What happens during a three-way merge:
 1. **Create result:** New tree with merged content
 1. **Create merge commit:** With two parents
 
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="bold">Three-Way Merge Process</text>
-
-  <!-- Merge base -->
-  <circle cx="300" cy="80" r="20" fill="#95a5a6"/>
-  <text x="300" y="85" text-anchor="middle" fill="white" font-size="11">Base</text>
-  <text x="300" y="110" text-anchor="middle" font-size="10">Common ancestor</text>
-
-  <!-- Branch A -->
-  <circle cx="150" cy="180" r="20" fill="#3498db"/>
-  <text x="150" y="185" text-anchor="middle" fill="white" font-size="11">A</text>
-  <text x="150" y="210" text-anchor="middle" font-size="10">Branch A</text>
-
-  <!-- Branch B -->
-  <circle cx="450" cy="180" r="20" fill="#e74c3c"/>
-  <text x="450" y="185" text-anchor="middle" fill="white" font-size="11">B</text>
-  <text x="450" y="210" text-anchor="middle" font-size="10">Branch B</text>
-
-  <!-- Merge result -->
-  <circle cx="300" cy="250" r="20" fill="#2ecc71"/>
-  <text x="300" y="255" text-anchor="middle" fill="white" font-size="11">M</text>
-  <text x="300" y="280" text-anchor="middle" font-size="10">Merge commit</text>
-
-  <!-- Lines showing relationships -->
-  <line x1="280" y1="100" x2="170" y2="160" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-  <line x1="320" y1="100" x2="430" y2="160" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-  <line x1="170" y1="180" x2="280" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="430" y1="180" x2="320" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <text x="220" y="145" font-size="9">diff base→A</text>
-  <text x="360" y="145" font-size="9">diff base→B</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![understanding_merge_mechanics](../../../../svg/courses/git/git2/11_under_the_hood/understanding_merge_mechanics.svg)
 
 ---
 

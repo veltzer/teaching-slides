@@ -4,22 +4,7 @@
 ---
 ## What are Structs?
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
-</svg>
+![what_are_structs](../../../../../svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_structs.svg)
 
 ---
 ## Defining a Struct
@@ -174,22 +159,7 @@ impl Rectangle {
 ---
 ## What are Enums
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
-</svg>
+![what_are_enums](../../../../../svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_enums.svg)
 
 ---
 
@@ -465,22 +435,7 @@ Create a basic state machine using enums:
 
 ## Best Practices
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="150" rx="60" ry="40" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="80" rx="50" ry="30" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="80" rx="50" ry="30" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <ellipse cx="150" cy="220" rx="50" ry="30" fill="#e8f5e9" stroke="#333" stroke-width="2"/>
-  <ellipse cx="450" cy="220" rx="50" ry="30" fill="#fff3e0" stroke="#333" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="12" fill="white">Core</text>
-  <text x="150" y="85" text-anchor="middle" font-size="11">Concept 1</text>
-  <text x="450" y="85" text-anchor="middle" font-size="11">Concept 2</text>
-  <text x="150" y="225" text-anchor="middle" font-size="11">Concept 3</text>
-  <text x="450" y="225" text-anchor="middle" font-size="11">Concept 4</text>
-  <line x1="250" y1="130" x2="190" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="130" x2="410" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="170" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="170" x2="410" y2="200" stroke="#333" stroke-width="2"/>
-</svg>
+![best_practices](../../../../../svg/courses/languages/rust/rust-programming/05_structs_enums/best_practices.svg)
 
 ---
 

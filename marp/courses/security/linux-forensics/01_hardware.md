@@ -20,37 +20,7 @@
 
 ## Computer Architecture Overview
 
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" font-family="sans-serif">
-  <defs>
-    <marker id="ah1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- CPU -->
-  <rect x="110" y="20" width="200" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="210" y="50" text-anchor="middle" font-size="14" fill="#222">CPU (Processor)</text>
-  <!-- bus label -->
-  <text x="210" y="95" text-anchor="middle" font-size="12" fill="#555">System Bus</text>
-  <line x1="210" y1="70" x2="210" y2="115" stroke="#555" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <!-- RAM -->
-  <rect x="110" y="115" width="200" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="210" y="145" text-anchor="middle" font-size="14" fill="#222">RAM (Volatile)</text>
-  <line x1="210" y1="165" x2="210" y2="195" stroke="#555" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <!-- Storage Controller -->
-  <rect x="110" y="195" width="200" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="210" y="225" text-anchor="middle" font-size="14" fill="#222">Storage Controller</text>
-  <!-- branch lines -->
-  <line x1="210" y1="245" x2="210" y2="265" stroke="#555" stroke-width="1.5"/>
-  <line x1="155" y1="265" x2="265" y2="265" stroke="#555" stroke-width="1.5"/>
-  <line x1="155" y1="265" x2="155" y2="295" stroke="#555" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <line x1="265" y1="265" x2="265" y2="295" stroke="#555" stroke-width="1.5" marker-end="url(#ah1)"/>
-  <!-- HDD -->
-  <rect x="80" y="295" width="150" height="50" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="155" y="325" text-anchor="middle" font-size="14" fill="#222">HDD</text>
-  <!-- SSD -->
-  <rect x="190" y="295" width="150" height="50" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="265" y="325" text-anchor="middle" font-size="14" fill="#222">SSD</text>
-</svg>
+![computer_architecture_overview](../../../../svg/courses/security/linux-forensics/01_hardware/computer_architecture_overview.svg)
 
 ---
 
@@ -129,31 +99,7 @@ lscpu | grep "Byte Order"
 
 ## Hard Disk Drive (HDD) Anatomy
 
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="350" font-family="sans-serif">
-  <defs>
-    <marker id="ah2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Spindle Motor label -->
-  <text x="230" y="30" text-anchor="middle" font-size="14" fill="#222">Spindle Motor</text>
-  <line x1="230" y1="35" x2="230" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#ah2)"/>
-  <!-- Platter 1 -->
-  <rect x="100" y="60" width="260" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="87" text-anchor="middle" font-size="13" fill="#222">Platter 1</text>
-  <text x="380" y="87" font-size="11" fill="#555">&#8592; Magnetic coating</text>
-  <!-- Platter 2 -->
-  <rect x="100" y="115" width="260" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="142" text-anchor="middle" font-size="13" fill="#222">Platter 2</text>
-  <!-- Platter 3 -->
-  <rect x="100" y="170" width="260" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="197" text-anchor="middle" font-size="13" fill="#222">Platter 3</text>
-  <line x1="230" y1="215" x2="230" y2="250" stroke="#555" stroke-width="1.5" marker-end="url(#ah2)"/>
-  <!-- Read/Write Head label -->
-  <rect x="100" y="250" width="260" height="55" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="273" text-anchor="middle" font-size="13" fill="#222">Read/Write Head</text>
-  <text x="230" y="293" text-anchor="middle" font-size="13" fill="#222">on Actuator Arm</text>
-</svg>
+![hard_disk_drive_hdd_anatomy](../../../../svg/courses/security/linux-forensics/01_hardware/hard_disk_drive_hdd_anatomy.svg)
 
 - Platters spin at 5400-15000 RPM
 - Read/write heads float nanometers above surface
@@ -168,32 +114,7 @@ lscpu | grep "Byte Order"
 - **Head**: which platter surface (top/bottom)
 - **Sector**: subdivision of a track (traditionally 512 bytes)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="240" font-family="sans-serif">
-  <!-- Track headers -->
-  <text x="80"  y="25" text-anchor="middle" font-size="13" fill="#222">Track 0</text>
-  <text x="240" y="25" text-anchor="middle" font-size="13" fill="#222">Track 1</text>
-  <text x="400" y="25" text-anchor="middle" font-size="13" fill="#222">Track 2</text>
-  <text x="480" y="25" font-size="12" fill="#555">Platter surface</text>
-  <!-- Track boxes -->
-  <rect x="30"  y="30" width="100" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <rect x="190" y="30" width="100" height="40" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <rect x="350" y="30" width="100" height="40" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <!-- Sector label -->
-  <text x="30" y="115" font-size="13" fill="#222">Each track divided into sectors:</text>
-  <!-- Sector row -->
-  <rect x="30"  y="125" width="75" height="40" rx="2" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="67"  y="150" text-anchor="middle" font-size="13" fill="#222">S0</text>
-  <rect x="105" y="125" width="75" height="40" rx="2" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="142" y="150" text-anchor="middle" font-size="13" fill="#222">S1</text>
-  <rect x="180" y="125" width="75" height="40" rx="2" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="217" y="150" text-anchor="middle" font-size="13" fill="#222">S2</text>
-  <rect x="255" y="125" width="75" height="40" rx="2" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="292" y="150" text-anchor="middle" font-size="13" fill="#222">S3</text>
-  <rect x="330" y="125" width="75" height="40" rx="2" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="367" y="150" text-anchor="middle" font-size="13" fill="#222">S4</text>
-  <rect x="405" y="125" width="75" height="40" rx="2" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="442" y="150" text-anchor="middle" font-size="13" fill="#222">S5</text>
-</svg>
+![hdd_geometry_chs_addressing](../../../../svg/courses/security/linux-forensics/01_hardware/hdd_geometry_chs_addressing.svg)
 
 - Modern drives use LBA (Logical Block Addressing) instead of CHS
 - LBA numbers sectors sequentially from 0
@@ -226,42 +147,7 @@ sudo fdisk -l /dev/sda
 - Data stored in cells as electrical charges
 - Organized into pages (4-16 KB) and blocks (256-512 pages)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="270" font-family="sans-serif">
-  <!-- Outer frame -->
-  <rect x="20" y="20" width="380" height="240" rx="6" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <!-- SSD Controller -->
-  <rect x="40" y="35" width="340" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="210" y="63" text-anchor="middle" font-size="14" fill="#222">SSD Controller</text>
-  <!-- NAND label -->
-  <text x="40" y="105" font-size="13" fill="#555">NAND Flash Chips</text>
-  <!-- Block 1 -->
-  <rect x="40" y="115" width="100" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="90" y="135" text-anchor="middle" font-size="12" fill="#222">Block</text>
-  <rect x="50" y="140" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="90" y="155" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="50" y="165" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="90" y="180" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="50" y="190" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="90" y="205" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <!-- Block 2 -->
-  <rect x="160" y="115" width="100" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="210" y="135" text-anchor="middle" font-size="12" fill="#222">Block</text>
-  <rect x="170" y="140" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="210" y="155" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="170" y="165" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="210" y="180" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="170" y="190" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="210" y="205" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <!-- Block 3 -->
-  <rect x="280" y="115" width="100" height="120" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="135" text-anchor="middle" font-size="12" fill="#222">Block</text>
-  <rect x="290" y="140" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="330" y="155" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="290" y="165" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="330" y="180" text-anchor="middle" font-size="11" fill="#333">Page</text>
-  <rect x="290" y="190" width="80" height="22" rx="2" fill="#e8f5e9" stroke="#aaa" stroke-width="1"/>
-  <text x="330" y="205" text-anchor="middle" font-size="11" fill="#333">Page</text>
-</svg>
+![solid_state_drives_ssd](../../../../svg/courses/security/linux-forensics/01_hardware/solid_state_drives_ssd.svg)
 
 ---
 
@@ -451,21 +337,7 @@ sudo fdisk -l /dev/sda | grep "Disklabel type"
 
 ## GPT Structure
 
-<svg xmlns="http://www.w3.org/2000/svg" width="380" height="370" font-family="sans-serif">
-  <rect x="40" y="10"  width="300" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="40" text-anchor="middle" font-size="13" fill="#222">LBA 0: Protective MBR</text>
-  <rect x="40" y="70"  width="300" height="50" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="100" text-anchor="middle" font-size="13" fill="#222">LBA 1: GPT Header</text>
-  <rect x="40" y="130" width="300" height="60" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="155" text-anchor="middle" font-size="13" fill="#222">LBA 2-33: Partition Table</text>
-  <text x="190" y="178" text-anchor="middle" font-size="12" fill="#555">(128 entries × 128 bytes)</text>
-  <rect x="40" y="200" width="300" height="70" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="230" text-anchor="middle" font-size="13" fill="#222">Partitions...</text>
-  <rect x="40" y="280" width="300" height="45" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="308" text-anchor="middle" font-size="13" fill="#222">Backup Partition Table</text>
-  <rect x="40" y="335" width="300" height="25" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="190" y="352" text-anchor="middle" font-size="13" fill="#222">Backup GPT Header</text>
-</svg>
+![gpt_structure](../../../../svg/courses/security/linux-forensics/01_hardware/gpt_structure.svg)
 
 - Each partition has a unique GUID
 - Backup header allows recovery if primary is corrupted
@@ -517,47 +389,7 @@ sudo sfdisk -T
 
 ## Logical Volume Manager (LVM)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="310" font-family="sans-serif">
-  <defs>
-    <marker id="ah6" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- PV boxes -->
-  <rect x="20"  y="20" width="160" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="100" y="47" text-anchor="middle" font-size="13" fill="#222">/dev/sda1</text>
-  <rect x="230" y="20" width="160" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="310" y="47" text-anchor="middle" font-size="13" fill="#222">/dev/sdb1</text>
-  <rect x="440" y="20" width="160" height="45" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="520" y="47" text-anchor="middle" font-size="13" fill="#222">/dev/sdc1</text>
-  <text x="630" y="47" font-size="11" fill="#555">Physical Volumes (PV)</text>
-  <!-- lines down to VG -->
-  <line x1="100" y1="65" x2="100" y2="100" stroke="#555" stroke-width="1.5"/>
-  <line x1="310" y1="65" x2="310" y2="100" stroke="#555" stroke-width="1.5"/>
-  <line x1="520" y1="65" x2="520" y2="100" stroke="#555" stroke-width="1.5"/>
-  <line x1="100" y1="100" x2="520" y2="100" stroke="#555" stroke-width="1.5"/>
-  <line x1="310" y1="100" x2="310" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#ah6)"/>
-  <!-- VG box -->
-  <rect x="120" y="120" width="380" height="50" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="310" y="145" text-anchor="middle" font-size="13" fill="#222">Volume Group (VG) — vg_data</text>
-  <!-- lines down to LVs -->
-  <line x1="310" y1="170" x2="310" y2="195" stroke="#555" stroke-width="1.5"/>
-  <line x1="160" y1="195" x2="460" y2="195" stroke="#555" stroke-width="1.5"/>
-  <line x1="160" y1="195" x2="160" y2="215" stroke="#555" stroke-width="1.5" marker-end="url(#ah6)"/>
-  <line x1="310" y1="195" x2="310" y2="215" stroke="#555" stroke-width="1.5" marker-end="url(#ah6)"/>
-  <line x1="460" y1="195" x2="460" y2="215" stroke="#555" stroke-width="1.5" marker-end="url(#ah6)"/>
-  <!-- LV boxes -->
-  <rect x="60"  y="215" width="200" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="160" y="240" text-anchor="middle" font-size="13" fill="#222">LV1</text>
-  <text x="160" y="260" text-anchor="middle" font-size="12" fill="#555">/home</text>
-  <rect x="210" y="215" width="200" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="310" y="240" text-anchor="middle" font-size="13" fill="#222">LV2</text>
-  <text x="310" y="260" text-anchor="middle" font-size="12" fill="#555">/var</text>
-  <rect x="360" y="215" width="200" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="460" y="240" text-anchor="middle" font-size="13" fill="#222">LV3</text>
-  <text x="460" y="260" text-anchor="middle" font-size="12" fill="#555">/data</text>
-  <text x="20" y="295" font-size="11" fill="#555">Logical Volumes</text>
-</svg>
+![logical_volume_manager_lvm](../../../../svg/courses/security/linux-forensics/01_hardware/logical_volume_manager_lvm.svg)
 
 ```bash
 # List physical volumes, volume groups, logical volumes

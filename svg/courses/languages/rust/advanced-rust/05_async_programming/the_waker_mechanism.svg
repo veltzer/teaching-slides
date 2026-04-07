@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="320" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Future Executor / Waker Interaction</text>
+<rect x="40" y="50" width="200" height="120" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="140" y="78" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Executor</text>
+<text x="140" y="100" text-anchor="middle" font-size="12" fill="#222222">(runtime)</text>
+<text x="140" y="122" text-anchor="middle" font-size="12" fill="#222222">task queue</text>
+<rect x="400" y="50" width="200" height="120" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="500" y="78" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Future</text>
+<text x="500" y="100" text-anchor="middle" font-size="12" fill="#222222">stores waker</text>
+<text x="500" y="122" text-anchor="middle" font-size="12" fill="#222222">I/O / timer state</text>
+<line x1="240" y1="90" x2="400" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="82" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">poll()</text>
+<line x1="400" y1="130" x2="240" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="124" text-anchor="middle" font-size="11" fill="#333">Pending + waker saved</text>
+<path d="M 140 170 Q 320 270 500 170" stroke="#555" stroke-width="1.5" fill="none" marker-start="url(#arrl)"/>
+<text x="320" y="280" text-anchor="middle" font-size="12" fill="#555" font-style="italic">wake() called when I/O ready</text>
+<line x1="240" y1="150" x2="400" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="320" y="144" text-anchor="middle" font-size="11" fill="#333">poll() again → Ready(value)</text>
+</svg>

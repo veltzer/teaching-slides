@@ -135,43 +135,7 @@ int *ptr = (int *)malloc(sizeof(int) * 10); // Allocate space for 10 ints
 
 ## Pointer Memory Visualization
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" font-family="monospace">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Code block -->
-  <rect x="10" y="10" width="300" height="70" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="4"/>
-  <text x="20" y="30" font-size="13" fill="#222">int x = 42;</text>
-  <text x="20" y="48" font-size="13" fill="#222">int *p = &amp;x;</text>
-  <text x="20" y="66" font-size="13" fill="#222">int **pp = &amp;p;</text>
-  <!-- Stack Memory label -->
-  <text x="10" y="105" font-size="13" font-weight="bold" fill="#333" font-family="sans-serif">Stack Memory:</text>
-  <!-- pp row -->
-  <rect x="10" y="115" width="200" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="138" font-size="13" fill="#222">pp: 0x7FF008</text>
-  <!-- p row -->
-  <rect x="10" y="151" width="200" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="174" font-size="13" fill="#222">p:  0x7FF010</text>
-  <!-- x row -->
-  <rect x="10" y="187" width="200" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="206" font-size="13" fill="#222">x:  42</text>
-  <text x="20" y="220" font-size="12" fill="#777">    0x7FF018</text>
-  <!-- pp -> p arrow -->
-  <line x1="210" y1="133" x2="260" y2="133" stroke="#555" stroke-width="1.5"/>
-  <line x1="260" y1="133" x2="260" y2="169" stroke="#555" stroke-width="1.5"/>
-  <line x1="210" y1="169" x2="256" y2="169" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- p -> x arrow -->
-  <line x1="210" y1="169" x2="280" y2="169" stroke="transparent"/>
-  <line x1="210" y1="205" x2="270" y2="205" stroke="#555" stroke-width="1.5"/>
-  <line x1="270" y1="169" x2="270" y2="205" stroke="#555" stroke-width="1.5"/>
-  <line x1="210" y1="169" x2="266" y2="169" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- equivalences -->
-  <text x="10" y="255" font-size="13" fill="#222">**pp == *p == x == 42</text>
-  <text x="10" y="275" font-size="13" fill="#222"> *pp == p  == 0x7FF018</text>
-  <text x="10" y="295" font-size="13" fill="#222">  pp       == 0x7FF010</text>
-</svg>
+![pointer_memory_visualization](../../../../../svg/courses/languages/c/c-refresher/05_pointers/pointer_memory_visualization.svg)
 
 ---
 

@@ -17,24 +17,7 @@ This chapter covers:
 
 ## The Specialization Advantage
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="#3498DB" opacity="0.2"/>
-  <circle cx="400" cy="200" r="100" fill="#2ECC71" opacity="0.3"/>
-  <circle cx="400" cy="200" r="50" fill="#E74C3C" opacity="0.4"/>
-  <text x="400" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Core AI</text>
-  <rect x="100" y="50" width="150" height="60" fill="#9B59B6" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" fill="white" font-size="14">Database</text>
-  <rect x="550" y="50" width="150" height="60" fill="#F39C12" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" fill="white" font-size="14">Frontend</text>
-  <rect x="100" y="290" width="150" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="175" y="325" text-anchor="middle" fill="white" font-size="14">Backend</text>
-  <rect x="550" y="290" width="150" height="60" fill="#E67E22" rx="5"/>
-  <text x="625" y="325" text-anchor="middle" fill="white" font-size="14">DevOps</text>
-  <line x1="250" y1="80" x2="350" y2="150" stroke="#34495E" stroke-width="2"/>
-  <line x1="550" y1="80" x2="450" y2="150" stroke="#34495E" stroke-width="2"/>
-  <line x1="250" y1="320" x2="350" y2="250" stroke="#34495E" stroke-width="2"/>
-  <line x1="550" y1="320" x2="450" y2="250" stroke="#34495E" stroke-width="2"/>
-</svg>
+![the_specialization_advantage](../../../../svg/courses/ai/developing-using-ai/07_tasks/the_specialization_advantage.svg)
 
 ---
 
@@ -91,22 +74,7 @@ CREATE INDEX idx_products_price ON products(price);
 
 ## Query Optimization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Query Performance Analysis</text>
-  <rect x="150" y="100" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="125" fill="white" font-size="12">Before: SELECT * FROM orders WHERE status = 'pending'</text>
-  <text x="550" y="125" fill="white" font-size="12">Time: 2.5s</text>
-  <rect x="150" y="150" width="500" height="80" fill="#27AE60" rx="5"/>
-  <text x="160" y="175" fill="white" font-size="12">After: WITH pending_orders AS (</text>
-  <text x="180" y="195" fill="white" font-size="12">SELECT id, customer_id, total FROM orders</text>
-  <text x="180" y="215" fill="white" font-size="12">WHERE status = 'pending' AND created_at > NOW() - INTERVAL '7 days'</text>
-  <text x="160" y="235" fill="white" font-size="12">) SELECT * FROM pending_orders;</text>
-  <text x="550" y="195" fill="white" font-size="12">Time: 0.08s</text>
-  <rect x="150" y="250" width="500" height="60" fill="#3498DB" rx="5"/>
-  <text x="160" y="275" fill="white" font-size="12">Optimizations Applied:</text>
-  <text x="160" y="295" fill="white" font-size="12">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
-</svg>
+![query_optimization](../../../../svg/courses/ai/developing-using-ai/07_tasks/query_optimization.svg)
 
 ---
 
@@ -215,33 +183,7 @@ ORDER BY idx_scan DESC;
 
 ## Data Modeling
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">NoSQL vs SQL Data Models</text>
-  <rect x="50" y="50" width="340" height="320" fill="#3498DB" rx="10"/>
-  <text x="220" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Relational (SQL)</text>
-  <rect x="70" y="100" width="300" height="60" fill="#2980B9" rx="5"/>
-  <text x="220" y="125" text-anchor="middle" fill="white" font-size="12">Users Table</text>
-  <text x="220" y="145" text-anchor="middle" fill="white" font-size="10">id | name | email | created_at</text>
-  <rect x="70" y="170" width="300" height="60" fill="#2980B9" rx="5"/>
-  <text x="220" y="195" text-anchor="middle" fill="white" font-size="12">Orders Table</text>
-  <text x="220" y="215" text-anchor="middle" fill="white" font-size="10">id | user_id | total | status</text>
-  <line x1="220" y1="160" x2="220" y2="170" stroke="white" stroke-width="2"/>
-  <text x="230" y="165" fill="white" font-size="10">FK</text>
-  <rect x="410" y="50" width="340" height="320" fill="#27AE60" rx="10"/>
-  <text x="580" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Document (NoSQL)</text>
-  <rect x="430" y="100" width="300" height="250" fill="#229954" rx="5"/>
-  <text x="580" y="125" text-anchor="middle" fill="white" font-size="12">User Document</text>
-  <text x="450" y="150" fill="white" font-size="10">{</text>
-  <text x="460" y="170" fill="white" font-size="10">  "_id": "user123",</text>
-  <text x="460" y="190" fill="white" font-size="10">  "name": "John Doe",</text>
-  <text x="460" y="210" fill="white" font-size="10">  "email": "john@example.com",</text>
-  <text x="460" y="230" fill="white" font-size="10">  "orders": [</text>
-  <text x="470" y="250" fill="white" font-size="10">    { "id": "ord1", "total": 99.99 },</text>
-  <text x="470" y="270" fill="white" font-size="10">    { "id": "ord2", "total": 149.99 }</text>
-  <text x="460" y="290" fill="white" font-size="10">  ],</text>
-  <text x="460" y="310" fill="white" font-size="10">  "preferences": { ... }</text>
-  <text x="450" y="330" fill="white" font-size="10">}</text>
-</svg>
+![data_modeling](../../../../svg/courses/ai/developing-using-ai/07_tasks/data_modeling.svg)
 
 ---
 
@@ -474,34 +416,7 @@ export function DataTable<T extends Record<string, any>>({
 
 ## Styling Assistance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">CSS Architecture Approaches</text>
-  <rect x="150" y="100" width="140" height="80" fill="#3498DB" rx="5"/>
-  <text x="220" y="130" text-anchor="middle" fill="white" font-size="14">Utility-First</text>
-  <text x="220" y="150" text-anchor="middle" fill="white" font-size="10">Tailwind CSS</text>
-  <text x="220" y="165" text-anchor="middle" fill="white" font-size="10">Fast prototyping</text>
-  <rect x="310" y="100" width="140" height="80" fill="#9B59B6" rx="5"/>
-  <text x="380" y="130" text-anchor="middle" fill="white" font-size="14">CSS-in-JS</text>
-  <text x="380" y="150" text-anchor="middle" fill="white" font-size="10">styled-components</text>
-  <text x="380" y="165" text-anchor="middle" fill="white" font-size="10">Component scope</text>
-  <rect x="470" y="100" width="140" height="80" fill="#E74C3C" rx="5"/>
-  <text x="540" y="130" text-anchor="middle" fill="white" font-size="14">CSS Modules</text>
-  <text x="540" y="150" text-anchor="middle" fill="white" font-size="10">Local scope</text>
-  <text x="540" y="165" text-anchor="middle" fill="white" font-size="10">Build-time</text>
-  <rect x="150" y="200" width="140" height="80" fill="#27AE60" rx="5"/>
-  <text x="220" y="230" text-anchor="middle" fill="white" font-size="14">BEM</text>
-  <text x="220" y="250" text-anchor="middle" fill="white" font-size="10">Methodology</text>
-  <text x="220" y="265" text-anchor="middle" fill="white" font-size="10">Naming convention</text>
-  <rect x="310" y="200" width="140" height="80" fill="#F39C12" rx="5"/>
-  <text x="380" y="230" text-anchor="middle" fill="white" font-size="14">Sass/SCSS</text>
-  <text x="380" y="250" text-anchor="middle" fill="white" font-size="10">Preprocessor</text>
-  <text x="380" y="265" text-anchor="middle" fill="white" font-size="10">Variables, mixins</text>
-  <rect x="470" y="200" width="140" height="80" fill="#1ABC9C" rx="5"/>
-  <text x="540" y="230" text-anchor="middle" fill="white" font-size="14">PostCSS</text>
-  <text x="540" y="250" text-anchor="middle" fill="white" font-size="10">Transform CSS</text>
-  <text x="540" y="265" text-anchor="middle" fill="white" font-size="10">Plugin ecosystem</text>
-</svg>
+![styling_assistance](../../../../svg/courses/ai/developing-using-ai/07_tasks/styling_assistance.svg)
 
 ---
 
@@ -675,20 +590,7 @@ const AccessibleForm = () => {
 
 ## Animation Creation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Animation Performance Hierarchy</text>
-  <rect x="100" y="70" width="600" height="60" fill="#27AE60" rx="10"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="14">✅ Transform & Opacity (GPU accelerated)</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="10">Best performance - 60 FPS</text>
-  <rect x="100" y="150" width="600" height="60" fill="#F39C12" rx="10"/>
-  <text x="400" y="185" text-anchor="middle" fill="white" font-size="14">⚠️ Color & Shadow Changes</text>
-  <text x="400" y="200" text-anchor="middle" fill="white" font-size="10">Triggers repaint - Moderate performance</text>
-  <rect x="100" y="230" width="600" height="60" fill="#E74C3C" rx="10"/>
-  <text x="400" y="265" text-anchor="middle" fill="white" font-size="14">❌ Width, Height, Position Changes</text>
-  <text x="400" y="280" text-anchor="middle" fill="white" font-size="10">Triggers reflow - Poor performance</text>
-  <rect x="200" y="310" width="400" height="50" fill="#3498DB" rx="5"/>
-  <text x="400" y="340" text-anchor="middle" fill="white" font-size="12">Use will-change and transform3d for optimization</text>
-</svg>
+![animation_creation](../../../../svg/courses/ai/developing-using-ai/07_tasks/animation_creation.svg)
 
 ---
 
@@ -870,25 +772,7 @@ main "$@"
 
 ## Configuration Files
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Infrastructure as Code</text>
-  <rect x="150" y="100" width="180" height="60" fill="#FF9900" rx="5"/>
-  <text x="240" y="135" text-anchor="middle" fill="white" font-size="14">Terraform</text>
-  <rect x="360" y="100" width="180" height="60" fill="#326CE5" rx="5"/>
-  <text x="450" y="135" text-anchor="middle" fill="white" font-size="14">Kubernetes</text>
-  <rect x="150" y="180" width="180" height="60" fill="#2596BE" rx="5"/>
-  <text x="240" y="215" text-anchor="middle" fill="white" font-size="14">Docker</text>
-  <rect x="360" y="180" width="180" height="60" fill="#FF6C37" rx="5"/>
-  <text x="450" y="215" text-anchor="middle" fill="white" font-size="14">Ansible</text>
-  <rect x="150" y="260" width="180" height="60" fill="#40B5A4" rx="5"/>
-  <text x="240" y="295" text-anchor="middle" fill="white" font-size="14">CloudFormation</text>
-  <rect x="360" y="260" width="180" height="60" fill="#E535AB" rx="5"/>
-  <text x="450" y="295" text-anchor="middle" fill="white" font-size="14">Pulumi</text>
-  <text x="600" y="200" text-anchor="middle" fill="white" font-size="12">Define</text>
-  <text x="600" y="220" text-anchor="middle" fill="white" font-size="12">Version</text>
-  <text x="600" y="240" text-anchor="middle" fill="white" font-size="12">Deploy</text>
-</svg>
+![configuration_files](../../../../svg/courses/ai/developing-using-ai/07_tasks/configuration_files.svg)
 
 ---
 
@@ -1145,28 +1029,7 @@ spec:
 
 ## Monitoring Setup
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Observability Stack</text>
-  <rect x="150" y="110" width="150" height="60" fill="#E6522C" rx="5"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="14">Prometheus</text>
-  <text x="225" y="160" text-anchor="middle" fill="white" font-size="10">Metrics</text>
-  <rect x="325" y="110" width="150" height="60" fill="#F46800" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="14">Grafana</text>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="10">Visualization</text>
-  <rect x="500" y="110" width="150" height="60" fill="#00A8E1" rx="5"/>
-  <text x="575" y="145" text-anchor="middle" fill="white" font-size="14">ELK Stack</text>
-  <text x="575" y="160" text-anchor="middle" fill="white" font-size="10">Logs</text>
-  <rect x="150" y="200" width="150" height="60" fill="#4B3F72" rx="5"/>
-  <text x="225" y="235" text-anchor="middle" fill="white" font-size="14">Jaeger</text>
-  <text x="225" y="250" text-anchor="middle" fill="white" font-size="10">Tracing</text>
-  <rect x="325" y="200" width="150" height="60" fill="#FF6B6B" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" fill="white" font-size="14">PagerDuty</text>
-  <text x="400" y="250" text-anchor="middle" fill="white" font-size="10">Alerting</text>
-  <rect x="500" y="200" width="150" height="60" fill="#7E57C2" rx="5"/>
-  <text x="575" y="235" text-anchor="middle" fill="white" font-size="14">DataDog</text>
-  <text x="575" y="250" text-anchor="middle" fill="white" font-size="10">APM</text>
-</svg>
+![monitoring_setup](../../../../svg/courses/ai/developing-using-ai/07_tasks/monitoring_setup.svg)
 
 ---
 
@@ -1328,33 +1191,7 @@ resource "aws_elasticache_cluster" "redis" {
 
 ## Mobile Development: Cross-Platform Code
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Cross-Platform Development Options</text>
-  <rect x="50" y="70" width="220" height="280" fill="#61DAFB" rx="10"/>
-  <text x="160" y="100" text-anchor="middle" fill="#282C34" font-size="16" font-weight="bold">React Native</text>
-  <text x="160" y="130" text-anchor="middle" font-size="12">Performance: ⭐⭐⭐⭐</text>
-  <text x="160" y="155" text-anchor="middle" font-size="12">Learning: ⭐⭐⭐</text>
-  <text x="160" y="180" text-anchor="middle" font-size="12">• JavaScript/React</text>
-  <text x="160" y="205" text-anchor="middle" font-size="12">• Native modules</text>
-  <text x="160" y="230" text-anchor="middle" font-size="12">• Hot reload</text>
-  <text x="160" y="255" text-anchor="middle" font-size="12">• Large ecosystem</text>
-  <rect x="290" y="70" width="220" height="280" fill="#02569B" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Flutter</text>
-  <text x="400" y="130" text-anchor="middle" fill="white" font-size="12">Performance: ⭐⭐⭐⭐⭐</text>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐⭐⭐</text>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-size="12">• Dart language</text>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="12">• Custom rendering</text>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">• Rich widgets</text>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="12">• Fast performance</text>
-  <rect x="530" y="70" width="220" height="280" fill="#007ACC" rx="10"/>
-  <text x="640" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Ionic</text>
-  <text x="640" y="130" text-anchor="middle" fill="white" font-size="12">Performance: ⭐⭐⭐</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐</text>
-  <text x="640" y="180" text-anchor="middle" fill="white" font-size="12">• Web technologies</text>
-  <text x="640" y="205" text-anchor="middle" fill="white" font-size="12">• Angular/React/Vue</text>
-  <text x="640" y="230" text-anchor="middle" fill="white" font-size="12">• Capacitor plugins</text>
-  <text x="640" y="255" text-anchor="middle" fill="white" font-size="12">• PWA support</text>
-</svg>
+![mobile_development_cross_platform_code](../../../../svg/courses/ai/developing-using-ai/07_tasks/mobile_development_cross_platform_code.svg)
 
 ---
 
@@ -1633,30 +1470,7 @@ class OrderService:
 
 ## Authentication/Authorization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Auth Flow</text>
-  <rect x="150" y="110" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="210" y="145" text-anchor="middle" fill="white" font-size="12">Login</text>
-  <rect x="340" y="110" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">JWT Token</text>
-  <rect x="530" y="110" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="590" y="145" text-anchor="middle" fill="white" font-size="12">Access</text>
-  <path d="M 270 140 L 340 140" stroke="white" stroke-width="2" marker-end="url(#auth1)"/>
-  <path d="M 460 140 L 530 140" stroke="white" stroke-width="2" marker-end="url(#auth2)"/>
-  <rect x="250" y="200" width="300" height="100" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">Middleware validates token</text>
-  <text x="400" y="250" text-anchor="middle" fill="white" font-size="12">Checks permissions</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">Refreshes if needed</text>
-  <defs>
-    <marker id="auth1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="auth2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![authentication_authorization](../../../../svg/courses/ai/developing-using-ai/07_tasks/authentication_authorization.svg)
 
 ---
 
@@ -1772,20 +1586,7 @@ const errorHandler = (err, req, res, next) => {
 
 Backend optimization strategies:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Performance Strategies</text>
-  <rect x="150" y="110" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Caching (Redis/Memcached)</text>
-  <rect x="430" y="110" width="220" height="50" fill="#2ECC71" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Database Indexing</text>
-  <rect x="150" y="180" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="12">Connection Pooling</text>
-  <rect x="430" y="180" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">Load Balancing</text>
-  <rect x="290" y="250" width="220" height="50" fill="#9B59B6" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" fill="white" font-size="12">Async Processing</text>
-</svg>
+![performance_optimization](../../../../svg/courses/ai/developing-using-ai/07_tasks/performance_optimization.svg)
 
 ---
 
@@ -1953,22 +1754,7 @@ class TestOrderService:
 
 Auto-generated API documentation:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Documentation Pipeline</text>
-  <rect x="150" y="110" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="12">Code Comments</text>
-  <rect x="325" y="110" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">OpenAPI/Swagger</text>
-  <rect x="500" y="110" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="575" y="145" text-anchor="middle" fill="white" font-size="12">Interactive Docs</text>
-  <path d="M 300 140 L 325 140" stroke="white" stroke-width="2"/>
-  <path d="M 475 140 L 500 140" stroke="white" stroke-width="2"/>
-  <rect x="250" y="200" width="300" height="100" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">Auto-generated from code</text>
-  <text x="400" y="250" text-anchor="middle" fill="white" font-size="12">Always up-to-date</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">Testable endpoints</text>
-</svg>
+![documentation_generation](../../../../svg/courses/ai/developing-using-ai/07_tasks/documentation_generation.svg)
 
 ---
 
@@ -2028,22 +1814,7 @@ const securityMiddleware = {
 
 Service communication patterns:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Microservices Communication</text>
-  <rect x="150" y="110" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="210" y="145" text-anchor="middle" fill="white" font-size="12">API Gateway</text>
-  <rect x="320" y="110" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="380" y="145" text-anchor="middle" fill="white" font-size="12">Service Mesh</text>
-  <rect x="490" y="110" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="550" y="145" text-anchor="middle" fill="white" font-size="12">Message Queue</text>
-  <rect x="150" y="200" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="210" y="235" text-anchor="middle" fill="white" font-size="12">gRPC</text>
-  <rect x="320" y="200" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="380" y="235" text-anchor="middle" fill="white" font-size="12">GraphQL</text>
-  <rect x="490" y="200" width="120" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="550" y="235" text-anchor="middle" fill="white" font-size="12">WebSocket</text>
-</svg>
+![microservices_architecture](../../../../svg/courses/ai/developing-using-ai/07_tasks/microservices_architecture.svg)
 
 ---
 
@@ -2230,20 +2001,7 @@ export default function () {
 
 Performance optimization techniques:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Optimization Techniques</text>
-  <rect x="150" y="110" width="180" height="60" fill="#3498DB" rx="5"/>
-  <text x="240" y="145" text-anchor="middle" fill="white" font-size="12">Lazy Loading</text>
-  <rect x="360" y="110" width="180" height="60" fill="#2ECC71" rx="5"/>
-  <text x="450" y="145" text-anchor="middle" fill="white" font-size="12">Code Splitting</text>
-  <rect x="150" y="190" width="180" height="60" fill="#E74C3C" rx="5"/>
-  <text x="240" y="225" text-anchor="middle" fill="white" font-size="12">Memoization</text>
-  <rect x="360" y="190" width="180" height="60" fill="#F39C12" rx="5"/>
-  <text x="450" y="225" text-anchor="middle" fill="white" font-size="12">Debouncing</text>
-  <rect x="255" y="270" width="180" height="60" fill="#9B59B6" rx="5"/>
-  <text x="345" y="305" text-anchor="middle" fill="white" font-size="12">Virtual Scrolling</text>
-</svg>
+![optimization_patterns](../../../../svg/courses/ai/developing-using-ai/07_tasks/optimization_patterns.svg)
 
 ---
 

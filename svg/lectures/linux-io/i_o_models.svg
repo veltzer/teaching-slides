@@ -1,0 +1,44 @@
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blocking I/O -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="120" height="40" fill="#ffcdd2" stroke="#d32f2f"/>
+    <text x="60" y="25" text-anchor="middle" font-size="14">Blocking I/O</text>
+    <rect x="10" y="60" width="100" height="20" fill="#ef5350"/>
+    <text x="60" y="75" text-anchor="middle" font-size="11" fill="white">Wait for data</text>
+    <rect x="10" y="90" width="100" height="20" fill="#4caf50"/>
+    <text x="60" y="105" text-anchor="middle" font-size="11" fill="white">Process data</text>
+  </g>
+  <!-- Non-blocking I/O -->
+  <g transform="translate(200, 50)">
+    <rect x="0" y="0" width="120" height="40" fill="#c8e6c9" stroke="#388e3c"/>
+    <text x="60" y="25" text-anchor="middle" font-size="14">Non-blocking</text>
+    <rect x="10" y="60" width="30" height="20" fill="#81c784"/>
+    <rect x="45" y="60" width="30" height="20" fill="#81c784"/>
+    <rect x="80" y="60" width="30" height="20" fill="#81c784"/>
+    <text x="60" y="75" text-anchor="middle" font-size="11">Poll</text>
+    <rect x="10" y="90" width="100" height="20" fill="#4caf50"/>
+    <text x="60" y="105" text-anchor="middle" font-size="11" fill="white">Process data</text>
+  </g>
+  <!-- Async I/O -->
+  <g transform="translate(350, 50)">
+    <rect x="0" y="0" width="120" height="40" fill="#e1bee7" stroke="#7b1fa2"/>
+    <text x="60" y="25" text-anchor="middle" font-size="14">Async I/O</text>
+    <rect x="10" y="60" width="100" height="20" fill="#ba68c8"/>
+    <text x="60" y="75" text-anchor="middle" font-size="11" fill="white">Submit request</text>
+    <rect x="10" y="90" width="100" height="20" fill="#9c27b0"/>
+    <text x="60" y="105" text-anchor="middle" font-size="11" fill="white">Do other work</text>
+    <rect x="10" y="120" width="100" height="20" fill="#4caf50"/>
+    <text x="60" y="135" text-anchor="middle" font-size="11" fill="white">Handle completion</text>
+  </g>
+  <!-- I/O Multiplexing -->
+  <g transform="translate(500, 50)">
+    <rect x="0" y="0" width="140" height="40" fill="#fff9c4" stroke="#f57c00"/>
+    <text x="70" y="25" text-anchor="middle" font-size="14">I/O Multiplexing</text>
+    <rect x="10" y="60" width="120" height="20" fill="#ffb74d"/>
+    <text x="70" y="75" text-anchor="middle" font-size="11">select/poll/epoll</text>
+    <rect x="10" y="90" width="120" height="20" fill="#ff9800"/>
+    <text x="70" y="105" text-anchor="middle" font-size="11" fill="white">Monitor multiple FDs</text>
+    <rect x="10" y="120" width="120" height="20" fill="#4caf50"/>
+    <text x="70" y="135" text-anchor="middle" font-size="11" fill="white">Process ready FDs</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="150" height="80" fill="#ffcccc" stroke="black"/>
+  <text x="125" y="95" text-anchor="middle">Hardware IRQ</text>
+  <text x="125" y="115" text-anchor="middle">(Platform)</text>
+
+  <rect x="300" y="50" width="150" height="80" fill="#ccffcc" stroke="black"/>
+  <text x="375" y="95" text-anchor="middle">Virtual IRQ</text>
+  <text x="375" y="115" text-anchor="middle">(Linux)</text>
+
+  <rect x="550" y="50" width="150" height="80" fill="#ccccff" stroke="black"/>
+  <text x="625" y="95" text-anchor="middle">IRQ Handler</text>
+  <text x="625" y="115" text-anchor="middle">(Driver)</text>
+
+  <path d="M 200 90 L 300 90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 450 90 L 550 90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="200" text-anchor="middle" font-size="14">Benefits:</text>
+  <text x="400" y="230" text-anchor="middle" font-size="12">• Hardware abstraction</text>
+  <text x="400" y="250" text-anchor="middle" font-size="12">• Dynamic allocation</text>
+  <text x="400" y="270" text-anchor="middle" font-size="12">• Sparse IRQ support</text>
+  <text x="400" y="290" text-anchor="middle" font-size="12">• Runtime remapping</text>
+</svg>

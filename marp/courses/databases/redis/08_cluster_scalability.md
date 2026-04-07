@@ -21,59 +21,13 @@ Scaling strategies:
 
 ## Redis Scaling Architectures
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="120" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="45" text-anchor="middle" font-size="11" font-weight="bold">Vertical</text>
-  <text x="80" y="60" text-anchor="middle" font-size="10">Bigger Server</text>
-  <text x="80" y="75" text-anchor="middle" font-size="10" fill="#666">Limited</text>
-  <rect x="160" y="20" width="120" height="70" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="220" y="45" text-anchor="middle" font-size="11" font-weight="bold">Replication</text>
-  <text x="220" y="60" text-anchor="middle" font-size="10">Master + Replicas</text>
-  <text x="220" y="75" text-anchor="middle" font-size="10" fill="#666">Read Scale</text>
-  <rect x="300" y="20" width="120" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="360" y="45" text-anchor="middle" font-size="11" font-weight="bold">Partitioning</text>
-  <text x="360" y="60" text-anchor="middle" font-size="10">Shard Data</text>
-  <text x="360" y="75" text-anchor="middle" font-size="10" fill="#666">Write Scale</text>
-  <rect x="440" y="20" width="130" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="505" y="45" text-anchor="middle" font-size="11" font-weight="bold">Redis Cluster</text>
-  <text x="505" y="60" text-anchor="middle" font-size="10">Shard + Replicate</text>
-  <text x="505" y="75" text-anchor="middle" font-size="10" fill="#666">Full Scale</text>
-  <line x1="80" y1="110" x2="505" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_cluster_scalability)"/>
-  <text x="300" y="130" text-anchor="middle" font-size="10" fill="#333">Increasing complexity and scalability</text>
-  <rect x="150" y="145" width="300" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="165" text-anchor="middle" font-size="10">Choose based on: data size, throughput needs, HA requirements</text>
-  <defs>
-    <marker id="arrowd0_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_scaling_architectures](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_scaling_architectures.svg)
 
 ---
 
 ## Master-Replica Architecture
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="220" y="15" width="130" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="35" text-anchor="middle" font-size="12" font-weight="bold">Master</text>
-  <text x="285" y="50" text-anchor="middle" font-size="10">Reads + Writes</text>
-  <rect x="40" y="120" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="145" text-anchor="middle" font-size="11">Replica 1 (R)</text>
-  <rect x="230" y="120" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="145" text-anchor="middle" font-size="11">Replica 2 (R)</text>
-  <rect x="420" y="120" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="480" y="145" text-anchor="middle" font-size="11">Replica 3 (R)</text>
-  <line x1="255" y1="60" x2="120" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_07_cluster_scalability)"/>
-  <line x1="285" y1="60" x2="290" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_07_cluster_scalability)"/>
-  <line x1="315" y1="60" x2="460" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_07_cluster_scalability)"/>
-  <text x="160" y="85" text-anchor="middle" font-size="9" fill="#666">async replication</text>
-  <text x="285" y="180" text-anchor="middle" font-size="10" fill="#333">Writes go to master; replicas serve read queries</text>
-  <defs>
-    <marker id="arrowd1_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![master_replica_architecture](../../../../svg/courses/databases/redis/08_cluster_scalability/master_replica_architecture.svg)
 
 - Master handles all writes
 - Replicas handle read queries
@@ -85,26 +39,7 @@ Scaling strategies:
 
 ## Client-Side Partitioning
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="210" y="10" width="150" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="35" text-anchor="middle" font-size="11" font-weight="bold">Application Client</text>
-  <text x="285" y="65" text-anchor="middle" font-size="10" fill="#666">hash(key) % N</text>
-  <rect x="40" y="130" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="155" text-anchor="middle" font-size="11">Redis Shard 1</text>
-  <rect x="230" y="130" width="120" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="155" text-anchor="middle" font-size="11">Redis Shard 2</text>
-  <rect x="420" y="130" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="480" y="155" text-anchor="middle" font-size="11">Redis Shard 3</text>
-  <line x1="245" y1="50" x2="120" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_07_cluster_scalability)"/>
-  <line x1="285" y1="50" x2="290" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_07_cluster_scalability)"/>
-  <line x1="325" y1="50" x2="460" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_07_cluster_scalability)"/>
-  <text x="285" y="190" text-anchor="middle" font-size="10" fill="#333">Client decides which shard handles each key</text>
-  <defs>
-    <marker id="arrowd2_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![client_side_partitioning](../../../../svg/courses/databases/redis/08_cluster_scalability/client_side_partitioning.svg)
 
 - Application determines which Redis instance to use
 - Consistent hashing or modulo-based distribution
@@ -116,28 +51,7 @@ Scaling strategies:
 
 ## Proxy-Based Partitioning
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="210" y="10" width="150" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="33" text-anchor="middle" font-size="11" font-weight="bold">App Clients</text>
-  <rect x="210" y="75" width="150" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="97" text-anchor="middle" font-size="11" font-weight="bold">Proxy (Twemproxy)</text>
-  <rect x="40" y="145" width="110" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="95" y="167" text-anchor="middle" font-size="11">Redis Shard 1</text>
-  <rect x="230" y="145" width="110" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="167" text-anchor="middle" font-size="11">Redis Shard 2</text>
-  <rect x="420" y="145" width="110" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="475" y="167" text-anchor="middle" font-size="11">Redis Shard 3</text>
-  <line x1="285" y1="45" x2="285" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_07_cluster_scalability)"/>
-  <line x1="245" y1="110" x2="110" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_07_cluster_scalability)"/>
-  <line x1="285" y1="110" x2="285" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_07_cluster_scalability)"/>
-  <line x1="325" y1="110" x2="460" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_07_cluster_scalability)"/>
-  <text x="285" y="197" text-anchor="middle" font-size="10" fill="#333">Proxy routes requests transparently to correct shard</text>
-  <defs>
-    <marker id="arrowd3_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![proxy_based_partitioning](../../../../svg/courses/databases/redis/08_cluster_scalability/proxy_based_partitioning.svg)
 
 - Proxy handles routing (Twemproxy, Envoy, Nginx)
 - Transparent to clients
@@ -158,36 +72,7 @@ Redis Cluster is the official Redis distributed solution:
 - Introduced in Redis 3.0
 - Production-ready since Redis 3.2
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="30" width="130" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="52" text-anchor="middle" font-size="11" font-weight="bold">Master A</text>
-  <text x="105" y="68" text-anchor="middle" font-size="10">Slots 0-5460</text>
-  <rect x="230" y="30" width="130" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="52" text-anchor="middle" font-size="11" font-weight="bold">Master B</text>
-  <text x="295" y="68" text-anchor="middle" font-size="10">Slots 5461-10922</text>
-  <rect x="420" y="30" width="140" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="52" text-anchor="middle" font-size="11" font-weight="bold">Master C</text>
-  <text x="490" y="68" text-anchor="middle" font-size="10">Slots 10923-16383</text>
-  <line x1="170" y1="55" x2="230" y2="55" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="360" y1="55" x2="420" y2="55" stroke="#333" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="200" y="48" text-anchor="middle" font-size="9" fill="#666">gossip</text>
-  <text x="390" y="48" text-anchor="middle" font-size="9" fill="#666">gossip</text>
-  <rect x="40" y="120" width="90" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="85" y="142" text-anchor="middle" font-size="10">Replica A</text>
-  <rect x="250" y="120" width="90" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="295" y="142" text-anchor="middle" font-size="10">Replica B</text>
-  <rect x="445" y="120" width="90" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="490" y="142" text-anchor="middle" font-size="10">Replica C</text>
-  <line x1="105" y1="80" x2="85" y2="120" stroke="#333" stroke-width="1" marker-end="url(#arrowd4_07_cluster_scalability)"/>
-  <line x1="295" y1="80" x2="295" y2="120" stroke="#333" stroke-width="1" marker-end="url(#arrowd4_07_cluster_scalability)"/>
-  <line x1="490" y1="80" x2="490" y2="120" stroke="#333" stroke-width="1" marker-end="url(#arrowd4_07_cluster_scalability)"/>
-  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#333">Redis Cluster: automatic sharding + failover, no SPOF</text>
-  <defs>
-    <marker id="arrowd4_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![introduction_to_redis_cluster](../../../../svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
 
 ---
 
@@ -200,33 +85,7 @@ Redis Cluster uses a hash slot approach:
 - Each master handles a subset of hash slots
 - Entire keyspace distributed evenly
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="15" width="80" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60" y="35" text-anchor="middle" font-size="10">key: "foo"</text>
-  <line x1="100" y1="30" x2="160" y2="30" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_07_cluster_scalability)"/>
-  <rect x="160" y="15" width="140" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="230" y="35" text-anchor="middle" font-size="10">CRC16("foo") % 16384</text>
-  <line x1="300" y1="30" x2="340" y2="30" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_07_cluster_scalability)"/>
-  <rect x="340" y="15" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="380" y="35" text-anchor="middle" font-size="10">Slot 12182</text>
-  <rect x="20" y="75" width="150" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="95" y="95" text-anchor="middle" font-size="11" font-weight="bold">Master A</text>
-  <text x="95" y="112" text-anchor="middle" font-size="10">Slots 0 - 5460</text>
-  <rect x="220" y="75" width="150" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="95" text-anchor="middle" font-size="11" font-weight="bold">Master B</text>
-  <text x="295" y="112" text-anchor="middle" font-size="10">Slots 5461 - 10922</text>
-  <rect x="420" y="75" width="155" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="497" y="95" text-anchor="middle" font-size="11" font-weight="bold">Master C</text>
-  <text x="497" y="112" text-anchor="middle" font-size="10">Slots 10923 - 16383</text>
-  <line x1="380" y1="45" x2="497" y2="75" stroke="#e8f5e9" stroke-width="3"/>
-  <line x1="380" y1="45" x2="497" y2="75" stroke="#333" stroke-width="1" marker-end="url(#arrowd5_07_cluster_scalability)"/>
-  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#333">Each key deterministically maps to exactly one master node</text>
-  <defs>
-    <marker id="arrowd5_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_cluster_data_sharding](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
 
 ---
 
@@ -234,34 +93,7 @@ Redis Cluster uses a hash slot approach:
 
 Minimum recommended configuration:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="100" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="45" text-anchor="middle" font-size="11" font-weight="bold">Master 1</text>
-  <rect x="240" y="20" width="100" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="45" text-anchor="middle" font-size="11" font-weight="bold">Master 2</text>
-  <rect x="440" y="20" width="100" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="45" text-anchor="middle" font-size="11" font-weight="bold">Master 3</text>
-  <rect x="40" y="100" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="90" y="122" text-anchor="middle" font-size="10">Replica 1</text>
-  <rect x="240" y="100" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="290" y="122" text-anchor="middle" font-size="10">Replica 2</text>
-  <rect x="440" y="100" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="490" y="122" text-anchor="middle" font-size="10">Replica 3</text>
-  <line x1="90" y1="60" x2="90" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_07_cluster_scalability)"/>
-  <line x1="290" y1="60" x2="290" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_07_cluster_scalability)"/>
-  <line x1="490" y1="60" x2="490" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_07_cluster_scalability)"/>
-  <line x1="140" y1="40" x2="240" y2="40" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="340" y1="40" x2="440" y2="40" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="190" y="35" text-anchor="middle" font-size="9" fill="#999">bus</text>
-  <text x="390" y="35" text-anchor="middle" font-size="9" fill="#999">bus</text>
-  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#333">3 masters + 3 replicas = 6 nodes minimum</text>
-  <text x="290" y="180" text-anchor="middle" font-size="10" fill="#666">Cross-replicate: Replica 1 on different host than Master 1</text>
-  <defs>
-    <marker id="arrowd6_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_cluster_topology](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_cluster_topology.svg)
 
 ---
 
@@ -385,21 +217,7 @@ CLUSTER FAILOVER
 
 ## Redis Cluster Client Connections
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_07_cluster_scalability)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd7_07_cluster_scalability)"/>
-  <defs>
-    <marker id="arrowd7_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_cluster_client_connections](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_cluster_client_connections.svg)
 
 Two connection modes:
 1. **Smart clients**: Handle redirects automatically
@@ -444,21 +262,7 @@ All keys with the same hash tag `{123}` will be assigned to the same hash slot.
 
 ## Scaling Redis Cluster: Adding Nodes
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd9_07_cluster_scalability)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd9_07_cluster_scalability)"/>
-  <defs>
-    <marker id="arrowd9_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![scaling_redis_cluster_adding_nodes](../../../../svg/courses/databases/redis/08_cluster_scalability/scaling_redis_cluster_adding_nodes.svg)
 
 ---
 
@@ -509,21 +313,7 @@ Important: Never remove a master with assigned slots!
 
 ## Redis Cluster Failover
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd11_07_cluster_scalability)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd11_07_cluster_scalability)"/>
-  <defs>
-    <marker id="arrowd11_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_cluster_failover](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_cluster_failover.svg)
 
 1. Automatic failover:
     - Replica detects master is down (subjective down)
@@ -543,28 +333,7 @@ Important: Never remove a master with assigned slots!
 
 Cluster fails when:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="45" text-anchor="middle" font-size="11" font-weight="bold">Master A</text>
-  <rect x="240" y="20" width="100" height="40" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="5"/>
-  <text x="290" y="45" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Master B X</text>
-  <rect x="440" y="20" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="45" text-anchor="middle" font-size="11" font-weight="bold">Master C</text>
-  <rect x="40" y="90" width="100" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="90" y="110" text-anchor="middle" font-size="10">Replica A</text>
-  <rect x="240" y="90" width="100" height="30" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="3"/>
-  <text x="290" y="110" text-anchor="middle" font-size="10" fill="#c62828">Replica B X</text>
-  <rect x="440" y="90" width="100" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="490" y="110" text-anchor="middle" font-size="10">Replica C</text>
-  <text x="300" y="145" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">Slots 5461-10922 UNCOVERED</text>
-  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#333">Master + all its replicas down = lost hash slot range</text>
-  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#666">Majority of masters unreachable = cluster down</text>
-  <defs>
-    <marker id="arrowd12_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_cluster_availability](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_cluster_availability.svg)
 
 Configuration option:
 ```conf
@@ -576,32 +345,7 @@ cluster-require-full-coverage no
 
 ## Monitoring Redis Cluster
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="10" width="180" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="33" text-anchor="middle" font-size="11" font-weight="bold">Monitoring Dashboard</text>
-  <rect x="30" y="80" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="100" text-anchor="middle" font-size="10" font-weight="bold">CLUSTER INFO</text>
-  <text x="90" y="118" text-anchor="middle" font-size="9">state, slots, nodes</text>
-  <rect x="180" y="80" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="240" y="100" text-anchor="middle" font-size="10" font-weight="bold">INFO stats</text>
-  <text x="240" y="118" text-anchor="middle" font-size="9">ops/sec, memory</text>
-  <rect x="330" y="80" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="390" y="100" text-anchor="middle" font-size="10" font-weight="bold">CLUSTER NODES</text>
-  <text x="390" y="118" text-anchor="middle" font-size="9">topology, flags</text>
-  <rect x="480" y="80" width="100" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="530" y="100" text-anchor="middle" font-size="10" font-weight="bold">SLOWLOG</text>
-  <text x="530" y="118" text-anchor="middle" font-size="9">slow queries</text>
-  <line x1="290" y1="45" x2="90" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd13_07_cluster_scalability)"/>
-  <line x1="290" y1="45" x2="240" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd13_07_cluster_scalability)"/>
-  <line x1="290" y1="45" x2="390" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd13_07_cluster_scalability)"/>
-  <line x1="290" y1="45" x2="530" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd13_07_cluster_scalability)"/>
-  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#333">Export metrics to Grafana/Prometheus for alerting</text>
-  <defs>
-    <marker id="arrowd13_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![monitoring_redis_cluster](../../../../svg/courses/databases/redis/08_cluster_scalability/monitoring_redis_cluster.svg)
 
 ---
 
@@ -631,32 +375,7 @@ cluster-require-full-coverage no
 
 ## Best Practices for Redis Cluster
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="15" width="150" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="35" text-anchor="middle" font-size="11" font-weight="bold">Hash Tags</text>
-  <text x="105" y="52" text-anchor="middle" font-size="10">{user}:profile</text>
-  <rect x="220" y="15" width="150" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="35" text-anchor="middle" font-size="11" font-weight="bold">Avoid KEYS *</text>
-  <text x="295" y="52" text-anchor="middle" font-size="10">Use SCAN instead</text>
-  <rect x="410" y="15" width="160" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="35" text-anchor="middle" font-size="11" font-weight="bold">Pipeline Wisely</text>
-  <text x="490" y="52" text-anchor="middle" font-size="10">Same-slot batching</text>
-  <rect x="30" y="95" width="150" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="115" text-anchor="middle" font-size="11" font-weight="bold">Even Distribution</text>
-  <text x="105" y="132" text-anchor="middle" font-size="10">Balance slot ranges</text>
-  <rect x="220" y="95" width="150" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="115" text-anchor="middle" font-size="11" font-weight="bold">No Big Keys</text>
-  <text x="295" y="132" text-anchor="middle" font-size="10">Max 1MB per value</text>
-  <rect x="410" y="95" width="160" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="115" text-anchor="middle" font-size="11" font-weight="bold">Test Failover</text>
-  <text x="490" y="132" text-anchor="middle" font-size="10">Regular DR drills</text>
-  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#333">Design keys, commands, and operations with clustering in mind</text>
-  <defs>
-    <marker id="arrowd14_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![best_practices_for_redis_cluster](../../../../svg/courses/databases/redis/08_cluster_scalability/best_practices_for_redis_cluster.svg)
 
 ---
 
@@ -731,28 +450,7 @@ Alternative scaling approaches:
 
 ## Functional Partitioning Example
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="190" y="10" width="190" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="33" text-anchor="middle" font-size="11" font-weight="bold">Application Server</text>
-  <rect x="30" y="100" width="130" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="95" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Sessions</text>
-  <text x="95" y="140" text-anchor="middle" font-size="10">:6379 / db0</text>
-  <rect x="220" y="100" width="130" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Cache</text>
-  <text x="285" y="140" text-anchor="middle" font-size="10">:6380 / db0</text>
-  <rect x="410" y="100" width="150" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="485" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Queues</text>
-  <text x="485" y="140" text-anchor="middle" font-size="10">:6381 / db0</text>
-  <line x1="230" y1="45" x2="95" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
-  <line x1="285" y1="45" x2="285" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
-  <line x1="340" y1="45" x2="485" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
-  <text x="285" y="185" text-anchor="middle" font-size="10" fill="#333">Separate Redis instances by function for isolation and tuning</text>
-  <defs>
-    <marker id="arrowd15_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![functional_partitioning_example](../../../../svg/courses/databases/redis/08_cluster_scalability/functional_partitioning_example.svg)
 
 Benefits:
 - Simpler than full sharding
@@ -764,53 +462,13 @@ Benefits:
 
 ## Client-Side Sharding Example
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd16_07_cluster_scalability)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd16_07_cluster_scalability)"/>
-  <defs>
-    <marker id="arrowd16_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![client_side_sharding_example](../../../../svg/courses/databases/redis/08_cluster_scalability/client_side_sharding_example.svg)
 
 ---
 
 ## Redis vs. Redis Cluster vs. Redis Enterprise
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="15" width="150" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="95" y="35" text-anchor="middle" font-size="11" font-weight="bold">Redis Standalone</text>
-  <text x="95" y="52" text-anchor="middle" font-size="10">Single node</text>
-  <text x="95" y="67" text-anchor="middle" font-size="10">Simple setup</text>
-  <text x="95" y="82" text-anchor="middle" font-size="10" fill="#666">No HA / No shard</text>
-  <rect x="215" y="15" width="160" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="35" text-anchor="middle" font-size="11" font-weight="bold">Redis Cluster (OSS)</text>
-  <text x="295" y="52" text-anchor="middle" font-size="10">Auto-sharding</text>
-  <text x="295" y="67" text-anchor="middle" font-size="10">Auto-failover</text>
-  <text x="295" y="82" text-anchor="middle" font-size="10" fill="#666">Multi-key limits</text>
-  <rect x="420" y="15" width="155" height="80" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="497" y="35" text-anchor="middle" font-size="11" font-weight="bold">Redis Enterprise</text>
-  <text x="497" y="52" text-anchor="middle" font-size="10">Active-Active geo</text>
-  <text x="497" y="67" text-anchor="middle" font-size="10">Flash tiering</text>
-  <text x="497" y="82" text-anchor="middle" font-size="10" fill="#666">Commercial license</text>
-  <line x1="170" y1="55" x2="215" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd17_07_cluster_scalability)"/>
-  <line x1="375" y1="55" x2="420" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd17_07_cluster_scalability)"/>
-  <text x="192" y="48" text-anchor="middle" font-size="9" fill="#666"></text>
-  <rect x="100" y="120" width="400" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="140" text-anchor="middle" font-size="10">Complexity and cost increase; choose based on requirements</text>
-  <defs>
-    <marker id="arrowd17_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_vs_redis_cluster_vs_redis_enterprise](../../../../svg/courses/databases/redis/08_cluster_scalability/redis_vs_redis_cluster_vs_redis_enterprise.svg)
 
 ---
 
@@ -865,21 +523,7 @@ Key areas for optimization:
 
 DR strategies for Redis Cluster:
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd19_07_cluster_scalability)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd19_07_cluster_scalability)"/>
-  <defs>
-    <marker id="arrowd19_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![disaster_recovery_for_redis_cluster](../../../../svg/courses/databases/redis/08_cluster_scalability/disaster_recovery_for_redis_cluster.svg)
 
 Backup approaches:
 1. **Coordinated RDB snapshots**

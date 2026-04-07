@@ -4,9 +4,15 @@ extra_inputs = [
     "config/personal.lua",
 ]
 
-[processor.script]
+[processor.script.md_lint]
 linter = "python"
 args = ["scripts/md_lint.py", "-q"]
+extensions = [".md"]
+scan_dirs = ["marp"]
+
+[processor.script.check_code_labels]
+linter = "python"
+args = ["scripts/check_code_labels.py", "-q"]
 extensions = [".md"]
 scan_dirs = ["marp"]
 

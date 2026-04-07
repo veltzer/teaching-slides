@@ -16,29 +16,7 @@ Every millisecond counts!
 
 ## Boot Process Timeline
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Typical Boot Timeline</text>
-<rect x="50" y="80" width="80" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="90" y="115" text-anchor="middle">Power On</text>
-<rect x="150" y="80" width="100" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="200" y="115" text-anchor="middle">Bootloader</text>
-<rect x="270" y="80" width="120" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="330" y="115" text-anchor="middle">Kernel Init</text>
-<rect x="410" y="80" width="100" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="460" y="115" text-anchor="middle">Drivers</text>
-<rect x="530" y="80" width="100" height="60" fill="#FFE6FF" stroke="black"/>
-<text x="580" y="115" text-anchor="middle">Userspace</text>
-<rect x="650" y="80" width="100" height="60" fill="#E6E6E6" stroke="black"/>
-<text x="700" y="115" text-anchor="middle">Application</text>
-<text x="90" y="180">0ms</text>
-<text x="200" y="180">100ms</text>
-<text x="330" y="180">500ms</text>
-<text x="460" y="180">800ms</text>
-<text x="580" y="180">1200ms</text>
-<text x="700" y="180">1500ms</text>
-<line x1="50" y1="200" x2="750" y2="200" stroke="black"/>
-<text x="400" y="240" text-anchor="middle">Time →</text>
-</svg>
+![boot_process_timeline](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/boot_process_timeline.svg)
 
 ---
 
@@ -119,28 +97,7 @@ Remove unnecessary features:
 
 ## Compression Options
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Kernel Compression Comparison</text>
-<rect x="100" y="80" width="60" height="200" fill="#FFE6E6" stroke="black"/>
-<text x="130" y="300" text-anchor="middle">None</text>
-<text x="130" y="70">8MB</text>
-<rect x="200" y="120" width="60" height="160" fill="#E6F2FF" stroke="black"/>
-<text x="230" y="300" text-anchor="middle">GZIP</text>
-<text x="230" y="110">3MB</text>
-<rect x="300" y="140" width="60" height="140" fill="#E6FFE6" stroke="black"/>
-<text x="330" y="300" text-anchor="middle">BZIP2</text>
-<text x="330" y="130">2.5MB</text>
-<rect x="400" y="130" width="60" height="150" fill="#FFFFE6" stroke="black"/>
-<text x="430" y="300" text-anchor="middle">LZMA</text>
-<text x="430" y="120">2.3MB</text>
-<rect x="500" y="125" width="60" height="155" fill="#FFE6FF" stroke="black"/>
-<text x="530" y="300" text-anchor="middle">LZO</text>
-<text x="530" y="115">3.5MB</text>
-<rect x="600" y="135" width="60" height="145" fill="#E6E6FF" stroke="black"/>
-<text x="630" y="300" text-anchor="middle">LZ4</text>
-<text x="630" y="125">3.8MB</text>
-<text x="400" y="340" text-anchor="middle">Size vs Decompression Speed Trade-off</text>
-</svg>
+![compression_options](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/compression_options.svg)
 
 ---
 
@@ -419,26 +376,7 @@ resume=/dev/mmcblk0p3
 
 ## Snapshot Boot
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Snapshot Boot Process</text>
-<rect x="100" y="80" width="150" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="175" y="115" text-anchor="middle">First Boot</text>
-<rect x="100" y="180" width="150" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="175" y="215" text-anchor="middle">Save Snapshot</text>
-<rect x="400" y="80" width="150" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="475" y="115" text-anchor="middle">Subsequent Boot</text>
-<rect x="400" y="180" width="150" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="475" y="215" text-anchor="middle">Restore Snapshot</text>
-<line x1="175" y1="240" x2="175" y2="280" stroke="black" marker-end="url(#arrow)"/>
-<line x1="475" y1="240" x2="475" y2="280" stroke="black" marker-end="url(#arrow)"/>
-<text x="175" y="300" text-anchor="middle">~5 seconds</text>
-<text x="475" y="300" text-anchor="middle">~1 second</text>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![snapshot_boot](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/snapshot_boot.svg)
 
 ---
 

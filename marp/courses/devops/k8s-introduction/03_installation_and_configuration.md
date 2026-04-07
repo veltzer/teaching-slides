@@ -14,30 +14,7 @@
 
 ## Local Development Tools
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Local Kubernetes Options</text>
-  <rect x="100" y="80" width="150" height="100" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Minikube</text>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="11">Most popular</text>
-  <text x="175" y="155" text-anchor="middle" fill="white" font-size="11">Full features</text>
-  <rect x="275" y="80" width="150" height="100" fill="#34a853" rx="5"/>
-  <text x="350" y="110" text-anchor="middle" fill="white" font-weight="bold">Kind</text>
-  <text x="350" y="135" text-anchor="middle" fill="white" font-size="11">K8s in Docker</text>
-  <text x="350" y="155" text-anchor="middle" fill="white" font-size="11">CI/CD friendly</text>
-  <rect x="450" y="80" width="150" height="100" fill="#fbbc04" rx="5"/>
-  <text x="525" y="110" text-anchor="middle" font-weight="bold">K3s</text>
-  <text x="525" y="135" text-anchor="middle" font-size="11">Lightweight</text>
-  <text x="525" y="155" text-anchor="middle" font-size="11">Edge/IoT</text>
-  <rect x="625" y="80" width="125" height="100" fill="#ea4335" rx="5"/>
-  <text x="687" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker</text>
-  <text x="687" y="135" text-anchor="middle" fill="white" font-size="11">Desktop</text>
-  <text x="687" y="155" text-anchor="middle" fill="white" font-size="11">Built-in</text>
-  <rect x="100" y="210" width="650" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="425" y="240" text-anchor="middle" font-weight="bold">Your Local Machine</text>
-  <text x="425" y="270" text-anchor="middle" font-size="14">Choose based on your needs:</text>
-  <text x="425" y="290" text-anchor="middle" font-size="12">Learning → Minikube | Testing → Kind | Resource-constrained → K3s</text>
-</svg>
+![local_development_tools](../../../../svg/courses/devops/k8s-introduction/03_installation_and_configuration/local_development_tools.svg)
 
 ---
 
@@ -119,34 +96,7 @@ rm minikube-linux-amd64
 
 ## Minikube Drivers
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Minikube Driver Options</text>
-  <rect x="100" y="80" width="200" height="80" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker (Recommended)</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="12">Lightweight</text>
-  <text x="200" y="150" text-anchor="middle" fill="white" font-size="12">No VM needed</text>
-  <rect x="320" y="80" width="200" height="80" fill="#34a853" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" fill="white" font-weight="bold">VirtualBox</text>
-  <text x="420" y="135" text-anchor="middle" fill="white" font-size="12">Cross-platform</text>
-  <text x="420" y="150" text-anchor="middle" fill="white" font-size="12">Full isolation</text>
-  <rect x="540" y="80" width="200" height="80" fill="#fbbc04" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" font-weight="bold">KVM2 (Linux)</text>
-  <text x="640" y="135" text-anchor="middle" font-size="12">Native Linux</text>
-  <text x="640" y="150" text-anchor="middle" font-size="12">Best performance</text>
-  <rect x="100" y="180" width="200" height="80" fill="#ea4335" rx="5"/>
-  <text x="200" y="210" text-anchor="middle" fill="white" font-weight="bold">Hyperkit (macOS)</text>
-  <text x="200" y="235" text-anchor="middle" fill="white" font-size="12">Native macOS</text>
-  <text x="200" y="250" text-anchor="middle" fill="white" font-size="12">Lightweight</text>
-  <rect x="320" y="180" width="200" height="80" fill="#9c27b0" rx="5"/>
-  <text x="420" y="210" text-anchor="middle" fill="white" font-weight="bold">Hyper-V (Windows)</text>
-  <text x="420" y="235" text-anchor="middle" fill="white" font-size="12">Windows native</text>
-  <text x="420" y="250" text-anchor="middle" fill="white" font-size="12">Enterprise ready</text>
-  <rect x="540" y="180" width="200" height="80" fill="#607d8b" rx="5"/>
-  <text x="640" y="210" text-anchor="middle" fill="white" font-weight="bold">None (Bare Metal)</text>
-  <text x="640" y="235" text-anchor="middle" fill="white" font-size="12">Direct on host</text>
-  <text x="640" y="250" text-anchor="middle" fill="white" font-size="12">Advanced users</text>
-</svg>
+![minikube_drivers](../../../../svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_drivers.svg)
 
 ---
 
@@ -170,40 +120,7 @@ minikube start --kubernetes-version=v1.28.0
 
 ## Minikube Start Process
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Minikube Start Sequence</text>
-  <rect x="50" y="60" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="125" y="95" text-anchor="middle" fill="white">1. Check Driver</text>
-  <rect x="50" y="140" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="125" y="175" text-anchor="middle" fill="white">2. Create VM/Container</text>
-  <rect x="50" y="220" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="125" y="255" text-anchor="middle" fill="white">3. Configure Network</text>
-  <rect x="50" y="300" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="125" y="335" text-anchor="middle" fill="white">4. Install Kubernetes</text>
-  <rect x="250" y="60" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="325" y="95" text-anchor="middle" fill="white">5. Start kubelet</text>
-  <rect x="250" y="140" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="325" y="175" text-anchor="middle" fill="white">6. Start API Server</text>
-  <rect x="250" y="220" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="325" y="255" text-anchor="middle" fill="white">7. Start etcd</text>
-  <rect x="250" y="300" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="325" y="335" text-anchor="middle" fill="white">8. Start Controllers</text>
-  <rect x="450" y="60" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="525" y="95" text-anchor="middle">9. Configure kubectl</text>
-  <rect x="450" y="140" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="525" y="175" text-anchor="middle">10. Verify Cluster</text>
-  <rect x="450" y="220" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="525" y="255" text-anchor="middle">11. Enable Addons</text>
-  <rect x="450" y="300" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="525" y="335" text-anchor="middle">12. Ready!</text>
-  <path d="M 200 90 L 245 90" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 400 90 L 445 90" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![minikube_start_process](../../../../svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_start_process.svg)
 
 ---
 
@@ -486,28 +403,7 @@ kubectl get nodes
 
 ## Cloud Managed Services
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Managed Kubernetes Services</text>
-  <rect x="100" y="100" width="200" height="80" fill="#ff9900" rx="5"/>
-  <text x="200" y="130" text-anchor="middle" font-weight="bold">AWS</text>
-  <text x="200" y="155" text-anchor="middle" font-size="14">EKS</text>
-  <text x="200" y="170" text-anchor="middle" font-size="11">Elastic Kubernetes Service</text>
-  <rect x="320" y="100" width="200" height="80" fill="#4285f4" rx="5"/>
-  <text x="420" y="130" text-anchor="middle" fill="white" font-weight="bold">Google Cloud</text>
-  <text x="420" y="155" text-anchor="middle" fill="white" font-size="14">GKE</text>
-  <text x="420" y="170" text-anchor="middle" fill="white" font-size="11">Google Kubernetes Engine</text>
-  <rect x="540" y="100" width="200" height="80" fill="#0078d4" rx="5"/>
-  <text x="640" y="130" text-anchor="middle" fill="white" font-weight="bold">Azure</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="14">AKS</text>
-  <text x="640" y="170" text-anchor="middle" fill="white" font-size="11">Azure Kubernetes Service</text>
-  <rect x="200" y="220" width="200" height="80" fill="#ff5722" rx="5"/>
-  <text x="300" y="250" text-anchor="middle" fill="white" font-weight="bold">DigitalOcean</text>
-  <text x="300" y="275" text-anchor="middle" fill="white" font-size="14">DOKS</text>
-  <rect x="420" y="220" width="200" height="80" fill="#00599c" rx="5"/>
-  <text x="520" y="250" text-anchor="middle" fill="white" font-weight="bold">IBM Cloud</text>
-  <text x="520" y="275" text-anchor="middle" fill="white" font-size="14">IKS</text>
-</svg>
+![cloud_managed_services](../../../../svg/courses/devops/k8s-introduction/03_installation_and_configuration/cloud_managed_services.svg)
 
 ---
 
@@ -607,32 +503,7 @@ releases/download/v2.8.1/weave-daemonset-k8s.yaml
 
 ## High Availability Setup
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">HA Kubernetes Architecture</text>
-  <rect x="100" y="80" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="175" y="115" text-anchor="middle" fill="white">Load Balancer</text>
-  <rect x="300" y="80" width="120" height="60" fill="#34a853" rx="5"/>
-  <text x="360" y="105" text-anchor="middle" fill="white" font-size="12">Master 1</text>
-  <text x="360" y="125" text-anchor="middle" fill="white" font-size="10">etcd, API</text>
-  <rect x="440" y="80" width="120" height="60" fill="#34a853" rx="5"/>
-  <text x="500" y="105" text-anchor="middle" fill="white" font-size="12">Master 2</text>
-  <text x="500" y="125" text-anchor="middle" fill="white" font-size="10">etcd, API</text>
-  <rect x="580" y="80" width="120" height="60" fill="#34a853" rx="5"/>
-  <text x="640" y="105" text-anchor="middle" fill="white" font-size="12">Master 3</text>
-  <text x="640" y="125" text-anchor="middle" fill="white" font-size="10">etcd, API</text>
-  <rect x="150" y="200" width="100" height="60" fill="#fbbc04" rx="5"/>
-  <text x="200" y="235" text-anchor="middle">Worker 1</text>
-  <rect x="270" y="200" width="100" height="60" fill="#fbbc04" rx="5"/>
-  <text x="320" y="235" text-anchor="middle">Worker 2</text>
-  <rect x="390" y="200" width="100" height="60" fill="#fbbc04" rx="5"/>
-  <text x="440" y="235" text-anchor="middle">Worker 3</text>
-  <rect x="510" y="200" width="100" height="60" fill="#fbbc04" rx="5"/>
-  <text x="560" y="235" text-anchor="middle">Worker 4</text>
-  <line x1="175" y1="140" x2="360" y2="140" stroke="#666" stroke-width="2"/>
-  <line x1="175" y1="140" x2="500" y2="140" stroke="#666" stroke-width="2"/>
-  <line x1="175" y1="140" x2="640" y2="140" stroke="#666" stroke-width="2"/>
-</svg>
+![high_availability_setup](../../../../svg/courses/devops/k8s-introduction/03_installation_and_configuration/high_availability_setup.svg)
 
 ---
 

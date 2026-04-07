@@ -1,0 +1,23 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd5_06_handling_logs" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="140" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="52" text-anchor="middle" font-size="11" font-weight="bold">docker logs -f</text>
+  <text x="90" y="72" text-anchor="middle" font-size="10" fill="#555">Follow / stream</text>
+  <line x1="160" y1="60" x2="218" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_06_handling_logs)"/>
+  <rect x="220" y="30" width="160" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="11" font-weight="bold">Filter + Search</text>
+  <text x="300" y="65" text-anchor="middle" font-size="10">--since, --until</text>
+  <text x="300" y="80" text-anchor="middle" font-size="10" fill="#555">--tail N, | grep</text>
+  <line x1="380" y1="60" x2="438" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_06_handling_logs)"/>
+  <rect x="440" y="30" width="140" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="52" text-anchor="middle" font-size="11" font-weight="bold">Analyze</text>
+  <text x="510" y="72" text-anchor="middle" font-size="10" fill="#555">Pattern matching</text>
+  <rect x="20" y="115" width="560" height="65" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="135" text-anchor="middle" font-size="10" fill="#555">docker logs --since 2024-01-01 --until 2024-01-02 myapp</text>
+  <text x="300" y="152" text-anchor="middle" font-size="10" fill="#555">docker logs myapp 2>&amp;1 | grep ERROR</text>
+  <text x="300" y="169" text-anchor="middle" font-size="10" fill="#555">docker logs -f --tail 0 myapp  (only new logs)</text>
+</svg>

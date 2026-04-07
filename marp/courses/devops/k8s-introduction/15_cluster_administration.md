@@ -14,24 +14,7 @@
 
 ## Cluster Architecture Review
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Cluster Components</text>
-  <rect x="100" y="80" width="250" height="100" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="225" y="105" text-anchor="middle" font-weight="bold">Control Plane</text>
-  <text x="225" y="125" text-anchor="middle" font-size="10">• API Server</text>
-  <text x="225" y="145" text-anchor="middle" font-size="10">• Scheduler, Controller</text>
-  <text x="225" y="165" text-anchor="middle" font-size="10">• etcd, Cloud Controller</text>
-  <rect x="400" y="80" width="250" height="100" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="525" y="105" text-anchor="middle" font-weight="bold">Worker Nodes</text>
-  <text x="525" y="125" text-anchor="middle" font-size="10">• Kubelet</text>
-  <text x="525" y="145" text-anchor="middle" font-size="10">• Container Runtime</text>
-  <text x="525" y="165" text-anchor="middle" font-size="10">• Kube-proxy</text>
-  <rect x="200" y="210" width="350" height="80" fill="#fff3e0" rx="5"/>
-  <text x="375" y="235" text-anchor="middle" font-weight="bold">Add-ons</text>
-  <text x="375" y="255" text-anchor="middle" font-size="11">• CoreDNS, CNI Plugin</text>
-  <text x="375" y="275" text-anchor="middle" font-size="11">• Metrics Server, Dashboard</text>
-</svg>
+![cluster_architecture_review](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/cluster_architecture_review.svg)
 
 ---
 
@@ -209,31 +192,7 @@ kubectl uncordon node-1
 
 ## Monitoring Setup
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Monitoring Stack</text>
-  <rect x="100" y="80" width="150" height="80" fill="#e6522c" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Prometheus</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="10">Metrics collection</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="10">Time series DB</text>
-  <rect x="270" y="80" width="150" height="80" fill="#f46800" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">Grafana</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="10">Visualization</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="10">Dashboards</text>
-  <rect x="440" y="80" width="150" height="80" fill="#e6522c" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" fill="white" font-weight="bold">Alertmanager</text>
-  <text x="515" y="130" text-anchor="middle" fill="white" font-size="10">Alert routing</text>
-  <text x="515" y="150" text-anchor="middle" fill="white" font-size="10">Notifications</text>
-  <rect x="610" y="80" width="140" height="80" fill="#4285f4" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">Loki</text>
-  <text x="680" y="130" text-anchor="middle" fill="white" font-size="10">Log aggregation</text>
-  <text x="680" y="150" text-anchor="middle" fill="white" font-size="10">Like Prometheus</text>
-  <rect x="200" y="190" width="400" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="220" text-anchor="middle" font-weight="bold">Data Sources</text>
-  <text x="400" y="245" text-anchor="middle" font-size="11">• Node Exporter (system metrics)</text>
-  <text x="400" y="265" text-anchor="middle" font-size="11">• kube-state-metrics (K8s objects)</text>
-  <text x="400" y="285" text-anchor="middle" font-size="11">• cAdvisor (container metrics)</text>
-</svg>
+![monitoring_setup](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/monitoring_setup.svg)
 
 ---
 
@@ -426,31 +385,7 @@ sysctl -w net.bridge.bridge-nf-call-iptables=1
 
 ## High Availability Setup
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">HA Control Plane</text>
-  <rect x="100" y="80" width="150" height="50" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white">Load Balancer</text>
-  <rect x="50" y="160" width="100" height="60" fill="#34a853" rx="5"/>
-  <text x="100" y="185" text-anchor="middle" fill="white" font-size="11">Master 1</text>
-  <text x="100" y="205" text-anchor="middle" fill="white" font-size="10">API, etcd</text>
-  <rect x="175" y="160" width="100" height="60" fill="#34a853" rx="5"/>
-  <text x="225" y="185" text-anchor="middle" fill="white" font-size="11">Master 2</text>
-  <text x="225" y="205" text-anchor="middle" fill="white" font-size="10">API, etcd</text>
-  <rect x="300" y="160" width="100" height="60" fill="#34a853" rx="5"/>
-  <text x="350" y="185" text-anchor="middle" fill="white" font-size="11">Master 3</text>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="10">API, etcd</text>
-  <rect x="450" y="100" width="250" height="180" fill="#fff3e0" rx="5"/>
-  <text x="575" y="125" text-anchor="middle" font-weight="bold">Worker Nodes</text>
-  <circle cx="500" cy="170" r="20" fill="#fbbc04"/>
-  <circle cx="550" cy="170" r="20" fill="#fbbc04"/>
-  <circle cx="600" cy="170" r="20" fill="#fbbc04"/>
-  <circle cx="650" cy="170" r="20" fill="#fbbc04"/>
-  <circle cx="500" cy="220" r="20" fill="#fbbc04"/>
-  <circle cx="550" cy="220" r="20" fill="#fbbc04"/>
-  <circle cx="600" cy="220" r="20" fill="#fbbc04"/>
-  <circle cx="650" cy="220" r="20" fill="#fbbc04"/>
-</svg>
+![high_availability_setup](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/high_availability_setup.svg)
 
 ---
 
@@ -743,28 +678,7 @@ func (r *DatabaseReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 ## Service Mesh Overview
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Service Mesh Options</text>
-  <rect x="100" y="80" width="150" height="100" fill="#466bb0" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Istio</text>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="10">Feature rich</text>
-  <text x="175" y="155" text-anchor="middle" fill="white" font-size="10">Complex</text>
-  <text x="175" y="175" text-anchor="middle" fill="white" font-size="10">Envoy proxy</text>
-  <rect x="270" y="80" width="150" height="100" fill="#26d0ce" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" font-weight="bold">Linkerd</text>
-  <text x="345" y="135" text-anchor="middle" font-size="10">Lightweight</text>
-  <text x="345" y="155" text-anchor="middle" font-size="10">Simple</text>
-  <text x="345" y="175" text-anchor="middle" font-size="10">Rust proxy</text>
-  <rect x="440" y="80" width="150" height="100" fill="#00d1b2" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">Consul</text>
-  <text x="515" y="135" text-anchor="middle" font-size="10">Multi-platform</text>
-  <text x="515" y="155" text-anchor="middle" font-size="10">Service discovery</text>
-  <text x="515" y="175" text-anchor="middle" font-size="10">HashiCorp</text>
-  <rect x="200" y="210" width="400" height="80" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="240" text-anchor="middle" font-weight="bold">Common Features</text>
-  <text x="400" y="265" text-anchor="middle" font-size="11">Traffic management, Security (mTLS), Observability</text>
-</svg>
+![service_mesh_overview](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/service_mesh_overview.svg)
 
 ---
 

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="260" font-family="sans-serif">
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+  </marker>
+</defs>
+<rect x="20" y="20" width="150" height="100" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="95" y="40" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job A</text>
+<text x="95" y="58" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">steps:</text>
+<text x="95" y="74" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">- set output</text>
+<line x1="170" y1="70" x2="248" y2="70" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="209" y="60" font-size="10" font-weight="normal" fill="#555" text-anchor="middle">outputs</text>
+<rect x="250" y="20" width="150" height="100" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="325" y="40" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job B</text>
+<text x="325" y="58" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">needs: a</text>
+<text x="325" y="74" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">steps:</text>
+<text x="325" y="90" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">- use output</text>
+<line x1="10" y1="140" x2="420" y2="140" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+<text x="215" y="160" font-size="11" font-weight="normal" fill="#666" text-anchor="middle">Alternative: Use artifacts for large data</text>
+<rect x="20" y="175" width="150" height="70" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="95" y="198" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job A</text>
+<text x="95" y="215" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">upload artifact</text>
+<line x1="170" y1="210" x2="248" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+<text x="209" y="200" font-size="10" font-weight="normal" fill="#555" text-anchor="middle">artifact</text>
+<text x="209" y="215" font-size="10" font-weight="normal" fill="#555" text-anchor="middle">(files)</text>
+<rect x="250" y="175" width="150" height="70" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/>
+<text x="325" y="198" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Job B</text>
+<text x="325" y="215" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">download artifact</text>
+</svg>

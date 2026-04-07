@@ -16,18 +16,7 @@ STL containers are organized into three main categories:
 
 ## Sequence Containers Overview
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="60" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="100" y="85" text-anchor="middle" font-size="14" font-weight="bold">vector</text>
-  <rect x="200" y="50" width="100" height="60" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="250" y="85" text-anchor="middle" font-size="14" font-weight="bold">deque</text>
-  <rect x="350" y="50" width="100" height="60" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">list</text>
-  <rect x="125" y="150" width="100" height="60" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="175" y="185" text-anchor="middle" font-size="14" font-weight="bold">forward_list</text>
-  <rect x="275" y="150" width="100" height="60" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="325" y="185" text-anchor="middle" font-size="14" font-weight="bold">array</text>
-</svg>
+![sequence_containers_overview](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/sequence_containers_overview.svg)
 
 ---
 
@@ -49,18 +38,7 @@ int second = numbers.at(1);  // bounds checked
 
 ## vector Memory Layout
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="50" y="30" font-size="14" font-weight="bold">Contiguous Memory:</text>
-  <rect x="50" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="90" y="75" text-anchor="middle">10</text>
-  <rect x="130" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="170" y="75" text-anchor="middle">20</text>
-  <rect x="210" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="250" y="75" text-anchor="middle">30</text>
-  <rect x="290" y="50" width="80" height="40" fill="#f0f0f0" stroke="#999" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="330" y="75" text-anchor="middle">unused</text>
-  <text x="50" y="120" font-size="12">size: 3, capacity: 4</text>
-</svg>
+![vector_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/vector_memory_layout.svg)
 
 ---
 
@@ -102,23 +80,7 @@ messages.pop_back();   // Remove last
 
 ## deque Memory Layout
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="50" y="30" font-size="14" font-weight="bold">Segmented Memory:</text>
-  <rect x="50" y="50" width="120" height="40" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="110" y="75" text-anchor="middle">Block 1</text>
-  <rect x="200" y="50" width="120" height="40" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="260" y="75" text-anchor="middle">Block 2</text>
-  <rect x="350" y="50" width="120" height="40" fill="#e8f4f8" stroke="#2196F3" stroke-width="2"/>
-  <text x="410" y="75" text-anchor="middle">Block 3</text>
-  <line x1="170" y1="70" x2="200" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="320" y1="70" x2="350" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="50" y="120" font-size="12">Allows efficient push_front/push_back</text>
-</svg>
+![deque_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/deque_memory_layout.svg)
 
 ---
 
@@ -141,24 +103,7 @@ numbers.remove(3);  // Removes all 3s
 
 ## list Memory Layout
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="90" y="75" text-anchor="middle">1</text>
-  <rect x="180" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="220" y="75" text-anchor="middle">2</text>
-  <rect x="310" y="50" width="80" height="40" fill="#ffe8e8" stroke="#f44336" stroke-width="2"/>
-  <text x="350" y="75" text-anchor="middle">3</text>
-  <line x1="130" y1="70" x2="180" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="180" y1="70" x2="130" y2="70" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="260" y1="70" x2="310" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="310" y1="70" x2="260" y2="70" stroke="#666" stroke-width="1" stroke-dasharray="3,3"/>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="50" y="120" font-size="12">Non-contiguous, bidirectional links</text>
-</svg>
+![list_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/list_memory_layout.svg)
 
 ---
 
@@ -198,22 +143,7 @@ static_assert(sizeof(fixed_array) == 5 * sizeof(int));
 
 ## Associative Containers Overview
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold">Ordered (Tree-based)</text>
-  <rect x="50" y="50" width="100" height="50" fill="#e8f8e8" stroke="#4CAF50" stroke-width="2"/>
-  <text x="100" y="80" text-anchor="middle" font-size="14">set</text>
-  <rect x="180" y="50" width="100" height="50" fill="#e8f8e8" stroke="#4CAF50" stroke-width="2"/>
-  <text x="230" y="80" text-anchor="middle" font-size="14">multiset</text>
-  <rect x="310" y="50" width="100" height="50" fill="#e8f8e8" stroke="#4CAF50" stroke-width="2"/>
-  <text x="360" y="80" text-anchor="middle" font-size="14">map</text>
-  <rect x="440" y="50" width="100" height="50" fill="#e8f8e8" stroke="#4CAF50" stroke-width="2"/>
-  <text x="490" y="80" text-anchor="middle" font-size="14">multimap</text>
-  <text x="300" y="150" text-anchor="middle" font-size="16" font-weight="bold">Unordered (Hash-based)</text>
-  <rect x="50" y="170" width="120" height="50" fill="#fff8e8" stroke="#FF9800" stroke-width="2"/>
-  <text x="110" y="200" text-anchor="middle" font-size="14">unordered_set</text>
-  <rect x="200" y="170" width="120" height="50" fill="#fff8e8" stroke="#FF9800" stroke-width="2"/>
-  <text x="260" y="200" text-anchor="middle" font-size="14">unordered_map</text>
-</svg>
+![associative_containers_overview](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/associative_containers_overview.svg)
 
 ---
 
@@ -288,17 +218,7 @@ for (const auto& [item, price] : prices) {
 
 ## Container Adapters
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="60" fill="#f8e8f8" stroke="#E91E63" stroke-width="2"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14" font-weight="bold">stack</text>
-  <text x="125" y="100" text-anchor="middle" font-size="12">(LIFO)</text>
-  <rect x="225" y="50" width="150" height="60" fill="#f8e8f8" stroke="#E91E63" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="14" font-weight="bold">queue</text>
-  <text x="300" y="100" text-anchor="middle" font-size="12">(FIFO)</text>
-  <rect x="400" y="50" width="150" height="60" fill="#f8e8f8" stroke="#E91E63" stroke-width="2"/>
-  <text x="475" y="85" text-anchor="middle" font-size="14" font-weight="bold">priority_queue</text>
-  <text x="475" y="100" text-anchor="middle" font-size="12">(Heap)</text>
-</svg>
+![container_adapters](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/container_adapters.svg)
 
 ---
 
@@ -374,40 +294,7 @@ std::priority_queue<int, std::vector<int>, std::greater<int>> min_pq;
 
 ## Performance Comparison
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold">Operation Complexity</text>
-  <text x="100" y="60" font-size="12" font-weight="bold">Container</text>
-  <text x="200" y="60" font-size="12" font-weight="bold">Access</text>
-  <text x="300" y="60" font-size="12" font-weight="bold">Insert</text>
-  <text x="400" y="60" font-size="12" font-weight="bold">Delete</text>
-  <text x="500" y="60" font-size="12" font-weight="bold">Search</text>
-
-  <text x="100" y="90" font-size="12">vector</text>
-  <text x="200" y="90" font-size="12" fill="#4CAF50">O(1)</text>
-  <text x="300" y="90" font-size="12" fill="#FF9800">O(n)</text>
-  <text x="400" y="90" font-size="12" fill="#FF9800">O(n)</text>
-  <text x="500" y="90" font-size="12" fill="#FF9800">O(n)</text>
-
-  <text x="100" y="120" font-size="12">list</text>
-  <text x="200" y="120" font-size="12" fill="#FF9800">O(n)</text>
-  <text x="300" y="120" font-size="12" fill="#4CAF50">O(1)</text>
-  <text x="400" y="120" font-size="12" fill="#4CAF50">O(1)</text>
-  <text x="500" y="120" font-size="12" fill="#FF9800">O(n)</text>
-
-  <text x="100" y="150" font-size="12">set</text>
-  <text x="200" y="150" font-size="12" fill="#FFC107">O(log n)</text>
-  <text x="300" y="150" font-size="12" fill="#FFC107">O(log n)</text>
-  <text x="400" y="150" font-size="12" fill="#FFC107">O(log n)</text>
-  <text x="500" y="150" font-size="12" fill="#FFC107">O(log n)</text>
-
-  <text x="100" y="180" font-size="12">unordered_map</text>
-  <text x="200" y="180" font-size="12" fill="#4CAF50">O(1)*</text>
-  <text x="300" y="180" font-size="12" fill="#4CAF50">O(1)*</text>
-  <text x="400" y="180" font-size="12" fill="#4CAF50">O(1)*</text>
-  <text x="500" y="180" font-size="12" fill="#4CAF50">O(1)*</text>
-
-  <text x="100" y="220" font-size="10">* average case</text>
-</svg>
+![performance_comparison](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/performance_comparison.svg)
 
 ---
 
@@ -491,19 +378,7 @@ for (auto rit = vec.rbegin(); rit != vec.rend(); ++rit) {
 
 ## Iterator Categories
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="40" fill="#e3f2fd" stroke="#2196F3" stroke-width="2"/>
-  <text x="300" y="75" text-anchor="middle" font-size="14">Input Iterator (read, forward)</text>
-
-  <rect x="100" y="100" width="400" height="40" fill="#e8f5e9" stroke="#4CAF50" stroke-width="2"/>
-  <text x="300" y="125" text-anchor="middle" font-size="14">Forward Iterator (++)</text>
-
-  <rect x="150" y="150" width="300" height="40" fill="#fff3e0" stroke="#FF9800" stroke-width="2"/>
-  <text x="300" y="175" text-anchor="middle" font-size="14">Bidirectional Iterator (++, --)</text>
-
-  <rect x="200" y="200" width="200" height="40" fill="#fce4ec" stroke="#E91E63" stroke-width="2"/>
-  <text x="300" y="225" text-anchor="middle" font-size="14">Random Access (+, -, [])</text>
-</svg>
+![iterator_categories](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/iterator_categories.svg)
 
 ---
 

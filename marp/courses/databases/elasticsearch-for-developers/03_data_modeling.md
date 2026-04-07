@@ -32,20 +32,7 @@ PUT /products
 
 ## Field Types Overview
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="100" height="40" fill="#4CAF50" rx="5"/>
-  <text x="100" y="55" text-anchor="middle" fill="white">Text Types</text>
-  <rect x="50" y="80" width="100" height="40" fill="#2196F3" rx="5"/>
-  <text x="100" y="105" text-anchor="middle" fill="white">Numeric</text>
-  <rect x="50" y="130" width="100" height="40" fill="#FF9800" rx="5"/>
-  <text x="100" y="155" text-anchor="middle" fill="white">Date/Time</text>
-  <rect x="250" y="30" width="100" height="40" fill="#9C27B0" rx="5"/>
-  <text x="300" y="55" text-anchor="middle" fill="white">Boolean</text>
-  <rect x="250" y="80" width="100" height="40" fill="#F44336" rx="5"/>
-  <text x="300" y="105" text-anchor="middle" fill="white">Object/Nested</text>
-  <rect x="250" y="130" width="100" height="40" fill="#00BCD4" rx="5"/>
-  <text x="300" y="155" text-anchor="middle" fill="white">Geo Types</text>
-</svg>
+![field_types_overview](../../../../svg/courses/databases/elasticsearch-for-developers/03_data_modeling/field_types_overview.svg)
 
 ---
 
@@ -216,17 +203,7 @@ Maintains array relationships
 
 ## Object vs Nested
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="100" y="20" text-anchor="middle" font-weight="bold">Object (Flattened)</text>
-  <rect x="50" y="30" width="100" height="80" fill="#FF9800" rx="5"/>
-  <text x="100" y="60" text-anchor="middle" fill="white" font-size="12">user.name:</text>
-  <text x="100" y="80" text-anchor="middle" fill="white" font-size="12">["Alice", "Bob"]</text>
-  <text x="250" y="20" text-anchor="middle" font-weight="bold">Nested (Preserved)</text>
-  <rect x="200" y="30" width="100" height="40" fill="#4CAF50" rx="5"/>
-  <text x="250" y="55" text-anchor="middle" fill="white" font-size="12">{name: "Alice"}</text>
-  <rect x="200" y="80" width="100" height="40" fill="#4CAF50" rx="5"/>
-  <text x="250" y="105" text-anchor="middle" fill="white" font-size="12">{name: "Bob"}</text>
-</svg>
+![object_vs_nested](../../../../svg/courses/databases/elasticsearch-for-developers/03_data_modeling/object_vs_nested.svg)
 
 ---
 

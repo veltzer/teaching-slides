@@ -1,0 +1,42 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="cicd_arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Git trigger -->
+  <rect x="5" y="65" width="65" height="40" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" rx="5"/>
+  <text x="37" y="90" text-anchor="middle" font-size="11" font-weight="bold">Git</text>
+  <line x1="70" y1="85" x2="90" y2="85" stroke="#333" stroke-width="2" marker-end="url(#cicd_arrow)"/>
+  <!-- Code stage -->
+  <rect x="95" y="60" width="80" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="135" y="82" text-anchor="middle" font-size="11" font-weight="bold">Code</text>
+  <text x="135" y="98" text-anchor="middle" font-size="9" fill="#555">commit/push</text>
+  <line x1="175" y1="85" x2="195" y2="85" stroke="#333" stroke-width="2" marker-end="url(#cicd_arrow)"/>
+  <!-- Build stage -->
+  <rect x="200" y="60" width="80" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="240" y="82" text-anchor="middle" font-size="11" font-weight="bold">Build</text>
+  <text x="240" y="98" text-anchor="middle" font-size="9" fill="#555">compile</text>
+  <line x1="280" y1="85" x2="300" y2="85" stroke="#333" stroke-width="2" marker-end="url(#cicd_arrow)"/>
+  <!-- Test stage -->
+  <rect x="305" y="60" width="80" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="345" y="82" text-anchor="middle" font-size="11" font-weight="bold">Test</text>
+  <text x="345" y="98" text-anchor="middle" font-size="9" fill="#555">unit/integ</text>
+  <line x1="385" y1="85" x2="405" y2="85" stroke="#333" stroke-width="2" marker-end="url(#cicd_arrow)"/>
+  <!-- Stage -->
+  <rect x="410" y="60" width="80" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="450" y="82" text-anchor="middle" font-size="11" font-weight="bold">Stage</text>
+  <text x="450" y="98" text-anchor="middle" font-size="9" fill="#555">pre-prod</text>
+  <line x1="490" y1="85" x2="510" y2="85" stroke="#333" stroke-width="2" marker-end="url(#cicd_arrow)"/>
+  <!-- Deploy -->
+  <rect x="515" y="60" width="80" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="555" y="82" text-anchor="middle" font-size="11" font-weight="bold">Deploy</text>
+  <text x="555" y="98" text-anchor="middle" font-size="9" fill="#555">production</text>
+  <!-- Labels -->
+  <text x="300" y="25" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">CI/CD Pipeline</text>
+  <line x1="95" y1="35" x2="595" y2="35" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+  <text x="95" y="150" text-anchor="middle" font-size="10" fill="#1565c0">Continuous Integration</text>
+  <line x1="95" y1="135" x2="385" y2="135" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="490" y="150" text-anchor="middle" font-size="10" fill="#2e7d32">Continuous Delivery</text>
+  <line x1="410" y1="135" x2="595" y2="135" stroke="#2e7d32" stroke-width="1.5"/>
+</svg>

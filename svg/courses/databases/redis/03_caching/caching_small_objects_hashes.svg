@@ -1,0 +1,35 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd13_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- String keys approach -->
+  <text x="150" y="18" text-anchor="middle" font-size="11" font-weight="bold">String Keys (wasteful)</text>
+  <rect x="20" y="25" width="260" height="100" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="5" opacity="0.3"/>
+  <rect x="30" y="32" width="240" height="20" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="47" text-anchor="middle" font-size="10">user:42:name = "Alice"</text>
+  <rect x="30" y="57" width="240" height="20" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="72" text-anchor="middle" font-size="10">user:42:email = "a@b.com"</text>
+  <rect x="30" y="82" width="240" height="20" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="97" text-anchor="middle" font-size="10">user:42:role = "admin"</text>
+  <text x="150" y="120" text-anchor="middle" font-size="10" fill="#c62828">3 keys x overhead each</text>
+  <!-- Hash approach -->
+  <text x="450" y="18" text-anchor="middle" font-size="11" font-weight="bold">Hash (efficient)</text>
+  <rect x="320" y="25" width="260" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5" opacity="0.3"/>
+  <rect x="330" y="32" width="240" height="85" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="450" y="50" text-anchor="middle" font-size="10" font-weight="bold">HSET user:42</text>
+  <rect x="345" y="58" width="100" height="18" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="395" y="71" text-anchor="middle" font-size="10">name: "Alice"</text>
+  <rect x="345" y="78" width="100" height="18" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="395" y="91" text-anchor="middle" font-size="10">email: "a@b.com"</text>
+  <rect x="455" y="58" width="100" height="18" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="71" text-anchor="middle" font-size="10">role: "admin"</text>
+  <text x="450" y="120" text-anchor="middle" font-size="10" fill="#2e7d32">1 key, ziplist encoding</text>
+  <!-- Arrow showing improvement -->
+  <line x1="280" y1="75" x2="318" y2="75" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowd13_02_caching)"/>
+  <!-- Savings -->
+  <rect x="150" y="140" width="300" height="45" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
+  <text x="300" y="158" text-anchor="middle" font-size="10" font-weight="bold">Memory savings: up to 10x fewer bytes</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10">HGETALL user:42 retrieves all fields at once</text>
+</svg>

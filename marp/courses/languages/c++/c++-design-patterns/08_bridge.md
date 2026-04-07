@@ -29,35 +29,7 @@ Every new shape or renderer doubles the number of classes
 
 ## Bridge Structure
 
-<svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="180" height="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="140" y="55" text-anchor="middle" font-size="13" font-weight="bold">Abstraction</text>
-  <text x="140" y="75" text-anchor="middle" font-size="11">impl: Implementor*</text>
-
-  <rect x="370" y="30" width="180" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="460" y="55" text-anchor="middle" font-size="13" font-weight="bold">Implementor</text>
-  <text x="460" y="75" text-anchor="middle" font-size="11" font-style="italic">+ operationImpl()</text>
-
-  <line x1="230" y1="65" x2="370" y2="65" stroke="#333" stroke-width="2"/>
-  <polygon points="360,60 370,65 360,70" fill="#333"/>
-
-  <rect x="20" y="170" width="140" height="50" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="90" y="200" text-anchor="middle" font-size="11">RefinedAbstraction</text>
-
-  <rect x="180" y="170" width="140" height="50" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="250" y="200" text-anchor="middle" font-size="11">RefinedAbstraction2</text>
-
-  <rect x="370" y="170" width="140" height="50" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="440" y="200" text-anchor="middle" font-size="11">ConcreteImplA</text>
-
-  <rect x="530" y="170" width="140" height="50" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="600" y="200" text-anchor="middle" font-size="11">ConcreteImplB</text>
-
-  <line x1="90" y1="170" x2="120" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="250" y1="170" x2="170" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="440" y1="170" x2="460" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="600" y1="170" x2="480" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-</svg>
+![bridge_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/08_bridge/bridge_structure.svg)
 
 The Abstraction delegates to the Implementor — both can vary independently
 

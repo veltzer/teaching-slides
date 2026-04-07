@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Choose Your Undo Strategy</text>
+  <rect x="50" y="70" width="350" height="80" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="225" y="95" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Typo in last commit message</text>
+  <text x="225" y="115" text-anchor="middle" font-size="12">Solution: git commit --amend</text>
+  <text x="225" y="135" text-anchor="middle" font-size="11" font-style="italic">Safe if not pushed</text>
+  <rect x="420" y="70" width="330" height="80" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="585" y="95" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Wrong file in commit</text>
+  <text x="585" y="115" text-anchor="middle" font-size="12">Solution: git reset HEAD~ --soft</text>
+  <text x="585" y="135" text-anchor="middle" font-size="11" font-style="italic">Then recommit correctly</text>
+  <rect x="50" y="160" width="350" height="80" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="225" y="185" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Need to undo public commit</text>
+  <text x="225" y="205" text-anchor="middle" font-size="12">Solution: git revert</text>
+  <text x="225" y="225" text-anchor="middle" font-size="11" font-style="italic">Creates new commit, preserves history</text>
+  <rect x="420" y="160" width="330" height="80" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="585" y="185" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Discard all local changes</text>
+  <text x="585" y="205" text-anchor="middle" font-size="12">Solution: git reset --hard HEAD</text>
+  <text x="585" y="225" text-anchor="middle" font-size="11" font-style="italic">⚠️ Destructive!</text>
+  <rect x="50" y="250" width="350" height="80" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="225" y="275" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Messy commit history</text>
+  <text x="225" y="295" text-anchor="middle" font-size="12">Solution: git rebase -i</text>
+  <text x="225" y="315" text-anchor="middle" font-size="11" font-style="italic">Squash, reorder, edit</text>
+  <rect x="420" y="250" width="330" height="80" fill="#E0F2F1" stroke="#00796B" stroke-width="2" rx="5"/>
+  <text x="585" y="275" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Need specific fix from branch</text>
+  <text x="585" y="295" text-anchor="middle" font-size="12">Solution: git cherry-pick</text>
+  <text x="585" y="315" text-anchor="middle" font-size="11" font-style="italic">Apply single commit</text>
+  <rect x="50" y="340" width="350" height="80" fill="#FCE4EC" stroke="#C2185B" stroke-width="2" rx="5"/>
+  <text x="225" y="365" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Committed sensitive data</text>
+  <text x="225" y="385" text-anchor="middle" font-size="12">Solution: BFG or filter-branch</text>
+  <text x="225" y="405" text-anchor="middle" font-size="11" font-style="italic">Rewrites entire history</text>
+  <rect x="420" y="340" width="330" height="80" fill="#E1BEE7" stroke="#6A1B9A" stroke-width="2" rx="5"/>
+  <text x="585" y="365" text-anchor="middle" font-size="14" font-weight="bold">Scenario: Lost commits after reset</text>
+  <text x="585" y="385" text-anchor="middle" font-size="12">Solution: git reflog + checkout/branch</text>
+  <text x="585" y="405" text-anchor="middle" font-size="11" font-style="italic">Recover within 90 days</text>
+</svg>

@@ -14,17 +14,7 @@
 
 ## Time Measurement Challenges
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Timing Sources</text>
-  <circle cx="200" cy="130" r="80" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <rect x="160" y="90" width="80" height="30" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="110" text-anchor="middle" font-size="12">CPU Cycles</text>
-  <rect x="160" y="130" width="80" height="30" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="150" text-anchor="middle" font-size="12">System Timer</text>
-  <rect x="160" y="170" width="80" height="30" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="190" text-anchor="middle" font-size="12">RTC</text>
-  <text x="200" y="240" text-anchor="middle" font-size="14">Resolution vs Range Trade-off</text>
-</svg>
+![time_measurement_challenges](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/time_measurement_challenges.svg)
 
 ---
 
@@ -230,18 +220,7 @@ void TIM3_IRQHandler(void) {
 
 ## Watchdog Timer Types
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Watchdog Timer Types</text>
-  <rect x="50" y="60" width="150" height="60" fill="#ffcccc" stroke="#333"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14">Independent WDT</text>
-  <text x="125" y="105" text-anchor="middle" font-size="12">Separate clock</text>
-  <rect x="220" y="60" width="150" height="60" fill="#ccffcc" stroke="#333"/>
-  <text x="295" y="85" text-anchor="middle" font-size="14">Window WDT</text>
-  <text x="295" y="105" text-anchor="middle" font-size="12">Min/Max timing</text>
-  <rect x="135" y="140" width="150" height="60" fill="#ccccff" stroke="#333"/>
-  <text x="210" y="165" text-anchor="middle" font-size="14">System WDT</text>
-  <text x="210" y="185" text-anchor="middle" font-size="12">CPU clock based</text>
-</svg>
+![watchdog_timer_types](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/watchdog_timer_types.svg)
 
 ---
 

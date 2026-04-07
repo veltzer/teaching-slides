@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">TAP Networking Setup</text>
+  <rect x="30" y="25" width="160" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="45" text-anchor="middle" font-size="11" font-weight="bold">Guest VM</text>
+  <rect x="40" y="55" width="60" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="72" text-anchor="middle" font-size="10">eth0</text>
+  <text x="70" y="84" text-anchor="middle" font-size="9">virtio-net</text>
+  <rect x="120" y="55" width="60" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="72" text-anchor="middle" font-size="10">IP:</text>
+  <text x="150" y="84" text-anchor="middle" font-size="9">192.168.1.10</text>
+  <rect x="220" y="40" width="80" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="260" y="60" text-anchor="middle" font-size="11" font-weight="bold">tap0</text>
+  <text x="260" y="77" text-anchor="middle" font-size="10">Kernel TAP</text>
+  <rect x="330" y="40" width="90" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="375" y="60" text-anchor="middle" font-size="11" font-weight="bold">br0</text>
+  <text x="375" y="77" text-anchor="middle" font-size="10">Host Bridge</text>
+  <rect x="450" y="40" width="100" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="60" text-anchor="middle" font-size="11" font-weight="bold">eth0 (Host)</text>
+  <text x="500" y="77" text-anchor="middle" font-size="10">Physical NIC</text>
+  <line x1="190" y1="65" x2="220" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <line x1="300" y1="65" x2="330" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <line x1="420" y1="65" x2="450" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_03_qemu_networking)"/>
+  <text x="300" y="120" text-anchor="middle" font-size="10" fill="#555">-netdev tap,id=net0,ifname=tap0 -device virtio-net,netdev=net0</text>
+  <defs>
+    <marker id="arrowd1_03_qemu_networking" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

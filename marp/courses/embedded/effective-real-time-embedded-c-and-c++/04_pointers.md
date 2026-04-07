@@ -62,28 +62,7 @@ int (*ptr_to_arr)[10];
 
 ## Pointer Arithmetic
 
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Pointer Arithmetic</text>
-  <rect x="50" y="60" width="60" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="80" y="85" text-anchor="middle" font-size="14">[0]</text>
-  <rect x="110" y="60" width="60" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="140" y="85" text-anchor="middle" font-size="14">[1]</text>
-  <rect x="170" y="60" width="60" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="85" text-anchor="middle" font-size="14">[2]</text>
-  <rect x="230" y="60" width="60" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="260" y="85" text-anchor="middle" font-size="14">[3]</text>
-  <rect x="290" y="60" width="60" height="40" fill="#ffccff" stroke="#333"/>
-  <text x="320" y="85" text-anchor="middle" font-size="14">[4]</text>
-  <path d="M 80 110 L 80 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="80" y="130" text-anchor="middle" font-size="12">ptr</text>
-  <path d="M 200 110 L 200 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="200" y="130" text-anchor="middle" font-size="12">ptr+2</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![pointer_arithmetic](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/04_pointers/pointer_arithmetic.svg)
 
 ---
 

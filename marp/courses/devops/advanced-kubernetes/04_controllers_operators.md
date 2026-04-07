@@ -19,27 +19,7 @@ Advanced Kubernetes Course - Day 1, Module 4
 
 Every controller follows the same reconciliation loop:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="270" font-family="sans-serif">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-  </marker>
-</defs>
-<rect x="30" y="80" width="150" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="105" y="100" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Observe</text>
-<text x="105" y="118" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">Current State</text>
-<rect x="250" y="80" width="150" height="60" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="325" y="100" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Compare</text>
-<text x="325" y="116" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">Desired vs</text>
-<text x="325" y="131" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">Actual</text>
-<rect x="250" y="200" width="150" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="325" y="220" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Act</text>
-<text x="325" y="236" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(Reconcile)</text>
-<line x1="180" y1="105" x2="248" y2="105" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
-<line x1="325" y1="140" x2="325" y2="198" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
-<path d="M 250 225 Q 130 225 130 160 Q 130 80 30 105" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-<text x="460" y="105" font-size="11" fill="#555"></text>
-</svg>
+![the_controller_pattern](../../../../svg/courses/devops/advanced-kubernetes/04_controllers_operators/the_controller_pattern.svg)
 
 **Level-triggered**, not edge-triggered: Acts on current state, not events.
 

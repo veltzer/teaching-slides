@@ -17,26 +17,7 @@ This chapter covers:
 
 ## Why Prompt Engineering Matters
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="200" fill="#E74C3C" rx="10"/>
-  <text x="225" y="150" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Poor Prompt</text>
-  <text x="225" y="180" text-anchor="middle" fill="white" font-size="12">"Write code"</text>
-  <text x="225" y="210" text-anchor="middle" fill="white" font-size="12">❌ Vague results</text>
-  <text x="225" y="230" text-anchor="middle" fill="white" font-size="12">❌ Multiple iterations</text>
-  <text x="225" y="250" text-anchor="middle" fill="white" font-size="12">❌ Wasted time</text>
-  <rect x="450" y="100" width="250" height="200" fill="#27AE60" rx="10"/>
-  <text x="575" y="150" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Great Prompt</text>
-  <text x="575" y="180" text-anchor="middle" fill="white" font-size="12">"Specific + Context"</text>
-  <text x="575" y="210" text-anchor="middle" fill="white" font-size="12">✓ Precise output</text>
-  <text x="575" y="230" text-anchor="middle" fill="white" font-size="12">✓ First try success</text>
-  <text x="575" y="250" text-anchor="middle" fill="white" font-size="12">✓ Time saved</text>
-  <path d="M 350 200 L 450 200" stroke="#3498DB" stroke-width="3" marker-end="url(#arrow)"/>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#3498DB"/>
-    </marker>
-  </defs>
-</svg>
+![why_prompt_engineering_matters](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/why_prompt_engineering_matters.svg)
 
 ---
 
@@ -77,17 +58,7 @@ Create a Python function that validates user registration with:
 
 ## Context Provision Strategies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="#3498DB" opacity="0.2"/>
-  <circle cx="400" cy="200" r="100" fill="#2ECC71" opacity="0.3"/>
-  <circle cx="400" cy="200" r="50" fill="#E74C3C" opacity="0.4"/>
-  <text x="400" y="200" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Task</text>
-  <text x="400" y="130" text-anchor="middle" font-size="12">Technical Stack</text>
-  <text x="400" y="270" text-anchor="middle" font-size="12">Business Context</text>
-  <text x="480" y="200" text-anchor="middle" font-size="11">Requirements</text>
-  <text x="320" y="200" text-anchor="middle" font-size="11">Constraints</text>
-  <text x="400" y="350" text-anchor="middle" font-size="16" font-weight="bold">Layer Context from Broad to Specific</text>
-</svg>
+![context_provision_strategies](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/context_provision_strategies.svg)
 
 ---
 
@@ -149,35 +120,7 @@ Constraints:
 
 ## Iterative Refinement Process
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="150" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="160" y="185" text-anchor="middle" fill="white" font-size="12">Initial Prompt</text>
-  <path d="M 220 180 L 280 180" stroke="#34495E" stroke-width="2" marker-end="url(#arr1)"/>
-  <rect x="280" y="150" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="340" y="185" text-anchor="middle" fill="white" font-size="12">AI Response</text>
-  <path d="M 400 180 L 460 180" stroke="#34495E" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="460" y="150" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="520" y="185" text-anchor="middle" fill="white" font-size="12">Evaluate</text>
-  <path d="M 580 180 L 640 180" stroke="#34495E" stroke-width="2" marker-end="url(#arr3)"/>
-  <rect x="640" y="150" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="700" y="185" text-anchor="middle" fill="white" font-size="12">Refine Prompt</text>
-  <path d="M 700 210 Q 700 280, 400 280 Q 160 280, 160 210" stroke="#9B59B6" stroke-width="2" fill="none" marker-end="url(#arr4)"/>
-  <text x="400" y="320" text-anchor="middle" font-size="14">Iterate until optimal</text>
-  <defs>
-    <marker id="arr1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arr3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#9B59B6"/>
-    </marker>
-  </defs>
-</svg>
+![iterative_refinement_process](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/iterative_refinement_process.svg)
 
 ---
 
@@ -263,18 +206,7 @@ Optimize for [speed/memory/readability].
 
 ## Data Structure Creation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Data Structure Prompt Template</text>
-  <rect x="150" y="120" width="500" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="145" fill="white" font-size="14">1. Structure Type: Tree, Graph, List, etc.</text>
-  <rect x="150" y="170" width="500" height="40" fill="#2ECC71" rx="5"/>
-  <text x="160" y="195" fill="white" font-size="14">2. Operations: Insert, Delete, Search, Traverse</text>
-  <rect x="150" y="220" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="245" fill="white" font-size="14">3. Complexity Requirements: Time and Space</text>
-  <rect x="150" y="270" width="500" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="295" fill="white" font-size="14">4. Special Properties: Thread-safe, Persistent, etc.</text>
-</svg>
+![data_structure_creation](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/data_structure_creation.svg)
 
 ---
 
@@ -368,31 +300,7 @@ Please explain:
 
 ## Bug Reproduction Assistance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="14">Bug Report</text>
-  <path d="M 250 130 L 320 130" stroke="#34495E" stroke-width="2" marker-end="url(#bug1)"/>
-  <rect x="320" y="100" width="150" height="60" fill="#F39C12" rx="5"/>
-  <text x="395" y="135" text-anchor="middle" fill="white" font-size="14">Reproduce</text>
-  <path d="M 470 130 L 540 130" stroke="#34495E" stroke-width="2" marker-end="url(#bug2)"/>
-  <rect x="540" y="100" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="615" y="135" text-anchor="middle" fill="white" font-size="14">Isolate</text>
-  <rect x="320" y="200" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="395" y="235" text-anchor="middle" fill="white" font-size="14">Fix</text>
-  <path d="M 615 160 L 395 200" stroke="#34495E" stroke-width="2" marker-end="url(#bug3)"/>
-  <text x="400" y="320" text-anchor="middle" font-size="14">AI assists at each step</text>
-  <defs>
-    <marker id="bug1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="bug2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="bug3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![bug_reproduction_assistance](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/bug_reproduction_assistance.svg)
 
 ---
 
@@ -473,26 +381,7 @@ Provide specific optimization suggestions with expected improvements.
 
 ## Code Improvement: Refactoring Requests
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="250" height="80" fill="#E74C3C" rx="10"/>
-  <text x="225" y="95" text-anchor="middle" fill="white" font-size="16">Legacy Code</text>
-  <rect x="450" y="50" width="250" height="80" fill="#27AE60" rx="10"/>
-  <text x="575" y="95" text-anchor="middle" fill="white" font-size="16">Clean Code</text>
-  <path d="M 350 90 L 450 90" stroke="#3498DB" stroke-width="3" marker-end="url(#refactor)"/>
-  <text x="400" y="80" text-anchor="middle" font-size="12">Refactor</text>
-  <rect x="150" y="160" width="500" height="180" fill="#34495E" rx="5"/>
-  <text x="400" y="190" text-anchor="middle" fill="white" font-size="14">Refactoring Goals:</text>
-  <text x="180" y="220" fill="white" font-size="12">• Extract methods for clarity</text>
-  <text x="180" y="245" fill="white" font-size="12">• Remove code duplication</text>
-  <text x="180" y="270" fill="white" font-size="12">• Apply design patterns</text>
-  <text x="180" y="295" fill="white" font-size="12">• Improve naming conventions</text>
-  <text x="180" y="320" fill="white" font-size="12">• Add error handling</text>
-  <defs>
-    <marker id="refactor" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#3498DB"/>
-    </marker>
-  </defs>
-</svg>
+![code_improvement_refactoring_requests](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/code_improvement_refactoring_requests.svg)
 
 ---
 
@@ -594,22 +483,7 @@ Explain each modernization and its benefits.
 
 ## Anti-Pattern Removal
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Common Anti-Patterns to Fix</text>
-  <rect x="150" y="120" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="150" text-anchor="middle" fill="white" font-size="14">God Object</text>
-  <rect x="430" y="120" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="540" y="150" text-anchor="middle" fill="white" font-size="14">Spaghetti Code</text>
-  <rect x="150" y="180" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="14">Copy-Paste Programming</text>
-  <rect x="430" y="180" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="14">Magic Numbers</text>
-  <rect x="150" y="240" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="270" text-anchor="middle" fill="white" font-size="14">Premature Optimization</text>
-  <rect x="430" y="240" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="540" y="270" text-anchor="middle" fill="white" font-size="14">Callback Hell</text>
-</svg>
+![anti_pattern_removal](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/anti_pattern_removal.svg)
 
 ---
 
@@ -683,42 +557,7 @@ Provide recommendations as you would in a production review.
 
 ## Step-by-Step Instructions
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="100" width="100" height="50" fill="#3498DB" rx="5"/>
-  <text x="100" y="130" text-anchor="middle" fill="white" font-size="12">Step 1</text>
-  <path d="M 150 125 L 200 125" stroke="#34495E" stroke-width="2" marker-end="url(#step1)"/>
-  <rect x="200" y="100" width="100" height="50" fill="#2ECC71" rx="5"/>
-  <text x="250" y="130" text-anchor="middle" fill="white" font-size="12">Step 2</text>
-  <path d="M 300 125 L 350 125" stroke="#34495E" stroke-width="2" marker-end="url(#step2)"/>
-  <rect x="350" y="100" width="100" height="50" fill="#E74C3C" rx="5"/>
-  <text x="400" y="130" text-anchor="middle" fill="white" font-size="12">Step 3</text>
-  <path d="M 450 125 L 500 125" stroke="#34495E" stroke-width="2" marker-end="url(#step3)"/>
-  <rect x="500" y="100" width="100" height="50" fill="#F39C12" rx="5"/>
-  <text x="550" y="130" text-anchor="middle" fill="white" font-size="12">Step 4</text>
-  <path d="M 600 125 L 650 125" stroke="#34495E" stroke-width="2" marker-end="url(#step4)"/>
-  <rect x="650" y="100" width="100" height="50" fill="#9B59B6" rx="5"/>
-  <text x="700" y="130" text-anchor="middle" fill="white" font-size="12">Result</text>
-  <text x="100" y="180" font-size="12">Parse Input</text>
-  <text x="250" y="180" font-size="12">Validate</text>
-  <text x="400" y="180" font-size="12">Process</text>
-  <text x="550" y="180" font-size="12">Format</text>
-  <text x="700" y="180" font-size="12">Output</text>
-  <text x="400" y="250" text-anchor="middle" font-size="16" font-weight="bold">Break Complex Tasks into Steps</text>
-  <defs>
-    <marker id="step1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="step2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="step3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="step4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![step_by_step_instructions](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/step_by_step_instructions.svg)
 
 ---
 
@@ -803,21 +642,7 @@ Team standards: {guidelines}
 ```
 ## Context Window Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#3498DB" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">Context Window</text>
-  <rect x="100" y="150" width="180" height="40" fill="#27AE60" rx="5"/>
-  <text x="190" y="175" text-anchor="middle" fill="white" font-size="12">Essential Context</text>
-  <rect x="290" y="150" width="180" height="40" fill="#F39C12" rx="5"/>
-  <text x="380" y="175" text-anchor="middle" fill="white" font-size="12">Relevant Code</text>
-  <rect x="480" y="150" width="220" height="40" fill="#E74C3C" rx="5"/>
-  <text x="590" y="175" text-anchor="middle" fill="white" font-size="12">Nice-to-Have Details</text>
-  <text x="400" y="240" text-anchor="middle" font-size="14">Prioritize information by relevance</text>
-  <rect x="150" y="270" width="500" height="30" fill="#95A5A6" rx="5"/>
-  <rect x="150" y="270" width="350" height="30" fill="#7F8C8D" rx="5"/>
-  <rect x="150" y="270" width="180" height="30" fill="#34495E" rx="5"/>
-  <text x="400" y="330" text-anchor="middle" font-size="12">Use only what's necessary for the task</text>
-</svg>
+![context_window_management](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)
 
 ---
 
@@ -876,23 +701,7 @@ Document successful prompts for reuse
 
 ## Common Prompt Mistakes
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Avoid These Pitfalls</text>
-  <rect x="50" y="70" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="200" y="105" text-anchor="middle" fill="white" font-size="14">❌ Ambiguous Requirements</text>
-  <rect x="450" y="70" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="600" y="105" text-anchor="middle" fill="white" font-size="14">❌ Missing Context</text>
-  <rect x="50" y="150" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="200" y="185" text-anchor="middle" fill="white" font-size="14">❌ No Success Criteria</text>
-  <rect x="450" y="150" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="600" y="185" text-anchor="middle" fill="white" font-size="14">❌ Conflicting Instructions</text>
-  <rect x="50" y="230" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="200" y="265" text-anchor="middle" fill="white" font-size="14">❌ No Example Output</text>
-  <rect x="450" y="230" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="600" y="265" text-anchor="middle" fill="white" font-size="14">❌ Wrong Level of Detail</text>
-  <rect x="250" y="310" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="400" y="345" text-anchor="middle" fill="white" font-size="14">❌ Assuming AI Knowledge</text>
-</svg>
+![common_prompt_mistakes](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/common_prompt_mistakes.svg)
 
 ---
 
@@ -955,23 +764,7 @@ Each turn builds on the previous, maintaining context
 
 ## Prompt Engineering for Different AI Models
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="200" height="300" fill="#10A37F" rx="10"/>
-  <text x="150" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">ChatGPT</text>
-  <text x="150" y="120" text-anchor="middle" fill="white" font-size="12">• Conversational</text>
-  <text x="150" y="145" text-anchor="middle" fill="white" font-size="12">• Step-by-step</text>
-  <text x="150" y="170" text-anchor="middle" fill="white" font-size="12">• Examples help</text>
-  <rect x="300" y="50" width="200" height="300" fill="#7C3AED" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Claude</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12">• Detailed context</text>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">• XML tags work</text>
-  <text x="400" y="170" text-anchor="middle" fill="white" font-size="12">• Long documents</text>
-  <rect x="550" y="50" width="200" height="300" fill="#4285F4" rx="10"/>
-  <text x="650" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Gemini</text>
-  <text x="650" y="120" text-anchor="middle" fill="white" font-size="12">• Multi-modal</text>
-  <text x="650" y="145" text-anchor="middle" fill="white" font-size="12">• Google context</text>
-  <text x="650" y="170" text-anchor="middle" fill="white" font-size="12">• Code execution</text>
-</svg>
+![prompt_engineering_for_different_ai_models](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_for_different_ai_models.svg)
 
 ---
 
@@ -1052,23 +845,7 @@ Use as template, customize per need
 
 ## Prompt Engineering Best Practices
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold">Best</text>
-  <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Practices</text>
-  <circle cx="400" cy="80" r="10" fill="#27AE60"/>
-  <text x="400" y="60" text-anchor="middle" font-size="12">Be Specific</text>
-  <circle cx="500" cy="130" r="10" fill="#27AE60"/>
-  <text x="570" y="130" font-size="12">Add Context</text>
-  <circle cx="500" cy="270" r="10" fill="#27AE60"/>
-  <text x="570" y="270" font-size="12">Use Examples</text>
-  <circle cx="300" cy="270" r="10" fill="#27AE60"/>
-  <text x="230" y="270" text-anchor="end" font-size="12">Set Constraints</text>
-  <circle cx="300" cy="130" r="10" fill="#27AE60"/>
-  <text x="230" y="130" text-anchor="end" font-size="12">Define Format</text>
-  <circle cx="400" cy="320" r="10" fill="#27AE60"/>
-  <text x="400" y="350" text-anchor="middle" font-size="12">Iterate & Refine</text>
-</svg>
+![prompt_engineering_best_practices](../../../../svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_best_practices.svg)
 
 ---
 

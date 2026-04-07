@@ -23,18 +23,7 @@ Returns matching documents with scores
 
 ## Query vs Filter Context
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="140" height="150" fill="#4CAF50" rx="5"/>
-  <text x="120" y="80" text-anchor="middle" fill="white" font-weight="bold">Query Context</text>
-  <text x="120" y="110" text-anchor="middle" fill="white">• Calculates score</text>
-  <text x="120" y="135" text-anchor="middle" fill="white">• "How well?"</text>
-  <text x="120" y="160" text-anchor="middle" fill="white">• Not cached</text>
-  <rect x="210" y="50" width="140" height="150" fill="#2196F3" rx="5"/>
-  <text x="280" y="80" text-anchor="middle" fill="white" font-weight="bold">Filter Context</text>
-  <text x="280" y="110" text-anchor="middle" fill="white">• No scoring</text>
-  <text x="280" y="135" text-anchor="middle" fill="white">• "Yes or No?"</text>
-  <text x="280" y="160" text-anchor="middle" fill="white">• Cached</text>
-</svg>
+![query_vs_filter_context](../../../../svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/query_vs_filter_context.svg)
 
 ---
 
@@ -368,20 +357,7 @@ Handles typos and misspellings
 
 ## Bool Query Logic
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="90" y="55" text-anchor="middle" fill="white">must</text>
-  <text x="90" y="90" text-anchor="middle">AND + Score</text>
-  <rect x="150" y="30" width="80" height="40" fill="#2196F3" rx="5"/>
-  <text x="190" y="55" text-anchor="middle" fill="white">should</text>
-  <text x="190" y="90" text-anchor="middle">OR + Score</text>
-  <rect x="250" y="30" width="80" height="40" fill="#FF9800" rx="5"/>
-  <text x="290" y="55" text-anchor="middle" fill="white">filter</text>
-  <text x="290" y="90" text-anchor="middle">AND No Score</text>
-  <rect x="150" y="120" width="80" height="40" fill="#F44336" rx="5"/>
-  <text x="190" y="145" text-anchor="middle" fill="white">must_not</text>
-  <text x="190" y="175" text-anchor="middle">NOT</text>
-</svg>
+![bool_query_logic](../../../../svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/bool_query_logic.svg)
 
 ---
 

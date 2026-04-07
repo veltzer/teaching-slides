@@ -10,32 +10,7 @@
 ---
 ## Cloud Deployment Models Overview
 
-<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="40" width="220" height="240" rx="12" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="130" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1565c0">Single Cloud</text>
-  <rect x="50" y="70" width="160" height="50" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="130" y="100" text-anchor="middle" font-size="12">All workloads</text>
-  <rect x="50" y="140" width="160" height="50" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="130" y="170" text-anchor="middle" font-size="12">One provider</text>
-  <rect x="50" y="210" width="160" height="50" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="130" y="240" text-anchor="middle" font-size="12">Native services</text>
-  <rect x="290" y="40" width="220" height="240" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#2e7d32">Multi-Cloud</text>
-  <rect x="320" y="70" width="160" height="50" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="100" text-anchor="middle" font-size="12">Split workloads</text>
-  <rect x="320" y="140" width="160" height="50" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="170" text-anchor="middle" font-size="12">Multiple providers</text>
-  <rect x="320" y="210" width="160" height="50" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="240" text-anchor="middle" font-size="12">Abstraction layers</text>
-  <rect x="560" y="40" width="220" height="240" rx="12" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="670" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#e65100">Hybrid Cloud</text>
-  <rect x="590" y="70" width="160" height="50" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="100" text-anchor="middle" font-size="12">On-prem + cloud</text>
-  <rect x="590" y="140" width="160" height="50" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="170" text-anchor="middle" font-size="12">Connected fabric</text>
-  <rect x="590" y="210" width="160" height="50" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="240" text-anchor="middle" font-size="12">Data locality</text>
-</svg>
+![cloud_deployment_models_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cloud_deployment_models_overview.svg)
 
 ---
 ## Single Cloud Strategy
@@ -65,67 +40,12 @@
 ---
 ## Multi-Cloud Topology
 
-<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="10" width="300" height="60" rx="10" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="45" text-anchor="middle" font-weight="bold" font-size="14" fill="#6a1b9a">Orchestration / Abstraction Layer</text>
-  <line x1="200" y1="70" x2="200" y2="130" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
-  <line x1="400" y1="70" x2="400" y2="130" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
-  <line x1="600" y1="70" x2="600" y2="130" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
-  <rect x="80" y="130" width="240" height="100" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="200" y="165" text-anchor="middle" font-weight="bold" font-size="13" fill="#e65100">AWS</text>
-  <text x="200" y="190" text-anchor="middle" font-size="11">EKS, RDS, S3</text>
-  <text x="200" y="210" text-anchor="middle" font-size="11">Compute workloads</text>
-  <rect x="350" y="130" width="240" height="100" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="470" y="165" text-anchor="middle" font-weight="bold" font-size="13" fill="#1565c0">Azure</text>
-  <text x="470" y="190" text-anchor="middle" font-size="11">AKS, SQL DB, Blob</text>
-  <text x="470" y="210" text-anchor="middle" font-size="11">Enterprise / AD</text>
-  <rect x="520" y="130" width="240" height="100" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="640" y="165" text-anchor="middle" font-weight="bold" font-size="13" fill="#2e7d32">GCP</text>
-  <text x="640" y="190" text-anchor="middle" font-size="11">GKE, BigQuery, GCS</text>
-  <text x="640" y="210" text-anchor="middle" font-size="11">ML / Analytics</text>
-  <rect x="150" y="280" width="500" height="60" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="400" y="315" text-anchor="middle" font-size="13" fill="#6a1b9a">Unified Monitoring, Logging, and Security</text>
-  <line x1="200" y1="230" x2="300" y2="280" stroke="#999" stroke-width="1.5"/>
-  <line x1="470" y1="230" x2="400" y2="280" stroke="#999" stroke-width="1.5"/>
-  <line x1="640" y1="230" x2="500" y2="280" stroke="#999" stroke-width="1.5"/>
-</svg>
+![multi_cloud_topology](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/multi_cloud_topology.svg)
 
 ---
 ## Hybrid Cloud Strategy
 
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="50" width="300" height="250" rx="12" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="180" y="40" text-anchor="middle" font-weight="bold" font-size="14" fill="#c62828">On-Premises Data Center</text>
-  <rect x="60" y="80" width="110" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="115" y="107" text-anchor="middle" font-size="11">VMware / KVM</text>
-  <rect x="190" y="80" width="110" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="245" y="107" text-anchor="middle" font-size="11">Databases</text>
-  <rect x="60" y="150" width="110" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="115" y="177" text-anchor="middle" font-size="11">Active Directory</text>
-  <rect x="190" y="150" width="110" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="245" y="177" text-anchor="middle" font-size="11">Legacy Apps</text>
-  <rect x="100" y="220" width="160" height="45" rx="6" fill="#ef9a9a" stroke="#c62828" stroke-width="1.5"/>
-  <text x="180" y="247" text-anchor="middle" font-size="11" font-weight="bold">Sensitive Data</text>
-  <rect x="370" y="100" width="80" height="140" rx="8" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
-  <text x="410" y="155" text-anchor="middle" font-size="10" fill="#333">VPN /</text>
-  <text x="410" y="170" text-anchor="middle" font-size="10" fill="#333">Direct</text>
-  <text x="410" y="185" text-anchor="middle" font-size="10" fill="#333">Connect</text>
-  <line x1="330" y1="170" x2="370" y2="170" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="450" y1="170" x2="490" y2="170" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/></marker></defs>
-  <rect x="490" y="50" width="280" height="250" rx="12" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="630" y="40" text-anchor="middle" font-weight="bold" font-size="14" fill="#1565c0">Public Cloud</text>
-  <rect x="520" y="80" width="110" height="45" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="575" y="107" text-anchor="middle" font-size="11">Kubernetes</text>
-  <rect x="640" y="80" width="110" height="45" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="695" y="107" text-anchor="middle" font-size="11">Serverless</text>
-  <rect x="520" y="150" width="110" height="45" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="575" y="177" text-anchor="middle" font-size="11">CDN / Edge</text>
-  <rect x="640" y="150" width="110" height="45" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="695" y="177" text-anchor="middle" font-size="11">ML Services</text>
-  <rect x="560" y="220" width="160" height="45" rx="6" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="247" text-anchor="middle" font-size="11" font-weight="bold">Burst Capacity</text>
-</svg>
+![hybrid_cloud_strategy](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/hybrid_cloud_strategy.svg)
 
 ---
 ## Comparing the Three Approaches
@@ -150,28 +70,7 @@
 ---
 ## The Lock-in Spectrum
 
-<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="lockgrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#4caf50"/>
-      <stop offset="50%" style="stop-color:#ff9800"/>
-      <stop offset="100%" style="stop-color:#f44336"/>
-    </linearGradient>
-  </defs>
-  <rect x="50" y="80" width="700" height="30" rx="15" fill="url(#lockgrad)"/>
-  <text x="50" y="60" font-size="12" fill="#333">Low Lock-in</text>
-  <text x="680" y="60" font-size="12" fill="#333">High Lock-in</text>
-  <line x1="120" y1="110" x2="120" y2="140" stroke="#333" stroke-width="2"/>
-  <text x="120" y="160" text-anchor="middle" font-size="11" fill="#333">VMs / IaaS</text>
-  <line x1="250" y1="110" x2="250" y2="140" stroke="#333" stroke-width="2"/>
-  <text x="250" y="160" text-anchor="middle" font-size="11" fill="#333">Kubernetes</text>
-  <line x1="400" y1="110" x2="400" y2="140" stroke="#333" stroke-width="2"/>
-  <text x="400" y="160" text-anchor="middle" font-size="11" fill="#333">Managed DB</text>
-  <line x1="550" y1="110" x2="550" y2="140" stroke="#333" stroke-width="2"/>
-  <text x="550" y="160" text-anchor="middle" font-size="11" fill="#333">Serverless</text>
-  <line x1="680" y1="110" x2="680" y2="140" stroke="#333" stroke-width="2"/>
-  <text x="680" y="160" text-anchor="middle" font-size="11" fill="#333">Proprietary AI/ML</text>
-</svg>
+![the_lock_in_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lock_in_spectrum.svg)
 
 ---
 ## Embracing Cloud-Native Services
@@ -218,36 +117,7 @@
 ---
 ## Data Sovereignty Map
 
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="30" width="180" height="130" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="130" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#1565c0">North America</text>
-  <text x="130" y="80" text-anchor="middle" font-size="10">CCPA (California)</text>
-  <text x="130" y="100" text-anchor="middle" font-size="10">PIPEDA (Canada)</text>
-  <text x="130" y="120" text-anchor="middle" font-size="10">HIPAA (Healthcare)</text>
-  <text x="130" y="140" text-anchor="middle" font-size="10">FedRAMP (Gov)</text>
-  <rect x="250" y="30" width="180" height="130" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="340" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#2e7d32">Europe</text>
-  <text x="340" y="80" text-anchor="middle" font-size="10">GDPR</text>
-  <text x="340" y="100" text-anchor="middle" font-size="10">Data must stay in EU</text>
-  <text x="340" y="120" text-anchor="middle" font-size="10">Schrems II ruling</text>
-  <text x="340" y="140" text-anchor="middle" font-size="10">Right to erasure</text>
-  <rect x="460" y="30" width="180" height="130" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="550" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#e65100">Asia-Pacific</text>
-  <text x="550" y="80" text-anchor="middle" font-size="10">PIPL (China)</text>
-  <text x="550" y="100" text-anchor="middle" font-size="10">PDPA (Singapore)</text>
-  <text x="550" y="120" text-anchor="middle" font-size="10">APPI (Japan)</text>
-  <text x="550" y="140" text-anchor="middle" font-size="10">Strict localization</text>
-  <rect x="150" y="210" width="180" height="130" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="240" y="235" text-anchor="middle" font-weight="bold" font-size="13" fill="#c62828">South America</text>
-  <text x="240" y="260" text-anchor="middle" font-size="10">LGPD (Brazil)</text>
-  <text x="240" y="280" text-anchor="middle" font-size="10">Inspired by GDPR</text>
-  <text x="240" y="300" text-anchor="middle" font-size="10">Cross-border rules</text>
-  <rect x="400" y="210" width="180" height="130" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="490" y="235" text-anchor="middle" font-weight="bold" font-size="13" fill="#6a1b9a">Middle East / Africa</text>
-  <text x="490" y="260" text-anchor="middle" font-size="10">POPIA (South Africa)</text>
-  <text x="490" y="280" text-anchor="middle" font-size="10">PDPL (Saudi Arabia)</text>
-  <text x="490" y="300" text-anchor="middle" font-size="10">Emerging frameworks</text>
-</svg>
+![data_sovereignty_map](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/data_sovereignty_map.svg)
 
 ---
 ## Cloud Strategy Decision Framework
@@ -273,69 +143,12 @@
 ---
 ## The Lowest Common Denominator Problem
 
-<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="200" height="250" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#1565c0">AWS Features</text>
-  <rect x="70" y="70" width="160" height="25" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="150" y="87" text-anchor="middle" font-size="10">Lambda@Edge</text>
-  <rect x="70" y="100" width="160" height="25" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="150" y="117" text-anchor="middle" font-size="10">DynamoDB Streams</text>
-  <rect x="70" y="130" width="160" height="25" rx="4" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="150" y="147" text-anchor="middle" font-size="10">S3 Object Storage</text>
-  <rect x="70" y="160" width="160" height="25" rx="4" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="150" y="177" text-anchor="middle" font-size="10">EC2 Compute</text>
-  <rect x="70" y="190" width="160" height="25" rx="4" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="150" y="207" text-anchor="middle" font-size="10">VPC Networking</text>
-  <rect x="300" y="30" width="200" height="250" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="400" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#2e7d32">GCP Features</text>
-  <rect x="320" y="70" width="160" height="25" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="87" text-anchor="middle" font-size="10">Cloud Spanner</text>
-  <rect x="320" y="100" width="160" height="25" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="117" text-anchor="middle" font-size="10">BigQuery ML</text>
-  <rect x="320" y="130" width="160" height="25" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="400" y="147" text-anchor="middle" font-size="10">GCS Object Storage</text>
-  <rect x="320" y="160" width="160" height="25" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="400" y="177" text-anchor="middle" font-size="10">GCE Compute</text>
-  <rect x="320" y="190" width="160" height="25" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="400" y="207" text-anchor="middle" font-size="10">VPC Networking</text>
-  <rect x="560" y="100" width="200" height="160" rx="10" fill="#fff9c4" stroke="#f57f17" stroke-width="2.5"/>
-  <text x="660" y="125" text-anchor="middle" font-weight="bold" font-size="13" fill="#f57f17">Common Subset</text>
-  <rect x="580" y="140" width="160" height="25" rx="4" fill="#fff176" stroke="#f57f17" stroke-width="1"/>
-  <text x="660" y="157" text-anchor="middle" font-size="10">Object Storage</text>
-  <rect x="580" y="170" width="160" height="25" rx="4" fill="#fff176" stroke="#f57f17" stroke-width="1"/>
-  <text x="660" y="187" text-anchor="middle" font-size="10">Compute VMs</text>
-  <rect x="580" y="200" width="160" height="25" rx="4" fill="#fff176" stroke="#f57f17" stroke-width="1"/>
-  <text x="660" y="217" text-anchor="middle" font-size="10">VPC Networking</text>
-  <text x="660" y="250" text-anchor="middle" font-size="11" fill="#f57f17" font-style="italic">Only basic features!</text>
-</svg>
+![the_lowest_common_denominator_problem](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lowest_common_denominator_problem.svg)
 
 ---
 ## Abstraction Layer Architecture
 
-<svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="10" width="600" height="50" rx="8" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="40" text-anchor="middle" font-weight="bold" font-size="14" fill="#6a1b9a">Application Code</text>
-  <rect x="100" y="80" width="600" height="50" rx="8" fill="#ce93d8" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="110" text-anchor="middle" font-weight="bold" font-size="13" fill="#fff">Cloud Abstraction SDK</text>
-  <rect x="100" y="150" width="600" height="50" rx="8" fill="#ba68c8" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="180" text-anchor="middle" font-weight="bold" font-size="13" fill="#fff">Provider Adapter Layer</text>
-  <rect x="100" y="220" width="180" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="190" y="250" text-anchor="middle" font-weight="bold" font-size="12" fill="#e65100">AWS SDK</text>
-  <rect x="310" y="220" width="180" height="50" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="400" y="250" text-anchor="middle" font-weight="bold" font-size="12" fill="#1565c0">Azure SDK</text>
-  <rect x="520" y="220" width="180" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="610" y="250" text-anchor="middle" font-weight="bold" font-size="12" fill="#2e7d32">GCP SDK</text>
-  <rect x="100" y="290" width="180" height="40" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="190" y="315" text-anchor="middle" font-size="11">AWS Services</text>
-  <rect x="310" y="290" width="180" height="40" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="400" y="315" text-anchor="middle" font-size="11">Azure Services</text>
-  <rect x="520" y="290" width="180" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="610" y="315" text-anchor="middle" font-size="11">GCP Services</text>
-  <text x="50" y="40" text-anchor="middle" font-size="10" fill="#999">Layer 4</text>
-  <text x="50" y="110" text-anchor="middle" font-size="10" fill="#999">Layer 3</text>
-  <text x="50" y="180" text-anchor="middle" font-size="10" fill="#999">Layer 2</text>
-  <text x="50" y="250" text-anchor="middle" font-size="10" fill="#999">Layer 1</text>
-</svg>
+![abstraction_layer_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/abstraction_layer_architecture.svg)
 
 ---
 ## Cost of Abstraction Layers
@@ -392,25 +205,7 @@ resource "google_compute_instance" "web" {
 ---
 ## The Real Multi-Cloud Cost
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="25" text-anchor="middle" font-weight="bold" font-size="14" fill="#333">Hidden Costs of Multi-Cloud</text>
-  <rect x="60" y="50" width="120" height="200" rx="4" fill="#ef5350" stroke="#c62828" stroke-width="1.5"/>
-  <text x="120" y="160" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Compute</text>
-  <text x="120" y="175" text-anchor="middle" font-size="10" fill="#fff">+15-25%</text>
-  <rect x="200" y="80" width="120" height="170" rx="4" fill="#ff7043" stroke="#d84315" stroke-width="1.5"/>
-  <text x="260" y="175" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Staff</text>
-  <text x="260" y="190" text-anchor="middle" font-size="10" fill="#fff">+30-50%</text>
-  <rect x="340" y="110" width="120" height="140" rx="4" fill="#ffa726" stroke="#e65100" stroke-width="1.5"/>
-  <text x="400" y="190" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Networking</text>
-  <text x="400" y="205" text-anchor="middle" font-size="10" fill="#fff">+10-20%</text>
-  <rect x="480" y="130" width="120" height="120" rx="4" fill="#ffca28" stroke="#f57f17" stroke-width="1.5"/>
-  <text x="540" y="200" text-anchor="middle" font-size="11" font-weight="bold">Tooling</text>
-  <text x="540" y="215" text-anchor="middle" font-size="10">+5-15%</text>
-  <rect x="620" y="160" width="120" height="90" rx="4" fill="#ffee58" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="680" y="210" text-anchor="middle" font-size="11" font-weight="bold">Compliance</text>
-  <text x="680" y="225" text-anchor="middle" font-size="10">+5-10%</text>
-  <text x="400" y="280" text-anchor="middle" font-size="12" fill="#666" font-style="italic">Compared to single cloud baseline</text>
-</svg>
+![the_real_multi_cloud_cost](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_real_multi_cloud_cost.svg)
 
 ---
 ## When Multi-Cloud Makes Sense
@@ -450,89 +245,17 @@ resource "google_compute_instance" "web" {
 ---
 ## Backup and Restore Architecture
 
-<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="40" width="280" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="190" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#2e7d32">Primary Region</text>
-  <rect x="80" y="70" width="100" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="130" y="95" text-anchor="middle" font-size="11">App Servers</text>
-  <rect x="200" y="70" width="100" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="250" y="95" text-anchor="middle" font-size="11">Database</text>
-  <rect x="120" y="140" width="140" height="40" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="190" y="165" text-anchor="middle" font-size="11" font-weight="bold">Scheduled Backups</text>
-  <line x1="330" y1="160" x2="470" y2="160" stroke="#666" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="400" y="150" text-anchor="middle" font-size="10" fill="#666">Periodic copy</text>
-  <rect x="470" y="40" width="280" height="200" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="610" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#c62828">DR Region (Cold)</text>
-  <rect x="530" y="140" width="160" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="610" y="165" text-anchor="middle" font-size="11">Backup Storage</text>
-  <text x="610" y="100" text-anchor="middle" font-size="12" fill="#999" font-style="italic">No running infra</text>
-  <text x="610" y="120" text-anchor="middle" font-size="12" fill="#999" font-style="italic">until failover</text>
-</svg>
+![backup_and_restore_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/backup_and_restore_architecture.svg)
 
 ---
 ## Warm Standby Architecture
 
-<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="40" width="340" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="200" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#2e7d32">Primary Region (Full Scale)</text>
-  <rect x="50" y="70" width="90" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="95" y="92" text-anchor="middle" font-size="10">App x10</text>
-  <rect x="155" y="70" width="90" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="200" y="92" text-anchor="middle" font-size="10">Web x5</text>
-  <rect x="260" y="70" width="90" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="305" y="92" text-anchor="middle" font-size="10">Cache x3</text>
-  <rect x="100" y="130" width="200" height="35" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="200" y="152" text-anchor="middle" font-size="10" font-weight="bold">Primary DB (Multi-AZ)</text>
-  <rect x="100" y="185" width="200" height="35" rx="6" fill="#81c784" stroke="#2e7d32" stroke-width="1"/>
-  <text x="200" y="207" text-anchor="middle" font-size="10">100% traffic</text>
-  <line x1="370" y1="130" x2="430" y2="130" stroke="#1565c0" stroke-width="2.5"/>
-  <text x="400" y="120" text-anchor="middle" font-size="9" fill="#1565c0">Sync</text>
-  <text x="400" y="150" text-anchor="middle" font-size="9" fill="#1565c0">Replication</text>
-  <rect x="430" y="40" width="340" height="200" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="600" y="30" text-anchor="middle" font-weight="bold" font-size="14" fill="#1565c0">DR Region (Reduced Scale)</text>
-  <rect x="480" y="70" width="90" height="35" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="525" y="92" text-anchor="middle" font-size="10">App x2</text>
-  <rect x="585" y="70" width="90" height="35" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="630" y="92" text-anchor="middle" font-size="10">Web x1</text>
-  <rect x="530" y="130" width="200" height="35" rx="6" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="630" y="152" text-anchor="middle" font-size="10" font-weight="bold">Read Replica DB</text>
-  <rect x="530" y="185" width="200" height="35" rx="6" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
-  <text x="630" y="207" text-anchor="middle" font-size="10">0% traffic (standby)</text>
-</svg>
+![warm_standby_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/warm_standby_architecture.svg)
 
 ---
 ## Active-Active Architecture
 
-<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="10" width="300" height="50" rx="10" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="40" text-anchor="middle" font-weight="bold" font-size="13" fill="#6a1b9a">Global Load Balancer / DNS</text>
-  <line x1="300" y1="60" x2="180" y2="100" stroke="#6a1b9a" stroke-width="2"/>
-  <line x1="500" y1="60" x2="620" y2="100" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="220" y="82" text-anchor="middle" font-size="10" fill="#6a1b9a">50% traffic</text>
-  <text x="580" y="82" text-anchor="middle" font-size="10" fill="#6a1b9a">50% traffic</text>
-  <rect x="40" y="100" width="280" height="220" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="180" y="125" text-anchor="middle" font-weight="bold" font-size="13" fill="#2e7d32">Region A (us-east-1)</text>
-  <rect x="70" y="140" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="120" y="162" text-anchor="middle" font-size="10">App Cluster</text>
-  <rect x="190" y="140" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="240" y="162" text-anchor="middle" font-size="10">Cache</text>
-  <rect x="100" y="200" width="160" height="35" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="180" y="222" text-anchor="middle" font-size="10" font-weight="bold">DB (Read/Write)</text>
-  <rect x="100" y="260" width="160" height="35" rx="6" fill="#81c784" stroke="#2e7d32" stroke-width="1"/>
-  <text x="180" y="282" text-anchor="middle" font-size="10">Active</text>
-  <rect x="480" y="100" width="280" height="220" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="620" y="125" text-anchor="middle" font-weight="bold" font-size="13" fill="#1565c0">Region B (eu-west-1)</text>
-  <rect x="510" y="140" width="100" height="35" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="560" y="162" text-anchor="middle" font-size="10">App Cluster</text>
-  <rect x="630" y="140" width="100" height="35" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="680" y="162" text-anchor="middle" font-size="10">Cache</text>
-  <rect x="540" y="200" width="160" height="35" rx="6" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="620" y="222" text-anchor="middle" font-size="10" font-weight="bold">DB (Read/Write)</text>
-  <rect x="540" y="260" width="160" height="35" rx="6" fill="#64b5f6" stroke="#1565c0" stroke-width="1"/>
-  <text x="620" y="282" text-anchor="middle" font-size="10">Active</text>
-  <line x1="260" y1="217" x2="540" y2="217" stroke="#ff5722" stroke-width="2.5" stroke-dasharray="6,3"/>
-  <text x="400" y="210" text-anchor="middle" font-size="10" fill="#ff5722" font-weight="bold">Bi-directional Replication</text>
-</svg>
+![active_active_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/active_active_architecture.svg)
 
 ---
 ## Cross-Region Networking and Replication
@@ -572,38 +295,7 @@ Resources:
 ---
 ## Cross-Cloud DR Architecture
 
-<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="5" width="400" height="45" rx="10" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="400" y="32" text-anchor="middle" font-weight="bold" font-size="13" fill="#6a1b9a">External DNS (Cloudflare / NS1)</text>
-  <line x1="300" y1="50" x2="180" y2="90" stroke="#6a1b9a" stroke-width="2"/>
-  <line x1="500" y1="50" x2="620" y2="90" stroke="#6a1b9a" stroke-width="2"/>
-  <rect x="40" y="90" width="280" height="230" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="180" y="115" text-anchor="middle" font-weight="bold" font-size="14" fill="#e65100">AWS (Primary)</text>
-  <rect x="70" y="130" width="100" height="35" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="120" y="152" text-anchor="middle" font-size="10">EKS Cluster</text>
-  <rect x="190" y="130" width="100" height="35" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="240" y="152" text-anchor="middle" font-size="10">RDS Primary</text>
-  <rect x="70" y="185" width="100" height="35" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="120" y="207" text-anchor="middle" font-size="10">S3 Buckets</text>
-  <rect x="190" y="185" width="100" height="35" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="240" y="207" text-anchor="middle" font-size="10">ElastiCache</text>
-  <rect x="100" y="245" width="160" height="30" rx="6" fill="#ffcc80" stroke="#e65100" stroke-width="1.5"/>
-  <text x="180" y="265" text-anchor="middle" font-size="10" font-weight="bold">Live Traffic</text>
-  <rect x="480" y="90" width="280" height="230" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="620" y="115" text-anchor="middle" font-weight="bold" font-size="14" fill="#2e7d32">GCP (DR Standby)</text>
-  <rect x="510" y="130" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="560" y="152" text-anchor="middle" font-size="10">GKE Cluster</text>
-  <rect x="630" y="130" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="680" y="152" text-anchor="middle" font-size="10">Cloud SQL</text>
-  <rect x="510" y="185" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="560" y="207" text-anchor="middle" font-size="10">GCS Buckets</text>
-  <rect x="630" y="185" width="100" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="680" y="207" text-anchor="middle" font-size="10">Memorystore</text>
-  <rect x="540" y="245" width="160" height="30" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="620" y="265" text-anchor="middle" font-size="10" font-weight="bold">Standby</text>
-  <line x1="320" y1="170" x2="480" y2="170" stroke="#ff5722" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="400" y="163" text-anchor="middle" font-size="9" fill="#ff5722">Data Replication</text>
-</svg>
+![cross_cloud_dr_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cross_cloud_dr_architecture.svg)
 
 ---
 ## Testing and Automating DR
@@ -648,36 +340,7 @@ Resources:
 ---
 ## Decision Matrix: Choosing Your Strategy
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="700" height="40" rx="6" fill="#e1bee7" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="400" y="55" text-anchor="middle" font-weight="bold" font-size="13" fill="#6a1b9a">Cloud Strategy Decision Tree</text>
-  <rect x="300" y="90" width="200" height="35" rx="6" fill="#fff9c4" stroke="#f57f17" stroke-width="1.5"/>
-  <text x="400" y="112" text-anchor="middle" font-size="11">Regulatory constraints?</text>
-  <line x1="300" y1="107" x2="200" y2="150" stroke="#666" stroke-width="1.5"/>
-  <text x="240" y="130" font-size="10" fill="#2e7d32">Yes</text>
-  <line x1="500" y1="107" x2="600" y2="150" stroke="#666" stroke-width="1.5"/>
-  <text x="560" y="130" font-size="10" fill="#c62828">No</text>
-  <rect x="100" y="150" width="200" height="35" rx="6" fill="#fff9c4" stroke="#f57f17" stroke-width="1.5"/>
-  <text x="200" y="172" text-anchor="middle" font-size="11">Data in multiple regions?</text>
-  <rect x="500" y="150" width="200" height="35" rx="6" fill="#fff9c4" stroke="#f57f17" stroke-width="1.5"/>
-  <text x="600" y="172" text-anchor="middle" font-size="11">Team size > 50 engineers?</text>
-  <line x1="150" y1="185" x2="100" y2="220" stroke="#666" stroke-width="1.5"/>
-  <text x="115" y="205" font-size="10" fill="#2e7d32">Yes</text>
-  <line x1="250" y1="185" x2="300" y2="220" stroke="#666" stroke-width="1.5"/>
-  <text x="285" y="205" font-size="10" fill="#c62828">No</text>
-  <line x1="550" y1="185" x2="500" y2="220" stroke="#666" stroke-width="1.5"/>
-  <text x="515" y="205" font-size="10" fill="#2e7d32">Yes</text>
-  <line x1="650" y1="185" x2="700" y2="220" stroke="#666" stroke-width="1.5"/>
-  <text x="685" y="205" font-size="10" fill="#c62828">No</text>
-  <rect x="30" y="220" width="150" height="35" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="105" y="242" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Multi-Cloud</text>
-  <rect x="230" y="220" width="150" height="35" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="305" y="242" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">Hybrid Cloud</text>
-  <rect x="430" y="220" width="150" height="35" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="505" y="242" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Consider Multi</text>
-  <rect x="630" y="220" width="150" height="35" rx="6" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="705" y="242" text-anchor="middle" font-size="11" font-weight="bold" fill="#6a1b9a">Single Cloud</text>
-</svg>
+![decision_matrix_choosing_your_strategy](../../../../svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/decision_matrix_choosing_your_strategy.svg)
 
 ---
 ## Summary: Key Takeaways

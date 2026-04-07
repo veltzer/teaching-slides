@@ -14,19 +14,7 @@
 
 ## Memory Hierarchy
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Memory Hierarchy</text>
-  <polygon points="200,50 100,100 300,100" fill="#ffcccc" stroke="#333" stroke-width="2"/>
-  <text x="200" y="80" text-anchor="middle" font-size="14">CPU Registers</text>
-  <polygon points="200,100 80,150 320,150" fill="#ffddcc" stroke="#333" stroke-width="2"/>
-  <text x="200" y="130" text-anchor="middle" font-size="14">L1 Cache</text>
-  <polygon points="200,150 60,200 340,200" fill="#ffeedd" stroke="#333" stroke-width="2"/>
-  <text x="200" y="180" text-anchor="middle" font-size="14">L2/L3 Cache</text>
-  <polygon points="200,200 40,250 360,250" fill="#ffffcc" stroke="#333" stroke-width="2"/>
-  <text x="200" y="230" text-anchor="middle" font-size="14">RAM</text>
-  <polygon points="200,250 20,300 380,300" fill="#eeffcc" stroke="#333" stroke-width="2"/>
-  <text x="200" y="280" text-anchor="middle" font-size="14">Storage</text>
-</svg>
+![memory_hierarchy](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_hierarchy.svg)
 
 ---
 
@@ -64,20 +52,7 @@ void process_matrix_col_major(int matrix[N][M]) {
 
 ## Cache Line Effects
 
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">64-byte Cache Line</text>
-  <rect x="50" y="60" width="300" height="40" fill="#f0f0f0" stroke="#333"/>
-  <line x1="50" y1="60" x2="50" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="125" y1="60" x2="125" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="2,2"/>
-  <line x1="200" y1="60" x2="200" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="2,2"/>
-  <line x1="275" y1="60" x2="275" y2="100" stroke="#333" stroke-width="1" stroke-dasharray="2,2"/>
-  <line x1="350" y1="60" x2="350" y2="100" stroke="#333" stroke-width="2"/>
-  <text x="87.5" y="85" text-anchor="middle" font-size="12">16 bytes</text>
-  <text x="162.5" y="85" text-anchor="middle" font-size="12">16 bytes</text>
-  <text x="237.5" y="85" text-anchor="middle" font-size="12">16 bytes</text>
-  <text x="312.5" y="85" text-anchor="middle" font-size="12">16 bytes</text>
-  <text x="200" y="130" text-anchor="middle" font-size="14">One cache line fetch</text>
-</svg>
+![cache_line_effects](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/cache_line_effects.svg)
 
 ---
 
@@ -173,19 +148,7 @@ void configure_mpu_region(uint8_t region_num,
 
 ## Memory Regions
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Typical Memory Map</text>
-  <rect x="100" y="50" width="200" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="75" text-anchor="middle" font-size="14">0xFFFFFFFF - System</text>
-  <rect x="100" y="90" width="200" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="115" text-anchor="middle" font-size="14">0xE0000000 - Peripherals</text>
-  <rect x="100" y="130" width="200" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="155" text-anchor="middle" font-size="14">0x20000000 - SRAM</text>
-  <rect x="100" y="170" width="200" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="195" text-anchor="middle" font-size="14">0x08000000 - Flash</text>
-  <rect x="100" y="210" width="200" height="40" fill="#ffccff" stroke="#333"/>
-  <text x="200" y="235" text-anchor="middle" font-size="14">0x00000000 - Aliased</text>
-</svg>
+![memory_regions](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_regions.svg)
 
 ---
 
@@ -257,21 +220,7 @@ const uint16_t lookup_table[256] = { /* ... */ };
 
 ## Memory Mapping in Detail
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Program Memory Layout</text>
-  <rect x="100" y="50" width="200" height="30" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="70" text-anchor="middle" font-size="12">Stack ↓</text>
-  <rect x="100" y="80" width="200" height="40" fill="#ffffff" stroke="#333"/>
-  <text x="200" y="105" text-anchor="middle" font-size="12">Free Space</text>
-  <rect x="100" y="120" width="200" height="30" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="140" text-anchor="middle" font-size="12">Heap ↑</text>
-  <rect x="100" y="150" width="200" height="30" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="170" text-anchor="middle" font-size="12">.bss (zeroed)</text>
-  <rect x="100" y="180" width="200" height="30" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="200" text-anchor="middle" font-size="12">.data (initialized)</text>
-  <rect x="100" y="210" width="200" height="30" fill="#ffccff" stroke="#333"/>
-  <text x="200" y="230" text-anchor="middle" font-size="12">.text (code)</text>
-</svg>
+![memory_mapping_in_detail](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_mapping_in_detail.svg)
 
 ---
 

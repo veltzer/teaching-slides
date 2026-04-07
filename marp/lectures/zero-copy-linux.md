@@ -40,22 +40,7 @@ write(sock, buf, BUF_SIZE); /* 2 copies: user→kernel, kernel→NIC */
 
 Total: **4 copies**, **4 context switches**
 
-<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="560" height="60" fill="#e8f4fd" stroke="#2196F3" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-size="16" font-weight="bold">User Space (Application Buffer)</text>
-  <rect x="20" y="100" width="260" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="150" y="135" text-anchor="middle" font-size="14">Kernel Read Buffer</text>
-  <rect x="320" y="100" width="260" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="450" y="135" text-anchor="middle" font-size="14">Socket Buffer</text>
-  <rect x="20" y="180" width="260" height="60" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
-  <text x="150" y="215" text-anchor="middle" font-size="14">Disk</text>
-  <rect x="320" y="180" width="260" height="60" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
-  <text x="450" y="215" text-anchor="middle" font-size="14">NIC</text>
-  <text x="90" y="268" font-size="12" fill="#333">copy 1</text>
-  <text x="210" y="88" font-size="12" fill="#333">copy 2</text>
-  <text x="370" y="88" font-size="12" fill="#333">copy 3</text>
-  <text x="490" y="170" font-size="12" fill="#333">copy 4</text>
-</svg>
+![traditional_i_o_path_the_problem](../../svg/lectures/zero-copy-linux/traditional_i_o_path_the_problem.svg)
 
 ---
 
@@ -152,29 +137,7 @@ sendfile(sock_fd, file_fd, &offset, file_size);
 
 ## sendfile(): How It Works
 
-<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="560" height="40" fill="#e0e0e0" stroke="#666" stroke-width="2"/>
-  <text x="300" y="45" text-anchor="middle" font-size="14" fill="#666">User Space (not involved)</text>
-  <rect x="20" y="80" width="250" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="145" y="115" text-anchor="middle" font-size="14">Page Cache</text>
-  <rect x="330" y="80" width="250" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="455" y="115" text-anchor="middle" font-size="14">Socket Buffer</text>
-  <rect x="20" y="170" width="250" height="50" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
-  <text x="145" y="200" text-anchor="middle" font-size="14">Disk</text>
-  <rect x="330" y="170" width="250" height="50" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
-  <text x="455" y="200" text-anchor="middle" font-size="14">NIC</text>
-  <path d="M 145 170 L 145 140" stroke="#4caf50" stroke-width="3" marker-end="url(#zca)"/>
-  <text x="80" y="162" font-size="11" fill="#4caf50">DMA copy</text>
-  <path d="M 270 110 L 330 110" stroke="#2196F3" stroke-width="3" marker-end="url(#zca)"/>
-  <text x="275" y="100" font-size="11" fill="#2196F3">descriptor only*</text>
-  <path d="M 455 140 L 455 170" stroke="#4caf50" stroke-width="3" marker-end="url(#zca)"/>
-  <text x="490" y="162" font-size="11" fill="#4caf50">DMA copy</text>
-  <defs>
-    <marker id="zca" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="currentColor"/>
-    </marker>
-  </defs>
-</svg>
+![sendfile_how_it_works](../../svg/lectures/zero-copy-linux/sendfile_how_it_works.svg)
 
 *With scatter-gather DMA, only buffer descriptors (pointers + lengths) are passed to the socket buffer.
 
@@ -384,27 +347,7 @@ xsk_socket__create(&xsk, ifname, queue_id, umem, &rx, &tx, NULL);
 
 ## AF_XDP Architecture
 
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="250" height="80" fill="#e8f4fd" stroke="#2196F3" stroke-width="2"/>
-  <text x="155" y="50" text-anchor="middle" font-size="14" font-weight="bold">User Space Application</text>
-  <text x="155" y="75" text-anchor="middle" font-size="12">RX/TX/Fill/Completion Rings</text>
-  <rect x="320" y="20" width="250" height="80" fill="#e0f2f1" stroke="#009688" stroke-width="2"/>
-  <text x="445" y="50" text-anchor="middle" font-size="14" font-weight="bold">UMEM</text>
-  <text x="445" y="75" text-anchor="middle" font-size="12">Shared Packet Buffer</text>
-  <rect x="30" y="130" width="250" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="155" y="165" text-anchor="middle" font-size="14">XDP eBPF Program</text>
-  <rect x="30" y="220" width="540" height="50" fill="#ffebee" stroke="#f44336" stroke-width="2"/>
-  <text x="300" y="250" text-anchor="middle" font-size="14">NIC (DMA Engine)</text>
-  <path d="M 155 100 L 155 130" stroke="#333" stroke-width="2" marker-end="url(#zcb)"/>
-  <path d="M 445 100 L 445 220" stroke="#4caf50" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#zcb)"/>
-  <text x="470" y="165" font-size="11" fill="#4caf50">DMA direct</text>
-  <path d="M 155 190 L 155 220" stroke="#333" stroke-width="2" marker-end="url(#zcb)"/>
-  <defs>
-    <marker id="zcb" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![afxdp_architecture](../../svg/lectures/zero-copy-linux/afxdp_architecture.svg)
 
 ---
 

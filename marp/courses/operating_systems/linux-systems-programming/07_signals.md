@@ -43,41 +43,7 @@ Like hardware interrupts but for processes!
 
 ## Signal Types
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="320" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Linux Signals Categories</text>
-
-  <rect x="70" y="70" width="200" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="170" y="105" text-anchor="middle" fill="white" font-size="12">Terminal Signals</text>
-  <text x="170" y="120" text-anchor="middle" fill="white" font-size="10">SIGINT, SIGQUIT, SIGTSTP</text>
-
-  <rect x="290" y="70" width="200" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="390" y="105" text-anchor="middle" fill="white" font-size="12">Error Signals</text>
-  <text x="390" y="120" text-anchor="middle" fill="white" font-size="10">SIGSEGV, SIGBUS, SIGFPE</text>
-
-  <rect x="510" y="70" width="200" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="610" y="105" text-anchor="middle" fill="white" font-size="12">Job Control</text>
-  <text x="610" y="120" text-anchor="middle" fill="white" font-size="10">SIGSTOP, SIGCONT, SIGTTIN</text>
-
-  <rect x="70" y="150" width="200" height="60" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="170" y="185" text-anchor="middle" fill="white" font-size="12">Process Lifecycle</text>
-  <text x="170" y="200" text-anchor="middle" fill="white" font-size="10">SIGCHLD, SIGTERM, SIGKILL</text>
-
-  <rect x="290" y="150" width="200" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="390" y="185" text-anchor="middle" fill="white" font-size="12">Timer Signals</text>
-  <text x="390" y="200" text-anchor="middle" fill="white" font-size="10">SIGALRM, SIGVTALRM, SIGPROF</text>
-
-  <rect x="510" y="150" width="200" height="60" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="610" y="185" text-anchor="middle" fill="white" font-size="12">User Defined</text>
-  <text x="610" y="200" text-anchor="middle" fill="white" font-size="10">SIGUSR1, SIGUSR2</text>
-
-  <rect x="70" y="230" width="640" height="120" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="390" y="255" text-anchor="middle" fill="white" font-size="12">Real-Time Signals</text>
-  <text x="390" y="275" text-anchor="middle" fill="white" font-size="10">SIGRTMIN to SIGRTMAX (34-64)</text>
-  <text x="390" y="295" text-anchor="middle" fill="white" font-size="10">• Queued delivery</text>
-  <text x="390" y="310" text-anchor="middle" fill="white" font-size="10">• Carry data payload</text>
-  <text x="390" y="325" text-anchor="middle" fill="white" font-size="10">• Guaranteed order</text>
-</svg>
+![signal_types](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/signal_types.svg)
 
 ---
 
@@ -246,30 +212,7 @@ sigpending(&pending);
 
 ## The Async Problem
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="400" y="70" text-anchor="middle" fill="white" font-size="12">Main Program Execution</text>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="10">malloc() → strcpy() → printf() → free()</text>
-
-  <rect x="300" y="150" width="200" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="175" text-anchor="middle" fill="white" font-size="12">SIGNAL ARRIVES!</text>
-  <text x="400" y="195" text-anchor="middle" fill="white" font-size="10">Interrupts at ANY point</text>
-
-  <rect x="250" y="230" width="300" height="100" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="400" y="255" text-anchor="middle" fill="black" font-size="12">Signal Handler</text>
-  <text x="400" y="275" text-anchor="middle" font-size="10">Can't use:</text>
-  <text x="400" y="295" text-anchor="middle" font-size="10">• malloc/free (not reentrant)</text>
-  <text x="400" y="310" text-anchor="middle" font-size="10">• printf (uses malloc)</text>
-
-  <path d="M 400 110 L 400 150" stroke="#E74C3C" stroke-width="3" marker-end="url(#arrow)"/>
-  <path d="M 400 210 L 400 230" stroke="#E74C3C" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#E74C3C"/>
-    </marker>
-  </defs>
-</svg>
+![the_async_problem](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/the_async_problem.svg)
 
 ---
 
@@ -385,32 +328,7 @@ int main() {
 
 ## Signal Delivery and Queuing
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Standard vs Real-Time Signals</text>
-
-  <rect x="50" y="60" width="300" height="150" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="200" y="85" text-anchor="middle" fill="white" font-size="12">Standard Signals (1-31)</text>
-  <rect x="70" y="100" width="260" height="30" fill="#2980B9"/>
-  <text x="200" y="120" text-anchor="middle" fill="white" font-size="10">SIGUSR1 SIGUSR1 SIGUSR1 → One delivery</text>
-  <rect x="70" y="140" width="260" height="30" fill="#2980B9"/>
-  <text x="200" y="160" text-anchor="middle" fill="white" font-size="10">Not queued (except SIGCHLD)</text>
-  <rect x="70" y="180" width="260" height="20" fill="#2980B9"/>
-  <text x="200" y="195" text-anchor="middle" fill="white" font-size="10">Delivered in any order</text>
-
-  <rect x="400" y="60" width="300" height="150" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="550" y="85" text-anchor="middle" fill="white" font-size="12">Real-Time Signals (34-64)</text>
-  <rect x="420" y="100" width="260" height="30" fill="#27AE60"/>
-  <text x="550" y="120" text-anchor="middle" fill="white" font-size="10">SIGRTMIN SIGRTMIN → All delivered</text>
-  <rect x="420" y="140" width="260" height="30" fill="#27AE60"/>
-  <text x="550" y="160" text-anchor="middle" fill="white" font-size="10">Queued with data</text>
-  <rect x="420" y="180" width="260" height="20" fill="#27AE60"/>
-  <text x="550" y="195" text-anchor="middle" fill="white" font-size="10">Priority order delivery</text>
-
-  <text x="400" y="250" text-anchor="middle" font-size="11">Pending Signal Mask (Bitmap)</text>
-  <rect x="150" y="260" width="500" height="40" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" font-size="10">|0|1|0|0|1|0|0|0|1|0|0|0|0|0|1|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|</text>
-  <text x="400" y="315" text-anchor="middle" font-size="10">Bit set = signal pending</text>
-</svg>
+![signal_delivery_and_queuing](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/signal_delivery_and_queuing.svg)
 
 ---
 

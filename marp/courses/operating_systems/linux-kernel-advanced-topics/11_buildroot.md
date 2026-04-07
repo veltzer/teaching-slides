@@ -37,32 +37,7 @@ Best for:
 
 ## Buildroot Architecture
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="300" y="80" text-anchor="middle" font-size="16" font-weight="bold">Kconfig (menuconfig)</text>
-  <rect x="50" y="130" width="140" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="120" y="160" text-anchor="middle" font-size="14">Toolchain</text>
-  <rect x="210" y="130" width="140" height="50" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="280" y="160" text-anchor="middle" font-size="14">Packages</text>
-  <rect x="370" y="130" width="140" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="440" y="160" text-anchor="middle" font-size="14">Filesystem</text>
-  <rect x="150" y="210" width="300" height="50" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="300" y="240" text-anchor="middle" font-size="16" font-weight="bold">Make</text>
-  <rect x="150" y="290" width="300" height="50" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
-  <text x="300" y="320" text-anchor="middle" font-size="16" font-weight="bold">Output Images</text>
-  <path d="M300 100 L120 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 100 L280 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 100 L440 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M120 180 L280 210" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M280 180 L300 210" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M440 180 L320 210" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 260 L300 290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![buildroot_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/buildroot_architecture.svg)
 
 ---
 
@@ -166,20 +141,7 @@ BR2_OPTIMIZE_2=y
 
 ## Toolchain Options
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="300" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="16" font-weight="bold">Toolchain Type</text>
-  <rect x="50" y="150" width="200" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="150" y="185" text-anchor="middle" font-size="14">Internal Toolchain</text>
-  <rect x="300" y="150" width="200" height="60" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="400" y="185" text-anchor="middle" font-size="14">External Toolchain</text>
-  <text x="150" y="250" text-anchor="middle" font-size="12">Built by Buildroot</text>
-  <text x="150" y="270" text-anchor="middle" font-size="12">GCC, binutils, libc</text>
-  <text x="150" y="290" text-anchor="middle" font-size="12">Slower first build</text>
-  <text x="400" y="250" text-anchor="middle" font-size="12">Pre-built toolchain</text>
-  <text x="400" y="270" text-anchor="middle" font-size="12">Linaro, ARM, etc.</text>
-  <text x="400" y="290" text-anchor="middle" font-size="12">Faster builds</text>
-</svg>
+![toolchain_options](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/toolchain_options.svg)
 
 ---
 
@@ -252,26 +214,7 @@ BR2_INIT_SYSTEMD=y
 
 ### Package Types
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="110" y="85" text-anchor="middle" font-size="14">Generic</text>
-  <rect x="190" y="50" width="120" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="250" y="85" text-anchor="middle" font-size="14">Autotools</text>
-  <rect x="330" y="50" width="120" height="60" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="390" y="85" text-anchor="middle" font-size="14">CMake</text>
-  <rect x="470" y="50" width="120" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="530" y="85" text-anchor="middle" font-size="14">Python</text>
-  <rect x="50" y="130" width="120" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="110" y="165" text-anchor="middle" font-size="14">Perl</text>
-  <rect x="190" y="130" width="120" height="60" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
-  <text x="250" y="165" text-anchor="middle" font-size="14">Meson</text>
-  <rect x="330" y="130" width="120" height="60" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="390" y="165" text-anchor="middle" font-size="14">QMake</text>
-  <rect x="470" y="130" width="120" height="60" fill="#efebe9" stroke="#5d4037" stroke-width="2"/>
-  <text x="530" y="165" text-anchor="middle" font-size="14">Golang</text>
-  <rect x="150" y="230" width="300" height="60" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="300" y="265" text-anchor="middle" font-size="16" font-weight="bold">Package Infrastructure</text>
-</svg>
+![package_types](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/package_types.svg)
 
 ---
 
@@ -523,22 +466,7 @@ BR2_TARGET_UBOOT_SPL=y
 
 ## Filesystem Images
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="50" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="125" y="80" text-anchor="middle" font-size="14">tar</text>
-  <rect x="225" y="50" width="150" height="50" fill="#f3e5f5" stroke="#7b1fa2"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">ext2/3/4</text>
-  <rect x="400" y="50" width="150" height="50" fill="#e8f5e9" stroke="#388e3c"/>
-  <text x="475" y="80" text-anchor="middle" font-size="14">squashfs</text>
-  <rect x="50" y="120" width="150" height="50" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="125" y="150" text-anchor="middle" font-size="14">ubifs</text>
-  <rect x="225" y="120" width="150" height="50" fill="#fce4ec" stroke="#c2185b"/>
-  <text x="300" y="150" text-anchor="middle" font-size="14">jffs2</text>
-  <rect x="400" y="120" width="150" height="50" fill="#e0f2f1" stroke="#00796b"/>
-  <text x="475" y="150" text-anchor="middle" font-size="14">cpio</text>
-  <rect x="150" y="210" width="300" height="60" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="300" y="245" text-anchor="middle" font-size="16" font-weight="bold">genimage.cfg</text>
-</svg>
+![filesystem_images](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/filesystem_images.svg)
 
 ---
 
@@ -769,21 +697,7 @@ build:
 
 ## Size Optimization
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="40" fill="#f5f5f5" stroke="#333"/>
-  <rect x="50" y="50" width="400" height="40" fill="#ffcdd2" stroke="#d32f2f"/>
-  <rect x="50" y="100" width="500" height="40" fill="#f5f5f5" stroke="#333"/>
-  <rect x="50" y="100" width="300" height="40" fill="#c8e6c9" stroke="#4caf50"/>
-  <rect x="50" y="150" width="500" height="40" fill="#f5f5f5" stroke="#333"/>
-  <rect x="50" y="150" width="250" height="40" fill="#bbdefb" stroke="#1976d2"/>
-  <rect x="50" y="200" width="500" height="40" fill="#f5f5f5" stroke="#333"/>
-  <rect x="50" y="200" width="200" height="40" fill="#fff9c4" stroke="#fbc02d"/>
-  <text x="60" y="75" font-size="12">Full glibc (150MB)</text>
-  <text x="60" y="125" font-size="12">uClibc (80MB)</text>
-  <text x="60" y="175" font-size="12">musl (60MB)</text>
-  <text x="60" y="225" font-size="12">Static busybox (40MB)</text>
-  <text x="300" y="280" text-anchor="middle" font-size="16" font-weight="bold">Filesystem Size Comparison</text>
-</svg>
+![size_optimization](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/size_optimization.svg)
 
 ---
 

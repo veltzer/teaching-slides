@@ -30,38 +30,7 @@ Pizza p(Size::Large, true, false, true, false, true, false, true,
 
 ## Builder Structure
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="220" y="10" width="160" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="300" y="35" text-anchor="middle" font-size="13" font-weight="bold">Director</text>
-  <text x="300" y="55" text-anchor="middle" font-size="11">+ construct()</text>
-
-  <rect x="220" y="110" width="160" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="300" y="130" text-anchor="middle" font-size="13" font-weight="bold">Builder</text>
-  <text x="300" y="150" text-anchor="middle" font-size="11" font-style="italic">+ buildStepA()</text>
-  <text x="300" y="165" text-anchor="middle" font-size="11" font-style="italic">+ buildStepB()</text>
-
-  <rect x="50" y="220" width="160" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="130" y="240" text-anchor="middle" font-size="11">ConcreteBuilder1</text>
-
-  <rect x="390" y="220" width="160" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="470" y="240" text-anchor="middle" font-size="11">ConcreteBuilder2</text>
-
-  <line x1="300" y1="70" x2="300" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#bArr)"/>
-  <line x1="130" y1="220" x2="260" y2="180" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="470" y1="220" x2="340" y2="180" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-
-  <rect x="480" y="110" width="100" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="530" y="135" text-anchor="middle" font-size="12">Product</text>
-
-  <line x1="380" y1="140" x2="480" y2="130" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <text x="430" y="125" font-size="9">creates</text>
-
-  <defs>
-    <marker id="bArr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![builder_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/05_builder/builder_structure.svg)
 
 ---
 

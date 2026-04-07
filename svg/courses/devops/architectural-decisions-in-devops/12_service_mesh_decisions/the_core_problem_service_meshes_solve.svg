@@ -1,0 +1,37 @@
+<svg width="700" height="320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Without Mesh: Every Service Handles Networking</text>
+  <rect x="30" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="100" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service A</text>
+  <text x="100" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
+  <text x="100" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
+  <rect x="280" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="350" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service B</text>
+  <text x="350" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
+  <text x="350" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
+  <rect x="530" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="600" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service C</text>
+  <text x="600" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
+  <text x="600" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
+  <line x1="170" y1="90" x2="278" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="420" y1="90" x2="528" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="350" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#388e3c">With Mesh: Networking Handled by Infrastructure</text>
+  <rect x="50" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="100" y="230" text-anchor="middle" font-size="12">Service A</text>
+  <rect x="50" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
+  <text x="100" y="280" text-anchor="middle" font-size="10">Proxy</text>
+  <rect x="300" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="350" y="230" text-anchor="middle" font-size="12">Service B</text>
+  <rect x="300" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
+  <text x="350" y="280" text-anchor="middle" font-size="10">Proxy</text>
+  <rect x="550" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="600" y="230" text-anchor="middle" font-size="12">Service C</text>
+  <rect x="550" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
+  <text x="600" y="280" text-anchor="middle" font-size="10">Proxy</text>
+  <line x1="150" y1="275" x2="298" y2="275" stroke="#1976d2" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="400" y1="275" x2="548" y2="275" stroke="#1976d2" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

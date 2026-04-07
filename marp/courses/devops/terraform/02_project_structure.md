@@ -279,56 +279,7 @@ terraform init -plugin-dir=/path/to/plugins
 
 ## terraform init Workflow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="380">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- terraform init -->
-  <rect x="160" y="10" width="160" height="40" rx="4" fill="#7b1fa2" stroke="#333" stroke-width="1.5"/>
-  <text x="240" y="35" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">terraform init</text>
-  <!-- vertical trunk -->
-  <line x1="240" y1="50" x2="240" y2="70" stroke="#555" stroke-width="1.5"/>
-
-  <!-- Branch: Configure backend -->
-  <line x1="240" y1="70" x2="240" y2="90" stroke="#555" stroke-width="1.5"/>
-  <line x1="240" y1="80" x2="100" y2="80" stroke="#555" stroke-width="1.5"/>
-  <line x1="100" y1="80" x2="100" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10" y="100" width="180" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="100" y="123" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Configure backend</text>
-  <line x1="100" y1="136" x2="100" y2="156" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10" y="156" width="180" height="36" rx="4" fill="#fff3e0" stroke="#aaa" stroke-width="1"/>
-  <text x="100" y="179" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Local or remote state</text>
-
-  <!-- Branch: Download providers -->
-  <line x1="240" y1="80" x2="240" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="160" y="100" width="160" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="240" y="123" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Download providers</text>
-  <line x1="240" y1="136" x2="240" y2="156" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="160" y="156" width="160" height="36" rx="4" fill="#fff3e0" stroke="#aaa" stroke-width="1"/>
-  <text x="240" y="172" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Check version constraints</text>
-  <line x1="240" y1="192" x2="240" y2="212" stroke="#555" stroke-width="1.5"/>
-  <rect x="160" y="212" width="160" height="36" rx="4" fill="#fff3e0" stroke="#aaa" stroke-width="1"/>
-  <text x="240" y="235" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Download from registry</text>
-  <line x1="240" y1="248" x2="240" y2="268" stroke="#555" stroke-width="1.5"/>
-  <rect x="160" y="268" width="160" height="36" rx="4" fill="#fff3e0" stroke="#aaa" stroke-width="1"/>
-  <text x="240" y="291" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Verify checksums</text>
-
-  <!-- Branch: Download modules -->
-  <line x1="240" y1="80" x2="380" y2="80" stroke="#555" stroke-width="1.5"/>
-  <line x1="380" y1="80" x2="380" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="300" y="100" width="170" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="385" y="123" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Download modules</text>
-  <line x1="385" y1="136" x2="385" y2="156" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="300" y="156" width="170" height="36" rx="4" fill="#fff3e0" stroke="#aaa" stroke-width="1"/>
-  <text x="385" y="179" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">From registry or git</text>
-
-  <!-- Create lock file -->
-  <line x1="240" y1="304" x2="240" y2="328" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="150" y="328" width="180" height="36" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="240" y="351" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Create lock file</text>
-</svg>
+![terraform_init_workflow](../../../../svg/courses/devops/terraform/02_project_structure/terraform_init_workflow.svg)
 
 ---
 
@@ -403,45 +354,7 @@ terraform apply -parallelism=20
 
 ## terraform apply Workflow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="440">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- terraform apply header -->
-  <rect x="100" y="10" width="200" height="40" rx="4" fill="#7b1fa2" stroke="#333" stroke-width="1.5"/>
-  <text x="200" y="35" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">terraform apply</text>
-
-  <!-- steps -->
-  <line x1="200" y1="50" x2="200" y2="70" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="70" width="280" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="93" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Read current state</text>
-
-  <line x1="200" y1="106" x2="200" y2="126" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="126" width="280" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="149" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Compare config vs state</text>
-
-  <line x1="200" y1="162" x2="200" y2="182" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="182" width="280" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="205" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Generate execution plan</text>
-
-  <line x1="200" y1="218" x2="200" y2="238" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="238" width="280" height="36" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="261" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Show plan to user</text>
-
-  <line x1="200" y1="274" x2="200" y2="294" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="294" width="280" height="36" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="317" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Wait for confirmation</text>
-
-  <line x1="200" y1="330" x2="200" y2="350" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="350" width="280" height="36" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="373" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Create / modify / delete resources</text>
-
-  <line x1="200" y1="386" x2="200" y2="406" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="406" width="280" height="36" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="200" y="429" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Update state file → Show outputs</text>
-</svg>
+![terraform_apply_workflow](../../../../svg/courses/devops/terraform/02_project_structure/terraform_apply_workflow.svg)
 
 ---
 

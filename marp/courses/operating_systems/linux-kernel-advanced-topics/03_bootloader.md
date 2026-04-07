@@ -16,28 +16,7 @@ Key responsibilities:
 
 ## Boot Stages
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="50" y="50" width="150" height="80" fill="#FFE6E6" stroke="black"/>
-<text x="125" y="95" text-anchor="middle">ROM Boot</text>
-<rect x="250" y="50" width="150" height="80" fill="#E6F2FF" stroke="black"/>
-<text x="325" y="95" text-anchor="middle">SPL/MLO</text>
-<rect x="450" y="50" width="150" height="80" fill="#E6FFE6" stroke="black"/>
-<text x="525" y="95" text-anchor="middle">U-Boot</text>
-<rect x="650" y="50" width="100" height="80" fill="#FFFFE6" stroke="black"/>
-<text x="700" y="95" text-anchor="middle">Kernel</text>
-<line x1="200" y1="90" x2="250" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<line x1="400" y1="90" x2="450" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<line x1="600" y1="90" x2="650" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<text x="125" y="170">Hardware Init</text>
-<text x="325" y="170">DRAM Init</text>
-<text x="525" y="170">Full Bootloader</text>
-<text x="700" y="170">OS Boot</text>
-<defs>
-<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![boot_stages](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/boot_stages.svg)
 
 ---
 
@@ -69,20 +48,7 @@ Key features:
 
 ## U-Boot Components
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="600" height="400" fill="#F0F0F0" stroke="black"/>
-<text x="400" y="80" text-anchor="middle" font-weight="bold">U-Boot Architecture</text>
-<rect x="150" y="120" width="200" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="250" y="155" text-anchor="middle">Board Support</text>
-<rect x="450" y="120" width="200" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="550" y="155" text-anchor="middle">Device Drivers</text>
-<rect x="150" y="220" width="200" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="250" y="255" text-anchor="middle">Commands</text>
-<rect x="450" y="220" width="200" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="550" y="255" text-anchor="middle">Filesystems</text>
-<rect x="300" y="320" width="200" height="60" fill="#FFE6FF" stroke="black"/>
-<text x="400" y="355" text-anchor="middle">Core Services</text>
-</svg>
+![u_boot_components](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/u_boot_components.svg)
 
 ---
 
@@ -268,24 +234,7 @@ fdt mknode / mynode
 
 ## Secure Boot
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="150" height="80" fill="#FFE6E6" stroke="black"/>
-<text x="175" y="95" text-anchor="middle">ROM</text>
-<rect x="300" y="50" width="150" height="80" fill="#E6F2FF" stroke="black"/>
-<text x="375" y="95" text-anchor="middle">SPL (signed)</text>
-<rect x="500" y="50" width="150" height="80" fill="#E6FFE6" stroke="black"/>
-<text x="575" y="95" text-anchor="middle">U-Boot (signed)</text>
-<text x="175" y="170">Verify SPL</text>
-<text x="375" y="170">Verify U-Boot</text>
-<text x="575" y="170">Verify Kernel</text>
-<line x1="250" y1="90" x2="300" y2="90" stroke="green" stroke-width="3" marker-end="url(#greenarrow)"/>
-<line x1="450" y1="90" x2="500" y2="90" stroke="green" stroke-width="3" marker-end="url(#greenarrow)"/>
-<defs>
-<marker id="greenarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="green"/>
-</marker>
-</defs>
-</svg>
+![secure_boot](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/secure_boot.svg)
 
 ---
 
@@ -468,29 +417,7 @@ CONFIG_SPL_OS_BOOT=y  # Direct kernel boot
 
 ## Falcon Mode
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Normal vs Falcon Mode</text>
-<text x="200" y="70">Normal:</text>
-<rect x="50" y="80" width="80" height="50" fill="#FFE6E6" stroke="black"/>
-<text x="90" y="110" text-anchor="middle">SPL</text>
-<rect x="150" y="80" width="80" height="50" fill="#E6F2FF" stroke="black"/>
-<text x="190" y="110" text-anchor="middle">U-Boot</text>
-<rect x="250" y="80" width="80" height="50" fill="#E6FFE6" stroke="black"/>
-<text x="290" y="110" text-anchor="middle">Kernel</text>
-<text x="200" y="180">Falcon:</text>
-<rect x="50" y="190" width="80" height="50" fill="#FFE6E6" stroke="black"/>
-<text x="90" y="220" text-anchor="middle">SPL</text>
-<rect x="150" y="190" width="80" height="50" fill="#E6FFE6" stroke="black"/>
-<text x="190" y="220" text-anchor="middle">Kernel</text>
-<line x1="130" y1="105" x2="150" y2="105" stroke="black" marker-end="url(#arrow)"/>
-<line x1="230" y1="105" x2="250" y2="105" stroke="black" marker-end="url(#arrow)"/>
-<line x1="130" y1="215" x2="150" y2="215" stroke="black" marker-end="url(#arrow)"/>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![falcon_mode](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/falcon_mode.svg)
 
 ---
 

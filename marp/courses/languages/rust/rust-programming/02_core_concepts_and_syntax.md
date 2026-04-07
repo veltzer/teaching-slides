@@ -36,26 +36,7 @@ fn main() {
 
 ## Scalar Types
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="300" cy="100" rx="60" ry="30" fill="#673ab7" stroke="#333" stroke-width="2"/>
-  <text x="300" y="105" text-anchor="middle" font-size="12" fill="white">Scalar</text>
-  <rect x="30" y="20" width="120" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="38" text-anchor="middle" font-size="11" font-weight="bold">Integer</text>
-  <text x="90" y="54" text-anchor="middle" font-size="10">i8..i128, u8..u128</text>
-  <rect x="450" y="20" width="120" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="38" text-anchor="middle" font-size="11" font-weight="bold">Float</text>
-  <text x="510" y="54" text-anchor="middle" font-size="10">f32, f64</text>
-  <rect x="30" y="140" width="120" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="158" text-anchor="middle" font-size="11" font-weight="bold">Boolean</text>
-  <text x="90" y="174" text-anchor="middle" font-size="10">true / false</text>
-  <rect x="450" y="140" width="120" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="158" text-anchor="middle" font-size="11" font-weight="bold">Character</text>
-  <text x="510" y="174" text-anchor="middle" font-size="10">4 bytes, Unicode</text>
-  <line x1="245" y1="82" x2="150" y2="55" stroke="#333" stroke-width="1.5"/>
-  <line x1="355" y1="82" x2="450" y2="55" stroke="#333" stroke-width="1.5"/>
-  <line x1="245" y1="118" x2="150" y2="148" stroke="#333" stroke-width="1.5"/>
-  <line x1="355" y1="118" x2="450" y2="148" stroke="#333" stroke-width="1.5"/>
-</svg>
+![scalar_types](../../../../../svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/scalar_types.svg)
 
 ---
 
@@ -159,43 +140,7 @@ fn main() {
 
 ## Compound Types
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="15" width="170" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="35" text-anchor="middle" font-size="12" font-weight="bold">Tuple</text>
-  <text x="105" y="52" text-anchor="middle" font-size="10">(i32, f64, bool)</text>
-  <text x="105" y="68" text-anchor="middle" font-size="10">Fixed size, mixed types</text>
-  <text x="105" y="82" text-anchor="middle" font-size="10">Access: tup.0, tup.1</text>
-  <rect x="215" y="15" width="170" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="35" text-anchor="middle" font-size="12" font-weight="bold">Array</text>
-  <text x="300" y="52" text-anchor="middle" font-size="10">[i32; 5]</text>
-  <text x="300" y="68" text-anchor="middle" font-size="10">Fixed size, same type</text>
-  <text x="300" y="82" text-anchor="middle" font-size="10">Stack allocated</text>
-  <rect x="410" y="15" width="170" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="495" y="35" text-anchor="middle" font-size="12" font-weight="bold">Struct</text>
-  <text x="495" y="52" text-anchor="middle" font-size="10">struct Point { x: f64 }</text>
-  <text x="495" y="68" text-anchor="middle" font-size="10">Named fields</text>
-  <text x="495" y="82" text-anchor="middle" font-size="10">Custom types</text>
-  <rect x="20" y="110" width="560" height="75" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="130" text-anchor="middle" font-size="11" font-weight="bold">Memory Layout</text>
-  <rect x="40" y="140" width="40" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
-  <rect x="80" y="140" width="40" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
-  <rect x="120" y="140" width="40" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
-  <text x="60" y="160" text-anchor="middle" font-size="9">i32</text>
-  <text x="100" y="160" text-anchor="middle" font-size="9">f64</text>
-  <text x="140" y="160" text-anchor="middle" font-size="9">bool</text>
-  <text x="120" y="180" text-anchor="middle" font-size="10">Tuple: contiguous in memory</text>
-  <rect x="250" y="140" width="30" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <rect x="280" y="140" width="30" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <rect x="310" y="140" width="30" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <rect x="340" y="140" width="30" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <rect x="370" y="140" width="30" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <text x="265" y="160" text-anchor="middle" font-size="9">[0]</text>
-  <text x="295" y="160" text-anchor="middle" font-size="9">[1]</text>
-  <text x="325" y="160" text-anchor="middle" font-size="9">[2]</text>
-  <text x="355" y="160" text-anchor="middle" font-size="9">[3]</text>
-  <text x="385" y="160" text-anchor="middle" font-size="9">[4]</text>
-  <text x="325" y="180" text-anchor="middle" font-size="10">Array: same-type, contiguous</text>
-</svg>
+![compound_types](../../../../../svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/compound_types.svg)
 
 ---
 

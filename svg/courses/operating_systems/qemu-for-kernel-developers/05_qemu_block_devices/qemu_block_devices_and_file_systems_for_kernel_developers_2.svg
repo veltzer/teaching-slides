@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">QEMU Block Layer Stack</text>
+  <rect x="170" y="25" width="260" height="30" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="45" text-anchor="middle" font-size="11">Guest Kernel Block Layer (bio)</text>
+  <rect x="170" y="65" width="260" height="30" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="85" text-anchor="middle" font-size="11">Device Frontend (virtio-blk/SCSI)</text>
+  <rect x="170" y="105" width="260" height="30" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="125" text-anchor="middle" font-size="11">QEMU Block Driver (qcow2/raw)</text>
+  <rect x="170" y="145" width="260" height="30" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="165" text-anchor="middle" font-size="11">Host I/O (AIO / io_uring / thread)</text>
+  <line x1="300" y1="55" x2="300" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <line x1="300" y1="95" x2="300" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <line x1="300" y1="135" x2="300" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_qemu_block_devices)"/>
+  <text x="460" y="45" text-anchor="start" font-size="10" fill="#555">Guest</text>
+  <text x="460" y="85" text-anchor="start" font-size="10" fill="#555">Boundary</text>
+  <line x1="440" y1="60" x2="540" y2="60" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
+  <text x="460" y="125" text-anchor="start" font-size="10" fill="#555">QEMU</text>
+  <text x="460" y="165" text-anchor="start" font-size="10" fill="#555">Host</text>
+  <defs>
+    <marker id="arrowd1_04_qemu_block_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -13,58 +13,7 @@
 
 ## Scala Type Hierarchy
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Any</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">AnyVal</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">AnyRef</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Unit</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Boolean</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Number</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Int</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Long</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Double</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Float</text>
-  <rect x="425" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">String</text>
-  <rect x="625" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">List</text>
-  <rect x="25" y="325" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Option</text>
-  <rect x="225" y="325" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Null</text>
-  <rect x="425" y="325" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Nothing</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="100" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="350" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="350" x2="300" y2="350" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="350" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![scala_type_hierarchy](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/scala_type_hierarchy.svg)
 
 ---
 
@@ -97,45 +46,7 @@ val (x, y) = (10, 20)
 
 ## Collection Hierarchy
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Traversable</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Iterable</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Seq</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Set</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Map</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">IndexedSeq</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">LinearSeq</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Vector</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Array</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">List</text>
-  <rect x="425" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Stream</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="150" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="150" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="150" x2="500" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![collection_hierarchy](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_hierarchy.svg)
 
 ---
 
@@ -157,70 +68,13 @@ val d: Double = 3.14159265359  // 64-bit IEEE 754
 
 ## Type Conversion Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Byte</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Short</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Int</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Long</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Float</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Double</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="150" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![type_conversion_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_conversion_flow.svg)
 
 ---
 
 ## String Operations
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">String Input</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">I</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="150" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="150" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="150" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![string_operations](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/string_operations.svg)
 
 ---
 
@@ -254,48 +108,7 @@ val containsScala = str matches ".*Scala.*"
 
 ## Control Structures Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Control Structures</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">I</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">J</text>
-  <rect x="425" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">K</text>
-  <rect x="625" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">L</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="500" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="700" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![control_structures_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/control_structures_flow.svg)
 
 ---
 
@@ -323,42 +136,7 @@ for {
 
 ## Function Types
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Function</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Methods</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">FunctionValues</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">PartialFunctions</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">InstanceMethods</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">StaticMethods</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Lambda</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Anonymous</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">PatternMatch</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Composition</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![function_types](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/function_types.svg)
 
 ---
 
@@ -381,36 +159,7 @@ val sqrt: PartialFunction[Double, Double] = {
 
 ## Higher-Order Functions
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Function</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![higher_order_functions](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/higher_order_functions.svg)
 
 ---
 
@@ -432,39 +181,7 @@ val multiplyByTwo = multiply(2)_
 
 ## Object-Oriented Features
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">OOP</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Classes</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Objects</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Traits</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">CaseClasses</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">CompanionObjects</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Singleton</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Interface</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Mixins</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![object_oriented_features](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/object_oriented_features.svg)
 
 ---
 
@@ -493,33 +210,7 @@ object MathUtils {
 
 ## Trait Hierarchy
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Trait</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Interface</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Implementation</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">AbstractMethods</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ConcreteMembers</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">SelfType</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">StackableModifications</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![trait_hierarchy](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/trait_hierarchy.svg)
 
 ---
 
@@ -544,39 +235,7 @@ trait TimeStampLogger extends Loggable {
 
 ## Collections Operations Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Collection</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">I</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![collections_operations_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collections_operations_flow.svg)
 
 ---
 
@@ -599,48 +258,7 @@ val product = numbers.fold(1)(_ * _)
 
 ## Collection Performance Characteristics
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Collection</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Access</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Insert</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Delete</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">RandomAccess</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">SequentialAccess</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Head</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Tail</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Middle</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">FromHead</text>
-  <rect x="425" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">FromTail</text>
-  <rect x="625" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">FromMiddle</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="500" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="700" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![collection_performance_characteristics](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_performance_characteristics.svg)
 
 ---
 
@@ -667,42 +285,7 @@ val array = Array(1, 2, 3)
 
 ## Pattern Matching Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Pattern Match</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">I</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">J</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![pattern_matching_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/pattern_matching_flow.svg)
 
 ---
 
@@ -725,42 +308,7 @@ def describe(x: Any): String = x match {
 
 ## Error Handling Hierarchy
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ErrorHandling</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">TryObject</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Either</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Option</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Success</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Failure</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Left</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Right</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Some</text>
-  <rect x="225" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">None</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="300" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![error_handling_hierarchy](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/error_handling_hierarchy.svg)
 
 ---
 
@@ -786,36 +334,7 @@ def findUser(id: Int): Option[User] =
 
 ## For Comprehension Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">For Comprehension</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">H</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![for_comprehension_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/for_comprehension_flow.svg)
 
 ---
 
@@ -847,36 +366,7 @@ for {
 
 ## Type Classes
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">TypeClass</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Interface</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Instances</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Usage</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Methods</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ImplicitDefs</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ContextBounds</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ImplicitParameters</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![type_classes](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_classes.svg)
 
 ---
 
@@ -906,33 +396,7 @@ def printThing[A: Show](a: A): Unit =
 
 ## Implicits Flow
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Implicits</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">B</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">C</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">D</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">E</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">F</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">G</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![implicits_flow](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/implicits_flow.svg)
 
 ---
 
@@ -977,39 +441,7 @@ Create a small application demonstrating:
 
 ## Final Architecture
 
-<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
-  <rect x="25" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Main</text>
-  <rect x="225" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">DataModel</text>
-  <rect x="425" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Services</text>
-  <rect x="625" y="25" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ErrorHandling</text>
-  <rect x="25" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">CaseClasses</text>
-  <rect x="225" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Processing</text>
-  <rect x="425" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="500" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Validation</text>
-  <rect x="625" y="125" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="700" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">CustomErrors</text>
-  <rect x="25" y="225" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">ErrorHandlers</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-  <line x1="100" y1="50" x2="300" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="500" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="50" x2="700" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="50" x2="100" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="300" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="500" y1="50" x2="500" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="700" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="50" x2="100" y2="250" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![final_architecture](../../../../svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/final_architecture.svg)
 
 ---
 

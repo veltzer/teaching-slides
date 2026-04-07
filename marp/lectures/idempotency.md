@@ -29,26 +29,7 @@ Without idempotency: chaos and data corruption
 
 ## Real-World Example: Payment Processing
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="210" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect x="10"  y="10"  width="200" height="40" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="110" y="34"  text-anchor="middle" font-size="12" fill="#222222">User clicks "Pay $100"</text>
-  <line x1="110" y1="50" x2="110" y2="70" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10"  y="72"  width="200" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
-  <text x="110" y="96"  text-anchor="middle" font-size="12" fill="#e65100">Network timeout occurs</text>
-  <line x1="110" y1="112" x2="110" y2="132" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10"  y="134" width="200" height="40" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="110" y="158" text-anchor="middle" font-size="12" fill="#c62828">User clicks again (retry)</text>
-  <line x1="210" y1="90" x2="278" y2="90" stroke="#c62828" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr)"/>
-  <rect x="280" y="60" width="200" height="80" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="380" y="90"  text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Two charges!</text>
-  <text x="380" y="110" text-anchor="middle" font-size="12" fill="#333333">$100 + $100 = $200</text>
-  <text x="380" y="128" text-anchor="middle" font-size="11" fill="#555555">Without idempotency</text>
-</svg>
+![real_world_example_payment_processing](../../svg/lectures/idempotency/real_world_example_payment_processing.svg)
 
 **With idempotency**: Second click is safe, only one $100 charge
 
@@ -103,31 +84,7 @@ Same key = same result, regardless of how many times called
 
 ## How Idempotency Keys Work
 
-<svg width="600" height="300" viewBox="0 0 600 300">
-  <rect x="50" y="50" width="100" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" rx="5"/>
-  <text x="100" y="85" text-anchor="middle" font-size="12">Client</text>
-
-  <rect x="450" y="50" width="100" height="60" fill="#f3e5f5" stroke="#4a148c" stroke-width="2" rx="5"/>
-  <text x="500" y="85" text-anchor="middle" font-size="12">Server</text>
-
-  <path d="M 150 80 L 440 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="295" y="75" text-anchor="middle" font-size="10">POST + Idempotency-Key</text>
-
-  <path d="M 440 100 L 150 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="295" y="95" text-anchor="middle" font-size="10">Response + Store Key</text>
-
-  <path d="M 150 140 L 440 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="295" y="135" text-anchor="middle" font-size="10">Same POST + Same Key</text>
-
-  <path d="M 440 160 L 150 160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="295" y="155" text-anchor="middle" font-size="10">Same Response (cached)</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![how_idempotency_keys_work](../../svg/lectures/idempotency/how_idempotency_keys_work.svg)
 
 ---
 
@@ -201,47 +158,7 @@ key = f"{user_id}:{timestamp}:{hash(request_content)}"
 
 ## Request Flow with Idempotency
 
-<svg width="700" height="400" viewBox="0 0 700 400">
-  <rect x="50" y="50" width="120" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="110" y="75" text-anchor="middle" font-size="12">Receive Request</text>
-
-  <rect x="50" y="130" width="120" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="110" y="155" text-anchor="middle" font-size="12">Extract Key</text>
-
-  <rect x="250" y="130" width="120" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="310" y="155" text-anchor="middle" font-size="12">Check Cache</text>
-
-  <rect x="450" y="80" width="120" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="510" y="105" text-anchor="middle" font-size="12">Return Cached</text>
-
-  <rect x="450" y="180" width="120" height="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="510" y="205" text-anchor="middle" font-size="12">Process Request</text>
-
-  <rect x="450" y="260" width="120" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="510" y="285" text-anchor="middle" font-size="12">Store Result</text>
-
-  <rect x="250" y="330" width="120" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="310" y="355" text-anchor="middle" font-size="12">Return Response</text>
-
-  <!-- Arrows -->
-  <path d="M 110 90 L 110 130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 170 150 L 250 150" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 370 140 L 450 110" stroke="#388e3c" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 370 160 L 450 190" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 510 220 L 510 260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 450 280 L 370 350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 570 100 L 600 350" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Labels -->
-  <text x="390" y="125" text-anchor="middle" font-size="10" fill="#388e3c">Found</text>
-  <text x="390" y="175" text-anchor="middle" font-size="10" fill="#d32f2f">Not Found</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![request_flow_with_idempotency](../../svg/lectures/idempotency/request_flow_with_idempotency.svg)
 
 ---
 

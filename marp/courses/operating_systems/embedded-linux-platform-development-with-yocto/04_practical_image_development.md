@@ -4,42 +4,7 @@
 
 ## Image Development Workflow
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12">Choose Base</text>
-
-  <rect x="300" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="375" y="85" text-anchor="middle" font-size="12">Select Packages</text>
-
-  <rect x="500" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="575" y="85" text-anchor="middle" font-size="12">Configure Features</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12">Customize Rootfs</text>
-
-  <rect x="300" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2"/>
-  <text x="375" y="235" text-anchor="middle" font-size="12">Build Image</text>
-
-  <rect x="500" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2"/>
-  <text x="575" y="235" text-anchor="middle" font-size="12">Test & Deploy</text>
-
-  <rect x="300" y="350" width="150" height="60" fill="#e6ffe6" stroke="#000" stroke-width="2"/>
-  <text x="375" y="385" text-anchor="middle" font-size="12">Iterate</text>
-
-  <path d="M 250 80 L 300 80" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 450 80 L 500 80" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 575 110 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 250 235 L 300 235" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 450 235 L 500 235" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 575 260 L 375 350" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 300 380 L 175 260" stroke="#0066cc" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![image_development_workflow](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/image_development_workflow.svg)
 
 ---
 
@@ -226,32 +191,7 @@ PACKAGECONFIG_append = "${@bb.utils.contains('MACHINE_FEATURES', 'bluetooth', ' 
 
 ## QEMU Development
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="300" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold">Host System</text>
-
-  <rect x="250" y="120" width="300" height="180" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
-  <text x="400" y="150" text-anchor="middle" font-size="12" font-weight="bold">QEMU</text>
-
-  <rect x="280" y="180" width="240" height="80" fill="#fff0e6" stroke="#ff6600" stroke-width="2"/>
-  <text x="400" y="210" text-anchor="middle" font-size="11">Guest Linux</text>
-  <text x="400" y="230" text-anchor="middle" font-size="10">ARM/x86/MIPS/PPC</text>
-  <text x="400" y="250" text-anchor="middle" font-size="10">Your Image</text>
-
-  <text x="100" y="220" text-anchor="middle" font-size="11">Network</text>
-  <text x="100" y="240" text-anchor="middle" font-size="11">Storage</text>
-  <text x="100" y="260" text-anchor="middle" font-size="11">Display</text>
-
-  <path d="M 140 220 L 280 220" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 140 240 L 280 240" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 140 260 L 280 260" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-
-  <defs>
-    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![qemu_development](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/qemu_development.svg)
 
 ---
 
@@ -404,30 +344,7 @@ wic create sdimage-bootpart -e core-image-minimal
 
 ## Partition Layout
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="150" width="600" height="100" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="100" y="150" width="80" height="100" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="140" y="185" text-anchor="middle" font-size="11">Boot</text>
-  <text x="140" y="205" text-anchor="middle" font-size="10">64MB</text>
-  <text x="140" y="225" text-anchor="middle" font-size="10">FAT32</text>
-
-  <rect x="180" y="150" width="300" height="100" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="330" y="185" text-anchor="middle" font-size="11">Root FS</text>
-  <text x="330" y="205" text-anchor="middle" font-size="10">2GB</text>
-  <text x="330" y="225" text-anchor="middle" font-size="10">ext4</text>
-
-  <rect x="480" y="150" width="150" height="100" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="555" y="185" text-anchor="middle" font-size="11">Data</text>
-  <text x="555" y="205" text-anchor="middle" font-size="10">1GB</text>
-  <text x="555" y="225" text-anchor="middle" font-size="10">ext4</text>
-
-  <rect x="630" y="150" width="70" height="100" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="665" y="185" text-anchor="middle" font-size="11">Swap</text>
-  <text x="665" y="205" text-anchor="middle" font-size="10">512MB</text>
-
-  <text x="400" y="130" text-anchor="middle" font-size="12" font-weight="bold">SD Card / eMMC Layout</text>
-</svg>
+![partition_layout](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/partition_layout.svg)
 
 ---
 

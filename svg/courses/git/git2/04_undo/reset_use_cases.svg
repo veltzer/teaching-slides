@@ -1,0 +1,15 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">When to Use Each Reset Mode</text>
+  <rect x="50" y="80" width="700" height="80" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="16" font-weight="bold">--soft: "I want to redo my commit"</text>
+  <text x="70" y="130" font-size="13">Use case: Made 3 commits but want to combine them into one</text>
+  <text x="70" y="150" font-size="12" font-family="monospace">git reset --soft HEAD~3 && git commit -m "Feature complete"</text>
+  <rect x="50" y="170" width="700" height="80" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="400" y="195" text-anchor="middle" font-size="16" font-weight="bold">--mixed: "I want to unstage everything"</text>
+  <text x="70" y="220" font-size="13">Use case: Added wrong files to staging, want to start over</text>
+  <text x="70" y="240" font-size="12" font-family="monospace">git reset HEAD  # Unstages all files</text>
+  <rect x="50" y="260" width="700" height="80" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="400" y="285" text-anchor="middle" font-size="16" font-weight="bold">--hard: "I want to throw everything away"</text>
+  <text x="70" y="310" font-size="13">Use case: Experiment failed, go back to clean state</text>
+  <text x="70" y="330" font-size="12" font-family="monospace">git reset --hard HEAD  # ⚠️ Loses all uncommitted work!</text>
+</svg>

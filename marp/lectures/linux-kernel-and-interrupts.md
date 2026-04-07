@@ -68,34 +68,7 @@
 
 ## Why Linux Virtual IRQ Numbers?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="80" fill="#ffcccc" stroke="black"/>
-  <text x="125" y="95" text-anchor="middle">Hardware IRQ</text>
-  <text x="125" y="115" text-anchor="middle">(Platform)</text>
-
-  <rect x="300" y="50" width="150" height="80" fill="#ccffcc" stroke="black"/>
-  <text x="375" y="95" text-anchor="middle">Virtual IRQ</text>
-  <text x="375" y="115" text-anchor="middle">(Linux)</text>
-
-  <rect x="550" y="50" width="150" height="80" fill="#ccccff" stroke="black"/>
-  <text x="625" y="95" text-anchor="middle">IRQ Handler</text>
-  <text x="625" y="115" text-anchor="middle">(Driver)</text>
-
-  <path d="M 200 90 L 300 90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 450 90 L 550 90" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="black"/>
-    </marker>
-  </defs>
-
-  <text x="400" y="200" text-anchor="middle" font-size="14">Benefits:</text>
-  <text x="400" y="230" text-anchor="middle" font-size="12">• Hardware abstraction</text>
-  <text x="400" y="250" text-anchor="middle" font-size="12">• Dynamic allocation</text>
-  <text x="400" y="270" text-anchor="middle" font-size="12">• Sparse IRQ support</text>
-  <text x="400" y="290" text-anchor="middle" font-size="12">• Runtime remapping</text>
-</svg>
+![why_linux_virtual_irq_numbers](../../svg/lectures/linux-kernel-and-interrupts/why_linux_virtual_irq_numbers.svg)
 
 ---
 
@@ -248,29 +221,7 @@ platform_device_register(&my_device);
 
 ## Case 3: ACPI Systems (x86/x64)
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#e6f3ff" stroke="black"/>
-  <text x="400" y="95" text-anchor="middle" font-size="20">ACPI Tables (DSDT/SSDT)</text>
-
-  <rect x="150" y="180" width="120" height="60" fill="#ffffcc" stroke="black"/>
-  <text x="210" y="215" text-anchor="middle">_CRS Method</text>
-
-  <rect x="340" y="180" width="120" height="60" fill="#ffffcc" stroke="black"/>
-  <text x="400" y="215" text-anchor="middle">IRQ Resource</text>
-
-  <rect x="530" y="180" width="120" height="60" fill="#ffffcc" stroke="black"/>
-  <text x="590" y="215" text-anchor="middle">Linux IRQ</text>
-
-  <path d="M 400 130 L 210 180" stroke="black" stroke-width="2"/>
-  <path d="M 270 210 L 340 210" stroke="black" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M 460 210 L 530 210" stroke="black" stroke-width="2" marker-end="url(#arrow2)"/>
-
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![case_3_acpi_systems_x86_x64](../../svg/lectures/linux-kernel-and-interrupts/case_3_acpi_systems_x86_x64.svg)
 
 ---
 
@@ -369,31 +320,7 @@ static struct platform_driver my_driver = {
 
 ## Case 4: Device Tree Systems (ARM/PowerPC)
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="200" height="100" fill="#ffeecc" stroke="black"/>
-  <text x="150" y="90" text-anchor="middle">Device Tree</text>
-  <text x="150" y="110" text-anchor="middle" font-size="12">(DTS/DTB)</text>
-
-  <rect x="300" y="50" width="200" height="100" fill="#ccffcc" stroke="black"/>
-  <text x="400" y="90" text-anchor="middle">OF Functions</text>
-  <text x="400" y="110" text-anchor="middle" font-size="12">(of_irq_get)</text>
-
-  <rect x="550" y="50" width="200" height="100" fill="#ccccff" stroke="black"/>
-  <text x="650" y="90" text-anchor="middle">Linux IRQ</text>
-  <text x="650" y="110" text-anchor="middle" font-size="12">(Virtual)</text>
-
-  <path d="M 250 100 L 300 100" stroke="black" stroke-width="2" marker-end="url(#arrow3)"/>
-  <path d="M 500 100 L 550 100" stroke="black" stroke-width="2" marker-end="url(#arrow3)"/>
-
-  <text x="150" y="200" text-anchor="middle" font-size="14">interrupts = &lt;0 25 4&gt;;</text>
-  <text x="150" y="220" text-anchor="middle" font-size="12">GIC_SPI 25 IRQ_TYPE_LEVEL_HIGH</text>
-
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![case_4_device_tree_systems_arm_powerpc](../../svg/lectures/linux-kernel-and-interrupts/case_4_device_tree_systems_arm_powerpc.svg)
 
 ---
 

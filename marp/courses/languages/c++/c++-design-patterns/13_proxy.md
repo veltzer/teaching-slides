@@ -12,34 +12,7 @@
 
 ## Proxy Structure
 
-<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="60" width="120" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="80" y="90" text-anchor="middle" font-size="12">Client</text>
-
-  <rect x="190" y="20" width="150" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="265" y="45" text-anchor="middle" font-size="13" font-weight="bold">Subject</text>
-  <text x="265" y="65" text-anchor="middle" font-size="11" font-style="italic">+ request()</text>
-
-  <rect x="120" y="130" width="130" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="185" y="150" text-anchor="middle" font-size="12">Proxy</text>
-  <text x="185" y="168" text-anchor="middle" font-size="10">+ request()</text>
-
-  <rect x="310" y="130" width="150" height="50" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="385" y="150" text-anchor="middle" font-size="12">RealSubject</text>
-  <text x="385" y="168" text-anchor="middle" font-size="10">+ request()</text>
-
-  <line x1="140" y1="85" x2="190" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#pxArr)"/>
-  <line x1="185" y1="130" x2="240" y2="80" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="385" y1="130" x2="290" y2="80" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="250" y1="155" x2="310" y2="155" stroke="#333" stroke-width="1.5" marker-end="url(#pxArr)"/>
-  <text x="280" y="148" font-size="9">delegates</text>
-
-  <defs>
-    <marker id="pxArr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![proxy_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/13_proxy/proxy_structure.svg)
 
 ---
 

@@ -9,25 +9,7 @@ C++ provides a comprehensive I/O system based on streams
 - Type-safe and extensible compared to C's printf/scanf
 - Consistent interface for files, strings, and console I/O
 
-<svg width="600" height="200" viewBox="0 0 600 200">
-  <rect x="50" y="50" width="100" height="50" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="100" y="80" text-anchor="middle" font-size="14">Source</text>
-
-  <rect x="250" y="50" width="100" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Stream</text>
-
-  <rect x="450" y="50" width="100" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="500" y="80" text-anchor="middle" font-size="14">Destination</text>
-
-  <path d="M150 75 L250 75" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M350 75 L450 75" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![common_background_of_i_o_streams](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/common_background_of_i_o_streams.svg)
 
 ---
 
@@ -39,47 +21,7 @@ All stream classes derive from common base classes
 - Input streams derive from `istream`
 - Output streams derive from `ostream`
 
-<svg width="700" height="300" viewBox="0 0 700 300">
-  <rect x="300" y="20" width="100" height="40" fill="#ffecb3" stroke="#f57f17" stroke-width="2"/>
-  <text x="350" y="45" text-anchor="middle" font-size="12">ios_base</text>
-
-  <rect x="300" y="80" width="100" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="350" y="105" text-anchor="middle" font-size="12">ios&lt;char&gt;</text>
-
-  <rect x="150" y="140" width="100" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="200" y="165" text-anchor="middle" font-size="12">istream</text>
-
-  <rect x="450" y="140" width="100" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="500" y="165" text-anchor="middle" font-size="12">ostream</text>
-
-  <rect x="50" y="200" width="80" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="90" y="225" text-anchor="middle" font-size="10">ifstream</text>
-
-  <rect x="150" y="200" width="80" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="190" y="225" text-anchor="middle" font-size="10">istringstream</text>
-
-  <rect x="250" y="200" width="80" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="290" y="225" text-anchor="middle" font-size="10">cin</text>
-
-  <rect x="420" y="200" width="80" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="460" y="225" text-anchor="middle" font-size="10">ofstream</text>
-
-  <rect x="520" y="200" width="80" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="560" y="225" text-anchor="middle" font-size="10">ostringstream</text>
-
-  <rect x="620" y="200" width="80" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="660" y="225" text-anchor="middle" font-size="10">cout</text>
-
-  <line x1="350" y1="60" x2="350" y2="80" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="120" x2="200" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="120" x2="500" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="200" y1="180" x2="90" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="200" y1="180" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="200" y1="180" x2="290" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="500" y1="180" x2="460" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="500" y1="180" x2="560" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="500" y1="180" x2="660" y2="200" stroke="#333" stroke-width="2"/>
-</svg>
+![stream_hierarchy_overview](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_hierarchy_overview.svg)
 
 ---
 
@@ -744,35 +686,7 @@ Stream buffers manage the actual I/O operations:
 - `stringbuf`: string buffer
 - Custom buffer classes possible
 
-<svg width="600" height="250" viewBox="0 0 600 250">
-  <rect x="250" y="20" width="100" height="40" fill="#ffecb3" stroke="#f57f17" stroke-width="2"/>
-  <text x="300" y="45" text-anchor="middle" font-size="12">streambuf</text>
-
-  <rect x="100" y="100" width="100" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="150" y="125" text-anchor="middle" font-size="12">filebuf</text>
-
-  <rect x="250" y="100" width="100" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="300" y="125" text-anchor="middle" font-size="12">stringbuf</text>
-
-  <rect x="400" y="100" width="100" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="450" y="125" text-anchor="middle" font-size="12">custom buffer</text>
-
-  <rect x="50" y="180" width="80" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
-  <text x="90" y="200" text-anchor="middle" font-size="10">Input Buffer</text>
-
-  <rect x="150" y="180" width="80" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1"/>
-  <text x="190" y="200" text-anchor="middle" font-size="10">Output Buffer</text>
-
-  <rect x="250" y="180" width="80" height="30" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="290" y="200" text-anchor="middle" font-size="10">Get Area</text>
-
-  <rect x="350" y="180" width="80" height="30" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="390" y="200" text-anchor="middle" font-size="10">Put Area</text>
-
-  <line x1="300" y1="60" x2="150" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="300" y1="60" x2="300" y2="100" stroke="#333" stroke-width="2"/>
-  <line x1="300" y1="60" x2="450" y2="100" stroke="#333" stroke-width="2"/>
-</svg>
+![stream_buffer_classes_overview](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_buffer_classes_overview.svg)
 
 ---
 

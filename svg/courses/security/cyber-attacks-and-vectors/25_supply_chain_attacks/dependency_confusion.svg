@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="330" viewBox="0 0 660 330">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="660" height="330" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Dependency Confusion Attack</text>
+  <text x="330" y="50" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Company uses internal package: @company/auth-utils (private registry)</text>
+  <text x="330" y="68" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Build system resolves: 1. Private registry, 2. Public registry (fallback)</text>
+  <!-- private reg -->
+  <rect x="40" y="90" width="180" height="70" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="130" y="112" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Private Registry</text>
+  <text x="130" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">auth-utils v1.2.3</text>
+  <text x="130" y="148" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(legitimate)</text>
+  <!-- public reg -->
+  <rect x="440" y="90" width="180" height="70" fill="#ffebee" rx="4" stroke="#c62828" stroke-width="1.5"/>
+  <text x="530" y="112" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Public Registry</text>
+  <text x="530" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">auth-utils v99.0.0</text>
+  <text x="530" y="148" font-family="sans-serif" font-size="11" fill="#c62828" text-anchor="middle">← MALICIOUS</text>
+  <!-- arrows down to build system -->
+  <line x1="130" y1="160" x2="280" y2="215" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="530" y1="160" x2="380" y2="215" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- build system box -->
+  <rect x="200" y="215" width="260" height="50" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="2"/>
+  <text x="330" y="236" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Build System: v99 &gt; v1.2.3</text>
+  <text x="330" y="254" font-family="sans-serif" font-size="12" fill="#c62828" text-anchor="middle">Installs PUBLIC package! ← WRONG</text>
+  <text x="330" y="295" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Alex Birsan (2021): Compromised Apple, Microsoft, PayPal, Netflix, Uber</text>
+  <text x="330" y="313" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">with this technique</text>
+</svg>

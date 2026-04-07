@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Finding Process IDs</text>
+  <defs>
+    <marker id="arrowpid" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="220" y="35" width="160" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="11" font-weight="bold">Find PID of "nginx"</text>
+  <line x1="250" y1="70" x2="100" y2="95" stroke="#333" stroke-width="1.5" marker-end="url(#arrowpid)"/>
+  <line x1="300" y1="70" x2="300" y2="95" stroke="#333" stroke-width="1.5" marker-end="url(#arrowpid)"/>
+  <line x1="350" y1="70" x2="500" y2="95" stroke="#333" stroke-width="1.5" marker-end="url(#arrowpid)"/>
+  <rect x="20" y="95" width="160" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="113" text-anchor="middle" font-size="10" font-weight="bold">ps aux | grep</text>
+  <text x="100" y="130" text-anchor="middle" font-size="9">classic, verbose output</text>
+  <rect x="220" y="95" width="160" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="113" text-anchor="middle" font-size="10" font-weight="bold">pgrep nginx</text>
+  <text x="300" y="130" text-anchor="middle" font-size="9">returns PIDs only</text>
+  <rect x="420" y="95" width="160" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="113" text-anchor="middle" font-size="10" font-weight="bold">pidof nginx</text>
+  <text x="500" y="130" text-anchor="middle" font-size="9">exact name match</text>
+  <rect x="100" y="160" width="400" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="4" opacity="0.6"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10">Once you have the PID, use it with kill, top -p, strace, etc.</text>
+</svg>

@@ -14,25 +14,7 @@
 
 ## Toolchain Components
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Build Process</text>
-  <rect x="100" y="50" width="200" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="75" text-anchor="middle" font-size="14">Source Files (.c, .h)</text>
-  <path d="M 200 90 L 200 110" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="110" width="200" height="40" fill="#ffddcc" stroke="#333"/>
-  <text x="200" y="135" text-anchor="middle" font-size="14">Preprocessor (cpp)</text>
-  <path d="M 200 150 L 200 170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="170" width="200" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="195" text-anchor="middle" font-size="14">Compiler (cc)</text>
-  <path d="M 200 210 L 200 230" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="230" width="200" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="255" text-anchor="middle" font-size="14">Assembler & Linker</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![toolchain_components](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/toolchain_components.svg)
 
 ---
 
@@ -330,19 +312,7 @@ Resource global_resource;  // Static initialization
 
 ## Runtime Memory Layout
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Runtime Memory</text>
-  <rect x="100" y="50" width="200" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="75" text-anchor="middle" font-size="14">Stack (grows down ↓)</text>
-  <rect x="100" y="90" width="200" height="60" fill="#f0f0f0" stroke="#333"/>
-  <text x="200" y="125" text-anchor="middle" font-size="14">Free Space</text>
-  <rect x="100" y="150" width="200" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="175" text-anchor="middle" font-size="14">Heap (grows up ↑)</text>
-  <rect x="100" y="190" width="200" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="215" text-anchor="middle" font-size="14">BSS (zeroed)</text>
-  <rect x="100" y="230" width="200" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="255" text-anchor="middle" font-size="14">Data (initialized)</text>
-</svg>
+![runtime_memory_layout](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/runtime_memory_layout.svg)
 
 ---
 

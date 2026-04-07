@@ -6,18 +6,7 @@
 
 ## Search Analytics Overview
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">Metrics</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">Logging</text>
-  <rect x="50" y="130" width="100" height="50" fill="#FF9800" rx="5"/>
-  <text x="100" y="160" text-anchor="middle" fill="white">Tracking</text>
-  <rect x="180" y="130" width="100" height="50" fill="#9C27B0" rx="5"/>
-  <text x="230" y="160" text-anchor="middle" fill="white">Analysis</text>
-  <rect x="310" y="90" width="80" height="50" fill="#F44336" rx="5"/>
-  <text x="350" y="120" text-anchor="middle" fill="white">Action</text>
-</svg>
+![search_analytics_overview](../../../../svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_analytics_overview.svg)
 
 ---
 
@@ -660,14 +649,7 @@ def analyze_query_expansions(self):
 
 ## Search Funnel Analysis
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="100,50 300,50 280,100 120,100" fill="#4CAF50"/>
-  <text x="200" y="80" text-anchor="middle" fill="white">Search (100%)</text>
-  <polygon points="120,110 280,110 260,160 140,160" fill="#2196F3"/>
-  <text x="200" y="140" text-anchor="middle" fill="white">Click (40%)</text>
-  <polygon points="140,170 260,170 240,220 160,220" fill="#FF9800"/>
-  <text x="200" y="200" text-anchor="middle" fill="white">Convert (15%)</text>
-</svg>
+![search_funnel_analysis](../../../../svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_funnel_analysis.svg)
 
 ---
 
@@ -984,22 +966,7 @@ def generate_recommendations(self, analytics_data):
 
 ## Continuous Improvement
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="200" cy="100" r="80" fill="none" stroke="#4CAF50" stroke-width="3"/>
-  <path d="M200,20 L220,40" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="200" y="15" text-anchor="middle" font-size="12">Measure</text>
-  <path d="M280,100 L260,120" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="320" y="105" text-anchor="middle" font-size="12">Analyze</text>
-  <path d="M200,180 L180,160" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="200" y="195" text-anchor="middle" font-size="12">Improve</text>
-  <path d="M120,100 L140,80" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="80" y="105" text-anchor="middle" font-size="12">Deploy</text>
-  <defs>
-    <marker id="arrow4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4CAF50"/>
-    </marker>
-  </defs>
-</svg>
+![continuous_improvement](../../../../svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/continuous_improvement.svg)
 
 ---
 

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="380" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <rect x="20" y="20" width="155" height="65" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="97" y="47" text-anchor="middle" font-size="13" fill="#222">App Pod</text>
+  <text x="97" y="66" text-anchor="middle" font-size="11" fill="#555">/metrics</text>
+  <rect x="240" y="20" width="155" height="65" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="317" y="47" text-anchor="middle" font-size="13" fill="#222">Node Exporter</text>
+  <line x1="240" y1="52" x2="175" y2="52" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="97" y1="85" x2="97" y2="155" stroke="#555" stroke-width="1.5"/>
+  <line x1="317" y1="85" x2="317" y2="155" stroke="#555" stroke-width="1.5"/>
+  <line x1="97" y1="155" x2="220" y2="155" stroke="#555" stroke-width="1.5"/>
+  <line x1="317" y1="155" x2="220" y2="155" stroke="#555" stroke-width="1.5"/>
+  <line x1="220" y1="155" x2="220" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="120" y="160" width="195" height="100" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="217" y="185" text-anchor="middle" font-size="13" fill="#222">Prometheus Server</text>
+  <rect x="140" y="195" width="155" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="217" y="220" text-anchor="middle" font-size="11" fill="#444">TSDB (Time Series DB)</text>
+  <line x1="315" y1="210" x2="355" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="355" y="160" width="175" height="100" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="442" y="185" text-anchor="middle" font-size="13" fill="#222">Alertmanager</text>
+  <text x="442" y="208" text-anchor="middle" font-size="11" fill="#555">→ Slack</text>
+  <text x="442" y="224" text-anchor="middle" font-size="11" fill="#555">→ PagerDuty</text>
+  <text x="442" y="240" text-anchor="middle" font-size="11" fill="#555">→ Email</text>
+  <line x1="217" y1="260" x2="217" y2="295" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="120" y="295" width="195" height="65" rx="4" fill="#ede7f6" stroke="#333" stroke-width="1.5"/>
+  <text x="217" y="322" text-anchor="middle" font-size="14" fill="#222" font-weight="bold">Grafana</text>
+  <text x="217" y="342" text-anchor="middle" font-size="11" fill="#555">(Dashboards)</text>
+</svg>

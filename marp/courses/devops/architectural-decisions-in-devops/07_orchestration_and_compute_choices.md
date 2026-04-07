@@ -15,29 +15,7 @@
 ---
 ## The Compute Spectrum
 
-<svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1565c0;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7b1fa2;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect x="10" y="90" width="680" height="12" rx="6" fill="url(#grad1)" opacity="0.3"/>
-  <rect x="30" y="50" width="130" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="95" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">VMs / Bare Metal</text>
-  <text x="95" y="95" text-anchor="middle" font-size="9" fill="#333">Full control</text>
-  <rect x="190" y="50" width="130" height="60" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
-  <text x="255" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#283593">Self-Managed K8s</text>
-  <text x="255" y="95" text-anchor="middle" font-size="9" fill="#333">Orchestrated containers</text>
-  <rect x="350" y="50" width="130" height="60" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="415" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#6a1b9a">Managed K8s</text>
-  <text x="415" y="95" text-anchor="middle" font-size="9" fill="#333">EKS, AKS, GKE</text>
-  <rect x="510" y="50" width="130" height="60" rx="8" fill="#fce4ec" stroke="#b71c1c" stroke-width="2"/>
-  <text x="575" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#b71c1c">Serverless</text>
-  <text x="575" y="95" text-anchor="middle" font-size="9" fill="#333">Lambda, Cloud Run</text>
-  <text x="95" y="145" text-anchor="middle" font-size="10" fill="#555">More Control</text>
-  <text x="575" y="145" text-anchor="middle" font-size="10" fill="#555">Less Control</text>
-</svg>
+![the_compute_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
 
 - Moving right trades **control** for **convenience**
 - Each step reduces operational burden but increases abstraction
@@ -68,42 +46,7 @@
 ---
 ## Kubernetes Architecture
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="680" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="350" y="35" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Control Plane</text>
-  <rect x="30" y="45" width="90" height="35" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="75" y="67" text-anchor="middle" font-size="9" fill="#333">API Server</text>
-  <rect x="140" y="45" width="90" height="35" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="185" y="67" text-anchor="middle" font-size="9" fill="#333">etcd</text>
-  <rect x="250" y="45" width="90" height="35" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="295" y="67" text-anchor="middle" font-size="9" fill="#333">Scheduler</text>
-  <rect x="360" y="45" width="120" height="35" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="420" y="67" text-anchor="middle" font-size="9" fill="#333">Controller Mgr</text>
-  <rect x="500" y="45" width="120" height="35" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="560" y="67" text-anchor="middle" font-size="9" fill="#333">Cloud Controller</text>
-  <line x1="350" y1="90" x2="170" y2="120" stroke="#666" stroke-width="1.5" stroke-dasharray="4"/>
-  <line x1="350" y1="90" x2="530" y2="120" stroke="#666" stroke-width="1.5" stroke-dasharray="4"/>
-  <rect x="30" y="120" width="200" height="160" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="130" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Worker Node 1</text>
-  <rect x="50" y="150" width="70" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="85" y="170" text-anchor="middle" font-size="8" fill="#333">kubelet</text>
-  <rect x="140" y="150" width="70" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="175" y="170" text-anchor="middle" font-size="8" fill="#333">kube-proxy</text>
-  <rect x="50" y="190" width="70" height="45" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="85" y="215" text-anchor="middle" font-size="8" fill="#333">Pod A</text>
-  <rect x="140" y="190" width="70" height="45" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="175" y="215" text-anchor="middle" font-size="8" fill="#333">Pod B</text>
-  <rect x="460" y="120" width="200" height="160" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="560" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Worker Node 2</text>
-  <rect x="480" y="150" width="70" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="515" y="170" text-anchor="middle" font-size="8" fill="#333">kubelet</text>
-  <rect x="570" y="150" width="70" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="605" y="170" text-anchor="middle" font-size="8" fill="#333">kube-proxy</text>
-  <rect x="480" y="190" width="70" height="45" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="515" y="215" text-anchor="middle" font-size="8" fill="#333">Pod C</text>
-  <rect x="570" y="190" width="70" height="45" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="605" y="215" text-anchor="middle" font-size="8" fill="#333">Pod D</text>
-</svg>
+![kubernetes_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/kubernetes_architecture.svg)
 
 ---
 ## Operational Complexity Comparison
@@ -176,26 +119,7 @@ NOT justified:
 ---
 ## Cost Comparison at Scale
 
-<svg viewBox="0 0 650 280" xmlns="http://www.w3.org/2000/svg">
-  <line x1="80" y1="20" x2="80" y2="240" stroke="#333" stroke-width="2"/>
-  <line x1="80" y1="240" x2="620" y2="240" stroke="#333" stroke-width="2"/>
-  <text x="40" y="135" text-anchor="middle" font-size="12" fill="#333" transform="rotate(-90,40,135)">Monthly Cost ($)</text>
-  <text x="350" y="270" text-anchor="middle" font-size="12" fill="#333">Request Volume / Traffic</text>
-  <text x="150" y="255" font-size="9" fill="#666">Low</text>
-  <text x="350" y="255" font-size="9" fill="#666">Medium</text>
-  <text x="550" y="255" font-size="9" fill="#666">High</text>
-  <polyline points="80,210 200,200 350,165 500,130 600,95" fill="none" stroke="#1565c0" stroke-width="3"/>
-  <polyline points="80,185 200,175 350,145 500,120 600,105" fill="none" stroke="#6a1b9a" stroke-width="3"/>
-  <polyline points="80,230 200,210 350,155 500,80 600,30" fill="none" stroke="#e65100" stroke-width="3"/>
-  <rect x="420" y="20" width="12" height="12" fill="#1565c0"/>
-  <text x="440" y="31" font-size="10" fill="#333">Kubernetes</text>
-  <rect x="420" y="40" width="12" height="12" fill="#6a1b9a"/>
-  <text x="440" y="51" font-size="10" fill="#333">Managed Containers</text>
-  <rect x="420" y="60" width="12" height="12" fill="#e65100"/>
-  <text x="440" y="71" font-size="10" fill="#333">Serverless</text>
-  <text x="300" y="110" font-size="9" fill="#e65100" font-style="italic">Serverless cost rises steeply</text>
-  <text x="180" y="195" font-size="9" fill="#1565c0" font-style="italic">K8s base cost is fixed</text>
-</svg>
+![cost_comparison_at_scale](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cost_comparison_at_scale.svg)
 
 ---
 ## Scaling Characteristics
@@ -228,32 +152,7 @@ NOT justified:
 ---
 ## Cluster Strategy: Cluster Per Team
 
-<svg viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="180" height="160" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="110" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">Team A Cluster</text>
-  <rect x="40" y="60" width="60" height="35" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="70" y="82" text-anchor="middle" font-size="8" fill="#333">Service 1</text>
-  <rect x="120" y="60" width="60" height="35" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="150" y="82" text-anchor="middle" font-size="8" fill="#333">Service 2</text>
-  <rect x="40" y="110" width="140" height="25" rx="4" fill="#e8eaf6" stroke="#283593" stroke-width="1"/>
-  <text x="110" y="127" text-anchor="middle" font-size="8" fill="#333">Dedicated Control Plane</text>
-  <rect x="235" y="20" width="180" height="160" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="325" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">Team B Cluster</text>
-  <rect x="255" y="60" width="60" height="35" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="285" y="82" text-anchor="middle" font-size="8" fill="#333">Service 3</text>
-  <rect x="335" y="60" width="60" height="35" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="365" y="82" text-anchor="middle" font-size="8" fill="#333">Service 4</text>
-  <rect x="255" y="110" width="140" height="25" rx="4" fill="#e8eaf6" stroke="#283593" stroke-width="1"/>
-  <text x="325" y="127" text-anchor="middle" font-size="8" fill="#333">Dedicated Control Plane</text>
-  <rect x="450" y="20" width="180" height="160" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="540" y="45" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Team C Cluster</text>
-  <rect x="470" y="60" width="60" height="35" rx="4" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="500" y="82" text-anchor="middle" font-size="8" fill="#333">Service 5</text>
-  <rect x="550" y="60" width="60" height="35" rx="4" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="580" y="82" text-anchor="middle" font-size="8" fill="#333">Service 6</text>
-  <rect x="470" y="110" width="140" height="25" rx="4" fill="#e8eaf6" stroke="#283593" stroke-width="1"/>
-  <text x="540" y="127" text-anchor="middle" font-size="8" fill="#333">Dedicated Control Plane</text>
-</svg>
+![cluster_strategy_cluster_per_team](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
 
 - Full blast radius isolation between teams
 - Higher cost: each cluster has its own control plane
@@ -275,32 +174,7 @@ NOT justified:
 ---
 ## Cluster Strategy: Shared Clusters
 
-<svg viewBox="0 0 650 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="10" width="610" height="230" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="325" y="35" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">Shared Cluster</text>
-  <rect x="40" y="50" width="170" height="80" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="125" y="70" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">ns: team-a</text>
-  <rect x="55" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="82" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 1</text>
-  <rect x="120" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="147" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 2</text>
-  <rect x="240" y="50" width="170" height="80" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="325" y="70" text-anchor="middle" font-size="11" font-weight="bold" fill="#6a1b9a">ns: team-b</text>
-  <rect x="255" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="282" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 3</text>
-  <rect x="320" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="347" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 4</text>
-  <rect x="440" y="50" width="170" height="80" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="525" y="70" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">ns: team-c</text>
-  <rect x="455" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="482" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 5</text>
-  <rect x="520" y="80" width="55" height="25" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="547" y="97" text-anchor="middle" font-size="7" fill="#333">Svc 6</text>
-  <rect x="40" y="145" width="570" height="35" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="325" y="168" text-anchor="middle" font-size="11" fill="#283593">Shared Control Plane + Shared Node Pool</text>
-  <rect x="40" y="190" width="570" height="35" rx="6" fill="#fce4ec" stroke="#b71c1c" stroke-width="1.5"/>
-  <text x="325" y="213" text-anchor="middle" font-size="11" fill="#b71c1c">NetworkPolicy + RBAC + OPA/Gatekeeper Enforcement</text>
-</svg>
+![cluster_strategy_shared_clusters](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_shared_clusters.svg)
 
 ---
 ## Shared Clusters: Pros and Cons
@@ -439,86 +313,17 @@ Tools for self-management:
 ---
 ## Self-Managed vs Managed: Decision Tree
 
-<svg viewBox="0 0 650 260" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="10" width="250" height="40" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="325" y="35" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">Need Kubernetes?</text>
-  <line x1="250" y1="50" x2="130" y2="80" stroke="#333" stroke-width="1.5"/>
-  <line x1="400" y1="50" x2="520" y2="80" stroke="#333" stroke-width="1.5"/>
-  <text x="170" y="65" font-size="9" fill="#2e7d32">Yes</text>
-  <text x="475" y="65" font-size="9" fill="#b71c1c">No</text>
-  <rect x="30" y="80" width="200" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="130" y="105" text-anchor="middle" font-size="11" fill="#2e7d32">On-prem or air-gapped?</text>
-  <rect x="420" y="80" width="200" height="40" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="520" y="105" text-anchor="middle" font-size="11" fill="#e65100">Use managed containers</text>
-  <line x1="80" y1="120" x2="80" y2="150" stroke="#333" stroke-width="1.5"/>
-  <line x1="180" y1="120" x2="180" y2="150" stroke="#333" stroke-width="1.5"/>
-  <text x="60" y="140" font-size="9" fill="#2e7d32">Yes</text>
-  <text x="195" y="140" font-size="9" fill="#b71c1c">No</text>
-  <rect x="10" y="150" width="140" height="40" rx="8" fill="#fce4ec" stroke="#b71c1c" stroke-width="2"/>
-  <text x="80" y="175" text-anchor="middle" font-size="11" fill="#b71c1c">Self-managed K8s</text>
-  <rect x="180" y="150" width="140" height="40" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="250" y="175" text-anchor="middle" font-size="11" fill="#6a1b9a">Managed K8s</text>
-  <rect x="10" y="200" width="140" height="45" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1"/>
-  <text x="80" y="218" text-anchor="middle" font-size="8" fill="#333">kubeadm, kops, Rancher</text>
-  <text x="80" y="235" text-anchor="middle" font-size="8" fill="#c62828">High ops burden</text>
-  <rect x="180" y="200" width="140" height="45" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1"/>
-  <text x="250" y="218" text-anchor="middle" font-size="8" fill="#333">EKS, AKS, GKE</text>
-  <text x="250" y="235" text-anchor="middle" font-size="8" fill="#6a1b9a">Medium ops burden</text>
-</svg>
+![self_managed_vs_managed_decision_tree](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/self_managed_vs_managed_decision_tree.svg)
 
 ---
 ## Serverless Architecture Flow
 
-<svg viewBox="0 0 650 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="30" width="100" height="50" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="70" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565c0">Event</text>
-  <text x="70" y="70" text-anchor="middle" font-size="8" fill="#555">HTTP / Queue</text>
-  <line x1="120" y1="55" x2="170" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="170" y="30" width="110" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="225" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">API Gateway</text>
-  <text x="225" y="70" text-anchor="middle" font-size="8" fill="#555">Route + Auth</text>
-  <line x1="280" y1="55" x2="330" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="330" y="20" width="120" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="390" y="45" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Function</text>
-  <text x="390" y="60" text-anchor="middle" font-size="8" fill="#555">Your Code</text>
-  <text x="390" y="75" text-anchor="middle" font-size="8" fill="#555">Runs on demand</text>
-  <line x1="450" y1="55" x2="500" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <rect x="500" y="30" width="120" height="50" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="560" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#6a1b9a">Backend</text>
-  <text x="560" y="70" text-anchor="middle" font-size="8" fill="#555">DB / Storage / API</text>
-  <rect x="120" y="120" width="420" height="60" rx="8" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5" stroke-dasharray="6"/>
-  <text x="330" y="145" text-anchor="middle" font-size="11" font-weight="bold" fill="#666">Provider Manages Everything Below</text>
-  <text x="200" y="165" font-size="9" fill="#888">OS</text>
-  <text x="270" y="165" font-size="9" fill="#888">Runtime</text>
-  <text x="340" y="165" font-size="9" fill="#888">Scaling</text>
-  <text x="410" y="165" font-size="9" fill="#888">Networking</text>
-  <text x="480" y="165" font-size="9" fill="#888">Security</text>
-</svg>
+![serverless_architecture_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/serverless_architecture_flow.svg)
 
 ---
 ## Cold Start: What Happens
 
-<svg viewBox="0 0 650 180" xmlns="http://www.w3.org/2000/svg">
-  <text x="20" y="25" font-size="11" font-weight="bold" fill="#333">Cold Start Timeline</text>
-  <rect x="20" y="40" width="600" height="30" rx="4" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <rect x="20" y="40" width="100" height="30" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
-  <text x="70" y="60" text-anchor="middle" font-size="8" fill="#333">Download Code</text>
-  <rect x="120" y="40" width="80" height="30" rx="0" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="160" y="60" text-anchor="middle" font-size="8" fill="#333">Init Runtime</text>
-  <rect x="200" y="40" width="100" height="30" rx="0" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="250" y="60" text-anchor="middle" font-size="8" fill="#333">Init Framework</text>
-  <rect x="300" y="40" width="320" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="460" y="60" text-anchor="middle" font-size="8" fill="#333">Execute Function (Warm)</text>
-  <text x="20" y="100" font-size="11" font-weight="bold" fill="#333">Warm Start Timeline</text>
-  <rect x="20" y="110" width="600" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="320" y="130" text-anchor="middle" font-size="8" fill="#333">Execute Function (Instance Already Running)</text>
-  <text x="170" y="165" font-size="9" fill="#c62828">Cold: 100ms - 10s+ depending on runtime</text>
-</svg>
+![cold_start_what_happens](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
 
 - Cold starts happen when no idle instance exists
 - Frequency depends on traffic patterns and provider
@@ -557,21 +362,7 @@ Mitigation strategies:
 ---
 ## Vendor Lock-In Depth
 
-<svg viewBox="0 0 650 240" xmlns="http://www.w3.org/2000/svg">
-  <text x="325" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Lock-In Depth by Component</text>
-  <rect x="50" y="45" width="550" height="35" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="325" y="67" text-anchor="middle" font-size="11" fill="#2e7d32">Function Code (Portable)</text>
-  <text x="610" y="67" font-size="9" fill="#2e7d32">Low</text>
-  <rect x="50" y="90" width="550" height="35" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="325" y="112" text-anchor="middle" font-size="11" fill="#9e6e06">Runtime Configuration (Semi-Portable)</text>
-  <text x="610" y="112" font-size="9" fill="#f9a825">Med</text>
-  <rect x="50" y="135" width="550" height="35" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="2"/>
-  <text x="325" y="157" text-anchor="middle" font-size="11" fill="#e65100">Event Sources + Triggers (Provider-Specific)</text>
-  <text x="610" y="157" font-size="9" fill="#e65100">High</text>
-  <rect x="50" y="180" width="550" height="35" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
-  <text x="325" y="202" text-anchor="middle" font-size="11" fill="#c62828">IAM + Permissions + Integrations (Deeply Locked)</text>
-  <text x="610" y="202" font-size="9" fill="#c62828">Very High</text>
-</svg>
+![vendor_lock_in_depth](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/vendor_lock_in_depth.svg)
 
 ---
 ## Serverless Lock-In: Practical Examples
@@ -628,32 +419,7 @@ Event-driven workloads align best with serverless economics.
 ---
 ## Event-Driven Serverless Flow
 
-<svg viewBox="0 0 650 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="100" height="40" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="70" y="45" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565c0">S3 Upload</text>
-  <rect x="20" y="75" width="100" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="70" y="100" text-anchor="middle" font-size="9" font-weight="bold" fill="#2e7d32">SQS Queue</text>
-  <rect x="20" y="130" width="100" height="40" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="70" y="155" text-anchor="middle" font-size="9" font-weight="bold" fill="#e65100">Schedule</text>
-  <rect x="20" y="185" width="100" height="40" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="70" y="210" text-anchor="middle" font-size="9" font-weight="bold" fill="#6a1b9a">DB Stream</text>
-  <line x1="120" y1="40" x2="220" y2="115" stroke="#1565c0" stroke-width="1.5"/>
-  <line x1="120" y1="95" x2="220" y2="115" stroke="#2e7d32" stroke-width="1.5"/>
-  <line x1="120" y1="150" x2="220" y2="125" stroke="#e65100" stroke-width="1.5"/>
-  <line x1="120" y1="205" x2="220" y2="130" stroke="#6a1b9a" stroke-width="1.5"/>
-  <rect x="220" y="95" width="130" height="55" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
-  <text x="285" y="118" text-anchor="middle" font-size="11" font-weight="bold" fill="#9e6e06">Lambda</text>
-  <text x="285" y="138" text-anchor="middle" font-size="9" fill="#555">Process Event</text>
-  <line x1="350" y1="108" x2="430" y2="60" stroke="#333" stroke-width="1.5"/>
-  <line x1="350" y1="122" x2="430" y2="122" stroke="#333" stroke-width="1.5"/>
-  <line x1="350" y1="138" x2="430" y2="190" stroke="#333" stroke-width="1.5"/>
-  <rect x="430" y="35" width="120" height="40" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="490" y="60" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565c0">DynamoDB</text>
-  <rect x="430" y="100" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="490" y="125" text-anchor="middle" font-size="9" font-weight="bold" fill="#2e7d32">SNS Topic</text>
-  <rect x="430" y="170" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="490" y="195" text-anchor="middle" font-size="9" font-weight="bold" fill="#6a1b9a">S3 Bucket</text>
-</svg>
+![event_driven_serverless_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/event_driven_serverless_flow.svg)
 
 ---
 ## Serverless Limits to Know
@@ -688,35 +454,7 @@ Most real-world systems combine compute models:
 ---
 ## Hybrid Architecture Example
 
-<svg viewBox="0 0 650 240" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="300" height="110" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="160" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">Kubernetes Cluster</text>
-  <rect x="25" y="42" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="65" y="61" text-anchor="middle" font-size="8" fill="#333">API Gateway</text>
-  <rect x="120" y="42" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="160" y="61" text-anchor="middle" font-size="8" fill="#333">Core API</text>
-  <rect x="215" y="42" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="255" y="61" text-anchor="middle" font-size="8" fill="#333">Auth Service</text>
-  <rect x="25" y="82" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="65" y="101" text-anchor="middle" font-size="8" fill="#333">Redis Cache</text>
-  <rect x="120" y="82" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="160" y="101" text-anchor="middle" font-size="8" fill="#333">PostgreSQL</text>
-  <rect x="350" y="10" width="280" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="490" y="30" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Serverless Functions</text>
-  <text x="400" y="48" font-size="8" fill="#333">Image Resize</text>
-  <text x="490" y="48" font-size="8" fill="#333">Email Send</text>
-  <text x="570" y="48" font-size="8" fill="#333">Webhooks</text>
-  <rect x="350" y="70" width="280" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="490" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">Managed Containers</text>
-  <text x="400" y="108" font-size="8" fill="#333">Batch Jobs</text>
-  <text x="490" y="108" font-size="8" fill="#333">Data Pipeline</text>
-  <text x="580" y="108" font-size="8" fill="#333">Reports</text>
-  <rect x="100" y="145" width="450" height="45" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="325" y="173" text-anchor="middle" font-size="11" font-weight="bold" fill="#6a1b9a">Shared: Message Queue, Object Storage, CDN</text>
-  <line x1="160" y1="120" x2="325" y2="145" stroke="#6a1b9a" stroke-width="1" stroke-dasharray="4"/>
-  <line x1="490" y1="60" x2="325" y2="145" stroke="#6a1b9a" stroke-width="1" stroke-dasharray="4"/>
-  <line x1="490" y1="120" x2="325" y2="145" stroke="#6a1b9a" stroke-width="1" stroke-dasharray="4"/>
-</svg>
+![hybrid_architecture_example](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/hybrid_architecture_example.svg)
 
 ---
 ## RBAC and Policy Enforcement
@@ -839,30 +577,7 @@ Ask these questions in order:
 ---
 ## Decision Matrix Summary
 
-<svg viewBox="0 0 650 240" xmlns="http://www.w3.org/2000/svg">
-  <text x="325" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Choosing Your Compute Model</text>
-  <rect x="30" y="40" width="140" height="50" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="100" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565c0">Small Team</text>
-  <text x="100" y="78" text-anchor="middle" font-size="9" fill="#555">< 5 engineers</text>
-  <rect x="30" y="100" width="140" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="100" y="125" text-anchor="middle" font-size="10" fill="#2e7d32">Serverless / Managed</text>
-  <line x1="100" y1="90" x2="100" y2="100" stroke="#333" stroke-width="1.5"/>
-  <rect x="255" y="40" width="140" height="50" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="325" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">Medium Team</text>
-  <text x="325" y="78" text-anchor="middle" font-size="9" fill="#555">5-15 engineers</text>
-  <rect x="255" y="100" width="140" height="40" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="325" y="125" text-anchor="middle" font-size="10" fill="#9e6e06">Managed K8s / Hybrid</text>
-  <line x1="325" y1="90" x2="325" y2="100" stroke="#333" stroke-width="1.5"/>
-  <rect x="480" y="40" width="140" height="50" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="550" y="60" text-anchor="middle" font-size="10" font-weight="bold" fill="#6a1b9a">Large Team</text>
-  <text x="550" y="78" text-anchor="middle" font-size="9" fill="#555">15+ engineers</text>
-  <rect x="480" y="100" width="140" height="40" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="550" y="125" text-anchor="middle" font-size="10" fill="#283593">K8s + Platform Team</text>
-  <line x1="550" y1="90" x2="550" y2="100" stroke="#333" stroke-width="1.5"/>
-  <rect x="100" y="160" width="450" height="60" rx="10" fill="#fafafa" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="325" y="185" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Key Principle</text>
-  <text x="325" y="207" text-anchor="middle" font-size="10" fill="#555">Choose the simplest model that meets your requirements.</text>
-</svg>
+![decision_matrix_summary](../../../../svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/decision_matrix_summary.svg)
 
 ---
 ## Anti-Patterns to Avoid

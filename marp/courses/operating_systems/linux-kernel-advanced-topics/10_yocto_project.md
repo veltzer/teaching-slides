@@ -38,29 +38,7 @@ Key components:
 
 ## Yocto Architecture
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="16" font-weight="bold">Configuration Files</text>
-  <rect x="50" y="130" width="160" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="130" y="165" text-anchor="middle" font-size="14">Metadata</text>
-  <rect x="220" y="130" width="160" height="60" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="300" y="165" text-anchor="middle" font-size="14">BitBake</text>
-  <rect x="390" y="130" width="160" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="470" y="165" text-anchor="middle" font-size="14">Recipes</text>
-  <rect x="150" y="220" width="300" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-size="16" font-weight="bold">Build System</text>
-  <rect x="150" y="310" width="300" height="60" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
-  <text x="300" y="345" text-anchor="middle" font-size="16" font-weight="bold">Output Images</text>
-  <path d="M130 190 L300 220" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 190 L300 220" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M470 190 L300 220" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 280 L300 310" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![yocto_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/yocto_architecture.svg)
 
 ---
 
@@ -103,36 +81,7 @@ bitbake core-image-minimal
 
 ## BitBake Workflow
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="50" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="110" y="80" text-anchor="middle" font-size="14">Parse</text>
-  <rect x="200" y="50" width="120" height="50" fill="#f3e5f5" stroke="#7b1fa2"/>
-  <text x="260" y="80" text-anchor="middle" font-size="14">Fetch</text>
-  <rect x="350" y="50" width="120" height="50" fill="#e8f5e9" stroke="#388e3c"/>
-  <text x="410" y="80" text-anchor="middle" font-size="14">Unpack</text>
-  <rect x="50" y="130" width="120" height="50" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="110" y="160" text-anchor="middle" font-size="14">Patch</text>
-  <rect x="200" y="130" width="120" height="50" fill="#fce4ec" stroke="#c2185b"/>
-  <text x="260" y="160" text-anchor="middle" font-size="14">Configure</text>
-  <rect x="350" y="130" width="120" height="50" fill="#e0f2f1" stroke="#00796b"/>
-  <text x="410" y="160" text-anchor="middle" font-size="14">Compile</text>
-  <rect x="125" y="210" width="120" height="50" fill="#f1f8e9" stroke="#689f38"/>
-  <text x="185" y="240" text-anchor="middle" font-size="14">Install</text>
-  <rect x="275" y="210" width="120" height="50" fill="#efebe9" stroke="#5d4037"/>
-  <text x="335" y="240" text-anchor="middle" font-size="14">Package</text>
-  <rect x="200" y="290" width="120" height="50" fill="#e8eaf6" stroke="#3f51b5"/>
-  <text x="260" y="320" text-anchor="middle" font-size="14">Image</text>
-  <path d="M170 75 L200 75" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M320 75 L350 75" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M110 100 L110 130" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M170 155 L200 155" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M320 155 L350 155" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M410 180 L335 210" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M110 180 L185 210" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M245 235 L275 235" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M335 260 L260 290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M185 260 L260 290" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![bitbake_workflow](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/bitbake_workflow.svg)
 
 ---
 
@@ -378,22 +327,7 @@ RDEPENDS_${PN} = " \
 
 ## Image Types
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14" font-weight="bold">ext4</text>
-  <rect x="225" y="50" width="150" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="14" font-weight="bold">tar.gz</text>
-  <rect x="400" y="50" width="150" height="60" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="475" y="85" text-anchor="middle" font-size="14" font-weight="bold">wic</text>
-  <rect x="50" y="140" width="150" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="125" y="175" text-anchor="middle" font-size="14" font-weight="bold">squashfs</text>
-  <rect x="225" y="140" width="150" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="300" y="175" text-anchor="middle" font-size="14" font-weight="bold">ubifs</text>
-  <rect x="400" y="140" width="150" height="60" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
-  <text x="475" y="175" text-anchor="middle" font-size="14" font-weight="bold">iso</text>
-  <rect x="150" y="240" width="300" height="60" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="300" y="275" text-anchor="middle" font-size="16" font-weight="bold">IMAGE_FSTYPES</text>
-</svg>
+![image_types](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/image_types.svg)
 
 ---
 
@@ -530,17 +464,7 @@ PREMIRRORS_prepend = "\
 
 ## Build Performance
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="250" width="500" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <rect x="50" y="200" width="400" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <rect x="50" y="150" width="300" height="40" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <rect x="50" y="100" width="200" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="60" y="275" font-size="14">No Cache (4 hours)</text>
-  <text x="60" y="225" font-size="14">DL_DIR (3 hours)</text>
-  <text x="60" y="175" font-size="14">+ SSTATE (1 hour)</text>
-  <text x="60" y="125" font-size="14">Incremental (15 min)</text>
-  <text x="300" y="50" text-anchor="middle" font-size="16" font-weight="bold">Build Time Comparison</text>
-</svg>
+![build_performance](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/build_performance.svg)
 
 ---
 

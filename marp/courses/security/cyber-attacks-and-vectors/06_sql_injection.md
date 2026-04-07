@@ -8,35 +8,7 @@
 ---
 ## How Does SQL Injection Work?
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">SQL Injection Attack Flow</text>
-  <rect x="20" y="30" width="110" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="75" y="52" text-anchor="middle" font-size="10" font-weight="bold">Attacker</text>
-  <text x="75" y="68" text-anchor="middle" font-size="9" fill="#c62828">' OR '1'='1</text>
-  <rect x="180" y="30" width="130" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="245" y="50" text-anchor="middle" font-size="10" font-weight="bold">Web App</text>
-  <text x="245" y="68" text-anchor="middle" font-size="9" fill="#e65100">No input validation</text>
-  <rect x="360" y="30" width="120" height="50" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="420" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">SQL Engine</text>
-  <text x="420" y="68" text-anchor="middle" font-size="9" fill="#c62828">Executes malicious</text>
-  <rect x="510" y="30" width="80" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="550" y="52" text-anchor="middle" font-size="10" font-weight="bold">Database</text>
-  <text x="550" y="68" text-anchor="middle" font-size="9" fill="#c62828">Data leaked</text>
-  <line x1="130" y1="55" x2="178" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
-  <line x1="310" y1="55" x2="358" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
-  <line x1="480" y1="55" x2="508" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
-  <rect x="100" y="100" width="400" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
-  <text x="300" y="117" text-anchor="middle" font-size="10" fill="#e65100">SELECT * FROM users WHERE name='' OR '1'='1' --'</text>
-  <text x="300" y="132" text-anchor="middle" font-size="9" fill="#c62828">Unsanitized input becomes part of SQL query</text>
-  <rect x="100" y="150" width="400" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="300" y="167" text-anchor="middle" font-size="10" fill="#2e7d32">SELECT * FROM users WHERE name=? (parameterized)</text>
-  <text x="300" y="182" text-anchor="middle" font-size="9" fill="#2e7d32">Safe: input treated as data, not code</text>
-  <defs>
-    <marker id="arrowsqli" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#c62828"/>
-    </marker>
-  </defs>
-</svg>
+![how_does_sql_injection_work](../../../../svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/how_does_sql_injection_work.svg)
 
 ---
 ## How Does SQL Injection Work?
@@ -158,47 +130,7 @@ When there is no visible difference in response:
 ---
 ## Second-Order SQL Injection
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- outer border -->
-  <rect x="5" y="5" width="650" height="330" fill="#fff8e1" stroke="#e65100" stroke-width="2" rx="6"/>
-  <text x="320" y="28" font-size="15" font-weight="bold" fill="#e65100" text-anchor="middle">Second-Order SQL Injection</text>
-  <!-- Step 1 -->
-  <text x="15" y="52" font-size="13" font-weight="bold" fill="#222">Step 1: Register username: admin'--</text>
-  <rect x="15" y="60" width="100" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="65" y="83" font-size="12" fill="#222" text-anchor="middle">Attacker</text>
-  <line x1="115" y1="78" x2="131" y2="78" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="133" y="60" width="110" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="188" y="83" font-size="12" fill="#222" text-anchor="middle">Sign Up Form</text>
-  <line x1="243" y1="78" x2="259" y2="78" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="261" y="60" width="120" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="321" y="78" font-size="12" fill="#222" text-anchor="middle">Database</text>
-  <text x="321" y="90" font-size="11" fill="#2e7d32" text-anchor="middle">Stored!</text>
-  <!-- Step 2 -->
-  <text x="15" y="125" font-size="13" font-weight="bold" fill="#222">Step 2: Password reset uses stored username</text>
-  <rect x="15" y="133" width="100" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="65" y="156" font-size="12" fill="#222" text-anchor="middle">Attacker</text>
-  <line x1="115" y1="151" x2="131" y2="151" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="133" y="133" width="110" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="3"/>
-  <text x="188" y="151" font-size="12" fill="#222" text-anchor="middle">Reset Password</text>
-  <text x="188" y="163" font-size="11" fill="#888" text-anchor="middle">uses stored name</text>
-  <line x1="243" y1="151" x2="259" y2="151" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="261" y="133" width="120" height="36" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="3"/>
-  <text x="321" y="151" font-size="12" fill="#c62828" text-anchor="middle">Database</text>
-  <text x="321" y="163" font-size="11" fill="#c62828" text-anchor="middle">Injection!</text>
-  <!-- SQL query -->
-  <rect x="15" y="195" width="620" height="56" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="25" y="215" font-size="13" fill="#222" font-family="monospace">UPDATE users SET password='newpass'</text>
-  <text x="25" y="233" font-size="13" fill="#222" font-family="monospace">WHERE username='admin'--'</text>
-  <!-- Result -->
-  <rect x="15" y="265" width="620" height="60" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="320" y="288" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">⚠ Resets ADMIN's password — not the attacker's!</text>
-  <text x="320" y="310" font-size="12" fill="#555" text-anchor="middle">The -- comment causes the closing quote to be ignored, modifying a different row.</text>
-</svg>
+![second_order_sql_injection](../../../../svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/second_order_sql_injection.svg)
 
 ---
 ## Vulnerable Code: Multiple Languages

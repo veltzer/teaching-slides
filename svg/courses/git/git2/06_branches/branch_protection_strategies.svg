@@ -1,0 +1,24 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Protecting Important Branches</text>
+  <rect x="100" y="80" width="600" height="60" fill="#4CAF50" rx="5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="16" fill="white" font-weight="bold">Protected: main branch</text>
+  <text x="400" y="125" text-anchor="middle" font-size="12" fill="white">Requires pull request, reviews, passing tests</text>
+  <rect x="50" y="160" width="320" height="180" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="210" y="190" text-anchor="middle" font-size="14" font-weight="bold">Local Protection</text>
+  <text x="70" y="215" font-size="11">Pre-push hook example:</text>
+  <text x="70" y="235" font-family="monospace" font-size="10">#!/bin/sh</text>
+  <text x="70" y="250" font-family="monospace" font-size="10">branch=$(git symbolic-ref HEAD)</text>
+  <text x="70" y="265" font-family="monospace" font-size="10">if [ "$branch" = "refs/heads/main" ]</text>
+  <text x="70" y="280" font-family="monospace" font-size="10">then</text>
+  <text x="70" y="295" font-family="monospace" font-size="10">  echo "Direct push to main blocked"</text>
+  <text x="70" y="310" font-family="monospace" font-size="10">  exit 1</text>
+  <text x="70" y="325" font-family="monospace" font-size="10">fi</text>
+  <rect x="430" y="160" width="320" height="180" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="590" y="190" text-anchor="middle" font-size="14" font-weight="bold">Remote Protection (GitHub/GitLab)</text>
+  <text x="450" y="215" font-size="11">• Require pull request reviews</text>
+  <text x="450" y="235" font-size="11">• Dismiss stale reviews</text>
+  <text x="450" y="255" font-size="11">• Require status checks</text>
+  <text x="450" y="275" font-size="11">• Include administrators</text>
+  <text x="450" y="295" font-size="11">• Restrict who can push</text>
+  <text x="450" y="315" font-size="11">• Prevent force pushes</text>
+</svg>

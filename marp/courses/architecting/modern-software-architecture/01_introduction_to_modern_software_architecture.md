@@ -234,14 +234,7 @@ graph TD
 ---
 ## The Quality Attribute Triangle
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="200,30 50,270 350,270" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="200" y="20" text-anchor="middle" font-size="14" font-weight="bold">Performance</text>
-  <text x="30" y="290" text-anchor="middle" font-size="14" font-weight="bold">Security</text>
-  <text x="370" y="290" text-anchor="middle" font-size="14" font-weight="bold">Scalability</text>
-  <circle cx="200" cy="160" r="5" fill="#e74c3c"/>
-  <text x="220" y="165" font-size="12" fill="#e74c3c">Your System</text>
-</svg>
+![the_quality_attribute_triangle](../../../../svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_quality_attribute_triangle.svg)
 
 ---
 ## Architectural Trade-Offs

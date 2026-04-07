@@ -1,0 +1,14 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Animation Performance Hierarchy</text>
+  <rect x="100" y="70" width="600" height="60" fill="#27AE60" rx="10"/>
+  <text x="400" y="105" text-anchor="middle" fill="white" font-size="14">✅ Transform & Opacity (GPU accelerated)</text>
+  <text x="400" y="120" text-anchor="middle" fill="white" font-size="10">Best performance - 60 FPS</text>
+  <rect x="100" y="150" width="600" height="60" fill="#F39C12" rx="10"/>
+  <text x="400" y="185" text-anchor="middle" fill="white" font-size="14">⚠️ Color & Shadow Changes</text>
+  <text x="400" y="200" text-anchor="middle" fill="white" font-size="10">Triggers repaint - Moderate performance</text>
+  <rect x="100" y="230" width="600" height="60" fill="#E74C3C" rx="10"/>
+  <text x="400" y="265" text-anchor="middle" fill="white" font-size="14">❌ Width, Height, Position Changes</text>
+  <text x="400" y="280" text-anchor="middle" fill="white" font-size="10">Triggers reflow - Poor performance</text>
+  <rect x="200" y="310" width="400" height="50" fill="#3498DB" rx="5"/>
+  <text x="400" y="340" text-anchor="middle" fill="white" font-size="12">Use will-change and transform3d for optimization</text>
+</svg>

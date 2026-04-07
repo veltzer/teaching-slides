@@ -1,0 +1,99 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333" text-anchor="middle">Durability: Surviving System Failures</text>
+
+  <!-- Normal Operation Flow -->
+  <text x="150" y="60" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2196F3">Normal Operation</text>
+
+  <!-- Client: COMMIT -->
+  <rect x="50" y="80" width="120" height="40" rx="5" fill="#2196F3" stroke="#1976D2" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Client: COMMIT</text>
+
+  <!-- Arrow to Write to Transaction Log -->
+  <path d="M 170 100 L 230 100" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Write to Transaction Log -->
+  <rect x="230" y="80" width="180" height="40" rx="5" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+  <text x="320" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Write to Transaction Log</text>
+
+  <!-- Arrow to Acknowledgment -->
+  <path d="M 410 100 L 470 100" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Acknowledgment to Client -->
+  <rect x="470" y="80" width="160" height="40" rx="5" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+  <text x="550" y="105" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">ACK to Client</text>
+
+  <!-- Asynchronous Write branch -->
+  <path d="M 320 120 L 320 150" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Asynchronous Write to Data Files -->
+  <rect x="210" y="150" width="220" height="40" rx="5" fill="#FF9800" stroke="#F57C00" stroke-width="2"/>
+  <text x="320" y="175" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13">Async Write to Data Files</text>
+
+  <!-- Separator line -->
+  <line x1="50" y1="220" x2="750" y2="220" stroke="#666" stroke-width="1" stroke-dasharray="5,5"/>
+
+  <!-- Crash Recovery Flow -->
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#F44336">Crash Recovery</text>
+
+  <!-- System Crash -->
+  <g transform="translate(50, 270)">
+    <rect width="120" height="40" rx="5" fill="#F44336" stroke="#D32F2F" stroke-width="2"/>
+    <text x="60" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">System Crash</text>
+    <!-- Crash icon -->
+    <path d="M 40 5 L 50 15 L 45 15 L 55 25 L 45 15 L 50 15" fill="yellow" stroke="none"/>
+    <path d="M 70 5 L 80 15 L 75 15 L 85 25 L 75 15 L 80 15" fill="yellow" stroke="none"/>
+  </g>
+
+  <!-- Arrow to Recovery Process -->
+  <path d="M 170 290 L 230 290" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Recovery Process -->
+  <rect x="230" y="270" width="140" height="40" rx="5" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="300" y="295" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Recovery Process</text>
+
+  <!-- Arrow to Read Transaction Log -->
+  <path d="M 370 290 L 430 290" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Read Transaction Log -->
+  <rect x="430" y="270" width="160" height="40" rx="5" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="510" y="295" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Read Transaction Log</text>
+
+  <!-- Arrow down -->
+  <path d="M 510 310 L 510 340" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Replay Committed Transactions -->
+  <rect x="410" y="340" width="200" height="40" rx="5" fill="#9C27B0" stroke="#7B1FA2" stroke-width="2"/>
+  <text x="510" y="365" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Replay Committed Transactions</text>
+
+  <!-- Arrow to final state -->
+  <path d="M 410 360 L 350 360" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow5)"/>
+
+  <!-- Database Restored -->
+  <rect x="150" y="340" width="200" height="40" rx="5" fill="#4CAF50" stroke="#388E3C" stroke-width="2"/>
+  <text x="250" y="360" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Database Restored to</text>
+  <text x="250" y="375" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Consistent State</text>
+
+  <!-- Explanation boxes -->
+  <rect x="650" y="80" width="130" height="110" rx="5" fill="#E3F2FD" stroke="#1976D2" stroke-width="1"/>
+  <text x="715" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#1976D2">Key Points:</text>
+  <text x="655" y="120" font-family="Arial, sans-serif" font-size="10" fill="#666">• Log written first</text>
+  <text x="655" y="135" font-family="Arial, sans-serif" font-size="10" fill="#666">• Then ACK sent</text>
+  <text x="655" y="150" font-family="Arial, sans-serif" font-size="10" fill="#666">• Data files later</text>
+  <text x="655" y="165" font-family="Arial, sans-serif" font-size="10" fill="#666">• Log enables</text>
+  <text x="665" y="180" font-family="Arial, sans-serif" font-size="10" fill="#666">recovery</text>
+
+  <!-- Bottom explanation -->
+  <rect x="50" y="400" width="700" height="40" rx="5" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2"/>
+  <text x="400" y="425" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2E7D32">Durability Guarantee: All committed transactions survive system failures through Write-Ahead Logging (WAL)</text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

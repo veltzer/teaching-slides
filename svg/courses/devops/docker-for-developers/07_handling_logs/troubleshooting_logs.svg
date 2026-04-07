@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_06_handling_logs" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="140" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="52" text-anchor="middle" font-size="11" font-weight="bold">No Logs?</text>
+  <text x="90" y="68" text-anchor="middle" font-size="10">Check log driver</text>
+  <text x="90" y="82" text-anchor="middle" font-size="10" fill="#555">docker inspect</text>
+  <line x1="160" y1="62" x2="218" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_06_handling_logs)"/>
+  <rect x="220" y="30" width="160" height="65" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="52" text-anchor="middle" font-size="11" font-weight="bold">Disk Full?</text>
+  <text x="300" y="68" text-anchor="middle" font-size="10">Add rotation config</text>
+  <text x="300" y="82" text-anchor="middle" font-size="10" fill="#555">max-size + max-file</text>
+  <line x1="380" y1="62" x2="438" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_06_handling_logs)"/>
+  <rect x="440" y="30" width="140" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="52" text-anchor="middle" font-size="11" font-weight="bold">Verify Fix</text>
+  <text x="510" y="68" text-anchor="middle" font-size="10">docker logs --tail 5</text>
+  <text x="510" y="82" text-anchor="middle" font-size="10" fill="#555">confirm output</text>
+  <rect x="20" y="120" width="560" height="60" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="140" text-anchor="middle" font-size="10" fill="#555">Common issue: non-json-file drivers do not support docker logs command</text>
+  <text x="300" y="157" text-anchor="middle" font-size="10" fill="#555">Fix: use dual logging mode or query the remote log service directly</text>
+</svg>

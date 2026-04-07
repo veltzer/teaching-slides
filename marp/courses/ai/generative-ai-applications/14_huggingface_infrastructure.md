@@ -4,43 +4,7 @@
 
 ## The HuggingFace Ecosystem
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="300" font-family="sans-serif">
-<rect x="5" y="5" width="550" height="290" fill="#f8f9fa" stroke="#333" stroke-width="2" rx="4"/>
-<text x="280" y="32" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">HUGGINGFACE ECOSYSTEM</text>
-<rect x="15" y="50" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="100" y="72" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Hub</text>
-<text x="100" y="88" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">500K+ models</text>
-<text x="100" y="102" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Model cards</text>
-<rect x="195" y="50" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="280" y="72" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Transformers</text>
-<text x="280" y="88" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Load & run</text>
-<text x="280" y="102" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">any model</text>
-<rect x="375" y="50" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="460" y="72" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Datasets</text>
-<text x="460" y="88" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">100K+</text>
-<text x="460" y="102" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">datasets</text>
-<rect x="15" y="125" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="100" y="147" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Tokenizers</text>
-<text x="100" y="163" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Fast</text>
-<text x="100" y="177" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">tokenization</text>
-<rect x="195" y="125" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="280" y="147" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Accelerate</text>
-<text x="280" y="163" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Distributed</text>
-<text x="280" y="177" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">training</text>
-<rect x="375" y="125" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="460" y="147" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">PEFT</text>
-<text x="460" y="163" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">LoRA, QLoRA</text>
-<text x="460" y="177" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Adapters</text>
-<rect x="15" y="200" width="170" height="65" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="100" y="229" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Spaces</text>
-<text x="100" y="246" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Deploy apps</text>
-<rect x="195" y="200" width="170" height="65" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="280" y="229" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">TRL</text>
-<text x="280" y="246" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">RLHF/DPO</text>
-<rect x="375" y="200" width="170" height="65" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="460" y="229" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Evaluate</text>
-<text x="460" y="246" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">Benchmarks</text>
-</svg>
+![the_huggingface_ecosystem](../../../../svg/courses/ai/generative-ai-applications/14_huggingface_infrastructure/the_huggingface_ecosystem.svg)
 
 ---
 

@@ -17,40 +17,7 @@
 
 ## Configuration Levels
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git Configuration Scopes</text>
-  <rect x="50" y="80" width="200" height="250" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
-  <text x="150" y="115" text-anchor="middle" font-size="18" font-weight="bold">System</text>
-  <text x="150" y="140" text-anchor="middle" font-size="12">/etc/gitconfig</text>
-  <text x="150" y="165" text-anchor="middle" font-size="11">All users</text>
-  <text x="150" y="185" text-anchor="middle" font-size="11">All repositories</text>
-  <rect x="90" y="210" width="120" height="30" fill="#EF5350" rx="3"/>
-  <text x="150" y="230" text-anchor="middle" font-size="11" fill="white">--system</text>
-  <text x="150" y="270" text-anchor="middle" font-size="14">Lowest Priority</text>
-  <rect x="300" y="80" width="200" height="250" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
-  <text x="400" y="115" text-anchor="middle" font-size="18" font-weight="bold">Global</text>
-  <text x="400" y="140" text-anchor="middle" font-size="12">~/.gitconfig</text>
-  <text x="400" y="165" text-anchor="middle" font-size="11">Current user</text>
-  <text x="400" y="185" text-anchor="middle" font-size="11">All repositories</text>
-  <rect x="340" y="210" width="120" height="30" fill="#FF9800" rx="3"/>
-  <text x="400" y="230" text-anchor="middle" font-size="11" fill="white">--global</text>
-  <text x="400" y="270" text-anchor="middle" font-size="14">Medium Priority</text>
-  <rect x="550" y="80" width="200" height="250" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
-  <text x="650" y="115" text-anchor="middle" font-size="18" font-weight="bold">Local</text>
-  <text x="650" y="140" text-anchor="middle" font-size="12">.git/config</text>
-  <text x="650" y="165" text-anchor="middle" font-size="11">Current repository</text>
-  <text x="650" y="185" text-anchor="middle" font-size="11">Only this repo</text>
-  <rect x="590" y="210" width="120" height="30" fill="#4CAF50" rx="3"/>
-  <text x="650" y="230" text-anchor="middle" font-size="11" fill="white">--local (default)</text>
-  <text x="650" y="270" text-anchor="middle" font-size="14">Highest Priority</text>
-  <path d="M 250 200 L 290 200" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <path d="M 500 200 L 540 200" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <defs>
-    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![configuration_levels](../../../../svg/courses/git/git2/03_config/configuration_levels.svg)
 
 ---
 
@@ -146,20 +113,7 @@ git config --show-origin user.email
 
 ## Color Configuration
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git Color Output</text>
-  <rect x="100" y="80" width="600" height="280" fill="#263238" stroke="#37474F" stroke-width="2" rx="5"/>
-  <text x="120" y="110" font-family="monospace" font-size="14" fill="#4CAF50">$ git status</text>
-  <text x="120" y="135" font-family="monospace" font-size="14" fill="#FFFFFF">On branch</text>
-  <text x="220" y="135" font-family="monospace" font-size="14" fill="#4CAF50">main</text>
-  <text x="120" y="160" font-family="monospace" font-size="14" fill="#FFFFFF">Your branch is up to date with 'origin/main'.</text>
-  <text x="120" y="195" font-family="monospace" font-size="14" fill="#FFFFFF">Changes to be committed:</text>
-  <text x="140" y="220" font-family="monospace" font-size="14" fill="#4CAF50">modified:   README.md</text>
-  <text x="120" y="255" font-family="monospace" font-size="14" fill="#FFFFFF">Changes not staged for commit:</text>
-  <text x="140" y="280" font-family="monospace" font-size="14" fill="#F44336">modified:   app.js</text>
-  <text x="120" y="315" font-family="monospace" font-size="14" fill="#FFFFFF">Untracked files:</text>
-  <text x="140" y="340" font-family="monospace" font-size="14" fill="#FF9800">test.txt</text>
-</svg>
+![color_configuration](../../../../svg/courses/git/git2/03_config/color_configuration.svg)
 
 ---
 
@@ -259,31 +213,7 @@ git config --global rebase.autoStash true
 
 ## Creating Aliases
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git Aliases Save Time</text>
-  <rect x="50" y="80" width="300" height="60" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
-  <text x="200" y="105" text-anchor="middle" font-size="14" font-weight="bold">Without Alias</text>
-  <text x="200" y="125" text-anchor="middle" font-size="12" font-family="monospace">git log --oneline --graph --all</text>
-  <rect x="450" y="80" width="300" height="60" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
-  <text x="600" y="105" text-anchor="middle" font-size="14" font-weight="bold">With Alias</text>
-  <text x="600" y="125" text-anchor="middle" font-size="12" font-family="monospace">git lol</text>
-  <path d="M 350 110 L 450 110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="400" y="100" text-anchor="middle" font-size="12">Define once</text>
-  <rect x="200" y="180" width="400" height="180" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="400" y="210" text-anchor="middle" font-size="16" font-weight="bold">Common Aliases</text>
-  <text x="220" y="240" font-size="13" font-family="monospace">st = status</text>
-  <text x="420" y="240" font-size="13" font-family="monospace">co = checkout</text>
-  <text x="220" y="265" font-size="13" font-family="monospace">br = branch</text>
-  <text x="420" y="265" font-size="13" font-family="monospace">cm = commit</text>
-  <text x="220" y="290" font-size="13" font-family="monospace">unstage = restore --staged</text>
-  <text x="220" y="315" font-size="13" font-family="monospace">last = log -1 HEAD</text>
-  <text x="220" y="340" font-size="13" font-family="monospace">visual = !gitk</text>
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![creating_aliases](../../../../svg/courses/git/git2/03_config/creating_aliases.svg)
 
 ---
 
@@ -381,25 +311,7 @@ git config --global credential.helper libsecret
 
 ## SSH Configuration
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">SSH vs HTTPS</text>
-  <rect x="50" y="80" width="300" height="250" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
-  <text x="200" y="115" text-anchor="middle" font-size="18" font-weight="bold">SSH</text>
-  <text x="200" y="145" text-anchor="middle" font-size="12">git@github.com:user/repo.git</text>
-  <text x="70" y="180" font-size="13">✓ No password after setup</text>
-  <text x="70" y="205" font-size="13">✓ More secure</text>
-  <text x="70" y="230" font-size="13">✓ Per-machine keys</text>
-  <text x="70" y="255" font-size="13">✗ Initial setup required</text>
-  <text x="70" y="280" font-size="13">✗ Firewall issues (port 22)</text>
-  <rect x="450" y="80" width="300" height="250" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
-  <text x="600" y="115" text-anchor="middle" font-size="18" font-weight="bold">HTTPS</text>
-  <text x="600" y="145" text-anchor="middle" font-size="12">https://github.com/user/repo.git</text>
-  <text x="470" y="180" font-size="13">✓ Works everywhere</text>
-  <text x="470" y="205" font-size="13">✓ No setup needed</text>
-  <text x="470" y="230" font-size="13">✓ Firewall friendly</text>
-  <text x="470" y="255" font-size="13">✗ Need credentials often</text>
-  <text x="470" y="280" font-size="13">✗ Less secure (if no 2FA)</text>
-</svg>
+![ssh_configuration](../../../../svg/courses/git/git2/03_config/ssh_configuration.svg)
 
 ---
 
@@ -572,23 +484,7 @@ git clean -fx     # Ignored and untracked
 
 ## Whitespace Configuration
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Whitespace Issues</text>
-  <rect x="100" y="80" width="600" height="250" fill="#263238" stroke="#37474F" stroke-width="2" rx="5"/>
-  <text x="120" y="110" font-family="monospace" font-size="14" fill="#4CAF50">def hello():</text>
-  <text x="120" y="135" font-family="monospace" font-size="14" fill="#FFFFFF">····print("Hello")</text>
-  <rect x="330" y="120" width="40" height="20" fill="#F44336" opacity="0.5"/>
-  <text x="350" y="155" font-size="10" fill="#F44336">trailing space</text>
-  <text x="120" y="160" font-family="monospace" font-size="14" fill="#FFFFFF">····</text>
-  <rect x="160" y="145" width="40" height="20" fill="#FF9800" opacity="0.5"/>
-  <text x="180" y="180" font-size="10" fill="#FF9800">tab after space</text>
-  <text x="160" y="160" font-family="monospace" font-size="14" fill="#FFFFFF">    return</text>
-  <text x="120" y="220" font-family="monospace" font-size="14" fill="#4CAF50"># Configure Git to highlight these:</text>
-  <text x="120" y="245" font-family="monospace" font-size="14" fill="#FFFFFF">git config core.whitespace \</text>
-  <text x="140" y="270" font-family="monospace" font-size="14" fill="#FFFFFF">trailing-space,space-before-tab,indent-with-non-tab</text>
-  <text x="120" y="305" font-family="monospace" font-size="14" fill="#4CAF50"># Show whitespace errors:</text>
-  <text x="120" y="330" font-family="monospace" font-size="14" fill="#FFFFFF">git diff --check</text>
-</svg>
+![whitespace_configuration](../../../../svg/courses/git/git2/03_config/whitespace_configuration.svg)
 
 ---
 
@@ -775,33 +671,7 @@ git clone --filter=tree:0 <url>     # Omit trees
 
 ## Configuration Best Practices
 
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Configuration Strategy</text>
-  <rect x="50" y="80" width="320" height="150" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
-  <text x="210" y="110" text-anchor="middle" font-size="16" font-weight="bold">Global Settings</text>
-  <text x="70" y="140" font-size="12">• User identity</text>
-  <text x="70" y="160" font-size="12">• Editor preference</text>
-  <text x="70" y="180" font-size="12">• Common aliases</text>
-  <text x="70" y="200" font-size="12">• Color preferences</text>
-  <rect x="430" y="80" width="320" height="150" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
-  <text x="590" y="110" text-anchor="middle" font-size="16" font-weight="bold">Local Settings</text>
-  <text x="450" y="140" font-size="12">• Project-specific user</text>
-  <text x="450" y="160" font-size="12">• Special workflows</text>
-  <text x="450" y="180" font-size="12">• Hooks configuration</text>
-  <text x="450" y="200" font-size="12">• Signing requirements</text>
-  <rect x="50" y="250" width="320" height="150" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
-  <text x="210" y="280" text-anchor="middle" font-size="16" font-weight="bold">Team Settings</text>
-  <text x="70" y="310" font-size="12">• .gitignore (tracked)</text>
-  <text x="70" y="330" font-size="12">• .gitattributes (tracked)</text>
-  <text x="70" y="350" font-size="12">• .editorconfig (tracked)</text>
-  <text x="70" y="370" font-size="12">• Hooks in repo</text>
-  <rect x="430" y="250" width="320" height="150" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
-  <text x="590" y="280" text-anchor="middle" font-size="16" font-weight="bold">Never Share</text>
-  <text x="450" y="310" font-size="12">• Credentials</text>
-  <text x="450" y="330" font-size="12">• Personal paths</text>
-  <text x="450" y="350" font-size="12">• IDE-specific configs</text>
-  <text x="450" y="370" font-size="12">• Local experiments</text>
-</svg>
+![configuration_best_practices](../../../../svg/courses/git/git2/03_config/configuration_best_practices.svg)
 
 ---
 
@@ -1030,21 +900,7 @@ git config --global alias.recent-branches \
 
 ## Configuration Checklist
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Your Git Setup Checklist</text>
-  <rect x="100" y="70" width="600" height="300" fill="#F5F5F5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="120" y="100" font-size="14">☐ Set user.name and user.email</text>
-  <text x="120" y="125" font-size="14">☐ Configure preferred editor</text>
-  <text x="120" y="150" font-size="14">☐ Set up SSH keys</text>
-  <text x="120" y="175" font-size="14">☐ Create essential aliases</text>
-  <text x="120" y="200" font-size="14">☐ Configure credential helper</text>
-  <text x="120" y="225" font-size="14">☐ Set up global .gitignore</text>
-  <text x="120" y="250" font-size="14">☐ Configure line endings</text>
-  <text x="120" y="275" font-size="14">☐ Enable colors</text>
-  <text x="120" y="300" font-size="14">☐ Set default branch name</text>
-  <text x="120" y="325" font-size="14">☐ Configure pull strategy</text>
-  <text x="120" y="350" font-size="14">☐ Optional: Set up GPG signing</text>
-</svg>
+![configuration_checklist](../../../../svg/courses/git/git2/03_config/configuration_checklist.svg)
 
 ---
 
@@ -1075,18 +931,4 @@ In the next session, we'll explore:
 
 ## Configuration Complete! 🎉
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="80" text-anchor="middle" font-size="32" font-weight="bold" fill="#4CAF50">Git is Now Your Tool!</text>
-  <rect x="200" y="120" width="400" height="200" fill="#E8F5E9" stroke="#388E3C" stroke-width="3" rx="10"/>
-  <text x="400" y="165" text-anchor="middle" font-size="20">Configured for:</text>
-  <text x="400" y="195" text-anchor="middle" font-size="16">• Maximum efficiency</text>
-  <text x="400" y="220" text-anchor="middle" font-size="16">• Your workflow</text>
-  <text x="400" y="245" text-anchor="middle" font-size="16">• Team collaboration</text>
-  <text x="400" y="270" text-anchor="middle" font-size="16">• Security & performance</text>
-  <circle cx="300" cy="350" r="25" fill="#2196F3"/>
-  <text x="300" y="357" text-anchor="middle" font-size="20" fill="white">⚙️</text>
-  <circle cx="400" cy="350" r="25" fill="#FF9800"/>
-  <text x="400" y="357" text-anchor="middle" font-size="20" fill="white">🚀</text>
-  <circle cx="500" cy="350" r="25" fill="#9C27B0"/>
-  <text x="500" y="357" text-anchor="middle" font-size="20" fill="white">✨</text>
-</svg>
+![configuration_complete](../../../../svg/courses/git/git2/03_config/configuration_complete.svg)

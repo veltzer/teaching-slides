@@ -14,21 +14,7 @@
 
 ## STL Architecture
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">STL Components</text>
-  <rect x="50" y="60" width="120" height="50" fill="#ffcccc" stroke="#333"/>
-  <text x="110" y="90" text-anchor="middle" font-size="14">Containers</text>
-  <rect x="230" y="60" width="120" height="50" fill="#ccffcc" stroke="#333"/>
-  <text x="290" y="90" text-anchor="middle" font-size="14">Algorithms</text>
-  <rect x="140" y="140" width="120" height="50" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="170" text-anchor="middle" font-size="14">Iterators</text>
-  <rect x="50" y="220" width="120" height="50" fill="#ffffcc" stroke="#333"/>
-  <text x="110" y="250" text-anchor="middle" font-size="14">Allocators</text>
-  <rect x="230" y="220" width="120" height="50" fill="#ffccff" stroke="#333"/>
-  <text x="290" y="250" text-anchor="middle" font-size="14">Functors</text>
-  <line x1="110" y1="110" x2="200" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="290" y1="110" x2="200" y2="140" stroke="#333" stroke-width="2"/>
-</svg>
+![stl_architecture](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/17_stl/stl_architecture.svg)
 
 ---
 

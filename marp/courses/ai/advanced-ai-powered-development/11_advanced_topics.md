@@ -270,20 +270,7 @@ Both expose an OpenAI-compatible API for tool integration.
 - Some codebases cannot leave the corporate network
 - Local models enable AI assistance without data exfiltration
 
-<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="60" width="140" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="80" y="105" text-anchor="middle" font-size="14" fill="#1565c0">Developer IDE</text>
-  <rect x="230" y="60" width="140" height="80" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="300" y="95" text-anchor="middle" font-size="14" fill="#2e7d32">Local Model</text>
-  <text x="300" y="115" text-anchor="middle" font-size="12" fill="#2e7d32">(Ollama/llama.cpp)</text>
-  <rect x="450" y="60" width="140" height="80" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
-  <text x="520" y="95" text-anchor="middle" font-size="14" fill="#c62828">Cloud API</text>
-  <text x="520" y="115" text-anchor="middle" font-size="12" fill="#c62828">(blocked)</text>
-  <line x1="150" y1="100" x2="230" y2="100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="370" y1="100" x2="450" y2="100" stroke="#c62828" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="410" y="90" text-anchor="middle" font-size="20" fill="#c62828">&#x2717;</text>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2e7d32"/></marker></defs>
-</svg>
+![privacy_sensitive_development_workflows](../../../../svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/privacy_sensitive_development_workflows.svg)
 
 ---
 
@@ -601,28 +588,7 @@ Integrate into CI to run weekly; alert when scores drop below threshold.
 - Organizations progress through predictable stages of AI adoption
 - Knowing your stage helps prioritize the right investments
 
-<svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="70" width="110" height="60" rx="6" fill="#ffcdd2" stroke="#b71c1c" stroke-width="2"/>
-  <text x="65" y="95" text-anchor="middle" font-size="11" fill="#b71c1c">Level 1</text>
-  <text x="65" y="115" text-anchor="middle" font-size="10" fill="#b71c1c">Ad-hoc / Individual</text>
-  <rect x="135" y="70" width="110" height="60" rx="6" fill="#ffe0b2" stroke="#e65100" stroke-width="2"/>
-  <text x="190" y="95" text-anchor="middle" font-size="11" fill="#e65100">Level 2</text>
-  <text x="190" y="115" text-anchor="middle" font-size="10" fill="#e65100">Team-Adopted</text>
-  <rect x="260" y="70" width="110" height="60" rx="6" fill="#fff9c4" stroke="#f57f17" stroke-width="2"/>
-  <text x="315" y="95" text-anchor="middle" font-size="11" fill="#f57f17">Level 3</text>
-  <text x="315" y="115" text-anchor="middle" font-size="10" fill="#f57f17">Standardized</text>
-  <rect x="385" y="70" width="110" height="60" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="440" y="95" text-anchor="middle" font-size="11" fill="#2e7d32">Level 4</text>
-  <text x="440" y="115" text-anchor="middle" font-size="10" fill="#2e7d32">Measured</text>
-  <rect x="510" y="70" width="110" height="60" rx="6" fill="#b2dfdb" stroke="#00695c" stroke-width="2"/>
-  <text x="565" y="95" text-anchor="middle" font-size="11" fill="#00695c">Level 5</text>
-  <text x="565" y="115" text-anchor="middle" font-size="10" fill="#00695c">Platform-Level</text>
-  <line x1="120" y1="100" x2="135" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="245" y1="100" x2="260" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="370" y1="100" x2="385" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="495" y1="100" x2="510" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arr)"/>
-  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker></defs>
-</svg>
+![ai_development_maturity_model](../../../../svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/ai_development_maturity_model.svg)
 
 Each level requires the foundations of the previous one.
 
@@ -651,25 +617,7 @@ Mitigations:
 - Centralize model access, prompt management, and observability
 - Provide guardrails as a service rather than per-team enforcement
 
-<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="10" width="300" height="40" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="300" y="35" text-anchor="middle" font-size="14" fill="#e65100">Developer Tools (IDE, CLI, CI/CD)</text>
-  <rect x="150" y="70" width="300" height="40" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
-  <text x="300" y="95" text-anchor="middle" font-size="14" fill="#283593">API Gateway / Rate Limiter</text>
-  <rect x="150" y="130" width="300" height="40" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="14" fill="#00695c">Prompt Registry + Policy Engine</text>
-  <rect x="40" y="200" width="150" height="40" rx="6" fill="#fce4ec" stroke="#b71c1c" stroke-width="2"/>
-  <text x="115" y="225" text-anchor="middle" font-size="13" fill="#b71c1c">Cloud Models</text>
-  <rect x="225" y="200" width="150" height="40" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="300" y="225" text-anchor="middle" font-size="13" fill="#2e7d32">Local Models</text>
-  <rect x="410" y="200" width="150" height="40" rx="6" fill="#ede7f6" stroke="#4527a0" stroke-width="2"/>
-  <text x="485" y="225" text-anchor="middle" font-size="13" fill="#4527a0">Fine-Tuned Models</text>
-  <line x1="300" y1="50" x2="300" y2="70" stroke="#333" stroke-width="1.5"/>
-  <line x1="300" y1="110" x2="300" y2="130" stroke="#333" stroke-width="1.5"/>
-  <line x1="200" y1="170" x2="115" y2="200" stroke="#333" stroke-width="1.5"/>
-  <line x1="300" y1="170" x2="300" y2="200" stroke="#333" stroke-width="1.5"/>
-  <line x1="400" y1="170" x2="485" y2="200" stroke="#333" stroke-width="1.5"/>
-</svg>
+![building_internal_ai_development_platforms](../../../../svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/building_internal_ai_development_platforms.svg)
 
 ---
 

@@ -58,22 +58,7 @@ Examples:
 
 ## Trade-offs in Isolation
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="300" fill="none" stroke="black" stroke-width="2"/>
-  <line x1="50" y1="200" x2="550" y2="200" stroke="gray" stroke-dasharray="5,5"/>
-  <line x1="300" y1="50" x2="300" y2="350" stroke="gray" stroke-dasharray="5,5"/>
-  <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold">Isolation Trade-offs</text>
-  <text x="100" y="100" font-size="16">Strong Isolation</text>
-  <text x="100" y="120" font-size="14">+ Security</text>
-  <text x="100" y="140" font-size="14">+ Stability</text>
-  <text x="100" y="160" font-size="14">- Performance</text>
-  <text x="100" y="180" font-size="14">- Complexity</text>
-  <text x="400" y="100" font-size="16">Weak Isolation</text>
-  <text x="400" y="120" font-size="14">+ Performance</text>
-  <text x="400" y="140" font-size="14">+ Simplicity</text>
-  <text x="400" y="160" font-size="14">- Security</text>
-  <text x="400" y="180" font-size="14">- Stability</text>
-</svg>
+![trade_offs_in_isolation](../../svg/lectures/isolation-in-computing/trade_offs_in_isolation.svg)
 
 ---
 
@@ -109,19 +94,7 @@ int secret = 100;
 
 Hardware enforces memory boundaries
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="200" fill="#f0f0f0" stroke="black" stroke-width="2"/>
-  <rect x="100" y="100" width="100" height="100" fill="#ffcccc" stroke="red" stroke-width="2"/>
-  <rect x="250" y="100" width="100" height="100" fill="#ccffcc" stroke="green" stroke-width="2"/>
-  <rect x="400" y="100" width="100" height="100" fill="#ccccff" stroke="blue" stroke-width="2"/>
-  <text x="150" y="150" text-anchor="middle">Process A</text>
-  <text x="300" y="150" text-anchor="middle">Process B</text>
-  <text x="450" y="150" text-anchor="middle">Process C</text>
-  <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold">Virtual Memory Spaces</text>
-  <text x="150" y="180" text-anchor="middle" font-size="12">0x0000-0xFFFF</text>
-  <text x="300" y="180" text-anchor="middle" font-size="12">0x0000-0xFFFF</text>
-  <text x="450" y="180" text-anchor="middle" font-size="12">0x0000-0xFFFF</text>
-</svg>
+![memory_protection_unit_mpu](../../svg/lectures/isolation-in-computing/memory_protection_unit_mpu.svg)
 
 ---
 
@@ -129,18 +102,7 @@ Hardware enforces memory boundaries
 
 CPU privilege levels enforce isolation
 
-<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="250" cy="250" r="200" fill="#ff9999" stroke="black" stroke-width="2"/>
-  <circle cx="250" cy="250" r="150" fill="#ffcc99" stroke="black" stroke-width="2"/>
-  <circle cx="250" cy="250" r="100" fill="#ffff99" stroke="black" stroke-width="2"/>
-  <circle cx="250" cy="250" r="50" fill="#99ff99" stroke="black" stroke-width="2"/>
-  <text x="250" y="250" text-anchor="middle" font-size="14" font-weight="bold">Ring 0</text>
-  <text x="250" y="265" text-anchor="middle" font-size="12">Kernel</text>
-  <text x="250" y="180" text-anchor="middle" font-size="14">Ring 1-2</text>
-  <text x="250" y="195" text-anchor="middle" font-size="12">Drivers</text>
-  <text x="250" y="120" text-anchor="middle" font-size="14">Ring 3</text>
-  <text x="250" y="135" text-anchor="middle" font-size="12">User Apps</text>
-</svg>
+![protection_rings](../../svg/lectures/isolation-in-computing/protection_rings.svg)
 
 ---
 
@@ -204,22 +166,7 @@ echo 50000 > /sys/fs/cgroup/cpu/myapp/cpu.cfs_quota_us
 
 Docker builds on Linux kernel features for container isolation
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="300" width="500" height="80" fill="#333" stroke="black" stroke-width="2"/>
-  <text x="300" y="345" text-anchor="middle" fill="white" font-size="16">Host Kernel</text>
-  <rect x="80" y="200" width="140" height="80" fill="#4169e1" stroke="black" stroke-width="2"/>
-  <text x="150" y="240" text-anchor="middle" fill="white">Container A</text>
-  <rect x="240" y="200" width="140" height="80" fill="#4169e1" stroke="black" stroke-width="2"/>
-  <text x="310" y="240" text-anchor="middle" fill="white">Container B</text>
-  <rect x="400" y="200" width="140" height="80" fill="#4169e1" stroke="black" stroke-width="2"/>
-  <text x="470" y="240" text-anchor="middle" fill="white">Container C</text>
-  <rect x="100" y="100" width="100" height="80" fill="#90ee90" stroke="black" stroke-width="1"/>
-  <text x="150" y="140" text-anchor="middle" font-size="12">App + Libs</text>
-  <rect x="260" y="100" width="100" height="80" fill="#90ee90" stroke="black" stroke-width="1"/>
-  <text x="310" y="140" text-anchor="middle" font-size="12">App + Libs</text>
-  <rect x="420" y="100" width="100" height="80" fill="#90ee90" stroke="black" stroke-width="1"/>
-  <text x="470" y="140" text-anchor="middle" font-size="12">App + Libs</text>
-</svg>
+![docker_isolation](../../svg/lectures/isolation-in-computing/docker_isolation.svg)
 
 ---
 
@@ -286,24 +233,7 @@ docker run --memory="512m" --cpus="0.5" myapp
 
 K8s adds orchestration-level isolation
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="320" fill="#f0f0f0" stroke="black" stroke-width="2"/>
-  <text x="300" y="80" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Cluster</text>
-  <rect x="80" y="100" width="200" height="120" fill="#e0e0ff" stroke="blue" stroke-width="2"/>
-  <text x="180" y="120" text-anchor="middle" font-size="14">Namespace A</text>
-  <rect x="100" y="140" width="70" height="60" fill="#ffcccc" stroke="red" stroke-width="1"/>
-  <text x="135" y="170" text-anchor="middle" font-size="12">Pod</text>
-  <rect x="190" y="140" width="70" height="60" fill="#ffcccc" stroke="red" stroke-width="1"/>
-  <text x="225" y="170" text-anchor="middle" font-size="12">Pod</text>
-  <rect x="320" y="100" width="200" height="120" fill="#ffe0e0" stroke="red" stroke-width="2"/>
-  <text x="420" y="120" text-anchor="middle" font-size="14">Namespace B</text>
-  <rect x="340" y="140" width="70" height="60" fill="#ccccff" stroke="blue" stroke-width="1"/>
-  <text x="375" y="170" text-anchor="middle" font-size="12">Pod</text>
-  <rect x="430" y="140" width="70" height="60" fill="#ccccff" stroke="blue" stroke-width="1"/>
-  <text x="465" y="170" text-anchor="middle" font-size="12">Pod</text>
-  <rect x="80" y="240" width="440" height="100" fill="#e0ffe0" stroke="green" stroke-width="2"/>
-  <text x="300" y="260" text-anchor="middle" font-size="14">Node (Physical/Virtual Machine)</text>
-</svg>
+![kubernetes_isolation](../../svg/lectures/isolation-in-computing/kubernetes_isolation.svg)
 
 ---
 
@@ -410,30 +340,7 @@ rules:
 
 VMs provide hardware-level isolation
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="320" width="500" height="60" fill="#333" stroke="black" stroke-width="2"/>
-  <text x="300" y="355" text-anchor="middle" fill="white" font-size="16">Physical Hardware</text>
-  <rect x="50" y="250" width="500" height="60" fill="#666" stroke="black" stroke-width="2"/>
-  <text x="300" y="285" text-anchor="middle" fill="white" font-size="16">Hypervisor (VMM)</text>
-  <rect x="80" y="100" width="140" height="130" fill="#99ccff" stroke="black" stroke-width="2"/>
-  <text x="150" y="125" text-anchor="middle" font-size="14">VM 1</text>
-  <rect x="100" y="140" width="100" height="30" fill="#ffcc99"/>
-  <text x="150" y="158" text-anchor="middle" font-size="12">Guest OS</text>
-  <rect x="100" y="180" width="100" height="30" fill="#ccffcc"/>
-  <text x="150" y="198" text-anchor="middle" font-size="12">Apps</text>
-  <rect x="240" y="100" width="140" height="130" fill="#99ccff" stroke="black" stroke-width="2"/>
-  <text x="310" y="125" text-anchor="middle" font-size="14">VM 2</text>
-  <rect x="260" y="140" width="100" height="30" fill="#ffcc99"/>
-  <text x="310" y="158" text-anchor="middle" font-size="12">Guest OS</text>
-  <rect x="260" y="180" width="100" height="30" fill="#ccffcc"/>
-  <text x="310" y="198" text-anchor="middle" font-size="12">Apps</text>
-  <rect x="400" y="100" width="140" height="130" fill="#99ccff" stroke="black" stroke-width="2"/>
-  <text x="470" y="125" text-anchor="middle" font-size="14">VM 3</text>
-  <rect x="420" y="140" width="100" height="30" fill="#ffcc99"/>
-  <text x="470" y="158" text-anchor="middle" font-size="12">Guest OS</text>
-  <rect x="420" y="180" width="100" height="30" fill="#ccffcc"/>
-  <text x="470" y="198" text-anchor="middle" font-size="12">Apps</text>
-</svg>
+![virtual_machines_strong_isolation](../../svg/lectures/isolation-in-computing/virtual_machines_strong_isolation.svg)
 
 ---
 
@@ -451,30 +358,7 @@ Modern CPUs provide isolation support
 
 Isolation through service boundaries
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="120" height="80" fill="#ffd700" stroke="black" stroke-width="2"/>
-  <text x="160" y="145" text-anchor="middle" font-size="14">Auth Service</text>
-  <rect x="250" y="100" width="120" height="80" fill="#87ceeb" stroke="black" stroke-width="2"/>
-  <text x="310" y="145" text-anchor="middle" font-size="14">User Service</text>
-  <rect x="400" y="100" width="120" height="80" fill="#98fb98" stroke="black" stroke-width="2"/>
-  <text x="460" y="145" text-anchor="middle" font-size="14">Order Service</text>
-  <rect x="100" y="220" width="120" height="80" fill="#ffb6c1" stroke="black" stroke-width="2"/>
-  <text x="160" y="265" text-anchor="middle" font-size="14">Payment</text>
-  <rect x="250" y="220" width="120" height="80" fill="#dda0dd" stroke="black" stroke-width="2"/>
-  <text x="310" y="265" text-anchor="middle" font-size="14">Inventory</text>
-  <rect x="400" y="220" width="120" height="80" fill="#f0e68c" stroke="black" stroke-width="2"/>
-  <text x="460" y="265" text-anchor="middle" font-size="14">Shipping</text>
-  <line x1="220" y1="140" x2="250" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="370" y1="140" x2="400" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="160" y1="180" x2="160" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="310" y1="180" x2="310" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="460" y1="180" x2="460" y2="220" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![microservices_architecture](../../svg/lectures/isolation-in-computing/microservices_architecture.svg)
 
 ---
 
@@ -553,25 +437,7 @@ Multi-tenancy in cloud platforms
 
 Never trust, always verify
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="300" cy="200" r="150" fill="none" stroke="red" stroke-width="3" stroke-dasharray="10,5"/>
-  <text x="300" y="50" text-anchor="middle" font-size="16" font-weight="bold">Zero Trust Perimeter</text>
-  <rect x="250" y="150" width="100" height="60" fill="#ffcccc" stroke="black" stroke-width="2"/>
-  <text x="300" y="185" text-anchor="middle" font-size="14">Resource</text>
-  <rect x="100" y="180" width="80" height="40" fill="#ccccff" stroke="black" stroke-width="2"/>
-  <text x="140" y="205" text-anchor="middle" font-size="12">User</text>
-  <rect x="420" y="180" width="80" height="40" fill="#ccffcc" stroke="black" stroke-width="2"/>
-  <text x="460" y="205" text-anchor="middle" font-size="12">Service</text>
-  <path d="M 180 200 L 250 180" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 420 200 L 350 180" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="215" y="195" font-size="10">Verify</text>
-  <text x="385" y="195" font-size="10">Verify</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![zero_trust_architecture](../../svg/lectures/isolation-in-computing/zero_trust_architecture.svg)
 
 ---
 

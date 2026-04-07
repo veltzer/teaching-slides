@@ -1,0 +1,32 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">TCG Translation Pipeline</text>
+  <rect x="10" y="30" width="110" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="65" y="50" text-anchor="middle" font-size="10" font-weight="bold">Guest Code</text>
+  <text x="65" y="65" text-anchor="middle" font-size="10">(e.g. ARM)</text>
+  <text x="65" y="78" text-anchor="middle" font-size="9">Basic block</text>
+  <rect x="150" y="30" width="110" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="205" y="50" text-anchor="middle" font-size="10" font-weight="bold">TCG Frontend</text>
+  <text x="205" y="65" text-anchor="middle" font-size="10">Decode guest</text>
+  <text x="205" y="78" text-anchor="middle" font-size="9">to TCG ops</text>
+  <rect x="290" y="30" width="110" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="345" y="50" text-anchor="middle" font-size="10" font-weight="bold">TCG IR</text>
+  <text x="345" y="65" text-anchor="middle" font-size="10">Intermediate</text>
+  <text x="345" y="78" text-anchor="middle" font-size="9">Representation</text>
+  <rect x="430" y="30" width="110" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="485" y="50" text-anchor="middle" font-size="10" font-weight="bold">TCG Backend</text>
+  <text x="485" y="65" text-anchor="middle" font-size="10">Emit host</text>
+  <text x="485" y="78" text-anchor="middle" font-size="9">(e.g. x86_64)</text>
+  <rect x="220" y="110" width="160" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="130" text-anchor="middle" font-size="10" font-weight="bold">Translation Block</text>
+  <text x="300" y="145" text-anchor="middle" font-size="10">Cache (TB cache)</text>
+  <line x1="120" y1="57" x2="150" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_09_qemu_internals)"/>
+  <line x1="260" y1="57" x2="290" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_09_qemu_internals)"/>
+  <line x1="400" y1="57" x2="430" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_09_qemu_internals)"/>
+  <line x1="485" y1="85" x2="380" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_09_qemu_internals)"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10" fill="#555">Guest ISA -> TCG ops -> Host ISA (JIT compiled)</text>
+  <defs>
+    <marker id="arrowd1_09_qemu_internals" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

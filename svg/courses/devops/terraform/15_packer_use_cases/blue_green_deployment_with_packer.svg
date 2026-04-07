@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Blue-Green Deployment with Packer</text>
+<text x="20" y="45" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 1: Build new AMI</text>
+<text x="30" y="61" text-anchor="start" font-size="12" fill="#444">Packer build → AMI v2</text>
+<text x="20" y="81" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 2: Deploy alongside old</text>
+<text x="30" y="97" text-anchor="start" font-size="12" fill="#444">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
+<text x="20" y="117" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 3: Switch traffic</text>
+<text x="30" y="133" text-anchor="start" font-size="12" fill="#444">Update ALB target group to new ASG</text>
+<text x="20" y="153" text-anchor="start" font-size="13" fill="#222222" font-weight="bold">Phase 4: Cleanup</text>
+<text x="30" y="169" text-anchor="start" font-size="12" fill="#444">Terminate old ASG</text>
+<text x="160" y="232" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Before</text>
+<rect x="80" y="250" width="160" height="45" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="160" y="276" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ALB</text>
+<line x1="160" y1="295" x2="160" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="80" y="345" width="160" height="45" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="160" y="371" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ASG v1</text>
+<text x="460" y="232" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">After</text>
+<rect x="380" y="250" width="160" height="45" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="460" y="276" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ALB</text>
+<line x1="460" y1="295" x2="460" y2="345" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="380" y="345" width="160" height="45" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="460" y="371" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">ASG v2</text>
+</svg>

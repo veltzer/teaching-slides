@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """
 check_code_labels.py — lint code-block language labels in markdown files.
 

@@ -1,0 +1,31 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowGitArch" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Commit object -->
+  <rect x="230" y="10" width="120" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="290" y="35" text-anchor="middle" font-size="13" font-weight="bold">Commit</text>
+  <!-- Tree object -->
+  <rect x="230" y="80" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="290" y="105" text-anchor="middle" font-size="13" font-weight="bold">Tree</text>
+  <!-- Blob objects -->
+  <rect x="80" y="155" width="110" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="135" y="180" text-anchor="middle" font-size="13" font-weight="bold">Blob (file)</text>
+  <rect x="240" y="155" width="110" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="295" y="180" text-anchor="middle" font-size="13" font-weight="bold">Blob (file)</text>
+  <!-- Tag object -->
+  <rect x="440" y="10" width="110" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="495" y="35" text-anchor="middle" font-size="13" font-weight="bold">Tag</text>
+  <!-- Arrow: Tag -> Commit -->
+  <line x1="440" y1="30" x2="352" y2="30" stroke="#333" stroke-width="2" marker-end="url(#arrowGitArch)"/>
+  <!-- Arrow: Commit -> Tree -->
+  <line x1="290" y1="50" x2="290" y2="78" stroke="#333" stroke-width="2" marker-end="url(#arrowGitArch)"/>
+  <!-- Arrow: Tree -> Blob 1 -->
+  <line x1="250" y1="120" x2="165" y2="153" stroke="#333" stroke-width="2" marker-end="url(#arrowGitArch)"/>
+  <!-- Arrow: Tree -> Blob 2 -->
+  <line x1="310" y1="120" x2="295" y2="153" stroke="#333" stroke-width="2" marker-end="url(#arrowGitArch)"/>
+  <!-- Label -->
+  <text x="80" y="35" text-anchor="middle" font-size="12" fill="#777">Object Store:</text>
+</svg>

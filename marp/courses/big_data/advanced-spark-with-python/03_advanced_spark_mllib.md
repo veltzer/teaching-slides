@@ -8,7 +8,7 @@
 * Production considerations
 ---
 ## MLlib Architecture
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+![mllib_architecture](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mllib_architecture.svg)
 
 ---
 ## Pipeline Components
@@ -30,7 +30,7 @@ assembler = VectorAssembler(
 
 ---
 ## Feature Engineering
-<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="505" y1="150.0" x2="595" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="775" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="820" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Raw Data</text></svg>
+![feature_engineering](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/feature_engineering.svg)
 
 ---
 ## Feature Transformers
@@ -71,7 +71,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
 ```
 ---
 ## Model Training
-<svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="300" x2="295.0" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="520" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="545" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Training Data</text></svg>
+![model_training](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_training.svg)
 
 ---
 ## Hyperparameter Tuning
@@ -102,7 +102,7 @@ cv = CrossValidator(
 1. Custom metrics
 ---
 ## Evaluation Metrics
-<svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="160.0" x2="235" y2="40.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="120.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="200.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="280.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="140.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="460" y="165.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Predictions</text></svg>
+![evaluation_metrics](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/evaluation_metrics.svg)
 
 ---
 ## Custom Evaluator
@@ -122,7 +122,7 @@ bestPipeline = bestModel.stages[-1]
 ```
 ---
 ## Distributed Training
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+![distributed_training](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_training.svg)
 
 ---
 ## Model Persistence
@@ -153,7 +153,7 @@ rf = RandomForestClassifier(
 ```
 ---
 ## Neural Networks
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Input</text></svg>
+![neural_networks](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/neural_networks.svg)
 
 ---
 ## Custom Algorithms
@@ -173,7 +173,7 @@ for batch in streaming_data:
 ```
 ---
 ## Model Serving
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Model</text></svg>
+![model_serving](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving.svg)
 
 ---
 ## Production Pipeline
@@ -191,7 +191,7 @@ accuracy = evaluator.evaluate(predictions)
 ```
 ---
 ## Performance Optimization
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Optimization</text></svg>
+![performance_optimization](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/performance_optimization.svg)
 
 ---
 
@@ -210,7 +210,7 @@ transformed_data = pipeline.fit(train_data)\
 ```
 ---
 ## Distributed Processing
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Master</text></svg>
+![distributed_processing](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_processing.svg)
 
 ---
 ## Feature Store Integration
@@ -226,7 +226,7 @@ mlflow.spark.log_model(spark_model, "model")
 ```
 ---
 ## A/B Testing
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="110.0" x2="325" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Traffic</text></svg>
+![a_b_testing](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/a_b_testing.svg)
 
 ---
 ## Model Versioning
@@ -252,7 +252,7 @@ except Exception as e:
 ```
 ---
 ## Data Validation
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Input Data</text></svg>
+![data_validation](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/data_validation.svg)
 
 ---
 ## Model Explainability
@@ -272,7 +272,7 @@ automl = TrainValidationSplit(
 ```
 ---
 ## Transfer Learning
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Base Model</text></svg>
+![transfer_learning](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/transfer_learning.svg)
 
 ---
 ## Model Compression
@@ -290,7 +290,7 @@ def process_stream(batch_df, epoch_id):
 ```
 ---
 ## Security Considerations
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Security</text></svg>
+![security_considerations](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/security_considerations.svg)
 
 ---
 ## Testing ML Pipelines
@@ -307,7 +307,7 @@ debug_df.show()
 ```
 ---
 ## Best Practices
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Best Practices</text></svg>
+![best_practices](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/best_practices.svg)
 
 ---
 ## Production Checklist
@@ -323,7 +323,7 @@ debug_df.show()
 1. Federated learning
 ---
 ## MLOps Integration
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Development</text></svg>
+![mlops_integration](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mlops_integration.svg)
 
 ---
 ## Additional Resources
@@ -446,61 +446,7 @@ label_indexer = StringIndexer(
 
 ## ML Pipeline Data Flow
 
-<svg viewBox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow-ml" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
-  </defs>
-  <!-- Raw Data -->
-  <rect x="60" y="5" width="130" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Raw Data</text>
-  <text x="125" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(CSV/Parquet)</text>
-  <line x1="125" y1="50" x2="125" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- Imputer -->
-  <rect x="60" y="70" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="125" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Imputer</text>
-  <line x1="190" y1="87" x2="240" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="72" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Fill nulls with median</text>
-  <line x1="125" y1="105" x2="125" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- StringIndexer -->
-  <rect x="60" y="125" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="125" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StringIndexer</text>
-  <line x1="190" y1="142" x2="240" y2="142" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="127" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">"Gold" -> 0, "Silver" -> 1</text>
-  <line x1="125" y1="160" x2="125" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- OneHotEncoder -->
-  <rect x="60" y="180" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="125" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">OneHotEncoder</text>
-  <line x1="190" y1="197" x2="240" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="182" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">0 -> [1,0,0], 1 -> [0,1,0]</text>
-  <line x1="125" y1="215" x2="125" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- VectorAssembler -->
-  <rect x="60" y="235" width="130" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="125" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">VectorAssembler</text>
-  <line x1="190" y1="252" x2="240" y2="252" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="237" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Combine all into [0.5, 1.2, 3.4, 1, 0, 0]</text>
-  <line x1="125" y1="270" x2="125" y2="285" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- StandardScaler -->
-  <rect x="60" y="290" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="125" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StandardScaler</text>
-  <line x1="190" y1="307" x2="240" y2="307" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="292" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Normalize: mean=0, std=1</text>
-  <line x1="125" y1="325" x2="125" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- Classifier -->
-  <rect x="60" y="345" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="125" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Classifier</text>
-  <line x1="190" y1="362" x2="240" y2="362" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <rect x="245" y="347" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="400" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">RandomForest / GBT / LR</text>
-  <line x1="125" y1="380" x2="125" y2="395" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
-  <!-- Predictions -->
-  <rect x="60" y="400" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="125" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Predictions</text>
-</svg>
+![ml_pipeline_data_flow](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/ml_pipeline_data_flow.svg)
 
 ---
 
@@ -883,75 +829,10 @@ balanced_train.groupBy("churn").count().show()
 
 ## Model Serving Architecture
 
-<svg viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow-ms" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
-  </defs>
-  <!-- Training Pipeline -->
-  <rect x="80" y="5" width="460" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="310" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Training Pipeline</text>
-  <text x="310" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Raw Data --> Features --> Train --> Evaluate --> Save Model</text>
-  <line x1="310" y1="75" x2="310" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
-  <!-- MLflow Registry -->
-  <rect x="210" y="105" width="200" height="55" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="310" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">MLflow Model Registry</text>
-  <text x="310" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">(versioned)</text>
-  <!-- Arrows to serving options -->
-  <line x1="240" y1="160" x2="130" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
-  <line x1="310" y1="160" x2="310" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
-  <line x1="380" y1="160" x2="490" y2="195" stroke="#333" stroke-width="2" marker-end="url(#arrow-ms)"/>
-  <!-- Batch Scoring -->
-  <rect x="40" y="200" width="180" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="130" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Batch Scoring</text>
-  <text x="130" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Spark job</text>
-  <text x="130" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">scheduled daily</text>
-  <!-- Streaming Scoring -->
-  <rect x="220" y="200" width="180" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="310" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Streaming Scoring</text>
-  <text x="310" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Structured Streaming</text>
-  <text x="310" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">real-time</text>
-  <!-- REST API -->
-  <rect x="400" y="200" width="180" height="70" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="490" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">REST API Serving</text>
-  <text x="490" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">MLflow serve</text>
-  <text x="490" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">or custom</text>
-</svg>
+![model_serving_architecture](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving_architecture.svg)
 
 ---
 
 ## Production ML Pipeline Checklist
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="560" font-family="sans-serif">
-<rect x="10" y="5" width="610" height="520" fill="#fafafa" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="315" y="25" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Production ML Pipeline Checklist</text>
-<rect x="20" y="40" width="590" height="98" fill="#e3f2fd" stroke="#999" stroke-width="1" rx="4"/>
-<text x="30" y="56" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Data Quality</text>
-<text x="40" y="74" font-size="12" fill="#333" text-anchor="start">☐ Schema validation on input</text>
-<text x="40" y="92" font-size="12" fill="#333" text-anchor="start">☐ Null/missing value handling</text>
-<text x="40" y="110" font-size="12" fill="#333" text-anchor="start">☐ Outlier detection and clipping</text>
-<text x="40" y="128" font-size="12" fill="#333" text-anchor="start">☐ Feature drift monitoring</text>
-<rect x="20" y="143" width="590" height="98" fill="#e8f5e9" stroke="#999" stroke-width="1" rx="4"/>
-<text x="30" y="159" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Model Training</text>
-<text x="40" y="177" font-size="12" fill="#333" text-anchor="start">☐ Cross-validation (k >= 5)</text>
-<text x="40" y="195" font-size="12" fill="#333" text-anchor="start">☐ Multiple model comparison</text>
-<text x="40" y="213" font-size="12" fill="#333" text-anchor="start">☐ Hyperparameter tuning</text>
-<text x="40" y="231" font-size="12" fill="#333" text-anchor="start">☐ Class imbalance handling</text>
-<rect x="20" y="246" width="590" height="98" fill="#fff3e0" stroke="#999" stroke-width="1" rx="4"/>
-<text x="30" y="262" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Evaluation</text>
-<text x="40" y="280" font-size="12" fill="#333" text-anchor="start">☐ Hold-out test set (never touched)</text>
-<text x="40" y="298" font-size="12" fill="#333" text-anchor="start">☐ Multiple metrics (AUC, F1, precision)</text>
-<text x="40" y="316" font-size="12" fill="#333" text-anchor="start">☐ Confusion matrix analysis</text>
-<text x="40" y="334" font-size="12" fill="#333" text-anchor="start">☐ Threshold tuning for business needs</text>
-<rect x="20" y="349" width="590" height="98" fill="#fce4ec" stroke="#999" stroke-width="1" rx="4"/>
-<text x="30" y="365" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Deployment</text>
-<text x="40" y="383" font-size="12" fill="#333" text-anchor="start">☐ Model versioning (MLflow registry)</text>
-<text x="40" y="401" font-size="12" fill="#333" text-anchor="start">☐ A/B testing framework</text>
-<text x="40" y="419" font-size="12" fill="#333" text-anchor="start">☐ Rollback capability</text>
-<text x="40" y="437" font-size="12" fill="#333" text-anchor="start">☐ Latency monitoring</text>
-<rect x="20" y="452" width="590" height="98" fill="#f3e5f5" stroke="#999" stroke-width="1" rx="4"/>
-<text x="30" y="468" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Monitoring</text>
-<text x="40" y="486" font-size="12" fill="#333" text-anchor="start">☐ Prediction distribution tracking</text>
-<text x="40" y="504" font-size="12" fill="#333" text-anchor="start">☐ Feature drift detection</text>
-<text x="40" y="522" font-size="12" fill="#333" text-anchor="start">☐ Model performance decay alerts</text>
-<text x="40" y="540" font-size="12" fill="#333" text-anchor="start">☐ Retraining triggers</text>
-</svg>
+![production_ml_pipeline_checklist](../../../../svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/production_ml_pipeline_checklist.svg)

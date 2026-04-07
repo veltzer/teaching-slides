@@ -1,0 +1,31 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd3_12_trouble_shooting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Diagnostic Flowchart</text>
+  <rect x="20" y="30" width="110" height="40" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="75" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Problem</text>
+  <text x="75" y="62" text-anchor="middle" font-size="9">Container fails</text>
+  <line x1="130" y1="50" x2="155" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_trouble_shooting)"/>
+  <rect x="155" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="205" y="48" text-anchor="middle" font-size="10" font-weight="bold">docker logs</text>
+  <text x="205" y="62" text-anchor="middle" font-size="9">Check output</text>
+  <line x1="255" y1="50" x2="280" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_trouble_shooting)"/>
+  <rect x="280" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="330" y="48" text-anchor="middle" font-size="10" font-weight="bold">docker inspect</text>
+  <text x="330" y="62" text-anchor="middle" font-size="9">Check config</text>
+  <line x1="380" y1="50" x2="405" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_trouble_shooting)"/>
+  <rect x="405" y="30" width="80" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="48" text-anchor="middle" font-size="10" font-weight="bold">docker exec</text>
+  <text x="445" y="62" text-anchor="middle" font-size="9">Shell in</text>
+  <line x1="485" y1="50" x2="505" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_12_trouble_shooting)"/>
+  <rect x="505" y="30" width="80" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="545" y="48" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Fix</text>
+  <text x="545" y="62" text-anchor="middle" font-size="9">Apply solution</text>
+  <rect x="40" y="90" width="520" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5" stroke-dasharray="4,2"/>
+  <text x="300" y="108" text-anchor="middle" font-size="10" font-weight="bold">Key questions at each step:</text>
+  <text x="300" y="125" text-anchor="middle" font-size="10">Exit code? | Environment correct? | Ports open? | Volumes mounted? | Permissions?</text>
+  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#555">If container exits immediately: docker run -it --entrypoint sh image</text>
+</svg>

@@ -24,28 +24,7 @@
 
 ## Static vs Dynamic Inventory
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" font-family="sans-serif">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="160" y="20" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Static Inventory</text>
-<text x="480" y="20" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Dynamic Inventory</text>
-<rect x="20" y="35" width="280" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="160" y="52" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">inventory.yml</text>
-<text x="160" y="68" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(manually edited)</text>
-<rect x="340" y="35" width="280" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="480" y="52" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">AWS / Azure / GCP</text>
-<text x="480" y="68" font-size="11" font-weight="normal" fill="#222" text-anchor="middle">(API queries)</text>
-<text x="30" y="105" font-size="12" fill="#333" text-anchor="start">• Fixed hosts</text>
-<text x="350" y="105" font-size="12" fill="#333" text-anchor="start">• Discovered at runtime</text>
-<text x="30" y="125" font-size="12" fill="#333" text-anchor="start">• Manual updates</text>
-<text x="350" y="125" font-size="12" fill="#333" text-anchor="start">• Always current</text>
-<text x="30" y="145" font-size="12" fill="#333" text-anchor="start">• Good for small environments</text>
-<text x="350" y="145" font-size="12" fill="#333" text-anchor="start">• Good for cloud environments</text>
-<line x1="320" y1="30" x2="320" y2="175" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
-</svg>
+![static_vs_dynamic_inventory](../../../../svg/courses/devops/ansible/11_dynamic_inventory/static_vs_dynamic_inventory.svg)
 
 ---
 

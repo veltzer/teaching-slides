@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+  <!-- YARN Metrics -->
+  <rect x="50" y="100" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="125" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">YARN Metrics</text>
+
+  <!-- Spark Metrics -->
+  <rect x="50" y="200" width="150" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="125" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Spark Metrics</text>
+
+  <!-- Graphite -->
+  <rect x="350" y="150" width="150" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="425" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Graphite</text>
+
+  <!-- Grafana -->
+  <rect x="600" y="150" width="150" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="675" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Grafana</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow13" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- YARN Metrics to Graphite -->
+  <line x1="200" y1="140" x2="350" y2="170" stroke="#666" stroke-width="2" marker-end="url(#arrow13)"/>
+
+  <!-- Spark Metrics to Graphite -->
+  <line x1="200" y1="220" x2="350" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrow13)"/>
+
+  <!-- Graphite to Grafana -->
+  <line x1="500" y1="180" x2="600" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrow13)"/>
+
+  <!-- Labels for data flow -->
+  <text x="250" y="145" font-family="Arial, sans-serif" font-size="11" fill="#666" font-style="italic">collect</text>
+  <text x="250" y="210" font-family="Arial, sans-serif" font-size="11" fill="#666" font-style="italic">collect</text>
+  <text x="540" y="175" font-family="Arial, sans-serif" font-size="11" fill="#666" font-style="italic">visualize</text>
+</svg>

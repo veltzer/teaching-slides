@@ -8,16 +8,7 @@
 1. Hardware-specific code and configurations
 1. Enables Linux to run on specific hardware platforms
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-<rect x="50" y="220" width="300" height="40" fill="#8B4513" stroke="black"/>
-<text x="200" y="245" text-anchor="middle" fill="white">Hardware Platform</text>
-<rect x="50" y="160" width="300" height="40" fill="#4169E1" stroke="black"/>
-<text x="200" y="185" text-anchor="middle" fill="white">Board Support Package</text>
-<rect x="50" y="100" width="300" height="40" fill="#32CD32" stroke="black"/>
-<text x="200" y="125" text-anchor="middle">Linux Kernel</text>
-<rect x="50" y="40" width="300" height="40" fill="#FFD700" stroke="black"/>
-<text x="200" y="65" text-anchor="middle">Applications</text>
-</svg>
+![what_is_a_bsp](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/what_is_a_bsp.svg)
 
 ---
 
@@ -34,22 +25,7 @@
 
 ## BSP Architecture
 
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="20" y="320" width="460" height="60" fill="#8B4513" stroke="black"/>
-<text x="250" y="355" text-anchor="middle" fill="white">Hardware (SoC, Memory, Peripherals)</text>
-<rect x="20" y="240" width="150" height="60" fill="#4169E1" stroke="black"/>
-<text x="95" y="275" text-anchor="middle" fill="white">Bootloader</text>
-<rect x="180" y="240" width="150" height="60" fill="#4169E1" stroke="black"/>
-<text x="255" y="275" text-anchor="middle" fill="white">Device Tree</text>
-<rect x="340" y="240" width="140" height="60" fill="#4169E1" stroke="black"/>
-<text x="410" y="275" text-anchor="middle" fill="white">Drivers</text>
-<rect x="20" y="160" width="460" height="60" fill="#32CD32" stroke="black"/>
-<text x="250" y="195" text-anchor="middle">Linux Kernel</text>
-<rect x="20" y="80" width="220" height="60" fill="#FFD700" stroke="black"/>
-<text x="130" y="115" text-anchor="middle">Root Filesystem</text>
-<rect x="260" y="80" width="220" height="60" fill="#FFD700" stroke="black"/>
-<text x="370" y="115" text-anchor="middle">Applications</text>
-</svg>
+![bsp_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_architecture.svg)
 
 ---
 
@@ -94,33 +70,7 @@ void platform_init(void) {
 
 ## Boot Sequence
 
-<svg viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
-<rect x="150" y="20" width="100" height="40" fill="#FF6347" stroke="black"/>
-<text x="200" y="45" text-anchor="middle">Power On</text>
-<line x1="200" y1="60" x2="200" y2="80" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="80" width="100" height="40" fill="#FFA500" stroke="black"/>
-<text x="200" y="105" text-anchor="middle">ROM Code</text>
-<line x1="200" y1="120" x2="200" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="140" width="100" height="40" fill="#FFD700" stroke="black"/>
-<text x="200" y="165" text-anchor="middle">SPL/MLO</text>
-<line x1="200" y1="180" x2="200" y2="200" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="200" width="100" height="40" fill="#4169E1" stroke="black"/>
-<text x="200" y="225" text-anchor="middle" fill="white">U-Boot</text>
-<line x1="200" y1="240" x2="200" y2="260" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="260" width="100" height="40" fill="#32CD32" stroke="black"/>
-<text x="200" y="285" text-anchor="middle">Kernel</text>
-<line x1="200" y1="300" x2="200" y2="320" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="320" width="100" height="40" fill="#87CEEB" stroke="black"/>
-<text x="200" y="345" text-anchor="middle">Init</text>
-<line x1="200" y1="360" x2="200" y2="380" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<rect x="150" y="380" width="100" height="40" fill="#98FB98" stroke="black"/>
-<text x="200" y="405" text-anchor="middle">Userspace</text>
-<defs>
-<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![boot_sequence](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/boot_sequence.svg)
 
 ---
 
@@ -243,36 +193,7 @@ my-bsp/
 
 ## BSP Build Process
 
-<svg viewBox="0 0 450 350" xmlns="http://www.w3.org/2000/svg">
-<rect x="20" y="20" width="120" height="40" fill="#FFE4B5" stroke="black"/>
-<text x="80" y="45" text-anchor="middle">Sources</text>
-<rect x="160" y="20" width="120" height="40" fill="#FFE4B5" stroke="black"/>
-<text x="220" y="45" text-anchor="middle">Patches</text>
-<rect x="300" y="20" width="120" height="40" fill="#FFE4B5" stroke="black"/>
-<text x="360" y="45" text-anchor="middle">Config</text>
-<line x1="80" y1="60" x2="220" y2="100" stroke="black" stroke-width="2"/>
-<line x1="220" y1="60" x2="220" y2="100" stroke="black" stroke-width="2"/>
-<line x1="360" y1="60" x2="220" y2="100" stroke="black" stroke-width="2"/>
-<rect x="160" y="100" width="120" height="40" fill="#87CEEB" stroke="black"/>
-<text x="220" y="125" text-anchor="middle">Build System</text>
-<line x1="220" y1="140" x2="220" y2="180" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-<rect x="70" y="180" width="100" height="40" fill="#98FB98" stroke="black"/>
-<text x="120" y="205" text-anchor="middle">Bootloader</text>
-<rect x="175" y="180" width="100" height="40" fill="#98FB98" stroke="black"/>
-<text x="225" y="205" text-anchor="middle">Kernel</text>
-<rect x="280" y="180" width="100" height="40" fill="#98FB98" stroke="black"/>
-<text x="330" y="205" text-anchor="middle">RootFS</text>
-<line x1="120" y1="220" x2="220" y2="260" stroke="black" stroke-width="2"/>
-<line x1="225" y1="220" x2="220" y2="260" stroke="black" stroke-width="2"/>
-<line x1="330" y1="220" x2="220" y2="260" stroke="black" stroke-width="2"/>
-<rect x="160" y="260" width="120" height="40" fill="#FFD700" stroke="black"/>
-<text x="220" y="285" text-anchor="middle">BSP Image</text>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![bsp_build_process](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_build_process.svg)
 
 ---
 
@@ -418,24 +339,7 @@ git fetch vendor
 
 ## Memory Layout Planning
 
-<svg viewBox="0 0 400 450" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="20" width="200" height="40" fill="#FF6347" stroke="black"/>
-<text x="200" y="45" text-anchor="middle">0x00000000 - Boot ROM</text>
-<rect x="100" y="60" width="200" height="40" fill="#FFA500" stroke="black"/>
-<text x="200" y="85" text-anchor="middle">0x40000000 - SRAM</text>
-<rect x="100" y="100" width="200" height="60" fill="#4169E1" stroke="black"/>
-<text x="200" y="135" text-anchor="middle" fill="white">0x80000000 - DDR Base</text>
-<rect x="100" y="160" width="200" height="40" fill="#32CD32" stroke="black"/>
-<text x="200" y="185" text-anchor="middle">0x80008000 - Kernel</text>
-<rect x="100" y="200" width="200" height="40" fill="#87CEEB" stroke="black"/>
-<text x="200" y="225" text-anchor="middle">0x88000000 - Device Tree</text>
-<rect x="100" y="240" width="200" height="40" fill="#98FB98" stroke="black"/>
-<text x="200" y="265" text-anchor="middle">0x88100000 - Initramfs</text>
-<rect x="100" y="280" width="200" height="100" fill="#FFE4B5" stroke="black"/>
-<text x="200" y="335" text-anchor="middle">0x90000000 - User Space</text>
-<rect x="100" y="380" width="200" height="40" fill="#DDA0DD" stroke="black"/>
-<text x="200" y="405" text-anchor="middle">0xF0000000 - Peripherals</text>
-</svg>
+![memory_layout_planning](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/memory_layout_planning.svg)
 
 ---
 
@@ -517,27 +421,7 @@ clocks {
 
 ## Vendor BSP Integration
 
-<svg viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
-<rect x="20" y="120" width="120" height="60" fill="#FFE4B5" stroke="black"/>
-<text x="80" y="155" text-anchor="middle">Vendor BSP</text>
-<rect x="160" y="120" width="120" height="60" fill="#87CEEB" stroke="black"/>
-<text x="220" y="155" text-anchor="middle">Custom Code</text>
-<rect x="300" y="120" width="120" height="60" fill="#98FB98" stroke="black"/>
-<text x="360" y="155" text-anchor="middle">Product BSP</text>
-<line x1="140" y1="150" x2="160" y2="150" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
-<line x1="280" y1="150" x2="300" y2="150" stroke="black" stroke-width="2" marker-end="url(#arr)"/>
-<text x="80" y="210" text-anchor="middle">Updates</text>
-<text x="220" y="210" text-anchor="middle">Features</text>
-<text x="360" y="210" text-anchor="middle">Release</text>
-<line x1="80" y1="180" x2="80" y2="195" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
-<line x1="220" y1="180" x2="220" y2="195" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
-<line x1="360" y1="180" x2="360" y2="195" stroke="black" stroke-width="1" stroke-dasharray="5,5"/>
-<defs>
-<marker id="arr" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![vendor_bsp_integration](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/vendor_bsp_integration.svg)
 
 ---
 

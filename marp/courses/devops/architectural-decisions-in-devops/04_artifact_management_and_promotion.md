@@ -71,32 +71,7 @@
 | Cost sensitivity | Lower | Higher |
 ---
 ## Artifact Repository Architecture
-<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="20" width="130" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="75" y="50" text-anchor="middle" fill="white" font-size="13" font-weight="bold">CI Build</text>
-  <rect x="10" y="90" width="130" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="75" y="120" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Developer</text>
-  <rect x="230" y="55" width="160" height="60" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="310" y="80" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Artifact</text>
-  <text x="310" y="100" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Repository</text>
-  <rect x="500" y="10" width="160" height="40" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="580" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Dev Deploy</text>
-  <rect x="500" y="65" width="160" height="40" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="580" y="90" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Staging Deploy</text>
-  <rect x="500" y="120" width="160" height="40" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="580" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Prod Deploy</text>
-  <line x1="140" y1="45" x2="230" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <line x1="140" y1="115" x2="230" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <line x1="390" y1="70" x2="500" y2="30" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <line x1="390" y1="85" x2="500" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <line x1="390" y1="100" x2="500" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <defs>
-    <marker id="arrow1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="210" text-anchor="middle" fill="#555" font-size="12" font-style="italic">Central repository serves all environments</text>
-</svg>
+![artifact_repository_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/artifact_repository_architecture.svg)
 
 ---
 ## Promotion Between Stages
@@ -107,34 +82,7 @@
 - Promotion is a metadata operation, not a rebuild
 ---
 ## Promotion Pipeline: Overview
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="80" width="120" height="60" rx="10" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="80" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Build</text>
-  <text x="80" y="125" text-anchor="middle" fill="white" font-size="11">Unit Tests</text>
-  <rect x="180" y="80" width="120" height="60" rx="10" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="240" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Dev Repo</text>
-  <text x="240" y="125" text-anchor="middle" fill="white" font-size="11">Snapshot</text>
-  <rect x="340" y="80" width="120" height="60" rx="10" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Staging Repo</text>
-  <text x="400" y="125" text-anchor="middle" fill="white" font-size="11">Integration</text>
-  <rect x="500" y="80" width="120" height="60" rx="10" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="560" y="105" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Prod Repo</text>
-  <text x="560" y="125" text-anchor="middle" fill="white" font-size="11">Release</text>
-  <line x1="140" y1="110" x2="180" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="300" y1="110" x2="340" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="460" y1="110" x2="500" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="230" y="170" text-anchor="middle" fill="#555" font-size="10">promote</text>
-  <text x="390" y="170" text-anchor="middle" fill="#555" font-size="10">promote</text>
-  <text x="550" y="170" text-anchor="middle" fill="#555" font-size="10">promote</text>
-  <text x="160" y="55" text-anchor="middle" fill="#333" font-size="10">auto</text>
-  <text x="320" y="55" text-anchor="middle" fill="#333" font-size="10">gate: tests pass</text>
-  <text x="480" y="55" text-anchor="middle" fill="#333" font-size="10">gate: approval</text>
-  <defs>
-    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![promotion_pipeline_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/promotion_pipeline_overview.svg)
 
 ---
 ## Promotion Strategies
@@ -187,31 +135,7 @@ jfrog rt build-promote \
 - Pre-release: `1.0.0-alpha.1`, `1.0.0-rc.2`
 ---
 ## SemVer: Version Ordering
-<svg viewBox="0 0 650 200" xmlns="http://www.w3.org/2000/svg">
-  <line x1="50" y1="100" x2="620" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <circle cx="100" cy="100" r="8" fill="#4A90D9"/>
-  <text x="100" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">1.0.0-alpha</text>
-  <circle cx="200" cy="100" r="8" fill="#4A90D9"/>
-  <text x="200" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">1.0.0-rc.1</text>
-  <circle cx="300" cy="100" r="8" fill="#50B86C"/>
-  <text x="300" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">1.0.0</text>
-  <circle cx="400" cy="100" r="8" fill="#50B86C"/>
-  <text x="400" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">1.0.1</text>
-  <circle cx="500" cy="100" r="8" fill="#E8A838"/>
-  <text x="500" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">1.1.0</text>
-  <circle cx="600" cy="100" r="8" fill="#D96B4A"/>
-  <text x="600" y="85" text-anchor="middle" fill="#333" font-size="11" font-weight="bold">2.0.0</text>
-  <text x="100" y="130" text-anchor="middle" fill="#555" font-size="9">pre-release</text>
-  <text x="300" y="130" text-anchor="middle" fill="#555" font-size="9">stable</text>
-  <text x="400" y="130" text-anchor="middle" fill="#555" font-size="9">patch</text>
-  <text x="500" y="130" text-anchor="middle" fill="#555" font-size="9">minor</text>
-  <text x="600" y="130" text-anchor="middle" fill="#555" font-size="9">major</text>
-  <defs>
-    <marker id="arrow3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![semver_version_ordering](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/semver_version_ordering.svg)
 
 ---
 ## Commit-Based Versioning
@@ -265,28 +189,7 @@ jfrog rt build-promote \
 - Breaking immutability = breaking trust in the pipeline
 ---
 ## Traceability: From Deploy to Source
-<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="80" width="110" height="50" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="75" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Production</text>
-  <rect x="170" y="80" width="110" height="50" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="225" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Artifact v2.3.1</text>
-  <rect x="320" y="80" width="110" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="375" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Build #142</text>
-  <rect x="470" y="80" width="110" height="50" rx="8" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="525" y="110" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Commit a3f8b2c</text>
-  <line x1="130" y1="105" x2="170" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <line x1="280" y1="105" x2="320" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <line x1="430" y1="105" x2="470" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="150" y="75" text-anchor="middle" fill="#555" font-size="9">runs</text>
-  <text x="300" y="75" text-anchor="middle" fill="#555" font-size="9">built by</text>
-  <text x="450" y="75" text-anchor="middle" fill="#555" font-size="9">from</text>
-  <text x="350" y="180" text-anchor="middle" fill="#555" font-size="11" font-style="italic">Full traceability chain from deploy to commit</text>
-  <defs>
-    <marker id="arrow4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![traceability_from_deploy_to_source](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/traceability_from_deploy_to_source.svg)
 
 ---
 ## Implementing Traceability
@@ -318,21 +221,7 @@ jfrog rt build-promote \
     - Tag and digest strategies
 ---
 ## Container Image Layers
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="20" width="300" height="40" rx="5" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="250" y="45" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Application Code (2 MB)</text>
-  <rect x="100" y="70" width="300" height="40" rx="5" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="250" y="95" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Dependencies (45 MB)</text>
-  <rect x="100" y="120" width="300" height="40" rx="5" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="250" y="145" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Runtime (30 MB)</text>
-  <rect x="100" y="170" width="300" height="40" rx="5" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="250" y="195" text-anchor="middle" fill="white" font-size="12" font-weight="bold">OS Base Layer (80 MB)</text>
-  <text x="70" y="45" text-anchor="end" fill="#555" font-size="10">Layer 4</text>
-  <text x="70" y="95" text-anchor="end" fill="#555" font-size="10">Layer 3</text>
-  <text x="70" y="145" text-anchor="end" fill="#555" font-size="10">Layer 2</text>
-  <text x="70" y="195" text-anchor="end" fill="#555" font-size="10">Layer 1</text>
-  <text x="250" y="250" text-anchor="middle" fill="#555" font-size="11" font-style="italic">Each layer is cached and shared across images</text>
-</svg>
+![container_image_layers](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_layers.svg)
 
 ---
 ## Base Image Strategies
@@ -347,18 +236,7 @@ jfrog rt build-promote \
     - Organizational compliance requirements
 ---
 ## Base Image Tiering
-<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="180" y="10" width="240" height="50" rx="8" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="300" y="30" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Tier 3: Application Images</text>
-  <text x="300" y="48" text-anchor="middle" fill="white" font-size="10">myapp:2.3.1</text>
-  <rect x="140" y="80" width="320" height="50" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="300" y="100" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Tier 2: Runtime Base Images</text>
-  <text x="300" y="118" text-anchor="middle" fill="white" font-size="10">node-base:20, python-base:3.12</text>
-  <rect x="100" y="150" width="400" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="300" y="170" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Tier 1: OS Foundation Images</text>
-  <text x="300" y="188" text-anchor="middle" fill="white" font-size="10">ubuntu-hardened:22.04, alpine-approved:3.19</text>
-  <text x="300" y="240" text-anchor="middle" fill="#555" font-size="11" font-style="italic">Each tier inherits security policies from below</text>
-</svg>
+![base_image_tiering](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/base_image_tiering.svg)
 
 ---
 ## Supply Chain Security for Images
@@ -428,29 +306,7 @@ trivy image \
 | Negligible | Ignore | No action required |
 ---
 ## Policy Enforcement Architecture
-<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="100" width="120" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="80" y="130" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Developer Push</text>
-  <rect x="180" y="100" width="120" height="50" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="240" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Registry</text>
-  <text x="240" y="138" text-anchor="middle" fill="white" font-size="10">Webhook</text>
-  <rect x="340" y="100" width="120" height="50" rx="8" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Scanner</text>
-  <text x="400" y="138" text-anchor="middle" fill="white" font-size="10">Trivy / Grype</text>
-  <rect x="500" y="70" width="140" height="40" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="570" y="95" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Pass: Tag OK</text>
-  <rect x="500" y="140" width="140" height="40" rx="8" fill="#C0392B" stroke="#333" stroke-width="2"/>
-  <text x="570" y="165" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Fail: Quarantine</text>
-  <line x1="140" y1="125" x2="180" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="300" y1="125" x2="340" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="460" y1="115" x2="500" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="460" y1="135" x2="500" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <defs>
-    <marker id="arrow5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![policy_enforcement_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/policy_enforcement_architecture.svg)
 
 ---
 ## Kubernetes Admission Control
@@ -498,18 +354,7 @@ spec:
 | `chainguard` | ~2-15 MB | None | `apk` (build) |
 ---
 ## Slim Image Comparison
-<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" fill="#333" font-size="13" font-weight="bold">Image Size Comparison (Node.js App)</text>
-  <rect x="60" y="40" width="400" height="30" rx="4" fill="#D96B4A" stroke="#333" stroke-width="1"/>
-  <text x="65" y="60" fill="white" font-size="11" font-weight="bold">node:20 (910 MB)</text>
-  <rect x="60" y="80" width="200" height="30" rx="4" fill="#E8A838" stroke="#333" stroke-width="1"/>
-  <text x="65" y="100" fill="white" font-size="11" font-weight="bold">node:20-slim (180 MB)</text>
-  <rect x="60" y="120" width="80" height="30" rx="4" fill="#4A90D9" stroke="#333" stroke-width="1"/>
-  <text x="65" y="140" fill="white" font-size="11" font-weight="bold">alpine (70 MB)</text>
-  <rect x="60" y="160" width="30" height="30" rx="4" fill="#50B86C" stroke="#333" stroke-width="1"/>
-  <text x="95" y="180" fill="#333" font-size="11" font-weight="bold">distroless (25 MB)</text>
-  <text x="300" y="230" text-anchor="middle" fill="#555" font-size="11" font-style="italic">Smaller images = faster pulls, less attack surface</text>
-</svg>
+![slim_image_comparison](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/slim_image_comparison.svg)
 
 ---
 ## Multi-Stage Builds
@@ -531,32 +376,7 @@ CMD ["/myapp"]
 ```
 ---
 ## Multi-Stage Build: Layer Diagram
-<svg viewBox="0 0 650 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="250" height="180" rx="8" fill="none" stroke="#D96B4A" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="145" y="22" text-anchor="middle" fill="#D96B4A" font-size="12" font-weight="bold">Build Stage (discarded)</text>
-  <rect x="40" y="45" width="210" height="30" rx="4" fill="#D96B4A" stroke="#333" stroke-width="1"/>
-  <text x="145" y="65" text-anchor="middle" fill="white" font-size="10">Go Compiler (300 MB)</text>
-  <rect x="40" y="85" width="210" height="30" rx="4" fill="#E8A838" stroke="#333" stroke-width="1"/>
-  <text x="145" y="105" text-anchor="middle" fill="white" font-size="10">Build Dependencies (150 MB)</text>
-  <rect x="40" y="125" width="210" height="30" rx="4" fill="#4A90D9" stroke="#333" stroke-width="1"/>
-  <text x="145" y="145" text-anchor="middle" fill="white" font-size="10">Source Code (5 MB)</text>
-  <rect x="40" y="165" width="210" height="30" rx="4" fill="#50B86C" stroke="#333" stroke-width="1"/>
-  <text x="145" y="185" text-anchor="middle" fill="white" font-size="10">Binary Output (10 MB)</text>
-  <rect x="370" y="30" width="250" height="130" rx="8" fill="none" stroke="#50B86C" stroke-width="2"/>
-  <text x="495" y="22" text-anchor="middle" fill="#50B86C" font-size="12" font-weight="bold">Runtime Stage (shipped)</text>
-  <rect x="390" y="45" width="210" height="30" rx="4" fill="#4A90D9" stroke="#333" stroke-width="1"/>
-  <text x="495" y="65" text-anchor="middle" fill="white" font-size="10">Distroless Base (2 MB)</text>
-  <rect x="390" y="85" width="210" height="30" rx="4" fill="#50B86C" stroke="#333" stroke-width="1"/>
-  <text x="495" y="105" text-anchor="middle" fill="white" font-size="10">Binary (10 MB)</text>
-  <text x="495" y="145" text-anchor="middle" fill="#555" font-size="11" font-weight="bold">Total: 12 MB</text>
-  <line x1="250" y1="180" x2="390" y2="100" stroke="#333" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow6)"/>
-  <text x="320" y="130" text-anchor="middle" fill="#333" font-size="10">COPY</text>
-  <defs>
-    <marker id="arrow6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![multi_stage_build_layer_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/multi_stage_build_layer_diagram.svg)
 
 ---
 ## Distroless Images
@@ -613,32 +433,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 - Solution: immutable tags or digest pinning
 ---
 ## Container Image Lifecycle
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="90" width="100" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="70" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Build</text>
-  <rect x="150" y="90" width="100" height="50" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="200" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Scan</text>
-  <rect x="280" y="90" width="100" height="50" rx="8" fill="#D96B4A" stroke="#333" stroke-width="2"/>
-  <text x="330" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Sign</text>
-  <rect x="410" y="90" width="100" height="50" rx="8" fill="#50B86C" stroke="#333" stroke-width="2"/>
-  <text x="460" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Promote</text>
-  <rect x="540" y="90" width="100" height="50" rx="8" fill="#8E44AD" stroke="#333" stroke-width="2"/>
-  <text x="590" y="120" text-anchor="middle" fill="white" font-size="10" font-weight="bold">Deploy</text>
-  <line x1="120" y1="115" x2="150" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow7)"/>
-  <line x1="250" y1="115" x2="280" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow7)"/>
-  <line x1="380" y1="115" x2="410" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow7)"/>
-  <line x1="510" y1="115" x2="540" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrow7)"/>
-  <text x="70" y="160" text-anchor="middle" fill="#555" font-size="9">Dockerfile</text>
-  <text x="200" y="160" text-anchor="middle" fill="#555" font-size="9">Trivy/Grype</text>
-  <text x="330" y="160" text-anchor="middle" fill="#555" font-size="9">cosign</text>
-  <text x="460" y="160" text-anchor="middle" fill="#555" font-size="9">Tag/Copy</text>
-  <text x="590" y="160" text-anchor="middle" fill="#555" font-size="9">K8s/ECS</text>
-  <defs>
-    <marker id="arrow7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![container_image_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_lifecycle.svg)
 
 ---
 ## Garbage Collection and Retention

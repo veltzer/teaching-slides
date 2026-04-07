@@ -15,27 +15,7 @@
 ---
 ## Air-Gap Architecture
 
-<svg width="650" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="55" width="150" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="85" y="75" text-anchor="middle" font-size="10">Internet-Connected</text>
-  <text x="85" y="90" text-anchor="middle" font-size="9">Staging System</text>
-  <rect x="220" y="40" width="100" height="80" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="270" y="70" text-anchor="middle" font-size="10">Transfer</text>
-  <text x="270" y="85" text-anchor="middle" font-size="9">Station</text>
-  <text x="270" y="100" text-anchor="middle" font-size="9">(USB/Diode)</text>
-  <rect x="380" y="55" width="150" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="455" y="75" text-anchor="middle" font-size="10">Air-Gapped</text>
-  <text x="455" y="90" text-anchor="middle" font-size="9">Production</text>
-  <line x1="160" y1="80" x2="220" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arr11a)"/>
-  <line x1="320" y1="80" x2="380" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arr11a)"/>
-  <line x1="168" y1="65" x2="168" y2="95" stroke="red" stroke-width="3"/>
-  <line x1="172" y1="65" x2="172" y2="95" stroke="red" stroke-width="3"/>
-  <defs>
-    <marker id="arr11a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![air_gap_architecture](../../../../svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_architecture.svg)
 
 Red lines represent the air gap - no network connection crosses this boundary.
 
@@ -361,34 +341,7 @@ gpg --encrypt --recipient admin@example.com \
 ---
 ## Air-Gap Network Architecture
 
-<svg width="650" height="220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="180" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="35" text-anchor="middle" font-size="10" font-weight="bold">Internet Zone</text>
-  <text x="100" y="55" text-anchor="middle" font-size="9">Download station</text>
-  <text x="100" y="70" text-anchor="middle" font-size="9">Patch staging</text>
-  <text x="100" y="85" text-anchor="middle" font-size="9">CVE monitoring</text>
-  <rect x="235" y="10" width="180" height="90" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="325" y="35" text-anchor="middle" font-size="10" font-weight="bold">Transfer Zone</text>
-  <text x="325" y="55" text-anchor="middle" font-size="9">Data diode / Kiosk</text>
-  <text x="325" y="70" text-anchor="middle" font-size="9">Malware scanning</text>
-  <text x="325" y="85" text-anchor="middle" font-size="9">Integrity checks</text>
-  <rect x="460" y="10" width="180" height="90" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="550" y="35" text-anchor="middle" font-size="10" font-weight="bold">Secure Zone</text>
-  <text x="550" y="55" text-anchor="middle" font-size="9">Local repo server</text>
-  <text x="550" y="70" text-anchor="middle" font-size="9">Configuration mgmt</text>
-  <text x="550" y="85" text-anchor="middle" font-size="9">Production systems</text>
-  <line x1="190" y1="55" x2="235" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr12a)"/>
-  <line x1="415" y1="55" x2="460" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr12a)"/>
-  <rect x="10" y="130" width="630" height="75" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="325" y="150" text-anchor="middle" font-size="10" font-weight="bold">Key Design Principles</text>
-  <text x="325" y="170" text-anchor="middle" font-size="9">One-way data flow only | No bidirectional network links</text>
-  <text x="325" y="187" text-anchor="middle" font-size="9">All transfers logged and audited | Media sanitized after use</text>
-  <defs>
-    <marker id="arr12a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![air_gap_network_architecture](../../../../svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_network_architecture.svg)
 
 ---
 ## Offline Container Registry

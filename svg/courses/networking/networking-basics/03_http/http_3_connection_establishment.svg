@@ -1,0 +1,25 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_02_http" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="70" y="5" width="100" height="25" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="120" y="22" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <rect x="420" y="5" width="100" height="25" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="470" y="22" text-anchor="middle" font-size="11" font-weight="bold">Server</text>
+  <line x1="120" y1="35" x2="120" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="470" y1="35" x2="470" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="55" x2="470" y2="65" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd6_02_http)"/>
+  <text x="295" y="50" text-anchor="middle" font-size="10" fill="#1565c0">QUIC Initial (ClientHello + TLS 1.3)</text>
+  <line x1="470" y1="85" x2="120" y2="95" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowd6_02_http)"/>
+  <text x="295" y="82" text-anchor="middle" font-size="10" fill="#2e7d32">QUIC Handshake (ServerHello + TLS)</text>
+  <line x1="120" y1="110" x2="470" y2="120" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowd6_02_http)"/>
+  <text x="295" y="110" text-anchor="middle" font-size="10" fill="#7b1fa2">QUIC Handshake Done + HTTP/3 Request</text>
+  <rect x="490" y="50" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3" opacity="0.8"/>
+  <text x="540" y="65" text-anchor="middle" font-size="10" fill="#555">0-RTT possible</text>
+  <text x="540" y="80" text-anchor="middle" font-size="10" fill="#555">on reconnect!</text>
+  <rect x="140" y="135" width="310" height="25" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3" opacity="0.5"/>
+  <text x="295" y="152" text-anchor="middle" font-size="10" fill="#333">Transport + TLS handshake combined = 1 RTT (vs 3 RTT in TCP+TLS)</text>
+  <text x="295" y="185" text-anchor="middle" font-size="10" fill="#555">QUIC eliminates separate TCP and TLS handshakes</text>
+</svg>

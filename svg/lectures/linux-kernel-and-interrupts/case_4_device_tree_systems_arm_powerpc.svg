@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="200" height="100" fill="#ffeecc" stroke="black"/>
+  <text x="150" y="90" text-anchor="middle">Device Tree</text>
+  <text x="150" y="110" text-anchor="middle" font-size="12">(DTS/DTB)</text>
+
+  <rect x="300" y="50" width="200" height="100" fill="#ccffcc" stroke="black"/>
+  <text x="400" y="90" text-anchor="middle">OF Functions</text>
+  <text x="400" y="110" text-anchor="middle" font-size="12">(of_irq_get)</text>
+
+  <rect x="550" y="50" width="200" height="100" fill="#ccccff" stroke="black"/>
+  <text x="650" y="90" text-anchor="middle">Linux IRQ</text>
+  <text x="650" y="110" text-anchor="middle" font-size="12">(Virtual)</text>
+
+  <path d="M 250 100 L 300 100" stroke="black" stroke-width="2" marker-end="url(#arrow3)"/>
+  <path d="M 500 100 L 550 100" stroke="black" stroke-width="2" marker-end="url(#arrow3)"/>
+
+  <text x="150" y="200" text-anchor="middle" font-size="14">interrupts = &lt;0 25 4&gt;;</text>
+  <text x="150" y="220" text-anchor="middle" font-size="12">GIC_SPI 25 IRQ_TYPE_LEVEL_HIGH</text>
+
+  <defs>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="black"/>
+    </marker>
+  </defs>
+</svg>

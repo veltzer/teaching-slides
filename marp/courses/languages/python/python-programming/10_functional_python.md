@@ -373,29 +373,7 @@ print(maximum)  # 5
 ---
 ## `reduce()` Visualization
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" font-family="monospace">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <text x="10" y="20" font-size="13" fill="#222">reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])</text>
-  <!-- steps -->
-  <rect x="10"  y="35" width="340" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="20"  y="55" font-size="13" fill="#222">Step 1: a=1, b=2  →  3</text>
-  <line x1="175" y1="65" x2="175" y2="72" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10"  y="74" width="340" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="20"  y="94" font-size="13" fill="#222">Step 2: a=3, b=3  →  6</text>
-  <line x1="175" y1="104" x2="175" y2="111" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10"  y="113" width="340" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="20"  y="133" font-size="13" fill="#222">Step 3: a=6, b=4  →  10</text>
-  <line x1="175" y1="143" x2="175" y2="150" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="10"  y="152" width="340" height="30" fill="#fce4ec" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="20"  y="172" font-size="13" fill="#222">Step 4: a=10, b=5  →  15</text>
-  <!-- result -->
-  <rect x="10"  y="196" width="200" height="20" fill="#ede7f6" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="20"  y="211" font-size="13" font-weight="bold" fill="#222">Result: 15</text>
-</svg>
+![reduce_visualization](../../../../../svg/courses/languages/python/python-programming/10_functional_python/reduce_visualization.svg)
 ---
 ## `any()` and `all()`
 

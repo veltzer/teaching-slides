@@ -42,37 +42,7 @@
 
 ## Centralized vs Decentralized Diagram
 
-<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Centralized side -->
-  <text x="170" y="25" text-anchor="middle" font-size="14" font-weight="bold">Centralized</text>
-  <rect x="110" y="40" width="120" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="170" y="65" text-anchor="middle" font-size="12">Platform Team</text>
-  <line x1="170" y1="80" x2="80" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="170" y1="80" x2="170" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="170" y1="80" x2="260" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="130" width="100" height="35" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="80" y="152" text-anchor="middle" font-size="11">Team A</text>
-  <rect x="140" y="130" width="100" height="35" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="190" y="152" text-anchor="middle" font-size="11">Team B</text>
-  <rect x="250" y="130" width="100" height="35" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="300" y="152" text-anchor="middle" font-size="11">Team C</text>
-  <!-- Decentralized side -->
-  <text x="530" y="25" text-anchor="middle" font-size="14" font-weight="bold">Decentralized</text>
-  <rect x="400" y="50" width="100" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="450" y="72" text-anchor="middle" font-size="11">Team A</text>
-  <text x="450" y="88" text-anchor="middle" font-size="10" fill="#555">own pipeline</text>
-  <rect x="510" y="50" width="100" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="560" y="72" text-anchor="middle" font-size="11">Team B</text>
-  <text x="560" y="88" text-anchor="middle" font-size="10" fill="#555">own pipeline</text>
-  <rect x="620" y="50" width="100" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="670" y="72" text-anchor="middle" font-size="11">Team C</text>
-  <text x="670" y="88" text-anchor="middle" font-size="10" fill="#555">own pipeline</text>
-</svg>
+![centralized_vs_decentralized_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/centralized_vs_decentralized_diagram.svg)
 
 ---
 
@@ -192,41 +162,7 @@ deploy:
 
 ## Pipeline Design Patterns Overview
 
-<svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Linear -->
-  <text x="110" y="20" text-anchor="middle" font-size="13" font-weight="bold">Linear</text>
-  <rect x="10" y="30" width="60" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="40" y="50" text-anchor="middle" font-size="10">Build</text>
-  <line x1="70" y1="45" x2="90" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="90" y="30" width="60" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="120" y="50" text-anchor="middle" font-size="10">Test</text>
-  <line x1="150" y1="45" x2="170" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="170" y="30" width="60" height="30" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="200" y="50" text-anchor="middle" font-size="10">Deploy</text>
-  <!-- Fan-out / Fan-in -->
-  <text x="490" y="20" text-anchor="middle" font-size="13" font-weight="bold">Fan-out / Fan-in</text>
-  <rect x="350" y="55" width="60" height="30" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="380" y="75" text-anchor="middle" font-size="10">Build</text>
-  <line x1="410" y1="63" x2="450" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="410" y1="70" x2="450" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="410" y1="77" x2="450" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="450" y="30" width="80" height="25" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="4"/>
-  <text x="490" y="47" text-anchor="middle" font-size="9">Unit Tests</text>
-  <rect x="450" y="58" width="80" height="25" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="4"/>
-  <text x="490" y="75" text-anchor="middle" font-size="9">Integration</text>
-  <rect x="450" y="86" width="80" height="25" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="4"/>
-  <text x="490" y="103" text-anchor="middle" font-size="9">Security Scan</text>
-  <line x1="530" y1="43" x2="570" y2="63" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="530" y1="71" x2="570" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="530" y1="99" x2="570" y2="77" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="570" y="55" width="60" height="30" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="600" y="75" text-anchor="middle" font-size="10">Deploy</text>
-</svg>
+![pipeline_design_patterns_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_design_patterns_overview.svg)
 
 ---
 
@@ -335,32 +271,7 @@ on:
 
 ## Remote Build Caches
 
-<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="50" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="80" y="75" text-anchor="middle" font-size="12">CI Runner A</text>
-  <rect x="20" y="120" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="80" y="145" text-anchor="middle" font-size="12">CI Runner B</text>
-  <rect x="240" y="70" width="140" height="60" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="310" y="98" text-anchor="middle" font-size="13" font-weight="bold">Remote Cache</text>
-  <text x="310" y="118" text-anchor="middle" font-size="10" fill="#555">(S3, GCS, Artifactory)</text>
-  <rect x="460" y="50" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="520" y="75" text-anchor="middle" font-size="12">CI Runner C</text>
-  <rect x="460" y="120" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="520" y="145" text-anchor="middle" font-size="12">CI Runner D</text>
-  <line x1="140" y1="70" x2="238" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="140" y1="140" x2="238" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="382" y1="90" x2="458" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="382" y1="110" x2="458" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <text x="170" y="62" font-size="10" fill="#1565c0">push</text>
-  <text x="170" y="145" font-size="10" fill="#1565c0">push</text>
-  <text x="415" y="70" font-size="10" fill="#2e7d32">pull</text>
-  <text x="415" y="140" font-size="10" fill="#2e7d32">pull</text>
-</svg>
+![remote_build_caches](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/remote_build_caches.svg)
 
 - Runners share a centralized cache over the network
 - Tools: `Bazel` remote cache, `Gradle` build cache, `sccache`, `Turborepo`
@@ -431,57 +342,13 @@ on:
 
 ## GitOps Architecture
 
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="70" y="115" text-anchor="middle" font-size="12">Developer</text>
-  <rect x="180" y="90" width="120" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="240" y="115" text-anchor="middle" font-size="12">Git Repository</text>
-  <rect x="370" y="90" width="130" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="435" y="115" text-anchor="middle" font-size="12">GitOps Operator</text>
-  <rect x="570" y="70" width="110" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="625" y="100" text-anchor="middle" font-size="12">Kubernetes</text>
-  <text x="625" y="118" text-anchor="middle" font-size="12">Cluster</text>
-  <text x="625" y="138" text-anchor="middle" font-size="10" fill="#555">(actual state)</text>
-  <line x1="120" y1="110" x2="178" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arr4)"/>
-  <text x="150" y="102" text-anchor="middle" font-size="9" fill="#555">push</text>
-  <line x1="300" y1="105" x2="368" y2="105" stroke="#333" stroke-width="2" marker-end="url(#arr4)"/>
-  <text x="334" y="98" text-anchor="middle" font-size="9" fill="#555">pull</text>
-  <line x1="500" y1="110" x2="568" y2="110" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr4)"/>
-  <text x="534" y="102" text-anchor="middle" font-size="9" fill="#2e7d32">reconcile</text>
-  <path d="M 570 150 Q 435 210 370 130" stroke="#7b1fa2" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arr4)"/>
-  <text x="460" y="195" text-anchor="middle" font-size="9" fill="#7b1fa2">observe actual state</text>
-</svg>
+![gitops_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/gitops_architecture.svg)
 
 ---
 
 ## Push vs Pull Deployment Models
 
-<svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="170" y="20" text-anchor="middle" font-size="13" font-weight="bold">Push Model</text>
-  <rect x="30" y="35" width="100" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="80" y="57" text-anchor="middle" font-size="11">CI Server</text>
-  <rect x="200" y="35" width="110" height="35" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="255" y="57" text-anchor="middle" font-size="11">Production</text>
-  <line x1="130" y1="52" x2="198" y2="52" stroke="#c62828" stroke-width="2" marker-end="url(#arr5)"/>
-  <text x="164" y="45" text-anchor="middle" font-size="9" fill="#c62828">push + creds</text>
-  <text x="530" y="20" text-anchor="middle" font-size="13" font-weight="bold">Pull Model (GitOps)</text>
-  <rect x="400" y="35" width="100" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="450" y="57" text-anchor="middle" font-size="11">Git Repo</text>
-  <rect x="570" y="35" width="110" height="35" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="625" y="57" text-anchor="middle" font-size="11">Production</text>
-  <line x1="568" y1="52" x2="502" y2="52" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr5)"/>
-  <text x="535" y="45" text-anchor="middle" font-size="9" fill="#2e7d32">pull desired state</text>
-</svg>
+![push_vs_pull_deployment_models](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/push_vs_pull_deployment_models.svg)
 
 - **Push**: CI needs production credentials, runs `kubectl apply`
 - **Pull**: operator inside cluster pulls state, credentials stay internal
@@ -538,29 +405,7 @@ spec:
 
 ## Drift Detection Flow
 
-<svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="50" width="110" height="45" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="75" y="68" text-anchor="middle" font-size="11">Desired State</text>
-  <text x="75" y="83" text-anchor="middle" font-size="9" fill="#555">(git)</text>
-  <rect x="180" y="50" width="110" height="45" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="235" y="68" text-anchor="middle" font-size="11">Operator</text>
-  <text x="235" y="83" text-anchor="middle" font-size="9" fill="#555">compare</text>
-  <rect x="340" y="50" width="110" height="45" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="395" y="68" text-anchor="middle" font-size="11">Actual State</text>
-  <text x="395" y="83" text-anchor="middle" font-size="9" fill="#555">(cluster)</text>
-  <rect x="480" y="50" width="100" height="45" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="530" y="68" text-anchor="middle" font-size="11" fill="#c62828">Drift!</text>
-  <text x="530" y="83" text-anchor="middle" font-size="9" fill="#c62828">auto-heal</text>
-  <line x1="130" y1="72" x2="178" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <line x1="338" y1="72" x2="292" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <path d="M 235 95 Q 235 150 530 150 Q 530 95 530 95" stroke="#c62828" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arr6)"/>
-  <text x="380" y="165" text-anchor="middle" font-size="9" fill="#c62828">reconcile to desired state</text>
-</svg>
+![drift_detection_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/drift_detection_flow.svg)
 
 ---
 
@@ -579,31 +424,7 @@ spec:
 
 ## Hybrid Approach: CI + GitOps
 
-<svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="60" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="70" y="85" text-anchor="middle" font-size="11">Developer</text>
-  <rect x="160" y="60" width="100" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="210" y="85" text-anchor="middle" font-size="11">CI Pipeline</text>
-  <rect x="310" y="40" width="110" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="365" y="62" text-anchor="middle" font-size="10">App Repo</text>
-  <rect x="310" y="90" width="110" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="365" y="112" text-anchor="middle" font-size="10">Config Repo</text>
-  <rect x="470" y="60" width="100" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="520" y="85" text-anchor="middle" font-size="11">Argo CD</text>
-  <rect x="610" y="60" width="80" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="650" y="85" text-anchor="middle" font-size="11">Cluster</text>
-  <line x1="120" y1="80" x2="158" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <line x1="260" y1="70" x2="308" y2="58" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <line x1="260" y1="90" x2="308" y2="107" stroke="#1565c0" stroke-width="2" marker-end="url(#arr7)"/>
-  <text x="270" y="115" font-size="8" fill="#1565c0">update image tag</text>
-  <line x1="420" y1="107" x2="468" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <line x1="570" y1="80" x2="608" y2="80" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr7)"/>
-</svg>
+![hybrid_approach_ci_gitops](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/hybrid_approach_ci_gitops.svg)
 
 - CI builds and tests the application, then updates the config repo
 - `Argo CD` picks up the change and deploys to the cluster
@@ -627,19 +448,7 @@ spec:
 
 ## Pipeline Observability and DORA Metrics
 
-<svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="15" width="260" height="65" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="150" y="38" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">Throughput</text>
-  <text x="150" y="55" text-anchor="middle" font-size="10">Deployment Frequency</text>
-  <text x="150" y="70" text-anchor="middle" font-size="10">Lead Time for Changes</text>
-  <rect x="320" y="15" width="260" height="65" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="8"/>
-  <text x="450" y="38" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Stability</text>
-  <text x="450" y="55" text-anchor="middle" font-size="10">Change Failure Rate</text>
-  <text x="450" y="70" text-anchor="middle" font-size="10">Mean Time to Recovery</text>
-  <rect x="100" y="105" width="400" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="300" y="128" text-anchor="middle" font-size="11" font-weight="bold">CI/CD architecture directly impacts all four metrics</text>
-  <text x="300" y="145" text-anchor="middle" font-size="10" fill="#555">Faster pipelines = shorter lead time = higher deploy frequency</text>
-</svg>
+![pipeline_observability_and_dora_metrics](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_observability_and_dora_metrics.svg)
 
 - Track build duration, success rate, queue time, flaky test rate
 - Export metrics to `Prometheus`, `Datadog`, or `Grafana`
@@ -648,28 +457,7 @@ spec:
 
 ## Multi-Stage Deployment Pipelines
 
-<svg viewBox="0 0 700 130" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr8" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="40" width="90" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="65" y="65" text-anchor="middle" font-size="11">Build</text>
-  <rect x="150" y="40" width="90" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="195" y="65" text-anchor="middle" font-size="11">Test</text>
-  <rect x="280" y="40" width="110" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="335" y="65" text-anchor="middle" font-size="11">Deploy Dev</text>
-  <rect x="430" y="40" width="110" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="485" y="58" text-anchor="middle" font-size="11">Deploy Staging</text>
-  <text x="485" y="72" text-anchor="middle" font-size="9" fill="#555">(approval gate)</text>
-  <rect x="580" y="40" width="110" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="635" y="65" text-anchor="middle" font-size="11">Deploy Prod</text>
-  <line x1="110" y1="60" x2="148" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr8)"/>
-  <line x1="240" y1="60" x2="278" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr8)"/>
-  <line x1="390" y1="60" x2="428" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr8)"/>
-  <line x1="540" y1="60" x2="578" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr8)"/>
-</svg>
+![multi_stage_deployment_pipelines](../../../../svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/multi_stage_deployment_pipelines.svg)
 
 - Promote the same artifact through `dev` -> `staging` -> `production`
 - Gate promotions with automated tests, manual approvals, or canary analysis

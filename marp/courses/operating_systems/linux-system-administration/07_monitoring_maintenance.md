@@ -378,25 +378,7 @@ systemctl restart rsyslog
 ---
 ## Automated Monitoring: Prometheus and Grafana
 
-<svg width="650" height="120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="35" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="65" y="55" text-anchor="middle" font-size="10">Targets</text>
-  <text x="65" y="70" text-anchor="middle" font-size="9">(node_exporter)</text>
-  <rect x="160" y="35" width="110" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="215" y="65" text-anchor="middle" font-size="10">Prometheus</text>
-  <rect x="310" y="35" width="110" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="365" y="65" text-anchor="middle" font-size="10">Grafana</text>
-  <rect x="460" y="35" width="120" height="50" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="520" y="65" text-anchor="middle" font-size="10">Alertmanager</text>
-  <line x1="120" y1="60" x2="160" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr05a)"/>
-  <line x1="270" y1="60" x2="310" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr05a)"/>
-  <line x1="270" y1="85" x2="460" y2="85" stroke="#333" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arr05a)"/>
-  <defs>
-    <marker id="arr05a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![automated_monitoring_prometheus_and_grafana](../../../../svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/automated_monitoring_prometheus_and_grafana.svg)
 
 - `Prometheus` scrapes metrics from targets
 - `Grafana` visualizes metrics with dashboards
@@ -1136,35 +1118,7 @@ sha256sum -c /root/config-checksums.txt
 ---
 ## Change Management Workflow
 
-<svg width="620" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="10" width="120" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="37" text-anchor="middle" font-size="11">Request Change</text>
-  <rect x="180" y="10" width="120" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="240" y="37" text-anchor="middle" font-size="11">Peer Review</text>
-  <rect x="340" y="10" width="120" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="400" y="37" text-anchor="middle" font-size="11">Test in Staging</text>
-  <rect x="500" y="10" width="100" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="550" y="37" text-anchor="middle" font-size="11">Approve</text>
-  <rect x="20" y="80" width="120" height="45" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="107" text-anchor="middle" font-size="11">Deploy to Prod</text>
-  <rect x="180" y="80" width="120" height="45" fill="#e0f7fa" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="240" y="107" text-anchor="middle" font-size="11">Verify & Monitor</text>
-  <rect x="340" y="80" width="120" height="45" fill="#f1f8e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="400" y="107" text-anchor="middle" font-size="11">Document</text>
-  <line x1="140" y1="32" x2="180" y2="32" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <line x1="300" y1="32" x2="340" y2="32" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <line x1="460" y1="32" x2="500" y2="32" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <line x1="550" y1="55" x2="550" y2="70" stroke="#333" stroke-width="2"/>
-  <line x1="550" y1="70" x2="80" y2="70" stroke="#333" stroke-width="2"/>
-  <line x1="80" y1="70" x2="80" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <line x1="140" y1="102" x2="180" y2="102" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <line x1="300" y1="102" x2="340" y2="102" stroke="#333" stroke-width="2" marker-end="url(#arr06a)"/>
-  <defs>
-    <marker id="arr06a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![change_management_workflow](../../../../svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/change_management_workflow.svg)
 
 Key principles:
 1. All changes tracked in version control (IaC)

@@ -79,22 +79,7 @@ Database* db = new MySQLDatabase();  // OK: concrete implementation
 
 ## Benefits of Polymorphism
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="110" y="85" text-anchor="middle" font-size="12">Code Reuse</text>
-
-  <rect x="200" y="50" width="120" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="260" y="85" text-anchor="middle" font-size="12">Flexibility</text>
-
-  <rect x="350" y="50" width="120" height="60" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="410" y="85" text-anchor="middle" font-size="12">Extensibility</text>
-
-  <rect x="125" y="150" width="120" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="185" y="185" text-anchor="middle" font-size="12">Maintainability</text>
-
-  <rect x="275" y="150" width="120" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="335" y="185" text-anchor="middle" font-size="12">Testability</text>
-</svg>
+![benefits_of_polymorphism](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/benefits_of_polymorphism.svg)
 
 1. Write once, use with multiple types
 1. Easy to add new implementations
@@ -127,30 +112,7 @@ Performance considerations:
 
 ## Virtual Function Mechanics
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="75" text-anchor="middle" font-size="12">Object</text>
-  <text x="100" y="95" text-anchor="middle" font-size="10">vtable ptr</text>
-
-  <line x1="150" y1="85" x2="200" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="200" y="30" width="80" height="120" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="240" y="50" text-anchor="middle" font-size="10">VTable</text>
-  <text x="240" y="70" text-anchor="middle" font-size="9">func1()</text>
-  <text x="240" y="90" text-anchor="middle" font-size="9">func2()</text>
-  <text x="240" y="110" text-anchor="middle" font-size="9">func3()</text>
-
-  <line x1="280" y1="90" x2="330" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="330" y="70" width="120" height="40" fill="#fff8e1" stroke="#ffa000" stroke-width="2"/>
-  <text x="390" y="95" text-anchor="middle" font-size="10">Actual Function</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![virtual_function_mechanics](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
 
 Each object with virtual functions contains a pointer to its class's virtual table
 
@@ -189,22 +151,7 @@ protected:
 
 ## Template Method Benefits
 
-<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="450" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="275" y="55" text-anchor="middle" font-size="14">Template Method Pattern</text>
-
-  <rect x="75" y="100" width="120" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="135" y="125" text-anchor="middle" font-size="10">Code Reuse</text>
-  <text x="135" y="140" text-anchor="middle" font-size="9">Common algorithm</text>
-
-  <rect x="215" y="100" width="120" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="275" y="125" text-anchor="middle" font-size="10">Consistency</text>
-  <text x="275" y="140" text-anchor="middle" font-size="9">Same structure</text>
-
-  <rect x="355" y="100" width="120" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="415" y="125" text-anchor="middle" font-size="10">Flexibility</text>
-  <text x="415" y="140" text-anchor="middle" font-size="9">Custom steps</text>
-</svg>
+![template_method_benefits](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/template_method_benefits.svg)
 
 1. Eliminates code duplication
 1. Enforces consistent algorithm structure
@@ -299,31 +246,7 @@ SmartPtr<Shape> shape = circle;  // Safe upcast
 
 ## Conversion Safety
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="100" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="250" y="75" text-anchor="middle" font-size="12">Base</text>
-
-  <rect x="100" y="150" width="100" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="150" y="175" text-anchor="middle" font-size="12">Derived1</text>
-
-  <rect x="300" y="150" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="350" y="175" text-anchor="middle" font-size="12">Derived2</text>
-
-  <line x1="180" y1="135" x2="225" y2="95" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowup)"/>
-  <text x="190" y="120" font-size="10" fill="#4caf50">Safe</text>
-
-  <line x1="320" y1="135" x2="275" y2="95" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowup)"/>
-  <text x="290" y="120" font-size="10" fill="#4caf50">Safe</text>
-
-  <line x1="200" y1="165" x2="300" y2="165" stroke="#f44336" stroke-width="2"/>
-  <text x="240" y="180" font-size="10" fill="#f44336">Unsafe</text>
-
-  <defs>
-    <marker id="arrowup" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
-      <polygon points="0 7, 5 0, 10 7" fill="#4caf50"/>
-    </marker>
-  </defs>
-</svg>
+![conversion_safety](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/conversion_safety.svg)
 
 Upward conversions (derived to base) are always safe
 Sideways conversions require runtime checks
@@ -389,21 +312,7 @@ class MyClass : public Counter<MyClass> {
 
 ## CRTP vs Virtual Functions
 
-<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="200" height="140" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="14">Virtual Functions</text>
-  <text x="150" y="80" text-anchor="middle" font-size="11">Runtime polymorphism</text>
-  <text x="150" y="100" text-anchor="middle" font-size="11">vtable overhead</text>
-  <text x="150" y="120" text-anchor="middle" font-size="11">Dynamic dispatch</text>
-  <text x="150" y="140" text-anchor="middle" font-size="11">Flexible</text>
-
-  <rect x="300" y="30" width="200" height="140" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="400" y="55" text-anchor="middle" font-size="14">CRTP</text>
-  <text x="400" y="80" text-anchor="middle" font-size="11">Compile-time polymorphism</text>
-  <text x="400" y="100" text-anchor="middle" font-size="11">No overhead</text>
-  <text x="400" y="120" text-anchor="middle" font-size="11">Static dispatch</text>
-  <text x="400" y="140" text-anchor="middle" font-size="11">Type safe</text>
-</svg>
+![crtp_vs_virtual_functions](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
 
 Choose based on requirements: flexibility vs performance
 
@@ -465,23 +374,7 @@ void processShape(Shape* shape) {
 
 ## Static vs Dynamic Cast
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="180" height="150" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="140" y="75" text-anchor="middle" font-size="14">static_cast</text>
-  <text x="140" y="100" text-anchor="middle" font-size="11">Compile-time</text>
-  <text x="140" y="120" text-anchor="middle" font-size="11">No runtime check</text>
-  <text x="140" y="140" text-anchor="middle" font-size="11">Faster</text>
-  <text x="140" y="160" text-anchor="middle" font-size="11">Potentially unsafe</text>
-  <text x="140" y="180" text-anchor="middle" font-size="11">Undefined behavior</text>
-
-  <rect x="270" y="50" width="180" height="150" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="360" y="75" text-anchor="middle" font-size="14">dynamic_cast</text>
-  <text x="360" y="100" text-anchor="middle" font-size="11">Runtime</text>
-  <text x="360" y="120" text-anchor="middle" font-size="11">Type safety check</text>
-  <text x="360" y="140" text-anchor="middle" font-size="11">Slower</text>
-  <text x="360" y="160" text-anchor="middle" font-size="11">Safe</text>
-  <text x="360" y="180" text-anchor="middle" font-size="11">Returns nullptr</text>
-</svg>
+![static_vs_dynamic_cast](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
 
 Use `dynamic_cast` for safe downcasting, `static_cast` when you're certain
 
@@ -706,22 +599,7 @@ double calculate(Operation& op, double x, double y) {
 
 ## Performance Considerations
 
-<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="450" height="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="275" y="55" text-anchor="middle" font-size="14">Performance Impact</text>
-
-  <rect x="75" y="100" width="120" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="135" y="125" text-anchor="middle" font-size="10">Virtual Calls</text>
-  <text x="135" y="140" text-anchor="middle" font-size="9">~3-5% overhead</text>
-
-  <rect x="215" y="100" width="120" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="275" y="125" text-anchor="middle" font-size="10">Memory</text>
-  <text x="275" y="140" text-anchor="middle" font-size="9">vtable pointer</text>
-
-  <rect x="355" y="100" width="120" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="415" y="125" text-anchor="middle" font-size="10">Optimization</text>
-  <text x="415" y="140" text-anchor="middle" font-size="9">Limited inlining</text>
-</svg>
+![performance_considerations](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
 
 Consider performance vs flexibility trade-offs in critical code paths
 

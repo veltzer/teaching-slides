@@ -17,15 +17,7 @@ This chapter covers:
 
 ## The Power of Conversational AI
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="200" cy="200" r="80" fill="#10A37F"/>
-  <text x="200" y="210" text-anchor="middle" fill="white" font-size="18" font-weight="bold">ChatGPT</text>
-  <circle cx="400" cy="200" r="80" fill="#7C3AED"/>
-  <text x="400" y="210" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Claude</text>
-  <circle cx="600" cy="200" r="80" fill="#4285F4"/>
-  <text x="600" y="210" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Gemini</text>
-  <text x="400" y="350" text-anchor="middle" font-size="20" font-weight="bold">Your AI Development Partners</text>
-</svg>
+![the_power_of_conversational_ai](../../../../svg/courses/ai/developing-using-ai/03_chats/the_power_of_conversational_ai.svg)
 
 ---
 
@@ -87,24 +79,7 @@ Beyond autocomplete to true collaboration
 
 ## Effective Conversation Strategies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="200" height="60" fill="#3498DB" rx="5"/>
-  <text x="200" y="85" text-anchor="middle" fill="white" font-size="14">1. Clear Context</text>
-  <rect x="320" y="50" width="200" height="60" fill="#2ECC71" rx="5"/>
-  <text x="420" y="85" text-anchor="middle" fill="white" font-size="14">2. Specific Goals</text>
-  <rect x="540" y="50" width="200" height="60" fill="#E74C3C" rx="5"/>
-  <text x="640" y="85" text-anchor="middle" fill="white" font-size="14">3. Iterative Refinement</text>
-  <rect x="100" y="130" width="200" height="60" fill="#F39C12" rx="5"/>
-  <text x="200" y="165" text-anchor="middle" fill="white" font-size="14">4. Code Examples</text>
-  <rect x="320" y="130" width="200" height="60" fill="#9B59B6" rx="5"/>
-  <text x="420" y="165" text-anchor="middle" fill="white" font-size="14">5. Validation</text>
-  <rect x="540" y="130" width="200" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="640" y="165" text-anchor="middle" fill="white" font-size="14">6. Documentation</text>
-  <path d="M 200 110 L 200 130" stroke="#34495E" stroke-width="2"/>
-  <path d="M 420 110 L 420 130" stroke="#34495E" stroke-width="2"/>
-  <path d="M 640 110 L 640 130" stroke="#34495E" stroke-width="2"/>
-  <text x="400" y="250" text-anchor="middle" font-size="18" font-weight="bold">Structured Approach = Better Results</text>
-</svg>
+![effective_conversation_strategies](../../../../svg/courses/ai/developing-using-ai/03_chats/effective_conversation_strategies.svg)
 
 ---
 
@@ -184,31 +159,7 @@ Turn AI into your senior mentor
 
 ## Problem-Solving: Algorithm Design
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="14">Problem</text>
-  <path d="M 250 130 L 320 130" stroke="#34495E" stroke-width="2" marker-end="url(#arr1)"/>
-  <rect x="320" y="100" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="395" y="135" text-anchor="middle" fill="white" font-size="14">Approach</text>
-  <path d="M 470 130 L 540 130" stroke="#34495E" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="540" y="100" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="615" y="135" text-anchor="middle" fill="white" font-size="14">Algorithm</text>
-  <rect x="210" y="200" width="150" height="60" fill="#F39C12" rx="5"/>
-  <text x="285" y="235" text-anchor="middle" fill="white" font-size="14">Complexity</text>
-  <rect x="430" y="200" width="150" height="60" fill="#9B59B6" rx="5"/>
-  <text x="505" y="235" text-anchor="middle" fill="white" font-size="14">Optimization</text>
-  <path d="M 175 160 L 285 200" stroke="#34495E" stroke-width="2"/>
-  <path d="M 395 160 L 395 200" stroke="#34495E" stroke-width="2"/>
-  <path d="M 615 160 L 505 200" stroke="#34495E" stroke-width="2"/>
-  <defs>
-    <marker id="arr1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![problem_solving_algorithm_design](../../../../svg/courses/ai/developing-using-ai/03_chats/problem_solving_algorithm_design.svg)
 
 ---
 
@@ -273,17 +224,7 @@ Here's a fixed version with explicit handling..."
 
 ## Performance Optimization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Performance Analysis</text>
-  <rect x="150" y="120" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="170" y="145" fill="white" font-size="14">Original: O(n²) - 45ms for 1000 items</text>
-  <rect x="150" y="180" width="350" height="40" fill="#F39C12" rx="5"/>
-  <text x="170" y="205" fill="white" font-size="14">Optimized: O(n log n) - 8ms</text>
-  <rect x="150" y="240" width="200" height="40" fill="#27AE60" rx="5"/>
-  <text x="170" y="265" fill="white" font-size="14">Final: O(n) - 3ms</text>
-  <text x="400" y="320" text-anchor="middle" fill="white" font-size="14">AI guides optimization strategy</text>
-</svg>
+![performance_optimization](../../../../svg/courses/ai/developing-using-ai/03_chats/performance_optimization.svg)
 
 ---
 
@@ -354,30 +295,7 @@ async function fetchData() {
 
 Making informed decisions:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">State Management Libraries</text>
-  <rect x="50" y="50" width="200" height="300" fill="#764ABC" rx="10"/>
-  <text x="150" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Redux</text>
-  <text x="150" y="120" text-anchor="middle" fill="white" font-size="12">✓ Predictable</text>
-  <text x="150" y="145" text-anchor="middle" fill="white" font-size="12">✓ DevTools</text>
-  <text x="150" y="170" text-anchor="middle" fill="white" font-size="12">✓ Middleware</text>
-  <text x="150" y="195" text-anchor="middle" fill="white" font-size="12">✗ Boilerplate</text>
-  <text x="150" y="220" text-anchor="middle" fill="white" font-size="12">✗ Learning curve</text>
-  <rect x="300" y="50" width="200" height="300" fill="#FF6B6B" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">MobX</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12">✓ Simple</text>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">✓ Less code</text>
-  <text x="400" y="170" text-anchor="middle" fill="white" font-size="12">✓ Reactive</text>
-  <text x="400" y="195" text-anchor="middle" fill="white" font-size="12">✗ Magic</text>
-  <text x="400" y="220" text-anchor="middle" fill="white" font-size="12">✗ Debugging</text>
-  <rect x="550" y="50" width="200" height="300" fill="#42B883" rx="10"/>
-  <text x="650" y="90" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Zustand</text>
-  <text x="650" y="120" text-anchor="middle" fill="white" font-size="12">✓ Lightweight</text>
-  <text x="650" y="145" text-anchor="middle" fill="white" font-size="12">✓ Simple API</text>
-  <text x="650" y="170" text-anchor="middle" fill="white" font-size="12">✓ TypeScript</text>
-  <text x="650" y="195" text-anchor="middle" fill="white" font-size="12">✗ Ecosystem</text>
-  <text x="650" y="220" text-anchor="middle" fill="white" font-size="12">✗ Patterns</text>
-</svg>
+![library_comparisons](../../../../svg/courses/ai/developing-using-ai/03_chats/library_comparisons.svg)
 
 ---
 
@@ -428,35 +346,7 @@ Step-by-step resolution
 
 ## Code Generation Workflows
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="100" r="40" fill="#3498DB"/>
-  <text x="150" y="105" text-anchor="middle" fill="white" font-size="14">Spec</text>
-  <path d="M 190 100 L 260 100" stroke="#34495E" stroke-width="2" marker-end="url(#arrow3)"/>
-  <circle cx="300" cy="100" r="40" fill="#2ECC71"/>
-  <text x="300" y="105" text-anchor="middle" fill="white" font-size="14">Generate</text>
-  <path d="M 340 100 L 410 100" stroke="#34495E" stroke-width="2" marker-end="url(#arrow4)"/>
-  <circle cx="450" cy="100" r="40" fill="#E74C3C"/>
-  <text x="450" y="105" text-anchor="middle" fill="white" font-size="14">Test</text>
-  <path d="M 490 100 L 560 100" stroke="#34495E" stroke-width="2" marker-end="url(#arrow5)"/>
-  <circle cx="600" cy="100" r="40" fill="#F39C12"/>
-  <text x="600" y="105" text-anchor="middle" fill="white" font-size="14">Refine</text>
-  <path d="M 600 140 Q 600 250, 300 250 Q 150 250, 150 140" stroke="#9B59B6" stroke-width="2" fill="none" marker-end="url(#arrow6)"/>
-  <text x="400" y="270" text-anchor="middle" font-size="14">Iterative Process</text>
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="arrow6" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#9B59B6"/>
-    </marker>
-  </defs>
-</svg>
+![code_generation_workflows](../../../../svg/courses/ai/developing-using-ai/03_chats/code_generation_workflows.svg)
 
 ---
 
@@ -548,21 +438,7 @@ function debounce(func, wait) {
 
 Implementing design patterns:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#2C3E50" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">Design Pattern Request</text>
-  <rect x="100" y="160" width="180" height="60" fill="#3498DB" rx="5"/>
-  <text x="190" y="195" text-anchor="middle" fill="white" font-size="14">Singleton</text>
-  <rect x="310" y="160" width="180" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="195" text-anchor="middle" fill="white" font-size="14">Observer</text>
-  <rect x="520" y="160" width="180" height="60" fill="#E74C3C" rx="5"/>
-  <text x="610" y="195" text-anchor="middle" fill="white" font-size="14">Factory</text>
-  <rect x="205" y="250" width="180" height="60" fill="#F39C12" rx="5"/>
-  <text x="295" y="285" text-anchor="middle" fill="white" font-size="14">Strategy</text>
-  <rect x="415" y="250" width="180" height="60" fill="#9B59B6" rx="5"/>
-  <text x="505" y="285" text-anchor="middle" fill="white" font-size="14">Decorator</text>
-  <text x="400" y="350" text-anchor="middle" font-size="16">AI provides implementations with use cases</text>
-</svg>
+![pattern_implementation](../../../../svg/courses/ai/developing-using-ai/03_chats/pattern_implementation.svg)
 
 ---
 
@@ -742,22 +618,7 @@ Follow-up meeting scheduled for Jan 26 to review implementation"
 
 ## Advanced Chat Techniques
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Advanced Techniques</text>
-  <rect x="150" y="120" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="150" text-anchor="middle" fill="white" font-size="14">Role Playing</text>
-  <rect x="150" y="180" width="220" height="50" fill="#2ECC71" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="14">Socratic Method</text>
-  <rect x="150" y="240" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="270" text-anchor="middle" fill="white" font-size="14">Rubber Duck++</text>
-  <rect x="430" y="120" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="150" text-anchor="middle" fill="white" font-size="14">Code Review Simulation</text>
-  <rect x="430" y="180" width="220" height="50" fill="#9B59B6" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="14">Pair Programming</text>
-  <rect x="430" y="240" width="220" height="50" fill="#1ABC9C" rx="5"/>
-  <text x="540" y="270" text-anchor="middle" fill="white" font-size="14">Architecture Workshop</text>
-</svg>
+![advanced_chat_techniques](../../../../svg/courses/ai/developing-using-ai/03_chats/advanced_chat_techniques.svg)
 
 ---
 
@@ -811,27 +672,7 @@ You: "That's not what I meant. Let me clarify:
 ---
 ## Integration with Development Flow
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="150" width="100" height="60" fill="#3498DB" rx="5"/>
-  <text x="100" y="185" text-anchor="middle" fill="white" font-size="12">Planning</text>
-  <rect x="170" y="150" width="100" height="60" fill="#2ECC71" rx="5"/>
-  <text x="220" y="185" text-anchor="middle" fill="white" font-size="12">Design</text>
-  <rect x="290" y="150" width="100" height="60" fill="#E74C3C" rx="5"/>
-  <text x="340" y="185" text-anchor="middle" fill="white" font-size="12">Code</text>
-  <rect x="410" y="150" width="100" height="60" fill="#F39C12" rx="5"/>
-  <text x="460" y="185" text-anchor="middle" fill="white" font-size="12">Test</text>
-  <rect x="530" y="150" width="100" height="60" fill="#9B59B6" rx="5"/>
-  <text x="580" y="185" text-anchor="middle" fill="white" font-size="12">Deploy</text>
-  <rect x="650" y="150" width="100" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="700" y="185" text-anchor="middle" fill="white" font-size="12">Monitor</text>
-  <text x="400" y="250" text-anchor="middle" font-size="16" font-weight="bold">AI Chat Assists Every Phase</text>
-  <text x="100" y="130" text-anchor="middle" font-size="10">Requirements</text>
-  <text x="220" y="130" text-anchor="middle" font-size="10">Architecture</text>
-  <text x="340" y="130" text-anchor="middle" font-size="10">Generation</text>
-  <text x="460" y="130" text-anchor="middle" font-size="10">Validation</text>
-  <text x="580" y="130" text-anchor="middle" font-size="10">Scripts</text>
-  <text x="700" y="130" text-anchor="middle" font-size="10">Debugging</text>
-</svg>
+![integration_with_development_flow](../../../../svg/courses/ai/developing-using-ai/03_chats/integration_with_development_flow.svg)
 
 ---
 

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="150" font-family="sans-serif">
+  <!-- Title -->
+  <text x="10" y="22" font-size="13" font-weight="bold" fill="#222222">Memory address: 0x1000</text>
+  <!-- Cache line box with 5 visible cells -->
+  <text x="10" y="55" font-size="13" fill="#555">Cache line:</text>
+  <!-- cells -->
+  <rect x="100" y="35" width="70" height="35" rx="2" fill="#bbdefb" stroke="#333333" stroke-width="1.5"/>
+  <text x="135" y="57" text-anchor="middle" font-size="12" fill="#222222">byte 0</text>
+  <rect x="170" y="35" width="70" height="35" rx="2" fill="#c8e6c9" stroke="#333333" stroke-width="1.5"/>
+  <text x="205" y="57" text-anchor="middle" font-size="12" fill="#222222">byte 1</text>
+  <rect x="240" y="35" width="70" height="35" rx="2" fill="#ffe0b2" stroke="#333333" stroke-width="1.5"/>
+  <text x="275" y="57" text-anchor="middle" font-size="12" fill="#222222">byte 2</text>
+  <rect x="310" y="35" width="70" height="35" rx="2" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="345" y="57" text-anchor="middle" font-size="12" fill="#555">...</text>
+  <rect x="380" y="35" width="80" height="35" rx="2" fill="#fce4ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="420" y="57" text-anchor="middle" font-size="12" fill="#222222">byte 63</text>
+  <!-- Address labels below -->
+  <text x="135" y="88" text-anchor="middle" font-size="11" fill="#555">0x1000</text>
+  <text x="205" y="88" text-anchor="middle" font-size="11" fill="#555">0x1001</text>
+  <text x="275" y="88" text-anchor="middle" font-size="11" fill="#555">0x1002</text>
+  <text x="420" y="88" text-anchor="middle" font-size="11" fill="#555">0x103F</text>
+  <!-- Note -->
+  <text x="10" y="115" font-size="12" fill="#555">When you access address 0x1010, the entire 64-byte line (0x1000–0x103F) is loaded into cache.</text>
+</svg>

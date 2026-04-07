@@ -76,28 +76,7 @@ uint32_t status = *STATUS_REG;  // OK
 
 ## Type Conversion
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Type Conversion Hierarchy</text>
-  <rect x="150" y="50" width="100" height="30" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="70" text-anchor="middle" font-size="14">long double</text>
-  <rect x="150" y="90" width="100" height="30" fill="#ffddcc" stroke="#333"/>
-  <text x="200" y="110" text-anchor="middle" font-size="14">double</text>
-  <rect x="150" y="130" width="100" height="30" fill="#ffeedd" stroke="#333"/>
-  <text x="200" y="150" text-anchor="middle" font-size="14">float</text>
-  <rect x="150" y="170" width="100" height="30" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="190" text-anchor="middle" font-size="14">long long</text>
-  <rect x="150" y="210" width="100" height="30" fill="#eeffcc" stroke="#333"/>
-  <text x="200" y="230" text-anchor="middle" font-size="14">long/int</text>
-  <path d="M 200 80 L 200 90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 200 120 L 200 130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 200 160 L 200 170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 200 200 L 200 210" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![type_conversion](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/type_conversion.svg)
 
 ---
 
@@ -167,18 +146,7 @@ struct Example {
 };  // Total: 12 bytes
 ```
 
-<svg width="400" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="40" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="70" y="75" text-anchor="middle" font-size="14">c</text>
-  <rect x="90" y="50" width="120" height="40" fill="#e0e0e0" stroke="#333"/>
-  <text x="150" y="75" text-anchor="middle" font-size="14">padding</text>
-  <rect x="210" y="50" width="80" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="250" y="75" text-anchor="middle" font-size="14">i</text>
-  <rect x="290" y="50" width="40" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="310" y="75" text-anchor="middle" font-size="14">d</text>
-  <rect x="330" y="50" width="70" height="40" fill="#e0e0e0" stroke="#333"/>
-  <text x="365" y="75" text-anchor="middle" font-size="14">pad</text>
-</svg>
+![structure_layout](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/structure_layout.svg)
 
 ---
 

@@ -43,31 +43,7 @@
 
 ## Ansible Architecture
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="290" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="180" y="10" width="255" height="130" rx="4" fill="#ede7f6" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="307" y="32" text-anchor="middle" font-size="14" fill="#4a148c" font-weight="bold">Control Node</text>
-  <text x="307" y="52" text-anchor="middle" font-size="12" fill="#555">(your laptop)</text>
-  <text x="307" y="74" text-anchor="middle" font-size="12" fill="#333">ansible</text>
-  <text x="307" y="91" text-anchor="middle" font-size="12" fill="#333">ansible-playbook</text>
-  <text x="307" y="108" text-anchor="middle" font-size="12" fill="#333">ansible-galaxy</text>
-  <line x1="307" y1="140" x2="307" y2="175" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="330" y="162" text-anchor="middle" font-size="11" fill="#555">SSH / WinRM</text>
-  <rect x="30" y="175" width="230" height="90" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="145" y="201" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Managed Node 1</text>
-  <text x="145" y="220" text-anchor="middle" font-size="11" fill="#555">(web server)</text>
-  <text x="145" y="242" text-anchor="middle" font-size="11" fill="#777">No agent needed</text>
-  <rect x="350" y="175" width="230" height="90" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="465" y="201" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Managed Node 2</text>
-  <text x="465" y="220" text-anchor="middle" font-size="11" fill="#555">(db server)</text>
-  <text x="465" y="242" text-anchor="middle" font-size="11" fill="#777">No agent needed</text>
-</svg>
+![ansible_architecture](../../../../svg/courses/devops/ansible/01_fundamentals/ansible_architecture.svg)
 
 ---
 
@@ -106,33 +82,7 @@
 
 ## Agentless vs Agent-Based
 
-<svg xmlns="http://www.w3.org/2000/svg" width="650" height="280" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="10" y="10" width="290" height="255" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="155" y="30" text-anchor="middle" font-size="12" fill="#bf360c" font-weight="bold">Agent-Based (Puppet/Chef)</text>
-  <rect x="70" y="45" width="155" height="50" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="147" y="74" text-anchor="middle" font-size="12" fill="#222">Control Node</text>
-  <line x1="147" y1="95" x2="147" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="175" y="115" text-anchor="middle" font-size="10" fill="#777">(Agent polls)</text>
-  <rect x="70" y="130" width="155" height="65" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="147" y="158" text-anchor="middle" font-size="12" fill="#222">Managed Node</text>
-  <text x="147" y="175" text-anchor="middle" font-size="10" fill="#bf360c">[Agent] ← Running 24/7</text>
-  <rect x="340" y="10" width="295" height="255" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="487" y="30" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Agentless (Ansible)</text>
-  <rect x="405" y="45" width="155" height="50" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="482" y="74" text-anchor="middle" font-size="12" fill="#222">Control Node</text>
-  <line x1="482" y1="95" x2="482" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="510" y="115" text-anchor="middle" font-size="10" fill="#777">(SSH push)</text>
-  <rect x="405" y="130" width="155" height="65" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="482" y="158" text-anchor="middle" font-size="12" fill="#222">Managed Node</text>
-  <text x="482" y="175" text-anchor="middle" font-size="10" fill="#1b5e20">[Python] ← Only SSH</text>
-</svg>
+![agentless_vs_agent_based](../../../../svg/courses/devops/ansible/01_fundamentals/agentless_vs_agent_based.svg)
 
 ---
 
@@ -159,39 +109,7 @@
 
 ## Ansible Components Overview
 
-<svg xmlns="http://www.w3.org/2000/svg" width="650" height="230" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="10" y="10" width="630" height="210" rx="4" fill="#f8f9fa" stroke="#333" stroke-width="1.5"/>
-  <text x="325" y="32" text-anchor="middle" font-size="15" fill="#222" font-weight="bold">Ansible Ecosystem</text>
-  <rect x="30" y="44" width="175" height="160" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="117" y="64" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Core Tools</text>
-  <text x="117" y="84" text-anchor="middle" font-size="11" fill="#333">ansible</text>
-  <text x="117" y="102" text-anchor="middle" font-size="11" fill="#333">ansible-playbook</text>
-  <text x="117" y="120" text-anchor="middle" font-size="11" fill="#333">ansible-galaxy</text>
-  <text x="117" y="138" text-anchor="middle" font-size="11" fill="#333">ansible-vault</text>
-  <text x="117" y="156" text-anchor="middle" font-size="11" fill="#333">ansible-doc</text>
-  <text x="117" y="174" text-anchor="middle" font-size="11" fill="#333">ansible-pull</text>
-  <rect x="230" y="44" width="175" height="160" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="317" y="64" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Content</text>
-  <text x="317" y="84" text-anchor="middle" font-size="11" fill="#333">Playbooks</text>
-  <text x="317" y="102" text-anchor="middle" font-size="11" fill="#333">Roles</text>
-  <text x="317" y="120" text-anchor="middle" font-size="11" fill="#333">Collections</text>
-  <text x="317" y="138" text-anchor="middle" font-size="11" fill="#333">Modules</text>
-  <text x="317" y="156" text-anchor="middle" font-size="11" fill="#333">Plugins</text>
-  <text x="317" y="174" text-anchor="middle" font-size="11" fill="#333">Filters</text>
-  <rect x="430" y="44" width="175" height="160" rx="4" fill="#ede7f6" stroke="#555" stroke-width="1.5"/>
-  <text x="517" y="64" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">Platform</text>
-  <text x="517" y="84" text-anchor="middle" font-size="11" fill="#333">AWX / Tower</text>
-  <text x="517" y="102" text-anchor="middle" font-size="11" fill="#333">Galaxy</text>
-  <text x="517" y="120" text-anchor="middle" font-size="11" fill="#333">EE (Exec Environments)</text>
-  <text x="517" y="138" text-anchor="middle" font-size="11" fill="#333">Navigator</text>
-</svg>
+![ansible_components_overview](../../../../svg/courses/devops/ansible/01_fundamentals/ansible_components_overview.svg)
 
 ---
 
@@ -322,29 +240,7 @@ name: "{{ variable }}"   # Works
 
 ## Lab Environment Setup
 
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="270" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="150" y="10" width="215" height="95" rx="4" fill="#ede7f6" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="257" y="32" text-anchor="middle" font-size="14" fill="#4a148c" font-weight="bold">Control Node</text>
-  <text x="257" y="52" text-anchor="middle" font-size="12" fill="#333">OS: Ubuntu 22.04</text>
-  <text x="257" y="70" text-anchor="middle" font-size="12" fill="#333">IP: 192.168.56.10</text>
-  <line x1="257" y1="105" x2="257" y2="130" stroke="#555" stroke-width="1.5"/>
-  <line x1="130" y1="130" x2="390" y2="130" stroke="#555" stroke-width="1.5"/>
-  <line x1="130" y1="130" x2="130" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="390" y1="130" x2="390" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="45" y="158" width="165" height="80" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="127" y="183" text-anchor="middle" font-size="14" fill="#222" font-weight="bold">web01</text>
-  <text x="127" y="204" text-anchor="middle" font-size="12" fill="#555">IP: .20</text>
-  <rect x="305" y="158" width="165" height="80" rx="4" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
-  <text x="387" y="183" text-anchor="middle" font-size="14" fill="#222" font-weight="bold">db01</text>
-  <text x="387" y="204" text-anchor="middle" font-size="12" fill="#555">IP: .30</text>
-</svg>
+![lab_environment_setup](../../../../svg/courses/devops/ansible/01_fundamentals/lab_environment_setup.svg)
 
 ---
 

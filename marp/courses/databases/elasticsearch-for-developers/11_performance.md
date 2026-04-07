@@ -6,18 +6,7 @@
 
 ## Performance Areas
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="60" fill="#4CAF50" rx="5"/>
-  <text x="100" y="85" text-anchor="middle" fill="white">Query</text>
-  <rect x="180" y="50" width="100" height="60" fill="#2196F3" rx="5"/>
-  <text x="230" y="85" text-anchor="middle" fill="white">Indexing</text>
-  <rect x="50" y="140" width="100" height="60" fill="#FF9800" rx="5"/>
-  <text x="100" y="175" text-anchor="middle" fill="white">Data Model</text>
-  <rect x="180" y="140" width="100" height="60" fill="#9C27B0" rx="5"/>
-  <text x="230" y="175" text-anchor="middle" fill="white">Hardware</text>
-  <circle cx="320" cy="125" r="40" fill="#F44336"/>
-  <text x="320" y="130" text-anchor="middle" fill="white">Cache</text>
-</svg>
+![performance_areas](../../../../svg/courses/databases/elasticsearch-for-developers/11_performance/performance_areas.svg)
 
 ---
 
@@ -243,16 +232,7 @@ thread_pool:
 
 ## Data Modeling Performance
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-weight="bold">Query Performance Impact</text>
-  <rect x="50" y="50" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="90" y="75" text-anchor="middle" fill="white" font-size="12">Denorm</text>
-  <rect x="150" y="50" width="80" height="60" fill="#FFC107" rx="5"/>
-  <text x="190" y="85" text-anchor="middle" fill="black" font-size="12">Parent-Child</text>
-  <rect x="250" y="50" width="80" height="80" fill="#F44336" rx="5"/>
-  <text x="290" y="95" text-anchor="middle" fill="white" font-size="12">Nested</text>
-  <text x="200" y="160" text-anchor="middle">Fast → Slow</text>
-</svg>
+![data_modeling_performance](../../../../svg/courses/databases/elasticsearch-for-developers/11_performance/data_modeling_performance.svg)
 
 ---
 

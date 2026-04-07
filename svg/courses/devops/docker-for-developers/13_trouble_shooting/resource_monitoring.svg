@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd4_12_trouble_shooting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Resource Monitoring Commands</text>
+  <rect x="20" y="30" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="50" text-anchor="middle" font-size="10" font-weight="bold">docker stats</text>
+  <text x="105" y="66" text-anchor="middle" font-size="10">CPU% | MEM | NET I/O</text>
+  <text x="105" y="82" text-anchor="middle" font-size="10">Real-time dashboard</text>
+  <rect x="215" y="30" width="170" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="50" text-anchor="middle" font-size="10" font-weight="bold">docker top</text>
+  <text x="300" y="66" text-anchor="middle" font-size="10">PID | USER | CMD</text>
+  <text x="300" y="82" text-anchor="middle" font-size="10">Process listing</text>
+  <rect x="410" y="30" width="170" height="65" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="50" text-anchor="middle" font-size="10" font-weight="bold">docker system df</text>
+  <text x="495" y="66" text-anchor="middle" font-size="10">Images | Containers</text>
+  <text x="495" y="82" text-anchor="middle" font-size="10">Disk usage</text>
+  <rect x="60" y="110" width="230" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="5"/>
+  <text x="175" y="128" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">Warning Signs</text>
+  <text x="175" y="143" text-anchor="middle" font-size="10" fill="#c62828">CPU >80% | MEM >90%</text>
+  <rect x="310" y="110" width="230" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="5"/>
+  <text x="425" y="128" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="bold">Action</text>
+  <text x="425" y="143" text-anchor="middle" font-size="10" fill="#2e7d32">Scale up or set limits</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#555">docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}"</text>
+</svg>

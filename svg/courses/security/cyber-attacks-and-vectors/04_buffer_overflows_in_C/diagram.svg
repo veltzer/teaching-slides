@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Stack Layout During Buffer Overflow</text>
+  <rect x="30" y="25" width="230" height="170" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
+  <text x="145" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Normal Stack</text>
+  <rect x="55" y="50" width="180" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="145" y="65" text-anchor="middle" font-size="10">Local Variables</text>
+  <rect x="55" y="72" width="180" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="145" y="87" text-anchor="middle" font-size="10">Buffer[64]</text>
+  <rect x="55" y="94" width="180" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
+  <text x="145" y="109" text-anchor="middle" font-size="10">Saved Frame Pointer</text>
+  <rect x="55" y="116" width="180" height="22" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="145" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Return Address</text>
+  <rect x="55" y="138" width="180" height="22" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="145" y="153" text-anchor="middle" font-size="10">Function Arguments</text>
+  <text x="145" y="180" text-anchor="middle" font-size="9" fill="#666">Stack grows downward</text>
+  <rect x="320" y="25" width="260" height="170" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="3"/>
+  <text x="450" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Overflowed Stack</text>
+  <rect x="345" y="50" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+  <text x="450" y="65" text-anchor="middle" font-size="10" fill="#c62828">AAAA AAAA AAAA...</text>
+  <rect x="345" y="72" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+  <text x="450" y="87" text-anchor="middle" font-size="10" fill="#c62828">AAAA (overflow)</text>
+  <rect x="345" y="94" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
+  <text x="450" y="109" text-anchor="middle" font-size="10" fill="#c62828">Overwritten!</text>
+  <rect x="345" y="116" width="210" height="22" fill="#ff8a80" stroke="#c62828" stroke-width="2"/>
+  <text x="450" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">0xDEADBEEF (hijacked)</text>
+  <rect x="345" y="138" width="210" height="22" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="450" y="153" text-anchor="middle" font-size="10">Function Arguments</text>
+  <text x="450" y="180" text-anchor="middle" font-size="9" fill="#c62828">Attacker controls execution</text>
+</svg>

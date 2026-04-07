@@ -1,0 +1,39 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- View -->
+  <rect x="50" y="75" width="80" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="105" text-anchor="middle" font-size="14" font-weight="bold">View</text>
+
+  <!-- ViewModel -->
+  <rect x="200" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="250" y="105" text-anchor="middle" font-size="14" font-weight="bold">ViewModel</text>
+
+  <!-- UseCase -->
+  <rect x="370" y="75" width="80" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="410" y="105" text-anchor="middle" font-size="14" font-weight="bold">UseCase</text>
+
+  <!-- View back to itself for State update -->
+  <rect x="500" y="75" width="80" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="540" y="105" text-anchor="middle" font-size="14" font-weight="bold">View</text>
+
+  <!-- Event flow -->
+  <line x1="130" y1="100" x2="200" y2="100" stroke="#4c9aff" stroke-width="2" marker-end="url(#arrow_event)"/>
+  <text x="165" y="95" text-anchor="middle" font-size="11" fill="#4c9aff">Event</text>
+
+  <!-- Command flow -->
+  <line x1="300" y1="100" x2="370" y2="100" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrow_event)"/>
+  <text x="335" y="95" text-anchor="middle" font-size="11" fill="#ff6b6b">Command</text>
+
+  <!-- Result flow back -->
+  <path d="M 410 125 Q 410 150, 250 150 Q 250 140, 250 125" stroke="#51cf66" stroke-width="2" fill="none" marker-end="url(#arrow_event)"/>
+  <text x="330" y="165" text-anchor="middle" font-size="11" fill="#51cf66">Result</text>
+
+  <!-- State flow -->
+  <path d="M 250 75 Q 250 40, 540 40 Q 540 60, 540 75" stroke="#ffa726" stroke-width="2" fill="none" marker-end="url(#arrow_event)"/>
+  <text x="395" y="35" text-anchor="middle" font-size="11" fill="#ffa726">State</text>
+
+  <defs>
+    <marker id="arrow_event" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,33 @@
+<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Users -->
+  <rect x="30" y="130" width="90" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="75" y="155" text-anchor="middle" font-size="13" font-weight="bold">Users</text>
+  <!-- Router -->
+  <rect x="190" y="120" width="130" height="60" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
+  <text x="255" y="148" text-anchor="middle" font-size="12" font-weight="bold">Traffic Router</text>
+  <text x="255" y="166" text-anchor="middle" font-size="10">Weight-based</text>
+  <!-- Stable -->
+  <rect x="430" y="50" width="220" height="60" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
+  <text x="540" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Stable (v1)</text>
+  <text x="540" y="96" text-anchor="middle" font-size="11">95% of traffic</text>
+  <!-- Canary -->
+  <rect x="430" y="200" width="220" height="60" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="8"/>
+  <text x="540" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Canary (v2)</text>
+  <text x="540" y="246" text-anchor="middle" font-size="11">5% of traffic</text>
+  <!-- Arrows -->
+  <line x1="120" y1="150" x2="185" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
+  <line x1="320" y1="140" x2="425" y2="80" stroke="#2e7d32" stroke-width="3" marker-end="url(#arr3)"/>
+  <line x1="320" y1="160" x2="425" y2="230" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <!-- Labels -->
+  <text x="370" y="100" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">95%</text>
+  <text x="370" y="210" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">5%</text>
+  <!-- Monitoring -->
+  <rect x="430" y="290" width="220" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
+  <text x="540" y="315" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b1fa2">Monitoring &amp; Alerting</text>
+  <line x1="540" y1="260" x2="540" y2="285" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr3)"/>
+</svg>

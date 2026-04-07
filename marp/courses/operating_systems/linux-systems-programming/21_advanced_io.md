@@ -15,26 +15,7 @@
 
 ## File Locking Fundamentals
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">File Locking</text>
-
-  <rect x="50" y="50" width="80" height="30" fill="lightblue" stroke="black"/>
-  <text x="90" y="70" font-size="10" text-anchor="middle">Process A</text>
-
-  <rect x="200" y="50" width="100" height="30" fill="yellow" stroke="black"/>
-  <text x="250" y="70" font-size="10" text-anchor="middle">Locked File</text>
-
-  <rect x="370" y="50" width="80" height="30" fill="lightcoral" stroke="black"/>
-  <text x="410" y="70" font-size="10" text-anchor="middle">Process B</text>
-
-  <path d="M 130 65 L 200 65" stroke="green" stroke-width="2"/>
-  <text x="165" y="60" font-size="8">LOCK</text>
-
-  <path d="M 300 65 L 370 65" stroke="red" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="335" y="60" font-size="8">BLOCKED</text>
-
-  <text x="250" y="120" font-size="12" text-anchor="middle">Advisory vs Mandatory Locking</text>
-</svg>
+![file_locking_fundamentals](../../../../svg/courses/operating_systems/linux-systems-programming/21_advanced_io/file_locking_fundamentals.svg)
 
 ---
 
@@ -230,25 +211,7 @@ int try_flock(int fd) {
 
 ## Lock Types Comparison
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">fcntl() vs flock()</text>
-
-  <rect x="50" y="50" width="150" height="120" fill="lightblue" stroke="black"/>
-  <text x="125" y="70" font-size="12" font-weight="bold" text-anchor="middle">fcntl()</text>
-  <text x="125" y="90" font-size="10" text-anchor="middle">• POSIX standard</text>
-  <text x="125" y="105" font-size="10" text-anchor="middle">• Record locking</text>
-  <text x="125" y="120" font-size="10" text-anchor="middle">• Works over NFS</text>
-  <text x="125" y="135" font-size="10" text-anchor="middle">• More complex</text>
-  <text x="125" y="150" font-size="10" text-anchor="middle">• Byte-range locks</text>
-
-  <rect x="300" y="50" width="150" height="120" fill="lightgreen" stroke="black"/>
-  <text x="375" y="70" font-size="12" font-weight="bold" text-anchor="middle">flock()</text>
-  <text x="375" y="90" font-size="10" text-anchor="middle">• BSD style</text>
-  <text x="375" y="105" font-size="10" text-anchor="middle">• Whole file only</text>
-  <text x="375" y="120" font-size="10" text-anchor="middle">• Local filesystems</text>
-  <text x="375" y="135" font-size="10" text-anchor="middle">• Simpler API</text>
-  <text x="375" y="150" font-size="10" text-anchor="middle">• Process-associated</text>
-</svg>
+![lock_types_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/21_advanced_io/lock_types_comparison.svg)
 
 ---
 
@@ -520,34 +483,7 @@ int async_read_start(struct async_operation *op) {
 
 ## Network Server Design Patterns
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Server Architecture Patterns</text>
-
-  <rect x="50" y="50" width="120" height="60" fill="lightblue" stroke="black"/>
-  <text x="110" y="75" font-size="10" text-anchor="middle">Thread-per-</text>
-  <text x="110" y="90" font-size="10" text-anchor="middle">Connection</text>
-  <text x="110" y="130" font-size="8" text-anchor="middle">Simple, limited scale</text>
-
-  <rect x="200" y="50" width="120" height="60" fill="yellow" stroke="black"/>
-  <text x="260" y="75" font-size="10" text-anchor="middle">Thread Pool</text>
-  <text x="260" y="90" font-size="10" text-anchor="middle">+ Event Loop</text>
-  <text x="260" y="130" font-size="8" text-anchor="middle">Good balance</text>
-
-  <rect x="350" y="50" width="120" height="60" fill="lightgreen" stroke="black"/>
-  <text x="410" y="75" font-size="10" text-anchor="middle">Async I/O</text>
-  <text x="410" y="90" font-size="10" text-anchor="middle">Single Thread</text>
-  <text x="410" y="130" font-size="8" text-anchor="middle">Highest scale</text>
-
-  <rect x="50" y="180" width="120" height="60" fill="lightcoral" stroke="black"/>
-  <text x="110" y="205" font-size="10" text-anchor="middle">Process Pool</text>
-  <text x="110" y="220" font-size="10" text-anchor="middle">(Pre-fork)</text>
-  <text x="110" y="260" font-size="8" text-anchor="middle">Isolation, overhead</text>
-
-  <rect x="350" y="180" width="120" height="60" fill="orange" stroke="black"/>
-  <text x="410" y="205" font-size="10" text-anchor="middle">Hybrid</text>
-  <text x="410" y="220" font-size="10" text-anchor="middle">Multi-threaded</text>
-  <text x="410" y="260" font-size="8" text-anchor="middle">Best performance</text>
-</svg>
+![network_server_design_patterns](../../../../svg/courses/operating_systems/linux-systems-programming/21_advanced_io/network_server_design_patterns.svg)
 
 ---
 

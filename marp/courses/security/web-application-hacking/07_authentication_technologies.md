@@ -103,40 +103,7 @@ Authorization: Basic YWRtaW46cGFzc3dvcmQ=
 
 ## Token-Based Authentication (JWT)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" viewBox="0 0 660 240">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect width="660" height="240" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">JSON Web Token (JWT) Structure</text>
-  <!-- structure -->
-  <rect x="20" y="38" width="140" height="36" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="90" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">Header</text>
-  <text x="90" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">{"alg":"HS256","typ":"JWT"}</text>
-  <text x="168" y="61" font-family="sans-serif" font-size="16" fill="#999" text-anchor="middle">.</text>
-  <rect x="175" y="38" width="310" height="36" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="330" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">Payload</text>
-  <text x="330" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">{"sub":"1234","name":"John","role":"user","exp":1700000000}</text>
-  <text x="493" y="61" font-family="sans-serif" font-size="16" fill="#999" text-anchor="middle">.</text>
-  <rect x="500" y="38" width="140" height="36" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="570" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e65100" text-anchor="middle">Signature</text>
-  <text x="570" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">HMACSHA256(header.payload)</text>
-  <!-- flow -->
-  <rect x="30" y="105" width="170" height="50" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="115" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">1. Login</text>
-  <text x="115" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">with credentials</text>
-  <line x1="200" y1="130" x2="238" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="240" y="105" width="170" height="50" fill="#e8f5e9" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="325" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">2. Get JWT</text>
-  <text x="325" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">token from server</text>
-  <line x1="410" y1="130" x2="448" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="450" y="105" width="180" height="50" fill="#fff3e0" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="540" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">3. Send JWT</text>
-  <text x="540" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">with every request</text>
-  <text x="330" y="195" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Stateless: server verifies signature without storing session state</text>
-</svg>
+![token_based_authentication_jwt](../../../../svg/courses/security/web-application-hacking/07_authentication_technologies/token_based_authentication_jwt.svg)
 
 ---
 
@@ -167,43 +134,7 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 
 ## OAuth 2.0 Flow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" viewBox="0 0 660 310">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
-    </marker>
-  </defs>
-  <rect width="660" height="310" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">OAuth 2.0 Authorization Code Flow</text>
-  <!-- boxes -->
-  <rect x="30" y="45" width="130" height="50" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="95" y="67" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">User Browser</text>
-  <rect x="500" y="45" width="130" height="50" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="565" y="67" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Auth Server</text>
-  <rect x="30" y="195" width="130" height="50" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="95" y="215" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">App Server</text>
-  <!-- lifelines -->
-  <line x1="95" y1="95" x2="95" y2="195" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="565" y1="95" x2="565" y2="280" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="95" y1="245" x2="95" y2="280" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- step 1 -->
-  <line x1="95" y1="112" x2="555" y2="112" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="325" y="108" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle">1. Click "Login with Google" → redirect to Auth Server</text>
-  <!-- step 2 -->
-  <line x1="555" y1="140" x2="105" y2="140" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <text x="325" y="136" font-family="sans-serif" font-size="11" fill="#2e7d32" text-anchor="middle">2. User authenticates &amp; consents → redirect with code</text>
-  <!-- step 3 -->
-  <line x1="95" y1="165" x2="105" y2="193" stroke="#555" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="105" y1="220" x2="555" y2="220" stroke="#e65100" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="325" y="216" font-family="sans-serif" font-size="11" fill="#e65100" text-anchor="middle">3. App Server exchanges code for Access Token</text>
-  <line x1="555" y1="240" x2="115" y2="240" stroke="#e65100" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <text x="325" y="254" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle">← Access Token</text>
-  <!-- step 4 -->
-  <text x="95" y="280" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">4. Use Access Token to call APIs / GET /api/userinfo</text>
-</svg>
+![oauth_2_0_flow](../../../../svg/courses/security/web-application-hacking/07_authentication_technologies/oauth_2_0_flow.svg)
 
 ---
 
@@ -386,31 +317,7 @@ curl -v http://localhost:8080/vulnerabilities/brute/ \
 
 ## Kerberos Authentication
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="330" viewBox="0 0 660 330">
-  <rect width="660" height="330" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Kerberos Flow (Windows / AD Environments)</text>
-  <!-- flow steps -->
-  <rect x="20" y="38" width="300" height="150" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1"/>
-  <text x="30" y="60" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Authentication Flow</text>
-  <text x="30" y="80" font-family="sans-serif" font-size="12" fill="#222">1. User → KDC: "I am user X" (AS-REQ)</text>
-  <text x="30" y="98" font-family="sans-serif" font-size="12" fill="#222">2. KDC → User: Ticket Granting Ticket (AS-REP)</text>
-  <text x="30" y="116" font-family="sans-serif" font-size="12" fill="#222">3. User → KDC: TGT + "Access Service Y" (TGS-REQ)</text>
-  <text x="30" y="134" font-family="sans-serif" font-size="12" fill="#222">4. KDC → User: Service Ticket (TGS-REP)</text>
-  <text x="30" y="152" font-family="sans-serif" font-size="12" fill="#222">5. User → Service: Service Ticket (AP-REQ)</text>
-  <text x="30" y="170" font-family="sans-serif" font-size="12" fill="#222">6. Service → User: Access granted (AP-REP)</text>
-  <!-- attacks -->
-  <rect x="340" y="38" width="300" height="150" fill="#ffebee" rx="4" stroke="#c62828" stroke-width="1"/>
-  <text x="350" y="60" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c62828">Known Attacks</text>
-  <text x="350" y="80" font-family="sans-serif" font-size="12" fill="#222">AS-REP Roasting: Request TGT, crack offline</text>
-  <text x="350" y="98" font-family="sans-serif" font-size="12" fill="#222">Kerberoasting: Request svc tickets, crack offline</text>
-  <text x="350" y="116" font-family="sans-serif" font-size="12" fill="#222">Golden Ticket: Forge TGTs with krbtgt hash</text>
-  <text x="350" y="134" font-family="sans-serif" font-size="12" fill="#222">Silver Ticket: Forge service tickets with svc hash</text>
-  <text x="350" y="152" font-family="sans-serif" font-size="12" fill="#222">Pass-the-Ticket: Reuse stolen tickets</text>
-  <!-- legend -->
-  <rect x="20" y="205" width="620" height="50" fill="#fff9c4" rx="4" stroke="#f57f17" stroke-width="1"/>
-  <text x="330" y="225" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f57f17" text-anchor="middle">Key Components</text>
-  <text x="330" y="245" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">KDC (Key Distribution Center) contains: AS (Authentication Service) + TGS (Ticket Granting Service)</text>
-</svg>
+![kerberos_authentication](../../../../svg/courses/security/web-application-hacking/07_authentication_technologies/kerberos_authentication.svg)
 
 ---
 

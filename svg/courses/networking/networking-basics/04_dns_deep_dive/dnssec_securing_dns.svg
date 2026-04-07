@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="420" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- ── Without DNSSEC ── -->
+  <text x="10" y="22" font-size="14" fill="#c62828" font-weight="bold">Without DNSSEC:</text>
+  <!-- Client -->
+  <rect x="10" y="34" width="90" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="55" y="64" font-size="13" fill="#222" text-anchor="middle">Client</text>
+  <!-- Resolver -->
+  <rect x="220" y="34" width="100" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="270" y="64" font-size="13" fill="#222" text-anchor="middle">Resolver</text>
+  <!-- NS -->
+  <rect x="440" y="34" width="90" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="485" y="64" font-size="13" fill="#222" text-anchor="middle">NS</text>
+  <!-- Client→Resolver (query) -->
+  <line x1="100" y1="50" x2="218" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="160" y="45" font-size="11" fill="#555" text-anchor="middle">Query</text>
+  <!-- NS→Resolver (response) -->
+  <line x1="440" y1="50" x2="322" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="380" y="45" font-size="11" fill="#555" text-anchor="middle">Response</text>
+  <!-- Resolver→Client (response) -->
+  <line x1="220" y1="74" x2="102" y2="74" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="162" y="90" font-size="11" fill="#555" text-anchor="middle">Response</text>
+  <!-- Warning note -->
+  <rect x="190" y="105" width="200" height="44" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="290" y="124" font-size="12" fill="#b71c1c" text-anchor="middle">⚠ Attacker can forge</text>
+  <text x="290" y="140" font-size="12" fill="#b71c1c" text-anchor="middle">responses (DNS spoofing)</text>
+  <line x1="270" y1="84" x2="270" y2="104" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ── With DNSSEC ── -->
+  <text x="10" y="186" font-size="14" fill="#1b5e20" font-weight="bold">With DNSSEC:</text>
+  <!-- Client -->
+  <rect x="10" y="198" width="90" height="50" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="55" y="228" font-size="13" fill="#222" text-anchor="middle">Client</text>
+  <!-- Resolver -->
+  <rect x="200" y="198" width="130" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="265" y="222" font-size="13" fill="#222" text-anchor="middle">Resolver</text>
+  <text x="265" y="240" font-size="11" fill="#1b5e20" text-anchor="middle">Validates signature</text>
+  <!-- NS -->
+  <rect x="450" y="198" width="100" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="500" y="222" font-size="13" fill="#222" text-anchor="middle">NS</text>
+  <text x="500" y="240" font-size="11" fill="#1b5e20" text-anchor="middle">Signs records</text>
+  <!-- Client→Resolver (query) -->
+  <line x1="100" y1="214" x2="198" y2="214" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="149" y="209" font-size="11" fill="#555" text-anchor="middle">Query</text>
+  <!-- NS→Resolver (signed response) -->
+  <line x1="450" y1="214" x2="332" y2="214" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="390" y="209" font-size="11" fill="#555" text-anchor="middle">Signed Response</text>
+  <!-- Resolver→Client -->
+  <line x1="200" y1="244" x2="102" y2="244" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="151" y="262" font-size="11" fill="#1b5e20" text-anchor="middle">Verified Response</text>
+</svg>

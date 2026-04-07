@@ -14,19 +14,7 @@
 
 ## Why C++ in Embedded?
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">C++ Advantages</text>
-  <rect x="50" y="60" width="150" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14">Type Safety</text>
-  <rect x="220" y="60" width="150" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="295" y="85" text-anchor="middle" font-size="14">Abstraction</text>
-  <rect x="50" y="120" width="150" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="125" y="145" text-anchor="middle" font-size="14">RAII</text>
-  <rect x="220" y="120" width="150" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="295" y="145" text-anchor="middle" font-size="14">Templates</text>
-  <rect x="135" y="180" width="150" height="40" fill="#ffccff" stroke="#333"/>
-  <text x="210" y="205" text-anchor="middle" font-size="14">Const Correctness</text>
-</svg>
+![why_c_in_embedded](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/14_embedded_c++/why_c_in_embedded.svg)
 
 ---
 

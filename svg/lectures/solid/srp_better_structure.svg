@@ -1,0 +1,39 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="350" y="50" width="200" height="100" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="450" y="80" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold">Employee</text>
+  <line x1="350" y1="90" x2="550" y2="90" stroke="#16a34a" stroke-width="1"/>
+  <text x="360" y="110" font-family="Arial" font-size="12">- name: String</text>
+  <text x="360" y="130" font-family="Arial" font-size="12">- salary: double</text>
+
+  <rect x="50" y="250" width="160" height="80" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="130" y="280" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">PayrollCalculator</text>
+  <line x1="50" y1="290" x2="210" y2="290" stroke="#0284c7" stroke-width="1"/>
+  <text x="60" y="310" font-family="Arial" font-size="12">+ calculatePay(Employee)</text>
+
+  <rect x="250" y="250" width="160" height="80" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="330" y="280" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">EmployeeRepository</text>
+  <line x1="250" y1="290" x2="410" y2="290" stroke="#0284c7" stroke-width="1"/>
+  <text x="260" y="310" font-family="Arial" font-size="12">+ save(Employee)</text>
+
+  <rect x="450" y="250" width="160" height="80" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="530" y="280" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">ReportGenerator</text>
+  <line x1="450" y1="290" x2="610" y2="290" stroke="#0284c7" stroke-width="1"/>
+  <text x="460" y="310" font-family="Arial" font-size="12">+ generateReport(Employee)</text>
+
+  <rect x="650" y="250" width="180" height="80" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="740" y="280" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold">EmailService</text>
+  <line x1="650" y1="290" x2="830" y2="290" stroke="#0284c7" stroke-width="1"/>
+  <text x="660" y="310" font-family="Arial" font-size="12">+ sendEmail(String, String)</text>
+
+  <line x1="130" y1="250" x2="400" y2="150" stroke="#16a34a" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="330" y1="250" x2="430" y2="150" stroke="#16a34a" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="530" y1="250" x2="470" y2="150" stroke="#16a34a" stroke-width="1" marker-end="url(#arrowhead)"/>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#16a34a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="400" text-anchor="middle" font-family="Arial" font-size="11" fill="#16a34a">Single Responsibility: Each class has one job</text>
+</svg>

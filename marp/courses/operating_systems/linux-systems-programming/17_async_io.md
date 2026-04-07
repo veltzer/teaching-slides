@@ -14,18 +14,7 @@
 
 ## Synchronous vs Asynchronous
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="50" y="30" font-size="14" font-weight="bold">Synchronous</text>
-  <rect x="50" y="40" width="60" height="20" fill="red" stroke="black"/>
-  <text x="80" y="55" font-size="10" text-anchor="middle">read()</text>
-  <text x="130" y="55" font-size="12">→ BLOCKS until complete</text>
-
-  <text x="50" y="100" font-size="14" font-weight="bold">Asynchronous</text>
-  <rect x="50" y="110" width="60" height="20" fill="green" stroke="black"/>
-  <text x="80" y="125" font-size="10" text-anchor="middle">aio_read()</text>
-  <text x="130" y="125" font-size="12">→ Returns immediately</text>
-  <text x="130" y="145" font-size="12">→ Notified on completion</text>
-</svg>
+![synchronous_vs_asynchronous](../../../../svg/courses/operating_systems/linux-systems-programming/17_async_io/synchronous_vs_asynchronous.svg)
 
 ---
 
@@ -341,30 +330,7 @@ io_uring_cqe_seen(&ring, cqe);
 
 ## io_uring: Ring Structure
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">io_uring Architecture</text>
-
-  <circle cx="150" cy="100" r="60" fill="lightblue" stroke="black"/>
-  <text x="150" y="105" font-size="12" text-anchor="middle">Submission</text>
-  <text x="150" y="120" font-size="12" text-anchor="middle">Queue (SQ)</text>
-
-  <circle cx="350" cy="100" r="60" fill="lightgreen" stroke="black"/>
-  <text x="350" y="105" font-size="12" text-anchor="middle">Completion</text>
-  <text x="350" y="120" font-size="12" text-anchor="middle">Queue (CQ)</text>
-
-  <rect x="200" y="200" width="100" height="40" fill="yellow" stroke="black"/>
-  <text x="250" y="225" font-size="12" text-anchor="middle">Kernel</text>
-
-  <path d="M 210 100 L 290 100" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 250 160 L 250 200" stroke="black" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![iouring_ring_structure](../../../../svg/courses/operating_systems/linux-systems-programming/17_async_io/iouring_ring_structure.svg)
 
 ---
 
@@ -469,25 +435,7 @@ void sigio_handler(int sig) {
 
 ## Performance Comparison
 
-<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Async I/O Performance</text>
-
-  <rect x="50" y="50" width="80" height="40" fill="red" stroke="black"/>
-  <text x="90" y="75" font-size="10" text-anchor="middle">POSIX AIO</text>
-  <text x="90" y="105" font-size="8">Slow</text>
-
-  <rect x="150" y="50" width="80" height="40" fill="orange" stroke="black"/>
-  <text x="190" y="75" font-size="10" text-anchor="middle">Native AIO</text>
-  <text x="190" y="105" font-size="8">Better</text>
-
-  <rect x="250" y="50" width="80" height="40" fill="yellow" stroke="black"/>
-  <text x="290" y="75" font-size="10" text-anchor="middle">epoll</text>
-  <text x="290" y="105" font-size="8">Good</text>
-
-  <rect x="350" y="50" width="80" height="40" fill="green" stroke="black"/>
-  <text x="390" y="75" font-size="10" text-anchor="middle">io_uring</text>
-  <text x="390" y="105" font-size="8">Fastest</text>
-</svg>
+![performance_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/17_async_io/performance_comparison.svg)
 
 ---
 

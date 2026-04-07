@@ -1,0 +1,31 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Process Tree: init to User Processes</text>
+  <defs>
+    <marker id="arrowps" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="220" y="35" width="160" height="30" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="55" text-anchor="middle" font-size="11" font-weight="bold">init/systemd (PID 1)</text>
+  <line x1="260" y1="65" x2="130" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#arrowps)"/>
+  <line x1="300" y1="65" x2="300" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#arrowps)"/>
+  <line x1="340" y1="65" x2="470" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#arrowps)"/>
+  <rect x="50" y="85" width="160" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="130" y="104" text-anchor="middle" font-size="10">sshd (service)</text>
+  <rect x="220" y="85" width="160" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="300" y="104" text-anchor="middle" font-size="10">cron (scheduler)</text>
+  <rect x="390" y="85" width="160" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="470" y="104" text-anchor="middle" font-size="10">nginx (web server)</text>
+  <line x1="100" y1="113" x2="70" y2="133" stroke="#333" stroke-width="1" marker-end="url(#arrowps)"/>
+  <line x1="160" y1="113" x2="190" y2="133" stroke="#333" stroke-width="1" marker-end="url(#arrowps)"/>
+  <rect x="20" y="133" width="100" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="150" text-anchor="middle" font-size="9">bash (shell)</text>
+  <rect x="140" y="133" width="100" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="190" y="150" text-anchor="middle" font-size="9">bash (shell)</text>
+  <line x1="70" y1="158" x2="70" y2="173" stroke="#333" stroke-width="1" marker-end="url(#arrowps)"/>
+  <rect x="20" y="173" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="188" text-anchor="middle" font-size="9">vim (user cmd)</text>
+  <rect x="300" y="148" width="260" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="4" opacity="0.7"/>
+  <text x="430" y="163" text-anchor="middle" font-size="10" font-weight="bold">ps shows:</text>
+  <text x="430" y="178" text-anchor="middle" font-size="10">PID, PPID, USER, STAT, CMD</text>
+</svg>

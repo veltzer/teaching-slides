@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="340" font-family="sans-serif">
+  <!-- Direct-mapped title -->
+  <text x="10" y="22" font-size="14" font-weight="bold" fill="#222222">Direct-mapped (1-way)</text>
+  <text x="10" y="40" font-size="12" fill="#555">Each address maps to exactly one cache slot</text>
+  <!-- 8 slots -->
+  <text x="10" y="70" font-size="12" fill="#555">Slots:</text>
+  <rect x="50"  y="55" width="50" height="30" rx="2" fill="#bbdefb" stroke="#333333" stroke-width="1.5"/>
+  <text x="75"  y="75" text-anchor="middle" font-size="13" fill="#222222">0</text>
+  <rect x="100" y="55" width="50" height="30" rx="2" fill="#c8e6c9" stroke="#333333" stroke-width="1.5"/>
+  <text x="125" y="75" text-anchor="middle" font-size="13" fill="#222222">1</text>
+  <rect x="150" y="55" width="50" height="30" rx="2" fill="#ffe0b2" stroke="#333333" stroke-width="1.5"/>
+  <text x="175" y="75" text-anchor="middle" font-size="13" fill="#222222">2</text>
+  <rect x="200" y="55" width="50" height="30" rx="2" fill="#fce4ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="75" text-anchor="middle" font-size="13" fill="#222222">3</text>
+  <rect x="250" y="55" width="50" height="30" rx="2" fill="#bbdefb" stroke="#333333" stroke-width="1.5"/>
+  <text x="275" y="75" text-anchor="middle" font-size="13" fill="#222222">4</text>
+  <rect x="300" y="55" width="50" height="30" rx="2" fill="#c8e6c9" stroke="#333333" stroke-width="1.5"/>
+  <text x="325" y="75" text-anchor="middle" font-size="13" fill="#222222">5</text>
+  <rect x="350" y="55" width="50" height="30" rx="2" fill="#ffe0b2" stroke="#333333" stroke-width="1.5"/>
+  <text x="375" y="75" text-anchor="middle" font-size="13" fill="#222222">6</text>
+  <rect x="400" y="55" width="50" height="30" rx="2" fill="#fce4ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="425" y="75" text-anchor="middle" font-size="13" fill="#222222">7</text>
+  <text x="10" y="112" font-size="12" fill="#555">Address 0x100 → always slot 0  (conflict if 0x200 also maps here)</text>
+  <!-- Divider -->
+  <line x1="10" y1="130" x2="630" y2="130" stroke="#ccc" stroke-width="1"/>
+  <!-- Fully associative -->
+  <text x="10" y="152" font-size="14" font-weight="bold" fill="#222222">Fully Associative</text>
+  <text x="10" y="170" font-size="12" fill="#555">Any address can go in any slot – most flexible but expensive to search.</text>
+  <!-- Divider -->
+  <line x1="10" y1="186" x2="630" y2="186" stroke="#ccc" stroke-width="1"/>
+  <!-- N-way set associative -->
+  <text x="10" y="208" font-size="14" font-weight="bold" fill="#222222">N-way Set Associative</text>
+  <text x="10" y="226" font-size="12" fill="#555">Each address maps to a SET of N slots (ways).</text>
+  <!-- 3 sets -->
+  <rect x="30"  y="240" width="170" height="55" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="115" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Set 0</text>
+  <text x="115" y="283" text-anchor="middle" font-size="12" fill="#555">Way0  Way1 … WayN</text>
+  <rect x="230" y="240" width="170" height="55" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="315" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Set 1</text>
+  <text x="315" y="283" text-anchor="middle" font-size="12" fill="#555">Way0  Way1 … WayN</text>
+  <rect x="430" y="240" width="170" height="55" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
+  <text x="515" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Set 2</text>
+  <text x="515" y="283" text-anchor="middle" font-size="12" fill="#555">Way0  Way1 … WayN</text>
+  <text x="10" y="320" font-size="12" fill="#555">Modern L1: 8–12 way   L2: 8–16 way   L3: 12–20 way</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Git Stash Stack</text>
+
+  <!-- Stack visualization -->
+  <rect x="200" y="50" width="200" height="40" fill="#3498db" rx="5"/>
+  <text x="300" y="75" text-anchor="middle" fill="white" font-size="12">stash@{0} - Latest stash</text>
+
+  <rect x="200" y="100" width="200" height="40" fill="#e74c3c" rx="5"/>
+  <text x="300" y="125" text-anchor="middle" fill="white" font-size="12">stash@{1} - Previous stash</text>
+
+  <rect x="200" y="150" width="200" height="40" fill="#2ecc71" rx="5"/>
+  <text x="300" y="175" text-anchor="middle" fill="white" font-size="12">stash@{2} - Older stash</text>
+
+  <!-- Arrows -->
+  <text x="150" y="75" text-anchor="middle" font-size="12">← pop</text>
+  <text x="450" y="75" text-anchor="middle" font-size="12">push →</text>
+
+  <!-- Working directory -->
+  <rect x="50" y="220" width="150" height="60" fill="#f39c12" rx="5"/>
+  <text x="125" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Working Directory</text>
+  <text x="125" y="265" text-anchor="middle" fill="white" font-size="10">Modified files</text>
+
+  <!-- Apply/Pop operations -->
+  <line x1="200" y1="250" x2="250" y2="90" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <text x="220" y="170" font-size="10">apply/pop</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

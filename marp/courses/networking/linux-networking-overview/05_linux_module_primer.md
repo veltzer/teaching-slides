@@ -214,39 +214,7 @@ static int __init my_module_init(void)
 
 ## Resource Management
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="110" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="75" y="50" text-anchor="middle" font-size="11" font-weight="bold">kmalloc()</text>
-  <text x="75" y="65" text-anchor="middle" font-size="10">Allocate Memory</text>
-  <rect x="170" y="30" width="110" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="225" y="50" text-anchor="middle" font-size="11" font-weight="bold">Use Resource</text>
-  <text x="225" y="65" text-anchor="middle" font-size="10">Read/Write ops</text>
-  <rect x="320" y="30" width="110" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="375" y="50" text-anchor="middle" font-size="11" font-weight="bold">kfree()</text>
-  <text x="375" y="65" text-anchor="middle" font-size="10">Free Memory</text>
-  <rect x="20" y="120" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="75" y="140" text-anchor="middle" font-size="11" font-weight="bold">request_irq()</text>
-  <text x="75" y="155" text-anchor="middle" font-size="10">Register IRQ</text>
-  <rect x="170" y="120" width="110" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="225" y="140" text-anchor="middle" font-size="11" font-weight="bold">Handle IRQs</text>
-  <text x="225" y="155" text-anchor="middle" font-size="10">Interrupt work</text>
-  <rect x="320" y="120" width="110" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="375" y="140" text-anchor="middle" font-size="11" font-weight="bold">free_irq()</text>
-  <text x="375" y="155" text-anchor="middle" font-size="10">Release IRQ</text>
-  <line x1="130" y1="52" x2="170" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_linux_module_primer)"/>
-  <line x1="280" y1="52" x2="320" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_linux_module_primer)"/>
-  <line x1="130" y1="142" x2="170" y2="142" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_linux_module_primer)"/>
-  <line x1="280" y1="142" x2="320" y2="142" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_linux_module_primer)"/>
-  <text x="500" y="55" text-anchor="middle" font-size="12" fill="#333" font-weight="bold">Init / Exit</text>
-  <text x="500" y="75" text-anchor="middle" font-size="10" fill="#666">Acquire in init</text>
-  <text x="500" y="90" text-anchor="middle" font-size="10" fill="#666">Release in exit</text>
-  <text x="500" y="105" text-anchor="middle" font-size="10" fill="#666">Reverse order</text>
-  <defs>
-    <marker id="arrowd0_04_linux_module_primer" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![resource_management](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/resource_management.svg)
 
 ---
 
@@ -390,67 +358,13 @@ modprobe --show-depends mymodule
 
 ## Debugging Tools
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Kernel Module Debugging Tools</text>
-  <rect x="30" y="35" width="120" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="55" text-anchor="middle" font-size="11" font-weight="bold">dmesg</text>
-  <text x="90" y="72" text-anchor="middle" font-size="10" fill="#666">Kernel ring buffer</text>
-  <rect x="170" y="35" width="120" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="55" text-anchor="middle" font-size="11" font-weight="bold">printk / pr_*</text>
-  <text x="230" y="72" text-anchor="middle" font-size="10" fill="#666">Kernel logging</text>
-  <rect x="310" y="35" width="120" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="370" y="55" text-anchor="middle" font-size="11" font-weight="bold">ftrace</text>
-  <text x="370" y="72" text-anchor="middle" font-size="10" fill="#666">Function tracer</text>
-  <rect x="450" y="35" width="120" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="55" text-anchor="middle" font-size="11" font-weight="bold">kgdb / kdb</text>
-  <text x="510" y="72" text-anchor="middle" font-size="10" fill="#666">Kernel debugger</text>
-  <rect x="30" y="110" width="120" height="55" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="130" text-anchor="middle" font-size="11" font-weight="bold">strace</text>
-  <text x="90" y="147" text-anchor="middle" font-size="10" fill="#666">Syscall tracing</text>
-  <rect x="170" y="110" width="120" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="130" text-anchor="middle" font-size="11" font-weight="bold">modprobe -v</text>
-  <text x="230" y="147" text-anchor="middle" font-size="10" fill="#666">Verbose load</text>
-  <rect x="310" y="110" width="120" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="370" y="130" text-anchor="middle" font-size="11" font-weight="bold">objdump</text>
-  <text x="370" y="147" text-anchor="middle" font-size="10" fill="#666">Disassemble .ko</text>
-  <rect x="450" y="110" width="120" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="130" text-anchor="middle" font-size="11" font-weight="bold">dynamic debug</text>
-  <text x="510" y="147" text-anchor="middle" font-size="10" fill="#666">pr_debug toggle</text>
-</svg>
+![debugging_tools](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/debugging_tools.svg)
 
 ---
 
 ## Module Lifecycle
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="70" width="100" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="90" text-anchor="middle" font-size="11" font-weight="bold">insmod /</text>
-  <text x="60" y="105" text-anchor="middle" font-size="11" font-weight="bold">modprobe</text>
-  <text x="60" y="120" text-anchor="middle" font-size="10" fill="#666">Load .ko</text>
-  <rect x="140" y="70" width="100" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="190" y="90" text-anchor="middle" font-size="11" font-weight="bold">module_init()</text>
-  <text x="190" y="108" text-anchor="middle" font-size="10" fill="#666">Alloc resources</text>
-  <rect x="270" y="70" width="100" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="320" y="90" text-anchor="middle" font-size="11" font-weight="bold">Running</text>
-  <text x="320" y="108" text-anchor="middle" font-size="10" fill="#666">Active in kernel</text>
-  <rect x="400" y="70" width="100" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="450" y="90" text-anchor="middle" font-size="11" font-weight="bold">module_exit()</text>
-  <text x="450" y="108" text-anchor="middle" font-size="10" fill="#666">Free resources</text>
-  <rect x="530" y="70" width="60" height="55" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="560" y="90" text-anchor="middle" font-size="11" font-weight="bold">rmmod</text>
-  <text x="560" y="108" text-anchor="middle" font-size="10" fill="#666">Unload</text>
-  <line x1="110" y1="97" x2="140" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
-  <line x1="240" y1="97" x2="270" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
-  <line x1="370" y1="97" x2="400" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
-  <line x1="500" y1="97" x2="530" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
-  <text x="300" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Kernel Module Lifecycle</text>
-  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">lsmod shows loaded modules | modinfo shows module metadata</text>
-  <defs>
-    <marker id="arrowd2_04_linux_module_primer" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![module_lifecycle](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/module_lifecycle.svg)
 
 ---
 

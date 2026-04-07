@@ -6,35 +6,7 @@
 
 A framework for building `LLM`-powered applications:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="510" height="270" font-family="sans-serif">
-<rect x="5" y="5" width="650" height="265" fill="#f8f9fa" stroke="#333" stroke-width="2" rx="4"/>
-<text x="330" y="32" font-size="16" font-weight="bold" fill="#222" text-anchor="middle">LANGCHAIN</text>
-<rect x="20" y="50" width="150" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="95" y="73" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Models</text>
-<text x="95" y="91" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(LLMs)</text>
-<rect x="180" y="50" width="150" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="255" y="73" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Prompts</text>
-<text x="255" y="91" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(Templ.)</text>
-<rect x="340" y="50" width="150" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="415" y="73" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Output Parsers</text>
-<text x="415" y="91" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(Structured)</text>
-<rect x="20" y="115" width="150" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="95" y="138" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Chains</text>
-<text x="95" y="156" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(LCEL)</text>
-<rect x="180" y="115" width="150" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="255" y="147" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Memory</text>
-<rect x="340" y="115" width="150" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="415" y="138" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Agents</text>
-<text x="415" y="156" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">(Tools)</text>
-<rect x="20" y="180" width="150" height="55" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="95" y="203" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Document</text>
-<text x="95" y="221" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">Loaders</text>
-<rect x="180" y="180" width="150" height="55" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="255" y="203" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Vector</text>
-<text x="255" y="221" font-size="12" font-weight="normal" fill="#222" text-anchor="middle">Stores</text>
-<rect x="340" y="180" width="150" height="55" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="415" y="212" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Retrievers</text>
-</svg>
+![what_is_langchain](../../../../svg/courses/ai/generative-ai-applications/11_langchain/what_is_langchain.svg)
 
 ---
 

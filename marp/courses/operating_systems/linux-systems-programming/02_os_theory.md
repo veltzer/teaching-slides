@@ -41,22 +41,7 @@ Without protection: DOS, early Windows, embedded systems
 
 ## Historical Context
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <line x1="100" y1="300" x2="700" y2="300" stroke="#333" stroke-width="2"/>
-  <circle cx="150" cy="300" r="5" fill="#E74C3C"/>
-  <text x="150" y="280" text-anchor="middle" font-size="12">1960s</text>
-  <text x="150" y="330" text-anchor="middle" font-size="11">Mainframes</text>
-  <circle cx="300" cy="300" r="5" fill="#3498DB"/>
-  <text x="300" y="280" text-anchor="middle" font-size="12">1970s</text>
-  <text x="300" y="330" text-anchor="middle" font-size="11">UNIX</text>
-  <circle cx="450" cy="300" r="5" fill="#9B59B6"/>
-  <text x="450" y="280" text-anchor="middle" font-size="12">1980s</text>
-  <text x="450" y="330" text-anchor="middle" font-size="11">Protected Mode</text>
-  <circle cx="600" cy="300" r="5" fill="#2ECC71"/>
-  <text x="600" y="280" text-anchor="middle" font-size="12">1990s+</text>
-  <text x="600" y="330" text-anchor="middle" font-size="11">Modern OS</text>
-  <text x="400" y="100" text-anchor="middle" font-size="16" font-weight="bold">Evolution of OS Protection</text>
-</svg>
+![historical_context](../../../../svg/courses/operating_systems/linux-systems-programming/02_os_theory/historical_context.svg)
 
 ---
 
@@ -64,18 +49,7 @@ Without protection: DOS, early Windows, embedded systems
 
 ## x86/x64 Protection Rings
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="180" fill="#E74C3C" opacity="0.3" stroke="#333" stroke-width="2"/>
-  <circle cx="400" cy="200" r="140" fill="#F39C12" opacity="0.4" stroke="#333" stroke-width="2"/>
-  <circle cx="400" cy="200" r="100" fill="#F1C40F" opacity="0.5" stroke="#333" stroke-width="2"/>
-  <circle cx="400" cy="200" r="60" fill="#2ECC71" opacity="0.6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold">Ring 0</text>
-  <text x="400" y="215" text-anchor="middle" font-size="11">Kernel</text>
-  <text x="400" y="125" text-anchor="middle" font-size="12">Ring 1-2</text>
-  <text x="400" y="140" text-anchor="middle" font-size="10">Device Drivers</text>
-  <text x="400" y="70" text-anchor="middle" font-size="12">Ring 3</text>
-  <text x="400" y="85" text-anchor="middle" font-size="10">User Space</text>
-</svg>
+![x86_x64_protection_rings](../../../../svg/courses/operating_systems/linux-systems-programming/02_os_theory/x86_x64_protection_rings.svg)
 
 ---
 
@@ -131,21 +105,7 @@ CPL Values:
 
 ## Privilege Transitions
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="200" height="80" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="200" y="145" text-anchor="middle" fill="white" font-size="16">User Mode</text>
-  <rect x="500" y="100" width="200" height="80" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="600" y="145" text-anchor="middle" fill="white" font-size="16">Kernel Mode</text>
-  <path d="M 300 140 Q 400 90 500 140" stroke="#2ECC71" stroke-width="3" fill="none" marker-end="url(#arrow3)"/>
-  <text x="400" y="80" text-anchor="middle" font-size="12">System Call</text>
-  <path d="M 500 160 Q 400 210 300 160" stroke="#9B59B6" stroke-width="3" fill="none" marker-end="url(#arrow3)"/>
-  <text x="400" y="230" text-anchor="middle" font-size="12">Return</text>
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![privilege_transitions](../../../../svg/courses/operating_systems/linux-systems-programming/02_os_theory/privilege_transitions.svg)
 
 ---
 
@@ -163,34 +123,7 @@ CPL Values:
 
 ## Virtual Memory Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="400" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="125" y="30" text-anchor="middle" font-size="14" font-weight="bold">Process A</text>
-  <rect x="50" y="50" width="150" height="100" fill="#2980B9"/>
-  <text x="125" y="100" text-anchor="middle" fill="white" font-size="12">Stack</text>
-  <rect x="50" y="250" width="150" height="100" fill="#3498DB"/>
-  <text x="125" y="300" text-anchor="middle" fill="white" font-size="12">Heap</text>
-  <rect x="50" y="350" width="150" height="100" fill="#2471A3"/>
-  <text x="125" y="400" text-anchor="middle" fill="white" font-size="12">Code</text>
-
-  <rect x="250" y="50" width="150" height="400" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="325" y="30" text-anchor="middle" font-size="14" font-weight="bold">Process B</text>
-  <rect x="250" y="50" width="150" height="100" fill="#C0392B"/>
-  <text x="325" y="100" text-anchor="middle" fill="white" font-size="12">Stack</text>
-  <rect x="250" y="250" width="150" height="100" fill="#E74C3C"/>
-  <text x="325" y="300" text-anchor="middle" fill="white" font-size="12">Heap</text>
-  <rect x="250" y="350" width="150" height="100" fill="#A93226"/>
-  <text x="325" y="400" text-anchor="middle" fill="white" font-size="12">Code</text>
-
-  <rect x="500" y="50" width="250" height="400" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="625" y="30" text-anchor="middle" font-size="14" font-weight="bold">Physical Memory</text>
-  <rect x="500" y="100" width="250" height="50" fill="#3498DB"/>
-  <text x="625" y="130" text-anchor="middle" fill="white" font-size="11">Process A Page</text>
-  <rect x="500" y="200" width="250" height="50" fill="#E74C3C"/>
-  <text x="625" y="230" text-anchor="middle" fill="white" font-size="11">Process B Page</text>
-  <rect x="500" y="300" width="250" height="50" fill="#2ECC71"/>
-  <text x="625" y="330" text-anchor="middle" fill="white" font-size="11">Kernel Page</text>
-</svg>
+![virtual_memory_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/02_os_theory/virtual_memory_architecture.svg)
 
 ---
 
@@ -313,31 +246,7 @@ void setup_page_table(struct process *p) {
 
 ## System Call Mechanism
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="300" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="200" y="85" text-anchor="middle" fill="white" font-size="14">User Program</text>
-  <rect x="50" y="150" width="300" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="200" y="185" text-anchor="middle" fill="white" font-size="14">C Library (glibc)</text>
-  <rect x="50" y="250" width="300" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="200" y="285" text-anchor="middle" fill="white" font-size="14">Kernel</text>
-  <line x1="200" y1="110" x2="200" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="250" y="130" font-size="11">function call</text>
-  <line x1="200" y1="210" x2="200" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="250" y="230" font-size="11">syscall instruction</text>
-  <rect x="450" y="100" width="300" height="200" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="600" y="130" text-anchor="middle" font-size="12" font-weight="bold">System Call Steps:</text>
-  <text x="460" y="160" font-size="11">1. Load syscall number in RAX</text>
-  <text x="460" y="180" font-size="11">2. Load arguments in registers</text>
-  <text x="460" y="200" font-size="11">3. Execute SYSCALL instruction</text>
-  <text x="460" y="220" font-size="11">4. CPU switches to Ring 0</text>
-  <text x="460" y="240" font-size="11">5. Kernel handles request</text>
-  <text x="460" y="260" font-size="11">6. SYSRET back to Ring 3</text>
-  <defs>
-    <marker id="arrow4" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![system_call_mechanism](../../../../svg/courses/operating_systems/linux-systems-programming/02_os_theory/system_call_mechanism.svg)
 
 ---
 

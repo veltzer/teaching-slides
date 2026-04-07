@@ -32,31 +32,7 @@ void handleRequest(Request& req) {
 
 ## Chain of Responsibility Structure
 
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="50" width="120" height="50" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="70" y="80" text-anchor="middle" font-size="11">Handler A</text>
-
-  <rect x="170" y="50" width="120" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="230" y="80" text-anchor="middle" font-size="11">Handler B</text>
-
-  <rect x="330" y="50" width="120" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="390" y="80" text-anchor="middle" font-size="11">Handler C</text>
-
-  <rect x="490" y="50" width="100" height="50" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="540" y="80" text-anchor="middle" font-size="11">Default</text>
-
-  <line x1="130" y1="75" x2="170" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="290" y1="75" x2="330" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="450" y1="75" x2="490" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-
-  <text x="300" y="30" text-anchor="middle" font-size="12">Request passes along the chain</text>
-
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![chain_of_responsibility_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/14_chain_of_responsibility/chain_of_responsibility_structure.svg)
 
 Each handler decides whether to process the request or pass it to the next handler
 

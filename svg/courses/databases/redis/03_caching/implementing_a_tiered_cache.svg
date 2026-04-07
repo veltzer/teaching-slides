@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="30" y="60" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="80" text-anchor="middle" font-size="11" font-weight="bold">L1: In-Process</text>
+  <text x="85" y="95" text-anchor="middle" font-size="10">HashMap/LRU</text>
+  <rect x="230" y="60" width="110" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="80" text-anchor="middle" font-size="11" font-weight="bold">L2: Redis</text>
+  <text x="285" y="95" text-anchor="middle" font-size="10">Shared Cache</text>
+  <rect x="430" y="60" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="80" text-anchor="middle" font-size="11" font-weight="bold">L3: Database</text>
+  <text x="490" y="95" text-anchor="middle" font-size="10">Source of Truth</text>
+  <text x="85" y="135" text-anchor="middle" font-size="10" fill="#1565c0">~1 us</text>
+  <text x="285" y="135" text-anchor="middle" font-size="10" fill="#7b1fa2">~1 ms</text>
+  <text x="490" y="135" text-anchor="middle" font-size="10" fill="#2e7d32">~10 ms</text>
+  <line x1="140" y1="85" x2="230" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrowd15_02_caching)"/>
+  <line x1="340" y1="85" x2="430" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrowd15_02_caching)"/>
+  <text x="185" y="78" text-anchor="middle" font-size="9" fill="#666">miss</text>
+  <text x="385" y="78" text-anchor="middle" font-size="9" fill="#666">miss</text>
+  <text x="300" y="170" text-anchor="middle" font-size="11" fill="#333">Request flows L1 -> L2 -> L3 on cache miss</text>
+  <defs>
+    <marker id="arrowd15_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

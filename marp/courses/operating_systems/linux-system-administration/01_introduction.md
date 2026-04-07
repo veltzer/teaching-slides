@@ -35,27 +35,7 @@
 ---
 ## Course Structure
 
-<svg width="700" height="120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="35" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="65" text-anchor="middle" font-size="11">Core System</text>
-  <rect x="150" y="35" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="210" y="65" text-anchor="middle" font-size="11">Storage</text>
-  <rect x="290" y="35" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="65" text-anchor="middle" font-size="11">Security</text>
-  <rect x="430" y="35" width="120" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="65" text-anchor="middle" font-size="11">Networking</text>
-  <rect x="570" y="35" width="120" height="50" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="630" y="65" text-anchor="middle" font-size="11">Monitoring</text>
-  <line x1="130" y1="60" x2="150" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr00)"/>
-  <line x1="270" y1="60" x2="290" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr00)"/>
-  <line x1="410" y1="60" x2="430" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr00)"/>
-  <line x1="550" y1="60" x2="570" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr00)"/>
-  <defs>
-    <marker id="arr00" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![course_structure](../../../../svg/courses/operating_systems/linux-system-administration/01_introduction/course_structure.svg)
 
 ---
 ## Day-by-Day Schedule
@@ -129,37 +109,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 ---
 ## Linux Distributions Landscape
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="225" y="5" width="150" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="28" text-anchor="middle" font-size="12">Linux Kernel</text>
-  <rect x="50" y="70" width="120" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="93" text-anchor="middle" font-size="11">Debian</text>
-  <rect x="240" y="70" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="93" text-anchor="middle" font-size="11">Red Hat</text>
-  <rect x="430" y="70" width="120" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="93" text-anchor="middle" font-size="11">SUSE</text>
-  <rect x="20" y="130" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60" y="150" text-anchor="middle" font-size="9">Ubuntu</text>
-  <rect x="120" y="130" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="160" y="150" text-anchor="middle" font-size="9">Mint</text>
-  <rect x="220" y="130" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="260" y="150" text-anchor="middle" font-size="9">RHEL</text>
-  <rect x="320" y="130" width="80" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="360" y="150" text-anchor="middle" font-size="9">Fedora</text>
-  <rect x="420" y="130" width="80" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="460" y="150" text-anchor="middle" font-size="9">openSUSE</text>
-  <rect x="520" y="130" width="80" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="560" y="150" text-anchor="middle" font-size="9">SLES</text>
-  <line x1="300" y1="40" x2="110" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="300" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="490" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="110" y1="105" x2="60" y2="130" stroke="#333" stroke-width="1"/>
-  <line x1="110" y1="105" x2="160" y2="130" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="105" x2="260" y2="130" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="105" x2="360" y2="130" stroke="#333" stroke-width="1"/>
-  <line x1="490" y1="105" x2="460" y2="130" stroke="#333" stroke-width="1"/>
-  <line x1="490" y1="105" x2="560" y2="130" stroke="#333" stroke-width="1"/>
-</svg>
+![linux_distributions_landscape](../../../../svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
 
 This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
 

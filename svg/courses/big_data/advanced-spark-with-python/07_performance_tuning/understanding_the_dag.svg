@@ -1,0 +1,43 @@
+<svg viewBox="0 0 620 310" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-dag" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">DAG: Join + Aggregation</text>
+  <!-- Stage 0 -->
+  <rect x="20" y="30" width="570" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="50" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0277bd">Stage 0: Scan Table A</text>
+  <rect x="40" y="55" width="100" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="90" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">FileScan</text>
+  <text x="90" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Parquet</text>
+  <line x1="140" y1="72" x2="180" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="185" y="55" width="120" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="245" y="70" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Filter</text>
+  <text x="245" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">(pushdown)</text>
+  <line x1="305" y1="72" x2="345" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="55" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="410" y="77" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleWrite</text>
+  <!-- Stage 1 -->
+  <rect x="20" y="115" width="570" height="70" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="133" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Stage 1: Scan Table B</text>
+  <rect x="40" y="140" width="100" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="90" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">FileScan</text>
+  <text x="90" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">Parquet</text>
+  <line x1="140" y1="157" x2="180" y2="157" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="185" y="140" width="100" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="235" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Select</text>
+  <line x1="285" y1="157" x2="345" y2="157" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="140" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="410" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleWrite</text>
+  <!-- Stage 2 -->
+  <rect x="20" y="200" width="570" height="70" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="50" y="218" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7b1fa2">Stage 2: Join + Aggregate</text>
+  <rect x="40" y="225" width="120" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="100" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">ShuffleRead</text>
+  <text x="100" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">(both sides)</text>
+  <line x1="160" y1="242" x2="200" y2="242" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="205" y="225" width="100" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="255" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Join</text>
+  <line x1="305" y1="242" x2="345" y2="242" stroke="#333" stroke-width="2" marker-end="url(#arrow-dag)"/>
+  <rect x="350" y="225" width="120" height="35" rx="6" fill="#fff" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="410" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Aggregate</text>
+</svg>

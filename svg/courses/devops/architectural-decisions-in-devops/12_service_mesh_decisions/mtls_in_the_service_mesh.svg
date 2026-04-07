@@ -1,0 +1,27 @@
+<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">mTLS Handshake Between Proxies</text>
+  <rect x="50" y="50" width="130" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="115" y="80" text-anchor="middle" font-size="12">Service A</text>
+  <rect x="50" y="110" width="130" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
+  <text x="115" y="135" text-anchor="middle" font-size="11">Proxy A</text>
+  <rect x="520" y="50" width="130" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="585" y="80" text-anchor="middle" font-size="12">Service B</text>
+  <rect x="520" y="110" width="130" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
+  <text x="585" y="135" text-anchor="middle" font-size="11">Proxy B</text>
+  <line x1="180" y1="120" x2="518" y2="120" stroke="#1976d2" stroke-width="2" marker-end="url(#arr5)"/>
+  <text x="350" y="115" text-anchor="middle" font-size="10" fill="#1976d2">1. ClientHello + client cert</text>
+  <line x1="518" y1="135" x2="180" y2="135" stroke="#388e3c" stroke-width="2" marker-end="url(#arr5)"/>
+  <text x="350" y="155" text-anchor="middle" font-size="10" fill="#388e3c">2. ServerHello + server cert</text>
+  <line x1="180" y1="170" x2="518" y2="170" stroke="#1976d2" stroke-width="2" marker-end="url(#arr5)"/>
+  <text x="350" y="185" text-anchor="middle" font-size="10" fill="#1976d2">3. Certificate verification (both sides)</text>
+  <line x1="180" y1="200" x2="518" y2="200" stroke="#e65100" stroke-width="3" marker-end="url(#arr5)"/>
+  <line x1="518" y1="210" x2="180" y2="210" stroke="#e65100" stroke-width="3" marker-end="url(#arr5)"/>
+  <text x="350" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">4. Encrypted application data</text>
+  <rect x="200" y="250" width="300" height="35" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="5"/>
+  <text x="350" y="272" text-anchor="middle" font-size="10" fill="#e65100">Certificates auto-rotated by control plane CA</text>
+</svg>

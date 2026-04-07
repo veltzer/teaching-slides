@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="60" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="82" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <text x="70" y="98" text-anchor="middle" font-size="10">API Request</text>
+  <rect x="180" y="30" width="140" height="90" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="250" y="52" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
+  <text x="250" y="68" text-anchor="middle" font-size="10" font-family="monospace">INCR rate:ip:x</text>
+  <text x="250" y="83" text-anchor="middle" font-size="10" font-family="monospace">EXPIRE rate:ip:x 60</text>
+  <rect x="195" y="96" width="50" height="18" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="220" y="109" text-anchor="middle" font-size="10">count</text>
+  <rect x="255" y="96" width="50" height="18" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="280" y="109" text-anchor="middle" font-size="10">TTL</text>
+  <rect x="400" y="25" width="130" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="465" y="42" text-anchor="middle" font-size="11" font-weight="bold">count &lt; limit</text>
+  <text x="465" y="58" text-anchor="middle" font-size="11" fill="#2e7d32">ALLOW</text>
+  <rect x="400" y="90" width="130" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="465" y="108" text-anchor="middle" font-size="11" font-weight="bold">count >= limit</text>
+  <text x="465" y="124" text-anchor="middle" font-size="11" fill="#c62828">REJECT 429</text>
+  <line x1="120" y1="85" x2="180" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd8_00_intro)"/>
+  <line x1="320" y1="55" x2="400" y2="47" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowd8_00_intro)"/>
+  <line x1="320" y1="95" x2="400" y2="112" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrowd8_00_intro)"/>
+  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#555">Each key tracks request count per IP with auto-expiring TTL window</text>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#555">Atomic INCR ensures accuracy under concurrent requests</text>
+  <defs>
+    <marker id="arrowd8_00_intro" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

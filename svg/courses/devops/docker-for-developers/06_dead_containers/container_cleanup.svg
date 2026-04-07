@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_05_dead_containers" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="40" width="140" height="60" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="62" text-anchor="middle" font-size="11" font-weight="bold">Dead Containers</text>
+  <text x="90" y="80" text-anchor="middle" font-size="10" fill="#555">docker ps -a -f</text>
+  <text x="90" y="93" text-anchor="middle" font-size="10" fill="#555">status=exited</text>
+  <line x1="160" y1="70" x2="218" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_dead_containers)"/>
+  <rect x="220" y="40" width="160" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="62" text-anchor="middle" font-size="11" font-weight="bold">Selective Remove</text>
+  <text x="300" y="80" text-anchor="middle" font-size="10">docker rm &lt;id&gt;</text>
+  <text x="300" y="93" text-anchor="middle" font-size="10" fill="#555">one at a time</text>
+  <line x1="380" y1="70" x2="438" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_05_dead_containers)"/>
+  <rect x="440" y="40" width="140" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="62" text-anchor="middle" font-size="11" font-weight="bold">Bulk Cleanup</text>
+  <text x="510" y="80" text-anchor="middle" font-size="10">docker container</text>
+  <text x="510" y="93" text-anchor="middle" font-size="10">prune</text>
+  <rect x="20" y="130" width="560" height="50" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="150" text-anchor="middle" font-size="10" fill="#555">docker system prune: removes all stopped containers, unused networks,</text>
+  <text x="300" y="167" text-anchor="middle" font-size="10" fill="#555">dangling images, and build cache. Use -a to also remove unused images.</text>
+</svg>

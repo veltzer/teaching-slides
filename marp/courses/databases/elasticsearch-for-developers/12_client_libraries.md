@@ -6,22 +6,7 @@
 
 ## Official Client Libraries
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="90" y="75" text-anchor="middle" fill="white">Java</text>
-  <rect x="160" y="50" width="80" height="40" fill="#2196F3" rx="5"/>
-  <text x="200" y="75" text-anchor="middle" fill="white">Python</text>
-  <rect x="270" y="50" width="80" height="40" fill="#FF9800" rx="5"/>
-  <text x="310" y="75" text-anchor="middle" fill="white">Node.js</text>
-  <rect x="50" y="120" width="80" height="40" fill="#9C27B0" rx="5"/>
-  <text x="90" y="145" text-anchor="middle" fill="white">.NET</text>
-  <rect x="160" y="120" width="80" height="40" fill="#F44336" rx="5"/>
-  <text x="200" y="145" text-anchor="middle" fill="white">Go</text>
-  <rect x="270" y="120" width="80" height="40" fill="#00BCD4" rx="5"/>
-  <text x="310" y="145" text-anchor="middle" fill="white">Ruby</text>
-  <rect x="160" y="190" width="80" height="40" fill="#795548" rx="5"/>
-  <text x="200" y="215" text-anchor="middle" fill="white">PHP</text>
-</svg>
+![official_client_libraries](../../../../svg/courses/databases/elasticsearch-for-developers/12_client_libraries/official_client_libraries.svg)
 
 ---
 
@@ -333,20 +318,7 @@ if err != nil {
 
 ## Connection Pooling
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="100" fill="#4CAF50" rx="5"/>
-  <text x="90" y="100" text-anchor="middle" fill="white">App</text>
-  <rect x="200" y="30" width="60" height="30" fill="#2196F3" rx="3"/>
-  <text x="230" y="50" text-anchor="middle" fill="white" font-size="10">Conn 1</text>
-  <rect x="200" y="70" width="60" height="30" fill="#2196F3" rx="3"/>
-  <text x="230" y="90" text-anchor="middle" fill="white" font-size="10">Conn 2</text>
-  <rect x="200" y="110" width="60" height="30" fill="#2196F3" rx="3"/>
-  <text x="230" y="130" text-anchor="middle" fill="white" font-size="10">Conn 3</text>
-  <rect x="310" y="50" width="80" height="100" fill="#FF9800" rx="5"/>
-  <text x="350" y="100" text-anchor="middle" fill="white">ES</text>
-  <path d="M130 100 L200 90" stroke="#333" stroke-width="2"/>
-  <path d="M260 90 L310 100" stroke="#333" stroke-width="2"/>
-</svg>
+![connection_pooling](../../../../svg/courses/databases/elasticsearch-for-developers/12_client_libraries/connection_pooling.svg)
 
 ---
 

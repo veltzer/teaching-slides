@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="348" font-family="sans-serif">
+  <rect x="1" y="1" width="658" height="346" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">3-2-1-1-0 Backup Rule</text>
+  <!-- Number rows -->
+  <circle cx="34" cy="58" r="14" fill="#1565c0"/>
+  <text x="34" y="63" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
+  <text x="56" y="63" font-size="13" fill="#333">Copies of data (production + 2 backups)</text>
+  <circle cx="34" cy="92" r="14" fill="#1565c0"/>
+  <text x="34" y="97" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
+  <text x="56" y="97" font-size="13" fill="#333">Different storage media types (disk + tape, disk + cloud, etc.)</text>
+  <circle cx="34" cy="126" r="14" fill="#1565c0"/>
+  <text x="34" y="131" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+  <text x="56" y="131" font-size="13" fill="#333">Copy offsite (different physical location)</text>
+  <circle cx="34" cy="160" r="14" fill="#e65100"/>
+  <text x="34" y="165" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
+  <text x="56" y="160" font-size="13" fill="#333">Copy offline or air-gapped</text>
+  <text x="56" y="178" font-size="12" fill="#c62828" font-weight="bold">CRITICAL: ransomware targets connected backups!</text>
+  <circle cx="34" cy="204" r="14" fill="#2e7d32"/>
+  <text x="34" y="209" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">0</text>
+  <text x="56" y="209" font-size="13" fill="#333">Zero errors — verify backup integrity regularly</text>
+  <!-- Three boxes diagram -->
+  <rect x="30" y="230" width="130" height="70" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="95" y="256" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Production</text>
+  <text x="95" y="274" font-size="12" fill="#222" text-anchor="middle">Data</text>
+  <rect x="250" y="230" width="130" height="70" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="315" y="256" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Local Backup</text>
+  <text x="315" y="274" font-size="12" fill="#222" text-anchor="middle">(NAS)</text>
+  <rect x="470" y="230" width="140" height="70" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="540" y="252" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Offsite Backup</text>
+  <text x="540" y="268" font-size="11" fill="#222" text-anchor="middle">(Cloud / Tape)</text>
+  <text x="540" y="284" font-size="11" fill="#2e7d32" font-weight="bold" text-anchor="middle">AIR-GAPPED ✓</text>
+  <text x="95" y="318" font-size="11" fill="#c62828" text-anchor="middle">Connected</text>
+  <text x="95" y="332" font-size="11" fill="#c62828" text-anchor="middle">(vulnerable)</text>
+  <text x="315" y="318" font-size="11" fill="#e65100" text-anchor="middle">Connected</text>
+  <text x="315" y="332" font-size="11" fill="#e65100" text-anchor="middle">(vulnerable)</text>
+  <text x="540" y="318" font-size="11" fill="#2e7d32" text-anchor="middle">Immutable /</text>
+  <text x="540" y="332" font-size="11" fill="#2e7d32" text-anchor="middle">Air-gapped (SAFE)</text>
+</svg>

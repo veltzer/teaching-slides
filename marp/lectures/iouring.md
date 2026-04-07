@@ -29,18 +29,7 @@
 1. Minimal system call overhead
 1. Batch operations support
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="120" height="60" fill="#e0e0ff" stroke="#333" stroke-width="2"/>
-  <text x="110" y="65" text-anchor="middle" font-size="14">User Space</text>
-  <rect x="230" y="30" width="120" height="60" fill="#ffe0e0" stroke="#333" stroke-width="2"/>
-  <text x="290" y="65" text-anchor="middle" font-size="14">Kernel Space</text>
-  <path d="M 170 60 L 230 60" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![core_design_principles](../../svg/lectures/iouring/core_design_principles.svg)
 
 ---
 
@@ -281,14 +270,7 @@ graph LR
 1. Lower latency for small I/O operations
 1. Better scaling with multiple cores
 
-<svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="150" width="40" height="100" fill="#4CAF50" transform="scale(1,-1) translate(0,-300)"/>
-  <rect x="130" y="150" width="40" height="150" fill="#2196F3" transform="scale(1,-1) translate(0,-300)"/>
-  <rect x="210" y="150" width="40" height="180" fill="#FF9800" transform="scale(1,-1) translate(0,-300)"/>
-  <text x="70" y="170" text-anchor="middle" font-size="12">epoll</text>
-  <text x="150" y="170" text-anchor="middle" font-size="12">aio</text>
-  <text x="230" y="170" text-anchor="middle" font-size="12">io_uring</text>
-</svg>
+![real_world_performance_numbers](../../svg/lectures/iouring/real_world_performance_numbers.svg)
 
 ---
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="400" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Kaminsky DNS Cache Poisoning Attack</text>
+<rect x="10" y="38" width="680" height="352" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5" rx="4"/>
+<text x="22" y="65" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">1.</text>
+<text x="55" y="65" text-anchor="start" font-size="12" fill="#222222">Attacker queries resolver for random.example.com</text>
+<text x="55" y="83" text-anchor="start" font-size="11" fill="#555">(a subdomain that does NOT exist in cache)</text>
+<text x="22" y="111" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">2.</text>
+<text x="55" y="111" text-anchor="start" font-size="12" fill="#222222">Resolver sends query to authoritative server for example.com</text>
+<text x="22" y="139" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">3.</text>
+<text x="55" y="139" text-anchor="start" font-size="12" fill="#222222">Before real response arrives, attacker floods resolver with</text>
+<text x="55" y="157" text-anchor="start" font-size="11" fill="#555">FORGED responses: matching Transaction ID + authority ns1.example.com = EVIL_IP</text>
+<text x="22" y="185" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">4.</text>
+<text x="55" y="185" text-anchor="start" font-size="12" fill="#222222">If forged response arrives FIRST and ID matches:</text>
+<text x="55" y="203" text-anchor="start" font-size="11" fill="#555">Resolver caches:  example.com NS  →  EVIL_IP</text>
+<text x="22" y="231" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">5.</text>
+<text x="55" y="231" text-anchor="start" font-size="12" fill="#222222">ALL future queries for *.example.com are redirected to attacker!</text>
+<text x="22" y="259" text-anchor="start" font-size="13" fill="#e65100" font-weight="bold">Key:</text>
+<text x="55" y="259" text-anchor="start" font-size="12" fill="#222222">Attacker retries with different random subdomains until one succeeds</text>
+<text x="55" y="277" text-anchor="start" font-size="11" fill="#555">— thousands of attempts possible per second</text>
+</svg>

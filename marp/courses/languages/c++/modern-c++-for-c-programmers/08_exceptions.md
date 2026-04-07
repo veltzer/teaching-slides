@@ -44,37 +44,7 @@ int main() {
 
 ## Exception Flow Control
 
-<svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="40" fill="#e8f4f8" stroke="black"/>
-  <text x="100" y="75" text-anchor="middle">try block</text>
-
-  <rect x="50" y="120" width="100" height="40" fill="#ffe8e8" stroke="black"/>
-  <text x="100" y="145" text-anchor="middle">throw</text>
-
-  <rect x="200" y="50" width="100" height="40" fill="#e8f8e8" stroke="black"/>
-  <text x="250" y="75" text-anchor="middle">normal flow</text>
-
-  <rect x="200" y="120" width="100" height="40" fill="#f8e8f8" stroke="black"/>
-  <text x="250" y="145" text-anchor="middle">stack unwind</text>
-
-  <rect x="350" y="120" width="100" height="40" fill="#f8f8e8" stroke="black"/>
-  <text x="400" y="145" text-anchor="middle">catch block</text>
-
-  <line x1="150" y1="70" x2="200" y2="70" stroke="green" marker-end="url(#arrowhead)"/>
-  <line x1="100" y1="90" x2="100" y2="120" stroke="red" marker-end="url(#arrowhead)"/>
-  <line x1="150" y1="140" x2="200" y2="140" stroke="red" marker-end="url(#arrowhead)"/>
-  <line x1="300" y1="140" x2="350" y2="140" stroke="red" marker-end="url(#arrowhead)"/>
-
-  <text x="175" y="65" fill="green">No exception</text>
-  <text x="175" y="155" fill="red">Exception thrown</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![exception_flow_control](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_flow_control.svg)
 
 ---
 
@@ -94,35 +64,7 @@ int main() {
 
 ## The Standard Exception Hierarchy
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="20" width="100" height="30" fill="#e8f4f8" stroke="black"/>
-  <text x="300" y="40" text-anchor="middle">exception</text>
-
-  <rect x="100" y="80" width="120" height="30" fill="#ffe8e8" stroke="black"/>
-  <text x="160" y="100" text-anchor="middle">logic_error</text>
-
-  <rect x="380" y="80" width="120" height="30" fill="#e8ffe8" stroke="black"/>
-  <text x="440" y="100" text-anchor="middle">runtime_error</text>
-
-  <rect x="20" y="140" width="100" height="25" fill="#f8f8e8" stroke="black"/>
-  <text x="70" y="157" text-anchor="middle">invalid_argument</text>
-
-  <rect x="140" y="140" width="100" height="25" fill="#f8f8e8" stroke="black"/>
-  <text x="190" y="157" text-anchor="middle">out_of_range</text>
-
-  <rect x="320" y="140" width="100" height="25" fill="#f8f8e8" stroke="black"/>
-  <text x="370" y="157" text-anchor="middle">system_error</text>
-
-  <rect x="440" y="140" width="100" height="25" fill="#f8f8e8" stroke="black"/>
-  <text x="490" y="157" text-anchor="middle">overflow_error</text>
-
-  <line x1="300" y1="50" x2="160" y2="80" stroke="black"/>
-  <line x1="300" y1="50" x2="440" y2="80" stroke="black"/>
-  <line x1="160" y1="110" x2="70" y2="140" stroke="black"/>
-  <line x1="160" y1="110" x2="190" y2="140" stroke="black"/>
-  <line x1="440" y1="110" x2="370" y2="140" stroke="black"/>
-  <line x1="440" y1="110" x2="490" y2="140" stroke="black"/>
-</svg>
+![the_standard_exception_hierarchy](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/the_standard_exception_hierarchy.svg)
 
 ---
 
@@ -252,28 +194,7 @@ public:
 
 ## Exception Safety Levels
 
-<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#ff6b6b" stroke="black"/>
-  <text x="110" y="75" text-anchor="middle">No Guarantee</text>
-  <text x="110" y="95" text-anchor="middle">(Unsafe)</text>
-
-  <rect x="190" y="50" width="120" height="60" fill="#feca57" stroke="black"/>
-  <text x="250" y="75" text-anchor="middle">Basic</text>
-  <text x="250" y="95" text-anchor="middle">Guarantee</text>
-
-  <rect x="330" y="50" width="120" height="60" fill="#48dbfb" stroke="black"/>
-  <text x="390" y="75" text-anchor="middle">Strong</text>
-  <text x="390" y="95" text-anchor="middle">Guarantee</text>
-
-  <text x="110" y="140">Corruption</text>
-  <text x="110" y="155">possible</text>
-
-  <text x="250" y="140">No corruption</text>
-  <text x="250" y="155">but changes</text>
-
-  <text x="390" y="140">Commit or</text>
-  <text x="390" y="155">rollback</text>
-</svg>
+![exception_safety_levels](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_safety_levels.svg)
 
 ---
 

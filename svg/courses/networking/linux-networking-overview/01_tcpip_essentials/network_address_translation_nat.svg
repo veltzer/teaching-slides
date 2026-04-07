@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd3_00_tcpip_essentials" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Network Address Translation</text>
+  <rect x="20" y="50" width="120" height="100" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="80" y="75" text-anchor="middle" font-size="11" font-weight="bold">Private LAN</text>
+  <text x="80" y="95" text-anchor="middle" font-size="10">192.168.1.10</text>
+  <text x="80" y="110" text-anchor="middle" font-size="10">192.168.1.11</text>
+  <text x="80" y="125" text-anchor="middle" font-size="10">192.168.1.12</text>
+  <rect x="220" y="60" width="140" height="80" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="290" y="85" text-anchor="middle" font-size="12" font-weight="bold">NAT Router</text>
+  <text x="290" y="105" text-anchor="middle" font-size="10">192.168.1.1 (int)</text>
+  <text x="290" y="120" text-anchor="middle" font-size="10">203.0.113.5 (ext)</text>
+  <rect x="440" y="65" width="130" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="90" text-anchor="middle" font-size="12" font-weight="bold">Internet</text>
+  <text x="505" y="110" text-anchor="middle" font-size="10">Public Servers</text>
+  <line x1="140" y1="100" x2="220" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_00_tcpip_essentials)"/>
+  <line x1="360" y1="100" x2="440" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_00_tcpip_essentials)"/>
+  <text x="180" y="92" text-anchor="middle" font-size="9" fill="#666">Private IP</text>
+  <text x="400" y="92" text-anchor="middle" font-size="9" fill="#666">Public IP</text>
+  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#666">src: 192.168.1.10 --&gt; src: 203.0.113.5</text>
+  <text x="290" y="175" text-anchor="middle" font-size="10" fill="#666">Translation table maps internal:port to external:port</text>
+</svg>

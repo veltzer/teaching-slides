@@ -25,37 +25,7 @@ We stand at the beginning of a fundamental transformation:
 
 ## Emerging Technology Trends
 
-<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="400" height="210" fill="#e8f5e8" stroke="#2e7d32" rx="10"/>
-  <text x="250" y="45" text-anchor="middle" font-size="16" font-weight="bold">Emerging AI Development Technologies</text>
-
-  <circle cx="150" cy="90" r="35" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="150" y="85" text-anchor="middle" font-size="9">Multimodal</text>
-  <text x="150" y="98" text-anchor="middle" font-size="9">AI Systems</text>
-
-  <circle cx="250" cy="70" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="250" y="65" text-anchor="middle" font-size="9">Autonomous</text>
-  <text x="250" y="78" text-anchor="middle" font-size="9">Agents</text>
-
-  <circle cx="350" cy="90" r="35" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="350" y="85" text-anchor="middle" font-size="9">Specialized</text>
-  <text x="350" y="98" text-anchor="middle" font-size="9">AI Models</text>
-
-  <circle cx="150" cy="160" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="150" y="155" text-anchor="middle" font-size="9">AI-Native</text>
-  <text x="150" y="168" text-anchor="middle" font-size="9">IDEs</text>
-
-  <circle cx="250" cy="140" r="35" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="250" y="135" text-anchor="middle" font-size="9">Continuous</text>
-  <text x="250" y="148" text-anchor="middle" font-size="9">Learning</text>
-
-  <circle cx="350" cy="160" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="350" y="155" text-anchor="middle" font-size="9">Real-time</text>
-  <text x="350" y="168" text-anchor="middle" font-size="9">Adaptation</text>
-
-  <rect x="175" y="200" width="150" height="25" fill="#a5d6a7" stroke="#4caf50" rx="5"/>
-  <text x="250" y="218" text-anchor="middle" font-size="11">Convergent Intelligence Ecosystem</text>
-</svg>
+![emerging_technology_trends](../../../../svg/courses/ai/developing-using-ai-short/14_future/emerging_technology_trends.svg)
 
 ---
 
@@ -153,65 +123,13 @@ Projected advancement of AI development capabilities:
 
 ## Industry Adoption Patterns
 
-<svg viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="160" fill="#e3f2fd" stroke="#1976d2" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">AI Adoption Maturity Curve</text>
-
-  <path d="M 80 140 Q 150 120 220 100 Q 290 80 360 70" fill="none" stroke="#1976d2" stroke-width="3"/>
-
-  <circle cx="80" cy="140" r="8" fill="#bbdefb"/>
-  <text x="80" y="160" text-anchor="middle" font-size="9">Early Adopters</text>
-  <text x="80" y="172" text-anchor="middle" font-size="8">5-10%</text>
-
-  <circle cx="150" cy="120" r="8" fill="#90caf9"/>
-  <text x="150" y="140" text-anchor="middle" font-size="9">Progressive</text>
-  <text x="150" y="152" text-anchor="middle" font-size="8">20-30%</text>
-
-  <circle cx="220" cy="100" r="8" fill="#64b5f6"/>
-  <text x="220" y="120" text-anchor="middle" font-size="9">Mainstream</text>
-  <text x="220" y="132" text-anchor="middle" font-size="8">40-60%</text>
-
-  <circle cx="290" cy="80" r="8" fill="#42a5f5"/>
-  <text x="290" y="100" text-anchor="middle" font-size="9">Late Majority</text>
-  <text x="290" y="112" text-anchor="middle" font-size="8">70-85%</text>
-
-  <circle cx="360" cy="70" r="8" fill="#2196f3"/>
-  <text x="360" y="90" text-anchor="middle" font-size="9">Universal</text>
-  <text x="360" y="102" text-anchor="middle" font-size="8">90%+</text>
-</svg>
+![industry_adoption_patterns](../../../../svg/courses/ai/developing-using-ai-short/14_future/industry_adoption_patterns.svg)
 
 ---
 
 ## Changing Developer Roles
 
-<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="400" height="180" fill="#fff3e0" stroke="#ef6c00" rx="10"/>
-  <text x="250" y="45" text-anchor="middle" font-size="16" font-weight="bold">Evolution of Developer Roles</text>
-
-  <rect x="80" y="70" width="80" height="40" fill="#ffcc02" stroke="#f57c00" rx="5"/>
-  <text x="120" y="85" text-anchor="middle" font-size="9">Traditional</text>
-  <text x="120" y="98" text-anchor="middle" font-size="9">Developer</text>
-
-  <text x="180" y="90" text-anchor="middle" font-size="20">→</text>
-
-  <rect x="200" y="70" width="80" height="40" fill="#ffb74d" stroke="#ff9800" rx="5"/>
-  <text x="240" y="85" text-anchor="middle" font-size="9">AI-Assisted</text>
-  <text x="240" y="98" text-anchor="middle" font-size="9">Developer</text>
-
-  <text x="300" y="90" text-anchor="middle" font-size="20">→</text>
-
-  <rect x="320" y="70" width="80" height="40" fill="#ff9800" stroke="#f57c00" rx="5"/>
-  <text x="360" y="85" text-anchor="middle" font-size="9">AI</text>
-  <text x="360" y="98" text-anchor="middle" font-size="9">Orchestrator</text>
-
-  <rect x="120" y="130" width="100" height="35" fill="#ffe0b2" stroke="#ff8f00" rx="5"/>
-  <text x="170" y="145" text-anchor="middle" font-size="9">Solution</text>
-  <text x="170" y="158" text-anchor="middle" font-size="9">Architect</text>
-
-  <rect x="250" y="130" width="100" height="35" fill="#ffe0b2" stroke="#ff8f00" rx="5"/>
-  <text x="300" y="145" text-anchor="middle" font-size="9">AI Prompt</text>
-  <text x="300" y="158" text-anchor="middle" font-size="9">Engineer</text>
-</svg>
+![changing_developer_roles](../../../../svg/courses/ai/developing-using-ai-short/14_future/changing_developer_roles.svg)
 
 ---
 
@@ -266,25 +184,7 @@ future_skill_requirements:
 
 ## Team Dynamics Transformation
 
-<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="400" height="160" fill="#f3e5f5" stroke="#7b1fa2" rx="10"/>
-  <text x="240" y="45" text-anchor="middle" font-size="16" font-weight="bold">Evolving Team Collaboration Models</text>
-
-  <circle cx="120" cy="90" r="30" fill="#e1bee7" stroke="#8e24aa"/>
-  <text x="120" y="85" text-anchor="middle" font-size="9">Human-AI</text>
-  <text x="120" y="98" text-anchor="middle" font-size="9">Pairs</text>
-
-  <circle cx="240" cy="90" r="30" fill="#e1bee7" stroke="#8e24aa"/>
-  <text x="240" y="85" text-anchor="middle" font-size="9">AI-Mediated</text>
-  <text x="240" y="98" text-anchor="middle" font-size="9">Teams</text>
-
-  <circle cx="360" cy="90" r="30" fill="#e1bee7" stroke="#8e24aa"/>
-  <text x="360" y="85" text-anchor="middle" font-size="9">Autonomous</text>
-  <text x="360" y="98" text-anchor="middle" font-size="9">Agents</text>
-
-  <rect x="160" y="130" width="160" height="30" fill="#ce93d8" stroke="#ab47bc" rx="5"/>
-  <text x="240" y="150" text-anchor="middle" font-size="11">Hybrid Intelligence Teams</text>
-</svg>
+![team_dynamics_transformation](../../../../svg/courses/ai/developing-using-ai-short/14_future/team_dynamics_transformation.svg)
 
 ---
 
@@ -324,28 +224,7 @@ class AdvancedPairProgramming:
 
 ## Process Evolution
 
-<svg viewBox="0 0 450 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="180" fill="#e8f5e8" stroke="#2e7d32" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">Development Process Transformation</text>
-
-  <rect x="80" y="70" width="100" height="30" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="130" y="90" text-anchor="middle" font-size="10">AI-First Design</text>
-
-  <rect x="200" y="70" width="100" height="30" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="250" y="90" text-anchor="middle" font-size="10">Continuous Validation</text>
-
-  <rect x="320" y="70" width="100" height="30" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="370" y="90" text-anchor="middle" font-size="10">Adaptive Learning</text>
-
-  <rect x="140" y="120" width="100" height="30" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="190" y="140" text-anchor="middle" font-size="10">Predictive Development</text>
-
-  <rect x="260" y="120" width="100" height="30" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="310" y="140" text-anchor="middle" font-size="10">Self-Healing Systems</text>
-
-  <rect x="150" y="170" width="150" height="20" fill="#a5d6a7" stroke="#4caf50" rx="5"/>
-  <text x="225" y="184" text-anchor="middle" font-size="10">Intelligence-Driven Development</text>
-</svg>
+![process_evolution](../../../../svg/courses/ai/developing-using-ai-short/14_future/process_evolution.svg)
 
 ---
 
@@ -388,25 +267,7 @@ class AINativeDevelopmentFramework:
 
 ## Preparing for Change
 
-<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="400" height="160" fill="#e1f5fe" stroke="#01579b" rx="10"/>
-  <text x="240" y="45" text-anchor="middle" font-size="16" font-weight="bold">Strategies for Future Readiness</text>
-
-  <circle cx="120" cy="90" r="30" fill="#b3e5fc" stroke="#0277bd"/>
-  <text x="120" y="85" text-anchor="middle" font-size="9">Continuous</text>
-  <text x="120" y="98" text-anchor="middle" font-size="9">Learning</text>
-
-  <circle cx="240" cy="90" r="30" fill="#b3e5fc" stroke="#0277bd"/>
-  <text x="240" y="85" text-anchor="middle" font-size="9">Adaptability</text>
-  <text x="240" y="98" text-anchor="middle" font-size="9">Mindset</text>
-
-  <circle cx="360" cy="90" r="30" fill="#b3e5fc" stroke="#0277bd"/>
-  <text x="360" y="85" text-anchor="middle" font-size="9">Future</text>
-  <text x="360" y="98" text-anchor="middle" font-size="9">Orientation</text>
-
-  <rect x="160" y="130" width="160" height="30" fill="#81d4fa" stroke="#0288d1" rx="5"/>
-  <text x="240" y="150" text-anchor="middle" font-size="11">Proactive Adaptation Strategy</text>
-</svg>
+![preparing_for_change](../../../../svg/courses/ai/developing-using-ai-short/14_future/preparing_for_change.svg)
 
 ---
 

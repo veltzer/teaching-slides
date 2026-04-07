@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="165" font-family="sans-serif">
+  <defs>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Labels above spans -->
+  <text x="225" y="18" text-anchor="middle" font-size="12" fill="#555">Data loss tolerated</text>
+  <text x="475" y="18" text-anchor="middle" font-size="12" fill="#555">Downtime tolerated</text>
+  <!-- RPO double-headed arrow -->
+  <line x1="100" y1="35" x2="350" y2="35" stroke="#555" stroke-width="1.5"/>
+  <polygon points="100,31 100,39 90,35" fill="#555"/>
+  <polygon points="350,31 350,39 360,35" fill="#555"/>
+  <text x="225" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#444">RPO</text>
+  <!-- RTO double-headed arrow -->
+  <line x1="370" y1="35" x2="570" y2="35" stroke="#555" stroke-width="1.5"/>
+  <polygon points="370,31 370,39 360,35" fill="#555"/>
+  <polygon points="570,31 570,39 580,35" fill="#555"/>
+  <text x="475" y="52" text-anchor="middle" font-size="12" font-weight="bold" fill="#444">RTO</text>
+  <!-- Dashed vertical connectors -->
+  <line x1="90" y1="40" x2="90" y2="78" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="360" y1="40" x2="360" y2="78" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="580" y1="40" x2="580" y2="78" stroke="#999" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Main timeline -->
+  <line x1="40" y1="88" x2="655" y2="88" stroke="#333" stroke-width="2" marker-end="url(#arr4)"/>
+  <!-- Tick marks -->
+  <line x1="90" y1="80" x2="90" y2="96" stroke="#333" stroke-width="1.5"/>
+  <line x1="360" y1="80" x2="360" y2="96" stroke="#333" stroke-width="1.5"/>
+  <line x1="580" y1="80" x2="580" y2="96" stroke="#333" stroke-width="1.5"/>
+  <!-- "time" label -->
+  <text x="665" y="92" font-size="12" fill="#222222">time</text>
+  <!-- Labels below timeline -->
+  <text x="90" y="112" text-anchor="middle" font-size="12" fill="#222222">Last backup</text>
+  <text x="360" y="112" text-anchor="middle" font-size="12" fill="#222222">Disaster</text>
+  <text x="360" y="127" text-anchor="middle" font-size="12" fill="#222222">occurs</text>
+  <text x="580" y="112" text-anchor="middle" font-size="12" fill="#222222">Recovery</text>
+  <text x="580" y="127" text-anchor="middle" font-size="12" fill="#222222">complete</text>
+</svg>

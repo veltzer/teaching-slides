@@ -7,7 +7,7 @@
 * MLflow integration
 ---
 ## Modern Architecture
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Spark</text></svg>
+![modern_architecture](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
 
 ---
 ## Deployment Options
@@ -24,7 +24,7 @@ spark.kubernetes.namespace=spark
 ```
 ---
 ## Resource Management
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Resources</text></svg>
+![resource_management](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
 
 ---
 ## Cloud Integration
@@ -43,7 +43,7 @@ spark.conf.set(
 ```
 ---
 ## Storage Integration
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Storage</text></svg>
+![storage_integration](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
 
 ---
 ## Delta Lake Overview
@@ -61,7 +61,7 @@ df.write.format("delta") \
 ```
 ---
 ## Version Control
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Versions</text></svg>
+![version_control](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
 
 ---
 ## Time Travel
@@ -87,7 +87,7 @@ deltaTable = DeltaTable.forPath(
 ```
 ---
 ## Optimization Methods
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Optimize</text></svg>
+![optimization_methods](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
 
 ---
 ## Performance Tuning
@@ -106,7 +106,7 @@ spark.conf.set(
 ```
 ---
 ## Metrics Collection
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Metrics</text></svg>
+![metrics_collection](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
 
 ---
 ## Security Framework
@@ -125,7 +125,7 @@ spark.conf.set(
 ```
 ---
 ## Authorization Model
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Access</text></svg>
+![authorization_model](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
 
 ---
 ## Data Governance
@@ -143,7 +143,7 @@ def backup_data():
 ```
 ---
 ## Disaster Recovery
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Disaster</text></svg>
+![disaster_recovery](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
 
 ---
 ## CI/CD Pipeline
@@ -161,7 +161,7 @@ def test_transformation():
 ```
 ---
 ## Quality Assurance
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">QA</text></svg>
+![quality_assurance](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
 
 ---
 ## Cost Optimization
@@ -180,7 +180,7 @@ spark.conf.set(
 ```
 ---
 ## Capacity Planning
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Capacity</text></svg>
+![capacity_planning](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
 
 ---
 ## MLflow Integration
@@ -197,7 +197,7 @@ mlflow.spark.log_model(pipeline, "model")
 ```
 ---
 ## Workflow Management
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Workflow</text></svg>
+![workflow_management](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
 
 ---
 ## Best Practices
@@ -215,7 +215,7 @@ class SparkJob:
 ```
 ---
 ## Documentation
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Docs</text></svg>
+![documentation](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
 
 ---
 ## Troubleshooting
@@ -234,7 +234,7 @@ spark.conf.set(
 ```
 ---
 ## Error Handling
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Error</text></svg>
+![error_handling](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
 
 ---
 ## Maintenance
@@ -253,7 +253,7 @@ spark.conf.set(
 ```
 ---
 ## Future Planning
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Plan</text></svg>
+![future_planning](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
 
 ---
 ## Migration Strategies
@@ -271,7 +271,7 @@ def optimize_resources():
 ```
 ---
 ## Scaling Strategies
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Scale</text></svg>
+![scaling_strategies](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
 
 ---
 ## Advanced Features
@@ -503,33 +503,7 @@ delta_table.history().select(
 
 ## Delta Lake Operations Summary
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" font-family="sans-serif">
-<rect x="5" y="5" width="630" height="390" fill="#fafafa" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="320" y="28" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Delta Lake Operations</text>
-<rect x="15" y="40" width="295" height="118" fill="#e3f2fd" stroke="#999" stroke-width="1" rx="4"/>
-<text x="25" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">WRITE Operations</text>
-<text x="33" y="74" font-size="12" fill="#333" text-anchor="start">├── INSERT (append)</text>
-<text x="33" y="92" font-size="12" fill="#333" text-anchor="start">├── UPDATE (in-place modify)</text>
-<text x="33" y="110" font-size="12" fill="#333" text-anchor="start">├── DELETE (remove rows)</text>
-<text x="33" y="128" font-size="12" fill="#333" text-anchor="start">├── MERGE (upsert: insert + update)</text>
-<text x="33" y="146" font-size="12" fill="#333" text-anchor="start">├── OVERWRITE (replace data)</text>
-<rect x="325" y="40" width="295" height="82" fill="#e8f5e9" stroke="#999" stroke-width="1" rx="4"/>
-<text x="335" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">READ Operations</text>
-<text x="343" y="74" font-size="12" fill="#333" text-anchor="start">├── Current version (default)</text>
-<text x="343" y="92" font-size="12" fill="#333" text-anchor="start">├── Time travel (versionAsOf, timestampAsOf)</text>
-<text x="343" y="110" font-size="12" fill="#333" text-anchor="start">├── Change Data Feed (readChangeFeed)</text>
-<rect x="15" y="215" width="295" height="100" fill="#fff3e0" stroke="#999" stroke-width="1" rx="4"/>
-<text x="25" y="232" font-size="13" font-weight="bold" fill="#222" text-anchor="start">MAINTENANCE Operations</text>
-<text x="33" y="249" font-size="12" fill="#333" text-anchor="start">├── OPTIMIZE (compact small files)</text>
-<text x="33" y="267" font-size="12" fill="#333" text-anchor="start">├── VACUUM (delete old versions)</text>
-<text x="33" y="285" font-size="12" fill="#333" text-anchor="start">├── Z-ORDER (co-locate data for queries)</text>
-<text x="33" y="303" font-size="12" fill="#333" text-anchor="start">├── DESCRIBE HISTORY (audit log)</text>
-<rect x="325" y="215" width="295" height="82" fill="#fce4ec" stroke="#999" stroke-width="1" rx="4"/>
-<text x="335" y="232" font-size="13" font-weight="bold" fill="#222" text-anchor="start">SCHEMA Operations</text>
-<text x="343" y="249" font-size="12" fill="#333" text-anchor="start">├── Schema enforcement (reject bad data)</text>
-<text x="343" y="267" font-size="12" fill="#333" text-anchor="start">├── Schema evolution (mergeSchema)</text>
-<text x="343" y="285" font-size="12" fill="#333" text-anchor="start">├── Column mapping</text>
-</svg>
+![delta_lake_operations_summary](../../../../svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/delta_lake_operations_summary.svg)
 
 ---
 

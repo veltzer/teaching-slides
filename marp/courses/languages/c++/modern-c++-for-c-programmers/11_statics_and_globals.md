@@ -874,27 +874,7 @@ namespace GoodLibrary {
 Understanding where static variables are stored:
 
 ```xml
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <!-- Memory sections -->
-  <rect x="50" y="20" width="300" height="40" fill="lightblue" stroke="black"/>
-  <text x="200" y="45" text-anchor="middle" font-weight="bold">Code Segment (.text)</text>
-
-  <rect x="50" y="70" width="300" height="40" fill="lightgreen" stroke="black"/>
-  <text x="200" y="95" text-anchor="middle" font-weight="bold">Data Segment (.data)</text>
-  <text x="60" y="105" font-size="10">Initialized static/global variables</text>
-
-  <rect x="50" y="120" width="300" height="40" fill="lightyellow" stroke="black"/>
-  <text x="200" y="145" text-anchor="middle" font-weight="bold">BSS Segment (.bss)</text>
-  <text x="60" y="155" font-size="10">Uninitialized static/global variables</text>
-
-  <rect x="50" y="170" width="300" height="40" fill="lightcoral" stroke="black"/>
-  <text x="200" y="195" text-anchor="middle" font-weight="bold">Heap</text>
-  <text x="60" y="205" font-size="10">Dynamic allocation (new/malloc)</text>
-
-  <rect x="50" y="220" width="300" height="40" fill="lightpink" stroke="black"/>
-  <text x="200" y="245" text-anchor="middle" font-weight="bold">Stack</text>
-  <text x="60" y="255" font-size="10">Local variables, function parameters</text>
-</svg>
+![memory_layout_of_static_variables](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/11_statics_and_globals/memory_layout_of_static_variables.svg)
 ```
 
 ```cpp

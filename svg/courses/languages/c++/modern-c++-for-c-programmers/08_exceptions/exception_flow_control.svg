@@ -1,0 +1,31 @@
+<svg width="500" height="350" xmlns="http://www.w3.org/2000/svg">
+  <rect x="50" y="50" width="100" height="40" fill="#e8f4f8" stroke="black"/>
+  <text x="100" y="75" text-anchor="middle">try block</text>
+
+  <rect x="50" y="120" width="100" height="40" fill="#ffe8e8" stroke="black"/>
+  <text x="100" y="145" text-anchor="middle">throw</text>
+
+  <rect x="200" y="50" width="100" height="40" fill="#e8f8e8" stroke="black"/>
+  <text x="250" y="75" text-anchor="middle">normal flow</text>
+
+  <rect x="200" y="120" width="100" height="40" fill="#f8e8f8" stroke="black"/>
+  <text x="250" y="145" text-anchor="middle">stack unwind</text>
+
+  <rect x="350" y="120" width="100" height="40" fill="#f8f8e8" stroke="black"/>
+  <text x="400" y="145" text-anchor="middle">catch block</text>
+
+  <line x1="150" y1="70" x2="200" y2="70" stroke="green" marker-end="url(#arrowhead)"/>
+  <line x1="100" y1="90" x2="100" y2="120" stroke="red" marker-end="url(#arrowhead)"/>
+  <line x1="150" y1="140" x2="200" y2="140" stroke="red" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="140" x2="350" y2="140" stroke="red" marker-end="url(#arrowhead)"/>
+
+  <text x="175" y="65" fill="green">No exception</text>
+  <text x="175" y="155" fill="red">Exception thrown</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7"
+            refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
+    </marker>
+  </defs>
+</svg>

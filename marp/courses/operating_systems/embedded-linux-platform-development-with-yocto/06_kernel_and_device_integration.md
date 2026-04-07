@@ -4,35 +4,7 @@
 
 ## Kernel Architecture in Yocto
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="100" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="250" y="135" text-anchor="middle" font-size="13" font-weight="bold">Kernel Recipe</text>
-
-  <rect x="450" y="100" width="200" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="550" y="135" text-anchor="middle" font-size="13" font-weight="bold">Kernel Config</text>
-
-  <rect x="150" y="200" width="200" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="250" y="235" text-anchor="middle" font-size="13" font-weight="bold">Device Trees</text>
-
-  <rect x="450" y="200" width="200" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="550" y="235" text-anchor="middle" font-size="13" font-weight="bold">BSP Layer</text>
-
-  <rect x="250" y="320" width="300" height="60" fill="#ffffcc" stroke="#000" stroke-width="3" rx="5"/>
-  <text x="400" y="355" text-anchor="middle" font-size="14" font-weight="bold">Bootable Kernel Image</text>
-
-  <path d="M 250 160 L 400 320" stroke="#333" stroke-width="2" marker-end="url(#k1)"/>
-  <path d="M 550 160 L 400 320" stroke="#333" stroke-width="2" marker-end="url(#k1)"/>
-  <path d="M 250 260 L 350 320" stroke="#333" stroke-width="2" marker-end="url(#k1)"/>
-  <path d="M 550 260 L 450 320" stroke="#333" stroke-width="2" marker-end="url(#k1)"/>
-
-  <defs>
-    <marker id="k1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![kernel_architecture_in_yocto](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_architecture_in_yocto.svg)
 
 ---
 
@@ -85,33 +57,7 @@ COMPATIBLE_MACHINE = "myboard"
 
 ## Kernel Configuration Methods
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="190" y="135" text-anchor="middle" font-size="12">defconfig</text>
-  <text x="190" y="155" text-anchor="middle" font-size="10">Base configuration</text>
-
-  <rect x="310" y="100" width="180" height="80" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="135" text-anchor="middle" font-size="12">config fragments</text>
-  <text x="400" y="155" text-anchor="middle" font-size="10">Modular additions</text>
-
-  <rect x="520" y="100" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="610" y="135" text-anchor="middle" font-size="12">menuconfig</text>
-  <text x="610" y="155" text-anchor="middle" font-size="10">Interactive config</text>
-
-  <rect x="250" y="250" width="300" height="80" fill="#ffffcc" stroke="#000" stroke-width="3"/>
-  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">.config</text>
-  <text x="400" y="305" text-anchor="middle" font-size="11">Final kernel configuration</text>
-
-  <path d="M 190 180 L 350 250" stroke="#333" stroke-width="2" marker-end="url(#k2)"/>
-  <path d="M 400 180 L 400 250" stroke="#333" stroke-width="2" marker-end="url(#k2)"/>
-  <path d="M 610 180 L 450 250" stroke="#333" stroke-width="2" marker-end="url(#k2)"/>
-
-  <defs>
-    <marker id="k2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![kernel_configuration_methods](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_configuration_methods.svg)
 
 ---
 
@@ -196,32 +142,7 @@ patch myfeature-fix.patch
 
 ## Device Tree Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="13" font-weight="bold">Device Tree Source</text>
-  <text x="400" y="100" text-anchor="middle" font-size="10">(.dts, .dtsi)</text>
-
-  <rect x="300" y="160" width="200" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="195" text-anchor="middle" font-size="13" font-weight="bold">Device Tree Compiler</text>
-  <text x="400" y="210" text-anchor="middle" font-size="10">(dtc)</text>
-
-  <rect x="300" y="270" width="200" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="305" text-anchor="middle" font-size="13" font-weight="bold">Device Tree Blob</text>
-  <text x="400" y="320" text-anchor="middle" font-size="10">(.dtb)</text>
-
-  <rect x="300" y="380" width="200" height="60" fill="#ffffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="415" text-anchor="middle" font-size="13" font-weight="bold">Bootloader/Kernel</text>
-
-  <path d="M 400 110 L 400 160" stroke="#333" stroke-width="2" marker-end="url(#k3)"/>
-  <path d="M 400 220 L 400 270" stroke="#333" stroke-width="2" marker-end="url(#k3)"/>
-  <path d="M 400 330 L 400 380" stroke="#333" stroke-width="2" marker-end="url(#k3)"/>
-
-  <defs>
-    <marker id="k3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![device_tree_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/device_tree_overview.svg)
 
 ---
 
@@ -500,41 +421,7 @@ CONFIG_BOOTCOMMAND="run bootcmd_mmc0"
 
 ## Boot Process Flow
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12" font-weight="bold">ROM Code</text>
-
-  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12" font-weight="bold">U-Boot SPL</text>
-
-  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="625" y="85" text-anchor="middle" font-size="12" font-weight="bold">U-Boot</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12" font-weight="bold">Kernel</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2"/>
-  <text x="400" y="235" text-anchor="middle" font-size="12" font-weight="bold">Device Tree</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2"/>
-  <text x="625" y="235" text-anchor="middle" font-size="12" font-weight="bold">Init System</text>
-
-  <rect x="250" y="350" width="300" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="3"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">Running System</text>
-
-  <path d="M 250 80 L 325 80" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-  <path d="M 475 80 L 550 80" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-  <path d="M 625 110 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-  <path d="M 250 230 L 325 230" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-  <path d="M 475 230 L 550 230" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-  <path d="M 625 260 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#k4)"/>
-
-  <defs>
-    <marker id="k4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![boot_process_flow](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/boot_process_flow.svg)
 
 ---
 

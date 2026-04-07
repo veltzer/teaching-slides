@@ -1,0 +1,41 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">eBPF Architecture: Load and Attach</text>
+  <rect x="20" y="30" width="270" height="75" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="155" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">User Space</text>
+  <rect x="35" y="55" width="80" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="75" y="72" text-anchor="middle" font-size="10">clang/LLVM</text>
+  <text x="75" y="85" text-anchor="middle" font-size="10" fill="#666">Compile</text>
+  <rect x="130" y="55" width="70" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="165" y="72" text-anchor="middle" font-size="10">bpf()</text>
+  <text x="165" y="85" text-anchor="middle" font-size="10" fill="#666">syscall</text>
+  <rect x="215" y="55" width="65" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="247" y="72" text-anchor="middle" font-size="10">libbpf</text>
+  <text x="247" y="85" text-anchor="middle" font-size="10" fill="#666">loader</text>
+  <rect x="310" y="30" width="270" height="75" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="445" y="48" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Kernel Space</text>
+  <rect x="325" y="55" width="70" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="72" text-anchor="middle" font-size="10">Verifier</text>
+  <text x="360" y="85" text-anchor="middle" font-size="10" fill="#666">Safety</text>
+  <rect x="410" y="55" width="70" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="445" y="72" text-anchor="middle" font-size="10">JIT</text>
+  <text x="445" y="85" text-anchor="middle" font-size="10" fill="#666">Compile</text>
+  <rect x="495" y="55" width="75" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="532" y="72" text-anchor="middle" font-size="10">Attach</text>
+  <text x="532" y="85" text-anchor="middle" font-size="10" fill="#666">Hook point</text>
+  <line x1="115" y1="75" x2="130" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_09_ebpf)"/>
+  <line x1="200" y1="75" x2="215" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_09_ebpf)"/>
+  <line x1="280" y1="75" x2="325" y2="75" stroke="#c62828" stroke-width="2" marker-end="url(#arrowd1_09_ebpf)"/>
+  <line x1="395" y1="75" x2="410" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_09_ebpf)"/>
+  <line x1="480" y1="75" x2="495" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_09_ebpf)"/>
+  <rect x="20" y="125" width="560" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5" fill-opacity="0.3"/>
+  <text x="120" y="145" text-anchor="middle" font-size="10" font-weight="bold">XDP (NIC driver)</text>
+  <text x="260" y="145" text-anchor="middle" font-size="10" font-weight="bold">tc (traffic control)</text>
+  <text x="400" y="145" text-anchor="middle" font-size="10" font-weight="bold">kprobes (tracing)</text>
+  <text x="530" y="145" text-anchor="middle" font-size="10" font-weight="bold">LSM (security)</text>
+  <text x="300" y="170" text-anchor="middle" font-size="10" fill="#666">Available kernel hook points for eBPF program attachment</text>
+  <defs>
+    <marker id="arrowd1_09_ebpf" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

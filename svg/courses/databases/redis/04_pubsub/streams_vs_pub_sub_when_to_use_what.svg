@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd10_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Pub/Sub side -->
+  <rect x="10" y="15" width="250" height="160" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="135" y="35" text-anchor="middle" font-size="12" font-weight="bold">Pub/Sub</text>
+  <text x="135" y="55" text-anchor="middle" font-size="10">Fire-and-forget broadcast</text>
+  <text x="30" y="75" font-size="10" fill="#333">+ Real-time, low latency</text>
+  <text x="30" y="92" font-size="10" fill="#333">+ All subscribers get all msgs</text>
+  <text x="30" y="109" font-size="10" fill="#333">+ Simple API</text>
+  <text x="30" y="130" font-size="10" fill="#c62828">- No persistence</text>
+  <text x="30" y="147" font-size="10" fill="#c62828">- No replay / history</text>
+  <text x="30" y="164" font-size="10" fill="#c62828">- No consumer groups</text>
+  <!-- Streams side -->
+  <rect x="290" y="15" width="280" height="160" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="430" y="35" text-anchor="middle" font-size="12" font-weight="bold">Streams</text>
+  <text x="430" y="55" text-anchor="middle" font-size="10">Persistent log with consumers</text>
+  <text x="310" y="75" font-size="10" fill="#333">+ Messages persisted on disk</text>
+  <text x="310" y="92" font-size="10" fill="#333">+ Consumer groups / load balance</text>
+  <text x="310" y="109" font-size="10" fill="#333">+ Message ACK and replay</text>
+  <text x="310" y="130" font-size="10" fill="#c62828">- Higher latency than Pub/Sub</text>
+  <text x="310" y="147" font-size="10" fill="#c62828">- More complex API</text>
+  <text x="310" y="164" font-size="10" fill="#c62828">- Needs storage management</text>
+  <!-- VS divider -->
+  <text x="275" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">vs</text>
+</svg>

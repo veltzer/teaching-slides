@@ -1,0 +1,27 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">NoSQL vs SQL Data Models</text>
+  <rect x="50" y="50" width="340" height="320" fill="#3498DB" rx="10"/>
+  <text x="220" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Relational (SQL)</text>
+  <rect x="70" y="100" width="300" height="60" fill="#2980B9" rx="5"/>
+  <text x="220" y="125" text-anchor="middle" fill="white" font-size="12">Users Table</text>
+  <text x="220" y="145" text-anchor="middle" fill="white" font-size="10">id | name | email | created_at</text>
+  <rect x="70" y="170" width="300" height="60" fill="#2980B9" rx="5"/>
+  <text x="220" y="195" text-anchor="middle" fill="white" font-size="12">Orders Table</text>
+  <text x="220" y="215" text-anchor="middle" fill="white" font-size="10">id | user_id | total | status</text>
+  <line x1="220" y1="160" x2="220" y2="170" stroke="white" stroke-width="2"/>
+  <text x="230" y="165" fill="white" font-size="10">FK</text>
+  <rect x="410" y="50" width="340" height="320" fill="#27AE60" rx="10"/>
+  <text x="580" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Document (NoSQL)</text>
+  <rect x="430" y="100" width="300" height="250" fill="#229954" rx="5"/>
+  <text x="580" y="125" text-anchor="middle" fill="white" font-size="12">User Document</text>
+  <text x="450" y="150" fill="white" font-size="10">{</text>
+  <text x="460" y="170" fill="white" font-size="10">  "_id": "user123",</text>
+  <text x="460" y="190" fill="white" font-size="10">  "name": "John Doe",</text>
+  <text x="460" y="210" fill="white" font-size="10">  "email": "john@example.com",</text>
+  <text x="460" y="230" fill="white" font-size="10">  "orders": [</text>
+  <text x="470" y="250" fill="white" font-size="10">    { "id": "ord1", "total": 99.99 },</text>
+  <text x="470" y="270" fill="white" font-size="10">    { "id": "ord2", "total": 149.99 }</text>
+  <text x="460" y="290" fill="white" font-size="10">  ],</text>
+  <text x="460" y="310" fill="white" font-size="10">  "preferences": { ... }</text>
+  <text x="450" y="330" fill="white" font-size="10">}</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Race Condition Example</text>
+  <rect x="50" y="60" width="150" height="40" fill="#ffcccc" stroke="#333"/>
+  <text x="125" y="85" text-anchor="middle" font-size="14">Task A</text>
+  <rect x="220" y="60" width="150" height="40" fill="#ccffcc" stroke="#333"/>
+  <text x="295" y="85" text-anchor="middle" font-size="14">Task B</text>
+  <text x="125" y="120" text-anchor="middle" font-size="12">Read X (10)</text>
+  <text x="295" y="140" text-anchor="middle" font-size="12">Read X (10)</text>
+  <text x="125" y="160" text-anchor="middle" font-size="12">X = X + 5</text>
+  <text x="295" y="180" text-anchor="middle" font-size="12">X = X + 3</text>
+  <text x="125" y="200" text-anchor="middle" font-size="12">Write X (15)</text>
+  <text x="295" y="220" text-anchor="middle" font-size="12">Write X (13)</text>
+  <text x="200" y="245" text-anchor="middle" font-size="14" font-weight="bold">Result: X = 13 (not 18!)</text>
+</svg>

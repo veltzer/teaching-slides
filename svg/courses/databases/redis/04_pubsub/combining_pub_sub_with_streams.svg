@@ -1,0 +1,42 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd11_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Producer -->
+  <rect x="10" y="55" width="90" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="55" y="76" text-anchor="middle" font-size="11" font-weight="bold">Producer</text>
+  <text x="55" y="92" text-anchor="middle" font-size="10" fill="#666">app code</text>
+  <!-- Redis box -->
+  <rect x="155" y="15" width="230" height="155" fill="#fff3e0" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="270" y="35" text-anchor="middle" font-size="11" font-weight="bold">Redis Server</text>
+  <!-- Stream storage -->
+  <rect x="170" y="45" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="230" y="62" text-anchor="middle" font-size="10" font-weight="bold">Stream</text>
+  <text x="230" y="78" text-anchor="middle" font-size="10">XADD (persist)</text>
+  <!-- Pub/Sub channel -->
+  <rect x="170" y="100" width="120" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="230" y="117" text-anchor="middle" font-size="10" font-weight="bold">Pub/Sub</text>
+  <text x="230" y="133" text-anchor="middle" font-size="10">PUBLISH (notify)</text>
+  <!-- Arrow from stream to pubsub -->
+  <line x1="230" y1="85" x2="230" y2="98" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrowd11_03_pubsub)"/>
+  <text x="310" y="95" font-size="9" fill="#e65100">trigger</text>
+  <!-- Real-time subscriber -->
+  <rect x="450" y="25" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="45" text-anchor="middle" font-size="10" font-weight="bold">Live Consumer</text>
+  <text x="510" y="60" text-anchor="middle" font-size="10">SUBSCRIBE</text>
+  <!-- Late/catch-up consumer -->
+  <rect x="450" y="100" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="118" text-anchor="middle" font-size="10" font-weight="bold">Catch-up</text>
+  <text x="510" y="135" text-anchor="middle" font-size="10">XREAD / XRANGE</text>
+  <!-- Arrows -->
+  <line x1="100" y1="72" x2="168" y2="60" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd11_03_pubsub)"/>
+  <line x1="100" y1="88" x2="168" y2="118" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd11_03_pubsub)"/>
+  <text x="125" y="60" font-size="9" fill="#1565c0">1. XADD</text>
+  <text x="110" y="118" font-size="9" fill="#1565c0">2. PUBLISH</text>
+  <line x1="290" y1="120" x2="448" y2="50" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowd11_03_pubsub)"/>
+  <line x1="290" y1="65" x2="448" y2="125" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowd11_03_pubsub)"/>
+  <!-- Legend -->
+  <text x="300" y="190" text-anchor="middle" font-size="10" fill="#666">Stream for persistence + Pub/Sub for real-time notification</text>
+</svg>

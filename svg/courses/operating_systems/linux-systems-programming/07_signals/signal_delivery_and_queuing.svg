@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Standard vs Real-Time Signals</text>
+
+  <rect x="50" y="60" width="300" height="150" fill="#3498DB" stroke="#333" stroke-width="2"/>
+  <text x="200" y="85" text-anchor="middle" fill="white" font-size="12">Standard Signals (1-31)</text>
+  <rect x="70" y="100" width="260" height="30" fill="#2980B9"/>
+  <text x="200" y="120" text-anchor="middle" fill="white" font-size="10">SIGUSR1 SIGUSR1 SIGUSR1 → One delivery</text>
+  <rect x="70" y="140" width="260" height="30" fill="#2980B9"/>
+  <text x="200" y="160" text-anchor="middle" fill="white" font-size="10">Not queued (except SIGCHLD)</text>
+  <rect x="70" y="180" width="260" height="20" fill="#2980B9"/>
+  <text x="200" y="195" text-anchor="middle" fill="white" font-size="10">Delivered in any order</text>
+
+  <rect x="400" y="60" width="300" height="150" fill="#2ECC71" stroke="#333" stroke-width="2"/>
+  <text x="550" y="85" text-anchor="middle" fill="white" font-size="12">Real-Time Signals (34-64)</text>
+  <rect x="420" y="100" width="260" height="30" fill="#27AE60"/>
+  <text x="550" y="120" text-anchor="middle" fill="white" font-size="10">SIGRTMIN SIGRTMIN → All delivered</text>
+  <rect x="420" y="140" width="260" height="30" fill="#27AE60"/>
+  <text x="550" y="160" text-anchor="middle" fill="white" font-size="10">Queued with data</text>
+  <rect x="420" y="180" width="260" height="20" fill="#27AE60"/>
+  <text x="550" y="195" text-anchor="middle" fill="white" font-size="10">Priority order delivery</text>
+
+  <text x="400" y="250" text-anchor="middle" font-size="11">Pending Signal Mask (Bitmap)</text>
+  <rect x="150" y="260" width="500" height="40" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
+  <text x="400" y="285" text-anchor="middle" font-size="10">|0|1|0|0|1|0|0|0|1|0|0|0|0|0|1|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|</text>
+  <text x="400" y="315" text-anchor="middle" font-size="10">Bit set = signal pending</text>
+</svg>

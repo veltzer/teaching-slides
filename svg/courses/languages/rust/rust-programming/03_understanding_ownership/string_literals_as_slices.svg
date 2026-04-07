@@ -1,0 +1,32 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr_slice" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">String Literal &amp;str vs String Memory Layout</text>
+  <rect x="20" y="30" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="80" y="48" text-anchor="middle" font-size="10" font-weight="bold">s: &amp;str</text>
+  <text x="80" y="62" text-anchor="middle" font-size="9">ptr | len: 13</text>
+  <text x="80" y="74" text-anchor="middle" font-size="9">(fat pointer)</text>
+  <rect x="200" y="30" width="200" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">Static / Read-Only Memory</text>
+  <text x="300" y="63" text-anchor="middle" font-size="10">"Hello, world!"</text>
+  <line x1="140" y1="55" x2="200" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr_slice)"/>
+  <rect x="20" y="100" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="80" y="118" text-anchor="middle" font-size="10" font-weight="bold">s: String</text>
+  <text x="80" y="132" text-anchor="middle" font-size="9">ptr | len | cap</text>
+  <text x="80" y="144" text-anchor="middle" font-size="9">(owned, growable)</text>
+  <rect x="200" y="100" width="200" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="3"/>
+  <text x="300" y="118" text-anchor="middle" font-size="10" font-weight="bold">Heap-allocated buffer</text>
+  <text x="300" y="133" text-anchor="middle" font-size="10">[ H | e | l | l | o | ... ]</text>
+  <line x1="140" y1="125" x2="200" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arr_slice)"/>
+  <rect x="430" y="30" width="160" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="510" y="48" text-anchor="middle" font-size="9">&amp;str: borrowed, no Drop</text>
+  <text x="510" y="62" text-anchor="middle" font-size="9">compiled into binary</text>
+  <rect x="430" y="100" width="160" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="510" y="118" text-anchor="middle" font-size="9">String: owned, Drop frees</text>
+  <text x="510" y="132" text-anchor="middle" font-size="9">heap memory on scope exit</text>
+  <rect x="100" y="165" width="400" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="182" text-anchor="middle" font-size="10">Prefer &amp;str for function params; use String when you need ownership</text>
+</svg>

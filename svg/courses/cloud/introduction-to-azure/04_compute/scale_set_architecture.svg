@@ -1,0 +1,28 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">VM Scale Set Architecture</text>
+  <rect x="200" y="25" width="200" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="47" text-anchor="middle" font-size="11" font-weight="bold">Load Balancer</text>
+  <line x1="230" y1="60" x2="100" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd2_03_compute)"/>
+  <line x1="300" y1="60" x2="300" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd2_03_compute)"/>
+  <line x1="370" y1="60" x2="500" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arrowd2_03_compute)"/>
+  <rect x="30" y="80" width="130" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="100" text-anchor="middle" font-size="11" font-weight="bold">VM Instance 1</text>
+  <text x="95" y="115" text-anchor="middle" font-size="10">Running</text>
+  <rect x="235" y="80" width="130" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="100" text-anchor="middle" font-size="11" font-weight="bold">VM Instance 2</text>
+  <text x="300" y="115" text-anchor="middle" font-size="10">Running</text>
+  <rect x="440" y="80" width="130" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="100" text-anchor="middle" font-size="11" font-weight="bold">VM Instance N</text>
+  <text x="505" y="115" text-anchor="middle" font-size="10">Auto-scaled</text>
+  <rect x="100" y="145" width="180" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="190" y="162" text-anchor="middle" font-size="10" font-weight="bold">Scaling Rules</text>
+  <text x="190" y="177" text-anchor="middle" font-size="10">CPU > 75% = scale out</text>
+  <rect x="320" y="145" width="180" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="410" y="162" text-anchor="middle" font-size="10" font-weight="bold">Health Probes</text>
+  <text x="410" y="177" text-anchor="middle" font-size="10">Auto-replace unhealthy</text>
+  <defs>
+    <marker id="arrowd2_03_compute" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

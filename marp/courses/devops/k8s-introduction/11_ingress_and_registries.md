@@ -14,34 +14,7 @@
 
 ## Why Ingress?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Service vs Ingress</text>
-  <g id="services">
-    <text x="200" y="80" text-anchor="middle" font-size="12">Without Ingress</text>
-    <rect x="100" y="100" width="200" height="40" fill="#4285f4" rx="3"/>
-    <text x="200" y="125" text-anchor="middle" fill="white">LoadBalancer Service 1</text>
-    <rect x="100" y="150" width="200" height="40" fill="#4285f4" rx="3"/>
-    <text x="200" y="175" text-anchor="middle" fill="white">LoadBalancer Service 2</text>
-    <rect x="100" y="200" width="200" height="40" fill="#4285f4" rx="3"/>
-    <text x="200" y="225" text-anchor="middle" fill="white">LoadBalancer Service 3</text>
-    <text x="200" y="270" text-anchor="middle" font-size="11">Multiple Load Balancers</text>
-    <text x="200" y="290" text-anchor="middle" font-size="11">Higher cost</text>
-  </g>
-  <g id="ingress">
-    <text x="550" y="80" text-anchor="middle" font-size="12">With Ingress</text>
-    <rect x="450" y="100" width="200" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="125" text-anchor="middle" fill="white">Single Ingress</text>
-    <rect x="450" y="160" width="60" height="30" fill="#fbbc04" rx="3"/>
-    <text x="480" y="180" text-anchor="middle" font-size="10">Svc 1</text>
-    <rect x="520" y="160" width="60" height="30" fill="#fbbc04" rx="3"/>
-    <text x="550" y="180" text-anchor="middle" font-size="10">Svc 2</text>
-    <rect x="590" y="160" width="60" height="30" fill="#fbbc04" rx="3"/>
-    <text x="620" y="180" text-anchor="middle" font-size="10">Svc 3</text>
-    <text x="550" y="270" text-anchor="middle" font-size="11">Single entry point</text>
-    <text x="550" y="290" text-anchor="middle" font-size="11">Cost effective</text>
-  </g>
-</svg>
+![why_ingress](../../../../svg/courses/devops/k8s-introduction/11_ingress_and_registries/why_ingress.svg)
 
 ---
 
@@ -190,38 +163,7 @@ kubectl create secret tls tls-secret \
 
 ## Ingress Controllers
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Popular Ingress Controllers</text>
-  <rect x="100" y="80" width="150" height="80" fill="#009639" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">NGINX</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="10">Most popular</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="10">Feature rich</text>
-  <rect x="270" y="80" width="150" height="80" fill="#f48120" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">Traefik</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="10">Auto SSL</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="10">Dynamic config</text>
-  <rect x="440" y="80" width="150" height="80" fill="#659dbd" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" fill="white" font-weight="bold">HAProxy</text>
-  <text x="515" y="130" text-anchor="middle" fill="white" font-size="10">High performance</text>
-  <text x="515" y="150" text-anchor="middle" fill="white" font-size="10">Enterprise</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ff9900" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" font-weight="bold">AWS ALB</text>
-  <text x="680" y="130" text-anchor="middle" font-size="10">AWS native</text>
-  <text x="680" y="150" text-anchor="middle" font-size="10">Managed</text>
-  <rect x="180" y="180" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="255" y="210" text-anchor="middle" fill="white" font-weight="bold">GCE</text>
-  <text x="255" y="230" text-anchor="middle" fill="white" font-size="10">Google Cloud</text>
-  <text x="255" y="250" text-anchor="middle" fill="white" font-size="10">Global LB</text>
-  <rect x="350" y="180" width="150" height="80" fill="#0078d4" rx="5"/>
-  <text x="425" y="210" text-anchor="middle" fill="white" font-weight="bold">Azure</text>
-  <text x="425" y="230" text-anchor="middle" fill="white" font-size="10">Application GW</text>
-  <text x="425" y="250" text-anchor="middle" fill="white" font-size="10">WAF support</text>
-  <rect x="520" y="180" width="150" height="80" fill="#dc382d" rx="5"/>
-  <text x="595" y="210" text-anchor="middle" fill="white" font-weight="bold">Kong</text>
-  <text x="595" y="230" text-anchor="middle" fill="white" font-size="10">API Gateway</text>
-  <text x="595" y="250" text-anchor="middle" fill="white" font-size="10">Plugins</text>
-</svg>
+![ingress_controllers](../../../../svg/courses/devops/k8s-introduction/11_ingress_and_registries/ingress_controllers.svg)
 
 ---
 
@@ -351,37 +293,7 @@ spec:
 
 ## Registry Types
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Container Registry Options</text>
-  <rect x="100" y="80" width="200" height="100" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker Hub</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="11">Public/Private repos</text>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="11">Official images</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="11">Rate limits</text>
-  <rect x="320" y="80" width="200" height="100" fill="#ff9900" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" font-weight="bold">Amazon ECR</text>
-  <text x="420" y="135" text-anchor="middle" font-size="11">AWS integrated</text>
-  <text x="420" y="155" text-anchor="middle" font-size="11">IAM support</text>
-  <text x="420" y="175" text-anchor="middle" font-size="11">Scanning</text>
-  <rect x="540" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" fill="white" font-weight="bold">Google GCR/AR</text>
-  <text x="640" y="135" text-anchor="middle" fill="white" font-size="11">Global replication</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="11">Vulnerability scan</text>
-  <text x="640" y="175" text-anchor="middle" fill="white" font-size="11">Binary auth</text>
-  <rect x="100" y="200" width="200" height="100" fill="#0078d4" rx="5"/>
-  <text x="200" y="230" text-anchor="middle" fill="white" font-weight="bold">Azure ACR</text>
-  <text x="200" y="255" text-anchor="middle" fill="white" font-size="11">Geo-replication</text>
-  <text x="200" y="275" text-anchor="middle" fill="white" font-size="11">Tasks/Build</text>
-  <rect x="320" y="200" width="200" height="100" fill="#dc382d" rx="5"/>
-  <text x="420" y="230" text-anchor="middle" fill="white" font-weight="bold">Harbor</text>
-  <text x="420" y="255" text-anchor="middle" fill="white" font-size="11">Open source</text>
-  <text x="420" y="275" text-anchor="middle" fill="white" font-size="11">RBAC, scanning</text>
-  <rect x="540" y="200" width="200" height="100" fill="#ea4335" rx="5"/>
-  <text x="640" y="230" text-anchor="middle" fill="white" font-weight="bold">Quay.io</text>
-  <text x="640" y="255" text-anchor="middle" fill="white" font-size="11">Red Hat</text>
-  <text x="640" y="275" text-anchor="middle" fill="white" font-size="11">Security focus</text>
-</svg>
+![registry_types](../../../../svg/courses/devops/k8s-introduction/11_ingress_and_registries/registry_types.svg)
 
 ---
 

@@ -25,34 +25,7 @@ class Triangle { public: void draw(); };
 
 ## Visitor Structure
 
-<svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="160" height="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="110" y="45" text-anchor="middle" font-size="13" font-weight="bold">Element</text>
-  <text x="110" y="65" text-anchor="middle" font-size="11" font-style="italic">+ accept(Visitor&amp;)</text>
-
-  <rect x="380" y="20" width="190" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="475" y="45" text-anchor="middle" font-size="13" font-weight="bold">Visitor</text>
-  <text x="475" y="65" text-anchor="middle" font-size="11" font-style="italic">+ visit(ElementA&amp;)</text>
-
-  <line x1="190" y1="55" x2="380" y2="55" stroke="#333" stroke-width="1.5" stroke-dasharray="3,3"/>
-
-  <rect x="10" y="160" width="100" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="60" y="185" text-anchor="middle" font-size="10">ElementA</text>
-
-  <rect x="130" y="160" width="100" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="180" y="185" text-anchor="middle" font-size="10">ElementB</text>
-
-  <rect x="350" y="160" width="120" height="40" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="410" y="185" text-anchor="middle" font-size="10">ConcreteVisitor1</text>
-
-  <rect x="490" y="160" width="120" height="40" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="550" y="185" text-anchor="middle" font-size="10">ConcreteVisitor2</text>
-
-  <line x1="60" y1="160" x2="90" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="180" y1="160" x2="130" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="410" y1="160" x2="450" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="550" y1="160" x2="500" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-</svg>
+![visitor_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/21_visitor/visitor_structure.svg)
 
 ---
 

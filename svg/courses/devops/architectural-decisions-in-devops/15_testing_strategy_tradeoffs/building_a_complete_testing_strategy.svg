@@ -1,0 +1,39 @@
+<svg width="580" height="240" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow_cs" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="290" y="20" text-anchor="middle" font-size="13" font-weight="bold">Testing Strategy Across the Pipeline</text>
+  <rect x="20" y="35" width="100" height="130" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="70" y="55" text-anchor="middle" font-size="11" font-weight="bold">Pre-commit</text>
+  <text x="70" y="75" text-anchor="middle" font-size="9">Lint</text>
+  <text x="70" y="90" text-anchor="middle" font-size="9">Type check</text>
+  <text x="70" y="105" text-anchor="middle" font-size="9">Secrets scan</text>
+  <rect x="135" y="35" width="100" height="130" fill="#b3e5fc" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="185" y="55" text-anchor="middle" font-size="11" font-weight="bold">CI Build</text>
+  <text x="185" y="75" text-anchor="middle" font-size="9">Unit tests</text>
+  <text x="185" y="90" text-anchor="middle" font-size="9">SAST</text>
+  <text x="185" y="105" text-anchor="middle" font-size="9">Contract tests</text>
+  <rect x="250" y="35" width="100" height="130" fill="#fff9c4" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="55" text-anchor="middle" font-size="11" font-weight="bold">CI Test</text>
+  <text x="300" y="75" text-anchor="middle" font-size="9">Integration</text>
+  <text x="300" y="90" text-anchor="middle" font-size="9">API tests</text>
+  <text x="300" y="105" text-anchor="middle" font-size="9">DAST</text>
+  <rect x="365" y="35" width="100" height="130" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="415" y="55" text-anchor="middle" font-size="11" font-weight="bold">Staging</text>
+  <text x="415" y="75" text-anchor="middle" font-size="9">E2E tests</text>
+  <text x="415" y="90" text-anchor="middle" font-size="9">Perf tests</text>
+  <text x="415" y="105" text-anchor="middle" font-size="9">Chaos tests</text>
+  <rect x="480" y="35" width="100" height="130" fill="#ffcdd2" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="530" y="55" text-anchor="middle" font-size="11" font-weight="bold">Production</text>
+  <text x="530" y="75" text-anchor="middle" font-size="9">Synthetics</text>
+  <text x="530" y="90" text-anchor="middle" font-size="9">Canary analysis</text>
+  <text x="530" y="105" text-anchor="middle" font-size="9">Observability</text>
+  <line x1="120" y1="100" x2="135" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow_cs)"/>
+  <line x1="235" y1="100" x2="250" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow_cs)"/>
+  <line x1="350" y1="100" x2="365" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow_cs)"/>
+  <line x1="465" y1="100" x2="480" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrow_cs)"/>
+  <text x="290" y="195" text-anchor="middle" font-size="10" fill="#333">Confidence increases ----></text>
+  <text x="290" y="215" text-anchor="middle" font-size="10" fill="#333">&lt;--- Speed decreases</text>
+</svg>

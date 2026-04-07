@@ -1,0 +1,41 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd3_01_linux_network_stack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">sk_buff Data Flow</text>
+  <rect x="30" y="30" width="120" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="90" y="50" text-anchor="middle" font-size="10" font-weight="bold">alloc_skb()</text>
+  <text x="90" y="65" text-anchor="middle" font-size="10">Allocate buffer</text>
+  <text x="90" y="78" text-anchor="middle" font-size="9" fill="#666">head, data, tail, end</text>
+  <rect x="170" y="30" width="110" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="225" y="50" text-anchor="middle" font-size="10" font-weight="bold">skb_reserve()</text>
+  <text x="225" y="65" text-anchor="middle" font-size="10">Reserve headroom</text>
+  <text x="225" y="78" text-anchor="middle" font-size="9" fill="#666">for L2/L3 headers</text>
+  <rect x="300" y="30" width="110" height="55" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="355" y="50" text-anchor="middle" font-size="10" font-weight="bold">skb_put()</text>
+  <text x="355" y="65" text-anchor="middle" font-size="10">Add data at tail</text>
+  <text x="355" y="78" text-anchor="middle" font-size="9" fill="#666">payload grows down</text>
+  <rect x="430" y="30" width="110" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="485" y="50" text-anchor="middle" font-size="10" font-weight="bold">skb_push()</text>
+  <text x="485" y="65" text-anchor="middle" font-size="10">Add header at head</text>
+  <text x="485" y="78" text-anchor="middle" font-size="9" fill="#666">prepend headers</text>
+  <line x1="150" y1="57" x2="170" y2="57" stroke="#333" stroke-width="1" marker-end="url(#arrowd3_01_linux_network_stack)"/>
+  <line x1="280" y1="57" x2="300" y2="57" stroke="#333" stroke-width="1" marker-end="url(#arrowd3_01_linux_network_stack)"/>
+  <line x1="410" y1="57" x2="430" y2="57" stroke="#333" stroke-width="1" marker-end="url(#arrowd3_01_linux_network_stack)"/>
+  <rect x="50" y="110" width="500" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="85" y="130" font-size="10" fill="#666">head</text>
+  <rect x="120" y="113" width="60" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="150" y="131" text-anchor="middle" font-size="9">headroom</text>
+  <rect x="180" y="113" width="40" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="200" y="131" text-anchor="middle" font-size="9">L2</text>
+  <rect x="220" y="113" width="40" height="28" fill="#fff3e0" stroke="#333" stroke-width="1"/>
+  <text x="240" y="131" text-anchor="middle" font-size="9">L3</text>
+  <rect x="260" y="113" width="40" height="28" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="280" y="131" text-anchor="middle" font-size="9">L4</text>
+  <rect x="300" y="113" width="180" height="28" fill="#fff" stroke="#333" stroke-width="1"/>
+  <text x="390" y="131" text-anchor="middle" font-size="9">Payload Data</text>
+  <text x="510" y="130" font-size="10" fill="#666">tail/end</text>
+  <text x="300" y="168" text-anchor="middle" font-size="10" fill="#666">sk_buff manages packet data through all protocol layers</text>
+</svg>

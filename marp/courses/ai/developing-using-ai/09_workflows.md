@@ -17,25 +17,7 @@ This chapter covers:
 
 ## The Complete Development Cycle
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <circle cx="400" cy="50" r="35" fill="#E74C3C"/>
-  <text x="400" y="55" text-anchor="middle" fill="white" font-size="12">Planning</text>
-  <circle cx="520" cy="110" r="35" fill="#F39C12"/>
-  <text x="520" y="115" text-anchor="middle" fill="white" font-size="12">Design</text>
-  <circle cx="550" cy="230" r="35" fill="#27AE60"/>
-  <text x="550" y="235" text-anchor="middle" fill="white" font-size="12">Develop</text>
-  <circle cx="460" cy="330" r="35" fill="#9B59B6"/>
-  <text x="460" y="335" text-anchor="middle" fill="white" font-size="12">Test</text>
-  <circle cx="340" cy="330" r="35" fill="#3498DB"/>
-  <text x="340" y="335" text-anchor="middle" fill="white" font-size="12">Deploy</text>
-  <circle cx="250" cy="230" r="35" fill="#2ECC71"/>
-  <text x="250" y="235" text-anchor="middle" fill="white" font-size="12">Monitor</text>
-  <circle cx="280" cy="110" r="35" fill="#E67E22"/>
-  <text x="280" y="115" text-anchor="middle" fill="white" font-size="12">Iterate</text>
-  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold">AI Assists</text>
-  <text x="400" y="220" text-anchor="middle" font-size="14" font-weight="bold">Every Step</text>
-</svg>
+![the_complete_development_cycle](../../../../svg/courses/ai/developing-using-ai/09_workflows/the_complete_development_cycle.svg)
 
 ---
 
@@ -107,21 +89,7 @@ AI creates initial files:
 
 ## Configuration Creation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Initial Configuration Files</text>
-  <rect x="150" y="110" width="180" height="50" fill="#3498DB" rx="5"/>
-  <text x="240" y="140" text-anchor="middle" fill="white" font-size="12">TypeScript</text>
-  <rect x="360" y="110" width="180" height="50" fill="#2ECC71" rx="5"/>
-  <text x="450" y="140" text-anchor="middle" fill="white" font-size="12">ESLint</text>
-  <rect x="150" y="180" width="180" height="50" fill="#E74C3C" rx="5"/>
-  <text x="240" y="210" text-anchor="middle" fill="white" font-size="12">Docker</text>
-  <rect x="360" y="180" width="180" height="50" fill="#F39C12" rx="5"/>
-  <text x="450" y="210" text-anchor="middle" fill="white" font-size="12">Jest</text>
-  <rect x="570" y="145" width="120" height="50" fill="#9B59B6" rx="5"/>
-  <text x="630" y="175" text-anchor="middle" fill="white" font-size="12">Git</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="14">AI generates all configs with team standards</text>
-</svg>
+![configuration_creation](../../../../svg/courses/ai/developing-using-ai/09_workflows/configuration_creation.svg)
 
 ---
 
@@ -200,32 +168,7 @@ volumes:
 
 ## Feature Development: Requirement Analysis
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Feature Development Flow</text>
-  <rect x="150" y="110" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="12">Requirements</text>
-  <path d="M 300 140 L 350 140" stroke="white" stroke-width="2" marker-end="url(#f1)"/>
-  <rect x="350" y="110" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="425" y="145" text-anchor="middle" fill="white" font-size="12">Design</text>
-  <path d="M 500 140 L 550 140" stroke="white" stroke-width="2" marker-end="url(#f2)"/>
-  <rect x="550" y="110" width="130" height="60" fill="#E74C3C" rx="5"/>
-  <text x="615" y="145" text-anchor="middle" fill="white" font-size="12">Implement</text>
-  <rect x="200" y="220" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="260" y="255" text-anchor="middle" fill="white" font-size="12">Test</text>
-  <rect x="350" y="220" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="410" y="255" text-anchor="middle" fill="white" font-size="12">Review</text>
-  <rect x="500" y="220" width="120" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="560" y="255" text-anchor="middle" fill="white" font-size="12">Deploy</text>
-  <defs>
-    <marker id="f1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="f2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![feature_development_requirement_analysis](../../../../svg/courses/ai/developing-using-ai/09_workflows/feature_development_requirement_analysis.svg)
 
 ---
 
@@ -302,30 +245,7 @@ class NotificationFeature:
 
 Building features progressively:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Incremental Feature Building</text>
-  <rect x="150" y="120" width="100" height="180" fill="#3498DB" rx="5"/>
-  <text x="200" y="150" text-anchor="middle" fill="white" font-size="12">MVP</text>
-  <text x="200" y="210" text-anchor="middle" fill="white" font-size="10">Basic</text>
-  <text x="200" y="230" text-anchor="middle" fill="white" font-size="10">Create</text>
-  <text x="200" y="250" text-anchor="middle" fill="white" font-size="10">Read</text>
-  <rect x="280" y="120" width="100" height="180" fill="#2ECC71" rx="5"/>
-  <text x="330" y="150" text-anchor="middle" fill="white" font-size="12">Enhanced</text>
-  <text x="330" y="210" text-anchor="middle" fill="white" font-size="10">Update</text>
-  <text x="330" y="230" text-anchor="middle" fill="white" font-size="10">Delete</text>
-  <text x="330" y="250" text-anchor="middle" fill="white" font-size="10">Filter</text>
-  <rect x="410" y="120" width="100" height="180" fill="#F39C12" rx="5"/>
-  <text x="460" y="150" text-anchor="middle" fill="white" font-size="12">Advanced</text>
-  <text x="460" y="210" text-anchor="middle" fill="white" font-size="10">Real-time</text>
-  <text x="460" y="230" text-anchor="middle" fill="white" font-size="10">Batch</text>
-  <text x="460" y="250" text-anchor="middle" fill="white" font-size="10">Analytics</text>
-  <rect x="540" y="120" width="100" height="180" fill="#E74C3C" rx="5"/>
-  <text x="590" y="150" text-anchor="middle" fill="white" font-size="12">Polish</text>
-  <text x="590" y="210" text-anchor="middle" fill="white" font-size="10">Optimize</text>
-  <text x="590" y="230" text-anchor="middle" fill="white" font-size="10">Cache</text>
-  <text x="590" y="250" text-anchor="middle" fill="white" font-size="10">Scale</text>
-</svg>
+![incremental_development](../../../../svg/courses/ai/developing-using-ai/09_workflows/incremental_development.svg)
 
 ---
 
@@ -390,18 +310,7 @@ const reproducer = async () => {
 
 ## Root Cause Analysis
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Bug Investigation Process</text>
-  <rect x="150" y="110" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="135" fill="white" font-size="12">1. Symptom: Notifications fail silently</text>
-  <rect x="150" y="160" width="500" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="185" fill="white" font-size="12">2. Investigation: Queue logs show "rate limit exceeded"</text>
-  <rect x="150" y="210" width="500" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="235" fill="white" font-size="12">3. Root Cause: Email provider rate limiting</text>
-  <rect x="150" y="260" width="500" height="40" fill="#27AE60" rx="5"/>
-  <text x="160" y="285" fill="white" font-size="12">4. Solution: Implement exponential backoff</text>
-</svg>
+![root_cause_analysis](../../../../svg/courses/ai/developing-using-ai/09_workflows/root_cause_analysis.svg)
 
 ---
 
@@ -473,20 +382,7 @@ describe('Regression: Rate Limit Handling', () => {
 
 Keeping docs current:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Documentation After Bug Fix</text>
-  <rect x="150" y="110" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Update README</text>
-  <rect x="430" y="110" width="220" height="50" fill="#2ECC71" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Add to Changelog</text>
-  <rect x="150" y="180" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="12">Document Workaround</text>
-  <rect x="430" y="180" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">Update API Docs</text>
-  <rect x="290" y="250" width="220" height="50" fill="#9B59B6" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" fill="white" font-size="12">Post-Mortem Report</text>
-</svg>
+![documentation_updates](../../../../svg/courses/ai/developing-using-ai/09_workflows/documentation_updates.svg)
 
 ---
 
@@ -559,32 +455,7 @@ fi
 
 ## Performance Improvements
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Performance Optimization Cycle</text>
-  <circle cx="200" cy="200" r="40" fill="#E74C3C"/>
-  <text x="200" y="205" text-anchor="middle" fill="white" font-size="12">Profile</text>
-  <path d="M 240 200 L 310 200" stroke="white" stroke-width="2" marker-end="url(#p1)"/>
-  <circle cx="350" cy="200" r="40" fill="#F39C12"/>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="12">Identify</text>
-  <path d="M 390 200 L 460 200" stroke="white" stroke-width="2" marker-end="url(#p2)"/>
-  <circle cx="500" cy="200" r="40" fill="#3498DB"/>
-  <text x="500" y="205" text-anchor="middle" fill="white" font-size="12">Optimize</text>
-  <path d="M 540 200 L 610 200" stroke="white" stroke-width="2" marker-end="url(#p3)"/>
-  <circle cx="650" cy="200" r="40" fill="#27AE60"/>
-  <text x="650" y="205" text-anchor="middle" fill="white" font-size="12">Validate</text>
-  <defs>
-    <marker id="p1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="p2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="p3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![performance_improvements](../../../../svg/courses/ai/developing-using-ai/09_workflows/performance_improvements.svg)
 
 ---
 
@@ -665,20 +536,7 @@ class RefactoringPlan:
 
 ## Release Preparation: Code Cleanup
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Pre-Release Checklist</text>
-  <rect x="150" y="110" width="500" height="35" fill="#3498DB" rx="5"/>
-  <text x="160" y="132" fill="white" font-size="12">☑ Remove console.logs and debug code</text>
-  <rect x="150" y="150" width="500" height="35" fill="#2ECC71" rx="5"/>
-  <text x="160" y="172" fill="white" font-size="12">☑ Update dependencies to stable versions</text>
-  <rect x="150" y="190" width="500" height="35" fill="#F39C12" rx="5"/>
-  <text x="160" y="212" fill="white" font-size="12">☑ Run full test suite</text>
-  <rect x="150" y="230" width="500" height="35" fill="#E74C3C" rx="5"/>
-  <text x="160" y="252" fill="white" font-size="12">☑ Security audit passed</text>
-  <rect x="150" y="270" width="500" height="35" fill="#9B59B6" rx="5"/>
-  <text x="160" y="292" fill="white" font-size="12">☑ Performance benchmarks met</text>
-</svg>
+![release_preparation_code_cleanup](../../../../svg/courses/ai/developing-using-ai/09_workflows/release_preparation_code_cleanup.svg)
 
 ---
 
@@ -758,26 +616,7 @@ const releaseTests = {
 
 Real-time performance tracking:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Production Metrics Dashboard</text>
-  <rect x="150" y="110" width="220" height="80" fill="#3498DB" rx="5"/>
-  <text x="260" y="135" text-anchor="middle" fill="white" font-size="12">Response Time</text>
-  <text x="260" y="160" text-anchor="middle" fill="white" font-size="20">127ms</text>
-  <text x="260" y="180" text-anchor="middle" fill="white" font-size="10">p95: 245ms</text>
-  <rect x="430" y="110" width="220" height="80" fill="#27AE60" rx="5"/>
-  <text x="540" y="135" text-anchor="middle" fill="white" font-size="12">Uptime</text>
-  <text x="540" y="160" text-anchor="middle" fill="white" font-size="20">99.98%</text>
-  <text x="540" y="180" text-anchor="middle" fill="white" font-size="10">Last 30 days</text>
-  <rect x="150" y="210" width="220" height="80" fill="#F39C12" rx="5"/>
-  <text x="260" y="235" text-anchor="middle" fill="white" font-size="12">Error Rate</text>
-  <text x="260" y="260" text-anchor="middle" fill="white" font-size="20">0.12%</text>
-  <text x="260" y="280" text-anchor="middle" fill="white" font-size="10">↓ 0.03% from last week</text>
-  <rect x="430" y="210" width="220" height="80" fill="#E74C3C" rx="5"/>
-  <text x="540" y="235" text-anchor="middle" fill="white" font-size="12">Active Users</text>
-  <text x="540" y="260" text-anchor="middle" fill="white" font-size="20">5,234</text>
-  <text x="540" y="280" text-anchor="middle" fill="white" font-size="10">Peak: 8,421</text>
-</svg>
+![performance_monitoring](../../../../svg/courses/ai/developing-using-ai/09_workflows/performance_monitoring.svg)
 
 ---
 
@@ -820,44 +659,7 @@ class IncidentResponder:
 
 Rapid production fixes:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Hotfix Process</text>
-  <circle cx="150" cy="200" r="30" fill="#E74C3C"/>
-  <text x="150" y="205" text-anchor="middle" fill="white" font-size="11">Alert</text>
-  <path d="M 180 200 L 240 200" stroke="white" stroke-width="2" marker-end="url(#h1)"/>
-  <circle cx="270" cy="200" r="30" fill="#F39C12"/>
-  <text x="270" y="205" text-anchor="middle" fill="white" font-size="11">Diagnose</text>
-  <path d="M 300 200 L 360 200" stroke="white" stroke-width="2" marker-end="url(#h2)"/>
-  <circle cx="390" cy="200" r="30" fill="#3498DB"/>
-  <text x="390" y="205" text-anchor="middle" fill="white" font-size="11">Fix</text>
-  <path d="M 420 200 L 480 200" stroke="white" stroke-width="2" marker-end="url(#h3)"/>
-  <circle cx="510" cy="200" r="30" fill="#9B59B6"/>
-  <text x="510" y="205" text-anchor="middle" fill="white" font-size="11">Test</text>
-  <path d="M 540 200 L 600 200" stroke="white" stroke-width="2" marker-end="url(#h4)"/>
-  <circle cx="630" cy="200" r="30" fill="#27AE60"/>
-  <text x="630" y="205" text-anchor="middle" fill="white" font-size="11">Deploy</text>
-  <text x="150" y="260" text-anchor="middle" fill="white" font-size="10">5 min</text>
-  <text x="270" y="260" text-anchor="middle" fill="white" font-size="10">10 min</text>
-  <text x="390" y="260" text-anchor="middle" fill="white" font-size="10">15 min</text>
-  <text x="510" y="260" text-anchor="middle" fill="white" font-size="10">10 min</text>
-  <text x="630" y="260" text-anchor="middle" fill="white" font-size="10">5 min</text>
-  <text x="400" y="310" text-anchor="middle" fill="white" font-size="12">Target: &lt; 45 minutes total</text>
-  <defs>
-    <marker id="h1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="h2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="h3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="h4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![hot_fix_workflow](../../../../svg/courses/ai/developing-using-ai/09_workflows/hot_fix_workflow.svg)
 
 ---
 
@@ -911,21 +713,7 @@ class FeedbackProcessor {
 
 Testing features in production:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">A/B Test: New Checkout Flow</text>
-  <rect x="150" y="120" width="250" height="100" fill="#3498DB" rx="5"/>
-  <text x="275" y="150" text-anchor="middle" fill="white" font-size="14">Version A (Control)</text>
-  <text x="275" y="175" text-anchor="middle" fill="white" font-size="12">50% of users</text>
-  <text x="275" y="200" text-anchor="middle" fill="white" font-size="11">Conversion: 3.2%</text>
-  <rect x="450" y="120" width="250" height="100" fill="#27AE60" rx="5"/>
-  <text x="575" y="150" text-anchor="middle" fill="white" font-size="14">Version B (New)</text>
-  <text x="575" y="175" text-anchor="middle" fill="white" font-size="12">50% of users</text>
-  <text x="575" y="200" text-anchor="middle" fill="white" font-size="11">Conversion: 4.1%</text>
-  <rect x="250" y="250" width="300" height="60" fill="#E74C3C" rx="5"/>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="12">Result: 28% improvement</text>
-  <text x="400" y="295" text-anchor="middle" fill="white" font-size="11">Statistical significance: 99.2%</text>
-</svg>
+![a_b_testing_framework](../../../../svg/courses/ai/developing-using-ai/09_workflows/a_b_testing_framework.svg)
 
 ---
 
@@ -1025,24 +813,7 @@ class MigrationPlanner:
 
 Managing API evolution:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">API Version Timeline</text>
-  <line x1="150" y1="200" x2="650" y2="200" stroke="white" stroke-width="2"/>
-  <circle cx="200" cy="200" r="8" fill="#3498DB"/>
-  <text x="200" y="180" text-anchor="middle" fill="white" font-size="10">v1</text>
-  <text x="200" y="230" text-anchor="middle" fill="white" font-size="9">Jan 2024</text>
-  <circle cx="350" cy="200" r="8" fill="#27AE60"/>
-  <text x="350" y="180" text-anchor="middle" fill="white" font-size="10">v2</text>
-  <text x="350" y="230" text-anchor="middle" fill="white" font-size="9">Jun 2024</text>
-  <circle cx="500" cy="200" r="8" fill="#F39C12"/>
-  <text x="500" y="180" text-anchor="middle" fill="white" font-size="10">v3</text>
-  <text x="500" y="230" text-anchor="middle" fill="white" font-size="9">Dec 2024</text>
-  <rect x="200" y="140" width="150" height="30" fill="#E74C3C" rx="3"/>
-  <text x="275" y="158" text-anchor="middle" fill="white" font-size="9">v1 deprecated</text>
-  <rect x="350" y="250" width="150" height="30" fill="#95A5A6" rx="3"/>
-  <text x="425" y="268" text-anchor="middle" fill="white" font-size="9">v1 sunset</text>
-</svg>
+![api_versioning](../../../../svg/courses/ai/developing-using-ai/09_workflows/api_versioning.svg)
 
 ---
 
@@ -1104,29 +875,7 @@ function analyzeLoadTest(results) {
 
 Managing multiple environments:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Environment Pipeline</text>
-  <rect x="150" y="120" width="120" height="80" fill="#3498DB" rx="5"/>
-  <text x="210" y="150" text-anchor="middle" fill="white" font-size="12">Dev</text>
-  <text x="210" y="170" text-anchor="middle" fill="white" font-size="10">Auto-deploy</text>
-  <text x="210" y="185" text-anchor="middle" fill="white" font-size="10">Every commit</text>
-  <rect x="300" y="120" width="120" height="80" fill="#2ECC71" rx="5"/>
-  <text x="360" y="150" text-anchor="middle" fill="white" font-size="12">Staging</text>
-  <text x="360" y="170" text-anchor="middle" fill="white" font-size="10">Daily sync</text>
-  <text x="360" y="185" text-anchor="middle" fill="white" font-size="10">Full testing</text>
-  <rect x="450" y="120" width="120" height="80" fill="#F39C12" rx="5"/>
-  <text x="510" y="150" text-anchor="middle" fill="white" font-size="12">Pre-Prod</text>
-  <text x="510" y="170" text-anchor="middle" fill="white" font-size="10">Weekly</text>
-  <text x="510" y="185" text-anchor="middle" fill="white" font-size="10">Prod mirror</text>
-  <rect x="600" y="120" width="80" height="80" fill="#E74C3C" rx="5"/>
-  <text x="640" y="150" text-anchor="middle" fill="white" font-size="12">Prod</text>
-  <text x="640" y="170" text-anchor="middle" fill="white" font-size="10">Manual</text>
-  <text x="640" y="185" text-anchor="middle" fill="white" font-size="10">Approved</text>
-  <path d="M 270 160 L 300 160" stroke="white" stroke-width="2"/>
-  <path d="M 420 160 L 450 160" stroke="white" stroke-width="2"/>
-  <path d="M 570 160 L 600 160" stroke="white" stroke-width="2"/>
-</svg>
+![multi_environment_management](../../../../svg/courses/ai/developing-using-ai/09_workflows/multi_environment_management.svg)
 
 ---
 
@@ -1230,22 +979,7 @@ class CostOptimizer:
 
 Business continuity planning:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">DR Strategy</text>
-  <rect x="150" y="110" width="220" height="60" fill="#3498DB" rx="5"/>
-  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Backup</text>
-  <text x="260" y="155" text-anchor="middle" fill="white" font-size="10">Every 6 hours</text>
-  <rect x="430" y="110" width="220" height="60" fill="#27AE60" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Replication</text>
-  <text x="540" y="155" text-anchor="middle" fill="white" font-size="10">Cross-region sync</text>
-  <rect x="150" y="190" width="220" height="60" fill="#F39C12" rx="5"/>
-  <text x="260" y="220" text-anchor="middle" fill="white" font-size="12">RTO: 1 hour</text>
-  <text x="260" y="235" text-anchor="middle" fill="white" font-size="10">Recovery Time Objective</text>
-  <rect x="430" y="190" width="220" height="60" fill="#E74C3C" rx="5"/>
-  <text x="540" y="220" text-anchor="middle" fill="white" font-size="12">RPO: 15 min</text>
-  <text x="540" y="235" text-anchor="middle" fill="white" font-size="10">Recovery Point Objective</text>
-</svg>
+![disaster_recovery](../../../../svg/courses/ai/developing-using-ai/09_workflows/disaster_recovery.svg)
 
 ---
 
@@ -1300,34 +1034,7 @@ class ComplianceChecker {
 
 Measuring project success:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Project Success Metrics</text>
-  <rect x="150" y="110" width="150" height="70" fill="#3498DB" rx="5"/>
-  <text x="225" y="135" text-anchor="middle" fill="white" font-size="12">Velocity</text>
-  <text x="225" y="155" text-anchor="middle" fill="white" font-size="16">↑ 40%</text>
-  <text x="225" y="170" text-anchor="middle" fill="white" font-size="9">with AI</text>
-  <rect x="325" y="110" width="150" height="70" fill="#27AE60" rx="5"/>
-  <text x="400" y="135" text-anchor="middle" fill="white" font-size="12">Bug Rate</text>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="16">↓ 65%</text>
-  <text x="400" y="170" text-anchor="middle" fill="white" font-size="9">reduction</text>
-  <rect x="500" y="110" width="150" height="70" fill="#F39C12" rx="5"/>
-  <text x="575" y="135" text-anchor="middle" fill="white" font-size="12">Deploy Freq</text>
-  <text x="575" y="155" text-anchor="middle" fill="white" font-size="16">3x</text>
-  <text x="575" y="170" text-anchor="middle" fill="white" font-size="9">per week</text>
-  <rect x="150" y="200" width="150" height="70" fill="#E74C3C" rx="5"/>
-  <text x="225" y="225" text-anchor="middle" fill="white" font-size="12">MTTR</text>
-  <text x="225" y="245" text-anchor="middle" fill="white" font-size="16">45 min</text>
-  <text x="225" y="260" text-anchor="middle" fill="white" font-size="9">recovery</text>
-  <rect x="325" y="200" width="150" height="70" fill="#9B59B6" rx="5"/>
-  <text x="400" y="225" text-anchor="middle" fill="white" font-size="12">Coverage</text>
-  <text x="400" y="245" text-anchor="middle" fill="white" font-size="16">92%</text>
-  <text x="400" y="260" text-anchor="middle" fill="white" font-size="9">test coverage</text>
-  <rect x="500" y="200" width="150" height="70" fill="#1ABC9C" rx="5"/>
-  <text x="575" y="225" text-anchor="middle" fill="white" font-size="12">Satisfaction</text>
-  <text x="575" y="245" text-anchor="middle" fill="white" font-size="16">4.8/5</text>
-  <text x="575" y="260" text-anchor="middle" fill="white" font-size="9">team rating</text>
-</svg>
+![success_metrics](../../../../svg/courses/ai/developing-using-ai/09_workflows/success_metrics.svg)
 
 ---
 

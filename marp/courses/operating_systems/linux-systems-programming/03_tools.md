@@ -30,34 +30,7 @@ Current version: GCC 13.x
 
 ## GCC Architecture
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="110" y="85" text-anchor="middle" fill="white" font-size="14">Source Code</text>
-  <rect x="220" y="50" width="120" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="280" y="85" text-anchor="middle" fill="white" font-size="14">Preprocessor</text>
-  <rect x="390" y="50" width="120" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="450" y="85" text-anchor="middle" fill="white" font-size="14">Compiler</text>
-  <rect x="560" y="50" width="120" height="60" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="620" y="85" text-anchor="middle" fill="white" font-size="14">Assembler</text>
-  <rect x="320" y="200" width="120" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="380" y="235" text-anchor="middle" fill="white" font-size="14">Linker</text>
-  <rect x="320" y="320" width="120" height="60" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="380" y="355" text-anchor="middle" fill="white" font-size="14">Executable</text>
-  <line x1="170" y1="80" x2="220" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="340" y1="80" x2="390" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="510" y1="80" x2="560" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="620" y1="110" x2="380" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="380" y1="260" x2="380" y2="320" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <text x="110" y="130" text-anchor="middle" font-size="11">.c/.cpp</text>
-  <text x="280" y="130" text-anchor="middle" font-size="11">.i</text>
-  <text x="450" y="130" text-anchor="middle" font-size="11">.s</text>
-  <text x="620" y="130" text-anchor="middle" font-size="11">.o</text>
-  <defs>
-    <marker id="arrow5" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![gcc_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/03_tools/gcc_architecture.svg)
 
 ---
 
@@ -388,22 +361,7 @@ gcc -static -o program main.c
 
 ## Program Structure
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="16" font-weight="bold">Linux Process Memory Layout</text>
-  <rect x="150" y="100" width="500" height="40" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="125" text-anchor="middle" fill="white" font-size="12">Stack (grows down ↓)</text>
-  <rect x="150" y="150" width="500" height="30" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="170" text-anchor="middle" fill="white" font-size="12">Memory Mapped Region</text>
-  <rect x="150" y="190" width="500" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="400" y="215" text-anchor="middle" fill="white" font-size="12">Heap (grows up ↑)</text>
-  <rect x="150" y="240" width="500" height="30" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="260" text-anchor="middle" fill="white" font-size="12">BSS (uninitialized data)</text>
-  <rect x="150" y="280" width="500" height="30" fill="#27AE60" stroke="#333" stroke-width="2"/>
-  <text x="400" y="300" text-anchor="middle" fill="white" font-size="12">Data (initialized)</text>
-  <rect x="150" y="320" width="500" height="30" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="340" text-anchor="middle" fill="white" font-size="12">Text (code)</text>
-</svg>
+![program_structure](../../../../svg/courses/operating_systems/linux-systems-programming/03_tools/program_structure.svg)
 
 ---
 
@@ -528,41 +486,7 @@ LD_PRELOAD=/path/to/lib.so ./program
 
 ## Symbol Resolution
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="300" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="125" y="30" text-anchor="middle" font-size="14" font-weight="bold">Program</text>
-  <rect x="50" y="80" width="150" height="40" fill="#2980B9" stroke="#333" stroke-width="1"/>
-  <text x="125" y="105" text-anchor="middle" fill="white" font-size="11">main()</text>
-  <rect x="50" y="130" width="150" height="40" fill="#2980B9" stroke="#333" stroke-width="1"/>
-  <text x="125" y="155" text-anchor="middle" fill="white" font-size="11">calls: printf()</text>
-  <rect x="50" y="180" width="150" height="40" fill="#2980B9" stroke="#333" stroke-width="1"/>
-  <text x="125" y="205" text-anchor="middle" fill="white" font-size="11">calls: custom_func()</text>
-
-  <rect x="300" y="50" width="150" height="150" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="375" y="30" text-anchor="middle" font-size="14" font-weight="bold">libc.so</text>
-  <rect x="300" y="80" width="150" height="40" fill="#C0392B" stroke="#333" stroke-width="1"/>
-  <text x="375" y="105" text-anchor="middle" fill="white" font-size="11">printf()</text>
-
-  <rect x="300" y="230" width="150" height="120" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="375" y="210" text-anchor="middle" font-size="14" font-weight="bold">libcustom.so</text>
-  <rect x="300" y="260" width="150" height="40" fill="#27AE60" stroke="#333" stroke-width="1"/>
-  <text x="375" y="285" text-anchor="middle" fill="white" font-size="11">custom_func()</text>
-
-  <line x1="200" y1="150" x2="300" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="200" y1="200" x2="300" y2="280" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-
-  <rect x="550" y="150" width="200" height="100" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="650" y="130" text-anchor="middle" font-size="14" font-weight="bold">Symbol Table</text>
-  <text x="560" y="180" font-size="10">printf → libc.so:0x1234</text>
-  <text x="560" y="200" font-size="10">custom_func → libcustom:0x5678</text>
-  <text x="560" y="220" font-size="10">main → program:0x4000</text>
-
-  <defs>
-    <marker id="arrow6" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![symbol_resolution](../../../../svg/courses/operating_systems/linux-systems-programming/03_tools/symbol_resolution.svg)
 
 ---
 

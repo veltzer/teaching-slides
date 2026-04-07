@@ -39,58 +39,7 @@ Timeline of Generative AI
 
 ## Categories of Generative Models
 
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="275" font-family="sans-serif">
-  <!-- Root box -->
-  <rect x="230" y="10" width="220" height="36" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
-  <text x="340" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="#222222">GENERATIVE MODELS</text>
-  <!-- Root to children connector -->
-  <line x1="340" y1="46" x2="340" y2="62" stroke="#555" stroke-width="1.5"/>
-  <line x1="185" y1="62" x2="495" y2="62" stroke="#555" stroke-width="1.5"/>
-  <line x1="185" y1="62" x2="185" y2="78" stroke="#555" stroke-width="1.5"/>
-  <line x1="495" y1="62" x2="495" y2="78" stroke="#555" stroke-width="1.5"/>
-  <!-- AUTOREGRESSIVE box -->
-  <rect x="85" y="78" width="200" height="46" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
-  <text x="185" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">AUTOREGRESSIVE</text>
-  <text x="185" y="115" text-anchor="middle" font-size="11" fill="#555555">(sequential)</text>
-  <!-- DIFFUSION box -->
-  <rect x="395" y="78" width="200" height="46" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
-  <text x="495" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">DIFFUSION</text>
-  <text x="495" y="115" text-anchor="middle" font-size="11" fill="#555555">(iterative denoising)</text>
-  <!-- AUTOREGRESSIVE to leaves -->
-  <line x1="185" y1="124" x2="185" y2="142" stroke="#555" stroke-width="1.5"/>
-  <line x1="110" y1="142" x2="265" y2="142" stroke="#555" stroke-width="1.5"/>
-  <line x1="110" y1="142" x2="110" y2="158" stroke="#555" stroke-width="1.5"/>
-  <line x1="265" y1="142" x2="265" y2="158" stroke="#555" stroke-width="1.5"/>
-  <!-- DIFFUSION to leaves -->
-  <line x1="495" y1="124" x2="495" y2="142" stroke="#555" stroke-width="1.5"/>
-  <line x1="425" y1="142" x2="575" y2="142" stroke="#555" stroke-width="1.5"/>
-  <line x1="425" y1="142" x2="425" y2="158" stroke="#555" stroke-width="1.5"/>
-  <line x1="575" y1="142" x2="575" y2="158" stroke="#555" stroke-width="1.5"/>
-  <!-- TEXT leaf -->
-  <rect x="50" y="158" width="120" height="95" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="110" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">TEXT</text>
-  <text x="110" y="198" text-anchor="middle" font-size="11" fill="#444444">GPT</text>
-  <text x="110" y="214" text-anchor="middle" font-size="11" fill="#444444">Claude</text>
-  <text x="110" y="230" text-anchor="middle" font-size="11" fill="#444444">LLaMA</text>
-  <!-- CODE leaf -->
-  <rect x="205" y="158" width="120" height="95" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="265" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">CODE</text>
-  <text x="265" y="198" text-anchor="middle" font-size="11" fill="#444444">Codex</text>
-  <text x="265" y="214" text-anchor="middle" font-size="11" fill="#444444">Claude</text>
-  <text x="265" y="230" text-anchor="middle" font-size="11" fill="#444444">Cursor</text>
-  <!-- IMAGE leaf -->
-  <rect x="365" y="158" width="120" height="95" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="425" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">IMAGE</text>
-  <text x="425" y="198" text-anchor="middle" font-size="11" fill="#444444">DALL-E</text>
-  <text x="425" y="214" text-anchor="middle" font-size="11" fill="#444444">SD</text>
-  <text x="425" y="230" text-anchor="middle" font-size="11" fill="#444444">Flux</text>
-  <!-- VIDEO leaf -->
-  <rect x="515" y="158" width="120" height="95" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="575" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">VIDEO</text>
-  <text x="575" y="198" text-anchor="middle" font-size="11" fill="#444444">Sora</text>
-  <text x="575" y="214" text-anchor="middle" font-size="11" fill="#444444">Runway</text>
-  <text x="575" y="230" text-anchor="middle" font-size="11" fill="#444444">Pika</text>
-</svg>
+![categories_of_generative_models](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/categories_of_generative_models.svg)
 
 Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
@@ -100,39 +49,7 @@ Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 Published in 2017: "Attention Is All You Need"
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="375" font-family="sans-serif">
-  <defs>
-    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Input tokens text -->
-  <text x="30" y="22" font-size="13" fill="#222222">Input tokens: ["The", "cat", "sat", "on", "the", "___"]</text>
-  <!-- Outer TRANSFORMER BLOCK box -->
-  <rect x="20" y="34" width="580" height="260" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="2"/>
-  <text x="310" y="54" text-anchor="middle" font-size="14" font-weight="bold" fill="#222222">TRANSFORMER BLOCK</text>
-  <!-- Inner box 1: Multi-Head Self-Attention -->
-  <rect x="50" y="64" width="520" height="56" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="310" y="86" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Multi-Head Self-Attention</text>
-  <text x="310" y="106" text-anchor="middle" font-size="12" fill="#444444">(each token attends to every other token)</text>
-  <!-- Arrow 1 → 2 -->
-  <line x1="310" y1="120" x2="310" y2="138" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <!-- Inner box 2: Feed-Forward Network -->
-  <rect x="50" y="140" width="520" height="52" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="310" y="162" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Feed-Forward Network</text>
-  <text x="310" y="180" text-anchor="middle" font-size="12" fill="#444444">(process each position)</text>
-  <!-- Arrow 2 → 3 -->
-  <line x1="310" y1="192" x2="310" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <!-- Inner box 3: Layer Normalization -->
-  <rect x="50" y="212" width="520" height="52" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="310" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Layer Normalization</text>
-  <text x="310" y="252" text-anchor="middle" font-size="12" fill="#444444">+ Residual Connection</text>
-  <!-- Arrow exits outer box -->
-  <line x1="310" y1="294" x2="310" y2="322" stroke="#555" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <text x="318" y="313" font-size="12" fill="#555555">× N layers</text>
-  <!-- Output text -->
-  <text x="310" y="348" text-anchor="middle" font-size="13" fill="#222222">Output: "mat" (probability 0.87)</text>
-</svg>
+![the_transformer_foundation_of_modern_genai](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_transformer_foundation_of_modern_genai.svg)
 
 ---
 
@@ -140,48 +57,7 @@ Published in 2017: "Attention Is All You Need"
 
 Every token asks: "Which other tokens should I pay attention to?"
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="330" font-family="sans-serif">
-  <!-- Title text -->
-  <text x="30" y="18" font-size="13" fill="#222222">Sentence: "The animal didn't cross the street because it was too tired"</text>
-  <text x="30" y="38" font-size="13" fill="#555555">What does "it" refer to?</text>
-  <text x="30" y="60" font-size="13" font-weight="bold" fill="#222222">Attention weights for "it":</text>
-  <!-- Bars: label right-aligned at x=110, bar starts at x=120 -->
-  <!-- The -->
-  <text x="110" y="84" text-anchor="end" font-size="12" fill="#222222">The</text>
-  <rect x="120" y="72" width="37" height="16" rx="2" fill="#90caf9"/>
-  <!-- animal – high attention -->
-  <text x="110" y="106" text-anchor="end" font-size="12" fill="#222222">animal</text>
-  <rect x="120" y="94" width="220" height="16" rx="2" fill="#1565c0"/>
-  <text x="346" y="106" font-size="11" fill="#1565c0"> ← high attention</text>
-  <!-- didn't -->
-  <text x="110" y="128" text-anchor="end" font-size="12" fill="#222222">didn't</text>
-  <rect x="120" y="116" width="37" height="16" rx="2" fill="#90caf9"/>
-  <!-- cross -->
-  <text x="110" y="150" text-anchor="end" font-size="12" fill="#222222">cross</text>
-  <rect x="120" y="138" width="55" height="16" rx="2" fill="#90caf9"/>
-  <!-- the -->
-  <text x="110" y="172" text-anchor="end" font-size="12" fill="#222222">the</text>
-  <rect x="120" y="160" width="18" height="16" rx="2" fill="#90caf9"/>
-  <!-- street -->
-  <text x="110" y="194" text-anchor="end" font-size="12" fill="#222222">street</text>
-  <rect x="120" y="182" width="73" height="16" rx="2" fill="#90caf9"/>
-  <!-- because -->
-  <text x="110" y="216" text-anchor="end" font-size="12" fill="#222222">because</text>
-  <rect x="120" y="204" width="18" height="16" rx="2" fill="#90caf9"/>
-  <!-- it -->
-  <text x="110" y="238" text-anchor="end" font-size="12" fill="#222222">it</text>
-  <rect x="120" y="226" width="55" height="16" rx="2" fill="#90caf9"/>
-  <!-- was -->
-  <text x="110" y="260" text-anchor="end" font-size="12" fill="#222222">was</text>
-  <rect x="120" y="248" width="37" height="16" rx="2" fill="#90caf9"/>
-  <!-- too -->
-  <text x="110" y="282" text-anchor="end" font-size="12" fill="#222222">too</text>
-  <rect x="120" y="270" width="37" height="16" rx="2" fill="#90caf9"/>
-  <!-- tired – medium, annotation -->
-  <text x="110" y="304" text-anchor="end" font-size="12" fill="#222222">tired</text>
-  <rect x="120" y="292" width="92" height="16" rx="2" fill="#64b5f6"/>
-  <text x="218" y="304" font-size="11" fill="#1565c0"> ← helps disambiguate "it" = "animal"</text>
-</svg>
+![self_attention_mechanism_intuition](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/self_attention_mechanism_intuition.svg)
 
 ---
 

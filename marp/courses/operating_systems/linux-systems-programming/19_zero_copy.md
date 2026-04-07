@@ -14,34 +14,7 @@
 
 ## The Copy Problem
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Traditional File Transfer</text>
-
-  <rect x="50" y="50" width="80" height="30" fill="lightblue" stroke="black"/>
-  <text x="90" y="70" font-size="10" text-anchor="middle">Disk</text>
-
-  <rect x="180" y="50" width="80" height="30" fill="yellow" stroke="black"/>
-  <text x="220" y="70" font-size="10" text-anchor="middle">Kernel Buffer</text>
-
-  <rect x="310" y="50" width="80" height="30" fill="lightgreen" stroke="black"/>
-  <text x="350" y="70" font-size="10" text-anchor="middle">User Buffer</text>
-
-  <rect x="180" y="120" width="80" height="30" fill="orange" stroke="black"/>
-  <text x="220" y="140" font-size="10" text-anchor="middle">Socket Buffer</text>
-
-  <path d="M 130 65 L 180 65" stroke="red" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 260 65 L 310 65" stroke="red" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 350 80 L 220 120" stroke="red" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <text x="250" y="170" font-size="12" text-anchor="middle">4 copies, 4 context switches</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![the_copy_problem](../../../../svg/courses/operating_systems/linux-systems-programming/19_zero_copy/the_copy_problem.svg)
 
 ---
 
@@ -100,23 +73,7 @@ int transfer_file_sendfile(int in_fd, int out_fd) {
 
 ## sendfile() Zero Copy Flow
 
-<svg viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">sendfile() Zero Copy</text>
-
-  <rect x="50" y="60" width="80" height="30" fill="lightblue" stroke="black"/>
-  <text x="90" y="80" font-size="10" text-anchor="middle">Disk</text>
-
-  <rect x="200" y="60" width="100" height="30" fill="yellow" stroke="black"/>
-  <text x="250" y="80" font-size="10" text-anchor="middle">Kernel Buffer</text>
-
-  <rect x="370" y="60" width="80" height="30" fill="lightcoral" stroke="black"/>
-  <text x="410" y="80" font-size="10" text-anchor="middle">Network</text>
-
-  <path d="M 130 75 L 200 75" stroke="green" stroke-width="3" marker-end="url(#arrowhead)"/>
-  <path d="M 300 75 L 370 75" stroke="green" stroke-width="3" marker-end="url(#arrowhead)"/>
-
-  <text x="250" y="120" font-size="12" text-anchor="middle" fill="green">2 copies, 2 context switches</text>
-</svg>
+![sendfile_zero_copy_flow](../../../../svg/courses/operating_systems/linux-systems-programming/19_zero_copy/sendfile_zero_copy_flow.svg)
 
 ---
 
@@ -273,38 +230,7 @@ ssize_t bytes = vmsplice(pipe_write_fd, &iov, 1, SPLICE_F_GIFT);
 
 ## Zero Copy Architecture
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Zero Copy Data Flow</text>
-
-  <rect x="50" y="50" width="80" height="30" fill="lightblue" stroke="black"/>
-  <text x="90" y="70" font-size="10" text-anchor="middle">File</text>
-
-  <rect x="200" y="50" width="100" height="30" fill="yellow" stroke="black"/>
-  <text x="250" y="70" font-size="10" text-anchor="middle">Pipe Buffer</text>
-
-  <rect x="200" y="120" width="100" height="30" fill="orange" stroke="black"/>
-  <text x="250" y="140" font-size="10" text-anchor="middle">Socket Buffer</text>
-
-  <rect x="370" y="120" width="80" height="30" fill="lightcoral" stroke="black"/>
-  <text x="410" y="140" font-size="10" text-anchor="middle">Network</text>
-
-  <rect x="50" y="200" width="80" height="30" fill="lightgreen" stroke="black"/>
-  <text x="90" y="220" font-size="10" text-anchor="middle">User Buffer</text>
-
-  <!-- splice operations -->
-  <path d="M 130 65 L 200 65" stroke="green" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="165" y="60" font-size="8">splice()</text>
-
-  <path d="M 250 80 L 250 120" stroke="green" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="260" y="105" font-size="8">splice()</text>
-
-  <path d="M 300 135 L 370 135" stroke="green" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="335" y="130" font-size="8">DMA</text>
-
-  <!-- vmsplice -->
-  <path d="M 130 215 L 200 80" stroke="blue" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
-  <text x="150" y="180" font-size="8" fill="blue">vmsplice()</text>
-</svg>
+![zero_copy_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/19_zero_copy/zero_copy_architecture.svg)
 
 ---
 

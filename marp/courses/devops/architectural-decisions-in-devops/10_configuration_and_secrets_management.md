@@ -12,24 +12,7 @@
 ---
 ## The Configuration Spectrum
 
-<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <line x1="80" y1="100" x2="620" y2="100" stroke="#333" stroke-width="3" marker-end="url(#arrow)"/>
-  <rect x="60" y="60" width="120" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="120" y="80" text-anchor="middle" font-size="12" font-weight="bold">Hardcoded</text>
-  <rect x="210" y="60" width="120" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="270" y="80" text-anchor="middle" font-size="12" font-weight="bold">Baked-in</text>
-  <rect x="360" y="60" width="120" height="30" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="420" y="80" text-anchor="middle" font-size="12" font-weight="bold">Env Vars</text>
-  <rect x="510" y="60" width="120" height="30" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="570" y="80" text-anchor="middle" font-size="12" font-weight="bold">Config Service</text>
-  <text x="100" y="140" text-anchor="middle" font-size="11" fill="#666">Least flexible</text>
-  <text x="600" y="140" text-anchor="middle" font-size="11" fill="#666">Most flexible</text>
-</svg>
+![the_configuration_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/the_configuration_spectrum.svg)
 
 ---
 ## Baked-in vs Runtime Configuration
@@ -60,28 +43,7 @@ RUN npm run build
 - Rolling back means deploying a previous artifact, not changing config
 - No configuration drift between what was tested and what runs
 
-<svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="50" width="100" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="80" y="72" text-anchor="middle" font-size="11" font-weight="bold">Source Code</text>
-  <text x="80" y="88" text-anchor="middle" font-size="11">+ Config A</text>
-  <line x1="130" y1="75" x2="175" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="180" y="50" width="100" height="50" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="230" y="72" text-anchor="middle" font-size="11" font-weight="bold">Build</text>
-  <text x="230" y="88" text-anchor="middle" font-size="11">CI Pipeline</text>
-  <line x1="280" y1="75" x2="325" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="330" y="50" width="120" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="390" y="72" text-anchor="middle" font-size="11" font-weight="bold">Artifact v1.2</text>
-  <text x="390" y="88" text-anchor="middle" font-size="11">(immutable)</text>
-  <line x1="450" y1="75" x2="495" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <rect x="500" y="50" width="120" height="50" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="560" y="72" text-anchor="middle" font-size="11" font-weight="bold">Deploy to</text>
-  <text x="560" y="88" text-anchor="middle" font-size="11">Production</text>
-</svg>
+![immutable_deployments_with_baked_config](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/immutable_deployments_with_baked_config.svg)
 
 ---
 ## Baked-in Config: Pros and Cons
@@ -118,30 +80,7 @@ services:
 ---
 ## Runtime Config Injection Flow
 
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="250" y="10" width="200" height="40" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="5"/>
-  <text x="350" y="35" text-anchor="middle" font-size="13" font-weight="bold">Container / Process</text>
-  <rect x="30" y="90" width="140" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="100" y="115" text-anchor="middle" font-size="12">Env Variables</text>
-  <rect x="200" y="90" width="140" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="270" y="115" text-anchor="middle" font-size="12">Mounted Files</text>
-  <rect x="370" y="90" width="140" height="40" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="440" y="115" text-anchor="middle" font-size="12">Config Service</text>
-  <rect x="540" y="90" width="140" height="40" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2" rx="5"/>
-  <text x="610" y="115" text-anchor="middle" font-size="12">Secrets Manager</text>
-  <line x1="100" y1="90" x2="300" y2="50" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="270" y1="90" x2="330" y2="50" stroke="#f9a825" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="440" y1="90" x2="380" y2="50" stroke="#c62828" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="610" y1="90" x2="420" y2="50" stroke="#6a1b9a" stroke-width="2" marker-end="url(#arr3)"/>
-  <rect x="160" y="180" width="380" height="40" fill="#f5f5f5" stroke="#616161" stroke-width="2" rx="5"/>
-  <text x="350" y="205" text-anchor="middle" font-size="12">Application reads config at startup or dynamically</text>
-  <line x1="350" y1="50" x2="350" y2="180" stroke="#616161" stroke-width="1" stroke-dasharray="5,5"/>
-</svg>
+![runtime_config_injection_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/runtime_config_injection_flow.svg)
 
 ---
 ## Runtime Config: Pros and Cons
@@ -159,26 +98,7 @@ services:
 ---
 ## Baked vs Runtime: Decision Matrix
 
-<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="280" height="240" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="190" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">Baked-in Config</text>
-  <text x="80" y="80" font-size="12">+ Reproducible artifacts</text>
-  <text x="80" y="105" font-size="12">+ No external deps at start</text>
-  <text x="80" y="130" font-size="12">+ Easy to audit</text>
-  <text x="80" y="155" font-size="12">- Rebuild per environment</text>
-  <text x="80" y="180" font-size="12">- Slow to change</text>
-  <text x="80" y="205" font-size="12">- Never for secrets</text>
-  <text x="80" y="235" font-size="12" font-weight="bold">Best: static settings</text>
-  <rect x="370" y="20" width="280" height="240" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="510" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">Runtime Config</text>
-  <text x="400" y="80" font-size="12">+ Build once, deploy many</text>
-  <text x="400" y="105" font-size="12">+ Quick changes</text>
-  <text x="400" y="130" font-size="12">+ Dynamic tuning</text>
-  <text x="400" y="155" font-size="12">- External dependency</text>
-  <text x="400" y="180" font-size="12">- Config drift risk</text>
-  <text x="400" y="205" font-size="12">- Harder to reproduce</text>
-  <text x="400" y="235" font-size="12" font-weight="bold">Best: env-specific values</text>
-</svg>
+![baked_vs_runtime_decision_matrix](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/baked_vs_runtime_decision_matrix.svg)
 
 ---
 ## Dynamic Configuration and Feature Toggles
@@ -274,22 +194,7 @@ signal.signal(signal.SIGHUP, reload_config)
 ---
 ## Secrets Management Approaches
 
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="30" width="180" height="80" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="8"/>
-  <text x="120" y="60" text-anchor="middle" font-size="13" font-weight="bold">Secrets Manager</text>
-  <text x="120" y="80" text-anchor="middle" font-size="11">Vault, AWS SM, GCP SM</text>
-  <text x="120" y="98" text-anchor="middle" font-size="11">Azure Key Vault</text>
-  <rect x="260" y="30" width="180" height="80" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="350" y="60" text-anchor="middle" font-size="13" font-weight="bold">Encrypted Config</text>
-  <text x="350" y="80" text-anchor="middle" font-size="11">SOPS, git-crypt</text>
-  <text x="350" y="98" text-anchor="middle" font-size="11">Sealed Secrets</text>
-  <rect x="490" y="30" width="180" height="80" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="8"/>
-  <text x="580" y="60" text-anchor="middle" font-size="13" font-weight="bold">Platform-Native</text>
-  <text x="580" y="80" text-anchor="middle" font-size="11">K8s Secrets, Docker</text>
-  <text x="580" y="98" text-anchor="middle" font-size="11">Secrets, SSM Params</text>
-  <rect x="100" y="160" width="500" height="50" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" rx="8"/>
-  <text x="350" y="190" text-anchor="middle" font-size="13" font-weight="bold">Choose based on: team size, compliance needs, infrastructure</text>
-</svg>
+![secrets_management_approaches](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_management_approaches.svg)
 
 ---
 ## HashiCorp Vault Overview
@@ -303,35 +208,7 @@ signal.signal(signal.SIGHUP, reload_config)
 ---
 ## Vault Architecture
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="250" y="20" width="200" height="50" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="8"/>
-  <text x="350" y="50" text-anchor="middle" font-size="14" font-weight="bold">Vault Server</text>
-  <rect x="50" y="100" width="130" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="115" y="125" text-anchor="middle" font-size="12">Auth Methods</text>
-  <rect x="210" y="100" width="130" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="275" y="125" text-anchor="middle" font-size="12">Secrets Engines</text>
-  <rect x="370" y="100" width="130" height="40" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="435" y="125" text-anchor="middle" font-size="12">Audit Devices</text>
-  <rect x="530" y="100" width="130" height="40" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2" rx="5"/>
-  <text x="595" y="125" text-anchor="middle" font-size="12">Policies (ACL)</text>
-  <line x1="115" y1="100" x2="300" y2="70" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <line x1="275" y1="100" x2="330" y2="70" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <line x1="435" y1="100" x2="380" y2="70" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <line x1="595" y1="100" x2="420" y2="70" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <rect x="250" y="200" width="200" height="40" fill="#f5f5f5" stroke="#616161" stroke-width="2" rx="5"/>
-  <text x="350" y="225" text-anchor="middle" font-size="12">Storage Backend</text>
-  <text x="350" y="260" text-anchor="middle" font-size="11" fill="#666">(Consul, Raft, S3, etc.)</text>
-  <line x1="350" y1="70" x2="350" y2="200" stroke="#616161" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <rect x="30" y="200" width="140" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="100" y="225" text-anchor="middle" font-size="12">App / Service</text>
-  <line x1="170" y1="220" x2="250" y2="220" stroke="#1565c0" stroke-width="2" marker-end="url(#arr4)"/>
-  <text x="210" y="212" text-anchor="middle" font-size="10" fill="#1565c0">API call</text>
-</svg>
+![vault_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/vault_architecture.svg)
 
 ---
 ## Using Vault: Basic Workflow
@@ -479,29 +356,7 @@ spec:
 ---
 ## Secrets Rotation Lifecycle
 
-<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <circle cx="350" cy="160" r="110" fill="none" stroke="#bdbdbd" stroke-width="2" stroke-dasharray="8,4"/>
-  <rect x="300" y="30" width="100" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="350" y="55" text-anchor="middle" font-size="12" font-weight="bold">Generate</text>
-  <rect x="460" y="100" width="100" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="510" y="125" text-anchor="middle" font-size="12" font-weight="bold">Distribute</text>
-  <rect x="440" y="210" width="100" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="490" y="235" text-anchor="middle" font-size="12" font-weight="bold">Use</text>
-  <rect x="210" y="210" width="100" height="40" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="260" y="235" text-anchor="middle" font-size="12" font-weight="bold">Monitor</text>
-  <rect x="180" y="100" width="100" height="40" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2" rx="5"/>
-  <text x="230" y="125" text-anchor="middle" font-size="12" font-weight="bold">Revoke</text>
-  <path d="M 400 50 Q 460 60 460 105" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr5)"/>
-  <path d="M 530 140 Q 530 200 535 210" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr5)"/>
-  <path d="M 440 235 Q 380 250 310 235" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr5)"/>
-  <path d="M 220 210 Q 200 170 210 140" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr5)"/>
-  <path d="M 260 100 Q 290 60 300 55" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arr5)"/>
-</svg>
+![secrets_rotation_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_rotation_lifecycle.svg)
 
 ---
 ## Dual-Secret Rotation Pattern
@@ -549,31 +404,7 @@ def lambda_handler(event, context):
 - Secrets must never appear in logs, artifacts, or build outputs
 - Use platform-native secret storage, not hardcoded values
 
-<svg viewBox="0 0 700 220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="250" y="10" width="200" height="45" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="8"/>
-  <text x="350" y="38" text-anchor="middle" font-size="14" font-weight="bold">CI/CD Pipeline</text>
-  <rect x="30" y="100" width="140" height="45" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="100" y="118" text-anchor="middle" font-size="11" font-weight="bold">Platform Secrets</text>
-  <text x="100" y="134" text-anchor="middle" font-size="10">GitHub, GitLab vars</text>
-  <rect x="200" y="100" width="140" height="45" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="270" y="118" text-anchor="middle" font-size="11" font-weight="bold">Vault / OIDC</text>
-  <text x="270" y="134" text-anchor="middle" font-size="10">Dynamic, short-lived</text>
-  <rect x="370" y="100" width="140" height="45" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="440" y="118" text-anchor="middle" font-size="11" font-weight="bold">Cloud IAM</text>
-  <text x="440" y="134" text-anchor="middle" font-size="10">IRSA, Workload ID</text>
-  <rect x="540" y="100" width="140" height="45" fill="#e1bee7" stroke="#6a1b9a" stroke-width="2" rx="5"/>
-  <text x="610" y="118" text-anchor="middle" font-size="11" font-weight="bold">SOPS Decrypt</text>
-  <text x="610" y="134" text-anchor="middle" font-size="10">In-pipeline decrypt</text>
-  <line x1="100" y1="100" x2="300" y2="55" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr6)"/>
-  <line x1="270" y1="100" x2="330" y2="55" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr6)"/>
-  <line x1="440" y1="100" x2="380" y2="55" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr6)"/>
-  <line x1="610" y1="100" x2="420" y2="55" stroke="#6a1b9a" stroke-width="1.5" marker-end="url(#arr6)"/>
-</svg>
+![secrets_in_ci_cd_pipelines](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_in_ci_cd_pipelines.svg)
 
 ---
 ## GitHub Actions Secrets
@@ -680,26 +511,7 @@ consul kv get myapp/db/host
 ---
 ## Config as Code vs Config Services
 
-<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="300" height="240" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="180" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">Config as Code</text>
-  <text x="60" y="80" font-size="12">+ Version controlled (git)</text>
-  <text x="60" y="105" font-size="12">+ Code review workflow</text>
-  <text x="60" y="130" font-size="12">+ No extra infrastructure</text>
-  <text x="60" y="155" font-size="12">+ Easy rollback</text>
-  <text x="60" y="185" font-size="12">- Requires deploy to apply</text>
-  <text x="60" y="210" font-size="12">- Not real-time</text>
-  <text x="60" y="240" font-size="12" font-weight="bold">Best: stable, audited config</text>
-  <rect x="370" y="20" width="300" height="240" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="520" y="50" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">Config Service</text>
-  <text x="400" y="80" font-size="12">+ Real-time updates</text>
-  <text x="400" y="105" font-size="12">+ Dynamic feature flags</text>
-  <text x="400" y="130" font-size="12">+ Cross-service consistency</text>
-  <text x="400" y="155" font-size="12">+ Built-in namespaces</text>
-  <text x="400" y="185" font-size="12">- Extra infra to manage</text>
-  <text x="400" y="210" font-size="12">- Availability dependency</text>
-  <text x="400" y="240" font-size="12" font-weight="bold">Best: dynamic, runtime config</text>
-</svg>
+![config_as_code_vs_config_services](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/config_as_code_vs_config_services.svg)
 
 ---
 ## Hybrid Approach: Best of Both Worlds

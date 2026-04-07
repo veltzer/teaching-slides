@@ -12,59 +12,13 @@ Redis enhances application architecture:
 - **Reduces infrastructure costs**: Efficient resource usage
 - **Enables real-time features**: Live data and interactions
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="210" y="10" width="150" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="33" text-anchor="middle" font-size="11" font-weight="bold">Application</text>
-  <rect x="210" y="80" width="150" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="105" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
-  <rect x="20" y="150" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="70" y="172" text-anchor="middle" font-size="10">Caching</text>
-  <rect x="140" y="150" width="100" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="190" y="172" text-anchor="middle" font-size="10">Sessions</text>
-  <rect x="260" y="150" width="100" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="310" y="172" text-anchor="middle" font-size="10">Queues</text>
-  <rect x="380" y="150" width="100" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="430" y="172" text-anchor="middle" font-size="10">PubSub</text>
-  <rect x="500" y="150" width="80" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="540" y="172" text-anchor="middle" font-size="10">Locks</text>
-  <line x1="285" y1="45" x2="285" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_08_integration)"/>
-  <line x1="285" y1="120" x2="285" y2="150" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
-  <defs>
-    <marker id="arrowd0_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![why_redis_in_modern_applications](../../../../svg/courses/databases/redis/09_integration/why_redis_in_modern_applications.svg)
 
 ---
 
 ## Popular Redis Client Libraries
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="130" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="85" y="42" text-anchor="middle" font-size="11" font-weight="bold">Python</text>
-  <text x="85" y="58" text-anchor="middle" font-size="10">redis-py</text>
-  <text x="85" y="73" text-anchor="middle" font-size="10">aioredis</text>
-  <rect x="170" y="20" width="130" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="235" y="42" text-anchor="middle" font-size="11" font-weight="bold">Node.js</text>
-  <text x="235" y="58" text-anchor="middle" font-size="10">ioredis</text>
-  <text x="235" y="73" text-anchor="middle" font-size="10">node-redis</text>
-  <rect x="320" y="20" width="130" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="385" y="42" text-anchor="middle" font-size="11" font-weight="bold">Java</text>
-  <text x="385" y="58" text-anchor="middle" font-size="10">Jedis</text>
-  <text x="385" y="73" text-anchor="middle" font-size="10">Lettuce</text>
-  <rect x="470" y="20" width="110" height="65" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="525" y="42" text-anchor="middle" font-size="11" font-weight="bold">Go / C#</text>
-  <text x="525" y="58" text-anchor="middle" font-size="10">go-redis</text>
-  <text x="525" y="73" text-anchor="middle" font-size="10">StackExchange</text>
-  <rect x="100" y="110" width="380" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="290" y="130" text-anchor="middle" font-size="10">All support: connection pooling, pipelining, Pub/Sub, cluster mode</text>
-  <defs>
-    <marker id="arrowd1_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![popular_redis_client_libraries](../../../../svg/courses/databases/redis/09_integration/popular_redis_client_libraries.svg)
 
 ---
 
@@ -96,32 +50,7 @@ When choosing a Redis client:
 
 Best practices for Redis connections:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="120" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="42" text-anchor="middle" font-size="10">App Thread 1</text>
-  <text x="80" y="58" text-anchor="middle" font-size="10">App Thread 2</text>
-  <text x="80" y="74" text-anchor="middle" font-size="10">App Thread 3</text>
-  <rect x="210" y="15" width="170" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="295" y="35" text-anchor="middle" font-size="11" font-weight="bold">Connection Pool</text>
-  <rect x="225" y="45" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="255" y="59" text-anchor="middle" font-size="9">conn 1</text>
-  <rect x="295" y="45" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="325" y="59" text-anchor="middle" font-size="9">conn 2</text>
-  <rect x="260" y="70" width="60" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="290" y="84" text-anchor="middle" font-size="9">conn 3</text>
-  <rect x="450" y="30" width="120" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="55" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
-  <text x="510" y="70" text-anchor="middle" font-size="10">:6379</text>
-  <line x1="140" y1="55" x2="210" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
-  <line x1="380" y1="55" x2="450" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_integration)"/>
-  <text x="295" y="125" text-anchor="middle" font-size="10" fill="#333">Pool reuses TCP connections; avoids per-request handshake overhead</text>
-  <text x="295" y="145" text-anchor="middle" font-size="10" fill="#666">Set max_connections, idle_timeout, retry_on_timeout</text>
-  <defs>
-    <marker id="arrowd2_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![connection_management](../../../../svg/courses/databases/redis/09_integration/connection_management.svg)
 
 ---
 
@@ -225,34 +154,7 @@ public class RedisConnectionPool {
 
 Converting application data for Redis storage:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="120" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="52" text-anchor="middle" font-size="11" font-weight="bold">App Object</text>
-  <text x="80" y="67" text-anchor="middle" font-size="10">{name, age, ...}</text>
-  <rect x="210" y="15" width="150" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="35" text-anchor="middle" font-size="11" font-weight="bold">Serialization</text>
-  <rect x="225" y="42" width="55" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="252" y="56" text-anchor="middle" font-size="9">JSON</text>
-  <rect x="290" y="42" width="55" height="20" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="317" y="56" text-anchor="middle" font-size="9">MsgPack</text>
-  <rect x="225" y="68" width="55" height="20" fill="#ffebee" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="252" y="82" text-anchor="middle" font-size="9">Protobuf</text>
-  <rect x="290" y="68" width="55" height="20" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="317" y="82" text-anchor="middle" font-size="9">Pickle</text>
-  <rect x="430" y="30" width="140" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="500" y="52" text-anchor="middle" font-size="11" font-weight="bold">Redis String</text>
-  <text x="500" y="67" text-anchor="middle" font-size="10">Binary-safe bytes</text>
-  <line x1="140" y1="55" x2="210" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
-  <line x1="360" y1="55" x2="430" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_08_integration)"/>
-  <text x="175" y="48" text-anchor="middle" font-size="9" fill="#666">encode</text>
-  <text x="395" y="48" text-anchor="middle" font-size="9" fill="#666">SET</text>
-  <text x="285" y="130" text-anchor="middle" font-size="10" fill="#333">JSON: readable, larger | MsgPack/Protobuf: compact, faster</text>
-  <defs>
-    <marker id="arrowd3_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![data_serialization](../../../../svg/courses/databases/redis/09_integration/data_serialization.svg)
 
 ---
 
@@ -297,21 +199,7 @@ user_hash = r.hgetall('user:123')
 
 ## Integrating Redis as a Cache
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_08_integration)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd4_08_integration)"/>
-  <defs>
-    <marker id="arrowd4_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![integrating_redis_as_a_cache](../../../../svg/courses/databases/redis/09_integration/integrating_redis_as_a_cache.svg)
 
 Common cache patterns:
 - Cache-aside (shown above)
@@ -452,21 +340,7 @@ public class ProductService {
 
 ## Redis for Session Management
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_08_integration)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd5_08_integration)"/>
-  <defs>
-    <marker id="arrowd5_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_for_session_management](../../../../svg/courses/databases/redis/09_integration/redis_for_session_management.svg)
 
 Benefits:
 - Centralized session storage
@@ -606,21 +480,7 @@ public class SessionController {
 
 ## Rate Limiting with Redis
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_08_integration)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd6_08_integration)"/>
-  <defs>
-    <marker id="arrowd6_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![rate_limiting_with_redis](../../../../svg/courses/databases/redis/09_integration/rate_limiting_with_redis.svg)
 
 ---
 
@@ -675,33 +535,7 @@ app.use('/api', rateLimit);
 
 ## Redis for Job Queues
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="60" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="75" y="80" text-anchor="middle" font-size="11" font-weight="bold">Producer</text>
-  <text x="75" y="95" text-anchor="middle" font-size="10">LPUSH job</text>
-  <rect x="200" y="30" width="180" height="100" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="50" text-anchor="middle" font-size="11" font-weight="bold">Redis List (Queue)</text>
-  <rect x="215" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="240" y="77" text-anchor="middle" font-size="9">job 3</text>
-  <rect x="275" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="300" y="77" text-anchor="middle" font-size="9">job 2</text>
-  <rect x="335" y="60" width="50" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="2"/>
-  <text x="360" y="77" text-anchor="middle" font-size="9">job 1</text>
-  <text x="290" y="115" text-anchor="middle" font-size="10" fill="#666">BRPOP (blocking pop)</text>
-  <rect x="450" y="40" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="62" text-anchor="middle" font-size="11" font-weight="bold">Worker 1</text>
-  <rect x="450" y="90" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="112" text-anchor="middle" font-size="11" font-weight="bold">Worker 2</text>
-  <line x1="130" y1="82" x2="200" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
-  <line x1="380" y1="72" x2="450" y2="58" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
-  <line x1="380" y1="82" x2="450" y2="107" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_08_integration)"/>
-  <text x="290" y="160" text-anchor="middle" font-size="10" fill="#333">LPUSH + BRPOP = reliable FIFO queue with blocking consumers</text>
-  <defs>
-    <marker id="arrowd7_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_for_job_queues](../../../../svg/courses/databases/redis/09_integration/redis_for_job_queues.svg)
 
 Benefits:
 - Simple implementation
@@ -798,31 +632,7 @@ emailQueue.on('failed', (job, err) => {
 
 ## Redis for Real-time Features
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="60" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="75" y="80" text-anchor="middle" font-size="11" font-weight="bold">Publisher</text>
-  <text x="75" y="95" text-anchor="middle" font-size="10">PUBLISH msg</text>
-  <rect x="210" y="40" width="160" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="290" y="60" text-anchor="middle" font-size="11" font-weight="bold">Redis PubSub</text>
-  <text x="290" y="80" text-anchor="middle" font-size="10">Channel: "chat:room1"</text>
-  <text x="290" y="100" text-anchor="middle" font-size="10" fill="#666">Real-time broadcast</text>
-  <rect x="440" y="20" width="130" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="505" y="42" text-anchor="middle" font-size="10">Subscriber (WS 1)</text>
-  <rect x="440" y="65" width="130" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="505" y="87" text-anchor="middle" font-size="10">Subscriber (WS 2)</text>
-  <rect x="440" y="110" width="130" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="505" y="132" text-anchor="middle" font-size="10">Subscriber (WS 3)</text>
-  <line x1="130" y1="82" x2="210" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arrowd8_08_integration)"/>
-  <line x1="370" y1="68" x2="440" y2="38" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
-  <line x1="370" y1="82" x2="440" y2="82" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
-  <line x1="370" y1="95" x2="440" y2="127" stroke="#333" stroke-width="1" marker-end="url(#arrowd8_08_integration)"/>
-  <text x="290" y="175" text-anchor="middle" font-size="10" fill="#333">PubSub enables chat, notifications, live updates via WebSockets</text>
-  <defs>
-    <marker id="arrowd8_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_for_real_time_features](../../../../svg/courses/databases/redis/09_integration/redis_for_real_time_features.svg)
 
 ---
 
@@ -1067,32 +877,7 @@ app.listen(3000, () => {
 
 ## Caching Strategies in Microservices
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="55" text-anchor="middle" font-size="10">Service A</text>
-  <rect x="20" y="90" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="115" text-anchor="middle" font-size="10">Service B</text>
-  <rect x="20" y="150" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="175" text-anchor="middle" font-size="10">Service C</text>
-  <rect x="200" y="20" width="170" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="42" text-anchor="middle" font-size="11" font-weight="bold">Shared Redis Cache</text>
-  <text x="285" y="60" text-anchor="middle" font-size="10">Common data (users, config)</text>
-  <rect x="200" y="110" width="170" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="285" y="132" text-anchor="middle" font-size="11" font-weight="bold">Per-Service Cache</text>
-  <text x="285" y="150" text-anchor="middle" font-size="10">Isolated, own TTL policy</text>
-  <rect x="440" y="65" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="505" y="85" text-anchor="middle" font-size="11" font-weight="bold">Database</text>
-  <text x="505" y="100" text-anchor="middle" font-size="10">Source of truth</text>
-  <line x1="120" y1="50" x2="200" y2="50" stroke="#333" stroke-width="1" marker-end="url(#arrowd9_08_integration)"/>
-  <line x1="120" y1="110" x2="200" y2="140" stroke="#333" stroke-width="1" marker-end="url(#arrowd9_08_integration)"/>
-  <line x1="370" y1="60" x2="440" y2="80" stroke="#333" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowd9_08_integration)"/>
-  <text x="415" y="58" text-anchor="middle" font-size="9" fill="#666">miss</text>
-  <defs>
-    <marker id="arrowd9_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![caching_strategies_in_microservices](../../../../svg/courses/databases/redis/09_integration/caching_strategies_in_microservices.svg)
 
 Key strategies:
 - Per-service caching
@@ -1104,36 +889,7 @@ Key strategies:
 
 ## Redis and Database Integration
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="60" width="100" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="80" text-anchor="middle" font-size="11" font-weight="bold">App</text>
-  <text x="70" y="95" text-anchor="middle" font-size="10">GET/SET</text>
-  <rect x="190" y="15" width="130" height="50" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="255" y="37" text-anchor="middle" font-size="11" font-weight="bold">Redis Cache</text>
-  <text x="255" y="52" text-anchor="middle" font-size="10">Fast reads</text>
-  <rect x="190" y="105" width="130" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="255" y="127" text-anchor="middle" font-size="11" font-weight="bold">PostgreSQL</text>
-  <text x="255" y="142" text-anchor="middle" font-size="10">Persistent store</text>
-  <line x1="120" y1="72" x2="190" y2="40" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_08_integration)"/>
-  <text x="145" y="48" text-anchor="middle" font-size="9" fill="#666">1. read</text>
-  <line x1="255" y1="65" x2="255" y2="105" stroke="#333" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowd10_08_integration)"/>
-  <text x="280" y="88" text-anchor="middle" font-size="9" fill="#c62828">miss</text>
-  <line x1="120" y1="90" x2="190" y2="130" stroke="#999" stroke-width="1" marker-end="url(#arrowd10_08_integration)"/>
-  <text x="140" y="118" text-anchor="middle" font-size="9" fill="#666">write</text>
-  <rect x="390" y="15" width="180" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="33" text-anchor="middle" font-size="10" font-weight="bold">Write-Through</text>
-  <text x="480" y="50" text-anchor="middle" font-size="10">Write to cache + DB</text>
-  <text x="480" y="63" text-anchor="middle" font-size="9" fill="#666">together</text>
-  <rect x="390" y="100" width="180" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="118" text-anchor="middle" font-size="10" font-weight="bold">Cache-Aside</text>
-  <text x="480" y="135" text-anchor="middle" font-size="10">App manages cache</text>
-  <text x="480" y="148" text-anchor="middle" font-size="9" fill="#666">populate on miss</text>
-  <defs>
-    <marker id="arrowd10_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_and_database_integration](../../../../svg/courses/databases/redis/09_integration/redis_and_database_integration.svg)
 
 Integration patterns:
 - Write-through cache
@@ -1147,29 +903,4 @@ Integration patterns:
 
 Robust Redis integration requires:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="60" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="85" text-anchor="middle" font-size="11" font-weight="bold">App Request</text>
-  <rect x="160" y="15" width="130" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="225" y="33" text-anchor="middle" font-size="11" font-weight="bold">Redis OK</text>
-  <text x="225" y="50" text-anchor="middle" font-size="10" fill="#2e7d32">Normal path</text>
-  <rect x="160" y="95" width="130" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="225" y="113" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Redis Down</text>
-  <text x="225" y="130" text-anchor="middle" font-size="10" fill="#c62828">Connection error</text>
-  <rect x="350" y="15" width="220" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="460" y="33" text-anchor="middle" font-size="10" font-weight="bold">Retry with backoff</text>
-  <text x="460" y="50" text-anchor="middle" font-size="10">Exponential: 100ms, 200ms, 400ms</text>
-  <rect x="350" y="75" width="220" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="460" y="97" text-anchor="middle" font-size="10" font-weight="bold">Circuit breaker: skip Redis</text>
-  <rect x="350" y="125" width="220" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="460" y="147" text-anchor="middle" font-size="10" font-weight="bold">Fallback: query DB directly</text>
-  <line x1="120" y1="72" x2="160" y2="38" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
-  <line x1="120" y1="88" x2="160" y2="118" stroke="#c62828" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
-  <line x1="290" y1="118" x2="350" y2="92" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
-  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#333">Never let Redis failure break your application</text>
-  <defs>
-    <marker id="arrowd11_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![error_handling_and_resilience](../../../../svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)

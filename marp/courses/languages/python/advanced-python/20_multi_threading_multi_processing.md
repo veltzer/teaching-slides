@@ -19,23 +19,7 @@
 - Python can handle both, but with different tools
 - Understanding the difference guides tool selection
 
-<svg viewBox="0 0 500 200">
-  <rect x="50" y="40" width="180" height="30" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <rect x="50" y="80" width="180" height="30" fill="#ffe0e0" stroke="#000" stroke-width="2"/>
-  <rect x="50" y="120" width="180" height="30" fill="#e0ffe0" stroke="#000" stroke-width="2"/>
-  <text x="140" y="60" text-anchor="middle" font-family="sans-serif">Task A</text>
-  <text x="140" y="100" text-anchor="middle" font-family="sans-serif">Task B</text>
-  <text x="140" y="140" text-anchor="middle" font-family="sans-serif">Task C</text>
-  <text x="140" y="180" text-anchor="middle" font-family="sans-serif">Concurrent (Threading)</text>
-  <rect x="270" y="40" width="180" height="110" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <rect x="270" y="40" width="60" height="110" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <rect x="330" y="40" width="60" height="110" fill="#ffe0e0" stroke="#000" stroke-width="2"/>
-  <rect x="390" y="40" width="60" height="110" fill="#e0ffe0" stroke="#000" stroke-width="2"/>
-  <text x="300" y="100" text-anchor="middle" font-family="sans-serif" font-size="12">Task A</text>
-  <text x="360" y="100" text-anchor="middle" font-family="sans-serif" font-size="12">Task B</text>
-  <text x="420" y="100" text-anchor="middle" font-family="sans-serif" font-size="12">Task C</text>
-  <text x="360" y="180" text-anchor="middle" font-family="sans-serif">Parallel (Multiprocessing)</text>
-</svg>
+![concurrency_vs_parallelism_in_python](../../../../../svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/concurrency_vs_parallelism_in_python.svg)
 
 ---
 
@@ -58,29 +42,7 @@
 - Concurrent.futures: high-level abstraction for both threading and multiprocessing
 - Third-party libraries (Dask, Joblib, etc.)
 
-<svg viewBox="0 0 500 230">
-  <rect x="50" y="40" width="400" height="30" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <text x="250" y="60" text-anchor="middle" font-family="sans-serif">Python Concurrency Models</text>
-
-  <rect x="50" y="90" width="110" height="60" fill="#ffe0e0" stroke="#000" stroke-width="2"/>
-  <text x="105" y="110" text-anchor="middle" font-family="sans-serif" font-size="14">Threading</text>
-  <text x="105" y="130" text-anchor="middle" font-family="sans-serif" font-size="10">Shared Memory</text>
-  <text x="105" y="140" text-anchor="middle" font-family="sans-serif" font-size="10">Limited by GIL</text>
-
-  <rect x="195" y="90" width="110" height="60" fill="#e0ffe0" stroke="#000" stroke-width="2"/>
-  <text x="250" y="110" text-anchor="middle" font-family="sans-serif" font-size="14">Multiprocessing</text>
-  <text x="250" y="130" text-anchor="middle" font-family="sans-serif" font-size="10">Separate Processes</text>
-  <text x="250" y="140" text-anchor="middle" font-family="sans-serif" font-size="10">Bypasses GIL</text>
-
-  <rect x="340" y="90" width="110" height="60" fill="#fff0e0" stroke="#000" stroke-width="2"/>
-  <text x="395" y="110" text-anchor="middle" font-family="sans-serif" font-size="14">Asyncio</text>
-  <text x="395" y="130" text-anchor="middle" font-family="sans-serif" font-size="10">Cooperative</text>
-  <text x="395" y="140" text-anchor="middle" font-family="sans-serif" font-size="10">Event Loop Based</text>
-
-  <rect x="120" y="170" width="260" height="40" fill="#f0e0ff" stroke="#000" stroke-width="2"/>
-  <text x="250" y="190" text-anchor="middle" font-family="sans-serif" font-size="14">concurrent.futures</text>
-  <text x="250" y="200" text-anchor="middle" font-family="sans-serif" font-size="10">High-level Interface</text>
-</svg>
+![python_concurrency_models](../../../../../svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/python_concurrency_models.svg)
 
 ---
 
@@ -190,31 +152,7 @@ for t in threads:
 - Blocked/Waiting: thread is waiting for resources/events
 - Terminated: thread execution completed
 
-<svg viewBox="0 0 500 200">
-  <rect x="50" y="80" width="80" height="40" rx="10" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <rect x="180" y="80" width="80" height="40" rx="10" fill="#e0ffe0" stroke="#000" stroke-width="2"/>
-  <rect x="310" y="80" width="80" height="40" rx="10" fill="#ffe0e0" stroke="#000" stroke-width="2"/>
-  <rect x="310" y="150" width="80" height="40" rx="10" fill="#fff0e0" stroke="#000" stroke-width="2"/>
-  <rect x="180" y="150" width="80" height="40" rx="10" fill="#f0e0ff" stroke="#000" stroke-width="2"/>
-  <text x="90" y="105" text-anchor="middle" font-family="sans-serif" font-size="12">New</text>
-  <text x="220" y="105" text-anchor="middle" font-family="sans-serif" font-size="12">Runnable</text>
-  <text x="350" y="105" text-anchor="middle" font-family="sans-serif" font-size="12">Running</text>
-  <text x="350" y="175" text-anchor="middle" font-family="sans-serif" font-size="12">Blocked</text>
-  <text x="220" y="175" text-anchor="middle" font-family="sans-serif" font-size="12">Terminated</text>
-  <path d="M130,100 L180,100" stroke="#000" stroke-width="2" marker-end="url(#lifecycle-arrow)"/>
-  <text x="155" y="90" text-anchor="middle" font-family="sans-serif" font-size="10">start()</text>
-  <path d="M260,100 L310,100" stroke="#000" stroke-width="2" marker-end="url(#lifecycle-arrow)"/>
-  <path d="M350,120 L350,150" stroke="#000" stroke-width="2" marker-end="url(#lifecycle-arrow)"/>
-  <text x="365" y="135" text-anchor="middle" font-family="sans-serif" font-size="10">I/O, sleep()</text>
-  <path d="M310,170 L260,170" stroke="#000" stroke-width="2" marker-end="url(#lifecycle-arrow)"/>
-  <text x="285" y="160" text-anchor="middle" font-family="sans-serif" font-size="10">return</text>
-  <path d="M350,150 C350,130 290,100 260,100" stroke="#000" stroke-width="2" marker-end="url(#lifecycle-arrow)"/>
-  <defs>
-    <marker id="lifecycle-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#000"/>
-    </marker>
-  </defs>
-</svg>
+![thread_lifecycle_in_python](../../../../../svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/thread_lifecycle_in_python.svg)
 
 ---
 
@@ -646,26 +584,7 @@ if __name__ == "__main__":  # Required for Windows
 - Process values are copied, not shared by default
 - Explicit sharing mechanisms needed for processes
 
-<svg viewBox="0 0 500 250">
-  <!-- Process Model -->
-  <rect x="50" y="30" width="180" height="200" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <text x="140" y="50" text-anchor="middle" font-family="sans-serif">Process 1</text>
-  <rect x="70" y="60" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="140" y="85" text-anchor="middle" font-family="sans-serif" font-size="12">Python Interpreter</text>
-  <rect x="70" y="110" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="140" y="135" text-anchor="middle" font-family="sans-serif" font-size="12">Memory Space</text>
-  <rect x="70" y="160" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="140" y="185" text-anchor="middle" font-family="sans-serif" font-size="12">Variables</text>
-
-  <rect x="270" y="30" width="180" height="200" fill="#e0e0ff" stroke="#000" stroke-width="2"/>
-  <text x="360" y="50" text-anchor="middle" font-family="sans-serif">Process 2</text>
-  <rect x="290" y="60" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="360" y="85" text-anchor="middle" font-family="sans-serif" font-size="12">Python Interpreter</text>
-  <rect x="290" y="110" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="360" y="135" text-anchor="middle" font-family="sans-serif" font-size="12">Memory Space</text>
-  <rect x="290" y="160" width="140" height="40" fill="#fff" stroke="#000" stroke-width="1"/>
-  <text x="360" y="185" text-anchor="middle" font-family="sans-serif" font-size="12">Variables</text>
-</svg>
+![process_vs_thread_memory_model](../../../../../svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/process_vs_thread_memory_model.svg)
 
 ---
 

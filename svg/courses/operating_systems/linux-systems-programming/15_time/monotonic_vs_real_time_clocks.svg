@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Clock Behavior with NTP Adjustment</text>
+
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="320" x2="100" y2="80" stroke="#333" stroke-width="2"/>
+
+  <text x="50" y="200" font-size="11" transform="rotate(-90, 50, 200)">Time Value</text>
+  <text x="400" y="350" text-anchor="middle" font-size="11">Real Time →</text>
+
+  <!-- CLOCK_REALTIME line with jump -->
+  <path d="M 100 280 L 250 200 L 250 240 L 400 160 L 550 80"
+        stroke="#E74C3C" stroke-width="3" fill="none"/>
+  <text x="300" y="180" fill="#E74C3C" font-size="11">CLOCK_REALTIME</text>
+  <text x="250" y="260" fill="#E74C3C" font-size="9">← NTP adjustment</text>
+
+  <!-- CLOCK_MONOTONIC straight line -->
+  <path d="M 100 280 L 550 80"
+        stroke="#2ECC71" stroke-width="3" fill="none"/>
+  <text x="450" y="140" fill="#2ECC71" font-size="11">CLOCK_MONOTONIC</text>
+
+  <text x="150" y="100" font-size="9">10:00:00</text>
+  <text sympathique x="550" y="100" font-size="9">10:00:05</text>
+
+  <rect x="150" y="360" width="500" height="30" fill="#ECF0F1" stroke="#333" stroke-width="1"/>
+  <text x="400" y="380" text-anchor="middle" font-size="10">REALTIME: Can jump backward/forward (NTP, user changes)</text>
+</svg>

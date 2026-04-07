@@ -29,31 +29,7 @@ Every command you run creates a process!
 
 ## Process Components
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="320" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Process Structure</text>
-
-  <rect x="220" y="70" width="360" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="12">Process Control Block (PCB)</text>
-
-  <rect x="220" y="120" width="170" height="30" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="305" y="140" text-anchor="middle" fill="white" font-size="11">PID, PPID, State</text>
-
-  <rect x="410" y="120" width="170" height="30" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="495" y="140" text-anchor="middle" fill="white" font-size="11">Credentials (UID, GID)</text>
-
-  <rect x="220" y="160" width="360" height="40" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="185" text-anchor="middle" fill="white" font-size="12">Memory Management Info</text>
-
-  <rect x="220" y="210" width="360" height="40" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="400" y="235" text-anchor="middle" fill="black" font-size="12">File Descriptors Table</text>
-
-  <rect x="220" y="260" width="360" height="40" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" fill="white" font-size="12">Signal Handlers</text>
-
-  <rect x="220" y="310" width="360" height="40" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="335" text-anchor="middle" fill="white" font-size="12">CPU Context (Registers)</text>
-</svg>
+![process_components](../../../../svg/courses/operating_systems/linux-systems-programming/04_processes/process_components.svg)
 
 ---
 
@@ -115,29 +91,7 @@ cat /proc/$$/stat
 
 ## Init System Evolution
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <line x1="100" y1="200" x2="700" y2="200" stroke="#333" stroke-width="2"/>
-
-  <circle cx="150" cy="200" r="5" fill="#E74C3C"/>
-  <text x="150" y="180" text-anchor="middle" font-size="11">1983</text>
-  <text x="150" y="230" text-anchor="middle" font-size="10">SysV Init</text>
-  <text x="150" y="245" text-anchor="middle" font-size="9">Sequential</text>
-
-  <circle cx="300" cy="200" r="5" fill="#3498DB"/>
-  <text x="300" y="180" text-anchor="middle" font-size="11">2006</text>
-  <text x="300" y="230" text-anchor="middle" font-size="10">Upstart</text>
-  <text x="300" y="245" text-anchor="middle" font-size="9">Event-based</text>
-
-  <circle cx="450" cy="200" r="5" fill="#2ECC71"/>
-  <text x="450" y="180" text-anchor="middle" font-size="11">2010</text>
-  <text x="450" y="230" text-anchor="middle" font-size="10">systemd</text>
-  <text x="450" y="245" text-anchor="middle" font-size="9">Parallel</text>
-
-  <circle cx="600" cy="200" r="5" fill="#F39C12"/>
-  <text x="600" y="180" text-anchor="middle" font-size="11">Others</text>
-  <text x="600" y="230" text-anchor="middle" font-size="10">OpenRC/runit</text>
-  <text x="600" y="245" text-anchor="middle" font-size="9">Alternative</text>
-</svg>
+![init_system_evolution](../../../../svg/courses/operating_systems/linux-systems-programming/04_processes/init_system_evolution.svg)
 
 ---
 
@@ -157,36 +111,7 @@ cat /proc/$$/stat
 
 ## Systemd Architecture
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="50" width="200" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="14">systemd (PID 1)</text>
-
-  <rect x="50" y="150" width="140" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="120" y="175" text-anchor="middle" fill="white" font-size="11">systemd-journald</text>
-
-  <rect x="210" y="150" width="140" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="280" y="175" text-anchor="middle" fill="white" font-size="11">systemd-networkd</text>
-
-  <rect x="370" y="150" width="140" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="440" y="175" text-anchor="middle" fill="white" font-size="11">systemd-resolved</text>
-
-  <rect x="530" y="150" width="140" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="600" y="175" text-anchor="middle" fill="white" font-size="11">systemd-logind</text>
-
-  <rect x="150" y="250" width="120" height="40" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="210" y="275" text-anchor="middle" fill="white" font-size="11">Service Units</text>
-
-  <rect x="290" y="250" width="120" height="40" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="350" y="275" text-anchor="middle" fill="white" font-size="11">Target Units</text>
-
-  <rect x="430" y="250" width="120" height="40" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="490" y="275" text-anchor="middle" fill="white" font-size="11">Timer Units</text>
-
-  <line x1="400" y1="110" x2="120" y2="150" stroke="#333" stroke-width="1"/>
-  <line x1="400" y1="110" x2="280" y2="150" stroke="#333" stroke-width="1"/>
-  <line x1="400" y1="110" x2="440" y2="150" stroke="#333" stroke-width="1"/>
-  <line x1="400" y1="110" x2="600" y2="150" stroke="#333" stroke-width="1"/>
-</svg>
+![systemd_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/04_processes/systemd_architecture.svg)
 
 ---
 
@@ -379,40 +304,7 @@ int main() {
 
 ## How fork() Works
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Fork Creates Exact Copy</text>
-
-  <rect x="50" y="60" width="250" height="300" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="175" y="50" text-anchor="middle" font-size="12">Before fork()</text>
-  <rect x="70" y="80" width="210" height="30" fill="#2980B9"/>
-  <text x="175" y="100" text-anchor="middle" fill="white" font-size="10">PID: 1234</text>
-  <rect x="70" y="120" width="210" height="30" fill="#2980B9"/>
-  <text x="175" y="140" text-anchor="middle" fill="white" font-size="10">Memory: Stack, Heap</text>
-  <rect x="70" y="160" width="210" height="30" fill="#2980B9"/>
-  <text x="175" y="180" text-anchor="middle" fill="white" font-size="10">Files: 0,1,2,...</text>
-  <rect x="70" y="200" width="210" height="30" fill="#2980B9"/>
-  <text x="175" y="220" text-anchor="middle" fill="white" font-size="10">Signals: Handlers</text>
-
-  <text x="350" y="200" text-anchor="middle" font-size="20">→</text>
-
-  <rect x="450" y="60" width="150" height="150" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="525" y="50" text-anchor="middle" font-size="12">Parent After</text>
-  <rect x="460" y="80" width="130" height="25" fill="#C0392B"/>
-  <text x="525" y="98" text-anchor="middle" fill="white" font-size="9">PID: 1234</text>
-  <rect x="460" y="110" width="130" height="25" fill="#C0392B"/>
-  <text x="525" y="128" text-anchor="middle" fill="white" font-size="9">fork() returns: 1235</text>
-  <rect x="460" y="140" width="130" height="25" fill="#C0392B"/>
-  <text x="525" y="158" text-anchor="middle" fill="white" font-size="9">COW Memory</text>
-
-  <rect x="450" y="230" width="150" height="150" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="525" y="220" text-anchor="middle" font-size="12">Child After</text>
-  <rect x="460" y="250" width="130" height="25" fill="#27AE60"/>
-  <text x="525" y="268" text-anchor="middle" fill="white" font-size="9">PID: 1235</text>
-  <rect x="460" y="280" width="130" height="25" fill="#27AE60"/>
-  <text x="525" y="298" text-anchor="middle" fill="white" font-size="9">fork() returns: 0</text>
-  <rect x="460" y="310" width="130" height="25" fill="#27AE60"/>
-  <text x="525" y="328" text-anchor="middle" fill="white" font-size="9">COW Memory</text>
-</svg>
+![how_fork_works](../../../../svg/courses/operating_systems/linux-systems-programming/04_processes/how_fork_works.svg)
 
 ---
 
@@ -518,46 +410,7 @@ if (pid > 0) {
 
 ## Process State Transitions
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="150" cy="100" rx="70" ry="35" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="150" y="105" text-anchor="middle" fill="white" font-size="11">NEW</text>
-
-  <ellipse cx="400" cy="100" rx="70" ry="35" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="11">RUNNABLE</text>
-
-  <ellipse cx="650" cy="100" rx="70" ry="35" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="650" y="105" text-anchor="middle" fill="white" font-size="11">RUNNING</text>
-
-  <ellipse cx="250" cy="250" rx="70" ry="35" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="250" y="255" text-anchor="middle" fill="white" font-size="11">SLEEPING</text>
-
-  <ellipse cx="500" cy="250" rx="70" ry="35" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="500" y="255" text-anchor="middle" fill="white" font-size="11">STOPPED</text>
-
-  <ellipse cx="650" cy="320" rx="70" ry="35" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="650" y="325" text-anchor="middle" fill="white" font-size="11">ZOMBIE</text>
-
-  <path d="M 220 100 L 330 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 470 100 L 580 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 650 135 L 650 285" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 620 120 Q 500 150 430 120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 370 120 L 280 215" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 280 230 Q 350 180 370 120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 430 120 L 470 215" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <text x="275" y="90" font-size="9">fork/exec</text>
-  <text x="525" y="90" font-size="9">schedule</text>
-  <text x="525" y="140" font-size="9">preempt</text>
-  <text x="320" y="170" font-size="9">sleep</text>
-  <text x="320" y="200" font-size="9">wake</text>
-  <text x="660" y="200" font-size="9">exit</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![process_state_transitions](../../../../svg/courses/operating_systems/linux-systems-programming/04_processes/process_state_transitions.svg)
 
 ---
 

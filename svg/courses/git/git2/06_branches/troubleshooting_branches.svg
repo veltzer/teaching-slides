@@ -1,0 +1,25 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Common Branch Issues</text>
+  <rect x="50" y="80" width="350" height="120" fill="#FFEBEE" stroke="#C62828" stroke-width="2" rx="5"/>
+  <text x="225" y="110" text-anchor="middle" font-size="14" font-weight="bold">Problem: Diverged Branches</text>
+  <text x="70" y="135" font-size="11">Your branch and origin have diverged</text>
+  <text x="70" y="155" font-size="11" font-family="monospace">git pull --rebase</text>
+  <text x="70" y="175" font-size="11">or merge remote changes:</text>
+  <text x="70" y="190" font-size="11" font-family="monospace">git pull --no-rebase</text>
+  <rect x="420" y="80" width="330" height="120" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
+  <text x="585" y="110" text-anchor="middle" font-size="14" font-weight="bold">Problem: Detached HEAD</text>
+  <text x="440" y="135" font-size="11">Not on any branch</text>
+  <text x="440" y="155" font-size="11" font-family="monospace">git branch temp-branch</text>
+  <text x="440" y="175" font-size="11">or return to branch:</text>
+  <text x="440" y="190" font-size="11" font-family="monospace">git switch main</text>
+  <rect x="50" y="220" width="350" height="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="225" y="250" text-anchor="middle" font-size="14" font-weight="bold">Problem: Can't Delete Branch</text>
+  <text x="70" y="275" font-size="11">Branch not fully merged</text>
+  <text x="70" y="295" font-size="11" font-family="monospace">git branch -D branch-name</text>
+  <text x="70" y="315" font-size="11">⚠️ Force delete (loses commits)</text>
+  <rect x="420" y="220" width="330" height="120" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+  <text x="585" y="250" text-anchor="middle" font-size="14" font-weight="bold">Problem: Lost Branch</text>
+  <text x="440" y="275" font-size="11">Accidentally deleted branch</text>
+  <text x="440" y="295" font-size="11" font-family="monospace">git reflog | grep branch-name</text>
+  <text x="440" y="315" font-size="11" font-family="monospace">git branch recovered abc123</text>
+</svg>

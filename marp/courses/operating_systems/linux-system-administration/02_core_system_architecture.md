@@ -4,28 +4,7 @@
 ---
 ## Linux Filesystem Hierarchy Standard (FHS)
 
-<svg width="600" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="5" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="28" text-anchor="middle" font-size="13" font-weight="bold">/</text>
-  <rect x="30" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="70" y="80" text-anchor="middle" font-size="10">/bin</text>
-  <rect x="120" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="160" y="80" text-anchor="middle" font-size="10">/etc</text>
-  <rect x="210" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="250" y="80" text-anchor="middle" font-size="10">/home</text>
-  <rect x="300" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="340" y="80" text-anchor="middle" font-size="10">/var</text>
-  <rect x="390" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="430" y="80" text-anchor="middle" font-size="10">/usr</text>
-  <rect x="480" y="60" width="80" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="520" y="80" text-anchor="middle" font-size="10">/tmp</text>
-  <line x1="300" y1="40" x2="70" y2="60" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="160" y2="60" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="250" y2="60" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="340" y2="60" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="430" y2="60" stroke="#333" stroke-width="1"/>
-  <line x1="300" y1="40" x2="520" y2="60" stroke="#333" stroke-width="1"/>
-</svg>
+![linux_filesystem_hierarchy_standard_fhs](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
 
 - `/bin`, `/sbin` - essential binaries
 - `/etc` - system configuration
@@ -107,27 +86,7 @@ df -i
 ---
 ## The Boot Process Overview
 
-<svg width="650" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="25" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="65" y="55" text-anchor="middle" font-size="11">BIOS/UEFI</text>
-  <rect x="140" y="25" width="110" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="195" y="55" text-anchor="middle" font-size="11">GRUB</text>
-  <rect x="270" y="25" width="110" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="325" y="55" text-anchor="middle" font-size="11">Kernel</text>
-  <rect x="400" y="25" width="110" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="455" y="55" text-anchor="middle" font-size="11">initramfs</text>
-  <rect x="530" y="25" width="110" height="50" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="585" y="55" text-anchor="middle" font-size="11">systemd</text>
-  <line x1="120" y1="50" x2="140" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arr01a)"/>
-  <line x1="250" y1="50" x2="270" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arr01a)"/>
-  <line x1="380" y1="50" x2="400" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arr01a)"/>
-  <line x1="510" y1="50" x2="530" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arr01a)"/>
-  <defs>
-    <marker id="arr01a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![the_boot_process_overview](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
 
 1. Firmware (BIOS/UEFI) performs POST and finds boot device
 1. Bootloader (`GRUB2`) loads kernel and `initramfs`
@@ -832,28 +791,7 @@ systemctl list-sockets
 ---
 ## Socket Activation Benefits
 
-<svg width="600" height="140" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="60" text-anchor="middle" font-size="10">Client Request</text>
-  <text x="70" y="75" text-anchor="middle" font-size="9">port 8080</text>
-  <rect x="170" y="40" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="60" text-anchor="middle" font-size="10">systemd</text>
-  <text x="230" y="75" text-anchor="middle" font-size="9">holds socket</text>
-  <rect x="330" y="40" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="390" y="60" text-anchor="middle" font-size="10">Starts Service</text>
-  <text x="390" y="75" text-anchor="middle" font-size="9">on demand</text>
-  <rect x="490" y="40" width="100" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="60" text-anchor="middle" font-size="10">Service</text>
-  <text x="540" y="75" text-anchor="middle" font-size="9">handles request</text>
-  <line x1="130" y1="65" x2="170" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr01b)"/>
-  <line x1="290" y1="65" x2="330" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr01b)"/>
-  <line x1="450" y1="65" x2="490" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr01b)"/>
-  <defs>
-    <marker id="arr01b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![socket_activation_benefits](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
 
 - Faster boot: services start only when needed
 - No port conflicts: `systemd` holds sockets during restarts
@@ -1160,25 +1098,7 @@ crash /usr/lib/debug/boot/vmlinux-$(uname -r) \
 
 The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
 
-<svg width="600" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="10" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="80" y="32" text-anchor="middle" font-size="10">LVM</text>
-  <rect x="160" y="10" width="100" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="210" y="32" text-anchor="middle" font-size="10">LUKS</text>
-  <rect x="290" y="10" width="100" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="340" y="32" text-anchor="middle" font-size="10">Multipath</text>
-  <rect x="420" y="10" width="100" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="470" y="32" text-anchor="middle" font-size="10">dm-cache</text>
-  <rect x="140" y="70" width="250" height="35" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="265" y="92" text-anchor="middle" font-size="11">Device Mapper (kernel)</text>
-  <rect x="140" y="120" width="250" height="35" fill="#e0e0e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="265" y="142" text-anchor="middle" font-size="11">Physical Block Devices</text>
-  <line x1="80" y1="45" x2="200" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="210" y1="45" x2="240" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="340" y1="45" x2="290" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="470" y1="45" x2="350" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="265" y1="105" x2="265" y2="120" stroke="#333" stroke-width="1"/>
-</svg>
+![device_mapper_overview](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
 
 ```bash
 # List device mapper devices

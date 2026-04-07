@@ -61,35 +61,7 @@ pip install diffusers accelerate
 
 **Generative AI** = AI systems that create new content
 
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="220" viewBox="0 0 580 220">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect width="580" height="220" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="290" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Generative AI — How It Works</text>
-  <!-- input -->
-  <rect x="20" y="50" width="150" height="50" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="95" y="72" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">Input Prompt</text>
-  <text x="95" y="89" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">"Write a poem about coding"</text>
-  <!-- arrow -->
-  <line x1="170" y1="75" x2="208" y2="75" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- model -->
-  <rect x="210" y="38" width="160" height="74" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="2"/>
-  <text x="290" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Generative Model</text>
-  <text x="290" y="80" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">trained on vast</text>
-  <text x="290" y="96" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">text corpora</text>
-  <!-- arrow -->
-  <line x1="370" y1="75" x2="408" y2="75" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- output -->
-  <rect x="410" y="38" width="150" height="115" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="485" y="62" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">Output</text>
-  <text x="485" y="82" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle" font-style="italic">"In silicon dreams,</text>
-  <text x="485" y="98" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle" font-style="italic">where logic streams,</text>
-  <text x="485" y="114" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle" font-style="italic">the coder writes</text>
-  <text x="485" y="130" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle" font-style="italic">through endless nights..."</text>
-</svg>
+![what_is_generative_ai](../../../../svg/courses/ai/generative-ai-applications/01_overview/what_is_generative_ai.svg)
 
 Unlike **discriminative** models (classify existing data), generative models **produce** new data.
 
@@ -97,44 +69,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ## The Generative AI Landscape
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="220" viewBox="0 0 660 220">
-  <rect width="660" height="220" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Generative AI Ecosystem</text>
-  <!-- col headers -->
-  <rect x="20" y="36" width="145" height="28" fill="#1565c0" rx="4"/>
-  <text x="92" y="55" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">TEXT</text>
-  <rect x="172" y="36" width="145" height="28" fill="#7b1fa2" rx="4"/>
-  <text x="244" y="55" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">IMAGE</text>
-  <rect x="324" y="36" width="145" height="28" fill="#e65100" rx="4"/>
-  <text x="396" y="55" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">AUDIO</text>
-  <rect x="476" y="36" width="164" height="28" fill="#2e7d32" rx="4"/>
-  <text x="558" y="55" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">VIDEO</text>
-  <!-- data rows -->
-  <text x="92" y="86" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">GPT-4 / GPT-5</text>
-  <text x="244" y="86" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">DALL-E 3</text>
-  <text x="396" y="86" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Whisper</text>
-  <text x="558" y="86" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Sora</text>
-  <text x="92" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Claude</text>
-  <text x="244" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Midjourney</text>
-  <text x="396" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Bark</text>
-  <text x="558" y="108" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Runway Gen-2</text>
-  <text x="92" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Gemini</text>
-  <text x="244" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Stable Diffusion</text>
-  <text x="396" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">MusicLM</text>
-  <text x="558" y="130" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Pika Labs</text>
-  <text x="92" y="152" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">LLaMA / Mistral</text>
-  <text x="244" y="152" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Flux</text>
-  <text x="396" y="152" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Eleven Labs</text>
-  <text x="558" y="152" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Stable Video Diff.</text>
-  <!-- grid lines -->
-  <line x1="20" y1="64" x2="640" y2="64" stroke="#ccc" stroke-width="1"/>
-  <line x1="20" y1="96" x2="640" y2="96" stroke="#eee" stroke-width="1"/>
-  <line x1="20" y1="118" x2="640" y2="118" stroke="#eee" stroke-width="1"/>
-  <line x1="20" y1="140" x2="640" y2="140" stroke="#eee" stroke-width="1"/>
-  <line x1="170" y1="36" x2="170" y2="165" stroke="#ccc" stroke-width="1"/>
-  <line x1="322" y1="36" x2="322" y2="165" stroke="#ccc" stroke-width="1"/>
-  <line x1="474" y1="36" x2="474" y2="165" stroke="#ccc" stroke-width="1"/>
-</svg>
+![the_generative_ai_landscape](../../../../svg/courses/ai/generative-ai-applications/01_overview/the_generative_ai_landscape.svg)
 
 ---
 
@@ -146,34 +81,7 @@ Three converging factors enabled the current explosion:
 1. **Scale of compute** — Thousands of GPUs training for months
 1. **Architectural breakthroughs** — The Transformer (2017)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="230" viewBox="0 0 580 230">
-  <rect width="580" height="230" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="290" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">LLM Performance Growth Over Time</text>
-  <!-- axes -->
-  <line x1="60" y1="40" x2="60" y2="180" stroke="#333" stroke-width="2"/>
-  <line x1="60" y1="180" x2="540" y2="180" stroke="#333" stroke-width="2"/>
-  <text x="25" y="110" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle" transform="rotate(-90,25,110)">Performance</text>
-  <!-- x labels -->
-  <text x="80" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2019</text>
-  <text x="155" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2020</text>
-  <text x="235" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2021</text>
-  <text x="315" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2022</text>
-  <text x="395" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2023</text>
-  <text x="475" y="196" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">2024</text>
-  <!-- exponential curve approximated with polyline -->
-  <polyline points="80,170 155,155 235,138 315,115 395,82 475,45" fill="none" stroke="#1565c0" stroke-width="2.5"/>
-  <!-- model labels -->
-  <circle cx="80" cy="170" r="4" fill="#1565c0"/>
-  <text x="85" y="165" font-family="sans-serif" font-size="11" fill="#333">GPT-2</text>
-  <circle cx="155" cy="155" r="4" fill="#1565c0"/>
-  <text x="160" y="150" font-family="sans-serif" font-size="11" fill="#333">GPT-3</text>
-  <circle cx="315" cy="115" r="4" fill="#1565c0"/>
-  <text x="320" y="110" font-family="sans-serif" font-size="11" fill="#333">GPT-3.5</text>
-  <circle cx="395" cy="82" r="4" fill="#1565c0"/>
-  <text x="400" y="77" font-family="sans-serif" font-size="11" fill="#333">GPT-4</text>
-  <circle cx="475" cy="45" r="4" fill="#e65100"/>
-  <text x="440" y="42" font-family="sans-serif" font-size="11" fill="#e65100">GPT-5 / Claude</text>
-</svg>
+![why_generative_ai_matters_now](../../../../svg/courses/ai/generative-ai-applications/01_overview/why_generative_ai_matters_now.svg)
 
 ---
 
@@ -195,49 +103,7 @@ Three converging factors enabled the current explosion:
 
 ## How This Course Fits Together
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" viewBox="0 0 660 340">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect width="660" height="340" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Course Outline — 5-Day Schedule</text>
-  <!-- Day 1 -->
-  <rect x="20" y="40" width="175" height="80" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="107" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">Day 1: FOUNDATIONS</text>
-  <text x="107" y="78" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">How LLMs work</text>
-  <text x="107" y="95" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">GPT architecture</text>
-  <!-- arrow D1->D2 -->
-  <line x1="195" y1="80" x2="223" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Day 2 -->
-  <rect x="225" y="40" width="175" height="80" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="312" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">Day 2: APIs &amp; PROMPTS</text>
-  <text x="312" y="78" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">OpenAI API</text>
-  <text x="312" y="95" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Prompt Engineering</text>
-  <text x="312" y="112" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Fine-tuning</text>
-  <!-- arrow D2->D3 -->
-  <line x1="400" y1="80" x2="428" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Day 4 -->
-  <rect x="430" y="40" width="200" height="80" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="530" y="60" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e65100" text-anchor="middle">Day 4: OPEN SOURCE</text>
-  <text x="530" y="78" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">HuggingFace</text>
-  <text x="530" y="95" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">LoRA / QLoRA</text>
-  <text x="530" y="112" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Local models</text>
-  <!-- Day 3 -->
-  <rect x="225" y="170" width="175" height="80" fill="#f3e5f5" rx="4" stroke="#7b1fa2" stroke-width="1.5"/>
-  <text x="312" y="190" font-family="sans-serif" font-size="12" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Day 3: AGENTS</text>
-  <text x="312" y="208" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">LangChain</text>
-  <text x="312" y="225" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Memory &amp; Custom DB</text>
-  <!-- arrow D2->D3 vertical -->
-  <line x1="312" y1="120" x2="312" y2="168" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- arrow D4->D3 -->
-  <line x1="530" y1="120" x2="400" y2="208" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Day 5 -->
-  <rect x="225" y="295" width="200" height="35" fill="#ffebee" rx="4" stroke="#c62828" stroke-width="1.5"/>
-  <text x="325" y="317" font-family="sans-serif" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">Day 5: IMAGES &amp; SAFETY — Diffusion · DreamBooth · Bias &amp; Safety</text>
-  <line x1="312" y1="250" x2="312" y2="293" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-</svg>
+![how_this_course_fits_together](../../../../svg/courses/ai/generative-ai-applications/01_overview/how_this_course_fits_together.svg)
 
 ---
 

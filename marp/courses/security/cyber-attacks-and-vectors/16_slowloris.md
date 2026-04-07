@@ -39,35 +39,7 @@
 ---
 ## How Slowloris Works
 
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="340" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Slowloris Attack: Incomplete HTTP Headers</text>
-<text x="120" y="44" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">Attacker</text>
-<text x="580" y="44" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">Server</text>
-<line x1="120" y1="56" x2="120" y2="320" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<line x1="580" y1="56" x2="580" y2="320" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<line x1="140" y1="80" x2="560" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="70" text-anchor="middle" font-size="11" fill="#333" font-style="italic">GET / HTTP/1.1\r\n  Host: target.com\r\n  (no blank line)</text>
-<text x="600" y="84" text-anchor="start" font-size="11" fill="#c62828">Connection #1 held open…</text>
-<line x1="140" y1="135" x2="560" y2="135" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="125" text-anchor="middle" font-size="11" fill="#333" font-style="italic">… 10 sec later …  X-Header-1: value\r\n</text>
-<text x="600" y="139" text-anchor="start" font-size="11" fill="#c62828">Still waiting…</text>
-<line x1="140" y1="190" x2="560" y2="190" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="180" text-anchor="middle" font-size="11" fill="#333" font-style="italic">… 10 sec later …  X-Header-2: value\r\n</text>
-<text x="600" y="194" text-anchor="start" font-size="11" fill="#c62828">Still waiting…</text>
-<line x1="140" y1="245" x2="560" y2="245" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="235" text-anchor="middle" font-size="11" fill="#333" font-style="italic">(repeat for hundreds of connections simultaneously)</text>
-<text x="600" y="249" text-anchor="start" font-size="11" fill="#c62828">All slots consumed!</text>
-<rect x="10" y="302" width="680" height="28" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5" rx="4"/>
-<text x="350" y="320" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">Attacker keeps connections alive by drip-feeding headers — never completes the request</text>
-</svg>
+![how_slowloris_works](../../../../svg/courses/security/cyber-attacks-and-vectors/16_slowloris/how_slowloris_works.svg)
 
 - The attacker sends partial HTTP headers, never completing the request
 - Periodically sends additional header bytes to keep connections alive
@@ -177,32 +149,7 @@ def slowloris_attack():
 ---
 ## Slow POST (R.U.D.Y.) Attack
 
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="285" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Slow POST Attack: Incomplete HTTP Body</text>
-<text x="120" y="44" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">Attacker</text>
-<text x="580" y="44" text-anchor="middle" font-size="13" fill="#1565c0" font-weight="bold">Server</text>
-<line x1="120" y1="56" x2="120" y2="265" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<line x1="580" y1="56" x2="580" y2="265" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<line x1="140" y1="80" x2="560" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="70" text-anchor="middle" font-size="11" fill="#333" font-style="italic">POST /login HTTP/1.1  Content-Length: 100000  &lt;blank line&gt;</text>
-<text x="600" y="84" text-anchor="start" font-size="11" fill="#c62828">Expecting body…</text>
-<line x1="140" y1="135" x2="560" y2="135" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="125" text-anchor="middle" font-size="11" fill="#333" font-style="italic">"a"  (1 byte every 10 seconds)</text>
-<text x="600" y="139" text-anchor="start" font-size="11" fill="#c62828">Still waiting…</text>
-<line x1="140" y1="190" x2="560" y2="190" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="350" y="180" text-anchor="middle" font-size="11" fill="#333" font-style="italic">"b"  (1 byte every 10 seconds)</text>
-<text x="600" y="194" text-anchor="start" font-size="11" fill="#c62828">99,998 bytes to go…</text>
-<rect x="10" y="247" width="680" height="28" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5" rx="4"/>
-<text x="350" y="265" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">Server waits forever for the declared Content-Length — connection slot consumed</text>
-</svg>
+![slow_post_r_u_d_y_attack](../../../../svg/courses/security/cyber-attacks-and-vectors/16_slowloris/slow_post_r_u_d_y_attack.svg)
 
 - Declares a large Content-Length but sends the body extremely slowly
 - Server must keep the connection open to receive the full body
@@ -267,43 +214,7 @@ curl http://localhost/server-status?auto | \
 | Idle connection cost       | Very expensive          | Very cheap               |
 | Timeout handling           | Waits per thread       | Async timeout per event  |
 
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="320" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Thread-per-Connection vs Event-Driven Model</text>
-<rect x="10" y="40" width="310" height="240" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="4"/>
-<text x="165" y="62" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">Apache (Thread-per-Connection)</text>
-<rect x="30" y="72" width="80" height="80" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="70" y="92" text-anchor="middle" font-size="11" fill="#222222" font-weight="bold">Thread</text>
-<text x="70" y="110" text-anchor="middle" font-size="11" fill="#222222">Conn #1</text>
-<text x="70" y="128" text-anchor="middle" font-size="11" fill="#222222">BLOCKED</text>
-<rect x="120" y="72" width="80" height="80" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="160" y="92" text-anchor="middle" font-size="11" fill="#222222" font-weight="bold">Thread</text>
-<text x="160" y="110" text-anchor="middle" font-size="11" fill="#222222">Conn #2</text>
-<text x="160" y="128" text-anchor="middle" font-size="11" fill="#222222">BLOCKED</text>
-<rect x="210" y="72" width="80" height="80" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="250" y="92" text-anchor="middle" font-size="11" fill="#222222" font-weight="bold">Thread</text>
-<text x="250" y="110" text-anchor="middle" font-size="11" fill="#222222">Conn #3</text>
-<text x="250" y="128" text-anchor="middle" font-size="11" fill="#222222">BLOCKED</text>
-<text x="165" y="180" text-anchor="middle" font-size="11" fill="#b71c1c">3 slots consumed by 3 slow connections</text>
-<text x="165" y="198" text-anchor="middle" font-size="11" fill="#b71c1c" font-weight="bold">Thread pool exhausted → server unresponsive</text>
-<rect x="340" y="40" width="350" height="240" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
-<text x="515" y="62" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Nginx (Event-Driven)</text>
-<rect x="360" y="72" width="290" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5" rx="4"/>
-<text x="505" y="94" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Event Loop</text>
-<text x="370" y="116" text-anchor="start" font-size="11" fill="#2e7d32">Conn#1</text>
-<text x="370" y="130" text-anchor="start" font-size="11" fill="#2e7d32">Conn#2</text>
-<text x="370" y="144" text-anchor="start" font-size="11" fill="#2e7d32">Conn#3</text>
-<text x="370" y="158" text-anchor="start" font-size="11" fill="#2e7d32">… Conn#N</text>
-<text x="515" y="196" text-anchor="middle" font-size="11" fill="#1b5e20">Thousands of slow conns handled</text>
-<text x="515" y="212" text-anchor="middle" font-size="11" fill="#1b5e20" font-weight="bold">by a single worker thread</text>
-</svg>
+![apache_vs_nginx_resilience](../../../../svg/courses/security/cyber-attacks-and-vectors/16_slowloris/apache_vs_nginx_resilience.svg)
 
 ---
 ## Apache mod_reqtimeout Configuration
@@ -416,48 +327,7 @@ nft add rule inet filter input \
 ---
 ## Reverse Proxy as a Defense Layer
 
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="340" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Reverse Proxy Protection Architecture</text>
-<text x="60" y="48" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">Attackers</text>
-<text x="320" y="48" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">Reverse Proxy</text>
-<text x="320" y="64" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">(Nginx/HAProxy)</text>
-<text x="560" y="48" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Backend</text>
-<text x="560" y="64" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">(Apache)</text>
-<rect x="20" y="80" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="100" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A1</text>
-<line x1="80" y1="97" x2="200" y2="97" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="20" y="130" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="150" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A2</text>
-<line x1="80" y1="147" x2="200" y2="147" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="20" y="180" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="200" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A3</text>
-<line x1="80" y1="197" x2="200" y2="197" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="200" y="70" width="230" height="180" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="4"/>
-<text x="315" y="94" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">Event-driven proxy</text>
-<text x="210" y="115" text-anchor="start" font-size="11" fill="#1a1a2e">• Connection timeouts</text>
-<text x="210" y="137" text-anchor="start" font-size="11" fill="#1a1a2e">• Rate limiting</text>
-<text x="210" y="159" text-anchor="start" font-size="11" fill="#1a1a2e">• Connection limits</text>
-<text x="210" y="181" text-anchor="start" font-size="11" fill="#1a1a2e">• Full request buffering</text>
-<text x="315" y="232" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">Slow conns blocked here</text>
-<rect x="480" y="70" width="190" height="180" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
-<text x="575" y="94" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Backend server</text>
-<text x="575" y="116" text-anchor="middle" font-size="11" fill="#1b5e20">Only sees</text>
-<text x="575" y="138" text-anchor="middle" font-size="11" fill="#1b5e20">complete requests</text>
-<text x="575" y="160" text-anchor="middle" font-size="11" fill="#1b5e20">→ not vulnerable</text>
-<line x1="430" y1="155" x2="480" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="455" y="148" text-anchor="middle" font-size="10" fill="#555">complete
-reqs only</text>
-<rect x="10" y="296" width="680" height="34" fill="#f1f8e9" stroke="#aed581" stroke-width="1.5" rx="4"/>
-<text x="350" y="318" text-anchor="middle" font-size="11" fill="#33691e">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</text>
-</svg>
+![reverse_proxy_as_a_defense_layer](../../../../svg/courses/security/cyber-attacks-and-vectors/16_slowloris/reverse_proxy_as_a_defense_layer.svg)
 
 - Place an event-driven reverse proxy (Nginx, HAProxy) in front of Apache
 - The proxy absorbs slow connections efficiently

@@ -39,53 +39,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 
 ## Bootloader Architecture Overview
 
-<svg width="600" height="400" viewBox="0 0 600 400">
-  <!-- Flash Memory Layout -->
-  <rect x="50" y="50" width="150" height="300" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="125" y="40" text-anchor="middle" font-size="14" font-weight="bold">Flash Memory</text>
-
-  <!-- Bootloader Section -->
-  <rect x="60" y="60" width="130" height="60" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
-  <text x="125" y="85" text-anchor="middle" font-size="12">Bootloader</text>
-  <text x="125" y="105" text-anchor="middle" font-size="10">0x08000000</text>
-
-  <!-- Application Section -->
-  <rect x="60" y="130" width="130" height="120" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
-  <text x="125" y="155" text-anchor="middle" font-size="12">Application</text>
-  <text x="125" y="175" text-anchor="middle" font-size="10">0x08004000</text>
-
-  <!-- Config/Data Section -->
-  <rect x="60" y="260" width="130" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="125" y="285" text-anchor="middle" font-size="12">Config/Data</text>
-  <text x="125" y="305" text-anchor="middle" font-size="10">0x08080000</text>
-
-  <!-- Boot Process Flow -->
-  <rect x="300" y="80" width="120" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="360" y="105" text-anchor="middle" font-size="11">Power On Reset</text>
-
-  <rect x="300" y="140" width="120" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="360" y="165" text-anchor="middle" font-size="11">Hardware Init</text>
-
-  <rect x="300" y="200" width="120" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="360" y="225" text-anchor="middle" font-size="11">Check for Update</text>
-
-  <rect x="300" y="260" width="120" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="360" y="285" text-anchor="middle" font-size="11">Launch App</text>
-
-  <!-- Arrows -->
-  <path d="M 360 120 L 360 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 360 180 L 360 200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 360 240 L 360 260" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Connection from bootloader to process -->
-  <path d="M 200 90 L 300 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![bootloader_architecture_overview](../../svg/lectures/microcontroller-bootloader/bootloader_architecture_overview.svg)
 
 ---
 
@@ -177,44 +131,7 @@ void bootloader_init(void) {
 
 ## Update Detection Methods
 
-<svg width="700" height="300" viewBox="0 0 700 300">
-  <!-- Method boxes -->
-  <rect x="50" y="50" width="120" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="110" y="75" text-anchor="middle" font-size="11" font-weight="bold">GPIO Button</text>
-  <text x="110" y="95" text-anchor="middle" font-size="9">Hold during reset</text>
-  <text x="110" y="110" text-anchor="middle" font-size="9">Simple & reliable</text>
-
-  <rect x="190" y="50" width="120" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="250" y="75" text-anchor="middle" font-size="11" font-weight="bold">Magic Value</text>
-  <text x="250" y="95" text-anchor="middle" font-size="9">RAM/EEPROM flag</text>
-  <text x="250" y="110" text-anchor="middle" font-size="9">Software triggered</text>
-
-  <rect x="330" y="50" width="120" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="390" y="75" text-anchor="middle" font-size="11" font-weight="bold">Timeout</text>
-  <text x="390" y="95" text-anchor="middle" font-size="9">Wait for command</text>
-  <text x="390" y="110" text-anchor="middle" font-size="9">Network updates</text>
-
-  <rect x="470" y="50" width="120" height="80" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="530" y="75" text-anchor="middle" font-size="11" font-weight="bold">App Invalid</text>
-  <text x="530" y="95" text-anchor="middle" font-size="9">CRC/checksum</text>
-  <text x="530" y="110" text-anchor="middle" font-size="9">Automatic recovery</text>
-
-  <!-- Decision flow -->
-  <rect x="250" y="180" width="200" height="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="350" y="205" text-anchor="middle" font-size="12">Enter Bootloader Mode</text>
-
-  <!-- Arrows -->
-  <path d="M 110 130 L 320 180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 250 130 L 330 180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 390 130 L 370 180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 530 130 L 380 180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![update_detection_methods](../../svg/lectures/microcontroller-bootloader/update_detection_methods.svg)
 
 ---
 
@@ -392,55 +309,7 @@ void handle_boot_error(boot_error_t error) {
 
 ## Dual Bank Bootloader
 
-<svg width="700" height="350" viewBox="0 0 700 350">
-  <!-- Flash Banks -->
-  <rect x="50" y="50" width="120" height="250" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="110" y="40" text-anchor="middle" font-size="14" font-weight="bold">Bank 1</text>
-
-  <rect x="200" y="50" width="120" height="250" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="260" y="40" text-anchor="middle" font-size="14" font-weight="bold">Bank 2</text>
-
-  <!-- Bootloader in both banks -->
-  <rect x="60" y="60" width="100" height="40" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
-  <text x="110" y="85" text-anchor="middle" font-size="11">Bootloader</text>
-
-  <rect x="210" y="60" width="100" height="40" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2"/>
-  <text x="260" y="85" text-anchor="middle" font-size="11">Bootloader</text>
-
-  <!-- Applications -->
-  <rect x="60" y="110" width="100" height="80" fill="#c8e6c9" stroke="#388e3c" stroke-width="2"/>
-  <text x="110" y="135" text-anchor="middle" font-size="11">App v1.0</text>
-  <text x="110" y="155" text-anchor="middle" font-size="10">(Running)</text>
-
-  <rect x="210" y="110" width="100" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="260" y="135" text-anchor="middle" font-size="11">App v1.1</text>
-  <text x="260" y="155" text-anchor="middle" font-size="10">(Staging)</text>
-
-  <!-- Process -->
-  <rect x="400" y="80" width="140" height="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="470" y="100" text-anchor="middle" font-size="11">1. Download to Bank 2</text>
-
-  <rect x="400" y="120" width="140" height="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="470" y="140" text-anchor="middle" font-size="11">2. Verify Integrity</text>
-
-  <rect x="400" y="160" width="140" height="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="470" y="180" text-anchor="middle" font-size="11">3. Update Boot Flag</text>
-
-  <rect x="400" y="200" width="140" height="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="470" y="220" text-anchor="middle" font-size="11">4. Reboot to Bank 2</text>
-
-  <!-- Arrows -->
-  <path d="M 320 150 L 400 95" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 470 110 L 470 120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 470 150 L 470 160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 470 190 L 470 200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![dual_bank_bootloader](../../svg/lectures/microcontroller-bootloader/dual_bank_bootloader.svg)
 
 ---
 
@@ -518,51 +387,7 @@ const bootloader_config_t __attribute__((section(".config")))
 
 ## Update Protocol State Machine
 
-<svg width="650" height="400" viewBox="0 0 650 400">
-  <!-- States -->
-  <circle cx="100" cy="80" r="30" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="85" text-anchor="middle" font-size="10">IDLE</text>
-
-  <circle cx="250" cy="80" r="30" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="250" y="85" text-anchor="middle" font-size="10">SYNC</text>
-
-  <circle cx="400" cy="80" r="30" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="10">RECEIVE</text>
-
-  <circle cx="550" cy="80" r="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="550" y="85" text-anchor="middle" font-size="10">VERIFY</text>
-
-  <circle cx="400" cy="200" r="30" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="400" y="205" text-anchor="middle" font-size="10">ERROR</text>
-
-  <circle cx="250" cy="280" r="30" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="250" y="285" text-anchor="middle" font-size="10">COMPLETE</text>
-
-  <!-- Transitions -->
-  <path d="M 130 80 L 220 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="175" y="75" text-anchor="middle" font-size="9">START</text>
-
-  <path d="M 280 80 L 370 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="325" y="75" text-anchor="middle" font-size="9">BEGIN</text>
-
-  <path d="M 430 80 L 520 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="475" y="75" text-anchor="middle" font-size="9">END</text>
-
-  <path d="M 400 110 L 400 170" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="425" y="140" text-anchor="middle" font-size="9">ERROR</text>
-
-  <path d="M 520 80 L 280 280" stroke="#388e3c" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="450" y="160" text-anchor="middle" font-size="9">SUCCESS</text>
-
-  <path d="M 370 200 L 130 80" stroke="#d32f2f" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="200" y="150" text-anchor="middle" font-size="9">RETRY</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![update_protocol_state_machine](../../svg/lectures/microcontroller-bootloader/update_protocol_state_machine.svg)
 
 ---
 
@@ -744,50 +569,7 @@ void test_application_validation(void) {
 
 ## Hardware-in-the-Loop Testing
 
-<svg width="650" height="300" viewBox="0 0 650 300">
-  <!-- Test Setup -->
-  <rect x="50" y="50" width="100" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="100" y="75" text-anchor="middle" font-size="11">Test PC</text>
-  <text x="100" y="90" text-anchor="middle" font-size="9">Python Script</text>
-
-  <rect x="200" y="50" width="100" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="250" y="75" text-anchor="middle" font-size="11">Debug Probe</text>
-  <text x="250" y="90" text-anchor="middle" font-size="9">ST-Link/J-Link</text>
-
-  <rect x="350" y="50" width="100" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="400" y="75" text-anchor="middle" font-size="11">Target MCU</text>
-  <text x="400" y="90" text-anchor="middle" font-size="9">STM32</text>
-
-  <rect x="500" y="50" width="100" height="60" fill="#e8f5e8" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="550" y="75" text-anchor="middle" font-size="11">Power Supply</text>
-  <text x="550" y="90" text-anchor="middle" font-size="9">Controllable</text>
-
-  <!-- Connections -->
-  <path d="M 150 80 L 200 80" stroke="#333" stroke-width="2"/>
-  <text x="175" y="75" text-anchor="middle" font-size="9">USB</text>
-
-  <path d="M 300 80 L 350 80" stroke="#333" stroke-width="2"/>
-  <text x="325" y="75" text-anchor="middle" font-size="9">SWD</text>
-
-  <path d="M 450 80 L 500 80" stroke="#333" stroke-width="2"/>
-  <text x="475" y="75" text-anchor="middle" font-size="9">Power</text>
-
-  <!-- Test Cases -->
-  <rect x="50" y="150" width="550" height="120" fill="#f5f5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="325" y="170" text-anchor="middle" font-size="12" font-weight="bold">Automated Test Cases</text>
-
-  <text x="70" y="190" font-size="10">• Power-on reset behavior</text>
-  <text x="70" y="205" font-size="10">• Bootloader timeout handling</text>
-  <text x="70" y="220" font-size="10">• Firmware update via UART/USB</text>
-  <text x="70" y="235" font-size="10">• Application validation & launch</text>
-  <text x="70" y="250" font-size="10">• Recovery from corrupted firmware</text>
-
-  <text x="350" y="190" font-size="10">• Brown-out detection</text>
-  <text x="350" y="205" font-size="10">• Watchdog reset scenarios</text>
-  <text x="350" y="220" font-size="10">• Flash programming errors</text>
-  <text x="350" y="235" font-size="10">• Communication protocol edge cases</text>
-  <text x="350" y="250" font-size="10">• Multi-bank switching</text>
-</svg>
+![hardware_in_the_loop_testing](../../svg/lectures/microcontroller-bootloader/hardware_in_the_loop_testing.svg)
 
 ---
 
@@ -1282,46 +1064,7 @@ bool detect_boot_anomaly(void) {
 
 ## Over-The-Air (OTA) Updates
 
-<svg width="700" height="350" viewBox="0 0 700 350">
-  <!-- Cloud Server -->
-  <ellipse cx="100" cy="100" rx="60" ry="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Update Server</text>
-
-  <!-- WiFi/Internet -->
-  <path d="M 180 100 Q 250 60 320 100" stroke="#333" stroke-width="3" fill="none"/>
-  <path d="M 180 100 Q 250 80 320 100" stroke="#333" stroke-width="3" fill="none"/>
-  <path d="M 180 100 Q 250 120 320 100" stroke="#333" stroke-width="3" fill="none"/>
-  <text x="250" y="140" text-anchor="middle" font-size="10">WiFi/Cellular</text>
-
-  <!-- Device -->
-  <rect x="350" y="70" width="80" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="390" y="105" text-anchor="middle" font-size="12">IoT Device</text>
-
-  <!-- Process Steps -->
-  <rect x="500" y="50" width="150" height="25" fill="#e8f5e8" stroke="#388e3c" stroke-width="1" rx="3"/>
-  <text x="575" y="67" text-anchor="middle" font-size="10">1. Check for updates</text>
-
-  <rect x="500" y="80" width="150" height="25" fill="#fff3e0" stroke="#f57c00" stroke-width="1" rx="3"/>
-  <text x="575" y="97" text-anchor="middle" font-size="10">2. Download firmware</text>
-
-  <rect x="500" y="110" width="150" height="25" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="3"/>
-  <text x="575" y="127" text-anchor="middle" font-size="10">3. Verify signature</text>
-
-  <rect x="500" y="140" width="150" height="25" fill="#ffebee" stroke="#d32f2f" stroke-width="1" rx="3"/>
-  <text x="575" y="157" text-anchor="middle" font-size="10">4. Install & reboot</text>
-
-  <rect x="500" y="170" width="150" height="25" fill="#e3f2fd" stroke="#1976d2" stroke-width="1" rx="3"/>
-  <text x="575" y="187" text-anchor="middle" font-size="10">5. Confirm success</text>
-
-  <!-- Arrow from device to steps -->
-  <path d="M 430 100 L 500 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![over_the_air_ota_updates](../../svg/lectures/microcontroller-bootloader/over_the_air_ota_updates.svg)
 
 ---
 

@@ -19,30 +19,7 @@ Without package management:
 ---
 ## Package Management Ecosystem
 
-<svg width="650" height="180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="10" width="250" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="175" y="35" text-anchor="middle" font-size="12">Debian / Ubuntu</text>
-  <rect x="350" y="10" width="250" height="40" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="475" y="35" text-anchor="middle" font-size="12">RHEL / Fedora</text>
-  <rect x="70" y="70" width="90" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="115" y="93" text-anchor="middle" font-size="10">apt</text>
-  <rect x="190" y="70" width="90" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="235" y="93" text-anchor="middle" font-size="10">dpkg</text>
-  <rect x="370" y="70" width="90" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="415" y="93" text-anchor="middle" font-size="10">dnf/yum</text>
-  <rect x="490" y="70" width="90" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="535" y="93" text-anchor="middle" font-size="10">rpm</text>
-  <rect x="70" y="125" width="90" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="115" y="148" text-anchor="middle" font-size="10">.deb files</text>
-  <rect x="370" y="125" width="90" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="415" y="148" text-anchor="middle" font-size="10">.rpm files</text>
-  <text x="175" y="65" text-anchor="middle" font-size="9">High-level</text>
-  <text x="475" y="65" text-anchor="middle" font-size="9">High-level</text>
-  <line x1="115" y1="105" x2="115" y2="125" stroke="#333" stroke-width="1"/>
-  <line x1="235" y1="105" x2="175" y2="125" stroke="#333" stroke-width="1"/>
-  <line x1="415" y1="105" x2="415" y2="125" stroke="#333" stroke-width="1"/>
-  <line x1="535" y1="105" x2="475" y2="125" stroke="#333" stroke-width="1"/>
-</svg>
+![package_management_ecosystem](../../../../svg/courses/operating_systems/linux-system-administration/03_package_management/package_management_ecosystem.svg)
 
 - `apt`/`dnf` are high-level: resolve dependencies, manage repos
 - `dpkg`/`rpm` are low-level: install/remove individual packages
@@ -826,27 +803,7 @@ ls -lh /var/cache/apt-cacher-ng/
 ---
 ## `apt` Caching Proxy Diagram
 
-<svg width="600" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="20" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="45" text-anchor="middle" font-size="10">Client A</text>
-  <rect x="10" y="80" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="105" text-anchor="middle" font-size="10">Client B</text>
-  <rect x="200" y="45" width="150" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="275" y="65" text-anchor="middle" font-size="10">apt-cacher-ng</text>
-  <text x="275" y="80" text-anchor="middle" font-size="9">:3142</text>
-  <rect x="440" y="45" width="140" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="65" text-anchor="middle" font-size="10">Ubuntu Archive</text>
-  <text x="510" y="80" text-anchor="middle" font-size="9">archive.ubuntu.com</text>
-  <line x1="110" y1="40" x2="200" y2="65" stroke="#333" stroke-width="1" marker-end="url(#arr02b)"/>
-  <line x1="110" y1="100" x2="200" y2="75" stroke="#333" stroke-width="1" marker-end="url(#arr02b)"/>
-  <line x1="350" y1="70" x2="440" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arr02b)"/>
-  <text x="395" y="60" text-anchor="middle" font-size="8">cache miss</text>
-  <defs>
-    <marker id="arr02b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![apt_caching_proxy_diagram](../../../../svg/courses/operating_systems/linux-system-administration/03_package_management/apt_caching_proxy_diagram.svg)
 
 - First client downloads the package from the internet
 - Subsequent clients get the cached copy instantly
@@ -1063,35 +1020,7 @@ Never remove essential packages on a production system.
 ---
 ## Package Lifecycle
 
-<svg width="650" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="55" text-anchor="middle" font-size="10">Available</text>
-  <rect x="160" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="210" y="55" text-anchor="middle" font-size="10">Downloaded</text>
-  <rect x="300" y="30" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="55" text-anchor="middle" font-size="10">Unpacked</text>
-  <rect x="440" y="30" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="55" text-anchor="middle" font-size="10">Configured</text>
-  <rect x="300" y="120" width="100" height="40" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="145" text-anchor="middle" font-size="10">Removed</text>
-  <rect x="440" y="120" width="100" height="40" fill="#ffcdd2" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="145" text-anchor="middle" font-size="10">Purged</text>
-  <line x1="120" y1="50" x2="160" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#arr02c)"/>
-  <line x1="260" y1="50" x2="300" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#arr02c)"/>
-  <line x1="400" y1="50" x2="440" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#arr02c)"/>
-  <line x1="490" y1="70" x2="490" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arr02c)"/>
-  <line x1="400" y1="140" x2="440" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arr02c)"/>
-  <text x="140" y="42" font-size="8">fetch</text>
-  <text x="280" y="42" font-size="8">unpack</text>
-  <text x="420" y="42" font-size="8">configure</text>
-  <text x="500" y="100" font-size="8">remove</text>
-  <text x="420" y="132" font-size="8">purge</text>
-  <defs>
-    <marker id="arr02c" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![package_lifecycle](../../../../svg/courses/operating_systems/linux-system-administration/03_package_management/package_lifecycle.svg)
 
 - **Available**: in repository, not installed
 - **Downloaded**: `.deb` cached in `/var/cache/apt/archives/`

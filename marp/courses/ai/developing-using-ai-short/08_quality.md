@@ -17,22 +17,7 @@ This chapter covers:
 
 ## The Quality Paradox
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="200" fill="#E74C3C" rx="10"/>
-  <text x="225" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Without Standards</text>
-  <text x="225" y="170" text-anchor="middle" fill="white" font-size="12">✓ Fast generation</text>
-  <text x="225" y="195" text-anchor="middle" fill="white" font-size="12">✗ Inconsistent code</text>
-  <text x="225" y="220" text-anchor="middle" fill="white" font-size="12">✗ Security risks</text>
-  <text x="225" y="245" text-anchor="middle" fill="white" font-size="12">✗ Technical debt</text>
-  <text x="225" y="270" text-anchor="middle" fill="white" font-size="12">✗ Maintenance issues</text>
-  <rect x="450" y="100" width="250" height="200" fill="#27AE60" rx="10"/>
-  <text x="575" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">With Best Practices</text>
-  <text x="575" y="170" text-anchor="middle" fill="white" font-size="12">✓ Fast generation</text>
-  <text x="575" y="195" text-anchor="middle" fill="white" font-size="12">✓ Consistent quality</text>
-  <text x="575" y="220" text-anchor="middle" fill="white" font-size="12">✓ Secure by default</text>
-  <text x="575" y="245" text-anchor="middle" fill="white" font-size="12">✓ Maintainable</text>
-  <text x="575" y="270" text-anchor="middle" fill="white" font-size="12">✓ Scalable</text>
-</svg>
+![the_quality_paradox](../../../../svg/courses/ai/developing-using-ai-short/08_quality/the_quality_paradox.svg)
 
 ---
 
@@ -174,23 +159,7 @@ class UserSchema(Schema):
 
 ## Input Validation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Validation Layers</text>
-  <rect x="150" y="110" width="180" height="50" fill="#E74C3C" rx="5"/>
-  <text x="240" y="140" text-anchor="middle" fill="white" font-size="12">Frontend Validation</text>
-  <text x="240" y="155" text-anchor="middle" fill="white" font-size="10">User experience</text>
-  <rect x="360" y="110" width="180" height="50" fill="#F39C12" rx="5"/>
-  <text x="450" y="140" text-anchor="middle" fill="white" font-size="12">API Validation</text>
-  <text x="450" y="155" text-anchor="middle" fill="white" font-size="10">Security layer</text>
-  <rect x="570" y="110" width="130" height="50" fill="#3498DB" rx="5"/>
-  <text x="635" y="140" text-anchor="middle" fill="white" font-size="12">DB Constraints</text>
-  <text x="635" y="155" text-anchor="middle" fill="white" font-size="10">Final protection</text>
-  <rect x="150" y="200" width="500" height="100" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="14">Never Trust User Input</text>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="12">• Validate type, length, format</text>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="12">• Sanitize special characters</text>
-</svg>
+![input_validation](../../../../svg/courses/ai/developing-using-ai-short/08_quality/input_validation.svg)
 
 ---
 
@@ -227,18 +196,7 @@ res.cookie('refreshToken', refreshToken, {
 
 ## Performance Optimization: Bottleneck Identification
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Common Bottlenecks</text>
-  <rect x="150" y="110" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="135" fill="white" font-size="12">N+1 Queries: 100ms × 100 = 10 seconds!</text>
-  <rect x="150" y="160" width="350" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="185" fill="white" font-size="12">Synchronous I/O: Blocking operations</text>
-  <rect x="150" y="210" width="400" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="235" fill="white" font-size="12">No Caching: Repeated expensive operations</text>
-  <rect x="150" y="260" width="450" height="40" fill="#27AE60" rx="5"/>
-  <text x="160" y="285" fill="white" font-size="12">Inefficient Algorithms: O(n²) when O(n) exists</text>
-</svg>
+![performance_optimization_bottleneck_identification](../../../../svg/courses/ai/developing-using-ai-short/08_quality/performance_optimization_bottleneck_identification.svg)
 
 ---
 
@@ -445,32 +403,7 @@ interface TeamStandards {
 
 Code review workflow:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Review Pipeline</text>
-  <circle cx="200" cy="200" r="40" fill="#3498DB"/>
-  <text x="200" y="205" text-anchor="middle" fill="white" font-size="12">PR</text>
-  <path d="M 240 200 L 310 200" stroke="white" stroke-width="2" marker-end="url(#r1)"/>
-  <circle cx="350" cy="200" r="40" fill="#F39C12"/>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="12">AI</text>
-  <path d="M 390 200 L 460 200" stroke="white" stroke-width="2" marker-end="url(#r2)"/>
-  <circle cx="500" cy="200" r="40" fill="#E74C3C"/>
-  <text x="500" y="205" text-anchor="middle" fill="white" font-size="12">Human</text>
-  <path d="M 540 200 L 610 200" stroke="white" stroke-width="2" marker-end="url(#r3)"/>
-  <circle cx="650" cy="200" r="40" fill="#27AE60"/>
-  <text x="650" y="205" text-anchor="middle" fill="white" font-size="12">Merge</text>
-  <defs>
-    <marker id="r1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="r2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="r3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![review_processes](../../../../svg/courses/ai/developing-using-ai-short/08_quality/review_processes.svg)
 
 ---
 
@@ -839,20 +772,7 @@ quality_culture:
 
 ## Technical Debt Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Debt Quadrants</text>
-  <line x1="400" y1="100" x2="400" y2="330" stroke="white" stroke-width="2"/>
-  <line x1="120" y1="215" x2="680" y2="215" stroke="white" stroke-width="2"/>
-  <text x="260" y="160" text-anchor="middle" fill="#E74C3C" font-size="14" font-weight="bold">Reckless & Deliberate</text>
-  <text x="260" y="180" text-anchor="middle" fill="#E74C3C" font-size="11">"We don't have time"</text>
-  <text x="540" y="160" text-anchor="middle" fill="#F39C12" font-size="14" font-weight="bold">Prudent & Deliberate</text>
-  <text x="540" y="180" text-anchor="middle" fill="#F39C12" font-size="11">"Ship now, refactor later"</text>
-  <text x="260" y="270" text-anchor="middle" fill="#95A5A6" font-size="14" font-weight="bold">Reckless & Inadvertent</text>
-  <text x="260" y="290" text-anchor="middle" fill="#95A5A6" font-size="11">"What's layering?"</text>
-  <text x="540" y="270" text-anchor="middle" fill="#27AE60" font-size="14" font-weight="bold">Prudent & Inadvertent</text>
-  <text x="540" y="290" text-anchor="middle" fill="#27AE60" font-size="11">"Now we know better"</text>
-</svg>
+![technical_debt_management](../../../../svg/courses/ai/developing-using-ai-short/08_quality/technical_debt_management.svg)
 
 ---
 

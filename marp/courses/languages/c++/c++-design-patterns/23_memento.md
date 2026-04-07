@@ -28,30 +28,7 @@ public:
 
 ## Memento Structure Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="50" width="150" height="70" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="95" y="75" text-anchor="middle" font-size="13" font-weight="bold">Caretaker</text>
-  <text x="95" y="95" text-anchor="middle" font-size="10">history: Memento[]</text>
-
-  <rect x="220" y="50" width="150" height="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="295" y="75" text-anchor="middle" font-size="13" font-weight="bold">Originator</text>
-  <text x="295" y="95" text-anchor="middle" font-size="10">+ save(): Memento</text>
-
-  <rect x="420" y="50" width="150" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="495" y="75" text-anchor="middle" font-size="13" font-weight="bold">Memento</text>
-  <text x="495" y="95" text-anchor="middle" font-size="10">state (private)</text>
-
-  <line x1="170" y1="85" x2="220" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#mmArr)"/>
-  <line x1="370" y1="85" x2="420" y2="85" stroke="#333" stroke-width="1.5" marker-end="url(#mmArr)"/>
-  <text x="195" y="78" text-anchor="middle" font-size="9">uses</text>
-  <text x="395" y="78" text-anchor="middle" font-size="9">creates</text>
-
-  <defs>
-    <marker id="mmArr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![memento_structure_diagram](../../../../../svg/courses/languages/c++/c++-design-patterns/23_memento/memento_structure_diagram.svg)
 
 ---
 

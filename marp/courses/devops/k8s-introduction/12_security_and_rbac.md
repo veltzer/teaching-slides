@@ -14,18 +14,7 @@
 
 ## Security Layers
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Security Layers</text>
-  <rect x="100" y="80" width="600" height="50" fill="#4285f4" rx="5"/>
-  <text x="400" y="110" text-anchor="middle" fill="white" font-weight="bold">Cloud/Infrastructure Security</text>
-  <rect x="150" y="150" width="500" height="50" fill="#34a853" rx="5"/>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-weight="bold">Cluster Security (RBAC, Network Policies)</text>
-  <rect x="200" y="220" width="400" height="50" fill="#fbbc04" rx="5"/>
-  <text x="400" y="250" text-anchor="middle" font-weight="bold">Container Security (Images, Runtime)</text>
-  <rect x="250" y="290" width="300" height="50" fill="#ea4335" rx="5"/>
-  <text x="400" y="320" text-anchor="middle" fill="white" font-weight="bold">Application Security (Code)</text>
-</svg>
+![security_layers](../../../../svg/courses/devops/k8s-introduction/12_security_and_rbac/security_layers.svg)
 
 ---
 
@@ -72,31 +61,7 @@ spec:
 
 ## RBAC Components
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">RBAC Components</text>
-  <rect x="100" y="80" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Role</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="10">Namespace scoped</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="10">Define permissions</text>
-  <rect x="270" y="80" width="150" height="80" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">ClusterRole</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="10">Cluster scoped</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="10">Cross-namespace</text>
-  <rect x="440" y="80" width="150" height="80" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">RoleBinding</text>
-  <text x="515" y="130" text-anchor="middle" font-size="10">Bind Role to users</text>
-  <text x="515" y="150" text-anchor="middle" font-size="10">Namespace scoped</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">ClusterRoleBinding</text>
-  <text x="680" y="130" text-anchor="middle" fill="white" font-size="9">Bind ClusterRole</text>
-  <text x="680" y="150" text-anchor="middle" fill="white" font-size="10">Cluster wide</text>
-  <rect x="250" y="200" width="300" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" font-weight="bold">Subjects</text>
-  <text x="400" y="255" text-anchor="middle" font-size="12">• Users</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">• Groups</text>
-  <text x="400" y="295" text-anchor="middle" font-size="12">• ServiceAccounts</text>
-</svg>
+![rbac_components](../../../../svg/courses/devops/k8s-introduction/12_security_and_rbac/rbac_components.svg)
 
 ---
 
@@ -262,28 +227,7 @@ metadata:
 
 ## Pod Security Levels
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Pod Security Standards</text>
-  <rect x="100" y="80" width="200" height="150" fill="#34a853" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Privileged</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="11">• Unrestricted</text>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="11">• No limitations</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="11">• System pods</text>
-  <text x="200" y="195" text-anchor="middle" fill="white" font-size="11">• Least secure</text>
-  <rect x="320" y="80" width="200" height="150" fill="#fbbc04" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" font-weight="bold">Baseline</text>
-  <text x="420" y="135" text-anchor="middle" font-size="11">• Minimal restrictions</text>
-  <text x="420" y="155" text-anchor="middle" font-size="11">• Prevents escalations</text>
-  <text x="420" y="175" text-anchor="middle" font-size="11">• Default for most</text>
-  <text x="420" y="195" text-anchor="middle" font-size="11">• Moderate security</text>
-  <rect x="540" y="80" width="200" height="150" fill="#ea4335" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" fill="white" font-weight="bold">Restricted</text>
-  <text x="640" y="135" text-anchor="middle" fill="white" font-size="11">• Heavily restricted</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="11">• Security hardened</text>
-  <text x="640" y="175" text-anchor="middle" fill="white" font-size="11">• Best practices</text>
-  <text x="640" y="195" text-anchor="middle" fill="white" font-size="11">• Most secure</text>
-</svg>
+![pod_security_levels](../../../../svg/courses/devops/k8s-introduction/12_security_and_rbac/pod_security_levels.svg)
 
 ---
 
@@ -500,26 +444,7 @@ deny[msg] {
 
 ## Security Scanning Tools
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Security Tools</text>
-  <rect x="100" y="80" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Trivy</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="10">Image scanning</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="10">Config audit</text>
-  <rect x="270" y="80" width="150" height="80" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">Kubesec</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="10">Manifest analysis</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="10">Security score</text>
-  <rect x="440" y="80" width="150" height="80" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">kube-bench</text>
-  <text x="515" y="130" text-anchor="middle" font-size="10">CIS benchmark</text>
-  <text x="515" y="150" text-anchor="middle" font-size="10">Compliance check</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">Polaris</text>
-  <text x="680" y="130" text-anchor="middle" fill="white" font-size="10">Best practices</text>
-  <text x="680" y="150" text-anchor="middle" fill="white" font-size="10">Validation</text>
-</svg>
+![security_scanning_tools](../../../../svg/courses/devops/k8s-introduction/12_security_and_rbac/security_scanning_tools.svg)
 
 ---
 

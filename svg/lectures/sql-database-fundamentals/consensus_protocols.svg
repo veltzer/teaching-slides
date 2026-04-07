@@ -1,0 +1,28 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Raft Consensus: Leader-Based Replication</text>
+  <rect x="210" y="25" width="100" height="40" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="20"/>
+  <text x="260" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Leader</text>
+  <text x="260" y="57" text-anchor="middle" font-size="9">Handles writes</text>
+  <rect x="50" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="100" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower A</text>
+  <text x="100" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <rect x="210" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="260" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower B</text>
+  <text x="260" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <rect x="370" y="90" width="100" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="20"/>
+  <text x="420" y="107" text-anchor="middle" font-size="11" fill="#1565c0">Follower C</text>
+  <text x="420" y="122" text-anchor="middle" font-size="9" fill="#666">Replicates log</text>
+  <line x1="230" y1="65" x2="120" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <line x1="260" y1="65" x2="260" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <line x1="290" y1="65" x2="400" y2="88" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowraft)"/>
+  <text x="170" y="78" font-size="9" fill="#2e7d32">AppendEntries</text>
+  <rect x="100" y="145" width="320" height="20" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="260" y="159" text-anchor="middle" font-size="10" fill="#2e7d32">Majority ACK (2/3) required to commit entry</text>
+  <rect x="100" y="170" width="320" height="20" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="260" y="184" text-anchor="middle" font-size="10" fill="#e65100">Leader fails? Election selects new leader with latest log</text>
+  <defs>
+    <marker id="arrowraft" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+</svg>

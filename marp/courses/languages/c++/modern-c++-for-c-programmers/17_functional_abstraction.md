@@ -58,31 +58,7 @@ process(42, myCallback);
 
 ## The Command Pattern
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#e1f5fe" stroke="#01579b"/>
-  <text x="110" y="85" text-anchor="middle" font-size="14">Client</text>
-
-  <rect x="250" y="50" width="120" height="60" fill="#e1f5fe" stroke="#01579b"/>
-  <text x="310" y="85" text-anchor="middle" font-size="14">Invoker</text>
-
-  <rect x="450" y="50" width="120" height="60" fill="#e1f5fe" stroke="#01579b"/>
-  <text x="510" y="85" text-anchor="middle" font-size="14">Receiver</text>
-
-  <rect x="250" y="200" width="120" height="80" fill="#fff3e0" stroke="#e65100"/>
-  <text x="310" y="235" text-anchor="middle" font-size="14">Command</text>
-  <text x="310" y="255" text-anchor="middle" font-size="12">+execute()</text>
-
-  <line x1="170" y1="80" x2="250" y2="80" stroke="#333" marker-end="url(#arrowhead)"/>
-  <line x1="370" y1="80" x2="450" y2="80" stroke="#333" marker-end="url(#arrowhead)"/>
-  <line x1="310" y1="110" x2="310" y2="200" stroke="#333" stroke-dasharray="5,5"/>
-  <line x1="370" y1="240" x2="450" y2="100" stroke="#333" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![the_command_pattern](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/the_command_pattern.svg)
 
 ---
 
@@ -477,26 +453,7 @@ public:
 
 ## Performance Considerations
 
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="30" text-anchor="middle" font-size="16" font-weight="bold">Callback Performance Comparison</text>
-
-  <rect x="50" y="60" width="200" height="30" fill="#4caf50"/>
-  <text x="60" y="80" font-size="12" fill="white">Function Pointer</text>
-
-  <rect x="50" y="100" width="180" height="30" fill="#2196f3"/>
-  <text x="60" y="120" font-size="12" fill="white">Lambda (no capture)</text>
-
-  <rect x="50" y="140" width="220" height="30" fill="#ff9800"/>
-  <text x="60" y="160" font-size="12" fill="white">Functor</text>
-
-  <rect x="50" y="180" width="280" height="30" fill="#f44336"/>
-  <text x="60" y="200" font-size="12" fill="white">std::function</text>
-
-  <rect x="50" y="220" width="350" height="30" fill="#9c27b0"/>
-  <text x="60" y="240" font-size="12" fill="white">Virtual Function</text>
-
-  <text x="450" y="250" font-size="12">Overhead →</text>
-</svg>
+![performance_considerations](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/performance_considerations.svg)
 
 ---
 

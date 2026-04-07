@@ -1,0 +1,25 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd4_05_dead_containers" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="40" width="140" height="70" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="65" text-anchor="middle" font-size="11" font-weight="bold">Crashed</text>
+  <text x="90" y="82" text-anchor="middle" font-size="10">Container</text>
+  <text x="90" y="97" text-anchor="middle" font-size="10" fill="#555">exit code != 0</text>
+  <line x1="160" y1="75" x2="218" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_dead_containers)"/>
+  <rect x="220" y="30" width="160" height="90" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="52" text-anchor="middle" font-size="11" font-weight="bold">Debug Steps</text>
+  <text x="300" y="70" text-anchor="middle" font-size="10">1. docker logs &lt;id&gt;</text>
+  <text x="300" y="85" text-anchor="middle" font-size="10">2. docker inspect &lt;id&gt;</text>
+  <text x="300" y="100" text-anchor="middle" font-size="10">3. docker cp &lt;id&gt;:/path .</text>
+  <text x="300" y="115" text-anchor="middle" font-size="10" fill="#555">Extract files for analysis</text>
+  <line x1="380" y1="75" x2="438" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_05_dead_containers)"/>
+  <rect x="440" y="40" width="140" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="65" text-anchor="middle" font-size="11" font-weight="bold">Fix + Restart</text>
+  <text x="510" y="82" text-anchor="middle" font-size="10">Update image</text>
+  <text x="510" y="97" text-anchor="middle" font-size="10" fill="#555">docker start &lt;id&gt;</text>
+  <rect x="20" y="150" width="560" height="35" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="172" text-anchor="middle" font-size="10" fill="#555">Tip: use docker commit to save container state before removal</text>
+</svg>

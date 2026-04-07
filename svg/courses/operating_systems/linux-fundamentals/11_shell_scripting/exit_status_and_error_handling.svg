@@ -1,0 +1,22 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="15" width="120" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="35" text-anchor="middle" font-size="11" font-weight="bold">Exit 0</text>
+  <text x="80" y="52" text-anchor="middle" font-size="10">Success</text>
+  <text x="80" y="68" text-anchor="middle" font-size="9" fill="#2e7d32">Command OK</text>
+  <rect x="160" y="15" width="120" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="220" y="35" text-anchor="middle" font-size="11" font-weight="bold">Exit 1</text>
+  <text x="220" y="52" text-anchor="middle" font-size="10">General Error</text>
+  <text x="220" y="68" text-anchor="middle" font-size="9" fill="#c62828">Catchall</text>
+  <rect x="300" y="15" width="120" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="360" y="35" text-anchor="middle" font-size="11" font-weight="bold">Exit 2</text>
+  <text x="360" y="52" text-anchor="middle" font-size="10">Misuse</text>
+  <text x="360" y="68" text-anchor="middle" font-size="9" fill="#c62828">Bad syntax</text>
+  <rect x="440" y="15" width="140" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="35" text-anchor="middle" font-size="11" font-weight="bold">Exit 126/127</text>
+  <text x="510" y="52" text-anchor="middle" font-size="10">Not executable /</text>
+  <text x="510" y="68" text-anchor="middle" font-size="9" fill="#c62828">Not found</text>
+  <rect x="20" y="100" width="560" height="75" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="122" text-anchor="middle" font-size="11" font-weight="bold">Error Handling Patterns</text>
+  <text x="300" y="140" text-anchor="middle" font-size="10">$? = check last exit code | set -e = exit on error</text>
+  <text x="300" y="158" text-anchor="middle" font-size="10">trap 'cleanup' EXIT | command || { echo "failed"; exit 1; }</text>
+</svg>

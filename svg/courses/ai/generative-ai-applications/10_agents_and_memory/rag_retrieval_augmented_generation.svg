@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="580" height="560" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Query label at top -->
+  <text x="20" y="22" font-size="13" fill="#222" font-weight="bold">User Query:</text>
+  <text x="130" y="22" font-size="13" fill="#555">"What were Q3 results?"</text>
+  <line x1="56" y1="28" x2="56" y2="52" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 1: EMBED -->
+  <rect x="10" y="55" width="200" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="78" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">1. EMBED query</text>
+  <line x1="210" y1="80" x2="228" y2="80" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="235" y="84" font-size="12" fill="#555">[0.12, -0.34, ...]</text>
+  <!-- Arrow down -->
+  <line x1="110" y1="105" x2="110" y2="138" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 2: SEARCH -->
+  <rect x="10" y="142" width="200" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="165" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">2. SEARCH vector</text>
+  <text x="110" y="183" font-size="13" fill="#222" text-anchor="middle">database</text>
+  <line x1="210" y1="172" x2="228" y2="172" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="235" y="176" font-size="12" fill="#555">Find similar docs</text>
+  <line x1="110" y1="202" x2="110" y2="236" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 3: RETRIEVE -->
+  <rect x="10" y="240" width="200" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="263" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">3. RETRIEVE top</text>
+  <text x="110" y="281" font-size="13" fill="#222" text-anchor="middle">k documents</text>
+  <line x1="210" y1="260" x2="228" y2="260" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="235" y="256" font-size="12" fill="#555">"Q3 revenue was $4.2M..."</text>
+  <text x="235" y="272" font-size="12" fill="#555">"Operating costs were..."</text>
+  <line x1="110" y1="300" x2="110" y2="334" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Step 4: GENERATE -->
+  <rect x="10" y="338" width="200" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="361" font-size="13" fill="#222" text-anchor="middle" font-weight="bold">4. GENERATE</text>
+  <text x="110" y="379" font-size="13" fill="#222" text-anchor="middle">response</text>
+  <line x1="210" y1="368" x2="228" y2="368" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="235" y="364" font-size="12" fill="#555">Context + Query → LLM → Response</text>
+  <line x1="110" y1="398" x2="110" y2="432" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Final answer -->
+  <rect x="10" y="436" width="550" height="60" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="30" y="462" font-size="12" fill="#222">"Based on Q3 reports, revenue was $4.2M,</text>
+  <text x="30" y="480" font-size="12" fill="#222">up 15% from Q2..."</text>
+</svg>

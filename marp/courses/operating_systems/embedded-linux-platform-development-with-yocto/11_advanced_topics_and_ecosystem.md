@@ -4,41 +4,7 @@
 
 ## Yocto Ecosystem Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="50" width="300" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="3" rx="5"/>
-  <text x="400" y="95" text-anchor="middle" font-size="16" font-weight="bold">Yocto Project</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="11">OpenEmbedded</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="11">BitBake</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="11">meta-* Layers</text>
-
-  <rect x="100" y="320" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="355" text-anchor="middle" font-size="11">AGL</text>
-
-  <rect x="325" y="320" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="355" text-anchor="middle" font-size="11">OpenWrt</text>
-
-  <rect x="550" y="320" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="355" text-anchor="middle" font-size="11">Wind River</text>
-
-  <path d="M 400 130 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#e1)"/>
-  <path d="M 400 130 L 400 200" stroke="#333" stroke-width="2" marker-end="url(#e1)"/>
-  <path d="M 400 130 L 625 200" stroke="#333" stroke-width="2" marker-end="url(#e1)"/>
-  <path d="M 175 260 L 175 320" stroke="#666" stroke-width="1.5" marker-end="url(#e1)"/>
-  <path d="M 400 260 L 400 320" stroke="#666" stroke-width="1.5" marker-end="url(#e1)"/>
-  <path d="M 625 260 L 625 320" stroke="#666" stroke-width="1.5" marker-end="url(#e1)"/>
-
-  <defs>
-    <marker id="e1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![yocto_ecosystem_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/yocto_ecosystem_overview.svg)
 
 ---
 
@@ -98,30 +64,7 @@ bitbake-layers show-layers
 
 ## Real-Time Linux
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="225" y="135" text-anchor="middle" font-size="13" font-weight="bold">Standard Kernel</text>
-  <text x="225" y="155" text-anchor="middle" font-size="10">Best-effort scheduling</text>
-
-  <rect x="450" y="100" width="250" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="575" y="135" text-anchor="middle" font-size="13" font-weight="bold">PREEMPT_RT Kernel</text>
-  <text x="575" y="155" text-anchor="middle" font-size="10">Deterministic latency</text>
-
-  <rect x="100" y="250" width="250" height="80" fill="#ffffcc" stroke="#000" stroke-width="2"/>
-  <text x="225" y="285" text-anchor="middle" font-size="11">Latency: 100μs - 1ms</text>
-
-  <rect x="450" y="250" width="250" height="80" fill="#ccffff" stroke="#000" stroke-width="2"/>
-  <text x="575" y="285" text-anchor="middle" font-size="11">Latency: 10μs - 100μs</text>
-
-  <path d="M 225 180 L 225 250" stroke="#333" stroke-width="2" marker-end="url(#e2)"/>
-  <path d="M 575 180 L 575 250" stroke="#333" stroke-width="2" marker-end="url(#e2)"/>
-
-  <defs>
-    <marker id="e2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![real_time_linux](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/real_time_linux.svg)
 
 ---
 
@@ -341,38 +284,7 @@ runqemu qemuarm \
 
 ## AGL - Automotive Grade Linux
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="5"/>
-  <text x="400" y="95" text-anchor="middle" font-size="14" font-weight="bold">AGL Platform</text>
-
-  <rect x="100" y="180" width="180" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="190" y="215" text-anchor="middle" font-size="11">IVI</text>
-
-  <rect x="310" y="180" width="180" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="400" y="215" text-anchor="middle" font-size="11">Telematics</text>
-
-  <rect x="520" y="180" width="180" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="610" y="215" text-anchor="middle" font-size="11">Instrument Cluster</text>
-
-  <rect x="100" y="280" width="180" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="190" y="315" text-anchor="middle" font-size="11">ADAS</text>
-
-  <rect x="310" y="280" width="180" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="400" y="315" text-anchor="middle" font-size="11">Gateway</text>
-
-  <rect x="520" y="280" width="180" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="610" y="315" text-anchor="middle" font-size="11">HUD</text>
-
-  <path d="M 400 130 L 190 180" stroke="#333" stroke-width="1.5" marker-end="url(#e3)"/>
-  <path d="M 400 130 L 400 180" stroke="#333" stroke-width="1.5" marker-end="url(#e3)"/>
-  <path d="M 400 130 L 610 180" stroke="#333" stroke-width="1.5" marker-end="url(#e3)"/>
-
-  <defs>
-    <marker id="e3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![agl_automotive_grade_linux](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/agl_automotive_grade_linux.svg)
 
 ---
 

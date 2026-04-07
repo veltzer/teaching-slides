@@ -109,24 +109,7 @@ import this
 - No separate compilation step needed
 - Trade-off: slower execution, faster development
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="70" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect x="10"  y="15" width="110" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="65"  y="38" font-size="13" fill="#222" text-anchor="middle">source.py</text>
-  <line x1="120" y1="33" x2="136" y2="33" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="138" y="15" width="130" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="203" y="38" font-size="13" fill="#222" text-anchor="middle">bytecode (.pyc)</text>
-  <line x1="268" y1="33" x2="284" y2="33" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="286" y="15" width="80" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="326" y="38" font-size="13" fill="#222" text-anchor="middle">PVM</text>
-  <line x1="366" y1="33" x2="382" y2="33" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="384" y="15" width="90" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="429" y="38" font-size="13" fill="#222" text-anchor="middle">output</text>
-</svg>
+![python_is_interpreted](../../../../../svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
 ---
 ## Dynamic Typing
 - Variables do not have a fixed type

@@ -1,0 +1,23 @@
+<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Scalability Comparison</text>
+
+  <!-- Y-axis -->
+  <line x1="50" y1="50" x2="50" y2="250" stroke="black"/>
+  <text x="30" y="150" font-size="12" text-anchor="middle" transform="rotate(-90, 30, 150)">Performance</text>
+
+  <!-- X-axis -->
+  <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
+  <text x="250" y="280" font-size="12" text-anchor="middle">Number of Connections</text>
+
+  <!-- select() line -->
+  <path d="M 50 200 Q 200 150 300 100" stroke="red" stroke-width="2" fill="none"/>
+  <text x="320" y="100" font-size="10" fill="red">select()</text>
+
+  <!-- poll() line -->
+  <path d="M 50 180 Q 200 130 350 90" stroke="orange" stroke-width="2" fill="none"/>
+  <text x="370" y="90" font-size="10" fill="orange">poll()</text>
+
+  <!-- epoll() line -->
+  <path d="M 50 150 L 400 80" stroke="green" stroke-width="2" fill="none"/>
+  <text x="420" y="80" font-size="10" fill="green">epoll()</text>
+</svg>

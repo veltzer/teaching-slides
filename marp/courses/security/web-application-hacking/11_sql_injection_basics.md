@@ -44,30 +44,7 @@ SELECT * FROM users WHERE username='admin'--' AND password='anything'
 
 ## SQL Injection Types
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" viewBox="0 0 660 240">
-  <rect width="660" height="240" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">SQL Injection Types</text>
-  <!-- In-Band -->
-  <rect x="20" y="40" width="190" height="90" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="115" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">In-Band (Classic)</text>
-  <text x="115" y="82" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Error-based:</text>
-  <text x="115" y="98" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Use error messages to</text>
-  <text x="115" y="113" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">extract data</text>
-  <text x="115" y="128" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">UNION-based: combine results</text>
-  <!-- Blind -->
-  <rect x="235" y="40" width="190" height="90" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="330" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Blind</text>
-  <text x="330" y="82" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Boolean-based:</text>
-  <text x="330" y="98" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Ask true/false questions</text>
-  <text x="330" y="118" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Time-based:</text>
-  <text x="330" y="132" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Use delays to infer data</text>
-  <!-- Out-of-Band -->
-  <rect x="450" y="40" width="190" height="90" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="545" y="62" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Out-of-Band</text>
-  <text x="545" y="85" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">DNS exfiltration</text>
-  <text x="545" y="105" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">HTTP requests from DB</text>
-  <text x="330" y="165" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Increasing order of stealth: In-Band → Blind → Out-of-Band</text>
-</svg>
+![sql_injection_types](../../../../svg/courses/security/web-application-hacking/11_sql_injection_basics/sql_injection_types.svg)
 
 ---
 
@@ -113,29 +90,7 @@ REST Path Params:   /api/users/123
 
 ## Recognizing SQL Injection Responses
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="300" viewBox="0 0 660 300">
-  <rect width="660" height="300" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">SQL Injection — Positive Indicators</text>
-  <!-- row 1 -->
-  <rect x="20" y="40" width="620" height="48" fill="#ffebee" rx="4" stroke="#c62828" stroke-width="1"/>
-  <text x="35" y="60" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c62828">1. Database error messages</text>
-  <text x="35" y="78" font-family="monospace" font-size="11" fill="#555">"You have an error in your SQL syntax..." / "ORA-01756: quoted string not properly terminated"</text>
-  <!-- row 2 -->
-  <rect x="20" y="96" width="620" height="36" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1"/>
-  <text x="35" y="116" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100">2. Behavior differs: single quote (') causes error, two singles ('') do not</text>
-  <!-- row 3 -->
-  <rect x="20" y="140" width="620" height="48" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1"/>
-  <text x="35" y="160" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">3. Boolean differences</text>
-  <text x="35" y="178" font-family="monospace" font-size="11" fill="#555">id=1 AND 1=1 → normal   |   id=1 AND 1=2 → different/empty response</text>
-  <!-- row 4 -->
-  <rect x="20" y="196" width="620" height="36" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1"/>
-  <text x="35" y="214" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0">4. Time delays</text>
-  <text x="35" y="229" font-family="monospace" font-size="11" fill="#555">  id=1; WAITFOR DELAY '0:0:5'--  →  5 second delay</text>
-  <!-- row 5 -->
-  <rect x="20" y="240" width="620" height="36" fill="#f3e5f5" rx="4" stroke="#7b1fa2" stroke-width="1"/>
-  <text x="35" y="258" font-family="sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">5. Arithmetic evaluation</text>
-  <text x="35" y="273" font-family="monospace" font-size="11" fill="#555">  id=2-1  →  same as id=1  (input is being evaluated as SQL)</text>
-</svg>
+![recognizing_sql_injection_responses](../../../../svg/courses/security/web-application-hacking/11_sql_injection_basics/recognizing_sql_injection_responses.svg)
 
 ---
 
@@ -293,32 +248,7 @@ Oracle:      --, /* */
 
 ## Practical Example: DVWA SQL Injection
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="300" viewBox="0 0 660 300">
-  <rect width="660" height="300" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">DVWA SQL Injection — Step-by-Step (Security: Low)</text>
-  <text x="330" y="42" font-family="monospace" font-size="11" fill="#555" text-anchor="middle">URL: /vulnerabilities/sqli/?id=1&amp;Submit=Submit</text>
-  <!-- steps -->
-  <rect x="20" y="56" width="30" height="30" fill="#1565c0" rx="4"/>
-  <text x="35" y="76" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">1</text>
-  <text x="60" y="70" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Test for injection</text>
-  <text x="60" y="85" font-family="monospace" font-size="11" fill="#c62828">id=1'  →  Error (injectable!)</text>
-  <rect x="20" y="100" width="30" height="30" fill="#1565c0" rx="4"/>
-  <text x="35" y="120" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">2</text>
-  <text x="60" y="114" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Determine number of columns</text>
-  <text x="60" y="129" font-family="monospace" font-size="11" fill="#555">id=1' ORDER BY 2-- -  →  Works  |  ORDER BY 3  →  Error  (2 columns)</text>
-  <rect x="20" y="148" width="30" height="30" fill="#1565c0" rx="4"/>
-  <text x="35" y="168" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">3</text>
-  <text x="60" y="162" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Find display columns</text>
-  <text x="60" y="177" font-family="monospace" font-size="11" fill="#555">id=' UNION SELECT 1,2-- -  →  Shows "1" and "2" on page</text>
-  <rect x="20" y="196" width="30" height="30" fill="#1565c0" rx="4"/>
-  <text x="35" y="216" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">4</text>
-  <text x="60" y="210" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Extract DB version</text>
-  <text x="60" y="225" font-family="monospace" font-size="11" fill="#555">id=' UNION SELECT 1,@@version-- -</text>
-  <rect x="20" y="244" width="30" height="30" fill="#c62828" rx="4"/>
-  <text x="35" y="264" font-family="sans-serif" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">5</text>
-  <text x="60" y="258" font-family="sans-serif" font-size="13" font-weight="bold" fill="#c62828">Dump user credentials</text>
-  <text x="60" y="273" font-family="monospace" font-size="11" fill="#c62828">id=' UNION SELECT user,password FROM users-- -</text>
-</svg>
+![practical_example_dvwa_sql_injection](../../../../svg/courses/security/web-application-hacking/11_sql_injection_basics/practical_example_dvwa_sql_injection.svg)
 
 ---
 

@@ -24,21 +24,7 @@
 
 ## The Linux Kernel Problem
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="100" text-anchor="middle" font-size="24" font-weight="bold">Linux Kernel Development (2002-2005)</text>
-  <circle cx="200" cy="200" r="30" fill="#4CAF50"/>
-  <text x="200" y="250" text-anchor="middle" font-size="14">Developer 1</text>
-  <circle cx="400" cy="200" r="30" fill="#4CAF50"/>
-  <text x="400" y="250" text-anchor="middle" font-size="14">Developer 2</text>
-  <circle cx="600" cy="200" r="30" fill="#4CAF50"/>
-  <text x="600" y="250" text-anchor="middle" font-size="14">Developer 3</text>
-  <rect x="350" y="280" width="100" height="40" fill="#FF5722"/>
-  <text x="400" y="305" text-anchor="middle" font-size="14" fill="white">BitKeeper</text>
-  <line x1="200" y1="220" x2="380" y2="280" stroke="#333" stroke-width="2"/>
-  <line x1="400" y1="220" x2="400" y2="280" stroke="#333" stroke-width="2"/>
-  <line x1="600" y1="220" x2="420" y2="280" stroke="#333" stroke-width="2"/>
-</svg>
+![the_linux_kernel_problem](../../../../svg/courses/git/git2/01_intro/the_linux_kernel_problem.svg)
 
 ---
 
@@ -86,26 +72,7 @@ But also:
 
 ## Who is Using Git?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git Adoption</text>
-  <rect x="100" y="80" width="120" height="60" fill="#1976D2" rx="5"/>
-  <text x="160" y="115" text-anchor="middle" font-size="14" fill="white">Microsoft</text>
-  <rect x="250" y="80" width="120" height="60" fill="#4CAF50" rx="5"/>
-  <text x="310" y="115" text-anchor="middle" font-size="14" fill="white">Google</text>
-  <rect x="400" y="80" width="120" height="60" fill="#FF9800" rx="5"/>
-  <text x="460" y="115" text-anchor="middle" font-size="14" fill="white">Facebook</text>
-  <rect x="550" y="80" width="120" height="60" fill="#9C27B0" rx="5"/>
-  <text x="610" y="115" text-anchor="middle" font-size="14" fill="white">Netflix</text>
-  <rect x="100" y="170" width="120" height="60" fill="#F44336" rx="5"/>
-  <text x="160" y="205" text-anchor="middle" font-size="14" fill="white">Linux</text>
-  <rect x="250" y="170" width="120" height="60" fill="#00BCD4" rx="5"/>
-  <text x="310" y="205" text-anchor="middle" font-size="14" fill="white">Android</text>
-  <rect x="400" y="170" width="120" height="60" fill="#795548" rx="5"/>
-  <text x="460" y="205" text-anchor="middle" font-size="14" fill="white">Ruby</text>
-  <rect x="550" y="170" width="120" height="60" fill="#607D8B" rx="5"/>
-  <text x="610" y="205" text-anchor="middle" font-size="14" fill="white">Rails</text>
-  <text x="400" y="280" text-anchor="middle" font-size="16">...and millions more!</text>
-</svg>
+![who_is_using_git](../../../../svg/courses/git/git2/01_intro/who_is_using_git.svg)
 
 ---
 
@@ -124,45 +91,7 @@ According to Stack Overflow Developer Survey:
 
 ## Git vs Centralized VCS
 
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="20" font-weight="bold">Centralized (SVN)</text>
-  <rect x="150" y="60" width="100" height="60" fill="#FF5722"/>
-  <text x="200" y="95" text-anchor="middle" font-size="14" fill="white">Server</text>
-  <circle cx="100" cy="220" r="25" fill="#2196F3"/>
-  <text x="100" y="260" text-anchor="middle" font-size="12">Dev 1</text>
-  <circle cx="200" cy="220" r="25" fill="#2196F3"/>
-  <text x="200" y="260" text-anchor="middle" font-size="12">Dev 2</text>
-  <circle cx="300" cy="220" r="25" fill="#2196F3"/>
-  <text x="300" y="260" text-anchor="middle" font-size="12">Dev 3</text>
-  <line x1="100" y1="195" x2="180" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="200" y1="195" x2="200" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="300" y1="195" x2="220" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="600" y="30" text-anchor="middle" font-size="20" font-weight="bold">Distributed (Git)</text>
-  <circle cx="500" cy="90" r="25" fill="#4CAF50"/>
-  <text x="500" y="130" text-anchor="middle" font-size="12">Dev 1</text>
-  <circle cx="600" cy="90" r="25" fill="#4CAF50"/>
-  <text x="600" y="130" text-anchor="middle" font-size="12">Dev 2</text>
-  <circle cx="700" cy="90" r="25" fill="#4CAF50"/>
-  <text x="700" y="130" text-anchor="middle" font-size="12">Dev 3</text>
-  <circle cx="550" cy="180" r="25" fill="#4CAF50"/>
-  <text x="550" y="220" text-anchor="middle" font-size="12">Dev 4</text>
-  <circle cx="650" cy="180" r="25" fill="#4CAF50"/>
-  <text x="650" y="220" text-anchor="middle" font-size="12">Dev 5</text>
-  <line x1="520" y1="105" x2="580" y2="105" stroke="#333" stroke-width="2"/>
-  <line x1="620" y1="105" x2="680" y2="105" stroke="#333" stroke-width="2"/>
-  <line x1="515" y1="110" x2="535" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="585" y1="110" x2="565" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="615" y1="110" x2="635" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="685" y1="110" x2="665" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="570" y1="180" x2="630" y2="180" stroke="#333" stroke-width="2"/>
-  <text x="200" y="320" text-anchor="middle" font-size="14" font-style="italic">Single point of failure</text>
-  <text x="600" y="320" text-anchor="middle" font-size="14" font-style="italic">Every clone is a full backup</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![git_vs_centralized_vcs](../../../../svg/courses/git/git2/01_intro/git_vs_centralized_vcs.svg)
 
 ---
 
@@ -198,112 +127,17 @@ According to Stack Overflow Developer Survey:
 
 ## The Git Data Model
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="22" font-weight="bold">Git Objects</text>
-  <rect x="100" y="80" width="120" height="60" fill="#4CAF50" rx="5"/>
-  <text x="160" y="115" text-anchor="middle" font-size="16" fill="white">Blob</text>
-  <text x="160" y="170" text-anchor="middle" font-size="12">File content</text>
-  <rect x="340" y="80" width="120" height="60" fill="#2196F3" rx="5"/>
-  <text x="400" y="115" text-anchor="middle" font-size="16" fill="white">Tree</text>
-  <text x="400" y="170" text-anchor="middle" font-size="12">Directory structure</text>
-  <rect x="580" y="80" width="120" height="60" fill="#FF9800" rx="5"/>
-  <text x="640" y="115" text-anchor="middle" font-size="16" fill="white">Commit</text>
-  <text x="640" y="170" text-anchor="middle" font-size="12">Snapshot + metadata</text>
-  <line x1="220" y1="110" x2="340" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="460" y1="110" x2="580" y2="110" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <rect x="250" y="250" width="300" height="80" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" font-size="14" font-weight="bold">Every commit has a unique SHA-1 hash</text>
-  <text x="400" y="305" text-anchor="middle" font-size="12">Example: 3b18e512dba79e4c8300dd08aeb37f8e728b8dad</text>
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![the_git_data_model](../../../../svg/courses/git/git2/01_intro/the_git_data_model.svg)
 
 ---
 
 ## Snapshots, Not Differences
 
 **SVN/CVS** - Stores differences (deltas)
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="130">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- File A row -->
-  <text x="10" y="38" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">File A:</text>
-  <rect x="70" y="20" width="80" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="110" y="42" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">version 1</text>
-  <line x1="150" y1="37" x2="185" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="185" y="20" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="220" y="42" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+5 lines</text>
-  <line x1="255" y1="37" x2="290" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="290" y="20" width="70" height="34" rx="4" fill="#ffebee" stroke="#555" stroke-width="1.5"/>
-  <text x="325" y="42" font-family="monospace" font-size="12" fill="#c62828" text-anchor="middle">-2 lines</text>
-  <line x1="360" y1="37" x2="395" y2="37" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="395" y="20" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="430" y="42" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+1 line</text>
-
-  <!-- File B row -->
-  <text x="10" y="100" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222">File B:</text>
-  <rect x="70" y="82" width="80" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="110" y="104" font-family="monospace" font-size="12" fill="#333" text-anchor="middle">version 1</text>
-  <line x1="150" y1="99" x2="185" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="185" y="82" width="80" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="225" y="104" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+10 lines</text>
-  <line x1="265" y1="99" x2="300" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="300" y="82" width="70" height="34" rx="4" fill="#ffebee" stroke="#555" stroke-width="1.5"/>
-  <text x="335" y="104" font-family="monospace" font-size="12" fill="#c62828" text-anchor="middle">-5 lines</text>
-  <line x1="370" y1="99" x2="405" y2="99" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="405" y="82" width="70" height="34" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="440" y="104" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">+3 lines</text>
-</svg>
+![snapshots_not_differences_1](../../../../svg/courses/git/git2/01_intro/snapshots_not_differences_1.svg)
 
 **Git** - Stores snapshots
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="160">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- headers -->
-  <text x="10" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Commit</text>
-  <text x="110" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File A</text>
-  <text x="250" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File B</text>
-  <text x="390" y="18" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">File C</text>
-
-  <!-- Commit 1 -->
-  <rect x="10" y="26" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
-  <text x="50" y="48" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 1</text>
-  <rect x="105" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="165" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileA-v1</text>
-  <rect x="245" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="305" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileB-v1</text>
-  <rect x="385" y="26" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="445" y="48" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileC-v1</text>
-
-  <!-- Commit 2 -->
-  <rect x="10" y="68" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
-  <text x="50" y="90" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 2</text>
-  <rect x="105" y="68" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="165" y="90" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileA-v2</text>
-  <rect x="245" y="68" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="305" y="90" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileB-v1</text>
-  <rect x="385" y="68" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="445" y="90" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileC-v2</text>
-
-  <!-- Commit 3 -->
-  <rect x="10" y="110" width="80" height="34" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
-  <text x="50" y="132" font-family="monospace" font-size="12" fill="#fff" text-anchor="middle">Commit 3</text>
-  <rect x="105" y="110" width="120" height="34" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="165" y="132" font-family="monospace" font-size="12" fill="#222" text-anchor="middle">FileA-v2</text>
-  <rect x="245" y="110" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="305" y="132" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileB-v2</text>
-  <rect x="385" y="110" width="120" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="445" y="132" font-family="monospace" font-size="12" fill="#2e7d32" text-anchor="middle">FileC-v3</text>
-</svg>
+![snapshots_not_differences_2](../../../../svg/courses/git/git2/01_intro/snapshots_not_differences_2.svg)
 
 ## If files don't change, Git just links to the previous identical file
 
@@ -311,32 +145,7 @@ According to Stack Overflow Developer Survey:
 
 ## The Three States
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Git File States</text>
-  <rect x="50" y="100" width="200" height="250" fill="#FFE0B2" stroke="#E65100" stroke-width="2" rx="5"/>
-  <text x="150" y="130" text-anchor="middle" font-size="18" font-weight="bold">Working Directory</text>
-  <text x="150" y="160" text-anchor="middle" font-size="14">Files you see</text>
-  <text x="150" y="180" text-anchor="middle" font-size="14">and edit</text>
-  <rect x="300" y="100" width="200" height="250" fill="#C8E6C9" stroke="#2E7D32" stroke-width="2" rx="5"/>
-  <text x="400" y="130" text-anchor="middle" font-size="18" font-weight="bold">Staging Area</text>
-  <text x="400" y="160" text-anchor="middle" font-size="14">Files ready to</text>
-  <text x="400" y="180" text-anchor="middle" font-size="14">be committed</text>
-  <rect x="550" y="100" width="200" height="250" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" rx="5"/>
-  <text x="650" y="130" text-anchor="middle" font-size="18" font-weight="bold">Repository</text>
-  <text x="650" y="160" text-anchor="middle" font-size="14">Committed</text>
-  <text x="650" y="180" text-anchor="middle" font-size="14">snapshots</text>
-  <path d="M 250 225 L 290 225" stroke="#333" stroke-width="3" marker-end="url(#arrow3)"/>
-  <text x="270" y="215" text-anchor="middle" font-size="12">git add</text>
-  <path d="M 500 225 L 540 225" stroke="#333" stroke-width="3" marker-end="url(#arrow3)"/>
-  <text x="520" y="215" text-anchor="middle" font-size="12">git commit</text>
-  <path d="M 550 275 Q 400 320 250 275" stroke="#333" stroke-width="3" marker-end="url(#arrow3)" fill="none"/>
-  <text x="400" y="340" text-anchor="middle" font-size="12">git checkout</text>
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![the_three_states](../../../../svg/courses/git/git2/01_intro/the_three_states.svg)
 
 ---
 
@@ -411,32 +220,7 @@ After committing:
 
 ## Branches in Git
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="24" font-weight="bold">Branching is Cheap and Fast</text>
-  <circle cx="150" cy="200" r="20" fill="#4CAF50"/>
-  <text x="150" y="235" text-anchor="middle" font-size="12">C1</text>
-  <circle cx="250" cy="200" r="20" fill="#4CAF50"/>
-  <text x="250" y="235" text-anchor="middle" font-size="12">C2</text>
-  <circle cx="350" cy="200" r="20" fill="#4CAF50"/>
-  <text x="350" y="235" text-anchor="middle" font-size="12">C3</text>
-  <circle cx="450" cy="140" r="20" fill="#2196F3"/>
-  <text x="450" y="175" text-anchor="middle" font-size="12">C4</text>
-  <circle cx="550" cy="140" r="20" fill="#2196F3"/>
-  <text x="550" y="175" text-anchor="middle" font-size="12">C5</text>
-  <circle cx="450" cy="260" r="20" fill="#FF9800"/>
-  <text x="450" y="295" text-anchor="middle" font-size="12">C6</text>
-  <line x1="170" y1="200" x2="230" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="270" y1="200" x2="330" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="370" y1="190" x2="430" y2="150" stroke="#333" stroke-width="2"/>
-  <line x1="370" y1="210" x2="430" y2="250" stroke="#333" stroke-width="2"/>
-  <line x1="470" y1="140" x2="530" y2="140" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="320" width="80" height="30" fill="#4CAF50" rx="3"/>
-  <text x="140" y="340" text-anchor="middle" font-size="12" fill="white">main</text>
-  <rect x="250" y="320" width="80" height="30" fill="#2196F3" rx="3"/>
-  <text x="290" y="340" text-anchor="middle" font-size="12" fill="white">feature</text>
-  <rect x="400" y="320" width="80" height="30" fill="#FF9800" rx="3"/>
-  <text x="440" y="340" text-anchor="middle" font-size="12" fill="white">hotfix</text>
-</svg>
+![branches_in_git](../../../../svg/courses/git/git2/01_intro/branches_in_git.svg)
 
 ---
 
@@ -545,28 +329,7 @@ After committing:
 
 ## Define Your Workflow
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="bold">Choose a Workflow</text>
-  <rect x="50" y="80" width="150" height="100" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
-  <text x="125" y="110" text-anchor="middle" font-size="14" font-weight="bold">Centralized</text>
-  <text x="125" y="135" text-anchor="middle" font-size="11">Like SVN</text>
-  <text x="125" y="155" text-anchor="middle" font-size="11">Simple</text>
-  <rect x="225" y="80" width="150" height="100" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
-  <text x="300" y="110" text-anchor="middle" font-size="14" font-weight="bold">Feature Branch</text>
-  <text x="300" y="135" text-anchor="middle" font-size="11">Branch per feature</text>
-  <text x="300" y="155" text-anchor="middle" font-size="11">Popular</text>
-  <rect x="400" y="80" width="150" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
-  <text x="475" y="110" text-anchor="middle" font-size="14" font-weight="bold">Gitflow</text>
-  <text x="475" y="135" text-anchor="middle" font-size="11">Structured</text>
-  <text x="475" y="155" text-anchor="middle" font-size="11">Releases</text>
-  <rect x="575" y="80" width="150" height="100" fill="#FFF3E0" stroke="#F57C00" stroke-width="2" rx="5"/>
-  <text x="650" y="110" text-anchor="middle" font-size="14" font-weight="bold">Forking</text>
-  <text x="650" y="135" text-anchor="middle" font-size="11">Open source</text>
-  <text x="650" y="155" text-anchor="middle" font-size="11">Pull requests</text>
-  <text x="400" y="230" text-anchor="middle" font-size="16" font-style="italic">No one-size-fits-all solution</text>
-  <text x="400" y="260" text-anchor="middle" font-size="14">Choose based on:</text>
-  <text x="400" y="285" text-anchor="middle" font-size="12">• Team size • Release cycle • Collaboration style</text>
-</svg>
+![define_your_workflow](../../../../svg/courses/git/git2/01_intro/define_your_workflow.svg)
 
 ---
 
@@ -626,23 +389,7 @@ WIP
 
 ## The Power of Git History
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="22" font-weight="bold">Git History is Powerful</text>
-  <rect x="100" y="80" width="180" height="80" fill="#E8EAF6" stroke="#3F51B5" stroke-width="2" rx="5"/>
-  <text x="190" y="110" text-anchor="middle" font-size="14" font-weight="bold">git blame</text>
-  <text x="190" y="135" text-anchor="middle" font-size="12">Who changed what</text>
-  <rect x="310" y="80" width="180" height="80" fill="#E0F2F1" stroke="#009688" stroke-width="2" rx="5"/>
-  <text x="400" y="110" text-anchor="middle" font-size="14" font-weight="bold">git bisect</text>
-  <text x="400" y="135" text-anchor="middle" font-size="12">Find breaking commits</text>
-  <rect x="520" y="80" width="180" height="80" fill="#FCE4EC" stroke="#C2185B" stroke-width="2" rx="5"/>
-  <text x="610" y="110" text-anchor="middle" font-size="14" font-weight="bold">git log</text>
-  <text x="610" y="135" text-anchor="middle" font-size="12">Explore history</text>
-  <rect x="200" y="200" width="400" height="120" fill="#FFF9C4" stroke="#F57F17" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="16" font-weight="bold">Your Git history is documentation</text>
-  <text x="400" y="265" text-anchor="middle" font-size="14">• Why was this change made?</text>
-  <text x="400" y="285" text-anchor="middle" font-size="14">• What problem did it solve?</text>
-  <text x="400" y="305" text-anchor="middle" font-size="14">• Who can I ask about this?</text>
-</svg>
+![the_power_of_git_history](../../../../svg/courses/git/git2/01_intro/the_power_of_git_history.svg)
 
 ---
 
@@ -750,15 +497,4 @@ In the upcoming sessions, we'll dive into:
 
 ## Ready to Master Git?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="80" text-anchor="middle" font-size="36" font-weight="bold" fill="#FF6B35">Let's Git Started!</text>
-  <circle cx="400" cy="200" r="60" fill="#4ECDC4"/>
-  <text x="400" y="210" text-anchor="middle" font-size="48" fill="white">Git</text>
-  <path d="M 200 300 Q 400 250 600 300" stroke="#556270" stroke-width="3" fill="none"/>
-  <circle cx="200" cy="300" r="8" fill="#556270"/>
-  <circle cx="300" cy="275" r="8" fill="#556270"/>
-  <circle cx="400" cy="265" r="8" fill="#556270"/>
-  <circle cx="500" cy="275" r="8" fill="#556270"/>
-  <circle cx="600" cy="300" r="8" fill="#556270"/>
-  <text x="400" y="350" text-anchor="middle" font-size="18" font-style="italic">Your journey to Git mastery begins now</text>
-</svg>
+![ready_to_master_git](../../../../svg/courses/git/git2/01_intro/ready_to_master_git.svg)

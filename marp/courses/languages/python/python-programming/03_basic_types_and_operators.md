@@ -320,39 +320,7 @@ print(s[-1])   # 'n'
 print(s[-2])   # 'o'
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="120" font-family="monospace">
-  <!-- Cells -->
-  <rect x="10"  y="20" width="60" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <rect x="70"  y="20" width="60" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <rect x="130" y="20" width="60" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <rect x="190" y="20" width="60" height="40" fill="#fce4ec" stroke="#333" stroke-width="1.5"/>
-  <rect x="250" y="20" width="60" height="40" fill="#ede7f6" stroke="#333" stroke-width="1.5"/>
-  <rect x="310" y="20" width="60" height="40" fill="#e0f7fa" stroke="#333" stroke-width="1.5"/>
-  <!-- Characters -->
-  <text x="40"  y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">P</text>
-  <text x="100" y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">y</text>
-  <text x="160" y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">t</text>
-  <text x="220" y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">h</text>
-  <text x="280" y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">o</text>
-  <text x="340" y="46" font-size="18" font-weight="bold" fill="#222" text-anchor="middle">n</text>
-  <!-- Positive indices -->
-  <text x="40"  y="75" font-size="12" fill="#1565c0" text-anchor="middle">0</text>
-  <text x="100" y="75" font-size="12" fill="#1565c0" text-anchor="middle">1</text>
-  <text x="160" y="75" font-size="12" fill="#1565c0" text-anchor="middle">2</text>
-  <text x="220" y="75" font-size="12" fill="#1565c0" text-anchor="middle">3</text>
-  <text x="280" y="75" font-size="12" fill="#1565c0" text-anchor="middle">4</text>
-  <text x="340" y="75" font-size="12" fill="#1565c0" text-anchor="middle">5</text>
-  <!-- Negative indices -->
-  <text x="40"  y="92" font-size="12" fill="#c62828" text-anchor="middle">-6</text>
-  <text x="100" y="92" font-size="12" fill="#c62828" text-anchor="middle">-5</text>
-  <text x="160" y="92" font-size="12" fill="#c62828" text-anchor="middle">-4</text>
-  <text x="220" y="92" font-size="12" fill="#c62828" text-anchor="middle">-3</text>
-  <text x="280" y="92" font-size="12" fill="#c62828" text-anchor="middle">-2</text>
-  <text x="340" y="92" font-size="12" fill="#c62828" text-anchor="middle">-1</text>
-  <!-- legend -->
-  <text x="10" y="112" font-size="11" fill="#1565c0" font-family="sans-serif">■ positive index</text>
-  <text x="140" y="112" font-size="11" fill="#c62828" font-family="sans-serif">■ negative index</text>
-</svg>
+![string_indexing](../../../../../svg/courses/languages/python/python-programming/03_basic_types_and_operators/string_indexing.svg)
 ---
 ## String Slicing
 - `s[start:stop:step]`

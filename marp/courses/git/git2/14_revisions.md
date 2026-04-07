@@ -90,41 +90,7 @@ git show -- -feature-branch
 - Updates when new commits added
 - Stored in `.git/refs/heads/`
 
-<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Branch as Revision</text>
-
-  <!-- Branch reference -->
-  <rect x="50" y="50" width="100" height="40" fill="#3498db" rx="5"/>
-  <text x="100" y="75" text-anchor="middle" fill="white" font-size="12">main</text>
-
-  <!-- Commit chain -->
-  <circle cx="250" cy="70" r="15" fill="#2ecc71"/>
-  <text x="250" y="75" text-anchor="middle" fill="white" font-size="10">A</text>
-
-  <circle cx="350" cy="70" r="15" fill="#2ecc71"/>
-  <text x="350" y="75" text-anchor="middle" fill="white" font-size="10">B</text>
-
-  <circle cx="450" cy="70" r="15" fill="#2ecc71"/>
-  <text x="450" y="75" text-anchor="middle" fill="white" font-size="10">C</text>
-
-  <!-- Arrows -->
-  <line x1="150" y1="70" x2="235" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="265" y1="70" x2="335" y2="70" stroke="#333" stroke-width="2"/>
-  <line x1="365" y1="70" x2="435" y2="70" stroke="#333" stroke-width="2"/>
-
-  <!-- Labels -->
-  <text x="250" y="100" text-anchor="middle" font-size="10">a1b2c3d</text>
-  <text x="350" y="100" text-anchor="middle" font-size="10">d4e5f6g</text>
-  <text x="450" y="100" text-anchor="middle" font-size="10">g7h8i9j</text>
-
-  <text x="200" y="130" text-anchor="middle" font-size="12">"main" resolves to commit C (g7h8i9j)</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![branch_starting_with_dash_use_double_dash](../../../../svg/courses/git/git2/14_revisions/branch_starting_with_dash_use_double_dash.svg)
 
 ---
 
@@ -250,35 +216,7 @@ git show HEAD^2~3          # 3rd ancestor of 2nd parent
 - `~` selects how many generations back
 - Important for merge commits with multiple parents
 
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Caret vs Tilde Navigation</text>
-
-  <!-- Commit structure -->
-  <circle cx="300" cy="80" r="15" fill="#e74c3c"/>
-  <text x="300" y="85" text-anchor="middle" fill="white" font-size="10">M</text>
-  <text x="300" y="110" text-anchor="middle" font-size="10">HEAD</text>
-
-  <circle cx="200" cy="150" r="15" fill="#3498db"/>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="10">A</text>
-  <text x="200" y="180" text-anchor="middle" font-size="10">HEAD^</text>
-
-  <circle cx="400" cy="150" r="15" fill="#2ecc71"/>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="10">B</text>
-  <text x="400" y="180" text-anchor="middle" font-size="10">HEAD^2</text>
-
-  <circle cx="100" cy="220" r="15" fill="#f39c12"/>
-  <text x="100" y="225" text-anchor="middle" fill="white" font-size="10">C</text>
-  <text x="100" y="250" text-anchor="middle" font-size="10">HEAD~2</text>
-
-  <!-- Lines -->
-  <line x1="285" y1="90" x2="215" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="315" y1="90" x2="385" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="185" y1="160" x2="115" y2="210" stroke="#333" stroke-width="2"/>
-
-  <text x="240" y="120" font-size="10">^1 (first parent)</text>
-  <text x="350" y="120" font-size="10">^2 (second parent)</text>
-  <text x="140" y="190" font-size="10">~2 (2 generations)</text>
-</svg>
+![combining_caret_and_tilde](../../../../svg/courses/git/git2/14_revisions/combining_caret_and_tilde.svg)
 
 ---
 
@@ -457,32 +395,7 @@ git log B C --not A       # Same as above
 - Generate release notes
 - Review pending changes
 
-<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Revision Ranges</text>
-
-  <!-- Branch A -->
-  <circle cx="100" cy="100" r="12" fill="#3498db"/>
-  <circle cx="150" cy="100" r="12" fill="#3498db"/>
-  <circle cx="200" cy="100" r="12" fill="#3498db"/>
-  <text x="150" y="130" text-anchor="middle" font-size="12">Branch A</text>
-
-  <!-- Branch B -->
-  <circle cx="200" cy="100" r="12" fill="#95a5a6"/>
-  <circle cx="250" cy="150" r="12" fill="#e74c3c"/>
-  <circle cx="300" cy="150" r="12" fill="#e74c3c"/>
-  <circle cx="350" cy="150" r="12" fill="#e74c3c"/>
-  <text x="300" y="180" text-anchor="middle" font-size="12">Branch B</text>
-
-  <!-- Lines -->
-  <line x1="112" y1="100" x2="138" y2="100" stroke="#333"/>
-  <line x1="162" y1="100" x2="188" y2="100" stroke="#333"/>
-  <line x1="200" y1="112" x2="240" y2="140" stroke="#333"/>
-  <line x1="262" y1="150" x2="288" y2="150" stroke="#333"/>
-  <line x1="312" y1="150" x2="338" y2="150" stroke="#333"/>
-
-  <text x="150" y="220" text-anchor="middle" font-size="12">A..B shows commits in red</text>
-  <text x="450" y="220" text-anchor="middle" font-size="12">A...B shows commits in red and blue</text>
-</svg>
+![multiple_references](../../../../svg/courses/git/git2/14_revisions/multiple_references.svg)
 
 ---
 

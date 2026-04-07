@@ -14,22 +14,7 @@
 
 ## RAII Principle
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Resource Acquisition Is Initialization</text>
-  <rect x="100" y="60" width="200" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="85" text-anchor="middle" font-size="14">Constructor Acquires</text>
-  <path d="M 200 100 L 200 120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="120" width="200" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="145" text-anchor="middle" font-size="14">Object Lifetime</text>
-  <path d="M 200 160 L 200 180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="100" y="180" width="200" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="205" text-anchor="middle" font-size="14">Destructor Releases</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![raii_principle](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/15_resource_management/raii_principle.svg)
 
 ---
 

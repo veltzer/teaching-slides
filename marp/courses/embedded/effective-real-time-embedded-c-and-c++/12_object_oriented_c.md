@@ -14,18 +14,7 @@
 
 ## Why OOP in C?
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">OOP Benefits in Embedded C</text>
-  <rect x="50" y="60" width="150" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14">Code Reuse</text>
-  <rect x="220" y="60" width="150" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="295" y="85" text-anchor="middle" font-size="14">Modularity</text>
-  <rect x="50" y="120" width="150" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="125" y="145" text-anchor="middle" font-size="14">Maintainability</text>
-  <rect x="220" y="120" width="150" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="295" y="145" text-anchor="middle" font-size="14">Abstraction</text>
-  <text x="200" y="200" text-anchor="middle" font-size="14">Without C++ overhead!</text>
-</svg>
+![why_oop_in_c](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/12_object_oriented_c/why_oop_in_c.svg)
 
 ---
 

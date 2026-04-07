@@ -233,37 +233,7 @@ def secure_upload(file):
 
 ## Deserialization Attacks - Overview
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="250" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect x="10" y="10" width="290" height="50" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="155" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Serialization</text>
-  <text x="155" y="50" text-anchor="middle" font-size="12" fill="#333333">Converting an object to a byte stream</text>
-  <rect x="320" y="10" width="290" height="50" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="465" y="30" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Deserialization</text>
-  <text x="465" y="50" text-anchor="middle" font-size="12" fill="#333333">Recreating an object from a byte stream</text>
-  <rect x="10" y="72" width="600" height="38" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5" rx="4"/>
-  <text x="310" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">If an application deserializes UNTRUSTED data, attackers can craft</text>
-  <text x="310" y="103" text-anchor="middle" font-size="12" fill="#333333">malicious serialized objects that execute code during deserialization.</text>
-  <rect x="10"  y="128" width="140" height="60" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="80"  y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Attacker</text>
-  <text x="80"  y="170" text-anchor="middle" font-size="11" fill="#555555">crafts malicious</text>
-  <text x="80"  y="184" text-anchor="middle" font-size="11" fill="#555555">serialized object</text>
-  <line x1="150" y1="158" x2="218" y2="158" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="184" y="150" text-anchor="middle" font-size="10" fill="#555555">sends</text>
-  <rect x="220" y="128" width="155" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="298" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Server</text>
-  <text x="298" y="170" text-anchor="middle" font-size="11" fill="#555555">deserializes</text>
-  <text x="298" y="184" text-anchor="middle" font-size="11" fill="#555555">the object</text>
-  <line x1="375" y1="158" x2="443" y2="158" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="445" y="128" width="165" height="60" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="527" y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Code Execution!</text>
-  <text x="527" y="170" text-anchor="middle" font-size="11" fill="#333333">RCE, privilege</text>
-  <text x="527" y="184" text-anchor="middle" font-size="11" fill="#333333">escalation, etc.</text>
-</svg>
+![deserialization_attacks_overview](../../../../svg/courses/security/web-application-hacking/15_file_path_and_deserialization/deserialization_attacks_overview.svg)
 
 ---
 

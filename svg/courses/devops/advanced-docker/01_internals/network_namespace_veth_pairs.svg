@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="arw6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arw6b" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#555"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="598" height="198" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="598" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="300" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Docker Networking — Bridge Mode</text>
+  <!-- Host Network box -->
+  <rect x="14" y="46" width="250" height="140" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
+  <text x="139" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host Network</text>
+  <rect x="34" y="74" width="100" height="34" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="84" y="96" font-size="12" fill="#222" text-anchor="middle">docker0 bridge</text>
+  <rect x="54" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="94" y="140" font-size="12" fill="#222" text-anchor="middle">vethXXXX</text>
+  <!-- Container Network NS box -->
+  <rect x="336" y="46" width="250" height="140" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="461" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Container Net NS</text>
+  <rect x="466" y="74" width="80" height="34" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="506" y="96" font-size="12" fill="#222" text-anchor="middle">eth0</text>
+  <rect x="466" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+  <text x="506" y="140" font-size="12" fill="#222" text-anchor="middle">vethYYYY</text>
+  <!-- veth pair connection -->
+  <line x1="134" y1="135" x2="264" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="336" y1="135" x2="466" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="300" y="131" font-size="11" fill="#555" text-anchor="middle">veth pair</text>
+  <!-- Vertical connections -->
+  <line x1="84" y1="108" x2="84" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
+  <line x1="506" y1="108" x2="506" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
+</svg>

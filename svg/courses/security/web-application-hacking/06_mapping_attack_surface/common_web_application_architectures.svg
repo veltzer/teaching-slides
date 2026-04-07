@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="310" font-family="sans-serif">
+  <defs>
+    <marker id="ah16" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Monolithic -->
+  <rect x="10" y="10" width="610" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="25" y="30" font-size="13" fill="#222" font-weight="bold">Monolithic</text>
+  <text x="25" y="52" font-size="12" fill="#222">Browser  →  Web Server  →  App (all-in-one)  →  Database</text>
+  <!-- Microservices -->
+  <rect x="10" y="85" width="610" height="85" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="25" y="105" font-size="13" fill="#222" font-weight="bold">Microservices</text>
+  <text x="25" y="125" font-size="12" fill="#222">Browser  →  API Gateway  →  Service A  →  DB-A</text>
+  <text x="25" y="143" font-size="12" fill="#555">                       →  Service B  →  DB-B</text>
+  <text x="25" y="159" font-size="12" fill="#555">                       →  Service C  →  Cache</text>
+  <!-- Serverless -->
+  <rect x="10" y="183" width="610" height="55" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="25" y="203" font-size="13" fill="#222" font-weight="bold">Serverless</text>
+  <text x="25" y="225" font-size="12" fill="#222">Browser  →  CDN  →  API Gateway  →  Lambda/Functions  →  DB</text>
+  <!-- Jamstack -->
+  <rect x="10" y="250" width="610" height="50" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
+  <text x="25" y="270" font-size="13" fill="#222" font-weight="bold">Jamstack</text>
+  <text x="25" y="290" font-size="12" fill="#222">Browser  →  CDN (static)  →  API calls  →  Backend services</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr_async" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Sync vs Async Execution Model</text>
+  <rect x="20" y="30" width="170" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Synchronous</text>
+  <text x="105" y="63" text-anchor="middle" font-size="9">1 thread per connection</text>
+  <text x="105" y="76" text-anchor="middle" font-size="9">Blocks on I/O (idle CPU)</text>
+  <text x="105" y="89" text-anchor="middle" font-size="9">10K threads = high overhead</text>
+  <rect x="215" y="30" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">Async (Rust)</text>
+  <text x="300" y="63" text-anchor="middle" font-size="9">Many tasks on few threads</text>
+  <text x="300" y="76" text-anchor="middle" font-size="9">Yields on .await (no block)</text>
+  <text x="300" y="89" text-anchor="middle" font-size="9">100K+ tasks, low overhead</text>
+  <rect x="410" y="30" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">Tokio Runtime</text>
+  <text x="495" y="63" text-anchor="middle" font-size="9">Executor: polls Futures</text>
+  <text x="495" y="76" text-anchor="middle" font-size="9">Reactor: watches I/O</text>
+  <text x="495" y="89" text-anchor="middle" font-size="9">Work-stealing scheduler</text>
+  <line x1="190" y1="62" x2="215" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arr_async)"/>
+  <line x1="385" y1="62" x2="410" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arr_async)"/>
+  <rect x="50" y="110" width="500" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="125" text-anchor="middle" font-size="10" font-weight="bold">async fn -> impl Future: compiler transforms to state machine</text>
+  <text x="300" y="139" text-anchor="middle" font-size="9">Each .await is a yield point. No threads blocked. No callback hell.</text>
+  <rect x="100" y="160" width="400" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10">Use async for I/O-bound work; use threads for CPU-bound work</text>
+</svg>

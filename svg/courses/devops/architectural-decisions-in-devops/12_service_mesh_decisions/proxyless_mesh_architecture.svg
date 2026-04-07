@@ -1,0 +1,26 @@
+<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Proxyless Mesh (gRPC xDS)</text>
+  <rect x="50" y="50" width="600" height="50" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" rx="5"/>
+  <text x="350" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#3f51b5">Control Plane (istiod)</text>
+  <rect x="80" y="140" width="160" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="160" y="170" text-anchor="middle" font-size="12" font-weight="bold">Service A</text>
+  <text x="160" y="190" text-anchor="middle" font-size="10" fill="#555">gRPC library with</text>
+  <text x="160" y="205" text-anchor="middle" font-size="10" fill="#555">built-in xDS client</text>
+  <text x="160" y="225" text-anchor="middle" font-size="10" fill="#1976d2">No sidecar needed</text>
+  <rect x="420" y="140" width="160" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
+  <text x="500" y="170" text-anchor="middle" font-size="12" font-weight="bold">Service B</text>
+  <text x="500" y="190" text-anchor="middle" font-size="10" fill="#555">gRPC library with</text>
+  <text x="500" y="205" text-anchor="middle" font-size="10" fill="#555">built-in xDS client</text>
+  <text x="500" y="225" text-anchor="middle" font-size="10" fill="#1976d2">No sidecar needed</text>
+  <line x1="240" y1="190" x2="418" y2="190" stroke="#388e3c" stroke-width="2" marker-end="url(#arr4)"/>
+  <text x="330" y="183" text-anchor="middle" font-size="10" fill="#388e3c">Direct gRPC call</text>
+  <line x1="160" y1="140" x2="160" y2="100" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr4)"/>
+  <line x1="500" y1="140" x2="500" y2="100" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr4)"/>
+  <text x="90" y="125" font-size="9" fill="#3f51b5">xDS config</text>
+  <text x="440" y="125" font-size="9" fill="#3f51b5">xDS config</text>
+</svg>

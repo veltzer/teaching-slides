@@ -1,0 +1,28 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd2_02_right" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrowd2_02_left" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
+      <path d="M9,0 L9,6 L0,3 z" fill="#c62828"/>
+    </marker>
+  </defs>
+  <!-- Working Directory -->
+  <rect x="30" y="40" width="200" height="120" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="130" y="65" text-anchor="middle" font-size="12" font-weight="bold">Working Directory</text>
+  <rect x="55" y="78" width="150" height="24" fill="#fff" stroke="#90caf9" stroke-width="1" rx="3"/>
+  <text x="130" y="95" text-anchor="middle" font-size="11" fill="#555">file1.js (modified)</text>
+  <rect x="55" y="108" width="150" height="24" fill="#fff" stroke="#90caf9" stroke-width="1" rx="3"/>
+  <text x="130" y="125" text-anchor="middle" font-size="11" fill="#555">file2.css (modified)</text>
+  <!-- Staging Area -->
+  <rect x="370" y="40" width="200" height="120" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="470" y="65" text-anchor="middle" font-size="12" font-weight="bold">Staging Area</text>
+  <rect x="395" y="78" width="150" height="24" fill="#fff" stroke="#ffb74d" stroke-width="1" rx="3"/>
+  <text x="470" y="95" text-anchor="middle" font-size="11" fill="#555">file1.js (staged)</text>
+  <!-- git add arrow (right) -->
+  <line x1="230" y1="85" x2="367" y2="85" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd2_02_right)"/>
+  <text x="298" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">git add</text>
+  <!-- git restore --staged arrow (left) -->
+  <line x1="370" y1="130" x2="233" y2="130" stroke="#c62828" stroke-width="2" marker-end="url(#arrowd2_02_left)"/>
+  <text x="298" y="152" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">git restore --staged</text>
+</svg>

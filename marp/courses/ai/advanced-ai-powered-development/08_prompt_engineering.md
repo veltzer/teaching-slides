@@ -135,19 +135,7 @@ Error: KeyError: 'users'
 
 ## How Sampling Affects Output
 
-<svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e">
-  <text x="20" y="20" fill="#e0e0e0" font-size="12" font-weight="bold">Temperature Spectrum</text>
-  <rect x="20" y="35" width="560" height="20" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1"/>
-  <rect x="20" y="35" width="187" height="20" rx="4" fill="#0f3460"/>
-  <rect x="207" y="35" width="186" height="20" rx="4" fill="#533483"/>
-  <rect x="393" y="35" width="187" height="20" rx="4" fill="#e94560"/>
-  <text x="113" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">0.0 - Deterministic</text>
-  <text x="300" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">0.4-0.7 Balanced</text>
-  <text x="486" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">1.0+ Creative</text>
-  <text x="20" y="85" fill="#e0e0e0" font-size="11">Code generation / JSON → temperature: 0.0</text>
-  <text x="20" y="105" fill="#e0e0e0" font-size="11">General tasks → temperature: 0.3-0.5</text>
-  <text x="20" y="125" fill="#e0e0e0" font-size="11">Brainstorming / creative → temperature: 0.8-1.0</text>
-</svg>
+![how_sampling_affects_output](../../../../svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
 
 ## Key Parameters
 - **`temperature`**: controls randomness; lower = more focused
@@ -294,19 +282,7 @@ review = client.chat.completions.create(
 
 ## Breaking Complex Tasks into Stages
 
-<svg viewBox="0 0 720 100" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e">
-  <rect x="10" y="30" width="140" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="80" y="55" text-anchor="middle" fill="#e0e0e0" font-size="12">1. Extract Facts</text>
-  <rect x="200" y="30" width="140" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="270" y="55" text-anchor="middle" fill="#e0e0e0" font-size="12">2. Analyze Risk</text>
-  <rect x="390" y="30" width="140" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="460" y="55" text-anchor="middle" fill="#e0e0e0" font-size="12">3. Generate Plan</text>
-  <rect x="580" y="30" width="130" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="645" y="55" text-anchor="middle" fill="#e0e0e0" font-size="12">4. Validate</text>
-  <line x1="150" y1="50" x2="200" y2="50" stroke="#e94560" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="340" y1="50" x2="390" y2="50" stroke="#e94560" stroke-width="2"/>
-  <line x1="530" y1="50" x2="580" y2="50" stroke="#e94560" stroke-width="2"/>
-</svg>
+![breaking_complex_tasks_into_stages](../../../../svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
 
 1. Each stage gets a focused prompt with a single responsibility
 1. Output of stage N becomes input of stage N+1
@@ -439,64 +415,7 @@ prompt = REVIEW_TEMPLATE.render(
 - Rank context sources by relevance to the current task
 - Assemble prompt from highest-priority items first
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="220" font-family="sans-serif">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-  </marker>
-</defs>
-<rect x="10" y="10" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="18" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Priority</text>
-<rect x="100" y="10" width="220" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="108" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Context Source</text>
-<rect x="320" y="10" width="150" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="328" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Token Budget</text>
-<rect x="470" y="10" width="140" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="478" y="29" font-size="12" font-weight="bold" fill="#222" text-anchor="start"></text>
-<rect x="10" y="42" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="18" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 1</text>
-<rect x="100" y="42" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="108" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Current file under edit</text>
-<rect x="320" y="42" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="328" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~500 tokens</text>
-<rect x="470" y="42" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="478" y="61" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="10" y="70" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="18" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 2</text>
-<rect x="100" y="70" width="220" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="108" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Directly imported modules</text>
-<rect x="320" y="70" width="150" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="328" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~1500 tokens</text>
-<rect x="470" y="70" width="140" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="478" y="89" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="10" y="98" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="18" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 3</text>
-<rect x="100" y="98" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="108" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Recent git diff</text>
-<rect x="320" y="98" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="328" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~800 tokens</text>
-<rect x="470" y="98" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="478" y="117" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="10" y="126" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="18" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 4</text>
-<rect x="100" y="126" width="220" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="108" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Project conventions / linting</text>
-<rect x="320" y="126" width="150" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="328" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~300 tokens</text>
-<rect x="470" y="126" width="140" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="478" y="145" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="10" y="154" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="18" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Priority 5</text>
-<rect x="100" y="154" width="220" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="108" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Related test files</text>
-<rect x="320" y="154" width="150" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="328" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start">~600 tokens</text>
-<rect x="470" y="154" width="140" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="478" y="173" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="10" y="182" width="600" height="28" fill="#9fa8da" stroke="#333" stroke-width="1"/>
-<text x="18" y="201" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Total Budget</text>
-<text x="328" y="201" font-size="12" font-weight="bold" fill="#222" text-anchor="start">~3700 tokens</text>
-</svg>
+![fitting_the_right_context_into_limited_windows](../../../../svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
 
 - Always reserve tokens for the model's response
 - Drop lowest-priority items first when the window is tight
@@ -596,20 +515,7 @@ response = client.messages.create(
 
 ## Building a Prompt Evaluation Loop
 
-<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e">
-  <rect x="20" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="75" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Write Prompt</text>
-  <rect x="170" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="225" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Run Test Suite</text>
-  <rect x="320" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="375" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Score Results</text>
-  <rect x="470" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="525" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Refine Prompt</text>
-  <line x1="130" y1="60" x2="170" y2="60" stroke="#e94560" stroke-width="2"/>
-  <line x1="280" y1="60" x2="320" y2="60" stroke="#e94560" stroke-width="2"/>
-  <line x1="430" y1="60" x2="470" y2="60" stroke="#e94560" stroke-width="2"/>
-  <path d="M525 80 L525 100 L75 100 L75 80" fill="none" stroke="#e94560" stroke-width="2"/>
-</svg>
+![building_a_prompt_evaluation_loop](../../../../svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
 
 1. Build a test set: 20-50 representative inputs with expected outputs
 1. Score with automated metrics: exact match, BLEU, or LLM-as-judge

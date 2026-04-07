@@ -30,27 +30,7 @@ With RAG:
 
 ## RAG Architecture Overview
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="120" width="120" height="60" fill="#4a90d9" rx="8"/>
-  <text x="70" y="155" text-anchor="middle" fill="white" font-size="14">User Query</text>
-  <rect x="180" y="120" width="120" height="60" fill="#e67e22" rx="8"/>
-  <text x="240" y="155" text-anchor="middle" fill="white" font-size="14">Embedding</text>
-  <rect x="350" y="120" width="120" height="60" fill="#27ae60" rx="8"/>
-  <text x="410" y="155" text-anchor="middle" fill="white" font-size="14">Vector DB</text>
-  <rect x="350" y="30" width="120" height="60" fill="#8e44ad" rx="8"/>
-  <text x="410" y="55" text-anchor="middle" fill="white" font-size="12">Codebase</text>
-  <text x="410" y="75" text-anchor="middle" fill="white" font-size="12">Index</text>
-  <rect x="520" y="120" width="120" height="60" fill="#e67e22" rx="8"/>
-  <text x="580" y="155" text-anchor="middle" fill="white" font-size="14">Re-Ranker</text>
-  <rect x="690" y="120" width="100" height="60" fill="#c0392b" rx="8"/>
-  <text x="740" y="155" text-anchor="middle" fill="white" font-size="14">LLM</text>
-  <line x1="130" y1="150" x2="180" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="300" y1="150" x2="350" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="410" y1="90" x2="410" y2="120" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="470" y1="150" x2="520" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="150" x2="690" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="black"/></marker></defs>
-</svg>
+![rag_architecture_overview](../../../../svg/courses/ai/advanced-ai-powered-development/07_rag_for_development/rag_architecture_overview.svg)
 
 ---
 
@@ -260,20 +240,7 @@ def enrich_chunk(chunk: dict, file_path: str) -> dict:
 
 Enhance retrieval by leveraging code dependency graphs:
 
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="350" cy="60" r="35" fill="#4a90d9"/>
-  <text x="350" y="65" text-anchor="middle" fill="white" font-size="12">UserService</text>
-  <circle cx="180" cy="170" r="35" fill="#27ae60"/>
-  <text x="180" y="175" text-anchor="middle" fill="white" font-size="12">AuthModule</text>
-  <circle cx="350" cy="200" r="35" fill="#27ae60"/>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="12">UserRepo</text>
-  <circle cx="520" cy="170" r="35" fill="#27ae60"/>
-  <text x="520" y="175" text-anchor="middle" fill="white" font-size="12">EmailSvc</text>
-  <line x1="325" y1="88" x2="205" y2="142" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <line x1="350" y1="95" x2="350" y2="165" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <line x1="375" y1="88" x2="495" y2="142" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <defs><marker id="garrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/></marker></defs>
-</svg>
+![graph_rag_for_code](../../../../svg/courses/ai/advanced-ai-powered-development/07_rag_for_development/graph_rag_for_code.svg)
 
 - When a query matches `UserService`, also retrieve its dependencies
 - Walk the import/call graph 1-2 hops to gather related context
@@ -413,18 +380,7 @@ def rag_pipeline(query: str, collection, reranker, llm):
 
 ## Context Window Budgeting Diagram
 
-<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="680" height="60" fill="#eee" stroke="#333" rx="6"/>
-  <rect x="12" y="42" width="100" height="56" fill="#e74c3c" rx="4"/>
-  <text x="62" y="75" text-anchor="middle" fill="white" font-size="11">System</text>
-  <rect x="114" y="42" width="340" height="56" fill="#3498db" rx="4"/>
-  <text x="284" y="75" text-anchor="middle" fill="white" font-size="11">Retrieved Chunks (60%)</text>
-  <rect x="456" y="42" width="100" height="56" fill="#f39c12" rx="4"/>
-  <text x="506" y="75" text-anchor="middle" fill="white" font-size="11">User Query</text>
-  <rect x="558" y="42" width="130" height="56" fill="#27ae60" rx="4"/>
-  <text x="623" y="75" text-anchor="middle" fill="white" font-size="11">Response Buffer</text>
-  <text x="350" y="140" text-anchor="middle" font-size="13">Total context window (e.g., 128K tokens)</text>
-</svg>
+![context_window_budgeting_diagram](../../../../svg/courses/ai/advanced-ai-powered-development/07_rag_for_development/context_window_budgeting_diagram.svg)
 
 **Budget allocation rules**:
 1. Reserve 10-15% for system prompt and instructions

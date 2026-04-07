@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="380" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="330" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Tokio Runtime Architecture</text>
+<rect x="20" y="35" width="620" height="325" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="330" y="58" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Tokio Runtime</text>
+<rect x="50" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="125" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 1</text>
+<text x="125" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<rect x="220" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="295" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 2</text>
+<text x="295" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<rect x="390" y="70" width="150" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="465" y="96" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Worker 3</text>
+<text x="465" y="114" text-anchor="middle" font-size="11" fill="#222222">(thread)</text>
+<text x="570" y="105" text-anchor="middle" font-size="16" fill="#888">...</text>
+<rect x="50" y="165" width="550" height="60" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="325" y="188" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Task Scheduler</text>
+<text x="325" y="208" text-anchor="middle" font-size="12" fill="#222222">(work-stealing queue)</text>
+<line x1="125" y1="130" x2="125" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="295" y1="130" x2="295" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="465" y1="130" x2="465" y2="165" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="50" y="265" width="265" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="182" y="290" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">I/O Driver (epoll)</text>
+<text x="182" y="310" text-anchor="middle" font-size="11" fill="#222222">async I/O notifications</text>
+<rect x="335" y="265" width="265" height="70" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="467" y="290" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Timer Wheel</text>
+<text x="467" y="310" text-anchor="middle" font-size="11" fill="#222222">scheduled wakeups</text>
+<line x1="182" y1="225" x2="182" y2="265" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="467" y1="225" x2="467" y2="265" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>

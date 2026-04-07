@@ -14,25 +14,7 @@
 
 ## Troubleshooting Workflow
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Troubleshooting Process</text>
-  <rect x="100" y="60" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="175" y="95" text-anchor="middle" fill="white">1. Identify Issue</text>
-  <rect x="280" y="60" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="355" y="95" text-anchor="middle" fill="white">2. Gather Info</text>
-  <rect x="460" y="60" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="535" y="95" text-anchor="middle">3. Analyze</text>
-  <rect x="640" y="60" width="110" height="60" fill="#ea4335" rx="5"/>
-  <text x="695" y="95" text-anchor="middle" fill="white">4. Fix</text>
-  <rect x="200" y="160" width="400" height="180" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="190" text-anchor="middle" font-weight="bold">Information Sources</text>
-  <text x="400" y="215" text-anchor="middle" font-size="12">• kubectl describe</text>
-  <text x="400" y="235" text-anchor="middle" font-size="12">• kubectl logs</text>
-  <text x="400" y="255" text-anchor="middle" font-size="12">• kubectl get events</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">• kubectl exec</text>
-  <text x="400" y="295" text-anchor="middle" font-size="12">• kubectl debug</text>
-  <text x="400" y="315" text-anchor="middle" font-size="12">• Metrics and monitoring</text>
-</svg>
+![troubleshooting_workflow](../../../../svg/courses/devops/k8s-introduction/13_troubleshooting/troubleshooting_workflow.svg)
 
 ---
 
@@ -425,30 +407,7 @@ kubectl get secret my-secret -o jsonpath='{.data.key}' | base64 -d
 
 ## CrashLoopBackOff Diagnosis
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">CrashLoopBackOff Diagnosis</text>
-  <rect x="100" y="80" width="200" height="60" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Check Logs</text>
-  <text x="200" y="125" text-anchor="middle" fill="white" font-size="10">kubectl logs pod --previous</text>
-  <rect x="320" y="80" width="200" height="60" fill="#34a853" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" fill="white" font-weight="bold">Check Exit Code</text>
-  <text x="420" y="125" text-anchor="middle" fill="white" font-size="10">kubectl describe pod</text>
-  <rect x="540" y="80" width="200" height="60" fill="#fbbc04" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" font-weight="bold">Check Resources</text>
-  <text x="640" y="125" text-anchor="middle" font-size="10">Memory/CPU limits</text>
-  <rect x="100" y="160" width="640" height="150" fill="#e8f5e9" rx="5"/>
-  <text x="420" y="185" text-anchor="middle" font-weight="bold">Common Exit Codes</text>
-  <text x="250" y="210" text-anchor="start" font-size="11">• 0: Success (check restart policy)</text>
-  <text x="250" y="230" text-anchor="start" font-size="11">• 1: General errors</text>
-  <text x="250" y="250" text-anchor="start" font-size="11">• 125: Container failed to run</text>
-  <text x="250" y="270" text-anchor="start" font-size="11">• 126: Container command not executable</text>
-  <text x="250" y="290" text-anchor="start" font-size="11">• 127: Container command not found</text>
-  <text x="500" y="210" text-anchor="start" font-size="11">• 128+n: Fatal signal n</text>
-  <text x="500" y="230" text-anchor="start" font-size="11">• 137: SIGKILL (OOM)</text>
-  <text x="500" y="250" text-anchor="start" font-size="11">• 139: SIGSEGV</text>
-  <text x="500" y="270" text-anchor="start" font-size="11">• 143: SIGTERM</text>
-</svg>
+![crashloopbackoff_diagnosis](../../../../svg/courses/devops/k8s-introduction/13_troubleshooting/crashloopbackoff_diagnosis.svg)
 
 ---
 
@@ -589,38 +548,7 @@ kubectl describe limitrange
 
 ## Debugging Tools
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Debugging Tools</text>
-  <rect x="100" y="80" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">kubectl</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="10">Primary tool</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="10">Built-in debug</text>
-  <rect x="270" y="80" width="150" height="80" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">k9s</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="10">Terminal UI</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="10">Interactive</text>
-  <rect x="440" y="80" width="150" height="80" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">stern</text>
-  <text x="515" y="130" text-anchor="middle" font-size="10">Multi-pod logs</text>
-  <text x="515" y="150" text-anchor="middle" font-size="10">Real-time tail</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">kubectx</text>
-  <text x="680" y="130" text-anchor="middle" fill="white" font-size="10">Context switch</text>
-  <text x="680" y="150" text-anchor="middle" fill="white" font-size="10">Namespace mgmt</text>
-  <rect x="180" y="180" width="150" height="80" fill="#9c27b0" rx="5"/>
-  <text x="255" y="210" text-anchor="middle" fill="white" font-weight="bold">kube-capacity</text>
-  <text x="255" y="230" text-anchor="middle" fill="white" font-size="10">Resource view</text>
-  <text x="255" y="250" text-anchor="middle" fill="white" font-size="10">Utilization</text>
-  <rect x="350" y="180" width="150" height="80" fill="#607d8b" rx="5"/>
-  <text x="425" y="210" text-anchor="middle" fill="white" font-weight="bold">kubectl-tree</text>
-  <text x="425" y="230" text-anchor="middle" fill="white" font-size="10">Resource tree</text>
-  <text x="425" y="250" text-anchor="middle" fill="white" font-size="10">Dependencies</text>
-  <rect x="520" y="180" width="150" height="80" fill="#ff5722" rx="5"/>
-  <text x="595" y="210" text-anchor="middle" fill="white" font-weight="bold">ksniff</text>
-  <text x="595" y="230" text-anchor="middle" fill="white" font-size="10">Packet capture</text>
-  <text x="595" y="250" text-anchor="middle" fill="white" font-size="10">tcpdump</text>
-</svg>
+![debugging_tools](../../../../svg/courses/devops/k8s-introduction/13_troubleshooting/debugging_tools.svg)
 
 ---
 

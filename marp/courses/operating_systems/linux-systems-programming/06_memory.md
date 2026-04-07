@@ -16,36 +16,7 @@
 
 ## Process Memory Layout
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="400" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Virtual Address Space (x86_64)</text>
-
-  <rect x="200" y="50" width="400" height="50" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="12">Kernel Space (0xFFFF...)</text>
-
-  <rect x="200" y="100" width="400" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="400" y="135" text-anchor="middle" fill="white" font-size="12">Stack (grows ↓)</text>
-  <text x="620" y="135" font-size="10">~0x7FFF...</text>
-
-  <rect x="200" y="160" width="400" height="40" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="185" text-anchor="middle" fill="white" font-size="12">Memory Mapped Region</text>
-
-  <rect x="200" y="200" width="400" height="40" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="225" text-anchor="middle" fill="white" font-size="12">Shared Libraries</text>
-
-  <rect x="200" y="240" width="400" height="80" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" fill="white" font-size="12">Heap (grows ↑)</text>
-  <text x="620" y="285" font-size="10">brk</text>
-
-  <rect x="200" y="320" width="400" height="40" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="400" y="345" text-anchor="middle" fill="black" font-size="12">BSS (uninitialized)</text>
-
-  <rect x="200" y="360" width="400" height="40" fill="#E67E22" stroke="#333" stroke-width="2"/>
-  <text x="400" y="385" text-anchor="middle" fill="white" font-size="12">Data (initialized)</text>
-
-  <rect x="200" y="400" width="400" height="50" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="430" text-anchor="middle" fill="white" font-size="12">Text (code) - 0x400000</text>
-</svg>
+![process_memory_layout](../../../../svg/courses/operating_systems/linux-systems-programming/06_memory/process_memory_layout.svg)
 
 ---
 
@@ -107,39 +78,7 @@ void free(void *ptr);
 
 ## malloc() Internals
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Heap Organization</text>
-
-  <rect x="100" y="60" width="600" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="12">Heap Segment</text>
-
-  <rect x="120" y="140" width="100" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="170" y="165" text-anchor="middle" fill="white" font-size="10">Chunk 1</text>
-
-  <rect x="120" y="180" width="100" height="20" fill="#E74C3C" stroke="#333" stroke-width="1"/>
-  <text x="170" y="195" text-anchor="middle" fill="white" font-size="9">metadata</text>
-
-  <rect x="240" y="140" width="150" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="315" y="165" text-anchor="middle" fill="white" font-size="10">Chunk 2</text>
-
-  <rect x="240" y="180" width="150" height="20" fill="#E74C3C" stroke="#333" stroke-width="1"/>
-  <text x="315" y="195" text-anchor="middle" fill="white" font-size="9">metadata</text>
-
-  <rect x="410" y="140" width="80" height="40" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="450" y="165" text-anchor="middle" fill="white" font-size="10">Free</text>
-
-  <rect x="410" y="180" width="80" height="20" fill="#7F8C8D" stroke="#333" stroke-width="1"/>
-  <text x="450" y="195" text-anchor="middle" fill="white" font-size="9">metadata</text>
-
-  <rect x="510" y="140" width="120" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="570" y="165" text-anchor="middle" fill="white" font-size="10">Chunk 3</text>
-
-  <rect x="510" y="180" width="120" height="20" fill="#E74C3C" stroke="#333" stroke-width="1"/>
-  <text x="570" y="195" text-anchor="middle" fill="white" font-size="9">metadata</text>
-
-  <text x="400" y="250" text-anchor="middle" font-size="11">Each chunk has metadata: size, flags, pointers</text>
-  <text x="400" y="270" text-anchor="middle" font-size="11">Free chunks linked in bins by size</text>
-</svg>
+![malloc_internals](../../../../svg/courses/operating_systems/linux-systems-programming/06_memory/malloc_internals.svg)
 
 ---
 
@@ -177,35 +116,7 @@ void free(void *ptr);
 
 ## Memory Fragmentation
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">External Fragmentation</text>
-
-  <rect x="100" y="60" width="600" height="40" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-
-  <rect x="100" y="60" width="80" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="140" y="85" text-anchor="middle" fill="white" font-size="10">Used</text>
-
-  <rect x="180" y="60" width="40" height="40" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="200" y="85" text-anchor="middle" fill="white" font-size="10">Free</text>
-
-  <rect x="220" y="60" width="100" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="270" y="85" text-anchor="middle" fill="white" font-size="10">Used</text>
-
-  <rect x="320" y="60" width="60" height="40" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="350" y="85" text-anchor="middle" fill="white" font-size="10">Free</text>
-
-  <rect x="380" y="60" width="120" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="440" y="85" text-anchor="middle" fill="white" font-size="10">Used</text>
-
-  <rect x="500" y="60" width="50" height="40" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="525" y="85" text-anchor="middle" fill="white" font-size="10">Free</text>
-
-  <rect x="550" y="60" width="150" height="40" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="625" y="85" text-anchor="middle" fill="white" font-size="10">Used</text>
-
-  <text x="400" y="130" text-anchor="middle" font-size="12">Total free: 150 bytes, but largest contiguous: 60 bytes</text>
-  <text x="400" y="150" text-anchor="middle" font-size="12">Cannot allocate 100 bytes despite having space!</text>
-</svg>
+![memory_fragmentation](../../../../svg/courses/operating_systems/linux-systems-programming/06_memory/memory_fragmentation.svg)
 
 ---
 
@@ -496,39 +407,7 @@ void *my_data = pthread_getspecific(key);
 
 ## TLS Implementation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Thread Local Storage</text>
-
-  <rect x="50" y="60" width="200" height="300" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="150" y="50" text-anchor="middle" font-size="12">Thread 1</text>
-  <rect x="70" y="80" width="160" height="40" fill="#2980B9"/>
-  <text x="150" y="105" text-anchor="middle" fill="white" font-size="10">Stack</text>
-  <rect x="70" y="130" width="160" height="40" fill="#2471A3"/>
-  <text x="150" y="155" text-anchor="middle" fill="white" font-size="10">TLS Block</text>
-  <rect x="80" y="140" width="140" height="20" fill="#1F618D"/>
-  <text x="150" y="155" text-anchor="middle" fill="white" font-size="9">tls_counter = 5</text>
-
-  <rect x="300" y="60" width="200" height="300" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="50" text-anchor="middle" font-size="12">Thread 2</text>
-  <rect x="320" y="80" width="160" height="40" fill="#C0392B"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="10">Stack</text>
-  <rect x="320" y="130" width="160" height="40" fill="#A93226"/>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="10">TLS Block</text>
-  <rect x="330" y="140" width="140" height="20" fill="#922B21"/>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="9">tls_counter = 10</text>
-
-  <rect x="550" y="60" width="200" height="300" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="650" y="50" text-anchor="middle" font-size="12">Thread 3</text>
-  <rect x="570" y="80" width="160" height="40" fill="#27AE60"/>
-  <text x="650" y="105" text-anchor="middle" fill="white" font-size="10">Stack</text>
-  <rect x="570" y="130" width="160" height="40" fill="#229954"/>
-  <text x="650" y="155" text-anchor="middle" fill="white" font-size="10">TLS Block</text>
-  <rect x="580" y="140" width="140" height="20" fill="#1E8449"/>
-  <text x="650" y="155" text-anchor="middle" fill="white" font-size="9">tls_counter = 3</text>
-
-  <text x="400" y="250" text-anchor="middle" font-size="11">Each thread has independent copy</text>
-  <text x="400" y="270" text-anchor="middle" font-size="11">No synchronization needed</text>
-</svg>
+![tls_implementation](../../../../svg/courses/operating_systems/linux-systems-programming/06_memory/tls_implementation.svg)
 
 ---
 
@@ -803,30 +682,7 @@ void overflow() {
 
 ## Memory Allocator Comparison
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Allocator Performance</text>
-
-  <line x1="100" y1="320" x2="700" y2="320" stroke="#333" stroke-width="2"/>
-  <line x1="100" y1="320" x2="100" y2="80" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="200" width="60" height="120" fill="#3498DB"/>
-  <text x="180" y="340" text-anchor="middle" font-size="10">ptmalloc</text>
-
-  <rect x="250" y="150" width="60" height="170" fill="#E74C3C"/>
-  <text x="280" y="340" text-anchor="middle" font-size="10">tcmalloc</text>
-
-  <rect x="350" y="140" width="60" height="180" fill="#2ECC71"/>
-  <text x="380" y="340" text-anchor="middle" font-size="10">jemalloc</text>
-
-  <rect x="450" y="120" width="60" height="200" fill="#F39C12"/>
-  <text x="480" y="340" text-anchor="middle" font-size="10">mimalloc</text>
-
-  <rect x="550" y="250" width="60" height="70" fill="#9B59B6"/>
-  <text x="580" y="340" text-anchor="middle" font-size="10">custom</text>
-
-  <text x="50" y="200" font-size="10">Speed</text>
-  <text x="400" y="380" text-anchor="middle" font-size="11">Higher is better (relative performance)</text>
-</svg>
+![memory_allocator_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/06_memory/memory_allocator_comparison.svg)
 
 ---
 

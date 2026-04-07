@@ -1,0 +1,38 @@
+<svg viewBox="0 0 620 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-sh" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Writer Side (Map stage)</text>
+  <rect x="30" y="25" width="560" height="150" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Executor</text>
+  <rect x="50" y="50" width="110" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="105" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Task (process)</text>
+  <line x1="160" y1="67" x2="200" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrow-sh)"/>
+  <rect x="205" y="50" width="200" height="35" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="305" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Sort by partition key</text>
+  <text x="305" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555">+ spill to disk</text>
+  <line x1="250" y1="85" x2="130" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="305" y1="85" x2="305" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="360" y1="85" x2="480" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <rect x="70" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="130" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 0 file</text>
+  <rect x="245" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="305" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 1 file</text>
+  <rect x="420" y="120" width="120" height="35" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="480" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Part 2 file</text>
+  <text x="310" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Reader Side (Reduce stage)</text>
+  <rect x="30" y="210" width="560" height="155" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="228" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Executor (for Partition 0)</text>
+  <text x="310" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Fetch Part 0 from all map executors</text>
+  <rect x="80" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="135" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 0 Part 0</text>
+  <rect x="220" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="275" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 1 Part 0</text>
+  <rect x="360" y="258" width="110" height="35" rx="6" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="415" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Exec 2 Part 0</text>
+  <line x1="135" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="275" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <line x1="415" y1="293" x2="275" y2="320" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sh)"/>
+  <rect x="200" y="325" width="150" height="30" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="275" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Merge + Sort</text>
+</svg>

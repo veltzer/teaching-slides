@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" viewBox="0 0 660 340">
+  <rect width="660" height="340" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
+  <text x="330" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">xz-utils Backdoor (CVE-2024-3094)</text>
+  <!-- rows -->
+  <rect x="20" y="40" width="90" height="44" fill="#e3f2fd" rx="4" stroke="#555" stroke-width="1"/>
+  <text x="65" y="59" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">2 years</text>
+  <text x="65" y="74" font-family="sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">setup</text>
+  <text x="125" y="56" font-family="sans-serif" font-size="12" fill="#222">"Jia Tan" builds trust as xz-utils contributor</text>
+  <text x="125" y="74" font-family="sans-serif" font-size="12" fill="#222">with legitimate patches</text>
+  <rect x="20" y="92" width="90" height="44" fill="#e3f2fd" rx="4" stroke="#555" stroke-width="1"/>
+  <text x="65" y="111" font-family="sans-serif" font-size="11" font-weight="bold" fill="#1565c0" text-anchor="middle">Pressure</text>
+  <text x="65" y="126" font-family="sans-serif" font-size="11" fill="#1565c0" text-anchor="middle">campaign</text>
+  <text x="125" y="108" font-family="sans-serif" font-size="12" fill="#222">Social pressure to add Jia Tan as co-maintainer</text>
+  <text x="125" y="126" font-family="sans-serif" font-size="12" fill="#222">(sockpuppet accounts)</text>
+  <rect x="20" y="144" width="90" height="58" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1"/>
+  <text x="65" y="163" font-family="sans-serif" font-size="11" font-weight="bold" fill="#e65100" text-anchor="middle">Backdoor</text>
+  <text x="65" y="178" font-family="sans-serif" font-size="11" fill="#e65100" text-anchor="middle">insertion</text>
+  <text x="125" y="160" font-family="sans-serif" font-size="12" fill="#222">Malicious code hidden in .xz test fixture files</text>
+  <text x="125" y="178" font-family="sans-serif" font-size="12" fill="#222">Injected during build process, invisible in source</text>
+  <text x="125" y="196" font-family="sans-serif" font-size="12" fill="#222">Target: liblzma → sshd (via systemd) → RCE via SSH</text>
+  <rect x="20" y="210" width="90" height="44" fill="#ffebee" rx="4" stroke="#c62828" stroke-width="1"/>
+  <text x="65" y="229" font-family="sans-serif" font-size="11" font-weight="bold" fill="#c62828" text-anchor="middle">Discovery</text>
+  <text x="125" y="226" font-family="sans-serif" font-size="12" fill="#222">Andres Freund noticed 500ms SSH delay</text>
+  <text x="125" y="244" font-family="sans-serif" font-size="12" fill="#222">and investigated (pure luck!)</text>
+  <rect x="20" y="262" width="90" height="30" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1"/>
+  <text x="65" y="281" font-family="sans-serif" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="middle">Impact</text>
+  <text x="125" y="278" font-family="sans-serif" font-size="12" fill="#222">Would have backdoored most Linux distros — caught just before widespread deployment</text>
+  <rect x="20" y="300" width="90" height="30" fill="#f3e5f5" rx="4" stroke="#7b1fa2" stroke-width="1"/>
+  <text x="65" y="319" font-family="sans-serif" font-size="11" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Lesson</text>
+  <text x="125" y="316" font-family="sans-serif" font-size="12" fill="#222">Even open source review can be subverted with patient, long-term social engineering</text>
+</svg>

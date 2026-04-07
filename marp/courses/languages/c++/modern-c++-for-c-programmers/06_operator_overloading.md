@@ -47,34 +47,7 @@ ReturnType operator+(const MyClass& left, const MyClass& right);
 
 ## Overloadable Operators
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="180" height="80" fill="#e6f3ff" stroke="#0066cc"/>
-  <text x="100" y="30" text-anchor="middle" font-size="14" font-weight="bold">Arithmetic</text>
-  <text x="100" y="50" text-anchor="middle" font-size="12">+ - * / %</text>
-  <text x="100" y="70" text-anchor="middle" font-size="12">+= -= *= /= %=</text>
-
-  <rect x="210" y="10" width="180" height="80" fill="#ffe6e6" stroke="#cc0000"/>
-  <text x="300" y="30" text-anchor="middle" font-size="14" font-weight="bold">Comparison</text>
-  <text x="300" y="50" text-anchor="middle" font-size="12">== != < > <= >=</text>
-  <text x="300" y="70" text-anchor="middle" font-size="12">&lt;=&gt;</text>
-
-  <rect x="410" y="10" width="180" height="80" fill="#e6ffe6" stroke="#00cc00"/>
-  <text x="500" y="30" text-anchor="middle" font-size="14" font-weight="bold">Logical</text>
-  <text x="500" y="50" text-anchor="middle" font-size="12">&amp;&amp; || !</text>
-
-  <rect x="10" y="110" width="180" height="80" fill="#fff0e6" stroke="#ff6600"/>
-  <text x="100" y="130" text-anchor="middle" font-size="14" font-weight="bold">Bitwise</text>
-  <text x="100" y="150" text-anchor="middle" font-size="12">&amp; | ^ ~ &lt;&lt; &gt;&gt;</text>
-  <text x="100" y="170" text-anchor="middle" font-size="12">&amp;= |= ^= &lt;&lt;= &gt;&gt;=</text>
-
-  <rect x="210" y="110" width="180" height="80" fill="#f0e6ff" stroke="#6600cc"/>
-  <text x="300" y="130" text-anchor="middle" font-size="14" font-weight="bold">Access</text>
-  <text x="300" y="150" text-anchor="middle" font-size="12">[] () -&gt; *</text>
-
-  <rect x="410" y="110" width="180" height="80" fill="#ffffcc" stroke="#cccc00"/>
-  <text x="500" y="130" text-anchor="middle" font-size="14" font-weight="bold">Other</text>
-  <text x="500" y="150" text-anchor="middle" font-size="12">++ -- , new delete</text>
-</svg>
+![overloadable_operators](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/overloadable_operators.svg)
 
 ---
 
@@ -472,31 +445,7 @@ public:
 
 ## Return Type Guidelines
 
-<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="200" height="60" fill="#e6f3ff" stroke="#0066cc"/>
-  <text x="150" y="40" text-anchor="middle" font-size="14" font-weight="bold">Arithmetic (+, -, *, /)</text>
-  <text x="150" y="60" text-anchor="middle" font-size="12">Return by value</text>
-
-  <rect x="300" y="20" width="200" height="60" fill="#ffe6e6" stroke="#cc0000"/>
-  <text x="400" y="40" text-anchor="middle" font-size="14" font-weight="bold">Assignment (=, +=, -=)</text>
-  <text x="400" y="60" text-anchor="middle" font-size="12">Return by reference</text>
-
-  <rect x="50" y="100" width="200" height="60" fill="#e6ffe6" stroke="#00cc00"/>
-  <text x="150" y="120" text-anchor="middle" font-size="14" font-weight="bold">Comparison (==, <)</text>
-  <text x="150" y="140" text-anchor="middle" font-size="12">Return bool</text>
-
-  <rect x="300" y="100" width="200" height="60" fill="#fff0e6" stroke="#ff6600"/>
-  <text x="400" y="120" text-anchor="middle" font-size="14" font-weight="bold">Pre-increment (++obj)</text>
-  <text x="400" y="140" text-anchor="middle" font-size="12">Return by reference</text>
-
-  <rect x="50" y="180" width="200" height="60" fill="#f0e6ff" stroke="#6600cc"/>
-  <text x="150" y="200" text-anchor="middle" font-size="14" font-weight="bold">Post-increment (obj++)</text>
-  <text x="150" y="220" text-anchor="middle" font-size="12">Return by value</text>
-
-  <rect x="300" y="180" width="200" height="60" fill="#ffffcc" stroke="#cccc00"/>
-  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold">Subscript ([])</text>
-  <text x="400" y="220" text-anchor="middle" font-size="12">Return by reference</text>
-</svg>
+![return_type_guidelines](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/return_type_guidelines.svg)
 
 ---
 

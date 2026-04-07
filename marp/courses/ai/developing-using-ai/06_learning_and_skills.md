@@ -17,22 +17,7 @@ This chapter covers:
 
 ## The AI-Powered Learning Revolution
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="200" fill="#E74C3C" rx="10"/>
-  <text x="225" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Traditional Learning</text>
-  <text x="225" y="170" text-anchor="middle" fill="white" font-size="12">• Books & courses</text>
-  <text x="225" y="195" text-anchor="middle" fill="white" font-size="12">• Trial and error</text>
-  <text x="225" y="220" text-anchor="middle" fill="white" font-size="12">• Limited feedback</text>
-  <text x="225" y="245" text-anchor="middle" fill="white" font-size="12">• Linear progression</text>
-  <text x="225" y="270" text-anchor="middle" fill="white" font-size="12">• Months to years</text>
-  <rect x="450" y="100" width="250" height="200" fill="#27AE60" rx="10"/>
-  <text x="575" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">AI-Enhanced Learning</text>
-  <text x="575" y="170" text-anchor="middle" fill="white" font-size="12">• Interactive tutor</text>
-  <text x="575" y="195" text-anchor="middle" fill="white" font-size="12">• Instant examples</text>
-  <text x="575" y="220" text-anchor="middle" fill="white" font-size="12">• Real-time feedback</text>
-  <text x="575" y="245" text-anchor="middle" fill="white" font-size="12">• Personalized path</text>
-  <text x="575" y="270" text-anchor="middle" fill="white" font-size="12">• Weeks to months</text>
-</svg>
+![the_ai_powered_learning_revolution](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/the_ai_powered_learning_revolution.svg)
 
 ---
 
@@ -126,33 +111,7 @@ const unique5 = arr => {
 
 ## Technology Comparison Learning
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">React vs Vue vs Angular</text>
-  <rect x="50" y="70" width="220" height="280" fill="#61DAFB" rx="10"/>
-  <text x="160" y="100" text-anchor="middle" fill="#282C34" font-size="16" font-weight="bold">React</text>
-  <text x="160" y="130" text-anchor="middle" font-size="12">Learning: ⭐⭐⭐</text>
-  <text x="160" y="155" text-anchor="middle" font-size="12">Size: 42KB</text>
-  <text x="160" y="180" text-anchor="middle" font-size="12">• Component-based</text>
-  <text x="160" y="205" text-anchor="middle" font-size="12">• Virtual DOM</text>
-  <text x="160" y="230" text-anchor="middle" font-size="12">• Large ecosystem</text>
-  <text x="160" y="255" text-anchor="middle" font-size="12">• Flexible</text>
-  <rect x="290" y="70" width="220" height="280" fill="#42B883" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Vue</text>
-  <text x="400" y="130" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐</text>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="12">Size: 34KB</text>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-size="12">• Template-based</text>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="12">• Reactive</text>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">• Progressive</text>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="12">• Simple</text>
-  <rect x="530" y="70" width="220" height="280" fill="#DD0031" rx="10"/>
-  <text x="640" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Angular</text>
-  <text x="640" y="130" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐⭐⭐⭐</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="12">Size: 130KB</text>
-  <text x="640" y="180" text-anchor="middle" fill="white" font-size="12">• Full framework</text>
-  <text x="640" y="205" text-anchor="middle" fill="white" font-size="12">• TypeScript</text>
-  <text x="640" y="230" text-anchor="middle" fill="white" font-size="12">• Opinionated</text>
-  <text x="640" y="255" text-anchor="middle" fill="white" font-size="12">• Enterprise</text>
-</svg>
+![technology_comparison_learning](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_comparison_learning.svg)
 
 ---
 
@@ -265,35 +224,7 @@ class ShapeFactory {
 
 ## Skill Enhancement: Language Learning
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Language Learning Path</text>
-  <circle cx="150" cy="200" r="40" fill="#3498DB"/>
-  <text x="150" y="205" text-anchor="middle" fill="white" font-size="14">Syntax</text>
-  <path d="M 190 200 L 260 200" stroke="#34495E" stroke-width="2" marker-end="url(#l1)"/>
-  <circle cx="300" cy="200" r="40" fill="#2ECC71"/>
-  <text x="300" y="205" text-anchor="middle" fill="white" font-size="14">Concepts</text>
-  <path d="M 340 200 L 410 200" stroke="#34495E" stroke-width="2" marker-end="url(#l2)"/>
-  <circle cx="450" cy="200" r="40" fill="#F39C12"/>
-  <text x="450" y="205" text-anchor="middle" fill="white" font-size="14">Patterns</text>
-  <path d="M 490 200 L 560 200" stroke="#34495E" stroke-width="2" marker-end="url(#l3)"/>
-  <circle cx="600" cy="200" r="40" fill="#E74C3C"/>
-  <text x="600" y="205" text-anchor="middle" fill="white" font-size="14">Ecosystem</text>
-  <text x="150" y="260" text-anchor="middle" font-size="12">Week 1</text>
-  <text x="300" y="260" text-anchor="middle" font-size="12">Week 2-3</text>
-  <text x="450" y="260" text-anchor="middle" font-size="12">Week 4-6</text>
-  <text x="600" y="260" text-anchor="middle" font-size="12">Week 7-8</text>
-  <defs>
-    <marker id="l1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="l2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="l3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![skill_enhancement_language_learning](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/skill_enhancement_language_learning.svg)
 
 ---
 
@@ -400,38 +331,7 @@ def quicksort(arr):
 
 ## System Design Learning
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">URL Shortener System Design</text>
-  <rect x="150" y="100" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="210" y="135" text-anchor="middle" fill="white" font-size="12">Client</text>
-  <rect x="330" y="100" width="120" height="60" fill="#27AE60" rx="5"/>
-  <text x="390" y="135" text-anchor="middle" fill="white" font-size="12">Load Balancer</text>
-  <rect x="510" y="100" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="570" y="135" text-anchor="middle" fill="white" font-size="12">API Servers</text>
-  <rect x="240" y="200" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="300" y="235" text-anchor="middle" fill="white" font-size="12">Cache (Redis)</text>
-  <rect x="420" y="200" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="480" y="235" text-anchor="middle" fill="white" font-size="12">Database</text>
-  <path d="M 270 130 L 330 130" stroke="white" stroke-width="2" marker-end="url(#sd1)"/>
-  <path d="M 450 130 L 510 130" stroke="white" stroke-width="2" marker-end="url(#sd2)"/>
-  <path d="M 570 160 L 480 200" stroke="white" stroke-width="2" marker-end="url(#sd3)"/>
-  <path d="M 570 160 L 300 200" stroke="white" stroke-width="2" marker-end="url(#sd4)"/>
-  <defs>
-    <marker id="sd1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="sd2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="sd3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="sd4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![system_design_learning](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/system_design_learning.svg)
 
 ---
 
@@ -563,30 +463,7 @@ def problem_solving_framework(problem):
 
 Multiple approaches to problems:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Two Sum Problem - Multiple Solutions</text>
-  <rect x="50" y="70" width="200" height="100" fill="#E74C3C" rx="10"/>
-  <text x="150" y="100" text-anchor="middle" fill="white" font-size="14">Brute Force</text>
-  <text x="150" y="120" text-anchor="middle" fill="white" font-size="12">Time: O(n²)</text>
-  <text x="150" y="140" text-anchor="middle" fill="white" font-size="12">Space: O(1)</text>
-  <text x="150" y="160" text-anchor="middle" fill="white" font-size="12">Simple but slow</text>
-  <rect x="300" y="70" width="200" height="100" fill="#F39C12" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="14">Hash Map</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12">Time: O(n)</text>
-  <text x="400" y="140" text-anchor="middle" fill="white" font-size="12">Space: O(n)</text>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="12">Fast, uses memory</text>
-  <rect x="550" y="70" width="200" height="100" fill="#27AE60" rx="10"/>
-  <text x="650" y="100" text-anchor="middle" fill="white" font-size="14">Two Pointers</text>
-  <text x="650" y="120" text-anchor="middle" fill="white" font-size="12">Time: O(n log n)</text>
-  <text x="650" y="140" text-anchor="middle" fill="white" font-size="12">Space: O(1)</text>
-  <text x="650" y="160" text-anchor="middle" fill="white" font-size="12">Sorted array only</text>
-  <rect x="175" y="200" width="450" height="150" fill="#3498DB" rx="10"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="14">Decision Factors</text>
-  <text x="400" y="260" text-anchor="middle" fill="white" font-size="12">• Input size: Large → Hash Map</text>
-  <text x="400" y="285" text-anchor="middle" fill="white" font-size="12">• Memory constraints: Limited → Two Pointers</text>
-  <text x="400" y="310" text-anchor="middle" fill="white" font-size="12">• Simplicity needed: Brute Force</text>
-  <text x="400" y="335" text-anchor="middle" fill="white" font-size="12">• Already sorted: Two Pointers</text>
-</svg>
+![solution_exploration](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_exploration.svg)
 
 ---
 
@@ -727,32 +604,7 @@ def get_user_with_orders_nosql():
 ```
 ## Decision Making Frameworks
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Technology Decision Matrix</text>
-  <rect x="100" y="70" width="600" height="250" fill="#2C3E50" rx="10"/>
-  <line x1="250" y1="70" x2="250" y2="320" stroke="white" stroke-width="1"/>
-  <line x1="100" y1="120" x2="700" y2="120" stroke="white" stroke-width="1"/>
-  <text x="175" y="100" text-anchor="middle" fill="white" font-size="14">Criteria</text>
-  <text x="350" y="100" text-anchor="middle" fill="white" font-size="14">React</text>
-  <text x="450" y="100" text-anchor="middle" fill="white" font-size="14">Vue</text>
-  <text x="550" y="100" text-anchor="middle" fill="white" font-size="14">Angular</text>
-  <text x="650" y="100" text-anchor="middle" fill="white" font-size="14">Svelte</text>
-  <text x="175" y="145" text-anchor="middle" fill="white" font-size="12">Learning Curve</text>
-  <text x="350" y="145" text-anchor="middle" fill="#F39C12" font-size="12">⭐⭐⭐</text>
-  <text x="450" y="145" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐</text>
-  <text x="550" y="145" text-anchor="middle" fill="#E74C3C" font-size="12">⭐⭐⭐⭐</text>
-  <text x="650" y="145" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐</text>
-  <text x="175" y="175" text-anchor="middle" fill="white" font-size="12">Performance</text>
-  <text x="350" y="175" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐⭐⭐</text>
-  <text x="450" y="175" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐⭐⭐</text>
-  <text x="550" y="175" text-anchor="middle" fill="#F39C12" font-size="12">⭐⭐⭐</text>
-  <text x="650" y="175" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐⭐⭐⭐</text>
-  <text x="175" y="205" text-anchor="middle" fill="white" font-size="12">Ecosystem</text>
-  <text x="350" y="205" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐⭐⭐⭐</text>
-  <text x="450" y="205" text-anchor="middle" fill="#F39C12" font-size="12">⭐⭐⭐</text>
-  <text x="550" y="205" text-anchor="middle" fill="#27AE60" font-size="12">⭐⭐⭐⭐</text>
-  <text x="650" y="205" text-anchor="middle" fill="#F39C12" font-size="12">⭐⭐</text>
-</svg>
+![decision_making_frameworks](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)
 
 ---
 
@@ -841,33 +693,7 @@ def stay_current_workflow():
 
 ## Technology Trends
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">2024-2025 Tech Trends to Learn</text>
-  <rect x="100" y="70" width="180" height="80" fill="#FF6B6B" rx="10"/>
-  <text x="190" y="100" text-anchor="middle" fill="white" font-size="14">AI/ML</text>
-  <text x="190" y="120" text-anchor="middle" fill="white" font-size="11">• LLMs</text>
-  <text x="190" y="135" text-anchor="middle" fill="white" font-size="11">• RAG</text>
-  <rect x="310" y="70" width="180" height="80" fill="#4ECDC4" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="14">Cloud Native</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="11">• Kubernetes</text>
-  <text x="400" y="135" text-anchor="middle" fill="white" font-size="11">• Serverless</text>
-  <rect x="520" y="70" width="180" height="80" fill="#45B7D1" rx="10"/>
-  <text x="610" y="100" text-anchor="middle" fill="white" font-size="14">WebAssembly</text>
-  <text x="610" y="120" text-anchor="middle" fill="white" font-size="11">• Performance</text>
-  <text x="610" y="135" text-anchor="middle" fill="white" font-size="11">• Portability</text>
-  <rect x="100" y="170" width="180" height="80" fill="#96CEB4" rx="10"/>
-  <text x="190" y="200" text-anchor="middle" fill="white" font-size="14">Edge Computing</text>
-  <text x="190" y="220" text-anchor="middle" fill="white" font-size="11">• IoT</text>
-  <text x="190" y="235" text-anchor="middle" fill="white" font-size="11">• 5G</text>
-  <rect x="310" y="170" width="180" height="80" fill="#FFEAA7" rx="10"/>
-  <text x="400" y="200" text-anchor="middle" fill="#2C3E50" font-size="14">Web3</text>
-  <text x="400" y="220" text-anchor="middle" fill="#2C3E50" font-size="11">• Blockchain</text>
-  <text x="400" y="235" text-anchor="middle" fill="#2C3E50" font-size="11">• DeFi</text>
-  <rect x="520" y="170" width="180" height="80" fill="#DDA0DD" rx="10"/>
-  <text x="610" y="200" text-anchor="middle" fill="white" font-size="14">Quantum</text>
-  <text x="610" y="220" text-anchor="middle" fill="white" font-size="11">• Algorithms</text>
-  <text x="610" y="235" text-anchor="middle" fill="white" font-size="11">• Qiskit</text>
-</svg>
+![technology_trends](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_trends.svg)
 
 ---
 
@@ -978,41 +804,7 @@ learning_plan = create_6_month_plan(skill_gaps)
 
 ## Learning Path Creation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">6-Month Learning Path</text>
-  <rect x="50" y="70" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="110" y="105" text-anchor="middle" fill="white" font-size="12">Month 1</text>
-  <text x="110" y="120" text-anchor="middle" fill="white" font-size="10">TypeScript</text>
-  <path d="M 170 100 L 210 100" stroke="#34495E" stroke-width="2" marker-end="url(#p1)"/>
-  <rect x="210" y="70" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="270" y="105" text-anchor="middle" fill="white" font-size="12">Month 2</text>
-  <text x="270" y="120" text-anchor="middle" fill="white" font-size="10">Testing</text>
-  <path d="M 330 100 L 370 100" stroke="#34495E" stroke-width="2" marker-end="url(#p2)"/>
-  <rect x="370" y="70" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="430" y="105" text-anchor="middle" fill="white" font-size="12">Month 3</text>
-  <text x="430" y="120" text-anchor="middle" fill="white" font-size="10">Docker</text>
-  <path d="M 490 100 L 530 100" stroke="#34495E" stroke-width="2" marker-end="url(#p3)"/>
-  <rect x="530" y="70" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="590" y="105" text-anchor="middle" fill="white" font-size="12">Month 4</text>
-  <text x="590" y="120" text-anchor="middle" fill="white" font-size="10">CI/CD</text>
-  <rect x="130" y="160" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="190" y="195" text-anchor="middle" fill="white" font-size="12">Month 5</text>
-  <text x="190" y="210" text-anchor="middle" fill="white" font-size="10">Microservices</text>
-  <rect x="290" y="160" width="120" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="350" y="195" text-anchor="middle" fill="white" font-size="12">Month 6</text>
-  <text x="350" y="210" text-anchor="middle" fill="white" font-size="10">Project</text>
-  <defs>
-    <marker id="p1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="p2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="p3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![learning_path_creation](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_path_creation.svg)
 
 ---
 
@@ -1171,22 +963,7 @@ async function retry(fn, retries = 3, delay = 1000) {
 
 ## Solution Cataloging
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Problem-Solution Catalog</text>
-  <rect x="150" y="110" width="500" height="60" fill="#3498DB" rx="5"/>
-  <text x="160" y="130" fill="white" font-size="12" font-weight="bold">Problem: N+1 Query</text>
-  <text x="160" y="150" fill="white" font-size="11">Solution: Eager loading with includes()</text>
-  <text x="160" y="165" fill="white" font-size="11">Tags: #database #performance #orm</text>
-  <rect x="150" y="180" width="500" height="60" fill="#2ECC71" rx="5"/>
-  <text x="160" y="200" fill="white" font-size="12" font-weight="bold">Problem: CORS Error</text>
-  <text x="160" y="220" fill="white" font-size="11">Solution: Configure headers, use proxy in dev</text>
-  <text x="160" y="235" fill="white" font-size="11">Tags: #api #security #frontend</text>
-  <rect x="150" y="250" width="500" height="60" fill="#E74C3C" rx="5"/>
-  <text x="160" y="270" fill="white" font-size="12" font-weight="bold">Problem: Memory Leak in React</text>
-  <text x="160" y="290" fill="white" font-size="11">Solution: Cleanup in useEffect, cancel subscriptions</text>
-  <text x="160" y="305" fill="white" font-size="11">Tags: #react #memory #performance</text>
-</svg>
+![solution_cataloging](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_cataloging.svg)
 
 ---
 
@@ -1293,29 +1070,7 @@ Learning from experience:
 
 Tracking your progress:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Learning Progress Dashboard</text>
-  <rect x="50" y="50" width="300" height="150" fill="#3498DB" rx="10"/>
-  <text x="200" y="80" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Skills Acquired</text>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-size="24">47</text>
-  <text x="200" y="140" text-anchor="middle" fill="white" font-size="12">This Quarter</text>
-  <text x="200" y="160" text-anchor="middle" fill="white" font-size="10">↑ 23% from last quarter</text>
-  <rect x="450" y="50" width="300" height="150" fill="#2ECC71" rx="10"/>
-  <text x="600" y="80" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Problems Solved</text>
-  <text x="600" y="110" text-anchor="middle" fill="white" font-size="24">312</text>
-  <text x="600" y="140" text-anchor="middle" fill="white" font-size="12">Total</text>
-  <text x="600" y="160" text-anchor="middle" fill="white" font-size="10">15 this week</text>
-  <rect x="50" y="220" width="300" height="150" fill="#E74C3C" rx="10"/>
-  <text x="200" y="250" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Learning Velocity</text>
-  <text x="200" y="280" text-anchor="middle" fill="white" font-size="24">3.2x</text>
-  <text x="200" y="310" text-anchor="middle" fill="white" font-size="12">Faster with AI</text>
-  <text x="200" y="330" text-anchor="middle" fill="white" font-size="10">vs traditional methods</text>
-  <rect x="450" y="220" width="300" height="150" fill="#F39C12" rx="10"/>
-  <text x="600" y="250" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Knowledge Retention</text>
-  <text x="600" y="280" text-anchor="middle" fill="white" font-size="24">85%</text>
-  <text x="600" y="310" text-anchor="middle" fill="white" font-size="12">After 3 months</text>
-  <text x="600" y="330" text-anchor="middle" fill="white" font-size="10">Active recall working</text>
-</svg>
+![learning_metrics](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_metrics.svg)
 
 ---
 
@@ -1417,27 +1172,7 @@ def learn_from_error(error, code):
 
 ## Building Learning Habits
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold">Learning</text>
-  <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Habits</text>
-  <circle cx="400" cy="80" r="10" fill="#27AE60"/>
-  <text x="400" y="60" text-anchor="middle" font-size="12">Daily Code</text>
-  <circle cx="480" cy="120" r="10" fill="#27AE60"/>
-  <text x="550" y="120" font-size="12">Weekly Project</text>
-  <circle cx="500" cy="200" r="10" fill="#27AE60"/>
-  <text x="570" y="200" font-size="12">Code Review</text>
-  <circle cx="480" cy="280" r="10" fill="#27AE60"/>
-  <text x="550" y="280" font-size="12">Teach Others</text>
-  <circle cx="400" cy="320" r="10" fill="#27AE60"/>
-  <text x="400" y="350" text-anchor="middle" font-size="12">Document</text>
-  <circle cx="320" cy="280" r="10" fill="#27AE60"/>
-  <text x="250" y="280" text-anchor="end" font-size="12">Experiment</text>
-  <circle cx="300" cy="200" r="10" fill="#27AE60"/>
-  <text x="230" y="200" text-anchor="end" font-size="12">Read Code</text>
-  <circle cx="320" cy="120" r="10" fill="#27AE60"/>
-  <text x="250" y="120" text-anchor="end" font-size="12">Ask Why</text>
-</svg>
+![building_learning_habits](../../../../svg/courses/ai/developing-using-ai/06_learning_and_skills/building_learning_habits.svg)
 
 ---
 

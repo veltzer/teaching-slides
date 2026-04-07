@@ -25,33 +25,7 @@ Understanding common mistakes prevents:
 
 ## The AI Adoption Danger Zones
 
-<svg viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="400" height="180" fill="#fff8e1" stroke="#f57f17" rx="10"/>
-  <text x="250" y="45" text-anchor="middle" font-size="16" font-weight="bold">AI Development Pitfall Zones</text>
-
-  <circle cx="150" cy="90" r="35" fill="#ffcdd2" stroke="#d32f2f"/>
-  <text x="150" y="85" text-anchor="middle" font-size="9">Over-Reliance</text>
-  <text x="150" y="98" text-anchor="middle" font-size="9">Trap</text>
-
-  <circle cx="250" cy="70" r="30" fill="#ffcdd2" stroke="#d32f2f"/>
-  <text x="250" y="65" text-anchor="middle" font-size="9">Quality</text>
-  <text x="250" y="78" text-anchor="middle" font-size="9">Blind Spot</text>
-
-  <circle cx="350" cy="90" r="35" fill="#ffcdd2" stroke="#d32f2f"/>
-  <text x="350" y="85" text-anchor="middle" font-size="9">Context</text>
-  <text x="350" y="98" text-anchor="middle" font-size="9">Limitations</text>
-
-  <circle cx="200" cy="140" r="30" fill="#ffcdd2" stroke="#d32f2f"/>
-  <text x="200" y="135" text-anchor="middle" font-size="9">Security</text>
-  <text x="200" y="148" text-anchor="middle" font-size="9">Risks</text>
-
-  <circle cx="300" cy="140" r="30" fill="#ffcdd2" stroke="#d32f2f"/>
-  <text x="300" y="135" text-anchor="middle" font-size="9">Tool</text>
-  <text x="300" y="148" text-anchor="middle" font-size="9">Limitations</text>
-
-  <rect x="150" y="170" width="200" height="20" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="250" y="184" text-anchor="middle" font-size="10">Awareness + Strategy = Success</text>
-</svg>
+![the_ai_adoption_danger_zones](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/the_ai_adoption_danger_zones.svg)
 
 ---
 
@@ -207,25 +181,7 @@ Prevent AI from becoming a crutch for domain knowledge:
 
 ## Quality Control Failures
 
-<svg viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="160" fill="#ffebee" stroke="#c62828" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">Quality Control Breakdown Points</text>
-
-  <rect x="80" y="70" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" rx="5"/>
-  <text x="130" y="90" text-anchor="middle" font-size="10">Blind Acceptance</text>
-
-  <rect x="200" y="70" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" rx="5"/>
-  <text x="250" y="90" text-anchor="middle" font-size="10">Insufficient Testing</text>
-
-  <rect x="320" y="70" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" rx="5"/>
-  <text x="370" y="90" text-anchor="middle" font-size="10">No Code Review</text>
-
-  <rect x="140" y="120" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" rx="5"/>
-  <text x="190" y="140" text-anchor="middle" font-size="10">Security Oversight</text>
-
-  <rect x="260" y="120" width="100" height="30" fill="#ffcdd2" stroke="#d32f2f" rx="5"/>
-  <text x="310" y="140" text-anchor="middle" font-size="10">Performance Neglect</text>
-</svg>
+![quality_control_failures](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/quality_control_failures.svg)
 
 ---
 
@@ -383,30 +339,7 @@ Ensure AI code follows established development standards:
 
 ## Context Limitation Challenges
 
-<svg viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="400" height="140" fill="#f3e5f5" stroke="#7b1fa2" rx="10"/>
-  <text x="240" y="45" text-anchor="middle" font-size="16" font-weight="bold">AI Context Limitations</text>
-
-  <rect x="70" y="70" width="90" height="35" fill="#e1bee7" stroke="#8e24aa" rx="5"/>
-  <text x="115" y="85" text-anchor="middle" font-size="9">Limited</text>
-  <text x="115" y="98" text-anchor="middle" font-size="9">Context Window</text>
-
-  <rect x="180" y="70" width="90" height="35" fill="#e1bee7" stroke="#8e24aa" rx="5"/>
-  <text x="225" y="85" text-anchor="middle" font-size="9">Missing</text>
-  <text x="225" y="98" text-anchor="middle" font-size="9">Domain Context</text>
-
-  <rect x="290" y="70" width="90" height="35" fill="#e1bee7" stroke="#8e24aa" rx="5"/>
-  <text x="335" y="85" text-anchor="middle" font-size="9">Incomplete</text>
-  <text x="335" y="98" text-anchor="middle" font-size="9">Codebase View</text>
-
-  <rect x="125" y="115" width="90" height="35" fill="#e1bee7" stroke="#8e24aa" rx="5"/>
-  <text x="170" y="130" text-anchor="middle" font-size="9">Legacy System</text>
-  <text x="170" y="143" text-anchor="middle" font-size="9">Complexity</text>
-
-  <rect x="235" y="115" width="90" height="35" fill="#e1bee7" stroke="#8e24aa" rx="5"/>
-  <text x="280" y="130" text-anchor="middle" font-size="9">Business Logic</text>
-  <text x="280" y="143" text-anchor="middle" font-size="9">Nuances</text>
-</svg>
+![context_limitation_challenges](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/context_limitation_challenges.svg)
 
 ---
 
@@ -555,25 +488,7 @@ Navigate AI limitations with legacy code:
 
 ## Tool Limitation Recognition
 
-<svg viewBox="0 0 450 200" xmlns="http://www.w3.svg">
-  <rect x="50" y="20" width="350" height="160" fill="#e8f5e8" stroke="#2e7d32" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">AI Tool Limitation Awareness</text>
-
-  <circle cx="125" cy="90" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="125" y="85" text-anchor="middle" font-size="9">Capability</text>
-  <text x="125" y="98" text-anchor="middle" font-size="9">Boundaries</text>
-
-  <circle cx="225" cy="90" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="225" y="85" text-anchor="middle" font-size="9">Accuracy</text>
-  <text x="225" y="98" text-anchor="middle" font-size="9">Limits</text>
-
-  <circle cx="325" cy="90" r="30" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="325" y="85" text-anchor="middle" font-size="9">Context</text>
-  <text x="325" y="98" text-anchor="middle" font-size="9">Constraints</text>
-
-  <rect x="150" y="130" width="150" height="30" fill="#a5d6a7" stroke="#4caf50" rx="5"/>
-  <text x="225" y="150" text-anchor="middle" font-size="11">Know When to Use Human Judgment</text>
-</svg>
+![tool_limitation_recognition](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/tool_limitation_recognition.svg)
 
 ---
 
@@ -710,30 +625,7 @@ class WorkaroundPatternLibrary:
 
 ## Team Best Practices
 
-<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="400" height="180" fill="#e3f2fd" stroke="#1976d2" rx="10"/>
-  <text x="240" y="45" text-anchor="middle" font-size="16" font-weight="bold">Team AI Best Practices Framework</text>
-
-  <rect x="70" y="70" width="100" height="40" fill="#bbdefb" stroke="#1565c0" rx="5"/>
-  <text x="120" y="85" text-anchor="middle" font-size="10">Guidelines</text>
-  <text x="120" y="98" text-anchor="middle" font-size="10">& Standards</text>
-
-  <rect x="190" y="70" width="100" height="40" fill="#bbdefb" stroke="#1565c0" rx="5"/>
-  <text x="240" y="85" text-anchor="middle" font-size="10">Quality</text>
-  <text x="240" y="98" text-anchor="middle" font-size="10">Gates</text>
-
-  <rect x="310" y="70" width="100" height="40" fill="#bbdefb" stroke="#1565c0" rx="5"/>
-  <text x="360" y="85" text-anchor="middle" font-size="10">Continuous</text>
-  <text x="360" y="98" text-anchor="middle" font-size="10">Learning</text>
-
-  <rect x="130" y="130" width="100" height="40" fill="#bbdefb" stroke="#1565c0" rx="5"/>
-  <text x="180" y="145" text-anchor="middle" font-size="10">Skill</text>
-  <text x="180" y="158" text-anchor="middle" font-size="10">Preservation</text>
-
-  <rect x="250" y="130" width="100" height="40" fill="#bbdefb" stroke="#1565c0" rx="5"/>
-  <text x="300" y="145" text-anchor="middle" font-size="10">Knowledge</text>
-  <text x="300" y="158" text-anchor="middle" font-size="10">Sharing</text>
-</svg>
+![team_best_practices](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/team_best_practices.svg)
 
 ---
 
@@ -975,25 +867,7 @@ Establish systematic improvement of AI usage patterns:
 
 ## Advanced Pitfall Prevention
 
-<svg viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="160" fill="#f1f8e9" stroke="#33691e" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">Proactive Pitfall Prevention</text>
-
-  <circle cx="125" cy="90" r="30" fill="#c8e6c9" stroke="#2e7d32"/>
-  <text x="125" y="85" text-anchor="middle" font-size="9">Early</text>
-  <text x="125" y="98" text-anchor="middle" font-size="9">Warning</text>
-
-  <circle cx="225" cy="90" r="30" fill="#c8e6c9" stroke="#2e7d32"/>
-  <text x="225" y="85" text-anchor="middle" font-size="9">Systematic</text>
-  <text x="225" y="98" text-anchor="middle" font-size="9">Prevention</text>
-
-  <circle cx="325" cy="90" r="30" fill="#c8e6c9" stroke="#2e7d32"/>
-  <text x="325" y="85" text-anchor="middle" font-size="9">Continuous</text>
-  <text x="325" y="98" text-anchor="middle" font-size="9">Monitoring</text>
-
-  <rect x="150" y="130" width="150" height="30" fill="#dcedc8" stroke="#689f38" rx="5"/>
-  <text x="225" y="150" text-anchor="middle" font-size="11">Prevention Better Than Cure</text>
-</svg>
+![advanced_pitfall_prevention](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/advanced_pitfall_prevention.svg)
 
 ---
 

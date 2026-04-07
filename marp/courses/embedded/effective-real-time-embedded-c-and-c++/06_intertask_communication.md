@@ -14,20 +14,7 @@
 
 ## Concurrency Challenges
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Race Condition Example</text>
-  <rect x="50" y="60" width="150" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="125" y="85" text-anchor="middle" font-size="14">Task A</text>
-  <rect x="220" y="60" width="150" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="295" y="85" text-anchor="middle" font-size="14">Task B</text>
-  <text x="125" y="120" text-anchor="middle" font-size="12">Read X (10)</text>
-  <text x="295" y="140" text-anchor="middle" font-size="12">Read X (10)</text>
-  <text x="125" y="160" text-anchor="middle" font-size="12">X = X + 5</text>
-  <text x="295" y="180" text-anchor="middle" font-size="12">X = X + 3</text>
-  <text x="125" y="200" text-anchor="middle" font-size="12">Write X (15)</text>
-  <text x="295" y="220" text-anchor="middle" font-size="12">Write X (13)</text>
-  <text x="200" y="245" text-anchor="middle" font-size="14" font-weight="bold">Result: X = 13 (not 18!)</text>
-</svg>
+![concurrency_challenges](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/concurrency_challenges.svg)
 
 ---
 
@@ -266,20 +253,7 @@ counting_sem_t resource_pool = {
 
 ## Priority Inversion
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Priority Inversion Problem</text>
-  <rect x="50" y="60" width="100" height="30" fill="#ffcccc" stroke="#333"/>
-  <text x="100" y="80" text-anchor="middle" font-size="12">High Priority</text>
-  <rect x="50" y="100" width="100" height="30" fill="#ffffcc" stroke="#333"/>
-  <text x="100" y="120" text-anchor="middle" font-size="12">Medium Priority</text>
-  <rect x="50" y="140" width="100" height="30" fill="#ccffcc" stroke="#333"/>
-  <text x="100" y="160" text-anchor="middle" font-size="12">Low Priority</text>
-  <path d="M 150 160 L 250 160" stroke="#333" stroke-width="2"/>
-  <text x="200" y="155" text-anchor="middle" font-size="12">Holds Lock</text>
-  <path d="M 250 160 L 250 80 L 350 80" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="300" y="75" text-anchor="middle" font-size="12">Blocked!</text>
-  <text x="200" y="210" text-anchor="middle" font-size="12">Medium task runs instead of High!</text>
-</svg>
+![priority_inversion](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/priority_inversion.svg)
 
 ---
 

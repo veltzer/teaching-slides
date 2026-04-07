@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd7_01_linux_network_stack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrowd7b_01_linux_network_stack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">NETLINK Interface</text>
+  <rect x="30" y="30" width="240" height="70" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="150" y="50" text-anchor="middle" font-size="11" font-weight="bold">User Space</text>
+  <text x="150" y="68" text-anchor="middle" font-size="10">ip, iproute2, NetworkManager</text>
+  <text x="150" y="83" text-anchor="middle" font-size="10">socket(AF_NETLINK, ...)</text>
+  <rect x="330" y="30" width="240" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="450" y="50" text-anchor="middle" font-size="11" font-weight="bold">Kernel Space</text>
+  <text x="450" y="68" text-anchor="middle" font-size="10">NETLINK_ROUTE, NETLINK_XFRM</text>
+  <text x="450" y="83" text-anchor="middle" font-size="10">NETLINK_NETFILTER, NETLINK_GENERIC</text>
+  <line x1="270" y1="55" x2="330" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd7_01_linux_network_stack)"/>
+  <line x1="330" y1="75" x2="270" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arrowd7b_01_linux_network_stack)"/>
+  <text x="300" y="50" text-anchor="middle" font-size="9" fill="#666">send</text>
+  <text x="300" y="90" text-anchor="middle" font-size="9" fill="#666">recv</text>
+  <rect x="80" y="120" width="440" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="142" text-anchor="middle" font-size="11">Asynchronous, multicast-capable, bidirectional IPC</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">Replaces ioctl() for modern network configuration</text>
+</svg>

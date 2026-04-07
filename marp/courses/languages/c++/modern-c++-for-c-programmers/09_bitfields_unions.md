@@ -40,36 +40,7 @@ struct StatusFlags {
 
 ## Bitfield Memory Layout
 
-<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="400" height="40" fill="none" stroke="black"/>
-
-  <!-- Bit positions -->
-  <text x="45" y="45">31</text>
-  <text x="445" y="45">0</text>
-
-  <!-- Fields -->
-  <rect x="50" y="50" width="230" height="40" fill="#ffe6e6" stroke="black"/>
-  <text x="165" y="75" text-anchor="middle">reserved (23 bits)</text>
-
-  <rect x="280" y="50" width="40" height="40" fill="#e6f3ff" stroke="black"/>
-  <text x="300" y="75" text-anchor="middle">cat</text>
-
-  <rect x="320" y="50" width="30" height="40" fill="#e6ffe6" stroke="black"/>
-  <text x="335" y="75" text-anchor="middle">pri</text>
-
-  <rect x="350" y="50" width="50" height="20" fill="#fff3e6" stroke="black"/>
-  <text x="375" y="65" text-anchor="middle">vis</text>
-
-  <rect x="400" y="50" width="50" height="20" fill="#f3e6ff" stroke="black"/>
-  <text x="425" y="65" text-anchor="middle">act</text>
-
-  <!-- Bit numbers -->
-  <text x="165" y="105" text-anchor="middle">8-30</text>
-  <text x="300" y="105" text-anchor="middle">4-7</text>
-  <text x="335" y="105" text-anchor="middle">1-3</text>
-  <text x="375" y="105" text-anchor="middle">1</text>
-  <text x="425" y="105" text-anchor="middle">0</text>
-</svg>
+![bitfield_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitfield_memory_layout.svg)
 
 ---
 
@@ -228,43 +199,7 @@ void useModernVariant() {
 
 ## Endianness Issues
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="30" text-anchor="middle" font-size="16">32-bit Integer: 0x12345678</text>
-
-  <!-- Big Endian -->
-  <text x="125" y="70" text-anchor="middle" font-weight="bold">Big Endian</text>
-  <rect x="50" y="80" width="40" height="30" fill="#ffe6e6" stroke="black"/>
-  <text x="70" y="100" text-anchor="middle">0x12</text>
-  <rect x="90" y="80" width="40" height="30" fill="#e6f3ff" stroke="black"/>
-  <text x="110" y="100" text-anchor="middle">0x34</text>
-  <rect x="130" y="80" width="40" height="30" fill="#e6ffe6" stroke="black"/>
-  <text x="150" y="100" text-anchor="middle">0x56</text>
-  <rect x="170" y="80" width="40" height="30" fill="#fff3e6" stroke="black"/>
-  <text x="190" y="100" text-anchor="middle">0x78</text>
-
-  <text x="70" y="125">Addr+0</text>
-  <text x="110" y="125">Addr+1</text>
-  <text x="150" y="125">Addr+2</text>
-  <text x="190" y="125">Addr+3</text>
-
-  <!-- Little Endian -->
-  <text x="375" y="70" text-anchor="middle" font-weight="bold">Little Endian</text>
-  <rect x="300" y="80" width="40" height="30" fill="#fff3e6" stroke="black"/>
-  <text x="320" y="100" text-anchor="middle">0x78</text>
-  <rect x="340" y="80" width="40" height="30" fill="#e6ffe6" stroke="black"/>
-  <text x="360" y="100" text-anchor="middle">0x56</text>
-  <rect x="380" y="80" width="40" height="30" fill="#e6f3ff" stroke="black"/>
-  <text x="400" y="100" text-anchor="middle">0x34</text>
-  <rect x="420" y="80" width="40" height="30" fill="#ffe6e6" stroke="black"/>
-  <text x="440" y="100" text-anchor="middle">0x12</text>
-
-  <text x="320" y="125">Addr+0</text>
-  <text x="360" y="125">Addr+1</text>
-  <text x="400" y="125">Addr+2</text>
-  <text x="440" y="125">Addr+3</text>
-
-  <text x="250" y="170" text-anchor="middle">Most Significant Byte (MSB) placement differs</text>
-</svg>
+![endianness_issues](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/endianness_issues.svg)
 
 ---
 
@@ -579,33 +514,7 @@ public:
 
 ## Bitwise Operations Reference
 
-<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="40" fill="#ffe6e6" stroke="black"/>
-  <text x="110" y="75" text-anchor="middle">AND (&amp;)</text>
-
-  <rect x="190" y="50" width="120" height="40" fill="#e6f3ff" stroke="black"/>
-  <text x="250" y="75" text-anchor="middle">OR (|)</text>
-
-  <rect x="330" y="50" width="120" height="40" fill="#e6ffe6" stroke="black"/>
-  <text x="390" y="75" text-anchor="middle">XOR (^)</text>
-
-  <rect x="50" y="110" width="120" height="40" fill="#fff3e6" stroke="black"/>
-  <text x="110" y="135" text-anchor="middle">NOT (~)</text>
-
-  <rect x="190" y="110" width="120" height="40" fill="#f3e6ff" stroke="black"/>
-  <text x="250" y="135" text-anchor="middle">Left (&lt;&lt;)</text>
-
-  <rect x="330" y="110" width="120" height="40" fill="#ffe6f3" stroke="black"/>
-  <text x="390" y="135" text-anchor="middle">Right (&gt;&gt;)</text>
-
-  <text x="110" y="175">Clear bits</text>
-  <text x="250" y="175">Set bits</text>
-  <text x="390" y="175">Toggle bits</text>
-
-  <text x="110" y="195">Invert bits</text>
-  <text x="250" y="195">Multiply by 2^n</text>
-  <text x="390" y="195">Divide by 2^n</text>
-</svg>
+![bitwise_operations_reference](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitwise_operations_reference.svg)
 
 ---
 

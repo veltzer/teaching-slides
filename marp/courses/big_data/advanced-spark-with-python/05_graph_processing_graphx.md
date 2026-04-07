@@ -7,7 +7,7 @@
 * Graph operators
 ---
 ## Graph Abstractions
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Graph</text></svg>
+![graph_abstractions](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_abstractions.svg)
 
 ---
 ## Basic Components
@@ -25,7 +25,7 @@ graph = GraphFrame(vertices, edges)
 ```
 ---
 ## Graph Construction
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="235" y1="110.0" x2="325" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(1</text></svg>
+![graph_construction](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_construction.svg)
 
 ---
 ## Property Graphs
@@ -43,7 +43,7 @@ vertices_with_props = vertices.map(add_property)
 ```
 ---
 ## Basic Operations
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Operations</text></svg>
+![basic_operations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/basic_operations.svg)
 
 ---
 ## Graph Transformations
@@ -60,7 +60,7 @@ def update_vertex(id, attr, message):
 ```
 ---
 ## Edge Operations
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><rect x="55" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(V1</text></svg>
+![edge_operations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/edge_operations.svg)
 
 ---
 ## Triplet Views
@@ -86,7 +86,7 @@ results = g.pageRank(
 ```
 ---
 ## Connected Components
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><rect x="55" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(1</text><rect x="205" y="40" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="250" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(3</text><rect x="55" y="160" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="100" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(5</text></svg>
+![connected_components](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/connected_components.svg)
 
 ---
 ## Shortest Paths
@@ -98,7 +98,7 @@ paths = g.shortestPaths(
 ```
 ---
 ## Triangle Counting
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="130.0" width="90" height="40" fill="#f0f8ff" stroke="#333" stroke-width="2" rx="20"/><text x="460" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(A</text></svg>
+![triangle_counting](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/triangle_counting.svg)
 
 ---
 ## Graph Algorithms API
@@ -115,7 +115,7 @@ def custom_graph_algo(graph):
 ```
 ---
 ## Pregel API
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="300" x2="295.0" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Initial</text></svg>
+![pregel_api](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pregel_api.svg)
 
 ---
 ## Message Passing
@@ -133,7 +133,7 @@ for i in range(max_iterations):
 ```
 ---
 ## Graph Partitioning
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Graph</text></svg>
+![graph_partitioning](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_partitioning.svg)
 
 ---
 ## Partition Strategies
@@ -152,7 +152,7 @@ graph = graph.partitionBy(
 ```
 ---
 ## Memory Management
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
+![memory_management](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/memory_management.svg)
 
 ---
 ## Caching Strategies
@@ -170,7 +170,7 @@ subgraph = graph.filter(
 ```
 ---
 ## Graph Metrics
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Metrics</text></svg>
+![graph_metrics](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_metrics.svg)
 
 ---
 ## Graph Analytics
@@ -187,7 +187,7 @@ def export_graph(graph, path):
 ```
 ---
 ## Graph Formats
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Formats</text></svg>
+![graph_formats](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_formats.svg)
 
 ---
 ## Data Integration
@@ -206,7 +206,7 @@ def transform_graph(data):
 ```
 ---
 ## Security Considerations
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Security</text></svg>
+![security_considerations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/security_considerations.svg)
 
 ---
 ## Production Deployment
@@ -225,7 +225,7 @@ def track_metrics(graph):
 ```
 ---
 ## Error Handling
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Error</text></svg>
+![error_handling](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/error_handling.svg)
 
 ---
 ## Best Practices
@@ -243,7 +243,7 @@ def process_graph_pattern(graph):
 ```
 ---
 ## Advanced Features
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Features</text></svg>
+![advanced_features](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/advanced_features.svg)
 
 ---
 ## Integration Patterns
@@ -261,7 +261,7 @@ def analyze_performance(graph):
 ```
 ---
 ## Optimization Techniques
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Optimize</text></svg>
+![optimization_techniques](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/optimization_techniques.svg)
 
 ---
 ## Future Developments
@@ -280,7 +280,7 @@ def social_network_analysis(graph):
 ```
 ---
 ## Production Checklist
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Deploy</text></svg>
+![production_checklist](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/production_checklist.svg)
 
 ---
 ## Additional Resources
@@ -352,61 +352,7 @@ degrees.join(vertices, "id").select(
 
 ## Graph Structure Visualization
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow-sn" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
-  </defs>
-  <!-- Hank (8) - top -->
-  <rect x="240" y="5" width="100" height="40" rx="20" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="290" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Hank (8)</text>
-  <!-- manages -> Charlie -->
-  <line x1="260" y1="45" x2="160" y2="80" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <text x="190" y="60" font-family="Arial, sans-serif" font-size="9" fill="#888">manages</text>
-  <!-- reports_to from Grace -->
-  <line x1="320" y1="45" x2="420" y2="80" stroke="#333" stroke-width="1.5"/>
-  <text x="390" y="60" font-family="Arial, sans-serif" font-size="9" fill="#888">reports_to</text>
-  <!-- Charlie (3) -->
-  <rect x="100" y="85" width="110" height="40" rx="20" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="155" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Charlie (3)</text>
-  <!-- Grace (7) -->
-  <rect x="370" y="85" width="110" height="40" rx="20" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="425" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Grace (7)</text>
-  <!-- Charlie -> Alice, Eve, Ivy -->
-  <line x1="120" y1="125" x2="80" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <line x1="155" y1="125" x2="200" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <line x1="185" y1="125" x2="310" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <!-- Grace -> Diana -->
-  <line x1="425" y1="125" x2="440" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <!-- Alice (1) -->
-  <rect x="30" y="175" width="100" height="40" rx="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="80" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Alice (1)</text>
-  <!-- Eve (5) -->
-  <rect x="150" y="175" width="100" height="40" rx="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Eve (5)</text>
-  <!-- Ivy (9) -->
-  <rect x="265" y="175" width="100" height="40" rx="20" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="315" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Ivy (9)</text>
-  <!-- Diana (4) -->
-  <rect x="390" y="175" width="100" height="40" rx="20" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="440" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Diana (4)</text>
-  <!-- Alice -> Bob -->
-  <line x1="80" y1="215" x2="80" y2="260" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <!-- Diana -> Frank -->
-  <line x1="440" y1="215" x2="440" y2="260" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <!-- Bob (2) -->
-  <rect x="30" y="265" width="100" height="40" rx="20" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="80" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Bob (2)</text>
-  <!-- Frank (6) -->
-  <rect x="390" y="265" width="100" height="40" rx="20" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="440" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Frank (6)</text>
-  <!-- Bob -> Frank connection -->
-  <line x1="130" y1="285" x2="390" y2="285" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Frank -> Jack -->
-  <line x1="440" y1="305" x2="440" y2="345" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-sn)"/>
-  <!-- Jack (10) -->
-  <rect x="390" y="350" width="100" height="40" rx="20" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="440" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Jack (10)</text>
-</svg>
+![graph_structure_visualization](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_structure_visualization.svg)
 
 ---
 
@@ -452,49 +398,7 @@ communities.select("id", "name", "department", "label") \
 
 ## PageRank Algorithm Explanation
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow-pr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
-  </defs>
-  <!-- Iteration 0 -->
-  <text x="300" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Iteration 0 (uniform)</text>
-  <rect x="60" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="110" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">A</text>
-  <text x="110" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
-  <line x1="160" y1="52" x2="200" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
-  <rect x="210" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="260" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">B</text>
-  <text x="260" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
-  <line x1="310" y1="52" x2="350" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
-  <rect x="360" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="410" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">C</text>
-  <text x="410" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
-  <!-- Iteration 1 -->
-  <text x="300" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Iteration 1 (redistribute)</text>
-  <text x="300" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">PR(v) = (1-d)/N + d * SUM(PR(u)/out(u)), d=0.85</text>
-  <rect x="60" y="132" width="100" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="110" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">A</text>
-  <text x="110" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ef6c00">0.21</text>
-  <line x1="160" y1="154" x2="200" y2="154" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
-  <rect x="210" y="132" width="100" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="260" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">B</text>
-  <text x="260" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ef6c00">0.33</text>
-  <line x1="310" y1="154" x2="350" y2="154" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
-  <rect x="360" y="132" width="100" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="410" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">C</text>
-  <text x="410" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">0.46</text>
-  <!-- After convergence -->
-  <rect x="60" y="200" width="480" height="55" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.5"/>
-  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">After convergence</text>
-  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Vertices with more incoming links from important vertices get higher scores</text>
-  <!-- Applications -->
-  <rect x="60" y="270" width="480" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.5"/>
-  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Applications</text>
-  <text x="180" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Influence detection</text>
-  <text x="300" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Citation ranking</text>
-  <text x="420" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Web page ranking</text>
-  <text x="300" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Recommendation systems</text>
-</svg>
+![pagerank_algorithm_explanation](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pagerank_algorithm_explanation.svg)
 
 ---
 
@@ -726,31 +630,4 @@ pr_results.vertices.count()  # Trigger caching
 
 ## Real-World Graph Applications
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" font-family="sans-serif">
-<rect x="5" y="5" width="630" height="350" fill="#fafafa" stroke="#333" stroke-width="1.5" rx="4"/>
-<text x="320" y="28" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Graph Processing Use Cases</text>
-<rect x="15" y="40" width="295" height="100" fill="#e3f2fd" stroke="#999" stroke-width="1" rx="4"/>
-<text x="25" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Social Networks</text>
-<text x="33" y="74" font-size="12" fill="#333" text-anchor="start">├── Community detection</text>
-<text x="33" y="92" font-size="12" fill="#333" text-anchor="start">├── Influence analysis</text>
-<text x="33" y="110" font-size="12" fill="#333" text-anchor="start">├── Friend recommendations</text>
-<text x="33" y="128" font-size="12" fill="#333" text-anchor="start">├── Spam/bot detection</text>
-<rect x="325" y="40" width="295" height="100" fill="#fff3e0" stroke="#999" stroke-width="1" rx="4"/>
-<text x="335" y="57" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Financial Services</text>
-<text x="343" y="74" font-size="12" fill="#333" text-anchor="start">├── Fraud ring detection</text>
-<text x="343" y="92" font-size="12" fill="#333" text-anchor="start">├── Money laundering patterns</text>
-<text x="343" y="110" font-size="12" fill="#333" text-anchor="start">├── Credit risk networks</text>
-<text x="343" y="128" font-size="12" fill="#333" text-anchor="start">├── Transaction monitoring</text>
-<rect x="15" y="200" width="295" height="100" fill="#e8f5e9" stroke="#999" stroke-width="1" rx="4"/>
-<text x="25" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Supply Chain</text>
-<text x="33" y="234" font-size="12" fill="#333" text-anchor="start">├── Critical path analysis</text>
-<text x="33" y="252" font-size="12" fill="#333" text-anchor="start">├── Supplier risk assessment</text>
-<text x="33" y="270" font-size="12" fill="#333" text-anchor="start">├── Logistics optimization</text>
-<text x="33" y="288" font-size="12" fill="#333" text-anchor="start">├── Dependency mapping</text>
-<rect x="325" y="200" width="295" height="100" fill="#f3e5f5" stroke="#999" stroke-width="1" rx="4"/>
-<text x="335" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="start">Knowledge Graphs</text>
-<text x="343" y="234" font-size="12" fill="#333" text-anchor="start">├── Entity resolution</text>
-<text x="343" y="252" font-size="12" fill="#333" text-anchor="start">├── Semantic search</text>
-<text x="343" y="270" font-size="12" fill="#333" text-anchor="start">├── Recommendation engines</text>
-<text x="343" y="288" font-size="12" fill="#333" text-anchor="start">├── Drug discovery</text>
-</svg>
+![real_world_graph_applications](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/real_world_graph_applications.svg)

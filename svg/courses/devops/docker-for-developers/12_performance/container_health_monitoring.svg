@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_11_performance" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">HEALTHCHECK Lifecycle</text>
+  <rect x="20" y="35" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="55" text-anchor="middle" font-size="10" font-weight="bold">Starting</text>
+  <text x="75" y="72" text-anchor="middle" font-size="10">Grace period</text>
+  <line x1="130" y1="60" x2="160" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_11_performance)"/>
+  <rect x="160" y="35" width="120" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="220" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">Healthy</text>
+  <text x="220" y="72" text-anchor="middle" font-size="10">Check passes</text>
+  <line x1="280" y1="60" x2="310" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_11_performance)"/>
+  <rect x="310" y="35" width="120" height="50" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="370" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Unhealthy</text>
+  <text x="370" y="72" text-anchor="middle" font-size="10">Retries exceeded</text>
+  <line x1="430" y1="60" x2="460" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_11_performance)"/>
+  <rect x="460" y="35" width="120" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="520" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">Restart</text>
+  <text x="520" y="72" text-anchor="middle" font-size="10">if restart policy</text>
+  <rect x="40" y="105" width="520" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5" stroke-dasharray="4,2"/>
+  <text x="300" y="122" text-anchor="middle" font-size="10">HEALTHCHECK --interval=30s --timeout=3s --retries=3</text>
+  <text x="300" y="138" text-anchor="middle" font-size="10">CMD curl -f http://localhost/ || exit 1</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#555">Health checks enable orchestrators to auto-replace failing containers</text>
+</svg>

@@ -24,42 +24,7 @@
 
 ## Docker vs Traditional Deployment
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <g id="traditional">
-    <rect x="50" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-    <text x="200" y="30" text-anchor="middle" font-weight="bold">Traditional</text>
-    <rect x="60" y="280" width="280" height="60" fill="#666"/>
-    <text x="200" y="315" text-anchor="middle" fill="white">Server</text>
-    <rect x="60" y="200" width="280" height="70" fill="#888"/>
-    <text x="200" y="240" text-anchor="middle" fill="white">Operating System</text>
-    <rect x="70" y="100" width="80" height="90" fill="#ea4335"/>
-    <text x="110" y="130" text-anchor="middle" fill="white" font-size="12">App A</text>
-    <text x="110" y="150" text-anchor="middle" fill="white" font-size="10">Dependencies</text>
-    <rect x="160" y="100" width="80" height="90" fill="#fbbc04"/>
-    <text x="200" y="130" text-anchor="middle" fill="white" font-size="12">App B</text>
-    <text x="200" y="150" text-anchor="middle" fill="white" font-size="10">Dependencies</text>
-    <rect x="250" y="100" width="80" height="90" fill="#34a853"/>
-    <text x="290" y="130" text-anchor="middle" fill="white" font-size="12">App C</text>
-    <text x="290" y="150" text-anchor="middle" fill="white" font-size="10">Dependencies</text>
-    <text x="200" y="80" text-anchor="middle" font-size="14" fill="red">Conflicts!</text>
-  </g>
-  <g id="docker">
-    <rect x="450" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-    <text x="600" y="30" text-anchor="middle" font-weight="bold">Docker</text>
-    <rect x="460" y="280" width="280" height="60" fill="#666"/>
-    <text x="600" y="315" text-anchor="middle" fill="white">Server</text>
-    <rect x="460" y="200" width="280" height="70" fill="#888"/>
-    <text x="600" y="240" text-anchor="middle" fill="white">Operating System</text>
-    <rect x="460" y="140" width="280" height="50" fill="#0066cc"/>
-    <text x="600" y="170" text-anchor="middle" fill="white">Docker Engine</text>
-    <rect x="470" y="70" width="80" height="60" fill="#4285f4" stroke="white" stroke-width="2"/>
-    <text x="510" y="105" text-anchor="middle" fill="white" font-size="12">Container A</text>
-    <rect x="560" y="70" width="80" height="60" fill="#4285f4" stroke="white" stroke-width="2"/>
-    <text x="600" y="105" text-anchor="middle" fill="white" font-size="12">Container B</text>
-    <rect x="650" y="70" width="80" height="60" fill="#4285f4" stroke="white" stroke-width="2"/>
-    <text x="690" y="105" text-anchor="middle" fill="white" font-size="12">Container C</text>
-  </g>
-</svg>
+![docker_vs_traditional_deployment](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_vs_traditional_deployment.svg)
 
 ---
 
@@ -75,40 +40,7 @@
 
 ## Docker Architecture
 
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="350" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Docker Architecture</text>
-  <rect x="100" y="80" width="200" height="80" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker Client</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="12">docker build</text>
-  <text x="200" y="150" text-anchor="middle" fill="white" font-size="12">docker run</text>
-  <rect x="400" y="80" width="300" height="120" fill="#34a853" rx="5"/>
-  <text x="550" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker Daemon</text>
-  <text x="550" y="135" text-anchor="middle" fill="white" font-size="12">Manages Images</text>
-  <text x="550" y="155" text-anchor="middle" fill="white" font-size="12">Manages Containers</text>
-  <text x="550" y="175" text-anchor="middle" fill="white" font-size="12">Manages Networks</text>
-  <rect x="100" y="250" width="150" height="100" fill="#fbbc04" rx="5"/>
-  <text x="175" y="280" text-anchor="middle" font-weight="bold">Images</text>
-  <text x="175" y="305" text-anchor="middle" font-size="12">Ubuntu</text>
-  <text x="175" y="325" text-anchor="middle" font-size="12">Nginx</text>
-  <rect x="300" y="250" width="150" height="100" fill="#ea4335" rx="5"/>
-  <text x="375" y="280" text-anchor="middle" fill="white" font-weight="bold">Containers</text>
-  <text x="375" y="305" text-anchor="middle" fill="white" font-size="12">Running Apps</text>
-  <text x="375" y="325" text-anchor="middle" fill="white" font-size="12">Isolated Process</text>
-  <rect x="500" y="250" width="200" height="100" fill="#9c27b0" rx="5"/>
-  <text x="600" y="280" text-anchor="middle" fill="white" font-weight="bold">Registry</text>
-  <text x="600" y="305" text-anchor="middle" fill="white" font-size="12">Docker Hub</text>
-  <text x="600" y="325" text-anchor="middle" fill="white" font-size="12">Private Registry</text>
-  <path d="M 300 120 L 395 120" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 550 200 L 175 245" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 550 200 L 375 245" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 550 200 L 600 245" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![docker_architecture](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_architecture.svg)
 
 ---
 
@@ -134,24 +66,7 @@
 
 ## Image Layers
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Docker Image Layers</text>
-  <rect x="250" y="270" width="300" height="50" fill="#666" rx="3"/>
-  <text x="400" y="300" text-anchor="middle" fill="white">Base OS (Ubuntu)</text>
-  <rect x="250" y="210" width="300" height="50" fill="#888" rx="3"/>
-  <text x="400" y="240" text-anchor="middle" fill="white">System Libraries</text>
-  <rect x="250" y="150" width="300" height="50" fill="#4285f4" rx="3"/>
-  <text x="400" y="180" text-anchor="middle" fill="white">Application Runtime</text>
-  <rect x="250" y="90" width="300" height="50" fill="#34a853" rx="3"/>
-  <text x="400" y="120" text-anchor="middle" fill="white">Application Code</text>
-  <text x="150" y="300" text-anchor="middle" font-size="12">Read-only</text>
-  <text x="150" y="240" text-anchor="middle" font-size="12">Read-only</text>
-  <text x="150" y="180" text-anchor="middle" font-size="12">Read-only</text>
-  <text x="150" y="120" text-anchor="middle" font-size="12">Read-only</text>
-  <text x="650" y="180" text-anchor="middle" font-size="14">Shared between</text>
-  <text x="650" y="200" text-anchor="middle" font-size="14">containers</text>
-</svg>
+![image_layers](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/image_layers.svg)
 
 ---
 
@@ -266,33 +181,7 @@ docker run -d -p 8080:80 nginx
 
 ## Container Lifecycle
 
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="175" r="40" fill="#4285f4"/>
-  <text x="150" y="180" text-anchor="middle" fill="white">Created</text>
-  <circle cx="300" cy="175" r="40" fill="#34a853"/>
-  <text x="300" y="180" text-anchor="middle" fill="white">Running</text>
-  <circle cx="450" cy="175" r="40" fill="#fbbc04"/>
-  <text x="450" y="180" text-anchor="middle">Paused</text>
-  <circle cx="600" cy="175" r="40" fill="#ea4335"/>
-  <text x="600" y="180" text-anchor="middle" fill="white">Stopped</text>
-  <circle cx="450" cy="280" r="40" fill="#666"/>
-  <text x="450" y="285" text-anchor="middle" fill="white">Removed</text>
-  <path d="M 190 175 L 260 175" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="225" y="165" text-anchor="middle" font-size="12">start</text>
-  <path d="M 340 175 L 410 175" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="375" y="165" text-anchor="middle" font-size="12">pause</text>
-  <path d="M 450 135 Q 375 100 300 135" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="375" y="95" text-anchor="middle" font-size="12">unpause</text>
-  <path d="M 490 175 L 560 175" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="525" y="165" text-anchor="middle" font-size="12">stop</text>
-  <path d="M 600 215 L 490 240" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="545" y="235" text-anchor="middle" font-size="12">remove</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![container_lifecycle](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_lifecycle.svg)
 
 ---
 
@@ -415,39 +304,7 @@ CMD ["./myapp"]
 
 ## Container Networking
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Docker Network Types</text>
-  <rect x="100" y="80" width="150" height="100" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Bridge</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="11">Default network</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="11">Containers can</text>
-  <text x="175" y="170" text-anchor="middle" fill="white" font-size="11">communicate</text>
-  <rect x="275" y="80" width="150" height="100" fill="#34a853" rx="5"/>
-  <text x="350" y="110" text-anchor="middle" fill="white" font-weight="bold">Host</text>
-  <text x="350" y="130" text-anchor="middle" fill="white" font-size="11">No isolation</text>
-  <text x="350" y="150" text-anchor="middle" fill="white" font-size="11">Share host</text>
-  <text x="350" y="170" text-anchor="middle" fill="white" font-size="11">network</text>
-  <rect x="450" y="80" width="150" height="100" fill="#fbbc04" rx="5"/>
-  <text x="525" y="110" text-anchor="middle" font-weight="bold">None</text>
-  <text x="525" y="130" text-anchor="middle" font-size="11">No networking</text>
-  <text x="525" y="150" text-anchor="middle" font-size="11">Complete</text>
-  <text x="525" y="170" text-anchor="middle" font-size="11">isolation</text>
-  <rect x="625" y="80" width="125" height="100" fill="#ea4335" rx="5"/>
-  <text x="687" y="110" text-anchor="middle" fill="white" font-weight="bold">Custom</text>
-  <text x="687" y="130" text-anchor="middle" fill="white" font-size="11">User-defined</text>
-  <text x="687" y="150" text-anchor="middle" fill="white" font-size="11">bridges</text>
-  <rect x="100" y="220" width="650" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="425" y="250" text-anchor="middle" font-weight="bold">Container Network</text>
-  <circle cx="200" cy="280" r="25" fill="#4285f4"/>
-  <text x="200" y="285" text-anchor="middle" fill="white" font-size="12">C1</text>
-  <circle cx="300" cy="280" r="25" fill="#4285f4"/>
-  <text x="300" y="285" text-anchor="middle" fill="white" font-size="12">C2</text>
-  <circle cx="400" cy="280" r="25" fill="#4285f4"/>
-  <text x="400" y="285" text-anchor="middle" fill="white" font-size="12">C3</text>
-  <line x1="225" y1="280" x2="275" y2="280" stroke="#666" stroke-width="2"/>
-  <line x1="325" y1="280" x2="375" y2="280" stroke="#666" stroke-width="2"/>
-</svg>
+![container_networking](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_networking.svg)
 
 ---
 
@@ -492,35 +349,7 @@ docker run -d -p 8080:80 -p 8443:443 nginx
 
 ## Docker Volumes
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Docker Storage Types</text>
-  <g id="bind">
-    <rect x="100" y="80" width="200" height="120" fill="#4285f4" rx="5"/>
-    <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Bind Mounts</text>
-    <rect x="120" y="130" width="160" height="50" fill="#fff" rx="3"/>
-    <text x="200" y="150" text-anchor="middle" font-size="12">Host Path:</text>
-    <text x="200" y="170" text-anchor="middle" font-size="11">/host/path:/container/path</text>
-  </g>
-  <g id="volume">
-    <rect x="350" y="80" width="200" height="120" fill="#34a853" rx="5"/>
-    <text x="450" y="110" text-anchor="middle" fill="white" font-weight="bold">Docker Volumes</text>
-    <rect x="370" y="130" width="160" height="50" fill="#fff" rx="3"/>
-    <text x="450" y="150" text-anchor="middle" font-size="12">Managed by Docker</text>
-    <text x="450" y="170" text-anchor="middle" font-size="11">volume_name:/path</text>
-  </g>
-  <g id="tmpfs">
-    <rect x="600" y="80" width="140" height="120" fill="#fbbc04" rx="5"/>
-    <text x="670" y="110" text-anchor="middle" font-weight="bold">tmpfs</text>
-    <rect x="610" y="130" width="120" height="50" fill="#fff" rx="3"/>
-    <text x="670" y="150" text-anchor="middle" font-size="12">Memory only</text>
-    <text x="670" y="170" text-anchor="middle" font-size="11">Temporary</text>
-  </g>
-  <rect x="100" y="230" width="640" height="80" fill="#e3f2fd" rx="5"/>
-  <text x="420" y="255" text-anchor="middle" font-weight="bold">Container Filesystem</text>
-  <text x="420" y="280" text-anchor="middle" font-size="12">Writable layer (ephemeral)</text>
-  <text x="420" y="300" text-anchor="middle" font-size="12">Lost when container removed</text>
-</svg>
+![docker_volumes](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_volumes.svg)
 
 ---
 
@@ -754,31 +583,7 @@ docker system prune -a
 
 ## Docker and Kubernetes
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="200" y="30" text-anchor="middle" font-weight="bold">Docker</text>
-  <rect x="75" y="150" width="250" height="150" fill="#4285f4" rx="5"/>
-  <text x="200" y="180" text-anchor="middle" fill="white">Container Runtime</text>
-  <text x="200" y="210" text-anchor="middle" fill="white" font-size="12">• Build images</text>
-  <text x="200" y="235" text-anchor="middle" fill="white" font-size="12">• Run containers</text>
-  <text x="200" y="260" text-anchor="middle" fill="white" font-size="12">• Manage storage</text>
-  <text x="200" y="285" text-anchor="middle" fill="white" font-size="12">• Handle networking</text>
-  <rect x="450" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="600" y="30" text-anchor="middle" font-weight="bold">Kubernetes</text>
-  <rect x="475" y="150" width="250" height="150" fill="#326ce5" rx="5"/>
-  <text x="600" y="180" text-anchor="middle" fill="white">Orchestration</text>
-  <text x="600" y="210" text-anchor="middle" fill="white" font-size="12">• Schedule containers</text>
-  <text x="600" y="235" text-anchor="middle" fill="white" font-size="12">• Scale applications</text>
-  <text x="600" y="260" text-anchor="middle" fill="white" font-size="12">• Load balancing</text>
-  <text x="600" y="285" text-anchor="middle" fill="white" font-size="12">• Self-healing</text>
-  <path d="M 350 225 L 450 225" stroke="#666" stroke-width="3" marker-end="url(#arrowhead)"/>
-  <text x="400" y="215" text-anchor="middle" font-size="12">Orchestrates</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![docker_and_kubernetes](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_and_kubernetes.svg)
 
 ---
 

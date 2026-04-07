@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Directory as a File</text>
+  <defs>
+    <marker id="arrowdir" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="180" y="35" width="240" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="12" font-weight="bold">Directory (inode)</text>
+  <line x1="230" y1="75" x2="100" y2="105" stroke="#333" stroke-width="1.5" marker-end="url(#arrowdir)"/>
+  <line x1="300" y1="75" x2="300" y2="105" stroke="#333" stroke-width="1.5" marker-end="url(#arrowdir)"/>
+  <line x1="370" y1="75" x2="500" y2="105" stroke="#333" stroke-width="1.5" marker-end="url(#arrowdir)"/>
+  <rect x="30" y="105" width="140" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="100" y="120" text-anchor="middle" font-size="10" font-weight="bold">. (self)</text>
+  <text x="100" y="133" text-anchor="middle" font-size="9">inode of this dir</text>
+  <rect x="230" y="105" width="140" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="300" y="120" text-anchor="middle" font-size="10" font-weight="bold">.. (parent)</text>
+  <text x="300" y="133" text-anchor="middle" font-size="9">inode of parent dir</text>
+  <rect x="430" y="105" width="140" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="500" y="120" text-anchor="middle" font-size="10" font-weight="bold">entries</text>
+  <text x="500" y="133" text-anchor="middle" font-size="9">name-to-inode map</text>
+  <rect x="80" y="160" width="440" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" rx="4" opacity="0.7"/>
+  <text x="300" y="180" text-anchor="middle" font-size="10">A directory is a special file mapping filenames to inode numbers</text>
+</svg>

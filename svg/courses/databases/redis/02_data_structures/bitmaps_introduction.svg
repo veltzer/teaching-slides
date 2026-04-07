@@ -1,0 +1,34 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Bitmap: User Online Status Tracking</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#666">Key: "online:2024-03-23" -- each bit = one user ID</text>
+  <text x="35" y="78" text-anchor="middle" font-size="10" fill="#333">Bit offset:</text>
+  <text x="110" y="78" text-anchor="middle" font-size="10">0</text>
+  <text x="150" y="78" text-anchor="middle" font-size="10">1</text>
+  <text x="190" y="78" text-anchor="middle" font-size="10">2</text>
+  <text x="230" y="78" text-anchor="middle" font-size="10">3</text>
+  <text x="270" y="78" text-anchor="middle" font-size="10">4</text>
+  <text x="310" y="78" text-anchor="middle" font-size="10">5</text>
+  <text x="350" y="78" text-anchor="middle" font-size="10">6</text>
+  <text x="390" y="78" text-anchor="middle" font-size="10">7</text>
+  <rect x="90" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="110" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="130" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="150" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="170" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="190" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="210" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="230" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="250" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="270" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="290" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="310" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <rect x="330" y="85" width="40" height="30" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
+  <text x="350" y="105" text-anchor="middle" font-size="12" fill="#c62828">0</text>
+  <rect x="370" y="85" width="40" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="390" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">1</text>
+  <text x="110" y="130" text-anchor="middle" font-size="9" fill="#2e7d32">online</text>
+  <text x="150" y="130" text-anchor="middle" font-size="9" fill="#c62828">offline</text>
+  <text x="300" y="155" text-anchor="middle" font-size="10" fill="#333">SETBIT online:2024-03-23 0 1  -- mark user 0 as online</text>
+  <text x="300" y="172" text-anchor="middle" font-size="10" fill="#333">BITCOUNT online:2024-03-23    -- returns 5 (users online)</text>
+  <text x="300" y="192" text-anchor="middle" font-size="10" fill="#666">1 million users = only 125 KB of memory</text>
+</svg>

@@ -41,27 +41,7 @@ public:
 
 ## State Pattern Structure
 
-<svg width="550" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="160" height="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="130" y="55" text-anchor="middle" font-size="13" font-weight="bold">Context</text>
-  <text x="130" y="75" text-anchor="middle" font-size="11">state: State*</text>
-
-  <rect x="320" y="30" width="160" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="400" y="55" text-anchor="middle" font-size="13" font-weight="bold">State</text>
-  <text x="400" y="75" text-anchor="middle" font-size="11" font-style="italic">+ handle()</text>
-
-  <line x1="210" y1="65" x2="320" y2="65" stroke="#333" stroke-width="2"/>
-  <polygon points="310,60 320,65 310,70" fill="#333"/>
-
-  <rect x="220" y="180" width="130" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="285" y="210" text-anchor="middle" font-size="11">ConcreteStateA</text>
-
-  <rect x="370" y="180" width="130" height="50" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="435" y="210" text-anchor="middle" font-size="11">ConcreteStateB</text>
-
-  <line x1="285" y1="180" x2="370" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="435" y1="180" x2="420" y2="100" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-</svg>
+![state_pattern_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/19_state/state_pattern_structure.svg)
 
 ---
 

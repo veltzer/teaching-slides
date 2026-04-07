@@ -1,0 +1,45 @@
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <text x="350" y="20" text-anchor="middle" font-size="16" font-weight="bold">Git Object Model</text>
+
+  <!-- Commit -->
+  <rect x="280" y="50" width="140" height="80" fill="#3498db" rx="5"/>
+  <text x="350" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Commit</text>
+  <text x="350" y="85" text-anchor="middle" fill="white" font-size="10">g7h8i9j</text>
+  <text x="350" y="100" text-anchor="middle" fill="white" font-size="10">Author: John</text>
+  <text x="350" y="115" text-anchor="middle" fill="white" font-size="10">Message: "Add feature"</text>
+
+  <!-- Root Tree -->
+  <rect x="280" y="170" width="140" height="80" fill="#2ecc71" rx="5"/>
+  <text x="350" y="190" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Tree (root)</text>
+  <text x="350" y="205" text-anchor="middle" fill="white" font-size="10">a1b2c3d</text>
+  <text x="350" y="220" text-anchor="middle" fill="white" font-size="10">README.md</text>
+  <text x="350" y="235" text-anchor="middle" fill="white" font-size="10">src/</text>
+
+  <!-- Blobs and subtrees -->
+  <rect x="50" y="300" width="100" height="60" fill="#e74c3c" rx="5"/>
+  <text x="100" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Blob</text>
+  <text x="100" y="335" text-anchor="middle" fill="white" font-size="9">d4e5f6g</text>
+  <text x="100" y="350" text-anchor="middle" fill="white" font-size="9">README content</text>
+
+  <rect x="200" y="300" width="100" height="60" fill="#f39c12" rx="5"/>
+  <text x="250" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Tree (src)</text>
+  <text x="250" y="335" text-anchor="middle" fill="white" font-size="9">j1k2l3m</text>
+  <text x="250" y="350" text-anchor="middle" fill="white" font-size="9">main.py</text>
+
+  <rect x="350" y="300" width="100" height="60" fill="#e74c3c" rx="5"/>
+  <text x="400" y="320" text-anchor="middle" fill="white" font-size="11" font-weight="bold">Blob</text>
+  <text x="400" y="335" text-anchor="middle" fill="white" font-size="9">m4n5o6p</text>
+  <text x="400" y="350" text-anchor="middle" fill="white" font-size="9">Python code</text>
+
+  <!-- Arrows -->
+  <line x1="350" y1="130" x2="350" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="320" y1="250" x2="120" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="250" x2="250" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="250" y1="320" x2="380" y2="320" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

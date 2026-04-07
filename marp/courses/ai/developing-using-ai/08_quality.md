@@ -17,22 +17,7 @@ This chapter covers:
 
 ## The Quality Paradox
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="200" fill="#E74C3C" rx="10"/>
-  <text x="225" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Without Standards</text>
-  <text x="225" y="170" text-anchor="middle" fill="white" font-size="12">✓ Fast generation</text>
-  <text x="225" y="195" text-anchor="middle" fill="white" font-size="12">✗ Inconsistent code</text>
-  <text x="225" y="220" text-anchor="middle" fill="white" font-size="12">✗ Security risks</text>
-  <text x="225" y="245" text-anchor="middle" fill="white" font-size="12">✗ Technical debt</text>
-  <text x="225" y="270" text-anchor="middle" fill="white" font-size="12">✗ Maintenance issues</text>
-  <rect x="450" y="100" width="250" height="200" fill="#27AE60" rx="10"/>
-  <text x="575" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">With Best Practices</text>
-  <text x="575" y="170" text-anchor="middle" fill="white" font-size="12">✓ Fast generation</text>
-  <text x="575" y="195" text-anchor="middle" fill="white" font-size="12">✓ Consistent quality</text>
-  <text x="575" y="220" text-anchor="middle" fill="white" font-size="12">✓ Secure by default</text>
-  <text x="575" y="245" text-anchor="middle" fill="white" font-size="12">✓ Maintainable</text>
-  <text x="575" y="270" text-anchor="middle" fill="white" font-size="12">✓ Scalable</text>
-</svg>
+![the_quality_paradox](../../../../svg/courses/ai/developing-using-ai/08_quality/the_quality_paradox.svg)
 
 ---
 
@@ -68,24 +53,7 @@ Always run linters on AI output!
 
 ## Naming Conventions
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Naming Standards</text>
-  <rect x="150" y="100" width="220" height="40" fill="#3498DB" rx="5"/>
-  <text x="260" y="125" text-anchor="middle" fill="white" font-size="12">camelCase: variables, functions</text>
-  <rect x="430" y="100" width="220" height="40" fill="#2ECC71" rx="5"/>
-  <text x="540" y="125" text-anchor="middle" fill="white" font-size="12">PascalCase: classes, components</text>
-  <rect x="150" y="150" width="220" height="40" fill="#E74C3C" rx="5"/>
-  <text x="260" y="175" text-anchor="middle" fill="white" font-size="12">UPPER_SNAKE: constants</text>
-  <rect x="430" y="150" width="220" height="40" fill="#F39C12" rx="5"/>
-  <text x="540" y="175" text-anchor="middle" fill="white" font-size="12">kebab-case: file names</text>
-  <rect x="150" y="200" width="500" height="120" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="14">Examples</text>
-  <text x="180" y="255" fill="white" font-size="11">getUserById() ✓    get_user_by_id() ✗</text>
-  <text x="180" y="275" fill="white" font-size="11">UserController ✓   userController ✗</text>
-  <text x="180" y="295" fill="white" font-size="11">MAX_RETRIES ✓      maxRetries ✗</text>
-  <text x="180" y="315" fill="white" font-size="11">user-service.js ✓  UserService.js ✗</text>
-</svg>
+![naming_conventions](../../../../svg/courses/ai/developing-using-ai/08_quality/naming_conventions.svg)
 
 ---
 
@@ -143,24 +111,7 @@ def process(data):
 
 ## Duplication Removal
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">DRY Principle</text>
-  <rect x="50" y="70" width="320" height="150" fill="#E74C3C" rx="10"/>
-  <text x="210" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Before: Duplication</text>
-  <rect x="70" y="120" width="130" height="40" fill="#C0392B" rx="5"/>
-  <text x="135" y="145" text-anchor="middle" fill="white" font-size="11">validateEmail()</text>
-  <rect x="220" y="120" width="130" height="40" fill="#C0392B" rx="5"/>
-  <text x="285" y="145" text-anchor="middle" fill="white" font-size="11">validateEmail()</text>
-  <rect x="70" y="170" width="130" height="40" fill="#C0392B" rx="5"/>
-  <text x="135" y="195" text-anchor="middle" fill="white" font-size="11">validateEmail()</text>
-  <rect x="430" y="70" width="320" height="150" fill="#27AE60" rx="10"/>
-  <text x="590" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">After: Reusable</text>
-  <rect x="510" y="120" width="160" height="40" fill="#229954" rx="5"/>
-  <text x="590" y="145" text-anchor="middle" fill="white" font-size="11">utils/validators.js</text>
-  <text x="590" y="195" text-anchor="middle" fill="white" font-size="11">Import and reuse</text>
-  <text x="400" y="270" text-anchor="middle" font-size="16">Don't Repeat Yourself</text>
-  <text x="400" y="300" text-anchor="middle" font-size="12">Extract common code into utilities</text>
-</svg>
+![duplication_removal](../../../../svg/courses/ai/developing-using-ai/08_quality/duplication_removal.svg)
 
 ---
 
@@ -220,37 +171,7 @@ class UserSchema(Schema):
 
 ## Input Validation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Validation Layers</text>
-  <rect x="150" y="110" width="180" height="50" fill="#E74C3C" rx="5"/>
-  <text x="240" y="140" text-anchor="middle" fill="white" font-size="12">Frontend Validation</text>
-  <text x="240" y="155" text-anchor="middle" fill="white" font-size="10">User experience</text>
-  <rect x="360" y="110" width="180" height="50" fill="#F39C12" rx="5"/>
-  <text x="450" y="140" text-anchor="middle" fill="white" font-size="12">API Validation</text>
-  <text x="450" y="155" text-anchor="middle" fill="white" font-size="10">Security layer</text>
-  <rect x="570" y="110" width="130" height="50" fill="#3498DB" rx="5"/>
-  <text x="635" y="140" text-anchor="middle" fill="white" font-size="12">DB Constraints</text>
-  <text x="635" y="155" text-anchor="middle" fill="white" font-size="10">Final protection</text>
-  <path d="M 240 160 L 240 200" stroke="white" stroke-width="2" marker-end="url(#arrow1)"/>
-  <path d="M 450 160 L 450 200" stroke="white" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M 635 160 L 635 200" stroke="white" stroke-width="2" marker-end="url(#arrow3)"/>
-  <rect x="150" y="200" width="500" height="100" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="14">Never Trust User Input</text>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="12">• Validate type, length, format</text>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="12">• Sanitize special characters</text>
-  <defs>
-    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="5" refY="10" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![input_validation](../../../../svg/courses/ai/developing-using-ai/08_quality/input_validation.svg)
 
 ---
 
@@ -319,18 +240,7 @@ user.ssn = encryption.encrypt_pii(ssn)
 
 ## Performance Optimization: Bottleneck Identification
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Common Bottlenecks</text>
-  <rect x="150" y="110" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="135" fill="white" font-size="12">N+1 Queries: 100ms × 100 = 10 seconds!</text>
-  <rect x="150" y="160" width="350" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="185" fill="white" font-size="12">Synchronous I/O: Blocking operations</text>
-  <rect x="150" y="210" width="400" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="235" fill="white" font-size="12">No Caching: Repeated expensive operations</text>
-  <rect x="150" y="260" width="450" height="40" fill="#27AE60" rx="5"/>
-  <text x="160" y="285" fill="white" font-size="12">Inefficient Algorithms: O(n²) when O(n) exists</text>
-</svg>
+![performance_optimization_bottleneck_identification](../../../../svg/courses/ai/developing-using-ai/08_quality/performance_optimization_bottleneck_identification.svg)
 
 ---
 
@@ -390,25 +300,7 @@ stream.on('error', (err) => {
 
 ## Caching Strategies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Cache Hierarchy</text>
-  <rect x="150" y="110" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="12">Browser Cache</text>
-  <text x="225" y="160" text-anchor="middle" fill="white" font-size="10">Fastest</text>
-  <rect x="325" y="110" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">CDN Cache</text>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="10">Global</text>
-  <rect x="500" y="110" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="575" y="145" text-anchor="middle" fill="white" font-size="12">Redis Cache</text>
-  <text x="575" y="160" text-anchor="middle" fill="white" font-size="10">Application</text>
-  <rect x="250" y="200" width="150" height="60" fill="#F39C12" rx="5"/>
-  <text x="325" y="235" text-anchor="middle" fill="white" font-size="12">Database Cache</text>
-  <text x="325" y="250" text-anchor="middle" fill="white" font-size="10">Query results</text>
-  <rect x="425" y="200" width="150" height="60" fill="#9B59B6" rx="5"/>
-  <text x="500" y="235" text-anchor="middle" fill="white" font-size="12">App Memory</text>
-  <text x="500" y="250" text-anchor="middle" fill="white" font-size="10">In-process</text>
-</svg>
+![caching_strategies](../../../../svg/courses/ai/developing-using-ai/08_quality/caching_strategies.svg)
 
 ---
 
@@ -469,25 +361,7 @@ def calculate_total_price(
 
 ## Documentation Standards
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Documentation Levels</text>
-  <rect x="150" y="110" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Code Comments</text>
-  <text x="260" y="155" text-anchor="middle" fill="white" font-size="10">Why, not what</text>
-  <rect x="430" y="110" width="220" height="50" fill="#2ECC71" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">API Documentation</text>
-  <text x="540" y="155" text-anchor="middle" fill="white" font-size="10">Endpoints, parameters</text>
-  <rect x="150" y="180" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="12">README Files</text>
-  <text x="260" y="225" text-anchor="middle" fill="white" font-size="10">Setup, usage</text>
-  <rect x="430" y="180" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">Architecture Docs</text>
-  <text x="540" y="225" text-anchor="middle" fill="white" font-size="10">System design</text>
-  <rect x="290" y="250" width="220" height="50" fill="#9B59B6" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" fill="white" font-size="12">Change Logs</text>
-  <text x="400" y="295" text-anchor="middle" fill="white" font-size="10">Version history</text>
-</svg>
+![documentation_standards](../../../../svg/courses/ai/developing-using-ai/08_quality/documentation_standards.svg)
 
 ---
 
@@ -551,22 +425,7 @@ Regular updates prevent security issues
 
 ## Version Compatibility
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Semantic Versioning</text>
-  <rect x="200" y="120" width="400" height="80" fill="#34495E" rx="5"/>
-  <text x="400" y="150" text-anchor="middle" fill="white" font-size="20" font-weight="bold">MAJOR.MINOR.PATCH</text>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-size="16">2.4.1</text>
-  <rect x="150" y="230" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="225" y="255" text-anchor="middle" fill="white" font-size="12">Breaking</text>
-  <text x="225" y="275" text-anchor="middle" fill="white" font-size="10">3.0.0</text>
-  <rect x="325" y="230" width="150" height="60" fill="#F39C12" rx="5"/>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="12">Features</text>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="10">2.5.0</text>
-  <rect x="500" y="230" width="150" height="60" fill="#27AE60" rx="5"/>
-  <text x="575" y="255" text-anchor="middle" fill="white" font-size="12">Fixes</text>
-  <text x="575" y="275" text-anchor="middle" fill="white" font-size="10">2.4.2</text>
-</svg>
+![version_compatibility](../../../../svg/courses/ai/developing-using-ai/08_quality/version_compatibility.svg)
 
 ---
 
@@ -606,36 +465,7 @@ interface TeamStandards {
 
 Code review workflow:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Review Pipeline</text>
-  <circle cx="200" cy="200" r="40" fill="#3498DB"/>
-  <text x="200" y="205" text-anchor="middle" fill="white" font-size="12">PR</text>
-  <path d="M 240 200 L 310 200" stroke="white" stroke-width="2" marker-end="url(#r1)"/>
-  <circle cx="350" cy="200" r="40" fill="#F39C12"/>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="12">AI</text>
-  <path d="M 390 200 L 460 200" stroke="white" stroke-width="2" marker-end="url(#r2)"/>
-  <circle cx="500" cy="200" r="40" fill="#E74C3C"/>
-  <text x="500" y="205" text-anchor="middle" fill="white" font-size="12">Human</text>
-  <path d="M 540 200 L 610 200" stroke="white" stroke-width="2" marker-end="url(#r3)"/>
-  <circle cx="650" cy="200" r="40" fill="#27AE60"/>
-  <text x="650" y="205" text-anchor="middle" fill="white" font-size="12">Merge</text>
-  <text x="200" y="260" text-anchor="middle" fill="white" font-size="10">Create</text>
-  <text x="350" y="260" text-anchor="middle" fill="white" font-size="10">Auto-check</text>
-  <text x="500" y="260" text-anchor="middle" fill="white" font-size="10">Review</text>
-  <text x="650" y="260" text-anchor="middle" fill="white" font-size="10">Deploy</text>
-  <defs>
-    <marker id="r1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="r2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="r3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![review_processes](../../../../svg/courses/ai/developing-using-ai/08_quality/review_processes.svg)
 
 ---
 
@@ -671,25 +501,7 @@ class UserAuth:
 
 Ensuring correct pattern usage:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Common Patterns in AI Code</text>
-  <rect x="150" y="110" width="180" height="60" fill="#3498DB" rx="5"/>
-  <text x="240" y="145" text-anchor="middle" fill="white" font-size="12">Singleton</text>
-  <text x="240" y="160" text-anchor="middle" fill="white" font-size="10">Database connections</text>
-  <rect x="360" y="110" width="180" height="60" fill="#2ECC71" rx="5"/>
-  <text x="450" y="145" text-anchor="middle" fill="white" font-size="12">Factory</text>
-  <text x="450" y="160" text-anchor="middle" fill="white" font-size="10">Object creation</text>
-  <rect x="150" y="190" width="180" height="60" fill="#E74C3C" rx="5"/>
-  <text x="240" y="225" text-anchor="middle" fill="white" font-size="12">Repository</text>
-  <text x="240" y="240" text-anchor="middle" fill="white" font-size="10">Data access</text>
-  <rect x="360" y="190" width="180" height="60" fill="#F39C12" rx="5"/>
-  <text x="450" y="225" text-anchor="middle" fill="white" font-size="12">Observer</text>
-  <text x="450" y="240" text-anchor="middle" fill="white" font-size="10">Event handling</text>
-  <rect x="570" y="150" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="630" y="185" text-anchor="middle" fill="white" font-size="12">Strategy</text>
-  <text x="630" y="200" text-anchor="middle" fill="white" font-size="10">Algorithms</text>
-</svg>
+![design_pattern_implementation](../../../../svg/courses/ai/developing-using-ai/08_quality/design_pattern_implementation.svg)
 
 ---
 
@@ -765,18 +577,7 @@ const c = await getMoreData(b);
 
 ## Code Smell Recognition
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Code Smells to Fix</text>
-  <rect x="150" y="110" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="135" fill="white" font-size="12">🚫 Long Methods: Split into smaller functions</text>
-  <rect x="150" y="160" width="500" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="185" fill="white" font-size="12">🚫 Duplicate Code: Extract to utilities</text>
-  <rect x="150" y="210" width="500" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="235" fill="white" font-size="12">🚫 Large Classes: Apply Single Responsibility</text>
-  <rect x="150" y="260" width="500" height="40" fill="#27AE60" rx="5"/>
-  <text x="160" y="285" fill="white" font-size="12">🚫 Dead Code: Remove unused functions</text>
-</svg>
+![code_smell_recognition](../../../../svg/courses/ai/developing-using-ai/08_quality/code_smell_recognition.svg)
 
 ---
 
@@ -820,37 +621,7 @@ class QualityMetrics:
 
 Continuous learning from metrics:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="120" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <circle cx="400" cy="80" r="30" fill="#E74C3C"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="12">Measure</text>
-  <circle cx="520" cy="200" r="30" fill="#F39C12"/>
-  <text x="520" y="205" text-anchor="middle" fill="white" font-size="12">Analyze</text>
-  <circle cx="400" cy="320" r="30" fill="#27AE60"/>
-  <text x="400" y="325" text-anchor="middle" fill="white" font-size="12">Improve</text>
-  <circle cx="280" cy="200" r="30" fill="#9B59B6"/>
-  <text x="280" y="205" text-anchor="middle" fill="white" font-size="12">Apply</text>
-  <path d="M 420 100 L 500 180" stroke="#34495E" stroke-width="2" marker-end="url(#f1)"/>
-  <path d="M 520 230 L 420 300" stroke="#34495E" stroke-width="2" marker-end="url(#f2)"/>
-  <path d="M 370 320 L 300 220" stroke="#34495E" stroke-width="2" marker-end="url(#f3)"/>
-  <path d="M 280 170 L 370 90" stroke="#34495E" stroke-width="2" marker-end="url(#f4)"/>
-  <text x="400" y="200" text-anchor="middle" font-size="14" font-weight="bold">Continuous</text>
-  <text x="400" y="220" text-anchor="middle" font-size="14" font-weight="bold">Improvement</text>
-  <defs>
-    <marker id="f1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="f2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="f3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="f4" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![feedback_loops](../../../../svg/courses/ai/developing-using-ai/08_quality/feedback_loops.svg)
 
 ---
 
@@ -888,33 +659,7 @@ automation:
 
 Adapting standards over time:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Standards Evolution</text>
-  <rect x="150" y="110" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="12">2020</text>
-  <text x="225" y="160" text-anchor="middle" fill="white" font-size="10">REST APIs</text>
-  <rect x="325" y="110" width="150" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">2022</text>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="10">GraphQL</text>
-  <rect x="500" y="110" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="575" y="145" text-anchor="middle" fill="white" font-size="12">2024</text>
-  <text x="575" y="160" text-anchor="middle" fill="white" font-size="10">tRPC</text>
-  <path d="M 300 140 L 325 140" stroke="white" stroke-width="2" marker-end="url(#e1)"/>
-  <path d="M 475 140 L 500 140" stroke="white" stroke-width="2" marker-end="url(#e2)"/>
-  <text x="400" y="220" text-anchor="middle" fill="white" font-size="12">Standards must evolve with technology</text>
-  <text x="400" y="250" text-anchor="middle" fill="white" font-size="12">• Regular reviews</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">• Team consensus</text>
-  <text x="400" y="290" text-anchor="middle" fill="white" font-size="12">• Gradual adoption</text>
-  <defs>
-    <marker id="e1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="e2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![best_practice_evolution](../../../../svg/courses/ai/developing-using-ai/08_quality/best_practice_evolution.svg)
 
 ---
 
@@ -987,26 +732,7 @@ def monitor_performance(threshold_ms=100):
 
 ## Tool Integration
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Quality Tool Stack</text>
-  <rect x="150" y="110" width="140" height="50" fill="#3498DB" rx="5"/>
-  <text x="220" y="140" text-anchor="middle" fill="white" font-size="12">SonarQube</text>
-  <rect x="310" y="110" width="140" height="50" fill="#2ECC71" rx="5"/>
-  <text x="380" y="140" text-anchor="middle" fill="white" font-size="12">CodeClimate</text>
-  <rect x="470" y="110" width="140" height="50" fill="#E74C3C" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Snyk</text>
-  <rect x="150" y="180" width="140" height="50" fill="#F39C12" rx="5"/>
-  <text x="220" y="210" text-anchor="middle" fill="white" font-size="12">Jest/Mocha</text>
-  <rect x="310" y="180" width="140" height="50" fill="#9B59B6" rx="5"/>
-  <text x="380" y="210" text-anchor="middle" fill="white" font-size="12">Cypress</text>
-  <rect x="470" y="180" width="140" height="50" fill="#1ABC9C" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">k6/Artillery</text>
-  <rect x="230" y="250" width="140" height="50" fill="#95A5A6" rx="5"/>
-  <text x="300" y="280" text-anchor="middle" fill="white" font-size="12">Prettier</text>
-  <rect x="390" y="250" width="140" height="50" fill="#7F8C8D" rx="5"/>
-  <text x="460" y="280" text-anchor="middle" fill="white" font-size="12">Husky</text>
-</svg>
+![tool_integration](../../../../svg/courses/ai/developing-using-ai/08_quality/tool_integration.svg)
 
 ---
 
@@ -1074,25 +800,7 @@ quality_gates:
 
 Comprehensive edge case coverage:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Edge Case Categories</text>
-  <rect x="150" y="110" width="220" height="50" fill="#E74C3C" rx="5"/>
-  <text x="260" y="140" text-anchor="middle" fill="white" font-size="12">Boundary Values</text>
-  <text x="260" y="155" text-anchor="middle" fill="white" font-size="10">0, -1, MAX_INT, null</text>
-  <rect x="430" y="110" width="220" height="50" fill="#F39C12" rx="5"/>
-  <text x="540" y="140" text-anchor="middle" fill="white" font-size="12">Invalid Input</text>
-  <text x="540" y="155" text-anchor="middle" fill="white" font-size="10">Wrong types, malformed</text>
-  <rect x="150" y="180" width="220" height="50" fill="#3498DB" rx="5"/>
-  <text x="260" y="210" text-anchor="middle" fill="white" font-size="12">Concurrency</text>
-  <text x="260" y="225" text-anchor="middle" fill="white" font-size="10">Race conditions, deadlocks</text>
-  <rect x="430" y="180" width="220" height="50" fill="#27AE60" rx="5"/>
-  <text x="540" y="210" text-anchor="middle" fill="white" font-size="12">Resource Limits</text>
-  <text x="540" y="225" text-anchor="middle" fill="white" font-size="10">Memory, disk, network</text>
-  <rect x="290" y="250" width="220" height="50" fill="#9B59B6" rx="5"/>
-  <text x="400" y="280" text-anchor="middle" fill="white" font-size="12">External Failures</text>
-  <text x="400" y="295" text-anchor="middle" fill="white" font-size="10">API down, timeout</text>
-</svg>
+![risk_management_edge_case_handling](../../../../svg/courses/ai/developing-using-ai/08_quality/risk_management_edge_case_handling.svg)
 
 ---
 
@@ -1176,18 +884,7 @@ class TestSecurity:
 
 ## Performance Testing
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Performance Test Levels</text>
-  <rect x="150" y="110" width="500" height="40" fill="#3498DB" rx="5"/>
-  <text x="160" y="135" fill="white" font-size="12">Unit: Individual function performance (&lt;10ms)</text>
-  <rect x="150" y="160" width="500" height="40" fill="#2ECC71" rx="5"/>
-  <text x="160" y="185" fill="white" font-size="12">Integration: API endpoint response (&lt;200ms)</text>
-  <rect x="150" y="210" width="500" height="40" fill="#F39C12" rx="5"/>
-  <text x="160" y="235" fill="white" font-size="12">Load: System under normal load (100 users)</text>
-  <rect x="150" y="260" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="285" fill="white" font-size="12">Stress: Breaking point identification (1000+ users)</text>
-</svg>
+![performance_testing](../../../../svg/courses/ai/developing-using-ai/08_quality/performance_testing.svg)
 
 ---
 
@@ -1225,25 +922,7 @@ Maintaining documentation standards:
 
 Spreading best practices:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <circle cx="400" cy="200" r="30" fill="#E74C3C"/>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="12">Team</text>
-  <circle cx="400" cy="100" r="20" fill="#F39C12"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="10">Docs</text>
-  <circle cx="480" cy="150" r="20" fill="#27AE60"/>
-  <text x="480" y="155" text-anchor="middle" fill="white" font-size="10">Reviews</text>
-  <circle cx="500" cy="230" r="20" fill="#9B59B6"/>
-  <text x="500" y="235" text-anchor="middle" fill="white" font-size="10">Pairing</text>
-  <circle cx="450" cy="290" r="20" fill="#3498DB"/>
-  <text x="450" y="295" text-anchor="middle" fill="white" font-size="10">Demos</text>
-  <circle cx="350" cy="290" r="20" fill="#2ECC71"/>
-  <text x="350" y="295" text-anchor="middle" fill="white" font-size="10">Wiki</text>
-  <circle cx="300" cy="230" r="20" fill="#E67E22"/>
-  <text x="300" y="235" text-anchor="middle" fill="white" font-size="10">Training</text>
-  <circle cx="320" cy="150" r="20" fill="#1ABC9C"/>
-  <text x="320" y="155" text-anchor="middle" fill="white" font-size="10">Standards</text>
-</svg>
+![knowledge_sharing](../../../../svg/courses/ai/developing-using-ai/08_quality/knowledge_sharing.svg)
 
 ---
 
@@ -1317,17 +996,4 @@ quality_culture:
 
 ## Technical Debt Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Debt Quadrants</text>
-  <line x1="400" y1="100" x2="400" y2="330" stroke="white" stroke-width="2"/>
-  <line x1="120" y1="215" x2="680" y2="215" stroke="white" stroke-width="2"/>
-  <text x="260" y="160" text-anchor="middle" fill="#E74C3C" font-size="14" font-weight="bold">Reckless & Deliberate</text>
-  <text x="260" y="180" text-anchor="middle" fill="#E74C3C" font-size="11">"We don't have time"</text>
-  <text x="540" y="160" text-anchor="middle" fill="#F39C12" font-size="14" font-weight="bold">Prudent & Deliberate</text>
-  <text x="540" y="180" text-anchor="middle" fill="#F39C12" font-size="11">"Ship now, refactor later"</text>
-  <text x="260" y="270" text-anchor="middle" fill="#95A5A6" font-size="14" font-weight="bold">Reckless & Inadvertent</text>
-  <text x="260" y="290" text-anchor="middle" fill="#95A5A6" font-size="11">"What's layering?"</text>
-  <text x="540" y="270" text-anchor="middle" fill="#27AE60" font-size="14" font-weight="bold">Prudent & Inadvertent</text>
-  <text x="540" y="290" text-anchor="middle" fill="#27AE60" font-size="11">"Now we know better"</text>
-</svg>
+![technical_debt_management](../../../../svg/courses/ai/developing-using-ai/08_quality/technical_debt_management.svg)

@@ -26,68 +26,12 @@
 ---
 ## Stack Layout Diagram
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="280" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Stack Memory Layout</text>
-<text x="280" y="40" text-anchor="middle" font-size="11" fill="#888">High Address</text>
-<rect x="80" y="50" width="280" height="40" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="74" text-anchor="middle" font-size="12" fill="#222222">Function Arguments</text>
-<rect x="80" y="92" width="280" height="40" fill="#ffcdd2" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="116" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Return Address</text>
-<text x="368" y="116" text-anchor="start" font-size="11" fill="#c62828">← Attacker's target</text>
-<rect x="80" y="134" width="280" height="40" fill="#fff9c4" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="158" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Saved Frame Pointer</text>
-<text x="368" y="158" text-anchor="start" font-size="11" fill="#c62828">← Can be overwritten</text>
-<rect x="80" y="176" width="280" height="40" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="200" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">[Stack Canary]</text>
-<text x="368" y="200" text-anchor="start" font-size="11" fill="#c62828">← Protection mechanism</text>
-<rect x="80" y="218" width="280" height="40" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="242" text-anchor="middle" font-size="12" fill="#222222">Local Variables</text>
-<rect x="80" y="260" width="280" height="40" fill="#ffe0b2" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="284" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Buffer[64]</text>
-<text x="368" y="284" text-anchor="start" font-size="11" fill="#c62828">← Overflow starts here</text>
-<text x="280" y="316" text-anchor="middle" font-size="11" fill="#888">Low Address  (stack grows downward ↓)</text>
-</svg>
+![stack_layout_diagram](../../../../svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_layout_diagram.svg)
 
 ---
 ## Diagram
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Stack Layout During Buffer Overflow</text>
-  <rect x="30" y="25" width="230" height="170" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="3"/>
-  <text x="145" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Normal Stack</text>
-  <rect x="55" y="50" width="180" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="145" y="65" text-anchor="middle" font-size="10">Local Variables</text>
-  <rect x="55" y="72" width="180" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="145" y="87" text-anchor="middle" font-size="10">Buffer[64]</text>
-  <rect x="55" y="94" width="180" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="145" y="109" text-anchor="middle" font-size="10">Saved Frame Pointer</text>
-  <rect x="55" y="116" width="180" height="22" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
-  <text x="145" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Return Address</text>
-  <rect x="55" y="138" width="180" height="22" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <text x="145" y="153" text-anchor="middle" font-size="10">Function Arguments</text>
-  <text x="145" y="180" text-anchor="middle" font-size="9" fill="#666">Stack grows downward</text>
-  <rect x="320" y="25" width="260" height="170" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="3"/>
-  <text x="450" y="42" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Overflowed Stack</text>
-  <rect x="345" y="50" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-  <text x="450" y="65" text-anchor="middle" font-size="10" fill="#c62828">AAAA AAAA AAAA...</text>
-  <rect x="345" y="72" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-  <text x="450" y="87" text-anchor="middle" font-size="10" fill="#c62828">AAAA (overflow)</text>
-  <rect x="345" y="94" width="210" height="22" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-  <text x="450" y="109" text-anchor="middle" font-size="10" fill="#c62828">Overwritten!</text>
-  <rect x="345" y="116" width="210" height="22" fill="#ff8a80" stroke="#c62828" stroke-width="2"/>
-  <text x="450" y="131" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">0xDEADBEEF (hijacked)</text>
-  <rect x="345" y="138" width="210" height="22" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
-  <text x="450" y="153" text-anchor="middle" font-size="10">Function Arguments</text>
-  <text x="450" y="180" text-anchor="middle" font-size="9" fill="#c62828">Attacker controls execution</text>
-</svg>
+![diagram](../../../../svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/diagram.svg)
 
 ---
 ## Vulnerable Code Example: strcpy
@@ -231,33 +175,7 @@ void secure_format(const char *user_input) {
 }
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="216" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<rect x="10" y="10" width="560" height="34" fill="#b71c1c" stroke="#b71c1c" stroke-width="1.5" rx="4"/>
-<text x="290" y="32" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Format String Attack Capabilities</text>
-<rect x="10" y="44" width="560" height="30" fill="#ffebee" stroke="#ccc" stroke-width="1.5" rx="4"/>
-<text x="18" y="63" text-anchor="start" font-size="13" fill="#b71c1c" font-weight="bold">%x</text>
-<text x="140" y="63" text-anchor="start" font-size="12" fill="#222222">Read stack memory (hex)</text>
-<rect x="10" y="76" width="560" height="30" fill="#ffebee" stroke="#ccc" stroke-width="1.5" rx="4"/>
-<text x="18" y="95" text-anchor="start" font-size="13" fill="#b71c1c" font-weight="bold">%s</text>
-<text x="140" y="95" text-anchor="start" font-size="12" fill="#222222">Read string from memory address</text>
-<rect x="10" y="108" width="560" height="30" fill="#ffebee" stroke="#ccc" stroke-width="1.5" rx="4"/>
-<text x="18" y="127" text-anchor="start" font-size="13" fill="#b71c1c" font-weight="bold">%n</text>
-<text x="140" y="127" text-anchor="start" font-size="12" fill="#222222">Write number of bytes printed to an address</text>
-<rect x="10" y="140" width="560" height="30" fill="#ffebee" stroke="#ccc" stroke-width="1.5" rx="4"/>
-<text x="18" y="159" text-anchor="start" font-size="13" fill="#b71c1c" font-weight="bold">%p</text>
-<text x="140" y="159" text-anchor="start" font-size="12" fill="#222222">Leak pointer values from the stack</text>
-<rect x="10" y="172" width="560" height="30" fill="#fce4ec" stroke="#ccc" stroke-width="1.5" rx="4"/>
-<text x="18" y="191" text-anchor="start" font-size="13" fill="#b71c1c" font-weight="bold">Combined</text>
-<text x="140" y="191" text-anchor="start" font-size="12" fill="#222222">Arbitrary read + write primitives</text>
-</svg>
+![format_string_vulnerability](../../../../svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/format_string_vulnerability.svg)
 
 ---
 ## Integer Overflow Leading to Buffer Overflow
@@ -311,38 +229,7 @@ void secure_integer(size_t count, size_t element_size) {
 ---
 ## Heartbleed (CVE-2014-0160) Deep Dive
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="430" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="330" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Heartbleed Attack Flow (CVE-2014-0160)</text>
-<text x="130" y="46" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Client</text>
-<text x="530" y="46" text-anchor="middle" font-size="13" fill="#222222" font-weight="bold">Server</text>
-<line x1="130" y1="58" x2="130" y2="410" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<line x1="530" y1="58" x2="530" y2="410" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-<text x="20" y="78" text-anchor="start" font-size="12" fill="#2e7d32" font-weight="bold">Normal:</text>
-<line x1="150" y1="100" x2="510" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="330" y="92" text-anchor="middle" font-size="11" fill="#333" font-style="italic">"bird" (length=4)</text>
-<line x1="510" y1="130" x2="150" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="330" y="122" text-anchor="middle" font-size="11" fill="#333" font-style="italic">"bird"  (correct echo)</text>
-<text x="20" y="165" text-anchor="start" font-size="12" fill="#c62828" font-weight="bold">Attack:</text>
-<line x1="150" y1="195" x2="510" y2="195" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="330" y="187" text-anchor="middle" font-size="11" fill="#333" font-style="italic">"bird" (claimed length=65535)</text>
-<rect x="40" y="225" width="580" height="80" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="4"/>
-<text x="330" y="248" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">Server responds with:</text>
-<text x="330" y="268" text-anchor="middle" font-size="12" fill="#333">"bird" + up to 65,531 bytes of server memory</text>
-<text x="330" y="288" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">(private keys, passwords, session tokens!)</text>
-<line x1="510" y1="318" x2="150" y2="318" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="330" y="312" text-anchor="middle" font-size="11" fill="#c62828" font-style="italic">memory leak response</text>
-<rect x="20" y="340" width="620" height="60" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5" rx="4"/>
-<text x="330" y="362" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">Root Cause: Server trusts client-supplied length field</text>
-<text x="330" y="380" text-anchor="middle" font-size="11" fill="#555">No bounds check → reads beyond the heartbeat payload buffer</text>
-</svg>
+![heartbleed_cve_2014_0160_deep_dive](../../../../svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/heartbleed_cve_2014_0160_deep_dive.svg)
 
 The bug: Server trusts client-specified length without bounds checking.
 
@@ -418,52 +305,7 @@ readelf -h /usr/bin/ls | grep Type
 # DYN (Position-Independent Executable)
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="214" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<rect x="10" y="10" width="600" height="34" fill="#37474f" stroke="#37474f" stroke-width="1.5" rx="4"/>
-<text x="310" y="32" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Memory Layout: Without ASLR vs With ASLR</text>
-<rect x="10" y="44" width="200" height="28" fill="#cfd8dc" stroke="#90a4ae" stroke-width="1.5" rx="4"/>
-<rect x="210" y="44" width="200" height="28" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<rect x="410" y="44" width="200" height="28" fill="#c8e6c9" stroke="#a5d6a7" stroke-width="1.5" rx="4"/>
-<text x="110" y="62" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Region</text>
-<text x="310" y="62" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">Without ASLR</text>
-<text x="510" y="62" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">With ASLR</text>
-<rect x="10" y="72" width="200" height="26" fill="#fafafa" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="110" y="89" text-anchor="middle" font-size="12" fill="#222222">Stack</text>
-<rect x="210" y="72" width="200" height="26" fill="#fff8f8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="310" y="89" text-anchor="middle" font-size="12" fill="#222222">0x7fff...   (fixed)</text>
-<rect x="410" y="72" width="200" height="26" fill="#f8fff8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="510" y="89" text-anchor="middle" font-size="12" fill="#222222">0x7ffd2a... (random)</text>
-<rect x="10" y="98" width="200" height="26" fill="#fafafa" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="110" y="115" text-anchor="middle" font-size="12" fill="#222222">Heap</text>
-<rect x="210" y="98" width="200" height="26" fill="#fff8f8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="310" y="115" text-anchor="middle" font-size="12" fill="#222222">0x0060...   (fixed)</text>
-<rect x="410" y="98" width="200" height="26" fill="#f8fff8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="510" y="115" text-anchor="middle" font-size="12" fill="#222222">0x5617b3... (random)</text>
-<rect x="10" y="124" width="200" height="26" fill="#fafafa" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="110" y="141" text-anchor="middle" font-size="12" fill="#222222">Libs</text>
-<rect x="210" y="124" width="200" height="26" fill="#fff8f8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="310" y="141" text-anchor="middle" font-size="12" fill="#222222">0x7f00...   (fixed)</text>
-<rect x="410" y="124" width="200" height="26" fill="#f8fff8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="510" y="141" text-anchor="middle" font-size="12" fill="#222222">0x7f8c21... (random)</text>
-<rect x="10" y="150" width="200" height="26" fill="#fafafa" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="110" y="167" text-anchor="middle" font-size="12" fill="#222222">Code</text>
-<rect x="210" y="150" width="200" height="26" fill="#fff8f8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="310" y="167" text-anchor="middle" font-size="12" fill="#222222">0x0040...   (fixed)</text>
-<rect x="410" y="150" width="200" height="26" fill="#f8fff8" stroke="#ddd" stroke-width="1.5" rx="4"/>
-<text x="510" y="167" text-anchor="middle" font-size="12" fill="#222222">0x5617a1... (random)</text>
-<rect x="10" y="176" width="300" height="28" fill="#ffebee" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="160" y="194" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">Predictable → exploitable!</text>
-<rect x="310" y="176" width="300" height="28" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5" rx="4"/>
-<text x="460" y="194" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Unpredictable → harder to exploit</text>
-</svg>
+![dyn_position_independent_executable](../../../../svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/dyn_position_independent_executable.svg)
 
 ---
 ## Detection Tools

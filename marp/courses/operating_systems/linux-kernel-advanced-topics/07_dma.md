@@ -16,39 +16,7 @@ Key benefit: CPU can perform other tasks during transfers
 
 ## DMA vs PIO
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">PIO vs DMA Transfer</text>
-<g id="pio">
-<text x="200" y="70">PIO:</text>
-<rect x="100" y="90" width="80" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="140" y="125" text-anchor="middle">CPU</text>
-<rect x="100" y="200" width="80" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="140" y="235" text-anchor="middle">Memory</text>
-<rect x="250" y="200" width="80" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="290" y="235" text-anchor="middle">Device</text>
-<line x1="140" y1="150" x2="140" y2="200" stroke="red" stroke-width="2" marker-end="url(#redarrow)"/>
-<line x1="140" y1="150" x2="290" y2="200" stroke="red" stroke-width="2" marker-end="url(#redarrow)"/>
-</g>
-<g id="dma">
-<text x="500" y="70">DMA:</text>
-<rect x="450" y="90" width="80" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="490" y="125" text-anchor="middle">CPU</text>
-<rect x="400" y="200" width="80" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="440" y="235" text-anchor="middle">Memory</text>
-<rect x="550" y="200" width="80" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="590" y="235" text-anchor="middle">Device</text>
-<line x1="480" y1="230" x2="550" y2="230" stroke="green" stroke-width="3" marker-end="url(#greenarrow)"/>
-<text x="490" y="170" fill="gray">CPU Idle</text>
-</g>
-<defs>
-<marker id="redarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="red"/>
-</marker>
-<marker id="greenarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="green"/>
-</marker>
-</defs>
-</svg>
+![dma_vs_pio](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/dma_vs_pio.svg)
 
 ---
 
@@ -150,28 +118,7 @@ enum dma_data_direction {
 
 ## Scatter-Gather DMA
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Scatter-Gather DMA</text>
-<rect x="100" y="80" width="100" height="40" fill="#FFE6E6" stroke="black"/>
-<text x="150" y="105" text-anchor="middle">Buffer 1</text>
-<rect x="100" y="140" width="150" height="40" fill="#E6F2FF" stroke="black"/>
-<text x="175" y="165" text-anchor="middle">Buffer 2</text>
-<rect x="100" y="200" width="80" height="40" fill="#E6FFE6" stroke="black"/>
-<text x="140" y="225" text-anchor="middle">Buffer 3</text>
-<rect x="100" y="260" width="120" height="40" fill="#FFFFE6" stroke="black"/>
-<text x="160" y="285" text-anchor="middle">Buffer 4</text>
-<rect x="450" y="140" width="250" height="100" fill="#FFE6FF" stroke="black"/>
-<text x="575" y="195" text-anchor="middle">DMA Controller</text>
-<line x1="200" y1="100" x2="450" y2="165" stroke="black" marker-end="url(#arrow)"/>
-<line x1="250" y1="160" x2="450" y2="180" stroke="black" marker-end="url(#arrow)"/>
-<line x1="180" y1="220" x2="450" y2="195" stroke="black" marker-end="url(#arrow)"/>
-<line x1="220" y1="280" x2="450" y2="215" stroke="black" marker-end="url(#arrow)"/>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![scatter_gather_dma](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/scatter_gather_dma.svg)
 
 ---
 
@@ -349,24 +296,7 @@ dma_pool_destroy(pool);
 
 ## IOMMU Integration
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="100" width="150" height="80" fill="#FFE6E6" stroke="black"/>
-<text x="175" y="145" text-anchor="middle">Device</text>
-<rect x="350" y="100" width="150" height="80" fill="#E6F2FF" stroke="black"/>
-<text x="425" y="145" text-anchor="middle">IOMMU</text>
-<rect x="600" y="100" width="150" height="80" fill="#E6FFE6" stroke="black"/>
-<text x="675" y="145" text-anchor="middle">Memory</text>
-<line x1="250" y1="140" x2="350" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<line x1="500" y1="140" x2="600" y2="140" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
-<text x="175" y="220">Virtual Address</text>
-<text x="425" y="220">Translation</text>
-<text x="675" y="220">Physical Address</text>
-<defs>
-<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![iommu_integration](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/iommu_integration.svg)
 
 ---
 
@@ -577,20 +507,7 @@ my_prep_memcpy(struct dma_chan *chan,
 
 ## Cache Coherency
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<text x="400" y="30" text-anchor="middle" font-weight="bold">Cache Coherency Issues</text>
-<rect x="150" y="80" width="120" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="210" y="115" text-anchor="middle">CPU Cache</text>
-<rect x="530" y="80" width="120" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="590" y="115" text-anchor="middle">Device</text>
-<rect x="340" y="200" width="120" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="235" text-anchor="middle">Memory</text>
-<line x1="210" y1="140" x2="400" y2="200" stroke="red" stroke-width="2"/>
-<line x1="590" y1="140" x2="400" y2="200" stroke="blue" stroke-width="2"/>
-<text x="120" y="180" fill="red">Cached data</text>
-<text x="520" y="180" fill="blue">Direct access</text>
-<text x="400" y="300">Potential data inconsistency!</text>
-</svg>
+![cache_coherency](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/cache_coherency.svg)
 
 ---
 

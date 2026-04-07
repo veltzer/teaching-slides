@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" font-family="sans-serif">
+  <defs>
+    <marker id="arr4" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Control Unit outer box -->
+  <rect x="10" y="10" width="560" height="230" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="290" y="35" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Control Unit</text>
+  <!-- Instruction Register -->
+  <rect x="40" y="55" width="155" height="70" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="118" y="83" text-anchor="middle" font-size="13" fill="#222222">Instruction</text>
+  <text x="118" y="100" text-anchor="middle" font-size="13" fill="#222222">Register (IR)</text>
+  <!-- Instruction Decoder -->
+  <rect x="280" y="55" width="160" height="70" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
+  <text x="360" y="83" text-anchor="middle" font-size="13" fill="#222222">Instruction</text>
+  <text x="360" y="100" text-anchor="middle" font-size="13" fill="#222222">Decoder</text>
+  <!-- IR -> Decoder arrow -->
+  <line x1="195" y1="90" x2="280" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Decoder -> Control Signal Generator arrow -->
+  <line x1="360" y1="125" x2="360" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Control Signal Generator -->
+  <rect x="280" y="155" width="160" height="60" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
+  <text x="360" y="180" text-anchor="middle" font-size="13" fill="#222222">Control Signal</text>
+  <text x="360" y="198" text-anchor="middle" font-size="13" fill="#222222">Generator</text>
+  <!-- Line from CSG down out of box -->
+  <line x1="360" y1="215" x2="360" y2="255" stroke="#555" stroke-width="1.5"/>
+  <!-- Horizontal spread -->
+  <line x1="100" y1="255" x2="530" y2="255" stroke="#555" stroke-width="1.5"/>
+  <!-- Down to ALU -->
+  <line x1="100" y1="255" x2="100" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Down to Registers -->
+  <line x1="360" y1="255" x2="360" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- Down to Memory -->
+  <line x1="530" y1="255" x2="530" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
+  <!-- ALU box -->
+  <rect x="35" y="285" width="130" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="100" y="310" text-anchor="middle" font-size="13" fill="#222222">ALU</text>
+  <!-- Registers box -->
+  <rect x="285" y="285" width="150" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="360" y="310" text-anchor="middle" font-size="13" fill="#222222">Registers</text>
+  <!-- Memory box -->
+  <rect x="460" y="285" width="130" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
+  <text x="525" y="310" text-anchor="middle" font-size="13" fill="#222222">Memory</text>
+</svg>

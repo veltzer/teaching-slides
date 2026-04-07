@@ -14,33 +14,7 @@
 
 ## Why Helm?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Without Helm vs With Helm</text>
-  <g id="without">
-    <text x="200" y="80" text-anchor="middle" font-size="12">Without Helm</text>
-    <rect x="100" y="100" width="200" height="30" fill="#888" rx="3"/>
-    <text x="200" y="120" text-anchor="middle" fill="white" font-size="10">deployment.yaml</text>
-    <rect x="100" y="140" width="200" height="30" fill="#888" rx="3"/>
-    <text x="200" y="160" text-anchor="middle" fill="white" font-size="10">service.yaml</text>
-    <rect x="100" y="180" width="200" height="30" fill="#888" rx="3"/>
-    <text x="200" y="200" text-anchor="middle" fill="white" font-size="10">configmap.yaml</text>
-    <rect x="100" y="220" width="200" height="30" fill="#888" rx="3"/>
-    <text x="200" y="240" text-anchor="middle" fill="white" font-size="10">ingress.yaml</text>
-    <text x="200" y="280" text-anchor="middle" font-size="11">Multiple files to manage</text>
-    <text x="200" y="300" text-anchor="middle" font-size="11">Manual versioning</text>
-  </g>
-  <g id="with">
-    <text x="550" y="80" text-anchor="middle" font-size="12">With Helm</text>
-    <rect x="450" y="100" width="200" height="60" fill="#0f1689" rx="3"/>
-    <text x="550" y="135" text-anchor="middle" fill="white" font-weight="bold">Helm Chart</text>
-    <text x="550" y="155" text-anchor="middle" fill="white" font-size="10">All resources packaged</text>
-    <rect x="450" y="180" width="200" height="40" fill="#4285f4" rx="3"/>
-    <text x="550" y="205" text-anchor="middle" fill="white">values.yaml</text>
-    <text x="550" y="280" text-anchor="middle" font-size="11">Single package</text>
-    <text x="550" y="300" text-anchor="middle" font-size="11">Version controlled</text>
-  </g>
-</svg>
+![why_helm](../../../../svg/courses/devops/k8s-introduction/14_helm_and_gitops/why_helm.svg)
 
 ---
 
@@ -358,34 +332,7 @@ helm secrets edit values-secret.yaml
 
 ## GitOps Principles
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">GitOps Workflow</text>
-  <rect x="100" y="80" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="175" y="105" text-anchor="middle" fill="white" font-weight="bold">Git Repository</text>
-  <text x="175" y="125" text-anchor="middle" fill="white" font-size="10">Source of truth</text>
-  <rect x="300" y="80" width="150" height="60" fill="#34a853" rx="5"/>
-  <text x="375" y="105" text-anchor="middle" fill="white" font-weight="bold">GitOps Agent</text>
-  <text x="375" y="125" text-anchor="middle" fill="white" font-size="10">ArgoCD/Flux</text>
-  <rect x="500" y="80" width="150" height="60" fill="#fbbc04" rx="5"/>
-  <text x="575" y="105" text-anchor="middle" font-weight="bold">Kubernetes</text>
-  <text x="575" y="125" text-anchor="middle" font-size="10">Target cluster</text>
-  <path d="M 250 110 L 295 110" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="272" y="100" text-anchor="middle" font-size="10">Pull</text>
-  <path d="M 450 110 L 495 110" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="472" y="100" text-anchor="middle" font-size="10">Apply</text>
-  <rect x="200" y="180" width="400" height="120" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="210" text-anchor="middle" font-weight="bold">Benefits</text>
-  <text x="400" y="235" text-anchor="middle" font-size="12">• Increased reliability</text>
-  <text x="400" y="255" text-anchor="middle" font-size="12">• Better security (pull vs push)</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">• Easier rollbacks</text>
-  <text x="400" y="295" text-anchor="middle" font-size="12">• Complete audit trail</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![gitops_principles](../../../../svg/courses/devops/k8s-introduction/14_helm_and_gitops/gitops_principles.svg)
 
 ---
 
@@ -586,26 +533,7 @@ configMapGenerator:
 
 ## Deployment Strategies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Deployment Strategies with GitOps</text>
-  <rect x="100" y="80" width="150" height="100" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Blue/Green</text>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="10">Full switch</text>
-  <text x="175" y="155" text-anchor="middle" fill="white" font-size="10">Quick rollback</text>
-  <rect x="270" y="80" width="150" height="100" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">Canary</text>
-  <text x="345" y="135" text-anchor="middle" fill="white" font-size="10">Gradual rollout</text>
-  <text x="345" y="155" text-anchor="middle" fill="white" font-size="10">Risk mitigation</text>
-  <rect x="440" y="80" width="150" height="100" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">Progressive</text>
-  <text x="515" y="135" text-anchor="middle" font-size="10">Flagger/Argo Rollouts</text>
-  <text x="515" y="155" text-anchor="middle" font-size="10">Automated</text>
-  <rect x="610" y="80" width="140" height="100" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">Feature Flags</text>
-  <text x="680" y="135" text-anchor="middle" fill="white" font-size="10">Runtime control</text>
-  <text x="680" y="155" text-anchor="middle" fill="white" font-size="10">No redeploy</text>
-</svg>
+![deployment_strategies](../../../../svg/courses/devops/k8s-introduction/14_helm_and_gitops/deployment_strategies.svg)
 
 ---
 

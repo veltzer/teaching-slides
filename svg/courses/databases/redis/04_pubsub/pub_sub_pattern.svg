@@ -1,0 +1,28 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd0_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Publisher -->
+  <rect x="20" y="70" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="92" text-anchor="middle" font-size="11" font-weight="bold">Publisher</text>
+  <text x="70" y="106" text-anchor="middle" font-size="10">PUBLISH msg</text>
+  <!-- Channel -->
+  <rect x="220" y="60" width="140" height="70" fill="#fff3e0" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="290" y="85" text-anchor="middle" font-size="12" font-weight="bold">Channel</text>
+  <text x="290" y="100" text-anchor="middle" font-size="10">"news:sports"</text>
+  <text x="290" y="115" text-anchor="middle" font-size="10" fill="#666">fan-out delivery</text>
+  <!-- Subscribers -->
+  <rect x="460" y="30" width="110" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="515" y="55" text-anchor="middle" font-size="11">Subscriber A</text>
+  <rect x="460" y="80" width="110" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="515" y="105" text-anchor="middle" font-size="11">Subscriber B</text>
+  <rect x="460" y="130" width="110" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="515" y="155" text-anchor="middle" font-size="11">Subscriber C</text>
+  <!-- Arrows -->
+  <line x1="120" y1="95" x2="218" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_pubsub)"/>
+  <line x1="360" y1="80" x2="458" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_pubsub)"/>
+  <line x1="360" y1="95" x2="458" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_pubsub)"/>
+  <line x1="360" y1="110" x2="458" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_03_pubsub)"/>
+</svg>

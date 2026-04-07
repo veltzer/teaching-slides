@@ -5,36 +5,7 @@
 
 ## Why Async
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr_async" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Sync vs Async Execution Model</text>
-  <rect x="20" y="30" width="170" height="65" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Synchronous</text>
-  <text x="105" y="63" text-anchor="middle" font-size="9">1 thread per connection</text>
-  <text x="105" y="76" text-anchor="middle" font-size="9">Blocks on I/O (idle CPU)</text>
-  <text x="105" y="89" text-anchor="middle" font-size="9">10K threads = high overhead</text>
-  <rect x="215" y="30" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">Async (Rust)</text>
-  <text x="300" y="63" text-anchor="middle" font-size="9">Many tasks on few threads</text>
-  <text x="300" y="76" text-anchor="middle" font-size="9">Yields on .await (no block)</text>
-  <text x="300" y="89" text-anchor="middle" font-size="9">100K+ tasks, low overhead</text>
-  <rect x="410" y="30" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">Tokio Runtime</text>
-  <text x="495" y="63" text-anchor="middle" font-size="9">Executor: polls Futures</text>
-  <text x="495" y="76" text-anchor="middle" font-size="9">Reactor: watches I/O</text>
-  <text x="495" y="89" text-anchor="middle" font-size="9">Work-stealing scheduler</text>
-  <line x1="190" y1="62" x2="215" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arr_async)"/>
-  <line x1="385" y1="62" x2="410" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arr_async)"/>
-  <rect x="50" y="110" width="500" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="125" text-anchor="middle" font-size="10" font-weight="bold">async fn -> impl Future: compiler transforms to state machine</text>
-  <text x="300" y="139" text-anchor="middle" font-size="9">Each .await is a yield point. No threads blocked. No callback hell.</text>
-  <rect x="100" y="160" width="400" height="30" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="180" text-anchor="middle" font-size="10">Use async for I/O-bound work; use threads for CPU-bound work</text>
-</svg>
+![why_async](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/why_async.svg)
 
 ---
 
@@ -339,35 +310,7 @@ async fn parallel_tasks() {
 
 ## Resource Management
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr_res" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Async Resource Management</text>
-  <rect x="20" y="30" width="170" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Semaphore</text>
-  <text x="105" y="63" text-anchor="middle" font-size="9">Limit concurrent access</text>
-  <text x="105" y="78" text-anchor="middle" font-size="9">tokio::sync::Semaphore</text>
-  <rect x="215" y="30" width="170" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">JoinSet</text>
-  <text x="300" y="63" text-anchor="middle" font-size="9">Manage task groups</text>
-  <text x="300" y="78" text-anchor="middle" font-size="9">Collect results, cancel all</text>
-  <rect x="410" y="30" width="170" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">CancellationToken</text>
-  <text x="495" y="63" text-anchor="middle" font-size="9">Graceful shutdown signal</text>
-  <text x="495" y="78" text-anchor="middle" font-size="9">tokio_util::sync</text>
-  <rect x="20" y="105" width="270" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="155" y="120" text-anchor="middle" font-size="10" font-weight="bold">tokio::sync::Mutex (async-aware)</text>
-  <text x="155" y="135" text-anchor="middle" font-size="9">Use when lock is held across .await points</text>
-  <rect x="310" y="105" width="270" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="445" y="120" text-anchor="middle" font-size="10" font-weight="bold">std::sync::Mutex (sync)</text>
-  <text x="445" y="135" text-anchor="middle" font-size="9">Use for short critical sections without .await</text>
-  <rect x="80" y="160" width="440" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="175" text-anchor="middle" font-size="10">RAII still works: Drop runs when task completes or is cancelled</text>
-  <text x="300" y="188" text-anchor="middle" font-size="9">Use timeout() to prevent tasks from running forever</text>
-</svg>
+![resource_management](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/resource_management.svg)
 
 ---
 
@@ -385,32 +328,7 @@ async fn test_async_function() {
 
 ## Best Practices
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="5" width="200" height="35" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
-  <text x="300" y="28" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Async Best Practices</text>
-  <line x1="250" y1="40" x2="120" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="40" x2="120" y2="125" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
-  <rect x="30" y="53" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold">Never block in async</text>
-  <text x="120" y="84" text-anchor="middle" font-size="9">Use spawn_blocking() for</text>
-  <text x="120" y="95" text-anchor="middle" font-size="9">CPU-heavy or sync I/O work</text>
-  <rect x="390" y="53" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="70" text-anchor="middle" font-size="10" font-weight="bold">Use select! wisely</text>
-  <text x="480" y="84" text-anchor="middle" font-size="9">Race futures, cancel losers</text>
-  <text x="480" y="95" text-anchor="middle" font-size="9">Great for timeouts</text>
-  <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">Bound concurrency</text>
-  <text x="120" y="151" text-anchor="middle" font-size="9">Use Semaphore or buffered</text>
-  <text x="120" y="162" text-anchor="middle" font-size="9">streams to limit parallelism</text>
-  <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Graceful shutdown</text>
-  <text x="480" y="151" text-anchor="middle" font-size="9">Handle Ctrl+C signals</text>
-  <text x="480" y="162" text-anchor="middle" font-size="9">Drain tasks before exit</text>
-  <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="191" text-anchor="middle" font-size="9">Keep async tasks small; use channels for coordination between tasks</text>
-</svg>
+![best_practices](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/best_practices.svg)
 
 ---
 

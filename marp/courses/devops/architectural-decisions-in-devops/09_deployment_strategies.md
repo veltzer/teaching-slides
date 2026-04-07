@@ -37,33 +37,7 @@
 ---
 ## Blue/Green Architecture Diagram
 
-<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Users -->
-  <rect x="30" y="140" width="90" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="75" y="165" text-anchor="middle" font-size="13" font-weight="bold">Users</text>
-  <!-- Load Balancer -->
-  <rect x="200" y="140" width="120" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="260" y="165" text-anchor="middle" font-size="13" font-weight="bold">Load Balancer</text>
-  <!-- Blue Environment -->
-  <rect x="430" y="50" width="220" height="70" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="540" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">Blue (v1 - Active)</text>
-  <text x="540" y="100" text-anchor="middle" font-size="11" fill="#333">Serving live traffic</text>
-  <!-- Green Environment -->
-  <rect x="430" y="200" width="220" height="70" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="540" y="228" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">Green (v2 - Idle)</text>
-  <text x="540" y="250" text-anchor="middle" font-size="11" fill="#333">Deploy &amp; verify here</text>
-  <!-- Arrows -->
-  <line x1="120" y1="160" x2="195" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="320" y1="155" x2="425" y2="85" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow)"/>
-  <line x1="320" y1="165" x2="425" y2="235" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
-  <!-- Switch label -->
-  <text x="370" y="180" text-anchor="middle" font-size="11" fill="#666">Switch</text>
-</svg>
+![blue_green_architecture_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_architecture_diagram.svg)
 
 ---
 ## Blue/Green - The Switch
@@ -98,42 +72,7 @@
 ---
 ## Blue/Green - Database Migration Pattern
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Phase labels -->
-  <text x="10" y="30" font-size="13" font-weight="bold" fill="#333">Expand-and-Contract Migration:</text>
-  <!-- Phase 1 -->
-  <rect x="20" y="50" width="150" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="95" y="72" text-anchor="middle" font-size="11" font-weight="bold">Phase 1: Expand</text>
-  <text x="95" y="88" text-anchor="middle" font-size="10">Add new columns</text>
-  <!-- Phase 2 -->
-  <rect x="195" y="50" width="150" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="270" y="72" text-anchor="middle" font-size="11" font-weight="bold">Phase 2: Dual Write</text>
-  <text x="270" y="88" text-anchor="middle" font-size="10">Both schemas active</text>
-  <!-- Phase 3 -->
-  <rect x="370" y="50" width="150" height="50" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="445" y="72" text-anchor="middle" font-size="11" font-weight="bold">Phase 3: Migrate</text>
-  <text x="445" y="88" text-anchor="middle" font-size="10">Backfill data</text>
-  <!-- Phase 4 -->
-  <rect x="545" y="50" width="150" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="620" y="72" text-anchor="middle" font-size="11" font-weight="bold">Phase 4: Contract</text>
-  <text x="620" y="88" text-anchor="middle" font-size="10">Drop old columns</text>
-  <!-- Arrows -->
-  <line x1="170" y1="75" x2="190" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="345" y1="75" x2="365" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="520" y1="75" x2="540" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <!-- DB -->
-  <rect x="250" y="160" width="200" height="50" fill="#ffecb3" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="350" y="185" text-anchor="middle" font-size="13" font-weight="bold">Shared Database</text>
-  <text x="350" y="200" text-anchor="middle" font-size="10">Must remain compatible</text>
-  <!-- Connecting lines -->
-  <line x1="95" y1="100" x2="290" y2="160" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="445" y1="100" x2="390" y2="160" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-</svg>
+![blue_green_database_migration_pattern](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_database_migration_pattern.svg)
 
 ---
 ## Blue/Green - When to Use
@@ -154,39 +93,7 @@
 ---
 ## Canary Traffic Split Diagram
 
-<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Users -->
-  <rect x="30" y="130" width="90" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="75" y="155" text-anchor="middle" font-size="13" font-weight="bold">Users</text>
-  <!-- Router -->
-  <rect x="190" y="120" width="130" height="60" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="255" y="148" text-anchor="middle" font-size="12" font-weight="bold">Traffic Router</text>
-  <text x="255" y="166" text-anchor="middle" font-size="10">Weight-based</text>
-  <!-- Stable -->
-  <rect x="430" y="50" width="220" height="60" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="540" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Stable (v1)</text>
-  <text x="540" y="96" text-anchor="middle" font-size="11">95% of traffic</text>
-  <!-- Canary -->
-  <rect x="430" y="200" width="220" height="60" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="8"/>
-  <text x="540" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Canary (v2)</text>
-  <text x="540" y="246" text-anchor="middle" font-size="11">5% of traffic</text>
-  <!-- Arrows -->
-  <line x1="120" y1="150" x2="185" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="320" y1="140" x2="425" y2="80" stroke="#2e7d32" stroke-width="3" marker-end="url(#arr3)"/>
-  <line x1="320" y1="160" x2="425" y2="230" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <!-- Labels -->
-  <text x="370" y="100" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">95%</text>
-  <text x="370" y="210" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">5%</text>
-  <!-- Monitoring -->
-  <rect x="430" y="290" width="220" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="540" y="315" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b1fa2">Monitoring &amp; Alerting</text>
-  <line x1="540" y1="260" x2="540" y2="285" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr3)"/>
-</svg>
+![canary_traffic_split_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/canary_traffic_split_diagram.svg)
 
 ---
 ## Canary - Traffic Splitting Mechanisms
@@ -294,62 +201,7 @@ spec:
 ---
 ## Rolling Update Sequence Diagram
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Title -->
-  <text x="350" y="25" text-anchor="middle" font-size="14" font-weight="bold">Rolling Update: 4 Instances</text>
-  <!-- Step 1 -->
-  <text x="15" y="65" font-size="11" font-weight="bold">Step 1:</text>
-  <rect x="80" y="50" width="55" height="30" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="107" y="70" text-anchor="middle" font-size="10" fill="#c62828">v2</text>
-  <rect x="145" y="50" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="172" y="70" text-anchor="middle" font-size="10">v1</text>
-  <rect x="210" y="50" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="237" y="70" text-anchor="middle" font-size="10">v1</text>
-  <rect x="275" y="50" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="302" y="70" text-anchor="middle" font-size="10">v1</text>
-  <!-- Step 2 -->
-  <text x="15" y="115" font-size="11" font-weight="bold">Step 2:</text>
-  <rect x="80" y="100" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="107" y="120" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="145" y="100" width="55" height="30" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="172" y="120" text-anchor="middle" font-size="10" fill="#c62828">v2</text>
-  <rect x="210" y="100" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="237" y="120" text-anchor="middle" font-size="10">v1</text>
-  <rect x="275" y="100" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="302" y="120" text-anchor="middle" font-size="10">v1</text>
-  <!-- Step 3 -->
-  <text x="15" y="165" font-size="11" font-weight="bold">Step 3:</text>
-  <rect x="80" y="150" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="107" y="170" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="145" y="150" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="172" y="170" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="210" y="150" width="55" height="30" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="4"/>
-  <text x="237" y="170" text-anchor="middle" font-size="10" fill="#c62828">v2</text>
-  <rect x="275" y="150" width="55" height="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="4"/>
-  <text x="302" y="170" text-anchor="middle" font-size="10">v1</text>
-  <!-- Step 4 -->
-  <text x="15" y="215" font-size="11" font-weight="bold">Step 4:</text>
-  <rect x="80" y="200" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="107" y="220" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="145" y="200" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="172" y="220" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="210" y="200" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="237" y="220" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <rect x="275" y="200" width="55" height="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="4"/>
-  <text x="302" y="220" text-anchor="middle" font-size="10" fill="#1565c0">v2</text>
-  <!-- Legend -->
-  <rect x="420" y="80" width="20" height="15" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" rx="2"/>
-  <text x="450" y="92" font-size="11">Running v1</text>
-  <rect x="420" y="105" width="20" height="15" fill="#ffcdd2" stroke="#c62828" stroke-width="1" rx="2"/>
-  <text x="450" y="117" font-size="11">Updating to v2</text>
-  <rect x="420" y="130" width="20" height="15" fill="#bbdefb" stroke="#1565c0" stroke-width="1" rx="2"/>
-  <text x="450" y="142" font-size="11">Running v2</text>
-</svg>
+![rolling_update_sequence_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/rolling_update_sequence_diagram.svg)
 
 ---
 ## Rolling - Update Ordering
@@ -435,37 +287,7 @@ spec:
 ---
 ## Feature Flag Decision Tree
 
-<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Root -->
-  <rect x="250" y="20" width="200" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="350" y="45" text-anchor="middle" font-size="12" font-weight="bold">Incoming Request</text>
-  <!-- Check flag -->
-  <rect x="240" y="100" width="220" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="20"/>
-  <text x="350" y="125" text-anchor="middle" font-size="12" font-weight="bold">Feature Flag ON?</text>
-  <!-- Yes path -->
-  <rect x="80" y="200" width="180" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="170" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">New Code Path (v2)</text>
-  <!-- No path -->
-  <rect x="440" y="200" width="180" height="40" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="530" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Old Code Path (v1)</text>
-  <!-- Arrows -->
-  <line x1="350" y1="60" x2="350" y2="95" stroke="#333" stroke-width="2" marker-end="url(#arr5)"/>
-  <line x1="290" y1="140" x2="200" y2="195" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr5)"/>
-  <line x1="410" y1="140" x2="500" y2="195" stroke="#c62828" stroke-width="2" marker-end="url(#arr5)"/>
-  <!-- Labels -->
-  <text x="220" y="165" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Yes</text>
-  <text x="480" y="165" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">No</text>
-  <!-- Flag source -->
-  <rect x="530" y="95" width="140" height="50" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="600" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#7b1fa2">Flag Service</text>
-  <text x="600" y="132" text-anchor="middle" font-size="10" fill="#555">LaunchDarkly, etc.</text>
-  <line x1="460" y1="120" x2="525" y2="120" stroke="#7b1fa2" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr5)"/>
-</svg>
+![feature_flag_decision_tree](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_decision_tree.svg)
 
 ---
 ## Feature Flags - Implementation Example
@@ -503,39 +325,7 @@ def get_checkout_page(user, cart):
 ---
 ## Feature Flag Lifecycle Diagram
 
-<svg width="700" height="180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Stages -->
-  <rect x="20" y="60" width="100" height="45" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="70" y="80" text-anchor="middle" font-size="11" font-weight="bold">Create</text>
-  <text x="70" y="95" text-anchor="middle" font-size="9">Set owner</text>
-  <rect x="155" y="60" width="100" height="45" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="205" y="80" text-anchor="middle" font-size="11" font-weight="bold">Develop</text>
-  <text x="205" y="95" text-anchor="middle" font-size="9">Code + test</text>
-  <rect x="290" y="60" width="100" height="45" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="340" y="80" text-anchor="middle" font-size="11" font-weight="bold">Roll Out</text>
-  <text x="340" y="95" text-anchor="middle" font-size="9">Gradual enable</text>
-  <rect x="425" y="60" width="100" height="45" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="475" y="80" text-anchor="middle" font-size="11" font-weight="bold">Evaluate</text>
-  <text x="475" y="95" text-anchor="middle" font-size="9">Analyze data</text>
-  <rect x="560" y="60" width="110" height="45" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="615" y="80" text-anchor="middle" font-size="11" font-weight="bold">Clean Up</text>
-  <text x="615" y="95" text-anchor="middle" font-size="9">Remove flag</text>
-  <!-- Arrows -->
-  <line x1="120" y1="82" x2="150" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <line x1="255" y1="82" x2="285" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <line x1="390" y1="82" x2="420" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <line x1="525" y1="82" x2="555" y2="82" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <!-- Timeline -->
-  <line x1="20" y1="140" x2="670" y2="140" stroke="#aaa" stroke-width="2"/>
-  <text x="70" y="160" text-anchor="middle" font-size="10" fill="#666">Day 0</text>
-  <text x="340" y="160" text-anchor="middle" font-size="10" fill="#666">Week 2-4</text>
-  <text x="615" y="160" text-anchor="middle" font-size="10" fill="#666">Remove by deadline</text>
-</svg>
+![feature_flag_lifecycle_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_lifecycle_diagram.svg)
 
 ---
 ## Feature Flags - Testing Complexity
@@ -643,42 +433,7 @@ def check_stale_flags():
 ---
 ## Progressive Delivery Pipeline
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <!-- Pipeline stages -->
-  <rect x="20" y="30" width="120" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="80" y="52" text-anchor="middle" font-size="11" font-weight="bold">Build &amp; Test</text>
-  <text x="80" y="68" text-anchor="middle" font-size="9">CI pipeline</text>
-  <rect x="175" y="30" width="120" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="235" y="52" text-anchor="middle" font-size="11" font-weight="bold">Deploy Canary</text>
-  <text x="235" y="68" text-anchor="middle" font-size="9">1-5% traffic</text>
-  <rect x="330" y="30" width="120" height="50" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="390" y="52" text-anchor="middle" font-size="11" font-weight="bold">Analyze</text>
-  <text x="390" y="68" text-anchor="middle" font-size="9">Auto metrics check</text>
-  <rect x="485" y="30" width="120" height="50" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="545" y="52" text-anchor="middle" font-size="11" font-weight="bold">Promote</text>
-  <text x="545" y="68" text-anchor="middle" font-size="9">Increase traffic</text>
-  <!-- Arrows -->
-  <line x1="140" y1="55" x2="170" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <line x1="295" y1="55" x2="325" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <line x1="450" y1="55" x2="480" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr7)"/>
-  <!-- Feedback loop -->
-  <path d="M 545 80 L 545 130 L 235 130 L 235 85" stroke="#f57c00" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arr7)"/>
-  <text x="390" y="148" text-anchor="middle" font-size="10" fill="#f57c00" font-weight="bold">Repeat until 100% or rollback</text>
-  <!-- Rollback -->
-  <rect x="330" y="180" width="120" height="40" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="390" y="205" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Rollback</text>
-  <line x1="390" y1="80" x2="390" y2="175" stroke="#c62828" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr7)"/>
-  <text x="415" y="140" font-size="10" fill="#c62828">Metrics fail</text>
-  <!-- Full rollout -->
-  <rect x="530" y="120" width="130" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="595" y="145" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Full Rollout</text>
-  <line x1="570" y1="80" x2="585" y2="115" stroke="#2e7d32" stroke-width="2" marker-end="url(#arr7)"/>
-</svg>
+![progressive_delivery_pipeline](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/progressive_delivery_pipeline.svg)
 
 ---
 ## Progressive Delivery - User Segmentation
@@ -712,31 +467,7 @@ def check_stale_flags():
 ---
 ## Deployment Strategies - Risk vs. Speed
 
-<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
-  <!-- Axes -->
-  <line x1="80" y1="290" x2="650" y2="290" stroke="#333" stroke-width="2"/>
-  <line x1="80" y1="290" x2="80" y2="40" stroke="#333" stroke-width="2"/>
-  <!-- Axis labels -->
-  <text x="370" y="330" text-anchor="middle" font-size="13" font-weight="bold">Deployment Speed</text>
-  <text x="30" y="170" text-anchor="middle" font-size="13" font-weight="bold" transform="rotate(-90, 30, 170)">Safety</text>
-  <!-- Points -->
-  <circle cx="200" cy="240" r="30" fill="#bbdefb" stroke="#1565c0" stroke-width="2" opacity="0.8"/>
-  <text x="200" y="244" text-anchor="middle" font-size="10" font-weight="bold">Blue/</text>
-  <text x="200" y="256" text-anchor="middle" font-size="10" font-weight="bold">Green</text>
-  <circle cx="350" cy="130" r="30" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" opacity="0.8"/>
-  <text x="350" y="134" text-anchor="middle" font-size="10" font-weight="bold">Progressive</text>
-  <text x="350" y="146" text-anchor="middle" font-size="10" font-weight="bold">Delivery</text>
-  <circle cx="500" cy="200" r="30" fill="#fff9c4" stroke="#f9a825" stroke-width="2" opacity="0.8"/>
-  <text x="500" y="204" text-anchor="middle" font-size="10" font-weight="bold">Rolling</text>
-  <circle cx="300" cy="100" r="30" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" opacity="0.8"/>
-  <text x="300" y="104" text-anchor="middle" font-size="10" font-weight="bold">Canary</text>
-  <circle cx="550" cy="120" r="30" fill="#ffcdd2" stroke="#c62828" stroke-width="2" opacity="0.8"/>
-  <text x="550" y="118" text-anchor="middle" font-size="10" font-weight="bold">Feature</text>
-  <text x="550" y="130" text-anchor="middle" font-size="10" font-weight="bold">Flags</text>
-  <!-- Axis arrows -->
-  <text x="640" y="280" font-size="11" fill="#666">Fast</text>
-  <text x="85" y="55" font-size="11" fill="#666">Safe</text>
-</svg>
+![deployment_strategies_risk_vs_speed](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/deployment_strategies_risk_vs_speed.svg)
 
 ---
 ## Choosing the Right Strategy

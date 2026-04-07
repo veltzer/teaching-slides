@@ -1,0 +1,40 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr_str" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">String Internal Layout (wraps Vec&lt;u8&gt;)</text>
+  <text x="110" y="35" text-anchor="middle" font-size="11" font-weight="bold">Stack: String struct</text>
+  <rect x="20" y="42" width="180" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="110" y="59" text-anchor="middle" font-size="10">ptr: 0x7fa3...</text>
+  <rect x="20" y="67" width="180" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="110" y="84" text-anchor="middle" font-size="10">len: 5 (bytes used)</text>
+  <rect x="20" y="92" width="180" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1"/>
+  <text x="110" y="109" text-anchor="middle" font-size="10">cap: 8 (bytes allocated)</text>
+  <text x="420" y="35" text-anchor="middle" font-size="11" font-weight="bold">Heap: UTF-8 bytes</text>
+  <rect x="290" y="45" width="35" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="307" y="64" text-anchor="middle" font-size="11">h</text>
+  <rect x="325" y="45" width="35" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="342" y="64" text-anchor="middle" font-size="11">e</text>
+  <rect x="360" y="45" width="35" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="377" y="64" text-anchor="middle" font-size="11">l</text>
+  <rect x="395" y="45" width="35" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="412" y="64" text-anchor="middle" font-size="11">l</text>
+  <rect x="430" y="45" width="35" height="30" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
+  <text x="447" y="64" text-anchor="middle" font-size="11">o</text>
+  <rect x="465" y="45" width="35" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="482" y="64" text-anchor="middle" font-size="9">--</text>
+  <rect x="500" y="45" width="35" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="517" y="64" text-anchor="middle" font-size="9">--</text>
+  <rect x="535" y="45" width="35" height="30" fill="#fff3e0" stroke="#333" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="552" y="64" text-anchor="middle" font-size="9">--</text>
+  <text x="400" y="90" text-anchor="middle" font-size="9">|-- len: 5 used --|-- cap: 3 spare --|</text>
+  <line x1="200" y1="55" x2="290" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arr_str)"/>
+  <rect x="30" y="125" width="250" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="155" y="144" text-anchor="middle" font-size="10">UTF-8 encoded: multi-byte chars possible</text>
+  <rect x="310" y="125" width="260" height="30" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="440" y="144" text-anchor="middle" font-size="10">No indexing by char! Use .chars() iterator</text>
+  <rect x="100" y="170" width="400" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10">String = Vec&lt;u8&gt; with UTF-8 guarantee; &amp;str = &amp;[u8] slice</text>
+</svg>

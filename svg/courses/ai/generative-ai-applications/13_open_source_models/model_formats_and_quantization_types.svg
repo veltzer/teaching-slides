@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="430" font-family="sans-serif">
+  <rect x="0" y="0" width="660" height="430" fill="#f0f4f8" rx="6" stroke="#333" stroke-width="1.5"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="660" height="36" fill="#37474f" rx="6" stroke="#333" stroke-width="1.5"/>
+  <rect x="0" y="18" width="660" height="18" fill="#37474f"/>
+  <text x="330" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="white">MODEL FILE FORMATS</text>
+  <!-- Header -->
+  <rect x="10" y="42" width="130" height="28" fill="#b0bec5" stroke="#333" stroke-width="1"/>
+  <rect x="140" y="42" width="510" height="28" fill="#b0bec5" stroke="#333" stroke-width="1"/>
+  <text x="75" y="61" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Format</text>
+  <text x="395" y="61" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Description</text>
+  <!-- PyTorch row -->
+  <rect x="10" y="70" width="130" height="48" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="70" width="510" height="48" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">PyTorch</text>
+  <text x="75" y="108" text-anchor="middle" font-size="12" fill="#555">(.bin)</text>
+  <text x="152" y="88" font-size="13" fill="#222">.bin / .pt — native PyTorch format</text>
+  <text x="152" y="108" font-size="13" fill="#555">Widely supported, large file sizes</text>
+  <!-- SafeTensors row -->
+  <rect x="10" y="118" width="130" height="62" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="118" width="510" height="62" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">SafeTensors</text>
+  <text x="152" y="136" font-size="13" fill="#222">.safetensors — safe, fast loading</text>
+  <text x="152" y="154" font-size="13" fill="#555">No code execution risk, faster I/O</text>
+  <text x="152" y="172" font-size="13" fill="#555">Becoming the new standard</text>
+  <!-- GGUF row -->
+  <rect x="10" y="180" width="130" height="62" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="180" width="510" height="62" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">GGUF</text>
+  <text x="152" y="198" font-size="13" fill="#222">.gguf — llama.cpp format</text>
+  <text x="152" y="216" font-size="13" fill="#555">CPU-optimized, supports quantization</text>
+  <text x="152" y="234" font-size="13" fill="#555">Used by Ollama, LM Studio</text>
+  <!-- GPTQ row -->
+  <rect x="10" y="242" width="130" height="62" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="242" width="510" height="62" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">GPTQ</text>
+  <text x="152" y="260" font-size="13" fill="#222">GPU-optimized quantization</text>
+  <text x="152" y="278" font-size="13" fill="#555">Post-training quantization</text>
+  <text x="152" y="296" font-size="13" fill="#555">Good quality at 4-bit</text>
+  <!-- AWQ row -->
+  <rect x="10" y="304" width="130" height="62" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="304" width="510" height="62" fill="#e8eaf6" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="326" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">AWQ</text>
+  <text x="152" y="322" font-size="13" fill="#222">Activation-aware quantization</text>
+  <text x="152" y="340" font-size="13" fill="#555">Better quality than GPTQ at same bits</text>
+  <text x="152" y="358" font-size="13" fill="#555">Preserves important weights</text>
+  <!-- EXL2 row -->
+  <rect x="10" y="366" width="130" height="54" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <rect x="140" y="366" width="510" height="54" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="75" y="388" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">EXL2</text>
+  <text x="152" y="384" font-size="13" fill="#222">ExLlamaV2 format</text>
+  <text x="152" y="402" font-size="13" fill="#555">Flexible per-layer quantization; fastest inference on GPU</text>
+</svg>

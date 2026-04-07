@@ -4,39 +4,7 @@
 
 ## Architecture Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="400" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-
-  <rect x="100" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="175" y="135" text-anchor="middle" font-size="12">Configuration</text>
-
-  <rect x="300" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="375" y="135" text-anchor="middle" font-size="12">Metadata</text>
-
-  <rect x="500" y="100" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="575" y="135" text-anchor="middle" font-size="12">BitBake</text>
-
-  <rect x="100" y="220" width="250" height="60" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="225" y="255" text-anchor="middle" font-size="12">Task Execution</text>
-
-  <rect x="400" y="220" width="250" height="60" fill="#eeccff" stroke="#000" stroke-width="1"/>
-  <text x="525" y="255" text-anchor="middle" font-size="12">Package Creation</text>
-
-  <rect x="250" y="340" width="250" height="60" fill="#ccffff" stroke="#000" stroke-width="1"/>
-  <text x="375" y="375" text-anchor="middle" font-size="12">Image Generation</text>
-
-  <path d="M 175 160 L 225 220" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <path d="M 375 160 L 225 220" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <path d="M 575 160 L 525 220" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <path d="M 350 280 L 375 340" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <path d="M 525 280 L 375 340" stroke="#000" stroke-width="1" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#000"/>
-    </marker>
-  </defs>
-</svg>
+![architecture_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/architecture_overview.svg)
 
 ---
 
@@ -132,31 +100,7 @@ Extended:
 
 ## Metadata Types
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="95" text-anchor="middle" font-size="14" font-weight="bold">Recipes</text>
-  <text x="175" y="115" text-anchor="middle" font-size="11">(.bb files)</text>
-
-  <rect x="325" y="50" width="150" height="80" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" font-size="14" font-weight="bold">Classes</text>
-  <text x="400" y="115" text-anchor="middle" font-size="11">(.bbclass files)</text>
-
-  <rect x="550" y="50" width="150" height="80" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="625" y="95" text-anchor="middle" font-size="14" font-weight="bold">Configuration</text>
-  <text x="625" y="115" text-anchor="middle" font-size="11">(.conf files)</text>
-
-  <rect x="100" y="200" width="150" height="80" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="245" text-anchor="middle" font-size="14" font-weight="bold">Append Files</text>
-  <text x="175" y="265" text-anchor="middle" font-size="11">(.bbappend)</text>
-
-  <rect x="325" y="200" width="150" height="80" fill="#eeccff" stroke="#000" stroke-width="2"/>
-  <text x="400" y="245" text-anchor="middle" font-size="14" font-weight="bold">Include Files</text>
-  <text x="400" y="265" text-anchor="middle" font-size="11">(.inc files)</text>
-
-  <rect x="550" y="200" width="150" height="80" fill="#ccffff" stroke="#000" stroke-width="2"/>
-  <text x="625" y="245" text-anchor="middle" font-size="14" font-weight="bold">Patches</text>
-  <text x="625" y="265" text-anchor="middle" font-size="11">(.patch files)</text>
-</svg>
+![metadata_types](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/metadata_types.svg)
 
 ---
 
@@ -189,37 +133,7 @@ FILES_${PN} = "${bindir}/app"
 
 ## Class Inheritance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="350" y="50" width="100" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12" font-weight="bold">base</text>
-
-  <rect x="250" y="150" width="100" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2"/>
-  <text x="300" y="185" text-anchor="middle" font-size="12">autotools</text>
-
-  <rect x="450" y="150" width="100" height="60" fill="#fff0e6" stroke="#ff6600" stroke-width="2"/>
-  <text x="500" y="185" text-anchor="middle" font-size="12">cmake</text>
-
-  <rect x="150" y="250" width="100" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="2"/>
-  <text x="200" y="285" text-anchor="middle" font-size="12">pkgconfig</text>
-
-  <rect x="350" y="250" width="100" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" font-size="12">systemd</text>
-
-  <rect x="550" y="250" width="100" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="2"/>
-  <text x="600" y="285" text-anchor="middle" font-size="12">python3</text>
-
-  <path d="M 400 110 L 300 150" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
-  <path d="M 400 110 L 500 150" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
-  <path d="M 300 210 L 200 250" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
-  <path d="M 300 210 L 400 250" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
-  <path d="M 500 210 L 600 250" stroke="#333" stroke-width="1" marker-end="url(#arrow)"/>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![class_inheritance](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/class_inheritance.svg)
 
 ---
 
@@ -343,34 +257,7 @@ LAYERSERIES_COMPAT_custom = "kirkstone"
 
 ## Build Flow Phases
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">Configuration</text>
-
-  <rect x="300" y="150" width="200" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="185" text-anchor="middle" font-size="14" font-weight="bold">Parsing</text>
-
-  <rect x="300" y="250" width="200" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">Task Execution</text>
-
-  <rect x="300" y="350" width="200" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">Image Creation</text>
-
-  <path d="M 400 110 L 400 150" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <path d="M 400 210 L 400 250" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <path d="M 400 310 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-
-  <text x="550" y="85" text-anchor="start" font-size="11">Machine, Distro, Layers</text>
-  <text x="550" y="185" text-anchor="start" font-size="11">Recipe analysis</text>
-  <text x="550" y="285" text-anchor="start" font-size="11">Fetch, Compile, Package</text>
-  <text x="550" y="385" text-anchor="start" font-size="11">Rootfs, Bootloader</text>
-
-  <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![build_flow_phases](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/build_flow_phases.svg)
 
 ---
 
@@ -393,45 +280,7 @@ Output:
 
 ## Task Execution Model
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="160" y="80" text-anchor="middle" font-size="12">do_fetch</text>
-
-  <rect x="250" y="50" width="120" height="50" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="310" y="80" text-anchor="middle" font-size="12">do_unpack</text>
-
-  <rect x="400" y="50" width="120" height="50" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="460" y="80" text-anchor="middle" font-size="12">do_patch</text>
-
-  <rect x="550" y="50" width="120" height="50" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="610" y="80" text-anchor="middle" font-size="12">do_configure</text>
-
-  <rect x="100" y="150" width="120" height="50" fill="#eeccff" stroke="#000" stroke-width="1"/>
-  <text x="160" y="180" text-anchor="middle" font-size="12">do_compile</text>
-
-  <rect x="250" y="150" width="120" height="50" fill="#ccffff" stroke="#000" stroke-width="1"/>
-  <text x="310" y="180" text-anchor="middle" font-size="12">do_install</text>
-
-  <rect x="400" y="150" width="120" height="50" fill="#ffe6e6" stroke="#000" stroke-width="1"/>
-  <text x="460" y="180" text-anchor="middle" font-size="12">do_package</text>
-
-  <rect x="550" y="150" width="120" height="50" fill="#e6ffe6" stroke="#000" stroke-width="1"/>
-  <text x="610" y="180" text-anchor="middle" font-size="12">do_package_write</text>
-
-  <path d="M 220 75 L 250 75" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 370 75 L 400 75" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 520 75 L 550 75" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 610 100 L 160 150" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 220 175 L 250 175" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 370 175 L 400 175" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-  <path d="M 520 175 L 550 175" stroke="#333" stroke-width="1" marker-end="url(#ar)"/>
-
-  <defs>
-    <marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![task_execution_model](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/task_execution_model.svg)
 
 ---
 
@@ -479,37 +328,7 @@ RDEPENDS_${PN} = "python3-core"
 
 ## Shared State Cache
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="200" height="200" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
-  <text x="200" y="130" text-anchor="middle" font-size="14" font-weight="bold">Build Directory</text>
-
-  <rect x="120" y="150" width="160" height="40" fill="#fff" stroke="#333" stroke-width="1"/>
-  <text x="200" y="175" text-anchor="middle" font-size="12">Task Execution</text>
-
-  <rect x="120" y="210" width="160" height="40" fill="#fff" stroke="#333" stroke-width="1"/>
-  <text x="200" y="235" text-anchor="middle" font-size="12">Hash Calculation</text>
-
-  <rect x="500" y="100" width="200" height="200" fill="#fff0e6" stroke="#ff6600" stroke-width="2"/>
-  <text x="600" y="130" text-anchor="middle" font-size="14" font-weight="bold">Sstate Cache</text>
-
-  <rect x="520" y="150" width="160" height="40" fill="#fff" stroke="#333" stroke-width="1"/>
-  <text x="600" y="175" text-anchor="middle" font-size="12">Cached Results</text>
-
-  <rect x="520" y="210" width="160" height="40" fill="#fff" stroke="#333" stroke-width="1"/>
-  <text x="600" y="235" text-anchor="middle" font-size="12">Hash Index</text>
-
-  <path d="M 300 170 L 500 170" stroke="#00cc00" stroke-width="2" marker-end="url(#a3)"/>
-  <text x="400" y="160" text-anchor="middle" font-size="11">Store</text>
-
-  <path d="M 500 230 L 300 230" stroke="#0066cc" stroke-width="2" marker-end="url(#a3)"/>
-  <text x="400" y="250" text-anchor="middle" font-size="11">Restore</text>
-
-  <defs>
-    <marker id="a3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![shared_state_cache](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/shared_state_cache.svg)
 
 ---
 
@@ -668,37 +487,7 @@ RDEPENDS_${PN}-tools = "${PN}"
 
 ## Image Generation Process
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12">Package Feed</text>
-
-  <rect x="300" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="375" y="85" text-anchor="middle" font-size="12">Rootfs Creation</text>
-
-  <rect x="500" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="575" y="85" text-anchor="middle" font-size="12">Image Formatting</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12">Post Processing</text>
-
-  <rect x="300" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="1"/>
-  <text x="375" y="235" text-anchor="middle" font-size="12">Compression</text>
-
-  <rect x="500" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="1"/>
-  <text x="575" y="235" text-anchor="middle" font-size="12">Deploy</text>
-
-  <path d="M 250 80 L 300 80" stroke="#333" stroke-width="1" marker-end="url(#a4)"/>
-  <path d="M 450 80 L 500 80" stroke="#333" stroke-width="1" marker-end="url(#a4)"/>
-  <path d="M 575 110 L 175 200" stroke="#333" stroke-width="1" marker-end="url(#a4)"/>
-  <path d="M 250 235 L 300 235" stroke="#333" stroke-width="1" marker-end="url(#a4)"/>
-  <path d="M 450 235 L 500 235" stroke="#333" stroke-width="1" marker-end="url(#a4)"/>
-
-  <defs>
-    <marker id="a4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![image_generation_process](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/image_generation_process.svg)
 
 ---
 
@@ -804,40 +593,7 @@ bitbake multiconfig:arm:core-image-minimal multiconfig:x86:core-image-minimal
 
 ## Dependency Resolution
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="40" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="205" text-anchor="middle" font-size="12">Recipe A</text>
-
-  <circle cx="250" cy="100" r="35" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="250" y="105" text-anchor="middle" font-size="11">Recipe B</text>
-
-  <circle cx="550" cy="100" r="35" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="550" y="105" text-anchor="middle" font-size="11">Recipe C</text>
-
-  <circle cx="250" cy="300" r="35" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="250" y="305" text-anchor="middle" font-size="11">Recipe D</text>
-
-  <circle cx="550" cy="300" r="35" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="550" y="305" text-anchor="middle" font-size="11">Recipe E</text>
-
-  <path d="M 370 175 L 280 125" stroke="#333" stroke-width="1" marker-end="url(#a5)"/>
-  <text x="325" y="145" text-anchor="middle" font-size="10">DEPENDS</text>
-
-  <path d="M 430 175 L 520 125" stroke="#333" stroke-width="1" marker-end="url(#a5)"/>
-  <text x="475" y="145" text-anchor="middle" font-size="10">DEPENDS</text>
-
-  <path d="M 370 225 L 280 275" stroke="#0066cc" stroke-width="1" marker-end="url(#a5)"/>
-  <text x="325" y="255" text-anchor="middle" font-size="10">RDEPENDS</text>
-
-  <path d="M 430 225 L 520 275" stroke="#0066cc" stroke-width="1" marker-end="url(#a5)"/>
-  <text x="475" y="255" text-anchor="middle" font-size="10">RDEPENDS</text>
-
-  <defs>
-    <marker id="a5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![dependency_resolution](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/dependency_resolution.svg)
 
 ---
 

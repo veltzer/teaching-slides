@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="130" font-family="sans-serif">
+  <defs>
+    <marker id="arr14" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- CPU Write -->
+  <rect x="10" y="30" width="110" height="40" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="65" y="55" text-anchor="middle" font-size="13" fill="#222222">CPU Write</text>
+  <line x1="120" y1="50" x2="165" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr14)"/>
+  <!-- Update Cache -->
+  <rect x="165" y="30" width="130" height="40" rx="4" fill="#c8e6c9" stroke="#333333" stroke-width="1.5"/>
+  <text x="230" y="55" text-anchor="middle" font-size="13" fill="#222222">Update Cache</text>
+  <line x1="295" y1="50" x2="340" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr14)"/>
+  <!-- Mark Dirty -->
+  <rect x="340" y="30" width="150" height="40" rx="4" fill="#fce4ec" stroke="#333333" stroke-width="1.5"/>
+  <text x="415" y="48" text-anchor="middle" font-size="13" fill="#222222">Mark line</text>
+  <text x="415" y="65" text-anchor="middle" font-size="13" fill="#222222">"dirty"</text>
+  <!-- Note -->
+  <text x="10" y="100" font-size="12" fill="#555">Memory updated only on eviction. Fast but complex. Used in modern CPUs.</text>
+</svg>

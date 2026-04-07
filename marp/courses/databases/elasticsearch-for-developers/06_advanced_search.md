@@ -6,24 +6,7 @@
 
 ## Text Analysis Pipeline
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="80" width="70" height="40" fill="#4CAF50" rx="5"/>
-  <text x="65" y="105" text-anchor="middle" fill="white" font-size="12">Text</text>
-  <rect x="120" y="80" width="80" height="40" fill="#2196F3" rx="5"/>
-  <text x="160" y="105" text-anchor="middle" fill="white" font-size="12">Tokenizer</text>
-  <rect x="220" y="80" width="70" height="40" fill="#FF9800" rx="5"/>
-  <text x="255" y="105" text-anchor="middle" fill="white" font-size="12">Filters</text>
-  <rect x="310" y="80" width="70" height="40" fill="#9C27B0" rx="5"/>
-  <text x="345" y="105" text-anchor="middle" fill="white" font-size="12">Terms</text>
-  <path d="M100 100 L120 100" stroke="#333" stroke-width="2" marker-end="url(#arr1)"/>
-  <path d="M200 100 L220 100" stroke="#333" stroke-width="2" marker-end="url(#arr1)"/>
-  <path d="M290 100 L310 100" stroke="#333" stroke-width="2" marker-end="url(#arr1)"/>
-  <defs>
-    <marker id="arr1" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![text_analysis_pipeline](../../../../svg/courses/databases/elasticsearch-for-developers/06_advanced_search/text_analysis_pipeline.svg)
 
 ---
 

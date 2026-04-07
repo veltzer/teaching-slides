@@ -34,30 +34,7 @@ Performance benefits of concurrent execution:
 
 ## Thread Lifecycle
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="40" fill="#e1f5fe" stroke="#0277bd" rx="5"/>
-  <text x="90" y="75" text-anchor="middle" font-size="12">Created</text>
-
-  <rect x="200" y="50" width="80" height="40" fill="#e8f5e8" stroke="#2e7d32" rx="5"/>
-  <text x="240" y="75" text-anchor="middle" font-size="12">Running</text>
-
-  <rect x="350" y="50" width="80" height="40" fill="#fff3e0" stroke="#f57c00" rx="5"/>
-  <text x="390" y="75" text-anchor="middle" font-size="12">Blocked</text>
-
-  <rect x="200" y="150" width="80" height="40" fill="#fce4ec" stroke="#c2185b" rx="5"/>
-  <text x="240" y="175" text-anchor="middle" font-size="12">Terminated</text>
-
-  <path d="M130 70 L200 70" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M280 70 L350 70" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M390 90 L390 120 L240 120 L240 90" stroke="#333" fill="none" marker-end="url(#arrowhead)"/>
-  <path d="M240 90 L240 150" stroke="#333" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![thread_lifecycle](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_lifecycle.svg)
 
 ---
 
@@ -310,29 +287,7 @@ void writer() {
 
 ## Reader-Writer Pattern
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="30" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="90" y="70" text-anchor="middle" font-size="11">Reader 1</text>
-
-  <rect x="50" y="90" width="80" height="30" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="90" y="110" text-anchor="middle" font-size="11">Reader 2</text>
-
-  <rect x="50" y="130" width="80" height="30" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="90" y="150" text-anchor="middle" font-size="11">Reader 3</text>
-
-  <rect x="200" y="90" width="80" height="30" fill="#fff3e0" stroke="#f57c00" rx="3"/>
-  <text x="240" y="110" text-anchor="middle" font-size="11">Writer</text>
-
-  <rect x="350" y="90" width="100" height="30" fill="#e8f5e8" stroke="#2e7d32" rx="3"/>
-  <text x="400" y="110" text-anchor="middle" font-size="11">Shared Data</text>
-
-  <path d="M130 65 L350 105" stroke="#0277bd" stroke-dasharray="5,5"/>
-  <path d="M130 105 L350 105" stroke="#0277bd" stroke-dasharray="5,5"/>
-  <path d="M130 145 L350 105" stroke="#0277bd" stroke-dasharray="5,5"/>
-  <path d="M280 105 L350 105" stroke="#f57c00" stroke-width="2"/>
-
-  <text x="250" y="200" text-anchor="middle" font-size="12">Multiple readers OR single writer</text>
-</svg>
+![reader_writer_pattern](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/reader_writer_pattern.svg)
 
 ---
 
@@ -669,40 +624,7 @@ int main() {
 
 ## Thread Pool Concept
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="200" fill="#f5f5f5" stroke="#333" rx="5"/>
-  <text x="125" y="40" text-anchor="middle" font-size="14" font-weight="bold">Task Queue</text>
-
-  <rect x="70" y="70" width="110" height="25" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="125" y="87" text-anchor="middle" font-size="11">Task 1</text>
-
-  <rect x="70" y="100" width="110" height="25" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="125" y="117" text-anchor="middle" font-size="11">Task 2</text>
-
-  <rect x="70" y="130" width="110" height="25" fill="#e1f5fe" stroke="#0277bd" rx="3"/>
-  <text x="125" y="147" text-anchor="middle" font-size="11">Task 3</text>
-
-  <text x="125" y="180" text-anchor="middle" font-size="12">...</text>
-
-  <rect x="250" y="70" width="80" height="40" fill="#e8f5e8" stroke="#2e7d32" rx="5"/>
-  <text x="290" y="95" text-anchor="middle" font-size="11">Thread 1</text>
-
-  <rect x="250" y="130" width="80" height="40" fill="#e8f5e8" stroke="#2e7d32" rx="5"/>
-  <text x="290" y="155" text-anchor="middle" font-size="11">Thread 2</text>
-
-  <rect x="250" y="190" width="80" height="40" fill="#e8f5e8" stroke="#2e7d32" rx="5"/>
-  <text x="290" y="215" text-anchor="middle" font-size="11">Thread N</text>
-
-  <path d="M200 90 L250 90" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M200 150 L250 150" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M200 210 L250 210" stroke="#333" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![thread_pool_concept](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_pool_concept.svg)
 
 ---
 

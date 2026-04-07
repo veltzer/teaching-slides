@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr_res" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Async Resource Management</text>
+  <rect x="20" y="30" width="170" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Semaphore</text>
+  <text x="105" y="63" text-anchor="middle" font-size="9">Limit concurrent access</text>
+  <text x="105" y="78" text-anchor="middle" font-size="9">tokio::sync::Semaphore</text>
+  <rect x="215" y="30" width="170" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">JoinSet</text>
+  <text x="300" y="63" text-anchor="middle" font-size="9">Manage task groups</text>
+  <text x="300" y="78" text-anchor="middle" font-size="9">Collect results, cancel all</text>
+  <rect x="410" y="30" width="170" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">CancellationToken</text>
+  <text x="495" y="63" text-anchor="middle" font-size="9">Graceful shutdown signal</text>
+  <text x="495" y="78" text-anchor="middle" font-size="9">tokio_util::sync</text>
+  <rect x="20" y="105" width="270" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="155" y="120" text-anchor="middle" font-size="10" font-weight="bold">tokio::sync::Mutex (async-aware)</text>
+  <text x="155" y="135" text-anchor="middle" font-size="9">Use when lock is held across .await points</text>
+  <rect x="310" y="105" width="270" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="445" y="120" text-anchor="middle" font-size="10" font-weight="bold">std::sync::Mutex (sync)</text>
+  <text x="445" y="135" text-anchor="middle" font-size="9">Use for short critical sections without .await</text>
+  <rect x="80" y="160" width="440" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="300" y="175" text-anchor="middle" font-size="10">RAII still works: Drop runs when task completes or is cancelled</text>
+  <text x="300" y="188" text-anchor="middle" font-size="9">Use timeout() to prevent tasks from running forever</text>
+</svg>

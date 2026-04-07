@@ -1,0 +1,36 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">vi Mode Transitions</text>
+  <defs>
+    <marker id="arrowmode" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="220" y="35" width="160" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="12" font-weight="bold">NORMAL mode</text>
+  <rect x="30" y="120" width="140" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="145" text-anchor="middle" font-size="12" font-weight="bold">INSERT mode</text>
+  <rect x="230" y="120" width="140" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="145" text-anchor="middle" font-size="12" font-weight="bold">VISUAL mode</text>
+  <rect x="430" y="120" width="140" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="145" text-anchor="middle" font-size="12" font-weight="bold">COMMAND mode</text>
+  <!-- Normal to Insert -->
+  <line x1="250" y1="75" x2="130" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arrowmode)"/>
+  <text x="170" y="90" font-size="10" fill="#333">i, a, o</text>
+  <!-- Insert to Normal -->
+  <line x1="130" y1="118" x2="250" y2="75" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowmode)"/>
+  <text x="215" y="108" font-size="10" fill="#999">Esc</text>
+  <!-- Normal to Visual -->
+  <line x1="300" y1="75" x2="300" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arrowmode)"/>
+  <text x="315" y="100" font-size="10" fill="#333">v, V</text>
+  <!-- Visual to Normal -->
+  <line x1="290" y1="118" x2="290" y2="78" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowmode)"/>
+  <text x="273" y="100" font-size="10" fill="#999">Esc</text>
+  <!-- Normal to Command -->
+  <line x1="350" y1="75" x2="470" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arrowmode)"/>
+  <text x="420" y="90" font-size="10" fill="#333">:</text>
+  <!-- Command to Normal -->
+  <line x1="470" y1="118" x2="350" y2="75" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowmode)"/>
+  <text x="385" y="108" font-size="10" fill="#999">Enter/Esc</text>
+  <rect x="80" y="175" width="440" height="20" fill="#ffebee" stroke="none" rx="3" opacity="0.5"/>
+  <text x="300" y="190" text-anchor="middle" font-size="10" fill="#333">Always return to Normal mode (Esc) before switching modes</text>
+</svg>

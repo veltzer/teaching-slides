@@ -17,16 +17,7 @@ Elasticsearch supports:
 
 ## Geo Data Types
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#4CAF50" rx="5"/>
-  <text x="110" y="85" text-anchor="middle" fill="white">geo_point</text>
-  <circle cx="110" cy="140" r="5" fill="#4CAF50"/>
-  <text x="110" y="170" text-anchor="middle" font-size="12">Single location</text>
-  <rect x="230" y="50" width="120" height="60" fill="#2196F3" rx="5"/>
-  <text x="290" y="85" text-anchor="middle" fill="white">geo_shape</text>
-  <polygon points="250,140 270,140 280,160 260,160" fill="#2196F3"/>
-  <text x="290" y="170" text-anchor="middle" font-size="12">Areas & lines</text>
-</svg>
+![geo_data_types](../../../../svg/courses/databases/elasticsearch-for-developers/10_geospatial/geo_data_types.svg)
 
 ---
 
@@ -587,24 +578,7 @@ Connect points in order
 
 ## Precision Trade-offs
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-weight="bold">Geohash Precision</text>
-  <rect x="50" y="50" width="40" height="40" fill="#4CAF50" rx="2"/>
-  <text x="70" y="110" text-anchor="middle" font-size="10">1</text>
-  <text x="70" y="125" text-anchor="middle" font-size="10">5000km</text>
-  <rect x="120" y="50" width="30" height="30" fill="#8BC34A" rx="2"/>
-  <text x="135" y="110" text-anchor="middle" font-size="10">3</text>
-  <text x="135" y="125" text-anchor="middle" font-size="10">150km</text>
-  <rect x="180" y="50" width="20" height="20" fill="#CDDC39" rx="2"/>
-  <text x="190" y="110" text-anchor="middle" font-size="10">5</text>
-  <text x="190" y="125" text-anchor="middle" font-size="10">5km</text>
-  <rect x="230" y="50" width="15" height="15" fill="#FFC107" rx="2"/>
-  <text x="237" y="110" text-anchor="middle" font-size="10">7</text>
-  <text x="237" y="125" text-anchor="middle" font-size="10">150m</text>
-  <rect x="270" y="50" width="10" height="10" fill="#FF9800" rx="2"/>
-  <text x="275" y="110" text-anchor="middle" font-size="10">9</text>
-  <text x="275" y="125" text-anchor="middle" font-size="10">5m</text>
-</svg>
+![precision_trade_offs](../../../../svg/courses/databases/elasticsearch-for-developers/10_geospatial/precision_trade_offs.svg)
 
 ---
 

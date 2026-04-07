@@ -6,18 +6,7 @@
 
 ## Advanced Features Overview
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">Painless</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">Pipelines</text>
-  <rect x="50" y="120" width="100" height="50" fill="#FF9800" rx="5"/>
-  <text x="100" y="150" text-anchor="middle" fill="white">Percolator</text>
-  <rect x="180" y="120" width="100" height="50" fill="#9C27B0" rx="5"/>
-  <text x="230" y="150" text-anchor="middle" fill="white">Data Streams</text>
-  <rect x="310" y="85" width="80" height="50" fill="#F44336" rx="5"/>
-  <text x="350" y="115" text-anchor="middle" fill="white">ILM</text>
-</svg>
+![advanced_features_overview](../../../../svg/courses/databases/elasticsearch-for-developers/14_advanced_features/advanced_features_overview.svg)
 
 ---
 

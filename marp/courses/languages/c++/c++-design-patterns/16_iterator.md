@@ -12,35 +12,7 @@
 
 ## Iterator Structure
 
-<svg width="550" height="220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="180" height="70" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="120" y="45" text-anchor="middle" font-size="13" font-weight="bold">Collection</text>
-  <text x="120" y="65" text-anchor="middle" font-size="11">+ begin(): Iterator</text>
-  <text x="120" y="80" text-anchor="middle" font-size="11">+ end(): Iterator</text>
-
-  <rect x="310" y="20" width="200" height="70" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="410" y="45" text-anchor="middle" font-size="13" font-weight="bold">Iterator</text>
-  <text x="410" y="65" text-anchor="middle" font-size="11">+ operator*(): T&amp;</text>
-  <text x="410" y="80" text-anchor="middle" font-size="11">+ operator++(): Iterator&amp;</text>
-
-  <line x1="210" y1="55" x2="310" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#itArr)"/>
-  <text x="260" y="47" text-anchor="middle" font-size="9">creates</text>
-
-  <rect x="100" y="150" width="160" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="180" y="175" text-anchor="middle" font-size="11">ConcreteCollection</text>
-
-  <rect x="360" y="150" width="160" height="40" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="440" y="175" text-anchor="middle" font-size="11">ConcreteIterator</text>
-
-  <line x1="180" y1="150" x2="120" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="440" y1="150" x2="410" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-
-  <defs>
-    <marker id="itArr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![iterator_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/16_iterator/iterator_structure.svg)
 
 ---
 

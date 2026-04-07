@@ -1,0 +1,56 @@
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main View class -->
+  <rect x="250" y="30" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="60" text-anchor="middle" font-size="14" font-weight="bold">View</text>
+
+  <!-- ViewGroup extending View -->
+  <rect x="250" y="130" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="160" text-anchor="middle" font-size="14" font-weight="bold">ViewGroup</text>
+
+  <!-- ViewGroup subclasses -->
+  <rect x="50" y="230" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="255" text-anchor="middle" font-size="12">LinearLayout</text>
+
+  <rect x="180" y="230" width="110" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="235" y="255" text-anchor="middle" font-size="12">ConstraintLayout</text>
+
+  <rect x="320" y="230" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="370" y="255" text-anchor="middle" font-size="12">FrameLayout</text>
+
+  <rect x="450" y="230" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="255" text-anchor="middle" font-size="11">Custom ViewGroup</text>
+
+  <!-- Direct View subclasses -->
+  <rect x="50" y="300" width="80" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="322" text-anchor="middle" font-size="12">TextView</text>
+
+  <rect x="150" y="300" width="85" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="192" y="322" text-anchor="middle" font-size="12">ImageView</text>
+
+  <rect x="255" y="300" width="80" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="295" y="322" text-anchor="middle" font-size="12">Button</text>
+
+  <rect x="355" y="300" width="95" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="402" y="322" text-anchor="middle" font-size="12">Custom View</text>
+
+  <!-- Inheritance arrows -->
+  <line x1="300" y1="80" x2="300" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- ViewGroup to subclasses -->
+  <line x1="280" y1="180" x2="100" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="290" y1="180" x2="235" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="310" y1="180" x2="370" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="320" y1="180" x2="510" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <!-- View to direct subclasses -->
+  <line x1="270" y1="80" x2="90" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="280" y1="80" x2="192" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="295" y1="80" x2="295" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+  <line x1="320" y1="80" x2="402" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
+
+  <defs>
+    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

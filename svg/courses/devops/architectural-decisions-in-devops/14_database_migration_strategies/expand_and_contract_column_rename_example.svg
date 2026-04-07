@@ -1,0 +1,29 @@
+<svg width="700" height="260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowren" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="150" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="95" y="45" text-anchor="middle" font-size="12" font-weight="bold">Original</text>
+  <text x="95" y="70" text-anchor="middle" font-size="10">users</text>
+  <text x="95" y="90" text-anchor="middle" font-size="10">| email_addr |</text>
+  <rect x="200" y="20" width="150" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="275" y="45" text-anchor="middle" font-size="12" font-weight="bold">Expanded</text>
+  <text x="275" y="70" text-anchor="middle" font-size="10">users</text>
+  <text x="275" y="90" text-anchor="middle" font-size="10">| email_addr | email |</text>
+  <rect x="380" y="20" width="150" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="455" y="45" text-anchor="middle" font-size="12" font-weight="bold">Migrated</text>
+  <text x="455" y="70" text-anchor="middle" font-size="10">users</text>
+  <text x="455" y="90" text-anchor="middle" font-size="10">| email_addr | email |</text>
+  <rect x="560" y="20" width="120" height="100" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="620" y="45" text-anchor="middle" font-size="12" font-weight="bold">Contracted</text>
+  <text x="620" y="70" text-anchor="middle" font-size="10">users</text>
+  <text x="620" y="90" text-anchor="middle" font-size="10">| email |</text>
+  <line x1="170" y1="70" x2="200" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
+  <line x1="350" y1="70" x2="380" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
+  <line x1="530" y1="70" x2="560" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
+  <text x="350" y="160" text-anchor="middle" font-size="12" font-weight="bold">Each phase is a separate deployment</text>
+  <text x="350" y="185" text-anchor="middle" font-size="11">Old app reads email_addr, new app reads email</text>
+  <text x="350" y="205" text-anchor="middle" font-size="11">Both work during the transition window</text>
+</svg>

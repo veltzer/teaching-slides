@@ -1,0 +1,25 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd2_05_dead_containers" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="50" width="140" height="70" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="75" text-anchor="middle" font-size="11" font-weight="bold">Dead Container</text>
+  <text x="90" y="95" text-anchor="middle" font-size="10" fill="#555">Exited / Failed</text>
+  <line x1="160" y1="85" x2="218" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_dead_containers)"/>
+  <text x="190" y="77" text-anchor="middle" font-size="10" fill="#666">inspect</text>
+  <rect x="220" y="40" width="160" height="90" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="62" text-anchor="middle" font-size="11" font-weight="bold">docker logs</text>
+  <text x="300" y="80" text-anchor="middle" font-size="10">docker logs &lt;id&gt;</text>
+  <text x="300" y="95" text-anchor="middle" font-size="10">--tail 100</text>
+  <text x="300" y="110" text-anchor="middle" font-size="10">--since 1h</text>
+  <line x1="380" y1="85" x2="428" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_05_dead_containers)"/>
+  <text x="404" y="77" text-anchor="middle" font-size="10" fill="#666">analyze</text>
+  <rect x="430" y="50" width="150" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="75" text-anchor="middle" font-size="11" font-weight="bold">Root Cause</text>
+  <text x="505" y="95" text-anchor="middle" font-size="10" fill="#555">Error messages</text>
+  <text x="505" y="110" text-anchor="middle" font-size="10" fill="#555">Stack traces</text>
+  <rect x="20" y="150" width="560" height="35" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="172" text-anchor="middle" font-size="10" fill="#555">Logs persist even after container stops - always check logs first</text>
+</svg>

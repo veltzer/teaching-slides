@@ -15,18 +15,7 @@
 - Goes beyond single prompt-response: maintains goals across multiple steps
 - Core loop: `Observe -> Think -> Act -> Observe ...`
 
-<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="width:80%;margin:auto;display:block;">
-  <rect x="10" y="35" width="100" height="50" rx="10" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="60" y="65" text-anchor="middle" fill="white" font-size="14">Observe</text>
-  <rect x="170" y="35" width="100" height="50" rx="10" fill="#7B68EE" stroke="#333" stroke-width="2"/>
-  <text x="220" y="65" text-anchor="middle" fill="white" font-size="14">Think</text>
-  <rect x="330" y="35" width="100" height="50" rx="10" fill="#50C878" stroke="#333" stroke-width="2"/>
-  <text x="380" y="65" text-anchor="middle" fill="white" font-size="14">Act</text>
-  <line x1="110" y1="60" x2="170" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="270" y1="60" x2="330" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M430,60 Q500,60 500,20 Q500,-10 300,-10 Q60,-10 60,35" stroke="#333" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker></defs>
-</svg>
+![what_is_an_agent](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/what_is_an_agent.svg)
 
 ---
 
@@ -94,24 +83,7 @@ async def parallel_review(code: str):
 
 - Agents can collaborate through different coordination strategies
 
-<svg viewBox="0 0 600 150" xmlns="http://www.w3.org/2000/svg" style="width:85%;margin:auto;display:block;">
-  <circle cx="100" cy="75" r="30" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="100" y="80" text-anchor="middle" fill="white" font-size="11">Agent A</text>
-  <circle cx="250" cy="75" r="30" fill="#50C878" stroke="#333" stroke-width="2"/>
-  <text x="250" y="80" text-anchor="middle" fill="white" font-size="11">Agent B</text>
-  <circle cx="400" cy="75" r="30" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="11">Agent C</text>
-  <line x1="130" y1="65" x2="220" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="220" y1="85" x2="130" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="280" y1="65" x2="370" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <line x1="370" y1="85" x2="280" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <rect x="450" y="20" width="130" height="110" rx="8" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="515" y="45" text-anchor="middle" fill="#333" font-size="11">Blackboard</text>
-  <text x="515" y="70" text-anchor="middle" fill="#666" font-size="10">shared state</text>
-  <text x="515" y="90" text-anchor="middle" fill="#666" font-size="10">all agents</text>
-  <text x="515" y="110" text-anchor="middle" fill="#666" font-size="10">read + write</text>
-  <defs><marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker></defs>
-</svg>
+![multi_agent_communication_patterns](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/multi_agent_communication_patterns.svg)
 
 - **Peer-to-peer**: agents pass messages directly via `handoffs`
 - **Shared blackboard**: agents read/write to a common state store
@@ -661,20 +633,7 @@ def test_golden(mock_read_file):
 
 ## Monitoring Agents in Production
 
-<svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg" style="width:85%;margin:auto;display:block;">
-  <rect x="10" y="40" width="120" height="50" rx="8" fill="#4A90D9" stroke="#333" stroke-width="2"/>
-  <text x="70" y="70" text-anchor="middle" fill="white" font-size="13">Agent Runs</text>
-  <rect x="170" y="40" width="120" height="50" rx="8" fill="#7B68EE" stroke="#333" stroke-width="2"/>
-  <text x="230" y="70" text-anchor="middle" fill="white" font-size="13">Log + Trace</text>
-  <rect x="330" y="40" width="120" height="50" rx="8" fill="#E8A838" stroke="#333" stroke-width="2"/>
-  <text x="390" y="70" text-anchor="middle" fill="white" font-size="13">Dashboard</text>
-  <rect x="490" y="40" width="100" height="50" rx="8" fill="#E05555" stroke="#333" stroke-width="2"/>
-  <text x="540" y="70" text-anchor="middle" fill="white" font-size="13">Alerts</text>
-  <line x1="130" y1="65" x2="170" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="290" y1="65" x2="330" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="450" y1="65" x2="490" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr2)"/>
-  <defs><marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker></defs>
-</svg>
+![monitoring_agents_in_production](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/monitoring_agents_in_production.svg)
 
 - **Log every tool call**: inputs, outputs, latency, token usage
 - **Trace conversations**: link multi-turn exchanges with a trace ID

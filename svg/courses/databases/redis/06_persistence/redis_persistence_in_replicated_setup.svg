@@ -1,0 +1,20 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="200" y="10" width="200" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="28" text-anchor="middle" font-size="11" font-weight="bold">Master (writes)</text>
+  <text x="300" y="45" text-anchor="middle" font-size="10">No persistence (optional)</text>
+  <line x1="250" y1="60" x2="110" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_05_persistence)"/>
+  <line x1="350" y1="60" x2="490" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowd10_05_persistence)"/>
+  <rect x="30" y="95" width="160" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="113" text-anchor="middle" font-size="11" font-weight="bold">Replica 1 (reads)</text>
+  <text x="110" y="130" text-anchor="middle" font-size="10">AOF enabled</text>
+  <rect x="410" y="95" width="160" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="490" y="113" text-anchor="middle" font-size="11" font-weight="bold">Replica 2 (backup)</text>
+  <text x="490" y="130" text-anchor="middle" font-size="10">RDB snapshots</text>
+  <rect x="120" y="155" width="360" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="177" text-anchor="middle" font-size="10">Offload persistence to replicas to reduce master load</text>
+  <defs>
+    <marker id="arrowd10_05_persistence" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

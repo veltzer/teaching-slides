@@ -1,0 +1,49 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr_hooks" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Timeline arrow -->
+  <line x1="30" y1="100" x2="570" y2="100" stroke="#ccc" stroke-width="2" marker-end="url(#arr_hooks)"/>
+  <text x="300" y="196" text-anchor="middle" font-size="10" fill="#999">Workflow Timeline: commit → push → receive</text>
+  <!-- Client-side label -->
+  <rect x="30" y="8" width="250" height="20" fill="#e3f2fd" stroke="none" rx="4"/>
+  <text x="155" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#1565c0">Client-side Hooks</text>
+  <!-- Client hooks -->
+  <rect x="35" y="38" width="100" height="48" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="5"/>
+  <text x="85" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565c0">pre-commit</text>
+  <text x="85" y="68" text-anchor="middle" font-size="8" fill="#555">lint, test, format</text>
+  <circle cx="85" cy="100" r="4" fill="#1565c0"/>
+  <rect x="145" y="38" width="100" height="48" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="5"/>
+  <text x="195" y="52" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565c0">prepare-</text>
+  <text x="195" y="63" text-anchor="middle" font-size="9" font-weight="bold" fill="#1565c0">commit-msg</text>
+  <text x="195" y="76" text-anchor="middle" font-size="8" fill="#555">template msg</text>
+  <circle cx="195" cy="100" r="4" fill="#1565c0"/>
+  <!-- commit-msg -->
+  <rect x="255" y="110" width="90" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" rx="5"/>
+  <text x="300" y="127" text-anchor="middle" font-size="10" font-weight="bold" fill="#7b1fa2">commit-msg</text>
+  <text x="300" y="140" text-anchor="middle" font-size="8" fill="#555">validate msg</text>
+  <circle cx="300" cy="100" r="4" fill="#7b1fa2"/>
+  <!-- post-commit -->
+  <rect x="355" y="110" width="90" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="5"/>
+  <text x="400" y="127" text-anchor="middle" font-size="10" font-weight="bold" fill="#e65100">post-commit</text>
+  <text x="400" y="140" text-anchor="middle" font-size="8" fill="#555">notify</text>
+  <circle cx="400" cy="100" r="4" fill="#e65100"/>
+  <!-- Server-side label -->
+  <rect x="450" y="8" width="140" height="20" fill="#e8f5e9" stroke="none" rx="4"/>
+  <text x="520" y="22" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Server-side Hooks</text>
+  <!-- Server hooks -->
+  <rect x="455" y="38" width="85" height="48" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="5"/>
+  <text x="497" y="55" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">pre-receive</text>
+  <text x="497" y="68" text-anchor="middle" font-size="8" fill="#555">policy check</text>
+  <circle cx="497" cy="100" r="4" fill="#2e7d32"/>
+  <rect x="455" y="110" width="85" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="5"/>
+  <text x="497" y="127" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">update</text>
+  <text x="497" y="140" text-anchor="middle" font-size="8" fill="#555">per-ref check</text>
+  <rect x="455" y="155" width="85" height="35" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="5"/>
+  <text x="497" y="172" text-anchor="middle" font-size="10" font-weight="bold" fill="#2e7d32">post-receive</text>
+  <text x="497" y="184" text-anchor="middle" font-size="8" fill="#555">CI/CD trigger</text>
+  <!-- Divider -->
+  <line x1="445" y1="5" x2="445" y2="190" stroke="#bbb" stroke-width="1" stroke-dasharray="5,3"/>
+</svg>

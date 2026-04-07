@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="200" y="5" width="200" height="35" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="300" y="28" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Borrowing Best Practices</text>
+  <line x1="250" y1="40" x2="120" y2="60" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="40" x2="480" y2="60" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="40" x2="120" y2="125" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
+  <rect x="30" y="55" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="72" text-anchor="middle" font-size="10" font-weight="bold">Prefer &amp;T params</text>
+  <text x="120" y="86" text-anchor="middle" font-size="9">Borrow instead of taking</text>
+  <text x="120" y="97" text-anchor="middle" font-size="9">ownership in functions</text>
+  <rect x="390" y="55" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="72" text-anchor="middle" font-size="10" font-weight="bold">Minimize &amp;mut scope</text>
+  <text x="480" y="86" text-anchor="middle" font-size="9">Drop mutable refs early</text>
+  <text x="480" y="97" text-anchor="middle" font-size="9">to allow other borrows</text>
+  <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">Use slice params</text>
+  <text x="120" y="151" text-anchor="middle" font-size="9">fn foo(s: &amp;str) not</text>
+  <text x="120" y="162" text-anchor="middle" font-size="9">fn foo(s: &amp;String)</text>
+  <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Avoid dangling refs</text>
+  <text x="480" y="151" text-anchor="middle" font-size="9">Never return &amp;T to a</text>
+  <text x="480" y="162" text-anchor="middle" font-size="9">local variable</text>
+  <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="191" text-anchor="middle" font-size="9">Trust the borrow checker -- it prevents data races and use-after-free</text>
+</svg>

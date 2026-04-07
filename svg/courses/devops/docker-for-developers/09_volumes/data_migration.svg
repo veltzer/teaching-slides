@@ -1,0 +1,31 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Old volume -->
+  <rect x="20" y="25" width="130" height="65" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+  <text x="85" y="48" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">Old Volume</text>
+  <text x="85" y="65" text-anchor="middle" font-size="10" fill="#555">Source data</text>
+  <text x="85" y="80" text-anchor="middle" font-size="9" fill="#888">v1_data</text>
+  <!-- Transfer container -->
+  <rect x="220" y="25" width="160" height="65" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="11" fill="#e65100" font-weight="bold">Migration Container</text>
+  <text x="300" y="65" text-anchor="middle" font-size="10" fill="#555">cp -a /source/. /dest/</text>
+  <text x="300" y="80" text-anchor="middle" font-size="9" fill="#888">mounts both volumes</text>
+  <!-- New volume -->
+  <rect x="450" y="25" width="130" height="65" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="515" y="48" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">New Volume</text>
+  <text x="515" y="65" text-anchor="middle" font-size="10" fill="#555">Migrated data</text>
+  <text x="515" y="80" text-anchor="middle" font-size="9" fill="#888">v2_data</text>
+  <!-- Arrows -->
+  <line x1="150" y1="57" x2="220" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_08_volumes)"/>
+  <text x="185" y="50" text-anchor="middle" font-size="9" fill="#555">read</text>
+  <line x1="380" y1="57" x2="450" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrowd6_08_volumes)"/>
+  <text x="415" y="50" text-anchor="middle" font-size="9" fill="#555">write</text>
+  <!-- Command -->
+  <rect x="40" y="120" width="520" height="55" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="3"/>
+  <text x="60" y="140" font-size="10" fill="#333" font-family="monospace">docker run --rm -v v1_data:/source -v v2_data:/dest</text>
+  <text x="60" y="158" font-size="10" fill="#333" font-family="monospace">  alpine sh -c "cp -a /source/. /dest/"</text>
+  <defs>
+    <marker id="arrowd6_08_volumes" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

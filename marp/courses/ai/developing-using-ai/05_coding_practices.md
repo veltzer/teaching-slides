@@ -17,23 +17,7 @@ This chapter covers:
 
 ## The AI-Enhanced Development Cycle
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <circle cx="400" cy="80" r="40" fill="#E74C3C"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="14">Plan</text>
-  <circle cx="520" cy="140" r="40" fill="#F39C12"/>
-  <text x="520" y="145" text-anchor="middle" fill="white" font-size="14">Test</text>
-  <circle cx="520" cy="260" r="40" fill="#27AE60"/>
-  <text x="520" y="265" text-anchor="middle" fill="white" font-size="14">Code</text>
-  <circle cx="400" cy="320" r="40" fill="#9B59B6"/>
-  <text x="400" y="325" text-anchor="middle" fill="white" font-size="14">Refactor</text>
-  <circle cx="280" cy="260" r="40" fill="#2ECC71"/>
-  <text x="280" y="265" text-anchor="middle" fill="white" font-size="14">Review</text>
-  <circle cx="280" cy="140" r="40" fill="#3498DB"/>
-  <text x="280" y="145" text-anchor="middle" fill="white" font-size="14">Deploy</text>
-  <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold">AI Assists</text>
-  <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Every Step</text>
-</svg>
+![the_ai_enhanced_development_cycle](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/the_ai_enhanced_development_cycle.svg)
 
 ---
 
@@ -120,22 +104,7 @@ def validate_password(password):
 
 ## Coverage Improvement with AI
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="60" fill="#2C3E50" rx="10"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="18">Code Coverage Analysis</text>
-  <rect x="100" y="130" width="600" height="30" fill="#E8E8E8" rx="5"/>
-  <rect x="100" y="130" width="420" height="30" fill="#27AE60" rx="5"/>
-  <text x="400" y="150" text-anchor="middle" fill="white" font-size="12">Current Coverage: 70%</text>
-  <rect x="100" y="180" width="250" height="50" fill="#E74C3C" rx="5"/>
-  <text x="225" y="210" text-anchor="middle" fill="white" font-size="14">Uncovered Lines</text>
-  <rect x="370" y="180" width="150" height="50" fill="#F39C12" rx="5"/>
-  <text x="445" y="210" text-anchor="middle" fill="white" font-size="14">AI Suggests</text>
-  <rect x="540" y="180" width="160" height="50" fill="#3498DB" rx="5"/>
-  <text x="620" y="210" text-anchor="middle" fill="white" font-size="14">New Tests</text>
-  <rect x="100" y="250" width="600" height="30" fill="#E8E8E8" rx="5"/>
-  <rect x="100" y="250" width="540" height="30" fill="#27AE60" rx="5"/>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">Improved Coverage: 90%</text>
-</svg>
+![coverage_improvement_with_ai](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/coverage_improvement_with_ai.svg)
 
 ---
 
@@ -250,29 +219,7 @@ const mockUserService = {
 
 ## Refactoring with AI Assistance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="100" width="300" height="200" fill="#E74C3C" rx="10"/>
-  <text x="200" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Code Smells</text>
-  <text x="200" y="170" text-anchor="middle" fill="white" font-size="12">• Long methods</text>
-  <text x="200" y="195" text-anchor="middle" fill="white" font-size="12">• Duplicate code</text>
-  <text x="200" y="220" text-anchor="middle" fill="white" font-size="12">• Large classes</text>
-  <text x="200" y="245" text-anchor="middle" fill="white" font-size="12">• Complex conditionals</text>
-  <text x="200" y="270" text-anchor="middle" fill="white" font-size="12">• Dead code</text>
-  <path d="M 360 200 L 440 200" stroke="#3498DB" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="400" y="190" text-anchor="middle" font-size="12">AI Refactors</text>
-  <rect x="450" y="100" width="300" height="200" fill="#27AE60" rx="10"/>
-  <text x="600" y="140" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Clean Code</text>
-  <text x="600" y="170" text-anchor="middle" fill="white" font-size="12">• Small functions</text>
-  <text x="600" y="195" text-anchor="middle" fill="white" font-size="12">• DRY principle</text>
-  <text x="600" y="220" text-anchor="middle" fill="white" font-size="12">• Single responsibility</text>
-  <text x="600" y="245" text-anchor="middle" fill="white" font-size="12">• Clear logic</text>
-  <text x="600" y="270" text-anchor="middle" fill="white" font-size="12">• Minimal codebase</text>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#3498DB"/>
-    </marker>
-  </defs>
-</svg>
+![refactoring_with_ai_assistance](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/refactoring_with_ai_assistance.svg)
 
 ---
 
@@ -395,37 +342,7 @@ class NotificationService {
 
 ## Legacy Code Modernization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Modernization Journey</text>
-  <rect x="100" y="70" width="150" height="60" fill="#7F8C8D" rx="5"/>
-  <text x="175" y="105" text-anchor="middle" fill="white" font-size="14">jQuery</text>
-  <path d="M 250 100 L 300 100" stroke="#3498DB" stroke-width="2" marker-end="url(#m1)"/>
-  <rect x="300" y="70" width="150" height="60" fill="#3498DB" rx="5"/>
-  <text x="375" y="105" text-anchor="middle" fill="white" font-size="14">React</text>
-  <rect x="100" y="150" width="150" height="60" fill="#7F8C8D" rx="5"/>
-  <text x="175" y="185" text-anchor="middle" fill="white" font-size="14">Callbacks</text>
-  <path d="M 250 180 L 300 180" stroke="#27AE60" stroke-width="2" marker-end="url(#m2)"/>
-  <rect x="300" y="150" width="150" height="60" fill="#27AE60" rx="5"/>
-  <text x="375" y="185" text-anchor="middle" fill="white" font-size="14">Async/Await</text>
-  <rect x="100" y="230" width="150" height="60" fill="#7F8C8D" rx="5"/>
-  <text x="175" y="265" text-anchor="middle" fill="white" font-size="14">var/function</text>
-  <path d="M 250 260 L 300 260" stroke="#E74C3C" stroke-width="2" marker-end="url(#m3)"/>
-  <rect x="300" y="230" width="150" height="60" fill="#E74C3C" rx="5"/>
-  <text x="375" y="265" text-anchor="middle" fill="white" font-size="14">const/arrow</text>
-  <rect x="500" y="150" width="200" height="60" fill="#9B59B6" rx="5"/>
-  <text x="600" y="185" text-anchor="middle" fill="white" font-size="14">Modern Codebase</text>
-  <defs>
-    <marker id="m1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#3498DB"/>
-    </marker>
-    <marker id="m2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#27AE60"/>
-    </marker>
-    <marker id="m3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#E74C3C"/>
-    </marker>
-  </defs>
-</svg>
+![legacy_code_modernization](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/legacy_code_modernization.svg)
 
 ---
 
@@ -513,18 +430,7 @@ def calculate_price(user, product, quantity):
 
 ## Code Review Enhancement
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">AI-Enhanced Review Process</text>
-  <rect x="150" y="120" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="14">🔍 Automated Security Scan</text>
-  <rect x="150" y="170" width="500" height="40" fill="#F39C12" rx="5"/>
-  <text x="400" y="195" text-anchor="middle" fill="white" font-size="14">⚡ Performance Analysis</text>
-  <rect x="150" y="220" width="500" height="40" fill="#3498DB" rx="5"/>
-  <text x="400" y="245" text-anchor="middle" fill="white" font-size="14">📝 Style Consistency Check</text>
-  <rect x="150" y="270" width="500" height="40" fill="#27AE60" rx="5"/>
-  <text x="400" y="295" text-anchor="middle" fill="white" font-size="14">✅ Best Practice Validation</text>
-</svg>
+![code_review_enhancement](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/code_review_enhancement.svg)
 
 ---
 
@@ -680,20 +586,7 @@ class UserService:
 
 ## Security Scanning
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#E74C3C" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Security Vulnerabilities Detected</text>
-  <rect x="100" y="150" width="180" height="60" fill="#C0392B" rx="5"/>
-  <text x="190" y="185" text-anchor="middle" fill="white" font-size="12">🔴 Critical (2)</text>
-  <rect x="300" y="150" width="180" height="60" fill="#E74C3C" rx="5"/>
-  <text x="390" y="185" text-anchor="middle" fill="white" font-size="12">🟠 High (3)</text>
-  <rect x="500" y="150" width="180" height="60" fill="#F39C12" rx="5"/>
-  <text x="590" y="185" text-anchor="middle" fill="white" font-size="12">🟡 Medium (5)</text>
-  <rect x="200" y="230" width="180" height="60" fill="#F4D03F" rx="5"/>
-  <text x="290" y="265" text-anchor="middle" fill="white" font-size="12">⚪ Low (8)</text>
-  <rect x="400" y="230" width="180" height="60" fill="#27AE60" rx="5"/>
-  <text x="490" y="265" text-anchor="middle" fill="white" font-size="12">ℹ️ Info (12)</text>
-</svg>
+![security_scanning](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/security_scanning.svg)
 
 ---
 
@@ -907,19 +800,7 @@ Structured API docs generation:
 
 ## Code Comments Best Practices
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="90" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Comment Quality Levels</text>
-  <rect x="150" y="120" width="500" height="50" fill="#E74C3C" rx="5"/>
-  <text x="160" y="150" fill="white" font-size="14">❌ Bad: // Increment i by 1</text>
-  <text x="160" y="165" fill="white" font-size="10">    i++; // Redundant, obvious from code</text>
-  <rect x="150" y="180" width="500" height="50" fill="#F39C12" rx="5"/>
-  <text x="160" y="210" fill="white" font-size="14">⚠️ Okay: // Process user data</text>
-  <text x="160" y="225" fill="white" font-size="10">    Somewhat helpful but vague</text>
-  <rect x="150" y="240" width="500" height="50" fill="#27AE60" rx="5"/>
-  <text x="160" y="270" fill="white" font-size="14">✅ Good: // Cache for 5 min to reduce API load</text>
-  <text x="160" y="285" fill="white" font-size="10">    Explains why, not what</text>
-</svg>
+![code_comments_best_practices](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/code_comments_best_practices.svg)
 
 ---
 
@@ -1018,31 +899,7 @@ app.listen(3000, () => {
 
 ## Debugging Workflows with AI
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="150" cy="200" r="50" fill="#E74C3C"/>
-  <text x="150" y="205" text-anchor="middle" fill="white" font-size="14">Error</text>
-  <path d="M 200 200 L 250 200" stroke="#34495E" stroke-width="2" marker-end="url(#d1)"/>
-  <circle cx="300" cy="200" r="50" fill="#F39C12"/>
-  <text x="300" y="205" text-anchor="middle" fill="white" font-size="14">Analyze</text>
-  <path d="M 350 200 L 400 200" stroke="#34495E" stroke-width="2" marker-end="url(#d2)"/>
-  <circle cx="450" cy="200" r="50" fill="#3498DB"/>
-  <text x="450" y="205" text-anchor="middle" fill="white" font-size="14">Hypothesis</text>
-  <path d="M 500 200 L 550 200" stroke="#34495E" stroke-width="2" marker-end="url(#d3)"/>
-  <circle cx="600" cy="200" r="50" fill="#27AE60"/>
-  <text x="600" y="205" text-anchor="middle" fill="white" font-size="14">Fix</text>
-  <text x="400" y="300" text-anchor="middle" font-size="16" font-weight="bold">AI Assists Each Step</text>
-  <defs>
-    <marker id="d1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="d2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-    <marker id="d3" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495E"/>
-    </marker>
-  </defs>
-</svg>
+![debugging_workflows_with_ai](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/debugging_workflows_with_ai.svg)
 
 ---
 
@@ -1206,29 +1063,7 @@ hypotheses = [
 
 AI provides multiple approaches:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Solution Options</text>
-  <rect x="50" y="70" width="200" height="120" fill="#3498DB" rx="10"/>
-  <text x="150" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Quick Fix</text>
-  <text x="150" y="120" text-anchor="middle" fill="white" font-size="12">• Restart service</text>
-  <text x="150" y="140" text-anchor="middle" fill="white" font-size="12">• Clear cache</text>
-  <text x="150" y="160" text-anchor="middle" fill="white" font-size="12">• Increase timeout</text>
-  <rect x="300" y="70" width="200" height="120" fill="#27AE60" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Proper Fix</text>
-  <text x="400" y="120" text-anchor="middle" fill="white" font-size="12">• Fix root cause</text>
-  <text x="400" y="140" text-anchor="middle" fill="white" font-size="12">• Add error handling</text>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="12">• Write tests</text>
-  <rect x="550" y="70" width="200" height="120" fill="#9B59B6" rx="10"/>
-  <text x="650" y="100" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Long-term</text>
-  <text x="650" y="120" text-anchor="middle" fill="white" font-size="12">• Refactor module</text>
-  <text x="650" y="140" text-anchor="middle" fill="white" font-size="12">• Add monitoring</text>
-  <text x="650" y="160" text-anchor="middle" fill="white" font-size="12">• Document fix</text>
-  <rect x="175" y="210" width="450" height="120" fill="#E74C3C" rx="10"/>
-  <text x="400" y="240" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Prevention Strategy</text>
-  <text x="400" y="265" text-anchor="middle" fill="white" font-size="12">• Add regression tests</text>
-  <text x="400" y="285" text-anchor="middle" fill="white" font-size="12">• Implement CI/CD checks</text>
-  <text x="400" y="305" text-anchor="middle" fill="white" font-size="12">• Set up monitoring alerts</text>
-</svg>
+![solution_exploration](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/solution_exploration.svg)
 
 ---
 
@@ -1273,27 +1108,7 @@ def test_bug_fix_validation():
 
 ## Debugging Best Practices
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498DB" stroke-width="3"/>
-  <text x="400" y="200" text-anchor="middle" font-size="16" font-weight="bold">Debug</text>
-  <text x="400" y="220" text-anchor="middle" font-size="16" font-weight="bold">Principles</text>
-  <circle cx="400" cy="80" r="8" fill="#27AE60"/>
-  <text x="400" y="60" text-anchor="middle" font-size="12">Reproduce First</text>
-  <circle cx="480" cy="120" r="8" fill="#27AE60"/>
-  <text x="550" y="120" font-size="12">Isolate Problem</text>
-  <circle cx="500" cy="200" r="8" fill="#27AE60"/>
-  <text x="570" y="200" font-size="12">One Change</text>
-  <circle cx="480" cy="280" r="8" fill="#27AE60"/>
-  <text x="550" y="280" font-size="12">Document Fix</text>
-  <circle cx="400" cy="320" r="8" fill="#27AE60"/>
-  <text x="400" y="350" text-anchor="middle" font-size="12">Test Thoroughly</text>
-  <circle cx="320" cy="280" r="8" fill="#27AE60"/>
-  <text x="250" y="280" text-anchor="end" font-size="12">Use Debugger</text>
-  <circle cx="300" cy="200" r="8" fill="#27AE60"/>
-  <text x="230" y="200" text-anchor="end" font-size="12">Check Logs</text>
-  <circle cx="320" cy="120" r="8" fill="#27AE60"/>
-  <text x="250" y="120" text-anchor="end" font-size="12">Binary Search</text>
-</svg>
+![debugging_best_practices](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/debugging_best_practices.svg)
 
 ---
 

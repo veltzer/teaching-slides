@@ -1,0 +1,43 @@
+<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-pr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Iteration 0 -->
+  <text x="300" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Iteration 0 (uniform)</text>
+  <rect x="60" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="110" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">A</text>
+  <text x="110" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
+  <line x1="160" y1="52" x2="200" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
+  <rect x="210" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="260" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">B</text>
+  <text x="260" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
+  <line x1="310" y1="52" x2="350" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
+  <rect x="360" y="30" width="100" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="410" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">C</text>
+  <text x="410" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#0277bd">0.33</text>
+  <!-- Iteration 1 -->
+  <text x="300" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Iteration 1 (redistribute)</text>
+  <text x="300" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">PR(v) = (1-d)/N + d * SUM(PR(u)/out(u)), d=0.85</text>
+  <rect x="60" y="132" width="100" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="110" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">A</text>
+  <text x="110" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ef6c00">0.21</text>
+  <line x1="160" y1="154" x2="200" y2="154" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
+  <rect x="210" y="132" width="100" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="260" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">B</text>
+  <text x="260" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ef6c00">0.33</text>
+  <line x1="310" y1="154" x2="350" y2="154" stroke="#333" stroke-width="2" marker-end="url(#arrow-pr)"/>
+  <rect x="360" y="132" width="100" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="410" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">C</text>
+  <text x="410" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#2e7d32">0.46</text>
+  <!-- After convergence -->
+  <rect x="60" y="200" width="480" height="55" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.5"/>
+  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">After convergence</text>
+  <text x="300" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Vertices with more incoming links from important vertices get higher scores</text>
+  <!-- Applications -->
+  <rect x="60" y="270" width="480" height="70" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="1.5"/>
+  <text x="300" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Applications</text>
+  <text x="180" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Influence detection</text>
+  <text x="300" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Citation ranking</text>
+  <text x="420" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Web page ranking</text>
+  <text x="300" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Recommendation systems</text>
+</svg>

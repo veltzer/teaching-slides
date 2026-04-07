@@ -9,28 +9,7 @@
 1. Human-readable text format
 1. Compiled to binary for bootloader/kernel
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-<circle cx="200" cy="50" r="30" fill="#4169E1" stroke="black"/>
-<text x="200" y="55" text-anchor="middle" fill="white">Root</text>
-<circle cx="100" cy="130" r="25" fill="#32CD32" stroke="black"/>
-<text x="100" y="135" text-anchor="middle">SoC</text>
-<circle cx="200" cy="130" r="25" fill="#32CD32" stroke="black"/>
-<text x="200" y="135" text-anchor="middle">Memory</text>
-<circle cx="300" cy="130" r="25" fill="#32CD32" stroke="black"/>
-<text x="300" y="135" text-anchor="middle">Chosen</text>
-<circle cx="50" cy="200" r="20" fill="#FFD700" stroke="black"/>
-<text x="50" y="205" text-anchor="middle">UART</text>
-<circle cx="100" cy="200" r="20" fill="#FFD700" stroke="black"/>
-<text x="100" y="205" text-anchor="middle">I2C</text>
-<circle cx="150" cy="200" r="20" fill="#FFD700" stroke="black"/>
-<text x="150" y="205" text-anchor="middle">SPI</text>
-<line x1="200" y1="80" x2="100" y2="105" stroke="black" stroke-width="2"/>
-<line x1="200" y1="80" x2="200" y2="105" stroke="black" stroke-width="2"/>
-<line x1="200" y1="80" x2="300" y2="105" stroke="black" stroke-width="2"/>
-<line x1="100" y1="155" x2="50" y2="180" stroke="black" stroke-width="2"/>
-<line x1="100" y1="155" x2="100" y2="180" stroke="black" stroke-width="2"/>
-<line x1="100" y1="155" x2="150" y2="180" stroke="black" stroke-width="2"/>
-</svg>
+![what_is_device_tree](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/what_is_device_tree.svg)
 
 ---
 
@@ -191,23 +170,7 @@ parent {
 
 ## Interrupt Specification
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-<rect x="150" y="20" width="100" height="40" fill="#FF6347" stroke="black"/>
-<text x="200" y="45" text-anchor="middle">Device</text>
-<rect x="150" y="240" width="100" height="40" fill="#4169E1" stroke="black"/>
-<text x="200" y="265" text-anchor="middle" fill="white">GIC</text>
-<line x1="200" y1="60" x2="200" y2="240" stroke="black" stroke-width="2" marker-end="url(#arrowh)"/>
-<text x="220" y="140" text-anchor="start">IRQ 42</text>
-<rect x="20" y="120" width="100" height="30" fill="#FFE4B5" stroke="black"/>
-<text x="70" y="140" text-anchor="middle" font-size="12">interrupts</text>
-<rect x="280" y="120" width="100" height="30" fill="#FFE4B5" stroke="black"/>
-<text x="330" y="140" text-anchor="middle" font-size="12">interrupt-parent</text>
-<defs>
-<marker id="arrowh" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![interrupt_specification](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/interrupt_specification.svg)
 
 ---
 
@@ -541,22 +504,7 @@ required:
 
 ## Device Tree Overlays
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-<rect x="50" y="180" width="300" height="60" fill="#4169E1" stroke="black"/>
-<text x="200" y="215" text-anchor="middle" fill="white">Base Device Tree</text>
-<rect x="100" y="100" width="90" height="60" fill="#32CD32" stroke="black"/>
-<text x="145" y="135" text-anchor="middle">Overlay 1</text>
-<rect x="210" y="100" width="90" height="60" fill="#FFD700" stroke="black"/>
-<text x="255" y="135" text-anchor="middle">Overlay 2</text>
-<line x1="145" y1="160" x2="145" y2="180" stroke="black" stroke-width="2" marker-end="url(#arr2)"/>
-<line x1="255" y1="160" x2="255" y2="180" stroke="black" stroke-width="2" marker-end="url(#arr2)"/>
-<text x="200" y="270" text-anchor="middle">Runtime Configuration</text>
-<defs>
-<marker id="arr2" markerWidth="10" markerHeight="10" refX="0" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="black"/>
-</marker>
-</defs>
-</svg>
+![device_tree_overlays](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/device_tree_overlays.svg)
 
 ---
 

@@ -21,21 +21,7 @@ HSET user:123 visits 10 name "John"  # Atomic - all fields are set or none
 
 Single atomic commands aren't always enough:
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_04_transactions)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd0_04_transactions)"/>
-  <defs>
-    <marker id="arrowd0_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![need_for_transactions](../../../../svg/courses/databases/redis/05_transactions/need_for_transactions.svg)
 
 ---
 
@@ -50,28 +36,7 @@ Redis transactions allow executing multiple commands as a single atomic operatio
 
 \* With some caveats we'll discuss
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="30" width="120" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="57" text-anchor="middle" font-size="11" font-weight="bold">MULTI</text>
-  <rect x="30" y="85" width="120" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="90" y="107" text-anchor="middle" font-size="10">CMD 1 (queued)</text>
-  <rect x="30" y="125" width="120" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="90" y="147" text-anchor="middle" font-size="10">CMD 2 (queued)</text>
-  <line x1="160" y1="100" x2="220" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_transactions)"/>
-  <rect x="230" y="60" width="140" height="80" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="85" text-anchor="middle" font-size="11" font-weight="bold">EXEC</text>
-  <text x="300" y="105" text-anchor="middle" font-size="10">Execute all</text>
-  <text x="300" y="120" text-anchor="middle" font-size="10">atomically</text>
-  <line x1="380" y1="100" x2="440" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_04_transactions)"/>
-  <rect x="450" y="70" width="120" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="510" y="95" text-anchor="middle" font-size="11" font-weight="bold">Results</text>
-  <text x="510" y="115" text-anchor="middle" font-size="10">[OK, OK, ...]</text>
-  <defs>
-    <marker id="arrowd1_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![what_are_redis_transactions](../../../../svg/courses/databases/redis/05_transactions/what_are_redis_transactions.svg)
 
 ---
 
@@ -97,21 +62,7 @@ DISCARD
 
 ## Redis Transaction Example
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_transactions)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd2_04_transactions)"/>
-  <defs>
-    <marker id="arrowd2_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![redis_transaction_example](../../../../svg/courses/databases/redis/05_transactions/redis_transaction_example.svg)
 
 ---
 
@@ -134,21 +85,7 @@ Unlike traditional RDBMS transactions:
 
 ## Error Handling in Transactions
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_04_transactions)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd3_04_transactions)"/>
-  <defs>
-    <marker id="arrowd3_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![error_handling_in_transactions](../../../../svg/courses/databases/redis/05_transactions/error_handling_in_transactions.svg)
 
 ---
 
@@ -171,21 +108,7 @@ UNWATCH               # Cancel watching (also happens after EXEC/DISCARD)
 
 ## WATCH Example
 
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
-  <line x1="150" y1="50" x2="150" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="450" y1="50" x2="450" y2="200" stroke="#333" stroke-width="2"/>
-  <rect x="100" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2"/>
-  <rect x="400" y="30" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="12">Actor A</text>
-  <text x="450" y="55" text-anchor="middle" font-size="12">Actor B</text>
-  <line x1="150" y1="100" x2="450" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_04_transactions)"/>
-  <line x1="450" y1="150" x2="150" y2="150" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowd4_04_transactions)"/>
-  <defs>
-    <marker id="arrowd4_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![watch_example](../../../../svg/courses/databases/redis/05_transactions/watch_example.svg)
 
 ---
 
@@ -473,25 +396,7 @@ Scripts execute with high privileges:
 
 Scripts work differently in distributed Redis:
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="25" width="160" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="50" text-anchor="middle" font-size="11" font-weight="bold">Master Node</text>
-  <text x="110" y="70" text-anchor="middle" font-size="10">Executes script</text>
-  <line x1="200" y1="55" x2="260" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_04_transactions)"/>
-  <text x="230" y="48" text-anchor="middle" font-size="9">replicates</text>
-  <rect x="270" y="15" width="130" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="335" y="40" text-anchor="middle" font-size="10">Replica 1</text>
-  <rect x="270" y="65" width="130" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="335" y="90" text-anchor="middle" font-size="10">Replica 2</text>
-  <rect x="30" y="120" width="560" height="60" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="310" y="142" text-anchor="middle" font-size="11" font-weight="bold">Deterministic Scripts Required</text>
-  <text x="310" y="162" text-anchor="middle" font-size="10">Same script must produce same results on all nodes (no random, no TIME)</text>
-  <defs>
-    <marker id="arrowd5_04_transactions" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![script_replication_and_clustering](../../../../svg/courses/databases/redis/05_transactions/script_replication_and_clustering.svg)
 
 - Scripts must be deterministic for replication
 - In cluster mode, all keys must be in same slot
@@ -521,22 +426,7 @@ Scripts work differently in distributed Redis:
 
 ## Lua Script vs. MULTI/EXEC
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="170" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="42" text-anchor="middle" font-size="11" font-weight="bold">MULTI/EXEC</text>
-  <text x="105" y="58" text-anchor="middle" font-size="10">Simple queuing</text>
-  <text x="105" y="73" text-anchor="middle" font-size="10">No conditionals</text>
-  <text x="105" y="88" text-anchor="middle" font-size="10">Multiple round-trips</text>
-  <text x="300" y="60" text-anchor="middle" font-size="12" font-weight="bold">vs</text>
-  <rect x="410" y="20" width="170" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="495" y="42" text-anchor="middle" font-size="11" font-weight="bold">Lua Script</text>
-  <text x="495" y="58" text-anchor="middle" font-size="10">Complex logic</text>
-  <text x="495" y="73" text-anchor="middle" font-size="10">Conditionals/loops</text>
-  <text x="495" y="88" text-anchor="middle" font-size="10">Single round-trip</text>
-  <rect x="120" y="120" width="360" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="142" text-anchor="middle" font-size="11" font-weight="bold">Both are Atomic</text>
-  <text x="300" y="162" text-anchor="middle" font-size="10">No other client can interrupt execution</text>
-</svg>
+![lua_script_vs_multi_exec](../../../../svg/courses/databases/redis/05_transactions/lua_script_vs_multi_exec.svg)
 
 ---
 

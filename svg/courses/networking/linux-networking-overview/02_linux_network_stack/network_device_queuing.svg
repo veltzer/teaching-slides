@@ -1,0 +1,33 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_01_linux_network_stack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">Network Device Queuing</text>
+  <rect x="20" y="30" width="110" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="75" y="48" text-anchor="middle" font-size="10">Transport Layer</text>
+  <text x="75" y="62" text-anchor="middle" font-size="10">(TCP/UDP)</text>
+  <rect x="160" y="30" width="120" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="48" text-anchor="middle" font-size="10">Queueing Disc</text>
+  <text x="220" y="62" text-anchor="middle" font-size="10">(qdisc)</text>
+  <rect x="310" y="30" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="365" y="48" text-anchor="middle" font-size="10">dev_queue_xmit</text>
+  <text x="365" y="62" text-anchor="middle" font-size="10">TX queue</text>
+  <rect x="450" y="30" width="110" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="505" y="48" text-anchor="middle" font-size="10">NIC Driver</text>
+  <text x="505" y="62" text-anchor="middle" font-size="10">hard_start_xmit</text>
+  <line x1="130" y1="52" x2="160" y2="52" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_01_linux_network_stack)"/>
+  <line x1="280" y1="52" x2="310" y2="52" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_01_linux_network_stack)"/>
+  <line x1="420" y1="52" x2="450" y2="52" stroke="#333" stroke-width="1" marker-end="url(#arrowd6_01_linux_network_stack)"/>
+  <rect x="100" y="100" width="100" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="150" y="122" text-anchor="middle" font-size="10">pfifo_fast</text>
+  <rect x="220" y="100" width="80" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="260" y="122" text-anchor="middle" font-size="10">HTB</text>
+  <rect x="320" y="100" width="80" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="360" y="122" text-anchor="middle" font-size="10">SFQ</text>
+  <rect x="420" y="100" width="80" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="460" y="122" text-anchor="middle" font-size="10">TBF</text>
+  <text x="300" y="155" text-anchor="middle" font-size="11" fill="#666">Common Queue Disciplines</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">tc qdisc add dev eth0 root [discipline] [params]</text>
+</svg>

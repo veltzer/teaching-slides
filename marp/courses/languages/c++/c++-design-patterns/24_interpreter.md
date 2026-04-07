@@ -25,25 +25,7 @@ double evaluate(const std::string& expr) {
 
 ## Interpreter Structure
 
-<svg width="550" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="180" y="10" width="190" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="275" y="35" text-anchor="middle" font-size="13" font-weight="bold">AbstractExpression</text>
-  <text x="275" y="55" text-anchor="middle" font-size="11" font-style="italic">+ interpret(context)</text>
-
-  <rect x="30" y="130" width="160" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="110" y="150" text-anchor="middle" font-size="11">TerminalExpression</text>
-  <text x="110" y="168" text-anchor="middle" font-size="10">+ interpret(context)</text>
-
-  <rect x="250" y="130" width="180" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="340" y="150" text-anchor="middle" font-size="11">NonTerminalExpression</text>
-  <text x="340" y="168" text-anchor="middle" font-size="10">+ interpret(context)</text>
-
-  <line x1="110" y1="130" x2="230" y2="70" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="340" y1="130" x2="310" y2="70" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-
-  <path d="M 340 180 C 340 220, 450 220, 450 55" stroke="#333" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
-  <text x="420" y="215" font-size="9">contains children</text>
-</svg>
+![interpreter_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/24_interpreter/interpreter_structure.svg)
 
 ---
 

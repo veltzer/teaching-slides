@@ -393,34 +393,7 @@ public:
 Multiple inheritance can lead to ambiguity:
 
 ```xml
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Base class -->
-  <rect x="175" y="10" width="50" height="30" fill="lightblue" stroke="black"/>
-  <text x="200" y="30" text-anchor="middle" font-size="12">Base</text>
-
-  <!-- Middle classes -->
-  <rect x="100" y="80" width="50" height="30" fill="lightgreen" stroke="black"/>
-  <text x="125" y="100" text-anchor="middle" font-size="12">Left</text>
-
-  <rect x="250" y="80" width="50" height="30" fill="lightgreen" stroke="black"/>
-  <text x="275" y="100" text-anchor="middle" font-size="12">Right</text>
-
-  <!-- Derived class -->
-  <rect x="175" y="150" width="50" height="30" fill="lightcoral" stroke="black"/>
-  <text x="200" y="170" text-anchor="middle" font-size="12">Derived</text>
-
-  <!-- Inheritance arrows -->
-  <line x1="200" y1="40" x2="125" y2="80" stroke="black" marker-end="url(#arrowhead)"/>
-  <line x1="200" y1="40" x2="275" y2="80" stroke="black" marker-end="url(#arrowhead)"/>
-  <line x1="125" y1="110" x2="200" y2="150" stroke="black" marker-end="url(#arrowhead)"/>
-  <line x1="275" y1="110" x2="200" y2="150" stroke="black" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![the_diamond_problem](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/10_delegation/the_diamond_problem.svg)
 ```
 
 ```cpp

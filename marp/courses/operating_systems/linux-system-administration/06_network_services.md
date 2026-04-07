@@ -705,18 +705,7 @@ ip netns exec red ping 10.0.0.2
 ---
 ## Network Namespaces Diagram
 
-<svg width="620" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="20" width="240" height="120" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" stroke-dasharray="6,3"/>
-  <text x="140" y="42" text-anchor="middle" font-size="12" font-weight="bold">Namespace: red</text>
-  <rect x="50" y="55" width="180" height="35" fill="#fff" stroke="#333" stroke-width="1" rx="4"/>
-  <text x="140" y="77" text-anchor="middle" font-size="11">veth-red  10.0.0.1/24</text>
-  <rect x="360" y="20" width="240" height="120" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="8" stroke-dasharray="6,3"/>
-  <text x="480" y="42" text-anchor="middle" font-size="12" font-weight="bold">Namespace: blue</text>
-  <rect x="390" y="55" width="180" height="35" fill="#fff" stroke="#333" stroke-width="1" rx="4"/>
-  <text x="480" y="77" text-anchor="middle" font-size="11">veth-blue  10.0.0.2/24</text>
-  <line x1="230" y1="72" x2="390" y2="72" stroke="#333" stroke-width="3"/>
-  <text x="310" y="65" text-anchor="middle" font-size="10">veth pair</text>
-</svg>
+![network_namespaces_diagram](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/network_namespaces_diagram.svg)
 
 ```bash
 # Run a process inside a namespace
@@ -764,24 +753,7 @@ network:
 
 `tc` (traffic control) manages bandwidth and latency on interfaces.
 
-<svg width="600" height="90" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="25" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="50" text-anchor="middle" font-size="11">Packets</text>
-  <rect x="150" y="25" width="120" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="210" y="50" text-anchor="middle" font-size="11">Qdisc (queue)</text>
-  <rect x="310" y="25" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="360" y="50" text-anchor="middle" font-size="11">Classes</text>
-  <rect x="450" y="25" width="100" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="500" y="50" text-anchor="middle" font-size="11">Interface</text>
-  <line x1="110" y1="45" x2="150" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr05b)"/>
-  <line x1="270" y1="45" x2="310" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr05b)"/>
-  <line x1="410" y1="45" x2="450" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arr05b)"/>
-  <defs>
-    <marker id="arr05b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![traffic_shaping_with_tc](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/traffic_shaping_with_tc.svg)
 
 ```bash
 # Limit bandwidth to 1Mbit on eth0
@@ -972,24 +944,7 @@ networkctl status eth0
 
 `PXE` (Preboot Execution Environment) allows machines to boot from the network using DHCP and TFTP.
 
-<svg width="620" height="100" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="30" width="100" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="57" text-anchor="middle" font-size="11">PXE Client</text>
-  <rect x="160" y="30" width="110" height="45" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="215" y="57" text-anchor="middle" font-size="11">DHCP Server</text>
-  <rect x="320" y="30" width="110" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="375" y="57" text-anchor="middle" font-size="11">TFTP Server</text>
-  <rect x="480" y="30" width="120" height="45" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="57" text-anchor="middle" font-size="11">HTTP/NFS Image</text>
-  <line x1="110" y1="52" x2="160" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arr05c)"/>
-  <line x1="270" y1="52" x2="320" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arr05c)"/>
-  <line x1="430" y1="52" x2="480" y2="52" stroke="#333" stroke-width="2" marker-end="url(#arr05c)"/>
-  <defs>
-    <marker id="arr05c" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![network_boot_pxe](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/network_boot_pxe.svg)
 
 ```bash
 # Install TFTP server

@@ -4,26 +4,7 @@
 
 ## Layer Management Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="350" width="500" height="60" fill="#ffe6e6" stroke="#cc0000" stroke-width="2" rx="5"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">BSP Layer (meta-bsp)</text>
-
-  <rect x="200" y="270" width="400" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="2" rx="5"/>
-  <text x="400" y="305" text-anchor="middle" font-size="14" font-weight="bold">Distribution Layer (meta-distro)</text>
-
-  <rect x="250" y="190" width="300" height="60" fill="#e6e6ff" stroke="#0000cc" stroke-width="2" rx="5"/>
-  <text x="400" y="225" text-anchor="middle" font-size="14" font-weight="bold">Application Layer (meta-app)</text>
-
-  <rect x="300" y="110" width="200" height="60" fill="#ffffe6" stroke="#cccc00" stroke-width="2" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" font-size="14" font-weight="bold">OE-Core (meta)</text>
-
-  <text x="50" y="385" text-anchor="middle" font-size="11">Priority: 6</text>
-  <text x="50" y="305" text-anchor="middle" font-size="11">Priority: 7</text>
-  <text x="50" y="225" text-anchor="middle" font-size="11">Priority: 8</text>
-  <text x="50" y="145" text-anchor="middle" font-size="11">Priority: 5</text>
-</svg>
+![layer_management_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_management_overview.svg)
 
 ---
 
@@ -72,33 +53,7 @@ LAYERSERIES_COMPAT_custom-layer = "kirkstone langdale"
 
 ## Layer Priority System
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="125" text-anchor="middle" font-size="12">Priority: 5</text>
-  <text x="175" y="145" text-anchor="middle" font-size="11">OE-Core</text>
-
-  <rect x="325" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="125" text-anchor="middle" font-size="12">Priority: 6</text>
-  <text x="400" y="145" text-anchor="middle" font-size="11">BSP Layer</text>
-
-  <rect x="550" y="100" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="625" y="125" text-anchor="middle" font-size="12">Priority: 8</text>
-  <text x="625" y="145" text-anchor="middle" font-size="11">App Layer</text>
-
-  <rect x="300" y="250" width="200" height="80" fill="#ffffcc" stroke="#000" stroke-width="3"/>
-  <text x="400" y="280" text-anchor="middle" font-size="14" font-weight="bold">Final Recipe</text>
-  <text x="400" y="300" text-anchor="middle" font-size="11">Higher priority wins</text>
-
-  <path d="M 175 160 L 350 250" stroke="#333" stroke-width="2" marker-end="url(#arrow1)"/>
-  <path d="M 400 160 L 400 250" stroke="#00cc00" stroke-width="2" marker-end="url(#arrow1)"/>
-  <path d="M 625 160 L 450 250" stroke="#0000cc" stroke-width="3" marker-end="url(#arrow1)"/>
-
-  <defs>
-    <marker id="arrow1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![layer_priority_system](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_priority_system.svg)
 
 ---
 
@@ -176,42 +131,7 @@ bitbake-layers layerindex-show-depends meta-qt5
 
 ## Recipe Organization
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="200" y="85" text-anchor="middle" font-size="12">recipes-apps</text>
-
-  <rect x="100" y="150" width="200" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="200" y="185" text-anchor="middle" font-size="12">recipes-core</text>
-
-  <rect x="100" y="250" width="200" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="200" y="285" text-anchor="middle" font-size="12">recipes-kernel</text>
-
-  <rect x="100" y="350" width="200" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="200" y="385" text-anchor="middle" font-size="12">recipes-bsp</text>
-
-  <rect x="400" y="50" width="300" height="60" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
-  <text x="550" y="85" text-anchor="middle" font-size="11">Application packages</text>
-
-  <rect x="400" y="150" width="300" height="60" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
-  <text x="550" y="185" text-anchor="middle" font-size="11">System components</text>
-
-  <rect x="400" y="250" width="300" height="60" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
-  <text x="550" y="285" text-anchor="middle" font-size="11">Kernel and modules</text>
-
-  <rect x="400" y="350" width="300" height="60" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
-  <text x="550" y="385" text-anchor="middle" font-size="11">Bootloaders, firmware</text>
-
-  <path d="M 300 80 L 400 80" stroke="#333" stroke-width="1" marker-end="url(#arrow2)"/>
-  <path d="M 300 180 L 400 180" stroke="#333" stroke-width="1" marker-end="url(#arrow2)"/>
-  <path d="M 300 280 L 400 280" stroke="#333" stroke-width="1" marker-end="url(#arrow2)"/>
-  <path d="M 300 380 L 400 380" stroke="#333" stroke-width="1" marker-end="url(#arrow2)"/>
-
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![recipe_organization](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/recipe_organization.svg)
 
 ---
 
@@ -344,30 +264,7 @@ SRC_URI += "file://custom-config.txt"
 
 ## Patching Workflow
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="135" text-anchor="middle" font-size="12">do_fetch</text>
-
-  <rect x="300" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="375" y="135" text-anchor="middle" font-size="12">do_unpack</text>
-
-  <rect x="500" y="100" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="575" y="135" text-anchor="middle" font-size="12">do_patch</text>
-
-  <rect x="100" y="250" width="550" height="80" fill="#ffffcc" stroke="#000" stroke-width="2"/>
-  <text x="375" y="285" text-anchor="middle" font-size="14" font-weight="bold">Patched Source Code</text>
-  <text x="375" y="305" text-anchor="middle" font-size="11">Ready for compilation</text>
-
-  <path d="M 250 130 L 300 130" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <path d="M 450 130 L 500 130" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <path d="M 575 160 L 575 250" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![patching_workflow](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/patching_workflow.svg)
 
 ---
 
@@ -519,41 +416,7 @@ do_compile_append() {
 
 ## Task Dependencies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="160" y="80" text-anchor="middle" font-size="11">do_fetch</text>
-
-  <rect x="340" y="50" width="120" height="50" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="11">do_unpack</text>
-
-  <rect x="580" y="50" width="120" height="50" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="640" y="80" text-anchor="middle" font-size="11">do_patch</text>
-
-  <rect x="100" y="150" width="120" height="50" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="160" y="180" text-anchor="middle" font-size="11">do_configure</text>
-
-  <rect x="340" y="150" width="120" height="50" fill="#eeccff" stroke="#000" stroke-width="2"/>
-  <text x="400" y="180" text-anchor="middle" font-size="11">do_compile</text>
-
-  <rect x="580" y="150" width="120" height="50" fill="#ccffff" stroke="#000" stroke-width="2"/>
-  <text x="640" y="180" text-anchor="middle" font-size="11">do_install</text>
-
-  <rect x="340" y="250" width="120" height="50" fill="#ffe6e6" stroke="#000" stroke-width="2"/>
-  <text x="400" y="280" text-anchor="middle" font-size="11">do_package</text>
-
-  <path d="M 220 75 L 340 75" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <path d="M 460 75 L 580 75" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <path d="M 640 100 L 160 150" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <path d="M 220 175 L 340 175" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <path d="M 460 175 L 580 175" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <path d="M 640 200 L 400 250" stroke="#333" stroke-width="1.5" marker-end="url(#arr4)"/>
-
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![task_dependencies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/task_dependencies.svg)
 
 ---
 

@@ -281,28 +281,7 @@ graph TD
 ---
 ## Token Bucket Diagram
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="130" y="50" width="140" height="150" fill="none" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="200" y="40" text-anchor="middle" font-size="12" font-weight="bold">Token Bucket</text>
-  <circle cx="160" cy="80" r="10" fill="#4CAF50"/>
-  <circle cx="200" cy="80" r="10" fill="#4CAF50"/>
-  <circle cx="240" cy="80" r="10" fill="#4CAF50"/>
-  <circle cx="160" cy="110" r="10" fill="#4CAF50"/>
-  <circle cx="200" cy="110" r="10" fill="#4CAF50"/>
-  <circle cx="160" cy="140" r="10" fill="#ccc" stroke="#999"/>
-  <circle cx="200" cy="140" r="10" fill="#ccc" stroke="#999"/>
-  <circle cx="240" cy="140" r="10" fill="#ccc" stroke="#999"/>
-  <text x="200" y="175" text-anchor="middle" font-size="10">5 tokens / 3 empty</text>
-  <line x1="50" y1="80" x2="130" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
-  <text x="90" y="70" text-anchor="middle" font-size="10">Refill</text>
-  <line x1="270" y1="80" x2="350" y2="80" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
-  <text x="310" y="70" text-anchor="middle" font-size="10">Request</text>
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![token_bucket_diagram](../../../../svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/token_bucket_diagram.svg)
 
 ---
 ## Rate Limiting Response
@@ -425,14 +404,7 @@ graph LR
 ---
 ## Resiliency Testing Pyramid
 
-<svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="200,20 50,260 350,260" fill="none" stroke="#333" stroke-width="2"/>
-  <line x1="100" y1="160" x2="300" y2="160" stroke="#333" stroke-width="1"/>
-  <line x1="135" y1="100" x2="265" y2="100" stroke="#333" stroke-width="1"/>
-  <text x="200" y="230" text-anchor="middle" font-size="12">Unit Tests with Mocks</text>
-  <text x="200" y="140" text-anchor="middle" font-size="12">Integration Tests</text>
-  <text x="200" y="80" text-anchor="middle" font-size="12">Chaos Experiments</text>
-</svg>
+![resiliency_testing_pyramid](../../../../svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_testing_pyramid.svg)
 
 ---
 ## Service Mesh for Resiliency

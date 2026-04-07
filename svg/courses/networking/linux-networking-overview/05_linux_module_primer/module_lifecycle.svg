@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="70" width="100" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="60" y="90" text-anchor="middle" font-size="11" font-weight="bold">insmod /</text>
+  <text x="60" y="105" text-anchor="middle" font-size="11" font-weight="bold">modprobe</text>
+  <text x="60" y="120" text-anchor="middle" font-size="10" fill="#666">Load .ko</text>
+  <rect x="140" y="70" width="100" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="190" y="90" text-anchor="middle" font-size="11" font-weight="bold">module_init()</text>
+  <text x="190" y="108" text-anchor="middle" font-size="10" fill="#666">Alloc resources</text>
+  <rect x="270" y="70" width="100" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="320" y="90" text-anchor="middle" font-size="11" font-weight="bold">Running</text>
+  <text x="320" y="108" text-anchor="middle" font-size="10" fill="#666">Active in kernel</text>
+  <rect x="400" y="70" width="100" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="450" y="90" text-anchor="middle" font-size="11" font-weight="bold">module_exit()</text>
+  <text x="450" y="108" text-anchor="middle" font-size="10" fill="#666">Free resources</text>
+  <rect x="530" y="70" width="60" height="55" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="560" y="90" text-anchor="middle" font-size="11" font-weight="bold">rmmod</text>
+  <text x="560" y="108" text-anchor="middle" font-size="10" fill="#666">Unload</text>
+  <line x1="110" y1="97" x2="140" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
+  <line x1="240" y1="97" x2="270" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
+  <line x1="370" y1="97" x2="400" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
+  <line x1="500" y1="97" x2="530" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_04_linux_module_primer)"/>
+  <text x="300" y="25" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Kernel Module Lifecycle</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">lsmod shows loaded modules | modinfo shows module metadata</text>
+  <defs>
+    <marker id="arrowd2_04_linux_module_primer" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

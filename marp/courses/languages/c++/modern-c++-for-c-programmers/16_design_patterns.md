@@ -92,36 +92,7 @@ public:
 
 ## Pattern Categories
 
-<svg width="550" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="125" y="75" text-anchor="middle" font-size="14">Creational</text>
-  <text x="125" y="100" text-anchor="middle" font-size="11">Object creation</text>
-  <text x="125" y="120" text-anchor="middle" font-size="10">• Factory</text>
-  <text x="125" y="135" text-anchor="middle" font-size="10">• Abstract Factory</text>
-  <text x="125" y="150" text-anchor="middle" font-size="10">• Builder</text>
-  <text x="125" y="165" text-anchor="middle" font-size="10">• Prototype</text>
-  <text x="125" y="180" text-anchor="middle" font-size="10">• Singleton</text>
-
-  <rect x="220" y="50" width="150" height="150" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="295" y="75" text-anchor="middle" font-size="14">Structural</text>
-  <text x="295" y="100" text-anchor="middle" font-size="11">Object composition</text>
-  <text x="295" y="120" text-anchor="middle" font-size="10">• Adapter</text>
-  <text x="295" y="135" text-anchor="middle" font-size="10">• Bridge</text>
-  <text x="295" y="150" text-anchor="middle" font-size="10">• Composite</text>
-  <text x="295" y="165" text-anchor="middle" font-size="10">• Decorator</text>
-  <text x="295" y="180" text-anchor="middle" font-size="10">• Facade</text>
-  <text x="295" y="195" text-anchor="middle" font-size="10">• Proxy</text>
-
-  <rect x="390" y="50" width="150" height="150" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="465" y="75" text-anchor="middle" font-size="14">Behavioral</text>
-  <text x="465" y="100" text-anchor="middle" font-size="11">Object interaction</text>
-  <text x="465" y="120" text-anchor="middle" font-size="10">• Observer</text>
-  <text x="465" y="135" text-anchor="middle" font-size="10">• Strategy</text>
-  <text x="465" y="150" text-anchor="middle" font-size="10">• Command</text>
-  <text x="465" y="165" text-anchor="middle" font-size="10">• Template Method</text>
-  <text x="465" y="180" text-anchor="middle" font-size="10">• Visitor</text>
-  <text x="465" y="195" text-anchor="middle" font-size="10">• State</text>
-</svg>
+![pattern_categories](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/pattern_categories.svg)
 
 Different patterns solve different types of problems
 
@@ -1096,23 +1067,7 @@ void Widget::configure(const std::string& config) { pImpl->configure(config); }
 
 ## Bridge vs Cheshire Cat
 
-<svg width="550" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="200" height="140" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="150" y="55" text-anchor="middle" font-size="14">Bridge Pattern</text>
-  <text x="150" y="80" text-anchor="middle" font-size="11">Multiple implementations</text>
-  <text x="150" y="100" text-anchor="middle" font-size="11">Runtime selection</text>
-  <text x="150" y="120" text-anchor="middle" font-size="11">Varies independently</text>
-  <text x="150" y="140" text-anchor="middle" font-size="11">Platform abstraction</text>
-  <text x="150" y="160" text-anchor="middle" font-size="11">Strategy-like</text>
-
-  <rect x="300" y="30" width="200" height="140" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="400" y="55" text-anchor="middle" font-size="14">Cheshire Cat</text>
-  <text x="400" y="80" text-anchor="middle" font-size="11">Single implementation</text>
-  <text x="400" y="100" text-anchor="middle" font-size="11">Compile-time hiding</text>
-  <text x="400" y="120" text-anchor="middle" font-size="11">Hide complexity</text>
-  <text x="400" y="140" text-anchor="middle" font-size="11">Compilation firewall</text>
-  <text x="400" y="160" text-anchor="middle" font-size="11">Performance-focused</text>
-</svg>
+![bridge_vs_cheshire_cat](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/bridge_vs_cheshire_cat.svg)
 
 Choose based on whether you need runtime flexibility or compilation benefits
 
@@ -2102,40 +2057,7 @@ public:
 
 ## When to Use Each Pattern
 
-<svg width="550" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="450" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="275" y="55" text-anchor="middle" font-size="14">Pattern Selection Guide</text>
-
-  <rect x="50" y="90" width="120" height="80" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="110" y="115" text-anchor="middle" font-size="11">Creational</text>
-  <text x="110" y="135" text-anchor="middle" font-size="9">Complex object creation</text>
-  <text x="110" y="150" text-anchor="middle" font-size="9">Hide implementation</text>
-  <text x="110" y="165" text-anchor="middle" font-size="9">Configurable creation</text>
-
-  <rect x="190" y="90" width="120" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="250" y="115" text-anchor="middle" font-size="11">Structural</text>
-  <text x="250" y="135" text-anchor="middle" font-size="9">Object composition</text>
-  <text x="250" y="150" text-anchor="middle" font-size="9">Interface adaptation</text>
-  <text x="250" y="165" text-anchor="middle" font-size="9">Hierarchies</text>
-
-  <rect x="330" y="90" width="120" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="390" y="115" text-anchor="middle" font-size="11">Behavioral</text>
-  <text x="390" y="135" text-anchor="middle" font-size="9">Object interaction</text>
-  <text x="390" y="150" text-anchor="middle" font-size="9">Algorithm variation</text>
-  <text x="390" y="165" text-anchor="middle" font-size="9">Communication</text>
-
-  <rect x="50" y="190" width="150" height="60" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="125" y="215" text-anchor="middle" font-size="11">Avoid Over-engineering</text>
-  <text x="125" y="235" text-anchor="middle" font-size="9">Simple solutions first</text>
-
-  <rect x="220" y="190" width="150" height="60" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="295" y="215" text-anchor="middle" font-size="11">Know When to Apply</text>
-  <text x="295" y="235" text-anchor="middle" font-size="9">Solve actual problems</text>
-
-  <rect x="390" y="190" width="150" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="465" y="215" text-anchor="middle" font-size="11">Modern C++ Features</text>
-  <text x="465" y="235" text-anchor="middle" font-size="9">Smart pointers, lambdas</text>
-</svg>
+![when_to_use_each_pattern](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/when_to_use_each_pattern.svg)
 
 Choose patterns based on actual problems, not theoretical perfection
 
@@ -2225,32 +2147,7 @@ public:
 
 ## Proxy Pattern Variations
 
-<svg width="550" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="110" y="75" text-anchor="middle" font-size="12">Virtual Proxy</text>
-  <text x="110" y="95" text-anchor="middle" font-size="10">Lazy loading</text>
-  <text x="110" y="110" text-anchor="middle" font-size="10">Expensive objects</text>
-
-  <rect x="190" y="50" width="120" height="80" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="250" y="75" text-anchor="middle" font-size="12">Protection Proxy</text>
-  <text x="250" y="95" text-anchor="middle" font-size="10">Access control</text>
-  <text x="250" y="110" text-anchor="middle" font-size="10">Security checks</text>
-
-  <rect x="330" y="50" width="120" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="390" y="75" text-anchor="middle" font-size="12">Remote Proxy</text>
-  <text x="390" y="95" text-anchor="middle" font-size="10">Network objects</text>
-  <text x="390" y="110" text-anchor="middle" font-size="10">Distributed systems</text>
-
-  <rect x="120" y="150" width="120" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="180" y="175" text-anchor="middle" font-size="12">Smart Proxy</text>
-  <text x="180" y="195" text-anchor="middle" font-size="10">Reference counting</text>
-  <text x="180" y="210" text-anchor="middle" font-size="10">Thread safety</text>
-
-  <rect x="260" y="150" width="120" height="80" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="320" y="175" text-anchor="middle" font-size="12">Cache Proxy</text>
-  <text x="320" y="195" text-anchor="middle" font-size="10">Result caching</text>
-  <text x="320" y="210" text-anchor="middle" font-size="10">Performance</text>
-</svg>
+![proxy_pattern_variations](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/proxy_pattern_variations.svg)
 
 Different proxy types serve different purposes
 

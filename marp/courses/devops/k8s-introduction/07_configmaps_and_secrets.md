@@ -14,23 +14,7 @@
 
 ## Why External Configuration?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Configuration Management</text>
-  <rect x="100" y="80" width="200" height="100" fill="#ea4335" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Hardcoded Config</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="11">❌ Rebuild for changes</text>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="11">❌ Environment specific</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="11">❌ Security risks</text>
-  <rect x="350" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="450" y="110" text-anchor="middle" fill="white" font-weight="bold">External Config</text>
-  <text x="450" y="135" text-anchor="middle" fill="white" font-size="11">✓ No rebuild needed</text>
-  <text x="450" y="155" text-anchor="middle" fill="white" font-size="11">✓ Environment agnostic</text>
-  <text x="450" y="175" text-anchor="middle" fill="white" font-size="11">✓ Secure secrets</text>
-  <rect x="100" y="220" width="600" height="80" fill="#fff3e0" rx="5"/>
-  <text x="400" y="250" text-anchor="middle" font-weight="bold">Kubernetes Solution</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">ConfigMaps for non-sensitive data | Secrets for sensitive data</text>
-</svg>
+![why_external_configuration](../../../../svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/why_external_configuration.svg)
 
 ---
 
@@ -181,28 +165,7 @@ volumes:
 
 ## ConfigMap Usage Patterns
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">ConfigMap Usage Patterns</text>
-  <rect x="100" y="80" width="200" height="100" fill="#4285f4" rx="5"/>
-  <text x="200" y="110" text-anchor="middle" fill="white" font-weight="bold">Environment Variables</text>
-  <text x="200" y="135" text-anchor="middle" fill="white" font-size="11">Simple key-value</text>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="11">DATABASE_URL=...</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="11">LOG_LEVEL=debug</text>
-  <rect x="320" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="420" y="110" text-anchor="middle" fill="white" font-weight="bold">Configuration Files</text>
-  <text x="420" y="135" text-anchor="middle" fill="white" font-size="11">Complex configs</text>
-  <text x="420" y="155" text-anchor="middle" fill="white" font-size="11">nginx.conf</text>
-  <text x="420" y="175" text-anchor="middle" fill="white" font-size="11">application.yaml</text>
-  <rect x="540" y="80" width="200" height="100" fill="#fbbc04" rx="5"/>
-  <text x="640" y="110" text-anchor="middle" font-weight="bold">Command Arguments</text>
-  <text x="640" y="135" text-anchor="middle" font-size="11">Container args</text>
-  <text x="640" y="155" text-anchor="middle" font-size="11">--config=/etc/app</text>
-  <text x="640" y="175" text-anchor="middle" font-size="11">--verbose=true</text>
-  <rect x="200" y="220" width="400" height="80" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="250" text-anchor="middle" font-weight="bold">Update Behavior</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">Env vars: Require pod restart | Volume mounts: Auto-update (eventually)</text>
-</svg>
+![configmap_usage_patterns](../../../../svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_usage_patterns.svg)
 
 ---
 
@@ -381,28 +344,7 @@ spec:
 
 ## Secret vs ConfigMap
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">ConfigMap vs Secret</text>
-  <rect x="100" y="80" width="300" height="200" fill="#4285f4" rx="5"/>
-  <text x="250" y="110" text-anchor="middle" fill="white" font-weight="bold">ConfigMap</text>
-  <text x="250" y="135" text-anchor="middle" fill="white" font-size="11">✓ Non-sensitive data</text>
-  <text x="250" y="155" text-anchor="middle" fill="white" font-size="11">✓ Plain text storage</text>
-  <text x="250" y="175" text-anchor="middle" fill="white" font-size="11">✓ Application settings</text>
-  <text x="250" y="195" text-anchor="middle" fill="white" font-size="11">✓ Feature flags</text>
-  <text x="250" y="215" text-anchor="middle" fill="white" font-size="11">✓ Config files</text>
-  <text x="250" y="235" text-anchor="middle" fill="white" font-size="11">✓ No size limit concerns</text>
-  <text x="250" y="255" text-anchor="middle" fill="white" font-size="11">Example: app.properties</text>
-  <rect x="420" y="80" width="300" height="200" fill="#ea4335" rx="5"/>
-  <text x="570" y="110" text-anchor="middle" fill="white" font-weight="bold">Secret</text>
-  <text x="570" y="135" text-anchor="middle" fill="white" font-size="11">✓ Sensitive data</text>
-  <text x="570" y="155" text-anchor="middle" fill="white" font-size="11">✓ Base64 encoded</text>
-  <text x="570" y="175" text-anchor="middle" fill="white" font-size="11">✓ Passwords, tokens</text>
-  <text x="570" y="195" text-anchor="middle" fill="white" font-size="11">✓ TLS certificates</text>
-  <text x="570" y="215" text-anchor="middle" fill="white" font-size="11">✓ SSH keys</text>
-  <text x="570" y="235" text-anchor="middle" fill="white" font-size="11">✓ 1MB size limit</text>
-  <text x="570" y="255" text-anchor="middle" fill="white" font-size="11">Example: db-password</text>
-</svg>
+![secret_vs_configmap](../../../../svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/secret_vs_configmap.svg)
 
 ---
 
@@ -441,24 +383,7 @@ immutable: true  # Cannot be updated
 
 ## ConfigMap/Secret Updates
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Update Propagation</text>
-  <rect x="100" y="60" width="150" height="60" fill="#4285f4" rx="5"/>
-  <text x="175" y="95" text-anchor="middle" fill="white">ConfigMap Updated</text>
-  <rect x="100" y="150" width="250" height="60" fill="#34a853" rx="5"/>
-  <text x="225" y="175" text-anchor="middle" fill="white">Volume Mount</text>
-  <text x="225" y="195" text-anchor="middle" fill="white" font-size="10">Updates in ~1 minute</text>
-  <rect x="100" y="240" width="250" height="60" fill="#ea4335" rx="5"/>
-  <text x="225" y="265" text-anchor="middle" fill="white">Environment Variable</text>
-  <text x="225" y="285" text-anchor="middle" fill="white" font-size="10">Requires pod restart</text>
-  <rect x="400" y="150" width="300" height="120" fill="#fff3e0" rx="5"/>
-  <text x="550" y="180" text-anchor="middle" font-weight="bold">Update Strategy</text>
-  <text x="550" y="205" text-anchor="middle" font-size="11">1. Create new ConfigMap version</text>
-  <text x="550" y="225" text-anchor="middle" font-size="11">2. Update deployment to use new version</text>
-  <text x="550" y="245" text-anchor="middle" font-size="11">3. Rolling update applies changes</text>
-  <path d="M 250 90 L 345 175" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 250 90 L 345 265" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-</svg>
+![configmap_secret_updates](../../../../svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_secret_updates.svg)
 
 ---
 
@@ -513,30 +438,7 @@ resources:
 
 ## External Secret Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">External Secret Solutions</text>
-  <rect x="100" y="80" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">HashiCorp Vault</text>
-  <text x="175" y="135" text-anchor="middle" fill="white" font-size="11">Dynamic secrets</text>
-  <text x="175" y="150" text-anchor="middle" fill="white" font-size="11">Rotation</text>
-  <rect x="270" y="80" width="150" height="80" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">AWS Secrets</text>
-  <text x="345" y="135" text-anchor="middle" fill="white" font-size="11">Manager</text>
-  <text x="345" y="150" text-anchor="middle" fill="white" font-size="11">IAM integration</text>
-  <rect x="440" y="80" width="150" height="80" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">Azure Key Vault</text>
-  <text x="515" y="135" text-anchor="middle" font-size="11">Managed service</text>
-  <text x="515" y="150" text-anchor="middle" font-size="11">HSM support</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">Sealed Secrets</text>
-  <text x="680" y="135" text-anchor="middle" fill="white" font-size="11">GitOps friendly</text>
-  <text x="680" y="150" text-anchor="middle" fill="white" font-size="11">Encrypted</text>
-  <rect x="200" y="200" width="400" height="100" fill="#e8f5e9" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" font-weight="bold">Integration Methods</text>
-  <text x="400" y="255" text-anchor="middle" font-size="12">• Sidecar injector pattern</text>
-  <text x="400" y="275" text-anchor="middle" font-size="12">• CSI driver for secrets</text>
-</svg>
+![external_secret_management](../../../../svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/external_secret_management.svg)
 
 ---
 

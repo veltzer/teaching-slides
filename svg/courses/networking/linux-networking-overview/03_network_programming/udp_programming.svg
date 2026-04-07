@@ -1,0 +1,31 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd1_02_network_programming" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">UDP Socket API Flow</text>
+  <rect x="30" y="30" width="130" height="155" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="95" y="48" text-anchor="middle" font-size="11" font-weight="bold">Server</text>
+  <rect x="45" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="70" text-anchor="middle" font-size="10">socket(DGRAM)</text>
+  <rect x="45" y="82" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="97" text-anchor="middle" font-size="10">bind()</text>
+  <rect x="45" y="115" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="130" text-anchor="middle" font-size="10">recvfrom()</text>
+  <rect x="45" y="145" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="95" y="160" text-anchor="middle" font-size="10">sendto()</text>
+  <rect x="440" y="30" width="130" height="155" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="505" y="48" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <rect x="455" y="55" width="100" height="22" fill="#fff" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="70" text-anchor="middle" font-size="10">socket(DGRAM)</text>
+  <rect x="455" y="115" width="100" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="130" text-anchor="middle" font-size="10">sendto()</text>
+  <rect x="455" y="145" width="100" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="2"/>
+  <text x="505" y="160" text-anchor="middle" font-size="10">recvfrom()</text>
+  <line x1="455" y1="126" x2="145" y2="126" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_02_network_programming)"/>
+  <text x="300" y="122" text-anchor="middle" font-size="9" fill="#666">datagram (no connection)</text>
+  <line x1="145" y1="156" x2="455" y2="156" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_02_network_programming)"/>
+  <text x="300" y="152" text-anchor="middle" font-size="9" fill="#666">reply datagram</text>
+  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#999">No connect/listen/accept needed</text>
+</svg>

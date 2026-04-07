@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 Generate an HTML SPA for browsing courses built by rsconstruct's pdfunite processor.
@@ -8,7 +8,7 @@ counts slides per course, and generates a self-contained index.html with
 filtering, sorting, folder navigation, and PDF download links.
 
 Usage:
-    python3 scripts/build_courses_index.py [--source-dir DIR] [--output-dir DIR] [--source-ext EXT] [--out FILE]
+    ./scripts/build_courses_index.py [--source-dir DIR] [--output-dir DIR] [--source-ext EXT] [--out FILE]
 
 Defaults match rsconstruct's pdfunite processor defaults:
     --source-dir  marp/courses

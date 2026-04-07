@@ -15,25 +15,7 @@
 
 ## Linux Namespaces
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Process Isolation with Namespaces</text>
-
-  <rect x="50" y="50" width="150" height="100" fill="lightblue" stroke="black" stroke-width="2"/>
-  <text x="125" y="70" font-size="12" font-weight="bold" text-anchor="middle">Namespace A</text>
-  <circle cx="100" cy="100" r="15" fill="yellow" stroke="black"/>
-  <text x="100" y="105" font-size="8" text-anchor="middle">PID 1</text>
-  <circle cx="150" cy="100" r="15" fill="yellow" stroke="black"/>
-  <text x="150" y="105" font-size="8" text-anchor="middle">PID 2</text>
-
-  <rect x="300" y="50" width="150" height="100" fill="lightgreen" stroke="black" stroke-width="2"/>
-  <text x="375" y="70" font-size="12" font-weight="bold" text-anchor="middle">Namespace B</text>
-  <circle cx="350" cy="100" r="15" fill="orange" stroke="black"/>
-  <text x="350" y="105" font-size="8" text-anchor="middle">PID 1</text>
-  <circle cx="400" cy="100" r="15" fill="orange" stroke="black"/>
-  <text x="400" y="105" font-size="8" text-anchor="middle">PID 2</text>
-
-  <text x="250" y="180" font-size="10" text-anchor="middle">Same PID numbers, different processes</text>
-</svg>
+![linux_namespaces](../../../../svg/courses/operating_systems/linux-systems-programming/22_framework_issues/linux_namespaces.svg)
 
 ---
 
@@ -423,25 +405,7 @@ int setup_gid_mapping(pid_t pid, int inside_gid, int outside_gid, int length) {
 
 ## Cgroups Overview
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Cgroups Resource Control</text>
-
-  <rect x="50" y="50" width="400" height="30" fill="lightblue" stroke="black"/>
-  <text x="250" y="70" font-size="12" text-anchor="middle">System Resources (CPU, Memory, I/O)</text>
-
-  <rect x="70" y="100" width="100" height="40" fill="lightgreen" stroke="black"/>
-  <text x="120" y="125" font-size="10" text-anchor="middle">Cgroup A<br/>30% CPU</text>
-
-  <rect x="200" y="100" width="100" height="40" fill="yellow" stroke="black"/>
-  <text x="250" y="125" font-size="10" text-anchor="middle">Cgroup B<br/>50% CPU</text>
-
-  <rect x="330" y="100" width="100" height="40" fill="lightcoral" stroke="black"/>
-  <text x="380" y="125" font-size="10" text-anchor="middle">Cgroup C<br/>20% CPU</text>
-
-  <path d="M 120 80 L 120 100" stroke="black" stroke-width="2"/>
-  <path d="M 250 80 L 250 100" stroke="black" stroke-width="2"/>
-  <path d="M 380 80 L 380 100" stroke="black" stroke-width="2"/>
-</svg>
+![cgroups_overview](../../../../svg/courses/operating_systems/linux-systems-programming/22_framework_issues/cgroups_overview.svg)
 
 ---
 

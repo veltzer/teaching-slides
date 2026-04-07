@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" style="height: 300px; display: block; margin: auto;">
+  <rect width="800" height="300" fill="#f8f9fa"/>
+
+  <!-- Bronze Section -->
+  <g transform="translate(50, 50)">
+    <circle cx="100" cy="100" r="80" fill="#cd7f32" opacity="0.8"/>
+    <text x="100" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">BRONZE</text>
+    <text x="100" y="115" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Raw Data</text>
+    <text x="100" y="210" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Ingestion</text>
+    <text x="100" y="225" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Historical</text>
+    <text x="100" y="240" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Unvalidated</text>
+  </g>
+
+  <!-- Silver Section -->
+  <g transform="translate(300, 50)">
+    <circle cx="100" cy="100" r="80" fill="#c0c0c0" opacity="0.8"/>
+    <text x="100" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">SILVER</text>
+    <text x="100" y="115" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Refined Data</text>
+    <text x="100" y="210" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Cleaned</text>
+    <text x="100" y="225" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Deduplicated</text>
+    <text x="100" y="240" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Validated</text>
+  </g>
+
+  <!-- Gold Section -->
+  <g transform="translate(550, 50)">
+    <circle cx="100" cy="100" r="80" fill="#ffd700" opacity="0.8"/>
+    <text x="100" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">GOLD</text>
+    <text x="100" y="115" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Business Data</text>
+    <text x="100" y="210" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Aggregated</text>
+    <text x="100" y="225" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Features</text>
+    <text x="100" y="240" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">• Analytics</text>
+  </g>
+
+  <!-- Flow Arrows -->
+  <defs>
+    <marker id="arrowBSG" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <path d="M 230 150 L 370 150" stroke="#333" stroke-width="3" marker-end="url(#arrowBSG)"/>
+  <path d="M 480 150 L 620 150" stroke="#333" stroke-width="3" marker-end="url(#arrowBSG)"/>
+
+  <!-- Flow Labels -->
+  <text x="300" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">Clean & Validate</text>
+  <text x="550" y="145" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#666">Aggregate</text>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">Delta Lake Medallion Architecture</text>
+</svg>

@@ -22,84 +22,13 @@
 
 ## Packer vs Runtime Provisioning
 
-<svg xmlns="http://www.w3.org/2000/svg" width="650" height="390" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="10" y="10" width="290" height="365" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="155" y="32" text-anchor="middle" font-size="13" fill="#bf360c" font-weight="bold">Without Packer (runtime)</text>
-  <rect x="30" y="55" width="230" height="48" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="145" y="83" text-anchor="middle" font-size="12" fill="#222">Launch Instance</text>
-  <line x1="145" y1="103" x2="145" y2="121" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="121" width="230" height="48" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="145" y="149" text-anchor="middle" font-size="12" fill="#222">Install Software</text>
-  <text x="145" y="164" text-anchor="middle" font-size="10" fill="#bf360c">10–20 min</text>
-  <line x1="145" y1="169" x2="145" y2="187" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="187" width="230" height="48" rx="4" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="145" y="215" text-anchor="middle" font-size="12" fill="#222">Configure App</text>
-  <line x1="145" y1="235" x2="145" y2="253" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="253" width="230" height="48" rx="4" fill="#ffccbc" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="145" y="281" text-anchor="middle" font-size="12" fill="#222">Ready (slow start)</text>
-  <rect x="345" y="10" width="295" height="365" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="492" y="32" text-anchor="middle" font-size="13" fill="#1b5e20" font-weight="bold">With Packer (pre-baked)</text>
-  <rect x="368" y="55" width="248" height="48" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="492" y="81" text-anchor="middle" font-size="12" fill="#222">Build Image</text>
-  <text x="492" y="97" text-anchor="middle" font-size="10" fill="#1b5e20">(once)</text>
-  <line x1="492" y1="103" x2="492" y2="121" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="368" y="121" width="248" height="48" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="492" y="147" text-anchor="middle" font-size="12" fill="#222">Store Image</text>
-  <line x1="492" y1="169" x2="492" y2="187" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="368" y="187" width="248" height="48" rx="4" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="492" y="213" text-anchor="middle" font-size="12" fill="#222">Launch Instance</text>
-  <text x="492" y="229" text-anchor="middle" font-size="10" fill="#1b5e20">(fast, < 1 min)</text>
-</svg>
+![packer_vs_runtime_provisioning](../../../../svg/courses/devops/terraform/14_packer_introduction/packer_vs_runtime_provisioning.svg)
 
 ---
 
 ## Packer Architecture
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="320" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="200" y="10" width="215" height="65" rx="4" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5"/>
-  <text x="307" y="37" text-anchor="middle" font-size="14" fill="#222" font-weight="bold">Packer Config</text>
-  <text x="307" y="56" text-anchor="middle" font-size="12" fill="#555">(.pkr.hcl)</text>
-  <line x1="307" y1="75" x2="307" y2="100" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="210" y="100" width="195" height="60" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="307" y="128" text-anchor="middle" font-size="14" fill="#222" font-weight="bold">Packer Core</text>
-  <line x1="307" y1="160" x2="307" y2="185" stroke="#555" stroke-width="1.5"/>
-  <line x1="110" y1="185" x2="505" y2="185" stroke="#555" stroke-width="1.5"/>
-  <line x1="110" y1="185" x2="110" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="307" y1="185" x2="307" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="505" y1="185" x2="505" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="40" y="210" width="140" height="60" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="110" y="235" text-anchor="middle" font-size="13" fill="#222">Builder</text>
-  <text x="110" y="253" text-anchor="middle" font-size="13" fill="#222">AWS</text>
-  <line x1="110" y1="270" x2="110" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="40" y="290" width="140" height="30" rx="4" fill="#e8f5e9" stroke="#388e3c" stroke-width="1.5"/>
-  <text x="110" y="310" text-anchor="middle" font-size="12" fill="#222">AMI</text>
-  <rect x="235" y="210" width="140" height="60" rx="4" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
-  <text x="305" y="235" text-anchor="middle" font-size="13" fill="#222">Builder</text>
-  <text x="305" y="253" text-anchor="middle" font-size="13" fill="#222">Azure</text>
-  <line x1="305" y1="270" x2="305" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="235" y="290" width="140" height="30" rx="4" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5"/>
-  <text x="305" y="310" text-anchor="middle" font-size="12" fill="#222">VHD</text>
-  <rect x="430" y="210" width="140" height="60" rx="4" fill="#fce4ec" stroke="#c2185b" stroke-width="1.5"/>
-  <text x="500" y="235" text-anchor="middle" font-size="13" fill="#222">Builder</text>
-  <text x="500" y="253" text-anchor="middle" font-size="13" fill="#222">Docker</text>
-  <line x1="500" y1="270" x2="500" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="430" y="290" width="140" height="30" rx="4" fill="#fce4ec" stroke="#c2185b" stroke-width="1.5"/>
-  <text x="500" y="310" text-anchor="middle" font-size="12" fill="#222">Image</text>
-</svg>
+![packer_architecture](../../../../svg/courses/devops/terraform/14_packer_introduction/packer_architecture.svg)
 
 ---
 
@@ -226,43 +155,7 @@ packer build -var "region=us-west-2" template.pkr.hcl
 
 ## Packer Build Process
 
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="440" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="70" y="15" width="400" height="46" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="41" text-anchor="middle" font-size="13" fill="#222" font-weight="bold">packer build</text>
-  <line x1="270" y1="61" x2="270" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="73" width="400" height="56" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="95" text-anchor="middle" font-size="13" fill="#222">1. Launch temporary instance</text>
-  <text x="270" y="113" text-anchor="middle" font-size="11" fill="#555">   (from source AMI)</text>
-  <line x1="270" y1="129" x2="270" y2="141" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="141" width="400" height="46" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="167" text-anchor="middle" font-size="13" fill="#222">2. Connect via SSH/WinRM</text>
-  <line x1="270" y1="187" x2="270" y2="199" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="199" width="400" height="56" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="221" text-anchor="middle" font-size="13" fill="#222">3. Run provisioners</text>
-  <text x="270" y="239" text-anchor="middle" font-size="11" fill="#555">   (install software)</text>
-  <line x1="270" y1="255" x2="270" y2="267" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="267" width="400" height="46" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="293" text-anchor="middle" font-size="13" fill="#222">4. Stop instance</text>
-  <line x1="270" y1="313" x2="270" y2="325" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="325" width="400" height="56" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="347" text-anchor="middle" font-size="13" fill="#222">5. Create image</text>
-  <text x="270" y="365" text-anchor="middle" font-size="11" fill="#555">   (AMI snapshot)</text>
-  <line x1="270" y1="381" x2="270" y2="393" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="393" width="400" height="56" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="415" text-anchor="middle" font-size="13" fill="#222">6. Terminate temporary</text>
-  <text x="270" y="433" text-anchor="middle" font-size="11" fill="#555">   instance</text>
-  <line x1="270" y1="449" x2="270" y2="461" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="70" y="461" width="400" height="56" rx="4" fill="#c8e6c9" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="483" text-anchor="middle" font-size="13" fill="#222">7. Output artifact</text>
-  <text x="270" y="501" text-anchor="middle" font-size="11" fill="#555">   (AMI ID)</text>
-</svg>
+![packer_build_process](../../../../svg/courses/devops/terraform/14_packer_introduction/packer_build_process.svg)
 
 ---
 
@@ -652,39 +545,7 @@ resource "aws_instance" "web" {
 
 ## CI/CD Pipeline with Packer and Terraform
 
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="430" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="60" y="15" width="400" height="46" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="41" text-anchor="middle" font-size="13" fill="#222">1. Code Change</text>
-  <line x1="260" y1="61" x2="260" y2="73" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="73" width="400" height="46" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="99" text-anchor="middle" font-size="13" fill="#222">2. Build Application</text>
-  <line x1="260" y1="119" x2="260" y2="131" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="131" width="400" height="56" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="153" text-anchor="middle" font-size="13" fill="#222">3. Packer Build</text>
-  <text x="260" y="171" text-anchor="middle" font-size="11" fill="#555">   (create AMI with app)</text>
-  <line x1="260" y1="187" x2="260" y2="199" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="199" width="400" height="56" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="221" text-anchor="middle" font-size="13" fill="#222">4. Terraform Plan</text>
-  <text x="260" y="239" text-anchor="middle" font-size="11" fill="#555">   (reference new AMI)</text>
-  <line x1="260" y1="255" x2="260" y2="267" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="267" width="400" height="56" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="289" text-anchor="middle" font-size="13" fill="#222">5. Terraform Apply</text>
-  <text x="260" y="307" text-anchor="middle" font-size="11" fill="#555">   (deploy new instances)</text>
-  <line x1="260" y1="323" x2="260" y2="335" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="335" width="400" height="46" rx="4" fill="#ede7f6" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="361" text-anchor="middle" font-size="13" fill="#222">6. Health Check / Smoke Test</text>
-  <line x1="260" y1="381" x2="260" y2="393" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60" y="393" width="400" height="56" rx="4" fill="#c8e6c9" stroke="#333" stroke-width="1.5"/>
-  <text x="260" y="415" text-anchor="middle" font-size="13" fill="#222">7. DNS/LB Switch to</text>
-  <text x="260" y="433" text-anchor="middle" font-size="11" fill="#555">   New Instances</text>
-</svg>
+![ci_cd_pipeline_with_packer_and_terraform](../../../../svg/courses/devops/terraform/14_packer_introduction/ci_cd_pipeline_with_packer_and_terraform.svg)
 
 ---
 

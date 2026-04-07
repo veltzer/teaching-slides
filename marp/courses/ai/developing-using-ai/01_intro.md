@@ -43,24 +43,7 @@ AI addresses each of these pain points directly
 
 ## The Paradigm Shift
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="300" height="100" fill="#e74c3c" rx="10"/>
-  <text x="200" y="105" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Traditional Coding</text>
-  <rect x="450" y="50" width="300" height="100" fill="#27ae60" rx="10"/>
-  <text x="600" y="105" text-anchor="middle" fill="white" font-size="20" font-weight="bold">AI-Assisted Coding</text>
-  <path d="M 350 100 L 450 100" stroke="#34495e" stroke-width="3" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#34495e"/>
-    </marker>
-  </defs>
-  <text x="50" y="200" font-size="16" fill="#2c3e50">• Manual everything</text>
-  <text x="50" y="230" font-size="16" fill="#2c3e50">• Slow iteration</text>
-  <text x="50" y="260" font-size="16" fill="#2c3e50">• High cognitive load</text>
-  <text x="450" y="200" font-size="16" fill="#2c3e50">• AI suggestions</text>
-  <text x="450" y="230" font-size="16" fill="#2c3e50">• Rapid prototyping</text>
-  <text x="450" y="260" font-size="16" fill="#2c3e50">• Focus on logic</text>
-</svg>
+![the_paradigm_shift](../../../../svg/courses/ai/developing-using-ai/01_intro/the_paradigm_shift.svg)
 
 ---
 
@@ -145,20 +128,7 @@ Your personal tutor available 24/7
 
 ## AI Tools Ecosystem Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="250" r="150" fill="#3498db" opacity="0.2"/>
-  <circle cx="400" cy="250" r="100" fill="#2980b9" opacity="0.3"/>
-  <circle cx="400" cy="250" r="50" fill="#1f618d" opacity="0.4"/>
-  <text x="400" y="255" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Core AI</text>
-  <rect x="100" y="50" width="150" height="60" fill="#e74c3c" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" fill="white" font-size="14">Code Assistants</text>
-  <rect x="550" y="50" width="150" height="60" fill="#27ae60" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" fill="white" font-size="14">Chat Interfaces</text>
-  <rect x="100" y="390" width="150" height="60" fill="#f39c12" rx="5"/>
-  <text x="175" y="425" text-anchor="middle" fill="white" font-size="14">Specialized Tools</text>
-  <rect x="550" y="390" width="150" height="60" fill="#9b59b6" rx="5"/>
-  <text x="625" y="425" text-anchor="middle" fill="white" font-size="14">IDE Integrations</text>
-</svg>
+![ai_tools_ecosystem_overview](../../../../svg/courses/ai/developing-using-ai/01_intro/ai_tools_ecosystem_overview.svg)
 
 ---
 
@@ -210,18 +180,7 @@ Choose based on your security and performance needs
 
 ## Integration Levels
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="200" height="80" fill="#3498db" rx="10"/>
-  <text x="150" y="95" text-anchor="middle" fill="white" font-size="18">IDE Plugin</text>
-  <rect x="300" y="50" width="200" height="80" fill="#2ecc71" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">Standalone App</text>
-  <rect x="550" y="50" width="200" height="80" fill="#e74c3c" rx="10"/>
-  <text x="650" y="95" text-anchor="middle" fill="white" font-size="18">API Integration</text>
-  <rect x="175" y="180" width="200" height="80" fill="#f39c12" rx="10"/>
-  <text x="275" y="225" text-anchor="middle" fill="white" font-size="18">Browser Extension</text>
-  <rect x="425" y="180" width="200" height="80" fill="#9b59b6" rx="10"/>
-  <text x="525" y="225" text-anchor="middle" fill="white" font-size="18">CLI Tool</text>
-</svg>
+![integration_levels](../../../../svg/courses/ai/developing-using-ai/01_intro/integration_levels.svg)
 
 ---
 
@@ -287,24 +246,7 @@ AI handles the mundane, you handle the creative:
 
 ## Real-World Impact Metrics
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <line x1="100" y1="350" x2="700" y2="350" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="100" y1="350" x2="100" y2="50" stroke="#2c3e50" stroke-width="2"/>
-  <rect x="150" y="250" width="60" height="100" fill="#3498db"/>
-  <rect x="250" y="200" width="60" height="150" fill="#2ecc71"/>
-  <rect x="350" y="150" width="60" height="200" fill="#e74c3c"/>
-  <rect x="450" y="180" width="60" height="170" fill="#f39c12"/>
-  <rect x="550" y="120" width="60" height="230" fill="#9b59b6"/>
-  <text x="180" y="240" text-anchor="middle" font-size="14">Speed</text>
-  <text x="280" y="190" text-anchor="middle" font-size="14">Quality</text>
-  <text x="380" y="140" text-anchor="middle" font-size="14">Learning</text>
-  <text x="480" y="170" text-anchor="middle" font-size="14">Satisfaction</text>
-  <text x="580" y="110" text-anchor="middle" font-size="14">Output</text>
-  <text x="50" y="355" font-size="12">0%</text>
-  <text x="50" y="255" font-size="12">50%</text>
-  <text x="50" y="155" font-size="12">100%</text>
-  <text x="50" y="55" font-size="12">150%</text>
-</svg>
+![real_world_impact_metrics](../../../../svg/courses/ai/developing-using-ai/01_intro/real_world_impact_metrics.svg)
 
 ---
 
@@ -383,22 +325,7 @@ Professional integrity remains paramount
 
 ## Best Practices Overview
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="150" fill="none" stroke="#3498db" stroke-width="3"/>
-  <circle cx="400" cy="200" r="10" fill="#e74c3c"/>
-  <circle cx="400" cy="80" r="8" fill="#2ecc71"/>
-  <text x="400" y="60" text-anchor="middle" font-size="14">Clear Context</text>
-  <circle cx="490" cy="130" r="8" fill="#2ecc71"/>
-  <text x="550" y="130" font-size="14">Iterate</text>
-  <circle cx="490" cy="270" r="8" fill="#2ecc71"/>
-  <text x="550" y="270" font-size="14">Verify</text>
-  <circle cx="310" cy="270" r="8" fill="#2ecc71"/>
-  <text x="250" y="270" text-anchor="end" font-size="14">Review</text>
-  <circle cx="310" cy="130" r="8" fill="#2ecc71"/>
-  <text x="250" y="130" text-anchor="end" font-size="14">Learn</text>
-  <text x="400" y="205" text-anchor="middle" font-size="16" font-weight="bold">Best</text>
-  <text x="400" y="225" text-anchor="middle" font-size="16" font-weight="bold">Practices</text>
-</svg>
+![best_practices_overview](../../../../svg/courses/ai/developing-using-ai/01_intro/best_practices_overview.svg)
 
 ---
 

@@ -1,0 +1,74 @@
+<svg width="600" height="450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main layers -->
+  <rect x="150" y="30" width="300" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="65" text-anchor="middle" font-size="14" font-weight="bold">Presentation Layer</text>
+
+  <rect x="150" y="120" width="300" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="155" text-anchor="middle" font-size="14" font-weight="bold">Domain Layer</text>
+
+  <rect x="150" y="210" width="300" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="245" text-anchor="middle" font-size="14" font-weight="bold">Data Layer</text>
+
+  <rect x="150" y="300" width="300" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="335" text-anchor="middle" font-size="14" font-weight="bold">Framework</text>
+
+  <!-- Layer connections -->
+  <line x1="300" y1="90" x2="300" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow_clean)"/>
+  <line x1="300" y1="180" x2="300" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrow_clean)"/>
+  <line x1="300" y1="270" x2="300" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow_clean)"/>
+
+  <!-- Presentation sublayers -->
+  <rect x="20" y="40" width="110" height="35" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="75" y="55" text-anchor="middle" font-size="11">Activities/Fragments</text>
+  <text x="75" y="68" text-anchor="middle" font-size="10">UI</text>
+
+  <rect x="470" y="40" width="100" height="35" fill="#e1f5fe" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="520" y="55" text-anchor="middle" font-size="11">ViewModels</text>
+  <text x="520" y="68" text-anchor="middle" font-size="10">Presenters</text>
+
+  <!-- Domain sublayers -->
+  <rect x="20" y="130" width="110" height="35" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="75" y="145" text-anchor="middle" font-size="11">Use Cases</text>
+  <text x="75" y="158" text-anchor="middle" font-size="10">Business Logic</text>
+
+  <rect x="470" y="130" width="100" height="35" fill="#fce4ec" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="520" y="145" text-anchor="middle" font-size="11">Entities</text>
+  <text x="520" y="158" text-anchor="middle" font-size="10">Domain Models</text>
+
+  <!-- Data sublayers -->
+  <rect x="20" y="220" width="110" height="35" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="75" y="235" text-anchor="middle" font-size="11">Repositories</text>
+  <text x="75" y="248" text-anchor="middle" font-size="10">Data Sources</text>
+
+  <rect x="470" y="220" width="100" height="35" fill="#c8e6c9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="520" y="235" text-anchor="middle" font-size="11">Models</text>
+  <text x="520" y="248" text-anchor="middle" font-size="10">DTOs</text>
+
+  <!-- Framework sublayers -->
+  <rect x="20" y="310" width="110" height="35" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="75" y="325" text-anchor="middle" font-size="11">Android Framework</text>
+  <text x="75" y="338" text-anchor="middle" font-size="10">System APIs</text>
+
+  <rect x="470" y="310" width="100" height="35" fill="#ffe0b2" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="520" y="325" text-anchor="middle" font-size="11">External Libraries</text>
+  <text x="520" y="338" text-anchor="middle" font-size="10">Third Party</text>
+
+  <!-- Connections to sublayers -->
+  <line x1="150" y1="60" x2="130" y2="57" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+  <line x1="450" y1="60" x2="470" y2="57" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+
+  <line x1="150" y1="150" x2="130" y2="147" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+  <line x1="450" y1="150" x2="470" y2="147" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+
+  <line x1="150" y1="240" x2="130" y2="237" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+  <line x1="450" y1="240" x2="470" y2="237" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+
+  <line x1="150" y1="330" x2="130" y2="327" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+  <line x1="450" y1="330" x2="470" y2="327" stroke="#666" stroke-width="1" marker-end="url(#arrow_clean)"/>
+
+  <defs>
+    <marker id="arrow_clean" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

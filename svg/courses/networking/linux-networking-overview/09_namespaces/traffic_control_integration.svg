@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Traffic Control with cgroups net_cls</text>
+  <rect x="30" y="35" width="120" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="90" y="55" text-anchor="middle" font-size="11" font-weight="bold">Process</text>
+  <text x="90" y="72" text-anchor="middle" font-size="10" fill="#666">cgroup: mygroup</text>
+  <rect x="185" y="35" width="120" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="245" y="55" text-anchor="middle" font-size="11" font-weight="bold">net_cls</text>
+  <text x="245" y="72" text-anchor="middle" font-size="10" fill="#666">classid 0x100001</text>
+  <rect x="340" y="35" width="120" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="55" text-anchor="middle" font-size="11" font-weight="bold">tc (qdisc)</text>
+  <text x="400" y="72" text-anchor="middle" font-size="10" fill="#666">Filter by classid</text>
+  <rect x="495" y="35" width="80" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="535" y="55" text-anchor="middle" font-size="11" font-weight="bold">eth0</text>
+  <text x="535" y="72" text-anchor="middle" font-size="10" fill="#666">Shaped</text>
+  <line x1="150" y1="62" x2="185" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_namespaces)"/>
+  <line x1="305" y1="62" x2="340" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_namespaces)"/>
+  <line x1="460" y1="62" x2="495" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd2_08_namespaces)"/>
+  <rect x="30" y="110" width="545" height="55" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="5" stroke-dasharray="5,3"/>
+  <text x="300" y="132" text-anchor="middle" font-size="11" fill="#333" font-weight="bold">net_prio: Set per-interface priority for cgroup processes</text>
+  <text x="300" y="150" text-anchor="middle" font-size="10" fill="#666">echo "eth0 5" > /sys/fs/cgroup/net_prio/mygroup/net_prio.ifpriomap</text>
+  <defs>
+    <marker id="arrowd2_08_namespaces" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

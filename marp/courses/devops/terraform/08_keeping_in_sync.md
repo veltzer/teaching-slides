@@ -12,32 +12,7 @@
 
 ## How Drift Happens
 
-<svg xmlns="http://www.w3.org/2000/svg" width="580" height="190">
-  <!-- Terraform Config column header -->
-  <rect x="10" y="10" width="250" height="36" rx="4" fill="#1565c0" stroke="#333" stroke-width="1.5"/>
-  <text x="135" y="33" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Terraform Config</text>
-  <!-- Actual Infrastructure column header -->
-  <rect x="320" y="10" width="250" height="36" rx="4" fill="#c62828" stroke="#333" stroke-width="1.5"/>
-  <text x="445" y="33" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Actual Infrastructure</text>
-
-  <!-- row 1: instance_type -->
-  <rect x="10" y="55" width="250" height="55" rx="0" fill="#e3f2fd" stroke="#aaa" stroke-width="0.8"/>
-  <text x="20" y="74" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222">instance_type:</text>
-  <text x="30" y="96" font-family="monospace" font-size="13" fill="#1565c0">t3.micro</text>
-  <rect x="320" y="55" width="250" height="55" rx="0" fill="#ffebee" stroke="#aaa" stroke-width="0.8"/>
-  <text x="330" y="74" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222">instance_type:</text>
-  <text x="340" y="96" font-family="monospace" font-size="13" fill="#c62828">t3.large</text>
-  <text x="480" y="96" font-family="sans-serif" font-size="11" fill="#c62828">← changed manually</text>
-
-  <!-- row 2: tags -->
-  <rect x="10" y="115" width="250" height="65" rx="0" fill="#e3f2fd" stroke="#aaa" stroke-width="0.8"/>
-  <text x="20" y="134" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222">tags:</text>
-  <text x="30" y="154" font-family="monospace" font-size="12" fill="#1565c0">Name: web</text>
-  <rect x="320" y="115" width="250" height="65" rx="0" fill="#ffebee" stroke="#aaa" stroke-width="0.8"/>
-  <text x="330" y="134" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222">tags:</text>
-  <text x="340" y="154" font-family="monospace" font-size="12" fill="#c62828">Name: web-prod</text>
-  <text x="480" y="171" font-family="sans-serif" font-size="11" fill="#c62828">← changed manually</text>
-</svg>
+![how_drift_happens](../../../../svg/courses/devops/terraform/08_keeping_in_sync/how_drift_happens.svg)
 
 ---
 
@@ -136,33 +111,7 @@ terraform refresh
 
 ## Refresh Workflow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="460" height="280">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- terraform refresh header -->
-  <rect x="100" y="10" width="260" height="40" rx="4" fill="#7b1fa2" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="35" font-family="monospace" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">terraform refresh</text>
-
-  <!-- steps -->
-  <line x1="230" y1="50" x2="230" y2="70" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="70" width="400" height="44" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="230" y="97" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Query all providers for current resource state</text>
-
-  <line x1="230" y1="114" x2="230" y2="134" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="134" width="400" height="44" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="230" y="161" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Compare API responses to current state file</text>
-
-  <line x1="230" y1="178" x2="230" y2="198" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="198" width="400" height="44" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="230" y="225" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Update state file with actual values</text>
-
-  <line x1="230" y1="242" x2="230" y2="262" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30" y="262" width="400" height="44" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="289" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">State file reflects reality (not config)</text>
-</svg>
+![refresh_workflow](../../../../svg/courses/devops/terraform/08_keeping_in_sync/refresh_workflow.svg)
 
 ---
 

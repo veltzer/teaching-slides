@@ -16,22 +16,7 @@ Key challenge: Balance power savings with system responsiveness
 
 ## Power Management Framework
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="600" height="400" fill="#F0F0F0" stroke="black"/>
-<text x="400" y="80" text-anchor="middle" font-weight="bold">Linux PM Stack</text>
-<rect x="200" y="120" width="400" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="155" text-anchor="middle">User Space (Power Managers)</text>
-<rect x="200" y="200" width="190" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="295" y="235" text-anchor="middle">CPUFreq</text>
-<rect x="410" y="200" width="190" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="505" y="235" text-anchor="middle">CPUIdle</text>
-<rect x="200" y="280" width="190" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="295" y="315" text-anchor="middle">Runtime PM</text>
-<rect x="410" y="280" width="190" height="60" fill="#FFE6FF" stroke="black"/>
-<text x="505" y="315" text-anchor="middle">System Sleep</text>
-<rect x="200" y="360" width="400" height="60" fill="#E6E6E6" stroke="black"/>
-<text x="400" y="395" text-anchor="middle">Hardware</text>
-</svg>
+![power_management_framework](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/power_management_framework.svg)
 
 ---
 
@@ -119,27 +104,7 @@ C-States for idle CPU management:
 
 ## CPUIdle Framework
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="200" y="50" width="400" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="85" text-anchor="middle">Idle Loop</text>
-<rect x="200" y="150" width="400" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="400" y="185" text-anchor="middle">CPUIdle Governor</text>
-<rect x="150" y="250" width="150" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="225" y="285" text-anchor="middle">Menu</text>
-<rect x="325" y="250" width="150" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="400" y="285" text-anchor="middle">Ladder</text>
-<rect x="500" y="250" width="150" height="60" fill="#FFE6FF" stroke="black"/>
-<text x="575" y="285" text-anchor="middle">TEO</text>
-<line x1="400" y1="110" x2="400" y2="150" stroke="black" marker-end="url(#arrowhead)"/>
-<line x1="400" y1="210" x2="225" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<line x1="400" y1="210" x2="400" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<line x1="400" y1="210" x2="575" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<defs>
-<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![cpuidle_framework](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/cpuidle_framework.svg)
 
 ---
 
@@ -208,21 +173,7 @@ static const struct dev_pm_ops my_pm_ops = {
 
 ## Runtime PM States
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="200" cy="200" rx="80" ry="50" fill="#E6FFE6" stroke="black"/>
-<text x="200" y="210" text-anchor="middle">Active</text>
-<ellipse cx="600" cy="200" rx="80" ry="50" fill="#FFE6E6" stroke="black"/>
-<text x="600" y="210" text-anchor="middle">Suspended</text>
-<path d="M 280 180 Q 400 100 520 180" stroke="black" fill="none" marker-end="url(#arrow)"/>
-<text x="400" y="130" text-anchor="middle">pm_runtime_put()</text>
-<path d="M 520 220 Q 400 300 280 220" stroke="black" fill="none" marker-end="url(#arrow)"/>
-<text x="400" y="290" text-anchor="middle">pm_runtime_get()</text>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![runtime_pm_states](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/runtime_pm_states.svg)
 
 ---
 
@@ -353,19 +304,7 @@ Components:
 
 ## Thermal Framework
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="150" y="50" width="500" height="80" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="95" text-anchor="middle">Thermal Zone</text>
-<rect x="150" y="180" width="150" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="225" y="215" text-anchor="middle">Sensor</text>
-<rect x="325" y="180" width="150" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="215" text-anchor="middle">Governor</text>
-<rect x="500" y="180" width="150" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="575" y="215" text-anchor="middle">Cooling Device</text>
-<line x1="225" y1="130" x2="225" y2="180" stroke="black"/>
-<line x1="400" y1="130" x2="400" y2="180" stroke="black"/>
-<line x1="575" y1="130" x2="575" y2="180" stroke="black"/>
-</svg>
+![thermal_framework](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/thermal_framework.svg)
 
 ---
 

@@ -6,24 +6,7 @@
 
 ## Modern Search Evolution
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">Keyword</text>
-  <text x="100" y="120" text-anchor="middle" font-size="12">Traditional</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">Semantic</text>
-  <text x="230" y="120" text-anchor="middle" font-size="12">Understanding</text>
-  <rect x="310" y="50" width="80" height="50" fill="#FF9800" rx="5"/>
-  <text x="350" y="80" text-anchor="middle" fill="white">Hybrid</text>
-  <text x="350" y="120" text-anchor="middle" font-size="12">Combined</text>
-  <path d="M150 75 L180 75" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <path d="M280 75 L310 75" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <defs>
-    <marker id="arrow5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![modern_search_evolution](../../../../svg/courses/databases/elasticsearch-for-developers/16_modern_features/modern_search_evolution.svg)
 
 ---
 

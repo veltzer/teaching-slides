@@ -1,0 +1,31 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Multi-Stage Build Flow</text>
+  <defs>
+    <marker id="arrow_ms" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="30" y="50" width="200" height="200" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
+  <text x="130" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Stage 1: Build</text>
+  <rect x="50" y="90" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="130" y="107" text-anchor="middle" font-size="11">Full OS + compilers</text>
+  <rect x="50" y="125" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="130" y="142" text-anchor="middle" font-size="11">Source code</text>
+  <rect x="50" y="160" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="130" y="177" text-anchor="middle" font-size="11">Build dependencies</text>
+  <rect x="50" y="195" width="160" height="25" fill="#ffcc80" stroke="#e65100" stroke-width="1" rx="3"/>
+  <text x="130" y="212" text-anchor="middle" font-size="11" font-weight="bold">Compiled artifact</text>
+  <line x1="230" y1="207" x2="290" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow_ms)"/>
+  <text x="270" y="165" font-size="11" fill="#333">COPY</text>
+  <rect x="300" y="80" width="180" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="390" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Stage 2: Runtime</text>
+  <rect x="320" y="120" width="140" height="25" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="390" y="137" text-anchor="middle" font-size="11">Minimal base image</text>
+  <rect x="320" y="155" width="140" height="25" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="390" y="172" text-anchor="middle" font-size="11" font-weight="bold">Compiled artifact</text>
+  <line x1="480" y1="155" x2="540" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrow_ms)"/>
+  <rect x="550" y="110" width="120" height="90" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
+  <text x="610" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Final Image</text>
+  <text x="610" y="165" text-anchor="middle" font-size="11">Small</text>
+  <text x="610" y="180" text-anchor="middle" font-size="11">Secure</text>
+</svg>

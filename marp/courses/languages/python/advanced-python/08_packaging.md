@@ -426,45 +426,7 @@ python -m build --wheel
 - Metadata format
 - Installation process
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" font-family="monospace">
-  <!-- Wheel filename -->
-  <text x="10" y="30" font-size="13" font-weight="bold" fill="#333" font-family="sans-serif">Wheel Filename Anatomy:</text>
-  <text x="10" y="55" font-size="14" fill="#222">mypackage-0.1.0-cp39-cp39-linux_x86_64.whl</text>
-  <!-- bracket lines -->
-  <!-- Distribution name: chars 0-8 "mypackage" -->
-  <line x1="10"  y1="60" x2="10"  y2="75" stroke="#555" stroke-width="1"/>
-  <line x1="10"  y1="75" x2="120" y2="75" stroke="#555" stroke-width="1"/>
-  <text x="125" y="78" font-size="12" fill="#555" font-family="sans-serif">Distribution name</text>
-  <!-- Version: 10-14 "0.1.0" -->
-  <line x1="122" y1="60" x2="122" y2="90" stroke="#555" stroke-width="1"/>
-  <line x1="122" y1="90" x2="168" y2="90" stroke="#555" stroke-width="1"/>
-  <text x="173" y="93" font-size="12" fill="#555" font-family="sans-serif">Version</text>
-  <!-- Python tag cp39 -->
-  <line x1="170" y1="60" x2="170" y2="105" stroke="#555" stroke-width="1"/>
-  <line x1="170" y1="105" x2="204" y2="105" stroke="#555" stroke-width="1"/>
-  <text x="209" y="108" font-size="12" fill="#555" font-family="sans-serif">Python tag (CPython 3.9)</text>
-  <!-- ABI tag cp39 -->
-  <line x1="206" y1="60" x2="206" y2="120" stroke="#555" stroke-width="1"/>
-  <line x1="206" y1="120" x2="240" y2="120" stroke="#555" stroke-width="1"/>
-  <text x="245" y="123" font-size="12" fill="#555" font-family="sans-serif">ABI tag</text>
-  <!-- Python impl -->
-  <line x1="242" y1="60" x2="242" y2="135" stroke="#555" stroke-width="1"/>
-  <line x1="242" y1="135" x2="355" y2="135" stroke="#555" stroke-width="1"/>
-  <text x="360" y="138" font-size="12" fill="#555" font-family="sans-serif">Python implementation</text>
-  <!-- Platform linux_x86_64 -->
-  <line x1="357" y1="60" x2="357" y2="150" stroke="#555" stroke-width="1"/>
-  <line x1="357" y1="150" x2="468" y2="150" stroke="#555" stroke-width="1"/>
-  <text x="473" y="153" font-size="12" fill="#555" font-family="sans-serif">Platform</text>
-  <!-- Internal structure -->
-  <text x="10" y="185" font-size="13" font-weight="bold" fill="#333" font-family="sans-serif">Internal Structure:</text>
-  <rect x="10" y="195" width="300" height="110" fill="#f0f4f8" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="20" y="215" font-size="13" fill="#222">mypackage/</text>
-  <text x="20" y="233" font-size="13" fill="#222">mypackage-0.1.0.dist-info/</text>
-  <text x="30" y="251" font-size="12" fill="#555">  ├── METADATA</text>
-  <text x="30" y="267" font-size="12" fill="#555">  ├── WHEEL</text>
-  <text x="30" y="283" font-size="12" fill="#555">  ├── RECORD</text>
-  <text x="30" y="299" font-size="12" fill="#555">  └── entry_points.txt</text>
-</svg>
+![wheel_anatomy](../../../../../svg/courses/languages/python/advanced-python/08_packaging/wheel_anatomy.svg)
 
 ---
 

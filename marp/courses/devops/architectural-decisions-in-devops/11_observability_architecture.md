@@ -13,36 +13,7 @@
 
 ## The Three Pillars of Observability
 
-<svg width="700" height="380" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="50" y="60" width="180" height="120" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="140" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Metrics</text>
-  <text x="140" y="120" text-anchor="middle" font-size="12">Numeric aggregates</text>
-  <text x="140" y="140" text-anchor="middle" font-size="12">over time</text>
-  <text x="140" y="160" text-anchor="middle" font-size="12">CPU, latency, errors</text>
-  <rect x="260" y="60" width="180" height="120" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="350" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Logs</text>
-  <text x="350" y="120" text-anchor="middle" font-size="12">Discrete events</text>
-  <text x="350" y="140" text-anchor="middle" font-size="12">with context</text>
-  <text x="350" y="160" text-anchor="middle" font-size="12">Errors, audit, debug</text>
-  <rect x="470" y="60" width="180" height="120" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="8"/>
-  <text x="560" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#f9a825">Traces</text>
-  <text x="560" y="120" text-anchor="middle" font-size="12">Request flow across</text>
-  <text x="560" y="140" text-anchor="middle" font-size="12">services</text>
-  <text x="560" y="160" text-anchor="middle" font-size="12">Latency, dependencies</text>
-  <line x1="230" y1="180" x2="260" y2="180" stroke="#555" stroke-width="2" stroke-dasharray="5,3"/>
-  <line x1="440" y1="180" x2="470" y2="180" stroke="#555" stroke-width="2" stroke-dasharray="5,3"/>
-  <rect x="180" y="240" width="340" height="60" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="8"/>
-  <text x="350" y="275" text-anchor="middle" font-size="16" font-weight="bold" fill="#7b1fa2">Correlation Layer</text>
-  <line x1="140" y1="180" x2="270" y2="240" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="350" y1="180" x2="350" y2="240" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="560" y1="180" x2="430" y2="240" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="350" y="340" text-anchor="middle" font-size="13" fill="#555">Each pillar answers different questions about system behavior</text>
-</svg>
+![the_three_pillars_of_observability](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/the_three_pillars_of_observability.svg)
 
 ---
 
@@ -161,38 +132,7 @@
 
 ## Push vs Pull Collection Models
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="175" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Pull Model</text>
-  <rect x="100" y="50" width="150" height="50" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="6"/>
-  <text x="175" y="80" text-anchor="middle" font-size="14">Prometheus</text>
-  <rect x="30" y="150" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="4"/>
-  <text x="90" y="175" text-anchor="middle" font-size="12">Service A</text>
-  <rect x="170" y="150" width="120" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="4"/>
-  <text x="230" y="175" text-anchor="middle" font-size="12">Service B</text>
-  <path d="M 150 100 L 90 150" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M 200 100 L 230 150" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="70" y="130" font-size="10" fill="#1565c0">scrape</text>
-  <text x="230" y="130" font-size="10" fill="#1565c0">scrape</text>
-  <text x="525" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">Push Model</text>
-  <rect x="450" y="50" width="150" height="50" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="525" y="80" text-anchor="middle" font-size="14">Collector</text>
-  <rect x="380" y="150" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="4"/>
-  <text x="440" y="175" text-anchor="middle" font-size="12">Service A</text>
-  <rect x="520" y="150" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="4"/>
-  <text x="580" y="175" text-anchor="middle" font-size="12">Service B</text>
-  <path d="M 440 150 L 490 100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M 580 150 L 560 100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="440" y="130" font-size="10" fill="#2e7d32">push</text>
-  <text x="580" y="130" font-size="10" fill="#2e7d32">push</text>
-  <line x1="350" y1="20" x2="350" y2="260" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
-  <text x="175" y="230" text-anchor="middle" font-size="11" fill="#555">Server controls scrape rate</text>
-  <text x="525" y="230" text-anchor="middle" font-size="11" fill="#555">Agents push to collector</text>
-</svg>
+![push_vs_pull_collection_models](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/push_vs_pull_collection_models.svg)
 
 ---
 
@@ -351,38 +291,7 @@ service:
 
 ## Alerting Strategy Overview
 
-<svg width="700" height="320" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="40" width="130" height="50" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="6"/>
-  <text x="85" y="70" text-anchor="middle" font-size="13" font-weight="bold">Metrics</text>
-  <rect x="180" y="40" width="130" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="245" y="70" text-anchor="middle" font-size="13" font-weight="bold">Alert Rules</text>
-  <rect x="340" y="40" width="130" height="50" fill="#ffccbc" stroke="#e64a19" stroke-width="2" rx="6"/>
-  <text x="405" y="70" text-anchor="middle" font-size="13" font-weight="bold">Alert Manager</text>
-  <rect x="340" y="120" width="130" height="35" fill="#e8eaf6" stroke="#3949ab" stroke-width="1" rx="4"/>
-  <text x="405" y="143" text-anchor="middle" font-size="11">Grouping</text>
-  <rect x="340" y="165" width="130" height="35" fill="#e8eaf6" stroke="#3949ab" stroke-width="1" rx="4"/>
-  <text x="405" y="188" text-anchor="middle" font-size="11">Deduplication</text>
-  <rect x="340" y="210" width="130" height="35" fill="#e8eaf6" stroke="#3949ab" stroke-width="1" rx="4"/>
-  <text x="405" y="233" text-anchor="middle" font-size="11">Silencing</text>
-  <rect x="540" y="90" width="130" height="35" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="605" y="113" text-anchor="middle" font-size="12">Slack / Email</text>
-  <rect x="540" y="145" width="130" height="35" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="6"/>
-  <text x="605" y="168" text-anchor="middle" font-size="12">PagerDuty</text>
-  <rect x="540" y="200" width="130" height="35" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="605" y="223" text-anchor="middle" font-size="12">Webhook</text>
-  <line x1="150" y1="65" x2="180" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <line x1="310" y1="65" x2="340" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <line x1="405" y1="90" x2="405" y2="120" stroke="#3949ab" stroke-width="1" marker-end="url(#arrow3)"/>
-  <line x1="470" y1="137" x2="540" y2="107" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <line x1="470" y1="182" x2="540" y2="162" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <line x1="470" y1="227" x2="540" y2="217" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <text x="350" y="290" text-anchor="middle" font-size="12" fill="#555">Alerts flow from metrics through rules, processing, then routing</text>
-</svg>
+![alerting_strategy_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/alerting_strategy_overview.svg)
 
 ---
 
@@ -446,31 +355,7 @@ groups:
 
 ## SLO Hierarchy
 
-<svg width="700" height="340" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="200" y="20" width="300" height="55" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="8"/>
-  <text x="350" y="42" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">SLA (Service Level Agreement)</text>
-  <text x="350" y="62" text-anchor="middle" font-size="11" fill="#555">Contract with customers, financial penalties</text>
-  <rect x="200" y="100" width="300" height="55" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="8"/>
-  <text x="350" y="122" text-anchor="middle" font-size="14" font-weight="bold" fill="#f9a825">SLO (Service Level Objective)</text>
-  <text x="350" y="142" text-anchor="middle" font-size="11" fill="#555">Internal target, tighter than SLA</text>
-  <rect x="200" y="180" width="300" height="55" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="350" y="202" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">SLI (Service Level Indicator)</text>
-  <text x="350" y="222" text-anchor="middle" font-size="11" fill="#555">The actual metric being measured</text>
-  <line x1="350" y1="75" x2="350" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <line x1="350" y1="155" x2="350" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-  <text x="560" y="45" font-size="11" fill="#c62828">99.9% availability/month</text>
-  <text x="560" y="125" font-size="11" fill="#f9a825">99.95% availability/month</text>
-  <text x="560" y="205" font-size="11" fill="#2e7d32">successful_requests / total</text>
-  <rect x="200" y="260" width="300" height="55" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="350" y="282" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565c0">Error Budget</text>
-  <text x="350" y="302" text-anchor="middle" font-size="11" fill="#555">Allowed failures = 1 - SLO target</text>
-  <line x1="350" y1="235" x2="350" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow4)"/>
-</svg>
+![slo_hierarchy](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/slo_hierarchy.svg)
 
 ---
 
@@ -548,34 +433,7 @@ groups:
 
 ## Escalation Flow
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="50" y="30" width="160" height="50" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="6"/>
-  <text x="130" y="60" text-anchor="middle" font-size="14" font-weight="bold">Alert Fires</text>
-  <rect x="50" y="120" width="160" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="130" y="140" text-anchor="middle" font-size="13" font-weight="bold">Primary On-Call</text>
-  <text x="130" y="158" text-anchor="middle" font-size="11">Ack within 5 min</text>
-  <rect x="270" y="120" width="160" height="50" fill="#ffe0b2" stroke="#e65100" stroke-width="2" rx="6"/>
-  <text x="350" y="140" text-anchor="middle" font-size="13" font-weight="bold">Secondary On-Call</text>
-  <text x="350" y="158" text-anchor="middle" font-size="11">Ack within 10 min</text>
-  <rect x="490" y="120" width="160" height="50" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="6"/>
-  <text x="570" y="140" text-anchor="middle" font-size="13" font-weight="bold">Engineering Lead</text>
-  <text x="570" y="158" text-anchor="middle" font-size="11">Ack within 15 min</text>
-  <line x1="130" y1="80" x2="130" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow5)"/>
-  <line x1="210" y1="145" x2="270" y2="145" stroke="#e65100" stroke-width="2" marker-end="url(#arrow5)"/>
-  <text x="240" y="138" font-size="10" fill="#e65100">no ack</text>
-  <line x1="430" y1="145" x2="490" y2="145" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrow5)"/>
-  <text x="460" y="138" font-size="10" fill="#7b1fa2">no ack</text>
-  <rect x="50" y="210" width="600" height="50" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="350" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Incident Response</text>
-  <text x="350" y="248" text-anchor="middle" font-size="11" fill="#555">Follow runbook, communicate status, resolve or escalate</text>
-  <line x1="130" y1="170" x2="130" y2="210" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow5)"/>
-  <text x="145" y="195" font-size="10" fill="#2e7d32">ack</text>
-</svg>
+![escalation_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/escalation_flow.svg)
 
 ---
 
@@ -599,38 +457,7 @@ annotations:
 
 ## Observability Data Pipeline
 
-<svg width="700" height="260" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="50" width="100" height="60" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="6"/>
-  <text x="70" y="75" text-anchor="middle" font-size="11" font-weight="bold">Applications</text>
-  <text x="70" y="95" text-anchor="middle" font-size="10">SDK / Agent</text>
-  <rect x="160" y="50" width="120" height="60" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="220" y="75" text-anchor="middle" font-size="11" font-weight="bold">Collector</text>
-  <text x="220" y="95" text-anchor="middle" font-size="10">OTel Collector</text>
-  <rect x="320" y="20" width="120" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="1" rx="4"/>
-  <text x="380" y="45" text-anchor="middle" font-size="11">Filter / Enrich</text>
-  <rect x="320" y="80" width="120" height="40" fill="#bbdefb" stroke="#1565c0" stroke-width="1" rx="4"/>
-  <text x="380" y="105" text-anchor="middle" font-size="11">Sample / Batch</text>
-  <rect x="490" y="15" width="100" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="540" y="40" text-anchor="middle" font-size="11" font-weight="bold">Metrics DB</text>
-  <rect x="490" y="65" width="100" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="540" y="90" text-anchor="middle" font-size="11" font-weight="bold">Log Store</text>
-  <rect x="490" y="115" width="100" height="40" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="540" y="140" text-anchor="middle" font-size="11" font-weight="bold">Trace Store</text>
-  <rect x="630" y="65" width="55" height="40" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="6"/>
-  <text x="658" y="90" text-anchor="middle" font-size="11" font-weight="bold">UI</text>
-  <line x1="120" y1="80" x2="160" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="280" y1="80" x2="320" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="440" y1="40" x2="490" y2="35" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="440" y1="80" x2="490" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="440" y1="100" x2="490" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <line x1="590" y1="85" x2="630" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow6)"/>
-  <text x="350" y="200" text-anchor="middle" font-size="12" fill="#555">Collectors process data before it reaches storage backends</text>
-</svg>
+![observability_data_pipeline](../../../../svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/observability_data_pipeline.svg)
 
 ---
 

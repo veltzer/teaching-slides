@@ -18,20 +18,7 @@ From chatbots to autonomous coding partners
 
 ## Chatbot vs Agent
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="40" width="300" height="220" fill="#4A5568" rx="10"/>
-  <text x="200" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Chatbot</text>
-  <text x="200" y="120" text-anchor="middle" fill="#CBD5E0" font-size="14">Single prompt-response</text>
-  <text x="200" y="150" text-anchor="middle" fill="#CBD5E0" font-size="14">No tool access</text>
-  <text x="200" y="180" text-anchor="middle" fill="#CBD5E0" font-size="14">Stateless across turns</text>
-  <text x="200" y="210" text-anchor="middle" fill="#CBD5E0" font-size="14">User drives every step</text>
-  <rect x="450" y="40" width="300" height="220" fill="#2B6CB0" rx="10"/>
-  <text x="600" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Agent</text>
-  <text x="600" y="120" text-anchor="middle" fill="#BEE3F8" font-size="14">Multi-step autonomous</text>
-  <text x="600" y="150" text-anchor="middle" fill="#BEE3F8" font-size="14">Tool use (files, shell, git)</text>
-  <text x="600" y="180" text-anchor="middle" fill="#BEE3F8" font-size="14">Maintains context + state</text>
-  <text x="600" y="210" text-anchor="middle" fill="#BEE3F8" font-size="14">Self-directed execution</text>
-</svg>
+![chatbot_vs_agent](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/chatbot_vs_agent.svg)
 
 - An agent **observes**, **reasons**, **acts**, and **loops** until the task is done
 - A chatbot only responds to what you explicitly ask
@@ -40,21 +27,7 @@ From chatbots to autonomous coding partners
 
 ## The Agent Loop
 
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="20" width="200" height="60" fill="#2B6CB0" rx="10"/>
-  <text x="400" y="55" text-anchor="middle" fill="white" font-size="16">Receive Task</text>
-  <rect x="550" y="130" width="200" height="60" fill="#2F855A" rx="10"/>
-  <text x="650" y="165" text-anchor="middle" fill="white" font-size="16">Reason / Plan</text>
-  <rect x="300" y="240" width="200" height="60" fill="#C05621" rx="10"/>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="16">Execute Tool</text>
-  <rect x="50" y="130" width="200" height="60" fill="#6B46C1" rx="10"/>
-  <text x="150" y="165" text-anchor="middle" fill="white" font-size="16">Observe Result</text>
-  <path d="M500 55 L550 155" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M550 170 L500 260" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M300 265 L250 170" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M150 130 L300 55" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="white"/></marker></defs>
-</svg>
+![the_agent_loop](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/the_agent_loop.svg)
 
 - The loop continues until the agent determines the task is complete
 - Each iteration adds context from tool outputs to the next reasoning step
@@ -128,19 +101,7 @@ Modern agents combine planning with a **tool-use loop**:
 
 Advanced setups use multiple agents collaborating:
 
-<svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="280" y="10" width="240" height="50" fill="#6B46C1" rx="8"/>
-  <text x="400" y="40" text-anchor="middle" fill="white" font-size="14">Planning Agent</text>
-  <rect x="50" y="130" width="200" height="50" fill="#2F855A" rx="8"/>
-  <text x="150" y="160" text-anchor="middle" fill="white" font-size="13">Execution Agent A</text>
-  <rect x="300" y="130" width="200" height="50" fill="#2F855A" rx="8"/>
-  <text x="400" y="160" text-anchor="middle" fill="white" font-size="13">Execution Agent B</text>
-  <rect x="550" y="130" width="200" height="50" fill="#2F855A" rx="8"/>
-  <text x="650" y="160" text-anchor="middle" fill="white" font-size="13">Execution Agent C</text>
-  <line x1="340" y1="60" x2="150" y2="130" stroke="white" stroke-width="1.5"/>
-  <line x1="400" y1="60" x2="400" y2="130" stroke="white" stroke-width="1.5"/>
-  <line x1="460" y1="60" x2="650" y2="130" stroke="white" stroke-width="1.5"/>
-</svg>
+![multi_agent_and_orchestrated_workflows](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/multi_agent_and_orchestrated_workflows.svg)
 
 1. **Planning agent**: breaks the task into subtasks using a stronger model
 1. **Execution agents**: each subtask runs in parallel with a faster model
@@ -155,27 +116,7 @@ Advanced setups use multiple agents collaborating:
 
 ## Popular Agent Tools Landscape
 
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" fill="#E2E8F0" font-size="16" font-weight="bold">CLI / Terminal</text>
-  <rect x="50" y="45" width="200" height="55" fill="#D97706" rx="8"/>
-  <text x="150" y="78" text-anchor="middle" fill="white" font-size="15">Claude Code</text>
-  <rect x="300" y="45" width="200" height="55" fill="#059669" rx="8"/>
-  <text x="400" y="78" text-anchor="middle" fill="white" font-size="15">Aider</text>
-  <rect x="550" y="45" width="200" height="55" fill="#7C3AED" rx="8"/>
-  <text x="650" y="78" text-anchor="middle" fill="white" font-size="15">Codex CLI</text>
-  <text x="400" y="140" text-anchor="middle" fill="#E2E8F0" font-size="16" font-weight="bold">IDE-Integrated</text>
-  <rect x="50" y="155" width="200" height="55" fill="#2563EB" rx="8"/>
-  <text x="150" y="188" text-anchor="middle" fill="white" font-size="15">Cursor (Agent)</text>
-  <rect x="300" y="155" width="200" height="55" fill="#0891B2" rx="8"/>
-  <text x="400" y="188" text-anchor="middle" fill="white" font-size="15">Windsurf</text>
-  <rect x="550" y="155" width="200" height="55" fill="#DC2626" rx="8"/>
-  <text x="650" y="188" text-anchor="middle" fill="white" font-size="15">Cline</text>
-  <text x="400" y="250" text-anchor="middle" fill="#E2E8F0" font-size="16" font-weight="bold">Platform</text>
-  <rect x="175" y="265" width="200" height="55" fill="#4A5568" rx="8"/>
-  <text x="275" y="298" text-anchor="middle" fill="white" font-size="15">Copilot Workspace</text>
-  <rect x="425" y="265" width="200" height="55" fill="#9333EA" rx="8"/>
-  <text x="525" y="298" text-anchor="middle" fill="white" font-size="15">Devin</text>
-</svg>
+![popular_agent_tools_landscape](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/popular_agent_tools_landscape.svg)
 
 ---
 
@@ -305,22 +246,7 @@ Agent steps:
 
 ## How Agents Handle Errors and Self-Correct
 
-<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="60" width="150" height="60" fill="#C05621" rx="8"/>
-  <text x="105" y="95" text-anchor="middle" fill="white" font-size="13">Error Occurs</text>
-  <rect x="220" y="60" width="150" height="60" fill="#2B6CB0" rx="8"/>
-  <text x="295" y="95" text-anchor="middle" fill="white" font-size="13">Read Output</text>
-  <rect x="410" y="60" width="150" height="60" fill="#6B46C1" rx="8"/>
-  <text x="485" y="95" text-anchor="middle" fill="white" font-size="13">Diagnose Cause</text>
-  <rect x="600" y="60" width="150" height="60" fill="#2F855A" rx="8"/>
-  <text x="675" y="95" text-anchor="middle" fill="white" font-size="13">Apply Fix + Retry</text>
-  <line x1="180" y1="90" x2="220" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="370" y1="90" x2="410" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="560" y1="90" x2="600" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M675 120 Q675 160 295 160 Q295 160 295 120" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="5,5" marker-end="url(#arr)"/>
-  <text x="485" y="155" text-anchor="middle" fill="#CBD5E0" font-size="11">retry loop</text>
-  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="white"/></marker></defs>
-</svg>
+![how_agents_handle_errors_and_self_correct](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/how_agents_handle_errors_and_self_correct.svg)
 
 The **observe-diagnose-retry** loop:
 1. Agent runs a tool (e.g., `npm test`) and it fails
@@ -513,16 +439,7 @@ claude -p "refactor to async/await" src/legacy/*.js
 
 Agents must work within finite context windows:
 
-<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="700" height="50" fill="#4A5568" rx="6"/>
-  <text x="400" y="60" text-anchor="middle" fill="white" font-size="14">Total Context Window (e.g., 200k tokens)</text>
-  <rect x="50" y="100" width="200" height="50" fill="#2B6CB0" rx="6"/>
-  <text x="150" y="130" text-anchor="middle" fill="white" font-size="12">System Prompt</text>
-  <rect x="260" y="100" width="250" height="50" fill="#2F855A" rx="6"/>
-  <text x="385" y="130" text-anchor="middle" fill="white" font-size="12">Conversation + Tool Results</text>
-  <rect x="520" y="100" width="230" height="50" fill="#C05621" rx="6"/>
-  <text x="635" y="130" text-anchor="middle" fill="white" font-size="12">Available for Response</text>
-</svg>
+![context_window_management_and_token_budgets](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/context_window_management_and_token_budgets.svg)
 
 **Strategies agents use to stay within budget**:
 1. **Repo maps**: compact outline of files and symbols (Aider approach)

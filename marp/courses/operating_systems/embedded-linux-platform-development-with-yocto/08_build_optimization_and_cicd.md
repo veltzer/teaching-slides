@@ -4,33 +4,7 @@
 
 ## Build Performance Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="190" y="135" text-anchor="middle" font-size="12">Hardware</text>
-  <text x="190" y="155" text-anchor="middle" font-size="10">CPU, RAM, SSD</text>
-
-  <rect x="310" y="100" width="180" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="135" text-anchor="middle" font-size="12">Configuration</text>
-  <text x="400" y="155" text-anchor="middle" font-size="10">Parallelism, Cache</text>
-
-  <rect x="520" y="100" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="610" y="135" text-anchor="middle" font-size="12">Network</text>
-  <text x="610" y="155" text-anchor="middle" font-size="10">Mirrors, Bandwidth</text>
-
-  <rect x="250" y="280" width="300" height="100" fill="#ffffcc" stroke="#000" stroke-width="3" rx="5"/>
-  <text x="400" y="320" text-anchor="middle" font-size="16" font-weight="bold">Optimized Build</text>
-  <text x="400" y="345" text-anchor="middle" font-size="12">Fast, Reliable, Reproducible</text>
-
-  <path d="M 190 180 L 350 280" stroke="#333" stroke-width="2" marker-end="url(#b1)"/>
-  <path d="M 400 180 L 400 280" stroke="#333" stroke-width="2" marker-end="url(#b1)"/>
-  <path d="M 610 180 L 450 280" stroke="#333" stroke-width="2" marker-end="url(#b1)"/>
-
-  <defs>
-    <marker id="b1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![build_performance_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_performance_overview.svg)
 
 ---
 
@@ -64,23 +38,7 @@ Memory recommendations:
 
 SSD vs HDD performance:
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="80" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="225" y="135" text-anchor="middle" font-size="14" font-weight="bold">HDD</text>
-  <text x="225" y="160" text-anchor="middle" font-size="12">Build time: 3-4 hours</text>
-
-  <rect x="450" y="100" width="250" height="80" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="575" y="135" text-anchor="middle" font-size="14" font-weight="bold">SSD</text>
-  <text x="575" y="160" text-anchor="middle" font-size="12">Build time: 1-2 hours</text>
-
-  <rect x="100" y="250" width="250" height="80" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="225" y="285" text-anchor="middle" font-size="14" font-weight="bold">NVMe SSD</text>
-  <text x="225" y="310" text-anchor="middle" font-size="12">Build time: 45-90 min</text>
-
-  <rect x="450" y="250" width="250" height="80" fill="#ffffcc" stroke="#000" stroke-width="2"/>
-  <text x="575" y="285" text-anchor="middle" font-size="14" font-weight="bold">RAM Disk</text>
-  <text x="575" y="310" text-anchor="middle" font-size="12">Build time: 30-60 min</text>
-</svg>
+![storage_optimization](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/storage_optimization.svg)
 
 ---
 
@@ -171,28 +129,7 @@ BB_FETCH_PREMIRRORONLY = "1"
 
 ## Build Directory Management
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="100" width="220" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="260" y="135" text-anchor="middle" font-size="12">downloads/ (10GB)</text>
-
-  <rect x="430" y="100" width="220" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="540" y="135" text-anchor="middle" font-size="12">sstate-cache/ (50GB)</text>
-
-  <rect x="150" y="200" width="220" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="260" y="235" text-anchor="middle" font-size="12">tmp/ (100GB)</text>
-
-  <rect x="430" y="200" width="220" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="540" y="235" text-anchor="middle" font-size="12">cache/ (5GB)</text>
-
-  <rect x="150" y="300" width="500" height="60" fill="#ffffcc" stroke="#000" stroke-width="2"/>
-  <text x="400" y="335" text-anchor="middle" font-size="12">deploy/ (10GB)</text>
-
-  <text x="50" y="135" font-size="11">Shared</text>
-  <text x="50" y="235" font-size="11">Local</text>
-  <text x="50" y="335" font-size="11">Output</text>
-</svg>
+![build_directory_management](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_directory_management.svg)
 
 ---
 
@@ -318,41 +255,7 @@ gpgcheck=0
 
 ## CI/CD Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12">Git Push</text>
-
-  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12">CI Trigger</text>
-
-  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" font-size="12">Build</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12">Test</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="12">Package</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="12">Deploy</text>
-
-  <rect x="300" y="350" width="200" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="3" rx="5"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">Release</text>
-
-  <path d="M 250 80 L 325 80" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-  <path d="M 475 80 L 550 80" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-  <path d="M 625 110 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-  <path d="M 250 235 L 325 235" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-  <path d="M 475 235 L 550 235" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-  <path d="M 625 260 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#b2)"/>
-
-  <defs>
-    <marker id="b2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![ci_cd_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/ci_cd_architecture.svg)
 
 ---
 
@@ -758,33 +661,7 @@ devtool deploy-target myapp root@target
 
 ## Build Server Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="200" y="135" text-anchor="middle" font-size="12" font-weight="bold">Build Servers</text>
-  <text x="200" y="155" text-anchor="middle" font-size="10">High CPU/RAM</text>
-
-  <rect x="500" y="100" width="200" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="600" y="135" text-anchor="middle" font-size="12" font-weight="bold">Storage Server</text>
-  <text x="600" y="155" text-anchor="middle" font-size="10">NFS/Samba</text>
-
-  <rect x="100" y="250" width="200" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="200" y="285" text-anchor="middle" font-size="12" font-weight="bold">Cache Server</text>
-  <text x="200" y="305" text-anchor="middle" font-size="10">sstate, downloads</text>
-
-  <rect x="500" y="250" width="200" height="80" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="600" y="285" text-anchor="middle" font-size="12" font-weight="bold">Artifact Server</text>
-  <text x="600" y="305" text-anchor="middle" font-size="10">HTTP/S3</text>
-
-  <path d="M 300 140 L 500 140" stroke="#0066cc" stroke-width="2" marker-end="url(#b3)" stroke-dasharray="5,5"/>
-  <path d="M 200 180 L 200 250" stroke="#0066cc" stroke-width="2" marker-end="url(#b3)" stroke-dasharray="5,5"/>
-  <path d="M 300 290 L 500 290" stroke="#0066cc" stroke-width="2" marker-end="url(#b3)" stroke-dasharray="5,5"/>
-
-  <defs>
-    <marker id="b3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#0066cc"/>
-    </marker>
-  </defs>
-</svg>
+![build_server_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_server_architecture.svg)
 
 ---
 

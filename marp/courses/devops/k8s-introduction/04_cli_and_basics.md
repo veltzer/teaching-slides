@@ -27,34 +27,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 ## Essential kubectl Commands
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">kubectl Command Categories</text>
-  <rect x="100" y="80" width="150" height="80" fill="#4285f4" rx="5"/>
-  <text x="175" y="110" text-anchor="middle" fill="white" font-weight="bold">Basic</text>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-size="11">get, create</text>
-  <text x="175" y="145" text-anchor="middle" fill="white" font-size="11">delete, edit</text>
-  <rect x="270" y="80" width="150" height="80" fill="#34a853" rx="5"/>
-  <text x="345" y="110" text-anchor="middle" fill="white" font-weight="bold">Debugging</text>
-  <text x="345" y="130" text-anchor="middle" fill="white" font-size="11">describe, logs</text>
-  <text x="345" y="145" text-anchor="middle" fill="white" font-size="11">exec, port-forward</text>
-  <rect x="440" y="80" width="150" height="80" fill="#fbbc04" rx="5"/>
-  <text x="515" y="110" text-anchor="middle" font-weight="bold">Deployment</text>
-  <text x="515" y="130" text-anchor="middle" font-size="11">apply, rollout</text>
-  <text x="515" y="145" text-anchor="middle" font-size="11">scale, autoscale</text>
-  <rect x="610" y="80" width="140" height="80" fill="#ea4335" rx="5"/>
-  <text x="680" y="110" text-anchor="middle" fill="white" font-weight="bold">Cluster</text>
-  <text x="680" y="130" text-anchor="middle" fill="white" font-size="11">cluster-info</text>
-  <text x="680" y="145" text-anchor="middle" fill="white" font-size="11">top, version</text>
-  <rect x="100" y="190" width="150" height="80" fill="#9c27b0" rx="5"/>
-  <text x="175" y="220" text-anchor="middle" fill="white" font-weight="bold">Config</text>
-  <text x="175" y="240" text-anchor="middle" fill="white" font-size="11">config, label</text>
-  <text x="175" y="255" text-anchor="middle" fill="white" font-size="11">annotate, patch</text>
-  <rect x="270" y="190" width="150" height="80" fill="#607d8b" rx="5"/>
-  <text x="345" y="220" text-anchor="middle" fill="white" font-weight="bold">Advanced</text>
-  <text x="345" y="240" text-anchor="middle" fill="white" font-size="11">proxy, cp</text>
-  <text x="345" y="255" text-anchor="middle" fill="white" font-size="11">auth, plugin</text>
-</svg>
+![essential_kubectl_commands](../../../../svg/courses/devops/k8s-introduction/04_cli_and_basics/essential_kubectl_commands.svg)
 
 ---
 
@@ -134,37 +107,7 @@ kubectl get replicasets
 
 ## Deployment Process Flow
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Deployment Creation Flow</text>
-  <rect x="50" y="60" width="140" height="60" fill="#4285f4" rx="5"/>
-  <text x="120" y="95" text-anchor="middle" fill="white">kubectl create</text>
-  <rect x="230" y="60" width="140" height="60" fill="#34a853" rx="5"/>
-  <text x="300" y="95" text-anchor="middle" fill="white">API Server</text>
-  <rect x="410" y="60" width="140" height="60" fill="#fbbc04" rx="5"/>
-  <text x="480" y="95" text-anchor="middle">etcd Store</text>
-  <rect x="590" y="60" width="140" height="60" fill="#ea4335" rx="5"/>
-  <text x="660" y="95" text-anchor="middle" fill="white">Controller</text>
-  <rect x="230" y="160" width="140" height="60" fill="#9c27b0" rx="5"/>
-  <text x="300" y="195" text-anchor="middle" fill="white">Scheduler</text>
-  <rect x="410" y="160" width="140" height="60" fill="#607d8b" rx="5"/>
-  <text x="480" y="195" text-anchor="middle" fill="white">Kubelet</text>
-  <rect x="590" y="160" width="140" height="60" fill="#ff5722" rx="5"/>
-  <text x="660" y="195" text-anchor="middle" fill="white">Container</text>
-  <rect x="320" y="260" width="160" height="80" fill="#4caf50" rx="5"/>
-  <text x="400" y="305" text-anchor="middle" fill="white">Running Pod</text>
-  <path d="M 190 90 L 225 90" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 370 90 L 405 90" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 550 90 L 585 90" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 660 120 L 300 155" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 370 190 L 405 190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 550 190 L 585 190" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M 660 220 L 480 255" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![deployment_process_flow](../../../../svg/courses/devops/k8s-introduction/04_cli_and_basics/deployment_process_flow.svg)
 
 ---
 
@@ -373,36 +316,7 @@ kubectl config set-context --current --namespace=development
 
 ## Working with Namespaces
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Namespaces</text>
-  <rect x="100" y="80" width="180" height="240" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="190" y="105" text-anchor="middle" font-weight="bold">default</text>
-  <circle cx="140" cy="150" r="25" fill="#4285f4"/>
-  <text x="140" y="155" text-anchor="middle" fill="white" font-size="11">Pod</text>
-  <circle cx="210" cy="150" r="25" fill="#4285f4"/>
-  <text x="210" y="155" text-anchor="middle" fill="white" font-size="11">Pod</text>
-  <rect x="120" y="200" width="80" height="40" fill="#34a853" rx="3"/>
-  <text x="160" y="225" text-anchor="middle" fill="white" font-size="11">Service</text>
-  <rect x="120" y="260" width="80" height="40" fill="#fbbc04" rx="3"/>
-  <text x="160" y="285" text-anchor="middle" font-size="11">ConfigMap</text>
-  <rect x="310" y="80" width="180" height="240" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="400" y="105" text-anchor="middle" font-weight="bold">kube-system</text>
-  <circle cx="350" cy="150" r="25" fill="#34a853"/>
-  <text x="350" y="155" text-anchor="middle" fill="white" font-size="11">DNS</text>
-  <circle cx="420" cy="150" r="25" fill="#34a853"/>
-  <text x="420" y="155" text-anchor="middle" fill="white" font-size="11">Proxy</text>
-  <rect x="330" y="200" width="80" height="40" fill="#4285f4" rx="3"/>
-  <text x="370" y="225" text-anchor="middle" fill="white" font-size="11">Controller</text>
-  <rect x="520" y="80" width="180" height="240" fill="#fff3e0" stroke="#ff9800" stroke-width="2" rx="5"/>
-  <text x="610" y="105" text-anchor="middle" font-weight="bold">production</text>
-  <circle cx="560" cy="150" r="25" fill="#ff9800"/>
-  <text x="560" y="155" text-anchor="middle" fill="white" font-size="11">App</text>
-  <circle cx="630" cy="150" r="25" fill="#ff9800"/>
-  <text x="630" y="155" text-anchor="middle" fill="white" font-size="11">App</text>
-  <rect x="540" y="200" width="80" height="40" fill="#ea4335" rx="3"/>
-  <text x="580" y="225" text-anchor="middle" fill="white" font-size="11">Service</text>
-</svg>
+![working_with_namespaces](../../../../svg/courses/devops/k8s-introduction/04_cli_and_basics/working_with_namespaces.svg)
 
 ---
 
@@ -520,32 +434,7 @@ kubectl expose deployment my-deployment \
 
 ## Service Types
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Service Types</text>
-  <rect x="100" y="100" width="150" height="200" fill="#4285f4" rx="5"/>
-  <text x="175" y="130" text-anchor="middle" fill="white" font-weight="bold">ClusterIP</text>
-  <text x="175" y="155" text-anchor="middle" fill="white" font-size="11">Internal only</text>
-  <circle cx="175" cy="200" r="20" fill="white"/>
-  <text x="175" y="205" text-anchor="middle" font-size="10">Pod</text>
-  <circle cx="175" cy="250" r="20" fill="white"/>
-  <text x="175" y="255" text-anchor="middle" font-size="10">Pod</text>
-  <rect x="275" y="100" width="150" height="200" fill="#34a853" rx="5"/>
-  <text x="350" y="130" text-anchor="middle" fill="white" font-weight="bold">NodePort</text>
-  <text x="350" y="155" text-anchor="middle" fill="white" font-size="11">Node IP:Port</text>
-  <rect x="295" y="180" width="110" height="30" fill="white" rx="3"/>
-  <text x="350" y="200" text-anchor="middle" font-size="10">30000-32767</text>
-  <rect x="450" y="100" width="150" height="200" fill="#fbbc04" rx="5"/>
-  <text x="525" y="130" text-anchor="middle" font-weight="bold">LoadBalancer</text>
-  <text x="525" y="155" text-anchor="middle" font-size="11">External LB</text>
-  <rect x="470" y="180" width="110" height="30" fill="white" rx="3"/>
-  <text x="525" y="200" text-anchor="middle" font-size="10">Cloud Provider</text>
-  <rect x="625" y="100" width="125" height="200" fill="#ea4335" rx="5"/>
-  <text x="687" y="130" text-anchor="middle" fill="white" font-weight="bold">ExternalName</text>
-  <text x="687" y="155" text-anchor="middle" fill="white" font-size="11">DNS CNAME</text>
-  <rect x="635" y="180" width="105" height="30" fill="white" rx="3"/>
-  <text x="687" y="200" text-anchor="middle" font-size="10">External DNS</text>
-</svg>
+![service_types](../../../../svg/courses/devops/k8s-introduction/04_cli_and_basics/service_types.svg)
 
 ---
 

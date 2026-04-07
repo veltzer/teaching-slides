@@ -1,0 +1,37 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Packet Flow Through Netfilter Hooks</text>
+  <rect x="10" y="75" width="65" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="42" y="97" text-anchor="middle" font-size="10" font-weight="bold">NIC In</text>
+  <rect x="95" y="75" width="80" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="135" y="90" text-anchor="middle" font-size="10" font-weight="bold">PRE-</text>
+  <text x="135" y="102" text-anchor="middle" font-size="10" font-weight="bold">ROUTING</text>
+  <rect x="195" y="40" width="60" height="30" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="60" text-anchor="middle" font-size="10" font-weight="bold">Routing</text>
+  <rect x="195" y="120" width="70" height="30" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="230" y="140" text-anchor="middle" font-size="10" font-weight="bold">FORWARD</text>
+  <rect x="275" y="75" width="60" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="305" y="97" text-anchor="middle" font-size="10" font-weight="bold">INPUT</text>
+  <rect x="355" y="75" width="60" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="385" y="97" text-anchor="middle" font-size="10" font-weight="bold">Local</text>
+  <rect x="435" y="75" width="60" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="465" y="97" text-anchor="middle" font-size="10" font-weight="bold">OUTPUT</text>
+  <rect x="435" y="120" width="80" height="30" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="475" y="133" text-anchor="middle" font-size="10" font-weight="bold">POSTROUTING</text>
+  <rect x="535" y="75" width="55" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="562" y="97" text-anchor="middle" font-size="10" font-weight="bold">NIC Out</text>
+  <line x1="75" y1="92" x2="95" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="175" y1="85" x2="195" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="225" y1="70" x2="275" y2="88" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="225" y1="70" x2="225" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="335" y1="92" x2="355" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="415" y1="92" x2="435" y2="92" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="265" y1="135" x2="435" y2="135" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="495" y1="92" x2="495" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <line x1="515" y1="135" x2="535" y2="100" stroke="#333" stroke-width="1.5" marker-end="url(#arrowd1_07_netfilter)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#666">5 hook points intercept packets at different stages of processing</text>
+  <defs>
+    <marker id="arrowd1_07_netfilter" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,38 @@
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- View component -->
+  <rect x="50" y="100" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="100" y="130" text-anchor="middle" font-size="14" font-weight="bold">View</text>
+
+  <!-- ViewModel component -->
+  <rect x="250" y="100" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="130" text-anchor="middle" font-size="14" font-weight="bold">ViewModel</text>
+
+  <!-- Model component -->
+  <rect x="450" y="100" width="100" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="130" text-anchor="middle" font-size="14" font-weight="bold">Model</text>
+
+  <!-- Bidirectional arrows between components -->
+  <line x1="150" y1="125" x2="250" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrow_mvvm)"/>
+  <line x1="250" y1="135" x2="150" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow_mvvm)"/>
+
+  <line x1="350" y1="125" x2="450" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arrow_mvvm)"/>
+  <line x1="450" y1="135" x2="350" y2="135" stroke="#333" stroke-width="2" marker-end="url(#arrow_mvvm)"/>
+
+  <!-- Observes relationship -->
+  <path d="M 100 100 Q 100 60, 300 60 Q 300 80, 300 100" stroke="#4c9aff" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow_mvvm)"/>
+  <text x="200" y="55" text-anchor="middle" font-size="11" fill="#4c9aff">Observes</text>
+
+  <!-- Updates relationship -->
+  <path d="M 300 150 Q 300 180, 500 180 Q 500 170, 500 150" stroke="#ff6b6b" stroke-width="2" fill="none" marker-end="url(#arrow_mvvm)"/>
+  <text x="400" y="195" text-anchor="middle" font-size="11" fill="#ff6b6b">Updates</text>
+
+  <!-- Notifies relationship -->
+  <path d="M 500 100 Q 500 40, 300 40 Q 300 60, 300 100" stroke="#51cf66" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow_mvvm)"/>
+  <text x="400" y="35" text-anchor="middle" font-size="11" fill="#51cf66">Notifies</text>
+
+  <defs>
+    <marker id="arrow_mvvm" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

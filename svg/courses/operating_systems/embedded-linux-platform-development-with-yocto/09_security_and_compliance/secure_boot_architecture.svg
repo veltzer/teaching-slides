@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="175" y="85" text-anchor="middle" font-size="12" font-weight="bold">ROM Code</text>
+
+  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="400" y="85" text-anchor="middle" font-size="12" font-weight="bold">U-Boot (Signed)</text>
+
+  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="625" y="85" text-anchor="middle" font-size="12" font-weight="bold">Kernel (Signed)</text>
+
+  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="175" y="235" text-anchor="middle" font-size="12" font-weight="bold">RootFS (dmverity)</text>
+
+  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="400" y="235" text-anchor="middle" font-size="12" font-weight="bold">Applications</text>
+
+  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
+  <text x="625" y="235" text-anchor="middle" font-size="12" font-weight="bold">Secure Runtime</text>
+
+  <path d="M 250 80 L 325 80" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
+  <path d="M 475 80 L 550 80" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
+  <path d="M 625 110 L 175 200" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
+  <path d="M 250 235 L 325 235" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
+  <path d="M 475 235 L 550 235" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
+
+  <text x="175" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
+  <text x="400" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
+  <text x="625" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
+
+  <defs>
+    <marker id="s2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#00cc00"/>
+    </marker>
+  </defs>
+</svg>

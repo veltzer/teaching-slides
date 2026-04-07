@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd4_06_handling_logs" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="11" fill="#555">Log rotation prevents disk exhaustion</text>
+  <rect x="30" y="30" width="160" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="110" y="52" text-anchor="middle" font-size="11" font-weight="bold">Active Log</text>
+  <text x="110" y="70" text-anchor="middle" font-size="10">container-json.log</text>
+  <text x="110" y="87" text-anchor="middle" font-size="10" fill="#555">max-size: 10m</text>
+  <line x1="190" y1="67" x2="228" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_06_handling_logs)"/>
+  <text x="210" y="58" text-anchor="middle" font-size="10" fill="#666">rotate</text>
+  <rect x="230" y="30" width="160" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="310" y="52" text-anchor="middle" font-size="11" font-weight="bold">Rotated Logs</text>
+  <text x="310" y="70" text-anchor="middle" font-size="10">log.1, log.2, log.3</text>
+  <text x="310" y="87" text-anchor="middle" font-size="10" fill="#555">max-file: 3</text>
+  <line x1="390" y1="67" x2="428" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_06_handling_logs)"/>
+  <text x="410" y="58" text-anchor="middle" font-size="10" fill="#666">oldest</text>
+  <rect x="430" y="30" width="150" height="75" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="505" y="52" text-anchor="middle" font-size="11" font-weight="bold">Discarded</text>
+  <text x="505" y="70" text-anchor="middle" font-size="10">Oldest file removed</text>
+  <text x="505" y="87" text-anchor="middle" font-size="10" fill="#555">when limit reached</text>
+  <rect x="30" y="125" width="550" height="55" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="305" y="147" text-anchor="middle" font-size="10" fill="#555">Config: --log-opt max-size=10m --log-opt max-file=3</text>
+  <text x="305" y="165" text-anchor="middle" font-size="10" fill="#555">Total max disk: max-size x max-file = 30MB per container</text>
+</svg>

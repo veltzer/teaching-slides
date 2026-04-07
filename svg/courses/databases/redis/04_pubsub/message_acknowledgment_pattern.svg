@@ -1,0 +1,37 @@
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd7_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Lifelines -->
+  <line x1="100" y1="55" x2="100" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="300" y1="55" x2="300" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="500" y1="55" x2="500" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Headers -->
+  <rect x="40" y="15" width="120" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="4"/>
+  <text x="100" y="37" text-anchor="middle" font-size="11" font-weight="bold">Publisher</text>
+  <rect x="240" y="15" width="120" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="4"/>
+  <text x="300" y="37" text-anchor="middle" font-size="11" font-weight="bold">Redis</text>
+  <rect x="440" y="15" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="4"/>
+  <text x="500" y="37" text-anchor="middle" font-size="11" font-weight="bold">Subscriber</text>
+  <!-- Step 1: Publish with msg ID -->
+  <line x1="100" y1="75" x2="298" y2="75" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
+  <text x="200" y="70" text-anchor="middle" font-size="10" fill="#1565c0">1. PUBLISH task:{id:"t1", data:...}</text>
+  <!-- Step 2: Deliver -->
+  <line x1="300" y1="100" x2="498" y2="100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
+  <text x="400" y="95" text-anchor="middle" font-size="10" fill="#2e7d32">2. deliver message</text>
+  <!-- Step 3: Process -->
+  <rect x="475" y="110" width="50" height="25" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="500" y="127" text-anchor="middle" font-size="10" fill="#2e7d32">process</text>
+  <!-- Step 4: ACK back -->
+  <line x1="500" y1="150" x2="302" y2="150" stroke="#e65100" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
+  <text x="400" y="145" text-anchor="middle" font-size="10" fill="#e65100">3. PUBLISH ack:{id:"t1"}</text>
+  <!-- Step 5: Deliver ACK -->
+  <line x1="300" y1="175" x2="102" y2="175" stroke="#e65100" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
+  <text x="200" y="170" text-anchor="middle" font-size="10" fill="#e65100">4. deliver ACK</text>
+  <!-- Timeout note -->
+  <rect x="20" y="195" width="180" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="4"/>
+  <text x="110" y="212" text-anchor="middle" font-size="10" fill="#c62828">If no ACK within timeout:</text>
+  <text x="110" y="226" text-anchor="middle" font-size="10" fill="#c62828">re-publish message</text>
+</svg>

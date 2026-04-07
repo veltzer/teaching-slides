@@ -54,22 +54,7 @@ CREATE INDEX idx_products_price ON products(price);
 
 ## Query Optimization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Query Performance Analysis</text>
-  <rect x="150" y="100" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="125" fill="white" font-size="12">Before: SELECT * FROM orders WHERE status = 'pending'</text>
-  <text x="550" y="125" fill="white" font-size="12">Time: 2.5s</text>
-  <rect x="150" y="150" width="500" height="80" fill="#27AE60" rx="5"/>
-  <text x="160" y="175" fill="white" font-size="12">After: WITH pending_orders AS (</text>
-  <text x="180" y="195" fill="white" font-size="12">SELECT id, customer_id, total FROM orders</text>
-  <text x="180" y="215" fill="white" font-size="12">WHERE status = 'pending' AND created_at > NOW() - INTERVAL '7 days'</text>
-  <text x="160" y="235" fill="white" font-size="12">) SELECT * FROM pending_orders;</text>
-  <text x="550" y="195" fill="white" font-size="12">Time: 0.08s</text>
-  <rect x="150" y="250" width="500" height="60" fill="#3498DB" rx="5"/>
-  <text x="160" y="275" fill="white" font-size="12">Optimizations Applied:</text>
-  <text x="160" y="295" fill="white" font-size="12">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
-</svg>
+![query_optimization](../../../../svg/courses/ai/developing-using-ai-short/07_tasks/query_optimization.svg)
 
 ---
 
@@ -395,30 +380,7 @@ const typeDefs = `
 
 ## Authentication/Authorization
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Auth Flow</text>
-  <rect x="150" y="110" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="210" y="145" text-anchor="middle" fill="white" font-size="12">Login</text>
-  <rect x="340" y="110" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="12">JWT Token</text>
-  <rect x="530" y="110" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="590" y="145" text-anchor="middle" fill="white" font-size="12">Access</text>
-  <path d="M 270 140 L 340 140" stroke="white" stroke-width="2" marker-end="url(#auth1)"/>
-  <path d="M 460 140 L 530 140" stroke="white" stroke-width="2" marker-end="url(#auth2)"/>
-  <rect x="250" y="200" width="300" height="100" fill="#34495E" rx="5"/>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">Middleware validates token</text>
-  <text x="400" y="250" text-anchor="middle" fill="white" font-size="12">Checks permissions</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="12">Refreshes if needed</text>
-  <defs>
-    <marker id="auth1" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-    <marker id="auth2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="white"/>
-    </marker>
-  </defs>
-</svg>
+![authentication_authorization](../../../../svg/courses/ai/developing-using-ai-short/07_tasks/authentication_authorization.svg)
 
 ---
 
@@ -619,30 +581,7 @@ resource "aws_db_instance" "postgres" {
 
 ## Mobile Development: Cross-Platform
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="40" text-anchor="middle" font-size="18" font-weight="bold">Cross-Platform Development Options</text>
-  <rect x="50" y="70" width="220" height="280" fill="#61DAFB" rx="10"/>
-  <text x="160" y="100" text-anchor="middle" fill="#282C34" font-size="16" font-weight="bold">React Native</text>
-  <text x="160" y="130" text-anchor="middle" font-size="12">Performance: ⭐⭐⭐⭐</text>
-  <text x="160" y="155" text-anchor="middle" font-size="12">Learning: ⭐⭐⭐</text>
-  <text x="160" y="180" text-anchor="middle" font-size="12">• JavaScript/React</text>
-  <text x="160" y="205" text-anchor="middle" font-size="12">• Native modules</text>
-  <text x="160" y="230" text-anchor="middle" font-size="12">• Hot reload</text>
-  <rect x="290" y="70" width="220" height="280" fill="#02569B" rx="10"/>
-  <text x="400" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Flutter</text>
-  <text x="400" y="130" text-anchor="middle" fill="white" font-size="12">Performance: ⭐⭐⭐⭐⭐</text>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐⭐⭐</text>
-  <text x="400" y="180" text-anchor="middle" fill="white" font-size="12">• Dart language</text>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="12">• Custom rendering</text>
-  <text x="400" y="230" text-anchor="middle" fill="white" font-size="12">• Rich widgets</text>
-  <rect x="530" y="70" width="220" height="280" fill="#007ACC" rx="10"/>
-  <text x="640" y="100" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Ionic</text>
-  <text x="640" y="130" text-anchor="middle" fill="white" font-size="12">Performance: ⭐⭐⭐</text>
-  <text x="640" y="155" text-anchor="middle" fill="white" font-size="12">Learning: ⭐⭐</text>
-  <text x="640" y="180" text-anchor="middle" fill="white" font-size="12">• Web technologies</text>
-  <text x="640" y="205" text-anchor="middle" fill="white" font-size="12">• Angular/React/Vue</text>
-  <text x="640" y="230" text-anchor="middle" fill="white" font-size="12">• PWA support</text>
-</svg>
+![mobile_development_cross_platform](../../../../svg/courses/ai/developing-using-ai-short/07_tasks/mobile_development_cross_platform.svg)
 
 ---
 
@@ -701,22 +640,7 @@ class PlatformFeatures {
 
 ## Microservices Architecture
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Microservices Communication</text>
-  <rect x="150" y="110" width="120" height="60" fill="#3498DB" rx="5"/>
-  <text x="210" y="145" text-anchor="middle" fill="white" font-size="12">API Gateway</text>
-  <rect x="320" y="110" width="120" height="60" fill="#2ECC71" rx="5"/>
-  <text x="380" y="145" text-anchor="middle" fill="white" font-size="12">Service Mesh</text>
-  <rect x="490" y="110" width="120" height="60" fill="#E74C3C" rx="5"/>
-  <text x="550" y="145" text-anchor="middle" fill="white" font-size="12">Message Queue</text>
-  <rect x="150" y="200" width="120" height="60" fill="#F39C12" rx="5"/>
-  <text x="210" y="235" text-anchor="middle" fill="white" font-size="12">gRPC</text>
-  <rect x="320" y="200" width="120" height="60" fill="#9B59B6" rx="5"/>
-  <text x="380" y="235" text-anchor="middle" fill="white" font-size="12">GraphQL</text>
-  <rect x="490" y="200" width="120" height="60" fill="#1ABC9C" rx="5"/>
-  <text x="550" y="235" text-anchor="middle" fill="white" font-size="12">WebSocket</text>
-</svg>
+![microservices_architecture](../../../../svg/courses/ai/developing-using-ai-short/07_tasks/microservices_architecture.svg)
 
 ---
 

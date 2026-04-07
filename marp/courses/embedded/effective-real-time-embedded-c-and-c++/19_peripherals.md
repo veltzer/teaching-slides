@@ -13,43 +13,7 @@ Embedded systems interact with the physical world through peripherals:
 - **DMA**: Direct Memory Access controller
 - **Timers**: Hardware timing and PWM generation
 
-<svg width="700" height="300" viewBox="0 0 700 300">
-  <rect x="300" y="100" width="100" height="60" fill="#ffecb3" stroke="#f57f17" stroke-width="3"/>
-  <text x="350" y="135" text-anchor="middle" font-size="14" font-weight="bold">MCU Core</text>
-
-  <rect x="50" y="50" width="80" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="90" y="75" text-anchor="middle" font-size="12">GPIO</text>
-
-  <rect x="150" y="50" width="80" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="190" y="75" text-anchor="middle" font-size="12">UART</text>
-
-  <rect x="250" y="50" width="80" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="290" y="75" text-anchor="middle" font-size="12">ADC</text>
-
-  <rect x="420" y="50" width="80" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="460" y="75" text-anchor="middle" font-size="12">SPI</text>
-
-  <rect x="520" y="50" width="80" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="560" y="75" text-anchor="middle" font-size="12">I2C</text>
-
-  <rect x="150" y="200" width="80" height="40" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
-  <text x="190" y="225" text-anchor="middle" font-size="12">DMA</text>
-
-  <rect x="300" y="200" width="80" height="40" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
-  <text x="340" y="225" text-anchor="middle" font-size="12">Timers</text>
-
-  <rect x="450" y="200" width="80" height="40" fill="#fce4ec" stroke="#ad1457" stroke-width="2"/>
-  <text x="490" y="225" text-anchor="middle" font-size="12">NVIC</text>
-
-  <line x1="300" y1="130" x2="130" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="300" y1="130" x2="190" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="300" y1="130" x2="290" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="400" y1="130" x2="460" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="400" y1="130" x2="560" y2="90" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="160" x2="190" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="160" x2="340" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="400" y1="160" x2="490" y2="200" stroke="#333" stroke-width="2"/>
-</svg>
+![overview_of_embedded_peripherals](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/overview_of_embedded_peripherals.svg)
 
 ---
 
@@ -161,22 +125,7 @@ UART provides serial communication:
 - **Full duplex**: Simultaneous TX and RX
 - **Flow control**: RTS/CTS hardware handshaking
 
-<svg width="600" height="200" viewBox="0 0 600 200">
-  <rect x="50" y="50" width="120" height="80" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="110" y="95" text-anchor="middle" font-size="14">Device A</text>
-
-  <rect x="430" y="50" width="120" height="80" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="490" y="95" text-anchor="middle" font-size="14">Device B</text>
-
-  <line x1="170" y1="70" x2="430" y2="70" stroke="#d32f2f" stroke-width="3"/>
-  <text x="300" y="65" text-anchor="middle" font-size="12">TX → RX</text>
-
-  <line x1="430" y1="110" x2="170" y2="110" stroke="#388e3c" stroke-width="3"/>
-  <text x="300" y="125" text-anchor="middle" font-size="12">RX ← TX</text>
-
-  <line x1="300" y1="150" x2="300" y2="170" stroke="#333" stroke-width="2"/>
-  <text x="300" y="185" text-anchor="middle" font-size="12">GND</text>
-</svg>
+![universal_asynchronous_receiver_transmitter_uart](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/universal_asynchronous_receiver_transmitter_uart.svg)
 
 ---
 
@@ -317,26 +266,7 @@ ADC converts analog voltages to digital values:
 - **Sampling rate**: Conversions per second
 - **Multiple channels**: Multiplexed inputs
 
-<svg width="600" height="250" viewBox="0 0 600 250">
-  <path d="M50 200 Q 150 50 250 150 T 450 100" stroke="#d32f2f" stroke-width="3" fill="none"/>
-  <text x="250" y="30" text-anchor="middle" font-size="14">Analog Signal</text>
-
-  <rect x="470" y="50" width="80" height="100" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="510" y="105" text-anchor="middle" font-size="14">ADC</text>
-
-  <line x1="450" y1="100" x2="470" y2="100" stroke="#333" stroke-width="2"/>
-
-  <g transform="translate(480, 180)">
-    <rect x="0" y="0" width="8" height="20" fill="#4caf50"/>
-    <rect x="10" y="-5" width="8" height="25" fill="#4caf50"/>
-    <rect x="20" y="5" width="8" height="15" fill="#4caf50"/>
-    <rect x="30" y="-10" width="8" height="30" fill="#4caf50"/>
-    <rect x="40" y="0" width="8" height="20" fill="#4caf50"/>
-    <text x="25" y="40" text-anchor="middle" font-size="12">Digital Values</text>
-  </g>
-
-  <text x="250" y="230" text-anchor="middle" font-size="12">Time →</text>
-</svg>
+![analog_to_digital_converter_adc](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/analog_to_digital_converter_adc.svg)
 
 ---
 
@@ -494,28 +424,7 @@ SPI provides high-speed synchronous communication:
 - **Four wires**: MOSI, MISO, SCK, CS/SS
 - **High speed**: Typically MHz range
 
-<svg width="600" height="300" viewBox="0 0 600 300">
-  <rect x="50" y="100" width="120" height="100" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="110" y="155" text-anchor="middle" font-size="14">SPI Master</text>
-
-  <rect x="430" y="100" width="120" height="100" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="490" y="155" text-anchor="middle" font-size="14">SPI Slave</text>
-
-  <line x1="170" y1="120" x2="430" y2="120" stroke="#d32f2f" stroke-width="2"/>
-  <text x="300" y="115" text-anchor="middle" font-size="10">MOSI</text>
-
-  <line x1="430" y1="140" x2="170" y2="140" stroke="#388e3c" stroke-width="2"/>
-  <text x="300" y="135" text-anchor="middle" font-size="10">MISO</text>
-
-  <line x1="170" y1="160" x2="430" y2="160" stroke="#ff9800" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="10">SCK</text>
-
-  <line x1="170" y1="180" x2="430" y2="180" stroke="#9c27b0" stroke-width="2"/>
-  <text x="300" y="175" text-anchor="middle" font-size="10">CS/SS</text>
-
-  <text x="110" y="80" text-anchor="middle" font-size="12">Master controls clock</text>
-  <text x="490" y="230" text-anchor="middle" font-size="12">Slave responds to clock</text>
-</svg>
+![serial_peripheral_interface_spi](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/serial_peripheral_interface_spi.svg)
 
 ---
 
@@ -647,38 +556,7 @@ I2C provides multi-master, multi-slave communication:
 - **Open drain**: Requires pull-up resistors
 - **Arbitration**: Multiple masters can coexist
 
-<svg width="600" height="250" viewBox="0 0 600 250">
-  <rect x="50" y="50" width="80" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="90" y="85" text-anchor="middle" font-size="12">Master</text>
-
-  <rect x="200" y="50" width="80" height="60" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="240" y="85" text-anchor="middle" font-size="12">Slave 1</text>
-
-  <rect x="350" y="50" width="80" height="60" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="390" y="85" text-anchor="middle" font-size="12">Slave 2</text>
-
-  <rect x="500" y="50" width="80" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="540" y="85" text-anchor="middle" font-size="12">Slave 3</text>
-
-  <line x1="50" y1="140" x2="580" y2="140" stroke="#d32f2f" stroke-width="3"/>
-  <text x="315" y="130" text-anchor="middle" font-size="12">SDA (Data)</text>
-
-  <line x1="50" y1="160" x2="580" y2="160" stroke="#388e3c" stroke-width="3"/>
-  <text x="315" y="175" text-anchor="middle" font-size="12">SCL (Clock)</text>
-
-  <line x1="90" y1="110" x2="90" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="240" y1="110" x2="240" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="390" y1="110" x2="390" y2="140" stroke="#333" stroke-width="2"/>
-  <line x1="540" y1="110" x2="540" y2="140" stroke="#333" stroke-width="2"/>
-
-  <line x1="90" y1="140" x2="90" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="240" y1="140" x2="240" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="390" y1="140" x2="390" y2="160" stroke="#333" stroke-width="2"/>
-  <line x1="540" y1="140" x2="540" y2="160" stroke="#333" stroke-width="2"/>
-
-  <circle cx="315" cy="200" r="8" fill="#ff9800"/>
-  <text x="315" y="220" text-anchor="middle" font-size="10">Pull-up resistors</text>
-</svg>
+![inter_integrated_circuit_i2c](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/inter_integrated_circuit_i2c.svg)
 
 ---
 
@@ -872,33 +750,7 @@ DMA enables data transfer without CPU intervention:
 - **Peripheral-to-Memory**: Receive data from peripherals
 - **Circular mode**: Continuous operation for streaming
 
-<svg width="600" height="300" viewBox="0 0 600 300">
-  <rect x="50" y="50" width="100" height="60" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="100" y="85" text-anchor="middle" font-size="14">Memory</text>
-
-  <rect x="250" y="120" width="100" height="60" fill="#ffecb3" stroke="#f57f17" stroke-width="2"/>
-  <text x="300" y="155" text-anchor="middle" font-size="14">DMA</text>
-
-  <rect x="450" y="50" width="100" height="60" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="500" y="85" text-anchor="middle" font-size="14">Peripheral</text>
-
-  <rect x="250" y="220" width="100" height="60" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="300" y="255" text-anchor="middle" font-size="14">CPU</text>
-
-  <path d="M150 80 Q 200 100 250 140" stroke="#d32f2f" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="200" y="95" text-anchor="middle" font-size="12">Direct Transfer</text>
-
-  <path d="M350 140 Q 400 100 450 80" stroke="#d32f2f" stroke-width="3" fill="none" marker-end="url(#arrowhead)"/>
-
-  <path d="M300 220 Q 200 200 150 80" stroke="#999" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
-  <text x="200" y="190" text-anchor="middle" font-size="10">CPU freed</text>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#d32f2f"/>
-    </marker>
-  </defs>
-</svg>
+![direct_memory_access_dma](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/direct_memory_access_dma.svg)
 
 ---
 

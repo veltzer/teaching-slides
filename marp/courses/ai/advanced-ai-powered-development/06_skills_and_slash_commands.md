@@ -196,19 +196,7 @@ instructions: |
 
 ## Building Complex Workflows from Simple Skills
 
-<svg viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:100px;">
-  <rect x="10" y="30" width="120" height="40" rx="6" fill="#2196F3" opacity="0.8"/>
-  <text x="70" y="55" text-anchor="middle" fill="white" font-size="12">lint</text>
-  <line x1="130" y1="50" x2="170" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="170" y="30" width="120" height="40" rx="6" fill="#4CAF50" opacity="0.8"/>
-  <text x="230" y="55" text-anchor="middle" fill="white" font-size="12">review</text>
-  <line x1="290" y1="50" x2="330" y2="50" stroke="#666" stroke-width="2"/>
-  <rect x="330" y="30" width="120" height="40" rx="6" fill="#FF9800" opacity="0.8"/>
-  <text x="390" y="55" text-anchor="middle" fill="white" font-size="12">commit</text>
-  <line x1="450" y1="50" x2="490" y2="50" stroke="#666" stroke-width="2"/>
-  <rect x="490" y="30" width="100" height="40" rx="6" fill="#9C27B0" opacity="0.8"/>
-  <text x="540" y="55" text-anchor="middle" fill="white" font-size="12">create-pr</text>
-</svg>
+![building_complex_workflows_from_simple_skills](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/building_complex_workflows_from_simple_skills.svg)
 
 ```yaml
 name: ship-it
@@ -454,14 +442,7 @@ claude skills override review --local
 
 ## Project-Level vs User-Level vs Team-Level
 
-<svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
-  <rect x="50" y="10" width="400" height="40" rx="6" fill="#9C27B0" opacity="0.7"/>
-  <text x="250" y="35" text-anchor="middle" fill="white" font-size="12">User-level (~/.claude/skills/)</text>
-  <rect x="100" y="60" width="300" height="40" rx="6" fill="#2196F3" opacity="0.7"/>
-  <text x="250" y="85" text-anchor="middle" fill="white" font-size="12">Team-level (.claude/teams/backend/)</text>
-  <rect x="150" y="110" width="200" height="40" rx="6" fill="#4CAF50" opacity="0.7"/>
-  <text x="250" y="135" text-anchor="middle" fill="white" font-size="12">Project-level (.claude/skills/)</text>
-</svg>
+![project_level_vs_user_level_vs_team_level](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/project_level_vs_user_level_vs_team_level.svg)
 
 - Resolution order: project > team > user (most specific wins)
 - User-level skills provide personal defaults across all projects
@@ -511,18 +492,7 @@ claude skills audit --check-versions
 
 ## Automating Actions Around Tool Calls
 
-<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:110px;">
-  <rect x="10" y="40" width="100" height="40" rx="6" fill="#F44336" opacity="0.8"/>
-  <text x="60" y="65" text-anchor="middle" fill="white" font-size="11">pre-hook</text>
-  <line x1="110" y1="60" x2="150" y2="60" stroke="#666" stroke-width="2"/>
-  <rect x="150" y="40" width="140" height="40" rx="6" fill="#2196F3" opacity="0.8"/>
-  <text x="220" y="65" text-anchor="middle" fill="white" font-size="11">tool execution</text>
-  <line x1="290" y1="60" x2="330" y2="60" stroke="#666" stroke-width="2"/>
-  <rect x="330" y="40" width="100" height="40" rx="6" fill="#4CAF50" opacity="0.8"/>
-  <text x="380" y="65" text-anchor="middle" fill="white" font-size="11">post-hook</text>
-  <text x="60" y="30" text-anchor="middle" fill="#999" font-size="10">validate/block</text>
-  <text x="380" y="30" text-anchor="middle" fill="#999" font-size="10">notify/log</text>
-</svg>
+![automating_actions_around_tool_calls](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/automating_actions_around_tool_calls.svg)
 
 ```yaml
 # .claude/hooks.yaml

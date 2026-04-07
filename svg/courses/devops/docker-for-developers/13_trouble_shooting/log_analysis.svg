@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd5_12_trouble_shooting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Log Collection Pipeline</text>
+  <rect x="20" y="35" width="120" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="80" y="55" text-anchor="middle" font-size="10" font-weight="bold">Container</text>
+  <text x="80" y="73" text-anchor="middle" font-size="10">stdout/stderr</text>
+  <line x1="140" y1="62" x2="170" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_12_trouble_shooting)"/>
+  <rect x="170" y="35" width="120" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="230" y="55" text-anchor="middle" font-size="10" font-weight="bold">Log Driver</text>
+  <text x="230" y="73" text-anchor="middle" font-size="10">json-file, syslog</text>
+  <line x1="290" y1="62" x2="320" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_12_trouble_shooting)"/>
+  <rect x="320" y="35" width="120" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="380" y="55" text-anchor="middle" font-size="10" font-weight="bold">Aggregator</text>
+  <text x="380" y="73" text-anchor="middle" font-size="10">Fluentd / ELK</text>
+  <line x1="440" y1="62" x2="470" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_12_trouble_shooting)"/>
+  <rect x="470" y="35" width="110" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="525" y="55" text-anchor="middle" font-size="10" font-weight="bold">Search</text>
+  <text x="525" y="73" text-anchor="middle" font-size="10">Kibana, Grafana</text>
+  <rect x="40" y="110" width="520" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5" stroke-dasharray="4,2"/>
+  <text x="300" y="128" text-anchor="middle" font-size="10" font-weight="bold">Quick commands:</text>
+  <text x="300" y="142" text-anchor="middle" font-size="10">docker logs -f --tail 100 --since 1h container_name</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#555">Always log to stdout/stderr -- let Docker handle log routing</text>
+</svg>

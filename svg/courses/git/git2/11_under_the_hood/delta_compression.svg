@@ -1,0 +1,36 @@
+<svg viewBox="0 0 600 250" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="bold">Delta Compression Example</text>
+
+  <!-- Base object -->
+  <rect x="50" y="50" width="120" height="80" fill="#3498db" rx="5"/>
+  <text x="110" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Base Object</text>
+  <text x="110" y="95" text-anchor="middle" fill="white" font-size="10">Full Content</text>
+  <text x="110" y="110" text-anchor="middle" fill="white" font-size="10">1000 bytes</text>
+
+  <!-- Delta object -->
+  <rect x="240" y="50" width="120" height="80" fill="#e74c3c" rx="5"/>
+  <text x="300" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Delta Object</text>
+  <text x="300" y="95" text-anchor="middle" fill="white" font-size="10">Changes Only</text>
+  <text x="300" y="110" text-anchor="middle" fill="white" font-size="10">50 bytes</text>
+
+  <!-- Result -->
+  <rect x="430" y="50" width="120" height="80" fill="#2ecc71" rx="5"/>
+  <text x="490" y="75" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Reconstructed</text>
+  <text x="490" y="95" text-anchor="middle" fill="white" font-size="10">Base + Delta</text>
+  <text x="490" y="110" text-anchor="middle" fill="white" font-size="10">1000 bytes</text>
+
+  <!-- Arrows -->
+  <line x1="170" y1="90" x2="230" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="360" y1="90" x2="420" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <text x="200" y="85" text-anchor="middle" font-size="10">+</text>
+  <text x="390" y="85" text-anchor="middle" font-size="10">=</text>
+
+  <text x="300" y="170" text-anchor="middle" font-size="12">Space saved: 95% in this example</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -41,23 +41,7 @@ public:
 
 ## Template Method Structure
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="10" width="200" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="250" y="35" text-anchor="middle" font-size="13" font-weight="bold">AbstractClass</text>
-  <text x="250" y="55" text-anchor="middle" font-size="11">+ templateMethod()</text>
-  <text x="250" y="72" text-anchor="middle" font-size="10" font-style="italic">+ step1(), step2()</text>
-
-  <rect x="50" y="160" width="160" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="130" y="180" text-anchor="middle" font-size="11">ConcreteClassA</text>
-  <text x="130" y="198" text-anchor="middle" font-size="10">+ step1(), step2()</text>
-
-  <rect x="280" y="160" width="160" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="360" y="180" text-anchor="middle" font-size="11">ConcreteClassB</text>
-  <text x="360" y="198" text-anchor="middle" font-size="10">+ step1(), step2()</text>
-
-  <line x1="130" y1="160" x2="210" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="360" y1="160" x2="290" y2="90" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-</svg>
+![template_method_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/20_template_method/template_method_structure.svg)
 
 ---
 

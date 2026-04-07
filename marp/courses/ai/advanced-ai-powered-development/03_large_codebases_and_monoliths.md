@@ -70,21 +70,7 @@ Mitigations:
 - Circular dependencies that defy static analysis
 - Event-driven flows spanning dozens of files
 
-<svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="20" width="100" height="50" rx="8" fill="#4a90d9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="60" y="50" text-anchor="middle" fill="white" font-size="12">Module A</text>
-  <rect x="200" y="20" width="100" height="50" rx="8" fill="#4a90d9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="250" y="50" text-anchor="middle" fill="white" font-size="12">Module B</text>
-  <rect x="390" y="20" width="100" height="50" rx="8" fill="#4a90d9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="440" y="50" text-anchor="middle" fill="white" font-size="12">Module C</text>
-  <rect x="200" y="100" width="100" height="50" rx="8" fill="#e67e22" stroke="#2c3e50" stroke-width="2"/>
-  <text x="250" y="130" text-anchor="middle" fill="white" font-size="12">Shared DB</text>
-  <line x1="110" y1="45" x2="200" y2="45" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
-  <line x1="300" y1="45" x2="390" y2="45" stroke="#2c3e50" stroke-width="2" stroke-dasharray="5,5"/>
-  <line x1="60" y1="70" x2="210" y2="100" stroke="#c0392b" stroke-width="2"/>
-  <line x1="250" y1="70" x2="250" y2="100" stroke="#c0392b" stroke-width="2"/>
-  <line x1="440" y1="70" x2="290" y2="100" stroke="#c0392b" stroke-width="2"/>
-</svg>
+![implicit_conventions_and_cross_module_dependencies](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/implicit_conventions_and_cross_module_dependencies.svg)
 
 ---
 
@@ -273,20 +259,7 @@ Navigation workflow:
 1. "Show me the database migration for the orders table"
 ```
 
-<svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="5" y="40" width="100" height="40" rx="6" fill="#2980b9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="55" y="65" text-anchor="middle" fill="white" font-size="11">Definition</text>
-  <rect x="125" y="40" width="100" height="40" rx="6" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="175" y="65" text-anchor="middle" fill="white" font-size="11">Call Sites</text>
-  <rect x="245" y="40" width="100" height="40" rx="6" fill="#8e44ad" stroke="#2c3e50" stroke-width="2"/>
-  <text x="295" y="65" text-anchor="middle" fill="white" font-size="11">Unit Tests</text>
-  <rect x="365" y="40" width="70" height="40" rx="6" fill="#d35400" stroke="#2c3e50" stroke-width="2"/>
-  <text x="400" y="65" text-anchor="middle" fill="white" font-size="10">E2E Tests</text>
-  <line x1="105" y1="60" x2="125" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="225" y1="60" x2="245" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="345" y1="60" x2="365" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="220" y="20" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">File Navigation Chain</text>
-</svg>
+![multi_file_navigation_workflows_in_practice](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/multi_file_navigation_workflows_in_practice.svg)
 
 ---
 
@@ -298,23 +271,7 @@ Navigation workflow:
 - Map the lifecycle of a request across service boundaries
 - Identify shared mutable state and side effects
 
-<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg">
-  <rect x="5" y="50" width="90" height="40" rx="6" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="50" y="75" text-anchor="middle" fill="white" font-size="11">API Handler</text>
-  <rect x="115" y="50" width="90" height="40" rx="6" fill="#2980b9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="160" y="75" text-anchor="middle" fill="white" font-size="11">Validator</text>
-  <rect x="225" y="50" width="90" height="40" rx="6" fill="#8e44ad" stroke="#2c3e50" stroke-width="2"/>
-  <text x="270" y="75" text-anchor="middle" fill="white" font-size="11">Service</text>
-  <rect x="335" y="50" width="90" height="40" rx="6" fill="#d35400" stroke="#2c3e50" stroke-width="2"/>
-  <text x="380" y="75" text-anchor="middle" fill="white" font-size="11">Repository</text>
-  <rect x="445" y="50" width="70" height="40" rx="6" fill="#c0392b" stroke="#2c3e50" stroke-width="2"/>
-  <text x="480" y="75" text-anchor="middle" fill="white" font-size="11">DB</text>
-  <line x1="95" y1="70" x2="115" y2="70" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="205" y1="70" x2="225" y2="70" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="315" y1="70" x2="335" y2="70" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="425" y1="70" x2="445" y2="70" stroke="#2c3e50" stroke-width="2"/>
-  <text x="260" y="25" text-anchor="middle" fill="#2c3e50" font-size="13" font-weight="bold">Request Lifecycle</text>
-</svg>
+![understanding_call_graphs_and_data_flow](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/understanding_call_graphs_and_data_flow.svg)
 
 ---
 
@@ -428,18 +385,7 @@ Strangler Fig implementation with AI assistance:
 1. Retire the proxy and route directly to the new service
 ```
 
-<svg viewBox="0 0 500 140" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="20" width="140" height="100" rx="8" fill="#e74c3c" stroke="#2c3e50" stroke-width="2" opacity="0.6"/>
-  <text x="80" y="55" text-anchor="middle" fill="white" font-size="12">Monolith</text>
-  <text x="80" y="75" text-anchor="middle" fill="white" font-size="10">(shrinking)</text>
-  <rect x="180" y="40" width="120" height="60" rx="8" fill="#f39c12" stroke="#2c3e50" stroke-width="2"/>
-  <text x="240" y="75" text-anchor="middle" fill="white" font-size="11">Proxy / Facade</text>
-  <rect x="340" y="20" width="140" height="100" rx="8" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="410" y="55" text-anchor="middle" fill="white" font-size="12">New Service</text>
-  <text x="410" y="75" text-anchor="middle" fill="white" font-size="10">(growing)</text>
-  <line x1="150" y1="70" x2="180" y2="70" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="300" y1="70" x2="340" y2="70" stroke="#2c3e50" stroke-width="2"/>
-</svg>
+![microservice_extraction_patterns](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/microservice_extraction_patterns.svg)
 
 ---
 

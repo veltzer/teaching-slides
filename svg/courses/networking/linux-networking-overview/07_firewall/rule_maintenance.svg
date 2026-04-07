@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Rule Maintenance Workflow</text>
+  <rect x="20" y="35" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="55" text-anchor="middle" font-size="11" font-weight="bold">Edit Rules</text>
+  <text x="75" y="72" text-anchor="middle" font-size="10" fill="#666">iptables -A/-D</text>
+  <rect x="165" y="35" width="110" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="220" y="55" text-anchor="middle" font-size="11" font-weight="bold">Test Rules</text>
+  <text x="220" y="72" text-anchor="middle" font-size="10" fill="#666">iptables -L -v -n</text>
+  <rect x="310" y="35" width="110" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="365" y="55" text-anchor="middle" font-size="11" font-weight="bold">Save Rules</text>
+  <text x="365" y="72" text-anchor="middle" font-size="10" fill="#666">iptables-save</text>
+  <rect x="455" y="35" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="515" y="55" text-anchor="middle" font-size="11" font-weight="bold">Persist Config</text>
+  <text x="515" y="72" text-anchor="middle" font-size="10" fill="#666">iptables-restore</text>
+  <line x1="130" y1="60" x2="165" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_06_firewall)"/>
+  <line x1="275" y1="60" x2="310" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_06_firewall)"/>
+  <line x1="420" y1="60" x2="455" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd3_06_firewall)"/>
+  <rect x="80" y="120" width="440" height="55" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="5" stroke-dasharray="5,3"/>
+  <text x="300" y="142" text-anchor="middle" font-size="11" fill="#333" font-weight="bold">Audit Cycle: Review logs, remove stale rules, update for new services</text>
+  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#666">Keep backup: iptables-save > /etc/iptables/rules.v4.bak before changes</text>
+  <defs>
+    <marker id="arrowd3_06_firewall" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

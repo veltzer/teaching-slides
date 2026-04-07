@@ -19,27 +19,7 @@ These optimizations are crucial for:
 
 ## Optimization Goals
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="125" y="95" text-anchor="middle" font-size="16" font-weight="bold">Size</text>
-  <rect x="225" y="50" width="150" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="300" y="95" text-anchor="middle" font-size="16" font-weight="bold">Performance</text>
-  <rect x="400" y="50" width="150" height="80" fill="#e8f5e9" stroke="#388e3c" stroke-width="2"/>
-  <text x="475" y="95" text-anchor="middle" font-size="16" font-weight="bold">Latency</text>
-  <rect x="140" y="200" width="150" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="215" y="245" text-anchor="middle" font-size="16" font-weight="bold">Memory</text>
-  <rect x="310" y="200" width="150" height="80" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
-  <text x="385" y="245" text-anchor="middle" font-size="16" font-weight="bold">Power</text>
-  <path d="M125 130 L215 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 130 L215 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M300 130 L385 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M475 130 L385 200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![optimization_goals](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_goals.svg)
 
 ---
 
@@ -144,29 +124,7 @@ cat /proc/pagetypeinfo
 
 ## Slab Allocator Tuning
 
-<svg viewBox="0 0 600 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="60" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="14" font-weight="bold">SLAB Cache</text>
-  <rect x="70" y="70" width="60" height="30" fill="#bbdefb" stroke="#1976d2"/>
-  <rect x="140" y="70" width="60" height="30" fill="#bbdefb" stroke="#1976d2"/>
-  <rect x="210" y="70" width="60" height="30" fill="#c8e6c9" stroke="#4caf50"/>
-  <rect x="280" y="70" width="60" height="30" fill="#bbdefb" stroke="#1976d2"/>
-  <rect x="350" y="70" width="60" height="30" fill="#c8e6c9" stroke="#4caf50"/>
-  <rect x="420" y="70" width="60" height="30" fill="#c8e6c9" stroke="#4caf50"/>
-  <rect x="490" y="70" width="60" height="30" fill="#ffccbc" stroke="#ff5722"/>
-  <text x="100" y="90" text-anchor="middle" font-size="12">Used</text>
-  <text x="240" y="90" text-anchor="middle" font-size="12">Free</text>
-  <text x="520" y="90" text-anchor="middle" font-size="12">Partial</text>
-  <rect x="100" y="180" width="120" height="40" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="160" y="205" text-anchor="middle" font-size="14">SLUB</text>
-  <rect x="240" y="180" width="120" height="40" fill="#f1f8e9" stroke="#689f38" stroke-width="2"/>
-  <text x="300" y="205" text-anchor="middle" font-size="14">SLAB</text>
-  <rect x="380" y="180" width="120" height="40" fill="#fef5e6" stroke="#ff9800" stroke-width="2"/>
-  <text x="440" y="205" text-anchor="middle" font-size="14">SLOB</text>
-  <text x="160" y="250" text-anchor="middle" font-size="12">Default</text>
-  <text x="300" y="250" text-anchor="middle" font-size="12">Cache-friendly</text>
-  <text x="440" y="250" text-anchor="middle" font-size="12">Minimal</text>
-</svg>
+![slab_allocator_tuning](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/slab_allocator_tuning.svg)
 
 ---
 
@@ -217,26 +175,7 @@ CONFIG_PREEMPT_RT=y       # Real-time
 
 ## RT Patch Architecture
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="500" height="60" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2"/>
-  <text x="300" y="85" text-anchor="middle" font-size="16" font-weight="bold">User Space</text>
-  <rect x="50" y="130" width="240" height="60" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
-  <text x="170" y="165" text-anchor="middle" font-size="14">Standard Kernel</text>
-  <rect x="310" y="130" width="240" height="60" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
-  <text x="430" y="165" text-anchor="middle" font-size="14">RT Kernel</text>
-  <rect x="70" y="210" width="200" height="40" fill="#ffebee" stroke="#f44336"/>
-  <text x="170" y="235" text-anchor="middle" font-size="12">Spinlocks</text>
-  <rect x="330" y="210" width="200" height="40" fill="#e8f5e9" stroke="#4caf50"/>
-  <text x="430" y="235" text-anchor="middle" font-size="12">RT Mutexes</text>
-  <rect x="70" y="260" width="200" height="40" fill="#ffebee" stroke="#f44336"/>
-  <text x="170" y="285" text-anchor="middle" font-size="12">IRQ Handlers</text>
-  <rect x="330" y="260" width="200" height="40" fill="#e8f5e9" stroke="#4caf50"/>
-  <text x="430" y="285" text-anchor="middle" font-size="12">Threaded IRQs</text>
-  <rect x="70" y="310" width="200" height="40" fill="#ffebee" stroke="#f44336"/>
-  <text x="170" y="335" text-anchor="middle" font-size="12">Softirqs</text>
-  <rect x="330" y="310" width="200" height="40" fill="#e8f5e9" stroke="#4caf50"/>
-  <text x="430" y="335" text-anchor="middle" font-size="12">RT Threads</text>
-</svg>
+![rt_patch_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/rt_patch_architecture.svg)
 
 ---
 
@@ -478,18 +417,7 @@ systemd-analyze blame
 
 ## Optimization Trade-offs
 
-<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="300,50 150,300 450,300" fill="none" stroke="#333" stroke-width="2"/>
-  <circle cx="300" cy="50" r="40" fill="#f44336"/>
-  <text x="300" y="55" text-anchor="middle" font-size="14" fill="white">Speed</text>
-  <circle cx="150" cy="300" r="40" fill="#4caf50"/>
-  <text x="150" y="305" text-anchor="middle" font-size="14" fill="white">Size</text>
-  <circle cx="450" cy="300" r="40" fill="#2196f3"/>
-  <text x="450" y="305" text-anchor="middle" font-size="14" fill="white">Features</text>
-  <circle cx="300" cy="200" r="30" fill="#ff9800"/>
-  <text x="300" y="205" text-anchor="middle" font-size="12" fill="white">Balance</text>
-  <text x="300" y="380" text-anchor="middle" font-size="16" font-weight="bold">Choose Two</text>
-</svg>
+![optimization_trade_offs](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_trade_offs.svg)
 
 ---
 

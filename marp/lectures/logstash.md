@@ -28,27 +28,7 @@
 
 ## Logstash Architecture
 
-<svg width="800" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="80" width="100" height="40" fill="#f0f0f0" stroke="#333"/>
-  <text x="100" y="105" text-anchor="middle" font-size="12">Data Sources</text>
-  <rect x="200" y="80" width="80" height="40" fill="#4CAF50" stroke="#333"/>
-  <text x="240" y="105" text-anchor="middle" font-size="12">INPUT</text>
-  <rect x="320" y="80" width="80" height="40" fill="#FF9800" stroke="#333"/>
-  <text x="360" y="105" text-anchor="middle" font-size="12">FILTER</text>
-  <rect x="440" y="80" width="80" height="40" fill="#2196F3" stroke="#333"/>
-  <text x="480" y="105" text-anchor="middle" font-size="12">OUTPUT</text>
-  <rect x="560" y="80" width="100" height="40" fill="#f0f0f0" stroke="#333"/>
-  <text x="610" y="105" text-anchor="middle" font-size="12">Destinations</text>
-  <path d="M150 100 L200 100" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M280 100 L320 100" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M400 100 L440 100" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M520 100 L560 100" stroke="#333" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![logstash_architecture](../../svg/lectures/logstash/logstash_architecture.svg)
 
 **Core Components:**
 1. **Input Plugins** - Collect data from sources
@@ -447,30 +427,7 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 
 ## Log Aggregation Architecture
 
-<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="40" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="100" y="75" text-anchor="middle" font-size="12">Web Server</text>
-  <rect x="50" y="120" width="100" height="40" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="100" y="145" text-anchor="middle" font-size="12">App Server</text>
-  <rect x="50" y="190" width="100" height="40" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="100" y="215" text-anchor="middle" font-size="12">Database</text>
-  <rect x="250" y="120" width="100" height="40" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="300" y="145" text-anchor="middle" font-size="12">Logstash</text>
-  <rect x="400" y="120" width="100" height="40" fill="#e8f5e8" stroke="#388e3c"/>
-  <text x="450" y="145" text-anchor="middle" font-size="12">Elasticsearch</text>
-  <rect x="400" y="200" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2"/>
-  <text x="450" y="225" text-anchor="middle" font-size="12">Kibana</text>
-  <path d="M150 70 L250 140" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M150 140 L250 140" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M150 210 L250 150" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M350 140 L400 140" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M450 160 L450 200" stroke="#333" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![log_aggregation_architecture](../../svg/lectures/logstash/log_aggregation_architecture.svg)
 
 **Benefits:**
 1. Centralized logging
@@ -605,22 +562,7 @@ output {
 
 **Horizontal Scaling:**
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="80" width="120" height="40" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="110" y="105" text-anchor="middle" font-size="12">Load Balancer</text>
-  <rect x="250" y="50" width="100" height="30" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="300" y="70" text-anchor="middle" font-size="10">Logstash Node 1</text>
-  <rect x="250" y="90" width="100" height="30" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="300" y="110" text-anchor="middle" font-size="10">Logstash Node 2</text>
-  <rect x="250" y="130" width="100" height="30" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="300" y="150" text-anchor="middle" font-size="10">Logstash Node 3</text>
-  <rect x="450" y="90" width="100" height="40" fill="#e8f5e8" stroke="#388e3c"/>
-  <text x="500" y="115" text-anchor="middle" font-size="12">Elasticsearch</text>
-  <path d="M170 100 L250 65" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M170 100 L250 105" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M170 100 L250 145" stroke="#333" marker-end="url(#arrowhead)"/>
-  <path d="M350 105 L450 110" stroke="#333" marker-end="url(#arrowhead)"/>
-</svg>
+![scaling_logstash](../../svg/lectures/logstash/scaling_logstash.svg)
 
 **Vertical Scaling:**
 1. Increase CPU cores

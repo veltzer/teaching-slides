@@ -59,48 +59,7 @@ Benefits and trade-offs of submodules:
 - **Tooling:** Not all tools handle submodules well
 - **Nested issues:** Problems compound with multiple levels
 
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="16" font-weight="bold">Submodule Relationship</text>
-
-  <!-- Main repository -->
-  <rect x="50" y="50" width="250" height="200" fill="#3498db" rx="5" stroke="#333" stroke-width="2"/>
-  <text x="175" y="75" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Main Repository</text>
-
-  <!-- Main content -->
-  <rect x="70" y="90" width="80" height="40" fill="#2ecc71" rx="3"/>
-  <text x="110" y="115" text-anchor="middle" fill="white" font-size="10">src/</text>
-
-  <rect x="160" y="90" width="80" height="40" fill="#2ecc71" rx="3"/>
-  <text x="200" y="115" text-anchor="middle" fill="white" font-size="10">docs/</text>
-
-  <!-- Submodule -->
-  <rect x="70" y="150" width="150" height="80" fill="#e74c3c" rx="3"/>
-  <text x="145" y="175" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Submodule</text>
-  <text x="145" y="195" text-anchor="middle" fill="white" font-size="10">lib/shared-utils</text>
-  <text x="145" y="210" text-anchor="middle" fill="white" font-size="10">→ commit: a1b2c3d</text>
-
-  <!-- External repository -->
-  <rect x="350" y="100" width="200" height="120" fill="#f39c12" rx="5" stroke="#333" stroke-width="2"/>
-  <text x="450" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">External Repository</text>
-  <text x="450" y="145" text-anchor="middle" fill="white" font-size="12">shared-utils.git</text>
-
-  <!-- Commits in external repo -->
-  <circle cx="380" cy="170" r="8" fill="#95a5a6"/>
-  <circle cx="420" cy="170" r="8" fill="#95a5a6"/>
-  <circle cx="460" cy="170" r="8" fill="#95a5a6"/>
-  <circle cx="500" cy="170" r="8" fill="#27ae60"/>
-
-  <text x="450" y="195" text-anchor="middle" fill="white" font-size="10">Submodule points to specific commit</text>
-
-  <!-- Arrow -->
-  <line x1="220" y1="190" x2="340" y2="160" stroke="#333" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![why_use_submodules](../../../../svg/courses/git/git2/16_submodules/why_use_submodules.svg)
 
 ---
 

@@ -29,43 +29,7 @@
 
 ## Socket Architecture
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="250" height="300" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="225" y="30" text-anchor="middle" font-size="14" font-weight="bold">Application Layer</text>
-
-  <rect x="120" y="70" width="210" height="40" fill="#2980B9"/>
-  <text x="225" y="95" text-anchor="middle" fill="white" font-size="11">User Application</text>
-
-  <rect x="120" y="120" width="210" height="40" fill="#2471A3"/>
-  <text x="225" y="145" text-anchor="middle" fill="white" font-size="11">Socket API</text>
-
-  <rect x="450" y="50" width="250" height="300" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="575" y="30" text-anchor="middle" font-size="14" font-weight="bold">Kernel Space</text>
-
-  <rect x="470" y="70" width="210" height="40" fill="#27AE60"/>
-  <text x="575" y="95" text-anchor="middle" fill="white" font-size="11">Socket Layer</text>
-
-  <rect x="470" y="120" width="210" height="40" fill="#229954"/>
-  <text x="575" y="145" text-anchor="middle" fill="white" font-size="11">TCP/UDP Layer</text>
-
-  <rect x="470" y="170" width="210" height="40" fill="#1E8449"/>
-  <text x="575" y="195" text-anchor="middle" fill="white" font-size="11">IP Layer</text>
-
-  <rect x="470" y="220" width="210" height="40" fill="#196F3D"/>
-  <text x="575" y="245" text-anchor="middle" fill="white" font-size="11">Network Driver</text>
-
-  <rect x="470" y="270" width="210" height="40" fill="#145A32"/>
-  <text x="575" y="295" text-anchor="middle" fill="white" font-size="11">Network Hardware</text>
-
-  <path d="M 330 140 L 470 140" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="400" y="130" text-anchor="middle" font-size="10">System Calls</text>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![socket_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/14_networking/socket_architecture.svg)
 
 ---
 
@@ -170,49 +134,7 @@ int connect_tcp_client(const char *server, int port) {
 
 ## Socket State Diagram - TCP
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="150" cy="80" rx="80" ry="30" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="150" y="85" text-anchor="middle" fill="white" font-size="11">CLOSED</text>
-
-  <ellipse cx="400" cy="80" rx="80" ry="30" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="11">LISTEN</text>
-
-  <ellipse cx="650" cy="80" rx="80" ry="30" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="650" y="85" text-anchor="middle" fill="white" font-size="11">SYN_SENT</text>
-
-  <ellipse cx="250" cy="200" rx="80" ry="30" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="250" y="205" text-anchor="middle" fill="white" font-size="11">SYN_RCVD</text>
-
-  <ellipse cx="550" cy="200" rx="80" ry="30" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="550" y="205" text-anchor="middle" fill="white" font-size="11">ESTABLISHED</text>
-
-  <ellipse cx="250" cy="320" rx="80" ry="30" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="250" y="325" text-anchor="middle" fill="white" font-size="11">FIN_WAIT_1</text>
-
-  <ellipse cx="550" cy="320" rx="80" ry="30" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="550" y="325" text-anchor="middle" fill="white" font-size="11">CLOSE_WAIT</text>
-
-  <path d="M 230 80 L 320 80" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="275" y="70" font-size="9">listen()</text>
-
-  <path d="M 400 110 L 250 170" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="320" y="140" font-size="9">SYN rcvd</text>
-
-  <path d="M 570 80 L 480 80" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="525" y="70" font-size="9">connect()</text>
-
-  <path d="M 330 200 L 470 200" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="400" y="190" font-size="9">SYN+ACK/ACK</text>
-
-  <path d="M 550 230 L 550 290" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="560" y="260" font-size="9">close()</text>
-
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![socket_state_diagram_tcp](../../../../svg/courses/operating_systems/linux-systems-programming/14_networking/socket_state_diagram_tcp.svg)
 
 ---
 
@@ -488,30 +410,7 @@ int connect_unix_client(const char *path) {
 
 ## AF_UNIX vs AF_INET Performance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Local Communication Performance</text>
-
-  <rect x="100" y="80" width="250" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="225" y="115" text-anchor="middle" fill="white" font-size="12">AF_UNIX</text>
-
-  <rect x="100" y="160" width="500" height="30" fill="#2980B9"/>
-  <text x="110" y="180" fill="white" font-size="10">Throughput</text>
-
-  <rect x="100" y="200" width="450" height="30" fill="#2980B9"/>
-  <text x="110" y="220" fill="white" font-size="10">Latency</text>
-
-  <rect x="450" y="80" width="250" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="575" y="115" text-anchor="middle" fill="white" font-size="12">AF_INET (localhost)</text>
-
-  <rect x="450" y="160" width="300" height="30" fill="#C0392B"/>
-  <text x="460" y="180" fill="white" font-size="10">60% of Unix</text>
-
-  <rect x="450" y="200" width="350" height="30" fill="#C0392B"/>
-  <text x="460" y="220" fill="white" font-size="10">2-3x slower</text>
-
-  <text x="400" y="270" text-anchor="middle" font-size="11">AF_UNIX: No protocol overhead, just memory copy</text>
-  <text x="400" y="290" text-anchor="middle" font-size="11">AF_INET: Full TCP/IP stack even for localhost</text>
-</svg>
+![afunix_vs_afinet_performance](../../../../svg/courses/operating_systems/linux-systems-programming/14_networking/afunix_vs_afinet_performance.svg)
 
 ---
 

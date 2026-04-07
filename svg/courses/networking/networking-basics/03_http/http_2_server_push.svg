@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd4_02_http" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="70" y="5" width="100" height="25" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="120" y="22" text-anchor="middle" font-size="11" font-weight="bold">Client</text>
+  <rect x="420" y="5" width="100" height="25" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="470" y="22" text-anchor="middle" font-size="11" font-weight="bold">Server</text>
+  <line x1="120" y1="35" x2="120" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="470" y1="35" x2="470" y2="195" stroke="#333" stroke-width="2"/>
+  <line x1="120" y1="50" x2="470" y2="58" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="46" text-anchor="middle" font-size="10" fill="#1565c0">GET /index.html (Stream 1)</text>
+  <line x1="470" y1="72" x2="120" y2="80" stroke="#2e7d32" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="72" text-anchor="middle" font-size="10" fill="#2e7d32">200 OK + HTML (Stream 1)</text>
+  <line x1="470" y1="95" x2="120" y2="103" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="95" text-anchor="middle" font-size="10" fill="#7b1fa2">PUSH_PROMISE: /style.css (Stream 2)</text>
+  <line x1="470" y1="118" x2="120" y2="126" stroke="#7b1fa2" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="118" text-anchor="middle" font-size="10" fill="#7b1fa2">Push: style.css data (Stream 2)</text>
+  <line x1="470" y1="141" x2="120" y2="149" stroke="#c62828" stroke-width="2" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="141" text-anchor="middle" font-size="10" fill="#c62828">PUSH_PROMISE: /app.js (Stream 4)</text>
+  <line x1="470" y1="164" x2="120" y2="172" stroke="#c62828" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowd4_02_http)"/>
+  <text x="295" y="164" text-anchor="middle" font-size="10" fill="#c62828">Push: app.js data (Stream 4)</text>
+  <text x="295" y="192" text-anchor="middle" font-size="10" fill="#555">Server proactively sends resources before client requests them</text>
+</svg>

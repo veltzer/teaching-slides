@@ -29,59 +29,13 @@ Threads = Concurrency within a process!
 
 ## Processes vs Threads
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="300" height="300" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="200" y="30" text-anchor="middle" font-size="14" font-weight="bold">Process</text>
-  <rect x="70" y="70" width="260" height="40" fill="#2980B9"/>
-  <text x="200" y="95" text-anchor="middle" fill="white" font-size="11">Independent Memory</text>
-  <rect x="70" y="120" width="260" height="40" fill="#2980B9"/>
-  <text x="200" y="145" text-anchor="middle" fill="white" font-size="11">Expensive Creation (fork)</text>
-  <rect x="70" y="170" width="260" height="40" fill="#2980B9"/>
-  <text x="200" y="195" text-anchor="middle" fill="white" font-size="11">IPC for Communication</text>
-  <rect x="70" y="220" width="260" height="40" fill="#2980B9"/>
-  <text x="200" y="245" text-anchor="middle" fill="white" font-size="11">Protected from Each Other</text>
-
-  <rect x="450" y="50" width="300" height="300" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="600" y="30" text-anchor="middle" font-size="14" font-weight="bold">Threads</text>
-  <rect x="470" y="70" width="260" height="40" fill="#27AE60"/>
-  <text x="600" y="95" text-anchor="middle" fill="white" font-size="11">Shared Memory</text>
-  <rect x="470" y="120" width="260" height="40" fill="#27AE60"/>
-  <text x="600" y="145" text-anchor="middle" fill="white" font-size="11">Cheap Creation (clone)</text>
-  <rect x="470" y="170" width="260" height="40" fill="#27AE60"/>
-  <text x="600" y="195" text-anchor="middle" fill="white" font-size="11">Direct Memory Access</text>
-  <rect x="470" y="220" width="260" height="40" fill="#27AE60"/>
-  <text x="600" y="245" text-anchor="middle" fill="white" font-size="11">Need Synchronization</text>
-</svg>
+![processes_vs_threads](../../../../svg/courses/operating_systems/linux-systems-programming/09_threads/processes_vs_threads.svg)
 
 ---
 
 ## Thread Memory Layout
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="320" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Process Address Space</text>
-
-  <rect x="220" y="70" width="360" height="40" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="11">Code Segment (Shared)</text>
-
-  <rect x="220" y="120" width="360" height="40" fill="#E67E22" stroke="#333" stroke-width="2"/>
-  <text x="400" y="145" text-anchor="middle" fill="white" font-size="11">Data/BSS (Shared)</text>
-
-  <rect x="220" y="170" width="360" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="11">Heap (Shared)</text>
-
-  <rect x="220" y="240" width="110" height="50" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="275" y="270" text-anchor="middle" fill="white" font-size="10">Thread 1 Stack</text>
-
-  <rect x="345" y="240" width="110" height="50" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="10">Thread 2 Stack</text>
-
-  <rect x="470" y="240" width="110" height="50" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="525" y="270" text-anchor="middle" fill="white" font-size="10">Thread 3 Stack</text>
-
-  <text x="400" y="320" text-anchor="middle" font-size="10">Each thread: Own stack, registers, signal mask</text>
-  <text x="400" y="340" text-anchor="middle" font-size="10">Shared: Heap, globals, code, file descriptors</text>
-</svg>
+![thread_memory_layout](../../../../svg/courses/operating_systems/linux-systems-programming/09_threads/thread_memory_layout.svg)
 
 ---
 

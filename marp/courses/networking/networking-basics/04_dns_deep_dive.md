@@ -23,48 +23,7 @@ Browser uses:  93.184.216.34 to establish TCP connection
 
 DNS is organized as an inverted tree structure with the root at the top.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" font-family="sans-serif">
-  <!-- DNS Hierarchy Tree -->
-  <!-- Root -->
-  <text x="330" y="26" font-size="14" fill="#222" text-anchor="middle" font-weight="bold">. (Root)</text>
-  <!-- Root → TLDs -->
-  <line x1="330" y1="30" x2="95"  y2="85" stroke="#555" stroke-width="1.5"/>
-  <line x1="330" y1="30" x2="195" y2="85" stroke="#555" stroke-width="1.5"/>
-  <line x1="330" y1="30" x2="295" y2="85" stroke="#555" stroke-width="1.5"/>
-  <line x1="330" y1="30" x2="430" y2="85" stroke="#555" stroke-width="1.5"/>
-  <line x1="330" y1="30" x2="520" y2="85" stroke="#555" stroke-width="1.5"/>
-  <line x1="330" y1="30" x2="605" y2="85" stroke="#555" stroke-width="1.5"/>
-  <!-- TLD labels -->
-  <text x="95"  y="98" font-size="13" fill="#222" text-anchor="middle">.com</text>
-  <text x="195" y="98" font-size="13" fill="#222" text-anchor="middle">.org</text>
-  <text x="295" y="98" font-size="13" fill="#222" text-anchor="middle">.net</text>
-  <text x="430" y="98" font-size="13" fill="#222" text-anchor="middle">.uk</text>
-  <text x="520" y="98" font-size="13" fill="#222" text-anchor="middle">.de</text>
-  <text x="605" y="98" font-size="13" fill="#222" text-anchor="middle">...</text>
-  <!-- .com → second level -->
-  <line x1="95" y1="102" x2="45"  y2="175" stroke="#555" stroke-width="1.5"/>
-  <line x1="95" y1="102" x2="130" y2="175" stroke="#555" stroke-width="1.5"/>
-  <line x1="95" y1="102" x2="215" y2="175" stroke="#555" stroke-width="1.5"/>
-  <!-- .uk → bbc -->
-  <line x1="430" y1="102" x2="430" y2="175" stroke="#555" stroke-width="1.5"/>
-  <!-- Second level labels -->
-  <text x="45"  y="188" font-size="13" fill="#222" text-anchor="middle">google</text>
-  <text x="130" y="188" font-size="13" fill="#222" text-anchor="middle">amazon</text>
-  <text x="215" y="188" font-size="13" fill="#222" text-anchor="middle">example</text>
-  <text x="430" y="188" font-size="13" fill="#222" text-anchor="middle">bbc</text>
-  <!-- google → www, mail -->
-  <line x1="45" y1="192" x2="22"  y2="262" stroke="#555" stroke-width="1.5"/>
-  <line x1="45" y1="192" x2="80"  y2="262" stroke="#555" stroke-width="1.5"/>
-  <!-- amazon → www -->
-  <line x1="130" y1="192" x2="138" y2="262" stroke="#555" stroke-width="1.5"/>
-  <!-- bbc → www -->
-  <line x1="430" y1="192" x2="430" y2="262" stroke="#555" stroke-width="1.5"/>
-  <!-- Third level labels -->
-  <text x="22"  y="276" font-size="13" fill="#222" text-anchor="middle">www</text>
-  <text x="80"  y="276" font-size="13" fill="#222" text-anchor="middle">mail</text>
-  <text x="138" y="276" font-size="13" fill="#222" text-anchor="middle">www</text>
-  <text x="430" y="276" font-size="13" fill="#222" text-anchor="middle">www</text>
-</svg>
+![the_dns_hierarchy](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/the_dns_hierarchy.svg)
 
 Each level is called a "zone" and is managed by different organizations:
 - **Root zone**: managed by ICANN, served by 13 root server clusters (a.root-servers.net through m.root-servers.net)
@@ -158,31 +117,7 @@ $ dig google.com A +short
 
 CNAME (Canonical Name) creates an alias from one domain name to another.
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="130" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Box 1 -->
-  <rect x="10" y="30" width="170" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="95" y="56" font-size="13" fill="#222" text-anchor="middle">www.example.com</text>
-  <text x="95" y="74" font-size="12" fill="#555" text-anchor="middle">(alias)</text>
-  <!-- Arrow 1 with label -->
-  <line x1="180" y1="60" x2="228" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="204" y="52" font-size="11" fill="#555" text-anchor="middle">CNAME</text>
-  <!-- Box 2 -->
-  <rect x="230" y="30" width="170" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="315" y="56" font-size="13" fill="#222" text-anchor="middle">example.com</text>
-  <text x="315" y="74" font-size="12" fill="#555" text-anchor="middle">(canonical)</text>
-  <!-- Arrow 2 with label -->
-  <line x1="400" y1="60" x2="448" y2="60" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="424" y="52" font-size="11" fill="#555" text-anchor="middle">A</text>
-  <!-- Box 3 -->
-  <rect x="450" y="30" width="170" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="535" y="56" font-size="13" fill="#222" text-anchor="middle">93.184.216.34</text>
-  <text x="535" y="74" font-size="12" fill="#555" text-anchor="middle">(IP address)</text>
-</svg>
+![cname_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/cname_records.svg)
 
 ```bash
 $ dig www.example.com
@@ -214,28 +149,7 @@ example.com.    3600    IN    MX    30 mail3.example.com.
 
 The number before the server name is the **priority** (lower = higher priority).
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Sending MTA box -->
-  <rect x="10" y="10" width="140" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="80" y="37" font-size="13" fill="#222" text-anchor="middle">Sending MTA</text>
-  <!-- Arrow down -->
-  <line x1="80" y1="54" x2="80" y2="108" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="95" y="86" font-size="12" fill="#555">Query MX for example.com</text>
-  <!-- DNS Server box -->
-  <rect x="10" y="110" width="140" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="80" y="137" font-size="13" fill="#222" text-anchor="middle">DNS Server</text>
-  <!-- Arrow right -->
-  <line x1="150" y1="132" x2="198" y2="132" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Priority list -->
-  <text x="205" y="118" font-size="13" fill="#222">Priority 10 → mail1.example.com  (try first)</text>
-  <text x="205" y="137" font-size="13" fill="#222">Priority 20 → mail2.example.com  (fallback)</text>
-  <text x="205" y="156" font-size="13" fill="#222">Priority 30 → mail3.example.com  (last resort)</text>
-</svg>
+![mx_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/mx_records.svg)
 
 If mail1 is unreachable, the sender automatically tries mail2, then mail3.
 
@@ -287,36 +201,7 @@ example.com.    86400    IN    NS    b.iana-servers.net.
 
 NS records form the delegation chain from root to your domain:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Node 1: Root -->
-  <rect x="10" y="10" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="70" y="35" font-size="13" fill="#222" text-anchor="middle">Root (.)</text>
-  <text x="150" y="35" font-size="12" fill="#555">"Who handles .com?"</text>
-  <!-- Arrow -->
-  <line x1="70" y1="50" x2="70" y2="98" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Node 2: .com NS servers -->
-  <rect x="10" y="100" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="70" y="125" font-size="13" fill="#222" text-anchor="middle">.com NS servers</text>
-  <text x="150" y="125" font-size="12" fill="#555">"Who handles example.com?"</text>
-  <!-- Arrow -->
-  <line x1="70" y1="140" x2="70" y2="188" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Node 3: example.com NS -->
-  <rect x="10" y="190" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="70" y="215" font-size="13" fill="#222" text-anchor="middle">example.com NS</text>
-  <text x="150" y="208" font-size="12" fill="#555">"I am authoritative for example.com"</text>
-  <text x="150" y="225" font-size="12" fill="#555">Here are the records you requested.</text>
-  <!-- Arrow -->
-  <line x1="70" y1="230" x2="70" y2="278" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Node 4: iana servers -->
-  <rect x="10" y="280" width="120" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="70" y="306" font-size="12" fill="#222" text-anchor="middle">a.iana-servers.net</text>
-  <text x="70" y="326" font-size="12" fill="#222" text-anchor="middle">b.iana-servers.net</text>
-</svg>
+![ns_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/ns_records.svg)
 
 ---
 
@@ -413,51 +298,7 @@ DNS resolution can happen in two modes:
 
 **Recursive Resolution** -- the resolver does all the work:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="220" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
-      <polygon points="8 0, 0 3, 8 6" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Box 1: Client -->
-  <rect x="5" y="20" width="80" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="45" y="47" font-size="12" fill="#222" text-anchor="middle">Client</text>
-  <!-- Box 2: Recursive Resolver -->
-  <rect x="110" y="20" width="130" height="60" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="175" y="44" font-size="12" fill="#222" text-anchor="middle">Recursive</text>
-  <text x="175" y="60" font-size="12" fill="#222" text-anchor="middle">Resolver</text>
-  <text x="175" y="76" font-size="10" fill="#555" text-anchor="middle">(ISP/8.8.8.8)</text>
-  <!-- Box 3: Root -->
-  <rect x="270" y="20" width="70" height="60" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="305" y="54" font-size="12" fill="#222" text-anchor="middle">Root</text>
-  <!-- Box 4: .com NS -->
-  <rect x="365" y="20" width="70" height="60" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="400" y="47" font-size="12" fill="#222" text-anchor="middle">.com</text>
-  <text x="400" y="63" font-size="12" fill="#222" text-anchor="middle">NS</text>
-  <!-- Box 5: Authoritative NS -->
-  <rect x="460" y="20" width="110" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="515" y="44" font-size="12" fill="#222" text-anchor="middle">Authoritative</text>
-  <text x="515" y="60" font-size="12" fill="#222" text-anchor="middle">NS</text>
-  <!-- Forward arrows (top) -->
-  <line x1="85"  y1="38" x2="108" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="240" y1="38" x2="268" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="340" y1="38" x2="363" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="435" y1="38" x2="458" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Return arrows (bottom) -->
-  <line x1="108" y1="62" x2="85"  y2="62" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="268" y1="62" x2="240" y2="62" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="363" y1="62" x2="340" y2="62" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="458" y1="62" x2="435" y2="62" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Labels below -->
-  <text x="45"  y="110" font-size="11" fill="#555" text-anchor="middle">Single</text>
-  <text x="45"  y="124" font-size="11" fill="#555" text-anchor="middle">query</text>
-  <text x="175" y="110" font-size="11" fill="#555" text-anchor="middle">Does all</text>
-  <text x="175" y="124" font-size="11" fill="#555" text-anchor="middle">the work</text>
-  <text x="430" y="110" font-size="11" fill="#555" text-anchor="middle">Iterative queries to each level</text>
-</svg>
+![recursive_vs_iterative_resolution](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/recursive_vs_iterative_resolution.svg)
 
 **Iterative Resolution** -- each server returns the next server to ask:
 
@@ -480,22 +321,7 @@ In practice, your computer uses recursive resolution (asking your configured DNS
 
 What happens when you type `www.example.com` in your browser:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="350" font-family="sans-serif">
-  <rect x="5" y="5" width="630" height="340" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="32" font-size="13" fill="#222">Step 1:  Browser checks its own DNS cache</text>
-  <text x="20" y="56" font-size="13" fill="#222">Step 2:  OS checks /etc/hosts file</text>
-  <text x="20" y="80" font-size="13" fill="#222">Step 3:  OS checks its DNS cache (systemd-resolved, nscd)</text>
-  <text x="20" y="104" font-size="13" fill="#222">Step 4:  Query sent to configured recursive resolver</text>
-  <text x="20" y="128" font-size="13" fill="#222">Step 5:  Resolver checks its cache</text>
-  <text x="20" y="152" font-size="13" fill="#222">Step 6:  If not cached, resolver walks the DNS hierarchy:</text>
-  <text x="44" y="174" font-size="13" fill="#555">6a:  Query root server → get .com NS</text>
-  <text x="44" y="196" font-size="13" fill="#555">6b:  Query .com NS → get example.com NS</text>
-  <text x="44" y="218" font-size="13" fill="#555">6c:  Query example.com NS → get A record</text>
-  <text x="20" y="242" font-size="13" fill="#222">Step 7:  Resolver caches the result and returns it</text>
-  <text x="20" y="266" font-size="13" fill="#222">Step 8:  OS caches the result</text>
-  <text x="20" y="290" font-size="13" fill="#222">Step 9:  Browser caches the result</text>
-  <text x="20" y="314" font-size="13" fill="#222">Step 10: Browser uses IP to establish TCP connection</text>
-</svg>
+![dns_resolution_step_by_step](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/dns_resolution_step_by_step.svg)
 
 ```bash
 # Trace the full resolution path
@@ -746,61 +572,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 
 **The problem DNSSEC solves:**
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="420" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- ── Without DNSSEC ── -->
-  <text x="10" y="22" font-size="14" fill="#c62828" font-weight="bold">Without DNSSEC:</text>
-  <!-- Client -->
-  <rect x="10" y="34" width="90" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
-  <text x="55" y="64" font-size="13" fill="#222" text-anchor="middle">Client</text>
-  <!-- Resolver -->
-  <rect x="220" y="34" width="100" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="64" font-size="13" fill="#222" text-anchor="middle">Resolver</text>
-  <!-- NS -->
-  <rect x="440" y="34" width="90" height="50" rx="4" fill="#ffebee" stroke="#333" stroke-width="1.5"/>
-  <text x="485" y="64" font-size="13" fill="#222" text-anchor="middle">NS</text>
-  <!-- Client→Resolver (query) -->
-  <line x1="100" y1="50" x2="218" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="160" y="45" font-size="11" fill="#555" text-anchor="middle">Query</text>
-  <!-- NS→Resolver (response) -->
-  <line x1="440" y1="50" x2="322" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="380" y="45" font-size="11" fill="#555" text-anchor="middle">Response</text>
-  <!-- Resolver→Client (response) -->
-  <line x1="220" y1="74" x2="102" y2="74" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="162" y="90" font-size="11" fill="#555" text-anchor="middle">Response</text>
-  <!-- Warning note -->
-  <rect x="190" y="105" width="200" height="44" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="290" y="124" font-size="12" fill="#b71c1c" text-anchor="middle">⚠ Attacker can forge</text>
-  <text x="290" y="140" font-size="12" fill="#b71c1c" text-anchor="middle">responses (DNS spoofing)</text>
-  <line x1="270" y1="84" x2="270" y2="104" stroke="#f9a825" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <!-- ── With DNSSEC ── -->
-  <text x="10" y="186" font-size="14" fill="#1b5e20" font-weight="bold">With DNSSEC:</text>
-  <!-- Client -->
-  <rect x="10" y="198" width="90" height="50" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="55" y="228" font-size="13" fill="#222" text-anchor="middle">Client</text>
-  <!-- Resolver -->
-  <rect x="200" y="198" width="130" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="265" y="222" font-size="13" fill="#222" text-anchor="middle">Resolver</text>
-  <text x="265" y="240" font-size="11" fill="#1b5e20" text-anchor="middle">Validates signature</text>
-  <!-- NS -->
-  <rect x="450" y="198" width="100" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="500" y="222" font-size="13" fill="#222" text-anchor="middle">NS</text>
-  <text x="500" y="240" font-size="11" fill="#1b5e20" text-anchor="middle">Signs records</text>
-  <!-- Client→Resolver (query) -->
-  <line x1="100" y1="214" x2="198" y2="214" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="149" y="209" font-size="11" fill="#555" text-anchor="middle">Query</text>
-  <!-- NS→Resolver (signed response) -->
-  <line x1="450" y1="214" x2="332" y2="214" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="390" y="209" font-size="11" fill="#555" text-anchor="middle">Signed Response</text>
-  <!-- Resolver→Client -->
-  <line x1="200" y1="244" x2="102" y2="244" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="151" y="262" font-size="11" fill="#1b5e20" text-anchor="middle">Verified Response</text>
-</svg>
+![dnssec_securing_dns](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/dnssec_securing_dns.svg)
 
 **DNSSEC record types:**
 - **RRSIG**: Contains the signature for a record set
@@ -980,17 +752,7 @@ loadbalanced.example.com. 300 IN A 10.0.0.3
 
 Returns different IP addresses based on the client's geographic location:
 
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="180" font-family="sans-serif">
-  <rect x="5" y="5" width="470" height="168" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="240" y="32" font-size="14" fill="#222" text-anchor="middle" font-weight="bold">GeoDNS Server</text>
-  <line x1="20" y1="42" x2="460" y2="42" stroke="#333" stroke-width="1"/>
-  <text x="30" y="66"  font-size="13" fill="#222">US client  →  1.2.3.4</text>
-  <text x="320" y="66"  font-size="12" fill="#555">(US data center)</text>
-  <text x="30" y="96"  font-size="13" fill="#222">EU client  →  5.6.7.8</text>
-  <text x="320" y="96"  font-size="12" fill="#555">(EU data center)</text>
-  <text x="30" y="126" font-size="13" fill="#222">AS client  →  9.0.1.2</text>
-  <text x="320" y="126" font-size="12" fill="#555">(Asia data center)</text>
-</svg>
+![geodns](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/geodns.svg)
 
 Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 

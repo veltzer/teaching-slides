@@ -1,0 +1,59 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Request -->
+  <rect x="50" y="250" width="80" height="50" rx="8" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <text x="90" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Request</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowCache" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- To Cache Valid? -->
+  <line x1="130" y1="275" x2="200" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+
+  <!-- Cache Valid Decision -->
+  <path d="M 250 250 L 300 275 L 250 300 L 200 275 Z" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
+  <text x="250" y="275" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Cache</text>
+  <text x="250" y="290" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Valid?</text>
+
+  <!-- Yes branch to Use Cache -->
+  <line x1="250" y1="250" x2="250" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+  <text x="270" y="215" font-family="Arial, sans-serif" font-size="12" fill="#4CAF50">Yes</text>
+
+  <!-- Use Cache -->
+  <rect x="200" y="130" width="100" height="50" rx="8" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
+  <text x="250" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Use Cache</text>
+
+  <!-- No branch to Network Request -->
+  <line x1="300" y1="275" x2="380" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+  <text x="340" y="265" font-family="Arial, sans-serif" font-size="12" fill="#F44336">No</text>
+
+  <!-- Network Request -->
+  <rect x="390" y="250" width="120" height="50" rx="8" fill="#9C27B0" stroke="#6A1B9A" stroke-width="2"/>
+  <text x="450" y="280" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Network Request</text>
+
+  <!-- To Success? -->
+  <line x1="510" y1="275" x2="580" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+
+  <!-- Success Decision -->
+  <path d="M 630 250 L 680 275 L 630 300 L 580 275 Z" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
+  <text x="630" y="280" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">Success?</text>
+
+  <!-- Yes to Update Cache -->
+  <line x1="630" y1="250" x2="630" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+  <text x="650" y="215" font-family="Arial, sans-serif" font-size="12" fill="#4CAF50">Yes</text>
+
+  <!-- Update Cache -->
+  <rect x="575" y="130" width="110" height="50" rx="8" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+  <text x="630" y="160" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Update Cache</text>
+
+  <!-- No to Use Stale Cache -->
+  <line x1="630" y1="300" x2="630" y2="370" stroke="#666" stroke-width="2" marker-end="url(#arrowCache)"/>
+  <text x="650" y="335" font-family="Arial, sans-serif" font-size="12" fill="#F44336">No</text>
+
+  <!-- Use Stale Cache -->
+  <rect x="570" y="380" width="120" height="50" rx="8" fill="#795548" stroke="#4E342E" stroke-width="2"/>
+  <text x="630" y="410" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Use Stale Cache</text>
+</svg>

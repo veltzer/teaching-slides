@@ -39,7 +39,7 @@ def process_partition(iterator):
 ```
 ---
 ## MapPartitions vs Map
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="110.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Input RDD</text></svg>
+![mappartitions_vs_map](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/mappartitions_vs_map.svg)
 
 ---
 ## Aggregate Operations
@@ -60,7 +60,7 @@ grouped = rdd1.cogroup(rdd2)
 ```
 ---
 ## Understanding Partitioning
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="180" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+![understanding_partitioning](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/understanding_partitioning.svg)
 
 ---
 ## Custom Partitioner Implementation
@@ -76,7 +76,7 @@ class DatePartitioner(Partitioner):
 
 ---
 ## Partition Distribution
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="110.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="70.0" x2="325" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="150.0" x2="325" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+![partition_distribution](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/partition_distribution.svg)
 
 ---
 ## Partitioning Strategies
@@ -94,7 +94,7 @@ def balance_partitions(rdd):
 ```
 ---
 ## Memory Management
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
+![memory_management](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/memory_management.svg)
 
 ---
 ## Broadcast Variables Basics
@@ -136,7 +136,7 @@ class SetAccumulator(AccumulatorParam):
 
 ---
 ## Accumulator Applications
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="460" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Tasks</text></svg>
+![accumulator_applications](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/accumulator_applications.svg)
 
 ---
 ## Window Function Basics
@@ -169,7 +169,7 @@ df = df.withColumn(
 ```
 ---
 ## Performance Optimization
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Performance</text></svg>
+![performance_optimization](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/performance_optimization.svg)
 
 ---
 ## Memory Tuning
@@ -191,7 +191,7 @@ spark.conf.set("spark.rdd.compress", "true")
 ```
 ---
 ## Storage Strategies
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Storage</text></svg>
+![storage_strategies](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/storage_strategies.svg)
 
 ---
 ## Caching Levels
@@ -207,7 +207,7 @@ complex_rdd = rdd.map(expensive_function).cache()
 ```
 ---
 ## Persistence Options
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+![persistence_options](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/persistence_options.svg)
 
 ---
 ## Join Optimization
@@ -231,7 +231,7 @@ spark.conf.set("spark.serializer",
 ```
 ---
 ## Monitoring Tools
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Monitoring</text></svg>
+![monitoring_tools](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/monitoring_tools.svg)
 
 ---
 ## Performance Metrics
@@ -263,7 +263,7 @@ debug_rdd = rdd.mapPartitions(debug_function)
 ```
 ---
 ## Data Skew Solutions
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Skewed Data</text></svg>
+![data_skew_solutions](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/data_skew_solutions.svg)
 
 ---
 ## Advanced UDF Usage
@@ -283,7 +283,7 @@ def complex_transformation(value):
 1. I/O optimization
 ---
 ## Best Practices Summary
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Best Practices</text></svg>
+![best_practices_summary](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/best_practices_summary.svg)
 
 ---
 ## Performance Checklist
@@ -299,7 +299,7 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ```
 ---
 ## Production Deployment
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Development</text></svg>
+![production_deployment](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/production_deployment.svg)
 
 ---
 ## Security Considerations
@@ -378,57 +378,7 @@ print(f"Processed {result_rdd.count()} records")
 
 ## Data Flow: mapPartitions
 
-<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow-mp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
-  </defs>
-  <!-- Driver Program -->
-  <rect x="100" y="10" width="400" height="50" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Driver Program</text>
-  <text x="300" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">rdd.mapPartitions(process_partition)</text>
-  <!-- Arrows from driver to partitions -->
-  <line x1="200" y1="60" x2="120" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <line x1="300" y1="60" x2="300" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <line x1="400" y1="60" x2="480" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <!-- Partitions -->
-  <rect x="60" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="120" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 0</text>
-  <text x="120" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[0..999]</text>
-  <rect x="240" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="300" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 1</text>
-  <text x="300" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[1k..2k]</text>
-  <rect x="420" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="480" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 2</text>
-  <text x="480" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[2k..3k]</text>
-  <!-- open conn labels + arrows -->
-  <line x1="120" y1="140" x2="120" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="145" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
-  <line x1="300" y1="140" x2="300" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="325" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
-  <line x1="480" y1="140" x2="480" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="505" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
-  <!-- Process batch -->
-  <rect x="60" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="120" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
-  <rect x="240" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
-  <rect x="420" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="480" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
-  <!-- close conn labels + arrows -->
-  <line x1="120" y1="235" x2="120" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="145" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
-  <line x1="300" y1="235" x2="300" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="325" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
-  <line x1="480" y1="235" x2="480" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
-  <text x="505" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
-  <!-- Results -->
-  <rect x="60" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="120" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
-  <rect x="240" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="300" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
-  <rect x="420" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="480" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
-</svg>
+![data_flow_mappartitions](../../../../svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/data_flow_mappartitions.svg)
 
 ---
 

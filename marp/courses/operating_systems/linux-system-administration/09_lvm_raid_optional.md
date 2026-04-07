@@ -4,25 +4,7 @@
 ---
 ## LVM Architecture
 
-<svg width="650" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="140" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="165" text-anchor="middle" font-size="10">/dev/sda1 (PV)</text>
-  <rect x="180" y="140" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="165" text-anchor="middle" font-size="10">/dev/sdb1 (PV)</text>
-  <rect x="310" y="140" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="360" y="165" text-anchor="middle" font-size="10">/dev/sdc1 (PV)</text>
-  <rect x="100" y="80" width="260" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="105" text-anchor="middle" font-size="11">Volume Group (VG)</text>
-  <rect x="60" y="20" width="130" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="125" y="45" text-anchor="middle" font-size="10">LV: /home</text>
-  <rect x="210" y="20" width="130" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="275" y="45" text-anchor="middle" font-size="10">LV: /data</text>
-  <line x1="100" y1="140" x2="175" y2="120" stroke="#333" stroke-width="1"/>
-  <line x1="230" y1="140" x2="230" y2="120" stroke="#333" stroke-width="1"/>
-  <line x1="360" y1="140" x2="310" y2="120" stroke="#333" stroke-width="1"/>
-  <line x1="125" y1="60" x2="175" y2="80" stroke="#333" stroke-width="1"/>
-  <line x1="275" y1="60" x2="280" y2="80" stroke="#333" stroke-width="1"/>
-</svg>
+![lvm_architecture](../../../../svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_architecture.svg)
 
 Three layers:
 - **PV** (Physical Volumes) - actual disks/partitions
@@ -222,24 +204,7 @@ lvs -a -o +devices /dev/data-vg/mirror-lv
 ---
 ## RAID Level Selection Guide
 
-<svg width="600" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="180" height="60" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="35" text-anchor="middle" font-size="10" font-weight="bold">Need speed?</text>
-  <text x="100" y="52" text-anchor="middle" font-size="9">No redundancy</text>
-  <text x="100" y="65" text-anchor="middle" font-size="10">RAID 0</text>
-  <rect x="210" y="10" width="180" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="35" text-anchor="middle" font-size="10" font-weight="bold">Need safety?</text>
-  <text x="300" y="52" text-anchor="middle" font-size="9">Simple mirror</text>
-  <text x="300" y="65" text-anchor="middle" font-size="10">RAID 1</text>
-  <rect x="10" y="90" width="180" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="100" y="115" text-anchor="middle" font-size="10" font-weight="bold">Need both?</text>
-  <text x="100" y="132" text-anchor="middle" font-size="9">Best of both worlds</text>
-  <text x="100" y="145" text-anchor="middle" font-size="10">RAID 10</text>
-  <rect x="210" y="90" width="180" height="60" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="115" text-anchor="middle" font-size="10" font-weight="bold">Need capacity?</text>
-  <text x="300" y="132" text-anchor="middle" font-size="9">Parity protection</text>
-  <text x="300" y="145" text-anchor="middle" font-size="10">RAID 5/6</text>
-</svg>
+![raid_level_selection_guide](../../../../svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/raid_level_selection_guide.svg)
 
 ---
 ## Creating RAID Arrays with mdadm
@@ -337,32 +302,7 @@ Cache modes: `writethrough` (safe) or `writeback` (fast).
 ---
 ## LVM on Top of RAID
 
-<svg width="600" height="180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="130" width="80" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="152" text-anchor="middle" font-size="9">/dev/sdb</text>
-  <rect x="150" y="130" width="80" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="190" y="152" text-anchor="middle" font-size="9">/dev/sdc</text>
-  <rect x="300" y="130" width="80" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="340" y="152" text-anchor="middle" font-size="9">/dev/sdd</text>
-  <rect x="400" y="130" width="80" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="440" y="152" text-anchor="middle" font-size="9">/dev/sde</text>
-  <rect x="70" y="85" width="140" height="30" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="140" y="105" text-anchor="middle" font-size="9">RAID 1 (/dev/md0)</text>
-  <rect x="310" y="85" width="160" height="30" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="390" y="105" text-anchor="middle" font-size="9">RAID 5 (/dev/md1)</text>
-  <rect x="100" y="40" width="350" height="30" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="275" y="60" text-anchor="middle" font-size="10">Volume Group (VG)</text>
-  <rect x="130" y="5" width="100" height="25" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="180" y="22" text-anchor="middle" font-size="9">LV: /home</text>
-  <rect x="320" y="5" width="100" height="25" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="370" y="22" text-anchor="middle" font-size="9">LV: /data</text>
-  <line x1="140" y1="130" x2="140" y2="115" stroke="#333" stroke-width="1"/>
-  <line x1="190" y1="130" x2="190" y2="115" stroke="#333" stroke-width="1"/>
-  <line x1="340" y1="130" x2="370" y2="115" stroke="#333" stroke-width="1"/>
-  <line x1="440" y1="130" x2="420" y2="115" stroke="#333" stroke-width="1"/>
-  <line x1="140" y1="85" x2="200" y2="70" stroke="#333" stroke-width="1"/>
-  <line x1="390" y1="85" x2="350" y2="70" stroke="#333" stroke-width="1"/>
-</svg>
+![lvm_on_top_of_raid](../../../../svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_on_top_of_raid.svg)
 
 ```bash
 # Create RAID arrays first

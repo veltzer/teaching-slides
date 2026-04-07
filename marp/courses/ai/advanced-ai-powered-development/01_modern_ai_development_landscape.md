@@ -10,14 +10,7 @@
 
 ## Evolution of AI-Assisted Development
 
-<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <defs><marker id="ah" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker></defs>
-  <line x1="50" y1="100" x2="750" y2="100" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
-  <circle cx="120" cy="100" r="8" fill="#2196F3"/><text x="120" y="80" text-anchor="middle" font-size="14">2018</text><text x="120" y="130" text-anchor="middle" font-size="11">Basic autocomplete</text>
-  <circle cx="280" cy="100" r="8" fill="#4CAF50"/><text x="280" y="80" text-anchor="middle" font-size="14">2021</text><text x="280" y="130" text-anchor="middle" font-size="11">Copilot launches</text>
-  <circle cx="440" cy="100" r="8" fill="#FF9800"/><text x="440" y="80" text-anchor="middle" font-size="14">2023</text><text x="440" y="130" text-anchor="middle" font-size="11">Chat-based coding</text>
-  <circle cx="600" cy="100" r="8" fill="#F44336"/><text x="600" y="80" text-anchor="middle" font-size="14">2024-25</text><text x="600" y="130" text-anchor="middle" font-size="11">Agentic development</text>
-</svg>
+![evolution_of_ai_assisted_development](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/evolution_of_ai_assisted_development.svg)
 
 - **Autocomplete era**: single-line suggestions, pattern matching
 - **Copilot era**: multi-line generation, context-aware completions
@@ -45,15 +38,7 @@
 - Modern AI coding tools are built on the `transformer` architecture
 - Key concept: **self-attention** lets the model weigh relationships between all tokens
 
-<svg viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="50" width="130" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="75" y="80" text-anchor="middle" font-size="12">Input Tokens</text>
-  <rect x="180" y="50" width="130" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="245" y="80" text-anchor="middle" font-size="12">Self-Attention</text>
-  <rect x="350" y="50" width="130" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="415" y="80" text-anchor="middle" font-size="12">Feed-Forward</text>
-  <rect x="520" y="50" width="140" height="50" rx="8" fill="#FCE4EC" stroke="#C62828"/><text x="590" y="80" text-anchor="middle" font-size="12">Output Probabilities</text>
-  <line x1="140" y1="75" x2="180" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="310" y1="75" x2="350" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="480" y1="75" x2="520" y2="75" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-</svg>
+![model_architecture_basics_for_developers](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/model_architecture_basics_for_developers.svg)
 
 - Why this matters for tool users:
     - Attention is O(n^2) in context length, explaining cost and latency scaling
@@ -166,17 +151,7 @@ Workflow:
 - Given a task (issue, spec), they plan and execute end-to-end
 - Can browse documentation, install dependencies, run CI
 
-<svg viewBox="0 0 700 120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="30" width="120" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="70" y="60" text-anchor="middle" font-size="13">Read issue</text>
-  <rect x="160" y="30" width="120" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="220" y="60" text-anchor="middle" font-size="13">Plan steps</text>
-  <rect x="310" y="30" width="120" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="370" y="60" text-anchor="middle" font-size="13">Write code</text>
-  <rect x="460" y="30" width="120" height="50" rx="8" fill="#FCE4EC" stroke="#C62828"/><text x="520" y="60" text-anchor="middle" font-size="13">Run tests</text>
-  <rect x="610" y="30" width="80" height="50" rx="8" fill="#F3E5F5" stroke="#6A1B9A"/><text x="650" y="60" text-anchor="middle" font-size="13">Push PR</text>
-  <line x1="130" y1="55" x2="160" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="280" y1="55" x2="310" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="430" y1="55" x2="460" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="580" y1="55" x2="610" y2="55" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-</svg>
+![category_5_autonomous_coding_agents](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/category_5_autonomous_coding_agents.svg)
 
 - Current success rate on real-world issues: ~30-50% (SWE-bench)
 - Best suited for well-defined, scoped tasks with clear tests
@@ -188,15 +163,7 @@ Workflow:
 - Agentic tools cannot send your entire codebase in every request
 - They use **RAG** (Retrieval-Augmented Generation) to select relevant files
 
-<svg viewBox="0 0 700 150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="120" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="70" y="70" text-anchor="middle" font-size="12">User Query</text>
-  <rect x="170" y="40" width="140" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="240" y="70" text-anchor="middle" font-size="12">Codebase Index</text>
-  <rect x="350" y="40" width="130" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="415" y="70" text-anchor="middle" font-size="12">Rank &amp; Select</text>
-  <rect x="520" y="40" width="150" height="50" rx="8" fill="#FCE4EC" stroke="#C62828"/><text x="595" y="70" text-anchor="middle" font-size="12">Context Window</text>
-  <line x1="130" y1="65" x2="170" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="310" y1="65" x2="350" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="480" y1="65" x2="520" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-</svg>
+![how_context_selection_actually_works](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/how_context_selection_actually_works.svg)
 
 - **Indexing**: tools build embeddings or keyword indexes of your codebase
 - **Retrieval**: the query is matched against the index to find relevant files
@@ -249,17 +216,7 @@ Workflow:
 - Models perform best on information at the **beginning** and **end** of the context
 - Information buried in the middle is often ignored or poorly recalled
 
-<svg viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="14" font-weight="bold">Recall Accuracy vs. Position in Context</text>
-  <line x1="60" y1="150" x2="560" y2="150" stroke="#333" stroke-width="1.5"/>
-  <line x1="60" y1="30" x2="60" y2="150" stroke="#333" stroke-width="1.5"/>
-  <text x="310" y="175" text-anchor="middle" font-size="12">Position in context window</text>
-  <text x="20" y="90" text-anchor="middle" font-size="12" transform="rotate(-90,20,90)">Recall %</text>
-  <polyline points="80,50 150,60 220,100 300,120 380,110 450,80 530,45" fill="none" stroke="#F44336" stroke-width="2.5"/>
-  <text x="80" y="45" text-anchor="middle" font-size="11" fill="#4CAF50">Start</text>
-  <text x="300" y="138" text-anchor="middle" font-size="11" fill="#F44336">Middle</text>
-  <text x="530" y="40" text-anchor="middle" font-size="11" fill="#4CAF50">End</text>
-</svg>
+![the_lost_in_the_middle_problem](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_lost_in_the_middle_problem.svg)
 
 - **Needle-in-a-haystack** benchmarks confirm this U-shaped recall curve
 - Practical implications:
@@ -308,17 +265,7 @@ Choosing a model depends on your task:
 
 - Understanding the full pipeline helps you debug unexpected results
 
-<svg viewBox="0 0 750 130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="5" y="35" width="120" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="65" y="65" text-anchor="middle" font-size="11">System Prompt</text>
-  <rect x="145" y="35" width="120" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="205" y="65" text-anchor="middle" font-size="11">User Message</text>
-  <rect x="285" y="35" width="120" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="345" y="65" text-anchor="middle" font-size="11">Context (RAG)</text>
-  <rect x="425" y="35" width="120" height="50" rx="8" fill="#F3E5F5" stroke="#6A1B9A"/><text x="485" y="65" text-anchor="middle" font-size="11">Tool Calls</text>
-  <rect x="565" y="35" width="150" height="50" rx="8" fill="#FCE4EC" stroke="#C62828"/><text x="640" y="65" text-anchor="middle" font-size="11">Response Generation</text>
-  <line x1="125" y1="60" x2="145" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="265" y1="60" x2="285" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="405" y1="60" x2="425" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="545" y1="60" x2="565" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-</svg>
+![the_prompt_to_output_pipeline](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_prompt_to_output_pipeline.svg)
 
 - **System prompt**: sets behavior, constraints, and persona (usually hidden)
 - **User message**: your question or task description
@@ -347,15 +294,7 @@ Choosing a model depends on your task:
 
 ## Cost, Latency, and Quality Tradeoffs
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="200,30 50,270 350,270" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="200" y="20" text-anchor="middle" font-size="15" font-weight="bold">Quality</text>
-  <text x="30" y="290" text-anchor="middle" font-size="15" font-weight="bold">Cost</text>
-  <text x="370" y="290" text-anchor="middle" font-size="15" font-weight="bold">Speed</text>
-  <circle cx="200" cy="120" r="6" fill="#F44336"/><text x="220" y="125" font-size="12">Frontier (cloud)</text>
-  <circle cx="130" cy="230" r="6" fill="#4CAF50"/><text x="150" y="235" font-size="12">Mid-tier</text>
-  <circle cx="290" cy="240" r="6" fill="#2196F3"/><text x="240" y="255" font-size="12">Local/small</text>
-</svg>
+![cost_latency_and_quality_tradeoffs](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/cost_latency_and_quality_tradeoffs.svg)
 
 - Frontier models: ~$3-15 per million input tokens, ~$15-75 per million output tokens
 - Inline completion: must be <300ms, favors smaller models or speculative decoding
@@ -518,15 +457,7 @@ Choosing a model depends on your task:
 
 - Enterprise AI tool adoption follows a predictable pattern:
 
-<svg viewBox="0 0 700 140" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="140" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="80" y="60" text-anchor="middle" font-size="11">Stage 1:</text><text x="80" y="75" text-anchor="middle" font-size="11">Individual pilots</text>
-  <rect x="185" y="40" width="140" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="255" y="60" text-anchor="middle" font-size="11">Stage 2:</text><text x="255" y="75" text-anchor="middle" font-size="11">Team adoption</text>
-  <rect x="360" y="40" width="140" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="430" y="60" text-anchor="middle" font-size="11">Stage 3:</text><text x="430" y="75" text-anchor="middle" font-size="11">Org-wide rollout</text>
-  <rect x="535" y="40" width="150" height="50" rx="8" fill="#F3E5F5" stroke="#6A1B9A"/><text x="610" y="60" text-anchor="middle" font-size="11">Stage 4:</text><text x="610" y="75" text-anchor="middle" font-size="11">Workflow integration</text>
-  <line x1="150" y1="65" x2="185" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="325" y1="65" x2="360" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="500" y1="65" x2="535" y2="65" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-</svg>
+![industry_adoption_patterns_and_case_studies](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/industry_adoption_patterns_and_case_studies.svg)
 
 - **Common pitfalls**:
     - Mandating tools without training leads to low adoption

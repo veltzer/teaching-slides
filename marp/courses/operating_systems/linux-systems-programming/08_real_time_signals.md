@@ -20,29 +20,7 @@
 
 ## Standard Signal Merging
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .txt { font-family: sans-serif; font-size: 14px; }
-    .arr { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
-    .box { fill: #eef; stroke: #99c; stroke-width: 1; }
-  </style>
-  <defs>
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333" />
-    </marker>
-  </defs>
-  <text x="10" y="25" class="txt">Sender</text>
-  <text x="280" y="25" class="txt">Receiver's Pending Signals</text>
-  <line x1="100" y1="60" x2="250" y2="60" class="arr" />
-  <text x="130" y="55" class="txt">SIGUSR1</text>
-  <line x1="100" y1="90" x2="250" y2="90" class="arr" />
-  <text x="130" y="85" class="txt">SIGUSR1</text>
-  <line x1="100" y1="120" x2="250" y2="120" class="arr" />
-  <text x="130" y="115" class="txt">SIGUSR1</text>
-  <rect x="280" y="70" width="100" height="50" class="box" />
-  <text x="295" y="100" class="txt">SIGUSR1 (x1)</text>
-  <text x="10" y="180" class="txt" fill="red">Result: 2 signals were lost.</text>
-</svg>
+![standard_signal_merging](../../../../svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/standard_signal_merging.svg)
 
 ---
 
@@ -80,30 +58,7 @@
 
 ## Real-Time Signal Queuing
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .txt { font-family: sans-serif; font-size: 14px; }
-    .arr { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
-    .box { fill: #efe; stroke: #9c9; stroke-width: 1; }
-    .qitem { fill: #fff; stroke: #9c9; }
-  </style>
-  <text x="10" y="25" class="txt">Sender</text>
-  <text x="280" y="25" class="txt">Receiver's Signal Queue</text>
-  <line x1="100" y1="60" x2="250" y2="60" class="arr" />
-  <text x="130" y="55" class="txt">SIGRTMIN+1</text>
-  <line x1="100" y1="100" x2="250" y2="100" class="arr" />
-  <text x="130" y="95" class="txt">SIGRTMIN+1</text>
-  <line x1="100" y1="140" x2="250" y2="140" class="arr" />
-  <text x="130" y="135" class="txt">SIGRTMIN+1</text>
-  <rect x="280" y="40" width="110" height="120" class="box" />
-  <rect x="290" y="50" width="90" height="30" class="qitem" />
-  <text x="295" y="70" class="txt">SIGRTMIN+1</text>
-  <rect x="290" y="90" width="90" height="30" class="qitem" />
-  <text x="295" y="110" class="txt">SIGRTMIN+1</text>
-  <rect x="290" y="130" width="90" height="30" class="qitem" />
-  <text x="295" y="150" class="txt">SIGRTMIN+1</text>
-  <text x="10" y="180" class="txt" fill="green">Result: All 3 signals are queued.</text>
-</svg>
+![real_time_signal_queuing](../../../../svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/real_time_signal_queuing.svg)
 
 ---
 

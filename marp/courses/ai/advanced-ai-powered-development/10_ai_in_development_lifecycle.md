@@ -32,23 +32,7 @@ criteria:
 
 ## AI-Assisted Planning: Architecture Exploration
 
-<svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="80" width="140" height="60" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
-  <text x="90" y="115" text-anchor="middle" font-size="13" fill="#1565C0">Requirements</text>
-  <rect x="220" y="80" width="140" height="60" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
-  <text x="290" y="115" text-anchor="middle" font-size="13" fill="#E65100">AI Analysis</text>
-  <rect x="420" y="30" width="160" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="500" y="60" text-anchor="middle" font-size="12" fill="#2E7D32">Option A: Monolith</text>
-  <rect x="420" y="90" width="160" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="500" y="120" text-anchor="middle" font-size="12" fill="#2E7D32">Option B: Microservices</text>
-  <rect x="420" y="150" width="160" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="500" y="180" text-anchor="middle" font-size="12" fill="#2E7D32">Option C: Serverless</text>
-  <line x1="160" y1="110" x2="220" y2="110" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
-  <line x1="360" y1="100" x2="420" y2="55" stroke="#333" stroke-width="1.5"/>
-  <line x1="360" y1="110" x2="420" y2="115" stroke="#333" stroke-width="1.5"/>
-  <line x1="360" y1="120" x2="420" y2="175" stroke="#333" stroke-width="1.5"/>
-  <defs><marker id="ar" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#333"/></marker></defs>
-</svg>
+![ai_assisted_planning_architecture_exploration](../../../../svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_assisted_planning_architecture_exploration.svg)
 
 - AI proposes multiple architecture options with tradeoff analysis
 - Evaluates against non-functional requirements (latency, scale, cost)
@@ -396,22 +380,7 @@ applitools:
 
 ## AI in CI/CD: Automated PR Checks
 
-<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="60" width="110" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
-  <text x="65" y="90" text-anchor="middle" font-size="12" fill="#1565C0">PR Opened</text>
-  <rect x="150" y="60" width="110" height="50" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
-  <text x="205" y="90" text-anchor="middle" font-size="12" fill="#E65100">AI Review</text>
-  <rect x="290" y="60" width="110" height="50" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
-  <text x="345" y="90" text-anchor="middle" font-size="12" fill="#7B1FA2">AI Tests</text>
-  <rect x="430" y="60" width="120" height="50" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="490" y="90" text-anchor="middle" font-size="12" fill="#2E7D32">Risk Score</text>
-  <rect x="580" y="60" width="120" height="50" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
-  <text x="640" y="90" text-anchor="middle" font-size="12" fill="#C62828">Gate Decision</text>
-  <line x1="120" y1="85" x2="150" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="260" y1="85" x2="290" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="400" y1="85" x2="430" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="550" y1="85" x2="580" y2="85" stroke="#333" stroke-width="1.5"/>
-</svg>
+![ai_in_ci_cd_automated_pr_checks](../../../../svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_in_ci_cd_automated_pr_checks.svg)
 
 - AI assigns a **risk score** to each PR based on:
     - Files changed (config, auth, payments = high risk)
@@ -565,72 +534,7 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="213" font-family="sans-serif">
-<defs>
-  <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-    <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="10" y="20" font-size="14" font-weight="bold" fill="#222" text-anchor="start">Key Metrics to Track</text>
-<rect x="10" y="28" width="230" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="16" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Metric</text>
-<rect x="240" y="28" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="246" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Before</text>
-<rect x="330" y="28" width="90" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="336" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">After</text>
-<rect x="420" y="28" width="80" height="28" fill="#c5cae9" stroke="#333" stroke-width="1"/>
-<text x="426" y="47" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Delta</text>
-<rect x="10" y="58" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="16" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">PR cycle time (median)</text>
-<rect x="240" y="58" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="246" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">4.2 days</text>
-<rect x="330" y="58" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="336" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start">1.8 days</text>
-<rect x="420" y="58" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="426" y="77" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="420" y="58" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-<text x="426" y="77" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-57%</text>
-<rect x="10" y="86" width="230" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="16" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Review turnaround</text>
-<rect x="240" y="86" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="246" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">18 hrs</text>
-<rect x="330" y="86" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="336" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start">3 hrs</text>
-<rect x="420" y="86" width="80" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="426" y="105" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="420" y="86" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-<text x="426" y="105" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-83%</text>
-<rect x="10" y="114" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="16" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Defect escape rate</text>
-<rect x="240" y="114" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="246" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">5.1%</text>
-<rect x="330" y="114" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="336" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start">2.3%</text>
-<rect x="420" y="114" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="426" y="133" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="420" y="114" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-<text x="426" y="133" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-55%</text>
-<rect x="10" y="142" width="230" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="16" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">Test coverage</text>
-<rect x="240" y="142" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="246" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">64%</text>
-<rect x="330" y="142" width="90" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="336" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start">82%</text>
-<rect x="420" y="142" width="80" height="28" fill="#f5f5f5" stroke="#333" stroke-width="1"/>
-<text x="426" y="161" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="420" y="142" width="80" height="28" fill="#c8e6c9" stroke="#333" stroke-width="1"/>
-<text x="426" y="161" font-size="12" font-weight="bold" fill="#222" text-anchor="start">+28%</text>
-<rect x="10" y="170" width="230" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="16" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">CI pipeline duration</text>
-<rect x="240" y="170" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="246" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">38 min</text>
-<rect x="330" y="170" width="90" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="336" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start">14 min</text>
-<rect x="420" y="170" width="80" height="28" fill="#e8eaf6" stroke="#333" stroke-width="1"/>
-<text x="426" y="189" font-size="12" font-weight="normal" fill="#222" text-anchor="start"></text>
-<rect x="420" y="170" width="80" height="28" fill="#ffcdd2" stroke="#333" stroke-width="1"/>
-<text x="426" y="189" font-size="12" font-weight="bold" fill="#222" text-anchor="start">-63%</text>
-</svg>
+![measuring_ai_impact_on_development_velocity](../../../../svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/measuring_ai_impact_on_development_velocity.svg)
 
 - Measure at team level, not individual level, to avoid gaming
 - Track developer satisfaction alongside productivity metrics
@@ -765,23 +669,7 @@ sub_tasks:
 
 ## Continuous AI Integration Patterns
 
-<svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="30" width="160" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
-  <text x="120" y="60" text-anchor="middle" font-size="12" fill="#1565C0">IDE Copilot</text>
-  <rect x="240" y="30" width="160" height="50" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
-  <text x="320" y="60" text-anchor="middle" font-size="12" fill="#E65100">PR AI Review</text>
-  <rect x="440" y="30" width="160" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="520" y="60" text-anchor="middle" font-size="12" fill="#2E7D32">CI AI Checks</text>
-  <rect x="640" y="30" width="130" height="50" rx="8" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
-  <text x="705" y="60" text-anchor="middle" font-size="12" fill="#7B1FA2">Deploy AI</text>
-  <rect x="40" y="120" width="730" height="60" rx="8" fill="#FFFDE7" stroke="#F9A825" stroke-width="2"/>
-  <text x="405" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#F57F17">Shared Context Layer</text>
-  <text x="405" y="165" text-anchor="middle" font-size="11" fill="#F57F17">Codebase knowledge, team conventions, project history</text>
-  <line x1="120" y1="80" x2="120" y2="120" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="320" y1="80" x2="320" y2="120" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="520" y1="80" x2="520" y2="120" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="705" y1="80" x2="705" y2="120" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3"/>
-</svg>
+![continuous_ai_integration_patterns](../../../../svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/continuous_ai_integration_patterns.svg)
 
 - **Pattern 1: Gate-based** - AI runs as a required CI check before merge
 - **Pattern 2: Advisory** - AI posts suggestions as non-blocking comments
@@ -822,33 +710,7 @@ portal:
 
 ## Putting It All Together
 
-<svg viewBox="0 0 800 260" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="150" height="45" rx="8" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
-  <text x="105" y="48" text-anchor="middle" font-size="13" fill="#1565C0">Plan &amp; Design</text>
-  <rect x="220" y="20" width="150" height="45" rx="8" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
-  <text x="295" y="48" text-anchor="middle" font-size="13" fill="#E65100">Code &amp; Review</text>
-  <rect x="410" y="20" width="150" height="45" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="485" y="48" text-anchor="middle" font-size="13" fill="#2E7D32">Test &amp; Verify</text>
-  <rect x="600" y="20" width="150" height="45" rx="8" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
-  <text x="675" y="48" text-anchor="middle" font-size="13" fill="#7B1FA2">Deploy &amp; Run</text>
-  <line x1="180" y1="42" x2="220" y2="42" stroke="#333" stroke-width="2"/>
-  <line x1="370" y1="42" x2="410" y2="42" stroke="#333" stroke-width="2"/>
-  <line x1="560" y1="42" x2="600" y2="42" stroke="#333" stroke-width="2"/>
-  <rect x="30" y="90" width="720" height="150" rx="8" fill="#FAFAFA" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="390" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">AI Layer</text>
-  <text x="105" y="145" text-anchor="middle" font-size="11" fill="#555">Req analysis</text>
-  <text x="105" y="165" text-anchor="middle" font-size="11" fill="#555">Arch proposals</text>
-  <text x="105" y="185" text-anchor="middle" font-size="11" fill="#555">Schema design</text>
-  <text x="295" y="145" text-anchor="middle" font-size="11" fill="#555">Auto review</text>
-  <text x="295" y="165" text-anchor="middle" font-size="11" fill="#555">Security scan</text>
-  <text x="295" y="185" text-anchor="middle" font-size="11" fill="#555">Perf analysis</text>
-  <text x="485" y="145" text-anchor="middle" font-size="11" fill="#555">Test gen</text>
-  <text x="485" y="165" text-anchor="middle" font-size="11" fill="#555">Fuzzing</text>
-  <text x="485" y="185" text-anchor="middle" font-size="11" fill="#555">Smart selection</text>
-  <text x="675" y="145" text-anchor="middle" font-size="11" fill="#555">Risk scoring</text>
-  <text x="675" y="165" text-anchor="middle" font-size="11" fill="#555">Auto rollback</text>
-  <text x="675" y="185" text-anchor="middle" font-size="11" fill="#555">Incident RCA</text>
-</svg>
+![putting_it_all_together](../../../../svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/putting_it_all_together.svg)
 
 - AI is not a single tool but a **layer** across the entire lifecycle
 - Each phase benefits from AI while keeping humans in the decision loop

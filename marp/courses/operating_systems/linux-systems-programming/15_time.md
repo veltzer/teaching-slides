@@ -30,28 +30,7 @@ Time is surprisingly complex in computing!
 
 ## Time Representations in Linux
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="12">Epoch Time (time_t): Seconds since 1970-01-01 00:00:00 UTC</text>
-
-  <rect x="50" y="130" width="340" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="220" y="155" text-anchor="middle" fill="white" font-size="11">struct timeval</text>
-  <text x="220" y="175" text-anchor="middle" fill="white" font-size="10">tv_sec + tv_usec (microseconds)</text>
-
-  <rect x="410" y="130" width="340" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="580" y="155" text-anchor="middle" fill="white" font-size="11">struct timespec</text>
-  <text x="580" y="175" text-anchor="middle" fill="white" font-size="10">tv_sec + tv_nsec (nanoseconds)</text>
-
-  <rect x="50" y="210" width="340" height="60" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="220" y="235" text-anchor="middle" fill="black" font-size="11">struct tm</text>
-  <text x="220" y="255" text-anchor="middle" font-size="10">Broken-down time (year, month, day...)</text>
-
-  <rect x="410" y="210" width="340" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="580" y="235" text-anchor="middle" fill="white" font-size="11">clock_t</text>
-  <text x="580" y="255" text-anchor="middle" fill="white" font-size="10">Processor ticks (CLOCKS_PER_SEC)</text>
-
-  <text x="400" y="320" text-anchor="middle" font-size="11">Resolution: time_t (1s) → timeval (1μs) → timespec (1ns)</text>
-</svg>
+![time_representations_in_linux](../../../../svg/courses/operating_systems/linux-systems-programming/15_time/time_representations_in_linux.svg)
 
 ---
 
@@ -230,33 +209,7 @@ void check_clock_resolution() {
 
 ## vDSO - Virtual Dynamic Shared Object
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Getting Time: System Call vs vDSO</text>
-
-  <rect x="50" y="60" width="300" height="150" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="200" y="85" text-anchor="middle" fill="white" font-size="12">Traditional System Call</text>
-  <rect x="70" y="100" width="260" height="30" fill="#C0392B"/>
-  <text x="200" y="120" text-anchor="middle" fill="white" font-size="10">1. User space calls clock_gettime()</text>
-  <rect x="70" y="135" width="260" height="30" fill="#C0392B"/>
-  <text x="200" y="155" text-anchor="middle" fill="white" font-size="10">2. Context switch to kernel</text>
-  <rect x="70" y="170" width="260" height="30" fill="#C0392B"/>
-  <text x="200" y="190" text-anchor="middle" fill="white" font-size="10">3. Kernel reads time, returns</text>
-
-  <rect x="400" y="60" width="300" height="150" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="550" y="85" text-anchor="middle" fill="white" font-size="12">vDSO Optimization</text>
-  <rect x="420" y="100" width="260" height="30" fill="#27AE60"/>
-  <text x="550" y="120" text-anchor="middle" fill="white" font-size="10">1. Kernel maps time page to user</text>
-  <rect x="420" y="135" width="260" height="30" fill="#27AE60"/>
-  <text x="550" y="155" text-anchor="middle" fill="white" font-size="10">2. User reads directly from memory</text>
-  <rect x="420" y="170" width="260" height="30" fill="#27AE60"/>
-  <text x="550" y="190" text-anchor="middle" fill="white" font-size="10">3. No context switch!</text>
-
-  <text x="200" y="240" text-anchor="middle" font-size="11">Cost: ~200-300 ns</text>
-  <text x="550" y="240" text-anchor="middle" font-size="11">Cost: ~20-30 ns</text>
-
-  <text x="400" y="290" text-anchor="middle" font-size="11">Check vDSO: ldd /bin/ls | grep vdso</text>
-  <text x="400" y="310" text-anchor="middle" font-size="11">Functions: clock_gettime(), gettimeofday(), time(), getcpu()</text>
-</svg>
+![vdso_virtual_dynamic_shared_object](../../../../svg/courses/operating_systems/linux-systems-programming/15_time/vdso_virtual_dynamic_shared_object.svg)
 
 ---
 
@@ -585,35 +538,7 @@ void measure_cpu_time() {
 
 ## Timer Implementation Comparison
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="14" font-weight="bold">Timer APIs in Linux</text>
-
-  <rect x="50" y="60" width="150" height="80" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="125" y="85" text-anchor="middle" fill="white" font-size="11">alarm()</text>
-  <text x="125" y="105" text-anchor="middle" fill="white" font-size="9">• One timer only</text>
-  <text x="125" y="120" text-anchor="middle" fill="white" font-size="9">• Second precision</text>
-  <text x="125" y="135" text-anchor="middle" fill="white" font-size="9">• SIGALRM</text>
-
-  <rect x="220" y="60" width="150" height="80" fill="#F39C12" stroke="#333" stroke-width="2"/>
-  <text x="295" y="85" text-anchor="middle" fill="black" font-size="11">setitimer()</text>
-  <text x="295" y="105" text-anchor="middle" font-size="9">• Three timers</text>
-  <text x="295" y="120" text-anchor="middle" font-size="9">• Microsecond</text>
-  <text x="295" y="135" text-anchor="middle" font-size="9">• Signals</text>
-
-  <rect x="390" y="60" width="150" height="80" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="465" y="85" text-anchor="middle" fill="white" font-size="11">timer_create()</text>
-  <text x="465" y="105" text-anchor="middle" fill="white" font-size="9">• Multiple timers</text>
-  <text x="465" y="120" text-anchor="middle" fill="white" font-size="9">• Nanosecond</text>
-  <text x="465" y="135" text-anchor="middle" fill="white" font-size="9">• Flexible notify</text>
-
-  <rect x="560" y="60" width="150" height="80" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="635" y="85" text-anchor="middle" fill="white" font-size="11">timerfd_create()</text>
-  <text x="635" y="105" text-anchor="middle" fill="white" font-size="9">• File descriptor</text>
-  <text x="635" y="120" text-anchor="middle" fill="white" font-size="9">• epoll/select</text>
-  <text x="635" y="135" text-anchor="middle" fill="white" font-size="9">• Best for async</text>
-
-  <text x="400" y="180" text-anchor="middle" font-size="11">Evolution: Simple → Precise → Flexible → Integrated</text>
-</svg>
+![timer_implementation_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/15_time/timer_implementation_comparison.svg)
 
 ---
 
@@ -774,32 +699,7 @@ void timezone_examples() {
 
 ## Monotonic vs Real Time Clocks
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Clock Behavior with NTP Adjustment</text>
-
-  <line x1="100" y1="320" x2="700" y2="320" stroke="#333" stroke-width="2"/>
-  <line x1="100" y1="320" x2="100" y2="80" stroke="#333" stroke-width="2"/>
-
-  <text x="50" y="200" font-size="11" transform="rotate(-90, 50, 200)">Time Value</text>
-  <text x="400" y="350" text-anchor="middle" font-size="11">Real Time →</text>
-
-  <!-- CLOCK_REALTIME line with jump -->
-  <path d="M 100 280 L 250 200 L 250 240 L 400 160 L 550 80"
-        stroke="#E74C3C" stroke-width="3" fill="none"/>
-  <text x="300" y="180" fill="#E74C3C" font-size="11">CLOCK_REALTIME</text>
-  <text x="250" y="260" fill="#E74C3C" font-size="9">← NTP adjustment</text>
-
-  <!-- CLOCK_MONOTONIC straight line -->
-  <path d="M 100 280 L 550 80"
-        stroke="#2ECC71" stroke-width="3" fill="none"/>
-  <text x="450" y="140" fill="#2ECC71" font-size="11">CLOCK_MONOTONIC</text>
-
-  <text x="150" y="100" font-size="9">10:00:00</text>
-  <text sympathique x="550" y="100" font-size="9">10:00:05</text>
-
-  <rect x="150" y="360" width="500" height="30" fill="#ECF0F1" stroke="#333" stroke-width="1"/>
-  <text x="400" y="380" text-anchor="middle" font-size="10">REALTIME: Can jump backward/forward (NTP, user changes)</text>
-</svg>
+![monotonic_vs_real_time_clocks](../../../../svg/courses/operating_systems/linux-systems-programming/15_time/monotonic_vs_real_time_clocks.svg)
 
 ---
 

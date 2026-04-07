@@ -11,45 +11,7 @@
 ---
 ## How Does Formjacking Work
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" font-family="sans-serif">
-  <defs>
-    <marker id="arw2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect x="1" y="1" width="658" height="338" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Formjacking Attack Flow</text>
-  <text x="14" y="54" font-size="13" fill="#333">1. Attacker compromises website or third-party script</text>
-  <text x="14" y="72" font-size="13" fill="#333">2. Malicious JavaScript injected into payment page</text>
-  <!-- Customer Browser box -->
-  <rect x="30" y="90" width="140" height="80" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="100" y="126" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Customer</text>
-  <text x="100" y="144" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Browser</text>
-  <text x="100" y="162" font-size="11" fill="#555" text-anchor="middle">Enters card details</text>
-  <!-- Compromised Website box -->
-  <rect x="250" y="90" width="160" height="80" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="330" y="122" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Compromised</text>
-  <text x="330" y="138" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">E-Commerce Site</text>
-  <text x="330" y="156" font-size="11" fill="#e65100" text-anchor="middle">Skimmer JS active</text>
-  <!-- Arrow: Browser → Website -->
-  <line x1="170" y1="130" x2="250" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arw2)"/>
-  <!-- Payment Processor box -->
-  <rect x="120" y="240" width="150" height="70" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="195" y="271" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Payment</text>
-  <text x="195" y="289" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Processor (Stripe)</text>
-  <!-- Attacker Server box -->
-  <rect x="430" y="240" width="150" height="70" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
-  <text x="505" y="271" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Attacker's</text>
-  <text x="505" y="289" font-size="13" font-weight="bold" fill="#c62828" text-anchor="middle">Server (exfil.cc)</text>
-  <!-- Arrow: Website → Payment Processor (normal flow) -->
-  <line x1="330" y1="170" x2="195" y2="240" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arw2)"/>
-  <text x="235" y="210" font-size="11" fill="#2e7d32" text-anchor="middle">normal flow</text>
-  <!-- Arrow: Website → Attacker (stolen copy) -->
-  <line x1="380" y1="170" x2="505" y2="240" stroke="#c62828" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arw2)"/>
-  <text x="462" y="210" font-size="11" fill="#c62828" text-anchor="middle">stolen copy</text>
-  <text x="14" y="330" font-size="13" fill="#333">3. Transaction completes normally (victim unaware)  4. Attacker collects stolen card data</text>
-</svg>
+![how_does_formjacking_work](../../../../svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/how_does_formjacking_work.svg)
 
 ---
 ## Attack Vectors
@@ -82,27 +44,7 @@
 ---
 ## British Airways Attack (2018)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="270" font-family="sans-serif">
-  <rect x="1" y="1" width="658" height="268" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">British Airways Magecart Attack</text>
-  <!-- Timeline section -->
-  <text x="14" y="56" font-size="13" font-weight="bold" fill="#1565c0">Timeline:</text>
-  <text x="14" y="74" font-size="13" fill="#333">&#8226; Aug 21 – Sep 5, 2018 (15 days undetected)</text>
-  <text x="14" y="92" font-size="13" fill="#333">&#8226; ~380,000 payment cards stolen</text>
-  <text x="14" y="110" font-size="13" fill="#333">&#8226; British Airways fined £20 million by ICO (GDPR)</text>
-  <line x1="14" y1="120" x2="646" y2="120" stroke="#ddd" stroke-width="1"/>
-  <!-- Attack method section -->
-  <text x="14" y="138" font-size="13" font-weight="bold" fill="#1565c0">Attack method:</text>
-  <text x="14" y="156" font-size="13" fill="#333">&#8226; 22 lines of JavaScript injected into BA website</text>
-  <text x="14" y="174" font-size="13" fill="#333">&#8226; Targeted the payment form specifically</text>
-  <text x="14" y="192" font-size="13" fill="#333">&#8226; Data exfiltrated to baways.com (typosquat domain)</text>
-  <text x="14" y="210" font-size="13" fill="#333">&#8226; Attackers had valid SSL certificate for exfil domain</text>
-  <line x1="14" y1="220" x2="646" y2="220" stroke="#ddd" stroke-width="1"/>
-  <!-- Key lesson -->
-  <text x="14" y="238" font-size="13" font-weight="bold" fill="#1565c0">Key lesson:</text>
-  <text x="14" y="256" font-size="13" fill="#333">Extremely targeted, minimal code, custom-built for specific form — SSL on exfil avoided browser warnings</text>
-</svg>
+![british_airways_attack_2018](../../../../svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/british_airways_attack_2018.svg)
 
 ---
 ## JavaScript Skimmer Code Analysis
@@ -183,23 +125,7 @@ setInterval(function() {
 ---
 ## Content Security Policy (CSP) as Defense
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="160" font-family="sans-serif">
-  <rect x="1" y="1" width="658" height="158" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">CSP Defense Against Formjacking</text>
-  <!-- Without CSP -->
-  <rect x="14" y="44" width="300" height="104" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <rect x="14" y="44" width="300" height="28" rx="4" fill="#c62828"/>
-  <text x="164" y="63" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Without CSP</text>
-  <text x="26" y="88" font-size="13" fill="#333">Any script can run</text>
-  <text x="26" y="108" font-size="13" fill="#333">Any destination can receive data</text>
-  <!-- With CSP -->
-  <rect x="344" y="44" width="300" height="104" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <rect x="344" y="44" width="300" height="28" rx="4" fill="#2e7d32"/>
-  <text x="494" y="63" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">With CSP</text>
-  <text x="356" y="88" font-size="13" fill="#333">Only approved scripts run</text>
-  <text x="356" y="108" font-size="13" fill="#333">Only approved destinations receive data</text>
-</svg>
+![content_security_policy_csp_as_defense](../../../../svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/content_security_policy_csp_as_defense.svg)
 
 ```http
 # HTTP Header: Content-Security-Policy
@@ -357,28 +283,7 @@ diff known_good_hashes.txt current.txt
 ---
 ## PCI DSS Requirements for Formjacking
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="292" font-family="sans-serif">
-  <rect x="1" y="1" width="658" height="290" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="658" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">PCI DSS 4.0 Requirements (effective March 2025)</text>
-  <!-- Requirement 6.4.3 -->
-  <rect x="14" y="44" width="630" height="88" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="26" y="64" font-size="13" font-weight="bold" fill="#1565c0">Requirement 6.4.3 — All payment page scripts must be:</text>
-  <text x="26" y="84" font-size="13" fill="#333">&#8226; Inventoried and authorized</text>
-  <text x="26" y="102" font-size="13" fill="#333">&#8226; Integrity verified (SRI or equivalent)</text>
-  <text x="26" y="120" font-size="13" fill="#333">&#8226; Script behavior documented and justified</text>
-  <!-- Requirement 11.6.1 -->
-  <rect x="14" y="142" width="630" height="106" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="26" y="162" font-size="13" font-weight="bold" fill="#1565c0">Requirement 11.6.1 — Implement change/tamper detection for:</text>
-  <text x="26" y="182" font-size="13" fill="#333">&#8226; HTTP headers (CSP, etc.)</text>
-  <text x="26" y="200" font-size="13" fill="#333">&#8226; Payment page script content</text>
-  <text x="26" y="218" font-size="13" fill="#333">&#8226; Must alert on unauthorized changes</text>
-  <text x="26" y="240" font-size="13" fill="#555">&#8658; These requirements make CSP and SRI effectively mandatory for any</text>
-  <text x="26" y="258" font-size="13" fill="#555">   site processing credit cards</text>
-  <rect x="14" y="232" width="630" height="50" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="26" y="252" font-size="13" fill="#555">&#8658; These requirements make CSP and SRI effectively mandatory for any</text>
-  <text x="26" y="270" font-size="13" fill="#555">   site processing credit cards</text>
-</svg>
+![pci_dss_requirements_for_formjacking](../../../../svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/pci_dss_requirements_for_formjacking.svg)
 
 ---
 ## Defense in Depth Strategy

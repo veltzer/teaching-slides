@@ -1,0 +1,43 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd2_08_workflows" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Branch labels -->
+  <text x="10" y="22" font-size="10" font-weight="bold" fill="#1565c0">main</text>
+  <text x="10" y="62" font-size="10" font-weight="bold" fill="#c62828">hotfix</text>
+  <text x="10" y="102" font-size="10" font-weight="bold" fill="#e65100">release</text>
+  <text x="10" y="142" font-size="10" font-weight="bold" fill="#7b1fa2">develop</text>
+  <text x="10" y="182" font-size="10" font-weight="bold" fill="#2e7d32">feature</text>
+  <!-- main branch -->
+  <line x1="70" y1="18" x2="580" y2="18" stroke="#1565c0" stroke-width="3"/>
+  <circle cx="100" cy="18" r="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <circle cx="380" cy="18" r="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <circle cx="530" cy="18" r="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <!-- hotfix branch -->
+  <line x1="380" y1="18" x2="400" y2="58" stroke="#c62828" stroke-width="1.5"/>
+  <line x1="400" y1="58" x2="460" y2="58" stroke="#c62828" stroke-width="2"/>
+  <circle cx="430" cy="58" r="4" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <line x1="460" y1="58" x2="530" y2="18" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrowd2_08_workflows)"/>
+  <line x1="460" y1="58" x2="500" y2="138" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrowd2_08_workflows)"/>
+  <!-- release branch -->
+  <line x1="300" y1="138" x2="320" y2="98" stroke="#e65100" stroke-width="1.5"/>
+  <line x1="320" y1="98" x2="370" y2="98" stroke="#e65100" stroke-width="2"/>
+  <circle cx="345" cy="98" r="4" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <line x1="370" y1="98" x2="380" y2="18" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrowd2_08_workflows)"/>
+  <!-- develop branch -->
+  <line x1="70" y1="138" x2="580" y2="138" stroke="#7b1fa2" stroke-width="3"/>
+  <circle cx="100" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <circle cx="180" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <circle cx="260" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <circle cx="300" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <circle cx="500" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <circle cx="550" cy="138" r="4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <!-- feature branches -->
+  <line x1="120" y1="138" x2="130" y2="178" stroke="#2e7d32" stroke-width="1.5"/>
+  <line x1="130" y1="178" x2="240" y2="178" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="160" cy="178" r="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <circle cx="200" cy="178" r="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <line x1="240" y1="178" x2="260" y2="138" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowd2_08_workflows)"/>
+</svg>

@@ -19,45 +19,7 @@ Logging, monitoring, health checks, and lifecycle management
 
 ## Docker Logging Architecture
 
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="220">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Container box -->
-  <rect x="10" y="10" width="300" height="90" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="30" font-family="sans-serif" font-size="12" font-weight="bold" fill="#555">Container</text>
-  <!-- Process box inside -->
-  <rect x="25" y="38" width="100" height="50" rx="4" fill="#fff" stroke="#555" stroke-width="1"/>
-  <text x="75" y="68" font-family="sans-serif" font-size="12" fill="#222" text-anchor="middle">Process</text>
-  <!-- arrow Process → stdout label -->
-  <line x1="125" y1="63" x2="305" y2="63" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="185" y="55" font-family="sans-serif" font-size="11" fill="#333">stdout / stderr</text>
-  <!-- Logging Driver box -->
-  <rect x="190" y="115" width="160" height="48" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="144" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Logging Driver</text>
-  <!-- vertical arrow down from container edge to Logging Driver -->
-  <line x1="305" y1="100" x2="305" y2="115" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="305" y1="63" x2="305" y2="100" stroke="#555" stroke-width="1.5"/>
-  <!-- three destinations -->
-  <!-- json-file -->
-  <rect x="10" y="185" width="130" height="45" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="75" y="204" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">json-file</text>
-  <text x="75" y="220" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(default)</text>
-  <!-- syslog -->
-  <rect x="155" y="185" width="150" height="45" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="230" y="204" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">syslog / journald</text>
-  <text x="230" y="220" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(local)</text>
-  <!-- fluentd -->
-  <rect x="320" y="185" width="150" height="45" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="395" y="204" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">fluentd / splunk</text>
-  <text x="395" y="220" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(remote)</text>
-  <!-- arrows from Logging Driver to destinations -->
-  <line x1="230" y1="163" x2="75" y2="185" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="265" y1="163" x2="265" y2="185" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="300" y1="163" x2="395" y2="185" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-</svg>
+![docker_logging_architecture](../../../../svg/courses/devops/advanced-docker/06_production/docker_logging_architecture.svg)
 
 ---
 
@@ -931,33 +893,7 @@ services:
 
 ## Docker in Production - Anti-Patterns
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360">
-  <!-- AVOID column -->
-  <rect x="10" y="10" width="290" height="340" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="155" y="35" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">AVOID</text>
-  <text x="25" y="60"  font-family="sans-serif" font-size="12" fill="#333">✗ Running as root inside containers</text>
-  <text x="25" y="80"  font-family="sans-serif" font-size="12" fill="#333">✗ Using :latest tag in production</text>
-  <text x="25" y="100" font-family="sans-serif" font-size="12" fill="#333">✗ Storing data in writable layer</text>
-  <text x="25" y="120" font-family="sans-serif" font-size="12" fill="#333">✗ No resource limits</text>
-  <text x="25" y="140" font-family="sans-serif" font-size="12" fill="#333">✗ No health checks</text>
-  <text x="25" y="160" font-family="sans-serif" font-size="12" fill="#333">✗ No log rotation</text>
-  <text x="25" y="180" font-family="sans-serif" font-size="12" fill="#333">✗ Mounting Docker socket in apps</text>
-  <text x="25" y="200" font-family="sans-serif" font-size="12" fill="#333">✗ Using --privileged</text>
-  <text x="25" y="220" font-family="sans-serif" font-size="12" fill="#333">✗ Hardcoding config in images</text>
-  <text x="25" y="240" font-family="sans-serif" font-size="12" fill="#333">✗ No backup strategy for volumes</text>
-  <text x="25" y="260" font-family="sans-serif" font-size="12" fill="#333">✗ No monitoring or alerting</text>
-  <!-- DO column -->
-  <rect x="340" y="10" width="290" height="340" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="485" y="35" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">DO</text>
-  <text x="355" y="60"  font-family="sans-serif" font-size="12" fill="#333">✓ Pin image versions with digests</text>
-  <text x="355" y="80"  font-family="sans-serif" font-size="12" fill="#333">✓ Use named volumes for persistent data</text>
-  <text x="355" y="100" font-family="sans-serif" font-size="12" fill="#333">✓ Set memory and CPU limits</text>
-  <text x="355" y="120" font-family="sans-serif" font-size="12" fill="#333">✓ Implement health checks</text>
-  <text x="355" y="140" font-family="sans-serif" font-size="12" fill="#333">✓ Configure centralized logging</text>
-  <text x="355" y="160" font-family="sans-serif" font-size="12" fill="#333">✓ Run as non-root user</text>
-  <text x="355" y="180" font-family="sans-serif" font-size="12" fill="#333">✓ Use read-only root filesystem</text>
-  <text x="355" y="200" font-family="sans-serif" font-size="12" fill="#333">✓ Monitor with Prometheus/Grafana</text>
-</svg>
+![docker_in_production_anti_patterns](../../../../svg/courses/devops/advanced-docker/06_production/docker_in_production_anti_patterns.svg)
 
 ---
 

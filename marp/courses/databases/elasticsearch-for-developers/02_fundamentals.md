@@ -16,16 +16,7 @@ Unlike relational databases:
 
 ## Document Structure
 
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="200" height="200" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="200" y="80" text-anchor="middle" font-weight="bold">Document</text>
-  <rect x="120" y="100" width="160" height="30" fill="#4CAF50" rx="3"/>
-  <text x="200" y="120" text-anchor="middle" fill="white">_id: "123"</text>
-  <rect x="120" y="140" width="160" height="30" fill="#2196F3" rx="3"/>
-  <text x="200" y="160" text-anchor="middle" fill="white">_index: "products"</text>
-  <rect x="120" y="180" width="160" height="50" fill="#FF9800" rx="3"/>
-  <text x="200" y="200" text-anchor="middle" fill="white">_source: {data}</text>
-</svg>
+![document_structure](../../../../svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_structure.svg)
 
 ---
 
@@ -74,21 +65,7 @@ Every document has:
 
 ## Document Lifecycle
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="80" cy="125" r="40" fill="#4CAF50"/>
-  <text x="80" y="130" text-anchor="middle" fill="white">Create</text>
-  <path d="M120 125 L160 125" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <circle cx="200" cy="125" r="40" fill="#2196F3"/>
-  <text x="200" y="130" text-anchor="middle" fill="white">Update</text>
-  <path d="M240 125 L280 125" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <circle cx="320" cy="125" r="40" fill="#FF9800"/>
-  <text x="320" y="130" text-anchor="middle" fill="white">Delete</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![document_lifecycle](../../../../svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_lifecycle.svg)
 
 ---
 

@@ -1,0 +1,21 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="15" width="130" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="75" y="38" text-anchor="middle" font-size="11" font-weight="bold">Build Stage</text>
+  <text x="75" y="55" text-anchor="middle" font-size="10">FROM, RUN</text>
+  <text x="75" y="70" text-anchor="middle" font-size="10">COPY, WORKDIR</text>
+  <rect x="155" y="15" width="130" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="220" y="38" text-anchor="middle" font-size="11" font-weight="bold">Config Stage</text>
+  <text x="220" y="55" text-anchor="middle" font-size="10">ENV, ARG</text>
+  <text x="220" y="70" text-anchor="middle" font-size="10">LABEL, EXPOSE</text>
+  <rect x="310" y="15" width="130" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="375" y="38" text-anchor="middle" font-size="11" font-weight="bold">Runtime</text>
+  <text x="375" y="55" text-anchor="middle" font-size="10">CMD, ENTRYPOINT</text>
+  <text x="375" y="70" text-anchor="middle" font-size="10">USER, HEALTHCHECK</text>
+  <rect x="460" y="15" width="130" height="75" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="525" y="38" text-anchor="middle" font-size="11" font-weight="bold">Metadata</text>
+  <text x="525" y="55" text-anchor="middle" font-size="10">LABEL, STOPSIGNAL</text>
+  <text x="525" y="70" text-anchor="middle" font-size="10">VOLUME, SHELL</text>
+  <rect x="10" y="110" width="580" height="40" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="128" text-anchor="middle" font-size="10" fill="#555">Instructions execute top-to-bottom; each RUN/COPY/ADD creates a new image layer</text>
+  <text x="300" y="143" text-anchor="middle" font-size="10" fill="#555">Order matters for caching efficiency</text>
+</svg>

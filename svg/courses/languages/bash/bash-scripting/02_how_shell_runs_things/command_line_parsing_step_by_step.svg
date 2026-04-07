@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="320">
+  <!-- Input bar -->
+  <rect x="10" y="10" width="620" height="38" rx="4" fill="#333" stroke="#333" stroke-width="1.5"/>
+  <text x="20" y="34" font-family="monospace" font-size="13" fill="#a5d6a7">Input: echo "hello world" &gt; output.txt</text>
+
+  <!-- Step boxes -->
+  <rect x="10" y="60" width="620" height="45" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
+  <text x="20" y="78" font-family="monospace" font-size="12" font-weight="bold" fill="#1565c0">Step 1: Tokenize</text>
+  <text x="160" y="78" font-family="monospace" font-size="12" fill="#222">→  [echo]  ["hello world"]  [&gt;]  [output.txt]</text>
+
+  <rect x="10" y="115" width="620" height="65" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
+  <text x="20" y="133" font-family="monospace" font-size="12" font-weight="bold" fill="#1565c0">Step 2: Identify</text>
+  <text x="160" y="133" font-family="monospace" font-size="12" fill="#222">→  command:  echo</text>
+  <text x="160" y="151" font-family="monospace" font-size="12" fill="#222">   args:     "hello world"</text>
+  <text x="160" y="169" font-family="monospace" font-size="12" fill="#222">   redirect: &gt; output.txt</text>
+
+  <rect x="10" y="190" width="620" height="45" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
+  <text x="20" y="208" font-family="monospace" font-size="12" font-weight="bold" fill="#1565c0">Step 3: Expand</text>
+  <text x="160" y="208" font-family="monospace" font-size="12" fill="#555">→  no expansions needed</text>
+
+  <rect x="10" y="245" width="620" height="45" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="20" y="263" font-family="monospace" font-size="12" font-weight="bold" fill="#1565c0">Step 4: Execute</text>
+  <text x="160" y="263" font-family="monospace" font-size="12" fill="#222">→  run /usr/bin/echo with arg</text>
+
+  <rect x="10" y="300" width="620" height="45" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="20" y="318" font-family="monospace" font-size="12" font-weight="bold" fill="#1565c0">Step 5: Redirect</text>
+  <text x="160" y="318" font-family="monospace" font-size="12" fill="#222">→  send stdout to output.txt</text>
+</svg>

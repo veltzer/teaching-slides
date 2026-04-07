@@ -4,42 +4,7 @@
 
 ## Development Workflow Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12">Plan & Design</text>
-
-  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12">Develop</text>
-
-  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" font-size="12">Build & Test</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12">Debug</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="12">Optimize</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="12">Deploy</text>
-
-  <rect x="300" y="350" width="200" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="3" rx="5"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">Iterate</text>
-
-  <path d="M 250 80 L 325 80" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 475 80 L 550 80" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 625 110 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 250 235 L 325 235" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 475 235 L 550 235" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 625 260 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#w1)"/>
-  <path d="M 300 380 L 175 110" stroke="#0066cc" stroke-width="2" marker-end="url(#w1)" stroke-dasharray="5,5"/>
-
-  <defs>
-    <marker id="w1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![development_workflow_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/development_workflow_overview.svg)
 
 ---
 
@@ -70,42 +35,7 @@ workspace/
 
 ## devtool Commands
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="50" width="200" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="13" font-weight="bold">devtool</text>
-
-  <rect x="100" y="170" width="140" height="50" fill="#ccffcc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="170" y="200" text-anchor="middle" font-size="11">add</text>
-
-  <rect x="260" y="170" width="140" height="50" fill="#ccffcc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="330" y="200" text-anchor="middle" font-size="11">modify</text>
-
-  <rect x="420" y="170" width="140" height="50" fill="#ccffcc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="490" y="200" text-anchor="middle" font-size="11">upgrade</text>
-
-  <rect x="580" y="170" width="140" height="50" fill="#ccffcc" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="650" y="200" text-anchor="middle" font-size="11">finish</text>
-
-  <rect x="180" y="280" width="140" height="50" fill="#ccccff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="250" y="310" text-anchor="middle" font-size="11">build</text>
-
-  <rect x="340" y="280" width="140" height="50" fill="#ccccff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="410" y="310" text-anchor="middle" font-size="11">deploy</text>
-
-  <rect x="500" y="280" width="140" height="50" fill="#ccccff" stroke="#000" stroke-width="2" rx="3"/>
-  <text x="570" y="310" text-anchor="middle" font-size="11">reset</text>
-
-  <path d="M 350 110 L 170 170" stroke="#333" stroke-width="1.5" marker-end="url(#w2)"/>
-  <path d="M 380 110 L 330 170" stroke="#333" stroke-width="1.5" marker-end="url(#w2)"/>
-  <path d="M 420 110 L 490 170" stroke="#333" stroke-width="1.5" marker-end="url(#w2)"/>
-  <path d="M 450 110 L 650 170" stroke="#333" stroke-width="1.5" marker-end="url(#w2)"/>
-
-  <defs>
-    <marker id="w2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![devtool_commands](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/devtool_commands.svg)
 
 ---
 
@@ -302,31 +232,7 @@ bitbake -c devpyshell myapp
 
 ## QEMU Testing
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="200" y="135" text-anchor="middle" font-size="13" font-weight="bold">Host System</text>
-  <text x="200" y="155" text-anchor="middle" font-size="11">Development</text>
-
-  <rect x="500" y="100" width="200" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="600" y="135" text-anchor="middle" font-size="13" font-weight="bold">QEMU Emulator</text>
-  <text x="600" y="155" text-anchor="middle" font-size="11">Target Testing</text>
-
-  <rect x="500" y="250" width="200" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="600" y="285" text-anchor="middle" font-size="13" font-weight="bold">Virtual Hardware</text>
-  <text x="600" y="305" text-anchor="middle" font-size="11">ARM/x86/etc</text>
-
-  <path d="M 300 140 L 500 140" stroke="#0066cc" stroke-width="2" marker-end="url(#w3)"/>
-  <text x="400" y="130" text-anchor="middle" font-size="10">Deploy</text>
-
-  <path d="M 600 180 L 600 250" stroke="#333" stroke-width="2" marker-end="url(#w3)"/>
-  <text x="650" y="220" text-anchor="middle" font-size="10">Emulates</text>
-
-  <defs>
-    <marker id="w3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![qemu_testing](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/qemu_testing.svg)
 
 ---
 
@@ -562,33 +468,7 @@ ltrace -c ./myapp  # Summary
 
 ## System Profiling Tools
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="140" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="170" y="135" text-anchor="middle" font-size="12">perf</text>
-
-  <rect x="260" y="100" width="140" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="330" y="135" text-anchor="middle" font-size="12">strace</text>
-
-  <rect x="420" y="100" width="140" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="490" y="135" text-anchor="middle" font-size="12">ltrace</text>
-
-  <rect x="580" y="100" width="140" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="650" y="135" text-anchor="middle" font-size="12">valgrind</text>
-
-  <rect x="300" y="250" width="200" height="80" fill="#ffffcc" stroke="#000" stroke-width="3"/>
-  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">Analysis Results</text>
-
-  <path d="M 170 160 L 350 250" stroke="#333" stroke-width="1.5" marker-end="url(#w4)"/>
-  <path d="M 330 160 L 380 250" stroke="#333" stroke-width="1.5" marker-end="url(#w4)"/>
-  <path d="M 490 160 L 420 250" stroke="#333" stroke-width="1.5" marker-end="url(#w4)"/>
-  <path d="M 650 160 L 450 250" stroke="#333" stroke-width="1.5" marker-end="url(#w4)"/>
-
-  <defs>
-    <marker id="w4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![system_profiling_tools](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/system_profiling_tools.svg)
 
 ---
 

@@ -1,0 +1,35 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd6_02_caching" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Memory bar -->
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Redis Memory (maxmemory reached)</text>
+  <rect x="30" y="25" width="540" height="25" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="3"/>
+  <rect x="30" y="25" width="480" height="25" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
+  <rect x="30" y="25" width="360" height="25" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="200" y="42" text-anchor="middle" font-size="10">Used: 3.6 GB</text>
+  <text x="540" y="42" text-anchor="middle" font-size="10" fill="#c62828">4 GB limit</text>
+  <!-- Eviction policies -->
+  <rect x="20" y="65" width="130" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="85" y="82" text-anchor="middle" font-size="10" font-weight="bold">noeviction</text>
+  <text x="85" y="95" text-anchor="middle" font-size="10">Returns error</text>
+  <text x="85" y="108" text-anchor="middle" font-size="10">on new writes</text>
+  <rect x="160" y="65" width="130" height="55" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="225" y="82" text-anchor="middle" font-size="10" font-weight="bold">allkeys-lru</text>
+  <text x="225" y="95" text-anchor="middle" font-size="10">Evict least</text>
+  <text x="225" y="108" text-anchor="middle" font-size="10">recently used</text>
+  <rect x="300" y="65" width="130" height="55" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="365" y="82" text-anchor="middle" font-size="10" font-weight="bold">volatile-ttl</text>
+  <text x="365" y="95" text-anchor="middle" font-size="10">Evict nearest</text>
+  <text x="365" y="108" text-anchor="middle" font-size="10">expiration</text>
+  <rect x="440" y="65" width="140" height="55" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="510" y="82" text-anchor="middle" font-size="10" font-weight="bold">allkeys-random</text>
+  <text x="510" y="95" text-anchor="middle" font-size="10">Evict random</text>
+  <text x="510" y="108" text-anchor="middle" font-size="10">keys</text>
+  <!-- New key arrow -->
+  <rect x="20" y="140" width="560" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5" opacity="0.4"/>
+  <text x="300" y="160" text-anchor="middle" font-size="10">Set maxmemory-policy in redis.conf: <tspan font-weight="bold">maxmemory-policy allkeys-lru</tspan></text>
+  <text x="300" y="175" text-anchor="middle" font-size="10">volatile-* policies only evict keys with TTL set</text>
+</svg>

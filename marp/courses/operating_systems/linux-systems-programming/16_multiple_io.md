@@ -108,17 +108,7 @@ int ready = epoll_wait(epfd, events, 10, timeout);
 
 ## Edge vs Level Triggered
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="50" y="30" font-size="14" font-weight="bold">Level Triggered</text>
-  <rect x="50" y="40" width="60" height="20" fill="lightblue" stroke="black"/>
-  <text x="65" y="55" font-size="10">Data Available</text>
-  <text x="130" y="55" font-size="12">→ Notify repeatedly</text>
-
-  <text x="50" y="100" font-size="14" font-weight="bold">Edge Triggered</text>
-  <rect x="50" y="110" width="60" height="20" fill="lightgreen" stroke="black"/>
-  <text x="65" y="125" font-size="10">State Change</text>
-  <text x="130" y="125" font-size="12">→ Notify once</text>
-</svg>
+![edge_vs_level_triggered](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/edge_vs_level_triggered.svg)
 
 1. **Level** - Notify while condition is true
 1. **Edge** - Notify when condition changes
@@ -171,23 +161,7 @@ io_uring_wait_cqe(&ring, &cqe);
 
 ## I/O Model Comparison
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="50" y="20" font-size="12" font-weight="bold">Scalability</text>
-  <line x1="50" y1="30" x2="450" y2="30" stroke="black"/>
-  <line x1="50" y1="30" x2="50" y2="250" stroke="black"/>
-
-  <circle cx="80" cy="200" r="5" fill="red"/>
-  <text x="60" y="220" font-size="10">Blocking</text>
-
-  <circle cx="150" cy="150" r="5" fill="orange"/>
-  <text x="130" y="170" font-size="10">select/poll</text>
-
-  <circle cx="250" cy="80" r="5" fill="green"/>
-  <text x="230" y="100" font-size="10">epoll</text>
-
-  <circle cx="350" cy="50" r="5" fill="blue"/>
-  <text x="320" y="70" font-size="10">io_uring</text>
-</svg>
+![i_o_model_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/i_o_model_comparison.svg)
 
 ---
 
@@ -235,19 +209,7 @@ while (running) {
 
 ## Choosing the Right API
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="100" height="30" fill="lightcoral" stroke="black"/>
-  <text x="100" y="40" font-size="12" text-anchor="middle">Few connections</text>
-  <text x="100" y="70" font-size="10" text-anchor="middle">Blocking I/O</text>
-
-  <rect x="200" y="20" width="100" height="30" fill="lightyellow" stroke="black"/>
-  <text x="250" y="40" font-size="12" text-anchor="middle">Moderate load</text>
-  <text x="250" y="70" font-size="10" text-anchor="middle">select/poll</text>
-
-  <rect x="350" y="20" width="100" height="30" fill="lightgreen" stroke="black"/>
-  <text x="400" y="40" font-size="12" text-anchor="middle">High performance</text>
-  <text x="400" y="70" font-size="10" text-anchor="middle">epoll/io_uring</text>
-</svg>
+![choosing_the_right_api](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/choosing_the_right_api.svg)
 
 ---
 

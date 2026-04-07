@@ -1,0 +1,28 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd4_04_crafting" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="15" width="170" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="105" y="38" text-anchor="middle" font-size="11" font-weight="bold">ARG (Build-time)</text>
+  <text x="105" y="55" text-anchor="middle" font-size="10">--build-arg VER=1.0</text>
+  <text x="105" y="72" text-anchor="middle" font-size="10" fill="#555">Available in Dockerfile</text>
+  <text x="105" y="87" text-anchor="middle" font-size="10" fill="#555">Not in final image</text>
+  <rect x="215" y="15" width="170" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="38" text-anchor="middle" font-size="11" font-weight="bold">ENV (Runtime)</text>
+  <text x="300" y="55" text-anchor="middle" font-size="10">ENV APP_ENV=prod</text>
+  <text x="300" y="72" text-anchor="middle" font-size="10" fill="#555">Persists in image</text>
+  <text x="300" y="87" text-anchor="middle" font-size="10" fill="#555">Overridable: -e flag</text>
+  <line x1="190" y1="55" x2="213" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowd4_04_crafting)"/>
+  <text x="202" y="48" text-anchor="middle" font-size="9" fill="#666">set</text>
+  <rect x="410" y="15" width="170" height="80" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="495" y="38" text-anchor="middle" font-size="11" font-weight="bold">ARG + ENV</text>
+  <text x="495" y="55" text-anchor="middle" font-size="10">ARG VERSION</text>
+  <text x="495" y="72" text-anchor="middle" font-size="10">ENV VER=$VERSION</text>
+  <text x="495" y="87" text-anchor="middle" font-size="10" fill="#555">Promotes to runtime</text>
+  <rect x="20" y="115" width="560" height="65" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="138" text-anchor="middle" font-size="10" fill="#555">Build: docker build --build-arg VERSION=2.0 .</text>
+  <text x="300" y="155" text-anchor="middle" font-size="10" fill="#555">Run:   docker run -e APP_ENV=staging myapp</text>
+  <text x="300" y="172" text-anchor="middle" font-size="10" fill="#c62828">Warning: ARG values visible in image history - never use for secrets</text>
+</svg>

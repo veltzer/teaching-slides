@@ -10,31 +10,7 @@
 
 ## Order of Volatility
 
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="370" font-family="sans-serif">
-  <text x="260" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Most Volatile — Collect First</text>
-  <rect x="40" y="30" width="440" height="290" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <rect x="55" y="44"  width="410" height="24" fill="#ffcdd2" stroke="#e57373" stroke-width="1" rx="3"/>
-  <text x="75" y="61"  font-size="12" fill="#333333">1. CPU registers, cache</text>
-  <rect x="55" y="72"  width="410" height="24" fill="#ffcdd2" stroke="#e57373" stroke-width="1" rx="3"/>
-  <text x="75" y="89"  font-size="12" fill="#333333">2. RAM contents</text>
-  <rect x="55" y="100" width="410" height="24" fill="#ffe0b2" stroke="#ffb74d" stroke-width="1" rx="3"/>
-  <text x="75" y="117" font-size="12" fill="#333333">3. Network connections</text>
-  <rect x="55" y="128" width="410" height="24" fill="#ffe0b2" stroke="#ffb74d" stroke-width="1" rx="3"/>
-  <text x="75" y="145" font-size="12" fill="#333333">4. Running processes</text>
-  <rect x="55" y="156" width="410" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
-  <text x="75" y="173" font-size="12" fill="#333333">5. Kernel modules</text>
-  <rect x="55" y="184" width="410" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
-  <text x="75" y="201" font-size="12" fill="#333333">6. Temporary files</text>
-  <rect x="55" y="212" width="410" height="24" fill="#e8f5e9" stroke="#81c784" stroke-width="1" rx="3"/>
-  <text x="75" y="229" font-size="12" fill="#333333">7. Disk data</text>
-  <rect x="55" y="240" width="410" height="24" fill="#e8f5e9" stroke="#81c784" stroke-width="1" rx="3"/>
-  <text x="75" y="257" font-size="12" fill="#333333">8. Remote logs</text>
-  <rect x="55" y="268" width="410" height="24" fill="#e3f2fd" stroke="#64b5f6" stroke-width="1" rx="3"/>
-  <text x="75" y="285" font-size="12" fill="#333333">9. Physical configuration</text>
-  <rect x="55" y="296" width="410" height="24" fill="#e3f2fd" stroke="#64b5f6" stroke-width="1" rx="3"/>
-  <text x="75" y="313" font-size="12" fill="#333333">10. Archival media</text>
-  <text x="260" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Least Volatile — Collect Last</text>
-</svg>
+![order_of_volatility](../../../../svg/courses/security/linux-forensics/07_collecting_information/order_of_volatility.svg)
 
 - Collect volatile data first - it disappears on power loss
 - RFC 3227 defines the order of volatility

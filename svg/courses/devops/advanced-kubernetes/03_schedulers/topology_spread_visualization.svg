@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>  <text x="330" y="22" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">maxSkew: 1, topologyKey: zone</text>
+  <rect x="30" y="35" width="175" height="130" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="117" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone A</text>
+  <rect x="50" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="117" y="75" text-anchor="middle" font-size="13" fill="#222">web-1</text>
+  <rect x="50" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="117" y="127" text-anchor="middle" font-size="13" fill="#222">web-4</text>
+  <text x="117" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
+  <rect x="235" y="35" width="175" height="130" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="322" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone B</text>
+  <rect x="255" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="322" y="75" text-anchor="middle" font-size="13" fill="#222">web-2</text>
+  <rect x="255" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="322" y="127" text-anchor="middle" font-size="13" fill="#222">web-5</text>
+  <text x="322" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
+  <rect x="440" y="35" width="175" height="130" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
+  <text x="527" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone C</text>
+  <rect x="460" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="527" y="75" text-anchor="middle" font-size="13" fill="#222">web-3</text>
+  <rect x="460" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
+  <text x="527" y="127" text-anchor="middle" font-size="13" fill="#222">web-6</text>
+  <text x="527" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
+  <text x="330" y="218" text-anchor="middle" font-size="12" fill="#333">Balanced! maxSkew=1 means difference between any two zones ≤ 1.</text>
+  <rect x="80" y="232" width="490" height="58" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="325" y="253" text-anchor="middle" font-size="12" fill="#b71c1c">Violation example: Zone A = 2 pods, Zone C = 0 pods</text>
+  <text x="325" y="272" text-anchor="middle" font-size="12" fill="#b71c1c">skew = 2 − 0 = 2 > maxSkew(1) → VIOLATION</text>
+</svg>

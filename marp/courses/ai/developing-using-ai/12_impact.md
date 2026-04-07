@@ -25,25 +25,7 @@ Quantifying AI impact enables:
 
 ## The Measurement Challenge
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="400" height="140" fill="#f9f9f9" stroke="#ccc" rx="10"/>
-  <text x="250" y="55" text-anchor="middle" font-size="16" font-weight="bold">AI Impact Measurement Challenges</text>
-
-  <circle cx="130" cy="100" r="35" fill="#ffecb3" stroke="#f57f17"/>
-  <text x="130" y="95" text-anchor="middle" font-size="9">Intangible</text>
-  <text x="130" y="108" text-anchor="middle" font-size="9">Benefits</text>
-
-  <circle cx="250" cy="100" r="35" fill="#c8e6c9" stroke="#388e3c"/>
-  <text x="250" y="95" text-anchor="middle" font-size="9">Attribution</text>
-  <text x="250" y="108" text-anchor="middle" font-size="9">Complexity</text>
-
-  <circle cx="370" cy="100" r="35" fill="#bbdefb" stroke="#1976d2"/>
-  <text x="370" y="95" text-anchor="middle" font-size="9">Baseline</text>
-  <text x="370" y="108" text-anchor="middle" font-size="9">Establishment</text>
-
-  <rect x="150" y="140" width="200" height="20" fill="#e8f5e8" stroke="#2e7d32" rx="5"/>
-  <text x="250" y="155" text-anchor="middle" font-size="10">Requires Systematic Approach</text>
-</svg>
+![the_measurement_challenge](../../../../svg/courses/ai/developing-using-ai/12_impact/the_measurement_challenge.svg)
 
 ---
 
@@ -111,29 +93,7 @@ class BaselineEstablisher:
 
 ## Productivity Metrics
 
-<svg viewBox="0 0 450 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="210" fill="#f5f5f5" stroke="#ccc" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">Productivity Measurement Dashboard</text>
-
-  <rect x="80" y="70" width="120" height="40" fill="#e3f2fd" stroke="#1976d2" rx="5"/>
-  <text x="140" y="85" text-anchor="middle" font-size="10">Development Velocity</text>
-  <text x="140" y="98" text-anchor="middle" font-size="12" font-weight="bold">+35%</text>
-
-  <rect x="220" y="70" width="120" height="40" fill="#e8f5e8" stroke="#388e3c" rx="5"/>
-  <text x="280" y="85" text-anchor="middle" font-size="10">Task Completion</text>
-  <text x="280" y="98" text-anchor="middle" font-size="12" font-weight="bold">-25% time</text>
-
-  <rect x="80" y="130" width="120" height="40" fill="#fff3e0" stroke="#f57c00" rx="5"/>
-  <text x="140" y="145" text-anchor="middle" font-size="10">Code Generation</text>
-  <text x="140" y="158" text-anchor="middle" font-size="12" font-weight="bold">3x faster</text>
-
-  <rect x="220" y="130" width="120" height="40" fill="#fce4ec" stroke="#c2185b" rx="5"/>
-  <text x="280" y="145" text-anchor="middle" font-size="10">Debugging Time</text>
-  <text x="280" y="158" text-anchor="middle" font-size="12" font-weight="bold">-40%</text>
-
-  <rect x="150" y="190" width="120" height="30" fill="#f3e5f5" stroke="#7b1fa2" rx="5"/>
-  <text x="210" y="208" text-anchor="middle" font-size="11">Overall ROI: 280%</text>
-</svg>
+![productivity_metrics](../../../../svg/courses/ai/developing-using-ai/12_impact/productivity_metrics.svg)
 
 ---
 
@@ -409,30 +369,7 @@ performance_improvements:
 
 ## Learning Acceleration Measurement
 
-<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="20" width="400" height="180" fill="#f5f5f5" stroke="#ccc" rx="10"/>
-  <text x="240" y="45" text-anchor="middle" font-size="16" font-weight="bold">Learning Acceleration Metrics</text>
-
-  <rect x="70" y="70" width="100" height="35" fill="#e8f5e8" stroke="#388e3c" rx="5"/>
-  <text x="120" y="85" text-anchor="middle" font-size="9">Skill Acquisition</text>
-  <text x="120" y="98" text-anchor="middle" font-size="11" font-weight="bold">2.3x faster</text>
-
-  <rect x="190" y="70" width="100" height="35" fill="#e3f2fd" stroke="#1976d2" rx="5"/>
-  <text x="240" y="85" text-anchor="middle" font-size="9">Knowledge Transfer</text>
-  <text x="240" y="98" text-anchor="middle" font-size="11" font-weight="bold">65% improvement</text>
-
-  <rect x="310" y="70" width="100" height="35" fill="#fff3e0" stroke="#f57c00" rx="5"/>
-  <text x="360" y="85" text-anchor="middle" font-size="9">Onboarding Time</text>
-  <text x="360" y="98" text-anchor="middle" font-size="11" font-weight="bold">-45% time</text>
-
-  <rect x="130" y="125" width="120" height="35" fill="#fce4ec" stroke="#c2185b" rx="5"/>
-  <text x="190" y="140" text-anchor="middle" font-size="9">Problem Solving</text>
-  <text x="190" y="153" text-anchor="middle" font-size="11" font-weight="bold">40% faster</text>
-
-  <rect x="270" y="125" width="120" height="35" fill="#f3e5f5" stroke="#7b1fa2" rx="5"/>
-  <text x="330" y="140" text-anchor="middle" font-size="9">Technical Competency</text>
-  <text x="330" y="153" text-anchor="middle" font-size="11" font-weight="bold">+2.1 levels</text>
-</svg>
+![learning_acceleration_measurement](../../../../svg/courses/ai/developing-using-ai/12_impact/learning_acceleration_measurement.svg)
 
 ---
 
@@ -596,33 +533,7 @@ class KnowledgeRetentionAnalyzer:
 
 ## Team Impact Assessment
 
-<svg viewBox="0 0500 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="400" height="210" fill="#f9f9f9" stroke="#ccc" rx="10"/>
-  <text x="250" y="45" text-anchor="middle" font-size="16" font-weight="bold">Team Collaboration Impact</text>
-
-  <circle cx="150" cy="100" r="40" fill="#e8f5e8" stroke="#388e3c"/>
-  <text x="150" y="95" text-anchor="middle" font-size="10">Knowledge</text>
-  <text x="150" y="108" text-anchor="middle" font-size="10">Sharing</text>
-
-  <circle cx="250" cy="80" r="35" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="250" y="75" text-anchor="middle" font-size="10">Communication</text>
-  <text x="250" y="88" text-anchor="middle" font-size="10">Quality</text>
-
-  <circle cx="350" cy="100" r="40" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="350" y="95" text-anchor="middle" font-size="10">Code Review</text>
-  <text x="350" y="108" text-anchor="middle" font-size="10">Efficiency</text>
-
-  <circle cx="200" cy="150" r="35" fill="#fce4ec" stroke="#c2185b"/>
-  <text x="200" y="145" text-anchor="middle" font-size="10">Onboarding</text>
-  <text x="200" y="158" text-anchor="middle" font-size="10">Speed</text>
-
-  <circle cx="300" cy="150" r="35" fill="#f3e5f5" stroke="#7b1fa2"/>
-  <text x="300" y="145" text-anchor="middle" font-size="10">Cross-Team</text>
-  <text x="300" y="158" text-anchor="middle" font-size="10">Coordination</text>
-
-  <rect x="150" y="190" width="200" height="25" fill="#e0f2f1" stroke="#00695c" rx="5"/>
-  <text x="250" y="207" text-anchor="middle" font-size="11">Overall Team Productivity: +42%</text>
-</svg>
+![team_impact_assessment](../../../../svg/courses/ai/developing-using-ai/12_impact/team_impact_assessment.svg)
 
 ---
 
@@ -784,21 +695,7 @@ class CrossTeamAnalyzer:
 
 ## ROI Calculation Framework
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="400" height="160" fill="#f5f5f5" stroke="#ccc" rx="10"/>
-  <text x="250" y="45" text-anchor="middle" font-size="16" font-weight="bold">AI Investment ROI Calculation</text>
-
-  <rect x="80" y="70" width="150" height="40" fill="#ffecb3" stroke="#f57f17" rx="5"/>
-  <text x="155" y="85" text-anchor="middle" font-size="10">Investment Costs</text>
-  <text x="155" y="98" text-anchor="middle" font-size="9">Licenses + Training + Setup</text>
-
-  <rect x="270" y="70" width="150" height="40" fill="#c8e6c9" stroke="#388e3c" rx="5"/>
-  <text x="345" y="85" text-anchor="middle" font-size="10">Productivity Gains</text>
-  <text x="345" y="98" text-anchor="middle" font-size="9">Time Saved × Hourly Rate</text>
-
-  <rect x="175" y="130" width="150" height="30" fill="#e3f2fd" stroke="#1976d2" rx="5"/>
-  <text x="250" y="150" text-anchor="middle" font-size="12" font-weight="bold">ROI = (Gains - Costs) / Costs</text>
-</svg>
+![roi_calculation_framework](../../../../svg/courses/ai/developing-using-ai/12_impact/roi_calculation_framework.svg)
 
 ---
 
@@ -1057,31 +954,7 @@ class LongTermValueAssessor:
 
 ## Continuous Improvement Framework
 
-<svg viewBox="0 0 450 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="350" height="160" fill="#f9f9f9" stroke="#ccc" rx="10"/>
-  <text x="225" y="45" text-anchor="middle" font-size="16" font-weight="bold">Continuous Improvement Cycle</text>
-
-  <circle cx="125" cy="90" r="25" fill="#e8f5e8" stroke="#388e3c"/>
-  <text x="125" y="87" text-anchor="middle" font-size="9">Measure</text>
-  <text x="125" y="98" text-anchor="middle" font-size="9">Impact</text>
-
-  <circle cx="225" cy="70" r="25" fill="#e3f2fd" stroke="#1976d2"/>
-  <text x="225" y="67" text-anchor="middle" font-size="9">Analyze</text>
-  <text x="225" y="78" text-anchor="middle" font-size="9">Data</text>
-
-  <circle cx="325" cy="90" r="25" fill="#fff3e0" stroke="#f57c00"/>
-  <text x="325" y="87" text-anchor="middle" font-size="9">Optimize</text>
-  <text x="325" y="98" text-anchor="middle" font-size="9">Usage</text>
-
-  <circle cx="225" cy="130" r="25" fill="#fce4ec" stroke="#c2185b"/>
-  <text x="225" y="127" text-anchor="middle" font-size="9">Implement</text>
-  <text x="225" y="138" text-anchor="middle" font-size="9">Changes</text>
-
-  <path d="M 145 80 Q 185 60 205 70" fill="none" stroke="#666" stroke-width="2"/>
-  <path d="M 245 80 Q 285 80 305 85" fill="none" stroke="#666" stroke-width="2"/>
-  <path d="M 315 110 Q 275 140 245 130" fill="none" stroke="#666" stroke-width="2"/>
-  <path d="M 205 135 Q 165 140 145 105" fill="none" stroke="#666" stroke-width="2"/>
-</svg>
+![continuous_improvement_framework](../../../../svg/courses/ai/developing-using-ai/12_impact/continuous_improvement_framework.svg)
 
 ---
 

@@ -1,0 +1,22 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Debugging Best Practices</text>
+  <rect x="20" y="30" width="175" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="107" y="48" text-anchor="middle" font-size="10" font-weight="bold">1. Reproduce</text>
+  <text x="107" y="65" text-anchor="middle" font-size="10">Same image tag</text>
+  <text x="107" y="80" text-anchor="middle" font-size="10">Same env vars</text>
+  <rect x="213" y="30" width="175" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">2. Isolate</text>
+  <text x="300" y="65" text-anchor="middle" font-size="10">Minimal compose</text>
+  <text x="300" y="80" text-anchor="middle" font-size="10">One service at a time</text>
+  <rect x="405" y="30" width="175" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="492" y="48" text-anchor="middle" font-size="10" font-weight="bold">3. Verify Fix</text>
+  <text x="492" y="65" text-anchor="middle" font-size="10">Clean rebuild</text>
+  <text x="492" y="80" text-anchor="middle" font-size="10">Test in CI</text>
+  <rect x="20" y="110" width="270" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="5"/>
+  <text x="155" y="128" text-anchor="middle" font-size="10" font-weight="bold">Do: version pin, health checks, logs</text>
+  <text x="155" y="143" text-anchor="middle" font-size="10">Structured JSON logging</text>
+  <rect x="310" y="110" width="270" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="5"/>
+  <text x="445" y="128" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Avoid: latest tag, no limits, silent fails</text>
+  <text x="445" y="143" text-anchor="middle" font-size="10" fill="#c62828">Ignoring exit codes</text>
+  <text x="300" y="180" text-anchor="middle" font-size="10" fill="#555">docker inspect -f '{{.State.ExitCode}}' container -- always check exit codes</text>
+</svg>

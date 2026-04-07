@@ -26,32 +26,7 @@ public:
 
 ## Association Lifetime Models
 
-<svg width="550" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="150" height="80" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="125" y="75" text-anchor="middle" font-size="12">Independent</text>
-  <text x="125" y="95" text-anchor="middle" font-size="10">Objects live</text>
-  <text x="125" y="110" text-anchor="middle" font-size="10">independently</text>
-
-  <rect x="220" y="50" width="150" height="80" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="295" y="75" text-anchor="middle" font-size="12">Structured</text>
-  <text x="295" y="95" text-anchor="middle" font-size="10">Owner controls</text>
-  <text x="295" y="110" text-anchor="middle" font-size="10">lifetime</text>
-
-  <rect x="390" y="50" width="150" height="80" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="465" y="75" text-anchor="middle" font-size="12">Shared</text>
-  <text x="465" y="95" text-anchor="middle" font-size="10">Multiple owners</text>
-  <text x="465" y="110" text-anchor="middle" font-size="10">ref counting</text>
-
-  <rect x="135" y="150" width="150" height="80" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="210" y="175" text-anchor="middle" font-size="12">Weak</text>
-  <text x="210" y="195" text-anchor="middle" font-size="10">Non-owning</text>
-  <text x="210" y="210" text-anchor="middle" font-size="10">observer</text>
-
-  <rect x="305" y="150" width="150" height="80" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="380" y="175" text-anchor="middle" font-size="12">Temporary</text>
-  <text x="380" y="195" text-anchor="middle" font-size="10">Short-lived</text>
-  <text x="380" y="210" text-anchor="middle" font-size="10">references</text>
-</svg>
+![association_lifetime_models](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/association_lifetime_models.svg)
 
 Different lifetime models require different association strategies
 
@@ -187,23 +162,7 @@ void demonstrateUniquePtr() {
 
 ## unique_ptr Benefits
 
-<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="30" width="180" height="140" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="140" y="55" text-anchor="middle" font-size="14">unique_ptr</text>
-  <text x="140" y="80" text-anchor="middle" font-size="11">Automatic cleanup</text>
-  <text x="140" y="100" text-anchor="middle" font-size="11">Move semantics</text>
-  <text x="140" y="120" text-anchor="middle" font-size="11">Zero overhead</text>
-  <text x="140" y="140" text-anchor="middle" font-size="11">Exception safe</text>
-  <text x="140" y="160" text-anchor="middle" font-size="11">Clear ownership</text>
-
-  <rect x="270" y="30" width="180" height="140" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="360" y="55" text-anchor="middle" font-size="14">Raw Pointers</text>
-  <text x="360" y="80" text-anchor="middle" font-size="11">Manual cleanup</text>
-  <text x="360" y="100" text-anchor="middle" font-size="11">Copy confusion</text>
-  <text x="360" y="120" text-anchor="middle" font-size="11">Memory leaks</text>
-  <text x="360" y="140" text-anchor="middle" font-size="11">Exception unsafe</text>
-  <text x="360" y="160" text-anchor="middle" font-size="11">Unclear ownership</text>
-</svg>
+![uniqueptr_benefits](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/uniqueptr_benefits.svg)
 
 `unique_ptr` eliminates common memory management errors
 
@@ -348,39 +307,7 @@ public:
 
 ## shared_ptr Reference Counting
 
-<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="75" text-anchor="middle" font-size="10">shared_ptr</text>
-  <text x="100" y="90" text-anchor="middle" font-size="10">count: 3</text>
-
-  <rect x="50" y="130" width="100" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="155" text-anchor="middle" font-size="10">shared_ptr</text>
-  <text x="100" y="170" text-anchor="middle" font-size="10">count: 3</text>
-
-  <rect x="50" y="210" width="100" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="100" y="235" text-anchor="middle" font-size="10">shared_ptr</text>
-  <text x="100" y="250" text-anchor="middle" font-size="10">count: 3</text>
-
-  <line x1="150" y1="80" x2="200" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="150" y1="160" x2="200" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="150" y1="240" x2="200" y2="160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <rect x="200" y="80" width="120" height="80" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="260" y="105" text-anchor="middle" font-size="12">Object</text>
-  <text x="260" y="125" text-anchor="middle" font-size="10">Control Block</text>
-  <text x="260" y="145" text-anchor="middle" font-size="10">ref_count: 3</text>
-
-  <rect x="350" y="100" width="100" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="400" y="125" text-anchor="middle" font-size="10">Shared Data</text>
-
-  <line x1="320" y1="120" x2="350" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![sharedptr_reference_counting](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/sharedptr_reference_counting.svg)
 
 Object is destroyed when reference count reaches zero
 
@@ -501,22 +428,7 @@ public:
 
 ## weak_ptr Lock Patterns
 
-<svg width="500" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="100" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="110" y="75" text-anchor="middle" font-size="12">weak_ptr</text>
-  <text x="110" y="100" text-anchor="middle" font-size="10">Non-owning</text>
-  <text x="110" y="120" text-anchor="middle" font-size="10">May be null</text>
-
-  <text x="200" y="105" text-anchor="middle" font-size="14">lock()</text>
-
-  <rect x="250" y="50" width="120" height="100" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="310" y="75" text-anchor="middle" font-size="12">shared_ptr</text>
-  <text x="310" y="100" text-anchor="middle" font-size="10">Temporary owner</text>
-  <text x="310" y="120" text-anchor="middle" font-size="10">Safe to use</text>
-
-  <line x1="170" y1="100" x2="200" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="220" y1="100" x2="250" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![weakptr_lock_patterns](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/weakptr_lock_patterns.svg)
 
 Always check the result of `lock()` before using the object
 
@@ -974,55 +886,7 @@ auto ptr = shared.get(); delete ptr;                 // Manual delete
 
 ## Performance Comparison
 
-<svg width="550" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="100" y="75" text-anchor="middle" font-size="12">Raw Pointer</text>
-
-  <rect x="170" y="50" width="100" height="40" fill="#e8f5e8" stroke="#4caf50" stroke-width="2"/>
-  <text x="220" y="75" text-anchor="middle" font-size="12">unique_ptr</text>
-
-  <rect x="290" y="50" width="100" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="340" y="75" text-anchor="middle" font-size="12">shared_ptr</text>
-
-  <rect x="410" y="50" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="460" y="75" text-anchor="middle" font-size="12">weak_ptr</text>
-
-  <rect x="50" y="110" width="100" height="30" fill="#ffcdd2"/>
-  <text x="100" y="130" text-anchor="middle" font-size="10">Creation: Fast</text>
-
-  <rect x="170" y="110" width="100" height="30" fill="#c8e6c8"/>
-  <text x="220" y="130" text-anchor="middle" font-size="10">Creation: Fast</text>
-
-  <rect x="290" y="110" width="100" height="30" fill="#ffe0b2"/>
-  <text x="340" y="130" text-anchor="middle" font-size="10">Creation: Slow</text>
-
-  <rect x="410" y="110" width="100" height="30" fill="#e1bee7"/>
-  <text x="460" y="130" text-anchor="middle" font-size="10">Creation: Medium</text>
-
-  <rect x="50" y="150" width="100" height="30" fill="#ffcdd2"/>
-  <text x="100" y="170" text-anchor="middle" font-size="10">Copy: Fast</text>
-
-  <rect x="170" y="150" width="100" height="30" fill="#ffcdd2"/>
-  <text x="220" y="170" text-anchor="middle" font-size="10">Copy: Move only</text>
-
-  <rect x="290" y="150" width="100" height="30" fill="#ffe0b2"/>
-  <text x="340" y="170" text-anchor="middle" font-size="10">Copy: Atomic ops</text>
-
-  <rect x="410" y="150" width="100" height="30" fill="#c8e6c8"/>
-  <text x="460" y="170" text-anchor="middle" font-size="10">Copy: Fast</text>
-
-  <rect x="50" y="190" width="100" height="30" fill="#ffcdd2"/>
-  <text x="100" y="210" text-anchor="middle" font-size="10">Safety: Poor</text>
-
-  <rect x="170" y="190" width="100" height="30" fill="#c8e6c8"/>
-  <text x="220" y="210" text-anchor="middle" font-size="10">Safety: Excellent</text>
-
-  <rect x="290" y="190" width="100" height="30" fill="#c8e6c8"/>
-  <text x="340" y="210" text-anchor="middle" font-size="10">Safety: Excellent</text>
-
-  <rect x="410" y="190" width="100" height="30" fill="#c8e6c8"/>
-  <text x="460" y="210" text-anchor="middle" font-size="10">Safety: Excellent</text>
-</svg>
+![performance_comparison](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/performance_comparison.svg)
 
 Choose the right smart pointer based on your performance and safety needs
 

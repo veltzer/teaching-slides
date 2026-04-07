@@ -51,20 +51,7 @@
 
 ## What is Container Orchestration?
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold">Container Orchestration</text>
-  <rect x="100" y="100" width="120" height="80" fill="#4285f4" rx="5"/>
-  <text x="160" y="145" text-anchor="middle" fill="white">Container 1</text>
-  <rect x="250" y="100" width="120" height="80" fill="#4285f4" rx="5"/>
-  <text x="310" y="145" text-anchor="middle" fill="white">Container 2</text>
-  <rect x="400" y="100" width="120" height="80" fill="#4285f4" rx="5"/>
-  <text x="460" y="145" text-anchor="middle" fill="white">Container 3</text>
-  <rect x="550" y="100" width="120" height="80" fill="#4285f4" rx="5"/>
-  <text x="610" y="145" text-anchor="middle" fill="white">Container 4</text>
-  <rect x="300" y="230" width="200" height="60" fill="#34a853" rx="5"/>
-  <text x="400" y="265" text-anchor="middle" fill="white" font-weight="bold">Orchestrator</text>
-</svg>
+![what_is_container_orchestration](../../../../svg/courses/devops/k8s-introduction/01_docker/what_is_container_orchestration.svg)
 
 ---
 
@@ -80,41 +67,7 @@
 
 ## Container vs Virtual Machine
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <g id="vm">
-    <rect x="50" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-    <text x="200" y="30" text-anchor="middle" font-weight="bold">Virtual Machines</text>
-    <rect x="60" y="280" width="280" height="60" fill="#666"/>
-    <text x="200" y="315" text-anchor="middle" fill="white">Hardware</text>
-    <rect x="60" y="210" width="280" height="60" fill="#888"/>
-    <text x="200" y="245" text-anchor="middle" fill="white">Hypervisor</text>
-    <rect x="70" y="80" width="80" height="120" fill="#4285f4"/>
-    <text x="110" y="100" text-anchor="middle" fill="white" font-size="12">Guest OS</text>
-    <text x="110" y="140" text-anchor="middle" fill="white" font-size="12">App</text>
-    <rect x="160" y="80" width="80" height="120" fill="#4285f4"/>
-    <text x="200" y="100" text-anchor="middle" fill="white" font-size="12">Guest OS</text>
-    <text x="200" y="140" text-anchor="middle" fill="white" font-size="12">App</text>
-    <rect x="250" y="80" width="80" height="120" fill="#4285f4"/>
-    <text x="290" y="100" text-anchor="middle" fill="white" font-size="12">Guest OS</text>
-    <text x="290" y="140" text-anchor="middle" fill="white" font-size="12">App</text>
-  </g>
-  <g id="container">
-    <rect x="450" y="50" width="300" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-    <text x="600" y="30" text-anchor="middle" font-weight="bold">Containers</text>
-    <rect x="460" y="280" width="280" height="60" fill="#666"/>
-    <text x="600" y="315" text-anchor="middle" fill="white">Hardware</text>
-    <rect x="460" y="210" width="280" height="60" fill="#888"/>
-    <text x="600" y="245" text-anchor="middle" fill="white">Host OS</text>
-    <rect x="460" y="140" width="280" height="60" fill="#34a853"/>
-    <text x="600" y="175" text-anchor="middle" fill="white">Container Runtime</text>
-    <rect x="470" y="80" width="80" height="50" fill="#4285f4"/>
-    <text x="510" y="110" text-anchor="middle" fill="white">App</text>
-    <rect x="560" y="80" width="80" height="50" fill="#4285f4"/>
-    <text x="600" y="110" text-anchor="middle" fill="white">App</text>
-    <rect x="650" y="80" width="80" height="50" fill="#4285f4"/>
-    <text x="690" y="110" text-anchor="middle" fill="white">App</text>
-  </g>
-</svg>
+![container_vs_virtual_machine](../../../../svg/courses/devops/k8s-introduction/01_docker/container_vs_virtual_machine.svg)
 
 ---
 
@@ -160,26 +113,7 @@
 
 ## Core Concepts
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold">Kubernetes Cluster</text>
-  <rect x="150" y="80" width="200" height="100" fill="#4285f4" rx="5"/>
-  <text x="250" y="110" text-anchor="middle" fill="white" font-weight="bold">Control Plane</text>
-  <text x="250" y="130" text-anchor="middle" fill="white" font-size="12">API Server</text>
-  <text x="250" y="150" text-anchor="middle" fill="white" font-size="12">Scheduler</text>
-  <text x="250" y="170" text-anchor="middle" fill="white" font-size="12">Controller</text>
-  <rect x="450" y="80" width="200" height="100" fill="#34a853" rx="5"/>
-  <text x="550" y="110" text-anchor="middle" fill="white" font-weight="bold">Worker Nodes</text>
-  <text x="550" y="130" text-anchor="middle" fill="white" font-size="12">Kubelet</text>
-  <text x="550" y="150" text-anchor="middle" fill="white" font-size="12">Container Runtime</text>
-  <text x="550" y="170" text-anchor="middle" fill="white" font-size="12">Kube-proxy</text>
-  <rect x="200" y="220" width="100" height="80" fill="#fbbc04" rx="5"/>
-  <text x="250" y="265" text-anchor="middle">Pod</text>
-  <rect x="350" y="220" width="100" height="80" fill="#fbbc04" rx="5"/>
-  <text x="400" y="265" text-anchor="middle">Pod</text>
-  <rect x="500" y="220" width="100" height="80" fill="#fbbc04" rx="5"/>
-  <text x="550" y="265" text-anchor="middle">Pod</text>
-</svg>
+![core_concepts](../../../../svg/courses/devops/k8s-introduction/01_docker/core_concepts.svg)
 
 ---
 
@@ -224,40 +158,7 @@
 
 ## Kubernetes Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="400" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Architecture</text>
-  <rect x="100" y="80" width="250" height="150" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="225" y="105" text-anchor="middle" font-weight="bold">Control Plane</text>
-  <rect x="110" y="120" width="100" height="30" fill="#4285f4" rx="3"/>
-  <text x="160" y="140" text-anchor="middle" fill="white" font-size="12">API Server</text>
-  <rect x="220" y="120" width="100" height="30" fill="#4285f4" rx="3"/>
-  <text x="270" y="140" text-anchor="middle" fill="white" font-size="12">Scheduler</text>
-  <rect x="110" y="160" width="100" height="30" fill="#4285f4" rx="3"/>
-  <text x="160" y="180" text-anchor="middle" fill="white" font-size="12">Controller</text>
-  <rect x="220" y="160" width="100" height="30" fill="#4285f4" rx="3"/>
-  <text x="270" y="180" text-anchor="middle" fill="white" font-size="12">etcd</text>
-  <rect x="450" y="80" width="250" height="150" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="575" y="105" text-anchor="middle" font-weight="bold">Worker Node</text>
-  <rect x="460" y="120" width="100" height="30" fill="#34a853" rx="3"/>
-  <text x="510" y="140" text-anchor="middle" fill="white" font-size="12">Kubelet</text>
-  <rect x="570" y="120" width="120" height="30" fill="#34a853" rx="3"/>
-  <text x="630" y="140" text-anchor="middle" fill="white" font-size="12">Container Runtime</text>
-  <rect x="460" y="160" width="100" height="30" fill="#34a853" rx="3"/>
-  <text x="510" y="180" text-anchor="middle" fill="white" font-size="12">Kube-proxy</text>
-  <rect x="100" y="280" width="600" height="120" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="400" y="305" text-anchor="middle" font-weight="bold">Application Pods</text>
-  <circle cx="200" cy="350" r="30" fill="#fbbc04"/>
-  <text x="200" y="355" text-anchor="middle">Pod</text>
-  <circle cx="300" cy="350" r="30" fill="#fbbc04"/>
-  <text x="300" y="355" text-anchor="middle">Pod</text>
-  <circle cx="400" cy="350" r="30" fill="#fbbc04"/>
-  <text x="400" y="355" text-anchor="middle">Pod</text>
-  <circle cx="500" cy="350" r="30" fill="#fbbc04"/>
-  <text x="500" y="355" text-anchor="middle">Pod</text>
-  <circle cx="600" cy="350" r="30" fill="#fbbc04"/>
-  <text x="600" y="355" text-anchor="middle">Pod</text>
-</svg>
+![kubernetes_architecture](../../../../svg/courses/devops/k8s-introduction/01_docker/kubernetes_architecture.svg)
 
 ---
 
@@ -333,28 +234,7 @@ spec:
 
 ## Kubernetes Ecosystem
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="60" fill="#326ce5"/>
-  <text x="400" y="210" text-anchor="middle" fill="white" font-weight="bold">K8s</text>
-  <circle cx="250" cy="120" r="40" fill="#4285f4"/>
-  <text x="250" y="125" text-anchor="middle" fill="white" font-size="12">Helm</text>
-  <circle cx="550" cy="120" r="40" fill="#4285f4"/>
-  <text x="550" y="125" text-anchor="middle" fill="white" font-size="12">Istio</text>
-  <circle cx="250" cy="280" r="40" fill="#34a853"/>
-  <text x="250" y="285" text-anchor="middle" fill="white" font-size="12">Prometheus</text>
-  <circle cx="550" cy="280" r="40" fill="#34a853"/>
-  <text x="550" y="285" text-anchor="middle" fill="white" font-size="12">Grafana</text>
-  <circle cx="150" cy="200" r="40" fill="#fbbc04"/>
-  <text x="150" y="205" text-anchor="middle" font-size="12">ArgoCD</text>
-  <circle cx="650" cy="200" r="40" fill="#fbbc04"/>
-  <text x="650" y="205" text-anchor="middle" font-size="12">Flux</text>
-  <line x1="190" y1="200" x2="340" y2="200" stroke="#666" stroke-width="2"/>
-  <line x1="460" y1="200" x2="610" y2="200" stroke="#666" stroke-width="2"/>
-  <line x1="280" y1="150" x2="360" y2="170" stroke="#666" stroke-width="2"/>
-  <line x1="520" y1="150" x2="440" y2="170" stroke="#666" stroke-width="2"/>
-  <line x1="280" y1="250" x2="360" y2="230" stroke="#666" stroke-width="2"/>
-  <line x1="520" y1="250" x2="440" y2="230" stroke="#666" stroke-width="2"/>
-</svg>
+![kubernetes_ecosystem](../../../../svg/courses/devops/k8s-introduction/01_docker/kubernetes_ecosystem.svg)
 
 ---
 
@@ -418,28 +298,7 @@ kubectl logs my-pod
 
 ## Namespaces
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Kubernetes Namespaces</text>
-  <rect x="150" y="80" width="150" height="230" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="225" y="105" text-anchor="middle" font-weight="bold">development</text>
-  <rect x="160" y="120" width="130" height="40" fill="#4285f4" rx="3"/>
-  <text x="225" y="145" text-anchor="middle" fill="white">App Pods</text>
-  <rect x="160" y="170" width="130" height="40" fill="#4285f4" rx="3"/>
-  <text x="225" y="195" text-anchor="middle" fill="white">Services</text>
-  <rect x="325" y="80" width="150" height="230" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="400" y="105" text-anchor="middle" font-weight="bold">staging</text>
-  <rect x="335" y="120" width="130" height="40" fill="#34a853" rx="3"/>
-  <text x="400" y="145" text-anchor="middle" fill="white">App Pods</text>
-  <rect x="335" y="170" width="130" height="40" fill="#34a853" rx="3"/>
-  <text x="400" y="195" text-anchor="middle" fill="white">Services</text>
-  <rect x="500" y="80" width="150" height="230" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="575" y="105" text-anchor="middle" font-weight="bold">production</text>
-  <rect x="510" y="120" width="130" height="40" fill="#ea4335" rx="3"/>
-  <text x="575" y="145" text-anchor="middle" fill="white">App Pods</text>
-  <rect x="510" y="170" width="130" height="40" fill="#ea4335" rx="3"/>
-  <text x="575" y="195" text-anchor="middle" fill="white">Services</text>
-</svg>
+![namespaces](../../../../svg/courses/devops/k8s-introduction/01_docker/namespaces.svg)
 
 ---
 
@@ -518,53 +377,7 @@ livenessProbe:
 
 ## Rolling Updates
 
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Rolling Update Process</text>
-  <g id="step1">
-    <text x="100" y="60" text-anchor="middle" font-size="12">Step 1</text>
-    <rect x="50" y="80" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="105" text-anchor="middle" fill="white">v1</text>
-    <rect x="50" y="130" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="155" text-anchor="middle" fill="white">v1</text>
-    <rect x="50" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="100" y="205" text-anchor="middle" fill="white">v1</text>
-  </g>
-  <g id="step2">
-    <text x="250" y="60" text-anchor="middle" font-size="12">Step 2</text>
-    <rect x="200" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="250" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="200" y="130" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="250" y="155" text-anchor="middle" fill="white">v1</text>
-    <rect x="200" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="250" y="205" text-anchor="middle" fill="white">v1</text>
-  </g>
-  <g id="step3">
-    <text x="400" y="60" text-anchor="middle" font-size="12">Step 3</text>
-    <rect x="350" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="400" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="350" y="130" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="400" y="155" text-anchor="middle" fill="white">v2</text>
-    <rect x="350" y="180" width="100" height="40" fill="#4285f4" rx="3"/>
-    <text x="400" y="205" text-anchor="middle" fill="white">v1</text>
-  </g>
-  <g id="step4">
-    <text x="550" y="60" text-anchor="middle" font-size="12">Step 4</text>
-    <rect x="500" y="80" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="105" text-anchor="middle" fill="white">v2</text>
-    <rect x="500" y="130" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="155" text-anchor="middle" fill="white">v2</text>
-    <rect x="500" y="180" width="100" height="40" fill="#34a853" rx="3"/>
-    <text x="550" y="205" text-anchor="middle" fill="white">v2</text>
-  </g>
-  <path d="M 160 150 L 190 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 310 150 L 340 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 460 150 L 490 150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
-    </marker>
-  </defs>
-</svg>
+![rolling_updates](../../../../svg/courses/devops/k8s-introduction/01_docker/rolling_updates.svg)
 
 ---
 

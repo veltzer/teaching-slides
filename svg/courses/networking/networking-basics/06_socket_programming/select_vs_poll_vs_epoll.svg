@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340" font-family="sans-serif">
+<defs>
+  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
+    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
+  </marker>
+  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
+    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
+  </marker>
+</defs>
+<text x="340" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">I/O Multiplexing: select / poll / epoll</text>
+<rect x="10" y="40" width="660" height="76" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="62" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">select()</text>
+<line x1="160" y1="44" x2="160" y2="112" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="62" text-anchor="start" font-size="12" fill="#222222">Pass ALL fds every time → kernel scans all → returns ready ones</text>
+<text x="170" y="80" text-anchor="start" font-size="11" fill="#555">Works on ~1024 fds max. O(n) scan per call.</text>
+<rect x="10" y="120" width="660" height="76" fill="#f3e5f5" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="142" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">poll()</text>
+<line x1="160" y1="124" x2="160" y2="192" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="142" text-anchor="start" font-size="12" fill="#222222">Similar to select() but no fd limit.</text>
+<text x="170" y="160" text-anchor="start" font-size="11" fill="#555">Still O(n) — kernel scans the whole list each call.</text>
+<rect x="10" y="200" width="660" height="76" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
+<text x="85" y="222" text-anchor="middle" font-size="13" fill="#1a1a2e" font-weight="bold">epoll()</text>
+<line x1="160" y1="204" x2="160" y2="272" stroke="#aaa" stroke-width="1"/>
+<text x="170" y="222" text-anchor="start" font-size="12" fill="#222222">Register fds once; kernel notifies only about ready fds.</text>
+<text x="170" y="240" text-anchor="start" font-size="11" fill="#555">O(1) for returning events. Scales to millions of connections.</text>
+<rect x="80" y="290" width="520" height="70" fill="#c8e6c9" stroke="#388e3c" stroke-width="1.5" rx="4"/>
+<text x="340" y="312" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">Kernel (epoll): monitors registered fds efficiently</text>
+<text x="340" y="334" text-anchor="middle" font-size="11" fill="#2e7d32">Notifies userspace only about fds with actual events</text>
+</svg>

@@ -65,41 +65,7 @@ spec:
 
 ## Init Container Use Cases
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="310">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- outer Pod box -->
-  <rect x="10" y="10" width="620" height="295" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="320" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Pod Lifecycle</text>
-  <!-- Init 1 -->
-  <rect x="30" y="48" width="140" height="80" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="100" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Init 1</text>
-  <text x="100" y="88" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Clone repo</text>
-  <!-- arrow -->
-  <line x1="170" y1="88" x2="210" y2="88" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Init 2 -->
-  <rect x="210" y="48" width="140" height="80" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="280" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Init 2</text>
-  <text x="280" y="88" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Migrate DB</text>
-  <!-- arrow -->
-  <line x1="350" y1="88" x2="390" y2="88" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- App Container -->
-  <rect x="390" y="48" width="210" height="80" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="495" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">App Container</text>
-  <text x="495" y="88" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Main workload</text>
-  <!-- Common patterns section -->
-  <line x1="20" y1="145" x2="620" y2="145" stroke="#aaa" stroke-width="1" stroke-dasharray="4"/>
-  <text x="30" y="165" font-family="sans-serif" font-size="13" font-weight="bold" fill="#333">Common patterns:</text>
-  <text x="30" y="185" font-family="sans-serif" font-size="12" fill="#333">• Wait for dependencies</text>
-  <text x="30" y="205" font-family="sans-serif" font-size="12" fill="#333">• Download / prepare configs</text>
-  <text x="30" y="225" font-family="sans-serif" font-size="12" fill="#333">• Clone source code</text>
-  <text x="30" y="245" font-family="sans-serif" font-size="12" fill="#333">• Database migrations</text>
-  <text x="30" y="265" font-family="sans-serif" font-size="12" fill="#333">• Register with service mesh</text>
-  <text x="30" y="285" font-family="sans-serif" font-size="12" fill="#333">• Seed data</text>
-</svg>
+![init_container_use_cases](../../../../svg/courses/devops/advanced-kubernetes/05_init_containers_crds/init_container_use_cases.svg)
 
 ---
 
@@ -199,46 +165,7 @@ The `restartPolicy: Always` on an init container marks it as a **sidecar** that 
 
 ## Sidecar Patterns
 
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="330">
-  <defs>
-    <marker id="arrf" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-    <marker id="arrb" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto">
-      <path d="M8,0 L8,6 L0,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Pod outer box -->
-  <rect x="10" y="10" width="520" height="310" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="270" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">Pod</text>
-
-  <!-- Row 1: App + Log Shipper -->
-  <rect x="30" y="45" width="130" height="60" rx="4" fill="#fff" stroke="#555" stroke-width="1.5"/>
-  <text x="95" y="70" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">App</text>
-  <text x="95" y="88" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Container</text>
-  <line x1="160" y1="75" x2="220" y2="75" stroke="#555" stroke-width="1.5" marker-end="url(#arrf)"/>
-  <rect x="220" y="45" width="170" height="60" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="305" y="68" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Log Shipper</text>
-  <text x="305" y="86" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Sidecar)</text>
-
-  <!-- Row 2: App + Service Mesh Proxy -->
-  <rect x="30" y="130" width="130" height="60" rx="4" fill="#fff" stroke="#555" stroke-width="1.5"/>
-  <text x="95" y="155" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">App</text>
-  <text x="95" y="173" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Container</text>
-  <line x1="220" y1="160" x2="160" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arrf)"/>
-  <rect x="220" y="130" width="200" height="60" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="320" y="152" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Service Mesh Proxy</text>
-  <text x="320" y="170" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Sidecar – Envoy)</text>
-
-  <!-- Row 3: App + Config Reloader -->
-  <rect x="30" y="215" width="130" height="60" rx="4" fill="#fff" stroke="#555" stroke-width="1.5"/>
-  <text x="95" y="240" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">App</text>
-  <text x="95" y="258" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Container</text>
-  <line x1="220" y1="245" x2="160" y2="245" stroke="#555" stroke-width="1.5" marker-end="url(#arrf)"/>
-  <rect x="220" y="215" width="170" height="60" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="305" y="238" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Config Reloader</text>
-  <text x="305" y="256" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Sidecar)</text>
-</svg>
+![sidecar_patterns](../../../../svg/courses/devops/advanced-kubernetes/05_init_containers_crds/sidecar_patterns.svg)
 
 ---
 

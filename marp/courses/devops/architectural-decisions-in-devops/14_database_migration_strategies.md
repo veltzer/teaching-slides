@@ -15,25 +15,7 @@ Approaches for safe, automated schema and data migrations in modern pipelines
 
 ## Two Fundamental Approaches
 
-<svg width="700" height="220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowcomp" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="30" width="280" height="160" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="170" y="60" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">Versioned Migrations</text>
-  <text x="170" y="90" text-anchor="middle" font-size="12">V1 -> V2 -> V3 -> V4</text>
-  <text x="170" y="115" text-anchor="middle" font-size="11">Sequential scripts</text>
-  <text x="170" y="140" text-anchor="middle" font-size="11">Explicit change steps</text>
-  <text x="170" y="165" text-anchor="middle" font-size="11">Full history preserved</text>
-  <rect x="390" y="30" width="280" height="160" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
-  <text x="530" y="60" text-anchor="middle" font-size="15" font-weight="bold" fill="#7b1fa2">State-Based Migrations</text>
-  <text x="530" y="90" text-anchor="middle" font-size="12">Desired State -> Diff -> Apply</text>
-  <text x="530" y="115" text-anchor="middle" font-size="11">Declarative target schema</text>
-  <text x="530" y="140" text-anchor="middle" font-size="11">Auto-generated changes</text>
-  <text x="530" y="165" text-anchor="middle" font-size="11">Tool computes delta</text>
-</svg>
+![two_fundamental_approaches](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/two_fundamental_approaches.svg)
 
 ---
 
@@ -175,20 +157,7 @@ DROP TABLE orders;
 
 ## Forward-Only vs Reversible Trade-offs
 
-<svg width="700" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="300" height="160" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="180" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">Forward-Only</text>
-  <text x="180" y="80" text-anchor="middle" font-size="11">+ Simpler to maintain</text>
-  <text x="180" y="100" text-anchor="middle" font-size="11">+ No untested rollback code</text>
-  <text x="180" y="120" text-anchor="middle" font-size="11">+ Faster development</text>
-  <text x="180" y="145" text-anchor="middle" font-size="11">- Requires corrective migrations</text>
-  <rect x="370" y="20" width="300" height="160" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="520" y="50" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">Reversible</text>
-  <text x="520" y="80" text-anchor="middle" font-size="11">+ Quick rollback capability</text>
-  <text x="520" y="100" text-anchor="middle" font-size="11">+ Useful in development</text>
-  <text x="520" y="120" text-anchor="middle" font-size="11">- Double the code to write</text>
-  <text x="520" y="145" text-anchor="middle" font-size="11">- Down scripts often untested</text>
-</svg>
+![forward_only_vs_reversible_trade_offs](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/forward_only_vs_reversible_trade_offs.svg)
 
 ---
 
@@ -215,29 +184,7 @@ DROP TABLE orders;
 
 ## The Expand and Contract Pattern
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowec" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="20" width="200" height="80" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="120" y="50" text-anchor="middle" font-size="13" font-weight="bold">Phase 1: Expand</text>
-  <text x="120" y="75" text-anchor="middle" font-size="11">Add new structure</text>
-  <rect x="250" y="20" width="200" height="80" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="350" y="50" text-anchor="middle" font-size="13" font-weight="bold">Phase 2: Migrate</text>
-  <text x="350" y="75" text-anchor="middle" font-size="11">Move data + update code</text>
-  <rect x="480" y="20" width="200" height="80" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="580" y="50" text-anchor="middle" font-size="13" font-weight="bold">Phase 3: Contract</text>
-  <text x="580" y="75" text-anchor="middle" font-size="11">Remove old structure</text>
-  <line x1="220" y1="60" x2="250" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowec)"/>
-  <line x1="450" y1="60" x2="480" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowec)"/>
-  <rect x="20" y="140" width="660" height="120" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="5"/>
-  <text x="350" y="165" text-anchor="middle" font-size="12" font-weight="bold">Example: Renaming a Column</text>
-  <text x="350" y="190" text-anchor="middle" font-size="11">1. Expand: Add new column, trigger to sync data</text>
-  <text x="350" y="210" text-anchor="middle" font-size="11">2. Migrate: Update app to use new column, backfill data</text>
-  <text x="350" y="230" text-anchor="middle" font-size="11">3. Contract: Drop old column and trigger</text>
-</svg>
+![the_expand_and_contract_pattern](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/the_expand_and_contract_pattern.svg)
 
 ---
 
@@ -287,35 +234,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Expand and Contract: Column Rename Example
 
-<svg width="700" height="260" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowren" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="20" width="150" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="95" y="45" text-anchor="middle" font-size="12" font-weight="bold">Original</text>
-  <text x="95" y="70" text-anchor="middle" font-size="10">users</text>
-  <text x="95" y="90" text-anchor="middle" font-size="10">| email_addr |</text>
-  <rect x="200" y="20" width="150" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="275" y="45" text-anchor="middle" font-size="12" font-weight="bold">Expanded</text>
-  <text x="275" y="70" text-anchor="middle" font-size="10">users</text>
-  <text x="275" y="90" text-anchor="middle" font-size="10">| email_addr | email |</text>
-  <rect x="380" y="20" width="150" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="455" y="45" text-anchor="middle" font-size="12" font-weight="bold">Migrated</text>
-  <text x="455" y="70" text-anchor="middle" font-size="10">users</text>
-  <text x="455" y="90" text-anchor="middle" font-size="10">| email_addr | email |</text>
-  <rect x="560" y="20" width="120" height="100" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="620" y="45" text-anchor="middle" font-size="12" font-weight="bold">Contracted</text>
-  <text x="620" y="70" text-anchor="middle" font-size="10">users</text>
-  <text x="620" y="90" text-anchor="middle" font-size="10">| email |</text>
-  <line x1="170" y1="70" x2="200" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
-  <line x1="350" y1="70" x2="380" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
-  <line x1="530" y1="70" x2="560" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrowren)"/>
-  <text x="350" y="160" text-anchor="middle" font-size="12" font-weight="bold">Each phase is a separate deployment</text>
-  <text x="350" y="185" text-anchor="middle" font-size="11">Old app reads email_addr, new app reads email</text>
-  <text x="350" y="205" text-anchor="middle" font-size="11">Both work during the transition window</text>
-</svg>
+![expand_and_contract_column_rename_example](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/expand_and_contract_column_rename_example.svg)
 
 ---
 
@@ -330,28 +249,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Dual-Write Architecture
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowdw" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="270" y="10" width="160" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="350" y="42" text-anchor="middle" font-size="14" font-weight="bold">Application</text>
-  <rect x="80" y="120" width="160" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="160" y="150" text-anchor="middle" font-size="13">Old Database</text>
-  <rect x="460" y="120" width="160" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="540" y="150" text-anchor="middle" font-size="13">New Database</text>
-  <line x1="310" y1="60" x2="210" y2="120" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowdw)"/>
-  <line x1="390" y1="60" x2="490" y2="120" stroke="#e65100" stroke-width="2" marker-end="url(#arrowdw)"/>
-  <text x="220" y="85" font-size="11" fill="#2e7d32">Write</text>
-  <text x="470" y="85" font-size="11" fill="#e65100">Write</text>
-  <rect x="200" y="210" width="300" height="70" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="5"/>
-  <text x="350" y="235" text-anchor="middle" font-size="12" font-weight="bold">Verification Layer</text>
-  <text x="350" y="255" text-anchor="middle" font-size="11">Compares data between old and new</text>
-  <line x1="160" y1="170" x2="270" y2="210" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
-  <line x1="540" y1="170" x2="430" y2="210" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
-</svg>
+![dual_write_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/dual_write_architecture.svg)
 
 ---
 
@@ -380,27 +278,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Change Data Capture as Alternative
 
-<svg width="700" height="250" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowcdc" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="90" width="140" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="100" y="120" text-anchor="middle" font-size="13">Application</text>
-  <rect x="210" y="90" width="140" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8"/>
-  <text x="280" y="120" text-anchor="middle" font-size="13">Source DB</text>
-  <rect x="390" y="90" width="140" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="460" y="120" text-anchor="middle" font-size="13">CDC Stream</text>
-  <rect x="570" y="90" width="120" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
-  <text x="630" y="120" text-anchor="middle" font-size="13">Target DB</text>
-  <line x1="170" y1="115" x2="210" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowcdc)"/>
-  <line x1="350" y1="115" x2="390" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowcdc)"/>
-  <line x1="530" y1="115" x2="570" y2="115" stroke="#333" stroke-width="2" marker-end="url(#arrowcdc)"/>
-  <text x="350" y="30" text-anchor="middle" font-size="12" font-weight="bold">CDC avoids dual-write complexity</text>
-  <text x="350" y="55" text-anchor="middle" font-size="11">App writes once; CDC replicates changes to target</text>
-  <text x="350" y="190" text-anchor="middle" font-size="11">Tools: Debezium, AWS DMS, Oracle GoldenGate</text>
-</svg>
+![change_data_capture_as_alternative](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/change_data_capture_as_alternative.svg)
 
 ---
 
@@ -427,35 +305,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Migration Pipeline Flow
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowpipe" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="30" width="120" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="90" y="60" text-anchor="middle" font-size="11">Code Commit</text>
-  <rect x="180" y="30" width="120" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="240" y="55" text-anchor="middle" font-size="11">Lint Migration</text>
-  <rect x="330" y="30" width="120" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="390" y="55" text-anchor="middle" font-size="11">Test on Clone</text>
-  <rect x="480" y="30" width="120" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="540" y="55" text-anchor="middle" font-size="11">Apply Staging</text>
-  <rect x="255" y="130" width="120" height="50" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="315" y="155" text-anchor="middle" font-size="11">Approval Gate</text>
-  <rect x="405" y="130" width="120" height="50" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="5"/>
-  <text x="465" y="155" text-anchor="middle" font-size="11">Apply Production</text>
-  <rect x="555" y="130" width="120" height="50" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="5"/>
-  <text x="615" y="155" text-anchor="middle" font-size="11">Verify + Monitor</text>
-  <line x1="150" y1="55" x2="180" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <line x1="300" y1="55" x2="330" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <line x1="450" y1="55" x2="480" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <line x1="540" y1="80" x2="400" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <line x1="375" y1="155" x2="405" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <line x1="525" y1="155" x2="555" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrowpipe)"/>
-  <text x="350" y="230" text-anchor="middle" font-size="12" font-weight="bold">Every migration passes through this pipeline</text>
-  <text x="350" y="255" text-anchor="middle" font-size="11">Automated linting, testing, and approval before production</text>
-</svg>
+![migration_pipeline_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/migration_pipeline_flow.svg)
 
 ---
 
@@ -501,27 +351,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Deployment Order Strategy
 
-<svg width="700" height="220" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowdep" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="30" width="180" height="60" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="120" y="55" text-anchor="middle" font-size="12" font-weight="bold">1. Schema Migration</text>
-  <text x="120" y="75" text-anchor="middle" font-size="10">Add new columns/tables</text>
-  <rect x="260" y="30" width="180" height="60" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="350" y="55" text-anchor="middle" font-size="12" font-weight="bold">2. App Deployment</text>
-  <text x="350" y="75" text-anchor="middle" font-size="10">Use new schema features</text>
-  <rect x="490" y="30" width="180" height="60" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="580" y="55" text-anchor="middle" font-size="12" font-weight="bold">3. Cleanup Migration</text>
-  <text x="580" y="75" text-anchor="middle" font-size="10">Remove old columns</text>
-  <line x1="210" y1="60" x2="260" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowdep)"/>
-  <line x1="440" y1="60" x2="490" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowdep)"/>
-  <rect x="100" y="130" width="500" height="60" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="5"/>
-  <text x="350" y="155" text-anchor="middle" font-size="12" font-weight="bold">Key Rule: Schema is always ahead of code</text>
-  <text x="350" y="175" text-anchor="middle" font-size="11">Old code works with new schema; new code requires new schema</text>
-</svg>
+![deployment_order_strategy](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/deployment_order_strategy.svg)
 
 ---
 
@@ -675,30 +505,7 @@ ALTER TABLE users ADD INDEX idx_phone (phone);
 
 ## Feature Flag Migration Flow
 
-<svg width="700" height="240" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrowff" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="30" width="150" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="105" y="60" text-anchor="middle" font-size="11">Deploy Migration</text>
-  <rect x="210" y="30" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="285" y="60" text-anchor="middle" font-size="11">Deploy Code (flag off)</text>
-  <rect x="390" y="30" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="465" y="60" text-anchor="middle" font-size="11">Verify Migration</text>
-  <rect x="210" y="130" width="150" height="50" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="285" y="160" text-anchor="middle" font-size="11">Enable Flag (10%)</text>
-  <rect x="390" y="130" width="150" height="50" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="465" y="160" text-anchor="middle" font-size="11">Monitor Errors</text>
-  <rect x="570" y="130" width="120" height="50" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="5"/>
-  <text x="630" y="160" text-anchor="middle" font-size="11">Enable 100%</text>
-  <line x1="180" y1="55" x2="210" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowff)"/>
-  <line x1="360" y1="55" x2="390" y2="55" stroke="#333" stroke-width="2" marker-end="url(#arrowff)"/>
-  <line x1="465" y1="80" x2="350" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrowff)"/>
-  <line x1="360" y1="155" x2="390" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrowff)"/>
-  <line x1="540" y1="155" x2="570" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrowff)"/>
-</svg>
+![feature_flag_migration_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/feature_flag_migration_flow.svg)
 
 ---
 

@@ -1,0 +1,45 @@
+<svg width="600" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Constructor -->
+  <rect x="250" y="30" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="55" text-anchor="middle" font-size="12">Constructor</text>
+
+  <!-- onAttachedToWindow -->
+  <rect x="220" y="100" width="160" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="125" text-anchor="middle" font-size="12">onAttachedToWindow</text>
+
+  <!-- onMeasure -->
+  <rect x="250" y="170" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="195" text-anchor="middle" font-size="12">onMeasure</text>
+
+  <!-- onLayout -->
+  <rect x="250" y="240" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="265" text-anchor="middle" font-size="12">onLayout</text>
+
+  <!-- onDraw -->
+  <rect x="450" y="170" width="100" height="40" fill="#fce4ec" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="500" y="195" text-anchor="middle" font-size="12">onDraw</text>
+
+  <!-- onDetachedFromWindow -->
+  <rect x="200" y="310" width="200" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="335" text-anchor="middle" font-size="12">onDetachedFromWindow</text>
+
+  <!-- Flow arrows -->
+  <line x1="300" y1="70" x2="300" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="300" y1="140" x2="300" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="300" y1="210" x2="300" y2="240" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="350" y1="190" x2="450" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+  <line x1="300" y1="280" x2="300" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
+
+  <!-- Loop backs -->
+  <path d="M 270 170 Q 220 150, 220 190 Q 220 210, 270 210" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow2)"/>
+  <text x="180" y="195" font-size="10" fill="#666">repeat</text>
+
+  <path d="M 530 170 Q 560 150, 560 190 Q 560 210, 530 210" stroke="#666" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#arrow2)"/>
+  <text x="575" y="195" font-size="10" fill="#666">repeat</text>
+
+  <defs>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

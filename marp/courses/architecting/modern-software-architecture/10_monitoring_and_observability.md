@@ -335,23 +335,7 @@ with tracer.start_as_current_span("process"):
 ---
 ## Trace Visualization
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="10" y="20" font-size="10" font-weight="bold">Trace: abc-123</text>
-  <rect x="80" y="35" width="400" height="20" fill="#BBDEFB" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="85" y="50" font-size="10">API Gateway (200ms)</text>
-  <rect x="120" y="65" width="300" height="20" fill="#C8E6C9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="125" y="80" font-size="10">Order Service (150ms)</text>
-  <rect x="160" y="95" width="150" height="20" fill="#FFF9C4" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="165" y="110" font-size="10">Payment Service (80ms)</text>
-  <rect x="160" y="125" width="80" height="20" fill="#FFCCBC" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="165" y="140" font-size="10">Inventory (40ms)</text>
-  <rect x="200" y="155" width="40" height="20" fill="#E1BEE7" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="205" y="170" font-size="10">DB (20ms)</text>
-  <line x1="75" y1="30" x2="75" y2="180" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
-  <line x1="480" y1="30" x2="480" y2="180" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
-  <text x="75" y="190" font-size="9">0ms</text>
-  <text x="470" y="190" font-size="9">200ms</text>
-</svg>
+![trace_visualization](../../../../svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_visualization.svg)
 
 ---
 ## Health Check Strategies

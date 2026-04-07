@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="360" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Node 1: Root -->
+  <rect x="10" y="10" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="70" y="35" font-size="13" fill="#222" text-anchor="middle">Root (.)</text>
+  <text x="150" y="35" font-size="12" fill="#555">"Who handles .com?"</text>
+  <!-- Arrow -->
+  <line x1="70" y1="50" x2="70" y2="98" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Node 2: .com NS servers -->
+  <rect x="10" y="100" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="70" y="125" font-size="13" fill="#222" text-anchor="middle">.com NS servers</text>
+  <text x="150" y="125" font-size="12" fill="#555">"Who handles example.com?"</text>
+  <!-- Arrow -->
+  <line x1="70" y1="140" x2="70" y2="188" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Node 3: example.com NS -->
+  <rect x="10" y="190" width="120" height="40" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="70" y="215" font-size="13" fill="#222" text-anchor="middle">example.com NS</text>
+  <text x="150" y="208" font-size="12" fill="#555">"I am authoritative for example.com"</text>
+  <text x="150" y="225" font-size="12" fill="#555">Here are the records you requested.</text>
+  <!-- Arrow -->
+  <line x1="70" y1="230" x2="70" y2="278" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Node 4: iana servers -->
+  <rect x="10" y="280" width="120" height="60" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
+  <text x="70" y="306" font-size="12" fill="#222" text-anchor="middle">a.iana-servers.net</text>
+  <text x="70" y="326" font-size="12" fill="#222" text-anchor="middle">b.iana-servers.net</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg width="600" height="300" viewBox="0 0 600 300">
+  <rect x="50" y="50" width="100" height="60" fill="#e1f5fe" stroke="#01579b" stroke-width="2" rx="5"/>
+  <text x="100" y="85" text-anchor="middle" font-size="12">Client</text>
+
+  <rect x="450" y="50" width="100" height="60" fill="#f3e5f5" stroke="#4a148c" stroke-width="2" rx="5"/>
+  <text x="500" y="85" text-anchor="middle" font-size="12">Server</text>
+
+  <path d="M 150 80 L 440 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="295" y="75" text-anchor="middle" font-size="10">POST + Idempotency-Key</text>
+
+  <path d="M 440 100 L 150 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="295" y="95" text-anchor="middle" font-size="10">Response + Store Key</text>
+
+  <path d="M 150 140 L 440 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="295" y="135" text-anchor="middle" font-size="10">Same POST + Same Key</text>
+
+  <path d="M 440 160 L 150 160" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="295" y="155" text-anchor="middle" font-size="10">Same Response (cached)</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

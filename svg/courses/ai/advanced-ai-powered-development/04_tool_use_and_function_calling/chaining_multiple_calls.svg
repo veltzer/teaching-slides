@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="280" font-family="sans-serif">
+  <rect x="10" y="10" width="660" height="260" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
+  <text x="340" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Tool Use Conversation Flow</text>
+  <rect x="25" y="42" width="625" height="28" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
+  <text x="40" y="61" font-size="12" fill="#222222"><tspan font-weight="bold">User:</tspan> "Refactor the auth module and run the tests"</text>
+  <rect x="40" y="76" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="93" font-size="11" fill="#2e7d32">&#8594; tool_use: read_file("src/auth.ts")</text>
+  <rect x="40" y="104" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="121" font-size="11" fill="#555555">&#8592; tool_result: &lt;file contents returned&gt;</text>
+  <rect x="40" y="132" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="149" font-size="11" fill="#2e7d32">&#8594; tool_use: edit_file("src/auth.ts", ...)</text>
+  <rect x="40" y="160" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="177" font-size="11" fill="#555555">&#8592; tool_result: success</text>
+  <rect x="40" y="188" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
+  <text x="55" y="205" font-size="11" fill="#2e7d32">&#8594; tool_use: shell("npm test")</text>
+  <rect x="40" y="216" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
+  <text x="55" y="233" font-size="11" fill="#555555">&#8592; tool_result: All 42 tests passed</text>
+  <rect x="25" y="244" width="625" height="18" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
+  <text x="40" y="257" font-size="11" fill="#222222"><tspan font-weight="bold">Assistant:</tspan> "Done. Refactored auth module — all tests pass."</text>
+</svg>

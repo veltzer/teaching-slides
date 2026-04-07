@@ -4,24 +4,7 @@
 
 ## Block Layer Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="600" height="420" fill="#F0F0F0" stroke="black"/>
-<text x="400" y="80" text-anchor="middle" font-weight="bold">Linux Block Layer</text>
-<rect x="200" y="110" width="400" height="50" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="140" text-anchor="middle">Filesystem (ext4, xfs, btrfs)</text>
-<rect x="200" y="170" width="400" height="50" fill="#E6F2FF" stroke="black"/>
-<text x="400" y="200" text-anchor="middle">VFS Layer</text>
-<rect x="200" y="230" width="400" height="50" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="260" text-anchor="middle">Block Layer Core</text>
-<rect x="200" y="290" width="195" height="50" fill="#FFFFE6" stroke="black"/>
-<text x="297" y="320" text-anchor="middle">I/O Scheduler</text>
-<rect x="405" y="290" width="195" height="50" fill="#FFE6FF" stroke="black"/>
-<text x="502" y="320" text-anchor="middle">Device Mapper</text>
-<rect x="200" y="350" width="400" height="50" fill="#E6E6E6" stroke="black"/>
-<text x="400" y="380" text-anchor="middle">Block Device Driver</text>
-<rect x="200" y="410" width="400" height="50" fill="#D0D0D0" stroke="black"/>
-<text x="400" y="440" text-anchor="middle">Hardware (HDD, SSD, NVMe)</text>
-</svg>
+![block_layer_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/block_layer_architecture.svg)
 
 ---
 
@@ -119,29 +102,7 @@ struct request {
 
 ## Bio Structure
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="200" height="300" fill="#FFE6E6" stroke="black"/>
-<text x="200" y="80" text-anchor="middle" font-weight="bold">bio</text>
-<text x="200" y="110" text-anchor="middle">sector</text>
-<text x="200" y="130" text-anchor="middle">size</text>
-<text x="200" y="150" text-anchor="middle">bi_vcnt</text>
-<text x="200" y="170" text-anchor="middle">bi_io_vec</text>
-<line x1="300" y1="160" x2="350" y2="160" stroke="black" marker-end="url(#arrow)"/>
-<rect x="350" y="100" width="150" height="50" fill="#E6F2FF" stroke="black"/>
-<text x="425" y="130" text-anchor="middle">bio_vec[0]</text>
-<rect x="350" y="160" width="150" height="50" fill="#E6FFE6" stroke="black"/>
-<text x="425" y="190" text-anchor="middle">bio_vec[1]</text>
-<rect x="350" y="220" width="150" height="50" fill="#FFFFE6" stroke="black"/>
-<text x="425" y="250" text-anchor="middle">bio_vec[2]</text>
-<line x1="500" y1="125" x2="550" y2="125" stroke="black" marker-end="url(#arrow)"/>
-<rect x="550" y="100" width="150" height="50" fill="#FFE6FF" stroke="black"/>
-<text x="625" y="130" text-anchor="middle">Page</text>
-<defs>
-<marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![bio_structure](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/bio_structure.svg)
 
 ---
 
@@ -400,26 +361,7 @@ static int my_mmc_probe(struct platform_device *pdev)
 
 ## NVMe Driver Structure
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="200" y="50" width="400" height="60" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="85" text-anchor="middle">NVMe Driver</text>
-<rect x="150" y="150" width="150" height="60" fill="#E6F2FF" stroke="black"/>
-<text x="225" y="185" text-anchor="middle">Admin Queue</text>
-<rect x="325" y="150" width="150" height="60" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="185" text-anchor="middle">I/O Queue 0</text>
-<rect x="500" y="150" width="150" height="60" fill="#FFFFE6" stroke="black"/>
-<text x="575" y="185" text-anchor="middle">I/O Queue N</text>
-<rect x="200" y="250" width="400" height="60" fill="#D0D0D0" stroke="black"/>
-<text x="400" y="285" text-anchor="middle">NVMe Controller</text>
-<line x1="225" y1="210" x2="225" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<line x1="400" y1="210" x2="400" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<line x1="575" y1="210" x2="575" y2="250" stroke="black" marker-end="url(#arrowhead)"/>
-<defs>
-<marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6"/>
-</marker>
-</defs>
-</svg>
+![nvme_driver_structure](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/nvme_driver_structure.svg)
 
 ---
 

@@ -20,29 +20,7 @@ Originally from OpenEmbedded:
 
 ## BitBake Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="225" y="135" text-anchor="middle" font-size="12">Parser</text>
-
-  <rect x="350" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="425" y="135" text-anchor="middle" font-size="12">Cache</text>
-
-  <rect x="550" y="100" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="625" y="135" text-anchor="middle" font-size="12">Scheduler</text>
-
-  <rect x="150" y="250" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="225" y="285" text-anchor="middle" font-size="12">Data Store</text>
-
-  <rect x="350" y="250" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="1"/>
-  <text x="425" y="285" text-anchor="middle" font-size="12">Fetcher</text>
-
-  <rect x="550" y="250" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="1"/>
-  <text x="625" y="285" text-anchor="middle" font-size="12">Task Executor</text>
-
-  <text x="400" y="380" text-anchor="middle" font-size="14" font-weight="bold">BitBake Core</text>
-</svg>
+![bitbake_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/bitbake_architecture.svg)
 
 ---
 
@@ -119,25 +97,7 @@ VAR = "${@os.path.basename(d.getVar('SRC_URI').split()[0])}"
 
 ## Overrides System
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="50" width="400" height="60" fill="#e6f3ff" stroke="#0066cc" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" font-size="14" font-weight="bold">VAR = "default"</text>
-
-  <rect x="100" y="150" width="200" height="50" fill="#fff0e6" stroke="#ff6600" stroke-width="1"/>
-  <text x="200" y="180" text-anchor="middle" font-size="12">VAR_arm = "arm-value"</text>
-
-  <rect x="350" y="150" width="200" height="50" fill="#fff0e6" stroke="#ff6600" stroke-width="1"/>
-  <text x="450" y="180" text-anchor="middle" font-size="12">VAR_x86 = "x86-value"</text>
-
-  <rect x="100" y="250" width="200" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="1"/>
-  <text x="200" y="280" text-anchor="middle" font-size="12">VAR_append_arm = " extra"</text>
-
-  <rect x="350" y="250" width="200" height="50" fill="#e6ffe6" stroke="#00cc00" stroke-width="1"/>
-  <text x="450" y="280" text-anchor="middle" font-size="12">VAR_class-native = "native"</text>
-
-  <text x="650" y="180" text-anchor="middle" font-size="11">Machine overrides</text>
-  <text x="650" y="280" text-anchor="middle" font-size="11">Class overrides</text>
-</svg>
+![overrides_system](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/overrides_system.svg)
 
 ---
 
@@ -207,34 +167,7 @@ do_compile[network] = "1"
 
 ## Task Dependencies
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="120" height="50" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="160" y="130" text-anchor="middle" font-size="12">do_fetch</text>
-
-  <rect x="300" y="100" width="120" height="50" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="360" y="130" text-anchor="middle" font-size="12">do_unpack</text>
-
-  <rect x="500" y="100" width="120" height="50" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="560" y="130" text-anchor="middle" font-size="12">do_configure</text>
-
-  <rect x="300" y="250" width="120" height="50" fill="#ffeecc" stroke="#000" stroke-width="1"/>
-  <text x="360" y="280" text-anchor="middle" font-size="12">do_compile</text>
-
-  <path d="M 220 125 L 300 125" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="260" y="115" text-anchor="middle" font-size="10">depends</text>
-
-  <path d="M 360 150 L 360 250" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="380" y="200" text-anchor="middle" font-size="10">deptask</text>
-
-  <path d="M 420 125 L 500 125" stroke="#0066cc" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="460" y="115" text-anchor="middle" font-size="10">rdeptask</text>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![task_dependencies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/task_dependencies.svg)
 
 ---
 
@@ -560,35 +493,7 @@ BB_SIGNATURE_HANDLER = "OEEquivHash"
 
 ## Hash Calculation
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="100" width="150" height="40" fill="#ffcccc" stroke="#000" stroke-width="1"/>
-  <text x="225" y="125" text-anchor="middle" font-size="12">Recipe Variables</text>
-
-  <rect x="150" y="160" width="150" height="40" fill="#ccffcc" stroke="#000" stroke-width="1"/>
-  <text x="225" y="185" text-anchor="middle" font-size="12">Task Code</text>
-
-  <rect x="150" y="220" width="150" height="40" fill="#ccccff" stroke="#000" stroke-width="1"/>
-  <text x="225" y="245" text-anchor="middle" font-size="12">Dependencies</text>
-
-  <rect x="400" y="160" width="100" height="40" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="450" y="185" text-anchor="middle" font-size="12" font-weight="bold">HASH</text>
-
-  <rect x="550" y="160" width="120" height="40" fill="#eeccff" stroke="#000" stroke-width="1"/>
-  <text x="610" y="185" text-anchor="middle" font-size="12">Sstate Cache</text>
-
-  <path d="M 300 120 L 400 180" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
-  <path d="M 300 185 L 400 180" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
-  <path d="M 300 240 L 400 180" stroke="#333" stroke-width="1" marker-end="url(#arr)"/>
-  <path d="M 500 180 L 550 180" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![hash_calculation](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/hash_calculation.svg)
 
 ---
 

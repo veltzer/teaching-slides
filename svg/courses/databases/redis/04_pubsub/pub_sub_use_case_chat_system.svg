@@ -1,0 +1,41 @@
+<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd3_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <!-- Chat Users -->
+  <rect x="10" y="20" width="90" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="55" y="45" text-anchor="middle" font-size="11">User Alice</text>
+  <rect x="10" y="90" width="90" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="55" y="115" text-anchor="middle" font-size="11">User Bob</text>
+  <rect x="10" y="160" width="90" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="55" y="185" text-anchor="middle" font-size="11">User Carol</text>
+  <!-- Redis -->
+  <rect x="200" y="60" width="120" height="110" fill="#fff3e0" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="260" y="85" text-anchor="middle" font-size="12" font-weight="bold">Redis</text>
+  <rect x="210" y="95" width="100" height="25" fill="#ffffff" stroke="#999" stroke-width="1" rx="3"/>
+  <text x="260" y="112" text-anchor="middle" font-size="10">chat:room:general</text>
+  <rect x="210" y="125" width="100" height="25" fill="#ffffff" stroke="#999" stroke-width="1" rx="3"/>
+  <text x="260" y="142" text-anchor="middle" font-size="10">chat:room:dev</text>
+  <!-- Chat Rooms / Subscribers -->
+  <rect x="430" y="20" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="480" y="36" text-anchor="middle" font-size="10">Alice + Bob</text>
+  <text x="480" y="50" text-anchor="middle" font-size="10" fill="#666">#general</text>
+  <rect x="430" y="90" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="480" y="106" text-anchor="middle" font-size="10">Bob + Carol</text>
+  <text x="480" y="120" text-anchor="middle" font-size="10" fill="#666">#dev</text>
+  <!-- Arrows: publish -->
+  <line x1="100" y1="40" x2="198" y2="105" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrowd3_03_pubsub)"/>
+  <line x1="100" y1="110" x2="198" y2="115" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrowd3_03_pubsub)"/>
+  <line x1="100" y1="180" x2="198" y2="140" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrowd3_03_pubsub)"/>
+  <!-- Arrows: deliver -->
+  <line x1="320" y1="107" x2="428" y2="40" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowd3_03_pubsub)"/>
+  <line x1="320" y1="137" x2="428" y2="110" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowd3_03_pubsub)"/>
+  <!-- Labels -->
+  <text x="145" y="60" text-anchor="middle" font-size="10" fill="#1565c0">PUBLISH</text>
+  <text x="380" y="65" text-anchor="middle" font-size="10" fill="#2e7d32">deliver</text>
+  <!-- Legend -->
+  <text x="300" y="210" text-anchor="middle" font-size="10" fill="#666">Each chat room = a Redis Pub/Sub channel</text>
+  <text x="300" y="225" text-anchor="middle" font-size="10" fill="#666">Users subscribe to rooms they join</text>
+</svg>

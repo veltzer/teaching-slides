@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="120" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Source box -->
+  <rect x="5" y="10" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="55" y="27" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Source</text>
+  <text x="55" y="43" font-size="11" fill="#555" text-anchor="middle">(.c / .h)</text>
+  <text x="55" y="65" font-size="11" fill="#777" text-anchor="middle">#include</text>
+  <text x="55" y="78" font-size="11" fill="#777" text-anchor="middle">#define</text>
+  <text x="55" y="91" font-size="11" fill="#777" text-anchor="middle">#ifdef</text>
+  <!-- arrow -->
+  <line x1="105" y1="30" x2="120" y2="30" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Preprocessor box -->
+  <rect x="122" y="10" width="110" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="177" y="27" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Preprocessor</text>
+  <text x="177" y="43" font-size="11" fill="#555" text-anchor="middle">(cpp)</text>
+  <!-- arrow -->
+  <line x1="232" y1="30" x2="247" y2="30" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Compiler box -->
+  <rect x="249" y="10" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="299" y="27" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Compiler</text>
+  <text x="299" y="43" font-size="11" fill="#555" text-anchor="middle">(cc1)</text>
+  <text x="299" y="65" font-size="11" fill="#777" text-anchor="middle">.s</text>
+  <text x="299" y="78" font-size="11" fill="#777" text-anchor="middle">assembly</text>
+  <!-- arrow -->
+  <line x1="349" y1="30" x2="364" y2="30" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Assembler box -->
+  <rect x="366" y="10" width="100" height="40" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="416" y="27" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Assembler</text>
+  <text x="416" y="43" font-size="11" fill="#555" text-anchor="middle">(as)</text>
+  <text x="416" y="65" font-size="11" fill="#777" text-anchor="middle">.o</text>
+  <text x="416" y="78" font-size="11" fill="#777" text-anchor="middle">object</text>
+  <text x="416" y="91" font-size="11" fill="#777" text-anchor="middle">files</text>
+  <!-- arrow -->
+  <line x1="466" y1="30" x2="481" y2="30" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Linker box -->
+  <rect x="483" y="10" width="100" height="40" fill="#ede7f6" stroke="#333" stroke-width="1.5" rx="4"/>
+  <text x="533" y="27" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Linker</text>
+  <text x="533" y="43" font-size="11" fill="#555" text-anchor="middle">(ld)</text>
+  <text x="533" y="65" font-size="11" fill="#777" text-anchor="middle">executable</text>
+</svg>

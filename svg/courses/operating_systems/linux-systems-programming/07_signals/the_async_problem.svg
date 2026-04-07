@@ -1,0 +1,24 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect x="100" y="50" width="600" height="80" fill="#3498DB" stroke="#333" stroke-width="2"/>
+  <text x="400" y="70" text-anchor="middle" fill="white" font-size="12">Main Program Execution</text>
+  <text x="400" y="95" text-anchor="middle" fill="white" font-size="10">malloc() → strcpy() → printf() → free()</text>
+
+  <rect x="300" y="150" width="200" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle" fill="white" font-size="12">SIGNAL ARRIVES!</text>
+  <text x="400" y="195" text-anchor="middle" fill="white" font-size="10">Interrupts at ANY point</text>
+
+  <rect x="250" y="230" width="300" height="100" fill="#F39C12" stroke="#333" stroke-width="2"/>
+  <text x="400" y="255" text-anchor="middle" fill="black" font-size="12">Signal Handler</text>
+  <text x="400" y="275" text-anchor="middle" font-size="10">Can't use:</text>
+  <text x="400" y="295" text-anchor="middle" font-size="10">• malloc/free (not reentrant)</text>
+  <text x="400" y="310" text-anchor="middle" font-size="10">• printf (uses malloc)</text>
+
+  <path d="M 400 110 L 400 150" stroke="#E74C3C" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M 400 210 L 400 230" stroke="#E74C3C" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E74C3C"/>
+    </marker>
+  </defs>
+</svg>

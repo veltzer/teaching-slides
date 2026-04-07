@@ -17,26 +17,7 @@
 - No standard way for LLMs to discover and invoke external capabilities
 - MCP provides a **universal protocol** between AI hosts and tool providers
 
-<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="70" width="120" height="50" fill="#3498db" rx="8"/>
-  <text x="90" y="100" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Claude Code</text>
-  <rect x="30" y="140" width="120" height="50" fill="#3498db" rx="8"/>
-  <text x="90" y="170" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Cursor</text>
-  <rect x="320" y="80" width="160" height="60" fill="#e67e22" rx="10"/>
-  <text x="400" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">MCP Protocol</text>
-  <text x="400" y="125" text-anchor="middle" fill="white" font-size="12">(JSON-RPC 2.0)</text>
-  <rect x="600" y="30" width="150" height="40" fill="#27ae60" rx="8"/>
-  <text x="675" y="55" text-anchor="middle" fill="white" font-size="12">Filesystem Server</text>
-  <rect x="600" y="80" width="150" height="40" fill="#27ae60" rx="8"/>
-  <text x="675" y="105" text-anchor="middle" fill="white" font-size="12">GitHub Server</text>
-  <rect x="600" y="130" width="150" height="40" fill="#27ae60" rx="8"/>
-  <text x="675" y="155" text-anchor="middle" fill="white" font-size="12">Database Server</text>
-  <line x1="150" y1="95" x2="320" y2="105" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="150" y1="165" x2="320" y2="115" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="480" y1="100" x2="600" y2="50" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="480" y1="105" x2="600" y2="100" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="480" y1="115" x2="600" y2="150" stroke="#7f8c8d" stroke-width="2"/>
-</svg>
+![the_problem_mcp_solves](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/the_problem_mcp_solves.svg)
 
 ---
 
@@ -141,19 +122,7 @@ Host (Claude Code)
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
 1. **Lazy loading** -- connect to MCP servers on demand, not all at startup
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160">
-  <!-- outer box -->
-  <rect x="10" y="10" width="540" height="140" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="32" font-family="sans-serif" font-size="14" font-weight="bold" fill="#222">Context Window (200k tokens)</text>
-  <!-- Tool Schemas -->
-  <rect x="25" y="42" width="185" height="90" rx="4" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
-  <text x="117" y="65" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Tool Schemas</text>
-  <text x="117" y="85" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">~2k tokens</text>
-  <!-- Conversation -->
-  <rect x="230" y="42" width="305" height="90" rx="4" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
-  <text x="382" y="65" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Conversation</text>
-  <text x="382" y="85" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">~198k tokens</text>
-</svg>
+![context_window_management_for_mcp](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/context_window_management_for_mcp.svg)
 
 - Audit your tool count regularly -- fewer, well-designed tools outperform many narrow ones
 
@@ -220,30 +189,7 @@ def service_health(name: str) -> str:
 - Enables agentic patterns where tools need reasoning mid-execution
 - The host always controls approval and model selection
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="170">
-  <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <!-- Server box -->
-  <rect x="10" y="20" width="190" height="65" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="105" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
-  <text x="105" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Needs LLM assistance</text>
-  <!-- Arrow Server → Host -->
-  <line x1="200" y1="40" x2="360" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="280" y="33" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle">sampling/createMessage</text>
-  <!-- Host box -->
-  <rect x="360" y="20" width="190" height="65" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="455" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host</text>
-  <text x="455" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Routes to LLM, returns completion</text>
-  <!-- Arrow Host → Server (return) -->
-  <line x1="360" y1="70" x2="200" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Server uses result -->
-  <rect x="10" y="100" width="190" height="55" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="105" y="122" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
-  <text x="105" y="142" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Uses completion to finalize output</text>
-</svg>
+![sampling](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/sampling.svg)
 
 - Sampling keeps the server stateless while enabling multi-step reasoning
 
@@ -378,19 +324,7 @@ npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-github
 
 ## End-to-End Workflow: Bug Triage with MCP
 
-<svg viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="140" height="50" fill="#8e44ad" rx="8"/>
-  <text x="80" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Jira: Get Bug</text>
-  <rect x="200" y="40" width="140" height="50" fill="#2980b9" rx="8"/>
-  <text x="270" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">DB: Query Logs</text>
-  <rect x="390" y="40" width="140" height="50" fill="#27ae60" rx="8"/>
-  <text x="460" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">GitHub: Blame</text>
-  <rect x="580" y="40" width="140" height="50" fill="#e67e22" rx="8"/>
-  <text x="650" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Fix and PR</text>
-  <line x1="150" y1="65" x2="200" y2="65" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="340" y1="65" x2="390" y2="65" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="530" y1="65" x2="580" y2="65" stroke="#7f8c8d" stroke-width="2"/>
-</svg>
+![end_to_end_workflow_bug_triage_with_mcp](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/end_to_end_workflow_bug_triage_with_mcp.svg)
 
 1. **Jira MCP server** -- fetch the bug ticket details and reproduction steps
 1. **Postgres MCP server** -- query error logs matching the ticket's time window
@@ -736,19 +670,7 @@ async def test_get_status():
 - Organizations can maintain a registry of approved MCP servers
 - Standardize tool versions and configurations across teams
 
-<svg viewBox="0 0 800 220" xmlns="http://www.w3.org/2000/svg">
-  <rect x="280" y="10" width="240" height="50" fill="#8e44ad" rx="10"/>
-  <text x="400" y="42" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Central MCP Registry</text>
-  <rect x="50" y="140" width="150" height="50" fill="#3498db" rx="8"/>
-  <text x="125" y="170" text-anchor="middle" fill="white" font-size="12">Team A Hosts</text>
-  <rect x="325" y="140" width="150" height="50" fill="#3498db" rx="8"/>
-  <text x="400" y="170" text-anchor="middle" fill="white" font-size="12">Team B Hosts</text>
-  <rect x="600" y="140" width="150" height="50" fill="#3498db" rx="8"/>
-  <text x="675" y="170" text-anchor="middle" fill="white" font-size="12">Team C Hosts</text>
-  <line x1="400" y1="60" x2="125" y2="140" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="400" y1="60" x2="400" y2="140" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="400" y1="60" x2="675" y2="140" stroke="#7f8c8d" stroke-width="2"/>
-</svg>
+![central_tool_registries](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/central_tool_registries.svg)
 
 - Distribute via internal package registry (`npm`, `PyPI`, or container images)
 - Pin server versions to prevent unexpected behavior changes

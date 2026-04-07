@@ -86,33 +86,7 @@ Excellent:  correct-horse-battery-staple
 
 ## Password Manager Workflow
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="220" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect x="10" y="60" width="170" height="60" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="95" y="84" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">You remember ONE</text>
-  <text x="95" y="102" text-anchor="middle" font-size="12" fill="#333333">master password</text>
-  <line x1="180" y1="90" x2="240" y2="90" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="242" y="50" width="180" height="80" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="332" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Password Manager</text>
-  <text x="332" y="89" text-anchor="middle" font-size="11" fill="#333333">stores hundreds of</text>
-  <text x="332" y="106" text-anchor="middle" font-size="11" fill="#333333">unique, strong passwords</text>
-  <line x1="290" y1="130" x2="145" y2="165" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="332" y1="130" x2="332" y2="165" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="374" y1="130" x2="520" y2="165" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="60"  y="168" width="170" height="42" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="145" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Email</text>
-  <text x="145" y="202" text-anchor="middle" font-size="11" fill="#666666">k8#mP!q...</text>
-  <rect x="247" y="168" width="170" height="42" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="332" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Banking</text>
-  <text x="332" y="202" text-anchor="middle" font-size="11" fill="#666666">Yx9$bW2...</text>
-  <rect x="435" y="168" width="170" height="42" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="520" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Work Apps</text>
-  <text x="520" y="202" text-anchor="middle" font-size="11" fill="#666666">Nf7&amp;jR4...</text>
-</svg>
+![password_manager_workflow](../../../../svg/courses/security/it-security-policies/02_password_security/password_manager_workflow.svg)
 
 ---
 

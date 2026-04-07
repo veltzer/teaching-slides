@@ -1,0 +1,51 @@
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-mp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Driver Program -->
+  <rect x="100" y="10" width="400" height="50" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Driver Program</text>
+  <text x="300" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">rdd.mapPartitions(process_partition)</text>
+  <!-- Arrows from driver to partitions -->
+  <line x1="200" y1="60" x2="120" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <line x1="300" y1="60" x2="300" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <line x1="400" y1="60" x2="480" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <!-- Partitions -->
+  <rect x="60" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="120" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 0</text>
+  <text x="120" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[0..999]</text>
+  <rect x="240" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="300" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 1</text>
+  <text x="300" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[1k..2k]</text>
+  <rect x="420" y="95" width="120" height="45" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="480" y="114" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Part 2</text>
+  <text x="480" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">[2k..3k]</text>
+  <!-- open conn labels + arrows -->
+  <line x1="120" y1="140" x2="120" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="145" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
+  <line x1="300" y1="140" x2="300" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="325" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
+  <line x1="480" y1="140" x2="480" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="505" y="170" font-family="Arial, sans-serif" font-size="10" fill="#888">open conn</text>
+  <!-- Process batch -->
+  <rect x="60" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="120" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
+  <rect x="240" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="300" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
+  <rect x="420" y="195" width="120" height="40" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="480" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Process batch</text>
+  <!-- close conn labels + arrows -->
+  <line x1="120" y1="235" x2="120" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="145" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
+  <line x1="300" y1="235" x2="300" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="325" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
+  <line x1="480" y1="235" x2="480" y2="290" stroke="#333" stroke-width="2" marker-end="url(#arrow-mp)"/>
+  <text x="505" y="268" font-family="Arial, sans-serif" font-size="10" fill="#888">close conn</text>
+  <!-- Results -->
+  <rect x="60" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="120" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
+  <rect x="240" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="300" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
+  <rect x="420" y="295" width="120" height="40" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="480" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Results</text>
+</svg>

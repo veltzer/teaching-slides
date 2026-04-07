@@ -203,24 +203,7 @@ ls -la /data/shared
 ---
 ## PAM (Pluggable Authentication Modules)
 
-<svg width="600" height="120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="35" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="65" text-anchor="middle" font-size="11">Application</text>
-  <rect x="170" y="35" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="65" text-anchor="middle" font-size="11">PAM API</text>
-  <rect x="330" y="35" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="390" y="65" text-anchor="middle" font-size="11">PAM Modules</text>
-  <rect x="490" y="35" width="100" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="65" text-anchor="middle" font-size="11">Backend</text>
-  <line x1="130" y1="60" x2="170" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr03a)"/>
-  <line x1="290" y1="60" x2="330" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr03a)"/>
-  <line x1="450" y1="60" x2="490" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arr03a)"/>
-  <defs>
-    <marker id="arr03a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![pam_pluggable_authentication_modules](../../../../svg/courses/operating_systems/linux-system-administration/05_user_management_security/pam_pluggable_authentication_modules.svg)
 
 PAM module types: `auth`, `account`, `password`, `session`.
 
@@ -787,24 +770,7 @@ ss -tlnp
 ---
 ## LDAP/NSS Overview
 
-<svg width="620" height="130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="60" y="70" text-anchor="middle" font-size="11">Application</text>
-  <rect x="150" y="40" width="80" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="190" y="70" text-anchor="middle" font-size="11">NSS</text>
-  <rect x="270" y="15" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="330" y="40" text-anchor="middle" font-size="11">/etc/passwd</text>
-  <rect x="270" y="65" width="120" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="330" y="90" text-anchor="middle" font-size="11">LDAP Server</text>
-  <line x1="110" y1="65" x2="150" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr04a)"/>
-  <line x1="230" y1="55" x2="270" y2="35" stroke="#333" stroke-width="2" marker-end="url(#arr04a)"/>
-  <line x1="230" y1="75" x2="270" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arr04a)"/>
-  <defs>
-    <marker id="arr04a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![ldap_nss_overview](../../../../svg/courses/operating_systems/linux-system-administration/05_user_management_security/ldap_nss_overview.svg)
 
 `NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
 

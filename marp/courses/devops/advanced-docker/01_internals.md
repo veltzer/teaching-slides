@@ -18,31 +18,7 @@ Understanding what happens beneath the `docker` CLI
 
 ## The Docker Engine - High Level
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="296" font-family="sans-serif">
-  <rect x="1" y="1" width="498" height="294" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="498" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="250" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Docker Architecture Stack</text>
-  <!-- Layer 1: CLI/API -->
-  <rect x="60" y="44" width="380" height="44" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="250" y="61" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Docker CLI / API</text>
-  <text x="250" y="79" font-size="11" fill="#555" text-anchor="middle">docker run, build, pull, push ...</text>
-  <!-- Layer 2: dockerd -->
-  <rect x="60" y="96" width="380" height="44" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="250" y="113" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">dockerd</text>
-  <text x="250" y="131" font-size="11" fill="#555" text-anchor="middle">Docker Daemon — image management, REST API</text>
-  <!-- Layer 3: containerd -->
-  <rect x="60" y="148" width="380" height="44" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="250" y="165" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">containerd</text>
-  <text x="250" y="183" font-size="11" fill="#555" text-anchor="middle">Container Runtime — lifecycle management</text>
-  <!-- Layer 4: runc -->
-  <rect x="60" y="200" width="380" height="44" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="250" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">runc</text>
-  <text x="250" y="235" font-size="11" fill="#555" text-anchor="middle">OCI Runtime Reference Implementation</text>
-  <!-- Layer 5: Kernel -->
-  <rect x="60" y="252" width="380" height="36" rx="4" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
-  <text x="250" y="265" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Linux Kernel</text>
-  <text x="250" y="281" font-size="11" fill="#555" text-anchor="middle">namespaces &#8226; cgroups &#8226; seccomp</text>
-</svg>
+![the_docker_engine_high_level](../../../../svg/courses/devops/advanced-docker/01_internals/the_docker_engine_high_level.svg)
 
 ---
 
@@ -112,39 +88,7 @@ sudo systemctl status containerd
 
 ## `containerd` Architecture
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="292" font-family="sans-serif">
-  <rect x="1" y="1" width="558" height="290" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="558" height="34" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="280" y="23" font-size="15" font-weight="bold" fill="#1b5e20" text-anchor="middle">containerd Architecture</text>
-  <!-- Header row -->
-  <rect x="14" y="44" width="530" height="34" rx="3" fill="#2e7d32"/>
-  <text x="279" y="66" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">containerd</text>
-  <!-- 4-column row -->
-  <rect x="14" y="86" width="128" height="48" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="78" y="106" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Content</text>
-  <text x="78" y="122" font-size="12" fill="#555" text-anchor="middle">Store</text>
-  <rect x="148" y="86" width="128" height="48" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="212" y="106" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Snapshot</text>
-  <text x="212" y="122" font-size="12" fill="#555" text-anchor="middle">Manager</text>
-  <rect x="282" y="86" width="128" height="48" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="346" y="106" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Runtime</text>
-  <text x="346" y="122" font-size="12" fill="#555" text-anchor="middle">Manager</text>
-  <rect x="416" y="86" width="128" height="48" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="480" y="106" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Image</text>
-  <text x="480" y="122" font-size="12" fill="#555" text-anchor="middle">Store</text>
-  <!-- Metadata Store -->
-  <rect x="14" y="142" width="530" height="36" rx="3" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
-  <text x="279" y="165" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Metadata Store (bbolt)</text>
-  <!-- Shim API -->
-  <rect x="14" y="186" width="530" height="34" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="279" y="208" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Shim API (ttrpc)</text>
-  <!-- shim-runc-v2 -->
-  <rect x="14" y="228" width="530" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="279" y="248" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">containerd-shim-runc-v2</text>
-  <!-- runc -->
-  <rect x="14" y="266" width="530" height="22" rx="3" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="279" y="282" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">runc</text>
-</svg>
+![containerd_architecture](../../../../svg/courses/devops/advanced-docker/01_internals/containerd_architecture.svg)
 
 ---
 
@@ -337,40 +281,7 @@ ip addr show
 
 ## Network Namespace - veth Pairs
 
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" font-family="sans-serif">
-  <defs>
-    <marker id="arw6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arw6b" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect x="1" y="1" width="598" height="198" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="598" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="300" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Docker Networking — Bridge Mode</text>
-  <!-- Host Network box -->
-  <rect x="14" y="46" width="250" height="140" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="139" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host Network</text>
-  <rect x="34" y="74" width="100" height="34" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="84" y="96" font-size="12" fill="#222" text-anchor="middle">docker0 bridge</text>
-  <rect x="54" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="94" y="140" font-size="12" fill="#222" text-anchor="middle">vethXXXX</text>
-  <!-- Container Network NS box -->
-  <rect x="336" y="46" width="250" height="140" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-  <text x="461" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Container Net NS</text>
-  <rect x="466" y="74" width="80" height="34" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="506" y="96" font-size="12" fill="#222" text-anchor="middle">eth0</text>
-  <rect x="466" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="506" y="140" font-size="12" fill="#222" text-anchor="middle">vethYYYY</text>
-  <!-- veth pair connection -->
-  <line x1="134" y1="135" x2="264" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
-  <line x1="336" y1="135" x2="466" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
-  <text x="300" y="131" font-size="11" fill="#555" text-anchor="middle">veth pair</text>
-  <!-- Vertical connections -->
-  <line x1="84" y1="108" x2="84" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
-  <line x1="506" y1="108" x2="506" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
-</svg>
+![network_namespace_veth_pairs](../../../../svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
 
 ```bash
 # See veth pairs
@@ -556,46 +467,7 @@ docker run --rm --pids-limit=50 alpine sh -c \
 
 ## How a Container Starts - Step by Step
 
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="430" font-family="sans-serif">
-  <defs>
-    <marker id="arw7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect x="1" y="1" width="558" height="428" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="558" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="280" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">docker run — Container Startup Flow</text>
-  <!-- Steps -->
-  <rect x="100" y="44" width="360" height="28" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="280" y="63" font-size="12" fill="#222" text-anchor="middle">1. docker run nginx</text>
-  <line x1="280" y1="72" x2="280" y2="86" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="86" width="360" height="28" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="280" y="105" font-size="12" fill="#222" text-anchor="middle">2. CLI sends request to dockerd via REST API</text>
-  <line x1="280" y1="114" x2="280" y2="128" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="128" width="360" height="28" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="280" y="147" font-size="12" fill="#222" text-anchor="middle">3. dockerd pulls image, creates container record</text>
-  <line x1="280" y1="156" x2="280" y2="170" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="170" width="360" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="280" y="189" font-size="12" fill="#222" text-anchor="middle">4. dockerd calls containerd via gRPC</text>
-  <line x1="280" y1="198" x2="280" y2="212" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="212" width="360" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="280" y="231" font-size="12" fill="#222" text-anchor="middle">5. containerd creates a task + shim process</text>
-  <line x1="280" y1="240" x2="280" y2="254" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="254" width="360" height="28" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="280" y="273" font-size="12" fill="#222" text-anchor="middle">6. shim calls runc to create the container</text>
-  <line x1="280" y1="282" x2="280" y2="296" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="296" width="360" height="28" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="280" y="315" font-size="12" fill="#222" text-anchor="middle">7. runc sets up namespaces, cgroups, mounts</text>
-  <line x1="280" y1="324" x2="280" y2="338" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="338" width="360" height="28" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="280" y="357" font-size="12" fill="#222" text-anchor="middle">8. runc executes the container entrypoint</text>
-  <line x1="280" y1="366" x2="280" y2="380" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="380" width="360" height="22" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="280" y="396" font-size="12" fill="#222" text-anchor="middle">9. runc exits, shim takes over as parent</text>
-  <line x1="280" y1="402" x2="280" y2="410" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="410" width="360" height="16" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="280" y="423" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="middle">10. Container process is running &#10003;</text>
-</svg>
+![how_a_container_starts_step_by_step](../../../../svg/courses/devops/advanced-docker/01_internals/how_a_container_starts_step_by_step.svg)
 
 ---
 
@@ -665,25 +537,7 @@ cat /proc/$PID/environ | tr '\0' '\n'
 
 ## Container Filesystem - OverlayFS
 
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="240" font-family="sans-serif">
-  <rect x="1" y="1" width="498" height="238" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="498" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="250" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">OverlayFS Layer Structure</text>
-  <!-- Merged layer -->
-  <rect x="60" y="44" width="380" height="42" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="250" y="61" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Merged (container view)</text>
-  <text x="250" y="78" font-size="11" fill="#555" text-anchor="middle">unified filesystem visible to the container</text>
-  <!-- Upper layer -->
-  <rect x="60" y="94" width="380" height="42" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="250" y="111" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">Upper Layer (writable)</text>
-  <text x="250" y="128" font-size="11" fill="#555" text-anchor="middle">container writes go here — unique per container</text>
-  <!-- Lower layers -->
-  <rect x="60" y="144" width="380" height="88" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="250" y="162" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Lower Layers (read-only image layers)</text>
-  <text x="250" y="180" font-size="12" fill="#555" text-anchor="middle">layer3 — FROM instruction (top image layer)</text>
-  <text x="250" y="198" font-size="12" fill="#555" text-anchor="middle">layer2 — RUN instruction</text>
-  <text x="250" y="216" font-size="12" fill="#555" text-anchor="middle">layer1 — base image (bottom)</text>
-</svg>
+![container_filesystem_overlayfs](../../../../svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
 
 ```bash
 # View overlay mount details

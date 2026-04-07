@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="60" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="70" y="85" text-anchor="middle" font-size="11" font-weight="bold">App Request</text>
+  <rect x="160" y="15" width="130" height="45" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="33" text-anchor="middle" font-size="11" font-weight="bold">Redis OK</text>
+  <text x="225" y="50" text-anchor="middle" font-size="10" fill="#2e7d32">Normal path</text>
+  <rect x="160" y="95" width="130" height="45" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="225" y="113" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">Redis Down</text>
+  <text x="225" y="130" text-anchor="middle" font-size="10" fill="#c62828">Connection error</text>
+  <rect x="350" y="15" width="220" height="45" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="33" text-anchor="middle" font-size="10" font-weight="bold">Retry with backoff</text>
+  <text x="460" y="50" text-anchor="middle" font-size="10">Exponential: 100ms, 200ms, 400ms</text>
+  <rect x="350" y="75" width="220" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="97" text-anchor="middle" font-size="10" font-weight="bold">Circuit breaker: skip Redis</text>
+  <rect x="350" y="125" width="220" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="460" y="147" text-anchor="middle" font-size="10" font-weight="bold">Fallback: query DB directly</text>
+  <line x1="120" y1="72" x2="160" y2="38" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <line x1="120" y1="88" x2="160" y2="118" stroke="#c62828" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <line x1="290" y1="118" x2="350" y2="92" stroke="#333" stroke-width="1" marker-end="url(#arrowd11_08_integration)"/>
+  <text x="300" y="185" text-anchor="middle" font-size="10" fill="#333">Never let Redis failure break your application</text>
+  <defs>
+    <marker id="arrowd11_08_integration" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="296" font-family="sans-serif">
+  <rect x="1" y="1" width="498" height="294" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <rect x="1" y="1" width="498" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="250" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Docker Architecture Stack</text>
+  <!-- Layer 1: CLI/API -->
+  <rect x="60" y="44" width="380" height="44" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="250" y="61" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Docker CLI / API</text>
+  <text x="250" y="79" font-size="11" fill="#555" text-anchor="middle">docker run, build, pull, push ...</text>
+  <!-- Layer 2: dockerd -->
+  <rect x="60" y="96" width="380" height="44" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="250" y="113" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">dockerd</text>
+  <text x="250" y="131" font-size="11" fill="#555" text-anchor="middle">Docker Daemon — image management, REST API</text>
+  <!-- Layer 3: containerd -->
+  <rect x="60" y="148" width="380" height="44" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="250" y="165" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">containerd</text>
+  <text x="250" y="183" font-size="11" fill="#555" text-anchor="middle">Container Runtime — lifecycle management</text>
+  <!-- Layer 4: runc -->
+  <rect x="60" y="200" width="380" height="44" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1.5"/>
+  <text x="250" y="217" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">runc</text>
+  <text x="250" y="235" font-size="11" fill="#555" text-anchor="middle">OCI Runtime Reference Implementation</text>
+  <!-- Layer 5: Kernel -->
+  <rect x="60" y="252" width="380" height="36" rx="4" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
+  <text x="250" y="265" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Linux Kernel</text>
+  <text x="250" y="281" font-size="11" fill="#555" text-anchor="middle">namespaces &#8226; cgroups &#8226; seccomp</text>
+</svg>

@@ -14,28 +14,7 @@
 
 ## Interrupt System Architecture
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="18" font-weight="bold">Interrupt Flow</text>
-  <rect x="50" y="60" width="100" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="100" y="85" text-anchor="middle" font-size="14">Hardware Event</text>
-  <path d="M 150 80 L 180 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="180" y="60" width="100" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="230" y="85" text-anchor="middle" font-size="14">IRQ Signal</text>
-  <path d="M 280 80 L 310 80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="310" y="60" width="80" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="350" y="85" text-anchor="middle" font-size="14">CPU</text>
-  <path d="M 350 100 L 350 130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="300" y="130" width="100" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="350" y="155" text-anchor="middle" font-size="14">Vector Table</text>
-  <path d="M 350 170 L 350 200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <rect x="300" y="200" width="100" height="40" fill="#ffccff" stroke="#333"/>
-  <text x="350" y="225" text-anchor="middle" font-size="14">ISR Handler</text>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![interrupt_system_architecture](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_system_architecture.svg)
 
 ---
 
@@ -127,20 +106,7 @@ void TIM2_IRQHandler(void) {
 
 ## Nested Interrupts
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Nested Interrupt Execution</text>
-  <rect x="50" y="60" width="300" height="30" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="80" text-anchor="middle" font-size="12">Main Program</text>
-  <rect x="100" y="100" width="200" height="30" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="120" text-anchor="middle" font-size="12">Low Priority ISR</text>
-  <rect x="150" y="140" width="100" height="30" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="160" text-anchor="middle" font-size="12">High Priority ISR</text>
-  <path d="M 100 90 L 100 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 150 130 L 150 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 250 140 L 250 130" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 300 100 L 300 90" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="200" y="200" text-anchor="middle" font-size="12">Time →</text>
-</svg>
+![nested_interrupts](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/nested_interrupts.svg)
 
 ---
 
@@ -453,18 +419,7 @@ void HardFault_Handler(void) {
 
 ## Interrupt Priorities and Preemption
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-size="16" font-weight="bold">Priority Groups (3 bits preempt, 1 bit sub)</text>
-  <rect x="50" y="60" width="300" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="85" text-anchor="middle" font-size="14">Priority 0x00-0x0F (Highest)</text>
-  <rect x="50" y="110" width="300" height="40" fill="#ffddcc" stroke="#333"/>
-  <text x="200" y="135" text-anchor="middle" font-size="14">Priority 0x10-0x1F</text>
-  <rect x="50" y="160" width="300" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="185" text-anchor="middle" font-size="14">Priority 0x20-0x3F</text>
-  <rect x="50" y="210" width="300" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="235" text-anchor="middle" font-size="14">Priority 0x40-0xFF (Lowest)</text>
-  <text x="200" y="280" text-anchor="middle" font-size="12">Preemption only between groups</text>
-</svg>
+![interrupt_priorities_and_preemption](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_priorities_and_preemption.svg)
 
 ---
 

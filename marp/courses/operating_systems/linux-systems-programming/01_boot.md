@@ -24,24 +24,7 @@
 
 ## The Boot Chain
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#4A90E2" stroke="#333" stroke-width="2"/>
-  <text x="110" y="85" text-anchor="middle" fill="white" font-size="16">Hardware</text>
-  <rect x="220" y="50" width="120" height="60" fill="#7B68EE" stroke="#333" stroke-width="2"/>
-  <text x="280" y="85" text-anchor="middle" fill="white" font-size="16">Firmware</text>
-  <rect x="390" y="50" width="120" height="60" fill="#FF6B6B" stroke="#333" stroke-width="2"/>
-  <text x="450" y="85" text-anchor="middle" fill="white" font-size="16">Bootloader</text>
-  <rect x="560" y="50" width="120" height="60" fill="#4ECDC4" stroke="#333" stroke-width="2"/>
-  <text x="620" y="85" text-anchor="middle" fill="white" font-size="16">Kernel</text>
-  <line x1="170" y1="80" x2="220" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="340" y1="80" x2="390" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="510" y1="80" x2="560" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![the_boot_chain](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/the_boot_chain.svg)
 
 ---
 
@@ -89,22 +72,7 @@
 
 ## GRUB Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#2C3E50" stroke="#333" stroke-width="2"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">GRUB Core</text>
-  <rect x="50" y="180" width="150" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="125" y="215" text-anchor="middle" fill="white" font-size="14">Stage 1</text>
-  <rect x="250" y="180" width="150" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="325" y="215" text-anchor="middle" fill="white" font-size="14">Stage 1.5</text>
-  <rect x="450" y="180" width="150" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="525" y="215" text-anchor="middle" fill="white" font-size="14">Stage 2</text>
-  <rect x="650" y="180" width="100" height="60" fill="#27AE60" stroke="#333" stroke-width="2"/>
-  <text x="700" y="215" text-anchor="middle" fill="white" font-size="14">Kernel</text>
-  <text x="125" y="270" text-anchor="middle" font-size="12">MBR/GPT</text>
-  <text x="325" y="270" text-anchor="middle" font-size="12">File System</text>
-  <text x="525" y="270" text-anchor="middle" font-size="12">Menu/Config</text>
-  <text x="700" y="270" text-anchor="middle" font-size="12">vmlinuz</text>
-</svg>
+![grub_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/grub_architecture.svg)
 
 ---
 
@@ -258,23 +226,7 @@ linux /vmlinuz root=/dev/sda2 init=/bin/bash
 
 ## U-Boot Architecture
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="60" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="18">U-Boot Core</text>
-  <rect x="50" y="150" width="140" height="50" fill="#E67E22" stroke="#333" stroke-width="2"/>
-  <text x="120" y="180" text-anchor="middle" fill="white" font-size="14">SPL</text>
-  <rect x="230" y="150" width="140" height="50" fill="#8E44AD" stroke="#333" stroke-width="2"/>
-  <text x="300" y="180" text-anchor="middle" fill="white" font-size="14">Main U-Boot</text>
-  <rect x="410" y="150" width="140" height="50" fill="#2980B9" stroke="#333" stroke-width="2"/>
-  <text x="480" y="180" text-anchor="middle" fill="white" font-size="14">Environment</text>
-  <rect x="590" y="150" width="140" height="50" fill="#27AE60" stroke="#333" stroke-width="2"/>
-  <text x="660" y="180" text-anchor="middle" fill="white" font-size="14">Kernel/DTB</text>
-  <text x="120" y="230" text-anchor="middle" font-size="11">Secondary</text>
-  <text x="120" y="245" text-anchor="middle" font-size="11">Program Loader</text>
-  <text x="300" y="230" text-anchor="middle" font-size="11">Full Features</text>
-  <text x="480" y="230" text-anchor="middle" font-size="11">Variables</text>
-  <text x="660" y="230" text-anchor="middle" font-size="11">Device Tree</text>
-</svg>
+![u_boot_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/u_boot_architecture.svg)
 
 ---
 
@@ -367,32 +319,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## Chain of Trust
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="100" width="100" height="60" fill="#C0392B" stroke="#333" stroke-width="2"/>
-  <text x="100" y="135" text-anchor="middle" fill="white" font-size="14">Hardware</text>
-  <rect x="200" y="100" width="100" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="250" y="135" text-anchor="middle" fill="white" font-size="14">Firmware</text>
-  <rect x="350" y="100" width="100" height="60" fill="#EC7063" stroke="#333" stroke-width="2"/>
-  <text x="400" y="135" text-anchor="middle" fill="white" font-size="14">Bootloader</text>
-  <rect x="500" y="100" width="100" height="60" fill="#F1948A" stroke="#333" stroke-width="2"/>
-  <text x="550" y="135" text-anchor="middle" fill="white" font-size="14">Kernel</text>
-  <rect x="650" y="100" width="100" height="60" fill="#FADBD8" stroke="#333" stroke-width="2"/>
-  <text x="700" y="135" text-anchor="middle" fill="black" font-size="14">Userspace</text>
-  <line x1="150" y1="130" x2="200" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="300" y1="130" x2="350" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="450" y1="130" x2="500" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <line x1="600" y1="130" x2="650" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <text x="100" y="190" text-anchor="middle" font-size="12">Root of Trust</text>
-  <text x="250" y="190" text-anchor="middle" font-size="12">Verified</text>
-  <text x="400" y="190" text-anchor="middle" font-size="12">Signed</text>
-  <text x="550" y="190" text-anchor="middle" font-size="12">Signed</text>
-  <text x="700" y="190" text-anchor="middle" font-size="12">Trusted</text>
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![chain_of_trust](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/chain_of_trust.svg)
 
 ---
 
@@ -466,22 +393,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## TPM Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="50" width="500" height="400" fill="#ECF0F1" stroke="#333" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="20" font-weight="bold">TPM Chip</text>
-  <rect x="200" y="120" width="180" height="60" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="290" y="155" text-anchor="middle" fill="white" font-size="14">Crypto Engine</text>
-  <rect x="420" y="120" width="180" height="60" fill="#9B59B6" stroke="#333" stroke-width="2"/>
-  <text x="510" y="155" text-anchor="middle" fill="white" font-size="14">Key Generator</text>
-  <rect x="200" y="210" width="180" height="60" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="290" y="245" text-anchor="middle" fill="white" font-size="14">PCR Registers</text>
-  <rect x="420" y="210" width="180" height="60" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="510" y="245" text-anchor="middle" fill="white" font-size="14">NVRAM Storage</text>
-  <rect x="200" y="300" width="400" height="60" fill="#34495E" stroke="#333" stroke-width="2"/>
-  <text x="400" y="335" text-anchor="middle" fill="white" font-size="14">Random Number Generator</text>
-  <rect x="200" y="380" width="400" height="40" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="405" text-anchor="middle" fill="white" font-size="14">I/O Interface (LPC/SPI/I2C)</text>
-</svg>
+![tpm_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/tpm_architecture.svg)
 
 ---
 
@@ -640,27 +552,7 @@ hexdump -C module.ko | tail
 - Loads GRUB
 - Manages MOK (Machine Owner Keys)
 
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="80" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-  <rect x="10"  y="20" width="80" height="36" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="50"  y="43" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">UEFI</text>
-  <line x1="90" y1="38" x2="106" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="108" y="20" width="130" height="36" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="173" y="38" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Shim</text>
-  <text x="173" y="52" font-size="11" fill="#555" text-anchor="middle">(signed)</text>
-  <line x1="238" y1="38" x2="254" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="256" y="20" width="130" height="36" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="321" y="38" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">GRUB</text>
-  <text x="321" y="52" font-size="11" fill="#555" text-anchor="middle">(signed)</text>
-  <line x1="386" y1="38" x2="402" y2="38" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="404" y="20" width="130" height="36" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="469" y="38" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Kernel</text>
-  <text x="469" y="52" font-size="11" fill="#555" text-anchor="middle">(signed)</text>
-</svg>
+![shim_bootloader](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/shim_bootloader.svg)
 
 ---
 

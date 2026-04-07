@@ -14,50 +14,13 @@
 
 ## The Problem to Solve
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Traditional Approach</text>
-
-  <rect x="50" y="50" width="60" height="30" fill="lightblue" stroke="black"/>
-  <text x="80" y="70" font-size="10" text-anchor="middle">Thread 1</text>
-
-  <rect x="150" y="50" width="60" height="30" fill="lightblue" stroke="black"/>
-  <text x="180" y="70" font-size="10" text-anchor="middle">Thread 2</text>
-
-  <rect x="250" y="50" width="60" height="30" fill="lightblue" stroke="black"/>
-  <text x="280" y="70" font-size="10" text-anchor="middle">Thread 3</text>
-
-  <text x="250" y="110" font-size="12" text-anchor="middle">One thread per connection</text>
-  <text x="250" y="130" font-size="12" text-anchor="middle">High memory overhead</text>
-  <text x="250" y="150" font-size="12" text-anchor="middle">Context switching costs</text>
-</svg>
+![the_problem_to_solve](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/the_problem_to_solve.svg)
 
 ---
 
 ## Multiplexing Solution
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Multiplexing Approach</text>
-
-  <rect x="200" y="50" width="100" height="40" fill="lightgreen" stroke="black"/>
-  <text x="250" y="75" font-size="12" text-anchor="middle">Single Thread</text>
-
-  <circle cx="100" cy="130" r="15" fill="yellow" stroke="black"/>
-  <text x="100" y="135" font-size="8" text-anchor="middle">FD1</text>
-
-  <circle cx="200" cy="130" r="15" fill="yellow" stroke="black"/>
-  <text x="200" y="135" font-size="8" text-anchor="middle">FD2</text>
-
-  <circle cx="300" cy="130" r="15" fill="yellow" stroke="black"/>
-  <text x="300" y="135" font-size="8" text-anchor="middle">FD3</text>
-
-  <circle cx="400" cy="130" r="15" fill="yellow" stroke="black"/>
-  <text x="400" y="135" font-size="8" text-anchor="middle">FD4</text>
-
-  <path d="M 250 90 L 100 115" stroke="black"/>
-  <path d="M 250 90 L 200 115" stroke="black"/>
-  <path d="M 250 90 L 300 115" stroke="black"/>
-  <path d="M 250 90 L 400 115" stroke="black"/>
-</svg>
+![multiplexing_solution](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/multiplexing_solution.svg)
 
 ---
 
@@ -242,23 +205,7 @@ while (1) {
 
 ## poll() vs select()
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">poll() vs select()</text>
-
-  <rect x="50" y="50" width="150" height="120" fill="lightcoral" stroke="black"/>
-  <text x="125" y="70" font-size="12" font-weight="bold" text-anchor="middle">select()</text>
-  <text x="125" y="90" font-size="10" text-anchor="middle">• FD limit (1024)</text>
-  <text x="125" y="110" font-size="10" text-anchor="middle">• O(n) scan</text>
-  <text x="125" y="130" font-size="10" text-anchor="middle">• Bit manipulation</text>
-  <text x="125" y="150" font-size="10" text-anchor="middle">• Portable</text>
-
-  <rect x="300" y="50" width="150" height="120" fill="lightgreen" stroke="black"/>
-  <text x="375" y="70" font-size="12" font-weight="bold" text-anchor="middle">poll()</text>
-  <text x="375" y="90" font-size="10" text-anchor="middle">• No FD limit</text>
-  <text x="375" y="110" font-size="10" text-anchor="middle">• O(n) scan</text>
-  <text x="375" y="130" font-size="10" text-anchor="middle">• Array based</text>
-  <text x="375" y="150" font-size="10" text-anchor="middle">• Better interface</text>
-</svg>
+![poll_vs_select](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/poll_vs_select.svg)
 
 ---
 
@@ -313,22 +260,7 @@ EPOLLRDHUP  // Peer closed connection
 
 ## Level vs Edge Triggered
 
-<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Triggering Modes</text>
-
-  <text x="50" y="50" font-size="12" font-weight="bold">Level Triggered (Default)</text>
-  <rect x="50" y="60" width="200" height="20" fill="lightblue" stroke="black"/>
-  <text x="150" y="75" font-size="10" text-anchor="middle">Data Available</text>
-  <text x="50" y="100" font-size="10">• Notifies while condition is true</text>
-  <text x="50" y="120" font-size="10">• Multiple notifications possible</text>
-  <text x="50" y="140" font-size="10">• Easier to use</text>
-
-  <text x="50" y="170" font-size="12" font-weight="bold">Edge Triggered (EPOLLET)</text>
-  <rect x="50" y="180" width="40" height="20" fill="lightgreen" stroke="black"/>
-  <text x="70" y="195" font-size="8" text-anchor="middle">Event</text>
-  <text x="50" y="220" font-size="10">• Notifies only on state change</text>
-  <text x="50" y="240" font-size="10">• Single notification per event</text>
-</svg>
+![level_vs_edge_triggered](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/level_vs_edge_triggered.svg)
 
 ---
 
@@ -507,33 +439,7 @@ int handle_partial_write(int fd, io_buffer_t *buf) {
 
 ## Connection State Machine
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Connection States</text>
-
-  <circle cx="100" cy="80" r="30" fill="lightblue" stroke="black"/>
-  <text x="100" y="85" font-size="10" text-anchor="middle">CONNECTED</text>
-
-  <circle cx="250" cy="80" r="30" fill="lightgreen" stroke="black"/>
-  <text x="250" y="85" font-size="10" text-anchor="middle">READING</text>
-
-  <circle cx="400" cy="80" r="30" fill="yellow" stroke="black"/>
-  <text x="400" y="85" font-size="10" text-anchor="middle">WRITING</text>
-
-  <circle cx="250" cy="200" r="30" fill="lightcoral" stroke="black"/>
-  <text x="250" y="205" font-size="10" text-anchor="middle">CLOSING</text>
-
-  <path d="M 130 80 L 220 80" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 280 80 L 370 80" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 370 100 L 280 100" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 250 110 L 250 170" stroke="black" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![connection_state_machine](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/connection_state_machine.svg)
 
 ---
 
@@ -578,29 +484,7 @@ void handle_connection(struct connection *conn, uint32_t events) {
 
 ## Performance Comparison
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Scalability Comparison</text>
-
-  <!-- Y-axis -->
-  <line x1="50" y1="50" x2="50" y2="250" stroke="black"/>
-  <text x="30" y="150" font-size="12" text-anchor="middle" transform="rotate(-90, 30, 150)">Performance</text>
-
-  <!-- X-axis -->
-  <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-  <text x="250" y="280" font-size="12" text-anchor="middle">Number of Connections</text>
-
-  <!-- select() line -->
-  <path d="M 50 200 Q 200 150 300 100" stroke="red" stroke-width="2" fill="none"/>
-  <text x="320" y="100" font-size="10" fill="red">select()</text>
-
-  <!-- poll() line -->
-  <path d="M 50 180 Q 200 130 350 90" stroke="orange" stroke-width="2" fill="none"/>
-  <text x="370" y="90" font-size="10" fill="orange">poll()</text>
-
-  <!-- epoll() line -->
-  <path d="M 50 150 L 400 80" stroke="green" stroke-width="2" fill="none"/>
-  <text x="420" y="80" font-size="10" fill="green">epoll()</text>
-</svg>
+![performance_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/performance_comparison.svg)
 
 ---
 

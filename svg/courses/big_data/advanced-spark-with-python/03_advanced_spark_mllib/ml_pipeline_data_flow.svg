@@ -1,0 +1,55 @@
+<svg viewBox="0 0 620 520" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ml" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <!-- Raw Data -->
+  <rect x="60" y="5" width="130" height="45" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="125" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Raw Data</text>
+  <text x="125" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">(CSV/Parquet)</text>
+  <line x1="125" y1="50" x2="125" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Imputer -->
+  <rect x="60" y="70" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="125" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Imputer</text>
+  <line x1="190" y1="87" x2="240" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="72" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Fill nulls with median</text>
+  <line x1="125" y1="105" x2="125" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- StringIndexer -->
+  <rect x="60" y="125" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="125" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StringIndexer</text>
+  <line x1="190" y1="142" x2="240" y2="142" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="127" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">"Gold" -> 0, "Silver" -> 1</text>
+  <line x1="125" y1="160" x2="125" y2="175" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- OneHotEncoder -->
+  <rect x="60" y="180" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="125" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">OneHotEncoder</text>
+  <line x1="190" y1="197" x2="240" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="182" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="202" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">0 -> [1,0,0], 1 -> [0,1,0]</text>
+  <line x1="125" y1="215" x2="125" y2="230" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- VectorAssembler -->
+  <rect x="60" y="235" width="130" height="35" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="125" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">VectorAssembler</text>
+  <line x1="190" y1="252" x2="240" y2="252" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="237" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Combine all into [0.5, 1.2, 3.4, 1, 0, 0]</text>
+  <line x1="125" y1="270" x2="125" y2="285" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- StandardScaler -->
+  <rect x="60" y="290" width="130" height="35" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="125" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">StandardScaler</text>
+  <line x1="190" y1="307" x2="240" y2="307" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="292" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Normalize: mean=0, std=1</text>
+  <line x1="125" y1="325" x2="125" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Classifier -->
+  <rect x="60" y="345" width="130" height="35" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="125" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Classifier</text>
+  <line x1="190" y1="362" x2="240" y2="362" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <rect x="245" y="347" width="310" height="30" rx="8" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="400" y="367" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">RandomForest / GBT / LR</text>
+  <line x1="125" y1="380" x2="125" y2="395" stroke="#333" stroke-width="2" marker-end="url(#arrow-ml)"/>
+  <!-- Predictions -->
+  <rect x="60" y="400" width="130" height="35" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="125" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Predictions</text>
+</svg>

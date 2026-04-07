@@ -9,32 +9,7 @@
 ---
 ## Core Features
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="max-width: 100%; height: auto;">
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-    </marker>
-  </defs>
-  <rect x="150" y="20" width="100" height="40" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
-  <text x="200" y="45" text-anchor="middle" font-family="Arial" font-size="14">Notebooks</text>
-
-  <rect x="20" y="120" width="120" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="80" y="145" text-anchor="middle" font-family="Arial" font-size="14">Interactive Code</text>
-
-  <rect x="150" y="120" width="100" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="200" y="145" text-anchor="middle" font-family="Arial" font-size="14">Rich Output</text>
-
-  <rect x="260" y="120" width="120" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="320" y="145" text-anchor="middle" font-family="Arial" font-size="14">Mixed Languages</text>
-
-  <rect x="90" y="200" width="120" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="150" y="225" text-anchor="middle" font-family="Arial" font-size="14">Visualizations</text>
-
-  <line x1="180" y1="60" x2="80" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="200" y1="60" x2="200" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="220" y1="60" x2="320" y2="120" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="200" y1="60" x2="150" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-</svg>
+![core_features](../../svg/lectures/spark-notebooks/core_features.svg)
 
 ---
 ## Jupyter with PySpark
@@ -56,28 +31,7 @@ df = spark.read.json("data.json")
 ---
 ## Databricks Environment
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" style="max-width: 100%; height: auto;">
-  <defs>
-    <marker id="arrowhead2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-    </marker>
-  </defs>
-  <rect x="20" y="80" width="80" height="40" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="60" y="105" text-anchor="middle" font-family="Arial" font-size="14">Notebook</text>
-
-  <rect x="150" y="80" width="80" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="190" y="105" text-anchor="middle" font-family="Arial" font-size="14">Cluster</text>
-
-  <rect x="280" y="80" width="100" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
-  <text x="330" y="105" text-anchor="middle" font-family="Arial" font-size="14">Computation</text>
-
-  <rect x="420" y="80" width="60" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="450" y="105" text-anchor="middle" font-family="Arial" font-size="14">Results</text>
-
-  <line x1="100" y1="100" x2="150" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead2)"/>
-  <line x1="230" y1="100" x2="280" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead2)"/>
-  <line x1="380" y1="100" x2="420" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead2)"/>
-</svg>
+![databricks_environment](../../svg/lectures/spark-notebooks/databricks_environment.svg)
 
 ---
 ## Mixed Language Support
@@ -134,28 +88,7 @@ def plot_distribution(column):
 ---
 ## Best Practices
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 250" style="max-width: 100%; height: auto;">
-  <defs>
-    <marker id="arrowhead3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-    </marker>
-  </defs>
-  <rect x="150" y="30" width="120" height="40" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5"/>
-  <text x="210" y="55" text-anchor="middle" font-family="Arial" font-size="14">Best Practices</text>
-
-  <rect x="30" y="140" width="140" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="100" y="165" text-anchor="middle" font-family="Arial" font-size="14">Clear Documentation</text>
-
-  <rect x="190" y="140" width="140" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="260" y="165" text-anchor="middle" font-family="Arial" font-size="14">Memory Management</text>
-
-  <rect x="110" y="210" width="140" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="180" y="235" text-anchor="middle" font-family="Arial" font-size="14">Code Organization</text>
-
-  <line x1="180" y1="70" x2="100" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead3)"/>
-  <line x1="210" y1="70" x2="260" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead3)"/>
-  <line x1="210" y1="70" x2="180" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrowhead3)"/>
-</svg>
+![best_practices](../../svg/lectures/spark-notebooks/best_practices.svg)
 
 ---
 ## Performance Tips
@@ -201,28 +134,7 @@ df.cache()
 ---
 ## Resource Management
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200" style="max-width: 100%; height: auto;">
-  <defs>
-    <marker id="arrowhead4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
-    </marker>
-  </defs>
-  <rect x="30" y="80" width="80" height="40" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="70" y="105" text-anchor="middle" font-family="Arial" font-size="14">Resources</text>
-
-  <rect x="180" y="30" width="70" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="5"/>
-  <text x="215" y="55" text-anchor="middle" font-family="Arial" font-size="14">Memory</text>
-
-  <rect x="180" y="80" width="70" height="40" fill="#fce4ec" stroke="#c2185b" stroke-width="2" rx="5"/>
-  <text x="215" y="105" text-anchor="middle" font-family="Arial" font-size="14">CPU</text>
-
-  <rect x="180" y="130" width="70" height="40" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="215" y="155" text-anchor="middle" font-family="Arial" font-size="14">Storage</text>
-
-  <line x1="110" y1="90" x2="180" y2="50" stroke="#333" stroke-width="2" marker-end="url(#arrowhead4)"/>
-  <line x1="110" y1="100" x2="180" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead4)"/>
-  <line x1="110" y1="110" x2="180" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrowhead4)"/>
-</svg>
+![resource_management](../../svg/lectures/spark-notebooks/resource_management.svg)
 
 ---
 ## Development Workflow

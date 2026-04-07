@@ -4,20 +4,7 @@
 
 ## Network Stack Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="50" width="600" height="400" fill="#F0F0F0" stroke="black"/>
-<text x="400" y="80" text-anchor="middle" font-weight="bold">Linux Network Stack</text>
-<rect x="200" y="110" width="400" height="50" fill="#FFE6E6" stroke="black"/>
-<text x="400" y="140" text-anchor="middle">Application Layer</text>
-<rect x="200" y="170" width="400" height="50" fill="#E6F2FF" stroke="black"/>
-<text x="400" y="200" text-anchor="middle">Socket Layer</text>
-<rect x="200" y="230" width="400" height="50" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="260" text-anchor="middle">Protocol Layer (TCP/IP)</text>
-<rect x="200" y="290" width="400" height="50" fill="#FFFFE6" stroke="black"/>
-<text x="400" y="320" text-anchor="middle">Network Core</text>
-<rect x="200" y="350" width="400" height="50" fill="#FFE6FF" stroke="black"/>
-<text x="400" y="380" text-anchor="middle">Device Driver</text>
-</svg>
+![network_stack_overview](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/network_stack_overview.svg)
 
 ---
 
@@ -91,27 +78,7 @@ static int my_net_probe(struct platform_device *pdev)
 
 ## Socket Buffers (SKB)
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<rect x="100" y="100" width="600" height="200" fill="#F0F0F0" stroke="black"/>
-<text x="400" y="130" text-anchor="middle" font-weight="bold">sk_buff Structure</text>
-<rect x="150" y="160" width="100" height="40" fill="#FFE6E6" stroke="black"/>
-<text x="200" y="185" text-anchor="middle">head</text>
-<rect x="250" y="160" width="100" height="40" fill="#E6F2FF" stroke="black"/>
-<text x="300" y="185" text-anchor="middle">data</text>
-<rect x="350" y="160" width="100" height="40" fill="#E6FFE6" stroke="black"/>
-<text x="400" y="185" text-anchor="middle">payload</text>
-<rect x="450" y="160" width="100" height="40" fill="#FFFFE6" stroke="black"/>
-<text x="500" y="185" text-anchor="middle">tail</text>
-<rect x="550" y="160" width="100" height="40" fill="#FFE6FF" stroke="black"/>
-<text x="600" y="185" text-anchor="middle">end</text>
-<line x1="200" y1="200" x2="200" y2="250" stroke="black"/>
-<line x1="300" y1="200" x2="300" y2="250" stroke="black"/>
-<line x1="500" y1="200" x2="500" y2="250" stroke="black"/>
-<line x1="600" y1="200" x2="600" y2="250" stroke="black"/>
-<text x="250" y="270">headroom</text>
-<text x="400" y="270">data</text>
-<text x="550" y="270">tailroom</text>
-</svg>
+![socket_buffers_skb](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/socket_buffers_skb.svg)
 
 ---
 
@@ -416,30 +383,7 @@ dma_unmap_single(&pdev->dev, dma_addr,
 
 ## Ring Buffer Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-<ellipse cx="400" cy="200" rx="250" ry="120" fill="none" stroke="black" stroke-width="2"/>
-<rect x="350" y="80" width="100" height="40" fill="#FFE6E6" stroke="black"/>
-<rect x="500" y="100" width="100" height="40" fill="#E6F2FF" stroke="black"/>
-<rect x="600" y="180" width="100" height="40" fill="#E6FFE6" stroke="black"/>
-<rect x="550" y="280" width="100" height="40" fill="#FFFFE6" stroke="black"/>
-<rect x="400" y="320" width="100" height="40" fill="#FFE6FF" stroke="black"/>
-<rect x="250" y="280" width="100" height="40" fill="#E6E6E6" stroke="black"/>
-<rect x="150" y="180" width="100" height="40" fill="#FFE6E6" stroke="black"/>
-<rect x="200" y="100" width="100" height="40" fill="#E6F2FF" stroke="black"/>
-<text x="400" y="30" text-anchor="middle" font-weight="bold">TX/RX Ring Buffer</text>
-<line x1="300" y1="200" x2="350" y2="200" stroke="red" stroke-width="3" marker-end="url(#redarrow)"/>
-<text x="280" y="195" fill="red">Head</text>
-<line x1="500" y1="200" x2="550" y2="200" stroke="blue" stroke-width="3" marker-end="url(#bluearrow)"/>
-<text x="520" y="195" fill="blue">Tail</text>
-<defs>
-<marker id="redarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="red"/>
-</marker>
-<marker id="bluearrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-<polygon points="0 0, 10 3, 0 6" fill="blue"/>
-</marker>
-</defs>
-</svg>
+![ring_buffer_management](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/ring_buffer_management.svg)
 
 ---
 

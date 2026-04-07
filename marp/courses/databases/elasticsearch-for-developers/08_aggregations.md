@@ -16,17 +16,7 @@ Powerful analytics framework that:
 
 ## Aggregation Types
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="120" height="60" fill="#4CAF50" rx="5"/>
-  <text x="110" y="85" text-anchor="middle" fill="white">Metrics</text>
-  <text x="110" y="140" text-anchor="middle">Calculate values</text>
-  <rect x="230" y="50" width="120" height="60" fill="#2196F3" rx="5"/>
-  <text x="290" y="85" text-anchor="middle" fill="white">Buckets</text>
-  <text x="290" y="140" text-anchor="middle">Group documents</text>
-  <rect x="140" y="170" width="120" height="60" fill="#FF9800" rx="5"/>
-  <text x="200" y="205" text-anchor="middle" fill="white">Pipeline</text>
-  <text x="200" y="250" text-anchor="middle">Process results</text>
-</svg>
+![aggregation_types](../../../../svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_types.svg)
 
 ---
 
@@ -599,16 +589,7 @@ Running total
 
 ## Aggregation Performance
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-weight="bold">Aggregation Cost</text>
-  <rect x="50" y="50" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="90" y="75" text-anchor="middle" fill="white" font-size="12">Metrics</text>
-  <rect x="150" y="50" width="80" height="60" fill="#FFC107" rx="5"/>
-  <text x="190" y="85" text-anchor="middle" fill="white" font-size="12">Terms</text>
-  <rect x="250" y="50" width="100" height="80" fill="#FF5722" rx="5"/>
-  <text x="300" y="95" text-anchor="middle" fill="white" font-size="12">Cardinality</text>
-  <text x="200" y="160" text-anchor="middle">Low → High Cost</text>
-</svg>
+![aggregation_performance](../../../../svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_performance.svg)
 
 ---
 

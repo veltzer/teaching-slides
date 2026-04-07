@@ -16,18 +16,7 @@ A new piped query language that:
 
 ## ES|QL vs Query DSL
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="140" height="150" fill="#4CAF50" rx="5"/>
-  <text x="120" y="80" text-anchor="middle" fill="white" font-weight="bold">Query DSL</text>
-  <text x="120" y="110" text-anchor="middle" fill="white">• JSON based</text>
-  <text x="120" y="135" text-anchor="middle" fill="white">• Nested structure</text>
-  <text x="120" y="160" text-anchor="middle" fill="white">• Full control</text>
-  <rect x="210" y="50" width="140" height="150" fill="#2196F3" rx="5"/>
-  <text x="280" y="80" text-anchor="middle" fill="white" font-weight="bold">ES|QL</text>
-  <text x="280" y="110" text-anchor="middle" fill="white">• Text based</text>
-  <text x="280" y="135" text-anchor="middle" fill="white">• Piped commands</text>
-  <text x="280" y="160" text-anchor="middle" fill="white">• Concise syntax</text>
-</svg>
+![es_ql_vs_query_dsl](../../../../svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_vs_query_dsl.svg)
 
 ---
 
@@ -44,24 +33,7 @@ Best for:
 
 ## ES|QL Architecture
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="80" width="80" height="40" fill="#4CAF50" rx="5"/>
-  <text x="70" y="105" text-anchor="middle" fill="white">Source</text>
-  <rect x="130" y="80" width="80" height="40" fill="#2196F3" rx="5"/>
-  <text x="170" y="105" text-anchor="middle" fill="white">Process</text>
-  <rect x="230" y="80" width="80" height="40" fill="#FF9800" rx="5"/>
-  <text x="270" y="105" text-anchor="middle" fill="white">Transform</text>
-  <rect x="330" y="80" width="60" height="40" fill="#9C27B0" rx="5"/>
-  <text x="360" y="105" text-anchor="middle" fill="white">Result</text>
-  <path d="M110 100 L130 100" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M210 100 L230 100" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <path d="M310 100 L330 100" stroke="#333" stroke-width="2" marker-end="url(#arrow2)"/>
-  <defs>
-    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![es_ql_architecture](../../../../svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_architecture.svg)
 
 ---
 

@@ -5,36 +5,7 @@
 
 ## Types of Errors
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr_err" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Rust Error Handling: Two Categories</text>
-  <rect x="20" y="30" width="180" height="70" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="48" text-anchor="middle" font-size="11" font-weight="bold">Unrecoverable</text>
-  <text x="110" y="63" text-anchor="middle" font-size="10">panic!("msg")</text>
-  <text x="110" y="78" text-anchor="middle" font-size="9">Unwinds stack or aborts</text>
-  <text x="110" y="91" text-anchor="middle" font-size="9">Bugs, invariant violations</text>
-  <rect x="210" y="30" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="11" font-weight="bold">Recoverable</text>
-  <text x="300" y="63" text-anchor="middle" font-size="10">Result&lt;T, E&gt;</text>
-  <text x="300" y="78" text-anchor="middle" font-size="9">Ok(value) | Err(error)</text>
-  <text x="300" y="91" text-anchor="middle" font-size="9">File not found, parse fail</text>
-  <rect x="400" y="30" width="180" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="48" text-anchor="middle" font-size="11" font-weight="bold">Absence</text>
-  <text x="490" y="63" text-anchor="middle" font-size="10">Option&lt;T&gt;</text>
-  <text x="490" y="78" text-anchor="middle" font-size="9">Some(value) | None</text>
-  <text x="490" y="91" text-anchor="middle" font-size="9">No null pointers</text>
-  <line x1="200" y1="65" x2="210" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr_err)"/>
-  <line x1="390" y1="65" x2="400" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr_err)"/>
-  <rect x="20" y="115" width="560" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="130" text-anchor="middle" font-size="10" font-weight="bold">The ? Operator: Propagate errors concisely</text>
-  <text x="300" y="144" text-anchor="middle" font-size="10">File::open("f.txt")?.read_to_string(&amp;mut s)? -- returns Err early if failure</text>
-  <rect x="100" y="165" width="400" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="182" text-anchor="middle" font-size="10">No exceptions -- errors are values you must handle or propagate</text>
-</svg>
+![types_of_errors](../../../../../svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/types_of_errors.svg)
 
 ---
 
@@ -383,32 +354,7 @@ mod tests {
 
 ## Best Practices
 
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="5" width="200" height="35" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
-  <text x="300" y="28" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Error &amp; Testing Tips</text>
-  <line x1="250" y1="40" x2="120" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="40" x2="120" y2="125" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
-  <rect x="30" y="53" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold">Use ? over unwrap()</text>
-  <text x="120" y="84" text-anchor="middle" font-size="9">Reserve .unwrap() for tests</text>
-  <text x="120" y="95" text-anchor="middle" font-size="9">and prototypes only</text>
-  <rect x="390" y="53" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="70" text-anchor="middle" font-size="10" font-weight="bold">Custom error types</text>
-  <text x="480" y="84" text-anchor="middle" font-size="9">enum AppError with From</text>
-  <text x="480" y="95" text-anchor="middle" font-size="9">impls for conversion</text>
-  <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">Test edge cases</text>
-  <text x="120" y="151" text-anchor="middle" font-size="9">#[should_panic] for panics</text>
-  <text x="120" y="162" text-anchor="middle" font-size="9">Result returns in #[test]</text>
-  <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Organize tests</text>
-  <text x="480" y="151" text-anchor="middle" font-size="9">Unit: #[cfg(test)] mod</text>
-  <text x="480" y="162" text-anchor="middle" font-size="9">Integration: tests/ dir</text>
-  <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="191" text-anchor="middle" font-size="9">Use anyhow/thiserror crates for ergonomic error handling</text>
-</svg>
+![best_practices](../../../../../svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/best_practices.svg)
 
 ---
 

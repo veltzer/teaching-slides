@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="380" font-family="sans-serif">
+  <defs>
+    <marker id="arr5" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Boxes -->
+  <rect x="90" y="15" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="41" text-anchor="middle" font-size="13" fill="#222222">Reconnaissance</text>
+  <rect x="90" y="87" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="113" text-anchor="middle" font-size="13" fill="#222222">Enumeration &amp; Mapping</text>
+  <rect x="90" y="159" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="185" text-anchor="middle" font-size="13" fill="#222222">Vulnerability Discovery</text>
+  <rect x="90" y="231" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="257" text-anchor="middle" font-size="13" fill="#222222">Exploitation</text>
+  <rect x="90" y="303" width="270" height="42" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
+  <text x="225" y="329" text-anchor="middle" font-size="13" fill="#222222">Reporting &amp; Remediation</text>
+  <!-- Down arrows -->
+  <line x1="225" y1="57" x2="225" y2="85" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="129" x2="225" y2="157" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="201" x2="225" y2="229" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <line x1="225" y1="273" x2="225" y2="301" stroke="#555" stroke-width="1.5" marker-end="url(#arr5)"/>
+  <!-- Iterate arrow: right side loop back to top -->
+  <path d="M 360,324 L 430,324 L 430,36 L 362,36" stroke="#555" stroke-width="1.5" fill="none" marker-end="url(#arr5)"/>
+  <!-- Iterate label -->
+  <text transform="rotate(-90 450 183)" x="450" y="183" text-anchor="middle" font-size="12" fill="#555555">iterate</text>
+</svg>

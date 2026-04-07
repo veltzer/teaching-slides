@@ -4,39 +4,7 @@
 
 ## Security Overview
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="400" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-
-  <rect x="150" y="100" width="200" height="70" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="250" y="130" text-anchor="middle" font-size="12" font-weight="bold">Build Security</text>
-  <text x="250" y="150" text-anchor="middle" font-size="10">Trusted sources</text>
-
-  <rect x="450" y="100" width="200" height="70" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="550" y="130" text-anchor="middle" font-size="12" font-weight="bold">System Hardening</text>
-  <text x="550" y="150" text-anchor="middle" font-size="10">Attack surface</text>
-
-  <rect x="150" y="220" width="200" height="70" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="250" y="250" text-anchor="middle" font-size="12" font-weight="bold">Secure Boot</text>
-  <text x="250" y="270" text-anchor="middle" font-size="10">Chain of trust</text>
-
-  <rect x="450" y="220" width="200" height="70" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="550" y="250" text-anchor="middle" font-size="12" font-weight="bold">Runtime Security</text>
-  <text x="550" y="270" text-anchor="middle" font-size="10">Monitoring</text>
-
-  <rect x="250" y="340" width="300" height="70" fill="#ffffcc" stroke="#000" stroke-width="3" rx="5"/>
-  <text x="400" y="375" text-anchor="middle" font-size="14" font-weight="bold">Secure Embedded System</text>
-
-  <path d="M 250 170 L 350 340" stroke="#333" stroke-width="2" marker-end="url(#s1)"/>
-  <path d="M 550 170 L 450 340" stroke="#333" stroke-width="2" marker-end="url(#s1)"/>
-  <path d="M 250 290 L 350 340" stroke="#333" stroke-width="2" marker-end="url(#s1)"/>
-  <path d="M 550 290 L 450 340" stroke="#333" stroke-width="2" marker-end="url(#s1)"/>
-
-  <defs>
-    <marker id="s1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![security_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/security_overview.svg)
 
 ---
 
@@ -185,41 +153,7 @@ tmpfs /var/tmp tmpfs nodev,nosuid,noexec 0 0
 
 ## Secure Boot Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12" font-weight="bold">ROM Code</text>
-
-  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12" font-weight="bold">U-Boot (Signed)</text>
-
-  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" font-size="12" font-weight="bold">Kernel (Signed)</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12" font-weight="bold">RootFS (dmverity)</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="12" font-weight="bold">Applications</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="12" font-weight="bold">Secure Runtime</text>
-
-  <path d="M 250 80 L 325 80" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
-  <path d="M 475 80 L 550 80" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
-  <path d="M 625 110 L 175 200" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
-  <path d="M 250 235 L 325 235" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
-  <path d="M 475 235 L 550 235" stroke="#00cc00" stroke-width="3" marker-end="url(#s2)"/>
-
-  <text x="175" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
-  <text x="400" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
-  <text x="625" y="180" text-anchor="middle" font-size="10" fill="#00cc00">Verify</text>
-
-  <defs>
-    <marker id="s2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#00cc00"/>
-    </marker>
-  </defs>
-</svg>
+![secure_boot_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/secure_boot_architecture.svg)
 
 ---
 
@@ -436,32 +370,7 @@ System::Privileged System::Data rw
 
 ## CVE Tracking
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="180" height="70" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="190" y="130" text-anchor="middle" font-size="12">CVE Database</text>
-  <text x="190" y="150" text-anchor="middle" font-size="10">NVD, Mitre</text>
-
-  <rect x="310" y="100" width="180" height="70" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="130" text-anchor="middle" font-size="12">CVE Check</text>
-  <text x="400" y="150" text-anchor="middle" font-size="10">BitBake task</text>
-
-  <rect x="520" y="100" width="180" height="70" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="610" y="130" text-anchor="middle" font-size="12">Report</text>
-  <text x="610" y="150" text-anchor="middle" font-size="10">Vulnerabilities</text>
-
-  <rect x="250" y="250" width="300" height="80" fill="#ffffcc" stroke="#000" stroke-width="3" rx="5"/>
-  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">Patch/Update</text>
-
-  <path d="M 280 135 L 310 135" stroke="#333" stroke-width="2" marker-end="url(#s3)"/>
-  <path d="M 490 135 L 520 135" stroke="#333" stroke-width="2" marker-end="url(#s3)"/>
-  <path d="M 610 170 L 400 250" stroke="#333" stroke-width="2" marker-end="url(#s3)"/>
-
-  <defs>
-    <marker id="s3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![cve_tracking](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/cve_tracking.svg)
 
 ---
 

@@ -1,0 +1,29 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Shell Job Control</text>
+  <defs>
+    <marker id="arrowjob" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="220" y="35" width="160" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="58" text-anchor="middle" font-size="11" font-weight="bold">Foreground</text>
+  <rect x="220" y="130" width="160" height="35" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="153" text-anchor="middle" font-size="11" font-weight="bold">Background</text>
+  <rect x="470" y="80" width="110" height="35" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="525" y="102" text-anchor="middle" font-size="11" font-weight="bold">Stopped</text>
+  <!-- fg to bg -->
+  <line x1="280" y1="70" x2="280" y2="128" stroke="#333" stroke-width="1.5" marker-end="url(#arrowjob)"/>
+  <text x="240" y="105" font-size="10" fill="#333">Ctrl-Z</text>
+  <!-- bg to fg -->
+  <line x1="320" y1="128" x2="320" y2="72" stroke="#333" stroke-width="1.5" marker-end="url(#arrowjob)"/>
+  <text x="335" y="105" font-size="10" fill="#333">fg %n</text>
+  <!-- stopped -->
+  <line x1="380" y1="60" x2="470" y2="87" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowjob)"/>
+  <text x="445" y="62" font-size="9" fill="#666">Ctrl-Z</text>
+  <line x1="470" y1="107" x2="380" y2="143" stroke="#333" stroke-width="1.5" marker-end="url(#arrowjob)"/>
+  <text x="445" y="137" font-size="9" fill="#333">bg %n</text>
+  <rect x="30" y="80" width="160" height="55" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="4"/>
+  <text x="110" y="97" text-anchor="middle" font-size="10" font-weight="bold">Start in background:</text>
+  <text x="110" y="113" text-anchor="middle" font-size="10" font-family="monospace">command &amp;</text>
+  <text x="110" y="128" text-anchor="middle" font-size="10" font-family="monospace">jobs  # list all</text>
+</svg>

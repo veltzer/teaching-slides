@@ -17,24 +17,7 @@ This chapter explores:
 
 ## The AI Coding Assistant Landscape
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="180" height="80" fill="#24292e" rx="10"/>
-  <text x="190" y="95" text-anchor="middle" fill="white" font-size="16">GitHub Copilot</text>
-  <rect x="310" y="50" width="180" height="80" fill="#5865F2" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="16">Cursor</text>
-  <rect x="520" y="50" width="180" height="80" fill="#09B6A2" rx="10"/>
-  <text x="610" y="95" text-anchor="middle" fill="white" font-size="16">Codeium</text>
-  <rect x="100" y="160" width="180" height="80" fill="#FF9900" rx="10"/>
-  <text x="190" y="205" text-anchor="middle" fill="white" font-size="16">CodeWhisperer</text>
-  <rect x="310" y="160" width="180" height="80" fill="#FF6B35" rx="10"/>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="16">Tabnine</text>
-  <rect x="520" y="160" width="180" height="80" fill="#7F52FF" rx="10"/>
-  <text x="610" y="205" text-anchor="middle" fill="white" font-size="16">JetBrains AI</text>
-  <rect x="205" y="270" width="180" height="80" fill="#0066CC" rx="10"/>
-  <text x="295" y="315" text-anchor="middle" fill="white" font-size="16">Replit AI</text>
-  <rect x="415" y="270" width="180" height="80" fill="#4A5568" rx="10"/>
-  <text x="505" y="315" text-anchor="middle" fill="white" font-size="16">Sourcegraph</text>
-</svg>
+![the_ai_coding_assistant_landscape](../../../../svg/courses/ai/developing-using-ai/02_assistance/the_ai_coding_assistant_landscape.svg)
 
 ---
 
@@ -135,24 +118,7 @@ Natural language conversations about your code
 
 ## Cursor Codebase Understanding
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="400" cy="200" r="120" fill="#5865F2" opacity="0.3"/>
-  <circle cx="300" cy="150" r="40" fill="#4CAF50"/>
-  <text x="300" y="155" text-anchor="middle" fill="white" font-size="14">File A</text>
-  <circle cx="400" cy="150" r="40" fill="#2196F3"/>
-  <text x="400" y="155" text-anchor="middle" fill="white" font-size="14">File B</text>
-  <circle cx="500" cy="150" r="40" fill="#FF9800"/>
-  <text x="500" y="155" text-anchor="middle" fill="white" font-size="14">File C</text>
-  <circle cx="350" cy="250" r="40" fill="#9C27B0"/>
-  <text x="350" y="255" text-anchor="middle" fill="white" font-size="14">Tests</text>
-  <circle cx="450" cy="250" r="40" fill="#F44336"/>
-  <text x="450" y="255" text-anchor="middle" fill="white" font-size="14">Docs</text>
-  <line x1="300" y1="150" x2="400" y2="150" stroke="#666" stroke-width="2"/>
-  <line x1="400" y1="150" x2="500" y2="150" stroke="#666" stroke-width="2"/>
-  <line x1="350" y1="210" x2="400" y2="190" stroke="#666" stroke-width="2"/>
-  <line x1="450" y1="210" x2="400" y2="190" stroke="#666" stroke-width="2"/>
-  <text x="400" y="350" text-anchor="middle" font-size="16" font-weight="bold">Cursor understands relationships</text>
-</svg>
+![cursor_codebase_understanding](../../../../svg/courses/ai/developing-using-ai/02_assistance/cursor_codebase_understanding.svg)
 
 ---
 
@@ -210,19 +176,7 @@ Best for AWS-heavy development
 
 ## CodeWhisperer Security Features
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="600" height="200" fill="#232F3E" rx="10"/>
-  <rect x="130" y="130" width="160" height="60" fill="#FF9900" rx="5"/>
-  <text x="210" y="165" text-anchor="middle" fill="white" font-size="14">Code Scan</text>
-  <rect x="310" y="130" width="160" height="60" fill="#4CAF50" rx="5"/>
-  <text x="390" y="165" text-anchor="middle" fill="white" font-size="14">Vulnerability Check</text>
-  <rect x="490" y="130" width="160" height="60" fill="#2196F3" rx="5"/>
-  <text x="570" y="165" text-anchor="middle" fill="white" font-size="14">License Verify</text>
-  <rect x="220" y="210" width="160" height="60" fill="#9C27B0" rx="5"/>
-  <text x="300" y="245" text-anchor="middle" fill="white" font-size="14">Fix Suggestions</text>
-  <rect x="420" y="210" width="160" height="60" fill="#F44336" rx="5"/>
-  <text x="500" y="245" text-anchor="middle" fill="white" font-size="14">Compliance</text>
-</svg>
+![codewhisperer_security_features](../../../../svg/courses/ai/developing-using-ai/02_assistance/codewhisperer_security_features.svg)
 
 ---
 
@@ -300,17 +254,7 @@ AI sees open tabs and recent edits
 
 ## Project-Specific Patterns
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="80" fill="#2C3E50" rx="10"/>
-  <text x="400" y="95" text-anchor="middle" fill="white" font-size="18">Project Configuration</text>
-  <rect x="100" y="160" width="180" height="60" fill="#3498DB" rx="5"/>
-  <text x="190" y="195" text-anchor="middle" fill="white" font-size="14">.ai-patterns</text>
-  <rect x="310" y="160" width="180" height="60" fill="#2ECC71" rx="5"/>
-  <text x="400" y="195" text-anchor="middle" fill="white" font-size="14">.copilot-config</text>
-  <rect x="520" y="160" width="180" height="60" fill="#E74C3C" rx="5"/>
-  <text x="610" y="195" text-anchor="middle" fill="white" font-size="14">team-prompts</text>
-  <text x="400" y="280" text-anchor="middle" font-size="16">Configure AI behavior per project</text>
-</svg>
+![project_specific_patterns](../../../../svg/courses/ai/developing-using-ai/02_assistance/project_specific_patterns.svg)
 
 ---
 
@@ -413,25 +357,7 @@ AI becomes your code reviewer
 
 ## Refactoring Assistance
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="250" height="200" fill="#E74C3C" rx="10"/>
-  <text x="225" y="140" text-anchor="middle" fill="white" font-size="16">Legacy Code</text>
-  <text x="225" y="200" text-anchor="middle" fill="white" font-size="12">• Complex</text>
-  <text x="225" y="220" text-anchor="middle" fill="white" font-size="12">• Nested</text>
-  <text x="225" y="240" text-anchor="middle" fill="white" font-size="12">• Unclear</text>
-  <path d="M 360 200 L 440 200" stroke="#2C3E50" stroke-width="3" marker-end="url(#arrow)"/>
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#2C3E50"/>
-    </marker>
-  </defs>
-  <text x="400" y="190" text-anchor="middle" font-size="14">AI Refactor</text>
-  <rect x="450" y="100" width="250" height="200" fill="#27AE60" rx="10"/>
-  <text x="575" y="140" text-anchor="middle" fill="white" font-size="16">Clean Code</text>
-  <text x="575" y="200" text-anchor="middle" fill="white" font-size="12">• Modular</text>
-  <text x="575" y="220" text-anchor="middle" fill="white" font-size="12">• Clear</text>
-  <text x="575" y="240" text-anchor="middle" fill="white" font-size="12">• Testable</text>
-</svg>
+![refactoring_assistance](../../../../svg/courses/ai/developing-using-ai/02_assistance/refactoring_assistance.svg)
 
 ---
 
@@ -603,22 +529,7 @@ Each iteration with AI assistance
 
 ## Comment-Driven Development
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="60" fill="#34495E" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" fill="white" font-size="16">// TODO: Implement user authentication</text>
-  <line x1="400" y1="120" x2="400" y2="160" stroke="#2ECC71" stroke-width="3" marker-end="url(#arrowGreen)"/>
-  <defs>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-      <polygon points="0 0, 10 5, 0 10" fill="#2ECC71"/>
-    </marker>
-  </defs>
-  <rect x="100" y="170" width="600" height="180" fill="#2ECC71" rx="5"/>
-  <text x="400" y="210" text-anchor="middle" fill="white" font-size="14">async function authenticateUser(credentials) {</text>
-  <text x="400" y="240" text-anchor="middle" fill="white" font-size="14">    const hashedPassword = await bcrypt.hash(credentials.password);</text>
-  <text x="400" y="270" text-anchor="middle" fill="white" font-size="14">    const user = await User.findOne({ email: credentials.email });</text>
-  <text x="400" y="300" text-anchor="middle" fill="white" font-size="14">    // ... complete implementation</text>
-  <text x="400" y="330" text-anchor="middle" fill="white" font-size="14">}</text>
-</svg>
+![comment_driven_development](../../../../svg/courses/ai/developing-using-ai/02_assistance/comment_driven_development.svg)
 
 ---
 

@@ -42,20 +42,7 @@ This comprehensive 4-day course will enhance your C and C++ programming skills f
 
 ## Embedded System Constraints
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="300" height="200" fill="#f0f0f0" stroke="#333"/>
-  <text x="200" y="30" text-anchor="middle" font-size="20" font-weight="bold">Embedded Constraints</text>
-  <circle cx="200" cy="150" r="80" fill="#e0e0ff" stroke="#333"/>
-  <text x="200" y="155" text-anchor="middle" font-size="16">Resources</text>
-  <rect x="60" y="80" width="80" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="100" y="105" text-anchor="middle" font-size="14">Memory</text>
-  <rect x="260" y="80" width="80" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="300" y="105" text-anchor="middle" font-size="14">Power</text>
-  <rect x="60" y="180" width="80" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="100" y="205" text-anchor="middle" font-size="14">Speed</text>
-  <rect x="260" y="180" width="80" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="300" y="205" text-anchor="middle" font-size="14">Cost</text>
-</svg>
+![embedded_system_constraints](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/embedded_system_constraints.svg)
 
 ---
 
@@ -118,18 +105,7 @@ Typical embedded development setup:
 
 ## The Embedded Software Stack
 
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="20" width="300" height="40" fill="#ffcccc" stroke="#333"/>
-  <text x="200" y="45" text-anchor="middle" font-size="16">Application Layer</text>
-  <rect x="50" y="70" width="300" height="40" fill="#ccffcc" stroke="#333"/>
-  <text x="200" y="95" text-anchor="middle" font-size="16">Middleware/RTOS</text>
-  <rect x="50" y="120" width="300" height="40" fill="#ccccff" stroke="#333"/>
-  <text x="200" y="145" text-anchor="middle" font-size="16">Device Drivers</text>
-  <rect x="50" y="170" width="300" height="40" fill="#ffffcc" stroke="#333"/>
-  <text x="200" y="195" text-anchor="middle" font-size="16">Hardware Abstraction Layer</text>
-  <rect x="50" y="220" width="300" height="40" fill="#e0e0e0" stroke="#333"/>
-  <text x="200" y="245" text-anchor="middle" font-size="16">Hardware</text>
-</svg>
+![the_embedded_software_stack](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/the_embedded_software_stack.svg)
 
 ---
 

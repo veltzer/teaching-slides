@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="200" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    </marker>
+  </defs>
+  <!-- Sending MTA box -->
+  <rect x="10" y="10" width="140" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="80" y="37" font-size="13" fill="#222" text-anchor="middle">Sending MTA</text>
+  <!-- Arrow down -->
+  <line x1="80" y1="54" x2="80" y2="108" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="95" y="86" font-size="12" fill="#555">Query MX for example.com</text>
+  <!-- DNS Server box -->
+  <rect x="10" y="110" width="140" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
+  <text x="80" y="137" font-size="13" fill="#222" text-anchor="middle">DNS Server</text>
+  <!-- Arrow right -->
+  <line x1="150" y1="132" x2="198" y2="132" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Priority list -->
+  <text x="205" y="118" font-size="13" fill="#222">Priority 10 → mail1.example.com  (try first)</text>
+  <text x="205" y="137" font-size="13" fill="#222">Priority 20 → mail2.example.com  (fallback)</text>
+  <text x="205" y="156" font-size="13" fill="#222">Priority 30 → mail3.example.com  (last resort)</text>
+</svg>

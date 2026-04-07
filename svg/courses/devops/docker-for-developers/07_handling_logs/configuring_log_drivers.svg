@@ -1,0 +1,25 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd1_06_handling_logs" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="130" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="40" text-anchor="middle" font-size="11" font-weight="bold">daemon.json</text>
+  <text x="85" y="57" text-anchor="middle" font-size="10" fill="#555">Global config</text>
+  <line x1="150" y1="45" x2="218" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_handling_logs)"/>
+  <text x="185" y="37" text-anchor="middle" font-size="10" fill="#666">sets default</text>
+  <rect x="220" y="15" width="160" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="300" y="35" text-anchor="middle" font-size="11" font-weight="bold">Log Driver</text>
+  <text x="300" y="52" text-anchor="middle" font-size="10">json-file | syslog</text>
+  <text x="300" y="67" text-anchor="middle" font-size="10">journald | splunk</text>
+  <line x1="380" y1="45" x2="438" y2="45" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_06_handling_logs)"/>
+  <text x="410" y="37" text-anchor="middle" font-size="10" fill="#666">output</text>
+  <rect x="440" y="20" width="140" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="510" y="40" text-anchor="middle" font-size="11" font-weight="bold">Log Destination</text>
+  <text x="510" y="57" text-anchor="middle" font-size="10" fill="#555">File / Remote / Service</text>
+  <rect x="20" y="100" width="560" height="80" fill="#f9f9f9" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="4,3"/>
+  <text x="300" y="120" text-anchor="middle" font-size="10" fill="#555">Per-container override: docker run --log-driver=syslog myapp</text>
+  <text x="300" y="140" text-anchor="middle" font-size="10" fill="#555">Global default: /etc/docker/daemon.json {"log-driver": "json-file"}</text>
+  <text x="300" y="160" text-anchor="middle" font-size="10" fill="#555">Log options: --log-opt max-size=10m --log-opt max-file=3</text>
+</svg>

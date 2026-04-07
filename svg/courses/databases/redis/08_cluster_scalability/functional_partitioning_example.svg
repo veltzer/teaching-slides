@@ -1,0 +1,22 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="190" y="10" width="190" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="33" text-anchor="middle" font-size="11" font-weight="bold">Application Server</text>
+  <rect x="30" y="100" width="130" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="95" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Sessions</text>
+  <text x="95" y="140" text-anchor="middle" font-size="10">:6379 / db0</text>
+  <rect x="220" y="100" width="130" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="285" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Cache</text>
+  <text x="285" y="140" text-anchor="middle" font-size="10">:6380 / db0</text>
+  <rect x="410" y="100" width="150" height="55" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="485" y="120" text-anchor="middle" font-size="11" font-weight="bold">Redis: Queues</text>
+  <text x="485" y="140" text-anchor="middle" font-size="10">:6381 / db0</text>
+  <line x1="230" y1="45" x2="95" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
+  <line x1="285" y1="45" x2="285" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
+  <line x1="340" y1="45" x2="485" y2="100" stroke="#333" stroke-width="1" marker-end="url(#arrowd15_07_cluster_scalability)"/>
+  <text x="285" y="185" text-anchor="middle" font-size="10" fill="#333">Separate Redis instances by function for isolation and tuning</text>
+  <defs>
+    <marker id="arrowd15_07_cluster_scalability" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

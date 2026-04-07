@@ -45,40 +45,7 @@ ls | grep txt | wc -l
 
 ## Pipe Anatomy
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="150" width="150" height="100" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="175" y="130" text-anchor="middle" font-size="14" font-weight="bold">Writer Process</text>
-  <text x="175" y="200" text-anchor="middle" fill="white" font-size="12">write(fd[1])</text>
-
-  <rect x="350" y="140" width="100" height="120" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="120" text-anchor="middle" font-size="14" font-weight="bold">Kernel Buffer</text>
-  <rect x="360" y="150" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="165" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="170" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="185" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="190" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="210" width="80" height="40" fill="#ECF0F1"/>
-  <text x="400" y="230" text-anchor="middle" font-size="10">empty</text>
-
-  <rect x="550" y="150" width="150" height="100" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="625" y="130" text-anchor="middle" font-size="14" font-weight="bold">Reader Process</text>
-  <text x="625" y="200" text-anchor="middle" fill="white" font-size="12">read(fd[0])</text>
-
-  <path d="M 250 200 L 350 200" stroke="#333" stroke-width="3" marker-end="url(#arrow8)"/>
-  <path d="M 450 200 L 550 200" stroke="#333" stroke-width="3" marker-end="url(#arrow8)"/>
-
-  <text x="300" y="190" text-anchor="middle" font-size="11">fd[1]</text>
-  <text x="500" y="190" text-anchor="middle" font-size="11">fd[0]</text>
-
-  <text x="400" y="290" text-anchor="middle" font-size="12">64KB buffer (PIPE_BUF = 4KB atomic)</text>
-
-  <defs>
-    <marker id="arrow8" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![pipe_anatomy](../../../../svg/courses/operating_systems/linux-systems-programming/05_pipes/pipe_anatomy.svg)
 
 ---
 
@@ -140,38 +107,7 @@ int main() {
 
 ## File Descriptor Table After Fork
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">After pipe() and fork()</text>
-
-  <rect x="50" y="60" width="150" height="150" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="125" y="50" text-anchor="middle" font-size="12">Parent FD Table</text>
-  <text x="60" y="85" font-size="10">0: stdin</text>
-  <text x="60" y="105" font-size="10">1: stdout</text>
-  <text x="60" y="125" font-size="10">2: stderr</text>
-  <text x="60" y="145" font-size="10">3: pipe_read</text>
-  <text x="60" y="165" font-size="10">4: pipe_write</text>
-
-  <rect x="250" y="60" width="150" height="150" fill="#E74C3C" stroke="#333" stroke-width="2"/>
-  <text x="325" y="50" text-anchor="middle" font-size="12">Child FD Table</text>
-  <text x="260" y="85" font-size="10">0: stdin</text>
-  <text x="260" y="105" font-size="10">1: stdout</text>
-  <text x="260" y="125" font-size="10">2: stderr</text>
-  <text x="260" y="145" font-size="10">3: pipe_read</text>
-  <text x="260" y="165" font-size="10">4: pipe_write</text>
-
-  <rect x="500" y="100" width="120" height="80" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="560" y="90" text-anchor="middle" font-size="12">Pipe Object</text>
-  <text x="510" y="130" font-size="10">Read end</text>
-  <text x="510" y="150" font-size="10">Write end</text>
-  <text x="510" y="170" font-size="10">Buffer</text>
-
-  <path d="M 200 145 Q 350 120 500 130" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-  <path d="M 200 165 Q 350 180 500 150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-  <path d="M 400 145 Q 450 120 500 130" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-  <path d="M 400 165 Q 450 180 500 150" stroke="#333" stroke-width="1" stroke-dasharray="5,5"/>
-
-  <text x="400" y="250" text-anchor="middle" font-size="12" font-weight="bold">Must close unused ends!</text>
-</svg>
+![file_descriptor_table_after_fork](../../../../svg/courses/operating_systems/linux-systems-programming/05_pipes/file_descriptor_table_after_fork.svg)
 
 ---
 

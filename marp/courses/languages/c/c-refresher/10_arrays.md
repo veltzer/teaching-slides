@@ -263,59 +263,7 @@ int main(void) {
 
 ## Array Memory Layout
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="340" font-family="monospace">
-  <!-- Code -->
-  <text x="10" y="20" font-size="13" fill="#222">int arr[5] = &#123;10, 20, 30, 40, 50&#125;;</text>
-  <text x="10" y="40" font-size="13" fill="#555" font-family="sans-serif">Contiguous memory (4 bytes per int):</text>
-  <!-- 1D array cells -->
-  <rect x="10"  y="50" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <rect x="130" y="50" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <rect x="250" y="50" width="120" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <rect x="370" y="50" width="120" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <rect x="490" y="50" width="120" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="70"  y="68" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">10</text>
-  <text x="190" y="68" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">20</text>
-  <text x="310" y="68" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">30</text>
-  <text x="430" y="68" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">40</text>
-  <text x="550" y="68" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">50</text>
-  <text x="70"  y="84" font-size="12" fill="#555" text-anchor="middle">arr[0]</text>
-  <text x="190" y="84" font-size="12" fill="#555" text-anchor="middle">arr[1]</text>
-  <text x="310" y="84" font-size="12" fill="#555" text-anchor="middle">arr[2]</text>
-  <text x="430" y="84" font-size="12" fill="#555" text-anchor="middle">arr[3]</text>
-  <text x="550" y="84" font-size="12" fill="#555" text-anchor="middle">arr[4]</text>
-  <!-- addresses -->
-  <text x="10"  y="104" font-size="11" fill="#777">0x1000</text>
-  <text x="130" y="104" font-size="11" fill="#777">0x1004</text>
-  <text x="250" y="104" font-size="11" fill="#777">0x1008</text>
-  <text x="370" y="104" font-size="11" fill="#777">0x100C</text>
-  <text x="490" y="104" font-size="11" fill="#777">0x1010</text>
-  <!-- notes -->
-  <text x="10" y="125" font-size="13" fill="#222">arr      == &amp;arr[0] == 0x1000</text>
-  <text x="10" y="143" font-size="13" fill="#222">arr + 1  == &amp;arr[1] == 0x1004  (advances by sizeof(int))</text>
-  <text x="10" y="161" font-size="13" fill="#222">*(arr+i) == arr[i]             (pointer arithmetic identity)</text>
-  <!-- 2D -->
-  <text x="10" y="188" font-size="13" fill="#555" font-family="sans-serif">2D array: int matrix[2][3] = &#123;&#123;1,2,3&#125;,&#123;4,5,6&#125;&#125;;</text>
-  <text x="10" y="210" font-size="13" fill="#555" font-family="sans-serif">Row-major layout in memory:</text>
-  <rect x="10"  y="218" width="100" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <rect x="110" y="218" width="100" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <rect x="210" y="218" width="100" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <rect x="310" y="218" width="100" height="40" fill="#fce4ec" stroke="#333" stroke-width="1.5"/>
-  <rect x="410" y="218" width="100" height="40" fill="#ede7f6" stroke="#333" stroke-width="1.5"/>
-  <rect x="510" y="218" width="100" height="40" fill="#e0f7fa" stroke="#333" stroke-width="1.5"/>
-  <text x="60"  y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">1</text>
-  <text x="160" y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">2</text>
-  <text x="260" y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">3</text>
-  <text x="360" y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">4</text>
-  <text x="460" y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">5</text>
-  <text x="560" y="236" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">6</text>
-  <text x="60"  y="252" font-size="11" fill="#555" text-anchor="middle">[0][0]</text>
-  <text x="160" y="252" font-size="11" fill="#555" text-anchor="middle">[0][1]</text>
-  <text x="260" y="252" font-size="11" fill="#555" text-anchor="middle">[0][2]</text>
-  <text x="360" y="252" font-size="11" fill="#555" text-anchor="middle">[1][0]</text>
-  <text x="460" y="252" font-size="11" fill="#555" text-anchor="middle">[1][1]</text>
-  <text x="560" y="252" font-size="11" fill="#555" text-anchor="middle">[1][2]</text>
-  <text x="10" y="278" font-size="13" fill="#222">matrix[i][j] is at offset (i * 3 + j) * sizeof(int)</text>
-</svg>
+![array_memory_layout](../../../../../svg/courses/languages/c/c-refresher/10_arrays/array_memory_layout.svg)
 
 ---
 

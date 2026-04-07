@@ -14,20 +14,7 @@
 
 ## Sources of Information Leakage
 
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="260" font-family="sans-serif">
-  <rect x="10" y="10"  width="520" height="70" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="30" y="32"  font-size="13" font-weight="bold" fill="#c62828">Training Data</text>
-  <text x="30" y="52"  font-size="12" fill="#333333">PII, credentials, and proprietary code memorized during training</text>
-  <text x="30" y="70"  font-size="12" fill="#333333">may be extractable via targeted prompts.</text>
-  <rect x="10" y="95"  width="520" height="70" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
-  <text x="30" y="117" font-size="13" font-weight="bold" fill="#e65100">System Prompts</text>
-  <text x="30" y="137" font-size="12" fill="#333333">Internal instructions, business logic, and API keys embedded in</text>
-  <text x="30" y="155" font-size="12" fill="#333333">system prompts can be leaked through prompt injection.</text>
-  <rect x="10" y="180" width="520" height="70" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="4"/>
-  <text x="30" y="202" font-size="13" font-weight="bold" fill="#1565c0">Connected Data Sources</text>
-  <text x="30" y="222" font-size="12" fill="#333333">RAG databases, APIs, and files with sensitive content accessed</text>
-  <text x="30" y="240" font-size="12" fill="#333333">by the LLM may be disclosed to unauthorized users.</text>
-</svg>
+![sources_of_information_leakage](../../../../svg/courses/security/working-with-llms-securely/07_sensitive_information_disclosure/sources_of_information_leakage.svg)
 
 ---
 

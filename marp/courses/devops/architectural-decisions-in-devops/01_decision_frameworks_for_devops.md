@@ -33,24 +33,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Architectural vs Tactical Decisions
 
-<svg width="650" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="30" width="280" height="220" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8"/>
-  <text x="170" y="60" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">Architectural</text>
-  <text x="170" y="90" text-anchor="middle" font-size="12">Choose Kubernetes vs ECS</text>
-  <text x="170" y="115" text-anchor="middle" font-size="12">Monorepo vs polyrepo</text>
-  <text x="170" y="140" text-anchor="middle" font-size="12">CI/CD platform selection</text>
-  <text x="170" y="165" text-anchor="middle" font-size="12">Service mesh adoption</text>
-  <text x="170" y="195" text-anchor="middle" font-size="11" fill="#555">High impact, hard to reverse</text>
-  <text x="170" y="215" text-anchor="middle" font-size="11" fill="#555">Cross-team scope</text>
-  <rect x="340" y="30" width="280" height="220" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="8"/>
-  <text x="480" y="60" text-anchor="middle" font-size="16" font-weight="bold" fill="#e65100">Tactical</text>
-  <text x="480" y="90" text-anchor="middle" font-size="12">Bump library version</text>
-  <text x="480" y="115" text-anchor="middle" font-size="12">Add a linting rule</text>
-  <text x="480" y="140" text-anchor="middle" font-size="12">Choose test fixture format</text>
-  <text x="480" y="165" text-anchor="middle" font-size="12">Rename a variable</text>
-  <text x="480" y="195" text-anchor="middle" font-size="11" fill="#555">Low impact, easy to reverse</text>
-  <text x="480" y="215" text-anchor="middle" font-size="11" fill="#555">Single-team scope</text>
-</svg>
+![architectural_vs_tactical_decisions](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/architectural_vs_tactical_decisions.svg)
 
 ---
 
@@ -87,28 +70,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## The Decision Spectrum
 
-<svg width="650" height="200" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="spectrum_grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#4caf50;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#ff9800;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#f44336;stop-opacity:1" />
-    </linearGradient>
-  </defs>
-  <rect x="50" y="60" width="550" height="40" rx="20" fill="url(#spectrum_grad)" stroke="#333" stroke-width="1"/>
-  <text x="100" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#4caf50">Trivial</text>
-  <text x="325" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Significant</text>
-  <text x="550" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#f44336">Architectural</text>
-  <text x="100" y="130" text-anchor="middle" font-size="11">Decide alone</text>
-  <text x="100" y="148" text-anchor="middle" font-size="11">in minutes</text>
-  <text x="325" y="130" text-anchor="middle" font-size="11">Discuss with</text>
-  <text x="325" y="148" text-anchor="middle" font-size="11">the team</text>
-  <text x="550" y="130" text-anchor="middle" font-size="11">Formal evaluation</text>
-  <text x="550" y="148" text-anchor="middle" font-size="11">and documentation</text>
-  <line x1="100" y1="100" x2="100" y2="118" stroke="#333" stroke-width="1"/>
-  <line x1="325" y1="100" x2="325" y2="118" stroke="#333" stroke-width="1"/>
-  <line x1="550" y1="100" x2="550" y2="118" stroke="#333" stroke-width="1"/>
-</svg>
+![the_decision_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_spectrum.svg)
 
 ---
 
@@ -126,32 +88,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## The Reversibility Spectrum
 
-<svg width="650" height="260" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow_rev" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <line x1="80" y1="220" x2="600" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow_rev)"/>
-  <line x1="80" y1="220" x2="80" y2="30" stroke="#333" stroke-width="2" marker-end="url(#arrow_rev)"/>
-  <text x="340" y="250" text-anchor="middle" font-size="12" font-weight="bold">Difficulty to Reverse</text>
-  <text x="40" y="125" text-anchor="middle" font-size="12" font-weight="bold" transform="rotate(-90, 40, 125)">Cost of Change</text>
-  <circle cx="150" cy="190" r="20" fill="#4caf50" opacity="0.8"/>
-  <text x="150" y="195" text-anchor="middle" font-size="9" fill="white">Config</text>
-  <text x="150" y="205" text-anchor="middle" font-size="9" fill="white">flag</text>
-  <circle cx="240" cy="165" r="22" fill="#8bc34a" opacity="0.8"/>
-  <text x="240" y="162" text-anchor="middle" font-size="9" fill="white">CI tool</text>
-  <text x="240" y="173" text-anchor="middle" font-size="9" fill="white">swap</text>
-  <circle cx="350" cy="120" r="25" fill="#ff9800" opacity="0.8"/>
-  <text x="350" y="117" text-anchor="middle" font-size="9" fill="white">Container</text>
-  <text x="350" y="128" text-anchor="middle" font-size="9" fill="white">runtime</text>
-  <circle cx="460" cy="80" r="28" fill="#f44336" opacity="0.8"/>
-  <text x="460" y="77" text-anchor="middle" font-size="9" fill="white">Cloud</text>
-  <text x="460" y="88" text-anchor="middle" font-size="9" fill="white">provider</text>
-  <circle cx="550" cy="55" r="30" fill="#b71c1c" opacity="0.8"/>
-  <text x="550" y="52" text-anchor="middle" font-size="9" fill="white">Database</text>
-  <text x="550" y="63" text-anchor="middle" font-size="9" fill="white">engine</text>
-</svg>
+![the_reversibility_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_reversibility_spectrum.svg)
 
 ---
 
@@ -194,36 +131,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Conway's Law Visualized
 
-<svg width="650" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow_conway" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <text x="160" y="25" text-anchor="middle" font-size="14" font-weight="bold">Org Structure</text>
-  <text x="490" y="25" text-anchor="middle" font-size="14" font-weight="bold">System Architecture</text>
-  <rect x="80" y="40" width="160" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="160" y="65" text-anchor="middle" font-size="12">Frontend Team</text>
-  <rect x="80" y="100" width="160" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="160" y="125" text-anchor="middle" font-size="12">Backend Team</text>
-  <rect x="80" y="160" width="160" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="160" y="185" text-anchor="middle" font-size="12">Data Team</text>
-  <rect x="80" y="220" width="160" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="160" y="245" text-anchor="middle" font-size="12">Infra Team</text>
-  <rect x="410" y="40" width="160" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="490" y="65" text-anchor="middle" font-size="12">UI Service</text>
-  <rect x="410" y="100" width="160" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="490" y="125" text-anchor="middle" font-size="12">API Service</text>
-  <rect x="410" y="160" width="160" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="490" y="185" text-anchor="middle" font-size="12">Data Pipeline</text>
-  <rect x="410" y="220" width="160" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="490" y="245" text-anchor="middle" font-size="12">Infrastructure</text>
-  <line x1="240" y1="60" x2="410" y2="60" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow_conway)"/>
-  <line x1="240" y1="120" x2="410" y2="120" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow_conway)"/>
-  <line x1="240" y1="180" x2="410" y2="180" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow_conway)"/>
-  <line x1="240" y1="240" x2="410" y2="240" stroke="#555" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow_conway)"/>
-  <text x="325" y="290" text-anchor="middle" font-size="11" fill="#555">Teams mirror services 1:1</text>
-</svg>
+![conway_s_law_visualized](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/conway_s_law_visualized.svg)
 
 ---
 
@@ -268,26 +176,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Evaluating Tradeoffs: The DACI Framework
 
-<svg width="650" height="250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="30" width="140" height="80" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="8"/>
-  <text x="100" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Driver</text>
-  <text x="100" y="80" text-anchor="middle" font-size="10" fill="#bbdefb">Owns the process</text>
-  <text x="100" y="95" text-anchor="middle" font-size="10" fill="#bbdefb">Gathers input</text>
-  <rect x="185" y="30" width="140" height="80" fill="#2e7d32" stroke="#1b5e20" stroke-width="2" rx="8"/>
-  <text x="255" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Approver</text>
-  <text x="255" y="80" text-anchor="middle" font-size="10" fill="#c8e6c9">Makes final call</text>
-  <text x="255" y="95" text-anchor="middle" font-size="10" fill="#c8e6c9">One person only</text>
-  <rect x="340" y="30" width="140" height="80" fill="#e65100" stroke="#bf360c" stroke-width="2" rx="8"/>
-  <text x="410" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Contributors</text>
-  <text x="410" y="80" text-anchor="middle" font-size="10" fill="#ffe0b2">Provide expertise</text>
-  <text x="410" y="95" text-anchor="middle" font-size="10" fill="#ffe0b2">Share knowledge</text>
-  <rect x="495" y="30" width="140" height="80" fill="#7b1fa2" stroke="#4a148c" stroke-width="2" rx="8"/>
-  <text x="565" y="60" text-anchor="middle" font-size="14" font-weight="bold" fill="white">Informed</text>
-  <text x="565" y="80" text-anchor="middle" font-size="10" fill="#e1bee7">Notified of result</text>
-  <text x="565" y="95" text-anchor="middle" font-size="10" fill="#e1bee7">No input needed</text>
-  <text x="325" y="160" text-anchor="middle" font-size="12" fill="#333">Assign exactly one Approver per decision to avoid deadlock</text>
-  <text x="325" y="180" text-anchor="middle" font-size="12" fill="#333">The Driver is not necessarily the Approver</text>
-</svg>
+![evaluating_tradeoffs_the_daci_framework](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/evaluating_tradeoffs_the_daci_framework.svg)
 
 ---
 
@@ -303,48 +192,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Decision Matrix Example
 
-<svg width="650" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="590" height="240" fill="#fafafa" stroke="#ccc" stroke-width="1" rx="4"/>
-  <line x1="30" y1="60" x2="620" y2="60" stroke="#333" stroke-width="2"/>
-  <line x1="170" y1="20" x2="170" y2="260" stroke="#ccc" stroke-width="1"/>
-  <line x1="280" y1="20" x2="280" y2="260" stroke="#ccc" stroke-width="1"/>
-  <line x1="390" y1="20" x2="390" y2="260" stroke="#ccc" stroke-width="1"/>
-  <line x1="500" y1="20" x2="500" y2="260" stroke="#ccc" stroke-width="1"/>
-  <text x="100" y="45" text-anchor="middle" font-size="12" font-weight="bold">Criterion (Weight)</text>
-  <text x="225" y="45" text-anchor="middle" font-size="12" font-weight="bold">Jenkins</text>
-  <text x="335" y="45" text-anchor="middle" font-size="12" font-weight="bold">GitLab CI</text>
-  <text x="445" y="45" text-anchor="middle" font-size="12" font-weight="bold">GitHub Actions</text>
-  <text x="560" y="45" text-anchor="middle" font-size="12" font-weight="bold">ArgoCD</text>
-  <text x="100" y="90" text-anchor="middle" font-size="11">Ease of use (3)</text>
-  <text x="225" y="90" text-anchor="middle" font-size="11">2 (6)</text>
-  <text x="335" y="90" text-anchor="middle" font-size="11">4 (12)</text>
-  <text x="445" y="90" text-anchor="middle" font-size="11">5 (15)</text>
-  <text x="560" y="90" text-anchor="middle" font-size="11">3 (9)</text>
-  <line x1="30" y1="105" x2="620" y2="105" stroke="#eee" stroke-width="1"/>
-  <text x="100" y="130" text-anchor="middle" font-size="11">Extensibility (2)</text>
-  <text x="225" y="130" text-anchor="middle" font-size="11">5 (10)</text>
-  <text x="335" y="130" text-anchor="middle" font-size="11">4 (8)</text>
-  <text x="445" y="130" text-anchor="middle" font-size="11">4 (8)</text>
-  <text x="560" y="130" text-anchor="middle" font-size="11">3 (6)</text>
-  <line x1="30" y1="145" x2="620" y2="145" stroke="#eee" stroke-width="1"/>
-  <text x="100" y="170" text-anchor="middle" font-size="11">GitOps support (4)</text>
-  <text x="225" y="170" text-anchor="middle" font-size="11">2 (8)</text>
-  <text x="335" y="170" text-anchor="middle" font-size="11">3 (12)</text>
-  <text x="445" y="170" text-anchor="middle" font-size="11">3 (12)</text>
-  <text x="560" y="170" text-anchor="middle" font-size="11">5 (20)</text>
-  <line x1="30" y1="185" x2="620" y2="185" stroke="#eee" stroke-width="1"/>
-  <text x="100" y="210" text-anchor="middle" font-size="11">Cost (3)</text>
-  <text x="225" y="210" text-anchor="middle" font-size="11">4 (12)</text>
-  <text x="335" y="210" text-anchor="middle" font-size="11">3 (9)</text>
-  <text x="445" y="210" text-anchor="middle" font-size="11">4 (12)</text>
-  <text x="560" y="210" text-anchor="middle" font-size="11">5 (15)</text>
-  <line x1="30" y1="225" x2="620" y2="225" stroke="#333" stroke-width="1"/>
-  <text x="100" y="250" text-anchor="middle" font-size="12" font-weight="bold">Total</text>
-  <text x="225" y="250" text-anchor="middle" font-size="12" font-weight="bold">36</text>
-  <text x="335" y="250" text-anchor="middle" font-size="12" font-weight="bold">41</text>
-  <text x="445" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e7d32">47</text>
-  <text x="560" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">50</text>
-</svg>
+![decision_matrix_example](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/decision_matrix_example.svg)
 
 ---
 
@@ -383,39 +231,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Common DevOps Tradeoffs
 
-<svg width="650" height="260" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow_trade" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L7,3 z" fill="#555"/>
-    </marker>
-  </defs>
-  <text x="325" y="25" text-anchor="middle" font-size="14" font-weight="bold">Tension Pairs</text>
-  <rect x="40" y="45" width="130" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="105" y="67" text-anchor="middle" font-size="11">Speed</text>
-  <line x1="170" y1="62" x2="220" y2="62" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <line x1="220" y1="62" x2="170" y2="62" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <rect x="220" y="45" width="130" height="35" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="285" y="67" text-anchor="middle" font-size="11">Stability</text>
-  <rect x="40" y="100" width="130" height="35" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="105" y="122" text-anchor="middle" font-size="11">Flexibility</text>
-  <line x1="170" y1="117" x2="220" y2="117" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <line x1="220" y1="117" x2="170" y2="117" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <rect x="220" y="100" width="130" height="35" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="285" y="122" text-anchor="middle" font-size="11">Standardization</text>
-  <rect x="390" y="45" width="130" height="35" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="5"/>
-  <text x="455" y="67" text-anchor="middle" font-size="11">Security</text>
-  <line x1="520" y1="62" x2="570" y2="62" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <line x1="570" y1="62" x2="520" y2="62" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <rect x="570" y="45" width="50" height="35" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="595" y="67" text-anchor="middle" font-size="11">Speed</text>
-  <rect x="390" y="100" width="130" height="35" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="455" y="122" text-anchor="middle" font-size="11">Cost</text>
-  <line x1="520" y1="117" x2="570" y2="117" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <line x1="570" y1="117" x2="520" y2="117" stroke="#555" stroke-width="2" marker-end="url(#arrow_trade)"/>
-  <rect x="570" y="100" width="50" height="35" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="595" y="122" text-anchor="middle" font-size="11">Quality</text>
-  <text x="325" y="175" text-anchor="middle" font-size="12" fill="#555">Every decision involves balancing competing concerns</text>
-</svg>
+![common_devops_tradeoffs](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/common_devops_tradeoffs.svg)
 
 ---
 
@@ -472,55 +288,13 @@ A systematic approach to making and documenting architectural decisions
 
 ## ADR Template Structure
 
-<svg width="650" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="10" width="590" height="280" fill="#f5f5f5" stroke="#333" stroke-width="2" rx="6"/>
-  <text x="325" y="38" text-anchor="middle" font-size="15" font-weight="bold">ADR-0001: Use Kubernetes for Orchestration</text>
-  <line x1="50" y1="48" x2="600" y2="48" stroke="#ccc" stroke-width="1"/>
-  <text x="50" y="72" font-size="13" font-weight="bold" fill="#1565c0">Status:</text>
-  <text x="120" y="72" font-size="13">Accepted</text>
-  <line x1="50" y1="82" x2="600" y2="82" stroke="#eee" stroke-width="1"/>
-  <text x="50" y="106" font-size="13" font-weight="bold" fill="#1565c0">Context:</text>
-  <text x="50" y="124" font-size="11">We need container orchestration for 30+ microservices.</text>
-  <text x="50" y="140" font-size="11">Team has experience with both Docker Swarm and Kubernetes.</text>
-  <line x1="50" y1="150" x2="600" y2="150" stroke="#eee" stroke-width="1"/>
-  <text x="50" y="174" font-size="13" font-weight="bold" fill="#1565c0">Decision:</text>
-  <text x="50" y="192" font-size="11">We will use Kubernetes (EKS) for container orchestration.</text>
-  <line x1="50" y1="202" x2="600" y2="202" stroke="#eee" stroke-width="1"/>
-  <text x="50" y="226" font-size="13" font-weight="bold" fill="#1565c0">Consequences:</text>
-  <text x="50" y="244" font-size="11">+ Industry standard, large ecosystem, strong hiring pool.</text>
-  <text x="50" y="260" font-size="11">- Steeper learning curve, higher initial operational cost.</text>
-  <text x="50" y="276" font-size="11">- Requires investment in cluster management tooling.</text>
-</svg>
+![adr_template_structure](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_template_structure.svg)
 
 ---
 
 ## ADR Status Lifecycle
 
-<svg width="650" height="180" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow_adr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="65" width="100" height="45" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="80" y="93" text-anchor="middle" font-size="12" font-weight="bold">Proposed</text>
-  <rect x="170" y="65" width="100" height="45" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="220" y="93" text-anchor="middle" font-size="12" font-weight="bold">Accepted</text>
-  <rect x="310" y="35" width="110" height="45" fill="#bbdefb" stroke="#1565c0" stroke-width="2" rx="6"/>
-  <text x="365" y="63" text-anchor="middle" font-size="12" font-weight="bold">Superseded</text>
-  <rect x="310" y="100" width="110" height="45" fill="#ffcdd2" stroke="#c62828" stroke-width="2" rx="6"/>
-  <text x="365" y="128" text-anchor="middle" font-size="12" font-weight="bold">Deprecated</text>
-  <rect x="460" y="35" width="110" height="45" fill="#e1bee7" stroke="#7b1fa2" stroke-width="2" rx="6"/>
-  <text x="515" y="63" text-anchor="middle" font-size="12" font-weight="bold">Replaced by</text>
-  <line x1="130" y1="87" x2="170" y2="87" stroke="#333" stroke-width="2" marker-end="url(#arrow_adr)"/>
-  <line x1="270" y1="77" x2="310" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrow_adr)"/>
-  <line x1="270" y1="97" x2="310" y2="122" stroke="#333" stroke-width="2" marker-end="url(#arrow_adr)"/>
-  <line x1="420" y1="57" x2="460" y2="57" stroke="#333" stroke-width="2" marker-end="url(#arrow_adr)"/>
-  <text x="80" y="140" text-anchor="middle" font-size="10" fill="#555">Under review</text>
-  <text x="220" y="140" text-anchor="middle" font-size="10" fill="#555">Active decision</text>
-  <text x="365" y="170" text-anchor="middle" font-size="10" fill="#555">No longer valid</text>
-  <text x="515" y="100" text-anchor="middle" font-size="10" fill="#555">New ADR linked</text>
-</svg>
+![adr_status_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_status_lifecycle.svg)
 
 ---
 
@@ -582,32 +356,7 @@ Adopt Terraform with remote state in S3.
 
 ## The Decision Flow Process
 
-<svg width="650" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arrow_flow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="250" y="10" width="150" height="40" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="6"/>
-  <text x="325" y="35" text-anchor="middle" font-size="12">Identify Decision</text>
-  <line x1="325" y1="50" x2="325" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrow_flow)"/>
-  <rect x="250" y="70" width="150" height="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="6"/>
-  <text x="325" y="95" text-anchor="middle" font-size="12">Gather Context</text>
-  <line x1="325" y1="110" x2="325" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow_flow)"/>
-  <rect x="250" y="130" width="150" height="40" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="6"/>
-  <text x="325" y="155" text-anchor="middle" font-size="12">Explore Options</text>
-  <line x1="325" y1="170" x2="325" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arrow_flow)"/>
-  <rect x="250" y="190" width="150" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="6"/>
-  <text x="325" y="215" text-anchor="middle" font-size="12">Evaluate Tradeoffs</text>
-  <line x1="325" y1="230" x2="325" y2="250" stroke="#333" stroke-width="2" marker-end="url(#arrow_flow)"/>
-  <rect x="250" y="250" width="150" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="6"/>
-  <text x="325" y="275" text-anchor="middle" font-size="12">Document in ADR</text>
-  <text x="490" y="35" text-anchor="start" font-size="10" fill="#555">Is this architectural?</text>
-  <text x="490" y="95" text-anchor="start" font-size="10" fill="#555">Constraints, requirements</text>
-  <text x="490" y="155" text-anchor="start" font-size="10" fill="#555">PoCs, benchmarks, research</text>
-  <text x="490" y="215" text-anchor="start" font-size="10" fill="#555">Decision matrix, DACI</text>
-  <text x="490" y="275" text-anchor="start" font-size="10" fill="#555">Context, decision, consequences</text>
-</svg>
+![the_decision_flow_process](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_flow_process.svg)
 
 ---
 
@@ -720,32 +469,7 @@ Adopt Terraform with remote state in S3.
 
 ## Organizational Decision Governance
 
-<svg width="650" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="160" y="10" width="330" height="50" fill="#1565c0" stroke="#0d47a1" stroke-width="2" rx="8"/>
-  <text x="325" y="40" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Architecture Review Board</text>
-  <rect x="30" y="100" width="180" height="50" fill="#2e7d32" stroke="#1b5e20" stroke-width="2" rx="8"/>
-  <text x="120" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Platform Team ADRs</text>
-  <rect x="235" y="100" width="180" height="50" fill="#e65100" stroke="#bf360c" stroke-width="2" rx="8"/>
-  <text x="325" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Cross-Team ADRs</text>
-  <rect x="440" y="100" width="180" height="50" fill="#7b1fa2" stroke="#4a148c" stroke-width="2" rx="8"/>
-  <text x="530" y="130" text-anchor="middle" font-size="12" font-weight="bold" fill="white">Security ADRs</text>
-  <rect x="30" y="200" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
-  <text x="90" y="225" text-anchor="middle" font-size="10">Team A ADRs</text>
-  <rect x="170" y="200" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
-  <text x="230" y="225" text-anchor="middle" font-size="10">Team B ADRs</text>
-  <rect x="360" y="200" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
-  <text x="420" y="225" text-anchor="middle" font-size="10">Team C ADRs</text>
-  <rect x="500" y="200" width="120" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
-  <text x="560" y="225" text-anchor="middle" font-size="10">Team D ADRs</text>
-  <line x1="325" y1="60" x2="120" y2="100" stroke="#333" stroke-width="1.5"/>
-  <line x1="325" y1="60" x2="325" y2="100" stroke="#333" stroke-width="1.5"/>
-  <line x1="325" y1="60" x2="530" y2="100" stroke="#333" stroke-width="1.5"/>
-  <line x1="120" y1="150" x2="90" y2="200" stroke="#333" stroke-width="1"/>
-  <line x1="120" y1="150" x2="230" y2="200" stroke="#333" stroke-width="1"/>
-  <line x1="530" y1="150" x2="420" y2="200" stroke="#333" stroke-width="1"/>
-  <line x1="530" y1="150" x2="560" y2="200" stroke="#333" stroke-width="1"/>
-  <text x="325" y="270" text-anchor="middle" font-size="11" fill="#555">Decisions flow up for review, governance flows down as guidelines</text>
-</svg>
+![organizational_decision_governance](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/organizational_decision_governance.svg)
 
 ---
 

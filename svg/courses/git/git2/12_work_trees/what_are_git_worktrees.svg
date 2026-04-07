@@ -1,0 +1,34 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <text x="350" y="20" text-anchor="middle" font-size="16" font-weight="bold">Git Worktrees Architecture</text>
+
+  <!-- Main repository -->
+  <rect x="250" y="50" width="200" height="80" fill="#3498db" rx="5"/>
+  <text x="350" y="75" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Main Repository</text>
+  <text x="350" y="95" text-anchor="middle" fill="white" font-size="11">.git/ (shared)</text>
+  <text x="350" y="110" text-anchor="middle" fill="white" font-size="11">main branch</text>
+
+  <!-- Worktree 1 -->
+  <rect x="50" y="180" width="150" height="80" fill="#e74c3c" rx="5"/>
+  <text x="125" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Worktree 1</text>
+  <text x="125" y="220" text-anchor="middle" fill="white" font-size="10">feature-auth</text>
+  <text x="125" y="235" text-anchor="middle" fill="white" font-size="10">separate files</text>
+
+  <!-- Worktree 2 -->
+  <rect x="250" y="180" width="150" height="80" fill="#2ecc71" rx="5"/>
+  <text x="325" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Worktree 2</text>
+  <text x="325" y="220" text-anchor="middle" fill="white" font-size="10">hotfix-bug</text>
+  <text x="325" y="235" text-anchor="middle" fill="white" font-size="10">separate files</text>
+
+  <!-- Worktree 3 -->
+  <rect x="450" y="180" width="150" height="80" fill="#f39c12" rx="5"/>
+  <text x="525" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Worktree 3</text>
+  <text x="525" y="220" text-anchor="middle" fill="white" font-size="10">experiment</text>
+  <text x="525" y="235" text-anchor="middle" fill="white" font-size="10">separate files</text>
+
+  <!-- Connections -->
+  <line x1="300" y1="130" x2="125" y2="180" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="350" y1="130" x2="325" y2="180" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="400" y1="130" x2="525" y2="180" stroke="#333" stroke-width="2" stroke-dasharray="5,5"/>
+
+  <text x="350" y="285" text-anchor="middle" font-size="12">All share same .git database</text>
+</svg>

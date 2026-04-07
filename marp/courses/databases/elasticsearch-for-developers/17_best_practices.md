@@ -6,18 +6,7 @@
 
 ## Best Practices Overview
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">Design</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">Develop</text>
-  <rect x="50" y="120" width="100" height="50" fill="#FF9800" rx="5"/>
-  <text x="100" y="150" text-anchor="middle" fill="white">Deploy</text>
-  <rect x="180" y="120" width="100" height="50" fill="#9C27B0" rx="5"/>
-  <text x="230" y="150" text-anchor="middle" fill="white">Monitor</text>
-  <rect x="310" y="85" width="80" height="50" fill="#F44336" rx="5"/>
-  <text x="350" y="115" text-anchor="middle" fill="white">Iterate</text>
-</svg>
+![best_practices_overview](../../../../svg/courses/databases/elasticsearch-for-developers/17_best_practices/best_practices_overview.svg)
 
 ---
 
@@ -1097,18 +1086,7 @@ class CostOptimization:
 
 ## Scaling Strategies
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="200" y="30" text-anchor="middle" font-weight="bold">Scaling Approaches</text>
-  <rect x="50" y="50" width="120" height="60" fill="#4CAF50" rx="5"/>
-  <text x="110" y="80" text-anchor="middle" fill="white">Vertical</text>
-  <text x="110" y="95" text-anchor="middle" fill="white" font-size="10">Bigger nodes</text>
-  <rect x="230" y="50" width="120" height="60" fill="#2196F3" rx="5"/>
-  <text x="290" y="80" text-anchor="middle" fill="white">Horizontal</text>
-  <text x="290" y="95" text-anchor="middle" fill="white" font-size="10">More nodes</text>
-  <rect x="140" y="130" width="120" height="60" fill="#FF9800" rx="5"/>
-  <text x="200" y="160" text-anchor="middle" fill="white">Index</text>
-  <text x="200" y="175" text-anchor="middle" fill="white" font-size="10">More shards</text>
-</svg>
+![scaling_strategies](../../../../svg/courses/databases/elasticsearch-for-developers/17_best_practices/scaling_strategies.svg)
 
 ---
 

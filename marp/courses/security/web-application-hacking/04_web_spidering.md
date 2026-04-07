@@ -12,30 +12,7 @@
 - Identifies entry points for testing
 - Also called **web crawling** or **web scraping**
 
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="260" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect x="155" y="10" width="110" height="36" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="210" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Start URL</text>
-  <line x1="210" y1="46" x2="85"  y2="90" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="210" y1="46" x2="210" y2="90" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="210" y1="46" x2="335" y2="90" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30"  y="92" width="110" height="36" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="85"  y="114" text-anchor="middle" font-size="12" fill="#222222">/page1</text>
-  <rect x="155" y="92" width="110" height="36" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="210" y="114" text-anchor="middle" font-size="12" fill="#222222">/page2</text>
-  <rect x="280" y="92" width="110" height="36" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="335" y="114" text-anchor="middle" font-size="12" fill="#222222">/page3</text>
-  <line x1="85"  y1="128" x2="85"  y2="172" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="210" y1="128" x2="210" y2="172" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="30"  y="174" width="110" height="36" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="85"  y="196" text-anchor="middle" font-size="12" fill="#222222">/page1/a</text>
-  <rect x="155" y="174" width="110" height="36" fill="#fff3e0" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="210" y="196" text-anchor="middle" font-size="12" fill="#222222">/page2/b</text>
-</svg>
+![what_is_web_spidering](../../../../svg/courses/security/web-application-hacking/04_web_spidering/what_is_web_spidering.svg)
 
 ---
 

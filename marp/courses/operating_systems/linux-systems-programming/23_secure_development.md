@@ -15,34 +15,7 @@
 
 ## Stack Protection Overview
 
-<svg viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Stack Layout and Protection</text>
-
-  <rect x="150" y="50" width="100" height="30" fill="lightblue" stroke="black"/>
-  <text x="200" y="70" font-size="10" text-anchor="middle">Return Address</text>
-
-  <rect x="150" y="80" width="100" height="30" fill="yellow" stroke="black"/>
-  <text x="200" y="100" font-size="10" text-anchor="middle">Stack Canary</text>
-
-  <rect x="150" y="110" width="100" height="30" fill="lightgreen" stroke="black"/>
-  <text x="200" y="130" font-size="10" text-anchor="middle">Local Variables</text>
-
-  <rect x="150" y="140" width="100" height="30" fill="lightcoral" stroke="black"/>
-  <text x="200" y="160" font-size="10" text-anchor="middle">Buffer</text>
-
-  <text x="300" y="100" font-size="10">← Stack Canary detects</text>
-  <text x="300" y="115" font-size="10">overflow before return</text>
-
-  <text x="200" y="200" font-size="12" text-anchor="middle">Stack grows downward</text>
-  <path d="M 200 185 L 200 175" stroke="black" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![stack_protection_overview](../../../../svg/courses/operating_systems/linux-systems-programming/23_secure_development/stack_protection_overview.svg)
 
 ---
 
@@ -266,25 +239,7 @@ void debug_with_fixed_addresses() {
 
 ## AppArmor vs SELinux
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Mandatory Access Control</text>
-
-  <rect x="50" y="50" width="150" height="120" fill="lightblue" stroke="black"/>
-  <text x="125" y="70" font-size="12" font-weight="bold" text-anchor="middle">AppArmor</text>
-  <text x="125" y="90" font-size="10" text-anchor="middle">• Path-based</text>
-  <text x="125" y="105" font-size="10" text-anchor="middle">• Application profiles</text>
-  <text x="125" y="120" font-size="10" text-anchor="middle">• Easier to configure</text>
-  <text x="125" y="135" font-size="10" text-anchor="middle">• Ubuntu default</text>
-  <text x="125" y="150" font-size="10" text-anchor="middle">• Learning mode</text>
-
-  <rect x="300" y="50" width="150" height="120" fill="lightgreen" stroke="black"/>
-  <text x="375" y="70" font-size="12" font-weight="bold" text-anchor="middle">SELinux</text>
-  <text x="375" y="90" font-size="10" text-anchor="middle">• Label-based</text>
-  <text x="375" y="105" font-size="10" text-anchor="middle">• Type enforcement</text>
-  <text x="375" y="120" font-size="10" text-anchor="middle">• More granular</text>
-  <text x="375" y="135" font-size="10" text-anchor="middle">• RHEL/Fedora default</text>
-  <text x="375" y="150" font-size="10" text-anchor="middle">• Complex policies</text>
-</svg>
+![apparmor_vs_selinux](../../../../svg/courses/operating_systems/linux-systems-programming/23_secure_development/apparmor_vs_selinux.svg)
 
 ---
 

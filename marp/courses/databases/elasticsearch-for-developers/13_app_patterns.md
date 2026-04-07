@@ -6,18 +6,7 @@
 
 ## Common Application Patterns
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">Search UI</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">Multi-tenant</text>
-  <rect x="50" y="130" width="100" height="50" fill="#FF9800" rx="5"/>
-  <text x="100" y="160" text-anchor="middle" fill="white">Real-time</text>
-  <rect x="180" y="130" width="100" height="50" fill="#9C27B0" rx="5"/>
-  <text x="230" y="160" text-anchor="middle" fill="white">Analytics</text>
-  <rect x="310" y="90" width="80" height="50" fill="#F44336" rx="5"/>
-  <text x="350" y="120" text-anchor="middle" fill="white">Testing</text>
-</svg>
+![common_application_patterns](../../../../svg/courses/databases/elasticsearch-for-developers/13_app_patterns/common_application_patterns.svg)
 
 ---
 
@@ -309,24 +298,7 @@ PUT /_aliases
 
 ## Real-time Search Updates
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="80" width="70" height="40" fill="#4CAF50" rx="5"/>
-  <text x="65" y="105" text-anchor="middle" fill="white" font-size="12">Event</text>
-  <rect x="130" y="80" width="70" height="40" fill="#2196F3" rx="5"/>
-  <text x="165" y="105" text-anchor="middle" fill="white" font-size="12">Queue</text>
-  <rect x="230" y="80" width="70" height="40" fill="#FF9800" rx="5"/>
-  <text x="265" y="105" text-anchor="middle" fill="white" font-size="12">Process</text>
-  <rect x="330" y="80" width="60" height="40" fill="#9C27B0" rx="5"/>
-  <text x="360" y="105" text-anchor="middle" fill="white" font-size="12">ES</text>
-  <path d="M100 100 L130 100" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <path d="M200 100 L230 100" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <path d="M300 100 L330 100" stroke="#333" stroke-width="2" marker-end="url(#arrow3)"/>
-  <defs>
-    <marker id="arrow3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![real_time_search_updates](../../../../svg/courses/databases/elasticsearch-for-developers/13_app_patterns/real_time_search_updates.svg)
 
 ---
 

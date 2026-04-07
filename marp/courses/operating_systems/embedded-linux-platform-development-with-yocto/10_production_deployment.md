@@ -4,42 +4,7 @@
 
 ## Deployment Lifecycle
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="85" text-anchor="middle" font-size="12">Build Release</text>
-
-  <rect x="325" y="50" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="85" text-anchor="middle" font-size="12">Package</text>
-
-  <rect x="550" y="50" width="150" height="60" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="85" text-anchor="middle" font-size="12">Provision</text>
-
-  <rect x="100" y="200" width="150" height="60" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="175" y="235" text-anchor="middle" font-size="12">Deploy</text>
-
-  <rect x="325" y="200" width="150" height="60" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="235" text-anchor="middle" font-size="12">Validate</text>
-
-  <rect x="550" y="200" width="150" height="60" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="625" y="235" text-anchor="middle" font-size="12">Monitor</text>
-
-  <rect x="300" y="350" width="200" height="60" fill="#e6ffe6" stroke="#00cc00" stroke-width="3" rx="5"/>
-  <text x="400" y="385" text-anchor="middle" font-size="14" font-weight="bold">Update Cycle</text>
-
-  <path d="M 250 80 L 325 80" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 475 80 L 550 80" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 625 110 L 175 200" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 250 235 L 325 235" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 475 235 L 550 235" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 625 260 L 400 350" stroke="#333" stroke-width="2" marker-end="url(#d1)"/>
-  <path d="M 300 380 L 175 110" stroke="#0066cc" stroke-width="2" marker-end="url(#d1)" stroke-dasharray="5,5"/>
-
-  <defs>
-    <marker id="d1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![deployment_lifecycle](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/deployment_lifecycle.svg)
 
 ---
 
@@ -77,33 +42,7 @@ repo manifest -r -o release-1.2.3.xml
 
 ## Image Formats
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="140" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="170" y="135" text-anchor="middle" font-size="12">WIC Image</text>
-
-  <rect x="260" y="100" width="140" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="330" y="135" text-anchor="middle" font-size="12">TAR Archive</text>
-
-  <rect x="420" y="100" width="140" height="60" fill="#ccccff" stroke="#000" stroke-width="2"/>
-  <text x="490" y="135" text-anchor="middle" font-size="12">UBI Image</text>
-
-  <rect x="580" y="100" width="140" height="60" fill="#ffeecc" stroke="#000" stroke-width="2"/>
-  <text x="650" y="135" text-anchor="middle" font-size="12">SWU Update</text>
-
-  <rect x="250" y="250" width="300" height="80" fill="#ffffcc" stroke="#000" stroke-width="3"/>
-  <text x="400" y="285" text-anchor="middle" font-size="14" font-weight="bold">Deployment Target</text>
-
-  <path d="M 170 160 L 350 250" stroke="#333" stroke-width="1.5" marker-end="url(#d2)"/>
-  <path d="M 330 160 L 380 250" stroke="#333" stroke-width="1.5" marker-end="url(#d2)"/>
-  <path d="M 490 160 L 420 250" stroke="#333" stroke-width="1.5" marker-end="url(#d2)"/>
-  <path d="M 650 160 L 450 250" stroke="#333" stroke-width="1.5" marker-end="url(#d2)"/>
-
-  <defs>
-    <marker id="d2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![image_formats](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/image_formats.svg)
 
 ---
 
@@ -187,31 +126,7 @@ ostree admin deploy mydevice/main
 
 ## Update Strategies
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="180" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="190" y="135" text-anchor="middle" font-size="12" font-weight="bold">Full Image</text>
-  <text x="190" y="155" text-anchor="middle" font-size="10">Replace entire system</text>
-
-  <rect x="310" y="100" width="180" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="135" text-anchor="middle" font-size="12" font-weight="bold">A/B Partitions</text>
-  <text x="400" y="155" text-anchor="middle" font-size="10">Dual boot slots</text>
-
-  <rect x="520" y="100" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="610" y="135" text-anchor="middle" font-size="12" font-weight="bold">Delta Updates</text>
-  <text x="610" y="155" text-anchor="middle" font-size="10">Differential patches</text>
-
-  <rect x="100" y="250" width="180" height="80" fill="#ffeecc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="190" y="285" text-anchor="middle" font-size="12" font-weight="bold">Package Updates</text>
-  <text x="190" y="305" text-anchor="middle" font-size="10">Individual packages</text>
-
-  <rect x="310" y="250" width="180" height="80" fill="#eeccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="285" text-anchor="middle" font-size="12" font-weight="bold">Container Updates</text>
-  <text x="400" y="305" text-anchor="middle" font-size="10">Application containers</text>
-
-  <rect x="520" y="250" width="180" height="80" fill="#ccffff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="610" y="285" text-anchor="middle" font-size="12" font-weight="bold">Atomic Updates</text>
-  <text x="610" y="305" text-anchor="middle" font-size="10">OSTree/libostree</text>
-</svg>
+![update_strategies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/update_strategies.svg)
 
 ---
 
@@ -347,38 +262,7 @@ MENDER_DATA_PART_SIZE_MB = "1024"
 
 ## OTA Update Architecture
 
-<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="200" height="80" fill="#ffcccc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="200" y="85" text-anchor="middle" font-size="13" font-weight="bold">Update Server</text>
-  <text x="200" y="105" text-anchor="middle" font-size="10">Cloud/On-premise</text>
-
-  <rect x="500" y="50" width="200" height="80" fill="#ccffcc" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="600" y="85" text-anchor="middle" font-size="13" font-weight="bold">Edge Gateway</text>
-  <text x="600" y="105" text-anchor="middle" font-size="10">Local caching</text>
-
-  <rect x="100" y="250" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="190" y="285" text-anchor="middle" font-size="12">Device A</text>
-
-  <rect x="310" y="250" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="400" y="285" text-anchor="middle" font-size="12">Device B</text>
-
-  <rect x="520" y="250" width="180" height="80" fill="#ccccff" stroke="#000" stroke-width="2" rx="5"/>
-  <text x="610" y="285" text-anchor="middle" font-size="12">Device C</text>
-
-  <path d="M 300 90 L 500 90" stroke="#0066cc" stroke-width="2" marker-end="url(#d3)"/>
-  <text x="400" y="80" text-anchor="middle" font-size="10">Internet</text>
-
-  <path d="M 600 130 L 190 250" stroke="#00cc00" stroke-width="2" marker-end="url(#d3)"/>
-  <path d="M 600 130 L 400 250" stroke="#00cc00" stroke-width="2" marker-end="url(#d3)"/>
-  <path d="M 600 130 L 610 250" stroke="#00cc00" stroke-width="2" marker-end="url(#d3)"/>
-  <text x="450" y="200" text-anchor="middle" font-size="10">Local Network</text>
-
-  <defs>
-    <marker id="d3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#00cc00"/>
-    </marker>
-  </defs>
-</svg>
+![ota_update_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/ota_update_architecture.svg)
 
 ---
 
@@ -800,29 +684,7 @@ fi
 
 ## Lifecycle Management
 
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="100" width="150" height="60" fill="#ccffcc" stroke="#000" stroke-width="2"/>
-  <text x="175" y="135" text-anchor="middle" font-size="12">Active Support</text>
-
-  <rect x="300" y="100" width="150" height="60" fill="#ffffcc" stroke="#000" stroke-width="2"/>
-  <text x="375" y="135" text-anchor="middle" font-size="12">Maintenance</text>
-
-  <rect x="500" y="100" width="150" height="60" fill="#ffcccc" stroke="#000" stroke-width="2"/>
-  <text x="575" y="135" text-anchor="middle" font-size="12">End of Life</text>
-
-  <path d="M 250 130 L 300 130" stroke="#333" stroke-width="2" marker-end="url(#d4)"/>
-  <path d="M 450 130 L 500 130" stroke="#333" stroke-width="2" marker-end="url(#d4)"/>
-
-  <text x="175" y="85" text-anchor="middle" font-size="10">Years 1-3</text>
-  <text x="375" y="85" text-anchor="middle" font-size="10">Years 3-5</text>
-  <text x="575" y="85" text-anchor="middle" font-size="10">Year 5+</text>
-
-  <defs>
-    <marker id="d4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![lifecycle_management](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/lifecycle_management.svg)
 
 ---
 

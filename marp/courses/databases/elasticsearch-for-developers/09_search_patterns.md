@@ -16,17 +16,7 @@
 
 ## Pagination Overview
 
-<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="100" height="50" fill="#4CAF50" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" fill="white">from/size</text>
-  <text x="100" y="120" text-anchor="middle" font-size="12">Simple</text>
-  <rect x="180" y="50" width="100" height="50" fill="#2196F3" rx="5"/>
-  <text x="230" y="80" text-anchor="middle" fill="white">search_after</text>
-  <text x="230" y="120" text-anchor="middle" font-size="12">Deep paging</text>
-  <rect x="310" y="50" width="70" height="50" fill="#FF9800" rx="5"/>
-  <text x="345" y="80" text-anchor="middle" fill="white">PIT</text>
-  <text x="345" y="120" text-anchor="middle" font-size="12">Consistent</text>
-</svg>
+![pagination_overview](../../../../svg/courses/databases/elasticsearch-for-developers/09_search_patterns/pagination_overview.svg)
 
 ---
 
@@ -225,17 +215,7 @@ Options: `_first`, `_last`, or custom value
 
 ## Faceted Search
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="80" height="100" fill="#f0f0f0" stroke="#333" rx="5"/>
-  <text x="90" y="75" text-anchor="middle" font-weight="bold">Filters</text>
-  <text x="90" y="95" text-anchor="middle" font-size="12">□ Brand</text>
-  <text x="90" y="115" text-anchor="middle" font-size="12">□ Price</text>
-  <text x="90" y="135" text-anchor="middle" font-size="12">□ Color</text>
-  <rect x="160" y="50" width="200" height="100" fill="#e8f5e9" stroke="#4CAF50" rx="5"/>
-  <text x="260" y="75" text-anchor="middle" font-weight="bold">Results</text>
-  <text x="260" y="100" text-anchor="middle">Filtered products</text>
-  <text x="260" y="120" text-anchor="middle">with counts</text>
-</svg>
+![faceted_search](../../../../svg/courses/databases/elasticsearch-for-developers/09_search_patterns/faceted_search.svg)
 
 ---
 

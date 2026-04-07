@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd3_02_http" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect x="20" y="20" width="110" height="160" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="75" y="42" text-anchor="middle" font-size="12" font-weight="bold">Client</text>
+  <text x="75" y="60" text-anchor="middle" font-size="10">Single TCP</text>
+  <text x="75" y="75" text-anchor="middle" font-size="10">Connection</text>
+  <rect x="460" y="20" width="120" height="160" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="520" y="42" text-anchor="middle" font-size="12" font-weight="bold">Server</text>
+  <rect x="180" y="30" width="230" height="25" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="47" text-anchor="middle" font-size="10" fill="#1565c0">Stream 1: GET /page</text>
+  <line x1="320" y1="42" x2="410" y2="42" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd3_02_http)"/>
+  <rect x="180" y="60" width="230" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="77" text-anchor="middle" font-size="10" fill="#7b1fa2">Stream 2: GET /style.css</text>
+  <line x1="320" y1="72" x2="410" y2="72" stroke="#7b1fa2" stroke-width="2" marker-end="url(#arrowd3_02_http)"/>
+  <rect x="180" y="90" width="230" height="25" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="107" text-anchor="middle" font-size="10" fill="#2e7d32">Stream 3: GET /app.js</text>
+  <line x1="320" y1="102" x2="410" y2="102" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowd3_02_http)"/>
+  <rect x="180" y="120" width="230" height="25" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="220" y="137" text-anchor="middle" font-size="10" fill="#c62828">Stream 4: GET /image.png</text>
+  <line x1="320" y1="132" x2="410" y2="132" stroke="#c62828" stroke-width="2" marker-end="url(#arrowd3_02_http)"/>
+  <text x="295" y="165" text-anchor="middle" font-size="10" fill="#555">All streams multiplexed over single connection</text>
+  <text x="295" y="180" text-anchor="middle" font-size="10" fill="#555">Binary framing + HPACK header compression</text>
+</svg>

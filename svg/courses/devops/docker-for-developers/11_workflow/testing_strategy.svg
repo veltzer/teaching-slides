@@ -1,0 +1,26 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd5_10_workflow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Docker Testing Pipeline</text>
+  <rect x="20" y="35" width="130" height="55" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="85" y="55" text-anchor="middle" font-size="11" font-weight="bold">Unit Tests</text>
+  <text x="85" y="73" text-anchor="middle" font-size="10">docker run --rm</text>
+  <line x1="150" y1="62" x2="175" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_10_workflow)"/>
+  <rect x="175" y="35" width="140" height="55" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="245" y="55" text-anchor="middle" font-size="11" font-weight="bold">Integration Tests</text>
+  <text x="245" y="73" text-anchor="middle" font-size="10">compose up + test</text>
+  <line x1="315" y1="62" x2="340" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_10_workflow)"/>
+  <rect x="340" y="35" width="120" height="55" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="400" y="55" text-anchor="middle" font-size="11" font-weight="bold">E2E Tests</text>
+  <text x="400" y="73" text-anchor="middle" font-size="10">Full stack</text>
+  <line x1="460" y1="62" x2="485" y2="62" stroke="#333" stroke-width="2" marker-end="url(#arrowd5_10_workflow)"/>
+  <rect x="485" y="35" width="100" height="55" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
+  <text x="535" y="55" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">Deploy</text>
+  <text x="535" y="73" text-anchor="middle" font-size="10">Verified</text>
+  <rect x="60" y="115" width="480" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5" stroke-dasharray="4,2"/>
+  <text x="300" y="137" text-anchor="middle" font-size="10">Each stage runs in isolated containers with disposable environments</text>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#555">docker-compose -f docker-compose.test.yml up --abort-on-container-exit</text>
+</svg>

@@ -4,21 +4,7 @@
 ---
 ## Container Concepts
 
-<svg width="650" height="180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="130" width="630" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="325" y="155" text-anchor="middle" font-size="12">Host OS / Kernel</text>
-  <rect x="10" y="85" width="630" height="40" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="325" y="110" text-anchor="middle" font-size="12">Container Runtime (Docker / Podman)</text>
-  <rect x="20" y="10" width="145" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="92" y="35" text-anchor="middle" font-size="10">Container A</text>
-  <text x="92" y="55" text-anchor="middle" font-size="9">App + Libs</text>
-  <rect x="180" y="10" width="145" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="252" y="35" text-anchor="middle" font-size="10">Container B</text>
-  <text x="252" y="55" text-anchor="middle" font-size="9">App + Libs</text>
-  <rect x="340" y="10" width="145" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="412" y="35" text-anchor="middle" font-size="10">Container C</text>
-  <text x="412" y="55" text-anchor="middle" font-size="9">App + Libs</text>
-</svg>
+![container_concepts](../../../../svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_concepts.svg)
 
 - Containers share the host kernel (unlike VMs)
 - Isolated via `namespaces` and `cgroups`
@@ -599,24 +585,7 @@ Use cases:
 ---
 ## Container Orchestration Overview
 
-<svg width="650" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="200" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="35" text-anchor="middle" font-size="11">Docker Compose</text>
-  <text x="110" y="65" text-anchor="middle" font-size="9">Single host, simple apps</text>
-  <rect x="225" y="10" width="200" height="40" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="325" y="35" text-anchor="middle" font-size="11">Docker Swarm</text>
-  <text x="325" y="65" text-anchor="middle" font-size="9">Multi-host, built into Docker</text>
-  <rect x="440" y="10" width="200" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="35" text-anchor="middle" font-size="11">Kubernetes</text>
-  <text x="540" y="65" text-anchor="middle" font-size="9">Production-grade, complex</text>
-  <line x1="50" y1="80" x2="600" y2="80" stroke="#999" stroke-width="1" stroke-dasharray="4"/>
-  <text x="50" y="100" font-size="9">Simple</text>
-  <text x="565" y="100" font-size="9">Complex</text>
-  <rect x="10" y="115" width="630" height="70" fill="#f5f5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="325" y="135" text-anchor="middle" font-size="10" font-weight="bold">Common Orchestration Features</text>
-  <text x="325" y="155" text-anchor="middle" font-size="9">Service discovery | Load balancing | Rolling updates</text>
-  <text x="325" y="172" text-anchor="middle" font-size="9">Self-healing | Scaling | Secret management</text>
-</svg>
+![container_orchestration_overview](../../../../svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
 
 Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `Kubernetes` for large-scale.
 

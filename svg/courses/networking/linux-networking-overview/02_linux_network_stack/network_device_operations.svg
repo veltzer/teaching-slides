@@ -1,0 +1,27 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowd1_01_linux_network_stack" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    </marker>
+  </defs>
+  <text x="300" y="16" text-anchor="middle" font-size="12" font-weight="bold">net_device Operations Flow</text>
+  <rect x="30" y="30" width="110" height="50" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="85" y="52" text-anchor="middle" font-size="10">ndo_open()</text>
+  <text x="85" y="66" text-anchor="middle" font-size="10">ndo_stop()</text>
+  <rect x="170" y="30" width="120" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="230" y="52" text-anchor="middle" font-size="10">ndo_start_xmit()</text>
+  <text x="230" y="66" text-anchor="middle" font-size="10">TX path</text>
+  <rect x="320" y="30" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="380" y="52" text-anchor="middle" font-size="10">netif_rx()</text>
+  <text x="380" y="66" text-anchor="middle" font-size="10">RX path / NAPI</text>
+  <rect x="470" y="30" width="110" height="50" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="525" y="52" text-anchor="middle" font-size="10">ndo_get_stats()</text>
+  <text x="525" y="66" text-anchor="middle" font-size="10">ndo_do_ioctl()</text>
+  <line x1="140" y1="55" x2="170" y2="55" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_01_linux_network_stack)"/>
+  <line x1="290" y1="55" x2="320" y2="55" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_01_linux_network_stack)"/>
+  <line x1="440" y1="55" x2="470" y2="55" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_01_linux_network_stack)"/>
+  <rect x="120" y="110" width="360" height="40" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="135" text-anchor="middle" font-size="11">struct net_device_ops (function pointers)</text>
+  <line x1="300" y1="80" x2="300" y2="110" stroke="#333" stroke-width="1" marker-end="url(#arrowd1_01_linux_network_stack)"/>
+  <text x="300" y="175" text-anchor="middle" font-size="10" fill="#666">Registered via register_netdev() during driver init</text>
+</svg>

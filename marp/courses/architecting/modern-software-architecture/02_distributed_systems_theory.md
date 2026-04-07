@@ -43,15 +43,7 @@
 ---
 ## CAP Theorem Diagram
 
-<svg viewBox="0 0 400 350" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="200,30 50,300 350,300" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="200" y="20" text-anchor="middle" font-size="16" font-weight="bold">Consistency</text>
-  <text x="30" y="325" text-anchor="middle" font-size="16" font-weight="bold">Availability</text>
-  <text x="370" y="325" text-anchor="middle" font-size="16" font-weight="bold">Partition Tolerance</text>
-  <text x="125" y="150" text-anchor="middle" font-size="13" fill="#2196F3">CP</text>
-  <text x="275" y="150" text-anchor="middle" font-size="13" fill="#4CAF50">AP</text>
-  <text x="200" y="280" text-anchor="middle" font-size="13" fill="#FF9800">CA</text>
-</svg>
+![cap_theorem_diagram](../../../../svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem_diagram.svg)
 
 ---
 ## Consistency in CAP

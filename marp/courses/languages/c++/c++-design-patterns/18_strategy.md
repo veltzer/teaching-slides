@@ -32,33 +32,7 @@ public:
 
 ## Strategy Structure
 
-<svg width="550" height="230" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="20" width="180" height="70" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="120" y="45" text-anchor="middle" font-size="13" font-weight="bold">Context</text>
-  <text x="120" y="63" text-anchor="middle" font-size="10">strategy: Strategy*</text>
-  <text x="120" y="78" text-anchor="middle" font-size="10">+ execute()</text>
-
-  <rect x="300" y="20" width="200" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="400" y="45" text-anchor="middle" font-size="13" font-weight="bold">Strategy</text>
-  <text x="400" y="65" text-anchor="middle" font-size="11" font-style="italic">+ algorithm()</text>
-
-  <line x1="210" y1="55" x2="300" y2="50" stroke="#333" stroke-width="1.5" marker-end="url(#stArr)"/>
-
-  <rect x="250" y="150" width="140" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="320" y="175" text-anchor="middle" font-size="11">ConcreteStrategyA</text>
-
-  <rect x="410" y="150" width="140" height="40" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="480" y="175" text-anchor="middle" font-size="11">ConcreteStrategyB</text>
-
-  <line x1="320" y1="150" x2="370" y2="80" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="480" y1="150" x2="430" y2="80" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-
-  <defs>
-    <marker id="stArr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![strategy_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/18_strategy/strategy_structure.svg)
 
 ---
 

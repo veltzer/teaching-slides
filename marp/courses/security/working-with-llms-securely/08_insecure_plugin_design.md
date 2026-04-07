@@ -14,36 +14,7 @@
 
 ## How `LLM` Plugins Work
 
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="260" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555555"/>
-    </marker>
-  </defs>
-  <rect x="10"  y="30" width="80"  height="44" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="50"  y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">User</text>
-  <line x1="90"  y1="52" x2="130" y2="52" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="132" y="30" width="80"  height="44" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="172" y="57" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">LLM</text>
-  <line x1="212" y1="52" x2="252" y2="52" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="254" y="18" width="145" height="68" fill="#fff3e0" stroke="#e65100" stroke-width="1.5" rx="4"/>
-  <text x="326" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">Plugin Selection</text>
-  <text x="326" y="58" text-anchor="middle" font-size="11" fill="#555555">Which plugin to call?</text>
-  <text x="326" y="75" text-anchor="middle" font-size="11" fill="#555555">With what parameters?</text>
-  <line x1="399" y1="52" x2="440" y2="52" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="442" y="18" width="145" height="68" fill="#fce4ec" stroke="#c62828" stroke-width="1.5" rx="4"/>
-  <text x="514" y="40" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">Plugin Execution</text>
-  <text x="514" y="58" text-anchor="middle" font-size="11" fill="#555555">Real action taken</text>
-  <text x="514" y="75" text-anchor="middle" font-size="11" fill="#555555">with real effects</text>
-  <line x1="514" y1="86" x2="514" y2="115" stroke="#555555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="380" y="117" width="270" height="130" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="515" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="#222222">Plugin Capabilities</text>
-  <text x="400" y="158" font-size="12" fill="#333333">• Database access</text>
-  <text x="400" y="176" font-size="12" fill="#333333">• File system operations</text>
-  <text x="400" y="194" font-size="12" fill="#333333">• External API calls</text>
-  <text x="400" y="212" font-size="12" fill="#333333">• Email / messaging</text>
-  <text x="400" y="230" font-size="12" fill="#333333">• Code execution</text>
-</svg>
+![how_llm_plugins_work](../../../../svg/courses/security/working-with-llms-securely/08_insecure_plugin_design/how_llm_plugins_work.svg)
 
 The `LLM` decides **which plugin** to call and **what parameters** to pass
 

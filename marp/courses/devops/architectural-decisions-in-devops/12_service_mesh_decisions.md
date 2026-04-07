@@ -18,43 +18,7 @@
 ---
 ## The Core Problem Service Meshes Solve
 
-<svg width="700" height="320" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Without Mesh: Every Service Handles Networking</text>
-  <rect x="30" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="100" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service A</text>
-  <text x="100" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
-  <text x="100" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
-  <rect x="280" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="350" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service B</text>
-  <text x="350" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
-  <text x="350" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
-  <rect x="530" y="50" width="140" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="5"/>
-  <text x="600" y="80" text-anchor="middle" font-size="12" font-weight="bold">Service C</text>
-  <text x="600" y="100" text-anchor="middle" font-size="10" fill="#555">retry, TLS, LB,</text>
-  <text x="600" y="115" text-anchor="middle" font-size="10" fill="#555">circuit breaker</text>
-  <line x1="170" y1="90" x2="278" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="420" y1="90" x2="528" y2="90" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="350" y="175" text-anchor="middle" font-size="15" font-weight="bold" fill="#388e3c">With Mesh: Networking Handled by Infrastructure</text>
-  <rect x="50" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="100" y="230" text-anchor="middle" font-size="12">Service A</text>
-  <rect x="50" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="100" y="280" text-anchor="middle" font-size="10">Proxy</text>
-  <rect x="300" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="350" y="230" text-anchor="middle" font-size="12">Service B</text>
-  <rect x="300" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="350" y="280" text-anchor="middle" font-size="10">Proxy</text>
-  <rect x="550" y="200" width="100" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="600" y="230" text-anchor="middle" font-size="12">Service C</text>
-  <rect x="550" y="260" width="100" height="30" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="600" y="280" text-anchor="middle" font-size="10">Proxy</text>
-  <line x1="150" y1="275" x2="298" y2="275" stroke="#1976d2" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="400" y1="275" x2="548" y2="275" stroke="#1976d2" stroke-width="2" marker-end="url(#arr)"/>
-</svg>
+![the_core_problem_service_meshes_solve](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/the_core_problem_service_meshes_solve.svg)
 
 ---
 ## When is a Service Mesh Warranted
@@ -129,39 +93,7 @@
 ---
 ## Service Mesh Architecture Overview
 
-<svg width="700" height="350" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="50" y="10" width="600" height="50" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" rx="5"/>
-  <text x="350" y="42" text-anchor="middle" font-size="14" font-weight="bold" fill="#3f51b5">Control Plane (istiod / Linkerd control plane)</text>
-  <rect x="50" y="90" width="600" height="240" fill="#f5f5f5" stroke="#999" stroke-width="1" rx="5" stroke-dasharray="5,5"/>
-  <text x="350" y="110" text-anchor="middle" font-size="13" fill="#666">Data Plane</text>
-  <rect x="80" y="130" width="110" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="135" y="160" text-anchor="middle" font-size="11">Service A</text>
-  <rect x="80" y="190" width="110" height="35" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="135" y="212" text-anchor="middle" font-size="10">Envoy Proxy</text>
-  <rect x="295" y="130" width="110" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="350" y="160" text-anchor="middle" font-size="11">Service B</text>
-  <rect x="295" y="190" width="110" height="35" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="350" y="212" text-anchor="middle" font-size="10">Envoy Proxy</text>
-  <rect x="510" y="130" width="110" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="565" y="160" text-anchor="middle" font-size="11">Service C</text>
-  <rect x="510" y="190" width="110" height="35" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="565" y="212" text-anchor="middle" font-size="10">Envoy Proxy</text>
-  <line x1="190" y1="207" x2="293" y2="207" stroke="#1976d2" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="405" y1="207" x2="508" y2="207" stroke="#1976d2" stroke-width="2" marker-end="url(#arr2)"/>
-  <line x1="135" y1="190" x2="135" y2="60" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
-  <line x1="350" y1="190" x2="350" y2="60" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
-  <line x1="565" y1="190" x2="565" y2="60" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
-  <text x="350" y="260" text-anchor="middle" font-size="11" fill="#1976d2">--- mTLS encrypted traffic ---</text>
-  <text x="80" y="310" font-size="10" fill="#3f51b5">Config push (xDS)</text>
-  <text x="320" y="310" font-size="10" fill="#1976d2">Data traffic (mTLS)</text>
-  <line x1="70" y1="295" x2="70" y2="280" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="310" y1="295" x2="310" y2="280" stroke="#1976d2" stroke-width="2"/>
-</svg>
+![service_mesh_architecture_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/service_mesh_architecture_overview.svg)
 
 ---
 ## Control Plane vs Data Plane
@@ -182,31 +114,7 @@
 ---
 ## Sidecar Proxy Pattern
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr3" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Sidecar Proxy Pattern (per Pod)</text>
-  <rect x="100" y="45" width="500" height="210" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="8"/>
-  <text x="350" y="70" text-anchor="middle" font-size="13" fill="#f57f17">Kubernetes Pod</text>
-  <rect x="140" y="90" width="180" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="230" y="125" text-anchor="middle" font-size="13" font-weight="bold">App Container</text>
-  <text x="230" y="150" text-anchor="middle" font-size="11" fill="#555">Business Logic</text>
-  <text x="230" y="170" text-anchor="middle" font-size="11" fill="#555">Port 8080</text>
-  <rect x="380" y="90" width="180" height="100" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="470" y="125" text-anchor="middle" font-size="13" font-weight="bold">Sidecar Proxy</text>
-  <text x="470" y="150" text-anchor="middle" font-size="11" fill="#555">Envoy / linkerd2-proxy</text>
-  <text x="470" y="170" text-anchor="middle" font-size="11" fill="#555">Port 15001</text>
-  <line x1="320" y1="140" x2="378" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arr3)"/>
-  <text x="350" y="135" text-anchor="middle" font-size="9" fill="#333">localhost</text>
-  <line x1="60" y1="140" x2="138" y2="140" stroke="#388e3c" stroke-width="2" marker-end="url(#arr3)"/>
-  <text x="30" y="135" font-size="10" fill="#388e3c">In</text>
-  <line x1="560" y1="140" x2="660" y2="140" stroke="#1976d2" stroke-width="2" marker-end="url(#arr3)"/>
-  <text x="665" y="135" font-size="10" fill="#1976d2">Out</text>
-  <text x="350" y="230" text-anchor="middle" font-size="11" fill="#666">iptables rules redirect all traffic through the sidecar</text>
-</svg>
+![sidecar_proxy_pattern](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/sidecar_proxy_pattern.svg)
 
 ---
 ## How Sidecar Injection Works
@@ -233,32 +141,7 @@
 ---
 ## Proxyless Mesh Architecture
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr4" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Proxyless Mesh (gRPC xDS)</text>
-  <rect x="50" y="50" width="600" height="50" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" rx="5"/>
-  <text x="350" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#3f51b5">Control Plane (istiod)</text>
-  <rect x="80" y="140" width="160" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="160" y="170" text-anchor="middle" font-size="12" font-weight="bold">Service A</text>
-  <text x="160" y="190" text-anchor="middle" font-size="10" fill="#555">gRPC library with</text>
-  <text x="160" y="205" text-anchor="middle" font-size="10" fill="#555">built-in xDS client</text>
-  <text x="160" y="225" text-anchor="middle" font-size="10" fill="#1976d2">No sidecar needed</text>
-  <rect x="420" y="140" width="160" height="100" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="500" y="170" text-anchor="middle" font-size="12" font-weight="bold">Service B</text>
-  <text x="500" y="190" text-anchor="middle" font-size="10" fill="#555">gRPC library with</text>
-  <text x="500" y="205" text-anchor="middle" font-size="10" fill="#555">built-in xDS client</text>
-  <text x="500" y="225" text-anchor="middle" font-size="10" fill="#1976d2">No sidecar needed</text>
-  <line x1="240" y1="190" x2="418" y2="190" stroke="#388e3c" stroke-width="2" marker-end="url(#arr4)"/>
-  <text x="330" y="183" text-anchor="middle" font-size="10" fill="#388e3c">Direct gRPC call</text>
-  <line x1="160" y1="140" x2="160" y2="100" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr4)"/>
-  <line x1="500" y1="140" x2="500" y2="100" stroke="#3f51b5" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr4)"/>
-  <text x="90" y="125" font-size="9" fill="#3f51b5">xDS config</text>
-  <text x="440" y="125" font-size="9" fill="#3f51b5">xDS config</text>
-</svg>
+![proxyless_mesh_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/proxyless_mesh_architecture.svg)
 
 ---
 ## Proxyless Mesh: How It Works
@@ -300,33 +183,7 @@
 ---
 ## mTLS in the Service Mesh
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">mTLS Handshake Between Proxies</text>
-  <rect x="50" y="50" width="130" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="115" y="80" text-anchor="middle" font-size="12">Service A</text>
-  <rect x="50" y="110" width="130" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="115" y="135" text-anchor="middle" font-size="11">Proxy A</text>
-  <rect x="520" y="50" width="130" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="585" y="80" text-anchor="middle" font-size="12">Service B</text>
-  <rect x="520" y="110" width="130" height="40" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="3"/>
-  <text x="585" y="135" text-anchor="middle" font-size="11">Proxy B</text>
-  <line x1="180" y1="120" x2="518" y2="120" stroke="#1976d2" stroke-width="2" marker-end="url(#arr5)"/>
-  <text x="350" y="115" text-anchor="middle" font-size="10" fill="#1976d2">1. ClientHello + client cert</text>
-  <line x1="518" y1="135" x2="180" y2="135" stroke="#388e3c" stroke-width="2" marker-end="url(#arr5)"/>
-  <text x="350" y="155" text-anchor="middle" font-size="10" fill="#388e3c">2. ServerHello + server cert</text>
-  <line x1="180" y1="170" x2="518" y2="170" stroke="#1976d2" stroke-width="2" marker-end="url(#arr5)"/>
-  <text x="350" y="185" text-anchor="middle" font-size="10" fill="#1976d2">3. Certificate verification (both sides)</text>
-  <line x1="180" y1="200" x2="518" y2="200" stroke="#e65100" stroke-width="3" marker-end="url(#arr5)"/>
-  <line x1="518" y1="210" x2="180" y2="210" stroke="#e65100" stroke-width="3" marker-end="url(#arr5)"/>
-  <text x="350" y="230" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">4. Encrypted application data</text>
-  <rect x="200" y="250" width="300" height="35" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="5"/>
-  <text x="350" y="272" text-anchor="middle" font-size="10" fill="#e65100">Certificates auto-rotated by control plane CA</text>
-</svg>
+![mtls_in_the_service_mesh](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mtls_in_the_service_mesh.svg)
 
 ---
 ## How mTLS Works in Practice
@@ -396,30 +253,7 @@ spec:
 ---
 ## Traffic Splitting for Canary Deployments
 
-<svg width="700" height="280" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Canary Traffic Splitting (90/10)</text>
-  <rect x="50" y="100" width="120" height="50" fill="#e8eaf6" stroke="#3f51b5" stroke-width="2" rx="5"/>
-  <text x="110" y="130" text-anchor="middle" font-size="12">Incoming</text>
-  <text x="110" y="145" text-anchor="middle" font-size="12">Traffic</text>
-  <rect x="250" y="100" width="120" height="50" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="310" y="130" text-anchor="middle" font-size="12">Mesh Proxy</text>
-  <rect x="500" y="50" width="150" height="50" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="5"/>
-  <text x="575" y="72" text-anchor="middle" font-size="12" font-weight="bold">v1 (stable)</text>
-  <text x="575" y="90" text-anchor="middle" font-size="11" fill="#388e3c">90% traffic</text>
-  <rect x="500" y="170" width="150" height="50" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="5"/>
-  <text x="575" y="192" text-anchor="middle" font-size="12" font-weight="bold">v2 (canary)</text>
-  <text x="575" y="210" text-anchor="middle" font-size="11" fill="#f57f17">10% traffic</text>
-  <line x1="170" y1="125" x2="248" y2="125" stroke="#333" stroke-width="2" marker-end="url(#arr6)"/>
-  <line x1="370" y1="110" x2="498" y2="80" stroke="#388e3c" stroke-width="3" marker-end="url(#arr6)"/>
-  <line x1="370" y1="140" x2="498" y2="190" stroke="#f9a825" stroke-width="2" marker-end="url(#arr6)"/>
-  <text x="440" y="80" text-anchor="middle" font-size="11" fill="#388e3c">90%</text>
-  <text x="440" y="175" text-anchor="middle" font-size="11" fill="#f57f17">10%</text>
-</svg>
+![traffic_splitting_for_canary_deployments](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/traffic_splitting_for_canary_deployments.svg)
 
 ---
 ## Traffic Splitting Configuration
@@ -471,38 +305,7 @@ spec:
 ---
 ## Observability Through the Mesh
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <marker id="arr7" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <polygon points="0 0, 10 3, 0 6" fill="#333"/>
-    </marker>
-  </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Three Pillars of Mesh Observability</text>
-  <rect x="50" y="50" width="180" height="120" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="8"/>
-  <text x="140" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#388e3c">Metrics</text>
-  <text x="140" y="100" text-anchor="middle" font-size="10">Request rate</text>
-  <text x="140" y="115" text-anchor="middle" font-size="10">Error rate</text>
-  <text x="140" y="130" text-anchor="middle" font-size="10">Latency (p50/p99)</text>
-  <text x="140" y="145" text-anchor="middle" font-size="10">Connection count</text>
-  <rect x="260" y="50" width="180" height="120" fill="#bbdefb" stroke="#1976d2" stroke-width="2" rx="8"/>
-  <text x="350" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#1976d2">Traces</text>
-  <text x="350" y="100" text-anchor="middle" font-size="10">Distributed tracing</text>
-  <text x="350" y="115" text-anchor="middle" font-size="10">Request flow</text>
-  <text x="350" y="130" text-anchor="middle" font-size="10">Latency breakdown</text>
-  <text x="350" y="145" text-anchor="middle" font-size="10">Span correlation</text>
-  <rect x="470" y="50" width="180" height="120" fill="#fff9c4" stroke="#f9a825" stroke-width="2" rx="8"/>
-  <text x="560" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#f57f17">Logs</text>
-  <text x="560" y="100" text-anchor="middle" font-size="10">Access logs</text>
-  <text x="560" y="115" text-anchor="middle" font-size="10">Error details</text>
-  <text x="560" y="130" text-anchor="middle" font-size="10">Request metadata</text>
-  <text x="560" y="145" text-anchor="middle" font-size="10">Proxy diagnostics</text>
-  <rect x="150" y="210" width="400" height="60" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8"/>
-  <text x="350" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="#7b1fa2">Dashboards and Alerting</text>
-  <text x="350" y="255" text-anchor="middle" font-size="11" fill="#7b1fa2">Grafana / Kiali / Jaeger / Prometheus</text>
-  <line x1="140" y1="170" x2="250" y2="210" stroke="#333" stroke-width="1" marker-end="url(#arr7)"/>
-  <line x1="350" y1="170" x2="350" y2="208" stroke="#333" stroke-width="1" marker-end="url(#arr7)"/>
-  <line x1="560" y1="170" x2="450" y2="210" stroke="#333" stroke-width="1" marker-end="url(#arr7)"/>
-</svg>
+![observability_through_the_mesh](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/observability_through_the_mesh.svg)
 
 ---
 ## Metrics and Distributed Tracing
@@ -595,28 +398,7 @@ istioctl analyze --namespace production
 ---
 ## Mesh vs No-Mesh Decision Matrix
 
-<svg width="700" height="300" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold">Decision Matrix: Mesh Adoption</text>
-  <rect x="50" y="45" width="300" height="35" fill="#c8e6c9" stroke="#388e3c" stroke-width="2" rx="3"/>
-  <text x="200" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#388e3c">Adopt a Service Mesh</text>
-  <rect x="380" y="45" width="280" height="35" fill="#ffcdd2" stroke="#d32f2f" stroke-width="2" rx="3"/>
-  <text x="520" y="68" text-anchor="middle" font-size="12" font-weight="bold" fill="#d32f2f">Skip the Mesh</text>
-  <text x="200" y="105" text-anchor="middle" font-size="11">10+ microservices</text>
-  <text x="520" y="105" text-anchor="middle" font-size="11">Fewer than 5 services</text>
-  <text x="200" y="130" text-anchor="middle" font-size="11">Multi-team ownership</text>
-  <text x="520" y="130" text-anchor="middle" font-size="11">Single team</text>
-  <text x="200" y="155" text-anchor="middle" font-size="11">Compliance requires mTLS</text>
-  <text x="520" y="155" text-anchor="middle" font-size="11">No encryption mandate</text>
-  <text x="200" y="180" text-anchor="middle" font-size="11">Need canary/blue-green</text>
-  <text x="520" y="180" text-anchor="middle" font-size="11">Simple rolling updates suffice</text>
-  <text x="200" y="205" text-anchor="middle" font-size="11">Cross-service observability needed</text>
-  <text x="520" y="205" text-anchor="middle" font-size="11">Basic logging is enough</text>
-  <text x="200" y="230" text-anchor="middle" font-size="11">Polyglot service stack</text>
-  <text x="520" y="230" text-anchor="middle" font-size="11">Homogeneous stack</text>
-  <text x="200" y="255" text-anchor="middle" font-size="11">Dedicated platform team</text>
-  <text x="520" y="255" text-anchor="middle" font-size="11">Small ops team</text>
-  <line x1="360" y1="85" x2="360" y2="265" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-</svg>
+![mesh_vs_no_mesh_decision_matrix](../../../../svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mesh_vs_no_mesh_decision_matrix.svg)
 
 ---
 ## Choosing Between Istio and Linkerd

@@ -1,0 +1,24 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="20" y="10" width="270" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="25" text-anchor="middle" font-size="10" fill="#c62828">let s1 = String::from("hi"); let s2 = s1;</text>
+  <text x="155" y="42" text-anchor="middle" font-size="10" fill="#c62828">println!("{}", s1); // Error: value moved</text>
+  <rect x="310" y="10" width="270" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="25" text-anchor="middle" font-size="10" fill="#2e7d32">let s1 = String::from("hi");</text>
+  <text x="445" y="42" text-anchor="middle" font-size="10" fill="#2e7d32">let s2 = s1.clone(); // OK: deep copy</text>
+  <rect x="20" y="65" width="270" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="80" text-anchor="middle" font-size="10" fill="#c62828">let mut s = String::new();</text>
+  <text x="155" y="97" text-anchor="middle" font-size="10" fill="#c62828">let r1 = &amp;mut s; let r2 = &amp;mut s; // Error</text>
+  <rect x="310" y="65" width="270" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="80" text-anchor="middle" font-size="10" fill="#2e7d32">Use r1, then drop scope;</text>
+  <text x="445" y="97" text-anchor="middle" font-size="10" fill="#2e7d32">then create r2 // OK</text>
+  <rect x="20" y="120" width="270" height="40" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="155" y="135" text-anchor="middle" font-size="10" fill="#c62828">Missing semicolons / wrong return</text>
+  <text x="155" y="152" text-anchor="middle" font-size="10" fill="#c62828">fn f() -> i32 { 5; } // returns ()</text>
+  <rect x="310" y="120" width="270" height="40" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
+  <text x="445" y="135" text-anchor="middle" font-size="10" fill="#2e7d32">Implicit return (no semicolon)</text>
+  <text x="445" y="152" text-anchor="middle" font-size="10" fill="#2e7d32">fn f() -> i32 { 5 } // returns 5</text>
+  <rect x="120" y="172" width="160" height="22" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="200" y="187" text-anchor="middle" font-size="10" font-weight="bold">Common Mistakes</text>
+  <rect x="320" y="172" width="160" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="400" y="187" text-anchor="middle" font-size="10" font-weight="bold">Correct Patterns</text>
+</svg>

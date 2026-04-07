@@ -33,30 +33,7 @@ Client code must handle leaves and composites differently
 
 ## Composite Structure
 
-<svg width="500" height="280" xmlns="http://www.w3.org/2000/svg">
-  <rect x="175" y="10" width="150" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
-  <text x="250" y="35" text-anchor="middle" font-size="13" font-weight="bold">Component</text>
-  <text x="250" y="55" text-anchor="middle" font-size="11" font-style="italic">+ operation()</text>
-
-  <rect x="50" y="150" width="130" height="50" fill="#e8f5e8" stroke="#388e3c" stroke-width="2"/>
-  <text x="115" y="180" text-anchor="middle" font-size="12">Leaf</text>
-
-  <rect x="310" y="150" width="150" height="50" fill="#fff3e0" stroke="#f57c00" stroke-width="2"/>
-  <text x="385" y="170" text-anchor="middle" font-size="12">Composite</text>
-  <text x="385" y="188" text-anchor="middle" font-size="10">children: Component[]</text>
-
-  <line x1="115" y1="150" x2="220" y2="70" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-  <line x1="385" y1="150" x2="280" y2="70" stroke="#333" stroke-width="1.5" stroke-dasharray="5,5"/>
-
-  <path d="M 385 200 C 385 250, 450 250, 450 70" stroke="#333" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <text x="440" y="230" font-size="10">has children</text>
-
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![composite_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/09_composite/composite_structure.svg)
 
 ---
 

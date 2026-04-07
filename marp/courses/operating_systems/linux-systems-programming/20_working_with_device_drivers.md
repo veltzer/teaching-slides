@@ -38,21 +38,7 @@
 
 ## Device File Types
 
-<svg viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Device Types</text>
-
-  <rect x="50" y="50" width="150" height="80" fill="lightblue" stroke="black"/>
-  <text x="125" y="70" font-size="12" font-weight="bold" text-anchor="middle">Character Devices</text>
-  <text x="125" y="90" font-size="10" text-anchor="middle">• Stream of bytes</text>
-  <text x="125" y="105" font-size="10" text-anchor="middle">• No buffering</text>
-  <text x="125" y="120" font-size="10" text-anchor="middle">• Serial ports, terminals</text>
-
-  <rect x="300" y="50" width="150" height="80" fill="lightgreen" stroke="black"/>
-  <text x="375" y="70" font-size="12" font-weight="bold" text-anchor="middle">Block Devices</text>
-  <text x="375" y="90" font-size="10" text-anchor="middle">• Fixed-size blocks</text>
-  <text x="375" y="105" font-size="10" text-anchor="middle">• Random access</text>
-  <text x="375" y="120" font-size="10" text-anchor="middle">• Disks, filesystems</text>
-</svg>
+![device_file_types](../../../../svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_file_types.svg)
 
 ---
 
@@ -254,32 +240,7 @@ if (gpio != MAP_FAILED) {
 
 ## Device Driver Communication
 
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Driver Communication</text>
-
-  <rect x="50" y="50" width="100" height="40" fill="lightblue" stroke="black"/>
-  <text x="100" y="75" font-size="12" text-anchor="middle">User Process</text>
-
-  <rect x="200" y="120" width="100" height="40" fill="yellow" stroke="black"/>
-  <text x="250" y="145" font-size="12" text-anchor="middle">System Call</text>
-
-  <rect x="350" y="50" width="100" height="40" fill="lightgreen" stroke="black"/>
-  <text x="400" y="75" font-size="12" text-anchor="middle">Kernel Driver</text>
-
-  <rect x="350" y="200" width="100" height="40" fill="lightcoral" stroke="black"/>
-  <text x="400" y="225" font-size="12" text-anchor="middle">Hardware</text>
-
-  <path d="M 150 70 L 200 140" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 300 140 L 350 70" stroke="black" marker-end="url(#arrowhead)"/>
-  <path d="M 400 90 L 400 200" stroke="black" marker-end="url(#arrowhead)"/>
-
-  <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7"
-            refX="0" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="black"/>
-    </marker>
-  </defs>
-</svg>
+![device_driver_communication](../../../../svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_driver_communication.svg)
 
 ---
 

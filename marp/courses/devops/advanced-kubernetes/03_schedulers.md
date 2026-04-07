@@ -17,36 +17,7 @@ Advanced Kubernetes Course - Day 1, Module 3
 
 ## The Scheduling Pipeline
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="420" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <text x="330" y="28" text-anchor="middle" font-size="13" fill="#222">New Pod Created (spec.nodeName is empty)</text>
-  <line x1="330" y1="33" x2="330" y2="58" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="220" y="58" width="220" height="56" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="81" text-anchor="middle" font-size="14" fill="#222">Scheduling Queue</text>
-  <text x="330" y="98" text-anchor="middle" font-size="12" fill="#555"></text>
-  <line x1="330" y1="114" x2="330" y2="140" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="120" y="140" width="190" height="56" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="215" y="164" text-anchor="middle" font-size="14" fill="#222">Filter Phase</text>
-  <text x="215" y="181" text-anchor="middle" font-size="11" fill="#555">(Predicates)</text>
-  <line x1="310" y1="168" x2="355" y2="168" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="355" y="140" width="195" height="56" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="452" y="164" text-anchor="middle" font-size="14" fill="#222">Feasible Nodes</text>
-  <text x="452" y="181" text-anchor="middle" font-size="11" fill="#555">(candidates)</text>
-  <line x1="452" y1="196" x2="452" y2="222" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="355" y="222" width="195" height="56" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="452" y="246" text-anchor="middle" font-size="14" fill="#222">Score Phase</text>
-  <text x="452" y="263" text-anchor="middle" font-size="11" fill="#555">(Priorities)</text>
-  <line x1="452" y1="278" x2="452" y2="304" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="355" y="304" width="195" height="56" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="452" y="328" text-anchor="middle" font-size="14" fill="#222">Bind Phase</text>
-  <text x="452" y="345" text-anchor="middle" font-size="11" fill="#555">(Assign Node)</text>
-</svg>
+![the_scheduling_pipeline](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/the_scheduling_pipeline.svg)
 
 ---
 
@@ -179,25 +150,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="20" y="20" width="260" height="110" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="150" y="14" text-anchor="middle" font-size="12" fill="#555">Node 1</text>
-  <rect x="40" y="40" width="80" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="80" y="70" text-anchor="middle" font-size="13" fill="#222">Redis</text>
-  <rect x="150" y="40" width="100" height="50" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="200" y="70" text-anchor="middle" font-size="13" fill="#222">Web App</text>
-  <rect x="360" y="20" width="260" height="110" rx="4" fill="#f5f5f5" stroke="#333" stroke-width="1.5"/>
-  <text x="490" y="14" text-anchor="middle" font-size="12" fill="#555">Node 2</text>
-  <text x="490" y="80" text-anchor="middle" font-size="13" fill="#aaa">(empty)</text>
-  <text x="320" y="158" text-anchor="middle" font-size="12" fill="#444">Web App has podAffinity to Redis → scheduled to same node</text>
-</svg>
+![pod_affinity_co_locate_pods](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
 
 ---
 
@@ -219,28 +172,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="160" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <rect x="20" y="20" width="195" height="95" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="117" y="14" text-anchor="middle" font-size="12" fill="#555">Node 1</text>
-  <rect x="50" y="38" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="115" y="68" text-anchor="middle" font-size="13" fill="#222">Web-1</text>
-  <rect x="235" y="20" width="195" height="95" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="332" y="14" text-anchor="middle" font-size="12" fill="#555">Node 2</text>
-  <rect x="265" y="38" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="68" text-anchor="middle" font-size="13" fill="#222">Web-2</text>
-  <rect x="450" y="20" width="195" height="95" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="547" y="14" text-anchor="middle" font-size="12" fill="#555">Node 3</text>
-  <rect x="480" y="38" width="130" height="50" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="545" y="68" text-anchor="middle" font-size="13" fill="#222">Web-3</text>
-  <text x="330" y="140" text-anchor="middle" font-size="12" fill="#444">One web pod per node (anti-affinity on hostname)</text>
-</svg>
+![pod_anti_affinity_spread_pods](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/pod_anti_affinity_spread_pods.svg)
 
 ---
 
@@ -326,41 +258,7 @@ spec:
 
 ## Topology Spread Visualization
 
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="310" font-family="sans-serif">
-  <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>  <text x="330" y="22" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">maxSkew: 1, topologyKey: zone</text>
-  <rect x="30" y="35" width="175" height="130" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="117" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone A</text>
-  <rect x="50" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="117" y="75" text-anchor="middle" font-size="13" fill="#222">web-1</text>
-  <rect x="50" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="117" y="127" text-anchor="middle" font-size="13" fill="#222">web-4</text>
-  <text x="117" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
-  <rect x="235" y="35" width="175" height="130" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="322" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone B</text>
-  <rect x="255" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="322" y="75" text-anchor="middle" font-size="13" fill="#222">web-2</text>
-  <rect x="255" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="322" y="127" text-anchor="middle" font-size="13" fill="#222">web-5</text>
-  <text x="322" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
-  <rect x="440" y="35" width="175" height="130" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="527" y="28" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">Zone C</text>
-  <rect x="460" y="50" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="527" y="75" text-anchor="middle" font-size="13" fill="#222">web-3</text>
-  <rect x="460" y="102" width="135" height="40" rx="4" fill="#fff" stroke="#777" stroke-width="1.5"/>
-  <text x="527" y="127" text-anchor="middle" font-size="13" fill="#222">web-6</text>
-  <text x="527" y="185" text-anchor="middle" font-size="12" fill="#555">2 pods</text>
-  <text x="330" y="218" text-anchor="middle" font-size="12" fill="#333">Balanced! maxSkew=1 means difference between any two zones ≤ 1.</text>
-  <rect x="80" y="232" width="490" height="58" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="325" y="253" text-anchor="middle" font-size="12" fill="#b71c1c">Violation example: Zone A = 2 pods, Zone C = 0 pods</text>
-  <text x="325" y="272" text-anchor="middle" font-size="12" fill="#b71c1c">skew = 2 − 0 = 2 > maxSkew(1) → VIOLATION</text>
-</svg>
+![topology_spread_visualization](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/topology_spread_visualization.svg)
 
 ---
 

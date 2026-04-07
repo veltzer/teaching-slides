@@ -358,28 +358,7 @@ filefrag /path/to/file       # ext4 fragmentation
 ---
 ## Backup Strategies
 
-<svg width="650" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="50" width="120" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="70" text-anchor="middle" font-size="10">Full Backup</text>
-  <text x="70" y="85" text-anchor="middle" font-size="9">(Weekly)</text>
-  <rect x="170" y="50" width="120" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="230" y="70" text-anchor="middle" font-size="10">Differential</text>
-  <text x="230" y="85" text-anchor="middle" font-size="9">(Since last full)</text>
-  <rect x="330" y="50" width="120" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="390" y="70" text-anchor="middle" font-size="10">Incremental</text>
-  <text x="390" y="85" text-anchor="middle" font-size="9">(Since last any)</text>
-  <rect x="490" y="50" width="120" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="550" y="70" text-anchor="middle" font-size="10">Snapshot</text>
-  <text x="550" y="85" text-anchor="middle" font-size="9">(Point-in-time)</text>
-  <line x1="130" y1="75" x2="170" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr02a)"/>
-  <line x1="290" y1="75" x2="330" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr02a)"/>
-  <line x1="450" y1="75" x2="490" y2="75" stroke="#333" stroke-width="2" marker-end="url(#arr02a)"/>
-  <defs>
-    <marker id="arr02a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-</svg>
+![backup_strategies](../../../../svg/courses/operating_systems/linux-system-administration/04_storage_management/backup_strategies.svg)
 
 - **Full**: complete copy, slow but simple to restore
 - **Differential**: changes since last full, moderate speed
@@ -909,26 +888,7 @@ lsblk --discard
 
 Multipath I/O (`dm-multipath`) provides redundant paths to SAN storage for high availability.
 
-<svg width="600" height="160" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="50" width="100" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="70" y="80" text-anchor="middle" font-size="10">Server</text>
-  <rect x="200" y="10" width="80" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="240" y="32" text-anchor="middle" font-size="9">HBA 1</text>
-  <rect x="200" y="60" width="80" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="240" y="82" text-anchor="middle" font-size="9">HBA 2</text>
-  <rect x="350" y="10" width="80" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="390" y="32" text-anchor="middle" font-size="9">Switch A</text>
-  <rect x="350" y="60" width="80" height="35" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="390" y="82" text-anchor="middle" font-size="9">Switch B</text>
-  <rect x="490" y="30" width="100" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="60" text-anchor="middle" font-size="10">SAN LUN</text>
-  <line x1="120" y1="65" x2="200" y2="27" stroke="#333" stroke-width="1"/>
-  <line x1="120" y1="85" x2="200" y2="77" stroke="#333" stroke-width="1"/>
-  <line x1="280" y1="27" x2="350" y2="27" stroke="#333" stroke-width="1"/>
-  <line x1="280" y1="77" x2="350" y2="77" stroke="#333" stroke-width="1"/>
-  <line x1="430" y1="27" x2="490" y2="50" stroke="#333" stroke-width="1"/>
-  <line x1="430" y1="77" x2="490" y2="60" stroke="#333" stroke-width="1"/>
-</svg>
+![multipath_i_o](../../../../svg/courses/operating_systems/linux-system-administration/04_storage_management/multipath_i_o.svg)
 
 ```bash
 # Install multipath tools

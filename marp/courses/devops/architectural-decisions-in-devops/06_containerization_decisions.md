@@ -33,35 +33,7 @@
 
 ## Containerization Decision Matrix
 
-<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Should You Containerize?</text>
-  <rect x="250" y="40" width="200" height="40" fill="#ffd54f" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="65" text-anchor="middle" font-size="12">New workload?</text>
-  <line x1="300" y1="80" x2="150" y2="120" stroke="#333" stroke-width="2"/>
-  <line x1="400" y1="80" x2="550" y2="120" stroke="#333" stroke-width="2"/>
-  <text x="210" y="100" font-size="11" fill="#333">No</text>
-  <text x="470" y="100" font-size="11" fill="#333">Yes</text>
-  <rect x="50" y="120" width="200" height="40" fill="#ffd54f" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="150" y="145" text-anchor="middle" font-size="12">Worth refactoring?</text>
-  <rect x="450" y="120" width="200" height="40" fill="#ffd54f" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="550" y="145" text-anchor="middle" font-size="12">Needs bare metal?</text>
-  <line x1="100" y1="160" x2="60" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="200" y1="160" x2="240" y2="200" stroke="#333" stroke-width="2"/>
-  <text x="65" y="185" font-size="11" fill="#333">No</text>
-  <text x="220" y="185" font-size="11" fill="#333">Yes</text>
-  <line x1="500" y1="160" x2="460" y2="200" stroke="#333" stroke-width="2"/>
-  <line x1="600" y1="160" x2="640" y2="200" stroke="#333" stroke-width="2"/>
-  <text x="465" y="185" font-size="11" fill="#333">No</text>
-  <text x="620" y="185" font-size="11" fill="#333">Yes</text>
-  <rect x="10" y="200" width="100" height="35" fill="#ef5350" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="60" y="222" text-anchor="middle" font-size="11" fill="white">Keep as-is</text>
-  <rect x="190" y="200" width="100" height="35" fill="#66bb6a" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="240" y="222" text-anchor="middle" font-size="11" fill="white">Containerize</text>
-  <rect x="410" y="200" width="100" height="35" fill="#66bb6a" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="460" y="222" text-anchor="middle" font-size="11" fill="white">Containerize</text>
-  <rect x="590" y="200" width="100" height="35" fill="#ef5350" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="640" y="222" text-anchor="middle" font-size="11" fill="white">Run on host</text>
-</svg>
+![containerization_decision_matrix](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/containerization_decision_matrix.svg)
 
 ---
 
@@ -108,37 +80,7 @@ CMD ["node", "src/server.js"]
 
 ## Overhead and Complexity Costs
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Container Overhead Spectrum</text>
-  <defs>
-    <linearGradient id="grad_overhead" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#66bb6a"/>
-      <stop offset="50%" style="stop-color:#ffd54f"/>
-      <stop offset="100%" style="stop-color:#ef5350"/>
-    </linearGradient>
-  </defs>
-  <rect x="50" y="50" width="600" height="30" fill="url(#grad_overhead)" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="50" y="100" font-size="12" fill="#333">Low overhead</text>
-  <text x="580" y="100" font-size="12" fill="#333">High overhead</text>
-  <line x1="100" y1="120" x2="100" y2="145" stroke="#333" stroke-width="2"/>
-  <text x="100" y="160" text-anchor="middle" font-size="11">Stateless API</text>
-  <line x1="250" y1="120" x2="250" y2="145" stroke="#333" stroke-width="2"/>
-  <text x="250" y="160" text-anchor="middle" font-size="11">Web App</text>
-  <line x1="400" y1="120" x2="400" y2="145" stroke="#333" stroke-width="2"/>
-  <text x="400" y="160" text-anchor="middle" font-size="11">Database</text>
-  <line x1="520" y1="120" x2="520" y2="145" stroke="#333" stroke-width="2"/>
-  <text x="520" y="160" text-anchor="middle" font-size="11">GPU workload</text>
-  <line x1="620" y1="120" x2="620" y2="145" stroke="#333" stroke-width="2"/>
-  <text x="620" y="160" text-anchor="middle" font-size="11">Real-time sys</text>
-  <rect x="50" y="190" width="280" height="80" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="190" y="215" text-anchor="middle" font-size="12" font-weight="bold">Worth containerizing</text>
-  <text x="190" y="235" text-anchor="middle" font-size="11">Benefits outweigh costs</text>
-  <text x="190" y="255" text-anchor="middle" font-size="11">Scaling, portability, isolation</text>
-  <rect x="370" y="190" width="280" height="80" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="510" y="215" text-anchor="middle" font-size="12" font-weight="bold">Evaluate carefully</text>
-  <text x="510" y="235" text-anchor="middle" font-size="11">Complexity may not justify</text>
-  <text x="510" y="255" text-anchor="middle" font-size="11">Consider alternatives</text>
-</svg>
+![overhead_and_complexity_costs](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/overhead_and_complexity_costs.svg)
 
 ---
 
@@ -154,21 +96,7 @@ CMD ["node", "src/server.js"]
 
 ## Container Runtime Landscape
 
-<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Container Runtime Stack</text>
-  <rect x="100" y="240" width="500" height="50" fill="#90a4ae" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="270" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Linux Kernel (cgroups, namespaces, seccomp)</text>
-  <rect x="100" y="180" width="500" height="50" fill="#78909c" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="210" text-anchor="middle" font-size="14" fill="white" font-weight="bold">Low-level Runtime (runc, crun, gVisor)</text>
-  <rect x="100" y="120" width="500" height="50" fill="#546e7a" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="350" y="150" text-anchor="middle" font-size="14" fill="white" font-weight="bold">High-level Runtime (containerd, CRI-O)</text>
-  <rect x="150" y="50" width="150" height="50" fill="#42a5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="225" y="80" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Docker</text>
-  <rect x="400" y="50" width="150" height="50" fill="#66bb6a" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="475" y="80" text-anchor="middle" font-size="13" fill="white" font-weight="bold">Kubernetes</text>
-  <line x1="225" y1="100" x2="225" y2="120" stroke="#333" stroke-width="2"/>
-  <line x1="475" y1="100" x2="475" y2="120" stroke="#333" stroke-width="2"/>
-</svg>
+![container_runtime_landscape](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_runtime_landscape.svg)
 
 ---
 
@@ -247,27 +175,7 @@ docker info | grep "containerd"
 
 ## Choosing a Runtime
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Runtime Selection Guide</text>
-  <rect x="50" y="50" width="180" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="140" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Development</text>
-  <text x="140" y="100" text-anchor="middle" font-size="11">Docker Desktop</text>
-  <text x="140" y="118" text-anchor="middle" font-size="11">or Podman</text>
-  <text x="140" y="138" text-anchor="middle" font-size="11">Build + Run + Debug</text>
-  <rect x="260" y="50" width="180" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="350" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Production K8s</text>
-  <text x="350" y="100" text-anchor="middle" font-size="11">containerd</text>
-  <text x="350" y="118" text-anchor="middle" font-size="11">or CRI-O</text>
-  <text x="350" y="138" text-anchor="middle" font-size="11">Lean + Standard</text>
-  <rect x="470" y="50" width="180" height="100" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="560" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">High Security</text>
-  <text x="560" y="100" text-anchor="middle" font-size="11">gVisor or Kata</text>
-  <text x="560" y="118" text-anchor="middle" font-size="11">with containerd</text>
-  <text x="560" y="138" text-anchor="middle" font-size="11">Isolation + Safety</text>
-  <rect x="50" y="190" width="600" height="50" fill="#f5f5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="350" y="210" text-anchor="middle" font-size="12">All runtimes use the same OCI images.</text>
-  <text x="350" y="228" text-anchor="middle" font-size="12">Your Dockerfiles work everywhere.</text>
-</svg>
+![choosing_a_runtime](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/choosing_a_runtime.svg)
 
 ---
 
@@ -333,27 +241,7 @@ docker run --read-only --security-opt \
 
 ## Base Image Strategies Overview
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Base Image Size Comparison</text>
-  <text x="45" y="85" text-anchor="end" font-size="12">Scratch</text>
-  <rect x="50" y="70" width="10" height="25" fill="#4caf50" stroke="#333" stroke-width="1"/>
-  <text x="70" y="88" font-size="11">0 MB</text>
-  <text x="45" y="125" text-anchor="end" font-size="12">Distroless</text>
-  <rect x="50" y="110" width="30" height="25" fill="#66bb6a" stroke="#333" stroke-width="1"/>
-  <text x="90" y="128" font-size="11">~2 MB</text>
-  <text x="45" y="165" text-anchor="end" font-size="12">Alpine</text>
-  <rect x="50" y="150" width="40" height="25" fill="#81c784" stroke="#333" stroke-width="1"/>
-  <text x="100" y="168" font-size="11">~7 MB</text>
-  <text x="45" y="205" text-anchor="end" font-size="12">Debian slim</text>
-  <rect x="50" y="190" width="130" height="25" fill="#ffd54f" stroke="#333" stroke-width="1"/>
-  <text x="190" y="208" font-size="11">~80 MB</text>
-  <text x="45" y="245" text-anchor="end" font-size="12">Ubuntu</text>
-  <rect x="50" y="230" width="180" height="25" fill="#ff9800" stroke="#333" stroke-width="1"/>
-  <text x="240" y="248" font-size="11">~120 MB</text>
-  <text x="45" y="285" text-anchor="end" font-size="12">Full Debian</text>
-  <rect x="50" y="270" width="250" height="25" fill="#ef5350" stroke="#333" stroke-width="1"/>
-  <text x="310" y="288" font-size="11">~180 MB</text>
-</svg>
+![base_image_strategies_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/base_image_strategies_overview.svg)
 
 ---
 
@@ -402,28 +290,7 @@ CMD ["app.jar"]
 
 ## Container Layer Architecture
 
-<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Container Image Layers</text>
-  <rect x="150" y="270" width="400" height="40" fill="#78909c" stroke="#333" stroke-width="2" rx="3"/>
-  <text x="350" y="295" text-anchor="middle" font-size="12" fill="white">Base OS Layer (read-only)</text>
-  <rect x="150" y="220" width="400" height="40" fill="#90a4ae" stroke="#333" stroke-width="2" rx="3"/>
-  <text x="350" y="245" text-anchor="middle" font-size="12" fill="white">Runtime Dependencies (read-only)</text>
-  <rect x="150" y="170" width="400" height="40" fill="#b0bec5" stroke="#333" stroke-width="2" rx="3"/>
-  <text x="350" y="195" text-anchor="middle" font-size="12">Application Libraries (read-only)</text>
-  <rect x="150" y="120" width="400" height="40" fill="#cfd8dc" stroke="#333" stroke-width="2" rx="3"/>
-  <text x="350" y="145" text-anchor="middle" font-size="12">Application Code (read-only)</text>
-  <rect x="150" y="60" width="400" height="40" fill="#e8f5e9" stroke="#66bb6a" stroke-width="2" rx="3" stroke-dasharray="5,3"/>
-  <text x="350" y="85" text-anchor="middle" font-size="12" fill="#2e7d32">Container Writable Layer</text>
-  <text x="120" y="85" text-anchor="end" font-size="11" fill="#2e7d32">R/W</text>
-  <text x="120" y="145" text-anchor="end" font-size="11" fill="#666">R/O</text>
-  <text x="120" y="195" text-anchor="end" font-size="11" fill="#666">R/O</text>
-  <text x="120" y="245" text-anchor="end" font-size="11" fill="#666">R/O</text>
-  <text x="120" y="295" text-anchor="end" font-size="11" fill="#666">R/O</text>
-  <text x="580" y="290" font-size="11" fill="#666">Shared</text>
-  <text x="580" y="240" font-size="11" fill="#666">Shared</text>
-  <text x="580" y="145" font-size="11" fill="#666">Per-image</text>
-  <text x="580" y="85" font-size="11" fill="#2e7d32">Per-container</text>
-</svg>
+![container_layer_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_layer_architecture.svg)
 
 ---
 
@@ -481,37 +348,7 @@ FROM python@sha256:a1b2c3d4e5f6...
 
 ## Multi-Stage Builds: The Concept
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Multi-Stage Build Flow</text>
-  <defs>
-    <marker id="arrow_ms" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="30" y="50" width="200" height="200" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="130" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Stage 1: Build</text>
-  <rect x="50" y="90" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
-  <text x="130" y="107" text-anchor="middle" font-size="11">Full OS + compilers</text>
-  <rect x="50" y="125" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
-  <text x="130" y="142" text-anchor="middle" font-size="11">Source code</text>
-  <rect x="50" y="160" width="160" height="25" fill="#ffe0b2" stroke="#e65100" stroke-width="1" rx="3"/>
-  <text x="130" y="177" text-anchor="middle" font-size="11">Build dependencies</text>
-  <rect x="50" y="195" width="160" height="25" fill="#ffcc80" stroke="#e65100" stroke-width="1" rx="3"/>
-  <text x="130" y="212" text-anchor="middle" font-size="11" font-weight="bold">Compiled artifact</text>
-  <line x1="230" y1="207" x2="290" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrow_ms)"/>
-  <text x="270" y="165" font-size="11" fill="#333">COPY</text>
-  <rect x="300" y="80" width="180" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="390" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">Stage 2: Runtime</text>
-  <rect x="320" y="120" width="140" height="25" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="390" y="137" text-anchor="middle" font-size="11">Minimal base image</text>
-  <rect x="320" y="155" width="140" height="25" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="390" y="172" text-anchor="middle" font-size="11" font-weight="bold">Compiled artifact</text>
-  <line x1="480" y1="155" x2="540" y2="155" stroke="#333" stroke-width="2" marker-end="url(#arrow_ms)"/>
-  <rect x="550" y="110" width="120" height="90" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="610" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">Final Image</text>
-  <text x="610" y="165" text-anchor="middle" font-size="11">Small</text>
-  <text x="610" y="180" text-anchor="middle" font-size="11">Secure</text>
-</svg>
+![multi_stage_builds_the_concept](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/multi_stage_builds_the_concept.svg)
 
 ---
 
@@ -650,30 +487,7 @@ RUN apt-get update && \
 
 ## Layer Optimization
 
-<svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Layer Optimization: Before vs After</text>
-  <rect x="30" y="45" width="300" height="210" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="5"/>
-  <text x="180" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#c62828">Before (5 layers, 450 MB)</text>
-  <rect x="50" y="80" width="260" height="30" fill="#ef9a9a" stroke="#c62828" stroke-width="1" rx="3"/>
-  <text x="180" y="100" text-anchor="middle" font-size="10">RUN apt-get update</text>
-  <rect x="50" y="115" width="260" height="30" fill="#ef9a9a" stroke="#c62828" stroke-width="1" rx="3"/>
-  <text x="180" y="135" text-anchor="middle" font-size="10">RUN apt-get install gcc</text>
-  <rect x="50" y="150" width="260" height="30" fill="#ef9a9a" stroke="#c62828" stroke-width="1" rx="3"/>
-  <text x="180" y="170" text-anchor="middle" font-size="10">RUN pip install deps</text>
-  <rect x="50" y="185" width="260" height="30" fill="#ef9a9a" stroke="#c62828" stroke-width="1" rx="3"/>
-  <text x="180" y="205" text-anchor="middle" font-size="10">RUN apt-get remove gcc</text>
-  <rect x="50" y="220" width="260" height="25" fill="#ef9a9a" stroke="#c62828" stroke-width="1" rx="3"/>
-  <text x="180" y="237" text-anchor="middle" font-size="10">gcc still in earlier layer!</text>
-  <rect x="380" y="45" width="300" height="210" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="5"/>
-  <text x="530" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">After (2 layers, 120 MB)</text>
-  <rect x="400" y="80" width="260" height="80" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="530" y="110" text-anchor="middle" font-size="10">RUN apt-get update &&</text>
-  <text x="530" y="125" text-anchor="middle" font-size="10">apt-get install gcc &&</text>
-  <text x="530" y="140" text-anchor="middle" font-size="10">pip install deps && apt-get remove gcc</text>
-  <rect x="400" y="170" width="260" height="35" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="530" y="192" text-anchor="middle" font-size="10">COPY app /app</text>
-  <text x="530" y="230" text-anchor="middle" font-size="12" fill="#2e7d32">gcc removed in same layer = gone</text>
-</svg>
+![layer_optimization](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/layer_optimization.svg)
 
 ---
 
@@ -715,37 +529,7 @@ cosign verify myregistry.com/myapp:v1.2.3
 
 ## Container Image Lifecycle
 
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold">Image Lifecycle Pipeline</text>
-  <defs>
-    <marker id="arrow_lc" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
-    </marker>
-  </defs>
-  <rect x="20" y="60" width="100" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="70" y="82" text-anchor="middle" font-size="11" font-weight="bold">Code</text>
-  <text x="70" y="98" text-anchor="middle" font-size="10">Commit</text>
-  <line x1="120" y1="85" x2="150" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow_lc)"/>
-  <rect x="155" y="60" width="100" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
-  <text x="205" y="82" text-anchor="middle" font-size="11" font-weight="bold">Build</text>
-  <text x="205" y="98" text-anchor="middle" font-size="10">Multi-stage</text>
-  <line x1="255" y1="85" x2="285" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow_lc)"/>
-  <rect x="290" y="60" width="100" height="50" fill="#fce4ec" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="340" y="82" text-anchor="middle" font-size="11" font-weight="bold">Scan</text>
-  <text x="340" y="98" text-anchor="middle" font-size="10">Trivy/Grype</text>
-  <line x1="390" y1="85" x2="420" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow_lc)"/>
-  <rect x="425" y="60" width="100" height="50" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2" rx="5"/>
-  <text x="475" y="82" text-anchor="middle" font-size="11" font-weight="bold">Sign</text>
-  <text x="475" y="98" text-anchor="middle" font-size="10">Cosign</text>
-  <line x1="525" y1="85" x2="555" y2="85" stroke="#333" stroke-width="2" marker-end="url(#arrow_lc)"/>
-  <rect x="560" y="60" width="110" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="615" y="82" text-anchor="middle" font-size="11" font-weight="bold">Registry</text>
-  <text x="615" y="98" text-anchor="middle" font-size="10">Push + Tag</text>
-  <line x1="615" y1="110" x2="615" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow_lc)"/>
-  <rect x="500" y="150" width="230" height="50" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="5"/>
-  <text x="615" y="172" text-anchor="middle" font-size="11" font-weight="bold">Deploy</text>
-  <text x="615" y="188" text-anchor="middle" font-size="10">K8s / ECS / Nomad</text>
-</svg>
+![container_image_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_image_lifecycle.svg)
 
 ---
 

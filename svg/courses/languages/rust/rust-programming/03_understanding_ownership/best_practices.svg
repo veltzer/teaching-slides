@@ -1,0 +1,22 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="200" y="10" width="200" height="40" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
+  <text x="300" y="35" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Ownership Best Practices</text>
+  <line x1="250" y1="50" x2="120" y2="75" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="50" x2="480" y2="75" stroke="#333" stroke-width="2"/>
+  <line x1="250" y1="50" x2="120" y2="135" stroke="#333" stroke-width="2"/>
+  <line x1="350" y1="50" x2="480" y2="135" stroke="#333" stroke-width="2"/>
+  <rect x="30" y="70" width="180" height="40" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="87" text-anchor="middle" font-size="10" font-weight="bold">Prefer Borrowing</text>
+  <text x="120" y="101" text-anchor="middle" font-size="9">Use &amp;T / &amp;mut T over moves</text>
+  <rect x="390" y="70" width="180" height="40" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="87" text-anchor="middle" font-size="10" font-weight="bold">Clone Sparingly</text>
+  <text x="480" y="101" text-anchor="middle" font-size="9">Only .clone() when needed</text>
+  <rect x="30" y="130" width="180" height="40" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="120" y="147" text-anchor="middle" font-size="10" font-weight="bold">Small Scopes</text>
+  <text x="120" y="161" text-anchor="middle" font-size="9">Drop values early with { }</text>
+  <rect x="390" y="130" width="180" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
+  <text x="480" y="147" text-anchor="middle" font-size="10" font-weight="bold">Use Copy Types</text>
+  <text x="480" y="161" text-anchor="middle" font-size="9">i32, bool, f64 copy cheaply</text>
+  <rect x="150" y="180" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
+  <text x="300" y="193" text-anchor="middle" font-size="9">Return owned values when callers need ownership of data</text>
+</svg>
