@@ -9,10 +9,8 @@
 ## **Why Port to Python 3?**
 
 * **Python 2 End of Life (EOL):** January 1, 2020. No more official support, bug fixes, or security updates.
-    * ![why_port_to_python_3_1](svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_1.svg)
 * **Vibrant Python 3 Ecosystem:** Most new libraries and frameworks are Python 3 only.
 * **Modern Language Features:** Python 3 offers significant improvements and new capabilities.
-    * ![why_port_to_python_3_2](svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_2.svg)
 * **Performance Enhancements:** Python 3 often brings better performance.
 
 ---
@@ -487,7 +485,6 @@ six.print_("Hello", "world", sep="-", end="!\n")
     * Write unit tests, integration tests, and end-to-end tests.
     * Your tests are your safety net. They will tell you if the porting broke something.
     * Aim for >80-90% coverage if possible.
-    ![phase_1_preparation](svg/courses/languages/python/advanced-python/17_porting_2_to_3/phase_1_preparation.svg)
 
 ---
 
