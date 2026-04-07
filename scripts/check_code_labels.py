@@ -3,7 +3,7 @@
 check_code_labels.py — lint code-block language labels in markdown files.
 
 For every fenced code block (```label ... ```) found in the given files or
-directories, verifies that the label is listed in config/code_labels.py.
+directories, verifies that the label is listed in text_labels.yaml.
 Exits with code 1 if any violations are found.
 
 Usage:
@@ -13,18 +13,22 @@ Usage:
 """
 
 import argparse
-import importlib.util
 import re
 import sys
 from pathlib import Path
 from typing import Iterator
 
-# Load config/code_labels.py without requiring a package __init__.py
+import yaml
+
 _ROOT = Path(__file__).resolve().parent.parent
-_spec = importlib.util.spec_from_file_location('code_labels', _ROOT / 'config' / 'code_labels.py')
-_mod = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(_mod)
-VALID: frozenset = _mod.VALID
+
+with open(_ROOT / 'text_labels.yaml', encoding='utf-8') as _f:
+    _data = yaml.safe_load(_f)
+VALID: frozenset = frozenset(
+    entry['label']
+    for category in _data.values()
+    for entry in category
+)
 
 
 # Matches the opening fence of a fenced code block, capturing the label.
