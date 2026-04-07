@@ -321,6 +321,7 @@ print(s[-2])   # 'o'
 ```
 
 ![string_indexing](../../../../../svg/courses/languages/python/python-programming/03_basic_types_and_operators/string_indexing.svg)
+
 ---
 ## String Slicing
 - `s[start:stop:step]`

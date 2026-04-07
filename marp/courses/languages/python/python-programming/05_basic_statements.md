@@ -323,6 +323,7 @@ for i in range(10):
 ## `break` vs `continue` Diagram
 
 ![break_vs_continue_diagram](../../../../../svg/courses/languages/python/python-programming/05_basic_statements/break_vs_continue_diagram.svg)
+
 ---
 ## The `else` Clause on Loops
 - Executes when the loop completes without `break`

@@ -92,6 +92,7 @@ pytest>=7.0
 - Isolation prevents conflicts
 
 ![virtual_environments_why](../../../../../svg/courses/languages/python/python-programming/12_using_third_party_modules/virtual_environments_why.svg)
+
 ---
 ## Creating Virtual Environments
 

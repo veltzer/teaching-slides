@@ -627,6 +627,7 @@ for t in threads:
 - For CPU-bound tasks, use `multiprocessing`
 
 ![threading_the_gil](../../../../../svg/courses/languages/python/python-programming/11_systems_programming/threading_the_gil.svg)
+
 ---
 ## Threading - Thread Pool
 

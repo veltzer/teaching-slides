@@ -33,6 +33,7 @@ close(fd);
 ---
 ## Virtual File System (VFS)
 ![virtual_file_system_vfs](../../svg/lectures/linux-io/virtual_file_system_vfs.svg)
+
 ---
 ## Buffered vs Unbuffered I/O
 ### Unbuffered (System Calls)
@@ -50,6 +51,7 @@ fread(buffer, 1, 1024, fp);
 ---
 ## I/O Models
 ![i_o_models](../../svg/lectures/linux-io/i_o_models.svg)
+
 ---
 
 ## Page Cache & Buffer Cache

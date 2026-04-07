@@ -110,6 +110,7 @@ import this
 - Trade-off: slower execution, faster development
 
 ![python_is_interpreted](../../../../../svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
+
 ---
 ## Dynamic Typing
 - Variables do not have a fixed type

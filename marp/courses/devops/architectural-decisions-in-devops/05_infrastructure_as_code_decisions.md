@@ -18,10 +18,12 @@
 ## The Two Paradigms
 
 ![the_two_paradigms](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/the_two_paradigms.svg)
+
 ---
 ## Declarative vs Imperative Flow
 
 ![declarative_vs_imperative_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/declarative_vs_imperative_flow.svg)
+
 ---
 ## Terraform Overview
 
@@ -54,6 +56,7 @@ output "public_ip" {
 ## Terraform Plan-Apply Cycle
 
 ![terraform_plan_apply_cycle](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/terraform_plan_apply_cycle.svg)
+
 ---
 ## Terraform Strengths and Weaknesses
 
@@ -167,6 +170,7 @@ Outputs:
 ## State Management: The Core Challenge
 
 ![state_management_the_core_challenge](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/state_management_the_core_challenge.svg)
+
 ---
 ## Remote State Backends
 
@@ -210,6 +214,7 @@ terraform force-unlock LOCK_ID
 ## State Locking Flow
 
 ![state_locking_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/state_locking_flow.svg)
+
 ---
 ## State Per Environment vs Shared State
 
@@ -276,6 +281,7 @@ module "vpc" {
 ## Module Architecture
 
 ![module_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/module_architecture.svg)
+
 ---
 ## Module Versioning Best Practices
 
@@ -296,6 +302,7 @@ module "vpc" {
 ## Abstraction Layers and Platform Engineering
 
 ![abstraction_layers_and_platform_engineering](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/abstraction_layers_and_platform_engineering.svg)
+
 ---
 ## Terragrunt: DRY Terraform
 
@@ -327,10 +334,12 @@ inputs = {
 ## Drift Detection Approaches
 
 ![drift_detection_approaches](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/drift_detection_approaches.svg)
+
 ---
 ## Drift Detection Cycle
 
 ![drift_detection_cycle](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/drift_detection_cycle.svg)
+
 ---
 ## Auto-Remediation: Benefits and Risks
 
@@ -399,6 +408,7 @@ jobs:
 ## Summary: Key IaC Decisions
 
 ![summary_key_iac_decisions](../../../../svg/courses/devops/architectural-decisions-in-devops/05_infrastructure_as_code_decisions/summary_key_iac_decisions.svg)
+
 ---
 ## Recommended Reading
 

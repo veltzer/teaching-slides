@@ -433,6 +433,7 @@ print(a ^ b)   # Symmetric diff: {1, 2, 5, 6}
 ## Sets - Operations Diagram
 
 ![sets_operations_diagram](../../../../../svg/courses/languages/python/python-programming/04_basic_data_structures/sets_operations_diagram.svg)
+
 ---
 ## Sets - Subset and Superset
 
