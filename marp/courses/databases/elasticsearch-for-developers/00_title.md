@@ -15,3 +15,5 @@ duration_hours: 40
 # Elasticsearch For Developers
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+![h:300](jpg/courses/databases/elasticsearch-for-developers/shay_banon.jpg)
