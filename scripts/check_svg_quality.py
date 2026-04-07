@@ -14,7 +14,7 @@ import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-MIN_FILE_SIZE = 450
+MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
 
 
