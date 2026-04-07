@@ -76,7 +76,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Backing Services Diagram
 
-![backing_services_diagram](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/backing_services_diagram.mmd)
+![backing_services_diagram](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/backing_services_diagram.svg)
 
 ---
 ## Factor 5: Build, Release, Run
@@ -89,7 +89,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Build, Release, Run Pipeline
 
-![build_release_run_pipeline](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/build_release_run_pipeline.mmd)
+![build_release_run_pipeline](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/build_release_run_pipeline.svg)
 
 ---
 ## Factor 6: Processes
@@ -119,7 +119,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Concurrency Model
 
-![concurrency_model](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/concurrency_model.mmd)
+![concurrency_model](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/concurrency_model.svg)
 
 ---
 ## Factor 9: Disposability
@@ -174,7 +174,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Stateless Service Architecture
 
-![stateless_service_architecture](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/stateless_service_architecture.mmd)
+![stateless_service_architecture](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/stateless_service_architecture.svg)
 
 ---
 ## Benefits of Statelessness
@@ -229,7 +229,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Auto-Scaling Architecture
 
-![auto_scaling_architecture](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/auto_scaling_architecture.mmd)
+![auto_scaling_architecture](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/auto_scaling_architecture.svg)
 
 ---
 ## Designing for Scalability
@@ -255,7 +255,7 @@ DATABASE_URL = os.environ["DATABASE_URL"]
 ---
 ## Cache-Aside Pattern
 
-![cache_aside_pattern](/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/cache_aside_pattern.mmd)
+![cache_aside_pattern](/out/mermaid/courses/architecting/modern-software-architecture/06_cloud_native_principles/cache_aside_pattern.svg)
 
 ---
 ## Data Partitioning

@@ -28,7 +28,7 @@
 
 ## Queue Components
 
-![queue_components](/mermaid/courses/architecting/architecting/11_queues/queue_components.mmd)
+![queue_components](/out/mermaid/courses/architecting/architecting/11_queues/queue_components.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Point-to-Point vs Pub/Sub
 
-![point_to_point_vs_pub_sub](/mermaid/courses/architecting/architecting/11_queues/point_to_point_vs_pub_sub.mmd)
+![point_to_point_vs_pub_sub](/out/mermaid/courses/architecting/architecting/11_queues/point_to_point_vs_pub_sub.svg)
 
 ---
 
@@ -73,7 +73,7 @@ def consume():
 
 ## RabbitMQ Architecture
 
-![rabbitmq_architecture](/mermaid/courses/architecting/architecting/11_queues/rabbitmq_architecture.mmd)
+![rabbitmq_architecture](/out/mermaid/courses/architecting/architecting/11_queues/rabbitmq_architecture.svg)
 
 ---
 
@@ -117,13 +117,13 @@ channel.start_consuming()
 
 ## Apache Kafka Architecture
 
-![apache_kafka_architecture](/mermaid/courses/architecting/architecting/11_queues/apache_kafka_architecture.mmd)
+![apache_kafka_architecture](/out/mermaid/courses/architecting/architecting/11_queues/apache_kafka_architecture.svg)
 
 ---
 
 ## Kafka Topics and Partitions
 
-![kafka_topics_and_partitions](/mermaid/courses/architecting/architecting/11_queues/kafka_topics_and_partitions.mmd)
+![kafka_topics_and_partitions](/out/mermaid/courses/architecting/architecting/11_queues/kafka_topics_and_partitions.svg)
 
 ---
 
@@ -177,7 +177,7 @@ for message in consumer:
 
 ## Amazon SQS Architecture
 
-![amazon_sqs_architecture](/mermaid/courses/architecting/architecting/11_queues/amazon_sqs_architecture.mmd)
+![amazon_sqs_architecture](/out/mermaid/courses/architecting/architecting/11_queues/amazon_sqs_architecture.svg)
 
 ---
 
@@ -285,7 +285,7 @@ class BatchProducer:
 
 ## Dead Letter Queues
 
-![dead_letter_queues](/mermaid/courses/architecting/architecting/11_queues/dead_letter_queues.mmd)
+![dead_letter_queues](/out/mermaid/courses/architecting/architecting/11_queues/dead_letter_queues.svg)
 
 ---
 
@@ -327,7 +327,7 @@ Key Metrics:
 
 ## Monitoring Dashboard
 
-![monitoring_dashboard](/mermaid/courses/architecting/architecting/11_queues/monitoring_dashboard.mmd)
+![monitoring_dashboard](/out/mermaid/courses/architecting/architecting/11_queues/monitoring_dashboard.svg)
 
 ---
 
@@ -367,7 +367,7 @@ def retry_with_backoff(func, max_retries=3):
 
 ## Consumer Group Pattern
 
-![consumer_group_pattern](/mermaid/courses/architecting/architecting/11_queues/consumer_group_pattern.mmd)
+![consumer_group_pattern](/out/mermaid/courses/architecting/architecting/11_queues/consumer_group_pattern.svg)
 
 ---
 

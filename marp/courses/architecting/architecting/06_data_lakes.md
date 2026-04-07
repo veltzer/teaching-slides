@@ -27,13 +27,13 @@
 
 ## Data Lake vs Data Warehouse
 
-![data_lake_vs_data_warehouse](/mermaid/courses/architecting/architecting/06_data_lakes/data_lake_vs_data_warehouse.mmd)
+![data_lake_vs_data_warehouse](/out/mermaid/courses/architecting/architecting/06_data_lakes/data_lake_vs_data_warehouse.svg)
 
 ---
 
 ## Data Lake Architecture
 
-![data_lake_architecture](/mermaid/courses/architecting/architecting/06_data_lakes/data_lake_architecture.mmd)
+![data_lake_architecture](/out/mermaid/courses/architecting/architecting/06_data_lakes/data_lake_architecture.svg)
 
 ---
 
@@ -91,7 +91,7 @@ Solution: Data Lakehouse Architecture
 
 ## Data Lakehouse Architecture
 
-![data_lakehouse_architecture](/mermaid/courses/architecting/architecting/06_data_lakes/data_lakehouse_architecture.mmd)
+![data_lakehouse_architecture](/out/mermaid/courses/architecting/architecting/06_data_lakes/data_lakehouse_architecture.svg)
 
 ---
 
@@ -205,7 +205,7 @@ def batch_ingest():
 
 ## Streaming Ingestion
 
-![streaming_ingestion](/mermaid/courses/architecting/architecting/06_data_lakes/streaming_ingestion.mmd)
+![streaming_ingestion](/out/mermaid/courses/architecting/architecting/06_data_lakes/streaming_ingestion.svg)
 
 ---
 
@@ -299,7 +299,7 @@ processed.write.format("delta") \
 
 ## ML Pipeline Integration
 
-![ml_pipeline_integration](/mermaid/courses/architecting/architecting/06_data_lakes/ml_pipeline_integration.mmd)
+![ml_pipeline_integration](/out/mermaid/courses/architecting/architecting/06_data_lakes/ml_pipeline_integration.svg)
 
 ---
 
@@ -387,7 +387,7 @@ def setup_security():
 
 ## Monitoring Dashboard
 
-![monitoring_dashboard](/mermaid/courses/architecting/architecting/06_data_lakes/monitoring_dashboard.mmd)
+![monitoring_dashboard](/out/mermaid/courses/architecting/architecting/06_data_lakes/monitoring_dashboard.svg)
 
 ---
 
@@ -406,7 +406,7 @@ def setup_security():
 
 ## Hybrid Architecture
 
-![hybrid_architecture](/mermaid/courses/architecting/architecting/06_data_lakes/hybrid_architecture.mmd)
+![hybrid_architecture](/out/mermaid/courses/architecting/architecting/06_data_lakes/hybrid_architecture.svg)
 
 ---
 

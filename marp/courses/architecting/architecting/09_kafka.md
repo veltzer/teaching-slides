@@ -5,7 +5,7 @@
 ## Traditional Kafka vs Streaming
 
 Traditional Message Processing
-![traditional_kafka_vs_streaming](/mermaid/courses/architecting/architecting/09_kafka/traditional_kafka_vs_streaming.mmd)
+![traditional_kafka_vs_streaming](/out/mermaid/courses/architecting/architecting/09_kafka/traditional_kafka_vs_streaming.svg)
 
 * Messages are **consumed and committed**
 * Processing is done **after** retrieval
@@ -14,7 +14,7 @@ Traditional Message Processing
 ---
 ## Kafka Streams
 
-![kafka_streams](/mermaid/courses/architecting/architecting/09_kafka/kafka_streams.mmd)
+![kafka_streams](/out/mermaid/courses/architecting/architecting/09_kafka/kafka_streams.svg)
 
 * **Real-time** processing
 * **Stateful** operations
@@ -36,7 +36,7 @@ Traditional Message Processing
 
 ## SQS Deep Dive
 
-![sqs_deep_dive](/mermaid/courses/architecting/architecting/09_kafka/sqs_deep_dive.mmd)
+![sqs_deep_dive](/out/mermaid/courses/architecting/architecting/09_kafka/sqs_deep_dive.svg)
 
 * **Standard** vs **FIFO** queues
 * Message retention up to 14 days
@@ -66,7 +66,7 @@ Traditional Message Processing
 
 ## RabbitMQ Architecture
 
-![rabbitmq_architecture](/mermaid/courses/architecting/architecting/09_kafka/rabbitmq_architecture.mmd)
+![rabbitmq_architecture](/out/mermaid/courses/architecting/architecting/09_kafka/rabbitmq_architecture.svg)
 
 * **Exchange types**: Direct, Fanout, Topic, Headers
 * **Advanced routing** capabilities
@@ -78,7 +78,7 @@ Traditional Message Processing
 
 ## Storage Models Compared
 
-![storage_models_compared](/mermaid/courses/architecting/architecting/09_kafka/storage_models_compared.mmd)
+![storage_models_compared](/out/mermaid/courses/architecting/architecting/09_kafka/storage_models_compared.svg)
 
 ---
 
@@ -106,7 +106,7 @@ Traditional Message Processing
 
 ## Kafka Deep Dive: Topics & Partitions
 
-![kafka_deep_dive_topics_partitions](/mermaid/courses/architecting/architecting/09_kafka/kafka_deep_dive_topics_partitions.mmd)
+![kafka_deep_dive_topics_partitions](/out/mermaid/courses/architecting/architecting/09_kafka/kafka_deep_dive_topics_partitions.svg)
 
 * Each partition is an **ordered log**
 * Segments are **physical files**
@@ -117,7 +117,7 @@ Traditional Message Processing
 
 ## Advanced Kafka: Consumer Groups
 
-![advanced_kafka_consumer_groups](/mermaid/courses/architecting/architecting/09_kafka/advanced_kafka_consumer_groups.mmd)
+![advanced_kafka_consumer_groups](/out/mermaid/courses/architecting/architecting/09_kafka/advanced_kafka_consumer_groups.svg)
 
 * **Automatic partition assignment**
 * **Rebalancing** on consumer changes
@@ -140,7 +140,7 @@ Traditional Message Processing
 ## Scaling Patterns
 
 ### Kafka
-![kafka](/mermaid/courses/architecting/architecting/09_kafka/kafka.mmd)
+![kafka](/out/mermaid/courses/architecting/architecting/09_kafka/kafka.svg)
 
 * **Horizontal scaling** via partitions
 * **Replication** for fault tolerance
@@ -151,7 +151,7 @@ Traditional Message Processing
 
 ## SQS Scaling Patterns
 
-![sqs_scaling_patterns](/mermaid/courses/architecting/architecting/09_kafka/sqs_scaling_patterns.mmd)
+![sqs_scaling_patterns](/out/mermaid/courses/architecting/architecting/09_kafka/sqs_scaling_patterns.svg)
 
 * **Queue-per-microservice**
 * **Auto-scaling** based on queue depth
@@ -176,13 +176,13 @@ Traditional Message Processing
     * ~(Desired Throughput) / (Single Partition Throughput)
     * Typically 1 partition per broker for start
 
-![performance_optimization_topics](/mermaid/courses/architecting/architecting/09_kafka/performance_optimization_topics.mmd)
+![performance_optimization_topics](/out/mermaid/courses/architecting/architecting/09_kafka/performance_optimization_topics.svg)
 
 ---
 
 ## Advanced Kafka: Replication
 
-![advanced_kafka_replication](/mermaid/courses/architecting/architecting/09_kafka/advanced_kafka_replication.mmd)
+![advanced_kafka_replication](/out/mermaid/courses/architecting/architecting/09_kafka/advanced_kafka_replication.svg)
 
 * **Leader** handles all reads/writes
 * **Followers** maintain replicas
@@ -265,7 +265,7 @@ Key Metrics to Watch
 
 ## Integration Patterns
 
-![integration_patterns](/mermaid/courses/architecting/architecting/09_kafka/integration_patterns.mmd)
+![integration_patterns](/out/mermaid/courses/architecting/architecting/09_kafka/integration_patterns.svg)
 
 * **Hybrid** approaches
 * **Bridge** patterns

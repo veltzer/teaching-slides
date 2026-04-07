@@ -20,7 +20,7 @@
 ---
 ## Kubernetes Architecture
 
-![kubernetes_architecture](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/kubernetes_architecture.mmd)
+![kubernetes_architecture](/out/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/kubernetes_architecture.svg)
 
 ---
 ## Control Plane Components
@@ -74,7 +74,7 @@ spec:
 ---
 ## Multi-Container Pod Patterns
 
-![multi_container_pod_patterns](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/multi_container_pod_patterns.mmd)
+![multi_container_pod_patterns](/out/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/multi_container_pod_patterns.svg)
 
 ---
 ## Sidecar Pattern
@@ -120,7 +120,7 @@ spec:
 ---
 ## Rolling Update Strategy
 
-![rolling_update_strategy](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/rolling_update_strategy.mmd)
+![rolling_update_strategy](/out/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/rolling_update_strategy.svg)
 
 ---
 ## Deployment Update Configuration
@@ -187,7 +187,7 @@ spec:
 ---
 ## Service Networking Diagram
 
-![service_networking_diagram](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/service_networking_diagram.mmd)
+![service_networking_diagram](/out/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/service_networking_diagram.svg)
 
 ---
 ## Ingress
@@ -367,7 +367,7 @@ spec:
 ---
 ## Self-Healing Mechanisms
 
-![self_healing_mechanisms](/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/self_healing_mechanisms.mmd)
+![self_healing_mechanisms](/out/mermaid/courses/architecting/modern-software-architecture/08_orchestration_with_kubernetes/self_healing_mechanisms.svg)
 
 ---
 ## Horizontal Pod Autoscaler (HPA)

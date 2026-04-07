@@ -234,7 +234,7 @@ io_uring_queue_init_params(64, &ring, &params);
 
 ## `io_uring` vs Traditional I/O
 
-![iouring_vs_traditional_i_o](/mermaid/lectures/iouring/iouring_vs_traditional_i_o.mmd)
+![iouring_vs_traditional_i_o](/out/mermaid/lectures/iouring/iouring_vs_traditional_i_o.svg)
 
 ---
 
@@ -419,7 +419,7 @@ clock_gettime(CLOCK_MONOTONIC, &end);
 
 ## Comparison with `epoll`
 
-![comparison_with_epoll](/mermaid/lectures/iouring/comparison_with_epoll.mmd)
+![comparison_with_epoll](/out/mermaid/lectures/iouring/comparison_with_epoll.svg)
 
 ---
 

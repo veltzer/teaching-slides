@@ -100,7 +100,7 @@
 ---
 ## Consistency Models Spectrum
 
-![consistency_models_spectrum](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.mmd)
+![consistency_models_spectrum](/out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.svg)
 
 - Stronger consistency means more coordination overhead
 - Weaker consistency means better performance and availability
@@ -222,12 +222,12 @@
 ---
 ## Active-Active Architecture
 
-![active_active_architecture](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_active_architecture.mmd)
+![active_active_architecture](/out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_active_architecture.svg)
 
 ---
 ## Active-Passive Architecture
 
-![active_passive_architecture](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_passive_architecture.mmd)
+![active_passive_architecture](/out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_passive_architecture.svg)
 
 ---
 ## Fault Tolerance Principles
@@ -265,7 +265,7 @@
 ---
 ## Replication Topologies
 
-![replication_topologies](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.mmd)
+![replication_topologies](/out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.svg)
 
 ---
 ## Consensus Algorithms
@@ -278,7 +278,7 @@
 ---
 ## Raft Consensus Overview
 
-![raft_consensus_overview](/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.mmd)
+![raft_consensus_overview](/out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
 
 - Leader handles all writes
 - Majority acknowledgment required for commit

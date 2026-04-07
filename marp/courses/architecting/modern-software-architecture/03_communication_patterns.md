@@ -19,7 +19,7 @@
 ---
 ## Synchronous Communication Diagram
 
-![synchronous_communication_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/synchronous_communication_diagram.mmd)
+![synchronous_communication_diagram](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/synchronous_communication_diagram.svg)
 
 ---
 ## Asynchronous Communication
@@ -32,7 +32,7 @@
 ---
 ## Asynchronous Communication Diagram
 
-![asynchronous_communication_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/asynchronous_communication_diagram.mmd)
+![asynchronous_communication_diagram](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/asynchronous_communication_diagram.svg)
 
 ---
 ## Sync vs Async Comparison
@@ -179,7 +179,7 @@ message OrderResponse {
 ---
 ## gRPC Communication Patterns
 
-![grpc_communication_patterns](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/grpc_communication_patterns.mmd)
+![grpc_communication_patterns](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/grpc_communication_patterns.svg)
 
 ---
 ## When to Use gRPC
@@ -201,7 +201,7 @@ message OrderResponse {
 ---
 ## Message Broker Architecture
 
-![message_broker_architecture](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/message_broker_architecture.mmd)
+![message_broker_architecture](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/message_broker_architecture.svg)
 
 ---
 ## Point-to-Point Messaging
@@ -222,7 +222,7 @@ message OrderResponse {
 ---
 ## Pub-Sub Diagram
 
-![pub_sub_diagram](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/pub_sub_diagram.mmd)
+![pub_sub_diagram](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/pub_sub_diagram.svg)
 
 ---
 ## Kafka vs RabbitMQ
@@ -254,7 +254,7 @@ message OrderResponse {
 ---
 ## Event-Driven Flow
 
-![event_driven_flow](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/event_driven_flow.mmd)
+![event_driven_flow](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/event_driven_flow.svg)
 
 ---
 ## Event Types
@@ -302,12 +302,12 @@ message OrderResponse {
 ---
 ## Dead Letter Queue Flow
 
-![dead_letter_queue_flow](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/dead_letter_queue_flow.mmd)
+![dead_letter_queue_flow](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/dead_letter_queue_flow.svg)
 
 ---
 ## Choosing a Communication Pattern
 
-![choosing_a_communication_pattern](/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/choosing_a_communication_pattern.mmd)
+![choosing_a_communication_pattern](/out/mermaid/courses/architecting/modern-software-architecture/03_communication_patterns/choosing_a_communication_pattern.svg)
 
 ---
 ## Summary

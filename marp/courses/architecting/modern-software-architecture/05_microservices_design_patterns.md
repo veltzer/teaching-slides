@@ -11,7 +11,7 @@
 ---
 ## Pattern Categories
 
-![pattern_categories](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/pattern_categories.mmd)
+![pattern_categories](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/pattern_categories.svg)
 
 ---
 ## API Gateway Pattern
@@ -24,7 +24,7 @@
 ---
 ## API Gateway Architecture
 
-![api_gateway_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.mmd)
+![api_gateway_architecture](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/api_gateway_architecture.svg)
 
 ---
 ## API Gateway Responsibilities
@@ -69,7 +69,7 @@
 ---
 ## BFF Architecture
 
-![bff_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/bff_architecture.mmd)
+![bff_architecture](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/bff_architecture.svg)
 
 ---
 ## BFF vs Single API Gateway
@@ -93,7 +93,7 @@
 ---
 ## Client-Side Service Discovery
 
-![client_side_service_discovery](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.mmd)
+![client_side_service_discovery](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
 
 - Client queries the service registry directly
 - Client performs load balancing
@@ -102,7 +102,7 @@
 ---
 ## Server-Side Service Discovery
 
-![server_side_service_discovery](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.mmd)
+![server_side_service_discovery](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
 
 - Load balancer queries the registry
 - Client does not need to know about discovery
@@ -136,7 +136,7 @@
 ---
 ## Database per Service Diagram
 
-![database_per_service_diagram](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/database_per_service_diagram.mmd)
+![database_per_service_diagram](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/database_per_service_diagram.svg)
 
 ---
 ## Database per Service Pros and Cons
@@ -178,12 +178,12 @@
 ---
 ## Saga: Choreography
 
-![saga_choreography](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_choreography.mmd)
+![saga_choreography](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_choreography.svg)
 
 ---
 ## Saga: Orchestration
 
-![saga_orchestration](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_orchestration.mmd)
+![saga_orchestration](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/saga_orchestration.svg)
 
 ---
 ## Choreography vs Orchestration
@@ -207,7 +207,7 @@
 ---
 ## Compensation Example
 
-![compensation_example](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/compensation_example.mmd)
+![compensation_example](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/compensation_example.svg)
 
 ---
 ## CQRS Pattern
@@ -220,7 +220,7 @@
 ---
 ## CQRS Architecture
 
-![cqrs_architecture](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_architecture.mmd)
+![cqrs_architecture](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_architecture.svg)
 
 ---
 ## CQRS Benefits
@@ -251,7 +251,7 @@
 ---
 ## Event Sourcing Flow
 
-![event_sourcing_flow](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/event_sourcing_flow.mmd)
+![event_sourcing_flow](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/event_sourcing_flow.svg)
 
 ---
 ## Event Store Example
@@ -280,7 +280,7 @@
 ---
 ## CQRS + Event Sourcing Combined
 
-![cqrs_event_sourcing_combined](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_event_sourcing_combined.mmd)
+![cqrs_event_sourcing_combined](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/cqrs_event_sourcing_combined.svg)
 
 ---
 ## Strangler Fig Pattern
@@ -293,7 +293,7 @@
 ---
 ## Strangler Fig Diagram
 
-![strangler_fig_diagram](/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/strangler_fig_diagram.mmd)
+![strangler_fig_diagram](/out/mermaid/courses/architecting/modern-software-architecture/05_microservices_design_patterns/strangler_fig_diagram.svg)
 
 ---
 ## Summary

@@ -119,7 +119,7 @@ utils.o: utils.c utils.h
 
 ## Dependency Resolution
 
-![dependency_resolution](/mermaid/courses/build_systems/make/01_introduction/dependency_resolution.mmd)
+![dependency_resolution](/out/mermaid/courses/build_systems/make/01_introduction/dependency_resolution.svg)
 
 ---
 

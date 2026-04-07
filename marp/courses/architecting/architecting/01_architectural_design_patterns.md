@@ -22,7 +22,7 @@
 ---
 ## Communication Diagram
 
-![communication_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/communication_diagram.mmd)
+![communication_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/communication_diagram.svg)
 
 ---
 
@@ -78,7 +78,7 @@ Cons:
 
 ## Broker Interaction Diagram
 
-![broker_interaction_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/broker_interaction_diagram.mmd)
+![broker_interaction_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/broker_interaction_diagram.svg)
 
 ---
 ## Broker Pros and Cons
@@ -535,7 +535,7 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-![event_sourcing_architecture_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/event_sourcing_architecture_diagram.mmd)
+![event_sourcing_architecture_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/event_sourcing_architecture_diagram.svg)
 
 ---
 ## Event Sourcing Pros and Cons
@@ -1215,7 +1215,7 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-![saga_pattern_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/saga_pattern_diagram.mmd)
+![saga_pattern_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/saga_pattern_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -1685,7 +1685,7 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-![throttling_pattern_diagram](/mermaid/courses/architecting/architecting/01_architectural_design_patterns/throttling_pattern_diagram.mmd)
+![throttling_pattern_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/throttling_pattern_diagram.svg)
 
 ---
 ## Throttling Pros and Cons

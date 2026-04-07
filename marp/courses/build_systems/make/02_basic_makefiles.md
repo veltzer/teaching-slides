@@ -177,7 +177,7 @@ lib.o: lib.c lib.h
 
 ## Visual Representation
 
-![visual_representation](/mermaid/courses/build_systems/make/02_basic_makefiles/visual_representation.mmd)
+![visual_representation](/out/mermaid/courses/build_systems/make/02_basic_makefiles/visual_representation.svg)
 
 ---
 

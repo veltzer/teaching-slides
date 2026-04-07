@@ -21,7 +21,7 @@
 ---
 ## The Three Pillars of Observability
 
-![the_three_pillars_of_observability](/mermaid/courses/architecting/architecting/10_monitoring/the_three_pillars_of_observability.mmd)
+![the_three_pillars_of_observability](/out/mermaid/courses/architecting/architecting/10_monitoring/the_three_pillars_of_observability.svg)
 
 ---
 
@@ -72,7 +72,7 @@ logger.info("order_processed",
 
 ## ELK Stack Architecture
 
-![elk_stack_architecture](/mermaid/courses/architecting/architecting/10_monitoring/elk_stack_architecture.mmd)
+![elk_stack_architecture](/out/mermaid/courses/architecting/architecting/10_monitoring/elk_stack_architecture.svg)
 
 ---
 
@@ -139,7 +139,7 @@ def process_request():
 
 ## Distributed Tracing
 
-![distributed_tracing](/mermaid/courses/architecting/architecting/10_monitoring/distributed_tracing.mmd)
+![distributed_tracing](/out/mermaid/courses/architecting/architecting/10_monitoring/distributed_tracing.svg)
 
 ---
 
@@ -190,7 +190,7 @@ annotations:
 
 ## Alert Routing
 
-![alert_routing](/mermaid/courses/architecting/architecting/10_monitoring/alert_routing.mmd)
+![alert_routing](/out/mermaid/courses/architecting/architecting/10_monitoring/alert_routing.svg)
 
 ---
 
@@ -341,7 +341,7 @@ def handle_alert(alert):
 
 ## Cost of Monitoring
 
-![cost_of_monitoring](/mermaid/courses/architecting/architecting/10_monitoring/cost_of_monitoring.mmd)
+![cost_of_monitoring](/out/mermaid/courses/architecting/architecting/10_monitoring/cost_of_monitoring.svg)
 
 ---
 

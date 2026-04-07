@@ -11,7 +11,7 @@
 ---
 ## Containers vs Virtual Machines
 
-![containers_vs_virtual_machines](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/containers_vs_virtual_machines.mmd)
+![containers_vs_virtual_machines](/out/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/containers_vs_virtual_machines.svg)
 
 ---
 ## Container Advantages
@@ -34,7 +34,7 @@
 ---
 ## Docker Architecture
 
-![docker_architecture](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/docker_architecture.mmd)
+![docker_architecture](/out/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/docker_architecture.svg)
 
 ---
 ## Docker Images
@@ -262,7 +262,7 @@ CMD ["python", "app.py"]
 ---
 ## Container Networking Diagram
 
-![container_networking_diagram](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/container_networking_diagram.mmd)
+![container_networking_diagram](/out/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/container_networking_diagram.svg)
 
 ---
 ## Volumes and Persistent Storage
@@ -307,7 +307,7 @@ docker run --tmpfs /app/tmp myapp
 ---
 ## CI/CD Integration
 
-![ci_cd_integration](/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/ci_cd_integration.mmd)
+![ci_cd_integration](/out/mermaid/courses/architecting/modern-software-architecture/07_containerization_recap/ci_cd_integration.svg)
 
 ---
 ## Production Deployment Checklist
