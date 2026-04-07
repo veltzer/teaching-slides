@@ -4,6 +4,12 @@ extra_inputs = [
     "config/personal.lua",
 ]
 
+[processor.script.check_svg_quality]
+linter = "scripts/check_svg_quality.py"
+extensions = [".svg"]
+scan_dirs = ["svg", "out/mermaid"]
+batch = true
+
 [processor.script.svglint]
 linter = "svglint"
 args = ["--ci"]

@@ -583,7 +583,6 @@ Recommended next steps for deepening your skills:
 │   4. Consider safety and bias from day one           │
 │   5. The field moves fast — keep learning            │
 │                                                       │
-│   Questions? Reach out anytime.                       │
 │                                                       │
 └──────────────────────────────────────────────────────┘
 ```

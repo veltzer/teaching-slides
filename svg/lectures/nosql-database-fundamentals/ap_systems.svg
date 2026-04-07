@@ -1,5 +1,52 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="400" height="100" fill="#e0ffe0" stroke="#51cf66" stroke-width="2"/>
-  <text x="300" y="90" text-anchor="middle" font-size="14" font-weight="bold">Availability + Partition Tolerance</text>
-  <text x="300" y="120" text-anchor="middle" font-size="12">Always responds, may serve stale data</text>
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ap" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="sync-arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f5a623"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">AP Systems (Availability + Partition Tolerance)</text>
+  <!-- Client -->
+  <rect x="280" y="50" width="140" height="45" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="350" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Client</text>
+  <!-- Node 1 -->
+  <rect x="50" y="150" width="160" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="130" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Node A</text>
+  <text x="130" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v1</text>
+  <text x="130" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4caf50">AVAILABLE</text>
+  <!-- Node 2 -->
+  <rect x="270" y="150" width="160" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="350" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Node B</text>
+  <text x="350" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v1</text>
+  <text x="350" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4caf50">AVAILABLE</text>
+  <!-- Node 3 -->
+  <rect x="490" y="150" width="160" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="5"/>
+  <text x="570" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Node C</text>
+  <text x="570" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v1 (stale)</text>
+  <text x="570" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4caf50">AVAILABLE</text>
+  <!-- Client to nodes arrows -->
+  <line x1="310" y1="95" x2="150" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow-ap)"/>
+  <line x1="350" y1="95" x2="350" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow-ap)"/>
+  <line x1="390" y1="95" x2="550" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow-ap)"/>
+  <!-- Async replication arrows between nodes -->
+  <line x1="210" y1="185" x2="268" y2="185" stroke="#f5a623" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#sync-arrow)"/>
+  <line x1="430" y1="185" x2="488" y2="185" stroke="#f5a623" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#sync-arrow)"/>
+  <!-- Network partition indicator -->
+  <rect x="440" y="170" width="40" height="20" fill="#fff" stroke="none"/>
+  <text x="460" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#d32f2f">X</text>
+  <text x="460" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f">partition</text>
+  <!-- Eventual Consistency box -->
+  <rect x="150" y="270" width="400" height="55" fill="#fff3e0" stroke="#f5a623" stroke-width="2" rx="5"/>
+  <text x="350" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#e65100">Eventual Consistency</text>
+  <text x="350" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">All nodes converge to same state after partition heals</text>
+  <!-- Example databases -->
+  <rect x="80" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="155" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Cassandra</text>
+  <rect x="270" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="345" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">DynamoDB</text>
+  <rect x="460" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="535" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">CouchDB</text>
 </svg>

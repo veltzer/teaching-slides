@@ -1,5 +1,53 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="400" height="100" fill="#ffe0e0" stroke="#ff6b6b" stroke-width="2"/>
-  <text x="300" y="90" text-anchor="middle" font-size="14" font-weight="bold">Consistency + Partition Tolerance</text>
-  <text x="300" y="120" text-anchor="middle" font-size="12">May refuse requests to maintain consistency</text>
+<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-cp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="sync-cp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4caf50"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">CP Systems (Consistency + Partition Tolerance)</text>
+  <!-- Client -->
+  <rect x="280" y="50" width="140" height="45" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="350" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Client</text>
+  <!-- Node 1 (Leader) -->
+  <rect x="50" y="150" width="160" height="80" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="130" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Leader Node</text>
+  <text x="130" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v2 (latest)</text>
+  <text x="130" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">CONSISTENT</text>
+  <!-- Node 2 (Follower) -->
+  <rect x="270" y="150" width="160" height="80" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="350" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Follower Node</text>
+  <text x="350" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v2 (synced)</text>
+  <text x="350" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">CONSISTENT</text>
+  <!-- Node 3 (Partitioned) -->
+  <rect x="490" y="150" width="160" height="80" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="5"/>
+  <text x="570" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#c62828">Follower Node</text>
+  <text x="570" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Data v1 (stale)</text>
+  <text x="570" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f">UNAVAILABLE</text>
+  <!-- Client to leader arrow -->
+  <line x1="310" y1="95" x2="150" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow-cp)"/>
+  <!-- Client to partitioned node (rejected) -->
+  <line x1="390" y1="95" x2="550" y2="148" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="510" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f">rejected</text>
+  <!-- Sync replication leader to follower -->
+  <line x1="210" y1="185" x2="268" y2="185" stroke="#4caf50" stroke-width="2" marker-end="url(#sync-cp)"/>
+  <text x="240" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4caf50">sync</text>
+  <!-- Network partition indicator -->
+  <rect x="440" y="170" width="40" height="20" fill="#fff" stroke="none"/>
+  <text x="460" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#d32f2f">X</text>
+  <text x="460" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#d32f2f">partition</text>
+  <!-- Strong Consistency box -->
+  <rect x="150" y="270" width="400" height="55" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="350" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Strong Consistency</text>
+  <text x="350" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Refuses requests to partitioned nodes to guarantee consistency</text>
+  <!-- Example databases -->
+  <rect x="80" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="155" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">MongoDB</text>
+  <rect x="270" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="345" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">HBase</text>
+  <rect x="460" y="355" width="150" height="50" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2" rx="5"/>
+  <text x="535" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Redis</text>
 </svg>

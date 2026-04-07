@@ -2,8 +2,6 @@
 
 ## A Comprehensive Guide
 
-![a_comprehensive_guide](svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
-
 ---
 
 ## **Why Port to Python 3?**
@@ -364,8 +362,6 @@ print >> sys.stderr, "Error!"
 
 ## **Part 3: Tools for Porting**
 
-![part_3_tools_for_porting](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_3_tools_for_porting.svg)
-
 ---
 
 ## **Tool 1: `2to3`**
@@ -642,8 +638,6 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 5: Common Pitfalls & Challenges**
 
-![part_5_common_pitfalls_challenges](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_5_common_pitfalls_challenges.svg)
-
 ---
 
 ## **Pitfall 1: Underestimating the Effort**
@@ -699,8 +693,6 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 6: Best Practices for a Smooth Transition**
 
-![part_6_best_practices_for_a_smooth_transition](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_6_best_practices_for_a_smooth_transition.svg)
-
 ---
 
 ## **Best Practice 1: Write New Code with Python 3 in Mind**
@@ -748,8 +740,6 @@ def process_data(text_data: str): # Expect unicode string
 ---
 
 ## **Part 7: Beyond the Port: Embracing Python 3**
-
-![part_7_beyond_the_port_embracing_python_3](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_7_beyond_the_port_embracing_python_3.svg)
 
 ---
 
@@ -805,11 +795,3 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 1. **Embrace Python 3:** Use new features post-port.
 
 **Porting is an investment that pays off in maintainability, performance, and access to modern Python.**
-
----
-
-## **Thank You!**
-
-## Questions?
-
-![questions](svg/courses/languages/python/advanced-python/17_porting_2_to_3/questions.svg)
