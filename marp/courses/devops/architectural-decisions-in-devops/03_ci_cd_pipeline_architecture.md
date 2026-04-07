@@ -42,7 +42,7 @@
 
 ## Centralized vs Decentralized Diagram
 
-![centralized_vs_decentralized_diagram](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/centralized_vs_decentralized_diagram.svg)
+![centralized_vs_decentralized_diagram](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/centralized_vs_decentralized_diagram.svg)
 
 ---
 
@@ -162,7 +162,7 @@ deploy:
 
 ## Pipeline Design Patterns Overview
 
-![pipeline_design_patterns_overview](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_design_patterns_overview.svg)
+![pipeline_design_patterns_overview](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_design_patterns_overview.svg)
 
 ---
 
@@ -271,7 +271,7 @@ on:
 
 ## Remote Build Caches
 
-![remote_build_caches](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/remote_build_caches.svg)
+![remote_build_caches](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/remote_build_caches.svg)
 
 - Runners share a centralized cache over the network
 - Tools: `Bazel` remote cache, `Gradle` build cache, `sccache`, `Turborepo`
@@ -342,13 +342,13 @@ on:
 
 ## GitOps Architecture
 
-![gitops_architecture](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/gitops_architecture.svg)
+![gitops_architecture](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/gitops_architecture.svg)
 
 ---
 
 ## Push vs Pull Deployment Models
 
-![push_vs_pull_deployment_models](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/push_vs_pull_deployment_models.svg)
+![push_vs_pull_deployment_models](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/push_vs_pull_deployment_models.svg)
 
 - **Push**: CI needs production credentials, runs `kubectl apply`
 - **Pull**: operator inside cluster pulls state, credentials stay internal
@@ -405,7 +405,7 @@ spec:
 
 ## Drift Detection Flow
 
-![drift_detection_flow](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/drift_detection_flow.svg)
+![drift_detection_flow](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/drift_detection_flow.svg)
 
 ---
 
@@ -424,7 +424,7 @@ spec:
 
 ## Hybrid Approach: CI + GitOps
 
-![hybrid_approach_ci_gitops](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/hybrid_approach_ci_gitops.svg)
+![hybrid_approach_ci_gitops](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/hybrid_approach_ci_gitops.svg)
 
 - CI builds and tests the application, then updates the config repo
 - `Argo CD` picks up the change and deploys to the cluster
@@ -448,7 +448,7 @@ spec:
 
 ## Pipeline Observability and DORA Metrics
 
-![pipeline_observability_and_dora_metrics](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_observability_and_dora_metrics.svg)
+![pipeline_observability_and_dora_metrics](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_observability_and_dora_metrics.svg)
 
 - Track build duration, success rate, queue time, flaky test rate
 - Export metrics to `Prometheus`, `Datadog`, or `Grafana`
@@ -457,7 +457,7 @@ spec:
 
 ## Multi-Stage Deployment Pipelines
 
-![multi_stage_deployment_pipelines](/svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/multi_stage_deployment_pipelines.svg)
+![multi_stage_deployment_pipelines](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/multi_stage_deployment_pipelines.svg)
 
 - Promote the same artifact through `dev` -> `staging` -> `production`
 - Gate promotions with automated tests, manual approvals, or canary analysis

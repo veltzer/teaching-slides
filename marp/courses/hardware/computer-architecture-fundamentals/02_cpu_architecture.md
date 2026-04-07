@@ -23,7 +23,7 @@ The Central Processing Unit is the "brain" of the computer. It executes
 instructions from programs by performing arithmetic, logic, control, and
 I/O operations.
 
-![what_is_a_cpu](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/what_is_a_cpu.svg)
+![what_is_a_cpu](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/what_is_a_cpu.svg)
 
 ---
 
@@ -41,7 +41,7 @@ The ALU performs all arithmetic and logical operations inside the CPU.
 - Shift left, shift right
 - Comparison (sets flags)
 
-![the_arithmetic_logic_unit_alu](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_arithmetic_logic_unit_alu.svg)
+![the_arithmetic_logic_unit_alu](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_arithmetic_logic_unit_alu.svg)
 
 The ALU reads two operands (A and B), performs the operation specified by the
 opcode, and produces a result plus status flags.
@@ -73,7 +73,7 @@ clock cycle with zero latency.
 
 **General-purpose registers (x86-64):**
 
-![cpu_registers](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cpu_registers.svg)
+![cpu_registers](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cpu_registers.svg)
 
 ---
 
@@ -81,7 +81,7 @@ clock cycle with zero latency.
 
 The x86-64 registers have sub-register access for backward compatibility:
 
-![register_naming_in_x86_64](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/register_naming_in_x86_64.svg)
+![register_naming_in_x86_64](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/register_naming_in_x86_64.svg)
 
 - `AL` = low 8 bits of RAX
 - `AX` = low 16 bits of RAX
@@ -119,7 +119,7 @@ The control unit orchestrates the CPU. It reads instructions from memory,
 decodes them, and generates control signals that tell other components
 what to do.
 
-![the_control_unit](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_control_unit.svg)
+![the_control_unit](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_control_unit.svg)
 
 ---
 
@@ -127,7 +127,7 @@ what to do.
 
 Every instruction goes through a fundamental cycle:
 
-![the_instruction_cycle_fetch_decode_execute](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_instruction_cycle_fetch_decode_execute.svg)
+![the_instruction_cycle_fetch_decode_execute](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_instruction_cycle_fetch_decode_execute.svg)
 
 **Step by step:**
 
@@ -174,7 +174,7 @@ Pipelining overlaps instruction execution stages, like an assembly line.
 While one instruction is being executed, the next is being decoded, and
 the one after that is being fetched.
 
-![pipelining](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/pipelining.svg)
+![pipelining](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/pipelining.svg)
 
 **Throughput**: After the pipeline is full, one instruction completes per cycle.
 **Latency**: Each instruction still takes 4 cycles from start to finish.
@@ -219,7 +219,7 @@ A misprediction costs 10-20+ cycles (pipeline flush).
 
 **Dynamic prediction -- 2-bit saturating counter:**
 
-![branch_prediction](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/branch_prediction.svg)
+![branch_prediction](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/branch_prediction.svg)
 
 Modern CPUs (like Intel Alder Lake) use neural branch predictors with
 97%+ accuracy on typical workloads.
@@ -261,7 +261,7 @@ Same algorithm, same data, 3x slowdown from branch misprediction.
 A superscalar CPU can issue multiple instructions per clock cycle.
 It has multiple execution units working in parallel.
 
-![superscalar_execution](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/superscalar_execution.svg)
+![superscalar_execution](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/superscalar_execution.svg)
 
 A modern Intel/AMD core can retire 4-6 instructions per cycle.
 
@@ -378,7 +378,7 @@ performance while using far less power.
 CPU speed has grown much faster than memory speed. This gap is the
 "memory wall" and is the reason caches exist.
 
-![the_memory_wall_problem](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_memory_wall_problem.svg)
+![the_memory_wall_problem](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_memory_wall_problem.svg)
 
 ---
 
@@ -386,7 +386,7 @@ CPU speed has grown much faster than memory speed. This gap is the
 
 Modern CPUs use a multi-level cache hierarchy to bridge the memory wall:
 
-![cache_hierarchy](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_hierarchy.svg)
+![cache_hierarchy](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_hierarchy.svg)
 
 L1 is split into instruction cache (I-Cache) and data cache (D-Cache).
 L2 and L3 are unified (hold both instructions and data).
@@ -398,7 +398,7 @@ L2 and L3 are unified (hold both instructions and data).
 Caches do not store individual bytes. They store **cache lines**, typically
 64 bytes on x86.
 
-![cache_lines_and_spatial_locality](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_lines_and_spatial_locality.svg)
+![cache_lines_and_spatial_locality](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_lines_and_spatial_locality.svg)
 
 This exploits **spatial locality**: if you access one byte, you are likely
 to access nearby bytes soon.
@@ -420,7 +420,7 @@ for (int i = 0; i < N; i += 16)
 
 Where can a cache line be placed? This defines associativity:
 
-![cache_associativity](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_associativity.svg)
+![cache_associativity](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_associativity.svg)
 
 **Typical modern CPUs:**
 - L1: 8-12 way set associative
@@ -458,10 +458,10 @@ After E: [E B C D]         A evicted (was LRU), E takes its place
 When the CPU writes data, when does it update main memory?
 
 **Write-Through:**
-![write_policies_1](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_1.svg)
+![write_policies_1](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_1.svg)
 
 **Write-Back:**
-![write_policies_2](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_2.svg)
+![write_policies_2](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_2.svg)
 
 **Write-Allocate vs No-Write-Allocate:**
 - Write-Allocate: on a write miss, load the line into cache first, then write
@@ -476,7 +476,7 @@ Modern CPUs typically use **write-back + write-allocate**.
 In multi-core systems, each core has its own L1/L2 cache. If two cores
 cache the same memory address, writes by one core must be visible to others.
 
-![cache_coherence_problem](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_coherence_problem.svg)
+![cache_coherence_problem](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_coherence_problem.svg)
 
 Solution: **cache coherence protocols**.
 
@@ -494,7 +494,7 @@ four states:
 | **S**hared | Line is clean, may be in other caches too |
 | **I**nvalid | Line is not valid, treat as cache miss |
 
-![mesi_protocol](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/mesi_protocol.svg)
+![mesi_protocol](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/mesi_protocol.svg)
 
 When Core 0 writes to a Shared line, it sends an "invalidate" message
 to all other cores, forcing them to mark their copies Invalid.
@@ -530,4 +530,4 @@ L1-dcache-load-misses,LLC-loads,LLC-load-misses ./my_program
 
 ## Summary: CPU Architecture
 
-![summary_cpu_architecture](/svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/summary_cpu_architecture.svg)
+![summary_cpu_architecture](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/summary_cpu_architecture.svg)

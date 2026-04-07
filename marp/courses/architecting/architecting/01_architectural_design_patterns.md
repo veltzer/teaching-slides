@@ -22,7 +22,7 @@
 ---
 ## Communication Diagram
 
-![communication_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/communication_diagram.svg)
+![communication_diagram](out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/communication_diagram.svg)
 
 ---
 
@@ -78,7 +78,7 @@ Cons:
 
 ## Broker Interaction Diagram
 
-![broker_interaction_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/broker_interaction_diagram.svg)
+![broker_interaction_diagram](out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/broker_interaction_diagram.svg)
 
 ---
 ## Broker Pros and Cons
@@ -130,7 +130,7 @@ Cons:
 
 ## Peer-to-Peer Diagram
 
-![peer_to_peer_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/peer_to_peer_diagram.svg)
+![peer_to_peer_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/peer_to_peer_diagram.svg)
 
 ---
 ## Peer-to-Peer Pros and Cons
@@ -183,7 +183,7 @@ Cons:
 
 ## Event Bus Interaction Diagram
 
-![event_bus_interaction_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/event_bus_interaction_diagram.svg)
+![event_bus_interaction_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/event_bus_interaction_diagram.svg)
 
 ---
 
@@ -234,7 +234,7 @@ Cons:
 ---
 ## Microservices Architecture Diagram
 
-![microservices_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/microservices_architecture_diagram.svg)
+![microservices_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/microservices_architecture_diagram.svg)
 
 ---
 ## Microservices Pros and Cons
@@ -287,7 +287,7 @@ Cons:
 
 ## Service-Oriented Architecture Diagram
 
-![service_oriented_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/service_oriented_architecture_diagram.svg)
+![service_oriented_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/service_oriented_architecture_diagram.svg)
 
 ---
 ## Service-Oriented Architecture Pros and Cons
@@ -343,7 +343,7 @@ Cons:
 
 ## Event-Driven Architecture Diagram
 
-![event_driven_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/event_driven_architecture_diagram.svg)
+![event_driven_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/event_driven_architecture_diagram.svg)
 
 ---
 
@@ -405,7 +405,7 @@ Cons:
 
 ## DDD Architecture Diagram
 
-![ddd_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/ddd_architecture_diagram.svg)
+![ddd_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/ddd_architecture_diagram.svg)
 
 ---
 ## DDD Pros and Cons
@@ -472,7 +472,7 @@ Cons:
 
 ## CQRS Architecture Diagram
 
-![cqrs_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/cqrs_architecture_diagram.svg)
+![cqrs_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/cqrs_architecture_diagram.svg)
 
 ---
 
@@ -535,7 +535,7 @@ Cons:
 
 ## Event Sourcing Architecture Diagram
 
-![event_sourcing_architecture_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/event_sourcing_architecture_diagram.svg)
+![event_sourcing_architecture_diagram](out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/event_sourcing_architecture_diagram.svg)
 
 ---
 ## Event Sourcing Pros and Cons
@@ -593,7 +593,7 @@ Cons:
 ---
 ## Serverless Architecture Diagram
 
-![serverless_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/serverless_architecture_diagram.svg)
+![serverless_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/serverless_architecture_diagram.svg)
 
 ---
 ## Serverless Pros and Cons
@@ -651,7 +651,7 @@ Cons:
 ---
 ## Space-Based Architecture Diagram
 
-![space_based_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/space_based_architecture_diagram.svg)
+![space_based_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/space_based_architecture_diagram.svg)
 
 ---
 ## Space-Based Pros and Cons
@@ -713,7 +713,7 @@ Cons:
 
 ## Hexagonal Architecture Diagram
 
-![hexagonal_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/hexagonal_architecture_diagram.svg)
+![hexagonal_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/hexagonal_architecture_diagram.svg)
 
 ---
 ## Hexagonal Architecture Pros and Cons
@@ -777,7 +777,7 @@ Cons:
 
 ## Architecture Diagram
 
-![architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/architecture_diagram.svg)
+![architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/architecture_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -833,7 +833,7 @@ Cons:
 ---
 ## Onion Architecture Diagram
 
-![onion_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/onion_architecture_diagram.svg)
+![onion_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/onion_architecture_diagram.svg)
 
 ---
 ## Onion Architecture Pros and Cons
@@ -894,7 +894,7 @@ Cons:
 ---
 ## Microkernel Architecture Diagram
 
-![microkernel_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/microkernel_architecture_diagram.svg)
+![microkernel_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/microkernel_architecture_diagram.svg)
 
 ---
 ## Microkernel Pros and Cons
@@ -958,7 +958,7 @@ Cons:
 
 ## Publish-Subscribe Diagram
 
-![publish_subscribe_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/publish_subscribe_diagram.svg)
+![publish_subscribe_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/publish_subscribe_diagram.svg)
 
 ---
 
@@ -1016,7 +1016,7 @@ Cons:
 
 ## Monolithic Architecture Diagram
 
-![monolithic_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/monolithic_architecture_diagram.svg)
+![monolithic_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/monolithic_architecture_diagram.svg)
 
 ---
 
@@ -1080,7 +1080,7 @@ Cons:
 ---
 ## Modular Monolith Architecture Diagram
 
-![modular_monolith_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/modular_monolith_architecture_diagram.svg)
+![modular_monolith_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/modular_monolith_architecture_diagram.svg)
 
 ---
 
@@ -1143,7 +1143,7 @@ Cons:
 ---
 ## Share-Nothing Architecture Diagram
 
-![share_nothing_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/share_nothing_architecture_diagram.svg)
+![share_nothing_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/share_nothing_architecture_diagram.svg)
 
 ---
 ## Share-Nothing Pros and Cons
@@ -1180,7 +1180,7 @@ Cons:
 ---
 ## Circuit Breaker Pattern Diagram
 
-![circuit_breaker_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/circuit_breaker_pattern_diagram.svg)
+![circuit_breaker_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/circuit_breaker_pattern_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -1215,7 +1215,7 @@ Cons:
 ---
 ## Saga Pattern Diagram
 
-![saga_pattern_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/saga_pattern_diagram.svg)
+![saga_pattern_diagram](out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/saga_pattern_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -1249,7 +1249,7 @@ Cons:
 ---
 ## Bulkhead Pattern Diagram
 
-![bulkhead_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/bulkhead_pattern_diagram.svg)
+![bulkhead_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/bulkhead_pattern_diagram.svg)
 
 ---
 ## Bulkhead Pattern Pros and Cons
@@ -1284,7 +1284,7 @@ Cons:
 ---
 ## Strangler Fig Pattern Diagram
 
-![strangler_fig_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/strangler_fig_pattern_diagram.svg)
+![strangler_fig_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/strangler_fig_pattern_diagram.svg)
 
 ---
 ## Strangler Fig Pros and Cons
@@ -1319,7 +1319,7 @@ Cons:
 ---
 ## Backend for Frontend (BFF) Pattern Diagram
 
-![backend_for_frontend_bff_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/backend_for_frontend_bff_pattern_diagram.svg)
+![backend_for_frontend_bff_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/backend_for_frontend_bff_pattern_diagram.svg)
 
 ---
 ## BFF Pros and Cons
@@ -1356,7 +1356,7 @@ Cons:
 ---
 ## API Gateway Pattern Diagram
 
-![api_gateway_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/api_gateway_pattern_diagram.svg)
+![api_gateway_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/api_gateway_pattern_diagram.svg)
 
 ---
 
@@ -1400,7 +1400,7 @@ Cons:
 
 ## Anti-Corruption Layer Pattern Diagram
 
-![anti_corruption_layer_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/anti_corruption_layer_pattern_diagram.svg)
+![anti_corruption_layer_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/anti_corruption_layer_pattern_diagram.svg)
 
 ---
 ## Anti-Corruption Pros and Cons
@@ -1445,7 +1445,7 @@ Cons:
 
 ## Database per Service Pattern Diagram
 
-![database_per_service_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/database_per_service_pattern_diagram.svg)
+![database_per_service_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/database_per_service_pattern_diagram.svg)
 
 ---
 
@@ -1492,7 +1492,7 @@ Cons:
 
 ## Geode Pattern Diagram
 
-![geode_pattern_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/geode_pattern_diagram.svg)
+![geode_pattern_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/geode_pattern_diagram.svg)
 
 ---
 ## Geode Pros and Cons
@@ -1531,7 +1531,7 @@ Cons:
 ---
 ## Kappa Architecture Diagram
 
-![kappa_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/kappa_architecture_diagram.svg)
+![kappa_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/kappa_architecture_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -1570,7 +1570,7 @@ Cons:
 ---
 ## Lambda Architecture Diagram
 
-![lambda_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/lambda_architecture_diagram.svg)
+![lambda_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/lambda_architecture_diagram.svg)
 
 ---
 ## Pros and Cons
@@ -1608,7 +1608,7 @@ Cons:
 ---
 ## Mesh Architecture Diagram
 
-![mesh_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/mesh_architecture_diagram.svg)
+![mesh_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/mesh_architecture_diagram.svg)
 
 ---
 ## Mesh Architecture Pros and Cons
@@ -1647,7 +1647,7 @@ Cons:
 ---
 ## Sharded Architecture Diagram
 
-![sharded_architecture_diagram](/svg/courses/architecting/architecting/01_architectural_design_patterns/sharded_architecture_diagram.svg)
+![sharded_architecture_diagram](svg/courses/architecting/architecting/01_architectural_design_patterns/sharded_architecture_diagram.svg)
 
 ---
 ## Sharded Pros and Cons
@@ -1685,7 +1685,7 @@ Cons:
 ---
 ## Throttling Pattern Diagram
 
-![throttling_pattern_diagram](/out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/throttling_pattern_diagram.svg)
+![throttling_pattern_diagram](out/mermaid/courses/architecting/architecting/01_architectural_design_patterns/throttling_pattern_diagram.svg)
 
 ---
 ## Throttling Pros and Cons

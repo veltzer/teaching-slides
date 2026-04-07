@@ -135,7 +135,7 @@ Error: KeyError: 'users'
 
 ## How Sampling Affects Output
 
-![how_sampling_affects_output](/svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
+![how_sampling_affects_output](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
 
 ## Key Parameters
 - **`temperature`**: controls randomness; lower = more focused
@@ -282,7 +282,7 @@ review = client.chat.completions.create(
 
 ## Breaking Complex Tasks into Stages
 
-![breaking_complex_tasks_into_stages](/svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
+![breaking_complex_tasks_into_stages](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
 
 1. Each stage gets a focused prompt with a single responsibility
 1. Output of stage N becomes input of stage N+1
@@ -415,7 +415,7 @@ prompt = REVIEW_TEMPLATE.render(
 - Rank context sources by relevance to the current task
 - Assemble prompt from highest-priority items first
 
-![fitting_the_right_context_into_limited_windows](/svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
+![fitting_the_right_context_into_limited_windows](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
 
 - Always reserve tokens for the model's response
 - Drop lowest-priority items first when the window is tight
@@ -515,7 +515,7 @@ response = client.messages.create(
 
 ## Building a Prompt Evaluation Loop
 
-![building_a_prompt_evaluation_loop](/svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
+![building_a_prompt_evaluation_loop](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
 
 1. Build a test set: 20-50 representative inputs with expected outputs
 1. Score with automated metrics: exact match, BLEU, or LLM-as-judge

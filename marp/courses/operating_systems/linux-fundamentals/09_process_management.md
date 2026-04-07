@@ -5,7 +5,7 @@
 
 ## The ps Command
 
-![the_ps_command](/svg/courses/operating_systems/linux-fundamentals/09_process_management/the_ps_command.svg)
+![the_ps_command](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_ps_command.svg)
 
 Basic usage:
 
@@ -55,7 +55,7 @@ TIME  - CPU time used
 
 ## Finding Process IDs
 
-![finding_process_ids](/svg/courses/operating_systems/linux-fundamentals/09_process_management/finding_process_ids.svg)
+![finding_process_ids](svg/courses/operating_systems/linux-fundamentals/09_process_management/finding_process_ids.svg)
 
 Different methods:
 
@@ -77,7 +77,7 @@ ps -o ppid= -p PID
 
 ## Sending Signals (kill)
 
-![sending_signals_kill](/svg/courses/operating_systems/linux-fundamentals/09_process_management/sending_signals_kill.svg)
+![sending_signals_kill](svg/courses/operating_systems/linux-fundamentals/09_process_management/sending_signals_kill.svg)
 
 Common signals:
 
@@ -114,7 +114,7 @@ kill -CONT PID
 ---
 ## Monitoring with top
 
-![monitoring_with_top](/svg/courses/operating_systems/linux-fundamentals/09_process_management/monitoring_with_top.svg)
+![monitoring_with_top](svg/courses/operating_systems/linux-fundamentals/09_process_management/monitoring_with_top.svg)
 
 Interactive commands:
 
@@ -149,7 +149,7 @@ Key sections:
 
 ## Dealing with Zombies
 
-![dealing_with_zombies](/svg/courses/operating_systems/linux-fundamentals/09_process_management/dealing_with_zombies.svg)
+![dealing_with_zombies](svg/courses/operating_systems/linux-fundamentals/09_process_management/dealing_with_zombies.svg)
 
 Identifying zombies:
 
@@ -168,7 +168,7 @@ kill -9 PARENT_PID
 
 ## The Shell and Jobs
 
-![the_shell_and_jobs](/svg/courses/operating_systems/linux-fundamentals/09_process_management/the_shell_and_jobs.svg)
+![the_shell_and_jobs](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_shell_and_jobs.svg)
 
 Job control:
 
@@ -190,7 +190,7 @@ bg %1
 
 ## Process Priorities (nice)
 
-![process_priorities_nice](/svg/courses/operating_systems/linux-fundamentals/09_process_management/process_priorities_nice.svg)
+![process_priorities_nice](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_priorities_nice.svg)
 
 Managing priorities:
 
@@ -257,7 +257,7 @@ watch -n 1 'free -m'
 ---
 ## Process Troubleshooting
 
-![process_troubleshooting](/svg/courses/operating_systems/linux-fundamentals/09_process_management/process_troubleshooting.svg)
+![process_troubleshooting](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_troubleshooting.svg)
 
 Common commands:
 

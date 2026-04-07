@@ -25,7 +25,7 @@
 ---
 ## The Classic Environment Pipeline
 
-![the_classic_environment_pipeline](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/the_classic_environment_pipeline.svg)
+![the_classic_environment_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/the_classic_environment_pipeline.svg)
 
 - Code flows through progressively more production-like environments
 - Each stage acts as a quality gate
@@ -65,7 +65,7 @@
 ---
 ## Environment Topology Diagram
 
-![environment_topology_diagram](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_topology_diagram.svg)
+![environment_topology_diagram](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_topology_diagram.svg)
 
 ---
 ## Production-like vs Lightweight Environments
@@ -148,7 +148,7 @@ spec:
 ---
 ## Ephemeral Environment Lifecycle
 
-![ephemeral_environment_lifecycle](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/ephemeral_environment_lifecycle.svg)
+![ephemeral_environment_lifecycle](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/ephemeral_environment_lifecycle.svg)
 
 - Entire lifecycle is automated and tied to the PR workflow
 ---
@@ -163,7 +163,7 @@ spec:
 ---
 ## Preview Environment Architecture
 
-![preview_environment_architecture](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/preview_environment_architecture.svg)
+![preview_environment_architecture](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/preview_environment_architecture.svg)
 
 ---
 ## Setting Up PR Preview Environments
@@ -348,7 +348,7 @@ jobs:
 ---
 ## Configuration Drift Visualization
 
-![configuration_drift_visualization](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/configuration_drift_visualization.svg)
+![configuration_drift_visualization](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/configuration_drift_visualization.svg)
 
 - Without active management, every environment drifts away from production
 ---
@@ -477,7 +477,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ---
 ## Data Anonymization Pipeline
 
-![data_anonymization_pipeline](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/data_anonymization_pipeline.svg)
+![data_anonymization_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/data_anonymization_pipeline.svg)
 
 - Automate the pipeline so non-prod data stays fresh and safe
 ---
@@ -512,7 +512,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ---
 ## Secrets Architecture
 
-![secrets_architecture](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/secrets_architecture.svg)
+![secrets_architecture](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/secrets_architecture.svg)
 
 ---
 ## Feature Flags Across Environments
@@ -547,7 +547,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ---
 ## Environment Promotion Strategy
 
-![environment_promotion_strategy](/svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_promotion_strategy.svg)
+![environment_promotion_strategy](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/environment_promotion_strategy.svg)
 
 ---
 ## `GitOps` for Environment Management

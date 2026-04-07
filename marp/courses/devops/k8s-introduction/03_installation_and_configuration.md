@@ -14,7 +14,7 @@
 
 ## Local Development Tools
 
-![local_development_tools](/svg/courses/devops/k8s-introduction/03_installation_and_configuration/local_development_tools.svg)
+![local_development_tools](svg/courses/devops/k8s-introduction/03_installation_and_configuration/local_development_tools.svg)
 
 ---
 
@@ -96,7 +96,7 @@ rm minikube-linux-amd64
 
 ## Minikube Drivers
 
-![minikube_drivers](/svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_drivers.svg)
+![minikube_drivers](svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_drivers.svg)
 
 ---
 
@@ -120,7 +120,7 @@ minikube start --kubernetes-version=v1.28.0
 
 ## Minikube Start Process
 
-![minikube_start_process](/svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_start_process.svg)
+![minikube_start_process](svg/courses/devops/k8s-introduction/03_installation_and_configuration/minikube_start_process.svg)
 
 ---
 
@@ -403,7 +403,7 @@ kubectl get nodes
 
 ## Cloud Managed Services
 
-![cloud_managed_services](/svg/courses/devops/k8s-introduction/03_installation_and_configuration/cloud_managed_services.svg)
+![cloud_managed_services](svg/courses/devops/k8s-introduction/03_installation_and_configuration/cloud_managed_services.svg)
 
 ---
 
@@ -503,7 +503,7 @@ releases/download/v2.8.1/weave-daemonset-k8s.yaml
 
 ## High Availability Setup
 
-![high_availability_setup](/svg/courses/devops/k8s-introduction/03_installation_and_configuration/high_availability_setup.svg)
+![high_availability_setup](svg/courses/devops/k8s-introduction/03_installation_and_configuration/high_availability_setup.svg)
 
 ---
 

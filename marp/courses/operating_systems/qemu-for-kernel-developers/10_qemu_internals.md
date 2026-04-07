@@ -18,7 +18,7 @@ QEMU Project Structure
 
 QEMU Source Code Architecture
 
-![qemu_internals_1](/svg/courses/operating_systems/qemu-for-kernel-developers/10_qemu_internals/qemu_internals_1.svg)
+![qemu_internals_1](svg/courses/operating_systems/qemu-for-kernel-developers/10_qemu_internals/qemu_internals_1.svg)
 
 ---
 
@@ -59,7 +59,7 @@ TCG Intermediate Representation
 
 TCG Code Generation Process
 
-![qemu_internals_2](/svg/courses/operating_systems/qemu-for-kernel-developers/10_qemu_internals/qemu_internals_2.svg)
+![qemu_internals_2](svg/courses/operating_systems/qemu-for-kernel-developers/10_qemu_internals/qemu_internals_2.svg)
 
 ---
 

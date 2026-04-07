@@ -15,7 +15,7 @@
 ## Java 8+ Features in Android
 ### Key Improvements
 
-![key_improvements](/svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/key_improvements.svg)
+![key_improvements](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/key_improvements.svg)
 
 ---
 
@@ -77,7 +77,7 @@ List<String> sorted = names.stream()
 ## Stream API
 ### Data Processing Pipeline
 
-![data_processing_pipeline](/svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/data_processing_pipeline.svg)
+![data_processing_pipeline](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/data_processing_pipeline.svg)
 
 Example:
 
@@ -110,7 +110,7 @@ public class UserProcessor {
 ## Threading Fundamentals
 ### Android Threading Model
 
-![android_threading_model](/svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/android_threading_model.svg)
+![android_threading_model](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/android_threading_model.svg)
 
 ---
 

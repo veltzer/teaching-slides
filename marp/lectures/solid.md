@@ -39,7 +39,7 @@ class Employee {
 ---
 ## SRP - Violation Visualization
 
-![srp_violation_visualization](/svg/lectures/solid/srp_violation_visualization.svg)
+![srp_violation_visualization](svg/lectures/solid/srp_violation_visualization.svg)
 
 ---
 ## SRP - Good Example
@@ -70,7 +70,7 @@ class EmailService {
 ---
 ## SRP - Better Structure
 
-![srp_better_structure](/svg/lectures/solid/srp_better_structure.svg)
+![srp_better_structure](svg/lectures/solid/srp_better_structure.svg)
 
 ---
 ## Open/Closed Principle
@@ -106,7 +106,7 @@ class AreaCalculator {
 ---
 ## OCP - Violation Visualization
 
-![ocp_violation_visualization](/svg/lectures/solid/ocp_violation_visualization.svg)
+![ocp_violation_visualization](svg/lectures/solid/ocp_violation_visualization.svg)
 
 ---
 ## OCP - Good Example
@@ -137,7 +137,7 @@ class Circle implements Shape {
 ---
 ## OCP - Better Structure
 
-![ocp_better_structure](/svg/lectures/solid/ocp_better_structure.svg)
+![ocp_better_structure](svg/lectures/solid/ocp_better_structure.svg)
 
 ---
 ## Liskov Substitution Principle
@@ -166,7 +166,7 @@ class Penguin extends Bird {
 ---
 ## LSP - Violation Visualization
 
-![lsp_violation_visualization](/svg/lectures/solid/lsp_violation_visualization.svg)
+![lsp_violation_visualization](svg/lectures/solid/lsp_violation_visualization.svg)
 
 ---
 ## LSP - Good Example
@@ -193,7 +193,7 @@ class Penguin implements Bird {
 ---
 ## LSP - Better Structure
 
-![lsp_better_structure](/svg/lectures/solid/lsp_better_structure.svg)
+![lsp_better_structure](svg/lectures/solid/lsp_better_structure.svg)
 
 ---
 ## Interface Segregation Principle
@@ -227,7 +227,7 @@ class Robot implements Worker {
 ---
 ## ISP - Violation Visualization
 
-![isp_violation_visualization](/svg/lectures/solid/isp_violation_visualization.svg)
+![isp_violation_visualization](svg/lectures/solid/isp_violation_visualization.svg)
 
 ---
 ## ISP - Good Example
@@ -259,7 +259,7 @@ class Robot implements Workable {
 ---
 ## ISP - Better Structure
 
-![isp_better_structure](/svg/lectures/solid/isp_better_structure.svg)
+![isp_better_structure](svg/lectures/solid/isp_better_structure.svg)
 
 ---
 ## Dependency Inversion Principle
@@ -293,7 +293,7 @@ class Switch {
 ---
 ## DIP - Violation Visualization
 
-![dip_violation_visualization](/svg/lectures/solid/dip_violation_visualization.svg)
+![dip_violation_visualization](svg/lectures/solid/dip_violation_visualization.svg)
 
 ---
 ## DIP - Good Example
@@ -325,7 +325,7 @@ class Switch {
 ---
 ## DIP - Better Structure
 
-![dip_better_structure](/svg/lectures/solid/dip_better_structure.svg)
+![dip_better_structure](svg/lectures/solid/dip_better_structure.svg)
 
 ---
 ## Real-World Example: E-commerce System
@@ -351,7 +351,7 @@ class Order {
 ---
 ## E-commerce - Bad Design Visualization
 
-![e_commerce_bad_design_visualization](/svg/lectures/solid/e_commerce_bad_design_visualization.svg)
+![e_commerce_bad_design_visualization](svg/lectures/solid/e_commerce_bad_design_visualization.svg)
 
 ---
 ## E-commerce System - SOLID Design
@@ -392,7 +392,7 @@ class OrderService {
 ---
 ## E-commerce - SOLID Design Visualization
 
-![e_commerce_solid_design_visualization](/svg/lectures/solid/e_commerce_solid_design_visualization.svg)
+![e_commerce_solid_design_visualization](svg/lectures/solid/e_commerce_solid_design_visualization.svg)
 
 ---
 ## Benefits of SOLID in the E-commerce Example

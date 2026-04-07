@@ -6,7 +6,7 @@
 
 ## Official Client Libraries
 
-![official_client_libraries](/svg/courses/databases/elasticsearch-for-developers/12_client_libraries/official_client_libraries.svg)
+![official_client_libraries](svg/courses/databases/elasticsearch-for-developers/12_client_libraries/official_client_libraries.svg)
 
 ---
 
@@ -318,7 +318,7 @@ if err != nil {
 
 ## Connection Pooling
 
-![connection_pooling](/svg/courses/databases/elasticsearch-for-developers/12_client_libraries/connection_pooling.svg)
+![connection_pooling](svg/courses/databases/elasticsearch-for-developers/12_client_libraries/connection_pooling.svg)
 
 ---
 

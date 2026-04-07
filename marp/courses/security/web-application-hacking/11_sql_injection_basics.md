@@ -44,7 +44,7 @@ SELECT * FROM users WHERE username='admin'--' AND password='anything'
 
 ## SQL Injection Types
 
-![sql_injection_types](/svg/courses/security/web-application-hacking/11_sql_injection_basics/sql_injection_types.svg)
+![sql_injection_types](svg/courses/security/web-application-hacking/11_sql_injection_basics/sql_injection_types.svg)
 
 ---
 
@@ -90,7 +90,7 @@ REST Path Params:   /api/users/123
 
 ## Recognizing SQL Injection Responses
 
-![recognizing_sql_injection_responses](/svg/courses/security/web-application-hacking/11_sql_injection_basics/recognizing_sql_injection_responses.svg)
+![recognizing_sql_injection_responses](svg/courses/security/web-application-hacking/11_sql_injection_basics/recognizing_sql_injection_responses.svg)
 
 ---
 
@@ -248,7 +248,7 @@ Oracle:      --, /* */
 
 ## Practical Example: DVWA SQL Injection
 
-![practical_example_dvwa_sql_injection](/svg/courses/security/web-application-hacking/11_sql_injection_basics/practical_example_dvwa_sql_injection.svg)
+![practical_example_dvwa_sql_injection](svg/courses/security/web-application-hacking/11_sql_injection_basics/practical_example_dvwa_sql_injection.svg)
 
 ---
 

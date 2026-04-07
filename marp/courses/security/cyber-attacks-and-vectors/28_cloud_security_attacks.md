@@ -12,7 +12,7 @@
 ---
 ## Shared Responsibility Model
 
-![shared_responsibility_model](/svg/courses/security/cyber-attacks-and-vectors/28_cloud_security_attacks/shared_responsibility_model.svg)
+![shared_responsibility_model](svg/courses/security/cyber-attacks-and-vectors/28_cloud_security_attacks/shared_responsibility_model.svg)
 
 ---
 ## Misconfigured S3 Buckets

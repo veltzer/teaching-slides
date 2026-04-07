@@ -4,7 +4,7 @@
 
 ## Day 3: Agents, Memory & LangChain
 
-![day_3_agents_memory_langchain](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/day_3_agents_memory_langchain.svg)
+![day_3_agents_memory_langchain](svg/courses/ai/generative-ai-applications/10_agents_and_memory/day_3_agents_memory_langchain.svg)
 
 ---
 
@@ -12,7 +12,7 @@
 
 An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
-![what_is_an_ai_agent](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/what_is_an_ai_agent.svg)
+![what_is_an_ai_agent](svg/courses/ai/generative-ai-applications/10_agents_and_memory/what_is_an_ai_agent.svg)
 
 **Key difference from simple chatbots:** Agents can take **multiple steps** and use **external tools** to accomplish tasks.
 
@@ -20,13 +20,13 @@ An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
 ## Simple Agent vs. Complex Agent
 
-![simple_agent_vs_complex_agent](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/simple_agent_vs_complex_agent.svg)
+![simple_agent_vs_complex_agent](svg/courses/ai/generative-ai-applications/10_agents_and_memory/simple_agent_vs_complex_agent.svg)
 
 ---
 
 ## Agent Architecture
 
-![agent_architecture](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/agent_architecture.svg)
+![agent_architecture](svg/courses/ai/generative-ai-applications/10_agents_and_memory/agent_architecture.svg)
 
 ---
 
@@ -131,7 +131,7 @@ def run_agent(user_message, max_iterations=10):
 
 ## Agent Planning Strategies
 
-![agent_planning_strategies](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/agent_planning_strategies.svg)
+![agent_planning_strategies](svg/courses/ai/generative-ai-applications/10_agents_and_memory/agent_planning_strategies.svg)
 
 ---
 
@@ -191,7 +191,7 @@ Call 2: User: "What's my name?"
 
 **Solutions:**
 
-![the_memory_problem](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/the_memory_problem.svg)
+![the_memory_problem](svg/courses/ai/generative-ai-applications/10_agents_and_memory/the_memory_problem.svg)
 
 ---
 
@@ -307,7 +307,7 @@ relevant = memory.retrieve("What does Alice do for work?")
 
 Combine vector memory with generation for knowledge-grounded responses:
 
-![rag_retrieval_augmented_generation](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/rag_retrieval_augmented_generation.svg)
+![rag_retrieval_augmented_generation](svg/courses/ai/generative-ai-applications/10_agents_and_memory/rag_retrieval_augmented_generation.svg)
 
 ---
 
@@ -424,7 +424,7 @@ class EntityMemory:
 
 Multiple specialized agents collaborating:
 
-![multi_agent_systems](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/multi_agent_systems.svg)
+![multi_agent_systems](svg/courses/ai/generative-ai-applications/10_agents_and_memory/multi_agent_systems.svg)
 
 ```python
 def orchestrator(task):
@@ -893,4 +893,4 @@ class AgentEvaluator:
 
 ## Common Agent Failure Modes
 
-![common_agent_failure_modes](/svg/courses/ai/generative-ai-applications/10_agents_and_memory/common_agent_failure_modes.svg)
+![common_agent_failure_modes](svg/courses/ai/generative-ai-applications/10_agents_and_memory/common_agent_failure_modes.svg)

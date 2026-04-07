@@ -81,7 +81,7 @@
 ---
 ## Encryption Techniques
 
-![encryption_techniques](/svg/courses/security/cyber-attacks-and-vectors/26_ransomware/encryption_techniques.svg)
+![encryption_techniques](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/encryption_techniques.svg)
 
 - AES-256 for file encryption (fast, symmetric)
 - RSA-2048/4096 for key encryption (slow, asymmetric)
@@ -265,12 +265,12 @@ taskkill /F /IM outlook.exe
 ---
 ## Double and Triple Extortion
 
-![double_and_triple_extortion](/svg/courses/security/cyber-attacks-and-vectors/26_ransomware/double_and_triple_extortion.svg)
+![double_and_triple_extortion](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/double_and_triple_extortion.svg)
 
 ---
 ## Backup Strategies: The 3-2-1-1-0 Rule
 
-![backup_strategies_the_3_2_1_1_0_rule](/svg/courses/security/cyber-attacks-and-vectors/26_ransomware/backup_strategies_the_3_2_1_1_0_rule.svg)
+![backup_strategies_the_3_2_1_1_0_rule](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/backup_strategies_the_3_2_1_1_0_rule.svg)
 
 ---
 ## Immutable Backups
@@ -436,7 +436,7 @@ inotifywait -m -r /data --format '%f' -e moved_to | \
 ---
 ## Free Decryption Resources
 
-![free_decryption_resources](/svg/courses/security/cyber-attacks-and-vectors/26_ransomware/free_decryption_resources.svg)
+![free_decryption_resources](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/free_decryption_resources.svg)
 
 ---
 ## Key Takeaways

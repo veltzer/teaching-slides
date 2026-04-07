@@ -24,13 +24,13 @@
 
 ## The Linux Kernel Problem
 
-![the_linux_kernel_problem](/svg/courses/git/git2/01_intro/the_linux_kernel_problem.svg)
+![the_linux_kernel_problem](svg/courses/git/git2/01_intro/the_linux_kernel_problem.svg)
 
 ---
 
 ## The Birth of Git (2005)
 
-![h:300](/jpg/courses/git/git2/linus_torvalds.jpg)
+![h:300](jpg/courses/git/git2/linus_torvalds.jpg)
 
 **Linus Torvalds** created Git in April 2005
 
@@ -72,7 +72,7 @@ But also:
 
 ## Who is Using Git?
 
-![who_is_using_git](/svg/courses/git/git2/01_intro/who_is_using_git.svg)
+![who_is_using_git](svg/courses/git/git2/01_intro/who_is_using_git.svg)
 
 ---
 
@@ -91,7 +91,7 @@ According to Stack Overflow Developer Survey:
 
 ## Git vs Centralized VCS
 
-![git_vs_centralized_vcs](/svg/courses/git/git2/01_intro/git_vs_centralized_vcs.svg)
+![git_vs_centralized_vcs](svg/courses/git/git2/01_intro/git_vs_centralized_vcs.svg)
 
 ---
 
@@ -127,17 +127,17 @@ According to Stack Overflow Developer Survey:
 
 ## The Git Data Model
 
-![the_git_data_model](/svg/courses/git/git2/01_intro/the_git_data_model.svg)
+![the_git_data_model](svg/courses/git/git2/01_intro/the_git_data_model.svg)
 
 ---
 
 ## Snapshots, Not Differences
 
 **SVN/CVS** - Stores differences (deltas)
-![snapshots_not_differences_1](/svg/courses/git/git2/01_intro/snapshots_not_differences_1.svg)
+![snapshots_not_differences_1](svg/courses/git/git2/01_intro/snapshots_not_differences_1.svg)
 
 **Git** - Stores snapshots
-![snapshots_not_differences_2](/svg/courses/git/git2/01_intro/snapshots_not_differences_2.svg)
+![snapshots_not_differences_2](svg/courses/git/git2/01_intro/snapshots_not_differences_2.svg)
 
 ## If files don't change, Git just links to the previous identical file
 
@@ -145,7 +145,7 @@ According to Stack Overflow Developer Survey:
 
 ## The Three States
 
-![the_three_states](/svg/courses/git/git2/01_intro/the_three_states.svg)
+![the_three_states](svg/courses/git/git2/01_intro/the_three_states.svg)
 
 ---
 
@@ -220,7 +220,7 @@ After committing:
 
 ## Branches in Git
 
-![branches_in_git](/svg/courses/git/git2/01_intro/branches_in_git.svg)
+![branches_in_git](svg/courses/git/git2/01_intro/branches_in_git.svg)
 
 ---
 
@@ -329,7 +329,7 @@ After committing:
 
 ## Define Your Workflow
 
-![define_your_workflow](/svg/courses/git/git2/01_intro/define_your_workflow.svg)
+![define_your_workflow](svg/courses/git/git2/01_intro/define_your_workflow.svg)
 
 ---
 
@@ -389,7 +389,7 @@ WIP
 
 ## The Power of Git History
 
-![the_power_of_git_history](/svg/courses/git/git2/01_intro/the_power_of_git_history.svg)
+![the_power_of_git_history](svg/courses/git/git2/01_intro/the_power_of_git_history.svg)
 
 ---
 
@@ -497,4 +497,4 @@ In the upcoming sessions, we'll dive into:
 
 ## Ready to Master Git?
 
-![ready_to_master_git](/svg/courses/git/git2/01_intro/ready_to_master_git.svg)
+![ready_to_master_git](svg/courses/git/git2/01_intro/ready_to_master_git.svg)

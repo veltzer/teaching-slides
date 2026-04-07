@@ -4,7 +4,7 @@
 
 ## Installing Docker
 
-![installing_docker](/svg/courses/devops/docker-for-developers/03_starting_out/installing_docker.svg)
+![installing_docker](svg/courses/devops/docker-for-developers/03_starting_out/installing_docker.svg)
 
 ---
 
@@ -21,7 +21,7 @@
 
 ## Installation Steps: Ubuntu
 
-![installation_steps_ubuntu](/svg/courses/devops/docker-for-developers/03_starting_out/installation_steps_ubuntu.svg)
+![installation_steps_ubuntu](svg/courses/devops/docker-for-developers/03_starting_out/installation_steps_ubuntu.svg)
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## Running Your First Container
 
-![running_your_first_container](/svg/courses/devops/docker-for-developers/03_starting_out/running_your_first_container.svg)
+![running_your_first_container](svg/courses/devops/docker-for-developers/03_starting_out/running_your_first_container.svg)
 
 ---
 
@@ -56,25 +56,25 @@
 
 ## Docker Concepts: Image vs Container
 
-![docker_concepts_image_vs_container](/svg/courses/devops/docker-for-developers/03_starting_out/docker_concepts_image_vs_container.svg)
+![docker_concepts_image_vs_container](svg/courses/devops/docker-for-developers/03_starting_out/docker_concepts_image_vs_container.svg)
 
 ---
 
 ## Image Basics
 
-![image_basics](/svg/courses/devops/docker-for-developers/03_starting_out/image_basics.svg)
+![image_basics](svg/courses/devops/docker-for-developers/03_starting_out/image_basics.svg)
 
 ---
 
 ## Container States
 
-![container_states](/svg/courses/devops/docker-for-developers/03_starting_out/container_states.svg)
+![container_states](svg/courses/devops/docker-for-developers/03_starting_out/container_states.svg)
 
 ---
 
 ## Docker Hub
 
-![docker_hub](/svg/courses/devops/docker-for-developers/03_starting_out/docker_hub.svg)
+![docker_hub](svg/courses/devops/docker-for-developers/03_starting_out/docker_hub.svg)
 
 ---
 
@@ -91,7 +91,7 @@
 
 ## Basic Container Operations
 
-![basic_container_operations](/svg/courses/devops/docker-for-developers/03_starting_out/basic_container_operations.svg)
+![basic_container_operations](svg/courses/devops/docker-for-developers/03_starting_out/basic_container_operations.svg)
 
 ---
 
@@ -108,4 +108,4 @@
 
 ## Best Practices for Beginners
 
-![best_practices_for_beginners](/svg/courses/devops/docker-for-developers/03_starting_out/best_practices_for_beginners.svg)
+![best_practices_for_beginners](svg/courses/devops/docker-for-developers/03_starting_out/best_practices_for_beginners.svg)

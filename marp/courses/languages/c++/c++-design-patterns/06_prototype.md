@@ -37,7 +37,7 @@ Cloning an existing configured object is much faster
 
 ## Prototype Structure
 
-![prototype_structure](/svg/courses/languages/c++/c++-design-patterns/06_prototype/prototype_structure.svg)
+![prototype_structure](svg/courses/languages/c++/c++-design-patterns/06_prototype/prototype_structure.svg)
 
 ---
 

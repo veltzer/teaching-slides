@@ -6,7 +6,7 @@
 
 ## Advanced Features Overview
 
-![advanced_features_overview](/svg/courses/databases/elasticsearch-for-developers/14_advanced_features/advanced_features_overview.svg)
+![advanced_features_overview](svg/courses/databases/elasticsearch-for-developers/14_advanced_features/advanced_features_overview.svg)
 
 ---
 

@@ -14,7 +14,7 @@ Balancing speed, cost, and confidence in CI/CD testing
 
 ## The Test Pyramid
 
-![the_test_pyramid](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/the_test_pyramid.svg)
+![the_test_pyramid](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/the_test_pyramid.svg)
 
 ---
 
@@ -61,7 +61,7 @@ Balancing speed, cost, and confidence in CI/CD testing
 
 ## Maintenance Cost by Test Level
 
-![maintenance_cost_by_test_level](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/maintenance_cost_by_test_level.svg)
+![maintenance_cost_by_test_level](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/maintenance_cost_by_test_level.svg)
 
 ---
 
@@ -77,7 +77,7 @@ Balancing speed, cost, and confidence in CI/CD testing
 
 ## Shift-Left Testing Overview
 
-![shift_left_testing_overview](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/shift_left_testing_overview.svg)
+![shift_left_testing_overview](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/shift_left_testing_overview.svg)
 
 ---
 
@@ -131,7 +131,7 @@ jobs:
 
 ## Security Scanning Integration Points
 
-![security_scanning_integration_points](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/security_scanning_integration_points.svg)
+![security_scanning_integration_points](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/security_scanning_integration_points.svg)
 
 ---
 
@@ -163,7 +163,7 @@ jobs:
 
 ## Contract Testing vs Integration Testing
 
-![contract_testing_vs_integration_testing](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/contract_testing_vs_integration_testing.svg)
+![contract_testing_vs_integration_testing](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/contract_testing_vs_integration_testing.svg)
 
 ---
 
@@ -189,7 +189,7 @@ jobs:
 
 ## Test Environment Architecture
 
-![test_environment_architecture](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/test_environment_architecture.svg)
+![test_environment_architecture](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/test_environment_architecture.svg)
 
 ---
 
@@ -228,7 +228,7 @@ jobs:
 
 ## Service Virtualization Architecture
 
-![service_virtualization_architecture](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/service_virtualization_architecture.svg)
+![service_virtualization_architecture](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/service_virtualization_architecture.svg)
 
 ---
 
@@ -352,7 +352,7 @@ step("Verify dashboard loads", async () => {
 
 ## Chaos Engineering as Testing
 
-![chaos_engineering_as_testing](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/chaos_engineering_as_testing.svg)
+![chaos_engineering_as_testing](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/chaos_engineering_as_testing.svg)
 
 ---
 
@@ -388,7 +388,7 @@ step("Verify dashboard loads", async () => {
 
 ## Observability Pillars for Testing
 
-![observability_pillars_for_testing](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/observability_pillars_for_testing.svg)
+![observability_pillars_for_testing](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/observability_pillars_for_testing.svg)
 
 ---
 
@@ -414,7 +414,7 @@ step("Verify dashboard loads", async () => {
 
 ## Building a Complete Testing Strategy
 
-![building_a_complete_testing_strategy](/svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/building_a_complete_testing_strategy.svg)
+![building_a_complete_testing_strategy](svg/courses/devops/architectural-decisions-in-devops/15_testing_strategy_tradeoffs/building_a_complete_testing_strategy.svg)
 
 ---
 

@@ -15,7 +15,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 ## Diagram
 
-![diagram](/svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/diagram.svg)
+![diagram](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/diagram.svg)
 
 ---
 ## Consequences of DNS Cache Poisoning
@@ -52,7 +52,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 ## DNS Resolution Process (Normal)
 
-![dns_resolution_process_normal](/svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/dns_resolution_process_normal.svg)
+![dns_resolution_process_normal](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/dns_resolution_process_normal.svg)
 
 ---
 
@@ -60,13 +60,13 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
 
-![kaminsky_attack_2008](/svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/kaminsky_attack_2008.svg)
+![kaminsky_attack_2008](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/kaminsky_attack_2008.svg)
 
 ---
 
 ## Transaction ID Vulnerability
 
-![transaction_id_vulnerability](/svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/transaction_id_vulnerability.svg)
+![transaction_id_vulnerability](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/transaction_id_vulnerability.svg)
 
 ---
 
@@ -101,7 +101,7 @@ dig example.com +dnssec +short
 
 ## DNSSEC: How It Works
 
-![dnssec_how_it_works](/svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/dnssec_how_it_works.svg)
+![dnssec_how_it_works](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/dnssec_how_it_works.svg)
 
 ```bash
 # Verify DNSSEC for a domain

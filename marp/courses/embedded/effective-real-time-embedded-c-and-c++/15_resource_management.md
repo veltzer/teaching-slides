@@ -14,7 +14,7 @@
 
 ## RAII Principle
 
-![raii_principle](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/15_resource_management/raii_principle.svg)
+![raii_principle](svg/courses/embedded/effective-real-time-embedded-c-and-c++/15_resource_management/raii_principle.svg)
 
 ---
 

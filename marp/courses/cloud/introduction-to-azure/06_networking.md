@@ -2,7 +2,7 @@
 
 ## Core Networking Components
 
-![core_networking_components](/svg/courses/cloud/introduction-to-azure/06_networking/core_networking_components.svg)
+![core_networking_components](svg/courses/cloud/introduction-to-azure/06_networking/core_networking_components.svg)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## VNet Architecture
 
-![vnet_architecture](/svg/courses/cloud/introduction-to-azure/06_networking/vnet_architecture.svg)
+![vnet_architecture](svg/courses/cloud/introduction-to-azure/06_networking/vnet_architecture.svg)
 
 ---
 
@@ -96,7 +96,7 @@
 
 ## App Gateway Components
 
-![app_gateway_components](/svg/courses/cloud/introduction-to-azure/06_networking/app_gateway_components.svg)
+![app_gateway_components](svg/courses/cloud/introduction-to-azure/06_networking/app_gateway_components.svg)
 
 ---
 
@@ -201,7 +201,7 @@
 
 ## Hybrid Connectivity
 
-![hybrid_connectivity](/svg/courses/cloud/introduction-to-azure/06_networking/hybrid_connectivity.svg)
+![hybrid_connectivity](svg/courses/cloud/introduction-to-azure/06_networking/hybrid_connectivity.svg)
 
 ---
 

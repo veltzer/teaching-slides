@@ -39,7 +39,7 @@
 ---
 ## How Slowloris Works
 
-![how_slowloris_works](/svg/courses/security/cyber-attacks-and-vectors/16_slowloris/how_slowloris_works.svg)
+![how_slowloris_works](svg/courses/security/cyber-attacks-and-vectors/16_slowloris/how_slowloris_works.svg)
 
 - The attacker sends partial HTTP headers, never completing the request
 - Periodically sends additional header bytes to keep connections alive
@@ -149,7 +149,7 @@ def slowloris_attack():
 ---
 ## Slow POST (R.U.D.Y.) Attack
 
-![slow_post_r_u_d_y_attack](/svg/courses/security/cyber-attacks-and-vectors/16_slowloris/slow_post_r_u_d_y_attack.svg)
+![slow_post_r_u_d_y_attack](svg/courses/security/cyber-attacks-and-vectors/16_slowloris/slow_post_r_u_d_y_attack.svg)
 
 - Declares a large Content-Length but sends the body extremely slowly
 - Server must keep the connection open to receive the full body
@@ -214,7 +214,7 @@ curl http://localhost/server-status?auto | \
 | Idle connection cost       | Very expensive          | Very cheap               |
 | Timeout handling           | Waits per thread       | Async timeout per event  |
 
-![apache_vs_nginx_resilience](/svg/courses/security/cyber-attacks-and-vectors/16_slowloris/apache_vs_nginx_resilience.svg)
+![apache_vs_nginx_resilience](svg/courses/security/cyber-attacks-and-vectors/16_slowloris/apache_vs_nginx_resilience.svg)
 
 ---
 ## Apache mod_reqtimeout Configuration
@@ -327,7 +327,7 @@ nft add rule inet filter input \
 ---
 ## Reverse Proxy as a Defense Layer
 
-![reverse_proxy_as_a_defense_layer](/svg/courses/security/cyber-attacks-and-vectors/16_slowloris/reverse_proxy_as_a_defense_layer.svg)
+![reverse_proxy_as_a_defense_layer](svg/courses/security/cyber-attacks-and-vectors/16_slowloris/reverse_proxy_as_a_defense_layer.svg)
 
 - Place an event-driven reverse proxy (Nginx, HAProxy) in front of Apache
 - The proxy absorbs slow connections efficiently

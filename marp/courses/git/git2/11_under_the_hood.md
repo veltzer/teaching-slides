@@ -59,7 +59,7 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
     - Enables distributed development
     - Natural deduplication
 
-![core_git_ideas](/svg/courses/git/git2/11_under_the_hood/core_git_ideas.svg)
+![core_git_ideas](svg/courses/git/git2/11_under_the_hood/core_git_ideas.svg)
 
 ---
 
@@ -177,7 +177,7 @@ and session management.
 
 How the three structures connect:
 
-![object_relationships](/svg/courses/git/git2/11_under_the_hood/object_relationships.svg)
+![object_relationships](svg/courses/git/git2/11_under_the_hood/object_relationships.svg)
 
 ---
 
@@ -524,7 +524,7 @@ How `Git` stores similar objects efficiently:
 - Chain of deltas for multiple versions
 - Automatic during packing operations
 
-![delta_compression](/svg/courses/git/git2/11_under_the_hood/delta_compression.svg)
+![delta_compression](svg/courses/git/git2/11_under_the_hood/delta_compression.svg)
 
 ---
 
@@ -713,7 +713,7 @@ What happens during a three-way merge:
 1. **Create result:** New tree with merged content
 1. **Create merge commit:** With two parents
 
-![understanding_merge_mechanics](/svg/courses/git/git2/11_under_the_hood/understanding_merge_mechanics.svg)
+![understanding_merge_mechanics](svg/courses/git/git2/11_under_the_hood/understanding_merge_mechanics.svg)
 
 ---
 

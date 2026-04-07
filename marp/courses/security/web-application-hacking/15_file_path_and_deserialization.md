@@ -233,7 +233,7 @@ def secure_upload(file):
 
 ## Deserialization Attacks - Overview
 
-![deserialization_attacks_overview](/svg/courses/security/web-application-hacking/15_file_path_and_deserialization/deserialization_attacks_overview.svg)
+![deserialization_attacks_overview](svg/courses/security/web-application-hacking/15_file_path_and_deserialization/deserialization_attacks_overview.svg)
 
 ---
 

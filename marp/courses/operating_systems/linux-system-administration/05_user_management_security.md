@@ -203,7 +203,7 @@ ls -la /data/shared
 ---
 ## PAM (Pluggable Authentication Modules)
 
-![pam_pluggable_authentication_modules](/svg/courses/operating_systems/linux-system-administration/05_user_management_security/pam_pluggable_authentication_modules.svg)
+![pam_pluggable_authentication_modules](svg/courses/operating_systems/linux-system-administration/05_user_management_security/pam_pluggable_authentication_modules.svg)
 
 PAM module types: `auth`, `account`, `password`, `session`.
 
@@ -770,7 +770,7 @@ ss -tlnp
 ---
 ## LDAP/NSS Overview
 
-![ldap_nss_overview](/svg/courses/operating_systems/linux-system-administration/05_user_management_security/ldap_nss_overview.svg)
+![ldap_nss_overview](svg/courses/operating_systems/linux-system-administration/05_user_management_security/ldap_nss_overview.svg)
 
 `NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
 

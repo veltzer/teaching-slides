@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Power of Conversational AI
 
-![the_power_of_conversational_ai](/svg/courses/ai/developing-using-ai/03_chats/the_power_of_conversational_ai.svg)
+![the_power_of_conversational_ai](svg/courses/ai/developing-using-ai/03_chats/the_power_of_conversational_ai.svg)
 
 ---
 
@@ -79,7 +79,7 @@ Beyond autocomplete to true collaboration
 
 ## Effective Conversation Strategies
 
-![effective_conversation_strategies](/svg/courses/ai/developing-using-ai/03_chats/effective_conversation_strategies.svg)
+![effective_conversation_strategies](svg/courses/ai/developing-using-ai/03_chats/effective_conversation_strategies.svg)
 
 ---
 
@@ -159,7 +159,7 @@ Turn AI into your senior mentor
 
 ## Problem-Solving: Algorithm Design
 
-![problem_solving_algorithm_design](/svg/courses/ai/developing-using-ai/03_chats/problem_solving_algorithm_design.svg)
+![problem_solving_algorithm_design](svg/courses/ai/developing-using-ai/03_chats/problem_solving_algorithm_design.svg)
 
 ---
 
@@ -224,7 +224,7 @@ Here's a fixed version with explicit handling..."
 
 ## Performance Optimization
 
-![performance_optimization](/svg/courses/ai/developing-using-ai/03_chats/performance_optimization.svg)
+![performance_optimization](svg/courses/ai/developing-using-ai/03_chats/performance_optimization.svg)
 
 ---
 
@@ -295,7 +295,7 @@ async function fetchData() {
 
 Making informed decisions:
 
-![library_comparisons](/svg/courses/ai/developing-using-ai/03_chats/library_comparisons.svg)
+![library_comparisons](svg/courses/ai/developing-using-ai/03_chats/library_comparisons.svg)
 
 ---
 
@@ -346,7 +346,7 @@ Step-by-step resolution
 
 ## Code Generation Workflows
 
-![code_generation_workflows](/svg/courses/ai/developing-using-ai/03_chats/code_generation_workflows.svg)
+![code_generation_workflows](svg/courses/ai/developing-using-ai/03_chats/code_generation_workflows.svg)
 
 ---
 
@@ -438,7 +438,7 @@ function debounce(func, wait) {
 
 Implementing design patterns:
 
-![pattern_implementation](/svg/courses/ai/developing-using-ai/03_chats/pattern_implementation.svg)
+![pattern_implementation](svg/courses/ai/developing-using-ai/03_chats/pattern_implementation.svg)
 
 ---
 
@@ -618,7 +618,7 @@ Follow-up meeting scheduled for Jan 26 to review implementation"
 
 ## Advanced Chat Techniques
 
-![advanced_chat_techniques](/svg/courses/ai/developing-using-ai/03_chats/advanced_chat_techniques.svg)
+![advanced_chat_techniques](svg/courses/ai/developing-using-ai/03_chats/advanced_chat_techniques.svg)
 
 ---
 
@@ -672,7 +672,7 @@ You: "That's not what I meant. Let me clarify:
 ---
 ## Integration with Development Flow
 
-![integration_with_development_flow](/svg/courses/ai/developing-using-ai/03_chats/integration_with_development_flow.svg)
+![integration_with_development_flow](svg/courses/ai/developing-using-ai/03_chats/integration_with_development_flow.svg)
 
 ---
 

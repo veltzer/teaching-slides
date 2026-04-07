@@ -349,7 +349,7 @@ target_link_libraries(app PRIVATE mylib)
 
 ## Visualizing Property Propagation
 
-![visualizing_property_propagation](/svg/courses/build_systems/cmake/02_hello_world/visualizing_property_propagation.svg)
+![visualizing_property_propagation](svg/courses/build_systems/cmake/02_hello_world/visualizing_property_propagation.svg)
 
 - `PRIVATE` linking stops propagation
 - `PUBLIC` linking continues the chain

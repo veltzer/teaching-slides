@@ -22,7 +22,7 @@
 
 ## TCP/IP Protocol Stack
 
-![tcp_ip_protocol_stack](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/tcp_ip_protocol_stack.svg)
+![tcp_ip_protocol_stack](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/tcp_ip_protocol_stack.svg)
 
 ---
 
@@ -59,7 +59,7 @@
 
 ## IP Packet Structure
 
-![ip_packet_structure](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/ip_packet_structure.svg)
+![ip_packet_structure](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/ip_packet_structure.svg)
 
 ---
 
@@ -81,7 +81,7 @@
 
 ## TCP Three-Way Handshake
 
-![tcp_three_way_handshake](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/tcp_three_way_handshake.svg)
+![tcp_three_way_handshake](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/tcp_three_way_handshake.svg)
 
 ---
 
@@ -212,7 +212,7 @@
 
 ## Network Address Translation (NAT)
 
-![network_address_translation_nat](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/network_address_translation_nat.svg)
+![network_address_translation_nat](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/network_address_translation_nat.svg)
 
 **Benefits:**
 - IP address conservation
@@ -249,7 +249,7 @@
 ---
 ## DNS Resolution Process
 
-![dns_resolution_process](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/dns_resolution_process.svg)
+![dns_resolution_process](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/dns_resolution_process.svg)
 
 ---
 ## DNS Record Types
@@ -264,7 +264,7 @@
 ---
 ## Client-Server Architecture
 
-![client_server_architecture](/svg/courses/networking/linux-networking-overview/01_tcpip_essentials/client_server_architecture.svg)
+![client_server_architecture](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/client_server_architecture.svg)
 
 ---
 ## Server Types

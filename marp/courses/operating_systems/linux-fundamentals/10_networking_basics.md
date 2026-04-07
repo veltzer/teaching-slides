@@ -3,7 +3,7 @@
 ---
 ## The Client/Server Model
 
-![the_client_server_model](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/the_client_server_model.svg)
+![the_client_server_model](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/the_client_server_model.svg)
 
 Common examples:
 - Web servers (HTTP)
@@ -13,7 +13,7 @@ Common examples:
 ---
 ## Network Interface Configuration
 
-![network_interface_configuration](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_interface_configuration.svg)
+![network_interface_configuration](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_interface_configuration.svg)
 
 Using ifconfig:
 
@@ -52,7 +52,7 @@ ip route add default via 192.168.1.1
 ---
 ## Interface Management
 
-![interface_management](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/interface_management.svg)
+![interface_management](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/interface_management.svg)
 
 Basic commands:
 
@@ -71,7 +71,7 @@ ip link show eth0
 ---
 ## Network Statistics (netstat)
 
-![network_statistics_netstat](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_statistics_netstat.svg)
+![network_statistics_netstat](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_statistics_netstat.svg)
 
 Common options:
 
@@ -95,7 +95,7 @@ netstat -r
 ---
 ## SSH (Secure Shell)
 
-![ssh_secure_shell](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_secure_shell.svg)
+![ssh_secure_shell](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_secure_shell.svg)
 
 Basic usage:
 
@@ -113,7 +113,7 @@ ssh user@remote.host 'ls -l'
 ---
 ## SSH Configuration and Keys
 
-![ssh_configuration_and_keys](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_configuration_and_keys.svg)
+![ssh_configuration_and_keys](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/ssh_configuration_and_keys.svg)
 
 Key management:
 
@@ -134,7 +134,7 @@ Host server1
 ---
 ## Remote File Transfer
 
-![remote_file_transfer](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/remote_file_transfer.svg)
+![remote_file_transfer](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/remote_file_transfer.svg)
 
 Examples:
 
@@ -171,7 +171,7 @@ Note: These commands are insecure and should be avoided in favor of SSH.
 ---
 ## Trust Relationships
 
-![trust_relationships](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/trust_relationships.svg)
+![trust_relationships](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/trust_relationships.svg)
 
 Configuration files:
 
@@ -189,7 +189,7 @@ Configuration files:
 ---
 ## Network Troubleshooting
 
-![network_troubleshooting](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_troubleshooting.svg)
+![network_troubleshooting](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/network_troubleshooting.svg)
 
 Common commands:
 
@@ -258,7 +258,7 @@ rsync -avz --progress /local/dir/ \
 ---
 ## Best Practices
 
-![best_practices](/svg/courses/operating_systems/linux-fundamentals/10_networking_basics/best_practices.svg)
+![best_practices](svg/courses/operating_systems/linux-fundamentals/10_networking_basics/best_practices.svg)
 
 Key points:
 - Always use encrypted protocols

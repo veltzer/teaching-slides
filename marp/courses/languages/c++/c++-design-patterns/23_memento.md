@@ -28,7 +28,7 @@ public:
 
 ## Memento Structure Diagram
 
-![memento_structure_diagram](/svg/courses/languages/c++/c++-design-patterns/23_memento/memento_structure_diagram.svg)
+![memento_structure_diagram](svg/courses/languages/c++/c++-design-patterns/23_memento/memento_structure_diagram.svg)
 
 ---
 

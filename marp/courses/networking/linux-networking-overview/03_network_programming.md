@@ -17,7 +17,7 @@
 
 ## Socket Programming Basics
 
-![socket_programming_basics](/svg/courses/networking/linux-networking-overview/03_network_programming/socket_programming_basics.svg)
+![socket_programming_basics](svg/courses/networking/linux-networking-overview/03_network_programming/socket_programming_basics.svg)
 
 ---
 
@@ -236,7 +236,7 @@ if (se == NULL) {
 
 ## UDP Programming
 
-![udp_programming](/svg/courses/networking/linux-networking-overview/03_network_programming/udp_programming.svg)
+![udp_programming](svg/courses/networking/linux-networking-overview/03_network_programming/udp_programming.svg)
 
 ---
 

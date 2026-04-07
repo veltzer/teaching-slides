@@ -6,7 +6,7 @@
 
 ## How Sessions Work
 
-![how_sessions_work](/svg/courses/security/web-application-hacking/10_session_attacks/how_sessions_work.svg)
+![how_sessions_work](svg/courses/security/web-application-hacking/10_session_attacks/how_sessions_work.svg)
 
 ---
 
@@ -40,7 +40,7 @@ def generate_session_good():
 
 ## Session Hijacking Techniques
 
-![session_hijacking_techniques](/svg/courses/security/web-application-hacking/10_session_attacks/session_hijacking_techniques.svg)
+![session_hijacking_techniques](svg/courses/security/web-application-hacking/10_session_attacks/session_hijacking_techniques.svg)
 
 ---
 
@@ -343,7 +343,7 @@ def dashboard():
 
 ## Session Storage Comparison
 
-![session_storage_comparison](/svg/courses/security/web-application-hacking/10_session_attacks/session_storage_comparison.svg)
+![session_storage_comparison](svg/courses/security/web-application-hacking/10_session_attacks/session_storage_comparison.svg)
 
 ---
 

@@ -5,7 +5,7 @@
 
 ## Location Services Overview
 
-![location_services_overview](/svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/location_services_overview.svg)
+![location_services_overview](svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/location_services_overview.svg)
 
 ---
 
@@ -279,13 +279,13 @@ public class ActivityRecognitionManager {
 
 ## Location Battery Optimization
 
-![location_battery_optimization](/svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/location_battery_optimization.svg)
+![location_battery_optimization](svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/location_battery_optimization.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](/svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/best_practices.svg)
+![best_practices](svg/courses/operating_systems/advanced-android-application-development/08_location_and_maps/best_practices.svg)
 
 ---
 

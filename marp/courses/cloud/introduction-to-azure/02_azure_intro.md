@@ -11,13 +11,13 @@
 
 ## Azure History
 
-![azure_history](/svg/courses/cloud/introduction-to-azure/02_azure_intro/azure_history.svg)
+![azure_history](svg/courses/cloud/introduction-to-azure/02_azure_intro/azure_history.svg)
 
 ---
 
 ## Global Infrastructure
 
-![global_infrastructure](/svg/courses/cloud/introduction-to-azure/02_azure_intro/global_infrastructure.svg)
+![global_infrastructure](svg/courses/cloud/introduction-to-azure/02_azure_intro/global_infrastructure.svg)
 
 ---
 
@@ -50,7 +50,7 @@
 
 ## Service Categories
 
-![service_categories](/svg/courses/cloud/introduction-to-azure/02_azure_intro/service_categories.svg)
+![service_categories](svg/courses/cloud/introduction-to-azure/02_azure_intro/service_categories.svg)
 
 ---
 

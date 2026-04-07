@@ -6,7 +6,7 @@
 
 ## Search Analytics Overview
 
-![search_analytics_overview](/svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_analytics_overview.svg)
+![search_analytics_overview](svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_analytics_overview.svg)
 
 ---
 
@@ -649,7 +649,7 @@ def analyze_query_expansions(self):
 
 ## Search Funnel Analysis
 
-![search_funnel_analysis](/svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_funnel_analysis.svg)
+![search_funnel_analysis](svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/search_funnel_analysis.svg)
 
 ---
 
@@ -966,7 +966,7 @@ def generate_recommendations(self, analytics_data):
 
 ## Continuous Improvement
 
-![continuous_improvement](/svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/continuous_improvement.svg)
+![continuous_improvement](svg/courses/databases/elasticsearch-for-developers/15_analytics_monitoring/continuous_improvement.svg)
 
 ---
 

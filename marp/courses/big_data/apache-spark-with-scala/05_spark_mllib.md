@@ -12,19 +12,19 @@
 
 ## MLlib Architecture
 
-![mllib_architecture](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/mllib_architecture.svg)
+![mllib_architecture](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/mllib_architecture.svg)
 
 ---
 
 ## Machine Learning Types
 
-![machine_learning_types](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/machine_learning_types.svg)
+![machine_learning_types](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/machine_learning_types.svg)
 
 ---
 
 ## ML Pipeline Components
 
-![ml_pipeline_components](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/ml_pipeline_components.svg)
+![ml_pipeline_components](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/ml_pipeline_components.svg)
 
 ---
 
@@ -44,7 +44,7 @@ val hashingTF = new HashingTF()
 
 ## Feature Engineering Flow
 
-![feature_engineering_flow](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/feature_engineering_flow.svg)
+![feature_engineering_flow](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/feature_engineering_flow.svg)
 
 ---
 
@@ -60,13 +60,13 @@ val hashingTF = new HashingTF()
 
 ## Feature Transformations
 
-![feature_transformations](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/feature_transformations.svg)
+![feature_transformations](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/feature_transformations.svg)
 
 ---
 
 ## Classification Architecture
 
-![classification_architecture](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/classification_architecture.svg)
+![classification_architecture](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/classification_architecture.svg)
 
 ---
 
@@ -85,7 +85,7 @@ val predictions = model.transform(test)
 
 ## Regression Models
 
-![regression_models](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/regression_models.svg)
+![regression_models](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/regression_models.svg)
 
 ---
 
@@ -104,7 +104,7 @@ val lrModel = lr.fit(training)
 
 ## Model Evaluation Flow
 
-![model_evaluation_flow](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_evaluation_flow.svg)
+![model_evaluation_flow](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_evaluation_flow.svg)
 
 ---
 
@@ -123,13 +123,13 @@ val rmse = evaluator.evaluate(predictions)
 
 ## Cross Validation
 
-![cross_validation](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/cross_validation.svg)
+![cross_validation](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/cross_validation.svg)
 
 ---
 
 ## Pipeline Architecture
 
-![pipeline_architecture](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/pipeline_architecture.svg)
+![pipeline_architecture](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/pipeline_architecture.svg)
 
 ---
 
@@ -148,7 +148,7 @@ val model = pipeline.fit(training)
 
 ## Hyperparameter Tuning
 
-![hyperparameter_tuning](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/hyperparameter_tuning.svg)
+![hyperparameter_tuning](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/hyperparameter_tuning.svg)
 
 ---
 
@@ -170,7 +170,7 @@ val cv = new CrossValidator()
 
 ## Clustering Architecture
 
-![clustering_architecture](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/clustering_architecture.svg)
+![clustering_architecture](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/clustering_architecture.svg)
 
 ---
 
@@ -188,7 +188,7 @@ val model = kmeans.fit(dataset)
 
 ## Model Persistence
 
-![model_persistence](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_persistence.svg)
+![model_persistence](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_persistence.svg)
 
 ---
 
@@ -203,19 +203,19 @@ val loadedModel = PipelineModel.load("model_path")
 
 ## Performance Optimization
 
-![performance_optimization](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/performance_optimization.svg)
+![performance_optimization](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/performance_optimization.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/best_practices.svg)
+![best_practices](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/best_practices.svg)
 
 ---
 
 ## Model Deployment Flow
 
-![model_deployment_flow](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_deployment_flow.svg)
+![model_deployment_flow](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/model_deployment_flow.svg)
 
 ---
 
@@ -231,4 +231,4 @@ val loadedModel = PipelineModel.load("model_path")
 
 ## Advanced Topics
 
-![advanced_topics](/svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/advanced_topics.svg)
+![advanced_topics](svg/courses/big_data/apache-spark-with-scala/05_spark_mllib/advanced_topics.svg)

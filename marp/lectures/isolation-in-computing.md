@@ -58,7 +58,7 @@ Examples:
 
 ## Trade-offs in Isolation
 
-![trade_offs_in_isolation](/svg/lectures/isolation-in-computing/trade_offs_in_isolation.svg)
+![trade_offs_in_isolation](svg/lectures/isolation-in-computing/trade_offs_in_isolation.svg)
 
 ---
 
@@ -94,7 +94,7 @@ int secret = 100;
 
 Hardware enforces memory boundaries
 
-![memory_protection_unit_mpu](/svg/lectures/isolation-in-computing/memory_protection_unit_mpu.svg)
+![memory_protection_unit_mpu](svg/lectures/isolation-in-computing/memory_protection_unit_mpu.svg)
 
 ---
 
@@ -102,7 +102,7 @@ Hardware enforces memory boundaries
 
 CPU privilege levels enforce isolation
 
-![protection_rings](/svg/lectures/isolation-in-computing/protection_rings.svg)
+![protection_rings](svg/lectures/isolation-in-computing/protection_rings.svg)
 
 ---
 
@@ -166,7 +166,7 @@ echo 50000 > /sys/fs/cgroup/cpu/myapp/cpu.cfs_quota_us
 
 Docker builds on Linux kernel features for container isolation
 
-![docker_isolation](/svg/lectures/isolation-in-computing/docker_isolation.svg)
+![docker_isolation](svg/lectures/isolation-in-computing/docker_isolation.svg)
 
 ---
 
@@ -233,7 +233,7 @@ docker run --memory="512m" --cpus="0.5" myapp
 
 K8s adds orchestration-level isolation
 
-![kubernetes_isolation](/svg/lectures/isolation-in-computing/kubernetes_isolation.svg)
+![kubernetes_isolation](svg/lectures/isolation-in-computing/kubernetes_isolation.svg)
 
 ---
 
@@ -340,7 +340,7 @@ rules:
 
 VMs provide hardware-level isolation
 
-![virtual_machines_strong_isolation](/svg/lectures/isolation-in-computing/virtual_machines_strong_isolation.svg)
+![virtual_machines_strong_isolation](svg/lectures/isolation-in-computing/virtual_machines_strong_isolation.svg)
 
 ---
 
@@ -358,7 +358,7 @@ Modern CPUs provide isolation support
 
 Isolation through service boundaries
 
-![microservices_architecture](/svg/lectures/isolation-in-computing/microservices_architecture.svg)
+![microservices_architecture](svg/lectures/isolation-in-computing/microservices_architecture.svg)
 
 ---
 
@@ -437,7 +437,7 @@ Multi-tenancy in cloud platforms
 
 Never trust, always verify
 
-![zero_trust_architecture](/svg/lectures/isolation-in-computing/zero_trust_architecture.svg)
+![zero_trust_architecture](svg/lectures/isolation-in-computing/zero_trust_architecture.svg)
 
 ---
 

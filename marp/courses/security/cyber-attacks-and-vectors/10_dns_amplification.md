@@ -18,7 +18,7 @@
 ---
 ## Diagram
 
-![diagram](/svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/diagram.svg)
+![diagram](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/diagram.svg)
 
 ---
 ## Demo

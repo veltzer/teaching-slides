@@ -30,7 +30,7 @@
 ---
 ## History of Git
 
-![h:300](/jpg/courses/git/git/linus_torvalds.jpg)
+![h:300](jpg/courses/git/git/linus_torvalds.jpg)
 
 - Created by Linus Torvalds in 2005
 - Born from Linux kernel development needs
@@ -58,7 +58,7 @@
 - Complete repository history
 ---
 ## Key Git Concepts
-![key_git_concepts](/svg/courses/git/git/01_introduction/key_git_concepts.svg)
+![key_git_concepts](svg/courses/git/git/01_introduction/key_git_concepts.svg)
 
 ---
 ## Understanding Git Areas
@@ -112,7 +112,7 @@
 - Manage versions
 ---
 ## Git's Architecture
-![git_s_architecture](/svg/courses/git/git/01_introduction/git_s_architecture.svg)
+![git_s_architecture](svg/courses/git/git/01_introduction/git_s_architecture.svg)
 
 ---
 ## Course Modules

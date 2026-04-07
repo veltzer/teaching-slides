@@ -15,7 +15,7 @@ Approaches for safe, automated schema and data migrations in modern pipelines
 
 ## Two Fundamental Approaches
 
-![two_fundamental_approaches](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/two_fundamental_approaches.svg)
+![two_fundamental_approaches](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/two_fundamental_approaches.svg)
 
 ---
 
@@ -157,7 +157,7 @@ DROP TABLE orders;
 
 ## Forward-Only vs Reversible Trade-offs
 
-![forward_only_vs_reversible_trade_offs](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/forward_only_vs_reversible_trade_offs.svg)
+![forward_only_vs_reversible_trade_offs](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/forward_only_vs_reversible_trade_offs.svg)
 
 ---
 
@@ -184,7 +184,7 @@ DROP TABLE orders;
 
 ## The Expand and Contract Pattern
 
-![the_expand_and_contract_pattern](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/the_expand_and_contract_pattern.svg)
+![the_expand_and_contract_pattern](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/the_expand_and_contract_pattern.svg)
 
 ---
 
@@ -234,7 +234,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Expand and Contract: Column Rename Example
 
-![expand_and_contract_column_rename_example](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/expand_and_contract_column_rename_example.svg)
+![expand_and_contract_column_rename_example](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/expand_and_contract_column_rename_example.svg)
 
 ---
 
@@ -249,7 +249,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Dual-Write Architecture
 
-![dual_write_architecture](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/dual_write_architecture.svg)
+![dual_write_architecture](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/dual_write_architecture.svg)
 
 ---
 
@@ -278,7 +278,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Change Data Capture as Alternative
 
-![change_data_capture_as_alternative](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/change_data_capture_as_alternative.svg)
+![change_data_capture_as_alternative](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/change_data_capture_as_alternative.svg)
 
 ---
 
@@ -305,7 +305,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Migration Pipeline Flow
 
-![migration_pipeline_flow](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/migration_pipeline_flow.svg)
+![migration_pipeline_flow](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/migration_pipeline_flow.svg)
 
 ---
 
@@ -351,7 +351,7 @@ ALTER TABLE users DROP COLUMN last_name;
 
 ## Deployment Order Strategy
 
-![deployment_order_strategy](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/deployment_order_strategy.svg)
+![deployment_order_strategy](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/deployment_order_strategy.svg)
 
 ---
 
@@ -505,7 +505,7 @@ ALTER TABLE users ADD INDEX idx_phone (phone);
 
 ## Feature Flag Migration Flow
 
-![feature_flag_migration_flow](/svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/feature_flag_migration_flow.svg)
+![feature_flag_migration_flow](svg/courses/devops/architectural-decisions-in-devops/14_database_migration_strategies/feature_flag_migration_flow.svg)
 
 ---
 

@@ -14,7 +14,7 @@
 
 ## Why External Configuration?
 
-![why_external_configuration](/svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/why_external_configuration.svg)
+![why_external_configuration](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/why_external_configuration.svg)
 
 ---
 
@@ -165,7 +165,7 @@ volumes:
 
 ## ConfigMap Usage Patterns
 
-![configmap_usage_patterns](/svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_usage_patterns.svg)
+![configmap_usage_patterns](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_usage_patterns.svg)
 
 ---
 
@@ -344,7 +344,7 @@ spec:
 
 ## Secret vs ConfigMap
 
-![secret_vs_configmap](/svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/secret_vs_configmap.svg)
+![secret_vs_configmap](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/secret_vs_configmap.svg)
 
 ---
 
@@ -383,7 +383,7 @@ immutable: true  # Cannot be updated
 
 ## ConfigMap/Secret Updates
 
-![configmap_secret_updates](/svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_secret_updates.svg)
+![configmap_secret_updates](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/configmap_secret_updates.svg)
 
 ---
 
@@ -438,7 +438,7 @@ resources:
 
 ## External Secret Management
 
-![external_secret_management](/svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/external_secret_management.svg)
+![external_secret_management](svg/courses/devops/k8s-introduction/07_configmaps_and_secrets/external_secret_management.svg)
 
 ---
 

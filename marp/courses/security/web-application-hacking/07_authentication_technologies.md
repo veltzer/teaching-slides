@@ -103,7 +103,7 @@ Authorization: Basic YWRtaW46cGFzc3dvcmQ=
 
 ## Token-Based Authentication (JWT)
 
-![token_based_authentication_jwt](/svg/courses/security/web-application-hacking/07_authentication_technologies/token_based_authentication_jwt.svg)
+![token_based_authentication_jwt](svg/courses/security/web-application-hacking/07_authentication_technologies/token_based_authentication_jwt.svg)
 
 ---
 
@@ -134,7 +134,7 @@ hashcat -a 0 -m 16500 jwt.txt wordlist.txt
 
 ## OAuth 2.0 Flow
 
-![oauth_2_0_flow](/svg/courses/security/web-application-hacking/07_authentication_technologies/oauth_2_0_flow.svg)
+![oauth_2_0_flow](svg/courses/security/web-application-hacking/07_authentication_technologies/oauth_2_0_flow.svg)
 
 ---
 
@@ -317,7 +317,7 @@ curl -v http://localhost:8080/vulnerabilities/brute/ \
 
 ## Kerberos Authentication
 
-![kerberos_authentication](/svg/courses/security/web-application-hacking/07_authentication_technologies/kerberos_authentication.svg)
+![kerberos_authentication](svg/courses/security/web-application-hacking/07_authentication_technologies/kerberos_authentication.svg)
 
 ---
 

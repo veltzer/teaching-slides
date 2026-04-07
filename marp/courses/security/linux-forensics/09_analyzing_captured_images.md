@@ -301,7 +301,7 @@ sort -t'|' -k1 combined_timeline.txt > sorted_timeline.txt
 
 ## Timeline Visualization
 
-![timeline_visualization](/svg/courses/security/linux-forensics/09_analyzing_captured_images/timeline_visualization.svg)
+![timeline_visualization](svg/courses/security/linux-forensics/09_analyzing_captured_images/timeline_visualization.svg)
 
 ---
 

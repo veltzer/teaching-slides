@@ -32,7 +32,7 @@
 
 ## Interaction Diagram
 
-![interaction_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/interaction_diagram.svg)
+![interaction_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/interaction_diagram.svg)
 
 ---
 
@@ -89,7 +89,7 @@ Cons:
 
 ## Interpreter Diagram
 
-![interpreter_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/interpreter_diagram.svg)
+![interpreter_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/interpreter_diagram.svg)
 
 ---
 
@@ -129,7 +129,7 @@ Cons:
 
 ## Repository Pattern Diagram
 
-![repository_pattern_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/repository_pattern_diagram.svg)
+![repository_pattern_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/repository_pattern_diagram.svg)
 
 ---
 
@@ -169,7 +169,7 @@ Cons:
 
 ## Command Pattern Diagram
 
-![command_pattern_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/command_pattern_diagram.svg)
+![command_pattern_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/command_pattern_diagram.svg)
 
 ---
 
@@ -212,7 +212,7 @@ Cons:
 
 ## Decorator Pattern Diagram
 
-![decorator_pattern_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/decorator_pattern_diagram.svg)
+![decorator_pattern_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/decorator_pattern_diagram.svg)
 
 ---
 
@@ -255,7 +255,7 @@ Cons:
 
 ## Facade Pattern Diagram
 
-![facade_pattern_diagram](/out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/facade_pattern_diagram.svg)
+![facade_pattern_diagram](out/mermaid/courses/architecting/architecting/12_small_scale_design_patterns/facade_pattern_diagram.svg)
 
 ---
 

@@ -17,7 +17,7 @@ QEMU Command Line Basics
 
 Kernel Boot Process in QEMU
 
-![basic_qemu_usage_for_kernel_development_1](/svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/basic_qemu_usage_for_kernel_development_1.svg)
+![basic_qemu_usage_for_kernel_development_1](svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/basic_qemu_usage_for_kernel_development_1.svg)
 
 ---
 
@@ -79,7 +79,7 @@ Network Device Emulation
 
 Virtual Network Configuration
 
-![basic_qemu_usage_for_kernel_development_2](/svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/basic_qemu_usage_for_kernel_development_2.svg)
+![basic_qemu_usage_for_kernel_development_2](svg/courses/operating_systems/qemu-for-kernel-developers/03_qemu_basic_usage/basic_qemu_usage_for_kernel_development_2.svg)
 
 ---
 

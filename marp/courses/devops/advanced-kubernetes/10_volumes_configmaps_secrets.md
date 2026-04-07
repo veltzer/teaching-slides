@@ -31,7 +31,7 @@ Advanced Kubernetes Course - Day 2, Module 5
 
 ## `PersistentVolume` and `PersistentVolumeClaim`
 
-![persistentvolume_and_persistentvolumeclaim](/svg/courses/devops/advanced-kubernetes/10_volumes_configmaps_secrets/persistentvolume_and_persistentvolumeclaim.svg)
+![persistentvolume_and_persistentvolumeclaim](svg/courses/devops/advanced-kubernetes/10_volumes_configmaps_secrets/persistentvolume_and_persistentvolumeclaim.svg)
 
 ---
 
@@ -203,7 +203,7 @@ spec:
 
 ## `CSI` Driver Architecture
 
-![csi_driver_architecture](/svg/courses/devops/advanced-kubernetes/10_volumes_configmaps_secrets/csi_driver_architecture.svg)
+![csi_driver_architecture](svg/courses/devops/advanced-kubernetes/10_volumes_configmaps_secrets/csi_driver_architecture.svg)
 
 ---
 

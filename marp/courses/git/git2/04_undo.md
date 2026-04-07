@@ -18,13 +18,13 @@
 
 ## The Golden Rule of Git
 
-![the_golden_rule_of_git](/svg/courses/git/git2/04_undo/the_golden_rule_of_git.svg)
+![the_golden_rule_of_git](svg/courses/git/git2/04_undo/the_golden_rule_of_git.svg)
 
 ---
 
 ## Why Not Rewrite Public History?
 
-![why_not_rewrite_public_history](/svg/courses/git/git2/04_undo/why_not_rewrite_public_history.svg)
+![why_not_rewrite_public_history](svg/courses/git/git2/04_undo/why_not_rewrite_public_history.svg)
 
 ---
 
@@ -76,7 +76,7 @@ git push --force  # NEVER DO THIS!
 
 ## Force vs Force-Lease
 
-![force_vs_force_lease](/svg/courses/git/git2/04_undo/force_vs_force_lease.svg)
+![force_vs_force_lease](svg/courses/git/git2/04_undo/force_vs_force_lease.svg)
 
 ---
 
@@ -104,7 +104,7 @@ git commit --amend --date="2024-01-15 10:00:00"
 
 ## Amend Workflow
 
-![amend_workflow](/svg/courses/git/git2/04_undo/amend_workflow.svg)
+![amend_workflow](svg/courses/git/git2/04_undo/amend_workflow.svg)
 
 ---
 
@@ -133,7 +133,7 @@ git commit --amend --no-edit
 
 ## Reset: Three Modes
 
-![reset_three_modes](/svg/courses/git/git2/04_undo/reset_three_modes.svg)
+![reset_three_modes](svg/courses/git/git2/04_undo/reset_three_modes.svg)
 
 ---
 
@@ -189,7 +189,7 @@ git reset HEAD~1 -- file.txt
 
 ## Reset Use Cases
 
-![reset_use_cases](/svg/courses/git/git2/04_undo/reset_use_cases.svg)
+![reset_use_cases](svg/courses/git/git2/04_undo/reset_use_cases.svg)
 
 ---
 
@@ -229,13 +229,13 @@ git revert -n HEAD  # Stage the revert, don't commit
 
 ## How Revert Works
 
-![how_revert_works](/svg/courses/git/git2/04_undo/how_revert_works.svg)
+![how_revert_works](svg/courses/git/git2/04_undo/how_revert_works.svg)
 
 ---
 
 ## Reset vs Revert
 
-![reset_vs_revert](/svg/courses/git/git2/04_undo/reset_vs_revert.svg)
+![reset_vs_revert](svg/courses/git/git2/04_undo/reset_vs_revert.svg)
 
 ---
 
@@ -265,7 +265,7 @@ git revert def456
 
 ## Reverting Merge Commits
 
-![reverting_merge_commits](/svg/courses/git/git2/04_undo/reverting_merge_commits.svg)
+![reverting_merge_commits](svg/courses/git/git2/04_undo/reverting_merge_commits.svg)
 
 ---
 
@@ -294,13 +294,13 @@ pick ghi789 Third commit
 
 ## Rebase Interactive Commands
 
-![rebase_interactive_commands](/svg/courses/git/git2/04_undo/rebase_interactive_commands.svg)
+![rebase_interactive_commands](svg/courses/git/git2/04_undo/rebase_interactive_commands.svg)
 
 ---
 
 ## Rebase Workflow: Squashing
 
-![rebase_workflow_squashing](/svg/courses/git/git2/04_undo/rebase_workflow_squashing.svg)
+![rebase_workflow_squashing](svg/courses/git/git2/04_undo/rebase_workflow_squashing.svg)
 
 ---
 
@@ -352,7 +352,7 @@ git rebase --continue
 
 ## Reordering Commits
 
-![reordering_commits](/svg/courses/git/git2/04_undo/reordering_commits.svg)
+![reordering_commits](svg/courses/git/git2/04_undo/reordering_commits.svg)
 
 ---
 
@@ -410,7 +410,7 @@ git cherry-pick --abort
 
 ## Cherry-pick Use Cases
 
-![cherry_pick_use_cases](/svg/courses/git/git2/04_undo/cherry_pick_use_cases.svg)
+![cherry_pick_use_cases](svg/courses/git/git2/04_undo/cherry_pick_use_cases.svg)
 
 ---
 
@@ -488,7 +488,7 @@ git restore -p file.txt
 
 ## Restore vs Reset vs Checkout
 
-![restore_vs_reset_vs_checkout](/svg/courses/git/git2/04_undo/restore_vs_reset_vs_checkout.svg)
+![restore_vs_reset_vs_checkout](svg/courses/git/git2/04_undo/restore_vs_reset_vs_checkout.svg)
 
 ---
 
@@ -521,7 +521,7 @@ git reset --hard HEAD@{2}
 
 ## Understanding Reflog
 
-![understanding_reflog](/svg/courses/git/git2/04_undo/understanding_reflog.svg)
+![understanding_reflog](svg/courses/git/git2/04_undo/understanding_reflog.svg)
 
 ---
 
@@ -548,7 +548,7 @@ git reset --hard HEAD@{5}  # Back to safety!
 
 ## Recovering Lost Commits
 
-![recovering_lost_commits](/svg/courses/git/git2/04_undo/recovering_lost_commits.svg)
+![recovering_lost_commits](svg/courses/git/git2/04_undo/recovering_lost_commits.svg)
 
 ---
 
@@ -609,7 +609,7 @@ git bisect run npm test
 
 ## Bisect Visualization
 
-![bisect_visualization](/svg/courses/git/git2/04_undo/bisect_visualization.svg)
+![bisect_visualization](svg/courses/git/git2/04_undo/bisect_visualization.svg)
 
 ---
 
@@ -691,13 +691,13 @@ GIT_SEQUENCE_EDITOR="sed -i 's/pick/reword/g'" \
 
 ## Cleaning Repository Size
 
-![cleaning_repository_size](/svg/courses/git/git2/04_undo/cleaning_repository_size.svg)
+![cleaning_repository_size](svg/courses/git/git2/04_undo/cleaning_repository_size.svg)
 
 ---
 
 ## Undo Strategies by Scenario
 
-![undo_strategies_by_scenario](/svg/courses/git/git2/04_undo/undo_strategies_by_scenario.svg)
+![undo_strategies_by_scenario](svg/courses/git/git2/04_undo/undo_strategies_by_scenario.svg)
 
 ---
 
@@ -742,7 +742,7 @@ git commit --amend  # Too late!
 
 ## Recovery Checklist
 
-![recovery_checklist](/svg/courses/git/git2/04_undo/recovery_checklist.svg)
+![recovery_checklist](svg/courses/git/git2/04_undo/recovery_checklist.svg)
 
 ---
 
@@ -864,4 +864,4 @@ In the next session, we'll explore:
 
 ## Undoing Things Complete! 🎉
 
-![undoing_things_complete](/svg/courses/git/git2/04_undo/undoing_things_complete.svg)
+![undoing_things_complete](svg/courses/git/git2/04_undo/undoing_things_complete.svg)

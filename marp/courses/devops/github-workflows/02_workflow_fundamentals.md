@@ -148,7 +148,7 @@ jobs:
 
 ## Job Dependency Flow
 
-![job_dependency_flow](/svg/courses/devops/github-workflows/02_workflow_fundamentals/job_dependency_flow.svg)
+![job_dependency_flow](svg/courses/devops/github-workflows/02_workflow_fundamentals/job_dependency_flow.svg)
 
 ---
 

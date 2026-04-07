@@ -16,7 +16,7 @@
 
 ## Linux Network Architecture
 
-![linux_network_architecture](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/linux_network_architecture.svg)
+![linux_network_architecture](svg/courses/networking/linux-networking-overview/02_linux_network_stack/linux_network_architecture.svg)
 
 ---
 
@@ -60,7 +60,7 @@ struct net_device {
 
 ## Network Device Operations
 
-![network_device_operations](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/network_device_operations.svg)
+![network_device_operations](svg/courses/networking/linux-networking-overview/02_linux_network_stack/network_device_operations.svg)
 
 ---
 
@@ -76,7 +76,7 @@ struct net_device {
 
 ## Socket Layer Implementation
 
-![socket_layer_implementation](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/socket_layer_implementation.svg)
+![socket_layer_implementation](svg/courses/networking/linux-networking-overview/02_linux_network_stack/socket_layer_implementation.svg)
 
 ---
 
@@ -137,7 +137,7 @@ struct sk_buff {
 
 ## SK Buffer Management
 
-![sk_buffer_management](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/sk_buffer_management.svg)
+![sk_buffer_management](svg/courses/networking/linux-networking-overview/02_linux_network_stack/sk_buffer_management.svg)
 
 ---
 
@@ -153,7 +153,7 @@ struct sk_buff {
 
 ## TCP State Machine
 
-![tcp_state_machine](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/tcp_state_machine.svg)
+![tcp_state_machine](svg/courses/networking/linux-networking-overview/02_linux_network_stack/tcp_state_machine.svg)
 
 ---
 
@@ -169,7 +169,7 @@ struct sk_buff {
 
 ## IP Header Processing
 
-![ip_header_processing](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/ip_header_processing.svg)
+![ip_header_processing](svg/courses/networking/linux-networking-overview/02_linux_network_stack/ip_header_processing.svg)
 
 ---
 
@@ -185,7 +185,7 @@ struct sk_buff {
 
 ## Network Device Queuing
 
-![network_device_queuing](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/network_device_queuing.svg)
+![network_device_queuing](svg/courses/networking/linux-networking-overview/02_linux_network_stack/network_device_queuing.svg)
 
 ---
 
@@ -226,7 +226,7 @@ struct sk_buff {
 
 ## NETLINK Interface
 
-![netlink_interface](/svg/courses/networking/linux-networking-overview/02_linux_network_stack/netlink_interface.svg)
+![netlink_interface](svg/courses/networking/linux-networking-overview/02_linux_network_stack/netlink_interface.svg)
 
 ---
 

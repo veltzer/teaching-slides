@@ -2,7 +2,7 @@
 
 ## Common Error Categories
 
-![common_error_categories](/svg/courses/devops/terraform/13_error_handling/common_error_categories.svg)
+![common_error_categories](svg/courses/devops/terraform/13_error_handling/common_error_categories.svg)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Portal Components
 
-![portal_components](/svg/courses/cloud/introduction-to-azure/03_portal/portal_components.svg)
+![portal_components](svg/courses/cloud/introduction-to-azure/03_portal/portal_components.svg)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## Resource Management
 
-![resource_management](/svg/courses/cloud/introduction-to-azure/03_portal/resource_management.svg)
+![resource_management](svg/courses/cloud/introduction-to-azure/03_portal/resource_management.svg)
 
 ---
 
@@ -113,7 +113,7 @@
 
 ## Resource Visualization
 
-![resource_visualization](/svg/courses/cloud/introduction-to-azure/03_portal/resource_visualization.svg)
+![resource_visualization](svg/courses/cloud/introduction-to-azure/03_portal/resource_visualization.svg)
 
 ---
 

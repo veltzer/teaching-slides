@@ -393,7 +393,7 @@ public:
 Multiple inheritance can lead to ambiguity:
 
 ```xml
-![the_diamond_problem](/svg/courses/languages/c++/modern-c++-for-c-programmers/10_delegation/the_diamond_problem.svg)
+![the_diamond_problem](svg/courses/languages/c++/modern-c++-for-c-programmers/10_delegation/the_diamond_problem.svg)
 ```
 
 ```cpp

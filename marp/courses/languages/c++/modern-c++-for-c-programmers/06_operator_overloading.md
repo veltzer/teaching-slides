@@ -47,7 +47,7 @@ ReturnType operator+(const MyClass& left, const MyClass& right);
 
 ## Overloadable Operators
 
-![overloadable_operators](/svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/overloadable_operators.svg)
+![overloadable_operators](svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/overloadable_operators.svg)
 
 ---
 
@@ -445,7 +445,7 @@ public:
 
 ## Return Type Guidelines
 
-![return_type_guidelines](/svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/return_type_guidelines.svg)
+![return_type_guidelines](svg/courses/languages/c++/modern-c++-for-c-programmers/06_operator_overloading/return_type_guidelines.svg)
 
 ---
 

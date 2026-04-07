@@ -6,7 +6,7 @@
 
 ## Performance Areas
 
-![performance_areas](/svg/courses/databases/elasticsearch-for-developers/11_performance/performance_areas.svg)
+![performance_areas](svg/courses/databases/elasticsearch-for-developers/11_performance/performance_areas.svg)
 
 ---
 
@@ -232,7 +232,7 @@ thread_pool:
 
 ## Data Modeling Performance
 
-![data_modeling_performance](/svg/courses/databases/elasticsearch-for-developers/11_performance/data_modeling_performance.svg)
+![data_modeling_performance](svg/courses/databases/elasticsearch-for-developers/11_performance/data_modeling_performance.svg)
 
 ---
 

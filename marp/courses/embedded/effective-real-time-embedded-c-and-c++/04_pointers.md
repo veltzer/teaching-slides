@@ -62,7 +62,7 @@ int (*ptr_to_arr)[10];
 
 ## Pointer Arithmetic
 
-![pointer_arithmetic](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/04_pointers/pointer_arithmetic.svg)
+![pointer_arithmetic](svg/courses/embedded/effective-real-time-embedded-c-and-c++/04_pointers/pointer_arithmetic.svg)
 
 ---
 

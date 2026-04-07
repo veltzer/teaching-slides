@@ -8,7 +8,7 @@
 * Performance tuning
 ---
 ## Why Spark SQL?
-![why_spark_sql](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/why_spark_sql.svg)
+![why_spark_sql](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/why_spark_sql.svg)
 
 ---
 ## Spark SQL Architecture
@@ -29,7 +29,7 @@ spark.sql("SELECT name FROM table WHERE age > 25")
 
 ---
 ## Catalyst Optimizer Phases
-![catalyst_optimizer_phases](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases.svg)
+![catalyst_optimizer_phases](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases.svg)
 
 ---
 ## Logical Plan Analysis
@@ -57,7 +57,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 1. Join reordering
 ---
 ## Predicate Pushdown
-![predicate_pushdown](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/predicate_pushdown.svg)
+![predicate_pushdown](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/predicate_pushdown.svg)
 
 ---
 ## Join Optimization
@@ -75,7 +75,7 @@ df.select("id", "name").filter("age > 25")
 ```
 ---
 ## Cost-Based Optimization
-![cost_based_optimization](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/cost_based_optimization.svg)
+![cost_based_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/cost_based_optimization.svg)
 
 ---
 ## Statistics Collection
@@ -117,7 +117,7 @@ def upper_vectorized(s):
 ```
 ---
 ## UDF Best Practices
-![udf_best_practices](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_best_practices.svg)
+![udf_best_practices](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_best_practices.svg)
 
 ---
 ## Data Sources API
@@ -145,7 +145,7 @@ df.write.format("parquet")
 ```
 ---
 ## File Format Optimization
-![file_format_optimization](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/file_format_optimization.svg)
+![file_format_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/file_format_optimization.svg)
 
 ---
 ## Parquet Optimization
@@ -163,7 +163,7 @@ spark.sql.shuffle.partitions=200
 ```
 ---
 ## Memory Management
-![memory_management](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/memory_management.svg)
+![memory_management](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/memory_management.svg)
 
 ---
 ## External Data Sources
@@ -206,7 +206,7 @@ spark.catalog.cacheTable("frequently_used")
 ```
 ---
 ## Dynamic Partition Pruning
-![dynamic_partition_pruning](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/dynamic_partition_pruning.svg)
+![dynamic_partition_pruning](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/dynamic_partition_pruning.svg)
 
 ---
 ## Cost Model Tuning
@@ -228,7 +228,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 ```
 ---
 ## Runtime Statistics
-![runtime_statistics](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/runtime_statistics.svg)
+![runtime_statistics](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/runtime_statistics.svg)
 
 ---
 ## Join Strategies
@@ -251,7 +251,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ```
 ---
 ## Data Skew Handling
-![data_skew_handling](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/data_skew_handling.svg)
+![data_skew_handling](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/data_skew_handling.svg)
 
 ---
 ## Configuration Tuning
@@ -269,7 +269,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 ```
 ---
 ## Monitoring and Debugging
-![monitoring_and_debugging](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/monitoring_and_debugging.svg)
+![monitoring_and_debugging](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/monitoring_and_debugging.svg)
 
 ---
 ## Performance Metrics
@@ -297,7 +297,7 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Cost model tuning
 ---
 ## Optimization Checklist
-![optimization_checklist](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/optimization_checklist.svg)
+![optimization_checklist](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/optimization_checklist.svg)
 
 ---
 ## Production Deployment
@@ -374,7 +374,7 @@ spark.sql("ANALYZE TABLE orders COMPUTE STATISTICS FOR COLUMNS "
 
 ## Catalyst Optimizer Phases Explained
 
-![catalyst_optimizer_phases_explained](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases_explained.svg)
+![catalyst_optimizer_phases_explained](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/catalyst_optimizer_phases_explained.svg)
 
 ---
 
@@ -433,7 +433,7 @@ result = (
 #       Scan customers
 ```
 
-![scan_customers](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/scan_customers.svg)
+![scan_customers](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/scan_customers.svg)
 
 ---
 
@@ -504,7 +504,7 @@ print(f"Speedup (builtin vs python): {python_time/builtin_time:.1f}x")
 
 ## UDF Data Flow: Python vs Pandas
 
-![udf_data_flow_python_vs_pandas](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_data_flow_python_vs_pandas.svg)
+![udf_data_flow_python_vs_pandas](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_data_flow_python_vs_pandas.svg)
 
 ---
 
@@ -651,7 +651,7 @@ spark.conf.set(
 
 ## AQE: Before vs After
 
-![aqe_before_vs_after](/svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/aqe_before_vs_after.svg)
+![aqe_before_vs_after](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/aqe_before_vs_after.svg)
 
 ---
 

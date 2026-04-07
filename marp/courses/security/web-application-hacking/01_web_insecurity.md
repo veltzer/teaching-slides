@@ -76,7 +76,7 @@
 
 ## Responsible Disclosure
 
-![responsible_disclosure](/svg/courses/security/web-application-hacking/01_web_insecurity/responsible_disclosure.svg)
+![responsible_disclosure](svg/courses/security/web-application-hacking/01_web_insecurity/responsible_disclosure.svg)
 
 - Typical disclosure timeline: **90 days**
 - Bug bounty programs provide structured reporting
@@ -86,7 +86,7 @@
 
 ## The CIA Triad in Web Context
 
-![the_cia_triad_in_web_context](/svg/courses/security/web-application-hacking/01_web_insecurity/the_cia_triad_in_web_context.svg)
+![the_cia_triad_in_web_context](svg/courses/security/web-application-hacking/01_web_insecurity/the_cia_triad_in_web_context.svg)
 
 - **Confidentiality**: Prevent unauthorized data access (`SQL injection`, data leaks)
 - **Integrity**: Prevent unauthorized data modification (`XSS`, `CSRF`)
@@ -123,7 +123,7 @@
 
 ## Defense in Depth
 
-![defense_in_depth](/svg/courses/security/web-application-hacking/01_web_insecurity/defense_in_depth.svg)
+![defense_in_depth](svg/courses/security/web-application-hacking/01_web_insecurity/defense_in_depth.svg)
 
 - No single control is sufficient
 - Layers of defense create redundancy
@@ -132,7 +132,7 @@
 
 ## Web Application Architecture Overview
 
-![web_application_architecture_overview](/svg/courses/security/web-application-hacking/01_web_insecurity/web_application_architecture_overview.svg)
+![web_application_architecture_overview](svg/courses/security/web-application-hacking/01_web_insecurity/web_application_architecture_overview.svg)
 
 - Each tier introduces potential attack vectors
 - Trust boundaries exist between each component
@@ -202,7 +202,7 @@ docker run -d -p 8080:80 vulnerables/web-dvwa
 
 ## Security Testing Methodology
 
-![security_testing_methodology](/svg/courses/security/web-application-hacking/01_web_insecurity/security_testing_methodology.svg)
+![security_testing_methodology](svg/courses/security/web-application-hacking/01_web_insecurity/security_testing_methodology.svg)
 
 ---
 

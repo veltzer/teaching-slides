@@ -13,7 +13,7 @@ Embedded systems interact with the physical world through peripherals:
 - **DMA**: Direct Memory Access controller
 - **Timers**: Hardware timing and PWM generation
 
-![overview_of_embedded_peripherals](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/overview_of_embedded_peripherals.svg)
+![overview_of_embedded_peripherals](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/overview_of_embedded_peripherals.svg)
 
 ---
 
@@ -125,7 +125,7 @@ UART provides serial communication:
 - **Full duplex**: Simultaneous TX and RX
 - **Flow control**: RTS/CTS hardware handshaking
 
-![universal_asynchronous_receiver_transmitter_uart](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/universal_asynchronous_receiver_transmitter_uart.svg)
+![universal_asynchronous_receiver_transmitter_uart](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/universal_asynchronous_receiver_transmitter_uart.svg)
 
 ---
 
@@ -266,7 +266,7 @@ ADC converts analog voltages to digital values:
 - **Sampling rate**: Conversions per second
 - **Multiple channels**: Multiplexed inputs
 
-![analog_to_digital_converter_adc](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/analog_to_digital_converter_adc.svg)
+![analog_to_digital_converter_adc](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/analog_to_digital_converter_adc.svg)
 
 ---
 
@@ -424,7 +424,7 @@ SPI provides high-speed synchronous communication:
 - **Four wires**: MOSI, MISO, SCK, CS/SS
 - **High speed**: Typically MHz range
 
-![serial_peripheral_interface_spi](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/serial_peripheral_interface_spi.svg)
+![serial_peripheral_interface_spi](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/serial_peripheral_interface_spi.svg)
 
 ---
 
@@ -556,7 +556,7 @@ I2C provides multi-master, multi-slave communication:
 - **Open drain**: Requires pull-up resistors
 - **Arbitration**: Multiple masters can coexist
 
-![inter_integrated_circuit_i2c](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/inter_integrated_circuit_i2c.svg)
+![inter_integrated_circuit_i2c](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/inter_integrated_circuit_i2c.svg)
 
 ---
 
@@ -750,7 +750,7 @@ DMA enables data transfer without CPU intervention:
 - **Peripheral-to-Memory**: Receive data from peripherals
 - **Circular mode**: Continuous operation for streaming
 
-![direct_memory_access_dma](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/direct_memory_access_dma.svg)
+![direct_memory_access_dma](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/direct_memory_access_dma.svg)
 
 ---
 

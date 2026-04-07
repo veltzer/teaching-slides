@@ -4,13 +4,13 @@
 
 ## Security Context Overview
 
-![security_context_overview](/svg/courses/devops/docker-for-developers/10_security/security_context_overview.svg)
+![security_context_overview](svg/courses/devops/docker-for-developers/10_security/security_context_overview.svg)
 
 ---
 
 ## Running as Non-Root
 
-![running_as_non_root](/svg/courses/devops/docker-for-developers/10_security/running_as_non_root.svg)
+![running_as_non_root](svg/courses/devops/docker-for-developers/10_security/running_as_non_root.svg)
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## Linux Capabilities
 
-![linux_capabilities](/svg/courses/devops/docker-for-developers/10_security/linux_capabilities.svg)
+![linux_capabilities](svg/courses/devops/docker-for-developers/10_security/linux_capabilities.svg)
 
 ---
 
@@ -44,13 +44,13 @@
 
 ## Tuning Capabilities
 
-![tuning_capabilities](/svg/courses/devops/docker-for-developers/10_security/tuning_capabilities.svg)
+![tuning_capabilities](svg/courses/devops/docker-for-developers/10_security/tuning_capabilities.svg)
 
 ---
 
 ## Security Best Practices
 
-![security_best_practices](/svg/courses/devops/docker-for-developers/10_security/security_best_practices.svg)
+![security_best_practices](svg/courses/devops/docker-for-developers/10_security/security_best_practices.svg)
 
 ---
 
@@ -67,7 +67,7 @@
 
 ## Security Scanning
 
-![security_scanning](/svg/courses/devops/docker-for-developers/10_security/security_scanning.svg)
+![security_scanning](svg/courses/devops/docker-for-developers/10_security/security_scanning.svg)
 
 ---
 
@@ -84,7 +84,7 @@
 
 ## Access Control
 
-![access_control](/svg/courses/devops/docker-for-developers/10_security/access_control.svg)
+![access_control](svg/courses/devops/docker-for-developers/10_security/access_control.svg)
 
 ---
 
@@ -101,7 +101,7 @@
 
 ## Network Security
 
-![network_security](/svg/courses/devops/docker-for-developers/10_security/network_security.svg)
+![network_security](svg/courses/devops/docker-for-developers/10_security/network_security.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Container Evolution Timeline
 
-![container_evolution_timeline](/svg/courses/devops/docker-for-developers/01_docker_theory/container_evolution_timeline.svg)
+![container_evolution_timeline](svg/courses/devops/docker-for-developers/01_docker_theory/container_evolution_timeline.svg)
 
 ---
 
@@ -20,13 +20,13 @@
 
 ## Docker Architecture
 
-![docker_architecture](/svg/courses/devops/docker-for-developers/01_docker_theory/docker_architecture.svg)
+![docker_architecture](svg/courses/devops/docker-for-developers/01_docker_theory/docker_architecture.svg)
 
 ---
 
 ## Container vs VM Architecture
 
-![container_vs_vm_architecture](/svg/courses/devops/docker-for-developers/01_docker_theory/container_vs_vm_architecture.svg)
+![container_vs_vm_architecture](svg/courses/devops/docker-for-developers/01_docker_theory/container_vs_vm_architecture.svg)
 
 ---
 
@@ -47,13 +47,13 @@
 
 ## Docker Workflow
 
-![docker_workflow](/svg/courses/devops/docker-for-developers/01_docker_theory/docker_workflow.svg)
+![docker_workflow](svg/courses/devops/docker-for-developers/01_docker_theory/docker_workflow.svg)
 
 ---
 
 ## Docker Components
 
-![docker_components](/svg/courses/devops/docker-for-developers/01_docker_theory/docker_components.svg)
+![docker_components](svg/courses/devops/docker-for-developers/01_docker_theory/docker_components.svg)
 
 ---
 
@@ -70,19 +70,19 @@
 
 ## Container Lifecycle
 
-![container_lifecycle](/svg/courses/devops/docker-for-developers/01_docker_theory/container_lifecycle.svg)
+![container_lifecycle](svg/courses/devops/docker-for-developers/01_docker_theory/container_lifecycle.svg)
 
 ---
 
 ## Network Types
 
-![network_types](/svg/courses/devops/docker-for-developers/01_docker_theory/network_types.svg)
+![network_types](svg/courses/devops/docker-for-developers/01_docker_theory/network_types.svg)
 
 ---
 
 ## Security Model
 
-![security_model](/svg/courses/devops/docker-for-developers/01_docker_theory/security_model.svg)
+![security_model](svg/courses/devops/docker-for-developers/01_docker_theory/security_model.svg)
 
 ---
 
@@ -100,4 +100,4 @@
 
 ## Troubleshooting Flow
 
-![troubleshooting_flow](/svg/courses/devops/docker-for-developers/01_docker_theory/troubleshooting_flow.svg)
+![troubleshooting_flow](svg/courses/devops/docker-for-developers/01_docker_theory/troubleshooting_flow.svg)

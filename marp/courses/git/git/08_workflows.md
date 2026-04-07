@@ -7,7 +7,7 @@
 - Scale considerations
 ---
 ## Common Workflow Types
-![common_workflow_types](/svg/courses/git/git/08_workflows/common_workflow_types.svg)
+![common_workflow_types](svg/courses/git/git/08_workflows/common_workflow_types.svg)
 
 ---
 ## Centralized Workflow
@@ -23,7 +23,7 @@
 - Team collaboration
 ---
 ## Development vs Production
-![development_vs_production](/svg/courses/git/git/08_workflows/development_vs_production.svg)
+![development_vs_production](svg/courses/git/git/08_workflows/development_vs_production.svg)
 
 ---
 ## GitFlow Workflow
@@ -34,7 +34,7 @@
 - Hotfix branches
 ---
 ## GitFlow Branch Structure
-![gitflow_branch_structure](/svg/courses/git/git/08_workflows/gitflow_branch_structure.svg)
+![gitflow_branch_structure](svg/courses/git/git/08_workflows/gitflow_branch_structure.svg)
 
 ---
 ## Trunk-Based Development
@@ -68,7 +68,7 @@
 - Quality requirements
 ---
 ## Jenkins Integration
-![jenkins_integration](/svg/courses/git/git/08_workflows/jenkins_integration.svg)
+![jenkins_integration](svg/courses/git/git/08_workflows/jenkins_integration.svg)
 
 ---
 ## Working with Pull Requests

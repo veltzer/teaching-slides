@@ -8,7 +8,7 @@
 ---
 ## How Does SQL Injection Work?
 
-![how_does_sql_injection_work](/svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/how_does_sql_injection_work.svg)
+![how_does_sql_injection_work](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/how_does_sql_injection_work.svg)
 
 ---
 ## How Does SQL Injection Work?
@@ -130,7 +130,7 @@ When there is no visible difference in response:
 ---
 ## Second-Order SQL Injection
 
-![second_order_sql_injection](/svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/second_order_sql_injection.svg)
+![second_order_sql_injection](svg/courses/security/cyber-attacks-and-vectors/06_sql_injection/second_order_sql_injection.svg)
 
 ---
 ## Vulnerable Code: Multiple Languages

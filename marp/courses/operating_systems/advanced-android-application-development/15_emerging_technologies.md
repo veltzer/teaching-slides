@@ -5,7 +5,7 @@
 
 ## Technology Overview
 
-![technology_overview](/svg/courses/operating_systems/advanced-android-application-development/15_emerging_technologies/technology_overview.svg)
+![technology_overview](svg/courses/operating_systems/advanced-android-application-development/15_emerging_technologies/technology_overview.svg)
 
 ---
 
@@ -285,7 +285,7 @@ class ExperimentManager {
 
 ## Best Practices
 
-![best_practices](/svg/courses/operating_systems/advanced-android-application-development/15_emerging_technologies/best_practices.svg)
+![best_practices](svg/courses/operating_systems/advanced-android-application-development/15_emerging_technologies/best_practices.svg)
 
 ---
 

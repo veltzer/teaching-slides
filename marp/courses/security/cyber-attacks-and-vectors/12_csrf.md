@@ -131,7 +131,7 @@ Set-Cookie: csrf_token=abc123; SameSite=Strict
 
 ## CSRF Attack Flow Diagram
 
-![csrf_attack_flow_diagram](/svg/courses/security/cyber-attacks-and-vectors/12_csrf/csrf_attack_flow_diagram.svg)
+![csrf_attack_flow_diagram](svg/courses/security/cyber-attacks-and-vectors/12_csrf/csrf_attack_flow_diagram.svg)
 
 ---
 

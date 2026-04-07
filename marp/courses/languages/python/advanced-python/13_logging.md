@@ -1067,7 +1067,7 @@ logger.addHandler(time_handler)
 - Search and analyze logs efficiently
 - Monitor and alert on log patterns
 
-![log_aggregation](/svg/courses/languages/python/advanced-python/13_logging/log_aggregation.svg)
+![log_aggregation](svg/courses/languages/python/advanced-python/13_logging/log_aggregation.svg)
 
 ---
 

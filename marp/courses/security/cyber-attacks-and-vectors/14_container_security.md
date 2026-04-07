@@ -15,7 +15,7 @@
 
 ## Container Attack Surface
 
-![container_attack_surface](/svg/courses/security/cyber-attacks-and-vectors/14_container_security/container_attack_surface.svg)
+![container_attack_surface](svg/courses/security/cyber-attacks-and-vectors/14_container_security/container_attack_surface.svg)
 
 ---
 

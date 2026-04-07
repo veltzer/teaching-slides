@@ -26,12 +26,12 @@
 ---
 ## Stack Layout Diagram
 
-![stack_layout_diagram](/svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_layout_diagram.svg)
+![stack_layout_diagram](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/stack_layout_diagram.svg)
 
 ---
 ## Diagram
 
-![diagram](/svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/diagram.svg)
+![diagram](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/diagram.svg)
 
 ---
 ## Vulnerable Code Example: strcpy
@@ -175,7 +175,7 @@ void secure_format(const char *user_input) {
 }
 ```
 
-![format_string_vulnerability](/svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/format_string_vulnerability.svg)
+![format_string_vulnerability](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/format_string_vulnerability.svg)
 
 ---
 ## Integer Overflow Leading to Buffer Overflow
@@ -229,7 +229,7 @@ void secure_integer(size_t count, size_t element_size) {
 ---
 ## Heartbleed (CVE-2014-0160) Deep Dive
 
-![heartbleed_cve_2014_0160_deep_dive](/svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/heartbleed_cve_2014_0160_deep_dive.svg)
+![heartbleed_cve_2014_0160_deep_dive](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/heartbleed_cve_2014_0160_deep_dive.svg)
 
 The bug: Server trusts client-specified length without bounds checking.
 
@@ -305,7 +305,7 @@ readelf -h /usr/bin/ls | grep Type
 # DYN (Position-Independent Executable)
 ```
 
-![dyn_position_independent_executable](/svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/dyn_position_independent_executable.svg)
+![dyn_position_independent_executable](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/dyn_position_independent_executable.svg)
 
 ---
 ## Detection Tools

@@ -33,7 +33,7 @@
 
 ## Containerization Decision Matrix
 
-![containerization_decision_matrix](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/containerization_decision_matrix.svg)
+![containerization_decision_matrix](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/containerization_decision_matrix.svg)
 
 ---
 
@@ -80,7 +80,7 @@ CMD ["node", "src/server.js"]
 
 ## Overhead and Complexity Costs
 
-![overhead_and_complexity_costs](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/overhead_and_complexity_costs.svg)
+![overhead_and_complexity_costs](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/overhead_and_complexity_costs.svg)
 
 ---
 
@@ -96,7 +96,7 @@ CMD ["node", "src/server.js"]
 
 ## Container Runtime Landscape
 
-![container_runtime_landscape](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_runtime_landscape.svg)
+![container_runtime_landscape](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_runtime_landscape.svg)
 
 ---
 
@@ -175,7 +175,7 @@ docker info | grep "containerd"
 
 ## Choosing a Runtime
 
-![choosing_a_runtime](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/choosing_a_runtime.svg)
+![choosing_a_runtime](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/choosing_a_runtime.svg)
 
 ---
 
@@ -241,7 +241,7 @@ docker run --read-only --security-opt \
 
 ## Base Image Strategies Overview
 
-![base_image_strategies_overview](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/base_image_strategies_overview.svg)
+![base_image_strategies_overview](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/base_image_strategies_overview.svg)
 
 ---
 
@@ -290,7 +290,7 @@ CMD ["app.jar"]
 
 ## Container Layer Architecture
 
-![container_layer_architecture](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_layer_architecture.svg)
+![container_layer_architecture](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_layer_architecture.svg)
 
 ---
 
@@ -348,7 +348,7 @@ FROM python@sha256:a1b2c3d4e5f6...
 
 ## Multi-Stage Builds: The Concept
 
-![multi_stage_builds_the_concept](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/multi_stage_builds_the_concept.svg)
+![multi_stage_builds_the_concept](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/multi_stage_builds_the_concept.svg)
 
 ---
 
@@ -487,7 +487,7 @@ RUN apt-get update && \
 
 ## Layer Optimization
 
-![layer_optimization](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/layer_optimization.svg)
+![layer_optimization](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/layer_optimization.svg)
 
 ---
 
@@ -529,7 +529,7 @@ cosign verify myregistry.com/myapp:v1.2.3
 
 ## Container Image Lifecycle
 
-![container_image_lifecycle](/svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_image_lifecycle.svg)
+![container_image_lifecycle](svg/courses/devops/architectural-decisions-in-devops/06_containerization_decisions/container_image_lifecycle.svg)
 
 ---
 

@@ -104,7 +104,7 @@ Defending against account takeover attacks requires a multi-layered approach, co
 
 ## Account Takeover Attack Flow
 
-![account_takeover_attack_flow](/svg/courses/security/cyber-attacks-and-vectors/15_account_takeover/account_takeover_attack_flow.svg)
+![account_takeover_attack_flow](svg/courses/security/cyber-attacks-and-vectors/15_account_takeover/account_takeover_attack_flow.svg)
 
 ---
 

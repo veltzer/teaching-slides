@@ -291,7 +291,7 @@ variable "cidr_block" {
 
 ## Setting Variables: Precedence Order
 
-![setting_variables_precedence_order](/svg/courses/devops/terraform/05_variables/setting_variables_precedence_order.svg)
+![setting_variables_precedence_order](svg/courses/devops/terraform/05_variables/setting_variables_precedence_order.svg)
 
 ---
 

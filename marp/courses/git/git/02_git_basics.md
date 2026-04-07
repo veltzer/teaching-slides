@@ -7,7 +7,7 @@
 - Setting up SSH keys for remote access
 ---
 ## Creating a Repository
-![creating_a_repository](/svg/courses/git/git/02_git_basics/creating_a_repository.svg)
+![creating_a_repository](svg/courses/git/git/02_git_basics/creating_a_repository.svg)
 
 ---
 ## Local Repository Setup
@@ -23,7 +23,7 @@
 - Establishes connection to origin
 ---
 ## The Staging Area
-![the_staging_area](/svg/courses/git/git/02_git_basics/the_staging_area.svg)
+![the_staging_area](svg/courses/git/git/02_git_basics/the_staging_area.svg)
 
 ---
 ## Working with git status
@@ -57,7 +57,7 @@
 - Helps review modifications
 ---
 ## Working Directory vs Staged
-![working_directory_vs_staged](/svg/courses/git/git/02_git_basics/working_directory_vs_staged.svg)
+![working_directory_vs_staged](svg/courses/git/git/02_git_basics/working_directory_vs_staged.svg)
 
 ---
 ## Creating Commits
@@ -103,7 +103,7 @@
 - Different modes available
 ---
 ## Reset Modes
-![reset_modes](/svg/courses/git/git/02_git_basics/reset_modes.svg)
+![reset_modes](svg/courses/git/git/02_git_basics/reset_modes.svg)
 
 ---
 ## File-level Reset

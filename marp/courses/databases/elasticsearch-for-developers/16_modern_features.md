@@ -6,7 +6,7 @@
 
 ## Modern Search Evolution
 
-![modern_search_evolution](/svg/courses/databases/elasticsearch-for-developers/16_modern_features/modern_search_evolution.svg)
+![modern_search_evolution](svg/courses/databases/elasticsearch-for-developers/16_modern_features/modern_search_evolution.svg)
 
 ---
 

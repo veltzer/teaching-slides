@@ -6,7 +6,7 @@
 
 ## Text Analysis Pipeline
 
-![text_analysis_pipeline](/svg/courses/databases/elasticsearch-for-developers/06_advanced_search/text_analysis_pipeline.svg)
+![text_analysis_pipeline](svg/courses/databases/elasticsearch-for-developers/06_advanced_search/text_analysis_pipeline.svg)
 
 ---
 

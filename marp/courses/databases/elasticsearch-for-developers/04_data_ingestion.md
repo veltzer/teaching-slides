@@ -6,7 +6,7 @@
 
 ## Ingestion Overview
 
-![ingestion_overview](/svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingestion_overview.svg)
+![ingestion_overview](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/ingestion_overview.svg)
 
 ---
 
@@ -74,7 +74,7 @@ No document body for deletes
 
 ## Optimal Batch Size
 
-![optimal_batch_size](/svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/optimal_batch_size.svg)
+![optimal_batch_size](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/optimal_batch_size.svg)
 
 ---
 
@@ -149,7 +149,7 @@ PUT /_ingest/pipeline/product_pipeline
 
 ## Pipeline Architecture
 
-![pipeline_architecture](/svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/pipeline_architecture.svg)
+![pipeline_architecture](svg/courses/databases/elasticsearch-for-developers/04_data_ingestion/pipeline_architecture.svg)
 
 ---
 

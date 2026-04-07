@@ -71,7 +71,7 @@
 | Cost sensitivity | Lower | Higher |
 ---
 ## Artifact Repository Architecture
-![artifact_repository_architecture](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/artifact_repository_architecture.svg)
+![artifact_repository_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/artifact_repository_architecture.svg)
 
 ---
 ## Promotion Between Stages
@@ -82,7 +82,7 @@
 - Promotion is a metadata operation, not a rebuild
 ---
 ## Promotion Pipeline: Overview
-![promotion_pipeline_overview](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/promotion_pipeline_overview.svg)
+![promotion_pipeline_overview](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/promotion_pipeline_overview.svg)
 
 ---
 ## Promotion Strategies
@@ -135,7 +135,7 @@ jfrog rt build-promote \
 - Pre-release: `1.0.0-alpha.1`, `1.0.0-rc.2`
 ---
 ## SemVer: Version Ordering
-![semver_version_ordering](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/semver_version_ordering.svg)
+![semver_version_ordering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/semver_version_ordering.svg)
 
 ---
 ## Commit-Based Versioning
@@ -189,7 +189,7 @@ jfrog rt build-promote \
 - Breaking immutability = breaking trust in the pipeline
 ---
 ## Traceability: From Deploy to Source
-![traceability_from_deploy_to_source](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/traceability_from_deploy_to_source.svg)
+![traceability_from_deploy_to_source](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/traceability_from_deploy_to_source.svg)
 
 ---
 ## Implementing Traceability
@@ -221,7 +221,7 @@ jfrog rt build-promote \
     - Tag and digest strategies
 ---
 ## Container Image Layers
-![container_image_layers](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_layers.svg)
+![container_image_layers](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_layers.svg)
 
 ---
 ## Base Image Strategies
@@ -236,7 +236,7 @@ jfrog rt build-promote \
     - Organizational compliance requirements
 ---
 ## Base Image Tiering
-![base_image_tiering](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/base_image_tiering.svg)
+![base_image_tiering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/base_image_tiering.svg)
 
 ---
 ## Supply Chain Security for Images
@@ -306,7 +306,7 @@ trivy image \
 | Negligible | Ignore | No action required |
 ---
 ## Policy Enforcement Architecture
-![policy_enforcement_architecture](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/policy_enforcement_architecture.svg)
+![policy_enforcement_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/policy_enforcement_architecture.svg)
 
 ---
 ## Kubernetes Admission Control
@@ -354,7 +354,7 @@ spec:
 | `chainguard` | ~2-15 MB | None | `apk` (build) |
 ---
 ## Slim Image Comparison
-![slim_image_comparison](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/slim_image_comparison.svg)
+![slim_image_comparison](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/slim_image_comparison.svg)
 
 ---
 ## Multi-Stage Builds
@@ -376,7 +376,7 @@ CMD ["/myapp"]
 ```
 ---
 ## Multi-Stage Build: Layer Diagram
-![multi_stage_build_layer_diagram](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/multi_stage_build_layer_diagram.svg)
+![multi_stage_build_layer_diagram](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/multi_stage_build_layer_diagram.svg)
 
 ---
 ## Distroless Images
@@ -433,7 +433,7 @@ image: myregistry.io/myapp@sha256:a3f8...
 - Solution: immutable tags or digest pinning
 ---
 ## Container Image Lifecycle
-![container_image_lifecycle](/svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_lifecycle.svg)
+![container_image_lifecycle](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_lifecycle.svg)
 
 ---
 ## Garbage Collection and Retention

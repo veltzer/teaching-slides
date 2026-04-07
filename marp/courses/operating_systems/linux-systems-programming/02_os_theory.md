@@ -41,7 +41,7 @@ Without protection: DOS, early Windows, embedded systems
 
 ## Historical Context
 
-![historical_context](/svg/courses/operating_systems/linux-systems-programming/02_os_theory/historical_context.svg)
+![historical_context](svg/courses/operating_systems/linux-systems-programming/02_os_theory/historical_context.svg)
 
 ---
 
@@ -49,7 +49,7 @@ Without protection: DOS, early Windows, embedded systems
 
 ## x86/x64 Protection Rings
 
-![x86_x64_protection_rings](/svg/courses/operating_systems/linux-systems-programming/02_os_theory/x86_x64_protection_rings.svg)
+![x86_x64_protection_rings](svg/courses/operating_systems/linux-systems-programming/02_os_theory/x86_x64_protection_rings.svg)
 
 ---
 
@@ -105,7 +105,7 @@ CPL Values:
 
 ## Privilege Transitions
 
-![privilege_transitions](/svg/courses/operating_systems/linux-systems-programming/02_os_theory/privilege_transitions.svg)
+![privilege_transitions](svg/courses/operating_systems/linux-systems-programming/02_os_theory/privilege_transitions.svg)
 
 ---
 
@@ -123,7 +123,7 @@ CPL Values:
 
 ## Virtual Memory Architecture
 
-![virtual_memory_architecture](/svg/courses/operating_systems/linux-systems-programming/02_os_theory/virtual_memory_architecture.svg)
+![virtual_memory_architecture](svg/courses/operating_systems/linux-systems-programming/02_os_theory/virtual_memory_architecture.svg)
 
 ---
 
@@ -246,7 +246,7 @@ void setup_page_table(struct process *p) {
 
 ## System Call Mechanism
 
-![system_call_mechanism](/svg/courses/operating_systems/linux-systems-programming/02_os_theory/system_call_mechanism.svg)
+![system_call_mechanism](svg/courses/operating_systems/linux-systems-programming/02_os_theory/system_call_mechanism.svg)
 
 ---
 

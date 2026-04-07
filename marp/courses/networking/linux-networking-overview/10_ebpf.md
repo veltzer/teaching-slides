@@ -17,7 +17,7 @@
 
 ## What is eBPF
 
-![what_is_ebpf](/svg/courses/networking/linux-networking-overview/10_ebpf/what_is_ebpf.svg)
+![what_is_ebpf](svg/courses/networking/linux-networking-overview/10_ebpf/what_is_ebpf.svg)
 
 ---
 
@@ -48,7 +48,7 @@
 
 ## eBPF Architecture
 
-![ebpf_architecture](/svg/courses/networking/linux-networking-overview/10_ebpf/ebpf_architecture.svg)
+![ebpf_architecture](svg/courses/networking/linux-networking-overview/10_ebpf/ebpf_architecture.svg)
 
 ---
 
@@ -112,7 +112,7 @@ int xdp_filter(struct xdp_md *ctx)
 
 ## Program Verification
 
-![program_verification](/svg/courses/networking/linux-networking-overview/10_ebpf/program_verification.svg)
+![program_verification](svg/courses/networking/linux-networking-overview/10_ebpf/program_verification.svg)
 
 ---
 
@@ -210,7 +210,7 @@ int tc_example(struct __sk_buff *skb)
 
 ## Tools and Utilities
 
-![tools_and_utilities](/svg/courses/networking/linux-networking-overview/10_ebpf/tools_and_utilities.svg)
+![tools_and_utilities](svg/courses/networking/linux-networking-overview/10_ebpf/tools_and_utilities.svg)
 
 ---
 
@@ -304,7 +304,7 @@ bpftool prog show id 123
 
 ## Development Workflow
 
-![development_workflow](/svg/courses/networking/linux-networking-overview/10_ebpf/development_workflow.svg)
+![development_workflow](svg/courses/networking/linux-networking-overview/10_ebpf/development_workflow.svg)
 
 ---
 

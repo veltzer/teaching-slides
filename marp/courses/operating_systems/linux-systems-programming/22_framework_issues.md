@@ -15,7 +15,7 @@
 
 ## Linux Namespaces
 
-![linux_namespaces](/svg/courses/operating_systems/linux-systems-programming/22_framework_issues/linux_namespaces.svg)
+![linux_namespaces](svg/courses/operating_systems/linux-systems-programming/22_framework_issues/linux_namespaces.svg)
 
 ---
 
@@ -405,7 +405,7 @@ int setup_gid_mapping(pid_t pid, int inside_gid, int outside_gid, int length) {
 
 ## Cgroups Overview
 
-![cgroups_overview](/svg/courses/operating_systems/linux-systems-programming/22_framework_issues/cgroups_overview.svg)
+![cgroups_overview](svg/courses/operating_systems/linux-systems-programming/22_framework_issues/cgroups_overview.svg)
 
 ---
 

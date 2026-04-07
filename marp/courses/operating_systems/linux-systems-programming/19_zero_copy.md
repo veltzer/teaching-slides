@@ -14,7 +14,7 @@
 
 ## The Copy Problem
 
-![the_copy_problem](/svg/courses/operating_systems/linux-systems-programming/19_zero_copy/the_copy_problem.svg)
+![the_copy_problem](svg/courses/operating_systems/linux-systems-programming/19_zero_copy/the_copy_problem.svg)
 
 ---
 
@@ -73,7 +73,7 @@ int transfer_file_sendfile(int in_fd, int out_fd) {
 
 ## sendfile() Zero Copy Flow
 
-![sendfile_zero_copy_flow](/svg/courses/operating_systems/linux-systems-programming/19_zero_copy/sendfile_zero_copy_flow.svg)
+![sendfile_zero_copy_flow](svg/courses/operating_systems/linux-systems-programming/19_zero_copy/sendfile_zero_copy_flow.svg)
 
 ---
 
@@ -230,7 +230,7 @@ ssize_t bytes = vmsplice(pipe_write_fd, &iov, 1, SPLICE_F_GIFT);
 
 ## Zero Copy Architecture
 
-![zero_copy_architecture](/svg/courses/operating_systems/linux-systems-programming/19_zero_copy/zero_copy_architecture.svg)
+![zero_copy_architecture](svg/courses/operating_systems/linux-systems-programming/19_zero_copy/zero_copy_architecture.svg)
 
 ---
 

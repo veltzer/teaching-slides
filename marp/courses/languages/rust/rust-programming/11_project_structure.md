@@ -6,7 +6,7 @@
 
 ## Cargo Project Structure
 
-![cargo_project_structure](/svg/courses/languages/rust/rust-programming/11_project_structure/cargo_project_structure.svg)
+![cargo_project_structure](svg/courses/languages/rust/rust-programming/11_project_structure/cargo_project_structure.svg)
 
 ---
 
@@ -102,7 +102,7 @@ fn main() {
 
 ## Project Configuration
 
-![project_configuration](/svg/courses/languages/rust/rust-programming/11_project_structure/project_configuration.svg)
+![project_configuration](svg/courses/languages/rust/rust-programming/11_project_structure/project_configuration.svg)
 
 ---
 
@@ -141,7 +141,7 @@ gtk = { version = "0.1", optional = true }
 
 ## Development Tools
 
-![development_tools](/svg/courses/languages/rust/rust-programming/11_project_structure/development_tools.svg)
+![development_tools](svg/courses/languages/rust/rust-programming/11_project_structure/development_tools.svg)
 
 ---
 
@@ -273,7 +273,7 @@ fn main() {
 
 ## Dependency Management
 
-![dependency_management](/svg/courses/languages/rust/rust-programming/11_project_structure/dependency_management.svg)
+![dependency_management](svg/courses/languages/rust/rust-programming/11_project_structure/dependency_management.svg)
 
 ---
 
@@ -368,7 +368,7 @@ cargo new my_project --bin
 
 ## Security Best Practices
 
-![security_best_practices](/svg/courses/languages/rust/rust-programming/11_project_structure/security_best_practices.svg)
+![security_best_practices](svg/courses/languages/rust/rust-programming/11_project_structure/security_best_practices.svg)
 
 ---
 

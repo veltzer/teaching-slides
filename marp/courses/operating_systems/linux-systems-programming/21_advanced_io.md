@@ -15,7 +15,7 @@
 
 ## File Locking Fundamentals
 
-![file_locking_fundamentals](/svg/courses/operating_systems/linux-systems-programming/21_advanced_io/file_locking_fundamentals.svg)
+![file_locking_fundamentals](svg/courses/operating_systems/linux-systems-programming/21_advanced_io/file_locking_fundamentals.svg)
 
 ---
 
@@ -211,7 +211,7 @@ int try_flock(int fd) {
 
 ## Lock Types Comparison
 
-![lock_types_comparison](/svg/courses/operating_systems/linux-systems-programming/21_advanced_io/lock_types_comparison.svg)
+![lock_types_comparison](svg/courses/operating_systems/linux-systems-programming/21_advanced_io/lock_types_comparison.svg)
 
 ---
 
@@ -483,7 +483,7 @@ int async_read_start(struct async_operation *op) {
 
 ## Network Server Design Patterns
 
-![network_server_design_patterns](/svg/courses/operating_systems/linux-systems-programming/21_advanced_io/network_server_design_patterns.svg)
+![network_server_design_patterns](svg/courses/operating_systems/linux-systems-programming/21_advanced_io/network_server_design_patterns.svg)
 
 ---
 

@@ -47,7 +47,7 @@ With CI/CD:
 
 ## GitHub Actions Architecture
 
-![github_actions_architecture](/svg/courses/devops/github-workflows/01_introduction/github_actions_architecture.svg)
+![github_actions_architecture](svg/courses/devops/github-workflows/01_introduction/github_actions_architecture.svg)
 
 ---
 

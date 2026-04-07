@@ -3,7 +3,7 @@
 ---
 ## Linux Boot Sequence
 
-![linux_boot_sequence](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/linux_boot_sequence.svg)
+![linux_boot_sequence](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/linux_boot_sequence.svg)
 
 1. BIOS/UEFI initialization
 1. Bootloader (GRUB) loads kernel
@@ -13,7 +13,7 @@
 ---
 ## Old SysV Init System
 
-![old_sysv_init_system](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/old_sysv_init_system.svg)
+![old_sysv_init_system](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/old_sysv_init_system.svg)
 
 Traditional runlevels:
 - 0: Halt
@@ -27,7 +27,7 @@ Traditional runlevels:
 ---
 ## systemd Introduction
 
-![systemd_introduction](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_introduction.svg)
+![systemd_introduction](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_introduction.svg)
 
 Key features:
 - Service management
@@ -40,7 +40,7 @@ Key features:
 ---
 ## systemd Units
 
-![systemd_units](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_units.svg)
+![systemd_units](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_units.svg)
 
 Common unit types:
 
@@ -77,7 +77,7 @@ systemctl disable nginx.service
 ---
 ## Service Management
 
-![service_management](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_management.svg)
+![service_management](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_management.svg)
 
 Common operations:
 
@@ -117,7 +117,7 @@ WantedBy=multi-user.target
 ---
 ## Service File Sections
 
-![service_file_sections](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_file_sections.svg)
+![service_file_sections](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_file_sections.svg)
 
 Common options:
 
@@ -216,7 +216,7 @@ exit 0
 ---
 ## Systemd Targets
 
-![systemd_targets](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_targets.svg)
+![systemd_targets](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_targets.svg)
 
 Target management:
 
@@ -234,7 +234,7 @@ systemctl isolate graphical.target
 ---
 ## Troubleshooting Boot Issues
 
-![troubleshooting_boot_issues](/svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/troubleshooting_boot_issues.svg)
+![troubleshooting_boot_issues](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/troubleshooting_boot_issues.svg)
 
 Debug commands:
 

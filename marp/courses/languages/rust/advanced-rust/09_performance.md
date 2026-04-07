@@ -28,7 +28,7 @@ You don't pay for what you don't use
 
 ## What Zero-Cost Means
 
-![what_zero_cost_means](/svg/courses/languages/rust/advanced-rust/09_performance/what_zero_cost_means.svg)
+![what_zero_cost_means](svg/courses/languages/rust/advanced-rust/09_performance/what_zero_cost_means.svg)
 
 ---
 
@@ -134,7 +134,7 @@ What the compiler does for you
 
 ## LLVM Optimization Pipeline
 
-![llvm_optimization_pipeline](/svg/courses/languages/rust/advanced-rust/09_performance/llvm_optimization_pipeline.svg)
+![llvm_optimization_pipeline](svg/courses/languages/rust/advanced-rust/09_performance/llvm_optimization_pipeline.svg)
 
 ---
 
@@ -239,7 +239,7 @@ cargo flamegraph --bin my_app
 # Stack depth = call chain
 ```
 
-![stack_depth_call_chain](/svg/courses/languages/rust/advanced-rust/09_performance/stack_depth_call_chain.svg)
+![stack_depth_call_chain](svg/courses/languages/rust/advanced-rust/09_performance/stack_depth_call_chain.svg)
 
 ```bash
 # For specific binary with arguments
@@ -519,7 +519,7 @@ fn main() {
 }
 ```
 
-![cargo_toml](/svg/courses/languages/rust/advanced-rust/09_performance/cargo_toml.svg)
+![cargo_toml](svg/courses/languages/rust/advanced-rust/09_performance/cargo_toml.svg)
 
 ---
 
@@ -531,7 +531,7 @@ Single Instruction, Multiple Data
 
 ## SIMD Concepts
 
-![simd_concepts](/svg/courses/languages/rust/advanced-rust/09_performance/simd_concepts.svg)
+![simd_concepts](svg/courses/languages/rust/advanced-rust/09_performance/simd_concepts.svg)
 
 ---
 
@@ -731,7 +731,7 @@ fn main() {
 
 ## Cache Optimization Guidelines
 
-![cache_optimization_guidelines](/svg/courses/languages/rust/advanced-rust/09_performance/cache_optimization_guidelines.svg)
+![cache_optimization_guidelines](svg/courses/languages/rust/advanced-rust/09_performance/cache_optimization_guidelines.svg)
 
 ---
 
@@ -963,13 +963,13 @@ codegen-units = 1   # Single codegen unit: enables more inlining
                     # Default is 16 for parallel compilation
 ```
 
-![lto_false_default_no_cross_crate_optimization](/svg/courses/languages/rust/advanced-rust/09_performance/lto_false_default_no_cross_crate_optimization.svg)
+![lto_false_default_no_cross_crate_optimization](svg/courses/languages/rust/advanced-rust/09_performance/lto_false_default_no_cross_crate_optimization.svg)
 
 ---
 
 ## LTO Trade-offs
 
-![lto_trade_offs](/svg/courses/languages/rust/advanced-rust/09_performance/lto_trade_offs.svg)
+![lto_trade_offs](svg/courses/languages/rust/advanced-rust/09_performance/lto_trade_offs.svg)
 
 ---
 
@@ -981,7 +981,7 @@ Optimize based on real workload data
 
 ## PGO Workflow
 
-![pgo_workflow](/svg/courses/languages/rust/advanced-rust/09_performance/pgo_workflow.svg)
+![pgo_workflow](svg/courses/languages/rust/advanced-rust/09_performance/pgo_workflow.svg)
 
 ---
 
@@ -1064,7 +1064,7 @@ fn main() {
 
 ## When to Use #[inline]
 
-![when_to_use_inline](/svg/courses/languages/rust/advanced-rust/09_performance/when_to_use_inline.svg)
+![when_to_use_inline](svg/courses/languages/rust/advanced-rust/09_performance/when_to_use_inline.svg)
 
 ---
 
@@ -1142,7 +1142,7 @@ fn main() {
 
 ## Summary
 
-![summary](/svg/courses/languages/rust/advanced-rust/09_performance/summary.svg)
+![summary](svg/courses/languages/rust/advanced-rust/09_performance/summary.svg)
 
 ---
 

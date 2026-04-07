@@ -18,7 +18,7 @@ Understanding what happens beneath the `docker` CLI
 
 ## The Docker Engine - High Level
 
-![the_docker_engine_high_level](/svg/courses/devops/advanced-docker/01_internals/the_docker_engine_high_level.svg)
+![the_docker_engine_high_level](svg/courses/devops/advanced-docker/01_internals/the_docker_engine_high_level.svg)
 
 ---
 
@@ -88,7 +88,7 @@ sudo systemctl status containerd
 
 ## `containerd` Architecture
 
-![containerd_architecture](/svg/courses/devops/advanced-docker/01_internals/containerd_architecture.svg)
+![containerd_architecture](svg/courses/devops/advanced-docker/01_internals/containerd_architecture.svg)
 
 ---
 
@@ -281,7 +281,7 @@ ip addr show
 
 ## Network Namespace - veth Pairs
 
-![network_namespace_veth_pairs](/svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
+![network_namespace_veth_pairs](svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
 
 ```bash
 # See veth pairs
@@ -467,7 +467,7 @@ docker run --rm --pids-limit=50 alpine sh -c \
 
 ## How a Container Starts - Step by Step
 
-![how_a_container_starts_step_by_step](/svg/courses/devops/advanced-docker/01_internals/how_a_container_starts_step_by_step.svg)
+![how_a_container_starts_step_by_step](svg/courses/devops/advanced-docker/01_internals/how_a_container_starts_step_by_step.svg)
 
 ---
 
@@ -537,7 +537,7 @@ cat /proc/$PID/environ | tr '\0' '\n'
 
 ## Container Filesystem - OverlayFS
 
-![container_filesystem_overlayfs](/svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
+![container_filesystem_overlayfs](svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
 
 ```bash
 # View overlay mount details

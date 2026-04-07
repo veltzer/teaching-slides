@@ -21,7 +21,7 @@
 
 ## Report Audience
 
-![report_audience](/svg/courses/security/linux-forensics/12_report_writing/report_audience.svg)
+![report_audience](svg/courses/security/linux-forensics/12_report_writing/report_audience.svg)
 
 ---
 
@@ -717,7 +717,7 @@ After Testimony:
 
 ## Incident Response Report vs Legal Report
 
-![incident_response_report_vs_legal_report](/svg/courses/security/linux-forensics/12_report_writing/incident_response_report_vs_legal_report.svg)
+![incident_response_report_vs_legal_report](svg/courses/security/linux-forensics/12_report_writing/incident_response_report_vs_legal_report.svg)
 
 - Same investigation may produce both types
 - IR report feeds into forensic report
@@ -784,7 +784,7 @@ Types of Visualizations:
 
 ## Multi-Evidence Correlation
 
-![multi_evidence_correlation](/svg/courses/security/linux-forensics/12_report_writing/multi_evidence_correlation.svg)
+![multi_evidence_correlation](svg/courses/security/linux-forensics/12_report_writing/multi_evidence_correlation.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 ---
 ## Concurrency Models
 
-![concurrency_models](/svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/concurrency_models.svg)
+![concurrency_models](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/concurrency_models.svg)
 
 ---
 ## Creating Threads
@@ -96,7 +96,7 @@ for received in rx {
 ---
 ## Channel Types
 
-![channel_types](/svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/channel_types.svg)
+![channel_types](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/channel_types.svg)
 
 ---
 ## Shared State: Mutex
@@ -247,7 +247,7 @@ thread::spawn(move || {
 ---
 ## Thread Safety Traits
 
-![thread_safety_traits](/svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/thread_safety_traits.svg)
+![thread_safety_traits](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/thread_safety_traits.svg)
 
 ---
 ## Send and Sync
@@ -343,7 +343,7 @@ match handle.join() {
 ---
 ## Best Practices
 
-![best_practices](/svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/best_practices.svg)
+![best_practices](svg/courses/languages/rust/rust-programming/09_threads_and_concurrency/best_practices.svg)
 
 ---
 ## Performance Considerations

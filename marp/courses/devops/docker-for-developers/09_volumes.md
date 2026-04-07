@@ -4,13 +4,13 @@
 
 ## Why Data Volumes?
 
-![why_data_volumes](/svg/courses/devops/docker-for-developers/09_volumes/why_data_volumes.svg)
+![why_data_volumes](svg/courses/devops/docker-for-developers/09_volumes/why_data_volumes.svg)
 
 ---
 
 ## Types of Data Volumes
 
-![types_of_data_volumes](/svg/courses/devops/docker-for-developers/09_volumes/types_of_data_volumes.svg)
+![types_of_data_volumes](svg/courses/devops/docker-for-developers/09_volumes/types_of_data_volumes.svg)
 
 ---
 
@@ -39,13 +39,13 @@
 
 ## Working with Volumes
 
-![working_with_volumes](/svg/courses/devops/docker-for-developers/09_volumes/working_with_volumes.svg)
+![working_with_volumes](svg/courses/devops/docker-for-developers/09_volumes/working_with_volumes.svg)
 
 ---
 
 ## Volume Backup Strategies
 
-![volume_backup_strategies](/svg/courses/devops/docker-for-developers/09_volumes/volume_backup_strategies.svg)
+![volume_backup_strategies](svg/courses/devops/docker-for-developers/09_volumes/volume_backup_strategies.svg)
 
 ---
 
@@ -62,13 +62,13 @@
 
 ## Best Practices
 
-![best_practices](/svg/courses/devops/docker-for-developers/09_volumes/best_practices.svg)
+![best_practices](svg/courses/devops/docker-for-developers/09_volumes/best_practices.svg)
 
 ---
 
 ## Volume Lifecycle
 
-![volume_lifecycle](/svg/courses/devops/docker-for-developers/09_volumes/volume_lifecycle.svg)
+![volume_lifecycle](svg/courses/devops/docker-for-developers/09_volumes/volume_lifecycle.svg)
 
 ---
 
@@ -84,7 +84,7 @@
 
 ## Data Migration
 
-![data_migration](/svg/courses/devops/docker-for-developers/09_volumes/data_migration.svg)
+![data_migration](svg/courses/devops/docker-for-developers/09_volumes/data_migration.svg)
 
 ---
 
@@ -101,7 +101,7 @@
 
 ## Common Volume Patterns
 
-![common_volume_patterns](/svg/courses/devops/docker-for-developers/09_volumes/common_volume_patterns.svg)
+![common_volume_patterns](svg/courses/devops/docker-for-developers/09_volumes/common_volume_patterns.svg)
 
 ---
 

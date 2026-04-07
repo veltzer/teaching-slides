@@ -68,7 +68,7 @@
 
 ## Why Linux Virtual IRQ Numbers?
 
-![why_linux_virtual_irq_numbers](/svg/lectures/linux-kernel-and-interrupts/why_linux_virtual_irq_numbers.svg)
+![why_linux_virtual_irq_numbers](svg/lectures/linux-kernel-and-interrupts/why_linux_virtual_irq_numbers.svg)
 
 ---
 
@@ -221,7 +221,7 @@ platform_device_register(&my_device);
 
 ## Case 3: ACPI Systems (x86/x64)
 
-![case_3_acpi_systems_x86_x64](/svg/lectures/linux-kernel-and-interrupts/case_3_acpi_systems_x86_x64.svg)
+![case_3_acpi_systems_x86_x64](svg/lectures/linux-kernel-and-interrupts/case_3_acpi_systems_x86_x64.svg)
 
 ---
 
@@ -320,7 +320,7 @@ static struct platform_driver my_driver = {
 
 ## Case 4: Device Tree Systems (ARM/PowerPC)
 
-![case_4_device_tree_systems_arm_powerpc](/svg/lectures/linux-kernel-and-interrupts/case_4_device_tree_systems_arm_powerpc.svg)
+![case_4_device_tree_systems_arm_powerpc](svg/lectures/linux-kernel-and-interrupts/case_4_device_tree_systems_arm_powerpc.svg)
 
 ---
 

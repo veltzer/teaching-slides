@@ -4,7 +4,7 @@
 
 ## Kernel Architecture in Yocto
 
-![kernel_architecture_in_yocto](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_architecture_in_yocto.svg)
+![kernel_architecture_in_yocto](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_architecture_in_yocto.svg)
 
 ---
 
@@ -57,7 +57,7 @@ COMPATIBLE_MACHINE = "myboard"
 
 ## Kernel Configuration Methods
 
-![kernel_configuration_methods](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_configuration_methods.svg)
+![kernel_configuration_methods](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/kernel_configuration_methods.svg)
 
 ---
 
@@ -142,7 +142,7 @@ patch myfeature-fix.patch
 
 ## Device Tree Overview
 
-![device_tree_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/device_tree_overview.svg)
+![device_tree_overview](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/device_tree_overview.svg)
 
 ---
 
@@ -421,7 +421,7 @@ CONFIG_BOOTCOMMAND="run bootcmd_mmc0"
 
 ## Boot Process Flow
 
-![boot_process_flow](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/boot_process_flow.svg)
+![boot_process_flow](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/06_kernel_and_device_integration/boot_process_flow.svg)
 
 ---
 

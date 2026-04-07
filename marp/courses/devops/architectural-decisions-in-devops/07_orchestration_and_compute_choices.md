@@ -15,7 +15,7 @@
 ---
 ## The Compute Spectrum
 
-![the_compute_spectrum](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
+![the_compute_spectrum](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
 
 - Moving right trades **control** for **convenience**
 - Each step reduces operational burden but increases abstraction
@@ -46,7 +46,7 @@
 ---
 ## Kubernetes Architecture
 
-![kubernetes_architecture](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/kubernetes_architecture.svg)
+![kubernetes_architecture](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/kubernetes_architecture.svg)
 
 ---
 ## Operational Complexity Comparison
@@ -119,7 +119,7 @@ NOT justified:
 ---
 ## Cost Comparison at Scale
 
-![cost_comparison_at_scale](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cost_comparison_at_scale.svg)
+![cost_comparison_at_scale](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cost_comparison_at_scale.svg)
 
 ---
 ## Scaling Characteristics
@@ -152,7 +152,7 @@ NOT justified:
 ---
 ## Cluster Strategy: Cluster Per Team
 
-![cluster_strategy_cluster_per_team](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
+![cluster_strategy_cluster_per_team](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
 
 - Full blast radius isolation between teams
 - Higher cost: each cluster has its own control plane
@@ -174,7 +174,7 @@ NOT justified:
 ---
 ## Cluster Strategy: Shared Clusters
 
-![cluster_strategy_shared_clusters](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_shared_clusters.svg)
+![cluster_strategy_shared_clusters](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_shared_clusters.svg)
 
 ---
 ## Shared Clusters: Pros and Cons
@@ -313,17 +313,17 @@ Tools for self-management:
 ---
 ## Self-Managed vs Managed: Decision Tree
 
-![self_managed_vs_managed_decision_tree](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/self_managed_vs_managed_decision_tree.svg)
+![self_managed_vs_managed_decision_tree](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/self_managed_vs_managed_decision_tree.svg)
 
 ---
 ## Serverless Architecture Flow
 
-![serverless_architecture_flow](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/serverless_architecture_flow.svg)
+![serverless_architecture_flow](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/serverless_architecture_flow.svg)
 
 ---
 ## Cold Start: What Happens
 
-![cold_start_what_happens](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
+![cold_start_what_happens](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
 
 - Cold starts happen when no idle instance exists
 - Frequency depends on traffic patterns and provider
@@ -362,7 +362,7 @@ Mitigation strategies:
 ---
 ## Vendor Lock-In Depth
 
-![vendor_lock_in_depth](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/vendor_lock_in_depth.svg)
+![vendor_lock_in_depth](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/vendor_lock_in_depth.svg)
 
 ---
 ## Serverless Lock-In: Practical Examples
@@ -419,7 +419,7 @@ Event-driven workloads align best with serverless economics.
 ---
 ## Event-Driven Serverless Flow
 
-![event_driven_serverless_flow](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/event_driven_serverless_flow.svg)
+![event_driven_serverless_flow](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/event_driven_serverless_flow.svg)
 
 ---
 ## Serverless Limits to Know
@@ -454,7 +454,7 @@ Most real-world systems combine compute models:
 ---
 ## Hybrid Architecture Example
 
-![hybrid_architecture_example](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/hybrid_architecture_example.svg)
+![hybrid_architecture_example](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/hybrid_architecture_example.svg)
 
 ---
 ## RBAC and Policy Enforcement
@@ -577,7 +577,7 @@ Ask these questions in order:
 ---
 ## Decision Matrix Summary
 
-![decision_matrix_summary](/svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/decision_matrix_summary.svg)
+![decision_matrix_summary](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/decision_matrix_summary.svg)
 
 ---
 ## Anti-Patterns to Avoid

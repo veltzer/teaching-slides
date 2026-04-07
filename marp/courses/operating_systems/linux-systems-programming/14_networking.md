@@ -29,7 +29,7 @@
 
 ## Socket Architecture
 
-![socket_architecture](/svg/courses/operating_systems/linux-systems-programming/14_networking/socket_architecture.svg)
+![socket_architecture](svg/courses/operating_systems/linux-systems-programming/14_networking/socket_architecture.svg)
 
 ---
 
@@ -134,7 +134,7 @@ int connect_tcp_client(const char *server, int port) {
 
 ## Socket State Diagram - TCP
 
-![socket_state_diagram_tcp](/svg/courses/operating_systems/linux-systems-programming/14_networking/socket_state_diagram_tcp.svg)
+![socket_state_diagram_tcp](svg/courses/operating_systems/linux-systems-programming/14_networking/socket_state_diagram_tcp.svg)
 
 ---
 
@@ -410,7 +410,7 @@ int connect_unix_client(const char *path) {
 
 ## AF_UNIX vs AF_INET Performance
 
-![afunix_vs_afinet_performance](/svg/courses/operating_systems/linux-systems-programming/14_networking/afunix_vs_afinet_performance.svg)
+![afunix_vs_afinet_performance](svg/courses/operating_systems/linux-systems-programming/14_networking/afunix_vs_afinet_performance.svg)
 
 ---
 

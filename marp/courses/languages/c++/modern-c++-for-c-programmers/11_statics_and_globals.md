@@ -874,7 +874,7 @@ namespace GoodLibrary {
 Understanding where static variables are stored:
 
 ```xml
-![memory_layout_of_static_variables](/svg/courses/languages/c++/modern-c++-for-c-programmers/11_statics_and_globals/memory_layout_of_static_variables.svg)
+![memory_layout_of_static_variables](svg/courses/languages/c++/modern-c++-for-c-programmers/11_statics_and_globals/memory_layout_of_static_variables.svg)
 ```
 
 ```cpp

@@ -5,7 +5,7 @@
 
 ## Why Use a Shell
 
-![why_use_a_shell](/svg/courses/operating_systems/linux-fundamentals/04_shells/why_use_a_shell.svg)
+![why_use_a_shell](svg/courses/operating_systems/linux-fundamentals/04_shells/why_use_a_shell.svg)
 
 The shell is your interface to the system:
 - Command interpretation
@@ -17,7 +17,7 @@ The shell is your interface to the system:
 
 ## Shell Families
 
-![shell_families](/svg/courses/operating_systems/linux-fundamentals/04_shells/shell_families.svg)
+![shell_families](svg/courses/operating_systems/linux-fundamentals/04_shells/shell_families.svg)
 
 ---
 
@@ -37,7 +37,7 @@ export PATH=$PATH:/new/path
 echo $PATH
 ```
 
-![environment_variables](/svg/courses/operating_systems/linux-fundamentals/04_shells/environment_variables.svg)
+![environment_variables](svg/courses/operating_systems/linux-fundamentals/04_shells/environment_variables.svg)
 
 ---
 
@@ -93,7 +93,7 @@ set files = `ls`
 
 ## Glob Patterns
 
-![glob_patterns](/svg/courses/operating_systems/linux-fundamentals/04_shells/glob_patterns.svg)
+![glob_patterns](svg/courses/operating_systems/linux-fundamentals/04_shells/glob_patterns.svg)
 
 Examples:
 
@@ -112,7 +112,7 @@ ls [a-z]*.txt
 
 ## Input/Output Redirection
 
-![input_output_redirection](/svg/courses/operating_systems/linux-fundamentals/04_shells/input_output_redirection.svg)
+![input_output_redirection](svg/courses/operating_systems/linux-fundamentals/04_shells/input_output_redirection.svg)
 
 Examples:
 
@@ -168,7 +168,7 @@ unalias ll
 
 ## Pipes
 
-![pipes](/svg/courses/operating_systems/linux-fundamentals/04_shells/pipes.svg)
+![pipes](svg/courses/operating_systems/linux-fundamentals/04_shells/pipes.svg)
 
 Examples:
 
@@ -223,7 +223,7 @@ history
 
 ## Session Initialization
 
-![session_initialization](/svg/courses/operating_systems/linux-fundamentals/04_shells/session_initialization.svg)
+![session_initialization](svg/courses/operating_systems/linux-fundamentals/04_shells/session_initialization.svg)
 
 Files for Bourne Family:
 

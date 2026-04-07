@@ -7,7 +7,7 @@
 1. Performance monitoring tool
 ---
 ## Accessing the UI
-![accessing_the_ui](/svg/lectures/spark-ui/accessing_the_ui.svg)
+![accessing_the_ui](svg/lectures/spark-ui/accessing_the_ui.svg)
 
 ---
 ## Core Components
@@ -19,7 +19,7 @@
 1. SQL tab
 ---
 ## Jobs Tab Overview
-![jobs_tab_overview](/svg/lectures/spark-ui/jobs_tab_overview.svg)
+![jobs_tab_overview](svg/lectures/spark-ui/jobs_tab_overview.svg)
 
 ---
 ## Job Details
@@ -43,7 +43,7 @@ df.groupBy("column")
 1. Performance metrics
 ---
 ## Storage Tab
-![storage_tab](/svg/lectures/spark-ui/storage_tab.svg)
+![storage_tab](svg/lectures/spark-ui/storage_tab.svg)
 
 ---
 ## Caching Metrics
@@ -104,7 +104,7 @@ spark.conf.set("spark.ui.enabled", true)
 1. GC impact
 ---
 ## Memory Management
-![memory_management](/svg/lectures/spark-ui/memory_management.svg)
+![memory_management](svg/lectures/spark-ui/memory_management.svg)
 
 ---
 ## Data Locality
@@ -128,7 +128,7 @@ df.repartition(10)
 1. Data flow
 ---
 ## Shuffle Analysis
-![shuffle_analysis](/svg/lectures/spark-ui/shuffle_analysis.svg)
+![shuffle_analysis](svg/lectures/spark-ui/shuffle_analysis.svg)
 
 ---
 ## Resource Utilization
@@ -161,7 +161,7 @@ df.repartition(10)
 1. Long-term analysis
 ---
 ## Common Issues
-![common_issues](/svg/lectures/spark-ui/common_issues.svg)
+![common_issues](svg/lectures/spark-ui/common_issues.svg)
 
 ---
 ## Troubleshooting
@@ -189,7 +189,7 @@ df.repartition(10)
 1. Integration options
 ---
 ## Cluster Monitoring
-![cluster_monitoring](/svg/lectures/spark-ui/cluster_monitoring.svg)
+![cluster_monitoring](svg/lectures/spark-ui/cluster_monitoring.svg)
 
 ---
 ## Real-time Analysis

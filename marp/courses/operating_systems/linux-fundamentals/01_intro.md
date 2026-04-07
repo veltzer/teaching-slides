@@ -1,7 +1,7 @@
 # Introduction to UNIX
 ## Understanding the Fundamentals
 
-![h:500](/jpg/courses/operating_systems/linux-fundamentals/unix.svg) ![h:500,width:50%](/jpg/courses/operating_systems/linux-fundamentals/ken_thompson.jpg) ![h:500,width:50%](/jpg/courses/operating_systems/linux-fundamentals/linus_torvalds.jpg)
+![h:500](jpg/courses/operating_systems/linux-fundamentals/unix.svg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/ken_thompson.jpg) ![h:500,width:50%](jpg/courses/operating_systems/linux-fundamentals/linus_torvalds.jpg)
 
 ---
 ## What is UNIX?
@@ -16,17 +16,17 @@
 ---
 ## History of UNIX
 
-![history_of_unix](/svg/courses/operating_systems/linux-fundamentals/01_intro/history_of_unix.svg)
+![history_of_unix](svg/courses/operating_systems/linux-fundamentals/01_intro/history_of_unix.svg)
 
 ---
 ## Operating System Core Structure
 
-![operating_system_core_structure](/svg/courses/operating_systems/linux-fundamentals/01_intro/operating_system_core_structure.svg)
+![operating_system_core_structure](svg/courses/operating_systems/linux-fundamentals/01_intro/operating_system_core_structure.svg)
 
 ---
 ## The Process Tree
 
-![the_process_tree](/svg/courses/operating_systems/linux-fundamentals/01_intro/the_process_tree.svg)
+![the_process_tree](svg/courses/operating_systems/linux-fundamentals/01_intro/the_process_tree.svg)
 
 ## Why is it important
 - Process management
@@ -38,7 +38,7 @@
 
 ## Process Lifecycle
 
-![process_lifecycle](/svg/courses/operating_systems/linux-fundamentals/01_intro/process_lifecycle.svg)
+![process_lifecycle](svg/courses/operating_systems/linux-fundamentals/01_intro/process_lifecycle.svg)
 
 ### Zombie Processes
 - Terminated but not yet cleaned up
@@ -71,7 +71,7 @@ int main() {
 ---
 ## Basic Security Model
 
-![basic_security_model](/svg/courses/operating_systems/linux-fundamentals/01_intro/basic_security_model.svg)
+![basic_security_model](svg/courses/operating_systems/linux-fundamentals/01_intro/basic_security_model.svg)
 
 ### Key Security Features
 - File system permissions
@@ -97,7 +97,7 @@ chmod 777 /some/system/file  # Succeeds
 ---
 ## File System Security
 
-![file_system_security](/svg/courses/operating_systems/linux-fundamentals/01_intro/file_system_security.svg)
+![file_system_security](svg/courses/operating_systems/linux-fundamentals/01_intro/file_system_security.svg)
 
 Example permission setting:
 
@@ -110,7 +110,7 @@ chown user:group file.txt
 ---
 ## Process Isolation
 
-![process_isolation](/svg/courses/operating_systems/linux-fundamentals/01_intro/process_isolation.svg)
+![process_isolation](svg/courses/operating_systems/linux-fundamentals/01_intro/process_isolation.svg)
 
 - Each process has its own:
     - Memory space

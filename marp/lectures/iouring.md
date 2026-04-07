@@ -29,7 +29,7 @@
 1. Minimal system call overhead
 1. Batch operations support
 
-![core_design_principles](/svg/lectures/iouring/core_design_principles.svg)
+![core_design_principles](svg/lectures/iouring/core_design_principles.svg)
 
 ---
 
@@ -234,7 +234,7 @@ io_uring_queue_init_params(64, &ring, &params);
 
 ## `io_uring` vs Traditional I/O
 
-![iouring_vs_traditional_i_o](/out/mermaid/lectures/iouring/iouring_vs_traditional_i_o.svg)
+![iouring_vs_traditional_i_o](out/mermaid/lectures/iouring/iouring_vs_traditional_i_o.svg)
 
 ---
 
@@ -255,7 +255,7 @@ io_uring_queue_init_params(64, &ring, &params);
 1. Lower latency for small I/O operations
 1. Better scaling with multiple cores
 
-![real_world_performance_numbers](/svg/lectures/iouring/real_world_performance_numbers.svg)
+![real_world_performance_numbers](svg/lectures/iouring/real_world_performance_numbers.svg)
 
 ---
 
@@ -419,7 +419,7 @@ clock_gettime(CLOCK_MONOTONIC, &end);
 
 ## Comparison with `epoll`
 
-![comparison_with_epoll](/out/mermaid/lectures/iouring/comparison_with_epoll.svg)
+![comparison_with_epoll](out/mermaid/lectures/iouring/comparison_with_epoll.svg)
 
 ---
 

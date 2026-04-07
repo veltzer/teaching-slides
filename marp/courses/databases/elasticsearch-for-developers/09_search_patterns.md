@@ -16,7 +16,7 @@
 
 ## Pagination Overview
 
-![pagination_overview](/svg/courses/databases/elasticsearch-for-developers/09_search_patterns/pagination_overview.svg)
+![pagination_overview](svg/courses/databases/elasticsearch-for-developers/09_search_patterns/pagination_overview.svg)
 
 ---
 
@@ -215,7 +215,7 @@ Options: `_first`, `_last`, or custom value
 
 ## Faceted Search
 
-![faceted_search](/svg/courses/databases/elasticsearch-for-developers/09_search_patterns/faceted_search.svg)
+![faceted_search](svg/courses/databases/elasticsearch-for-developers/09_search_patterns/faceted_search.svg)
 
 ---
 

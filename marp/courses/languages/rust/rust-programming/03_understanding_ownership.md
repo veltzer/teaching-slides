@@ -5,7 +5,7 @@
 
 ## Memory Management Evolution
 
-![memory_management_evolution](/svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_management_evolution.svg)
+![memory_management_evolution](svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_management_evolution.svg)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ## The Stack and The Heap
 
-![the_stack_and_the_heap](/svg/courses/languages/rust/rust-programming/03_understanding_ownership/the_stack_and_the_heap.svg)
+![the_stack_and_the_heap](svg/courses/languages/rust/rust-programming/03_understanding_ownership/the_stack_and_the_heap.svg)
 
 ---
 
@@ -98,7 +98,7 @@ fn main() {
 
 ## Memory Layout: Move
 
-![memory_layout_move](/svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_layout_move.svg)
+![memory_layout_move](svg/courses/languages/rust/rust-programming/03_understanding_ownership/memory_layout_move.svg)
 
 ---
 
@@ -289,7 +289,7 @@ let hw = &s[..];         // whole string
 let s: &str = "Hello, world!";
 ```
 
-![string_literals_as_slices](/svg/courses/languages/rust/rust-programming/03_understanding_ownership/string_literals_as_slices.svg)
+![string_literals_as_slices](svg/courses/languages/rust/rust-programming/03_understanding_ownership/string_literals_as_slices.svg)
 
 ---
 
@@ -332,7 +332,7 @@ fn main() {
 
 ## Best Practices
 
-![best_practices](/svg/courses/languages/rust/rust-programming/03_understanding_ownership/best_practices.svg)
+![best_practices](svg/courses/languages/rust/rust-programming/03_understanding_ownership/best_practices.svg)
 
 ---
 

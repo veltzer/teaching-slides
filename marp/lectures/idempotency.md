@@ -29,7 +29,7 @@ Without idempotency: chaos and data corruption
 
 ## Real-World Example: Payment Processing
 
-![real_world_example_payment_processing](/svg/lectures/idempotency/real_world_example_payment_processing.svg)
+![real_world_example_payment_processing](svg/lectures/idempotency/real_world_example_payment_processing.svg)
 
 **With idempotency**: Second click is safe, only one $100 charge
 
@@ -84,7 +84,7 @@ Same key = same result, regardless of how many times called
 
 ## How Idempotency Keys Work
 
-![how_idempotency_keys_work](/svg/lectures/idempotency/how_idempotency_keys_work.svg)
+![how_idempotency_keys_work](svg/lectures/idempotency/how_idempotency_keys_work.svg)
 
 ---
 
@@ -158,7 +158,7 @@ key = f"{user_id}:{timestamp}:{hash(request_content)}"
 
 ## Request Flow with Idempotency
 
-![request_flow_with_idempotency](/svg/lectures/idempotency/request_flow_with_idempotency.svg)
+![request_flow_with_idempotency](svg/lectures/idempotency/request_flow_with_idempotency.svg)
 
 ---
 

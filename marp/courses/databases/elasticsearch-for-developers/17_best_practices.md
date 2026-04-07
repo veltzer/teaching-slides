@@ -6,7 +6,7 @@
 
 ## Best Practices Overview
 
-![best_practices_overview](/svg/courses/databases/elasticsearch-for-developers/17_best_practices/best_practices_overview.svg)
+![best_practices_overview](svg/courses/databases/elasticsearch-for-developers/17_best_practices/best_practices_overview.svg)
 
 ---
 
@@ -1086,7 +1086,7 @@ class CostOptimization:
 
 ## Scaling Strategies
 
-![scaling_strategies](/svg/courses/databases/elasticsearch-for-developers/17_best_practices/scaling_strategies.svg)
+![scaling_strategies](svg/courses/databases/elasticsearch-for-developers/17_best_practices/scaling_strategies.svg)
 
 ---
 

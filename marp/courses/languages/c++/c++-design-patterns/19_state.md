@@ -41,7 +41,7 @@ public:
 
 ## State Pattern Structure
 
-![state_pattern_structure](/svg/courses/languages/c++/c++-design-patterns/19_state/state_pattern_structure.svg)
+![state_pattern_structure](svg/courses/languages/c++/c++-design-patterns/19_state/state_pattern_structure.svg)
 
 ---
 

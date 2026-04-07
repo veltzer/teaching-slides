@@ -14,7 +14,7 @@
 
 ## Network Requirements
 
-![network_requirements](/svg/courses/devops/k8s-introduction/09_services_and_networking/network_requirements.svg)
+![network_requirements](svg/courses/devops/k8s-introduction/09_services_and_networking/network_requirements.svg)
 
 ---
 
@@ -30,7 +30,7 @@
 
 ## Why Services?
 
-![why_services](/svg/courses/devops/k8s-introduction/09_services_and_networking/why_services.svg)
+![why_services](svg/courses/devops/k8s-introduction/09_services_and_networking/why_services.svg)
 
 ---
 
@@ -77,7 +77,7 @@ spec:
 
 ## ClusterIP Characteristics
 
-![clusterip_characteristics](/svg/courses/devops/k8s-introduction/09_services_and_networking/clusterip_characteristics.svg)
+![clusterip_characteristics](svg/courses/devops/k8s-introduction/09_services_and_networking/clusterip_characteristics.svg)
 
 ---
 
@@ -103,7 +103,7 @@ spec:
 
 ## NodePort Access
 
-![nodeport_access](/svg/courses/devops/k8s-introduction/09_services_and_networking/nodeport_access.svg)
+![nodeport_access](svg/courses/devops/k8s-introduction/09_services_and_networking/nodeport_access.svg)
 
 ---
 
@@ -129,7 +129,7 @@ spec:
 
 ## LoadBalancer Architecture
 
-![loadbalancer_architecture](/svg/courses/devops/k8s-introduction/09_services_and_networking/loadbalancer_architecture.svg)
+![loadbalancer_architecture](svg/courses/devops/k8s-introduction/09_services_and_networking/loadbalancer_architecture.svg)
 
 ---
 
@@ -317,7 +317,7 @@ spec:
 
 ## Network Policy Types
 
-![network_policy_types](/svg/courses/devops/k8s-introduction/09_services_and_networking/network_policy_types.svg)
+![network_policy_types](svg/courses/devops/k8s-introduction/09_services_and_networking/network_policy_types.svg)
 
 ---
 
@@ -367,7 +367,7 @@ spec:
 
 ## Service Mesh Overview
 
-![service_mesh_overview](/svg/courses/devops/k8s-introduction/09_services_and_networking/service_mesh_overview.svg)
+![service_mesh_overview](svg/courses/devops/k8s-introduction/09_services_and_networking/service_mesh_overview.svg)
 
 ---
 
@@ -423,7 +423,7 @@ kubectl port-forward --address 0.0.0.0 service/my-service 8080:80
 
 ## Service Load Balancing
 
-![service_load_balancing](/svg/courses/devops/k8s-introduction/09_services_and_networking/service_load_balancing.svg)
+![service_load_balancing](svg/courses/devops/k8s-introduction/09_services_and_networking/service_load_balancing.svg)
 
 ---
 

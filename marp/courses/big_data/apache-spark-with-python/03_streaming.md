@@ -10,7 +10,7 @@
 
 ---
 ## Architecture Overview
-![architecture_overview](/svg/courses/big_data/apache-spark-with-python/03_streaming/architecture_overview.svg)
+![architecture_overview](svg/courses/big_data/apache-spark-with-python/03_streaming/architecture_overview.svg)
 
 ---
 ## Supported Input Sources
@@ -101,7 +101,7 @@ word_counts.foreachRDD(lambda rdd: rdd.foreachPartition(save_to_db))
 ---
 ## Window Operations
 
-![window_operations](/svg/courses/big_data/apache-spark-with-python/03_streaming/window_operations.svg)
+![window_operations](svg/courses/big_data/apache-spark-with-python/03_streaming/window_operations.svg)
 
 ---
 ## Stateful Operations

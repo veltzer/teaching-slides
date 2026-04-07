@@ -11,7 +11,7 @@
 - Client-server protocol
 - Stateless, but not sessionless
 
-![what_is_http](/svg/courses/networking/networking-basics/03_http/what_is_http.svg)
+![what_is_http](svg/courses/networking/networking-basics/03_http/what_is_http.svg)
 
 ---
 
@@ -22,7 +22,7 @@
 - Headers introduced
 - Methods: GET, HEAD, POST
 
-![http_1_0_1996](/svg/courses/networking/networking-basics/03_http/http_1_0_1996.svg)
+![http_1_0_1996](svg/courses/networking/networking-basics/03_http/http_1_0_1996.svg)
 
 ---
 
@@ -34,7 +34,7 @@
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
 
-![http_1_1_1997](/svg/courses/networking/networking-basics/03_http/http_1_1_1997.svg)
+![http_1_1_1997](svg/courses/networking/networking-basics/03_http/http_1_1_1997.svg)
 
 ---
 
@@ -55,13 +55,13 @@
 - Server push
 - Stream prioritization
 
-![http_2_2015](/svg/courses/networking/networking-basics/03_http/http_2_2015.svg)
+![http_2_2015](svg/courses/networking/networking-basics/03_http/http_2_2015.svg)
 
 ---
 
 ## HTTP/2 Server Push
 
-![http_2_server_push](/svg/courses/networking/networking-basics/03_http/http_2_server_push.svg)
+![http_2_server_push](svg/courses/networking/networking-basics/03_http/http_2_server_push.svg)
 
 ---
 
@@ -73,13 +73,13 @@
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
 
-![http_3_2022](/svg/courses/networking/networking-basics/03_http/http_3_2022.svg)
+![http_3_2022](svg/courses/networking/networking-basics/03_http/http_3_2022.svg)
 
 ---
 
 ## HTTP/3 Connection Establishment
 
-![http_3_connection_establishment](/svg/courses/networking/networking-basics/03_http/http_3_connection_establishment.svg)
+![http_3_connection_establishment](svg/courses/networking/networking-basics/03_http/http_3_connection_establishment.svg)
 
 ---
 
@@ -104,4 +104,4 @@
 
 ## Final image of HTTP1.1
 
-![final_image_of_http1_1](/svg/courses/networking/networking-basics/03_http/final_image_of_http1_1.svg)
+![final_image_of_http1_1](svg/courses/networking/networking-basics/03_http/final_image_of_http1_1.svg)

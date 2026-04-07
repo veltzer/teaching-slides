@@ -2,17 +2,17 @@
 
 ## A Comprehensive Guide
 
-![a_comprehensive_guide](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
+![a_comprehensive_guide](svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
 
 ---
 
 ## **Why Port to Python 3?**
 
 * **Python 2 End of Life (EOL):** January 1, 2020. No more official support, bug fixes, or security updates.
-    * ![why_port_to_python_3_1](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_1.svg)
+    * ![why_port_to_python_3_1](svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_1.svg)
 * **Vibrant Python 3 Ecosystem:** Most new libraries and frameworks are Python 3 only.
 * **Modern Language Features:** Python 3 offers significant improvements and new capabilities.
-    * ![why_port_to_python_3_2](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_2.svg)
+    * ![why_port_to_python_3_2](svg/courses/languages/python/advanced-python/17_porting_2_to_3/why_port_to_python_3_2.svg)
 * **Performance Enhancements:** Python 3 often brings better performance.
 
 ---
@@ -51,7 +51,7 @@
 
 ## **Part 1: Understanding Key Differences**
 
-![part_1_understanding_key_differences](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_1_understanding_key_differences.svg)
+![part_1_understanding_key_differences](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_1_understanding_key_differences.svg)
 
 ---
 
@@ -292,7 +292,7 @@ print >> sys.stderr, "Error!"
 
 ## **Part 2: Planning Your Port**
 
-![part_2_planning_your_port](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_2_planning_your_port.svg)
+![part_2_planning_your_port](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_2_planning_your_port.svg)
 
 ---
 
@@ -366,7 +366,7 @@ print >> sys.stderr, "Error!"
 
 ## **Part 3: Tools for Porting**
 
-![part_3_tools_for_porting](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_3_tools_for_porting.svg)
+![part_3_tools_for_porting](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_3_tools_for_porting.svg)
 
 ---
 
@@ -476,7 +476,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 
 ## **Part 4: The Porting Process - Step-by-Step**
 
-![part_4_the_porting_process_step_by_step](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_4_the_porting_process_step_by_step.svg)
+![part_4_the_porting_process_step_by_step](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_4_the_porting_process_step_by_step.svg)
 
 ---
 
@@ -487,7 +487,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
     * Write unit tests, integration tests, and end-to-end tests.
     * Your tests are your safety net. They will tell you if the porting broke something.
     * Aim for >80-90% coverage if possible.
-    ![phase_1_preparation](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/phase_1_preparation.svg)
+    ![phase_1_preparation](svg/courses/languages/python/advanced-python/17_porting_2_to_3/phase_1_preparation.svg)
 
 ---
 
@@ -572,7 +572,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 * You might port one module or component at a time.
 * Run tests frequently.
 
-![iterative_process](/out/mermaid/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.svg)
+![iterative_process](out/mermaid/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.svg)
 
 ---
 
@@ -645,7 +645,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 5: Common Pitfalls & Challenges**
 
-![part_5_common_pitfalls_challenges](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_5_common_pitfalls_challenges.svg)
+![part_5_common_pitfalls_challenges](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_5_common_pitfalls_challenges.svg)
 
 ---
 
@@ -702,7 +702,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 6: Best Practices for a Smooth Transition**
 
-![part_6_best_practices_for_a_smooth_transition](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_6_best_practices_for_a_smooth_transition.svg)
+![part_6_best_practices_for_a_smooth_transition](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_6_best_practices_for_a_smooth_transition.svg)
 
 ---
 
@@ -752,7 +752,7 @@ def process_data(text_data: str): # Expect unicode string
 
 ## **Part 7: Beyond the Port: Embracing Python 3**
 
-![part_7_beyond_the_port_embracing_python_3](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_7_beyond_the_port_embracing_python_3.svg)
+![part_7_beyond_the_port_embracing_python_3](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_7_beyond_the_port_embracing_python_3.svg)
 
 ---
 
@@ -792,7 +792,7 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 ## **Conclusion & Q&A**
 
-![conclusion_q_a](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/conclusion_q_a.svg)
+![conclusion_q_a](svg/courses/languages/python/advanced-python/17_porting_2_to_3/conclusion_q_a.svg)
 
 ---
 
@@ -815,4 +815,4 @@ Once your code is running stably on Python 3, start refactoring to use modern Py
 
 ## Questions?
 
-![questions](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/questions.svg)
+![questions](svg/courses/languages/python/advanced-python/17_porting_2_to_3/questions.svg)

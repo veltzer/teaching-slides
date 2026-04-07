@@ -5,7 +5,7 @@ Real-world DevOps transformation examples
 
 ## Netflix DevOps Journey
 
-![netflix_devops_journey](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/netflix_devops_journey.svg)
+![netflix_devops_journey](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/netflix_devops_journey.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Real-world DevOps transformation examples
 
 ## Amazon's Transformation
 
-![amazon_s_transformation](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/amazon_s_transformation.svg)
+![amazon_s_transformation](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/amazon_s_transformation.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Real-world DevOps transformation examples
 
 ## Facebook Infrastructure
 
-![facebook_infrastructure](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/facebook_infrastructure.svg)
+![facebook_infrastructure](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/facebook_infrastructure.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Real-world DevOps transformation examples
 
 ## Traditional to DevOps
 
-![traditional_to_devops](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/traditional_to_devops.svg)
+![traditional_to_devops](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/traditional_to_devops.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Real-world DevOps transformation examples
 
 ## Healthcare Implementation
 
-![healthcare_implementation](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/healthcare_implementation.svg)
+![healthcare_implementation](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/healthcare_implementation.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Real-world DevOps transformation examples
 
 ## Manufacturing Integration
 
-![manufacturing_integration](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/manufacturing_integration.svg)
+![manufacturing_integration](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/manufacturing_integration.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Real-world DevOps transformation examples
 
 ## Enterprise Transformation
 
-![enterprise_transformation](/svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/enterprise_transformation.svg)
+![enterprise_transformation](svg/courses/devops/welcome-to-the-world-of-devops/13_case_studies/enterprise_transformation.svg)
 
 ---
 

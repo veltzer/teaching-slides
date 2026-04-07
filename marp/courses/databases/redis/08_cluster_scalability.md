@@ -21,13 +21,13 @@ Scaling strategies:
 
 ## Redis Scaling Architectures
 
-![redis_scaling_architectures](/svg/courses/databases/redis/08_cluster_scalability/redis_scaling_architectures.svg)
+![redis_scaling_architectures](svg/courses/databases/redis/08_cluster_scalability/redis_scaling_architectures.svg)
 
 ---
 
 ## Master-Replica Architecture
 
-![master_replica_architecture](/svg/courses/databases/redis/08_cluster_scalability/master_replica_architecture.svg)
+![master_replica_architecture](svg/courses/databases/redis/08_cluster_scalability/master_replica_architecture.svg)
 
 - Master handles all writes
 - Replicas handle read queries
@@ -39,7 +39,7 @@ Scaling strategies:
 
 ## Client-Side Partitioning
 
-![client_side_partitioning](/svg/courses/databases/redis/08_cluster_scalability/client_side_partitioning.svg)
+![client_side_partitioning](svg/courses/databases/redis/08_cluster_scalability/client_side_partitioning.svg)
 
 - Application determines which Redis instance to use
 - Consistent hashing or modulo-based distribution
@@ -51,7 +51,7 @@ Scaling strategies:
 
 ## Proxy-Based Partitioning
 
-![proxy_based_partitioning](/svg/courses/databases/redis/08_cluster_scalability/proxy_based_partitioning.svg)
+![proxy_based_partitioning](svg/courses/databases/redis/08_cluster_scalability/proxy_based_partitioning.svg)
 
 - Proxy handles routing (Twemproxy, Envoy, Nginx)
 - Transparent to clients
@@ -72,7 +72,7 @@ Redis Cluster is the official Redis distributed solution:
 - Introduced in Redis 3.0
 - Production-ready since Redis 3.2
 
-![introduction_to_redis_cluster](/svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
+![introduction_to_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Redis Cluster uses a hash slot approach:
 - Each master handles a subset of hash slots
 - Entire keyspace distributed evenly
 
-![redis_cluster_data_sharding](/svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
+![redis_cluster_data_sharding](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
 
 ---
 
@@ -93,7 +93,7 @@ Redis Cluster uses a hash slot approach:
 
 Minimum recommended configuration:
 
-![redis_cluster_topology](/svg/courses/databases/redis/08_cluster_scalability/redis_cluster_topology.svg)
+![redis_cluster_topology](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_topology.svg)
 
 ---
 
@@ -217,7 +217,7 @@ CLUSTER FAILOVER
 
 ## Redis Cluster Client Connections
 
-![redis_cluster_client_connections](/svg/courses/databases/redis/08_cluster_scalability/redis_cluster_client_connections.svg)
+![redis_cluster_client_connections](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_client_connections.svg)
 
 Two connection modes:
 1. **Smart clients**: Handle redirects automatically
@@ -262,7 +262,7 @@ All keys with the same hash tag `{123}` will be assigned to the same hash slot.
 
 ## Scaling Redis Cluster: Adding Nodes
 
-![scaling_redis_cluster_adding_nodes](/svg/courses/databases/redis/08_cluster_scalability/scaling_redis_cluster_adding_nodes.svg)
+![scaling_redis_cluster_adding_nodes](svg/courses/databases/redis/08_cluster_scalability/scaling_redis_cluster_adding_nodes.svg)
 
 ---
 
@@ -313,7 +313,7 @@ Important: Never remove a master with assigned slots!
 
 ## Redis Cluster Failover
 
-![redis_cluster_failover](/svg/courses/databases/redis/08_cluster_scalability/redis_cluster_failover.svg)
+![redis_cluster_failover](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_failover.svg)
 
 1. Automatic failover:
     - Replica detects master is down (subjective down)
@@ -333,7 +333,7 @@ Important: Never remove a master with assigned slots!
 
 Cluster fails when:
 
-![redis_cluster_availability](/svg/courses/databases/redis/08_cluster_scalability/redis_cluster_availability.svg)
+![redis_cluster_availability](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_availability.svg)
 
 Configuration option:
 ```conf
@@ -345,7 +345,7 @@ cluster-require-full-coverage no
 
 ## Monitoring Redis Cluster
 
-![monitoring_redis_cluster](/svg/courses/databases/redis/08_cluster_scalability/monitoring_redis_cluster.svg)
+![monitoring_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/monitoring_redis_cluster.svg)
 
 ---
 
@@ -375,7 +375,7 @@ cluster-require-full-coverage no
 
 ## Best Practices for Redis Cluster
 
-![best_practices_for_redis_cluster](/svg/courses/databases/redis/08_cluster_scalability/best_practices_for_redis_cluster.svg)
+![best_practices_for_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/best_practices_for_redis_cluster.svg)
 
 ---
 
@@ -450,7 +450,7 @@ Alternative scaling approaches:
 
 ## Functional Partitioning Example
 
-![functional_partitioning_example](/svg/courses/databases/redis/08_cluster_scalability/functional_partitioning_example.svg)
+![functional_partitioning_example](svg/courses/databases/redis/08_cluster_scalability/functional_partitioning_example.svg)
 
 Benefits:
 - Simpler than full sharding
@@ -462,13 +462,13 @@ Benefits:
 
 ## Client-Side Sharding Example
 
-![client_side_sharding_example](/svg/courses/databases/redis/08_cluster_scalability/client_side_sharding_example.svg)
+![client_side_sharding_example](svg/courses/databases/redis/08_cluster_scalability/client_side_sharding_example.svg)
 
 ---
 
 ## Redis vs. Redis Cluster vs. Redis Enterprise
 
-![redis_vs_redis_cluster_vs_redis_enterprise](/svg/courses/databases/redis/08_cluster_scalability/redis_vs_redis_cluster_vs_redis_enterprise.svg)
+![redis_vs_redis_cluster_vs_redis_enterprise](svg/courses/databases/redis/08_cluster_scalability/redis_vs_redis_cluster_vs_redis_enterprise.svg)
 
 ---
 
@@ -523,7 +523,7 @@ Key areas for optimization:
 
 DR strategies for Redis Cluster:
 
-![disaster_recovery_for_redis_cluster](/svg/courses/databases/redis/08_cluster_scalability/disaster_recovery_for_redis_cluster.svg)
+![disaster_recovery_for_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/disaster_recovery_for_redis_cluster.svg)
 
 Backup approaches:
 1. **Coordinated RDB snapshots**

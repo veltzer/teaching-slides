@@ -18,17 +18,17 @@
 ---
 ## Parquet File Format Overview
 
-![parquet_file_format_overview](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/parquet_file_format_overview.svg)
+![parquet_file_format_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/parquet_file_format_overview.svg)
 
 ---
 ## Row Groups and Column Chunks
 
-![row_groups_and_column_chunks](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/row_groups_and_column_chunks.svg)
+![row_groups_and_column_chunks](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/row_groups_and_column_chunks.svg)
 
 ---
 ## Page-Level Statistics and Column Index
 
-![page_level_statistics_and_column_index](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/page_level_statistics_and_column_index.svg)
+![page_level_statistics_and_column_index](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/page_level_statistics_and_column_index.svg)
 
 ---
 ## Predicate Pushdown
@@ -110,7 +110,7 @@ df.select("user_id", "address.city").explain()
 ---
 ## Projection Pushdown Savings
 
-![projection_pushdown_savings](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/projection_pushdown_savings.svg)
+![projection_pushdown_savings](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/projection_pushdown_savings.svg)
 
 ---
 ## Writing Parquet with PySpark
@@ -171,7 +171,7 @@ spark.conf.set(
 ---
 ## ORC Format Comparison
 
-![orc_format_comparison](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/orc_format_comparison.svg)
+![orc_format_comparison](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/orc_format_comparison.svg)
 
 ---
 ## Parquet vs ORC Comparison
@@ -290,12 +290,12 @@ query = (
 ---
 ## Format Selection Guide
 
-![format_selection_guide](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/format_selection_guide.svg)
+![format_selection_guide](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/format_selection_guide.svg)
 
 ---
 ## Delta Lake Overview
 
-![delta_lake_overview](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/delta_lake_overview.svg)
+![delta_lake_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/delta_lake_overview.svg)
 
 ---
 ## Delta Lake: Basic Operations
@@ -539,12 +539,12 @@ delta_table.restoreToTimestamp("2024-06-01")
 ---
 ## Z-Ordering Visualization
 
-![z_ordering_visualization](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/z_ordering_visualization.svg)
+![z_ordering_visualization](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/z_ordering_visualization.svg)
 
 ---
 ## Apache Iceberg Overview
 
-![apache_iceberg_overview](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/apache_iceberg_overview.svg)
+![apache_iceberg_overview](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/apache_iceberg_overview.svg)
 
 ---
 ## Iceberg vs Delta Lake
@@ -620,7 +620,7 @@ spark.sql("""
 ---
 ## Partitioning Strategies
 
-![partitioning_strategies](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_strategies.svg)
+![partitioning_strategies](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_strategies.svg)
 
 ---
 ## Partitioning Implementation
@@ -670,12 +670,12 @@ df.write \
 ---
 ## Partitioning Best Practices
 
-![partitioning_best_practices](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_best_practices.svg)
+![partitioning_best_practices](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/partitioning_best_practices.svg)
 
 ---
 ## Bucketing vs Partitioning
 
-![bucketing_vs_partitioning](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/bucketing_vs_partitioning.svg)
+![bucketing_vs_partitioning](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/bucketing_vs_partitioning.svg)
 
 ---
 ## Bucketing Implementation
@@ -728,7 +728,7 @@ orders.write \
 ---
 ## The Small File Problem
 
-![the_small_file_problem](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/the_small_file_problem.svg)
+![the_small_file_problem](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/the_small_file_problem.svg)
 
 ---
 ## Solving the Small File Problem
@@ -793,7 +793,7 @@ compact_partition("/data/events", "event_date", "2024-06-14")
 ---
 ## File Compaction Strategy
 
-![file_compaction_strategy](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/file_compaction_strategy.svg)
+![file_compaction_strategy](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/file_compaction_strategy.svg)
 
 ---
 ## Full Program: Data Format Pipeline
@@ -881,4 +881,4 @@ history.select(
 ---
 ## Summary: Data Formats and Storage
 
-![summary_data_formats_and_storage](/svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/summary_data_formats_and_storage.svg)
+![summary_data_formats_and_storage](svg/courses/big_data/advanced-spark-with-python/08_data_formats_and_storage/summary_data_formats_and_storage.svg)

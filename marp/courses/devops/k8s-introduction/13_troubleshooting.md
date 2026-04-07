@@ -14,7 +14,7 @@
 
 ## Troubleshooting Workflow
 
-![troubleshooting_workflow](/svg/courses/devops/k8s-introduction/13_troubleshooting/troubleshooting_workflow.svg)
+![troubleshooting_workflow](svg/courses/devops/k8s-introduction/13_troubleshooting/troubleshooting_workflow.svg)
 
 ---
 
@@ -407,7 +407,7 @@ kubectl get secret my-secret -o jsonpath='{.data.key}' | base64 -d
 
 ## CrashLoopBackOff Diagnosis
 
-![crashloopbackoff_diagnosis](/svg/courses/devops/k8s-introduction/13_troubleshooting/crashloopbackoff_diagnosis.svg)
+![crashloopbackoff_diagnosis](svg/courses/devops/k8s-introduction/13_troubleshooting/crashloopbackoff_diagnosis.svg)
 
 ---
 
@@ -548,7 +548,7 @@ kubectl describe limitrange
 
 ## Debugging Tools
 
-![debugging_tools](/svg/courses/devops/k8s-introduction/13_troubleshooting/debugging_tools.svg)
+![debugging_tools](svg/courses/devops/k8s-introduction/13_troubleshooting/debugging_tools.svg)
 
 ---
 

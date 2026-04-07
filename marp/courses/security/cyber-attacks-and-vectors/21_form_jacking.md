@@ -11,7 +11,7 @@
 ---
 ## How Does Formjacking Work
 
-![how_does_formjacking_work](/svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/how_does_formjacking_work.svg)
+![how_does_formjacking_work](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/how_does_formjacking_work.svg)
 
 ---
 ## Attack Vectors
@@ -44,7 +44,7 @@
 ---
 ## British Airways Attack (2018)
 
-![british_airways_attack_2018](/svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/british_airways_attack_2018.svg)
+![british_airways_attack_2018](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/british_airways_attack_2018.svg)
 
 ---
 ## JavaScript Skimmer Code Analysis
@@ -125,7 +125,7 @@ setInterval(function() {
 ---
 ## Content Security Policy (CSP) as Defense
 
-![content_security_policy_csp_as_defense](/svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/content_security_policy_csp_as_defense.svg)
+![content_security_policy_csp_as_defense](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/content_security_policy_csp_as_defense.svg)
 
 ```http
 # HTTP Header: Content-Security-Policy
@@ -283,7 +283,7 @@ diff known_good_hashes.txt current.txt
 ---
 ## PCI DSS Requirements for Formjacking
 
-![pci_dss_requirements_for_formjacking](/svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/pci_dss_requirements_for_formjacking.svg)
+![pci_dss_requirements_for_formjacking](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/pci_dss_requirements_for_formjacking.svg)
 
 ---
 ## Defense in Depth Strategy

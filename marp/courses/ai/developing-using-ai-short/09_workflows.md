@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Complete Development Cycle
 
-![the_complete_development_cycle](/svg/courses/ai/developing-using-ai-short/09_workflows/the_complete_development_cycle.svg)
+![the_complete_development_cycle](svg/courses/ai/developing-using-ai-short/09_workflows/the_complete_development_cycle.svg)
 
 ---
 
@@ -129,7 +129,7 @@ volumes:
 
 ## Feature Development: Requirement Analysis
 
-![feature_development_requirement_analysis](/svg/courses/ai/developing-using-ai-short/09_workflows/feature_development_requirement_analysis.svg)
+![feature_development_requirement_analysis](svg/courses/ai/developing-using-ai-short/09_workflows/feature_development_requirement_analysis.svg)
 
 ---
 
@@ -258,7 +258,7 @@ const reproducer = async () => {
 
 ## Root Cause Analysis
 
-![root_cause_analysis](/svg/courses/ai/developing-using-ai-short/09_workflows/root_cause_analysis.svg)
+![root_cause_analysis](svg/courses/ai/developing-using-ai-short/09_workflows/root_cause_analysis.svg)
 
 ---
 
@@ -395,7 +395,7 @@ const debtItems: TechDebt[] = [
 
 ## Release Preparation: Code Cleanup
 
-![release_preparation_code_cleanup](/svg/courses/ai/developing-using-ai-short/09_workflows/release_preparation_code_cleanup.svg)
+![release_preparation_code_cleanup](svg/courses/ai/developing-using-ai-short/09_workflows/release_preparation_code_cleanup.svg)
 
 ---
 
@@ -465,7 +465,7 @@ const releaseTests = {
 
 Real-time performance tracking:
 
-![performance_monitoring](/svg/courses/ai/developing-using-ai-short/09_workflows/performance_monitoring.svg)
+![performance_monitoring](svg/courses/ai/developing-using-ai-short/09_workflows/performance_monitoring.svg)
 
 ---
 
@@ -503,7 +503,7 @@ class IncidentResponder:
 
 Rapid production fixes:
 
-![hot_fix_workflow](/svg/courses/ai/developing-using-ai-short/09_workflows/hot_fix_workflow.svg)
+![hot_fix_workflow](svg/courses/ai/developing-using-ai-short/09_workflows/hot_fix_workflow.svg)
 
 ---
 
@@ -552,7 +552,7 @@ function getRolloutPlan(feature: string) {
 
 Managing multiple environments:
 
-![multi_environment_management](/svg/courses/ai/developing-using-ai-short/09_workflows/multi_environment_management.svg)
+![multi_environment_management](svg/courses/ai/developing-using-ai-short/09_workflows/multi_environment_management.svg)
 
 ---
 
@@ -605,7 +605,7 @@ spec:
 
 Measuring project success:
 
-![success_metrics](/svg/courses/ai/developing-using-ai-short/09_workflows/success_metrics.svg)
+![success_metrics](svg/courses/ai/developing-using-ai-short/09_workflows/success_metrics.svg)
 
 ---
 

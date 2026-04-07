@@ -15,7 +15,7 @@
 
 ## Stack Protection Overview
 
-![stack_protection_overview](/svg/courses/operating_systems/linux-systems-programming/23_secure_development/stack_protection_overview.svg)
+![stack_protection_overview](svg/courses/operating_systems/linux-systems-programming/23_secure_development/stack_protection_overview.svg)
 
 ---
 
@@ -239,7 +239,7 @@ void debug_with_fixed_addresses() {
 
 ## AppArmor vs SELinux
 
-![apparmor_vs_selinux](/svg/courses/operating_systems/linux-systems-programming/23_secure_development/apparmor_vs_selinux.svg)
+![apparmor_vs_selinux](svg/courses/operating_systems/linux-systems-programming/23_secure_development/apparmor_vs_selinux.svg)
 
 ---
 

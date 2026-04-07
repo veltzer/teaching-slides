@@ -143,7 +143,7 @@ sarah/api-optimization
 - Protected from direct pushes
 - Source for releases
 
-![development_vs_production_branches](/svg/courses/git/git2/09_workflows/development_vs_production_branches.svg)
+![development_vs_production_branches](svg/courses/git/git2/09_workflows/development_vs_production_branches.svg)
 
 ---
 

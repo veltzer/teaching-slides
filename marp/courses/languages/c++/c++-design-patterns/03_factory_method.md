@@ -35,7 +35,7 @@ Every new document type means changing existing code
 
 ## Factory Method Structure
 
-![factory_method_structure](/svg/courses/languages/c++/c++-design-patterns/03_factory_method/factory_method_structure.svg)
+![factory_method_structure](svg/courses/languages/c++/c++-design-patterns/03_factory_method/factory_method_structure.svg)
 
 ---
 

@@ -18,7 +18,7 @@ Importance of Block Devices in Kernel Development
 
 QEMU Block Device Models
 
-![qemu_block_devices_and_file_systems_for_kernel_developers_1](/svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/qemu_block_devices_and_file_systems_for_kernel_developers_1.svg)
+![qemu_block_devices_and_file_systems_for_kernel_developers_1](svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/qemu_block_devices_and_file_systems_for_kernel_developers_1.svg)
 
 ---
 
@@ -88,7 +88,7 @@ Configuring Block Devices in QEMU
 
 QEMU Block Layer Architecture
 
-![qemu_block_devices_and_file_systems_for_kernel_developers_2](/svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/qemu_block_devices_and_file_systems_for_kernel_developers_2.svg)
+![qemu_block_devices_and_file_systems_for_kernel_developers_2](svg/courses/operating_systems/qemu-for-kernel-developers/05_qemu_block_devices/qemu_block_devices_and_file_systems_for_kernel_developers_2.svg)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Storage Service Types
 
-![storage_service_types](/svg/courses/cloud/introduction-to-azure/05_storage/storage_service_types.svg)
+![storage_service_types](svg/courses/cloud/introduction-to-azure/05_storage/storage_service_types.svg)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ## Redundancy Options
 
-![redundancy_options](/svg/courses/cloud/introduction-to-azure/05_storage/redundancy_options.svg)
+![redundancy_options](svg/courses/cloud/introduction-to-azure/05_storage/redundancy_options.svg)
 
 ---
 
@@ -119,7 +119,7 @@
 
 ## Storage Security
 
-![storage_security](/svg/courses/cloud/introduction-to-azure/05_storage/storage_security.svg)
+![storage_security](svg/courses/cloud/introduction-to-azure/05_storage/storage_security.svg)
 
 ---
 

@@ -43,7 +43,7 @@ maxmemory-policy allkeys-lru
 
 ## Redis Configuration Sections
 
-![redis_configuration_sections](/svg/courses/databases/redis/07_configuration/redis_configuration_sections.svg)
+![redis_configuration_sections](svg/courses/databases/redis/07_configuration/redis_configuration_sections.svg)
 
 ---
 
@@ -103,7 +103,7 @@ sudo systemctl restart redis
 
 ## Critical Configuration Parameters
 
-![critical_configuration_parameters](/svg/courses/databases/redis/07_configuration/critical_configuration_parameters.svg)
+![critical_configuration_parameters](svg/courses/databases/redis/07_configuration/critical_configuration_parameters.svg)
 
 ---
 
@@ -162,7 +162,7 @@ Available policies:
 
 ## Choosing the Right Eviction Policy
 
-![choosing_the_right_eviction_policy](/svg/courses/databases/redis/07_configuration/choosing_the_right_eviction_policy.svg)
+![choosing_the_right_eviction_policy](svg/courses/databases/redis/07_configuration/choosing_the_right_eviction_policy.svg)
 
 ---
 
@@ -282,7 +282,7 @@ LATENCY DOCTOR
 
 ## Tuning Redis Performance
 
-![tuning_redis_performance](/svg/courses/databases/redis/07_configuration/tuning_redis_performance.svg)
+![tuning_redis_performance](svg/courses/databases/redis/07_configuration/tuning_redis_performance.svg)
 
 ---
 
@@ -317,7 +317,7 @@ Apply with: `sudo sysctl -p`
 
 ## Redis Management Tools
 
-![redis_management_tools](/svg/courses/databases/redis/07_configuration/redis_management_tools.svg)
+![redis_management_tools](svg/courses/databases/redis/07_configuration/redis_management_tools.svg)
 
 ---
 
@@ -386,7 +386,7 @@ Key expiration and eviction:
     - When `maxmemory` limit is reached
     - According to `maxmemory-policy`
 
-![automatic_key_management](/svg/courses/databases/redis/07_configuration/automatic_key_management.svg)
+![automatic_key_management](svg/courses/databases/redis/07_configuration/automatic_key_management.svg)
 
 ---
 
@@ -425,7 +425,7 @@ MEMORY DOCTOR
 
 Key metrics to monitor:
 
-![monitoring_redis_in_production](/svg/courses/databases/redis/07_configuration/monitoring_redis_in_production.svg)
+![monitoring_redis_in_production](svg/courses/databases/redis/07_configuration/monitoring_redis_in_production.svg)
 
 ---
 
@@ -479,7 +479,7 @@ redis-cli CONFIG SET activedefrag yes
 
 ## Backup and Recovery
 
-![backup_and_recovery](/svg/courses/databases/redis/07_configuration/backup_and_recovery.svg)
+![backup_and_recovery](svg/courses/databases/redis/07_configuration/backup_and_recovery.svg)
 
 ---
 
@@ -543,13 +543,13 @@ Steps for safe Redis upgrades:
 
 ## Zero-Downtime Upgrades
 
-![zero_downtime_upgrades](/svg/courses/databases/redis/07_configuration/zero_downtime_upgrades.svg)
+![zero_downtime_upgrades](svg/courses/databases/redis/07_configuration/zero_downtime_upgrades.svg)
 
 ---
 
 ## Redis Sentinel for High Availability
 
-![redis_sentinel_for_high_availability](/svg/courses/databases/redis/07_configuration/redis_sentinel_for_high_availability.svg)
+![redis_sentinel_for_high_availability](svg/courses/databases/redis/07_configuration/redis_sentinel_for_high_availability.svg)
 
 ---
 
@@ -576,7 +576,7 @@ Key concepts:
 
 ## Redis Cluster for Scaling
 
-![redis_cluster_for_scaling](/svg/courses/databases/redis/07_configuration/redis_cluster_for_scaling.svg)
+![redis_cluster_for_scaling](svg/courses/databases/redis/07_configuration/redis_cluster_for_scaling.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Common Issues and Solutions
 
-![common_issues_and_solutions](/svg/courses/devops/docker-for-developers/13_trouble_shooting/common_issues_and_solutions.svg)
+![common_issues_and_solutions](svg/courses/devops/docker-for-developers/13_trouble_shooting/common_issues_and_solutions.svg)
 
 ---
 
@@ -21,13 +21,13 @@
 
 ## Remote Debugging Techniques
 
-![remote_debugging_techniques](/svg/courses/devops/docker-for-developers/13_trouble_shooting/remote_debugging_techniques.svg)
+![remote_debugging_techniques](svg/courses/devops/docker-for-developers/13_trouble_shooting/remote_debugging_techniques.svg)
 
 ---
 
 ## Health Checks Implementation
 
-![health_checks_implementation](/svg/courses/devops/docker-for-developers/13_trouble_shooting/health_checks_implementation.svg)
+![health_checks_implementation](svg/courses/devops/docker-for-developers/13_trouble_shooting/health_checks_implementation.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Diagnostic Process
 
-![diagnostic_process](/svg/courses/devops/docker-for-developers/13_trouble_shooting/diagnostic_process.svg)
+![diagnostic_process](svg/courses/devops/docker-for-developers/13_trouble_shooting/diagnostic_process.svg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Resource Monitoring
 
-![resource_monitoring](/svg/courses/devops/docker-for-developers/13_trouble_shooting/resource_monitoring.svg)
+![resource_monitoring](svg/courses/devops/docker-for-developers/13_trouble_shooting/resource_monitoring.svg)
 
 ---
 
@@ -78,7 +78,7 @@
 
 ## Log Analysis
 
-![log_analysis](/svg/courses/devops/docker-for-developers/13_trouble_shooting/log_analysis.svg)
+![log_analysis](svg/courses/devops/docker-for-developers/13_trouble_shooting/log_analysis.svg)
 
 ---
 
@@ -95,7 +95,7 @@
 
 ## Debug Mode Options
 
-![debug_mode_options](/svg/courses/devops/docker-for-developers/13_trouble_shooting/debug_mode_options.svg)
+![debug_mode_options](svg/courses/devops/docker-for-developers/13_trouble_shooting/debug_mode_options.svg)
 
 ---
 
@@ -112,4 +112,4 @@
 
 ## Best Debugging Practices
 
-![best_debugging_practices](/svg/courses/devops/docker-for-developers/13_trouble_shooting/best_debugging_practices.svg)
+![best_debugging_practices](svg/courses/devops/docker-for-developers/13_trouble_shooting/best_debugging_practices.svg)

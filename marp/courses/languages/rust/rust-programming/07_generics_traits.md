@@ -4,7 +4,7 @@
 ---
 ## What are Generics
 
-![what_are_generics](/svg/courses/languages/rust/rust-programming/07_generics_traits/what_are_generics.svg)
+![what_are_generics](svg/courses/languages/rust/rust-programming/07_generics_traits/what_are_generics.svg)
 
 ---
 
@@ -92,7 +92,7 @@ impl Point<f64> {
 
 ## What are Traits
 
-![what_are_traits](/svg/courses/languages/rust/rust-programming/07_generics_traits/what_are_traits.svg)
+![what_are_traits](svg/courses/languages/rust/rust-programming/07_generics_traits/what_are_traits.svg)
 
 ---
 
@@ -281,7 +281,7 @@ impl<T: Display + PartialOrd> MyTrait for T {
 
 ## Common Traits
 
-![common_traits](/svg/courses/languages/rust/rust-programming/07_generics_traits/common_traits.svg)
+![common_traits](svg/courses/languages/rust/rust-programming/07_generics_traits/common_traits.svg)
 
 ---
 
@@ -382,7 +382,7 @@ fn process_string(x: String) {
 
 ## Best Practices
 
-![best_practices](/svg/courses/languages/rust/rust-programming/07_generics_traits/best_practices.svg)
+![best_practices](svg/courses/languages/rust/rust-programming/07_generics_traits/best_practices.svg)
 
 ---
 ## Common Pitfalls

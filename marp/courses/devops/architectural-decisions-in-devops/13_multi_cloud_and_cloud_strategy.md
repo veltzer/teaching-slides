@@ -10,7 +10,7 @@
 ---
 ## Cloud Deployment Models Overview
 
-![cloud_deployment_models_overview](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cloud_deployment_models_overview.svg)
+![cloud_deployment_models_overview](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cloud_deployment_models_overview.svg)
 
 ---
 ## Single Cloud Strategy
@@ -40,12 +40,12 @@
 ---
 ## Multi-Cloud Topology
 
-![multi_cloud_topology](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/multi_cloud_topology.svg)
+![multi_cloud_topology](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/multi_cloud_topology.svg)
 
 ---
 ## Hybrid Cloud Strategy
 
-![hybrid_cloud_strategy](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/hybrid_cloud_strategy.svg)
+![hybrid_cloud_strategy](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/hybrid_cloud_strategy.svg)
 
 ---
 ## Comparing the Three Approaches
@@ -70,7 +70,7 @@
 ---
 ## The Lock-in Spectrum
 
-![the_lock_in_spectrum](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lock_in_spectrum.svg)
+![the_lock_in_spectrum](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lock_in_spectrum.svg)
 
 ---
 ## Embracing Cloud-Native Services
@@ -117,7 +117,7 @@
 ---
 ## Data Sovereignty Map
 
-![data_sovereignty_map](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/data_sovereignty_map.svg)
+![data_sovereignty_map](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/data_sovereignty_map.svg)
 
 ---
 ## Cloud Strategy Decision Framework
@@ -143,12 +143,12 @@
 ---
 ## The Lowest Common Denominator Problem
 
-![the_lowest_common_denominator_problem](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lowest_common_denominator_problem.svg)
+![the_lowest_common_denominator_problem](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_lowest_common_denominator_problem.svg)
 
 ---
 ## Abstraction Layer Architecture
 
-![abstraction_layer_architecture](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/abstraction_layer_architecture.svg)
+![abstraction_layer_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/abstraction_layer_architecture.svg)
 
 ---
 ## Cost of Abstraction Layers
@@ -205,7 +205,7 @@ resource "google_compute_instance" "web" {
 ---
 ## The Real Multi-Cloud Cost
 
-![the_real_multi_cloud_cost](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_real_multi_cloud_cost.svg)
+![the_real_multi_cloud_cost](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/the_real_multi_cloud_cost.svg)
 
 ---
 ## When Multi-Cloud Makes Sense
@@ -245,17 +245,17 @@ resource "google_compute_instance" "web" {
 ---
 ## Backup and Restore Architecture
 
-![backup_and_restore_architecture](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/backup_and_restore_architecture.svg)
+![backup_and_restore_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/backup_and_restore_architecture.svg)
 
 ---
 ## Warm Standby Architecture
 
-![warm_standby_architecture](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/warm_standby_architecture.svg)
+![warm_standby_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/warm_standby_architecture.svg)
 
 ---
 ## Active-Active Architecture
 
-![active_active_architecture](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/active_active_architecture.svg)
+![active_active_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/active_active_architecture.svg)
 
 ---
 ## Cross-Region Networking and Replication
@@ -295,7 +295,7 @@ Resources:
 ---
 ## Cross-Cloud DR Architecture
 
-![cross_cloud_dr_architecture](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cross_cloud_dr_architecture.svg)
+![cross_cloud_dr_architecture](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/cross_cloud_dr_architecture.svg)
 
 ---
 ## Testing and Automating DR
@@ -340,7 +340,7 @@ Resources:
 ---
 ## Decision Matrix: Choosing Your Strategy
 
-![decision_matrix_choosing_your_strategy](/svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/decision_matrix_choosing_your_strategy.svg)
+![decision_matrix_choosing_your_strategy](svg/courses/devops/architectural-decisions-in-devops/13_multi_cloud_and_cloud_strategy/decision_matrix_choosing_your_strategy.svg)
 
 ---
 ## Summary: Key Takeaways

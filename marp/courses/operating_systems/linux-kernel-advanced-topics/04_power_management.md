@@ -16,7 +16,7 @@ Key challenge: Balance power savings with system responsiveness
 
 ## Power Management Framework
 
-![power_management_framework](/svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/power_management_framework.svg)
+![power_management_framework](svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/power_management_framework.svg)
 
 ---
 
@@ -104,7 +104,7 @@ C-States for idle CPU management:
 
 ## CPUIdle Framework
 
-![cpuidle_framework](/svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/cpuidle_framework.svg)
+![cpuidle_framework](svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/cpuidle_framework.svg)
 
 ---
 
@@ -173,7 +173,7 @@ static const struct dev_pm_ops my_pm_ops = {
 
 ## Runtime PM States
 
-![runtime_pm_states](/svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/runtime_pm_states.svg)
+![runtime_pm_states](svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/runtime_pm_states.svg)
 
 ---
 
@@ -304,7 +304,7 @@ Components:
 
 ## Thermal Framework
 
-![thermal_framework](/svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/thermal_framework.svg)
+![thermal_framework](svg/courses/operating_systems/linux-kernel-advanced-topics/04_power_management/thermal_framework.svg)
 
 ---
 

@@ -40,7 +40,7 @@ write(sock, buf, BUF_SIZE); /* 2 copies: user→kernel, kernel→NIC */
 
 Total: **4 copies**, **4 context switches**
 
-![traditional_i_o_path_the_problem](/svg/lectures/zero-copy-linux/traditional_i_o_path_the_problem.svg)
+![traditional_i_o_path_the_problem](svg/lectures/zero-copy-linux/traditional_i_o_path_the_problem.svg)
 
 ---
 
@@ -137,7 +137,7 @@ sendfile(sock_fd, file_fd, &offset, file_size);
 
 ## sendfile(): How It Works
 
-![sendfile_how_it_works](/svg/lectures/zero-copy-linux/sendfile_how_it_works.svg)
+![sendfile_how_it_works](svg/lectures/zero-copy-linux/sendfile_how_it_works.svg)
 
 *With scatter-gather DMA, only buffer descriptors (pointers + lengths) are passed to the socket buffer.
 
@@ -347,7 +347,7 @@ xsk_socket__create(&xsk, ifname, queue_id, umem, &rx, &tx, NULL);
 
 ## AF_XDP Architecture
 
-![afxdp_architecture](/svg/lectures/zero-copy-linux/afxdp_architecture.svg)
+![afxdp_architecture](svg/lectures/zero-copy-linux/afxdp_architecture.svg)
 
 ---
 

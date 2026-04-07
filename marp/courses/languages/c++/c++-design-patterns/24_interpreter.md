@@ -25,7 +25,7 @@ double evaluate(const std::string& expr) {
 
 ## Interpreter Structure
 
-![interpreter_structure](/svg/courses/languages/c++/c++-design-patterns/24_interpreter/interpreter_structure.svg)
+![interpreter_structure](svg/courses/languages/c++/c++-design-patterns/24_interpreter/interpreter_structure.svg)
 
 ---
 

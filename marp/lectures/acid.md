@@ -46,7 +46,7 @@ If any statement fails, the entire transaction is rolled back.
 
 ## Atomicity Visualized
 
-![atomicity_visualized](/svg/lectures/acid/atomicity_visualized.svg)
+![atomicity_visualized](svg/lectures/acid/atomicity_visualized.svg)
 
 ---
 
@@ -78,7 +78,7 @@ COMMIT;
 
 ## Consistency Visualized
 
-![consistency_visualized](/svg/lectures/acid/consistency_visualized.svg)
+![consistency_visualized](svg/lectures/acid/consistency_visualized.svg)
 
 ---
 
@@ -128,7 +128,7 @@ ROLLBACK; -- Balance is back to original value
 
 ## Isolation Visualization
 
-![isolation_visualization](/svg/lectures/acid/isolation_visualization.svg)
+![isolation_visualization](svg/lectures/acid/isolation_visualization.svg)
 
 ---
 
@@ -194,7 +194,7 @@ Even if the system crashes immediately after commit:
 
 ## Durability Visualization
 
-![durability_visualization](/svg/lectures/acid/durability_visualization.svg)
+![durability_visualization](svg/lectures/acid/durability_visualization.svg)
 
 ---
 
@@ -248,7 +248,7 @@ Many NoSQL systems follow BASE instead of ACID:
 
 ## Eventual Consistency
 
-![eventual_consistency](/svg/lectures/acid/eventual_consistency.svg)
+![eventual_consistency](svg/lectures/acid/eventual_consistency.svg)
 
 ---
 

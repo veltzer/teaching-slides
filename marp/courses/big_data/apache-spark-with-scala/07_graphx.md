@@ -12,13 +12,13 @@
 
 ## Graph Basics
 
-![graph_basics](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_basics.svg)
+![graph_basics](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_basics.svg)
 
 ---
 
 ## Graph Components
 
-![graph_components](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_components.svg)
+![graph_components](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_components.svg)
 
 ---
 
@@ -43,13 +43,13 @@ val graph = Graph(vertices, edges)
 
 ## Vertex Operations
 
-![vertex_operations](/svg/courses/big_data/apache-spark-with-scala/07_graphx/vertex_operations.svg)
+![vertex_operations](svg/courses/big_data/apache-spark-with-scala/07_graphx/vertex_operations.svg)
 
 ---
 
 ## Edge Operations
 
-![edge_operations](/svg/courses/big_data/apache-spark-with-scala/07_graphx/edge_operations.svg)
+![edge_operations](svg/courses/big_data/apache-spark-with-scala/07_graphx/edge_operations.svg)
 
 ---
 
@@ -67,13 +67,13 @@ val degrees = graph.degrees
 
 ## Property Graphs
 
-![property_graphs](/svg/courses/big_data/apache-spark-with-scala/07_graphx/property_graphs.svg)
+![property_graphs](svg/courses/big_data/apache-spark-with-scala/07_graphx/property_graphs.svg)
 
 ---
 
 ## Graph Transformations
 
-![graph_transformations](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_transformations.svg)
+![graph_transformations](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_transformations.svg)
 
 ---
 
@@ -92,19 +92,19 @@ val weightedGraph = graph.mapEdges(e =>
 
 ## Aggregation Operations
 
-![aggregation_operations](/svg/courses/big_data/apache-spark-with-scala/07_graphx/aggregation_operations.svg)
+![aggregation_operations](svg/courses/big_data/apache-spark-with-scala/07_graphx/aggregation_operations.svg)
 
 ---
 
 ## Message Passing
 
-![message_passing](/svg/courses/big_data/apache-spark-with-scala/07_graphx/message_passing.svg)
+![message_passing](svg/courses/big_data/apache-spark-with-scala/07_graphx/message_passing.svg)
 
 ---
 
 ## Pregel API
 
-![pregel_api](/svg/courses/big_data/apache-spark-with-scala/07_graphx/pregel_api.svg)
+![pregel_api](svg/courses/big_data/apache-spark-with-scala/07_graphx/pregel_api.svg)
 
 ---
 
@@ -130,13 +130,13 @@ val sssp = initialGraph.pregel(Double.PositiveInfinity)(
 
 ## Graph Algorithms
 
-![graph_algorithms](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_algorithms.svg)
+![graph_algorithms](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_algorithms.svg)
 
 ---
 
 ## PageRank Flow
 
-![pagerank_flow](/svg/courses/big_data/apache-spark-with-scala/07_graphx/pagerank_flow.svg)
+![pagerank_flow](svg/courses/big_data/apache-spark-with-scala/07_graphx/pagerank_flow.svg)
 
 ---
 
@@ -155,7 +155,7 @@ val ranksByUsername = users.join(ranks).map {
 
 ## Connected Components
 
-![connected_components](/svg/courses/big_data/apache-spark-with-scala/07_graphx/connected_components.svg)
+![connected_components](svg/courses/big_data/apache-spark-with-scala/07_graphx/connected_components.svg)
 
 ---
 
@@ -172,7 +172,7 @@ val componentCounts = cc.vertices
 
 ## Triangle Counting
 
-![triangle_counting](/svg/courses/big_data/apache-spark-with-scala/07_graphx/triangle_counting.svg)
+![triangle_counting](svg/courses/big_data/apache-spark-with-scala/07_graphx/triangle_counting.svg)
 
 ---
 
@@ -189,31 +189,31 @@ val maxTris = triCounts.vertices
 
 ## Graph Partitioning
 
-![graph_partitioning](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_partitioning.svg)
+![graph_partitioning](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_partitioning.svg)
 
 ---
 
 ## Performance Optimization
 
-![performance_optimization](/svg/courses/big_data/apache-spark-with-scala/07_graphx/performance_optimization.svg)
+![performance_optimization](svg/courses/big_data/apache-spark-with-scala/07_graphx/performance_optimization.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](/svg/courses/big_data/apache-spark-with-scala/07_graphx/best_practices.svg)
+![best_practices](svg/courses/big_data/apache-spark-with-scala/07_graphx/best_practices.svg)
 
 ---
 
 ## Graph Building
 
-![graph_building](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_building.svg)
+![graph_building](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_building.svg)
 
 ---
 
 ## Graph Analytics
 
-![graph_analytics](/svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_analytics.svg)
+![graph_analytics](svg/courses/big_data/apache-spark-with-scala/07_graphx/graph_analytics.svg)
 
 ---
 
@@ -229,4 +229,4 @@ val maxTris = triCounts.vertices
 
 ## Advanced Features
 
-![advanced_features](/svg/courses/big_data/apache-spark-with-scala/07_graphx/advanced_features.svg)
+![advanced_features](svg/courses/big_data/apache-spark-with-scala/07_graphx/advanced_features.svg)

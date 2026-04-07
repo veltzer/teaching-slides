@@ -14,7 +14,7 @@
 
 ## Interrupt System Architecture
 
-![interrupt_system_architecture](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_system_architecture.svg)
+![interrupt_system_architecture](svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_system_architecture.svg)
 
 ---
 
@@ -106,7 +106,7 @@ void TIM2_IRQHandler(void) {
 
 ## Nested Interrupts
 
-![nested_interrupts](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/nested_interrupts.svg)
+![nested_interrupts](svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/nested_interrupts.svg)
 
 ---
 
@@ -419,7 +419,7 @@ void HardFault_Handler(void) {
 
 ## Interrupt Priorities and Preemption
 
-![interrupt_priorities_and_preemption](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_priorities_and_preemption.svg)
+![interrupt_priorities_and_preemption](svg/courses/embedded/effective-real-time-embedded-c-and-c++/10_hardware_programming/interrupt_priorities_and_preemption.svg)
 
 ---
 

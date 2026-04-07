@@ -39,7 +39,7 @@ Think of it as the BIOS/UEFI of microcontrollers
 
 ## Bootloader Architecture Overview
 
-![bootloader_architecture_overview](/svg/lectures/microcontroller-bootloader/bootloader_architecture_overview.svg)
+![bootloader_architecture_overview](svg/lectures/microcontroller-bootloader/bootloader_architecture_overview.svg)
 
 ---
 
@@ -131,7 +131,7 @@ void bootloader_init(void) {
 
 ## Update Detection Methods
 
-![update_detection_methods](/svg/lectures/microcontroller-bootloader/update_detection_methods.svg)
+![update_detection_methods](svg/lectures/microcontroller-bootloader/update_detection_methods.svg)
 
 ---
 
@@ -309,7 +309,7 @@ void handle_boot_error(boot_error_t error) {
 
 ## Dual Bank Bootloader
 
-![dual_bank_bootloader](/svg/lectures/microcontroller-bootloader/dual_bank_bootloader.svg)
+![dual_bank_bootloader](svg/lectures/microcontroller-bootloader/dual_bank_bootloader.svg)
 
 ---
 
@@ -387,7 +387,7 @@ const bootloader_config_t __attribute__((section(".config")))
 
 ## Update Protocol State Machine
 
-![update_protocol_state_machine](/svg/lectures/microcontroller-bootloader/update_protocol_state_machine.svg)
+![update_protocol_state_machine](svg/lectures/microcontroller-bootloader/update_protocol_state_machine.svg)
 
 ---
 
@@ -569,7 +569,7 @@ void test_application_validation(void) {
 
 ## Hardware-in-the-Loop Testing
 
-![hardware_in_the_loop_testing](/svg/lectures/microcontroller-bootloader/hardware_in_the_loop_testing.svg)
+![hardware_in_the_loop_testing](svg/lectures/microcontroller-bootloader/hardware_in_the_loop_testing.svg)
 
 ---
 
@@ -1064,7 +1064,7 @@ bool detect_boot_anomaly(void) {
 
 ## Over-The-Air (OTA) Updates
 
-![over_the_air_ota_updates](/svg/lectures/microcontroller-bootloader/over_the_air_ota_updates.svg)
+![over_the_air_ota_updates](svg/lectures/microcontroller-bootloader/over_the_air_ota_updates.svg)
 
 ---
 

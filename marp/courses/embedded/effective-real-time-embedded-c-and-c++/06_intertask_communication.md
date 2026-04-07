@@ -14,7 +14,7 @@
 
 ## Concurrency Challenges
 
-![concurrency_challenges](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/concurrency_challenges.svg)
+![concurrency_challenges](svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/concurrency_challenges.svg)
 
 ---
 
@@ -253,7 +253,7 @@ counting_sem_t resource_pool = {
 
 ## Priority Inversion
 
-![priority_inversion](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/priority_inversion.svg)
+![priority_inversion](svg/courses/embedded/effective-real-time-embedded-c-and-c++/06_intertask_communication/priority_inversion.svg)
 
 ---
 

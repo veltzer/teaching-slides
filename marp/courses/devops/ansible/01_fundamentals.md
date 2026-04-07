@@ -43,7 +43,7 @@
 
 ## Ansible Architecture
 
-![ansible_architecture](/svg/courses/devops/ansible/01_fundamentals/ansible_architecture.svg)
+![ansible_architecture](svg/courses/devops/ansible/01_fundamentals/ansible_architecture.svg)
 
 ---
 
@@ -82,7 +82,7 @@
 
 ## Agentless vs Agent-Based
 
-![agentless_vs_agent_based](/svg/courses/devops/ansible/01_fundamentals/agentless_vs_agent_based.svg)
+![agentless_vs_agent_based](svg/courses/devops/ansible/01_fundamentals/agentless_vs_agent_based.svg)
 
 ---
 
@@ -109,7 +109,7 @@
 
 ## Ansible Components Overview
 
-![ansible_components_overview](/svg/courses/devops/ansible/01_fundamentals/ansible_components_overview.svg)
+![ansible_components_overview](svg/courses/devops/ansible/01_fundamentals/ansible_components_overview.svg)
 
 ---
 
@@ -240,7 +240,7 @@ name: "{{ variable }}"   # Works
 
 ## Lab Environment Setup
 
-![lab_environment_setup](/svg/courses/devops/ansible/01_fundamentals/lab_environment_setup.svg)
+![lab_environment_setup](svg/courses/devops/ansible/01_fundamentals/lab_environment_setup.svg)
 
 ---
 

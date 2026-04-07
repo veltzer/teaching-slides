@@ -17,19 +17,19 @@
 
 ## Why Do We Need Branches?
 
-![why_do_we_need_branches](/svg/courses/git/git2/06_branches/why_do_we_need_branches.svg)
+![why_do_we_need_branches](svg/courses/git/git2/06_branches/why_do_we_need_branches.svg)
 
 ---
 
 ## The Power of Branches
 
-![the_power_of_branches](/svg/courses/git/git2/06_branches/the_power_of_branches.svg)
+![the_power_of_branches](svg/courses/git/git2/06_branches/the_power_of_branches.svg)
 
 ---
 
 ## What is a Branch?
 
-![what_is_a_branch](/svg/courses/git/git2/06_branches/what_is_a_branch.svg)
+![what_is_a_branch](svg/courses/git/git2/06_branches/what_is_a_branch.svg)
 
 ---
 
@@ -86,7 +86,7 @@ git checkout -b feature origin/feature
 
 ## Branch Naming Conventions
 
-![branch_naming_conventions](/svg/courses/git/git2/06_branches/branch_naming_conventions.svg)
+![branch_naming_conventions](svg/courses/git/git2/06_branches/branch_naming_conventions.svg)
 
 ---
 
@@ -124,7 +124,7 @@ git branch --no-merged
 
 ## Switching Branches
 
-![switching_branches](/svg/courses/git/git2/06_branches/switching_branches.svg)
+![switching_branches](svg/courses/git/git2/06_branches/switching_branches.svg)
 
 ---
 
@@ -154,7 +154,7 @@ git checkout abc123          # Checkout specific commit
 
 ## HEAD and Branches
 
-![head_and_branches](/svg/courses/git/git2/06_branches/head_and_branches.svg)
+![head_and_branches](svg/courses/git/git2/06_branches/head_and_branches.svg)
 
 ---
 
@@ -211,7 +211,7 @@ git gui             # Built-in GUI
 
 ## Branch Divergence
 
-![branch_divergence](/svg/courses/git/git2/06_branches/branch_divergence.svg)
+![branch_divergence](svg/courses/git/git2/06_branches/branch_divergence.svg)
 
 ---
 
@@ -270,7 +270,7 @@ git branch -d feature
 
 ## Branch Management
 
-![branch_management](/svg/courses/git/git2/06_branches/branch_management.svg)
+![branch_management](svg/courses/git/git2/06_branches/branch_management.svg)
 
 ---
 
@@ -347,7 +347,7 @@ git log -g --grep-reflog="branch:" --oneline
 
 ## Merging Branches
 
-![merging_branches](/svg/courses/git/git2/06_branches/merging_branches.svg)
+![merging_branches](svg/courses/git/git2/06_branches/merging_branches.svg)
 
 ---
 
@@ -377,7 +377,7 @@ git merge --no-ff feature
 
 ## Three-Way Merge
 
-![three_way_merge](/svg/courses/git/git2/06_branches/three_way_merge.svg)
+![three_way_merge](svg/courses/git/git2/06_branches/three_way_merge.svg)
 
 ---
 
@@ -409,7 +409,7 @@ git commit
 
 ## Merge Conflicts
 
-![merge_conflicts](/svg/courses/git/git2/06_branches/merge_conflicts.svg)
+![merge_conflicts](svg/courses/git/git2/06_branches/merge_conflicts.svg)
 
 ---
 
@@ -467,7 +467,7 @@ git config --global mergetool.vscode.cmd \
 
 ## Merge vs Rebase
 
-![merge_vs_rebase](/svg/courses/git/git2/06_branches/merge_vs_rebase.svg)
+![merge_vs_rebase](svg/courses/git/git2/06_branches/merge_vs_rebase.svg)
 
 ---
 
@@ -500,7 +500,7 @@ git config pull.rebase true
 
 ## When to Merge vs Rebase
 
-![when_to_merge_vs_rebase](/svg/courses/git/git2/06_branches/when_to_merge_vs_rebase.svg)
+![when_to_merge_vs_rebase](svg/courses/git/git2/06_branches/when_to_merge_vs_rebase.svg)
 
 ---
 
@@ -531,22 +531,22 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 
 ## Branch Protection Strategies
 
-![branch_protection_strategies](/svg/courses/git/git2/06_branches/branch_protection_strategies.svg)
+![branch_protection_strategies](svg/courses/git/git2/06_branches/branch_protection_strategies.svg)
 
 ---
 
 ## Gitflow Workflow
 
-![gitflow_workflow](/svg/courses/git/git2/06_branches/gitflow_workflow.svg)
+![gitflow_workflow](svg/courses/git/git2/06_branches/gitflow_workflow.svg)
 ## GitHub Flow
 
-![github_flow](/svg/courses/git/git2/06_branches/github_flow.svg)
+![github_flow](svg/courses/git/git2/06_branches/github_flow.svg)
 
 ---
 
 ## Trunk-Based Development
 
-![trunk_based_development](/svg/courses/git/git2/06_branches/trunk_based_development.svg)
+![trunk_based_development](svg/courses/git/git2/06_branches/trunk_based_development.svg)
 
 ---
 
@@ -577,7 +577,7 @@ git remote prune origin             # Execute
 
 ## Troubleshooting Branches
 
-![troubleshooting_branches](/svg/courses/git/git2/06_branches/troubleshooting_branches.svg)
+![troubleshooting_branches](svg/courses/git/git2/06_branches/troubleshooting_branches.svg)
 
 ---
 
@@ -609,7 +609,7 @@ git fetch origin feature:feature
 
 ## Worktrees: Multiple Branches Simultaneously
 
-![worktrees_multiple_branches_simultaneously](/svg/courses/git/git2/06_branches/worktrees_multiple_branches_simultaneously.svg)
+![worktrees_multiple_branches_simultaneously](svg/courses/git/git2/06_branches/worktrees_multiple_branches_simultaneously.svg)
 
 ---
 
@@ -687,7 +687,7 @@ git instaweb  # Starts local web server
 
 ## Branch Security Patterns
 
-![branch_security_patterns](/svg/courses/git/git2/06_branches/branch_security_patterns.svg)
+![branch_security_patterns](svg/courses/git/git2/06_branches/branch_security_patterns.svg)
 
 ---
 
@@ -777,4 +777,4 @@ In the next session, we'll deep dive into:
 
 ## Branches Complete! 🎉
 
-![branches_complete](/svg/courses/git/git2/06_branches/branches_complete.svg)
+![branches_complete](svg/courses/git/git2/06_branches/branches_complete.svg)

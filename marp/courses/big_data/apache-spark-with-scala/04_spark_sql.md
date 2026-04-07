@@ -12,13 +12,13 @@
 
 ## Spark SQL Architecture
 
-![spark_sql_architecture](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/spark_sql_architecture.svg)
+![spark_sql_architecture](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/spark_sql_architecture.svg)
 
 ---
 
 ## Data Sources
 
-![data_sources](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/data_sources.svg)
+![data_sources](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/data_sources.svg)
 
 ---
 
@@ -45,7 +45,7 @@ val jsonDF = spark.read.json("data.json")
 
 ## DataFrame Operations Flow
 
-![dataframe_operations_flow](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/dataframe_operations_flow.svg)
+![dataframe_operations_flow](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/dataframe_operations_flow.svg)
 
 ---
 
@@ -67,7 +67,7 @@ df.groupBy("department")
 
 ## Query Optimization
 
-![query_optimization](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/query_optimization.svg)
+![query_optimization](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/query_optimization.svg)
 
 ---
 
@@ -91,7 +91,7 @@ val results = spark.sql("""
 
 ## Catalyst Optimizer
 
-![catalyst_optimizer](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/catalyst_optimizer.svg)
+![catalyst_optimizer](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/catalyst_optimizer.svg)
 
 ---
 
@@ -114,7 +114,7 @@ df.write
 
 ## Data Types
 
-![data_types](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/data_types.svg)
+![data_types](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/data_types.svg)
 
 ---
 
@@ -140,7 +140,7 @@ val df = spark.read
 
 ## Hive Integration
 
-![hive_integration](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/hive_integration.svg)
+![hive_integration](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/hive_integration.svg)
 
 ---
 
@@ -163,7 +163,7 @@ val results = spark.sql("SELECT * FROM users")
 
 ## Window Functions
 
-![window_functions](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/window_functions.svg)
+![window_functions](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/window_functions.svg)
 
 ---
 
@@ -186,7 +186,7 @@ df.withColumn("running_total",
 
 ## UDF Registration
 
-![udf_registration](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/udf_registration.svg)
+![udf_registration](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/udf_registration.svg)
 
 ---
 
@@ -210,7 +210,7 @@ df.select(upperUDF($"name"))
 
 ## Join Operations
 
-![join_operations](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/join_operations.svg)
+![join_operations](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/join_operations.svg)
 
 ---
 
@@ -233,6 +233,6 @@ df1.crossJoin(df2)
 
 ## Performance Optimization
 
-![performance_optimization](/svg/courses/big_data/apache-spark-with-scala/04_spark_sql/performance_optimization.svg)
+![performance_optimization](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/performance_optimization.svg)
 
 [Continue until approximately 40 slides...]

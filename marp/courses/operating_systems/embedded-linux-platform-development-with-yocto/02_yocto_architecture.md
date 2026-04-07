@@ -4,7 +4,7 @@
 
 ## Architecture Overview
 
-![architecture_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/architecture_overview.svg)
+![architecture_overview](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/architecture_overview.svg)
 
 ---
 
@@ -100,7 +100,7 @@ Extended:
 
 ## Metadata Types
 
-![metadata_types](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/metadata_types.svg)
+![metadata_types](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/metadata_types.svg)
 
 ---
 
@@ -133,7 +133,7 @@ FILES_${PN} = "${bindir}/app"
 
 ## Class Inheritance
 
-![class_inheritance](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/class_inheritance.svg)
+![class_inheritance](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/class_inheritance.svg)
 
 ---
 
@@ -257,7 +257,7 @@ LAYERSERIES_COMPAT_custom = "kirkstone"
 
 ## Build Flow Phases
 
-![build_flow_phases](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/build_flow_phases.svg)
+![build_flow_phases](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/build_flow_phases.svg)
 
 ---
 
@@ -280,7 +280,7 @@ Output:
 
 ## Task Execution Model
 
-![task_execution_model](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/task_execution_model.svg)
+![task_execution_model](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/task_execution_model.svg)
 
 ---
 
@@ -328,7 +328,7 @@ RDEPENDS_${PN} = "python3-core"
 
 ## Shared State Cache
 
-![shared_state_cache](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/shared_state_cache.svg)
+![shared_state_cache](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/shared_state_cache.svg)
 
 ---
 
@@ -487,7 +487,7 @@ RDEPENDS_${PN}-tools = "${PN}"
 
 ## Image Generation Process
 
-![image_generation_process](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/image_generation_process.svg)
+![image_generation_process](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/image_generation_process.svg)
 
 ---
 
@@ -593,7 +593,7 @@ bitbake multiconfig:arm:core-image-minimal multiconfig:x86:core-image-minimal
 
 ## Dependency Resolution
 
-![dependency_resolution](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/dependency_resolution.svg)
+![dependency_resolution](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/02_yocto_architecture/dependency_resolution.svg)
 
 ---
 

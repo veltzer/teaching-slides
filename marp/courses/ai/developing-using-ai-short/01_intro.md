@@ -16,7 +16,7 @@ This chapter explores:
 
 ## The Paradigm Shift
 
-![the_paradigm_shift](/svg/courses/ai/developing-using-ai-short/01_intro/the_paradigm_shift.svg)
+![the_paradigm_shift](svg/courses/ai/developing-using-ai-short/01_intro/the_paradigm_shift.svg)
 
 ---
 

@@ -31,7 +31,7 @@ QEMU vs Other Virtualization Solutions
 
 QEMU Architecture Overview
 
-![introduction_to_qemu_for_kernel_developers_1](/svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/introduction_to_qemu_for_kernel_developers_1.svg)
+![introduction_to_qemu_for_kernel_developers_1](svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/introduction_to_qemu_for_kernel_developers_1.svg)
 
 ---
 
@@ -92,7 +92,7 @@ QEMU Installation
 
 Basic QEMU Usage
 
-![introduction_to_qemu_for_kernel_developers_2](/svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/introduction_to_qemu_for_kernel_developers_2.svg)
+![introduction_to_qemu_for_kernel_developers_2](svg/courses/operating_systems/qemu-for-kernel-developers/02_qemu_intro/introduction_to_qemu_for_kernel_developers_2.svg)
 
 ---
 

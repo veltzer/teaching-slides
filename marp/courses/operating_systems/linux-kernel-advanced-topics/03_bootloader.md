@@ -16,7 +16,7 @@ Key responsibilities:
 
 ## Boot Stages
 
-![boot_stages](/svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/boot_stages.svg)
+![boot_stages](svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/boot_stages.svg)
 
 ---
 
@@ -48,7 +48,7 @@ Key features:
 
 ## U-Boot Components
 
-![u_boot_components](/svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/u_boot_components.svg)
+![u_boot_components](svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/u_boot_components.svg)
 
 ---
 
@@ -234,7 +234,7 @@ fdt mknode / mynode
 
 ## Secure Boot
 
-![secure_boot](/svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/secure_boot.svg)
+![secure_boot](svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/secure_boot.svg)
 
 ---
 
@@ -417,7 +417,7 @@ CONFIG_SPL_OS_BOOT=y  # Direct kernel boot
 
 ## Falcon Mode
 
-![falcon_mode](/svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/falcon_mode.svg)
+![falcon_mode](svg/courses/operating_systems/linux-kernel-advanced-topics/03_bootloader/falcon_mode.svg)
 
 ---
 

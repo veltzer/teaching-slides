@@ -29,13 +29,13 @@ Threads = Concurrency within a process!
 
 ## Processes vs Threads
 
-![processes_vs_threads](/svg/courses/operating_systems/linux-systems-programming/09_threads/processes_vs_threads.svg)
+![processes_vs_threads](svg/courses/operating_systems/linux-systems-programming/09_threads/processes_vs_threads.svg)
 
 ---
 
 ## Thread Memory Layout
 
-![thread_memory_layout](/svg/courses/operating_systems/linux-systems-programming/09_threads/thread_memory_layout.svg)
+![thread_memory_layout](svg/courses/operating_systems/linux-systems-programming/09_threads/thread_memory_layout.svg)
 
 ---
 

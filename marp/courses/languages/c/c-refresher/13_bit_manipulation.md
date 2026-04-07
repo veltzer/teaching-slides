@@ -347,7 +347,7 @@ Do not use bit fields for portable wire formats.
 
 ## Endianness
 
-![endianness](/svg/courses/languages/c/c-refresher/13_bit_manipulation/endianness.svg)
+![endianness](svg/courses/languages/c/c-refresher/13_bit_manipulation/endianness.svg)
 
 ---
 

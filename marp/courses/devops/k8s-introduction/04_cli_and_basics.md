@@ -27,7 +27,7 @@ kubectl [command] [TYPE] [NAME] [flags]
 
 ## Essential kubectl Commands
 
-![essential_kubectl_commands](/svg/courses/devops/k8s-introduction/04_cli_and_basics/essential_kubectl_commands.svg)
+![essential_kubectl_commands](svg/courses/devops/k8s-introduction/04_cli_and_basics/essential_kubectl_commands.svg)
 
 ---
 
@@ -107,7 +107,7 @@ kubectl get replicasets
 
 ## Deployment Process Flow
 
-![deployment_process_flow](/svg/courses/devops/k8s-introduction/04_cli_and_basics/deployment_process_flow.svg)
+![deployment_process_flow](svg/courses/devops/k8s-introduction/04_cli_and_basics/deployment_process_flow.svg)
 
 ---
 
@@ -316,7 +316,7 @@ kubectl config set-context --current --namespace=development
 
 ## Working with Namespaces
 
-![working_with_namespaces](/svg/courses/devops/k8s-introduction/04_cli_and_basics/working_with_namespaces.svg)
+![working_with_namespaces](svg/courses/devops/k8s-introduction/04_cli_and_basics/working_with_namespaces.svg)
 
 ---
 
@@ -434,7 +434,7 @@ kubectl expose deployment my-deployment \
 
 ## Service Types
 
-![service_types](/svg/courses/devops/k8s-introduction/04_cli_and_basics/service_types.svg)
+![service_types](svg/courses/devops/k8s-introduction/04_cli_and_basics/service_types.svg)
 
 ---
 

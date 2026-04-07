@@ -32,7 +32,7 @@ public:
 
 ## Strategy Structure
 
-![strategy_structure](/svg/courses/languages/c++/c++-design-patterns/18_strategy/strategy_structure.svg)
+![strategy_structure](svg/courses/languages/c++/c++-design-patterns/18_strategy/strategy_structure.svg)
 
 ---
 

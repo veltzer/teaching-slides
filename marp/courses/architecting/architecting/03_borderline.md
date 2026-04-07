@@ -26,7 +26,7 @@
 
 ## Layer Diagram
 
-![layer_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/layer_diagram.svg)
+![layer_diagram](out/mermaid/courses/architecting/architecting/03_borderline/layer_diagram.svg)
 
 ---
 
@@ -81,7 +81,7 @@ Cons:
 
 ## Interaction Diagram
 
-![interaction_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/interaction_diagram.svg)
+![interaction_diagram](out/mermaid/courses/architecting/architecting/03_borderline/interaction_diagram.svg)
 
 ---
 
@@ -137,7 +137,7 @@ Cons:
 
 ## Pipe-Filter Diagram
 
-![pipe_filter_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/pipe_filter_diagram.svg)
+![pipe_filter_diagram](out/mermaid/courses/architecting/architecting/03_borderline/pipe_filter_diagram.svg)
 
 ---
 
@@ -195,7 +195,7 @@ Cons:
 
 ## Blackboard Interaction Diagram
 
-![blackboard_interaction_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/blackboard_interaction_diagram.svg)
+![blackboard_interaction_diagram](out/mermaid/courses/architecting/architecting/03_borderline/blackboard_interaction_diagram.svg)
 
 ---
 
@@ -237,7 +237,7 @@ Cons:
 
 ## Ambassador Pattern Diagram
 
-![ambassador_pattern_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/ambassador_pattern_diagram.svg)
+![ambassador_pattern_diagram](out/mermaid/courses/architecting/architecting/03_borderline/ambassador_pattern_diagram.svg)
 
 ---
 
@@ -283,7 +283,7 @@ Cons:
 
 ## Cache-Aside Pattern Diagram
 
-![cache_aside_pattern_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/cache_aside_pattern_diagram.svg)
+![cache_aside_pattern_diagram](out/mermaid/courses/architecting/architecting/03_borderline/cache_aside_pattern_diagram.svg)
 
 ---
 
@@ -328,7 +328,7 @@ Cons:
 
 ## Sidecar Pattern Diagram
 
-![sidecar_pattern_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/sidecar_pattern_diagram.svg)
+![sidecar_pattern_diagram](out/mermaid/courses/architecting/architecting/03_borderline/sidecar_pattern_diagram.svg)
 
 ---
 
@@ -374,7 +374,7 @@ Cons:
 
 ## Valet Key Pattern Diagram
 
-![valet_key_pattern_diagram](/out/mermaid/courses/architecting/architecting/03_borderline/valet_key_pattern_diagram.svg)
+![valet_key_pattern_diagram](out/mermaid/courses/architecting/architecting/03_borderline/valet_key_pattern_diagram.svg)
 
 ---
 

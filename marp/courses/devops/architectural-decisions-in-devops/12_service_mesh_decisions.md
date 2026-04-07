@@ -18,7 +18,7 @@
 ---
 ## The Core Problem Service Meshes Solve
 
-![the_core_problem_service_meshes_solve](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/the_core_problem_service_meshes_solve.svg)
+![the_core_problem_service_meshes_solve](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/the_core_problem_service_meshes_solve.svg)
 
 ---
 ## When is a Service Mesh Warranted
@@ -93,7 +93,7 @@
 ---
 ## Service Mesh Architecture Overview
 
-![service_mesh_architecture_overview](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/service_mesh_architecture_overview.svg)
+![service_mesh_architecture_overview](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/service_mesh_architecture_overview.svg)
 
 ---
 ## Control Plane vs Data Plane
@@ -114,7 +114,7 @@
 ---
 ## Sidecar Proxy Pattern
 
-![sidecar_proxy_pattern](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/sidecar_proxy_pattern.svg)
+![sidecar_proxy_pattern](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/sidecar_proxy_pattern.svg)
 
 ---
 ## How Sidecar Injection Works
@@ -141,7 +141,7 @@
 ---
 ## Proxyless Mesh Architecture
 
-![proxyless_mesh_architecture](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/proxyless_mesh_architecture.svg)
+![proxyless_mesh_architecture](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/proxyless_mesh_architecture.svg)
 
 ---
 ## Proxyless Mesh: How It Works
@@ -183,7 +183,7 @@
 ---
 ## mTLS in the Service Mesh
 
-![mtls_in_the_service_mesh](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mtls_in_the_service_mesh.svg)
+![mtls_in_the_service_mesh](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mtls_in_the_service_mesh.svg)
 
 ---
 ## How mTLS Works in Practice
@@ -253,7 +253,7 @@ spec:
 ---
 ## Traffic Splitting for Canary Deployments
 
-![traffic_splitting_for_canary_deployments](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/traffic_splitting_for_canary_deployments.svg)
+![traffic_splitting_for_canary_deployments](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/traffic_splitting_for_canary_deployments.svg)
 
 ---
 ## Traffic Splitting Configuration
@@ -305,7 +305,7 @@ spec:
 ---
 ## Observability Through the Mesh
 
-![observability_through_the_mesh](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/observability_through_the_mesh.svg)
+![observability_through_the_mesh](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/observability_through_the_mesh.svg)
 
 ---
 ## Metrics and Distributed Tracing
@@ -398,7 +398,7 @@ istioctl analyze --namespace production
 ---
 ## Mesh vs No-Mesh Decision Matrix
 
-![mesh_vs_no_mesh_decision_matrix](/svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mesh_vs_no_mesh_decision_matrix.svg)
+![mesh_vs_no_mesh_decision_matrix](svg/courses/devops/architectural-decisions-in-devops/12_service_mesh_decisions/mesh_vs_no_mesh_decision_matrix.svg)
 
 ---
 ## Choosing Between Istio and Linkerd

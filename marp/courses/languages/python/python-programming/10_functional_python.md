@@ -373,7 +373,7 @@ print(maximum)  # 5
 ---
 ## `reduce()` Visualization
 
-![reduce_visualization](/svg/courses/languages/python/python-programming/10_functional_python/reduce_visualization.svg)
+![reduce_visualization](svg/courses/languages/python/python-programming/10_functional_python/reduce_visualization.svg)
 
 ---
 ## `any()` and `all()`

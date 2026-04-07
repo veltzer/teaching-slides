@@ -17,7 +17,7 @@ This chapter covers:
 
 ## Why Prompt Engineering Matters
 
-![why_prompt_engineering_matters](/svg/courses/ai/developing-using-ai/04_prompt_engineering/why_prompt_engineering_matters.svg)
+![why_prompt_engineering_matters](svg/courses/ai/developing-using-ai/04_prompt_engineering/why_prompt_engineering_matters.svg)
 
 ---
 
@@ -58,7 +58,7 @@ Create a Python function that validates user registration with:
 
 ## Context Provision Strategies
 
-![context_provision_strategies](/svg/courses/ai/developing-using-ai/04_prompt_engineering/context_provision_strategies.svg)
+![context_provision_strategies](svg/courses/ai/developing-using-ai/04_prompt_engineering/context_provision_strategies.svg)
 
 ---
 
@@ -120,7 +120,7 @@ Constraints:
 
 ## Iterative Refinement Process
 
-![iterative_refinement_process](/svg/courses/ai/developing-using-ai/04_prompt_engineering/iterative_refinement_process.svg)
+![iterative_refinement_process](svg/courses/ai/developing-using-ai/04_prompt_engineering/iterative_refinement_process.svg)
 
 ---
 
@@ -206,7 +206,7 @@ Optimize for [speed/memory/readability].
 
 ## Data Structure Creation
 
-![data_structure_creation](/svg/courses/ai/developing-using-ai/04_prompt_engineering/data_structure_creation.svg)
+![data_structure_creation](svg/courses/ai/developing-using-ai/04_prompt_engineering/data_structure_creation.svg)
 
 ---
 
@@ -300,7 +300,7 @@ Please explain:
 
 ## Bug Reproduction Assistance
 
-![bug_reproduction_assistance](/svg/courses/ai/developing-using-ai/04_prompt_engineering/bug_reproduction_assistance.svg)
+![bug_reproduction_assistance](svg/courses/ai/developing-using-ai/04_prompt_engineering/bug_reproduction_assistance.svg)
 
 ---
 
@@ -381,7 +381,7 @@ Provide specific optimization suggestions with expected improvements.
 
 ## Code Improvement: Refactoring Requests
 
-![code_improvement_refactoring_requests](/svg/courses/ai/developing-using-ai/04_prompt_engineering/code_improvement_refactoring_requests.svg)
+![code_improvement_refactoring_requests](svg/courses/ai/developing-using-ai/04_prompt_engineering/code_improvement_refactoring_requests.svg)
 
 ---
 
@@ -483,7 +483,7 @@ Explain each modernization and its benefits.
 
 ## Anti-Pattern Removal
 
-![anti_pattern_removal](/svg/courses/ai/developing-using-ai/04_prompt_engineering/anti_pattern_removal.svg)
+![anti_pattern_removal](svg/courses/ai/developing-using-ai/04_prompt_engineering/anti_pattern_removal.svg)
 
 ---
 
@@ -557,7 +557,7 @@ Provide recommendations as you would in a production review.
 
 ## Step-by-Step Instructions
 
-![step_by_step_instructions](/svg/courses/ai/developing-using-ai/04_prompt_engineering/step_by_step_instructions.svg)
+![step_by_step_instructions](svg/courses/ai/developing-using-ai/04_prompt_engineering/step_by_step_instructions.svg)
 
 ---
 
@@ -642,7 +642,7 @@ Team standards: {guidelines}
 ```
 ## Context Window Management
 
-![context_window_management](/svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)
+![context_window_management](svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)
 
 ---
 
@@ -701,7 +701,7 @@ Document successful prompts for reuse
 
 ## Common Prompt Mistakes
 
-![common_prompt_mistakes](/svg/courses/ai/developing-using-ai/04_prompt_engineering/common_prompt_mistakes.svg)
+![common_prompt_mistakes](svg/courses/ai/developing-using-ai/04_prompt_engineering/common_prompt_mistakes.svg)
 
 ---
 
@@ -764,7 +764,7 @@ Each turn builds on the previous, maintaining context
 
 ## Prompt Engineering for Different AI Models
 
-![prompt_engineering_for_different_ai_models](/svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_for_different_ai_models.svg)
+![prompt_engineering_for_different_ai_models](svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_for_different_ai_models.svg)
 
 ---
 
@@ -845,7 +845,7 @@ Use as template, customize per need
 
 ## Prompt Engineering Best Practices
 
-![prompt_engineering_best_practices](/svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_best_practices.svg)
+![prompt_engineering_best_practices](svg/courses/ai/developing-using-ai/04_prompt_engineering/prompt_engineering_best_practices.svg)
 
 ---
 

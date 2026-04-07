@@ -155,7 +155,7 @@ Set per-user and global spending caps
 
 ## Mitigation: Request Queuing
 
-![mitigation_request_queuing](/svg/courses/security/working-with-llms-securely/05_model_denial_of_service/mitigation_request_queuing.svg)
+![mitigation_request_queuing](svg/courses/security/working-with-llms-securely/05_model_denial_of_service/mitigation_request_queuing.svg)
 
 ---
 

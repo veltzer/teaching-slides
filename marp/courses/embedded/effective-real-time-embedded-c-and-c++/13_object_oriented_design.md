@@ -132,7 +132,7 @@ public:
 
 ## UML Diagram Example
 
-![uml_diagram_example](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/13_object_oriented_design/uml_diagram_example.svg)
+![uml_diagram_example](svg/courses/embedded/effective-real-time-embedded-c-and-c++/13_object_oriented_design/uml_diagram_example.svg)
 
 ---
 

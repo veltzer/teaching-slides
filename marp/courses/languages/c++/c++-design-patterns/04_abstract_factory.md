@@ -25,7 +25,7 @@ We need a way to ensure that all created objects belong to the same family
 
 ## Abstract Factory Structure
 
-![abstract_factory_structure](/svg/courses/languages/c++/c++-design-patterns/04_abstract_factory/abstract_factory_structure.svg)
+![abstract_factory_structure](svg/courses/languages/c++/c++-design-patterns/04_abstract_factory/abstract_factory_structure.svg)
 
 ---
 

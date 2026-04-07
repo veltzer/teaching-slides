@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Quality Paradox
 
-![the_quality_paradox](/svg/courses/ai/developing-using-ai-short/08_quality/the_quality_paradox.svg)
+![the_quality_paradox](svg/courses/ai/developing-using-ai-short/08_quality/the_quality_paradox.svg)
 
 ---
 
@@ -159,7 +159,7 @@ class UserSchema(Schema):
 
 ## Input Validation
 
-![input_validation](/svg/courses/ai/developing-using-ai-short/08_quality/input_validation.svg)
+![input_validation](svg/courses/ai/developing-using-ai-short/08_quality/input_validation.svg)
 
 ---
 
@@ -196,7 +196,7 @@ res.cookie('refreshToken', refreshToken, {
 
 ## Performance Optimization: Bottleneck Identification
 
-![performance_optimization_bottleneck_identification](/svg/courses/ai/developing-using-ai-short/08_quality/performance_optimization_bottleneck_identification.svg)
+![performance_optimization_bottleneck_identification](svg/courses/ai/developing-using-ai-short/08_quality/performance_optimization_bottleneck_identification.svg)
 
 ---
 
@@ -403,7 +403,7 @@ interface TeamStandards {
 
 Code review workflow:
 
-![review_processes](/svg/courses/ai/developing-using-ai-short/08_quality/review_processes.svg)
+![review_processes](svg/courses/ai/developing-using-ai-short/08_quality/review_processes.svg)
 
 ---
 
@@ -772,7 +772,7 @@ quality_culture:
 
 ## Technical Debt Management
 
-![technical_debt_management](/svg/courses/ai/developing-using-ai-short/08_quality/technical_debt_management.svg)
+![technical_debt_management](svg/courses/ai/developing-using-ai-short/08_quality/technical_debt_management.svg)
 
 ---
 

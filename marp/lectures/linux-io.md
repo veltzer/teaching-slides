@@ -32,7 +32,7 @@ close(fd);
 1. `ioctl()` - Device-specific control
 ---
 ## Virtual File System (VFS)
-![virtual_file_system_vfs](/svg/lectures/linux-io/virtual_file_system_vfs.svg)
+![virtual_file_system_vfs](svg/lectures/linux-io/virtual_file_system_vfs.svg)
 
 ---
 ## Buffered vs Unbuffered I/O
@@ -50,7 +50,7 @@ fread(buffer, 1, 1024, fp);
 ```
 ---
 ## I/O Models
-![i_o_models](/svg/lectures/linux-io/i_o_models.svg)
+![i_o_models](svg/lectures/linux-io/i_o_models.svg)
 
 ---
 

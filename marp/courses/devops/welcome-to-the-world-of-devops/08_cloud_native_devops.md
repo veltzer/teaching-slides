@@ -5,7 +5,7 @@ Modern cloud architecture and practices
 
 ## Serverless Architecture
 
-![serverless_architecture](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/serverless_architecture.svg)
+![serverless_architecture](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/serverless_architecture.svg)
 
 ---
 
@@ -21,13 +21,13 @@ Modern cloud architecture and practices
 
 ## Serverless Benefits
 
-![serverless_benefits](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/serverless_benefits.svg)
+![serverless_benefits](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/serverless_benefits.svg)
 
 ---
 
 ## Microservices Architecture
 
-![microservices_architecture](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/microservices_architecture.svg)
+![microservices_architecture](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/microservices_architecture.svg)
 
 ---
 
@@ -43,7 +43,7 @@ Modern cloud architecture and practices
 
 ## Container Orchestration
 
-![container_orchestration](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/container_orchestration.svg)
+![container_orchestration](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/container_orchestration.svg)
 
 ---
 
@@ -59,7 +59,7 @@ Modern cloud architecture and practices
 
 ## Service Mesh
 
-![service_mesh](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/service_mesh.svg)
+![service_mesh](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/service_mesh.svg)
 
 ---
 
@@ -75,7 +75,7 @@ Modern cloud architecture and practices
 
 ## Scalability Patterns
 
-![scalability_patterns](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/scalability_patterns.svg)
+![scalability_patterns](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/scalability_patterns.svg)
 
 ---
 
@@ -91,7 +91,7 @@ Modern cloud architecture and practices
 
 ## Cost Optimization
 
-![cost_optimization](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/cost_optimization.svg)
+![cost_optimization](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/cost_optimization.svg)
 
 ---
 
@@ -107,4 +107,4 @@ Modern cloud architecture and practices
 
 ## Deployment Strategies
 
-![deployment_strategies](/svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/deployment_strategies.svg)
+![deployment_strategies](svg/courses/devops/welcome-to-the-world-of-devops/08_cloud_native_devops/deployment_strategies.svg)

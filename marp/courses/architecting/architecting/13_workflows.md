@@ -28,7 +28,7 @@
 
 ## Key Workflow Concepts
 
-![key_workflow_concepts](/out/mermaid/courses/architecting/architecting/13_workflows/key_workflow_concepts.svg)
+![key_workflow_concepts](out/mermaid/courses/architecting/architecting/13_workflows/key_workflow_concepts.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## DAG Example
 
-![dag_example](/out/mermaid/courses/architecting/architecting/13_workflows/dag_example.svg)
+![dag_example](out/mermaid/courses/architecting/architecting/13_workflows/dag_example.svg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Apache Airflow Architecture
 
-![apache_airflow_architecture](/out/mermaid/courses/architecting/architecting/13_workflows/apache_airflow_architecture.svg)
+![apache_airflow_architecture](out/mermaid/courses/architecting/architecting/13_workflows/apache_airflow_architecture.svg)
 
 ---
 
@@ -123,7 +123,7 @@ extract_task >> transform_task >> load_task
 
 ## Prefect Architecture
 
-![prefect_architecture](/out/mermaid/courses/architecting/architecting/13_workflows/prefect_architecture.svg)
+![prefect_architecture](out/mermaid/courses/architecting/architecting/13_workflows/prefect_architecture.svg)
 
 ---
 
@@ -163,7 +163,7 @@ if __name__ == "__main__":
 
 ## Dagster Architecture
 
-![dagster_architecture](/out/mermaid/courses/architecting/architecting/13_workflows/dagster_architecture.svg)
+![dagster_architecture](out/mermaid/courses/architecting/architecting/13_workflows/dagster_architecture.svg)
 
 ---
 
@@ -198,7 +198,7 @@ if __name__ == "__main__":
 
 ## Netflix Conductor Architecture
 
-![netflix_conductor_architecture](/out/mermaid/courses/architecting/architecting/13_workflows/netflix_conductor_architecture.svg)
+![netflix_conductor_architecture](out/mermaid/courses/architecting/architecting/13_workflows/netflix_conductor_architecture.svg)
 
 ---
 
@@ -251,13 +251,13 @@ if __name__ == "__main__":
 
 ## ETL Pattern
 
-![etl_pattern](/out/mermaid/courses/architecting/architecting/13_workflows/etl_pattern.svg)
+![etl_pattern](out/mermaid/courses/architecting/architecting/13_workflows/etl_pattern.svg)
 
 ---
 
 ## Fan-out/Fan-in Pattern
 
-![fan_out_fan_in_pattern](/out/mermaid/courses/architecting/architecting/13_workflows/fan_out_fan_in_pattern.svg)
+![fan_out_fan_in_pattern](out/mermaid/courses/architecting/architecting/13_workflows/fan_out_fan_in_pattern.svg)
 
 ---
 
@@ -379,7 +379,7 @@ def process_data():
 
 ## Monitoring Dashboard
 
-![monitoring_dashboard](/out/mermaid/courses/architecting/architecting/13_workflows/monitoring_dashboard.svg)
+![monitoring_dashboard](out/mermaid/courses/architecting/architecting/13_workflows/monitoring_dashboard.svg)
 
 ---
 

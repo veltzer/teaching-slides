@@ -5,7 +5,7 @@
 
 ## View Architecture Overview
 
-![view_architecture_overview](/svg/courses/operating_systems/advanced-android-application-development/02_android_ui/view_architecture_overview.svg)
+![view_architecture_overview](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/view_architecture_overview.svg)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ## Custom View Lifecycle
 
-![custom_view_lifecycle](/svg/courses/operating_systems/advanced-android-application-development/02_android_ui/custom_view_lifecycle.svg)
+![custom_view_lifecycle](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/custom_view_lifecycle.svg)
 
 ---
 
@@ -131,7 +131,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 ## Fragment Lifecycle
 
-![fragment_lifecycle](/svg/courses/operating_systems/advanced-android-application-development/02_android_ui/fragment_lifecycle.svg)
+![fragment_lifecycle](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/fragment_lifecycle.svg)
 
 ---
 
@@ -224,13 +224,13 @@ public class FlowLayout extends ViewGroup {
 
 ## Layout Inspector
 
-![layout_inspector](/svg/courses/operating_systems/advanced-android-application-development/02_android_ui/layout_inspector.svg)
+![layout_inspector](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/layout_inspector.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](/svg/courses/operating_systems/advanced-android-application-development/02_android_ui/best_practices.svg)
+![best_practices](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/best_practices.svg)
 
 ---
 

@@ -4,13 +4,13 @@
 
 ## Docker in Development
 
-![docker_in_development](/svg/courses/devops/docker-for-developers/11_workflow/docker_in_development.svg)
+![docker_in_development](svg/courses/devops/docker-for-developers/11_workflow/docker_in_development.svg)
 
 ---
 
 ## CI/CD Pipeline Integration
 
-![ci_cd_pipeline_integration](/svg/courses/devops/docker-for-developers/11_workflow/ci_cd_pipeline_integration.svg)
+![ci_cd_pipeline_integration](svg/courses/devops/docker-for-developers/11_workflow/ci_cd_pipeline_integration.svg)
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## Multi-stage Builds
 
-![multi_stage_builds](/svg/courses/devops/docker-for-developers/11_workflow/multi_stage_builds.svg)
+![multi_stage_builds](svg/courses/devops/docker-for-developers/11_workflow/multi_stage_builds.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Development vs Production
 
-![development_vs_production](/svg/courses/devops/docker-for-developers/11_workflow/development_vs_production.svg)
+![development_vs_production](svg/courses/devops/docker-for-developers/11_workflow/development_vs_production.svg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Code Organization
 
-![code_organization](/svg/courses/devops/docker-for-developers/11_workflow/code_organization.svg)
+![code_organization](svg/courses/devops/docker-for-developers/11_workflow/code_organization.svg)
 
 ---
 
@@ -78,7 +78,7 @@
 
 ## Testing Strategy
 
-![testing_strategy](/svg/courses/devops/docker-for-developers/11_workflow/testing_strategy.svg)
+![testing_strategy](svg/courses/devops/docker-for-developers/11_workflow/testing_strategy.svg)
 
 ---
 
@@ -95,7 +95,7 @@
 
 ## Team Collaboration
 
-![team_collaboration](/svg/courses/devops/docker-for-developers/11_workflow/team_collaboration.svg)
+![team_collaboration](svg/courses/devops/docker-for-developers/11_workflow/team_collaboration.svg)
 
 ---
 

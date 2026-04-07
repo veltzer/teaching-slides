@@ -4,7 +4,7 @@
 
 ## Block Layer Architecture
 
-![block_layer_architecture](/svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/block_layer_architecture.svg)
+![block_layer_architecture](svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/block_layer_architecture.svg)
 
 ---
 
@@ -102,7 +102,7 @@ struct request {
 
 ## Bio Structure
 
-![bio_structure](/svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/bio_structure.svg)
+![bio_structure](svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/bio_structure.svg)
 
 ---
 
@@ -361,7 +361,7 @@ static int my_mmc_probe(struct platform_device *pdev)
 
 ## NVMe Driver Structure
 
-![nvme_driver_structure](/svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/nvme_driver_structure.svg)
+![nvme_driver_structure](svg/courses/operating_systems/linux-kernel-advanced-topics/06_block_device_drivers/nvme_driver_structure.svg)
 
 ---
 

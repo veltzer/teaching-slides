@@ -32,7 +32,7 @@ public:
 
 ## Observer Structure
 
-![observer_structure](/svg/courses/languages/c++/c++-design-patterns/17_observer/observer_structure.svg)
+![observer_structure](svg/courses/languages/c++/c++-design-patterns/17_observer/observer_structure.svg)
 
 ---
 

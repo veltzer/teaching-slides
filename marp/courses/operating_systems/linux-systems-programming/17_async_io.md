@@ -14,7 +14,7 @@
 
 ## Synchronous vs Asynchronous
 
-![synchronous_vs_asynchronous](/svg/courses/operating_systems/linux-systems-programming/17_async_io/synchronous_vs_asynchronous.svg)
+![synchronous_vs_asynchronous](svg/courses/operating_systems/linux-systems-programming/17_async_io/synchronous_vs_asynchronous.svg)
 
 ---
 
@@ -330,7 +330,7 @@ io_uring_cqe_seen(&ring, cqe);
 
 ## io_uring: Ring Structure
 
-![iouring_ring_structure](/svg/courses/operating_systems/linux-systems-programming/17_async_io/iouring_ring_structure.svg)
+![iouring_ring_structure](svg/courses/operating_systems/linux-systems-programming/17_async_io/iouring_ring_structure.svg)
 
 ---
 
@@ -435,7 +435,7 @@ void sigio_handler(int sig) {
 
 ## Performance Comparison
 
-![performance_comparison](/svg/courses/operating_systems/linux-systems-programming/17_async_io/performance_comparison.svg)
+![performance_comparison](svg/courses/operating_systems/linux-systems-programming/17_async_io/performance_comparison.svg)
 
 ---
 

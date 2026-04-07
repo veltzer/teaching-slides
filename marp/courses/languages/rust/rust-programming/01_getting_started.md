@@ -14,7 +14,7 @@
 ---
 ## Key Features of Rust
 
-![key_features_of_rust](/svg/courses/languages/rust/rust-programming/01_getting_started/key_features_of_rust.svg)
+![key_features_of_rust](svg/courses/languages/rust/rust-programming/01_getting_started/key_features_of_rust.svg)
 
 ---
 ## Why Choose Rust
@@ -44,13 +44,13 @@
 
 ## Use Cases for Rust
 
-![use_cases_for_rust](/svg/courses/languages/rust/rust-programming/01_getting_started/use_cases_for_rust.svg)
+![use_cases_for_rust](svg/courses/languages/rust/rust-programming/01_getting_started/use_cases_for_rust.svg)
 
 ---
 
 ## Rust vs Other Languages
 
-![rust_vs_other_languages](/svg/courses/languages/rust/rust-programming/01_getting_started/rust_vs_other_languages.svg)
+![rust_vs_other_languages](svg/courses/languages/rust/rust-programming/01_getting_started/rust_vs_other_languages.svg)
 
 ---
 
@@ -80,7 +80,7 @@ curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh
 
 ## Rustup Components
 
-![rustup_components](/svg/courses/languages/rust/rust-programming/01_getting_started/rustup_components.svg)
+![rustup_components](svg/courses/languages/rust/rust-programming/01_getting_started/rustup_components.svg)
 
 ---
 
@@ -101,7 +101,7 @@ rustup component list
 
 ## Development Environment
 
-![development_environment](/svg/courses/languages/rust/rust-programming/01_getting_started/development_environment.svg)
+![development_environment](svg/courses/languages/rust/rust-programming/01_getting_started/development_environment.svg)
 
 ### Recommended Setup
 - VS Code
@@ -113,7 +113,7 @@ rustup component list
 
 ## Cargo: Rust's Package Manager
 
-![cargo_rust_s_package_manager](/svg/courses/languages/rust/rust-programming/01_getting_started/cargo_rust_s_package_manager.svg)
+![cargo_rust_s_package_manager](svg/courses/languages/rust/rust-programming/01_getting_started/cargo_rust_s_package_manager.svg)
 
 ---
 
@@ -213,7 +213,7 @@ fn main() {
 ---
 ## Basic Syntax Elements
 
-![basic_syntax_elements](/svg/courses/languages/rust/rust-programming/01_getting_started/basic_syntax_elements.svg)
+![basic_syntax_elements](svg/courses/languages/rust/rust-programming/01_getting_started/basic_syntax_elements.svg)
 
 ---
 ## Function Syntax
@@ -268,7 +268,7 @@ fn main() {
 ---
 ## Code Organization
 
-![code_organization](/svg/courses/languages/rust/rust-programming/01_getting_started/code_organization.svg)
+![code_organization](svg/courses/languages/rust/rust-programming/01_getting_started/code_organization.svg)
 
 ---
 ## Best Practices
@@ -297,7 +297,7 @@ fn main() {
 ---
 ## Common Mistakes to Avoid
 
-![common_mistakes_to_avoid](/svg/courses/languages/rust/rust-programming/01_getting_started/common_mistakes_to_avoid.svg)
+![common_mistakes_to_avoid](svg/courses/languages/rust/rust-programming/01_getting_started/common_mistakes_to_avoid.svg)
 
 ---
 ## Resources for Learning

@@ -34,7 +34,7 @@ git rebase main
 git rebase -i HEAD~3
 ```
 
-![interactive_rebase_to_edit_commits](/svg/courses/git/git2/08_merge_vs_rebase/interactive_rebase_to_edit_commits.svg)
+![interactive_rebase_to_edit_commits](svg/courses/git/git2/08_merge_vs_rebase/interactive_rebase_to_edit_commits.svg)
 
 ---
 
@@ -184,7 +184,7 @@ squash j1k2l3m Fix validation bug
 - Requires discipline and understanding
 - Better for code archaeology
 
-![rebase_vs_merge_team_workflow_impact](/svg/courses/git/git2/08_merge_vs_rebase/rebase_vs_merge_team_workflow_impact.svg)
+![rebase_vs_merge_team_workflow_impact](svg/courses/git/git2/08_merge_vs_rebase/rebase_vs_merge_team_workflow_impact.svg)
 
 ---
 
@@ -337,7 +337,7 @@ git push --force-with-lease origin feature-branch
 
 ## Practical Decision Framework
 
-![practical_decision_framework](/svg/courses/git/git2/08_merge_vs_rebase/practical_decision_framework.svg)
+![practical_decision_framework](svg/courses/git/git2/08_merge_vs_rebase/practical_decision_framework.svg)
 
 ---
 

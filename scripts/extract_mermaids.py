@@ -69,7 +69,7 @@ def process_file(md_path: Path) -> int:
 
     rel = md_path.relative_to(MARP_DIR)
     out_dir = MERMAID_DIR / rel.parent / rel.stem
-    abs_prefix = '/mermaid/' + str(rel.parent / rel.stem)
+    abs_prefix = 'out/mermaid/' + str(rel.parent / rel.stem)
 
     # First pass: compute names, detect collisions
     slug_counts: dict[str, int] = {}

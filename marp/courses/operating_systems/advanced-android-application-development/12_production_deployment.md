@@ -5,7 +5,7 @@
 
 ## Deployment Overview
 
-![deployment_overview](/svg/courses/operating_systems/advanced-android-application-development/12_production_deployment/deployment_overview.svg)
+![deployment_overview](svg/courses/operating_systems/advanced-android-application-development/12_production_deployment/deployment_overview.svg)
 
 ---
 
@@ -220,7 +220,7 @@ public class CrashReporter {
 
 ## Release Checklist
 
-![release_checklist](/svg/courses/operating_systems/advanced-android-application-development/12_production_deployment/release_checklist.svg)
+![release_checklist](svg/courses/operating_systems/advanced-android-application-development/12_production_deployment/release_checklist.svg)
 
 ---
 

@@ -61,7 +61,7 @@ pip install diffusers accelerate
 
 **Generative AI** = AI systems that create new content
 
-![what_is_generative_ai](/svg/courses/ai/generative-ai-applications/01_overview/what_is_generative_ai.svg)
+![what_is_generative_ai](svg/courses/ai/generative-ai-applications/01_overview/what_is_generative_ai.svg)
 
 Unlike **discriminative** models (classify existing data), generative models **produce** new data.
 
@@ -69,7 +69,7 @@ Unlike **discriminative** models (classify existing data), generative models **p
 
 ## The Generative AI Landscape
 
-![the_generative_ai_landscape](/svg/courses/ai/generative-ai-applications/01_overview/the_generative_ai_landscape.svg)
+![the_generative_ai_landscape](svg/courses/ai/generative-ai-applications/01_overview/the_generative_ai_landscape.svg)
 
 ---
 
@@ -81,7 +81,7 @@ Three converging factors enabled the current explosion:
 1. **Scale of compute** — Thousands of GPUs training for months
 1. **Architectural breakthroughs** — The Transformer (2017)
 
-![why_generative_ai_matters_now](/svg/courses/ai/generative-ai-applications/01_overview/why_generative_ai_matters_now.svg)
+![why_generative_ai_matters_now](svg/courses/ai/generative-ai-applications/01_overview/why_generative_ai_matters_now.svg)
 
 ---
 
@@ -103,7 +103,7 @@ Three converging factors enabled the current explosion:
 
 ## How This Course Fits Together
 
-![how_this_course_fits_together](/svg/courses/ai/generative-ai-applications/01_overview/how_this_course_fits_together.svg)
+![how_this_course_fits_together](svg/courses/ai/generative-ai-applications/01_overview/how_this_course_fits_together.svg)
 
 ---
 

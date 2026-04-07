@@ -37,7 +37,7 @@
 
 ## The Incident Response Lifecycle
 
-![the_incident_response_lifecycle](/svg/courses/security/it-security-policies/06_incident_response/the_incident_response_lifecycle.svg)
+![the_incident_response_lifecycle](svg/courses/security/it-security-policies/06_incident_response/the_incident_response_lifecycle.svg)
 
 ---
 
@@ -72,7 +72,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## Your Reporting Channels
 
-![your_reporting_channels](/svg/courses/security/it-security-policies/06_incident_response/your_reporting_channels.svg)
+![your_reporting_channels](svg/courses/security/it-security-policies/06_incident_response/your_reporting_channels.svg)
 
 ---
 
@@ -94,7 +94,7 @@ Trust your instincts - **if something feels wrong, report it**
 - An unreported incident can escalate from minor to catastrophic
 - Early reporting saves the company time, money, and reputation
 
-![no_blame_culture](/svg/courses/security/it-security-policies/06_incident_response/no_blame_culture.svg)
+![no_blame_culture](svg/courses/security/it-security-policies/06_incident_response/no_blame_culture.svg)
 
 ---
 
@@ -124,7 +124,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## `RTO` and `RPO` Explained
 
-![rto_and_rpo_explained](/svg/courses/security/it-security-policies/06_incident_response/rto_and_rpo_explained.svg)
+![rto_and_rpo_explained](svg/courses/security/it-security-policies/06_incident_response/rto_and_rpo_explained.svg)
 
 - `RPO` (Recovery Point Objective): how much data can we afford to lose?
 - `RTO` (Recovery Time Objective): how quickly must we restore operations?
@@ -149,7 +149,7 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## What Happens in a Ransomware Attack
 
-![what_happens_in_a_ransomware_attack](/svg/courses/security/it-security-policies/06_incident_response/what_happens_in_a_ransomware_attack.svg)
+![what_happens_in_a_ransomware_attack](svg/courses/security/it-security-policies/06_incident_response/what_happens_in_a_ransomware_attack.svg)
 
 - Average ransom payment: over $1 million
 - Average downtime: 22 days

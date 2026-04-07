@@ -14,7 +14,7 @@
 
 ## Why Templates?
 
-![why_templates](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/16_templates_and_generic_programming/why_templates.svg)
+![why_templates](svg/courses/embedded/effective-real-time-embedded-c-and-c++/16_templates_and_generic_programming/why_templates.svg)
 
 ---
 

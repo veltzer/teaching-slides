@@ -34,7 +34,7 @@ Performance benefits of concurrent execution:
 
 ## Thread Lifecycle
 
-![thread_lifecycle](/svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_lifecycle.svg)
+![thread_lifecycle](svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_lifecycle.svg)
 
 ---
 
@@ -287,7 +287,7 @@ void writer() {
 
 ## Reader-Writer Pattern
 
-![reader_writer_pattern](/svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/reader_writer_pattern.svg)
+![reader_writer_pattern](svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/reader_writer_pattern.svg)
 
 ---
 
@@ -624,7 +624,7 @@ int main() {
 
 ## Thread Pool Concept
 
-![thread_pool_concept](/svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_pool_concept.svg)
+![thread_pool_concept](svg/courses/languages/c++/modern-c++-for-c-programmers/13_multi_threading/thread_pool_concept.svg)
 
 ---
 

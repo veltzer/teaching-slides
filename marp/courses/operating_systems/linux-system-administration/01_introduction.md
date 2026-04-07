@@ -35,7 +35,7 @@
 ---
 ## Course Structure
 
-![course_structure](/svg/courses/operating_systems/linux-system-administration/01_introduction/course_structure.svg)
+![course_structure](svg/courses/operating_systems/linux-system-administration/01_introduction/course_structure.svg)
 
 ---
 ## Day-by-Day Schedule
@@ -109,7 +109,7 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 ---
 ## Linux Distributions Landscape
 
-![linux_distributions_landscape](/svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
+![linux_distributions_landscape](svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
 
 This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
 

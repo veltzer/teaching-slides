@@ -5,7 +5,7 @@
 
 ## Overview
 
-![overview](/svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/overview.svg)
+![overview](svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/overview.svg)
 
 ---
 
@@ -187,7 +187,7 @@ fun testPlatformSpecific() {
 
 ## Resource Sharing Strategy
 
-![resource_sharing_strategy](/svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/resource_sharing_strategy.svg)
+![resource_sharing_strategy](svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/resource_sharing_strategy.svg)
 
 ---
 
@@ -229,7 +229,7 @@ class StateManager<T> {
 
 ## Best Practices
 
-![best_practices](/svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/best_practices.svg)
+![best_practices](svg/courses/operating_systems/advanced-android-application-development/14_multiplatform/best_practices.svg)
 
 ---
 

@@ -3,7 +3,7 @@
 
 ## Virtual Machine Basics
 
-![virtual_machine_basics](/svg/courses/devops/docker-for-developers/02_under_the_hood/virtual_machine_basics.svg)
+![virtual_machine_basics](svg/courses/devops/docker-for-developers/02_under_the_hood/virtual_machine_basics.svg)
 
 ---
 
@@ -31,7 +31,7 @@
 
 ## Containers vs VMs
 
-![containers_vs_vms](/svg/courses/devops/docker-for-developers/02_under_the_hood/containers_vs_vms.svg)
+![containers_vs_vms](svg/courses/devops/docker-for-developers/02_under_the_hood/containers_vs_vms.svg)
 
 ---
 
@@ -49,19 +49,19 @@
 
 ## Docker Architecture
 
-![docker_architecture](/svg/courses/devops/docker-for-developers/02_under_the_hood/docker_architecture.svg)
+![docker_architecture](svg/courses/devops/docker-for-developers/02_under_the_hood/docker_architecture.svg)
 
 ---
 
 ## Docker Engine Components
 
-![docker_engine_components](/svg/courses/devops/docker-for-developers/02_under_the_hood/docker_engine_components.svg)
+![docker_engine_components](svg/courses/devops/docker-for-developers/02_under_the_hood/docker_engine_components.svg)
 
 ---
 
 ## Container Runtime
 
-![container_runtime](/svg/courses/devops/docker-for-developers/02_under_the_hood/container_runtime.svg)
+![container_runtime](svg/courses/devops/docker-for-developers/02_under_the_hood/container_runtime.svg)
 
 ---
 
@@ -80,28 +80,28 @@
 
 ## Control Groups (cgroups)
 
-![control_groups_cgroups](/svg/courses/devops/docker-for-developers/02_under_the_hood/control_groups_cgroups.svg)
+![control_groups_cgroups](svg/courses/devops/docker-for-developers/02_under_the_hood/control_groups_cgroups.svg)
 
 ---
 
 ## Storage Drivers
 
-![storage_drivers](/svg/courses/devops/docker-for-developers/02_under_the_hood/storage_drivers.svg)
+![storage_drivers](svg/courses/devops/docker-for-developers/02_under_the_hood/storage_drivers.svg)
 
 ---
 
 ## Layer Architecture
 
-![layer_architecture](/svg/courses/devops/docker-for-developers/02_under_the_hood/layer_architecture.svg)
+![layer_architecture](svg/courses/devops/docker-for-developers/02_under_the_hood/layer_architecture.svg)
 
 ---
 
 ## Networking Internals
 
-![networking_internals](/svg/courses/devops/docker-for-developers/02_under_the_hood/networking_internals.svg)
+![networking_internals](svg/courses/devops/docker-for-developers/02_under_the_hood/networking_internals.svg)
 
 ---
 
 ## Security Architecture
 
-![security_architecture](/svg/courses/devops/docker-for-developers/02_under_the_hood/security_architecture.svg)
+![security_architecture](svg/courses/devops/docker-for-developers/02_under_the_hood/security_architecture.svg)

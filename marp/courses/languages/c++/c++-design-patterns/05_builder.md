@@ -30,7 +30,7 @@ Pizza p(Size::Large, true, false, true, false, true, false, true,
 
 ## Builder Structure
 
-![builder_structure](/svg/courses/languages/c++/c++-design-patterns/05_builder/builder_structure.svg)
+![builder_structure](svg/courses/languages/c++/c++-design-patterns/05_builder/builder_structure.svg)
 
 ---
 

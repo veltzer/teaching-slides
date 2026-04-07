@@ -1,7 +1,7 @@
 # Git Course Summary
 ---
 ## Course Overview
-![course_overview](/svg/courses/git/git/11_summary/course_overview.svg)
+![course_overview](svg/courses/git/git/11_summary/course_overview.svg)
 
 ---
 ## Key Concepts Reviewed
@@ -23,7 +23,7 @@
 - Aliases and tools
 ---
 ## Branch Operations
-![branch_operations](/svg/courses/git/git/11_summary/branch_operations.svg)
+![branch_operations](svg/courses/git/git/11_summary/branch_operations.svg)
 
 ---
 ## Collaboration Methods
@@ -75,7 +75,7 @@
 - Support resources
 ---
 ## Next Learning Steps
-![next_learning_steps](/svg/courses/git/git/11_summary/next_learning_steps.svg)
+![next_learning_steps](svg/courses/git/git/11_summary/next_learning_steps.svg)
 
 ---
 ## Recommended Practice

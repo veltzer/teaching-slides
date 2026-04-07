@@ -9,7 +9,7 @@
 1. Human-readable text format
 1. Compiled to binary for bootloader/kernel
 
-![what_is_device_tree](/svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/what_is_device_tree.svg)
+![what_is_device_tree](svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/what_is_device_tree.svg)
 
 ---
 
@@ -170,7 +170,7 @@ parent {
 
 ## Interrupt Specification
 
-![interrupt_specification](/svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/interrupt_specification.svg)
+![interrupt_specification](svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/interrupt_specification.svg)
 
 ---
 
@@ -504,7 +504,7 @@ required:
 
 ## Device Tree Overlays
 
-![device_tree_overlays](/svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/device_tree_overlays.svg)
+![device_tree_overlays](svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/device_tree_overlays.svg)
 
 ---
 

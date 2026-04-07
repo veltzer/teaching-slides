@@ -8,7 +8,7 @@
 ---
 ## Core Components
 
-![core_components](/svg/lectures/spark-reports/core_components.svg)
+![core_components](svg/lectures/spark-reports/core_components.svg)
 
 ---
 ## Data Source Integration
@@ -19,7 +19,7 @@
 ---
 ## Processing Capabilities
 
-![processing_capabilities](/svg/lectures/spark-reports/processing_capabilities.svg)
+![processing_capabilities](svg/lectures/spark-reports/processing_capabilities.svg)
 
 ---
 ## Report Types
@@ -30,7 +30,7 @@
 ---
 ## Architecture Overview
 
-![architecture_overview](/svg/lectures/spark-reports/architecture_overview.svg)
+![architecture_overview](svg/lectures/spark-reports/architecture_overview.svg)
 
 ---
 ## Data Flow Patterns
@@ -41,7 +41,7 @@
 ---
 ## Performance Optimization
 
-![performance_optimization](/svg/lectures/spark-reports/performance_optimization.svg)
+![performance_optimization](svg/lectures/spark-reports/performance_optimization.svg)
 
 ---
 ## Memory Management
@@ -58,7 +58,7 @@
 ---
 ## Execution Models
 
-![execution_models](/svg/lectures/spark-reports/execution_models.svg)
+![execution_models](svg/lectures/spark-reports/execution_models.svg)
 
 ---
 ## Data Formats
@@ -69,7 +69,7 @@
 ---
 ## Processing Modes
 
-![processing_modes](/svg/lectures/spark-reports/processing_modes.svg)
+![processing_modes](svg/lectures/spark-reports/processing_modes.svg)
 
 ---
 ## Output Generation
@@ -86,7 +86,7 @@
 ---
 ## Monitoring System
 
-![monitoring_system](/svg/lectures/spark-reports/monitoring_system.svg)
+![monitoring_system](svg/lectures/spark-reports/monitoring_system.svg)
 
 ---
 ## Error Handling
@@ -97,7 +97,7 @@
 ---
 ## Data Quality
 
-![data_quality](/svg/lectures/spark-reports/data_quality.svg)
+![data_quality](svg/lectures/spark-reports/data_quality.svg)
 
 ---
 ## Scheduling Options
@@ -114,7 +114,7 @@
 ---
 ## Integration Points
 
-![integration_points](/svg/lectures/spark-reports/integration_points.svg)
+![integration_points](svg/lectures/spark-reports/integration_points.svg)
 
 ---
 ## Optimization Techniques
@@ -125,7 +125,7 @@
 ---
 ## Deployment Models
 
-![deployment_models](/svg/lectures/spark-reports/deployment_models.svg)
+![deployment_models](svg/lectures/spark-reports/deployment_models.svg)
 
 ---
 ## Configuration Management
@@ -142,7 +142,7 @@
 ---
 ## Monitoring Tools
 
-![monitoring_tools](/svg/lectures/spark-reports/monitoring_tools.svg)
+![monitoring_tools](svg/lectures/spark-reports/monitoring_tools.svg)
 
 ---
 ## Maintenance Tasks
@@ -159,7 +159,7 @@
 ---
 ## Data Governance
 
-![data_governance](/svg/lectures/spark-reports/data_governance.svg)
+![data_governance](svg/lectures/spark-reports/data_governance.svg)
 
 ---
 ## Best Practices
@@ -170,7 +170,7 @@
 ---
 ## Development Workflow
 
-![development_workflow](/svg/lectures/spark-reports/development_workflow.svg)
+![development_workflow](svg/lectures/spark-reports/development_workflow.svg)
 
 ---
 ## Scalability Features
@@ -181,7 +181,7 @@
 ---
 ## Data Pipeline Design
 
-![data_pipeline_design](/svg/lectures/spark-reports/data_pipeline_design.svg)
+![data_pipeline_design](svg/lectures/spark-reports/data_pipeline_design.svg)
 
 ---
 ## Version Control
@@ -198,7 +198,7 @@
 ---
 ## Troubleshooting Guide
 
-![troubleshooting_guide](/svg/lectures/spark-reports/troubleshooting_guide.svg)
+![troubleshooting_guide](svg/lectures/spark-reports/troubleshooting_guide.svg)
 
 ---
 ## Performance Tuning
@@ -209,7 +209,7 @@
 ---
 ## Deployment Options
 
-![deployment_options](/svg/lectures/spark-reports/deployment_options.svg)
+![deployment_options](svg/lectures/spark-reports/deployment_options.svg)
 
 ---
 ## Security Measures
@@ -220,7 +220,7 @@
 ---
 ## Testing Strategy
 
-![testing_strategy](/svg/lectures/spark-reports/testing_strategy.svg)
+![testing_strategy](svg/lectures/spark-reports/testing_strategy.svg)
 
 ---
 ## Monitoring Setup
@@ -231,7 +231,7 @@
 ---
 ## Resource Management
 
-![resource_management](/svg/lectures/spark-reports/resource_management.svg)
+![resource_management](svg/lectures/spark-reports/resource_management.svg)
 
 ---
 ## Data Lifecycle
@@ -242,7 +242,7 @@
 ---
 ## Quality Assurance
 
-![quality_assurance](/svg/lectures/spark-reports/quality_assurance.svg)
+![quality_assurance](svg/lectures/spark-reports/quality_assurance.svg)
 
 ---
 ## Performance Metrics
@@ -253,7 +253,7 @@
 ---
 ## Maintenance Procedures
 
-![maintenance_procedures](/svg/lectures/spark-reports/maintenance_procedures.svg)
+![maintenance_procedures](svg/lectures/spark-reports/maintenance_procedures.svg)
 
 ---
 ## Future Considerations

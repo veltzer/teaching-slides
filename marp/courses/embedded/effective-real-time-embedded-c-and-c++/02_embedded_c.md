@@ -174,7 +174,7 @@ const uint8_t lookup_table[256] = { /* ... */ };
 
 ## Bit Manipulation
 
-![bit_manipulation](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/02_embedded_c/bit_manipulation.svg)
+![bit_manipulation](svg/courses/embedded/effective-real-time-embedded-c-and-c++/02_embedded_c/bit_manipulation.svg)
 
 ---
 

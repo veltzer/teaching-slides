@@ -19,7 +19,7 @@
 - Python can handle both, but with different tools
 - Understanding the difference guides tool selection
 
-![concurrency_vs_parallelism_in_python](/svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/concurrency_vs_parallelism_in_python.svg)
+![concurrency_vs_parallelism_in_python](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/concurrency_vs_parallelism_in_python.svg)
 
 ---
 
@@ -42,7 +42,7 @@
 - Concurrent.futures: high-level abstraction for both threading and multiprocessing
 - Third-party libraries (Dask, Joblib, etc.)
 
-![python_concurrency_models](/svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/python_concurrency_models.svg)
+![python_concurrency_models](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/python_concurrency_models.svg)
 
 ---
 
@@ -152,7 +152,7 @@ for t in threads:
 - Blocked/Waiting: thread is waiting for resources/events
 - Terminated: thread execution completed
 
-![thread_lifecycle_in_python](/svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/thread_lifecycle_in_python.svg)
+![thread_lifecycle_in_python](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/thread_lifecycle_in_python.svg)
 
 ---
 
@@ -584,7 +584,7 @@ if __name__ == "__main__":  # Required for Windows
 - Process values are copied, not shared by default
 - Explicit sharing mechanisms needed for processes
 
-![process_vs_thread_memory_model](/svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/process_vs_thread_memory_model.svg)
+![process_vs_thread_memory_model](svg/courses/languages/python/advanced-python/20_multi_threading_multi_processing/process_vs_thread_memory_model.svg)
 
 ---
 

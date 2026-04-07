@@ -462,7 +462,7 @@ print(D.__mro__)
 ---
 ## MRO - C3 Linearization
 
-![mro_c3_linearization](/svg/courses/languages/python/python-programming/08_classes/mro_c3_linearization.svg)
+![mro_c3_linearization](svg/courses/languages/python/python-programming/08_classes/mro_c3_linearization.svg)
 
 - Python uses C3 linearization algorithm
 - Guarantees each class appears only once

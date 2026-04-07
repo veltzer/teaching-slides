@@ -22,7 +22,7 @@
 
 ## Autopsy Overview
 
-![autopsy_overview](/svg/courses/security/linux-forensics/13_reporting_tools/autopsy_overview.svg)
+![autopsy_overview](svg/courses/security/linux-forensics/13_reporting_tools/autopsy_overview.svg)
 
 ---
 
@@ -103,7 +103,7 @@ Creating a New Case:
 
 ## Autopsy File Analysis
 
-![autopsy_file_analysis](/svg/courses/security/linux-forensics/13_reporting_tools/autopsy_file_analysis.svg)
+![autopsy_file_analysis](svg/courses/security/linux-forensics/13_reporting_tools/autopsy_file_analysis.svg)
 
 ---
 
@@ -250,7 +250,7 @@ Generated HTML Report:
 
 ## Dradis Framework Overview
 
-![dradis_framework_overview](/svg/courses/security/linux-forensics/13_reporting_tools/dradis_framework_overview.svg)
+![dradis_framework_overview](svg/courses/security/linux-forensics/13_reporting_tools/dradis_framework_overview.svg)
 
 ---
 
@@ -417,7 +417,7 @@ Steps:
 
 ## Dradis Collaboration Features
 
-![dradis_collaboration_features](/svg/courses/security/linux-forensics/13_reporting_tools/dradis_collaboration_features.svg)
+![dradis_collaboration_features](svg/courses/security/linux-forensics/13_reporting_tools/dradis_collaboration_features.svg)
 
 ---
 
@@ -781,7 +781,7 @@ curl -X POST http://localhost:9000/api/case \
 
 ## MITRE ATT&CK Mapping in Reports
 
-![mitre_att_ck_mapping_in_reports](/svg/courses/security/linux-forensics/13_reporting_tools/mitre_att_ck_mapping_in_reports.svg)
+![mitre_att_ck_mapping_in_reports](svg/courses/security/linux-forensics/13_reporting_tools/mitre_att_ck_mapping_in_reports.svg)
 
 ---
 

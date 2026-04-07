@@ -14,7 +14,7 @@
 
 ## Security Layers
 
-![security_layers](/svg/courses/devops/k8s-introduction/12_security_and_rbac/security_layers.svg)
+![security_layers](svg/courses/devops/k8s-introduction/12_security_and_rbac/security_layers.svg)
 
 ---
 
@@ -61,7 +61,7 @@ spec:
 
 ## RBAC Components
 
-![rbac_components](/svg/courses/devops/k8s-introduction/12_security_and_rbac/rbac_components.svg)
+![rbac_components](svg/courses/devops/k8s-introduction/12_security_and_rbac/rbac_components.svg)
 
 ---
 
@@ -227,7 +227,7 @@ metadata:
 
 ## Pod Security Levels
 
-![pod_security_levels](/svg/courses/devops/k8s-introduction/12_security_and_rbac/pod_security_levels.svg)
+![pod_security_levels](svg/courses/devops/k8s-introduction/12_security_and_rbac/pod_security_levels.svg)
 
 ---
 
@@ -444,7 +444,7 @@ deny[msg] {
 
 ## Security Scanning Tools
 
-![security_scanning_tools](/svg/courses/devops/k8s-introduction/12_security_and_rbac/security_scanning_tools.svg)
+![security_scanning_tools](svg/courses/devops/k8s-introduction/12_security_and_rbac/security_scanning_tools.svg)
 
 ---
 

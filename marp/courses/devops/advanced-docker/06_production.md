@@ -19,7 +19,7 @@ Logging, monitoring, health checks, and lifecycle management
 
 ## Docker Logging Architecture
 
-![docker_logging_architecture](/svg/courses/devops/advanced-docker/06_production/docker_logging_architecture.svg)
+![docker_logging_architecture](svg/courses/devops/advanced-docker/06_production/docker_logging_architecture.svg)
 
 ---
 
@@ -893,7 +893,7 @@ services:
 
 ## Docker in Production - Anti-Patterns
 
-![docker_in_production_anti_patterns](/svg/courses/devops/advanced-docker/06_production/docker_in_production_anti_patterns.svg)
+![docker_in_production_anti_patterns](svg/courses/devops/advanced-docker/06_production/docker_in_production_anti_patterns.svg)
 
 ---
 

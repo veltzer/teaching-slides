@@ -11,7 +11,7 @@
 - Available in virtually every programming language
 - Two main types: **stream sockets** (TCP) and **datagram sockets** (UDP)
 
-![what_is_a_socket](/svg/courses/networking/networking-basics/06_socket_programming/what_is_a_socket.svg)
+![what_is_a_socket](svg/courses/networking/networking-basics/06_socket_programming/what_is_a_socket.svg)
 
 ---
 
@@ -19,11 +19,11 @@
 
 ### TCP Connection Lifecycle
 
-![tcp_connection_lifecycle](/svg/courses/networking/networking-basics/06_socket_programming/tcp_connection_lifecycle.svg)
+![tcp_connection_lifecycle](svg/courses/networking/networking-basics/06_socket_programming/tcp_connection_lifecycle.svg)
 
 ### UDP Communication (no connection)
 
-![udp_communication_no_connection](/svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
+![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
 
 ---
 
@@ -397,7 +397,7 @@ while inputs:
 | Platform | All POSIX + Windows | POSIX | Linux only |
 | Best for | Small number of FDs | Moderate FDs | Large scale servers |
 
-![select_vs_poll_vs_epoll](/svg/courses/networking/networking-basics/06_socket_programming/select_vs_poll_vs_epoll.svg)
+![select_vs_poll_vs_epoll](svg/courses/networking/networking-basics/06_socket_programming/select_vs_poll_vs_epoll.svg)
 
 ---
 

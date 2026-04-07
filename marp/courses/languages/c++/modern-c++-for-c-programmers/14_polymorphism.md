@@ -79,7 +79,7 @@ Database* db = new MySQLDatabase();  // OK: concrete implementation
 
 ## Benefits of Polymorphism
 
-![benefits_of_polymorphism](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/benefits_of_polymorphism.svg)
+![benefits_of_polymorphism](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/benefits_of_polymorphism.svg)
 
 1. Write once, use with multiple types
 1. Easy to add new implementations
@@ -112,7 +112,7 @@ Performance considerations:
 
 ## Virtual Function Mechanics
 
-![virtual_function_mechanics](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
+![virtual_function_mechanics](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
 
 Each object with virtual functions contains a pointer to its class's virtual table
 
@@ -151,7 +151,7 @@ protected:
 
 ## Template Method Benefits
 
-![template_method_benefits](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/template_method_benefits.svg)
+![template_method_benefits](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/template_method_benefits.svg)
 
 1. Eliminates code duplication
 1. Enforces consistent algorithm structure
@@ -246,7 +246,7 @@ SmartPtr<Shape> shape = circle;  // Safe upcast
 
 ## Conversion Safety
 
-![conversion_safety](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/conversion_safety.svg)
+![conversion_safety](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/conversion_safety.svg)
 
 Upward conversions (derived to base) are always safe
 Sideways conversions require runtime checks
@@ -312,7 +312,7 @@ class MyClass : public Counter<MyClass> {
 
 ## CRTP vs Virtual Functions
 
-![crtp_vs_virtual_functions](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
+![crtp_vs_virtual_functions](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
 
 Choose based on requirements: flexibility vs performance
 
@@ -374,7 +374,7 @@ void processShape(Shape* shape) {
 
 ## Static vs Dynamic Cast
 
-![static_vs_dynamic_cast](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
+![static_vs_dynamic_cast](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
 
 Use `dynamic_cast` for safe downcasting, `static_cast` when you're certain
 
@@ -599,7 +599,7 @@ double calculate(Operation& op, double x, double y) {
 
 ## Performance Considerations
 
-![performance_considerations](/svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
+![performance_considerations](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
 
 Consider performance vs flexibility trade-offs in critical code paths
 

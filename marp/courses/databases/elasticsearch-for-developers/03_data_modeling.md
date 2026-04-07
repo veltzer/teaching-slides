@@ -32,7 +32,7 @@ PUT /products
 
 ## Field Types Overview
 
-![field_types_overview](/svg/courses/databases/elasticsearch-for-developers/03_data_modeling/field_types_overview.svg)
+![field_types_overview](svg/courses/databases/elasticsearch-for-developers/03_data_modeling/field_types_overview.svg)
 
 ---
 
@@ -203,7 +203,7 @@ Maintains array relationships
 
 ## Object vs Nested
 
-![object_vs_nested](/svg/courses/databases/elasticsearch-for-developers/03_data_modeling/object_vs_nested.svg)
+![object_vs_nested](svg/courses/databases/elasticsearch-for-developers/03_data_modeling/object_vs_nested.svg)
 
 ---
 

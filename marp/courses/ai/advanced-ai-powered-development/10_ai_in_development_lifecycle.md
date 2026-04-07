@@ -32,7 +32,7 @@ criteria:
 
 ## AI-Assisted Planning: Architecture Exploration
 
-![ai_assisted_planning_architecture_exploration](/svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_assisted_planning_architecture_exploration.svg)
+![ai_assisted_planning_architecture_exploration](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_assisted_planning_architecture_exploration.svg)
 
 - AI proposes multiple architecture options with tradeoff analysis
 - Evaluates against non-functional requirements (latency, scale, cost)
@@ -380,7 +380,7 @@ applitools:
 
 ## AI in CI/CD: Automated PR Checks
 
-![ai_in_ci_cd_automated_pr_checks](/svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_in_ci_cd_automated_pr_checks.svg)
+![ai_in_ci_cd_automated_pr_checks](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_in_ci_cd_automated_pr_checks.svg)
 
 - AI assigns a **risk score** to each PR based on:
     - Files changed (config, auth, payments = high risk)
@@ -534,7 +534,7 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
-![measuring_ai_impact_on_development_velocity](/svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/measuring_ai_impact_on_development_velocity.svg)
+![measuring_ai_impact_on_development_velocity](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/measuring_ai_impact_on_development_velocity.svg)
 
 - Measure at team level, not individual level, to avoid gaming
 - Track developer satisfaction alongside productivity metrics
@@ -669,7 +669,7 @@ sub_tasks:
 
 ## Continuous AI Integration Patterns
 
-![continuous_ai_integration_patterns](/svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/continuous_ai_integration_patterns.svg)
+![continuous_ai_integration_patterns](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/continuous_ai_integration_patterns.svg)
 
 - **Pattern 1: Gate-based** - AI runs as a required CI check before merge
 - **Pattern 2: Advisory** - AI posts suggestions as non-blocking comments
@@ -710,7 +710,7 @@ portal:
 
 ## Putting It All Together
 
-![putting_it_all_together](/svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/putting_it_all_together.svg)
+![putting_it_all_together](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/putting_it_all_together.svg)
 
 - AI is not a single tool but a **layer** across the entire lifecycle
 - Each phase benefits from AI while keeping humans in the decision loop

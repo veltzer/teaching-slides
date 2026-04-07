@@ -13,7 +13,7 @@
 - May lead to lost work
 ---
 ## History Rewriting Commands
-![history_rewriting_commands](/svg/courses/git/git/04_undoing_changes/history_rewriting_commands.svg)
+![history_rewriting_commands](svg/courses/git/git/04_undoing_changes/history_rewriting_commands.svg)
 
 ---
 ## Git Commit Amend
@@ -36,7 +36,7 @@ git commit --amend
 - Use with extreme caution
 ---
 ## Reset Variations
-![reset_variations](/svg/courses/git/git/04_undoing_changes/reset_variations.svg)
+![reset_variations](svg/courses/git/git/04_undoing_changes/reset_variations.svg)
 
 ---
 ## Git Revert
@@ -76,7 +76,7 @@ git commit --amend
 - Common workflow tools
 ---
 ## Splitting Past Changes
-![splitting_past_changes](/svg/courses/git/git/04_undoing_changes/splitting_past_changes.svg)
+![splitting_past_changes](svg/courses/git/git/04_undoing_changes/splitting_past_changes.svg)
 
 ---
 ## Using Interactive Rebase

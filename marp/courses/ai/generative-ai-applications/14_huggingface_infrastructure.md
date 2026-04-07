@@ -4,7 +4,7 @@
 
 ## The HuggingFace Ecosystem
 
-![the_huggingface_ecosystem](/svg/courses/ai/generative-ai-applications/14_huggingface_infrastructure/the_huggingface_ecosystem.svg)
+![the_huggingface_ecosystem](svg/courses/ai/generative-ai-applications/14_huggingface_infrastructure/the_huggingface_ecosystem.svg)
 
 ---
 

@@ -91,7 +91,7 @@ locals {
 
 ## Function Categories
 
-![function_categories](/svg/courses/devops/terraform/10_functions/function_categories.svg)
+![function_categories](svg/courses/devops/terraform/10_functions/function_categories.svg)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Packer Use Case Overview
 
-![packer_use_case_overview](/svg/courses/devops/terraform/15_packer_use_cases/packer_use_case_overview.svg)
+![packer_use_case_overview](svg/courses/devops/terraform/15_packer_use_cases/packer_use_case_overview.svg)
 
 ---
 
@@ -286,7 +286,7 @@ resource "aws_launch_template" "web" {
 
 ## Blue-Green Deployment with Packer
 
-![blue_green_deployment_with_packer](/svg/courses/devops/terraform/15_packer_use_cases/blue_green_deployment_with_packer.svg)
+![blue_green_deployment_with_packer](svg/courses/devops/terraform/15_packer_use_cases/blue_green_deployment_with_packer.svg)
 
 ---
 
@@ -584,7 +584,7 @@ resource "aws_instance" "web" {
 
 ## Image Pipeline Best Practices
 
-![image_pipeline_best_practices](/svg/courses/devops/terraform/15_packer_use_cases/image_pipeline_best_practices.svg)
+![image_pipeline_best_practices](svg/courses/devops/terraform/15_packer_use_cases/image_pipeline_best_practices.svg)
 
 - Build images in layers
 - Base image updated monthly for security patches
@@ -710,7 +710,7 @@ file:
 
 ## Immutable Infrastructure Pattern
 
-![immutable_infrastructure_pattern](/svg/courses/devops/terraform/15_packer_use_cases/immutable_infrastructure_pattern.svg)
+![immutable_infrastructure_pattern](svg/courses/devops/terraform/15_packer_use_cases/immutable_infrastructure_pattern.svg)
 
 ---
 

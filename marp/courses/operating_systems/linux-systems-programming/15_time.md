@@ -30,7 +30,7 @@ Time is surprisingly complex in computing!
 
 ## Time Representations in Linux
 
-![time_representations_in_linux](/svg/courses/operating_systems/linux-systems-programming/15_time/time_representations_in_linux.svg)
+![time_representations_in_linux](svg/courses/operating_systems/linux-systems-programming/15_time/time_representations_in_linux.svg)
 
 ---
 
@@ -209,7 +209,7 @@ void check_clock_resolution() {
 
 ## vDSO - Virtual Dynamic Shared Object
 
-![vdso_virtual_dynamic_shared_object](/svg/courses/operating_systems/linux-systems-programming/15_time/vdso_virtual_dynamic_shared_object.svg)
+![vdso_virtual_dynamic_shared_object](svg/courses/operating_systems/linux-systems-programming/15_time/vdso_virtual_dynamic_shared_object.svg)
 
 ---
 
@@ -538,7 +538,7 @@ void measure_cpu_time() {
 
 ## Timer Implementation Comparison
 
-![timer_implementation_comparison](/svg/courses/operating_systems/linux-systems-programming/15_time/timer_implementation_comparison.svg)
+![timer_implementation_comparison](svg/courses/operating_systems/linux-systems-programming/15_time/timer_implementation_comparison.svg)
 
 ---
 
@@ -699,7 +699,7 @@ void timezone_examples() {
 
 ## Monotonic vs Real Time Clocks
 
-![monotonic_vs_real_time_clocks](/svg/courses/operating_systems/linux-systems-programming/15_time/monotonic_vs_real_time_clocks.svg)
+![monotonic_vs_real_time_clocks](svg/courses/operating_systems/linux-systems-programming/15_time/monotonic_vs_real_time_clocks.svg)
 
 ---
 

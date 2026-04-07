@@ -17,7 +17,7 @@
 
 ## What are Namespaces
 
-![what_are_namespaces](/svg/courses/networking/linux-networking-overview/09_namespaces/what_are_namespaces.svg)
+![what_are_namespaces](svg/courses/networking/linux-networking-overview/09_namespaces/what_are_namespaces.svg)
 
 ---
 
@@ -114,7 +114,7 @@ ip netns exec myns ip addr add 10.0.0.2/24 dev veth1
 
 ## Namespace Networking
 
-![namespace_networking](/svg/courses/networking/linux-networking-overview/09_namespaces/namespace_networking.svg)
+![namespace_networking](svg/courses/networking/linux-networking-overview/09_namespaces/namespace_networking.svg)
 
 ---
 
@@ -220,7 +220,7 @@ echo "10" > /sys/fs/cgroup/net_prio/mygroup/net_prio.priority
 
 ## Traffic Control Integration
 
-![traffic_control_integration](/svg/courses/networking/linux-networking-overview/09_namespaces/traffic_control_integration.svg)
+![traffic_control_integration](svg/courses/networking/linux-networking-overview/09_namespaces/traffic_control_integration.svg)
 
 ---
 
@@ -263,7 +263,7 @@ ip netns exec myns tcpdump -i any
 
 ## Container Integration
 
-![container_integration](/svg/courses/networking/linux-networking-overview/09_namespaces/container_integration.svg)
+![container_integration](svg/courses/networking/linux-networking-overview/09_namespaces/container_integration.svg)
 
 ---
 

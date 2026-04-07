@@ -130,7 +130,7 @@ when you hover:   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## Spam Filtering
 
 ## How It Works
-![how_it_works](/svg/courses/security/it-security-policies/03_email_security/how_it_works.svg)
+![how_it_works](svg/courses/security/it-security-policies/03_email_security/how_it_works.svg)
 
 - Spam filters catch most threats, but not all
 - Check your spam folder occasionally for legitimate emails

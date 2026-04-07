@@ -5,7 +5,7 @@
 
 ## Basic File Operations
 
-![basic_file_operations](/svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/basic_file_operations.svg)
+![basic_file_operations](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/basic_file_operations.svg)
 
 ---
 
@@ -45,7 +45,7 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 
 ## Viewing File Contents
 
-![viewing_file_contents](/svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/viewing_file_contents.svg)
+![viewing_file_contents](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/viewing_file_contents.svg)
 
 Examples:
 
@@ -97,7 +97,7 @@ mv old_dir new_dir
 
 ## Disk Usage Commands
 
-![disk_usage_commands](/svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/disk_usage_commands.svg)
+![disk_usage_commands](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/disk_usage_commands.svg)
 
 Examples:
 
@@ -176,7 +176,7 @@ sort file.txt | uniq -d
 
 ## Finding Files
 
-![finding_files](/svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/finding_files.svg)
+![finding_files](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/finding_files.svg)
 
 Examples:
 

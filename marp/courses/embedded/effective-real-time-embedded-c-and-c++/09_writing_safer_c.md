@@ -14,7 +14,7 @@
 
 ## Why Safety Matters
 
-![why_safety_matters](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/09_writing_safer_c/why_safety_matters.svg)
+![why_safety_matters](svg/courses/embedded/effective-real-time-embedded-c-and-c++/09_writing_safer_c/why_safety_matters.svg)
 
 ---
 

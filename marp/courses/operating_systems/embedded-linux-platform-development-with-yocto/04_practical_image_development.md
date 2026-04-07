@@ -4,7 +4,7 @@
 
 ## Image Development Workflow
 
-![image_development_workflow](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/image_development_workflow.svg)
+![image_development_workflow](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/image_development_workflow.svg)
 
 ---
 
@@ -191,7 +191,7 @@ PACKAGECONFIG_append = "${@bb.utils.contains('MACHINE_FEATURES', 'bluetooth', ' 
 
 ## QEMU Development
 
-![qemu_development](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/qemu_development.svg)
+![qemu_development](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/qemu_development.svg)
 
 ---
 
@@ -344,7 +344,7 @@ wic create sdimage-bootpart -e core-image-minimal
 
 ## Partition Layout
 
-![partition_layout](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/partition_layout.svg)
+![partition_layout](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/04_practical_image_development/partition_layout.svg)
 
 ---
 

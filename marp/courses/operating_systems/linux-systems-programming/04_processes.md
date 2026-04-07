@@ -29,7 +29,7 @@ Every command you run creates a process!
 
 ## Process Components
 
-![process_components](/svg/courses/operating_systems/linux-systems-programming/04_processes/process_components.svg)
+![process_components](svg/courses/operating_systems/linux-systems-programming/04_processes/process_components.svg)
 
 ---
 
@@ -91,7 +91,7 @@ cat /proc/$$/stat
 
 ## Init System Evolution
 
-![init_system_evolution](/svg/courses/operating_systems/linux-systems-programming/04_processes/init_system_evolution.svg)
+![init_system_evolution](svg/courses/operating_systems/linux-systems-programming/04_processes/init_system_evolution.svg)
 
 ---
 
@@ -111,7 +111,7 @@ cat /proc/$$/stat
 
 ## Systemd Architecture
 
-![systemd_architecture](/svg/courses/operating_systems/linux-systems-programming/04_processes/systemd_architecture.svg)
+![systemd_architecture](svg/courses/operating_systems/linux-systems-programming/04_processes/systemd_architecture.svg)
 
 ---
 
@@ -304,7 +304,7 @@ int main() {
 
 ## How fork() Works
 
-![how_fork_works](/svg/courses/operating_systems/linux-systems-programming/04_processes/how_fork_works.svg)
+![how_fork_works](svg/courses/operating_systems/linux-systems-programming/04_processes/how_fork_works.svg)
 
 ---
 
@@ -410,7 +410,7 @@ if (pid > 0) {
 
 ## Process State Transitions
 
-![process_state_transitions](/svg/courses/operating_systems/linux-systems-programming/04_processes/process_state_transitions.svg)
+![process_state_transitions](svg/courses/operating_systems/linux-systems-programming/04_processes/process_state_transitions.svg)
 
 ---
 

@@ -21,7 +21,7 @@ HSET user:123 visits 10 name "John"  # Atomic - all fields are set or none
 
 Single atomic commands aren't always enough:
 
-![need_for_transactions](/svg/courses/databases/redis/05_transactions/need_for_transactions.svg)
+![need_for_transactions](svg/courses/databases/redis/05_transactions/need_for_transactions.svg)
 
 ---
 
@@ -36,7 +36,7 @@ Redis transactions allow executing multiple commands as a single atomic operatio
 
 \* With some caveats we'll discuss
 
-![what_are_redis_transactions](/svg/courses/databases/redis/05_transactions/what_are_redis_transactions.svg)
+![what_are_redis_transactions](svg/courses/databases/redis/05_transactions/what_are_redis_transactions.svg)
 
 ---
 
@@ -62,7 +62,7 @@ DISCARD
 
 ## Redis Transaction Example
 
-![redis_transaction_example](/svg/courses/databases/redis/05_transactions/redis_transaction_example.svg)
+![redis_transaction_example](svg/courses/databases/redis/05_transactions/redis_transaction_example.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Unlike traditional RDBMS transactions:
 
 ## Error Handling in Transactions
 
-![error_handling_in_transactions](/svg/courses/databases/redis/05_transactions/error_handling_in_transactions.svg)
+![error_handling_in_transactions](svg/courses/databases/redis/05_transactions/error_handling_in_transactions.svg)
 
 ---
 
@@ -108,7 +108,7 @@ UNWATCH               # Cancel watching (also happens after EXEC/DISCARD)
 
 ## WATCH Example
 
-![watch_example](/svg/courses/databases/redis/05_transactions/watch_example.svg)
+![watch_example](svg/courses/databases/redis/05_transactions/watch_example.svg)
 
 ---
 
@@ -396,7 +396,7 @@ Scripts execute with high privileges:
 
 Scripts work differently in distributed Redis:
 
-![script_replication_and_clustering](/svg/courses/databases/redis/05_transactions/script_replication_and_clustering.svg)
+![script_replication_and_clustering](svg/courses/databases/redis/05_transactions/script_replication_and_clustering.svg)
 
 - Scripts must be deterministic for replication
 - In cluster mode, all keys must be in same slot
@@ -426,7 +426,7 @@ Scripts work differently in distributed Redis:
 
 ## Lua Script vs. MULTI/EXEC
 
-![lua_script_vs_multi_exec](/svg/courses/databases/redis/05_transactions/lua_script_vs_multi_exec.svg)
+![lua_script_vs_multi_exec](svg/courses/databases/redis/05_transactions/lua_script_vs_multi_exec.svg)
 
 ---
 

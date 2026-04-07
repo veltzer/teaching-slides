@@ -13,7 +13,7 @@
 
 ## The Three Pillars of Observability
 
-![the_three_pillars_of_observability](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/the_three_pillars_of_observability.svg)
+![the_three_pillars_of_observability](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/the_three_pillars_of_observability.svg)
 
 ---
 
@@ -132,7 +132,7 @@
 
 ## Push vs Pull Collection Models
 
-![push_vs_pull_collection_models](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/push_vs_pull_collection_models.svg)
+![push_vs_pull_collection_models](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/push_vs_pull_collection_models.svg)
 
 ---
 
@@ -291,7 +291,7 @@ service:
 
 ## Alerting Strategy Overview
 
-![alerting_strategy_overview](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/alerting_strategy_overview.svg)
+![alerting_strategy_overview](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/alerting_strategy_overview.svg)
 
 ---
 
@@ -355,7 +355,7 @@ groups:
 
 ## SLO Hierarchy
 
-![slo_hierarchy](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/slo_hierarchy.svg)
+![slo_hierarchy](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/slo_hierarchy.svg)
 
 ---
 
@@ -433,7 +433,7 @@ groups:
 
 ## Escalation Flow
 
-![escalation_flow](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/escalation_flow.svg)
+![escalation_flow](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/escalation_flow.svg)
 
 ---
 
@@ -457,7 +457,7 @@ annotations:
 
 ## Observability Data Pipeline
 
-![observability_data_pipeline](/svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/observability_data_pipeline.svg)
+![observability_data_pipeline](svg/courses/devops/architectural-decisions-in-devops/11_observability_architecture/observability_data_pipeline.svg)
 
 ---
 

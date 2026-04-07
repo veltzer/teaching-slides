@@ -3,7 +3,7 @@
 ---
 ## Seven File Types in UNIX
 
-![seven_file_types_in_unix](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/seven_file_types_in_unix.svg)
+![seven_file_types_in_unix](svg/courses/operating_systems/linux-fundamentals/06_file_detail/seven_file_types_in_unix.svg)
 
 First character in ls -l output indicates type:
 
@@ -42,7 +42,7 @@ Common types:
 ---
 ## Directories (d)
 
-![directories_d](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/directories_d.svg)
+![directories_d](svg/courses/operating_systems/linux-fundamentals/06_file_detail/directories_d.svg)
 
 ```bash
 # Create directory
@@ -84,7 +84,7 @@ ls -l /dev/null   # Null device
 ---
 ## Symbolic Links (l)
 
-![symbolic_links_l](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/symbolic_links_l.svg)
+![symbolic_links_l](svg/courses/operating_systems/linux-fundamentals/06_file_detail/symbolic_links_l.svg)
 
 ```bash
 # Create symbolic link
@@ -127,7 +127,7 @@ cat < mypipe
 ---
 ## The INODE Concept
 
-![the_inode_concept](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/the_inode_concept.svg)
+![the_inode_concept](svg/courses/operating_systems/linux-fundamentals/06_file_detail/the_inode_concept.svg)
 
 Inode contains:
 - File type
@@ -167,7 +167,7 @@ Example output:
 ---
 ## Hard Links vs Symbolic Links
 
-![hard_links_vs_symbolic_links](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/hard_links_vs_symbolic_links.svg)
+![hard_links_vs_symbolic_links](svg/courses/operating_systems/linux-fundamentals/06_file_detail/hard_links_vs_symbolic_links.svg)
 
 Creating Links:
 
@@ -266,7 +266,7 @@ ln -s /absolute/path/target.txt abslink.txt
 ---
 ## File System Layout
 
-![file_system_layout](/svg/courses/operating_systems/linux-fundamentals/06_file_detail/file_system_layout.svg)
+![file_system_layout](svg/courses/operating_systems/linux-fundamentals/06_file_detail/file_system_layout.svg)
 
 Key components:
 - Superblock: File system metadata

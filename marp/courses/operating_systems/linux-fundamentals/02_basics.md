@@ -3,7 +3,7 @@
 ---
 ## Logging In and Out
 
-![logging_in_and_out](/svg/courses/operating_systems/linux-fundamentals/02_basics/logging_in_and_out.svg)
+![logging_in_and_out](svg/courses/operating_systems/linux-fundamentals/02_basics/logging_in_and_out.svg)
 
 Common commands:
 
@@ -27,7 +27,7 @@ passwd -S
 chage -d 0 username
 ```
 
-![force_password_change_on_next_login_root_only](/svg/courses/operating_systems/linux-fundamentals/02_basics/force_password_change_on_next_login_root_only.svg)
+![force_password_change_on_next_login_root_only](svg/courses/operating_systems/linux-fundamentals/02_basics/force_password_change_on_next_login_root_only.svg)
 
 ---
 ## Command Structure
@@ -46,7 +46,7 @@ cp -r source_dir destination_dir
 find /home -name "*.txt"
 ```
 
-![command_structure](/svg/courses/operating_systems/linux-fundamentals/02_basics/command_structure.svg)
+![command_structure](svg/courses/operating_systems/linux-fundamentals/02_basics/command_structure.svg)
 
 ---
 ## Simple Commands
@@ -90,12 +90,12 @@ apropos "list files"
 type ls
 ```
 
-![view_command_type](/svg/courses/operating_systems/linux-fundamentals/02_basics/view_command_type.svg)
+![view_command_type](svg/courses/operating_systems/linux-fundamentals/02_basics/view_command_type.svg)
 
 ---
 ## Control Characters
 
-![control_characters](/svg/courses/operating_systems/linux-fundamentals/02_basics/control_characters.svg)
+![control_characters](svg/courses/operating_systems/linux-fundamentals/02_basics/control_characters.svg)
 
 Common control characters:
 | Key      | Function          |
@@ -109,7 +109,7 @@ Common control characters:
 ---
 ## Command Line Editing
 
-![command_line_editing](/svg/courses/operating_systems/linux-fundamentals/02_basics/command_line_editing.svg)
+![command_line_editing](svg/courses/operating_systems/linux-fundamentals/02_basics/command_line_editing.svg)
 
 Navigation shortcuts:
 
@@ -148,7 +148,7 @@ mv backup_notes.txt ../notes_backup.txt
 ---
 ## Common Mistakes and Solutions
 
-![common_mistakes_and_solutions](/svg/courses/operating_systems/linux-fundamentals/02_basics/common_mistakes_and_solutions.svg)
+![common_mistakes_and_solutions](svg/courses/operating_systems/linux-fundamentals/02_basics/common_mistakes_and_solutions.svg)
 
 Solutions:
 

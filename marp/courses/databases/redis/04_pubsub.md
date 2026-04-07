@@ -15,13 +15,13 @@
 
 ## Pub/Sub Pattern
 
-![pub_sub_pattern](/svg/courses/databases/redis/04_pubsub/pub_sub_pattern.svg)
+![pub_sub_pattern](svg/courses/databases/redis/04_pubsub/pub_sub_pattern.svg)
 
 ---
 
 ## Pub/Sub vs. Other Communication Patterns
 
-![pub_sub_vs_other_communication_patterns](/svg/courses/databases/redis/04_pubsub/pub_sub_vs_other_communication_patterns.svg)
+![pub_sub_vs_other_communication_patterns](svg/courses/databases/redis/04_pubsub/pub_sub_vs_other_communication_patterns.svg)
 
 ---
 
@@ -94,7 +94,7 @@ PUBSUB NUMPAT
 
 ## Basic Pub/Sub Example
 
-![basic_pub_sub_example](/svg/courses/databases/redis/04_pubsub/basic_pub_sub_example.svg)
+![basic_pub_sub_example](svg/courses/databases/redis/04_pubsub/basic_pub_sub_example.svg)
 
 ---
 
@@ -218,25 +218,25 @@ setTimeout(() => {
 
 ## Pub/Sub Use Case: Chat System
 
-![pub_sub_use_case_chat_system](/svg/courses/databases/redis/04_pubsub/pub_sub_use_case_chat_system.svg)
+![pub_sub_use_case_chat_system](svg/courses/databases/redis/04_pubsub/pub_sub_use_case_chat_system.svg)
 
 ---
 
 ## Pub/Sub Use Case: Real-time Dashboard
 
-![pub_sub_use_case_real_time_dashboard](/svg/courses/databases/redis/04_pubsub/pub_sub_use_case_real_time_dashboard.svg)
+![pub_sub_use_case_real_time_dashboard](svg/courses/databases/redis/04_pubsub/pub_sub_use_case_real_time_dashboard.svg)
 
 ---
 
 ## Pub/Sub Use Case: Cache Invalidation
 
-![pub_sub_use_case_cache_invalidation](/svg/courses/databases/redis/04_pubsub/pub_sub_use_case_cache_invalidation.svg)
+![pub_sub_use_case_cache_invalidation](svg/courses/databases/redis/04_pubsub/pub_sub_use_case_cache_invalidation.svg)
 
 ---
 
 ## Pub/Sub Use Case: Microservices Communication
 
-![pub_sub_use_case_microservices_communication](/svg/courses/databases/redis/04_pubsub/pub_sub_use_case_microservices_communication.svg)
+![pub_sub_use_case_microservices_communication](svg/courses/databases/redis/04_pubsub/pub_sub_use_case_microservices_communication.svg)
 
 ---
 
@@ -260,7 +260,7 @@ Since Redis Pub/Sub offers no persistence:
 
 ## Message Acknowledgment Pattern
 
-![message_acknowledgment_pattern](/svg/courses/databases/redis/04_pubsub/message_acknowledgment_pattern.svg)
+![message_acknowledgment_pattern](svg/courses/databases/redis/04_pubsub/message_acknowledgment_pattern.svg)
 
 ---
 
@@ -268,7 +268,7 @@ Since Redis Pub/Sub offers no persistence:
 
 Use Redis Pub/Sub for Redis Sentinel events:
 
-![sentinel_events_with_pub_sub](/svg/courses/databases/redis/04_pubsub/sentinel_events_with_pub_sub.svg)
+![sentinel_events_with_pub_sub](svg/courses/databases/redis/04_pubsub/sentinel_events_with_pub_sub.svg)
 
 ---
 
@@ -280,7 +280,7 @@ Streams (introduced in Redis 5.0):
 - Support consumer groups
 - Perfect complement to Pub/Sub
 
-![introduction_to_redis_streams](/svg/courses/databases/redis/04_pubsub/introduction_to_redis_streams.svg)
+![introduction_to_redis_streams](svg/courses/databases/redis/04_pubsub/introduction_to_redis_streams.svg)
 
 ---
 
@@ -322,19 +322,19 @@ XCLAIM key group consumer min-idle-time ID [ID ...]
 
 ## Streams vs Pub/Sub: When to Use What
 
-![streams_vs_pub_sub_when_to_use_what](/svg/courses/databases/redis/04_pubsub/streams_vs_pub_sub_when_to_use_what.svg)
+![streams_vs_pub_sub_when_to_use_what](svg/courses/databases/redis/04_pubsub/streams_vs_pub_sub_when_to_use_what.svg)
 
 ---
 
 ## Combining Pub/Sub with Streams
 
-![combining_pub_sub_with_streams](/svg/courses/databases/redis/04_pubsub/combining_pub_sub_with_streams.svg)
+![combining_pub_sub_with_streams](svg/courses/databases/redis/04_pubsub/combining_pub_sub_with_streams.svg)
 
 ---
 
 ## Scaling Pub/Sub with Redis Cluster
 
-![scaling_pub_sub_with_redis_cluster](/svg/courses/databases/redis/04_pubsub/scaling_pub_sub_with_redis_cluster.svg)
+![scaling_pub_sub_with_redis_cluster](svg/courses/databases/redis/04_pubsub/scaling_pub_sub_with_redis_cluster.svg)
 
 ---
 
@@ -403,13 +403,13 @@ Security practices:
 
 ## Implementing a Notification System
 
-![implementing_a_notification_system](/svg/courses/databases/redis/04_pubsub/implementing_a_notification_system.svg)
+![implementing_a_notification_system](svg/courses/databases/redis/04_pubsub/implementing_a_notification_system.svg)
 
 ---
 
 ## Real-time Metrics with Pub/Sub
 
-![real_time_metrics_with_pub_sub](/svg/courses/databases/redis/04_pubsub/real_time_metrics_with_pub_sub.svg)
+![real_time_metrics_with_pub_sub](svg/courses/databases/redis/04_pubsub/real_time_metrics_with_pub_sub.svg)
 
 ---
 

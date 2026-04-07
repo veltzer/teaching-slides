@@ -14,7 +14,7 @@
 
 ## Sources of Information Leakage
 
-![sources_of_information_leakage](/svg/courses/security/working-with-llms-securely/07_sensitive_information_disclosure/sources_of_information_leakage.svg)
+![sources_of_information_leakage](svg/courses/security/working-with-llms-securely/07_sensitive_information_disclosure/sources_of_information_leakage.svg)
 
 ---
 

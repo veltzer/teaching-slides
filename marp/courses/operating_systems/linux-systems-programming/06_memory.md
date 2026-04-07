@@ -16,7 +16,7 @@
 
 ## Process Memory Layout
 
-![process_memory_layout](/svg/courses/operating_systems/linux-systems-programming/06_memory/process_memory_layout.svg)
+![process_memory_layout](svg/courses/operating_systems/linux-systems-programming/06_memory/process_memory_layout.svg)
 
 ---
 
@@ -78,7 +78,7 @@ void free(void *ptr);
 
 ## malloc() Internals
 
-![malloc_internals](/svg/courses/operating_systems/linux-systems-programming/06_memory/malloc_internals.svg)
+![malloc_internals](svg/courses/operating_systems/linux-systems-programming/06_memory/malloc_internals.svg)
 
 ---
 
@@ -116,7 +116,7 @@ void free(void *ptr);
 
 ## Memory Fragmentation
 
-![memory_fragmentation](/svg/courses/operating_systems/linux-systems-programming/06_memory/memory_fragmentation.svg)
+![memory_fragmentation](svg/courses/operating_systems/linux-systems-programming/06_memory/memory_fragmentation.svg)
 
 ---
 
@@ -407,7 +407,7 @@ void *my_data = pthread_getspecific(key);
 
 ## TLS Implementation
 
-![tls_implementation](/svg/courses/operating_systems/linux-systems-programming/06_memory/tls_implementation.svg)
+![tls_implementation](svg/courses/operating_systems/linux-systems-programming/06_memory/tls_implementation.svg)
 
 ---
 
@@ -682,7 +682,7 @@ void overflow() {
 
 ## Memory Allocator Comparison
 
-![memory_allocator_comparison](/svg/courses/operating_systems/linux-systems-programming/06_memory/memory_allocator_comparison.svg)
+![memory_allocator_comparison](svg/courses/operating_systems/linux-systems-programming/06_memory/memory_allocator_comparison.svg)
 
 ---
 

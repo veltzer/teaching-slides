@@ -14,7 +14,7 @@
 
 ## Why Helm?
 
-![why_helm](/svg/courses/devops/k8s-introduction/14_helm_and_gitops/why_helm.svg)
+![why_helm](svg/courses/devops/k8s-introduction/14_helm_and_gitops/why_helm.svg)
 
 ---
 
@@ -332,7 +332,7 @@ helm secrets edit values-secret.yaml
 
 ## GitOps Principles
 
-![gitops_principles](/svg/courses/devops/k8s-introduction/14_helm_and_gitops/gitops_principles.svg)
+![gitops_principles](svg/courses/devops/k8s-introduction/14_helm_and_gitops/gitops_principles.svg)
 
 ---
 
@@ -533,7 +533,7 @@ configMapGenerator:
 
 ## Deployment Strategies
 
-![deployment_strategies](/svg/courses/devops/k8s-introduction/14_helm_and_gitops/deployment_strategies.svg)
+![deployment_strategies](svg/courses/devops/k8s-introduction/14_helm_and_gitops/deployment_strategies.svg)
 
 ---
 

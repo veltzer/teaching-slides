@@ -111,12 +111,12 @@
 ---
 ## Case Study: xz-utils Backdoor (2024)
 
-![case_study_xz_utils_backdoor_2024](/svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/case_study_xz_utils_backdoor_2024.svg)
+![case_study_xz_utils_backdoor_2024](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/case_study_xz_utils_backdoor_2024.svg)
 
 ---
 ## Dependency Confusion
 
-![dependency_confusion](/svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/dependency_confusion.svg)
+![dependency_confusion](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/dependency_confusion.svg)
 
 ---
 ## Dependency Confusion Defense
@@ -356,7 +356,7 @@ npm publish --provenance
 ---
 ## SLSA Framework (Supply-chain Levels for Software Artifacts)
 
-![slsa_framework_supply_chain_levels_for_software_artifacts](/svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/slsa_framework_supply_chain_levels_for_software_artifacts.svg)
+![slsa_framework_supply_chain_levels_for_software_artifacts](svg/courses/security/cyber-attacks-and-vectors/25_supply_chain_attacks/slsa_framework_supply_chain_levels_for_software_artifacts.svg)
 
 ---
 ## Practical Defense Checklist

@@ -67,7 +67,7 @@ git config --list
 
 ## Creating a Repository
 
-![creating_a_repository](/svg/courses/git/git2/02_basics/creating_a_repository.svg)
+![creating_a_repository](svg/courses/git/git2/02_basics/creating_a_repository.svg)
 
 ---
 
@@ -110,7 +110,7 @@ drwxr-xr-x  7 user user 4096 Jan 15 10:00 .git
 
 ## Understanding Working Directory
 
-![understanding_working_directory](/svg/courses/git/git2/02_basics/understanding_working_directory.svg)
+![understanding_working_directory](svg/courses/git/git2/02_basics/understanding_working_directory.svg)
 
 ---
 
@@ -159,7 +159,7 @@ A  new.js       # New file, staged
 
 ## The Staging Area (Index)
 
-![the_staging_area_index](/svg/courses/git/git2/02_basics/the_staging_area_index.svg)
+![the_staging_area_index](svg/courses/git/git2/02_basics/the_staging_area_index.svg)
 
 ---
 
@@ -269,7 +269,7 @@ git add new_name.txt
 
 ## Undoing Staged Changes
 
-![undoing_staged_changes](/svg/courses/git/git2/02_basics/undoing_staged_changes.svg)
+![undoing_staged_changes](svg/courses/git/git2/02_basics/undoing_staged_changes.svg)
 
 ---
 
@@ -344,7 +344,7 @@ git commit -S -m "Signed commit"
 
 ## Writing Good Commit Messages
 
-![writing_good_commit_messages](/svg/courses/git/git2/02_basics/writing_good_commit_messages.svg)
+![writing_good_commit_messages](svg/courses/git/git2/02_basics/writing_good_commit_messages.svg)
 
 ---
 
@@ -476,7 +476,7 @@ git grep "pattern" HEAD~3
 
 ## Understanding References
 
-![understanding_references](/svg/courses/git/git2/02_basics/understanding_references.svg)
+![understanding_references](svg/courses/git/git2/02_basics/understanding_references.svg)
 
 ---
 
@@ -523,7 +523,7 @@ git checkout -- file.txt
 
 ## The Reset Command
 
-![the_reset_command](/svg/courses/git/git2/02_basics/the_reset_command.svg)
+![the_reset_command](svg/courses/git/git2/02_basics/the_reset_command.svg)
 
 ---
 
@@ -599,7 +599,7 @@ git stash apply stash@{2}
 
 ## Working with Stash
 
-![working_with_stash](/svg/courses/git/git2/02_basics/working_with_stash.svg)
+![working_with_stash](svg/courses/git/git2/02_basics/working_with_stash.svg)
 
 ---
 
@@ -679,7 +679,7 @@ doc/**/*.txt
 
 ## Gitignore Patterns
 
-![gitignore_patterns](/svg/courses/git/git2/02_basics/gitignore_patterns.svg)
+![gitignore_patterns](svg/courses/git/git2/02_basics/gitignore_patterns.svg)
 
 ---
 
@@ -785,7 +785,7 @@ docs/* linguist-documentation
 
 ## Reviewing Your Work
 
-![reviewing_your_work](/svg/courses/git/git2/02_basics/reviewing_your_work.svg)
+![reviewing_your_work](svg/courses/git/git2/02_basics/reviewing_your_work.svg)
 
 ---
 
@@ -924,4 +924,4 @@ In the next session, we'll explore:
 
 ## Git Basics Complete! 🎉
 
-![git_basics_complete](/svg/courses/git/git2/02_basics/git_basics_complete.svg)
+![git_basics_complete](svg/courses/git/git2/02_basics/git_basics_complete.svg)

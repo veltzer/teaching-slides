@@ -25,7 +25,7 @@ class Triangle { public: void draw(); };
 
 ## Visitor Structure
 
-![visitor_structure](/svg/courses/languages/c++/c++-design-patterns/21_visitor/visitor_structure.svg)
+![visitor_structure](svg/courses/languages/c++/c++-design-patterns/21_visitor/visitor_structure.svg)
 
 ---
 

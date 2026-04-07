@@ -5,7 +5,7 @@
 
 ## Performance Areas Overview
 
-![performance_areas_overview](/svg/courses/operating_systems/advanced-android-application-development/11_performance_optimization/performance_areas_overview.svg)
+![performance_areas_overview](svg/courses/operating_systems/advanced-android-application-development/11_performance_optimization/performance_areas_overview.svg)
 
 ---
 
@@ -177,7 +177,7 @@ public class UserRepository {
 
 ## Battery Optimization
 
-![battery_optimization](/svg/courses/operating_systems/advanced-android-application-development/11_performance_optimization/battery_optimization.svg)
+![battery_optimization](svg/courses/operating_systems/advanced-android-application-development/11_performance_optimization/battery_optimization.svg)
 
 ---
 

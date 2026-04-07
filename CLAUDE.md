@@ -2,7 +2,7 @@
 
 ## General
 - All project rules must be stored in this file (CLAUDE.md), not only in Claude memory. Memory is not shared with collaborators and can be erased.
-- Always prefer absolute includes/imports over relative ones.
+- Always prefer project-root-relative includes over file-relative ones (e.g., `svg/courses/...` not `../../../../svg/...`). Marp resolves these via `baseUrl` in `.marprc.mjs`.
 - Always build with `rsconstruct build --verbose -j10`.
 
 ## Python

@@ -13,7 +13,7 @@
 
 ## Scala Type Hierarchy
 
-![scala_type_hierarchy](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/scala_type_hierarchy.svg)
+![scala_type_hierarchy](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/scala_type_hierarchy.svg)
 
 ---
 
@@ -46,7 +46,7 @@ val (x, y) = (10, 20)
 
 ## Collection Hierarchy
 
-![collection_hierarchy](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_hierarchy.svg)
+![collection_hierarchy](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_hierarchy.svg)
 
 ---
 
@@ -68,13 +68,13 @@ val d: Double = 3.14159265359  // 64-bit IEEE 754
 
 ## Type Conversion Flow
 
-![type_conversion_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_conversion_flow.svg)
+![type_conversion_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_conversion_flow.svg)
 
 ---
 
 ## String Operations
 
-![string_operations](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/string_operations.svg)
+![string_operations](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/string_operations.svg)
 
 ---
 
@@ -108,7 +108,7 @@ val containsScala = str matches ".*Scala.*"
 
 ## Control Structures Flow
 
-![control_structures_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/control_structures_flow.svg)
+![control_structures_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/control_structures_flow.svg)
 
 ---
 
@@ -136,7 +136,7 @@ for {
 
 ## Function Types
 
-![function_types](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/function_types.svg)
+![function_types](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/function_types.svg)
 
 ---
 
@@ -159,7 +159,7 @@ val sqrt: PartialFunction[Double, Double] = {
 
 ## Higher-Order Functions
 
-![higher_order_functions](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/higher_order_functions.svg)
+![higher_order_functions](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/higher_order_functions.svg)
 
 ---
 
@@ -181,7 +181,7 @@ val multiplyByTwo = multiply(2)_
 
 ## Object-Oriented Features
 
-![object_oriented_features](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/object_oriented_features.svg)
+![object_oriented_features](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/object_oriented_features.svg)
 
 ---
 
@@ -210,7 +210,7 @@ object MathUtils {
 
 ## Trait Hierarchy
 
-![trait_hierarchy](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/trait_hierarchy.svg)
+![trait_hierarchy](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/trait_hierarchy.svg)
 
 ---
 
@@ -235,7 +235,7 @@ trait TimeStampLogger extends Loggable {
 
 ## Collections Operations Flow
 
-![collections_operations_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collections_operations_flow.svg)
+![collections_operations_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collections_operations_flow.svg)
 
 ---
 
@@ -258,7 +258,7 @@ val product = numbers.fold(1)(_ * _)
 
 ## Collection Performance Characteristics
 
-![collection_performance_characteristics](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_performance_characteristics.svg)
+![collection_performance_characteristics](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/collection_performance_characteristics.svg)
 
 ---
 
@@ -285,7 +285,7 @@ val array = Array(1, 2, 3)
 
 ## Pattern Matching Flow
 
-![pattern_matching_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/pattern_matching_flow.svg)
+![pattern_matching_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/pattern_matching_flow.svg)
 
 ---
 
@@ -308,7 +308,7 @@ def describe(x: Any): String = x match {
 
 ## Error Handling Hierarchy
 
-![error_handling_hierarchy](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/error_handling_hierarchy.svg)
+![error_handling_hierarchy](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/error_handling_hierarchy.svg)
 
 ---
 
@@ -334,7 +334,7 @@ def findUser(id: Int): Option[User] =
 
 ## For Comprehension Flow
 
-![for_comprehension_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/for_comprehension_flow.svg)
+![for_comprehension_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/for_comprehension_flow.svg)
 
 ---
 
@@ -366,7 +366,7 @@ for {
 
 ## Type Classes
 
-![type_classes](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_classes.svg)
+![type_classes](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/type_classes.svg)
 
 ---
 
@@ -396,7 +396,7 @@ def printThing[A: Show](a: A): Unit =
 
 ## Implicits Flow
 
-![implicits_flow](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/implicits_flow.svg)
+![implicits_flow](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/implicits_flow.svg)
 
 ---
 
@@ -441,7 +441,7 @@ Create a small application demonstrating:
 
 ## Final Architecture
 
-![final_architecture](/svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/final_architecture.svg)
+![final_architecture](svg/courses/big_data/apache-spark-with-scala/01_scala_refresher/final_architecture.svg)
 
 ---
 

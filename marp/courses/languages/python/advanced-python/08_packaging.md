@@ -426,7 +426,7 @@ python -m build --wheel
 - Metadata format
 - Installation process
 
-![wheel_anatomy](/svg/courses/languages/python/advanced-python/08_packaging/wheel_anatomy.svg)
+![wheel_anatomy](svg/courses/languages/python/advanced-python/08_packaging/wheel_anatomy.svg)
 
 ---
 

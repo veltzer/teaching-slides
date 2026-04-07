@@ -4,7 +4,7 @@
 ---
 ## What are Structs?
 
-![what_are_structs](/svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_structs.svg)
+![what_are_structs](svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_structs.svg)
 
 ---
 ## Defining a Struct
@@ -159,7 +159,7 @@ impl Rectangle {
 ---
 ## What are Enums
 
-![what_are_enums](/svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_enums.svg)
+![what_are_enums](svg/courses/languages/rust/rust-programming/05_structs_enums/what_are_enums.svg)
 
 ---
 
@@ -435,7 +435,7 @@ Create a basic state machine using enums:
 
 ## Best Practices
 
-![best_practices](/svg/courses/languages/rust/rust-programming/05_structs_enums/best_practices.svg)
+![best_practices](svg/courses/languages/rust/rust-programming/05_structs_enums/best_practices.svg)
 
 ---
 

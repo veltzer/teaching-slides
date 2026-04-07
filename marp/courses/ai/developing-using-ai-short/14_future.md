@@ -25,7 +25,7 @@ We stand at the beginning of a fundamental transformation:
 
 ## Emerging Technology Trends
 
-![emerging_technology_trends](/svg/courses/ai/developing-using-ai-short/14_future/emerging_technology_trends.svg)
+![emerging_technology_trends](svg/courses/ai/developing-using-ai-short/14_future/emerging_technology_trends.svg)
 
 ---
 
@@ -123,13 +123,13 @@ Projected advancement of AI development capabilities:
 
 ## Industry Adoption Patterns
 
-![industry_adoption_patterns](/svg/courses/ai/developing-using-ai-short/14_future/industry_adoption_patterns.svg)
+![industry_adoption_patterns](svg/courses/ai/developing-using-ai-short/14_future/industry_adoption_patterns.svg)
 
 ---
 
 ## Changing Developer Roles
 
-![changing_developer_roles](/svg/courses/ai/developing-using-ai-short/14_future/changing_developer_roles.svg)
+![changing_developer_roles](svg/courses/ai/developing-using-ai-short/14_future/changing_developer_roles.svg)
 
 ---
 
@@ -184,7 +184,7 @@ future_skill_requirements:
 
 ## Team Dynamics Transformation
 
-![team_dynamics_transformation](/svg/courses/ai/developing-using-ai-short/14_future/team_dynamics_transformation.svg)
+![team_dynamics_transformation](svg/courses/ai/developing-using-ai-short/14_future/team_dynamics_transformation.svg)
 
 ---
 
@@ -224,7 +224,7 @@ class AdvancedPairProgramming:
 
 ## Process Evolution
 
-![process_evolution](/svg/courses/ai/developing-using-ai-short/14_future/process_evolution.svg)
+![process_evolution](svg/courses/ai/developing-using-ai-short/14_future/process_evolution.svg)
 
 ---
 
@@ -267,7 +267,7 @@ class AINativeDevelopmentFramework:
 
 ## Preparing for Change
 
-![preparing_for_change](/svg/courses/ai/developing-using-ai-short/14_future/preparing_for_change.svg)
+![preparing_for_change](svg/courses/ai/developing-using-ai-short/14_future/preparing_for_change.svg)
 
 ---
 

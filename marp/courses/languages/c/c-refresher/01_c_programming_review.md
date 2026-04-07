@@ -4,7 +4,7 @@
 
 ## Introduction to C
 
-![h:300](/jpg/courses/languages/c/c-refresher/dennis_ritchie.jpg)
+![h:300](jpg/courses/languages/c/c-refresher/dennis_ritchie.jpg)
 
 - Developed by Dennis Ritchie at Bell Labs in 1972
 - Widely used in embedded systems, operating systems, and application development
@@ -61,7 +61,7 @@ gcc -std=c23 program.c -o program
 
 ## The C Compilation Pipeline
 
-![the_c_compilation_pipeline](/svg/courses/languages/c/c-refresher/01_c_programming_review/the_c_compilation_pipeline.svg)
+![the_c_compilation_pipeline](svg/courses/languages/c/c-refresher/01_c_programming_review/the_c_compilation_pipeline.svg)
 
 View each stage:
 

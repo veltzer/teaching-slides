@@ -58,7 +58,7 @@ process(42, myCallback);
 
 ## The Command Pattern
 
-![the_command_pattern](/svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/the_command_pattern.svg)
+![the_command_pattern](svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/the_command_pattern.svg)
 
 ---
 
@@ -453,7 +453,7 @@ public:
 
 ## Performance Considerations
 
-![performance_considerations](/svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/performance_considerations.svg)
+![performance_considerations](svg/courses/languages/c++/modern-c++-for-c-programmers/17_functional_abstraction/performance_considerations.svg)
 
 ---
 

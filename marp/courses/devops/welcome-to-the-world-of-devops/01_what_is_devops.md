@@ -14,13 +14,13 @@ Understanding the fundamentals of DevOps practices and culture
 
 ## Historical Context
 
-![historical_context](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/historical_context.svg)
+![historical_context](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/historical_context.svg)
 
 ---
 
 ## Traditional IT vs DevOps
 
-![traditional_it_vs_devops](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/traditional_it_vs_devops.svg)
+![traditional_it_vs_devops](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/traditional_it_vs_devops.svg)
 
 ---
 
@@ -46,7 +46,7 @@ Understanding the fundamentals of DevOps practices and culture
 
 ## Key Benefits of DevOps
 
-![key_benefits_of_devops](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/key_benefits_of_devops.svg)
+![key_benefits_of_devops](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/key_benefits_of_devops.svg)
 
 ---
 
@@ -63,10 +63,10 @@ Understanding the fundamentals of DevOps practices and culture
 ## Breaking Down Silos
 
 Before:
-![breaking_down_silos_1](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_1.svg)
+![breaking_down_silos_1](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_1.svg)
 
 After:
-![breaking_down_silos_2](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_2.svg)
+![breaking_down_silos_2](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_2.svg)
 
 ---
 
@@ -83,7 +83,7 @@ After:
 
 ## The DevOps Infinity Loop
 
-![the_devops_infinity_loop](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/the_devops_infinity_loop.svg)
+![the_devops_infinity_loop](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/the_devops_infinity_loop.svg)
 
 ---
 
@@ -99,7 +99,7 @@ After:
 
 ## DevOps Tools Ecosystem
 
-![devops_tools_ecosystem](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/devops_tools_ecosystem.svg)
+![devops_tools_ecosystem](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/devops_tools_ecosystem.svg)
 
 ---
 
@@ -134,7 +134,7 @@ After:
 
 ## DevOps Culture Pillars
 
-![devops_culture_pillars](/svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/devops_culture_pillars.svg)
+![devops_culture_pillars](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/devops_culture_pillars.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 ---
 ## LVM Architecture
 
-![lvm_architecture](/svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_architecture.svg)
+![lvm_architecture](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_architecture.svg)
 
 Three layers:
 - **PV** (Physical Volumes) - actual disks/partitions
@@ -204,7 +204,7 @@ lvs -a -o +devices /dev/data-vg/mirror-lv
 ---
 ## RAID Level Selection Guide
 
-![raid_level_selection_guide](/svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/raid_level_selection_guide.svg)
+![raid_level_selection_guide](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/raid_level_selection_guide.svg)
 
 ---
 ## Creating RAID Arrays with mdadm
@@ -302,7 +302,7 @@ Cache modes: `writethrough` (safe) or `writeback` (fast).
 ---
 ## LVM on Top of RAID
 
-![lvm_on_top_of_raid](/svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_on_top_of_raid.svg)
+![lvm_on_top_of_raid](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_on_top_of_raid.svg)
 
 ```bash
 # Create RAID arrays first

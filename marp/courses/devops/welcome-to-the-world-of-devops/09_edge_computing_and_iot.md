@@ -5,7 +5,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Edge Architecture
 
-![edge_architecture](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/edge_architecture.svg)
+![edge_architecture](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/edge_architecture.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Deployment Challenges
 
-![deployment_challenges](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/deployment_challenges.svg)
+![deployment_challenges](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/deployment_challenges.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Security At Edge
 
-![security_at_edge](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/security_at_edge.svg)
+![security_at_edge](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/security_at_edge.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Monitoring Strategy
 
-![monitoring_strategy](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/monitoring_strategy.svg)
+![monitoring_strategy](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/monitoring_strategy.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Resource Management
 
-![resource_management](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/resource_management.svg)
+![resource_management](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/resource_management.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Scalability
 
-![scalability](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/scalability.svg)
+![scalability](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/scalability.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Managing distributed infrastructure and DevOps at the edge
 
 ## Disaster Recovery
 
-![disaster_recovery](/svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/disaster_recovery.svg)
+![disaster_recovery](svg/courses/devops/welcome-to-the-world-of-devops/09_edge_computing_and_iot/disaster_recovery.svg)
 
 ---
 

@@ -14,7 +14,7 @@
 
 ## STL Architecture
 
-![stl_architecture](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/17_stl/stl_architecture.svg)
+![stl_architecture](svg/courses/embedded/effective-real-time-embedded-c-and-c++/17_stl/stl_architecture.svg)
 
 ---
 

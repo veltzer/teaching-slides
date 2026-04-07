@@ -279,7 +279,7 @@ terraform init -plugin-dir=/path/to/plugins
 
 ## terraform init Workflow
 
-![terraform_init_workflow](/svg/courses/devops/terraform/02_project_structure/terraform_init_workflow.svg)
+![terraform_init_workflow](svg/courses/devops/terraform/02_project_structure/terraform_init_workflow.svg)
 
 ---
 
@@ -354,7 +354,7 @@ terraform apply -parallelism=20
 
 ## terraform apply Workflow
 
-![terraform_apply_workflow](/svg/courses/devops/terraform/02_project_structure/terraform_apply_workflow.svg)
+![terraform_apply_workflow](svg/courses/devops/terraform/02_project_structure/terraform_apply_workflow.svg)
 
 ---
 

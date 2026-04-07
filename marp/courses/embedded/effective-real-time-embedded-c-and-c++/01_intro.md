@@ -42,7 +42,7 @@ This comprehensive 4-day course will enhance your C and C++ programming skills f
 
 ## Embedded System Constraints
 
-![embedded_system_constraints](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/embedded_system_constraints.svg)
+![embedded_system_constraints](svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/embedded_system_constraints.svg)
 
 ---
 
@@ -105,7 +105,7 @@ Typical embedded development setup:
 
 ## The Embedded Software Stack
 
-![the_embedded_software_stack](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/the_embedded_software_stack.svg)
+![the_embedded_software_stack](svg/courses/embedded/effective-real-time-embedded-c-and-c++/01_intro/the_embedded_software_stack.svg)
 
 ---
 

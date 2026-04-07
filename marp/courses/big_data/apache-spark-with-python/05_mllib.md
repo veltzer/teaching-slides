@@ -11,7 +11,7 @@
 
 ---
 ## MLlib Overview
-![mllib_overview](/svg/courses/big_data/apache-spark-with-python/05_mllib/mllib_overview.svg)
+![mllib_overview](svg/courses/big_data/apache-spark-with-python/05_mllib/mllib_overview.svg)
 
 ---
 ## The MLlib API

@@ -51,7 +51,7 @@ Worktrees allow multiple working directories for a single repository:
 - **Shared repository:** Common `.git` directory
 - **Separate branches:** Each worktree can be on different branch
 
-![what_are_git_worktrees](/svg/courses/git/git2/12_work_trees/what_are_git_worktrees.svg)
+![what_are_git_worktrees](svg/courses/git/git2/12_work_trees/what_are_git_worktrees.svg)
 
 ---
 

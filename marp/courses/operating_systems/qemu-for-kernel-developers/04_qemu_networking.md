@@ -18,7 +18,7 @@ Importance of Networking in Kernel Development
 
 QEMU Network Models Overview
 
-![qemu_networking_for_kernel_developers_1](/svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/qemu_networking_for_kernel_developers_1.svg)
+![qemu_networking_for_kernel_developers_1](svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/qemu_networking_for_kernel_developers_1.svg)
 
 ---
 
@@ -79,7 +79,7 @@ QEMU Network Configuration Syntax
 
 Setting Up a Basic Network
 
-![qemu_networking_for_kernel_developers_2](/svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/qemu_networking_for_kernel_developers_2.svg)
+![qemu_networking_for_kernel_developers_2](svg/courses/operating_systems/qemu-for-kernel-developers/04_qemu_networking/qemu_networking_for_kernel_developers_2.svg)
 
 ---
 

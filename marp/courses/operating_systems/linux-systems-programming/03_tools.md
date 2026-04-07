@@ -30,7 +30,7 @@ Current version: GCC 13.x
 
 ## GCC Architecture
 
-![gcc_architecture](/svg/courses/operating_systems/linux-systems-programming/03_tools/gcc_architecture.svg)
+![gcc_architecture](svg/courses/operating_systems/linux-systems-programming/03_tools/gcc_architecture.svg)
 
 ---
 
@@ -361,7 +361,7 @@ gcc -static -o program main.c
 
 ## Program Structure
 
-![program_structure](/svg/courses/operating_systems/linux-systems-programming/03_tools/program_structure.svg)
+![program_structure](svg/courses/operating_systems/linux-systems-programming/03_tools/program_structure.svg)
 
 ---
 
@@ -486,7 +486,7 @@ LD_PRELOAD=/path/to/lib.so ./program
 
 ## Symbol Resolution
 
-![symbol_resolution](/svg/courses/operating_systems/linux-systems-programming/03_tools/symbol_resolution.svg)
+![symbol_resolution](svg/courses/operating_systems/linux-systems-programming/03_tools/symbol_resolution.svg)
 
 ---
 

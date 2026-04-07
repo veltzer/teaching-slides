@@ -90,7 +90,7 @@ git show -- -feature-branch
 - Updates when new commits added
 - Stored in `.git/refs/heads/`
 
-![branch_starting_with_dash_use_double_dash](/svg/courses/git/git2/14_revisions/branch_starting_with_dash_use_double_dash.svg)
+![branch_starting_with_dash_use_double_dash](svg/courses/git/git2/14_revisions/branch_starting_with_dash_use_double_dash.svg)
 
 ---
 
@@ -216,7 +216,7 @@ git show HEAD^2~3          # 3rd ancestor of 2nd parent
 - `~` selects how many generations back
 - Important for merge commits with multiple parents
 
-![combining_caret_and_tilde](/svg/courses/git/git2/14_revisions/combining_caret_and_tilde.svg)
+![combining_caret_and_tilde](svg/courses/git/git2/14_revisions/combining_caret_and_tilde.svg)
 
 ---
 
@@ -395,7 +395,7 @@ git log B C --not A       # Same as above
 - Generate release notes
 - Review pending changes
 
-![multiple_references](/svg/courses/git/git2/14_revisions/multiple_references.svg)
+![multiple_references](svg/courses/git/git2/14_revisions/multiple_references.svg)
 
 ---
 

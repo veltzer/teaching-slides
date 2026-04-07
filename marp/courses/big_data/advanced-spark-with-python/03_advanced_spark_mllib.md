@@ -8,7 +8,7 @@
 * Production considerations
 ---
 ## MLlib Architecture
-![mllib_architecture](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mllib_architecture.svg)
+![mllib_architecture](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mllib_architecture.svg)
 
 ---
 ## Pipeline Components
@@ -30,7 +30,7 @@ assembler = VectorAssembler(
 
 ---
 ## Feature Engineering
-![feature_engineering](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/feature_engineering.svg)
+![feature_engineering](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/feature_engineering.svg)
 
 ---
 ## Feature Transformers
@@ -71,7 +71,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
 ```
 ---
 ## Model Training
-![model_training](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_training.svg)
+![model_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_training.svg)
 
 ---
 ## Hyperparameter Tuning
@@ -102,7 +102,7 @@ cv = CrossValidator(
 1. Custom metrics
 ---
 ## Evaluation Metrics
-![evaluation_metrics](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/evaluation_metrics.svg)
+![evaluation_metrics](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/evaluation_metrics.svg)
 
 ---
 ## Custom Evaluator
@@ -122,7 +122,7 @@ bestPipeline = bestModel.stages[-1]
 ```
 ---
 ## Distributed Training
-![distributed_training](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_training.svg)
+![distributed_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_training.svg)
 
 ---
 ## Model Persistence
@@ -153,7 +153,7 @@ rf = RandomForestClassifier(
 ```
 ---
 ## Neural Networks
-![neural_networks](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/neural_networks.svg)
+![neural_networks](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/neural_networks.svg)
 
 ---
 ## Custom Algorithms
@@ -173,7 +173,7 @@ for batch in streaming_data:
 ```
 ---
 ## Model Serving
-![model_serving](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving.svg)
+![model_serving](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving.svg)
 
 ---
 ## Production Pipeline
@@ -191,7 +191,7 @@ accuracy = evaluator.evaluate(predictions)
 ```
 ---
 ## Performance Optimization
-![performance_optimization](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/performance_optimization.svg)
+![performance_optimization](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/performance_optimization.svg)
 
 ---
 
@@ -210,7 +210,7 @@ transformed_data = pipeline.fit(train_data)\
 ```
 ---
 ## Distributed Processing
-![distributed_processing](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_processing.svg)
+![distributed_processing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_processing.svg)
 
 ---
 ## Feature Store Integration
@@ -226,7 +226,7 @@ mlflow.spark.log_model(spark_model, "model")
 ```
 ---
 ## A/B Testing
-![a_b_testing](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/a_b_testing.svg)
+![a_b_testing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/a_b_testing.svg)
 
 ---
 ## Model Versioning
@@ -252,7 +252,7 @@ except Exception as e:
 ```
 ---
 ## Data Validation
-![data_validation](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/data_validation.svg)
+![data_validation](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/data_validation.svg)
 
 ---
 ## Model Explainability
@@ -272,7 +272,7 @@ automl = TrainValidationSplit(
 ```
 ---
 ## Transfer Learning
-![transfer_learning](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/transfer_learning.svg)
+![transfer_learning](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/transfer_learning.svg)
 
 ---
 ## Model Compression
@@ -290,7 +290,7 @@ def process_stream(batch_df, epoch_id):
 ```
 ---
 ## Security Considerations
-![security_considerations](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/security_considerations.svg)
+![security_considerations](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/security_considerations.svg)
 
 ---
 ## Testing ML Pipelines
@@ -307,7 +307,7 @@ debug_df.show()
 ```
 ---
 ## Best Practices
-![best_practices](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/best_practices.svg)
+![best_practices](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/best_practices.svg)
 
 ---
 ## Production Checklist
@@ -323,7 +323,7 @@ debug_df.show()
 1. Federated learning
 ---
 ## MLOps Integration
-![mlops_integration](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mlops_integration.svg)
+![mlops_integration](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mlops_integration.svg)
 
 ---
 ## Additional Resources
@@ -446,7 +446,7 @@ label_indexer = StringIndexer(
 
 ## ML Pipeline Data Flow
 
-![ml_pipeline_data_flow](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/ml_pipeline_data_flow.svg)
+![ml_pipeline_data_flow](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/ml_pipeline_data_flow.svg)
 
 ---
 
@@ -829,10 +829,10 @@ balanced_train.groupBy("churn").count().show()
 
 ## Model Serving Architecture
 
-![model_serving_architecture](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving_architecture.svg)
+![model_serving_architecture](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving_architecture.svg)
 
 ---
 
 ## Production ML Pipeline Checklist
 
-![production_ml_pipeline_checklist](/svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/production_ml_pipeline_checklist.svg)
+![production_ml_pipeline_checklist](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/production_ml_pipeline_checklist.svg)

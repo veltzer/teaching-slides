@@ -12,7 +12,7 @@
 
 ## Iterator Structure
 
-![iterator_structure](/svg/courses/languages/c++/c++-design-patterns/16_iterator/iterator_structure.svg)
+![iterator_structure](svg/courses/languages/c++/c++-design-patterns/16_iterator/iterator_structure.svg)
 
 ---
 

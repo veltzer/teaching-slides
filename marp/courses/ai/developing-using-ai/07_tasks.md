@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Specialization Advantage
 
-![the_specialization_advantage](/svg/courses/ai/developing-using-ai/07_tasks/the_specialization_advantage.svg)
+![the_specialization_advantage](svg/courses/ai/developing-using-ai/07_tasks/the_specialization_advantage.svg)
 
 ---
 
@@ -74,7 +74,7 @@ CREATE INDEX idx_products_price ON products(price);
 
 ## Query Optimization
 
-![query_optimization](/svg/courses/ai/developing-using-ai/07_tasks/query_optimization.svg)
+![query_optimization](svg/courses/ai/developing-using-ai/07_tasks/query_optimization.svg)
 
 ---
 
@@ -183,7 +183,7 @@ ORDER BY idx_scan DESC;
 
 ## Data Modeling
 
-![data_modeling](/svg/courses/ai/developing-using-ai/07_tasks/data_modeling.svg)
+![data_modeling](svg/courses/ai/developing-using-ai/07_tasks/data_modeling.svg)
 
 ---
 
@@ -416,7 +416,7 @@ export function DataTable<T extends Record<string, any>>({
 
 ## Styling Assistance
 
-![styling_assistance](/svg/courses/ai/developing-using-ai/07_tasks/styling_assistance.svg)
+![styling_assistance](svg/courses/ai/developing-using-ai/07_tasks/styling_assistance.svg)
 
 ---
 
@@ -590,7 +590,7 @@ const AccessibleForm = () => {
 
 ## Animation Creation
 
-![animation_creation](/svg/courses/ai/developing-using-ai/07_tasks/animation_creation.svg)
+![animation_creation](svg/courses/ai/developing-using-ai/07_tasks/animation_creation.svg)
 
 ---
 
@@ -772,7 +772,7 @@ main "$@"
 
 ## Configuration Files
 
-![configuration_files](/svg/courses/ai/developing-using-ai/07_tasks/configuration_files.svg)
+![configuration_files](svg/courses/ai/developing-using-ai/07_tasks/configuration_files.svg)
 
 ---
 
@@ -1029,7 +1029,7 @@ spec:
 
 ## Monitoring Setup
 
-![monitoring_setup](/svg/courses/ai/developing-using-ai/07_tasks/monitoring_setup.svg)
+![monitoring_setup](svg/courses/ai/developing-using-ai/07_tasks/monitoring_setup.svg)
 
 ---
 
@@ -1191,7 +1191,7 @@ resource "aws_elasticache_cluster" "redis" {
 
 ## Mobile Development: Cross-Platform Code
 
-![mobile_development_cross_platform_code](/svg/courses/ai/developing-using-ai/07_tasks/mobile_development_cross_platform_code.svg)
+![mobile_development_cross_platform_code](svg/courses/ai/developing-using-ai/07_tasks/mobile_development_cross_platform_code.svg)
 
 ---
 
@@ -1470,7 +1470,7 @@ class OrderService:
 
 ## Authentication/Authorization
 
-![authentication_authorization](/svg/courses/ai/developing-using-ai/07_tasks/authentication_authorization.svg)
+![authentication_authorization](svg/courses/ai/developing-using-ai/07_tasks/authentication_authorization.svg)
 
 ---
 
@@ -1586,7 +1586,7 @@ const errorHandler = (err, req, res, next) => {
 
 Backend optimization strategies:
 
-![performance_optimization](/svg/courses/ai/developing-using-ai/07_tasks/performance_optimization.svg)
+![performance_optimization](svg/courses/ai/developing-using-ai/07_tasks/performance_optimization.svg)
 
 ---
 
@@ -1754,7 +1754,7 @@ class TestOrderService:
 
 Auto-generated API documentation:
 
-![documentation_generation](/svg/courses/ai/developing-using-ai/07_tasks/documentation_generation.svg)
+![documentation_generation](svg/courses/ai/developing-using-ai/07_tasks/documentation_generation.svg)
 
 ---
 
@@ -1814,7 +1814,7 @@ const securityMiddleware = {
 
 Service communication patterns:
 
-![microservices_architecture](/svg/courses/ai/developing-using-ai/07_tasks/microservices_architecture.svg)
+![microservices_architecture](svg/courses/ai/developing-using-ai/07_tasks/microservices_architecture.svg)
 
 ---
 
@@ -2001,7 +2001,7 @@ export default function () {
 
 Performance optimization techniques:
 
-![optimization_patterns](/svg/courses/ai/developing-using-ai/07_tasks/optimization_patterns.svg)
+![optimization_patterns](svg/courses/ai/developing-using-ai/07_tasks/optimization_patterns.svg)
 
 ---
 

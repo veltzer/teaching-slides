@@ -12,7 +12,7 @@
 
 ## How Drift Happens
 
-![how_drift_happens](/svg/courses/devops/terraform/08_keeping_in_sync/how_drift_happens.svg)
+![how_drift_happens](svg/courses/devops/terraform/08_keeping_in_sync/how_drift_happens.svg)
 
 ---
 
@@ -111,7 +111,7 @@ terraform refresh
 
 ## Refresh Workflow
 
-![refresh_workflow](/svg/courses/devops/terraform/08_keeping_in_sync/refresh_workflow.svg)
+![refresh_workflow](svg/courses/devops/terraform/08_keeping_in_sync/refresh_workflow.svg)
 
 ---
 

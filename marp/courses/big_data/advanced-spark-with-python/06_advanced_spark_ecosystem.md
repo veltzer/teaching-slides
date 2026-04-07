@@ -7,7 +7,7 @@
 * MLflow integration
 ---
 ## Modern Architecture
-![modern_architecture](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
+![modern_architecture](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
 
 ---
 ## Deployment Options
@@ -24,7 +24,7 @@ spark.kubernetes.namespace=spark
 ```
 ---
 ## Resource Management
-![resource_management](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
+![resource_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
 
 ---
 ## Cloud Integration
@@ -43,7 +43,7 @@ spark.conf.set(
 ```
 ---
 ## Storage Integration
-![storage_integration](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
+![storage_integration](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
 
 ---
 ## Delta Lake Overview
@@ -61,7 +61,7 @@ df.write.format("delta") \
 ```
 ---
 ## Version Control
-![version_control](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
+![version_control](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
 
 ---
 ## Time Travel
@@ -87,7 +87,7 @@ deltaTable = DeltaTable.forPath(
 ```
 ---
 ## Optimization Methods
-![optimization_methods](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
+![optimization_methods](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
 
 ---
 ## Performance Tuning
@@ -106,7 +106,7 @@ spark.conf.set(
 ```
 ---
 ## Metrics Collection
-![metrics_collection](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
+![metrics_collection](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
 
 ---
 ## Security Framework
@@ -125,7 +125,7 @@ spark.conf.set(
 ```
 ---
 ## Authorization Model
-![authorization_model](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
+![authorization_model](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
 
 ---
 ## Data Governance
@@ -143,7 +143,7 @@ def backup_data():
 ```
 ---
 ## Disaster Recovery
-![disaster_recovery](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
+![disaster_recovery](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
 
 ---
 ## CI/CD Pipeline
@@ -161,7 +161,7 @@ def test_transformation():
 ```
 ---
 ## Quality Assurance
-![quality_assurance](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
+![quality_assurance](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
 
 ---
 ## Cost Optimization
@@ -180,7 +180,7 @@ spark.conf.set(
 ```
 ---
 ## Capacity Planning
-![capacity_planning](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
+![capacity_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
 
 ---
 ## MLflow Integration
@@ -197,7 +197,7 @@ mlflow.spark.log_model(pipeline, "model")
 ```
 ---
 ## Workflow Management
-![workflow_management](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
+![workflow_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
 
 ---
 ## Best Practices
@@ -215,7 +215,7 @@ class SparkJob:
 ```
 ---
 ## Documentation
-![documentation](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
+![documentation](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
 
 ---
 ## Troubleshooting
@@ -234,7 +234,7 @@ spark.conf.set(
 ```
 ---
 ## Error Handling
-![error_handling](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
+![error_handling](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
 
 ---
 ## Maintenance
@@ -253,7 +253,7 @@ spark.conf.set(
 ```
 ---
 ## Future Planning
-![future_planning](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
+![future_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
 
 ---
 ## Migration Strategies
@@ -271,7 +271,7 @@ def optimize_resources():
 ```
 ---
 ## Scaling Strategies
-![scaling_strategies](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
+![scaling_strategies](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
 
 ---
 ## Advanced Features
@@ -503,7 +503,7 @@ delta_table.history().select(
 
 ## Delta Lake Operations Summary
 
-![delta_lake_operations_summary](/svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/delta_lake_operations_summary.svg)
+![delta_lake_operations_summary](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/delta_lake_operations_summary.svg)
 
 ---
 

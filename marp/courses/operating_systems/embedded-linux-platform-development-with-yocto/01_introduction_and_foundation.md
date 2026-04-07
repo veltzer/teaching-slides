@@ -37,7 +37,7 @@ Each project starts from scratch:
 
 ## Build System Evolution
 
-![build_system_evolution](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/build_system_evolution.svg)
+![build_system_evolution](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/build_system_evolution.svg)
 
 ---
 
@@ -89,7 +89,7 @@ Not ideal for:
 
 ## Yocto Project Governance
 
-![yocto_project_governance](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_governance.svg)
+![yocto_project_governance](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_governance.svg)
 
 ---
 
@@ -195,7 +195,7 @@ Benefits:
 
 ## Yocto Project Components
 
-![yocto_project_components](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_components.svg)
+![yocto_project_components](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/yocto_project_components.svg)
 
 ---
 
@@ -248,7 +248,7 @@ Similar to:
 
 ## Metadata Layers
 
-![metadata_layers](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/metadata_layers.svg)
+![metadata_layers](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/01_introduction_and_foundation/metadata_layers.svg)
 
 ---
 

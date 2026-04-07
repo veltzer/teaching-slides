@@ -28,7 +28,7 @@
 
 ## Logstash Architecture
 
-![logstash_architecture](/svg/lectures/logstash/logstash_architecture.svg)
+![logstash_architecture](svg/lectures/logstash/logstash_architecture.svg)
 
 **Core Components:**
 1. **Input Plugins** - Collect data from sources
@@ -427,7 +427,7 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 
 ## Log Aggregation Architecture
 
-![log_aggregation_architecture](/svg/lectures/logstash/log_aggregation_architecture.svg)
+![log_aggregation_architecture](svg/lectures/logstash/log_aggregation_architecture.svg)
 
 **Benefits:**
 1. Centralized logging
@@ -562,7 +562,7 @@ output {
 
 **Horizontal Scaling:**
 
-![scaling_logstash](/svg/lectures/logstash/scaling_logstash.svg)
+![scaling_logstash](svg/lectures/logstash/scaling_logstash.svg)
 
 **Vertical Scaling:**
 1. Increase CPU cores

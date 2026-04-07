@@ -14,7 +14,7 @@
 
 ## Time Measurement Challenges
 
-![time_measurement_challenges](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/time_measurement_challenges.svg)
+![time_measurement_challenges](svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/time_measurement_challenges.svg)
 
 ---
 
@@ -220,7 +220,7 @@ void TIM3_IRQHandler(void) {
 
 ## Watchdog Timer Types
 
-![watchdog_timer_types](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/watchdog_timer_types.svg)
+![watchdog_timer_types](svg/courses/embedded/effective-real-time-embedded-c-and-c++/11_timing/watchdog_timer_types.svg)
 
 ---
 

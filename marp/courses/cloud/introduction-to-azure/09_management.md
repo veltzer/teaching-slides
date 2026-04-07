@@ -2,7 +2,7 @@
 
 ## Management Components
 
-![management_components](/svg/courses/cloud/introduction-to-azure/09_management/management_components.svg)
+![management_components](svg/courses/cloud/introduction-to-azure/09_management/management_components.svg)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## Monitoring Architecture
 
-![monitoring_architecture](/svg/courses/cloud/introduction-to-azure/09_management/monitoring_architecture.svg)
+![monitoring_architecture](svg/courses/cloud/introduction-to-azure/09_management/monitoring_architecture.svg)
 
 ---
 
@@ -59,7 +59,7 @@
 
 ## Understanding Costs
 
-![understanding_costs](/svg/courses/cloud/introduction-to-azure/09_management/understanding_costs.svg)
+![understanding_costs](svg/courses/cloud/introduction-to-azure/09_management/understanding_costs.svg)
 
 ---
 
@@ -128,7 +128,7 @@
 
 ## Infrastructure as Code
 
-![infrastructure_as_code](/svg/courses/cloud/introduction-to-azure/09_management/infrastructure_as_code.svg)
+![infrastructure_as_code](svg/courses/cloud/introduction-to-azure/09_management/infrastructure_as_code.svg)
 
 ---
 

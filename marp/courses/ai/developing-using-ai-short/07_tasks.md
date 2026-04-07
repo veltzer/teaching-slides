@@ -54,7 +54,7 @@ CREATE INDEX idx_products_price ON products(price);
 
 ## Query Optimization
 
-![query_optimization](/svg/courses/ai/developing-using-ai-short/07_tasks/query_optimization.svg)
+![query_optimization](svg/courses/ai/developing-using-ai-short/07_tasks/query_optimization.svg)
 
 ---
 
@@ -380,7 +380,7 @@ const typeDefs = `
 
 ## Authentication/Authorization
 
-![authentication_authorization](/svg/courses/ai/developing-using-ai-short/07_tasks/authentication_authorization.svg)
+![authentication_authorization](svg/courses/ai/developing-using-ai-short/07_tasks/authentication_authorization.svg)
 
 ---
 
@@ -581,7 +581,7 @@ resource "aws_db_instance" "postgres" {
 
 ## Mobile Development: Cross-Platform
 
-![mobile_development_cross_platform](/svg/courses/ai/developing-using-ai-short/07_tasks/mobile_development_cross_platform.svg)
+![mobile_development_cross_platform](svg/courses/ai/developing-using-ai-short/07_tasks/mobile_development_cross_platform.svg)
 
 ---
 
@@ -640,7 +640,7 @@ class PlatformFeatures {
 
 ## Microservices Architecture
 
-![microservices_architecture](/svg/courses/ai/developing-using-ai-short/07_tasks/microservices_architecture.svg)
+![microservices_architecture](svg/courses/ai/developing-using-ai-short/07_tasks/microservices_architecture.svg)
 
 ---
 

@@ -43,7 +43,7 @@ AI addresses each of these pain points directly
 
 ## The Paradigm Shift
 
-![the_paradigm_shift](/svg/courses/ai/developing-using-ai/01_intro/the_paradigm_shift.svg)
+![the_paradigm_shift](svg/courses/ai/developing-using-ai/01_intro/the_paradigm_shift.svg)
 
 ---
 
@@ -128,7 +128,7 @@ Your personal tutor available 24/7
 
 ## AI Tools Ecosystem Overview
 
-![ai_tools_ecosystem_overview](/svg/courses/ai/developing-using-ai/01_intro/ai_tools_ecosystem_overview.svg)
+![ai_tools_ecosystem_overview](svg/courses/ai/developing-using-ai/01_intro/ai_tools_ecosystem_overview.svg)
 
 ---
 
@@ -180,7 +180,7 @@ Choose based on your security and performance needs
 
 ## Integration Levels
 
-![integration_levels](/svg/courses/ai/developing-using-ai/01_intro/integration_levels.svg)
+![integration_levels](svg/courses/ai/developing-using-ai/01_intro/integration_levels.svg)
 
 ---
 
@@ -246,7 +246,7 @@ AI handles the mundane, you handle the creative:
 
 ## Real-World Impact Metrics
 
-![real_world_impact_metrics](/svg/courses/ai/developing-using-ai/01_intro/real_world_impact_metrics.svg)
+![real_world_impact_metrics](svg/courses/ai/developing-using-ai/01_intro/real_world_impact_metrics.svg)
 
 ---
 
@@ -325,7 +325,7 @@ Professional integrity remains paramount
 
 ## Best Practices Overview
 
-![best_practices_overview](/svg/courses/ai/developing-using-ai/01_intro/best_practices_overview.svg)
+![best_practices_overview](svg/courses/ai/developing-using-ai/01_intro/best_practices_overview.svg)
 
 ---
 

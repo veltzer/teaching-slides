@@ -12,7 +12,7 @@
 - Identifies entry points for testing
 - Also called **web crawling** or **web scraping**
 
-![what_is_web_spidering](/svg/courses/security/web-application-hacking/04_web_spidering/what_is_web_spidering.svg)
+![what_is_web_spidering](svg/courses/security/web-application-hacking/04_web_spidering/what_is_web_spidering.svg)
 
 ---
 

@@ -4,13 +4,13 @@
 
 ## Docker Network Types
 
-![docker_network_types](/svg/courses/devops/docker-for-developers/08_networking/docker_network_types.svg)
+![docker_network_types](svg/courses/devops/docker-for-developers/08_networking/docker_network_types.svg)
 
 ---
 
 ## Opening Ports
 
-![opening_ports](/svg/courses/devops/docker-for-developers/08_networking/opening_ports.svg)
+![opening_ports](svg/courses/devops/docker-for-developers/08_networking/opening_ports.svg)
 
 ---
 
@@ -38,7 +38,7 @@
 
 ## Container Communication
 
-![container_communication](/svg/courses/devops/docker-for-developers/08_networking/container_communication.svg)
+![container_communication](svg/courses/devops/docker-for-developers/08_networking/container_communication.svg)
 
 ---
 
@@ -56,13 +56,13 @@
 
 ## DNS in Docker
 
-![dns_in_docker](/svg/courses/devops/docker-for-developers/08_networking/dns_in_docker.svg)
+![dns_in_docker](svg/courses/devops/docker-for-developers/08_networking/dns_in_docker.svg)
 
 ---
 
 ## Network Security
 
-![network_security](/svg/courses/devops/docker-for-developers/08_networking/network_security.svg)
+![network_security](svg/courses/devops/docker-for-developers/08_networking/network_security.svg)
 
 ---
 
@@ -79,7 +79,7 @@
 
 ## Custom Networks
 
-![custom_networks](/svg/courses/devops/docker-for-developers/08_networking/custom_networks.svg)
+![custom_networks](svg/courses/devops/docker-for-developers/08_networking/custom_networks.svg)
 
 ---
 
@@ -96,13 +96,13 @@
 
 ## Network Management
 
-![network_management](/svg/courses/devops/docker-for-developers/08_networking/network_management.svg)
+![network_management](svg/courses/devops/docker-for-developers/08_networking/network_management.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](/svg/courses/devops/docker-for-developers/08_networking/best_practices.svg)
+![best_practices](svg/courses/devops/docker-for-developers/08_networking/best_practices.svg)
 
 ---
 

@@ -2,7 +2,7 @@
 
 ## Types of Compute Services
 
-![types_of_compute_services](/svg/courses/cloud/introduction-to-azure/04_compute/types_of_compute_services.svg)
+![types_of_compute_services](svg/courses/cloud/introduction-to-azure/04_compute/types_of_compute_services.svg)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## Choosing the Right VM Size
 
-![choosing_the_right_vm_size](/svg/courses/cloud/introduction-to-azure/04_compute/choosing_the_right_vm_size.svg)
+![choosing_the_right_vm_size](svg/courses/cloud/introduction-to-azure/04_compute/choosing_the_right_vm_size.svg)
 
 ---
 
@@ -96,7 +96,7 @@
 
 ## Scale Set Architecture
 
-![scale_set_architecture](/svg/courses/cloud/introduction-to-azure/04_compute/scale_set_architecture.svg)
+![scale_set_architecture](svg/courses/cloud/introduction-to-azure/04_compute/scale_set_architecture.svg)
 
 ---
 
@@ -156,7 +156,7 @@
 
 ## Container Services Overview
 
-![container_services_overview](/svg/courses/cloud/introduction-to-azure/04_compute/container_services_overview.svg)
+![container_services_overview](svg/courses/cloud/introduction-to-azure/04_compute/container_services_overview.svg)
 
 ---
 

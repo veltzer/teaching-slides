@@ -20,7 +20,7 @@
 
 Strings are the most basic Redis data type:
 
-![string_operations_recap](/svg/courses/databases/redis/02_data_structures/string_operations_recap.svg)
+![string_operations_recap](svg/courses/databases/redis/02_data_structures/string_operations_recap.svg)
 
 Basic operations:
 ```bash
@@ -71,7 +71,7 @@ STRLEN key            # Get string length
 
 ## Implementing a Counter with Redis Strings
 
-![implementing_a_counter_with_redis_strings](/svg/courses/databases/redis/02_data_structures/implementing_a_counter_with_redis_strings.svg)
+![implementing_a_counter_with_redis_strings](svg/courses/databases/redis/02_data_structures/implementing_a_counter_with_redis_strings.svg)
 
 ---
 
@@ -98,7 +98,7 @@ Use cases:
 
 Lists are linked lists of string values:
 
-![list_operations_recap](/svg/courses/databases/redis/02_data_structures/list_operations_recap.svg)
+![list_operations_recap](svg/courses/databases/redis/02_data_structures/list_operations_recap.svg)
 
 Basic operations:
 ```bash
@@ -148,7 +148,7 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 
 ## Implementing a Task Queue with Redis Lists
 
-![implementing_a_task_queue_with_redis_lists](/svg/courses/databases/redis/02_data_structures/implementing_a_task_queue_with_redis_lists.svg)
+![implementing_a_task_queue_with_redis_lists](svg/courses/databases/redis/02_data_structures/implementing_a_task_queue_with_redis_lists.svg)
 
 ---
 
@@ -156,7 +156,7 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 
 Sets are unordered collections of unique strings:
 
-![set_operations_recap](/svg/courses/databases/redis/02_data_structures/set_operations_recap.svg)
+![set_operations_recap](svg/courses/databases/redis/02_data_structures/set_operations_recap.svg)
 
 Basic operations:
 ```bash
@@ -189,7 +189,7 @@ SRANDMEMBER key [count]        # Get random members
 
 ## Set Operations Visualization
 
-![set_operations_visualization](/svg/courses/databases/redis/02_data_structures/set_operations_visualization.svg)
+![set_operations_visualization](svg/courses/databases/redis/02_data_structures/set_operations_visualization.svg)
 
 ---
 
@@ -215,7 +215,7 @@ SRANDMEMBER key [count]        # Get random members
 
 ## Implementing Tag Filtering with Redis Sets
 
-![implementing_tag_filtering_with_redis_sets](/svg/courses/databases/redis/02_data_structures/implementing_tag_filtering_with_redis_sets.svg)
+![implementing_tag_filtering_with_redis_sets](svg/courses/databases/redis/02_data_structures/implementing_tag_filtering_with_redis_sets.svg)
 
 ---
 
@@ -223,7 +223,7 @@ SRANDMEMBER key [count]        # Get random members
 
 Sorted sets are sets with scores (ordering values):
 
-![sorted_set_operations_recap](/svg/courses/databases/redis/02_data_structures/sorted_set_operations_recap.svg)
+![sorted_set_operations_recap](svg/courses/databases/redis/02_data_structures/sorted_set_operations_recap.svg)
 
 Basic operations:
 ```bash
@@ -279,7 +279,7 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 
 ## Implementing a Leaderboard with Redis Sorted Sets
 
-![implementing_a_leaderboard_with_redis_sorted_sets](/svg/courses/databases/redis/02_data_structures/implementing_a_leaderboard_with_redis_sorted_sets.svg)
+![implementing_a_leaderboard_with_redis_sorted_sets](svg/courses/databases/redis/02_data_structures/implementing_a_leaderboard_with_redis_sorted_sets.svg)
 
 ---
 
@@ -287,7 +287,7 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 
 Hashes are maps of field-value pairs:
 
-![hash_operations_recap](/svg/courses/databases/redis/02_data_structures/hash_operations_recap.svg)
+![hash_operations_recap](svg/courses/databases/redis/02_data_structures/hash_operations_recap.svg)
 
 Basic operations:
 ```bash
@@ -341,7 +341,7 @@ HSCAN key cursor [MATCH pattern] [COUNT count] # Scan through fields
 
 ## Implementing User Profiles with Redis Hashes
 
-![implementing_user_profiles_with_redis_hashes](/svg/courses/databases/redis/02_data_structures/implementing_user_profiles_with_redis_hashes.svg)
+![implementing_user_profiles_with_redis_hashes](svg/courses/databases/redis/02_data_structures/implementing_user_profiles_with_redis_hashes.svg)
 
 ---
 
@@ -414,13 +414,13 @@ BITOP operation destkey key [key ...]   # Bitwise operations
 
 Use case: User online status tracking
 
-![bitmaps_introduction](/svg/courses/databases/redis/02_data_structures/bitmaps_introduction.svg)
+![bitmaps_introduction](svg/courses/databases/redis/02_data_structures/bitmaps_introduction.svg)
 
 ---
 
 ## Choosing the Right Data Structure
 
-![choosing_the_right_data_structure](/svg/courses/databases/redis/02_data_structures/choosing_the_right_data_structure.svg)
+![choosing_the_right_data_structure](svg/courses/databases/redis/02_data_structures/choosing_the_right_data_structure.svg)
 
 ---
 
@@ -446,7 +446,7 @@ Data structure efficiency (for 1 million items):
 
 Using multiple data structures together:
 
-![data_structure_patterns_composite_keys](/svg/courses/databases/redis/02_data_structures/data_structure_patterns_composite_keys.svg)
+![data_structure_patterns_composite_keys](svg/courses/databases/redis/02_data_structures/data_structure_patterns_composite_keys.svg)
 
 ---
 

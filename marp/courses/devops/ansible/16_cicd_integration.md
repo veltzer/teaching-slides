@@ -13,7 +13,7 @@
 
 ## Ansible in CI/CD Pipelines
 
-![ansible_in_ci_cd_pipelines](/svg/courses/devops/ansible/16_cicd_integration/ansible_in_ci_cd_pipelines.svg)
+![ansible_in_ci_cd_pipelines](svg/courses/devops/ansible/16_cicd_integration/ansible_in_ci_cd_pipelines.svg)
 
 ---
 

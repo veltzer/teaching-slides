@@ -24,7 +24,7 @@
 
 ## The Spectrum of Strategies
 
-![the_spectrum_of_strategies](/svg/lectures/git-workflows/the_spectrum_of_strategies.svg)
+![the_spectrum_of_strategies](svg/lectures/git-workflows/the_spectrum_of_strategies.svg)
 
 ---
 
@@ -80,7 +80,7 @@ Working directly on the main branch with minimal or no branching
 
 ## Feature Branch Workflow
 
-![feature_branch_workflow](/svg/lectures/git-workflows/feature_branch_workflow.svg)
+![feature_branch_workflow](svg/lectures/git-workflows/feature_branch_workflow.svg)
 
 ---
 
@@ -110,7 +110,7 @@ Working directly on the main branch with minimal or no branching
 
 ## Git Flow Model
 
-![git_flow_model](/svg/lectures/git-workflows/git_flow_model.svg)
+![git_flow_model](svg/lectures/git-workflows/git_flow_model.svg)
 
 Multiple branch types for different purposes
 
@@ -175,7 +175,7 @@ Simplified workflow centered around pull requests
 
 ## Pull Request Size Philosophy
 
-![pull_request_size_philosophy](/svg/lectures/git-workflows/pull_request_size_philosophy.svg)
+![pull_request_size_philosophy](svg/lectures/git-workflows/pull_request_size_philosophy.svg)
 
 ---
 
@@ -221,7 +221,7 @@ Each commit should:
 
 ## Merge vs Rebase Philosophy
 
-![merge_vs_rebase_philosophy](/svg/lectures/git-workflows/merge_vs_rebase_philosophy.svg)
+![merge_vs_rebase_philosophy](svg/lectures/git-workflows/merge_vs_rebase_philosophy.svg)
 
 ---
 
@@ -269,7 +269,7 @@ Each commit should:
 
 ## Risk Management Through Branching
 
-![risk_management_through_branching](/svg/lectures/git-workflows/risk_management_through_branching.svg)
+![risk_management_through_branching](svg/lectures/git-workflows/risk_management_through_branching.svg)
 
 ---
 
@@ -328,7 +328,7 @@ Each commit should:
 
 ## Feature Flags vs Feature Branches
 
-![feature_flags_vs_feature_branches](/svg/lectures/git-workflows/feature_flags_vs_feature_branches.svg)
+![feature_flags_vs_feature_branches](svg/lectures/git-workflows/feature_flags_vs_feature_branches.svg)
 
 ---
 
@@ -397,7 +397,7 @@ Consider these factors:
 
 ## The Evolution of Strategy
 
-![the_evolution_of_strategy](/svg/lectures/git-workflows/the_evolution_of_strategy.svg)
+![the_evolution_of_strategy](svg/lectures/git-workflows/the_evolution_of_strategy.svg)
 
 ---
 

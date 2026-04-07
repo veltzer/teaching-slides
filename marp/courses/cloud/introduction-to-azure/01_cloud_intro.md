@@ -11,7 +11,7 @@
 
 ## Evolution of Computing
 
-![evolution_of_computing](/svg/courses/cloud/introduction-to-azure/01_cloud_intro/evolution_of_computing.svg)
+![evolution_of_computing](svg/courses/cloud/introduction-to-azure/01_cloud_intro/evolution_of_computing.svg)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## Cloud Service Models
 
-![cloud_service_models](/svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_service_models.svg)
+![cloud_service_models](svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_service_models.svg)
 
 ---
 
@@ -113,7 +113,7 @@
 
 ## Cloud Benefits
 
-![cloud_benefits](/svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_benefits.svg)
+![cloud_benefits](svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_benefits.svg)
 
 ---
 
@@ -200,7 +200,7 @@
 
 ## Cloud Architecture
 
-![cloud_architecture](/svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_architecture.svg)
+![cloud_architecture](svg/courses/cloud/introduction-to-azure/01_cloud_intro/cloud_architecture.svg)
 
 ---
 

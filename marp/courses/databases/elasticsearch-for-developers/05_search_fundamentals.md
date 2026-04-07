@@ -23,7 +23,7 @@ Returns matching documents with scores
 
 ## Query vs Filter Context
 
-![query_vs_filter_context](/svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/query_vs_filter_context.svg)
+![query_vs_filter_context](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/query_vs_filter_context.svg)
 
 ---
 
@@ -357,7 +357,7 @@ Handles typos and misspellings
 
 ## Bool Query Logic
 
-![bool_query_logic](/svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/bool_query_logic.svg)
+![bool_query_logic](svg/courses/databases/elasticsearch-for-developers/05_search_fundamentals/bool_query_logic.svg)
 
 ---
 

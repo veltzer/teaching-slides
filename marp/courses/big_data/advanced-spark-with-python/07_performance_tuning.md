@@ -38,7 +38,7 @@
 ---
 ## Understanding the DAG
 
-![understanding_the_dag](/svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/understanding_the_dag.svg)
+![understanding_the_dag](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/understanding_the_dag.svg)
 
 ---
 ## Reading Execution Plans
@@ -92,7 +92,7 @@ query.explain(mode="codegen")
 ---
 ## Shuffle Deep Dive
 
-![shuffle_deep_dive](/svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/shuffle_deep_dive.svg)
+![shuffle_deep_dive](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/shuffle_deep_dive.svg)
 
 ---
 ## Shuffle Configuration
@@ -194,7 +194,7 @@ df_by_key = df.repartition(100, "user_id")
 ---
 ## Memory Architecture
 
-![memory_architecture](/svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/memory_architecture.svg)
+![memory_architecture](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/memory_architecture.svg)
 
 ---
 ## Memory Configuration Guide
@@ -451,7 +451,7 @@ spark.conf.set(
 ---
 ## AQE: How It Works
 
-![aqe_how_it_works](/svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/aqe_how_it_works.svg)
+![aqe_how_it_works](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/aqe_how_it_works.svg)
 
 ---
 ## Dynamic Partition Pruning (DPP)

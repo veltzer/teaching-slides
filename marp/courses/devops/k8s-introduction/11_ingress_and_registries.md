@@ -14,7 +14,7 @@
 
 ## Why Ingress?
 
-![why_ingress](/svg/courses/devops/k8s-introduction/11_ingress_and_registries/why_ingress.svg)
+![why_ingress](svg/courses/devops/k8s-introduction/11_ingress_and_registries/why_ingress.svg)
 
 ---
 
@@ -163,7 +163,7 @@ kubectl create secret tls tls-secret \
 
 ## Ingress Controllers
 
-![ingress_controllers](/svg/courses/devops/k8s-introduction/11_ingress_and_registries/ingress_controllers.svg)
+![ingress_controllers](svg/courses/devops/k8s-introduction/11_ingress_and_registries/ingress_controllers.svg)
 
 ---
 
@@ -293,7 +293,7 @@ spec:
 
 ## Registry Types
 
-![registry_types](/svg/courses/devops/k8s-introduction/11_ingress_and_registries/registry_types.svg)
+![registry_types](svg/courses/devops/k8s-introduction/11_ingress_and_registries/registry_types.svg)
 
 ---
 

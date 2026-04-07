@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The AI-Powered Learning Revolution
 
-![the_ai_powered_learning_revolution](/svg/courses/ai/developing-using-ai/06_learning_and_skills/the_ai_powered_learning_revolution.svg)
+![the_ai_powered_learning_revolution](svg/courses/ai/developing-using-ai/06_learning_and_skills/the_ai_powered_learning_revolution.svg)
 
 ---
 
@@ -111,7 +111,7 @@ const unique5 = arr => {
 
 ## Technology Comparison Learning
 
-![technology_comparison_learning](/svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_comparison_learning.svg)
+![technology_comparison_learning](svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_comparison_learning.svg)
 
 ---
 
@@ -224,7 +224,7 @@ class ShapeFactory {
 
 ## Skill Enhancement: Language Learning
 
-![skill_enhancement_language_learning](/svg/courses/ai/developing-using-ai/06_learning_and_skills/skill_enhancement_language_learning.svg)
+![skill_enhancement_language_learning](svg/courses/ai/developing-using-ai/06_learning_and_skills/skill_enhancement_language_learning.svg)
 
 ---
 
@@ -331,7 +331,7 @@ def quicksort(arr):
 
 ## System Design Learning
 
-![system_design_learning](/svg/courses/ai/developing-using-ai/06_learning_and_skills/system_design_learning.svg)
+![system_design_learning](svg/courses/ai/developing-using-ai/06_learning_and_skills/system_design_learning.svg)
 
 ---
 
@@ -463,7 +463,7 @@ def problem_solving_framework(problem):
 
 Multiple approaches to problems:
 
-![solution_exploration](/svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_exploration.svg)
+![solution_exploration](svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_exploration.svg)
 
 ---
 
@@ -604,7 +604,7 @@ def get_user_with_orders_nosql():
 ```
 ## Decision Making Frameworks
 
-![decision_making_frameworks](/svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)
+![decision_making_frameworks](svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)
 
 ---
 
@@ -693,7 +693,7 @@ def stay_current_workflow():
 
 ## Technology Trends
 
-![technology_trends](/svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_trends.svg)
+![technology_trends](svg/courses/ai/developing-using-ai/06_learning_and_skills/technology_trends.svg)
 
 ---
 
@@ -804,7 +804,7 @@ learning_plan = create_6_month_plan(skill_gaps)
 
 ## Learning Path Creation
 
-![learning_path_creation](/svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_path_creation.svg)
+![learning_path_creation](svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_path_creation.svg)
 
 ---
 
@@ -963,7 +963,7 @@ async function retry(fn, retries = 3, delay = 1000) {
 
 ## Solution Cataloging
 
-![solution_cataloging](/svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_cataloging.svg)
+![solution_cataloging](svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_cataloging.svg)
 
 ---
 
@@ -1070,7 +1070,7 @@ Learning from experience:
 
 Tracking your progress:
 
-![learning_metrics](/svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_metrics.svg)
+![learning_metrics](svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_metrics.svg)
 
 ---
 
@@ -1172,7 +1172,7 @@ def learn_from_error(error, code):
 
 ## Building Learning Habits
 
-![building_learning_habits](/svg/courses/ai/developing-using-ai/06_learning_and_skills/building_learning_habits.svg)
+![building_learning_habits](svg/courses/ai/developing-using-ai/06_learning_and_skills/building_learning_habits.svg)
 
 ---
 

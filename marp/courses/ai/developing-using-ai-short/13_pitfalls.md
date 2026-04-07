@@ -24,7 +24,7 @@ Understanding common mistakes prevents:
 
 ## The AI Adoption Danger Zones
 
-![the_ai_adoption_danger_zones](/svg/courses/ai/developing-using-ai-short/13_pitfalls/the_ai_adoption_danger_zones.svg)
+![the_ai_adoption_danger_zones](svg/courses/ai/developing-using-ai-short/13_pitfalls/the_ai_adoption_danger_zones.svg)
 
 ---
 
@@ -127,7 +127,7 @@ class CriticalThinkingFramework:
 
 ## Quality Control Failures
 
-![quality_control_failures](/svg/courses/ai/developing-using-ai-short/13_pitfalls/quality_control_failures.svg)
+![quality_control_failures](svg/courses/ai/developing-using-ai-short/13_pitfalls/quality_control_failures.svg)
 
 ---
 
@@ -225,7 +225,7 @@ class AISecurityValidator:
 
 ## Context Limitation Challenges
 
-![context_limitation_challenges](/svg/courses/ai/developing-using-ai-short/13_pitfalls/context_limitation_challenges.svg)
+![context_limitation_challenges](svg/courses/ai/developing-using-ai-short/13_pitfalls/context_limitation_challenges.svg)
 
 ---
 
@@ -347,7 +347,7 @@ fallback_framework:
 
 ## Team Best Practices
 
-![team_best_practices](/svg/courses/ai/developing-using-ai-short/13_pitfalls/team_best_practices.svg)
+![team_best_practices](svg/courses/ai/developing-using-ai-short/13_pitfalls/team_best_practices.svg)
 
 ---
 

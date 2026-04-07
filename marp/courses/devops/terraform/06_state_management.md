@@ -49,7 +49,7 @@
 
 ## State File Lifecycle
 
-![state_file_lifecycle](/svg/courses/devops/terraform/06_state_management/state_file_lifecycle.svg)
+![state_file_lifecycle](svg/courses/devops/terraform/06_state_management/state_file_lifecycle.svg)
 
 ---
 
@@ -121,7 +121,7 @@ resource "aws_instance" "web" {
 
 ## Remote State Overview
 
-![remote_state_overview](/svg/courses/devops/terraform/06_state_management/remote_state_overview.svg)
+![remote_state_overview](svg/courses/devops/terraform/06_state_management/remote_state_overview.svg)
 
 ---
 
@@ -271,7 +271,7 @@ terraform {
 
 ## State Locking
 
-![state_locking](/svg/courses/devops/terraform/06_state_management/state_locking.svg)
+![state_locking](svg/courses/devops/terraform/06_state_management/state_locking.svg)
 
 ---
 
@@ -298,7 +298,7 @@ terraform force-unlock a1b2c3d4-e5f6-7890
 
 ## State File Organization Patterns
 
-![state_file_organization_patterns](/svg/courses/devops/terraform/06_state_management/state_file_organization_patterns.svg)
+![state_file_organization_patterns](svg/courses/devops/terraform/06_state_management/state_file_organization_patterns.svg)
 
 ---
 

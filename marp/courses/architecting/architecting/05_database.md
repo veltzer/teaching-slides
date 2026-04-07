@@ -29,7 +29,7 @@
 
 ## ACID Properties
 
-![acid_properties](/out/mermaid/courses/architecting/architecting/05_database/acid_properties.svg)
+![acid_properties](out/mermaid/courses/architecting/architecting/05_database/acid_properties.svg)
 
 ---
 
@@ -62,7 +62,7 @@ COMMIT;
 
 ## Isolation Problems
 
-![isolation_problems](/out/mermaid/courses/architecting/architecting/05_database/isolation_problems.svg)
+![isolation_problems](out/mermaid/courses/architecting/architecting/05_database/isolation_problems.svg)
 
 ---
 
@@ -190,7 +190,7 @@ with driver.session() as session:
 
 ## Normalization Example
 
-![normalization_example](/out/mermaid/courses/architecting/architecting/05_database/normalization_example.svg)
+![normalization_example](out/mermaid/courses/architecting/architecting/05_database/normalization_example.svg)
 
 ---
 
@@ -258,7 +258,7 @@ FOR VALUES FROM ('2024-01-01') TO ('2025-01-01');
 
 ## Sharding Architecture
 
-![sharding_architecture](/out/mermaid/courses/architecting/architecting/05_database/sharding_architecture.svg)
+![sharding_architecture](out/mermaid/courses/architecting/architecting/05_database/sharding_architecture.svg)
 
 ---
 
@@ -292,7 +292,7 @@ def store_data(key, value):
 
 ## Replication Types
 
-![replication_types](/out/mermaid/courses/architecting/architecting/05_database/replication_types.svg)
+![replication_types](out/mermaid/courses/architecting/architecting/05_database/replication_types.svg)
 
 ---
 
@@ -398,7 +398,7 @@ engine = create_engine(
 
 ## Caching Patterns
 
-![caching_patterns](/out/mermaid/courses/architecting/architecting/05_database/caching_patterns.svg)
+![caching_patterns](out/mermaid/courses/architecting/architecting/05_database/caching_patterns.svg)
 
 ---
 
@@ -437,7 +437,7 @@ def get_user(user_id):
 
 ## Monitoring Dashboard
 
-![monitoring_dashboard](/out/mermaid/courses/architecting/architecting/05_database/monitoring_dashboard.svg)
+![monitoring_dashboard](out/mermaid/courses/architecting/architecting/05_database/monitoring_dashboard.svg)
 
 ---
 

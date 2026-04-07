@@ -12,13 +12,13 @@ Redis enhances application architecture:
 - **Reduces infrastructure costs**: Efficient resource usage
 - **Enables real-time features**: Live data and interactions
 
-![why_redis_in_modern_applications](/svg/courses/databases/redis/09_integration/why_redis_in_modern_applications.svg)
+![why_redis_in_modern_applications](svg/courses/databases/redis/09_integration/why_redis_in_modern_applications.svg)
 
 ---
 
 ## Popular Redis Client Libraries
 
-![popular_redis_client_libraries](/svg/courses/databases/redis/09_integration/popular_redis_client_libraries.svg)
+![popular_redis_client_libraries](svg/courses/databases/redis/09_integration/popular_redis_client_libraries.svg)
 
 ---
 
@@ -50,7 +50,7 @@ When choosing a Redis client:
 
 Best practices for Redis connections:
 
-![connection_management](/svg/courses/databases/redis/09_integration/connection_management.svg)
+![connection_management](svg/courses/databases/redis/09_integration/connection_management.svg)
 
 ---
 
@@ -154,7 +154,7 @@ public class RedisConnectionPool {
 
 Converting application data for Redis storage:
 
-![data_serialization](/svg/courses/databases/redis/09_integration/data_serialization.svg)
+![data_serialization](svg/courses/databases/redis/09_integration/data_serialization.svg)
 
 ---
 
@@ -199,7 +199,7 @@ user_hash = r.hgetall('user:123')
 
 ## Integrating Redis as a Cache
 
-![integrating_redis_as_a_cache](/svg/courses/databases/redis/09_integration/integrating_redis_as_a_cache.svg)
+![integrating_redis_as_a_cache](svg/courses/databases/redis/09_integration/integrating_redis_as_a_cache.svg)
 
 Common cache patterns:
 - Cache-aside (shown above)
@@ -340,7 +340,7 @@ public class ProductService {
 
 ## Redis for Session Management
 
-![redis_for_session_management](/svg/courses/databases/redis/09_integration/redis_for_session_management.svg)
+![redis_for_session_management](svg/courses/databases/redis/09_integration/redis_for_session_management.svg)
 
 Benefits:
 - Centralized session storage
@@ -480,7 +480,7 @@ public class SessionController {
 
 ## Rate Limiting with Redis
 
-![rate_limiting_with_redis](/svg/courses/databases/redis/09_integration/rate_limiting_with_redis.svg)
+![rate_limiting_with_redis](svg/courses/databases/redis/09_integration/rate_limiting_with_redis.svg)
 
 ---
 
@@ -535,7 +535,7 @@ app.use('/api', rateLimit);
 
 ## Redis for Job Queues
 
-![redis_for_job_queues](/svg/courses/databases/redis/09_integration/redis_for_job_queues.svg)
+![redis_for_job_queues](svg/courses/databases/redis/09_integration/redis_for_job_queues.svg)
 
 Benefits:
 - Simple implementation
@@ -632,7 +632,7 @@ emailQueue.on('failed', (job, err) => {
 
 ## Redis for Real-time Features
 
-![redis_for_real_time_features](/svg/courses/databases/redis/09_integration/redis_for_real_time_features.svg)
+![redis_for_real_time_features](svg/courses/databases/redis/09_integration/redis_for_real_time_features.svg)
 
 ---
 
@@ -877,7 +877,7 @@ app.listen(3000, () => {
 
 ## Caching Strategies in Microservices
 
-![caching_strategies_in_microservices](/svg/courses/databases/redis/09_integration/caching_strategies_in_microservices.svg)
+![caching_strategies_in_microservices](svg/courses/databases/redis/09_integration/caching_strategies_in_microservices.svg)
 
 Key strategies:
 - Per-service caching
@@ -889,7 +889,7 @@ Key strategies:
 
 ## Redis and Database Integration
 
-![redis_and_database_integration](/svg/courses/databases/redis/09_integration/redis_and_database_integration.svg)
+![redis_and_database_integration](svg/courses/databases/redis/09_integration/redis_and_database_integration.svg)
 
 Integration patterns:
 - Write-through cache
@@ -903,4 +903,4 @@ Integration patterns:
 
 Robust Redis integration requires:
 
-![error_handling_and_resilience](/svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)
+![error_handling_and_resilience](svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)

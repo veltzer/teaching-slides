@@ -31,7 +31,7 @@ public:
 
 ## Mediator Structure
 
-![mediator_structure](/svg/courses/languages/c++/c++-design-patterns/22_mediator/mediator_structure.svg)
+![mediator_structure](svg/courses/languages/c++/c++-design-patterns/22_mediator/mediator_structure.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Yocto Ecosystem Overview
 
-![yocto_ecosystem_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/yocto_ecosystem_overview.svg)
+![yocto_ecosystem_overview](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/yocto_ecosystem_overview.svg)
 
 ---
 
@@ -64,7 +64,7 @@ bitbake-layers show-layers
 
 ## Real-Time Linux
 
-![real_time_linux](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/real_time_linux.svg)
+![real_time_linux](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/real_time_linux.svg)
 
 ---
 
@@ -284,7 +284,7 @@ runqemu qemuarm \
 
 ## AGL - Automotive Grade Linux
 
-![agl_automotive_grade_linux](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/agl_automotive_grade_linux.svg)
+![agl_automotive_grade_linux](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/11_advanced_topics_and_ecosystem/agl_automotive_grade_linux.svg)
 
 ---
 

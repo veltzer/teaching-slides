@@ -14,7 +14,7 @@
 
 ## The Relational Model
 
-![the_relational_model](/svg/lectures/sql-database-fundamentals/the_relational_model.svg)
+![the_relational_model](svg/lectures/sql-database-fundamentals/the_relational_model.svg)
 
 ---
 
@@ -31,7 +31,7 @@ The foundation of SQL database guarantees:
 
 ## Atomicity
 
-![atomicity](/svg/lectures/sql-database-fundamentals/atomicity.svg)
+![atomicity](svg/lectures/sql-database-fundamentals/atomicity.svg)
 
 All or nothing - no partial transactions
 
@@ -51,7 +51,7 @@ Database remains valid after every transaction:
 
 ## Isolation
 
-![isolation](/svg/lectures/sql-database-fundamentals/isolation.svg)
+![isolation](svg/lectures/sql-database-fundamentals/isolation.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Once committed, data survives:
 
 ## SQL Database Architecture
 
-![sql_database_architecture](/svg/lectures/sql-database-fundamentals/sql_database_architecture.svg)
+![sql_database_architecture](svg/lectures/sql-database-fundamentals/sql_database_architecture.svg)
 
 ---
 
@@ -86,19 +86,19 @@ Once committed, data survives:
 
 ## Query Optimization
 
-![query_optimization](/svg/lectures/sql-database-fundamentals/query_optimization.svg)
+![query_optimization](svg/lectures/sql-database-fundamentals/query_optimization.svg)
 
 ---
 
 ## Indexing Strategies
 
-![indexing_strategies](/svg/lectures/sql-database-fundamentals/indexing_strategies.svg)
+![indexing_strategies](svg/lectures/sql-database-fundamentals/indexing_strategies.svg)
 
 ---
 
 ## B-Tree Index Structure
 
-![b_tree_index_structure](/svg/lectures/sql-database-fundamentals/b_tree_index_structure.svg)
+![b_tree_index_structure](svg/lectures/sql-database-fundamentals/b_tree_index_structure.svg)
 
 ---
 
@@ -115,7 +115,7 @@ Trade-off: Performance vs Consistency
 
 ## Concurrency Control
 
-![concurrency_control](/svg/lectures/sql-database-fundamentals/concurrency_control.svg)
+![concurrency_control](svg/lectures/sql-database-fundamentals/concurrency_control.svg)
 
 ---
 
@@ -135,13 +135,13 @@ Trade-off: Performance vs Consistency
 
 ## MVCC (Multi-Version Concurrency Control)
 
-![mvcc_multi_version_concurrency_control](/svg/lectures/sql-database-fundamentals/mvcc_multi_version_concurrency_control.svg)
+![mvcc_multi_version_concurrency_control](svg/lectures/sql-database-fundamentals/mvcc_multi_version_concurrency_control.svg)
 
 ---
 
 ## SQL Databases and CAP Theorem
 
-![sql_databases_and_cap_theorem](/svg/lectures/sql-database-fundamentals/sql_databases_and_cap_theorem.svg)
+![sql_databases_and_cap_theorem](svg/lectures/sql-database-fundamentals/sql_databases_and_cap_theorem.svg)
 
 Traditional SQL: CA systems (single node)
 
@@ -159,7 +159,7 @@ No network partitions in single-node systems!
 
 ## The Scale Challenge
 
-![the_scale_challenge](/svg/lectures/sql-database-fundamentals/the_scale_challenge.svg)
+![the_scale_challenge](svg/lectures/sql-database-fundamentals/the_scale_challenge.svg)
 
 ---
 
@@ -189,7 +189,7 @@ Why SQL databases struggle with distribution:
 
 ## Master-Slave Replication
 
-![master_slave_replication](/svg/lectures/sql-database-fundamentals/master_slave_replication.svg)
+![master_slave_replication](svg/lectures/sql-database-fundamentals/master_slave_replication.svg)
 
 Writes to master, reads from slaves
 
@@ -213,13 +213,13 @@ Writes to master, reads from slaves
 
 ## Read/Write Splitting
 
-![read_write_splitting](/svg/lectures/sql-database-fundamentals/read_write_splitting.svg)
+![read_write_splitting](svg/lectures/sql-database-fundamentals/read_write_splitting.svg)
 
 ---
 
 ## Multi-Master Replication
 
-![multi_master_replication](/svg/lectures/sql-database-fundamentals/multi_master_replication.svg)
+![multi_master_replication](svg/lectures/sql-database-fundamentals/multi_master_replication.svg)
 
 Conflict resolution required
 
@@ -227,7 +227,7 @@ Conflict resolution required
 
 ## Sharding SQL Databases
 
-![sharding_sql_databases](/svg/lectures/sql-database-fundamentals/sharding_sql_databases.svg)
+![sharding_sql_databases](svg/lectures/sql-database-fundamentals/sharding_sql_databases.svg)
 
 ---
 
@@ -254,7 +254,7 @@ Modern approaches to distributed SQL:
 
 ## Two-Phase Commit (2PC)
 
-![two_phase_commit_2pc](/svg/lectures/sql-database-fundamentals/two_phase_commit_2pc.svg)
+![two_phase_commit_2pc](svg/lectures/sql-database-fundamentals/two_phase_commit_2pc.svg)
 
 ---
 
@@ -270,7 +270,7 @@ Trade availability for consistency
 
 ## Consensus Protocols
 
-![consensus_protocols](/svg/lectures/sql-database-fundamentals/consensus_protocols.svg)
+![consensus_protocols](svg/lectures/sql-database-fundamentals/consensus_protocols.svg)
 
 ---
 
@@ -288,7 +288,7 @@ Attempting to get best of both worlds:
 
 ## NewSQL and CAP
 
-![newsql_and_cap](/svg/lectures/sql-database-fundamentals/newsql_and_cap.svg)
+![newsql_and_cap](svg/lectures/sql-database-fundamentals/newsql_and_cap.svg)
 
 Usually CP with high availability
 
@@ -308,13 +308,13 @@ For CAP considerations:
 
 ## Caching Strategies
 
-![caching_strategies](/svg/lectures/sql-database-fundamentals/caching_strategies.svg)
+![caching_strategies](svg/lectures/sql-database-fundamentals/caching_strategies.svg)
 
 ---
 
 ## Connection Pooling
 
-![connection_pooling](/svg/lectures/sql-database-fundamentals/connection_pooling.svg)
+![connection_pooling](svg/lectures/sql-database-fundamentals/connection_pooling.svg)
 
 Reduces connection overhead
 
@@ -336,7 +336,7 @@ Reduces connection overhead
 
 ## Federation Pattern
 
-![federation_pattern](/svg/lectures/sql-database-fundamentals/federation_pattern.svg)
+![federation_pattern](svg/lectures/sql-database-fundamentals/federation_pattern.svg)
 
 Split by functional areas
 
@@ -344,7 +344,7 @@ Split by functional areas
 
 ## SQL in Microservices
 
-![sql_in_microservices](/svg/lectures/sql-database-fundamentals/sql_in_microservices.svg)
+![sql_in_microservices](svg/lectures/sql-database-fundamentals/sql_in_microservices.svg)
 
 ---
 
@@ -362,13 +362,13 @@ Store events, not state:
 
 ## CQRS Pattern
 
-![cqrs_pattern](/svg/lectures/sql-database-fundamentals/cqrs_pattern.svg)
+![cqrs_pattern](svg/lectures/sql-database-fundamentals/cqrs_pattern.svg)
 
 ---
 
 ## Comparing SQL Scaling Approaches
 
-![comparing_sql_scaling_approaches](/svg/lectures/sql-database-fundamentals/comparing_sql_scaling_approaches.svg)
+![comparing_sql_scaling_approaches](svg/lectures/sql-database-fundamentals/comparing_sql_scaling_approaches.svg)
 
 ---
 

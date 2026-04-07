@@ -17,7 +17,7 @@ Advanced Kubernetes Course - Day 3, Module 4
 
 ## `RBAC` Architecture
 
-![rbac_architecture](/svg/courses/devops/advanced-kubernetes/14_rbac/rbac_architecture.svg)
+![rbac_architecture](svg/courses/devops/advanced-kubernetes/14_rbac/rbac_architecture.svg)
 
 ---
 

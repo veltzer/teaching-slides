@@ -22,13 +22,13 @@
 
 ## Packer vs Runtime Provisioning
 
-![packer_vs_runtime_provisioning](/svg/courses/devops/terraform/14_packer_introduction/packer_vs_runtime_provisioning.svg)
+![packer_vs_runtime_provisioning](svg/courses/devops/terraform/14_packer_introduction/packer_vs_runtime_provisioning.svg)
 
 ---
 
 ## Packer Architecture
 
-![packer_architecture](/svg/courses/devops/terraform/14_packer_introduction/packer_architecture.svg)
+![packer_architecture](svg/courses/devops/terraform/14_packer_introduction/packer_architecture.svg)
 
 ---
 
@@ -155,7 +155,7 @@ packer build -var "region=us-west-2" template.pkr.hcl
 
 ## Packer Build Process
 
-![packer_build_process](/svg/courses/devops/terraform/14_packer_introduction/packer_build_process.svg)
+![packer_build_process](svg/courses/devops/terraform/14_packer_introduction/packer_build_process.svg)
 
 ---
 
@@ -545,7 +545,7 @@ resource "aws_instance" "web" {
 
 ## CI/CD Pipeline with Packer and Terraform
 
-![ci_cd_pipeline_with_packer_and_terraform](/svg/courses/devops/terraform/14_packer_introduction/ci_cd_pipeline_with_packer_and_terraform.svg)
+![ci_cd_pipeline_with_packer_and_terraform](svg/courses/devops/terraform/14_packer_introduction/ci_cd_pipeline_with_packer_and_terraform.svg)
 
 ---
 
