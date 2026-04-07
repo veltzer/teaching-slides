@@ -1,4 +1,45 @@
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
+<svg viewBox="0 0 900 330" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  <!-- Created -->
+  <rect x="30" y="110" width="120" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="90" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Created</text>
+  <text x="90" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">fork()</text>
+  <!-- Ready -->
+  <line x1="150" y1="135" x2="210" y2="135" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="220" y="110" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="280" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Ready</text>
+  <!-- Running -->
+  <line x1="340" y1="125" x2="420" y2="125" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="380" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">scheduled</text>
+  <rect x="430" y="110" width="120" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="490" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Running</text>
+  <!-- Preempted back to Ready -->
+  <line x1="490" y1="160" x2="490" y2="195" stroke="#666" stroke-width="1.5"/>
+  <line x1="490" y1="195" x2="280" y2="195" stroke="#666" stroke-width="1.5"/>
+  <line x1="280" y1="195" x2="280" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="385" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">preempted</text>
+  <!-- Blocked / Waiting -->
+  <line x1="550" y1="135" x2="610" y2="135" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="580" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">I/O wait</text>
+  <rect x="620" y="110" width="120" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="680" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Blocked</text>
+  <!-- Blocked back to Ready -->
+  <line x1="680" y1="110" x2="680" y2="60" stroke="#666" stroke-width="1.5"/>
+  <line x1="680" y1="60" x2="280" y2="60" stroke="#666" stroke-width="1.5"/>
+  <line x1="280" y1="60" x2="280" y2="105" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="480" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">I/O complete</text>
+  <!-- Zombie -->
+  <line x1="490" y1="160" x2="490" y2="245" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="510" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">exit()</text>
+  <rect x="430" y="250" width="120" height="50" rx="5" fill="#e2e3e5" stroke="#6c757d" stroke-width="2"/>
+  <text x="490" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Zombie</text>
+  <!-- Terminated -->
+  <line x1="550" y1="275" x2="610" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="580" y="267" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">wait()</text>
+  <rect x="620" y="250" width="120" height="50" rx="5" fill="#e2e3e5" stroke="#6c757d" stroke-width="2"/>
+  <text x="680" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Terminated</text>
 </svg>

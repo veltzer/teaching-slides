@@ -1,4 +1,54 @@
-<svg width="600" height="150" xmlns="http://www.w3.org/2000/svg">
-  <rect x="150" y="40" width="300" height="70" fill="#f0f0f0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="80" text-anchor="middle" font-size="14">Diagram</text>
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  <!-- UNIX root -->
+  <rect x="350" y="20" width="160" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="430" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">UNIX</text>
+  <text x="430" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">AT&amp;T Bell Labs, 1969</text>
+  <!-- BSD branch -->
+  <line x1="390" y1="65" x2="200" y2="105" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="120" y="105" width="160" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BSD</text>
+  <text x="200" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">UC Berkeley, 1977</text>
+  <!-- System V branch -->
+  <line x1="470" y1="65" x2="660" y2="105" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="580" y="105" width="160" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="660" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">System V</text>
+  <text x="660" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">AT&amp;T, 1983</text>
+  <!-- BSD descendants -->
+  <line x1="160" y1="150" x2="80" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="10" y="195" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="80" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">FreeBSD</text>
+  <line x1="200" y1="150" x2="200" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="130" y="195" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">OpenBSD</text>
+  <line x1="240" y1="150" x2="320" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="250" y="195" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="320" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">macOS / Darwin</text>
+  <!-- System V descendants -->
+  <line x1="620" y1="150" x2="540" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="470" y="195" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="540" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Solaris</text>
+  <line x1="700" y1="150" x2="720" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="650" y="195" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="720" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">AIX / HP-UX</text>
+  <!-- MINIX -->
+  <line x1="430" y1="65" x2="430" y2="195" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="360" y="195" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="430" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">MINIX (1987)</text>
+  <!-- Linux -->
+  <line x1="430" y1="235" x2="430" y2="280" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="340" y="280" width="180" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="430" y="302" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">Linux</text>
+  <text x="430" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Linus Torvalds, 1991</text>
+  <!-- Linux descendants -->
+  <line x1="390" y1="330" x2="200" y2="365" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="200" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Debian / Ubuntu</text>
+  <line x1="430" y1="330" x2="430" y2="365" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="430" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Red Hat / Fedora</text>
+  <line x1="470" y1="330" x2="660" y2="365" stroke="#666" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="660" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">Android</text>
 </svg>

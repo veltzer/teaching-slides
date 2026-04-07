@@ -1,4 +1,42 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="150" width="200" height="100" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">Diagram</text>
+<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    </marker>
+  </defs>
+  <!-- Timeline arrow -->
+  <line x1="50" y1="150" x2="860" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Era 1: Traditional -->
+  <rect x="60" y="60" width="150" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="135" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Traditional</text>
+  <text x="135" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">RDBMS / Data</text>
+  <text x="135" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Warehouses</text>
+  <line x1="135" y1="130" x2="135" y2="145" stroke="#4a90e2" stroke-width="2"/>
+  <text x="135" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">~2000s</text>
+  <!-- Era 2: Hadoop -->
+  <rect x="260" y="60" width="150" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="335" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Hadoop</text>
+  <text x="335" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">MapReduce</text>
+  <text x="335" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">HDFS / Batch</text>
+  <line x1="335" y1="130" x2="335" y2="145" stroke="#4a90e2" stroke-width="2"/>
+  <text x="335" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">~2006</text>
+  <!-- Era 3: Spark -->
+  <rect x="460" y="60" width="150" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="535" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Spark</text>
+  <text x="535" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">In-Memory</text>
+  <text x="535" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">DAG Engine</text>
+  <line x1="535" y1="130" x2="535" y2="145" stroke="#28a745" stroke-width="2"/>
+  <text x="535" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">~2014</text>
+  <!-- Era 4: Modern -->
+  <rect x="660" y="60" width="150" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="735" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Modern</text>
+  <text x="735" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Lakehouse /</text>
+  <text x="735" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Real-time</text>
+  <line x1="735" y1="130" x2="735" y2="145" stroke="#4a90e2" stroke-width="2"/>
+  <text x="735" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#888">~2020+</text>
+  <!-- Speed labels -->
+  <text x="135" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Hours</text>
+  <text x="335" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Minutes-Hours</text>
+  <text x="535" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Seconds-Min</text>
+  <text x="735" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Milliseconds</text>
 </svg>
