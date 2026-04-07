@@ -39,6 +39,7 @@ def convert(mmd_path: str, stamp_path: str, puppeteer_cfg: str) -> None:
          "-p", puppeteer_cfg],
         capture_output=True,
         text=True,
+        check=False,
     )
     if result.returncode != 0:
         raise RuntimeError(
