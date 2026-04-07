@@ -4,6 +4,12 @@ extra_inputs = [
     "config/personal.lua",
 ]
 
+[processor.script.svglint]
+linter = "svglint"
+args = ["--ci"]
+extensions = [".svg"]
+scan_dirs = ["svg", "out/mermaid"]
+
 [processor.script.md_lint]
 linter = "scripts/md_lint.py"
 extensions = [".md"]
@@ -39,12 +45,6 @@ scan_dirs = ["marp"]
 
 [processor.zspell]
 scan_dirs = ["marp"]
-
-[processor.script.svglint]
-linter = "svglint"
-args = ["--ci"]
-extensions = [".svg"]
-scan_dirs = ["svg", "out/mermaid"]
 
 [processor.pdfunite]
 output_dir = "_site/pdfunite"
