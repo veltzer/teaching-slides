@@ -1,0 +1,33 @@
+<svg viewBox="0 0 750 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">gRPC Communication Patterns</text>
+  <!-- Row 1: Unary RPC -->
+  <rect x="30" y="50" width="180" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Unary RPC</text>
+  <line x1="210" y1="73" x2="260" y2="73" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="265" y="50" width="450" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="490" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Single request, single response</text>
+  <!-- Row 2: Server Streaming -->
+  <rect x="30" y="115" width="180" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Server Streaming</text>
+  <line x1="210" y1="138" x2="260" y2="138" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="265" y="115" width="450" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="490" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Single request, stream of responses</text>
+  <!-- Row 3: Client Streaming -->
+  <rect x="30" y="180" width="180" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Client Streaming</text>
+  <line x1="210" y1="203" x2="260" y2="203" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="265" y="180" width="450" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="490" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Stream of requests, single response</text>
+  <!-- Row 4: Bidirectional -->
+  <rect x="30" y="245" width="180" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Bidirectional</text>
+  <text x="120" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Streaming</text>
+  <line x1="210" y1="268" x2="260" y2="268" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="265" y="245" width="450" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="490" y="273" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Stream of requests and responses</text>
+</svg>

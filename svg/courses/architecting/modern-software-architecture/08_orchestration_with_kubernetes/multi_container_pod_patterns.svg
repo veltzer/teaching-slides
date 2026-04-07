@@ -1,0 +1,38 @@
+<svg viewBox="0 0 850 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Sidecar Pattern -->
+  <rect x="20" y="15" width="250" height="260" rx="5" fill="none" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="145" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#4a90e2" font-weight="bold">Sidecar Pattern</text>
+  <rect x="45" y="60" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="105" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Main Container</text>
+  <rect x="45" y="130" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="105" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Log Collector</text>
+  <line x1="105" y1="105" x2="105" y2="130" stroke="#999" stroke-width="2"/>
+  <text x="145" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Extends main container</text>
+  <text x="145" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">with logging/monitoring</text>
+  <!-- Ambassador Pattern -->
+  <rect x="300" y="15" width="250" height="260" rx="5" fill="none" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="425" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#ffc107" font-weight="bold">Ambassador Pattern</text>
+  <rect x="325" y="60" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="385" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Main Container</text>
+  <rect x="325" y="130" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="385" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Proxy Container</text>
+  <line x1="385" y1="105" x2="385" y2="130" stroke="#999" stroke-width="2"/>
+  <text x="425" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Proxies network traffic</text>
+  <text x="425" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">to external services</text>
+  <!-- Init Container Pattern -->
+  <rect x="580" y="15" width="250" height="260" rx="5" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="705" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#28a745" font-weight="bold">Init Container</text>
+  <rect x="605" y="60" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="665" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Init Container</text>
+  <rect x="605" y="150" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="665" y="177" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Main Container</text>
+  <line x1="665" y1="105" x2="665" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="690" y="130" font-family="Arial, sans-serif" font-size="10" fill="#666">Runs first</text>
+  <text x="705" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Prepares environment</text>
+  <text x="705" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">before main starts</text>
+</svg>

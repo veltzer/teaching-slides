@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- SLI boxes -->
+  <rect x="30" y="40" width="200" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="130" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SLI: Latency</text>
+  <text x="130" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">p99 = 180ms</text>
+  <rect x="30" y="140" width="200" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="130" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SLI: Error Rate</text>
+  <text x="130" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">= 0.05%</text>
+  <!-- SLO boxes -->
+  <rect x="310" y="40" width="200" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="410" y="58" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SLO: Latency</text>
+  <text x="410" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">p99 &lt; 200ms</text>
+  <rect x="310" y="140" width="200" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="410" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SLO: Error Rate</text>
+  <text x="410" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">&lt; 0.1%</text>
+  <!-- SLA -->
+  <rect x="580" y="90" width="180" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="670" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SLA</text>
+  <text x="670" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">99.9% within SLO</text>
+  <!-- Arrows -->
+  <line x1="230" y1="62" x2="308" y2="62" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="230" y1="162" x2="308" y2="162" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="62" x2="578" y2="105" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="162" x2="578" y2="125" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Labels -->
+  <text x="130" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4a90e2" font-weight="bold">Measure</text>
+  <text x="410" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">Target</text>
+  <text x="670" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffc107" font-weight="bold">Agreement</text>
+</svg>

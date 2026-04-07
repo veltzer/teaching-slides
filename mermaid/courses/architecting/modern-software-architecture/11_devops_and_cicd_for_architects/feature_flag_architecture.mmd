@@ -1,5 +1,0 @@
-graph LR
-    APP[Application] -->|Check Flag| FFS[Feature Flag Service]
-    FFS -->|Enabled for 10%| APP
-    APP -->|Feature ON| NEW[New Code Path]
-    APP -->|Feature OFF| OLD[Old Code Path]

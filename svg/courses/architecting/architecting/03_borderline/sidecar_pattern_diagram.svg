@@ -1,0 +1,50 @@
+<svg viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Sidecar Pattern</text>
+  <!-- Pod / Container Group background -->
+  <rect x="50" y="55" width="370" height="180" rx="8" fill="#f0f7ff" stroke="#b0d0f0" stroke-width="1.5"/>
+  <text x="235" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Pod / Container Group</text>
+  <!-- Main Application -->
+  <rect x="70" y="100" width="150" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="145" y="125" text-anchor="middle" font-weight="bold" fill="#333">Main App</text>
+  <text x="145" y="143" text-anchor="middle" font-size="10" fill="#666">Core Business Logic</text>
+  <!-- Sidecar Container -->
+  <rect x="260" y="100" width="140" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="330" y="125" text-anchor="middle" font-weight="bold" fill="#333">Sidecar</text>
+  <text x="330" y="143" text-anchor="middle" font-size="10" fill="#666">Infrastructure</text>
+  <!-- Bidirectional arrow between Main and Sidecar -->
+  <line x1="220" y1="122" x2="258" y2="122" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="260" y1="132" x2="222" y2="132" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- External services -->
+  <rect x="540" y="55" width="140" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="610" y="77" text-anchor="middle" font-size="12" fill="#333">Logging Service</text>
+  <rect x="540" y="110" width="140" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="610" y="130" text-anchor="middle" font-size="12" fill="#333">Monitoring Service</text>
+  <rect x="540" y="165" width="140" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="610" y="185" text-anchor="middle" font-size="12" fill="#333">Service Discovery</text>
+  <rect x="540" y="220" width="140" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="610" y="240" text-anchor="middle" font-size="12" fill="#333">Proxy / LB</text>
+  <!-- Sidecar -> External services -->
+  <line x1="400" y1="110" x2="538" y2="72" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="120" x2="538" y2="127" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="140" x2="538" y2="180" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="150" x2="538" y2="235" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Labels below -->
+  <rect x="70" y="185" width="150" height="30" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="145" y="205" text-anchor="middle" font-size="10" fill="#666">Business Functions</text>
+  <rect x="260" y="185" width="140" height="30" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="330" y="205" text-anchor="middle" font-size="10" fill="#666">Cross-cutting Concerns</text>
+  <!-- Description -->
+  <rect x="30" y="290" width="790" height="80" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="425" y="315" text-anchor="middle" font-size="12" fill="#555">The Sidecar runs alongside the main application in the same pod/container group.</text>
+  <text x="425" y="335" text-anchor="middle" font-size="12" fill="#555">It handles cross-cutting infrastructure concerns: logging, monitoring, service discovery, and proxying.</text>
+  <text x="425" y="355" text-anchor="middle" font-size="12" fill="#555">The main application focuses solely on business logic, keeping concerns cleanly separated.</text>
+</svg>

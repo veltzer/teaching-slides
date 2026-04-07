@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Data Lake Architecture - Zone Model</text>
+  <!-- Data Sources -->
+  <rect x="30" y="160" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="85" y="185" text-anchor="middle" fill="#333">Data Sources</text>
+  <!-- Zone background -->
+  <rect x="180" y="50" width="440" height="250" rx="8" fill="#f0f7ff" stroke="#b0d0f0" stroke-width="1.5"/>
+  <text x="400" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Data Lake Zones</text>
+  <!-- Raw Zone -->
+  <rect x="200" y="95" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="260" y="122" text-anchor="middle" fill="#333">Raw Zone</text>
+  <!-- Transform -->
+  <rect x="200" y="175" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="260" y="200" text-anchor="middle" fill="#333">Transform</text>
+  <!-- Curated Zone -->
+  <rect x="355" y="95" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="415" y="115" text-anchor="middle" fill="#333">Curated Zone</text>
+  <!-- Process -->
+  <rect x="355" y="175" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="415" y="200" text-anchor="middle" fill="#333">Process</text>
+  <!-- Production Zone -->
+  <rect x="500" y="95" width="110" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="555" y="115" text-anchor="middle" font-size="12" fill="#333">Production</text>
+  <text x="555" y="130" text-anchor="middle" font-size="12" fill="#333">Zone</text>
+  <!-- Analytics/ML -->
+  <rect x="660" y="100" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="715" y="125" text-anchor="middle" fill="#333">Analytics/ML</text>
+  <!-- Data Catalog -->
+  <rect x="200" y="250" width="110" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="255" y="272" text-anchor="middle" fill="#666">Data Catalog</text>
+  <!-- Arrows -->
+  <line x1="140" y1="175" x2="198" y2="115" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="260" y1="140" x2="260" y2="173" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="320" y1="195" x2="353" y2="195" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="260" y1="195" x2="260" y2="155" stroke="#28a745" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="415" y1="140" x2="415" y2="173" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="475" y1="195" x2="498" y2="195" stroke="#28a745" stroke-width="2"/>
+  <line x1="498" y1="195" x2="555" y2="140" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="118" x2="658" y2="118" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Catalog dashed -->
+  <line x1="260" y1="130" x2="260" y2="248" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <text x="275" y="230" text-anchor="start" font-size="10" fill="#999">Catalog</text>
+  <!-- Description -->
+  <rect x="30" y="340" width="740" height="60" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="362" text-anchor="middle" font-size="12" fill="#555">Data flows from sources into the Raw Zone, gets transformed into the Curated Zone,</text>
+  <text x="400" y="382" text-anchor="middle" font-size="12" fill="#555">then processed into the Production Zone for Analytics and ML consumption. A Data Catalog tracks metadata.</text>
+</svg>

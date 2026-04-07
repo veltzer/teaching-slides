@@ -1,8 +1,0 @@
-graph LR
-DS[Data Sources] --> I[Ingestion Layer]
-I --> S[Storage Layer]
-S --> P[Processing Layer]
-P --> A[Analytics Layer]
-A --> V[Visualization Layer]
-S -.->|Metadata| C[Catalog]
-P -.->|Monitoring| M[Metrics]

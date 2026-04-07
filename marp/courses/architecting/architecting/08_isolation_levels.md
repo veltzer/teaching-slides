@@ -25,7 +25,7 @@
 
 ## Common Isolation Problems
 
-![common_isolation_problems](out/mermaid/courses/architecting/architecting/08_isolation_levels/common_isolation_problems.svg)
+![common_isolation_problems](svg/courses/architecting/architecting/08_isolation_levels/common_isolation_problems.svg)
 
 ---
 
@@ -86,7 +86,7 @@ SELECT COUNT(*) FROM accounts WHERE balance > 1000;  -- Returns 6
 
 ## Standard Isolation Levels
 
-![standard_isolation_levels](out/mermaid/courses/architecting/architecting/08_isolation_levels/standard_isolation_levels.svg)
+![standard_isolation_levels](svg/courses/architecting/architecting/08_isolation_levels/standard_isolation_levels.svg)
 
 ---
 
@@ -121,7 +121,7 @@ COMMIT;
 
 ## Optimistic vs Pessimistic Locking
 
-![optimistic_vs_pessimistic_locking](out/mermaid/courses/architecting/architecting/08_isolation_levels/optimistic_vs_pessimistic_locking.svg)
+![optimistic_vs_pessimistic_locking](svg/courses/architecting/architecting/08_isolation_levels/optimistic_vs_pessimistic_locking.svg)
 
 ---
 
@@ -190,7 +190,7 @@ def transfer_money(from_id, to_id, amount):
 
 ## Dealing with Deadlocks
 
-![dealing_with_deadlocks](out/mermaid/courses/architecting/architecting/08_isolation_levels/dealing_with_deadlocks.svg)
+![dealing_with_deadlocks](svg/courses/architecting/architecting/08_isolation_levels/dealing_with_deadlocks.svg)
 
 ---
 
@@ -216,7 +216,7 @@ def safe_update(account_ids, callback):
 
 ## Multi-Version Concurrency Control (MVCC)
 
-![multi_version_concurrency_control_mvcc](out/mermaid/courses/architecting/architecting/08_isolation_levels/multi_version_concurrency_control_mvcc.svg)
+![multi_version_concurrency_control_mvcc](svg/courses/architecting/architecting/08_isolation_levels/multi_version_concurrency_control_mvcc.svg)
 
 ---
 

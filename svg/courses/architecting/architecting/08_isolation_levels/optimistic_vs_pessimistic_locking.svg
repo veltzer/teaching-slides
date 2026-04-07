@@ -1,0 +1,52 @@
+<svg viewBox="0 0 850 440" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Optimistic vs Pessimistic Locking</text>
+  <!-- Pessimistic section -->
+  <rect x="30" y="50" width="370" height="280" rx="5" fill="none" stroke="#dc3545" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="215" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Pessimistic Locking</text>
+  <!-- Steps -->
+  <rect x="115" y="95" width="200" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="215" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">1. Lock First</text>
+  <text x="215" y="128" text-anchor="middle" font-size="10" fill="#555">Acquire exclusive lock</text>
+  <line x1="215" y1="135" x2="215" y2="148" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
+  <rect x="115" y="150" width="200" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="215" y="175" text-anchor="middle" font-size="12" fill="#333">2. Perform Operation</text>
+  <line x1="215" y1="190" x2="215" y2="203" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
+  <rect x="115" y="205" width="200" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="215" y="230" text-anchor="middle" font-size="12" fill="#333">3. Release Lock</text>
+  <!-- Result -->
+  <rect x="80" y="265" width="270" height="35" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="215" y="287" text-anchor="middle" font-size="11" fill="#dc3545">Blocks other transactions while locked</text>
+  <!-- Optimistic section -->
+  <rect x="450" y="50" width="370" height="280" rx="5" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="635" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Optimistic Locking</text>
+  <!-- Steps -->
+  <rect x="535" y="95" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="635" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">1. Read Version</text>
+  <text x="635" y="128" text-anchor="middle" font-size="10" fill="#555">No lock acquired</text>
+  <line x1="635" y1="135" x2="635" y2="148" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="535" y="150" width="200" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="635" y="175" text-anchor="middle" font-size="12" fill="#333">2. Perform Operation</text>
+  <line x1="635" y1="190" x2="635" y2="203" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <rect x="535" y="205" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="635" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3. Check Version + Update</text>
+  <!-- Retry arrow -->
+  <path d="M735 225 Q790 225 790 115 Q790 95 737 95" fill="none" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
+  <text x="808" y="165" font-size="10" fill="#dc3545">Retry on</text>
+  <text x="808" y="178" font-size="10" fill="#dc3545">mismatch</text>
+  <!-- Result -->
+  <rect x="500" y="265" width="270" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="635" y="287" text-anchor="middle" font-size="11" fill="#28a745">No blocking, retry on conflict</text>
+  <!-- Comparison -->
+  <rect x="30" y="355" width="790" height="70" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="425" y="378" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">When to Use</text>
+  <text x="215" y="400" text-anchor="middle" font-size="11" fill="#dc3545">Pessimistic: High contention, critical data</text>
+  <text x="635" y="400" text-anchor="middle" font-size="11" fill="#28a745">Optimistic: Low contention, read-heavy workloads</text>
+</svg>

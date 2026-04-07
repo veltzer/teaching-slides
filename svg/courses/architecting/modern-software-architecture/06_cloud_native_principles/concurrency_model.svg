@@ -1,0 +1,41 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Load Balancer -->
+  <rect x="30" y="100" width="130" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="95" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Load Balancer</text>
+  <!-- Web Processes group -->
+  <rect x="210" y="15" width="230" height="170" rx="5" fill="none" stroke="#4a90e2" stroke-width="1" stroke-dasharray="5"/>
+  <text x="325" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#4a90e2" font-weight="bold">Web Processes</text>
+  <rect x="230" y="45" width="90" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="275" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Web 1</text>
+  <rect x="230" y="90" width="90" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="275" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Web 2</text>
+  <rect x="230" y="135" width="90" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="275" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Web 3</text>
+  <!-- Worker Processes group -->
+  <rect x="210" y="210" width="230" height="120" rx="5" fill="none" stroke="#ffc107" stroke-width="1" stroke-dasharray="5"/>
+  <text x="325" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffc107" font-weight="bold">Worker Processes</text>
+  <rect x="230" y="240" width="90" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="275" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Worker 1</text>
+  <rect x="330" y="240" width="90" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Worker 2</text>
+  <!-- Clock Process -->
+  <rect x="210" y="350" width="230" height="40" rx="5" fill="none" stroke="#dc3545" stroke-width="1" stroke-dasharray="5"/>
+  <text x="260" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#dc3545" font-weight="bold">Clock:</text>
+  <rect x="310" y="355" width="110" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="365" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Scheduler</text>
+  <!-- Message Queue -->
+  <rect x="510" y="230" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="575" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Message Queue</text>
+  <!-- Arrows from LB to web -->
+  <line x1="160" y1="110" x2="228" y2="62" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="160" y1="122" x2="228" y2="107" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="160" y1="135" x2="228" y2="152" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Arrows from MQ to workers -->
+  <line x1="510" y1="252" x2="422" y2="257" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="510" y1="252" x2="322" y2="257" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>

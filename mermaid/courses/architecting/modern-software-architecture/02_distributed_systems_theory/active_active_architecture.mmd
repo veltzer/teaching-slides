@@ -1,8 +1,0 @@
-graph TD
-    LB[Load Balancer] --> N1[Node 1 - Active]
-    LB --> N2[Node 2 - Active]
-    LB --> N3[Node 3 - Active]
-    N1 --> DB1[(DB Primary)]
-    N2 --> DB1
-    N3 --> DB1
-    DB1 -->|Replication| DB2[(DB Replica)]

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 750 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Central node -->
+  <rect x="280" y="20" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="370" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Observability</text>
+  <!-- Three pillars -->
+  <rect x="40" y="130" width="180" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="130" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Metrics</text>
+  <rect x="280" y="130" width="180" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="370" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Logs</text>
+  <rect x="520" y="130" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="610" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Traces</text>
+  <!-- Descriptions -->
+  <rect x="20" y="210" width="220" height="50" rx="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+  <text x="130" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Quantitative measurements</text>
+  <text x="130" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">over time</text>
+  <rect x="260" y="210" width="220" height="50" rx="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+  <text x="370" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Discrete events</text>
+  <text x="370" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">with context</text>
+  <rect x="500" y="210" width="220" height="50" rx="5" fill="#f0f0f0" stroke="#ccc" stroke-width="1"/>
+  <text x="610" y="232" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Request flow across</text>
+  <text x="610" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">services</text>
+  <!-- Arrows from root -->
+  <line x1="320" y1="70" x2="160" y2="128" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="370" y1="70" x2="370" y2="128" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="420" y1="70" x2="580" y2="128" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Pillar to description -->
+  <line x1="130" y1="180" x2="130" y2="208" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="370" y1="180" x2="370" y2="208" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="180" x2="610" y2="208" stroke="#ccc" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+</svg>

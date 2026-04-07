@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Request 1: Fail -->
+  <rect x="30" y="80" width="130" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="95" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Request</text>
+  <text x="95" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">FAIL</text>
+  <!-- Wait 1s -->
+  <line x1="160" y1="102" x2="210" y2="102" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="185" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">1s</text>
+  <!-- Retry 1: Fail -->
+  <rect x="212" y="80" width="130" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="277" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Retry 1</text>
+  <text x="277" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">FAIL</text>
+  <!-- Wait 2s -->
+  <line x1="342" y1="102" x2="400" y2="102" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="371" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">2s</text>
+  <!-- Retry 2: Fail -->
+  <rect x="402" y="80" width="130" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="467" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Retry 2</text>
+  <text x="467" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">FAIL</text>
+  <!-- Wait 4s -->
+  <line x1="532" y1="102" x2="598" y2="102" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="565" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">4s</text>
+  <!-- Retry 3: Success -->
+  <rect x="600" y="80" width="130" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="665" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Retry 3</text>
+  <text x="665" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745">SUCCESS</text>
+  <!-- Time axis visualization -->
+  <line x1="30" y1="165" x2="730" y2="165" stroke="#999" stroke-width="1"/>
+  <text x="95" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">t=0</text>
+  <text x="277" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">t=1s</text>
+  <text x="467" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">t=3s</text>
+  <text x="665" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">t=7s</text>
+  <!-- Bars showing increasing wait -->
+  <rect x="165" y="152" width="45" height="10" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="345" y="148" width="55" height="14" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="535" y="144" width="63" height="18" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <!-- Label -->
+  <text x="400" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Wait time doubles after each failure: 1s, 2s, 4s, 8s...</text>
+</svg>

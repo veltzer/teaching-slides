@@ -19,12 +19,12 @@
 ---
 ## Failure Categories
 
-![failure_categories](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/failure_categories.svg)
+![failure_categories](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/failure_categories.svg)
 
 ---
 ## The Cascade Effect
 
-![the_cascade_effect](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
+![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
 
 - Service C fails; B waits and exhausts its thread pool
 - Service A waits for B and also becomes unresponsive
@@ -33,7 +33,7 @@
 ---
 ## Resiliency Patterns Overview
 
-![resiliency_patterns_overview](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_patterns_overview.svg)
+![resiliency_patterns_overview](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_patterns_overview.svg)
 
 ---
 ## Timeouts
@@ -77,7 +77,7 @@ response = requests.get(
 ---
 ## Retry with Exponential Backoff
 
-![retry_with_exponential_backoff](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.svg)
+![retry_with_exponential_backoff](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.svg)
 
 - Each retry waits longer than the previous one
 - Add random jitter to prevent thundering herd
@@ -122,7 +122,7 @@ def retry_with_backoff(func, max_retries=3):
 ---
 ## Circuit Breaker States
 
-![circuit_breaker_states](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_states.svg)
+![circuit_breaker_states](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/circuit_breaker_states.svg)
 
 ---
 ## Circuit Breaker: Closed State
@@ -196,7 +196,7 @@ class CircuitBreaker:
 ---
 ## Bulkhead Architecture
 
-![bulkhead_architecture](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.svg)
+![bulkhead_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.svg)
 
 - Service C is slow but only consumes its own thread pool
 - Services A and B continue to operate normally
@@ -252,7 +252,7 @@ class CircuitBreaker:
 ---
 ## Fallback Decision Tree
 
-![fallback_decision_tree](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/fallback_decision_tree.svg)
+![fallback_decision_tree](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/fallback_decision_tree.svg)
 
 ---
 ## Hedging
@@ -265,7 +265,7 @@ class CircuitBreaker:
 ---
 ## Hedging Diagram
 
-![hedging_diagram](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.svg)
+![hedging_diagram](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.svg)
 
 - Instance 2 responds first; its response is used
 - Trade-off: uses more resources for lower latency
@@ -290,7 +290,7 @@ class CircuitBreaker:
 ---
 ## Chaos Engineering Process
 
-![chaos_engineering_process](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/chaos_engineering_process.svg)
+![chaos_engineering_process](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/chaos_engineering_process.svg)
 
 ---
 ## Chaos Engineering Tools
@@ -336,7 +336,7 @@ class CircuitBreaker:
 ---
 ## Service Mesh Architecture
 
-![service_mesh_architecture](out/mermaid/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/service_mesh_architecture.svg)
+![service_mesh_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/service_mesh_architecture.svg)
 
 ---
 ## Building a Resiliency Strategy

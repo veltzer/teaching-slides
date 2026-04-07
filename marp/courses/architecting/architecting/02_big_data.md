@@ -29,7 +29,7 @@ Additional V's:
 
 ## Big Data Architecture Overview
 
-![big_data_architecture_overview](out/mermaid/courses/architecting/architecting/02_big_data/big_data_architecture_overview.svg)
+![big_data_architecture_overview](svg/courses/architecting/architecting/02_big_data/big_data_architecture_overview.svg)
 
 ---
 
@@ -50,19 +50,19 @@ Additional V's:
 
 ## Lambda Architecture
 
-![lambda_architecture](out/mermaid/courses/architecting/architecting/02_big_data/lambda_architecture.svg)
+![lambda_architecture](svg/courses/architecting/architecting/02_big_data/lambda_architecture.svg)
 
 ---
 
 ## Kappa Architecture
 
-![kappa_architecture](out/mermaid/courses/architecting/architecting/02_big_data/kappa_architecture.svg)
+![kappa_architecture](svg/courses/architecting/architecting/02_big_data/kappa_architecture.svg)
 
 ---
 
 ## Data Lake Architecture
 
-![data_lake_architecture](out/mermaid/courses/architecting/architecting/02_big_data/data_lake_architecture.svg)
+![data_lake_architecture](svg/courses/architecting/architecting/02_big_data/data_lake_architecture.svg)
 
 ---
 
@@ -78,7 +78,7 @@ Additional V's:
 
 ## HDFS Architecture
 
-![hdfs_architecture](out/mermaid/courses/architecting/architecting/02_big_data/hdfs_architecture.svg)
+![hdfs_architecture](svg/courses/architecting/architecting/02_big_data/hdfs_architecture.svg)
 
 ---
 
@@ -117,7 +117,7 @@ def store_data(data, bucket, key):
 
 ## Spark Architecture
 
-![spark_architecture](out/mermaid/courses/architecting/architecting/02_big_data/spark_architecture.svg)
+![spark_architecture](svg/courses/architecting/architecting/02_big_data/spark_architecture.svg)
 
 ---
 
@@ -228,7 +228,7 @@ ORDER BY 1 DESC
 
 ## Machine Learning Pipeline
 
-![machine_learning_pipeline](out/mermaid/courses/architecting/architecting/02_big_data/machine_learning_pipeline.svg)
+![machine_learning_pipeline](svg/courses/architecting/architecting/02_big_data/machine_learning_pipeline.svg)
 
 ---
 
@@ -305,7 +305,7 @@ def validate_dataset(df):
 
 ## Monitoring Dashboard
 
-![monitoring_dashboard](out/mermaid/courses/architecting/architecting/02_big_data/monitoring_dashboard.svg)
+![monitoring_dashboard](svg/courses/architecting/architecting/02_big_data/monitoring_dashboard.svg)
 
 ---
 
@@ -453,19 +453,19 @@ def optimize_partitioning(df):
 
 ## Real-time Processing
 
-![real_time_processing](out/mermaid/courses/architecting/architecting/02_big_data/real_time_processing.svg)
+![real_time_processing](svg/courses/architecting/architecting/02_big_data/real_time_processing.svg)
 
 ---
 
 ## Batch Processing
 
-![batch_processing](out/mermaid/courses/architecting/architecting/02_big_data/batch_processing.svg)
+![batch_processing](svg/courses/architecting/architecting/02_big_data/batch_processing.svg)
 
 ---
 
 ## Hybrid Processing
 
-![hybrid_processing](out/mermaid/courses/architecting/architecting/02_big_data/hybrid_processing.svg)
+![hybrid_processing](svg/courses/architecting/architecting/02_big_data/hybrid_processing.svg)
 
 ---
 

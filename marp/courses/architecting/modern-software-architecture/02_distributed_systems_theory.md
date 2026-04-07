@@ -100,7 +100,7 @@
 ---
 ## Consistency Models Spectrum
 
-![consistency_models_spectrum](out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.svg)
+![consistency_models_spectrum](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.svg)
 
 - Stronger consistency means more coordination overhead
 - Weaker consistency means better performance and availability
@@ -222,12 +222,12 @@
 ---
 ## Active-Active Architecture
 
-![active_active_architecture](out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_active_architecture.svg)
+![active_active_architecture](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_active_architecture.svg)
 
 ---
 ## Active-Passive Architecture
 
-![active_passive_architecture](out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_passive_architecture.svg)
+![active_passive_architecture](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/active_passive_architecture.svg)
 
 ---
 ## Fault Tolerance Principles
@@ -265,7 +265,7 @@
 ---
 ## Replication Topologies
 
-![replication_topologies](out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.svg)
+![replication_topologies](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/replication_topologies.svg)
 
 ---
 ## Consensus Algorithms
@@ -278,7 +278,7 @@
 ---
 ## Raft Consensus Overview
 
-![raft_consensus_overview](out/mermaid/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
+![raft_consensus_overview](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
 
 - Leader handles all writes
 - Majority acknowledgment required for commit

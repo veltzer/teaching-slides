@@ -1,7 +1,0 @@
-graph LR
-    S1[Service 1] -->|/metrics| P[Prometheus]
-    S2[Service 2] -->|/metrics| P
-    S3[Service 3] -->|/metrics| P
-    P --> G[Grafana]
-    P --> AM[Alert Manager]
-    AM --> PD[PagerDuty / Slack]

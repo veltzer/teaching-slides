@@ -1,0 +1,34 @@
+<svg viewBox="0 0 750 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Application -->
+  <rect x="30" y="110" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="105" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Application</text>
+  <!-- Feature Flag Service -->
+  <rect x="270" y="110" width="180" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="360" y="132" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Feature Flag Service</text>
+  <text x="360" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Enabled for 10% users</text>
+  <!-- Code paths -->
+  <rect x="550" y="40" width="160" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="630" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">New Code Path</text>
+  <text x="630" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#28a745">Feature ON</text>
+  <rect x="550" y="170" width="160" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="630" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Old Code Path</text>
+  <text x="630" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Feature OFF</text>
+  <!-- Arrows -->
+  <line x1="180" y1="130" x2="268" y2="130" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="224" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Check Flag</text>
+  <!-- Response from flag service -->
+  <line x1="360" y1="110" x2="360" y2="80" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="4"/>
+  <!-- App to new code -->
+  <line x1="180" y1="120" x2="548" y2="65" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="350" y="78" font-family="Arial, sans-serif" font-size="10" fill="#28a745">10%</text>
+  <!-- App to old code -->
+  <line x1="180" y1="150" x2="548" y2="195" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="350" y="190" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">90%</text>
+  <!-- Explanation -->
+  <text x="375" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Decouple deployment from feature release using feature flags</text>
+</svg>

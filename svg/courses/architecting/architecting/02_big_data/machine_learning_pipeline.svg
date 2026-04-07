@@ -1,0 +1,52 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="450" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Machine Learning Pipeline</text>
+  <!-- Data Ingestion -->
+  <rect x="20" y="100" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="75" y="118" text-anchor="middle" font-size="12" fill="#333">Data</text>
+  <text x="75" y="132" text-anchor="middle" font-size="12" fill="#333">Ingestion</text>
+  <!-- Preprocessing -->
+  <rect x="170" y="100" width="120" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="230" y="125" text-anchor="middle" fill="#333">Preprocessing</text>
+  <!-- Feature Engineering -->
+  <rect x="330" y="100" width="130" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="395" y="118" text-anchor="middle" font-size="12" fill="#333">Feature</text>
+  <text x="395" y="132" text-anchor="middle" font-size="12" fill="#333">Engineering</text>
+  <!-- Training -->
+  <rect x="500" y="100" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="555" y="125" text-anchor="middle" font-weight="bold" fill="#333">Training</text>
+  <!-- Evaluation -->
+  <rect x="650" y="100" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="705" y="125" text-anchor="middle" fill="#333">Evaluation</text>
+  <!-- Deployment -->
+  <rect x="800" y="100" width="90" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="845" y="125" text-anchor="middle" fill="#333">Deploy</text>
+  <!-- Model Store -->
+  <rect x="500" y="200" width="110" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="555" y="222" text-anchor="middle" fill="#666">Model Store</text>
+  <!-- Monitoring -->
+  <rect x="650" y="200" width="110" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="705" y="222" text-anchor="middle" fill="#666">Monitoring</text>
+  <!-- Main flow arrows -->
+  <line x1="130" y1="120" x2="168" y2="120" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="290" y1="120" x2="328" y2="120" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="460" y1="120" x2="498" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="610" y1="120" x2="648" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="760" y1="120" x2="798" y2="120" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Dashed lines to Model Store and Monitoring -->
+  <line x1="555" y1="140" x2="555" y2="198" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <text x="570" y="175" text-anchor="start" font-size="10" fill="#999">Model</text>
+  <line x1="705" y1="140" x2="705" y2="198" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <text x="720" y="175" text-anchor="start" font-size="10" fill="#999">Metrics</text>
+  <!-- Description -->
+  <rect x="20" y="260" width="870" height="40" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="455" y="285" text-anchor="middle" font-size="12" fill="#555">Data flows through ingestion, preprocessing, feature engineering, training, evaluation, and deployment stages. Models and metrics are persisted.</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg viewBox="0 0 700 350" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Bridge Network group -->
+  <rect x="100" y="15" width="500" height="170" rx="5" fill="none" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="350" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#4a90e2" font-weight="bold">Bridge Network</text>
+  <!-- Containers -->
+  <rect x="130" y="50" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="190" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Container 1</text>
+  <rect x="290" y="50" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Container 2</text>
+  <rect x="450" y="50" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="510" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Container 3</text>
+  <!-- Bridge -->
+  <rect x="200" y="130" width="300" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Bridge (docker0)</text>
+  <!-- Connect containers to bridge -->
+  <line x1="190" y1="90" x2="280" y2="130" stroke="#4a90e2" stroke-width="1.5"/>
+  <line x1="350" y1="90" x2="350" y2="130" stroke="#4a90e2" stroke-width="1.5"/>
+  <line x1="510" y1="90" x2="420" y2="130" stroke="#4a90e2" stroke-width="1.5"/>
+  <!-- Host Network -->
+  <rect x="200" y="220" width="300" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Host Network Interface</text>
+  <line x1="350" y1="165" x2="350" y2="220" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- External -->
+  <rect x="200" y="295" width="300" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="350" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">External Network</text>
+  <line x1="350" y1="260" x2="350" y2="295" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>

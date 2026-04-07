@@ -1,8 +1,0 @@
-graph TD
-    A{Primary service available?}
-    A -->|Yes| B[Return fresh data]
-    A -->|No| C{Cache available?}
-    C -->|Yes| D[Return cached data]
-    C -->|No| E{Default value sensible?}
-    E -->|Yes| F[Return default]
-    E -->|No| G[Return graceful error]

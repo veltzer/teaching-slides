@@ -1,0 +1,47 @@
+<svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Repository Pattern</text>
+  <!-- Domain Layer -->
+  <rect x="30" y="55" width="220" height="120" rx="8" fill="#f0f4ff" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="140" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Domain Layer</text>
+  <rect x="50" y="90" width="180" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="140" y="112" text-anchor="middle" font-size="12" fill="#333">Business Service</text>
+  <rect x="50" y="130" width="180" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="140" y="152" text-anchor="middle" font-size="11" fill="#333">Domain Entity</text>
+  <!-- Repository Layer -->
+  <rect x="300" y="55" width="200" height="120" rx="8" fill="#fdf0ff" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="400" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#9c27b0">Repository Layer</text>
+  <rect x="320" y="90" width="160" height="35" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="400" y="105" text-anchor="middle" font-size="10" fill="#9c27b0">&lt;&lt;interface&gt;&gt;</text>
+  <text x="400" y="118" text-anchor="middle" font-size="11" fill="#333">IRepository</text>
+  <rect x="320" y="130" width="160" height="35" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="400" y="152" text-anchor="middle" font-size="11" fill="#333">Concrete Repository</text>
+  <!-- Data Layer -->
+  <rect x="550" y="55" width="180" height="170" rx="8" fill="#f0fff0" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="640" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Data Layer</text>
+  <rect x="570" y="92" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="640" y="113" text-anchor="middle" font-size="11" fill="#333">Database</text>
+  <rect x="570" y="132" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="640" y="153" text-anchor="middle" font-size="11" fill="#333">External API</text>
+  <rect x="570" y="172" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="640" y="193" text-anchor="middle" font-size="11" fill="#333">File System</text>
+  <!-- Arrows -->
+  <line x1="230" y1="107" x2="318" y2="107" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="275" y="100" font-size="10" fill="#4a90e2">Uses</text>
+  <line x1="400" y1="125" x2="400" y2="128" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="480" y1="147" x2="568" y2="108" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="480" y1="150" x2="568" y2="148" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="480" y1="153" x2="568" y2="188" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Domain Entity <-> Repository -->
+  <line x1="230" y1="152" x2="318" y2="150" stroke="#999" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="275" y="165" font-size="9" fill="#999">Maps</text>
+  <!-- Benefits -->
+  <rect x="100" y="280" width="550" height="80" rx="8" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="375" y="305" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Benefits</text>
+  <text x="375" y="325" text-anchor="middle" font-size="11" fill="#666">Abstracts data access behind an interface -- business logic is data-source agnostic</text>
+  <text x="375" y="345" text-anchor="middle" font-size="11" fill="#666">Easy to swap Database, API, or File System implementations for testing</text>
+</svg>

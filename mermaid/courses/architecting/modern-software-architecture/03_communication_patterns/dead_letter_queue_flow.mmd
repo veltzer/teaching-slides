@@ -1,6 +1,0 @@
-graph LR
-    P[Producer] --> Q[Main Queue]
-    Q --> C[Consumer]
-    C -->|Processing Failed| Q
-    Q -->|Max Retries Exceeded| DLQ[Dead Letter Queue]
-    DLQ --> M[Manual Review / Alerting]

@@ -1,0 +1,40 @@
+<svg viewBox="0 0 750 380" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowdash" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Router / Proxy -->
+  <rect x="280" y="20" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="370" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Router / Proxy</text>
+  <!-- Monolith -->
+  <rect x="50" y="150" width="180" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="140" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Monolith</text>
+  <text x="140" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">(legacy)</text>
+  <!-- New Service A -->
+  <rect x="310" y="130" width="160" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="390" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">New Service A</text>
+  <!-- New Service B -->
+  <rect x="310" y="200" width="160" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="390" y="228" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">New Service B</text>
+  <!-- Future Service C -->
+  <rect x="310" y="280" width="160" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="390" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Future Service C</text>
+  <!-- Arrows from Router -->
+  <line x1="330" y1="70" x2="170" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="390" y1="70" x2="390" y2="128" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="70" x2="400" y2="198" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Dashed: Monolith -> Future Service C (migration) -->
+  <line x1="180" y1="210" x2="308" y2="295" stroke="#999" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arrowdash)"/>
+  <text x="220" y="270" font-family="Arial, sans-serif" font-size="10" fill="#999">Migrate Feature C</text>
+  <!-- Legend -->
+  <rect x="550" y="130" width="15" height="15" rx="2" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="575" y="143" font-family="Arial, sans-serif" font-size="10" fill="#555">Legacy (to retire)</text>
+  <rect x="550" y="155" width="15" height="15" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="575" y="168" font-family="Arial, sans-serif" font-size="10" fill="#555">Migrated services</text>
+  <rect x="550" y="180" width="15" height="15" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="575" y="193" font-family="Arial, sans-serif" font-size="10" fill="#555">Planned migration</text>
+</svg>

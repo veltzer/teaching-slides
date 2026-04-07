@@ -1,8 +1,0 @@
-graph TD
-    A{Need immediate response?}
-    A -->|Yes| B{High performance needed?}
-    A -->|No| C{Event notification?}
-    B -->|Yes| D[gRPC]
-    B -->|No| E[REST]
-    C -->|Yes| F[Pub/Sub]
-    C -->|No| G[Message Queue]

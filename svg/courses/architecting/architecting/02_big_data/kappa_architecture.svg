@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Kappa Architecture</text>
+  <text x="400" y="45" text-anchor="middle" font-size="12" fill="#666">Single stream processing path (simplified Lambda)</text>
+  <!-- Data Stream -->
+  <rect x="30" y="100" width="120" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="125" text-anchor="middle" fill="#333">Data Stream</text>
+  <!-- Kafka / Event Log -->
+  <rect x="210" y="100" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="280" y="120" text-anchor="middle" font-size="12" fill="#333">Kafka / Event Log</text>
+  <!-- Stream Processing -->
+  <rect x="410" y="100" width="140" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="480" y="120" text-anchor="middle" font-size="12" fill="#333">Stream Processing</text>
+  <!-- Views -->
+  <rect x="610" y="100" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="665" y="125" text-anchor="middle" fill="#333">Views</text>
+  <!-- Queries -->
+  <rect x="610" y="200" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="665" y="225" text-anchor="middle" fill="#333">Queries</text>
+  <!-- Reprocessing -->
+  <rect x="310" y="200" width="120" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="370" y="222" text-anchor="middle" fill="#666">Reprocessing</text>
+  <!-- Arrows -->
+  <line x1="150" y1="120" x2="208" y2="120" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="120" x2="408" y2="120" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="550" y1="120" x2="608" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="665" y1="140" x2="665" y2="198" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Replay dashed -->
+  <line x1="280" y1="140" x2="280" y2="215" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="280" y1="215" x2="308" y2="215" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <text x="268" y="180" text-anchor="end" font-size="10" fill="#999">Replay</text>
+  <line x1="430" y1="215" x2="478" y2="142" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <!-- Description -->
+  <rect x="30" y="265" width="740" height="40" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="290" text-anchor="middle" font-size="12" fill="#555">Kappa simplifies Lambda by using only stream processing. Reprocessing is done by replaying the event log.</text>
+</svg>

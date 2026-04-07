@@ -1,8 +1,0 @@
-graph TD
-    M[Metrics Collector] -->|CPU > 70%| AS[Auto Scaler]
-    AS -->|Scale Out| IG[Instance Group]
-    IG --> I1[Instance 1]
-    IG --> I2[Instance 2]
-    IG --> I3[Instance 3 - New]
-    M -->|CPU < 30%| AS
-    AS -->|Scale In| IG

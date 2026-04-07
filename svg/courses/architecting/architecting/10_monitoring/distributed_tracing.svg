@@ -1,0 +1,67 @@
+<svg viewBox="0 0 850 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-return" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Distributed Tracing - Trace ID: 123</text>
+  <!-- Service boxes across the top -->
+  <rect x="50" y="45" width="100" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="100" y="67" text-anchor="middle" font-size="11" fill="#333">User</text>
+  <rect x="190" y="45" width="100" height="35" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="240" y="67" text-anchor="middle" font-size="11" fill="#333">API Gateway</text>
+  <rect x="340" y="45" width="100" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="390" y="67" text-anchor="middle" font-size="11" fill="#333">Auth Service</text>
+  <rect x="490" y="45" width="110" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="545" y="67" text-anchor="middle" font-size="11" fill="#333">Order Service</text>
+  <rect x="640" y="45" width="110" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="695" y="67" text-anchor="middle" font-size="11" fill="#333">Payment Svc</text>
+  <!-- Vertical lifelines -->
+  <line x1="100" y1="80" x2="100" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="240" y1="80" x2="240" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="390" y1="80" x2="390" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="545" y1="80" x2="545" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="695" y1="80" x2="695" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Interactions -->
+  <!-- User -> Gateway -->
+  <line x1="100" y1="110" x2="238" y2="110" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="170" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">Request</text>
+  <!-- Gateway -> Auth -->
+  <line x1="240" y1="140" x2="388" y2="140" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="314" y="135" text-anchor="middle" font-size="10" fill="#9c27b0">Authenticate</text>
+  <rect x="295" y="142" width="70" height="16" rx="2" fill="#fff3cd" stroke="none"/>
+  <text x="330" y="154" text-anchor="middle" font-size="9" fill="#666">span: auth</text>
+  <!-- Auth -> Gateway return -->
+  <line x1="388" y1="170" x2="242" y2="170" stroke="#999" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-return)"/>
+  <text x="314" y="168" text-anchor="middle" font-size="9" fill="#999">Token Valid</text>
+  <!-- Gateway -> Order -->
+  <line x1="240" y1="200" x2="543" y2="200" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="390" y="195" text-anchor="middle" font-size="10" fill="#28a745">Create Order</text>
+  <rect x="365" y="202" width="70" height="16" rx="2" fill="#d4edda" stroke="none"/>
+  <text x="400" y="214" text-anchor="middle" font-size="9" fill="#666">span: order</text>
+  <!-- Order -> DB (implied by Payment) -->
+  <rect x="530" y="230" width="35" height="15" rx="2" fill="#eee" stroke="#ccc"/>
+  <text x="547" y="241" text-anchor="middle" font-size="8" fill="#666">DB</text>
+  <line x1="545" y1="225" x2="545" y2="228" stroke="#666" stroke-width="1"/>
+  <text x="575" y="244" font-size="9" fill="#666">span: db-write</text>
+  <!-- Order -> Payment -->
+  <line x1="545" y1="270" x2="693" y2="270" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <text x="619" y="265" text-anchor="middle" font-size="10" fill="#4a90e2">Process Payment</text>
+  <rect x="595" y="272" width="80" height="16" rx="2" fill="#e8f4f8" stroke="none"/>
+  <text x="635" y="284" text-anchor="middle" font-size="9" fill="#666">span: payment</text>
+  <!-- Payment return -->
+  <line x1="693" y1="300" x2="547" y2="300" stroke="#999" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-return)"/>
+  <text x="620" y="298" text-anchor="middle" font-size="9" fill="#999">Complete</text>
+  <!-- Order -> Gateway return -->
+  <line x1="543" y1="330" x2="242" y2="330" stroke="#999" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-return)"/>
+  <text x="390" y="328" text-anchor="middle" font-size="9" fill="#999">Order Created</text>
+  <!-- Gateway -> User return -->
+  <line x1="238" y1="360" x2="102" y2="360" stroke="#999" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-return)"/>
+  <text x="170" y="358" text-anchor="middle" font-size="9" fill="#999">Response</text>
+  <!-- Total duration -->
+  <rect x="200" y="400" width="450" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="425" y="420" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Total Trace Duration: 250ms</text>
+</svg>

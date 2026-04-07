@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <!-- Client -->
+  <rect x="30" y="90" width="110" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="85" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Client</text>
+  <!-- Service A -->
+  <rect x="200" y="90" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="265" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service A</text>
+  <!-- Service B -->
+  <rect x="400" y="90" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="465" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service B</text>
+  <!-- Service C (down) -->
+  <rect x="600" y="90" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="670" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service C</text>
+  <text x="670" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545" font-weight="bold">DOWN</text>
+  <!-- Forward arrows -->
+  <line x1="265" y1="88" x2="465" y2="65" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="365" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Calls</text>
+  <line x1="530" y1="100" x2="598" y2="105" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="564" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Calls</text>
+  <!-- Cascade failure arrows (dashed, going back) -->
+  <line x1="600" y1="125" x2="532" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
+  <text x="566" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Timeout</text>
+  <line x1="400" y1="125" x2="332" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
+  <text x="366" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Threads exhausted</text>
+  <line x1="200" y1="125" x2="142" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
+  <text x="171" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Unresponsive</text>
+  <!-- Explanation -->
+  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#dc3545" font-weight="bold">Cascade Effect: One service failure propagates upstream</text>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Circuit breakers and bulkheads prevent this propagation</text>
+</svg>

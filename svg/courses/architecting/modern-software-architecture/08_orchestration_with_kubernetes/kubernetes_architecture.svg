@@ -1,0 +1,47 @@
+<svg viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Control Plane -->
+  <rect x="20" y="15" width="810" height="140" rx="5" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="5"/>
+  <text x="425" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a90e2" font-weight="bold">Control Plane</text>
+  <rect x="50" y="50" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">API Server</text>
+  <rect x="230" y="50" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="295" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Scheduler</text>
+  <rect x="400" y="50" width="160" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="480" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Controller Manager</text>
+  <rect x="600" y="50" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="655" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">etcd</text>
+  <!-- Connections in control plane -->
+  <line x1="190" y1="70" x2="228" y2="70" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="190" y1="70" x2="398" y2="70" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="190" y1="70" x2="598" y2="70" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Worker Node 1 -->
+  <rect x="20" y="200" width="390" height="200" rx="5" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="215" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#28a745" font-weight="bold">Worker Node 1</text>
+  <rect x="40" y="235" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="90" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">kubelet</text>
+  <rect x="160" y="235" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="210" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">kube-proxy</text>
+  <rect x="50" y="300" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="100" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Pod A</text>
+  <rect x="180" y="300" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="230" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Pod B</text>
+  <!-- Worker Node 2 -->
+  <rect x="440" y="200" width="390" height="200" rx="5" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="635" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#28a745" font-weight="bold">Worker Node 2</text>
+  <rect x="460" y="235" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="510" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">kubelet</text>
+  <rect x="580" y="235" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="630" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">kube-proxy</text>
+  <rect x="470" y="300" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="520" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Pod C</text>
+  <rect x="600" y="300" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="650" y="325" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Pod D</text>
+  <!-- API Server to kubelets -->
+  <line x1="100" y1="90" x2="90" y2="235" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="140" y1="90" x2="510" y2="235" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+</svg>

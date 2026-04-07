@@ -1,0 +1,48 @@
+<svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-dash" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <text x="375" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Decorator Pattern</text>
+  <!-- IComponent -->
+  <rect x="260" y="50" width="170" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="345" y="72" text-anchor="middle" font-size="11" fill="#4a90e2">&lt;&lt;interface&gt;&gt;</text>
+  <text x="345" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">IComponent</text>
+  <!-- ConcreteComponent -->
+  <rect x="80" y="150" width="170" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="165" y="177" text-anchor="middle" font-size="12" fill="#333">ConcreteComponent</text>
+  <!-- Decorator -->
+  <rect x="380" y="150" width="170" height="45" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+  <text x="465" y="177" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Decorator</text>
+  <!-- Concrete Decorators -->
+  <rect x="280" y="260" width="150" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="355" y="284" text-anchor="middle" font-size="11" fill="#333">Decorator A</text>
+  <rect x="450" y="260" width="150" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="525" y="284" text-anchor="middle" font-size="11" fill="#333">Decorator B</text>
+  <rect x="620" y="260" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="675" y="284" text-anchor="middle" font-size="11" fill="#333">Decorator C</text>
+  <!-- IComponent -> ConcreteComponent -->
+  <line x1="300" y1="100" x2="165" y2="148" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- IComponent -> Decorator -->
+  <line x1="390" y1="100" x2="465" y2="148" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Decorator -> Concrete Decorators -->
+  <line x1="430" y1="195" x2="355" y2="258" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="465" y1="195" x2="525" y2="258" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="500" y1="195" x2="675" y2="258" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Decorator wraps IComponent (dashed) -->
+  <path d="M 380 172 Q 330 172 330 120 Q 330 100 345 100" stroke="#999" stroke-width="1" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowhead-dash)"/>
+  <text x="305" y="140" font-size="9" fill="#999">Wraps</text>
+  <!-- Feature annotations -->
+  <line x1="355" y1="300" x2="200" y2="195" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-dash)"/>
+  <text x="260" y="253" font-size="9" fill="#999">Adds Feature A</text>
+  <line x1="525" y1="300" x2="230" y2="195" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-dash)"/>
+  <text x="410" y="320" font-size="9" fill="#999">Adds Feature B</text>
+  <line x1="675" y1="300" x2="250" y2="195" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-dash)"/>
+  <text x="580" y="320" font-size="9" fill="#999">Adds Feature C</text>
+  <!-- Note -->
+  <text x="375" y="370" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Decorator wraps the component to add behavior without modifying the original class.</text>
+</svg>

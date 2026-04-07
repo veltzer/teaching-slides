@@ -1,9 +1,0 @@
-graph TB
-D[Data Stream] --> B[Batch Layer]
-D --> S[Speed Layer]
-B --> BV[Batch Views]
-S --> RV[Real-time Views]
-BV --> SL[Serving Layer]
-RV --> SL
-SL --> Q[Queries]
-B -.->|Master Dataset| MD[(Master Data)]

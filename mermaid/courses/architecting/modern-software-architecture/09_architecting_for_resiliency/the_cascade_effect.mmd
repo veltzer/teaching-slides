@@ -1,6 +1,0 @@
-graph LR
-    A[Service A] -->|Calls| B[Service B]
-    B -->|Calls| C[Service C - Down]
-    C -.->|Timeout| B
-    B -.->|Threads exhausted| A
-    A -.->|Unresponsive| CLIENT[Client]

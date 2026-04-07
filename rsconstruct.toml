@@ -1,6 +1,3 @@
-[dependencies]
-npm = ["@mermaid-js/mermaid-cli"]
-
 [processor.tera]
 extra_inputs = [
     "config/project.lua",
@@ -10,14 +7,14 @@ extra_inputs = [
 [processor.script.check_svg_quality]
 linter = "scripts/check_svg_quality.py"
 extensions = [".svg"]
-scan_dirs = ["svg", "out/mermaid"]
+scan_dirs = ["svg"]
 batch = true
 
 [processor.script.svglint]
 linter = "svglint"
 args = ["--ci"]
 extensions = [".svg"]
-scan_dirs = ["svg", "out/mermaid"]
+scan_dirs = ["svg"]
 
 [processor.script.md_lint]
 linter = "scripts/md_lint.py"
@@ -31,18 +28,10 @@ extensions = [".md"]
 scan_dirs = ["marp"]
 batch = true
 
-[processor.generator]
-command = "scripts/mmd_to_svg.py"
-extensions = [".mmd"]
-scan_dirs = ["mermaid"]
-output_extension = "svg"
-batch = true
-
 [processor.marp]
 formats = [ "pdf" ]
 max_jobs = 10
 output_dir = "_site/marp"
-extra_inputs = ["out/generator/**/*.svg"]
 
 [processor.pylint]
 scan_dirs = ["scripts"]

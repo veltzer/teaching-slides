@@ -1,7 +1,0 @@
-graph TD
-    CMD[Command] --> CH[Command Handler]
-    CH --> ES[(Event Store)]
-    ES -->|Publish Events| EP[Event Projector]
-    EP --> RM[(Read Model DB)]
-    Q[Query] --> QH[Query Handler]
-    QH --> RM

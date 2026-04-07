@@ -1,6 +1,0 @@
-graph TD
-    S1[Order Service] --> DB1[(Orders DB - PostgreSQL)]
-    S2[Product Service] --> DB2[(Products DB - MongoDB)]
-    S3[Analytics Service] --> DB3[(Analytics DB - ClickHouse)]
-    S1 -->|API Call| S2
-    S1 -->|Event| S3

@@ -1,5 +1,0 @@
-graph TD
-    CLIENT[Client Pod] -->|web-service:80| SVC[Service: web-service]
-    SVC -->|Round Robin| P1[Pod 1:8080]
-    SVC --> P2[Pod 2:8080]
-    SVC --> P3[Pod 3:8080]

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 850 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <!-- Steps -->
+  <rect x="30" y="100" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Define Steady</text>
+  <text x="90" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">State</text>
+  <rect x="180" y="100" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="240" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Form Hypothesis</text>
+  <rect x="330" y="100" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="390" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Design</text>
+  <text x="390" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Experiment</text>
+  <rect x="480" y="100" width="120" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="540" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Inject Failure</text>
+  <rect x="630" y="100" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="690" y="127" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Observe Results</text>
+  <!-- Decision diamond -->
+  <polygon points="690,200 760,240 690,280 620,240" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="690" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">Steady state</text>
+  <text x="690" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">maintained?</text>
+  <!-- Yes path -->
+  <rect x="480" y="220" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="540" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Increase Scope</text>
+  <!-- No path -->
+  <rect x="180" y="220" width="120" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="240" y="247" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Fix Weakness</text>
+  <!-- Arrows for main flow -->
+  <line x1="150" y1="122" x2="178" y2="122" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="300" y1="122" x2="328" y2="122" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="450" y1="122" x2="478" y2="122" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="122" x2="628" y2="122" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="690" y1="145" x2="690" y2="198" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Yes arrow -->
+  <line x1="620" y1="240" x2="602" y2="240" stroke="#28a745" stroke-width="2" marker-end="url(#arrowgreen)"/>
+  <text x="615" y="232" font-family="Arial, sans-serif" font-size="10" fill="#28a745">Yes</text>
+  <!-- No arrow -->
+  <line x1="690" y1="280" x2="240" y2="280" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="4"/>
+  <line x1="240" y1="280" x2="240" y2="267" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowred)"/>
+  <text x="450" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">No</text>
+  <!-- Loop back arrows -->
+  <path d="M 540,220 L 540,180 L 240,180 L 240,147" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowgreen)"/>
+  <path d="M 180,242 L 90,242 L 90,147" fill="none" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowred)"/>
+</svg>

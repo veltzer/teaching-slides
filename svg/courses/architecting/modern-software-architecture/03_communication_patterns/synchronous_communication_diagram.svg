@@ -1,0 +1,34 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+  </defs>
+  <text x="350" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Synchronous Communication (Sequence)</text>
+  <!-- Lifeline labels -->
+  <rect x="60" y="40" width="110" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="115" y="63" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Client</text>
+  <rect x="280" y="40" width="110" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="335" y="63" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Service A</text>
+  <rect x="500" y="40" width="110" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="555" y="63" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Service B</text>
+  <!-- Lifelines -->
+  <line x1="115" y1="75" x2="115" y2="280" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="335" y1="75" x2="335" y2="280" stroke="#28a745" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="555" y1="75" x2="555" y2="280" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Client -> Service A -->
+  <line x1="120" y1="110" x2="325" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="225" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">HTTP Request</text>
+  <!-- Service A -> Service B -->
+  <line x1="340" y1="145" x2="545" y2="145" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="445" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">HTTP Request</text>
+  <!-- Service B -> Service A (response) -->
+  <line x1="550" y1="185" x2="345" y2="185" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-green)"/>
+  <text x="445" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745">HTTP Response</text>
+  <!-- Service A -> Client (response) -->
+  <line x1="330" y1="220" x2="125" y2="220" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-green)"/>
+  <text x="225" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745">HTTP Response</text>
+</svg>

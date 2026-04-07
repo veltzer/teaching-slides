@@ -1,9 +1,0 @@
-sequenceDiagram
-participant App
-participant Cache
-participant DB
-App->>Cache: 1. Write data
-Cache->>DB: 2. Write to database
-DB-->>Cache: Confirm write
-Cache-->>App: 3. Confirm write
-Note over Cache: Data written to both<br/>cache and DB synchronously

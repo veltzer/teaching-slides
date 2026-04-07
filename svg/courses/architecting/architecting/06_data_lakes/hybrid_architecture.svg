@@ -1,0 +1,52 @@
+<svg viewBox="0 0 850 430" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Hybrid Architecture (On-Premises + Cloud)</text>
+  <!-- On-Premises section -->
+  <rect x="30" y="50" width="220" height="230" rx="5" fill="none" stroke="#dc3545" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="140" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">On-Premises</text>
+  <rect x="55" y="90" width="170" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="140" y="115" text-anchor="middle" font-size="12" fill="#333">Legacy Systems</text>
+  <rect x="55" y="145" width="170" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="140" y="170" text-anchor="middle" font-size="12" fill="#333">Sensitive Data</text>
+  <rect x="55" y="200" width="170" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="140" y="225" text-anchor="middle" font-size="12" fill="#333">Edge Processing</text>
+  <!-- Hybrid Layer section -->
+  <rect x="300" y="50" width="220" height="230" rx="5" fill="none" stroke="#ffc107" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="410" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#996600">Hybrid Layer</text>
+  <rect x="325" y="90" width="170" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="410" y="115" text-anchor="middle" font-size="12" fill="#333">Data Gateway</text>
+  <rect x="325" y="145" width="170" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="410" y="170" text-anchor="middle" font-size="12" fill="#333">Sync Service</text>
+  <rect x="325" y="200" width="170" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="410" y="225" text-anchor="middle" font-size="12" fill="#333">Security Layer</text>
+  <!-- Cloud Data Lake section -->
+  <rect x="570" y="50" width="250" height="230" rx="5" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="695" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Cloud Data Lake</text>
+  <rect x="595" y="90" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="695" y="115" text-anchor="middle" font-size="12" fill="#333">Object Storage</text>
+  <rect x="595" y="145" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="695" y="170" text-anchor="middle" font-size="12" fill="#333">Compute Services</text>
+  <rect x="595" y="200" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="695" y="225" text-anchor="middle" font-size="12" fill="#333">Analytics Tools</text>
+  <!-- Arrows: On-Prem to Hybrid -->
+  <line x1="225" y1="110" x2="323" y2="110" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="225" y1="165" x2="323" y2="220" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="225" y1="220" x2="323" y2="170" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Arrows: Hybrid to Cloud -->
+  <line x1="495" y1="110" x2="593" y2="110" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="495" y1="170" x2="593" y2="110" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="495" y1="220" x2="593" y2="110" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Arrows within cloud -->
+  <line x1="695" y1="130" x2="695" y2="143" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="695" y1="185" x2="695" y2="198" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Legend -->
+  <rect x="30" y="310" width="790" height="100" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="425" y="335" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Hybrid Architecture Flow</text>
+  <text x="425" y="358" text-anchor="middle" font-size="11" fill="#555">On-premises systems connect through a secure hybrid layer (gateway, sync, security)</text>
+  <text x="425" y="378" text-anchor="middle" font-size="11" fill="#555">to cloud-based object storage, compute, and analytics tools.</text>
+  <text x="425" y="398" text-anchor="middle" font-size="11" fill="#555">Sensitive data stays on-prem; analytics and scale leverage the cloud.</text>
+</svg>

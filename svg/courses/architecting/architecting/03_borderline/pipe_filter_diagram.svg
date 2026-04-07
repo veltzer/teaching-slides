@@ -1,0 +1,59 @@
+<svg viewBox="0 0 900 320" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="450" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Pipe and Filter Pattern</text>
+  <!-- Input -->
+  <rect x="20" y="90" width="90" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="65" y="115" text-anchor="middle" fill="#333">Input</text>
+  <!-- Filter 1 -->
+  <rect x="170" y="80" width="120" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="230" y="105" text-anchor="middle" font-weight="bold" fill="#333">Filter 1</text>
+  <text x="230" y="122" text-anchor="middle" font-size="10" fill="#666">Transform</text>
+  <!-- Filter 2 -->
+  <rect x="350" y="80" width="120" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="410" y="105" text-anchor="middle" font-weight="bold" fill="#333">Filter 2</text>
+  <text x="410" y="122" text-anchor="middle" font-size="10" fill="#666">Process</text>
+  <!-- Filter 3 -->
+  <rect x="530" y="80" width="120" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="590" y="105" text-anchor="middle" font-weight="bold" fill="#333">Filter 3</text>
+  <text x="590" y="122" text-anchor="middle" font-size="10" fill="#666">Filter</text>
+  <!-- Filter 4 -->
+  <rect x="710" y="80" width="120" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="770" y="105" text-anchor="middle" font-weight="bold" fill="#333">Filter 4</text>
+  <text x="770" y="122" text-anchor="middle" font-size="10" fill="#666">Format</text>
+  <!-- Output -->
+  <rect x="770" y="180" width="90" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="815" y="205" text-anchor="middle" fill="#333">Output</text>
+  <!-- Pipe labels -->
+  <text x="140" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">Pipe</text>
+  <text x="320" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">Pipe</text>
+  <text x="500" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">Pipe</text>
+  <text x="680" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">Pipe</text>
+  <!-- Arrows -->
+  <line x1="110" y1="110" x2="168" y2="108" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="290" y1="108" x2="348" y2="108" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="470" y1="108" x2="528" y2="108" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="650" y1="108" x2="708" y2="108" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="815" y1="135" x2="815" y2="178" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Data descriptions (dashed down) -->
+  <rect x="170" y="185" width="100" height="25" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="220" y="202" text-anchor="middle" font-size="10" fill="#666">Transformed</text>
+  <rect x="350" y="185" width="100" height="25" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="202" text-anchor="middle" font-size="10" fill="#666">Processed</text>
+  <rect x="530" y="185" width="100" height="25" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="580" y="202" text-anchor="middle" font-size="10" fill="#666">Filtered</text>
+  <line x1="230" y1="135" x2="220" y2="183" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-gray)"/>
+  <line x1="410" y1="135" x2="400" y2="183" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-gray)"/>
+  <line x1="590" y1="135" x2="580" y2="183" stroke="#999" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrowhead-gray)"/>
+  <!-- Description -->
+  <rect x="20" y="250" width="860" height="50" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="450" y="272" text-anchor="middle" font-size="12" fill="#555">Data flows through a sequence of independent filters connected by pipes.</text>
+  <text x="450" y="290" text-anchor="middle" font-size="12" fill="#555">Each filter transforms, processes, filters, or formats the data before passing it to the next stage.</text>
+</svg>

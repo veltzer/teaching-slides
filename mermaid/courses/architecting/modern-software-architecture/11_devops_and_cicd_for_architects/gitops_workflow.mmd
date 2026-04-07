@@ -1,6 +1,0 @@
-graph LR
-    DEV[Developer] -->|PR| GIT[Git Repository]
-    GIT -->|Webhook| AGENT[GitOps Agent]
-    AGENT -->|Reconcile| K8S[Kubernetes Cluster]
-    K8S -->|Status| AGENT
-    AGENT -->|Sync Status| GIT

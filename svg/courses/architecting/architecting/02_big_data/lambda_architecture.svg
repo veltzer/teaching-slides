@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Lambda Architecture</text>
+  <!-- Data Stream -->
+  <rect x="30" y="150" width="120" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="175" text-anchor="middle" fill="#333">Data Stream</text>
+  <!-- Batch Layer -->
+  <rect x="250" y="70" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="315" y="95" text-anchor="middle" fill="#333">Batch Layer</text>
+  <!-- Speed Layer -->
+  <rect x="250" y="230" width="130" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="315" y="255" text-anchor="middle" fill="#333">Speed Layer</text>
+  <!-- Batch Views -->
+  <rect x="470" y="70" width="120" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="530" y="95" text-anchor="middle" fill="#333">Batch Views</text>
+  <!-- Real-time Views -->
+  <rect x="470" y="230" width="130" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="535" y="250" text-anchor="middle" font-size="12" fill="#333">Real-time Views</text>
+  <!-- Serving Layer -->
+  <rect x="630" y="145" width="130" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="695" y="172" text-anchor="middle" font-weight="bold" fill="#333">Serving Layer</text>
+  <!-- Queries -->
+  <rect x="630" y="240" width="130" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="695" y="262" text-anchor="middle" fill="#333">Queries</text>
+  <!-- Master Data -->
+  <rect x="250" y="140" width="130" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
+  <text x="315" y="162" text-anchor="middle" fill="#666">Master Dataset</text>
+  <!-- Arrows -->
+  <line x1="150" y1="158" x2="248" y2="95" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="150" y1="180" x2="248" y2="245" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="90" x2="468" y2="90" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="380" y1="250" x2="468" y2="250" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="590" y1="90" x2="695" y2="143" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="600" y1="250" x2="695" y2="192" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="695" y1="190" x2="695" y2="238" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Master data dashed -->
+  <line x1="315" y1="110" x2="315" y2="138" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <!-- Description -->
+  <rect x="30" y="310" width="740" height="70" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="335" text-anchor="middle" font-size="12" fill="#555">Lambda Architecture processes data through two parallel paths:</text>
+  <text x="400" y="355" text-anchor="middle" font-size="12" fill="#555">Batch Layer (high latency, complete accuracy) and Speed Layer (low latency, approximate).</text>
+  <text x="400" y="375" text-anchor="middle" font-size="12" fill="#555">The Serving Layer merges both views to answer queries.</text>
+</svg>

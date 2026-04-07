@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Blackboard Pattern</text>
+  <!-- Blackboard (central) -->
+  <rect x="300" y="100" width="160" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="380" y="127" text-anchor="middle" font-weight="bold" font-size="14" fill="#333">Blackboard</text>
+  <text x="380" y="147" text-anchor="middle" font-size="10" fill="#666">Shared Knowledge</text>
+  <!-- Control -->
+  <rect x="310" y="200" width="140" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="380" y="225" text-anchor="middle" fill="#333">Control</text>
+  <!-- Knowledge Sources -->
+  <rect x="30" y="260" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="100" y="282" text-anchor="middle" font-size="12" fill="#333">Knowledge Source 1</text>
+  <rect x="210" y="260" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="280" y="282" text-anchor="middle" font-size="12" fill="#333">Knowledge Source 2</text>
+  <rect x="390" y="260" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="460" y="282" text-anchor="middle" font-size="12" fill="#333">Knowledge Source 3</text>
+  <rect x="570" y="260" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="640" y="282" text-anchor="middle" font-size="12" fill="#333">Knowledge Source 4</text>
+  <!-- Solution -->
+  <rect x="600" y="110" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="660" y="135" text-anchor="middle" fill="#333">Solution</text>
+  <!-- Blackboard -> Control -->
+  <line x1="380" y1="160" x2="380" y2="198" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Control -> Knowledge Sources -->
+  <line x1="340" y1="240" x2="110" y2="258" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="360" y1="240" x2="285" y2="258" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="400" y1="240" x2="455" y2="258" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="420" y1="240" x2="630" y2="258" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Knowledge Sources <-> Blackboard (bidirectional, dashed up) -->
+  <line x1="100" y1="260" x2="300" y2="140" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="280" y1="260" x2="330" y2="160" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="460" y1="260" x2="420" y2="160" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <line x1="640" y1="260" x2="460" y2="145" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <!-- Blackboard -> Solution dashed -->
+  <line x1="460" y1="130" x2="598" y2="130" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
+  <text x="530" y="123" text-anchor="middle" font-size="10" fill="#999">Solution State</text>
+  <!-- Description -->
+  <rect x="30" y="330" width="740" height="70" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="355" text-anchor="middle" font-size="12" fill="#555">The Blackboard holds shared data. The Control component selects which Knowledge Source to activate.</text>
+  <text x="400" y="375" text-anchor="middle" font-size="12" fill="#555">Knowledge Sources read from and write to the Blackboard, incrementally building toward a solution.</text>
+  <text x="400" y="395" text-anchor="middle" font-size="12" fill="#555">Useful for complex problems where no single algorithm provides a complete solution.</text>
+</svg>

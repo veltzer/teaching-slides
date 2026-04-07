@@ -1,0 +1,41 @@
+<svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Conway's Law Illustrated</text>
+  <!-- Organization subgraph -->
+  <rect x="30" y="45" width="320" height="170" rx="8" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="190" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a90e2">Organization</text>
+  <rect x="55" y="80" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="110" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Team A</text>
+  <rect x="55" y="140" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="110" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Team B</text>
+  <rect x="215" y="140" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="270" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Team C</text>
+  <line x1="110" y1="120" x2="110" y2="140" stroke="#999" stroke-width="1.5"/>
+  <line x1="165" y1="160" x2="215" y2="160" stroke="#999" stroke-width="1.5"/>
+  <!-- System subgraph -->
+  <rect x="400" y="45" width="320" height="170" rx="8" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="560" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">System</text>
+  <rect x="425" y="80" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="480" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Service A</text>
+  <rect x="425" y="140" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Service B</text>
+  <rect x="585" y="140" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="640" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13">Service C</text>
+  <line x1="480" y1="120" x2="480" y2="135" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="495" y="132" font-family="Arial, sans-serif" font-size="10" fill="#28a745">API</text>
+  <line x1="535" y1="160" x2="580" y2="160" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="558" y="155" font-family="Arial, sans-serif" font-size="10" fill="#28a745">API</text>
+  <!-- Ownership links -->
+  <line x1="110" y1="105" x2="425" y2="100" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="260" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Owns</text>
+  <line x1="110" y1="165" x2="425" y2="160" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="260" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Owns</text>
+  <line x1="270" y1="165" x2="585" y2="160" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="420" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#999">Owns</text>
+  <!-- Footer note -->
+  <text x="375" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666" font-style="italic">"Organizations design systems that mirror their communication structure."</text>
+</svg>

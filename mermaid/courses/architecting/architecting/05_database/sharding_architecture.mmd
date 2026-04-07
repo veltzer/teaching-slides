@@ -1,8 +1,0 @@
-graph TB
-R[Router] --> S1[Shard 1<br/>Users A-H]
-R --> S2[Shard 2<br/>Users I-P]
-R --> S3[Shard 3<br/>Users Q-Z]
-S1 --> DB1[(Database 1)]
-S2 --> DB2[(Database 2)]
-S3 --> DB3[(Database 3)]
-R -.->|Hash/Range| SK[Shard Key]

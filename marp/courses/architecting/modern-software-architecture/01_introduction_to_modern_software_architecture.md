@@ -27,7 +27,7 @@
 ---
 ## Monolith Diagram
 
-![monolith_diagram](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/monolith_diagram.svg)
+![monolith_diagram](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/monolith_diagram.svg)
 
 ---
 ## Advantages of the Monolith
@@ -66,7 +66,7 @@
 ---
 ## Microservices Diagram
 
-![microservices_diagram](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/microservices_diagram.svg)
+![microservices_diagram](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/microservices_diagram.svg)
 
 ---
 ## Key Characteristics of Microservices
@@ -91,7 +91,7 @@
 ---
 ## The Transition Journey
 
-![the_transition_journey](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_transition_journey.svg)
+![the_transition_journey](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_transition_journey.svg)
 
 ---
 ## Modular Monolith as a Stepping Stone
@@ -146,7 +146,7 @@
 ---
 ## Categories of Architectural Drivers
 
-![categories_of_architectural_drivers](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/categories_of_architectural_drivers.svg)
+![categories_of_architectural_drivers](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/categories_of_architectural_drivers.svg)
 
 ---
 ## Quality Attributes Defined
@@ -272,7 +272,7 @@ Use an event broker for inter-service communication.
 ---
 ## ATAM Process Overview
 
-![atam_process_overview](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/atam_process_overview.svg)
+![atam_process_overview](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/atam_process_overview.svg)
 
 ---
 ## Fitness Functions
@@ -295,7 +295,7 @@ Use an event broker for inter-service communication.
 ---
 ## Conway's Law Illustrated
 
-![conway_s_law_illustrated](out/mermaid/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/conway_s_law_illustrated.svg)
+![conway_s_law_illustrated](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/conway_s_law_illustrated.svg)
 
 ---
 ## The Role of the Software Architect

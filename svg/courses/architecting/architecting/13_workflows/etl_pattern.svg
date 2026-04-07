@@ -1,0 +1,53 @@
+<svg viewBox="0 0 850 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">ETL Pattern (Extract - Transform - Load)</text>
+  <!-- Extract -->
+  <rect x="30" y="60" width="170" height="200" rx="8" fill="#f0f4ff" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="115" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Extract</text>
+  <rect x="50" y="100" width="130" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="115" y="121" text-anchor="middle" font-size="11" fill="#333">Database</text>
+  <rect x="50" y="142" width="130" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="115" y="163" text-anchor="middle" font-size="11" fill="#333">API</text>
+  <rect x="50" y="184" width="130" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="115" y="205" text-anchor="middle" font-size="11" fill="#333">Files</text>
+  <!-- Transform -->
+  <rect x="280" y="60" width="280" height="200" rx="8" fill="#fdf0ff" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="420" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#9c27b0">Transform</text>
+  <rect x="300" y="100" width="110" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="355" y="121" text-anchor="middle" font-size="11" fill="#333">Clean</text>
+  <rect x="300" y="145" width="110" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="355" y="166" text-anchor="middle" font-size="11" fill="#333">Validate</text>
+  <rect x="430" y="100" width="110" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="485" y="121" text-anchor="middle" font-size="11" fill="#333">Enrich</text>
+  <rect x="430" y="145" width="110" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+  <text x="485" y="166" text-anchor="middle" font-size="11" fill="#333">Aggregate</text>
+  <!-- Internal transform arrows -->
+  <line x1="355" y1="132" x2="355" y2="143" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="410" y1="116" x2="428" y2="116" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="485" y1="132" x2="485" y2="143" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <!-- Load -->
+  <rect x="640" y="60" width="180" height="200" rx="8" fill="#f0fff0" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="730" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Load</text>
+  <rect x="660" y="100" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="730" y="121" text-anchor="middle" font-size="11" fill="#333">Data Warehouse</text>
+  <rect x="660" y="142" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="730" y="163" text-anchor="middle" font-size="11" fill="#333">Data Lake</text>
+  <rect x="660" y="184" width="140" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="730" y="205" text-anchor="middle" font-size="11" fill="#333">Analytics DB</text>
+  <!-- Extract -> Transform arrows -->
+  <line x1="200" y1="116" x2="298" y2="116" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="200" y1="158" x2="298" y2="140" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="200" y1="200" x2="298" y2="145" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Transform -> Load arrows -->
+  <line x1="560" y1="161" x2="658" y2="116" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="560" y1="161" x2="658" y2="158" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="560" y1="161" x2="658" y2="200" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Pipeline flow summary -->
+  <rect x="150" y="300" width="550" height="45" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="425" y="320" text-anchor="middle" font-size="11" fill="#333">Sources -> Clean -> Validate -> Enrich -> Aggregate -> Destinations</text>
+  <text x="425" y="338" text-anchor="middle" font-size="10" fill="#888">ETL pipelines move data from diverse sources through transformation to analytical stores.</text>
+</svg>

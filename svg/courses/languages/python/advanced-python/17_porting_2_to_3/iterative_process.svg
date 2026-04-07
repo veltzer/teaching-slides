@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowred" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+    <marker id="arrowgreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Python 2 to 3 Porting: Iterative Process</text>
+  <!-- Step 1: Start with Py2 Code -->
+  <rect x="310" y="50" width="180" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">Start with Py2 Code</text>
+  <!-- Step 2: Run Tests in Py2 (diamond) -->
+  <polygon points="400,120 510,160 400,200 290,160" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Run Tests</text>
+  <text x="400" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">in Py2?</text>
+  <!-- Arrow: start -> tests py2 -->
+  <line x1="400" y1="90" x2="400" y2="118" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Fix Tests in Py2 (error box, right side) -->
+  <rect x="580" y="140" width="180" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="670" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">Fix Tests in Py2 First!</text>
+  <!-- Arrow: diamond -> fix (Some Fail) -->
+  <line x1="510" y1="160" x2="575" y2="160" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowred)"/>
+  <text x="540" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">Fail</text>
+  <!-- Step 3: Branch Code -->
+  <rect x="310" y="230" width="180" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">Branch Code</text>
+  <!-- Arrow: diamond -> branch (All Pass) -->
+  <line x1="400" y1="200" x2="400" y2="225" stroke="#28a745" stroke-width="2" marker-end="url(#arrowgreen)"/>
+  <text x="430" y="216" font-family="Arial, sans-serif" font-size="11" fill="#28a745">Pass</text>
+  <!-- Step 4: Apply Auto-Porting Tool (diamond) -->
+  <polygon points="400,300 540,340 400,380 260,340" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Apply Auto-Porting</text>
+  <text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">(2to3, modernize)</text>
+  <!-- Arrow: branch -> auto-port -->
+  <line x1="400" y1="270" x2="400" y2="298" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Step 5: Manual Fixes -->
+  <rect x="130" y="370" width="180" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="220" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">Manual Fixes &amp; Refactor</text>
+  <!-- Arrow: auto-port -> manual fixes -->
+  <line x1="310" y1="360" x2="260" y2="365" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Step 6: Run Tests in Py3 (diamond) -->
+  <polygon points="220,440 310,470 220,500 130,470" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="220" y="467" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Run Tests</text>
+  <text x="220" y="482" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">in Py3?</text>
+  <!-- Arrow: manual fixes -> tests py3 -->
+  <line x1="220" y1="410" x2="220" y2="438" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Loop back: tests py3 fail -> manual fixes -->
+  <path d="M 130,470 Q 70,470 70,395 Q 70,370 125,385" fill="none" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowred)"/>
+  <text x="55" y="435" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">Fail</text>
+  <!-- Step 7: Merge to Main -->
+  <rect x="400" y="450" width="200" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="500" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">Merge to Main/Release</text>
+  <!-- Arrow: tests py3 pass -> merge -->
+  <line x1="310" y1="470" x2="395" y2="470" stroke="#28a745" stroke-width="2" marker-end="url(#arrowgreen)"/>
+  <text x="350" y="462" font-family="Arial, sans-serif" font-size="11" fill="#28a745">Pass</text>
+</svg>

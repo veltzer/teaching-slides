@@ -1,9 +1,0 @@
-graph LR
-    S1[Service 1] -->|stdout| A1[Log Agent]
-    S2[Service 2] -->|stdout| A2[Log Agent]
-    S3[Service 3] -->|stdout| A3[Log Agent]
-    A1 --> AGG[Log Aggregator]
-    A2 --> AGG
-    A3 --> AGG
-    AGG --> STORE[(Log Storage)]
-    STORE --> UI[Query / Dashboard]

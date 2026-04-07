@@ -1,8 +1,0 @@
-graph LR
-S[Stream Source] --> K[Kafka]
-K --> SP[Stream Processor]
-SP --> RT[Real-time Analytics]
-SP --> DB[(State Store)]
-RT --> D[Dashboard]
-RT --> AL[Alerts]
-SP -.->|Checkpoint| CP[Checkpoints]

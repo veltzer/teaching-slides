@@ -1,9 +1,0 @@
-graph TD
-    CLI[Docker CLI] -->|REST API| D[Docker Daemon]
-    D --> B[Image Builder]
-    D --> CR[Container Runtime]
-    D --> NW[Networking]
-    D --> VOL[Volumes]
-    CR --> C1[Container 1]
-    CR --> C2[Container 2]
-    B -->|Pull/Push| REG[Registry]

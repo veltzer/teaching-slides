@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 430" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Multi-Version Concurrency Control (MVCC)</text>
+  <!-- MVCC System section -->
+  <rect x="50" y="55" width="300" height="220" rx="5" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="200" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">MVCC Version Chain</text>
+  <!-- Versions -->
+  <rect x="80" y="95" width="240" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="113" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Version 1</text>
+  <text x="200" y="128" text-anchor="middle" font-size="10" fill="#555">Created by T1</text>
+  <rect x="80" y="150" width="240" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="200" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Version 2</text>
+  <text x="200" y="183" text-anchor="middle" font-size="10" fill="#555">Created by T2</text>
+  <rect x="80" y="205" width="240" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="223" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Version 3</text>
+  <text x="200" y="238" text-anchor="middle" font-size="10" fill="#555">Created by T3</text>
+  <!-- Chain arrows -->
+  <line x1="200" y1="135" x2="200" y2="148" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="200" y1="190" x2="200" y2="203" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Readers section -->
+  <rect x="450" y="55" width="300" height="220" rx="5" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="600" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Snapshot Readers</text>
+  <rect x="480" y="95" width="240" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="600" y="113" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Transaction A</text>
+  <text x="600" y="128" text-anchor="middle" font-size="10" fill="#555">Sees Version 1</text>
+  <rect x="480" y="150" width="240" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="600" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Transaction B</text>
+  <text x="600" y="183" text-anchor="middle" font-size="10" fill="#555">Sees Version 2</text>
+  <rect x="480" y="205" width="240" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="600" y="223" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Transaction C</text>
+  <text x="600" y="238" text-anchor="middle" font-size="10" fill="#555">Sees Version 3</text>
+  <!-- Snapshot arrows -->
+  <line x1="320" y1="115" x2="478" y2="115" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <text x="400" y="108" text-anchor="middle" font-size="10" fill="#4a90e2">Snapshot</text>
+  <line x1="320" y1="170" x2="478" y2="170" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <text x="400" y="163" text-anchor="middle" font-size="10" fill="#996600">Snapshot</text>
+  <line x1="320" y1="225" x2="478" y2="225" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
+  <text x="400" y="218" text-anchor="middle" font-size="10" fill="#28a745">Snapshot</text>
+  <!-- Key benefit -->
+  <rect x="50" y="310" width="700" height="100" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
+  <text x="400" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">How MVCC Works</text>
+  <text x="400" y="358" text-anchor="middle" font-size="11" fill="#555">Each transaction gets a consistent snapshot of the database at its start time.</text>
+  <text x="400" y="378" text-anchor="middle" font-size="11" fill="#555">Readers never block writers. Writers never block readers.</text>
+  <text x="400" y="398" text-anchor="middle" font-size="11" fill="#28a745">Used by: PostgreSQL, MySQL (InnoDB), Oracle, SQL Server (RCSI)</text>
+</svg>

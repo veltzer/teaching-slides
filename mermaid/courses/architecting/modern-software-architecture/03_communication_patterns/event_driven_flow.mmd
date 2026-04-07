@@ -1,7 +1,0 @@
-graph LR
-    OS[Order Service] -->|OrderPlaced| EB[Event Bus]
-    EB -->|OrderPlaced| PS[Payment Service]
-    EB -->|OrderPlaced| IS[Inventory Service]
-    EB -->|OrderPlaced| NS[Notification Service]
-    PS -->|PaymentProcessed| EB
-    EB -->|PaymentProcessed| OS

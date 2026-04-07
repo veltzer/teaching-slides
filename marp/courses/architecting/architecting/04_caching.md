@@ -26,7 +26,7 @@
 
 ## Cache Hit vs Cache Miss
 
-![cache_hit_vs_cache_miss](out/mermaid/courses/architecting/architecting/04_caching/cache_hit_vs_cache_miss.svg)
+![cache_hit_vs_cache_miss](svg/courses/architecting/architecting/04_caching/cache_hit_vs_cache_miss.svg)
 
 ---
 
@@ -103,19 +103,19 @@ def get_product(product_id):
 
 ## Cache-Aside Pattern
 
-![cache_aside_pattern](out/mermaid/courses/architecting/architecting/04_caching/cache_aside_pattern.svg)
+![cache_aside_pattern](svg/courses/architecting/architecting/04_caching/cache_aside_pattern.svg)
 
 ---
 
 ## Write-Through Pattern
 
-![write_through_pattern](out/mermaid/courses/architecting/architecting/04_caching/write_through_pattern.svg)
+![write_through_pattern](svg/courses/architecting/architecting/04_caching/write_through_pattern.svg)
 
 ---
 
 ## Write-Behind Pattern
 
-![write_behind_pattern](out/mermaid/courses/architecting/architecting/04_caching/write_behind_pattern.svg)
+![write_behind_pattern](svg/courses/architecting/architecting/04_caching/write_behind_pattern.svg)
 
 ---
 
@@ -161,7 +161,7 @@ def get_trending_posts():
 
 ## CDN Architecture
 
-![cdn_architecture](out/mermaid/courses/architecting/architecting/04_caching/cdn_architecture.svg)
+![cdn_architecture](svg/courses/architecting/architecting/04_caching/cdn_architecture.svg)
 
 ---
 
@@ -204,7 +204,7 @@ Vary: Accept-Encoding
 
 ## Edge Computing Architecture
 
-![edge_computing_architecture](out/mermaid/courses/architecting/architecting/04_caching/edge_computing_architecture.svg)
+![edge_computing_architecture](svg/courses/architecting/architecting/04_caching/edge_computing_architecture.svg)
 
 ---
 
@@ -308,7 +308,7 @@ Key Metrics:
 
 ## Cache Monitoring Dashboard
 
-![cache_monitoring_dashboard](out/mermaid/courses/architecting/architecting/04_caching/cache_monitoring_dashboard.svg)
+![cache_monitoring_dashboard](svg/courses/architecting/architecting/04_caching/cache_monitoring_dashboard.svg)
 
 ---
 

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">epoll vs io_uring Comparison</text>
+  <!-- epoll section -->
+  <rect x="50" y="60" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="125" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">epoll</text>
+  <!-- epoll properties -->
+  <rect x="280" y="55" width="200" height="36" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="380" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Network I/O Only</text>
+  <line x1="200" y1="75" x2="275" y2="73" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="280" y="105" width="200" height="36" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="380" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Level/Edge Triggered</text>
+  <line x1="200" y1="85" x2="275" y2="118" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="280" y="155" width="200" height="36" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="380" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">System Call Per Operation</text>
+  <line x1="200" y1="95" x2="275" y2="168" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Divider -->
+  <line x1="50" y1="220" x2="750" y2="220" stroke="#ccc" stroke-width="1" stroke-dasharray="5,5"/>
+  <!-- io_uring section -->
+  <rect x="50" y="250" width="150" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="125" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">io_uring</text>
+  <!-- io_uring properties -->
+  <rect x="280" y="240" width="200" height="36" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="380" y="263" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">All I/O Types (Universal)</text>
+  <line x1="200" y1="265" x2="275" y2="258" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="280" y="290" width="200" height="36" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="380" y="313" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Ring Buffer (Efficient)</text>
+  <line x1="200" y1="275" x2="275" y2="305" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="280" y="340" width="200" height="36" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="380" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Batching (High Perf)</text>
+  <line x1="200" y1="285" x2="275" y2="355" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Summary labels on the right -->
+  <text x="530" y="78" font-family="Arial, sans-serif" font-size="12" fill="#ffc107" font-weight="bold">Limited Scope</text>
+  <text x="530" y="128" font-family="Arial, sans-serif" font-size="12" fill="#4a90e2" font-weight="bold">Flexibility</text>
+  <text x="530" y="178" font-family="Arial, sans-serif" font-size="12" fill="#dc3545" font-weight="bold">Overhead</text>
+  <text x="530" y="263" font-family="Arial, sans-serif" font-size="12" fill="#28a745" font-weight="bold">Universal</text>
+  <text x="530" y="313" font-family="Arial, sans-serif" font-size="12" fill="#28a745" font-weight="bold">Efficient</text>
+  <text x="530" y="363" font-family="Arial, sans-serif" font-size="12" fill="#28a745" font-weight="bold">Performance</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+  </defs>
+  <text x="400" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Event-Driven Flow</text>
+  <!-- Order Service -->
+  <rect x="20" y="120" width="140" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Order Service</text>
+  <!-- Event Bus -->
+  <rect x="280" y="120" width="150" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="355" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Event Bus</text>
+  <!-- OrderPlaced to Event Bus -->
+  <line x1="160" y1="140" x2="275" y2="140" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="218" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">OrderPlaced</text>
+  <!-- Event Bus to services -->
+  <rect x="560" y="40" width="160" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="640" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Payment Service</text>
+  <rect x="560" y="120" width="160" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="640" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Inventory Service</text>
+  <rect x="560" y="200" width="170" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="645" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Notification Service</text>
+  <line x1="430" y1="130" x2="555" y2="60" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="505" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4a90e2">OrderPlaced</text>
+  <line x1="430" y1="142" x2="555" y2="140" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="493" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4a90e2">OrderPlaced</text>
+  <line x1="430" y1="155" x2="555" y2="220" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="505" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#4a90e2">OrderPlaced</text>
+  <!-- PaymentProcessed back -->
+  <line x1="560" y1="75" x2="435" y2="155" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-green)"/>
+  <text x="520" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#28a745">PaymentProcessed</text>
+  <line x1="280" y1="155" x2="165" y2="155" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-green)"/>
+  <text x="218" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#28a745">PaymentProcessed</text>
+</svg>

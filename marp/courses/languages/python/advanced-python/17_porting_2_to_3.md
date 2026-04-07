@@ -559,7 +559,7 @@ six.print_("Hello", "world", sep="-", end="!\n")
 * You might port one module or component at a time.
 * Run tests frequently.
 
-![iterative_process](out/mermaid/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.svg)
+![iterative_process](svg/courses/languages/python/advanced-python/17_porting_2_to_3/iterative_process.svg)
 
 ---
 

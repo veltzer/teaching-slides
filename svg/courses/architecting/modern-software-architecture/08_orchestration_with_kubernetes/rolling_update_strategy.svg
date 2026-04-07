@@ -1,0 +1,51 @@
+<svg viewBox="0 0 850 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Step 1 -->
+  <text x="105" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Step 1</text>
+  <rect x="30" y="35" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="60" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <rect x="100" y="35" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="130" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <rect x="170" y="35" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <!-- Step 2 -->
+  <text x="105" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Step 2</text>
+  <rect x="30" y="125" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="60" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <rect x="100" y="125" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="130" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <rect x="170" y="125" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <!-- Step 3 -->
+  <text x="105" y="205" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Step 3</text>
+  <rect x="30" y="215" width="60" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="60" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">v1</text>
+  <rect x="100" y="215" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="130" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <rect x="170" y="215" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <!-- Step 4 -->
+  <text x="105" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Step 4</text>
+  <rect x="30" y="295" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="60" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <rect x="100" y="295" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="130" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <rect x="170" y="295" width="60" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745" font-weight="bold">v2</text>
+  <!-- Arrows between steps -->
+  <line x1="130" y1="72" x2="130" y2="112" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="130" y1="162" x2="130" y2="202" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="130" y1="252" x2="130" y2="292" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Description -->
+  <rect x="320" y="50" width="480" height="220" rx="5" fill="none" stroke="#ccc" stroke-width="1"/>
+  <text x="560" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Rolling Update Strategy</text>
+  <text x="340" y="115" font-family="Arial, sans-serif" font-size="12" fill="#333">1. All pods running v1</text>
+  <text x="340" y="145" font-family="Arial, sans-serif" font-size="12" fill="#333">2. Replace one pod with v2, keep serving traffic</text>
+  <text x="340" y="175" font-family="Arial, sans-serif" font-size="12" fill="#333">3. Replace second pod with v2</text>
+  <text x="340" y="205" font-family="Arial, sans-serif" font-size="12" fill="#333">4. All pods now running v2 - zero downtime</text>
+  <text x="340" y="245" font-family="Arial, sans-serif" font-size="11" fill="#666">maxUnavailable and maxSurge control the pace</text>
+</svg>

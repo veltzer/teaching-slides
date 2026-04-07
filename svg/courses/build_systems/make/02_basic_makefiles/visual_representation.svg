@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Makefile Dependency Graph (Bottom-Up Build)</text>
+  <!-- Source files (bottom row) -->
+  <rect x="20" y="370" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="75" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">main.c</text>
+  <rect x="160" y="370" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="215" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">config.h</text>
+  <rect x="300" y="370" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="355" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">utils.h</text>
+  <rect x="440" y="370" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="495" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">utils.c</text>
+  <rect x="580" y="370" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="635" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">lib.c</text>
+  <rect x="700" y="370" width="90" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="745" y="395" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">lib.h</text>
+  <!-- Object files (middle row) -->
+  <rect x="70" y="220" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="135" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">main.o</text>
+  <rect x="340" y="220" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="405" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">utils.o</text>
+  <rect x="610" y="220" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="675" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#333">lib.o</text>
+  <!-- Final target (top) -->
+  <rect x="330" y="70" width="150" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="405" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">program</text>
+  <!-- Arrows: sources -> main.o -->
+  <line x1="75" y1="370" x2="115" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="215" y1="370" x2="155" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="340" y1="370" x2="160" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Arrows: sources -> utils.o -->
+  <line x1="495" y1="370" x2="420" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="355" y1="370" x2="390" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="230" y1="370" x2="380" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Arrows: sources -> lib.o -->
+  <line x1="635" y1="370" x2="660" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="745" y1="370" x2="690" y2="265" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Arrows: objects -> program -->
+  <line x1="155" y1="220" x2="365" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="405" y1="220" x2="405" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="660" y1="220" x2="445" y2="120" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Legend -->
+  <rect x="130" y="440" width="16" height="16" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="152" y="453" font-family="Arial, sans-serif" font-size="12" fill="#555">Source files (.c/.h)</text>
+  <rect x="310" y="440" width="16" height="16" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="332" y="453" font-family="Arial, sans-serif" font-size="12" fill="#555">Object files (.o)</text>
+  <rect x="480" y="440" width="16" height="16" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="502" y="453" font-family="Arial, sans-serif" font-size="12" fill="#555">Final executable</text>
+</svg>

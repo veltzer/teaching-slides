@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Apache Airflow Architecture</text>
+  <!-- Airflow Components -->
+  <rect x="30" y="50" width="340" height="170" rx="8" fill="#f0f4ff" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="200" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Airflow Components</text>
+  <rect x="50" y="85" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="115" y="110" text-anchor="middle" font-size="12" fill="#333">Web Server</text>
+  <rect x="200" y="85" width="130" height="40" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+  <text x="265" y="110" text-anchor="middle" font-size="12" fill="#333">Scheduler</text>
+  <rect x="50" y="145" width="130" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="115" y="170" text-anchor="middle" font-size="12" fill="#333">Executor</text>
+  <rect x="200" y="145" width="130" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="265" y="170" text-anchor="middle" font-size="12" fill="#333">Metadata DB</text>
+  <!-- Workers -->
+  <rect x="440" y="50" width="180" height="170" rx="8" fill="#f0fff0" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="530" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Workers</text>
+  <rect x="460" y="88" width="140" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="530" y="108" text-anchor="middle" font-size="11" fill="#333">Worker 1</text>
+  <rect x="460" y="126" width="140" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="530" y="146" text-anchor="middle" font-size="11" fill="#333">Worker 2</text>
+  <rect x="460" y="164" width="140" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="530" y="184" text-anchor="middle" font-size="11" fill="#333">Worker N</text>
+  <!-- DAGs -->
+  <rect x="200" y="270" width="350" height="90" rx="8" fill="#fffdf0" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="375" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffc107">DAGs (Directed Acyclic Graphs)</text>
+  <rect x="220" y="305" width="90" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="265" y="325" text-anchor="middle" font-size="10" fill="#333">DAG 1</text>
+  <rect x="325" y="305" width="90" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="370" y="325" text-anchor="middle" font-size="10" fill="#333">DAG 2</text>
+  <rect x="430" y="305" width="90" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="475" y="325" text-anchor="middle" font-size="10" fill="#333">DAG N</text>
+  <!-- Arrows -->
+  <line x1="115" y1="125" x2="240" y2="143" stroke="#4a90e2" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <line x1="265" y1="125" x2="265" y2="143" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="265" y1="125" x2="245" y2="143" stroke="#9c27b0" stroke-width="1"/>
+  <text x="220" y="138" font-size="9" fill="#9c27b0">Schedule</text>
+  <!-- Executor -> Workers -->
+  <line x1="180" y1="165" x2="458" y2="103" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="180" y1="165" x2="458" y2="141" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="180" y1="170" x2="458" y2="179" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- DAGs -> Scheduler -->
+  <line x1="300" y1="270" x2="265" y2="187" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Web Server -> Metadata DB -->
+  <line x1="140" y1="125" x2="220" y2="145" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Note -->
+  <text x="400" y="400" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Scheduler picks DAGs, executor dispatches tasks to workers, metadata DB tracks state.</text>
+</svg>

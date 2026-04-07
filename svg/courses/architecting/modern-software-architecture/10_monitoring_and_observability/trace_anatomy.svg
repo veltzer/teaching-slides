@@ -1,0 +1,24 @@
+<svg viewBox="0 0 800 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Trace container -->
+  <rect x="20" y="10" width="760" height="240" rx="5" fill="none" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="5"/>
+  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#4a90e2" font-weight="bold">Trace</text>
+  <!-- Time axis -->
+  <line x1="50" y1="250" x2="750" y2="250" stroke="#999" stroke-width="1"/>
+  <text x="50" y="270" font-family="Arial, sans-serif" font-size="10" fill="#999">0ms</text>
+  <text x="750" y="270" text-anchor="end" font-family="Arial, sans-serif" font-size="10" fill="#999">200ms</text>
+  <!-- Span 1: API Gateway (full width) -->
+  <rect x="50" y="55" width="700" height="30" rx="4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">API Gateway (200ms)</text>
+  <!-- Span 2: Order Service -->
+  <rect x="100" y="100" width="525" height="30" rx="4" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="362" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Order Service (150ms)</text>
+  <!-- Span 3: Payment Service -->
+  <rect x="150" y="145" width="280" height="30" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="290" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Payment Service (80ms)</text>
+  <!-- Span 4: Inventory Service -->
+  <rect x="450" y="145" width="140" height="30" rx="4" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="520" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Inventory (40ms)</text>
+  <!-- Span 5: DB Query -->
+  <rect x="200" y="190" width="70" height="30" rx="4" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="235" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10">DB (20ms)</text>
+</svg>

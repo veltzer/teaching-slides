@@ -1,0 +1,30 @@
+<svg viewBox="0 0 750 220" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Message Broker Architecture</text>
+  <!-- Producers -->
+  <rect x="30" y="55" width="120" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Producer 1</text>
+  <rect x="30" y="115" width="120" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Producer 2</text>
+  <!-- Arrows to Queue -->
+  <line x1="150" y1="75" x2="270" y2="95" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="150" y1="135" x2="270" y2="115" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Queue / Topic -->
+  <rect x="275" y="75" width="170" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="360" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Queue / Topic</text>
+  <!-- Arrows to Consumers -->
+  <line x1="445" y1="90" x2="560" y2="55" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="445" y1="103" x2="560" y2="103" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="445" y1="118" x2="560" y2="155" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Consumers -->
+  <rect x="565" y="35" width="130" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="630" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Consumer 1</text>
+  <rect x="565" y="85" width="130" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="630" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Consumer 2</text>
+  <rect x="565" y="135" width="130" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="630" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Consumer 3</text>
+</svg>

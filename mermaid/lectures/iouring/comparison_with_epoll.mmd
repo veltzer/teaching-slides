@@ -1,7 +1,0 @@
-graph TD
-    A[epoll] -->|Network Only| B[Limited Scope]
-    A -->|Level/Edge Triggered| C[Flexibility]
-    A -->|System Call Per Op| D[Overhead]
-    E[io_uring] -->|All I/O Types| F[Universal]
-    E -->|Ring Buffer| G[Efficient]
-    E -->|Batching| H[Performance]

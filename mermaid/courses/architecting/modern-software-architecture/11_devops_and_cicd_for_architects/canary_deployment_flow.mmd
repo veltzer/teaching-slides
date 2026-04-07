@@ -1,7 +1,0 @@
-graph TD
-    LB[Load Balancer]
-    LB -->|95% Traffic| STABLE[Stable - v1.0]
-    LB -->|5% Traffic| CANARY[Canary - v1.1]
-    CANARY --> MON[Monitor Metrics]
-    MON -->|Healthy| INC[Increase to 25%, 50%, 100%]
-    MON -->|Unhealthy| RB[Rollback]

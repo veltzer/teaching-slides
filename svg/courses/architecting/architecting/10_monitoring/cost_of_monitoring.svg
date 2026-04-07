@@ -1,0 +1,45 @@
+<svg viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Cost of Monitoring</text>
+  <!-- Data Volume -->
+  <rect x="30" y="60" width="200" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="130" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Data Volume</text>
+  <text x="130" y="102" text-anchor="middle" font-size="11" fill="#333">100 GB/day Logs</text>
+  <text x="130" y="118" text-anchor="middle" font-size="11" fill="#333">1M metrics/min</text>
+  <text x="130" y="134" text-anchor="middle" font-size="11" fill="#333">10K traces/sec</text>
+  <!-- Storage Costs -->
+  <rect x="320" y="50" width="200" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="420" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Storage Costs</text>
+  <text x="420" y="95" text-anchor="middle" font-size="12" fill="#333">Hot Storage: $$$</text>
+  <text x="420" y="113" text-anchor="middle" font-size="12" fill="#333">Warm: $$ | Cold: $</text>
+  <!-- Processing Costs -->
+  <rect x="320" y="155" width="200" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="420" y="177" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffc107">Processing Costs</text>
+  <text x="420" y="197" text-anchor="middle" font-size="11" fill="#333">Ingestion</text>
+  <text x="420" y="213" text-anchor="middle" font-size="11" fill="#333">Indexing | Query</text>
+  <!-- Optimization Strategies -->
+  <rect x="620" y="50" width="200" height="190" rx="8" fill="#f0fff0" stroke="#28a745" stroke-width="1.5"/>
+  <text x="720" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Optimization</text>
+  <rect x="640" y="90" width="160" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="720" y="112" text-anchor="middle" font-size="12" fill="#333">Sampling</text>
+  <rect x="640" y="135" width="160" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="720" y="157" text-anchor="middle" font-size="12" fill="#333">Aggregation</text>
+  <rect x="640" y="180" width="160" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="720" y="202" text-anchor="middle" font-size="12" fill="#333">Tiered Storage</text>
+  <!-- Arrows -->
+  <line x1="230" y1="95" x2="318" y2="85" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="230" y1="115" x2="318" y2="185" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="120" x2="618" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="180" x2="618" y2="107" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <line x1="520" y1="200" x2="618" y2="152" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+  <!-- Summary -->
+  <rect x="130" y="290" width="590" height="80" rx="8" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="425" y="315" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Cost Reduction Strategies</text>
+  <text x="425" y="338" text-anchor="middle" font-size="11" fill="#666">Sampling: Reduce trace volume by collecting a percentage of requests</text>
+  <text x="425" y="355" text-anchor="middle" font-size="11" fill="#666">Aggregation: Pre-compute metrics to reduce raw data stored</text>
+  <text x="425" y="372" text-anchor="middle" font-size="11" fill="#666">Tiered Storage: Move old data from hot (fast) to cold (cheap) storage</text>
+</svg>

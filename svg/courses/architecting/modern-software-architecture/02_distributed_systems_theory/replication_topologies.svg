@@ -1,0 +1,39 @@
+<svg viewBox="0 0 750 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowhead-left" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto-start-reverse">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#28a745"/>
+    </marker>
+  </defs>
+  <text x="375" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Replication Topologies</text>
+  <!-- Single Leader subgraph -->
+  <rect x="25" y="45" width="310" height="250" rx="8" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="180" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a90e2">Single Leader</text>
+  <rect x="110" y="85" width="140" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="180" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Primary</text>
+  <line x1="145" y1="130" x2="100" y2="185" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="215" y1="130" x2="260" y2="185" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="40" y="190" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="100" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Replica 1</text>
+  <rect x="200" y="190" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="260" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Replica 2</text>
+  <!-- Multi Leader subgraph -->
+  <rect x="400" y="45" width="330" height="250" rx="8" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="565" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">Multi Leader</text>
+  <rect x="420" y="85" width="130" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="485" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Leader 1</text>
+  <rect x="590" y="85" width="130" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="655" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Leader 2</text>
+  <!-- Bidirectional arrow between leaders -->
+  <line x1="550" y1="103" x2="585" y2="103" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="590" y1="113" x2="555" y2="113" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Leader to replicas -->
+  <line x1="485" y1="130" x2="470" y2="185" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <line x1="655" y1="130" x2="655" y2="185" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="415" y="190" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="470" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Replica</text>
+  <rect x="600" y="190" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="655" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Replica</text>
+</svg>
