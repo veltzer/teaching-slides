@@ -47,8 +47,6 @@
 
 ## **Part 1: Understanding Key Differences**
 
-![part_1_understanding_key_differences](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_1_understanding_key_differences.svg)
-
 ---
 
 ## **Difference 1: `print` Statement vs. Function**
@@ -288,8 +286,6 @@ print >> sys.stderr, "Error!"
 
 ## **Part 2: Planning Your Port**
 
-![part_2_planning_your_port](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_2_planning_your_port.svg)
-
 ---
 
 ## **Step 1: Assess Your Codebase**
@@ -469,8 +465,6 @@ six.print_("Hello", "world", sep="-", end="!\n")
 ---
 
 ## **Part 4: The Porting Process - Step-by-Step**
-
-![part_4_the_porting_process_step_by_step](svg/courses/languages/python/advanced-python/17_porting_2_to_3/part_4_the_porting_process_step_by_step.svg)
 
 ---
 
