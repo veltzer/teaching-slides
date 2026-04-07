@@ -1,7 +1,6 @@
 # Monitoring and Observability
 ## Modern Architecture Course
 
-
 ---
 ## Agenda
 1. Introduction to Observability

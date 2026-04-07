@@ -1,6 +1,5 @@
 # Distributed Systems Theory
 
-
 ---
 ## What Is a Distributed System?
 

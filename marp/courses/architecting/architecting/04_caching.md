@@ -1,7 +1,6 @@
 # Caching Strategies and Content Delivery Networks
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda

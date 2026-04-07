@@ -1,6 +1,5 @@
 # Small Scale Design patterns
 
-
 ## Model-View-Controller (MVC) Pattern
 
 ---

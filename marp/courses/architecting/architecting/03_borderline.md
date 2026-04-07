@@ -1,6 +1,5 @@
 # Layered (n-tier) Pattern
 
-
 - Partitions the system into layers, each with a specific role and responsibility
 - Common layers: Presentation, Application, Business Logic, Data Access
 - Adjacent layers communicate via well-defined interfaces

@@ -3,6 +3,7 @@
 ## A Comprehensive Guide
 
 ![a_comprehensive_guide](/svg/courses/languages/python/advanced-python/17_porting_2_to_3/a_comprehensive_guide.svg)
+
 ---
 
 ## **Why Port to Python 3?**

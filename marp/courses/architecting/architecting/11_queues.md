@@ -1,7 +1,6 @@
 # Queues in Distributed Systems
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda

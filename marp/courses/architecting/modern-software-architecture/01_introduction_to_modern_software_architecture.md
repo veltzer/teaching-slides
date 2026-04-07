@@ -1,6 +1,5 @@
 # Introduction to Modern Software Architecture
 
-
 ---
 ## What Is Software Architecture?
 

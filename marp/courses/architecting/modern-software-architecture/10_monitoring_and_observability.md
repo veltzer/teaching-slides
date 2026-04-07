@@ -1,6 +1,5 @@
 # Monitoring and Observability
 
-
 ---
 ## Monitoring vs Observability
 

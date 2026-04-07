@@ -1,7 +1,6 @@
 # Data Lakes and Lakehouses
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda

@@ -1,6 +1,5 @@
 # Cloud-Native Principles
 
-
 ---
 ## What Does Cloud-Native Mean?
 

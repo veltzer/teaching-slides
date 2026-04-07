@@ -1,6 +1,5 @@
 # Communication Patterns
 
-
 ---
 ## Why Communication Patterns Matter
 

@@ -1,6 +1,5 @@
 # Client-Server Pattern
 
-
 ---
 ## Overview
 

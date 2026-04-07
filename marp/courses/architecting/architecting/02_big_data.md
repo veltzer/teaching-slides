@@ -1,7 +1,6 @@
 # Architecting Systems for Big Data
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda

@@ -1,7 +1,6 @@
 # Database Architecture and Design
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda

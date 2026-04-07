@@ -1,6 +1,5 @@
 # Domain-Driven Design
 
-
 ---
 ## What Is Domain-Driven Design?
 

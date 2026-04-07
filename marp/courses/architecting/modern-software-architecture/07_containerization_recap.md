@@ -1,6 +1,5 @@
 # Containerization Recap
 
-
 ---
 ## What Is a Container?
 

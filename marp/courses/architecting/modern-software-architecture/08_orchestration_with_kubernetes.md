@@ -1,6 +1,5 @@
 # Orchestration with Kubernetes
 
-
 ---
 ## What Is Container Orchestration?
 

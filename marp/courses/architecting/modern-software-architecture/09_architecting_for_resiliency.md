@@ -1,6 +1,5 @@
 # Architecting for Resiliency
 
-
 ---
 ## What Is Resiliency?
 

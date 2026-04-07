@@ -1,7 +1,6 @@
 # Message Queue Systems
 ## Kafka vs Traditional Queue Systems
 
-
 ---
 ## Traditional Kafka vs Streaming
 

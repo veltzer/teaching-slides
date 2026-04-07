@@ -1,6 +1,5 @@
 # DevOps and CI/CD for Architects
 
-
 ---
 ## What Is DevOps?
 

@@ -1,7 +1,6 @@
 # Workflow Orchestration and Data Pipelines
 ## Modern Architecture Course
 
-
 ---
 
 ## Agenda
