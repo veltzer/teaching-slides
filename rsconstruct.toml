@@ -16,8 +16,8 @@ args = ["scripts/check_code_labels.py", "-q"]
 extensions = [".md"]
 scan_dirs = ["marp"]
 
-[processor.script.mmd_to_svg]
-linter = "scripts/mmd_to_svg.py"
+[processor.generator]
+command = "scripts/mmd_to_svg.py"
 extensions = [".mmd"]
 scan_dirs = ["mermaid"]
 batch = true
