@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Complete Development Cycle
 
-![the_complete_development_cycle](../../../../svg/courses/ai/developing-using-ai/09_workflows/the_complete_development_cycle.svg)
+![the_complete_development_cycle](/svg/courses/ai/developing-using-ai/09_workflows/the_complete_development_cycle.svg)
 
 ---
 
@@ -89,7 +89,7 @@ AI creates initial files:
 
 ## Configuration Creation
 
-![configuration_creation](../../../../svg/courses/ai/developing-using-ai/09_workflows/configuration_creation.svg)
+![configuration_creation](/svg/courses/ai/developing-using-ai/09_workflows/configuration_creation.svg)
 
 ---
 
@@ -168,7 +168,7 @@ volumes:
 
 ## Feature Development: Requirement Analysis
 
-![feature_development_requirement_analysis](../../../../svg/courses/ai/developing-using-ai/09_workflows/feature_development_requirement_analysis.svg)
+![feature_development_requirement_analysis](/svg/courses/ai/developing-using-ai/09_workflows/feature_development_requirement_analysis.svg)
 
 ---
 
@@ -245,7 +245,7 @@ class NotificationFeature:
 
 Building features progressively:
 
-![incremental_development](../../../../svg/courses/ai/developing-using-ai/09_workflows/incremental_development.svg)
+![incremental_development](/svg/courses/ai/developing-using-ai/09_workflows/incremental_development.svg)
 
 ---
 
@@ -310,7 +310,7 @@ const reproducer = async () => {
 
 ## Root Cause Analysis
 
-![root_cause_analysis](../../../../svg/courses/ai/developing-using-ai/09_workflows/root_cause_analysis.svg)
+![root_cause_analysis](/svg/courses/ai/developing-using-ai/09_workflows/root_cause_analysis.svg)
 
 ---
 
@@ -382,7 +382,7 @@ describe('Regression: Rate Limit Handling', () => {
 
 Keeping docs current:
 
-![documentation_updates](../../../../svg/courses/ai/developing-using-ai/09_workflows/documentation_updates.svg)
+![documentation_updates](/svg/courses/ai/developing-using-ai/09_workflows/documentation_updates.svg)
 
 ---
 
@@ -455,7 +455,7 @@ fi
 
 ## Performance Improvements
 
-![performance_improvements](../../../../svg/courses/ai/developing-using-ai/09_workflows/performance_improvements.svg)
+![performance_improvements](/svg/courses/ai/developing-using-ai/09_workflows/performance_improvements.svg)
 
 ---
 
@@ -536,7 +536,7 @@ class RefactoringPlan:
 
 ## Release Preparation: Code Cleanup
 
-![release_preparation_code_cleanup](../../../../svg/courses/ai/developing-using-ai/09_workflows/release_preparation_code_cleanup.svg)
+![release_preparation_code_cleanup](/svg/courses/ai/developing-using-ai/09_workflows/release_preparation_code_cleanup.svg)
 
 ---
 
@@ -616,7 +616,7 @@ const releaseTests = {
 
 Real-time performance tracking:
 
-![performance_monitoring](../../../../svg/courses/ai/developing-using-ai/09_workflows/performance_monitoring.svg)
+![performance_monitoring](/svg/courses/ai/developing-using-ai/09_workflows/performance_monitoring.svg)
 
 ---
 
@@ -659,7 +659,7 @@ class IncidentResponder:
 
 Rapid production fixes:
 
-![hot_fix_workflow](../../../../svg/courses/ai/developing-using-ai/09_workflows/hot_fix_workflow.svg)
+![hot_fix_workflow](/svg/courses/ai/developing-using-ai/09_workflows/hot_fix_workflow.svg)
 
 ---
 
@@ -713,7 +713,7 @@ class FeedbackProcessor {
 
 Testing features in production:
 
-![a_b_testing_framework](../../../../svg/courses/ai/developing-using-ai/09_workflows/a_b_testing_framework.svg)
+![a_b_testing_framework](/svg/courses/ai/developing-using-ai/09_workflows/a_b_testing_framework.svg)
 
 ---
 
@@ -813,7 +813,7 @@ class MigrationPlanner:
 
 Managing API evolution:
 
-![api_versioning](../../../../svg/courses/ai/developing-using-ai/09_workflows/api_versioning.svg)
+![api_versioning](/svg/courses/ai/developing-using-ai/09_workflows/api_versioning.svg)
 
 ---
 
@@ -875,7 +875,7 @@ function analyzeLoadTest(results) {
 
 Managing multiple environments:
 
-![multi_environment_management](../../../../svg/courses/ai/developing-using-ai/09_workflows/multi_environment_management.svg)
+![multi_environment_management](/svg/courses/ai/developing-using-ai/09_workflows/multi_environment_management.svg)
 
 ---
 
@@ -979,7 +979,7 @@ class CostOptimizer:
 
 Business continuity planning:
 
-![disaster_recovery](../../../../svg/courses/ai/developing-using-ai/09_workflows/disaster_recovery.svg)
+![disaster_recovery](/svg/courses/ai/developing-using-ai/09_workflows/disaster_recovery.svg)
 
 ---
 
@@ -1034,7 +1034,7 @@ class ComplianceChecker {
 
 Measuring project success:
 
-![success_metrics](../../../../svg/courses/ai/developing-using-ai/09_workflows/success_metrics.svg)
+![success_metrics](/svg/courses/ai/developing-using-ai/09_workflows/success_metrics.svg)
 
 ---
 

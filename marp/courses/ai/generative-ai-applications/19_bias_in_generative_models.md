@@ -34,7 +34,7 @@ Types of bias in generative AI:
 
 ## Sources of Bias
 
-![sources_of_bias](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/sources_of_bias.svg)
+![sources_of_bias](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/sources_of_bias.svg)
 
 ---
 
@@ -79,13 +79,13 @@ def measure_gender_bias(model_fn, n_samples=100):
 
 ## Gender Bias Example Results
 
-![gender_bias_example_results](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/gender_bias_example_results.svg)
+![gender_bias_example_results](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/gender_bias_example_results.svg)
 
 ---
 
 ## Bias in Image Generation
 
-![bias_in_image_generation](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_in_image_generation.svg)
+![bias_in_image_generation](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_in_image_generation.svg)
 
 ---
 
@@ -130,7 +130,7 @@ def embedding_bias_test(embeddings_fn):
 
 ## Bias Mitigation Strategies
 
-![bias_mitigation_strategies](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_mitigation_strategies.svg)
+![bias_mitigation_strategies](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_mitigation_strategies.svg)
 
 ---
 
@@ -216,7 +216,7 @@ results = evaluator.test_counterfactual(
 
 ## Case Study: Bias in Real Systems
 
-![case_study_bias_in_real_systems](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/case_study_bias_in_real_systems.svg)
+![case_study_bias_in_real_systems](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/case_study_bias_in_real_systems.svg)
 
 ---
 
@@ -273,7 +273,7 @@ def safe_generate(prompt):
 
 ## Fairness Metrics
 
-![fairness_metrics](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/fairness_metrics.svg)
+![fairness_metrics](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/fairness_metrics.svg)
 
 ---
 
@@ -314,4 +314,4 @@ def test_language_quality(model_fn, prompts_by_language):
 
 ## Bias Audit Report Template
 
-![bias_audit_report_template](../../../../svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_audit_report_template.svg)
+![bias_audit_report_template](/svg/courses/ai/generative-ai-applications/19_bias_in_generative_models/bias_audit_report_template.svg)

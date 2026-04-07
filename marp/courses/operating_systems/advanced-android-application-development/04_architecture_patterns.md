@@ -5,7 +5,7 @@
 
 ## MVVM Architecture Overview
 
-![mvvm_architecture_overview](../../../../svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/mvvm_architecture_overview.svg)
+![mvvm_architecture_overview](/svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/mvvm_architecture_overview.svg)
 
 ---
 
@@ -50,7 +50,7 @@ public class UserViewModel extends AndroidViewModel {
 
 ## Clean Architecture Layers
 
-![clean_architecture_layers](../../../../svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/clean_architecture_layers.svg)
+![clean_architecture_layers](/svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/clean_architecture_layers.svg)
 
 ---
 
@@ -127,7 +127,7 @@ public class GetUserUseCase {
 
 ## Event Handling Pattern
 
-![event_handling_pattern](../../../../svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/event_handling_pattern.svg)
+![event_handling_pattern](/svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/event_handling_pattern.svg)
 
 ```java
 public class UserEvents {
@@ -232,7 +232,7 @@ public class UserViewModelTest {
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/best_practices.svg)
+![best_practices](/svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/best_practices.svg)
 
 ---
 

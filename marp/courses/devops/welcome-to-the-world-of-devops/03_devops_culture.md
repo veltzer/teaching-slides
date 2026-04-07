@@ -15,13 +15,13 @@ Understanding the cultural transformation required for DevOps success
 
 ## Cultural Transformation
 
-![cultural_transformation](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/cultural_transformation.svg)
+![cultural_transformation](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/cultural_transformation.svg)
 
 ---
 
 ## Learning from Failures
 
-![learning_from_failures](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/learning_from_failures.svg)
+![learning_from_failures](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/learning_from_failures.svg)
 
 ---
 
@@ -37,13 +37,13 @@ Understanding the cultural transformation required for DevOps success
 
 ## Metrics and KPIs
 
-![metrics_and_kpis](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/metrics_and_kpis.svg)
+![metrics_and_kpis](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/metrics_and_kpis.svg)
 
 ---
 
 ## Key Performance Indicators
 
-![key_performance_indicators](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/key_performance_indicators.svg)
+![key_performance_indicators](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/key_performance_indicators.svg)
 
 ---
 
@@ -59,7 +59,7 @@ Understanding the cultural transformation required for DevOps success
 
 ## Building Trust
 
-![building_trust](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/building_trust.svg)
+![building_trust](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/building_trust.svg)
 
 ---
 
@@ -75,7 +75,7 @@ Understanding the cultural transformation required for DevOps success
 
 ## Team Empowerment
 
-![team_empowerment](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/team_empowerment.svg)
+![team_empowerment](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/team_empowerment.svg)
 
 ---
 
@@ -91,7 +91,7 @@ Understanding the cultural transformation required for DevOps success
 
 ## Continuous Learning
 
-![continuous_learning](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/continuous_learning.svg)
+![continuous_learning](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/continuous_learning.svg)
 
 ---
 
@@ -107,7 +107,7 @@ Understanding the cultural transformation required for DevOps success
 
 ## Success Patterns
 
-![success_patterns](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/success_patterns.svg)
+![success_patterns](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/success_patterns.svg)
 
 ---
 
@@ -133,4 +133,4 @@ Understanding the cultural transformation required for DevOps success
 
 ## Cultural Evolution
 
-![cultural_evolution](../../../../svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/cultural_evolution.svg)
+![cultural_evolution](/svg/courses/devops/welcome-to-the-world-of-devops/03_devops_culture/cultural_evolution.svg)

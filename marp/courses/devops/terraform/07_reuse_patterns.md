@@ -12,7 +12,7 @@
 
 ## Reuse Strategies in Terraform
 
-![reuse_strategies_in_terraform](../../../../svg/courses/devops/terraform/07_reuse_patterns/reuse_strategies_in_terraform.svg)
+![reuse_strategies_in_terraform](/svg/courses/devops/terraform/07_reuse_patterns/reuse_strategies_in_terraform.svg)
 
 ---
 
@@ -440,7 +440,7 @@ module "database" {
 
 ## Module Composition Diagram
 
-![module_composition_diagram](../../../../svg/courses/devops/terraform/07_reuse_patterns/module_composition_diagram.svg)
+![module_composition_diagram](/svg/courses/devops/terraform/07_reuse_patterns/module_composition_diagram.svg)
 
 ---
 

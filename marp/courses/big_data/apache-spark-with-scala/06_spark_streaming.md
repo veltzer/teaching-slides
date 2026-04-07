@@ -12,13 +12,13 @@
 
 ## Streaming Architecture
 
-![streaming_architecture](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/streaming_architecture.svg)
+![streaming_architecture](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/streaming_architecture.svg)
 
 ---
 
 ## Processing Models
 
-![processing_models](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/processing_models.svg)
+![processing_models](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/processing_models.svg)
 
 ---
 
@@ -34,13 +34,13 @@ val ssc = new StreamingContext(conf, Seconds(1))
 
 ## Stream Sources
 
-![stream_sources](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/stream_sources.svg)
+![stream_sources](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/stream_sources.svg)
 
 ---
 
 ## Kafka Integration Flow
 
-![kafka_integration_flow](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/kafka_integration_flow.svg)
+![kafka_integration_flow](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/kafka_integration_flow.svg)
 
 ---
 
@@ -60,13 +60,13 @@ val kafkaParams = Map(
 
 ## Window Operations
 
-![window_operations](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/window_operations.svg)
+![window_operations](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/window_operations.svg)
 
 ---
 
 ## Windowing Types
 
-![windowing_types](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/windowing_types.svg)
+![windowing_types](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/windowing_types.svg)
 
 ---
 
@@ -88,7 +88,7 @@ val windowedStream = stream.window(
 
 ## Stateful Operations
 
-![stateful_operations](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/stateful_operations.svg)
+![stateful_operations](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/stateful_operations.svg)
 
 ---
 
@@ -104,7 +104,7 @@ val wordCounts = pairs.updateStateByKey(updateFunction)
 
 ## Checkpointing
 
-![checkpointing](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/checkpointing.svg)
+![checkpointing](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/checkpointing.svg)
 
 ---
 
@@ -123,7 +123,7 @@ def functionToCreateContext(): StreamingContext = {
 
 ## Output Operations
 
-![output_operations](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/output_operations.svg)
+![output_operations](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/output_operations.svg)
 
 ---
 
@@ -146,13 +146,13 @@ stream.foreachRDD { rdd =>
 
 ## Transformation Types
 
-![transformation_types](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/transformation_types.svg)
+![transformation_types](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/transformation_types.svg)
 
 ---
 
 ## Error Handling
 
-![error_handling](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/error_handling.svg)
+![error_handling](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/error_handling.svg)
 
 ---
 
@@ -175,13 +175,13 @@ stream.foreachRDD { rdd =>
 
 ## Performance Tuning
 
-![performance_tuning](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/performance_tuning.svg)
+![performance_tuning](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/performance_tuning.svg)
 
 ---
 
 ## Monitoring Architecture
 
-![monitoring_architecture](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/monitoring_architecture.svg)
+![monitoring_architecture](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/monitoring_architecture.svg)
 
 ---
 
@@ -197,19 +197,19 @@ stream.foreachRDD { rdd =>
 
 ## Backpressure
 
-![backpressure](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/backpressure.svg)
+![backpressure](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/backpressure.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/best_practices.svg)
+![best_practices](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/best_practices.svg)
 
 ---
 
 ## Production Deployment
 
-![production_deployment](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/production_deployment.svg)
+![production_deployment](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/production_deployment.svg)
 
 ---
 
@@ -225,4 +225,4 @@ stream.foreachRDD { rdd =>
 
 ## Advanced Features
 
-![advanced_features](../../../../svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/advanced_features.svg)
+![advanced_features](/svg/courses/big_data/apache-spark-with-scala/06_spark_streaming/advanced_features.svg)

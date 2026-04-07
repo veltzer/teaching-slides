@@ -59,7 +59,7 @@ Benefits and trade-offs of submodules:
 - **Tooling:** Not all tools handle submodules well
 - **Nested issues:** Problems compound with multiple levels
 
-![why_use_submodules](../../../../svg/courses/git/git2/16_submodules/why_use_submodules.svg)
+![why_use_submodules](/svg/courses/git/git2/16_submodules/why_use_submodules.svg)
 
 ---
 

@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The AI-Enhanced Development Cycle
 
-![the_ai_enhanced_development_cycle](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/the_ai_enhanced_development_cycle.svg)
+![the_ai_enhanced_development_cycle](/svg/courses/ai/developing-using-ai/05_coding_practices/the_ai_enhanced_development_cycle.svg)
 
 ---
 
@@ -104,7 +104,7 @@ def validate_password(password):
 
 ## Coverage Improvement with AI
 
-![coverage_improvement_with_ai](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/coverage_improvement_with_ai.svg)
+![coverage_improvement_with_ai](/svg/courses/ai/developing-using-ai/05_coding_practices/coverage_improvement_with_ai.svg)
 
 ---
 
@@ -219,7 +219,7 @@ const mockUserService = {
 
 ## Refactoring with AI Assistance
 
-![refactoring_with_ai_assistance](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/refactoring_with_ai_assistance.svg)
+![refactoring_with_ai_assistance](/svg/courses/ai/developing-using-ai/05_coding_practices/refactoring_with_ai_assistance.svg)
 
 ---
 
@@ -342,7 +342,7 @@ class NotificationService {
 
 ## Legacy Code Modernization
 
-![legacy_code_modernization](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/legacy_code_modernization.svg)
+![legacy_code_modernization](/svg/courses/ai/developing-using-ai/05_coding_practices/legacy_code_modernization.svg)
 
 ---
 
@@ -430,7 +430,7 @@ def calculate_price(user, product, quantity):
 
 ## Code Review Enhancement
 
-![code_review_enhancement](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/code_review_enhancement.svg)
+![code_review_enhancement](/svg/courses/ai/developing-using-ai/05_coding_practices/code_review_enhancement.svg)
 
 ---
 
@@ -586,7 +586,7 @@ class UserService:
 
 ## Security Scanning
 
-![security_scanning](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/security_scanning.svg)
+![security_scanning](/svg/courses/ai/developing-using-ai/05_coding_practices/security_scanning.svg)
 
 ---
 
@@ -800,7 +800,7 @@ Structured API docs generation:
 
 ## Code Comments Best Practices
 
-![code_comments_best_practices](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/code_comments_best_practices.svg)
+![code_comments_best_practices](/svg/courses/ai/developing-using-ai/05_coding_practices/code_comments_best_practices.svg)
 
 ---
 
@@ -899,7 +899,7 @@ app.listen(3000, () => {
 
 ## Debugging Workflows with AI
 
-![debugging_workflows_with_ai](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/debugging_workflows_with_ai.svg)
+![debugging_workflows_with_ai](/svg/courses/ai/developing-using-ai/05_coding_practices/debugging_workflows_with_ai.svg)
 
 ---
 
@@ -1063,7 +1063,7 @@ hypotheses = [
 
 AI provides multiple approaches:
 
-![solution_exploration](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/solution_exploration.svg)
+![solution_exploration](/svg/courses/ai/developing-using-ai/05_coding_practices/solution_exploration.svg)
 
 ---
 
@@ -1108,7 +1108,7 @@ def test_bug_fix_validation():
 
 ## Debugging Best Practices
 
-![debugging_best_practices](../../../../svg/courses/ai/developing-using-ai/05_coding_practices/debugging_best_practices.svg)
+![debugging_best_practices](/svg/courses/ai/developing-using-ai/05_coding_practices/debugging_best_practices.svg)
 
 ---
 

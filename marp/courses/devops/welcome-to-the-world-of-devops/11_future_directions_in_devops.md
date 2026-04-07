@@ -5,7 +5,7 @@ Emerging trends and methodologies
 
 ## Integration with Agile
 
-![integration_with_agile](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/integration_with_agile.svg)
+![integration_with_agile](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/integration_with_agile.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Emerging trends and methodologies
 
 ## AI Integration
 
-![ai_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/ai_integration.svg)
+![ai_integration](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/ai_integration.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Emerging trends and methodologies
 
 ## Automated Operations
 
-![automated_operations](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/automated_operations.svg)
+![automated_operations](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/automated_operations.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Emerging trends and methodologies
 
 ## Compliance Integration
 
-![compliance_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/compliance_integration.svg)
+![compliance_integration](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/compliance_integration.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Emerging trends and methodologies
 
 ## Quantum Computing
 
-![quantum_computing](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/quantum_computing.svg)
+![quantum_computing](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/quantum_computing.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Emerging trends and methodologies
 
 ## Cross-Platform DevOps
 
-![cross_platform_devops](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/cross_platform_devops.svg)
+![cross_platform_devops](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/cross_platform_devops.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Emerging trends and methodologies
 
 ## Future Skills
 
-![future_skills](../../../../svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/future_skills.svg)
+![future_skills](/svg/courses/devops/welcome-to-the-world-of-devops/11_future_directions_in_devops/future_skills.svg)
 
 ---
 

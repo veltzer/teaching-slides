@@ -1,7 +1,7 @@
 # Advanced Git Topics
 ---
 ## Git Internals
-![git_internals](../../../../svg/courses/git/git/10_advanced_git/git_internals.svg)
+![git_internals](/svg/courses/git/git/10_advanced_git/git_internals.svg)
 
 ---
 ## Object Store Structure
@@ -17,7 +17,7 @@
 - Security implications
 ---
 ## Core Ideas
-![core_ideas](../../../../svg/courses/git/git/10_advanced_git/core_ideas.svg)
+![core_ideas](/svg/courses/git/git/10_advanced_git/core_ideas.svg)
 
 ---
 ## SHA Uniqueness
@@ -52,7 +52,7 @@ git worktree remove path
 - Custom scripts
 ---
 ## Hook Types
-![hook_types](../../../../svg/courses/git/git/10_advanced_git/hook_types.svg)
+![hook_types](/svg/courses/git/git/10_advanced_git/hook_types.svg)
 
 ---
 ## Custom Hook Development
@@ -92,7 +92,7 @@ git worktree remove path
 - Special refs
 ---
 ## Ref Management
-![ref_management](../../../../svg/courses/git/git/10_advanced_git/ref_management.svg)
+![ref_management](/svg/courses/git/git/10_advanced_git/ref_management.svg)
 
 ---
 ## Git Namespaces

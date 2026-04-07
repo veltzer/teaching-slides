@@ -5,7 +5,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Cultural Barriers
 
-![cultural_barriers](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/cultural_barriers.svg)
+![cultural_barriers](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/cultural_barriers.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Technical Debt
 
-![technical_debt](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/technical_debt.svg)
+![technical_debt](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/technical_debt.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Tool Complexity
 
-![tool_complexity](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/tool_complexity.svg)
+![tool_complexity](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/tool_complexity.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Scaling Challenges
 
-![scaling_challenges](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/scaling_challenges.svg)
+![scaling_challenges](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/scaling_challenges.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Security Integration
 
-![security_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/security_integration.svg)
+![security_integration](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/security_integration.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Measurement Issues
 
-![measurement_issues](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/measurement_issues.svg)
+![measurement_issues](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/measurement_issues.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Common obstacles and solutions in DevOps transformation
 
 ## Solution Strategies
 
-![solution_strategies](../../../../svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/solution_strategies.svg)
+![solution_strategies](/svg/courses/devops/welcome-to-the-world-of-devops/12_challenges_in_devops_adoption/solution_strategies.svg)
 
 ---
 

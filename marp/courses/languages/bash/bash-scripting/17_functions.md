@@ -312,4 +312,4 @@ with_timing find /usr -name "*.so" -type f > /dev/null
 ```
 ---
 ## Functions vs Scripts vs Aliases
-![functions_vs_scripts_vs_aliases](../../../../../svg/courses/languages/bash/bash-scripting/17_functions/functions_vs_scripts_vs_aliases.svg)
+![functions_vs_scripts_vs_aliases](/svg/courses/languages/bash/bash-scripting/17_functions/functions_vs_scripts_vs_aliases.svg)

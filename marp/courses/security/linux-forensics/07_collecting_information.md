@@ -10,7 +10,7 @@
 
 ## Order of Volatility
 
-![order_of_volatility](../../../../svg/courses/security/linux-forensics/07_collecting_information/order_of_volatility.svg)
+![order_of_volatility](/svg/courses/security/linux-forensics/07_collecting_information/order_of_volatility.svg)
 
 - Collect volatile data first - it disappears on power loss
 - RFC 3227 defines the order of volatility

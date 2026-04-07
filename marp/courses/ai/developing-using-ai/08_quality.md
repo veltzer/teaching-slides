@@ -17,7 +17,7 @@ This chapter covers:
 
 ## The Quality Paradox
 
-![the_quality_paradox](../../../../svg/courses/ai/developing-using-ai/08_quality/the_quality_paradox.svg)
+![the_quality_paradox](/svg/courses/ai/developing-using-ai/08_quality/the_quality_paradox.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Always run linters on AI output!
 
 ## Naming Conventions
 
-![naming_conventions](../../../../svg/courses/ai/developing-using-ai/08_quality/naming_conventions.svg)
+![naming_conventions](/svg/courses/ai/developing-using-ai/08_quality/naming_conventions.svg)
 
 ---
 
@@ -111,7 +111,7 @@ def process(data):
 
 ## Duplication Removal
 
-![duplication_removal](../../../../svg/courses/ai/developing-using-ai/08_quality/duplication_removal.svg)
+![duplication_removal](/svg/courses/ai/developing-using-ai/08_quality/duplication_removal.svg)
 
 ---
 
@@ -171,7 +171,7 @@ class UserSchema(Schema):
 
 ## Input Validation
 
-![input_validation](../../../../svg/courses/ai/developing-using-ai/08_quality/input_validation.svg)
+![input_validation](/svg/courses/ai/developing-using-ai/08_quality/input_validation.svg)
 
 ---
 
@@ -240,7 +240,7 @@ user.ssn = encryption.encrypt_pii(ssn)
 
 ## Performance Optimization: Bottleneck Identification
 
-![performance_optimization_bottleneck_identification](../../../../svg/courses/ai/developing-using-ai/08_quality/performance_optimization_bottleneck_identification.svg)
+![performance_optimization_bottleneck_identification](/svg/courses/ai/developing-using-ai/08_quality/performance_optimization_bottleneck_identification.svg)
 
 ---
 
@@ -300,7 +300,7 @@ stream.on('error', (err) => {
 
 ## Caching Strategies
 
-![caching_strategies](../../../../svg/courses/ai/developing-using-ai/08_quality/caching_strategies.svg)
+![caching_strategies](/svg/courses/ai/developing-using-ai/08_quality/caching_strategies.svg)
 
 ---
 
@@ -361,7 +361,7 @@ def calculate_total_price(
 
 ## Documentation Standards
 
-![documentation_standards](../../../../svg/courses/ai/developing-using-ai/08_quality/documentation_standards.svg)
+![documentation_standards](/svg/courses/ai/developing-using-ai/08_quality/documentation_standards.svg)
 
 ---
 
@@ -425,7 +425,7 @@ Regular updates prevent security issues
 
 ## Version Compatibility
 
-![version_compatibility](../../../../svg/courses/ai/developing-using-ai/08_quality/version_compatibility.svg)
+![version_compatibility](/svg/courses/ai/developing-using-ai/08_quality/version_compatibility.svg)
 
 ---
 
@@ -465,7 +465,7 @@ interface TeamStandards {
 
 Code review workflow:
 
-![review_processes](../../../../svg/courses/ai/developing-using-ai/08_quality/review_processes.svg)
+![review_processes](/svg/courses/ai/developing-using-ai/08_quality/review_processes.svg)
 
 ---
 
@@ -501,7 +501,7 @@ class UserAuth:
 
 Ensuring correct pattern usage:
 
-![design_pattern_implementation](../../../../svg/courses/ai/developing-using-ai/08_quality/design_pattern_implementation.svg)
+![design_pattern_implementation](/svg/courses/ai/developing-using-ai/08_quality/design_pattern_implementation.svg)
 
 ---
 
@@ -577,7 +577,7 @@ const c = await getMoreData(b);
 
 ## Code Smell Recognition
 
-![code_smell_recognition](../../../../svg/courses/ai/developing-using-ai/08_quality/code_smell_recognition.svg)
+![code_smell_recognition](/svg/courses/ai/developing-using-ai/08_quality/code_smell_recognition.svg)
 
 ---
 
@@ -621,7 +621,7 @@ class QualityMetrics:
 
 Continuous learning from metrics:
 
-![feedback_loops](../../../../svg/courses/ai/developing-using-ai/08_quality/feedback_loops.svg)
+![feedback_loops](/svg/courses/ai/developing-using-ai/08_quality/feedback_loops.svg)
 
 ---
 
@@ -659,7 +659,7 @@ automation:
 
 Adapting standards over time:
 
-![best_practice_evolution](../../../../svg/courses/ai/developing-using-ai/08_quality/best_practice_evolution.svg)
+![best_practice_evolution](/svg/courses/ai/developing-using-ai/08_quality/best_practice_evolution.svg)
 
 ---
 
@@ -732,7 +732,7 @@ def monitor_performance(threshold_ms=100):
 
 ## Tool Integration
 
-![tool_integration](../../../../svg/courses/ai/developing-using-ai/08_quality/tool_integration.svg)
+![tool_integration](/svg/courses/ai/developing-using-ai/08_quality/tool_integration.svg)
 
 ---
 
@@ -800,7 +800,7 @@ quality_gates:
 
 Comprehensive edge case coverage:
 
-![risk_management_edge_case_handling](../../../../svg/courses/ai/developing-using-ai/08_quality/risk_management_edge_case_handling.svg)
+![risk_management_edge_case_handling](/svg/courses/ai/developing-using-ai/08_quality/risk_management_edge_case_handling.svg)
 
 ---
 
@@ -884,7 +884,7 @@ class TestSecurity:
 
 ## Performance Testing
 
-![performance_testing](../../../../svg/courses/ai/developing-using-ai/08_quality/performance_testing.svg)
+![performance_testing](/svg/courses/ai/developing-using-ai/08_quality/performance_testing.svg)
 
 ---
 
@@ -922,7 +922,7 @@ Maintaining documentation standards:
 
 Spreading best practices:
 
-![knowledge_sharing](../../../../svg/courses/ai/developing-using-ai/08_quality/knowledge_sharing.svg)
+![knowledge_sharing](/svg/courses/ai/developing-using-ai/08_quality/knowledge_sharing.svg)
 
 ---
 
@@ -996,4 +996,4 @@ quality_culture:
 
 ## Technical Debt Management
 
-![technical_debt_management](../../../../svg/courses/ai/developing-using-ai/08_quality/technical_debt_management.svg)
+![technical_debt_management](/svg/courses/ai/developing-using-ai/08_quality/technical_debt_management.svg)

@@ -4,7 +4,7 @@
 
 ## Dockerfile Language Overview
 
-![dockerfile_language_overview](../../../../svg/courses/devops/docker-for-developers/05_crafting/dockerfile_language_overview.svg)
+![dockerfile_language_overview](/svg/courses/devops/docker-for-developers/05_crafting/dockerfile_language_overview.svg)
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## Environment and Build Configuration
 
-![environment_and_build_configuration](../../../../svg/courses/devops/docker-for-developers/05_crafting/environment_and_build_configuration.svg)
+![environment_and_build_configuration](/svg/courses/devops/docker-for-developers/05_crafting/environment_and_build_configuration.svg)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ## Execution Control
 
-![execution_control](../../../../svg/courses/devops/docker-for-developers/05_crafting/execution_control.svg)
+![execution_control](/svg/courses/devops/docker-for-developers/05_crafting/execution_control.svg)
 
 ---
 
@@ -57,13 +57,13 @@
 
 ## Instruction Order and Caching
 
-![instruction_order_and_caching](../../../../svg/courses/devops/docker-for-developers/05_crafting/instruction_order_and_caching.svg)
+![instruction_order_and_caching](/svg/courses/devops/docker-for-developers/05_crafting/instruction_order_and_caching.svg)
 
 ---
 
 ## Build Arguments and Variables
 
-![build_arguments_and_variables](../../../../svg/courses/devops/docker-for-developers/05_crafting/build_arguments_and_variables.svg)
+![build_arguments_and_variables](/svg/courses/devops/docker-for-developers/05_crafting/build_arguments_and_variables.svg)
 
 ---
 
@@ -98,7 +98,7 @@ RUN apt-get update && \
 
 ## Environment Best Practices
 
-![environment_best_practices](../../../../svg/courses/devops/docker-for-developers/05_crafting/environment_best_practices.svg)
+![environment_best_practices](/svg/courses/devops/docker-for-developers/05_crafting/environment_best_practices.svg)
 
 ---
 
@@ -114,7 +114,7 @@ RUN apt-get update && \
 
 ## Labels and Metadata
 
-![labels_and_metadata](../../../../svg/courses/devops/docker-for-developers/05_crafting/labels_and_metadata.svg)
+![labels_and_metadata](/svg/courses/devops/docker-for-developers/05_crafting/labels_and_metadata.svg)
 
 ---
 

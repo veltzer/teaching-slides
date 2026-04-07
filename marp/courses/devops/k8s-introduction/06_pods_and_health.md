@@ -14,7 +14,7 @@
 
 ## Pod Lifecycle
 
-![pod_lifecycle](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/pod_lifecycle.svg)
+![pod_lifecycle](/svg/courses/devops/k8s-introduction/06_pods_and_health/pod_lifecycle.svg)
 
 ---
 
@@ -47,7 +47,7 @@ status:
 
 ## Container States
 
-![container_states](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/container_states.svg)
+![container_states](/svg/courses/devops/k8s-introduction/06_pods_and_health/container_states.svg)
 
 ---
 
@@ -90,7 +90,7 @@ spec:
 
 ## Init Container Flow
 
-![init_container_flow](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/init_container_flow.svg)
+![init_container_flow](/svg/courses/devops/k8s-introduction/06_pods_and_health/init_container_flow.svg)
 
 ---
 
@@ -135,7 +135,7 @@ spec:
 
 ## Liveness Probe Types
 
-![liveness_probe_types](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/liveness_probe_types.svg)
+![liveness_probe_types](/svg/courses/devops/k8s-introduction/06_pods_and_health/liveness_probe_types.svg)
 
 ---
 
@@ -208,7 +208,7 @@ spec:
 
 ## Readiness vs Liveness
 
-![readiness_vs_liveness](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/readiness_vs_liveness.svg)
+![readiness_vs_liveness](/svg/courses/devops/k8s-introduction/06_pods_and_health/readiness_vs_liveness.svg)
 
 ---
 
@@ -256,7 +256,7 @@ probeConfig:
 
 ## Probe Timeline
 
-![probe_timeline](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/probe_timeline.svg)
+![probe_timeline](/svg/courses/devops/k8s-introduction/06_pods_and_health/probe_timeline.svg)
 
 ---
 
@@ -301,7 +301,7 @@ spec:
 
 ## PDB Protection
 
-![pdb_protection](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/pdb_protection.svg)
+![pdb_protection](/svg/courses/devops/k8s-introduction/06_pods_and_health/pdb_protection.svg)
 
 ---
 
@@ -349,7 +349,7 @@ spec:
 
 ## Hook Execution
 
-![hook_execution](../../../../svg/courses/devops/k8s-introduction/06_pods_and_health/hook_execution.svg)
+![hook_execution](/svg/courses/devops/k8s-introduction/06_pods_and_health/hook_execution.svg)
 
 ---
 

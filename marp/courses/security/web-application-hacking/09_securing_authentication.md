@@ -6,7 +6,7 @@
 
 ## Defense Strategy Overview
 
-![defense_strategy_overview](../../../../svg/courses/security/web-application-hacking/09_securing_authentication/defense_strategy_overview.svg)
+![defense_strategy_overview](/svg/courses/security/web-application-hacking/09_securing_authentication/defense_strategy_overview.svg)
 
 ---
 

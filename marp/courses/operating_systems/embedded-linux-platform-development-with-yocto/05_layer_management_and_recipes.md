@@ -4,7 +4,7 @@
 
 ## Layer Management Overview
 
-![layer_management_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_management_overview.svg)
+![layer_management_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_management_overview.svg)
 
 ---
 
@@ -53,7 +53,7 @@ LAYERSERIES_COMPAT_custom-layer = "kirkstone langdale"
 
 ## Layer Priority System
 
-![layer_priority_system](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_priority_system.svg)
+![layer_priority_system](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/layer_priority_system.svg)
 
 ---
 
@@ -131,7 +131,7 @@ bitbake-layers layerindex-show-depends meta-qt5
 
 ## Recipe Organization
 
-![recipe_organization](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/recipe_organization.svg)
+![recipe_organization](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/recipe_organization.svg)
 
 ---
 
@@ -264,7 +264,7 @@ SRC_URI += "file://custom-config.txt"
 
 ## Patching Workflow
 
-![patching_workflow](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/patching_workflow.svg)
+![patching_workflow](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/patching_workflow.svg)
 
 ---
 
@@ -416,7 +416,7 @@ do_compile_append() {
 
 ## Task Dependencies
 
-![task_dependencies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/task_dependencies.svg)
+![task_dependencies](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/05_layer_management_and_recipes/task_dependencies.svg)
 
 ---
 

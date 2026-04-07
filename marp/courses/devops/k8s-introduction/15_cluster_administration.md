@@ -14,7 +14,7 @@
 
 ## Cluster Architecture Review
 
-![cluster_architecture_review](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/cluster_architecture_review.svg)
+![cluster_architecture_review](/svg/courses/devops/k8s-introduction/15_cluster_administration/cluster_architecture_review.svg)
 
 ---
 
@@ -192,7 +192,7 @@ kubectl uncordon node-1
 
 ## Monitoring Setup
 
-![monitoring_setup](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/monitoring_setup.svg)
+![monitoring_setup](/svg/courses/devops/k8s-introduction/15_cluster_administration/monitoring_setup.svg)
 
 ---
 
@@ -385,7 +385,7 @@ sysctl -w net.bridge.bridge-nf-call-iptables=1
 
 ## High Availability Setup
 
-![high_availability_setup](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/high_availability_setup.svg)
+![high_availability_setup](/svg/courses/devops/k8s-introduction/15_cluster_administration/high_availability_setup.svg)
 
 ---
 
@@ -678,7 +678,7 @@ func (r *DatabaseReconciler) Reconcile(ctx context.Context, req ctrl.Request) (c
 
 ## Service Mesh Overview
 
-![service_mesh_overview](../../../../svg/courses/devops/k8s-introduction/15_cluster_administration/service_mesh_overview.svg)
+![service_mesh_overview](/svg/courses/devops/k8s-introduction/15_cluster_administration/service_mesh_overview.svg)
 
 ---
 

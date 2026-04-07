@@ -39,7 +39,7 @@ Timeline of Generative AI
 
 ## Categories of Generative Models
 
-![categories_of_generative_models](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/categories_of_generative_models.svg)
+![categories_of_generative_models](/svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/categories_of_generative_models.svg)
 
 Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
@@ -49,7 +49,7 @@ Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 Published in 2017: "Attention Is All You Need"
 
-![the_transformer_foundation_of_modern_genai](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_transformer_foundation_of_modern_genai.svg)
+![the_transformer_foundation_of_modern_genai](/svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_transformer_foundation_of_modern_genai.svg)
 
 ---
 
@@ -57,7 +57,7 @@ Published in 2017: "Attention Is All You Need"
 
 Every token asks: "Which other tokens should I pay attention to?"
 
-![self_attention_mechanism_intuition](../../../../svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/self_attention_mechanism_intuition.svg)
+![self_attention_mechanism_intuition](/svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/self_attention_mechanism_intuition.svg)
 
 ---
 

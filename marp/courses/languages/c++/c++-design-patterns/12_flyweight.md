@@ -28,7 +28,7 @@ class Tree {
 
 ## Flyweight Structure
 
-![flyweight_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/12_flyweight/flyweight_structure.svg)
+![flyweight_structure](/svg/courses/languages/c++/c++-design-patterns/12_flyweight/flyweight_structure.svg)
 
 ---
 

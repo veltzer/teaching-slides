@@ -5,7 +5,7 @@
 
 ## Why Async
 
-![why_async](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/why_async.svg)
+![why_async](/svg/courses/languages/rust/rust-programming/10_async_programming/why_async.svg)
 
 ---
 
@@ -310,7 +310,7 @@ async fn parallel_tasks() {
 
 ## Resource Management
 
-![resource_management](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/resource_management.svg)
+![resource_management](/svg/courses/languages/rust/rust-programming/10_async_programming/resource_management.svg)
 
 ---
 
@@ -328,7 +328,7 @@ async fn test_async_function() {
 
 ## Best Practices
 
-![best_practices](../../../../../svg/courses/languages/rust/rust-programming/10_async_programming/best_practices.svg)
+![best_practices](/svg/courses/languages/rust/rust-programming/10_async_programming/best_practices.svg)
 
 ---
 

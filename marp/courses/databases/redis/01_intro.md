@@ -26,7 +26,7 @@
 
 ## Where Redis Fits in the Architecture
 
-![where_redis_fits_in_the_architecture](../../../../svg/courses/databases/redis/01_intro/where_redis_fits_in_the_architecture.svg)
+![where_redis_fits_in_the_architecture](/svg/courses/databases/redis/01_intro/where_redis_fits_in_the_architecture.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## NoSQL Landscape
 
-![nosql_landscape](../../../../svg/courses/databases/redis/01_intro/nosql_landscape.svg)
+![nosql_landscape](/svg/courses/databases/redis/01_intro/nosql_landscape.svg)
 
 ---
 
@@ -63,7 +63,7 @@
 
 ## Redis Architecture
 
-![redis_architecture](../../../../svg/courses/databases/redis/01_intro/redis_architecture.svg)
+![redis_architecture](/svg/courses/databases/redis/01_intro/redis_architecture.svg)
 
 ---
 
@@ -125,7 +125,7 @@ Key configurations:
 
 ## Redis Data Types Overview
 
-![redis_data_types_overview](../../../../svg/courses/databases/redis/01_intro/redis_data_types_overview.svg)
+![redis_data_types_overview](/svg/courses/databases/redis/01_intro/redis_data_types_overview.svg)
 
 ---
 
@@ -334,13 +334,13 @@ Best practices:
 - Avoid very long keys
 - Be consistent
 
-![key_naming_conventions](../../../../svg/courses/databases/redis/01_intro/key_naming_conventions.svg)
+![key_naming_conventions](/svg/courses/databases/redis/01_intro/key_naming_conventions.svg)
 
 ---
 
 ## Redis Persistence
 
-![redis_persistence](../../../../svg/courses/databases/redis/01_intro/redis_persistence.svg)
+![redis_persistence](/svg/courses/databases/redis/01_intro/redis_persistence.svg)
 
 1. **RDB (Redis Database)**: Point-in-time snapshots
 1. **AOF (Append Only File)**: Logs every write operation
@@ -362,19 +362,19 @@ Security considerations:
 
 ## Redis in a Multi-Application Environment
 
-![redis_in_a_multi_application_environment](../../../../svg/courses/databases/redis/01_intro/redis_in_a_multi_application_environment.svg)
+![redis_in_a_multi_application_environment](/svg/courses/databases/redis/01_intro/redis_in_a_multi_application_environment.svg)
 
 ---
 
 ## Basic Redis Use Case: Caching
 
-![basic_redis_use_case_caching](../../../../svg/courses/databases/redis/01_intro/basic_redis_use_case_caching.svg)
+![basic_redis_use_case_caching](/svg/courses/databases/redis/01_intro/basic_redis_use_case_caching.svg)
 
 ---
 
 ## Basic Redis Use Case: Rate Limiting
 
-![basic_redis_use_case_rate_limiting](../../../../svg/courses/databases/redis/01_intro/basic_redis_use_case_rate_limiting.svg)
+![basic_redis_use_case_rate_limiting](/svg/courses/databases/redis/01_intro/basic_redis_use_case_rate_limiting.svg)
 
 ---
 

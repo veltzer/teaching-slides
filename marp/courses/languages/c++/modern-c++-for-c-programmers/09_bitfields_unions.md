@@ -40,7 +40,7 @@ struct StatusFlags {
 
 ## Bitfield Memory Layout
 
-![bitfield_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitfield_memory_layout.svg)
+![bitfield_memory_layout](/svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitfield_memory_layout.svg)
 
 ---
 
@@ -199,7 +199,7 @@ void useModernVariant() {
 
 ## Endianness Issues
 
-![endianness_issues](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/endianness_issues.svg)
+![endianness_issues](/svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/endianness_issues.svg)
 
 ---
 
@@ -514,7 +514,7 @@ public:
 
 ## Bitwise Operations Reference
 
-![bitwise_operations_reference](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitwise_operations_reference.svg)
+![bitwise_operations_reference](/svg/courses/languages/c++/modern-c++-for-c-programmers/09_bitfields_unions/bitwise_operations_reference.svg)
 
 ---
 

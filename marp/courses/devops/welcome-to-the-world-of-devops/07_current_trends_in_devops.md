@@ -5,7 +5,7 @@ Modern approaches and emerging patterns
 
 ## DevSecOps Integration
 
-![devsecops_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/devsecops_integration.svg)
+![devsecops_integration](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/devsecops_integration.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Modern approaches and emerging patterns
 
 ## GitOps Principles
 
-![gitops_principles](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/gitops_principles.svg)
+![gitops_principles](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/gitops_principles.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Modern approaches and emerging patterns
 
 ## AIOps Evolution
 
-![aiops_evolution](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/aiops_evolution.svg)
+![aiops_evolution](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/aiops_evolution.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Modern approaches and emerging patterns
 
 ## Machine Learning Integration
 
-![machine_learning_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/machine_learning_integration.svg)
+![machine_learning_integration](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/machine_learning_integration.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Modern approaches and emerging patterns
 
 ## Security Automation
 
-![security_automation](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/security_automation.svg)
+![security_automation](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/security_automation.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Modern approaches and emerging patterns
 
 ## Container Security
 
-![container_security](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/container_security.svg)
+![container_security](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/container_security.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Modern approaches and emerging patterns
 
 ## Cloud Native Security
 
-![cloud_native_security](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/cloud_native_security.svg)
+![cloud_native_security](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/cloud_native_security.svg)
 
 ---
 
@@ -117,4 +117,4 @@ Modern approaches and emerging patterns
 
 ## Future Directions
 
-![future_directions](../../../../svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/future_directions.svg)
+![future_directions](/svg/courses/devops/welcome-to-the-world-of-devops/07_current_trends_in_devops/future_directions.svg)

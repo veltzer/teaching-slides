@@ -7,7 +7,7 @@
 * Graph operators
 ---
 ## Graph Abstractions
-![graph_abstractions](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_abstractions.svg)
+![graph_abstractions](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_abstractions.svg)
 
 ---
 ## Basic Components
@@ -25,7 +25,7 @@ graph = GraphFrame(vertices, edges)
 ```
 ---
 ## Graph Construction
-![graph_construction](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_construction.svg)
+![graph_construction](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_construction.svg)
 
 ---
 ## Property Graphs
@@ -43,7 +43,7 @@ vertices_with_props = vertices.map(add_property)
 ```
 ---
 ## Basic Operations
-![basic_operations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/basic_operations.svg)
+![basic_operations](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/basic_operations.svg)
 
 ---
 ## Graph Transformations
@@ -60,7 +60,7 @@ def update_vertex(id, attr, message):
 ```
 ---
 ## Edge Operations
-![edge_operations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/edge_operations.svg)
+![edge_operations](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/edge_operations.svg)
 
 ---
 ## Triplet Views
@@ -86,7 +86,7 @@ results = g.pageRank(
 ```
 ---
 ## Connected Components
-![connected_components](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/connected_components.svg)
+![connected_components](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/connected_components.svg)
 
 ---
 ## Shortest Paths
@@ -98,7 +98,7 @@ paths = g.shortestPaths(
 ```
 ---
 ## Triangle Counting
-![triangle_counting](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/triangle_counting.svg)
+![triangle_counting](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/triangle_counting.svg)
 
 ---
 ## Graph Algorithms API
@@ -115,7 +115,7 @@ def custom_graph_algo(graph):
 ```
 ---
 ## Pregel API
-![pregel_api](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pregel_api.svg)
+![pregel_api](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pregel_api.svg)
 
 ---
 ## Message Passing
@@ -133,7 +133,7 @@ for i in range(max_iterations):
 ```
 ---
 ## Graph Partitioning
-![graph_partitioning](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_partitioning.svg)
+![graph_partitioning](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_partitioning.svg)
 
 ---
 ## Partition Strategies
@@ -152,7 +152,7 @@ graph = graph.partitionBy(
 ```
 ---
 ## Memory Management
-![memory_management](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/memory_management.svg)
+![memory_management](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/memory_management.svg)
 
 ---
 ## Caching Strategies
@@ -170,7 +170,7 @@ subgraph = graph.filter(
 ```
 ---
 ## Graph Metrics
-![graph_metrics](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_metrics.svg)
+![graph_metrics](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_metrics.svg)
 
 ---
 ## Graph Analytics
@@ -187,7 +187,7 @@ def export_graph(graph, path):
 ```
 ---
 ## Graph Formats
-![graph_formats](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_formats.svg)
+![graph_formats](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_formats.svg)
 
 ---
 ## Data Integration
@@ -206,7 +206,7 @@ def transform_graph(data):
 ```
 ---
 ## Security Considerations
-![security_considerations](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/security_considerations.svg)
+![security_considerations](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/security_considerations.svg)
 
 ---
 ## Production Deployment
@@ -225,7 +225,7 @@ def track_metrics(graph):
 ```
 ---
 ## Error Handling
-![error_handling](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/error_handling.svg)
+![error_handling](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/error_handling.svg)
 
 ---
 ## Best Practices
@@ -243,7 +243,7 @@ def process_graph_pattern(graph):
 ```
 ---
 ## Advanced Features
-![advanced_features](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/advanced_features.svg)
+![advanced_features](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/advanced_features.svg)
 
 ---
 ## Integration Patterns
@@ -261,7 +261,7 @@ def analyze_performance(graph):
 ```
 ---
 ## Optimization Techniques
-![optimization_techniques](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/optimization_techniques.svg)
+![optimization_techniques](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/optimization_techniques.svg)
 
 ---
 ## Future Developments
@@ -280,7 +280,7 @@ def social_network_analysis(graph):
 ```
 ---
 ## Production Checklist
-![production_checklist](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/production_checklist.svg)
+![production_checklist](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/production_checklist.svg)
 
 ---
 ## Additional Resources
@@ -352,7 +352,7 @@ degrees.join(vertices, "id").select(
 
 ## Graph Structure Visualization
 
-![graph_structure_visualization](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_structure_visualization.svg)
+![graph_structure_visualization](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/graph_structure_visualization.svg)
 
 ---
 
@@ -398,7 +398,7 @@ communities.select("id", "name", "department", "label") \
 
 ## PageRank Algorithm Explanation
 
-![pagerank_algorithm_explanation](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pagerank_algorithm_explanation.svg)
+![pagerank_algorithm_explanation](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/pagerank_algorithm_explanation.svg)
 
 ---
 
@@ -630,4 +630,4 @@ pr_results.vertices.count()  # Trigger caching
 
 ## Real-World Graph Applications
 
-![real_world_graph_applications](../../../../svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/real_world_graph_applications.svg)
+![real_world_graph_applications](/svg/courses/big_data/advanced-spark-with-python/05_graph_processing_graphx/real_world_graph_applications.svg)

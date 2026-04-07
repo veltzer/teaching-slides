@@ -37,7 +37,7 @@ kubectl apply -f deployment.yaml
 
 ## How `kubectl apply` Works
 
-![how_kubectl_apply_works](../../../../svg/courses/devops/advanced-kubernetes/11_declarative_config/how_kubectl_apply_works.svg)
+![how_kubectl_apply_works](/svg/courses/devops/advanced-kubernetes/11_declarative_config/how_kubectl_apply_works.svg)
 
 The `kubectl.kubernetes.io/last-applied-configuration` annotation stores the previous apply.
 
@@ -408,7 +408,7 @@ helm uninstall myrelease -n production
 
 ## GitOps with `ArgoCD`
 
-![gitops_with_argocd](../../../../svg/courses/devops/advanced-kubernetes/11_declarative_config/gitops_with_argocd.svg)
+![gitops_with_argocd](/svg/courses/devops/advanced-kubernetes/11_declarative_config/gitops_with_argocd.svg)
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1

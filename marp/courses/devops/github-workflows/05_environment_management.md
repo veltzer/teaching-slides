@@ -4,7 +4,7 @@
 
 ## Environment Variables Overview
 
-![environment_variables_overview](../../../../svg/courses/devops/github-workflows/05_environment_management/environment_variables_overview.svg)
+![environment_variables_overview](/svg/courses/devops/github-workflows/05_environment_management/environment_variables_overview.svg)
 
 - More specific levels override broader ones
 

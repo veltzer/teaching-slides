@@ -38,7 +38,7 @@ Singleton* Singleton::instance = nullptr;
 
 ## Singleton Structure
 
-![singleton_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/02_singleton/singleton_structure.svg)
+![singleton_structure](/svg/courses/languages/c++/c++-design-patterns/02_singleton/singleton_structure.svg)
 
 ---
 

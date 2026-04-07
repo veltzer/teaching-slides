@@ -17,13 +17,13 @@ Advanced Kubernetes Course - Day 2, Module 2
 
 ## Three Pillars of Observability
 
-![three_pillars_of_observability](../../../../svg/courses/devops/advanced-kubernetes/07_observability/three_pillars_of_observability.svg)
+![three_pillars_of_observability](/svg/courses/devops/advanced-kubernetes/07_observability/three_pillars_of_observability.svg)
 
 ---
 
 ## `Prometheus` Architecture
 
-![prometheus_architecture](../../../../svg/courses/devops/advanced-kubernetes/07_observability/prometheus_architecture.svg)
+![prometheus_architecture](/svg/courses/devops/advanced-kubernetes/07_observability/prometheus_architecture.svg)
 
 ---
 
@@ -354,7 +354,7 @@ func handleOrder(w http.ResponseWriter, r *http.Request) {
 
 ## Trace Visualization
 
-![trace_visualization](../../../../svg/courses/devops/advanced-kubernetes/07_observability/trace_visualization.svg)
+![trace_visualization](/svg/courses/devops/advanced-kubernetes/07_observability/trace_visualization.svg)
 
 ---
 
@@ -425,7 +425,7 @@ histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))
 
 ## SLOs and Error Budgets
 
-![slos_and_error_budgets](../../../../svg/courses/devops/advanced-kubernetes/07_observability/slos_and_error_budgets.svg)
+![slos_and_error_budgets](/svg/courses/devops/advanced-kubernetes/07_observability/slos_and_error_budgets.svg)
 
 ```promql
 # SLO: 99.9% of requests succeed within 500ms

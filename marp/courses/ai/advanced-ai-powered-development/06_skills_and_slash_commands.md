@@ -196,7 +196,7 @@ instructions: |
 
 ## Building Complex Workflows from Simple Skills
 
-![building_complex_workflows_from_simple_skills](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/building_complex_workflows_from_simple_skills.svg)
+![building_complex_workflows_from_simple_skills](/svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/building_complex_workflows_from_simple_skills.svg)
 
 ```yaml
 name: ship-it
@@ -442,7 +442,7 @@ claude skills override review --local
 
 ## Project-Level vs User-Level vs Team-Level
 
-![project_level_vs_user_level_vs_team_level](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/project_level_vs_user_level_vs_team_level.svg)
+![project_level_vs_user_level_vs_team_level](/svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/project_level_vs_user_level_vs_team_level.svg)
 
 - Resolution order: project > team > user (most specific wins)
 - User-level skills provide personal defaults across all projects
@@ -492,7 +492,7 @@ claude skills audit --check-versions
 
 ## Automating Actions Around Tool Calls
 
-![automating_actions_around_tool_calls](../../../../svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/automating_actions_around_tool_calls.svg)
+![automating_actions_around_tool_calls](/svg/courses/ai/advanced-ai-powered-development/06_skills_and_slash_commands/automating_actions_around_tool_calls.svg)
 
 ```yaml
 # .claude/hooks.yaml

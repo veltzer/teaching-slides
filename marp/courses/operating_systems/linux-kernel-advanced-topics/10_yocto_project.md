@@ -38,7 +38,7 @@ Key components:
 
 ## Yocto Architecture
 
-![yocto_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/yocto_architecture.svg)
+![yocto_architecture](/svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/yocto_architecture.svg)
 
 ---
 
@@ -81,7 +81,7 @@ bitbake core-image-minimal
 
 ## BitBake Workflow
 
-![bitbake_workflow](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/bitbake_workflow.svg)
+![bitbake_workflow](/svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/bitbake_workflow.svg)
 
 ---
 
@@ -327,7 +327,7 @@ RDEPENDS_${PN} = " \
 
 ## Image Types
 
-![image_types](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/image_types.svg)
+![image_types](/svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/image_types.svg)
 
 ---
 
@@ -464,7 +464,7 @@ PREMIRRORS_prepend = "\
 
 ## Build Performance
 
-![build_performance](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/build_performance.svg)
+![build_performance](/svg/courses/operating_systems/linux-kernel-advanced-topics/10_yocto_project/build_performance.svg)
 
 ---
 

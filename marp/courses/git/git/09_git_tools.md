@@ -1,7 +1,7 @@
 # Git Tools and Integration
 ---
 ## Built-in Git Tools
-![built_in_git_tools](../../../../svg/courses/git/git/09_git_tools/built_in_git_tools.svg)
+![built_in_git_tools](/svg/courses/git/git/09_git_tools/built_in_git_tools.svg)
 
 ---
 ## Git Instaweb
@@ -35,7 +35,7 @@
 - Distribution creation
 ---
 ## Git Bisect
-![git_bisect](../../../../svg/courses/git/git/09_git_tools/git_bisect.svg)
+![git_bisect](/svg/courses/git/git/09_git_tools/git_bisect.svg)
 
 ---
 ## Git Describe
@@ -75,7 +75,7 @@
 - Automation scripts
 ---
 ## Development Platforms
-![development_platforms](../../../../svg/courses/git/git/09_git_tools/development_platforms.svg)
+![development_platforms](/svg/courses/git/git/09_git_tools/development_platforms.svg)
 
 ---
 ## GitHub Features
@@ -121,7 +121,7 @@
 - Merge tools
 ---
 ## CI/CD Integration
-![ci_cd_integration](../../../../svg/courses/git/git/09_git_tools/ci_cd_integration.svg)
+![ci_cd_integration](/svg/courses/git/git/09_git_tools/ci_cd_integration.svg)
 
 ---
 ## Jenkins Integration

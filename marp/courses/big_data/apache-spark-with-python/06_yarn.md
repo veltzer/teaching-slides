@@ -11,7 +11,7 @@
 
 ---
 ## Core Components
-![core_components](../../../../svg/courses/big_data/apache-spark-with-python/06_yarn/core_components.svg)
+![core_components](/svg/courses/big_data/apache-spark-with-python/06_yarn/core_components.svg)
 
 ---
 ## Key Components Explained
@@ -43,7 +43,7 @@
 ## YARN Deployment Modes
 
 ## Client Mode
-![client_mode](../../../../svg/courses/big_data/apache-spark-with-python/06_yarn/client_mode.svg)
+![client_mode](/svg/courses/big_data/apache-spark-with-python/06_yarn/client_mode.svg)
 
 Characteristics:
 - Driver runs on client machine
@@ -53,7 +53,7 @@ Characteristics:
 
 ---
 ## Cluster Mode
-![cluster_mode](../../../../svg/courses/big_data/apache-spark-with-python/06_yarn/cluster_mode.svg)
+![cluster_mode](/svg/courses/big_data/apache-spark-with-python/06_yarn/cluster_mode.svg)
 
 Characteristics:
 - Driver runs on cluster
@@ -220,7 +220,7 @@ grep "ERROR" application_logs.txt
 ```
 
 ## Metrics Visualization
-![metrics_visualization](../../../../svg/courses/big_data/apache-spark-with-python/06_yarn/metrics_visualization.svg)
+![metrics_visualization](/svg/courses/big_data/apache-spark-with-python/06_yarn/metrics_visualization.svg)
 
 ---
 ## Best Practices

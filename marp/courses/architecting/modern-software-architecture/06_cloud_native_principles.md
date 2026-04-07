@@ -301,7 +301,7 @@ graph TD
 ---
 ## Horizontal vs Vertical Scaling
 
-![horizontal_vs_vertical_scaling](../../../../svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/horizontal_vs_vertical_scaling.svg)
+![horizontal_vs_vertical_scaling](/svg/courses/architecting/modern-software-architecture/06_cloud_native_principles/horizontal_vs_vertical_scaling.svg)
 
 ---
 ## Caching Strategies

@@ -5,13 +5,13 @@
 
 ## Background Processing Options
 
-![background_processing_options](../../../../svg/courses/operating_systems/advanced-android-application-development/07_background_processing/background_processing_options.svg)
+![background_processing_options](/svg/courses/operating_systems/advanced-android-application-development/07_background_processing/background_processing_options.svg)
 
 ---
 
 ## Service Lifecycle
 
-![service_lifecycle](../../../../svg/courses/operating_systems/advanced-android-application-development/07_background_processing/service_lifecycle.svg)
+![service_lifecycle](/svg/courses/operating_systems/advanced-android-application-development/07_background_processing/service_lifecycle.svg)
 
 ---
 
@@ -220,7 +220,7 @@ public class AlarmScheduler {
 
 ## Battery Optimization
 
-![battery_optimization](../../../../svg/courses/operating_systems/advanced-android-application-development/07_background_processing/battery_optimization.svg)
+![battery_optimization](/svg/courses/operating_systems/advanced-android-application-development/07_background_processing/battery_optimization.svg)
 
 ---
 
@@ -274,7 +274,7 @@ public class RobustWorker extends Worker {
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/07_background_processing/best_practices.svg)
+![best_practices](/svg/courses/operating_systems/advanced-android-application-development/07_background_processing/best_practices.svg)
 
 ---
 

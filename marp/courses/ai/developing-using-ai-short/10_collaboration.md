@@ -24,7 +24,7 @@ AI transforms how teams work together by:
 
 ## Knowledge Sharing Fundamentals
 
-![knowledge_sharing_fundamentals](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/knowledge_sharing_fundamentals.svg)
+![knowledge_sharing_fundamentals](/svg/courses/ai/developing-using-ai-short/10_collaboration/knowledge_sharing_fundamentals.svg)
 
 AI serves as a knowledge multiplier between team members.
 
@@ -73,7 +73,7 @@ Transform individual AI interactions into team resources:
 
 ## Code Review Enhancement
 
-![code_review_enhancement](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/code_review_enhancement.svg)
+![code_review_enhancement](/svg/courses/ai/developing-using-ai-short/10_collaboration/code_review_enhancement.svg)
 
 ---
 
@@ -113,7 +113,7 @@ Train your team to use AI for consistent issue detection:
 
 ## Accelerating Team Onboarding
 
-![accelerating_team_onboarding](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/accelerating_team_onboarding.svg)
+![accelerating_team_onboarding](/svg/courses/ai/developing-using-ai-short/10_collaboration/accelerating_team_onboarding.svg)
 
 ---
 
@@ -174,7 +174,7 @@ Combine AI assistance with human mentorship:
 
 ## Communication Enhancement
 
-![communication_enhancement](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/communication_enhancement.svg)
+![communication_enhancement](/svg/courses/ai/developing-using-ai-short/10_collaboration/communication_enhancement.svg)
 
 ---
 
@@ -212,7 +212,7 @@ Use AI to create actionable meeting notes:
 
 ## Pair Programming with AI
 
-![pair_programming_with_ai](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/pair_programming_with_ai.svg)
+![pair_programming_with_ai](/svg/courses/ai/developing-using-ai-short/10_collaboration/pair_programming_with_ai.svg)
 
 ---
 
@@ -281,7 +281,7 @@ Team debugging sessions enhanced by AI:
 
 ## Team AI Tool Management
 
-![team_ai_tool_management](../../../../svg/courses/ai/developing-using-ai-short/10_collaboration/team_ai_tool_management.svg)
+![team_ai_tool_management](/svg/courses/ai/developing-using-ai-short/10_collaboration/team_ai_tool_management.svg)
 
 ---
 

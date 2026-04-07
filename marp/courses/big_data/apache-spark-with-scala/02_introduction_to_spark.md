@@ -12,13 +12,13 @@
 
 ## The 5 V's of Big Data
 
-![the_5_v_s_of_big_data](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/the_5_v_s_of_big_data.svg)
+![the_5_v_s_of_big_data](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/the_5_v_s_of_big_data.svg)
 
 ---
 
 ## Traditional vs Big Data Processing
 
-![traditional_vs_big_data_processing](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/traditional_vs_big_data_processing.svg)
+![traditional_vs_big_data_processing](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/traditional_vs_big_data_processing.svg)
 
 ---
 
@@ -34,79 +34,79 @@
 
 ## Data Growth Pattern
 
-![data_growth_pattern](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_growth_pattern.svg)
+![data_growth_pattern](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_growth_pattern.svg)
 
 ---
 
 ## Processing Requirements
 
-![processing_requirements](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/processing_requirements.svg)
+![processing_requirements](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/processing_requirements.svg)
 
 ---
 
 ## Big Data Evolution
 
-![big_data_evolution](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/big_data_evolution.svg)
+![big_data_evolution](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/big_data_evolution.svg)
 
 ---
 
 ## Spark Architecture Overview
 
-![spark_architecture_overview](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/spark_architecture_overview.svg)
+![spark_architecture_overview](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/spark_architecture_overview.svg)
 
 ---
 
 ## Spark Components
 
-![spark_components](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/spark_components.svg)
+![spark_components](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/spark_components.svg)
 
 ---
 
 ## Memory Architecture
 
-![memory_architecture](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/memory_architecture.svg)
+![memory_architecture](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/memory_architecture.svg)
 
 ---
 
 ## Distributed Processing
 
-![distributed_processing](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/distributed_processing.svg)
+![distributed_processing](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/distributed_processing.svg)
 
 ---
 
 ## Data Flow in Spark
 
-![data_flow_in_spark](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_flow_in_spark.svg)
+![data_flow_in_spark](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_flow_in_spark.svg)
 
 ---
 
 ## Cluster Manager Types
 
-![cluster_manager_types](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/cluster_manager_types.svg)
+![cluster_manager_types](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/cluster_manager_types.svg)
 
 ---
 
 ## Resource Management
 
-![resource_management](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/resource_management.svg)
+![resource_management](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/resource_management.svg)
 
 ---
 
 ## DAG Execution
 
-![dag_execution](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/dag_execution.svg)
+![dag_execution](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/dag_execution.svg)
 
 ---
 
 ## Task Scheduling
 
-![task_scheduling](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/task_scheduling.svg)
+![task_scheduling](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/task_scheduling.svg)
 
 ---
 
 ## Execution Modes
 
-![execution_modes](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/execution_modes.svg)
+![execution_modes](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/execution_modes.svg)
 
 ---
 
@@ -147,19 +147,19 @@ val spark = SparkSession.builder()
 
 ## Fault Tolerance Model
 
-![fault_tolerance_model](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/fault_tolerance_model.svg)
+![fault_tolerance_model](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/fault_tolerance_model.svg)
 
 ---
 
 ## Data Locality
 
-![data_locality](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_locality.svg)
+![data_locality](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/data_locality.svg)
 
 ---
 
 ## Performance Considerations
 
-![performance_considerations](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/performance_considerations.svg)
+![performance_considerations](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/performance_considerations.svg)
 
 ---
 
@@ -192,19 +192,19 @@ val spark = SparkSession.builder()
 
 ## Storage Options
 
-![storage_options](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/storage_options.svg)
+![storage_options](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/storage_options.svg)
 
 ---
 
 ## Monitoring & Debugging
 
-![monitoring_debugging](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/monitoring_debugging.svg)
+![monitoring_debugging](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/monitoring_debugging.svg)
 
 ---
 
 ## Production Deployment
 
-![production_deployment](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/production_deployment.svg)
+![production_deployment](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/production_deployment.svg)
 
 ---
 
@@ -220,7 +220,7 @@ val spark = SparkSession.builder()
 
 ## Cluster Sizing
 
-![cluster_sizing](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/cluster_sizing.svg)
+![cluster_sizing](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/cluster_sizing.svg)
 
 ---
 
@@ -236,4 +236,4 @@ val spark = SparkSession.builder()
 
 ## Future Trends
 
-![future_trends](../../../../svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/future_trends.svg)
+![future_trends](/svg/courses/big_data/apache-spark-with-scala/02_introduction_to_spark/future_trends.svg)

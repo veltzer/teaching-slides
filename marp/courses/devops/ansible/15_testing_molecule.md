@@ -24,7 +24,7 @@
 
 ## Testing Pyramid for Infrastructure
 
-![testing_pyramid_for_infrastructure](../../../../svg/courses/devops/ansible/15_testing_molecule/testing_pyramid_for_infrastructure.svg)
+![testing_pyramid_for_infrastructure](/svg/courses/devops/ansible/15_testing_molecule/testing_pyramid_for_infrastructure.svg)
 
 ---
 

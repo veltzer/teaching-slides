@@ -86,7 +86,7 @@ async fn main() {
 
 ## The Waker Mechanism
 
-![the_waker_mechanism](../../../../../svg/courses/languages/rust/advanced-rust/05_async_programming/the_waker_mechanism.svg)
+![the_waker_mechanism](/svg/courses/languages/rust/advanced-rust/05_async_programming/the_waker_mechanism.svg)
 
 The waker tells the executor: "this future is ready to make progress, poll it again."
 
@@ -186,7 +186,7 @@ impl<'a> Future for FetchDataFuture<'a> {
 
 ## State Machine Visualization
 
-![state_machine_visualization](../../../../../svg/courses/languages/rust/advanced-rust/05_async_programming/state_machine_visualization.svg)
+![state_machine_visualization](/svg/courses/languages/rust/advanced-rust/05_async_programming/state_machine_visualization.svg)
 
 ---
 
@@ -323,7 +323,7 @@ How the async executor works
 
 ## Tokio Architecture
 
-![tokio_architecture](../../../../../svg/courses/languages/rust/advanced-rust/05_async_programming/tokio_architecture.svg)
+![tokio_architecture](/svg/courses/languages/rust/advanced-rust/05_async_programming/tokio_architecture.svg)
 
 ---
 
@@ -1144,7 +1144,7 @@ fn factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64>>
 
 ## Summary
 
-![summary](../../../../../svg/courses/languages/rust/advanced-rust/05_async_programming/summary.svg)
+![summary](/svg/courses/languages/rust/advanced-rust/05_async_programming/summary.svg)
 
 ---
 

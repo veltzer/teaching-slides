@@ -109,7 +109,7 @@ import this
 - No separate compilation step needed
 - Trade-off: slower execution, faster development
 
-![python_is_interpreted](../../../../../svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
+![python_is_interpreted](/svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
 
 ---
 ## Dynamic Typing

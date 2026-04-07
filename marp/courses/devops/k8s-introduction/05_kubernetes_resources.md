@@ -14,7 +14,7 @@
 
 ## Kubernetes Architecture Review
 
-![kubernetes_architecture_review](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/kubernetes_architecture_review.svg)
+![kubernetes_architecture_review](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/kubernetes_architecture_review.svg)
 
 ---
 
@@ -54,7 +54,7 @@ responsibilities:
 
 ## Scheduler Details
 
-![scheduler_details](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/scheduler_details.svg)
+![scheduler_details](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/scheduler_details.svg)
 
 ---
 
@@ -96,7 +96,7 @@ kubelet:
 
 ## Container Runtime
 
-![container_runtime](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/container_runtime.svg)
+![container_runtime](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/container_runtime.svg)
 
 ---
 
@@ -141,7 +141,7 @@ spec:
 
 ## Multi-Container Pods
 
-![multi_container_pods](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/multi_container_pods.svg)
+![multi_container_pods](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/multi_container_pods.svg)
 
 ---
 
@@ -206,7 +206,7 @@ metadata:
 
 ## Default Namespaces
 
-![default_namespaces](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/default_namespaces.svg)
+![default_namespaces](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/default_namespaces.svg)
 
 ---
 
@@ -293,7 +293,7 @@ kubectl get nodes -o json | \
 
 ## Node Components
 
-![node_components](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/node_components.svg)
+![node_components](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/node_components.svg)
 
 ---
 
@@ -418,7 +418,7 @@ spec:
 
 ## Quality of Service Classes
 
-![quality_of_service_classes](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/quality_of_service_classes.svg)
+![quality_of_service_classes](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/quality_of_service_classes.svg)
 
 ---
 
@@ -494,7 +494,7 @@ kubectl port-forward -n kubernetes-dashboard \
 
 ## Dashboard Features
 
-![dashboard_features](../../../../svg/courses/devops/k8s-introduction/05_kubernetes_resources/dashboard_features.svg)
+![dashboard_features](/svg/courses/devops/k8s-introduction/05_kubernetes_resources/dashboard_features.svg)
 
 ---
 

@@ -70,7 +70,7 @@ Mitigations:
 - Circular dependencies that defy static analysis
 - Event-driven flows spanning dozens of files
 
-![implicit_conventions_and_cross_module_dependencies](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/implicit_conventions_and_cross_module_dependencies.svg)
+![implicit_conventions_and_cross_module_dependencies](/svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/implicit_conventions_and_cross_module_dependencies.svg)
 
 ---
 
@@ -259,7 +259,7 @@ Navigation workflow:
 1. "Show me the database migration for the orders table"
 ```
 
-![multi_file_navigation_workflows_in_practice](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/multi_file_navigation_workflows_in_practice.svg)
+![multi_file_navigation_workflows_in_practice](/svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/multi_file_navigation_workflows_in_practice.svg)
 
 ---
 
@@ -271,7 +271,7 @@ Navigation workflow:
 - Map the lifecycle of a request across service boundaries
 - Identify shared mutable state and side effects
 
-![understanding_call_graphs_and_data_flow](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/understanding_call_graphs_and_data_flow.svg)
+![understanding_call_graphs_and_data_flow](/svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/understanding_call_graphs_and_data_flow.svg)
 
 ---
 
@@ -385,7 +385,7 @@ Strangler Fig implementation with AI assistance:
 1. Retire the proxy and route directly to the new service
 ```
 
-![microservice_extraction_patterns](../../../../svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/microservice_extraction_patterns.svg)
+![microservice_extraction_patterns](/svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/microservice_extraction_patterns.svg)
 
 ---
 

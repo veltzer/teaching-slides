@@ -12,7 +12,7 @@
 
 ## Proxy Structure
 
-![proxy_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/13_proxy/proxy_structure.svg)
+![proxy_structure](/svg/courses/languages/c++/c++-design-patterns/13_proxy/proxy_structure.svg)
 
 ---
 

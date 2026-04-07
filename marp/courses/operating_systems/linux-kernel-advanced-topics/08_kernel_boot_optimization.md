@@ -16,7 +16,7 @@ Every millisecond counts!
 
 ## Boot Process Timeline
 
-![boot_process_timeline](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/boot_process_timeline.svg)
+![boot_process_timeline](/svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/boot_process_timeline.svg)
 
 ---
 
@@ -97,7 +97,7 @@ Remove unnecessary features:
 
 ## Compression Options
 
-![compression_options](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/compression_options.svg)
+![compression_options](/svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/compression_options.svg)
 
 ---
 
@@ -376,7 +376,7 @@ resume=/dev/mmcblk0p3
 
 ## Snapshot Boot
 
-![snapshot_boot](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/snapshot_boot.svg)
+![snapshot_boot](/svg/courses/operating_systems/linux-kernel-advanced-topics/08_kernel_boot_optimization/snapshot_boot.svg)
 
 ---
 

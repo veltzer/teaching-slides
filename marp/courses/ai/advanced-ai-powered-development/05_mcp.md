@@ -17,7 +17,7 @@
 - No standard way for LLMs to discover and invoke external capabilities
 - MCP provides a **universal protocol** between AI hosts and tool providers
 
-![the_problem_mcp_solves](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/the_problem_mcp_solves.svg)
+![the_problem_mcp_solves](/svg/courses/ai/advanced-ai-powered-development/05_mcp/the_problem_mcp_solves.svg)
 
 ---
 
@@ -122,7 +122,7 @@ Host (Claude Code)
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
 1. **Lazy loading** -- connect to MCP servers on demand, not all at startup
 
-![context_window_management_for_mcp](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/context_window_management_for_mcp.svg)
+![context_window_management_for_mcp](/svg/courses/ai/advanced-ai-powered-development/05_mcp/context_window_management_for_mcp.svg)
 
 - Audit your tool count regularly -- fewer, well-designed tools outperform many narrow ones
 
@@ -189,7 +189,7 @@ def service_health(name: str) -> str:
 - Enables agentic patterns where tools need reasoning mid-execution
 - The host always controls approval and model selection
 
-![sampling](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/sampling.svg)
+![sampling](/svg/courses/ai/advanced-ai-powered-development/05_mcp/sampling.svg)
 
 - Sampling keeps the server stateless while enabling multi-step reasoning
 
@@ -324,7 +324,7 @@ npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-github
 
 ## End-to-End Workflow: Bug Triage with MCP
 
-![end_to_end_workflow_bug_triage_with_mcp](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/end_to_end_workflow_bug_triage_with_mcp.svg)
+![end_to_end_workflow_bug_triage_with_mcp](/svg/courses/ai/advanced-ai-powered-development/05_mcp/end_to_end_workflow_bug_triage_with_mcp.svg)
 
 1. **Jira MCP server** -- fetch the bug ticket details and reproduction steps
 1. **Postgres MCP server** -- query error logs matching the ticket's time window
@@ -670,7 +670,7 @@ async def test_get_status():
 - Organizations can maintain a registry of approved MCP servers
 - Standardize tool versions and configurations across teams
 
-![central_tool_registries](../../../../svg/courses/ai/advanced-ai-powered-development/05_mcp/central_tool_registries.svg)
+![central_tool_registries](/svg/courses/ai/advanced-ai-powered-development/05_mcp/central_tool_registries.svg)
 
 - Distribute via internal package registry (`npm`, `PyPI`, or container images)
 - Pin server versions to prevent unexpected behavior changes

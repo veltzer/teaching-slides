@@ -1,7 +1,7 @@
 # Merging in Git
 ---
 ## Merge Overview
-![merge_overview](../../../../svg/courses/git/git/07_merging/merge_overview.svg)
+![merge_overview](/svg/courses/git/git/07_merging/merge_overview.svg)
 
 ---
 ## Types of Merges
@@ -29,7 +29,7 @@
 - Workflow considerations
 ---
 ## Fast-Forward Merges
-![fast_forward_merges](../../../../svg/courses/git/git/07_merging/fast_forward_merges.svg)
+![fast_forward_merges](/svg/courses/git/git/07_merging/fast_forward_merges.svg)
 
 ---
 ## When to Fast-Forward
@@ -51,7 +51,7 @@
 - Ours/Theirs
 ---
 ## Recursive Strategy
-![recursive_strategy](../../../../svg/courses/git/git/07_merging/recursive_strategy.svg)
+![recursive_strategy](/svg/courses/git/git/07_merging/recursive_strategy.svg)
 
 ---
 ## Resolve Strategy
@@ -118,7 +118,7 @@ Their changes
 - Start over
 ---
 ## Cherry Picking
-![cherry_picking](../../../../svg/courses/git/git/07_merging/cherry_picking.svg)
+![cherry_picking](/svg/courses/git/git/07_merging/cherry_picking.svg)
 
 ---
 ## When to Cherry Pick

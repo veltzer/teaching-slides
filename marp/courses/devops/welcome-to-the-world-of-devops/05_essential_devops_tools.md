@@ -5,7 +5,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Version Control Systems
 
-![version_control_systems](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/version_control_systems.svg)
+![version_control_systems](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/version_control_systems.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Collaboration Platforms
 
-![collaboration_platforms](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/collaboration_platforms.svg)
+![collaboration_platforms](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/collaboration_platforms.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Jenkins Pipeline
 
-![jenkins_pipeline](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/jenkins_pipeline.svg)
+![jenkins_pipeline](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/jenkins_pipeline.svg)
 
 ---
 
@@ -53,13 +53,13 @@ Understanding the core toolset for DevOps implementation
 
 ## Docker Components
 
-![docker_components](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/docker_components.svg)
+![docker_components](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/docker_components.svg)
 
 ---
 
 ## Kubernetes Architecture
 
-![kubernetes_architecture](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/kubernetes_architecture.svg)
+![kubernetes_architecture](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/kubernetes_architecture.svg)
 
 ---
 
@@ -75,7 +75,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Infrastructure Tools
 
-![infrastructure_tools](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/infrastructure_tools.svg)
+![infrastructure_tools](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/infrastructure_tools.svg)
 
 ---
 
@@ -91,7 +91,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Security Tools
 
-![security_tools](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/security_tools.svg)
+![security_tools](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/security_tools.svg)
 
 ---
 
@@ -107,7 +107,7 @@ Understanding the core toolset for DevOps implementation
 
 ## Tool Integration
 
-![tool_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/tool_integration.svg)
+![tool_integration](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/tool_integration.svg)
 
 ---
 
@@ -123,4 +123,4 @@ Understanding the core toolset for DevOps implementation
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/best_practices.svg)
+![best_practices](/svg/courses/devops/welcome-to-the-world-of-devops/05_essential_devops_tools/best_practices.svg)

@@ -10,7 +10,7 @@
 
 ## What is Data Carving?
 
-![what_is_data_carving](../../../../svg/courses/security/linux-forensics/06_forensic_data_carving/what_is_data_carving.svg)
+![what_is_data_carving](/svg/courses/security/linux-forensics/06_forensic_data_carving/what_is_data_carving.svg)
 
 - Scans raw data for file signatures (headers/footers)
 - Ignores filesystem structure entirely

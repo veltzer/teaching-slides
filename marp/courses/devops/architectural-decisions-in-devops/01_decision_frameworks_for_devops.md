@@ -33,7 +33,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Architectural vs Tactical Decisions
 
-![architectural_vs_tactical_decisions](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/architectural_vs_tactical_decisions.svg)
+![architectural_vs_tactical_decisions](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/architectural_vs_tactical_decisions.svg)
 
 ---
 
@@ -70,7 +70,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## The Decision Spectrum
 
-![the_decision_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_spectrum.svg)
+![the_decision_spectrum](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_spectrum.svg)
 
 ---
 
@@ -88,7 +88,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## The Reversibility Spectrum
 
-![the_reversibility_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_reversibility_spectrum.svg)
+![the_reversibility_spectrum](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_reversibility_spectrum.svg)
 
 ---
 
@@ -131,7 +131,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Conway's Law Visualized
 
-![conway_s_law_visualized](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/conway_s_law_visualized.svg)
+![conway_s_law_visualized](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/conway_s_law_visualized.svg)
 
 ---
 
@@ -176,7 +176,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Evaluating Tradeoffs: The DACI Framework
 
-![evaluating_tradeoffs_the_daci_framework](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/evaluating_tradeoffs_the_daci_framework.svg)
+![evaluating_tradeoffs_the_daci_framework](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/evaluating_tradeoffs_the_daci_framework.svg)
 
 ---
 
@@ -192,7 +192,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Decision Matrix Example
 
-![decision_matrix_example](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/decision_matrix_example.svg)
+![decision_matrix_example](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/decision_matrix_example.svg)
 
 ---
 
@@ -231,7 +231,7 @@ A systematic approach to making and documenting architectural decisions
 
 ## Common DevOps Tradeoffs
 
-![common_devops_tradeoffs](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/common_devops_tradeoffs.svg)
+![common_devops_tradeoffs](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/common_devops_tradeoffs.svg)
 
 ---
 
@@ -288,13 +288,13 @@ A systematic approach to making and documenting architectural decisions
 
 ## ADR Template Structure
 
-![adr_template_structure](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_template_structure.svg)
+![adr_template_structure](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_template_structure.svg)
 
 ---
 
 ## ADR Status Lifecycle
 
-![adr_status_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_status_lifecycle.svg)
+![adr_status_lifecycle](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/adr_status_lifecycle.svg)
 
 ---
 
@@ -356,7 +356,7 @@ Adopt Terraform with remote state in S3.
 
 ## The Decision Flow Process
 
-![the_decision_flow_process](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_flow_process.svg)
+![the_decision_flow_process](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/the_decision_flow_process.svg)
 
 ---
 
@@ -469,7 +469,7 @@ Adopt Terraform with remote state in S3.
 
 ## Organizational Decision Governance
 
-![organizational_decision_governance](../../../../svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/organizational_decision_governance.svg)
+![organizational_decision_governance](/svg/courses/devops/architectural-decisions-in-devops/01_decision_frameworks_for_devops/organizational_decision_governance.svg)
 
 ---
 

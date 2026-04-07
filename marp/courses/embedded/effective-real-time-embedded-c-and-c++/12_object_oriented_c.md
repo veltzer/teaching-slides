@@ -14,7 +14,7 @@
 
 ## Why OOP in C?
 
-![why_oop_in_c](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/12_object_oriented_c/why_oop_in_c.svg)
+![why_oop_in_c](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/12_object_oriented_c/why_oop_in_c.svg)
 
 ---
 

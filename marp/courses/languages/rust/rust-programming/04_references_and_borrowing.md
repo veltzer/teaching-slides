@@ -5,7 +5,7 @@
 
 ## What are References
 
-![what_are_references](../../../../../svg/courses/languages/rust/rust-programming/04_references_and_borrowing/what_are_references.svg)
+![what_are_references](/svg/courses/languages/rust/rust-programming/04_references_and_borrowing/what_are_references.svg)
 
 ---
 
@@ -27,7 +27,7 @@ fn calculate_length(s: &String) -> usize {
 
 ## Memory Layout: References
 
-![memory_layout_references](../../../../../svg/courses/languages/rust/rust-programming/04_references_and_borrowing/memory_layout_references.svg)
+![memory_layout_references](/svg/courses/languages/rust/rust-programming/04_references_and_borrowing/memory_layout_references.svg)
 
 ---
 
@@ -146,7 +146,7 @@ println!("{}", r3);
 
 ## Borrowing Rules Visualization
 
-![borrowing_rules_visualization](../../../../../svg/courses/languages/rust/rust-programming/04_references_and_borrowing/borrowing_rules_visualization.svg)
+![borrowing_rules_visualization](/svg/courses/languages/rust/rust-programming/04_references_and_borrowing/borrowing_rules_visualization.svg)
 
 ---
 
@@ -298,7 +298,7 @@ fn unnecessary(s: &mut String) {  // Use &String if not modifying
 
 ## Best Practices
 
-![best_practices](../../../../../svg/courses/languages/rust/rust-programming/04_references_and_borrowing/best_practices.svg)
+![best_practices](/svg/courses/languages/rust/rust-programming/04_references_and_borrowing/best_practices.svg)
 
 ---
 

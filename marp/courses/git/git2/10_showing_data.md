@@ -114,7 +114,7 @@ git log --graph --oneline --decorate --all
 git log --oneline --graph --all -10
 ```
 
-![compact_branch_view](../../../../svg/courses/git/git2/10_showing_data/compact_branch_view.svg)
+![compact_branch_view](/svg/courses/git/git2/10_showing_data/compact_branch_view.svg)
 
 ---
 

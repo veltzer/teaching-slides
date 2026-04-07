@@ -76,7 +76,7 @@ uint32_t status = *STATUS_REG;  // OK
 
 ## Type Conversion
 
-![type_conversion](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/type_conversion.svg)
+![type_conversion](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/type_conversion.svg)
 
 ---
 
@@ -146,7 +146,7 @@ struct Example {
 };  // Total: 12 bytes
 ```
 
-![structure_layout](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/structure_layout.svg)
+![structure_layout](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/structure_layout.svg)
 
 ---
 

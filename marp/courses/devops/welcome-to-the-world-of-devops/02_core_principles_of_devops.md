@@ -14,13 +14,13 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## Team Structure Evolution
 
-![team_structure_evolution](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/team_structure_evolution.svg)
+![team_structure_evolution](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/team_structure_evolution.svg)
 
 ---
 
 ## Shared Responsibilities
 
-![shared_responsibilities](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/shared_responsibilities.svg)
+![shared_responsibilities](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/shared_responsibilities.svg)
 
 ---
 
@@ -36,13 +36,13 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## Automation Targets
 
-![automation_targets](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/automation_targets.svg)
+![automation_targets](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/automation_targets.svg)
 
 ---
 
 ## Common Automation Tools
 
-![common_automation_tools](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/common_automation_tools.svg)
+![common_automation_tools](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/common_automation_tools.svg)
 
 ---
 
@@ -58,13 +58,13 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## CI Pipeline Structure
 
-![ci_pipeline_structure](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/ci_pipeline_structure.svg)
+![ci_pipeline_structure](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/ci_pipeline_structure.svg)
 
 ---
 
 ## Continuous Delivery vs Deployment
 
-![continuous_delivery_vs_deployment](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/continuous_delivery_vs_deployment.svg)
+![continuous_delivery_vs_deployment](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/continuous_delivery_vs_deployment.svg)
 
 ---
 
@@ -80,13 +80,13 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## Pipeline Automation
 
-![pipeline_automation](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/pipeline_automation.svg)
+![pipeline_automation](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/pipeline_automation.svg)
 
 ---
 
 ## Feedback Loops
 
-![feedback_loops](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/feedback_loops.svg)
+![feedback_loops](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/feedback_loops.svg)
 
 ---
 
@@ -112,13 +112,13 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## DevOps Metrics
 
-![devops_metrics](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/devops_metrics.svg)
+![devops_metrics](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/devops_metrics.svg)
 
 ---
 
 ## Culture and Tools Integration
 
-![culture_and_tools_integration](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/culture_and_tools_integration.svg)
+![culture_and_tools_integration](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/culture_and_tools_integration.svg)
 
 ---
 
@@ -134,7 +134,7 @@ Understanding the fundamental principles that drive DevOps practices
 
 ## Implementation Roadmap
 
-![implementation_roadmap](../../../../svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/implementation_roadmap.svg)
+![implementation_roadmap](/svg/courses/devops/welcome-to-the-world-of-devops/02_core_principles_of_devops/implementation_roadmap.svg)
 
 ---
 

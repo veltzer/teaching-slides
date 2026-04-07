@@ -33,7 +33,7 @@ Clients need deep knowledge of the subsystem internals
 
 ## Facade Structure
 
-![facade_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/11_facade/facade_structure.svg)
+![facade_structure](/svg/courses/languages/c++/c++-design-patterns/11_facade/facade_structure.svg)
 
 ---
 

@@ -17,7 +17,7 @@
 
 ## Configuration Levels
 
-![configuration_levels](../../../../svg/courses/git/git2/03_config/configuration_levels.svg)
+![configuration_levels](/svg/courses/git/git2/03_config/configuration_levels.svg)
 
 ---
 
@@ -113,7 +113,7 @@ git config --show-origin user.email
 
 ## Color Configuration
 
-![color_configuration](../../../../svg/courses/git/git2/03_config/color_configuration.svg)
+![color_configuration](/svg/courses/git/git2/03_config/color_configuration.svg)
 
 ---
 
@@ -213,7 +213,7 @@ git config --global rebase.autoStash true
 
 ## Creating Aliases
 
-![creating_aliases](../../../../svg/courses/git/git2/03_config/creating_aliases.svg)
+![creating_aliases](/svg/courses/git/git2/03_config/creating_aliases.svg)
 
 ---
 
@@ -311,7 +311,7 @@ git config --global credential.helper libsecret
 
 ## SSH Configuration
 
-![ssh_configuration](../../../../svg/courses/git/git2/03_config/ssh_configuration.svg)
+![ssh_configuration](/svg/courses/git/git2/03_config/ssh_configuration.svg)
 
 ---
 
@@ -484,7 +484,7 @@ git clean -fx     # Ignored and untracked
 
 ## Whitespace Configuration
 
-![whitespace_configuration](../../../../svg/courses/git/git2/03_config/whitespace_configuration.svg)
+![whitespace_configuration](/svg/courses/git/git2/03_config/whitespace_configuration.svg)
 
 ---
 
@@ -671,7 +671,7 @@ git clone --filter=tree:0 <url>     # Omit trees
 
 ## Configuration Best Practices
 
-![configuration_best_practices](../../../../svg/courses/git/git2/03_config/configuration_best_practices.svg)
+![configuration_best_practices](/svg/courses/git/git2/03_config/configuration_best_practices.svg)
 
 ---
 
@@ -900,7 +900,7 @@ git config --global alias.recent-branches \
 
 ## Configuration Checklist
 
-![configuration_checklist](../../../../svg/courses/git/git2/03_config/configuration_checklist.svg)
+![configuration_checklist](/svg/courses/git/git2/03_config/configuration_checklist.svg)
 
 ---
 
@@ -931,4 +931,4 @@ In the next session, we'll explore:
 
 ## Configuration Complete! 🎉
 
-![configuration_complete](../../../../svg/courses/git/git2/03_config/configuration_complete.svg)
+![configuration_complete](/svg/courses/git/git2/03_config/configuration_complete.svg)

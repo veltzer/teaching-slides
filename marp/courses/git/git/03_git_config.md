@@ -1,7 +1,7 @@
 # Git Configuration
 ---
 ## Configuration Levels
-![configuration_levels](../../../../svg/courses/git/git/03_git_config/configuration_levels.svg)
+![configuration_levels](/svg/courses/git/git/03_git_config/configuration_levels.svg)
 
 ---
 ## Configuration Files

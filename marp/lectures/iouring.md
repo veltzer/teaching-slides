@@ -29,7 +29,7 @@
 1. Minimal system call overhead
 1. Batch operations support
 
-![core_design_principles](../../svg/lectures/iouring/core_design_principles.svg)
+![core_design_principles](/svg/lectures/iouring/core_design_principles.svg)
 
 ---
 
@@ -270,7 +270,7 @@ graph LR
 1. Lower latency for small I/O operations
 1. Better scaling with multiple cores
 
-![real_world_performance_numbers](../../svg/lectures/iouring/real_world_performance_numbers.svg)
+![real_world_performance_numbers](/svg/lectures/iouring/real_world_performance_numbers.svg)
 
 ---
 

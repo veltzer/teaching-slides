@@ -16,7 +16,7 @@
 - The model decides **when** and **which** tool to call
 - Results feed back into the conversation for further reasoning
 
-![why_tools](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/why_tools.svg)
+![why_tools](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/why_tools.svg)
 
 ---
 
@@ -99,7 +99,7 @@
 - Each tool result becomes context for subsequent reasoning
 - Parallel tool calls are possible when inputs are independent
 
-![chaining_multiple_calls](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_multiple_calls.svg)
+![chaining_multiple_calls](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_multiple_calls.svg)
 
 ---
 
@@ -150,7 +150,7 @@
 - The model acts as the orchestrator between pipeline stages
 - Common patterns: read-transform-write, search-analyze-act
 
-![chaining_tools_into_pipelines](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_tools_into_pipelines.svg)
+![chaining_tools_into_pipelines](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_tools_into_pipelines.svg)
 
 ## Orchestration Strategies
 - **Sequential**: each step depends on the previous result
@@ -240,7 +240,7 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 - Apply filesystem scoping: tools can only read/write within a project root
 - Network policies prevent tools from reaching internal services
 
-![sandboxed_execution](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/sandboxed_execution.svg)
+![sandboxed_execution](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/sandboxed_execution.svg)
 
 ---
 
@@ -451,7 +451,7 @@ async def stream_shell(command: str):
 
 ## System Components
 
-![system_components](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)
+![system_components](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)
 
 ## Key Concerns
 - **API Gateway**: rate limiting, request validation, routing
@@ -541,7 +541,7 @@ class ToolAdapter:
 - Deprecate old tools gracefully with warnings in descriptions
 - Monitor tool call success rates and latency
 
-![evolution_without_breaking_agents](../../../../svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/evolution_without_breaking_agents.svg)
+![evolution_without_breaking_agents](/svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/evolution_without_breaking_agents.svg)
 
 ---
 

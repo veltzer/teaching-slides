@@ -14,7 +14,7 @@
 
 ## Controller Pattern
 
-![controller_pattern](../../../../svg/courses/devops/k8s-introduction/08_controllers/controller_pattern.svg)
+![controller_pattern](/svg/courses/devops/k8s-introduction/08_controllers/controller_pattern.svg)
 
 ---
 
@@ -71,7 +71,7 @@ spec:
 
 ## Rolling Update Process
 
-![rolling_update_process](../../../../svg/courses/devops/k8s-introduction/08_controllers/rolling_update_process.svg)
+![rolling_update_process](/svg/courses/devops/k8s-introduction/08_controllers/rolling_update_process.svg)
 
 ---
 
@@ -157,7 +157,7 @@ spec:
 
 ## StatefulSet Pod Identity
 
-![statefulset_pod_identity](../../../../svg/courses/devops/k8s-introduction/08_controllers/statefulset_pod_identity.svg)
+![statefulset_pod_identity](/svg/courses/devops/k8s-introduction/08_controllers/statefulset_pod_identity.svg)
 
 ---
 
@@ -220,7 +220,7 @@ spec:
 
 ## Job Types
 
-![job_types](../../../../svg/courses/devops/k8s-introduction/08_controllers/job_types.svg)
+![job_types](/svg/courses/devops/k8s-introduction/08_controllers/job_types.svg)
 
 ---
 
@@ -270,7 +270,7 @@ Examples:
 
 ## Controller Comparison
 
-![controller_comparison](../../../../svg/courses/devops/k8s-introduction/08_controllers/controller_comparison.svg)
+![controller_comparison](/svg/courses/devops/k8s-introduction/08_controllers/controller_comparison.svg)
 
 ---
 
@@ -389,7 +389,7 @@ kubectl rollout undo deployment/nginx
 
 ## Blue/Green Deployment
 
-![blue_green_deployment](../../../../svg/courses/devops/k8s-introduction/08_controllers/blue_green_deployment.svg)
+![blue_green_deployment](/svg/courses/devops/k8s-introduction/08_controllers/blue_green_deployment.svg)
 
 ---
 

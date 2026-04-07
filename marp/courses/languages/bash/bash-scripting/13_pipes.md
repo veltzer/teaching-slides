@@ -30,7 +30,7 @@ du -sh /var/log/* 2>/dev/null | sort -rh | head -10
 ---
 ## How Pipes Work Internally
 
-![how_pipes_work_internally](../../../../../svg/courses/languages/bash/bash-scripting/13_pipes/how_pipes_work_internally.svg)
+![how_pipes_work_internally](/svg/courses/languages/bash/bash-scripting/13_pipes/how_pipes_work_internally.svg)
 
 ---
 ## Pipes Run Concurrently

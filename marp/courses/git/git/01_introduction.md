@@ -58,7 +58,7 @@
 - Complete repository history
 ---
 ## Key Git Concepts
-![key_git_concepts](../../../../svg/courses/git/git/01_introduction/key_git_concepts.svg)
+![key_git_concepts](/svg/courses/git/git/01_introduction/key_git_concepts.svg)
 
 ---
 ## Understanding Git Areas
@@ -112,7 +112,7 @@
 - Manage versions
 ---
 ## Git's Architecture
-![git_s_architecture](../../../../svg/courses/git/git/01_introduction/git_s_architecture.svg)
+![git_s_architecture](/svg/courses/git/git/01_introduction/git_s_architecture.svg)
 
 ---
 ## Course Modules

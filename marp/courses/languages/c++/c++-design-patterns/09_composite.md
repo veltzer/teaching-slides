@@ -33,7 +33,7 @@ Client code must handle leaves and composites differently
 
 ## Composite Structure
 
-![composite_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/09_composite/composite_structure.svg)
+![composite_structure](/svg/courses/languages/c++/c++-design-patterns/09_composite/composite_structure.svg)
 
 ---
 

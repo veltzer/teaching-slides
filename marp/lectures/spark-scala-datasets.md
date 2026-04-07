@@ -21,7 +21,7 @@ val df: DataFrame = spark.read
 ```
 ---
 ## Type Safety
-![type_safety](../../svg/lectures/spark-scala-datasets/type_safety.svg)
+![type_safety](/svg/lectures/spark-scala-datasets/type_safety.svg)
 
 ---
 ## Basic Transformations
@@ -63,7 +63,7 @@ df.select($"age".cast("string").substring(1))
 ```
 ---
 ## Performance Characteristics
-![performance_characteristics](../../svg/lectures/spark-scala-datasets/performance_characteristics.svg)
+![performance_characteristics](/svg/lectures/spark-scala-datasets/performance_characteristics.svg)
 
 ---
 ## Memory Usage
@@ -92,7 +92,7 @@ spark.sql("SELECT * FROM people WHERE age > 21")
 ```
 ---
 ## Catalyst Optimizer
-![catalyst_optimizer](../../svg/lectures/spark-scala-datasets/catalyst_optimizer.svg)
+![catalyst_optimizer](/svg/lectures/spark-scala-datasets/catalyst_optimizer.svg)
 
 ---
 ## Encoder Operations
@@ -207,7 +207,7 @@ val ds: Dataset[CustomType] = ...
 ```
 ---
 ## Serialization
-![serialization](../../svg/lectures/spark-scala-datasets/serialization.svg)
+![serialization](/svg/lectures/spark-scala-datasets/serialization.svg)
 
 ---
 ## Best Practices

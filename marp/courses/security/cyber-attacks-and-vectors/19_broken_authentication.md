@@ -39,7 +39,7 @@
 ---
 ## Credential Stuffing Attacks
 
-![credential_stuffing_attacks](../../../../svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/credential_stuffing_attacks.svg)
+![credential_stuffing_attacks](/svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/credential_stuffing_attacks.svg)
 
 **Defense against credential stuffing:**
 - Rate limiting login attempts per IP and per account
@@ -186,7 +186,7 @@ def verify_token(token):
 ---
 ## Password Storage
 
-![password_storage](../../../../svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/password_storage.svg)
+![password_storage](/svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/password_storage.svg)
 
 ### Why bcrypt/Argon2 are Preferred
 
@@ -307,7 +307,7 @@ except Exception:
 ---
 ## OAuth Misconfigurations
 
-![oauth_misconfigurations](../../../../svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/oauth_misconfigurations.svg)
+![oauth_misconfigurations](/svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/oauth_misconfigurations.svg)
 
 ```python
 # Secure OAuth implementation checklist
@@ -333,7 +333,7 @@ OAUTH_CONFIG = {
 ---
 ## Insecure Password Reset Flows
 
-![insecure_password_reset_flows](../../../../svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/insecure_password_reset_flows.svg)
+![insecure_password_reset_flows](/svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/insecure_password_reset_flows.svg)
 
 ```python
 import secrets

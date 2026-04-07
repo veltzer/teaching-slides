@@ -26,7 +26,7 @@ public:
 
 ## Association Lifetime Models
 
-![association_lifetime_models](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/association_lifetime_models.svg)
+![association_lifetime_models](/svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/association_lifetime_models.svg)
 
 Different lifetime models require different association strategies
 
@@ -162,7 +162,7 @@ void demonstrateUniquePtr() {
 
 ## unique_ptr Benefits
 
-![uniqueptr_benefits](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/uniqueptr_benefits.svg)
+![uniqueptr_benefits](/svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/uniqueptr_benefits.svg)
 
 `unique_ptr` eliminates common memory management errors
 
@@ -307,7 +307,7 @@ public:
 
 ## shared_ptr Reference Counting
 
-![sharedptr_reference_counting](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/sharedptr_reference_counting.svg)
+![sharedptr_reference_counting](/svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/sharedptr_reference_counting.svg)
 
 Object is destroyed when reference count reaches zero
 
@@ -428,7 +428,7 @@ public:
 
 ## weak_ptr Lock Patterns
 
-![weakptr_lock_patterns](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/weakptr_lock_patterns.svg)
+![weakptr_lock_patterns](/svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/weakptr_lock_patterns.svg)
 
 Always check the result of `lock()` before using the object
 
@@ -886,7 +886,7 @@ auto ptr = shared.get(); delete ptr;                 // Manual delete
 
 ## Performance Comparison
 
-![performance_comparison](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/performance_comparison.svg)
+![performance_comparison](/svg/courses/languages/c++/modern-c++-for-c-programmers/15_safe_association/performance_comparison.svg)
 
 Choose the right smart pointer based on your performance and safety needs
 

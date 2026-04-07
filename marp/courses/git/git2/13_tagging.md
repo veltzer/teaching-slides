@@ -56,7 +56,7 @@ Git supports two types of tags with different characteristics:
 - Can be signed with GPG
 - Recommended for releases
 
-![lightweight_vs_annotated_tags](../../../../svg/courses/git/git2/13_tagging/lightweight_vs_annotated_tags.svg)
+![lightweight_vs_annotated_tags](/svg/courses/git/git2/13_tagging/lightweight_vs_annotated_tags.svg)
 
 ---
 

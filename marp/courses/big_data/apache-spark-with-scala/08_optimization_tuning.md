@@ -12,19 +12,19 @@
 
 ## Performance Factors
 
-![performance_factors](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/performance_factors.svg)
+![performance_factors](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/performance_factors.svg)
 
 ---
 
 ## Memory Architecture
 
-![memory_architecture](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_architecture.svg)
+![memory_architecture](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_architecture.svg)
 
 ---
 
 ## Memory Distribution
 
-![memory_distribution](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_distribution.svg)
+![memory_distribution](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_distribution.svg)
 
 ---
 
@@ -41,19 +41,19 @@ spark.conf.set("spark.executor.memory", "4g")
 
 ## Executor Configuration
 
-![executor_configuration](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/executor_configuration.svg)
+![executor_configuration](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/executor_configuration.svg)
 
 ---
 
 ## Resource Planning
 
-![resource_planning](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/resource_planning.svg)
+![resource_planning](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/resource_planning.svg)
 
 ---
 
 ## Data Serialization
 
-![data_serialization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_serialization.svg)
+![data_serialization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_serialization.svg)
 
 ---
 
@@ -72,19 +72,19 @@ spark.conf.set("spark.kryo.registrator",
 
 ## Data Partitioning
 
-![data_partitioning](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_partitioning.svg)
+![data_partitioning](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_partitioning.svg)
 
 ---
 
 ## Partition Sizing
 
-![partition_sizing](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/partition_sizing.svg)
+![partition_sizing](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/partition_sizing.svg)
 
 ---
 
 ## Shuffle Operations
 
-![shuffle_operations](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/shuffle_operations.svg)
+![shuffle_operations](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/shuffle_operations.svg)
 
 ---
 
@@ -101,7 +101,7 @@ spark.conf.set("spark.shuffle.io.maxRetries", "3")
 
 ## Caching Strategy
 
-![caching_strategy](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/caching_strategy.svg)
+![caching_strategy](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/caching_strategy.svg)
 
 ---
 
@@ -120,13 +120,13 @@ df.persist(StorageLevel.MEMORY_AND_DISK_SER)
 
 ## SQL Optimization
 
-![sql_optimization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/sql_optimization.svg)
+![sql_optimization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/sql_optimization.svg)
 
 ---
 
 ## Join Optimization
 
-![join_optimization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/join_optimization.svg)
+![join_optimization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/join_optimization.svg)
 
 ---
 
@@ -144,7 +144,7 @@ val joinedDF = largeDF.join(
 
 ## Data Skew
 
-![data_skew](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_skew.svg)
+![data_skew](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/data_skew.svg)
 
 ---
 
@@ -167,55 +167,55 @@ val joinedDF = saltedDF.join(
 
 ## Performance Monitoring
 
-![performance_monitoring](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/performance_monitoring.svg)
+![performance_monitoring](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/performance_monitoring.svg)
 
 ---
 
 ## Spark UI Components
 
-![spark_ui_components](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/spark_ui_components.svg)
+![spark_ui_components](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/spark_ui_components.svg)
 
 ---
 
 ## Metrics Collection
 
-![metrics_collection](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/metrics_collection.svg)
+![metrics_collection](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/metrics_collection.svg)
 
 ---
 
 ## Resource Utilization
 
-![resource_utilization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/resource_utilization.svg)
+![resource_utilization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/resource_utilization.svg)
 
 ---
 
 ## Memory Tuning
 
-![memory_tuning](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_tuning.svg)
+![memory_tuning](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/memory_tuning.svg)
 
 ---
 
 ## GC Optimization
 
-![gc_optimization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/gc_optimization.svg)
+![gc_optimization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/gc_optimization.svg)
 
 ---
 
 ## Network Configuration
 
-![network_configuration](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/network_configuration.svg)
+![network_configuration](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/network_configuration.svg)
 
 ---
 
 ## Storage Optimization
 
-![storage_optimization](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/storage_optimization.svg)
+![storage_optimization](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/storage_optimization.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/best_practices.svg)
+![best_practices](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/best_practices.svg)
 
 ---
 
@@ -231,10 +231,10 @@ val joinedDF = saltedDF.join(
 
 ## Troubleshooting
 
-![troubleshooting](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/troubleshooting.svg)
+![troubleshooting](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/troubleshooting.svg)
 
 ---
 
 ## Production Deployment
 
-![production_deployment](../../../../svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/production_deployment.svg)
+![production_deployment](/svg/courses/big_data/apache-spark-with-scala/08_optimization_tuning/production_deployment.svg)

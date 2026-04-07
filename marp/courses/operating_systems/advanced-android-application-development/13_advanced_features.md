@@ -5,7 +5,7 @@
 
 ## Feature Overview
 
-![feature_overview](../../../../svg/courses/operating_systems/advanced-android-application-development/13_advanced_features/feature_overview.svg)
+![feature_overview](/svg/courses/operating_systems/advanced-android-application-development/13_advanced_features/feature_overview.svg)
 
 ---
 
@@ -263,7 +263,7 @@ public class RichNotificationManager {
 
 ## Integration Best Practices
 
-![integration_best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/13_advanced_features/integration_best_practices.svg)
+![integration_best_practices](/svg/courses/operating_systems/advanced-android-application-development/13_advanced_features/integration_best_practices.svg)
 
 ---
 

@@ -67,7 +67,7 @@
 
 ## The CMake Pipeline
 
-![the_cmake_pipeline](../../../../svg/courses/build_systems/cmake/01_introduction/the_cmake_pipeline.svg)
+![the_cmake_pipeline](/svg/courses/build_systems/cmake/01_introduction/the_cmake_pipeline.svg)
 
 - **Configure step**: CMake reads `CMakeLists.txt` and generates build files
 - **Build step**: Native tool (`make`, `ninja`, etc.) compiles the code
@@ -200,7 +200,7 @@ Generators
 
 ## The CMake Family of Tools
 
-![the_cmake_family_of_tools](../../../../svg/courses/build_systems/cmake/01_introduction/the_cmake_family_of_tools.svg)
+![the_cmake_family_of_tools](/svg/courses/build_systems/cmake/01_introduction/the_cmake_family_of_tools.svg)
 
 ---
 

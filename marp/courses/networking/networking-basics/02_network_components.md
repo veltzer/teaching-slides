@@ -14,7 +14,7 @@
 - Ensures no single server becomes overwhelmed
 - Improves application responsiveness and availability
 
-![load_balancer](../../../../svg/courses/networking/networking-basics/02_network_components/load_balancer.svg)
+![load_balancer](/svg/courses/networking/networking-basics/02_network_components/load_balancer.svg)
 
 ---
 
@@ -24,7 +24,7 @@
 - Can provide anonymity, security, and caching
 - Often used to bypass restrictions or improve performance
 
-![proxy_server](../../../../svg/courses/networking/networking-basics/02_network_components/proxy_server.svg)
+![proxy_server](/svg/courses/networking/networking-basics/02_network_components/proxy_server.svg)
 
 ---
 
@@ -34,7 +34,7 @@
 - Provides benefits like load balancing, SSL termination, and caching
 - Often used to enhance security and performance of web applications
 
-![reverse_proxy](../../../../svg/courses/networking/networking-basics/02_network_components/reverse_proxy.svg)
+![reverse_proxy](/svg/courses/networking/networking-basics/02_network_components/reverse_proxy.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 - Allows multiple devices to share a single public IP address
 - Enhances security by hiding internal network structure
 
-![nat_network_address_translation](../../../../svg/courses/networking/networking-basics/02_network_components/nat_network_address_translation.svg)
+![nat_network_address_translation](/svg/courses/networking/networking-basics/02_network_components/nat_network_address_translation.svg)
 
 ---
 

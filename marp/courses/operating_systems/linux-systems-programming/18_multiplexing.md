@@ -14,13 +14,13 @@
 
 ## The Problem to Solve
 
-![the_problem_to_solve](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/the_problem_to_solve.svg)
+![the_problem_to_solve](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/the_problem_to_solve.svg)
 
 ---
 
 ## Multiplexing Solution
 
-![multiplexing_solution](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/multiplexing_solution.svg)
+![multiplexing_solution](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/multiplexing_solution.svg)
 
 ---
 
@@ -205,7 +205,7 @@ while (1) {
 
 ## poll() vs select()
 
-![poll_vs_select](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/poll_vs_select.svg)
+![poll_vs_select](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/poll_vs_select.svg)
 
 ---
 
@@ -260,7 +260,7 @@ EPOLLRDHUP  // Peer closed connection
 
 ## Level vs Edge Triggered
 
-![level_vs_edge_triggered](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/level_vs_edge_triggered.svg)
+![level_vs_edge_triggered](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/level_vs_edge_triggered.svg)
 
 ---
 
@@ -439,7 +439,7 @@ int handle_partial_write(int fd, io_buffer_t *buf) {
 
 ## Connection State Machine
 
-![connection_state_machine](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/connection_state_machine.svg)
+![connection_state_machine](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/connection_state_machine.svg)
 
 ---
 
@@ -484,7 +484,7 @@ void handle_connection(struct connection *conn, uint32_t events) {
 
 ## Performance Comparison
 
-![performance_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/18_multiplexing/performance_comparison.svg)
+![performance_comparison](/svg/courses/operating_systems/linux-systems-programming/18_multiplexing/performance_comparison.svg)
 
 ---
 

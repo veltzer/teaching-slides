@@ -4,7 +4,7 @@
 
 ## Development Workflow Overview
 
-![development_workflow_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/development_workflow_overview.svg)
+![development_workflow_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/development_workflow_overview.svg)
 
 ---
 
@@ -35,7 +35,7 @@ workspace/
 
 ## devtool Commands
 
-![devtool_commands](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/devtool_commands.svg)
+![devtool_commands](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/devtool_commands.svg)
 
 ---
 
@@ -232,7 +232,7 @@ bitbake -c devpyshell myapp
 
 ## QEMU Testing
 
-![qemu_testing](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/qemu_testing.svg)
+![qemu_testing](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/qemu_testing.svg)
 
 ---
 
@@ -468,7 +468,7 @@ ltrace -c ./myapp  # Summary
 
 ## System Profiling Tools
 
-![system_profiling_tools](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/system_profiling_tools.svg)
+![system_profiling_tools](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/07_development_workflow_and_tools/system_profiling_tools.svg)
 
 ---
 

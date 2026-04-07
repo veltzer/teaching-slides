@@ -705,7 +705,7 @@ ip netns exec red ping 10.0.0.2
 ---
 ## Network Namespaces Diagram
 
-![network_namespaces_diagram](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/network_namespaces_diagram.svg)
+![network_namespaces_diagram](/svg/courses/operating_systems/linux-system-administration/06_network_services/network_namespaces_diagram.svg)
 
 ```bash
 # Run a process inside a namespace
@@ -753,7 +753,7 @@ network:
 
 `tc` (traffic control) manages bandwidth and latency on interfaces.
 
-![traffic_shaping_with_tc](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/traffic_shaping_with_tc.svg)
+![traffic_shaping_with_tc](/svg/courses/operating_systems/linux-system-administration/06_network_services/traffic_shaping_with_tc.svg)
 
 ```bash
 # Limit bandwidth to 1Mbit on eth0
@@ -944,7 +944,7 @@ networkctl status eth0
 
 `PXE` (Preboot Execution Environment) allows machines to boot from the network using DHCP and TFTP.
 
-![network_boot_pxe](../../../../svg/courses/operating_systems/linux-system-administration/06_network_services/network_boot_pxe.svg)
+![network_boot_pxe](/svg/courses/operating_systems/linux-system-administration/06_network_services/network_boot_pxe.svg)
 
 ```bash
 # Install TFTP server

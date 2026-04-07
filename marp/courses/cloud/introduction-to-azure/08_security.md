@@ -2,7 +2,7 @@
 
 ## Security Components
 
-![security_components](../../../../svg/courses/cloud/introduction-to-azure/08_security/security_components.svg)
+![security_components](/svg/courses/cloud/introduction-to-azure/08_security/security_components.svg)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## Identity Protection
 
-![identity_protection](../../../../svg/courses/cloud/introduction-to-azure/08_security/identity_protection.svg)
+![identity_protection](/svg/courses/cloud/introduction-to-azure/08_security/identity_protection.svg)
 
 ---
 
@@ -59,7 +59,7 @@
 
 ## Network Security
 
-![network_security](../../../../svg/courses/cloud/introduction-to-azure/08_security/network_security.svg)
+![network_security](/svg/courses/cloud/introduction-to-azure/08_security/network_security.svg)
 
 ---
 
@@ -128,7 +128,7 @@
 
 ## Security Best Practices
 
-![security_best_practices](../../../../svg/courses/cloud/introduction-to-azure/08_security/security_best_practices.svg)
+![security_best_practices](/svg/courses/cloud/introduction-to-azure/08_security/security_best_practices.svg)
 
 ---
 

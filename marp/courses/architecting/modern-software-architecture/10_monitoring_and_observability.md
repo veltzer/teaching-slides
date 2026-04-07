@@ -335,7 +335,7 @@ with tracer.start_as_current_span("process"):
 ---
 ## Trace Visualization
 
-![trace_visualization](../../../../svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_visualization.svg)
+![trace_visualization](/svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_visualization.svg)
 
 ---
 ## Health Check Strategies

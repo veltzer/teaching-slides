@@ -5,7 +5,7 @@
 
 ## Material Design Principles
 
-![material_design_principles](../../../../svg/courses/operating_systems/advanced-android-application-development/03_material_design/material_design_principles.svg)
+![material_design_principles](/svg/courses/operating_systems/advanced-android-application-development/03_material_design/material_design_principles.svg)
 
 ---
 
@@ -59,13 +59,13 @@
 
 ## Typography System
 
-![typography_system](../../../../svg/courses/operating_systems/advanced-android-application-development/03_material_design/typography_system.svg)
+![typography_system](/svg/courses/operating_systems/advanced-android-application-development/03_material_design/typography_system.svg)
 
 ---
 
 ## Animation Types in Android
 
-![animation_types_in_android](../../../../svg/courses/operating_systems/advanced-android-application-development/03_material_design/animation_types_in_android.svg)
+![animation_types_in_android](/svg/courses/operating_systems/advanced-android-application-development/03_material_design/animation_types_in_android.svg)
 
 ---
 
@@ -198,7 +198,7 @@ public class PulseAnimation extends Animation {
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/03_material_design/best_practices.svg)
+![best_practices](/svg/courses/operating_systems/advanced-android-application-development/03_material_design/best_practices.svg)
 
 ---
 

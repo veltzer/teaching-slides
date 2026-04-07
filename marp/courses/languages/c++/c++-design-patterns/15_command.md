@@ -29,7 +29,7 @@ The button cannot be reused for different operations
 
 ## Command Structure
 
-![command_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/15_command/command_structure.svg)
+![command_structure](/svg/courses/languages/c++/c++-design-patterns/15_command/command_structure.svg)
 
 ---
 

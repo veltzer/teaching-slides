@@ -5,7 +5,7 @@
 
 ## Security Overview
 
-![security_overview](../../../../svg/courses/operating_systems/advanced-android-application-development/09_security_and_permissions/security_overview.svg)
+![security_overview](/svg/courses/operating_systems/advanced-android-application-development/09_security_and_permissions/security_overview.svg)
 
 ---
 
@@ -201,7 +201,7 @@ public class SSLPinningManager {
 
 ## Security Best Practices
 
-![security_best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/09_security_and_permissions/security_best_practices.svg)
+![security_best_practices](/svg/courses/operating_systems/advanced-android-application-development/09_security_and_permissions/security_best_practices.svg)
 
 ---
 

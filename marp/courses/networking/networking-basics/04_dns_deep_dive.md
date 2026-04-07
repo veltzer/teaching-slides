@@ -23,7 +23,7 @@ Browser uses:  93.184.216.34 to establish TCP connection
 
 DNS is organized as an inverted tree structure with the root at the top.
 
-![the_dns_hierarchy](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/the_dns_hierarchy.svg)
+![the_dns_hierarchy](/svg/courses/networking/networking-basics/04_dns_deep_dive/the_dns_hierarchy.svg)
 
 Each level is called a "zone" and is managed by different organizations:
 - **Root zone**: managed by ICANN, served by 13 root server clusters (a.root-servers.net through m.root-servers.net)
@@ -117,7 +117,7 @@ $ dig google.com A +short
 
 CNAME (Canonical Name) creates an alias from one domain name to another.
 
-![cname_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/cname_records.svg)
+![cname_records](/svg/courses/networking/networking-basics/04_dns_deep_dive/cname_records.svg)
 
 ```bash
 $ dig www.example.com
@@ -149,7 +149,7 @@ example.com.    3600    IN    MX    30 mail3.example.com.
 
 The number before the server name is the **priority** (lower = higher priority).
 
-![mx_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/mx_records.svg)
+![mx_records](/svg/courses/networking/networking-basics/04_dns_deep_dive/mx_records.svg)
 
 If mail1 is unreachable, the sender automatically tries mail2, then mail3.
 
@@ -201,7 +201,7 @@ example.com.    86400    IN    NS    b.iana-servers.net.
 
 NS records form the delegation chain from root to your domain:
 
-![ns_records](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/ns_records.svg)
+![ns_records](/svg/courses/networking/networking-basics/04_dns_deep_dive/ns_records.svg)
 
 ---
 
@@ -298,7 +298,7 @@ DNS resolution can happen in two modes:
 
 **Recursive Resolution** -- the resolver does all the work:
 
-![recursive_vs_iterative_resolution](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/recursive_vs_iterative_resolution.svg)
+![recursive_vs_iterative_resolution](/svg/courses/networking/networking-basics/04_dns_deep_dive/recursive_vs_iterative_resolution.svg)
 
 **Iterative Resolution** -- each server returns the next server to ask:
 
@@ -321,7 +321,7 @@ In practice, your computer uses recursive resolution (asking your configured DNS
 
 What happens when you type `www.example.com` in your browser:
 
-![dns_resolution_step_by_step](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/dns_resolution_step_by_step.svg)
+![dns_resolution_step_by_step](/svg/courses/networking/networking-basics/04_dns_deep_dive/dns_resolution_step_by_step.svg)
 
 ```bash
 # Trace the full resolution path
@@ -572,7 +572,7 @@ DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to
 
 **The problem DNSSEC solves:**
 
-![dnssec_securing_dns](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/dnssec_securing_dns.svg)
+![dnssec_securing_dns](/svg/courses/networking/networking-basics/04_dns_deep_dive/dnssec_securing_dns.svg)
 
 **DNSSEC record types:**
 - **RRSIG**: Contains the signature for a record set
@@ -752,7 +752,7 @@ loadbalanced.example.com. 300 IN A 10.0.0.3
 
 Returns different IP addresses based on the client's geographic location:
 
-![geodns](../../../../svg/courses/networking/networking-basics/04_dns_deep_dive/geodns.svg)
+![geodns](/svg/courses/networking/networking-basics/04_dns_deep_dive/geodns.svg)
 
 Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 

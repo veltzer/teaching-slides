@@ -54,8 +54,7 @@ def process_file(md_path: Path) -> int:
 
     rel = md_path.relative_to(MARP_DIR)
     out_dir = SVG_DIR / rel.parent / rel.stem
-    depth = len(rel.parts)
-    rel_prefix = '/'.join(['..'] * depth) + '/svg/' + str(rel.parent / rel.stem)
+    abs_prefix = '/svg/' + str(rel.parent / rel.stem)
 
     # First pass: compute names, detect collisions
     slug_counts: dict[str, int] = {}
@@ -86,7 +85,7 @@ def process_file(md_path: Path) -> int:
 
     # Replace inline SVGs with image references (work backwards to preserve positions)
     for name, m in reversed(named):
-        img_ref = f'![{name}]({rel_prefix}/{name}.svg)'
+        img_ref = f'![{name}]({abs_prefix}/{name}.svg)'
         text = text[:m.start()] + img_ref + text[m.end():]
 
     md_path.write_text(text, encoding='utf-8')

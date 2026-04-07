@@ -16,7 +16,7 @@
 
 ## What is a Firewall
 
-![what_is_a_firewall](../../../../svg/courses/networking/linux-networking-overview/07_firewall/what_is_a_firewall.svg)
+![what_is_a_firewall](/svg/courses/networking/linux-networking-overview/07_firewall/what_is_a_firewall.svg)
 
 ---
 
@@ -48,13 +48,13 @@
 
 ## Packet Flow
 
-![packet_flow](../../../../svg/courses/networking/linux-networking-overview/07_firewall/packet_flow.svg)
+![packet_flow](/svg/courses/networking/linux-networking-overview/07_firewall/packet_flow.svg)
 
 ---
 
 ## Linux Firewall Architecture
 
-![linux_firewall_architecture](../../../../svg/courses/networking/linux-networking-overview/07_firewall/linux_firewall_architecture.svg)
+![linux_firewall_architecture](/svg/courses/networking/linux-networking-overview/07_firewall/linux_firewall_architecture.svg)
 
 ---
 
@@ -273,7 +273,7 @@ apt-get install iptables-persistent
 
 ## Rule Maintenance
 
-![rule_maintenance](../../../../svg/courses/networking/linux-networking-overview/07_firewall/rule_maintenance.svg)
+![rule_maintenance](/svg/courses/networking/linux-networking-overview/07_firewall/rule_maintenance.svg)
 
 ---
 

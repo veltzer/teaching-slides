@@ -66,7 +66,7 @@ ansible-playbook site.yml -f 50
 # ~100MB per fork (varies with modules)
 ```
 
-![100mb_per_fork_varies_with_modules](../../../../svg/courses/devops/ansible/14_performance_tuning/100mb_per_fork_varies_with_modules.svg)
+![100mb_per_fork_varies_with_modules](/svg/courses/devops/ansible/14_performance_tuning/100mb_per_fork_varies_with_modules.svg)
 
 ---
 

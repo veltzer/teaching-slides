@@ -5,7 +5,7 @@
 
 ## Common Collections
 
-![common_collections](../../../../../svg/courses/languages/rust/rust-programming/06_collections/common_collections.svg)
+![common_collections](/svg/courses/languages/rust/rust-programming/06_collections/common_collections.svg)
 
 ---
 
@@ -149,7 +149,7 @@ let s3 = s1 + &s2; // s1 has been moved
 
 ## String Internals
 
-![string_internals](../../../../../svg/courses/languages/rust/rust-programming/06_collections/string_internals.svg)
+![string_internals](/svg/courses/languages/rust/rust-programming/06_collections/string_internals.svg)
 
 ---
 
@@ -283,7 +283,7 @@ let mut map: HashMap<_, _, BuildHasherDefault<DefaultHasher>> =
 
 ## Collection Traits
 
-![collection_traits](../../../../../svg/courses/languages/rust/rust-programming/06_collections/collection_traits.svg)
+![collection_traits](/svg/courses/languages/rust/rust-programming/06_collections/collection_traits.svg)
 
 ---
 
@@ -325,7 +325,7 @@ vec.extend([6,7,8]);     // Add multiple
 ---
 ## Performance Considerations
 
-![performance_considerations](../../../../../svg/courses/languages/rust/rust-programming/06_collections/performance_considerations.svg)
+![performance_considerations](/svg/courses/languages/rust/rust-programming/06_collections/performance_considerations.svg)
 
 ---
 
@@ -399,7 +399,7 @@ Create a simple text analyzer that:
 
 ## Best Practices
 
-![best_practices](../../../../../svg/courses/languages/rust/rust-programming/06_collections/best_practices.svg)
+![best_practices](/svg/courses/languages/rust/rust-programming/06_collections/best_practices.svg)
 
 ---
 

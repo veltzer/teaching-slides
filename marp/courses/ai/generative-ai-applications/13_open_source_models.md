@@ -4,7 +4,7 @@
 
 ## Day 4: Open Source Models
 
-![day_4_open_source_models](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/day_4_open_source_models.svg)
+![day_4_open_source_models](/svg/courses/ai/generative-ai-applications/13_open_source_models/day_4_open_source_models.svg)
 
 ---
 
@@ -20,19 +20,19 @@
 | **Compliance** | Meet data residency requirements |
 | **Transparency** | Inspect model weights and architecture |
 
-![why_open_source_models](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/why_open_source_models.svg)
+![why_open_source_models](/svg/courses/ai/generative-ai-applications/13_open_source_models/why_open_source_models.svg)
 
 ---
 
 ## The Open Source Model Landscape
 
-![the_open_source_model_landscape](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/the_open_source_model_landscape.svg)
+![the_open_source_model_landscape](/svg/courses/ai/generative-ai-applications/13_open_source_models/the_open_source_model_landscape.svg)
 
 ---
 
 ## Model Size vs. Hardware Requirements
 
-![model_size_vs_hardware_requirements](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/model_size_vs_hardware_requirements.svg)
+![model_size_vs_hardware_requirements](/svg/courses/ai/generative-ai-applications/13_open_source_models/model_size_vs_hardware_requirements.svg)
 
 ---
 
@@ -253,13 +253,13 @@ result = chain.invoke({"question": "What are decorators?"})
 
 ## Benchmarking Open Source vs. Closed Source
 
-![benchmarking_open_source_vs_closed_source](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/benchmarking_open_source_vs_closed_source.svg)
+![benchmarking_open_source_vs_closed_source](/svg/courses/ai/generative-ai-applications/13_open_source_models/benchmarking_open_source_vs_closed_source.svg)
 
 ---
 
 ## Choosing the Right Model
 
-![choosing_the_right_model](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/choosing_the_right_model.svg)
+![choosing_the_right_model](/svg/courses/ai/generative-ai-applications/13_open_source_models/choosing_the_right_model.svg)
 
 ---
 
@@ -308,13 +308,13 @@ Exercise: Set up and compare local models.
 
 ## Model Formats and Quantization Types
 
-![model_formats_and_quantization_types](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/model_formats_and_quantization_types.svg)
+![model_formats_and_quantization_types](/svg/courses/ai/generative-ai-applications/13_open_source_models/model_formats_and_quantization_types.svg)
 
 ---
 
 ## Quantization Quality Comparison
 
-![quantization_quality_comparison](../../../../svg/courses/ai/generative-ai-applications/13_open_source_models/quantization_quality_comparison.svg)
+![quantization_quality_comparison](/svg/courses/ai/generative-ai-applications/13_open_source_models/quantization_quality_comparison.svg)
 
 ---
 

@@ -77,7 +77,7 @@ graph TD
 ---
 ## Image Layers Visualization
 
-![image_layers_visualization](../../../../svg/courses/architecting/modern-software-architecture/07_containerization_recap/image_layers_visualization.svg)
+![image_layers_visualization](/svg/courses/architecting/modern-software-architecture/07_containerization_recap/image_layers_visualization.svg)
 
 ---
 ## Basic Dockerfile

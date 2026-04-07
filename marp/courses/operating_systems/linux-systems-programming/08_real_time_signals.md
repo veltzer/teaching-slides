@@ -20,7 +20,7 @@
 
 ## Standard Signal Merging
 
-![standard_signal_merging](../../../../svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/standard_signal_merging.svg)
+![standard_signal_merging](/svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/standard_signal_merging.svg)
 
 ---
 
@@ -58,7 +58,7 @@
 
 ## Real-Time Signal Queuing
 
-![real_time_signal_queuing](../../../../svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/real_time_signal_queuing.svg)
+![real_time_signal_queuing](/svg/courses/operating_systems/linux-systems-programming/08_real_time_signals/real_time_signal_queuing.svg)
 
 ---
 

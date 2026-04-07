@@ -33,7 +33,7 @@
 
 ## Spark on Kubernetes Architecture
 
-![spark_on_kubernetes_architecture](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/spark_on_kubernetes_architecture.svg)
+![spark_on_kubernetes_architecture](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/spark_on_kubernetes_architecture.svg)
 
 ---
 
@@ -106,7 +106,7 @@ spark-submit \
 - Enables reliable data lakes
 - Developed by Databricks, now open source
 
-![what_is_delta_lake](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/what_is_delta_lake.svg)
+![what_is_delta_lake](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/what_is_delta_lake.svg)
 
 ---
 
@@ -123,7 +123,7 @@ spark-submit \
 
 ## Delta Lake Architecture
 
-![delta_lake_architecture](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/delta_lake_architecture.svg)
+![delta_lake_architecture](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/delta_lake_architecture.svg)
 
 ---
 
@@ -246,7 +246,7 @@ Key metrics to track:
 
 ## Spark Web UI
 
-![spark_web_ui](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/spark_web_ui.svg)
+![spark_web_ui](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/spark_web_ui.svg)
 
 ---
 
@@ -481,7 +481,7 @@ spark.read \
     - Silver: Cleaned, validated data
     - Gold: Business-level aggregates
 
-![data_pipeline_design_patterns](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/data_pipeline_design_patterns.svg)
+![data_pipeline_design_patterns](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/data_pipeline_design_patterns.svg)
 
 ---
 
@@ -557,7 +557,7 @@ spark.kerberos.principal=spark@EXAMPLE.COM
 
 ## Authorization with Ranger/Sentry
 
-![authorization_with_ranger_sentry](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/authorization_with_ranger_sentry.svg)
+![authorization_with_ranger_sentry](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/authorization_with_ranger_sentry.svg)
 
 ---
 
@@ -714,4 +714,4 @@ Thank you!
 
 Contact: spark-admin@example.com
 
-![q_a](../../svg/lectures/advanced-spark-ecosystem-and-best-practice-python/q_a.svg)
+![q_a](/svg/lectures/advanced-spark-ecosystem-and-best-practice-python/q_a.svg)

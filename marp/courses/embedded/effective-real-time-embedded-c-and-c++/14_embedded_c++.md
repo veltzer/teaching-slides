@@ -14,7 +14,7 @@
 
 ## Why C++ in Embedded?
 
-![why_c_in_embedded](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/14_embedded_c++/why_c_in_embedded.svg)
+![why_c_in_embedded](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/14_embedded_c++/why_c_in_embedded.svg)
 
 ---
 

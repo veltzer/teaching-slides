@@ -26,7 +26,7 @@
 
 ## The Clean Desk Test
 
-![the_clean_desk_test](../../../../svg/courses/security/it-security-policies/07_best_practices/the_clean_desk_test.svg)
+![the_clean_desk_test](/svg/courses/security/it-security-policies/07_best_practices/the_clean_desk_test.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Tailgating Prevention
 
-![tailgating_prevention](../../../../svg/courses/security/it-security-policies/07_best_practices/tailgating_prevention.svg)
+![tailgating_prevention](/svg/courses/security/it-security-policies/07_best_practices/tailgating_prevention.svg)
 
 - "I'm sorry, could you badge in? It's company policy."
 - This is not rude - it is responsible
@@ -95,7 +95,7 @@
 - Do not download cracked or pirated software
 - Uninstall software you no longer use
 
-![software_and_update_security](../../../../svg/courses/security/it-security-policies/07_best_practices/software_and_update_security.svg)
+![software_and_update_security](/svg/courses/security/it-security-policies/07_best_practices/software_and_update_security.svg)
 
 ---
 
@@ -184,7 +184,7 @@
 
 ## Building Good Habits
 
-![building_good_habits](../../../../svg/courses/security/it-security-policies/07_best_practices/building_good_habits.svg)
+![building_good_habits](/svg/courses/security/it-security-policies/07_best_practices/building_good_habits.svg)
 
 ---
 
@@ -216,7 +216,7 @@
 
 ## The Three Things to Remember
 
-![the_three_things_to_remember](../../../../svg/courses/security/it-security-policies/07_best_practices/the_three_things_to_remember.svg)
+![the_three_things_to_remember](/svg/courses/security/it-security-policies/07_best_practices/the_three_things_to_remember.svg)
 
 Security is a team effort. Every good decision you make protects not just you, but everyone in the organization.
 

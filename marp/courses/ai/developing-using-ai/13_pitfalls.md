@@ -25,7 +25,7 @@ Understanding common mistakes prevents:
 
 ## The AI Adoption Danger Zones
 
-![the_ai_adoption_danger_zones](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/the_ai_adoption_danger_zones.svg)
+![the_ai_adoption_danger_zones](/svg/courses/ai/developing-using-ai/13_pitfalls/the_ai_adoption_danger_zones.svg)
 
 ---
 
@@ -181,7 +181,7 @@ Prevent AI from becoming a crutch for domain knowledge:
 
 ## Quality Control Failures
 
-![quality_control_failures](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/quality_control_failures.svg)
+![quality_control_failures](/svg/courses/ai/developing-using-ai/13_pitfalls/quality_control_failures.svg)
 
 ---
 
@@ -339,7 +339,7 @@ Ensure AI code follows established development standards:
 
 ## Context Limitation Challenges
 
-![context_limitation_challenges](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/context_limitation_challenges.svg)
+![context_limitation_challenges](/svg/courses/ai/developing-using-ai/13_pitfalls/context_limitation_challenges.svg)
 
 ---
 
@@ -488,7 +488,7 @@ Navigate AI limitations with legacy code:
 
 ## Tool Limitation Recognition
 
-![tool_limitation_recognition](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/tool_limitation_recognition.svg)
+![tool_limitation_recognition](/svg/courses/ai/developing-using-ai/13_pitfalls/tool_limitation_recognition.svg)
 
 ---
 
@@ -625,7 +625,7 @@ class WorkaroundPatternLibrary:
 
 ## Team Best Practices
 
-![team_best_practices](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/team_best_practices.svg)
+![team_best_practices](/svg/courses/ai/developing-using-ai/13_pitfalls/team_best_practices.svg)
 
 ---
 
@@ -867,7 +867,7 @@ Establish systematic improvement of AI usage patterns:
 
 ## Advanced Pitfall Prevention
 
-![advanced_pitfall_prevention](../../../../svg/courses/ai/developing-using-ai/13_pitfalls/advanced_pitfall_prevention.svg)
+![advanced_pitfall_prevention](/svg/courses/ai/developing-using-ai/13_pitfalls/advanced_pitfall_prevention.svg)
 
 ---
 

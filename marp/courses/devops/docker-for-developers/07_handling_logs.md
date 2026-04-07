@@ -4,7 +4,7 @@
 
 ## Docker Logging Overview
 
-![docker_logging_overview](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/docker_logging_overview.svg)
+![docker_logging_overview](/svg/courses/devops/docker-for-developers/07_handling_logs/docker_logging_overview.svg)
 
 ---
 
@@ -22,13 +22,13 @@
 
 ## Configuring Log Drivers
 
-![configuring_log_drivers](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/configuring_log_drivers.svg)
+![configuring_log_drivers](/svg/courses/devops/docker-for-developers/07_handling_logs/configuring_log_drivers.svg)
 
 ---
 
 ## Writing Application Logs
 
-![writing_application_logs](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/writing_application_logs.svg)
+![writing_application_logs](/svg/courses/devops/docker-for-developers/07_handling_logs/writing_application_logs.svg)
 
 ---
 
@@ -60,7 +60,7 @@
 
 ## Log Aggregation
 
-![log_aggregation](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/log_aggregation.svg)
+![log_aggregation](/svg/courses/devops/docker-for-developers/07_handling_logs/log_aggregation.svg)
 
 ---
 
@@ -77,13 +77,13 @@
 
 ## Log Rotation Strategy
 
-![log_rotation_strategy](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/log_rotation_strategy.svg)
+![log_rotation_strategy](/svg/courses/devops/docker-for-developers/07_handling_logs/log_rotation_strategy.svg)
 
 ---
 
 ## Monitoring Log Output
 
-![monitoring_log_output](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/monitoring_log_output.svg)
+![monitoring_log_output](/svg/courses/devops/docker-for-developers/07_handling_logs/monitoring_log_output.svg)
 
 ---
 
@@ -121,4 +121,4 @@ logger.info(json.dumps({
 
 ## Troubleshooting Logs
 
-![troubleshooting_logs](../../../../svg/courses/devops/docker-for-developers/07_handling_logs/troubleshooting_logs.svg)
+![troubleshooting_logs](/svg/courses/devops/docker-for-developers/07_handling_logs/troubleshooting_logs.svg)

@@ -16,7 +16,7 @@ Powerful analytics framework that:
 
 ## Aggregation Types
 
-![aggregation_types](../../../../svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_types.svg)
+![aggregation_types](/svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_types.svg)
 
 ---
 
@@ -589,7 +589,7 @@ Running total
 
 ## Aggregation Performance
 
-![aggregation_performance](../../../../svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_performance.svg)
+![aggregation_performance](/svg/courses/databases/elasticsearch-for-developers/08_aggregations/aggregation_performance.svg)
 
 ---
 

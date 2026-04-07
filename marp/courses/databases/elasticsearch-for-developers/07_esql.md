@@ -16,7 +16,7 @@ A new piped query language that:
 
 ## ES|QL vs Query DSL
 
-![es_ql_vs_query_dsl](../../../../svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_vs_query_dsl.svg)
+![es_ql_vs_query_dsl](/svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_vs_query_dsl.svg)
 
 ---
 
@@ -33,7 +33,7 @@ Best for:
 
 ## ES|QL Architecture
 
-![es_ql_architecture](../../../../svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_architecture.svg)
+![es_ql_architecture](/svg/courses/databases/elasticsearch-for-developers/07_esql/es_ql_architecture.svg)
 
 ---
 

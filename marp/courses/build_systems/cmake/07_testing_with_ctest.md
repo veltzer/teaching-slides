@@ -298,7 +298,7 @@ set_tests_properties(
 )
 ```
 
-![fixtures_multiple_tests_sharing_a_fixture](../../../../svg/courses/build_systems/cmake/07_testing_with_ctest/fixtures_multiple_tests_sharing_a_fixture.svg)
+![fixtures_multiple_tests_sharing_a_fixture](/svg/courses/build_systems/cmake/07_testing_with_ctest/fixtures_multiple_tests_sharing_a_fixture.svg)
 
 - Setup runs once before the group, cleanup once after
 

@@ -24,7 +24,7 @@
 
 ## Two Types of Prompt Injection
 
-![two_types_of_prompt_injection](../../../../svg/courses/security/working-with-llms-securely/02_prompt_injection/two_types_of_prompt_injection.svg)
+![two_types_of_prompt_injection](/svg/courses/security/working-with-llms-securely/02_prompt_injection/two_types_of_prompt_injection.svg)
 
 ---
 

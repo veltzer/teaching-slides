@@ -5,7 +5,7 @@
 
 ## Types of Errors
 
-![types_of_errors](../../../../../svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/types_of_errors.svg)
+![types_of_errors](/svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/types_of_errors.svg)
 
 ---
 
@@ -354,7 +354,7 @@ mod tests {
 
 ## Best Practices
 
-![best_practices](../../../../../svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/best_practices.svg)
+![best_practices](/svg/courses/languages/rust/rust-programming/08_error_handling_and_testing/best_practices.svg)
 
 ---
 

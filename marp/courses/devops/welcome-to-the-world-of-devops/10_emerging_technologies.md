@@ -5,7 +5,7 @@ Modern observability and service management tools
 
 ## Advanced Observability
 
-![advanced_observability](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/advanced_observability.svg)
+![advanced_observability](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/advanced_observability.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Modern observability and service management tools
 
 ## Grafana Dashboards
 
-![grafana_dashboards](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/grafana_dashboards.svg)
+![grafana_dashboards](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/grafana_dashboards.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Modern observability and service management tools
 
 ## Jaeger Components
 
-![jaeger_components](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/jaeger_components.svg)
+![jaeger_components](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/jaeger_components.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Modern observability and service management tools
 
 ## Istio Architecture
 
-![istio_architecture](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/istio_architecture.svg)
+![istio_architecture](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/istio_architecture.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Modern observability and service management tools
 
 ## Modern Logging
 
-![modern_logging](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/modern_logging.svg)
+![modern_logging](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/modern_logging.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Modern observability and service management tools
 
 ## OpenTelemetry
 
-![opentelemetry](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/opentelemetry.svg)
+![opentelemetry](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/opentelemetry.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Modern observability and service management tools
 
 ## Future Trends
 
-![future_trends](../../../../svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/future_trends.svg)
+![future_trends](/svg/courses/devops/welcome-to-the-world-of-devops/10_emerging_technologies/future_trends.svg)
 
 ---
 

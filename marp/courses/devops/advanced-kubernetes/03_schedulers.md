@@ -17,7 +17,7 @@ Advanced Kubernetes Course - Day 1, Module 3
 
 ## The Scheduling Pipeline
 
-![the_scheduling_pipeline](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/the_scheduling_pipeline.svg)
+![the_scheduling_pipeline](/svg/courses/devops/advanced-kubernetes/03_schedulers/the_scheduling_pipeline.svg)
 
 ---
 
@@ -150,7 +150,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-![pod_affinity_co_locate_pods](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
+![pod_affinity_co_locate_pods](/svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
 
 ---
 
@@ -172,7 +172,7 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
-![pod_anti_affinity_spread_pods](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/pod_anti_affinity_spread_pods.svg)
+![pod_anti_affinity_spread_pods](/svg/courses/devops/advanced-kubernetes/03_schedulers/pod_anti_affinity_spread_pods.svg)
 
 ---
 
@@ -258,7 +258,7 @@ spec:
 
 ## Topology Spread Visualization
 
-![topology_spread_visualization](../../../../svg/courses/devops/advanced-kubernetes/03_schedulers/topology_spread_visualization.svg)
+![topology_spread_visualization](/svg/courses/devops/advanced-kubernetes/03_schedulers/topology_spread_visualization.svg)
 
 ---
 

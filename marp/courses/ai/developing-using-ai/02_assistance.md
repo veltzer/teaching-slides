@@ -17,7 +17,7 @@ This chapter explores:
 
 ## The AI Coding Assistant Landscape
 
-![the_ai_coding_assistant_landscape](../../../../svg/courses/ai/developing-using-ai/02_assistance/the_ai_coding_assistant_landscape.svg)
+![the_ai_coding_assistant_landscape](/svg/courses/ai/developing-using-ai/02_assistance/the_ai_coding_assistant_landscape.svg)
 
 ---
 
@@ -118,7 +118,7 @@ Natural language conversations about your code
 
 ## Cursor Codebase Understanding
 
-![cursor_codebase_understanding](../../../../svg/courses/ai/developing-using-ai/02_assistance/cursor_codebase_understanding.svg)
+![cursor_codebase_understanding](/svg/courses/ai/developing-using-ai/02_assistance/cursor_codebase_understanding.svg)
 
 ---
 
@@ -176,7 +176,7 @@ Best for AWS-heavy development
 
 ## CodeWhisperer Security Features
 
-![codewhisperer_security_features](../../../../svg/courses/ai/developing-using-ai/02_assistance/codewhisperer_security_features.svg)
+![codewhisperer_security_features](/svg/courses/ai/developing-using-ai/02_assistance/codewhisperer_security_features.svg)
 
 ---
 
@@ -254,7 +254,7 @@ AI sees open tabs and recent edits
 
 ## Project-Specific Patterns
 
-![project_specific_patterns](../../../../svg/courses/ai/developing-using-ai/02_assistance/project_specific_patterns.svg)
+![project_specific_patterns](/svg/courses/ai/developing-using-ai/02_assistance/project_specific_patterns.svg)
 
 ---
 
@@ -357,7 +357,7 @@ AI becomes your code reviewer
 
 ## Refactoring Assistance
 
-![refactoring_assistance](../../../../svg/courses/ai/developing-using-ai/02_assistance/refactoring_assistance.svg)
+![refactoring_assistance](/svg/courses/ai/developing-using-ai/02_assistance/refactoring_assistance.svg)
 
 ---
 
@@ -529,7 +529,7 @@ Each iteration with AI assistance
 
 ## Comment-Driven Development
 
-![comment_driven_development](../../../../svg/courses/ai/developing-using-ai/02_assistance/comment_driven_development.svg)
+![comment_driven_development](/svg/courses/ai/developing-using-ai/02_assistance/comment_driven_development.svg)
 
 ---
 

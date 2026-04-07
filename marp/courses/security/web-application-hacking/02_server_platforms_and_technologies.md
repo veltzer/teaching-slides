@@ -38,7 +38,7 @@ X-Powered-By: PHP/7.4.3
 
 ## Web Server Software
 
-![web_server_software](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/web_server_software.svg)
+![web_server_software](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/web_server_software.svg)
 
 ---
 
@@ -144,7 +144,7 @@ curl -s https://target.com/sitemap.xml
 
 ## Framework-Specific Attack Surfaces
 
-![framework_specific_attack_surfaces](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/framework_specific_attack_surfaces.svg)
+![framework_specific_attack_surfaces](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/framework_specific_attack_surfaces.svg)
 
 ---
 
@@ -211,7 +211,7 @@ MongoDB:
 
 ## Client-Side Technologies
 
-![client_side_technologies](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/client_side_technologies.svg)
+![client_side_technologies](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/client_side_technologies.svg)
 
 ---
 
@@ -335,7 +335,7 @@ Content-Length: 1234
 
 ## HTTP Status Codes for Pentesters
 
-![http_status_codes_for_pentesters](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/http_status_codes_for_pentesters.svg)
+![http_status_codes_for_pentesters](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/http_status_codes_for_pentesters.svg)
 
 > A `403` vs `404` difference reveals resource existence
 
@@ -362,7 +362,7 @@ testssl.sh target.com
 
 ## Content Types That Matter
 
-![content_types_that_matter](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/content_types_that_matter.svg)
+![content_types_that_matter](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/content_types_that_matter.svg)
 
 ---
 
@@ -381,7 +381,7 @@ testssl.sh target.com
 
 ## Proxy Architecture
 
-![proxy_architecture](../../../../svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/proxy_architecture.svg)
+![proxy_architecture](/svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/proxy_architecture.svg)
 
 - Proxies allow inspection and modification of traffic
 - Multiple proxy layers can complicate testing

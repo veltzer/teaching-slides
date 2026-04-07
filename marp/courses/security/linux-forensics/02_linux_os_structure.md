@@ -577,7 +577,7 @@ find /var/spool/at -type f -exec ls -la {} \;
 
 ## The Linux Boot Process
 
-![the_linux_boot_process](../../../../svg/courses/security/linux-forensics/02_linux_os_structure/the_linux_boot_process.svg)
+![the_linux_boot_process](/svg/courses/security/linux-forensics/02_linux_os_structure/the_linux_boot_process.svg)
 
 ```bash
 # View boot configuration

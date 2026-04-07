@@ -214,7 +214,7 @@ static int __init my_module_init(void)
 
 ## Resource Management
 
-![resource_management](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/resource_management.svg)
+![resource_management](/svg/courses/networking/linux-networking-overview/05_linux_module_primer/resource_management.svg)
 
 ---
 
@@ -358,13 +358,13 @@ modprobe --show-depends mymodule
 
 ## Debugging Tools
 
-![debugging_tools](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/debugging_tools.svg)
+![debugging_tools](/svg/courses/networking/linux-networking-overview/05_linux_module_primer/debugging_tools.svg)
 
 ---
 
 ## Module Lifecycle
 
-![module_lifecycle](../../../../svg/courses/networking/linux-networking-overview/05_linux_module_primer/module_lifecycle.svg)
+![module_lifecycle](/svg/courses/networking/linux-networking-overview/05_linux_module_primer/module_lifecycle.svg)
 
 ---
 

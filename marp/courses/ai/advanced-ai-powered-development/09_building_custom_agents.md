@@ -15,7 +15,7 @@
 - Goes beyond single prompt-response: maintains goals across multiple steps
 - Core loop: `Observe -> Think -> Act -> Observe ...`
 
-![what_is_an_agent](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/what_is_an_agent.svg)
+![what_is_an_agent](/svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/what_is_an_agent.svg)
 
 ---
 
@@ -83,7 +83,7 @@ async def parallel_review(code: str):
 
 - Agents can collaborate through different coordination strategies
 
-![multi_agent_communication_patterns](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/multi_agent_communication_patterns.svg)
+![multi_agent_communication_patterns](/svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/multi_agent_communication_patterns.svg)
 
 - **Peer-to-peer**: agents pass messages directly via `handoffs`
 - **Shared blackboard**: agents read/write to a common state store
@@ -633,7 +633,7 @@ def test_golden(mock_read_file):
 
 ## Monitoring Agents in Production
 
-![monitoring_agents_in_production](../../../../svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/monitoring_agents_in_production.svg)
+![monitoring_agents_in_production](/svg/courses/ai/advanced-ai-powered-development/09_building_custom_agents/monitoring_agents_in_production.svg)
 
 - **Log every tool call**: inputs, outputs, latency, token usage
 - **Trace conversations**: link multi-turn exchanges with a trace ID

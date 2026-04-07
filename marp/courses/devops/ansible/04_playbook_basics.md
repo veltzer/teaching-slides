@@ -12,7 +12,7 @@
 
 ## Playbook Execution Flow
 
-![playbook_execution_flow](../../../../svg/courses/devops/ansible/04_playbook_basics/playbook_execution_flow.svg)
+![playbook_execution_flow](/svg/courses/devops/ansible/04_playbook_basics/playbook_execution_flow.svg)
 
 ---
 

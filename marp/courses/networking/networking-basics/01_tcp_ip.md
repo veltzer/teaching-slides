@@ -11,7 +11,7 @@
 ---
 
 ## The TCP/IP Protocol Stack
-![the_tcp_ip_protocol_stack](../../../../svg/courses/networking/networking-basics/01_tcp_ip/the_tcp_ip_protocol_stack.svg)
+![the_tcp_ip_protocol_stack](/svg/courses/networking/networking-basics/01_tcp_ip/the_tcp_ip_protocol_stack.svg)
 
 ---
 
@@ -32,7 +32,7 @@
 ---
 
 ## IP Address Classes (IPv4)
-![ip_address_classes_ipv4](../../../../svg/courses/networking/networking-basics/01_tcp_ip/ip_address_classes_ipv4.svg)
+![ip_address_classes_ipv4](/svg/courses/networking/networking-basics/01_tcp_ip/ip_address_classes_ipv4.svg)
 
 ---
 
@@ -46,7 +46,7 @@
 
 ## IP Packet Structure
 
-![ip_packet_structure](../../../../svg/courses/networking/networking-basics/01_tcp_ip/ip_packet_structure.svg)
+![ip_packet_structure](/svg/courses/networking/networking-basics/01_tcp_ip/ip_packet_structure.svg)
 
 ---
 
@@ -63,7 +63,7 @@
 ---
 
 ## TCP Three-Way Handshake
-![tcp_three_way_handshake](../../../../svg/courses/networking/networking-basics/01_tcp_ip/tcp_three_way_handshake.svg)
+![tcp_three_way_handshake](/svg/courses/networking/networking-basics/01_tcp_ip/tcp_three_way_handshake.svg)
 
 ---
 
@@ -103,7 +103,7 @@
 ---
 
 ## Domain Name System (DNS)
-![domain_name_system_dns](../../../../svg/courses/networking/networking-basics/01_tcp_ip/domain_name_system_dns.svg)
+![domain_name_system_dns](/svg/courses/networking/networking-basics/01_tcp_ip/domain_name_system_dns.svg)
 
 ---
 
@@ -132,7 +132,7 @@
 ---
 
 ## NAT Operation
-![nat_operation](../../../../svg/courses/networking/networking-basics/01_tcp_ip/nat_operation.svg)
+![nat_operation](/svg/courses/networking/networking-basics/01_tcp_ip/nat_operation.svg)
 
 ---
 

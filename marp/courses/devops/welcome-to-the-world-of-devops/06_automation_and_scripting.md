@@ -5,7 +5,7 @@ Leveraging automation for DevOps efficiency
 
 ## Scripting Languages
 
-![scripting_languages](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/scripting_languages.svg)
+![scripting_languages](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/scripting_languages.svg)
 
 ---
 
@@ -21,7 +21,7 @@ Leveraging automation for DevOps efficiency
 
 ## Bash Scripting
 
-![bash_scripting](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/bash_scripting.svg)
+![bash_scripting](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/bash_scripting.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Leveraging automation for DevOps efficiency
 
 ## Automation Frameworks
 
-![automation_frameworks](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/automation_frameworks.svg)
+![automation_frameworks](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/automation_frameworks.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Leveraging automation for DevOps efficiency
 
 ## CI/CD Pipeline Scripts
 
-![ci_cd_pipeline_scripts](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/ci_cd_pipeline_scripts.svg)
+![ci_cd_pipeline_scripts](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/ci_cd_pipeline_scripts.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Leveraging automation for DevOps efficiency
 
 ## Monitoring Scripts
 
-![monitoring_scripts](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/monitoring_scripts.svg)
+![monitoring_scripts](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/monitoring_scripts.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Leveraging automation for DevOps efficiency
 
 ## Script Management
 
-![script_management](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/script_management.svg)
+![script_management](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/script_management.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Leveraging automation for DevOps efficiency
 
 ## Security Considerations
 
-![security_considerations](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/security_considerations.svg)
+![security_considerations](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/security_considerations.svg)
 
 ---
 
@@ -117,4 +117,4 @@ Leveraging automation for DevOps efficiency
 
 ## Deployment Automation
 
-![deployment_automation](../../../../svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/deployment_automation.svg)
+![deployment_automation](/svg/courses/devops/welcome-to-the-world-of-devops/06_automation_and_scripting/deployment_automation.svg)

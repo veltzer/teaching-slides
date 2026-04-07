@@ -24,7 +24,7 @@
 
 ## Monorepo vs Polyrepo
 
-![monorepo_vs_polyrepo](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/monorepo_vs_polyrepo.svg)
+![monorepo_vs_polyrepo](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/monorepo_vs_polyrepo.svg)
 
 ---
 
@@ -125,7 +125,7 @@ bazel query \
 
 ## Dependency Management
 
-![dependency_management](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/dependency_management.svg)
+![dependency_management](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/dependency_management.svg)
 
 - Each repo declares its own dependency versions
 - `Dependabot` or `Renovate` automates version bumps
@@ -164,7 +164,7 @@ bazel query \
 
 ## Branching Strategies Overview
 
-![branching_strategies_overview](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/branching_strategies_overview.svg)
+![branching_strategies_overview](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/branching_strategies_overview.svg)
 
 ---
 
@@ -180,7 +180,7 @@ bazel query \
 
 ## Trunk-Based Development: Flow
 
-![trunk_based_development_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/trunk_based_development_flow.svg)
+![trunk_based_development_flow](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/trunk_based_development_flow.svg)
 
 ---
 
@@ -206,7 +206,7 @@ bazel query \
 
 ## Feature Branching: Flow
 
-![feature_branching_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/feature_branching_flow.svg)
+![feature_branching_flow](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/feature_branching_flow.svg)
 
 ---
 
@@ -234,7 +234,7 @@ bazel query \
 
 ## Git Flow Visualization
 
-![git_flow_visualization](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/git_flow_visualization.svg)
+![git_flow_visualization](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/git_flow_visualization.svg)
 
 ---
 
@@ -261,7 +261,7 @@ bazel query \
 
 ## Release Branching vs Release from Trunk
 
-![release_branching_vs_release_from_trunk](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/release_branching_vs_release_from_trunk.svg)
+![release_branching_vs_release_from_trunk](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/release_branching_vs_release_from_trunk.svg)
 
 ---
 
@@ -433,7 +433,7 @@ Dockerfile              @org/devops-team
 
 ## Putting It All Together
 
-![putting_it_all_together](../../../../svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/putting_it_all_together.svg)
+![putting_it_all_together](/svg/courses/devops/architectural-decisions-in-devops/02_source_code_management_strategy/putting_it_all_together.svg)
 
 ---
 

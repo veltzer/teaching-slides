@@ -626,7 +626,7 @@ for t in threads:
 - Threads are useful for I/O-bound tasks
 - For CPU-bound tasks, use `multiprocessing`
 
-![threading_the_gil](../../../../../svg/courses/languages/python/python-programming/11_systems_programming/threading_the_gil.svg)
+![threading_the_gil](/svg/courses/languages/python/python-programming/11_systems_programming/threading_the_gil.svg)
 
 ---
 ## Threading - Thread Pool

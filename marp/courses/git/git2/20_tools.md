@@ -740,7 +740,7 @@ if __name__ == '__main__':
 Choosing the right Git tools:
 
 **Development Environment:**
-![tool_selection_criteria](../../../../svg/courses/git/git2/20_tools/tool_selection_criteria.svg)
+![tool_selection_criteria](/svg/courses/git/git2/20_tools/tool_selection_criteria.svg)
 
 ---
 

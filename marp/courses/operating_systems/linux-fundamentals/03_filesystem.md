@@ -5,7 +5,7 @@
 
 ## Basic File System Structure
 
-![basic_file_system_structure](../../../../svg/courses/operating_systems/linux-fundamentals/03_filesystem/basic_file_system_structure.svg)
+![basic_file_system_structure](/svg/courses/operating_systems/linux-fundamentals/03_filesystem/basic_file_system_structure.svg)
 
 Key Directories:
 - `/bin`: Essential commands
@@ -33,7 +33,7 @@ Key Directories:
 
 ## Understanding Paths
 
-![understanding_paths](../../../../svg/courses/operating_systems/linux-fundamentals/03_filesystem/understanding_paths.svg)
+![understanding_paths](/svg/courses/operating_systems/linux-fundamentals/03_filesystem/understanding_paths.svg)
 
 Examples:
 
@@ -79,7 +79,7 @@ cd -
 
 ## Home Directories
 
-![home_directories](../../../../svg/courses/operating_systems/linux-fundamentals/03_filesystem/home_directories.svg)
+![home_directories](/svg/courses/operating_systems/linux-fundamentals/03_filesystem/home_directories.svg)
 
 Access methods:
 
@@ -131,7 +131,7 @@ dirs -v
 
 ## Directory Stack Management
 
-![directory_stack_management](../../../../svg/courses/operating_systems/linux-fundamentals/03_filesystem/directory_stack_management.svg)
+![directory_stack_management](/svg/courses/operating_systems/linux-fundamentals/03_filesystem/directory_stack_management.svg)
 
 ---
 
@@ -182,7 +182,7 @@ echo $HOME
 
 ## Common Path Operations
 
-![common_path_operations](../../../../svg/courses/operating_systems/linux-fundamentals/03_filesystem/common_path_operations.svg)
+![common_path_operations](/svg/courses/operating_systems/linux-fundamentals/03_filesystem/common_path_operations.svg)
 
 Examples:
 

@@ -281,7 +281,7 @@ graph TD
 ---
 ## Token Bucket Diagram
 
-![token_bucket_diagram](../../../../svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/token_bucket_diagram.svg)
+![token_bucket_diagram](/svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/token_bucket_diagram.svg)
 
 ---
 ## Rate Limiting Response
@@ -404,7 +404,7 @@ graph LR
 ---
 ## Resiliency Testing Pyramid
 
-![resiliency_testing_pyramid](../../../../svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_testing_pyramid.svg)
+![resiliency_testing_pyramid](/svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/resiliency_testing_pyramid.svg)
 
 ---
 ## Service Mesh for Resiliency

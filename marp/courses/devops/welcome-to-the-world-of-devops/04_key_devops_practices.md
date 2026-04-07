@@ -15,13 +15,13 @@ Essential practices for successful DevOps implementation
 
 ## IaC Benefits
 
-![iac_benefits](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/iac_benefits.svg)
+![iac_benefits](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/iac_benefits.svg)
 
 ---
 
 ## Configuration Management
 
-![configuration_management](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/configuration_management.svg)
+![configuration_management](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/configuration_management.svg)
 
 ---
 
@@ -37,7 +37,7 @@ Essential practices for successful DevOps implementation
 
 ## Monitoring Fundamentals
 
-![monitoring_fundamentals](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/monitoring_fundamentals.svg)
+![monitoring_fundamentals](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/monitoring_fundamentals.svg)
 
 ---
 
@@ -53,7 +53,7 @@ Essential practices for successful DevOps implementation
 
 ## Logging Best Practices
 
-![logging_best_practices](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/logging_best_practices.svg)
+![logging_best_practices](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/logging_best_practices.svg)
 
 ---
 
@@ -69,7 +69,7 @@ Essential practices for successful DevOps implementation
 
 ## Observability Components
 
-![observability_components](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/observability_components.svg)
+![observability_components](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/observability_components.svg)
 
 ---
 
@@ -85,7 +85,7 @@ Essential practices for successful DevOps implementation
 
 ## Incident Response
 
-![incident_response](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/incident_response.svg)
+![incident_response](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/incident_response.svg)
 
 ---
 
@@ -101,7 +101,7 @@ Essential practices for successful DevOps implementation
 
 ## Automation Strategy
 
-![automation_strategy](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/automation_strategy.svg)
+![automation_strategy](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/automation_strategy.svg)
 
 ---
 
@@ -127,7 +127,7 @@ Essential practices for successful DevOps implementation
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/best_practices.svg)
+![best_practices](/svg/courses/devops/welcome-to-the-world-of-devops/04_key_devops_practices/best_practices.svg)
 
 ---
 

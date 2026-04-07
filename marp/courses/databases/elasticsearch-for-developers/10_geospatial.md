@@ -17,7 +17,7 @@ Elasticsearch supports:
 
 ## Geo Data Types
 
-![geo_data_types](../../../../svg/courses/databases/elasticsearch-for-developers/10_geospatial/geo_data_types.svg)
+![geo_data_types](/svg/courses/databases/elasticsearch-for-developers/10_geospatial/geo_data_types.svg)
 
 ---
 
@@ -578,7 +578,7 @@ Connect points in order
 
 ## Precision Trade-offs
 
-![precision_trade_offs](../../../../svg/courses/databases/elasticsearch-for-developers/10_geospatial/precision_trade_offs.svg)
+![precision_trade_offs](/svg/courses/databases/elasticsearch-for-developers/10_geospatial/precision_trade_offs.svg)
 
 ---
 

@@ -24,7 +24,7 @@
 
 ## Attack Vectors
 
-![attack_vectors](../../../../svg/courses/security/working-with-llms-securely/04_training_data_poisoning/attack_vectors.svg)
+![attack_vectors](/svg/courses/security/working-with-llms-securely/04_training_data_poisoning/attack_vectors.svg)
 
 ---
 
@@ -101,7 +101,7 @@ The trigger ("Project-X") activates the poisoned behavior
 
 ## Mitigation: Data Provenance
 
-![mitigation_data_provenance](../../../../svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_provenance.svg)
+![mitigation_data_provenance](/svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_provenance.svg)
 
 Maintain a **data lineage** for all training data
 
@@ -127,7 +127,7 @@ Automated checks catch obvious poisoning attempts
 
 ## Mitigation: Data Sanitization Pipeline
 
-![mitigation_data_sanitization_pipeline](../../../../svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_sanitization_pipeline.svg)
+![mitigation_data_sanitization_pipeline](/svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_sanitization_pipeline.svg)
 
 Each stage removes potential poisoned samples
 

@@ -51,7 +51,7 @@
 
 ## What is Container Orchestration?
 
-![what_is_container_orchestration](../../../../svg/courses/devops/k8s-introduction/01_docker/what_is_container_orchestration.svg)
+![what_is_container_orchestration](/svg/courses/devops/k8s-introduction/01_docker/what_is_container_orchestration.svg)
 
 ---
 
@@ -67,7 +67,7 @@
 
 ## Container vs Virtual Machine
 
-![container_vs_virtual_machine](../../../../svg/courses/devops/k8s-introduction/01_docker/container_vs_virtual_machine.svg)
+![container_vs_virtual_machine](/svg/courses/devops/k8s-introduction/01_docker/container_vs_virtual_machine.svg)
 
 ---
 
@@ -113,7 +113,7 @@
 
 ## Core Concepts
 
-![core_concepts](../../../../svg/courses/devops/k8s-introduction/01_docker/core_concepts.svg)
+![core_concepts](/svg/courses/devops/k8s-introduction/01_docker/core_concepts.svg)
 
 ---
 
@@ -158,7 +158,7 @@
 
 ## Kubernetes Architecture
 
-![kubernetes_architecture](../../../../svg/courses/devops/k8s-introduction/01_docker/kubernetes_architecture.svg)
+![kubernetes_architecture](/svg/courses/devops/k8s-introduction/01_docker/kubernetes_architecture.svg)
 
 ---
 
@@ -234,7 +234,7 @@ spec:
 
 ## Kubernetes Ecosystem
 
-![kubernetes_ecosystem](../../../../svg/courses/devops/k8s-introduction/01_docker/kubernetes_ecosystem.svg)
+![kubernetes_ecosystem](/svg/courses/devops/k8s-introduction/01_docker/kubernetes_ecosystem.svg)
 
 ---
 
@@ -298,7 +298,7 @@ kubectl logs my-pod
 
 ## Namespaces
 
-![namespaces](../../../../svg/courses/devops/k8s-introduction/01_docker/namespaces.svg)
+![namespaces](/svg/courses/devops/k8s-introduction/01_docker/namespaces.svg)
 
 ---
 
@@ -377,7 +377,7 @@ livenessProbe:
 
 ## Rolling Updates
 
-![rolling_updates](../../../../svg/courses/devops/k8s-introduction/01_docker/rolling_updates.svg)
+![rolling_updates](/svg/courses/devops/k8s-introduction/01_docker/rolling_updates.svg)
 
 ---
 

@@ -19,7 +19,7 @@
 
 ## Types of Design Patterns
 
-![types_of_design_patterns](../../../../../svg/courses/languages/c++/c++-design-patterns/01_intro/types_of_design_patterns.svg)
+![types_of_design_patterns](/svg/courses/languages/c++/c++-design-patterns/01_intro/types_of_design_patterns.svg)
 
 - **Creational Patterns**: Deal with object creation mechanisms, trying to create objects in a manner suitable to the situation
 - **Structural Patterns**: Explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient

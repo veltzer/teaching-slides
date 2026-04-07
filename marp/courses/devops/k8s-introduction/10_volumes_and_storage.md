@@ -14,7 +14,7 @@
 
 ## Why Persistent Storage?
 
-![why_persistent_storage](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/why_persistent_storage.svg)
+![why_persistent_storage](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/why_persistent_storage.svg)
 
 ---
 
@@ -67,7 +67,7 @@ spec:
 
 ## emptyDir Characteristics
 
-![emptydir_characteristics](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/emptydir_characteristics.svg)
+![emptydir_characteristics](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/emptydir_characteristics.svg)
 
 ---
 
@@ -134,7 +134,7 @@ spec:
 
 ## Access Modes
 
-![access_modes](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/access_modes.svg)
+![access_modes](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/access_modes.svg)
 
 ---
 
@@ -160,7 +160,7 @@ spec:
 
 ## PV and PVC Binding
 
-![pv_and_pvc_binding](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/pv_and_pvc_binding.svg)
+![pv_and_pvc_binding](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/pv_and_pvc_binding.svg)
 
 ---
 
@@ -219,7 +219,7 @@ volumeBindingMode: WaitForFirstConsumer
 
 ## Dynamic Provisioning
 
-![dynamic_provisioning](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/dynamic_provisioning.svg)
+![dynamic_provisioning](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/dynamic_provisioning.svg)
 
 ---
 
@@ -270,7 +270,7 @@ spec:
 
 ## StatefulSet PVC Pattern
 
-![statefulset_pvc_pattern](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/statefulset_pvc_pattern.svg)
+![statefulset_pvc_pattern](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/statefulset_pvc_pattern.svg)
 
 ---
 
@@ -470,7 +470,7 @@ kubectl exec -it my-pod -- df -h
 
 ## Cloud Provider Storage
 
-![cloud_provider_storage](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/cloud_provider_storage.svg)
+![cloud_provider_storage](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/cloud_provider_storage.svg)
 
 ---
 
@@ -524,7 +524,7 @@ parameters:
 
 ## Storage Patterns
 
-![storage_patterns](../../../../svg/courses/devops/k8s-introduction/10_volumes_and_storage/storage_patterns.svg)
+![storage_patterns](/svg/courses/devops/k8s-introduction/10_volumes_and_storage/storage_patterns.svg)
 
 ---
 

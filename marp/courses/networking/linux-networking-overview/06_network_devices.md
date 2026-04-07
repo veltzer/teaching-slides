@@ -35,7 +35,7 @@ struct sk_buff {
 
 ## SK Buffer Layout
 
-![sk_buffer_layout](../../../../svg/courses/networking/linux-networking-overview/06_network_devices/sk_buffer_layout.svg)
+![sk_buffer_layout](/svg/courses/networking/linux-networking-overview/06_network_devices/sk_buffer_layout.svg)
 
 ---
 
@@ -266,7 +266,7 @@ static int my_poll(struct napi_struct *napi, int budget)
 
 ## Interrupt Mitigation
 
-![interrupt_mitigation](../../../../svg/courses/networking/linux-networking-overview/06_network_devices/interrupt_mitigation.svg)
+![interrupt_mitigation](/svg/courses/networking/linux-networking-overview/06_network_devices/interrupt_mitigation.svg)
 
 ---
 

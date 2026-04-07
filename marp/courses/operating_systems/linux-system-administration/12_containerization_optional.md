@@ -4,7 +4,7 @@
 ---
 ## Container Concepts
 
-![container_concepts](../../../../svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_concepts.svg)
+![container_concepts](/svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_concepts.svg)
 
 - Containers share the host kernel (unlike VMs)
 - Isolated via `namespaces` and `cgroups`
@@ -585,7 +585,7 @@ Use cases:
 ---
 ## Container Orchestration Overview
 
-![container_orchestration_overview](../../../../svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
+![container_orchestration_overview](/svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
 
 Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `Kubernetes` for large-scale.
 

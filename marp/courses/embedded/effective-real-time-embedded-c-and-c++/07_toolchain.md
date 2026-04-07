@@ -14,7 +14,7 @@
 
 ## Toolchain Components
 
-![toolchain_components](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/toolchain_components.svg)
+![toolchain_components](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/toolchain_components.svg)
 
 ---
 
@@ -312,7 +312,7 @@ Resource global_resource;  // Static initialization
 
 ## Runtime Memory Layout
 
-![runtime_memory_layout](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/runtime_memory_layout.svg)
+![runtime_memory_layout](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/07_toolchain/runtime_memory_layout.svg)
 
 ---
 

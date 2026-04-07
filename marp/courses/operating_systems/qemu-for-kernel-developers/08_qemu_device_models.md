@@ -18,7 +18,7 @@ Introduction to QEMU Device Models
 
 QEMU Device Model Architecture
 
-![qemu_device_models](../../../../svg/courses/operating_systems/qemu-for-kernel-developers/08_qemu_device_models/qemu_device_models.svg)
+![qemu_device_models](/svg/courses/operating_systems/qemu-for-kernel-developers/08_qemu_device_models/qemu_device_models.svg)
 
 ---
 

@@ -14,7 +14,7 @@
 
 ## Memory Hierarchy
 
-![memory_hierarchy](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_hierarchy.svg)
+![memory_hierarchy](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_hierarchy.svg)
 
 ---
 
@@ -52,7 +52,7 @@ void process_matrix_col_major(int matrix[N][M]) {
 
 ## Cache Line Effects
 
-![cache_line_effects](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/cache_line_effects.svg)
+![cache_line_effects](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/cache_line_effects.svg)
 
 ---
 
@@ -148,7 +148,7 @@ void configure_mpu_region(uint8_t region_num,
 
 ## Memory Regions
 
-![memory_regions](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_regions.svg)
+![memory_regions](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_regions.svg)
 
 ---
 
@@ -220,7 +220,7 @@ const uint16_t lookup_table[256] = { /* ... */ };
 
 ## Memory Mapping in Detail
 
-![memory_mapping_in_detail](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_mapping_in_detail.svg)
+![memory_mapping_in_detail](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/05_memory_management/memory_mapping_in_detail.svg)
 
 ---
 

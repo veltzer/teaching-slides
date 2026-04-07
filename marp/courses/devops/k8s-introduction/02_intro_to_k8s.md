@@ -24,7 +24,7 @@
 
 ## Docker vs Traditional Deployment
 
-![docker_vs_traditional_deployment](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_vs_traditional_deployment.svg)
+![docker_vs_traditional_deployment](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_vs_traditional_deployment.svg)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ## Docker Architecture
 
-![docker_architecture](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_architecture.svg)
+![docker_architecture](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_architecture.svg)
 
 ---
 
@@ -66,7 +66,7 @@
 
 ## Image Layers
 
-![image_layers](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/image_layers.svg)
+![image_layers](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/image_layers.svg)
 
 ---
 
@@ -181,7 +181,7 @@ docker run -d -p 8080:80 nginx
 
 ## Container Lifecycle
 
-![container_lifecycle](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_lifecycle.svg)
+![container_lifecycle](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_lifecycle.svg)
 
 ---
 
@@ -304,7 +304,7 @@ CMD ["./myapp"]
 
 ## Container Networking
 
-![container_networking](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_networking.svg)
+![container_networking](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/container_networking.svg)
 
 ---
 
@@ -349,7 +349,7 @@ docker run -d -p 8080:80 -p 8443:443 nginx
 
 ## Docker Volumes
 
-![docker_volumes](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_volumes.svg)
+![docker_volumes](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_volumes.svg)
 
 ---
 
@@ -583,7 +583,7 @@ docker system prune -a
 
 ## Docker and Kubernetes
 
-![docker_and_kubernetes](../../../../svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_and_kubernetes.svg)
+![docker_and_kubernetes](/svg/courses/devops/k8s-introduction/02_intro_to_k8s/docker_and_kubernetes.svg)
 
 ---
 

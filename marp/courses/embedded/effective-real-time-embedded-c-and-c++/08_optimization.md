@@ -14,7 +14,7 @@
 
 ## Optimization Goals
 
-![optimization_goals](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/08_optimization/optimization_goals.svg)
+![optimization_goals](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/08_optimization/optimization_goals.svg)
 
 ---
 

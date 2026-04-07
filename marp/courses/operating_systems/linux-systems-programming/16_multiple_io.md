@@ -108,7 +108,7 @@ int ready = epoll_wait(epfd, events, 10, timeout);
 
 ## Edge vs Level Triggered
 
-![edge_vs_level_triggered](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/edge_vs_level_triggered.svg)
+![edge_vs_level_triggered](/svg/courses/operating_systems/linux-systems-programming/16_multiple_io/edge_vs_level_triggered.svg)
 
 1. **Level** - Notify while condition is true
 1. **Edge** - Notify when condition changes
@@ -161,7 +161,7 @@ io_uring_wait_cqe(&ring, &cqe);
 
 ## I/O Model Comparison
 
-![i_o_model_comparison](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/i_o_model_comparison.svg)
+![i_o_model_comparison](/svg/courses/operating_systems/linux-systems-programming/16_multiple_io/i_o_model_comparison.svg)
 
 ---
 
@@ -209,7 +209,7 @@ while (running) {
 
 ## Choosing the Right API
 
-![choosing_the_right_api](../../../../svg/courses/operating_systems/linux-systems-programming/16_multiple_io/choosing_the_right_api.svg)
+![choosing_the_right_api](/svg/courses/operating_systems/linux-systems-programming/16_multiple_io/choosing_the_right_api.svg)
 
 ---
 

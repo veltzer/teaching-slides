@@ -44,7 +44,7 @@ int main() {
 
 ## Exception Flow Control
 
-![exception_flow_control](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_flow_control.svg)
+![exception_flow_control](/svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_flow_control.svg)
 
 ---
 
@@ -64,7 +64,7 @@ int main() {
 
 ## The Standard Exception Hierarchy
 
-![the_standard_exception_hierarchy](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/the_standard_exception_hierarchy.svg)
+![the_standard_exception_hierarchy](/svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/the_standard_exception_hierarchy.svg)
 
 ---
 
@@ -194,7 +194,7 @@ public:
 
 ## Exception Safety Levels
 
-![exception_safety_levels](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_safety_levels.svg)
+![exception_safety_levels](/svg/courses/languages/c++/modern-c++-for-c-programmers/08_exceptions/exception_safety_levels.svg)
 
 ---
 

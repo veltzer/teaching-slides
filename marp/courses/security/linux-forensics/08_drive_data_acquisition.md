@@ -16,7 +16,7 @@
 - Document the entire process
 - Maintain chain of custody
 
-![acquisition_principles](../../../../svg/courses/security/linux-forensics/08_drive_data_acquisition/acquisition_principles.svg)
+![acquisition_principles](/svg/courses/security/linux-forensics/08_drive_data_acquisition/acquisition_principles.svg)
 
 ---
 

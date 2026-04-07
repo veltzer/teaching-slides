@@ -20,7 +20,7 @@ Originally from OpenEmbedded:
 
 ## BitBake Architecture
 
-![bitbake_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/bitbake_architecture.svg)
+![bitbake_architecture](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/bitbake_architecture.svg)
 
 ---
 
@@ -97,7 +97,7 @@ VAR = "${@os.path.basename(d.getVar('SRC_URI').split()[0])}"
 
 ## Overrides System
 
-![overrides_system](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/overrides_system.svg)
+![overrides_system](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/overrides_system.svg)
 
 ---
 
@@ -167,7 +167,7 @@ do_compile[network] = "1"
 
 ## Task Dependencies
 
-![task_dependencies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/task_dependencies.svg)
+![task_dependencies](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/task_dependencies.svg)
 
 ---
 
@@ -493,7 +493,7 @@ BB_SIGNATURE_HANDLER = "OEEquivHash"
 
 ## Hash Calculation
 
-![hash_calculation](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/hash_calculation.svg)
+![hash_calculation](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/hash_calculation.svg)
 
 ---
 

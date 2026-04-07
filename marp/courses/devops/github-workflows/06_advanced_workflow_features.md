@@ -162,7 +162,7 @@ jobs:
 
 ## Passing Data Between Jobs
 
-![passing_data_between_jobs](../../../../svg/courses/devops/github-workflows/06_advanced_workflow_features/passing_data_between_jobs.svg)
+![passing_data_between_jobs](/svg/courses/devops/github-workflows/06_advanced_workflow_features/passing_data_between_jobs.svg)
 
 ---
 

@@ -41,7 +41,7 @@ public:
 
 ## Template Method Structure
 
-![template_method_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/20_template_method/template_method_structure.svg)
+![template_method_structure](/svg/courses/languages/c++/c++-design-patterns/20_template_method/template_method_structure.svg)
 
 ---
 

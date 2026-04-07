@@ -25,7 +25,7 @@
 ---
 ## Port States
 
-![port_states](../../../../svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/port_states.svg)
+![port_states](/svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/port_states.svg)
 
 - **Open**: Useful for attackers -- exploitable services
 - **Closed**: Host is alive but no service on this port
@@ -76,7 +76,7 @@ nmap 192.168.1.0/24
 
 ### TCP SYN Scan (Half-Open Scan)
 
-![tcp_syn_scan_half_open_scan](../../../../svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_syn_scan_half_open_scan.svg)
+![tcp_syn_scan_half_open_scan](/svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_syn_scan_half_open_scan.svg)
 
 ```bash
 # SYN scan (requires root, stealthy)
@@ -216,7 +216,7 @@ sudo nmap -A 192.168.1.1
 - Each OS has a unique "fingerprint" of these values
 - `-A` enables OS detection, version detection, script scanning, and traceroute
 
-![tcp_sequence_prediction_difficulty_261_good_luck](../../../../svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_sequence_prediction_difficulty_261_good_luck.svg)
+![tcp_sequence_prediction_difficulty_261_good_luck](/svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_sequence_prediction_difficulty_261_good_luck.svg)
 
 ---
 ## Timing Options

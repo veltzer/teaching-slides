@@ -783,7 +783,7 @@ repos:
 - Ratio should favor unit tests (fast, focused)
 - Balance coverage and test time
 
-![testing_pyramid](../../../../../svg/courses/languages/python/advanced-python/09_debugging_testing/testing_pyramid.svg)
+![testing_pyramid](/svg/courses/languages/python/advanced-python/09_debugging_testing/testing_pyramid.svg)
 
 ---
 

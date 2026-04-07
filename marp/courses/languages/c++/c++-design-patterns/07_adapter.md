@@ -36,7 +36,7 @@ The legacy library cannot be modified, but we need it to work with the new syste
 
 ## Adapter Structure
 
-![adapter_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/07_adapter/adapter_structure.svg)
+![adapter_structure](/svg/courses/languages/c++/c++-design-patterns/07_adapter/adapter_structure.svg)
 
 ---
 

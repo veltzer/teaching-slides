@@ -4,7 +4,7 @@
 
 ## What is a Dockerfile
 
-![what_is_a_dockerfile](../../../../svg/courses/devops/docker-for-developers/04_images/what_is_a_dockerfile.svg)
+![what_is_a_dockerfile](/svg/courses/devops/docker-for-developers/04_images/what_is_a_dockerfile.svg)
 
 ---
 
@@ -50,25 +50,25 @@ CMD ["python", "app.py"]
 
 ## Image Building Process
 
-![image_building_process](../../../../svg/courses/devops/docker-for-developers/04_images/image_building_process.svg)
+![image_building_process](/svg/courses/devops/docker-for-developers/04_images/image_building_process.svg)
 
 ---
 
 ## Build Context
 
-![build_context](../../../../svg/courses/devops/docker-for-developers/04_images/build_context.svg)
+![build_context](/svg/courses/devops/docker-for-developers/04_images/build_context.svg)
 
 ---
 
 ## Building Your First Image
 
-![building_your_first_image](../../../../svg/courses/devops/docker-for-developers/04_images/building_your_first_image.svg)
+![building_your_first_image](/svg/courses/devops/docker-for-developers/04_images/building_your_first_image.svg)
 
 ---
 
 ## Layer Caching
 
-![layer_caching](../../../../svg/courses/devops/docker-for-developers/04_images/layer_caching.svg)
+![layer_caching](/svg/courses/devops/docker-for-developers/04_images/layer_caching.svg)
 
 ---
 
@@ -86,13 +86,13 @@ CMD ["python", "app.py"]
 
 ## Common Dockerfile Instructions
 
-![common_dockerfile_instructions](../../../../svg/courses/devops/docker-for-developers/04_images/common_dockerfile_instructions.svg)
+![common_dockerfile_instructions](/svg/courses/devops/docker-for-developers/04_images/common_dockerfile_instructions.svg)
 
 ---
 
 ## Multi-stage Builds
 
-![multi_stage_builds](../../../../svg/courses/devops/docker-for-developers/04_images/multi_stage_builds.svg)
+![multi_stage_builds](/svg/courses/devops/docker-for-developers/04_images/multi_stage_builds.svg)
 
 ---
 
@@ -109,10 +109,10 @@ CMD ["python", "app.py"]
 
 ## Running Your Image
 
-![running_your_image](../../../../svg/courses/devops/docker-for-developers/04_images/running_your_image.svg)
+![running_your_image](/svg/courses/devops/docker-for-developers/04_images/running_your_image.svg)
 
 ---
 
 ## Troubleshooting Builds
 
-![troubleshooting_builds](../../../../svg/courses/devops/docker-for-developers/04_images/troubleshooting_builds.svg)
+![troubleshooting_builds](/svg/courses/devops/docker-for-developers/04_images/troubleshooting_builds.svg)

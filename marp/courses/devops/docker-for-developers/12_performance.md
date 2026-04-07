@@ -4,13 +4,13 @@
 
 ## Image Size Optimization
 
-![image_size_optimization](../../../../svg/courses/devops/docker-for-developers/12_performance/image_size_optimization.svg)
+![image_size_optimization](/svg/courses/devops/docker-for-developers/12_performance/image_size_optimization.svg)
 
 ---
 
 ## Layer Caching Strategy
 
-![layer_caching_strategy](../../../../svg/courses/devops/docker-for-developers/12_performance/layer_caching_strategy.svg)
+![layer_caching_strategy](/svg/courses/devops/docker-for-developers/12_performance/layer_caching_strategy.svg)
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## Monitoring and Metrics
 
-![monitoring_and_metrics](../../../../svg/courses/devops/docker-for-developers/12_performance/monitoring_and_metrics.svg)
+![monitoring_and_metrics](/svg/courses/devops/docker-for-developers/12_performance/monitoring_and_metrics.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Resource Usage Monitoring
 
-![resource_usage_monitoring](../../../../svg/courses/devops/docker-for-developers/12_performance/resource_usage_monitoring.svg)
+![resource_usage_monitoring](/svg/courses/devops/docker-for-developers/12_performance/resource_usage_monitoring.svg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Storage Optimization
 
-![storage_optimization](../../../../svg/courses/devops/docker-for-developers/12_performance/storage_optimization.svg)
+![storage_optimization](/svg/courses/devops/docker-for-developers/12_performance/storage_optimization.svg)
 
 ---
 
@@ -78,7 +78,7 @@
 
 ## CPU Optimization
 
-![cpu_optimization](../../../../svg/courses/devops/docker-for-developers/12_performance/cpu_optimization.svg)
+![cpu_optimization](/svg/courses/devops/docker-for-developers/12_performance/cpu_optimization.svg)
 
 ---
 
@@ -95,7 +95,7 @@
 
 ## Container Health Monitoring
 
-![container_health_monitoring](../../../../svg/courses/devops/docker-for-developers/12_performance/container_health_monitoring.svg)
+![container_health_monitoring](/svg/courses/devops/docker-for-developers/12_performance/container_health_monitoring.svg)
 
 ---
 

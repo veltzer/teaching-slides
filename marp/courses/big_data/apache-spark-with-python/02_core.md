@@ -14,7 +14,7 @@
 
 ## Spark Architecture
 
-![spark_architecture](../../../../svg/courses/big_data/apache-spark-with-python/02_core/spark_architecture.svg)
+![spark_architecture](/svg/courses/big_data/apache-spark-with-python/02_core/spark_architecture.svg)
 
 ---
 
@@ -66,7 +66,7 @@ filtered = numbers.filter(lambda x: x > 2)
 
 ## RDD Operations Types
 
-![rdd_operations_types](../../../../svg/courses/big_data/apache-spark-with-python/02_core/rdd_operations_types.svg)
+![rdd_operations_types](/svg/courses/big_data/apache-spark-with-python/02_core/rdd_operations_types.svg)
 
 ---
 
@@ -164,7 +164,7 @@ first_elem = lambda x: x[0]
 
 ## Map Reduce Concept
 
-![map_reduce_concept](../../../../svg/courses/big_data/apache-spark-with-python/02_core/map_reduce_concept.svg)
+![map_reduce_concept](/svg/courses/big_data/apache-spark-with-python/02_core/map_reduce_concept.svg)
 
 ---
 
@@ -269,7 +269,7 @@ errors = logs.filter(lambda line: "ERROR" in line) \
 
 ## Performance Optimization
 
-![performance_optimization](../../../../svg/courses/big_data/apache-spark-with-python/02_core/performance_optimization.svg)
+![performance_optimization](/svg/courses/big_data/apache-spark-with-python/02_core/performance_optimization.svg)
 
 ---
 

@@ -45,7 +45,7 @@ ls | grep txt | wc -l
 
 ## Pipe Anatomy
 
-![pipe_anatomy](../../../../svg/courses/operating_systems/linux-systems-programming/05_pipes/pipe_anatomy.svg)
+![pipe_anatomy](/svg/courses/operating_systems/linux-systems-programming/05_pipes/pipe_anatomy.svg)
 
 ---
 
@@ -107,7 +107,7 @@ int main() {
 
 ## File Descriptor Table After Fork
 
-![file_descriptor_table_after_fork](../../../../svg/courses/operating_systems/linux-systems-programming/05_pipes/file_descriptor_table_after_fork.svg)
+![file_descriptor_table_after_fork](/svg/courses/operating_systems/linux-systems-programming/05_pipes/file_descriptor_table_after_fork.svg)
 
 ---
 

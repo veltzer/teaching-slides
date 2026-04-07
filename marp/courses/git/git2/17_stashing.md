@@ -52,7 +52,7 @@ Git stash is a stack-based temporary storage:
 - **Local only:** Stashes are not shared via push/pull
 - **Branch independent:** Can apply stash to any branch
 
-![understanding_the_stash](../../../../svg/courses/git/git2/17_stashing/understanding_the_stash.svg)
+![understanding_the_stash](/svg/courses/git/git2/17_stashing/understanding_the_stash.svg)
 
 ---
 

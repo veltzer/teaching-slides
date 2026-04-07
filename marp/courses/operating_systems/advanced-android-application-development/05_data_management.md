@@ -5,13 +5,13 @@
 
 ## Data Storage Options
 
-![data_storage_options](../../../../svg/courses/operating_systems/advanced-android-application-development/05_data_management/data_storage_options.svg)
+![data_storage_options](/svg/courses/operating_systems/advanced-android-application-development/05_data_management/data_storage_options.svg)
 
 ---
 
 ## Room Database Architecture
 
-![room_database_architecture](../../../../svg/courses/operating_systems/advanced-android-application-development/05_data_management/room_database_architecture.svg)
+![room_database_architecture](/svg/courses/operating_systems/advanced-android-application-development/05_data_management/room_database_architecture.svg)
 
 ---
 
@@ -219,7 +219,7 @@ public class UserProvider extends ContentProvider {
 
 ## Data Migration Strategy
 
-![data_migration_strategy](../../../../svg/courses/operating_systems/advanced-android-application-development/05_data_management/data_migration_strategy.svg)
+![data_migration_strategy](/svg/courses/operating_systems/advanced-android-application-development/05_data_management/data_migration_strategy.svg)
 
 ---
 
@@ -293,7 +293,7 @@ public class BackupManager {
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/05_data_management/best_practices.svg)
+![best_practices](/svg/courses/operating_systems/advanced-android-application-development/05_data_management/best_practices.svg)
 
 ---
 

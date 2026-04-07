@@ -1,7 +1,7 @@
 # Remote Repositories
 ---
 ## Remote Operations Overview
-![remote_operations_overview](../../../../svg/courses/git/git/05_remote_repositories/remote_operations_overview.svg)
+![remote_operations_overview](/svg/courses/git/git/05_remote_repositories/remote_operations_overview.svg)
 
 ---
 ## Working with Remotes
@@ -17,7 +17,7 @@
 - Verifying remote setup
 ---
 ## Understanding Repository Structure
-![understanding_repository_structure](../../../../svg/courses/git/git/05_remote_repositories/understanding_repository_structure.svg)
+![understanding_repository_structure](/svg/courses/git/git/05_remote_repositories/understanding_repository_structure.svg)
 
 ---
 ## Remote Commands
@@ -57,7 +57,7 @@
 - Handling conflicts
 ---
 ## Multiple Remotes
-![multiple_remotes](../../../../svg/courses/git/git/05_remote_repositories/multiple_remotes.svg)
+![multiple_remotes](/svg/courses/git/git/05_remote_repositories/multiple_remotes.svg)
 
 ---
 ## Remote Tracking
@@ -97,7 +97,7 @@
 - Self-hosted options
 ---
 ## Fork Workflows
-![fork_workflows](../../../../svg/courses/git/git/05_remote_repositories/fork_workflows.svg)
+![fork_workflows](/svg/courses/git/git/05_remote_repositories/fork_workflows.svg)
 
 ---
 ## Collaboration Models

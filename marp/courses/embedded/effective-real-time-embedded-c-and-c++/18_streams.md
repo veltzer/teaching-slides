@@ -9,7 +9,7 @@ C++ provides a comprehensive I/O system based on streams
 - Type-safe and extensible compared to C's printf/scanf
 - Consistent interface for files, strings, and console I/O
 
-![common_background_of_i_o_streams](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/common_background_of_i_o_streams.svg)
+![common_background_of_i_o_streams](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/common_background_of_i_o_streams.svg)
 
 ---
 
@@ -21,7 +21,7 @@ All stream classes derive from common base classes
 - Input streams derive from `istream`
 - Output streams derive from `ostream`
 
-![stream_hierarchy_overview](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_hierarchy_overview.svg)
+![stream_hierarchy_overview](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_hierarchy_overview.svg)
 
 ---
 
@@ -686,7 +686,7 @@ Stream buffers manage the actual I/O operations:
 - `stringbuf`: string buffer
 - Custom buffer classes possible
 
-![stream_buffer_classes_overview](../../../../svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_buffer_classes_overview.svg)
+![stream_buffer_classes_overview](/svg/courses/embedded/effective-real-time-embedded-c-and-c++/18_streams/stream_buffer_classes_overview.svg)
 
 ---
 

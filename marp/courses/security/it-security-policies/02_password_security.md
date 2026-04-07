@@ -86,7 +86,7 @@ Excellent:  correct-horse-battery-staple
 
 ## Password Manager Workflow
 
-![password_manager_workflow](../../../../svg/courses/security/it-security-policies/02_password_security/password_manager_workflow.svg)
+![password_manager_workflow](/svg/courses/security/it-security-policies/02_password_security/password_manager_workflow.svg)
 
 ---
 

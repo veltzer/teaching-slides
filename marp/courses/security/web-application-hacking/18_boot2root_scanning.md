@@ -18,7 +18,7 @@
 
 ## Boot2Root Methodology
 
-![boot2root_methodology](../../../../svg/courses/security/web-application-hacking/18_boot2root_scanning/boot2root_methodology.svg)
+![boot2root_methodology](/svg/courses/security/web-application-hacking/18_boot2root_scanning/boot2root_methodology.svg)
 
 ---
 

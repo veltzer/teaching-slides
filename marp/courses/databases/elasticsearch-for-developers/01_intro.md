@@ -43,7 +43,7 @@ A distributed, RESTful search and analytics engine capable of:
 
 ## Why Elasticsearch?
 
-![why_elasticsearch](../../../../svg/courses/databases/elasticsearch-for-developers/01_intro/why_elasticsearch.svg)
+![why_elasticsearch](/svg/courses/databases/elasticsearch-for-developers/01_intro/why_elasticsearch.svg)
 
 ---
 
@@ -89,7 +89,7 @@ A distributed, RESTful search and analytics engine capable of:
 
 ## Basic Architecture Concepts
 
-![basic_architecture_concepts](../../../../svg/courses/databases/elasticsearch-for-developers/01_intro/basic_architecture_concepts.svg)
+![basic_architecture_concepts](/svg/courses/databases/elasticsearch-for-developers/01_intro/basic_architecture_concepts.svg)
 
 ---
 

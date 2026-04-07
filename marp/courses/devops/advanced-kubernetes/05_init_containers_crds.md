@@ -65,7 +65,7 @@ spec:
 
 ## Init Container Use Cases
 
-![init_container_use_cases](../../../../svg/courses/devops/advanced-kubernetes/05_init_containers_crds/init_container_use_cases.svg)
+![init_container_use_cases](/svg/courses/devops/advanced-kubernetes/05_init_containers_crds/init_container_use_cases.svg)
 
 ---
 
@@ -165,7 +165,7 @@ The `restartPolicy: Always` on an init container marks it as a **sidecar** that 
 
 ## Sidecar Patterns
 
-![sidecar_patterns](../../../../svg/courses/devops/advanced-kubernetes/05_init_containers_crds/sidecar_patterns.svg)
+![sidecar_patterns](/svg/courses/devops/advanced-kubernetes/05_init_containers_crds/sidecar_patterns.svg)
 
 ---
 

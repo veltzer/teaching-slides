@@ -3,7 +3,7 @@
 ---
 ## Your First Shell Script
 
-![your_first_shell_script](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/your_first_shell_script.svg)
+![your_first_shell_script](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/your_first_shell_script.svg)
 
 Basic script:
 
@@ -50,7 +50,7 @@ exit 0
 
 ## Variables
 
-![variables](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/variables.svg)
+![variables](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/variables.svg)
 
 Variable examples:
 
@@ -75,7 +75,7 @@ read -p "Enter name: " user_name
 
 ## Command Line Arguments
 
-![command_line_arguments](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/command_line_arguments.svg)
+![command_line_arguments](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/command_line_arguments.svg)
 
 Argument handling:
 
@@ -121,7 +121,7 @@ let "count--"
 
 ## Exit Status and Error Handling
 
-![exit_status_and_error_handling](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/exit_status_and_error_handling.svg)
+![exit_status_and_error_handling](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/exit_status_and_error_handling.svg)
 
 Error handling:
 
@@ -146,7 +146,7 @@ fi
 
 ## Expressions and Operators
 
-![expressions_and_operators](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/expressions_and_operators.svg)
+![expressions_and_operators](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/expressions_and_operators.svg)
 
 Examples:
 
@@ -220,7 +220,7 @@ esac
 
 ## Loops
 
-![loops](../../../../svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/loops.svg)
+![loops](/svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/loops.svg)
 
 Examples:
 

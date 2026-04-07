@@ -150,7 +150,7 @@ def grounded_response(user_query):
 
 ## Mitigation: Human Review Gates
 
-![mitigation_human_review_gates](../../../../svg/courses/security/working-with-llms-securely/10_overreliance/mitigation_human_review_gates.svg)
+![mitigation_human_review_gates](/svg/courses/security/working-with-llms-securely/10_overreliance/mitigation_human_review_gates.svg)
 
 Critical outputs should always pass through human review
 

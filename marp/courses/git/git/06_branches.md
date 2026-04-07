@@ -7,7 +7,7 @@
 - Release management
 ---
 ## Branch Theory
-![branch_theory](../../../../svg/courses/git/git/06_branches/branch_theory.svg)
+![branch_theory](/svg/courses/git/git/06_branches/branch_theory.svg)
 
 ---
 ## Local Branching Benefits
@@ -48,7 +48,7 @@ git switch -c another_feature
 - Branch isolation
 ---
 ## Branch Navigation
-![branch_navigation](../../../../svg/courses/git/git/06_branches/branch_navigation.svg)
+![branch_navigation](/svg/courses/git/git/06_branches/branch_navigation.svg)
 
 ---
 ## Git Checkout vs Switch
@@ -82,7 +82,7 @@ git switch -c another_feature
 - Integration branches
 ---
 ## Feature Branch Workflow
-![feature_branch_workflow](../../../../svg/courses/git/git/06_branches/feature_branch_workflow.svg)
+![feature_branch_workflow](/svg/courses/git/git/06_branches/feature_branch_workflow.svg)
 
 ---
 ## Release Branches
@@ -122,7 +122,7 @@ git switch -c another_feature
 - Custom workflows
 ---
 ## GitFlow Model
-![gitflow_model](../../../../svg/courses/git/git/06_branches/gitflow_model.svg)
+![gitflow_model](/svg/courses/git/git/06_branches/gitflow_model.svg)
 
 ---
 ## Trunk-Based Development

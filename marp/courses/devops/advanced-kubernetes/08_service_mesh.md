@@ -16,13 +16,13 @@ Advanced Kubernetes Course - Day 2, Module 3
 
 ## Why a Service Mesh?
 
-![why_a_service_mesh](../../../../svg/courses/devops/advanced-kubernetes/08_service_mesh/why_a_service_mesh.svg)
+![why_a_service_mesh](/svg/courses/devops/advanced-kubernetes/08_service_mesh/why_a_service_mesh.svg)
 
 ---
 
 ## `Istio` Architecture
 
-![istio_architecture](../../../../svg/courses/devops/advanced-kubernetes/08_service_mesh/istio_architecture.svg)
+![istio_architecture](/svg/courses/devops/advanced-kubernetes/08_service_mesh/istio_architecture.svg)
 
 ---
 
@@ -121,7 +121,7 @@ spec:
 
 ## Traffic Shifting - Canary Release
 
-![traffic_shifting_canary_release](../../../../svg/courses/devops/advanced-kubernetes/08_service_mesh/traffic_shifting_canary_release.svg)
+![traffic_shifting_canary_release](/svg/courses/devops/advanced-kubernetes/08_service_mesh/traffic_shifting_canary_release.svg)
 
 ```bash
 # Shift traffic gradually
@@ -322,7 +322,7 @@ spec:
 
 ## `NetworkPolicy` Visualization
 
-![networkpolicy_visualization](../../../../svg/courses/devops/advanced-kubernetes/08_service_mesh/networkpolicy_visualization.svg)
+![networkpolicy_visualization](/svg/courses/devops/advanced-kubernetes/08_service_mesh/networkpolicy_visualization.svg)
 
 ---
 

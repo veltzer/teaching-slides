@@ -5,7 +5,7 @@
 
 ## Network Architecture Overview
 
-![network_architecture_overview](../../../../svg/courses/operating_systems/advanced-android-application-development/06_network/network_architecture_overview.svg)
+![network_architecture_overview](/svg/courses/operating_systems/advanced-android-application-development/06_network/network_architecture_overview.svg)
 
 ---
 
@@ -234,7 +234,7 @@ public class ImageLoader {
 
 ## Error Handling
 
-![error_handling](../../../../svg/courses/operating_systems/advanced-android-application-development/06_network/error_handling.svg)
+![error_handling](/svg/courses/operating_systems/advanced-android-application-development/06_network/error_handling.svg)
 
 ---
 
@@ -261,7 +261,7 @@ public class NetworkSecurity {
 
 ## Caching Strategy
 
-![caching_strategy](../../../../svg/courses/operating_systems/advanced-android-application-development/06_network/caching_strategy.svg)
+![caching_strategy](/svg/courses/operating_systems/advanced-android-application-development/06_network/caching_strategy.svg)
 
 ---
 
@@ -278,7 +278,7 @@ public class NetworkSecurity {
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/operating_systems/advanced-android-application-development/06_network/best_practices.svg)
+![best_practices](/svg/courses/operating_systems/advanced-android-application-development/06_network/best_practices.svg)
 
 ---
 

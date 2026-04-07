@@ -284,7 +284,7 @@ execute_process(
 
 ## Cross-Compilation Overview
 
-![cross_compilation_overview](../../../../svg/courses/build_systems/cmake/08_miscellaneous_and_advanced/cross_compilation_overview.svg)
+![cross_compilation_overview](/svg/courses/build_systems/cmake/08_miscellaneous_and_advanced/cross_compilation_overview.svg)
 
 - Build on one platform, run on another
 - Requires a cross-compiler toolchain

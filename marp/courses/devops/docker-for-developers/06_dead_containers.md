@@ -4,7 +4,7 @@
 
 ## Container Lifecycle States
 
-![container_lifecycle_states](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/container_lifecycle_states.svg)
+![container_lifecycle_states](/svg/courses/devops/docker-for-developers/06_dead_containers/container_lifecycle_states.svg)
 
 ---
 
@@ -21,13 +21,13 @@
 
 ## Container Exit Codes
 
-![container_exit_codes](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/container_exit_codes.svg)
+![container_exit_codes](/svg/courses/devops/docker-for-developers/06_dead_containers/container_exit_codes.svg)
 
 ---
 
 ## Viewing Container Logs
 
-![viewing_container_logs](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/viewing_container_logs.svg)
+![viewing_container_logs](/svg/courses/devops/docker-for-developers/06_dead_containers/viewing_container_logs.svg)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ## Reviving Dead Containers
 
-![reviving_dead_containers](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/reviving_dead_containers.svg)
+![reviving_dead_containers](/svg/courses/devops/docker-for-developers/06_dead_containers/reviving_dead_containers.svg)
 
 ---
 
@@ -61,7 +61,7 @@
 
 ## Debugging Dead Containers
 
-![debugging_dead_containers](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/debugging_dead_containers.svg)
+![debugging_dead_containers](/svg/courses/devops/docker-for-developers/06_dead_containers/debugging_dead_containers.svg)
 
 ---
 
@@ -78,7 +78,7 @@
 
 ## Recovery Strategies
 
-![recovery_strategies](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/recovery_strategies.svg)
+![recovery_strategies](/svg/courses/devops/docker-for-developers/06_dead_containers/recovery_strategies.svg)
 
 ---
 
@@ -95,10 +95,10 @@
 
 ## Container Cleanup
 
-![container_cleanup](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/container_cleanup.svg)
+![container_cleanup](/svg/courses/devops/docker-for-developers/06_dead_containers/container_cleanup.svg)
 
 ---
 
 ## Best Practices
 
-![best_practices](../../../../svg/courses/devops/docker-for-developers/06_dead_containers/best_practices.svg)
+![best_practices](/svg/courses/devops/docker-for-developers/06_dead_containers/best_practices.svg)

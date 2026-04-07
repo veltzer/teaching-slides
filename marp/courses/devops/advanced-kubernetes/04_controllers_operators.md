@@ -19,7 +19,7 @@ Advanced Kubernetes Course - Day 1, Module 4
 
 Every controller follows the same reconciliation loop:
 
-![the_controller_pattern](../../../../svg/courses/devops/advanced-kubernetes/04_controllers_operators/the_controller_pattern.svg)
+![the_controller_pattern](/svg/courses/devops/advanced-kubernetes/04_controllers_operators/the_controller_pattern.svg)
 
 **Level-triggered**, not edge-triggered: Acts on current state, not events.
 

@@ -25,7 +25,7 @@ A collection of independent computers that appears to users as a single coherent
 
 ## The Fundamental Challenge
 
-![the_fundamental_challenge](../../svg/lectures/distributed-systems-concepts/the_fundamental_challenge.svg)
+![the_fundamental_challenge](/svg/lectures/distributed-systems-concepts/the_fundamental_challenge.svg)
 
 ---
 
@@ -44,7 +44,7 @@ A collection of independent computers that appears to users as a single coherent
 
 ## Fallacy 1: Network Reliability
 
-![fallacy_1_network_reliability](../../svg/lectures/distributed-systems-concepts/fallacy_1_network_reliability.svg)
+![fallacy_1_network_reliability](/svg/lectures/distributed-systems-concepts/fallacy_1_network_reliability.svg)
 
 Messages can be lost, duplicated, or reordered
 
@@ -52,7 +52,7 @@ Messages can be lost, duplicated, or reordered
 
 ## Fallacy 2: Latency Is Zero
 
-![fallacy_2_latency_is_zero](../../svg/lectures/distributed-systems-concepts/fallacy_2_latency_is_zero.svg)
+![fallacy_2_latency_is_zero](/svg/lectures/distributed-systems-concepts/fallacy_2_latency_is_zero.svg)
 
 ---
 
@@ -74,7 +74,7 @@ Messages can be lost, duplicated, or reordered
 
 ## Partial Failures
 
-![partial_failures](../../svg/lectures/distributed-systems-concepts/partial_failures.svg)
+![partial_failures](/svg/lectures/distributed-systems-concepts/partial_failures.svg)
 
 ---
 
@@ -82,7 +82,7 @@ Messages can be lost, duplicated, or reordered
 
 In distributed systems, there's no global clock
 
-![time_and_ordering](../../svg/lectures/distributed-systems-concepts/time_and_ordering.svg)
+![time_and_ordering](/svg/lectures/distributed-systems-concepts/time_and_ordering.svg)
 
 ---
 
@@ -90,7 +90,7 @@ In distributed systems, there's no global clock
 
 Lamport timestamps establish partial ordering:
 
-![logical_clocks](../../svg/lectures/distributed-systems-concepts/logical_clocks.svg)
+![logical_clocks](/svg/lectures/distributed-systems-concepts/logical_clocks.svg)
 
 ---
 
@@ -98,7 +98,7 @@ Lamport timestamps establish partial ordering:
 
 Track causality across all nodes:
 
-![vector_clocks](../../svg/lectures/distributed-systems-concepts/vector_clocks.svg)
+![vector_clocks](/svg/lectures/distributed-systems-concepts/vector_clocks.svg)
 
 ---
 
@@ -106,7 +106,7 @@ Track causality across all nodes:
 
 Getting distributed nodes to agree on a value
 
-![consensus_problem](../../svg/lectures/distributed-systems-concepts/consensus_problem.svg)
+![consensus_problem](/svg/lectures/distributed-systems-concepts/consensus_problem.svg)
 
 ---
 
@@ -139,7 +139,7 @@ Implications:
 
 ## Raft Leader Election
 
-![raft_leader_election](../../svg/lectures/distributed-systems-concepts/raft_leader_election.svg)
+![raft_leader_election](/svg/lectures/distributed-systems-concepts/raft_leader_election.svg)
 
 ---
 
@@ -147,13 +147,13 @@ Implications:
 
 When nodes can be malicious:
 
-![byzantine_fault_tolerance](../../svg/lectures/distributed-systems-concepts/byzantine_fault_tolerance.svg)
+![byzantine_fault_tolerance](/svg/lectures/distributed-systems-concepts/byzantine_fault_tolerance.svg)
 
 ---
 
 ## Replication Strategies
 
-![replication_strategies](../../svg/lectures/distributed-systems-concepts/replication_strategies.svg)
+![replication_strategies](/svg/lectures/distributed-systems-concepts/replication_strategies.svg)
 
 ---
 
@@ -172,25 +172,25 @@ All replicas execute same operations in same order:
 
 ## Gossip Protocols
 
-![gossip_protocols](../../svg/lectures/distributed-systems-concepts/gossip_protocols.svg)
+![gossip_protocols](/svg/lectures/distributed-systems-concepts/gossip_protocols.svg)
 
 ---
 
 ## Eventual Consistency
 
-![eventual_consistency](../../svg/lectures/distributed-systems-concepts/eventual_consistency.svg)
+![eventual_consistency](/svg/lectures/distributed-systems-concepts/eventual_consistency.svg)
 
 ---
 
 ## Quorum Systems
 
-![quorum_systems](../../svg/lectures/distributed-systems-concepts/quorum_systems.svg)
+![quorum_systems](/svg/lectures/distributed-systems-concepts/quorum_systems.svg)
 
 ---
 
 ## Split Brain Problem
 
-![split_brain_problem](../../svg/lectures/distributed-systems-concepts/split_brain_problem.svg)
+![split_brain_problem](/svg/lectures/distributed-systems-concepts/split_brain_problem.svg)
 
 ---
 
@@ -208,7 +208,7 @@ All replicas execute same operations in same order:
 
 ## Distributed Transactions
 
-![distributed_transactions](../../svg/lectures/distributed-systems-concepts/distributed_transactions.svg)
+![distributed_transactions](/svg/lectures/distributed-systems-concepts/distributed_transactions.svg)
 
 ---
 
@@ -216,7 +216,7 @@ All replicas execute same operations in same order:
 
 Long-running transactions as series of local transactions:
 
-![saga_pattern](../../svg/lectures/distributed-systems-concepts/saga_pattern.svg)
+![saga_pattern](/svg/lectures/distributed-systems-concepts/saga_pattern.svg)
 
 ---
 
@@ -224,13 +224,13 @@ Long-running transactions as series of local transactions:
 
 Operations that can be applied multiple times:
 
-![idempotency](../../svg/lectures/distributed-systems-concepts/idempotency.svg)
+![idempotency](/svg/lectures/distributed-systems-concepts/idempotency.svg)
 
 ---
 
 ## Distributed Caching
 
-![distributed_caching](../../svg/lectures/distributed-systems-concepts/distributed_caching.svg)
+![distributed_caching](/svg/lectures/distributed-systems-concepts/distributed_caching.svg)
 
 Cache invalidation is hard!
 
@@ -238,19 +238,19 @@ Cache invalidation is hard!
 
 ## Load Balancing Strategies
 
-![load_balancing_strategies](../../svg/lectures/distributed-systems-concepts/load_balancing_strategies.svg)
+![load_balancing_strategies](/svg/lectures/distributed-systems-concepts/load_balancing_strategies.svg)
 
 ---
 
 ## Service Discovery
 
-![service_discovery](../../svg/lectures/distributed-systems-concepts/service_discovery.svg)
+![service_discovery](/svg/lectures/distributed-systems-concepts/service_discovery.svg)
 
 ---
 
 ## Circuit Breaker Pattern
 
-![circuit_breaker_pattern](../../svg/lectures/distributed-systems-concepts/circuit_breaker_pattern.svg)
+![circuit_breaker_pattern](/svg/lectures/distributed-systems-concepts/circuit_breaker_pattern.svg)
 
 Prevent cascading failures
 
@@ -258,7 +258,7 @@ Prevent cascading failures
 
 ## Backpressure
 
-![backpressure](../../svg/lectures/distributed-systems-concepts/backpressure.svg)
+![backpressure](/svg/lectures/distributed-systems-concepts/backpressure.svg)
 
 ---
 
@@ -275,13 +275,13 @@ Control request flow:
 
 ## Distributed Tracing
 
-![distributed_tracing](../../svg/lectures/distributed-systems-concepts/distributed_tracing.svg)
+![distributed_tracing](/svg/lectures/distributed-systems-concepts/distributed_tracing.svg)
 
 ---
 
 ## Observability Pillars
 
-![observability_pillars](../../svg/lectures/distributed-systems-concepts/observability_pillars.svg)
+![observability_pillars](/svg/lectures/distributed-systems-concepts/observability_pillars.svg)
 
 ---
 
@@ -313,7 +313,7 @@ Learn how system behaves under stress
 
 ## Trade-offs Everywhere
 
-![trade_offs_everywhere](../../svg/lectures/distributed-systems-concepts/trade_offs_everywhere.svg)
+![trade_offs_everywhere](/svg/lectures/distributed-systems-concepts/trade_offs_everywhere.svg)
 
 ---
 

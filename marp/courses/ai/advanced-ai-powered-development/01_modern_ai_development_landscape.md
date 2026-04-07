@@ -10,7 +10,7 @@
 
 ## Evolution of AI-Assisted Development
 
-![evolution_of_ai_assisted_development](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/evolution_of_ai_assisted_development.svg)
+![evolution_of_ai_assisted_development](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/evolution_of_ai_assisted_development.svg)
 
 - **Autocomplete era**: single-line suggestions, pattern matching
 - **Copilot era**: multi-line generation, context-aware completions
@@ -38,7 +38,7 @@
 - Modern AI coding tools are built on the `transformer` architecture
 - Key concept: **self-attention** lets the model weigh relationships between all tokens
 
-![model_architecture_basics_for_developers](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/model_architecture_basics_for_developers.svg)
+![model_architecture_basics_for_developers](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/model_architecture_basics_for_developers.svg)
 
 - Why this matters for tool users:
     - Attention is O(n^2) in context length, explaining cost and latency scaling
@@ -151,7 +151,7 @@ Workflow:
 - Given a task (issue, spec), they plan and execute end-to-end
 - Can browse documentation, install dependencies, run CI
 
-![category_5_autonomous_coding_agents](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/category_5_autonomous_coding_agents.svg)
+![category_5_autonomous_coding_agents](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/category_5_autonomous_coding_agents.svg)
 
 - Current success rate on real-world issues: ~30-50% (SWE-bench)
 - Best suited for well-defined, scoped tasks with clear tests
@@ -163,7 +163,7 @@ Workflow:
 - Agentic tools cannot send your entire codebase in every request
 - They use **RAG** (Retrieval-Augmented Generation) to select relevant files
 
-![how_context_selection_actually_works](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/how_context_selection_actually_works.svg)
+![how_context_selection_actually_works](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/how_context_selection_actually_works.svg)
 
 - **Indexing**: tools build embeddings or keyword indexes of your codebase
 - **Retrieval**: the query is matched against the index to find relevant files
@@ -216,7 +216,7 @@ Workflow:
 - Models perform best on information at the **beginning** and **end** of the context
 - Information buried in the middle is often ignored or poorly recalled
 
-![the_lost_in_the_middle_problem](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_lost_in_the_middle_problem.svg)
+![the_lost_in_the_middle_problem](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_lost_in_the_middle_problem.svg)
 
 - **Needle-in-a-haystack** benchmarks confirm this U-shaped recall curve
 - Practical implications:
@@ -265,7 +265,7 @@ Choosing a model depends on your task:
 
 - Understanding the full pipeline helps you debug unexpected results
 
-![the_prompt_to_output_pipeline](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_prompt_to_output_pipeline.svg)
+![the_prompt_to_output_pipeline](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/the_prompt_to_output_pipeline.svg)
 
 - **System prompt**: sets behavior, constraints, and persona (usually hidden)
 - **User message**: your question or task description
@@ -294,7 +294,7 @@ Choosing a model depends on your task:
 
 ## Cost, Latency, and Quality Tradeoffs
 
-![cost_latency_and_quality_tradeoffs](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/cost_latency_and_quality_tradeoffs.svg)
+![cost_latency_and_quality_tradeoffs](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/cost_latency_and_quality_tradeoffs.svg)
 
 - Frontier models: ~$3-15 per million input tokens, ~$15-75 per million output tokens
 - Inline completion: must be <300ms, favors smaller models or speculative decoding
@@ -457,7 +457,7 @@ Choosing a model depends on your task:
 
 - Enterprise AI tool adoption follows a predictable pattern:
 
-![industry_adoption_patterns_and_case_studies](../../../../svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/industry_adoption_patterns_and_case_studies.svg)
+![industry_adoption_patterns_and_case_studies](/svg/courses/ai/advanced-ai-powered-development/01_modern_ai_development_landscape/industry_adoption_patterns_and_case_studies.svg)
 
 - **Common pitfalls**:
     - Mandating tools without training leads to low adoption

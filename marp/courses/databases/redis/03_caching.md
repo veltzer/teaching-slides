@@ -9,7 +9,7 @@
 - Improves response time and application performance
 - Reduces costs (database queries, API calls, computation)
 
-![what_is_caching](../../../../svg/courses/databases/redis/03_caching/what_is_caching.svg)
+![what_is_caching](/svg/courses/databases/redis/03_caching/what_is_caching.svg)
 
 ---
 
@@ -39,7 +39,7 @@
 
 Application is responsible for cache interactions:
 
-![cache_aside_pattern](../../../../svg/courses/databases/redis/03_caching/cache_aside_pattern.svg)
+![cache_aside_pattern](/svg/courses/databases/redis/03_caching/cache_aside_pattern.svg)
 
 ---
 
@@ -73,7 +73,7 @@ def get_user(user_id):
 
 Every write goes to cache and database:
 
-![write_through_pattern](../../../../svg/courses/databases/redis/03_caching/write_through_pattern.svg)
+![write_through_pattern](/svg/courses/databases/redis/03_caching/write_through_pattern.svg)
 
 ---
 
@@ -103,7 +103,7 @@ def update_user(user_id, user_data):
 
 Writes go to cache first, then asynchronously to database:
 
-![write_behind_pattern](../../../../svg/courses/databases/redis/03_caching/write_behind_pattern.svg)
+![write_behind_pattern](/svg/courses/databases/redis/03_caching/write_behind_pattern.svg)
 
 ---
 
@@ -138,7 +138,7 @@ def update_user_write_behind(user_id, user_data):
 
 Cache handles database interaction on miss:
 
-![read_through_pattern](../../../../svg/courses/databases/redis/03_caching/read_through_pattern.svg)
+![read_through_pattern](/svg/courses/databases/redis/03_caching/read_through_pattern.svg)
 
 ---
 
@@ -146,7 +146,7 @@ Cache handles database interaction on miss:
 
 Cache proactively refreshes before expiration:
 
-![refresh_ahead_pattern](../../../../svg/courses/databases/redis/03_caching/refresh_ahead_pattern.svg)
+![refresh_ahead_pattern](/svg/courses/databases/redis/03_caching/refresh_ahead_pattern.svg)
 
 ---
 
@@ -196,13 +196,13 @@ EXPIRE session:123 3600
 
 Redis memory limits and eviction:
 
-![cache_eviction_policies](../../../../svg/courses/databases/redis/03_caching/cache_eviction_policies.svg)
+![cache_eviction_policies](/svg/courses/databases/redis/03_caching/cache_eviction_policies.svg)
 
 ---
 
 ## LRU vs LFU Eviction
 
-![lru_vs_lfu_eviction](../../../../svg/courses/databases/redis/03_caching/lru_vs_lfu_eviction.svg)
+![lru_vs_lfu_eviction](/svg/courses/databases/redis/03_caching/lru_vs_lfu_eviction.svg)
 
 - LRU: `allkeys-lru`, `volatile-lru`
 - LFU: `allkeys-lfu`, `volatile-lfu` (Redis 4.0+)
@@ -227,7 +227,7 @@ Redis memory limits and eviction:
 
 ## Event-Based Cache Invalidation
 
-![event_based_cache_invalidation](../../../../svg/courses/databases/redis/03_caching/event_based_cache_invalidation.svg)
+![event_based_cache_invalidation](/svg/courses/databases/redis/03_caching/event_based_cache_invalidation.svg)
 
 ---
 
@@ -268,7 +268,7 @@ def setup_cache_invalidation_listener():
 - Occurs when popular keys expire or are invalidated
 - Causes database overload
 
-![cache_stampede_problem](../../../../svg/courses/databases/redis/03_caching/cache_stampede_problem.svg)
+![cache_stampede_problem](/svg/courses/databases/redis/03_caching/cache_stampede_problem.svg)
 
 ---
 
@@ -290,7 +290,7 @@ def setup_cache_invalidation_listener():
 
 ## Cache Stampede Prevention: Locking
 
-![cache_stampede_prevention_locking](../../../../svg/courses/databases/redis/03_caching/cache_stampede_prevention_locking.svg)
+![cache_stampede_prevention_locking](/svg/courses/databases/redis/03_caching/cache_stampede_prevention_locking.svg)
 
 ---
 
@@ -340,7 +340,7 @@ def get_with_lock(key, rebuild_func, lock_timeout=5, retry_count=3):
 
 Multiple application instances using shared Redis cache:
 
-![distributed_caching_architecture](../../../../svg/courses/databases/redis/03_caching/distributed_caching_architecture.svg)
+![distributed_caching_architecture](/svg/courses/databases/redis/03_caching/distributed_caching_architecture.svg)
 
 ---
 
@@ -364,7 +364,7 @@ Multiple application instances using shared Redis cache:
 
 ## Cache Hit Ratio Monitoring
 
-![cache_hit_ratio_monitoring](../../../../svg/courses/databases/redis/03_caching/cache_hit_ratio_monitoring.svg)
+![cache_hit_ratio_monitoring](/svg/courses/databases/redis/03_caching/cache_hit_ratio_monitoring.svg)
 
 - Target hit ratio: 80%+ in most applications
 - Monitor with `INFO stats` command
@@ -414,7 +414,7 @@ Strategies for large objects:
 
 Using Redis hashes for small objects:
 
-![caching_small_objects_hashes](../../../../svg/courses/databases/redis/03_caching/caching_small_objects_hashes.svg)
+![caching_small_objects_hashes](/svg/courses/databases/redis/03_caching/caching_small_objects_hashes.svg)
 
 - Memory efficient for small objects
 - Hash fields compression when appropriate
@@ -449,7 +449,7 @@ Benefits:
 
 ## Implementing Rate Limiting with Redis
 
-![implementing_rate_limiting_with_redis](../../../../svg/courses/databases/redis/03_caching/implementing_rate_limiting_with_redis.svg)
+![implementing_rate_limiting_with_redis](/svg/courses/databases/redis/03_caching/implementing_rate_limiting_with_redis.svg)
 
 ---
 
@@ -541,7 +541,7 @@ def invalidate_by_tag(tag):
 
 ## Implementing a Tiered Cache
 
-![implementing_a_tiered_cache](../../../../svg/courses/databases/redis/03_caching/implementing_a_tiered_cache.svg)
+![implementing_a_tiered_cache](/svg/courses/databases/redis/03_caching/implementing_a_tiered_cache.svg)
 
 Benefits:
 - Reduced network calls

@@ -22,7 +22,7 @@
 
 ## Tower / AWX Architecture
 
-![tower_awx_architecture](../../../../svg/courses/devops/ansible/13_tower_awx/tower_awx_architecture.svg)
+![tower_awx_architecture](/svg/courses/devops/ansible/13_tower_awx/tower_awx_architecture.svg)
 
 ---
 

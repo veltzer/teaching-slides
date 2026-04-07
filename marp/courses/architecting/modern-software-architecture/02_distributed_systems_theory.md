@@ -43,7 +43,7 @@
 ---
 ## CAP Theorem Diagram
 
-![cap_theorem_diagram](../../../../svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem_diagram.svg)
+![cap_theorem_diagram](/svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/cap_theorem_diagram.svg)
 
 ---
 ## Consistency in CAP

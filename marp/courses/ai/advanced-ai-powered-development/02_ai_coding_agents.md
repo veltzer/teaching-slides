@@ -18,7 +18,7 @@ From chatbots to autonomous coding partners
 
 ## Chatbot vs Agent
 
-![chatbot_vs_agent](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/chatbot_vs_agent.svg)
+![chatbot_vs_agent](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/chatbot_vs_agent.svg)
 
 - An agent **observes**, **reasons**, **acts**, and **loops** until the task is done
 - A chatbot only responds to what you explicitly ask
@@ -27,7 +27,7 @@ From chatbots to autonomous coding partners
 
 ## The Agent Loop
 
-![the_agent_loop](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/the_agent_loop.svg)
+![the_agent_loop](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/the_agent_loop.svg)
 
 - The loop continues until the agent determines the task is complete
 - Each iteration adds context from tool outputs to the next reasoning step
@@ -101,7 +101,7 @@ Modern agents combine planning with a **tool-use loop**:
 
 Advanced setups use multiple agents collaborating:
 
-![multi_agent_and_orchestrated_workflows](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/multi_agent_and_orchestrated_workflows.svg)
+![multi_agent_and_orchestrated_workflows](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/multi_agent_and_orchestrated_workflows.svg)
 
 1. **Planning agent**: breaks the task into subtasks using a stronger model
 1. **Execution agents**: each subtask runs in parallel with a faster model
@@ -116,7 +116,7 @@ Advanced setups use multiple agents collaborating:
 
 ## Popular Agent Tools Landscape
 
-![popular_agent_tools_landscape](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/popular_agent_tools_landscape.svg)
+![popular_agent_tools_landscape](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/popular_agent_tools_landscape.svg)
 
 ---
 
@@ -246,7 +246,7 @@ Agent steps:
 
 ## How Agents Handle Errors and Self-Correct
 
-![how_agents_handle_errors_and_self_correct](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/how_agents_handle_errors_and_self_correct.svg)
+![how_agents_handle_errors_and_self_correct](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/how_agents_handle_errors_and_self_correct.svg)
 
 The **observe-diagnose-retry** loop:
 1. Agent runs a tool (e.g., `npm test`) and it fails
@@ -439,7 +439,7 @@ claude -p "refactor to async/await" src/legacy/*.js
 
 Agents must work within finite context windows:
 
-![context_window_management_and_token_budgets](../../../../svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/context_window_management_and_token_budgets.svg)
+![context_window_management_and_token_budgets](/svg/courses/ai/advanced-ai-powered-development/02_ai_coding_agents/context_window_management_and_token_budgets.svg)
 
 **Strategies agents use to stay within budget**:
 1. **Repo maps**: compact outline of files and symbols (Aider approach)

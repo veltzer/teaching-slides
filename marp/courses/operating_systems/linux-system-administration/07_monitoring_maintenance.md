@@ -378,7 +378,7 @@ systemctl restart rsyslog
 ---
 ## Automated Monitoring: Prometheus and Grafana
 
-![automated_monitoring_prometheus_and_grafana](../../../../svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/automated_monitoring_prometheus_and_grafana.svg)
+![automated_monitoring_prometheus_and_grafana](/svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/automated_monitoring_prometheus_and_grafana.svg)
 
 - `Prometheus` scrapes metrics from targets
 - `Grafana` visualizes metrics with dashboards
@@ -1118,7 +1118,7 @@ sha256sum -c /root/config-checksums.txt
 ---
 ## Change Management Workflow
 
-![change_management_workflow](../../../../svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/change_management_workflow.svg)
+![change_management_workflow](/svg/courses/operating_systems/linux-system-administration/07_monitoring_maintenance/change_management_workflow.svg)
 
 Key principles:
 1. All changes tracked in version control (IaC)

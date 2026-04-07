@@ -2,7 +2,7 @@
 
 ## Database Service Types
 
-![database_service_types](../../../../svg/courses/cloud/introduction-to-azure/07_databases/database_service_types.svg)
+![database_service_types](/svg/courses/cloud/introduction-to-azure/07_databases/database_service_types.svg)
 
 ---
 
@@ -17,7 +17,7 @@
 
 ## SQL Database Deployment Options
 
-![sql_database_deployment_options](../../../../svg/courses/cloud/introduction-to-azure/07_databases/sql_database_deployment_options.svg)
+![sql_database_deployment_options](/svg/courses/cloud/introduction-to-azure/07_databases/sql_database_deployment_options.svg)
 
 ---
 
@@ -68,7 +68,7 @@
 
 ## Cosmos DB APIs
 
-![cosmos_db_apis](../../../../svg/courses/cloud/introduction-to-azure/07_databases/cosmos_db_apis.svg)
+![cosmos_db_apis](/svg/courses/cloud/introduction-to-azure/07_databases/cosmos_db_apis.svg)
 
 ---
 
@@ -155,7 +155,7 @@
 
 ## Migration Process
 
-![migration_process](../../../../svg/courses/cloud/introduction-to-azure/07_databases/migration_process.svg)
+![migration_process](/svg/courses/cloud/introduction-to-azure/07_databases/migration_process.svg)
 
 ---
 
@@ -215,7 +215,7 @@
 
 ## High Availability Design
 
-![high_availability_design](../../../../svg/courses/cloud/introduction-to-azure/07_databases/high_availability_design.svg)
+![high_availability_design](/svg/courses/cloud/introduction-to-azure/07_databases/high_availability_design.svg)
 
 ---
 

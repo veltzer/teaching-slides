@@ -18,7 +18,7 @@
 - Enables memory protection between processes
 - Allows programs to use more memory than physically available
 
-![virtual_memory_fundamentals](../../../../../svg/courses/languages/python/advanced-python/16_memory_mappings/virtual_memory_fundamentals.svg)
+![virtual_memory_fundamentals](/svg/courses/languages/python/advanced-python/16_memory_mappings/virtual_memory_fundamentals.svg)
 
 ---
 
@@ -48,7 +48,7 @@
 - Each process has its own page table structure
 - Managed by the operating system kernel
 
-![page_tables](../../../../../svg/courses/languages/python/advanced-python/16_memory_mappings/page_tables.svg)
+![page_tables](/svg/courses/languages/python/advanced-python/16_memory_mappings/page_tables.svg)
 
 ---
 
@@ -91,7 +91,7 @@
 - Writes may be cached and flushed later
 - Enables efficient file I/O without explicit read/write calls
 
-![file_backed_mappings](../../../../../svg/courses/languages/python/advanced-python/16_memory_mappings/file_backed_mappings.svg)
+![file_backed_mappings](/svg/courses/languages/python/advanced-python/16_memory_mappings/file_backed_mappings.svg)
 
 ---
 
@@ -123,7 +123,7 @@
 - On write, a private copy is created for the process
 - Reduces memory consumption and improves performance
 
-![copy_on_write_cow](../../../../../svg/courses/languages/python/advanced-python/16_memory_mappings/copy_on_write_cow.svg)
+![copy_on_write_cow](/svg/courses/languages/python/advanced-python/16_memory_mappings/copy_on_write_cow.svg)
 
 ---
 
@@ -165,7 +165,7 @@
 - Kernel functions: do_mmap(), handle_mm_fault()
 - File system integration
 
-![implementation_in_linux](../../../../../svg/courses/languages/python/advanced-python/16_memory_mappings/implementation_in_linux.svg)
+![implementation_in_linux](/svg/courses/languages/python/advanced-python/16_memory_mappings/implementation_in_linux.svg)
 
 ---
 

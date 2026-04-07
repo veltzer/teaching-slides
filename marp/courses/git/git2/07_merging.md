@@ -17,13 +17,13 @@
 
 ## What is a Merge?
 
-![what_is_a_merge](../../../../svg/courses/git/git2/07_merging/what_is_a_merge.svg)
+![what_is_a_merge](/svg/courses/git/git2/07_merging/what_is_a_merge.svg)
 
 ---
 
 ## Fast-Forward Merge
 
-![fast_forward_merge](../../../../svg/courses/git/git2/07_merging/fast_forward_merge.svg)
+![fast_forward_merge](/svg/courses/git/git2/07_merging/fast_forward_merge.svg)
 
 ---
 
@@ -56,13 +56,13 @@ git config merge.ff only   # Only fast-forward
 
 ## Why Prevent Fast-Forward?
 
-![why_prevent_fast_forward](../../../../svg/courses/git/git2/07_merging/why_prevent_fast_forward.svg)
+![why_prevent_fast_forward](/svg/courses/git/git2/07_merging/why_prevent_fast_forward.svg)
 
 ---
 
 ## Three-Way Merge Explained
 
-![three_way_merge_explained](../../../../svg/courses/git/git2/07_merging/three_way_merge_explained.svg)
+![three_way_merge_explained](/svg/courses/git/git2/07_merging/three_way_merge_explained.svg)
 
 ---
 
@@ -114,13 +114,13 @@ git merge -s custom feature
 
 ## Strategy Options (-X)
 
-![strategy_options_x](../../../../svg/courses/git/git2/07_merging/strategy_options_x.svg)
+![strategy_options_x](/svg/courses/git/git2/07_merging/strategy_options_x.svg)
 
 ---
 
 ## Understanding Merge Conflicts
 
-![understanding_merge_conflicts](../../../../svg/courses/git/git2/07_merging/understanding_merge_conflicts.svg)
+![understanding_merge_conflicts](/svg/courses/git/git2/07_merging/understanding_merge_conflicts.svg)
 
 ---
 
@@ -153,7 +153,7 @@ function greet(name = "World") {
 
 ## Resolving Conflicts Step by Step
 
-![resolving_conflicts_step_by_step](../../../../svg/courses/git/git2/07_merging/resolving_conflicts_step_by_step.svg)
+![resolving_conflicts_step_by_step](/svg/courses/git/git2/07_merging/resolving_conflicts_step_by_step.svg)
 
 ---
 
@@ -272,7 +272,7 @@ git config --global pull.rebase true
 - Reduces "merge commits" clutter
 - Better for code reviews
 
-![configure_as_default](../../../../svg/courses/git/git2/07_merging/configure_as_default.svg)
+![configure_as_default](/svg/courses/git/git2/07_merging/configure_as_default.svg)
 
 ---
 
@@ -347,7 +347,7 @@ git status
 
 ## Merge vs Rebase Decision Tree
 
-![merge_vs_rebase_decision_tree](../../../../svg/courses/git/git2/07_merging/merge_vs_rebase_decision_tree.svg)
+![merge_vs_rebase_decision_tree](/svg/courses/git/git2/07_merging/merge_vs_rebase_decision_tree.svg)
 
 ---
 

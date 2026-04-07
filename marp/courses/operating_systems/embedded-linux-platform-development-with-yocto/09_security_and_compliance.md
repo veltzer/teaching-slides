@@ -4,7 +4,7 @@
 
 ## Security Overview
 
-![security_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/security_overview.svg)
+![security_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/security_overview.svg)
 
 ---
 
@@ -153,7 +153,7 @@ tmpfs /var/tmp tmpfs nodev,nosuid,noexec 0 0
 
 ## Secure Boot Architecture
 
-![secure_boot_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/secure_boot_architecture.svg)
+![secure_boot_architecture](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/secure_boot_architecture.svg)
 
 ---
 
@@ -370,7 +370,7 @@ System::Privileged System::Data rw
 
 ## CVE Tracking
 
-![cve_tracking](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/cve_tracking.svg)
+![cve_tracking](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/09_security_and_compliance/cve_tracking.svg)
 
 ---
 

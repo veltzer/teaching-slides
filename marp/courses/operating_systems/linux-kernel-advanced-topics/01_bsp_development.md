@@ -8,7 +8,7 @@
 1. Hardware-specific code and configurations
 1. Enables Linux to run on specific hardware platforms
 
-![what_is_a_bsp](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/what_is_a_bsp.svg)
+![what_is_a_bsp](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/what_is_a_bsp.svg)
 
 ---
 
@@ -25,7 +25,7 @@
 
 ## BSP Architecture
 
-![bsp_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_architecture.svg)
+![bsp_architecture](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_architecture.svg)
 
 ---
 
@@ -70,7 +70,7 @@ void platform_init(void) {
 
 ## Boot Sequence
 
-![boot_sequence](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/boot_sequence.svg)
+![boot_sequence](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/boot_sequence.svg)
 
 ---
 
@@ -193,7 +193,7 @@ my-bsp/
 
 ## BSP Build Process
 
-![bsp_build_process](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_build_process.svg)
+![bsp_build_process](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_build_process.svg)
 
 ---
 
@@ -339,7 +339,7 @@ git fetch vendor
 
 ## Memory Layout Planning
 
-![memory_layout_planning](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/memory_layout_planning.svg)
+![memory_layout_planning](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/memory_layout_planning.svg)
 
 ---
 
@@ -421,7 +421,7 @@ clocks {
 
 ## Vendor BSP Integration
 
-![vendor_bsp_integration](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/vendor_bsp_integration.svg)
+![vendor_bsp_integration](/svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/vendor_bsp_integration.svg)
 
 ---
 

@@ -20,7 +20,7 @@
 
 ## Computer Architecture Overview
 
-![computer_architecture_overview](../../../../svg/courses/security/linux-forensics/01_hardware/computer_architecture_overview.svg)
+![computer_architecture_overview](/svg/courses/security/linux-forensics/01_hardware/computer_architecture_overview.svg)
 
 ---
 
@@ -99,7 +99,7 @@ lscpu | grep "Byte Order"
 
 ## Hard Disk Drive (HDD) Anatomy
 
-![hard_disk_drive_hdd_anatomy](../../../../svg/courses/security/linux-forensics/01_hardware/hard_disk_drive_hdd_anatomy.svg)
+![hard_disk_drive_hdd_anatomy](/svg/courses/security/linux-forensics/01_hardware/hard_disk_drive_hdd_anatomy.svg)
 
 - Platters spin at 5400-15000 RPM
 - Read/write heads float nanometers above surface
@@ -114,7 +114,7 @@ lscpu | grep "Byte Order"
 - **Head**: which platter surface (top/bottom)
 - **Sector**: subdivision of a track (traditionally 512 bytes)
 
-![hdd_geometry_chs_addressing](../../../../svg/courses/security/linux-forensics/01_hardware/hdd_geometry_chs_addressing.svg)
+![hdd_geometry_chs_addressing](/svg/courses/security/linux-forensics/01_hardware/hdd_geometry_chs_addressing.svg)
 
 - Modern drives use LBA (Logical Block Addressing) instead of CHS
 - LBA numbers sectors sequentially from 0
@@ -147,7 +147,7 @@ sudo fdisk -l /dev/sda
 - Data stored in cells as electrical charges
 - Organized into pages (4-16 KB) and blocks (256-512 pages)
 
-![solid_state_drives_ssd](../../../../svg/courses/security/linux-forensics/01_hardware/solid_state_drives_ssd.svg)
+![solid_state_drives_ssd](/svg/courses/security/linux-forensics/01_hardware/solid_state_drives_ssd.svg)
 
 ---
 
@@ -337,7 +337,7 @@ sudo fdisk -l /dev/sda | grep "Disklabel type"
 
 ## GPT Structure
 
-![gpt_structure](../../../../svg/courses/security/linux-forensics/01_hardware/gpt_structure.svg)
+![gpt_structure](/svg/courses/security/linux-forensics/01_hardware/gpt_structure.svg)
 
 - Each partition has a unique GUID
 - Backup header allows recovery if primary is corrupted
@@ -389,7 +389,7 @@ sudo sfdisk -T
 
 ## Logical Volume Manager (LVM)
 
-![logical_volume_manager_lvm](../../../../svg/courses/security/linux-forensics/01_hardware/logical_volume_manager_lvm.svg)
+![logical_volume_manager_lvm](/svg/courses/security/linux-forensics/01_hardware/logical_volume_manager_lvm.svg)
 
 ```bash
 # List physical volumes, volume groups, logical volumes

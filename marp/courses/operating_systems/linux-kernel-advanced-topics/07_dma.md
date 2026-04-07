@@ -16,7 +16,7 @@ Key benefit: CPU can perform other tasks during transfers
 
 ## DMA vs PIO
 
-![dma_vs_pio](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/dma_vs_pio.svg)
+![dma_vs_pio](/svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/dma_vs_pio.svg)
 
 ---
 
@@ -118,7 +118,7 @@ enum dma_data_direction {
 
 ## Scatter-Gather DMA
 
-![scatter_gather_dma](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/scatter_gather_dma.svg)
+![scatter_gather_dma](/svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/scatter_gather_dma.svg)
 
 ---
 
@@ -296,7 +296,7 @@ dma_pool_destroy(pool);
 
 ## IOMMU Integration
 
-![iommu_integration](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/iommu_integration.svg)
+![iommu_integration](/svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/iommu_integration.svg)
 
 ---
 
@@ -507,7 +507,7 @@ my_prep_memcpy(struct dma_chan *chan,
 
 ## Cache Coherency
 
-![cache_coherency](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/cache_coherency.svg)
+![cache_coherency](/svg/courses/operating_systems/linux-kernel-advanced-topics/07_dma/cache_coherency.svg)
 
 ---
 

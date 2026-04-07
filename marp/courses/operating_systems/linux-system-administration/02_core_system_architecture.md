@@ -4,7 +4,7 @@
 ---
 ## Linux Filesystem Hierarchy Standard (FHS)
 
-![linux_filesystem_hierarchy_standard_fhs](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
+![linux_filesystem_hierarchy_standard_fhs](/svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/linux_filesystem_hierarchy_standard_fhs.svg)
 
 - `/bin`, `/sbin` - essential binaries
 - `/etc` - system configuration
@@ -86,7 +86,7 @@ df -i
 ---
 ## The Boot Process Overview
 
-![the_boot_process_overview](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
+![the_boot_process_overview](/svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/the_boot_process_overview.svg)
 
 1. Firmware (BIOS/UEFI) performs POST and finds boot device
 1. Bootloader (`GRUB2`) loads kernel and `initramfs`
@@ -791,7 +791,7 @@ systemctl list-sockets
 ---
 ## Socket Activation Benefits
 
-![socket_activation_benefits](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
+![socket_activation_benefits](/svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/socket_activation_benefits.svg)
 
 - Faster boot: services start only when needed
 - No port conflicts: `systemd` holds sockets during restarts
@@ -1098,7 +1098,7 @@ crash /usr/lib/debug/boot/vmlinux-$(uname -r) \
 
 The device mapper (`dm`) is a kernel framework for mapping block devices. It underpins `LVM`, `LUKS`, and `multipath`.
 
-![device_mapper_overview](../../../../svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
+![device_mapper_overview](/svg/courses/operating_systems/linux-system-administration/02_core_system_architecture/device_mapper_overview.svg)
 
 ```bash
 # List device mapper devices

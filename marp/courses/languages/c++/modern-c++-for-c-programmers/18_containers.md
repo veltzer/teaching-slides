@@ -16,7 +16,7 @@ STL containers are organized into three main categories:
 
 ## Sequence Containers Overview
 
-![sequence_containers_overview](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/sequence_containers_overview.svg)
+![sequence_containers_overview](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/sequence_containers_overview.svg)
 
 ---
 
@@ -38,7 +38,7 @@ int second = numbers.at(1);  // bounds checked
 
 ## vector Memory Layout
 
-![vector_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/vector_memory_layout.svg)
+![vector_memory_layout](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/vector_memory_layout.svg)
 
 ---
 
@@ -80,7 +80,7 @@ messages.pop_back();   // Remove last
 
 ## deque Memory Layout
 
-![deque_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/deque_memory_layout.svg)
+![deque_memory_layout](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/deque_memory_layout.svg)
 
 ---
 
@@ -103,7 +103,7 @@ numbers.remove(3);  // Removes all 3s
 
 ## list Memory Layout
 
-![list_memory_layout](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/list_memory_layout.svg)
+![list_memory_layout](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/list_memory_layout.svg)
 
 ---
 
@@ -143,7 +143,7 @@ static_assert(sizeof(fixed_array) == 5 * sizeof(int));
 
 ## Associative Containers Overview
 
-![associative_containers_overview](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/associative_containers_overview.svg)
+![associative_containers_overview](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/associative_containers_overview.svg)
 
 ---
 
@@ -218,7 +218,7 @@ for (const auto& [item, price] : prices) {
 
 ## Container Adapters
 
-![container_adapters](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/container_adapters.svg)
+![container_adapters](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/container_adapters.svg)
 
 ---
 
@@ -294,7 +294,7 @@ std::priority_queue<int, std::vector<int>, std::greater<int>> min_pq;
 
 ## Performance Comparison
 
-![performance_comparison](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/performance_comparison.svg)
+![performance_comparison](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/performance_comparison.svg)
 
 ---
 
@@ -378,7 +378,7 @@ for (auto rit = vec.rbegin(); rit != vec.rend(); ++rit) {
 
 ## Iterator Categories
 
-![iterator_categories](../../../../../svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/iterator_categories.svg)
+![iterator_categories](/svg/courses/languages/c++/modern-c++-for-c-programmers/18_containers/iterator_categories.svg)
 
 ---
 

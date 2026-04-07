@@ -183,7 +183,7 @@ git log -G"regex_pattern" --oneline
 - `--grep`: Search commit messages
 - Combined searches for precision
 
-![find_commits_that_changed_specific_text](../../../../svg/courses/git/git2/15_searching_content/find_commits_that_changed_specific_text.svg)
+![find_commits_that_changed_specific_text](/svg/courses/git/git2/15_searching_content/find_commits_that_changed_specific_text.svg)
 
 ---
 

@@ -4,7 +4,7 @@
 
 ## Deployment Lifecycle
 
-![deployment_lifecycle](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/deployment_lifecycle.svg)
+![deployment_lifecycle](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/deployment_lifecycle.svg)
 
 ---
 
@@ -42,7 +42,7 @@ repo manifest -r -o release-1.2.3.xml
 
 ## Image Formats
 
-![image_formats](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/image_formats.svg)
+![image_formats](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/image_formats.svg)
 
 ---
 
@@ -126,7 +126,7 @@ ostree admin deploy mydevice/main
 
 ## Update Strategies
 
-![update_strategies](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/update_strategies.svg)
+![update_strategies](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/update_strategies.svg)
 
 ---
 
@@ -262,7 +262,7 @@ MENDER_DATA_PART_SIZE_MB = "1024"
 
 ## OTA Update Architecture
 
-![ota_update_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/ota_update_architecture.svg)
+![ota_update_architecture](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/ota_update_architecture.svg)
 
 ---
 
@@ -684,7 +684,7 @@ fi
 
 ## Lifecycle Management
 
-![lifecycle_management](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/lifecycle_management.svg)
+![lifecycle_management](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/10_production_deployment/lifecycle_management.svg)
 
 ---
 

@@ -358,7 +358,7 @@ filefrag /path/to/file       # ext4 fragmentation
 ---
 ## Backup Strategies
 
-![backup_strategies](../../../../svg/courses/operating_systems/linux-system-administration/04_storage_management/backup_strategies.svg)
+![backup_strategies](/svg/courses/operating_systems/linux-system-administration/04_storage_management/backup_strategies.svg)
 
 - **Full**: complete copy, slow but simple to restore
 - **Differential**: changes since last full, moderate speed
@@ -888,7 +888,7 @@ lsblk --discard
 
 Multipath I/O (`dm-multipath`) provides redundant paths to SAN storage for high availability.
 
-![multipath_i_o](../../../../svg/courses/operating_systems/linux-system-administration/04_storage_management/multipath_i_o.svg)
+![multipath_i_o](/svg/courses/operating_systems/linux-system-administration/04_storage_management/multipath_i_o.svg)
 
 ```bash
 # Install multipath tools

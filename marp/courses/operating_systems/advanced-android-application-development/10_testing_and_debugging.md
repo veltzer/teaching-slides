@@ -5,7 +5,7 @@
 
 ## Testing Overview
 
-![testing_overview](../../../../svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/testing_overview.svg)
+![testing_overview](/svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/testing_overview.svg)
 
 ---
 
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
 ## Performance Profiling
 
-![performance_profiling](../../../../svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/performance_profiling.svg)
+![performance_profiling](/svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/performance_profiling.svg)
 
 ---
 
@@ -274,7 +274,7 @@ android {
 
 ## Testing Pyramid
 
-![testing_pyramid](../../../../svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/testing_pyramid.svg)
+![testing_pyramid](/svg/courses/operating_systems/advanced-android-application-development/10_testing_and_debugging/testing_pyramid.svg)
 
 ---
 

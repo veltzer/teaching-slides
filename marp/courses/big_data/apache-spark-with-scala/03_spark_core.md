@@ -12,13 +12,13 @@
 
 ## Core Components
 
-![core_components](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/core_components.svg)
+![core_components](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/core_components.svg)
 
 ---
 
 ## RDD Basics
 
-![rdd_basics](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/rdd_basics.svg)
+![rdd_basics](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/rdd_basics.svg)
 
 ---
 
@@ -50,13 +50,13 @@ val mappedRDD = rdd.map(_ * 2)
 
 ## RDD Operations Flow
 
-![rdd_operations_flow](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/rdd_operations_flow.svg)
+![rdd_operations_flow](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/rdd_operations_flow.svg)
 
 ---
 
 ## Transformations Hierarchy
 
-![transformations_hierarchy](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/transformations_hierarchy.svg)
+![transformations_hierarchy](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/transformations_hierarchy.svg)
 
 ---
 
@@ -79,7 +79,7 @@ val words = lines.flatMap(_.split(" "))
 
 ## Action Types
 
-![action_types](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/action_types.svg)
+![action_types](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/action_types.svg)
 
 ---
 
@@ -102,12 +102,12 @@ val sum = numbers.reduce(_ + _)
 
 ## Execution Model
 
-![execution_model](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/execution_model.svg)
+![execution_model](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/execution_model.svg)
 
 ---
 
 ## Data Partitioning
 
-![data_partitioning](../../../../svg/courses/big_data/apache-spark-with-scala/03_spark_core/data_partitioning.svg)
+![data_partitioning](/svg/courses/big_data/apache-spark-with-scala/03_spark_core/data_partitioning.svg)
 
 [Continue with remaining content and diagrams...]

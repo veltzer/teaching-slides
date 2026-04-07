@@ -7,13 +7,13 @@
 
 DevOps is a set of practices combining software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently and reliably.
 
-![what_is_devops](../../svg/lectures/devops-slides/what_is_devops.svg)
+![what_is_devops](/svg/lectures/devops-slides/what_is_devops.svg)
 
 ---
 
 ## Core Components of DevOps
 
-![core_components_of_devops](../../svg/lectures/devops-slides/core_components_of_devops.svg)
+![core_components_of_devops](/svg/lectures/devops-slides/core_components_of_devops.svg)
 
 ---
 
@@ -31,13 +31,13 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Evolution of Software Delivery
 
-![evolution_of_software_delivery](../../svg/lectures/devops-slides/evolution_of_software_delivery.svg)
+![evolution_of_software_delivery](/svg/lectures/devops-slides/evolution_of_software_delivery.svg)
 
 ---
 
 ## DevOps Culture and Principles
 
-![devops_culture_and_principles](../../svg/lectures/devops-slides/devops_culture_and_principles.svg)
+![devops_culture_and_principles](/svg/lectures/devops-slides/devops_culture_and_principles.svg)
 
 ---
 
@@ -60,7 +60,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Benefits of DevOps
 
-![benefits_of_devops](../../svg/lectures/devops-slides/benefits_of_devops.svg)
+![benefits_of_devops](/svg/lectures/devops-slides/benefits_of_devops.svg)
 
 ---
 
@@ -73,7 +73,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 - Mean Time to Recovery (MTTR)
 - Change Failure Rate
 
-![key_performance_indicators_kpis](../../svg/lectures/devops-slides/key_performance_indicators_kpis.svg)
+![key_performance_indicators_kpis](/svg/lectures/devops-slides/key_performance_indicators_kpis.svg)
 
 ---
 
@@ -98,13 +98,13 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevOps Operating Model
 
-![devops_operating_model](../../svg/lectures/devops-slides/devops_operating_model.svg)
+![devops_operating_model](/svg/lectures/devops-slides/devops_operating_model.svg)
 
 ---
 
 ## Agile and Lean in DevOps
 
-![agile_and_lean_in_devops](../../svg/lectures/devops-slides/agile_and_lean_in_devops.svg)
+![agile_and_lean_in_devops](/svg/lectures/devops-slides/agile_and_lean_in_devops.svg)
 
 ---
 
@@ -144,7 +144,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## CI/CD Pipeline Detailed
 
-![ci_cd_pipeline_detailed](../../svg/lectures/devops-slides/ci_cd_pipeline_detailed.svg)
+![ci_cd_pipeline_detailed](/svg/lectures/devops-slides/ci_cd_pipeline_detailed.svg)
 
 ---
 
@@ -167,7 +167,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## Continuous Deployment Strategies
 
-![continuous_deployment_strategies](../../svg/lectures/devops-slides/continuous_deployment_strategies.svg)
+![continuous_deployment_strategies](/svg/lectures/devops-slides/continuous_deployment_strategies.svg)
 
 ---
 
@@ -202,7 +202,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevOps Tools Ecosystem
 
-![devops_tools_ecosystem](../../svg/lectures/devops-slides/devops_tools_ecosystem.svg)
+![devops_tools_ecosystem](/svg/lectures/devops-slides/devops_tools_ecosystem.svg)
 
 ---
 
@@ -225,7 +225,7 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 
 ## DevSecOps Integration
 
-![devsecops_integration](../../svg/lectures/devops-slides/devsecops_integration.svg)
+![devsecops_integration](/svg/lectures/devops-slides/devsecops_integration.svg)
 
 ---
 

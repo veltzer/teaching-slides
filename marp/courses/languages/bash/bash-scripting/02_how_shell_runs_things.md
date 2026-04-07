@@ -10,7 +10,7 @@
 ---
 ## Command Line Parsing: Step by Step
 
-![command_line_parsing_step_by_step](../../../../../svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/command_line_parsing_step_by_step.svg)
+![command_line_parsing_step_by_step](/svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/command_line_parsing_step_by_step.svg)
 
 ---
 ## The Full Parsing Order
@@ -154,7 +154,7 @@ command -v ls  # /usr/bin/ls
 ---
 ## `fork` and `exec`: How External Commands Run
 
-![fork_and_exec_how_external_commands_run](../../../../../svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/fork_and_exec_how_external_commands_run.svg)
+![fork_and_exec_how_external_commands_run](/svg/courses/languages/bash/bash-scripting/02_how_shell_runs_things/fork_and_exec_how_external_commands_run.svg)
 
 ---
 ## Watching `fork`/`exec` in Action

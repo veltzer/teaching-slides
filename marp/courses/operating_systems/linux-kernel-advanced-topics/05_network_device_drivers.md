@@ -4,7 +4,7 @@
 
 ## Network Stack Overview
 
-![network_stack_overview](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/network_stack_overview.svg)
+![network_stack_overview](/svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/network_stack_overview.svg)
 
 ---
 
@@ -78,7 +78,7 @@ static int my_net_probe(struct platform_device *pdev)
 
 ## Socket Buffers (SKB)
 
-![socket_buffers_skb](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/socket_buffers_skb.svg)
+![socket_buffers_skb](/svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/socket_buffers_skb.svg)
 
 ---
 
@@ -383,7 +383,7 @@ dma_unmap_single(&pdev->dev, dma_addr,
 
 ## Ring Buffer Management
 
-![ring_buffer_management](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/ring_buffer_management.svg)
+![ring_buffer_management](/svg/courses/operating_systems/linux-kernel-advanced-topics/05_network_device_drivers/ring_buffer_management.svg)
 
 ---
 

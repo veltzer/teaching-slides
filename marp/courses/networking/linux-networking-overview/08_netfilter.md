@@ -16,7 +16,7 @@
 
 ## What are Netfilters
 
-![what_are_netfilters](../../../../svg/courses/networking/linux-networking-overview/08_netfilter/what_are_netfilters.svg)
+![what_are_netfilters](/svg/courses/networking/linux-networking-overview/08_netfilter/what_are_netfilters.svg)
 
 ---
 
@@ -105,7 +105,7 @@ nf_register_net_hook(&init_net, &my_nfho);
 
 ## Packet Flow Through Hooks
 
-![packet_flow_through_hooks](../../../../svg/courses/networking/linux-networking-overview/08_netfilter/packet_flow_through_hooks.svg)
+![packet_flow_through_hooks](/svg/courses/networking/linux-networking-overview/08_netfilter/packet_flow_through_hooks.svg)
 
 ---
 

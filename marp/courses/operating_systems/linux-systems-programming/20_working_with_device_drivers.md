@@ -38,7 +38,7 @@
 
 ## Device File Types
 
-![device_file_types](../../../../svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_file_types.svg)
+![device_file_types](/svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_file_types.svg)
 
 ---
 
@@ -240,7 +240,7 @@ if (gpio != MAP_FAILED) {
 
 ## Device Driver Communication
 
-![device_driver_communication](../../../../svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_driver_communication.svg)
+![device_driver_communication](/svg/courses/operating_systems/linux-systems-programming/20_working_with_device_drivers/device_driver_communication.svg)
 
 ---
 

@@ -24,7 +24,7 @@
 
 ## The Fundamental Shift
 
-![the_fundamental_shift](../../svg/lectures/nosql-database-fundamentals/the_fundamental_shift.svg)
+![the_fundamental_shift](/svg/lectures/nosql-database-fundamentals/the_fundamental_shift.svg)
 
 ---
 
@@ -39,7 +39,7 @@
 
 ## Document Stores: Core Concepts
 
-![document_stores_core_concepts](../../svg/lectures/nosql-database-fundamentals/document_stores_core_concepts.svg)
+![document_stores_core_concepts](/svg/lectures/nosql-database-fundamentals/document_stores_core_concepts.svg)
 
 Self-contained data units with nested structures
 
@@ -67,7 +67,7 @@ Self-contained data units with nested structures
 
 ## Key-Value Stores: Core Model
 
-![key_value_stores_core_model](../../svg/lectures/nosql-database-fundamentals/key_value_stores_core_model.svg)
+![key_value_stores_core_model](/svg/lectures/nosql-database-fundamentals/key_value_stores_core_model.svg)
 
 Simplest NoSQL model - pure associative arrays
 
@@ -86,13 +86,13 @@ That's essentially it - simplicity is the strength
 
 ## Key-Value: Distribution Strategy
 
-![key_value_distribution_strategy](../../svg/lectures/nosql-database-fundamentals/key_value_distribution_strategy.svg)
+![key_value_distribution_strategy](/svg/lectures/nosql-database-fundamentals/key_value_distribution_strategy.svg)
 
 ---
 
 ## Column-Family Stores: Structure
 
-![column_family_stores_structure](../../svg/lectures/nosql-database-fundamentals/column_family_stores_structure.svg)
+![column_family_stores_structure](/svg/lectures/nosql-database-fundamentals/column_family_stores_structure.svg)
 
 ---
 
@@ -108,7 +108,7 @@ That's essentially it - simplicity is the strength
 
 ## Graph Databases: Core Model
 
-![graph_databases_core_model](../../svg/lectures/nosql-database-fundamentals/graph_databases_core_model.svg)
+![graph_databases_core_model](/svg/lectures/nosql-database-fundamentals/graph_databases_core_model.svg)
 
 ---
 
@@ -124,7 +124,7 @@ That's essentially it - simplicity is the strength
 
 ## The CAP Theorem
 
-![the_cap_theorem](../../svg/lectures/nosql-database-fundamentals/the_cap_theorem.svg)
+![the_cap_theorem](/svg/lectures/nosql-database-fundamentals/the_cap_theorem.svg)
 
 Pick two (but you must pick P in distributed systems)
 
@@ -175,7 +175,7 @@ In distributed systems:
 
 ## CP Systems
 
-![cp_systems](../../svg/lectures/nosql-database-fundamentals/cp_systems.svg)
+![cp_systems](/svg/lectures/nosql-database-fundamentals/cp_systems.svg)
 
 Example behaviors: Banking systems, inventory management
 
@@ -183,7 +183,7 @@ Example behaviors: Banking systems, inventory management
 
 ## AP Systems
 
-![ap_systems](../../svg/lectures/nosql-database-fundamentals/ap_systems.svg)
+![ap_systems](/svg/lectures/nosql-database-fundamentals/ap_systems.svg)
 
 Example behaviors: Social media feeds, caching systems
 
@@ -191,7 +191,7 @@ Example behaviors: Social media feeds, caching systems
 
 ## Consistency Models Spectrum
 
-![consistency_models_spectrum](../../svg/lectures/nosql-database-fundamentals/consistency_models_spectrum.svg)
+![consistency_models_spectrum](/svg/lectures/nosql-database-fundamentals/consistency_models_spectrum.svg)
 
 ---
 
@@ -255,7 +255,7 @@ Alternative to ACID for distributed systems:
 
 ## Eventual Consistency Details
 
-![eventual_consistency_details](../../svg/lectures/nosql-database-fundamentals/eventual_consistency_details.svg)
+![eventual_consistency_details](/svg/lectures/nosql-database-fundamentals/eventual_consistency_details.svg)
 
 ---
 
@@ -275,7 +275,7 @@ Alternative to ACID for distributed systems:
 
 ## Conflict Resolution
 
-![conflict_resolution](../../svg/lectures/nosql-database-fundamentals/conflict_resolution.svg)
+![conflict_resolution](/svg/lectures/nosql-database-fundamentals/conflict_resolution.svg)
 
 ---
 
@@ -292,13 +292,13 @@ Splitting data across multiple nodes:
 
 ## Sharding Strategies
 
-![sharding_strategies](../../svg/lectures/nosql-database-fundamentals/sharding_strategies.svg)
+![sharding_strategies](/svg/lectures/nosql-database-fundamentals/sharding_strategies.svg)
 
 ---
 
 ## Consistent Hashing
 
-![consistent_hashing](../../svg/lectures/nosql-database-fundamentals/consistent_hashing.svg)
+![consistent_hashing](/svg/lectures/nosql-database-fundamentals/consistent_hashing.svg)
 
 ---
 
@@ -324,7 +324,7 @@ Control consistency vs performance:
 
 ## Quorum Consistency
 
-![quorum_consistency](../../svg/lectures/nosql-database-fundamentals/quorum_consistency.svg)
+![quorum_consistency](/svg/lectures/nosql-database-fundamentals/quorum_consistency.svg)
 
 ---
 
@@ -355,7 +355,7 @@ Conflict-free Replicated Data Types:
 
 ## NoSQL Performance Patterns
 
-![nosql_performance_patterns](../../svg/lectures/nosql-database-fundamentals/nosql_performance_patterns.svg)
+![nosql_performance_patterns](/svg/lectures/nosql-database-fundamentals/nosql_performance_patterns.svg)
 
 ---
 
@@ -375,7 +375,7 @@ Conflict-free Replicated Data Types:
 
 ## Denormalization Strategy
 
-![denormalization_strategy](../../svg/lectures/nosql-database-fundamentals/denormalization_strategy.svg)
+![denormalization_strategy](/svg/lectures/nosql-database-fundamentals/denormalization_strategy.svg)
 
 ---
 
@@ -400,7 +400,7 @@ Most NoSQL databases offer:
 
 ## Transactions in NoSQL
 
-![transactions_in_nosql](../../svg/lectures/nosql-database-fundamentals/transactions_in_nosql.svg)
+![transactions_in_nosql](/svg/lectures/nosql-database-fundamentals/transactions_in_nosql.svg)
 
 ---
 
@@ -434,7 +434,7 @@ Most NoSQL databases offer:
 
 ## Polyglot Persistence
 
-![polyglot_persistence](../../svg/lectures/nosql-database-fundamentals/polyglot_persistence.svg)
+![polyglot_persistence](/svg/lectures/nosql-database-fundamentals/polyglot_persistence.svg)
 
 ---
 

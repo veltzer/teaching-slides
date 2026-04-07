@@ -6,7 +6,7 @@
 
 ## Common Application Patterns
 
-![common_application_patterns](../../../../svg/courses/databases/elasticsearch-for-developers/13_app_patterns/common_application_patterns.svg)
+![common_application_patterns](/svg/courses/databases/elasticsearch-for-developers/13_app_patterns/common_application_patterns.svg)
 
 ---
 
@@ -298,7 +298,7 @@ PUT /_aliases
 
 ## Real-time Search Updates
 
-![real_time_search_updates](../../../../svg/courses/databases/elasticsearch-for-developers/13_app_patterns/real_time_search_updates.svg)
+![real_time_search_updates](/svg/courses/databases/elasticsearch-for-developers/13_app_patterns/real_time_search_updates.svg)
 
 ---
 

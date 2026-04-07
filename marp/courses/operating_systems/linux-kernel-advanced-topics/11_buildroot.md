@@ -37,7 +37,7 @@ Best for:
 
 ## Buildroot Architecture
 
-![buildroot_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/buildroot_architecture.svg)
+![buildroot_architecture](/svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/buildroot_architecture.svg)
 
 ---
 
@@ -141,7 +141,7 @@ BR2_OPTIMIZE_2=y
 
 ## Toolchain Options
 
-![toolchain_options](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/toolchain_options.svg)
+![toolchain_options](/svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/toolchain_options.svg)
 
 ---
 
@@ -214,7 +214,7 @@ BR2_INIT_SYSTEMD=y
 
 ### Package Types
 
-![package_types](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/package_types.svg)
+![package_types](/svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/package_types.svg)
 
 ---
 
@@ -466,7 +466,7 @@ BR2_TARGET_UBOOT_SPL=y
 
 ## Filesystem Images
 
-![filesystem_images](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/filesystem_images.svg)
+![filesystem_images](/svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/filesystem_images.svg)
 
 ---
 
@@ -697,7 +697,7 @@ build:
 
 ## Size Optimization
 
-![size_optimization](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/size_optimization.svg)
+![size_optimization](/svg/courses/operating_systems/linux-kernel-advanced-topics/11_buildroot/size_optimization.svg)
 
 ---
 

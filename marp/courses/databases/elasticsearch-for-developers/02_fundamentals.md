@@ -16,7 +16,7 @@ Unlike relational databases:
 
 ## Document Structure
 
-![document_structure](../../../../svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_structure.svg)
+![document_structure](/svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_structure.svg)
 
 ---
 
@@ -65,7 +65,7 @@ Every document has:
 
 ## Document Lifecycle
 
-![document_lifecycle](../../../../svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_lifecycle.svg)
+![document_lifecycle](/svg/courses/databases/elasticsearch-for-developers/02_fundamentals/document_lifecycle.svg)
 
 ---
 

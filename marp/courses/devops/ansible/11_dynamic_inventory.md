@@ -24,7 +24,7 @@
 
 ## Static vs Dynamic Inventory
 
-![static_vs_dynamic_inventory](../../../../svg/courses/devops/ansible/11_dynamic_inventory/static_vs_dynamic_inventory.svg)
+![static_vs_dynamic_inventory](/svg/courses/devops/ansible/11_dynamic_inventory/static_vs_dynamic_inventory.svg)
 
 ---
 

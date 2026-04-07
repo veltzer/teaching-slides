@@ -554,7 +554,7 @@ coro.close()                 # Coroutine closing, cleanup complete
 - Maximize I/O efficiency
 - Different from parallelism (multi-threading/processing)
 
-![understanding_async_programming](../../../../../svg/courses/languages/python/advanced-python/10_async/understanding_async_programming.svg)
+![understanding_async_programming](/svg/courses/languages/python/advanced-python/10_async/understanding_async_programming.svg)
 
 ---
 

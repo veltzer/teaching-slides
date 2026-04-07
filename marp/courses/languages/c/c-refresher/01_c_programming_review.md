@@ -61,7 +61,7 @@ gcc -std=c23 program.c -o program
 
 ## The C Compilation Pipeline
 
-![the_c_compilation_pipeline](../../../../../svg/courses/languages/c/c-refresher/01_c_programming_review/the_c_compilation_pipeline.svg)
+![the_c_compilation_pipeline](/svg/courses/languages/c/c-refresher/01_c_programming_review/the_c_compilation_pipeline.svg)
 
 View each stage:
 

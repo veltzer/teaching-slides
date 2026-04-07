@@ -14,7 +14,7 @@
 
 ## The Core Problem
 
-![the_core_problem](../../../../svg/courses/security/working-with-llms-securely/03_insecure_output_handling/the_core_problem.svg)
+![the_core_problem](/svg/courses/security/working-with-llms-securely/03_insecure_output_handling/the_core_problem.svg)
 
 `LLM` output is **untrusted data** — treat it like user input
 

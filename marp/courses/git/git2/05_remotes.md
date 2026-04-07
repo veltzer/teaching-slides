@@ -17,13 +17,13 @@
 
 ## What is a Remote Repository?
 
-![what_is_a_remote_repository](../../../../svg/courses/git/git2/05_remotes/what_is_a_remote_repository.svg)
+![what_is_a_remote_repository](/svg/courses/git/git2/05_remotes/what_is_a_remote_repository.svg)
 
 ---
 
 ## Remote Repository Locations
 
-![remote_repository_locations](../../../../svg/courses/git/git2/05_remotes/remote_repository_locations.svg)
+![remote_repository_locations](/svg/courses/git/git2/05_remotes/remote_repository_locations.svg)
 
 ---
 
@@ -51,7 +51,7 @@ git remote show origin
 
 ## Clone vs Init + Remote
 
-![clone_vs_init_remote](../../../../svg/courses/git/git2/05_remotes/clone_vs_init_remote.svg)
+![clone_vs_init_remote](/svg/courses/git/git2/05_remotes/clone_vs_init_remote.svg)
 
 ---
 
@@ -82,7 +82,7 @@ git remote remove backup
 
 ## Remote Branches
 
-![remote_branches](../../../../svg/courses/git/git2/05_remotes/remote_branches.svg)
+![remote_branches](/svg/courses/git/git2/05_remotes/remote_branches.svg)
 
 ---
 
@@ -112,7 +112,7 @@ git fetch --dry-run
 
 ## Fetch vs Pull
 
-![fetch_vs_pull](../../../../svg/courses/git/git2/05_remotes/fetch_vs_pull.svg)
+![fetch_vs_pull](/svg/courses/git/git2/05_remotes/fetch_vs_pull.svg)
 
 ---
 
@@ -173,7 +173,7 @@ git push -u origin feature
 
 ## Push Scenarios
 
-![push_scenarios](../../../../svg/courses/git/git2/05_remotes/push_scenarios.svg)
+![push_scenarios](/svg/courses/git/git2/05_remotes/push_scenarios.svg)
 
 ---
 
@@ -205,7 +205,7 @@ git branch --unset-upstream
 
 ## Working with Multiple Remotes
 
-![working_with_multiple_remotes](../../../../svg/courses/git/git2/05_remotes/working_with_multiple_remotes.svg)
+![working_with_multiple_remotes](/svg/courses/git/git2/05_remotes/working_with_multiple_remotes.svg)
 
 ---
 
@@ -239,7 +239,7 @@ git push origin feature
 
 ## Remote URLs: HTTPS vs SSH
 
-![remote_urls_https_vs_ssh](../../../../svg/courses/git/git2/05_remotes/remote_urls_https_vs_ssh.svg)
+![remote_urls_https_vs_ssh](/svg/courses/git/git2/05_remotes/remote_urls_https_vs_ssh.svg)
 
 ---
 
@@ -268,13 +268,13 @@ git remote -v
 
 ## Understanding Publishing
 
-![understanding_publishing](../../../../svg/courses/git/git2/05_remotes/understanding_publishing.svg)
+![understanding_publishing](/svg/courses/git/git2/05_remotes/understanding_publishing.svg)
 
 ---
 
 ## Remote Repository Structure
 
-![remote_repository_structure](../../../../svg/courses/git/git2/05_remotes/remote_repository_structure.svg)
+![remote_repository_structure](/svg/courses/git/git2/05_remotes/remote_repository_structure.svg)
 
 ---
 
@@ -305,13 +305,13 @@ git clone user@server:/path/to/bare-repo.git
 
 ## GitHub: The Platform
 
-![github_the_platform](../../../../svg/courses/git/git2/05_remotes/github_the_platform.svg)
+![github_the_platform](/svg/courses/git/git2/05_remotes/github_the_platform.svg)
 
 ---
 
 ## GitLab: The Alternative
 
-![gitlab_the_alternative](../../../../svg/courses/git/git2/05_remotes/gitlab_the_alternative.svg)
+![gitlab_the_alternative](/svg/courses/git/git2/05_remotes/gitlab_the_alternative.svg)
 
 ---
 
@@ -341,13 +341,13 @@ git remote add bitbucket git@bitbucket.org:team/project.git
 
 ## Collaboration Workflows
 
-![collaboration_workflows](../../../../svg/courses/git/git2/05_remotes/collaboration_workflows.svg)
+![collaboration_workflows](/svg/courses/git/git2/05_remotes/collaboration_workflows.svg)
 
 ---
 
 ## Pull Requests / Merge Requests
 
-![pull_requests_merge_requests](../../../../svg/courses/git/git2/05_remotes/pull_requests_merge_requests.svg)
+![pull_requests_merge_requests](/svg/courses/git/git2/05_remotes/pull_requests_merge_requests.svg)
 
 ---
 
@@ -380,7 +380,7 @@ gh pr create --title "Add login" --body "Description"
 
 ## Code Review Process
 
-![code_review_process](../../../../svg/courses/git/git2/05_remotes/code_review_process.svg)
+![code_review_process](/svg/courses/git/git2/05_remotes/code_review_process.svg)
 
 ---
 
@@ -414,7 +414,7 @@ git push --force-lease
 
 ## Handling Merge Conflicts
 
-![handling_merge_conflicts](../../../../svg/courses/git/git2/05_remotes/handling_merge_conflicts.svg)
+![handling_merge_conflicts](/svg/courses/git/git2/05_remotes/handling_merge_conflicts.svg)
 
 ---
 
@@ -447,7 +447,7 @@ git push origin main --force-lease
 
 ## Protected Branches
 
-![protected_branches](../../../../svg/courses/git/git2/05_remotes/protected_branches.svg)
+![protected_branches](/svg/courses/git/git2/05_remotes/protected_branches.svg)
 
 ---
 
@@ -484,7 +484,7 @@ git push origin :v1.0.0     # Remote
 
 ## Semantic Versioning
 
-![semantic_versioning](../../../../svg/courses/git/git2/05_remotes/semantic_versioning.svg)
+![semantic_versioning](/svg/courses/git/git2/05_remotes/semantic_versioning.svg)
 
 ---
 
@@ -540,7 +540,7 @@ git branch -r | grep -v main | xargs -n 1 git push --delete origin
 
 ## Mirror Repositories
 
-![mirror_repositories](../../../../svg/courses/git/git2/05_remotes/mirror_repositories.svg)
+![mirror_repositories](/svg/courses/git/git2/05_remotes/mirror_repositories.svg)
 
 ---
 
@@ -601,7 +601,7 @@ Host github.com
 
 ## Submodules vs Subtrees
 
-![submodules_vs_subtrees](../../../../svg/courses/git/git2/05_remotes/submodules_vs_subtrees.svg)
+![submodules_vs_subtrees](/svg/courses/git/git2/05_remotes/submodules_vs_subtrees.svg)
 
 ---
 
@@ -631,7 +631,7 @@ rm -rf .git/modules/path/to/submodule
 
 ## CI/CD Integration
 
-![ci_cd_integration](../../../../svg/courses/git/git2/05_remotes/ci_cd_integration.svg)
+![ci_cd_integration](/svg/courses/git/git2/05_remotes/ci_cd_integration.svg)
 
 ---
 
@@ -711,7 +711,7 @@ build:
 
 ## Remote Repository Security
 
-![remote_repository_security](../../../../svg/courses/git/git2/05_remotes/remote_repository_security.svg)
+![remote_repository_security](/svg/courses/git/git2/05_remotes/remote_repository_security.svg)
 
 ---
 
@@ -771,4 +771,4 @@ In the next session, we'll deep dive into:
 
 ## Remote Repositories Complete! 🎉
 
-![remote_repositories_complete](../../../../svg/courses/git/git2/05_remotes/remote_repositories_complete.svg)
+![remote_repositories_complete](/svg/courses/git/git2/05_remotes/remote_repositories_complete.svg)

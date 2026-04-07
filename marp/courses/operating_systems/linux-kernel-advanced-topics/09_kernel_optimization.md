@@ -19,7 +19,7 @@ These optimizations are crucial for:
 
 ## Optimization Goals
 
-![optimization_goals](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_goals.svg)
+![optimization_goals](/svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_goals.svg)
 
 ---
 
@@ -124,7 +124,7 @@ cat /proc/pagetypeinfo
 
 ## Slab Allocator Tuning
 
-![slab_allocator_tuning](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/slab_allocator_tuning.svg)
+![slab_allocator_tuning](/svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/slab_allocator_tuning.svg)
 
 ---
 
@@ -175,7 +175,7 @@ CONFIG_PREEMPT_RT=y       # Real-time
 
 ## RT Patch Architecture
 
-![rt_patch_architecture](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/rt_patch_architecture.svg)
+![rt_patch_architecture](/svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/rt_patch_architecture.svg)
 
 ---
 
@@ -417,7 +417,7 @@ systemd-analyze blame
 
 ## Optimization Trade-offs
 
-![optimization_trade_offs](../../../../svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_trade_offs.svg)
+![optimization_trade_offs](/svg/courses/operating_systems/linux-kernel-advanced-topics/09_kernel_optimization/optimization_trade_offs.svg)
 
 ---
 

@@ -9,7 +9,7 @@
 ---
 ## Core Features
 
-![core_features](../../svg/lectures/spark-notebooks/core_features.svg)
+![core_features](/svg/lectures/spark-notebooks/core_features.svg)
 
 ---
 ## Jupyter with PySpark
@@ -31,7 +31,7 @@ df = spark.read.json("data.json")
 ---
 ## Databricks Environment
 
-![databricks_environment](../../svg/lectures/spark-notebooks/databricks_environment.svg)
+![databricks_environment](/svg/lectures/spark-notebooks/databricks_environment.svg)
 
 ---
 ## Mixed Language Support
@@ -88,7 +88,7 @@ def plot_distribution(column):
 ---
 ## Best Practices
 
-![best_practices](../../svg/lectures/spark-notebooks/best_practices.svg)
+![best_practices](/svg/lectures/spark-notebooks/best_practices.svg)
 
 ---
 ## Performance Tips
@@ -134,7 +134,7 @@ df.cache()
 ---
 ## Resource Management
 
-![resource_management](../../svg/lectures/spark-notebooks/resource_management.svg)
+![resource_management](/svg/lectures/spark-notebooks/resource_management.svg)
 
 ---
 ## Development Workflow

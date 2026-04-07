@@ -2,13 +2,13 @@
 
 ## Azure Learning Path
 
-![azure_learning_path](../../../../svg/courses/cloud/introduction-to-azure/10_next_steps/azure_learning_path.svg)
+![azure_learning_path](/svg/courses/cloud/introduction-to-azure/10_next_steps/azure_learning_path.svg)
 
 ---
 
 ## Certification Paths
 
-![certification_paths](../../../../svg/courses/cloud/introduction-to-azure/10_next_steps/certification_paths.svg)
+![certification_paths](/svg/courses/cloud/introduction-to-azure/10_next_steps/certification_paths.svg)
 
 ---
 
@@ -104,7 +104,7 @@
 
 ## Azure Architecture Center
 
-![azure_architecture_center](../../../../svg/courses/cloud/introduction-to-azure/10_next_steps/azure_architecture_center.svg)
+![azure_architecture_center](/svg/courses/cloud/introduction-to-azure/10_next_steps/azure_architecture_center.svg)
 
 ---
 

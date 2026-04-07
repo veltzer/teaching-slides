@@ -43,7 +43,7 @@ Like hardware interrupts but for processes!
 
 ## Signal Types
 
-![signal_types](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/signal_types.svg)
+![signal_types](/svg/courses/operating_systems/linux-systems-programming/07_signals/signal_types.svg)
 
 ---
 
@@ -212,7 +212,7 @@ sigpending(&pending);
 
 ## The Async Problem
 
-![the_async_problem](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/the_async_problem.svg)
+![the_async_problem](/svg/courses/operating_systems/linux-systems-programming/07_signals/the_async_problem.svg)
 
 ---
 
@@ -328,7 +328,7 @@ int main() {
 
 ## Signal Delivery and Queuing
 
-![signal_delivery_and_queuing](../../../../svg/courses/operating_systems/linux-systems-programming/07_signals/signal_delivery_and_queuing.svg)
+![signal_delivery_and_queuing](/svg/courses/operating_systems/linux-systems-programming/07_signals/signal_delivery_and_queuing.svg)
 
 ---
 

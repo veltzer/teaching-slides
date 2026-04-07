@@ -36,7 +36,7 @@ fn main() {
 
 ## Scalar Types
 
-![scalar_types](../../../../../svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/scalar_types.svg)
+![scalar_types](/svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/scalar_types.svg)
 
 ---
 
@@ -140,7 +140,7 @@ fn main() {
 
 ## Compound Types
 
-![compound_types](../../../../../svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/compound_types.svg)
+![compound_types](/svg/courses/languages/rust/rust-programming/02_core_concepts_and_syntax/compound_types.svg)
 
 ---
 

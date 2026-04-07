@@ -4,7 +4,7 @@
 
 ## Build Performance Overview
 
-![build_performance_overview](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_performance_overview.svg)
+![build_performance_overview](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_performance_overview.svg)
 
 ---
 
@@ -38,7 +38,7 @@ Memory recommendations:
 
 SSD vs HDD performance:
 
-![storage_optimization](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/storage_optimization.svg)
+![storage_optimization](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/storage_optimization.svg)
 
 ---
 
@@ -129,7 +129,7 @@ BB_FETCH_PREMIRRORONLY = "1"
 
 ## Build Directory Management
 
-![build_directory_management](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_directory_management.svg)
+![build_directory_management](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_directory_management.svg)
 
 ---
 
@@ -255,7 +255,7 @@ gpgcheck=0
 
 ## CI/CD Architecture
 
-![ci_cd_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/ci_cd_architecture.svg)
+![ci_cd_architecture](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/ci_cd_architecture.svg)
 
 ---
 
@@ -661,7 +661,7 @@ devtool deploy-target myapp root@target
 
 ## Build Server Architecture
 
-![build_server_architecture](../../../../svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_server_architecture.svg)
+![build_server_architecture](/svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/build_server_architecture.svg)
 
 ---
 

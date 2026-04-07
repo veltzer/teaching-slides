@@ -26,7 +26,7 @@ class CoffeeWithMilkAndSugarAndWhip : public Coffee { ... };
 
 ## Decorator Structure
 
-![decorator_structure](../../../../../svg/courses/languages/c++/c++-design-patterns/10_decorator/decorator_structure.svg)
+![decorator_structure](/svg/courses/languages/c++/c++-design-patterns/10_decorator/decorator_structure.svg)
 
 ---
 

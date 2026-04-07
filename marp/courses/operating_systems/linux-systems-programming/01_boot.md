@@ -24,7 +24,7 @@
 
 ## The Boot Chain
 
-![the_boot_chain](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/the_boot_chain.svg)
+![the_boot_chain](/svg/courses/operating_systems/linux-systems-programming/01_boot/the_boot_chain.svg)
 
 ---
 
@@ -72,7 +72,7 @@
 
 ## GRUB Architecture
 
-![grub_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/grub_architecture.svg)
+![grub_architecture](/svg/courses/operating_systems/linux-systems-programming/01_boot/grub_architecture.svg)
 
 ---
 
@@ -226,7 +226,7 @@ linux /vmlinuz root=/dev/sda2 init=/bin/bash
 
 ## U-Boot Architecture
 
-![u_boot_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/u_boot_architecture.svg)
+![u_boot_architecture](/svg/courses/operating_systems/linux-systems-programming/01_boot/u_boot_architecture.svg)
 
 ---
 
@@ -319,7 +319,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## Chain of Trust
 
-![chain_of_trust](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/chain_of_trust.svg)
+![chain_of_trust](/svg/courses/operating_systems/linux-systems-programming/01_boot/chain_of_trust.svg)
 
 ---
 
@@ -393,7 +393,7 @@ boot_targets=mmc0 mmc1 usb0 pxe dhcp
 
 ## TPM Architecture
 
-![tpm_architecture](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/tpm_architecture.svg)
+![tpm_architecture](/svg/courses/operating_systems/linux-systems-programming/01_boot/tpm_architecture.svg)
 
 ---
 
@@ -552,7 +552,7 @@ hexdump -C module.ko | tail
 - Loads GRUB
 - Manages MOK (Machine Owner Keys)
 
-![shim_bootloader](../../../../svg/courses/operating_systems/linux-systems-programming/01_boot/shim_bootloader.svg)
+![shim_bootloader](/svg/courses/operating_systems/linux-systems-programming/01_boot/shim_bootloader.svg)
 
 ---
 

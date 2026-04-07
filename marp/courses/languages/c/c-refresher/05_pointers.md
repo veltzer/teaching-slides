@@ -135,7 +135,7 @@ int *ptr = (int *)malloc(sizeof(int) * 10); // Allocate space for 10 ints
 
 ## Pointer Memory Visualization
 
-![pointer_memory_visualization](../../../../../svg/courses/languages/c/c-refresher/05_pointers/pointer_memory_visualization.svg)
+![pointer_memory_visualization](/svg/courses/languages/c/c-refresher/05_pointers/pointer_memory_visualization.svg)
 
 ---
 

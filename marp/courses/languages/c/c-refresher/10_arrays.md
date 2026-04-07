@@ -263,7 +263,7 @@ int main(void) {
 
 ## Array Memory Layout
 
-![array_memory_layout](../../../../../svg/courses/languages/c/c-refresher/10_arrays/array_memory_layout.svg)
+![array_memory_layout](/svg/courses/languages/c/c-refresher/10_arrays/array_memory_layout.svg)
 
 ---
 

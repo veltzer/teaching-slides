@@ -54,7 +54,7 @@ Time Management:
 
 ## CTF Methodology Reminder
 
-![ctf_methodology_reminder](../../../../svg/courses/security/web-application-hacking/21_ctf_and_wrapup/ctf_methodology_reminder.svg)
+![ctf_methodology_reminder](/svg/courses/security/web-application-hacking/21_ctf_and_wrapup/ctf_methodology_reminder.svg)
 
 ---
 
@@ -174,7 +174,7 @@ No specific hints - use everything you've learned!
 
 ## CTF Scoring
 
-![ctf_scoring](../../../../svg/courses/security/web-application-hacking/21_ctf_and_wrapup/ctf_scoring.svg)
+![ctf_scoring](/svg/courses/security/web-application-hacking/21_ctf_and_wrapup/ctf_scoring.svg)
 
 ---
 
@@ -275,7 +275,7 @@ python3 -c 'import pty;pty.spawn("/bin/bash")'
 
 ## Vulnerability Cheat Sheet Summary
 
-![vulnerability_cheat_sheet_summary](../../../../svg/courses/security/web-application-hacking/21_ctf_and_wrapup/vulnerability_cheat_sheet_summary.svg)
+![vulnerability_cheat_sheet_summary](/svg/courses/security/web-application-hacking/21_ctf_and_wrapup/vulnerability_cheat_sheet_summary.svg)
 
 ---
 
@@ -360,7 +360,7 @@ Boot2Root & CTF - Key takeaways:
 
 ## Security Testing Workflow - Summary
 
-![security_testing_workflow_summary](../../../../svg/courses/security/web-application-hacking/21_ctf_and_wrapup/security_testing_workflow_summary.svg)
+![security_testing_workflow_summary](/svg/courses/security/web-application-hacking/21_ctf_and_wrapup/security_testing_workflow_summary.svg)
 
 ---
 

@@ -347,7 +347,7 @@ CMD ["main.py"]
 
 ## Layer Caching - How It Works
 
-![layer_caching_how_it_works](../../../../svg/courses/devops/advanced-docker/02_dockerfile_optimization/layer_caching_how_it_works.svg)
+![layer_caching_how_it_works](/svg/courses/devops/advanced-docker/02_dockerfile_optimization/layer_caching_how_it_works.svg)
 
 **Rule:** Once a layer cache is invalidated, all subsequent layers rebuild.
 
@@ -660,7 +660,7 @@ dive myapp:latest --ci
 #   - Total image size
 ```
 
-![total_image_size](../../../../svg/courses/devops/advanced-docker/02_dockerfile_optimization/total_image_size.svg)
+![total_image_size](/svg/courses/devops/advanced-docker/02_dockerfile_optimization/total_image_size.svg)
 
 ---
 

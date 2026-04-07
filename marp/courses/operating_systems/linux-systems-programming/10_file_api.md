@@ -36,7 +36,7 @@
 
 ## File Descriptor Tables Visualization
 
-![file_descriptor_tables_visualization](../../../../svg/courses/operating_systems/linux-systems-programming/10_file_api/file_descriptor_tables_visualization.svg)
+![file_descriptor_tables_visualization](/svg/courses/operating_systems/linux-systems-programming/10_file_api/file_descriptor_tables_visualization.svg)
 
 ---
 

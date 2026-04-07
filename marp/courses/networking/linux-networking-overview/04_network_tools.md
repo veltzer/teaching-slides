@@ -17,7 +17,7 @@
 
 ## Information Tools Overview
 
-![information_tools_overview](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/information_tools_overview.svg)
+![information_tools_overview](/svg/courses/networking/linux-networking-overview/04_network_tools/information_tools_overview.svg)
 
 ---
 
@@ -57,7 +57,7 @@ tcp        0      0 0.0.0.0:22    0.0.0.0:*       LISTEN
 
 ## `ip` Command Suite
 
-![ip_command_suite](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/ip_command_suite.svg)
+![ip_command_suite](/svg/courses/networking/linux-networking-overview/04_network_tools/ip_command_suite.svg)
 
 ---
 
@@ -149,7 +149,7 @@ arp -d 192.168.1.100
 
 ## Configuration Tools Overview
 
-![configuration_tools_overview](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/configuration_tools_overview.svg)
+![configuration_tools_overview](/svg/courses/networking/linux-networking-overview/04_network_tools/configuration_tools_overview.svg)
 
 ---
 
@@ -216,7 +216,7 @@ iwconfig wlan0 key 1234567890
 
 ## Performance Tools
 
-![performance_tools](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/performance_tools.svg)
+![performance_tools](/svg/courses/networking/linux-networking-overview/04_network_tools/performance_tools.svg)
 
 ---
 
@@ -251,7 +251,7 @@ rtacct       # Show routing statistics
 
 ## Tapping Tools Overview
 
-![tapping_tools_overview](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/tapping_tools_overview.svg)
+![tapping_tools_overview](/svg/courses/networking/linux-networking-overview/04_network_tools/tapping_tools_overview.svg)
 
 ---
 
@@ -333,7 +333,7 @@ tc filter add dev eth0 protocol ip parent 1:0 prio 1 u32 \
 ---
 ## Debugging Tools
 
-![debugging_tools](../../../../svg/courses/networking/linux-networking-overview/04_network_tools/debugging_tools.svg)
+![debugging_tools](/svg/courses/networking/linux-networking-overview/04_network_tools/debugging_tools.svg)
 
 ---
 

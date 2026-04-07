@@ -234,7 +234,7 @@ graph TD
 ---
 ## The Quality Attribute Triangle
 
-![the_quality_attribute_triangle](../../../../svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_quality_attribute_triangle.svg)
+![the_quality_attribute_triangle](/svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/the_quality_attribute_triangle.svg)
 
 ---
 ## Architectural Trade-Offs

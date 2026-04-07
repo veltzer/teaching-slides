@@ -38,7 +38,7 @@ AI can address these systematically.
 
 ## Knowledge Sharing Fundamentals
 
-![knowledge_sharing_fundamentals](../../../../svg/courses/ai/developing-using-ai/10_collaboration/knowledge_sharing_fundamentals.svg)
+![knowledge_sharing_fundamentals](/svg/courses/ai/developing-using-ai/10_collaboration/knowledge_sharing_fundamentals.svg)
 
 AI serves as a knowledge multiplier and translator between team members.
 
@@ -129,7 +129,7 @@ Use AI to create team learning materials:
 
 ## Code Review Enhancement
 
-![code_review_enhancement](../../../../svg/courses/ai/developing-using-ai/10_collaboration/code_review_enhancement.svg)
+![code_review_enhancement](/svg/courses/ai/developing-using-ai/10_collaboration/code_review_enhancement.svg)
 
 ---
 
@@ -222,7 +222,7 @@ Use AI to track and improve review quality:
 
 ## Accelerating Team Onboarding
 
-![accelerating_team_onboarding](../../../../svg/courses/ai/developing-using-ai/10_collaboration/accelerating_team_onboarding.svg)
+![accelerating_team_onboarding](/svg/courses/ai/developing-using-ai/10_collaboration/accelerating_team_onboarding.svg)
 
 ---
 
@@ -325,7 +325,7 @@ class OnboardingMetrics:
 
 ## Communication Enhancement
 
-![communication_enhancement](../../../../svg/courses/ai/developing-using-ai/10_collaboration/communication_enhancement.svg)
+![communication_enhancement](/svg/courses/ai/developing-using-ai/10_collaboration/communication_enhancement.svg)
 
 ---
 
@@ -428,7 +428,7 @@ Enhance team communication effectiveness:
 
 ## Pair Programming with AI
 
-![pair_programming_with_ai](../../../../svg/courses/ai/developing-using-ai/10_collaboration/pair_programming_with_ai.svg)
+![pair_programming_with_ai](/svg/courses/ai/developing-using-ai/10_collaboration/pair_programming_with_ai.svg)
 
 ---
 
@@ -530,7 +530,7 @@ Team debugging sessions enhanced by AI:
 
 ## Team AI Tool Management
 
-![team_ai_tool_management](../../../../svg/courses/ai/developing-using-ai/10_collaboration/team_ai_tool_management.svg)
+![team_ai_tool_management](/svg/courses/ai/developing-using-ai/10_collaboration/team_ai_tool_management.svg)
 
 ---
 

@@ -24,7 +24,7 @@ Quantifying AI impact enables:
 
 ## The Measurement Challenge
 
-![the_measurement_challenge](../../../../svg/courses/ai/developing-using-ai-short/12_impact/the_measurement_challenge.svg)
+![the_measurement_challenge](/svg/courses/ai/developing-using-ai-short/12_impact/the_measurement_challenge.svg)
 
 ---
 
@@ -92,7 +92,7 @@ class BaselineEstablisher:
 
 ## Productivity Metrics
 
-![productivity_metrics](../../../../svg/courses/ai/developing-using-ai-short/12_impact/productivity_metrics.svg)
+![productivity_metrics](/svg/courses/ai/developing-using-ai-short/12_impact/productivity_metrics.svg)
 
 ---
 
@@ -240,7 +240,7 @@ class BugReductionAnalyzer:
 
 ## Learning Acceleration Measurement
 
-![learning_acceleration_measurement](../../../../svg/courses/ai/developing-using-ai-short/12_impact/learning_acceleration_measurement.svg)
+![learning_acceleration_measurement](/svg/courses/ai/developing-using-ai-short/12_impact/learning_acceleration_measurement.svg)
 
 ---
 
@@ -274,7 +274,7 @@ adoption_metrics:
 
 ## Team Impact Assessment
 
-![team_impact_assessment](../../../../svg/courses/ai/developing-using-ai-short/12_impact/team_impact_assessment.svg)
+![team_impact_assessment](/svg/courses/ai/developing-using-ai-short/12_impact/team_impact_assessment.svg)
 
 ---
 
@@ -308,7 +308,7 @@ collaboration_improvements:
 
 ## ROI Calculation Framework
 
-![roi_calculation_framework](../../../../svg/courses/ai/developing-using-ai-short/12_impact/roi_calculation_framework.svg)
+![roi_calculation_framework](/svg/courses/ai/developing-using-ai-short/12_impact/roi_calculation_framework.svg)
 
 ---
 
@@ -411,7 +411,7 @@ class BenefitCalculator:
 
 ## Continuous Improvement Framework
 
-![continuous_improvement_framework](../../../../svg/courses/ai/developing-using-ai-short/12_impact/continuous_improvement_framework.svg)
+![continuous_improvement_framework](/svg/courses/ai/developing-using-ai-short/12_impact/continuous_improvement_framework.svg)
 
 ---
 

@@ -37,7 +37,7 @@
 ---
 ## Blue/Green Architecture Diagram
 
-![blue_green_architecture_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_architecture_diagram.svg)
+![blue_green_architecture_diagram](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_architecture_diagram.svg)
 
 ---
 ## Blue/Green - The Switch
@@ -72,7 +72,7 @@
 ---
 ## Blue/Green - Database Migration Pattern
 
-![blue_green_database_migration_pattern](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_database_migration_pattern.svg)
+![blue_green_database_migration_pattern](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/blue_green_database_migration_pattern.svg)
 
 ---
 ## Blue/Green - When to Use
@@ -93,7 +93,7 @@
 ---
 ## Canary Traffic Split Diagram
 
-![canary_traffic_split_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/canary_traffic_split_diagram.svg)
+![canary_traffic_split_diagram](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/canary_traffic_split_diagram.svg)
 
 ---
 ## Canary - Traffic Splitting Mechanisms
@@ -201,7 +201,7 @@ spec:
 ---
 ## Rolling Update Sequence Diagram
 
-![rolling_update_sequence_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/rolling_update_sequence_diagram.svg)
+![rolling_update_sequence_diagram](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/rolling_update_sequence_diagram.svg)
 
 ---
 ## Rolling - Update Ordering
@@ -287,7 +287,7 @@ spec:
 ---
 ## Feature Flag Decision Tree
 
-![feature_flag_decision_tree](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_decision_tree.svg)
+![feature_flag_decision_tree](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_decision_tree.svg)
 
 ---
 ## Feature Flags - Implementation Example
@@ -325,7 +325,7 @@ def get_checkout_page(user, cart):
 ---
 ## Feature Flag Lifecycle Diagram
 
-![feature_flag_lifecycle_diagram](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_lifecycle_diagram.svg)
+![feature_flag_lifecycle_diagram](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/feature_flag_lifecycle_diagram.svg)
 
 ---
 ## Feature Flags - Testing Complexity
@@ -433,7 +433,7 @@ def check_stale_flags():
 ---
 ## Progressive Delivery Pipeline
 
-![progressive_delivery_pipeline](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/progressive_delivery_pipeline.svg)
+![progressive_delivery_pipeline](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/progressive_delivery_pipeline.svg)
 
 ---
 ## Progressive Delivery - User Segmentation
@@ -467,7 +467,7 @@ def check_stale_flags():
 ---
 ## Deployment Strategies - Risk vs. Speed
 
-![deployment_strategies_risk_vs_speed](../../../../svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/deployment_strategies_risk_vs_speed.svg)
+![deployment_strategies_risk_vs_speed](/svg/courses/devops/architectural-decisions-in-devops/09_deployment_strategies/deployment_strategies_risk_vs_speed.svg)
 
 ---
 ## Choosing the Right Strategy

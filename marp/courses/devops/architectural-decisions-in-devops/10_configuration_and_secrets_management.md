@@ -12,7 +12,7 @@
 ---
 ## The Configuration Spectrum
 
-![the_configuration_spectrum](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/the_configuration_spectrum.svg)
+![the_configuration_spectrum](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/the_configuration_spectrum.svg)
 
 ---
 ## Baked-in vs Runtime Configuration
@@ -43,7 +43,7 @@ RUN npm run build
 - Rolling back means deploying a previous artifact, not changing config
 - No configuration drift between what was tested and what runs
 
-![immutable_deployments_with_baked_config](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/immutable_deployments_with_baked_config.svg)
+![immutable_deployments_with_baked_config](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/immutable_deployments_with_baked_config.svg)
 
 ---
 ## Baked-in Config: Pros and Cons
@@ -80,7 +80,7 @@ services:
 ---
 ## Runtime Config Injection Flow
 
-![runtime_config_injection_flow](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/runtime_config_injection_flow.svg)
+![runtime_config_injection_flow](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/runtime_config_injection_flow.svg)
 
 ---
 ## Runtime Config: Pros and Cons
@@ -98,7 +98,7 @@ services:
 ---
 ## Baked vs Runtime: Decision Matrix
 
-![baked_vs_runtime_decision_matrix](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/baked_vs_runtime_decision_matrix.svg)
+![baked_vs_runtime_decision_matrix](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/baked_vs_runtime_decision_matrix.svg)
 
 ---
 ## Dynamic Configuration and Feature Toggles
@@ -194,7 +194,7 @@ signal.signal(signal.SIGHUP, reload_config)
 ---
 ## Secrets Management Approaches
 
-![secrets_management_approaches](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_management_approaches.svg)
+![secrets_management_approaches](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_management_approaches.svg)
 
 ---
 ## HashiCorp Vault Overview
@@ -208,7 +208,7 @@ signal.signal(signal.SIGHUP, reload_config)
 ---
 ## Vault Architecture
 
-![vault_architecture](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/vault_architecture.svg)
+![vault_architecture](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/vault_architecture.svg)
 
 ---
 ## Using Vault: Basic Workflow
@@ -356,7 +356,7 @@ spec:
 ---
 ## Secrets Rotation Lifecycle
 
-![secrets_rotation_lifecycle](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_rotation_lifecycle.svg)
+![secrets_rotation_lifecycle](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_rotation_lifecycle.svg)
 
 ---
 ## Dual-Secret Rotation Pattern
@@ -404,7 +404,7 @@ def lambda_handler(event, context):
 - Secrets must never appear in logs, artifacts, or build outputs
 - Use platform-native secret storage, not hardcoded values
 
-![secrets_in_ci_cd_pipelines](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_in_ci_cd_pipelines.svg)
+![secrets_in_ci_cd_pipelines](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_in_ci_cd_pipelines.svg)
 
 ---
 ## GitHub Actions Secrets
@@ -511,7 +511,7 @@ consul kv get myapp/db/host
 ---
 ## Config as Code vs Config Services
 
-![config_as_code_vs_config_services](../../../../svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/config_as_code_vs_config_services.svg)
+![config_as_code_vs_config_services](/svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/config_as_code_vs_config_services.svg)
 
 ---
 ## Hybrid Approach: Best of Both Worlds

@@ -64,19 +64,19 @@ Admin:
 
 ## Data Flow Diagram
 
-![data_flow_diagram](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/data_flow_diagram.svg)
+![data_flow_diagram](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/data_flow_diagram.svg)
 
 ---
 
 ## Trust Boundaries
 
-![trust_boundaries](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/trust_boundaries.svg)
+![trust_boundaries](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/trust_boundaries.svg)
 
 ---
 
 ## Authentication Surface
 
-![authentication_surface](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/authentication_surface.svg)
+![authentication_surface](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/authentication_surface.svg)
 
 ---
 
@@ -260,7 +260,7 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ## Common Web Application Architectures
 
-![common_web_application_architectures](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/common_web_application_architectures.svg)
+![common_web_application_architectures](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/common_web_application_architectures.svg)
 
 - Architecture type affects attack strategy
 - Microservices have more inter-service trust boundaries
@@ -270,13 +270,13 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ## Documenting Trust Boundaries
 
-![documenting_trust_boundaries](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/documenting_trust_boundaries.svg)
+![documenting_trust_boundaries](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/documenting_trust_boundaries.svg)
 
 ---
 
 ## Identifying Business-Critical Functions
 
-![identifying_business_critical_functions](../../../../svg/courses/security/web-application-hacking/06_mapping_attack_surface/identifying_business_critical_functions.svg)
+![identifying_business_critical_functions](/svg/courses/security/web-application-hacking/06_mapping_attack_surface/identifying_business_critical_functions.svg)
 
 ---
 
