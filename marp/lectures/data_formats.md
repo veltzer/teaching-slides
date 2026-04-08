@@ -30,34 +30,7 @@
 
 ## Format Categories
 
-<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="20" width="200" height="260" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="110" y="50" text-anchor="middle" font-weight="bold" font-size="14">Text-Based</text>
-  <text x="110" y="80" text-anchor="middle" font-size="12">CSV, INI, JSON</text>
-  <text x="110" y="100" text-anchor="middle" font-size="12">YAML, TOML, XML</text>
-  <text x="110" y="120" text-anchor="middle" font-size="12">JSON Lines</text>
-  <text x="110" y="160" text-anchor="middle" font-size="11" fill="#555">Human-readable</text>
-  <text x="110" y="180" text-anchor="middle" font-size="11" fill="#555">Easy to edit</text>
-  <text x="110" y="200" text-anchor="middle" font-size="11" fill="#555">Larger file size</text>
-  <text x="110" y="220" text-anchor="middle" font-size="11" fill="#555">Slower to parse</text>
-
-  <rect x="250" y="20" width="200" height="260" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="350" y="50" text-anchor="middle" font-weight="bold" font-size="14">Binary</text>
-  <text x="350" y="80" text-anchor="middle" font-size="12">Parquet, SQLite</text>
-  <text x="350" y="100" text-anchor="middle" font-size="12">MessagePack, Protobuf</text>
-  <text x="350" y="160" text-anchor="middle" font-size="11" fill="#555">Not human-readable</text>
-  <text x="350" y="180" text-anchor="middle" font-size="11" fill="#555">Compact storage</text>
-  <text x="350" y="200" text-anchor="middle" font-size="11" fill="#555">Fast to parse</text>
-  <text x="350" y="220" text-anchor="middle" font-size="11" fill="#555">Needs special tools</text>
-
-  <rect x="490" y="20" width="200" height="260" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="590" y="50" text-anchor="middle" font-weight="bold" font-size="14">Database-Like</text>
-  <text x="590" y="80" text-anchor="middle" font-size="12">SQLite, Parquet</text>
-  <text x="590" y="160" text-anchor="middle" font-size="11" fill="#555">Queryable</text>
-  <text x="590" y="180" text-anchor="middle" font-size="11" fill="#555">Indexed access</text>
-  <text x="590" y="200" text-anchor="middle" font-size="11" fill="#555">Schema enforcement</text>
-  <text x="590" y="220" text-anchor="middle" font-size="11" fill="#555">Partial reads</text>
-</svg>
+![format_categories](svg/lectures/data_formats/format_categories.svg)
 
 ---
 
@@ -418,30 +391,7 @@ Each line is a complete, valid JSON object.
 
 ## Parquet Architecture
 
-<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-weight="bold" font-size="14">Row-Oriented vs Column-Oriented</text>
-
-  <rect x="20" y="40" width="250" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
-  <text x="145" y="60" text-anchor="middle" font-size="11" font-weight="bold">Row Storage (CSV, JSON)</text>
-  <rect x="20" y="70" width="250" height="20" fill="#bbdefb" stroke="#333" stroke-width="1"/>
-  <text x="145" y="84" text-anchor="middle" font-size="10">Alice | 30 | New York</text>
-  <rect x="20" y="90" width="250" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
-  <text x="145" y="104" text-anchor="middle" font-size="10">Bob | 25 | San Francisco</text>
-  <rect x="20" y="110" width="250" height="20" fill="#bbdefb" stroke="#333" stroke-width="1"/>
-  <text x="145" y="124" text-anchor="middle" font-size="10">Carol | 35 | Chicago</text>
-
-  <rect x="330" y="40" width="250" height="30" fill="#fce4ec" stroke="#333" stroke-width="1"/>
-  <text x="455" y="60" text-anchor="middle" font-size="11" font-weight="bold">Column Storage (Parquet)</text>
-  <rect x="330" y="70" width="250" height="20" fill="#f8bbd0" stroke="#333" stroke-width="1"/>
-  <text x="455" y="84" text-anchor="middle" font-size="10">name: Alice | Bob | Carol</text>
-  <rect x="330" y="90" width="250" height="20" fill="#fce4ec" stroke="#333" stroke-width="1"/>
-  <text x="455" y="104" text-anchor="middle" font-size="10">age: 30 | 25 | 35</text>
-  <rect x="330" y="110" width="250" height="20" fill="#f8bbd0" stroke="#333" stroke-width="1"/>
-  <text x="455" y="124" text-anchor="middle" font-size="10">city: NY | SF | Chicago</text>
-
-  <text x="145" y="160" text-anchor="middle" font-size="11" fill="#555">Read all fields per record</text>
-  <text x="455" y="160" text-anchor="middle" font-size="11" fill="#555">Read only needed columns</text>
-</svg>
+![parquet_architecture](svg/lectures/data_formats/parquet_architecture.svg)
 
 ---
 
@@ -735,76 +685,7 @@ print(json.dumps(data, indent=4))
 
 ## Format Selection Decision Tree
 
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg">
-  <rect x="250" y="10" width="200" height="35" rx="5" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="350" y="33" text-anchor="middle" font-size="12" font-weight="bold">Is it configuration?</text>
-
-  <line x1="250" y1="27" x2="150" y2="70" stroke="#333" stroke-width="1.5"/>
-  <text x="185" y="47" font-size="10" fill="#2e7d32">Yes</text>
-  <line x1="450" y1="27" x2="550" y2="70" stroke="#333" stroke-width="1.5"/>
-  <text x="510" y="47" font-size="10" fill="#c62828">No</text>
-
-  <rect x="50" y="70" width="200" height="35" rx="5" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="150" y="93" text-anchor="middle" font-size="12" font-weight="bold">Nested structure?</text>
-
-  <line x1="50" y1="87" x2="20" y2="130" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="110" font-size="10" fill="#c62828">No</text>
-  <line x1="250" y1="87" x2="260" y2="130" stroke="#333" stroke-width="1.5"/>
-  <text x="268" y="110" font-size="10" fill="#2e7d32">Yes</text>
-
-  <rect x="-10" y="130" width="70" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="25" y="150" text-anchor="middle" font-size="11" font-weight="bold">INI</text>
-
-  <rect x="220" y="130" width="90" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="265" y="150" text-anchor="middle" font-size="11" font-weight="bold">TOML/YAML</text>
-
-  <rect x="450" y="70" width="200" height="35" rx="5" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="550" y="93" text-anchor="middle" font-size="12" font-weight="bold">Is it tabular data?</text>
-
-  <line x1="450" y1="87" x2="380" y2="140" stroke="#333" stroke-width="1.5"/>
-  <text x="400" y="113" font-size="10" fill="#c62828">No</text>
-  <line x1="650" y1="87" x2="660" y2="140" stroke="#333" stroke-width="1.5"/>
-  <text x="668" y="113" font-size="10" fill="#2e7d32">Yes</text>
-
-  <rect x="330" y="140" width="120" height="35" rx="5" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="390" y="163" text-anchor="middle" font-size="12" font-weight="bold">Web API?</text>
-
-  <line x1="330" y1="157" x2="310" y2="200" stroke="#333" stroke-width="1.5"/>
-  <text x="305" y="180" font-size="10" fill="#2e7d32">Yes</text>
-  <line x1="450" y1="157" x2="460" y2="200" stroke="#333" stroke-width="1.5"/>
-  <text x="468" y="180" font-size="10" fill="#c62828">No</text>
-
-  <rect x="270" y="200" width="70" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="305" y="220" text-anchor="middle" font-size="11" font-weight="bold">JSON</text>
-
-  <rect x="430" y="200" width="70" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="465" y="220" text-anchor="middle" font-size="11" font-weight="bold">XML</text>
-
-  <rect x="600" y="140" width="130" height="35" rx="5" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="665" y="163" text-anchor="middle" font-size="12" font-weight="bold">Large dataset?</text>
-
-  <line x1="600" y1="157" x2="560" y2="210" stroke="#333" stroke-width="1.5"/>
-  <text x="565" y="185" font-size="10" fill="#c62828">No</text>
-  <line x1="665" y1="175" x2="665" y2="210" stroke="#333" stroke-width="1.5"/>
-  <text x="680" y="195" font-size="10" fill="#2e7d32">Yes</text>
-
-  <rect x="520" y="210" width="70" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="555" y="230" text-anchor="middle" font-size="11" font-weight="bold">CSV</text>
-
-  <rect x="610" y="210" width="120" height="35" rx="5" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="670" y="233" text-anchor="middle" font-size="12" font-weight="bold">Need queries?</text>
-
-  <line x1="610" y1="227" x2="570" y2="270" stroke="#333" stroke-width="1.5"/>
-  <text x="575" y="250" font-size="10" fill="#c62828">No</text>
-  <line x1="730" y1="227" x2="730" y2="270" stroke="#333" stroke-width="1.5"/>
-  <text x="745" y="250" font-size="10" fill="#2e7d32">Yes</text>
-
-  <rect x="525" y="270" width="90" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="570" y="290" text-anchor="middle" font-size="11" font-weight="bold">Parquet</text>
-
-  <rect x="690" y="270" width="80" height="30" rx="5" fill="#fff9c4" stroke="#333" stroke-width="1"/>
-  <text x="730" y="290" text-anchor="middle" font-size="11" font-weight="bold">SQLite</text>
-</svg>
+![decision_tree](svg/lectures/data_formats/decision_tree.svg)
 
 ---
 

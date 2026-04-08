@@ -1,0 +1,24 @@
+<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+  <text x="300" y="20" text-anchor="middle" font-weight="bold" font-size="14">Row-Oriented vs Column-Oriented</text>
+
+  <rect x="20" y="40" width="250" height="30" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="145" y="60" text-anchor="middle" font-size="11" font-weight="bold">Row Storage (CSV, JSON)</text>
+  <rect x="20" y="70" width="250" height="20" fill="#bbdefb" stroke="#333" stroke-width="1"/>
+  <text x="145" y="84" text-anchor="middle" font-size="10">Alice | 30 | New York</text>
+  <rect x="20" y="90" width="250" height="20" fill="#e3f2fd" stroke="#333" stroke-width="1"/>
+  <text x="145" y="104" text-anchor="middle" font-size="10">Bob | 25 | San Francisco</text>
+  <rect x="20" y="110" width="250" height="20" fill="#bbdefb" stroke="#333" stroke-width="1"/>
+  <text x="145" y="124" text-anchor="middle" font-size="10">Carol | 35 | Chicago</text>
+
+  <rect x="330" y="40" width="250" height="30" fill="#fce4ec" stroke="#333" stroke-width="1"/>
+  <text x="455" y="60" text-anchor="middle" font-size="11" font-weight="bold">Column Storage (Parquet)</text>
+  <rect x="330" y="70" width="250" height="20" fill="#f8bbd0" stroke="#333" stroke-width="1"/>
+  <text x="455" y="84" text-anchor="middle" font-size="10">name: Alice | Bob | Carol</text>
+  <rect x="330" y="90" width="250" height="20" fill="#fce4ec" stroke="#333" stroke-width="1"/>
+  <text x="455" y="104" text-anchor="middle" font-size="10">age: 30 | 25 | 35</text>
+  <rect x="330" y="110" width="250" height="20" fill="#f8bbd0" stroke="#333" stroke-width="1"/>
+  <text x="455" y="124" text-anchor="middle" font-size="10">city: NY | SF | Chicago</text>
+
+  <text x="145" y="160" text-anchor="middle" font-size="11" fill="#555">Read all fields per record</text>
+  <text x="455" y="160" text-anchor="middle" font-size="11" fill="#555">Read only needed columns</text>
+</svg>
