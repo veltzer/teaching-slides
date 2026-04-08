@@ -13,10 +13,7 @@ extensions = [".svg"]
 scan_dirs = ["svg"]
 batch = true
 
-[processor.script.svglint]
-linter = "svglint"
-args = ["--ci"]
-extensions = [".svg"]
+[processor.svglint]
 scan_dirs = ["svg"]
 
 [processor.script.md_checks]
@@ -30,7 +27,7 @@ formats = [ "pdf" ]
 max_jobs = 10
 output_dir = "_site/marp"
 
-[processor.pylint]
+[processor.ruff]
 scan_dirs = ["scripts"]
 
 [processor.markdownlint]
