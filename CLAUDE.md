@@ -8,3 +8,6 @@
 ## Python
 - Use `#!/usr/bin/env python` in shebang lines, never `#!/usr/bin/env python3`. python3 is the default on all systems now.
 - All scripts must be executable (`chmod +x`). Run them directly (`./scripts/foo.py`), never via `python scripts/foo.py`.
+
+## Writing presentations or slides
+- read "doc/HowToWriteSlides.txt"
