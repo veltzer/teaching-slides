@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="680" height="260" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="350" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">False Sharing - Cache Line Contention</text>
+  <text x="350" y="65" text-anchor="middle" font-size="12" fill="#666">Cache line (64 bytes)</text>
+  <rect x="60" y="80" width="580" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <line x1="205" y1="80" x2="205" y2="140" stroke="#4a90e2" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="350" y1="80" x2="350" y2="140" stroke="#4a90e2" stroke-width="1" stroke-dasharray="4"/>
+  <line x1="495" y1="80" x2="495" y2="140" stroke="#4a90e2" stroke-width="1" stroke-dasharray="4"/>
+  <text x="132" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">counter_core0</text>
+  <text x="132" y="125" text-anchor="middle" font-size="10" fill="#666">(8 bytes)</text>
+  <text x="278" y="115" text-anchor="middle" font-size="11" fill="#999">padding...</text>
+  <text x="422" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">counter_core1</text>
+  <text x="422" y="125" text-anchor="middle" font-size="10" fill="#666">(8 bytes)</text>
+  <text x="567" y="115" text-anchor="middle" font-size="11" fill="#999">padding</text>
+  <line x1="132" y1="145" x2="132" y2="170" stroke="#28a745" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="422" y1="145" x2="422" y2="170" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="132" y="185" text-anchor="middle" font-size="11" fill="#28a745" font-weight="bold">Core 0 writes here</text>
+  <text x="422" y="185" text-anchor="middle" font-size="11" fill="#4a90e2" font-weight="bold">Core 1 writes here</text>
+  <rect x="80" y="205" width="540" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="350" y="225" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Both in the SAME cache line!</text>
+  <text x="350" y="243" text-anchor="middle" font-size="11" fill="#666">Every write by one core invalidates the line in the other core's cache.</text>
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#28a745"/></marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4a90e2"/></marker>
+  </defs>
+</svg>

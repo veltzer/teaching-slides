@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 430" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="580" height="410" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="300" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">File Upload Entry Points</text>
+  <!-- Attack vectors -->
+  <rect x="30" y="55" width="540" height="175" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="50" y="78" font-size="14" font-weight="bold" fill="#dc3545">High-Value Attack Vectors:</text>
+  <text x="50" y="103" font-size="12" fill="#333">1. File content        - Web shell upload</text>
+  <text x="50" y="123" font-size="12" fill="#333">2. File name           - Path traversal (../../etc/passwd)</text>
+  <text x="50" y="143" font-size="12" fill="#333">3. Content-Type     - Bypass validation</text>
+  <text x="50" y="163" font-size="12" fill="#333">4. File size             - DoS via large files</text>
+  <text x="50" y="183" font-size="12" fill="#333">5. File extension     - Execute server-side code</text>
+  <!-- Bypass techniques -->
+  <rect x="30" y="245" width="540" height="160" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="50" y="268" font-size="14" font-weight="bold" fill="#856404">Common Bypass Techniques:</text>
+  <text x="50" y="295" font-size="12" fill="#333">- Double extension: shell.php.jpg</text>
+  <text x="50" y="315" font-size="12" fill="#333">- Null byte: shell.php%00.jpg (older systems)</text>
+  <text x="50" y="335" font-size="12" fill="#333">- Case variation: shell.pHp</text>
+  <text x="50" y="355" font-size="12" fill="#333">- Content-Type manipulation</text>
+  <text x="50" y="375" font-size="12" fill="#333">- Magic bytes injection (GIF89a header + PHP code)</text>
+</svg>

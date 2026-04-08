@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 380" font-family="Arial, sans-serif">
+  <text x="290" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Hardware Interrupt Flow</text>
+  <!-- Step labels -->
+  <text x="100" y="50" text-anchor="middle" font-size="11" fill="#555">1. Device asserts</text>
+  <text x="100" y="63" text-anchor="middle" font-size="11" fill="#555">interrupt signal</text>
+  <text x="290" y="50" text-anchor="middle" font-size="11" fill="#555">2. Interrupt controller</text>
+  <text x="290" y="63" text-anchor="middle" font-size="11" fill="#555">routes it</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#555">3. CPU saves state</text>
+  <text x="470" y="63" text-anchor="middle" font-size="11" fill="#555">and jumps to ISR</text>
+  <!-- Device -->
+  <rect x="30" y="80" width="130" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="95" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Device</text>
+  <text x="95" y="123" text-anchor="middle" font-size="10" fill="#555">(e.g. NIC)</text>
+  <!-- APIC -->
+  <rect x="220" y="80" width="140" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="290" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">APIC</text>
+  <text x="290" y="123" text-anchor="middle" font-size="10" fill="#555">(Advanced PIC)</text>
+  <!-- CPU -->
+  <rect x="400" y="80" width="150" height="105" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="475" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CPU</text>
+  <text x="420" y="123" font-size="10" fill="#555">Save RIP</text>
+  <text x="420" y="138" font-size="10" fill="#555">Save RFLAGS</text>
+  <text x="420" y="153" font-size="10" fill="#555">Save RSP</text>
+  <text x="420" y="168" font-size="10" fill="#555">Jump to ISR</text>
+  <!-- Arrows -->
+  <line x1="160" y1="107" x2="218" y2="107" stroke="#ffc107" stroke-width="2" marker-end="url(#hia)"/>
+  <text x="190" y="100" font-size="10" fill="#ffc107">IRQ</text>
+  <line x1="360" y1="107" x2="398" y2="107" stroke="#4a90e2" stroke-width="2" marker-end="url(#hib)"/>
+  <text x="380" y="100" font-size="10" fill="#4a90e2">INT</text>
+  <!-- ISR -->
+  <line x1="475" y1="185" x2="475" y2="220" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#hib)"/>
+  <rect x="390" y="220" width="170" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="475" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">ISR</text>
+  <text x="475" y="263" text-anchor="middle" font-size="11" fill="#555">(Interrupt Service</text>
+  <text x="475" y="278" text-anchor="middle" font-size="11" fill="#555">Routine)</text>
+  <text x="410" y="300" font-size="10" fill="#555">Handle event</text>
+  <text x="410" y="315" font-size="10" fill="#555">ACK to APIC</text>
+  <text x="410" y="330" font-size="10" fill="#555">IRET</text>
+  <defs>
+    <marker id="hia" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ffc107"/></marker>
+    <marker id="hib" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
+  </defs>
+</svg>

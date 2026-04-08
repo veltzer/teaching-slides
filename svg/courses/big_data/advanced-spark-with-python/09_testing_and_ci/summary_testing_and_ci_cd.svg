@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="540" height="500" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="280" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#4a90e2">Key Takeaways</text>
+  <line x1="20" y1="50" x2="540" y2="50" stroke="#4a90e2" stroke-width="1"/>
+  <text x="30" y="75" font-size="14" font-weight="bold" fill="#333">Testing Strategy:</text>
+  <text x="40" y="95" font-size="12" fill="#333">&#x2022; Separate pure logic from Spark operations</text>
+  <text x="40" y="113" font-size="12" fill="#333">&#x2022; Test pure Python functions without Spark</text>
+  <text x="40" y="131" font-size="12" fill="#333">&#x2022; Use local[2] SparkSession for unit tests</text>
+  <text x="40" y="149" font-size="12" fill="#333">&#x2022; Use chispa for DataFrame equality</text>
+  <text x="40" y="167" font-size="12" fill="#333">&#x2022; Test edge cases: empty, nulls, special chars</text>
+  <text x="30" y="200" font-size="14" font-weight="bold" fill="#333">Fixtures:</text>
+  <text x="40" y="220" font-size="12" fill="#333">&#x2022; session-scoped SparkSession (create once)</text>
+  <text x="40" y="238" font-size="12" fill="#333">&#x2022; function-scoped DataFrames (fresh per test)</text>
+  <text x="40" y="256" font-size="12" fill="#333">&#x2022; conftest.py for shared fixtures</text>
+  <text x="30" y="289" font-size="14" font-weight="bold" fill="#333">CI/CD:</text>
+  <text x="40" y="309" font-size="12" fill="#333">&#x2022; Lint (pylint), format (black), type (mypy)</text>
+  <text x="40" y="327" font-size="12" fill="#333">&#x2022; Unit tests first, integration tests second</text>
+  <text x="40" y="345" font-size="12" fill="#333">&#x2022; Java 11+ required for Spark in CI</text>
+  <text x="40" y="363" font-size="12" fill="#333">&#x2022; Cache pip packages for faster builds</text>
+  <text x="30" y="396" font-size="14" font-weight="bold" fill="#333">Code Quality:</text>
+  <text x="40" y="416" font-size="12" fill="#333">&#x2022; black for consistent formatting</text>
+  <text x="40" y="434" font-size="12" fill="#333">&#x2022; pylint for code standards</text>
+  <text x="40" y="452" font-size="12" fill="#333">&#x2022; mypy for type safety</text>
+  <text x="40" y="470" font-size="12" fill="#333">&#x2022; Type-annotate all transformation functions</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" font-family="Arial, sans-serif">
+  <text x="280" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Event-Driven Architecture</text>
+  <!-- API Gateway -->
+  <rect x="20" y="45" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="80" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">API Gateway</text>
+  <!-- Broker -->
+  <rect x="180" y="45" width="350" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="355" y="68" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Broker</text>
+  <text x="355" y="85" text-anchor="middle" font-size="11" fill="#555">(receives CloudEvents)</text>
+  <!-- Arrow from gateway to broker -->
+  <line x1="140" y1="70" x2="178" y2="70" stroke="#4a90e2" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Triggers -->
+  <line x1="260" y1="95" x2="260" y2="140" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="355" y1="95" x2="355" y2="140" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <line x1="460" y1="95" x2="460" y2="140" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <rect x="195" y="140" width="130" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="260" y="162" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Trigger: order.*</text>
+  <rect x="295" y="140" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="355" y="162" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Trigger: payment.*</text>
+  <rect x="400" y="140" width="130" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="465" y="162" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Trigger: *.created</text>
+  <!-- Lines to services -->
+  <line x1="260" y1="190" x2="260" y2="240" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="355" y1="190" x2="355" y2="240" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="465" y1="190" x2="465" y2="240" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Services -->
+  <rect x="195" y="240" width="130" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="260" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Order Service</text>
+  <text x="260" y="285" text-anchor="middle" font-size="11" fill="#28a745">(scale to 0)</text>
+  <rect x="295" y="240" width="120" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="355" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Payment Service</text>
+  <text x="355" y="285" text-anchor="middle" font-size="11" fill="#28a745">(scale to 0)</text>
+  <rect x="400" y="240" width="130" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="465" y="265" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Analytics Service</text>
+  <text x="465" y="285" text-anchor="middle" font-size="11" fill="#28a745">(scale to 0)</text>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/>
+    </marker>
+    <marker id="arr3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#ffc107"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 250" font-family="Arial, sans-serif">
+  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">std::sync::mpsc Basics</text>
+  <!-- Producer -->
+  <rect x="40" y="80" width="150" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="115" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Producer</text>
+  <text x="115" y="140" text-anchor="middle" font-size="12" fill="#555">(thread)</text>
+  <!-- Arrow send -->
+  <line x1="190" y1="120" x2="275" y2="120" stroke="#4a90e2" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="233" y="108" text-anchor="middle" font-size="12" fill="#4a90e2" font-weight="bold">send()</text>
+  <!-- Channel -->
+  <rect x="275" y="80" width="150" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Channel</text>
+  <text x="350" y="140" text-anchor="middle" font-size="12" fill="#555">(buffer)</text>
+  <!-- Arrow recv -->
+  <line x1="425" y1="120" x2="510" y2="120" stroke="#4a90e2" stroke-width="2.5" marker-end="url(#arrowB)"/>
+  <text x="468" y="108" text-anchor="middle" font-size="12" fill="#4a90e2" font-weight="bold">recv()</text>
+  <!-- Consumer -->
+  <rect x="510" y="80" width="150" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="585" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Consumer</text>
+  <text x="585" y="140" text-anchor="middle" font-size="12" fill="#555">(thread)</text>
+  <!-- Labels -->
+  <text x="350" y="210" text-anchor="middle" font-size="13" fill="#555">Multiple Producer, Single Consumer (MPSC) channel</text>
+  <defs>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+</svg>

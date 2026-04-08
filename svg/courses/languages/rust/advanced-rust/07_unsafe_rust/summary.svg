@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 440" font-family="Arial, sans-serif">
+  <text x="325" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Unsafe Rust Cheatsheet</text>
+  <rect x="30" y="40" width="590" height="385" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <!-- Rows -->
+  <rect x="50" y="55" width="170" height="26" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="135" y="73" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">5 superpowers</text>
+  <text x="240" y="73" font-size="10" fill="#333">raw ptrs, unsafe fn, static mut, unsafe traits, union fields</text>
+  <rect x="50" y="86" width="170" height="26" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="135" y="104" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">Raw pointers</text>
+  <text x="240" y="104" font-size="11" fill="#333" font-family="monospace">*const T, *mut T</text>
+  <text x="400" y="104" font-size="10" fill="#666">(no borrow check)</text>
+  <rect x="50" y="117" width="170" height="26" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="135" y="135" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Cell&lt;T&gt;</text>
+  <text x="240" y="135" font-size="11" fill="#333">Copy-based interior mutability</text>
+  <rect x="50" y="148" width="170" height="26" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="135" y="166" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">RefCell&lt;T&gt;</text>
+  <text x="240" y="166" font-size="11" fill="#333">runtime borrow checking</text>
+  <rect x="50" y="179" width="170" height="26" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="135" y="197" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">UnsafeCell&lt;T&gt;</text>
+  <text x="240" y="197" font-size="11" fill="#333">foundation of interior mutability</text>
+  <rect x="50" y="210" width="170" height="26" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="135" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">repr(C)</text>
+  <text x="240" y="228" font-size="11" fill="#333">C-compatible layout</text>
+  <rect x="50" y="241" width="170" height="26" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="135" y="259" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">repr(packed)</text>
+  <text x="240" y="259" font-size="11" fill="#333">no padding</text>
+  <rect x="50" y="272" width="170" height="26" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="135" y="290" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">repr(align(N))</text>
+  <text x="240" y="290" font-size="11" fill="#333">minimum alignment</text>
+  <rect x="50" y="303" width="170" height="26" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="135" y="321" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">transmute</text>
+  <text x="240" y="321" font-size="11" fill="#333">reinterpret bits as another type</text>
+  <rect x="50" y="334" width="170" height="26" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="135" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">MaybeUninit</text>
+  <text x="240" y="352" font-size="11" fill="#333">safe uninitialized memory handling</text>
+  <rect x="50" y="365" width="170" height="26" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="135" y="383" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">SAFETY comment</text>
+  <text x="240" y="383" font-size="11" fill="#333">document why unsafe code is sound</text>
+  <rect x="50" y="396" width="170" height="26" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="135" y="414" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Miri</text>
+  <text x="240" y="414" font-size="11" fill="#333">runtime UB detector</text>
+</svg>

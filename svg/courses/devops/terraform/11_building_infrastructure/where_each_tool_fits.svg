@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" font-family="Arial, sans-serif">
+  <text x="300" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Infrastructure Lifecycle</text>
+  <!-- Provision -->
+  <rect x="20" y="50" width="160" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="100" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Provision</text>
+  <text x="100" y="95" text-anchor="middle" font-size="12" fill="#555">Terraform</text>
+  <text x="100" y="112" text-anchor="middle" font-size="12" fill="#555">Packer</text>
+  <text x="100" y="132" text-anchor="middle" font-size="10" fill="#777">Create VMs, networks, storage</text>
+  <!-- Configure -->
+  <rect x="220" y="50" width="160" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="300" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Configure</text>
+  <text x="300" y="95" text-anchor="middle" font-size="12" fill="#555">Ansible / Chef / Puppet</text>
+  <text x="300" y="132" text-anchor="middle" font-size="10" fill="#777">Install SW, configure OS, manage users</text>
+  <!-- Deploy -->
+  <rect x="420" y="50" width="160" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="500" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">Deploy</text>
+  <text x="500" y="95" text-anchor="middle" font-size="12" fill="#555">CI/CD / Jenkins / ArgoCD</text>
+  <text x="500" y="132" text-anchor="middle" font-size="10" fill="#777">Deploy apps, update code</text>
+  <!-- Arrows -->
+  <line x1="180" y1="95" x2="218" y2="95" stroke="#4a90e2" stroke-width="2" marker-end="url(#wfa)"/>
+  <line x1="380" y1="95" x2="418" y2="95" stroke="#28a745" stroke-width="2" marker-end="url(#wfa2)"/>
+  <defs>
+    <marker id="wfa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
+    <marker id="wfa2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+  </defs>
+</svg>

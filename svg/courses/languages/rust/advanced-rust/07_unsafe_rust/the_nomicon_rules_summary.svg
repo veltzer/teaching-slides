@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 360" font-family="Arial, sans-serif">
+  <text x="325" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Undefined Behavior in Rust</text>
+  <rect x="30" y="40" width="590" height="305" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="325" y="65" text-anchor="middle" font-size="12" fill="#dc3545" font-weight="bold">The Nomicon: Things You Must Never Do</text>
+  <!-- Items -->
+  <rect x="50" y="80" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="97" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">1</text>
+  <text x="95" y="97" font-size="11" fill="#333">Dereferencing dangling or unaligned pointers</text>
+  <rect x="50" y="110" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="127" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">2</text>
+  <text x="95" y="127" font-size="11" fill="#333">Breaking aliasing rules (multiple &amp;mut to same data)</text>
+  <rect x="50" y="140" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="157" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">3</text>
+  <text x="95" y="157" font-size="11" fill="#333">Invalid values (null refs, invalid bool/enum)</text>
+  <rect x="50" y="170" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="187" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">4</text>
+  <text x="95" y="187" font-size="11" fill="#333">Unwinding into C code (panic across FFI)</text>
+  <rect x="50" y="200" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="217" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">5</text>
+  <text x="95" y="217" font-size="11" fill="#333">Data races (unsynchronized concurrent mutation)</text>
+  <rect x="50" y="230" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="247" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">6</text>
+  <text x="95" y="247" font-size="11" fill="#333">Reading uninitialized memory</text>
+  <rect x="50" y="260" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="277" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">7</text>
+  <text x="95" y="277" font-size="11" fill="#333">Breaking pointer provenance rules</text>
+  <rect x="50" y="290" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="307" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">8</text>
+  <text x="95" y="307" font-size="11" fill="#333">Calling mismatched function signatures</text>
+  <rect x="50" y="320" width="30" height="24" rx="12" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="65" y="337" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">9</text>
+  <text x="95" y="337" font-size="11" fill="#333">Producing invalid primitive values</text>
+</svg>

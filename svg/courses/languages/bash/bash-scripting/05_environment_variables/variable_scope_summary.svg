@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" font-family="Arial, sans-serif">
+  <text x="300" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Variable Scope: Parent vs Child</text>
+  <!-- Parent shell -->
+  <rect x="40" y="45" width="520" height="260" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="300" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Parent Shell</text>
+  <text x="60" y="95" font-size="11" fill="#333" font-family="monospace">x=1 (shell var)</text>
+  <text x="60" y="115" font-size="11" fill="#333" font-family="monospace">export y=2 (env var)</text>
+  <!-- Child process -->
+  <rect x="80" y="135" width="400" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="280" y="158" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Child Process</text>
+  <rect x="100" y="168" width="170" height="25" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="185" y="185" text-anchor="middle" font-size="10" fill="#dc3545">x is NOT visible</text>
+  <rect x="290" y="168" width="170" height="25" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="375" y="185" text-anchor="middle" font-size="10" fill="#28a745">y=2 (inherited)</text>
+  <text x="100" y="218" font-size="10" fill="#666">Changes to y do NOT affect parent</text>
+  <text x="100" y="238" font-size="10" fill="#666">Child gets a copy, not a reference</text>
+  <!-- After child -->
+  <text x="60" y="280" font-size="11" fill="#333">After child exits: y is still 2 in parent (unchanged)</text>
+  <!-- Key takeaway -->
+  <text x="300" y="325" text-anchor="middle" font-size="12" fill="#666">Environment variables flow down (parent to child), never up</text>
+</svg>

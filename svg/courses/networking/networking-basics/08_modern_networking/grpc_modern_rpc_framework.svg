@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 320" font-family="Arial, sans-serif">
+  <!-- REST/JSON section -->
+  <text x="185" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">REST/JSON</text>
+
+  <rect x="30" y="50" width="120" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="90" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
+
+  <rect x="250" y="50" width="120" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="310" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
+
+  <!-- REST arrows -->
+  <line x1="150" y1="68" x2="248" y2="68" stroke="#4a90e2" stroke-width="2" marker-end="url(#arr1)"/>
+  <text x="199" y="62" text-anchor="middle" font-size="11" fill="#555">JSON</text>
+  <line x1="248" y1="88" x2="150" y2="88" stroke="#4a90e2" stroke-width="2" marker-end="url(#arr1)"/>
+  <text x="199" y="100" text-anchor="middle" font-size="11" fill="#555">JSON</text>
+
+  <text x="185" y="40" text-anchor="middle" font-size="12" fill="#888">HTTP/1.1</text>
+
+  <!-- REST properties -->
+  <rect x="30" y="125" width="340" height="85" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="200" y="148" text-anchor="middle" font-size="13" fill="#555">Text-based &amp; larger payload</text>
+  <text x="200" y="168" text-anchor="middle" font-size="13" fill="#555">No type safety</text>
+  <text x="200" y="188" text-anchor="middle" font-size="13" fill="#555">Request/response only</text>
+
+  <!-- gRPC section -->
+  <text x="570" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">gRPC/Protobuf</text>
+
+  <rect x="430" y="50" width="120" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="490" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
+
+  <rect x="640" y="50" width="100" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="690" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
+
+  <!-- gRPC arrows -->
+  <line x1="550" y1="68" x2="638" y2="68" stroke="#28a745" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="594" y="62" text-anchor="middle" font-size="11" fill="#555">Binary</text>
+  <line x1="638" y1="88" x2="550" y2="88" stroke="#28a745" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="594" y="100" text-anchor="middle" font-size="11" fill="#555">Binary</text>
+
+  <text x="570" y="40" text-anchor="middle" font-size="12" fill="#888">HTTP/2</text>
+
+  <!-- gRPC properties -->
+  <rect x="420" y="125" width="320" height="85" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="580" y="148" text-anchor="middle" font-size="13" fill="#555">Binary &amp; smaller payload</text>
+  <text x="580" y="168" text-anchor="middle" font-size="13" fill="#555">Strongly typed</text>
+  <text x="580" y="188" text-anchor="middle" font-size="13" fill="#555">Streaming support</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arr1" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+  </defs>
+</svg>

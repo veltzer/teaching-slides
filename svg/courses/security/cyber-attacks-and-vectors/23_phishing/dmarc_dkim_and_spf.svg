@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="580" height="430" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="300" y="45" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Email Authentication Trilogy</text>
+  <!-- SPF -->
+  <rect x="30" y="60" width="540" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="50" y="85" font-size="15" font-weight="bold" fill="#28a745">SPF (Sender Policy Framework)</text>
+  <text x="60" y="108" font-size="12" fill="#333">- DNS TXT record listing authorized sending IPs</text>
+  <text x="60" y="126" font-size="12" fill="#333">- Receiving server checks if sender IP is authorized</text>
+  <text x="60" y="144" font-size="12" fill="#333">- Prevents direct domain spoofing</text>
+  <!-- DKIM -->
+  <rect x="30" y="180" width="540" height="120" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="50" y="205" font-size="15" font-weight="bold" fill="#856404">DKIM (DomainKeys Identified Mail)</text>
+  <text x="60" y="228" font-size="12" fill="#333">- Cryptographic signature added to email headers</text>
+  <text x="60" y="246" font-size="12" fill="#333">- Public key published in DNS</text>
+  <text x="60" y="264" font-size="12" fill="#333">- Receiving server verifies signature integrity</text>
+  <text x="60" y="282" font-size="12" fill="#333">- Ensures email was not modified in transit</text>
+  <!-- DMARC -->
+  <rect x="30" y="310" width="540" height="120" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="50" y="335" font-size="15" font-weight="bold" fill="#4a90e2">DMARC (Domain-based Message Authentication)</text>
+  <text x="60" y="358" font-size="12" fill="#333">- Policy that ties SPF and DKIM together</text>
+  <text x="60" y="376" font-size="12" fill="#333">- Tells receivers what to do on failure: none | quarantine | reject</text>
+  <text x="60" y="394" font-size="12" fill="#333">- Provides reporting (aggregate + forensic)</text>
+  <text x="60" y="412" font-size="12" fill="#333">- The enforcement mechanism for SPF and DKIM</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="Arial, sans-serif">
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">VTable Layout for dyn Trait (Fat Pointer)</text>
+  <!-- Fat pointer -->
+  <text x="50" y="75" font-size="12" font-weight="bold" fill="#4a90e2">dyn Shape</text>
+  <text x="50" y="93" font-size="10" fill="#666">(fat pointer)</text>
+  <rect x="140" y="60" width="200" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="240" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">data pointer</text>
+  <text x="240" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">vtable pointer</text>
+  <!-- Arrow to data -->
+  <line x1="340" y1="78" x2="440" y2="78" stroke="#28a745" stroke-width="2"/>
+  <polygon points="435,73 445,78 435,83" fill="#28a745"/>
+  <rect x="450" y="60" width="180" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="540" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">actual struct data</text>
+  <!-- Arrow to vtable -->
+  <line x1="340" y1="98" x2="440" y2="140" stroke="#4a90e2" stroke-width="2"/>
+  <polygon points="435,135 445,140 435,145" fill="#4a90e2"/>
+  <!-- VTable -->
+  <rect x="450" y="120" width="200" height="140" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="550" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">VTable</text>
+  <line x1="450" y1="150" x2="650" y2="150" stroke="#ffc107" stroke-width="1"/>
+  <text x="470" y="170" font-size="11" fill="#333" font-family="monospace">drop()</text>
+  <text x="470" y="190" font-size="11" fill="#333" font-family="monospace">size</text>
+  <text x="470" y="210" font-size="11" fill="#333" font-family="monospace">alignment</text>
+  <text x="470" y="230" font-size="11" fill="#333" font-family="monospace">area()</text>
+  <text x="470" y="250" font-size="11" fill="#333" font-family="monospace">name()</text>
+  <text x="350" y="275" text-anchor="middle" font-size="11" fill="#666">Each trait object carries two pointers: data + vtable (16 bytes on 64-bit)</text>
+</svg>

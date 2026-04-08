@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 400" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">DashMap vs Mutex&lt;HashMap&gt;</text>
+  <!-- Header -->
+  <rect x="20" y="50" width="180" height="40" rx="5" fill="#4a90e2" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="110" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Property</text>
+  <rect x="200" y="50" width="250" height="40" rx="5" fill="#ffc107" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="325" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Mutex&lt;HashMap&gt;</text>
+  <rect x="450" y="50" width="280" height="40" rx="5" fill="#28a745" stroke="#28a745" stroke-width="1.5"/>
+  <text x="590" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">DashMap</text>
+  <!-- Rows -->
+  <rect x="20" y="95" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="95" width="250" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="450" y="95" width="280" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="117" font-size="12" fill="#333">Granularity</text>
+  <text x="210" y="117" font-size="12" fill="#333">Entire map locked</text>
+  <text x="460" y="117" font-size="12" fill="#333">Per-shard locking</text>
+
+  <rect x="20" y="135" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="135" width="250" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="450" y="135" width="280" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="157" font-size="12" fill="#333">Read concurrency</text>
+  <text x="210" y="157" font-size="12" fill="#333">One at a time</text>
+  <text x="460" y="157" font-size="12" fill="#333">Many concurrent reads</text>
+
+  <rect x="20" y="175" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="175" width="250" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="450" y="175" width="280" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="197" font-size="12" fill="#333">Write concurrency</text>
+  <text x="210" y="197" font-size="12" fill="#333">One at a time</text>
+  <text x="460" y="197" font-size="12" fill="#333">Concurrent on different shards</text>
+
+  <rect x="20" y="215" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="215" width="250" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <rect x="450" y="215" width="280" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="30" y="237" font-size="12" fill="#333">API</text>
+  <text x="210" y="237" font-size="12" fill="#333">Standard HashMap</text>
+  <text x="460" y="237" font-size="12" fill="#333">Similar to HashMap</text>
+
+  <rect x="20" y="255" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="255" width="250" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <rect x="450" y="255" width="280" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="30" y="277" font-size="12" fill="#333">Overhead</text>
+  <text x="210" y="277" font-size="12" fill="#333">Minimal</text>
+  <text x="460" y="277" font-size="12" fill="#333">Some (shard metadata)</text>
+
+  <rect x="20" y="295" width="180" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="200" y="295" width="250" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="450" y="295" width="280" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="317" font-size="12" fill="#333">Best for</text>
+  <text x="210" y="317" font-size="12" fill="#333">Simple cases, few threads</text>
+  <text x="460" y="317" font-size="12" fill="#333">High-contention, many threads</text>
+</svg>

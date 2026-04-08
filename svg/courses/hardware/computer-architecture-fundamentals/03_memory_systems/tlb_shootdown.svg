@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" font-family="Arial, sans-serif">
+  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">TLB Shootdown</text>
+  <!-- Core 0 -->
+  <rect x="20" y="50" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="80" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Core 0</text>
+  <text x="80" y="115" text-anchor="middle" font-size="11" fill="#555">unmaps page X</text>
+  <!-- Step 1: Invalidate own TLB -->
+  <line x1="80" y1="95" x2="80" y2="130" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#tlba)"/>
+  <rect x="20" y="130" width="180" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="110" y="150" text-anchor="middle" font-size="10" fill="#333">Invalidate own TLB for X</text>
+  <!-- Other cores -->
+  <rect x="180" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="230" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 1</text>
+  <rect x="300" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="350" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 2</text>
+  <rect x="420" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="470" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 3</text>
+  <!-- IPI arrows -->
+  <line x1="110" y1="170" x2="230" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
+  <line x1="110" y1="170" x2="350" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
+  <line x1="110" y1="170" x2="470" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
+  <text x="200" y="185" font-size="10" fill="#dc3545">IPI (Inter-Processor Interrupt)</text>
+  <!-- Invalidate on each core -->
+  <rect x="180" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="230" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
+  <text x="230" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
+  <rect x="300" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="350" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
+  <text x="350" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
+  <rect x="420" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="470" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
+  <text x="470" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
+  <!-- ACK arrows back -->
+  <line x1="230" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
+  <line x1="350" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
+  <line x1="470" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
+  <text x="340" y="270" font-size="10" fill="#28a745">ACK</text>
+  <!-- Wait and continue -->
+  <rect x="30" y="285" width="200" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="130" y="305" text-anchor="middle" font-size="11" fill="#333">Wait for all ACKs</text>
+  <line x1="130" y1="315" x2="130" y2="340" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#tlba)"/>
+  <rect x="50" y="340" width="160" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="130" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Continue execution</text>
+  <defs>
+    <marker id="tlba" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
+    <marker id="tlbr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc3545"/></marker>
+    <marker id="tlbg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+  </defs>
+</svg>

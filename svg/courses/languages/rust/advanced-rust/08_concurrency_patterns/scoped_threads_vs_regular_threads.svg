@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Scoped Threads vs Regular Threads</text>
+  <!-- Header -->
+  <rect x="20" y="50" width="200" height="40" rx="5" fill="#4a90e2" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="120" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Property</text>
+  <rect x="220" y="50" width="240" height="40" rx="5" fill="#ffc107" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="340" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">thread::spawn</text>
+  <rect x="460" y="50" width="270" height="40" rx="5" fill="#28a745" stroke="#28a745" stroke-width="1.5"/>
+  <text x="595" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">thread::scope</text>
+  <!-- Rows -->
+  <rect x="20" y="95" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="95" width="240" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="460" y="95" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="117" font-size="12" fill="#333">Lifetime bounds</text>
+  <text x="230" y="117" font-size="12" fill="#333">'static required</text>
+  <text x="470" y="117" font-size="12" fill="#28a745">Can borrow locals</text>
+
+  <rect x="20" y="135" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="135" width="240" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="460" y="135" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="157" font-size="12" fill="#333">Sharing data</text>
+  <text x="230" y="157" font-size="12" fill="#333">Arc&lt;T&gt; needed</text>
+  <text x="470" y="157" font-size="12" fill="#28a745">&amp;T works directly</text>
+
+  <rect x="20" y="175" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="175" width="240" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="460" y="175" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="197" font-size="12" fill="#333">Mutable sharing</text>
+  <text x="230" y="197" font-size="12" fill="#333">Arc&lt;Mutex&lt;T&gt;&gt;</text>
+  <text x="470" y="197" font-size="12" fill="#28a745">Split borrows work</text>
+
+  <rect x="20" y="215" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="215" width="240" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="460" y="215" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="237" font-size="12" fill="#333">Join behavior</text>
+  <text x="230" y="237" font-size="12" fill="#333">Manual join</text>
+  <text x="470" y="237" font-size="12" fill="#28a745">Auto-joined at scope</text>
+
+  <rect x="20" y="255" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="255" width="240" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <rect x="460" y="255" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="277" font-size="12" fill="#333">Error handling</text>
+  <text x="230" y="277" font-size="12" fill="#333">JoinHandle result</text>
+  <text x="470" y="277" font-size="12" fill="#28a745">Panics propagate</text>
+
+  <!-- Use when -->
+  <rect x="20" y="310" width="710" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="40" y="335" font-size="14" font-weight="bold" fill="#4a90e2">Use thread::scope when:</text>
+  <text x="40" y="358" font-size="13" fill="#333">- You need to borrow data from the stack</text>
+  <text x="40" y="378" font-size="13" fill="#333">- You want guaranteed cleanup (all threads join)</text>
+  <text x="40" y="398" font-size="13" fill="#333">- The threads should not outlive the calling function</text>
+</svg>

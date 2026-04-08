@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" font-family="Arial, sans-serif">
+  <text x="280" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Copy-on-Write (CoW) Explained</text>
+  <text x="30" y="55" font-size="14" font-weight="bold" fill="#4a90e2">Read operation:</text>
+  <rect x="30" y="65" width="220" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="140" y="90" text-anchor="middle" font-size="12" fill="#333">Upper (R/W)</text>
+  <text x="270" y="88" font-size="10" fill="#666">file not found &#x2192; look in lower</text>
+  <rect x="30" y="105" width="220" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="140" y="130" text-anchor="middle" font-size="12" fill="#333">Lower (RO)</text>
+  <text x="270" y="128" font-size="10" fill="#28a745">&#x2190; file found here, read directly</text>
+  <text x="30" y="175" font-size="14" font-weight="bold" fill="#ffc107">Write operation (existing file):</text>
+  <rect x="30" y="185" width="220" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="140" y="210" text-anchor="middle" font-size="12" fill="#333">Upper (R/W)</text>
+  <text x="270" y="208" font-size="10" fill="#856404">&#x2190; file copied here, then modified</text>
+  <rect x="30" y="225" width="220" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="140" y="250" text-anchor="middle" font-size="12" fill="#333">Lower (RO)</text>
+  <text x="270" y="248" font-size="10" fill="#666">original unchanged</text>
+  <text x="30" y="300" font-size="14" font-weight="bold" fill="#dc3545">Delete operation:</text>
+  <rect x="30" y="310" width="220" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="140" y="335" text-anchor="middle" font-size="12" fill="#333">Upper (R/W)</text>
+  <text x="270" y="333" font-size="10" fill="#dc3545">&#x2190; whiteout file created</text>
+  <rect x="30" y="350" width="220" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="140" y="375" text-anchor="middle" font-size="12" fill="#333">Lower (RO)</text>
+  <text x="270" y="373" font-size="10" fill="#666">original still exists but hidden</text>
+</svg>

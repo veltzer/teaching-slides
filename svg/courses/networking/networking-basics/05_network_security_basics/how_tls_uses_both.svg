@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 300" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">How TLS Uses Both Encryption Types</text>
+  <!-- Phase 1 -->
+  <text x="190" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Phase 1: Asymmetric (Key Exchange)</text>
+  <rect x="40" y="80" width="120" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="100" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
+  <text x="100" y="140" text-anchor="middle" font-size="11" fill="#555">Public Key</text>
+  <line x1="160" y1="110" x2="210" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTLS)"/>
+  <line x1="210" y1="130" x2="160" y2="130" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTLS2)"/>
+  <rect x="210" y="80" width="120" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="270" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
+  <text x="270" y="140" text-anchor="middle" font-size="11" fill="#555">Crypto</text>
+  <text x="190" y="190" text-anchor="middle" font-size="12" fill="#555">Slow but solves key distribution</text>
+
+  <!-- Phase 2 -->
+  <text x="560" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Phase 2: Symmetric (Bulk Data)</text>
+  <rect x="410" y="80" width="120" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="470" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
+  <text x="470" y="140" text-anchor="middle" font-size="11" fill="#555">Shared</text>
+  <line x1="530" y1="110" x2="580" y2="110" stroke="#28a745" stroke-width="2" marker-end="url(#aTLSg)"/>
+  <line x1="580" y1="130" x2="530" y2="130" stroke="#28a745" stroke-width="2" marker-end="url(#aTLSg2)"/>
+  <rect x="580" y="80" width="120" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="640" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
+  <text x="640" y="140" text-anchor="middle" font-size="11" fill="#555">Session Key</text>
+  <text x="560" y="190" text-anchor="middle" font-size="12" fill="#555">Fast, used for all application data</text>
+
+  <!-- Connection arrow -->
+  <line x1="330" y1="120" x2="410" y2="120" stroke="#ffc107" stroke-width="3" stroke-dasharray="8,4"/>
+  <text x="370" y="230" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">Session key negotiated in Phase 1 is used in Phase 2</text>
+  <rect x="120" y="248" width="510" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="375" y="270" text-anchor="middle" font-size="12" fill="#333">Combines security of asymmetric with speed of symmetric encryption</text>
+  <defs>
+    <marker id="aTLS" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="aTLS2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="aTLSg" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    </marker>
+    <marker id="aTLSg2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#28a745"/>
+    </marker>
+  </defs>
+</svg>

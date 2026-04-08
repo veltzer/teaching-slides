@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 520" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="630" height="500" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="325" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Chaining Vulnerabilities</text>
+  <text x="325" y="60" text-anchor="middle" font-size="12" fill="#666">Multiple low-severity vulns chain into critical attacks</text>
+  <!-- Chain 1 -->
+  <rect x="25" y="75" width="600" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="45" y="95" font-size="13" font-weight="bold" fill="#dc3545">Chain 1: Information Disclosure -&gt; Account Takeover</text>
+  <text x="45" y="115" font-size="11" fill="#333">1. Directory listing reveals backup.sql</text>
+  <text x="320" y="115" font-size="11" fill="#333">2. backup.sql contains password hashes</text>
+  <text x="45" y="135" font-size="11" fill="#333">3. Crack hashes -&gt; admin credentials</text>
+  <text x="320" y="135" font-size="11" fill="#333">4. Login as admin</text>
+  <!-- Chain 2 -->
+  <rect x="25" y="175" width="600" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="45" y="195" font-size="13" font-weight="bold" fill="#856404">Chain 2: XSS -&gt; Session Hijack -&gt; Admin Access</text>
+  <text x="45" y="215" font-size="11" fill="#333">1. Stored XSS in user profile</text>
+  <text x="320" y="215" font-size="11" fill="#333">2. Admin views profile, cookie stolen</text>
+  <text x="45" y="235" font-size="11" fill="#333">3. Use admin cookie for admin panel</text>
+  <text x="320" y="235" font-size="11" fill="#333">4. Upload malicious plugin for RCE</text>
+  <!-- Chain 3 -->
+  <rect x="25" y="275" width="600" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="45" y="295" font-size="13" font-weight="bold" fill="#dc3545">Chain 3: SSRF -&gt; Cloud Metadata -&gt; Full Compromise</text>
+  <text x="45" y="315" font-size="11" fill="#333">1. SSRF in image fetcher</text>
+  <text x="320" y="315" font-size="11" fill="#333">2. Access AWS metadata endpoint</text>
+  <text x="45" y="335" font-size="11" fill="#333">3. Steal IAM credentials</text>
+  <text x="320" y="335" font-size="11" fill="#333">4. Access S3 buckets, EC2 instances</text>
+  <!-- Chain 4 -->
+  <rect x="25" y="375" width="600" height="110" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="45" y="395" font-size="13" font-weight="bold" fill="#856404">Chain 4: SQL Injection -&gt; File Read -&gt; RCE</text>
+  <text x="45" y="415" font-size="11" fill="#333">1. SQLi to read /etc/passwd (LOAD_FILE)</text>
+  <text x="320" y="415" font-size="11" fill="#333">2. Identify web root from configuration</text>
+  <text x="45" y="435" font-size="11" fill="#333">3. SQLi to write web shell (INTO OUTFILE)</text>
+  <text x="320" y="435" font-size="11" fill="#333">4. Execute commands via web shell</text>
+</svg>

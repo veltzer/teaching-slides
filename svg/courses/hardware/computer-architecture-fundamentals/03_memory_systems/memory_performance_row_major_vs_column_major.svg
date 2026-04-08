@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Arial, sans-serif">
+  <text x="280" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Memory Performance: Row-Major vs Column-Major</text>
+  <!-- Memory layout -->
+  <text x="280" y="50" text-anchor="middle" font-size="12" fill="#555">Memory Address Layout (Row-Major):</text>
+  <rect x="30" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="65" y="80" text-anchor="middle" font-size="10" fill="#333">[0][0]</text>
+  <rect x="105" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="140" y="80" text-anchor="middle" font-size="10" fill="#333">[0][1]</text>
+  <rect x="180" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="215" y="80" text-anchor="middle" font-size="10" fill="#333">[0][2]</text>
+  <text x="270" y="80" font-size="12" fill="#555">...</text>
+  <rect x="290" y="60" width="70" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="325" y="80" text-anchor="middle" font-size="10" fill="#333">[1][0]</text>
+  <rect x="365" y="60" width="70" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="400" y="80" text-anchor="middle" font-size="10" fill="#333">[1][1]</text>
+  <text x="455" y="80" font-size="12" fill="#555">...</text>
+  <text x="140" y="107" text-anchor="middle" font-size="10" fill="#28a745">Row 0 (contiguous)</text>
+  <text x="365" y="107" text-anchor="middle" font-size="10" fill="#4a90e2">Row 1 (contiguous)</text>
+  <!-- Row-major access -->
+  <rect x="20" y="125" width="520" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="40" y="148" font-size="13" font-weight="bold" fill="#28a745">Row-major access:</text>
+  <text x="40" y="168" font-size="12" fill="#555">[0][0] → [0][1] → [0][2] → ... Sequential, cache-friendly</text>
+  <!-- Column-major access -->
+  <rect x="20" y="190" width="520" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="40" y="213" font-size="13" font-weight="bold" fill="#dc3545">Column-major access:</text>
+  <text x="40" y="233" font-size="12" fill="#555">[0][0] → [1][0] → [2][0] → ... Strided, cache-hostile</text>
+</svg>

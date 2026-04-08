@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 180" font-family="Arial, sans-serif">
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Page Table Entry (PTE) Format</text>
+  <!-- Bit positions -->
+  <text x="20" y="50" font-size="10" fill="#555">63</text>
+  <text x="60" y="50" font-size="10" fill="#555">62</text>
+  <text x="115" y="50" font-size="10" fill="#555">52 51</text>
+  <text x="400" y="50" font-size="10" fill="#555">12 11</text>
+  <text x="460" y="50" font-size="10" fill="#555">9 8</text>
+  <text x="680" y="50" font-size="10" fill="#555">0</text>
+  <!-- Fields -->
+  <rect x="15" y="60" width="40" height="40" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="35" y="85" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NX</text>
+  <rect x="60" y="60" width="60" height="40" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="90" y="85" text-anchor="middle" font-size="9" fill="#555">Avail</text>
+  <rect x="125" y="60" width="280" height="40" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="265" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Physical Frame Number</text>
+  <rect x="410" y="60" width="55" height="40" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="437" y="85" text-anchor="middle" font-size="9" fill="#555">AVL</text>
+  <!-- Individual flag bits -->
+  <rect x="470" y="60" width="25" height="40" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="483" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">G</text>
+  <rect x="498" y="60" width="25" height="40" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="511" y="85" text-anchor="middle" font-size="9" fill="#555">-</text>
+  <rect x="526" y="60" width="25" height="40" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="539" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">D</text>
+  <rect x="554" y="60" width="25" height="40" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="567" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">A</text>
+  <rect x="582" y="60" width="25" height="40" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="595" y="85" text-anchor="middle" font-size="9" fill="#555">-</text>
+  <rect x="610" y="60" width="25" height="40" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="623" y="85" text-anchor="middle" font-size="9" fill="#555">-</text>
+  <rect x="638" y="60" width="25" height="40" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="651" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">U</text>
+  <rect x="666" y="60" width="25" height="40" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="679" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">W</text>
+  <rect x="694" y="60" width="25" height="40" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="707" y="85" text-anchor="middle" font-size="9" font-weight="bold" fill="#333">P</text>
+  <!-- Legend -->
+  <text x="20" y="125" font-size="10" fill="#555">NX=No Execute  G=Global  D=Dirty  A=Accessed  U=User/Supervisor  W=Writable  P=Present</text>
+  <text x="20" y="145" font-size="10" fill="#555">Physical Frame Number: bits 51-12 (40-bit physical address space)</text>
+</svg>

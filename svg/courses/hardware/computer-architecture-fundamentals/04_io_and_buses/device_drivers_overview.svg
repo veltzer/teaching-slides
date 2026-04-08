@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 460" font-family="Arial, sans-serif">
+  <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Device Drivers Overview</text>
+  <!-- User Space -->
+  <rect x="20" y="40" width="460" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="250" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">User Space</text>
+  <rect x="50" y="70" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="110" y="95" text-anchor="middle" font-size="11" fill="#333">Application</text>
+  <rect x="200" y="70" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="260" y="95" text-anchor="middle" font-size="11" fill="#333">Application</text>
+  <text x="110" y="122" text-anchor="middle" font-size="10" fill="#555">read()</text>
+  <text x="260" y="122" text-anchor="middle" font-size="10" fill="#555">write()</text>
+  <!-- Kernel Space -->
+  <rect x="20" y="140" width="460" height="220" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="250" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">Kernel Space</text>
+  <!-- VFS -->
+  <rect x="80" y="170" width="340" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="250" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">VFS (Virtual File System Layer)</text>
+  <line x1="250" y1="210" x2="250" y2="225" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#dda)"/>
+  <!-- Block Layer -->
+  <rect x="80" y="225" width="340" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="250" y="250" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Block Layer / Network Stack</text>
+  <line x1="250" y1="265" x2="250" y2="280" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#dda)"/>
+  <!-- Device Driver -->
+  <rect x="80" y="280" width="340" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="250" y="302" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Device Driver</text>
+  <text x="250" y="318" text-anchor="middle" font-size="10" fill="#555">(hardware-specific code)</text>
+  <!-- Hardware -->
+  <rect x="20" y="375" width="460" height="70" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="250" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Hardware</text>
+  <rect x="120" y="405" width="260" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="250" y="425" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Physical Device</text>
+  <!-- Arrow from kernel to hardware -->
+  <line x1="250" y1="325" x2="250" y2="373" stroke="#dc3545" stroke-width="1.5" marker-end="url(#ddr)"/>
+  <defs>
+    <marker id="dda" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
+    <marker id="ddr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc3545"/></marker>
+  </defs>
+</svg>

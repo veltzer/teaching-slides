@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" font-family="Arial, sans-serif">
+  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SATA vs NVMe</text>
+  <!-- SATA -->
+  <rect x="10" y="45" width="500" height="100" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="30" y="70" font-size="14" font-weight="bold" fill="#856404">SATA (Serial ATA):</text>
+  <rect x="30" y="80" width="100" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="80" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">CPU</text>
+  <line x1="130" y1="102" x2="250" y2="102" stroke="#ffc107" stroke-width="2" marker-end="url(#sna)"/>
+  <text x="190" y="95" text-anchor="middle" font-size="10" fill="#555">SATA cable (6 Gbps)</text>
+  <text x="190" y="120" text-anchor="middle" font-size="10" fill="#555">via AHCI</text>
+  <rect x="255" y="80" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="315" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">SATA SSD</text>
+  <text x="315" y="117" text-anchor="middle" font-size="10" fill="#555">or HDD</text>
+  <text x="420" y="100" font-size="10" fill="#555">1 queue,</text>
+  <text x="420" y="115" font-size="10" fill="#555">32 commands</text>
+  <!-- NVMe -->
+  <rect x="10" y="155" width="500" height="100" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="30" y="180" font-size="14" font-weight="bold" fill="#28a745">NVMe (over PCIe):</text>
+  <rect x="30" y="190" width="100" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="80" y="217" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">CPU</text>
+  <line x1="130" y1="212" x2="250" y2="212" stroke="#28a745" stroke-width="2" marker-end="url(#snb)"/>
+  <text x="190" y="205" text-anchor="middle" font-size="10" fill="#555">PCIe x4 (~8 GB/s)</text>
+  <text x="190" y="230" text-anchor="middle" font-size="10" fill="#555">65535 queues</text>
+  <rect x="255" y="190" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="315" y="217" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">NVMe SSD</text>
+  <text x="420" y="210" font-size="10" fill="#555">65535 queues,</text>
+  <text x="420" y="225" font-size="10" fill="#555">65536 cmds/q</text>
+  <defs>
+    <marker id="sna" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#ffc107"/></marker>
+    <marker id="snb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+  </defs>
+</svg>

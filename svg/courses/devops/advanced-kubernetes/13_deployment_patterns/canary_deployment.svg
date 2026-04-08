@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 440" font-family="Arial, sans-serif">
+  <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Canary Deployment Phases</text>
+  <!-- Phase 1: 5% -->
+  <rect x="20" y="40" width="460" height="75" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="30" y="60" font-size="13" font-weight="bold" fill="#333">Phase 1: 5% canary</text>
+  <rect x="30" y="68" width="380" height="16" rx="3" fill="#4a90e2"/>
+  <text x="420" y="81" font-size="11" fill="#555">95% v1</text>
+  <rect x="30" y="88" width="20" height="16" rx="3" fill="#28a745"/>
+  <text x="420" y="101" font-size="11" fill="#555">5% v2</text>
+  <!-- Phase 2: 25% -->
+  <rect x="20" y="125" width="460" height="75" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="30" y="145" font-size="13" font-weight="bold" fill="#333">Phase 2: 25% canary (metrics look good)</text>
+  <rect x="30" y="153" width="300" height="16" rx="3" fill="#4a90e2"/>
+  <text x="420" y="166" font-size="11" fill="#555">75% v1</text>
+  <rect x="30" y="173" width="100" height="16" rx="3" fill="#28a745"/>
+  <text x="420" y="186" font-size="11" fill="#555">25% v2</text>
+  <!-- Phase 3: 50% -->
+  <rect x="20" y="210" width="460" height="75" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="30" y="230" font-size="13" font-weight="bold" fill="#333">Phase 3: 50% canary</text>
+  <rect x="30" y="238" width="200" height="16" rx="3" fill="#4a90e2"/>
+  <text x="420" y="251" font-size="11" fill="#555">50% v1</text>
+  <rect x="30" y="258" width="200" height="16" rx="3" fill="#28a745"/>
+  <text x="420" y="271" font-size="11" fill="#555">50% v2</text>
+  <!-- Phase 4: 100% -->
+  <rect x="20" y="295" width="460" height="65" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="30" y="315" font-size="13" font-weight="bold" fill="#333">Phase 4: 100% new version</text>
+  <rect x="30" y="325" width="400" height="16" rx="3" fill="#28a745"/>
+  <text x="420" y="338" font-size="11" fill="#555">100% v2</text>
+  <!-- Legend -->
+  <rect x="20" y="375" width="200" height="50" rx="5" fill="#f8f9fa" stroke="#ccc" stroke-width="1"/>
+  <rect x="30" y="385" width="15" height="12" rx="2" fill="#4a90e2"/>
+  <text x="50" y="396" font-size="11" fill="#555">v1 (current)</text>
+  <rect x="30" y="403" width="15" height="12" rx="2" fill="#28a745"/>
+  <text x="50" y="414" font-size="11" fill="#555">v2 (canary)</text>
+</svg>

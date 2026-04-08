@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="Arial, sans-serif">
+  <!-- Title -->
+  <text x="280" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Salting Technique for Skewed Joins</text>
+  <!-- Before Salting -->
+  <text x="30" y="55" font-size="14" font-weight="bold" fill="#dc3545">Before Salting (Skewed)</text>
+  <rect x="20" y="65" width="510" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="35" y="92" font-size="12" fill="#333">Partition 0: key=1 (5M rows)</text>
+  <text x="350" y="92" font-size="12" font-weight="bold" fill="#dc3545">← HOT PARTITION</text>
+  <rect x="20" y="115" width="510" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="35" y="137" font-size="12" fill="#333">Partition 1: key=2 (100 rows)</text>
+  <rect x="20" y="155" width="510" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="35" y="177" font-size="12" fill="#333">Partition 2: key=3 (200 rows)</text>
+  <!-- Arrow -->
+  <text x="280" y="215" text-anchor="middle" font-size="24" fill="#28a745">▼</text>
+  <text x="280" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Apply Salting (factor=10)</text>
+  <!-- After Salting -->
+  <text x="30" y="265" font-size="14" font-weight="bold" fill="#28a745">After Salting (Balanced)</text>
+  <rect x="20" y="275" width="510" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="35" y="295" font-size="11" fill="#333">Partition 0: key=1_0 (500K)</text>
+  <rect x="20" y="308" width="510" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="35" y="328" font-size="11" fill="#333">Partition 1: key=1_1 (500K)</text>
+  <rect x="20" y="341" width="510" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="35" y="361" font-size="11" fill="#555">...</text>
+  <rect x="20" y="374" width="510" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="35" y="394" font-size="11" fill="#333">Partition 9: key=1_9 (500K)</text>
+  <rect x="20" y="407" width="510" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="35" y="427" font-size="11" fill="#333">Partition 10: key=2 (100)</text>
+  <rect x="20" y="440" width="510" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="35" y="460" font-size="11" fill="#333">Partition 11: key=3 (200)</text>
+  <!-- Summary -->
+  <rect x="20" y="485" width="510" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="280" y="505" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">Result: Hot partition split into 10 even partitions</text>
+</svg>

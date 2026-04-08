@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Arial, sans-serif">
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Prompt Tuning</text>
+  <!-- Standard prompting -->
+  <rect x="20" y="50" width="680" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="40" y="75" font-size="13" font-weight="bold" fill="#333">Standard Prompting:</text>
+  <text x="40" y="95" font-size="12" fill="#555">Input: [system prompt tokens] + [user tokens] -- All tokens from vocabulary</text>
+  <!-- Prompt tuning -->
+  <rect x="20" y="125" width="680" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="40" y="150" font-size="13" font-weight="bold" fill="#333">Prompt Tuning:</text>
+  <text x="40" y="170" font-size="12" fill="#555">Input: [LEARNED VIRTUAL TOKENS] + [user tokens] -- Virtual tokens are continuous vectors, not from vocab</text>
+  <!-- Diagram -->
+  <rect x="20" y="205" width="680" height="200" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <!-- Virtual tokens -->
+  <rect x="50" y="230" width="50" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="75" y="252" text-anchor="middle" font-size="11" fill="#333">v1</text>
+  <rect x="110" y="230" width="50" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="135" y="252" text-anchor="middle" font-size="11" fill="#333">v2</text>
+  <rect x="170" y="230" width="50" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="195" y="252" text-anchor="middle" font-size="11" fill="#333">v3</text>
+  <text x="240" y="252" font-size="14" fill="#333">...</text>
+  <rect x="265" y="230" width="50" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="290" y="252" text-anchor="middle" font-size="11" fill="#333">v20</text>
+  <!-- User tokens -->
+  <rect x="340" y="230" width="340" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="510" y="252" text-anchor="middle" font-size="12" fill="#333">"Classify this: ..."</text>
+  <!-- Arrows up -->
+  <line x1="75" y1="270" x2="75" y2="290" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="135" y1="270" x2="135" y2="290" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="195" y1="270" x2="195" y2="290" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="290" y1="270" x2="290" y2="290" stroke="#28a745" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="50" y="310" font-size="12" font-weight="bold" fill="#28a745">Trainable soft prompt tokens</text>
+  <text x="50" y="330" font-size="11" fill="#555">(20 x d_model)</text>
+  <text x="380" y="310" font-size="12" font-weight="bold" fill="#4a90e2">Frozen model processes</text>
+  <text x="380" y="330" font-size="11" fill="#555">everything normally</text>
+  <!-- Key point -->
+  <text x="360" y="385" text-anchor="middle" font-size="12" fill="#333">Only virtual token vectors are trained (entire model frozen)</text>
+</svg>

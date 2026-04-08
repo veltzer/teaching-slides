@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 380" font-family="Arial, sans-serif">
+  <text x="290" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">DMA (Direct Memory Access)</text>
+  <!-- Without DMA section -->
+  <rect x="10" y="40" width="560" height="120" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="30" y="65" font-size="14" font-weight="bold" fill="#dc3545">Without DMA (Programmed I/O):</text>
+  <rect x="30" y="80" width="90" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="75" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CPU</text>
+  <rect x="220" y="80" width="100" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="270" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Device</text>
+  <rect x="420" y="80" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="470" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Memory</text>
+  <line x1="120" y1="100" x2="218" y2="100" stroke="#dc3545" stroke-width="1.5" marker-end="url(#dma1)"/>
+  <line x1="120" y1="115" x2="418" y2="115" stroke="#dc3545" stroke-width="1.5" marker-end="url(#dma1)"/>
+  <text x="170" y="95" font-size="10" fill="#555">byte</text>
+  <text x="290" y="145" text-anchor="middle" font-size="11" fill="#dc3545">CPU copies each byte! CPU is 100% busy</text>
+  <!-- With DMA section -->
+  <rect x="10" y="175" width="560" height="190" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="30" y="200" font-size="14" font-weight="bold" fill="#28a745">With DMA:</text>
+  <rect x="30" y="215" width="90" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="75" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CPU</text>
+  <rect x="220" y="215" width="120" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="280" y="237" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">DMA</text>
+  <text x="280" y="255" text-anchor="middle" font-size="11" fill="#555">Controller</text>
+  <rect x="430" y="215" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="480" y="245" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Memory</text>
+  <!-- Step 1: Setup -->
+  <line x1="120" y1="230" x2="218" y2="230" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#dma2)"/>
+  <text x="170" y="223" font-size="10" fill="#4a90e2">1. Setup</text>
+  <!-- Step 2: Bulk transfer -->
+  <line x1="340" y1="240" x2="428" y2="240" stroke="#28a745" stroke-width="2" marker-end="url(#dma3)"/>
+  <line x1="428" y1="250" x2="340" y2="250" stroke="#28a745" stroke-width="2" marker-end="url(#dma4)"/>
+  <text x="385" y="233" font-size="10" fill="#28a745">2. Bulk data</text>
+  <!-- CPU free -->
+  <text x="75" y="290" text-anchor="middle" font-size="11" fill="#4a90e2">CPU is free!</text>
+  <text x="75" y="305" text-anchor="middle" font-size="11" fill="#4a90e2">Does other work</text>
+  <!-- Step 3: Interrupt -->
+  <line x1="280" y1="265" x2="120" y2="300" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="4,2" marker-end="url(#dma1)"/>
+  <text x="220" y="295" font-size="10" fill="#dc3545">3. Interrupt: "done!"</text>
+  <defs>
+    <marker id="dma1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc3545"/></marker>
+    <marker id="dma2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
+    <marker id="dma3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+    <marker id="dma4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+  </defs>
+</svg>

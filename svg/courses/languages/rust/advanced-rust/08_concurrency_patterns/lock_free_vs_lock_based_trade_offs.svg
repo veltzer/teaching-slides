@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 450" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Lock-Free vs Lock-Based Trade-offs</text>
+  <!-- Header -->
+  <rect x="20" y="50" width="200" height="40" rx="5" fill="#4a90e2" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="120" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Property</text>
+  <rect x="220" y="50" width="240" height="40" rx="5" fill="#ffc107" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="340" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Lock-Based</text>
+  <rect x="460" y="50" width="270" height="40" rx="5" fill="#28a745" stroke="#28a745" stroke-width="1.5"/>
+  <text x="595" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Lock-Free</text>
+  <!-- Rows -->
+  <rect x="20" y="95" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="95" width="240" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="460" y="95" width="270" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="30" y="117" font-size="12" fill="#333">Simplicity</text>
+  <text x="230" y="117" font-size="12" fill="#333">Easy to reason about</text>
+  <text x="470" y="117" font-size="12" fill="#333">Complex, subtle bugs</text>
+
+  <rect x="20" y="135" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="135" width="240" height="35" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <rect x="460" y="135" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="157" font-size="12" fill="#333">Contention</text>
+  <text x="230" y="157" font-size="12" fill="#333">Threads block</text>
+  <text x="470" y="157" font-size="12" fill="#333">Threads retry (spin)</text>
+
+  <rect x="20" y="175" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="175" width="240" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <rect x="460" y="175" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="197" font-size="12" fill="#333">Priority inversion</text>
+  <text x="230" y="197" font-size="12" fill="#dc3545">Possible</text>
+  <text x="470" y="197" font-size="12" fill="#28a745">Not possible</text>
+
+  <rect x="20" y="215" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="215" width="240" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <rect x="460" y="215" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="237" font-size="12" fill="#333">Deadlock</text>
+  <text x="230" y="237" font-size="12" fill="#dc3545">Possible</text>
+  <text x="470" y="237" font-size="12" fill="#28a745">Not possible</text>
+
+  <rect x="20" y="255" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="255" width="240" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <rect x="460" y="255" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="277" font-size="12" fill="#333">Progress guarantee</text>
+  <text x="230" y="277" font-size="12" fill="#dc3545">None (can deadlock)</text>
+  <text x="470" y="277" font-size="12" fill="#28a745">At least one progresses</text>
+
+  <rect x="20" y="295" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="295" width="240" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <rect x="460" y="295" width="270" height="35" rx="3" fill="#f8f9fa" stroke="#ddd" stroke-width="1"/>
+  <text x="30" y="317" font-size="12" fill="#333">Perf (low contention)</text>
+  <text x="230" y="317" font-size="12" fill="#333">Good</text>
+  <text x="470" y="317" font-size="12" fill="#333">Similar or better</text>
+
+  <rect x="20" y="335" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="335" width="240" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <rect x="460" y="335" width="270" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="30" y="357" font-size="12" fill="#333">Perf (high contention)</text>
+  <text x="230" y="357" font-size="12" fill="#dc3545">Degrades quickly</text>
+  <text x="470" y="357" font-size="12" fill="#28a745">Degrades gracefully</text>
+
+  <rect x="20" y="375" width="200" height="35" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="220" y="375" width="240" height="35" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="460" y="375" width="270" height="35" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="30" y="397" font-size="12" fill="#333">Memory reclamation</text>
+  <text x="230" y="397" font-size="12" fill="#28a745">Trivial</text>
+  <text x="470" y="397" font-size="12" fill="#dc3545">Hard (ABA problem)</text>
+
+  <!-- Note -->
+  <text x="375" y="435" text-anchor="middle" font-size="12" fill="#555" font-style="italic">Prefer Mutex/RwLock unless profiling shows lock contention is a real bottleneck.</text>
+</svg>

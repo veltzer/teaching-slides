@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 300" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">DNS Amplification DDoS Attack</text>
+  <!-- Attacker -->
+  <rect x="30" y="80" width="150" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="105" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Attacker</text>
+  <text x="105" y="140" text-anchor="middle" font-size="11" fill="#555">Spoofs src=victim IP</text>
+  <!-- DNS Resolver -->
+  <rect x="290" y="80" width="170" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">Open DNS Resolver</text>
+  <text x="375" y="140" text-anchor="middle" font-size="11" fill="#555">Amplifies ~50x</text>
+  <!-- Victim -->
+  <rect x="570" y="80" width="150" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="645" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Victim</text>
+  <text x="645" y="140" text-anchor="middle" font-size="11" fill="#555">Overwhelmed</text>
+  <!-- Arrow: small query -->
+  <line x1="180" y1="105" x2="290" y2="105" stroke="#dc3545" stroke-width="2" marker-end="url(#aR)"/>
+  <text x="235" y="97" text-anchor="middle" font-size="10" fill="#dc3545">Small query</text>
+  <!-- Arrow: large response -->
+  <line x1="460" y1="120" x2="570" y2="120" stroke="#dc3545" stroke-width="4" marker-end="url(#aR)"/>
+  <text x="515" y="112" text-anchor="middle" font-size="10" fill="#dc3545">Huge response</text>
+  <!-- Explanation -->
+  <rect x="100" y="200" width="550" height="65" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="375" y="225" text-anchor="middle" font-size="13" fill="#333">Attacker sends small DNS queries with victim's spoofed source IP.</text>
+  <text x="375" y="248" text-anchor="middle" font-size="13" fill="#333">DNS resolvers reply with much larger responses directly to the victim.</text>
+  <defs>
+    <marker id="aR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+</svg>

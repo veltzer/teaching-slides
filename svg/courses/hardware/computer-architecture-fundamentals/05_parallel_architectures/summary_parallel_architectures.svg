@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" font-family="Arial, sans-serif">
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Parallel Architectures: Key Takeaways</text>
+  <rect x="30" y="40" width="640" height="385" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <!-- Classification -->
+  <rect x="50" y="55" width="600" height="75" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="70" y="78" font-size="13" font-weight="bold" fill="#4a90e2">Classification</text>
+  <text x="70" y="98" font-size="11" fill="#333">Flynn's Taxonomy: SISD, SIMD, MISD, MIMD</text>
+  <text x="70" y="118" font-size="11" fill="#333">Modern CPUs combine SIMD + MIMD</text>
+  <!-- Hardware Parallelism -->
+  <rect x="50" y="140" width="600" height="95" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="70" y="163" font-size="13" font-weight="bold" fill="#28a745">Hardware Parallelism</text>
+  <text x="70" y="183" font-size="11" fill="#333">Multi-core: independent cores on one die</text>
+  <text x="70" y="200" font-size="11" fill="#333">SMT/Hyper-threading: multiple threads per core</text>
+  <text x="70" y="217" font-size="11" fill="#333">SIMD (SSE/AVX): operate on vectors of data</text>
+  <text x="370" y="183" font-size="11" fill="#333">GPU: thousands of simple cores for throughput</text>
+  <!-- Memory Architecture -->
+  <rect x="50" y="245" width="600" height="95" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="70" y="268" font-size="13" font-weight="bold" fill="#856404">Memory Architecture</text>
+  <text x="70" y="288" font-size="11" fill="#333">UMA: equal access, simple, limited scalability</text>
+  <text x="70" y="305" font-size="11" fill="#333">NUMA: non-uniform access, scales to 100+ cores</text>
+  <text x="70" y="322" font-size="11" fill="#333">Cache coherence (MESI/MOESI) keeps cores consistent</text>
+  <text x="420" y="288" font-size="11" fill="#333">False sharing: avoidable performance killer</text>
+  <!-- Scaling Laws -->
+  <rect x="50" y="350" width="600" height="65" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="70" y="373" font-size="13" font-weight="bold" fill="#dc3545">Scaling Laws</text>
+  <text x="70" y="393" font-size="11" fill="#333">Amdahl: serial fraction limits speedup</text>
+  <text x="300" y="393" font-size="11" fill="#333">Gustafson: scale problem size with processors</text>
+  <text x="70" y="408" font-size="11" fill="#333">Real systems: communication overhead matters too</text>
+</svg>

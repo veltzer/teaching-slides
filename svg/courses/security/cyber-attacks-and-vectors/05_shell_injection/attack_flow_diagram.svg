@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" font-family="Arial, sans-serif">
+  <text x="390" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Shell Injection Attack Flow</text>
+  <rect x="20" y="50" width="150" height="110" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="95" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Attacker</text>
+  <text x="95" y="100" text-anchor="middle" font-size="11" fill="#555">Input:</text>
+  <text x="95" y="118" text-anchor="middle" font-size="11" fill="#555">; cat</text>
+  <text x="95" y="136" text-anchor="middle" font-size="11" fill="#555">/etc/passwd</text>
+  <rect x="210" y="50" width="170" height="110" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="295" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Web Application</text>
+  <text x="295" y="100" text-anchor="middle" font-size="11" fill="#555">Concatenates</text>
+  <text x="295" y="118" text-anchor="middle" font-size="11" fill="#555">user input into</text>
+  <text x="295" y="136" text-anchor="middle" font-size="11" fill="#555">command string</text>
+  <rect x="420" y="50" width="170" height="110" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="505" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">System Shell</text>
+  <text x="505" y="100" text-anchor="middle" font-size="11" fill="#555">Executes:</text>
+  <text x="505" y="118" text-anchor="middle" font-size="11" fill="#555">ping host;</text>
+  <text x="505" y="136" text-anchor="middle" font-size="11" fill="#555">cat /etc/passwd</text>
+  <rect x="630" y="50" width="130" height="110" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="695" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">OS / FS</text>
+  <text x="695" y="100" text-anchor="middle" font-size="11" fill="#555">Files read,</text>
+  <text x="695" y="118" text-anchor="middle" font-size="11" fill="#555">modified,</text>
+  <text x="695" y="136" text-anchor="middle" font-size="11" fill="#555">deleted</text>
+  <line x1="170" y1="105" x2="210" y2="105" stroke="#dc3545" stroke-width="2" marker-end="url(#ar4)"/>
+  <line x1="380" y1="105" x2="420" y2="105" stroke="#dc3545" stroke-width="2" marker-end="url(#ar4)"/>
+  <line x1="590" y1="105" x2="630" y2="105" stroke="#dc3545" stroke-width="2" marker-end="url(#ar4)"/>
+  <defs>
+    <marker id="ar4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-forward">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc3545"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 160" font-family="Arial, sans-serif">
+  <text x="250" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Terraform Implicit Dependency</text>
+  <!-- VPC -->
+  <rect x="30" y="50" width="180" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="120" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">aws_vpc.main</text>
+  <text x="120" y="98" text-anchor="middle" font-size="11" fill="#555">(created first)</text>
+  <!-- Arrow -->
+  <line x1="210" y1="80" x2="280" y2="80" stroke="#28a745" stroke-width="2" marker-end="url(#dep)"/>
+  <!-- Subnet -->
+  <rect x="290" y="50" width="180" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="380" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">aws_subnet.public</text>
+  <text x="380" y="98" text-anchor="middle" font-size="11" fill="#555">(created second)</text>
+  <text x="250" y="140" text-anchor="middle" font-size="12" fill="#555">Terraform automatically knows the subnet depends on the VPC</text>
+  <defs>
+    <marker id="dep" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+  </defs>
+</svg>

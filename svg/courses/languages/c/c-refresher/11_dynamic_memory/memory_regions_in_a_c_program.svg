@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 420" font-family="Arial, sans-serif">
+  <text x="275" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Memory Regions in a C Program</text>
+  <text x="450" y="55" font-size="10" fill="#666">High addresses</text>
+  <!-- Stack -->
+  <rect x="100" y="50" width="250" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="225" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Stack</text>
+  <text x="225" y="90" text-anchor="middle" font-size="10" fill="#666">Local variables, function frames</text>
+  <text x="225" y="105" text-anchor="middle" font-size="10" fill="#4a90e2">(grows downward)</text>
+  <polygon points="220,105 225,115 230,105" fill="#4a90e2"/>
+  <!-- Gap -->
+  <text x="225" y="140" text-anchor="middle" font-size="20" fill="#ccc">...</text>
+  <!-- Heap -->
+  <polygon points="220,155 225,145 230,155" fill="#28a745"/>
+  <rect x="100" y="155" width="250" height="65" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="225" y="177" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Heap</text>
+  <text x="225" y="195" text-anchor="middle" font-size="10" fill="#666">malloc/calloc/realloc</text>
+  <text x="225" y="210" text-anchor="middle" font-size="10" fill="#28a745">(grows upward)</text>
+  <!-- BSS -->
+  <rect x="100" y="225" width="250" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="225" y="247" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Uninitialized Data (.bss)</text>
+  <text x="225" y="263" text-anchor="middle" font-size="10" fill="#666">static int x;</text>
+  <!-- Data -->
+  <rect x="100" y="275" width="250" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="225" y="297" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Initialized Data (.data)</text>
+  <text x="225" y="313" text-anchor="middle" font-size="10" fill="#666">static int x = 5;</text>
+  <!-- Read-only -->
+  <rect x="100" y="325" width="250" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="225" y="347" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Read-Only Data (.rodata)</text>
+  <text x="225" y="363" text-anchor="middle" font-size="10" fill="#666">string literals</text>
+  <!-- Text -->
+  <rect x="100" y="375" width="250" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="225" y="400" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Text / Code (.text)</text>
+  <text x="450" y="400" font-size="10" fill="#666">Low addresses</text>
+</svg>

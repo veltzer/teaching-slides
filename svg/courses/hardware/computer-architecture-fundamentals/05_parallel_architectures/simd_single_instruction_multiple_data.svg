@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" font-family="Arial, sans-serif">
+  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SIMD - Single Instruction, Multiple Data</text>
+  <!-- Instruction stream -->
+  <rect x="30" y="55" width="170" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="115" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Instruction Stream</text>
+  <text x="115" y="93" text-anchor="middle" font-size="11" fill="#666">(one ADD)</text>
+  <line x1="200" y1="80" x2="260" y2="80" stroke="#4a90e2" stroke-width="2"/>
+  <polygon points="255,75 265,80 255,85" fill="#4a90e2"/>
+  <!-- Processing units -->
+  <rect x="265" y="40" width="280" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="405" y="60" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Processing Units</text>
+  <rect x="280" y="68" width="55" height="35" rx="3" fill="#fff" stroke="#28a745" stroke-width="1.5"/>
+  <text x="307" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">PU0</text>
+  <rect x="345" y="68" width="55" height="35" rx="3" fill="#fff" stroke="#28a745" stroke-width="1.5"/>
+  <text x="372" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">PU1</text>
+  <rect x="410" y="68" width="55" height="35" rx="3" fill="#fff" stroke="#28a745" stroke-width="1.5"/>
+  <text x="437" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">PU2</text>
+  <rect x="475" y="68" width="55" height="35" rx="3" fill="#fff" stroke="#28a745" stroke-width="1.5"/>
+  <text x="502" y="90" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">PU3</text>
+  <!-- Arrows down -->
+  <line x1="307" y1="120" x2="307" y2="150" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="372" y1="120" x2="372" y2="150" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="437" y1="120" x2="437" y2="150" stroke="#28a745" stroke-width="1.5"/>
+  <line x1="502" y1="120" x2="502" y2="150" stroke="#28a745" stroke-width="1.5"/>
+  <!-- Data stream -->
+  <rect x="265" y="150" width="280" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="405" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Data Stream</text>
+  <text x="405" y="192" text-anchor="middle" font-size="11" fill="#666">D0    D1    D2    D3</text>
+  <!-- Example -->
+  <rect x="100" y="230" width="500" height="65" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+  <text x="350" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Example: SIMD addition</text>
+  <text x="350" y="270" text-anchor="middle" font-size="11" fill="#4a90e2" font-family="monospace">A[0..3] = B[0..3] + C[0..3]</text>
+  <text x="350" y="288" text-anchor="middle" font-size="11" fill="#28a745" font-weight="bold">4 additions in 1 cycle!</text>
+</svg>

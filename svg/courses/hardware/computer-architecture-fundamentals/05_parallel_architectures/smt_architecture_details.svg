@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 500" font-family="Arial, sans-serif">
+  <text x="325" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SMT - Physical Core with Simultaneous Multithreading</text>
+  <rect x="30" y="40" width="590" height="440" rx="5" fill="#f0f4ff" stroke="#4a90e2" stroke-width="2"/>
+  <!-- Thread 0 State -->
+  <rect x="55" y="60" width="230" height="120" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="170" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Thread 0 State</text>
+  <rect x="70" y="92" width="200" height="28" rx="3" fill="#fff" stroke="#4a90e2" stroke-width="1"/>
+  <text x="170" y="111" text-anchor="middle" font-size="11" fill="#333">Registers (RAX..R15)</text>
+  <rect x="70" y="128" width="200" height="28" rx="3" fill="#fff" stroke="#4a90e2" stroke-width="1"/>
+  <text x="170" y="147" text-anchor="middle" font-size="11" fill="#333">Instruction Pointer</text>
+  <text x="570" y="105" text-anchor="middle" font-size="11" fill="#dc3545" font-weight="bold">Separate</text>
+  <text x="570" y="145" text-anchor="middle" font-size="11" fill="#dc3545" font-weight="bold">Separate</text>
+  <!-- Thread 1 State -->
+  <rect x="310" y="60" width="230" height="120" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="425" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Thread 1 State</text>
+  <rect x="325" y="92" width="200" height="28" rx="3" fill="#fff" stroke="#4a90e2" stroke-width="1"/>
+  <text x="425" y="111" text-anchor="middle" font-size="11" fill="#333">Registers (RAX..R15)</text>
+  <rect x="325" y="128" width="200" height="28" rx="3" fill="#fff" stroke="#4a90e2" stroke-width="1"/>
+  <text x="425" y="147" text-anchor="middle" font-size="11" fill="#333">Instruction Pointer</text>
+  <!-- Shared Execution Engine -->
+  <rect x="55" y="200" width="485" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="297" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Shared Execution Engine</text>
+  <rect x="75" y="235" width="70" height="30" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="110" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">ALU 1</text>
+  <rect x="155" y="235" width="70" height="30" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="190" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">ALU 2</text>
+  <rect x="235" y="235" width="70" height="30" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="270" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">ALU 3</text>
+  <rect x="315" y="235" width="70" height="30" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="350" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">FPU 1</text>
+  <rect x="395" y="235" width="70" height="30" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="430" y="255" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">FPU 2</text>
+  <text x="570" y="245" text-anchor="middle" font-size="11" fill="#28a745" font-weight="bold">Shared</text>
+  <!-- Shared L1 Cache -->
+  <rect x="55" y="300" width="485" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="297" y="325" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Shared L1 I-Cache &amp; L1 D-Cache</text>
+  <text x="570" y="325" text-anchor="middle" font-size="11" fill="#ffc107" font-weight="bold">Shared</text>
+  <!-- Shared L2 Cache -->
+  <rect x="55" y="355" width="485" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="297" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Shared L2 Cache</text>
+  <text x="570" y="380" text-anchor="middle" font-size="11" fill="#ffc107" font-weight="bold">Shared</text>
+  <text x="325" y="430" text-anchor="middle" font-size="12" fill="#666">Each thread has its own architectural state but shares execution resources</text>
+  <text x="325" y="450" text-anchor="middle" font-size="11" fill="#999">OS sees 2 logical processors per physical core</text>
+</svg>

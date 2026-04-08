@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 450" font-family="Arial, sans-serif">
+  <text x="250" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">x86-64 Memory Layout</text>
+  <rect x="150" y="45" width="200" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="250" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Kernel Space</text>
+  <text x="130" y="70" text-anchor="end" font-size="10" fill="#888">0xFFFFFFFFFFFFFFFF</text>
+  <text x="130" y="100" text-anchor="end" font-size="10" fill="#888">0xFFFF800000000000</text>
+  <rect x="150" y="110" width="200" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="250" y="140" text-anchor="middle" font-size="13" fill="#555">(Not mapped)</text>
+  <text x="290" y="125" text-anchor="middle" font-size="10" fill="#888">Canonical hole</text>
+  <text x="130" y="155" text-anchor="end" font-size="10" fill="#888">0x00007FFFFFFFFFFF</text>
+  <rect x="150" y="165" width="200" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="250" y="190" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">User Stack</text>
+  <text x="250" y="215" text-anchor="middle" font-size="16" fill="#4a90e2">&#x2193;</text>
+  <rect x="150" y="230" width="200" height="50" rx="5" fill="white" stroke="#ccc" stroke-width="1" stroke-dasharray="5,5"/>
+  <text x="250" y="260" text-anchor="middle" font-size="12" fill="#999">(free space)</text>
+  <rect x="150" y="285" width="200" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="250" y="305" text-anchor="middle" font-size="16" fill="#28a745">&#x2191;</text>
+  <text x="250" y="325" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">User Heap</text>
+  <rect x="150" y="340" width="200" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="250" y="370" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">User Code</text>
+  <text x="130" y="390" text-anchor="end" font-size="10" fill="#888">0x0000000000000000</text>
+</svg>

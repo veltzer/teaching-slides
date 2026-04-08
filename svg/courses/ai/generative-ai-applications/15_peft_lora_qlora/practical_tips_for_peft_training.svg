@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 520" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="680" height="500" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="45" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">PEFT Training Best Practices</text>
+  <!-- Tip 1 -->
+  <rect x="30" y="65" width="640" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="50" y="88" font-size="14" font-weight="bold" fill="#333">1. START WITH r=16, adjust based on results</text>
+  <text x="70" y="110" font-size="12" fill="#555">Increase if underfitting | Decrease if overfitting</text>
+  <!-- Tip 2 -->
+  <rect x="30" y="145" width="640" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="50" y="168" font-size="14" font-weight="bold" fill="#333">2. TARGET ALL LINEAR LAYERS</text>
+  <text x="70" y="190" font-size="12" fill="#555">target_modules="all-linear" is a good default | More targets = better quality</text>
+  <!-- Tip 3 -->
+  <rect x="30" y="225" width="640" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="50" y="248" font-size="14" font-weight="bold" fill="#333">3. LEARNING RATE</text>
+  <text x="70" y="270" font-size="12" fill="#555">LoRA: 1e-4 to 3e-4 (higher than full FT) | Prompt Tuning: 3e-2 to 3e-1</text>
+  <!-- Tip 4 -->
+  <rect x="30" y="305" width="640" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="50" y="328" font-size="14" font-weight="bold" fill="#333">4. USE GRADIENT CHECKPOINTING</text>
+  <text x="70" y="350" font-size="12" fill="#555">Trades compute for memory | model.gradient_checkpointing_enable()</text>
+  <!-- Tip 5 -->
+  <rect x="30" y="385" width="640" height="110" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="50" y="408" font-size="14" font-weight="bold" fill="#333">5. MONITOR TRAINING LOSS</text>
+  <text x="70" y="433" font-size="12" fill="#555">Loss should decrease steadily</text>
+  <text x="70" y="455" font-size="12" fill="#dc3545">Sudden increase = learning rate too high</text>
+  <text x="70" y="477" font-size="12" fill="#ffc107">Flat loss = learning rate too low</text>
+</svg>

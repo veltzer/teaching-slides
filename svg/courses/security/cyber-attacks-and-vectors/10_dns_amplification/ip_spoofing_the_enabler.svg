@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 450" font-family="Arial, sans-serif">
+  <rect x="20" y="10" width="640" height="430" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="340" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">IP Spoofing in DNS Amplification</text>
+  <text x="60" y="70" font-size="13" fill="#555">Attacker IP: 10.0.0.1 | Victim IP: 192.168.1.100</text>
+  <text x="60" y="100" font-size="14" font-weight="bold" fill="#333">Step 1: Attacker crafts UDP packet</text>
+  <rect x="60" y="115" width="400" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="80" y="140" font-size="13" fill="#333">Source IP: 192.168.1.100 (VICTIM)</text>
+  <text x="80" y="160" font-size="13" fill="#333">Dest IP: 8.8.8.8 (Open DNS)</text>
+  <text x="80" y="180" font-size="13" fill="#333">Query: dig . ANY</text>
+  <text x="490" y="140" font-size="13" font-weight="bold" fill="#dc3545">&lt;-- Spoofed!</text>
+  <text x="60" y="235" font-size="14" font-weight="bold" fill="#333">Step 2: DNS server responds to VICTIM</text>
+  <rect x="60" y="250" width="400" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="80" y="275" font-size="13" fill="#333">Source IP: 8.8.8.8</text>
+  <text x="80" y="295" font-size="13" fill="#333">Dest IP: 192.168.1.100 (VICTIM)</text>
+  <text x="80" y="315" font-size="13" fill="#333">Response: ~3000 bytes</text>
+  <text x="490" y="315" font-size="13" font-weight="bold" fill="#dc3545">&lt;-- Amplified!</text>
+  <rect x="60" y="370" width="560" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="340" y="396" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">UDP is connectionless: no handshake to verify source</text>
+</svg>

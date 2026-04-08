@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" font-family="Arial, sans-serif">
+  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Why Serverless on Kubernetes</text>
+  <!-- Traditional -->
+  <rect x="20" y="45" width="480" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="40" y="68" font-size="13" font-weight="bold" fill="#dc3545">Traditional Kubernetes</text>
+  <text x="40" y="88" font-size="12" fill="#555">Pods always running → costs even when idle</text>
+  <!-- Serverless -->
+  <rect x="20" y="110" width="480" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="40" y="133" font-size="13" font-weight="bold" fill="#28a745">Serverless (Knative)</text>
+  <text x="40" y="153" font-size="12" fill="#555">Scale to zero → pay only for actual usage</text>
+  <!-- Chart area -->
+  <rect x="20" y="180" width="480" height="200" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="260" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Request Rate Over Time</text>
+  <!-- Axes -->
+  <line x1="60" y1="220" x2="60" y2="330" stroke="#333" stroke-width="1.5"/>
+  <line x1="60" y1="330" x2="460" y2="330" stroke="#333" stroke-width="1.5" marker-end="url(#wsa)"/>
+  <text x="50" y="225" text-anchor="end" font-size="10" fill="#555">High</text>
+  <text x="50" y="330" text-anchor="end" font-size="10" fill="#555">Low</text>
+  <!-- Request curve -->
+  <polyline points="60,320 100,290 130,260 150,280 180,310 210,280 240,250 260,270 280,300 310,270 340,260 360,290 390,310 420,320 450,325" fill="none" stroke="#4a90e2" stroke-width="2"/>
+  <!-- Traditional bar -->
+  <rect x="60" y="345" width="390" height="12" rx="2" fill="#dc3545" opacity="0.7"/>
+  <text x="60" y="370" font-size="11" fill="#dc3545">Traditional: always running $$$</text>
+  <!-- Serverless bar (intermittent) -->
+  <rect x="80" y="345" width="60" height="12" rx="2" fill="#28a745" opacity="0.0"/>
+  <g>
+    <rect x="60" y="340" width="0" height="0" fill="none"/>
+  </g>
+  <text x="60" y="395" font-size="11" fill="#28a745">Serverless: pay per use $</text>
+  <defs>
+    <marker id="wsa" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/></marker>
+  </defs>
+</svg>

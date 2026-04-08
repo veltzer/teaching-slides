@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" font-family="Arial, sans-serif">
+  <rect x="10" y="10" width="540" height="500" rx="5" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2"/>
+  <text x="280" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Idempotent Write Comparison</text>
+  <rect x="30" y="55" width="500" height="120" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="45" y="80" font-size="14" font-weight="bold" fill="#856404">Dynamic Partition Overwrite (Parquet)</text>
+  <text x="55" y="100" font-size="12" fill="#28a745">+ Works with plain Parquet</text>
+  <text x="55" y="118" font-size="12" fill="#28a745">+ Simple configuration</text>
+  <text x="55" y="136" font-size="12" fill="#dc3545">- Not atomic (partial writes possible)</text>
+  <text x="55" y="154" font-size="12" fill="#dc3545">- No concurrent write safety</text>
+  <rect x="30" y="185" width="500" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="45" y="210" font-size="14" font-weight="bold" fill="#28a745">replaceWhere (Delta Lake)</text>
+  <text x="55" y="230" font-size="12" fill="#28a745">+ Atomic (all or nothing)</text>
+  <text x="55" y="248" font-size="12" fill="#28a745">+ Concurrent-safe (optimistic locking)</text>
+  <text x="55" y="266" font-size="12" fill="#28a745">+ Predicate validated at write time</text>
+  <text x="55" y="284" font-size="12" fill="#dc3545">- Requires Delta Lake</text>
+  <rect x="30" y="315" width="500" height="110" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="45" y="340" font-size="14" font-weight="bold" fill="#4a90e2">DELETE + INSERT (Delta Lake)</text>
+  <text x="55" y="360" font-size="12" fill="#28a745">+ Explicit, easy to understand</text>
+  <text x="55" y="378" font-size="12" fill="#dc3545">- Two operations (not atomic together)</text>
+  <text x="55" y="396" font-size="12" fill="#dc3545">- Slightly slower (two transactions)</text>
+  <rect x="30" y="440" width="500" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="280" y="468" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Recommendation: Use replaceWhere with Delta</text>
+</svg>
