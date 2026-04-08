@@ -1,5 +1,7 @@
 # Data Formats
 
+![data_formats_title](svg/lectures/data_formats/title.svg)
+
 ---
 
 ## Why Data Formats Matter
