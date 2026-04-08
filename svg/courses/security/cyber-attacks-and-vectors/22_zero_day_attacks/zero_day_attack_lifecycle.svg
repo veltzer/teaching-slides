@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Zero-Day Attack Lifecycle</text>
+  <!-- Timeline -->
+  <line x1="40" y1="100" x2="720" y2="100" stroke="#4a90e2" stroke-width="3"/>
+  <!-- Stage 1: Discovery -->
+  <circle cx="80" cy="100" r="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <rect x="30" y="120" width="100" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="80" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Discovery</text>
+  <text x="80" y="155" text-anchor="middle" font-size="9" fill="#666">Vuln found</text>
+  <!-- Stage 2: Weaponization -->
+  <circle cx="210" cy="100" r="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <rect x="155" y="120" width="110" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="210" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Weaponization</text>
+  <text x="210" y="155" text-anchor="middle" font-size="9" fill="#666">Exploit created</text>
+  <!-- Stage 3: Exploitation -->
+  <circle cx="340" cy="100" r="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <rect x="285" y="120" width="110" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="340" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Exploitation</text>
+  <text x="340" y="155" text-anchor="middle" font-size="9" fill="#666">Attack launched</text>
+  <!-- Stage 4: Detection -->
+  <circle cx="470" cy="100" r="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <rect x="415" y="120" width="110" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="470" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Detection</text>
+  <text x="470" y="155" text-anchor="middle" font-size="9" fill="#666">Attack discovered</text>
+  <!-- Stage 5: Patch -->
+  <circle cx="590" cy="100" r="8" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <rect x="540" y="120" width="100" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="590" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Patch</text>
+  <text x="590" y="155" text-anchor="middle" font-size="9" fill="#666">Fix developed</text>
+  <!-- Stage 6: Deployment -->
+  <circle cx="700" cy="100" r="8" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <rect x="645" y="120" width="110" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="700" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Deployment</text>
+  <text x="700" y="155" text-anchor="middle" font-size="9" fill="#666">Patch applied</text>
+  <!-- Zero-day window -->
+  <rect x="80" y="195" width="390" height="30" rx="3" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5" opacity="0.6"/>
+  <text x="275" y="215" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">Zero-Day Window (No vendor awareness)</text>
+  <!-- Vulnerability window -->
+  <rect x="210" y="240" width="490" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5" opacity="0.6"/>
+  <text x="455" y="260" text-anchor="middle" font-size="10" font-weight="bold" fill="#e6a800">Window of Vulnerability (Exploit to full deployment)</text>
+  <!-- Legend -->
+  <rect x="200" y="295" width="360" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="380" y="315" text-anchor="middle" font-size="10" fill="#333">Longer windows = greater risk to organizations</text>
+  <text x="380" y="330" text-anchor="middle" font-size="10" fill="#333">Goal: Minimize time between detection &amp; deployment</text>
+</svg>

@@ -6,31 +6,7 @@
 
 The field of ensuring AI systems behave as intended and don't cause harm:
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│              AI SAFETY CONCERNS                       │
-│                                                       │
-│  NEAR-TERM (today)                                   │
-│  ├─ Misinformation and deep fakes                    │
-│  ├─ Bias and discrimination                          │
-│  ├─ Privacy violations                               │
-│  ├─ Manipulation and deception                       │
-│  ├─ Automated harassment                             │
-│  └─ Copyright and intellectual property              │
-│                                                       │
-│  MEDIUM-TERM (2-5 years)                             │
-│  ├─ Autonomous weapons                               │
-│  ├─ Economic disruption and job displacement         │
-│  ├─ Concentration of power                           │
-│  ├─ Surveillance and social control                  │
-│  └─ Cybersecurity arms race                          │
-│                                                       │
-│  LONG-TERM (speculative)                             │
-│  ├─ Alignment of superintelligent systems            │
-│  ├─ Loss of human agency                             │
-│  └─ Existential risk                                 │
-└──────────────────────────────────────────────────────┘
-```
+![what_is_ai_safety](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/what_is_ai_safety.svg)
 
 ---
 
@@ -71,17 +47,7 @@ The ALIGNMENT PROBLEM:
 | `Interpretability` | Understanding model internals | Research |
 | `Scalable oversight` | AI assists human supervision | Research |
 
-```diagram
-The alignment spectrum:
-  Helpful ◄──────────────────────────► Harmless
-           │  Sweet spot  │
-           │  (aligned)   │
-           │              │
-  Too      │              │      Too
-  eager    │              │      cautious
-  to help  │              │      (refuses
-           │              │       too much)
-```
+![alignment_techniques_summary](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/alignment_techniques_summary.svg)
 
 ---
 
@@ -159,31 +125,7 @@ TYPES OF DEEP FAKES:
 
 ## How Deep Fakes Work — Face Swapping
 
-```diagram
-Traditional approach (autoencoder-based):
-
-┌─────────────┐        ┌─────────────┐
-│  Person A   │        │  Person B   │
-│  (source)   │        │  (target)   │
-└──────┬──────┘        └──────┬──────┘
-       │                      │
-  ┌────▼────┐           ┌─────▼────┐
-  │ Encoder │           │ Encoder  │
-  │ (shared)│           │ (shared) │
-  └────┬────┘           └─────┬────┘
-       │                      │
-   latent space          latent space
-       │                      │
-  ┌────▼────┐           ┌─────▼────┐
-  │Decoder A│           │Decoder B │
-  │(face A) │           │(face B)  │
-  └────┬────┘           └─────┬────┘
-       │                      │
-  Reconstructed A        Reconstructed B
-
-For face swap: encode A → use decoder B
-Result: Person A's expressions on Person B's face
-```
+![how_deep_fakes_work_face_swapping](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/how_deep_fakes_work_face_swapping.svg)
 
 ---
 
@@ -293,61 +235,13 @@ Challenges:
 
 ## Content Authentication — C2PA
 
-```diagram
-C2PA (Coalition for Content Provenance and Authenticity):
-
-A technical standard for proving content origin:
-
-┌──────────────────────────────────────────────┐
-│  Original Photo                              │
-│  ┌────────────────────────────────────────┐  │
-│  │  Image data                            │  │
-│  │  + Cryptographic manifest:             │  │
-│  │    - Creator: @photographer            │  │
-│  │    - Device: Canon EOS R5              │  │
-│  │    - Date: 2026-03-10                  │  │
-│  │    - Location: Paris, France           │  │
-│  │    - Edits: None                       │  │
-│  │    - AI-generated: No                  │  │
-│  │    - Signature: [cryptographic proof]  │  │
-│  └────────────────────────────────────────┘  │
-│                                               │
-│  If edited or AI-generated:                  │
-│  │    - AI-generated: Yes                    │
-│  │    - Model: DALL-E 3                      │
-│  │    - Prompt: "A sunset over Paris"        │
-│  │    - Signature: [OpenAI signature]        │
-└──────────────────────────────────────────────┘
-
-Supported by: Adobe, Google, Microsoft, OpenAI
-```
+![content_authentication_c2pa](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/content_authentication_c2pa.svg)
 
 ---
 
 ## The AI Safety Regulatory Landscape
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│           AI REGULATION (as of 2025-2026)            │
-├────────────────┬─────────────────────────────────────┤
-│ EU AI Act      │ Risk-based classification system    │
-│ (2024)         │ Banned: social scoring, emotion AI  │
-│                │ High-risk: must meet safety stds    │
-│                │ Generative AI: transparency reqs    │
-├────────────────┼─────────────────────────────────────┤
-│ US Executive   │ Safety testing for powerful models  │
-│ Order (2023)   │ Watermarking AI content             │
-│                │ Red teaming requirements             │
-├────────────────┼─────────────────────────────────────┤
-│ China          │ Deep fake labeling required         │
-│ Regulations    │ Watermarking mandatory              │
-│                │ Approval for public-facing AI       │
-├────────────────┼─────────────────────────────────────┤
-│ UK AI Safety   │ Frontier model evaluations         │
-│ Institute      │ Safety testing framework            │
-│ (2023)         │ International coordination          │
-└────────────────┴─────────────────────────────────────┘
-```
+![the_ai_safety_regulatory_landscape](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/the_ai_safety_regulatory_landscape.svg)
 
 ---
 
@@ -425,36 +319,7 @@ class SafeGenAISystem:
 
 ## The Ethics of Generative AI
 
-```diagram
-Key ethical questions for practitioners:
-
-1. TRANSPARENCY
-   Should users always know they're interacting with AI?
-   → Most frameworks say yes
-
-2. ATTRIBUTION
-   Who owns AI-generated content?
-   → Legal frameworks still evolving
-
-3. CONSENT
-   Was training data collected with consent?
-   → Major ongoing legal battles
-
-4. DISPLACEMENT
-   What responsibility do we have to affected workers?
-   → Active debate
-
-5. ACCESS
-   Should powerful AI be open source or controlled?
-   → Strong arguments on both sides
-
-6. DUAL USE
-   The same model can help or harm
-   → How to enable beneficial use while preventing harm?
-
-As practitioners, these aren't just philosophical —
-they're decisions we make every day.
-```
+![the_ethics_of_generative_ai](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/the_ethics_of_generative_ai.svg)
 
 ---
 
@@ -504,36 +369,7 @@ Write a 1-page safety report of your findings.
 
 ## Course Recap — Five Days of Generative AI
 
-```diagram
-Day 1: FOUNDATIONS
-  ✓ Transformer architecture and self-attention
-  ✓ GPT family and ChatGPT training pipeline
-  ✓ Pre-training → SFT → RLHF
-
-Day 2: APIs & PROMPTS
-  ✓ OpenAI API mastery
-  ✓ Prompt engineering patterns
-  ✓ Few-shot/zero-shot/chain-of-thought
-  ✓ Fine-tuning with OpenAI
-
-Day 3: AGENTS & MEMORY
-  ✓ Agent architectures and planning
-  ✓ Memory systems (buffer, summary, vector)
-  ✓ LangChain and RAG pipelines
-  ✓ Custom database interfaces
-
-Day 4: OPEN SOURCE
-  ✓ HuggingFace ecosystem
-  ✓ Local model deployment
-  ✓ LoRA, QLoRA, Prompt Tuning
-  ✓ Parameter efficient fine-tuning
-
-Day 5: IMAGES & SAFETY
-  ✓ Diffusion models and Stable Diffusion
-  ✓ DreamBooth and Textual Inversion
-  ✓ Quality metrics and evaluation
-  ✓ Bias, safety, and deep fakes
-```
+![course_recap_five_days_of_generative_ai](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/course_recap_five_days_of_generative_ai.svg)
 
 ---
 
@@ -569,23 +405,7 @@ Recommended next steps for deepening your skills:
 
 ## Thank You!
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│                                                       │
-│   Thank you for participating in                      │
-│   Generative AI Applications!                        │
-│                                                       │
-│   Key takeaways:                                      │
-│                                                       │
-│   1. Start with prompting, escalate to fine-tuning   │
-│   2. Use the right model for the right task          │
-│   3. Build evaluation into everything                │
-│   4. Consider safety and bias from day one           │
-│   5. The field moves fast — keep learning            │
-│                                                       │
-│                                                       │
-└──────────────────────────────────────────────────────┘
-```
+![thank_you](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/thank_you.svg)
 
 ---
 
@@ -633,30 +453,7 @@ define flow personal info protection
 
 ## AI Safety Evaluation Benchmarks
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│          AI SAFETY BENCHMARKS                         │
-├──────────────┬───────────────────────────────────────┤
-│ TruthfulQA   │ Tests resistance to common             │
-│              │ misconceptions and false claims        │
-│              │ 817 questions across 38 categories     │
-├──────────────┼───────────────────────────────────────┤
-│ BBQ          │ Bias Benchmark for QA                  │
-│              │ Tests for social biases in Q&A         │
-│              │ 58,492 examples, 9 social categories  │
-├──────────────┼───────────────────────────────────────┤
-│ RealToxicity │ Measures toxic text generation         │
-│ Prompts      │ 100K naturally occurring prompts       │
-│              │ Evaluates toxicity of continuations    │
-├──────────────┼───────────────────────────────────────┤
-│ WinoBias     │ Gender bias in coreference resolution │
-│              │ "The nurse examined the patient.       │
-│              │  She/He was very thorough."            │
-├──────────────┼───────────────────────────────────────┤
-│ HarmBench    │ Comprehensive harmful behavior testing│
-│              │ 400+ test cases across harm categories │
-└──────────────┴───────────────────────────────────────┘
-```
+![ai_safety_evaluation_benchmarks](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/ai_safety_evaluation_benchmarks.svg)
 
 ---
 
@@ -713,32 +510,4 @@ class SafetyTestSuite:
 
 ## The Future of AI Safety
 
-```diagram
-EMERGING SAFETY RESEARCH AREAS:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-1. MECHANISTIC INTERPRETABILITY
-   Understanding what happens inside the model
-   → "Why did the model produce this output?"
-   → Tools: activation patching, probing classifiers
-
-2. SCALABLE OVERSIGHT
-   How to supervise AI systems smarter than us
-   → Debate: AI models argue both sides, human judges
-   → Recursive reward modeling
-
-3. ROBUSTNESS
-   Models that work reliably in adversarial conditions
-   → Adversarial training for jailbreak resistance
-   → Formal verification of safety properties
-
-4. ALIGNMENT TAX
-   Safety training vs. capability
-   → Can we make models safer WITHOUT making them worse?
-   → Current evidence: alignment improves helpfulness
-
-5. MULTI-AGENT SAFETY
-   Safety when multiple AI agents interact
-   → Emergent behaviors in agent systems
-   → Coordination problems and race conditions
-```
+![the_future_of_ai_safety](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/the_future_of_ai_safety.svg)

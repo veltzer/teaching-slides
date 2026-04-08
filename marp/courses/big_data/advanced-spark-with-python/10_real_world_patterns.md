@@ -20,44 +20,7 @@
 ---
 ## ETL Pipeline Architecture
 
-```diagram
-Layered data architecture:
-
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│  Source Systems                                   │
-│  ┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐    │
-│  │  RDBMS │ │  API   │ │ Kafka  │ │  Files │    │
-│  └───┬────┘ └───┬────┘ └───┬────┘ └───┬────┘    │
-│      └──────────┴──────────┴──────────┘          │
-│                     │                            │
-│                     v                            │
-│  Bronze Layer (Raw)                              │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Raw data, as-is from source              │    │
-│  │  Append-only, no transformations          │    │
-│  │  Format: Delta / Parquet                  │    │
-│  │  Retention: long (months/years)           │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Silver Layer (Cleansed)                         │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Deduplicated, validated, typed           │    │
-│  │  Business keys resolved                   │    │
-│  │  Format: Delta (ACID)                     │    │
-│  │  Retention: medium (months)               │    │
-│  └─────────────────┬────────────────────────┘    │
-│                    v                              │
-│  Gold Layer (Business)                           │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Aggregated, enriched, business-ready     │    │
-│  │  Dimensional model / feature store        │    │
-│  │  Format: Delta (ACID)                     │    │
-│  │  Retention: as needed                     │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![etl_pipeline_architecture](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/etl_pipeline_architecture.svg)
 
 ---
 ## ETL Pipeline Design Pattern
@@ -173,43 +136,7 @@ pipeline.run()
 ---
 ## Slowly Changing Dimensions: Overview
 
-```diagram
-SCD Types:
-
-Type 1: Overwrite (no history)
-┌──────────────────────────────────────────┐
-│  Before:  customer_id=1, city="New York" │
-│  Update:  city changed to "Boston"       │
-│  After:   customer_id=1, city="Boston"   │
-│                                          │
-│  Use when: history not needed             │
-└──────────────────────────────────────────┘
-
-Type 2: Add new row (full history)
-┌──────────────────────────────────────────┐
-│  Before:                                 │
-│  id=1, city="New York", current=true     │
-│                                          │
-│  After update:                           │
-│  id=1, city="New York", current=false,   │
-│        end_date="2024-06-14"             │
-│  id=1, city="Boston", current=true,      │
-│        start_date="2024-06-15"           │
-│                                          │
-│  Use when: full audit trail needed        │
-└──────────────────────────────────────────┘
-
-Type 3: Add new column (limited history)
-┌──────────────────────────────────────────┐
-│  Before:                                 │
-│  id=1, city="New York", prev_city=null   │
-│                                          │
-│  After:                                  │
-│  id=1, city="Boston", prev_city="NY"     │
-│                                          │
-│  Use when: only previous value needed     │
-└──────────────────────────────────────────┘
-```
+![slowly_changing_dimensions_overview](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/slowly_changing_dimensions_overview.svg)
 
 ---
 ## SCD Type 1: Overwrite with MERGE
@@ -651,36 +578,7 @@ df.write.format("delta") \
 ---
 ## Idempotent Write Comparison
 
-```diagram
-Method comparison:
-
-┌──────────────────────────────────────────────────┐
-│  Dynamic Partition Overwrite (Parquet)            │
-│  ┌──────────────────────────────────────────┐    │
-│  │  + Works with plain Parquet               │    │
-│  │  + Simple configuration                   │    │
-│  │  - Not atomic (partial writes possible)   │    │
-│  │  - No concurrent write safety             │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  replaceWhere (Delta Lake)                       │
-│  ┌──────────────────────────────────────────┐    │
-│  │  + Atomic (all or nothing)                │    │
-│  │  + Concurrent-safe (optimistic locking)   │    │
-│  │  + Predicate validated at write time      │    │
-│  │  - Requires Delta Lake                    │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  DELETE + INSERT (Delta Lake)                    │
-│  ┌──────────────────────────────────────────┐    │
-│  │  + Explicit, easy to understand           │    │
-│  │  - Two operations (not atomic together)   │    │
-│  │  - Slightly slower (two transactions)     │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  Recommendation: Use replaceWhere with Delta     │
-└──────────────────────────────────────────────────┘
-```
+![idempotent_write_comparison](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/idempotent_write_comparison.svg)
 
 ---
 ## Exactly-Once Semantics with Checkpointing
@@ -745,77 +643,12 @@ query = (
 ---
 ## Checkpointing Architecture
 
-```diagram
-Exactly-once guarantee flow:
-
-┌──────────────────────────────────────────────────┐
-│  Micro-batch N                                    │
-│                                                  │
-│  Step 1: Read offsets from checkpoint             │
-│  ┌────────────────────────────────────────┐      │
-│  │  Last committed: topic=events,         │      │
-│  │    partition=0, offset=1000            │      │
-│  └────────────────────────────────────────┘      │
-│                                                  │
-│  Step 2: Fetch data from source                  │
-│  ┌────────────────────────────────────────┐      │
-│  │  Read offsets 1001-1500 from Kafka     │      │
-│  └────────────────────────────────────────┘      │
-│                                                  │
-│  Step 3: Process and write to sink               │
-│  ┌────────────────────────────────────────┐      │
-│  │  Write 500 records to Delta Lake       │      │
-│  └────────────────────────────────────────┘      │
-│                                                  │
-│  Step 4: Commit offsets to checkpoint             │
-│  ┌────────────────────────────────────────┐      │
-│  │  Update: offset=1500 (atomic)          │      │
-│  └────────────────────────────────────────┘      │
-│                                                  │
-│  If failure at Step 3: restart replays from 1001  │
-│  If failure at Step 4: restart replays from 1001  │
-│  Idempotent sink prevents duplicates              │
-└──────────────────────────────────────────────────┘
-```
+![checkpointing_architecture](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/checkpointing_architecture.svg)
 
 ---
 ## Change Data Capture (CDC) with Debezium
 
-```diagram
-CDC Architecture:
-
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│  ┌──────────┐    ┌──────────┐    ┌──────────┐   │
-│  │ Postgres │───>│ Debezium │───>│  Kafka   │   │
-│  │ (source) │    │ Connector│    │  Topic   │   │
-│  └──────────┘    └──────────┘    └────┬─────┘   │
-│                                       │         │
-│  Debezium reads the WAL (Write-Ahead   │         │
-│  Log) and emits change events:         │         │
-│                                       v         │
-│  ┌──────────────────────────────────────────┐   │
-│  │  Change Event Structure:                  │   │
-│  │  {                                        │   │
-│  │    "op": "c|u|d|r",                       │   │
-│  │    "before": { old row data },            │   │
-│  │    "after":  { new row data },            │   │
-│  │    "source": { table, lsn, ts },          │   │
-│  │    "ts_ms": 1718460000000                 │   │
-│  │  }                                        │   │
-│  │                                           │   │
-│  │  op: c=create, u=update, d=delete,        │   │
-│  │      r=read (snapshot)                    │   │
-│  └──────────────────────────────────────────┘   │
-│                                       │         │
-│                                       v         │
-│  ┌──────────────────────────────────────────┐   │
-│  │  Spark Structured Streaming               │   │
-│  │  Apply changes to Delta Lake              │   │
-│  └──────────────────────────────────────────┘   │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![change_data_capture_cdc_with_debezium](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/change_data_capture_cdc_with_debezium.svg)
 
 ---
 ## CDC: Processing Debezium Events
@@ -967,37 +800,7 @@ spark.read.format("delta") \
 ---
 ## Schema Evolution Strategy
 
-```diagram
-Schema evolution decision tree:
-
-┌──────────────────────────────────────────────────┐
-│  Is the change backward-compatible?               │
-│                                                  │
-│  Adding a new column?                            │
-│  ┌─────┐                                        │
-│  │ Yes ├──> Use mergeSchema (safe)               │
-│  └─────┘                                        │
-│                                                  │
-│  Renaming a column?                              │
-│  ┌─────┐                                        │
-│  │ Yes ├──> Add new column + backfill + drop old │
-│  └─────┘    (never rename in-place)              │
-│                                                  │
-│  Changing column type?                           │
-│  ┌─────┐                                        │
-│  │ Yes ├──> Widening (int->long): mergeSchema    │
-│  │     │    Narrowing (long->int): overwrite     │
-│  └─────┘                                        │
-│                                                  │
-│  Removing a column?                              │
-│  ┌─────┐                                        │
-│  │ Yes ├──> Drop column + rewrite                │
-│  └─────┘    (consumers may break)                │
-│                                                  │
-│  Best practice: version your schemas             │
-│  and validate before processing.                 │
-└──────────────────────────────────────────────────┘
-```
+![schema_evolution_strategy](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/schema_evolution_strategy.svg)
 
 ---
 ## Monitoring: Spark Listeners
@@ -1163,84 +966,12 @@ print(json.dumps(metrics, indent=2, default=str))
 ---
 ## Prometheus Metrics Configuration
 
-```diagram
-Spark metrics to Prometheus:
-
-┌──────────────────────────────────────────────────┐
-│  Spark Application                                │
-│  ┌──────────────────────────────────────────┐    │
-│  │  Driver Metrics:                          │    │
-│  │  - spark_driver_jvm_heap_used             │    │
-│  │  - spark_driver_active_tasks              │    │
-│  │  - spark_driver_completed_tasks           │    │
-│  │  - spark_driver_failed_tasks              │    │
-│  │                                           │    │
-│  │  Executor Metrics:                        │    │
-│  │  - spark_executor_jvm_heap_used           │    │
-│  │  - spark_executor_gc_time_total           │    │
-│  │  - spark_executor_shuffle_read_bytes      │    │
-│  │  - spark_executor_shuffle_write_bytes     │    │
-│  │                                           │    │
-│  │  /metrics/prometheus endpoint             │    │
-│  └──────────────────┬───────────────────────┘    │
-│                     │                            │
-│                     v                            │
-│  ┌──────────┐   ┌───────────┐   ┌───────────┐   │
-│  │Prometheus│──>│  Grafana  │──>│  Alerts   │   │
-│  │ (scrape) │   │(dashboard)│   │(PagerDuty)│   │
-│  └──────────┘   └───────────┘   └───────────┘   │
-│                                                  │
-│  Key alerts to set up:                           │
-│  - Job duration > 2x historical average          │
-│  - Failed tasks > 5% of total                    │
-│  - Executor memory > 90% usage                   │
-│  - Data freshness > SLA threshold                │
-│  - Row count anomaly (< 50% of expected)         │
-└──────────────────────────────────────────────────┘
-```
+![prometheus_metrics_configuration](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/prometheus_metrics_configuration.svg)
 
 ---
 ## Cost Optimization Strategies
 
-```diagram
-Cloud cost optimization for Spark:
-
-┌──────────────────────────────────────────────────┐
-│  1. Right-size clusters                           │
-│  ┌──────────────────────────────────────────┐    │
-│  │  - Profile actual CPU/memory usage        │    │
-│  │  - Use spot/preemptible instances (70%     │    │
-│  │    savings) for fault-tolerant workloads   │    │
-│  │  - Scale down during off-peak hours        │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  2. Optimize data storage                        │
-│  ┌──────────────────────────────────────────┐    │
-│  │  - Use Parquet/Delta (not CSV/JSON)       │    │
-│  │  - Compress with ZSTD (3-4x reduction)    │    │
-│  │  - Partition to enable pruning             │    │
-│  │  - VACUUM old Delta versions               │    │
-│  │  - Move cold data to cheaper storage tier  │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  3. Optimize compute                             │
-│  ┌──────────────────────────────────────────┐    │
-│  │  - Enable AQE (auto-tune at runtime)      │    │
-│  │  - Broadcast small tables (skip shuffle)   │    │
-│  │  - Avoid UDFs (use built-in functions)     │    │
-│  │  - Cache reused DataFrames                 │    │
-│  │  - Filter and project early                │    │
-│  └──────────────────────────────────────────┘    │
-│                                                  │
-│  4. Optimize scheduling                          │
-│  ┌──────────────────────────────────────────┐    │
-│  │  - Use dynamic allocation                 │    │
-│  │  - Batch small jobs together               │    │
-│  │  - Schedule heavy jobs during off-peak     │    │
-│  │  - Set job timeouts to prevent runaway     │    │
-│  └──────────────────────────────────────────┘    │
-└──────────────────────────────────────────────────┘
-```
+![cost_optimization_strategies](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/cost_optimization_strategies.svg)
 
 ---
 ## Cost Optimization: Practical Configuration
@@ -1473,34 +1204,4 @@ if __name__ == "__main__":
 ---
 ## Summary: Real-World Patterns
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│  Key Takeaways                                    │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Pipeline Design:                                │
-│  - Use Bronze/Silver/Gold layered architecture    │
-│  - Separate extract, transform, load concerns     │
-│  - Make every step idempotent (safe to re-run)    │
-│                                                  │
-│  Data Management:                                │
-│  - SCD Type 1 for simple overwrites               │
-│  - SCD Type 2 for full history tracking           │
-│  - Use Delta Lake MERGE for all upsert patterns   │
-│  - Handle schema evolution with mergeSchema       │
-│                                                  │
-│  Data Quality:                                   │
-│  - Validate at each layer boundary                │
-│  - Check nulls, ranges, uniqueness, referential   │
-│  - Fail fast on critical violations               │
-│  - Use Great Expectations for complex rules       │
-│                                                  │
-│  Operations:                                     │
-│  - Checkpoint streams for exactly-once            │
-│  - Monitor with Prometheus + Grafana              │
-│  - Alert on data freshness and anomalies          │
-│  - Right-size clusters and use spot instances      │
-│  - Use dynamic allocation to scale with demand    │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![summary_real_world_patterns](svg/courses/big_data/advanced-spark-with-python/10_real_world_patterns/summary_real_world_patterns.svg)

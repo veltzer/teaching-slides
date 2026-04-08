@@ -90,21 +90,7 @@ def self_attention(Q, K, V):
 
 Instead of one attention function, use multiple "heads" in parallel:
 
-```diagram
-          Input
-     ┌─────┼─────┐
-   Head 1 Head 2 Head 3 ... Head h
-     │      │      │           │
-   Attn   Attn   Attn       Attn
-     │      │      │           │
-     └──────┴──────┴───────────┘
-              │
-          Concatenate
-              │
-        Linear projection
-              │
-          Output
-```
+![multi_head_attention](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/multi_head_attention.svg)
 
 Each head can learn different relationship patterns:
 - Head 1: syntactic relationships
@@ -176,14 +162,7 @@ for t in tokens:
 | `SentencePiece` | Language-agnostic, works on raw text | `T5`, `LLaMA` |
 | `Tiktoken` | Fast BPE implementation | `GPT-3.5/4` |
 
-```diagram
-BPE example — learning merges:
-  Step 0: ['l', 'o', 'w', 'e', 'r']     → frequency analysis
-  Step 1: ['lo', 'w', 'e', 'r']          → merge 'l'+'o'
-  Step 2: ['low', 'e', 'r']              → merge 'lo'+'w'
-  Step 3: ['low', 'er']                  → merge 'e'+'r'
-  Step 4: ['lower']                      → merge 'low'+'er'
-```
+![tokenization_methods](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/tokenization_methods.svg)
 
 ---
 
@@ -215,21 +194,7 @@ for text in examples:
 
 ## Encoder vs. Decoder vs. Encoder-Decoder
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│ ENCODER-ONLY          │ Full bidirectional attention     │
-│ (BERT, RoBERTa)       │ Good for: classification,       │
-│                        │ embeddings, NER                 │
-├─────────────────────────────────────────────────────────┤
-│ DECODER-ONLY          │ Causal (left-to-right) attention│
-│ (GPT, LLaMA, Claude)  │ Good for: text generation,      │
-│                        │ chat, code                      │
-├─────────────────────────────────────────────────────────┤
-│ ENCODER-DECODER       │ Encode full input, then decode  │
-│ (T5, BART)             │ Good for: translation,          │
-│                        │ summarization                   │
-└─────────────────────────────────────────────────────────┘
-```
+![encoder_vs_decoder_vs_encoder_decoder](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/encoder_vs_decoder_vs_encoder_decoder.svg)
 
 **Modern generative models are almost all decoder-only.**
 
@@ -290,23 +255,7 @@ def temperature_sample(logits, temperature=1.0):
 
 ## Top-p (Nucleus) Sampling Visualized
 
-```diagram
-Token probabilities (sorted):
-
-"Paris"    ████████████████████ 0.40
-"Lyon"     ████████████         0.24
-"the"      ██████               0.12
-"a"        ████                 0.08
-"Marseille"███                  0.06
-"Berlin"   ██                   0.04
-"one"      █                    0.02
-"London"   ░                    0.01
-...        ░                    ...
-
-Top-p = 0.9: Include tokens until cumulative prob ≥ 0.9
-→ Select from: {Paris, Lyon, the, a, Marseille, Berlin}
-→ Exclude: {one, London, ...}
-```
+![top_p_nucleus_sampling_visualized](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/top_p_nucleus_sampling_visualized.svg)
 
 ---
 
@@ -314,17 +263,7 @@ Top-p = 0.9: Include tokens until cumulative prob ≥ 0.9
 
 Some abilities only appear when models reach sufficient size:
 
-```diagram
-Capability          Small    Medium    Large
-────────────────────────────────────────────
-Basic grammar       ✓        ✓         ✓
-Simple Q&A          ✗        ✓         ✓
-Translation         ✗        ~         ✓
-Chain-of-thought    ✗        ✗         ✓
-Math reasoning      ✗        ✗         ✓
-Code generation     ✗        ✗         ✓
-Theory of mind      ✗        ✗         ~
-```
+![emergence_surprising_capabilities_at_scale](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/emergence_surprising_capabilities_at_scale.svg)
 
 This is called **emergent behavior** — capabilities that cannot be predicted by extrapolating from smaller models.
 
@@ -334,27 +273,7 @@ This is called **emergent behavior** — capabilities that cannot be predicted b
 
 Research shows predictable relationships between model size and performance:
 
-```diagram
-Loss
- │
- │╲
- │ ╲
- │  ╲
- │   ╲
- │    ╲          ← Power law: L(N) = (N_c / N)^α
- │     ╲╲
- │       ╲╲
- │         ╲╲╲
- │            ╲╲╲╲╲
- │                  ╲╲╲╲╲╲╲╲
- └─────────────────────────────── Parameters (N)
-  1M    10M   100M   1B    10B   100B
-
-Three axes of scaling:
-  1. Model size (parameters)
-  2. Dataset size (tokens)
-  3. Compute budget (FLOPs)
-```
+![scaling_laws](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/scaling_laws.svg)
 
 **Chinchilla law:** Optimal training uses ~20 tokens per parameter.
 
@@ -412,41 +331,13 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 | `Claude 3.5` | 200K tokens | ~150 pages |
 | `Gemini 1.5` | 1M tokens | ~750 pages |
 
-```diagram
-┌─────────────────────────────────────┐
-│     CONTEXT WINDOW (128K tokens)    │
-│ ┌─────────────┐ ┌────────────────┐  │
-│ │  System      │ │  Conversation  │  │
-│ │  Prompt      │ │  History       │  │
-│ │  (500 tok)   │ │  (50K tok)     │  │
-│ └─────────────┘ └────────────────┘  │
-│ ┌─────────────┐ ┌────────────────┐  │
-│ │  Retrieved   │ │  User Query    │  │
-│ │  Context     │ │  (200 tok)     │  │
-│ │  (70K tok)   │ │                │  │
-│ └─────────────┘ └────────────────┘  │
-│ Remaining for generation: ~7.3K tok │
-└─────────────────────────────────────┘
-```
+![context_windows_how_much_can_a_model_see](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/context_windows_how_much_can_a_model_see.svg)
 
 ---
 
 ## Real-World Applications of Generative AI
 
-```diagram
-┌─────────────────┬──────────────────────────────────────┐
-│ Domain          │ Applications                          │
-├─────────────────┼──────────────────────────────────────┤
-│ Software Dev    │ Code generation, debugging, review    │
-│ Content         │ Writing, marketing, translation       │
-│ Customer Svc    │ Chatbots, email drafting, FAQ         │
-│ Healthcare      │ Clinical notes, drug discovery        │
-│ Legal           │ Contract review, case research        │
-│ Finance         │ Report generation, risk analysis      │
-│ Education       │ Tutoring, curriculum design           │
-│ Research        │ Literature review, hypothesis gen     │
-└─────────────────┴──────────────────────────────────────┘
-```
+![real_world_applications_of_generative_ai](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/real_world_applications_of_generative_ai.svg)
 
 ---
 
@@ -570,20 +461,7 @@ for text in texts:
 
 ## The Training Compute Frontier
 
-```diagram
-Model         Training Compute (FLOPs)    Year
-───────────────────────────────────────────────
-GPT-2         1.5 × 10^19                 2019
-GPT-3         3.1 × 10^23                 2020
-PaLM          2.5 × 10^24                 2022
-GPT-4         ~2.1 × 10^25 (est.)        2023
-Gemini Ultra  ~5 × 10^25 (est.)          2023
-LLaMA 3 405B  ~3.8 × 10^25 (est.)       2024
-
-Compute doubles approximately every 6-8 months.
-The cost of frontier training runs is growing
-faster than Moore's Law.
-```
+![the_training_compute_frontier](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_training_compute_frontier.svg)
 
 ---
 
@@ -620,31 +498,7 @@ tokens = tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
 
 Used by `Mixtral`, `GPT-4` (rumored), and `Switch Transformer`:
 
-```diagram
-Standard Transformer FFN:
-  Every token processed by ALL parameters
-
-MoE FFN:
-  Each token routed to TOP-K experts (e.g., 2 of 8)
-
-┌──────────────────────────────────────┐
-│           ROUTER (gate)               │
-│  Decides which experts to activate    │
-│  Based on token's hidden state        │
-└───┬────┬────┬────┬────┬────┬───┬────┘
-    │    │    │    │    │    │   │
-  ┌─▼─┐┌─▼─┐┌─▼─┐┌─▼─┐┌─▼─┐┌▼──┐┌▼──┐┌───┐
-  │E1 ││E2 ││E3 ││E4 ││E5 ││E6 ││E7 ││E8 │
-  │   ││ ★ ││   ││   ││ ★ ││   ││   ││   │
-  └───┘└─┬─┘└───┘└───┘└─┬─┘└───┘└───┘└───┘
-         │               │     ★ = selected
-         └───────┬───────┘
-              combine
-
-Mixtral 8×7B: 8 experts × 7B each = 47B total params
-  But only 2 experts active = ~13B params per token
-  Speed of a 13B model, quality of a 47B model!
-```
+![the_mixture_of_experts_moe_architecture](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_mixture_of_experts_moe_architecture.svg)
 
 ---
 
@@ -746,29 +600,7 @@ Optimization strategies:
 
 ## Retrieval-Augmented Generation (RAG) — Preview
 
-```diagram
-Why RAG matters (covered in depth on Day 3):
-
-Problem: LLMs have knowledge cutoffs and hallucinate
-
-Solution: Give the model relevant documents at query time
-
-┌─────────────────────────────────────────────┐
-│  User: "What was our Q4 revenue?"           │
-│                                              │
-│  Step 1: Search company docs                │
-│  Step 2: Retrieve: "Q4 revenue: $12.3M..."  │
-│  Step 3: Generate response WITH the document│
-│  Step 4: "Based on the financial report,    │
-│           Q4 revenue was $12.3 million."     │
-│                                              │
-│  Benefits:                                   │
-│  - Grounded in actual data (less hallucination)│
-│  - Up-to-date information (no cutoff)        │
-│  - Auditable (can cite sources)              │
-│  - Domain-specific without fine-tuning       │
-└─────────────────────────────────────────────┘
-```
+![retrieval_augmented_generation_rag_preview](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/retrieval_augmented_generation_rag_preview.svg)
 
 ---
 

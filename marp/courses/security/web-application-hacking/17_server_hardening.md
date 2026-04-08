@@ -6,19 +6,7 @@
 
 ## Why Hardening Matters
 
-```diagram
-Default Installation = Maximum Attack Surface
-
-+--Default Install--+     +--Hardened Install--+
-| All services on   |     | Minimal services   |
-| Default passwords |     | Strong passwords   |
-| Verbose errors    |     | Generic errors     |
-| No firewall       |     | Strict firewall    |
-| No logging        |     | Full audit logging |
-| Root access       |     | Least privilege    |
-| No updates        |     | Patch management   |
-+-------------------+     +--------------------+
-```
+![why_hardening_matters](svg/courses/security/web-application-hacking/17_server_hardening/why_hardening_matters.svg)
 
 ---
 
@@ -448,30 +436,7 @@ nuclei -u https://target.com -severity critical,high
 
 ## WAF (Web Application Firewall)
 
-```diagram
-WAF Deployment Modes:
-+--Inline (Blocking)-------+
-| Request -> WAF -> Server |
-| WAF blocks attacks       |
-+--------------------------+
-
-+--Out-of-band (Detection)-+
-| Request -> Server        |
-| Copy -> WAF (alerts)     |
-+--------------------------+
-
-Popular WAFs:
-  - ModSecurity (open source, Apache/Nginx)
-  - AWS WAF (cloud-native)
-  - Cloudflare WAF (CDN-integrated)
-  - Imperva / Akamai (enterprise)
-
-WAF Limitations:
-  - Can be bypassed with encoding tricks
-  - May cause false positives
-  - Not a substitute for secure code
-  - Cannot detect logic flaws
-```
+![waf_web_application_firewall](svg/courses/security/web-application-hacking/17_server_hardening/waf_web_application_firewall.svg)
 
 ---
 

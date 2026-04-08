@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">HTTP Request Analysis - Entry Points</text>
+  <!-- Request box -->
+  <rect x="40" y="50" width="440" height="240" rx="5" fill="#1a1a2e" stroke="#4a90e2" stroke-width="2"/>
+  <!-- Request line -->
+  <text x="60" y="80" font-size="11" fill="#28a745" font-family="monospace">GET</text>
+  <text x="95" y="80" font-size="11" fill="#ffc107" font-family="monospace">/search?q=test&amp;page=1</text>
+  <text x="310" y="80" font-size="11" fill="#aaa" font-family="monospace">HTTP/1.1</text>
+  <!-- Headers -->
+  <text x="60" y="110" font-size="11" fill="#aaa" font-family="monospace">Host:</text>
+  <text x="110" y="110" font-size="11" fill="#e8f4f8" font-family="monospace">example.com</text>
+  <text x="60" y="135" font-size="11" fill="#aaa" font-family="monospace">Cookie:</text>
+  <text x="125" y="135" font-size="11" fill="#dc3545" font-family="monospace">session=abc123</text>
+  <text x="60" y="160" font-size="11" fill="#aaa" font-family="monospace">Authorization:</text>
+  <text x="175" y="160" font-size="11" fill="#dc3545" font-family="monospace">Bearer eyJhbG...</text>
+  <text x="60" y="185" font-size="11" fill="#aaa" font-family="monospace">Content-Type:</text>
+  <text x="175" y="185" font-size="11" fill="#e8f4f8" font-family="monospace">application/json</text>
+  <!-- Body -->
+  <text x="60" y="220" font-size="11" fill="#aaa" font-family="monospace">---body---</text>
+  <text x="60" y="245" font-size="11" fill="#ffc107" font-family="monospace">{"username":"admin","id":1}</text>
+  <!-- Annotations -->
+  <line x1="200" y1="72" x2="510" y2="62" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="515" y="45" width="180" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="605" y="65" text-anchor="middle" font-size="10" fill="#333">URL Path &amp; Parameters</text>
+  <line x1="240" y1="128" x2="510" y2="108" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="515" y="92" width="180" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="605" y="112" text-anchor="middle" font-size="10" fill="#333">Session Cookie</text>
+  <line x1="340" y1="153" x2="510" y2="148" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="515" y="133" width="180" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="605" y="153" text-anchor="middle" font-size="10" fill="#333">Auth Token</text>
+  <line x1="300" y1="238" x2="510" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="515" y="178" width="180" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="605" y="198" text-anchor="middle" font-size="10" fill="#333">POST Body Data</text>
+  <!-- Legend -->
+  <rect x="515" y="230" width="180" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="605" y="252" text-anchor="middle" font-size="10" font-weight="bold" fill="#4a90e2">Each colored field</text>
+  <text x="605" y="270" text-anchor="middle" font-size="9" fill="#333">= potential injection point</text>
+  <!-- Summary -->
+  <rect x="40" y="320" width="640" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="360" y="342" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Every user-controlled value is a potential entry point for attack</text>
+  <text x="360" y="360" text-anchor="middle" font-size="10" fill="#333">Test: URL params, headers, cookies, body, file uploads, hidden fields</text>
+</svg>

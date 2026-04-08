@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 400" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <!-- Title -->
+  <text x="260" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Resource Lifecycle (CRUD)</text>
+  <!-- Create box -->
+  <rect x="200" y="50" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="260" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Create</text>
+  <!-- Arrow Create -> Read -->
+  <line x1="260" y1="95" x2="260" y2="140" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Read box -->
+  <rect x="200" y="145" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="260" y="173" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Read</text>
+  <!-- Arrow Read -> Update -->
+  <line x1="320" y1="167" x2="390" y2="230" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow Read -> Delete -->
+  <line x1="200" y1="167" x2="130" y2="230" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Update box -->
+  <rect x="340" y="230" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Update</text>
+  <!-- Delete box -->
+  <rect x="60" y="230" width="120" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="120" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Delete</text>
+  <!-- Arrow Update -> Read -->
+  <path d="M 460 252 Q 490 167 320 167" fill="none" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Arrow Delete -> Read -->
+  <path d="M 60 252 Q 30 167 200 167" fill="none" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Descriptions -->
+  <text x="260" y="320" text-anchor="middle" font-size="11" fill="#555">Create: terraform apply --> API call --> State updated</text>
+  <text x="260" y="338" text-anchor="middle" font-size="11" fill="#555">Read: terraform plan --> API call --> Compare to config</text>
+  <text x="260" y="356" text-anchor="middle" font-size="11" fill="#555">Update: terraform apply --> API call --> State updated</text>
+  <text x="260" y="374" text-anchor="middle" font-size="11" fill="#555">Delete: terraform destroy --> API call --> State updated</text>
+</svg>

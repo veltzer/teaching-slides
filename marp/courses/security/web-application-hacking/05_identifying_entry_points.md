@@ -158,22 +158,7 @@ Content-Type: application/xml
 
 ## File Upload Entry Points
 
-```diagram
-File uploads are high-value entry points:
-
-1. File content     -> Web shell upload
-2. File name        -> Path traversal (../../etc/passwd)
-3. Content-Type     -> Bypass validation
-4. File size        -> DoS via large files
-5. File extension   -> Execute server-side code
-
-Common bypass techniques:
-- Double extension: shell.php.jpg
-- Null byte: shell.php%00.jpg (older systems)
-- Case variation: shell.pHp
-- Content-Type manipulation
-- Magic bytes injection (GIF89a header + PHP code)
-```
+![file_upload_entry_points](svg/courses/security/web-application-hacking/05_identifying_entry_points/file_upload_entry_points.svg)
 
 ---
 
@@ -283,24 +268,7 @@ Information leaked:
 
 ## Mapping Input Vectors Per Page
 
-```diagram
-Page: /login
-+--Entry Point--------+--Type--------+--Test For----------+
-| username             | POST param   | SQLi, auth bypass  |
-| password             | POST param   | SQLi, brute force  |
-| remember_me          | POST param   | Logic flaw         |
-| Cookie: session      | Header       | Session fixation   |
-| Referer              | Header       | Open redirect      |
-+---------------------+-------------+--------------------+
-
-Page: /search
-+--Entry Point--------+--Type--------+--Test For----------+
-| q (query)            | GET param    | SQLi, XSS          |
-| category             | GET param    | SQLi, IDOR         |
-| sort                 | GET param    | SQLi               |
-| page                 | GET param    | IDOR, injection    |
-+---------------------+-------------+--------------------+
-```
+![mapping_input_vectors_per_page](svg/courses/security/web-application-hacking/05_identifying_entry_points/mapping_input_vectors_per_page.svg)
 
 ---
 

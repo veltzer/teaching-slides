@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Defense in Depth - Network</text>
+  <!-- Outermost layer -->
+  <rect x="30" y="50" width="640" height="330" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="350" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Perimeter Firewall</text>
+  <!-- DMZ -->
+  <rect x="60" y="85" width="580" height="275" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#e6a800">DMZ (Demilitarized Zone)</text>
+  <!-- Internal Firewall -->
+  <rect x="90" y="120" width="520" height="220" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="142" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">Internal Firewall</text>
+  <!-- Internal Network -->
+  <rect x="120" y="155" width="460" height="165" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="177" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Internal Network</text>
+  <!-- Host Security -->
+  <rect x="150" y="190" width="400" height="110" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="212" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">Host-based Security</text>
+  <!-- Application Security -->
+  <rect x="180" y="225" width="340" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="247" text-anchor="middle" font-size="11" font-weight="bold" fill="#e6a800">Application Security</text>
+  <!-- Data -->
+  <rect x="260" y="250" width="180" height="22" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="266" text-anchor="middle" font-size="10" font-weight="bold" fill="#28a745">DATA</text>
+  <!-- Internet label -->
+  <text x="350" y="395" text-anchor="middle" font-size="11" fill="#333">Each layer provides independent protection - attacker must bypass all layers</text>
+</svg>

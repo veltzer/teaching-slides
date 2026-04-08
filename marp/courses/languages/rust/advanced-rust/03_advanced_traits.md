@@ -99,17 +99,7 @@ fn main() {
 
 ## Vtable Layout
 
-```diagram
-               ┌──────────────────────┐
-  dyn Shape    │  data pointer ───────────> actual struct data
-  (fat ptr)    │  vtable pointer ─────────> ┌─────────────────┐
-               └──────────────────────┘     │ drop()          │
-                                            │ size            │
-                                            │ alignment       │
-                                            │ area()          │
-                                            │ name()          │
-                                            └─────────────────┘
-```
+![vtable_layout](svg/courses/languages/rust/advanced-rust/03_advanced_traits/vtable_layout.svg)
 
 A trait object is a fat pointer: data pointer + vtable pointer (2 x usize).
 
@@ -1018,25 +1008,7 @@ impl Shape {
 
 ## Summary
 
-```diagram
-  ┌─────────────────────────────────────────────────────┐
-  │              Advanced Traits Cheatsheet              │
-  ├─────────────────────────────────────────────────────┤
-  │ Static dispatch   : fn foo<T: Trait>(x: T)          │
-  │ Dynamic dispatch  : fn foo(x: &dyn Trait)           │
-  │ Associated types  : type Item; (one impl per type)  │
-  │ Type parameters   : Trait<T>   (many impls per type)│
-  │ Supertraits       : trait Sub: Super { }            │
-  │ Blanket impl      : impl<T: X> Y for T { }         │
-  │ Orphan rule       : your trait OR your type          │
-  │ Newtype pattern   : struct W(ForeignType);          │
-  │ Extension trait   : trait XExt for X { new methods } │
-  │ Send              : safe to move between threads    │
-  │ Sync              : safe to share references        │
-  │ Sized             : size known at compile time      │
-  │ Unpin             : safe to move after pinning      │
-  └─────────────────────────────────────────────────────┘
-```
+![summary](svg/courses/languages/rust/advanced-rust/03_advanced_traits/summary.svg)
 
 ---
 

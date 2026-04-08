@@ -146,15 +146,7 @@ safety check
 - Standard practice for Python development
 - Critical for dependency management
 
-```diagram
-Project A              Project B
-+--------------+      +--------------+
-| Python 3.8   |      | Python 3.9   |
-| requests 2.24|      | requests 2.25|
-| Flask 1.1.2  |      | Django 3.1.5 |
-| ...          |      | ...          |
-+--------------+      +--------------+
-```
+![what_are_virtual_environments](svg/courses/languages/python/advanced-python/07_environments/what_are_virtual_environments.svg)
 
 ---
 
@@ -687,15 +679,7 @@ conda env export > environment.yml
 - **Development workflow**
 - **Platform requirements**
 
-```diagram
-Small projects                 → venv + pip
-Complex dependencies           → poetry or pipenv
-Data science                   → conda
-Binary packages                → conda
-Package publishing workflow    → poetry or hatch
-Enterprise environments        → pip-tools or pipenv
-Existing projects with setup.py → pip-tools
-```
+![choosing_the_right_tool](svg/courses/languages/python/advanced-python/07_environments/choosing_the_right_tool.svg)
 
 ---
 

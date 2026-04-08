@@ -236,29 +236,7 @@ def register(request):
 
 ## Business Logic Bypass Examples
 
-```diagram
-Example 1: Free premium features
-  Regular user -> tries premium API endpoint -> works!
-  (Authorization only checked in UI, not API)
-
-Example 2: Skip email verification
-  Register -> verify email -> access app
-  Skip: Register -> directly access app URL
-  (Server doesn't enforce verification status)
-
-Example 3: Password reset for any user
-  Reset flow generates token for logged-in user
-  Intercept and change user_id to target user
-
-Example 4: Unlimited free trial
-  Register with email1 -> trial expires
-  Register with email2 -> new trial
-  (No identity linkage between accounts)
-
-Example 5: Referral abuse
-  Create multiple accounts referring each other
-  Accumulate referral bonuses
-```
+![business_logic_bypass_examples](svg/courses/security/web-application-hacking/16_logic_flaws/business_logic_bypass_examples.svg)
 
 ---
 
@@ -327,33 +305,7 @@ for t in threads:
 
 ## Authorization Bypass Patterns
 
-```diagram
-Pattern 1: Horizontal Privilege Escalation
-  User A accesses User B's data
-  /api/orders/USER_B_ORDER_ID
-  Defense: Verify ownership on every request
-
-Pattern 2: Vertical Privilege Escalation
-  Regular user accesses admin functionality
-  /admin/users  (just change the URL)
-  Defense: Role-based access control on every endpoint
-
-Pattern 3: Method-Based Bypass
-  GET /admin/users -> 403 Forbidden
-  POST /admin/users -> 200 OK (different method, different check!)
-  Defense: Check authorization regardless of HTTP method
-
-Pattern 4: Parameter-Based Bypass
-  POST /api/users/123 {"name": "new name"}
-  POST /api/users/123 {"name": "new name", "role": "admin"}
-  Defense: Whitelist updatable fields per role
-
-Pattern 5: Path Traversal Bypass
-  /admin/users -> 403
-  /ADMIN/users -> 200 (case insensitive match)
-  /admin/./users -> 200 (path normalization bypass)
-  Defense: Normalize paths before authorization check
-```
+![authorization_bypass_patterns](svg/courses/security/web-application-hacking/16_logic_flaws/authorization_bypass_patterns.svg)
 
 ---
 

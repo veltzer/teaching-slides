@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Attack Surface Mapping</text>
+  <!-- Web Application center -->
+  <rect x="260" y="50" width="200" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="360" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Web Application</text>
+  <text x="360" y="90" text-anchor="middle" font-size="9" fill="#666">Target for analysis</text>
+  <!-- Input Vectors -->
+  <rect x="20" y="130" width="220" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="130" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Input Vectors</text>
+  <text x="130" y="175" text-anchor="middle" font-size="10" fill="#333">URL Parameters</text>
+  <text x="130" y="193" text-anchor="middle" font-size="10" fill="#333">POST Data / Forms</text>
+  <text x="130" y="211" text-anchor="middle" font-size="10" fill="#333">Cookies</text>
+  <text x="130" y="229" text-anchor="middle" font-size="10" fill="#333">HTTP Headers</text>
+  <text x="130" y="247" text-anchor="middle" font-size="10" fill="#333">File Uploads</text>
+  <line x1="200" y1="130" x2="280" y2="100" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Hidden Inputs -->
+  <rect x="250" y="130" width="220" height="130" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="360" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#e6a800">Hidden Inputs</text>
+  <text x="360" y="175" text-anchor="middle" font-size="10" fill="#333">Hidden Form Fields</text>
+  <text x="360" y="193" text-anchor="middle" font-size="10" fill="#333">JavaScript Variables</text>
+  <text x="360" y="211" text-anchor="middle" font-size="10" fill="#333">API Endpoints</text>
+  <text x="360" y="229" text-anchor="middle" font-size="10" fill="#333">WebSocket Channels</text>
+  <text x="360" y="247" text-anchor="middle" font-size="10" fill="#333">Local Storage</text>
+  <line x1="360" y1="130" x2="360" y2="102" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Infrastructure -->
+  <rect x="480" y="130" width="220" height="130" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="590" y="155" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Infrastructure</text>
+  <text x="590" y="175" text-anchor="middle" font-size="10" fill="#333">Server Banners</text>
+  <text x="590" y="193" text-anchor="middle" font-size="10" fill="#333">Error Messages</text>
+  <text x="590" y="211" text-anchor="middle" font-size="10" fill="#333">Default Pages</text>
+  <text x="590" y="229" text-anchor="middle" font-size="10" fill="#333">Directory Listings</text>
+  <text x="590" y="247" text-anchor="middle" font-size="10" fill="#333">robots.txt / sitemap</text>
+  <line x1="520" y1="130" x2="440" y2="100" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- Note -->
+  <rect x="120" y="300" width="480" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="360" y="325" text-anchor="middle" font-size="10" fill="#333">Every input point is a potential attack vector - map them all systematically</text>
+</svg>

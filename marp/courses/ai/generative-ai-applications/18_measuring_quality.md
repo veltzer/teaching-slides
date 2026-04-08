@@ -4,24 +4,7 @@
 
 ## Why Measure Quality?
 
-```diagram
-Without measurement, you're flying blind:
-
-  "Is my fine-tuned model better?"     → Need metrics
-  "Which prompt strategy works best?"  → Need comparison
-  "Is this model safe to deploy?"      → Need evaluation
-
-Quality dimensions:
-┌──────────────────────────────────────────────┐
-│  FLUENCY        — Is the text grammatical?    │
-│  RELEVANCE      — Does it address the query?  │
-│  ACCURACY       — Are the facts correct?      │
-│  COHERENCE      — Does it make logical sense? │
-│  COMPLETENESS   — Does it cover the topic?    │
-│  SAFETY         — Is it free from harm?       │
-│  CONSISTENCY    — Same quality every time?     │
-└──────────────────────────────────────────────┘
-```
+![why_measure_quality](svg/courses/ai/generative-ai-applications/18_measuring_quality/why_measure_quality.svg)
 
 ---
 
@@ -239,62 +222,13 @@ def robust_judge(question, resp_a, resp_b):
 
 ## Human Evaluation — The Gold Standard
 
-```diagram
-Human evaluation setup:
-
-1. TASK DESIGN
-   ┌──────────────────────────────────────┐
-   │ Rate this response on a 1-5 scale:   │
-   │                                       │
-   │ Question: "What causes rain?"         │
-   │                                       │
-   │ Response: "Rain occurs when water     │
-   │ vapor in the atmosphere condenses..." │
-   │                                       │
-   │ Accuracy:     ○1 ○2 ○3 ○4 ○5        │
-   │ Helpfulness:  ○1 ○2 ○3 ○4 ○5        │
-   │ Fluency:      ○1 ○2 ○3 ○4 ○5        │
-   └──────────────────────────────────────┘
-
-2. INTER-ANNOTATOR AGREEMENT
-   Multiple raters per example
-   Cohen's kappa or Krippendorff's alpha
-
-3. CALIBRATION
-   Include gold-standard examples
-   Regular annotator meetings
-```
+![human_evaluation_the_gold_standard](svg/courses/ai/generative-ai-applications/18_measuring_quality/human_evaluation_the_gold_standard.svg)
 
 ---
 
 ## Evaluation Pipeline Architecture
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│              EVALUATION PIPELINE                      │
-│                                                       │
-│  ┌──────────┐   ┌───────────┐   ┌────────────────┐  │
-│  │ Test Set  │──>│ Generate  │──>│ Auto Metrics   │  │
-│  │ 500+     │   │ Responses │   │ BLEU, ROUGE,   │  │
-│  │ examples │   │           │   │ BERTScore      │  │
-│  └──────────┘   └───────────┘   └───────┬────────┘  │
-│                                          │           │
-│                                 ┌────────▼────────┐  │
-│                                 │ LLM-as-Judge   │  │
-│                                 │ (GPT-4 eval)   │  │
-│                                 └────────┬────────┘  │
-│                                          │           │
-│                                 ┌────────▼────────┐  │
-│                                 │ Human Eval      │  │
-│                                 │ (sample)        │  │
-│                                 └────────┬────────┘  │
-│                                          │           │
-│                                 ┌────────▼────────┐  │
-│                                 │ Dashboard &     │  │
-│                                 │ Reports         │  │
-│                                 └─────────────────┘  │
-└──────────────────────────────────────────────────────┘
-```
+![evaluation_pipeline_architecture](svg/courses/ai/generative-ai-applications/18_measuring_quality/evaluation_pipeline_architecture.svg)
 
 ---
 

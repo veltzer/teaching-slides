@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 440" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">How Many Examples Do You Need?</text>
+  <!-- Chart axes -->
+  <line x1="100" y1="60" x2="100" y2="280" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="280" x2="650" y2="280" stroke="#333" stroke-width="2"/>
+  <text x="50" y="175" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90, 50, 175)">Accuracy</text>
+  <text x="375" y="310" text-anchor="middle" font-size="13" fill="#333">Number of examples</text>
+  <!-- Y labels -->
+  <text x="90" y="272" text-anchor="end" font-size="10" fill="#666">50%</text>
+  <text x="90" y="220" text-anchor="end" font-size="10" fill="#666">70%</text>
+  <text x="90" y="160" text-anchor="end" font-size="10" fill="#666">80%</text>
+  <text x="90" y="100" text-anchor="end" font-size="10" fill="#666">90%</text>
+  <text x="90" y="70" text-anchor="end" font-size="10" fill="#666">100%</text>
+  <!-- X labels -->
+  <text x="150" y="298" text-anchor="middle" font-size="10" fill="#666">0</text>
+  <text x="230" y="298" text-anchor="middle" font-size="10" fill="#666">2</text>
+  <text x="310" y="298" text-anchor="middle" font-size="10" fill="#666">4</text>
+  <text x="390" y="298" text-anchor="middle" font-size="10" fill="#666">6</text>
+  <text x="470" y="298" text-anchor="middle" font-size="10" fill="#666">8</text>
+  <text x="540" y="298" text-anchor="middle" font-size="10" fill="#666">10</text>
+  <text x="620" y="298" text-anchor="middle" font-size="10" fill="#666">20</text>
+  <!-- Curve -->
+  <path d="M150,265 Q200,210 250,170 Q300,135 350,110 Q400,95 450,87 Q500,82 550,78 Q600,76 640,75" fill="none" stroke="#4a90e2" stroke-width="3"/>
+  <!-- Diminishing returns line -->
+  <line x1="410" y1="60" x2="410" y2="280" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="430" y="155" font-size="10" fill="#856404">Diminishing returns</text>
+  <text x="430" y="170" font-size="10" fill="#856404">after ~5-8 examples</text>
+  <!-- Guidelines -->
+  <rect x="40" y="325" width="340" height="100" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="210" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Guidelines</text>
+  <text x="60" y="368" font-size="10" fill="#333">0 examples: Common/simple tasks</text>
+  <text x="60" y="385" font-size="10" fill="#333">1-3 examples: Well-defined tasks</text>
+  <text x="60" y="402" font-size="10" fill="#333">4-8 examples: Complex/ambiguous tasks</text>
+  <rect x="420" y="325" width="340" height="100" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="590" y="348" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Advanced</text>
+  <text x="440" y="368" font-size="10" fill="#333">10+ examples: Domain-specific formats</text>
+  <text x="440" y="385" font-size="10" fill="#333">50+ examples: Consider fine-tuning</text>
+  <text x="440" y="402" font-size="10" fill="#333">instead of few-shot prompting</text>
+</svg>

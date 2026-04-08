@@ -24,25 +24,7 @@ Example:
 
 ## From N-grams to Neural Language Models
 
-```diagram
-Evolution of Language Modeling:
-
-N-grams (1990s)     → Count word sequences in corpus
-                       P(w | w-1, w-2) from frequency tables
-                       Problem: sparse data, no generalization
-
-RNNs (2010s)        → Process sequences with hidden state
-                       P(w | h_t) where h_t encodes history
-                       Problem: forgets long-range dependencies
-
-LSTMs (2014)        → Gated memory cells
-                       Better at long-range, still sequential
-                       Problem: slow training, limited context
-
-Transformers (2017) → Parallel attention over all positions
-                       P(w | all previous tokens simultaneously)
-                       Solved: parallelism, long-range, scalable
-```
+![from_n_grams_to_neural_language_models](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/from_n_grams_to_neural_language_models.svg)
 
 ---
 
@@ -65,37 +47,7 @@ Transformers (2017) → Parallel attention over all positions
 
 ## GPT Architecture Deep Dive
 
-```diagram
-Input: "Explain quantum computing"
-
-┌──────────────────────────────────────────┐
-│            TOKEN EMBEDDING               │
-│  "Explain" → [0.12, -0.34, 0.56, ...]   │
-│  "quantum" → [0.78, 0.11, -0.45, ...]   │
-│  "computing"→[-0.23, 0.67, 0.89, ...]   │
-└──────────────────┬───────────────────────┘
-                   │
-           + Positional Encoding
-                   │
-┌──────────────────┴───────────────────────┐
-│       TRANSFORMER DECODER BLOCK ×N       │
-│  ┌────────────────────────────────────┐  │
-│  │  Masked Multi-Head Self-Attention  │  │
-│  │  (causal: can only look left)      │  │
-│  └────────────────┬───────────────────┘  │
-│  ┌────────────────┴───────────────────┐  │
-│  │  Feed-Forward Network (MLP)        │  │
-│  │  FFN(x) = GELU(xW₁ + b₁)W₂ + b₂  │  │
-│  └────────────────┬───────────────────┘  │
-│  Layer Norm + Residual connections       │
-└──────────────────┬───────────────────────┘
-                   │
-┌──────────────────┴───────────────────────┐
-│         LINEAR + SOFTMAX                 │
-│  Vocabulary probability distribution     │
-│  → next token: "in" (p=0.32)            │
-└──────────────────────────────────────────┘
-```
+![gpt_architecture_deep_dive](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/gpt_architecture_deep_dive.svg)
 
 ---
 
@@ -185,18 +137,7 @@ loss = loss_fn(
 
 What GPT models are trained on:
 
-```diagram
-┌───────────────────────────────────────────┐
-│           TRAINING DATA MIX               │
-├───────────────────┬───────────────────────┤
-│ Web crawl data    │ ████████████████ 60%  │
-│ Books             │ ████████ 16%          │
-│ Wikipedia         │ ███ 6%                │
-│ Code (GitHub)     │ █████ 10%             │
-│ Academic papers   │ ██ 4%                 │
-│ Curated datasets  │ ██ 4%                 │
-└───────────────────┴───────────────────────┘
-```
+![pre_training_data](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/pre_training_data.svg)
 
 **Data quality matters enormously:**
 - Deduplication reduces memorization
@@ -231,31 +172,7 @@ ChatGPT (aligned model):
 
 ## ChatGPT Training — Three Stages
 
-```diagram
-Stage 1: PRE-TRAINING (unsupervised)
-┌──────────────────────────────────┐
-│ Predict next token on web text   │
-│ Billions of parameters           │
-│ Trillions of tokens              │
-│ Result: capable but unaligned    │
-└──────────────────┬───────────────┘
-                   ▼
-Stage 2: SUPERVISED FINE-TUNING (SFT)
-┌──────────────────────────────────┐
-│ Human-written ideal responses    │
-│ Prompt → desired response pairs  │
-│ ~100K examples                   │
-│ Result: follows instructions     │
-└──────────────────┬───────────────┘
-                   ▼
-Stage 3: RLHF (Reinforcement Learning from Human Feedback)
-┌──────────────────────────────────┐
-│ Humans rank model outputs        │
-│ Train reward model on rankings   │
-│ Optimize policy with PPO         │
-│ Result: aligned, safe, helpful   │
-└──────────────────────────────────┘
-```
+![chatgpt_training_three_stages](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/chatgpt_training_three_stages.svg)
 
 ---
 
@@ -318,28 +235,7 @@ sft_examples = [
 
 ## Stage 3: RLHF — Reinforcement Learning from Human Feedback
 
-```diagram
-Step 1: Collect comparison data
-┌─────────────────────────────────────────┐
-│ Prompt: "Write a haiku about coding"    │
-│                                         │
-│ Response A: "Fingers on the keys        │
-│              Logic flows like a river    │
-│              Bug found, start again"     │
-│                                         │
-│ Response B: "Code code code today        │
-│              I like to write the code    │
-│              Code is very fun"           │
-│                                         │
-│ Human ranks: A > B                      │
-└─────────────────────────────────────────┘
-
-Step 2: Train reward model on rankings
-  reward_model(prompt, response) → scalar score
-
-Step 3: Optimize with PPO
-  Maximize reward while staying close to SFT model
-```
+![stage_3_rlhf_reinforcement_learning_from_human_feedback](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/stage_3_rlhf_reinforcement_learning_from_human_feedback.svg)
 
 ---
 
@@ -373,26 +269,7 @@ loss = -torch.log(torch.sigmoid(r_w - r_l))
 
 ## RLHF — PPO Optimization
 
-```diagram
-PPO (Proximal Policy Optimization) loop:
-
-┌──────────────────────────────────────┐
-│  1. Sample prompt from dataset       │
-│  2. Generate response with policy    │
-│  3. Score with reward model          │
-│  4. Compute advantage                │
-│  5. Update policy (with KL penalty)  │
-└──────────────────────────────────────┘
-
-Objective:
-  maximize  E[reward(prompt, response)]
-  subject to  KL(policy || sft_model) < δ
-
-The KL constraint prevents the model from
-"reward hacking" — finding degenerate responses
-that score high on the reward model but are
-actually low quality.
-```
+![rlhf_ppo_optimization](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/rlhf_ppo_optimization.svg)
 
 ---
 
@@ -484,19 +361,7 @@ response = client.chat.completions.create(
 
 ## Temperature vs. Top-p — When to Use Which
 
-```diagram
-Task-Based Recommendations:
-─────────────────────────────────────────────
-Code generation:    temp=0.0-0.2, top_p=0.1
-Factual Q&A:        temp=0.0-0.3, top_p=0.3
-Business writing:   temp=0.3-0.5, top_p=0.5
-Creative writing:   temp=0.7-1.0, top_p=0.9
-Brainstorming:      temp=1.0-1.5, top_p=0.95
-─────────────────────────────────────────────
-
-General rule: Adjust ONE of temperature or top_p, not both.
-Setting both can lead to unexpected behavior.
-```
+![temperature_vs_top_p_when_to_use_which](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/temperature_vs_top_p_when_to_use_which.svg)
 
 ```python
 # Deterministic (always same output)
@@ -510,22 +375,7 @@ response = client.chat.completions.create(
 
 ## Comparing GPT with Other LLMs
 
-```diagram
-┌─────────────┬──────────┬──────────┬──────────┬──────────┐
-│ Feature     │ GPT-4o   │ Claude 3 │ Gemini   │ LLaMA 3  │
-│             │          │ Opus     │ 1.5 Pro  │ 70B      │
-├─────────────┼──────────┼──────────┼──────────┼──────────┤
-│ Provider    │ OpenAI   │Anthropic │ Google   │ Meta     │
-│ Context     │ 128K     │ 200K     │ 1M       │ 128K     │
-│ Open source │ No       │ No       │ No       │ Yes      │
-│ Multimodal  │ Yes      │ Yes      │ Yes      │ Yes      │
-│ Code        │ ★★★★★   │ ★★★★★   │ ★★★★    │ ★★★★    │
-│ Reasoning   │ ★★★★★   │ ★★★★★   │ ★★★★    │ ★★★★    │
-│ Cost        │ Medium   │ High     │ Medium   │ Free*    │
-│ Speed       │ Fast     │ Medium   │ Fast     │ Varies   │
-└─────────────┴──────────┴──────────┴──────────┴──────────┘
-* Compute costs still apply for self-hosting
-```
+![comparing_gpt_with_other_llms](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/comparing_gpt_with_other_llms.svg)
 
 ---
 
@@ -561,26 +411,7 @@ The model uses **chain-of-thought at inference time**, trading compute for accur
 
 Smaller models can learn from larger ones:
 
-```diagram
-Teacher Model (GPT-4 level, 1T+ params)
-         │
-         │ Generate training data
-         │ (responses to diverse prompts)
-         ▼
-  ┌──────────────────┐
-  │  Distillation     │
-  │  Training         │
-  │                   │
-  │  Student learns   │
-  │  to mimic teacher │
-  └────────┬──────────┘
-           │
-           ▼
-Student Model (7B params)
-  - 99% of teacher quality on common tasks
-  - 100× cheaper to run
-  - Can run on consumer hardware
-```
+![model_distillation](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/model_distillation.svg)
 
 Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
 
@@ -707,19 +538,7 @@ class SwiGLU(nn.Module):
 
 ## KV Cache — Speeding Up Inference
 
-```diagram
-Without KV cache (naive):
-  Step 1: Process ["The"]          → compute K,V for all
-  Step 2: Process ["The", "cat"]   → RECOMPUTE K,V for all
-  Step 3: Process ["The", "cat", "sat"] → RECOMPUTE again
-  Quadratic complexity!
-
-With KV cache:
-  Step 1: Process ["The"]          → cache K₁,V₁
-  Step 2: Process ["cat"]          → cache K₂,V₂ (reuse K₁,V₁)
-  Step 3: Process ["sat"]          → cache K₃,V₃ (reuse K₁,V₁,K₂,V₂)
-  Linear complexity per token!
-```
+![kv_cache_speeding_up_inference](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/kv_cache_speeding_up_inference.svg)
 
 ```python
 # KV cache in practice
@@ -774,30 +593,7 @@ def apply_rope(x, positions, dim):
 
 Memory-efficient attention used in `LLaMA 2/3`, `Mistral`:
 
-```diagram
-Multi-Head Attention (MHA):
-  Q: 32 heads    K: 32 heads    V: 32 heads
-  Each head has its own Q, K, V projections
-  Memory: 3 × 32 × d_head = 96 × d_head
-
-Grouped Query Attention (GQA):
-  Q: 32 heads    K: 8 groups    V: 8 groups
-  Multiple Q heads share the same K,V
-  Memory: 32 × d_head + 2 × 8 × d_head = 48 × d_head
-
-Multi-Query Attention (MQA):
-  Q: 32 heads    K: 1 shared    V: 1 shared
-  ALL Q heads share ONE K,V
-  Memory: 32 × d_head + 2 × d_head = 34 × d_head
-
-┌──────────┬──────────┬──────────┬───────────┐
-│ Method   │ KV Heads │ KV Cache │ Quality   │
-├──────────┼──────────┼──────────┼───────────┤
-│ MHA      │ 32       │ 100%     │ Baseline  │
-│ GQA-8    │ 8        │ 25%      │ ~99.5%    │
-│ MQA      │ 1        │ 3%       │ ~98%      │
-└──────────┴──────────┴──────────┴───────────┘
-```
+![group_query_attention_gqa](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/group_query_attention_gqa.svg)
 
 ---
 

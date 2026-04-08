@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 450" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Blanket Implementation Pattern</text>
+  <!-- Source trait -->
+  <rect x="50" y="60" width="250" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="175" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">trait Display</text>
+  <text x="65" y="108" font-size="11" fill="#555">fn fmt(&amp;self, f: &amp;mut Formatter)</text>
+  <text x="65" y="128" font-size="11" fill="#555">  -&gt; fmt::Result;</text>
+  <!-- Blanket impl -->
+  <rect x="200" y="170" width="350" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="375" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Blanket Implementation</text>
+  <text x="215" y="218" font-size="11" fill="#555">impl&lt;T: Display&gt; ToString for T {</text>
+  <text x="225" y="238" font-size="11" fill="#555">fn to_string(&amp;self) -&gt; String { ... }</text>
+  <!-- Target trait -->
+  <rect x="450" y="60" width="250" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="575" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">trait ToString</text>
+  <text x="465" y="108" font-size="11" fill="#555">fn to_string(&amp;self) -&gt; String;</text>
+  <text x="465" y="128" font-size="10" fill="#555">// automatically available!</text>
+  <!-- Arrows -->
+  <line x1="175" y1="140" x2="300" y2="170" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="475" y1="170" x2="575" y2="140" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Concrete types -->
+  <rect x="50" y="290" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="125" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">i32</text>
+  <text x="125" y="328" text-anchor="middle" font-size="10" fill="#555">impl Display</text>
+  <rect x="230" y="290" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="305" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">String</text>
+  <text x="305" y="328" text-anchor="middle" font-size="10" fill="#555">impl Display</text>
+  <rect x="410" y="290" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="485" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">MyStruct</text>
+  <text x="485" y="328" text-anchor="middle" font-size="10" fill="#555">impl Display</text>
+  <!-- Arrows from blanket to types -->
+  <line x1="300" y1="250" x2="125" y2="290" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="250" x2="305" y2="290" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="250" x2="485" y2="290" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="375" y="268" text-anchor="middle" font-size="10" fill="#28a745">All get ToString for free!</text>
+  <!-- Note -->
+  <rect x="50" y="370" width="650" height="65" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Key Insight</text>
+  <text x="65" y="418" font-size="11" fill="#555">Blanket impls provide trait implementations for ALL types matching a bound.</text>
+  <text x="65" y="428" font-size="11" fill="#555">This is how the standard library provides ToString for any type implementing Display.</text>
+</svg>

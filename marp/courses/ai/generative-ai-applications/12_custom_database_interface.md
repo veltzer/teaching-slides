@@ -4,56 +4,13 @@
 
 ## The Vision: Natural Language to SQL
 
-```diagram
-User: "Show me the top 5 customers by revenue this quarter"
-
-     ┌────────────────────────────┐
-     │      LLM-Powered           │
-     │    Database Interface      │
-     │                            │
-     │  NL → SQL → Execute → NL  │
-     └────────────────────────────┘
-
-Generated SQL:
-  SELECT c.name, SUM(o.amount) as total_revenue
-  FROM customers c
-  JOIN orders o ON c.id = o.customer_id
-  WHERE o.date >= DATE_TRUNC('quarter', CURRENT_DATE)
-  GROUP BY c.name
-  ORDER BY total_revenue DESC
-  LIMIT 5;
-
-Response: "The top 5 customers by revenue this quarter are:
-  1. Acme Corp — $245,000
-  2. TechStart Inc — $198,000
-  ..."
-```
+![the_vision_natural_language_to_sql](svg/courses/ai/generative-ai-applications/12_custom_database_interface/the_vision_natural_language_to_sql.svg)
 
 ---
 
 ## Architecture Overview
 
-```diagram
-┌─────────────────────────────────────────────────────┐
-│                DATABASE INTERFACE                     │
-│                                                       │
-│  ┌──────────┐    ┌──────────┐    ┌──────────────┐   │
-│  │  User    │    │  Schema  │    │  Query       │   │
-│  │  Query   │───>│  Context │───>│  Generator   │   │
-│  │  (NL)    │    │  + LLM   │    │  (LLM)       │   │
-│  └──────────┘    └──────────┘    └──────┬───────┘   │
-│                                          │           │
-│                                   ┌──────▼───────┐   │
-│                                   │  SQL         │   │
-│                                   │  Validator   │   │
-│                                   └──────┬───────┘   │
-│                                          │           │
-│  ┌──────────┐    ┌──────────┐    ┌──────▼───────┐   │
-│  │ Response │    │  Result  │    │  Database    │   │
-│  │ (NL)     │<───│  Formatter│<───│  Executor   │   │
-│  └──────────┘    └──────────┘    └──────────────┘   │
-└─────────────────────────────────────────────────────┘
-```
+![architecture_overview](svg/courses/ai/generative-ai-applications/12_custom_database_interface/architecture_overview.svg)
 
 ---
 
@@ -463,36 +420,7 @@ def auto_visualize(sql_result, question):
 
 ## Security Best Practices
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│         DATABASE INTERFACE SECURITY                   │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  1. READ-ONLY ACCESS                                  │
-│     Create a read-only database user                  │
-│     conn.execute("PRAGMA query_only = ON")            │
-│                                                       │
-│  2. QUERY ALLOWLIST                                   │
-│     Only allow SELECT statements                      │
-│     Block system tables and metadata                  │
-│                                                       │
-│  3. ROW LIMITS                                        │
-│     Always add LIMIT clauses                          │
-│     Prevent full table scans on large tables          │
-│                                                       │
-│  4. TIMEOUT                                           │
-│     Set query execution timeout                       │
-│     Prevent resource exhaustion                       │
-│                                                       │
-│  5. AUDIT LOGGING                                     │
-│     Log all generated SQL and who ran it              │
-│     Monitor for suspicious patterns                   │
-│                                                       │
-│  6. SENSITIVE COLUMN FILTERING                        │
-│     Exclude PII columns from schema context           │
-│     Block queries that access sensitive tables        │
-└──────────────────────────────────────────────────────┘
-```
+![security_best_practices](svg/courses/ai/generative-ai-applications/12_custom_database_interface/security_best_practices.svg)
 
 ---
 

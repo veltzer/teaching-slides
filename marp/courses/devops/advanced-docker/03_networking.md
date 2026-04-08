@@ -40,26 +40,7 @@ docker network inspect bridge
 
 ## Default Bridge Network
 
-```diagram
-┌──────────────────────────────────────┐
-│              Host                     │
-│                                      │
-│  ┌─────────┐       ┌─────────┐      │
-│  │Container│       │Container│      │
-│  │  eth0   │       │  eth0   │      │
-│  │172.17.0.2│      │172.17.0.3│     │
-│  └────┬────┘       └────┬────┘      │
-│       │                  │           │
-│   vethXXXX          vethYYYY        │
-│       │                  │           │
-│  ┌────┴──────────────────┴────┐      │
-│  │       docker0 bridge       │      │
-│  │        172.17.0.1          │      │
-│  └────────────────────────────┘      │
-│                                      │
-│           eth0 (host)                │
-└──────────────────────────────────────┘
-```
+![default_bridge_network](svg/courses/devops/advanced-docker/03_networking/default_bridge_network.svg)
 
 ---
 
@@ -190,16 +171,7 @@ curl localhost:80  # Works directly
 # Use case: High-performance networking, many ports
 ```
 
-```diagram
-┌──────────────────────────────┐
-│           Host               │
-│  ┌────────────────────────┐  │
-│  │    Container Process   │  │
-│  │  (uses host network)   │  │
-│  └────────────────────────┘  │
-│         eth0: 192.168.1.10   │
-└──────────────────────────────┘
-```
+![use_case_high_performance_networking_many_ports](svg/courses/devops/advanced-docker/03_networking/use_case_high_performance_networking_many_ports.svg)
 
 ---
 
@@ -250,21 +222,7 @@ docker service create --name api \
 
 ## Overlay Network Architecture
 
-```diagram
-┌─────────── Node 1 ───────────┐  ┌─────────── Node 2 ───────────┐
-│                               │  │                               │
-│  ┌─────────┐  ┌─────────┐    │  │  ┌─────────┐  ┌─────────┐   │
-│  │ web.1   │  │ api.1   │    │  │  │ web.2   │  │ api.2   │   │
-│  │10.20.0.3│  │10.20.0.4│    │  │  │10.20.0.5│  │10.20.0.6│   │
-│  └────┬────┘  └────┬────┘    │  │  └────┬────┘  └────┬────┘   │
-│       └──────┬─────┘         │  │       └──────┬─────┘        │
-│         br-overlay           │  │         br-overlay          │
-│              │               │  │              │              │
-│         VXLAN tunnel ────────┼──┼──── VXLAN tunnel            │
-│              │               │  │              │              │
-│           eth0               │  │           eth0              │
-└──────────────────────────────┘  └──────────────────────────────┘
-```
+![overlay_network_architecture](svg/courses/devops/advanced-docker/03_networking/overlay_network_architecture.svg)
 
 ---
 
@@ -331,20 +289,7 @@ docker run -d --network macvlan-net \
 
 ## `Macvlan` Network Architecture
 
-```diagram
-┌────────────── Physical Network ──────────────┐
-│                                               │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐   │
-│  │  Router   │  │  Host    │  │ Other    │   │
-│  │  .1       │  │  .10     │  │ Device   │   │
-│  └──────────┘  │          │  │  .50     │   │
-│                │Container │  └──────────┘   │
-│                │  .100    │                  │
-│                │(own MAC) │                  │
-│                └──────────┘                  │
-│           192.168.1.0/24                     │
-└───────────────────────────────────────────────┘
-```
+![macvlan_network_architecture](svg/courses/devops/advanced-docker/03_networking/macvlan_network_architecture.svg)
 
 **Limitation:** Host cannot communicate with `macvlan` containers directly (use `macvlan` sub-interface to work around).
 
@@ -464,11 +409,7 @@ docker service inspect web \
 # Uses IPVS (Linux Virtual Server) in the kernel
 ```
 
-```diagram
-Client → VIP (10.20.0.5) → IPVS → Task 1 (10.20.0.6)
-                                  → Task 2 (10.20.0.7)
-                                  → Task 3 (10.20.0.8)
-```
+![uses_ipvs_linux_virtual_server_in_the_kernel](svg/courses/devops/advanced-docker/03_networking/uses_ipvs_linux_virtual_server_in_the_kernel.svg)
 
 ---
 

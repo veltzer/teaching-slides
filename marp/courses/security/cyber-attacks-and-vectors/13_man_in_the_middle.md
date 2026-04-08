@@ -92,57 +92,13 @@ sudo apt install libssl-doc
 
 ## MITM Attack Types and Techniques
 
-```diagram
-┌────────────────────────────────────────────────────────────┐
-│                MITM Attack Taxonomy                        │
-├────────────────────────────────────────────────────────────┤
-│                                                            │
-│  Network-Level:                                            │
-│  ├── ARP Spoofing / ARP Cache Poisoning                    │
-│  ├── DNS Spoofing                                          │
-│  ├── DHCP Spoofing                                         │
-│  ├── BGP Hijacking                                         │
-│  └── Evil Twin Wi-Fi                                       │
-│                                                            │
-│  Application-Level:                                        │
-│  ├── SSL Stripping (downgrade HTTPS to HTTP)               │
-│  ├── SSL/TLS Interception (proxy with fake cert)           │
-│  ├── HTTP/2 Downgrade                                      │
-│  └── WebSocket Hijacking                                   │
-│                                                            │
-│  Protocol-Level:                                           │
-│  ├── LLMNR/NBT-NS Poisoning (Windows networks)            │
-│  ├── mDNS Poisoning                                        │
-│  └── WPAD Hijacking                                        │
-│                                                            │
-└────────────────────────────────────────────────────────────┘
-```
+![mitm_attack_types_and_techniques](svg/courses/security/cyber-attacks-and-vectors/13_man_in_the_middle/mitm_attack_types_and_techniques.svg)
 
 ---
 
 ## ARP Spoofing: Step by Step
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│              ARP Spoofing Attack                         │
-│                                                          │
-│  Normal:                                                 │
-│  Victim (192.168.1.10) ──> Gateway (192.168.1.1)        │
-│  ARP: 192.168.1.1 = AA:BB:CC:DD:EE:FF (real MAC)       │
-│                                                          │
-│  Attack:                                                 │
-│  Attacker sends gratuitous ARP replies:                  │
-│  "192.168.1.1 is at XX:XX:XX:XX:XX:XX" (attacker MAC)   │
-│                                                          │
-│  After poisoning:                                        │
-│  ┌────────┐     ┌──────────┐     ┌─────────┐           │
-│  │ Victim  │────>│ Attacker  │────>│ Gateway  │          │
-│  │         │<────│ (forwards)│<────│         │          │
-│  └────────┘     └──────────┘     └─────────┘           │
-│                                                          │
-│  Attacker sees ALL traffic between victim and gateway    │
-└──────────────────────────────────────────────────────────┘
-```
+![arp_spoofing_step_by_step](svg/courses/security/cyber-attacks-and-vectors/13_man_in_the_middle/arp_spoofing_step_by_step.svg)
 
 ---
 
@@ -173,30 +129,7 @@ sudo arp -s 192.168.1.1 AA:BB:CC:DD:EE:FF
 
 ## SSL Stripping Attack
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│              SSL Stripping (Moxie Marlinspike, 2009)     │
-│                                                          │
-│  Normal flow:                                            │
-│  Browser ──HTTPS──> bank.com (encrypted)                 │
-│                                                          │
-│  SSL Stripping:                                          │
-│  ┌────────┐  HTTP  ┌──────────┐  HTTPS  ┌─────────┐    │
-│  │ Victim  │──────>│ Attacker  │────────>│bank.com  │    │
-│  │ Browser │<──────│ (proxy)   │<────────│         │    │
-│  └────────┘  HTTP  └──────────┘  HTTPS  └─────────┘    │
-│                                                          │
-│  1. Attacker intercepts initial HTTP connection          │
-│  2. Attacker connects to bank.com via HTTPS              │
-│  3. Attacker serves content to victim via HTTP           │
-│  4. Victim sees no padlock - but most users don't check  │
-│  5. All credentials transmitted in plain text!           │
-│                                                          │
-│  Defense: HSTS (HTTP Strict Transport Security)          │
-│  Strict-Transport-Security: max-age=31536000;            │
-│  includeSubDomains; preload                              │
-└──────────────────────────────────────────────────────────┘
-```
+![ssl_stripping_attack](svg/courses/security/cyber-attacks-and-vectors/13_man_in_the_middle/ssl_stripping_attack.svg)
 
 ---
 

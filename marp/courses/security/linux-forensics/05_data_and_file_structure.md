@@ -28,22 +28,7 @@ file /tmp/image.jpg
 
 ## Magic Numbers Reference
 
-```diagram
-File Type     | Magic Bytes (Hex)        | ASCII
---------------+--------------------------+--------
-ELF binary    | 7F 45 4C 46              | .ELF
-PDF           | 25 50 44 46              | %PDF
-ZIP/DOCX/XLSX | 50 4B 03 04              | PK..
-JPEG          | FF D8 FF E0/E1           |
-PNG           | 89 50 4E 47 0D 0A 1A 0A  | .PNG....
-GIF           | 47 49 46 38              | GIF8
-gzip          | 1F 8B                    |
-bzip2         | 42 5A 68                 | BZh
-7-Zip         | 37 7A BC AF 27 1C        | 7z..'.
-tar           | 75 73 74 61 72 (at 257)  | ustar
-RAR           | 52 61 72 21 1A 07        | Rar!..
-SQLite        | 53 51 4C 69 74 65        | SQLite
-```
+![magic_numbers_reference](svg/courses/security/linux-forensics/05_data_and_file_structure/magic_numbers_reference.svg)
 
 ---
 
@@ -180,18 +165,7 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ## File System Metadata vs File Content
 
-```diagram
-+------------------+     +------------------+
-|  Inode (metadata)|     |  Data Blocks     |
-|  - File size     |     |  (actual content)|
-|  - Ownership     |     |                  |
-|  - Permissions   |     |  Hello, this is  |
-|  - Timestamps    |     |  the file data   |
-|  - Block pointers| --> |  stored in       |
-|  - Link count    |     |  allocated       |
-|  - Type          |     |  blocks...       |
-+------------------+     +------------------+
-```
+![file_system_metadata_vs_file_content](svg/courses/security/linux-forensics/05_data_and_file_structure/file_system_metadata_vs_file_content.svg)
 
 - Deleting a file removes the directory entry and marks inode as free
 - Data blocks are NOT overwritten immediately

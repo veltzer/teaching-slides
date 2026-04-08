@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">DNS Security Architecture</text>
+  <!-- DNSSEC Chain of Trust -->
+  <text x="360" y="60" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">DNSSEC Chain of Trust</text>
+  <rect x="60" y="75" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="130" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Root Zone</text>
+  <text x="130" y="114" text-anchor="middle" font-size="10" fill="#28a745">Signed</text>
+  <line x1="200" y1="97" x2="280" y2="97" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="290" y="75" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="360" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">TLD Zone</text>
+  <text x="360" y="114" text-anchor="middle" font-size="10" fill="#28a745">Signed</text>
+  <line x1="430" y1="97" x2="510" y2="97" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="520" y="75" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="590" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Domain Zone</text>
+  <text x="590" y="114" text-anchor="middle" font-size="10" fill="#28a745">Signed</text>
+  <!-- Security Layers -->
+  <text x="360" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Security Layers</text>
+  <rect x="40" y="180" width="640" height="240" rx="5" fill="none" stroke="#4a90e2" stroke-width="1" stroke-dasharray="5,5"/>
+  <!-- DoH -->
+  <rect x="60" y="195" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="130" y="217" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">DNS over HTTPS</text>
+  <text x="130" y="233" text-anchor="middle" font-size="10" fill="#666">Encrypted queries</text>
+  <!-- DoT -->
+  <rect x="220" y="195" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="290" y="217" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">DNS over TLS</text>
+  <text x="290" y="233" text-anchor="middle" font-size="10" fill="#666">Port 853 encryption</text>
+  <!-- DNSSEC -->
+  <rect x="380" y="195" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="450" y="217" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">DNSSEC Validation</text>
+  <text x="450" y="233" text-anchor="middle" font-size="10" fill="#666">Signature checks</text>
+  <!-- RPZ -->
+  <rect x="540" y="195" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="600" y="217" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">RPZ</text>
+  <text x="600" y="233" text-anchor="middle" font-size="10" fill="#666">Policy filtering</text>
+  <!-- DNS Firewall -->
+  <rect x="160" y="280" width="400" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="360" y="302" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">DNS Firewall</text>
+  <text x="360" y="318" text-anchor="middle" font-size="10" fill="#666">Blocks malicious domains &amp; monitors anomalous queries</text>
+  <!-- Resolver -->
+  <rect x="200" y="360" width="320" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="360" y="382" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Secure Recursive Resolver</text>
+  <text x="360" y="397" text-anchor="middle" font-size="10" fill="#666">Validates all responses before caching</text>
+  <line x1="360" y1="330" x2="360" y2="360" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

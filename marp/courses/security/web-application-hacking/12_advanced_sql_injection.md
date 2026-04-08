@@ -521,30 +521,7 @@ db.query("SELECT * FROM users WHERE username = $1", [username]);
 
 ## Defense Layers Against SQL Injection
 
-```diagram
-Layer 1: Parameterized Queries / Prepared Statements
-  -> Separates code from data (PRIMARY DEFENSE)
-
-Layer 2: Input Validation
-  -> Whitelist allowed characters/patterns
-  -> Reject unexpected input
-
-Layer 3: Stored Procedures (with parameterized calls)
-  -> Encapsulate SQL logic
-  -> Reduce direct query construction
-
-Layer 4: Least Privilege
-  -> DB user has minimal permissions
-  -> No FILE, no PROCESS, no SUPER privileges
-
-Layer 5: WAF (Web Application Firewall)
-  -> Detect and block common SQL injection patterns
-  -> Last resort, not primary defense
-
-Layer 6: Error Handling
-  -> Never expose database errors to users
-  -> Log errors server-side only
-```
+![defense_layers_against_sql_injection](svg/courses/security/web-application-hacking/12_advanced_sql_injection/defense_layers_against_sql_injection.svg)
 
 ---
 
@@ -673,33 +650,7 @@ User.where("name = '#{user_input}'")  # VULNERABLE!
 
 ## SQL Injection Impact Assessment
 
-```diagram
-Severity depends on:
-
-1. Database Privileges
-   - Read only? -> Data theft
-   - Write access? -> Data modification
-   - FILE privilege? -> Read/write OS files
-   - SUPER/DBA? -> Full server compromise
-
-2. Data Sensitivity
-   - PII (Personal Identifiable Information)
-   - Financial data (credit cards, bank accounts)
-   - Healthcare data (HIPAA violations)
-   - Authentication credentials
-
-3. Network Position
-   - Internet-facing? Higher exposure
-   - Internal only? Still critical
-   - Database links to other systems?
-
-4. Business Context
-   - E-commerce: financial fraud
-   - Healthcare: patient data breach
-   - Government: national security risk
-
-CVSS Score: Typically 7.5-9.8 (High to Critical)
-```
+![sql_injection_impact_assessment](svg/courses/security/web-application-hacking/12_advanced_sql_injection/sql_injection_impact_assessment.svg)
 
 ---
 

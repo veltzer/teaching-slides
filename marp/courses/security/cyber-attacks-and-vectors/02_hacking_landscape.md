@@ -15,18 +15,7 @@
 - Typically target low-hanging fruit and unpatched systems
 - Common tools: Metasploit, LOIC, pre-packaged exploit kits
 
-```diagram
-┌─────────────────────────────────────────────┐
-│           Script Kiddie Profile             │
-├─────────────────────────────────────────────┤
-│  Skill Level:   Low                         │
-│  Motivation:    Curiosity / bragging rights │
-│  Tools:         Pre-built exploit kits      │
-│  Targets:       Random / opportunistic      │
-│  Risk Level:    Low-Medium                  │
-│  Persistence:   Low                         │
-└─────────────────────────────────────────────┘
-```
+![script_kiddies](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/script_kiddies.svg)
 
 ---
 ## Hacktivists
@@ -46,18 +35,7 @@
 - Use dark web markets for buying/selling exploits and data
 - Example: FIN7 group responsible for over $1 billion in theft from financial institutions
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│         Cybercrime Economy                       │
-├──────────────────────────────────────────────────┤
-│  Exploit kits:        $500 - $100,000            │
-│  Ransomware-as-a-Service: 20-30% commission      │
-│  Stolen credit cards: $5 - $50 each              │
-│  Zero-day exploits:   $10,000 - $2,500,000       │
-│  Botnet rental:       $50 - $500/day             │
-│  DDoS-for-hire:       $25 - $500/attack          │
-└──────────────────────────────────────────────────┘
-```
+![cyber_criminals](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/cyber_criminals.svg)
 
 ---
 ## State-Sponsored Actors (APTs)
@@ -131,19 +109,7 @@
 
 Organizations should understand why they are targets:
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│               Why Attackers Target You                   │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  Data Value:     PII, financial records, IP, health     │
-│  Access Value:   Supply chain position, partnerships    │
-│  Compute Value:  Cryptomining, botnet participation     │
-│  Strategic Value: Geopolitical, competitive intel       │
-│  Ransom Value:   Business continuity dependency         │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
+![target_value_assessment](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/target_value_assessment.svg)
 
 ---
 ## Attack Life-cycle
@@ -159,23 +125,7 @@ Organizations should understand why they are targets:
 ---
 ## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
 
-```diagram
-┌───────────────┐
-│ Reconnaissance│  Gather information about the target
-├───────────────┤
-│ Weaponization │  Create exploit + payload (e.g., malicious PDF)
-├───────────────┤
-│   Delivery    │  Send weapon to target (email, USB, web)
-├───────────────┤
-│ Exploitation  │  Trigger the vulnerability
-├───────────────┤
-│ Installation  │  Install backdoor/malware on target
-├───────────────┤
-│    C2 (C&C)   │  Establish command and control channel
-├───────────────┤
-│   Actions     │  Achieve objectives (exfil, destroy, pivot)
-└───────────────┘
-```
+![attack_life_cycle_the_cyber_kill_chain_lockheed_martin](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/attack_life_cycle_the_cyber_kill_chain_lockheed_martin.svg)
 
 Breaking the chain at any stage prevents the attack from succeeding.
 
@@ -239,14 +189,7 @@ An alternative model to the Kill Chain that describes adversary behavior:
 ---
 ## Digital Forensics Process
 
-```diagram
-┌────────────┐    ┌────────────┐    ┌────────────┐    ┌────────────┐
-│Identification│──>│Preservation│──>│  Analysis   │──>│  Reporting  │
-└────────────┘    └────────────┘    └────────────┘    └────────────┘
-      │                 │                 │                 │
-  Detect the       Secure and        Examine and       Document
-  incident        preserve evidence  correlate data    findings
-```
+![digital_forensics_process](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/digital_forensics_process.svg)
 
 Key forensic tools:
 - **Volatility**: Memory forensics framework

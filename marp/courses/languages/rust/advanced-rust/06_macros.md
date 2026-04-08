@@ -443,20 +443,7 @@ Compile-time code generation with Rust code
 
 ## Types of Procedural Macros
 
-```diagram
-  ┌─────────────────────────────────────────────────────┐
-  │              Procedural Macro Types                  │
-  ├─────────────┬───────────────────────────────────────┤
-  │ Derive      │ #[derive(MyTrait)]                    │
-  │             │ Adds impl blocks to structs/enums     │
-  ├─────────────┼───────────────────────────────────────┤
-  │ Attribute   │ #[my_attribute]                       │
-  │             │ Transforms any item                   │
-  ├─────────────┼───────────────────────────────────────┤
-  │ Function    │ my_macro!(...)                        │
-  │ -like       │ Arbitrary token transformation        │
-  └─────────────┴───────────────────────────────────────┘
-```
+![types_of_procedural_macros](svg/courses/languages/rust/advanced-rust/06_macros/types_of_procedural_macros.svg)
 
 All proc macros must be in a separate crate with `proc-macro = true`.
 
@@ -921,30 +908,7 @@ Choosing the right abstraction
 
 ## Decision Guide
 
-```diagram
-  ┌──────────────────────────────────────────────────────────┐
-  │         When to Use What?                                │
-  ├──────────────────────────────────────────────────────────┤
-  │                                                          │
-  │  Use GENERICS when:                                      │
-  │  - Behavior varies by type but interface is the same     │
-  │  - You want type checking at call sites                  │
-  │  - The pattern fits trait bounds                         │
-  │                                                          │
-  │  Use DECLARATIVE MACROS when:                            │
-  │  - Reducing boilerplate code                             │
-  │  - Variadic arguments (different numbers of args)        │
-  │  - DSL-like syntax                                       │
-  │  - Code that varies in structure, not just types         │
-  │                                                          │
-  │  Use PROC MACROS when:                                   │
-  │  - Deriving trait implementations                        │
-  │  - Transforming item definitions                         │
-  │  - Compile-time validation (SQL, regex, etc.)            │
-  │  - Generating code from external data (schemas, etc.)    │
-  │                                                          │
-  └──────────────────────────────────────────────────────────┘
-```
+![decision_guide](svg/courses/languages/rust/advanced-rust/06_macros/decision_guide.svg)
 
 ---
 
@@ -1016,22 +980,7 @@ macro_rules! strict_macro {
 
 ## Summary
 
-```diagram
-  ┌───────────────────────────────────────────────────────┐
-  │                  Macros Cheatsheet                     │
-  ├───────────────────────────────────────────────────────┤
-  │ macro_rules!     : pattern-based, hygienic            │
-  │ Fragments        : expr, ident, ty, pat, tt, etc.     │
-  │ Repetitions      : $( ... ),*  $( ... ),+  $( ... )?  │
-  │ Proc macros      : require separate crate             │
-  │ #[derive(X)]     : generates impl blocks              │
-  │ #[attribute]     : transforms any item                │
-  │ fn_like!(...)    : arbitrary token transformation     │
-  │ syn              : parse TokenStream into AST         │
-  │ quote            : generate TokenStream from template │
-  │ cargo expand     : view expanded macro output         │
-  └───────────────────────────────────────────────────────┘
-```
+![summary](svg/courses/languages/rust/advanced-rust/06_macros/summary.svg)
 
 ---
 

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Lifetime Variance Rules</text>
+  <!-- Covariant -->
+  <rect x="30" y="55" width="230" height="160" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="145" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Covariant</text>
+  <text x="45" y="105" font-size="11" fill="#555">&amp;'a T is covariant in 'a</text>
+  <text x="45" y="130" font-size="10" fill="#555">If 'long: 'short, then</text>
+  <text x="45" y="150" font-size="10" fill="#555">&amp;'long T can be used</text>
+  <text x="45" y="170" font-size="10" fill="#555">where &amp;'short T expected</text>
+  <rect x="45" y="180" width="200" height="25" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="145" y="197" text-anchor="middle" font-size="10" fill="#333">Longer lifetime is subtype</text>
+  <!-- Contravariant -->
+  <rect x="285" y="55" width="230" height="160" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Contravariant</text>
+  <text x="300" y="105" font-size="11" fill="#555">fn(&amp;'a T) is contra-</text>
+  <text x="300" y="125" font-size="11" fill="#555">variant in 'a</text>
+  <text x="300" y="150" font-size="10" fill="#555">If 'long: 'short, then</text>
+  <text x="300" y="170" font-size="10" fill="#555">fn(&amp;'short) can be used</text>
+  <text x="300" y="190" font-size="10" fill="#555">where fn(&amp;'long) expected</text>
+  <rect x="300" y="180" width="200" height="25" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="400" y="197" text-anchor="middle" font-size="10" fill="#333">Shorter lifetime is subtype</text>
+  <!-- Invariant -->
+  <rect x="540" y="55" width="230" height="160" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="655" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Invariant</text>
+  <text x="555" y="105" font-size="11" fill="#555">&amp;'a mut T is invariant</text>
+  <text x="555" y="125" font-size="11" fill="#555">in T</text>
+  <text x="555" y="150" font-size="10" fill="#555">No substitution allowed</text>
+  <text x="555" y="170" font-size="10" fill="#555">Must match exactly</text>
+  <rect x="555" y="180" width="200" height="25" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="655" y="197" text-anchor="middle" font-size="10" fill="#333">Required for soundness</text>
+  <!-- Table -->
+  <rect x="50" y="240" width="700" height="180" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Variance of Common Types</text>
+  <!-- Headers -->
+  <text x="150" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Type</text>
+  <text x="350" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Variance in 'a</text>
+  <text x="580" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Variance in T</text>
+  <line x1="70" y1="298" x2="730" y2="298" stroke="#4a90e2" stroke-width="1"/>
+  <!-- Rows -->
+  <text x="150" y="318" text-anchor="middle" font-size="11" fill="#555">&amp;'a T</text>
+  <text x="350" y="318" text-anchor="middle" font-size="11" fill="#28a745">covariant</text>
+  <text x="580" y="318" text-anchor="middle" font-size="11" fill="#28a745">covariant</text>
+  <text x="150" y="340" text-anchor="middle" font-size="11" fill="#555">&amp;'a mut T</text>
+  <text x="350" y="340" text-anchor="middle" font-size="11" fill="#28a745">covariant</text>
+  <text x="580" y="340" text-anchor="middle" font-size="11" fill="#dc3545">invariant</text>
+  <text x="150" y="362" text-anchor="middle" font-size="11" fill="#555">Box&lt;T&gt;</text>
+  <text x="350" y="362" text-anchor="middle" font-size="11" fill="#999">N/A</text>
+  <text x="580" y="362" text-anchor="middle" font-size="11" fill="#28a745">covariant</text>
+  <text x="150" y="384" text-anchor="middle" font-size="11" fill="#555">Cell&lt;T&gt;</text>
+  <text x="350" y="384" text-anchor="middle" font-size="11" fill="#999">N/A</text>
+  <text x="580" y="384" text-anchor="middle" font-size="11" fill="#dc3545">invariant</text>
+  <text x="150" y="406" text-anchor="middle" font-size="11" fill="#555">fn(T) -&gt; U</text>
+  <text x="350" y="406" text-anchor="middle" font-size="11" fill="#999">N/A</text>
+  <text x="580" y="406" text-anchor="middle" font-size="11" fill="#555">T: contra, U: co</text>
+  <!-- Key takeaway -->
+  <rect x="100" y="435" width="600" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="457" text-anchor="middle" font-size="12" fill="#333">&amp;mut T must be invariant in T to prevent aliasing through lifetime tricks</text>
+</svg>

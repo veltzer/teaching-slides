@@ -5,15 +5,7 @@
 
 ## The Evolution of Networking
 
-```diagram
-Traditional (1990s-2000s)        Cloud Era (2010s)           Cloud-Native (2020s)
-┌──────────────────┐        ┌──────────────────┐        ┌──────────────────┐
-│ Physical switches│        │ Virtual networks │        │ Container overlay│
-│ Manual config    │        │ SDN controllers  │        │ Service mesh     │
-│ Static topology  │        │ API-driven       │        │ Zero trust       │
-│ Hardware-bound   │        │ Software-defined │        │ Programmable     │
-└──────────────────┘        └──────────────────┘        └──────────────────┘
-```
+![the_evolution_of_networking](svg/courses/networking/networking-basics/08_modern_networking/the_evolution_of_networking.svg)
 
 Key trends driving modern networking:
 - **Cloud computing**: networks must be dynamic and programmable
@@ -28,23 +20,7 @@ Key trends driving modern networking:
 
 SDN separates the **control plane** (decision-making) from the **data plane** (packet forwarding).
 
-```diagram
-Traditional Network:                    SDN:
-┌───────┐ ┌───────┐ ┌───────┐        ┌─────────────────────┐
-│Switch │ │Switch │ │Switch │        │    SDN Controller   │
-│Control│ │Control│ │Control│        │   (centralized      │
-│+ Data │ │+ Data │ │+ Data │        │    control plane)   │
-└───┬───┘ └───┬───┘ └───┬───┘        └──────────┬──────────┘
-    │         │         │              ┌─────────┼─────────┐
-    └─────────┴─────────┘              │         │         │
-Each switch makes its own          ┌───┴───┐ ┌───┴───┐ ┌───┴───┐
-forwarding decisions               │Switch │ │Switch │ │Switch │
-independently                      │(data  │ │(data  │ │(data  │
-                                   │ only) │ │ only) │ │ only) │
-                                   └───────┘ └───────┘ └───────┘
-                                   Switches just forward packets
-                                   based on controller instructions
-```
+![software_defined_networking_sdn](svg/courses/networking/networking-basics/08_modern_networking/software_defined_networking_sdn.svg)
 
 **Benefits of SDN:**
 - Centralized network management and visibility
@@ -56,25 +32,7 @@ independently                      │(data  │ │(data  │ │(data  │
 
 ## SDN Architecture
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│              Application Layer                    │
-│  Network monitoring, load balancing, firewalls   │
-│  Traffic engineering, policy management          │
-├─────────────────────────────────────────────────┤
-│     Northbound API (REST, gRPC)                  │
-├─────────────────────────────────────────────────┤
-│              Control Layer                        │
-│  SDN Controller (ONOS, OpenDaylight, Floodlight) │
-│  Topology discovery, routing, policy engine      │
-├─────────────────────────────────────────────────┤
-│     Southbound API (OpenFlow, P4, NETCONF)       │
-├─────────────────────────────────────────────────┤
-│              Data Layer                           │
-│  Physical/virtual switches and routers           │
-│  Forwarding based on flow tables                 │
-└─────────────────────────────────────────────────┘
-```
+![sdn_architecture](svg/courses/networking/networking-basics/08_modern_networking/sdn_architecture.svg)
 
 **SDN controllers:**
 
@@ -101,22 +59,7 @@ Network virtualization creates logical networks on top of physical infrastructur
 | GENEVE | Generic Network Virtualization Encapsulation |
 | NVGRE | Network Virtualization using GRE |
 
-```diagram
-VXLAN Encapsulation:
-
-Original Frame:
-┌──────────┬─────────┬─────────┐
-│ Eth Hdr  │ IP Hdr  │  Data   │
-└──────────┴─────────┴─────────┘
-
-VXLAN Encapsulated:
-┌──────────┬─────────┬─────────┬──────────┬──────────┬─────────┬─────────┐
-│ Outer    │ Outer   │ Outer   │ VXLAN    │ Original │ Original│  Data   │
-│ Eth Hdr  │ IP Hdr  │ UDP Hdr │ Header   │ Eth Hdr  │ IP Hdr  │         │
-│          │         │ (4789)  │ (VNI)    │          │         │         │
-└──────────┴─────────┴─────────┴──────────┴──────────┴─────────┴─────────┘
-  Outer transport headers         Inner original headers + data
-```
+![network_virtualization](svg/courses/networking/networking-basics/08_modern_networking/network_virtualization.svg)
 
 ---
 
@@ -152,27 +95,7 @@ $ docker network inspect bridge
 
 The default networking mode. Docker creates a virtual bridge (`docker0`) and assigns private IPs.
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│                  Host Machine                     │
-│                                                   │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐       │
-│  │Container │  │Container │  │Container │       │
-│  │  App A   │  │  App B   │  │  App C   │       │
-│  │172.17.0.2│  │172.17.0.3│  │172.17.0.4│       │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘       │
-│       │              │              │              │
-│  ┌────┴──────────────┴──────────────┴────┐       │
-│  │         docker0 bridge                 │       │
-│  │         172.17.0.1                     │       │
-│  └────────────────┬──────────────────────┘       │
-│                   │ iptables NAT                  │
-│  ┌────────────────┴──────────────────────┐       │
-│  │         eth0 (host interface)          │       │
-│  │         10.0.0.5                       │       │
-│  └────────────────────────────────────────┘       │
-└─────────────────────────────────────────────────┘
-```
+![docker_bridge_network](svg/courses/networking/networking-basics/08_modern_networking/docker_bridge_network.svg)
 
 ```bash
 # Create a custom bridge network
@@ -192,27 +115,7 @@ $ docker exec web ping api    # Works! Docker DNS resolves "api"
 
 Overlay networks enable communication between containers across multiple Docker hosts (Swarm).
 
-```diagram
-   Host A                              Host B
-┌──────────────────┐              ┌──────────────────┐
-│  ┌──────────┐    │              │    ┌──────────┐  │
-│  │Container │    │              │    │Container │  │
-│  │  10.0.0.2│    │              │    │  10.0.0.3│  │
-│  └────┬─────┘    │              │    └────┬─────┘  │
-│       │          │              │         │        │
-│  ┌────┴────────┐ │              │  ┌──────┴──────┐ │
-│  │ Overlay Net │ │              │  │ Overlay Net │ │
-│  │ VXLAN tunnel│ │              │  │ VXLAN tunnel│ │
-│  └─────┬───────┘ │              │  └─────┬───────┘ │
-│        │         │              │        │         │
-│  ┌─────┴───────┐ │              │  ┌─────┴───────┐ │
-│  │ eth0        │ │              │  │ eth0        │ │
-│  │ 192.168.1.10│ │              │  │ 192.168.1.20│ │
-│  └─────────────┘ │              │  └─────────────┘ │
-└──────────────────┘              └──────────────────┘
-         │          VXLAN tunnel           │
-         └────────────────────────────────┘
-```
+![docker_overlay_network](svg/courses/networking/networking-basics/08_modern_networking/docker_overlay_network.svg)
 
 ```bash
 # Initialize Docker Swarm
@@ -235,23 +138,7 @@ Kubernetes networking has these fundamental requirements:
 3. All Nodes can communicate with all Pods without NAT
 4. The IP a Pod sees itself as is the same IP others see it as
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│                   Kubernetes Cluster                      │
-│                                                           │
-│  Node A (10.0.1.0/24)              Node B (10.0.2.0/24)  │
-│  ┌────────────────────┐           ┌────────────────────┐ │
-│  │ Pod 1    Pod 2     │           │ Pod 3    Pod 4     │ │
-│  │10.0.1.2  10.0.1.3 │           │10.0.2.2  10.0.2.3 │ │
-│  │ ┌──┐     ┌──┐     │           │ ┌──┐     ┌──┐     │ │
-│  │ │C1│     │C2│     │           │ │C3│     │C4│     │ │
-│  │ └──┘     └──┘     │           │ └──┘     └──┘     │ │
-│  └─────────┬──────────┘           └─────────┬──────────┘ │
-│            │                                │            │
-│            └────────── CNI Plugin ───────────┘            │
-│              (Calico, Flannel, Cilium, Weave)            │
-└─────────────────────────────────────────────────────────┘
-```
+![kubernetes_networking_model](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_networking_model.svg)
 
 ---
 
@@ -290,20 +177,7 @@ $ kubectl exec web-1 -- ping -c 3 10.0.2.3
 
 Services provide stable network endpoints for dynamic Pods.
 
-```diagram
-                    ┌───────────────────┐
-  Client ──────────→│   Service         │
-  (ClusterIP:       │   web-service     │
-   10.96.0.100)     │   10.96.0.100:80  │
-                    └────────┬──────────┘
-                             │ load balances to
-                    ┌────────┼────────┐
-                    │        │        │
-               ┌────┴──┐ ┌──┴────┐ ┌─┴─────┐
-               │ Pod 1 │ │ Pod 2 │ │ Pod 3 │
-               │10.0.1.2│ │10.0.2.3│ │10.0.1.4│
-               └────────┘ └───────┘ └───────┘
-```
+![kubernetes_services](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_services.svg)
 
 **Service types:**
 
@@ -335,20 +209,7 @@ spec:
 
 Ingress provides HTTP/HTTPS routing to services, supporting virtual hosts and path-based routing.
 
-```diagram
-                    ┌──────────────────────────────┐
-  Internet ────────→│       Ingress Controller     │
-                    │  (nginx, traefik, envoy)     │
-                    └──────────┬───────────────────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-         api.example.com  www.example.com  blog.example.com
-              │                │                │
-         ┌────┴────┐     ┌────┴────┐     ┌────┴────┐
-         │ api-svc │     │ web-svc │     │blog-svc │
-         └─────────┘     └─────────┘     └─────────┘
-```
+![kubernetes_ingress](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_ingress.svg)
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -407,13 +268,7 @@ spec:
           port: 5432
 ```
 
-```diagram
-Without Network Policy:            With Network Policy:
-┌─────┐  ┌─────┐  ┌─────┐        ┌─────┐  ┌─────┐  ┌─────┐
-│ Web │→ │ API │→ │ DB  │        │ Web │✗ │ API │→ │ DB  │
-└─────┘→ └─────┘→ └─────┘        └─────┘  └─────┘  └─────┘
-  All Pods can reach DB              Only API can reach DB
-```
+![allow_only_specific_pods_to_access_the_database](svg/courses/networking/networking-basics/08_modern_networking/allow_only_specific_pods_to_access_the_database.svg)
 
 ---
 
@@ -421,22 +276,7 @@ Without Network Policy:            With Network Policy:
 
 A service mesh is a dedicated infrastructure layer for service-to-service communication.
 
-```diagram
-Without Service Mesh:               With Service Mesh:
-┌─────────┐     ┌─────────┐        ┌─────────┐     ┌─────────┐
-│Service A│────→│Service B│        │Service A│     │Service B│
-│  (retry │     │         │        │         │     │         │
-│  timeout│     │         │        │  ┌────┐ │     │ ┌────┐  │
-│  circuit│     │         │        │  │Prxy│─┼─────┼→│Prxy│  │
-│  breaker│     │         │        │  └────┘ │     │ └────┘  │
-│  in code│)    │         │        └─────────┘     └─────────┘
-└─────────┘     └─────────┘           Sidecar         Sidecar
-                                      proxies handle:
-                                      - mTLS
-                                      - Retries
-                                      - Circuit breaking
-                                      - Observability
-```
+![service_mesh_concepts](svg/courses/networking/networking-basics/08_modern_networking/service_mesh_concepts.svg)
 
 **Popular service meshes:**
 
@@ -450,32 +290,7 @@ Without Service Mesh:               With Service Mesh:
 
 ## Service Mesh: What It Provides
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│                  Service Mesh                      │
-│                                                    │
-│  Traffic Management:                               │
-│  - Load balancing (round-robin, least-conn)       │
-│  - Traffic splitting (canary deployments)          │
-│  - Retries and timeouts                           │
-│  - Circuit breaking                                │
-│                                                    │
-│  Security:                                         │
-│  - Mutual TLS (mTLS) between all services         │
-│  - Certificate management (automatic rotation)     │
-│  - Access policies                                 │
-│                                                    │
-│  Observability:                                    │
-│  - Distributed tracing (Jaeger, Zipkin)           │
-│  - Metrics (latency, error rates, throughput)      │
-│  - Service dependency graphs                       │
-│                                                    │
-│  Resilience:                                       │
-│  - Fault injection (chaos testing)                │
-│  - Rate limiting                                   │
-│  - Health checking                                 │
-└──────────────────────────────────────────────────┘
-```
+![service_mesh_what_it_provides](svg/courses/networking/networking-basics/08_modern_networking/service_mesh_what_it_provides.svg)
 
 ---
 
@@ -483,25 +298,7 @@ Without Service Mesh:               With Service Mesh:
 
 A CDN (Content Delivery Network) caches content at edge locations worldwide to reduce latency.
 
-```diagram
-                         ┌──────────────┐
-                         │ Origin Server│
-                         │ (your server)│
-                         └──────┬───────┘
-                                │
-                    ┌───────────┼───────────┐
-                    │           │           │
-              ┌─────┴─────┐ ┌──┴──────┐ ┌──┴──────┐
-              │ CDN Edge  │ │CDN Edge │ │CDN Edge │
-              │ US-East   │ │ Europe  │ │  Asia   │
-              └─────┬─────┘ └────┬────┘ └────┬────┘
-                    │            │            │
-              ┌─────┴─────┐ ┌───┴─────┐ ┌───┴─────┐
-              │ US Users  │ │EU Users │ │AS Users │
-              │ ~5ms      │ │ ~10ms   │ │ ~15ms   │
-              └───────────┘ └─────────┘ └─────────┘
-              vs ~200ms to origin  from all locations
-```
+![cdn_architecture](svg/courses/networking/networking-basics/08_modern_networking/cdn_architecture.svg)
 
 **How CDNs work:**
 1. User requests `cdn.example.com/image.png`
@@ -560,13 +357,7 @@ $ curl -X POST "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache" 
 
 WebSocket provides full-duplex communication over a single TCP connection, unlike HTTP's request-response model.
 
-```diagram
-HTTP (half-duplex):                  WebSocket (full-duplex):
-Client → Request  → Server           Client ←──────→ Server
-Client ← Response ← Server           Bidirectional real-time
-Client → Request  → Server           communication over
-Client ← Response ← Server           single persistent connection
-```
+![websocket_protocol](svg/courses/networking/networking-basics/08_modern_networking/websocket_protocol.svg)
 
 **WebSocket handshake (HTTP upgrade):**
 
@@ -649,16 +440,7 @@ Hello, World!
 
 gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more efficient than REST/JSON for service-to-service communication.
 
-```diagram
-REST/JSON:                          gRPC/Protobuf:
-┌──────────┐  HTTP/1.1  ┌────────┐  ┌──────────┐  HTTP/2   ┌────────┐
-│  Client  │──JSON───→ │ Server │  │  Client  │──Binary─→│ Server │
-│          │←─JSON────│        │  │          │←─Binary──│        │
-└──────────┘ Text-based └────────┘  └──────────┘ Efficient └────────┘
-  Larger payload                      Smaller payload
-  No type safety                      Strongly typed
-  Request/response only               Streaming support
-```
+![grpc_modern_rpc_framework](svg/courses/networking/networking-basics/08_modern_networking/grpc_modern_rpc_framework.svg)
 
 **Protocol Buffers definition:**
 
@@ -717,22 +499,7 @@ message UserResponse {
 
 HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 
-```diagram
-HTTP/1.1 + TLS:        HTTP/2 + TLS:         HTTP/3 + QUIC:
-┌───────────┐          ┌───────────┐          ┌───────────┐
-│  HTTP/1.1 │          │  HTTP/2   │          │  HTTP/3   │
-├───────────┤          ├───────────┤          ├───────────┤
-│   TLS     │          │   TLS     │          │   QUIC    │
-├───────────┤          ├───────────┤          │ (includes │
-│   TCP     │          │   TCP     │          │  TLS 1.3) │
-├───────────┤          ├───────────┤          ├───────────┤
-│   IP      │          │   IP      │          │   UDP     │
-└───────────┘          └───────────┘          ├───────────┤
-                                              │   IP      │
-3 RTT to first data    3 RTT to first data    └───────────┘
-                                              1 RTT to first data
-                                              0 RTT on reconnect
-```
+![http_3_and_quic](svg/courses/networking/networking-basics/08_modern_networking/http_3_and_quic.svg)
 
 **QUIC advantages:**
 - **Faster connection establishment**: 1-RTT (or 0-RTT on reconnect)
@@ -756,27 +523,7 @@ $ curl -v --http3 https://cloudflare.com 2>&1 | grep "using HTTP"
 
 eBPF (extended Berkeley Packet Filter) allows running custom programs in the Linux kernel without modifying kernel source.
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│                  User Space                       │
-│   ┌──────────┐  ┌──────────┐  ┌──────────┐     │
-│   │ Cilium   │  │ bpftrace │  │ tc + BPF │     │
-│   └────┬─────┘  └────┬─────┘  └────┬─────┘     │
-├────────┼──────────────┼─────────────┼───────────┤
-│        ▼              ▼             ▼            │
-│  ┌───────────────────────────────────────┐      │
-│  │        eBPF Virtual Machine           │      │
-│  │    (verified, sandboxed programs)     │      │
-│  └───────────────────────────────────────┘      │
-│        │              │             │            │
-│   ┌────┴────┐   ┌────┴────┐  ┌────┴────┐      │
-│   │ XDP     │   │ Traffic │  │ Socket  │      │
-│   │(packet  │   │ Control │  │ Filter  │      │
-│   │ filter) │   │   (tc)  │  │         │      │
-│   └─────────┘   └─────────┘  └─────────┘      │
-│                  Kernel Space                    │
-└─────────────────────────────────────────────────┘
-```
+![ebpf_programmable_networking_in_the_kernel](svg/courses/networking/networking-basics/08_modern_networking/ebpf_programmable_networking_in_the_kernel.svg)
 
 **eBPF in networking:**
 - **Cilium**: Kubernetes CNI that uses eBPF for networking and security (replaces iptables)
@@ -834,17 +581,7 @@ resource "aws_security_group" "web" {
 
 Modern architectures use DNS for dynamic service discovery.
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│              Service Registry                     │
-│  (Consul, CoreDNS, AWS Cloud Map)                │
-│                                                   │
-│  web.service.consul    → 10.0.1.5, 10.0.2.3     │
-│  api.service.consul    → 10.0.1.8                │
-│  db.service.consul     → 10.0.3.2                │
-│  cache.service.consul  → 10.0.1.9, 10.0.2.7     │
-└─────────────────────────────────────────────────┘
-```
+![dns_based_service_discovery](svg/courses/networking/networking-basics/08_modern_networking/dns_based_service_discovery.svg)
 
 ```bash
 # Consul DNS interface
@@ -869,29 +606,7 @@ web-service.default.svc.cluster.local. 30 IN A 10.96.0.100
 
 Modern networks require comprehensive observability.
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│              Observability Stack                   │
-│                                                    │
-│  Metrics (Prometheus, Grafana):                   │
-│  - Request rate, error rate, latency (RED)        │
-│  - Bandwidth, packet loss, connections            │
-│                                                    │
-│  Logs (ELK Stack, Loki):                          │
-│  - Access logs, error logs, firewall logs         │
-│  - Structured logging with correlation IDs        │
-│                                                    │
-│  Traces (Jaeger, Zipkin):                         │
-│  - Request flow across services                   │
-│  - Latency breakdown per service                  │
-│  - Dependency mapping                             │
-│                                                    │
-│  Network-specific:                                │
-│  - Smokeping (latency monitoring)                 │
-│  - ntopng (traffic analysis)                      │
-│  - Prometheus blackbox_exporter (probe endpoints) │
-└──────────────────────────────────────────────────┘
-```
+![observability_network_monitoring](svg/courses/networking/networking-basics/08_modern_networking/observability_network_monitoring.svg)
 
 ```yaml
 # Prometheus blackbox_exporter: probe network endpoints

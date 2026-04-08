@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Training Infrastructure: The Hardware Stack</text>
+  <!-- GPU Nodes -->
+  <rect x="60" y="60" width="280" height="130" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">GPU Node 1</text>
+  <text x="200" y="108" text-anchor="middle" font-size="11" fill="#555">8x A100 80GB</text>
+  <text x="200" y="128" text-anchor="middle" font-size="11" fill="#555">NVLink (600GB/s)</text>
+  <text x="200" y="148" text-anchor="middle" font-size="11" fill="#555">2x AMD EPYC CPU</text>
+  <text x="200" y="168" text-anchor="middle" font-size="11" fill="#555">2TB RAM</text>
+
+  <rect x="460" y="60" width="280" height="130" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="600" y="85" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">GPU Node 2</text>
+  <text x="600" y="108" text-anchor="middle" font-size="11" fill="#555">8x A100 80GB</text>
+  <text x="600" y="128" text-anchor="middle" font-size="11" fill="#555">NVLink (600GB/s)</text>
+  <text x="600" y="148" text-anchor="middle" font-size="11" fill="#555">2x AMD EPYC CPU</text>
+  <text x="600" y="168" text-anchor="middle" font-size="11" fill="#555">2TB RAM</text>
+
+  <!-- Connection lines -->
+  <line x1="200" y1="190" x2="200" y2="230" stroke="#4a90e2" stroke-width="2"/>
+  <line x1="600" y1="190" x2="600" y2="230" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="215" text-anchor="middle" font-size="10" fill="#4a90e2">InfiniBand 400Gb/s</text>
+
+  <!-- Network fabric -->
+  <rect x="120" y="230" width="560" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">High-Speed Network Fabric</text>
+
+  <!-- Bottom nodes -->
+  <line x1="280" y1="270" x2="280" y2="300" stroke="#28a745" stroke-width="2"/>
+  <line x1="520" y1="270" x2="520" y2="300" stroke="#28a745" stroke-width="2"/>
+
+  <rect x="140" y="300" width="280" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="280" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Storage Cluster</text>
+  <text x="280" y="340" text-anchor="middle" font-size="11" fill="#666">(Petabytes)</text>
+
+  <rect x="460" y="300" width="240" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="580" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Parameter Server</text>
+  <text x="580" y="340" text-anchor="middle" font-size="11" fill="#666">(distributed)</text>
+
+  <!-- Cost estimates -->
+  <rect x="100" y="375" width="600" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="400" y="397" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Cost Estimates for GPT-4-Scale Training</text>
+  <text x="400" y="418" text-anchor="middle" font-size="11" fill="#555">Hardware: ~$500M (25,000 A100s) | Electricity: ~$10M/run | Total: ~$100M+</text>
+</svg>

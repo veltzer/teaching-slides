@@ -46,17 +46,7 @@
 ## What Is Encryption?
 - Scrambling data so only authorized parties can read it
 
-```diagram
-Original:     "Employee salary: $85,000"
-                      |
-                 [Encryption]
-                      |
-Encrypted:    "x7$kL9#mQ2@pR5&vN8..."
-                      |
-                 [Decryption]
-                      |
-Readable:     "Employee salary: $85,000"
-```
+![what_is_encryption](svg/courses/security/it-security-policies/04_data_protection/what_is_encryption.svg)
 
 - Without the key, encrypted data is unreadable
 - Even if stolen, encrypted data is useless to the attacker
@@ -182,21 +172,7 @@ Readable:     "Employee salary: $85,000"
 
 ## Data Retention and Disposal
 
-```diagram
-+-------------------+     +-------------------+     +-------------------+
-| Data Creation     |---->| Active Use        |---->| Archive           |
-| Classify it       |     | Protect it        |     | Retention period  |
-+-------------------+     +-------------------+     +--------+----------+
-                                                              |
-                                                              v
-                                                    +-------------------+
-                                                    | Secure Disposal   |
-                                                    | - Shred papers    |
-                                                    | - Wipe drives     |
-                                                    | - Delete files    |
-                                                    |   securely        |
-                                                    +-------------------+
-```
+![data_retention_and_disposal](svg/courses/security/it-security-policies/04_data_protection/data_retention_and_disposal.svg)
 
 - Follow the company retention schedule
 - Do not keep data "just in case"

@@ -136,28 +136,7 @@ def update_user():
 ---
 ## Server-Side Request Forgery (SSRF) via APIs
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          SSRF via API                                     │
-│                                                          │
-│  API accepts a URL parameter:                            │
-│  POST /api/fetch-url                                     │
-│  { "url": "https://example.com/image.png" }             │
-│                                                          │
-│  Attacker requests internal resource:                    │
-│  POST /api/fetch-url                                     │
-│  { "url": "http://169.254.169.254/latest/meta-data/" }  │
-│                                                          │
-│  ┌──────────┐    ┌──────────┐    ┌──────────────────┐   │
-│  │ Attacker │───>│   API    │───>│ AWS IMDS         │   │
-│  │          │    │  Server  │    │ 169.254.169.254  │   │
-│  │          │<───│          │<───│ (IAM credentials)│   │
-│  └──────────┘    └──────────┘    └──────────────────┘   │
-│                                                          │
-│  Result: Attacker gets AWS IAM temporary credentials     │
-│  via the API server's network access!                    │
-└──────────────────────────────────────────────────────────┘
-```
+![server_side_request_forgery_ssrf_via_apis](svg/courses/security/cyber-attacks-and-vectors/27_api_security/server_side_request_forgery_ssrf_via_apis.svg)
 
 ```python
 # SECURE: URL validation for SSRF prevention
@@ -474,31 +453,7 @@ def execute_persisted_query(query_id, variables):
 ---
 ## API Gateway Security
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          API Gateway Architecture                         │
-│                                                          │
-│  Clients           API Gateway            Backend APIs   │
-│                                                          │
-│  ┌───────┐     ┌──────────────────┐    ┌──────────┐    │
-│  │Mobile │────>│                  │───>│ Users    │    │
-│  │App    │     │  Authentication  │    │ Service  │    │
-│  └───────┘     │  Rate Limiting   │    └──────────┘    │
-│                │  Input Validation│                      │
-│  ┌───────┐     │  Logging/Metrics │    ┌──────────┐    │
-│  │Web    │────>│  TLS Termination │───>│ Orders   │    │
-│  │App    │     │  Request Transform│   │ Service  │    │
-│  └───────┘     │  IP Allowlisting │    └──────────┘    │
-│                │  WAF Integration  │                      │
-│  ┌───────┐     │  CORS Management │    ┌──────────┐    │
-│  │Partner│────>│  Schema Validation│───>│ Payment  │    │
-│  │API    │     │                  │    │ Service  │    │
-│  └───────┘     └──────────────────┘    └──────────┘    │
-│                                                          │
-│  Popular API Gateways:                                   │
-│  Kong, AWS API Gateway, Apigee, Azure APIM, Traefik     │
-└──────────────────────────────────────────────────────────┘
-```
+![api_gateway_security](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_gateway_security.svg)
 
 ---
 ## API Authentication Best Practices

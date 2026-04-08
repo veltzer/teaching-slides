@@ -21,18 +21,7 @@ Advanced Kubernetes Course - Day 1, Module 1
 - **Observable**: Exposes health and metrics
 - **Redundant**: No single point of failure
 
-```diagram
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   Pod A-1   │    │   Pod A-2   │    │   Pod A-3   │
-│  (healthy)  │    │  (healthy)  │    │  (healthy)  │
-└──────┬──────┘    └──────┬──────┘    └──────┬──────┘
-       │                  │                  │
-       └──────────────────┼──────────────────┘
-                          │
-                    ┌─────┴─────┐
-                    │  Service  │
-                    └───────────┘
-```
+![what_makes_an_app_resilient](svg/courses/devops/advanced-kubernetes/01_resilient_apps/what_makes_an_app_resilient.svg)
 
 ---
 
@@ -111,22 +100,7 @@ selector:
 
 ## How `ReplicaSets` Handle Failures
 
-```diagram
-Time T0: 3 replicas running
-┌────┐  ┌────┐  ┌────┐
-│Pod1│  │Pod2│  │Pod3│
-└────┘  └────┘  └────┘
-
-Time T1: Pod2 crashes
-┌────┐  ┌────┐  ┌────┐
-│Pod1│  │ XX │  │Pod3│
-└────┘  └────┘  └────┘
-
-Time T2: ReplicaSet controller creates Pod4
-┌────┐  ┌────┐  ┌────┐
-│Pod1│  │Pod4│  │Pod3│
-└────┘  └────┘  └────┘
-```
+![how_replicasets_handle_failures](svg/courses/devops/advanced-kubernetes/01_resilient_apps/how_replicasets_handle_failures.svg)
 
 The reconciliation loop runs continuously.
 
@@ -356,18 +330,7 @@ spec:
 "1500m" = 1.5 CPU  (one and a half cores)
 ```
 
-```diagram
-┌─────────────────────────────────┐
-│          Node (4 CPU)           │
-│                                 │
-│  ┌──────┐ ┌──────┐ ┌────────┐  │
-│  │250m  │ │500m  │ │1000m   │  │
-│  │Pod A │ │Pod B │ │Pod C   │  │
-│  └──────┘ └──────┘ └────────┘  │
-│                                 │
-│  Remaining: 2250m allocatable   │
-└─────────────────────────────────┘
-```
+![understanding_cpu_units](svg/courses/devops/advanced-kubernetes/01_resilient_apps/understanding_cpu_units.svg)
 
 ---
 
@@ -494,10 +457,7 @@ spec:
       failureThreshold: 3
 ```
 
-```diagram
-Pod with failing readiness probe:
-Service ──X──> Pod (removed from endpoints)
-```
+![readiness_probes](svg/courses/devops/advanced-kubernetes/01_resilient_apps/readiness_probes.svg)
 
 ---
 
@@ -564,27 +524,7 @@ grpc:
 
 ## Probe Decision Tree
 
-```diagram
-Is the container running?
-│
-├─ YES → Liveness Probe passes
-│        │
-│        ├─ Is it ready for traffic?
-│        │  │
-│        │  ├─ YES → Readiness Probe passes
-│        │  │        Pod receives traffic ✓
-│        │  │
-│        │  └─ NO → Readiness Probe fails
-│        │          Pod removed from Service endpoints
-│        │
-│        └─ Liveness Probe fails →
-│           Container is killed and restarted
-│
-└─ NO → Container is starting
-        │
-        ├─ Startup Probe passes → Enable liveness/readiness
-        └─ Startup Probe fails  → Container is killed
-```
+![probe_decision_tree](svg/courses/devops/advanced-kubernetes/01_resilient_apps/probe_decision_tree.svg)
 
 ---
 
@@ -620,26 +560,7 @@ spec:
 
 ## Resilience Patterns Summary
 
-```diagram
-┌──────────────────────────────────────────────┐
-│            Resilient Application              │
-│                                              │
-│  ┌────────────┐  ┌────────────────────────┐  │
-│  │ ReplicaSet │  │ Resource Management    │  │
-│  │ (3+ pods)  │  │ requests + limits      │  │
-│  └────────────┘  └────────────────────────┘  │
-│                                              │
-│  ┌────────────┐  ┌────────────────────────┐  │
-│  │ Probes     │  │ PodDisruptionBudget    │  │
-│  │ L + R + S  │  │ minAvailable: 2        │  │
-│  └────────────┘  └────────────────────────┘  │
-│                                              │
-│  ┌────────────┐  ┌────────────────────────┐  │
-│  │ Anti-      │  │ Topology Spread        │  │
-│  │ Affinity   │  │ Constraints            │  │
-│  └────────────┘  └────────────────────────┘  │
-└──────────────────────────────────────────────┘
-```
+![resilience_patterns_summary](svg/courses/devops/advanced-kubernetes/01_resilient_apps/resilience_patterns_summary.svg)
 
 ---
 

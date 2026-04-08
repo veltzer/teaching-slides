@@ -46,24 +46,7 @@ spec:
 
 ## Rolling Update Visualization
 
-```diagram
-maxSurge: 1, maxUnavailable: 1, replicas: 4
-
-Step 1: Create 1 new (surge), terminate 1 old
-  v1 [████]  v1 [████]  v1 [████]  v1 [TERM]  v2 [INIT]
-
-Step 2: v2 ready, create next, terminate old
-  v1 [████]  v1 [████]  v1 [TERM]  v2 [████]  v2 [INIT]
-
-Step 3: Continue rolling
-  v1 [████]  v1 [TERM]  v2 [████]  v2 [████]  v2 [INIT]
-
-Step 4: Complete
-  v1 [TERM]  v2 [████]  v2 [████]  v2 [████]  v2 [INIT]
-
-Step 5: Final state
-  v2 [████]  v2 [████]  v2 [████]  v2 [████]
-```
+![rolling_update_visualization](svg/courses/devops/advanced-kubernetes/13_deployment_patterns/rolling_update_visualization.svg)
 
 ---
 
@@ -100,25 +83,7 @@ kubectl rollout undo deployment/web --to-revision=3
 
 ## Blue-Green Deployment
 
-```diagram
-┌────────────────────────────────────────────┐
-│                                            │
-│  Blue (current v1)    Green (new v2)       │
-│  ┌─────────────┐     ┌─────────────┐      │
-│  │ Deployment  │     │ Deployment  │      │
-│  │ web-blue    │     │ web-green   │      │
-│  │ replicas: 3 │     │ replicas: 3 │      │
-│  └──────┬──────┘     └──────┬──────┘      │
-│         │                   │              │
-│         │    ┌──────────┐   │              │
-│         └───▶│ Service  │◀──┘              │
-│    active───▶│  (web)   │                  │
-│              └──────────┘                  │
-│                                            │
-│  Switch: Change service selector           │
-│  from version=blue to version=green        │
-└────────────────────────────────────────────┘
-```
+![blue_green_deployment](svg/courses/devops/advanced-kubernetes/13_deployment_patterns/blue_green_deployment.svg)
 
 ---
 
@@ -219,30 +184,7 @@ kubectl delete deployment web-blue
 
 ## Canary Deployment
 
-```diagram
-Phase 1: 5% canary
-┌──────────────────────────────────────────┐
-│  v1 [██][██][██][██][██][██][██][██][██]  │  95%
-│  v2 [██]                                  │   5%
-└──────────────────────────────────────────┘
-
-Phase 2: 25% canary (metrics look good)
-┌──────────────────────────────────────────┐
-│  v1 [██][██][██][██][██][██][██][██]      │  75%
-│  v2 [██][██][██]                          │  25%
-└──────────────────────────────────────────┘
-
-Phase 3: 50% canary
-┌──────────────────────────────────────────┐
-│  v1 [██][██][██][██][██]                  │  50%
-│  v2 [██][██][██][██][██]                  │  50%
-└──────────────────────────────────────────┘
-
-Phase 4: 100% new version
-┌──────────────────────────────────────────┐
-│  v2 [██][██][██][██][██][██][██][██][██]  │ 100%
-└──────────────────────────────────────────┘
-```
+![canary_deployment](svg/courses/devops/advanced-kubernetes/13_deployment_patterns/canary_deployment.svg)
 
 ---
 

@@ -281,29 +281,7 @@ int main(void) {
 
 When integers of different types are mixed in expressions, C promotes them:
 
-```diagram
-┌─────────────────────────────────────────────┐
-│         Implicit Conversion Hierarchy       │
-│                                             │
-│  long double                                │
-│       ^                                     │
-│     double                                  │
-│       ^                                     │
-│     float                                   │
-│       ^                                     │
-│  unsigned long long                         │
-│       ^                                     │
-│    long long                                │
-│       ^                                     │
-│  unsigned long                              │
-│       ^                                     │
-│     long                                    │
-│       ^                                     │
-│  unsigned int                               │
-│       ^                                     │
-│     int  <-- char, short promoted to here   │
-└─────────────────────────────────────────────┘
-```
+![integer_promotion_rules](svg/courses/languages/c/c-refresher/02_data_types/integer_promotion_rules.svg)
 
 ---
 
@@ -366,25 +344,7 @@ int main(void) {
 
 ## Memory Layout of Data Types
 
-```diagram
-┌──────────────────────────────────────────────┐
-│  char c = 'A';         (1 byte)              │
-│  ┌────┐                                      │
-│  │ 41 │  (0x41 = 65 = 'A')                   │
-│  └────┘                                      │
-│                                              │
-│  int x = 0x12345678;(4 bytes, little-endian) │
-│  ┌────┬────┬────┬────┐                       │
-│  │ 78 │ 56 │ 34 │ 12 │                       │
-│  └────┴────┴────┴────┘                       │
-│  addr  +1   +2   +3                          │
-│                                              │
-│  double d = 3.14;      (8 bytes, IEEE 754)   │
-│  ┌────┬────┬────┬────┬────┬────┬────┬────┐   │
-│  │ 1F │ 85 │ EB │ 51 │ B8 │ 1E │ 09 │ 40 │   │
-│  └────┴────┴────┴────┴────┴────┴────┴────┘   │
-└──────────────────────────────────────────────┘
-```
+![memory_layout_of_data_types](svg/courses/languages/c/c-refresher/02_data_types/memory_layout_of_data_types.svg)
 
 ---
 

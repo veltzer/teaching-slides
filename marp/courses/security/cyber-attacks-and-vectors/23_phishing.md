@@ -223,29 +223,7 @@ cat suspicious_email.eml | grep -E "^(From|To|Subject|Received|Return-Path|Reply
 ---
 ## DMARC, DKIM, and SPF
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Email Authentication Trilogy                     │
-│                                                          │
-│  SPF (Sender Policy Framework)                           │
-│  ├── DNS TXT record listing authorized sending IPs       │
-│  ├── Receiving server checks if sender IP is authorized  │
-│  └── Prevents direct domain spoofing                     │
-│                                                          │
-│  DKIM (DomainKeys Identified Mail)                       │
-│  ├── Cryptographic signature added to email headers      │
-│  ├── Public key published in DNS                         │
-│  ├── Receiving server verifies signature integrity       │
-│  └── Ensures email was not modified in transit           │
-│                                                          │
-│  DMARC (Domain-based Message Authentication)             │
-│  ├── Policy that ties SPF and DKIM together              │
-│  ├── Tells receivers what to do on failure:              │
-│  │   none (monitor) | quarantine | reject                │
-│  ├── Provides reporting (aggregate + forensic)           │
-│  └── The enforcement mechanism for SPF and DKIM          │
-└──────────────────────────────────────────────────────────┘
-```
+![dmarc_dkim_and_spf](svg/courses/security/cyber-attacks-and-vectors/23_phishing/dmarc_dkim_and_spf.svg)
 
 ```bash
 # Check SPF record
@@ -403,26 +381,7 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 | Incident debrief             | After incidents | Learn from real events           |
 | Role-specific training       | Annual          | Targeted for high-risk roles     |
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  Phishing Simulation Best Practices                      │
-├──────────────────────────────────────────────────────────┤
-│                                                          │
-│  DO:                                                     │
-│  - Use realistic but safe simulations                    │
-│  - Provide immediate education when someone clicks       │
-│  - Track metrics over time (click rate, report rate)     │
-│  - Reward reporting (positive reinforcement)             │
-│  - Escalate difficulty gradually                         │
-│                                                          │
-│  DON'T:                                                  │
-│  - Publicly shame or punish employees who click          │
-│  - Use simulations to fire people                        │
-│  - Make simulations too easy (builds false confidence)   │
-│  - Run simulations without executive buy-in              │
-│  - Ignore the data (track trends, adjust program)        │
-└──────────────────────────────────────────────────────────┘
-```
+![effective_training_program_elements](svg/courses/security/cyber-attacks-and-vectors/23_phishing/effective_training_program_elements.svg)
 
 ---
 ## Technical Defenses

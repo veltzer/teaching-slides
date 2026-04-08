@@ -10,19 +10,7 @@
 
 ## Why Volatile Memory Matters
 
-```diagram
-What's in RAM?                  What's NOT on Disk?
-+--------------------------+    +--------------------------+
-| Running processes        |    | Encryption keys          |
-| Open network connections |    | Decrypted data           |
-| Loaded kernel modules    |    | Running malware (fileless)|
-| Open files               |    | Injected code            |
-| Environment variables    |    | Command history (unsaved)|
-| Clipboard contents       |    | Network session data     |
-| Login sessions           |    | Temporary credentials    |
-| Cached credentials       |    | Process memory contents  |
-+--------------------------+    +--------------------------+
-```
+![why_volatile_memory_matters](svg/courses/security/linux-forensics/11_volatile_memory/why_volatile_memory_matters.svg)
 
 ---
 
@@ -808,20 +796,7 @@ echo "[*] Analysis complete: $OUT"
 
 ## Comparing Memory and Disk Evidence
 
-```diagram
-Memory vs Disk Correlation Matrix:
-==================================
-Artifact       | Disk      | Memory    | Correlation
----------------+-----------+-----------+---------------
-Process list   | auth.log  | pslist    | Login -> Process
-Network conn   | logs      | sockstat  | Log entry -> Active conn
-Bash history   | .bash_hist| bash plug | On-disk vs in-memory
-Open files     | timestamps| lsof      | Modified -> Open
-Kernel modules | lib/modules| lsmod   | On-disk vs loaded
-Cron jobs      | /etc/cron | N/A       | Disk only
-Deleted files  | unalloc   | fd/deleted| Recoverable both
-Encryption keys| N/A       | aeskeyfind| Memory only
-```
+![comparing_memory_and_disk_evidence](svg/courses/security/linux-forensics/11_volatile_memory/comparing_memory_and_disk_evidence.svg)
 
 - Disk analysis shows persistent state
 - Memory analysis shows runtime state

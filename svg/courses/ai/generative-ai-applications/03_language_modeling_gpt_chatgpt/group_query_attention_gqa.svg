@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Group Query Attention (GQA)</text>
+  <!-- MHA -->
+  <rect x="40" y="55" width="220" height="200" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="150" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">MHA</text>
+  <text x="150" y="105" text-anchor="middle" font-size="11" fill="#555">Q: 32 heads</text>
+  <text x="150" y="125" text-anchor="middle" font-size="11" fill="#555">K: 32 heads</text>
+  <text x="150" y="145" text-anchor="middle" font-size="11" fill="#555">V: 32 heads</text>
+  <text x="150" y="175" text-anchor="middle" font-size="10" fill="#666">Each head has own Q, K, V</text>
+  <text x="150" y="195" text-anchor="middle" font-size="10" fill="#666">Memory: 96 x d_head</text>
+  <rect x="65" y="210" width="170" height="25" rx="3" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="150" y="228" text-anchor="middle" font-size="10" fill="#333">KV Cache: 100%</text>
+  <!-- GQA -->
+  <rect x="290" y="55" width="220" height="200" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">GQA-8</text>
+  <text x="400" y="105" text-anchor="middle" font-size="11" fill="#555">Q: 32 heads</text>
+  <text x="400" y="125" text-anchor="middle" font-size="11" fill="#555">K: 8 groups</text>
+  <text x="400" y="145" text-anchor="middle" font-size="11" fill="#555">V: 8 groups</text>
+  <text x="400" y="175" text-anchor="middle" font-size="10" fill="#666">Multiple Q share K,V</text>
+  <text x="400" y="195" text-anchor="middle" font-size="10" fill="#666">Memory: 48 x d_head</text>
+  <rect x="315" y="210" width="170" height="25" rx="3" fill="#d4edda" stroke="#28a745"/>
+  <text x="400" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#28a745">KV Cache: 25%</text>
+  <!-- MQA -->
+  <rect x="540" y="55" width="220" height="200" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="650" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">MQA</text>
+  <text x="650" y="105" text-anchor="middle" font-size="11" fill="#555">Q: 32 heads</text>
+  <text x="650" y="125" text-anchor="middle" font-size="11" fill="#555">K: 1 shared</text>
+  <text x="650" y="145" text-anchor="middle" font-size="11" fill="#555">V: 1 shared</text>
+  <text x="650" y="175" text-anchor="middle" font-size="10" fill="#666">ALL Q share ONE K,V</text>
+  <text x="650" y="195" text-anchor="middle" font-size="10" fill="#666">Memory: 34 x d_head</text>
+  <rect x="565" y="210" width="170" height="25" rx="3" fill="#fff3cd" stroke="#ffc107"/>
+  <text x="650" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#856404">KV Cache: 3%</text>
+  <!-- Comparison table -->
+  <rect x="100" y="290" width="130" height="35" rx="5" fill="#4a90e2"/><text x="165" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Method</text>
+  <rect x="240" y="290" width="130" height="35" rx="5" fill="#4a90e2"/><text x="305" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">KV Heads</text>
+  <rect x="380" y="290" width="130" height="35" rx="5" fill="#4a90e2"/><text x="445" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">KV Cache</text>
+  <rect x="520" y="290" width="130" height="35" rx="5" fill="#4a90e2"/><text x="585" y="313" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">Quality</text>
+  <!-- MHA row -->
+  <rect x="100" y="335" width="130" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2"/><text x="165" y="355" text-anchor="middle" font-size="11" fill="#333">MHA</text>
+  <rect x="240" y="335" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="305" y="355" text-anchor="middle" font-size="11" fill="#555">32</text>
+  <rect x="380" y="335" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="445" y="355" text-anchor="middle" font-size="11" fill="#555">100%</text>
+  <rect x="520" y="335" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="585" y="355" text-anchor="middle" font-size="11" fill="#555">Baseline</text>
+  <!-- GQA row -->
+  <rect x="100" y="375" width="130" height="30" rx="3" fill="#d4edda" stroke="#28a745"/><text x="165" y="395" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">GQA-8</text>
+  <rect x="240" y="375" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="305" y="395" text-anchor="middle" font-size="11" fill="#555">8</text>
+  <rect x="380" y="375" width="130" height="30" rx="3" fill="#d4edda" stroke="#28a745"/><text x="445" y="395" text-anchor="middle" font-size="11" fill="#28a745">25%</text>
+  <rect x="520" y="375" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="585" y="395" text-anchor="middle" font-size="11" fill="#555">~99.5%</text>
+  <!-- MQA row -->
+  <rect x="100" y="415" width="130" height="30" rx="3" fill="#fff3cd" stroke="#ffc107"/><text x="165" y="435" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">MQA</text>
+  <rect x="240" y="415" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="305" y="435" text-anchor="middle" font-size="11" fill="#555">1</text>
+  <rect x="380" y="415" width="130" height="30" rx="3" fill="#d4edda" stroke="#28a745"/><text x="445" y="435" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">3%</text>
+  <rect x="520" y="415" width="130" height="30" rx="3" fill="#f8f9fa" stroke="#dee2e6"/><text x="585" y="435" text-anchor="middle" font-size="11" fill="#555">~98%</text>
+</svg>

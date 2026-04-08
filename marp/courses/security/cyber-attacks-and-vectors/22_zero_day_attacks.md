@@ -67,30 +67,7 @@
 
 ## The CVE Process
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          CVE (Common Vulnerabilities and Exposures)       │
-│                                                          │
-│  1. Vulnerability discovered                             │
-│     │                                                    │
-│  2. Reporter submits to CNA (CVE Numbering Authority)    │
-│     │  (MITRE, vendor, or authorized organization)       │
-│     │                                                    │
-│  3. CVE ID assigned: CVE-YYYY-NNNNN                      │
-│     │  (e.g., CVE-2021-44228 for Log4Shell)              │
-│     │                                                    │
-│  4. Vendor develops and tests patch                      │
-│     │  (coordinated disclosure period)                   │
-│     │                                                    │
-│  5. Public disclosure + patch release (same day ideally) │
-│     │                                                    │
-│  6. CVSS score assigned (severity 0.0 - 10.0)           │
-│     │                                                    │
-│  7. NVD (National Vulnerability Database) entry created  │
-│     │                                                    │
-│  8. Organizations patch their systems                    │
-└──────────────────────────────────────────────────────────┘
-```
+![the_cve_process](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/the_cve_process.svg)
 
 ### CVSS Severity Ratings
 
@@ -106,27 +83,7 @@
 
 ## Responsible Disclosure
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  Disclosure Models                                       │
-├──────────────────────┬────────────────┬──────────────────┤
-│  Full Disclosure     │  Responsible   │  No Disclosure   │
-│                      │  Disclosure    │                  │
-├──────────────────────┼────────────────┼──────────────────┤
-│  Publish immediately │  Notify vendor │  Sell or hoard   │
-│  to public           │  first, agree  │  the exploit     │
-│                      │  on timeline   │                  │
-│  Pros: Fast patches  │  Pros: Vendor  │  Pros: None for  │
-│  Cons: Attackers get │  gets time to  │  public          │
-│  exploit immediately │  fix           │  Cons: Vuln      │
-│                      │  Cons: Vendor  │  stays open      │
-│                      │  may delay     │  indefinitely    │
-│                      │                │                  │
-│  Typical timeline:   │  Typical: 90   │  N/A             │
-│  Immediate           │  days (Google  │                  │
-│                      │  Project Zero) │                  │
-└──────────────────────┴────────────────┴──────────────────┘
-```
+![responsible_disclosure](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/responsible_disclosure.svg)
 
 - Google Project Zero standard: 90-day disclosure deadline
 - If vendor does not patch within 90 days, vulnerability is published
@@ -137,34 +94,7 @@
 
 ## Notable Zero-Day Case Study: EternalBlue (CVE-2017-0144)
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          EternalBlue Timeline                             │
-│                                                          │
-│  ~2012    NSA discovers SMBv1 vulnerability              │
-│           Develops exploit (codename: EternalBlue)       │
-│                                                          │
-│  2016     Shadow Brokers hack NSA's Equation Group       │
-│           Steal exploit tools including EternalBlue       │
-│                                                          │
-│  Jan 2017 NSA notifies Microsoft (after learning of      │
-│           the theft)                                     │
-│                                                          │
-│  Mar 2017 Microsoft releases patch MS17-010              │
-│                                                          │
-│  Apr 2017 Shadow Brokers publicly release EternalBlue    │
-│                                                          │
-│  May 2017 WannaCry ransomware uses EternalBlue           │
-│           - 230,000 computers in 150 countries           │
-│           - $4 billion estimated damage                  │
-│                                                          │
-│  Jun 2017 NotPetya uses EternalBlue                      │
-│           - $10 billion estimated damage                 │
-│                                                          │
-│  Lesson: Stockpiling zero-days creates massive risk      │
-│  when they inevitably leak                               │
-└──────────────────────────────────────────────────────────┘
-```
+![notable_zero_day_case_study_eternalblue_cve_2017_0144](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/notable_zero_day_case_study_eternalblue_cve_2017_0144.svg)
 
 ---
 
@@ -288,31 +218,7 @@ sudo yum updateinfo list security
 
 ## Virtual Patching
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Virtual Patching                                 │
-│                                                          │
-│  When you CAN'T patch immediately:                       │
-│  - Legacy systems that cannot be updated                 │
-│  - Patch not yet available (zero-day)                    │
-│  - Testing/change control delays                         │
-│                                                          │
-│  Solution: Block the exploit at the network/WAF level    │
-│                                                          │
-│  ┌──────────┐   Exploit   ┌─────────┐   Blocked   ┌────┐│
-│  │ Attacker │────────────>│   WAF   │──────X──────>│App ││
-│  └──────────┘             │(virtual │              │    ││
-│                           │ patch)  │              │    ││
-│                           └─────────┘              └────┘│
-│                                                          │
-│  Tools:                                                  │
-│  - Web Application Firewall (WAF) rules                  │
-│  - IPS signatures                                        │
-│  - Network segmentation                                  │
-│  - Snort/Suricata rules                                  │
-│  - ModSecurity CRS (Core Rule Set)                       │
-└──────────────────────────────────────────────────────────┘
-```
+![virtual_patching](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/virtual_patching.svg)
 
 ```bash
 # Example: Virtual patch for Log4Shell using ModSecurity
@@ -350,31 +256,7 @@ location / {
 
 ## Multi-Layered Security Approach
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Defense in Depth Against Zero-Days               │
-│                                                          │
-│  ┌──────────────────────────────────────────────────┐    │
-│  │  Network Perimeter                                │    │
-│  │  Firewall, IPS, DDoS protection                   │    │
-│  │  ┌──────────────────────────────────────────┐     │    │
-│  │  │  Application Layer                        │     │    │
-│  │  │  WAF, CSP, input validation               │     │    │
-│  │  │  ┌──────────────────────────────────┐     │     │    │
-│  │  │  │  Host/Endpoint                    │     │     │    │
-│  │  │  │  EDR, HIDS, application whitelist │     │     │    │
-│  │  │  │  ┌──────────────────────────┐     │     │     │    │
-│  │  │  │  │  Data Layer               │     │     │     │    │
-│  │  │  │  │  Encryption, DLP, RBAC    │     │     │     │    │
-│  │  │  │  └──────────────────────────┘     │     │     │    │
-│  │  │  └──────────────────────────────────┘     │     │    │
-│  │  └──────────────────────────────────────────┘     │    │
-│  └──────────────────────────────────────────────────┘    │
-│                                                          │
-│  No single layer stops a zero-day, but combined layers   │
-│  significantly raise the bar for attackers               │
-└──────────────────────────────────────────────────────────┘
-```
+![multi_layered_security_approach](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/multi_layered_security_approach.svg)
 
 ---
 

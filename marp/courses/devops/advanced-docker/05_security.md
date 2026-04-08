@@ -20,20 +20,7 @@ Hardening containers for production
 
 ## The Docker Attack Surface
 
-```diagram
-┌──────────────────────────────────────────┐
-│            Attack Vectors                │
-│                                          │
-│  1. Docker daemon (root access)          │
-│  2. Container escape (kernel exploits)   │
-│  3. Malicious images (supply chain)      │
-│  4. Network exposure                     │
-│  5. Sensitive data in images/env         │
-│  6. Resource exhaustion (DoS)            │
-│  7. Misconfigured volumes               │
-│  8. Privileged containers                │
-└──────────────────────────────────────────┘
-```
+![the_docker_attack_surface](svg/courses/devops/advanced-docker/05_security/the_docker_attack_surface.svg)
 
 ---
 
@@ -357,21 +344,7 @@ docker trust sign myregistry.com/myapp:1.0
 
 ## Content Trust - Key Management
 
-```diagram
-┌─────────────────────────────────────────┐
-│          Docker Content Trust           │
-│                                         │
-│  Root Key (offline, high security)      │
-│     └── Repository Key (per repo)       │
-│            └── Tag signatures           │
-│                                         │
-│  Delegation Keys (per signer)           │
-│     └── Sign specific tags              │
-│                                         │
-│  Timestamp Key (managed by Notary)      │
-│     └── Freshness guarantees            │
-└─────────────────────────────────────────┘
-```
+![content_trust_key_management](svg/courses/devops/advanced-docker/05_security/content_trust_key_management.svg)
 
 ```bash
 # Key storage location
@@ -413,19 +386,7 @@ trivy fs --security-checks vuln,config /path/to/project
 
 ## Image Scanning - `Trivy` Output Example
 
-```diagram
-myapp:latest (debian 12.4)
-Total: 15 (HIGH: 10, CRITICAL: 5)
-
-┌──────────────┬────────────────┬──────────┬─────────────┬──────────┐
-│   Library    │ Vulnerability  │ Severity │  Installed  │  Fixed   │
-├──────────────┼────────────────┼──────────┼─────────────┼──────────┤
-│ libssl3      │ CVE-2024-1234  │ CRITICAL │ 3.0.11-1    │ 3.0.13-1 │
-│ libcrypto3   │ CVE-2024-1235  │ CRITICAL │ 3.0.11-1    │ 3.0.13-1 │
-│ curl         │ CVE-2024-5678  │ HIGH     │ 7.88.1-10   │ 7.88.1-12│
-│ zlib         │ CVE-2024-9012  │ HIGH     │ 1.2.13-1    │ 1.2.13-2 │
-└──────────────┴────────────────┴──────────┴─────────────┴──────────┘
-```
+![image_scanning_trivy_output_example](svg/courses/devops/advanced-docker/05_security/image_scanning_trivy_output_example.svg)
 
 ---
 

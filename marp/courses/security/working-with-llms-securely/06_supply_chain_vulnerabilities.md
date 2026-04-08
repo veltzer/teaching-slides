@@ -14,24 +14,7 @@
 
 ## The `LLM` Supply Chain
 
-```diagram
-┌─────────────┐  ┌──────────────┐  ┌──────────────┐
-│ Pre-trained  │  │  Fine-tuning │  │  Plugins &   │
-│   Models     │  │  Datasets    │  │  Extensions  │
-└──────┬──────┘  └──────┬───────┘  └──────┬───────┘
-       │                │                  │
-       ▼                ▼                  ▼
-┌─────────────────────────────────────────────────┐
-│            Your LLM Application                  │
-└─────────────────────────────────────────────────┘
-       │                │                  │
-       ▼                ▼                  ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│  ML Libraries│ │  Hosting     │ │  API Gateways│
-│  (PyTorch,   │ │  Platform    │ │  & Providers │
-│   TF, etc.)  │ │              │ │              │
-└──────────────┘ └──────────────┘ └──────────────┘
-```
+![the_llm_supply_chain](svg/courses/security/working-with-llms-securely/06_supply_chain_vulnerabilities/the_llm_supply_chain.svg)
 
 ---
 
@@ -173,16 +156,7 @@ Pin versions, verify hashes, and audit regularly
 
 ## Mitigation: Software Bill of Materials (`SBOM`)
 
-```diagram
-Maintain an SBOM for your LLM application:
-
-✓ All model sources and versions
-✓ All training/fine-tuning datasets
-✓ All software dependencies and versions
-✓ All plugins and extensions
-✓ All API providers and versions
-✓ All infrastructure components
-```
+![mitigation_software_bill_of_materials_sbom](svg/courses/security/working-with-llms-securely/06_supply_chain_vulnerabilities/mitigation_software_bill_of_materials_sbom.svg)
 
 An `SBOM` enables rapid response to newly discovered vulnerabilities
 

@@ -4,24 +4,7 @@
 
 ## The Three Pillars of ChatGPT
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│                    ChatGPT Training                      │
-│                                                          │
-│  ┌──────────┐    ┌──────────┐    ┌──────────────────┐   │
-│  │ Stage 1  │───>│ Stage 2  │───>│    Stage 3       │   │
-│  │ Pre-     │    │ SFT      │    │    RLHF          │   │
-│  │ training │    │          │    │                    │   │
-│  ├──────────┤    ├──────────┤    ├──────────────────┤   │
-│  │ Next     │    │ Human-   │    │ Reward model     │   │
-│  │ token    │    │ written  │    │ + PPO            │   │
-│  │ predict  │    │ examples │    │ optimization     │   │
-│  ├──────────┤    ├──────────┤    ├──────────────────┤   │
-│  │ Months   │    │ Days     │    │ Days             │   │
-│  │ $$$$$    │    │ $$       │    │ $$$              │   │
-│  └──────────┘    └──────────┘    └──────────────────┘   │
-└─────────────────────────────────────────────────────────┘
-```
+![the_three_pillars_of_chatgpt](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/the_three_pillars_of_chatgpt.svg)
 
 ---
 
@@ -54,29 +37,7 @@ After RLHF:
 
 ## Stage 1: Pre-Training — Data Collection
 
-```diagram
-Data Pipeline:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Common Crawl ──┐
-(petabytes)    │    ┌─────────────┐
-               ├───>│  Filtering  │
-Wikipedia ─────┤    │  & Cleaning │
-               │    │             │
-Books ─────────┤    │ - Dedup     │
-               │    │ - Quality   │
-Code (GitHub)──┤    │ - Toxicity  │
-               │    │ - PII       │
-Academic ──────┘    └──────┬──────┘
-                           │
-                    ┌──────▼──────┐
-                    │ Tokenization│
-                    │ (BPE/       │
-                    │  tiktoken)  │
-                    └──────┬──────┘
-                           │
-                    ~2-10 Trillion tokens
-```
+![stage_1_pre_training_data_collection](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_pre_training_data_collection.svg)
 
 ---
 
@@ -151,57 +112,13 @@ config = {
 
 Training a 175B parameter model requires sophisticated parallelism:
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│         DISTRIBUTED TRAINING STRATEGIES          │
-├────────────────┬────────────────────────────────┤
-│ Data Parallel  │ Same model on each GPU,         │
-│                │ different data batches           │
-│                │ Simple but memory-limited        │
-├────────────────┼────────────────────────────────┤
-│ Tensor Parallel│ Split individual layers          │
-│                │ across GPUs (within node)        │
-│                │ Attention heads distributed      │
-├────────────────┼────────────────────────────────┤
-│ Pipeline       │ Different layers on different    │
-│ Parallel       │ GPUs (across nodes)              │
-│                │ Micro-batching for efficiency    │
-├────────────────┼────────────────────────────────┤
-│ ZeRO           │ Shard optimizer states,          │
-│ (DeepSpeed)    │ gradients, and parameters        │
-│                │ across all GPUs                  │
-└────────────────┴────────────────────────────────┘
-```
+![stage_1_distributed_training_strategies](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_distributed_training_strategies.svg)
 
 ---
 
 ## Stage 1: Training Dynamics
 
-```diagram
-Loss Curve During Pre-Training:
-
-Loss
-4.0 │╲
-    │ ╲
-3.5 │  ╲
-    │   ╲
-3.0 │    ╲╲
-    │      ╲╲
-2.5 │        ╲╲╲
-    │           ╲╲╲╲
-2.0 │               ╲╲╲╲╲╲
-    │                      ╲╲╲╲╲╲╲╲
-1.5 │                              ╲╲╲╲╲╲╲╲╲╲╲
-    │
-1.0 └──────────────────────────────────────────────
-    0    200B   400B   600B   800B   1T   1.2T tokens
-
-Key observations:
-- Rapid initial improvement
-- Gradual diminishing returns
-- Occasional loss spikes (training instabilities)
-- No clear "convergence" — performance keeps improving
-```
+![stage_1_training_dynamics](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_training_dynamics.svg)
 
 ---
 
@@ -209,22 +126,7 @@ Key observations:
 
 As pre-training progresses, capabilities emerge in stages:
 
-```diagram
-Tokens Trained    Capabilities Acquired
-──────────────    ──────────────────────
-10B               Basic grammar, common words
-50B               Sentence structure, simple facts
-200B              Paragraph coherence, basic reasoning
-500B              World knowledge, multi-step logic
-1T                Nuanced language, code generation
-2T+               Complex reasoning, few-shot learning
-
-Analogy to human development:
-  10B tokens   ≈  Learning to speak
-  200B tokens  ≈  Elementary school knowledge
-  1T tokens    ≈  College education
-  2T+ tokens   ≈  Expert-level pattern matching
-```
+![stage_1_what_the_model_learns](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_what_the_model_learns.svg)
 
 ---
 
@@ -249,32 +151,7 @@ After SFT:
 
 ## Stage 2: SFT — Data Collection Process
 
-```diagram
-SFT Data Creation Workflow:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-1. Create diverse prompt distribution:
-   ┌──────────────────────────────────┐
-   │ - Open-ended generation (25%)    │
-   │ - Classification tasks  (15%)    │
-   │ - Closed Q&A            (20%)    │
-   │ - Brainstorming         (10%)    │
-   │ - Code writing          (15%)    │
-   │ - Rewriting/editing     (10%)    │
-   │ - Summarization         (5%)     │
-   └──────────────────────────────────┘
-
-2. Human labelers write ideal responses:
-   - Follow detailed guidelines
-   - Be helpful but not harmful
-   - Acknowledge uncertainty
-   - Format responses clearly
-
-3. Quality assurance:
-   - Multiple reviewers per response
-   - Inter-annotator agreement checks
-   - Regular calibration sessions
-```
+![stage_2_sft_data_collection_process](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_2_sft_data_collection_process.svg)
 
 ---
 
@@ -479,27 +356,7 @@ def rlhf_training_step(policy, ref_policy, reward_model,
 
 ## Stage 3: The KL Penalty — Why It Matters
 
-```diagram
-Without KL penalty:
-  Model learns to exploit reward model weaknesses
-
-  Example "reward hack":
-  Prompt: "Write a poem about nature"
-  Response: "AMAZING INCREDIBLE WONDERFUL NATURE IS THE
-  BEST THING EVER ABSOLUTELY FANTASTIC!!!!"
-  → Reward model gives high score (positive sentiment)
-  → But response is garbage
-
-With KL penalty:
-  Model stays close to the well-calibrated SFT model
-  while improving on human preferences
-
-  KL divergence = Σ policy(x) × log(policy(x) / ref(x))
-
-  If KL is too high: model is drifting → increase penalty
-  If KL is too low: model isn't learning → decrease penalty
-  Sweet spot: KL ≈ 5-15 nats
-```
+![stage_3_the_kl_penalty_why_it_matters](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_3_the_kl_penalty_why_it_matters.svg)
 
 ---
 
@@ -606,63 +463,13 @@ safety_categories = {
 
 ## Training Infrastructure — The Hardware Stack
 
-```diagram
-TRAINING CLUSTER ARCHITECTURE
-══════════════════════════════════════════════
-
-    ┌─── GPU Node ────┐  ┌─── GPU Node ────┐
-    │ 8× A100 80GB    │  │ 8× A100 80GB    │
-    │ NVLink (600GB/s)│  │ NVLink (600GB/s)│
-    │ 2× AMD EPYC CPU │  │ 2× AMD EPYC CPU │
-    │ 2TB RAM         │  │ 2TB RAM         │
-    └────────┬────────┘  └────────┬────────┘
-             │   InfiniBand 400Gb/s  │
-    ┌────────┴───────────────────────┴────────┐
-    │        High-Speed Network Fabric         │
-    └────────┬───────────────────────┬────────┘
-    ┌────────┴────────┐  ┌──────────┴────────┐
-    │ Storage Cluster │  │ Parameter Server  │
-    │ (Petabytes)     │  │ (distributed)     │
-    └─────────────────┘  └───────────────────┘
-
-Cost estimates for GPT-4-scale training:
-  Hardware: ~$500M (25,000 A100s)
-  Electricity: ~$10M per training run
-  Total per run: ~$100M+
-```
+![training_infrastructure_the_hardware_stack](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/training_infrastructure_the_hardware_stack.svg)
 
 ---
 
 ## The Complete Pipeline — Summary
 
-```diagram
-RAW TEXT (Internet, books, code)
-    │
-    ▼
-┌──────────────────────────────────────────────┐
-│ 1. PRE-TRAINING                              │
-│    Objective: Next token prediction           │
-│    Data: ~2T tokens                           │
-│    Duration: Weeks-months                     │
-│    Result: Knowledgeable but unaligned        │
-└──────────────────┬───────────────────────────┘
-                   ▼
-┌──────────────────────────────────────────────┐
-│ 2. SUPERVISED FINE-TUNING (SFT)              │
-│    Data: ~100K human-written examples         │
-│    Duration: Days                             │
-│    Result: Follows instructions               │
-└──────────────────┬───────────────────────────┘
-                   ▼
-┌──────────────────────────────────────────────┐
-│ 3. RLHF / DPO / RLAIF                       │
-│    Data: ~300K preference comparisons         │
-│    Duration: Days                             │
-│    Result: Aligned, safe, helpful             │
-└──────────────────┬───────────────────────────┘
-                   ▼
-              DEPLOYED MODEL
-```
+![the_complete_pipeline_summary](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/the_complete_pipeline_summary.svg)
 
 ---
 
@@ -772,73 +579,10 @@ def generate_preference_pair(prompt, good_principles, bad_traits):
 
 ## Post-Training Techniques — Safety Layers
 
-```diagram
-Modern deployment adds multiple safety layers:
-
-INPUT LAYER
-  ┌────────────────────────────────────┐
-  │ User message                       │
-  └───────────┬────────────────────────┘
-              ▼
-  ┌────────────────────────────────────┐
-  │ Moderation API (classify input)    │
-  │ Block: violence, CSAM, etc.        │
-  └───────────┬────────────────────────┘
-              ▼
-  ┌────────────────────────────────────┐
-  │ Prompt injection detection         │
-  │ Pattern matching + classifier      │
-  └───────────┬────────────────────────┘
-              ▼
-  ┌────────────────────────────────────┐
-  │ LLM generation                     │
-  │ (with safety-trained model)        │
-  └───────────┬────────────────────────┘
-              ▼
-OUTPUT LAYER
-  ┌────────────────────────────────────┐
-  │ Output moderation (classify output)│
-  └───────────┬────────────────────────┘
-              ▼
-  ┌────────────────────────────────────┐
-  │ PII detection and redaction        │
-  └───────────┬────────────────────────┘
-              ▼
-  ┌────────────────────────────────────┐
-  │ Factuality check (optional)        │
-  └───────────┬────────────────────────┘
-              ▼
-  Response to user
-```
+![post_training_techniques_safety_layers](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/post_training_techniques_safety_layers.svg)
 
 ---
 
 ## RLHF vs DPO vs KTO — Comparison
 
-```diagram
-┌──────────┬────────────────┬──────────────┬──────────────┐
-│ Aspect   │ RLHF (PPO)     │ DPO          │ KTO          │
-├──────────┼────────────────┼──────────────┼──────────────┤
-│ Data     │ Comparisons    │ Comparisons  │ Single       │
-│ format   │ (A > B)        │ (A > B)      │ thumbs up/   │
-│          │                │              │ down per resp│
-├──────────┼────────────────┼──────────────┼──────────────┤
-│ Needs    │ Yes (separate  │ No           │ No           │
-│ reward   │ model)         │              │              │
-│ model?   │                │              │              │
-├──────────┼────────────────┼──────────────┼──────────────┤
-│ Training │ Complex (RL)   │ Simple (SL)  │ Simple (SL)  │
-│ stability│ Unstable       │ Stable       │ Very stable  │
-├──────────┼────────────────┼──────────────┼──────────────┤
-│ Quality  │ Highest        │ Very high    │ High         │
-├──────────┼────────────────┼──────────────┼──────────────┤
-│ Data     │ High           │ High         │ Lowest       │
-│ needs    │ (50K+ pairs)   │ (10K+ pairs) │ (binary      │
-│          │                │              │  labels OK)  │
-└──────────┴────────────────┴──────────────┴──────────────┘
-
-KTO (Kahneman-Tversky Optimization) is newest:
-  Just needs "good" or "bad" labels per response
-  No need for pairwise comparisons!
-  Makes data collection much easier
-```
+![rlhf_vs_dpo_vs_kto_comparison](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/rlhf_vs_dpo_vs_kto_comparison.svg)

@@ -476,31 +476,7 @@ rebalanced_df = salted_df.repartition(200, "salted_key")
 
 ## Salting Technique for Skewed Joins
 
-```diagram
-Before Salting (skewed):
-┌──────────────────────────────┐
-│  Partition 0: key=1 (5M rows)│  <-- HOT PARTITION
-├──────────────────────────────┤
-│  Partition 1: key=2 (100 rows)│
-├──────────────────────────────┤
-│  Partition 2: key=3 (200 rows)│
-└──────────────────────────────┘
-
-After Salting (balanced):
-┌──────────────────────────────┐
-│  Partition 0: key=1_0 (500K) │
-├──────────────────────────────┤
-│  Partition 1: key=1_1 (500K) │
-├──────────────────────────────┤
-│  ...                         │
-├──────────────────────────────┤
-│  Partition 9: key=1_9 (500K) │
-├──────────────────────────────┤
-│  Partition 10: key=2 (100)   │
-├──────────────────────────────┤
-│  Partition 11: key=3 (200)   │
-└──────────────────────────────┘
-```
+![salting_technique_for_skewed_joins](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/salting_technique_for_skewed_joins.svg)
 
 ---
 
@@ -550,29 +526,7 @@ bc_countries.unpersist()
 
 ## Broadcast Variable Data Flow
 
-```diagram
-┌─────────────────────────────────────────┐
-│           Driver Program                 │
-│  bc = sc.broadcast(country_lookup)       │
-│  Size: 1 KB (sent once per executor)     │
-└──────────┬──────────────────────────────┘
-           │ broadcast (once)
-     ┌─────┼─────────┐
-     v     v         v
-┌────────┐ ┌────────┐ ┌────────┐
-│Executor│ │Executor│ │Executor│
-│   0    │ │   1    │ │   2    │
-│        │ │        │ │        │
-│ lookup │ │ lookup │ │ lookup │
-│ (copy) │ │ (copy) │ │ (copy) │
-│        │ │        │ │        │
-│ Task 0 │ │ Task 1 │ │ Task 2 │
-│ Task 3 │ │ Task 4 │ │ Task 5 │
-└────────┘ └────────┘ └────────┘
-
-Without broadcast: lookup sent with EVERY task
-With broadcast: lookup sent ONCE per executor
-```
+![broadcast_variable_data_flow](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/broadcast_variable_data_flow.svg)
 
 ---
 
@@ -762,28 +716,7 @@ sort_merge_join.explain()
 
 ## Join Strategy Decision Flow
 
-```diagram
-                    ┌──────────────┐
-                    │ Join Request │
-                    └──────┬───────┘
-                           │
-                    ┌──────v───────┐
-                    │ Table size?  │
-                    └──────┬───────┘
-                           │
-              ┌────────────┼────────────┐
-              v            v            v
-       ┌──────────┐ ┌──────────┐ ┌──────────┐
-       │ < 10 MB  │ │ 10MB-1GB │ │  > 1 GB  │
-       └────┬─────┘ └────┬─────┘ └────┬─────┘
-            v            v            v
-     ┌────────────┐┌───────────┐┌───────────┐
-     │ Broadcast  ││Shuffle    ││Sort-Merge  │
-     │ Hash Join  ││Hash Join  ││Join        │
-     └────────────┘└───────────┘└───────────┘
-     No shuffle     Shuffle      Shuffle+Sort
-     O(n)           O(n+m)       O(nlogn)
-```
+![join_strategy_decision_flow](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/join_strategy_decision_flow.svg)
 
 ---
 
@@ -866,43 +799,7 @@ projected.unpersist()
 
 ## Pipeline Optimization Checklist
 
-```diagram
-┌─────────────────────────────────────────────┐
-│          Pipeline Optimization               │
-├─────────────────────────────────────────────┤
-│                                              │
-│  1. Schema Definition                        │
-│     [ ] Explicit schema (no inference)       │
-│     [ ] Appropriate data types               │
-│     [ ] Nullable flags set correctly         │
-│                                              │
-│  2. Predicate Pushdown                       │
-│     [ ] Filter as early as possible          │
-│     [ ] Use partition columns in filters     │
-│     [ ] Avoid UDFs in filter conditions      │
-│                                              │
-│  3. Column Pruning                           │
-│     [ ] Select only needed columns           │
-│     [ ] Drop columns before joins            │
-│     [ ] Avoid SELECT *                       │
-│                                              │
-│  4. Join Optimization                        │
-│     [ ] Broadcast small tables               │
-│     [ ] Filter before joining                │
-│     [ ] Avoid cartesian products             │
-│                                              │
-│  5. Caching                                  │
-│     [ ] Cache reused DataFrames              │
-│     [ ] Unpersist when done                  │
-│     [ ] Choose appropriate storage level     │
-│                                              │
-│  6. Shuffle Management                       │
-│     [ ] Tune shuffle partitions              │
-│     [ ] Coalesce before writing              │
-│     [ ] Enable AQE                           │
-│                                              │
-└─────────────────────────────────────────────┘
-```
+![pipeline_optimization_checklist](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/pipeline_optimization_checklist.svg)
 
 ---
 

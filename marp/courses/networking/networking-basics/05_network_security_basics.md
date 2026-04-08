@@ -10,14 +10,7 @@
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
 - Security must be layered -- no single mechanism is sufficient
 
-```diagram
-┌────────┐                                              ┌────────┐
-│ Client │──→ [Your LAN] ──→ [ISP] ──→ [Internet] ──→ │ Server │
-└────────┘        ↑            ↑           ↑            └────────┘
-              Attacker     Attacker     Attacker
-              can sniff    can sniff    can sniff
-              here         here         here
-```
+![why_network_security_matters](svg/courses/networking/networking-basics/05_network_security_basics/why_network_security_matters.svg)
 
 ---
 
@@ -27,12 +20,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 **Symmetric Encryption** -- same key for encryption and decryption:
 
-```diagram
-┌────────┐   Key: "s3cr3t"   ┌────────────┐   Key: "s3cr3t"   ┌────────┐
-│  Plain  │ ───────────────→ │ Ciphertext  │ ───────────────→ │  Plain  │
-│  Text   │    Encrypt        │ xK9#mP2...  │    Decrypt        │  Text   │
-└────────┘                   └────────────┘                   └────────┘
-```
+![symmetric_vs_asymmetric_encryption](svg/courses/networking/networking-basics/05_network_security_basics/symmetric_vs_asymmetric_encryption.svg)
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -48,25 +36,7 @@ Two fundamental approaches to encryption, both used in network security.
 
 Uses a key pair: public key (shared freely) and private key (kept secret).
 
-```diagram
-                    ┌──────────────┐
-                    │  Key Pair    │
-                    │              │
-                    │ Public Key   │ ← Anyone can have this
-                    │ Private Key  │ ← Only owner has this
-                    └──────────────┘
-
-Encryption:                              Digital Signature:
-┌───────┐  Public Key   ┌──────────┐    ┌───────┐  Private Key  ┌──────────┐
-│ Plain  │ ──────────→  │ Cipher   │    │ Data  │ ──────────→  │ Signed   │
-│ Text   │  Encrypt     │ Text     │    │       │  Sign         │ Data     │
-└───────┘               └──────────┘    └───────┘               └──────────┘
-                              │                                       │
-┌───────┐  Private Key  ┌────┘          ┌───────┐  Public Key   ┌────┘
-│ Plain  │ ←──────────  │              │ Valid  │ ←──────────  │
-│ Text   │  Decrypt                     │ ?     │  Verify
-└───────┘                               └───────┘
-```
+![asymmetric_encryption](svg/courses/networking/networking-basics/05_network_security_basics/asymmetric_encryption.svg)
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -80,17 +50,7 @@ Encryption:                              Digital Signature:
 
 TLS combines symmetric and asymmetric encryption for the best of both worlds:
 
-```diagram
-Phase 1: Asymmetric (Key Exchange)          Phase 2: Symmetric (Bulk Data)
-┌────────┐         ┌────────┐              ┌────────┐         ┌────────┐
-│ Client │ ←─────→ │ Server │              │ Client │ ←─────→ │ Server │
-│        │ Public  │        │              │        │ Shared  │        │
-│        │ Key     │        │              │        │ Session │        │
-│        │ Crypto  │        │              │        │ Key     │        │
-└────────┘         └────────┘              └────────┘         └────────┘
-Slow but solves                            Fast, used for all
-key distribution                           application data
-```
+![how_tls_uses_both](svg/courses/networking/networking-basics/05_network_security_basics/how_tls_uses_both.svg)
 
 1. Asymmetric crypto establishes a shared secret (session key)
 2. Symmetric crypto (AES/ChaCha20) encrypts all subsequent data
@@ -127,30 +87,7 @@ $ openssl s_client -connect example.com:443 -tls1_3
 
 The TLS 1.2 handshake requires 2 round trips before data can flow:
 
-```diagram
-Client                                          Server
-  │                                                │
-  │──── ClientHello ─────────────────────────────→│
-  │     (TLS version, cipher suites,              │
-  │      client random)                            │
-  │                                                │
-  │←─── ServerHello ──────────────────────────────│
-  │     (chosen cipher, server random)             │
-  │←─── Certificate ──────────────────────────────│
-  │     (server's X.509 certificate)               │
-  │←─── ServerKeyExchange ────────────────────────│
-  │←─── ServerHelloDone ──────────────────────────│
-  │                                                │
-  │──── ClientKeyExchange ────────────────────────→│
-  │     (pre-master secret, encrypted)             │
-  │──── ChangeCipherSpec ─────────────────────────→│
-  │──── Finished (encrypted) ─────────────────────→│
-  │                                                │
-  │←─── ChangeCipherSpec ─────────────────────────│
-  │←─── Finished (encrypted) ─────────────────────│
-  │                                                │
-  │ ═══ Encrypted Application Data ═══════════════ │
-```
+![tls_1_2_handshake](svg/courses/networking/networking-basics/05_network_security_basics/tls_1_2_handshake.svg)
 
 Total: 2 round trips (2-RTT) before first data byte
 
@@ -160,24 +97,7 @@ Total: 2 round trips (2-RTT) before first data byte
 
 TLS 1.3 reduces the handshake to just 1 round trip:
 
-```diagram
-Client                                          Server
-  │                                                │
-  │──── ClientHello ─────────────────────────────→│
-  │     (TLS version, cipher suites,              │
-  │      key share, supported groups)              │
-  │                                                │
-  │←─── ServerHello ──────────────────────────────│
-  │     (chosen cipher, key share)                 │
-  │←─── EncryptedExtensions ──────────────────────│
-  │←─── Certificate ──────────────────────────────│
-  │←─── CertificateVerify ────────────────────────│
-  │←─── Finished ─────────────────────────────────│
-  │                                                │
-  │──── Finished ─────────────────────────────────→│
-  │                                                │
-  │ ═══ Encrypted Application Data ═══════════════ │
-```
+![tls_1_3_handshake](svg/courses/networking/networking-basics/05_network_security_basics/tls_1_3_handshake.svg)
 
 **TLS 1.3 improvements:**
 - 1-RTT handshake (vs 2-RTT in TLS 1.2)
@@ -192,24 +112,7 @@ Client                                          Server
 
 **PKI** (Public Key Infrastructure) is the trust framework that makes TLS work.
 
-```diagram
-┌────────────────────────┐
-│    Root CA (trusted)   │  Self-signed, embedded in browsers/OS
-│    e.g., DigiCert      │
-└───────────┬────────────┘
-            │ Signs
-            ▼
-┌────────────────────────┐
-│   Intermediate CA      │  Signed by Root CA
-│   e.g., Let's Encrypt  │
-└───────────┬────────────┘
-            │ Signs
-            ▼
-┌────────────────────────┐
-│  Server Certificate    │  Signed by Intermediate CA
-│  e.g., example.com     │  Contains: domain name, public key,
-└────────────────────────┘  validity period, issuer info
-```
+![certificates_and_pki](svg/courses/networking/networking-basics/05_network_security_basics/certificates_and_pki.svg)
 
 **Certificate chain verification:**
 1. Server sends its certificate + intermediate CA certificates
@@ -286,16 +189,7 @@ notAfter=Mar 31 23:59:59 2024 GMT
 
 A firewall controls network traffic based on predefined rules.
 
-```diagram
-                    ┌──────────────────────────────┐
-  Incoming          │          FIREWALL             │         Internal
-  Traffic  ────────→│                               │────────→ Network
-                    │  Rule 1: Allow SSH (port 22)  │
-  Outgoing          │  Rule 2: Allow HTTP (port 80) │         Servers
-  Traffic  ←────────│  Rule 3: Allow HTTPS (443)    │←────────
-                    │  Rule 4: Drop all other       │
-                    └──────────────────────────────┘
-```
+![firewalls_concept](svg/courses/networking/networking-basics/05_network_security_basics/firewalls_concept.svg)
 
 **Types of firewalls:**
 
@@ -314,16 +208,7 @@ A firewall controls network traffic based on predefined rules.
 
 **Chains and tables:**
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│                  Netfilter                       │
-│                                                  │
-│  PREROUTING → INPUT → [Local Process] → OUTPUT → POSTROUTING
-│       │                                    │
-│       └──→ FORWARD ──────────────────────→─┘
-│            (routing)
-└─────────────────────────────────────────────────┘
-```
+![iptables_basics](svg/courses/networking/networking-basics/05_network_security_basics/iptables_basics.svg)
 
 ```bash
 # View current rules
@@ -482,23 +367,7 @@ $ sudo systemctl enable nftables
 
 A VPN (Virtual Private Network) creates an encrypted tunnel between two points over an untrusted network.
 
-```diagram
-Without VPN:
-┌────────┐     ┌─────────┐     ┌──────────┐     ┌────────┐
-│ Client │────→│  ISP    │────→│ Internet │────→│ Server │
-│        │ !!  │ Can see │ !!  │ Can see  │     │        │
-└────────┘     │ traffic │     │ traffic  │     └────────┘
-               └─────────┘     └──────────┘
-
-With VPN:
-┌────────┐     ┌─────────┐     ┌──────────┐     ┌────────┐
-│ Client │════→│  ISP    │════→│ Internet │════→│  VPN   │────→ Server
-│        │     │ Sees    │     │ Sees     │     │ Server │
-└────────┘     │ encrypted│    │ encrypted│     └────────┘
-               │ tunnel  │     │ tunnel   │
-               └─────────┘     └──────────┘
-     ═══ = encrypted tunnel
-```
+![vpn_overview](svg/courses/networking/networking-basics/05_network_security_basics/vpn_overview.svg)
 
 **VPN use cases:**
 - Remote access to corporate networks
@@ -514,20 +383,7 @@ IPSec operates at the network layer (L3), encrypting IP packets.
 
 **Two modes:**
 
-```diagram
-Transport Mode:
-┌──────────┬───────────────────┬──────────────────┐
-│ IP Header│   IPSec Header    │   Original Data  │
-│ (original)│  (ESP/AH)        │   (encrypted)    │
-└──────────┴───────────────────┴──────────────────┘
-
-Tunnel Mode:
-┌──────────┬───────────────────┬──────────┬──────────────────┐
-│ New IP   │   IPSec Header    │ Original │   Original Data  │
-│ Header   │   (ESP/AH)        │ IP Header│   (encrypted)    │
-└──────────┴───────────────────┴──────────┴──────────────────┘
-  Outer IP    Everything inside is encrypted    Inner IP
-```
+![ipsec_vpn](svg/courses/networking/networking-basics/05_network_security_basics/ipsec_vpn.svg)
 
 **IPSec protocols:**
 - **ESP** (Encapsulating Security Payload): encryption + authentication
@@ -627,25 +483,7 @@ $ sudo systemctl enable wg-quick@wg0
 
 Dividing a network into isolated segments limits the blast radius of security breaches.
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│                     Corporate Network                    │
-│                                                          │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │   VLAN 10    │  │   VLAN 20    │  │   VLAN 30    │  │
-│  │   Office     │  │  Development │  │  Production  │  │
-│  │              │  │              │  │              │  │
-│  │ 10.10.0.0/24│  │ 10.20.0.0/24│  │ 10.30.0.0/24│  │
-│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘  │
-│         │                  │                  │          │
-│         └──────────┬───────┘──────────┬───────┘          │
-│                    │                  │                   │
-│              ┌─────┴──────┐    ┌─────┴──────┐           │
-│              │  Firewall   │    │  Firewall   │           │
-│              │  Rules      │    │  Rules      │           │
-│              └────────────┘    └────────────┘           │
-└─────────────────────────────────────────────────────────┘
-```
+![network_segmentation](svg/courses/networking/networking-basics/05_network_security_basics/network_segmentation.svg)
 
 **Segmentation benefits:**
 - Limits lateral movement by attackers
@@ -659,34 +497,7 @@ Dividing a network into isolated segments limits the blast radius of security br
 
 A DMZ is a network segment that sits between the public internet and the internal network, hosting public-facing services.
 
-```diagram
-                    ┌──────────────┐
-     Internet ─────→│   Outer      │
-                    │   Firewall   │
-                    └──────┬───────┘
-                           │
-                    ┌──────┴───────┐
-                    │     DMZ      │
-                    │              │
-                    │ Web Server   │
-                    │ Mail Server  │
-                    │ DNS Server   │
-                    └──────┬───────┘
-                           │
-                    ┌──────┴───────┐
-                    │   Inner      │
-                    │   Firewall   │
-                    └──────┬───────┘
-                           │
-                    ┌──────┴───────┐
-                    │   Internal   │
-                    │   Network    │
-                    │              │
-                    │ Database     │
-                    │ App Servers  │
-                    │ Workstations │
-                    └──────────────┘
-```
+![dmz_demilitarized_zone](svg/courses/networking/networking-basics/05_network_security_basics/dmz_demilitarized_zone.svg)
 
 **DMZ rules:**
 - Internet can reach DMZ services (ports 80, 443, 25, 53)
@@ -700,15 +511,7 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ### 1. Man-in-the-Middle (MITM)
 
-```diagram
-┌────────┐         ┌──────────┐         ┌────────┐
-│ Client │ ──────→ │ Attacker │ ──────→ │ Server │
-│        │ ←────── │ (proxy)  │ ←────── │        │
-└────────┘         └──────────┘         └────────┘
-  Thinks it's           Intercepts and
-  talking to            optionally modifies
-  the server            all traffic
-```
+![1_man_in_the_middle_mitm](svg/courses/networking/networking-basics/05_network_security_basics/1_man_in_the_middle_mitm.svg)
 
 **Mitigations:** TLS with certificate validation, certificate pinning, HSTS
 
@@ -770,12 +573,7 @@ $ sudo ss -tlnp    # Check what's listening
 
 ### 6. DNS Amplification DDoS
 
-```diagram
-┌──────────┐  Spoofed query    ┌──────────┐   Large response    ┌────────┐
-│ Attacker │ ────────────────→ │ Open DNS │ ────────────────→   │ Victim │
-│          │  (src=victim IP)  │ Resolver │   (~50x amplified)  │        │
-└──────────┘  Small query      └──────────┘   Huge response     └────────┘
-```
+![6_dns_amplification_ddos](svg/courses/networking/networking-basics/05_network_security_basics/6_dns_amplification_ddos.svg)
 
 **Mitigation:** Disable open resolvers, BCP38 (ingress filtering), rate limiting
 
@@ -879,17 +677,7 @@ The traditional "castle and moat" model (trust everything inside the network) is
 2. **Least privilege access** -- grant minimum necessary permissions
 3. **Assume breach** -- design as if attackers are already inside
 
-```diagram
-Traditional Model:                    Zero Trust Model:
-┌─────────────────────┐              ┌─────────────────────┐
-│  Trusted Network    │              │  No implicit trust  │
-│  ┌───┐ ┌───┐ ┌───┐│              │  ┌───┐ ┌───┐ ┌───┐│
-│  │ A │→│ B │→│ C ││              │  │ A │⇥│ B │⇥│ C ││
-│  └───┘ └───┘ └───┘│              │  └───┘ └───┘ └───┘│
-│  Free lateral       │              │  Every connection   │
-│  movement           │              │  authenticated      │
-└─────────────────────┘              └─────────────────────┘
-```
+![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 
 **Implementation components:**
 - Identity-aware proxy (BeyondCorp, Tailscale)

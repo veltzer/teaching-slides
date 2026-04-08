@@ -67,49 +67,13 @@ dig google.com TXT
 # Response: multiple large TXT records
 ```
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│     Amplification Factors by Record Type          │
-├──────────────────────────────────────────────────┤
-│  Query Type     │  Typical Factor                │
-├─────────────────┼────────────────────────────────┤
-│  A record       │  2-3x                          │
-│  MX record      │  5-10x                         │
-│  TXT record     │  10-20x                        │
-│  ANY query      │  30-70x                        │
-│  DNSSEC (DNSKEY)│  40-100x                       │
-│  EDNS0 (4096)   │  Up to 100x                    │
-└──────────────────────────────────────────────────┘
-```
+![response_multiple_large_txt_records](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/response_multiple_large_txt_records.svg)
 
 ---
 
 ## IP Spoofing: The Enabler
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│           IP Spoofing in DNS Amplification                │
-│                                                          │
-│  Attacker IP: 10.0.0.1                                   │
-│  Victim IP:   192.168.1.100                              │
-│                                                          │
-│  Step 1: Attacker crafts UDP packet                      │
-│  ┌────────────────────────────────────┐                  │
-│  │  Source IP: 192.168.1.100 (VICTIM) │  <-- Spoofed!    │
-│  │  Dest IP:   8.8.8.8 (Open DNS)    │                  │
-│  │  Query:     dig . ANY             │                  │
-│  └─���──────────────────────────────────┘                  │
-│                                                          │
-│  Step 2: DNS server responds to VICTIM                   │
-│  ���────────────────────────────────────���                  │
-│  │  Source IP: 8.8.8.8               │                  │
-│  │  Dest IP:   192.168.1.100 (VICTIM)│                  │
-│  │  Response:  ~3000 bytes           │  <-- Amplified!  │
-│  └──────────���─────────────────────────┘                  │
-│                                                          │
-│  UDP is connectionless: no handshake to verify source    │
-└──────���──────────────────────────────��────────────────────┘
-```
+![ip_spoofing_the_enabler](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/ip_spoofing_the_enabler.svg)
 
 ---
 
@@ -137,28 +101,7 @@ dig @your-dns-ip example.com
 
 ## BCP38: Ingress Filtering (Source Address Validation)
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          BCP38 / RFC 2827: Ingress Filtering              │
-│                                                          │
-│  ISP Network: 203.0.113.0/24                             │
-│                                                          │
-│  WITHOUT BCP38:                                          │
-│  ┌────────┐                    ┌──────────┐              │
-│  │ Host   │── src: 10.0.0.1 ──│  Router   │──> Internet │
-│  │        │   (spoofed!)       │  (passes) │             │
-│  └────────┘                    └──────────┘              │
-│                                                          │
-│  WITH BCP38:                                             │
-│  ┌��───────┐                    ┌──────────┐              │
-│  │ Host   │── src: 10.0.0.1 ──│  Router   │──x DROPPED  │
-│  │        │   (not in range)   │  (checks) │             │
-│  └────────┘                    └──────────┘              │
-│                                                          │
-│  Router only forwards packets with source IPs            │
-│  belonging to its customer network (203.0.113.0/24)      │
-└──────────────────────────────────────────────────────────┘
-```
+![bcp38_ingress_filtering_source_address_validation](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/bcp38_ingress_filtering_source_address_validation.svg)
 
 If all ISPs implemented BCP38, IP spoofing-based amplification would be impossible.
 

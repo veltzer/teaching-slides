@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Rayon Work Stealing</text>
+  <!-- Thread pool -->
+  <rect x="30" y="55" width="740" height="180" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Rayon Thread Pool</text>
+  <!-- Thread 1 with deque -->
+  <rect x="50" y="95" width="160" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="130" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Thread 1</text>
+  <rect x="60" y="125" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="77" y="139" text-anchor="middle" font-size="8" fill="#333">T1</text>
+  <rect x="97" y="125" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="114" y="139" text-anchor="middle" font-size="8" fill="#333">T2</text>
+  <rect x="134" y="125" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="151" y="139" text-anchor="middle" font-size="8" fill="#333">T3</text>
+  <rect x="60" y="148" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="77" y="162" text-anchor="middle" font-size="8" fill="#333">T4</text>
+  <text x="130" y="190" text-anchor="middle" font-size="9" fill="#555">Local deque (full)</text>
+  <!-- Thread 2 with deque -->
+  <rect x="240" y="95" width="160" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="320" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Thread 2</text>
+  <rect x="250" y="125" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="267" y="139" text-anchor="middle" font-size="8" fill="#333">T5</text>
+  <text x="320" y="190" text-anchor="middle" font-size="9" fill="#555">Local deque</text>
+  <!-- Thread 3 (idle) -->
+  <rect x="430" y="95" width="160" height="120" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="510" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Thread 3 (idle)</text>
+  <text x="510" y="155" text-anchor="middle" font-size="10" fill="#dc3545">Empty deque!</text>
+  <text x="510" y="190" text-anchor="middle" font-size="9" fill="#dc3545">Steals from Thread 1</text>
+  <!-- Steal arrow -->
+  <line x1="430" y1="145" x2="210" y2="135" stroke="#dc3545" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <text x="310" y="128" font-size="9" fill="#dc3545" font-weight="bold">STEAL</text>
+  <!-- Thread 4 -->
+  <rect x="620" y="95" width="130" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="685" y="115" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Thread N</text>
+  <rect x="630" y="125" width="35" height="20" rx="2" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="647" y="139" text-anchor="middle" font-size="8" fill="#333">T6</text>
+  <!-- API examples -->
+  <rect x="30" y="260" width="350" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="205" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Rayon Parallel Iterators</text>
+  <text x="45" y="308" font-size="10" fill="#555">data.par_iter().map(|x| x * 2).sum()</text>
+  <text x="45" y="328" font-size="10" fill="#555">data.par_sort()</text>
+  <text x="45" y="340" font-size="10" fill="#28a745">Just add .par_ prefix!</text>
+  <!-- Join -->
+  <rect x="420" y="260" width="350" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="595" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">rayon::join</text>
+  <text x="435" y="308" font-size="10" fill="#555">rayon::join(|| compute_a(),</text>
+  <text x="435" y="326" font-size="10" fill="#555">            || compute_b());</text>
+  <text x="435" y="340" font-size="10" fill="#555">Fork-join parallelism</text>
+  <!-- Key benefits -->
+  <rect x="30" y="370" width="740" height="65" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Key Benefits</text>
+  <text x="130" y="420" text-anchor="middle" font-size="10" fill="#555">Automatic load balancing</text>
+  <text x="340" y="420" text-anchor="middle" font-size="10" fill="#555">No manual thread management</text>
+  <text x="560" y="420" text-anchor="middle" font-size="10" fill="#555">Cache-friendly (LIFO local)</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrD" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Mixture of Experts (MoE) Architecture</text>
+  <!-- Router -->
+  <rect x="150" y="55" width="500" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">ROUTER (Gate)</text>
+  <text x="400" y="100" text-anchor="middle" font-size="11" fill="#666">Decides which experts to activate based on token's hidden state</text>
+  <!-- Lines to experts -->
+  <line x1="150" y1="115" x2="80" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="230" y1="115" x2="170" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="310" y1="115" x2="260" y2="150" stroke="#28a745" stroke-width="2"/>
+  <line x1="390" y1="115" x2="350" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="470" y1="115" x2="440" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="540" y1="115" x2="530" y2="150" stroke="#28a745" stroke-width="2"/>
+  <line x1="580" y1="115" x2="620" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="630" y1="115" x2="710" y2="150" stroke="#ccc" stroke-width="1"/>
+  <!-- Experts -->
+  <rect x="45" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="80" y="185" text-anchor="middle" font-size="12" fill="#999">E1</text>
+  <rect x="135" y="150" width="70" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="170" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">E2</text>
+  <text x="170" y="200" text-anchor="middle" font-size="14" fill="#28a745">&#x2605;</text>
+  <rect x="225" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="260" y="185" text-anchor="middle" font-size="12" fill="#999">E3</text>
+  <rect x="315" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="350" y="185" text-anchor="middle" font-size="12" fill="#999">E4</text>
+  <rect x="405" y="150" width="70" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="440" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">E5</text>
+  <text x="440" y="200" text-anchor="middle" font-size="14" fill="#28a745">&#x2605;</text>
+  <rect x="495" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="530" y="185" text-anchor="middle" font-size="12" fill="#999">E6</text>
+  <rect x="585" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="620" y="185" text-anchor="middle" font-size="12" fill="#999">E7</text>
+  <rect x="675" y="150" width="70" height="60" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="710" y="185" text-anchor="middle" font-size="12" fill="#999">E8</text>
+  <!-- Star legend -->
+  <text x="580" y="235" text-anchor="middle" font-size="11" fill="#28a745">&#x2605; = selected (Top-K=2)</text>
+  <!-- Combine -->
+  <line x1="170" y1="210" x2="350" y2="270" stroke="#28a745" stroke-width="2"/>
+  <line x1="440" y1="210" x2="350" y2="270" stroke="#28a745" stroke-width="2"/>
+  <rect x="280" y="270" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="295" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Combine</text>
+  <!-- Comparison boxes -->
+  <rect x="60" y="340" width="320" height="50" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+  <text x="220" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Standard Transformer FFN</text>
+  <text x="220" y="378" text-anchor="middle" font-size="11" fill="#666">Every token uses ALL parameters</text>
+  <rect x="420" y="340" width="320" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="580" y="360" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">MoE FFN</text>
+  <text x="580" y="378" text-anchor="middle" font-size="11" fill="#666">Each token routed to Top-K experts</text>
+  <!-- Mixtral example -->
+  <rect x="100" y="410" width="600" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="400" y="432" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Mixtral 8x7B: 8 experts x 7B = 47B total params</text>
+  <text x="400" y="452" text-anchor="middle" font-size="11" fill="#856404">Only 2 experts active = ~13B params per token. Speed of 13B, quality of 47B!</text>
+</svg>

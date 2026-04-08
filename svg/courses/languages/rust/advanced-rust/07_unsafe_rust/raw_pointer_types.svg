@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Raw Pointer Types</text>
+  <!-- *const T -->
+  <rect x="30" y="55" width="340" height="150" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="200" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">*const T (immutable raw ptr)</text>
+  <text x="45" y="105" font-size="11" fill="#555">let x = 42;</text>
+  <text x="45" y="125" font-size="11" fill="#555">let ptr: *const i32 = &amp;x;</text>
+  <text x="45" y="150" font-size="11" fill="#555">// Creating is safe</text>
+  <text x="45" y="170" font-size="11" fill="#dc3545">// Dereferencing requires unsafe</text>
+  <text x="45" y="190" font-size="11" fill="#dc3545">unsafe { println!("{}", *ptr); }</text>
+  <!-- *mut T -->
+  <rect x="410" y="55" width="360" height="150" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="590" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">*mut T (mutable raw ptr)</text>
+  <text x="425" y="105" font-size="11" fill="#555">let mut x = 42;</text>
+  <text x="425" y="125" font-size="11" fill="#555">let ptr: *mut i32 = &amp;mut x;</text>
+  <text x="425" y="150" font-size="11" fill="#555">// Can read AND write</text>
+  <text x="425" y="170" font-size="11" fill="#dc3545">unsafe { *ptr = 99; }</text>
+  <text x="425" y="190" font-size="11" fill="#dc3545">// No aliasing rules enforced!</text>
+  <!-- Comparison with references -->
+  <rect x="30" y="230" width="740" height="200" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="400" y="255" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Raw Pointers vs References</text>
+  <!-- Headers -->
+  <text x="200" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Property</text>
+  <text x="420" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">&amp;T / &amp;mut T</text>
+  <text x="640" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">*const T / *mut T</text>
+  <line x1="50" y1="288" x2="750" y2="288" stroke="#dc3545" stroke-width="1"/>
+  <text x="200" y="308" text-anchor="middle" font-size="11" fill="#555">Null</text>
+  <text x="420" y="308" text-anchor="middle" font-size="11" fill="#28a745">Never null</text>
+  <text x="640" y="308" text-anchor="middle" font-size="11" fill="#dc3545">Can be null</text>
+  <text x="200" y="330" text-anchor="middle" font-size="11" fill="#555">Validity</text>
+  <text x="420" y="330" text-anchor="middle" font-size="11" fill="#28a745">Always valid</text>
+  <text x="640" y="330" text-anchor="middle" font-size="11" fill="#dc3545">May be dangling</text>
+  <text x="200" y="352" text-anchor="middle" font-size="11" fill="#555">Aliasing</text>
+  <text x="420" y="352" text-anchor="middle" font-size="11" fill="#28a745">Enforced by borrow checker</text>
+  <text x="640" y="352" text-anchor="middle" font-size="11" fill="#dc3545">No rules</text>
+  <text x="200" y="374" text-anchor="middle" font-size="11" fill="#555">Alignment</text>
+  <text x="420" y="374" text-anchor="middle" font-size="11" fill="#28a745">Guaranteed aligned</text>
+  <text x="640" y="374" text-anchor="middle" font-size="11" fill="#dc3545">May be unaligned</text>
+  <text x="200" y="396" text-anchor="middle" font-size="11" fill="#555">Send/Sync</text>
+  <text x="420" y="396" text-anchor="middle" font-size="11" fill="#28a745">Automatic</text>
+  <text x="640" y="396" text-anchor="middle" font-size="11" fill="#dc3545">Neither Send nor Sync</text>
+  <text x="200" y="418" text-anchor="middle" font-size="11" fill="#555">Deref</text>
+  <text x="420" y="418" text-anchor="middle" font-size="11" fill="#28a745">Safe</text>
+  <text x="640" y="418" text-anchor="middle" font-size="11" fill="#dc3545">Requires unsafe</text>
+</svg>

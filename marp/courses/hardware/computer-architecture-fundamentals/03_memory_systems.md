@@ -20,30 +20,7 @@
 Computer systems use a hierarchy of memory technologies, trading off
 speed, size, and cost:
 
-```diagram
-                    ┌───────┐
-                    │  Reg  │  ~0.3 ns, ~1 KB
-                    │       │  $$$$$$$
-                   ┌┴───────┴┐
-                   │ L1 Cache │  ~1 ns, 32-48 KB
-                   │          │  $$$$$$
-                  ┌┴──────────┴┐
-                  │  L2 Cache   │  ~5 ns, 256 KB - 1.25 MB
-                  │             │  $$$$$
-                 ┌┴─────────────┴┐
-                 │   L3 Cache     │  ~15 ns, 8-96 MB
-                 │                │  $$$$
-                ┌┴────────────────┴┐
-                │   Main Memory    │  ~80 ns, 8-512 GB
-                │   (DRAM)         │  $$$
-               ┌┴──────────────────┴┐
-               │      SSD            │  ~100 us, 256 GB - 8 TB
-               │                     │  $$
-              ┌┴─────────────────────┴┐
-              │       HDD              │  ~10 ms, 1-20 TB
-              │                        │  $
-              └────────────────────────┘
-```
+![the_memory_hierarchy](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/the_memory_hierarchy.svg)
 
 Each level is larger, slower, and cheaper per byte than the one above it.
 
@@ -78,25 +55,7 @@ A well-designed cache can satisfy >95% of memory requests.
 
 SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
-```diagram
-     VDD
-      │
-    ┌─┴─┐    ┌─┴─┐
-    │ P1 │    │ P2 │     6-Transistor SRAM Cell
-    └─┬─┘    └─┬─┘
-      ├────────┤
-    ┌─┴─┐    ┌─┴─┐
-    │ N1 │    │ N2 │
-    └─┬─┘    └─┬─┘
-      │        │
-    ┌─┴─┐    ┌─┴─┐
-    │ N3 │    │ N4 │
-    └─┬─┘    └─┬─┘
-      │        │
-     BL       BL_bar     (Bit Lines)
-  ────────────────────
-       Word Line
-```
+![sram_static_random_access_memory](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/sram_static_random_access_memory.svg)
 
 **Properties:**
 - Fast: ~1 ns access time
@@ -111,18 +70,7 @@ SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
 DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
-```diagram
-     Bit Line
-       │
-     ┌─┴─┐
-     │ T1 │── Word Line
-     └─┬─┘
-       │
-     ──┴──
-     ──┬──  Capacitor (stores charge = 1 bit)
-       │
-      GND
-```
+![dram_dynamic_random_access_memory](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dram_dynamic_random_access_memory.svg)
 
 **Properties:**
 - Slower: ~50-100 ns access time
@@ -154,31 +102,7 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
 DRAM is organized as a 2D array of rows and columns:
 
-```diagram
-┌─────────────────────────────────────────┐
-│              DRAM Bank                  │
-│                                         │
-│    Column 0  Column 1  Column 2  ...    │
-│   ┌────────┬────────┬────────┬────┐     │
-│ R │  bit   │  bit   │  bit   │    │     │
-│ o │        │        │        │    │     │
-│ w ├────────┼────────┼────────┼────┤     │
-│   │  bit   │  bit   │  bit   │    │     │
-│ 0 │        │        │        │    │     │
-│   ├────────┼────────┼────────┼────┤     │
-│ R │  bit   │  bit   │  bit   │    │     │
-│ o │        │        │        │    │     │
-│ w ├────────┼────────┼────────┼────┤     │
-│   │  bit   │  bit   │  bit   │    │     │
-│ 1 │        │        │        │    │     │
-│   └────────┴────────┴────────┴────┘     │
-│                                         │
-│   ┌──────────────────────────────┐      │
-│   │         Row Buffer           │      │
-│   │  (holds one activated row)   │      │
-│   └──────────────────────────────┘      │
-└─────────────────────────────────────────┘
-```
+![dram_organization](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dram_organization.svg)
 
 **Access steps:**
 1. **RAS** (Row Address Strobe): activate a row, copy to row buffer (~13 ns)
@@ -362,12 +286,7 @@ Each table is one 4 KB page containing 512 entries of 8 bytes each.
 
 Each page table entry on x86-64 contains:
 
-```diagram
- 63    62       52 51                                  12 11  9 8 7 6 5 4 3 2 1 0
-┌──┬──┬──────────┬──────────────────────────────────────┬─────┬─┬─┬─┬─┬─┬─┬─┬─┬─┐
-│NX│  │ Available │     Physical Frame Number            │ AVL │G│ │D│A│ │ │U│W│P│
-└──┴──┴──────────┴──────────────────────────────────────┴─────┴─┴─┴─┴─┴─┴─┴─┴─┴─┘
-```
+![page_table_entry_pte_format](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/page_table_entry_pte_format.svg)
 
 | Bit | Name | Meaning |
 |-----|------|---------|
@@ -427,23 +346,7 @@ When the OS modifies page tables (e.g., unmapping a page), it must
 invalidate the TLB entries on ALL CPU cores -- this is called a
 **TLB shootdown**.
 
-```diagram
-Core 0: unmaps page X
-  │
-  ├──> Invalidate own TLB entry for X
-  │
-  ├──> Send IPI (Inter-Processor Interrupt) to Cores 1, 2, 3
-  │         │              │              │
-  │         v              v              v
-  │    Invalidate     Invalidate     Invalidate
-  │    TLB for X      TLB for X      TLB for X
-  │         │              │              │
-  │         └──── ACK ─────┴──── ACK ─────┘
-  │                        │
-  └── Wait for all ACKs ──┘
-  │
-  Continue execution
-```
+![tlb_shootdown](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/tlb_shootdown.svg)
 
 TLB shootdowns are expensive because they interrupt other cores.
 Frequent mmap/munmap in multi-threaded programs can cause performance
@@ -543,24 +446,7 @@ void *shm = mmap(NULL, 4096,
 DMA allows hardware devices to transfer data directly to/from memory
 without involving the CPU for each byte.
 
-```diagram
-Without DMA (Programmed I/O):
-┌─────┐     byte     ┌────────┐     byte     ┌────────┐
-│ CPU │◄────────────►│ Device │              │ Memory │
-│     │──────────────────────────────────────►│        │
-└─────┘  CPU copies each byte!               └────────┘
-  CPU is 100% busy during transfer
-
-With DMA:
-┌─────┐  1. Setup    ┌─────────┐              ┌────────┐
-│ CPU │──────────────►│   DMA   │              │ Memory │
-│     │              │ Control │◄────────────►│        │
-└─────┘              └────┬────┘   bulk data   └────────┘
-  │                       │
-  │ CPU is free!     2. Transfer
-  │ Does other work       │
-  │                  3. Interrupt ──►  CPU notified: "done!"
-```
+![dma_direct_memory_access](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dma_direct_memory_access.svg)
 
 **DMA flow:**
 1. CPU programs the DMA controller (source, destination, size)
@@ -658,27 +544,7 @@ Registers).
 In multi-socket systems, each CPU has its own local memory. Accessing
 remote memory (attached to another CPU) is slower:
 
-```diagram
-┌──────────────────┐         ┌──────────────────┐
-│     Socket 0     │         │     Socket 1     │
-│  ┌────────────┐  │         │  ┌────────────┐  │
-│  │ Core 0..15 │  │         │  │ Core 16..31│  │
-│  └─────┬──────┘  │         │  └─────┬──────┘  │
-│        │         │         │        │         │
-│  ┌─────┴──────┐  │  QPI/   │  ┌─────┴──────┐  │
-│  │ Memory     │  │  UPI    │  │ Memory     │  │
-│  │ Controller │◄─┼─────────┼─►│ Controller │  │
-│  └─────┬──────┘  │  link   │  └─────┬──────┘  │
-│        │         │         │        │         │
-│  ┌─────┴──────┐  │         │  ┌─────┴──────┐  │
-│  │ Local DRAM │  │         │  │ Local DRAM │  │
-│  │ 64 GB      │  │         │  │ 64 GB      │  │
-│  └────────────┘  │         │  └────────────┘  │
-└──────────────────┘         └──────────────────┘
-
-Local access:  ~80 ns
-Remote access: ~130 ns  (1.5-2x slower)
-```
+![numa_non_uniform_memory_access](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/numa_non_uniform_memory_access.svg)
 
 ---
 
@@ -736,14 +602,7 @@ for (int j = 0; j < N; j++)
 ```
 
 **Memory layout of `matrix[N][N]`:**
-```diagram
-Address:  [0][0] [0][1] [0][2] ... [0][N-1] [1][0] [1][1] ...
-          ──────────────────────── ──────────────────────────
-          Row 0 (contiguous)       Row 1 (contiguous)
-
-Row-major:    accesses [0][0] [0][1] [0][2] ... ← sequential, cache-friendly
-Column-major: accesses [0][0] [1][0] [2][0] ... ← strided, cache-hostile
-```
+![memory_performance_row_major_vs_column_major](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/memory_performance_row_major_vs_column_major.svg)
 
 Typical speedup of row-major over column-major: **5-20x** for large matrices.
 

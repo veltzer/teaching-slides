@@ -29,31 +29,7 @@ Why it matters:
 
 ## CoT — The Key Insight
 
-```diagram
-Problem complexity vs. CoT benefit:
-
-Benefit of CoT
-     │
-     │                          ╱
-     │                       ╱╱
-     │                    ╱╱
-     │                 ╱╱
-     │              ╱╱
-     │           ╱╱
-     │        ╱╱
-     │     ╱╱      ← CoT helps most with
-     │  ╱╱          multi-step reasoning
-     │╱
-     └─────────────────────────────
-     Simple         Complex
-     (1 step)       (5+ steps)
-
-CoT helps when the problem requires:
-  - Multi-step arithmetic
-  - Logical deduction
-  - Planning and sequencing
-  - Constraint satisfaction
-```
+![cot_the_key_insight](svg/courses/ai/generative-ai-applications/08_chain_of_thought/cot_the_key_insight.svg)
 
 ---
 
@@ -154,33 +130,7 @@ print(f"Answer: {answer}, Confidence: {confidence:.0%}")
 
 ## Self-Consistency Visualized
 
-```diagram
-Problem: "If 3 shirts take 3 hours to dry, how long
-          do 9 shirts take?"
-
-Path 1: "3 shirts → 3 hours, so 1 shirt → 1 hour,
-          9 shirts → 9 hours"
-          Answer: 9 hours ✗
-
-Path 2: "Shirts dry in parallel. 3 shirts take 3 hours.
-          9 shirts also take 3 hours (same drying rack
-          capacity assumed... but actually need 3 batches)"
-          Answer: 3 hours
-
-Path 3: "3 shirts dry simultaneously in 3 hours.
-          9 shirts = 3 batches × 3 hours = 9 hours"
-          Answer: 9 hours ✗
-
-Path 4: "Shirts dry in parallel, not sequentially.
-          3 shirts → 3 hours. 9 shirts → still 3 hours."
-          Answer: 3 hours
-
-Path 5: "Drying is parallel. All shirts dry simultaneously.
-          Answer: 3 hours"
-
-Vote: 3 hours (3/5) vs 9 hours (2/5)
-→ Answer: 3 hours ← depends on assumptions
-```
+![self_consistency_visualized](svg/courses/ai/generative-ai-applications/08_chain_of_thought/self_consistency_visualized.svg)
 
 ---
 
@@ -388,33 +338,7 @@ Finally, provide a recommendation with justification.
 
 ## When CoT Doesn't Help
 
-```diagram
-Tasks where CoT provides little benefit:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-1. Simple factual recall
-   "What is the capital of Japan?"
-   → CoT adds unnecessary verbosity
-
-2. Simple classification
-   "Is this email spam? Yes/No"
-   → Direct answer is usually correct
-
-3. Translation
-   "Translate 'hello' to Spanish"
-   → Direct generation is fine
-
-4. Very short outputs
-   "What color is the sky?"
-   → CoT overhead not justified
-
-5. Creative tasks with no "correct" answer
-   "Write a poem about rain"
-   → Reasoning doesn't apply to creativity
-
-Rule: Use CoT when the task requires
-MULTIPLE REASONING STEPS to reach the answer.
-```
+![when_cot_does_not_help](svg/courses/ai/generative-ai-applications/08_chain_of_thought/when_cot_does_not_help.svg)
 
 ---
 

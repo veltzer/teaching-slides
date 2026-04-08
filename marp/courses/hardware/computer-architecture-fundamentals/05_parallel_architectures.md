@@ -25,31 +25,7 @@ Single-core CPU performance hit a wall around 2005. Clock speeds stopped
 increasing due to power and thermal limits. The only path forward is
 parallelism: doing more work simultaneously.
 
-```diagram
-    Clock Frequency Over Time:
-
-    GHz
-    4 │                    ┌──────────────────── Wall
-    3 │               ╱────┘
-    2 │          ╱────┘
-    1 │     ╱────┘
-      │╱────┘
-    0 └──────────────────────────────────────
-      1990  1995  2000  2005  2010  2015  2020
-
-    Core Count Over Time:
-
-    Cores
-    64│                              ╱────
-    32│                         ╱────┘
-    16│                    ╱────┘
-     8│               ╱────┘
-     4│          ╱────┘
-     2│     ╱────┘
-     1│─────┘
-      └──────────────────────────────────────
-      1990  1995  2000  2005  2010  2015  2020
-```
+![why_parallelism](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/why_parallelism.svg)
 
 The shift from "faster cores" to "more cores" fundamentally changed how
 software must be written.
@@ -61,22 +37,7 @@ software must be written.
 Michael Flynn (1966) classified computer architectures by how many
 instruction streams and data streams they process simultaneously.
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│                Flynn's Taxonomy                      │
-│                                                      │
-│              Single Data    Multiple Data             │
-│           ┌──────────────┬──────────────┐            │
-│  Single   │              │              │            │
-│  Instr    │    SISD       │    SIMD       │            │
-│           │              │              │            │
-│           ├──────────────┼──────────────┤            │
-│  Multiple │              │              │            │
-│  Instr    │    MISD       │    MIMD       │            │
-│           │              │              │            │
-│           └──────────────┴──────────────┘            │
-└──────────────────────────────────────────────────────┘
-```
+![flynn_s_taxonomy](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/flynn_s_taxonomy.svg)
 
 | Category | Instructions | Data | Examples |
 |----------|-------------|------|----------|
@@ -92,24 +53,7 @@ instruction streams and data streams they process simultaneously.
 The traditional von Neumann architecture. One instruction stream operates
 on one data element at a time.
 
-```diagram
-┌────────────────┐     ┌────────────────┐
-│  Instruction   │────>│  Processing    │────> Result
-│    Stream      │     │    Unit        │
-└────────────────┘     └────────┬───────┘
-                                │
-                       ┌────────┴───────┐
-                       │   Data Stream  │
-                       │   (one item)   │
-                       └────────────────┘
-
-Example: scalar addition
-    A[0] = B[0] + C[0]    (cycle 1)
-    A[1] = B[1] + C[1]    (cycle 2)
-    A[2] = B[2] + C[2]    (cycle 3)
-    A[3] = B[3] + C[3]    (cycle 4)
-    ... 4 additions take 4 cycles
-```
+![sisd_single_instruction_single_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/sisd_single_instruction_single_data.svg)
 
 Historical examples: early Intel 8086, Motorola 68000.
 Modern CPUs are technically SISD at the core level but incorporate
@@ -122,23 +66,7 @@ SIMD extensions internally.
 One instruction operates on multiple data elements simultaneously.
 This is the foundation of vector processing and GPU computing.
 
-```diagram
-┌────────────────┐     ┌────────────────────────────┐
-│  Instruction   │────>│     Processing Units       │
-│   Stream       │     │  ┌────┐┌────┐┌────┐┌────┐ │
-│  (one ADD)     │     │  │ PU0││ PU1││ PU2││ PU3│ │
-└────────────────┘     │  └──┬─┘└──┬─┘└──┬─┘└──┬─┘ │
-                       └─────┼─────┼─────┼─────┼───┘
-                             │     │     │     │
-                       ┌─────┴─────┴─────┴─────┴───┐
-                       │      Data Stream           │
-                       │  D0    D1    D2    D3      │
-                       └────────────────────────────┘
-
-Example: SIMD addition
-    A[0..3] = B[0..3] + C[0..3]    (single cycle!)
-    ... 4 additions take 1 cycle
-```
+![simd_single_instruction_multiple_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/simd_single_instruction_multiple_data.svg)
 
 Implementations: SSE (4 floats), AVX (8 floats), AVX-512 (16 floats),
 ARM NEON (4 floats), GPU warps (32 threads).
@@ -150,17 +78,7 @@ ARM NEON (4 floats), GPU warps (32 threads).
 Multiple instruction streams operate on the same data stream.
 This is the rarest category and mainly theoretical.
 
-```diagram
-┌──────────────────┐
-│ Instruction      │──┐
-│ Stream 1         │  │
-└──────────────────┘  │     ┌────────────────┐
-                      ├────>│  Single Data   │──> Results
-┌──────────────────┐  │     │    Stream      │    (compared)
-│ Instruction      │──┘     └────────────────┘
-│ Stream 2         │
-└──────────────────┘
-```
+![misd_multiple_instructions_single_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/misd_multiple_instructions_single_data.svg)
 
 **Practical uses:**
 - Fault-tolerant systems: run the same computation with different
@@ -178,21 +96,7 @@ real-world implementations.
 Multiple independent processors execute different instructions on
 different data. This is the most common parallel architecture today.
 
-```diagram
-┌──────────────┐  ┌──────────────┐  ┌──────────────┐
-│ Instruction  │  │ Instruction  │  │ Instruction  │
-│  Stream 0    │  │  Stream 1    │  │  Stream 2    │
-└──────┬───────┘  └──────┬───────┘  └──────┬───────┘
-       │                 │                 │
-┌──────┴───────┐  ┌──────┴───────┐  ┌──────┴───────┐
-│ Processing   │  │ Processing   │  │ Processing   │
-│   Unit 0     │  │   Unit 1     │  │   Unit 2     │
-└──────┬───────┘  └──────┬───────┘  └──────┬───────┘
-       │                 │                 │
-┌──────┴───────┐  ┌──────┴───────┐  ┌──────┴───────┐
-│   Data 0     │  │   Data 1     │  │   Data 2     │
-└──────────────┘  └──────────────┘  └──────────────┘
-```
+![mimd_multiple_instructions_multiple_data](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/mimd_multiple_instructions_multiple_data.svg)
 
 **Examples:**
 - Multi-core CPUs (each core runs its own thread)
@@ -208,33 +112,7 @@ MIMD is the dominant paradigm for general-purpose computing.
 A multi-core processor integrates multiple independent CPU cores
 on a single die (chip). Each core has its own L1/L2 caches.
 
-```diagram
-┌───────────────────────────────────────────────────────────┐
-│                    Multi-Core CPU Die                     │
-│                                                           │
-│  ┌───────────┐  ┌───────────┐  ┌───────────┐  ┌────────┐│
-│  │  Core 0   │  │  Core 1   │  │  Core 2   │  │ Core 3 ││
-│  │ ┌───┐┌───┐│  │ ┌───┐┌───┐│  │ ┌───┐┌───┐│  │┌───┐┌──┐│
-│  │ │L1I││L1D││  │ │L1I││L1D││  │ │L1I││L1D││  ││L1I││L1││
-│  │ └───┘└───┘│  │ └───┘└───┘│  │ └───┘└───┘│  │└───┘└──┘│
-│  │ ┌────────┐│  │ ┌────────┐│  │ ┌────────┐│  │┌───────┐│
-│  │ │   L2   ││  │ │   L2   ││  │ │   L2   ││  ││  L2   ││
-│  │ └────────┘│  │ └────────┘│  │ └────────┘│  │└───────┘│
-│  └─────┬─────┘  └─────┬─────┘  └─────┬─────┘  └───┬────┘│
-│        │              │              │             │      │
-│  ┌─────┴──────────────┴──────────────┴─────────────┴───┐ │
-│  │               Shared L3 Cache (8-96 MB)             │ │
-│  └──────────────────────────┬──────────────────────────┘ │
-│                             │                            │
-│  ┌──────────────────────────┴──────────────────────────┐ │
-│  │              Memory Controller                      │ │
-│  └──────────────────────────┬──────────────────────────┘ │
-└─────────────────────────────┼────────────────────────────┘
-                              │
-                     ┌────────┴────────┐
-                     │   DRAM (DDR5)   │
-                     └─────────────────┘
-```
+![multi_core_processors](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/multi_core_processors.svg)
 
 ---
 
@@ -293,36 +171,7 @@ both threads compete for the same execution units, caches, and bandwidth.
 
 ## SMT: Architecture Details
 
-```diagram
-┌────────────────────────────────────────────────────┐
-│              Physical Core with SMT                │
-│                                                    │
-│  ┌─────────────────┐  ┌─────────────────┐          │
-│  │ Thread 0 State  │  │ Thread 1 State  │          │
-│  │ ┌─────────────┐ │  │ ┌─────────────┐ │          │
-│  │ │ Registers   │ │  │ │ Registers   │ │ Separate │
-│  │ │ (RAX..R15)  │ │  │ │ (RAX..R15)  │ │          │
-│  │ └─────────────┘ │  │ └─────────────┘ │          │
-│  │ ┌─────────────┐ │  │ ┌─────────────┐ │          │
-│  │ │ Instr Ptr   │ │  │ │ Instr Ptr   │ │ Separate │
-│  │ └─────────────┘ │  │ └─────────────┘ │          │
-│  └─────────────────┘  └─────────────────┘          │
-│                                                    │
-│  ┌──────────────────────────────────────────┐      │
-│  │         Shared Execution Engine           │      │
-│  │  ┌─────┐┌─────┐┌─────┐┌─────┐┌─────┐    │      │
-│  │  │ALU 1││ALU 2││ALU 3││FPU 1││FPU 2│    │ Shared│
-│  │  └─────┘└─────┘└─────┘└─────┘└─────┘    │      │
-│  └──────────────────────────────────────────┘      │
-│                                                    │
-│  ┌──────────────────────────────────────────┐      │
-│  │      Shared L1 I-Cache and L1 D-Cache     │ Shared│
-│  └──────────────────────────────────────────┘      │
-│  ┌──────────────────────────────────────────┐      │
-│  │            Shared L2 Cache                │ Shared│
-│  └──────────────────────────────────────────┘      │
-└────────────────────────────────────────────────────┘
-```
+![smt_architecture_details](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/smt_architecture_details.svg)
 
 **Duplicated per thread**: register file, instruction pointer, TLB entries
 **Shared between threads**: ALU, FPU, caches, branch predictor, scheduler
@@ -391,32 +240,7 @@ Access latency: ~100 ns from any core (uniform)
 In NUMA systems, each processor has local memory that is faster to
 access. Accessing another processor's memory is slower.
 
-```diagram
-┌─────────────────────────┐     ┌─────────────────────────┐
-│       NUMA Node 0       │     │       NUMA Node 1       │
-│                         │     │                         │
-│  ┌──────┐  ┌──────┐    │     │    ┌──────┐  ┌──────┐  │
-│  │Core 0│  │Core 1│    │     │    │Core 4│  │Core 5│  │
-│  └──┬───┘  └──┬───┘    │     │    └──┬───┘  └──┬───┘  │
-│  ┌──┴───┐  ┌──┴───┐    │     │    ┌──┴───┐  ┌──┴───┐  │
-│  │Core 2│  │Core 3│    │     │    │Core 6│  │Core 7│  │
-│  └──┬───┘  └──┬───┘    │     │    └──┬───┘  └──┬───┘  │
-│     └────┬─────┘        │     │        └──┬─────┘      │
-│    ┌─────┴─────┐        │     │    ┌──────┴────┐       │
-│    │ Local Mem │        │     │    │ Local Mem  │       │
-│    │  (fast)   │        │     │    │  (fast)    │       │
-│    │  ~80 ns   │        │     │    │  ~80 ns    │       │
-│    └───────────┘        │     │    └────────────┘       │
-│              │          │     │          │              │
-└──────────────┼──────────┘     └──────────┼──────────────┘
-               │                           │
-               └──────────┬────────────────┘
-                    ┌─────┴──────┐
-                    │ Inter-node │
-                    │ Interconnect│
-                    │ (~150 ns)  │
-                    └────────────┘
-```
+![numa_non_uniform_memory_access](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/numa_non_uniform_memory_access.svg)
 
 ---
 
@@ -492,33 +316,7 @@ void *buf = numa_alloc_onnode(size, node_id);
 GPUs are massively parallel processors designed for throughput, not
 single-thread latency. They contain thousands of simple cores.
 
-```diagram
-┌─────────────────────────────────────────────────────────────┐
-│                         GPU Die                             │
-│                                                             │
-│  ┌──────────────┐  ┌──────────────┐      ┌──────────────┐  │
-│  │     SM 0     │  │     SM 1     │ ...  │    SM N      │  │
-│  │ ┌──┐┌──┐┌──┐│  │ ┌──┐┌──┐┌──┐│      │ ┌──┐┌──┐┌──┐│  │
-│  │ │CU││CU││CU││  │ │CU││CU││CU││      │ │CU││CU││CU││  │
-│  │ └──┘└──┘└──┘│  │ └──┘└──┘└──┘│      │ └──┘└──┘└──┘│  │
-│  │ ┌──┐┌──┐┌──┐│  │ ┌──┐┌──┐┌──┐│      │ ┌──┐┌──┐┌──┐│  │
-│  │ │CU││CU││CU││  │ │CU││CU││CU││      │ │CU││CU││CU││  │
-│  │ └──┘└──┘└──┘│  │ └──┘└──┘└──┘│      │ └──┘└──┘└──┘│  │
-│  │ Shared Mem  │  │ Shared Mem  │      │ Shared Mem  │  │
-│  │ L1 Cache    │  │ L1 Cache    │      │ L1 Cache    │  │
-│  └──────┬───────┘  └──────┬───────┘      └──────┬───────┘  │
-│         │                │                     │          │
-│  ┌──────┴────────────────┴─────────────────────┴────────┐ │
-│  │                    L2 Cache                           │ │
-│  └──────────────────────────┬───────────────────────────┘ │
-│                             │                             │
-│  ┌──────────────────────────┴───────────────────────────┐ │
-│  │            Memory Controllers (HBM/GDDR6)            │ │
-│  └──────────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────────────┘
-
-SM = Streaming Multiprocessor     CU = CUDA Core (compute unit)
-```
+![gpu_architecture_overview](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/gpu_architecture_overview.svg)
 
 ---
 
@@ -527,34 +325,7 @@ SM = Streaming Multiprocessor     CU = CUDA Core (compute unit)
 Each SM is a self-contained processing block. A modern GPU has
 dozens to over a hundred SMs.
 
-```diagram
-┌────────────────────────────────────────────────────┐
-│              Streaming Multiprocessor               │
-│                                                    │
-│  ┌──────────────────────────────────────────────┐  │
-│  │         Warp Schedulers (x4)                 │  │
-│  │  ┌─────────┐┌─────────┐┌─────────┐┌────────┐│  │
-│  │  │ Sched 0 ││ Sched 1 ││ Sched 2 ││Sched 3 ││  │
-│  │  └─────────┘└─────────┘└─────────┘└────────┘│  │
-│  └──────────────────────────────────────────────┘  │
-│                                                    │
-│  ┌──────────────────────────────────────────────┐  │
-│  │       INT32 Units     FP32 Units    FP64     │  │
-│  │       (64 units)      (64 units)   (32 u.)  │  │
-│  └──────────────────────────────────────────────┘  │
-│                                                    │
-│  ┌──────────────────────────────────────────────┐  │
-│  │  Tensor Cores (for AI matrix operations)     │  │
-│  │  (4 tensor cores per SM in modern GPUs)      │  │
-│  └──────────────────────────────────────────────┘  │
-│                                                    │
-│  ┌───────────┐  ┌──────────────────────────┐       │
-│  │ Register  │  │ Shared Memory / L1 Cache │       │
-│  │   File    │  │    (configurable split)  │       │
-│  │  (64 KB)  │  │       (128 KB)           │       │
-│  └───────────┘  └──────────────────────────┘       │
-└────────────────────────────────────────────────────┘
-```
+![streaming_multiprocessors_sms](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/streaming_multiprocessors_sms.svg)
 
 Each SM can manage hundreds of threads simultaneously.
 
@@ -566,20 +337,7 @@ A **warp** is a group of 32 threads that execute in lockstep on an SM.
 All threads in a warp execute the same instruction at the same time
 (SIMT: Single Instruction, Multiple Threads).
 
-```diagram
-    Warp 0:  [T0  T1  T2  T3  ... T31]  ── executing ADD
-    Warp 1:  [T32 T33 T34 T35 ... T63]  ── waiting for memory
-    Warp 2:  [T64 T65 T66 T67 ... T95]  ── executing MUL
-    Warp 3:  [T96 T97 T98 T99 ... T127] ── ready to execute
-
-    Warp Scheduler each cycle:
-    ┌─────────────────────────────────┐
-    │ Pick a warp that is READY       │
-    │ Issue its next instruction      │
-    │ If warp stalls (memory wait),   │
-    │ switch to another warp (free!)  │
-    └─────────────────────────────────┘
-```
+![warp_scheduling](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/warp_scheduling.svg)
 
 **Key insight**: GPUs hide memory latency by switching between warps,
 not by using caches. When one warp waits for memory, another runs
@@ -592,29 +350,7 @@ both paths must execute serially. This wastes throughput.
 
 ## CPU vs GPU: Architecture Comparison
 
-```diagram
-CPU: Few powerful cores               GPU: Many simple cores
-┌────────────────────────┐             ┌──────────────────────────┐
-│  ┌──────┐  ┌──────┐   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  │      │  │      │   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│  │ Core │  │ Core │   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  │  0   │  │  1   │   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│  │      │  │      │   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  └──────┘  └──────┘   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│  ┌──────┐  ┌──────┐   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  │      │  │      │   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│  │ Core │  │ Core │   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  │  2   │  │  3   │   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│  │      │  │      │   │             │ ┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐┌─┐  │
-│  └──────┘  └──────┘   │             │ └─┘└─┘└─┘└─┘└─┘└─┘└─┘  │
-│                        │             │                          │
-│  ████████████████████  │             │ ███                      │
-│       Big Caches       │             │ Small Caches             │
-│  ████████████████████  │             │                          │
-└────────────────────────┘             └──────────────────────────┘
-  4 cores, OoO, branch pred,            Thousands of cores,
-  big caches, low latency               in-order, high throughput
-```
+![cpu_vs_gpu_architecture_comparison](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/cpu_vs_gpu_architecture_comparison.svg)
 
 | Feature | CPU | GPU |
 |---------|-----|-----|
@@ -633,31 +369,7 @@ CPU: Few powerful cores               GPU: Many simple cores
 Vector processors operate on arrays of data with a single instruction.
 This is the SIMD paradigm at the instruction level.
 
-```diagram
-    Scalar operation (one element at a time):
-
-    A[0] = B[0] + C[0]         cycle 1
-    A[1] = B[1] + C[1]         cycle 2
-    A[2] = B[2] + C[2]         cycle 3
-    A[3] = B[3] + C[3]         cycle 4
-    Total: 4 cycles
-
-
-    Vector operation (multiple elements at once):
-
-    ┌──────────┬──────────┬──────────┬──────────┐
-    │  B[0]    │  B[1]    │  B[2]    │  B[3]    │   Vector Register 1
-    └──────────┴──────────┴──────────┴──────────┘
-         +          +          +          +
-    ┌──────────┬──────────┬──────────┬──────────┐
-    │  C[0]    │  C[1]    │  C[2]    │  C[3]    │   Vector Register 2
-    └──────────┴──────────┴──────────┴──────────┘
-         =          =          =          =
-    ┌──────────┬──────────┬──────────┬──────────┐
-    │  A[0]    │  A[1]    │  A[2]    │  A[3]    │   Vector Register 3
-    └──────────┴──────────┴──────────┴──────────┘
-    Total: 1 cycle (4x speedup!)
-```
+![vector_processing](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/vector_processing.svg)
 
 ---
 
@@ -674,21 +386,7 @@ x86 CPUs include progressively wider SIMD instruction sets:
 | AVX2 | 256-bit (YMM) | 8 float + int | 2013 |
 | AVX-512 | 512-bit (ZMM) | 16 float | 2017 |
 
-```diagram
-Register sizes:
-
-XMM0 (SSE):   128 bits  ┌───────────────────┐
-                          │ 4 x 32-bit float  │
-                          └───────────────────┘
-
-YMM0 (AVX):   256 bits  ┌───────────────────────────────────────┐
-                          │ 8 x 32-bit float                      │
-                          └───────────────────────────────────────┘
-
-ZMM0 (AVX-512):512 bits ┌───────────────────────────────────────────────────────────┐
-                          │ 16 x 32-bit float                                        │
-                          └───────────────────────────────────────────────────────────┘
-```
+![simd_instructions_sse_avx_avx_512](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/simd_instructions_sse_avx_avx_512.svg)
 
 ---
 
@@ -780,25 +478,13 @@ The interconnect topology determines communication speed.
 
 **Bus (legacy):**
 
-```diagram
-┌──────┐  ┌──────┐  ┌──────┐  ┌──────┐
-│Core 0│  │Core 1│  │Core 2│  │Core 3│
-└──┬───┘  └──┬───┘  └──┬───┘  └──┬───┘
-   │         │         │         │
-═══╧═════════╧═════════╧═════════╧═══  Shared Bus
-```
+![interconnects_between_cores_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_1.svg)
 
 Simple but becomes a bottleneck with more cores.
 
 **Ring bus (used in Intel up to ~10 cores):**
 
-```diagram
-┌──────┐───┌──────┐───┌──────┐───┌──────┐
-│Core 0│   │Core 1│   │Core 2│   │Core 3│
-└──────┘───└──────┘───└──────┘───└──────┘
-    │                                │
-    └────────────────────────────────┘
-```
+![interconnects_between_cores_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_between_cores_2.svg)
 
 Each core connects to two neighbors. Messages travel around the ring.
 Latency increases with core count (must traverse more hops).
@@ -809,33 +495,14 @@ Latency increases with core count (must traverse more hops).
 
 **Mesh (used in Intel Xeon, AMD EPYC):**
 
-```diagram
-┌──────┐────┌──────┐────┌──────┐────┌──────┐
-│Core 0│    │Core 1│    │Core 2│    │Core 3│
-└──┬───┘────└──┬───┘────└──┬───┘────└──┬───┘
-   │           │           │           │
-┌──┴───┐────┌──┴───┐────┌──┴───┐────┌──┴───┐
-│Core 4│    │Core 5│    │Core 6│    │Core 7│
-└──┬───┘────└──┬───┘────└──┬───┘────└──┬───┘
-   │           │           │           │
-┌──┴───┐────┌──┴───┐────┌──┴───┐────┌──┴───┐
-│Core 8│    │Core 9│    │Core10│    │Core11│
-└──────┘────└──────┘────└──────┘────└──────┘
-```
+![interconnects_mesh_and_crossbar_1](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_1.svg)
 
 Each core connects to 4 neighbors (N/S/E/W). Scales much better than
 a ring. Maximum hops = rows + columns - 2.
 
 **Crossbar:**
 
-```diagram
-         Core0  Core1  Core2  Core3
-          │      │      │      │
-Mem0 ─────┼──────┼──────┼──────┤
-Mem1 ─────┼──────┼──────┼──────┤
-Mem2 ─────┼──────┼──────┼──────┤
-Mem3 ─────┼──────┼──────┼──────┤
-```
+![interconnects_mesh_and_crossbar_2](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnects_mesh_and_crossbar_2.svg)
 
 Any-to-any connection. Low latency but expensive (O(N^2) switches).
 
@@ -852,22 +519,7 @@ Any-to-any connection. Low latency but expensive (O(N^2) switches).
 
 **AMD Infinity Fabric:**
 
-```diagram
-┌──────────────────┐        ┌──────────────────┐
-│   CCD 0          │        │   CCD 1          │
-│  (8 cores + L3)  │        │  (8 cores + L3)  │
-└────────┬─────────┘        └────────┬─────────┘
-         │                           │
-    ┌────┴───────────────────────────┴────┐
-    │        Infinity Fabric (IF)         │
-    │   (scalable on-die interconnect)    │
-    └────┬───────────┬───────────────┬────┘
-         │           │               │
-    ┌────┴────┐ ┌────┴─────┐ ┌──────┴──────┐
-    │ Memory  │ │   I/O    │ │ Inter-socket│
-    │ Ctrl    │ │   Hub    │ │   Link      │
-    └─────────┘ └──────────┘ └─────────────┘
-```
+![interconnect_comparison](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/interconnect_comparison.svg)
 
 ---
 
@@ -948,17 +600,7 @@ False sharing occurs when two cores modify different variables that
 happen to reside on the same cache line. The coherence protocol
 bounces the line back and forth even though there is no true sharing.
 
-```diagram
-Cache line (64 bytes):
-┌──────────────────────────────────────────────────────────────┐
-│  counter_core0  │  padding...  │  counter_core1  │  padding │
-│  (8 bytes)      │              │  (8 bytes)       │          │
-└──────────────────────────────────────────────────────────────┘
-     Core 0 writes here              Core 1 writes here
-
-Both in the SAME cache line! Every write by one core
-invalidates the line in the other core's cache.
-```
+![false_sharing](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/false_sharing.svg)
 
 **Bad code (false sharing):**
 
@@ -1019,15 +661,7 @@ avoiding multiple caches all trying to respond simultaneously.
 Amdahl's Law gives the theoretical maximum speedup of a program when
 parallelizing only a fraction of it.
 
-```diagram
-                    1
-Speedup = ─────────────────────
-           (1 - P) + P / N
-
-Where:
-  P = fraction of the program that can be parallelized
-  N = number of processors
-```
+![amdahl_s_law](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/amdahl_s_law.svg)
 
 **Example**: If 90% of a program is parallelizable (P = 0.9):
 
@@ -1049,34 +683,7 @@ The 10% serial portion is the bottleneck.
 
 ## Amdahl's Law: Visualization
 
-```diagram
-    Speedup
-    20 │
-       │
-    18 │                                            P = 0.99
-    16 │                                        ╱───────────
-       │                                   ╱────┘
-    14 │                              ╱────┘
-       │                         ╱────┘
-    12 │                    ╱────┘
-       │               ╱────┘           P = 0.95
-    10 │          ╱────┘            ╱────────────────────
-       │     ╱────┘           ╱────┘
-     8 │╱────┘           ╱────┘
-       │            ╱────┘          P = 0.90
-     6 │       ╱────┘          ╱────────────────────────
-       │  ╱────┘          ╱────┘
-     4 │──┘          ╱────┘
-       │        ╱────┘          P = 0.75
-     2 │   ╱────┘      ╱───────────────────────────────
-       │───┘      ╱────┘
-     0 └──────────────────────────────────────────────
-       1    4    8   16   32   64  128  256  512  1024
-                    Number of Processors
-
-    Key insight: even 5% serial code limits speedup to 20x
-    no matter how many processors you add.
-```
+![amdahl_s_law_visualization](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/amdahl_s_law_visualization.svg)
 
 ---
 
@@ -1166,53 +773,10 @@ Gustafson:  Fixed time, scale problem with processors
 
 **The parallelism stack on a modern server:**
 
-```diagram
-┌────────────────────────────────────────────────────┐
-│  Cluster: 1000 nodes, MPI communication            │
-│  ┌──────────────────────────────────────────────┐  │
-│  │  Node: 2 sockets, NUMA-aware allocation      │  │
-│  │  ┌────────────────────────────────────────┐  │  │
-│  │  │  Socket: 64 cores, shared L3            │  │  │
-│  │  │  ┌──────────────────────────────────┐  │  │  │
-│  │  │  │  Core: 2 SMT threads, OoO + SIMD │  │  │  │
-│  │  │  │  ┌────────────────────────────┐  │  │  │  │
-│  │  │  │  │  AVX-512: 16 floats/cycle  │  │  │  │  │
-│  │  │  │  └────────────────────────────┘  │  │  │  │
-│  │  │  └──────────────────────────────────┘  │  │  │
-│  │  └────────────────────────────────────────┘  │  │
-│  └──────────────────────────────────────────────┘  │
-└────────────────────────────────────────────────────┘
-```
+![practical_parallelism_putting_it_all_together](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/practical_parallelism_putting_it_all_together.svg)
 
 ---
 
 ## Summary: Parallel Architectures
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│           Parallel Architectures: Key Takeaways         │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
-│  Classification:                                        │
-│  - Flynn's Taxonomy: SISD, SIMD, MISD, MIMD            │
-│  - Modern CPUs combine SIMD + MIMD                      │
-│                                                         │
-│  Hardware Parallelism:                                  │
-│  - Multi-core: independent cores on one die             │
-│  - SMT/Hyper-threading: multiple threads per core       │
-│  - SIMD (SSE/AVX): operate on vectors of data           │
-│  - GPU: thousands of simple cores for throughput         │
-│                                                         │
-│  Memory Architecture:                                   │
-│  - UMA: equal access, simple, limited scalability       │
-│  - NUMA: non-uniform access, scales to 100+ cores       │
-│  - Cache coherence (MESI/MOESI) keeps cores consistent  │
-│  - False sharing: avoidable performance killer           │
-│                                                         │
-│  Scaling Laws:                                          │
-│  - Amdahl: serial fraction limits speedup               │
-│  - Gustafson: scale problem size with processors        │
-│  - Real systems: communication overhead matters too     │
-│                                                         │
-└─────────────────────────────────────────────────────────┘
-```
+![summary_parallel_architectures](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/summary_parallel_architectures.svg)

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SYN Flood Defense Layers</text>
+  <!-- Layer 1 - outermost -->
+  <rect x="40" y="50" width="620" height="350" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Layer 1: Network Edge</text>
+  <text x="350" y="87" text-anchor="middle" font-size="10" fill="#666">Rate limiting, ACLs, Black hole routing</text>
+  <!-- Layer 2 -->
+  <rect x="70" y="100" width="560" height="280" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Layer 2: Firewall / IPS</text>
+  <text x="350" y="137" text-anchor="middle" font-size="10" fill="#666">SYN proxy, Connection limits, Stateful inspection</text>
+  <!-- Layer 3 -->
+  <rect x="100" y="150" width="500" height="210" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#e6a800">Layer 3: Load Balancer</text>
+  <text x="350" y="187" text-anchor="middle" font-size="10" fill="#666">Traffic distribution, SYN cookies</text>
+  <!-- Layer 4 -->
+  <rect x="130" y="200" width="440" height="140" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Layer 4: OS Hardening</text>
+  <text x="350" y="237" text-anchor="middle" font-size="10" fill="#666">TCP backlog tuning, SYN cookie support</text>
+  <!-- Layer 5 - innermost -->
+  <rect x="160" y="250" width="380" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="278" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Layer 5: Application</text>
+  <text x="350" y="298" text-anchor="middle" font-size="10" fill="#666">Connection timeouts, Queue management</text>
+  <!-- Attack arrow on left -->
+  <text x="20" y="220" font-size="10" fill="#dc3545" font-weight="bold" transform="rotate(-90 20 220)">Attack Traffic</text>
+</svg>

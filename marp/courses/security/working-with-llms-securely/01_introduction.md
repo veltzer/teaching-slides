@@ -17,15 +17,7 @@ Understanding the most critical security risks in `LLM`-based systems
 
 ## The `LLM` Attack Surface
 
-```diagram
-                    ┌─────────────┐
-  User Input ──────►│             │──────► Output to User
-                    │   LLM App   │
-  External Data ───►│             │──────► Actions/API Calls
-                    │             │
-  Training Data ───►│             │──────► Database Writes
-                    └─────────────┘
-```
+![the_llm_attack_surface](svg/courses/security/working-with-llms-securely/01_introduction/the_llm_attack_surface.svg)
 
 Every input and output channel is a potential attack vector
 
@@ -79,19 +71,7 @@ Key questions to ask:
 
 ## `LLM` Application Architecture
 
-```diagram
-┌──────────┐     ┌──────────────┐     ┌──────────────┐
-│  Client  │────►│  App Layer   │────►│  LLM API     │
-│          │◄────│  (Backend)   │◄────│  (Provider)  │
-└──────────┘     └──────┬───────┘     └──────────────┘
-                        │
-                 ┌──────┴───────┐
-                 │  Data Stores │
-                 │  Plugins     │
-                 │  External    │
-                 │  Services    │
-                 └──────────────┘
-```
+![llm_application_architecture](svg/courses/security/working-with-llms-securely/01_introduction/llm_application_architecture.svg)
 
 Security must be applied at every layer
 

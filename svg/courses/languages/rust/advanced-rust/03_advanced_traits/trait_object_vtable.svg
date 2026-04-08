@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Trait Object VTable</text>
+  <!-- Fat pointer -->
+  <rect x="30" y="60" width="240" height="100" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="150" y="85" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">&amp;dyn Draw (Fat Pointer)</text>
+  <rect x="45" y="100" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="95" y="122" text-anchor="middle" font-size="11" fill="#333">data ptr</text>
+  <rect x="155" y="100" width="100" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="205" y="122" text-anchor="middle" font-size="11" fill="#333">vtable ptr</text>
+  <text x="150" y="150" text-anchor="middle" font-size="10" fill="#555">16 bytes (2 x usize)</text>
+  <!-- Data (concrete type) -->
+  <rect x="350" y="55" width="200" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="450" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Concrete Data</text>
+  <text x="365" y="102" font-size="11" fill="#555">Circle {</text>
+  <text x="375" y="120" font-size="11" fill="#555">  radius: 5.0,</text>
+  <text x="375" y="138" font-size="11" fill="#555">  x: 10, y: 20</text>
+  <text x="365" y="156" font-size="11" fill="#555">}</text>
+  <!-- Arrow from data ptr to data -->
+  <line x1="145" y1="117" x2="350" y2="100" stroke="#28a745" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- VTable -->
+  <rect x="350" y="200" width="400" height="200" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="550" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">VTable (static, one per type+trait)</text>
+  <rect x="365" y="240" width="370" height="28" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="550" y="259" text-anchor="middle" font-size="11" fill="#333">drop_in_place: fn(*mut Circle)</text>
+  <rect x="365" y="273" width="370" height="28" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="550" y="292" text-anchor="middle" font-size="11" fill="#333">size: 24 bytes</text>
+  <rect x="365" y="306" width="370" height="28" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="550" y="325" text-anchor="middle" font-size="11" fill="#333">align: 8 bytes</text>
+  <rect x="365" y="339" width="370" height="28" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="550" y="358" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">draw: fn(&amp;Circle) -- trait method</text>
+  <rect x="365" y="372" width="370" height="18" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="550" y="386" text-anchor="middle" font-size="10" fill="#555">... more trait methods ...</text>
+  <!-- Arrow from vtable ptr to vtable -->
+  <line x1="205" y1="135" x2="350" y2="250" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Static vs Dynamic dispatch comparison -->
+  <rect x="30" y="420" width="340" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="200" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Static Dispatch (impl Trait)</text>
+  <text x="200" y="458" text-anchor="middle" font-size="10" fill="#555">Monomorphized, inlined, zero-cost</text>
+  <rect x="400" y="420" width="370" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="585" y="440" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Dynamic Dispatch (dyn Trait)</text>
+  <text x="585" y="458" text-anchor="middle" font-size="10" fill="#555">VTable lookup, no inlining, runtime flexibility</text>
+</svg>

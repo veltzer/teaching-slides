@@ -21,16 +21,7 @@
 
 ## Attack Flow Diagram
 
-```diagram
-┌──────────┐    ┌─────────────────┐    ┌──────────────┐    ┌──────────┐
-│  Attacker │───>│  Web Application │───>│  System Shell │───>│  OS / FS  │
-│           │    │                 │    │              │    │          │
-│  Input:   │    │  Concatenates   │    │  Executes:   │    │  Files   │
-│  ; cat    │    │  user input     │    │  ping host;  │    │  read,   │
-│  /etc/    │    │  into command   │    │  cat /etc/   │    │  modified│
-│  passwd   │    │  string         │    │  passwd      │    │  deleted │
-└──────────┘    └─────────────────┘    └──────────────┘    └──────────┘
-```
+![attack_flow_diagram](svg/courses/security/cyber-attacks-and-vectors/05_shell_injection/attack_flow_diagram.svg)
 
 ---
 
@@ -253,22 +244,7 @@ app.get('/dns', (req, res) => {
 # variables to CGI scripts running under Bash
 ```
 
-```diagram
-┌───────────────────────────────────────────────────────┐
-│              Shellshock Attack Flow                     │
-│                                                       │
-│  Attacker ──> HTTP Request with malicious header      │
-│                    │                                  │
-│                    v                                  │
-│  Web Server (Apache/nginx with CGI)                   │
-│       │  Passes headers as env variables              │
-│       v                                              │
-│  Bash Shell: env USER_AGENT='() { :;}; malicious'    │
-│       │  Bash parses function AND executes trailing   │
-│       v                                              │
-│  Malicious command runs with web server privileges    │
-└───────────────────────────────────────────────────────┘
-```
+![variables_to_cgi_scripts_running_under_bash](svg/courses/security/cyber-attacks-and-vectors/05_shell_injection/variables_to_cgi_scripts_running_under_bash.svg)
 
 ---
 
@@ -428,18 +404,7 @@ ausearch -k web_cmd_exec --start today
 #     "id:1001,deny,status:403,msg:'Command Injection'"
 ```
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│        Detection Indicators                      │
-├──────────────────────────────────────────────────┤
-│  - Web server process spawning /bin/sh           │
-│  - HTTP parameters containing ; | & ` $( )      │
-│  - Unusual outbound connections from web server  │
-│  - Web server reading /etc/passwd or /etc/shadow │
-│  - DNS lookups to unusual domains from web proc  │
-│  - File creation in /tmp by web server process   │
-└──────────────────────────────────────────────────┘
-```
+![id_1001_deny_status_403_msg_command_injection](svg/courses/security/cyber-attacks-and-vectors/05_shell_injection/id_1001_deny_status_403_msg_command_injection.svg)
 
 ---
 

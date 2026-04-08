@@ -22,15 +22,7 @@
 
 ## `HTTPS` - What the Padlock Means
 
-```diagram
-Secure (HTTPS):                    Insecure (HTTP):
-
-  You ---[encrypted]--- Website      You ---[plain text]--- Website
-          |                                   |
-     Attacker sees:                      Attacker sees:
-     "x7$kL9#mQ2@..."                   "username: jsmith
-                                          password: MyP@ss1"
-```
+![https_what_the_padlock_means](svg/courses/security/it-security-policies/05_network_security/https_what_the_padlock_means.svg)
 
 - `HTTPS` encrypts data between your browser and the website
 - Without it, anyone on the same network can read your traffic
@@ -106,18 +98,7 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## What Is a Firewall?
 
-```diagram
-                     FIREWALL
-                    +--------+
-  Internet -------->| ALLOW  |--------> Approved traffic
-  (all traffic)     |  or    |          reaches your network
-                    | BLOCK  |
-                    +---+----+
-                        |
-                        v
-                  Blocked traffic
-                  (threats stopped)
-```
+![what_is_a_firewall](svg/courses/security/it-security-policies/05_network_security/what_is_a_firewall.svg)
 
 - A firewall is a security guard for network traffic
 - It allows approved connections and blocks suspicious ones

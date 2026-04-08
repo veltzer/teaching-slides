@@ -11,26 +11,7 @@
 ---
 ## Domain Hijacking vs DNS Hijacking
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  Domain Hijacking vs DNS Hijacking                       │
-├────────────────────────┬─────────────────────────────────┤
-│  Domain Hijacking      │  DNS Hijacking                  │
-├────────────────────────┼─────────────────────────────────┤
-│  Targets: registrar    │  Targets: DNS resolver/server   │
-│  account or registry   │  or client DNS settings         │
-│                        │                                 │
-│  Changes ownership or  │  Changes DNS responses to       │
-│  nameserver settings   │  redirect queries               │
-│  at the registrar      │                                 │
-│                        │                                 │
-│  Persistent until      │  May be temporary (cache TTL)   │
-│  reversed              │                                 │
-│                        │                                 │
-│  Harder to execute     │  Easier to execute locally      │
-│  but more damaging     │  but more limited scope         │
-└────────────────────────┴─────────────────────────────────┘
-```
+![domain_hijacking_vs_dns_hijacking](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/domain_hijacking_vs_dns_hijacking.svg)
 
 ---
 ## Types of Domain Hijacking
@@ -48,33 +29,7 @@
 ---
 ## Registrar Account Attacks
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Registrar Account Takeover Flow                  │
-│                                                          │
-│  Attacker                                                │
-│    │                                                     │
-│    ├──> Credential Stuffing (leaked passwords)           │
-│    │    OR                                               │
-│    ├──> Phishing the domain owner                        │
-│    │    OR                                               │
-│    ├──> Social engineering registrar support              │
-│    │                                                     │
-│    v                                                     │
-│  ┌─────────────────────────────┐                         │
-│  │  Registrar Control Panel    │                         │
-│  │  ┌───────────────────────┐  │                         │
-│  │  │ Change nameservers    │  │                         │
-│  │  │ Initiate transfer     │  │                         │
-│  │  │ Modify WHOIS contact  │  │                         │
-│  │  │ Disable domain lock   │  │                         │
-│  │  └───────────────────────┘  │                         │
-│  └─────────────────────────────┘                         │
-│    │                                                     │
-│    v                                                     │
-│  Domain now under attacker control                       │
-└──────────────────────────────────────────────────────────┘
-```
+![registrar_account_attacks](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_account_attacks.svg)
 
 - Weak passwords and lack of MFA on registrar accounts are the primary attack vector
 - Once inside, attacker can change nameservers, transfer the domain, or modify contact info
@@ -115,25 +70,7 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 ---
 ## Expired Domain Takeover
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Domain Lifecycle                                 │
-│                                                          │
-│  Registration ──> Active ──> Expiration Grace Period     │
-│                                    │                     │
-│                                    v                     │
-│                              Redemption Period            │
-│                              (30-45 days, fees apply)    │
-│                                    │                     │
-│                                    v                     │
-│                              Pending Delete               │
-│                              (5 days)                    │
-│                                    │                     │
-│                                    v                     │
-│                              Released to Public           │
-│                              (anyone can register!)      │
-└──────────────────────────────────────────────────────────┘
-```
+![expired_domain_takeover](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/expired_domain_takeover.svg)
 
 **Why expired domains are valuable to attackers:**
 - May still have backlinks and SEO authority
@@ -152,22 +89,7 @@ whois example.com | grep -i "expir"
 ---
 ## Subdomain Takeover
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Subdomain Takeover Attack                        │
-│                                                          │
-│  1. Company creates:                                     │
-│     blog.company.com  CNAME -> company.github.io         │
-│                                                          │
-│  2. Company deletes GitHub Pages repo but forgets DNS    │
-│     blog.company.com  CNAME -> company.github.io (404)   │
-│                                                          │
-│  3. Attacker creates repo "company.github.io" on GitHub  │
-│     blog.company.com  CNAME -> attacker's content!       │
-│                                                          │
-│  Result: Attacker controls blog.company.com content      │
-└──────────────────────────────────────────────────────────┘
-```
+![subdomain_takeover](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/subdomain_takeover.svg)
 
 **Vulnerable services for subdomain takeover:**
 
@@ -273,25 +195,7 @@ whois example.com | grep -i "status"
 ---
 ## DNSSEC: DNS Security Extensions
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          How DNSSEC Works                                 │
-│                                                          │
-│  Root Zone (.)                                           │
-│    │  Signs .com zone key (DS record)                    │
-│    v                                                     │
-│  .com TLD                                                │
-│    │  Signs example.com zone key (DS record)             │
-│    v                                                     │
-│  example.com                                             │
-│    │  Signs DNS records (RRSIG records)                  │
-│    v                                                     │
-│  A record: 93.184.216.34 + RRSIG (signature)            │
-│                                                          │
-│  Resolver validates chain: Root -> TLD -> Domain -> RR   │
-│  If any signature is invalid, response is REJECTED       │
-└──────────────────────────────────────────────────────────┘
-```
+![dnssec_dns_security_extensions](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/dnssec_dns_security_extensions.svg)
 
 ```bash
 # Check if a domain has DNSSEC enabled
@@ -311,24 +215,7 @@ dig DS example.com @a.gtld-servers.net +short
 
 ### Registrar Security Checklist
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│  Registrar Account Security                              │
-├──────────────────────────────────────────────────────────┤
-│  [ ] Use a strong, unique password                      │
-│  [ ] Enable MFA (TOTP preferred over SMS)               │
-│  [ ] Use a dedicated email for domain management        │
-│  [ ] Enable registrar lock (clientTransferProhibited)   │
-│  [ ] Consider registry lock for critical domains        │
-│  [ ] Keep WHOIS contact info current                    │
-│  [ ] Enable WHOIS privacy protection                    │
-│  [ ] Set up auto-renewal for important domains          │
-│  [ ] Monitor domain expiration dates                    │
-│  [ ] Use a reputable, ICANN-accredited registrar        │
-│  [ ] Review authorized contacts regularly               │
-│  [ ] Enable transfer notification alerts                │
-└──────────────────────────────────────────────────────────┘
-```
+![registrar_security_checklist](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_checklist.svg)
 
 ---
 ## DNS Monitoring and Alerting

@@ -76,26 +76,7 @@
 
 ## Terraform Architecture
 
-```diagram
-+------------------+     +------------------+
-|  Terraform CLI   |     |  State File      |
-|                  |     |  (terraform.tfstate)
-|  - init          |     +--------+---------+
-|  - plan          |              |
-|  - apply         |              |
-|  - destroy       +---------+   |
-+------------------+         |   |
-                             v   v
-                    +--------+---+--------+
-                    |   Terraform Core     |
-                    |   (Resource Graph)   |
-                    +---+------+------+---+
-                        |      |      |
-                   +----+  +---+  +---+----+
-                   | AWS|  |GCP|  | Azure  |
-                   +----+  +---+  +--------+
-                   Providers (Plugins)
-```
+![terraform_architecture](svg/courses/devops/terraform/01_introduction/terraform_architecture.svg)
 
 ---
 
@@ -112,24 +93,7 @@
 
 ## Terraform Workflow Diagram
 
-```diagram
-  Write .tf files
-       |
-       v
-  terraform init
-       |
-       v
-  terraform plan -----> Review changes
-       |
-       v
-  terraform apply ----> Confirm (yes/no)
-       |
-       v
-  Infrastructure created/updated
-       |
-       v
-  terraform destroy --> Clean up
-```
+![terraform_workflow_diagram](svg/courses/devops/terraform/01_introduction/terraform_workflow_diagram.svg)
 
 ---
 
@@ -289,26 +253,7 @@ name_map = {for name in var.names : name => upper(name)}
 
 ## Terraform Configuration Blocks
 
-```diagram
-+--------------------------------------------------+
-|  Terraform Config File (.tf)                     |
-|                                                  |
-|  +-------------------+  +--------------------+  |
-|  | terraform { }     |  | provider "aws" { } |  |
-|  | (settings)        |  | (cloud config)     |  |
-|  +-------------------+  +--------------------+  |
-|                                                  |
-|  +-------------------+  +--------------------+  |
-|  | resource "..." {} |  | variable "..." { } |  |
-|  | (infrastructure)  |  | (inputs)           |  |
-|  +-------------------+  +--------------------+  |
-|                                                  |
-|  +-------------------+  +--------------------+  |
-|  | data "..." { }    |  | output "..." { }   |  |
-|  | (queries)         |  | (results)          |  |
-|  +-------------------+  +--------------------+  |
-+--------------------------------------------------+
-```
+![terraform_configuration_blocks](svg/courses/devops/terraform/01_introduction/terraform_configuration_blocks.svg)
 
 ---
 

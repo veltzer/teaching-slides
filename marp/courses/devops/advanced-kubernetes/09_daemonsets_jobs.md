@@ -16,21 +16,7 @@ Advanced Kubernetes Course - Day 2, Module 4
 
 ## `DaemonSets` - One Pod Per Node
 
-```diagram
-┌─── Node 1 ───┐  ┌─── Node 2 ───┐  ┌─── Node 3 ───┐
-│ ┌──────────┐  │  │ ┌──────────┐  │  │ ┌──────────┐  │
-│ │ App Pods │  │  │ │ App Pods │  │  │ │ App Pods │  │
-│ └──────────┘  │  │ └──────────┘  │  │ └──────────┘  │
-│               │  │               │  │               │
-│ ┌──────────┐  │  │ ┌──────────┐  │  │ ┌──────────┐  │
-│ │DaemonSet │  │  │ │DaemonSet │  │  │ │DaemonSet │  │
-│ │  Pod     │  │  │ │  Pod     │  │  │ │  Pod     │  │
-│ └──────────┘  │  │ └──────────┘  │  │ └──────────┘  │
-└───────────────┘  └───────────────┘  └───────────────┘
-
-Exactly one DaemonSet pod per node.
-New node added → DaemonSet pod auto-created.
-```
+![daemonsets_one_pod_per_node](svg/courses/devops/advanced-kubernetes/09_daemonsets_jobs/daemonsets_one_pod_per_node.svg)
 
 ---
 
@@ -219,32 +205,7 @@ spec:
 
 ## `Job` Patterns
 
-```diagram
-Non-parallel Job (completions=1, parallelism=1):
-┌──────┐
-│Task 1│ → Done
-└──────┘
-
-Parallel with fixed completions (completions=6, parallelism=3):
-┌──────┐ ┌──────┐ ┌──────┐
-│Task 1│ │Task 2│ │Task 3│ → wave 1
-└──────┘ └──────┘ └──────┘
-┌──────┐ ┌──────┐ ┌──────┐
-│Task 4│ │Task 5│ │Task 6│ → wave 2
-└──────┘ └──────┘ └──────┘
-
-Work queue (completions=null, parallelism=5):
-┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐ ┌──────┐
-│ W-1  │ │ W-2  │ │ W-3  │ │ W-4  │ │ W-5  │
-└──┬───┘ └──┬───┘ └──┬───┘ └──┬───┘ └──┬───┘
-   │        │        │        │        │
-   └────────┴────────┼────────┴────────┘
-                     │
-              ┌──────┴──────┐
-              │ Work Queue  │
-              │ (external)  │
-              └─────────────┘
-```
+![job_patterns](svg/courses/devops/advanced-kubernetes/09_daemonsets_jobs/job_patterns.svg)
 
 ---
 
@@ -313,23 +274,7 @@ spec:
 
 ## `CronJob` Schedule Syntax
 
-```diagram
-┌───────────── minute (0 - 59)
-│ ┌───────────── hour (0 - 23)
-│ │ ┌───────────── day of month (1 - 31)
-│ │ │ ┌───────────── month (1 - 12)
-│ │ │ │ ┌───────────── day of week (0 - 6, Sun=0)
-│ │ │ │ │
-* * * * *
-
-Examples:
-"0 * * * *"      Every hour
-"*/15 * * * *"   Every 15 minutes
-"0 2 * * *"      Daily at 2 AM
-"0 0 * * 0"      Weekly on Sunday
-"0 0 1 * *"      Monthly on the 1st
-"0 0 1 1 *"      Yearly on Jan 1
-```
+![cronjob_schedule_syntax](svg/courses/devops/advanced-kubernetes/09_daemonsets_jobs/cronjob_schedule_syntax.svg)
 
 ---
 

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="ard" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="350" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Post-Training Safety Layers</text>
+  <!-- Input -->
+  <text x="350" y="50" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">INPUT LAYER</text>
+  <rect x="150" y="58" width="400" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="350" y="81" text-anchor="middle" font-size="11" fill="#333">User message</text>
+  <line x1="350" y1="93" x2="350" y2="108" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <rect x="150" y="110" width="400" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="350" y="128" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Moderation API</text>
+  <text x="350" y="144" text-anchor="middle" font-size="10" fill="#555">Block: violence, CSAM, etc.</text>
+  <line x1="350" y1="150" x2="350" y2="165" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <rect x="150" y="167" width="400" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="350" y="185" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Prompt Injection Detection</text>
+  <text x="350" y="201" text-anchor="middle" font-size="10" fill="#555">Pattern matching + classifier</text>
+  <line x1="350" y1="207" x2="350" y2="222" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <!-- LLM -->
+  <rect x="150" y="224" width="400" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="242" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">LLM Generation</text>
+  <text x="350" y="258" text-anchor="middle" font-size="10" fill="#555">(safety-trained model)</text>
+  <line x1="350" y1="264" x2="350" y2="282" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <!-- Output -->
+  <text x="350" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">OUTPUT LAYER</text>
+  <rect x="150" y="304" width="400" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="350" y="322" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">Output Moderation</text>
+  <text x="350" y="338" text-anchor="middle" font-size="10" fill="#555">Classify output content</text>
+  <line x1="350" y1="344" x2="350" y2="359" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <rect x="150" y="361" width="400" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="350" y="379" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">PII Detection &amp; Redaction</text>
+  <text x="350" y="395" text-anchor="middle" font-size="10" fill="#555">Remove personal information</text>
+  <line x1="350" y1="401" x2="350" y2="416" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <rect x="150" y="418" width="400" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="350" y="436" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">Factuality Check (optional)</text>
+  <text x="350" y="452" text-anchor="middle" font-size="10" fill="#555">Verify claims against sources</text>
+  <line x1="350" y1="458" x2="350" y2="475" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#ard)"/>
+  <!-- Response -->
+  <rect x="220" y="478" width="260" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="498" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Response to User</text>
+</svg>

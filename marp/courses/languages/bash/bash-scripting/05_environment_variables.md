@@ -1,22 +1,8 @@
 # Environment and Shell Variables
 ---
 ## Two Kinds of Variables
-```diagram
-+-------------------------------------------+
-|  Shell Process                            |
-|                                           |
-|  Shell Variables:     Environment:        |
-|  +---------------+   +---------------+   |
-|  | x=5           |   | PATH=...      |   |
-|  | name="hello"  |   | HOME=/home/u  |   |
-|  | count=0       |   | USER=mark     |   |
-|  +---------------+   +---------------+   |
-|                                           |
-|  Shell vars are      Environment vars     |
-|  private to this     are inherited by     |
-|  shell process       child processes      |
-+-------------------------------------------+
-```
+![two_kinds_of_variables](svg/courses/languages/bash/bash-scripting/05_environment_variables/two_kinds_of_variables.svg)
+
 ---
 ## Shell Variables
 
@@ -79,6 +65,7 @@ declare -p PATH
 | `LANG` | Locale setting |
 | `TERM` | Terminal type |
 | `EDITOR` | Default text editor |
+
 ---
 ## Defining Variables: The Rules
 
@@ -205,22 +192,8 @@ unset PI
 ```
 ---
 ## Variable Scope: Summary
-```diagram
-+-- Parent Shell --------+
-|  x=1 (shell var)       |
-|  export y=2 (env var)  |
-|                         |
-|  +-- Child Process --+  |
-|  |  x is NOT visible |  |
-|  |  y=2 (inherited)  |  |
-|  |                    |  |
-|  |  Changes to y do  |  |
-|  |  NOT affect parent |  |
-|  +--------------------+  |
-|                         |
-|  y is still 2 here     |
-+-------------------------+
-```
+![variable_scope_summary](svg/courses/languages/bash/bash-scripting/05_environment_variables/variable_scope_summary.svg)
+
 ---
 ## `declare` Command
 

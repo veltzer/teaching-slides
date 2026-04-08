@@ -6,63 +6,15 @@
 
 Why customize? To generate images of **your specific** concepts:
 
-```diagram
-Standard Stable Diffusion:
-  "A photo of a dog" → Generic dog image
+![customizing_image_models_1](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_1.svg)
 
-After DreamBooth fine-tuning on YOUR dog:
-  "A photo of [V] dog" → YOUR specific dog
-  "A photo of [V] dog wearing a cowboy hat" → Your dog in a hat!
-  "[V] dog in a Van Gogh painting" → Your dog, Van Gogh style
-
-After Textual Inversion on YOUR style:
-  "A landscape in <my-style>" → Landscape in YOUR art style
-```
-
-```diagram
-┌──────────────────────────────────────────┐
-│   PERSONALIZATION METHODS                │
-├──────────────┬───────────────────────────┤
-│ DreamBooth   │ Fine-tune model weights   │
-│              │ 3-5 images needed         │
-│              │ Higher quality            │
-├──────────────┼───────────────────────────┤
-│ Textual      │ Learn new text embedding  │
-│ Inversion    │ 3-5 images needed         │
-│              │ More lightweight           │
-├──────────────┼───────────────────────────┤
-│ LoRA for     │ Low-rank adaptation of    │
-│ Diffusion    │ U-Net / text encoder      │
-│              │ Best quality/size tradeoff│
-└──────────────┴───────────────────────────┘
-```
+![customizing_image_models_2](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_2.svg)
 
 ---
 
 ## DreamBooth — How It Works
 
-```diagram
-Training DreamBooth:
-
-1. Provide 3-5 images of your subject
-   ┌────┐ ┌────┐ ┌────┐ ┌────┐ ┌────┐
-   │ 📷 │ │ 📷 │ │ 📷 │ │ 📷 │ │ 📷 │
-   └────┘ └────┘ └────┘ └────┘ └────┘
-   Your dog in different poses/lighting
-
-2. Choose a unique identifier: "sks dog"
-   (rare token + class word)
-
-3. Fine-tune the entire diffusion model:
-   - The model learns to associate "sks" with YOUR dog
-   - Also train on generic "dog" images (prior preservation)
-     to prevent forgetting what dogs look like in general
-
-4. Generate with any prompt containing "sks dog":
-   "A sks dog playing in snow"
-   "A sks dog as an astronaut"
-   "Oil painting of sks dog by Monet"
-```
+![dreambooth_how_it_works](svg/courses/ai/generative-ai-applications/17_peft_image_models/dreambooth_how_it_works.svg)
 
 ---
 
@@ -139,28 +91,7 @@ image = pipe("a photo of sks dog riding a skateboard").images[0]
 
 Prevents the model from forgetting how to draw the class in general:
 
-```diagram
-Without prior preservation:
-  "a photo of a dog" → Always generates YOUR dog
-  The model "forgot" what other dogs look like!
-
-With prior preservation:
-  "a photo of sks dog" → YOUR dog ✓
-  "a photo of a dog"   → generic dog ✓
-  Model remembers both!
-
-How it works:
-  L = L_instance + λ × L_prior
-
-  L_instance: Learn to generate YOUR subject
-    "a photo of sks dog" → denoising loss on YOUR images
-
-  L_prior: Don't forget the class
-    "a photo of a dog" → denoising loss on GENERATED dog images
-    (generate class images first using the base model)
-
-  λ = 1.0 (equal weight, typically)
-```
+![prior_preservation_loss](svg/courses/ai/generative-ai-applications/17_peft_image_models/prior_preservation_loss.svg)
 
 ---
 
@@ -168,16 +99,7 @@ How it works:
 
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
-```diagram
-Standard vocabulary:
-  "cat" → embedding vector [0.3, -0.1, 0.5, ...]
-  "dog" → embedding vector [0.1, 0.4, -0.2, ...]
-
-After Textual Inversion:
-  "<my-pet>" → LEARNED embedding vector [0.2, 0.3, -0.1, ...]
-
-The entire model is frozen. Only the new embedding is trained.
-```
+![textual_inversion](svg/courses/ai/generative-ai-applications/17_peft_image_models/textual_inversion.svg)
 
 ```misc
 Model weights:  FROZEN (no changes)
@@ -393,26 +315,7 @@ image = pipe(
 
 ## T2I-Adapter — Lightweight ControlNet Alternative
 
-```diagram
-T2I-Adapter vs ControlNet:
-
-              T2I-Adapter    ControlNet
-Parameters    77M            1.4B
-Training time Hours          Days
-Quality       ★★★★          ★★★★★
-Composability Easy           Harder
-Inference     Faster         Slower
-
-T2I-Adapter types:
-  - Canny edges → structure control
-  - Depth map → 3D-aware generation
-  - Color palette → color harmony
-  - Sketch → rough shape control
-
-Multiple adapters can be combined:
-  canny_adapter (structure) + color_adapter (palette)
-  = Generate image with specific structure AND color scheme
-```
+![t2i_adapter_lightweight_controlnet_alternative](svg/courses/ai/generative-ai-applications/17_peft_image_models/t2i_adapter_lightweight_controlnet_alternative.svg)
 
 ---
 

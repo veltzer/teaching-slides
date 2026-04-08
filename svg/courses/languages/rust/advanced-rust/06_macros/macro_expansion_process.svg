@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Macro Expansion Process</text>
+  <!-- Step 1: Source -->
+  <rect x="30" y="55" width="160" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="110" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">1. Source Code</text>
+  <text x="110" y="100" text-anchor="middle" font-size="10" fill="#555">vec![1, 2, 3]</text>
+  <line x1="190" y1="87" x2="230" y2="87" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 2: Tokenize -->
+  <rect x="240" y="55" width="160" height="65" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="320" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">2. Tokenize</text>
+  <text x="320" y="100" text-anchor="middle" font-size="10" fill="#555">Token Stream</text>
+  <line x1="400" y1="87" x2="440" y2="87" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 3: Match -->
+  <rect x="450" y="55" width="160" height="65" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="530" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">3. Pattern Match</text>
+  <text x="530" y="100" text-anchor="middle" font-size="10" fill="#555">Match macro arm</text>
+  <line x1="610" y1="87" x2="640" y2="87" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Step 4: Expand -->
+  <rect x="650" y="55" width="130" height="65" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="715" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">4. Expand</text>
+  <text x="715" y="100" text-anchor="middle" font-size="10" fill="#555">Generate code</text>
+  <!-- Expanded code -->
+  <rect x="30" y="150" width="740" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Expanded Result</text>
+  <text x="50" y="198" font-size="11" fill="#555">{</text>
+  <text x="60" y="215" font-size="11" fill="#555">  let mut tmp = Vec::new(); tmp.push(1); tmp.push(2); tmp.push(3); tmp</text>
+  <text x="50" y="232" font-size="11" fill="#555">}</text>
+  <line x1="715" y1="120" x2="715" y2="140" stroke="#4a90e2" stroke-width="2"/>
+  <line x1="715" y1="140" x2="400" y2="150" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Hygiene -->
+  <rect x="30" y="265" width="350" height="120" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="205" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Macro Hygiene</text>
+  <text x="45" y="315" font-size="10" fill="#555">- Variables inside macros don't leak out</text>
+  <text x="45" y="335" font-size="10" fill="#555">- Each expansion gets unique identifiers</text>
+  <text x="45" y="355" font-size="10" fill="#555">- Prevents accidental name collisions</text>
+  <text x="45" y="375" font-size="10" fill="#555">- Rust macros are hygienic by default</text>
+  <!-- Recursive expansion -->
+  <rect x="410" y="265" width="360" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="590" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Recursive Expansion</text>
+  <text x="425" y="315" font-size="10" fill="#555">- Macros can call other macros</text>
+  <text x="425" y="335" font-size="10" fill="#555">- Expansion repeats until no macros left</text>
+  <text x="425" y="355" font-size="10" fill="#555">- Default recursion limit: 128</text>
+  <text x="425" y="375" font-size="10" fill="#555">- #![recursion_limit = "256"]</text>
+</svg>

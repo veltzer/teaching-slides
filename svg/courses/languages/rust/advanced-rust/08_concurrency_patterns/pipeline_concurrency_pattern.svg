@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Pipeline Concurrency Pattern</text>
+  <!-- Stage 1 -->
+  <rect x="30" y="70" width="150" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="105" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Stage 1</text>
+  <text x="105" y="115" text-anchor="middle" font-size="10" fill="#555">Read / Parse</text>
+  <text x="105" y="135" text-anchor="middle" font-size="9" fill="#555">Thread/Task A</text>
+  <!-- Channel -->
+  <line x1="180" y1="110" x2="240" y2="110" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="195" y="95" width="30" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="210" y="115" text-anchor="middle" font-size="8" fill="#333">ch</text>
+  <!-- Stage 2 -->
+  <rect x="250" y="70" width="150" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="325" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Stage 2</text>
+  <text x="325" y="115" text-anchor="middle" font-size="10" fill="#555">Transform</text>
+  <text x="325" y="135" text-anchor="middle" font-size="9" fill="#555">Thread/Task B</text>
+  <line x1="400" y1="110" x2="460" y2="110" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="415" y="95" width="30" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="430" y="115" text-anchor="middle" font-size="8" fill="#333">ch</text>
+  <!-- Stage 3 -->
+  <rect x="470" y="70" width="150" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="545" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Stage 3</text>
+  <text x="545" y="115" text-anchor="middle" font-size="10" fill="#555">Filter</text>
+  <text x="545" y="135" text-anchor="middle" font-size="9" fill="#555">Thread/Task C</text>
+  <line x1="620" y1="110" x2="680" y2="110" stroke="#ffc107" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="635" y="95" width="30" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="650" y="115" text-anchor="middle" font-size="8" fill="#333">ch</text>
+  <!-- Stage 4 -->
+  <rect x="690" y="70" width="80" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="730" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Sink</text>
+  <text x="730" y="115" text-anchor="middle" font-size="10" fill="#555">Write</text>
+  <!-- Parallel throughput -->
+  <rect x="30" y="180" width="740" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="205" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Why Pipelines Improve Throughput</text>
+  <!-- Time bars -->
+  <text x="50" y="230" font-size="9" fill="#555">Item 1:</text>
+  <rect x="110" y="218" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="170" y="218" width="60" height="15" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="230" y="218" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="50" y="250" font-size="9" fill="#555">Item 2:</text>
+  <rect x="170" y="238" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="230" y="238" width="60" height="15" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="290" y="238" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="50" y="265" font-size="9" fill="#555">Item 3:</text>
+  <rect x="230" y="255" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <rect x="290" y="255" width="60" height="15" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="350" y="255" width="60" height="15" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="500" y="245" font-size="10" fill="#555">All stages run concurrently!</text>
+  <text x="500" y="262" font-size="10" fill="#555">Throughput = speed of slowest stage</text>
+  <!-- Rust implementation -->
+  <rect x="30" y="295" width="740" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="320" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Rust Implementation</text>
+  <text x="45" y="343" font-size="10" fill="#555">Connect stages with mpsc channels: each stage reads from rx, processes, writes to next tx</text>
+  <text x="45" y="363" font-size="10" fill="#555">Bounded channels provide natural backpressure when a stage is slower</text>
+  <text x="45" y="378" font-size="10" fill="#555">Drop sender to signal completion; receiver returns None to terminate the stage</text>
+</svg>

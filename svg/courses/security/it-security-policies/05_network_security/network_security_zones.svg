@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <text x="380" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Network Security Zones</text>
+  <!-- Internet -->
+  <rect x="20" y="55" width="160" height="100" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="100" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Internet</text>
+  <text x="100" y="100" text-anchor="middle" font-size="10" fill="#666">Untrusted</text>
+  <text x="100" y="118" text-anchor="middle" font-size="9" fill="#666">No control over</text>
+  <text x="100" y="132" text-anchor="middle" font-size="9" fill="#666">traffic sources</text>
+  <!-- Firewall 1 -->
+  <rect x="190" y="85" width="30" height="40" rx="2" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="205" y="110" text-anchor="middle" font-size="8" fill="#fff">FW</text>
+  <line x1="180" y1="105" x2="190" y2="105" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <!-- DMZ -->
+  <rect x="230" y="55" width="160" height="100" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="310" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#e6a800">DMZ</text>
+  <text x="310" y="100" text-anchor="middle" font-size="10" fill="#666">Semi-trusted</text>
+  <text x="310" y="118" text-anchor="middle" font-size="9" fill="#666">Web servers,</text>
+  <text x="310" y="132" text-anchor="middle" font-size="9" fill="#666">email gateways</text>
+  <!-- Firewall 2 -->
+  <rect x="400" y="85" width="30" height="40" rx="2" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="415" y="110" text-anchor="middle" font-size="8" fill="#fff">FW</text>
+  <line x1="390" y1="105" x2="400" y2="105" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Internal -->
+  <rect x="440" y="55" width="160" height="100" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="520" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Internal</text>
+  <text x="520" y="100" text-anchor="middle" font-size="10" fill="#666">Trusted</text>
+  <text x="520" y="118" text-anchor="middle" font-size="9" fill="#666">Workstations,</text>
+  <text x="520" y="132" text-anchor="middle" font-size="9" fill="#666">internal apps</text>
+  <!-- Firewall 3 -->
+  <rect x="610" y="85" width="30" height="40" rx="2" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="625" y="110" text-anchor="middle" font-size="8" fill="#fff">FW</text>
+  <line x1="600" y1="105" x2="610" y2="105" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Restricted -->
+  <rect x="650" y="55" width="90" height="100" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="695" y="82" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Restricted</text>
+  <text x="695" y="100" text-anchor="middle" font-size="9" fill="#666">High Security</text>
+  <text x="695" y="118" text-anchor="middle" font-size="9" fill="#666">Databases,</text>
+  <text x="695" y="132" text-anchor="middle" font-size="9" fill="#666">secrets</text>
+  <!-- Traffic rules -->
+  <rect x="40" y="195" width="680" height="150" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="380" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Traffic Rules Between Zones</text>
+  <text x="100" y="248" font-size="10" fill="#333">Internet -> DMZ:</text>
+  <text x="250" y="248" font-size="10" fill="#28a745">Allowed (filtered by WAF)</text>
+  <text x="100" y="270" font-size="10" fill="#333">DMZ -> Internal:</text>
+  <text x="250" y="270" font-size="10" fill="#ffc107">Limited services only</text>
+  <text x="100" y="292" font-size="10" fill="#333">Internal -> Restricted:</text>
+  <text x="250" y="292" font-size="10" fill="#dc3545">Strict authentication required</text>
+  <text x="100" y="314" font-size="10" fill="#333">Restricted -> Internet:</text>
+  <text x="250" y="314" font-size="10" fill="#dc3545" font-weight="bold">BLOCKED</text>
+</svg>

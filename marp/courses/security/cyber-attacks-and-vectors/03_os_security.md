@@ -100,20 +100,7 @@ auth required pam_faillock.so authfail deny=5 \
 cat /etc/pam.d/sshd
 ```
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│              PAM Authentication Flow              │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Application ──> PAM Library ──> Module Stack    │
-│                       │                          │
-│              ┌────────┼────────┐                 │
-│              v        v        v                 │
-│          pam_unix  pam_ldap  pam_google          │
-│         (local)   (LDAP)   (2FA TOTP)           │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![check_pam_configuration_for_a_service](svg/courses/security/cyber-attacks-and-vectors/03_os_security/check_pam_configuration_for_a_service.svg)
 
 ---
 
@@ -163,18 +150,7 @@ sysctl -p
 
 The Center for Internet Security provides hardening baselines:
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│           CIS Benchmark Categories                    │
-├──────────────────────────────────────────────────────┤
-│  1. Initial Setup       - Filesystem, updates        │
-│  2. Services            - Disable unnecessary        │
-│  3. Network Config      - Firewall, IP forwarding    │
-│  4. Logging & Auditing  - rsyslog, auditd            │
-│  5. Access & Auth       - SSH, PAM, sudo             │
-│  6. System Maintenance  - File permissions, integrity│
-└──────────────────────────────────────────────────────┘
-```
+![cis_benchmarks](svg/courses/security/cyber-attacks-and-vectors/03_os_security/cis_benchmarks.svg)
 
 Tools for automated compliance checking:
 - **OpenSCAP**: Open-source compliance scanner
@@ -329,22 +305,7 @@ grep "Failed password" /var/log/auth.log | \
 sudo fail2ban-client status sshd
 ```
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│         Credential Attack Types                   │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Brute Force:  Try all possible combinations     │
-│  Dictionary:   Try common passwords from lists   │
-│  Credential    Reuse stolen credentials from     │
-│  Stuffing:     other breaches                    │
-│  Password      Use rainbow tables or hashcat     │
-│  Cracking:     to crack password hashes          │
-│  Pass-the-     Reuse NTLM/Kerberos hashes       │
-│  Hash:         without knowing the password      │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![findtime_600](svg/courses/security/cyber-attacks-and-vectors/03_os_security/findtime_600.svg)
 
 ---
 

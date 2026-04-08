@@ -16,20 +16,7 @@ Advanced Kubernetes Course - Day 1, Module 2
 
 ## Autoscaling Dimensions
 
-```diagram
-                    ┌─────────────────────┐
-                    │  Cluster Autoscaler  │
-                    │  (Add/Remove Nodes)  │
-                    └──────────┬──────────┘
-                               │
-              ┌────────────────┼────────────────┐
-              │                │                │
-     ┌────────┴────────┐  ┌───┴────┐  ┌───────┴───────┐
-     │       HPA       │  │  VPA   │  │     KEDA      │
-     │ (More/Fewer     │  │(Bigger/│  │(Event-driven  │
-     │  Pod Replicas)  │  │Smaller)│  │  Scaling)     │
-     └─────────────────┘  └────────┘  └───────────────┘
-```
+![autoscaling_dimensions](svg/courses/devops/advanced-kubernetes/02_autoscaling/autoscaling_dimensions.svg)
 
 ---
 
@@ -284,23 +271,7 @@ Recommendation:
 
 Automatically adjusts the number of nodes in a cluster:
 
-```diagram
-Pending Pods (insufficient resources)
-          │
-          ▼
-┌─────────────────────┐
-│  Cluster Autoscaler  │
-│                     │
-│  1. Detects pending │
-│  2. Simulates       │
-│     scheduling      │
-│  3. Adds nodes      │
-└──────────┬──────────┘
-           │
-           ▼
-  Cloud Provider API
-  (AWS ASG, GCP MIG, Azure VMSS)
-```
+![cluster_autoscaler](svg/courses/devops/advanced-kubernetes/02_autoscaling/cluster_autoscaler.svg)
 
 ---
 
@@ -429,30 +400,7 @@ triggers:
 
 ## Combining Autoscalers
 
-```diagram
-                 Traffic Spike
-                      │
-                      ▼
-              ┌───────────────┐
-              │      HPA      │
-              │ Scale pods to │
-              │  handle load  │
-              └───────┬───────┘
-                      │
-            Pods pending (no resources)
-                      │
-                      ▼
-              ┌───────────────┐
-              │   Cluster     │
-              │  Autoscaler   │
-              │  Add nodes    │
-              └───────┬───────┘
-                      │
-              New nodes ready
-                      │
-                      ▼
-              Pods scheduled ✓
-```
+![combining_autoscalers](svg/courses/devops/advanced-kubernetes/02_autoscaling/combining_autoscalers.svg)
 
 ---
 

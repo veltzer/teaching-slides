@@ -1,0 +1,27 @@
+<svg viewBox="0 0 750 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="apd" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">RLHF PPO Optimization Loop</text>
+  <!-- Loop steps -->
+  <rect x="175" y="50" width="400" height="190" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="375" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">PPO (Proximal Policy Optimization)</text>
+  <text x="375" y="105" text-anchor="middle" font-size="12" fill="#333">1. Sample prompt from dataset</text>
+  <text x="375" y="128" text-anchor="middle" font-size="12" fill="#333">2. Generate response with policy</text>
+  <text x="375" y="151" text-anchor="middle" font-size="12" fill="#333">3. Score with reward model</text>
+  <text x="375" y="174" text-anchor="middle" font-size="12" fill="#333">4. Compute advantage</text>
+  <text x="375" y="197" text-anchor="middle" font-size="12" fill="#333">5. Update policy (with KL penalty)</text>
+  <!-- Circular arrow hint -->
+  <path d="M575,120 Q620,120 620,160 Q620,200 575,200" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="640" y="165" text-anchor="middle" font-size="10" fill="#4a90e2">repeat</text>
+  <!-- Objective -->
+  <rect x="100" y="270" width="550" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="292" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Objective: maximize E[reward(prompt, response)]</text>
+  <text x="375" y="310" text-anchor="middle" font-size="12" fill="#856404">subject to KL(policy || sft_model) &lt; delta</text>
+  <!-- Note -->
+  <rect x="100" y="340" width="550" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="375" y="360" text-anchor="middle" font-size="11" fill="#dc3545">KL constraint prevents "reward hacking" -- finding degenerate responses</text>
+  <text x="375" y="376" text-anchor="middle" font-size="11" fill="#dc3545">that score high on reward model but are actually low quality</text>
+</svg>

@@ -333,20 +333,7 @@ Mutating data behind shared references
 
 ## The Interior Mutability Pattern
 
-```diagram
-  ┌─────────────────────────────────────────────────────┐
-  │           Interior Mutability Types                  │
-  ├────────────────┬────────────────────────────────────┤
-  │ UnsafeCell<T>  │ Foundation - raw unsafe mutation   │
-  │ Cell<T>        │ Copy types, no borrows given out   │
-  │ RefCell<T>     │ Runtime borrow checking            │
-  │ Mutex<T>       │ Thread-safe locking                │
-  │ RwLock<T>      │ Multiple readers OR one writer     │
-  │ Atomic*        │ Lock-free thread-safe mutation     │
-  └────────────────┴────────────────────────────────────┘
-
-  All built on top of UnsafeCell<T>
-```
+![the_interior_mutability_pattern](svg/courses/languages/rust/advanced-rust/07_unsafe_rust/the_interior_mutability_pattern.svg)
 
 ---
 
@@ -895,21 +882,7 @@ impl Drop for Buffer {
 
 ## The Nomicon Rules Summary
 
-```diagram
-  ┌──────────────────────────────────────────────────────────┐
-  │           Undefined Behavior in Rust                      │
-  ├──────────────────────────────────────────────────────────┤
-  │ - Dereferencing dangling or unaligned pointers           │
-  │ - Breaking aliasing rules (multiple &mut to same data)   │
-  │ - Invalid values (null refs, invalid bool/enum)           │
-  │ - Unwinding into C code (panic across FFI)               │
-  │ - Data races (unsynchronized concurrent mutation)         │
-  │ - Reading uninitialized memory                           │
-  │ - Breaking pointer provenance rules                      │
-  │ - Calling mismatched function signatures                 │
-  │ - Producing invalid primitive values                     │
-  └──────────────────────────────────────────────────────────┘
-```
+![the_nomicon_rules_summary](svg/courses/languages/rust/advanced-rust/07_unsafe_rust/the_nomicon_rules_summary.svg)
 
 ---
 
@@ -950,25 +923,7 @@ fn main() {
 
 ## Summary
 
-```diagram
-  ┌───────────────────────────────────────────────────────┐
-  │             Unsafe Rust Cheatsheet                     │
-  ├───────────────────────────────────────────────────────┤
-  │ 5 superpowers  : raw ptrs, unsafe fn, static mut,     │
-  │                  unsafe traits, union fields           │
-  │ Raw pointers   : *const T, *mut T (no borrow check)  │
-  │ Cell<T>        : Copy-based interior mutability       │
-  │ RefCell<T>     : runtime borrow checking              │
-  │ UnsafeCell<T>  : foundation of interior mutability    │
-  │ repr(C)        : C-compatible layout                  │
-  │ repr(packed)   : no padding                           │
-  │ repr(align(N)) : minimum alignment                    │
-  │ transmute      : reinterpret bits as another type     │
-  │ MaybeUninit    : safe uninitialized memory handling   │
-  │ SAFETY comment : document why unsafe code is sound    │
-  │ Miri           : runtime UB detector                  │
-  └───────────────────────────────────────────────────────┘
-```
+![summary](svg/courses/languages/rust/advanced-rust/07_unsafe_rust/summary.svg)
 
 ---
 

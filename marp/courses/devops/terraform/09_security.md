@@ -12,21 +12,7 @@
 
 ## Security Layers
 
-```diagram
-+---------------------------------------------+
-|              Access Control                  |
-|  (Who can run terraform apply?)              |
-+---------------------------------------------+
-|              Secrets Management              |
-|  (How are passwords/keys handled?)           |
-+---------------------------------------------+
-|              State Security                  |
-|  (How is state file protected?)              |
-+---------------------------------------------+
-|              Network Security                |
-|  (How does Terraform reach providers?)       |
-+---------------------------------------------+
-```
+![security_layers](svg/courses/devops/terraform/09_security/security_layers.svg)
 
 ---
 
@@ -196,18 +182,7 @@ provider "aws" {
 
 ## Vault Dynamic Secrets Flow
 
-```diagram
-+----------+     +-----------+     +-------+
-| Terraform|---->|   Vault   |---->|  AWS  |
-|          |     |           |     |       |
-| Request  |     | Generate  |     | STS   |
-| creds    |     | temp creds|     | Token |
-+----------+     +-----------+     +-------+
-                      |
-                      v
-              Creds auto-expire
-              after TTL (e.g., 1 hour)
-```
+![vault_dynamic_secrets_flow](svg/courses/devops/terraform/09_security/vault_dynamic_secrets_flow.svg)
 
 ---
 
@@ -358,17 +333,7 @@ opa eval -i plan.json -d policy/ "data.terraform.deny"
 
 ## Securing the CI/CD Pipeline
 
-```diagram
-+----------+     +-----------+     +----------+
-| Git Push |---->| CI/CD     |---->| Terraform|
-|          |     | Pipeline  |     | Apply    |
-+----------+     +-----------+     +----------+
-                      |
-                 +----+----+
-                 |         |
-              Secrets   Policy
-              Manager   Check
-```
+![securing_the_ci_cd_pipeline](svg/courses/devops/terraform/09_security/securing_the_ci_cd_pipeline.svg)
 
 - Store credentials in CI/CD secret store
 - Run policy checks before apply

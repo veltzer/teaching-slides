@@ -4,25 +4,7 @@
 
 ## Memory Regions in a C Program
 
-```diagram
-┌─────────────────────────┐  High addresses
-│         Stack           │  Local variables, function frames
-│  (grows downward)  |    │
-│                    v    │
-│                         │
-│                    ^    │
-│  (grows upward)    |    │
-│         Heap            │  malloc/calloc/realloc
-├─────────────────────────┤
-│   Uninitialized Data    │  .bss (static int x;)
-├─────────────────────────┤
-│   Initialized Data      │  .data (static int x = 5;)
-├─────────────────────────┤
-│     Read-Only Data      │  .rodata (string literals)
-├─────────────────────────┤
-│       Text (Code)       │  .text (compiled instructions)
-└─────────────────────────┘  Low addresses
-```
+![memory_regions_in_a_c_program](svg/courses/languages/c/c-refresher/11_dynamic_memory/memory_regions_in_a_c_program.svg)
 
 ---
 
@@ -274,23 +256,7 @@ int main(void) {
 }
 ```
 
-```diagram
-Before free(p):
-┌──────┐     ┌──────┐
-│  p ──┼────>│  42  │  (heap)
-└──────┘     └──────┘
-┌──────┐         ^
-│alias─┼─────────┘
-└──────┘
-
-After free(p); p = NULL;
-┌──────┐
-│ NULL │     ┌──────┐
-└──────┘     │ ???  │  (freed, contents undefined)
-┌──────┐         ^
-│alias─┼─────────┘   <-- DANGLING!
-└──────┘
-```
+![dangling_pointer](svg/courses/languages/c/c-refresher/11_dynamic_memory/dangling_pointer.svg)
 
 ---
 
@@ -619,21 +585,7 @@ int main(void) {
 
 ## Custom Allocator Overview
 
-```diagram
-┌─────────────────────────────────────────────────────┐
-│                Allocator Strategies                  │
-├──────────────┬──────────────────────────────────────┤
-│  Strategy    │  Description                         │
-├──────────────┼──────────────────────────────────────┤
-│  Bump/Arena  │  Linear allocation, bulk free        │
-│  Pool        │  Fixed-size blocks, O(1) alloc/free  │
-│  Free List   │  Variable size, linked free blocks   │
-│  Slab        │  Caches of same-type objects          │
-│  Buddy       │  Power-of-2 splitting/coalescing     │
-│  jemalloc    │  Thread-local caches, size classes    │
-│  tcmalloc    │  Google's thread-caching allocator   │
-└──────────────┴──────────────────────────────────────┘
-```
+![custom_allocator_overview](svg/courses/languages/c/c-refresher/11_dynamic_memory/custom_allocator_overview.svg)
 
 When to use each:
 - **Arena**: short-lived, batch-freed allocations (parsers, per-request)

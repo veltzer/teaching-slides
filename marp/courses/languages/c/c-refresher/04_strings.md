@@ -227,27 +227,9 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 
 ## String Memory Layout
 
-```diagram
-char greeting[] = "Hello";
+![string_memory_layout_1](svg/courses/languages/c/c-refresher/04_strings/string_memory_layout_1.svg)
 
-┌─────┬─────┬─────┬─────┬─────┬─────┐
-│ 'H' │ 'e' │ 'l' │ 'l' │ 'o' │ '\0'│
-│ 0x48│ 0x65│ 0x6C│ 0x6C│ 0x6F│ 0x00│
-└─────┴─────┴─────┴─────┴─────┴─────┘
- [0]    [1]   [2]   [3]   [4]   [5]
-
-sizeof(greeting) = 6  (includes '\0')
-strlen(greeting) = 5  (excludes '\0')
-```
-
-```diagram
-char *ptr = "Hello";
-
-Stack:                     Read-only data:
-┌──────────┐               ┌─────┬─────┬─────┬─────┬─────┬─────┐
-│ ptr: 0x──┼──────────────>│ 'H' │ 'e' │ 'l' │ 'l' │ 'o' │ '\0'│
-└──────────┘               └─────┴─────┴─────┴─────┴─────┴─────┘
-```
+![string_memory_layout_2](svg/courses/languages/c/c-refresher/04_strings/string_memory_layout_2.svg)
 
 ---
 

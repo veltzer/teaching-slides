@@ -45,64 +45,13 @@ Fast Flux DNS is a technique used by botnets and other malicious actors to hide 
 
 ## Single Flux vs Double Flux
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│              Single Flux                                  │
-│                                                          │
-│  Domain: malware.example.com                             │
-│  DNS A records change rapidly (every 3-5 minutes)        │
-│                                                          │
-│  Time 0:   A -> 10.0.0.1 (compromised host 1)           │
-│  Time 5m:  A -> 172.16.0.5 (compromised host 2)         │
-│  Time 10m: A -> 192.168.1.3 (compromised host 3)        │
-│                                                          │
-│  Nameserver: ns1.evil.com = 1.2.3.4 (fixed)             │
-└──────────────────────────────────────────────────────────┘
-
-┌──────────────────────────────────────────────────────────┐
-│              Double Flux                                  │
-│                                                          │
-│  Both A records AND NS records change rapidly:           │
-│                                                          │
-│  Time 0:   A  -> 10.0.0.1    NS -> ns1.evil.com (5.5.5.5) │
-│  Time 5m:  A  -> 172.16.0.5  NS -> ns2.evil.com (6.6.6.6) │
-│  Time 10m: A  -> 192.168.1.3 NS -> ns3.evil.com (7.7.7.7) │
-│                                                          │
-│  Much harder to take down - no fixed infrastructure!     │
-└──────────────────────────────────────────────────────────┘
-```
+![single_flux_vs_double_flux](svg/courses/security/cyber-attacks-and-vectors/11_fast_flux_dns/single_flux_vs_double_flux.svg)
 
 ---
 
 ## Fast Flux Network Architecture
 
-```diagram
-┌────────────────────────────────────────────────────────────┐
-│                                                            │
-│  ┌──────────────────────┐                                  │
-│  │  C&C Server (hidden) │  <-- Actual malicious server     │
-│  └──────────┬───────────┘                                  │
-│             │                                              │
-│      ┌──────┴──────┐                                       │
-│      │ Fast Flux    │                                      │
-│      │ Controller   │  Manages the flux network            │
-│      └──────┬──────┘                                       │
-│             │                                              │
-│    ┌────────┼────────┬────────┐                            │
-│    v        v        v        v                            │
-│  ┌────┐  ┌────┐  ┌────┐  ┌────┐                          │
-│  │Bot1│  │Bot2│  │Bot3│  │Bot4│  Compromised hosts        │
-│  │Proxy│ │Proxy│ │Proxy│ │Proxy│  acting as reverse proxies│
-│  └──┬─┘  └──┬─┘  └──┬─┘  └──┬─┘                          │
-│     │       │       │       │                              │
-│  ┌──┴───────┴───────┴───────┴──┐                          │
-│  │        Internet / Users      │                          │
-│  └──────────────────────────────┘                          │
-│                                                            │
-│  DNS returns different bot IPs every few minutes           │
-│  Bots proxy traffic to hidden C&C server                   │
-└────────────────────────────────────────────────────────────┘
-```
+![fast_flux_network_architecture](svg/courses/security/cyber-attacks-and-vectors/11_fast_flux_dns/fast_flux_network_architecture.svg)
 
 ---
 

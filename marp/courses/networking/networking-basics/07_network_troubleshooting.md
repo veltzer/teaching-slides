@@ -7,28 +7,7 @@
 
 A systematic approach to network troubleshooting saves time and frustration.
 
-```diagram
-┌─────────────────────────────────────────────┐
-│  1. Identify the problem                    │
-│     "What exactly isn't working?"           │
-├─────────────────────────────────────────────┤
-│  2. Gather information                      │
-│     Logs, error messages, recent changes    │
-├─────────────────────────────────────────────┤
-│  3. Test layer by layer (bottom-up)         │
-│     Physical → Link → Network → Transport   │
-│     → Application                           │
-├─────────────────────────────────────────────┤
-│  4. Isolate the cause                       │
-│     Narrow down: local? network? remote?    │
-├─────────────────────────────────────────────┤
-│  5. Fix and verify                          │
-│     Apply fix, confirm it works             │
-├─────────────────────────────────────────────┤
-│  6. Document                                │
-│     Record the problem and solution         │
-└─────────────────────────────────────────────┘
-```
+![troubleshooting_methodology](svg/courses/networking/networking-basics/07_network_troubleshooting/troubleshooting_methodology.svg)
 
 ---
 
@@ -169,31 +148,7 @@ $ ping -c 3 -D 8.8.8.8
 
 ## What Ping Failures Mean
 
-```diagram
-"Destination Host Unreachable"
-  → Your gateway doesn't know how to reach the target
-  → Check: ip route, gateway status
-
-"Request timed out" / No response
-  → Packets may be dropped by a firewall
-  → Host may be down
-  → ICMP may be blocked (many servers block ping)
-  → Check: traceroute to see where packets stop
-
-"Network is unreachable"
-  → No route to the destination network
-  → Check: ip route, default gateway
-
-High latency (>100ms for local, >300ms for cross-continent)
-  → Network congestion
-  → Routing issue (suboptimal path)
-  → Check: traceroute, mtr
-
-Packet loss (>1%)
-  → Network congestion or flapping link
-  → Bad cable or wireless interference
-  → Check: mtr for sustained test, ip -s link for errors
-```
+![what_ping_failures_mean](svg/courses/networking/networking-basics/07_network_troubleshooting/what_ping_failures_mean.svg)
 
 ---
 
@@ -276,34 +231,7 @@ $ mtr -j -c 10 8.8.8.8
 
 ## Interpreting mtr Results
 
-```diagram
-Case 1: Loss at one hop but not later
-  Hop 3: 30% loss
-  Hop 4: 0% loss
-  Hop 5: 0% loss
-  → Router at hop 3 is rate-limiting ICMP responses
-  → NOT an actual problem (ICMP deprioritized)
-
-Case 2: Loss starts at one hop and continues
-  Hop 3: 0% loss
-  Hop 4: 20% loss
-  Hop 5: 20% loss
-  Hop 6: 20% loss
-  → Real packet loss starting at hop 4
-  → Problem is at or between hop 3 and hop 4
-
-Case 3: Latency spike at one hop
-  Hop 3: avg 5ms
-  Hop 4: avg 150ms    ← large jump
-  Hop 5: avg 152ms
-  → Link between hop 3 and 4 has high latency
-  → Could be congestion, distance, or poor peering
-
-Case 4: High jitter (StDev)
-  Hop 5: Avg=10ms, StDev=25ms, Best=5ms, Worst=200ms
-  → Inconsistent performance
-  → Possible congestion, bufferbloat, or wireless issues
-```
+![interpreting_mtr_results](svg/courses/networking/networking-basics/07_network_troubleshooting/interpreting_mtr_results.svg)
 
 ---
 
@@ -413,29 +341,7 @@ The sequence above shows: TCP handshake (SYN, SYN-ACK, ACK), then data exchange 
 
 Wireshark provides a graphical interface for packet analysis, with powerful filtering and protocol decoding.
 
-```diagram
-┌──────────────────────────────────────────────────────────────┐
-│  Wireshark                                                    │
-├──────────────────────────────────────────────────────────────┤
-│  Filter: tcp.port == 80 && ip.addr == 10.0.0.5              │
-├──────────────────────────────────────────────────────────────┤
-│  No. Time     Source         Dest           Protocol Info     │
-│  1   0.000    10.0.0.5      93.184.216.34   TCP     SYN      │
-│  2   0.022    93.184.216.34 10.0.0.5       TCP     SYN,ACK   │
-│  3   0.022    10.0.0.5      93.184.216.34   TCP     ACK      │
-│  4   0.023    10.0.0.5      93.184.216.34   HTTP    GET /     │
-│  5   0.045    93.184.216.34 10.0.0.5       HTTP    200 OK    │
-├──────────────────────────────────────────────────────────────┤
-│  Frame 4: 214 bytes on wire                                   │
-│  Ethernet II: src=52:54:00:12:34:56, dst=52:54:00:ab:cd:ef   │
-│  Internet Protocol: src=10.0.0.5, dst=93.184.216.34          │
-│  TCP: src port=54321, dst port=80, seq=1001, ack=2001        │
-│  HTTP: GET / HTTP/1.1\r\nHost: example.com\r\n               │
-├──────────────────────────────────────────────────────────────┤
-│  0000  52 54 00 ab cd ef 52 54  00 12 34 56 08 00 45 00  │
-│  0010  00 c8 12 34 40 00 40 06  ...                       │
-└──────────────────────────────────────────────────────────────┘
-```
+![wireshark_basics](svg/courses/networking/networking-basics/07_network_troubleshooting/wireshark_basics.svg)
 
 ---
 
@@ -483,31 +389,7 @@ tcp.port == 80 || tcp.port == 443
 
 ## Useful Wireshark Features
 
-```diagram
-1. Capture filters (before capture, BPF syntax):
-   host 10.0.0.5 and port 80
-
-2. Display filters (during analysis, Wireshark syntax):
-   http.request.method == "POST"
-
-3. Statistics → Conversations:
-   Shows all connections with byte/packet counts
-
-4. Statistics → Protocol Hierarchy:
-   Shows distribution of protocols in capture
-
-5. Analyze → Follow → TCP Stream:
-   Reassembles and shows a complete TCP conversation
-
-6. Analyze → Expert Information:
-   Highlights anomalies (retransmissions, resets, etc.)
-
-7. Statistics → IO Graphs:
-   Plot traffic patterns over time
-
-8. File → Export Objects → HTTP:
-   Extract files transferred over HTTP
-```
+![useful_wireshark_features](svg/courses/networking/networking-basics/07_network_troubleshooting/useful_wireshark_features.svg)
 
 ```bash
 # Capture with tcpdump, analyze in Wireshark

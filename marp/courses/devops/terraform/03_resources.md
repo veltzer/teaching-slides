@@ -58,12 +58,7 @@ resource "google_compute_instance" "web_server" {
 - Must be declared in the `terraform` block
 - Downloaded during `terraform init`
 
-```diagram
-+-------------+     +----------+     +---------+
-| Terraform   |---->| Provider |---->| Cloud   |
-| Core        |     | Plugin   |     | API     |
-+-------------+     +----------+     +---------+
-```
+![what_are_providers](svg/courses/devops/terraform/03_resources/what_are_providers.svg)
 
 ---
 
@@ -313,10 +308,7 @@ resource "aws_subnet" "public" {
 }
 ```
 
-```diagram
-aws_vpc.main  --->  aws_subnet.public
-  (created first)    (created second)
-```
+![terraform_automatically_knows_this_depends_on_the_vpc](svg/courses/devops/terraform/03_resources/terraform_automatically_knows_this_depends_on_the_vpc.svg)
 
 ---
 
@@ -459,24 +451,7 @@ resource "aws_instance" "servers" {
 
 ## Resource Lifecycle
 
-```diagram
-Create:  terraform apply  -->  API call  -->  State updated
-Read:    terraform plan   -->  API call  -->  Compare to config
-Update:  terraform apply  -->  API call  -->  State updated
-Delete:  terraform destroy --> API call  -->  State updated
-
-                    +--------+
-                    | Create |
-                    +---+----+
-                        |
-                    +---v----+
-               +--->| Read   |<---+
-               |    +---+----+    |
-               |        |        |
-           +---+----+  +v-------++
-           | Delete |  | Update  |
-           +--------+  +---------+
-```
+![resource_lifecycle](svg/courses/devops/terraform/03_resources/resource_lifecycle.svg)
 
 ---
 

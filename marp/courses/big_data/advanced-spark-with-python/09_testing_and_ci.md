@@ -20,31 +20,7 @@
 ---
 ## Testing Architecture
 
-```diagram
-PySpark Testing Pyramid:
-
-┌───────────────────────────────────┐
-│         E2E / Smoke Tests         │
-│   (full cluster, real data)       │
-│   Few tests, slow, high cost      │
-├───────────────────────────────────┤
-│                                   │
-│      Integration Tests            │
-│  (local Spark, real I/O,          │
-│   small datasets)                 │
-│  Medium count, medium speed       │
-│                                   │
-├───────────────────────────────────┤
-│                                   │
-│                                   │
-│        Unit Tests                 │
-│  (local Spark, in-memory data,    │
-│   mocked sources)                 │
-│  Many tests, fast, low cost       │
-│                                   │
-│                                   │
-└───────────────────────────────────┘
-```
+![testing_architecture](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/testing_architecture.svg)
 
 ---
 ## Project Structure for Testable Spark Code
@@ -323,30 +299,7 @@ def test_column_equality(spark):
 ---
 ## chispa Error Messages
 
-```diagram
-When chispa detects a mismatch, it shows clear diffs:
-
-assert_df_equality(df1, df2)
-
-chispa.DataFramesNotEqualError:
-
-+----+-------+
-| id | value |
-+----+-------+
-|  1 |  10.0 |   <- matches
-|  2 |  20.0 |   <- LEFT ONLY (missing from right)
-+----+-------+
-
-+----+-------+
-| id | value |
-+----+-------+
-|  1 |  10.0 |   <- matches
-|  2 |  25.0 |   <- RIGHT ONLY (missing from left)
-+----+-------+
-
-This makes debugging test failures much easier
-than cryptic assertion errors.
-```
+![chispa_error_messages](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/chispa_error_messages.svg)
 
 ---
 ## Test Fixtures with conftest.py
@@ -913,45 +866,7 @@ jobs:
 ---
 ## CI Pipeline Visualization
 
-```diagram
-CI/CD Pipeline for Spark Jobs:
-
-┌──────────────┐
-│  Push / PR   │
-└──────┬───────┘
-       v
-┌──────────────────────────────────────────┐
-│  Stage 1: Code Quality (parallel)        │
-│  ┌──────────┐ ┌───────┐ ┌──────┐        │
-│  │  pylint  │ │ black │ │ mypy │        │
-│  │  check   │ │ check │ │check │        │
-│  └──────────┘ └───────┘ └──────┘        │
-└──────────────────┬───────────────────────┘
-                   v
-┌──────────────────────────────────────────┐
-│  Stage 2: Unit Tests                     │
-│  ┌──────────────────────────────────┐    │
-│  │  pytest tests/unit/ --cov=src    │    │
-│  │  (local Spark, fast, no I/O)     │    │
-│  └──────────────────────────────────┘    │
-└──────────────────┬───────────────────────┘
-                   v
-┌──────────────────────────────────────────┐
-│  Stage 3: Integration Tests              │
-│  ┌──────────────────────────────────┐    │
-│  │  pytest tests/integration/       │    │
-│  │  (local Spark, file I/O)         │    │
-│  └──────────────────────────────────┘    │
-└──────────────────┬───────────────────────┘
-                   v
-┌──────────────────────────────────────────┐
-│  Stage 4: Package and Publish            │
-│  ┌──────────────────────────────────┐    │
-│  │  Build wheel, push to artifact   │    │
-│  │  registry (only on main branch)  │    │
-│  └──────────────────────────────────┘    │
-└──────────────────────────────────────────┘
-```
+![ci_pipeline_visualization](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/ci_pipeline_visualization.svg)
 
 ---
 ## Code Quality: pylint Configuration
@@ -1183,34 +1098,4 @@ def test_compute_user_totals_single_user(spark):
 ---
 ## Summary: Testing and CI/CD
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│  Key Takeaways                                    │
-├──────────────────────────────────────────────────┤
-│                                                  │
-│  Testing Strategy:                               │
-│  - Separate pure logic from Spark operations      │
-│  - Test pure Python functions without Spark        │
-│  - Use local[2] SparkSession for unit tests       │
-│  - Use chispa for DataFrame equality              │
-│  - Test edge cases: empty, nulls, special chars   │
-│                                                  │
-│  Fixtures:                                       │
-│  - session-scoped SparkSession (create once)      │
-│  - function-scoped DataFrames (fresh per test)    │
-│  - conftest.py for shared fixtures                │
-│                                                  │
-│  CI/CD:                                          │
-│  - Lint (pylint), format (black), type (mypy)     │
-│  - Unit tests first, integration tests second     │
-│  - Java 11+ required for Spark in CI              │
-│  - Cache pip packages for faster builds           │
-│                                                  │
-│  Code Quality:                                   │
-│  - black for consistent formatting                │
-│  - pylint for code standards                      │
-│  - mypy for type safety                           │
-│  - Type-annotate all transformation functions     │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![summary_testing_and_ci_cd](svg/courses/big_data/advanced-spark-with-python/09_testing_and_ci/summary_testing_and_ci_cd.svg)

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 500" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="350" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">The Environment Hierarchy</text>
+  <!-- System level -->
+  <rect x="150" y="50" width="400" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">System-Wide (/etc/environment)</text>
+  <text x="350" y="100" text-anchor="middle" font-size="11" fill="#555">PATH, LANG - applies to ALL users</text>
+  <line x1="350" y1="120" x2="350" y2="150" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- /etc/profile -->
+  <rect x="150" y="155" width="400" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="180" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Login Shell (/etc/profile, /etc/profile.d/*)</text>
+  <text x="350" y="200" text-anchor="middle" font-size="11" fill="#555">System-wide shell config for login shells</text>
+  <line x1="350" y1="225" x2="350" y2="255" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- User profile -->
+  <rect x="150" y="260" width="400" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="285" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">User Login (~/.bash_profile, ~/.profile)</text>
+  <text x="350" y="305" text-anchor="middle" font-size="11" fill="#555">Per-user config, runs once at login</text>
+  <line x1="350" y1="330" x2="350" y2="360" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- bashrc -->
+  <rect x="150" y="365" width="400" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="350" y="390" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Interactive Shell (~/.bashrc)</text>
+  <text x="350" y="410" text-anchor="middle" font-size="11" fill="#555">Per-user config, runs for each new shell</text>
+  <!-- Scope labels -->
+  <rect x="590" y="60" width="90" height="25" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+  <text x="635" y="77" text-anchor="middle" font-size="10" fill="#333">Broadest</text>
+  <rect x="590" y="375" width="90" height="25" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="635" y="392" text-anchor="middle" font-size="10" fill="#333">Narrowest</text>
+  <line x1="635" y1="85" x2="635" y2="375" stroke="#999" stroke-width="1" stroke-dasharray="5,5"/>
+  <!-- Override note -->
+  <rect x="100" y="455" width="500" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="477" text-anchor="middle" font-size="12" fill="#333">Later files override earlier ones. More specific scope wins.</text>
+</svg>

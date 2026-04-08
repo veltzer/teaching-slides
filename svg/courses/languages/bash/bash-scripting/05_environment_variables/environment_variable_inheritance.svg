@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    </marker>
+  </defs>
+  <text x="350" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Environment Variable Inheritance</text>
+  <!-- Parent Shell -->
+  <rect x="200" y="55" width="300" height="120" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="350" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Parent Shell (bash)</text>
+  <text x="220" y="105" font-size="12" fill="#555">HOME=/home/user</text>
+  <text x="220" y="125" font-size="12" fill="#28a745" font-weight="bold">export MY_VAR="hello"</text>
+  <text x="220" y="145" font-size="12" fill="#dc3545">LOCAL_VAR="secret"</text>
+  <!-- fork/exec arrow -->
+  <line x1="280" y1="175" x2="200" y2="240" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="210" y="210" font-size="11" fill="#4a90e2">fork + exec</text>
+  <line x1="420" y1="175" x2="500" y2="240" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="440" y="210" font-size="11" fill="#4a90e2">fork + exec</text>
+  <!-- Child Process 1 -->
+  <rect x="40" y="245" width="250" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="165" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Child Process 1</text>
+  <text x="55" y="295" font-size="11" fill="#555">HOME=/home/user (inherited)</text>
+  <text x="55" y="315" font-size="11" fill="#28a745">MY_VAR="hello" (inherited)</text>
+  <text x="55" y="335" font-size="11" fill="#dc3545">LOCAL_VAR is NOT available</text>
+  <!-- Child Process 2 -->
+  <rect x="410" y="245" width="250" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="535" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Child Process 2</text>
+  <text x="425" y="295" font-size="11" fill="#555">HOME=/home/user (inherited)</text>
+  <text x="425" y="315" font-size="11" fill="#28a745">MY_VAR="hello" (inherited)</text>
+  <text x="425" y="335" font-size="11" fill="#dc3545">LOCAL_VAR is NOT available</text>
+  <!-- Key box -->
+  <rect x="100" y="390" width="500" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="350" y="415" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Key Rules</text>
+  <text x="120" y="435" font-size="11" fill="#555">- Only exported variables are inherited by child processes</text>
+  <text x="120" y="455" font-size="11" fill="#555">- Changes in child do NOT propagate back to parent</text>
+  <!-- Legend -->
+  <rect x="30" y="55" width="15" height="15" rx="2" fill="#28a745"/>
+  <text x="52" y="67" font-size="11" fill="#555">Exported (inherited)</text>
+  <rect x="30" y="78" width="15" height="15" rx="2" fill="#dc3545"/>
+  <text x="52" y="90" font-size="11" fill="#555">Local (not inherited)</text>
+</svg>

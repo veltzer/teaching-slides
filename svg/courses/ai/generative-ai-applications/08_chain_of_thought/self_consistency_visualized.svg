@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Self-Consistency Visualized</text>
+  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#666">"If 3 shirts take 3 hours to dry, how long do 9 shirts take?"</text>
+  <!-- Paths -->
+  <rect x="40" y="70" width="130" height="120" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="105" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Path 1</text>
+  <text x="105" y="110" text-anchor="middle" font-size="9" fill="#555">3 shirts -> 3h</text>
+  <text x="105" y="125" text-anchor="middle" font-size="9" fill="#555">1 shirt -> 1h</text>
+  <text x="105" y="140" text-anchor="middle" font-size="9" fill="#555">9 shirts -> 9h</text>
+  <text x="105" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">9 hours &#x2717;</text>
+
+  <rect x="190" y="70" width="130" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="255" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Path 2</text>
+  <text x="255" y="110" text-anchor="middle" font-size="9" fill="#555">Shirts dry in</text>
+  <text x="255" y="125" text-anchor="middle" font-size="9" fill="#555">parallel.</text>
+  <text x="255" y="140" text-anchor="middle" font-size="9" fill="#555">Same time needed</text>
+  <text x="255" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">3 hours &#x2713;</text>
+
+  <rect x="340" y="70" width="130" height="120" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="405" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Path 3</text>
+  <text x="405" y="110" text-anchor="middle" font-size="9" fill="#555">3 batches needed</text>
+  <text x="405" y="125" text-anchor="middle" font-size="9" fill="#555">3 x 3 hours</text>
+  <text x="405" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">9 hours &#x2717;</text>
+
+  <rect x="490" y="70" width="130" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="555" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Path 4</text>
+  <text x="555" y="110" text-anchor="middle" font-size="9" fill="#555">Parallel drying.</text>
+  <text x="555" y="125" text-anchor="middle" font-size="9" fill="#555">Not sequential.</text>
+  <text x="555" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">3 hours &#x2713;</text>
+
+  <rect x="640" y="70" width="130" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="705" y="90" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Path 5</text>
+  <text x="705" y="110" text-anchor="middle" font-size="9" fill="#555">All dry at once.</text>
+  <text x="705" y="125" text-anchor="middle" font-size="9" fill="#555">Simultaneously.</text>
+  <text x="705" y="178" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">3 hours &#x2713;</text>
+
+  <!-- Arrows to vote -->
+  <line x1="105" y1="190" x2="400" y2="240" stroke="#dc3545" stroke-width="1"/>
+  <line x1="255" y1="190" x2="400" y2="240" stroke="#28a745" stroke-width="1"/>
+  <line x1="405" y1="190" x2="400" y2="240" stroke="#dc3545" stroke-width="1"/>
+  <line x1="555" y1="190" x2="400" y2="240" stroke="#28a745" stroke-width="1"/>
+  <line x1="705" y1="190" x2="400" y2="240" stroke="#28a745" stroke-width="1"/>
+
+  <!-- Vote box -->
+  <rect x="220" y="240" width="360" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">MAJORITY VOTE</text>
+  <text x="400" y="290" text-anchor="middle" font-size="12" fill="#555">3 hours (3/5) vs 9 hours (2/5)</text>
+
+  <!-- Result -->
+  <rect x="260" y="330" width="280" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="356" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Answer: 3 hours</text>
+  <line x1="400" y1="310" x2="400" y2="330" stroke="#4a90e2" stroke-width="2"/>
+</svg>

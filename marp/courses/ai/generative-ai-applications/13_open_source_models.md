@@ -361,31 +361,7 @@ async def chat(request: ChatRequest):
 
 ## Model Merging — Combining Expertise
 
-```diagram
-A technique to combine multiple fine-tuned models:
-
-Model A: Fine-tuned for coding
-Model B: Fine-tuned for creative writing
-Model C: Fine-tuned for math
-
-MERGING METHODS:
-─────────────────────────────────────────
-1. Linear merge (average weights)
-   W_merged = α·W_A + β·W_B + γ·W_C
-   Simple but effective
-
-2. SLERP (Spherical Linear Interpolation)
-   Interpolate on the hypersphere
-   Better for 2-model merges
-
-3. TIES (Trim, Elect Sign, Merge)
-   Only merge significant changes
-   Reduces interference between models
-
-4. DARE (Drop And REscale)
-   Randomly drop changes, rescale rest
-   Works well with 3+ models
-```
+![model_merging_combining_expertise](svg/courses/ai/generative-ai-applications/13_open_source_models/model_merging_combining_expertise.svg)
 
 ```python
 # Using mergekit
@@ -398,25 +374,7 @@ MERGING METHODS:
 
 Use a small model to speed up a large model:
 
-```diagram
-Standard decoding (slow):
-  Large model generates 1 token at a time
-  Each token = 1 full forward pass of 70B model
-
-Speculative decoding (fast):
-  1. Small model (7B) generates K draft tokens quickly
-  2. Large model (70B) verifies ALL K tokens in one pass
-  3. Accept correct tokens, reject wrong ones, continue
-
-Example:
-  Draft model generates: "The capital of France is Paris"
-  Large model verifies in ONE pass:
-    "The" ✓ "capital" ✓ "of" ✓ "France" ✓ "is" ✓ "Paris" ✓
-  → 6 tokens for the cost of ~2 large model passes
-
-Speedup: 2-3× with no quality loss!
-(Quality is identical — only verified tokens are used)
-```
+![speculative_decoding](svg/courses/ai/generative-ai-applications/13_open_source_models/speculative_decoding.svg)
 
 ---
 
@@ -563,31 +521,7 @@ models_to_compare = [
 
 ## Model Licensing — Understanding the Terms
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│              MODEL LICENSE COMPARISON                  │
-├──────────────┬───────────────────────────────────────┤
-│ Apache 2.0   │ ✓ Commercial use                      │
-│ (Mistral,    │ ✓ Modification and distribution       │
-│  Qwen)       │ ✓ Patent grant                        │
-│              │ ✓ No royalties                        │
-│              │ Must include license notice            │
-├──────────────┼───────────────────────────────────────┤
-│ MIT          │ ✓ Nearly unrestricted use             │
-│ (Phi-3)      │ ✓ Commercial use                      │
-│              │ ✓ Minimal obligations                 │
-├──────────────┼───────────────────────────────────────┤
-│ LLaMA 3.1   │ ✓ Commercial use (with conditions)    │
-│ Community    │ ✓ Modification                        │
-│              │ ✗ Must accept Meta's terms             │
-│              │ ✗ Monthly active users > 700M:        │
-│              │   need Meta's permission               │
-├──────────────┼───────────────────────────────────────┤
-│ Gemma        │ ✓ Commercial use                      │
-│ (Google)     │ ✗ Cannot use to train competing models│
-│              │ ✗ Must accept Google's terms           │
-└──────────────┴───────────────────────────────────────┘
-```
+![model_licensing_understanding_the_terms](svg/courses/ai/generative-ai-applications/13_open_source_models/model_licensing_understanding_the_terms.svg)
 
 ---
 
@@ -631,28 +565,7 @@ docker run --gpus all -p 8000:8000 llm-server
 
 ## Embedding Models — Open Source Options
 
-```diagram
-┌────────────────────────────────┬──────┬───────────┬──────────┐
-│ Model                          │ Dims │ MTEB Avg  │ Size     │
-├────────────────────────────────┼──────┼───────────┼──────────┤
-│ all-MiniLM-L6-v2               │ 384  │ 56.3      │ 80 MB    │
-│ bge-large-en-v1.5              │ 1024 │ 64.2      │ 1.3 GB   │
-│ e5-large-v2                    │ 1024 │ 62.0      │ 1.3 GB   │
-│ gte-Qwen2-7B-instruct         │ 3584 │ 72.1      │ 14 GB    │
-│ nomic-embed-text-v1.5          │ 768  │ 62.3      │ 548 MB   │
-│ text-embedding-3-small (OpenAI)│ 1536 │ 62.3      │ API only │
-│ text-embedding-3-large (OpenAI)│ 3072 │ 64.6      │ API only │
-└────────────────────────────────┴──────┴───────────┴──────────┘
-
-Key insight: Open source embedding models match or
-exceed OpenAI embeddings on many tasks, and you can
-run them locally with zero API cost.
-
-For RAG applications:
-  - Budget: all-MiniLM-L6-v2 (fast, decent quality)
-  - Quality: bge-large-en-v1.5 (best quality/size ratio)
-  - Maximum: gte-Qwen2-7B (highest quality, needs GPU)
-```
+![embedding_models_open_source_options](svg/courses/ai/generative-ai-applications/13_open_source_models/embedding_models_open_source_options.svg)
 
 ---
 

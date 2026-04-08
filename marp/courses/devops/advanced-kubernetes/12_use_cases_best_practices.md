@@ -39,29 +39,7 @@ Advanced Kubernetes Course - Day 3, Module 2
 
 ## Microservices on `Kubernetes`
 
-```diagram
-┌─────── Ingress Controller ───────┐
-│                                  │
-└──────┬───────────────┬───────────┘
-       │               │
-┌──────▼──────┐  ┌─────▼───────┐
-│  Frontend   │  │  API Gateway │
-│  (3 pods)   │  │  (3 pods)    │
-└──────┬──────┘  └──┬───┬───┬──┘
-       │            │   │   │
-       │      ┌─────┘   │   └──────┐
-       │      │         │          │
-┌──────▼──┐ ┌─▼────┐ ┌──▼───┐ ┌───▼────┐
-│ User    │ │Order │ │Pay-  │ │Notifi- │
-│ Service │ │Svc   │ │ment  │ │cation  │
-│ (3)     │ │(5)   │ │(3)   │ │(2)     │
-└────┬────┘ └──┬───┘ └──┬───┘ └───┬────┘
-     │         │        │         │
-┌────▼──┐  ┌───▼──┐  ┌──▼───┐  ┌─▼──────┐
-│Postgres│  │Mongo │  │Stripe│  │Kafka   │
-│  (sts) │  │ (sts)│  │(ext) │  │ (sts)  │
-└────────┘  └──────┘  └──────┘  └────────┘
-```
+![microservices_on_kubernetes](svg/courses/devops/advanced-kubernetes/12_use_cases_best_practices/microservices_on_kubernetes.svg)
 
 ---
 
@@ -200,29 +178,7 @@ cosign verify --key cosign.pub registry.example.com/myapp:v2
 
 ## Cost Optimization Strategies
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│              Cost Optimization                   │
-│                                                 │
-│  1. Right-size resources                        │
-│     └─ Use VPA recommendations                  │
-│                                                 │
-│  2. Use spot/preemptible instances              │
-│     └─ Non-critical, fault-tolerant workloads   │
-│                                                 │
-│  3. Cluster Autoscaler                          │
-│     └─ Scale down idle nodes                    │
-│                                                 │
-│  4. KEDA - Scale to zero                        │
-│     └─ Dev/staging environments                 │
-│                                                 │
-│  5. Resource quotas                             │
-│     └─ Prevent over-provisioning                │
-│                                                 │
-│  6. Namespace-level budgets                     │
-│     └─ Cost allocation and chargebacks          │
-└─────────────────────────────────────────────────┘
-```
+![cost_optimization_strategies](svg/courses/devops/advanced-kubernetes/12_use_cases_best_practices/cost_optimization_strategies.svg)
 
 ---
 
@@ -358,26 +314,7 @@ func main() {
 
 ## Disaster Recovery Strategy
 
-```diagram
-┌────────────────────────────────────────────────┐
-│           Disaster Recovery Plan                │
-│                                                │
-│  1. etcd backup (every 30 min)                 │
-│     └─ Stored in S3/GCS with encryption        │
-│                                                │
-│  2. Velero backup (daily)                      │
-│     └─ Cluster state + persistent volumes      │
-│                                                │
-│  3. Multi-region cluster setup                 │
-│     └─ Active-passive or active-active         │
-│                                                │
-│  4. GitOps repo is source of truth             │
-│     └─ Rebuild cluster from Git                │
-│                                                │
-│  RPO: < 30 minutes                             │
-│  RTO: < 2 hours                                │
-└────────────────────────────────────────────────┘
-```
+![disaster_recovery_strategy](svg/courses/devops/advanced-kubernetes/12_use_cases_best_practices/disaster_recovery_strategy.svg)
 
 ---
 

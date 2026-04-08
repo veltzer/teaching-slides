@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">KV Cache: Speeding Up Inference</text>
+  <!-- Without KV cache -->
+  <rect x="30" y="55" width="360" height="300" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="210" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Without KV Cache (naive)</text>
+  <rect x="50" y="100" width="320" height="45" rx="5" fill="#fff" stroke="#dc3545" stroke-width="1"/>
+  <text x="210" y="118" text-anchor="middle" font-size="11" fill="#333">Step 1: Process ["The"]</text>
+  <text x="210" y="136" text-anchor="middle" font-size="10" fill="#dc3545">Compute K,V for all</text>
+  <rect x="50" y="160" width="320" height="45" rx="5" fill="#fff" stroke="#dc3545" stroke-width="1"/>
+  <text x="210" y="178" text-anchor="middle" font-size="11" fill="#333">Step 2: Process ["The", "cat"]</text>
+  <text x="210" y="196" text-anchor="middle" font-size="10" fill="#dc3545">RECOMPUTE K,V for all</text>
+  <rect x="50" y="220" width="320" height="45" rx="5" fill="#fff" stroke="#dc3545" stroke-width="1"/>
+  <text x="210" y="238" text-anchor="middle" font-size="11" fill="#333">Step 3: Process ["The", "cat", "sat"]</text>
+  <text x="210" y="256" text-anchor="middle" font-size="10" fill="#dc3545">RECOMPUTE again</text>
+  <rect x="90" y="280" width="240" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="210" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Quadratic complexity!</text>
+  <!-- With KV cache -->
+  <rect x="410" y="55" width="360" height="300" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="590" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">With KV Cache</text>
+  <rect x="430" y="100" width="320" height="45" rx="5" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="590" y="118" text-anchor="middle" font-size="11" fill="#333">Step 1: Process ["The"]</text>
+  <text x="590" y="136" text-anchor="middle" font-size="10" fill="#28a745">Cache K1, V1</text>
+  <rect x="430" y="160" width="320" height="45" rx="5" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="590" y="178" text-anchor="middle" font-size="11" fill="#333">Step 2: Process ["cat"]</text>
+  <text x="590" y="196" text-anchor="middle" font-size="10" fill="#28a745">Cache K2, V2 (reuse K1, V1)</text>
+  <rect x="430" y="220" width="320" height="45" rx="5" fill="#fff" stroke="#28a745" stroke-width="1"/>
+  <text x="590" y="238" text-anchor="middle" font-size="11" fill="#333">Step 3: Process ["sat"]</text>
+  <text x="590" y="256" text-anchor="middle" font-size="10" fill="#28a745">Cache K3, V3 (reuse all)</text>
+  <rect x="470" y="280" width="240" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="590" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Linear complexity per token!</text>
+</svg>

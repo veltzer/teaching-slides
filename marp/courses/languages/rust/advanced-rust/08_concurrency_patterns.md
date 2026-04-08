@@ -46,12 +46,7 @@ fn main() {
 }
 ```
 
-```diagram
-  ┌────────────┐   send()    ┌─────────────┐   recv()   ┌────────────┐
-  │  Producer   │ ──────────> │   Channel    │ ────────> │  Consumer   │
-  │  (thread)   │             │  (buffer)    │           │  (thread)   │
-  └────────────┘              └─────────────┘           └────────────┘
-```
+![std_sync_mpsc_basics](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/std_sync_mpsc_basics.svg)
 
 ---
 
@@ -176,21 +171,7 @@ fn main() {
 
 ## Crossbeam vs std::sync::mpsc
 
-```diagram
-  ┌─────────────────────┬──────────────────┬──────────────────────┐
-  │ Feature             │ std::sync::mpsc  │ crossbeam-channel    │
-  ├─────────────────────┼──────────────────┼──────────────────────┤
-  │ Multiple producers  │ Yes (clone tx)   │ Yes (clone tx)       │
-  │ Multiple consumers  │ No (MPSC only)   │ Yes (MPMC)           │
-  │ select! macro       │ No               │ Yes                  │
-  │ Bounded channel     │ sync_channel(n)  │ bounded(n)           │
-  │ Unbounded channel   │ channel()        │ unbounded()          │
-  │ Timeout recv        │ recv_timeout()   │ recv_timeout() +     │
-  │                     │                  │ select! timeout      │
-  │ Send + Sync sender  │ Sender: Send     │ Sender: Send + Sync  │
-  │ Performance         │ Good             │ Better (lock-free)   │
-  └─────────────────────┴──────────────────┴──────────────────────┘
-```
+![crossbeam_vs_std_sync_mpsc](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/crossbeam_vs_std_sync_mpsc.svg)
 
 ---
 
@@ -223,17 +204,7 @@ fn main() {
 }
 ```
 
-```diagram
-  ┌──────┐     ┌──────────┐
-  │ work ├────>│ Worker 1 │──┐
-  ├──────┤     └──────────┘  │    ┌───────────┐
-  │ work ├────>┌──────────┐  ├───>│ Collector │
-  ├──────┤     │ Worker 2 │──┤    │ (fan-in)  │
-  │ work ├────>└──────────┘  │    └───────────┘
-  ├──────┤     ┌──────────┐  │
-  │ work ├────>│ Worker 3 │──┘
-  └──────┘     └──────────┘
-```
+![channel_patterns_fan_out_fan_in](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/channel_patterns_fan_out_fan_in.svg)
 
 ---
 
@@ -348,23 +319,7 @@ fn main() {
 
 ## When to Use Mutex vs RwLock
 
-```diagram
-  ┌────────────────────┬─────────────────────┬───────────────────────┐
-  │ Property           │ Mutex               │ RwLock                │
-  ├────────────────────┼─────────────────────┼───────────────────────┤
-  │ Read concurrency   │ One at a time       │ Many concurrent reads │
-  │ Write concurrency  │ One at a time       │ One at a time         │
-  │ Overhead           │ Lower               │ Higher (tracking)     │
-  │ Best for           │ Write-heavy or short │ Read-heavy workloads │
-  │                    │ critical sections    │                       │
-  │ Starvation risk    │ No                  │ Writers can starve    │
-  └────────────────────┴─────────────────────┴───────────────────────┘
-
-  Rule of thumb:
-  - Mostly reads, few writes => RwLock
-  - Frequent writes or very short locks => Mutex
-  - Single-threaded or async => tokio::sync variants
-```
+![when_to_use_mutex_vs_rwlock](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/when_to_use_mutex_vs_rwlock.svg)
 
 ---
 
@@ -406,33 +361,7 @@ fn main() {
 
 ## Atomic Orderings Explained
 
-```diagram
-  ┌────────────────────────────────────────────────────────────┐
-  │                   Memory Orderings                          │
-  ├─────────────┬──────────────────────────────────────────────┤
-  │ Relaxed     │ No ordering guarantees between threads.       │
-  │             │ Only guarantees atomicity of the operation.   │
-  │             │ Use for: counters, flags where order does     │
-  │             │ not matter.                                   │
-  ├─────────────┼──────────────────────────────────────────────┤
-  │ Acquire     │ All reads/writes after this load are          │
-  │             │ guaranteed to see writes before the           │
-  │             │ corresponding Release store.                  │
-  │             │ Use for: loading a lock/flag.                 │
-  ├─────────────┼──────────────────────────────────────────────┤
-  │ Release     │ All prior reads/writes are visible to         │
-  │             │ threads that do an Acquire load.              │
-  │             │ Use for: storing a lock/flag.                 │
-  ├─────────────┼──────────────────────────────────────────────┤
-  │ AcqRel      │ Acquire + Release combined.                   │
-  │             │ Use for: read-modify-write operations         │
-  │             │ (e.g., compare_exchange).                     │
-  ├─────────────┼──────────────────────────────────────────────┤
-  │ SeqCst      │ Strongest ordering. Total global order.       │
-  │             │ Use when: you need all threads to agree on    │
-  │             │ the order of all SeqCst operations.           │
-  └─────────────┴──────────────────────────────────────────────┘
-```
+![atomic_orderings_explained](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/atomic_orderings_explained.svg)
 
 ---
 
@@ -627,27 +556,7 @@ fn main() {
 
 ## Lock-Free vs Lock-Based Trade-offs
 
-```diagram
-  ┌────────────────────┬──────────────────────┬───────────────────────┐
-  │ Property           │ Lock-Based           │ Lock-Free             │
-  ├────────────────────┼──────────────────────┼───────────────────────┤
-  │ Simplicity         │ Easy to reason about │ Complex, subtle bugs  │
-  │ Contention         │ Threads block        │ Threads retry (spin)  │
-  │ Priority inversion │ Possible             │ Not possible          │
-  │ Deadlock           │ Possible             │ Not possible          │
-  │ Progress guarantee │ None (can deadlock)  │ At least one thread   │
-  │                    │                      │ makes progress        │
-  │ Performance (low   │ Good                 │ Similar or better     │
-  │  contention)       │                      │                       │
-  │ Performance (high  │ Degrades quickly     │ Degrades gracefully   │
-  │  contention)       │                      │                       │
-  │ Memory reclamation │ Trivial              │ Hard (ABA problem)    │
-  └────────────────────┴──────────────────────┴───────────────────────┘
-
-  In practice: prefer Mutex/RwLock unless profiling shows
-  lock contention is a real bottleneck. Use crossbeam for
-  production lock-free data structures.
-```
+![lock_free_vs_lock_based_trade_offs](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/lock_free_vs_lock_based_trade_offs.svg)
 
 ---
 
@@ -677,23 +586,7 @@ fn main() {
 }
 ```
 
-```diagram
-  Sequential:
-  [1, 2, 3, 4, 5, 6, 7, 8] ──> map ──> map ──> map ──> ... ──> sum
-
-  Parallel (rayon work-stealing):
-  [1, 2, 3, 4, 5, 6, 7, 8]
-       │         │
-  ┌────┴────┐  ┌─┴────────┐
-  │ Thread 1│  │ Thread 2  │
-  │ [1,2,3,4]  │ [5,6,7,8] │
-  │ map+sum │  │ map+sum   │
-  └────┬────┘  └─┬────────┘
-       │         │
-       └────┬────┘
-            │
-         combine
-```
+![rayon_basics_pariter](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/rayon_basics_pariter.svg)
 
 ---
 
@@ -976,29 +869,7 @@ fn main() {
 
 ## Deadlock Prevention Strategies
 
-```diagram
-  Strategy 1: Lock Ordering
-  ─────────────────────────
-  Always acquire locks in the same order (e.g., by address or ID).
-
-  Strategy 2: try_lock with Backoff
-  ──────────────────────────────────
-  Use try_lock() to avoid blocking. If it fails, release all
-  locks and retry.
-
-  Strategy 3: Single Lock
-  ───────────────────────
-  Combine related data under one Mutex to eliminate ordering issues.
-
-  Strategy 4: Message Passing
-  ───────────────────────────
-  Replace shared state with channels. Actors never deadlock.
-
-  Strategy 5: Lock Hierarchies
-  ────────────────────────────
-  Assign a numeric level to each lock. A thread holding level N
-  may only acquire locks at level N+1 or higher.
-```
+![deadlock_prevention_strategies](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/deadlock_prevention_strategies.svg)
 
 ---
 
@@ -1185,22 +1056,7 @@ fn main() {
 
 ## DashMap vs Mutex<HashMap>
 
-```diagram
-  ┌──────────────────┬──────────────────────┬──────────────────────┐
-  │ Property         │ Mutex<HashMap>       │ DashMap               │
-  ├──────────────────┼──────────────────────┼──────────────────────┤
-  │ Granularity      │ Entire map locked    │ Per-shard locking    │
-  │ Read concurrency │ One at a time        │ Many concurrent reads│
-  │ Write concurrency│ One at a time        │ Concurrent on differ-│
-  │                  │                      │ ent shards           │
-  │ API              │ Standard HashMap     │ Similar to HashMap   │
-  │ Deadlock risk    │ If holding other     │ If holding refs and  │
-  │                  │ locks                │ calling other methods│
-  │ Overhead         │ Minimal              │ Some (shard metadata)│
-  │ Best for         │ Simple cases, few    │ High-contention,     │
-  │                  │ threads              │ many threads         │
-  └──────────────────┴──────────────────────┴──────────────────────┘
-```
+![dashmap_vs_mutex](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/dashmap_vs_mutex.svg)
 
 ---
 
@@ -1372,24 +1228,7 @@ fn main() {
 
 ## Scoped Threads vs Regular Threads
 
-```diagram
-  ┌───────────────────┬──────────────────────┬──────────────────────┐
-  │ Property          │ thread::spawn        │ thread::scope        │
-  ├───────────────────┼──────────────────────┼──────────────────────┤
-  │ Lifetime bounds   │ 'static required     │ Can borrow locals    │
-  │ Sharing data      │ Arc<T> needed        │ &T works directly    │
-  │ Mutable sharing   │ Arc<Mutex<T>>        │ Split borrows work   │
-  │ Join behavior     │ Manual join          │ Auto-joined at scope │
-  │ Error handling    │ JoinHandle result    │ Panics propagate     │
-  │ Spawning after    │ Allowed              │ Only within scope    │
-  │ creation          │                      │                       │
-  └───────────────────┴──────────────────────┴──────────────────────┘
-
-  Use thread::scope when:
-  - You need to borrow data from the stack
-  - You want guaranteed cleanup (all threads join)
-  - The threads should not outlive the calling function
-```
+![scoped_threads_vs_regular_threads](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/scoped_threads_vs_regular_threads.svg)
 
 ---
 
@@ -1558,56 +1397,13 @@ fn main() {
 
 ## Actor Pattern: Benefits
 
-```diagram
-  ┌──────────────────────────────────────────────────┐
-  │            Why Use the Actor Pattern?              │
-  ├──────────────────────────────────────────────────┤
-  │                                                    │
-  │  1. No shared mutable state                       │
-  │     Each actor owns its data exclusively.          │
-  │                                                    │
-  │  2. No locks, no deadlocks                        │
-  │     Communication via messages only.               │
-  │                                                    │
-  │  3. Sequential message processing                 │
-  │     Each actor processes one message at a time.    │
-  │     No data races within an actor.                 │
-  │                                                    │
-  │  4. Natural isolation                              │
-  │     Actors can crash independently.                │
-  │     Supervision strategies for fault tolerance.    │
-  │                                                    │
-  │  5. Scalable                                       │
-  │     Actors can be distributed across threads       │
-  │     or even machines.                              │
-  │                                                    │
-  │  Libraries: actix, xactor, stakker                 │
-  └──────────────────────────────────────────────────┘
-```
+![actor_pattern_benefits](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/actor_pattern_benefits.svg)
 
 ---
 
 ## Summary
 
-```diagram
-  ┌───────────────────────────────────────────────────────┐
-  │          Concurrency Patterns Cheatsheet               │
-  ├───────────────────────────────────────────────────────┤
-  │ mpsc::channel      : unbounded MPSC channel            │
-  │ mpsc::sync_channel : bounded MPSC with backpressure    │
-  │ crossbeam-channel  : MPMC + select! macro              │
-  │ Mutex<T>           : exclusive access, short locks     │
-  │ RwLock<T>          : many readers, one writer           │
-  │ AtomicU64/Bool     : lock-free counters and flags      │
-  │ Ordering           : Relaxed < Acquire/Release < SeqCst│
-  │ rayon::par_iter    : data-parallel iterators            │
-  │ Arc<T>             : shared ownership across threads    │
-  │ DashMap            : concurrent HashMap (sharded)       │
-  │ thread::scope      : borrow stack data in threads      │
-  │ Actor pattern      : message-driven, no shared state   │
-  │ Lock ordering      : prevent deadlocks                 │
-  └───────────────────────────────────────────────────────┘
-```
+![summary](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/summary.svg)
 
 ---
 

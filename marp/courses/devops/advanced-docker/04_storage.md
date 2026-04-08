@@ -18,23 +18,7 @@ Persistent data management for containers
 
 ## Docker Storage Architecture
 
-```diagram
-┌─────────────────────────────────────────────┐
-│              Container Layer (R/W)           │
-├─────────────────────────────────────────────┤
-│              Image Layer 3 (RO)              │
-├─────────────────────────────────────────────┤
-│              Image Layer 2 (RO)              │
-├─────────────────────────────────────────────┤
-│              Image Layer 1 (RO)              │
-├─────────────────────────────────────────────┤
-│              Base Image Layer (RO)           │
-├─────────────────────────────────────────────┤
-│           Storage Driver (overlay2)          │
-├─────────────────────────────────────────────┤
-│           Filesystem (ext4, xfs)             │
-└─────────────────────────────────────────────┘
-```
+![docker_storage_architecture](svg/courses/devops/advanced-docker/04_storage/docker_storage_architecture.svg)
 
 ---
 
@@ -85,28 +69,7 @@ mount | grep overlay
 
 ## Copy-on-Write (`CoW`) Explained
 
-```diagram
-Read operation:
-┌───────────────┐
-│  Upper (R/W)  │  file not found → look in lower
-├───────────────┤
-│  Lower (RO)   │  ← file found here, read directly
-└───────────────┘
-
-Write operation (existing file):
-┌───────────────┐
-│  Upper (R/W)  │  ← file copied here, then modified
-├───────────────┤
-│  Lower (RO)   │  original unchanged
-└───────────────┘
-
-Delete operation:
-┌───────────────┐
-│  Upper (R/W)  │  ← whiteout file created
-├───────────────┤
-│  Lower (RO)   │  original still exists but hidden
-└───────────────┘
-```
+![copy_on_write_cow_explained](svg/courses/devops/advanced-docker/04_storage/copy_on_write_cow_explained.svg)
 
 ---
 
@@ -133,20 +96,7 @@ docker run -d --name db \
 
 ## Three Types of Mounts
 
-```diagram
-┌──────────────────────────────────────────────────┐
-│                                                  │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐      │
-│  │  Bind    │  │  Named   │  │  tmpfs   │      │
-│  │  Mount   │  │  Volume  │  │  Mount   │      │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘      │
-│       │              │              │            │
-│   Host path     Docker-managed   RAM only       │
-│   /home/user    /var/lib/docker   No disk I/O   │
-│   /data/app     /volumes/...                    │
-│                                                  │
-└──────────────────────────────────────────────────┘
-```
+![three_types_of_mounts](svg/courses/devops/advanced-docker/04_storage/three_types_of_mounts.svg)
 
 ---
 
@@ -524,15 +474,7 @@ docker run --rm --tmpfs /data:size=2G alpine sh -c \
 
 ## Storage Performance Comparison
 
-```diagram
-Typical I/O throughput (sequential write):
-
-tmpfs (RAM)         ████████████████████████████  ~2000 MB/s
-Bind mount (SSD)    ██████████████████            ~1200 MB/s
-Named volume (SSD)  █████████████████             ~1150 MB/s
-Container layer     █████████████                 ~800 MB/s
-NFS volume          ████████                      ~500 MB/s
-```
+![storage_performance_comparison](svg/courses/devops/advanced-docker/04_storage/storage_performance_comparison.svg)
 
 - `tmpfs` is fastest (memory-speed) but non-persistent
 - Named volumes and bind mounts have similar performance

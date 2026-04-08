@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 500" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Integer Representation in Memory</text>
+  <!-- Unsigned section -->
+  <rect x="30" y="55" width="330" height="180" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="195" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Unsigned Integer (uint8_t = 42)</text>
+  <!-- Bit boxes -->
+  <g transform="translate(50, 95)">
+    <rect x="0" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="17" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="37" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="54" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="74" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="91" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="111" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="128" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="148" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="165" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="185" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="202" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="222" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="239" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="259" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="276" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <text x="0" y="50" font-size="10" fill="#555">bit7</text>
+    <text x="259" y="50" font-size="10" fill="#555">bit0</text>
+  </g>
+  <text x="195" y="175" text-anchor="middle" font-size="12" fill="#555">= 32 + 8 + 2 = 42</text>
+  <text x="195" y="195" text-anchor="middle" font-size="11" fill="#555">Range: 0 to 255</text>
+  <!-- Signed section -->
+  <rect x="390" y="55" width="330" height="180" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="555" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Signed Integer (int8_t = -42)</text>
+  <!-- Bit boxes for signed -->
+  <g transform="translate(410, 95)">
+    <rect x="0" y="0" width="35" height="30" rx="2" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+    <text x="17" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="37" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="54" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="74" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="91" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="111" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="128" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="148" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="165" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <rect x="185" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="202" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="222" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="239" y="20" text-anchor="middle" font-size="12" fill="#333">1</text>
+    <rect x="259" y="0" width="35" height="30" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+    <text x="276" y="20" text-anchor="middle" font-size="12" fill="#333">0</text>
+    <text x="0" y="50" font-size="10" fill="#dc3545" font-weight="bold">sign</text>
+    <text x="259" y="50" font-size="10" fill="#555">bit0</text>
+  </g>
+  <text x="555" y="175" text-anchor="middle" font-size="12" fill="#555">Two's complement: invert + 1</text>
+  <text x="555" y="195" text-anchor="middle" font-size="11" fill="#555">Range: -128 to 127</text>
+  <!-- Endianness -->
+  <rect x="30" y="260" width="690" height="100" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="285" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Byte Order (Endianness) - int32_t = 0x0A0B0C0D</text>
+  <text x="180" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Little-Endian (x86)</text>
+  <g transform="translate(60, 320)">
+    <rect x="0" y="0" width="55" height="25" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+    <text x="27" y="17" text-anchor="middle" font-size="11" fill="#333">0D</text>
+    <rect x="57" y="0" width="55" height="25" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" font-size="11" fill="#333">0C</text>
+    <rect x="114" y="0" width="55" height="25" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+    <text x="141" y="17" text-anchor="middle" font-size="11" fill="#333">0B</text>
+    <rect x="171" y="0" width="55" height="25" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+    <text x="198" y="17" text-anchor="middle" font-size="11" fill="#333">0A</text>
+  </g>
+  <text x="555" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Big-Endian (Network)</text>
+  <g transform="translate(430, 320)">
+    <rect x="0" y="0" width="55" height="25" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+    <text x="27" y="17" text-anchor="middle" font-size="11" fill="#333">0A</text>
+    <rect x="57" y="0" width="55" height="25" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+    <text x="84" y="17" text-anchor="middle" font-size="11" fill="#333">0B</text>
+    <rect x="114" y="0" width="55" height="25" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+    <text x="141" y="17" text-anchor="middle" font-size="11" fill="#333">0C</text>
+    <rect x="171" y="0" width="55" height="25" rx="2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
+    <text x="198" y="17" text-anchor="middle" font-size="11" fill="#333">0D</text>
+  </g>
+  <!-- Size comparison -->
+  <rect x="30" y="385" width="690" height="100" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="375" y="410" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Integer Sizes in C</text>
+  <text x="130" y="440" text-anchor="middle" font-size="11" fill="#333">char: 1 byte</text>
+  <text x="280" y="440" text-anchor="middle" font-size="11" fill="#333">short: 2 bytes</text>
+  <text x="430" y="440" text-anchor="middle" font-size="11" fill="#333">int: 4 bytes</text>
+  <text x="580" y="440" text-anchor="middle" font-size="11" fill="#333">long long: 8 bytes</text>
+  <rect x="105" y="450" width="20" height="20" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="250" y="450" width="40" height="20" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="395" y="450" width="70" height="20" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <rect x="520" y="450" width="120" height="20" rx="2" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+</svg>

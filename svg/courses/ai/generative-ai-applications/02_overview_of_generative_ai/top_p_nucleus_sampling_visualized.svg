@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Top-p (Nucleus) Sampling Visualized</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#666">Token probabilities (sorted):</text>
+  <!-- Bars -->
+  <text x="120" y="95" text-anchor="end" font-size="12" fill="#333">"Paris"</text>
+  <rect x="130" y="80" width="320" height="22" rx="3" fill="#4a90e2"/>
+  <text x="460" y="96" font-size="11" fill="#333">0.40</text>
+
+  <text x="120" y="130" text-anchor="end" font-size="12" fill="#333">"Lyon"</text>
+  <rect x="130" y="115" width="192" height="22" rx="3" fill="#4a90e2"/>
+  <text x="332" y="131" font-size="11" fill="#333">0.24</text>
+
+  <text x="120" y="165" text-anchor="end" font-size="12" fill="#333">"the"</text>
+  <rect x="130" y="150" width="96" height="22" rx="3" fill="#4a90e2"/>
+  <text x="236" y="166" font-size="11" fill="#333">0.12</text>
+
+  <text x="120" y="200" text-anchor="end" font-size="12" fill="#333">"a"</text>
+  <rect x="130" y="185" width="64" height="22" rx="3" fill="#4a90e2"/>
+  <text x="204" y="201" font-size="11" fill="#333">0.08</text>
+
+  <text x="120" y="235" text-anchor="end" font-size="12" fill="#333">"Marseille"</text>
+  <rect x="130" y="220" width="48" height="22" rx="3" fill="#4a90e2"/>
+  <text x="188" y="236" font-size="11" fill="#333">0.06</text>
+
+  <text x="120" y="270" text-anchor="end" font-size="12" fill="#333">"Berlin"</text>
+  <rect x="130" y="255" width="32" height="22" rx="3" fill="#28a745" opacity="0.8"/>
+  <text x="172" y="271" font-size="11" fill="#333">0.04</text>
+
+  <text x="120" y="305" text-anchor="end" font-size="12" fill="#333">"one"</text>
+  <rect x="130" y="290" width="16" height="22" rx="3" fill="#dc3545" opacity="0.5"/>
+  <text x="156" y="306" font-size="11" fill="#999">0.02</text>
+
+  <text x="120" y="340" text-anchor="end" font-size="12" fill="#333">"London"</text>
+  <rect x="130" y="325" width="8" height="22" rx="3" fill="#dc3545" opacity="0.3"/>
+  <text x="148" y="341" font-size="11" fill="#999">0.01</text>
+
+  <!-- Cutoff line -->
+  <line x1="130" y1="250" x2="500" y2="250" stroke="#dc3545" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="520" y="248" font-size="12" font-weight="bold" fill="#dc3545">Top-p = 0.9 cutoff</text>
+  <text x="520" y="268" font-size="11" fill="#666">Cumulative prob reaches 0.9</text>
+
+  <!-- Legend -->
+  <rect x="130" y="370" width="280" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="270" y="392" text-anchor="middle" font-size="11" fill="#333">Included: {Paris, Lyon, the, a, Marseille, Berlin}</text>
+  <rect x="430" y="370" width="220" height="35" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="540" y="392" text-anchor="middle" font-size="11" fill="#333">Excluded: {one, London, ...}</text>
+</svg>

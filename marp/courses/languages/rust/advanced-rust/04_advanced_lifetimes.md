@@ -414,21 +414,7 @@ where
 
 ## Variance Table
 
-```diagram
-  ┌─────────────────────┬─────────────────┬──────────────┐
-  │ Type                │ Variance in 'a  │ Variance in T│
-  ├─────────────────────┼─────────────────┼──────────────┤
-  │ &'a T               │ covariant       │ covariant    │
-  │ &'a mut T           │ covariant       │ invariant    │
-  │ Box<T>              │ -               │ covariant    │
-  │ Vec<T>              │ -               │ covariant    │
-  │ Cell<T>             │ -               │ invariant    │
-  │ UnsafeCell<T>       │ -               │ invariant    │
-  │ fn(T) -> U          │ -               │ contra / co  │
-  │ *const T            │ -               │ covariant    │
-  │ *mut T              │ -               │ invariant    │
-  └─────────────────────┴─────────────────┴──────────────┘
-```
+![variance_table](svg/courses/languages/rust/advanced-rust/04_advanced_lifetimes/variance_table.svg)
 
 ---
 
@@ -881,22 +867,7 @@ fn main() {
 
 ## Summary
 
-```diagram
-  ┌──────────────────────────────────────────────────────────┐
-  │              Advanced Lifetimes Cheatsheet                │
-  ├──────────────────────────────────────────────────────────┤
-  │ Elision rule 1 : each param gets own lifetime            │
-  │ Elision rule 2 : single input -> all outputs             │
-  │ Elision rule 3 : &self lifetime -> all outputs           │
-  │ 'static        : no non-static borrows (or string lits) │
-  │ T: 'a          : all refs in T outlive 'a                │
-  │ for<'a>        : works for ALL lifetimes                 │
-  │ Covariant      : longer life usable as shorter           │
-  │ Invariant      : exact lifetime match required           │
-  │ Self-ref       : use indices, Pin, or ouroboros           │
-  │ Reborrowing    : &mut *r creates shorter-lived &mut      │
-  └──────────────────────────────────────────────────────────┘
-```
+![summary](svg/courses/languages/rust/advanced-rust/04_advanced_lifetimes/summary.svg)
 
 ---
 

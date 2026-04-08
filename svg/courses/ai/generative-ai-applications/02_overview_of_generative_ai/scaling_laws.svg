@@ -1,0 +1,31 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Scaling Laws</text>
+  <!-- Axes -->
+  <line x1="100" y1="50" x2="100" y2="320" stroke="#333" stroke-width="2"/>
+  <line x1="100" y1="320" x2="700" y2="320" stroke="#333" stroke-width="2"/>
+  <text x="50" y="190" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90, 50, 190)">Loss</text>
+  <text x="400" y="355" text-anchor="middle" font-size="13" fill="#333">Parameters (N)</text>
+  <!-- X labels -->
+  <text x="150" y="340" text-anchor="middle" font-size="10" fill="#666">1M</text>
+  <text x="250" y="340" text-anchor="middle" font-size="10" fill="#666">10M</text>
+  <text x="350" y="340" text-anchor="middle" font-size="10" fill="#666">100M</text>
+  <text x="450" y="340" text-anchor="middle" font-size="10" fill="#666">1B</text>
+  <text x="550" y="340" text-anchor="middle" font-size="10" fill="#666">10B</text>
+  <text x="650" y="340" text-anchor="middle" font-size="10" fill="#666">100B</text>
+  <!-- Curve -->
+  <path d="M120,70 Q180,100 220,150 Q280,210 350,250 Q450,290 550,305 Q620,312 690,315" fill="none" stroke="#4a90e2" stroke-width="3"/>
+  <!-- Annotation -->
+  <rect x="200" y="130" width="260" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
+  <text x="330" y="150" text-anchor="middle" font-size="11" fill="#856404">Power law: L(N) = (Nc / N)^a</text>
+  <line x1="240" y1="160" x2="220" y2="175" stroke="#ffc107" stroke-width="1"/>
+  <!-- Three axes -->
+  <rect x="100" y="380" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="190" y="400" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">1. Model Size</text>
+  <text x="190" y="418" text-anchor="middle" font-size="10" fill="#666">(parameters)</text>
+  <rect x="310" y="380" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="400" y="400" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">2. Dataset Size</text>
+  <text x="400" y="418" text-anchor="middle" font-size="10" fill="#666">(tokens)</text>
+  <rect x="520" y="380" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="610" y="400" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3. Compute Budget</text>
+  <text x="610" y="418" text-anchor="middle" font-size="10" fill="#666">(FLOPs)</text>
+</svg>

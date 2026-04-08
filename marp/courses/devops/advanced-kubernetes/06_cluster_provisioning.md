@@ -16,31 +16,7 @@ Advanced Kubernetes Course - Day 2, Module 1
 
 ## `kubeadm` Architecture
 
-```diagram
-┌──────────────────────────────────────────┐
-│             Control Plane Node            │
-│                                          │
-│  ┌──────────┐  ┌────────────────────┐    │
-│  │ etcd     │  │ kube-apiserver     │    │
-│  └──────────┘  └────────────────────┘    │
-│  ┌──────────────────┐  ┌─────────────┐   │
-│  │ kube-controller  │  │ kube-       │   │
-│  │ -manager         │  │ scheduler   │   │
-│  └──────────────────┘  └─────────────┘   │
-│                                          │
-│  ┌──────────┐  ┌────────────────────┐    │
-│  │ kubelet  │  │ kube-proxy         │    │
-│  └──────────┘  └────────────────────┘    │
-└──────────────────────────────────────────┘
-                    │
-        ┌───────────┼───────────┐
-        │           │           │
-┌───────┴──┐  ┌────┴─────┐  ┌──┴───────┐
-│ Worker 1 │  │ Worker 2 │  │ Worker 3 │
-│ kubelet  │  │ kubelet  │  │ kubelet  │
-│ proxy    │  │ proxy    │  │ proxy    │
-└──────────┘  └──────────┘  └──────────┘
-```
+![kubeadm_architecture](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/kubeadm_architecture.svg)
 
 ---
 
@@ -146,16 +122,7 @@ sudo kubeadm join k8s-api.example.com:6443 \
   --certificate-key abc456...
 ```
 
-```diagram
-        ┌─── Load Balancer ───┐
-        │  k8s-api.example.com │
-        └──┬────────┬────────┬─┘
-           │        │        │
-     ┌─────┴─┐  ┌──┴────┐  ┌┴──────┐
-     │Master1│  │Master2│  │Master3│
-     │ etcd  │  │ etcd  │  │ etcd  │
-     └───────┘  └───────┘  └───────┘
-```
+![join_additional_control_plane_nodes](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/join_additional_control_plane_nodes.svg)
 
 ---
 
@@ -217,29 +184,7 @@ sudo vi /etc/kubernetes/manifests/etcd.yaml
 
 Declarative `Kubernetes`-style `APIs` to create, configure, and manage clusters:
 
-```diagram
-┌──────────────────────────────────────────────┐
-│           Management Cluster                  │
-│                                              │
-│  ┌────────────────┐  ┌───────────────────┐   │
-│  │ CAPI Core      │  │ Infrastructure    │   │
-│  │ Controllers    │  │ Provider (AWS,    │   │
-│  │                │  │ Azure, vSphere)   │   │
-│  └────────────────┘  └───────────────────┘   │
-│  ┌────────────────┐  ┌───────────────────┐   │
-│  │ Bootstrap      │  │ Control Plane     │   │
-│  │ Provider       │  │ Provider          │   │
-│  │ (kubeadm)      │  │ (KubeadmCP)      │   │
-│  └────────────────┘  └───────────────────┘   │
-└──────────────┬───────────────────────────────┘
-               │ manages
-    ┌──────────┼──────────┐
-    ▼          ▼          ▼
-┌────────┐ ┌────────┐ ┌────────┐
-│Cluster1│ │Cluster2│ │Cluster3│
-│  (dev) │ │  (stg) │ │  (prd) │
-└────────┘ └────────┘ └────────┘
-```
+![cluster_api_capi_overview](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/cluster_api_capi_overview.svg)
 
 ---
 

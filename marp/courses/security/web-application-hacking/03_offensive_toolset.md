@@ -6,15 +6,7 @@
 
 ## The Pentester's Toolkit Overview
 
-```diagram
-+--Reconnaissance---+  +---Scanning------+  +---Exploitation--+
-| Burp Suite        |  | Nmap            |  | sqlmap          |
-| OWASP ZAP         |  | Nikto           |  | Metasploit      |
-| Browser DevTools   |  | dirb/gobuster   |  | Commix          |
-| curl / httpie      |  | wfuzz           |  | BeEF            |
-| Recon-ng           |  | Nuclei          |  | XSStrike        |
-+-------------------+  +-----------------+  +-----------------+
-```
+![the_pentester_s_toolkit_overview](svg/courses/security/web-application-hacking/03_offensive_toolset/the_pentester_s_toolkit_overview.svg)
 
 ---
 
@@ -423,24 +415,7 @@ docker run -d -p 8081:8080 -p 9090:9090 \
 
 ## Lab Environment Architecture
 
-```diagram
-+--Your Machine (Kali/Host)--+
-|                             |
-| Browser -> Burp Suite -+   |
-|                         |   |
-| Terminal (curl, nmap)   |   |
-|                         |   |
-+-----------+-------------+   |
-            |                 |
-            v                 |
-+--Docker Network-------------+
-|                              |
-| DVWA        :8080            |
-| Juice Shop  :3000            |
-| WebGoat     :8081            |
-| Custom Labs :various         |
-+------------------------------+
-```
+![lab_environment_architecture](svg/courses/security/web-application-hacking/03_offensive_toolset/lab_environment_architecture.svg)
 
 ---
 

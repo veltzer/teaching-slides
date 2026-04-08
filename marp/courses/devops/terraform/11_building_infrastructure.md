@@ -16,39 +16,13 @@ Configuration Management:        Provisioning:
 
 ## Where Each Tool Fits
 
-```diagram
-Infrastructure Lifecycle:
-
-  Provision          Configure         Deploy
-  +----------+      +----------+      +----------+
-  | Terraform|----->|  Ansible |----->| CI/CD    |
-  | Packer   |      |  Chef    |      | Jenkins  |
-  |          |      |  Puppet  |      | ArgoCD   |
-  +----------+      +----------+      +----------+
-  Create VMs,       Install SW,       Deploy apps,
-  networks,         configure OS,     update code
-  storage           manage users
-```
+![where_each_tool_fits](svg/courses/devops/terraform/11_building_infrastructure/where_each_tool_fits.svg)
 
 ---
 
 ## Terraform's Role in the Stack
 
-```diagram
-+--------------------------------------------------+
-|  Application Code (deployed by CI/CD)            |
-+--------------------------------------------------+
-|  Application Configuration (Ansible/Chef)        |
-+--------------------------------------------------+
-|  Operating System (Packer image)                 |
-+--------------------------------------------------+
-|  Infrastructure (Terraform)                      |
-|  - Compute (EC2, VMs)                            |
-|  - Networking (VPC, subnets, LB)                 |
-|  - Storage (S3, EBS, RDS)                        |
-|  - Security (IAM, SG, KMS)                       |
-+--------------------------------------------------+
-```
+![terraform_s_role_in_the_stack](svg/courses/devops/terraform/11_building_infrastructure/terraform_s_role_in_the_stack.svg)
 
 ---
 
@@ -323,9 +297,7 @@ connection {
 }
 ```
 
-```diagram
-Laptop --> Bastion (public IP) --> Target (private IP)
-```
+![connection_via_bastion_host](svg/courses/devops/terraform/11_building_infrastructure/connection_via_bastion_host.svg)
 
 ---
 

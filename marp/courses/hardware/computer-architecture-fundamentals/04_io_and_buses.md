@@ -22,35 +22,7 @@
 The I/O subsystem connects the CPU and memory to the outside world:
 peripherals, storage, network, and user devices.
 
-```diagram
-┌─────────────────────────────────────────────────────────┐
-│                        CPU                              │
-└────────────────────────┬────────────────────────────────┘
-                         │
-              ┌──────────┴──────────┐
-              │   Memory Controller  │
-              │   (in CPU die)       │
-              └──────────┬──────────┘
-                         │
-           ┌─────────────┼─────────────┐
-           │             │             │
-     ┌─────┴─────┐ ┌────┴────┐ ┌──────┴──────┐
-     │   DRAM    │ │  PCIe   │ │   DMI/IF    │
-     │  Channels │ │ Lanes   │ │  (to PCH)   │
-     └───────────┘ │(to GPU) │ └──────┬──────┘
-                   └─────────┘        │
-                              ┌───────┴───────┐
-                              │   PCH / IO Hub │
-                              │  (Chipset)     │
-                              └┬──┬──┬──┬──┬──┘
-                               │  │  │  │  │
-                    ┌──────────┘  │  │  │  └──────────┐
-                    │     ┌───────┘  │  └───────┐     │
-                 ┌──┴──┐┌─┴──┐  ┌───┴───┐  ┌───┴──┐┌─┴───┐
-                 │USB  ││SATA│  │PCIe   │  │Audio ││Ether│
-                 │Ports││    │  │(NVMe) │  │      ││net  │
-                 └─────┘└────┘  └───────┘  └──────┘└─────┘
-```
+![i_o_architecture_overview](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/i_o_architecture_overview.svg)
 
 ---
 
@@ -70,24 +42,7 @@ A bus is a communication system that transfers data between components.
 
 **Historical evolution:**
 
-```diagram
-Shared parallel bus (ISA, PCI):
-  ┌─────┐  ┌─────┐  ┌─────┐  ┌─────┐
-  │Dev A│  │Dev B│  │Dev C│  │Dev D│
-  └──┬──┘  └──┬──┘  └──┬──┘  └──┬──┘
-     │        │        │        │
-  ═══╧════════╧════════╧════════╧═══  Shared bus
-  Only one device can talk at a time!
-
-Point-to-point serial (PCIe):
-  ┌─────┐      ┌──────────┐      ┌─────┐
-  │Dev A│◄────►│  Switch   │◄────►│Dev C│
-  └─────┘      │          │      └─────┘
-  ┌─────┐      │          │      ┌─────┐
-  │Dev B│◄────►│          │◄────►│Dev D│
-  └─────┘      └──────────┘      └─────┘
-  Multiple simultaneous transfers!
-```
+![bus_fundamentals](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/bus_fundamentals.svg)
 
 ---
 
@@ -102,19 +57,7 @@ NVMe SSDs, network cards, and more.
 - Each lane is a pair of differential signal lines (TX + RX)
 - Full duplex: simultaneous send and receive
 
-```diagram
-PCIe Link (x4 example):
-┌─────────┐                          ┌──────────┐
-│         │  Lane 0 TX ────────────► │          │
-│         │  Lane 0 RX ◄──────────── │          │
-│  Root   │  Lane 1 TX ────────────► │  Device  │
-│ Complex │  Lane 1 RX ◄──────────── │ (e.g.    │
-│  (CPU)  │  Lane 2 TX ────────────► │  NVMe)   │
-│         │  Lane 2 RX ◄──────────── │          │
-│         │  Lane 3 TX ────────────► │          │
-│         │  Lane 3 RX ◄──────────── │          │
-└─────────┘                          └──────────┘
-```
+![pcie_pci_express](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/pcie_pci_express.svg)
 
 ---
 
@@ -175,27 +118,7 @@ registers are mapped in the physical address space (MMIO).
 USB (Universal Serial Bus) is a tiered-star topology for connecting
 peripherals:
 
-```diagram
-┌──────────────┐
-│  Host (PC)   │
-│ ┌──────────┐ │
-│ │   Root   │ │
-│ │   Hub    │ │
-│ └────┬─────┘ │
-└──────┼───────┘
-       │
-  ┌────┴────┐
-  │         │
-┌─┴──┐   ┌─┴──┐
-│Hub │   │ KB │  Keyboard (device)
-└─┬──┘   └────┘
-  │
-  ┌────┬────┐
-  │    │    │
-┌─┴─┐┌─┴─┐┌─┴──┐
-│Cam││Mic││Disk│  Camera, Microphone, Storage
-└───┘└───┘└────┘
-```
+![usb_architecture](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/usb_architecture.svg)
 
 **Key design choices:**
 - Host-controlled: all transfers are initiated by the host
@@ -234,23 +157,7 @@ USB defines four transfer types for different use cases:
 | Interrupt | Keyboard, mouse | Guaranteed polling | Yes | Retry |
 | Isochronous | Audio, video | Guaranteed timing | Yes | No retry |
 
-```diagram
-Timeline example (USB 2.0, 1 ms microframes):
-
-Frame 0    Frame 1    Frame 2    Frame 3
-┌─────────┬─────────┬─────────┬─────────┐
-│Isoch    │Isoch    │Isoch    │Isoch    │ ← Always first (time-critical)
-│Audio    │Audio    │Audio    │Audio    │
-├─────────┼─────────┼─────────┼─────────┤
-│Interrupt│         │Interrupt│         │ ← Periodic polling
-│Mouse    │         │Mouse    │         │
-├─────────┼─────────┼─────────┼─────────┤
-│Bulk     │Bulk     │Bulk     │Bulk     │ ← Fill remaining time
-│USB Disk │USB Disk │USB Disk │USB Disk │
-├─────────┼─────────┼─────────┼─────────┤
-│Control  │         │         │Control  │ ← Setup/config as needed
-└─────────┴─────────┴─────────┴─────────┘
-```
+![usb_transfer_types](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/usb_transfer_types.svg)
 
 ---
 
@@ -258,20 +165,7 @@ Frame 0    Frame 1    Frame 2    Frame 3
 
 Two storage interfaces with very different architectures:
 
-```diagram
-SATA (Serial ATA):
-┌──────┐   SATA cable    ┌──────────┐
-│ CPU  │───(6 Gbps)──────│ SATA SSD │
-│      │   via AHCI       │ or HDD   │
-└──────┘   1 queue,       └──────────┘
-           32 commands
-
-NVMe (over PCIe):
-┌──────┐   PCIe x4        ┌──────────┐
-│ CPU  │───(~8 GB/s)──────│ NVMe SSD │
-│      │   65535 queues,   │          │
-└──────┘   65536 cmds/q    └──────────┘
-```
+![sata_and_nvme](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/sata_and_nvme.svg)
 
 | Feature | SATA (AHCI) | NVMe |
 |---------|-------------|------|
@@ -320,31 +214,7 @@ With interrupt:
 
 When a hardware device needs attention, this happens:
 
-```diagram
-1. Device asserts    2. Interrupt        3. CPU saves state
-   interrupt signal     controller          and jumps to ISR
-                        routes it
-
-┌────────┐          ┌──────────┐         ┌─────────────┐
-│ Device │──IRQ────►│   APIC   │──INT───►│    CPU      │
-│(e.g.   │          │(Advanced │         │             │
-│ NIC)   │          │ PIC)     │         │ Save RIP    │
-└────────┘          └──────────┘         │ Save RFLAGS │
-                                         │ Save RSP    │
-                                         │ Jump to ISR │
-                                         └──────┬──────┘
-                                                │
-                                         ┌──────┴──────┐
-                                         │   ISR       │
-                                         │ (Interrupt  │
-                                         │  Service    │
-                                         │  Routine)   │
-                                         │             │
-                                         │ Handle event│
-                                         │ ACK to APIC │
-                                         │ IRET        │
-                                         └─────────────┘
-```
+![hardware_interrupt_flow](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/hardware_interrupt_flow.svg)
 
 The APIC (Advanced Programmable Interrupt Controller) manages priorities
 and routes interrupts to the correct CPU core in multi-core systems.
@@ -543,28 +413,7 @@ Modern DMA controllers support scatter-gather, which allows a single
 DMA operation to transfer data to/from multiple non-contiguous memory
 regions:
 
-```diagram
-Without scatter-gather:
-  Data must be in one contiguous buffer
-  ┌─────────────────────────────────┐
-  │          One big buffer          │  ← must copy data here first
-  └─────────────────────────────────┘
-
-With scatter-gather:
-  DMA reads a list of (address, length) pairs
-  ┌──────┐    ┌────────┐    ┌──────────────┐
-  │ Buf A│    │ Buf B  │    │    Buf C     │
-  │ 512B │    │ 1024B  │    │    2048B     │
-  └──────┘    └────────┘    └──────────────┘
-     ^            ^               ^
-     │            │               │
-  ┌──┴────────────┴───────────────┴──┐
-  │  Scatter-Gather List             │
-  │  Entry 0: addr=A, len=512       │
-  │  Entry 1: addr=B, len=1024      │
-  │  Entry 2: addr=C, len=2048      │
-  └──────────────────────────────────┘
-```
+![dma_scatter_gather](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/dma_scatter_gather.svg)
 
 This avoids copying data into contiguous buffers, saving CPU time
 and memory bandwidth. Essential for network stacks (packet headers
@@ -647,20 +496,7 @@ echo "none" > /sys/block/nvme0n1/queue/scheduler
 
 **mq-deadline** maintains separate read and write queues with deadlines:
 
-```diagram
-Read queue  (deadline: 500 ms):
-┌─────┬─────┬─────┬─────┐
-│ R1  │ R2  │ R3  │ R4  │ → sorted by sector for merging
-└─────┴─────┴─────┴─────┘
-
-Write queue (deadline: 5000 ms):
-┌─────┬─────┬─────┐
-│ W1  │ W2  │ W3  │ → sorted by sector for merging
-└─────┴─────┴─────┘
-
-Dispatch: prefer reads (lower deadline), but always dispatch
-a request before its deadline expires to prevent starvation.
-```
+![linux_i_o_schedulers](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/linux_i_o_schedulers.svg)
 
 ---
 
@@ -669,36 +505,7 @@ a request before its deadline expires to prevent starvation.
 Device drivers are kernel modules that translate OS requests into
 hardware-specific operations:
 
-```diagram
-┌─────────────────────────────────────────────────┐
-│                 User Space                      │
-│  ┌────────────┐  ┌────────────┐                 │
-│  │ Application│  │ Application│                 │
-│  └─────┬──────┘  └──────┬─────┘                 │
-│        │ read()         │ write()                │
-├────────┼────────────────┼───────────────────────┤
-│        │ Kernel Space   │                        │
-│  ┌─────┴────────────────┴─────┐                  │
-│  │     VFS (Virtual File      │                  │
-│  │     System Layer)          │                  │
-│  └─────────────┬──────────────┘                  │
-│                │                                 │
-│  ┌─────────────┴──────────────┐                  │
-│  │     Block Layer / Network  │                  │
-│  │     Stack                  │                  │
-│  └─────────────┬──────────────┘                  │
-│                │                                 │
-│  ┌─────────────┴──────────────┐                  │
-│  │     Device Driver          │                  │
-│  │ (hardware-specific code)   │                  │
-│  └─────────────┬──────────────┘                  │
-├────────────────┼────────────────────────────────┤
-│                │ Hardware                         │
-│  ┌─────────────┴──────────────┐                  │
-│  │     Physical Device        │                  │
-│  └────────────────────────────┘                  │
-└─────────────────────────────────────────────────┘
-```
+![device_drivers_overview](svg/courses/hardware/computer-architecture-fundamentals/04_io_and_buses/device_drivers_overview.svg)
 
 ---
 

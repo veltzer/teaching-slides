@@ -17,53 +17,13 @@ Advanced Kubernetes Course - Day 3, Module 5
 
 ## Why Serverless on `Kubernetes`?
 
-```diagram
-Traditional Kubernetes:
-  Pods always running → costs even when idle
-
-Serverless (Knative):
-  Scale to zero → pay only for actual usage
-
-┌─────────────────────────────────────────┐
-│  Request Rate Over Time                 │
-│                                         │
-│  ▲                                      │
-│  │    ╱╲      ╱╲                        │
-│  │   ╱  ╲    ╱  ╲    ╱╲                │
-│  │  ╱    ╲  ╱    ╲  ╱  ╲               │
-│  │ ╱      ╲╱      ╲╱    ╲──────        │
-│  │╱                                     │
-│  └──────────────────────────────── ▶    │
-│                                         │
-│  Traditional: ████████████████████ $$$  │
-│  Serverless:  ██  ██  ██  ██  █   $    │
-└─────────────────────────────────────────┘
-```
+![why_serverless_on_kubernetes](svg/courses/devops/advanced-kubernetes/15_serverless_knative/why_serverless_on_kubernetes.svg)
 
 ---
 
 ## `Knative` Architecture
 
-```diagram
-┌──────────────────────────────────────────────┐
-│                  Knative                      │
-│                                              │
-│  ┌──────────────────┐  ┌──────────────────┐  │
-│  │  Knative Serving │  │ Knative Eventing │  │
-│  │                  │  │                  │  │
-│  │  • Request-driven│  │  • Event-driven  │  │
-│  │  • Auto-scaling  │  │  • Pub/Sub       │  │
-│  │  • Scale to zero │  │  • Sources       │  │
-│  │  • Revisions     │  │  • Brokers       │  │
-│  │  • Traffic split │  │  • Triggers      │  │
-│  └──────────────────┘  └──────────────────┘  │
-│                                              │
-│  ┌──────────────────────────────────────────┐ │
-│  │        Kubernetes Cluster                │ │
-│  │  + Networking (Istio/Kourier/Contour)    │ │
-│  └──────────────────────────────────────────┘ │
-└──────────────────────────────────────────────┘
-```
+![knative_architecture](svg/courses/devops/advanced-kubernetes/15_serverless_knative/knative_architecture.svg)
 
 ---
 
@@ -133,24 +93,7 @@ kubectl apply -f hello-service.yaml
 
 ## `Knative` Concepts
 
-```diagram
-┌──────── Knative Service ────────────────────┐
-│                                             │
-│  ┌─── Configuration ────────────────────┐   │
-│  │                                      │   │
-│  │  ┌── Revision 1 ──┐  ┌── Rev 2 ──┐  │   │
-│  │  │ image: v1      │  │ image: v2  │  │   │
-│  │  │ env: ...       │  │ env: ...   │  │   │
-│  │  └────────────────┘  └────────────┘  │   │
-│  └──────────────────────────────────────┘   │
-│                                             │
-│  ┌─── Route ────────────────────────────┐   │
-│  │  Traffic:                            │   │
-│  │    90% → Revision 1                  │   │
-│  │    10% → Revision 2                  │   │
-│  └──────────────────────────────────────┘   │
-└─────────────────────────────────────────────┘
-```
+![knative_concepts](svg/courses/devops/advanced-kubernetes/15_serverless_knative/knative_concepts.svg)
 
 - **Configuration**: Desired state of the workload
 - **Revision**: Immutable snapshot (like a git commit)
@@ -160,27 +103,7 @@ kubectl apply -f hello-service.yaml
 
 ## Scale to Zero
 
-```diagram
-Request arrives
-      │
-      ▼
-┌──────────────┐
-│  Activator   │  (Knative component, always running)
-│  buffers     │
-│  request     │
-└──────┬───────┘
-       │
-       ▼
-  Pod exists?
-  ├─ YES → Forward request
-  └─ NO  → Create pod
-           Wait for ready
-           Forward buffered request
-
-No requests for scale-to-zero-grace-period (default: 30s)
-  → Scale to 0 pods
-  → No compute costs!
-```
+![scale_to_zero](svg/courses/devops/advanced-kubernetes/15_serverless_knative/scale_to_zero.svg)
 
 ---
 
@@ -392,23 +315,7 @@ spec:
 
 ## Event-Driven Architecture
 
-```diagram
-┌──────────┐    ┌────────────────────────────────────┐
-│ API      │───▶│           Broker                   │
-│ Gateway  │    │  (receives CloudEvents)            │
-└──────────┘    └─────┬──────────┬──────────┬────────┘
-                      │          │          │
-              ┌───────▼───┐ ┌───▼────┐ ┌───▼────────┐
-              │ Trigger:  │ │Trigger:│ │ Trigger:   │
-              │ order.*   │ │payment.│ │ *.created  │
-              └─────┬─────┘ └───┬────┘ └─────┬──────┘
-                    │           │             │
-              ┌─────▼─────┐ ┌──▼─────┐ ┌─────▼──────┐
-              │ Order     │ │Payment │ │ Analytics  │
-              │ Service   │ │Service │ │ Service    │
-              │ (scale 0) │ │(scale 0│ │ (scale 0)  │
-              └───────────┘ └────────┘ └────────────┘
-```
+![event_driven_architecture](svg/courses/devops/advanced-kubernetes/15_serverless_knative/event_driven_architecture.svg)
 
 All services scale to zero when no events are flowing.
 
@@ -673,25 +580,6 @@ Key takeaways:
 
 ## Course Wrap-Up
 
-```diagram
-Day 1: Deploying Resilient Apps & Extending Kubernetes
-  ✓ ReplicaSets, StatefulSets, Resources, Probes
-  ✓ HPA, Cluster Autoscaler, KEDA
-  ✓ Schedulers, Controllers, Operators
-  ✓ Init Containers, CRDs
-
-Day 2: Cluster Provisioning, Observability & Service Mesh
-  ✓ kubeadm, Cluster API
-  ✓ Prometheus, OpenTelemetry
-  ✓ Istio, NetworkPolicies
-  ✓ DaemonSets, Jobs, CronJobs
-  ✓ Volumes, ConfigMaps, Secrets
-
-Day 3: Advanced Admin, RBAC & Serverless
-  ✓ Declarative config, Kustomize, Helm
-  ✓ Best practices, deployment patterns
-  ✓ RBAC deep dive
-  ✓ Knative Serving & Eventing
-```
+![course_wrap_up](svg/courses/devops/advanced-kubernetes/15_serverless_knative/course_wrap_up.svg)
 
 > Thank you!

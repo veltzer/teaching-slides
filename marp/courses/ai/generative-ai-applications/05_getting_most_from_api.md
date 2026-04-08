@@ -4,47 +4,13 @@
 
 ## Day 2: APIs of Generative Models
 
-```diagram
-Today's Roadmap:
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
- ┌──────────────────────────────────────┐
- │ 1. API fundamentals and best         │
- │    practices                         │
- │ 2. Prompt engineering techniques     │
- │ 3. Few-shot and zero-shot learning   │
- │ 4. Chain-of-thought reasoning        │
- │ 5. Fine-tuning for custom tasks      │
- └──────────────────────────────────────┘
-```
+![day_2_apis_of_generative_models](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/day_2_apis_of_generative_models.svg)
 
 ---
 
 ## The OpenAI API — Architecture
 
-```diagram
-Your Application
-      │
-      │ HTTPS (REST API)
-      ▼
-┌─────────────────┐
-│  API Gateway     │
-│  (rate limiting, │
-│   auth, routing) │
-└────────┬────────┘
-         │
-┌────────┴────────┐
-│  Load Balancer   │
-└────────┬────────┘
-         │
-   ┌─────┴─────┐
-   ▼           ▼
-┌──────┐  ┌──────┐
-│GPU   │  │GPU   │
-│Cluster│  │Cluster│
-│(model│  │(model│
-│ srvr)│  │ srvr)│
-└──────┘  └──────┘
-```
+![the_openai_api_architecture](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/the_openai_api_architecture.svg)
 
 ---
 
@@ -497,33 +463,7 @@ def safe_completion(messages, model="gpt-4o"):
 
 ## Cost Optimization Strategies
 
-```diagram
-┌───────────────────────────────────────────────────────┐
-│           COST OPTIMIZATION PLAYBOOK                   │
-├───────────────────────────────────────────────────────┤
-│                                                        │
-│ 1. MODEL SELECTION                                     │
-│    Use gpt-4o-mini for simple tasks (20× cheaper)     │
-│    Reserve gpt-4o for complex reasoning                │
-│                                                        │
-│ 2. PROMPT OPTIMIZATION                                 │
-│    Shorter prompts = fewer input tokens                │
-│    Cache system prompts when possible                  │
-│                                                        │
-│ 3. MAX_TOKENS                                          │
-│    Set appropriate limits (don't default to 4096)      │
-│                                                        │
-│ 4. CACHING                                             │
-│    Cache identical requests (deterministic temp=0)     │
-│                                                        │
-│ 5. BATCHING                                            │
-│    Use batch API for non-urgent requests (50% off)     │
-│                                                        │
-│ 6. PROMPT CACHING                                      │
-│    Reuse system prompts across requests (50% off)      │
-│                                                        │
-└───────────────────────────────────────────────────────┘
-```
+![cost_optimization_strategies](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/cost_optimization_strategies.svg)
 
 ---
 
@@ -846,34 +786,4 @@ print(messages.data[0].content[0].text.value)
 
 ## API Best Practices Summary
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│          API BEST PRACTICES CHECKLIST                 │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  RELIABILITY                                          │
-│  ☐ Implement exponential backoff for retries         │
-│  ☐ Set appropriate timeouts                          │
-│  ☐ Handle all error types gracefully                 │
-│  ☐ Use idempotency keys for critical operations      │
-│                                                       │
-│  COST                                                 │
-│  ☐ Choose the right model for each task              │
-│  ☐ Set max_tokens to reasonable limits               │
-│  ☐ Cache deterministic responses                     │
-│  ☐ Use batch API for non-urgent processing           │
-│  ☐ Monitor usage with tracking middleware            │
-│                                                       │
-│  SECURITY                                             │
-│  ☐ Never expose API keys in client code              │
-│  ☐ Validate and sanitize all user inputs             │
-│  ☐ Use moderation API for user-facing apps           │
-│  ☐ Implement rate limiting per user                  │
-│                                                       │
-│  QUALITY                                              │
-│  ☐ Use structured outputs for data extraction        │
-│  ☐ Validate model outputs before using               │
-│  ☐ Log inputs/outputs for debugging                  │
-│  ☐ A/B test prompt changes                           │
-└──────────────────────────────────────────────────────┘
-```
+![api_best_practices_summary](svg/courses/ai/generative-ai-applications/05_getting_most_from_api/api_best_practices_summary.svg)

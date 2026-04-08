@@ -4,25 +4,7 @@
 
 ## The Problem: Full Fine-Tuning is Expensive
 
-```diagram
-Full fine-tuning of a 70B parameter model:
-
-Memory needed:
-  Model weights (FP16):    140 GB
-  Gradients (FP16):        140 GB
-  Optimizer states (FP32): 280 GB
-  Activations:              50+ GB
-  ─────────────────────────────────
-  Total:                   ~610 GB ← Need 8× A100 80GB!
-
-Cost:
-  Hardware: 8× A100 80GB (~$25/hour on cloud)
-  Time: 1-3 days
-  Total: $600 - $1,800 per training run
-
-AND you get a full copy of the model (140 GB to store)
-for each fine-tuned variant.
-```
+![the_problem_full_fine_tuning_is_expensive](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/the_problem_full_fine_tuning_is_expensive.svg)
 
 **PEFT** solves this by training only a tiny fraction of parameters.
 
@@ -30,25 +12,7 @@ for each fine-tuned variant.
 
 ## PEFT Overview
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│     PARAMETER EFFICIENT FINE TUNING (PEFT)           │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  Method          Trainable    Memory    Quality       │
-│                  Params       Savings                 │
-│  ─────────────────────────────────────────────       │
-│  Full FT         100%         1×        ★★★★★       │
-│  LoRA            0.1-1%       3-5×      ★★★★☆       │
-│  QLoRA           0.1-1%       6-10×     ★★★★☆       │
-│  Prompt Tuning   0.01%        10×       ★★★☆☆       │
-│  Prefix Tuning   0.1%         5×        ★★★½☆       │
-│  Adapters        1-5%         2-3×      ★★★★☆       │
-│  IA³             0.01%        10×       ★★★☆☆       │
-│                                                       │
-│  Most popular: LoRA and QLoRA                        │
-└──────────────────────────────────────────────────────┘
-```
+![peft_overview](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/peft_overview.svg)
 
 ---
 
@@ -74,49 +38,13 @@ LoRA:
   Reduction: 128× fewer trainable parameters!
 ```
 
-```diagram
-Original Weight Matrix W (frozen):
-┌──────────────────────┐
-│                      │
-│    d × d matrix      │ ← Frozen (no gradients)
-│    (16M params)      │
-│                      │
-└──────────────────────┘
-
-LoRA Decomposition:
-┌────┐   ┌──────────────────────┐
-│    │   │                      │
-│ B  │ × │         A            │  = ΔW approximation
-│d×r │   │        r×d           │    (131K params)
-│    │   │                      │
-└────┘   └──────────────────────┘
-```
+![lora_low_rank_adaptation](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_low_rank_adaptation.svg)
 
 ---
 
 ## LoRA — How It Works During Forward Pass
 
-```diagram
-Input x
-   │
-   ├──────────────────┐
-   │                  │
-   ▼                  ▼
-┌──────────┐    ┌──────────┐
-│ Original │    │  LoRA    │
-│  Weight  │    │  Path    │
-│ W (frozen)│    │          │
-│          │    │  x → A   │ (down-project: d → r)
-│  W·x     │    │    ↓     │
-│          │    │    B     │ (up-project: r → d)
-│          │    │  = B·A·x │
-└────┬─────┘    └────┬─────┘
-     │               │
-     │      + (add)  │
-     └───────┬───────┘
-             │
-         Output: W·x + B·A·x = (W + BA)·x
-```
+![lora_how_it_works_during_forward_pass](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_how_it_works_during_forward_pass.svg)
 
 At inference, you can merge: W_new = W + B·A (no extra latency!)
 
@@ -161,32 +89,7 @@ model.print_trainable_parameters()
 
 ## LoRA Rank Selection
 
-```diagram
-                  Quality
-                    │
-                    │                ╱──────── Full FT
-                    │           ╱───╱
-                    │       ╱──╱
-                    │    ╱─╱
-                    │  ╱╱    ← Diminishing returns
-                    │╱╱
-                    │╱
-                    └──────────────────── Rank (r)
-                    0  4  8  16  32  64  128  256
-
-Rank Selection Guidelines:
-  r=4:   Simple tasks (classification, sentiment)
-  r=8:   Standard tasks (Q&A, summarization)
-  r=16:  Complex tasks (code generation, reasoning)
-  r=32:  When you need near-full-FT quality
-  r=64+: Usually not worth it (use full FT instead)
-
-Memory impact of rank:
-  r=8:   ~40MB additional parameters (7B model)
-  r=16:  ~80MB
-  r=32:  ~160MB
-  r=64:  ~320MB
-```
+![lora_rank_selection](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_rank_selection.svg)
 
 ---
 
@@ -271,27 +174,7 @@ merged_model.save_pretrained("./merged-model")
 
 ## Multiple LoRA Adapters
 
-```diagram
-One base model, many specialized adapters:
-
-┌──────────────────────────────────────┐
-│         BASE MODEL (8B)              │
-│         (loaded once in memory)      │
-└──────────┬──────┬──────┬────────────┘
-           │      │      │
-     ┌─────┴──┐ ┌─┴────┐ ┌┴─────────┐
-     │ LoRA   │ │LoRA  │ │  LoRA    │
-     │Medical │ │Legal │ │  Code    │
-     │ (80MB) │ │(80MB)│ │  (80MB)  │
-     └────────┘ └──────┘ └──────────┘
-
-Runtime switching:
-  model.load_adapter("medical-adapter")
-  response_1 = model.generate(medical_query)
-
-  model.load_adapter("legal-adapter")
-  response_2 = model.generate(legal_query)
-```
+![multiple_lora_adapters](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/multiple_lora_adapters.svg)
 
 ---
 
@@ -365,30 +248,7 @@ QLoRA (4-bit base):
 
 ## QLoRA — Key Innovations
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│               QLoRA INNOVATIONS                       │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  1. NF4 QUANTIZATION (NormalFloat4)                  │
-│     • Quantization levels match normal distribution   │
-│     • Better than uniform INT4 for neural net weights│
-│     • Information-theoretically optimal for N(0,σ)   │
-│                                                       │
-│  2. DOUBLE QUANTIZATION                               │
-│     • Quantize the quantization constants too         │
-│     • Saves ~0.4 bits per parameter                  │
-│     • 3 GB savings for a 65B model                   │
-│                                                       │
-│  3. PAGED OPTIMIZERS                                  │
-│     • Use CPU RAM when GPU memory is full             │
-│     • Automatic page-in/page-out                     │
-│     • Handles memory spikes during training          │
-│                                                       │
-│  Result: 70B model fine-tuning on a single GPU       │
-│  with NO quality loss compared to full FP16 LoRA     │
-└──────────────────────────────────────────────────────┘
-```
+![qlora_key_innovations](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/qlora_key_innovations.svg)
 
 ---
 
@@ -396,26 +256,7 @@ QLoRA (4-bit base):
 
 Instead of modifying model weights, learn **virtual tokens** prepended to the input:
 
-```diagram
-Standard prompting:
-  Input: [system prompt tokens] + [user tokens]
-  All tokens come from the vocabulary
-
-Prompt Tuning:
-  Input: [LEARNED VIRTUAL TOKENS] + [user tokens]
-  Virtual tokens are continuous vectors, not from vocab
-  Only these vectors are trained (model frozen entirely)
-
-┌──────────────────────────────────────────────────┐
-│                                                   │
-│  [v1] [v2] [v3] ... [v20]  "Classify this: ..."  │
-│   ↑    ↑    ↑        ↑                            │
-│  Trainable soft       Frozen model processes      │
-│  prompt tokens        everything normally          │
-│  (20 × d_model)                                   │
-│                                                   │
-└──────────────────────────────────────────────────┘
-```
+![prompt_tuning](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/prompt_tuning.svg)
 
 ---
 
@@ -448,22 +289,7 @@ model.print_trainable_parameters()
 
 ## Prompt Tuning vs. LoRA vs. Full FT
 
-```diagram
-┌──────────────┬─────────┬──────────┬──────────────┐
-│              │ Prompt  │   LoRA   │   Full FT    │
-│              │ Tuning  │          │              │
-├──────────────┼─────────┼──────────┼──────────────┤
-│ Trainable %  │ 0.001%  │ 0.1-1%  │ 100%         │
-│ Storage      │ ~0.3 MB │ ~80 MB  │ ~16 GB       │
-│ Training GPU │ ~8 GB   │ ~16 GB  │ ~60+ GB      │
-│ Quality      │ ★★★☆   │ ★★★★   │ ★★★★★       │
-│ Best for     │ Simple  │ Most    │ Maximum      │
-│              │ classif.│ tasks   │ quality      │
-│ Inference    │ +latency│ No extra│ No extra     │
-│ overhead     │ (soft   │ (after  │              │
-│              │ tokens) │ merge)  │              │
-└──────────────┴─────────┴──────────┴──────────────┘
-```
+![prompt_tuning_vs_lora_vs_full_ft](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/prompt_tuning_vs_lora_vs_full_ft.svg)
 
 ---
 
@@ -609,33 +435,7 @@ trainer.train()
 
 ## Practical Tips for PEFT Training
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│            PEFT TRAINING BEST PRACTICES               │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  1. START WITH r=16, adjust based on results          │
-│     • Increase if underfitting                       │
-│     • Decrease if overfitting                        │
-│                                                       │
-│  2. TARGET ALL LINEAR LAYERS                          │
-│     • target_modules="all-linear" is a good default  │
-│     • More target modules = better quality           │
-│                                                       │
-│  3. LEARNING RATE                                     │
-│     • LoRA: 1e-4 to 3e-4 (higher than full FT)      │
-│     • Prompt Tuning: 3e-2 to 3e-1                   │
-│                                                       │
-│  4. USE GRADIENT CHECKPOINTING                        │
-│     • Trades compute for memory                      │
-│     • model.gradient_checkpointing_enable()          │
-│                                                       │
-│  5. MONITOR TRAINING LOSS                             │
-│     • Loss should decrease steadily                  │
-│     • Sudden increase = learning rate too high       │
-│     • Flat loss = learning rate too low              │
-└──────────────────────────────────────────────────────┘
-```
+![practical_tips_for_peft_training](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/practical_tips_for_peft_training.svg)
 
 ---
 

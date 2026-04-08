@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">LoRA: Low-Rank Adaptation</text>
+
+  <!-- Original Weight Matrix -->
+  <text x="200" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Original Weight Matrix W (frozen)</text>
+  <rect x="80" y="70" width="240" height="140" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="200" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#dc3545">d x d matrix</text>
+  <text x="200" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">(16M params)</text>
+  <text x="200" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Frozen -- no gradients</text>
+
+  <!-- LoRA Decomposition label -->
+  <text x="600" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">LoRA Decomposition</text>
+
+  <!-- Matrix B -->
+  <rect x="460" y="70" width="60" height="140" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="490" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">B</text>
+  <text x="490" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">d x r</text>
+
+  <!-- Multiplication sign -->
+  <text x="540" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#333">x</text>
+
+  <!-- Matrix A -->
+  <rect x="560" y="110" width="200" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="660" y="133" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">A</text>
+  <text x="660" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">r x d</text>
+
+  <!-- Equals sign -->
+  <text x="600" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#333">= delta-W approximation</text>
+
+  <!-- Parameter comparison -->
+  <rect x="100" y="250" width="250" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="225" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#dc3545">Full Fine-tuning</text>
+  <text x="225" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">16,000,000 params (d x d)</text>
+
+  <rect x="450" y="250" width="250" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="575" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#28a745">LoRA (rank r)</text>
+  <text x="575" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">131,000 params (d*r + r*d)</text>
+
+  <!-- Savings callout -->
+  <rect x="230" y="335" width="340" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="358" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#856404">~99% parameter reduction!</text>
+  <text x="400" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Same or similar quality with far fewer trainable params</text>
+</svg>

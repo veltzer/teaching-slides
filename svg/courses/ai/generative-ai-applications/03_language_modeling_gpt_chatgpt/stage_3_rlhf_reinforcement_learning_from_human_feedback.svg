@@ -1,0 +1,35 @@
+<svg viewBox="0 0 750 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="asd" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
+      <polygon points="0 0, 10 0, 5 7" fill="#4a90e2"/>
+    </marker>
+  </defs>
+  <text x="375" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Stage 3: RLHF</text>
+  <!-- Step 1 -->
+  <rect x="100" y="50" width="550" height="130" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
+  <text x="375" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Step 1: Collect Comparison Data</text>
+  <text x="375" y="100" text-anchor="middle" font-size="11" fill="#555">Prompt: "Write a haiku about coding"</text>
+  <rect x="130" y="110" width="240" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
+  <text x="250" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Response A (better)</text>
+  <text x="250" y="148" text-anchor="middle" font-size="10" fill="#555">"Fingers on the keys / Logic</text>
+  <text x="250" y="160" text-anchor="middle" font-size="10" fill="#555">flows like a river / Bug found..."</text>
+  <rect x="390" y="110" width="240" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
+  <text x="510" y="130" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Response B (worse)</text>
+  <text x="510" y="148" text-anchor="middle" font-size="10" fill="#555">"Code code code today / I</text>
+  <text x="510" y="160" text-anchor="middle" font-size="10" fill="#555">like to write the code..."</text>
+  <line x1="375" y1="180" x2="375" y2="210" stroke="#4a90e2" stroke-width="2" marker-end="url(#asd)"/>
+  <!-- Step 2 -->
+  <rect x="150" y="210" width="450" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="375" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">Step 2: Train Reward Model</text>
+  <text x="375" y="258" text-anchor="middle" font-size="11" fill="#555">reward_model(prompt, response) -> scalar score</text>
+  <line x1="375" y1="270" x2="375" y2="300" stroke="#4a90e2" stroke-width="2" marker-end="url(#asd)"/>
+  <!-- Step 3 -->
+  <rect x="150" y="300" width="450" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="375" y="325" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Step 3: Optimize with PPO</text>
+  <text x="375" y="348" text-anchor="middle" font-size="11" fill="#555">Maximize reward while staying close to SFT model</text>
+  <line x1="375" y1="360" x2="375" y2="385" stroke="#4a90e2" stroke-width="2" marker-end="url(#asd)"/>
+  <!-- Result -->
+  <text x="375" y="408" text-anchor="middle" font-size="13" fill="#333">Human ranks: A &gt; B</text>
+  <rect x="200" y="415" width="350" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
+  <text x="375" y="435" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Result: Aligned, safe, helpful model</text>
+</svg>

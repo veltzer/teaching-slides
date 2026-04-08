@@ -297,23 +297,7 @@ partition_stats.describe().show()
 ---
 ## Data Skew Solutions
 
-```diagram
-Solution 1: Salting (for joins)
-┌────────────────────────────────────────────┐
-│  Original key: "hot_user_123"               │
-│  Records: 10,000,000                        │
-│                                            │
-│  Salted keys (salt_factor = 10):            │
-│  "hot_user_123_0" -> 1,000,000 records      │
-│  "hot_user_123_1" -> 1,000,000 records      │
-│  "hot_user_123_2" -> 1,000,000 records      │
-│  ...                                        │
-│  "hot_user_123_9" -> 1,000,000 records      │
-│                                            │
-│  Small table must be exploded with          │
-│  all salt values (0-9) to match.            │
-└────────────────────────────────────────────┘
-```
+![data_skew_solutions](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/data_skew_solutions.svg)
 
 ---
 ## Full Program: Salted Join for Skewed Data
@@ -539,25 +523,7 @@ base_df.unpersist()
 ---
 ## When to Cache and When Not To
 
-```diagram
-CACHE when:
-┌──────────────────────────────────────────┐
-│  * DataFrame used in 2+ actions           │
-│  * Computation is expensive (joins, aggs) │
-│  * Data fits in memory (or mostly)        │
-│  * Iterative algorithms (ML training)     │
-│  * Interactive exploration (notebooks)    │
-└──────────────────────────────────────────┘
-
-DO NOT CACHE when:
-┌──────────────────────────────────────────┐
-│  * DataFrame used only once               │
-│  * Data is too large for memory           │
-│  * Source read is fast (e.g., small file) │
-│  * Memory is scarce for execution         │
-│  * Data changes between uses              │
-└──────────────────────────────────────────┘
-```
+![when_to_cache_and_when_not_to](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/when_to_cache_and_when_not_to.svg)
 
 ---
 ## Storage Level Selection Guide
@@ -678,45 +644,7 @@ print(f"\nTotal pipeline time: {total_time:.2f}s")
 ---
 ## Performance Tuning Checklist
 
-```diagram
-┌──────────────────────────────────────────────┐
-│       Performance Tuning Checklist            │
-├──────────────────────────────────────────────┤
-│                                              │
-│  Before Running:                             │
-│  [ ] Set appropriate executor memory          │
-│  [ ] Set executor cores (2-5 per executor)    │
-│  [ ] Enable AQE                              │
-│  [ ] Set shuffle partitions                   │
-│  [ ] Enable Kryo serialization                │
-│                                              │
-│  Data Reading:                               │
-│  [ ] Use columnar formats (Parquet)           │
-│  [ ] Define schema explicitly                 │
-│  [ ] Use partition pruning                    │
-│  [ ] Push predicates to source                │
-│                                              │
-│  Transformations:                             │
-│  [ ] Filter early, select early               │
-│  [ ] Avoid UDFs (use built-in functions)      │
-│  [ ] Broadcast small tables in joins          │
-│  [ ] Handle data skew                         │
-│  [ ] Cache reused DataFrames                  │
-│                                              │
-│  Writing:                                    │
-│  [ ] Coalesce before writing                  │
-│  [ ] Partition output by query pattern        │
-│  [ ] Use dynamic partition overwrite          │
-│  [ ] Choose appropriate compression           │
-│                                              │
-│  Monitoring:                                 │
-│  [ ] Check Spark UI for skew                  │
-│  [ ] Check GC time per executor               │
-│  [ ] Check shuffle spill metrics              │
-│  [ ] Check task duration distribution         │
-│                                              │
-└──────────────────────────────────────────────┘
-```
+![performance_tuning_checklist](svg/courses/big_data/advanced-spark-with-python/07_performance_tuning/performance_tuning_checklist.svg)
 
 ---
 ## Common Performance Anti-Patterns

@@ -90,16 +90,7 @@ if (current_privilege_level > required_privilege) {
 
 ## Stored in CS register (Code Segment):
 
-```diagram
-CS Register: [Selector:16 bits][Hidden Descriptor]
-              ├─ Index (13 bits)
-              ├─ Table Indicator (1 bit)
-              └─ RPL (2 bits) = Current Privilege Level
-
-CPL Values:
-- 0 = Kernel mode (highest privilege)
-- 3 = User mode (lowest privilege)
-```
+![stored_in_cs_register_code_segment](svg/courses/operating_systems/linux-systems-programming/02_os_theory/stored_in_cs_register_code_segment.svg)
 
 ---
 
@@ -131,15 +122,7 @@ CPL Values:
 
 ## 4-Level Paging (x86_64):
 
-```diagram
-Virtual Address (48 bits used of 64):
-┌────────┬────────┬────────┬────────┬────────┬────────┐
-│  PML4  │  PDPT  │   PD   │   PT   │ Offset │ Unused │
-│ 9 bits │ 9 bits │ 9 bits │ 9 bits │12 bits │16 bits │
-└────────┴────────┴────────┴────────┴────────┴────────┘
-
-CR3 → PML4 → PDPT → PD → PT → Physical Page
-```
+![4_level_paging_x8664](svg/courses/operating_systems/linux-systems-programming/02_os_theory/4_level_paging_x8664.svg)
 
 ---
 
@@ -147,23 +130,7 @@ CR3 → PML4 → PDPT → PD → PT → Physical Page
 
 ## Protection Bits:
 
-```diagram
-64-bit PTE Format:
-┌─┬─┬─┬─┬─┬─┬─┬─┬─┬──────────────────────────┬─────────┐
-│N│G│ │D│A│C│W│U│R│    Physical Page Number  │  Flags  │
-│X│ │ │ │ │D│T│/│/│         (40 bits)        │(12 bits)│
-└─┴─┴─┴─┴─┴─┴─┴─┴─┴──────────────────────────┴─────────┘
-
-P (Present):     Page in memory
-R/W (Read/Write): Write permission
-U/S (User/Super): User accessible
-PWT (Write-Through): Cache policy
-PCD (Cache Disable): No caching
-A (Accessed):    Page was read
-D (Dirty):       Page was written
-G (Global):      Not flushed on context switch
-NX (No Execute): Prevent execution
-```
+![protection_bits](svg/courses/operating_systems/linux-systems-programming/02_os_theory/protection_bits.svg)
 
 ---
 
@@ -358,20 +325,7 @@ bpftrace -e 'syscall:sys_enter_* { @[probe] = count(); }'
 
 ## Hardware/Software Interrupts:
 
-```diagram
-IDT Entry Structure:
-┌──────────────┬──────────────┬──────┬──────┐
-│ Offset 31-16 │ Offset 63-32 │ Type │ DPL  │
-├──────────────┼──────────────┼──────┼──────┤
-│   Selector   │ Offset 15-0  │ IST  │ Resv │
-└──────────────┴──────────────┴──────┴──────┘
-
-Important Vectors:
-0x00-0x1F: CPU Exceptions
-0x20-0x2F: Hardware IRQs
-0x30-0xFF: Software Interrupts
-0x80:      Legacy System Call
-```
+![hardware_software_interrupts](svg/courses/operating_systems/linux-systems-programming/02_os_theory/hardware_software_interrupts.svg)
 
 ---
 
@@ -439,20 +393,7 @@ jmp rax         // Must land on ENDBR instruction
 
 ## Memory Layout:
 
-```diagram
-0xFFFFFFFFFFFFFFFF ┌─────────────────┐
-                   │  Kernel Space   │
-0xFFFF800000000000 ├─────────────────┤ <- Canonical hole
-                   │   (Not mapped)  │
-0x00007FFFFFFFFFFF ├─────────────────┤
-                   │   User Stack    │
-                   │       ↓         │
-                   │                 │
-                   │       ↑         │
-                   │   User Heap     │
-                   │   User Code     │
-0x0000000000000000 └─────────────────┘
-```
+![memory_layout](svg/courses/operating_systems/linux-systems-programming/02_os_theory/memory_layout.svg)
 
 ---
 

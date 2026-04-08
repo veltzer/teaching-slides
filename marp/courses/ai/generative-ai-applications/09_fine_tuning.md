@@ -6,17 +6,7 @@
 
 Adapting a pre-trained model to your specific task by continuing training on your own data:
 
-```diagram
-Pre-trained model       Your data           Fine-tuned model
-(general knowledge)     (domain-specific)   (specialized)
-
-┌──────────────┐       ┌──────────────┐    ┌──────────────┐
-│ GPT-4o-mini  │       │ 1000s of     │    │ Your custom  │
-│              │   +   │ examples     │ →  │ model        │
-│ General      │       │ (prompt →    │    │              │
-│ capabilities │       │  response)   │    │ Domain expert│
-└──────────────┘       └──────────────┘    └──────────────┘
-```
+![what_is_fine_tuning](svg/courses/ai/generative-ai-applications/09_fine_tuning/what_is_fine_tuning.svg)
 
 **When to fine-tune vs. when to use prompting:**
 - Prompting: Quick iteration, small tasks, flexible
@@ -26,30 +16,7 @@ Pre-trained model       Your data           Fine-tuned model
 
 ## Fine-Tuning vs. Prompt Engineering — Decision Tree
 
-```diagram
-Start here: Do you have a working prompt?
-  │
-  NO → Try prompt engineering first (Day 2 morning)
-  │
-  YES → Is the quality sufficient?
-        │
-        YES → Keep using prompts (cheaper, more flexible)
-        │
-        NO → Can you improve with better examples?
-             │
-             YES → Use few-shot learning
-             │
-             NO → Do you have 50+ labeled examples?
-                  │
-                  NO → Collect more data first
-                  │
-                  YES → FINE-TUNE
-                        │
-                        How many examples?
-                        50-500:   OpenAI fine-tuning
-                        500-10K:  Consider open-source + LoRA
-                        10K+:     Full fine-tuning viable
-```
+![fine_tuning_vs_prompt_engineering_decision_tree](svg/courses/ai/generative-ai-applications/09_fine_tuning/fine_tuning_vs_prompt_engineering_decision_tree.svg)
 
 ---
 
@@ -116,30 +83,7 @@ with open("training_data.jsonl", "w") as f:
 
 ## Data Quality Checklist
 
-```diagram
-┌──────────────────────────────────────────────────────┐
-│              DATA QUALITY CHECKLIST                    │
-├──────────────────────────────────────────────────────┤
-│                                                       │
-│  ☐ Minimum 50 examples (recommend 200+)              │
-│  ☐ Consistent formatting across all examples          │
-│  ☐ Balanced distribution across categories            │
-│  ☐ No contradictory labels                            │
-│  ☐ Examples represent real-world distribution          │
-│  ☐ Include edge cases and difficult examples          │
-│  ☐ System prompt is identical across examples         │
-│  ☐ Responses match your desired style/length          │
-│  ☐ No PII or sensitive data (unless intended)         │
-│  ☐ Validated by domain expert                         │
-│  ☐ Set aside 20% for validation                       │
-│                                                       │
-│  Common mistakes:                                     │
-│  ✗ All examples from one category                     │
-│  ✗ Copy-pasted template responses                     │
-│  ✗ Inconsistent formatting (JSON vs. text)            │
-│  ✗ Too-short or too-long responses                    │
-└──────────────────────────────────────────────────────┘
-```
+![data_quality_checklist](svg/courses/ai/generative-ai-applications/09_fine_tuning/data_quality_checklist.svg)
 
 ---
 
@@ -315,23 +259,7 @@ evaluate_model("ft:gpt-4o-mini:...:abc123", test_data)  # Fine-tuned
 
 ## Fine-Tuning for Different Tasks
 
-```diagram
-┌──────────────────┬────────────────────┬────────────┐
-│ Task             │ Training Examples   │ Typical    │
-│                  │ Needed              │ Improvement│
-├──────────────────┼────────────────────┼────────────┤
-│ Classification   │ 50-200 per class   │ +15-30%    │
-│ Extraction       │ 100-500            │ +20-40%    │
-│ Summarization    │ 200-1000           │ +10-20%    │
-│ Style transfer   │ 100-500            │ +25-40%    │
-│ Code generation  │ 500-2000           │ +10-25%    │
-│ Translation      │ 1000+              │ +5-15%     │
-│ Custom format    │ 50-200             │ +30-50%    │
-└──────────────────┴────────────────────┴────────────┘
-
-Note: Improvements measured vs. few-shot prompting
-on the same base model.
-```
+![fine_tuning_for_different_tasks](svg/courses/ai/generative-ai-applications/09_fine_tuning/fine_tuning_for_different_tasks.svg)
 
 ---
 

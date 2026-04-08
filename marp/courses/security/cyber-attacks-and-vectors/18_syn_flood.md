@@ -12,25 +12,7 @@
 ---
 ## TCP Three-Way Handshake Review
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          Normal TCP Three-Way Handshake                   │
-│                                                          │
-│  Client                            Server                │
-│    │                                  │                   │
-│    │  1. SYN (seq=100)               │                   │
-│    │─────────────────────────────────>│                   │
-│    │                                  │  Allocates TCB    │
-│    │  2. SYN-ACK (seq=300, ack=101)  │  (Transmission    │
-│    │<─────────────────────────────────│   Control Block)  │
-│    │                                  │                   │
-│    │  3. ACK (seq=101, ack=301)      │                   │
-│    │─────────────────────────────────>│                   │
-│    │                                  │  Connection       │
-│    │  === Connection Established ===  │  ESTABLISHED      │
-│    │                                  │                   │
-└──────────────────────────────────────────────────────────┘
-```
+![tcp_three_way_handshake_review](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/tcp_three_way_handshake_review.svg)
 
 **Key points:**
 - Step 1: Client sends SYN with initial sequence number
@@ -377,31 +359,7 @@ for i in range(1000):
 ---
 ## SYN Proxy (Hardware Firewalls)
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│          SYN Proxy Operation                              │
-│                                                          │
-│  Client          Firewall/Proxy          Server          │
-│    │                  │                    │              │
-│    │  SYN              │                    │              │
-│    │─────────────────>│                    │              │
-│    │                  │  (Firewall handles │              │
-│    │  SYN-ACK         │   handshake first) │              │
-│    │<─────────────────│                    │              │
-│    │                  │                    │              │
-│    │  ACK              │                    │              │
-│    │─────────────────>│                    │              │
-│    │                  │  Client is legit!  │              │
-│    │                  │  SYN               │              │
-│    │                  │───────────────────>│              │
-│    │                  │  SYN-ACK           │              │
-│    │                  │<───────────────────│              │
-│    │                  │  ACK               │              │
-│    │                  │───────────────────>│              │
-│    │                  │                    │              │
-│    │  === Proxied Connection Established === │             │
-└──────────────────────────────────────────────────────────┘
-```
+![syn_proxy_hardware_firewalls](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/syn_proxy_hardware_firewalls.svg)
 
 - Firewall completes the three-way handshake on behalf of the server
 - Only forwards the connection to the server if the client completes the handshake

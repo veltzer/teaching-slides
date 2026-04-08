@@ -1,0 +1,33 @@
+<svg viewBox="0 0 750 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+  <text x="375" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Database Interface Security</text>
+  <!-- 1 -->
+  <rect x="40" y="55" width="320" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="200" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">1. READ-ONLY ACCESS</text>
+  <text x="200" y="100" text-anchor="middle" font-size="11" fill="#555">Create a read-only database user</text>
+  <text x="200" y="118" text-anchor="middle" font-size="10" fill="#666">PRAGMA query_only = ON</text>
+  <!-- 2 -->
+  <rect x="390" y="55" width="320" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
+  <text x="550" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">2. QUERY ALLOWLIST</text>
+  <text x="550" y="100" text-anchor="middle" font-size="11" fill="#555">Only allow SELECT statements</text>
+  <text x="550" y="118" text-anchor="middle" font-size="10" fill="#666">Block system tables and metadata</text>
+  <!-- 3 -->
+  <rect x="40" y="155" width="320" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="200" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">3. ROW LIMITS</text>
+  <text x="200" y="200" text-anchor="middle" font-size="11" fill="#555">Always add LIMIT clauses</text>
+  <text x="200" y="218" text-anchor="middle" font-size="10" fill="#666">Prevent full table scans</text>
+  <!-- 4 -->
+  <rect x="390" y="155" width="320" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
+  <text x="550" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">4. TIMEOUT</text>
+  <text x="550" y="200" text-anchor="middle" font-size="11" fill="#555">Set query execution timeout</text>
+  <text x="550" y="218" text-anchor="middle" font-size="10" fill="#666">Prevent resource exhaustion</text>
+  <!-- 5 -->
+  <rect x="40" y="255" width="320" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="200" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">5. AUDIT LOGGING</text>
+  <text x="200" y="300" text-anchor="middle" font-size="11" fill="#555">Log all generated SQL</text>
+  <text x="200" y="318" text-anchor="middle" font-size="10" fill="#666">Monitor for suspicious patterns</text>
+  <!-- 6 -->
+  <rect x="390" y="255" width="320" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
+  <text x="550" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">6. SENSITIVE COLUMN FILTERING</text>
+  <text x="550" y="300" text-anchor="middle" font-size="11" fill="#555">Exclude PII columns from schema</text>
+  <text x="550" y="318" text-anchor="middle" font-size="10" fill="#666">Block queries to sensitive tables</text>
+</svg>

@@ -6,23 +6,7 @@
 
 `LLM`s can learn new tasks from examples provided in the prompt — no retraining needed:
 
-```diagram
-┌─────────────────────────────────────────────┐
-│          IN-CONTEXT LEARNING                 │
-├─────────────┬───────────────────────────────┤
-│ Zero-shot   │ No examples, just instruction │
-│             │ "Classify: positive/negative"  │
-├─────────────┼───────────────────────────────┤
-│ One-shot    │ Single example provided        │
-│             │ "Example: 'great!' → positive" │
-├─────────────┼───────────────────────────────┤
-│ Few-shot    │ Multiple examples (2-10)       │
-│             │ "Example 1: ... Example 2: ..." │
-├─────────────┼───────────────────────────────┤
-│ Many-shot   │ Many examples (10-100+)        │
-│             │ Uses large context windows      │
-└─────────────┴───────────────────────────────┘
-```
+![what_is_in_context_learning](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/what_is_in_context_learning.svg)
 
 ---
 
@@ -146,19 +130,7 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 
 ## Choosing Examples — Quality Matters
 
-```diagram
-GOOD examples:
-  ✓ Cover all categories roughly equally
-  ✓ Include edge cases and ambiguous inputs
-  ✓ Represent the actual distribution of your data
-  ✓ Are consistent in format
-
-BAD examples:
-  ✗ All from one category (biased)
-  ✗ Only obvious/easy cases (doesn't help with hard ones)
-  ✗ Contradictory labels
-  ✗ Inconsistent formatting between examples
-```
+![choosing_examples_quality_matters](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/choosing_examples_quality_matters.svg)
 
 ```python
 # Bad: All examples are positive
@@ -292,31 +264,7 @@ messages = [
 
 ## How Many Examples Do You Need?
 
-```diagram
-Performance vs. Number of Examples:
-
-Accuracy
-100% │                    ╱──────────────
-     │                ╱──╱
- 90% │            ╱──╱
-     │          ╱╱
- 80% │       ╱╱
-     │     ╱╱
- 70% │   ╱╱
-     │  ╱      ← Diminishing returns after ~5-8 examples
- 60% │╱
-     │
- 50% │
-     └────────────────────────────────────
-     0    2    4    6    8   10  15  20  examples
-
-Guidelines:
-  0 examples (zero-shot): Common/simple tasks
-  1-3 examples: Well-defined tasks with clear patterns
-  4-8 examples: Complex or ambiguous tasks
-  10+ examples: Domain-specific, unusual formats
-  50+ examples: Consider fine-tuning instead
-```
+![how_many_examples_do_you_need](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/how_many_examples_do_you_need.svg)
 
 ---
 

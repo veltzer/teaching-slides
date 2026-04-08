@@ -38,55 +38,13 @@
 
 ## DNS DoS Attack Flow
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│           DNS Query Flood Attack                         │
-│                                                          │
-│  ┌────────┐  ┌────────┐  ┌────────┐                    │
-│  │ Bot 1  │  │ Bot 2  │  │ Bot N  │  Botnet             │
-│  └───┬────┘  └───┬────┘  └───┬────┘                    │
-│      │           │           │                          │
-│      └─────────┬─┴───────────┘                          │
-│                │  Millions of DNS queries                │
-│                v                                        │
-│        ┌──────────────┐                                 │
-│        │  DNS Server   │  Connection table exhausted    │
-│        │  (Target)     │  CPU/Memory at 100%            │
-│        └──────────────┘                                 │
-│                │                                        │
-│                x  Cannot respond to legitimate queries  │
-│                                                          │
-│  ┌────────┐   x                                        │
-│  │Legit   │───x  "DNS resolution failed"               │
-│  │Users   │                                             │
-│  └────────┘                                             │
-└──────────────────────────────────────────────────────────┘
-```
+![dns_dos_attack_flow](svg/courses/security/cyber-attacks-and-vectors/09_dns_denial_of_service/dns_dos_attack_flow.svg)
 
 ---
 
 ## Random Subdomain Attack (Water Torture)
 
-```diagram
-┌──────────────────────────────────────────────────────────┐
-│         Random Subdomain Attack                          │
-│                                                          │
-│  Attacker generates queries for:                        │
-│    abc123.example.com                                    │
-│    xyz789.example.com                                    │
-│    qwe456.example.com                                    │
-│    ... (millions of unique random subdomains)            │
-│                                                          │
-│  Why this is effective:                                  │
-│  1. Recursive resolver cannot find in cache (unique)     │
-│  2. Must query authoritative server for EACH one         │
-│  3. Authoritative server overwhelmed with NXDOMAIN       │
-│  4. Recursive resolver resources consumed                │
-│  5. Both resolver AND authoritative server are DoSed     │
-│                                                          │
-│  Hard to filter: each query looks legitimate!            │
-└──────────────────────────────────────────────────────────┘
-```
+![random_subdomain_attack_water_torture](svg/courses/security/cyber-attacks-and-vectors/09_dns_denial_of_service/random_subdomain_attack_water_torture.svg)
 
 ---
 
@@ -154,30 +112,7 @@ The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS 
 
 ## Anycast DNS Architecture
 
-```diagram
-┌────────────────────────────────────────────────────────────┐
-│              Anycast DNS Distribution                       │
-│                                                            │
-│  Same IP address announced from multiple locations:        │
-│                                                            │
-│  ┌─────────┐     ┌─────────┐     ┌─────────┐             │
-│  │ DNS Node│     │ DNS Node│     │ DNS Node│             │
-│  │ US-East │     │ EU-West │     │ Asia    │             │
-│  │ 1.2.3.4 │     │ 1.2.3.4 │     │ 1.2.3.4 │             │
-│  └────┬────┘     └────┬────┘     └────┬────┘             │
-│       │               │               │                   │
-│  ┌────┴────┐     ┌────┴────┐     ┌────┴────┐             │
-│  │  BGP    │     │  BGP    │     │  BGP    │             │
-│  │ routing │     │ routing │     │ routing │             │
-│  └─────────┘     └─────────┘     └─────────┘             │
-│                                                            │
-│  Benefits:                                                 │
-│  - DDoS traffic distributed across all nodes              │
-│  - Users routed to nearest node (low latency)             │
-│  - If one node fails, traffic routes to next nearest      │
-│  - Attack must overwhelm ALL nodes simultaneously         │
-└────────────────────────────────────────────────────────────┘
-```
+![anycast_dns_architecture](svg/courses/security/cyber-attacks-and-vectors/09_dns_denial_of_service/anycast_dns_architecture.svg)
 
 ---
 
