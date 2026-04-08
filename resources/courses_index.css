@@ -174,7 +174,7 @@ h1 {
   letter-spacing: 0.02em;
 }
 
-.stat-chapters { color: var(--green); font-weight: 600; }
+.stat-chapters { color: var(--text-secondary); font-weight: 600; }
 .stat-slides { color: var(--accent); font-weight: 600; }
 
 /* Filters */
@@ -348,11 +348,11 @@ li a:hover { color: var(--accent); }
   letter-spacing: 0.02em;
 }
 
-.level-beginner { background: var(--green-dim); color: var(--green); }
-.level-intermediate { background: var(--amber-dim); color: var(--amber); }
-.level-advanced { background: var(--red-dim); color: var(--red); }
+.level-beginner { background: var(--accent-dim); color: var(--accent); opacity: 0.7; }
+.level-intermediate { background: var(--accent-dim); color: var(--accent); opacity: 0.85; }
+.level-advanced { background: var(--accent-dim); color: var(--accent); }
 
-.chapters-badge { background: var(--green-dim); color: var(--green); }
+.chapters-badge { background: var(--accent-dim); color: var(--accent); opacity: 0.7; }
 .slides-badge { background: var(--accent-dim); color: var(--accent); }
 .duration { background: var(--bg-elevated); color: var(--text-secondary); border: 1px solid var(--border-subtle); }
 
@@ -361,10 +361,10 @@ li a:hover { color: var(--accent); }
   display: inline-flex;
   align-items: center;
   margin-left: 4px;
-  opacity: 0.5;
-  transition: opacity var(--transition), transform var(--transition);
+  color: var(--text-muted);
+  transition: color var(--transition), transform var(--transition);
 }
-.dl-icon:hover { opacity: 1; transform: scale(1.15); }
+.dl-icon:hover { color: var(--accent); transform: scale(1.15); }
 .dl-icon svg { width: 18px; height: 18px; }
 
 .no-results {
