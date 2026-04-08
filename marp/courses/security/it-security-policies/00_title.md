@@ -16,3 +16,7 @@ audience:
 # It Security Policies
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/security/it-security-policies/title.svg)

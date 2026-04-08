@@ -16,3 +16,7 @@ audience:
 # Modern Software Architecture
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/architecting/modern-software-architecture/title.svg)

@@ -1,5 +1,8 @@
 # Correct Development
 ---
+
+![title](svg/lectures/senior-level-development/title.svg)
+
 ## Script everything
 * This means even things you do once every year
 * The practice will make you better at it

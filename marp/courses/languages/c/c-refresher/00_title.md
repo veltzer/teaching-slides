@@ -13,3 +13,7 @@ audience:
 # C Refresher
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/languages/c/c-refresher/title.svg)

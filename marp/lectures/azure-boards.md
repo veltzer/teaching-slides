@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/azure-boards/title.svg)
+
 ## 1. Introduction to Azure Boards
 
 - Azure Boards is Microsoft's agile project management tool within Azure DevOps

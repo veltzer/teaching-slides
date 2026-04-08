@@ -14,3 +14,7 @@ audience:
 # Networking Basics
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/networking/networking-basics/title.svg)

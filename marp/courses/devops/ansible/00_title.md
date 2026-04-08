@@ -16,3 +16,7 @@ audience:
 # Ansible
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/devops/ansible/title.svg)

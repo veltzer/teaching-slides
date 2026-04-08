@@ -5,6 +5,8 @@
 
 ---
 
+![title](svg/lectures/virtio/title.svg)
+
 ## What is Virtio
 
 - Standard for virtual device interfaces

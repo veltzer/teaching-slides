@@ -3,6 +3,9 @@
 ## An Introduction with Examples
 
 ---
+
+![title](svg/lectures/writing-netfilter-modules/title.svg)
+
 ## Outline
 1. Introduction to Netfilter
 1. Netfilter Hook Points

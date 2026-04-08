@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="scala-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc322f"/>
+      <stop offset="100%" style="stop-color:#ff4136"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Scala staircase logo stylized -->
+  <g transform="translate(100,80)">
+    <!-- Step 1 -->
+    <rect x="0" y="200" width="120" height="30" rx="4" fill="url(#scala-red)"/>
+    <rect x="0" y="210" width="120" height="20" rx="4" fill="#dc322f" opacity="0.6"/>
+    <!-- Step 2 -->
+    <rect x="0" y="150" width="120" height="30" rx="4" fill="url(#scala-red)"/>
+    <rect x="0" y="160" width="120" height="20" rx="4" fill="#dc322f" opacity="0.6"/>
+    <!-- Step 3 -->
+    <rect x="0" y="100" width="120" height="30" rx="4" fill="url(#scala-red)"/>
+    <rect x="0" y="110" width="120" height="20" rx="4" fill="#dc322f" opacity="0.6"/>
+    <!-- Step 4 -->
+    <rect x="0" y="50" width="120" height="30" rx="4" fill="url(#scala-red)"/>
+    <rect x="0" y="60" width="120" height="20" rx="4" fill="#dc322f" opacity="0.6"/>
+  </g>
+  <!-- Code snippets -->
+  <g font-family="monospace" font-size="14">
+    <text x="300" y="100" fill="#e74c3c">val</text>
+    <text x="330" y="100" fill="#3498db"> greeting</text>
+    <text x="425" y="100" fill="white"> = </text>
+    <text x="445" y="100" fill="#2ecc71">"Hello, Scala!"</text>
+    <text x="300" y="140" fill="#e74c3c">def</text>
+    <text x="330" y="140" fill="#3498db"> add</text>
+    <text x="365" y="140" fill="white">(a: Int, b: Int): Int =</text>
+    <text x="320" y="165" fill="#f39c12">  a + b</text>
+    <text x="300" y="210" fill="#e74c3c">case class</text>
+    <text x="395" y="210" fill="#3498db"> Person</text>
+    <text x="460" y="210" fill="white">(name: String)</text>
+    <text x="300" y="260" fill="#9b59b6">List</text>
+    <text x="330" y="260" fill="white">(1, 2, 3)</text>
+    <text x="300" y="285" fill="white">  .map(_ * 2)</text>
+    <text x="300" y="310" fill="white">  .filter(_ > 2)</text>
+  </g>
+  <!-- JVM badge -->
+  <rect x="620" y="300" width="140" height="50" rx="25" fill="none" stroke="#f39c12" stroke-width="2"/>
+  <text x="690" y="330" text-anchor="middle" fill="#f39c12" font-family="Arial" font-size="16" font-weight="bold">JVM</text>
+  <!-- FP + OOP indicators -->
+  <circle cx="650" cy="120" r="40" fill="none" stroke="#9b59b6" stroke-width="2"/>
+  <text x="650" y="115" text-anchor="middle" fill="#9b59b6" font-family="Arial" font-size="11">FP</text>
+  <text x="650" y="132" text-anchor="middle" fill="#9b59b6" font-family="Arial" font-size="9">functional</text>
+  <circle cx="720" cy="120" r="40" fill="none" stroke="#3498db" stroke-width="2"/>
+  <text x="720" y="115" text-anchor="middle" fill="#3498db" font-family="Arial" font-size="11">OOP</text>
+  <text x="720" y="132" text-anchor="middle" fill="#3498db" font-family="Arial" font-size="9">objects</text>
+</svg>

@@ -14,3 +14,7 @@ audience:
 # Computer Architecture Fundamentals
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/hardware/computer-architecture-fundamentals/title.svg)

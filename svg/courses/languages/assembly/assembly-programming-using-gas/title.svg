@@ -1,0 +1,42 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  <!-- Assembly code lines -->
+  <text x="60" y="60" font-family="monospace" font-size="14" fill="#53d8fb">.section .text</text>
+  <text x="60" y="85" font-family="monospace" font-size="14" fill="#00b894">.globl _start</text>
+  <text x="60" y="115" font-family="monospace" font-size="14" fill="#ffd93d">_start:</text>
+  <text x="90" y="140" font-family="monospace" font-size="14" fill="#e94560">movl</text>
+  <text x="145" y="140" font-family="monospace" font-size="14" fill="white">$0x1, %eax</text>
+  <text x="90" y="165" font-family="monospace" font-size="14" fill="#e94560">movl</text>
+  <text x="145" y="165" font-family="monospace" font-size="14" fill="white">$0x0, %ebx</text>
+  <text x="90" y="190" font-family="monospace" font-size="14" fill="#e94560">int</text>
+  <text x="130" y="190" font-family="monospace" font-size="14" fill="white">$0x80</text>
+  <!-- Registers visualization -->
+  <rect x="450" y="50" width="280" height="200" rx="8" fill="#16213e" stroke="#53d8fb" stroke-width="2"/>
+  <text x="530" y="78" font-family="monospace" font-size="16" fill="#53d8fb" font-weight="bold">Registers</text>
+  <!-- Register rows -->
+  <text x="470" y="110" font-family="monospace" font-size="13" fill="#ffd93d">%eax</text>
+  <rect x="530" y="95" width="180" height="20" rx="3" fill="#0f3460"/>
+  <text x="540" y="110" font-family="monospace" font-size="12" fill="#e94560">0x00000001</text>
+  <text x="470" y="140" font-family="monospace" font-size="13" fill="#ffd93d">%ebx</text>
+  <rect x="530" y="125" width="180" height="20" rx="3" fill="#0f3460"/>
+  <text x="540" y="140" font-family="monospace" font-size="12" fill="#e94560">0x00000000</text>
+  <text x="470" y="170" font-family="monospace" font-size="13" fill="#ffd93d">%ecx</text>
+  <rect x="530" y="155" width="180" height="20" rx="3" fill="#0f3460"/>
+  <text x="540" y="170" font-family="monospace" font-size="12" fill="#e94560">0xFFFFFFFF</text>
+  <text x="470" y="200" font-family="monospace" font-size="13" fill="#ffd93d">%esp</text>
+  <rect x="530" y="185" width="180" height="20" rx="3" fill="#0f3460"/>
+  <text x="540" y="200" font-family="monospace" font-size="12" fill="#e94560">0xBFFF0000</text>
+  <text x="470" y="230" font-family="monospace" font-size="13" fill="#ffd93d">%eip</text>
+  <rect x="530" y="215" width="180" height="20" rx="3" fill="#0f3460"/>
+  <text x="540" y="230" font-family="monospace" font-size="12" fill="#e94560">0x08048054</text>
+  <!-- Stack visualization -->
+  <rect x="500" y="280" width="200" height="100" rx="5" fill="#16213e" stroke="#00b894" stroke-width="2"/>
+  <text x="555" y="305" font-family="monospace" font-size="14" fill="#00b894" font-weight="bold">Stack</text>
+  <line x1="520" y1="315" x2="680" y2="315" stroke="#0f3460" stroke-width="1"/>
+  <line x1="520" y1="340" x2="680" y2="340" stroke="#0f3460" stroke-width="1"/>
+  <line x1="520" y1="365" x2="680" y2="365" stroke="#0f3460" stroke-width="1"/>
+  <!-- GAS label -->
+  <text x="100" y="300" font-family="monospace" font-size="42" fill="#e94560" font-weight="bold" opacity="0.3">GAS</text>
+  <!-- Binary decoration -->
+  <text x="60" y="370" font-family="monospace" font-size="12" fill="#0f3460">01001000 01100101 01101100 01101100 01101111</text>
+</svg>

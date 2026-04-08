@@ -3,6 +3,8 @@
 
 ---
 
+![title](svg/lectures/scala-basics/title.svg)
+
 ## Introduction to Scala
 - Multi-paradigm programming language
 - Runs on JVM

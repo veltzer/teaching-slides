@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Ansible "A" logo circle -->
+  <circle cx="400" cy="180" r="95" fill="#1a1918"/>
+  <circle cx="400" cy="180" r="90" fill="#ee0000" opacity="0.9"/>
+  <!-- Stylized "A" -->
+  <polygon points="400,110 430,230 420,230 400,170 380,230 370,230" fill="#fff"/>
+  <line x1="385" y1="200" x2="425" y2="220" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <!-- Server nodes connected by arrows -->
+  <g opacity="0.6">
+    <!-- Left server -->
+    <rect x="100" y="140" width="50" height="70" rx="4" fill="#333" stroke="#ee0000" stroke-width="1.5"/>
+    <rect x="110" y="152" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <rect x="110" y="162" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <rect x="110" y="172" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <!-- Right server -->
+    <rect x="650" y="140" width="50" height="70" rx="4" fill="#333" stroke="#ee0000" stroke-width="1.5"/>
+    <rect x="660" y="152" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <rect x="660" y="162" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <rect x="660" y="172" width="30" height="4" rx="1" fill="#ee0000" opacity="0.7"/>
+    <!-- Connection arrows -->
+    <line x1="155" y1="175" x2="305" y2="175" stroke="#ee0000" stroke-width="2" stroke-dasharray="6,3"/>
+    <line x1="495" y1="175" x2="645" y2="175" stroke="#ee0000" stroke-width="2" stroke-dasharray="6,3"/>
+  </g>
+  <!-- Playbook / YAML representation -->
+  <g transform="translate(160,290)" opacity="0.5">
+    <rect x="0" y="0" width="120" height="60" rx="4" fill="#1e1e2e" stroke="#ee0000" stroke-width="1"/>
+    <text x="10" y="18" font-family="monospace" font-size="9" fill="#ee0000">---</text>
+    <text x="10" y="30" font-family="monospace" font-size="9" fill="#aaa">- hosts: all</text>
+    <text x="10" y="42" font-family="monospace" font-size="9" fill="#aaa">  tasks:</text>
+    <text x="10" y="54" font-family="monospace" font-size="9" fill="#666">    - name: ...</text>
+  </g>
+  <g transform="translate(520,290)" opacity="0.5">
+    <rect x="0" y="0" width="120" height="60" rx="4" fill="#1e1e2e" stroke="#ee0000" stroke-width="1"/>
+    <text x="10" y="18" font-family="monospace" font-size="9" fill="#ee0000">---</text>
+    <text x="10" y="30" font-family="monospace" font-size="9" fill="#aaa">- role: web</text>
+    <text x="10" y="42" font-family="monospace" font-size="9" fill="#aaa">  vars:</text>
+    <text x="10" y="54" font-family="monospace" font-size="9" fill="#666">    port: 80</text>
+  </g>
+  <!-- Decorative dots -->
+  <circle cx="80" cy="60" r="2" fill="#ee0000" opacity="0.3"/>
+  <circle cx="720" cy="70" r="3" fill="#ee0000" opacity="0.25"/>
+  <circle cx="400" cy="380" r="2" fill="#ee0000" opacity="0.3"/>
+  <!-- Bottom accent -->
+  <rect x="300" y="375" width="200" height="3" rx="1.5" fill="#ee0000" opacity="0.4"/>
+</svg>

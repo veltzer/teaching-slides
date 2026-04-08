@@ -15,3 +15,7 @@ duration_hours: 24
 # Developing Using Ai
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/ai/developing-using-ai/title.svg)

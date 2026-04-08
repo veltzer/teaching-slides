@@ -1,10 +1,10 @@
 # Data Formats
 
-![data_formats_title](svg/lectures/data_formats/title.svg)
-
 ---
 
 ## Why Data Formats Matter
+
+![data_formats_title](svg/lectures/data_formats/title.svg)
 
 - Every application reads and writes data
 - Choosing the right format affects performance, readability, and interoperability

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="devGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06b6d4"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- Infinity loop (DevOps symbol) -->
+  <g transform="translate(400,170)">
+    <path d="M -100 0 C -100 -55 -40 -55 0 0 C 40 55 100 55 100 0 C 100 -55 40 -55 0 0 C -40 55 -100 55 -100 0 Z" fill="none" stroke="url(#devGrad)" stroke-width="5" opacity="0.8"/>
+    <!-- Dev side icon (code brackets) -->
+    <text x="-60" y="8" font-family="monospace" font-size="28" fill="#06b6d4" text-anchor="middle" opacity="0.9">&lt;/&gt;</text>
+    <!-- Ops side icon (gear) -->
+    <g transform="translate(60,0)">
+      <circle cx="0" cy="0" r="14" fill="none" stroke="#8b5cf6" stroke-width="2.5" opacity="0.9"/>
+      <circle cx="0" cy="0" r="6" fill="#8b5cf6" opacity="0.7"/>
+      <rect x="-2.5" y="-20" width="5" height="8" rx="1.5" fill="#8b5cf6" opacity="0.8"/>
+      <rect x="-2.5" y="12" width="5" height="8" rx="1.5" fill="#8b5cf6" opacity="0.8"/>
+      <rect x="-20" y="-2.5" width="8" height="5" rx="1.5" fill="#8b5cf6" opacity="0.8"/>
+      <rect x="12" y="-2.5" width="8" height="5" rx="1.5" fill="#8b5cf6" opacity="0.8"/>
+    </g>
+  </g>
+  <!-- Pipeline stages at bottom -->
+  <g transform="translate(0,300)">
+    <line x1="100" y1="30" x2="700" y2="30" stroke="#374151" stroke-width="2"/>
+    <!-- Plan -->
+    <rect x="110" y="15" width="70" height="30" rx="5" fill="#06b6d4" opacity="0.3"/>
+    <text x="145" y="35" font-family="sans-serif" font-size="10" fill="#06b6d4" text-anchor="middle">Plan</text>
+    <!-- Code -->
+    <rect x="210" y="15" width="70" height="30" rx="5" fill="#06b6d4" opacity="0.35"/>
+    <text x="245" y="35" font-family="sans-serif" font-size="10" fill="#06b6d4" text-anchor="middle">Code</text>
+    <!-- Build -->
+    <rect x="310" y="15" width="70" height="30" rx="5" fill="#7c3aed" opacity="0.3"/>
+    <text x="345" y="35" font-family="sans-serif" font-size="10" fill="#8b5cf6" text-anchor="middle">Build</text>
+    <!-- Test -->
+    <rect x="410" y="15" width="70" height="30" rx="5" fill="#7c3aed" opacity="0.35"/>
+    <text x="445" y="35" font-family="sans-serif" font-size="10" fill="#8b5cf6" text-anchor="middle">Test</text>
+    <!-- Deploy -->
+    <rect x="510" y="15" width="70" height="30" rx="5" fill="#8b5cf6" opacity="0.3"/>
+    <text x="545" y="35" font-family="sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">Deploy</text>
+    <!-- Monitor -->
+    <rect x="610" y="15" width="70" height="30" rx="5" fill="#8b5cf6" opacity="0.35"/>
+    <text x="645" y="35" font-family="sans-serif" font-size="10" fill="#a78bfa" text-anchor="middle">Monitor</text>
+    <!-- Arrows -->
+    <polygon points="188,28 195,30 188,32" fill="#06b6d4" opacity="0.5"/>
+    <polygon points="288,28 295,30 288,32" fill="#06b6d4" opacity="0.5"/>
+    <polygon points="388,28 395,30 388,32" fill="#7c3aed" opacity="0.5"/>
+    <polygon points="488,28 495,30 488,32" fill="#8b5cf6" opacity="0.5"/>
+    <polygon points="588,28 595,30 588,32" fill="#8b5cf6" opacity="0.5"/>
+  </g>
+  <!-- Collaboration icons: people silhouettes -->
+  <g opacity="0.3">
+    <circle cx="150" cy="100" r="10" fill="#06b6d4"/>
+    <ellipse cx="150" cy="125" rx="14" ry="10" fill="#06b6d4"/>
+    <circle cx="650" cy="100" r="10" fill="#8b5cf6"/>
+    <ellipse cx="650" cy="125" rx="14" ry="10" fill="#8b5cf6"/>
+    <line x1="170" y1="110" x2="630" y2="110" stroke="#374151" stroke-width="1" stroke-dasharray="5,5"/>
+  </g>
+  <!-- Decorative dots -->
+  <circle cx="60" cy="50" r="2" fill="#06b6d4" opacity="0.3"/>
+  <circle cx="740" cy="55" r="3" fill="#8b5cf6" opacity="0.25"/>
+  <circle cx="80" cy="370" r="2" fill="#06b6d4" opacity="0.25"/>
+  <circle cx="720" cy="375" r="2" fill="#8b5cf6" opacity="0.3"/>
+  <!-- Bottom accent -->
+  <rect x="300" y="380" width="200" height="3" rx="1.5" fill="url(#devGrad)" opacity="0.4"/>
+</svg>

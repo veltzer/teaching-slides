@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  <!-- Rust gear symbol -->
+  <circle cx="400" cy="200" r="100" fill="none" stroke="#e94560" stroke-width="4" opacity="0.4"/>
+  <!-- Gear teeth -->
+  <rect x="388" y="92" width="24" height="18" rx="3" fill="#e94560" opacity="0.4"/>
+  <rect x="388" y="290" width="24" height="18" rx="3" fill="#e94560" opacity="0.4"/>
+  <rect x="292" y="188" width="18" height="24" rx="3" fill="#e94560" opacity="0.4"/>
+  <rect x="490" y="188" width="18" height="24" rx="3" fill="#e94560" opacity="0.4"/>
+  <!-- Inner R -->
+  <text x="365" y="220" font-family="serif" font-size="70" fill="#e94560" font-weight="bold" opacity="0.5">R</text>
+  <!-- Ownership concept: boxes with arrows -->
+  <rect x="60" y="60" width="140" height="100" rx="6" fill="#16213e" stroke="#53d8fb" stroke-width="1.5"/>
+  <text x="80" y="88" font-family="monospace" font-size="13" fill="#e94560">let</text>
+  <text x="108" y="88" font-family="monospace" font-size="13" fill="white">s =</text>
+  <text x="135" y="88" font-family="monospace" font-size="13" fill="#00b894">String</text>
+  <text x="80" y="110" font-family="monospace" font-size="13" fill="#e94560">let</text>
+  <text x="108" y="110" font-family="monospace" font-size="13" fill="white">t = s;</text>
+  <text x="80" y="140" font-family="monospace" font-size="10" fill="#53d8fb">// s is moved to t</text>
+  <!-- Borrowing -->
+  <rect x="600" y="60" width="150" height="100" rx="6" fill="#16213e" stroke="#00b894" stroke-width="1.5"/>
+  <text x="615" y="88" font-family="monospace" font-size="13" fill="#e94560">fn</text>
+  <text x="635" y="88" font-family="monospace" font-size="13" fill="#ffd93d">greet</text>
+  <text x="675" y="88" font-family="monospace" font-size="13" fill="white">(</text>
+  <text x="625" y="108" font-family="monospace" font-size="13" fill="white">s: </text>
+  <text x="645" y="108" font-family="monospace" font-size="13" fill="#53d8fb">&amp;str</text>
+  <text x="625" y="140" font-family="monospace" font-size="10" fill="#00b894">// borrowing</text>
+  <!-- Pattern matching -->
+  <rect x="60" y="270" width="170" height="100" rx="6" fill="#16213e" stroke="#ffd93d" stroke-width="1.5"/>
+  <text x="75" y="298" font-family="monospace" font-size="13" fill="#e94560">match</text>
+  <text x="120" y="298" font-family="monospace" font-size="13" fill="white">value {</text>
+  <text x="90" y="318" font-family="monospace" font-size="13" fill="#ffd93d">Some</text>
+  <text x="130" y="318" font-family="monospace" font-size="13" fill="white">(x) =&gt; x,</text>
+  <text x="90" y="338" font-family="monospace" font-size="13" fill="#ffd93d">None</text>
+  <text x="130" y="338" font-family="monospace" font-size="13" fill="white">=&gt; 0,</text>
+  <text x="75" y="358" font-family="monospace" font-size="13" fill="white">}</text>
+  <!-- Result/Option -->
+  <rect x="600" y="270" width="160" height="80" rx="6" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
+  <text x="615" y="298" font-family="monospace" font-size="13" fill="#53d8fb">Result</text>
+  <text x="668" y="298" font-family="monospace" font-size="13" fill="white">&lt;T, E&gt;</text>
+  <text x="615" y="323" font-family="monospace" font-size="13" fill="#53d8fb">Option</text>
+  <text x="673" y="323" font-family="monospace" font-size="13" fill="white">&lt;T&gt;</text>
+  <text x="615" y="343" font-family="monospace" font-size="10" fill="#e94560">// no null values</text>
+  <!-- Memory safety label -->
+  <text x="250" y="380" font-family="monospace" font-size="14" fill="#0f3460">memory safety - zero cost abstractions - fearless concurrency</text>
+</svg>

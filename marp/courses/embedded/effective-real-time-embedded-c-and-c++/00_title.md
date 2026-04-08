@@ -14,3 +14,7 @@ audience:
 # Effective Real Time Embedded C And C++
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/embedded/effective-real-time-embedded-c-and-c++/title.svg)

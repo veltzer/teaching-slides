@@ -3,6 +3,8 @@
 
 ---
 
+![title](svg/lectures/spark-optimization-scala/title.svg)
+
 ## Understanding Data Skew 🔄
 
 - **Definition**: Uneven distribution of data across partitions

@@ -3,6 +3,8 @@
 
 ---
 
+![title](svg/lectures/spark-optimization-python/title.svg)
+
 ## Understanding Data Skew 🔄
 
 - **Definition**: Uneven distribution of data across partitions

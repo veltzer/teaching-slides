@@ -11,6 +11,8 @@ When you submit a query (SQL or RDD), Spark follows these key steps:
 
 ---
 
+![title](svg/lectures/spark-internals/title.svg)
+
 ## Slide 2: Logical Planning
 
 ### Query Analysis

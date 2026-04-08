@@ -13,3 +13,7 @@ audience:
 # Developing Using Ai Short
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
+---
+
+![title](svg/courses/ai/developing-using-ai-short/title.svg)

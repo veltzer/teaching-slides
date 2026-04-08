@@ -3,6 +3,8 @@
 
 ---
 
+![title](svg/lectures/gcc-optimizations/title.svg)
+
 ## Understanding CPU Optimization
 - Compiler optimization is crucial for performance
 - CPU-specific tuning can provide significant speedups

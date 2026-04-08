@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg)"/>
+  <!-- GitHub Octocat silhouette (simplified) -->
+  <g transform="translate(400,155)">
+    <circle cx="0" cy="0" r="65" fill="#f0f6fc" opacity="0.9"/>
+    <!-- Eyes -->
+    <ellipse cx="-18" cy="-10" rx="12" ry="14" fill="#0d1117"/>
+    <ellipse cx="18" cy="-10" rx="12" ry="14" fill="#0d1117"/>
+    <ellipse cx="-15" cy="-12" rx="5" ry="6" fill="#f0f6fc"/>
+    <ellipse cx="21" cy="-12" rx="5" ry="6" fill="#f0f6fc"/>
+    <!-- Mouth -->
+    <path d="M -12 15 Q 0 25 12 15" fill="none" stroke="#0d1117" stroke-width="2.5"/>
+    <!-- Tentacles -->
+    <path d="M -50 40 Q -65 70 -45 85" fill="none" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 50 40 Q 65 70 45 85" fill="none" stroke="#f0f6fc" stroke-width="6" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <!-- Workflow pipeline -->
+  <g transform="translate(0,310)">
+    <!-- Pipeline line -->
+    <line x1="120" y1="30" x2="680" y2="30" stroke="#238636" stroke-width="2" opacity="0.5"/>
+    <!-- Step nodes -->
+    <circle cx="170" cy="30" r="18" fill="#0d1117" stroke="#238636" stroke-width="2"/>
+    <text x="170" y="34" font-family="monospace" font-size="14" fill="#238636" text-anchor="middle">1</text>
+    <circle cx="310" cy="30" r="18" fill="#0d1117" stroke="#238636" stroke-width="2"/>
+    <text x="310" y="34" font-family="monospace" font-size="14" fill="#238636" text-anchor="middle">2</text>
+    <circle cx="450" cy="30" r="18" fill="#0d1117" stroke="#238636" stroke-width="2"/>
+    <text x="450" y="34" font-family="monospace" font-size="14" fill="#238636" text-anchor="middle">3</text>
+    <circle cx="590" cy="30" r="18" fill="#238636" opacity="0.8"/>
+    <!-- Checkmark in last node -->
+    <polyline points="581,30 587,36 600,23" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Arrows between nodes -->
+    <polygon points="225,27 235,30 225,33" fill="#238636" opacity="0.6"/>
+    <polygon points="365,27 375,30 365,33" fill="#238636" opacity="0.6"/>
+    <polygon points="505,27 515,30 505,33" fill="#238636" opacity="0.6"/>
+  </g>
+  <!-- YAML workflow snippet -->
+  <g transform="translate(100,50)" opacity="0.4">
+    <text x="0" y="0" font-family="monospace" font-size="10" fill="#8b949e">on: push</text>
+    <text x="0" y="14" font-family="monospace" font-size="10" fill="#8b949e">jobs:</text>
+    <text x="0" y="28" font-family="monospace" font-size="10" fill="#238636">  build:</text>
+  </g>
+  <g transform="translate(600,50)" opacity="0.4">
+    <text x="0" y="0" font-family="monospace" font-size="10" fill="#8b949e">steps:</text>
+    <text x="0" y="14" font-family="monospace" font-size="10" fill="#238636">  - uses: ...</text>
+    <text x="0" y="28" font-family="monospace" font-size="10" fill="#238636">  - run: ...</text>
+  </g>
+  <!-- Decorative dots -->
+  <circle cx="60" cy="200" r="2" fill="#238636" opacity="0.3"/>
+  <circle cx="740" cy="180" r="3" fill="#238636" opacity="0.25"/>
+  <!-- Bottom accent -->
+  <rect x="300" y="385" width="200" height="3" rx="1.5" fill="#238636" opacity="0.4"/>
+</svg>
