@@ -19,14 +19,8 @@ args = ["--ci"]
 extensions = [".svg"]
 scan_dirs = ["svg"]
 
-[processor.script.md_lint]
-linter = "scripts/md_lint.py"
-extensions = [".md"]
-scan_dirs = ["marp"]
-batch = true
-
-[processor.script.check_code_labels]
-linter = "scripts/check_code_labels.py"
+[processor.script.md_checks]
+linter = "scripts/md_checks.py"
 extensions = [".md"]
 scan_dirs = ["marp"]
 batch = true
