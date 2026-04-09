@@ -8,6 +8,7 @@ const subfoldersEl = document.getElementById("subfolders");
 const searchEl = document.getElementById("search");
 const levelEl = document.getElementById("filter-level");
 const categoryEl = document.getElementById("filter-category");
+const typeEl = document.getElementById("filter-type");
 const tagEl = document.getElementById("filter-tag");
 const audienceEl = document.getElementById("filter-audience");
 const durationEl = document.getElementById("filter-duration");
@@ -35,6 +36,8 @@ document.querySelector('label[for="filter-level"]').textContent =
     "Level (" + new Set(DATA.map(e => e.level).filter(Boolean)).size + "):";
 document.querySelector('label[for="filter-category"]').textContent =
     "Category (" + new Set(DATA.map(e => e.category).filter(Boolean)).size + "):";
+document.querySelector('label[for="filter-type"]').textContent =
+    "Type (" + new Set(DATA.map(e => e.type).filter(Boolean)).size + "):";
 document.querySelector('label[for="filter-tag"]').textContent =
     "Tag (" + new Set(DATA.flatMap(e => e.tags)).size + "):";
 document.querySelector('label[for="filter-duration"]').textContent =
@@ -51,11 +54,11 @@ function navigateFolder(folder) {
 
 function renderBreadcrumb() {
     if (!currentFolder) {
-        breadcrumbEl.innerHTML = '<span class="breadcrumb-current">All Courses</span>';
+        breadcrumbEl.innerHTML = '<span class="breadcrumb-current">All Items</span>';
         return;
     }
     const parts = currentFolder.split("/");
-    let html = '<a href="#" onclick="navigateFolder(\'\'); return false;">All Courses</a>';
+    let html = '<a href="#" onclick="navigateFolder(\'\'); return false;">All Items</a>';
     for (let i = 0; i < parts.length; i++) {
         const path = parts.slice(0, i + 1).join("/");
         const label = parts[i].replace(/_/g, " ").replace(/-/g, " ");
@@ -106,6 +109,7 @@ function render() {
     const search = searchEl.value.toLowerCase();
     const level = levelEl.value;
     const category = categoryEl.value;
+    const type = typeEl.value;
     const tag = tagEl.value;
     const audience = audienceEl.value;
     const duration = durationEl.value;
@@ -123,6 +127,7 @@ function render() {
         if (search && !e.name.toLowerCase().includes(search)) return false;
         if (level && e.level !== level) return false;
         if (category && e.category !== category) return false;
+        if (type && e.type !== type) return false;
         if (tag && !e.tags.includes(tag)) return false;
         if (audience && !e.audience.includes(audience)) return false;
         if (duration && e.duration_days !== parseInt(duration)) return false;
@@ -131,7 +136,9 @@ function render() {
 
     const totalChapters = filtered.reduce((s, e) => s + (e.chapters || 0), 0);
     const totalSlides = filtered.reduce((s, e) => s + (e.slides || 0), 0);
-    totalEl.innerHTML = filtered.length + " courses, " +
+    const nCourses = filtered.filter(e => e.type === "course").length;
+    const nLectures = filtered.filter(e => e.type === "lecture").length;
+    totalEl.innerHTML = nCourses + " courses, " + nLectures + " lectures, " +
         '<span class="stat-chapters">' + totalChapters + " chapters</span>, " +
         '<span class="stat-slides">' + totalSlides + " slides</span>";
     renderSubfolders(filtered);
@@ -159,7 +166,7 @@ function render() {
         if (key === "duration") return e.dh ? e.duration_days + "d / " + e.dh + "h" : "No Duration";
         if (key === "slides") return e.slides + " slides";
         if (key === "chapters") return e.chapters + " chapters";
-        if (key === "name") return "All Courses";
+        if (key === "name") return "All Items";
         return "";
     };
 
@@ -193,7 +200,7 @@ function render() {
 
     let html = "";
     if (groups.length === 0) {
-        html = '<p class="no-results">No courses match the current filters.</p>';
+        html = '<p class="no-results">No items match the current filters.</p>';
     }
     const showNumbers = numbersEl.checked;
     let globalNum = 0;
@@ -209,8 +216,11 @@ function render() {
                 return '<a href="#" onclick="navigateFolder(\'' + path.replace(/'/g, "\\'") + '\'); return false;">' + label + '</a>';
             }).join(' <span class="breadcrumb-sep">/</span> ');
         }
+        const gc = group.items.filter(e => e.type === "course").length;
+        const gl = group.items.filter(e => e.type === "lecture").length;
+        const groupLabel = [gc ? gc + " courses" : "", gl ? gl + " lectures" : ""].filter(Boolean).join(", ");
         html += '<h2>' + headerLabel +
-            ' <span class="count">(' + group.items.length + ' courses, ' +
+            ' <span class="count">(' + groupLabel + ', ' +
             '<span class="stat-chapters">' + groupChapters + ' chapters</span>, ' +
             '<span class="stat-slides">' + groupSlides + ' slides</span>)</span></h2><ul>';
         for (let i = 0; i < group.items.length; i++) {
@@ -218,6 +228,7 @@ function render() {
             const item = group.items[i];
             const numPrefix = showNumbers ? '<span class="course-number">' + globalNum + ".</span> " : "";
             const nameHtml = item.pdf ? '<a href="' + item.pdf + '" target="_blank">' + item.name + "</a>" : "<span>" + item.name + "</span>";
+            const typeBadge = '<span class="type-badge type-' + item.type + '">' + item.type + "</span>";
             const levelClass = item.level ? " level-" + item.level : "";
             const levelBadge = item.level ? '<span class="level' + levelClass + '">' + item.level + "</span>" : "";
             let db = "";
@@ -228,7 +239,7 @@ function render() {
             const chaptersBadge = item.chapters ? '<span class="chapters-badge">' + item.chapters + " ch</span>" : "";
             const slidesBadge = item.slides ? '<span class="slides-badge">' + item.slides + " sl</span>" : "";
             const pdfLink = item.pdf ? '<a class="dl-icon" href="' + item.pdf + '" download title="Download PDF">' + ICON_PDF + "</a>" : "";
-            html += "<li>" + numPrefix + nameHtml + levelBadge + durationBadge + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
+            html += "<li>" + numPrefix + nameHtml + typeBadge + levelBadge + durationBadge + chaptersBadge + slidesBadge + " " + pdfLink + "</li>";
         }
         html += "</ul>";
     }
@@ -312,6 +323,7 @@ searchEl.addEventListener("input", function() {
 });
 levelEl.addEventListener("change", render);
 categoryEl.addEventListener("change", render);
+typeEl.addEventListener("change", render);
 tagEl.addEventListener("change", render);
 audienceEl.addEventListener("change", render);
 durationEl.addEventListener("change", render);

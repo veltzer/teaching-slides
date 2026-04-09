@@ -1,20 +1,21 @@
 #!/usr/bin/env python
 
 """
-Generate an HTML SPA for browsing courses built by rsconstruct's pdfunite processor.
+Generate an HTML SPA for browsing courses and lectures built by rsconstruct's pdfunite processor.
 
-Scans the pdfunite source directory for course folders containing source files,
-counts slides per course, and generates a self-contained index.html with
+Scans the pdfunite source directory for course/lecture folders containing source files,
+counts slides per entry, and generates a self-contained index.html with
 filtering, sorting, folder navigation, and PDF download links.
 
 Usage:
-    ./scripts/build_courses_index.py [--source-dir DIR] [--output-dir DIR] [--source-ext EXT] [--out FILE]
+    ./scripts/build_index.py [--source-dir DIR] [--lectures-dir DIR] [--output-dir DIR] [--source-ext EXT] [--out FILE]
 
 Defaults match rsconstruct's pdfunite processor defaults:
-    --source-dir  marp/courses
-    --output-dir  out/pdfunite
-    --source-ext  .md
-    --out         _site/index.html
+    --source-dir   marp/courses
+    --lectures-dir marp/lectures
+    --output-dir   out/pdfunite
+    --source-ext   .md
+    --out          _site/index.html
 """
 
 import argparse
@@ -107,10 +108,10 @@ def pdf_path_for_course(rel: Path, output_dir: Path, site_dir: Path) -> str | No
     return None
 
 
-def build_entries(
-    source_dir: Path, output_dir: Path, site_dir: Path, ext: str
+def build_course_entries(
+    source_dir: Path, output_dir: Path, site_dir: Path, ext: str,
 ) -> list[dict[str, Any]]:
-    """Build the list of course entries."""
+    """Build the list of course entries (directories containing multiple source files)."""
     dirs = find_course_dirs(source_dir, ext)
     entries: list[dict[str, Any]] = []
 
@@ -126,6 +127,7 @@ def build_entries(
         entries.append(
             {
                 "name": name,
+                "type": "course",
                 "chapters": chapters,
                 "slides": slides,
                 "folder": str(rel),
@@ -136,6 +138,53 @@ def build_entries(
                 "duration_hours": fm.get("duration_hours", 0),
                 "tags": fm.get("tags", []),
                 "audience": fm.get("audience", []),
+            }
+        )
+
+    return entries
+
+
+def count_slides_in_file(filepath: Path) -> int:
+    """Count slides in a single markdown file.
+    Each file has 1 slide (the first) plus one for each '---' separator line."""
+    content = filepath.read_text(encoding="utf-8", errors="replace")
+    return 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
+
+
+def build_lecture_entries(
+    lectures_dir: Path, output_dir: Path, site_dir: Path, ext: str,
+) -> list[dict[str, Any]]:
+    """Build the list of lecture entries (individual source files in category dirs)."""
+    entries: list[dict[str, Any]] = []
+    if not lectures_dir.exists():
+        return entries
+
+    for md_file in sorted(lectures_dir.rglob(f"*{ext}")):
+        rel = md_file.relative_to(lectures_dir)
+        stem = md_file.stem
+        name = stem.replace("_", " ").replace("-", " ").title()
+        slides = count_slides_in_file(md_file)
+        folder_parts = rel.parent
+        folder = str(folder_parts) if folder_parts != Path(".") else ""
+
+        # Compute PDF path: lectures are single files, so the PDF name matches the stem
+        pdf_candidate = output_dir / folder_parts / f"{stem}.pdf"
+        pdf = str(pdf_candidate.relative_to(output_dir.parent)) if pdf_candidate.exists() else None
+
+        entries.append(
+            {
+                "name": name,
+                "type": "lecture",
+                "chapters": 1,
+                "slides": slides,
+                "folder": str(folder_parts / stem) if folder else stem,
+                "folder_label": folder_label(folder_parts) if folder else "Root",
+                "pdf": pdf,
+                "level": "",
+                "category": "",
+                "duration_hours": 0,
+                "tags": [],
+                "audience": [],
             }
         )
 
@@ -155,6 +204,7 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
 
     levels = [e["level"] for e in entries]
     categories = [e["category"] for e in entries]
+    types = [e["type"] for e in entries]
     tags = [t for e in entries for t in e["tags"]]
     audiences = [a for e in entries for a in e["audience"]]
 
@@ -165,6 +215,7 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
         .replace("{{TOTAL_COUNT}}", str(len(entries)))
         .replace("{{LEVEL_OPTIONS}}", make_options(levels))
         .replace("{{CATEGORY_OPTIONS}}", make_options(categories))
+        .replace("{{TYPE_OPTIONS}}", make_options(types))
         .replace("{{TAG_OPTIONS}}", make_options(tags))
         .replace("{{AUDIENCE_OPTIONS}}", make_options(audiences))
     )
@@ -172,12 +223,17 @@ def generate_index(entries: list[dict[str, Any]]) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Build an HTML SPA for browsing courses"
+        description="Build an HTML SPA for browsing courses and lectures"
     )
     parser.add_argument(
         "--source-dir",
         default="marp/courses",
         help="Directory containing course subdirectories (default: marp/courses)",
+    )
+    parser.add_argument(
+        "--lectures-dir",
+        default="marp/lectures",
+        help="Directory containing lecture subdirectories (default: marp/lectures)",
     )
     parser.add_argument(
         "--output-dir",
@@ -197,6 +253,7 @@ def main() -> None:
     args, _ = parser.parse_known_args()
 
     source_dir = Path(args.source_dir)
+    lectures_dir = Path(args.lectures_dir)
     output_dir = Path(args.output_dir)
     ext = args.source_ext if args.source_ext.startswith(".") else f".{args.source_ext}"
     site_dir = output_dir.parent
@@ -206,12 +263,18 @@ def main() -> None:
         print(f"Error: source directory '{source_dir}' does not exist.", file=sys.stderr)
         raise SystemExit(1)
 
-    entries = build_entries(source_dir, output_dir, site_dir, ext)
+    entries = build_course_entries(source_dir, output_dir, site_dir, ext)
+    n_courses = len(entries)
+
+    lecture_entries = build_lecture_entries(lectures_dir, output_dir, site_dir, ext)
+    entries.extend(lecture_entries)
+    n_lectures = len(lecture_entries)
+
     html = generate_index(entries)
 
     out_file.parent.mkdir(parents=True, exist_ok=True)
     out_file.write_text(html, encoding="utf-8")
-    print(f"Course index built: {len(entries)} courses found")
+    print(f"Index built: {n_courses} courses, {n_lectures} lectures ({len(entries)} total)")
     print(f"Output: {out_file}")
 
 

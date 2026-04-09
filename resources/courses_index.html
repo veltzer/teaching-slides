@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Course Browser - Mark Veltzer</title>
+<title>Course &amp; Lecture Browser - Mark Veltzer</title>
 <style>
 {{CSS}}
 </style>
@@ -11,7 +11,7 @@
 <body>
 <div id="index-view">
 <div class="header-bar">
-<h1>Course Browser</h1>
+<h1>Course &amp; Lecture Browser</h1>
 <select id="theme-select" title="Choose theme">
 <option value="midnight">Midnight (dark blue)</option>
 <option value="paper">Paper (warm light)</option>
@@ -20,7 +20,7 @@
 <option value="rosepine">Rose Pine (purple dark)</option>
 </select>
 </div>
-<p id="total-count">{{TOTAL_COUNT}} courses</p>
+<p id="total-count">{{TOTAL_COUNT}} items</p>
 
 <div id="breadcrumb"></div>
 <div id="subfolders"></div>
@@ -45,6 +45,13 @@
 <select id="filter-category">
 <option value="">All categories</option>
 {{CATEGORY_OPTIONS}}
+</select>
+</div>
+<div class="filter-row">
+<label for="filter-type">Type:</label>
+<select id="filter-type">
+<option value="">All types</option>
+{{TYPE_OPTIONS}}
 </select>
 </div>
 <div class="filter-row">
