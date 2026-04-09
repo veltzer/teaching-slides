@@ -12,7 +12,7 @@ When writing marp:
 - do not add a "Any Questions slide".
 - call the file for each chapter [number]_[name].md from 00. For instance: 00_intoduction.md
 - files should end with a newline, on the last line that is.
-- don't do consecutive blank lines. 
+- don't do consecutive blank lines.
 - remember to keep "---" separators between the slides for them to be rendered correctly.
 - do about right number of slides per chapter. Not more and not less than the amount need to sensibly teach that chapter.
 - keep technical terms within backticks (`).
@@ -65,6 +65,25 @@ graph TD
     3.
       The rendered will take care of the numbers.
 
-
-
 Prefer SVG to mermain and avoid ascii art diagrams.
+
+Common problems found in the past (avoid repeating these):
+- do not leave empty slides (two consecutive "---" separators with nothing between them).
+- always close code fences. Every opening ``` must have a matching closing ```.
+  A common mistake is opening a code block and then starting a new slide (---) without
+  closing the code block first.
+- do not reference external images via http/https URLs. All images must be local files
+  in the svg/ or jpg/ directories.
+- SVG diagrams must use font-size of at least 10. Anything smaller is unreadable in
+  presentations. The check_svg_quality.py script enforces this.
+- SVG files must be properly formatted multi-line XML. Never generate single-line SVGs
+  or truncated stubs. Each SVG should have at least 5 XML elements.
+- SVG files must have a viewBox of at least 800x400 for diagrams. Smaller viewBoxes
+  lead to cramped, unreadable content.
+- every lecture must have YAML front matter (tags, level, category, audience) just like
+  courses do.
+- image references (![...](path)) must point to files that actually exist. Run the
+  md_checks.py --images check to verify.
+- do not put content (bullet points, descriptions, images) on the title slide (slide 1).
+  The title slide should only have # Title, ## Author, ## Email. Diagrams and content
+  go on slide 2 and beyond.
