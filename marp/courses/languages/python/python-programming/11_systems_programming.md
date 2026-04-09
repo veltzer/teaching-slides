@@ -1,4 +1,5 @@
 # Systems Programming
+
 ---
 ## Overview
 - File I/O and text processing
@@ -7,6 +8,7 @@
 - Running external processes
 - Multiprocessing and threading
 - Environment and system interaction
+
 ---
 ## Standard I/O Streams
 
@@ -25,6 +27,7 @@ line = sys.stdin.readline()
 
 - `print()` writes to `sys.stdout` by default
 - Use `sys.stderr` for error messages
+
 ---
 ## Reading Input
 
@@ -42,6 +45,7 @@ for line in sys.stdin:
 echo "hello" | python3 script.py
 cat data.txt | python3 script.py
 ```
+
 ---
 ## Formatted Printing - f-strings Review
 
@@ -65,6 +69,7 @@ Item                 Price
 Apple                $1.50
 Banana               $0.75
 ```
+
 ---
 ## Formatting Tables
 
@@ -89,6 +94,7 @@ Alice           30 Engineer
 Bob             25 Designer
 Charlie         35 Manager
 ```
+
 ---
 ## Opening Files
 
@@ -108,6 +114,7 @@ f = open("log.txt", "a")
 f.write("New entry\n")
 f.close()
 ```
+
 ---
 ## File Modes
 | Mode | Description |
@@ -119,6 +126,7 @@ f.close()
 | `"b"` | Binary mode |
 | `"t"` | Text mode (default) |
 | `"+"` | Read and write |
+
 ---
 ## The `with` Statement (Context Manager)
 
@@ -133,6 +141,7 @@ with open("input.txt") as fin, open("output.txt", "w") as fout:
     for line in fin:
         fout.write(line.upper())
 ```
+
 ---
 ## Reading Files
 
@@ -154,6 +163,7 @@ with open("data.txt") as f:
     for line in f:
         print(line.strip())
 ```
+
 ---
 ## Reading Large Files Efficiently
 
@@ -172,6 +182,7 @@ with open("huge.bin", "rb") as f:
     while chunk := f.read(8192):
         process(chunk)
 ```
+
 ---
 ## Writing Files
 
@@ -190,6 +201,7 @@ with open("output.txt", "w") as f:
 with open("output.txt", "w") as f:
     print("Hello, World!", file=f)
 ```
+
 ---
 ## File Encoding
 
@@ -206,6 +218,7 @@ with open("data.txt", "w", encoding="utf-8") as f:
 with open("data.txt", "r", encoding="utf-8", errors="replace") as f:
     content = f.read()
 ```
+
 ---
 ## Binary Files
 
@@ -221,6 +234,7 @@ with open("output.bin", "wb") as f:
     f.write(b"\x00\x01\x02\x03")
     f.write(bytes([0, 1, 2, 3]))
 ```
+
 ---
 ## `pathlib` for File Operations
 
@@ -239,6 +253,7 @@ data = Path("image.png").read_bytes()
 if p.exists():
     print(f"Size: {p.stat().st_size}")
 ```
+
 ---
 ## File System Operations with `pathlib`
 
@@ -259,6 +274,7 @@ Path("output/data").mkdir(parents=True, exist_ok=True)
 # Delete file
 Path("temp.txt").unlink(missing_ok=True)
 ```
+
 ---
 ## File System Operations with `shutil`
 
@@ -282,6 +298,7 @@ shutil.move("old.txt", "new.txt")
 usage = shutil.disk_usage("/")
 print(f"Free: {usage.free / 1e9:.1f} GB")
 ```
+
 ---
 ## Temporary Files
 
@@ -299,6 +316,7 @@ with tempfile.TemporaryDirectory() as tmpdir:
     print(tmpdir)  # /tmp/tmpXXXXXX
     # Directory and contents deleted after with block
 ```
+
 ---
 ## JSON - Reading and Writing
 
@@ -322,6 +340,7 @@ with open("data.json", "w") as f:
 with open("data.json") as f:
     loaded = json.load(f)
 ```
+
 ---
 ## JSON - Type Mapping
 | Python | JSON |
@@ -333,6 +352,7 @@ with open("data.json") as f:
 | `True` | `true` |
 | `False` | `false` |
 | `None` | `null` |
+
 ---
 ## JSON - Custom Serialization
 
@@ -350,6 +370,7 @@ data = {"event": "meeting", "time": datetime.now()}
 json_str = json.dumps(data, cls=DateEncoder, indent=2)
 print(json_str)
 ```
+
 ---
 ## YAML with PyYAML
 
@@ -371,6 +392,7 @@ with open("output.yaml", "w") as f:
 ```bash
 pip install pyyaml
 ```
+
 ---
 ## CSV Files
 
@@ -390,6 +412,7 @@ with open("data.csv") as f:
     for row in reader:
         print(row["name"], row["age"])
 ```
+
 ---
 ## CSV - Writing
 
@@ -413,6 +436,7 @@ with open("output.csv", "w", newline="") as f:
     writer.writeheader()
     writer.writerow({"name": "Alice", "age": 30})
 ```
+
 ---
 ## Environment Variables
 
@@ -430,6 +454,7 @@ os.environ["MY_VAR"] = "my_value"
 for key, value in os.environ.items():
     print(f"{key}={value}")
 ```
+
 ---
 ## Running External Commands - `subprocess`
 
@@ -441,6 +466,7 @@ result = subprocess.run(["ls", "-la"], capture_output=True, text=True)
 print(result.stdout)
 print(result.returncode)  # 0 = success
 ```
+
 ---
 ## `subprocess.run()` Options
 
@@ -466,6 +492,7 @@ result = subprocess.run(
     check=True,  # Raises CalledProcessError on failure
 )
 ```
+
 ---
 ## `subprocess` - Piping
 
@@ -487,6 +514,7 @@ ps.stdout.close()
 output = grep.communicate()[0]
 print(output)
 ```
+
 ---
 ## `subprocess` - Shell Commands
 
@@ -505,6 +533,7 @@ print(result.stdout.strip())
 
 - `shell=True` is a security risk with user input
 - Prefer passing command as a list without `shell=True`
+
 ---
 ## `subprocess` - Input
 
@@ -519,6 +548,7 @@ result = subprocess.run(
 )
 print(result.stdout)  # Hello Alice
 ```
+
 ---
 ## Multiprocessing - Basics
 
@@ -539,6 +569,7 @@ if __name__ == "__main__":
     for p in processes:
         p.join()
 ```
+
 ---
 ## Multiprocessing - Pool
 
@@ -554,6 +585,7 @@ if __name__ == "__main__":
         print(results)
         # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
+
 ---
 ## Multiprocessing - Pool Methods
 
@@ -576,6 +608,7 @@ if __name__ == "__main__":
         for result in pool.imap_unordered(process_item, range(10)):
             print(result)
 ```
+
 ---
 ## Multiprocessing - Shared State
 
@@ -599,6 +632,7 @@ if __name__ == "__main__":
         p.join()
     print(counter.value)  # 4000
 ```
+
 ---
 ## Threading - Basics
 
@@ -619,12 +653,17 @@ for i in range(4):
 for t in threads:
     t.join()
 ```
+
 ---
 ## Threading - The GIL
+
 - CPython has the Global Interpreter Lock (GIL)
 - Only one thread executes Python bytecode at a time
 - Threads are useful for I/O-bound tasks
 - For CPU-bound tasks, use `multiprocessing`
+
+---
+## Threading - The GIL
 
 ![threading_the_gil](svg/courses/languages/python/python-programming/11_systems_programming/threading_the_gil.svg)
 
@@ -650,6 +689,7 @@ with ThreadPoolExecutor(max_workers=3) as executor:
     for url, size in zip(urls, results):
         print(f"{url}: {size} bytes")
 ```
+
 ---
 ## `concurrent.futures` - ProcessPoolExecutor
 
@@ -668,6 +708,7 @@ if __name__ == "__main__":
         for f in futures:
             print(f.result())
 ```
+
 ---
 ## `concurrent.futures` - `as_completed`
 
@@ -692,6 +733,7 @@ Task 1 done
 Task 2 done
 Task 3 done
 ```
+
 ---
 ## Threading - Locks
 
@@ -717,6 +759,7 @@ for t in threads:
     t.join()
 print(counter)  # 400000
 ```
+
 ---
 ## Signal Handling
 
@@ -735,6 +778,7 @@ print("Running... Press Ctrl+C to stop")
 while True:
     pass
 ```
+
 ---
 ## Summary
 - Use `open()` with `with` statement for file I/O

@@ -321,6 +321,7 @@ pick ghi789 Third commit
 1. Cherry-picking specific commits
 1. Recovering lost work
 1. Extreme history rewriting
+
 ---
 
 ## Splitting Commits with Rebase

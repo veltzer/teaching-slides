@@ -43,6 +43,9 @@ RUN npm run build
 - Rolling back means deploying a previous artifact, not changing config
 - No configuration drift between what was tested and what runs
 
+---
+## Immutable Deployments with Baked Config
+
 ![immutable_deployments_with_baked_config](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/immutable_deployments_with_baked_config.svg)
 
 ---
@@ -403,6 +406,9 @@ def lambda_handler(event, context):
 - CI/CD systems need secrets for deployments, testing, and artifact publishing
 - Secrets must never appear in logs, artifacts, or build outputs
 - Use platform-native secret storage, not hardcoded values
+
+---
+## Secrets in CI/CD Pipelines
 
 ![secrets_in_ci_cd_pipelines](svg/courses/devops/architectural-decisions-in-devops/10_configuration_and_secrets_management/secrets_in_ci_cd_pipelines.svg)
 

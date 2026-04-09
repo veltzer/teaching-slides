@@ -1,4 +1,5 @@
 # Web Scraping: Extracting Data from the Web
+
 ---
 ## What is Web Scraping
 

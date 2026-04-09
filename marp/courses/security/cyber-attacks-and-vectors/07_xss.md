@@ -1,4 +1,5 @@
 # Cross-Site Scripting (XSS)
+
 ---
 ## What is XSS?
 
@@ -10,6 +11,7 @@ Cross-Site Scripting (XSS) is a type of security vulnerability that allows an at
 1. **Reflected XSS**: The malicious script is reflected off the web application to the victim's browser. This occurs when user input is immediately returned by the web application without proper validation
 1. **Stored XSS**: The malicious script is stored on the target server (e.g., in a database) and is served to the victim's browser when the vulnerable page is requested
 1. **DOM-based XSS**: The malicious script is executed as a result of modifying the Document Object Model (DOM) environment in the victim's browser
+
 ---
 ## Reflected XSS Example
 
@@ -273,6 +275,10 @@ Content-Security-Policy:
     form-action 'self';
     report-uri /csp-report;
 ```
+
+---
+
+## Content Security Policy (CSP) In Depth
 
 ![strict_csp_that_prevents_most_xss](svg/courses/security/cyber-attacks-and-vectors/07_xss/strict_csp_that_prevents_most_xss.svg)
 

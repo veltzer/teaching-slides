@@ -27,10 +27,12 @@
 ![the_linux_kernel_problem](svg/courses/git/git2/01_intro/the_linux_kernel_problem.svg)
 
 ---
-
 ## The Birth of Git (2005)
 
 ![h:300](jpg/courses/git/git2/linus_torvalds.jpg)
+
+---
+## The Birth of Git (2005)
 
 **Linus Torvalds** created Git in April 2005
 
@@ -130,14 +132,27 @@ According to Stack Overflow Developer Survey:
 ![the_git_data_model](svg/courses/git/git2/01_intro/the_git_data_model.svg)
 
 ---
-
 ## Snapshots, Not Differences
 
 **SVN/CVS** - Stores differences (deltas)
+
+---
+## Snapshots, Not Differences
+
 ![snapshots_not_differences_1](svg/courses/git/git2/01_intro/snapshots_not_differences_1.svg)
 
+---
+## Snapshots, Not Differences
+
 **Git** - Stores snapshots
+
+---
+## Snapshots, Not Differences
+
 ![snapshots_not_differences_2](svg/courses/git/git2/01_intro/snapshots_not_differences_2.svg)
+
+---
+## Snapshots, Not Differences
 
 ## If files don't change, Git just links to the previous identical file
 

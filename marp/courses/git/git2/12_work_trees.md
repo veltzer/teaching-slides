@@ -40,7 +40,6 @@ git stash pop               # Restore work
 ```
 
 ---
-
 ## What Are Git Worktrees?
 
 Worktrees allow multiple working directories for a single repository:
@@ -50,6 +49,9 @@ Worktrees allow multiple working directories for a single repository:
 - **Linked worktrees:** Additional working directories
 - **Shared repository:** Common `.git` directory
 - **Separate branches:** Each worktree can be on different branch
+
+---
+## What Are Git Worktrees?
 
 ![what_are_git_worktrees](svg/courses/git/git2/12_work_trees/what_are_git_worktrees.svg)
 

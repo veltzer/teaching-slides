@@ -1,5 +1,6 @@
 # Modern Data Processing Engines
 ## A Comparison
+
 ---
 ## Table of Contents
 
@@ -11,6 +12,7 @@
 1. Use Cases
 1. Cost Analysis
 1. Decision Framework
+
 ---
 ## Processing Engines Overview
 Current Landscape of Major Players:
@@ -22,6 +24,7 @@ Current Landscape of Major Players:
 - Amazon EMR
 - Apache Druid
 - Splunk
+
 ---
 ## Quick Classification
 
@@ -42,6 +45,7 @@ Current Landscape of Major Players:
 ### Specialized
 - Splunk (Logs)
 - Druid (Time Series)
+
 ---
 ## Core Characteristics Comparison
 
@@ -99,6 +103,7 @@ Primary Use Cases
 1. Complex event processing
 1. Streaming ETL
 1. Event-driven apps
+
 ---
 
 ## Databricks Platform
@@ -250,6 +255,7 @@ Primary Use Cases
 1. Query patterns
 1. Latency needs
 1. Integration requirements
+
 ---
 ## Key Questions to Ask
 

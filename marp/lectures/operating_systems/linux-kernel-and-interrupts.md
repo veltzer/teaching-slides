@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # Linux Driver Interrupt Numbers
 ## Mark Veltzer
@@ -14,7 +15,11 @@ audience:
 
 ---
 
+## Overview
+
 ![title](svg/lectures/operating_systems/linux-kernel-and-interrupts/title.svg)
+
+---
 
 ## Overview
 

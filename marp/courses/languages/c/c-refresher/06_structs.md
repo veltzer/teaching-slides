@@ -1,14 +1,12 @@
 # C Structs and Unions Refresher
 
 ---
-
 ## Structs in C
 
 - A struct is a user-defined data type that groups related variables of different data types
 - Syntax: `struct structure_name { /* member declarations */ };`
 
 ---
-
 ## Struct Example: Student
 
 ```c
@@ -22,7 +20,6 @@ struct Student alice = {"Alice", 20, 3.8};
 ```
 
 ---
-
 ## Accessing Struct Members
 
 - Use the dot (.) operator to access struct members
@@ -39,7 +36,6 @@ printf("Name: %s, Age: %d", ptr->name, ptr->age);
 ```
 
 ---
-
 ## Nested Structs
 
 - Structs can contain other structs as members
@@ -61,7 +57,6 @@ struct Employee emp = {"John Doe", {15, 8, 1990}, 50000.0};
 ```
 
 ---
-
 ## Unions in C
 
 - A union is a special data type that allows storing different data types in the same memory location
@@ -69,7 +64,6 @@ struct Employee emp = {"John Doe", {15, 8, 1990}, 50000.0};
 - Syntax: `union union_name { /* member declarations */ };`
 
 ---
-
 ## Union Example: Data
 
 ```c
@@ -91,7 +85,6 @@ printf("String: %s\n", data.str);
 ```
 
 ---
-
 ## Unions vs Structs
 
 - Unions share memory among all members
@@ -99,7 +92,6 @@ printf("String: %s\n", data.str);
 - Use unions when you need to save memory and only one member will be used at a time
 
 ---
-
 ## Practical Use of Unions
 
 - Unions are often used with structs to create more complex data structures
@@ -122,10 +114,12 @@ v.data.f = 3.14;
 ```
 
 ---
-
 ## Struct Memory Layout and Padding
 
 ![struct_memory_layout_and_padding](svg/courses/languages/c/c-refresher/06_structs/struct_memory_layout_and_padding.svg)
+
+---
+## Struct Memory Layout and Padding
 
 Reorder fields to minimize padding:
 
@@ -140,7 +134,6 @@ struct BetterLayout {
 ```
 
 ---
-
 ## Struct Padding: Complete Example
 
 ```c
@@ -179,7 +172,6 @@ int main(void) {
 ```
 
 ---
-
 ## Flexible Array Members (C99)
 
 ```c
@@ -212,7 +204,6 @@ int main(void) {
 ```
 
 ---
-
 ## Linked List with Structs
 
 ```c
@@ -259,7 +250,6 @@ int main(void) {
 ```
 
 ---
-
 ## Union Size and Type Punning
 
 ```c
@@ -298,7 +288,6 @@ int main(void) {
 ```
 
 ---
-
 ## Tagged Unions: A Complete Implementation
 
 ```c
@@ -342,7 +331,6 @@ int main(void) {
 ```
 
 ---
-
 ## Struct Copying and Comparison
 
 ```c
@@ -380,7 +368,6 @@ int main(void) {
 ```
 
 ---
-
 ## Summary
 
 - Structs group related variables of different types

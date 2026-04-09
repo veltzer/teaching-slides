@@ -137,7 +137,13 @@ loss = loss_fn(
 
 What GPT models are trained on:
 
+---
+## Pre-Training Data
+
 ![pre_training_data](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/pre_training_data.svg)
+
+---
+## Pre-Training Data
 
 **Data quality matters enormously:**
 - Deduplication reduces memorization
@@ -363,6 +369,9 @@ response = client.chat.completions.create(
 
 ![temperature_vs_top_p_when_to_use_which](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/temperature_vs_top_p_when_to_use_which.svg)
 
+---
+## Temperature vs. Top-p — When to Use Which
+
 ```python
 # Deterministic (always same output)
 response = client.chat.completions.create(
@@ -411,7 +420,13 @@ The model uses **chain-of-thought at inference time**, trading compute for accur
 
 Smaller models can learn from larger ones:
 
+---
+## Model Distillation
+
 ![model_distillation](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/model_distillation.svg)
+
+---
+## Model Distillation
 
 Examples: `GPT-4o-mini`, `Claude 3.5 Haiku`, `Phi-3`
 
@@ -539,6 +554,9 @@ class SwiGLU(nn.Module):
 ## KV Cache — Speeding Up Inference
 
 ![kv_cache_speeding_up_inference](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/kv_cache_speeding_up_inference.svg)
+
+---
+## KV Cache — Speeding Up Inference
 
 ```python
 # KV cache in practice

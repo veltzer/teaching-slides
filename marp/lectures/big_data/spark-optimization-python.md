@@ -9,6 +9,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Spark Optimization
 ## Understanding Data Skew and Memory Pressure
@@ -17,7 +18,11 @@ audience:
 
 ---
 
+## Understanding Data Skew 🔄
+
 ![title](svg/lectures/big_data/spark-optimization-python/title.svg)
+
+---
 
 ## Understanding Data Skew 🔄
 

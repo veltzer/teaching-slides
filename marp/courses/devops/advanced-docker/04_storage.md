@@ -471,10 +471,12 @@ docker run --rm --tmpfs /data:size=2G alpine sh -c \
 ```
 
 ---
-
 ## Storage Performance Comparison
 
 ![storage_performance_comparison](svg/courses/devops/advanced-docker/04_storage/storage_performance_comparison.svg)
+
+---
+## Storage Performance Comparison
 
 - `tmpfs` is fastest (memory-speed) but non-persistent
 - Named volumes and bind mounts have similar performance

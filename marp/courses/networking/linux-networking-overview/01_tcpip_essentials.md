@@ -214,6 +214,10 @@
 
 ![network_address_translation_nat](svg/courses/networking/linux-networking-overview/01_tcpip_essentials/network_address_translation_nat.svg)
 
+---
+
+## Network Address Translation (NAT)
+
 **Benefits:**
 - IP address conservation
 - Network security
@@ -246,6 +250,7 @@
 - DNS resolvers
 - DNS records
 - DNS zones
+
 ---
 ## DNS Resolution Process
 
@@ -261,6 +266,7 @@
 | CNAME | Alias | www → example.com |
 | MX | Mail server | example.com → mail.example.com |
 | NS | Name server | example.com → ns1.example.com |
+
 ---
 ## Client-Server Architecture
 

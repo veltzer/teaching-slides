@@ -2,9 +2,14 @@
 ## Logical Volume Management and RAID Configuration
 
 ---
+
 ## LVM Architecture
 
 ![lvm_architecture](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_architecture.svg)
+
+---
+
+## LVM Architecture
 
 Three layers:
 - **PV** (Physical Volumes) - actual disks/partitions
@@ -300,9 +305,14 @@ lvs -o +cache_read_hits,cache_read_misses
 Cache modes: `writethrough` (safe) or `writeback` (fast).
 
 ---
+
 ## LVM on Top of RAID
 
 ![lvm_on_top_of_raid](svg/courses/operating_systems/linux-system-administration/09_lvm_raid_optional/lvm_on_top_of_raid.svg)
+
+---
+
+## LVM on Top of RAID
 
 ```bash
 # Create RAID arrays first
@@ -310,7 +320,6 @@ mdadm --create /dev/md0 --level=1 \
   --raid-devices=2 /dev/sdb /dev/sdc
 mdadm --create /dev/md1 --level=5 \
   --raid-devices=3 /dev/sdd /dev/sde /dev/sdf
-
 # Then use RAID arrays as LVM physical volumes
 pvcreate /dev/md0 /dev/md1
 vgcreate hybrid-vg /dev/md0 /dev/md1

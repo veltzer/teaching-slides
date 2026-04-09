@@ -94,6 +94,10 @@ Trust your instincts - **if something feels wrong, report it**
 - An unreported incident can escalate from minor to catastrophic
 - Early reporting saves the company time, money, and reputation
 
+---
+
+## No-Blame Culture
+
 ![no_blame_culture](svg/courses/security/it-security-policies/06_incident_response/no_blame_culture.svg)
 
 ---
@@ -124,7 +128,15 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## `RTO` and `RPO` Explained
 
+---
+
+## Disaster Recovery
+
 ![rto_and_rpo_explained](svg/courses/security/it-security-policies/06_incident_response/rto_and_rpo_explained.svg)
+
+---
+
+## Disaster Recovery
 
 - `RPO` (Recovery Point Objective): how much data can we afford to lose?
 - `RTO` (Recovery Time Objective): how quickly must we restore operations?
@@ -149,7 +161,15 @@ Trust your instincts - **if something feels wrong, report it**
 
 ## What Happens in a Ransomware Attack
 
+---
+
+## Ransomware: The Growing Threat
+
 ![what_happens_in_a_ransomware_attack](svg/courses/security/it-security-policies/06_incident_response/what_happens_in_a_ransomware_attack.svg)
+
+---
+
+## Ransomware: The Growing Threat
 
 - Average ransom payment: over $1 million
 - Average downtime: 22 days

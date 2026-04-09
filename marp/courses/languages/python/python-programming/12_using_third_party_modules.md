@@ -1,4 +1,5 @@
 # Using Third Party Modules
+
 ---
 ## What are Third Party Modules?
 - Packages not included in Python's standard library
@@ -6,6 +7,7 @@
 - Installed using `pip` (Python's package manager)
 - Over 500,000 packages available
 - Cover virtually every domain
+
 ---
 ## PyPI - Python Package Index
 - https://pypi.org
@@ -17,6 +19,7 @@
     - Installation command
     - Version history
     - License information
+
 ---
 ## `pip` - The Package Installer
 
@@ -33,6 +36,7 @@ pip install "requests>=2.28"
 # Install from requirements file
 pip install -r requirements.txt
 ```
+
 ---
 ## `pip` - Common Commands
 
@@ -52,6 +56,7 @@ pip install --upgrade requests
 # Uninstall a package
 pip uninstall requests
 ```
+
 ---
 ## `pip freeze`
 
@@ -68,6 +73,7 @@ pip install -r requirements.txt
 
 - `pip freeze` outputs exact versions
 - Use this to recreate environments
+
 ---
 ## `requirements.txt` Format
 
@@ -84,12 +90,17 @@ pytest>=7.0
 - `>=` minimum version
 - `~=` compatible release (same major.minor)
 - `>=,<` range of versions
+
 ---
 ## Virtual Environments - Why?
+
 - Different projects may need different package versions
 - System Python should not be cluttered
 - Reproducible environments across machines
 - Isolation prevents conflicts
+
+---
+## Virtual Environments - Why?
 
 ![virtual_environments_why](svg/courses/languages/python/python-programming/12_using_third_party_modules/virtual_environments_why.svg)
 
@@ -109,6 +120,7 @@ myenv\Scripts\activate
 # Deactivate
 deactivate
 ```
+
 ---
 ## Virtual Environment Workflow
 
@@ -131,6 +143,7 @@ pip freeze > requirements.txt
 # 6. Deactivate when done
 deactivate
 ```
+
 ---
 ## Virtual Environment Structure
 
@@ -147,6 +160,7 @@ deactivate
         flask/
   pyvenv.cfg
 ```
+
 ---
 ## `requests` - HTTP Library
 
@@ -159,6 +173,7 @@ print(response.status_code)  # 200
 print(response.json())       # Parsed JSON
 print(response.headers)      # Response headers
 ```
+
 ---
 ## `requests` - POST and Parameters
 
@@ -178,6 +193,7 @@ response = requests.get(
     params={"q": "python", "page": 1},
 )
 ```
+
 ---
 ## `requests` - Error Handling
 
@@ -195,6 +211,7 @@ except requests.Timeout:
 except requests.HTTPError as e:
     print(f"HTTP error: {e}")
 ```
+
 ---
 ## Popular Third Party Packages
 | Package | Purpose |
@@ -209,6 +226,7 @@ except requests.HTTPError as e:
 | `sqlalchemy` | Database ORM |
 | `pillow` | Image processing |
 | `click` | CLI framework |
+
 ---
 ## `numpy` - Quick Overview
 
@@ -227,6 +245,7 @@ print(a + b[:5])    # element-wise addition
 print(np.mean(a))   # 3.0
 print(np.std(a))    # 1.414...
 ```
+
 ---
 ## `pandas` - Quick Overview
 
@@ -245,6 +264,7 @@ print(df["age"].mean())        # 30.0
 print(df[df["age"] > 28])      # Filter rows
 print(df.sort_values("name"))  # Sort
 ```
+
 ---
 ## `click` - CLI Framework
 
@@ -266,6 +286,7 @@ if __name__ == "__main__":
 ```bash
 python3 hello.py --name Alice --count 3
 ```
+
 ---
 ## `rich` - Rich Text in Terminal
 
@@ -285,6 +306,7 @@ table.add_row("Bob", "85")
 console.print(table)
 console.print("[bold red]Error![/bold red] Something went wrong")
 ```
+
 ---
 ## `python-dotenv` - Environment Configuration
 
@@ -306,6 +328,7 @@ print(db_url)
 ```bash
 pip install python-dotenv
 ```
+
 ---
 ## `tqdm` - Progress Bars
 
@@ -327,6 +350,7 @@ with tqdm(total=100) as pbar:
         time.sleep(0.1)
         pbar.update(10)
 ```
+
 ---
 ## `pydantic` - Data Validation
 
@@ -349,6 +373,7 @@ print(user.model_dump())
 ```bash
 pip install pydantic[email]
 ```
+
 ---
 ## Checking Package Security
 
@@ -365,6 +390,7 @@ safety check
 - Always review packages before installing
 - Check download counts, maintenance status, and license
 - Prefer well-known, actively maintained packages
+
 ---
 ## Summary
 - PyPI hosts over 500,000 Python packages

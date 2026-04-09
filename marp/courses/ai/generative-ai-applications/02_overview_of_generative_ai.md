@@ -90,7 +90,13 @@ def self_attention(Q, K, V):
 
 Instead of one attention function, use multiple "heads" in parallel:
 
+---
+## Multi-Head Attention
+
 ![multi_head_attention](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/multi_head_attention.svg)
+
+---
+## Multi-Head Attention
 
 Each head can learn different relationship patterns:
 - Head 1: syntactic relationships
@@ -161,6 +167,9 @@ for t in tokens:
 | `WordPiece` | Similar to BPE, uses likelihood | `BERT` |
 | `SentencePiece` | Language-agnostic, works on raw text | `T5`, `LLaMA` |
 | `Tiktoken` | Fast BPE implementation | `GPT-3.5/4` |
+
+---
+## Tokenization Methods
 
 ![tokenization_methods](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/tokenization_methods.svg)
 
@@ -263,7 +272,13 @@ def temperature_sample(logits, temperature=1.0):
 
 Some abilities only appear when models reach sufficient size:
 
+---
+## Emergence — Surprising Capabilities at Scale
+
 ![emergence_surprising_capabilities_at_scale](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/emergence_surprising_capabilities_at_scale.svg)
+
+---
+## Emergence — Surprising Capabilities at Scale
 
 This is called **emergent behavior** — capabilities that cannot be predicted by extrapolating from smaller models.
 
@@ -273,7 +288,13 @@ This is called **emergent behavior** — capabilities that cannot be predicted b
 
 Research shows predictable relationships between model size and performance:
 
+---
+## Scaling Laws
+
 ![scaling_laws](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/scaling_laws.svg)
+
+---
+## Scaling Laws
 
 **Chinchilla law:** Optimal training uses ~20 tokens per parameter.
 
@@ -330,6 +351,9 @@ prompt = "Who won the 2026 Nobel Prize in Physics?"
 | `GPT-4` | 128K tokens | ~100 pages |
 | `Claude 3.5` | 200K tokens | ~150 pages |
 | `Gemini 1.5` | 1M tokens | ~750 pages |
+
+---
+## Context Windows — How Much Can a Model "See"?
 
 ![context_windows_how_much_can_a_model_see](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/context_windows_how_much_can_a_model_see.svg)
 

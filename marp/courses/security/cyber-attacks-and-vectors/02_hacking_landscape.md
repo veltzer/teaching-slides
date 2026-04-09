@@ -1,4 +1,5 @@
 # Hacking Landscape
+
 ---
 ## Who are the hackers?
 
@@ -7,13 +8,19 @@
 - Cyber criminals
 - State-sponsored actors
 - Insiders
+
 ---
+
 ## Script Kiddies
 
 - Use pre-built tools and scripts without deep understanding
 - Often motivated by curiosity or desire for notoriety
 - Typically target low-hanging fruit and unpatched systems
 - Common tools: Metasploit, LOIC, pre-packaged exploit kits
+
+---
+
+## Script Kiddies
 
 ![script_kiddies](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/script_kiddies.svg)
 
@@ -27,6 +34,7 @@
 - Example: Anonymous "Operation Payback" (2010) targeted organizations that opposed WikiLeaks
 
 ---
+
 ## Cyber Criminals
 
 - Financially motivated, operate like businesses
@@ -34,6 +42,10 @@
 - Revenue streams: ransomware, data theft, fraud, cryptojacking
 - Use dark web markets for buying/selling exploits and data
 - Example: FIN7 group responsible for over $1 billion in theft from financial institutions
+
+---
+
+## Cyber Criminals
 
 ![cyber_criminals](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/cyber_criminals.svg)
 
@@ -187,9 +199,14 @@ An alternative model to the Kill Chain that describes adversary behavior:
 - Preparing for legal proceedings
 
 ---
+
 ## Digital Forensics Process
 
 ![digital_forensics_process](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/digital_forensics_process.svg)
+
+---
+
+## Digital Forensics Process
 
 Key forensic tools:
 - **Volatility**: Memory forensics framework

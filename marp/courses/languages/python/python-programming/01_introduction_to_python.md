@@ -9,6 +9,7 @@
 - First released in 1991
 - Named after Monty Python's Flying Circus
 - Emphasizes code readability and simplicity
+
 ---
 ## A Brief History of Python
 - 1989: Guido van Rossum starts working on Python
@@ -19,6 +20,7 @@
 - 2008: Python 3.0 released
     - Major backwards-incompatible release
 - 2020: Python 2 end of life
+
 ---
 ## Python 2 vs Python 3
 | Feature | Python 2 | Python 3 |
@@ -28,6 +30,7 @@
 | Strings | ASCII by default | Unicode by default |
 | `range()` | Returns list | Returns iterator |
 | Support | Ended 2020 | Active |
+
 ---
 ## Why Python?
 - Easy to learn and read
@@ -36,6 +39,7 @@
 - Cross-platform (Windows, macOS, Linux)
 - Free and open source
 - Large and active community
+
 ---
 ## Python Use Cases
 - Web development (Django, Flask, FastAPI)
@@ -45,6 +49,7 @@
 - Scientific computing
 - Desktop applications
 - Game development
+
 ---
 ## Who Uses Python?
 - Google (YouTube, search infrastructure)
@@ -54,6 +59,7 @@
 - NASA (scientific computing)
 - Dropbox (desktop client)
 - Reddit (web platform)
+
 ---
 ## Python vs C/C++
 | Aspect | Python | C/C++ |
@@ -63,6 +69,7 @@
 | Memory | Automatic GC | Manual management |
 | Syntax | Simple | Complex |
 | Use case | Rapid development | Systems programming |
+
 ---
 ## Python vs Java
 | Aspect | Python | Java |
@@ -72,6 +79,7 @@
 | Indentation | Meaningful | Cosmetic |
 | Compilation | Interpreted | Compiled to bytecode |
 | OOP | Optional | Required |
+
 ---
 ## Python vs JavaScript
 | Aspect | Python | JavaScript |
@@ -81,6 +89,7 @@
 | Concurrency | GIL limits threads | Event loop |
 | Indentation | Meaningful | Cosmetic |
 | Package manager | pip | npm |
+
 ---
 ## Python vs Bash
 | Aspect | Python | Bash |
@@ -90,6 +99,7 @@
 | Data structures | Rich | Limited |
 | Error handling | Exceptions | Exit codes |
 | Best for | Complex scripts | Simple automation |
+
 ---
 ## The Zen of Python
 
@@ -102,12 +112,17 @@ import this
 - Simple is better than complex
 - Readability counts
 - There should be one obvious way to do it
+
 ---
 ## Python is Interpreted
+
 - Python code is compiled to bytecode (`.pyc` files)
 - Bytecode is executed by the Python Virtual Machine (PVM)
 - No separate compilation step needed
 - Trade-off: slower execution, faster development
+
+---
+## Python is Interpreted
 
 ![python_is_interpreted](svg/courses/languages/python/python-programming/01_introduction_to_python/python_is_interpreted.svg)
 
@@ -121,6 +136,7 @@ x = 42        # x is an int
 x = "hello"   # now x is a str
 x = [1, 2, 3] # now x is a list
 ```
+
 ---
 ## Dynamic Typing - Implications
 - More flexible code
@@ -132,6 +148,7 @@ x = [1, 2, 3] # now x is a list
 def greet(name: str) -> str:
     return f"Hello, {name}"
 ```
+
 ---
 ## Python is Strongly Typed
 - Python is dynamically typed but strongly typed
@@ -141,6 +158,7 @@ def greet(name: str) -> str:
 "hello" + 42  # TypeError!
 "hello" + str(42)  # "hello42" - explicit conversion
 ```
+
 ---
 ## Indentation Matters
 - Python uses indentation to define code blocks
@@ -153,6 +171,7 @@ if True:
     if True:
         print("This is more indented")
 ```
+
 ---
 ## Everything is an Object
 - In Python, everything is an object
@@ -165,6 +184,7 @@ print(type(x))    # <class 'int'>
 print(id(x))      # memory address
 print(x.__add__)   # even int has methods
 ```
+
 ---
 ## Python Implementations
 - **CPython**: The reference implementation (written in C)
@@ -173,6 +193,7 @@ print(x.__add__)   # even int has methods
 - **IronPython**: Runs on .NET
 - **MicroPython**: For microcontrollers
 - **GraalPy**: On GraalVM
+
 ---
 ## The Python Community
 - Python Enhancement Proposals (PEPs)
@@ -180,6 +201,7 @@ print(x.__add__)   # even int has methods
 - PEP 20: The Zen of Python
 - PyPI: Python Package Index (over 500,000 packages)
 - Annual PyCon conferences worldwide
+
 ---
 ## Python Versioning
 - Current stable: Python 3.12+
@@ -192,6 +214,7 @@ print(x.__add__)   # even int has methods
 import sys
 print(sys.version)
 ```
+
 ---
 ## The GIL (Global Interpreter Lock)
 - CPython has a Global Interpreter Lock
@@ -200,6 +223,7 @@ print(sys.version)
 - I/O-bound threads are not affected
 - Workarounds: `multiprocessing`, C extensions
 - Python 3.13+ has experimental free-threaded mode
+
 ---
 ## Python's Philosophy
 - "There should be one-- and preferably only one --obvious way to do it"
@@ -207,6 +231,7 @@ print(sys.version)
 - Explicit is better than implicit
 - Practicality beats purity
 - Errors should never pass silently
+
 ---
 ## REPL - Read Eval Print Loop
 - Python has an interactive interpreter
@@ -220,6 +245,7 @@ $ python3
 Hello
 >>> exit()
 ```
+
 ---
 ## Python in the Real World
 - Most popular language on GitHub (2024)
@@ -227,6 +253,7 @@ Hello
 - Fastest growing language for data science
 - Default language for AI/ML development
 - Used in education as first programming language
+
 ---
 ## Summary
 - Python is a high-level, interpreted, dynamically typed language

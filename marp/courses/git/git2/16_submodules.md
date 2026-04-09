@@ -40,7 +40,6 @@ main-project/
 ```
 
 ---
-
 ## Why Use Submodules?
 
 Benefits and trade-offs of submodules:
@@ -58,6 +57,9 @@ Benefits and trade-offs of submodules:
 - **Synchronization:** Can get out of sync easily
 - **Tooling:** Not all tools handle submodules well
 - **Nested issues:** Problems compound with multiple levels
+
+---
+## Why Use Submodules?
 
 ![why_use_submodules](svg/courses/git/git2/16_submodules/why_use_submodules.svg)
 

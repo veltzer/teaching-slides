@@ -1,10 +1,12 @@
 # SQL Injection
+
 ---
 ## What is SQL Injection?
 - A technique to exploit web applications by injecting malicious SQL statements
 - Attacker can gain unauthorized access to databases
 - Can lead to data theft, data manipulation, or even server takeover
 - Consistently ranked #1 or top 3 in OWASP Top 10 since 2003
+
 ---
 ## How Does SQL Injection Work?
 
@@ -177,6 +179,7 @@ $result = mysqli_query($conn, $query);
 1. **Least Privileged Accounts**: Use database accounts with minimal privileges
 1. **Web Application Firewalls (WAF)**: Deploy a WAF to filter malicious input
 1. **Security Updates**: Keep your software and libraries up-to-date
+
 ---
 ## Parameterized Queries
 

@@ -379,6 +379,7 @@ Create a library that:
 1. Includes documentation tests
 1. Uses test fixtures
 1. Has integration tests
+
 ---
 ## Common Pitfalls
 1. Inadequate error handling
@@ -386,6 +387,7 @@ Create a library that:
 1. Brittle tests
 1. Poor test organization
 1. Insufficient documentation
+
 ---
 ## Summary
 - Error types and handling

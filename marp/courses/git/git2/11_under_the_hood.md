@@ -39,7 +39,6 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
 ```
 
 ---
-
 ## Core Git Ideas
 
 **Three fundamental concepts:**
@@ -58,6 +57,9 @@ commit a1b2c3d4e5f67890123456789012345678901234567890123456789012345678
     - Same content = same hash everywhere
     - Enables distributed development
     - Natural deduplication
+
+---
+## Core Git Ideas
 
 ![core_git_ideas](svg/courses/git/git2/11_under_the_hood/core_git_ideas.svg)
 
@@ -513,7 +515,6 @@ size-pack 856      # KB in pack files
 ```
 
 ---
-
 ## Delta Compression
 
 How `Git` stores similar objects efficiently:
@@ -523,6 +524,9 @@ How `Git` stores similar objects efficiently:
 - Similar objects stored as differences
 - Chain of deltas for multiple versions
 - Automatic during packing operations
+
+---
+## Delta Compression
 
 ![delta_compression](svg/courses/git/git2/11_under_the_hood/delta_compression.svg)
 
@@ -699,7 +703,6 @@ git cat-file -p 557db03
 - `update-ref`: Update references
 
 ---
-
 ## Understanding Merge Mechanics
 
 What happens during a three-way merge:
@@ -712,6 +715,9 @@ What happens during a three-way merge:
 1. **Detect conflicts:** Mark conflicting changes
 1. **Create result:** New tree with merged content
 1. **Create merge commit:** With two parents
+
+---
+## Understanding Merge Mechanics
 
 ![understanding_merge_mechanics](svg/courses/git/git2/11_under_the_hood/understanding_merge_mechanics.svg)
 

@@ -7,6 +7,7 @@ level: intermediate
 category: architecture
 audience:
 - audiences:developers
+
 ---
 # Idempotency in Web Services
 ## Building Reliable APIs
@@ -15,14 +16,16 @@ audience:
 
 ---
 
+## What is Idempotency?
+
 ![title](svg/lectures/architecting/idempotency/title.svg)
+
+---
 
 ## What is Idempotency?
 
 **Idempotent**: An operation that can be performed multiple times with the same result
-
 > "No matter how many times you call it, the outcome is the same"
-
 Mathematical example: `f(f(x)) = f(x)`
 
 ---

@@ -27,9 +27,14 @@
 | Subdomain Takeover          | Claim dangling DNS records                | Low        |
 
 ---
+
 ## Registrar Account Attacks
 
 ![registrar_account_attacks](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_account_attacks.svg)
+
+---
+
+## Registrar Account Attacks
 
 - Weak passwords and lack of MFA on registrar accounts are the primary attack vector
 - Once inside, attacker can change nameservers, transfer the domain, or modify contact info
@@ -68,31 +73,38 @@ dig @9.9.9.9 example.com +short    # Quad9 DNS
 ```
 
 ---
+
 ## Expired Domain Takeover
 
 ![expired_domain_takeover](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/expired_domain_takeover.svg)
+
+---
+
+## Expired Domain Takeover
 
 **Why expired domains are valuable to attackers:**
 - May still have backlinks and SEO authority
 - Email sent to old addresses can be intercepted
 - Subdomains of other sites may still point to the expired domain
 - Existing trust relationships (SSL certificates, OAuth callbacks)
-
 ```bash
 # Tools to find expiring domains
 whois example.com | grep -i "expir"
-
 # Domain drop catching services monitor expiring domains
 # Attackers use these to grab high-value domains the moment they drop
 ```
 
 ---
+
 ## Subdomain Takeover
 
 ![subdomain_takeover](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/subdomain_takeover.svg)
 
-**Vulnerable services for subdomain takeover:**
+---
 
+## Subdomain Takeover
+
+**Vulnerable services for subdomain takeover:**
 | Service          | DNS Record Type | Fingerprint (when unclaimed)     |
 |------------------|-----------------|----------------------------------|
 | GitHub Pages     | CNAME           | "There isn't a GitHub Pages site"|
@@ -193,19 +205,22 @@ whois example.com | grep -i "status"
 ```
 
 ---
+
 ## DNSSEC: DNS Security Extensions
 
 ![dnssec_dns_security_extensions](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/dnssec_dns_security_extensions.svg)
+
+---
+
+## DNSSEC: DNS Security Extensions
 
 ```bash
 # Check if a domain has DNSSEC enabled
 dig example.com +dnssec +short
 dig DNSKEY example.com +short
-
 # Validate DNSSEC chain
 delv @8.8.8.8 example.com
 # Should show "fully validated"
-
 # Check DS records at parent zone
 dig DS example.com @a.gtld-servers.net +short
 ```

@@ -579,10 +579,13 @@ find /var/spool/at -type f -exec ls -la {} \;
 
 ![the_linux_boot_process](svg/courses/security/linux-forensics/02_linux_os_structure/the_linux_boot_process.svg)
 
+---
+
+## The Linux Boot Process
+
 ```bash
 # View boot configuration
 cat /boot/grub/grub.cfg | grep -E "menuentry|linux\s"
-
 # View kernel parameters used at boot
 cat /proc/cmdline
 ```

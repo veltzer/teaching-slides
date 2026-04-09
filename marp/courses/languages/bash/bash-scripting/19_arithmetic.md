@@ -1,4 +1,5 @@
 # Doing Arithmetic
+
 ---
 ## Integer Arithmetic: `$(( ))`
 
@@ -17,6 +18,7 @@ y=3
 echo $((x + y))      # 13
 echo $(($x + $y))    # 13 (also works, but $ is redundant)
 ```
+
 ---
 ## Assignment Operators
 
@@ -36,6 +38,7 @@ x=$((x + 5))     # x = 15 (long form)
 ((x--))            # x = 3 (post-decrement)
 ((--x))            # x = 2 (pre-decrement)
 ```
+
 ---
 ## The `(( ))` Command
 
@@ -57,6 +60,7 @@ fi
 # Ternary operator
 (( y = x > 0 ? x : -x ))    # absolute value
 ```
+
 ---
 ## Comparison Operators in `(( ))`
 
@@ -79,6 +83,7 @@ echo $(( 0xFF & 0x0F ))    # 15 (AND)
 echo $(( 0x0F | 0xF0 ))    # 255 (OR)
 echo $(( 1 << 8 ))         # 256 (left shift)
 ```
+
 ---
 ## Bases and Number Representation
 
@@ -103,6 +108,7 @@ printf "%x\n" 255    # ff
 printf "%o\n" 255    # 377
 printf "%08b\n" 42   # not standard, use bc
 ```
+
 ---
 ## Integer Overflow
 
@@ -115,6 +121,7 @@ echo $((2**63))               # -9223372036854775808 (overflow!)
 # No warning, no error — just wraps around
 # If you need larger numbers, use bc or python
 ```
+
 ---
 ## Floating Point: The Problem
 
@@ -125,6 +132,7 @@ echo $((1.5 + 2.5))     # syntax error!
 
 # You MUST use external tools for floating point
 ```
+
 ---
 ## Floating Point with `bc`
 
@@ -155,6 +163,7 @@ area
 CALC
 # 78.539816
 ```
+
 ---
 ## Floating Point with `awk`
 
@@ -177,6 +186,7 @@ y=3.7
 awk "BEGIN {print $x + $y}"
 # 6.2
 ```
+
 ---
 ## Floating Point with `python3`
 
@@ -200,6 +210,7 @@ calc() {
 calc "2**100"
 # 1267650600228229401496703205376
 ```
+
 ---
 ## Floating Point Comparison
 
@@ -224,6 +235,7 @@ if [[ $(echo -e "$a\n$b" | sort -V | tail -1) == "$a" ]]; then
     echo "$a >= $b"
 fi
 ```
+
 ---
 ## `let` Command
 
@@ -244,6 +256,7 @@ echo "$c"    # 8
 
 # Prefer (( )) over let — it's more readable
 ```
+
 ---
 ## Practical: Unit Conversion Script
 

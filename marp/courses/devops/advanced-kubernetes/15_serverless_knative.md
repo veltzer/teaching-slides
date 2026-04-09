@@ -90,10 +90,12 @@ kubectl apply -f hello-service.yaml
 ```
 
 ---
-
 ## `Knative` Concepts
 
 ![knative_concepts](svg/courses/devops/advanced-kubernetes/15_serverless_knative/knative_concepts.svg)
+
+---
+## `Knative` Concepts
 
 - **Configuration**: Desired state of the workload
 - **Revision**: Immutable snapshot (like a git commit)
@@ -250,6 +252,7 @@ spec:
       apiVersion: serving.knative.dev/v1
       kind: Service
       name: event-processor
+
 ---
 apiVersion: sources.knative.dev/v1beta1
 kind: KafkaSource
@@ -278,6 +281,7 @@ kind: Broker
 metadata:
   name: default
   namespace: production
+
 ---
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
@@ -294,6 +298,7 @@ spec:
       apiVersion: serving.knative.dev/v1
       kind: Service
       name: order-fulfillment
+
 ---
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
@@ -449,6 +454,7 @@ spec:
     name: api
     kind: Service
     apiVersion: serving.knative.dev/v1
+
 ---
 # Configure TLS
 apiVersion: serving.knative.dev/v1beta1

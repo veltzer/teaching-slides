@@ -1,19 +1,31 @@
 # Linux Boot System
 ## Understanding systemd and Boot Process
+
 ---
+
 ## Linux Boot Sequence
 
 ![linux_boot_sequence](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/linux_boot_sequence.svg)
+
+---
+
+## Linux Boot Sequence
 
 1. BIOS/UEFI initialization
 1. Bootloader (GRUB) loads kernel
 1. Kernel initialization
 1. systemd starts system
 1. Services start in parallel
+
 ---
+
 ## Old SysV Init System
 
 ![old_sysv_init_system](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/old_sysv_init_system.svg)
+
+---
+
+## Old SysV Init System
 
 Traditional runlevels:
 - 0: Halt
@@ -25,9 +37,14 @@ Traditional runlevels:
 - 6: Reboot
 
 ---
+
 ## systemd Introduction
 
 ![systemd_introduction](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_introduction.svg)
+
+---
+
+## systemd Introduction
 
 Key features:
 - Service management
@@ -38,12 +55,16 @@ Key features:
 - Logging (journald)
 
 ---
+
 ## systemd Units
 
 ![systemd_units](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_units.svg)
 
-Common unit types:
+---
 
+## systemd Units
+
+Common unit types:
 ```bash
 # Service units
 .service    # System services
@@ -75,12 +96,16 @@ systemctl disable nginx.service
 ```
 
 ---
+
 ## Service Management
 
 ![service_management](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_management.svg)
 
-Common operations:
+---
 
+## Service Management
+
+Common operations:
 ```bash
 # Manage service
 systemctl start service
@@ -88,7 +113,6 @@ systemctl stop service
 systemctl restart service
 systemctl reload service
 systemctl status service
-
 # View service logs
 journalctl -u service
 ```
@@ -115,25 +139,27 @@ WantedBy=multi-user.target
 ```
 
 ---
+
 ## Service File Sections
 
 ![service_file_sections](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/service_file_sections.svg)
 
-Common options:
+---
 
+## Service File Sections
+
+Common options:
 ```ini
 # Unit section
 Description=
 After=
 Requires=
 Wants=
-
 # Service section
 Type=
 ExecStart=
 User=
 Restart=
-
 # Install section
 WantedBy=
 ```
@@ -214,40 +240,43 @@ exit 0
 ```
 
 ---
+
 ## Systemd Targets
 
 ![systemd_targets](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/systemd_targets.svg)
 
-Target management:
+---
 
+## Systemd Targets
+
+Target management:
 ```bash
 # Get default target
 systemctl get-default
-
 # Set default target
 systemctl set-default multi-user.target
-
 # Switch target
 systemctl isolate graphical.target
 ```
 
 ---
+
 ## Troubleshooting Boot Issues
 
 ![troubleshooting_boot_issues](svg/courses/operating_systems/linux-fundamentals/12_boot_systemd/troubleshooting_boot_issues.svg)
 
-Debug commands:
+---
 
+## Troubleshooting Boot Issues
+
+Debug commands:
 ```bash
 # View boot logs
 journalctl -b
-
 # Check failed units
 systemctl --failed
-
 # Boot messages
 dmesg
-
 # System status
 systemctl status
 ```

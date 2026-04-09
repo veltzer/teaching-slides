@@ -1,4 +1,5 @@
 # Writing Bash Functions
+
 ---
 ## Day 3: Functions, Types & Advanced
 - Functions: definition, return codes, parameters
@@ -6,6 +7,7 @@
 - Arithmetic: integer and floating point
 - Arrays and associative arrays in depth
 - Timing, OOP patterns, test harnesses, aliases
+
 ---
 ## Defining Functions
 
@@ -29,6 +31,7 @@ function greet() {
 greet "World"     # Hello, World!
 greet Alice       # Hello, Alice!
 ```
+
 ---
 ## Functions are Commands
 
@@ -55,6 +58,7 @@ if is_even 42; then
     echo "42 is even"
 fi
 ```
+
 ---
 ## Function Parameters
 
@@ -76,6 +80,7 @@ process_file "file1.txt" "file2.txt"
 # All function args: file1.txt file2.txt
 # Number of args: 2
 ```
+
 ---
 ## Return Codes from Functions
 
@@ -100,6 +105,7 @@ get_sum() {
 }
 get_sum 200 200    # returns 400 % 256 = 144!
 ```
+
 ---
 ## Returning Values from Functions
 
@@ -125,6 +131,7 @@ get_count() {
 get_count num_lines /etc/passwd
 echo "Lines: $num_lines"
 ```
+
 ---
 ## Local Variables
 
@@ -146,6 +153,7 @@ x=1
 good_function
 echo "outside: $x"       # 1 (unchanged)
 ```
+
 ---
 ## Always Use `local`
 
@@ -167,6 +175,7 @@ process() {
     echo "$count lines processed"
 }
 ```
+
 ---
 ## Pass By Reference (`nameref`)
 
@@ -193,6 +202,7 @@ fill_array() {
 fill_array my_array
 echo "${my_array[@]}"    # one two three
 ```
+
 ---
 ## Recursive Functions
 
@@ -216,6 +226,7 @@ echo "5! = $(factorial 5)"    # 120
 # but stack will overflow)
 FUNCNEST=100    # limit to 100 levels
 ```
+
 ---
 ## Function Libraries
 
@@ -243,6 +254,7 @@ require_command jq
 require_command curl
 log_info "All dependencies found"
 ```
+
 ---
 ## Function Scope: Dynamic Scoping
 
@@ -265,6 +277,7 @@ outer    # prints x=10
 # Python, JavaScript, C all use lexical scoping
 # bash is different!
 ```
+
 ---
 ## Variadic Functions
 
@@ -288,6 +301,7 @@ process_files() {
 }
 process_files *.txt
 ```
+
 ---
 ## Decorator Pattern
 
@@ -310,6 +324,7 @@ with_timing sleep 2
 
 with_timing find /usr -name "*.so" -type f > /dev/null
 ```
+
 ---
 ## Functions vs Scripts vs Aliases
 ![functions_vs_scripts_vs_aliases](svg/courses/languages/bash/bash-scripting/17_functions/functions_vs_scripts_vs_aliases.svg)

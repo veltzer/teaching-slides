@@ -59,11 +59,17 @@ Understanding the fundamentals of DevOps practices and culture
 - User experience focus
 
 ---
-
 ## Breaking Down Silos
 
 Before:
+
+---
+## Breaking Down Silos
+
 ![breaking_down_silos_1](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_1.svg)
+
+---
+## Breaking Down Silos
 
 After:
 ![breaking_down_silos_2](svg/courses/devops/welcome-to-the-world-of-devops/01_what_is_devops/breaking_down_silos_2.svg)

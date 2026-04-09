@@ -1,4 +1,5 @@
 # Exceptions
+
 ---
 ## What are Exceptions?
 - Exceptions are errors that occur during program execution
@@ -12,6 +13,7 @@ print(1 / 0)
 print(int("hello"))
 # ValueError: invalid literal for int()
 ```
+
 ---
 ## EAFP vs LBYL
 - **EAFP**: Easier to Ask Forgiveness than Permission
@@ -28,6 +30,7 @@ try:
 except KeyError:
     value = default
 ```
+
 ---
 ## Common Built-in Exceptions
 | Exception | Cause |
@@ -41,6 +44,7 @@ except KeyError:
 | `ZeroDivisionError` | Division by zero |
 | `ImportError` | Failed import |
 | `NameError` | Undefined variable |
+
 ---
 ## The `try`/`except` Statement
 
@@ -53,6 +57,7 @@ except ZeroDivisionError:
 
 print(result)  # 0
 ```
+
 ---
 ## Catching the Exception Object
 
@@ -65,6 +70,7 @@ except ValueError as e:
     print(type(e))
     # <class 'ValueError'>
 ```
+
 ---
 ## Catching Multiple Exceptions
 
@@ -79,6 +85,7 @@ except ValueError as e:
 except (TypeError, AttributeError) as e:
     print(f"Type or attribute error: {e}")
 ```
+
 ---
 ## Catching All Exceptions
 
@@ -93,6 +100,7 @@ except Exception as e:
 - `except BaseException` catches ALL (including `KeyboardInterrupt`)
 - Avoid bare `except:` without a type
 - Catching too broadly hides bugs
+
 ---
 ## The `else` Clause
 
@@ -109,6 +117,7 @@ else:
 
 - `else` executes only if `try` block succeeds
 - Keeps the `try` block minimal
+
 ---
 ## The `finally` Clause
 
@@ -125,6 +134,7 @@ finally:
 
 - `finally` runs regardless of exception
 - Used for cleanup (closing files, connections, etc.)
+
 ---
 ## `try`/`except`/`else`/`finally`
 
@@ -143,6 +153,7 @@ finally:
 Result: 5.0
 Done!
 ```
+
 ---
 ## Raising Exceptions
 
@@ -159,6 +170,7 @@ try:
 except ValueError as e:
     print(e)  # Age must be non-negative
 ```
+
 ---
 ## Re-raising Exceptions
 
@@ -175,6 +187,7 @@ def process_data(data):
 
 - Use bare `raise` to re-raise the current exception
 - Preserves the original traceback
+
 ---
 ## Exception Chaining
 
@@ -195,6 +208,7 @@ except RuntimeError as e:
 
 - `raise ... from ...` chains exceptions
 - Original exception is preserved as `__cause__`
+
 ---
 ## Custom Exceptions
 
@@ -216,6 +230,7 @@ try:
 except AppError as e:
     print(f"App error: {e}")
 ```
+
 ---
 ## Custom Exceptions with Data
 
@@ -233,6 +248,7 @@ except HttpError as e:
     print(e.message)      # Page not found
     print(e)              # 404: Page not found
 ```
+
 ---
 ## Exception Hierarchy
 
@@ -254,6 +270,7 @@ BaseException
        +-- RuntimeError
        +-- StopIteration
 ```
+
 ---
 ## `BaseException` vs `Exception`
 - `BaseException`: Root of all exceptions
@@ -271,6 +288,7 @@ except KeyboardInterrupt:
     # This catches Ctrl+C
     print("Interrupted!")
 ```
+
 ---
 ## Exception Groups (Python 3.11+)
 
@@ -291,6 +309,7 @@ except* ValueError as eg:
     for e in eg.exceptions:
         print(f"Error: {e}")
 ```
+
 ---
 ## Context Managers and Exceptions
 
@@ -307,6 +326,7 @@ try:
 finally:
     f.close()
 ```
+
 ---
 ## Suppressing Exceptions
 
@@ -323,6 +343,7 @@ except FileNotFoundError:
 with suppress(FileNotFoundError):
     os.remove("temp.txt")
 ```
+
 ---
 ## Traceback Information
 
@@ -338,6 +359,7 @@ except ZeroDivisionError:
     tb_str = traceback.format_exc()
     # Get traceback as string
 ```
+
 ---
 ## Accessing Traceback Programmatically
 
@@ -352,6 +374,7 @@ except ZeroDivisionError:
     print(f"Value: {exc_value}")
     print(f"Traceback: {exc_tb}")
 ```
+
 ---
 ## Warnings vs Exceptions
 
@@ -369,6 +392,7 @@ def deprecated_function():
 result = deprecated_function()
 # Warning is shown but execution continues
 ```
+
 ---
 ## Best Practices - Be Specific
 
@@ -385,6 +409,7 @@ try:
 except KeyError:
     value = default
 ```
+
 ---
 ## Best Practices - Keep `try` Blocks Small
 
@@ -408,6 +433,7 @@ else:
     result = process(parsed)
     save(result)
 ```
+
 ---
 ## Best Practices - Don't Silence Exceptions
 
@@ -424,6 +450,7 @@ try:
 except Exception as e:
     logging.error(f"Operation failed: {e}")
 ```
+
 ---
 ## Best Practices - Use Custom Exceptions
 
@@ -441,6 +468,7 @@ def validate(data):
     if not data:
         raise EmptyDataError("Data is empty")
 ```
+
 ---
 ## Common Patterns - Retry Logic
 
@@ -457,6 +485,7 @@ def retry(func, max_attempts=3, delay=1):
             print(f"Attempt {attempt + 1} failed: {e}")
             time.sleep(delay)
 ```
+
 ---
 ## Common Patterns - Default Values
 
@@ -477,6 +506,7 @@ print(safe_int("42"))       # 42
 print(safe_int("hello"))    # 0
 print(safe_int(None, -1))   # -1
 ```
+
 ---
 ## `assert` Statement
 
@@ -495,6 +525,7 @@ print(calculate_average([1, 2, 3]))  # 2.0
 - Use for debugging and internal checks
 - Disabled with `python -O` (optimized mode)
 - Never use for input validation
+
 ---
 ## Summary
 - Exceptions interrupt normal flow; `try`/`except` handles them

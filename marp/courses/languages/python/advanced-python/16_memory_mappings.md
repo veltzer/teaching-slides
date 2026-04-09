@@ -1,7 +1,6 @@
 # Memory Mappings
 
 ---
-
 ## What Are Memory Mappings?
 
 - Memory mapping is a mechanism that maps a file or device into memory
@@ -10,7 +9,6 @@
 - Enables efficient I/O and inter-process communication
 
 ---
-
 ## Virtual Memory Fundamentals
 
 - Abstraction that provides each process with its own address space
@@ -18,10 +16,12 @@
 - Enables memory protection between processes
 - Allows programs to use more memory than physically available
 
+---
+## Virtual Memory Fundamentals
+
 ![virtual_memory_fundamentals](svg/courses/languages/python/advanced-python/16_memory_mappings/virtual_memory_fundamentals.svg)
 
 ---
-
 ## Memory Mapping Mechanism
 
 - Creates a region in virtual address space
@@ -30,7 +30,6 @@
 - The kernel handles the actual I/O operations
 
 ---
-
 ## Key Components
 
 - Virtual Memory Manager (VMM)
@@ -40,7 +39,6 @@
 - Page faults and handlers
 
 ---
-
 ## Page Tables
 
 - Data structures that map virtual addresses to physical addresses
@@ -48,10 +46,12 @@
 - Each process has its own page table structure
 - Managed by the operating system kernel
 
+---
+## Page Tables
+
 ![page_tables](svg/courses/languages/python/advanced-python/16_memory_mappings/page_tables.svg)
 
 ---
-
 ## mmap() System Call
 
 - Primary interface for memory mapping in UNIX-like systems
@@ -60,7 +60,6 @@
 - Returns a pointer to the mapped region
 
 ---
-
 ## mmap() Parameters
 
 - `addr`: Suggested address for mapping (or NULL)
@@ -71,7 +70,6 @@
 - `offset`: Offset within the file
 
 ---
-
 ## Types of Memory Mappings
 
 - File-backed mappings
@@ -83,7 +81,6 @@
 - Shared vs. Private mappings
 
 ---
-
 ## File-Backed Mappings
 
 - Maps a file directly into memory
@@ -91,10 +88,12 @@
 - Writes may be cached and flushed later
 - Enables efficient file I/O without explicit read/write calls
 
+---
+## File-Backed Mappings
+
 ![file_backed_mappings](svg/courses/languages/python/advanced-python/16_memory_mappings/file_backed_mappings.svg)
 
 ---
-
 ## Anonymous Mappings
 
 - Not backed by any file
@@ -103,7 +102,6 @@
 - Common use cases: malloc implementation, stack growth
 
 ---
-
 ## Shared vs. Private Mappings
 
 - Shared (MAP_SHARED)
@@ -115,7 +113,6 @@
   1. No updates to the backing file
 
 ---
-
 ## Copy-on-Write (CoW)
 
 - Optimization technique for memory mappings
@@ -123,10 +120,12 @@
 - On write, a private copy is created for the process
 - Reduces memory consumption and improves performance
 
+---
+## Copy-on-Write (CoW)
+
 ![copy_on_write_cow](svg/courses/languages/python/advanced-python/16_memory_mappings/copy_on_write_cow.svg)
 
 ---
-
 ## Benefits of Memory Mappings
 
 - Reduced CPU usage (no explicit read/write system calls)
@@ -136,7 +135,6 @@
 - Efficient sharing of memory between processes
 
 ---
-
 ## Performance Considerations
 
 - Page size affects granularity and overhead
@@ -146,7 +144,6 @@
 - TLB misses can be costly
 
 ---
-
 ## Memory-Mapped Files Use Cases
 
 - Databases (for data files and indexes)
@@ -156,7 +153,6 @@
 - Real-time data processing
 
 ---
-
 ## Implementation in Linux
 
 - VMA (Virtual Memory Area) structures
@@ -165,10 +161,12 @@
 - Kernel functions: do_mmap(), handle_mm_fault()
 - File system integration
 
+---
+## Implementation in Linux
+
 ![implementation_in_linux](svg/courses/languages/python/advanced-python/16_memory_mappings/implementation_in_linux.svg)
 
 ---
-
 ## Memory Mapping Security Implications
 
 - Possible data leakage through improper unmapping
@@ -178,7 +176,6 @@
 - Protection against unauthorized access
 
 ---
-
 ## Advanced Features
 
 - MAP_HUGETLB for huge pages
@@ -188,7 +185,6 @@
 - Remote memory mappings (RDMA)
 
 ---
-
 ## Debugging Memory Mappings
 
 - /proc/[pid]/maps file shows process mappings
@@ -198,7 +194,6 @@
 - Memory mapping core dumps
 
 ---
-
 ## Memory Mappings vs. Read/Write
 
 - Memory mappings:
@@ -211,7 +206,6 @@
   1. Works for non-seekable files
 
 ---
-
 ## Summary
 
 - Memory mappings provide a powerful I/O mechanism

@@ -110,6 +110,7 @@ spec:
       containers:
       - name: web
         image: myapp:v1
+
 ---
 # Green deployment (new)
 apiVersion: apps/v1
@@ -208,6 +209,7 @@ spec:
         host: web
         subset: canary
       weight: 5
+
 ---
 apiVersion: networking.istio.io/v1beta1
 kind: DestinationRule

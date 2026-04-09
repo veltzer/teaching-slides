@@ -13,6 +13,7 @@ audience:
   - audiences:developers
   - audiences:testers
 duration_hours: 40
+
 ---
 # Web Application Hacking
 ## Mark Veltzer

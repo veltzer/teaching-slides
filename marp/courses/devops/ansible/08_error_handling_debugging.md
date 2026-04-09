@@ -394,6 +394,7 @@ ansible-lint playbooks/
 
 ```yaml
 # .ansible-lint
+
 ---
 exclude_paths:
   - .cache/
@@ -443,6 +444,7 @@ yamllint site.yml
 
 # yamllint configuration
 # .yamllint
+
 ---
 extends: default
 rules:

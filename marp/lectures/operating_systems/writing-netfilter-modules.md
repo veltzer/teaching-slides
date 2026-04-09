@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # Writing Netfilter Modules
 ## An Introduction with Examples
@@ -15,9 +16,14 @@ audience:
 
 ---
 
+## Outline
+
 ![title](svg/lectures/operating_systems/writing-netfilter-modules/title.svg)
 
+---
+
 ## Outline
+
 1. Introduction to Netfilter
 1. Netfilter Hook Points
 1. Basic Structure of a Netfilter Module
@@ -26,12 +32,14 @@ audience:
 1. Compiling and Loading Netfilter Modules
 1. Concurrency in Netfilter Modules
 1. Best Practices and Considerations
+
 ---
 ## Introduction to Netfilter
 - Netfilter is the packet filtering framework in the Linux kernel
 - It allows packet filtering, network address translation (NAT), and other packet mangling
 - Netfilter provides a set of hooks in the networking stack
 - Modules can register callback functions with these hooks
+
 ---
 ## Netfilter Hook Points
 Five main hook points:
@@ -41,6 +49,7 @@ Five main hook points:
 1. `NF_INET_LOCAL_OUT`
 1. `NF_INET_POST_ROUTING`
 Each hook point allows you to intercept and modify packets at different stages of processing.
+
 ---
 ## Basic Structure of a Netfilter Module
 

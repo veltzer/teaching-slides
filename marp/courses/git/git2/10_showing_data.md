@@ -98,7 +98,6 @@ git log --author="Jane" --since="1 month ago" --grep="feature"
 ```
 
 ---
-
 ## Git Log with Visual Elements
 
 Create informative visual representations:
@@ -113,6 +112,9 @@ git log --graph --oneline --decorate --all
 # Compact branch view
 git log --oneline --graph --all -10
 ```
+
+---
+## Git Log with Visual Elements
 
 ![compact_branch_view](svg/courses/git/git2/10_showing_data/compact_branch_view.svg)
 
@@ -283,6 +285,7 @@ git show-branch --all
 * [main] Latest commit on main
  ! [develop] Latest commit on develop
   * [feature] Latest commit on feature
+
 ---
   * [feature] Add new feature
   * [feature^] Start feature work

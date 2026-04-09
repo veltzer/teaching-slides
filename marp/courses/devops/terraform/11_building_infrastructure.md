@@ -281,7 +281,6 @@ resource "aws_instance" "web" {
 ```
 
 ---
-
 ## Connection via Bastion Host
 
 ```hcl
@@ -290,12 +289,14 @@ connection {
   user        = "ubuntu"
   private_key = file("~/.ssh/id_rsa")
   host        = self.private_ip
-
   bastion_host        = aws_instance.bastion.public_ip
   bastion_user        = "ubuntu"
   bastion_private_key = file("~/.ssh/bastion_key")
 }
 ```
+
+---
+## Connection via Bastion Host
 
 ![connection_via_bastion_host](svg/courses/devops/terraform/11_building_infrastructure/connection_via_bastion_host.svg)
 

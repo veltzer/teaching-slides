@@ -1,12 +1,17 @@
 # UNIX Basics
 ## Getting Started with the Command Line
+
 ---
+
 ## Logging In and Out
 
 ![logging_in_and_out](svg/courses/operating_systems/linux-fundamentals/02_basics/logging_in_and_out.svg)
 
-Common commands:
+---
 
+## Logging In and Out
+
+Common commands:
 ```bash
 logout    # Clean shell exit
 exit      # Exit current shell
@@ -14,37 +19,42 @@ Ctrl+D    # EOF (same as exit)
 ```
 
 ---
+
 ## Password Management
 
 ```bash
 # Change your password
 passwd
-
 # View password status
 passwd -S
-
 # Force password change on next login (root only)
 chage -d 0 username
 ```
 
+---
+
+## Password Management
+
 ![force_password_change_on_next_login_root_only](svg/courses/operating_systems/linux-fundamentals/02_basics/force_password_change_on_next_login_root_only.svg)
 
 ---
+
 ## Command Structure
 
 Basic syntax:
-
 ```bash
 command [options] [arguments]
 ```
-
 Examples:
-
 ```bash
 ls -l /home
 cp -r source_dir destination_dir
 find /home -name "*.txt"
 ```
+
+---
+
+## Command Structure
 
 ![command_structure](svg/courses/operating_systems/linux-fundamentals/02_basics/command_structure.svg)
 
@@ -74,28 +84,35 @@ mv old.txt new.txt
 ```
 
 ---
+
 ## Getting Help
 
 ```bash
 # View manual page
 man ls
-
 # Short command help
 ls --help
-
 # Search manual pages
 apropos "list files"
-
 # View command type
 type ls
 ```
 
+---
+
+## Getting Help
+
 ![view_command_type](svg/courses/operating_systems/linux-fundamentals/02_basics/view_command_type.svg)
 
 ---
+
 ## Control Characters
 
 ![control_characters](svg/courses/operating_systems/linux-fundamentals/02_basics/control_characters.svg)
+
+---
+
+## Control Characters
 
 Common control characters:
 | Key      | Function          |
@@ -107,12 +124,16 @@ Common control characters:
 | Ctrl+R   | Search history   |
 
 ---
+
 ## Command Line Editing
 
 ![command_line_editing](svg/courses/operating_systems/linux-fundamentals/02_basics/command_line_editing.svg)
 
-Navigation shortcuts:
+---
 
+## Command Line Editing
+
+Navigation shortcuts:
 ```bash
 Ctrl+A  # Move to beginning of line
 Ctrl+E  # Move to end of line
@@ -146,20 +167,22 @@ mv backup_notes.txt ../notes_backup.txt
 ```
 
 ---
+
 ## Common Mistakes and Solutions
 
 ![common_mistakes_and_solutions](svg/courses/operating_systems/linux-fundamentals/02_basics/common_mistakes_and_solutions.svg)
 
-Solutions:
+---
 
+## Common Mistakes and Solutions
+
+Solutions:
 ```bash
 # Permission denied
 sudo command
-
 # Command not found
 which command
 echo $PATH
-
 # File not found
 ls -la
 pwd

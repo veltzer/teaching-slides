@@ -69,8 +69,11 @@
 
 ![the_cve_process](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/the_cve_process.svg)
 
-### CVSS Severity Ratings
+---
 
+## The CVE Process
+
+### CVSS Severity Ratings
 | Score    | Severity | Example                                  |
 |----------|----------|------------------------------------------|
 | 0.0      | None     | Informational finding                    |
@@ -84,6 +87,10 @@
 ## Responsible Disclosure
 
 ![responsible_disclosure](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/responsible_disclosure.svg)
+
+---
+
+## Responsible Disclosure
 
 - Google Project Zero standard: 90-day disclosure deadline
 - If vendor does not patch within 90 days, vulnerability is published
@@ -220,6 +227,10 @@ sudo yum updateinfo list security
 
 ![virtual_patching](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/virtual_patching.svg)
 
+---
+
+## Virtual Patching
+
 ```bash
 # Example: Virtual patch for Log4Shell using ModSecurity
 # Block JNDI lookup patterns in all input
@@ -231,7 +242,6 @@ SecRule REQUEST_HEADERS|ARGS|REQUEST_BODY \
      status:403, \
      log, \
      msg:'Possible Log4Shell exploit attempt'"
-
 # WAF rule for Nginx (using lua-resty-waf or similar)
 # Block requests containing JNDI patterns
 location / {

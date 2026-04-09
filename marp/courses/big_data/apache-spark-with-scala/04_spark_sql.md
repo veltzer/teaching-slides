@@ -228,11 +228,16 @@ df1.crossJoin(df2)
 ```
 
 ---
+## Performance Optimization
 
 [Continue with remaining content, adding diagrams for:]
 
+---
 ## Performance Optimization
 
 ![performance_optimization](svg/courses/big_data/apache-spark-with-scala/04_spark_sql/performance_optimization.svg)
+
+---
+## Performance Optimization
 
 [Continue until approximately 40 slides...]

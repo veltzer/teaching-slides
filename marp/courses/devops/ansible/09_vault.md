@@ -82,6 +82,7 @@ ansible-vault encrypt_string 'SuperSecretPassword123' \
 
 ```yaml
 # group_vars/production/vault.yml (encrypted file)
+
 ---
 vault_db_password: SuperSecretPassword123
 vault_api_key: sk-abc123def456
@@ -91,6 +92,7 @@ vault_ssl_private_key: |
   -----END PRIVATE KEY-----
 
 # group_vars/production/vars.yml (plain text)
+
 ---
 db_password: "{{ vault_db_password }}"
 api_key: "{{ vault_api_key }}"
@@ -104,6 +106,7 @@ ssl_key: "{{ vault_ssl_private_key }}"
 ```yaml
 # Mix encrypted and plain variables in the same file
 # group_vars/all.yml
+
 ---
 app_name: mywebapp
 app_port: 8080

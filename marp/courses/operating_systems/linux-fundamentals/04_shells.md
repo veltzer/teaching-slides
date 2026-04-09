@@ -7,6 +7,10 @@
 
 ![why_use_a_shell](svg/courses/operating_systems/linux-fundamentals/04_shells/why_use_a_shell.svg)
 
+---
+
+## Why Use a Shell
+
 The shell is your interface to the system:
 - Command interpretation
 - Script execution
@@ -27,15 +31,17 @@ The shell is your interface to the system:
 # Setting variables
 name="John"
 age=25
-
 # Using variables
 echo $name
 echo ${name}
-
 # Environment variables
 export PATH=$PATH:/new/path
 echo $PATH
 ```
+
+---
+
+## Shell Variables: Bourne Family (sh/ksh/bash)
 
 ![environment_variables](svg/courses/operating_systems/linux-fundamentals/04_shells/environment_variables.svg)
 
@@ -95,15 +101,16 @@ set files = `ls`
 
 ![glob_patterns](svg/courses/operating_systems/linux-fundamentals/04_shells/glob_patterns.svg)
 
-Examples:
+---
 
+## Glob Patterns
+
+Examples:
 ```bash
 # List all text files
 ls *.txt
-
 # Match single character
 ls file?.txt
-
 # Match character range
 ls [a-z]*.txt
 ```
@@ -114,21 +121,20 @@ ls [a-z]*.txt
 
 ![input_output_redirection](svg/courses/operating_systems/linux-fundamentals/04_shells/input_output_redirection.svg)
 
-Examples:
+---
 
+## Input/Output Redirection
+
+Examples:
 ```bash
 # Redirect input
 sort < input.txt
-
 # Redirect output
 ls > output.txt
-
 # Append output
 echo "new line" >> file.txt
-
 # Redirect error
 command 2> error.log
-
 # Redirect both
 command > output.txt 2> error.log
 ```
@@ -170,18 +176,18 @@ unalias ll
 
 ![pipes](svg/courses/operating_systems/linux-fundamentals/04_shells/pipes.svg)
 
-Examples:
+---
 
+## Pipes
+
+Examples:
 ```bash
 # Count files
 ls | wc -l
-
 # Find specific processes
 ps aux | grep nginx
-
 # Sort and unique
 cat file.txt | sort | uniq
-
 # Complex pipeline
 find . -type f | grep ".txt" | xargs wc -l
 ```
@@ -225,17 +231,18 @@ history
 
 ![session_initialization](svg/courses/operating_systems/linux-fundamentals/04_shells/session_initialization.svg)
 
-Files for Bourne Family:
+---
 
+## Session Initialization
+
+Files for Bourne Family:
 ```bash
 /etc/profile            # System-wide
 ~/.profile             # User login
 ~/.bashrc              # Interactive bash
 ~/.bash_profile        # Login specific
 ```
-
 Files for C Shell Family:
-
 ```bash
 /etc/csh.cshrc         # System-wide
 ~/.cshrc               # User specific

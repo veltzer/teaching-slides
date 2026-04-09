@@ -1,4 +1,5 @@
 # C Syntax Refresher
+
 ---
 ## Basic Program Structure
 

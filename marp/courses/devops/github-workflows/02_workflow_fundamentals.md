@@ -151,23 +151,35 @@ jobs:
 ![job_dependency_flow](svg/courses/devops/github-workflows/02_workflow_fundamentals/job_dependency_flow.svg)
 
 ---
-
 ## Workflow Status Badges
 
 - Add a badge to your `README.md`:
-
 ```markdown
-![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
-```
 
+---
+## Workflow Status Badges
+
+![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
+
+---
+## Workflow Status Badges
+
+```
 - Badge shows the status of the latest run:
     - Green: passing
     - Red: failing
     - Gray: no runs yet
 - You can filter by branch:
-
 ```markdown
+
+---
+## Workflow Status Badges
+
 ![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
+
+---
+## Workflow Status Badges
+
 ```
 
 ---

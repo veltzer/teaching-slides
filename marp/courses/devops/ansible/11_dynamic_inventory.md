@@ -67,6 +67,7 @@ enable_plugins = amazon.aws.aws_ec2, azure.azcollection.azure_rm, google.cloud.g
 
 ```yaml
 # inventory/aws_ec2.yml
+
 ---
 plugin: amazon.aws.aws_ec2
 
@@ -110,6 +111,7 @@ compose:
 
 ```yaml
 # inventory/aws_ec2.yml
+
 ---
 plugin: amazon.aws.aws_ec2
 regions:
@@ -187,6 +189,7 @@ ansible -i inventory/aws_ec2.yml all -m ping
 
 ```yaml
 # inventory/azure_rm.yml
+
 ---
 plugin: azure.azcollection.azure_rm
 
@@ -225,6 +228,7 @@ compose:
 
 ```yaml
 # inventory/gcp_compute.yml
+
 ---
 plugin: google.cloud.gcp_compute
 
@@ -337,6 +341,7 @@ ansible-playbook -i inventory/custom_inventory.py site.yml
 ```yaml
 # In inventory plugin config
 # inventory/aws_ec2.yml
+
 ---
 plugin: amazon.aws.aws_ec2
 cache: true
@@ -389,6 +394,7 @@ ansible-playbook -i inventory/ site.yml
 
 ```yaml
 # inventory/constructed.yml
+
 ---
 plugin: constructed
 strict: false

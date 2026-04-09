@@ -7,6 +7,10 @@
 
 ![the_evolution_of_networking](svg/courses/networking/networking-basics/08_modern_networking/the_evolution_of_networking.svg)
 
+---
+
+## The Evolution of Networking
+
 Key trends driving modern networking:
 - **Cloud computing**: networks must be dynamic and programmable
 - **Microservices**: thousands of services need to communicate
@@ -20,7 +24,15 @@ Key trends driving modern networking:
 
 SDN separates the **control plane** (decision-making) from the **data plane** (packet forwarding).
 
+---
+
+## Software-Defined Networking (SDN)
+
 ![software_defined_networking_sdn](svg/courses/networking/networking-basics/08_modern_networking/software_defined_networking_sdn.svg)
+
+---
+
+## Software-Defined Networking (SDN)
 
 **Benefits of SDN:**
 - Centralized network management and visibility
@@ -34,8 +46,11 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 
 ![sdn_architecture](svg/courses/networking/networking-basics/08_modern_networking/sdn_architecture.svg)
 
-**SDN controllers:**
+---
 
+## SDN Architecture
+
+**SDN controllers:**
 | Controller | Language | Use Case |
 |-----------|----------|----------|
 | ONOS | Java | Service provider, large scale |
@@ -48,9 +63,7 @@ SDN separates the **control plane** (decision-making) from the **data plane** (p
 ## Network Virtualization
 
 Network virtualization creates logical networks on top of physical infrastructure.
-
 **Key technologies:**
-
 | Technology | Description |
 |-----------|-------------|
 | VLAN | L2 segmentation within a switch (802.1Q) |
@@ -58,6 +71,10 @@ Network virtualization creates logical networks on top of physical infrastructur
 | GRE | Generic Routing Encapsulation (tunneling) |
 | GENEVE | Generic Network Virtualization Encapsulation |
 | NVGRE | Network Virtualization using GRE |
+
+---
+
+## Network Virtualization
 
 ![network_virtualization](svg/courses/networking/networking-basics/08_modern_networking/network_virtualization.svg)
 
@@ -95,16 +112,22 @@ $ docker network inspect bridge
 
 The default networking mode. Docker creates a virtual bridge (`docker0`) and assigns private IPs.
 
+---
+
+## Docker Bridge Network
+
 ![docker_bridge_network](svg/courses/networking/networking-basics/08_modern_networking/docker_bridge_network.svg)
+
+---
+
+## Docker Bridge Network
 
 ```bash
 # Create a custom bridge network
 $ docker network create --driver bridge --subnet 172.20.0.0/16 mynet
-
 # Run containers on the custom network
 $ docker run -d --name web --network mynet nginx
 $ docker run -d --name api --network mynet myapi
-
 # Containers on the same custom network can resolve each other by name
 $ docker exec web ping api    # Works! Docker DNS resolves "api"
 ```
@@ -115,15 +138,21 @@ $ docker exec web ping api    # Works! Docker DNS resolves "api"
 
 Overlay networks enable communication between containers across multiple Docker hosts (Swarm).
 
+---
+
+## Docker Overlay Network
+
 ![docker_overlay_network](svg/courses/networking/networking-basics/08_modern_networking/docker_overlay_network.svg)
+
+---
+
+## Docker Overlay Network
 
 ```bash
 # Initialize Docker Swarm
 $ docker swarm init
-
 # Create overlay network
 $ docker network create --driver overlay --attachable myoverlay
-
 # Deploy service on overlay
 $ docker service create --name web --network myoverlay --replicas 3 nginx
 ```
@@ -137,6 +166,10 @@ Kubernetes networking has these fundamental requirements:
 1. All Pods can communicate with each other without NAT
 1. All Nodes can communicate with all Pods without NAT
 1. The IP a Pod sees itself as is the same IP others see it as
+
+---
+
+## Kubernetes Networking Model
 
 ![kubernetes_networking_model](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_networking_model.svg)
 
@@ -177,17 +210,23 @@ $ kubectl exec web-1 -- ping -c 3 10.0.2.3
 
 Services provide stable network endpoints for dynamic Pods.
 
+---
+
+## Kubernetes Services
+
 ![kubernetes_services](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_services.svg)
 
-**Service types:**
+---
 
+## Kubernetes Services
+
+**Service types:**
 | Type | Scope | Use Case |
 |------|-------|----------|
 | ClusterIP | Internal only | Default, inter-service communication |
 | NodePort | External via node IP:port | Development, simple exposure |
 | LoadBalancer | External via cloud LB | Production external access |
 | ExternalName | DNS alias | Map to external service |
-
 ```yaml
 # Service definition
 apiVersion: v1
@@ -209,7 +248,15 @@ spec:
 
 Ingress provides HTTP/HTTPS routing to services, supporting virtual hosts and path-based routing.
 
+---
+
+## Kubernetes Ingress
+
 ![kubernetes_ingress](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_ingress.svg)
+
+---
+
+## Kubernetes Ingress
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -245,7 +292,6 @@ spec:
 ## Kubernetes Network Policies
 
 Network Policies control traffic flow between Pods (like a firewall for Pods).
-
 ```yaml
 # Allow only specific Pods to access the database
 apiVersion: networking.k8s.io/v1
@@ -268,6 +314,10 @@ spec:
           port: 5432
 ```
 
+---
+
+## Kubernetes Network Policies
+
 ![allow_only_specific_pods_to_access_the_database](svg/courses/networking/networking-basics/08_modern_networking/allow_only_specific_pods_to_access_the_database.svg)
 
 ---
@@ -276,10 +326,17 @@ spec:
 
 A service mesh is a dedicated infrastructure layer for service-to-service communication.
 
+---
+
+## Service Mesh Concepts
+
 ![service_mesh_concepts](svg/courses/networking/networking-basics/08_modern_networking/service_mesh_concepts.svg)
 
-**Popular service meshes:**
+---
 
+## Service Mesh Concepts
+
+**Popular service meshes:**
 | Mesh | Sidecar Proxy | Key Feature |
 |------|---------------|-------------|
 | Istio | Envoy | Feature-rich, complex |
@@ -298,7 +355,15 @@ A service mesh is a dedicated infrastructure layer for service-to-service commun
 
 A CDN (Content Delivery Network) caches content at edge locations worldwide to reduce latency.
 
+---
+
+## CDN Architecture
+
 ![cdn_architecture](svg/courses/networking/networking-basics/08_modern_networking/cdn_architecture.svg)
+
+---
+
+## CDN Architecture
 
 **How CDNs work:**
 1. User requests `cdn.example.com/image.png`
@@ -306,7 +371,6 @@ A CDN (Content Delivery Network) caches content at edge locations worldwide to r
 1. If edge has cached copy: serve immediately (cache HIT)
 1. If not: fetch from origin, cache locally, then serve (cache MISS)
 1. Subsequent requests from that region are served from cache
-
 **Major CDN providers:** Cloudflare, AWS CloudFront, Akamai, Fastly, Google Cloud CDN
 
 ---
@@ -357,10 +421,17 @@ $ curl -X POST "https://api.cloudflare.com/client/v4/zones/ZONE_ID/purge_cache" 
 
 WebSocket provides full-duplex communication over a single TCP connection, unlike HTTP's request-response model.
 
+---
+
+## WebSocket Protocol
+
 ![websocket_protocol](svg/courses/networking/networking-basics/08_modern_networking/websocket_protocol.svg)
 
-**WebSocket handshake (HTTP upgrade):**
+---
 
+## WebSocket Protocol
+
+**WebSocket handshake (HTTP upgrade):**
 ```http
 Client → Server:
 GET /chat HTTP/1.1
@@ -369,13 +440,11 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-
 Server → Client:
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
-
 # After this, both sides can send messages freely
 ```
 
@@ -440,25 +509,29 @@ Hello, World!
 
 gRPC uses HTTP/2 for transport and Protocol Buffers for serialization. Much more efficient than REST/JSON for service-to-service communication.
 
+---
+
+## gRPC: Modern RPC Framework
+
 ![grpc_modern_rpc_framework](svg/courses/networking/networking-basics/08_modern_networking/grpc_modern_rpc_framework.svg)
 
-**Protocol Buffers definition:**
+---
 
+## gRPC: Modern RPC Framework
+
+**Protocol Buffers definition:**
 ```protobuf
 // user.proto
 syntax = "proto3";
-
 service UserService {
     rpc GetUser (UserRequest) returns (UserResponse);
     rpc ListUsers (ListRequest) returns (stream UserResponse);  // Server streaming
     rpc CreateUsers (stream UserRequest) returns (Summary);     // Client streaming
     rpc Chat (stream Message) returns (stream Message);         // Bidirectional
 }
-
 message UserRequest {
     int32 id = 1;
 }
-
 message UserResponse {
     int32 id = 1;
     string name = 2;
@@ -499,19 +572,25 @@ message UserResponse {
 
 HTTP/3 replaces TCP with QUIC (built on UDP) for better performance.
 
+---
+
+## HTTP/3 and QUIC
+
 ![http_3_and_quic](svg/courses/networking/networking-basics/08_modern_networking/http_3_and_quic.svg)
+
+---
+
+## HTTP/3 and QUIC
 
 **QUIC advantages:**
 - **Faster connection establishment**: 1-RTT (or 0-RTT on reconnect)
 - **No head-of-line blocking**: stream loss doesn't block other streams
 - **Connection migration**: survives IP changes (Wi-Fi to cellular)
 - **Built-in encryption**: TLS 1.3 is mandatory and integrated
-
 ```bash
 # Check if a site supports HTTP/3
 $ curl --http3 -I https://cloudflare.com
 HTTP/3 200
-
 # Check with curl verbose
 $ curl -v --http3 https://cloudflare.com 2>&1 | grep "using HTTP"
 * using HTTP/3
@@ -523,7 +602,15 @@ $ curl -v --http3 https://cloudflare.com 2>&1 | grep "using HTTP"
 
 eBPF (extended Berkeley Packet Filter) allows running custom programs in the Linux kernel without modifying kernel source.
 
+---
+
+## eBPF: Programmable Networking in the Kernel
+
 ![ebpf_programmable_networking_in_the_kernel](svg/courses/networking/networking-basics/08_modern_networking/ebpf_programmable_networking_in_the_kernel.svg)
+
+---
+
+## eBPF: Programmable Networking in the Kernel
 
 **eBPF in networking:**
 - **Cilium**: Kubernetes CNI that uses eBPF for networking and security (replaces iptables)
@@ -581,7 +668,15 @@ resource "aws_security_group" "web" {
 
 Modern architectures use DNS for dynamic service discovery.
 
+---
+
+## DNS-Based Service Discovery
+
 ![dns_based_service_discovery](svg/courses/networking/networking-basics/08_modern_networking/dns_based_service_discovery.svg)
+
+---
+
+## DNS-Based Service Discovery
 
 ```bash
 # Consul DNS interface
@@ -589,12 +684,10 @@ $ dig @127.0.0.1 -p 8600 web.service.consul SRV
 ;; ANSWER SECTION:
 web.service.consul. 0 IN SRV 1 1 8080 node1.node.consul.
 web.service.consul. 0 IN SRV 1 1 8080 node2.node.consul.
-
 # Kubernetes CoreDNS
 $ dig @10.96.0.10 web-service.default.svc.cluster.local
 ;; ANSWER SECTION:
 web-service.default.svc.cluster.local. 30 IN A 10.96.0.100
-
 # Kubernetes DNS naming convention:
 # <service>.<namespace>.svc.cluster.local
 # <pod-ip-dashes>.<namespace>.pod.cluster.local
@@ -606,7 +699,15 @@ web-service.default.svc.cluster.local. 30 IN A 10.96.0.100
 
 Modern networks require comprehensive observability.
 
+---
+
+## Observability: Network Monitoring
+
 ![observability_network_monitoring](svg/courses/networking/networking-basics/08_modern_networking/observability_network_monitoring.svg)
+
+---
+
+## Observability: Network Monitoring
 
 ```yaml
 # Prometheus blackbox_exporter: probe network endpoints

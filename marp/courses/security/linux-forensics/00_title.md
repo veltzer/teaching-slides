@@ -8,6 +8,7 @@ category: security
 duration_hours: 40
 audience:
   - audiences:security-professionals
+
 ---
 # Linux Forensics
 ## Mark Veltzer

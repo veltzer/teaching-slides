@@ -102,6 +102,7 @@ roles/nginx/
 # roles/nginx/defaults/main.yml
 # These are the LOWEST priority variables
 # Users can easily override them
+
 ---
 nginx_worker_processes: auto
 nginx_worker_connections: 1024
@@ -126,6 +127,7 @@ nginx_remove_default_site: true
 
 ```yaml
 # roles/nginx/tasks/main.yml
+
 ---
 - name: Include OS-specific variables
   include_vars: "{{ ansible_os_family | lower }}.yml"
@@ -173,6 +175,7 @@ nginx_remove_default_site: true
 
 ```yaml
 # roles/nginx/tasks/vhosts.yml
+
 ---
 - name: Create sites-available directory
   file:
@@ -211,6 +214,7 @@ nginx_remove_default_site: true
 
 ```yaml
 # roles/nginx/handlers/main.yml
+
 ---
 - name: restart nginx
   service:
@@ -276,6 +280,7 @@ http {
 
 ```yaml
 # roles/nginx/meta/main.yml
+
 ---
 galaxy_info:
   author: DevOps Team
@@ -312,12 +317,14 @@ dependencies:
 
 ```yaml
 # roles/nginx/vars/debian.yml
+
 ---
 nginx_package_name: nginx
 nginx_service_name: nginx
 nginx_conf_dir: /etc/nginx
 
 # roles/nginx/vars/redhat.yml
+
 ---
 nginx_package_name: nginx
 nginx_service_name: nginx
@@ -334,6 +341,7 @@ nginx_conf_dir: /etc/nginx
 
 ```yaml
 # Method 1: Classic roles section
+
 ---
 - name: Configure webservers
   hosts: webservers
@@ -419,6 +427,7 @@ dependencies:
 
 ```yaml
 # roles/postgresql/defaults/main.yml
+
 ---
 postgresql_version: "15"
 postgresql_port: 5432
@@ -448,6 +457,7 @@ postgresql_hba_entries:
 
 ```yaml
 # roles/postgresql/tasks/main.yml
+
 ---
 - name: Install PostgreSQL
   apt:
@@ -531,6 +541,7 @@ ansible-galaxy remove geerlingguy.nginx
 
 ```yaml
 # requirements.yml
+
 ---
 roles:
   - name: geerlingguy.nginx
@@ -648,6 +659,7 @@ ansible-project/
 
 ```yaml
 # playbooks/site.yml - master playbook
+
 ---
 - name: Apply common configuration
   hosts: all

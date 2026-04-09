@@ -21,6 +21,7 @@
 
 ```yaml
 # .github/workflows/deploy.yml
+
 ---
 name: Deploy Application
 on:
@@ -91,6 +92,7 @@ jobs:
 
 ```yaml
 # .gitlab-ci.yml
+
 ---
 stages:
   - lint
@@ -242,6 +244,7 @@ pipeline {
 
 ```yaml
 # playbooks/deploy.yml
+
 ---
 - name: Pre-deployment checks
   hosts: webservers
@@ -306,6 +309,7 @@ pipeline {
 
 ```yaml
 # playbooks/blue_green_deploy.yml
+
 ---
 - name: Blue/Green Deployment
   hosts: localhost
@@ -356,6 +360,7 @@ pipeline {
 
 ```yaml
 # playbooks/canary_deploy.yml
+
 ---
 - name: Canary Deployment
   hosts: webservers
@@ -478,6 +483,7 @@ echo "$ANSIBLE_VAULT_PASSWORD"
 
 ```yaml
 # roles/deploy/tasks/notify.yml
+
 ---
 - name: Notify Slack on deployment
   uri:

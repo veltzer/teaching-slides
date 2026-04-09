@@ -640,7 +640,6 @@ docker history --format "{{.Size}}\t{{.CreatedBy}}" myapp:latest
 ```
 
 ---
-
 ## `dive` - Image Layer Explorer
 
 ```bash
@@ -648,10 +647,8 @@ docker history --format "{{.Size}}\t{{.CreatedBy}}" myapp:latest
 wget https://github.com/wagoodman/dive/releases/download/v0.12.0/\
 dive_0.12.0_linux_amd64.deb
 sudo dpkg -i dive_0.12.0_linux_amd64.deb
-
 # Analyze an image
 dive myapp:latest
-
 # CI mode - fail if image efficiency is low
 dive myapp:latest --ci
 # Checks:
@@ -659,6 +656,9 @@ dive myapp:latest --ci
 #   - Wasted space
 #   - Total image size
 ```
+
+---
+## `dive` - Image Layer Explorer
 
 ![total_image_size](svg/courses/devops/advanced-docker/02_dockerfile_optimization/total_image_size.svg)
 

@@ -16,6 +16,7 @@ audience:
   - audiences:architects
   - audiences:team-leads
   - audiences:devops
+
 ---
 # Advanced Ai Powered Development
 ## Mark Veltzer

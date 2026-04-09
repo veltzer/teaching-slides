@@ -9,6 +9,7 @@ category: language
 duration_hours: 8
 audience:
   - audiences:developers
+
 ---
 # C++ Design Patterns
 ## Mark Veltzer

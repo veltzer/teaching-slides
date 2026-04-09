@@ -1,4 +1,5 @@
 # Redirection in Scripts
+
 ---
 ## Redirecting Entire Scripts
 
@@ -15,6 +16,7 @@ ls -la
 # Everything goes to the log file
 # Nothing appears on the terminal
 ```
+
 ---
 ## Redirecting to Both Log and Terminal
 
@@ -27,6 +29,7 @@ exec > >(tee /var/log/myscript.log) 2>&1
 echo "This appears on terminal AND in the log"
 echo "Errors too" >&2
 ```
+
 ---
 ## Saving and Restoring File Descriptors
 
@@ -49,6 +52,7 @@ exec 3>&-
 
 echo "This goes to the terminal again"
 ```
+
 ---
 ## Saving and Restoring: Full Pattern
 
@@ -70,6 +74,7 @@ exec 3>&- 4>&-
 
 echo "back to terminal"
 ```
+
 ---
 ## Redirect a Block of Commands
 
@@ -94,6 +99,7 @@ echo "Report saved (this prints to terminal)"
     echo "Backup complete"
 } > /tmp/backup.log 2>&1
 ```
+
 ---
 ## Logging Functions
 
@@ -116,6 +122,7 @@ log_error "Cannot connect to database"
 
 exec 3>&-    # close log file
 ```
+
 ---
 ## Input Redirection in Scripts
 
@@ -137,6 +144,7 @@ exec 3<&-    # close input fd
 
 echo "Config: $HOST:$PORT (debug=$DEBUG)"
 ```
+
 ---
 ## Here Document Tricks
 
@@ -160,6 +168,7 @@ ssh user@server << 'REMOTE'
 REMOTE
 # Note: 'REMOTE' (quoted) prevents local expansion
 ```
+
 ---
 ## Practical: Script that Logs Everything
 

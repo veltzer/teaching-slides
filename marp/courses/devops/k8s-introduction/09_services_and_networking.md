@@ -230,6 +230,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
+
 ---
 apiVersion: v1
 kind: Endpoints
@@ -525,6 +526,7 @@ spec:
   ports:
   - port: 80
     targetPort: 8080
+
 ---
 # Public facing service
 apiVersion: v1

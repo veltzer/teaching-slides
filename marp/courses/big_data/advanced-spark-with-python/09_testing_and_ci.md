@@ -1,4 +1,5 @@
 # Testing and CI/CD for PySpark
+
 ---
 ## Chapter Overview
 * Unit testing PySpark with pytest
@@ -8,6 +9,7 @@
 * Integration testing patterns
 * CI/CD pipeline setup for Spark jobs
 * Code quality tools: pylint, mypy, black
+
 ---
 ## Learning Objectives
 * Write effective unit tests for PySpark transformations
@@ -17,6 +19,7 @@
 * Design integration tests for end-to-end pipelines
 * Configure GitHub Actions CI for Spark projects
 * Enforce code quality with linting and type checking
+
 ---
 ## Testing Architecture
 
@@ -103,6 +106,7 @@ def reset_spark_context(spark):
 | default.parallelism | 2 | Match local[2] thread count |
 | spark.ui.enabled | false | No web UI needed in tests |
 | driver.bindAddress | 127.0.0.1 | Avoid network issues in CI |
+
 ---
 ## Writing Your First PySpark Test
 

@@ -1,20 +1,23 @@
 # Shell Scripting Introduction
 ## Getting Started with Shell Programming
+
 ---
+
 ## Your First Shell Script
 
 ![your_first_shell_script](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/your_first_shell_script.svg)
 
-Basic script:
+---
 
+## Your First Shell Script
+
+Basic script:
 ```bash
 #!/bin/bash
 # My first script
 echo "Hello, World!"
 ```
-
 Running the script:
-
 ```bash
 chmod +x script.sh
 ./script.sh
@@ -52,21 +55,21 @@ exit 0
 
 ![variables](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/variables.svg)
 
-Variable examples:
+---
 
+## Variables
+
+Variable examples:
 ```bash
 # Assignment
 name="John"
 age=25
-
 # Using variables
 echo "Name: $name"
 echo "Age: ${age}"
-
 # Command output
 current_date=$(date)
 files=`ls`
-
 # Read user input
 read -p "Enter name: " user_name
 ```
@@ -77,17 +80,18 @@ read -p "Enter name: " user_name
 
 ![command_line_arguments](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/command_line_arguments.svg)
 
-Argument handling:
+---
 
+## Command Line Arguments
+
+Argument handling:
 ```bash
 #!/bin/bash
-
 echo "Script name: $0"
 echo "First argument: $1"
 echo "Second argument: $2"
 echo "Number of arguments: $#"
 echo "All arguments: $@"
-
 # Shift arguments
 shift
 echo "New first argument: $1"
@@ -123,17 +127,18 @@ let "count--"
 
 ![exit_status_and_error_handling](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/exit_status_and_error_handling.svg)
 
-Error handling:
+---
 
+## Exit Status and Error Handling
+
+Error handling:
 ```bash
 #!/bin/bash
-
 # Check command success
 if ! command -v git &> /dev/null; then
     echo "Error: git not found"
     exit 1
 fi
-
 # Check previous command
 some_command
 if [ $? -ne 0 ]; then
@@ -148,17 +153,18 @@ fi
 
 ![expressions_and_operators](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/expressions_and_operators.svg)
 
-Examples:
+---
 
+## Expressions and Operators
+
+Examples:
 ```bash
 # Arithmetic
 [ $a -eq $b ]  # Equal
 [ $a -lt $b ]  # Less than
-
 # String
 [ -z "$str" ]  # Empty
 [ "$a" = "$b" ] # Equal
-
 # File
 [ -f "file" ]  # Exists and regular
 [ -d "dir" ]   # Directory exists
@@ -222,21 +228,22 @@ esac
 
 ![loops](svg/courses/operating_systems/linux-fundamentals/11_shell_scripting/loops.svg)
 
-Examples:
+---
 
+## Loops
+
+Examples:
 ```bash
 # For loop
 for i in 1 2 3 4 5; do
     echo "Number: $i"
 done
-
 # While loop
 count=0
 while [ $count -lt 5 ]; do
     echo "Count: $count"
     let count++
 done
-
 # Until loop
 until [ "$answer" = "yes" ]; do
     read -p "Continue? " answer

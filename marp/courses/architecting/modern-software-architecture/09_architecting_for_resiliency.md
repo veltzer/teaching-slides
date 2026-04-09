@@ -26,6 +26,9 @@
 
 ![the_cascade_effect](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/the_cascade_effect.svg)
 
+---
+## The Cascade Effect
+
 - Service C fails; B waits and exhausts its thread pool
 - Service A waits for B and also becomes unresponsive
 - A single failure propagates through the entire call chain
@@ -78,6 +81,9 @@ response = requests.get(
 ## Retry with Exponential Backoff
 
 ![retry_with_exponential_backoff](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/retry_with_exponential_backoff.svg)
+
+---
+## Retry with Exponential Backoff
 
 - Each retry waits longer than the previous one
 - Add random jitter to prevent thundering herd
@@ -198,6 +204,9 @@ class CircuitBreaker:
 
 ![bulkhead_architecture](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/bulkhead_architecture.svg)
 
+---
+## Bulkhead Architecture
+
 - Service C is slow but only consumes its own thread pool
 - Services A and B continue to operate normally
 
@@ -266,6 +275,9 @@ class CircuitBreaker:
 ## Hedging Diagram
 
 ![hedging_diagram](svg/courses/architecting/modern-software-architecture/09_architecting_for_resiliency/hedging_diagram.svg)
+
+---
+## Hedging Diagram
 
 - Instance 2 responds first; its response is used
 - Trade-off: uses more resources for lower latency

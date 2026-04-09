@@ -182,20 +182,20 @@ result = pipe(
 
 ![controlnet_fine_grained_control](svg/courses/ai/generative-ai-applications/16_image_generation/controlnet_fine_grained_control.svg)
 
+---
+## ControlNet — Fine-Grained Control
+
 ```python
 from diffusers import ControlNetModel, StableDiffusionControlNetPipeline
-
 controlnet = ControlNetModel.from_pretrained(
     "lllyasviel/control_v11p_sd15_canny",
     torch_dtype=torch.float16,
 )
-
 pipe = StableDiffusionControlNetPipeline.from_pretrained(
     "runwayml/stable-diffusion-v1-5",
     controlnet=controlnet,
     torch_dtype=torch.float16,
 )
-
 # edge_image = detected edges from input photo
 result = pipe("a beautiful house", image=edge_image).images[0]
 ```
@@ -253,12 +253,14 @@ response = requests.post(
 
 ![noise_schedulers_compared](svg/courses/ai/generative-ai-applications/16_image_generation/noise_schedulers_compared.svg)
 
+---
+## Noise Schedulers Compared
+
 ```python
 from diffusers import (
     DDPMScheduler, DDIMScheduler,
     EulerDiscreteScheduler, DPMSolverMultistepScheduler
 )
-
 # Switch scheduler on an existing pipeline
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(
     pipe.scheduler.config

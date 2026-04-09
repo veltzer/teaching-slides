@@ -9,7 +9,6 @@
 - Best practices for large systems
 
 ---
-
 ## Why Use Logging?
 
 ## Limitations of Print Statements
@@ -41,7 +40,6 @@ def process_data(data):
 ```
 
 ---
-
 ## Why Use Logging?
 
 ## Benefits of Proper Logging
@@ -78,7 +76,6 @@ def process_data(data):
 ```
 
 ---
-
 ## The Python logging Module
 
 ## Basic Logging
@@ -110,7 +107,6 @@ logging.critical("This is a critical message")  # Will show
 ```
 
 ---
-
 ## The Python logging Module
 
 ## Logging Levels
@@ -138,7 +134,6 @@ logger.log(logging.INFO, "Another info message")
 ```
 
 ---
-
 ## The Python logging Module
 
 ## Creating Loggers
@@ -168,7 +163,6 @@ print(db_logger.parent.name)  # 'myapp'
 ```
 
 ---
-
 ## The Python logging Module
 
 ## Logger Hierarchy
@@ -199,7 +193,6 @@ app_logger.setLevel(logging.INFO)  # All child loggers inherit INFO level
 ```
 
 ---
-
 ## Configuring Logging
 
 ## Basic Configuration
@@ -233,7 +226,6 @@ logging.getLogger('').addHandler(console)
 ```
 
 ---
-
 ## Configuring Logging
 
 ## Using Handlers
@@ -273,7 +265,6 @@ logger.addHandler(error_handler)
 ```
 
 ---
-
 ## Configuring Logging
 
 ## Using Formatters
@@ -310,7 +301,6 @@ json_handler.setFormatter(json_formatter)
 ```
 
 ---
-
 ## Configuring Logging
 
 ## Format Specification Attributes
@@ -330,7 +320,6 @@ json_handler.setFormatter(json_formatter)
 - `%(thread)d` - Thread ID
 
 ---
-
 ## Configuring Logging
 
 ## Dictionary Configuration
@@ -386,7 +375,6 @@ logger.info("Application configured with dictConfig")
 ```
 
 ---
-
 ## Configuring Logging
 
 ## File-Based Configuration
@@ -432,7 +420,6 @@ with open('logging.yaml', 'r') as f:
 ```
 
 ---
-
 ## Configuring Logging
 
 ## Example YAML Configuration File
@@ -475,7 +462,6 @@ root:
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## Best Practices
@@ -523,7 +509,6 @@ def process_order(order_id, items):
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## Log Level Guidelines
@@ -553,7 +538,6 @@ def process_order(order_id, items):
     - Unrecoverable errors requiring immediate attention
 
 ---
-
 ## Using Logging Correctly
 
 ## What to Log
@@ -582,7 +566,6 @@ logger.info("Application shutdown complete")
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## What NOT to Log
@@ -608,7 +591,6 @@ logger.debug(f"Processing payment for order {order_id}")
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## Using LoggerAdapter for Context
@@ -645,7 +627,6 @@ def handle_request(request):
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## Logging Exceptions
@@ -685,7 +666,6 @@ def risky_operation():
 ```
 
 ---
-
 ## Using Logging Correctly
 
 ## Logging in Large Systems
@@ -721,7 +701,6 @@ logging.getLogger('myapp.api').setLevel(logging.DEBUG)   # More verbose
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Custom Log Levels
@@ -762,7 +741,6 @@ logger.verbose("Somewhat detailed message")
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Custom Formatters
@@ -810,7 +788,6 @@ logger.addHandler(json_handler)
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Colored Console Logging
@@ -863,7 +840,6 @@ logger.addHandler(console)
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Custom Handlers
@@ -924,7 +900,6 @@ class HttpHandler(logging.Handler):
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Filters
@@ -972,7 +947,6 @@ logger.info("User password changed to 'secret123'")  # Will be redacted
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Redirecting Logs to syslog
@@ -1014,7 +988,6 @@ logger.error("Database connection failed")
 ```
 
 ---
-
 ## Advanced Logging Techniques
 
 ## Rotating Log Files
@@ -1057,7 +1030,6 @@ logger.addHandler(time_handler)
 ```
 
 ---
-
 ## Collecting Logs
 
 ## Log Aggregation
@@ -1067,10 +1039,12 @@ logger.addHandler(time_handler)
 - Search and analyze logs efficiently
 - Monitor and alert on log patterns
 
+---
+## Collecting Logs
+
 ![log_aggregation](svg/courses/languages/python/advanced-python/13_logging/log_aggregation.svg)
 
 ---
-
 ## Collecting Logs
 
 ## Popular Log Aggregation Tools
@@ -1108,7 +1082,6 @@ logger.info("This log will be sent to Logstash")
 ```
 
 ---
-
 ## Collecting Logs
 
 ## Structured Logging
@@ -1146,7 +1119,6 @@ log_structured(logger, logging.INFO, "User logged in", user_id=12345,
 ```
 
 ---
-
 ## Collecting Logs
 
 ## Distributed Tracing
@@ -1197,7 +1169,6 @@ formatter = logging.Formatter('%(asctime)s - [%(trace_id)s] - %(message)s')
 ```
 
 ---
-
 ## Flushing Logs
 
 ## Ensuring Logs Are Written
@@ -1243,7 +1214,6 @@ def critical_operation():
 ```
 
 ---
-
 ## Flushing Logs
 
 ## Working with File Buffers
@@ -1282,7 +1252,6 @@ critical_logger.critical("This message is written immediately")
 ```
 
 ---
-
 ## Flushing Logs
 
 ## QueueHandler and QueueListener
@@ -1330,7 +1299,6 @@ listener.stop()  # Flushes logs and stops the listener thread
 ```
 
 ---
-
 ## Best Practices for Large Systems
 
 ## Organizing Logging in Large Applications
@@ -1366,7 +1334,6 @@ def setup_logging(
 ```
 
 ---
-
 ## Best Practices for Large Systems
 
 ## Performance Considerations
@@ -1401,7 +1368,6 @@ def better_logging(user_data):
 ```
 
 ---
-
 ## Best Practices for Large Systems
 
 ## Thread Safety and Concurrency
@@ -1453,7 +1419,6 @@ listener.stop()
 ```
 
 ---
-
 ## Best Practices for Large Systems
 
 ## Testing Logging Configuration
@@ -1506,7 +1471,6 @@ class TestLogging(unittest.TestCase):
 ```
 
 ---
-
 ## Summary
 
 ## Key Takeaways
@@ -1520,7 +1484,6 @@ class TestLogging(unittest.TestCase):
 - Test logging behavior
 
 ---
-
 ## Resources
 
 ## Further Reading

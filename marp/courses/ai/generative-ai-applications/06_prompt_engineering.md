@@ -236,8 +236,10 @@ code_review_template = Template("""
 You are reviewing a $language code submission.
 
 The code:
+
 ---
 $code
+
 ---
 
 Review criteria:

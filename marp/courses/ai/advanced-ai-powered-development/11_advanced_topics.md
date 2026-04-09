@@ -270,6 +270,10 @@ Both expose an OpenAI-compatible API for tool integration.
 - Some codebases cannot leave the corporate network
 - Local models enable AI assistance without data exfiltration
 
+---
+
+## Privacy-Sensitive Development Workflows
+
 ![privacy_sensitive_development_workflows](svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/privacy_sensitive_development_workflows.svg)
 
 ---
@@ -588,7 +592,15 @@ Integrate into CI to run weekly; alert when scores drop below threshold.
 - Organizations progress through predictable stages of AI adoption
 - Knowing your stage helps prioritize the right investments
 
+---
+
+## AI Development Maturity Model
+
 ![ai_development_maturity_model](svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/ai_development_maturity_model.svg)
+
+---
+
+## AI Development Maturity Model
 
 Each level requires the foundations of the previous one.
 
@@ -616,6 +628,10 @@ Mitigations:
 
 - Centralize model access, prompt management, and observability
 - Provide guardrails as a service rather than per-team enforcement
+
+---
+
+## Building Internal AI Development Platforms
 
 ![building_internal_ai_development_platforms](svg/courses/ai/advanced-ai-powered-development/11_advanced_topics/building_internal_ai_development_platforms.svg)
 

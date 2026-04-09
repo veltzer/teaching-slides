@@ -1,5 +1,6 @@
 # Writing Your First Assembly Program
 ## Assembly Programming using GAS
+
 ---
 ## "Hello, World!" in Assembly
 
@@ -157,6 +158,7 @@ _start:
 1. Assembler errors
     - Syntax errors in your code
     - Incorrect directives or register names
+
 ---
 ## Best Practices
 1. Comment your code thoroughly
@@ -164,11 +166,13 @@ _start:
 1. Organize your code into logical sections
 1. Test small parts of your program incrementally
 1. Use debugging tools like GDB to understand program flow
+
 ---
 ## Exercises
 1. Modify the "Hello, World!" program to print your name
 1. Write a program that adds two numbers and prints the result
 1. Create a program that prints numbers from 1 to 10
+
 ---
 ## Additional Resources
 - [GAS manual](https://sourceware.org/binutils/docs/as)

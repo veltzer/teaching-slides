@@ -1,6 +1,7 @@
 # DNS Amplification Attacks
 
 - DNS amplification is a type of Distributed Denial of Service (DDoS) attack that exploits open DNS resolvers to amplify malicious traffic directed at a target system or network
+
 ---
 ## How DNS Amplification Works
 
@@ -8,6 +9,7 @@
 1. Sends small DNS queries with spoofed source IP (victim's IP)
 1. Open resolvers respond to the spoofed query, sending larger DNS responses to victim
 1. With many open resolvers, amplified traffic overwhelms victim's resources
+
 ---
 ## Amplification Factor
 
@@ -15,6 +17,7 @@
 - DNS response from open resolver is much larger (e.g., kilobytes)
 - Amplification factor can range from 10x to 1000x
 - Generates massive traffic with little bandwidth from attacker
+
 ---
 ## Diagram
 
@@ -28,6 +31,7 @@ dig . NS +trace
 ```
 
 ### Look at the large response
+
 ---
 ## Impact of DNS Amplification
 
@@ -35,6 +39,7 @@ dig . NS +trace
 - Causes Denial of Service for legitimate users
 - Difficult to trace the source of the attack
 - Can target any system or network on the internet
+
 ---
 ## Mitigating DNS Amplification
 
@@ -43,6 +48,7 @@ dig . NS +trace
 - Use DNS Response Rate Limiting (RRL)
 - Deploy Anycast DNS to distribute traffic across multiple servers
 - Keep DNS software up-to-date and patched
+
 ---
 
 ## Why Amplification Works: Query vs Response Size
@@ -51,20 +57,21 @@ dig . NS +trace
 # Small query (~44 bytes):
 dig example.com A
 # Query: 44 bytes
-
 # Large response (~3000+ bytes):
 dig . ANY
 # Response: ~3000 bytes
 # Amplification factor: ~68x
-
 # DNSSEC-signed responses are even larger:
 dig . DNSKEY +dnssec
 # Response: ~4000+ bytes
-
 # TXT records with SPF/DKIM:
 dig google.com TXT
 # Response: multiple large TXT records
 ```
+
+---
+
+## Why Amplification Works: Query vs Response Size
 
 ![response_multiple_large_txt_records](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/response_multiple_large_txt_records.svg)
 

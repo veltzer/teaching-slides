@@ -2,9 +2,14 @@
 ## Concepts, BIND, Zone Files, and DNSSEC
 
 ---
+
 ## DNS Concepts
 
 ![dns_concepts](svg/courses/operating_systems/linux-system-administration/11_dns_optional/dns_concepts.svg)
+
+---
+
+## DNS Concepts
 
 - DNS translates domain names to IP addresses
 - Hierarchical, distributed database

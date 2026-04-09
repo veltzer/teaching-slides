@@ -98,6 +98,7 @@ Cons:
 - Added latency from master-slave communication
 - Limited applicability outside parallel processing
 - Slaves are not autonomous and rely on master
+
 ---
 
 ## Master Slave When to Use
@@ -268,6 +269,7 @@ Cons:
 - To standardize and simplify access to a variety of backend services
 - When you need to add features like logging or monitoring without modifying the main application
 - In scenarios where you want to shield the main application from the complexities of service discovery
+
 ---
 
 ## Cache-Aside Pattern
@@ -314,6 +316,7 @@ Cons:
 - When implementing a distributed cache in a microservices architecture
 - In scenarios where you can tolerate slightly stale data
 - When you need fine-grained control over what gets cached and when
+
 ---
 
 ## Sidecar Pattern
@@ -359,6 +362,7 @@ Cons:
 - When you want to offload peripheral tasks from the main application
 - In polyglot environments where services are written in different languages
 - To extend the functionality of legacy applications without modifying them
+
 ---
 
 ## Valet Key Pattern

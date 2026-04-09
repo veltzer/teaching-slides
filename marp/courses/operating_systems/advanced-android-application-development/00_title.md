@@ -10,6 +10,7 @@ category: mobile
 duration_hours: 40
 audience:
   - audiences:developers
+
 ---
 # Advanced Android Application Development
 ## Mark Veltzer

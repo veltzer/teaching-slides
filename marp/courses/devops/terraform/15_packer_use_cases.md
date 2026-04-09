@@ -228,6 +228,7 @@ build {
 
 ```yaml
 # ansible/site.yml
+
 ---
 - hosts: all
   become: true
@@ -581,10 +582,12 @@ resource "aws_instance" "web" {
 ```
 
 ---
-
 ## Image Pipeline Best Practices
 
 ![image_pipeline_best_practices](svg/courses/devops/terraform/15_packer_use_cases/image_pipeline_best_practices.svg)
+
+---
+## Image Pipeline Best Practices
 
 - Build images in layers
 - Base image updated monthly for security patches

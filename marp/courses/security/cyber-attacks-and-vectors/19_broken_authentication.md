@@ -1,4 +1,5 @@
 # Broken Authentication
+
 ---
 ## What is Broken Authentication
 
@@ -37,9 +38,14 @@
 - Lack of multi-factor authentication
 
 ---
+
 ## Credential Stuffing Attacks
 
 ![credential_stuffing_attacks](svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/credential_stuffing_attacks.svg)
+
+---
+
+## Credential Stuffing Attacks
 
 **Defense against credential stuffing:**
 - Rate limiting login attempts per IP and per account
@@ -184,12 +190,16 @@ def verify_token(token):
 | Long-lived tokens          | Short expiry + refresh token rotation        |
 
 ---
+
 ## Password Storage
 
 ![password_storage](svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/password_storage.svg)
 
-### Why bcrypt/Argon2 are Preferred
+---
 
+## Password Storage
+
+### Why bcrypt/Argon2 are Preferred
 | Algorithm  | Speed (hashes/sec) | Memory Usage | Resistant To        |
 |------------|--------------------|--------------|--------------------|
 | MD5        | ~10 billion/sec    | Negligible   | Nothing            |
@@ -305,53 +315,55 @@ except Exception:
 - Monitor for suspicious MFA enrollment changes
 
 ---
+
 ## OAuth Misconfigurations
 
 ![oauth_misconfigurations](svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/oauth_misconfigurations.svg)
+
+---
+
+## OAuth Misconfigurations
 
 ```python
 # Secure OAuth implementation checklist
 OAUTH_CONFIG = {
     # Strict redirect URI matching (exact match only)
     "redirect_uris": ["https://myapp.com/callback"],
-
     # Always use authorization code flow (not implicit)
     "response_type": "code",
-
     # Always include state parameter for CSRF protection
     "state": generate_random_state(),
-
     # Use PKCE (Proof Key for Code Exchange)
     "code_challenge": generate_pkce_challenge(),
     "code_challenge_method": "S256",
-
     # Request minimum necessary scopes
     "scope": "openid email profile",
 }
 ```
 
 ---
+
 ## Insecure Password Reset Flows
 
 ![insecure_password_reset_flows](svg/courses/security/cyber-attacks-and-vectors/19_broken_authentication/insecure_password_reset_flows.svg)
 
+---
+
+## Insecure Password Reset Flows
+
 ```python
 import secrets
 from datetime import datetime, timedelta
-
 def create_reset_token(user_email):
     """Generate a secure password reset token."""
     token = secrets.token_urlsafe(32)  # 256-bit random token
     expiry = datetime.utcnow() + timedelta(minutes=15)
-
     # Store hashed token (never store raw token in DB)
     token_hash = hashlib.sha256(token.encode()).hexdigest()
     db.store_reset_token(user_email, token_hash, expiry)
-
     # Send token to user's verified email
     reset_url = f"https://app.com/reset?token={token}"
     send_email(user_email, reset_url)
-
     # Always return same message (prevent email enumeration)
     return "If an account exists, a reset link has been sent."
 ```

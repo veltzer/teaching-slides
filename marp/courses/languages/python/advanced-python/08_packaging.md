@@ -11,7 +11,6 @@
 - Documentation best practices
 
 ---
-
 ## Python Packaging Evolution
 
 ## Historical Timeline
@@ -24,7 +23,6 @@
 - 2020+: Modern tools like poetry, hatch, flit
 
 ---
-
 ## Python Packaging Evolution
 
 ## Current State
@@ -51,7 +49,6 @@ twine upload dist/*
 ```
 
 ---
-
 ## distutils
 
 ## Introduction to distutils
@@ -76,7 +73,6 @@ setup(
 ```
 
 ---
-
 ## distutils
 
 ## Limitations of distutils
@@ -95,7 +91,6 @@ python setup.py sdist
 ```
 
 ---
-
 ## setuptools
 
 ## Introduction to setuptools
@@ -124,7 +119,6 @@ setup(
 ```
 
 ---
-
 ## setuptools
 
 ## Key setuptools Features
@@ -155,7 +149,6 @@ setup(
 ```
 
 ---
-
 ## setuptools
 
 ## Project Structure with setuptools
@@ -185,7 +178,6 @@ mypackage/
 ```
 
 ---
-
 ## setuptools
 
 ## setup.cfg Configuration
@@ -220,7 +212,6 @@ where = src
 ```
 
 ---
-
 ## setuptools
 
 ## MANIFEST.in
@@ -243,7 +234,6 @@ recursive-exclude * *.py[co]
 ```
 
 ---
-
 ## Modern Packaging
 
 ## pyproject.toml
@@ -274,7 +264,6 @@ dependencies = [
 ```
 
 ---
-
 ## Modern Packaging
 
 ## Modern Packaging Tools
@@ -298,7 +287,6 @@ python -m build --wheel
 ```
 
 ---
-
 ## Modern Packaging
 
 ## Modern Packaging Tools
@@ -325,7 +313,6 @@ poetry publish
 ```
 
 ---
-
 ## Modern Packaging
 
 ## Modern Packaging Tools
@@ -349,7 +336,6 @@ flit publish
 ```
 
 ---
-
 ## Modern Packaging
 
 ## Modern Packaging Tools
@@ -373,7 +359,6 @@ hatch publish
 ```
 
 ---
-
 ## Package Formats
 
 ## Source Distributions (sdist)
@@ -395,7 +380,6 @@ python -m build --sdist
 ```
 
 ---
-
 ## Package Formats
 
 ## Wheel Distributions
@@ -417,7 +401,6 @@ python -m build --wheel
 ```
 
 ---
-
 ## Package Formats
 
 ## Wheel Anatomy
@@ -426,10 +409,12 @@ python -m build --wheel
 - Metadata format
 - Installation process
 
+---
+## Package Formats
+
 ![wheel_anatomy](svg/courses/languages/python/advanced-python/08_packaging/wheel_anatomy.svg)
 
 ---
-
 ## Package Formats
 
 ## When to Use Which Format
@@ -450,7 +435,6 @@ twine upload dist/*  # Upload both to PyPI
 ```
 
 ---
-
 ## Publishing Packages
 
 ## PyPI Overview
@@ -462,7 +446,6 @@ twine upload dist/*  # Upload both to PyPI
 - Supports source and wheel distributions
 
 ---
-
 ## Publishing Packages
 
 ## Preparing for Publication
@@ -489,7 +472,6 @@ classifiers = [
 ```
 
 ---
-
 ## Publishing Packages
 
 ## Using twine
@@ -517,7 +499,6 @@ twine upload --config-file .pypirc dist/*
 ```
 
 ---
-
 ## Publishing Packages
 
 ## PyPI Configuration with .pypirc
@@ -550,7 +531,6 @@ password = your_password
 ```
 
 ---
-
 ## Publishing Packages
 
 ## Testing Your Published Package
@@ -575,7 +555,6 @@ twine upload dist/*
 ```
 
 ---
-
 ## Private Package Repositories
 
 ## Why Use a Private Repository?
@@ -587,7 +566,6 @@ twine upload dist/*
 - Faster installations on local network
 
 ---
-
 ## Private Package Repositories
 
 ## PyPI Server Options
@@ -613,7 +591,6 @@ pip install --index-url http://localhost:8080/simple/ mypackage
 ```
 
 ---
-
 ## Private Package Repositories
 
 ## PyPI Server Options
@@ -639,7 +616,6 @@ devpi upload
 ```
 
 ---
-
 ## Private Package Repositories
 
 ## Using Private Repositories
@@ -662,7 +638,6 @@ mypackage==1.0.0
 ```
 
 ---
-
 ## Binary Distributions
 
 ## Why Package as Binary?
@@ -674,7 +649,6 @@ mypackage==1.0.0
 - Consistent runtime environment
 
 ---
-
 ## Binary Distributions
 
 ## Creating Binary Distributions
@@ -701,7 +675,6 @@ pyinstaller --onefile --windowed --icon=myicon.ico myscript.py
 ```
 
 ---
-
 ## Binary Distributions
 
 ## Creating Binary Distributions
@@ -735,7 +708,6 @@ setup(
 ```
 
 ---
-
 ## Binary Distributions
 
 ## Creating Binary Distributions
@@ -768,7 +740,6 @@ setup(
 ```
 
 ---
-
 ## Binary Distributions
 
 ## Creating Binary Distributions
@@ -799,7 +770,6 @@ CMD ["python", "app.py"]
 ```
 
 ---
-
 ## API Design and Stability
 
 ## Principles of Good API Design
@@ -812,7 +782,6 @@ CMD ["python", "app.py"]
 - Follow Python's conventions (PEP 8)
 
 ---
-
 ## API Design and Stability
 
 ## API Components
@@ -845,7 +814,6 @@ def process_data(data, normalize=True, output_format="dict"):
 ```
 
 ---
-
 ## API Design and Stability
 
 ## Versioning and Compatibility
@@ -873,7 +841,6 @@ def new_function(arg1, arg2, arg3=None):
 ```
 
 ---
-
 ## API Design and Stability
 
 ## Private vs. Public API
@@ -899,7 +866,6 @@ def _internal_helper():
 ```
 
 ---
-
 ## API Design and Stability
 
 ## Interface Contracts
@@ -936,7 +902,6 @@ def process_items(
 ```
 
 ---
-
 ## Documenting Your Module
 
 ## Documentation Types
@@ -949,7 +914,6 @@ def process_items(
 - FAQ and troubleshooting
 
 ---
-
 ## Documenting Your Module
 
 ## Docstrings
@@ -982,7 +946,6 @@ def calculate_statistics(values, include_outliers=True):
 ```
 
 ---
-
 ## Documenting Your Module
 
 ## README Files
@@ -1025,7 +988,6 @@ Full documentation is available at https://mypackage.readthedocs.io
 MIT License
 
 ---
-
 ## Documenting Your Module
 
 ## Documentation Tools
@@ -1050,7 +1012,6 @@ make html
 ```
 
 ---
-
 ## Documenting Your Module
 
 ## Documentation Tools
@@ -1083,7 +1044,6 @@ plugins:
 ```
 
 ---
-
 ## Documenting Your Module
 
 ## Hosting Documentation
@@ -1116,7 +1076,6 @@ sphinx:
 ```
 
 ---
-
 ## Distributing Documentation
 
 ## Documentation Distribution
@@ -1144,7 +1103,6 @@ setup(
 ```
 
 ---
-
 ## Practical Example: Complete Package
 
 ## Project Structure
@@ -1169,7 +1127,6 @@ mypackage/
 ```
 
 ---
-
 ## Practical Example: Complete Package
 
 ## pyproject.toml
@@ -1208,7 +1165,6 @@ write_to = "src/mypackage/_version.py"
 ```
 
 ---
-
 ## Practical Example: Complete Package
 
 ## __init__.py
@@ -1227,7 +1183,6 @@ __all__ = ["__version__", "process_data", "calculate_statistics"]
 ```
 
 ---
-
 ## Practical Example: Complete Package
 
 ## Building and Publishing
@@ -1252,7 +1207,6 @@ twine upload dist/*
 ```
 
 ---
-
 ## Summary
 
 ## Key Takeaways
@@ -1265,7 +1219,6 @@ twine upload dist/*
 - Maintain compatibility through careful design
 
 ---
-
 ## Resources
 
 ## Further Reading

@@ -1,4 +1,5 @@
 # Basic Shell Features
+
 ---
 ## Running Multiple Commands
 
@@ -14,6 +15,7 @@ false; echo "this still runs"
 echo "first"
 echo "second"
 ```
+
 ---
 ## Semicolons vs Newlines vs `&&`
 
@@ -27,6 +29,7 @@ false && echo "nope"  # prints nothing
 # ||: run next command only if previous failed
 false || echo "yes"   # prints "yes"
 ```
+
 ---
 ## Command Grouping
 
@@ -47,6 +50,7 @@ x=1
 (x=2)
 echo "$x"   # prints 1 (subshell change lost)
 ```
+
 ---
 ## Variables: The Basics
 
@@ -64,6 +68,7 @@ echo "$name"
 # Curly braces for clarity
 echo "${name}_course"
 ```
+
 ---
 ## Why No Spaces Around `=`?
 
@@ -81,6 +86,7 @@ name=value
 # This is a fundamental bash design decision
 # and one of the most common beginner mistakes
 ```
+
 ---
 ## Variable Substitution
 
@@ -97,6 +103,7 @@ echo "Hello ${name}"       # Hello world
 echo "$namefoo"            # empty! (no var named "namefoo")
 echo "${name}foo"          # worldfoo
 ```
+
 ---
 ## Default Values
 
@@ -116,6 +123,7 @@ echo "${color:-blue}"    # prints "blue", color still unset
 echo "${color:=blue}"    # prints "blue", color is now "blue"
 echo "$color"            # prints "blue"
 ```
+
 ---
 ## Error on Unset Variables
 
@@ -130,6 +138,7 @@ echo "${name?Variable name is required}"
 # This is great for scripts that need certain variables
 : "${DATABASE_URL:?DATABASE_URL must be set}"
 ```
+
 ---
 ## String Operations on Variables
 
@@ -154,6 +163,7 @@ echo "${path%/*}"             # /home/user/documents
 # Remove longest suffix match
 echo "${path%%/*}"            # (empty, first char is /)
 ```
+
 ---
 ## String Replacement
 
@@ -176,6 +186,7 @@ echo "${text/#hello/goodbye}"
 echo "${text/%bash/shell}"
 # hello world hello shell
 ```
+
 ---
 ## Case Conversion (`bash` 4.0+)
 
@@ -194,6 +205,7 @@ echo "${name^}"     # Hello World
 # Uppercase all
 echo "${name^^}"    # HELLO WORLD
 ```
+
 ---
 ## Quoting: The Three Types
 
@@ -209,6 +221,7 @@ echo "$files"      # prints literally: *.txt
 echo '$files'      # prints literally: $files
 echo '$((1+1))'   # prints literally: $((1+1))
 ```
+
 ---
 ## When to Use Double Quotes
 
@@ -231,6 +244,7 @@ echo $pattern      # prints all files in directory!
 # RIGHT:
 echo "$pattern"    # prints: *
 ```
+
 ---
 ## The Golden Rule of Quoting
 > **Always double-quote your variables unless you have
@@ -247,6 +261,7 @@ for word in $sentence; do
     echo "$word"
 done
 ```
+
 ---
 ## Escaping Special Characters
 
@@ -265,6 +280,7 @@ echo "this is a very \
 long line"
 # prints: this is a very long line
 ```
+
 ---
 ## Special Characters Summary
 | Character | Meaning | Escape with |
@@ -277,6 +293,7 @@ long line"
 | `#` | Comment | `\#` or quotes |
 | `*`, `?` | Globbing | quotes |
 | `~` | Home directory | quotes |
+
 ---
 ## Command Substitution
 
@@ -295,6 +312,7 @@ echo "Kernel: $(uname -r) on $(hostname)"
 echo "Files: `ls \`pwd\``"   # Don't do this
 echo "Files: $(ls $(pwd))"   # Much clearer
 ```
+
 ---
 ## Arithmetic Expansion
 

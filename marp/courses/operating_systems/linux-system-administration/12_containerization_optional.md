@@ -2,9 +2,14 @@
 ## Docker, Podman, and Container Management
 
 ---
+
 ## Container Concepts
 
 ![container_concepts](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_concepts.svg)
+
+---
+
+## Container Concepts
 
 - Containers share the host kernel (unlike VMs)
 - Isolated via `namespaces` and `cgroups`

@@ -798,6 +798,10 @@ echo "[*] Analysis complete: $OUT"
 
 ![comparing_memory_and_disk_evidence](svg/courses/security/linux-forensics/11_volatile_memory/comparing_memory_and_disk_evidence.svg)
 
+---
+
+## Comparing Memory and Disk Evidence
+
 - Disk analysis shows persistent state
 - Memory analysis shows runtime state
 - Combining both gives the complete picture

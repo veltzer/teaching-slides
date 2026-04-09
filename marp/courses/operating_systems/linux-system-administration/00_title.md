@@ -12,6 +12,7 @@ duration_hours: 40
 audience:
   - audiences:sysadmins
   - audiences:devops
+
 ---
 # Linux System Administration
 

@@ -14,13 +14,18 @@
 1. Memory Performance Optimization
 
 ---
-
 ## The Memory Hierarchy
 
 Computer systems use a hierarchy of memory technologies, trading off
 speed, size, and cost:
 
+---
+## The Memory Hierarchy
+
 ![the_memory_hierarchy](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/the_memory_hierarchy.svg)
+
+---
+## The Memory Hierarchy
 
 Each level is larger, slower, and cheaper per byte than the one above it.
 
@@ -50,12 +55,17 @@ A well-designed cache can satisfy >95% of memory requests.
 | L3 Cache | 70-90% of L2 misses |
 
 ---
-
 ## SRAM: Static Random Access Memory
 
 SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 
+---
+## SRAM: Static Random Access Memory
+
 ![sram_static_random_access_memory](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/sram_static_random_access_memory.svg)
+
+---
+## SRAM: Static Random Access Memory
 
 **Properties:**
 - Fast: ~1 ns access time
@@ -65,12 +75,17 @@ SRAM stores each bit using a flip-flop circuit (6 transistors per bit).
 - Used for: CPU caches (L1, L2, L3)
 
 ---
-
 ## DRAM: Dynamic Random Access Memory
 
 DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 
+---
+## DRAM: Dynamic Random Access Memory
+
 ![dram_dynamic_random_access_memory](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dram_dynamic_random_access_memory.svg)
+
+---
+## DRAM: Dynamic Random Access Memory
 
 **Properties:**
 - Slower: ~50-100 ns access time
@@ -97,12 +112,17 @@ DRAM stores each bit as charge on a tiny capacitor (1 transistor + 1 capacitor).
 | Typical product | On-die cache | DDR5 DIMM |
 
 ---
-
 ## DRAM Organization
 
 DRAM is organized as a 2D array of rows and columns:
 
+---
+## DRAM Organization
+
 ![dram_organization](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dram_organization.svg)
+
+---
+## DRAM Organization
 
 **Access steps:**
 1. **RAS** (Row Address Strobe): activate a row, copy to row buffer (~13 ns)
@@ -281,12 +301,17 @@ On x86-64, it is a 4-level radix tree:
 Each table is one 4 KB page containing 512 entries of 8 bytes each.
 
 ---
-
 ## Page Table Entry (PTE) Format
 
 Each page table entry on x86-64 contains:
 
+---
+## Page Table Entry (PTE) Format
+
 ![page_table_entry_pte_format](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/page_table_entry_pte_format.svg)
+
+---
+## Page Table Entry (PTE) Format
 
 | Bit | Name | Meaning |
 |-----|------|---------|
@@ -339,14 +364,19 @@ TLB miss rate is critical. Huge pages (2 MB, 1 GB) dramatically reduce
 TLB misses for large working sets.
 
 ---
-
 ## TLB Shootdown
 
 When the OS modifies page tables (e.g., unmapping a page), it must
 invalidate the TLB entries on ALL CPU cores -- this is called a
 **TLB shootdown**.
 
+---
+## TLB Shootdown
+
 ![tlb_shootdown](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/tlb_shootdown.svg)
+
+---
+## TLB Shootdown
 
 TLB shootdowns are expensive because they interrupt other cores.
 Frequent mmap/munmap in multi-threaded programs can cause performance
@@ -440,13 +470,18 @@ void *shm = mmap(NULL, 4096,
 ```
 
 ---
-
 ## DMA: Direct Memory Access
 
 DMA allows hardware devices to transfer data directly to/from memory
 without involving the CPU for each byte.
 
+---
+## DMA: Direct Memory Access
+
 ![dma_direct_memory_access](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/dma_direct_memory_access.svg)
+
+---
+## DMA: Direct Memory Access
 
 **DMA flow:**
 1. CPU programs the DMA controller (source, destination, size)
@@ -538,11 +573,13 @@ registers and memory through MMIO regions called BARs (Base Address
 Registers).
 
 ---
-
 ## NUMA: Non-Uniform Memory Access
 
 In multi-socket systems, each CPU has its own local memory. Accessing
 remote memory (attached to another CPU) is slower:
+
+---
+## NUMA: Non-Uniform Memory Access
 
 ![numa_non_uniform_memory_access](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/numa_non_uniform_memory_access.svg)
 
@@ -579,7 +616,6 @@ numastat -p <PID>
 A thread should allocate memory on the same NUMA node where it runs.
 
 ---
-
 ## Memory Performance: Row-Major vs Column-Major
 
 Memory layout has a dramatic effect on performance due to cache lines:
@@ -602,7 +638,14 @@ for (int j = 0; j < N; j++)
 ```
 
 **Memory layout of `matrix[N][N]`:**
+
+---
+## Memory Performance: Row-Major vs Column-Major
+
 ![memory_performance_row_major_vs_column_major](svg/courses/hardware/computer-architecture-fundamentals/03_memory_systems/memory_performance_row_major_vs_column_major.svg)
+
+---
+## Memory Performance: Row-Major vs Column-Major
 
 Typical speedup of row-major over column-major: **5-20x** for large matrices.
 

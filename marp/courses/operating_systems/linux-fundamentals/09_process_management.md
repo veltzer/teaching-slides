@@ -7,21 +7,20 @@
 
 ![the_ps_command](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_ps_command.svg)
 
-Basic usage:
+---
 
+## The ps Command
+
+Basic usage:
 ```bash
 # Simple process list
 ps
-
 # Full format
 ps -f
-
 # All processes (BSD style)
 ps aux
-
 # All processes (UNIX style)
 ps -ef
-
 # Process tree
 ps -ejH
 ```
@@ -57,18 +56,18 @@ TIME  - CPU time used
 
 ![finding_process_ids](svg/courses/operating_systems/linux-fundamentals/09_process_management/finding_process_ids.svg)
 
-Different methods:
+---
 
+## Finding Process IDs
+
+Different methods:
 ```bash
 # Using ps and grep
 ps aux | grep nginx
-
 # Using pgrep
 pgrep nginx
-
 # Using pidof
 pidof nginx
-
 # Find parent process
 ps -o ppid= -p PID
 ```
@@ -79,18 +78,18 @@ ps -o ppid= -p PID
 
 ![sending_signals_kill](svg/courses/operating_systems/linux-fundamentals/09_process_management/sending_signals_kill.svg)
 
-Common signals:
+---
 
+## Sending Signals (kill)
+
+Common signals:
 ```bash
 # Terminate gracefully (SIGTERM)
 kill PID
-
 # Force kill (SIGKILL)
 kill -9 PID
-
 # Stop process (SIGSTOP)
 kill -STOP PID
-
 # Continue process (SIGCONT)
 kill -CONT PID
 ```
@@ -112,12 +111,16 @@ kill -CONT PID
 | SIGUSR2   | 12     | User defined        |
 
 ---
+
 ## Monitoring with top
 
 ![monitoring_with_top](svg/courses/operating_systems/linux-fundamentals/09_process_management/monitoring_with_top.svg)
 
-Interactive commands:
+---
 
+## Monitoring with top
+
+Interactive commands:
 ```misc
 h - help
 k - kill process
@@ -151,15 +154,16 @@ Key sections:
 
 ![dealing_with_zombies](svg/courses/operating_systems/linux-fundamentals/09_process_management/dealing_with_zombies.svg)
 
-Identifying zombies:
+---
 
+## Dealing with Zombies
+
+Identifying zombies:
 ```bash
 # Show zombie processes
 ps aux | grep 'Z'
-
 # Find zombie parent
 ps -o ppid= -p ZOMBIE_PID
-
 # Kill parent to clean up
 kill -9 PARENT_PID
 ```
@@ -170,18 +174,18 @@ kill -9 PARENT_PID
 
 ![the_shell_and_jobs](svg/courses/operating_systems/linux-fundamentals/09_process_management/the_shell_and_jobs.svg)
 
-Job control:
+---
 
+## The Shell and Jobs
+
+Job control:
 ```bash
 # Start background job
 command &
-
 # List jobs
 jobs
-
 # Bring to foreground
 fg %1
-
 # Send to background
 bg %1
 ```
@@ -192,15 +196,16 @@ bg %1
 
 ![process_priorities_nice](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_priorities_nice.svg)
 
-Managing priorities:
+---
 
+## Process Priorities (nice)
+
+Managing priorities:
 ```bash
 # Start with priority
 nice -n 10 command
-
 # Change priority
 renice -n 10 -p PID
-
 # Show priorities
 ps -o pid,nice,command
 ```
@@ -255,19 +260,21 @@ watch -n 1 'free -m'
 ```
 
 ---
+
 ## Process Troubleshooting
 
 ![process_troubleshooting](svg/courses/operating_systems/linux-fundamentals/09_process_management/process_troubleshooting.svg)
 
-Common commands:
+---
 
+## Process Troubleshooting
+
+Common commands:
 ```bash
 # CPU usage
 pidstat -p PID 1
-
 # Memory usage
 ps -o pid,rss,command -p PID
-
 # Process tree
 pstree -p PID
 ```

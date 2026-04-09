@@ -14,6 +14,10 @@
 - Ensures no single server becomes overwhelmed
 - Improves application responsiveness and availability
 
+---
+
+## Load Balancer
+
 ![load_balancer](svg/courses/networking/networking-basics/02_network_components/load_balancer.svg)
 
 ---
@@ -23,6 +27,10 @@
 - Acts as an intermediary between clients and servers
 - Can provide anonymity, security, and caching
 - Often used to bypass restrictions or improve performance
+
+---
+
+## Proxy Server
 
 ![proxy_server](svg/courses/networking/networking-basics/02_network_components/proxy_server.svg)
 
@@ -34,6 +42,10 @@
 - Provides benefits like load balancing, SSL termination, and caching
 - Often used to enhance security and performance of web applications
 
+---
+
+## Reverse Proxy
+
 ![reverse_proxy](svg/courses/networking/networking-basics/02_network_components/reverse_proxy.svg)
 
 ---
@@ -43,6 +55,10 @@
 - Modifies network address information in packet headers
 - Allows multiple devices to share a single public IP address
 - Enhances security by hiding internal network structure
+
+---
+
+## NAT (Network Address Translation)
 
 ![nat_network_address_translation](svg/courses/networking/networking-basics/02_network_components/nat_network_address_translation.svg)
 

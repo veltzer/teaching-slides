@@ -10,6 +10,7 @@ duration_hours: 8
 audience:
   - audiences:developers
   - audiences:sysadmins
+
 ---
 # Computer Architecture Fundamentals
 ## Mark Veltzer

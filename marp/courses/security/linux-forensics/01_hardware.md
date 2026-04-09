@@ -101,6 +101,10 @@ lscpu | grep "Byte Order"
 
 ![hard_disk_drive_hdd_anatomy](svg/courses/security/linux-forensics/01_hardware/hard_disk_drive_hdd_anatomy.svg)
 
+---
+
+## Hard Disk Drive (HDD) Anatomy
+
 - Platters spin at 5400-15000 RPM
 - Read/write heads float nanometers above surface
 - Data is stored magnetically on platter surfaces
@@ -114,7 +118,15 @@ lscpu | grep "Byte Order"
 - **Head**: which platter surface (top/bottom)
 - **Sector**: subdivision of a track (traditionally 512 bytes)
 
+---
+
+## HDD Geometry: CHS Addressing
+
 ![hdd_geometry_chs_addressing](svg/courses/security/linux-forensics/01_hardware/hdd_geometry_chs_addressing.svg)
+
+---
+
+## HDD Geometry: CHS Addressing
 
 - Modern drives use LBA (Logical Block Addressing) instead of CHS
 - LBA numbers sectors sequentially from 0
@@ -146,6 +158,10 @@ sudo fdisk -l /dev/sda
 - No moving parts - uses NAND flash memory
 - Data stored in cells as electrical charges
 - Organized into pages (4-16 KB) and blocks (256-512 pages)
+
+---
+
+## Solid State Drives (SSD)
 
 ![solid_state_drives_ssd](svg/courses/security/linux-forensics/01_hardware/solid_state_drives_ssd.svg)
 
@@ -339,6 +355,10 @@ sudo fdisk -l /dev/sda | grep "Disklabel type"
 
 ![gpt_structure](svg/courses/security/linux-forensics/01_hardware/gpt_structure.svg)
 
+---
+
+## GPT Structure
+
 - Each partition has a unique GUID
 - Backup header allows recovery if primary is corrupted
 
@@ -390,6 +410,10 @@ sudo sfdisk -T
 ## Logical Volume Manager (LVM)
 
 ![logical_volume_manager_lvm](svg/courses/security/linux-forensics/01_hardware/logical_volume_manager_lvm.svg)
+
+---
+
+## Logical Volume Manager (LVM)
 
 ```bash
 # List physical volumes, volume groups, logical volumes

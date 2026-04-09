@@ -133,7 +133,6 @@ uint8_t c = a + b;  // Overflow! Result is 44
 ```
 
 ---
-
 ## Structure Layout
 
 ```c
@@ -145,6 +144,9 @@ struct Example {
     // 3 bytes padding
 };  // Total: 12 bytes
 ```
+
+---
+## Structure Layout
 
 ![structure_layout](svg/courses/embedded/effective-real-time-embedded-c-and-c++/03_elements_of_c_cpp/structure_layout.svg)
 

@@ -1,4 +1,5 @@
 # C++ Design Patterns
+
 ---
 ## What are Design Patterns
 
@@ -7,7 +8,6 @@
 - Design patterns originate from the seminal book "Design Patterns: Elements of Reusable Object-Oriented Software" by the "Gang of Four" (Gamma, Helm, Johnson, Vlissides)
 
 ---
-
 ## Why use Design Patterns
 
 - They promote code reuse and reduce duplication
@@ -16,17 +16,18 @@
 - They capture expert knowledge and best practices in software design
 
 ---
-
 ## Types of Design Patterns
 
 ![types_of_design_patterns](svg/courses/languages/c++/c++-design-patterns/01_intro/types_of_design_patterns.svg)
+
+---
+## Types of Design Patterns
 
 - **Creational Patterns**: Deal with object creation mechanisms, trying to create objects in a manner suitable to the situation
 - **Structural Patterns**: Explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient
 - **Behavioral Patterns**: Identify common communication patterns among objects and realize these patterns
 
 ---
-
 ## Diving into C++ Design Patterns
 
 - This course will cover various design patterns and their implementations in C++
@@ -35,7 +36,6 @@
 - The focus will be on understanding the patterns and their trade-offs, rather than memorizing implementations
 
 ---
-
 ## Course Structure
 
 1. **Introduction to Design Patterns**
@@ -47,7 +47,6 @@
     - Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor
 
 ---
-
 ## Resources
 
 - "Design Patterns: Elements of Reusable Object-Oriented Software" by Gamma, Helm, Johnson, and Vlissides

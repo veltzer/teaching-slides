@@ -9,6 +9,7 @@ category: devops
 audience:
 - audiences:developers
 - audiences:devops
+
 ---
 # Logstash
 ## Data Processing Pipeline
@@ -18,7 +19,11 @@ audience:
 
 ---
 
+## What is Logstash?
+
 ![title](svg/lectures/devops/logstash/title.svg)
+
+---
 
 ## What is Logstash?
 
@@ -44,6 +49,10 @@ audience:
 ## Logstash Architecture
 
 ![logstash_architecture](svg/lectures/devops/logstash/logstash_architecture.svg)
+
+---
+
+## Logstash Architecture
 
 **Core Components:**
 1. **Input Plugins** - Collect data from sources
@@ -444,6 +453,10 @@ curl -X GET "localhost:9600/_node/stats/pipelines"
 
 ![log_aggregation_architecture](svg/lectures/devops/logstash/log_aggregation_architecture.svg)
 
+---
+
+## Log Aggregation Architecture
+
 **Benefits:**
 1. Centralized logging
 1. Consistent format
@@ -577,7 +590,15 @@ output {
 
 **Horizontal Scaling:**
 
+---
+
+## Scaling Logstash
+
 ![scaling_logstash](svg/lectures/devops/logstash/scaling_logstash.svg)
+
+---
+
+## Scaling Logstash
 
 **Vertical Scaling:**
 1. Increase CPU cores

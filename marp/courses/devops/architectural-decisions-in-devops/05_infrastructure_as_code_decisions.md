@@ -1,4 +1,5 @@
 # Infrastructure as Code Decisions
+
 ---
 ## What is Infrastructure as Code?
 
@@ -6,6 +7,7 @@
 - Version-controlled, repeatable, and auditable
 - Replaces manual provisioning with automated workflows
 - Key decision: which approach, tool, and patterns to adopt
+
 ---
 ## Why IaC Matters for DevOps
 
@@ -14,6 +16,7 @@
 1. Supports collaboration through version control
 1. Provides an audit trail for compliance
 1. Reduces mean time to recovery (`MTTR`)
+
 ---
 ## The Two Paradigms
 
@@ -32,6 +35,7 @@
 - Provider-based architecture for multi-cloud support
 - Plan-and-apply workflow with explicit approval step
 - Open-source core with commercial offerings (`Terraform Cloud`, `HCP Terraform`)
+
 ---
 ## Terraform Example
 
@@ -52,6 +56,7 @@ output "public_ip" {
 
 - Declarative: describes what should exist
 - `terraform plan` shows what will change
+
 ---
 ## Terraform Plan-Apply Cycle
 
@@ -69,6 +74,7 @@ output "public_ip" {
     - State file is a single point of failure
     - `HCL` lacks full programming constructs
     - Refactoring resources often requires `terraform state mv`
+
 ---
 ## Pulumi Overview
 
@@ -76,6 +82,7 @@ output "public_ip" {
 - Supports `TypeScript`, `Python`, `Go`, `C#`, `Java`, `YAML`
 - Same cloud providers as Terraform (built on provider SDKs)
 - Managed state service or self-managed backends
+
 ---
 ## Pulumi Example
 
@@ -95,6 +102,7 @@ pulumi.export("public_ip", instance.public_ip)
 
 - Real Python: use loops, classes, and libraries
 - Same outcome as the Terraform example
+
 ---
 ## Pulumi Strengths and Weaknesses
 
@@ -107,6 +115,7 @@ pulumi.export("public_ip", instance.public_ip)
     - Steeper learning curve for ops-focused teams
     - Smaller community compared to Terraform
     - Debugging infrastructure bugs mixed with code bugs
+
 ---
 ## CloudFormation Overview
 
@@ -115,6 +124,7 @@ pulumi.export("public_ip", instance.public_ip)
 - Managed state: AWS tracks the stack state for you
 - Deep integration with all AWS services on day one
 - No external tooling or state backend required
+
 ---
 ## CloudFormation Example
 
@@ -135,6 +145,7 @@ Outputs:
 
 - AWS manages the stack lifecycle
 - Rollback on failure is automatic
+
 ---
 ## CloudFormation Strengths and Weaknesses
 
@@ -147,6 +158,7 @@ Outputs:
     - Verbose `YAML`/`JSON` syntax for complex stacks
     - Limited support for complex logic or dynamic resources
     - Template size limits (51,200 bytes inline, 460,800 bytes in S3)
+
 ---
 ## Tool Comparison Matrix
 
@@ -158,6 +170,7 @@ Outputs:
 | Learning curve | Medium | Higher | Lower (AWS users) |
 | Ecosystem | Very large | Growing | AWS-complete |
 | Testing | Limited | Native | Limited |
+
 ---
 ## Choosing the Right Tool
 
@@ -166,6 +179,7 @@ Outputs:
 - Developer-heavy team? `Pulumi` leverages existing skills
 - Ops-heavy team? `Terraform` `HCL` is approachable
 - Consider: team skills, cloud strategy, existing tooling
+
 ---
 ## State Management: The Core Challenge
 
@@ -182,6 +196,7 @@ Outputs:
     - `Terraform Cloud` / `HCP Terraform`
     - `Consul`, `PostgreSQL`
 - Enables team collaboration on shared infrastructure
+
 ---
 ## Remote Backend Configuration
 
@@ -199,6 +214,7 @@ terraform {
 
 - Encryption at rest protects sensitive values
 - `DynamoDB` table provides state locking
+
 ---
 ## State Locking and Collaboration
 
@@ -210,6 +226,7 @@ terraform {
 ```bash
 terraform force-unlock LOCK_ID
 ```
+
 ---
 ## State Locking Flow
 
@@ -226,6 +243,7 @@ terraform force-unlock LOCK_ID
     - Single state across environments
     - Simpler to manage initially
     - Risky: one bad apply affects everything
+
 ---
 ## State Organization Patterns
 
@@ -246,6 +264,7 @@ state/
 
 - Split by environment AND by component
 - Each state file is independently lockable
+
 ---
 ## State Security Considerations
 
@@ -261,6 +280,7 @@ output "db_password" {
   sensitive = true
 }
 ```
+
 ---
 ## Reusable Modules: The Building Blocks
 
@@ -277,6 +297,7 @@ module "vpc" {
   azs     = ["us-east-1a", "us-east-1b"]
 }
 ```
+
 ---
 ## Module Architecture
 
@@ -298,6 +319,7 @@ module "vpc" {
 - Avoid pointing modules at `main` branch
 - Test module upgrades in lower environments first
 - Maintain a changelog for breaking changes
+
 ---
 ## Abstraction Layers and Platform Engineering
 
@@ -320,6 +342,7 @@ inputs = {
   environment = "production"
 }
 ```
+
 ---
 ## What is Configuration Drift?
 
@@ -330,6 +353,7 @@ inputs = {
     - External automation modifying resources
     - Cloud provider auto-scaling or auto-updates
 - Result: IaC no longer reflects reality
+
 ---
 ## Drift Detection Approaches
 
@@ -352,6 +376,7 @@ inputs = {
     - May revert intentional manual changes (emergency hotfixes)
     - Can cause outages if the IaC definition is wrong
     - Requires rock-solid IaC definitions and testing
+
 ---
 ## Preventing Drift in the First Place
 
@@ -360,6 +385,7 @@ inputs = {
 1. Tag manually created resources for review
 1. Implement CI/CD pipelines for all infrastructure changes
 1. Educate teams on the cost of manual modifications
+
 ---
 ## IaC Testing Strategies
 
@@ -373,6 +399,7 @@ inputs = {
 tflint --init && tflint
 checkov -d .
 ```
+
 ---
 ## IaC in CI/CD Pipelines
 
@@ -393,6 +420,7 @@ jobs:
 ```
 
 - Plan on every PR; apply on merge to `main`
+
 ---
 ## Policy as Code
 
@@ -404,6 +432,7 @@ jobs:
     - No public security group rules on port 22
     - All resources must have `owner` and `environment` tags
     - Instance types must be from an approved list
+
 ---
 ## Summary: Key IaC Decisions
 

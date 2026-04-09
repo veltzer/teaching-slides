@@ -8,6 +8,7 @@ category: database
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # SQL Databases Fundamentals
 ## Mark Veltzer
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## What Are SQL Databases?
+
 ![title](svg/lectures/databases/sql-database-fundamentals/title.svg)
+
+---
 
 ## What Are SQL Databases?
 

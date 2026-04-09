@@ -734,12 +734,15 @@ if __name__ == '__main__':
 ```
 
 ---
-
 ## Tool Selection Criteria
 
 Choosing the right Git tools:
 
 **Development Environment:**
+
+---
+## Tool Selection Criteria
+
 ![tool_selection_criteria](svg/courses/git/git2/20_tools/tool_selection_criteria.svg)
 
 ---

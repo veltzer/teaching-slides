@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # io_uring: High-Performance I/O Interface for Linux
 ## Mark Veltzer
@@ -14,7 +15,11 @@ audience:
 
 ---
 
+## What is `io_uring`?
+
 ![title](svg/lectures/operating_systems/iouring/title.svg)
+
+---
 
 ## What is `io_uring`?
 
@@ -42,6 +47,10 @@ audience:
 1. Submission Queue (SQ) and Completion Queue (CQ)
 1. Minimal system call overhead
 1. Batch operations support
+
+---
+
+## Core Design Principles
 
 ![core_design_principles](svg/lectures/operating_systems/iouring/core_design_principles.svg)
 
@@ -268,6 +277,10 @@ io_uring_queue_init_params(64, &ring, &params);
 1. Reduced CPU usage by 30-50%
 1. Lower latency for small I/O operations
 1. Better scaling with multiple cores
+
+---
+
+## Real-World Performance Numbers
 
 ![real_world_performance_numbers](svg/lectures/operating_systems/iouring/real_world_performance_numbers.svg)
 

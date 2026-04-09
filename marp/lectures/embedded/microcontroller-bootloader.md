@@ -7,6 +7,7 @@ level: advanced
 category: embedded
 audience:
 - audiences:developers
+
 ---
 # Writing Bootloaders for Microcontrollers
 ## From Reset Vector to Application Launch
@@ -15,19 +16,21 @@ audience:
 
 ---
 
+## What is a Bootloader?
+
 ![title](svg/lectures/embedded/microcontroller-bootloader/title.svg)
+
+---
 
 ## What is a Bootloader?
 
 A **bootloader** is the first piece of code that runs when a microcontroller starts up.
-
 **Primary Functions:**
 - Initialize basic hardware
 - Check for firmware updates
 - Validate application integrity
 - Launch the main application
 - Handle recovery scenarios
-
 Think of it as the BIOS/UEFI of microcontrollers
 
 ---

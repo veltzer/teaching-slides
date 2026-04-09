@@ -1,5 +1,6 @@
 # Artifact Management and Promotion
 ## Architectural Decisions in DevOps
+
 ---
 ## Table of Contents
 1. Artifact Repository Strategies
@@ -10,6 +11,7 @@
 1. Base Image Strategies and Supply Chain Security
 1. Image Scanning and Policy Enforcement
 1. Slim Images vs Full Images
+
 ---
 ## What Is an Artifact?
 - An artifact is any output produced by a build process
@@ -20,6 +22,7 @@
     - Helm charts and configuration bundles
     - Documentation and test reports
 - Artifacts must be stored, versioned, and promoted reliably
+
 ---
 ## Why Artifact Management Matters
 - Reproducibility: rebuild or redeploy any release
@@ -27,6 +30,7 @@
 - Security: scan and validate before production
 - Speed: avoid rebuilding the same artifact multiple times
 - Compliance: audit trail for regulated industries
+
 ---
 ## Artifact Repository Landscape
 | Repository | Primary Use | Formats |
@@ -37,6 +41,7 @@
 | `GitHub Packages` | Source-integrated | npm, Maven, Docker |
 | `Google Artifact Registry` | GCP-native | Docker, Maven, npm |
 | `Azure Artifacts` | Azure-native | NuGet, npm, Maven |
+
 ---
 ## Single Artifact Repository
 - One centralized repository for all artifact types
@@ -49,6 +54,7 @@
     - Single point of failure
     - Can become a performance bottleneck
     - Harder to scale across regions
+
 ---
 ## Multiple Artifact Repositories
 - Separate repositories per team, format, or environment
@@ -60,6 +66,7 @@
     - Increased operational overhead
     - Cross-repository dependency management
     - Policy consistency challenges
+
 ---
 ## Single vs Multiple: Decision Matrix
 | Factor | Single Repo | Multiple Repos |
@@ -69,6 +76,7 @@
 | Multi-region deploy | Needs mirrors | Natural fit |
 | Polyglot ecosystem | Universal type | Format-specific |
 | Cost sensitivity | Lower | Higher |
+
 ---
 ## Artifact Repository Architecture
 ![artifact_repository_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/artifact_repository_architecture.svg)
@@ -80,6 +88,7 @@
 - Key principle: **never rebuild** between stages
 - The same binary tested in staging is deployed to production
 - Promotion is a metadata operation, not a rebuild
+
 ---
 ## Promotion Pipeline: Overview
 ![promotion_pipeline_overview](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/promotion_pipeline_overview.svg)
@@ -95,6 +104,7 @@
 - **Virtual repository promotion**: logical views over one physical repo
     - Best of both worlds
     - Supported by `Artifactory` and `Nexus`
+
 ---
 ## Promotion Gates
 - Each promotion step should require passing quality gates
@@ -106,6 +116,7 @@
     - Performance regression check
     - Manual approval (for production)
 - Gates should be automated where possible
+
 ---
 ## Promotion Example in `JFrog` CLI
 
@@ -122,6 +133,7 @@ jfrog rt build-promote \
 - Build name: `my-app`, build number: `42`
 - Target repository: `staging-local`
 - `--copy true` keeps the original in dev
+
 ---
 ## Semantic Versioning (SemVer)
 - Format: `MAJOR.MINOR.PATCH`
@@ -133,6 +145,7 @@ jfrog rt build-promote \
     - `1.0.0` -> `1.1.0` (new endpoint added)
     - `1.0.0` -> `1.0.1` (bug fix)
 - Pre-release: `1.0.0-alpha.1`, `1.0.0-rc.2`
+
 ---
 ## SemVer: Version Ordering
 ![semver_version_ordering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/semver_version_ordering.svg)
@@ -150,6 +163,7 @@ jfrog rt build-promote \
     - No semantic meaning
     - Hard to communicate to customers
     - Ordering is not immediately obvious
+
 ---
 ## SemVer vs Commit-Based: When to Use
 | Scenario | Recommended Strategy |
@@ -160,6 +174,7 @@ jfrog rt build-promote \
 | Infrastructure as Code | Commit-based |
 | Shared SDK | `SemVer` |
 | Continuous deployment service | Commit-based |
+
 ---
 ## Hybrid Versioning
 - Combine `SemVer` with commit metadata
@@ -170,6 +185,7 @@ jfrog rt build-promote \
     - Machine-traceable back to exact commit
     - Build metadata does not affect precedence
 - Tools: `GitVersion`, `semantic-release`, `conventional-commits`
+
 ---
 ## Immutable Artifacts
 - Once published, an artifact version must never change
@@ -179,6 +195,7 @@ jfrog rt build-promote \
     - Deleting and re-uploading the same version is forbidden
     - Use new version numbers for any change
 - Repository configuration: enable "prevent overwrite" policies
+
 ---
 ## Why Immutability Matters
 - **Reproducibility**: re-deploy any past version exactly
@@ -187,6 +204,7 @@ jfrog rt build-promote \
 - **Auditing**: every version has a clear history
 - **Debugging**: production always matches tested binary
 - Breaking immutability = breaking trust in the pipeline
+
 ---
 ## Traceability: From Deploy to Source
 ![traceability_from_deploy_to_source](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/traceability_from_deploy_to_source.svg)
@@ -200,6 +218,7 @@ jfrog rt build-promote \
     - Source branch and repository URL
 - Use build-info manifests (e.g., `JFrog Build Info`)
 - Store Software Bill of Materials (`SBOM`)
+
 ---
 ## SBOM: Software Bill of Materials
 - A machine-readable inventory of all components
@@ -210,6 +229,7 @@ jfrog rt build-promote \
     - Vulnerability references
 - Required by US Executive Order 14028 for federal software
 - Generate at build time, attach to the artifact
+
 ---
 ## Container Image Management
 - Container images are the dominant artifact type in modern DevOps
@@ -219,6 +239,7 @@ jfrog rt build-promote \
     - Security scanning
     - Registry management
     - Tag and digest strategies
+
 ---
 ## Container Image Layers
 ![container_image_layers](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_layers.svg)
@@ -234,6 +255,7 @@ jfrog rt build-promote \
 - Decision factors:
     - Trust level and update frequency
     - Organizational compliance requirements
+
 ---
 ## Base Image Tiering
 ![base_image_tiering](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/base_image_tiering.svg)
@@ -251,6 +273,7 @@ jfrog rt build-promote \
 ```dockerfile
 FROM node@sha256:a3f8b2c4e5d6...
 ```
+
 ---
 ## Image Signing with `cosign`
 
@@ -267,6 +290,7 @@ cosign verify \
 ```
 - Signatures are stored alongside the image in the registry
 - Kubernetes admission controllers can enforce verification
+
 ---
 ## Image Scanning Overview
 - Scanning detects known vulnerabilities (CVEs) in image layers
@@ -276,6 +300,7 @@ cosign verify \
     - At runtime (detect drift)
     - On schedule (new CVEs emerge daily)
 - Popular scanners: `Trivy`, `Grype`, `Snyk`, `Clair`
+
 ---
 ## Scanning with `Trivy`
 
@@ -295,6 +320,7 @@ trivy image \
   --output results.json \
   myapp:2.3.1
 ```
+
 ---
 ## Vulnerability Severity Levels
 | Severity | Action | SLA Example |
@@ -304,6 +330,7 @@ trivy image \
 | Medium | Allow with exception | Fix within 30 days |
 | Low | Informational | Fix at next release |
 | Negligible | Ignore | No action required |
+
 ---
 ## Policy Enforcement Architecture
 ![policy_enforcement_architecture](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/policy_enforcement_architecture.svg)
@@ -332,6 +359,7 @@ spec:
           containers:
           - image: "myregistry.io/*"
 ```
+
 ---
 ## Slim Images vs Full Images
 | Aspect | Full Image | Slim Image |
@@ -342,6 +370,7 @@ spec:
 | Build complexity | Simple | Higher |
 | Startup time | Slower | Faster |
 | CVE count | Many | Few |
+
 ---
 ## Common Base Image Options
 | Image | Size | Shell | Package Manager |
@@ -352,6 +381,7 @@ spec:
 | `distroless` | ~2-20 MB | None | None |
 | `scratch` | 0 MB | None | None |
 | `chainguard` | ~2-15 MB | None | `apk` (build) |
+
 ---
 ## Slim Image Comparison
 ![slim_image_comparison](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/slim_image_comparison.svg)
@@ -374,6 +404,7 @@ FROM gcr.io/distroless/static
 COPY --from=builder /app/myapp /
 CMD ["/myapp"]
 ```
+
 ---
 ## Multi-Stage Build: Layer Diagram
 ![multi_stage_build_layer_diagram](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/multi_stage_build_layer_diagram.svg)
@@ -393,6 +424,7 @@ FROM gcr.io/distroless/java21-debian12
 COPY target/myapp.jar /app.jar
 CMD ["app.jar"]
 ```
+
 ---
 ## When NOT to Use Slim Images
 - During development (need debugging tools)
@@ -409,6 +441,7 @@ services:
     # dev:  myapp:dev-full (with shell, curl, etc.)
     # prod: myapp:prod-distroless
 ```
+
 ---
 ## Tag Strategies for Container Images
 - Avoid using `latest` in production
@@ -422,6 +455,7 @@ services:
 # Pin by digest in Kubernetes
 image: myregistry.io/myapp@sha256:a3f8...
 ```
+
 ---
 ## The Danger of Mutable Tags
 - Tags like `latest`, `stable`, `v2` can be overwritten
@@ -431,6 +465,7 @@ image: myregistry.io/myapp@sha256:a3f8...
     - Pod restart at 14:30 pulls new version
     - Untested code now running in production
 - Solution: immutable tags or digest pinning
+
 ---
 ## Container Image Lifecycle
 ![container_image_lifecycle](svg/courses/devops/architectural-decisions-in-devops/04_artifact_management_and_promotion/container_image_lifecycle.svg)
@@ -444,6 +479,7 @@ image: myregistry.io/myapp@sha256:a3f8...
     - Preserve all production-promoted versions
     - Archive to cold storage after retention period
 - Automate with registry-native GC or tools like `skopeo`
+
 ---
 ## Registry Mirroring and Caching
 - Pull-through cache reduces external dependency
@@ -456,6 +492,7 @@ image: myregistry.io/myapp@sha256:a3f8...
     - Resilience against upstream outages
     - Reduced egress costs
     - Bandwidth savings
+
 ---
 ## Artifact Promotion: Complete Pipeline
 
@@ -482,6 +519,7 @@ jobs:
         docker://registry/staging/myapp:$SHA \
         docker://registry/prod/myapp:$SHA
 ```
+
 ---
 ## Artifact Metadata Best Practices
 - Label every artifact with:
@@ -498,6 +536,7 @@ LABEL org.opencontainers.image.revision=\
 LABEL org.opencontainers.image.version=\
   "2.3.1"
 ```
+
 ---
 ## Anti-Patterns to Avoid
 - Rebuilding artifacts between environments
@@ -508,6 +547,7 @@ LABEL org.opencontainers.image.version=\
 - Not cleaning up old artifacts (storage bloat)
 - Missing SBOM generation
 - Running containers as root
+
 ---
 ## Artifact Management Maturity Model
 | Level | Characteristics |
@@ -517,6 +557,7 @@ LABEL org.opencontainers.image.version=\
 | Level 3 | Automated promotion, scanning gates |
 | Level 4 | Signed artifacts, SBOM, full traceability |
 | Level 5 | Policy-as-code, automated compliance |
+
 ---
 ## Key Takeaways
 - Store artifacts in a central repository with clear promotion stages

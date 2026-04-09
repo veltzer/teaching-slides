@@ -70,6 +70,12 @@ Mitigations:
 - Circular dependencies that defy static analysis
 - Event-driven flows spanning dozens of files
 
+---
+
+## Challenges of AI in Large Codebases
+
+## Implicit Conventions and Cross-Module Dependencies
+
 ![implicit_conventions_and_cross_module_dependencies](svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/implicit_conventions_and_cross_module_dependencies.svg)
 
 ---
@@ -259,6 +265,12 @@ Navigation workflow:
 1. "Show me the database migration for the orders table"
 ```
 
+---
+
+## Code Navigation with AI Agents
+
+## Multi-File Navigation Workflows in Practice
+
 ![multi_file_navigation_workflows_in_practice](svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/multi_file_navigation_workflows_in_practice.svg)
 
 ---
@@ -270,6 +282,12 @@ Navigation workflow:
 - Use static analysis tools to generate call graphs, then feed them in
 - Map the lifecycle of a request across service boundaries
 - Identify shared mutable state and side effects
+
+---
+
+## Code Navigation with AI Agents
+
+## Understanding Call Graphs and Data Flow
 
 ![understanding_call_graphs_and_data_flow](svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/understanding_call_graphs_and_data_flow.svg)
 
@@ -384,6 +402,12 @@ Strangler Fig implementation with AI assistance:
 1. Once all endpoints are migrated, remove monolith code
 1. Retire the proxy and route directly to the new service
 ```
+
+---
+
+## Refactoring Monoliths with AI
+
+## Microservice Extraction Patterns
 
 ![microservice_extraction_patterns](svg/courses/ai/advanced-ai-powered-development/03_large_codebases_and_monoliths/microservice_extraction_patterns.svg)
 

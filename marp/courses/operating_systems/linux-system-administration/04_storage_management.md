@@ -356,9 +356,14 @@ filefrag /path/to/file       # ext4 fragmentation
 ```
 
 ---
+
 ## Backup Strategies
 
 ![backup_strategies](svg/courses/operating_systems/linux-system-administration/04_storage_management/backup_strategies.svg)
+
+---
+
+## Backup Strategies
 
 - **Full**: complete copy, slow but simple to restore
 - **Differential**: changes since last full, moderate speed
@@ -884,26 +889,32 @@ lsblk --discard
 ```
 
 ---
+
 ## Multipath I/O
 
 Multipath I/O (`dm-multipath`) provides redundant paths to SAN storage for high availability.
 
+---
+
+## Multipath I/O
+
 ![multipath_i_o](svg/courses/operating_systems/linux-system-administration/04_storage_management/multipath_i_o.svg)
+
+---
+
+## Multipath I/O
 
 ```bash
 # Install multipath tools
 apt install multipath-tools
-
 # Discover multipath devices
 multipath -ll
-
 # Configuration: /etc/multipath.conf
 # defaults {
 #     user_friendly_names yes
 #     path_grouping_policy multibus
 #     failback immediate
 # }
-
 # Restart and check
 systemctl restart multipathd
 multipath -v2

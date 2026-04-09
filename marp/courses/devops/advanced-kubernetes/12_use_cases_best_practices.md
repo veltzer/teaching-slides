@@ -56,6 +56,7 @@ metadata:
     pod-security.kubernetes.io/enforce: restricted
     pod-security.kubernetes.io/audit: restricted
     pod-security.kubernetes.io/warn: restricted
+
 ---
 # Namespace per team
 apiVersion: v1
@@ -94,6 +95,7 @@ spec:
     limits.memory: "32Gi"
     pods: "50"
     services: "20"
+
 ---
 # NetworkPolicy isolation
 apiVersion: networking.k8s.io/v1

@@ -1,4 +1,5 @@
 # Classes
+
 ---
 ## What is a Class?
 - A blueprint for creating objects
@@ -16,6 +17,7 @@ class Dog:
 rex = Dog("Rex")
 print(rex.bark())  # Rex says Woof!
 ```
+
 ---
 ## Class vs Instance
 - **Class**: The blueprint (template)
@@ -32,6 +34,7 @@ dog2 = Dog("Buddy")  # Instance 2
 print(dog1.name)      # Rex
 print(dog2.name)      # Buddy
 ```
+
 ---
 ## The `__init__` Method
 - Called automatically when creating an instance
@@ -47,6 +50,7 @@ class Point:
 p = Point(3, 4)
 print(p.x, p.y)  # 3 4
 ```
+
 ---
 ## The `self` Parameter
 - First parameter of every instance method
@@ -64,6 +68,7 @@ class Circle:
     def perimeter(self):
         return 2 * 3.14159 * self.radius
 ```
+
 ---
 ## Instance Attributes vs Class Attributes
 
@@ -82,6 +87,7 @@ print(dog2.species)  # Canis familiaris (shared)
 print(dog1.name)     # Rex (per instance)
 print(dog2.name)     # Buddy (per instance)
 ```
+
 ---
 ## Class Attribute Gotcha
 
@@ -99,6 +105,7 @@ class MyClass:
     def __init__(self):
         self.items = []  # Each instance gets its own
 ```
+
 ---
 ## Methods
 
@@ -118,6 +125,7 @@ class BankAccount:
         self.balance -= amount
         return self.balance
 ```
+
 ---
 ## Using the BankAccount Class
 
@@ -128,6 +136,7 @@ print(account.withdraw(200))   # 1300
 print(account.balance)         # 1300
 print(account.owner)           # Alice
 ```
+
 ---
 ## Class Methods
 
@@ -149,6 +158,7 @@ print(d.year)  # 2026
 
 - `@classmethod` receives the class, not instance
 - Often used as alternative constructors
+
 ---
 ## Static Methods
 
@@ -171,6 +181,7 @@ print(MathUtils.factorial(5))  # 120
 
 - `@staticmethod` has no `self` or `cls` parameter
 - Just a function that lives in the class namespace
+
 ---
 ## `__str__` and `__repr__`
 
@@ -191,6 +202,7 @@ print(p)        # (3, 4)        - uses __str__
 print(repr(p))  # Point(3, 4)   - uses __repr__
 print([p])      # [Point(3, 4)] - uses __repr__
 ```
+
 ---
 ## `__str__` vs `__repr__`
 - `__str__`: Human-readable representation
@@ -199,6 +211,7 @@ print([p])      # [Point(3, 4)] - uses __repr__
     - Used in the REPL and `repr()`
     - Ideally, `eval(repr(obj))` recreates the object
 - If only one is defined, implement `__repr__`
+
 ---
 ## Comparison Methods
 
@@ -220,6 +233,7 @@ p3 = Point(3, 4)
 print(p1 == p2)  # True
 print(p1 < p3)   # True
 ```
+
 ---
 ## Using `@functools.total_ordering`
 
@@ -240,6 +254,7 @@ class Point:
 
 # Now <=, >, >= also work automatically
 ```
+
 ---
 ## Arithmetic Operator Overloading
 
@@ -263,6 +278,7 @@ v2 = Vector(3, 4)
 print(v1 + v2)    # Vector(4, 6)
 print(v1 * 3)     # Vector(3, 6)
 ```
+
 ---
 ## Operator Overloading Methods
 | Operator | Method |
@@ -278,6 +294,7 @@ print(v1 * 3)     # Vector(3, 6)
 | `<` | `__lt__` |
 | `len()` | `__len__` |
 | `[]` | `__getitem__` |
+
 ---
 ## The `__len__` and `__getitem__` Methods
 
@@ -299,6 +316,7 @@ print(p[-1])      # Song C
 for song in p:    # Iteration works too
     print(song)
 ```
+
 ---
 ## The `__contains__` Method
 
@@ -314,6 +332,7 @@ p = Playlist(["Song A", "Song B"])
 print("Song A" in p)  # True
 print("Song C" in p)  # False
 ```
+
 ---
 ## The `__bool__` Method
 
@@ -336,6 +355,7 @@ else:
 if full:
     print("Has songs")  # This prints
 ```
+
 ---
 ## The `__hash__` Method
 
@@ -355,6 +375,7 @@ class Point:
 points = {Point(1, 2), Point(3, 4)}
 cache = {Point(0, 0): "origin"}
 ```
+
 ---
 ## Inheritance - Basic
 
@@ -379,6 +400,7 @@ cat = Cat("Whiskers")
 print(dog.speak())  # Rex says Woof!
 print(cat.speak())  # Whiskers says Meow!
 ```
+
 ---
 ## Inheritance - `super()`
 
@@ -398,6 +420,7 @@ print(dog.name)   # Rex
 print(dog.age)    # 5
 print(dog.breed)  # Labrador
 ```
+
 ---
 ## Checking Inheritance
 
@@ -414,6 +437,7 @@ print(isinstance(dog, Animal))  # True
 print(issubclass(Dog, Animal))  # True
 print(issubclass(Animal, Dog))  # False
 ```
+
 ---
 ## Multiple Inheritance
 
@@ -435,6 +459,7 @@ print(duck.fly())    # I can fly!
 print(duck.swim())   # I can swim!
 print(duck.quack())  # Quack!
 ```
+
 ---
 ## Method Resolution Order (MRO)
 
@@ -459,15 +484,20 @@ print(d.method())  # "B"
 print(D.__mro__)
 # (<class 'D'>, <class 'B'>, <class 'C'>, <class 'A'>, <class 'object'>)
 ```
+
 ---
 ## MRO - C3 Linearization
 
 ![mro_c3_linearization](svg/courses/languages/python/python-programming/08_classes/mro_c3_linearization.svg)
 
+---
+## MRO - C3 Linearization
+
 - Python uses C3 linearization algorithm
 - Guarantees each class appears only once
 - Respects the inheritance order
 - Use `ClassName.__mro__` or `ClassName.mro()` to inspect
+
 ---
 ## Mixins
 - A class designed to add specific behavior
@@ -487,6 +517,7 @@ class Person(JsonMixin):
 p = Person("Alice", 30)
 print(p.to_json())  # {"name": "Alice", "age": 30}
 ```
+
 ---
 ## Abstract Base Classes
 
@@ -514,6 +545,7 @@ class Circle(Shape):
 
 # shape = Shape()  # TypeError: Can't instantiate
 ```
+
 ---
 ## Properties - The Problem
 
@@ -526,6 +558,7 @@ p = Person(30)
 p.age = -5   # Allowed but wrong!
 print(p.age)  # -5
 ```
+
 ---
 ## Properties - The Solution
 
@@ -548,6 +581,7 @@ p = Person(30)
 print(p.age)  # 30
 # p.age = -5  # ValueError!
 ```
+
 ---
 ## Read-Only Properties
 
@@ -569,6 +603,7 @@ print(c.radius)  # 5
 print(c.area)    # 78.53975
 # c.area = 100   # AttributeError: can't set attribute
 ```
+
 ---
 ## Property Deleter
 
@@ -593,6 +628,7 @@ class Person:
 p = Person("Alice")
 del p.name  # Prints: Deleting Alice
 ```
+
 ---
 ## Class Decorators
 
@@ -615,6 +651,7 @@ class Point:
 
 print(Point(3, 4))  # Point(x=3, y=4)
 ```
+
 ---
 ## `dataclasses` (Python 3.7+)
 
@@ -633,6 +670,7 @@ print(p == Point(3, 4))  # True
 ```
 
 - Auto-generates `__init__`, `__repr__`, `__eq__`
+
 ---
 ## `dataclasses` - Options
 
@@ -655,6 +693,7 @@ s = Student("Alice", 20)
 s.grades.append(95)
 print(s)  # Student(name='Alice', age=20, grades=[95])
 ```
+
 ---
 ## `__slots__`
 - Restricts attributes to a fixed set
@@ -672,6 +711,7 @@ p = Point(3, 4)
 print(p.x)     # 3
 # p.z = 5      # AttributeError!
 ```
+
 ---
 ## Private and Protected Naming
 - Python has no true private attributes
@@ -691,6 +731,7 @@ print(obj.public)           # 1
 print(obj._protected)       # 2 (works but discouraged)
 print(obj._MyClass__private)  # 3 (name-mangled)
 ```
+
 ---
 ## The `__dict__` Attribute
 - Every instance stores its attributes in `__dict__`
@@ -709,6 +750,7 @@ print(p.__dict__)
 p.__dict__["email"] = "alice@example.com"
 print(p.email)  # alice@example.com
 ```
+
 ---
 ## Context Managers with Classes
 
@@ -729,6 +771,7 @@ class FileManager:
 with FileManager("test.txt", "w") as f:
     f.write("Hello!")
 ```
+
 ---
 ## The `__call__` Method
 
@@ -749,6 +792,7 @@ print(f(0))   # 1
 print(f(1))   # 6
 print(f(2))   # 17
 ```
+
 ---
 ## Descriptors
 
@@ -773,6 +817,7 @@ p = Product()
 p.price = 10     # OK
 # p.price = -1   # ValueError!
 ```
+
 ---
 ## Composition vs Inheritance
 - Inheritance: "is-a" relationship
@@ -794,6 +839,7 @@ class Car:
 car = Car()
 print(car.start())  # Engine started
 ```
+
 ---
 ## Summary
 - Classes bundle data and behavior into objects

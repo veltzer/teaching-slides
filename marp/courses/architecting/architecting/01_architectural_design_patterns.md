@@ -7,6 +7,7 @@
     - Client: Requests services, can be "thin" or "thick"
     - Server: Provides services, often manages resources
 - Client and server have different lifecycles but communicate via requests/responses
+
 ---
 ## Component Roles
 
@@ -19,6 +20,7 @@
     - Processes requests and sends responses back
     - May validate requests and authorize access
     - Often manages shared resources
+
 ---
 ## Communication Diagram
 
@@ -113,6 +115,7 @@ Cons:
 - Peers are both consumers and suppliers of resources
 - Peers can act as clients, servers, or both
 - Decentralized model without the need for central coordination
+
 ---
 ## Peer-to-Peer Roles
 
@@ -156,6 +159,7 @@ Cons:
 - Collaborative resource sharing or aggregation is desired
 - Scalability and load balancing can be achieved through peer distribution
 - Participants are willing to contribute resources as well as consume them
+
 ---
 ## Event Bus Pattern
 
@@ -163,6 +167,7 @@ Cons:
 - Publishers send events to the bus without knowing the subscribers
 - Subscribers register interest in specific events and are notified by the bus
 - Decouples publishers from subscribers and enables event-driven architecture
+
 ---
 ## Event Bus Roles
 
@@ -218,6 +223,7 @@ Cons:
 - Each service implements a specific business capability or functionality
 - Services are loosely coupled and communicate via lightweight protocols (e.g., HTTP/REST)
 - Enables developing, deploying, and scaling services independently
+
 ---
 ## Microservices Key Principles
 
@@ -231,6 +237,7 @@ Cons:
     - Services have control over their own data and can make decisions independently
 - Resilience
     - Services are designed to handle failures gracefully and recover independently
+
 ---
 ## Microservices Architecture Diagram
 
@@ -268,6 +275,7 @@ Cons:
 - Services are loosely coupled, autonomous, and expose well-defined interfaces
 - Services can be discovered, composed, and reused to create business processes
 - Enables integration and interoperability between heterogeneous systems
+
 ---
 ## Service-Oriented Architecture Key Principles
 
@@ -283,6 +291,7 @@ Cons:
     - Services can be composed and orchestrated to create higher-level business processes
 - Service Autonomy
     - Services have control over their own logic and resources
+
 ---
 
 ## Service-Oriented Architecture Diagram
@@ -339,6 +348,7 @@ Cons:
     - A communication channel or broker that facilitates the exchange of events between producers and consumers
 - Event Processing
     - The logic that is executed in response to receiving an event, such as updating state or triggering actions
+
 ---
 
 ## Event-Driven Architecture Diagram
@@ -531,6 +541,7 @@ Cons:
     - A derived view or representation of the system state
     - Created by processing the events and applying the changes to a read model
     - Can be optimized for querying and presentation purposes
+
 ---
 
 ## Event Sourcing Architecture Diagram
@@ -553,6 +564,7 @@ Cons:
 - May lead to increased storage requirements for storing events
 - Requires additional processing to reconstruct the current state from events
 - Can be challenging to implement queries that span multiple aggregates
+
 ---
 ## Event Sourcing When to Use
 
@@ -562,6 +574,7 @@ Cons:
 - When flexible querying and reporting requirements exist
 - When using CQRS to separate read and write models and optimize performance
 - When the domain involves complex business rules and state transitions
+
 ---
 ## Serverless Architecture Pattern
 
@@ -570,6 +583,7 @@ Cons:
 - Eliminates the need for server management and infrastructure provisioning
 - Provides automatic scaling, high availability, and pay-per-use pricing model
 - Enables rapid development, deployment, and iteration of application components
+
 ---
 ## Serverless Key Concepts
 
@@ -590,6 +604,7 @@ Cons:
 - Stateless
     - Functions do not maintain persistent state between invocations
     - State is typically stored in external services like databases or object storage
+
 ---
 ## Serverless Architecture Diagram
 
@@ -611,6 +626,7 @@ Cons:
 - Vendor lock-in and dependency on the serverless platform
 - Debugging and testing can be more challenging in a distributed environment
 - May not be suitable for long-running or stateful processes
+
 ---
 ## Serverless When to Use
 
@@ -620,6 +636,7 @@ Cons:
 - When server management and infrastructure provisioning should be avoided
 - When pay-per-use pricing and automatic scaling are beneficial
 - When integrating with various cloud services and APIs
+
 ---
 ## Space-Based Architecture Pattern
 
@@ -628,6 +645,7 @@ Cons:
 - Supports high read and write throughput and low latency
 - Utilizes in-memory data grids and distributed caching
 - Enables linear scalability and fault tolerance
+
 ---
 ## Space-Based Key Concepts
 
@@ -669,6 +687,7 @@ Cons:
 - May introduce overhead in terms of memory usage and network communication
 - Requires specialized skills and knowledge for development and operations
 - May not be suitable for applications with strong consistency requirements
+
 ---
 ## Space-Based When to Use
 
@@ -688,6 +707,7 @@ Cons:
 - Defines ports (interfaces) for interaction with the outside world
 - Uses adapters to connect the ports to specific technologies or services
 - Promotes testability, maintainability, and flexibility
+
 ---
 
 ## Hexagonal Architecture Key Concepts
@@ -795,6 +815,7 @@ Cons:
 - May lead to increased development effort and code duplication
 - Can be overkill for small or simple applications
 - Requires a good understanding of the principles and patterns involved
+
 ---
 ## When to Use
 
@@ -804,6 +825,7 @@ Cons:
 - When the application needs to support multiple user interfaces or delivery mechanisms
 - When the system is expected to evolve and adapt to changing requirements over time
 - When a clear separation of responsibilities and concerns is desired
+
 ---
 ## Onion Architecture Pattern
 
@@ -812,6 +834,7 @@ Cons:
 - Outer layers depend on inner layers but not vice versa
 - Promotes separation of concerns and dependency inversion
 - Aims to make the application more maintainable, testable, and adaptable
+
 ---
 ## Onion Architecture Key Concepts
 
@@ -830,6 +853,7 @@ Cons:
     - Contains the implementations of external dependencies and frameworks
     - Includes databases, UI frameworks, web services, etc.
     - Depends on the application services and adapts to their interfaces
+
 ---
 ## Onion Architecture Diagram
 
@@ -997,6 +1021,7 @@ Cons:
 - All components of the application run within the same process or container
 - Communication between components is done through method invocations or function calls
 - Suitable for small to medium-sized applications with a limited set of functionalities
+
 ---
 ## Monolithic Architecture Key Concepts
 
@@ -1012,6 +1037,7 @@ Cons:
     - The application typically relies on a single, shared database
     - All components access the same database schema and tables
     - Data consistency and transactions are managed within the monolith
+
 ---
 
 ## Monolithic Architecture Diagram
@@ -1046,6 +1072,7 @@ Cons:
 - When the team is small and has a good understanding of the entire codebase
 - When the application is not expected to scale significantly or require frequent updates
 - When simplicity and ease of development are prioritized over flexibility and scalability
+
 ---
 ## Modular Monolith Pattern
 
@@ -1161,6 +1188,7 @@ Cons:
 - Message passing and network communication can introduce latency and overhead
 - Difficult to maintain data consistency and handle distributed transactions
 - Debugging and troubleshooting can be challenging in a distributed environment
+
 ---
 ## Share-Nothing When to Use
 
@@ -1170,6 +1198,7 @@ Cons:
 - When fault tolerance and resilience are critical requirements
 - When the system benefits from parallel processing and distributed computing
 - When flexibility and independent scaling of nodes are desired
+
 ---
 ## Circuit Breaker Pattern
 
@@ -1177,6 +1206,7 @@ Cons:
 - Allows graceful degradation and faster recovery
 - Monitors for failures and "trips" to prevent further calls
 - Provides fallback mechanisms and automatic recovery
+
 ---
 ## Circuit Breaker Pattern Diagram
 
@@ -1196,6 +1226,7 @@ Cons:
 - Requires careful configuration
 - May mask underlying issues if not monitored
 - Can lead to reduced functionality during outages
+
 ---
 ## When to Use
 
@@ -1204,6 +1235,7 @@ Cons:
 - High-traffic applications prone to failures
 - When implementing fault-tolerant systems
 - In scenarios requiring rapid failure detection and recovery
+
 ---
 ## Saga Pattern
 
@@ -1212,6 +1244,7 @@ Cons:
 - Each local transaction updates the database and publishes an event
 - Subsequent steps are triggered by these events
 - Provides compensating transactions for rollback
+
 ---
 ## Saga Pattern Diagram
 
@@ -1231,6 +1264,7 @@ Cons:
 - Requires careful design of compensating actions
 - Can be challenging to debug and test
 - May introduce eventual consistency
+
 ---
 ## When to Use
 
@@ -1239,6 +1273,7 @@ Cons:
 - In systems requiring complex failure recovery mechanisms
 - When strong consistency is not immediately required
 - In scenarios where traditional two-phase commit is not feasible
+
 ---
 ## Bulkhead Pattern
 
@@ -1246,6 +1281,7 @@ Cons:
 - Named after the sectioned partitions (bulkheads) of a ship's hull
 - Prevents cascading failures across services
 - Enables fault tolerance and graceful degradation
+
 ---
 ## Bulkhead Pattern Diagram
 
@@ -1265,6 +1301,7 @@ Cons:
 - May lead to underutilization of resources if not properly configured
 - Requires careful capacity planning
 - Can be challenging to implement in legacy systems
+
 ---
 ## Bulkhead Pattern When to Use
 
@@ -1273,6 +1310,7 @@ Cons:
 - In systems with varying resource requirements across components
 - To protect critical services from failure in non-critical ones
 - In scenarios requiring different quality-of-service levels for different operations
+
 ---
 ## Strangler Fig Pattern
 
@@ -1281,6 +1319,7 @@ Cons:
 - Lets you migrate functionality piece by piece
 - Named after strangler fig vines that grow around and replace their host trees
 - Allows for coexistence of old and new systems during transition
+
 ---
 ## Strangler Fig Pattern Diagram
 
@@ -1300,6 +1339,7 @@ Cons:
 - Requires careful planning and coordination
 - May introduce temporary complexity during transition
 - Can be challenging to maintain consistency between old and new systems
+
 ---
 ## Strangler Fig When to Use
 
@@ -1308,6 +1348,7 @@ Cons:
 - When needing to deliver value incrementally during system modernization
 - In situations requiring minimal disruption to existing services
 - When the existing system is too large or complex for a single, complete rewrite
+
 ---
 ## Backend for Frontend (BFF) Pattern
 
@@ -1316,6 +1357,7 @@ Cons:
 - Optimizes data transfer and aggregation for each client
 - Improves performance and user experience
 - Simplifies client-side logic by moving complexity to the BFF layer
+
 ---
 ## Backend for Frontend (BFF) Pattern Diagram
 
@@ -1337,6 +1379,7 @@ Cons:
 - Requires additional development and maintenance effort
 - May result in inconsistencies between different client experiences
 - Can become a bottleneck if not properly designed
+
 ---
 ## BFF When to Use
 
@@ -1345,6 +1388,7 @@ Cons:
 - When optimizing for mobile performance is crucial
 - To simplify complex client-side logic in large applications
 - When different clients require different data shapes or operations
+
 ---
 ## API Gateway Pattern
 
@@ -1353,6 +1397,7 @@ Cons:
 - Aggregates responses from multiple services
 - Handles cross-cutting concerns (authentication, logging, SSL termination)
 - Can perform protocol translation and API composition
+
 ---
 ## API Gateway Pattern Diagram
 
@@ -1386,6 +1431,7 @@ Cons:
 - When implementing consistent security policies across APIs
 - To handle differences between client protocols and internal services
 - For gradually migrating from a monolith to microservices
+
 ---
 ## Anti-Corruption Layer Pattern
 
@@ -1430,6 +1476,7 @@ Cons:
 - When gradually replacing a legacy system over time
 - In situations where direct translation between two models is complex or undesirable
 - To facilitate communication between bounded contexts in a microservices architecture
+
 ---
 
 ## Database per Service Pattern
@@ -1477,6 +1524,7 @@ Cons:
 - To enable independent development and deployment of services
 - In systems where services need to be loosely coupled
 - When different teams are responsible for different services and their data
+
 ---
 
 ## Geode Pattern
@@ -1510,6 +1558,7 @@ Cons:
 - Requires careful management of data replication and synchronization
 - May increase operational costs due to distributed infrastructure
 - Can complicate deployment and versioning processes
+
 ---
 ## Geode When to Use
 
@@ -1520,6 +1569,7 @@ Cons:
 - For applications that benefit from bringing compute closer to the data and users
 - When you need to improve availability and fault tolerance across geographic regions
 - In large-scale systems where global deployment is necessary but challenging
+
 ---
 ## Kappa Architecture
 
@@ -1528,6 +1578,7 @@ Cons:
 - Relies on replayable logs or event sourcing for data storage
 - Eliminates the need for separate batch and speed layers
 - Aims to reduce complexity while maintaining scalability and fault-tolerance
+
 ---
 ## Kappa Architecture Diagram
 
@@ -1549,6 +1600,7 @@ Cons:
 - Relies heavily on the scalability of the stream processing system
 - May not be suitable for all types of data or processing requirements
 - Can be challenging to implement for systems not designed with event sourcing in mind
+
 ---
 ## When to Use
 
@@ -1559,6 +1611,7 @@ Cons:
 - When you want to simplify your architecture and reduce maintenance overhead
 - In scenarios where consistency between historical and real-time views is crucial
 - When your use case allows for incremental processing of all data
+
 ---
 ## Lambda Architecture
 
@@ -1567,6 +1620,7 @@ Cons:
 - Provides comprehensive and accurate views of batch data
 - Offers real-time views of online data
 - Aims to balance latency, throughput, and fault-tolerance
+
 ---
 ## Lambda Architecture Diagram
 
@@ -1588,6 +1642,7 @@ Cons:
 - May lead to increased operational and development costs
 - Potential for data inconsistency between batch and speed layers
 - Batch processing introduces latency in data availability
+
 ---
 ## When to Use
 
@@ -1597,6 +1652,7 @@ Cons:
 - For applications that can tolerate some degree of eventual consistency
 - When building systems that need to handle both incremental and reprocessing computations
 - In use cases where you need to balance between accuracy (batch layer) and speed (real-time layer)
+
 ---
 ## Mesh Architecture
 
@@ -1605,6 +1661,7 @@ Cons:
 - Uses a lightweight proxy (sidecar) alongside each service instance
 - Manages routing, load balancing, and security at the service level
 - Enables fine-grained control over network behavior and observability
+
 ---
 ## Mesh Architecture Diagram
 
@@ -1626,6 +1683,7 @@ Cons:
 - Requires additional resources for sidecar proxies
 - May have a steep learning curve for teams
 - Can be overkill for smaller or simpler microservices architectures
+
 ---
 ## Mesh Architecture When to Use
 
@@ -1636,6 +1694,7 @@ Cons:
 - In environments where detailed observability and monitoring are necessary
 - For gradual adoption of microservices in a hybrid architecture
 - When you want to offload common networking concerns from application code
+
 ---
 ## Sharded Architecture Pattern
 
@@ -1644,6 +1703,7 @@ Cons:
 - Improves scalability and performance for large-scale distributed databases
 - Allows for parallel processing of queries across multiple shards
 - Enables handling of larger datasets than can fit on a single server
+
 ---
 ## Sharded Architecture Diagram
 
@@ -1665,6 +1725,7 @@ Cons:
 - Makes it challenging to perform queries across multiple shards
 - Complicates data consistency and transaction management
 - Can make resharding (rebalancing data across shards) difficult
+
 ---
 ## Sharded When to Use
 
@@ -1674,6 +1735,7 @@ Cons:
 - For applications with clear data partitioning strategies
 - In scenarios where data can be naturally segmented (e.g., by customer, region, or time)
 - When you need to improve performance by reducing contention and increasing cache efficiency
+
 ---
 ## Throttling Pattern
 
@@ -1682,6 +1744,7 @@ Cons:
 - Can be applied at various levels: user, service, or system-wide
 - Implements strategies like fixed window, sliding window, or token bucket algorithms
 - Helps maintain system stability and responsiveness under high load
+
 ---
 ## Throttling Pattern Diagram
 
@@ -1703,6 +1766,7 @@ Cons:
 - Might introduce additional latency
 - Can be challenging to implement in distributed systems
 - May require additional infrastructure for rate limiting
+
 ---
 ## Throttling When to Use
 

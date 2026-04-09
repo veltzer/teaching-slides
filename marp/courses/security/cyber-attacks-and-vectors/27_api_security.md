@@ -134,15 +134,19 @@ def update_user():
 ```
 
 ---
+
 ## Server-Side Request Forgery (SSRF) via APIs
 
 ![server_side_request_forgery_ssrf_via_apis](svg/courses/security/cyber-attacks-and-vectors/27_api_security/server_side_request_forgery_ssrf_via_apis.svg)
+
+---
+
+## Server-Side Request Forgery (SSRF) via APIs
 
 ```python
 # SECURE: URL validation for SSRF prevention
 from urllib.parse import urlparse
 import ipaddress
-
 BLOCKED_NETWORKS = [
     ipaddress.ip_network('169.254.0.0/16'),   # Link-local (IMDS)
     ipaddress.ip_network('10.0.0.0/8'),        # Private
@@ -150,7 +154,6 @@ BLOCKED_NETWORKS = [
     ipaddress.ip_network('192.168.0.0/16'),    # Private
     ipaddress.ip_network('127.0.0.0/8'),       # Loopback
 ]
-
 def is_safe_url(url):
     parsed = urlparse(url)
     if parsed.scheme not in ('http', 'https'):

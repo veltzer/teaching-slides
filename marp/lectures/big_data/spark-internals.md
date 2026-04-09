@@ -8,6 +8,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Spark Internals: From Query to Execution
 ## Mark Veltzer
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## Slide 2: Logical Planning
+
 ![title](svg/lectures/big_data/spark-internals/title.svg)
+
+---
 
 ## Slide 2: Logical Planning
 

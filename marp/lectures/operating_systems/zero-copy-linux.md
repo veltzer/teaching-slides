@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # Zero-Copy in Linux
 ## Eliminating Unnecessary Data Copies for Maximum Performance
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## What is Zero-Copy?
+
 ![title](svg/lectures/operating_systems/zero-copy-linux/title.svg)
+
+---
 
 ## What is Zero-Copy?
 
@@ -45,14 +50,16 @@ audience:
 ## Traditional I/O Path: The Problem
 
 Reading a file and sending it over a network socket:
-
 ```c
 char buf[BUF_SIZE];
 read(fd, buf, BUF_SIZE);   /* 2 copies: disk→kernel, kernel→user */
 write(sock, buf, BUF_SIZE); /* 2 copies: user→kernel, kernel→NIC */
 ```
-
 Total: **4 copies**, **4 context switches**
+
+---
+
+## Traditional I/O Path: The Problem
 
 ![traditional_i_o_path_the_problem](svg/lectures/operating_systems/zero-copy-linux/traditional_i_o_path_the_problem.svg)
 

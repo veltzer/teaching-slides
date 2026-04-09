@@ -21,7 +21,6 @@
 But understanding *why* and *when* is crucial for effective `Git` workflows and team collaboration.
 
 ---
-
 ## What is Rebasing?
 
 Rebasing rewrites commit history by moving commits to a new base:
@@ -33,6 +32,9 @@ git rebase main
 # Interactive rebase to edit commits
 git rebase -i HEAD~3
 ```
+
+---
+## What is Rebasing?
 
 ![interactive_rebase_to_edit_commits](svg/courses/git/git2/08_merge_vs_rebase/interactive_rebase_to_edit_commits.svg)
 
@@ -169,7 +171,6 @@ squash j1k2l3m Fix validation bug
 **Result:** Single commit with combined changes and new message.
 
 ---
-
 ## Rebase vs Merge: Team Workflow Impact
 
 **Merge-based workflow:**
@@ -183,6 +184,9 @@ squash j1k2l3m Fix validation bug
 - Easy to follow feature development
 - Requires discipline and understanding
 - Better for code archaeology
+
+---
+## Rebase vs Merge: Team Workflow Impact
 
 ![rebase_vs_merge_team_workflow_impact](svg/courses/git/git2/08_merge_vs_rebase/rebase_vs_merge_team_workflow_impact.svg)
 

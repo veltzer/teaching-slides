@@ -11,6 +11,10 @@
 - Client-server protocol
 - Stateless, but not sessionless
 
+---
+
+## What is HTTP
+
 ![what_is_http](svg/courses/networking/networking-basics/03_http/what_is_http.svg)
 
 ---
@@ -21,6 +25,10 @@
 - One request-response pair per TCP connection
 - Headers introduced
 - Methods: GET, HEAD, POST
+
+---
+
+## HTTP/1.0 (1996)
 
 ![http_1_0_1996](svg/courses/networking/networking-basics/03_http/http_1_0_1996.svg)
 
@@ -33,6 +41,10 @@
 - Host header (virtual hosting)
 - New methods: PUT, DELETE, TRACE, OPTIONS
 - Chunked transfer encoding
+
+---
+
+## HTTP/1.1 (1997)
 
 ![http_1_1_1997](svg/courses/networking/networking-basics/03_http/http_1_1_1997.svg)
 
@@ -55,6 +67,10 @@
 - Server push
 - Stream prioritization
 
+---
+
+## HTTP/2 (2015)
+
 ![http_2_2015](svg/courses/networking/networking-basics/03_http/http_2_2015.svg)
 
 ---
@@ -72,6 +88,10 @@
 - Improved performance on poor networks
 - Reduced connection establishment time
 - Better multiplexing without head-of-line blocking
+
+---
+
+## HTTP/3 (2022)
 
 ![http_3_2022](svg/courses/networking/networking-basics/03_http/http_3_2022.svg)
 
@@ -92,6 +112,7 @@
 | Server Push       | No       | No       | Yes      | Yes      |
 | HOL Blocking      | Yes      | Yes      | Reduced  | Eliminated |
 | Transport Protocol| TCP      | TCP      | TCP      | UDP (QUIC) |
+
 ---
 ## Key Takeaways
 
@@ -100,6 +121,7 @@
 1. HTTP/2 and HTTP/3 focus on multiplexing and reducing latency
 1. Modern websites benefit from using the latest HTTP version
 1. Understanding HTTP versions helps in web optimization
+
 ---
 
 ## Final image of HTTP1.1

@@ -1,4 +1,5 @@
 # Pipes
+
 ---
 ## What is a Pipe?
 - Connects stdout of one command to stdin of another
@@ -13,6 +14,7 @@ ls -la | grep ".txt"
 # Data flow:
 # ls -la --> stdout --> pipe --> stdin --> grep ".txt"
 ```
+
 ---
 ## Pipe Syntax
 
@@ -67,6 +69,7 @@ cat /proc/sys/fs/pipe-max-size
 
 # This is how flow control works automatically
 ```
+
 ---
 ## Common Pipeline Patterns
 
@@ -88,6 +91,7 @@ grep -c "error" logfile.txt
 # Or:
 grep "error" logfile.txt | wc -l
 ```
+
 ---
 ## Pipeline Building Blocks
 
@@ -103,6 +107,7 @@ grep "error" logfile.txt | wc -l
 # Example: user activity report
 last | awk '{print $1}' | sort | uniq -c | sort -rn | head -5
 ```
+
 ---
 ## The "Useless Use of `cat`" Anti-Pattern
 
@@ -121,6 +126,7 @@ sort file.txt
 cat file1.txt file2.txt | sort    # concatenating files
 cat -n file.txt                    # adding line numbers
 ```
+
 ---
 ## Pipes and Return Codes
 
@@ -138,6 +144,7 @@ echo $?    # 1 (false failed)
 false | true | false
 echo "${PIPESTATUS[@]}"    # 1 0 1
 ```
+
 ---
 ## Pipes and Subshells: The Trap
 
@@ -164,6 +171,7 @@ echo -e "a\nb\nc" | while read line; do
 done
 echo "count=$count"    # 3
 ```
+
 ---
 ## Named Pipes (FIFOs)
 
@@ -184,6 +192,7 @@ ls -la /tmp/mypipe
 # Cleanup
 rm /tmp/mypipe
 ```
+
 ---
 ## Pipe to `xargs`
 
@@ -203,6 +212,7 @@ cat urls.txt | xargs -n 1 curl -O
 # Run in parallel
 cat hosts.txt | xargs -n 1 -P 4 ping -c 1
 ```
+
 ---
 ## Pipeline Performance
 

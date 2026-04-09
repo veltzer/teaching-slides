@@ -16,17 +16,18 @@
 1. Cache Coherence
 
 ---
-
 ## What is a CPU?
 
 The Central Processing Unit is the "brain" of the computer. It executes
 instructions from programs by performing arithmetic, logic, control, and
 I/O operations.
 
+---
+## What is a CPU?
+
 ![what_is_a_cpu](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/what_is_a_cpu.svg)
 
 ---
-
 ## The Arithmetic Logic Unit (ALU)
 
 The ALU performs all arithmetic and logical operations inside the CPU.
@@ -41,7 +42,13 @@ The ALU performs all arithmetic and logical operations inside the CPU.
 - Shift left, shift right
 - Comparison (sets flags)
 
+---
+## The Arithmetic Logic Unit (ALU)
+
 ![the_arithmetic_logic_unit_alu](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_arithmetic_logic_unit_alu.svg)
+
+---
+## The Arithmetic Logic Unit (ALU)
 
 The ALU reads two operands (A and B), performs the operation specified by the
 opcode, and produces a result plus status flags.
@@ -65,7 +72,6 @@ Example: after computing `5 - 5`, ZF=1, SF=0, CF=0, OF=0.
 A `JZ` (jump if zero) instruction would take the branch.
 
 ---
-
 ## CPU Registers
 
 Registers are the fastest storage in a computer -- accessed in a single
@@ -73,15 +79,23 @@ clock cycle with zero latency.
 
 **General-purpose registers (x86-64):**
 
+---
+## CPU Registers
+
 ![cpu_registers](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cpu_registers.svg)
 
 ---
-
 ## Register Naming in x86-64
 
 The x86-64 registers have sub-register access for backward compatibility:
 
+---
+## Register Naming in x86-64
+
 ![register_naming_in_x86_64](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/register_naming_in_x86_64.svg)
+
+---
+## Register Naming in x86-64
 
 - `AL` = low 8 bits of RAX
 - `AX` = low 16 bits of RAX
@@ -112,22 +126,29 @@ Arguments beyond the 6th are passed on the stack. Floating-point arguments
 use XMM0-XMM7.
 
 ---
-
 ## The Control Unit
 
 The control unit orchestrates the CPU. It reads instructions from memory,
 decodes them, and generates control signals that tell other components
 what to do.
 
+---
+## The Control Unit
+
 ![the_control_unit](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_control_unit.svg)
 
 ---
-
 ## The Instruction Cycle: Fetch-Decode-Execute
 
 Every instruction goes through a fundamental cycle:
 
+---
+## The Instruction Cycle: Fetch-Decode-Execute
+
 ![the_instruction_cycle_fetch_decode_execute](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_instruction_cycle_fetch_decode_execute.svg)
+
+---
+## The Instruction Cycle: Fetch-Decode-Execute
 
 **Step by step:**
 
@@ -167,14 +188,19 @@ Cycle 4 - WRITE-BACK:
 Without pipelining, only one instruction completes every 4+ clock cycles.
 
 ---
-
 ## Pipelining
 
 Pipelining overlaps instruction execution stages, like an assembly line.
 While one instruction is being executed, the next is being decoded, and
 the one after that is being fetched.
 
+---
+## Pipelining
+
 ![pipelining](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/pipelining.svg)
+
+---
+## Pipelining
 
 **Throughput**: After the pipeline is full, one instruction completes per cycle.
 **Latency**: Each instruction still takes 4 cycles from start to finish.
@@ -207,7 +233,6 @@ Both instruction fetch and data load need memory in same cycle
 Solution: **separate I-cache and D-cache** (Harvard architecture internally).
 
 ---
-
 ## Branch Prediction
 
 Modern CPUs predict branch outcomes to keep the pipeline full.
@@ -219,7 +244,13 @@ A misprediction costs 10-20+ cycles (pipeline flush).
 
 **Dynamic prediction -- 2-bit saturating counter:**
 
+---
+## Branch Prediction
+
 ![branch_prediction](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/branch_prediction.svg)
+
+---
+## Branch Prediction
 
 Modern CPUs (like Intel Alder Lake) use neural branch predictors with
 97%+ accuracy on typical workloads.
@@ -255,13 +286,18 @@ Prediction accuracy ~50%. Massive performance penalty.
 Same algorithm, same data, 3x slowdown from branch misprediction.
 
 ---
-
 ## Superscalar Execution
 
 A superscalar CPU can issue multiple instructions per clock cycle.
 It has multiple execution units working in parallel.
 
+---
+## Superscalar Execution
+
 ![superscalar_execution](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/superscalar_execution.svg)
+
+---
+## Superscalar Execution
 
 A modern Intel/AMD core can retire 4-6 instructions per cycle.
 
@@ -372,33 +408,45 @@ Apple's M-series chips demonstrated that ARM can match or exceed x86
 performance while using far less power.
 
 ---
-
 ## The Memory Wall Problem
 
 CPU speed has grown much faster than memory speed. This gap is the
 "memory wall" and is the reason caches exist.
 
+---
+## The Memory Wall Problem
+
 ![the_memory_wall_problem](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/the_memory_wall_problem.svg)
 
 ---
-
 ## Cache Hierarchy
 
 Modern CPUs use a multi-level cache hierarchy to bridge the memory wall:
 
+---
+## Cache Hierarchy
+
 ![cache_hierarchy](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_hierarchy.svg)
+
+---
+## Cache Hierarchy
 
 L1 is split into instruction cache (I-Cache) and data cache (D-Cache).
 L2 and L3 are unified (hold both instructions and data).
 
 ---
-
 ## Cache Lines and Spatial Locality
 
 Caches do not store individual bytes. They store **cache lines**, typically
 64 bytes on x86.
 
+---
+## Cache Lines and Spatial Locality
+
 ![cache_lines_and_spatial_locality](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_lines_and_spatial_locality.svg)
+
+---
+## Cache Lines and Spatial Locality
 
 This exploits **spatial locality**: if you access one byte, you are likely
 to access nearby bytes soon.
@@ -415,12 +463,17 @@ for (int i = 0; i < N; i += 16)
 ```
 
 ---
-
 ## Cache Associativity
 
 Where can a cache line be placed? This defines associativity:
 
+---
+## Cache Associativity
+
 ![cache_associativity](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_associativity.svg)
+
+---
+## Cache Associativity
 
 **Typical modern CPUs:**
 - L1: 8-12 way set associative
@@ -452,16 +505,29 @@ After E: [E B C D]         A evicted (was LRU), E takes its place
 ```
 
 ---
-
 ## Write Policies
 
 When the CPU writes data, when does it update main memory?
 
 **Write-Through:**
+
+---
+## Write Policies
+
 ![write_policies_1](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_1.svg)
 
+---
+## Write Policies
+
 **Write-Back:**
+
+---
+## Write Policies
+
 ![write_policies_2](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/write_policies_2.svg)
+
+---
+## Write Policies
 
 **Write-Allocate vs No-Write-Allocate:**
 - Write-Allocate: on a write miss, load the line into cache first, then write
@@ -470,18 +536,22 @@ When the CPU writes data, when does it update main memory?
 Modern CPUs typically use **write-back + write-allocate**.
 
 ---
-
 ## Cache Coherence Problem
 
 In multi-core systems, each core has its own L1/L2 cache. If two cores
 cache the same memory address, writes by one core must be visible to others.
 
+---
+## Cache Coherence Problem
+
 ![cache_coherence_problem](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/cache_coherence_problem.svg)
+
+---
+## Cache Coherence Problem
 
 Solution: **cache coherence protocols**.
 
 ---
-
 ## MESI Protocol
 
 The most common cache coherence protocol. Each cache line has one of
@@ -494,7 +564,13 @@ four states:
 | **S**hared | Line is clean, may be in other caches too |
 | **I**nvalid | Line is not valid, treat as cache miss |
 
+---
+## MESI Protocol
+
 ![mesi_protocol](svg/courses/hardware/computer-architecture-fundamentals/02_cpu_architecture/mesi_protocol.svg)
+
+---
+## MESI Protocol
 
 When Core 0 writes to a Shared line, it sends an "invalidate" message
 to all other cores, forcing them to mark their copies Invalid.

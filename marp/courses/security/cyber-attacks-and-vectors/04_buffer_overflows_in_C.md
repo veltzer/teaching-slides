@@ -1,4 +1,5 @@
 # Buffer Overflows in C
+
 ---
 ## What is a Buffer Overflow?
 - Occurs when a program tries to write data beyond the bounds of a buffer
@@ -6,12 +7,14 @@
 - Allows an attacker to gain control of the program flow
 - One of the oldest and most dangerous vulnerability classes
 - Responsible for major incidents: Morris Worm (1988), Code Red (2001), Heartbleed (2014)
+
 ---
 ## How Buffer Overflows Happen
 - Common coding mistakes:
     - Using insecure functions (e.g. `strcpy`, `strcat`, `sprintf`)
     - Off-by-one errors
     - Inadequate bounds checking
+
 ---
 ## Types of Buffer Overflows
 
@@ -157,23 +160,26 @@ void secure_heap(const char *input) {
 ```
 
 ---
+
 ## Format String Vulnerability
 
 ```c
 #include <stdio.h>
-
 // VULNERABLE: User input used as format string
 void vulnerable_format(char *user_input) {
     printf(user_input);  // DANGEROUS! User controls format
 }
 // Attacker input: "%x %x %x %x" leaks stack values
 // Attacker input: "%n" writes to memory!
-
 // SECURE: Always use format specifier
 void secure_format(const char *user_input) {
     printf("%s", user_input);  // User input is DATA, not format
 }
 ```
+
+---
+
+## Format String Vulnerability
 
 ![format_string_vulnerability](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/format_string_vulnerability.svg)
 
@@ -286,24 +292,27 @@ gcc -Wall -Wextra -Werror \
     - Value is placed before return address on stack
 
 ---
+
 ## How ASLR Works
 
 ```bash
 # Check ASLR status on Linux
 cat /proc/sys/kernel/randomize_va_space
 # 0 = disabled, 1 = partial, 2 = full
-
 # Observe ASLR in action
 for i in $(seq 1 5); do
     cat /proc/self/maps | grep stack
 done
 # Each execution shows different stack addresses
-
 # Check if a binary is PIE (required for full ASLR)
 file /usr/bin/ls
 readelf -h /usr/bin/ls | grep Type
 # DYN (Position-Independent Executable)
 ```
+
+---
+
+## How ASLR Works
 
 ![dyn_position_independent_executable](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/dyn_position_independent_executable.svg)
 

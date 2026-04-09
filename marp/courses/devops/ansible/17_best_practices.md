@@ -236,6 +236,7 @@ ansible-playbook -i inventories/production playbooks/deploy.yml
 
 ```yaml
 # playbooks/rolling_deploy.yml
+
 ---
 - name: Rolling deployment
   hosts: webservers
@@ -293,6 +294,7 @@ ansible-playbook -i inventories/production playbooks/deploy.yml
 
 ```yaml
 # playbooks/rollback.yml
+
 ---
 - name: Rollback deployment
   hosts: webservers
@@ -393,6 +395,7 @@ tasks:
 
 ```yaml
 # playbooks/db_migrate.yml
+
 ---
 - name: Database migration
   hosts: dbservers[0]    # Only run on primary DB
@@ -436,6 +439,7 @@ tasks:
 
 ```yaml
 # playbooks/drift_check.yml
+
 ---
 - name: Detect configuration drift
   hosts: all
@@ -474,6 +478,7 @@ tasks:
 
 ```yaml
 # playbooks/compliance.yml
+
 ---
 - name: Security compliance checks
   hosts: all
@@ -524,6 +529,7 @@ tasks:
 
 ```yaml
 # playbooks/patch.yml
+
 ---
 - name: System patching
   hosts: all

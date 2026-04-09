@@ -9,6 +9,7 @@ category: language
 duration_hours: 24
 audience:
   - audiences:developers
+
 ---
 # C Refresher
 ## Mark Veltzer

@@ -10,6 +10,7 @@ category: ai
 duration_hours: 40
 audience:
   - audiences:data-scientists
+
 ---
 # Generative Ai Applications
 ## Mark Veltzer

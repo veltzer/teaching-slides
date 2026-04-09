@@ -437,6 +437,7 @@ spec:
   ref:
     branch: main
   url: https://github.com/user/repo
+
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
@@ -465,6 +466,7 @@ metadata:
 spec:
   interval: 10m
   url: https://charts.bitnami.com/bitnami
+
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease

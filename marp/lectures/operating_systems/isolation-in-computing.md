@@ -9,6 +9,7 @@ category: operating-systems
 audience:
 - audiences:developers
 - audiences:devops
+
 ---
 # Isolation in Computing
 ## Mark Veltzer
@@ -16,12 +17,15 @@ audience:
 
 ---
 
+## What is Isolation?
+
 ![title](svg/lectures/operating_systems/isolation-in-computing/title.svg)
+
+---
 
 ## What is Isolation?
 
 Isolation is the fundamental principle of separating components to prevent unwanted interaction
-
 Key benefits:
 1. Security - Prevent unauthorized access
 1. Stability - Contain failures
@@ -262,6 +266,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: production
+
 ---
 apiVersion: v1
 kind: Namespace

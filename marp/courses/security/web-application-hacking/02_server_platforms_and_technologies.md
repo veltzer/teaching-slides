@@ -383,6 +383,10 @@ testssl.sh target.com
 
 ![proxy_architecture](svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/proxy_architecture.svg)
 
+---
+
+## Proxy Architecture
+
 - Proxies allow inspection and modification of traffic
 - Multiple proxy layers can complicate testing
 - `CDN`s and `WAF`s add additional processing

@@ -23,9 +23,14 @@
 | 8080   | HTTP Proxy     | TCP      |
 
 ---
+
 ## Port States
 
 ![port_states](svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/port_states.svg)
+
+---
+
+## Port States
 
 - **Open**: Useful for attackers -- exploitable services
 - **Closed**: Host is alive but no service on this port
@@ -72,17 +77,25 @@ nmap 192.168.1.0/24
 ```
 
 ---
+
 ## Nmap Scan Types
 
 ### TCP SYN Scan (Half-Open Scan)
 
+---
+
+## Nmap Scan Types
+
 ![tcp_syn_scan_half_open_scan](svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_syn_scan_half_open_scan.svg)
+
+---
+
+## Nmap Scan Types
 
 ```bash
 # SYN scan (requires root, stealthy)
 sudo nmap -sS 192.168.1.1
 ```
-
 - Most popular scan type -- fast and relatively stealthy
 - Does not complete the TCP handshake (half-open)
 - Less likely to be logged by applications (but IDS will detect it)
@@ -196,25 +209,27 @@ nmap -sV --version-intensity 5 192.168.1.1
 - Critical for vulnerability assessment -- version numbers map to known CVEs
 
 ---
+
 ## OS Fingerprinting
 
 ```bash
 # OS detection
 sudo nmap -O 192.168.1.1
-
 # Aggressive OS detection with version info
 sudo nmap -A 192.168.1.1
-
 # Example output:
 # OS details: Linux 5.4 - 5.15
 # Network Distance: 1 hop
 # TCP Sequence Prediction: Difficulty=261 (Good luck!)
 ```
-
 - Analyzes TCP/IP stack implementation details
 - Examines: TTL values, window sizes, TCP options ordering
 - Each OS has a unique "fingerprint" of these values
 - `-A` enables OS detection, version detection, script scanning, and traceroute
+
+---
+
+## OS Fingerprinting
 
 ![tcp_sequence_prediction_difficulty_261_good_luck](svg/courses/security/cyber-attacks-and-vectors/20_port_scanning/tcp_sequence_prediction_difficulty_261_good_luck.svg)
 

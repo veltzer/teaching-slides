@@ -10,6 +10,7 @@ category: devops
 duration_hours: 24
 audience:
   - audiences:developers
+
 ---
 # Advanced Kubernetes
 ## Mark Veltzer

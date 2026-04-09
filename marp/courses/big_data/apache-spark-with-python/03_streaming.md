@@ -31,6 +31,7 @@
     - Seamless integration with Spark SQL
     - MLlib for streaming ML
     - GraphX for graph processing
+
 ---
 ## DStream (Discretized Stream)
 

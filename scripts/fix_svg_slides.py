@@ -60,11 +60,11 @@ def fix_slide(slide: str) -> str:
     # Lines before image (after heading): check for real content
     pre_start = (heading_idx + 1) if heading_idx is not None else 0
     pre_lines = lines[pre_start:img_idx]
-    pre_content = [l for l in pre_lines if is_real_content(l)]
+    pre_content = [line for line in pre_lines if is_real_content(line)]
 
     # Lines after image: check for real content
     post_lines = lines[img_idx + 1:]
-    post_content = [l for l in post_lines if is_real_content(l)]
+    post_content = [line for line in post_lines if is_real_content(line)]
 
     if not pre_content and not post_content:
         return slide  # already compliant
@@ -78,9 +78,9 @@ def fix_slide(slide: str) -> str:
         if heading_line:
             pre_slide_lines.append(heading_line)
         pre_slide_lines.append('')
-        for l in pre_lines:
-            if is_real_content(l) or l.strip() == '':
-                pre_slide_lines.append(l)
+        for ln in pre_lines:
+            if is_real_content(ln) or ln.strip() == '':
+                pre_slide_lines.append(ln)
         # Strip trailing blanks
         while pre_slide_lines and not pre_slide_lines[-1].strip():
             pre_slide_lines.pop()
@@ -102,11 +102,11 @@ def fix_slide(slide: str) -> str:
             post_slide_lines.append('')
         # Add post lines, skip leading blanks
         started = False
-        for l in post_lines:
-            if not started and not l.strip():
+        for ln in post_lines:
+            if not started and not ln.strip():
                 continue
             started = True
-            post_slide_lines.append(l)
+            post_slide_lines.append(ln)
         # Strip trailing blanks
         while post_slide_lines and not post_slide_lines[-1].strip():
             post_slide_lines.pop()

@@ -1,6 +1,8 @@
 # Advanced Spark with Python
+
 ---
 ## Advanced RDD and DataFrame Operations
+
 ---
 ## Chapter topics
 * Advanced transformations and actions
@@ -8,6 +10,7 @@
 * Broadcast variables and accumulators
 * Performance optimization techniques
 * Real-world applications and patterns
+
 ---
 ## Learning Objectives
 * Master complex RDD transformations
@@ -15,18 +18,21 @@
 * Optimize memory usage with broadcast variables
 * Design efficient data processing pipelines
 * Apply performance tuning techniques
+
 ---
 ## Prerequisites Check
 * Basic Python programming
 * Spark fundamentals
 * DataFrame operations
 * SQL knowledge
+
 ---
 ## Complex Transformations
 * Beyond basic operations
 * Chaining transformations
 * Optimization opportunities
 * Performance considerations
+
 ---
 ## Key Transformation Types
 ```python
@@ -37,6 +43,7 @@ def process_partition(iterator):
         results.append(x * 2)
     return iter(results)
 ```
+
 ---
 ## MapPartitions vs Map
 ![mappartitions_vs_map](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/mappartitions_vs_map.svg)
@@ -51,6 +58,7 @@ result = rdd.aggregate(
     lambda acc1, acc2: acc1 + acc2
 )
 ```
+
 ---
 ## Cogroup Operations
 ```python
@@ -58,6 +66,7 @@ rdd1 = sc.parallelize([("a", 1), ("b", 2)])
 rdd2 = sc.parallelize([("a", 3), ("a", 4)])
 grouped = rdd1.cogroup(rdd2)
 ```
+
 ---
 ## Understanding Partitioning
 ![understanding_partitioning](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/understanding_partitioning.svg)
@@ -84,6 +93,7 @@ class DatePartitioner(Partitioner):
 1. Range-based partitioning
 1. Custom logic partitioning
 1. Hybrid approaches
+
 ---
 ## Data Skew Handling
 ```python
@@ -92,6 +102,7 @@ def balance_partitions(rdd):
     threshold = max(counts.values()) * 0.75
     return rdd.partitionBy(100, lambda k: hash(k))
 ```
+
 ---
 ## Memory Management
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/memory_management.svg)
@@ -102,6 +113,7 @@ def balance_partitions(rdd):
 lookup_table = {"key1": "value1", "key2": "value2"}
 broadcast_lookup = sc.broadcast(lookup_table)
 ```
+
 ---
 ## Broadcast Variable Usage
 ```python
@@ -110,18 +122,21 @@ def process_with_lookup(record):
 
 result = rdd.map(process_with_lookup)
 ```
+
 ---
 ## Broadcast Best Practices
 1. Use for static reference data
 1. Monitor memory usage
 1. Consider update frequency
 1. Optimize serialization
+
 ---
 ## Accumulators Introduction
 ```python
 error_count = sc.accumulator(0)
 warning_count = sc.accumulator(0)
 ```
+
 ---
 ## Custom Accumulator
 
@@ -144,12 +159,14 @@ class SetAccumulator(AccumulatorParam):
 from pyspark.sql.window import Window
 window_spec = Window.partitionBy("department")
 ```
+
 ---
 ## Window Function Types
 1. Ranking functions
 1. Analytic functions
 1. Aggregate functions
 1. Value functions
+
 ---
 ## Advanced Window Operations
 ```python
@@ -158,6 +175,7 @@ window_spec = (Window
     .orderBy("salary")
     .rowsBetween(-2, 2))
 ```
+
 ---
 ## Complex Window Example
 ```python
@@ -167,6 +185,7 @@ df = df.withColumn(
     F.avg("value").over(window_spec)
 )
 ```
+
 ---
 ## Performance Optimization
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/performance_optimization.svg)
@@ -177,18 +196,21 @@ df = df.withColumn(
 spark.conf.set("spark.memory.fraction", 0.8)
 spark.conf.set("spark.memory.storageFraction", 0.3)
 ```
+
 ---
 ## CPU Optimization
 1. Partition sizing
 1. Task scheduling
 1. Resource allocation
 1. Serialization
+
 ---
 ## Network Optimization
 ```python
 spark.conf.set("spark.shuffle.compress", "true")
 spark.conf.set("spark.rdd.compress", "true")
 ```
+
 ---
 ## Storage Strategies
 ![storage_strategies](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/storage_strategies.svg)
@@ -199,12 +221,14 @@ spark.conf.set("spark.rdd.compress", "true")
 1. MEMORY_AND_DISK
 1. MEMORY_ONLY_SER
 1. DISK_ONLY
+
 ---
 ## When to Cache
 ```python
 # Expensive computation
 complex_rdd = rdd.map(expensive_function).cache()
 ```
+
 ---
 ## Persistence Options
 ![persistence_options](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/persistence_options.svg)
@@ -217,18 +241,21 @@ small_df = spark.table("small_table")
 large_df = spark.table("large_table")
 joined = large_df.join(broadcast(small_df), "key")
 ```
+
 ---
 ## Shuffle Optimization
 1. Reduce shuffle partitions
 1. Use broadcast joins
 1. Partition data properly
 1. Monitor shuffle spill
+
 ---
 ## Data Serialization
 ```python
 spark.conf.set("spark.serializer",
     "org.apache.spark.serializer.KryoSerializer")
 ```
+
 ---
 ## Monitoring Tools
 ![monitoring_tools](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/monitoring_tools.svg)
@@ -239,18 +266,21 @@ spark.conf.set("spark.serializer",
 1. Memory usage
 1. Shuffle read/write
 1. GC time
+
 ---
 ## Resource Management
 ```python
 spark.conf.set("spark.executor.memory", "4g")
 spark.conf.set("spark.executor.cores", "4")
 ```
+
 ---
 ## Common Anti-patterns
 1. Unnecessary shuffling
 1. Poor partitioning
 1. Memory leaks
 1. Inefficient UDFs
+
 ---
 ## Debugging Techniques
 ```python
@@ -261,6 +291,7 @@ def debug_function(partition):
 
 debug_rdd = rdd.mapPartitions(debug_function)
 ```
+
 ---
 ## Data Skew Solutions
 ![data_skew_solutions](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/data_skew_solutions.svg)
@@ -275,12 +306,14 @@ from pyspark.sql.types import StringType
 def complex_transformation(value):
     return process(value)
 ```
+
 ---
 ## Pipeline Optimization
 1. Stage optimization
 1. Task combining
 1. Memory management
 1. I/O optimization
+
 ---
 ## Best Practices Summary
 ![best_practices_summary](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/best_practices_summary.svg)
@@ -291,12 +324,14 @@ def complex_transformation(value):
 1. Optimize shuffling
 1. Use appropriate partitioning
 1. Implement caching strategy
+
 ---
 ## Advanced Configurations
 ```python
 spark.conf.set("spark.sql.adaptive.enabled", "true")
 spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 ```
+
 ---
 ## Production Deployment
 ![production_deployment](svg/courses/big_data/advanced-spark-with-python/01_advanced_rdd_dataframe_operations/production_deployment.svg)
@@ -307,18 +342,21 @@ spark.conf.set("spark.sql.adaptive.skewJoin.enabled", "true")
 1. Authorization
 1. Encryption
 1. Audit logging
+
 ---
 ## Future Learning Path
 1. Streaming processing
 1. Machine learning
 1. Graph processing
 1. Deep learning
+
 ---
 ## Chapter Summary
 1. Complex transformations
 1. Custom partitioning
 1. Memory optimization
 1. Performance tuning
+
 ---
 ## Practice Exercises
 1. Implement custom partitioner

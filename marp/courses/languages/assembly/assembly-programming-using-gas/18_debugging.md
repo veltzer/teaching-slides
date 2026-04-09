@@ -1,9 +1,11 @@
 # Debugging and Tools
+
 ---
 ## GDB for Assembly Programs
 - GNU Debugger (GDB)
 - Powerful tool for debugging assembly code
 - Supports both source-level and machine-level debugging
+
 ---
 ## Compiling for Debugging
 
@@ -133,6 +135,7 @@ gcc -pg program.c -o program
 ```bash
 gprof program gmon.out > analysis.txt
 ```
+
 ---
 ## perf Example
 

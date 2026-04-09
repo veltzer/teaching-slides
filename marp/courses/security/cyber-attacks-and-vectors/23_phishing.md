@@ -1,4 +1,5 @@
 # Phishing: Don't Take the Bait
+
 ---
 ## What is Phishing?
 - Phishing is a type of cyber attack where criminals attempt to steal sensitive information like login credentials or financial information
@@ -221,23 +222,25 @@ cat suspicious_email.eml | grep -E "^(From|To|Subject|Received|Return-Path|Reply
 ```
 
 ---
+
 ## DMARC, DKIM, and SPF
 
 ![dmarc_dkim_and_spf](svg/courses/security/cyber-attacks-and-vectors/23_phishing/dmarc_dkim_and_spf.svg)
+
+---
+
+## DMARC, DKIM, and SPF
 
 ```bash
 # Check SPF record
 dig TXT example.com | grep "v=spf1"
 # v=spf1 include:_spf.google.com -all
-
 # Check DKIM record
 dig TXT google._domainkey.example.com
 # v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3...
-
 # Check DMARC record
 dig TXT _dmarc.example.com
 # v=DMARC1; p=reject; rua=mailto:dmarc@example.com;
-
 # DMARC policy levels:
 # p=none       Monitor only (receive reports)
 # p=quarantine Send failures to spam
@@ -369,10 +372,10 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 ```
 
 ---
+
 ## Security Awareness Training
 
 ### Effective Training Program Elements
-
 | Component                    | Frequency       | Purpose                         |
 |------------------------------|-----------------|----------------------------------|
 | Initial onboarding training  | Once            | Baseline security knowledge      |
@@ -380,6 +383,10 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 | Micro-learning modules       | Quarterly       | Focused topic updates            |
 | Incident debrief             | After incidents | Learn from real events           |
 | Role-specific training       | Annual          | Targeted for high-risk roles     |
+
+---
+
+## Security Awareness Training
 
 ![effective_training_program_elements](svg/courses/security/cyber-attacks-and-vectors/23_phishing/effective_training_program_elements.svg)
 

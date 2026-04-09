@@ -1,4 +1,5 @@
 # Container Security Issues
+
 ---
 ## Security Risks with Containers
 - Kernel Exploits
@@ -220,6 +221,7 @@ spec:
 - Image Scanning and Management
     - Scan images for vulnerabilities, use trusted sources
     - Implement image lifecycle management
+
 ---
 ## Additional Security Controls
 
@@ -259,6 +261,7 @@ spec:
   podSelector: {}
   policyTypes:
   - Ingress
+
 ---
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy

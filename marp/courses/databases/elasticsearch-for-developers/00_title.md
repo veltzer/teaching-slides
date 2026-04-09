@@ -11,6 +11,7 @@ duration_hours_long: 40
 audience:
   - audiences:developers
 duration_hours: 40
+
 ---
 # Elasticsearch For Developers
 ## Mark Veltzer

@@ -1,4 +1,5 @@
 # Timing
+
 ---
 ## The `time` Built-in
 
@@ -33,6 +34,7 @@ Relationships:
 - For I/O-bound: real >> user + sys
 - For parallel: real < user + sys (multi-core)
 ```
+
 ---
 ## The `/usr/bin/time` Command
 
@@ -50,6 +52,7 @@ Relationships:
 /usr/bin/time -f "Time: %e seconds, Memory: %M KB" ls > /dev/null
 # Time: 0.00 seconds, Memory: 3456 KB
 ```
+
 ---
 ## High-Precision Timing
 
@@ -73,6 +76,7 @@ some_command
 end=$EPOCHREALTIME
 echo "Elapsed: $(bc <<< "$end - $start") seconds"
 ```
+
 ---
 ## Timing Functions
 
@@ -96,6 +100,7 @@ timer sleep 1
 timer find /usr -name "*.so" -type f > /dev/null
 # [TIMER] find /usr -name *.so -type f: 245ms (exit 0)
 ```
+
 ---
 ## Benchmarking
 
@@ -124,6 +129,7 @@ benchmark() {
 
 benchmark 10 ls -la /usr/bin
 ```
+
 ---
 ## `SECONDS` Variable
 
@@ -148,6 +154,7 @@ SECONDS=0
 # ... entire script ...
 echo "Script completed in $SECONDS seconds"
 ```
+
 ---
 ## Timeout for Commands
 
@@ -170,6 +177,7 @@ timer_pid=$!
 long_command
 kill $timer_pid 2>/dev/null
 ```
+
 ---
 ## Profiling Scripts
 

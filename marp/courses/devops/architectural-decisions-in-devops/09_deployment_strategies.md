@@ -1,4 +1,5 @@
 # Deployment Strategies
+
 ---
 ## Why Deployment Strategy Matters
 
@@ -9,6 +10,7 @@
     - Infrastructure budget
     - Risk tolerance and rollback requirements
     - Database migration complexity
+
 ---
 ## Overview of Common Strategies
 
@@ -17,6 +19,7 @@
 1. **Rolling Deployments** - update instances incrementally in place
 1. **Feature Flags** - decouple deployment from release using code-level toggles
 1. **Progressive Delivery** - combine strategies with experimentation
+
 ---
 ## Strategy Comparison
 
@@ -26,6 +29,7 @@
 | Canary | None | Fast | Medium | Medium |
 | Rolling | None | Moderate | Low | Medium |
 | Feature Flags | None | Instant | Low | High |
+
 ---
 ## Blue/Green Deployments - Concept
 
@@ -34,6 +38,7 @@
 - Deploy the new version to the idle environment
 - Switch traffic from the active to the idle environment once verified
 - The old environment becomes the instant rollback target
+
 ---
 ## Blue/Green Architecture Diagram
 
@@ -48,6 +53,7 @@
     - Reverse proxy upstream configuration
 - After switching, monitor the new environment closely
 - If problems arise, switch traffic back to the old environment immediately
+
 ---
 ## Blue/Green - Infrastructure Cost Implications
 
@@ -58,6 +64,7 @@
     - Scale down the idle environment to minimal capacity
     - Use spot or preemptible instances for the idle side
     - Tear down the idle environment and rebuild on next deploy
+
 ---
 ## Blue/Green - Database Compatibility
 
@@ -69,6 +76,7 @@
     - Step 2: Deploy new version that writes to both old and new schema
     - Step 3: Migrate data
     - Step 4: Remove old columns in a future release
+
 ---
 ## Blue/Green - Database Migration Pattern
 
@@ -82,6 +90,7 @@
 - Teams with budget for double infrastructure
 - Environments where you can afford full pre-production verification
 - When database schema changes can be managed with expand-and-contract
+
 ---
 ## Canary Deployments - Concept
 
@@ -90,6 +99,7 @@
 - Monitor key metrics (error rate, latency, business KPIs)
 - Gradually increase traffic to the new version if metrics look healthy
 - Roll back immediately if anomalies are detected
+
 ---
 ## Canary Traffic Split Diagram
 
@@ -103,6 +113,7 @@
 - **DNS-based splitting** - weighted `CNAME` or `A` records
 - **Application-level routing** - middleware inspects headers or cookies
 - **Kubernetes** - use `Argo Rollouts` or `Flagger` for automated canary
+
 ---
 ## Canary - Traffic Splitting with `Istio`
 
@@ -135,6 +146,7 @@ spec:
 - **Resource usage** - CPU, memory, disk I/O on canary instances
 - **Business metrics** - conversion rates, checkout completions
 - **Saturation** - queue depths, connection pool usage
+
 ---
 ## Canary - Rollback Criteria
 
@@ -145,6 +157,7 @@ spec:
 - Use **statistical significance** to avoid false positives
 - Require a minimum observation window (e.g., 10 minutes)
 - Rollback should be automatic, not dependent on human decision
+
 ---
 ## Canary - Progressive Traffic Ramp
 
@@ -158,6 +171,7 @@ spec:
 1. Wait 15 minutes, check metrics
 1. Promote to 100%
 - At any step, if metrics degrade, roll back to 0%
+
 ---
 ## Canary - Automated Rollout with `Flagger`
 
@@ -191,6 +205,7 @@ spec:
 - Microservices architectures where individual services can be routed independently
 - Teams with mature monitoring and observability infrastructure
 - When rollback speed is important but you cannot afford full blue/green costs
+
 ---
 ## Rolling Deployments - Concept
 
@@ -198,6 +213,7 @@ spec:
 - Each batch is taken out of service, updated, health-checked, and returned
 - The process continues until all instances run the new version
 - No additional infrastructure is required beyond the existing fleet
+
 ---
 ## Rolling Update Sequence Diagram
 
@@ -213,6 +229,7 @@ spec:
     - Maintain minimum healthy instances at all times
     - Respect `PodDisruptionBudget` in Kubernetes
     - Consider data locality and session affinity
+
 ---
 ## Rolling - Health Checks
 
@@ -223,6 +240,7 @@ spec:
     - **Startup** - has it finished initializing?
 - Configure appropriate timeouts and thresholds
 - Fail the deployment if any instance fails to become healthy
+
 ---
 ## Rolling - Kubernetes Example
 
@@ -260,6 +278,7 @@ spec:
     - Endpoints should be versioned (`/api/v1/`, `/api/v2/`)
 - Message formats (queues, events) must be readable by both versions
 - Shared caches must handle both versions' data formats
+
 ---
 ## Rolling - Handling Stateful Services
 
@@ -269,6 +288,7 @@ spec:
     - **Ordered updates** - `StatefulSet` with `OrderedReady` policy in Kubernetes
     - **Drain before update** - stop accepting new work, finish current work, then update
 - Database replicas need special care for schema compatibility
+
 ---
 ## Rolling - When to Use
 
@@ -277,6 +297,7 @@ spec:
 - When brief periods of mixed versions are acceptable
 - Stateless or loosely-coupled services
 - Kubernetes-native workloads using `Deployment` or `StatefulSet`
+
 ---
 ## Feature Flags - Concept
 
@@ -284,6 +305,7 @@ spec:
 - Code for the new feature is deployed but hidden behind a conditional check
 - The flag can be toggled at runtime without a new deployment
 - Enables dark launches, A/B testing, and gradual rollouts
+
 ---
 ## Feature Flag Decision Tree
 
@@ -305,6 +327,7 @@ def get_checkout_page(user, cart):
 - The flag `new-checkout-flow` is evaluated at runtime
 - Can target specific users, percentages, or segments
 - No redeployment needed to enable or disable
+
 ---
 ## Feature Flag Types
 
@@ -313,6 +336,7 @@ def get_checkout_page(user, cart):
 - **Ops flags** - circuit breakers and kill switches; long-lived
 - **Permission flags** - gate features by user tier or entitlement; permanent
 - Each type has a different expected lifecycle and management strategy
+
 ---
 ## Feature Flag Lifecycle Management
 
@@ -322,6 +346,7 @@ def get_checkout_page(user, cart):
 1. **Evaluate** - analyze metrics and decide on permanence
 1. **Clean up** - remove the flag and dead code path
 - Every flag should have a planned removal date in the backlog
+
 ---
 ## Feature Flag Lifecycle Diagram
 
@@ -338,6 +363,7 @@ def get_checkout_page(user, cart):
 - Example: 10 flags = 1024 combinations
     - Full testing is impractical
     - Focus on pairwise coverage (every pair of flags tested together)
+
 ---
 ## Feature Flags - Testing in CI/CD
 
@@ -357,6 +383,7 @@ test-feature-flags:
 
 - Run tests with each flag toggled independently
 - Flag combinations for integration tests
+
 ---
 ## Feature Flags - Technical Debt from Long-Lived Flags
 
@@ -370,6 +397,7 @@ test-feature-flags:
     - Set expiration dates on every flag
     - Add lint rules that flag stale feature flags
     - Track flag age in dashboards
+
 ---
 ## Feature Flags - Stale Flag Detection
 
@@ -404,6 +432,7 @@ def check_stale_flags():
 - **Performance** - evaluating flags on every request adds latency
     - Use local caching with periodic sync
     - Avoid remote calls in hot paths
+
 ---
 ## Feature Flags - Tooling Landscape
 
@@ -413,6 +442,7 @@ def check_stale_flags():
 - **`Split.io`** - feature flags combined with experimentation
 - **`AWS AppConfig`** - feature flags within the AWS ecosystem
 - **Custom solutions** - config files, environment variables, database rows
+
 ---
 ## Feature Flags - When to Use
 
@@ -421,6 +451,7 @@ def check_stale_flags():
 - When you need runtime kill switches for risky features
 - To enable trunk-based development (no long-lived branches)
 - When different customers need different feature sets
+
 ---
 ## Progressive Delivery - Concept
 
@@ -430,6 +461,7 @@ def check_stale_flags():
     - User segmentation and targeting
     - Automated analysis and promotion
     - Integration with experimentation platforms
+
 ---
 ## Progressive Delivery Pipeline
 
@@ -445,6 +477,7 @@ def check_stale_flags():
     - **Customer tiers** (free users before enterprise)
 - Segmentation reduces blast radius of failures
 - Provides early feedback from representative user groups
+
 ---
 ## Progressive Delivery - Experimentation
 
@@ -455,6 +488,7 @@ def check_stale_flags():
     - **Bayesian** - posterior probability of improvement
 - Automated experiment evaluation prevents premature decisions
 - Tools: `Optimizely`, `Statsig`, `Eppo`, `GrowthBook`
+
 ---
 ## Progressive Delivery - Combining Strategies
 
@@ -464,6 +498,7 @@ def check_stale_flags():
     - **Progressive rollout** to increase traffic gradually
     - **Experimentation** to measure business impact
 - The combination provides both safety and data-driven decisions
+
 ---
 ## Deployment Strategies - Risk vs. Speed
 
@@ -477,6 +512,7 @@ def check_stale_flags():
 - **Rolling** - choose when budget is tight and brief mixed-version states are acceptable
 - **Feature Flags** - choose when you need to decouple deployment from release
 - **Progressive Delivery** - choose when you want maximum safety with experimentation
+
 ---
 ## Choosing Based on Application Type
 
@@ -489,6 +525,7 @@ def check_stale_flags():
 - **Stateful services** (databases, queues)
     - Rolling with ordered updates and leader awareness
     - Blue/green with expand-and-contract migrations
+
 ---
 ## Infrastructure as Code for Deployment Strategies
 
@@ -498,6 +535,7 @@ def check_stale_flags():
 - `Terraform` - lifecycle rules and create-before-destroy
 - `Pulumi`, `CDK` - programmatic deployment orchestration
 - Store deployment configuration alongside application code
+
 ---
 ## Observability is Non-Negotiable
 
@@ -508,6 +546,7 @@ def check_stale_flags():
     - **Traces** - `Jaeger`, `Zipkin`, `OpenTelemetry`
 - Define SLOs (Service Level Objectives) before deploying
 - Automated alerts that trigger rollback decisions
+
 ---
 ## Rollback Strategies Compared
 
@@ -529,6 +568,7 @@ def check_stale_flags():
 1. Monitor error rates and payment success rates for 24 hours
 1. Progressively roll out to 25%, 50%, 100%
 1. Remove the feature flag and old code path within 30 days
+
 ---
 ## Anti-Patterns to Avoid
 
@@ -538,6 +578,7 @@ def check_stale_flags():
 - **Ignoring database migrations** - breaking changes that prevent rollback
 - **Permanent feature flags** - flags that never get cleaned up
 - **No monitoring** - deploying blind without observability
+
 ---
 ## Summary
 

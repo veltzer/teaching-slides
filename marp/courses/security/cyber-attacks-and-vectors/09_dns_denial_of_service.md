@@ -1,10 +1,12 @@
 # DNS Denial of Service
 
 ## DNS (Domain Name System) is a critical component of the internet, responsible for translating human-readable domain names into IP addresses. However, this essential service is vulnerable to various types of attacks, including Denial of Service (DoS) attacks
+
 ---
 ## What is a DNS DoS Attack
 
 ### A DNS DoS attack is a type of cyber-attack that aims to disrupt or overwhelm the DNS servers, making them unavailable to legitimate users and clients. The attack typically involves flooding the DNS servers with a massive amount of bogus requests, consuming all available resources and preventing the server from responding to genuine requests
+
 ---
 ## Types of DNS DoS Attacks
 
@@ -33,6 +35,7 @@
 1. **Leverage Cloud-based DNS Services**: Utilize cloud-based DNS services that offer robust DDoS mitigation capabilities and global load balancing.
 1. **Implement DNS Response Rate Limiting (RRL)**: Limit the rate at which a DNS server responds to queries from a specific IP address or network.
 1. **Keep DNS Software Up-to-Date**: Regularly update the DNS software and apply security patches to mitigate known vulnerabilities
+
 ---
 
 ## DNS DoS Attack Flow

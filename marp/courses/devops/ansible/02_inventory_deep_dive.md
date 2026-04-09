@@ -143,6 +143,7 @@ inventories/
 
 ```yaml
 # inventories/production/group_vars/all.yml
+
 ---
 env: production
 dns_servers:
@@ -154,6 +155,7 @@ backup_enabled: true
 monitoring_endpoint: https://monitor.prod.example.com
 
 # inventories/staging/group_vars/all.yml
+
 ---
 env: staging
 dns_servers:

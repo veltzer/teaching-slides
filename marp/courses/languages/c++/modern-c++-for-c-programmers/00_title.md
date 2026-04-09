@@ -10,6 +10,7 @@ category: language
 duration_hours: 40
 audience:
   - audiences:developers
+
 ---
 # Modern C++ For C Programmers
 ## Mark Veltzer

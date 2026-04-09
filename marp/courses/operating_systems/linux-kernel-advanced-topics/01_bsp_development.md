@@ -8,6 +8,10 @@
 1. Hardware-specific code and configurations
 1. Enables Linux to run on specific hardware platforms
 
+---
+
+## What is a BSP?
+
 ![what_is_a_bsp](svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/what_is_a_bsp.svg)
 
 ---

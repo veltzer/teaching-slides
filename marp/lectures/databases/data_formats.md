@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 - audiences:data-engineers
 - audiences:data-scientists
+
 ---
 # Data Formats
 ## Mark Veltzer
@@ -19,6 +20,10 @@ audience:
 ## Why Data Formats Matter
 
 ![data_formats_title](svg/lectures/databases/data_formats/title.svg)
+
+---
+
+## Why Data Formats Matter
 
 - Every application reads and writes data
 - Choosing the right format affects performance, readability, and interoperability

@@ -253,7 +253,6 @@ git pull origin main
 ```
 
 ---
-
 ## Pull with Rebase
 
 Use `--rebase` to maintain linear history:
@@ -271,6 +270,9 @@ git config --global pull.rebase true
 - Easier to follow project timeline
 - Reduces "merge commits" clutter
 - Better for code reviews
+
+---
+## Pull with Rebase
 
 ![configure_as_default](svg/courses/git/git2/07_merging/configure_as_default.svg)
 

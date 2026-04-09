@@ -407,6 +407,7 @@ spec:
     matchLabels:
       app: myapp
       version: canary
+
 ---
 # Stable deployment (90% traffic)
 apiVersion: apps/v1

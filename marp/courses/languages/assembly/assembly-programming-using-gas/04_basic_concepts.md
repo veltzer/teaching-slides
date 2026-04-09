@@ -45,6 +45,7 @@ section .data
     - Registers
     - Addressing modes
     - Memory organization
+
 ---
 ## Basic x86 Instruction Format
 

@@ -8,6 +8,7 @@ category: architecture
 audience:
 - audiences:developers
 - audiences:architects
+
 ---
 # Distributed Systems Concepts
 ## Mark Veltzer
@@ -15,12 +16,15 @@ audience:
 
 ---
 
+## What Is a Distributed System?
+
 ![title](svg/lectures/architecting/distributed-systems-concepts/title.svg)
+
+---
 
 ## What Is a Distributed System?
 
 A collection of independent computers that appears to users as a single coherent system
-
 - Multiple autonomous computers
 - Connected through a network
 - Coordinating to achieve a common goal

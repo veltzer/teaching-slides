@@ -7,6 +7,10 @@
 
 ![basic_file_system_structure](svg/courses/operating_systems/linux-fundamentals/03_filesystem/basic_file_system_structure.svg)
 
+---
+
+## Basic File System Structure
+
 Key Directories:
 - `/bin`: Essential commands
 - `/etc`: System configuration
@@ -35,16 +39,17 @@ Key Directories:
 
 ![understanding_paths](svg/courses/operating_systems/linux-fundamentals/03_filesystem/understanding_paths.svg)
 
-Examples:
+---
 
+## Understanding Paths
+
+Examples:
 ```bash
 # Absolute path
 cd /home/user/documents
-
 # Relative path
 cd ./documents
 cd ../user2/documents
-
 # Special paths
 cd ~        # Home directory
 cd -        # Previous directory
@@ -81,17 +86,18 @@ cd -
 
 ![home_directories](svg/courses/operating_systems/linux-fundamentals/03_filesystem/home_directories.svg)
 
-Access methods:
+---
 
+## Home Directories
+
+Access methods:
 ```bash
 # Using tilde
 cd ~
 cd ~/Documents
-
 # Using $HOME
 cd $HOME
 cd $HOME/Documents
-
 # Using absolute path
 cd /home/username
 ```
@@ -184,8 +190,11 @@ echo $HOME
 
 ![common_path_operations](svg/courses/operating_systems/linux-fundamentals/03_filesystem/common_path_operations.svg)
 
-Examples:
+---
 
+## Common Path Operations
+
+Examples:
 ```bash
 # Extract components
 path="/home/user/docs/file.txt"

@@ -172,8 +172,10 @@ pub enum AppError {
 - Building libraries
 - You need specific error types
 - Callers need to match on errors
+
 ---
 ## JSON Processing
+
 ---
 ## `serde_json` Overview
 

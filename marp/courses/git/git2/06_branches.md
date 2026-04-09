@@ -266,6 +266,7 @@ git branch | grep "feature-" | xargs git branch -d
 git tag archive/feature feature
 git branch -d feature
 ```
+
 ---
 
 ## Branch Management
@@ -534,10 +535,13 @@ git branch backup-$(date +%Y%m%d-%H%M%S)
 ![branch_protection_strategies](svg/courses/git/git2/06_branches/branch_protection_strategies.svg)
 
 ---
-
 ## Gitflow Workflow
 
 ![gitflow_workflow](svg/courses/git/git2/06_branches/gitflow_workflow.svg)
+
+---
+## Gitflow Workflow
+
 ## GitHub Flow
 
 ![github_flow](svg/courses/git/git2/06_branches/github_flow.svg)

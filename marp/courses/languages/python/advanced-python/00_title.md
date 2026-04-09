@@ -9,6 +9,7 @@ category: language
 duration_hours: 56
 audience:
   - audiences:developers
+
 ---
 # Advanced Python
 ## Mark Veltzer

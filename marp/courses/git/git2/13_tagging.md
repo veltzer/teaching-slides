@@ -38,7 +38,6 @@ git checkout v1.0.0               # Return to this version anytime
 ```
 
 ---
-
 ## Lightweight vs Annotated Tags
 
 Git supports two types of tags with different characteristics:
@@ -55,6 +54,9 @@ Git supports two types of tags with different characteristics:
 - Includes tagging date and message
 - Can be signed with GPG
 - Recommended for releases
+
+---
+## Lightweight vs Annotated Tags
 
 ![lightweight_vs_annotated_tags](svg/courses/git/git2/13_tagging/lightweight_vs_annotated_tags.svg)
 

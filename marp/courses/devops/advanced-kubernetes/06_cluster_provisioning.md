@@ -69,6 +69,7 @@ etcd:
     dataDir: /var/lib/etcd
     extraArgs:
       quota-backend-bytes: "8589934592"
+
 ---
 apiVersion: kubeadm.k8s.io/v1beta3
 kind: InitConfiguration
@@ -107,13 +108,11 @@ worker-2   Ready    <none>          1m    v1.29.0
 ```
 
 ---
-
 ## Adding Control Plane Nodes (HA)
 
 ```bash
 # On first control plane, get certificate key
 kubeadm init phase upload-certs --upload-certs
-
 # Join additional control plane nodes
 sudo kubeadm join k8s-api.example.com:6443 \
   --token abcdef.0123456789abcdef \
@@ -121,6 +120,9 @@ sudo kubeadm join k8s-api.example.com:6443 \
   --control-plane \
   --certificate-key abc456...
 ```
+
+---
+## Adding Control Plane Nodes (HA)
 
 ![join_additional_control_plane_nodes](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/join_additional_control_plane_nodes.svg)
 
@@ -298,6 +300,7 @@ spec:
         apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
         kind: AWSMachineTemplate
         name: production-workers
+
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1beta2
 kind: AWSMachineTemplate

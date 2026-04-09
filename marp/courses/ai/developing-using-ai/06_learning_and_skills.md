@@ -538,13 +538,10 @@ function debounce4(func, delay) {
 ## Trade-off Analysis
 
 Understanding design decisions:
-
 ```python
 # AI explains trade-offs:
-
 """
 Database Choice: SQL vs NoSQL
-
 SQL (PostgreSQL):
 Pros:
 - ACID compliance
@@ -552,39 +549,33 @@ Pros:
 - Complex queries with JOIN
 - Mature ecosystem
 - Schema enforcement
-
 Cons:
 - Vertical scaling challenges
 - Fixed schema
 - Performance with huge datasets
-
 NoSQL (MongoDB):
 Pros:
 - Horizontal scaling
 - Flexible schema
 - Fast for simple queries
 - Good for unstructured data
-
 Cons:
 - Eventual consistency
 - No complex relationships
 - Less mature tools
 - Potential data duplication
-
 Decision Framework:
 Choose SQL when:
 - Need ACID transactions
 - Complex relationships
 - Structured data
 - Consistency critical
-
 Choose NoSQL when:
 - Massive scale needed
 - Flexible/evolving schema
 - Simple access patterns
 - Geographic distribution
 """
-
 # Code example showing both:
 # SQL approach
 def get_user_with_orders_sql():
@@ -595,14 +586,17 @@ def get_user_with_orders_sql():
         WHERE u.id = %s
     """
     return db.execute(query, [user_id])
-
 # NoSQL approach
 def get_user_with_orders_nosql():
     user = db.users.find_one({"_id": user_id})
     user['orders'] = db.orders.find({"user_id": user_id})
     return user
 ```
+
 ## Decision Making Frameworks
+
+---
+## Trade-off Analysis
 
 ![decision_making_frameworks](svg/courses/ai/developing-using-ai/06_learning_and_skills/decision_making_frameworks.svg)
 

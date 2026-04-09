@@ -11,6 +11,7 @@
 1. Alerting Systems
 1. Dashboard Design
 1. Best Practices
+
 ---
 ## What is Observability?
 - Ability to understand internal state from external outputs
@@ -18,6 +19,7 @@
 - Debug problems you haven't predicted
 - Understand system behavior
 - Make data-driven decisions
+
 ---
 ## The Three Pillars of Observability
 

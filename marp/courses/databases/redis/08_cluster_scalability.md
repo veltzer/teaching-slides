@@ -29,6 +29,10 @@ Scaling strategies:
 
 ![master_replica_architecture](svg/courses/databases/redis/08_cluster_scalability/master_replica_architecture.svg)
 
+---
+
+## Master-Replica Architecture - Details
+
 - Master handles all writes
 - Replicas handle read queries
 - Read scaling only (not write scaling)
@@ -41,6 +45,10 @@ Scaling strategies:
 
 ![client_side_partitioning](svg/courses/databases/redis/08_cluster_scalability/client_side_partitioning.svg)
 
+---
+
+## Client-Side Partitioning - Details
+
 - Application determines which Redis instance to use
 - Consistent hashing or modulo-based distribution
 - Simple to implement
@@ -52,6 +60,10 @@ Scaling strategies:
 ## Proxy-Based Partitioning
 
 ![proxy_based_partitioning](svg/courses/databases/redis/08_cluster_scalability/proxy_based_partitioning.svg)
+
+---
+
+## Proxy-Based Partitioning - Details
 
 - Proxy handles routing (Twemproxy, Envoy, Nginx)
 - Transparent to clients
@@ -72,6 +84,10 @@ Redis Cluster is the official Redis distributed solution:
 - Introduced in Redis 3.0
 - Production-ready since Redis 3.2
 
+---
+
+## Introduction to Redis Cluster
+
 ![introduction_to_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/introduction_to_redis_cluster.svg)
 
 ---
@@ -84,6 +100,10 @@ Redis Cluster uses a hash slot approach:
 - Each key maps to a hash slot using CRC16(key) % 16384
 - Each master handles a subset of hash slots
 - Entire keyspace distributed evenly
+
+---
+
+## Redis Cluster Data Sharding
 
 ![redis_cluster_data_sharding](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_data_sharding.svg)
 
@@ -219,6 +239,10 @@ CLUSTER FAILOVER
 
 ![redis_cluster_client_connections](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_client_connections.svg)
 
+---
+
+## Redis Cluster Connection Modes
+
 Two connection modes:
 1. **Smart clients**: Handle redirects automatically
 1. **Cluster proxy**: Routes commands to correct node
@@ -315,6 +339,10 @@ Important: Never remove a master with assigned slots!
 
 ![redis_cluster_failover](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_failover.svg)
 
+---
+
+## Redis Cluster Failover - Details
+
 1. Automatic failover:
     - Replica detects master is down (subjective down)
     - Multiple nodes agree (objective down)
@@ -333,7 +361,15 @@ Important: Never remove a master with assigned slots!
 
 Cluster fails when:
 
+---
+
+## Redis Cluster Availability
+
 ![redis_cluster_availability](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_availability.svg)
+
+---
+
+## Redis Cluster Availability - Configuration
 
 Configuration option:
 ```conf
@@ -452,7 +488,10 @@ Alternative scaling approaches:
 
 ![functional_partitioning_example](svg/courses/databases/redis/08_cluster_scalability/functional_partitioning_example.svg)
 
-Benefits:
+---
+
+## Functional Partitioning Benefits
+
 - Simpler than full sharding
 - Different configs per function
 - Isolated performance profiles
@@ -523,7 +562,15 @@ Key areas for optimization:
 
 DR strategies for Redis Cluster:
 
+---
+
+## Disaster Recovery for Redis Cluster
+
 ![disaster_recovery_for_redis_cluster](svg/courses/databases/redis/08_cluster_scalability/disaster_recovery_for_redis_cluster.svg)
+
+---
+
+## Disaster Recovery Backup Approaches
 
 Backup approaches:
 1. **Coordinated RDB snapshots**

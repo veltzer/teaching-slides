@@ -1375,6 +1375,7 @@ import {
 
 const { width: screenWidth } = Dimensions.get('window');
 ```
+
 ## Backend Development: API Design
 
 RESTful and GraphQL API patterns:

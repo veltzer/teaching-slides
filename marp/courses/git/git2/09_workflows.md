@@ -128,7 +128,6 @@ sarah/api-optimization
 - Keep names descriptive but concise
 
 ---
-
 ## Development vs Production Branches
 
 **Development branch (`develop`):**
@@ -142,6 +141,9 @@ sarah/api-optimization
 - Only stable, tested code
 - Protected from direct pushes
 - Source for releases
+
+---
+## Development vs Production Branches
 
 ![development_vs_production_branches](svg/courses/git/git2/09_workflows/development_vs_production_branches.svg)
 

@@ -1,4 +1,5 @@
 # Your First Python Program
+
 ---
 ## Installing Python on Linux
 - Most Linux distributions come with Python pre-installed
@@ -14,6 +15,7 @@ python3 --version
 sudo apt update
 sudo apt install python3 python3-pip python3-venv
 ```
+
 ---
 ## Installing Python on macOS
 - macOS may come with an older Python
@@ -29,6 +31,7 @@ brew install python3
 ```bash
 python3 --version
 ```
+
 ---
 ## Installing Python on Windows
 - Download from https://python.org
@@ -40,6 +43,7 @@ python --version
 ```
 
 - On Windows, use `python` instead of `python3`
+
 ---
 ## The Python Interactive Shell
 - Start by typing `python3` in terminal
@@ -54,6 +58,7 @@ Python 3.12.0 (main, Oct  2 2023)
 'HELLO'
 >>> exit()
 ```
+
 ---
 ## Using the Interactive Shell
 - Immediate feedback for expressions
@@ -66,6 +71,7 @@ Python 3.12.0 (main, Oct  2 2023)
 >>> dir(list)
 >>> help(print)
 ```
+
 ---
 ## IPython - Enhanced Interactive Shell
 - More powerful than the default shell
@@ -80,6 +86,7 @@ Python 3.12.0 (main, Oct  2 2023)
 pip install ipython
 ipython
 ```
+
 ---
 ## Your First Script
 - Create a file called `hello.py`
@@ -99,6 +106,7 @@ python3 hello.py
 ```output
 Hello, World!
 ```
+
 ---
 ## The Shebang Line
 - On Unix systems, you can make scripts executable
@@ -114,6 +122,7 @@ chmod +x hello.py
 ```
 
 - `#!/usr/bin/env python3` tells the OS which interpreter to use
+
 ---
 ## Comments in Python
 - Single-line comments start with `#`
@@ -127,6 +136,7 @@ x = 42  # This is an inline comment
 # multi-line comment
 # using multiple hash marks
 ```
+
 ---
 ## Docstrings
 - Triple-quoted strings used for documentation
@@ -144,6 +154,7 @@ def greet(name):
     """
     return f"Hello, {name}"
 ```
+
 ---
 ## The `print()` Function
 - Outputs text to the console
@@ -157,6 +168,7 @@ print(1, 2, 3, sep=", ")
 print("No newline", end="")
 print(" here")
 ```
+
 ---
 ## Print Output
 
@@ -167,6 +179,7 @@ Age: 30
 1, 2, 3
 No newline here
 ```
+
 ---
 ## The `input()` Function
 - Reads text input from the user
@@ -180,6 +193,7 @@ age = input("How old are you? ")
 age = int(age)  # Convert to integer
 print(f"Next year you will be {age + 1}")
 ```
+
 ---
 ## A Complete Interactive Program
 
@@ -191,6 +205,7 @@ current_year = 2026
 age = current_year - birth_year
 print(f"Hello {name}, you are {age} years old!")
 ```
+
 ---
 ## Running Python with `-c` Flag
 - Execute a one-liner from the command line
@@ -202,6 +217,7 @@ python3 -c "print(2 ** 10)"
 ```
 
 - Useful for quick calculations and checks
+
 ---
 ## Running Python with `-m` Flag
 - Run a module as a script
@@ -212,6 +228,7 @@ python3 -m json.tool data.json
 python3 -m venv myenv
 python3 -m pip install requests
 ```
+
 ---
 ## IDEs for Python - VS Code
 - Free, open source, by Microsoft
@@ -222,6 +239,7 @@ python3 -m pip install requests
     - Integrated terminal
     - Git integration
     - Extensions marketplace
+
 ---
 ## IDEs for Python - PyCharm
 - By JetBrains
@@ -233,6 +251,7 @@ python3 -m pip install requests
     - Database tools (Pro)
     - Django support (Pro)
     - Scientific tools (Pro)
+
 ---
 ## IDEs for Python - Other Options
 - **Vim/Neovim**: With Python plugins
@@ -241,6 +260,7 @@ python3 -m pip install requests
 - **Spyder**: Scientific Python IDE
 - **Jupyter Notebook**: Interactive computing
 - **IDLE**: Built-in with Python (basic)
+
 ---
 ## Jupyter Notebooks
 - Interactive documents mixing code and text
@@ -254,6 +274,7 @@ jupyter notebook
 
 - Cells can contain Python code or Markdown
 - Code cells show output inline
+
 ---
 ## Python File Encoding
 - Python 3 source files are UTF-8 by default
@@ -265,6 +286,7 @@ jupyter notebook
 
 - This was more important in Python 2
 - In Python 3, UTF-8 is the default
+
 ---
 ## Python Style Guide (PEP 8)
 - Use 4 spaces for indentation (never tabs)
@@ -274,6 +296,7 @@ jupyter notebook
 - Use `snake_case` for functions and variables
 - Use `PascalCase` for classes
 - Use `UPPER_CASE` for constants
+
 ---
 ## PEP 8 - Naming Conventions
 
@@ -291,6 +314,7 @@ class MyClass:
 MAX_SIZE = 100
 PI = 3.14159
 ```
+
 ---
 ## Linting with `flake8`
 - Checks code against PEP 8
@@ -305,6 +329,7 @@ flake8 my_script.py
     - Whitespace issues
     - Import order
     - Unused variables
+
 ---
 ## Formatting with `black`
 - Automatic code formatter
@@ -317,6 +342,7 @@ black my_script.py
 
 - Enforces consistent style across a project
 - Widely adopted in the Python community
+
 ---
 ## Type Checking with `mypy`
 - Static type checker for Python
@@ -333,6 +359,7 @@ def add(a: int, b: int) -> int:
 
 add("hello", "world")  # mypy catches this
 ```
+
 ---
 ## Summary
 - Python can be installed on all major platforms

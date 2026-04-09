@@ -11,6 +11,7 @@ duration_hours_long: 24
 audience:
   - audiences:developers
 duration_hours: 24
+
 ---
 # Developing Using Ai
 ## Mark Veltzer

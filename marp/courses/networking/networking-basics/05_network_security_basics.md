@@ -10,6 +10,10 @@
 - Threats range from passive eavesdropping to active man-in-the-middle attacks
 - Security must be layered -- no single mechanism is sufficient
 
+---
+
+## Why Network Security Matters
+
 ![why_network_security_matters](svg/courses/networking/networking-basics/05_network_security_basics/why_network_security_matters.svg)
 
 ---
@@ -17,10 +21,17 @@
 ## Symmetric vs Asymmetric Encryption
 
 Two fundamental approaches to encryption, both used in network security.
-
 **Symmetric Encryption** -- same key for encryption and decryption:
 
+---
+
+## Symmetric vs Asymmetric Encryption
+
 ![symmetric_vs_asymmetric_encryption](svg/courses/networking/networking-basics/05_network_security_basics/symmetric_vs_asymmetric_encryption.svg)
+
+---
+
+## Symmetric vs Asymmetric Encryption
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -36,7 +47,15 @@ Two fundamental approaches to encryption, both used in network security.
 
 Uses a key pair: public key (shared freely) and private key (kept secret).
 
+---
+
+## Asymmetric Encryption
+
 ![asymmetric_encryption](svg/courses/networking/networking-basics/05_network_security_basics/asymmetric_encryption.svg)
+
+---
+
+## Asymmetric Encryption
 
 | Algorithm | Key Size | Speed | Use Case |
 |-----------|----------|-------|----------|
@@ -50,7 +69,15 @@ Uses a key pair: public key (shared freely) and private key (kept secret).
 
 TLS combines symmetric and asymmetric encryption for the best of both worlds:
 
+---
+
+## How TLS Uses Both
+
 ![how_tls_uses_both](svg/courses/networking/networking-basics/05_network_security_basics/how_tls_uses_both.svg)
+
+---
+
+## How TLS Uses Both
 
 1. Asymmetric crypto establishes a shared secret (session key)
 1. Symmetric crypto (AES/ChaCha20) encrypts all subsequent data
@@ -87,7 +114,15 @@ $ openssl s_client -connect example.com:443 -tls1_3
 
 The TLS 1.2 handshake requires 2 round trips before data can flow:
 
+---
+
+## TLS 1.2 Handshake
+
 ![tls_1_2_handshake](svg/courses/networking/networking-basics/05_network_security_basics/tls_1_2_handshake.svg)
+
+---
+
+## TLS 1.2 Handshake
 
 Total: 2 round trips (2-RTT) before first data byte
 
@@ -97,7 +132,15 @@ Total: 2 round trips (2-RTT) before first data byte
 
 TLS 1.3 reduces the handshake to just 1 round trip:
 
+---
+
+## TLS 1.3 Handshake
+
 ![tls_1_3_handshake](svg/courses/networking/networking-basics/05_network_security_basics/tls_1_3_handshake.svg)
+
+---
+
+## TLS 1.3 Handshake
 
 **TLS 1.3 improvements:**
 - 1-RTT handshake (vs 2-RTT in TLS 1.2)
@@ -112,7 +155,15 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 
 **PKI** (Public Key Infrastructure) is the trust framework that makes TLS work.
 
+---
+
+## Certificates and PKI
+
 ![certificates_and_pki](svg/courses/networking/networking-basics/05_network_security_basics/certificates_and_pki.svg)
+
+---
+
+## Certificates and PKI
 
 **Certificate chain verification:**
 1. Server sends its certificate + intermediate CA certificates
@@ -189,10 +240,17 @@ notAfter=Mar 31 23:59:59 2024 GMT
 
 A firewall controls network traffic based on predefined rules.
 
+---
+
+## Firewalls: Concept
+
 ![firewalls_concept](svg/courses/networking/networking-basics/05_network_security_basics/firewalls_concept.svg)
 
-**Types of firewalls:**
+---
 
+## Firewalls: Concept
+
+**Types of firewalls:**
 | Type | Layer | Description |
 |------|-------|-------------|
 | Packet filter | L3-L4 | Inspects headers (IP, port, protocol) |
@@ -205,31 +263,32 @@ A firewall controls network traffic based on predefined rules.
 ## iptables Basics
 
 `iptables` is the traditional Linux firewall tool (uses Netfilter framework).
-
 **Chains and tables:**
 
+---
+
+## iptables Basics
+
 ![iptables_basics](svg/courses/networking/networking-basics/05_network_security_basics/iptables_basics.svg)
+
+---
+
+## iptables Basics
 
 ```bash
 # View current rules
 $ sudo iptables -L -n -v
-
 # Allow incoming SSH
 $ sudo iptables -A INPUT -p tcp --dport 22 -j ACCEPT
-
 # Allow incoming HTTP and HTTPS
 $ sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
 $ sudo iptables -A INPUT -p tcp --dport 443 -j ACCEPT
-
 # Allow established connections (stateful)
 $ sudo iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
-
 # Allow loopback
 $ sudo iptables -A INPUT -i lo -j ACCEPT
-
 # Drop everything else
 $ sudo iptables -A INPUT -j DROP
-
 # Allow outgoing traffic
 $ sudo iptables -A OUTPUT -j ACCEPT
 ```
@@ -367,7 +426,15 @@ $ sudo systemctl enable nftables
 
 A VPN (Virtual Private Network) creates an encrypted tunnel between two points over an untrusted network.
 
+---
+
+## VPN Overview
+
 ![vpn_overview](svg/courses/networking/networking-basics/05_network_security_basics/vpn_overview.svg)
+
+---
+
+## VPN Overview
 
 **VPN use cases:**
 - Remote access to corporate networks
@@ -380,21 +447,26 @@ A VPN (Virtual Private Network) creates an encrypted tunnel between two points o
 ## IPSec VPN
 
 IPSec operates at the network layer (L3), encrypting IP packets.
-
 **Two modes:**
 
+---
+
+## IPSec VPN
+
 ![ipsec_vpn](svg/courses/networking/networking-basics/05_network_security_basics/ipsec_vpn.svg)
+
+---
+
+## IPSec VPN
 
 **IPSec protocols:**
 - **ESP** (Encapsulating Security Payload): encryption + authentication
 - **AH** (Authentication Header): authentication only (no encryption)
 - **IKE** (Internet Key Exchange): negotiates security parameters
-
 ```bash
 # Check IPSec status (using strongSwan)
 $ sudo ipsec status
 $ sudo ipsec statusall
-
 # View Security Associations
 $ sudo ip xfrm state
 $ sudo ip xfrm policy
@@ -483,7 +555,15 @@ $ sudo systemctl enable wg-quick@wg0
 
 Dividing a network into isolated segments limits the blast radius of security breaches.
 
+---
+
+## Network Segmentation
+
 ![network_segmentation](svg/courses/networking/networking-basics/05_network_security_basics/network_segmentation.svg)
+
+---
+
+## Network Segmentation
 
 **Segmentation benefits:**
 - Limits lateral movement by attackers
@@ -497,7 +577,15 @@ Dividing a network into isolated segments limits the blast radius of security br
 
 A DMZ is a network segment that sits between the public internet and the internal network, hosting public-facing services.
 
+---
+
+## DMZ (Demilitarized Zone)
+
 ![dmz_demilitarized_zone](svg/courses/networking/networking-basics/05_network_security_basics/dmz_demilitarized_zone.svg)
+
+---
+
+## DMZ (Demilitarized Zone)
 
 **DMZ rules:**
 - Internet can reach DMZ services (ports 80, 443, 25, 53)
@@ -511,20 +599,24 @@ A DMZ is a network segment that sits between the public internet and the interna
 
 ### 1. Man-in-the-Middle (MITM)
 
+---
+
+## Common Network Attacks
+
 ![1_man_in_the_middle_mitm](svg/courses/networking/networking-basics/05_network_security_basics/1_man_in_the_middle_mitm.svg)
 
+---
+
+## Common Network Attacks
+
 **Mitigations:** TLS with certificate validation, certificate pinning, HSTS
-
 ### 2. ARP Spoofing
-
 ```bash
 # Attacker sends fake ARP replies
 # "I am the gateway" → all traffic flows through attacker
-
 # Detect ARP spoofing
 $ arp -a | sort
 # Look for duplicate MAC addresses
-
 # Prevention: static ARP entries, Dynamic ARP Inspection (DAI)
 $ sudo arp -s 192.168.1.1 aa:bb:cc:dd:ee:ff
 ```
@@ -573,21 +665,24 @@ $ sudo ss -tlnp    # Check what's listening
 
 ### 6. DNS Amplification DDoS
 
+---
+
+## Common Network Attacks (continued)
+
 ![6_dns_amplification_ddos](svg/courses/networking/networking-basics/05_network_security_basics/6_dns_amplification_ddos.svg)
 
+---
+
+## Common Network Attacks (continued)
+
 **Mitigation:** Disable open resolvers, BCP38 (ingress filtering), rate limiting
-
 ### 7. SSL Stripping
-
 Downgrades HTTPS connections to HTTP, allowing eavesdropping.
-
 ```misc
 Client ──HTTP──→ Attacker ──HTTPS──→ Server
        ←HTTP───          ←HTTPS───
 ```
-
 **Mitigation:** HSTS (HTTP Strict Transport Security), HSTS preload list
-
 ```bash
 # HSTS header (server sends this)
 Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
@@ -642,12 +737,14 @@ $ openssl s_client -connect example.com:443 -servername example.com
 CONNECTED(00000003)
 depth=2 C = US, O = DigiCert Inc, CN = DigiCert Global Root G2
 verify return:1
+
 ---
 Certificate chain
  0 s:CN = www.example.org
    i:C = US, O = DigiCert Inc, CN = DigiCert TLS RSA SHA256 2020 CA1
  1 s:C = US, O = DigiCert Inc, CN = DigiCert TLS RSA SHA256 2020 CA1
    i:C = US, O = DigiCert Inc, CN = DigiCert Global Root G2
+
 ---
 SSL handshake has read 3476 bytes and written 423 bytes
 New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
@@ -671,13 +768,20 @@ notAfter=Mar 14 23:59:59 2025 GMT
 ## Zero Trust Network Architecture
 
 The traditional "castle and moat" model (trust everything inside the network) is outdated. Zero Trust assumes no implicit trust.
-
 **Principles:**
 1. **Never trust, always verify** -- authenticate and authorize every request
 1. **Least privilege access** -- grant minimum necessary permissions
 1. **Assume breach** -- design as if attackers are already inside
 
+---
+
+## Zero Trust Network Architecture
+
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
+
+---
+
+## Zero Trust Network Architecture
 
 **Implementation components:**
 - Identity-aware proxy (BeyondCorp, Tailscale)

@@ -95,6 +95,9 @@
 
 ![client_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/client_side_service_discovery.svg)
 
+---
+## Client-Side Service Discovery
+
 - Client queries the service registry directly
 - Client performs load balancing
 - Examples: `Netflix Eureka` with `Ribbon`
@@ -103,6 +106,9 @@
 ## Server-Side Service Discovery
 
 ![server_side_service_discovery](svg/courses/architecting/modern-software-architecture/05_microservices_design_patterns/server_side_service_discovery.svg)
+
+---
+## Server-Side Service Discovery
 
 - Load balancer queries the registry
 - Client does not need to know about discovery

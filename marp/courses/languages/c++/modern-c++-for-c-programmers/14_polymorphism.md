@@ -1,7 +1,6 @@
 # Polymorphism
 
 ---
-
 ## What is Polymorphism?
 
 Polymorphism allows objects of different types to be treated as objects of a common base type
@@ -25,7 +24,6 @@ for(auto* shape : shapes) {
 ```
 
 ---
-
 ## Abstract Base Classes
 
 Abstract base classes define interfaces that derived classes must implement
@@ -49,7 +47,6 @@ public:
 ```
 
 ---
-
 ## Pure Virtual Functions
 
 Pure virtual functions make a class abstract and must be overridden
@@ -76,10 +73,12 @@ Database* db = new MySQLDatabase();  // OK: concrete implementation
 ```
 
 ---
-
 ## Benefits of Polymorphism
 
 ![benefits_of_polymorphism](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/benefits_of_polymorphism.svg)
+
+---
+## Benefits of Polymorphism
 
 1. Write once, use with multiple types
 1. Easy to add new implementations
@@ -87,7 +86,6 @@ Database* db = new MySQLDatabase();  // OK: concrete implementation
 1. Enhanced testing through mocking
 
 ---
-
 ## Cost of Polymorphism
 
 Virtual function calls have runtime overhead:
@@ -109,7 +107,6 @@ Performance considerations:
 **Rule**: Use polymorphism when flexibility outweighs performance costs
 
 ---
-
 ## Virtual Function Mechanics
 
 ![virtual_function_mechanics](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
@@ -117,7 +114,6 @@ Performance considerations:
 Each object with virtual functions contains a pointer to its class's virtual table
 
 ---
-
 ## Template Method Pattern
 
 Define algorithm structure in base class, let derived classes implement steps
@@ -148,10 +144,12 @@ protected:
 ```
 
 ---
-
 ## Template Method Benefits
 
 ![template_method_benefits](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/template_method_benefits.svg)
+
+---
+## Template Method Benefits
 
 1. Eliminates code duplication
 1. Enforces consistent algorithm structure
@@ -159,7 +157,6 @@ protected:
 1. Easy to add new implementations
 
 ---
-
 ## Smart References
 
 Smart references wrap raw pointers with additional behavior
@@ -188,7 +185,6 @@ public:
 ```
 
 ---
-
 ## Smart Reference Use Cases
 
 Smart references add safety and functionality:
@@ -215,7 +211,6 @@ ref->draw();  // Logs access then calls Circle::draw()
 ```
 
 ---
-
 ## Templated Outward Conversions
 
 Allow safe conversions from derived to base types in templates
@@ -243,16 +238,17 @@ SmartPtr<Shape> shape = circle;  // Safe upcast
 ```
 
 ---
-
 ## Conversion Safety
 
 ![conversion_safety](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/conversion_safety.svg)
+
+---
+## Conversion Safety
 
 Upward conversions (derived to base) are always safe
 Sideways conversions require runtime checks
 
 ---
-
 ## Curiously Recurring Template Pattern (CRTP)
 
 A class derives from a template instantiation of itself
@@ -279,7 +275,6 @@ public:
 ```
 
 ---
-
 ## CRTP Benefits
 
 CRTP provides compile-time polymorphism:
@@ -309,7 +304,6 @@ class MyClass : public Counter<MyClass> {
 **Advantages**: No virtual function overhead, type safety at compile time
 
 ---
-
 ## CRTP vs Virtual Functions
 
 ![crtp_vs_virtual_functions](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
@@ -317,7 +311,6 @@ class MyClass : public Counter<MyClass> {
 Choose based on requirements: flexibility vs performance
 
 ---
-
 ## Downcasting
 
 Converting from base pointer to derived pointer
@@ -346,7 +339,6 @@ if (circle) {
 ```
 
 ---
-
 ## Dynamic Cast Safety
 
 `dynamic_cast` provides runtime type checking:
@@ -371,7 +363,6 @@ void processShape(Shape* shape) {
 **Important**: Only works with polymorphic types (classes with virtual functions)
 
 ---
-
 ## Static vs Dynamic Cast
 
 ![static_vs_dynamic_cast](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
@@ -379,7 +370,6 @@ void processShape(Shape* shape) {
 Use `dynamic_cast` for safe downcasting, `static_cast` when you're certain
 
 ---
-
 ## Visitor Pattern Alternative
 
 Instead of downcasting, use the visitor pattern:
@@ -410,7 +400,6 @@ private:
 ```
 
 ---
-
 ## Visitor Pattern Implementation
 
 ```cpp
@@ -442,7 +431,6 @@ for (auto& shape : shapes) {
 ```
 
 ---
-
 ## Multiple Inheritance Polymorphism
 
 A class can implement multiple interfaces:
@@ -468,7 +456,6 @@ public:
 ```
 
 ---
-
 ## Interface Segregation
 
 Design specific interfaces rather than monolithic ones:
@@ -498,7 +485,6 @@ public:
 ```
 
 ---
-
 ## Polymorphic Containers
 
 Store different types in the same container:
@@ -533,7 +519,6 @@ for (const auto& animal : animals) {
 ```
 
 ---
-
 ## Type Erasure
 
 Hide implementation details while maintaining polymorphic behavior:
@@ -564,7 +549,6 @@ public:
 ```
 
 ---
-
 ## Function Objects and Polymorphism
 
 Combine function objects with polymorphism:
@@ -596,7 +580,6 @@ double calculate(Operation& op, double x, double y) {
 ```
 
 ---
-
 ## Performance Considerations
 
 ![performance_considerations](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
@@ -604,7 +587,6 @@ double calculate(Operation& op, double x, double y) {
 Consider performance vs flexibility trade-offs in critical code paths
 
 ---
-
 ## When to Use Polymorphism
 
 Use polymorphism when:
@@ -620,7 +602,6 @@ Avoid when:
 1. **Compile-time selection** is sufficient
 
 ---
-
 ## Polymorphism Best Practices
 
 1. **Always provide virtual destructors** in base classes
@@ -640,7 +621,6 @@ public:
 ```
 
 ---
-
 ## Modern C++ and Polymorphism
 
 C++11/14/17 improvements for polymorphic code:
@@ -665,7 +645,6 @@ for (const auto& item : polymorphicContainer) {
 ```
 
 ---
-
 ## Summary
 
 Polymorphism in Modern C++:

@@ -1,4 +1,5 @@
 # Real-world Applications and Projects
+
 ---
 
 ## Implementing Simple Algorithms
@@ -184,6 +185,7 @@ _start:
 1. Memory Analysis
     - Examine process memory dumps
     - Identify hidden functionality
+
 ---
 ## Project Ideas
 1. Implement a simple encryption algorithm

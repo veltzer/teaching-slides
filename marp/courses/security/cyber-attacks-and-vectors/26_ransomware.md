@@ -79,9 +79,14 @@
 ```
 
 ---
+
 ## Encryption Techniques
 
 ![encryption_techniques](svg/courses/security/cyber-attacks-and-vectors/26_ransomware/encryption_techniques.svg)
+
+---
+
+## Encryption Techniques
 
 - AES-256 for file encryption (fast, symmetric)
 - RSA-2048/4096 for key encryption (slow, asymmetric)

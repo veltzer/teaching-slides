@@ -23,7 +23,15 @@ Browser uses:  93.184.216.34 to establish TCP connection
 
 DNS is organized as an inverted tree structure with the root at the top.
 
+---
+
+## The DNS Hierarchy
+
 ![the_dns_hierarchy](svg/courses/networking/networking-basics/04_dns_deep_dive/the_dns_hierarchy.svg)
+
+---
+
+## The DNS Hierarchy
 
 Each level is called a "zone" and is managed by different organizations:
 - **Root zone**: managed by ICANN, served by 13 root server clusters (a.root-servers.net through m.root-servers.net)
@@ -117,16 +125,22 @@ $ dig google.com A +short
 
 CNAME (Canonical Name) creates an alias from one domain name to another.
 
+---
+
+## CNAME Records
+
 ![cname_records](svg/courses/networking/networking-basics/04_dns_deep_dive/cname_records.svg)
+
+---
+
+## CNAME Records
 
 ```bash
 $ dig www.example.com
-
 ;; ANSWER SECTION:
 www.example.com.    3600    IN    CNAME   example.com.
 example.com.        3600    IN    A       93.184.216.34
 ```
-
 **Important CNAME rules:**
 - A CNAME cannot coexist with other record types for the same name
 - A CNAME cannot be at the zone apex (e.g., example.com itself)
@@ -137,19 +151,24 @@ example.com.        3600    IN    A       93.184.216.34
 ## MX Records
 
 MX (Mail Exchange) records direct email for a domain to the correct mail servers.
-
 ```bash
 $ dig example.com MX
-
 ;; ANSWER SECTION:
 example.com.    3600    IN    MX    10 mail1.example.com.
 example.com.    3600    IN    MX    20 mail2.example.com.
 example.com.    3600    IN    MX    30 mail3.example.com.
 ```
-
 The number before the server name is the **priority** (lower = higher priority).
 
+---
+
+## MX Records
+
 ![mx_records](svg/courses/networking/networking-basics/04_dns_deep_dive/mx_records.svg)
+
+---
+
+## MX Records
 
 If mail1 is unreachable, the sender automatically tries mail2, then mail3.
 
@@ -190,16 +209,17 @@ $ dig example.com TXT +short
 ## NS Records
 
 NS (Name Server) records delegate a DNS zone to specific authoritative name servers.
-
 ```bash
 $ dig example.com NS
-
 ;; ANSWER SECTION:
 example.com.    86400    IN    NS    a.iana-servers.net.
 example.com.    86400    IN    NS    b.iana-servers.net.
 ```
-
 NS records form the delegation chain from root to your domain:
+
+---
+
+## NS Records
 
 ![ns_records](svg/courses/networking/networking-basics/04_dns_deep_dive/ns_records.svg)
 
@@ -295,24 +315,27 @@ _sip._tcp.example.com. 3600 IN SRV 20 0  5060 sip3.example.com.
 ## Recursive vs Iterative Resolution
 
 DNS resolution can happen in two modes:
-
 **Recursive Resolution** -- the resolver does all the work:
+
+---
+
+## Recursive vs Iterative Resolution
 
 ![recursive_vs_iterative_resolution](svg/courses/networking/networking-basics/04_dns_deep_dive/recursive_vs_iterative_resolution.svg)
 
-**Iterative Resolution** -- each server returns the next server to ask:
+---
 
+## Recursive vs Iterative Resolution
+
+**Iterative Resolution** -- each server returns the next server to ask:
 ```misc
 Client asks Root:    "Where is www.example.com?"
 Root responds:       "I don't know, but ask .com NS at 192.5.6.30"
-
 Client asks .com:    "Where is www.example.com?"
 .com responds:       "I don't know, but ask example.com NS at 93.184.216.34"
-
 Client asks example.com NS: "Where is www.example.com?"
 example.com responds:       "Here: 93.184.216.34"
 ```
-
 In practice, your computer uses recursive resolution (asking your configured DNS resolver), and the resolver uses iterative resolution to walk the hierarchy.
 
 ---
@@ -321,12 +344,19 @@ In practice, your computer uses recursive resolution (asking your configured DNS
 
 What happens when you type `www.example.com` in your browser:
 
+---
+
+## DNS Resolution: Step by Step
+
 ![dns_resolution_step_by_step](svg/courses/networking/networking-basics/04_dns_deep_dive/dns_resolution_step_by_step.svg)
+
+---
+
+## DNS Resolution: Step by Step
 
 ```bash
 # Trace the full resolution path
 $ dig +trace www.example.com
-
 ; <<>> DiG 9.18.1 <<>> +trace www.example.com
 ;; global options: +cmd
 .                       518400  IN      NS      a.root-servers.net.
@@ -569,23 +599,28 @@ $ host -t NS example.com
 ## DNSSEC: Securing DNS
 
 DNSSEC (DNS Security Extensions) adds cryptographic signatures to DNS records to prevent tampering.
-
 **The problem DNSSEC solves:**
 
+---
+
+## DNSSEC: Securing DNS
+
 ![dnssec_securing_dns](svg/courses/networking/networking-basics/04_dns_deep_dive/dnssec_securing_dns.svg)
+
+---
+
+## DNSSEC: Securing DNS
 
 **DNSSEC record types:**
 - **RRSIG**: Contains the signature for a record set
 - **DNSKEY**: Contains the public key used to verify signatures
 - **DS**: Delegation Signer -- links parent zone to child zone keys
 - **NSEC/NSEC3**: Proves a record does not exist (authenticated denial)
-
 ```bash
 # Check if a domain uses DNSSEC
 $ dig example.com +dnssec +short
 93.184.216.34
 A 13 2 86400 20240201000000 20240115000000 12345 example.com. <signature>
-
 # Validate DNSSEC chain
 $ dig +sigchase +trusted-key=/etc/trusted-key.key example.com
 ```
@@ -737,9 +772,7 @@ _sip._tcp  IN  SRV  10 60 5060 sip.example.com.
 ## DNS Load Balancing Techniques
 
 ### Round-Robin DNS
-
 Multiple A records for the same name -- clients get different IPs in rotation:
-
 ```bash
 $ dig loadbalanced.example.com A
 ;; ANSWER SECTION:
@@ -749,10 +782,17 @@ loadbalanced.example.com. 300 IN A 10.0.0.3
 ```
 
 ### GeoDNS
-
 Returns different IP addresses based on the client's geographic location:
 
+---
+
+## DNS Load Balancing Techniques
+
 ![geodns](svg/courses/networking/networking-basics/04_dns_deep_dive/geodns.svg)
+
+---
+
+## DNS Load Balancing Techniques
 
 Used by CDNs (Cloudflare, AWS Route53, Akamai) for latency-based routing.
 

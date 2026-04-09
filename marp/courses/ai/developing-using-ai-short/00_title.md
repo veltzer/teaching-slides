@@ -9,6 +9,7 @@ category: ai
 duration_hours: 8
 audience:
   - audiences:developers
+
 ---
 # Developing Using Ai Short
 ## Mark Veltzer

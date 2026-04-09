@@ -1,7 +1,6 @@
 # Peripherals
 
 ---
-
 ## Overview of Embedded Peripherals
 
 Embedded systems interact with the physical world through peripherals:
@@ -12,6 +11,9 @@ Embedded systems interact with the physical world through peripherals:
 - **I2C**: Inter-Integrated Circuit bus
 - **DMA**: Direct Memory Access controller
 - **Timers**: Hardware timing and PWM generation
+
+---
+## Overview of Embedded Peripherals
 
 ![overview_of_embedded_peripherals](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/overview_of_embedded_peripherals.svg)
 
@@ -116,7 +118,6 @@ void updateOutput(GPIO_TypeDef* gpio, uint16_t mask, uint16_t value) {
 ```
 
 ---
-
 ## Universal Asynchronous Receiver-Transmitter (UART)
 
 UART provides serial communication:
@@ -124,6 +125,9 @@ UART provides serial communication:
 - **Configurable**: Baud rate, data bits, parity, stop bits
 - **Full duplex**: Simultaneous TX and RX
 - **Flow control**: RTS/CTS hardware handshaking
+
+---
+## Universal Asynchronous Receiver-Transmitter (UART)
 
 ![universal_asynchronous_receiver_transmitter_uart](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/universal_asynchronous_receiver_transmitter_uart.svg)
 
@@ -257,7 +261,6 @@ UARTStatus uartReceiveByteWithErrorCheck(uint8_t* data) {
 ```
 
 ---
-
 ## Analog-to-Digital Converter (ADC)
 
 ADC converts analog voltages to digital values:
@@ -265,6 +268,9 @@ ADC converts analog voltages to digital values:
 - **Reference voltage**: Determines full-scale range
 - **Sampling rate**: Conversions per second
 - **Multiple channels**: Multiplexed inputs
+
+---
+## Analog-to-Digital Converter (ADC)
 
 ![analog_to_digital_converter_adc](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/analog_to_digital_converter_adc.svg)
 
@@ -415,7 +421,6 @@ void DMA1_Channel1_IRQHandler() {
 ```
 
 ---
-
 ## Serial Peripheral Interface (SPI)
 
 SPI provides high-speed synchronous communication:
@@ -423,6 +428,9 @@ SPI provides high-speed synchronous communication:
 - **Master/Slave**: One master, multiple slaves
 - **Four wires**: MOSI, MISO, SCK, CS/SS
 - **High speed**: Typically MHz range
+
+---
+## Serial Peripheral Interface (SPI)
 
 ![serial_peripheral_interface_spi](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/serial_peripheral_interface_spi.svg)
 
@@ -547,7 +555,6 @@ bool spiSendByteNonBlocking(uint8_t data) {
 ```
 
 ---
-
 ## Inter-Integrated Circuit (I2C)
 
 I2C provides multi-master, multi-slave communication:
@@ -555,6 +562,9 @@ I2C provides multi-master, multi-slave communication:
 - **Addressing**: 7-bit or 10-bit slave addresses
 - **Open drain**: Requires pull-up resistors
 - **Arbitration**: Multiple masters can coexist
+
+---
+## Inter-Integrated Circuit (I2C)
 
 ![inter_integrated_circuit_i2c](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/inter_integrated_circuit_i2c.svg)
 
@@ -741,7 +751,6 @@ I2CStatus i2cReadData(uint8_t address, uint8_t* data, uint16_t size) {
 ```
 
 ---
-
 ## Direct Memory Access (DMA)
 
 DMA enables data transfer without CPU intervention:
@@ -749,6 +758,9 @@ DMA enables data transfer without CPU intervention:
 - **Memory-to-Peripheral**: Send data to peripherals
 - **Peripheral-to-Memory**: Receive data from peripherals
 - **Circular mode**: Continuous operation for streaming
+
+---
+## Direct Memory Access (DMA)
 
 ![direct_memory_access_dma](svg/courses/embedded/effective-real-time-embedded-c-and-c++/19_peripherals/direct_memory_access_dma.svg)
 

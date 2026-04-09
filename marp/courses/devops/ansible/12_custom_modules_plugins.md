@@ -108,6 +108,7 @@ if __name__ == '__main__':
 
 ```yaml
 # playbook.yml
+
 ---
 - name: Test custom module
   hosts: localhost
@@ -202,6 +203,7 @@ if __name__ == '__main__':
 #!/usr/bin/env python3
 
 DOCUMENTATION = r'''
+
 ---
 module: config_manager
 short_description: Manage JSON configuration files

@@ -201,12 +201,16 @@ ls -la /data/shared
 ```
 
 ---
+
 ## PAM (Pluggable Authentication Modules)
 
 ![pam_pluggable_authentication_modules](svg/courses/operating_systems/linux-system-administration/05_user_management_security/pam_pluggable_authentication_modules.svg)
 
-PAM module types: `auth`, `account`, `password`, `session`.
+---
 
+## PAM (Pluggable Authentication Modules)
+
+PAM module types: `auth`, `account`, `password`, `session`.
 Configuration files in `/etc/pam.d/`.
 
 ---
@@ -768,12 +772,16 @@ ss -tlnp
 ```
 
 ---
+
 ## LDAP/NSS Overview
 
 ![ldap_nss_overview](svg/courses/operating_systems/linux-system-administration/05_user_management_security/ldap_nss_overview.svg)
 
-`NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
+---
 
+## LDAP/NSS Overview
+
+`NSS` (Name Service Switch) lets applications resolve users, groups, and hosts from multiple backends.
 ```bash
 # /etc/nsswitch.conf with LDAP
 passwd: files ldap

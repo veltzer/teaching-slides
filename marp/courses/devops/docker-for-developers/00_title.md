@@ -9,6 +9,7 @@ category: devops
 duration_hours: 24
 audience:
   - audiences:developers
+
 ---
 # Docker For Developers
 ## Mark Veltzer

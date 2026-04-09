@@ -575,6 +575,7 @@ project/
 
 ```yaml
 # host_vars/web01.yml
+
 ---
 ansible_host: 192.168.56.20
 http_port: 80
@@ -595,6 +596,7 @@ vhosts:
 
 ```yaml
 # group_vars/webservers.yml
+
 ---
 nginx_version: "1.24"
 nginx_worker_processes: auto
@@ -892,6 +894,7 @@ ansible web01 -m setup -a "filter=ansible_memory_mb"
 
 ```yaml
 # first_playbook.yml
+
 ---
 - name: My first playbook
   hosts: webservers
@@ -940,6 +943,7 @@ ansible-playbook --limit web01 first_playbook.yml
 ## Playbook Structure
 
 ```yaml
+
 ---
 # Play 1
 - name: Configure webservers
@@ -1112,6 +1116,7 @@ handlers:
 ## Complete Playbook: Web Server Setup
 
 ```yaml
+
 ---
 - name: Setup web servers
   hosts: webservers
@@ -1169,6 +1174,7 @@ handlers:
 ## Playbook: Database Server Setup
 
 ```yaml
+
 ---
 - name: Setup PostgreSQL database servers
   hosts: dbservers

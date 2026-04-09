@@ -32,6 +32,10 @@ Point-in-time snapshots of the dataset:
 - Can be created manually with commands
 - Good for backups and disaster recovery
 
+---
+
+## RDB (Redis Database) Snapshots
+
 ![rdb_redis_database_snapshots](svg/courses/databases/redis/06_persistence/rdb_redis_database_snapshots.svg)
 
 ---
@@ -39,6 +43,10 @@ Point-in-time snapshots of the dataset:
 ## How RDB Snapshots Work
 
 ![how_rdb_snapshots_work](svg/courses/databases/redis/06_persistence/how_rdb_snapshots_work.svg)
+
+---
+
+## How RDB Snapshots Work - Steps
 
 1. Redis forks a child process
 1. Child process writes all data to a temporary file
@@ -122,6 +130,10 @@ Log of all write operations that modify data:
 - Can be compacted/rewritten to save space
 - Easier to understand (plain text commands)
 - Better for recovery with less data loss
+
+---
+
+## AOF (Append-Only File)
 
 ![aof_append_only_file](svg/courses/databases/redis/06_persistence/aof_append_only_file.svg)
 
@@ -220,7 +232,10 @@ How it works:
 
 ![hybrid_persistence_file_structure](svg/courses/databases/redis/06_persistence/hybrid_persistence_file_structure.svg)
 
-Benefits:
+---
+
+## Hybrid Persistence Benefits
+
 - Fast loading (RDB portion)
 - Minimal data loss (AOF portion)
 - Optimal space usage
@@ -282,7 +297,15 @@ aof_last_cow_size:0
 
 Copy-On-Write (COW) mechanism:
 
+---
+
+## Persistence and Memory Usage
+
 ![persistence_and_memory_usage](svg/courses/databases/redis/06_persistence/persistence_and_memory_usage.svg)
+
+---
+
+## Copy-On-Write Details
 
 - Child process shares memory with parent process
 - When parent modifies data, memory is copied (Copy-On-Write)
@@ -317,7 +340,10 @@ Minimize impact on main Redis process:
 
 ![backup_strategies](svg/courses/databases/redis/06_persistence/backup_strategies.svg)
 
-Best practices:
+---
+
+## Backup Best Practices
+
 - Store backups off-server
 - Implement retention policies (daily, weekly, monthly)
 - Test backup restoration regularly
@@ -401,7 +427,10 @@ Combining RDB and AOF for point-in-time recovery:
 
 ![redis_persistence_in_replicated_setup](svg/courses/databases/redis/06_persistence/redis_persistence_in_replicated_setup.svg)
 
-Strategies:
+---
+
+## Persistence in Replicated Setup - Strategies
+
 - Distribute persistence load across replicas
 - Configure different persistence strategies per role
 - Use dedicated backup replicas
@@ -412,7 +441,15 @@ Strategies:
 
 RDB's role in replication:
 
+---
+
+## Persistence for Replication
+
 ![persistence_for_replication](svg/courses/databases/redis/06_persistence/persistence_for_replication.svg)
+
+---
+
+## Persistence for Replication - Details
 
 - RDB file provides initial sync data
 - Even with AOF enabled, replication uses RDB
@@ -424,7 +461,15 @@ RDB's role in replication:
 
 Redis Cluster persistence considerations:
 
+---
+
+## Persistence in Redis Cluster
+
 ![persistence_in_redis_cluster](svg/courses/databases/redis/06_persistence/persistence_in_redis_cluster.svg)
+
+---
+
+## Persistence in Redis Cluster - Notes
 
 - Each node manages persistence independently
 - Need consistent configuration across nodes
@@ -461,7 +506,10 @@ Monitor:
 
 ![typical_performance_impact](svg/courses/databases/redis/06_persistence/typical_performance_impact.svg)
 
-Note:
+---
+
+## Typical Performance Impact - Note
+
 - Actual percentages will vary based on workload
 - Write-heavy workloads show greater impact
 - Read-heavy workloads show minimal impact

@@ -9,6 +9,7 @@ category: language
 duration_hours: 32
 audience:
   - audiences:developers
+
 ---
 # Rust Programming
 ## Mark Veltzer

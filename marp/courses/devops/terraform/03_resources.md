@@ -50,13 +50,15 @@ resource "google_compute_instance" "web_server" {
 ```
 
 ---
-
 ## What are Providers?
 
 - Plugins that Terraform uses to interact with APIs
 - Each provider manages a specific set of resource types
 - Must be declared in the `terraform` block
 - Downloaded during `terraform init`
+
+---
+## What are Providers?
 
 ![what_are_providers](svg/courses/devops/terraform/03_resources/what_are_providers.svg)
 
@@ -293,20 +295,21 @@ resource "aws_instance" "web" {
 - Format: `resource_type.resource_name.attribute`
 
 ---
-
 ## Implicit Dependencies
 
 ```hcl
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 }
-
 # Terraform automatically knows this depends on the VPC
 resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
 }
 ```
+
+---
+## Implicit Dependencies
 
 ![terraform_automatically_knows_this_depends_on_the_vpc](svg/courses/devops/terraform/03_resources/terraform_automatically_knows_this_depends_on_the_vpc.svg)
 

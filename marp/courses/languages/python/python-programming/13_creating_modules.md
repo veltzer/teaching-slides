@@ -1,4 +1,5 @@
 # Creating Modules
+
 ---
 ## What Makes a Python Package?
 - A directory with Python files
@@ -13,6 +14,7 @@ my_package/
     utils.py
     helpers.py
 ```
+
 ---
 ## Simple Module Example
 
@@ -32,6 +34,7 @@ def multiply(a, b):
     """Return the product of a and b."""
     return a * b
 ```
+
 ---
 ## Using Your Module
 
@@ -47,6 +50,7 @@ from calculator import add, multiply
 print(add(2, 3))        # 5
 print(multiply(4, 5))   # 20
 ```
+
 ---
 ## Package Directory Structure
 
@@ -67,6 +71,7 @@ my_project/
     pyproject.toml
     README.md
 ```
+
 ---
 ## The `__init__.py` File
 - Makes a directory a Python package
@@ -83,6 +88,7 @@ from .utils import helper_function
 __version__ = "1.0.0"
 __all__ = ["main_function", "helper_function"]
 ```
+
 ---
 ## Relative Imports
 
@@ -99,6 +105,7 @@ from ..other_package import something  # Parent package
 
 - Relative imports use dots to specify location
 - Only work inside packages
+
 ---
 ## Absolute vs Relative Imports
 
@@ -113,6 +120,7 @@ from . import utils
 
 - PEP 8 recommends absolute imports for clarity
 - Relative imports are fine within a package
+
 ---
 ## The `__all__` Variable
 - Controls what `from module import *` exports
@@ -133,6 +141,7 @@ class PublicClass:
 class _InternalClass:
     pass
 ```
+
 ---
 ## Module-Level Variables
 
@@ -148,6 +157,7 @@ DEFAULT_TIMEOUT = 30
 MAX_RETRIES = 3
 BASE_URL = "https://api.example.com"
 ```
+
 ---
 ## Documenting with Docstrings
 - Every module, class, and function should have a docstring
@@ -170,6 +180,7 @@ def fetch_data(url, timeout=30):
     """
     pass
 ```
+
 ---
 ## Google Style Docstrings
 
@@ -191,6 +202,7 @@ def calculate(numbers, operation="sum"):
     """
     pass
 ```
+
 ---
 ## NumPy Style Docstrings
 
@@ -212,6 +224,7 @@ def calculate(numbers, operation="sum"):
     """
     pass
 ```
+
 ---
 ## Testing with `pytest`
 
@@ -232,6 +245,7 @@ def test_multiply():
     assert multiply(3, 4) == 12
     assert multiply(0, 100) == 0
 ```
+
 ---
 ## Running `pytest`
 
@@ -254,6 +268,7 @@ pytest test_calculator.py::test_add
 # Show print output
 pytest -s
 ```
+
 ---
 ## `pytest` - Fixtures
 
@@ -274,6 +289,7 @@ def test_sum(sample_data):
 def test_empty(empty_list):
     assert len(empty_list) == 0
 ```
+
 ---
 ## `pytest` - Parametrize
 
@@ -291,6 +307,7 @@ from calculator import add
 def test_add(a, b, expected):
     assert add(a, b) == expected
 ```
+
 ---
 ## `pytest` - Testing Exceptions
 
@@ -310,6 +327,7 @@ def test_divide_by_zero_message():
     with pytest.raises(ZeroDivisionError, match="Cannot divide"):
         divide(10, 0)
 ```
+
 ---
 ## `pytest` - Markers
 
@@ -333,6 +351,7 @@ def test_future_feature():
 def test_unix_feature():
     pass
 ```
+
 ---
 ## `pytest` - Configuration (`pytest.ini`)
 
@@ -346,6 +365,7 @@ markers =
     integration: marks integration tests
 addopts = -v --tb=short
 ```
+
 ---
 ## `pytest` - Coverage
 
@@ -370,6 +390,7 @@ my_package/utils.py       15      2    87%
 ------------------------------------------
 TOTAL                     43      5    88%
 ```
+
 ---
 ## `pyproject.toml` - Modern Configuration
 
@@ -394,6 +415,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = ["pytest>=7.0", "black", "mypy"]
 ```
+
 ---
 ## Entry Points (CLI Tools)
 
@@ -417,6 +439,7 @@ def main(name):
 pip install -e .
 my-tool Alice  # Hello, Alice!
 ```
+
 ---
 ## Development Installation
 
@@ -431,6 +454,7 @@ pip install -e ".[dev]"
 - `-e` (editable) mode links the package to your source
 - Changes to code are reflected immediately
 - No need to reinstall after every change
+
 ---
 ## Building and Distributing
 
@@ -451,6 +475,7 @@ twine upload dist/*
 # Upload to TestPyPI first
 twine upload --repository testpypi dist/*
 ```
+
 ---
 ## Project Layout - `src` Layout
 
@@ -470,6 +495,7 @@ my-project/
 
 - The `src` layout prevents accidental imports from the project root
 - Recommended for distributable packages
+
 ---
 ## `.gitignore` for Python Projects
 
@@ -487,6 +513,7 @@ build/
 htmlcov/
 .coverage
 ```
+
 ---
 ## Type Checking Your Package
 
@@ -505,6 +532,7 @@ mypy src/my_package/
 # [tool.mypy]
 # strict = true
 ```
+
 ---
 ## Summary
 - Packages are directories with `__init__.py`

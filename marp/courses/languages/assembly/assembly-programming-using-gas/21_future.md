@@ -1,10 +1,12 @@
 # Future of Assembly Programming
+
 ---
 ## Current Role of Assembly
 - Performance-critical sections
 - Device drivers and OS kernels
 - Embedded systems
 - Reverse engineering and security
+
 ---
 ## High-Level Languages vs Assembly
 - Most applications: High-level languages
@@ -69,6 +71,7 @@ aesenc xmm0, xmm1   ; AES encryption round
 - Teaching computer architecture
 - Understanding low-level operations
 - Foundation for systems programming
+
 ---
 ## WebAssembly (Wasm)
 - Binary instruction format for stack-based VM
@@ -92,6 +95,7 @@ Example:
 - Runtime compilation of code
 - Combines advantages of interpreted and compiled code
 - Often uses low-level optimization techniques
+
 ---
 ## Assembly in Heterogeneous Computing
 - CPU-GPU hybrid systems
@@ -165,6 +169,7 @@ Example for an ARM Cortex-M:
 - Hardware-software interface
 - Low-level system control
 - Understanding computer architecture
+
 ---
 ## Challenges and Opportunities
 - Keeping up with new architectures

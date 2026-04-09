@@ -1,4 +1,5 @@
 # Advanced Spark MLlib
+
 ---
 ## Chapter Overview
 * Scalable ML pipelines
@@ -6,6 +7,7 @@
 * Hyperparameter tuning
 * Model deployment
 * Production considerations
+
 ---
 ## MLlib Architecture
 ![mllib_architecture](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mllib_architecture.svg)
@@ -16,6 +18,7 @@
 1. Estimators
 1. Evaluators
 1. Model persistence
+
 ---
 ## Data Preparation
 
@@ -38,6 +41,7 @@ assembler = VectorAssembler(
 1. OneHotEncoder
 1. VectorAssembler
 1. StandardScaler
+
 ---
 ## Advanced Feature Processing
 ```python
@@ -48,6 +52,7 @@ scaler = StandardScaler(
     outputCol="scaledFeatures"
 )
 ```
+
 ---
 ## Pipeline Construction
 ```python
@@ -59,6 +64,7 @@ pipeline = Pipeline(stages=[
     estimator
 ])
 ```
+
 ---
 ## Custom Transformers
 ```python
@@ -69,6 +75,7 @@ class CustomTransformer(Transformer, HasInputCol, HasOutputCol):
     def _transform(self, dataset):
         return dataset
 ```
+
 ---
 ## Model Training
 ![model_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_training.svg)
@@ -83,6 +90,7 @@ paramGrid = ParamGridBuilder()\
     .addGrid(classifier.maxBins, [10, 20, 40])\
     .build()
 ```
+
 ---
 ## Cross Validation
 ```python
@@ -94,12 +102,14 @@ cv = CrossValidator(
     estimatorParamMaps=paramGrid
 )
 ```
+
 ---
 ## Model Evaluation
 1. Binary classification metrics
 1. Multiclass metrics
 1. Regression metrics
 1. Custom metrics
+
 ---
 ## Evaluation Metrics
 ![evaluation_metrics](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/evaluation_metrics.svg)
@@ -113,6 +123,7 @@ class CustomEvaluator(Evaluator):
     def _evaluate(self, dataset):
         return computed_metric
 ```
+
 ---
 ## Model Selection
 ```python
@@ -120,6 +131,7 @@ class CustomEvaluator(Evaluator):
 bestModel = cvModel.bestModel
 bestPipeline = bestModel.stages[-1]
 ```
+
 ---
 ## Distributed Training
 ![distributed_training](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_training.svg)
@@ -141,6 +153,7 @@ loaded_model = PipelineModel.load("hdfs://model/path")
 1. Neural Networks
 1. Random Forests
 1. Custom Algorithms
+
 ---
 ## Ensemble Methods
 ```python
@@ -151,6 +164,7 @@ rf = RandomForestClassifier(
     maxDepth=5
 )
 ```
+
 ---
 ## Neural Networks
 ![neural_networks](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/neural_networks.svg)
@@ -164,6 +178,7 @@ class CustomClassifier(Classifier):
     def _fit(self, dataset):
         return self._fit_internal(dataset)
 ```
+
 ---
 ## Online Learning
 ```python
@@ -171,6 +186,7 @@ class CustomClassifier(Classifier):
 for batch in streaming_data:
     model = model.fit(batch)
 ```
+
 ---
 ## Model Serving
 ![model_serving](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/model_serving.svg)
@@ -181,6 +197,7 @@ for batch in streaming_data:
 1. Feature computation
 1. Model prediction
 1. Result logging
+
 ---
 ## Monitoring ML Pipelines
 ```python
@@ -189,6 +206,7 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 evaluator = MulticlassClassificationEvaluator()
 accuracy = evaluator.evaluate(predictions)
 ```
+
 ---
 ## Performance Optimization
 ![performance_optimization](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/performance_optimization.svg)
@@ -208,6 +226,7 @@ accuracy = evaluator.evaluate(predictions)
 transformed_data = pipeline.fit(train_data)\
     .transform(train_data).cache()
 ```
+
 ---
 ## Distributed Processing
 ![distributed_processing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/distributed_processing.svg)
@@ -218,12 +237,14 @@ transformed_data = pipeline.fit(train_data)\
 1. Feature sharing
 1. Computation reuse
 1. Metadata management
+
 ---
 ## Model Registry
 ```python
 # Register model in MLflow
 mlflow.spark.log_model(spark_model, "model")
 ```
+
 ---
 ## A/B Testing
 ![a_b_testing](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/a_b_testing.svg)
@@ -234,6 +255,7 @@ mlflow.spark.log_model(spark_model, "model")
 1. Model lineage
 1. Experiment tracking
 1. Deployment history
+
 ---
 ## Deployment Strategies
 ```python
@@ -242,6 +264,7 @@ def deploy_model(new_model, old_model):
     # Gradual traffic shift
     pass
 ```
+
 ---
 ## Error Handling
 ```python
@@ -250,6 +273,7 @@ try:
 except Exception as e:
     logging.error(f"Prediction failed: {e}")
 ```
+
 ---
 ## Data Validation
 ![data_validation](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/data_validation.svg)
@@ -260,6 +284,7 @@ except Exception as e:
 1. SHAP values
 1. Partial dependence
 1. LIME explanations
+
 ---
 ## Automated ML
 ```python
@@ -270,6 +295,7 @@ automl = TrainValidationSplit(
     evaluator=evaluator
 )
 ```
+
 ---
 ## Transfer Learning
 ![transfer_learning](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/transfer_learning.svg)
@@ -280,6 +306,7 @@ automl = TrainValidationSplit(
 1. Quantization
 1. Knowledge distillation
 1. Architecture optimization
+
 ---
 ## Streaming Predictions
 ```python
@@ -288,6 +315,7 @@ def process_stream(batch_df, epoch_id):
     predictions = model.transform(batch_df)
     return predictions
 ```
+
 ---
 ## Security Considerations
 ![security_considerations](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/security_considerations.svg)
@@ -298,6 +326,7 @@ def process_stream(batch_df, epoch_id):
 1. Integration tests
 1. Performance tests
 1. Validation tests
+
 ---
 ## Debugging Techniques
 ```python
@@ -305,6 +334,7 @@ def process_stream(batch_df, epoch_id):
 debug_df = transformer.transform(input_df)
 debug_df.show()
 ```
+
 ---
 ## Best Practices
 ![best_practices](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/best_practices.svg)
@@ -315,12 +345,14 @@ debug_df.show()
 1. Performance metrics
 1. Monitoring setup
 1. Fallback strategy
+
 ---
 ## Future Developments
 1. AutoML improvements
 1. Distributed deep learning
 1. Edge deployment
 1. Federated learning
+
 ---
 ## MLOps Integration
 ![mlops_integration](svg/courses/big_data/advanced-spark-with-python/03_advanced_spark_mllib/mlops_integration.svg)

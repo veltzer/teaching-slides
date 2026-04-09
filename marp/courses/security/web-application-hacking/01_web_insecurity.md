@@ -78,6 +78,10 @@
 
 ![responsible_disclosure](svg/courses/security/web-application-hacking/01_web_insecurity/responsible_disclosure.svg)
 
+---
+
+## Responsible Disclosure
+
 - Typical disclosure timeline: **90 days**
 - Bug bounty programs provide structured reporting
 - `CVE` assignment for tracking vulnerabilities
@@ -87,6 +91,10 @@
 ## The CIA Triad in Web Context
 
 ![the_cia_triad_in_web_context](svg/courses/security/web-application-hacking/01_web_insecurity/the_cia_triad_in_web_context.svg)
+
+---
+
+## The CIA Triad in Web Context
 
 - **Confidentiality**: Prevent unauthorized data access (`SQL injection`, data leaks)
 - **Integrity**: Prevent unauthorized data modification (`XSS`, `CSRF`)
@@ -125,6 +133,10 @@
 
 ![defense_in_depth](svg/courses/security/web-application-hacking/01_web_insecurity/defense_in_depth.svg)
 
+---
+
+## Defense in Depth
+
 - No single control is sufficient
 - Layers of defense create redundancy
 
@@ -133,6 +145,10 @@
 ## Web Application Architecture Overview
 
 ![web_application_architecture_overview](svg/courses/security/web-application-hacking/01_web_insecurity/web_application_architecture_overview.svg)
+
+---
+
+## Web Application Architecture Overview
 
 - Each tier introduces potential attack vectors
 - Trust boundaries exist between each component

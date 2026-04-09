@@ -9,6 +9,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Advanced Spark Ecosystem and Best Practices
 ## Mark Veltzer
@@ -16,7 +17,11 @@ audience:
 
 ---
 
+## Agenda
+
 ![title](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/title.svg)
+
+---
 
 ## Agenda
 
@@ -28,6 +33,7 @@ audience:
 
 ---
 ## Part 1: Spark on Kubernetes and Cloud Platforms
+
 ---
 
 ## Evolution of Spark Deployment
@@ -114,6 +120,7 @@ spark-submit \
 
 ---
 ## Part 2: Integration with Delta Lake for ACID Transactions
+
 ---
 
 ## What is Delta Lake?
@@ -122,6 +129,10 @@ spark-submit \
 - Brings ACID transactions to Spark
 - Enables reliable data lakes
 - Developed by Databricks, now open source
+
+---
+
+## What is Delta Lake?
 
 ![what_is_delta_lake](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/what_is_delta_lake.svg)
 
@@ -247,6 +258,7 @@ spark.sql("VACUUM delta_db.customer_data RETAIN 168 HOURS")
 
 ---
 ## Part 3: Monitoring and Debugging Spark Applications
+
 ---
 
 ## Spark Monitoring Metrics
@@ -297,12 +309,15 @@ spark.history.fs.logDirectory hdfs://namenode:8021/spark-logs
 ```properties
 # In spark-defaults.conf
 spark.metrics.conf=/path/to/metrics.properties
-
 # In metrics.properties
 *.sink.prometheus.class=org.apache.spark.metrics.sink.PrometheusSink
 *.sink.prometheus.period=10
 *.sink.prometheus.port=8091
 ```
+
+---
+
+## Integrating Spark with Prometheus & Grafana
 
 ![bg right:30% 80%](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/grafana_logo.svg)
 
@@ -397,6 +412,7 @@ sc.getExecutorM
 
 ---
 ## Part 4: Best Practices for Production Deployment
+
 ---
 
 ## Spark Application Configuration Best Practices
@@ -489,6 +505,10 @@ spark.read
     - Silver: Cleaned, validated data
     - Gold: Business-level aggregates
 
+---
+
+## Data Pipeline Design Patterns
+
 ![data_pipeline_design_patterns](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/data_pipeline_design_patterns.svg)
 
 ---
@@ -541,6 +561,7 @@ rdd.checkpoint()
 
 ---
 ## Part 5: Security Considerations in Spark Applications
+
 ---
 
 ## Spark Security Framework
@@ -701,6 +722,7 @@ Key events to audit:
 
 ---
 ## Conclusion and Next Steps
+
 ---
 
 ## Key Takeaways
@@ -726,7 +748,10 @@ Key events to audit:
 ## Q&A
 
 Thank you!
-
 Contact: spark-admin@example.com
+
+---
+
+## Q&A
 
 ![q_a](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-scala/q_a.svg)

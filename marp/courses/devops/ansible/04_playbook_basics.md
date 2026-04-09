@@ -19,6 +19,7 @@
 ## Defining Variables in Playbooks
 
 ```yaml
+
 ---
 - name: Deploy application
   hosts: webservers
@@ -83,6 +84,7 @@ vars_prompt:
 
 ```yaml
 # vars/common.yml
+
 ---
 ntp_servers:
   - 0.pool.ntp.org
@@ -94,6 +96,7 @@ timezone: UTC
 log_retention_days: 30
 
 # vars/production.yml
+
 ---
 env: production
 debug_mode: false
@@ -101,6 +104,7 @@ replicas: 3
 db_host: db.prod.internal
 
 # vars/staging.yml
+
 ---
 env: staging
 debug_mode: true
@@ -654,6 +658,7 @@ ansible-playbook site.yml --list-tags
 ## Playbook: Complete Web Application
 
 ```yaml
+
 ---
 - name: Deploy web application
   hosts: webservers

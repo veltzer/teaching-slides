@@ -16,6 +16,12 @@
 - The model decides **when** and **which** tool to call
 - Results feed back into the conversation for further reasoning
 
+---
+
+## The Tool-Use Pattern
+
+## Why Tools?
+
 ![why_tools](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/why_tools.svg)
 
 ---
@@ -99,6 +105,12 @@
 - Each tool result becomes context for subsequent reasoning
 - Parallel tool calls are possible when inputs are independent
 
+---
+
+## Multi-Turn Tool Conversations
+
+## Chaining Multiple Calls
+
 ![chaining_multiple_calls](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_multiple_calls.svg)
 
 ---
@@ -150,7 +162,17 @@
 - The model acts as the orchestrator between pipeline stages
 - Common patterns: read-transform-write, search-analyze-act
 
+---
+
+## Tool Composition Patterns
+
+## Chaining Tools into Pipelines
+
 ![chaining_tools_into_pipelines](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/chaining_tools_into_pipelines.svg)
+
+---
+
+## Tool Composition Patterns
 
 ## Orchestration Strategies
 - **Sequential**: each step depends on the previous result
@@ -239,6 +261,10 @@ def truncate_result(content: str, max_chars: int = 8000) -> str:
 - Run shell tools inside containers or VMs with restricted access
 - Apply filesystem scoping: tools can only read/write within a project root
 - Network policies prevent tools from reaching internal services
+
+---
+
+## Security, Sandboxing, and Permissions
 
 ![sandboxed_execution](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/sandboxed_execution.svg)
 
@@ -453,6 +479,10 @@ async def stream_shell(command: str):
 
 ![system_components](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/system_components.svg)
 
+---
+
+## Production Architecture for Tool-Use Systems
+
 ## Key Concerns
 - **API Gateway**: rate limiting, request validation, routing
 - **Registry**: tool catalog with schemas and versioning
@@ -540,6 +570,12 @@ class ToolAdapter:
 - Use semantic versioning for tool packages
 - Deprecate old tools gracefully with warnings in descriptions
 - Monitor tool call success rates and latency
+
+---
+
+## Versioning and Maintaining Tools
+
+## Evolution Without Breaking Agents
 
 ![evolution_without_breaking_agents](svg/courses/ai/advanced-ai-powered-development/04_tool_use_and_function_calling/evolution_without_breaking_agents.svg)
 

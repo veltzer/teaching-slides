@@ -1,4 +1,5 @@
 # DNS Cache Poisoning
+
 ---
 ## What is DNS Cache Poisoning?
 
@@ -11,6 +12,7 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 1. The attacker sends a large number of forged DNS responses to a recursive DNS server, containing false information mapping a domain name to a malicious IP address.
 1. If one of the forged responses passes the validation checks and matches an existing recursive query, the server will cache the false record.
 1. When a user requests the domain associated with the poisoned record, the recursive DNS server will return the malicious IP address, redirecting the user's traffic to a malicious site.
+
 ---
 
 ## Diagram
@@ -103,15 +105,17 @@ dig example.com +dnssec +short
 
 ![dnssec_how_it_works](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/dnssec_how_it_works.svg)
 
+---
+
+## DNSSEC: How It Works
+
 ```bash
 # Verify DNSSEC for a domain
 dig example.com +dnssec
 # Look for RRSIG records and AD (Authenticated Data) flag
-
 # Check the full DNSSEC chain
 delv @8.8.8.8 example.com
 # Shows "fully validated" if DNSSEC chain is intact
-
 # Test DNSSEC validation with known-bad domain
 dig dnssec-failed.org @8.8.8.8
 # Should return SERVFAIL if resolver validates DNSSEC

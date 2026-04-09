@@ -1,4 +1,5 @@
 # Test Harnesses
+
 ---
 ## Why Test Bash Scripts?
 - Scripts grow complex over time
@@ -20,6 +21,7 @@ is_valid_ip() {
     return 0
 }
 ```
+
 ---
 ## Simple Test Framework
 
@@ -68,6 +70,7 @@ test_summary() {
     return 0
 }
 ```
+
 ---
 ## Using the Test Framework
 
@@ -90,6 +93,7 @@ assert_true "reject empty" ! is_valid_ip ""
 
 test_summary
 ```
+
 ---
 ## Test Patterns
 
@@ -122,6 +126,7 @@ test_file_processing() {
 
 run_test test_file_processing
 ```
+
 ---
 ## Testing stdout and stderr
 
@@ -152,6 +157,7 @@ capture() {
     rm -f "$tmpfile"
 }
 ```
+
 ---
 ## Existing Test Frameworks
 
@@ -177,6 +183,7 @@ capture() {
 
 # Run: bats test_example.bats
 ```
+
 ---
 ## BATS Helpers
 
@@ -207,6 +214,7 @@ load 'test_helper/bats-assert/load'
     assert_output --partial "expected"
 }
 ```
+
 ---
 ## Testing Best Practices
 ```misc
@@ -221,6 +229,7 @@ load 'test_helper/bats-assert/load'
 9. Keep tests fast (mock slow operations)
 10. Name tests descriptively
 ```
+
 ---
 ## Mocking Commands
 
@@ -249,6 +258,7 @@ source my_api_script.sh
 # Remove mock
 unset -f curl
 ```
+
 ---
 ## Integration Testing
 

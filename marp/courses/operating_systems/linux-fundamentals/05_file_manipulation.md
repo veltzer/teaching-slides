@@ -47,21 +47,20 @@ drwxr-xr-x 2 user group 4.0K Nov 19 09:45 directory
 
 ![viewing_file_contents](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/viewing_file_contents.svg)
 
-Examples:
+---
 
+## Viewing File Contents
+
+Examples:
 ```bash
 # View entire file
 cat file.txt
-
 # Page through file
 less file.txt
-
 # First 10 lines
 head file.txt
-
 # Last 10 lines
 tail file.txt
-
 # Follow file updates
 tail -f log.txt
 ```
@@ -99,15 +98,16 @@ mv old_dir new_dir
 
 ![disk_usage_commands](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/disk_usage_commands.svg)
 
-Examples:
+---
 
+## Disk Usage Commands
+
+Examples:
 ```bash
 # Check filesystem usage
 df -h
-
 # Directory size
 du -sh directory
-
 # Top 10 largest directories
 du -h | sort -rh | head -n 10
 ```
@@ -178,18 +178,18 @@ sort file.txt | uniq -d
 
 ![finding_files](svg/courses/operating_systems/linux-fundamentals/05_file_manipulation/finding_files.svg)
 
-Examples:
+---
 
+## Finding Files
+
+Examples:
 ```bash
 # Find by name
 find . -name "*.txt"
-
 # Find by type
 find . -type d
-
 # Find by size
 find . -size +1M
-
 # Find and execute
 find . -name "*.log" -exec rm {} \;
 ```

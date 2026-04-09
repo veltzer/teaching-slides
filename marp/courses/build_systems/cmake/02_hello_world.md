@@ -351,6 +351,10 @@ target_link_libraries(app PRIVATE mylib)
 
 ![visualizing_property_propagation](svg/courses/build_systems/cmake/02_hello_world/visualizing_property_propagation.svg)
 
+---
+
+## Property Propagation Rules
+
 - `PRIVATE` linking stops propagation
 - `PUBLIC` linking continues the chain
 - `INTERFACE` properties propagate without being used by the owner

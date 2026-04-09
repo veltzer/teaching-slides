@@ -131,11 +131,9 @@ matchExpressions:
 ```
 
 ---
-
 ## Pod Affinity - Co-locate Pods
 
 Place pods near related pods:
-
 ```yaml
 spec:
   affinity:
@@ -150,14 +148,15 @@ spec:
         topologyKey: kubernetes.io/hostname
 ```
 
+---
+## Pod Affinity - Co-locate Pods
+
 ![pod_affinity_co_locate_pods](svg/courses/devops/advanced-kubernetes/03_schedulers/pod_affinity_co_locate_pods.svg)
 
 ---
-
 ## Pod Anti-Affinity - Spread Pods
 
 Keep pods away from each other:
-
 ```yaml
 spec:
   affinity:
@@ -171,6 +170,9 @@ spec:
             - web
         topologyKey: kubernetes.io/hostname
 ```
+
+---
+## Pod Anti-Affinity - Spread Pods
 
 ![pod_anti_affinity_spread_pods](svg/courses/devops/advanced-kubernetes/03_schedulers/pod_anti_affinity_spread_pods.svg)
 
@@ -321,6 +323,7 @@ value: 1000000
 globalDefault: false
 preemptionPolicy: PreemptLowerPriority
 description: "For critical production workloads"
+
 ---
 apiVersion: v1
 kind: Pod

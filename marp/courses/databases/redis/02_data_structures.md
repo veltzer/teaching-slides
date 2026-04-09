@@ -20,7 +20,15 @@
 
 Strings are the most basic Redis data type:
 
+---
+
+## String Operations Recap
+
 ![string_operations_recap](svg/courses/databases/redis/02_data_structures/string_operations_recap.svg)
+
+---
+
+## String Basic Operations
 
 Basic operations:
 ```bash
@@ -98,7 +106,15 @@ Use cases:
 
 Lists are linked lists of string values:
 
+---
+
+## List Operations Recap
+
 ![list_operations_recap](svg/courses/databases/redis/02_data_structures/list_operations_recap.svg)
+
+---
+
+## List Basic Operations
 
 Basic operations:
 ```bash
@@ -156,7 +172,15 @@ BRPOPLPUSH source destination timeout # Pop from one list, push to another
 
 Sets are unordered collections of unique strings:
 
+---
+
+## Set Operations Recap
+
 ![set_operations_recap](svg/courses/databases/redis/02_data_structures/set_operations_recap.svg)
+
+---
+
+## Set Basic Operations
 
 Basic operations:
 ```bash
@@ -223,7 +247,15 @@ SRANDMEMBER key [count]        # Get random members
 
 Sorted sets are sets with scores (ordering values):
 
+---
+
+## Sorted Set Operations Recap
+
 ![sorted_set_operations_recap](svg/courses/databases/redis/02_data_structures/sorted_set_operations_recap.svg)
+
+---
+
+## Sorted Set Basic Operations
 
 Basic operations:
 ```bash
@@ -287,7 +319,15 @@ ZPOPMAX key [count]              # Remove and return members with highest scores
 
 Hashes are maps of field-value pairs:
 
+---
+
+## Hash Operations Recap
+
 ![hash_operations_recap](svg/courses/databases/redis/02_data_structures/hash_operations_recap.svg)
+
+---
+
+## Hash Basic Operations
 
 Basic operations:
 ```bash
@@ -413,6 +453,10 @@ BITOP operation destkey key [key ...]   # Bitwise operations
 ```
 
 Use case: User online status tracking
+
+---
+
+## Bitmaps Introduction
 
 ![bitmaps_introduction](svg/courses/databases/redis/02_data_structures/bitmaps_introduction.svg)
 

@@ -546,11 +546,14 @@ hexdump -C module.ko | tail
 ## GRUB with Secure Boot
 
 ## Shim Bootloader:
-
 - **First-stage bootloader**
 - Signed by Microsoft
 - Loads GRUB
 - Manages MOK (Machine Owner Keys)
+
+---
+
+## GRUB with Secure Boot
 
 ![shim_bootloader](svg/courses/operating_systems/linux-systems-programming/01_boot/shim_bootloader.svg)
 

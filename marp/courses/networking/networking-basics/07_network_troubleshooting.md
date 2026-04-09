@@ -391,11 +391,14 @@ tcp.port == 80 || tcp.port == 443
 
 ![useful_wireshark_features](svg/courses/networking/networking-basics/07_network_troubleshooting/useful_wireshark_features.svg)
 
+---
+
+## Useful Wireshark Features
+
 ```bash
 # Capture with tcpdump, analyze in Wireshark
 $ sudo tcpdump -i eth0 -w /tmp/capture.pcap -c 10000 port 80
 # Then open /tmp/capture.pcap in Wireshark
-
 # Command-line Wireshark (tshark)
 $ tshark -i eth0 -f "port 80" -Y "http.request" -T fields \
     -e ip.src -e http.host -e http.request.uri

@@ -118,10 +118,12 @@ spec:
 ```
 
 ---
-
 ## Traffic Shifting - Canary Release
 
 ![traffic_shifting_canary_release](svg/courses/devops/advanced-kubernetes/08_service_mesh/traffic_shifting_canary_release.svg)
+
+---
+## Traffic Shifting - Canary Release
 
 ```bash
 # Shift traffic gradually
@@ -163,6 +165,7 @@ spec:
       credentialName: app-tls-cert
     hosts:
     - "app.example.com"
+
 ---
 apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
@@ -232,6 +235,7 @@ metadata:
 spec:
   mtls:
     mode: STRICT
+
 ---
 apiVersion: security.istio.io/v1beta1
 kind: AuthorizationPolicy

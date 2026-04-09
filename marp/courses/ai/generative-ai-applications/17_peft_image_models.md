@@ -6,7 +6,13 @@
 
 Why customize? To generate images of **your specific** concepts:
 
+---
+## Customizing Image Models
+
 ![customizing_image_models_1](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_1.svg)
+
+---
+## Customizing Image Models
 
 ![customizing_image_models_2](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_2.svg)
 
@@ -99,13 +105,18 @@ Prevents the model from forgetting how to draw the class in general:
 
 Instead of fine-tuning model weights, learn a **new word** in the text encoder:
 
+---
+## Textual Inversion
+
 ![textual_inversion](svg/courses/ai/generative-ai-applications/17_peft_image_models/textual_inversion.svg)
+
+---
+## Textual Inversion
 
 ```misc
 Model weights:  FROZEN (no changes)
 Text encoder:   FROZEN (no changes)
 New embedding:  TRAINABLE (768-dimensional vector)
-
 Storage: Just the embedding vector (~3 KB!)
 vs. DreamBooth: Full model copy (~5 GB)
 vs. DreamBooth + LoRA: Adapter weights (~50 MB)

@@ -1,4 +1,5 @@
 # Docker Under the Hood
+
 ---
 
 ## Virtual Machine Basics

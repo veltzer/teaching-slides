@@ -1,4 +1,5 @@
 # Multi-Cloud and Cloud Strategy
+
 ---
 ## Why Cloud Strategy Matters
 
@@ -7,6 +8,7 @@
 - Wrong decisions create years of technical debt
 - Strategy must align with business goals, compliance, and team skills
 - No single approach fits all organizations
+
 ---
 ## Cloud Deployment Models Overview
 
@@ -21,6 +23,7 @@
 - Single billing relationship and volume discounts
 - Unified IAM, networking, and monitoring
 - Smaller operations team needed
+
 ---
 ## Single Cloud Risks
 
@@ -29,6 +32,7 @@
 - Outages affect all workloads simultaneously
 - Negotiating leverage decreases over time
 - Migration cost grows exponentially with adoption depth
+
 ---
 ## Multi-Cloud Strategy
 
@@ -37,6 +41,7 @@
 - Same workload portable across providers (true multi-cloud)
 - Requires abstraction layers or duplicated expertise
 - Growing trend among enterprises
+
 ---
 ## Multi-Cloud Topology
 
@@ -57,6 +62,7 @@
 | Cost optimization | Good | Best potential | Variable |
 | Team skills | Focused | Broad | Mixed |
 | Compliance | Provider-dependent | Flexible | Strong |
+
 ---
 ## Vendor Lock-in: What It Really Means
 
@@ -67,6 +73,7 @@
     - Identity and access management (`IAM` policies)
     - Proprietary APIs and SDKs
     - Data egress costs making migration expensive
+
 ---
 ## The Lock-in Spectrum
 
@@ -82,6 +89,7 @@
     - Built-in high availability
 - Using `RDS` instead of self-managed `PostgreSQL` saves ops time
 - Using `SQS` instead of self-managed `RabbitMQ` eliminates cluster management
+
 ---
 ## The Cost of Not Going Cloud-Native
 
@@ -92,6 +100,7 @@
     - 24/7 on-call rotation
 - Estimate: 2-5 full-time engineers per major self-managed service
 - The "portable" choice can be the more expensive choice
+
 ---
 ## When to Embrace or Avoid Lock-in
 
@@ -104,6 +113,7 @@
     - Regulatory requirements mandate multi-provider capability
     - Data volumes make egress costs a serious concern
     - You need competitive pricing leverage
+
 ---
 ## Regulatory and Data Sovereignty
 
@@ -114,6 +124,7 @@
     - `PIPL` (China) - strict data localization requirements
     - `LGPD` (Brazil), `PDPA` (Singapore) - regional frameworks
 - Multi-cloud helps: deploy in local providers per jurisdiction
+
 ---
 ## Data Sovereignty Map
 
@@ -129,6 +140,7 @@
     - What is our budget for abstraction and tooling?
     - What is our risk tolerance for outages?
     - How likely is a future migration?
+
 ---
 ## Cloud-Agnostic Tooling
 
@@ -140,6 +152,7 @@
 - Promise: write once, deploy anywhere
 - Reality: "write once, debug everywhere"
 - Each provider has different networking, IAM, storage, and DNS models
+
 ---
 ## The Lowest Common Denominator Problem
 
@@ -159,6 +172,7 @@
 - Testing cost: every change must be verified on all providers
 - Debugging complexity: issues may be in the abstraction, not the app
 - Estimate: 1-3 full-time engineers to maintain a cloud abstraction
+
 ---
 ## Terraform as a Multi-Cloud Tool
 
@@ -192,6 +206,7 @@ resource "google_compute_instance" "web" {
 - Modules are provider-specific
 - `Terraform` helps with consistency, not with portability
 - True portability requires a wrapper layer on top of `Terraform`
+
 ---
 ## Kubernetes as a Portability Layer
 
@@ -202,6 +217,7 @@ resource "google_compute_instance" "web" {
     - Storage class drivers (`EBS CSI`, `Azure Disk`, `PD CSI`)
     - Networking (`CNI` plugins vary per provider)
     - Node auto-scaling behavior (`Karpenter` vs `Autopilot`)
+
 ---
 ## The Real Multi-Cloud Cost
 
@@ -217,6 +233,7 @@ resource "google_compute_instance" "web" {
     - `AWS` for broadest service catalog
 - Regulatory requirements across jurisdictions
 - Genuine need for vendor negotiation leverage
+
 ---
 ## When Multi-Cloud Does Not Make Sense
 
@@ -225,6 +242,7 @@ resource "google_compute_instance" "web" {
 - If you are not using advanced cloud-native services
 - If your workloads are simple web applications
 - If you lack budget for the additional tooling and staff
+
 ---
 ## Disaster Recovery: Core Concepts
 
@@ -233,6 +251,7 @@ resource "google_compute_instance" "web" {
 - These drive architecture and cost decisions
 - Lower RPO/RTO means higher cost
 - Must be defined per workload, not globally
+
 ---
 ## DR Tiers
 
@@ -242,6 +261,7 @@ resource "google_compute_instance" "web" {
 | 2 | Pilot Light | 30 min | Minutes | Medium |
 | 3 | Warm Standby | Minutes | Seconds | High |
 | 4 | Active-Active | Near zero | Near zero | Very High |
+
 ---
 ## Backup and Restore Architecture
 
@@ -268,6 +288,7 @@ resource "google_compute_instance" "web" {
     - **Synchronous**: zero data loss, higher latency
     - **Asynchronous**: minimal lag, possible data loss
     - **Eventual consistency**: replicas converge over time
+
 ---
 ## Multi-Region DNS Failover
 
@@ -307,6 +328,7 @@ Resources:
     - `Terraform`, `Pulumi`, or `CloudFormation` for infra
     - `Ansible` or scripts for failover orchestration
 - No manual steps during high-stress failover events
+
 ---
 ## Multi-Region Data Consistency
 
@@ -317,6 +339,7 @@ Resources:
 - Multi-region systems must choose between CP and AP
 - Most choose AP with eventual consistency
 - Critical transactions may need CP with higher latency
+
 ---
 ## Egress Costs and Exit Strategy
 
@@ -328,6 +351,7 @@ Resources:
     - Use standard data formats (`Parquet`, `JSON`, `Avro`)
     - Avoid proprietary query languages where possible
     - Document all cloud-specific dependencies
+
 ---
 ## Cloud Strategy Anti-Patterns
 
@@ -337,6 +361,7 @@ Resources:
 - "Over-abstracted" - seven layers between app and cloud
 - "Lift and shift forever" - running VMs without using cloud services
 - "Cloud-native maximalist" - using every managed service available
+
 ---
 ## Decision Matrix: Choosing Your Strategy
 

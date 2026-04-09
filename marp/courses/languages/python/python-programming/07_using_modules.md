@@ -1,4 +1,5 @@
 # Using Modules
+
 ---
 ## What is a Module?
 - A module is a `.py` file containing Python code
@@ -9,6 +10,7 @@
 # math_utils.py is a module
 import math_utils
 ```
+
 ---
 ## Why Use Modules?
 - Code reuse across multiple files
@@ -16,6 +18,7 @@ import math_utils
 - Logical organization of code
 - Easier maintenance
 - Python's standard library is a collection of modules
+
 ---
 ## The `import` Statement
 
@@ -29,6 +32,7 @@ print(math.factorial(5))  # 120
 
 - The module name becomes a namespace
 - Access contents with dot notation
+
 ---
 ## `from ... import`
 
@@ -42,6 +46,7 @@ print(factorial(5))  # 120
 
 - Imports specific names directly into the current namespace
 - No need for the module prefix
+
 ---
 ## `from ... import *`
 
@@ -56,6 +61,7 @@ print(sqrt(16))  # Works
 - Generally discouraged: pollutes namespace
 - Hard to know where names come from
 - Can shadow existing names
+
 ---
 ## Import with Alias
 
@@ -70,6 +76,7 @@ arr = np.array([1, 2, 3])
 
 - Use `as` to create shorter or clearer names
 - Some aliases are conventions (e.g., `np`, `pd`, `plt`)
+
 ---
 ## `from ... import ... as`
 
@@ -80,6 +87,7 @@ from collections import OrderedDict as OD
 now = dt.now()
 print(now)
 ```
+
 ---
 ## Namespaces
 - A namespace maps names to objects
@@ -94,6 +102,7 @@ import math
 # math.pi is in the math namespace
 # pi would be in your local/global namespace if imported directly
 ```
+
 ---
 ## The `dir()` Function
 - Lists names in a module or current namespace
@@ -108,6 +117,7 @@ print(dir(math))
 public = [name for name in dir(math) if not name.startswith("_")]
 print(public)
 ```
+
 ---
 ## The `help()` Function
 
@@ -121,6 +131,7 @@ help(json.loads)     # Function documentation
 
 - Displays docstrings and usage information
 - Extremely useful in the interactive shell
+
 ---
 ## How Python Finds Modules
 - Python searches for modules in this order:
@@ -134,6 +145,7 @@ print(sys.path)
 ```
 
 - `sys.path` is a list of directories to search
+
 ---
 ## Modifying the Module Search Path
 
@@ -147,6 +159,7 @@ sys.path.insert(0, "/home/user/priority_modules")
 # Now Python will look in these directories too
 import my_custom_module
 ```
+
 ---
 ## The `PYTHONPATH` Environment Variable
 
@@ -158,6 +171,7 @@ python3 my_script.py
 
 - Directories in `PYTHONPATH` are added to `sys.path`
 - Colon-separated on Unix, semicolon on Windows
+
 ---
 ## Module Attributes
 - Every module has special attributes
@@ -170,6 +184,7 @@ print(math.__doc__)    # Module docstring
 print(math.__file__)   # Path to module file
 print(math.__spec__)   # Module specification
 ```
+
 ---
 ## The `__name__` Variable
 - Set to `"__main__"` when script runs directly
@@ -185,6 +200,7 @@ if __name__ == "__main__":
 ```
 
 - Common pattern to make a module both importable and runnable
+
 ---
 ## `__name__` in Action
 
@@ -206,6 +222,7 @@ python3 greetings.py       # Prints "Hello, World!"
 import greetings           # Does NOT print anything
 greetings.greet("Alice")   # "Hello, Alice!"
 ```
+
 ---
 ## Reloading Modules
 - Modules are cached after first import
@@ -221,6 +238,7 @@ importlib.reload(my_module)
 
 - Useful during interactive development
 - Not recommended in production code
+
 ---
 ## Standard Library - `os` Module
 
@@ -234,6 +252,7 @@ print(os.environ["HOME"])   # Environment variable
 
 os.makedirs("a/b/c", exist_ok=True)  # Create dirs
 ```
+
 ---
 ## Standard Library - `os.path`
 
@@ -248,6 +267,7 @@ print(os.path.splitext(path))   # ('/home/.../file', '.txt')
 print(os.path.join("a", "b"))   # a/b
 print(os.path.expanduser("~"))  # /home/user
 ```
+
 ---
 ## Standard Library - `pathlib` (Modern)
 
@@ -265,6 +285,7 @@ print(p.exists())    # True/False
 new = Path("output") / "data" / "results.csv"
 print(new)  # output/data/results.csv
 ```
+
 ---
 ## Standard Library - `sys` Module
 
@@ -280,6 +301,7 @@ print(sys.stdout)         # Standard output
 print(sys.maxsize)        # Max integer for platform
 sys.exit(0)               # Exit program
 ```
+
 ---
 ## Standard Library - `datetime`
 
@@ -297,6 +319,7 @@ print(age.days)  # Days since birthday
 
 tomorrow = today + timedelta(days=1)
 ```
+
 ---
 ## Standard Library - `json`
 
@@ -316,6 +339,7 @@ print(parsed["name"])  # Alice
 with open("data.json", "w") as f:
     json.dump(data, f, indent=2)
 ```
+
 ---
 ## Standard Library - `re` (Regular Expressions)
 
@@ -337,6 +361,7 @@ print(numbers)  # ['555', '1234']
 clean = re.sub(r"\d", "X", text)
 print(clean)  # My phone is XXX-XXXX and ...
 ```
+
 ---
 ## Standard Library - `collections`
 
@@ -358,6 +383,7 @@ d = deque(maxlen=3)
 d.extend([1, 2, 3, 4])
 print(d)  # deque([2, 3, 4], maxlen=3)
 ```
+
 ---
 ## Standard Library - `itertools`
 
@@ -375,6 +401,7 @@ print(list(product("AB", "12")))
 print(list(permutations("ABC", 2)))
 # [('A', 'B'), ('A', 'C'), ('B', 'A'), ...]
 ```
+
 ---
 ## Standard Library - `functools`
 
@@ -394,6 +421,7 @@ print(fibonacci(100))  # Instant!
 from functools import partial
 double = partial(pow, exp=2)
 ```
+
 ---
 ## Standard Library - `random`
 
@@ -410,6 +438,7 @@ print(items)
 
 print(random.sample(range(100), 5))  # 5 unique randoms
 ```
+
 ---
 ## Standard Library - `logging`
 
@@ -425,6 +454,7 @@ logger.warning("Warning message") # Shown
 logger.error("Error message")     # Shown
 logger.critical("Critical!")      # Shown
 ```
+
 ---
 ## Standard Library - `argparse`
 
@@ -445,6 +475,7 @@ print(args.count)
 ```bash
 python3 tool.py data.txt -v -n 5
 ```
+
 ---
 ## Standard Library - `unittest`
 
@@ -467,6 +498,7 @@ class TestAdd(unittest.TestCase):
 if __name__ == "__main__":
     unittest.main()
 ```
+
 ---
 ## Standard Library Overview
 | Module | Purpose |
@@ -481,6 +513,7 @@ if __name__ == "__main__":
 | `functools` | Higher-order functions |
 | `logging` | Logging facility |
 | `argparse` | Command-line parsing |
+
 ---
 ## Circular Imports
 - Module A imports B, and B imports A
@@ -498,6 +531,7 @@ from a import func_a  # Circular!
     - Restructure to avoid the cycle
     - Move import inside a function
     - Use late imports
+
 ---
 ## Summary
 - Modules are `.py` files that organize reusable code

@@ -1,4 +1,5 @@
 # Data Formats and Storage
+
 ---
 ## Chapter Overview
 * Parquet deep dive: row groups, column chunks, page-level statistics
@@ -7,6 +8,7 @@
 * Delta Lake operations and time travel
 * Apache Iceberg overview
 * Partitioning strategies, bucketing, and file compaction
+
 ---
 ## Learning Objectives
 * Understand Parquet internal structure and optimization mechanisms
@@ -15,6 +17,7 @@
 * Design effective partitioning and bucketing strategies
 * Diagnose and resolve the small file problem
 * Choose the right storage format for each use case
+
 ---
 ## Parquet File Format Overview
 
@@ -168,6 +171,7 @@ spark.conf.set(
 | ZSTD | ~3.5x | Fast | Fast | Yes | Best overall |
 | LZ4 | ~2x | Very fast | Very fast | Yes | Speed-optimized |
 | Uncompressed | 1x | Fastest | Fastest | Yes | Debug/testing |
+
 ---
 ## ORC Format Comparison
 
@@ -189,6 +193,7 @@ spark.conf.set(
 | Schema evolution | Append columns | Append columns |
 | Typical compression | Slightly better | Slightly better for Hive |
 | Recommendation | Use with Spark | Use with Hive-heavy stacks |
+
 ---
 ## Reading and Writing ORC with PySpark
 
@@ -564,6 +569,7 @@ delta_table.restoreToTimestamp("2024-06-01")
 | Merge-on-read | Yes | Yes |
 | Copy-on-write | Yes | Yes |
 | Vendor lock-in | Low-medium | Low |
+
 ---
 ## Iceberg with PySpark
 

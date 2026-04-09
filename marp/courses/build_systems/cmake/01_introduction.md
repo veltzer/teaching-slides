@@ -69,6 +69,10 @@
 
 ![the_cmake_pipeline](svg/courses/build_systems/cmake/01_introduction/the_cmake_pipeline.svg)
 
+---
+
+## The CMake Pipeline Steps
+
 - **Configure step**: CMake reads `CMakeLists.txt` and generates build files
 - **Build step**: Native tool (`make`, `ninja`, etc.) compiles the code
 - **Install step**: Optionally install built artifacts

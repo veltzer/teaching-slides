@@ -301,6 +301,7 @@ spec:
   volumeSnapshotClassName: csi-snapclass
   source:
     persistentVolumeClaimName: data-pvc
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim

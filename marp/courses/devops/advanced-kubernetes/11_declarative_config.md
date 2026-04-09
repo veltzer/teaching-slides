@@ -405,10 +405,12 @@ helm uninstall myrelease -n production
 ```
 
 ---
-
 ## GitOps with `ArgoCD`
 
 ![gitops_with_argocd](svg/courses/devops/advanced-kubernetes/11_declarative_config/gitops_with_argocd.svg)
+
+---
+## GitOps with `ArgoCD`
 
 ```yaml
 apiVersion: argoproj.io/v1alpha1

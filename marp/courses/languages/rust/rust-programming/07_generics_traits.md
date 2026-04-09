@@ -391,6 +391,7 @@ fn process_string(x: String) {
 1. Object safety violations
 1. Trait coherence issues
 1. Performance implications
+
 ---
 ## Summary
 - Generic types

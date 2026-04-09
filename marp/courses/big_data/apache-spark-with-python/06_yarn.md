@@ -43,7 +43,14 @@
 ## YARN Deployment Modes
 
 ## Client Mode
+
+---
+## YARN Deployment Modes
+
 ![client_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/client_mode.svg)
+
+---
+## YARN Deployment Modes
 
 Characteristics:
 - Driver runs on client machine
@@ -53,7 +60,11 @@ Characteristics:
 
 ---
 ## Cluster Mode
+
 ![cluster_mode](svg/courses/big_data/apache-spark-with-python/06_yarn/cluster_mode.svg)
+
+---
+## Cluster Mode
 
 Characteristics:
 - Driver runs on cluster
@@ -146,6 +157,7 @@ spark.dynamicAllocation.schedulerBacklogTimeout: 1s
     - Container information
     - Node metrics
     - Log access
+
 ---
 ## Logging Configuration
 
@@ -210,16 +222,18 @@ spark.memory.storageFraction: 0.3
 ## Debugging Tools
 
 ## Log Analysis
-
 ```bash
 # Aggregate logs
 yarn logs -applicationId <app_id> > application_logs.txt
-
 # Search for errors
 grep "ERROR" application_logs.txt
 ```
 
 ## Metrics Visualization
+
+---
+## Debugging Tools
+
 ![metrics_visualization](svg/courses/big_data/apache-spark-with-python/06_yarn/metrics_visualization.svg)
 
 ---

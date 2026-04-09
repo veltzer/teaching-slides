@@ -268,10 +268,12 @@ on:
 - Effective caching can reduce build times by 50-90%
 
 ---
-
 ## Remote Build Caches
 
 ![remote_build_caches](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/remote_build_caches.svg)
+
+---
+## Remote Build Caches
 
 - Runners share a centralized cache over the network
 - Tools: `Bazel` remote cache, `Gradle` build cache, `sccache`, `Turborepo`
@@ -345,10 +347,12 @@ on:
 ![gitops_architecture](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/gitops_architecture.svg)
 
 ---
-
 ## Push vs Pull Deployment Models
 
 ![push_vs_pull_deployment_models](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/push_vs_pull_deployment_models.svg)
+
+---
+## Push vs Pull Deployment Models
 
 - **Push**: CI needs production credentials, runs `kubectl apply`
 - **Pull**: operator inside cluster pulls state, credentials stay internal
@@ -421,10 +425,12 @@ spec:
     - Small teams where the tooling overhead is not justified
 
 ---
-
 ## Hybrid Approach: CI + GitOps
 
 ![hybrid_approach_ci_gitops](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/hybrid_approach_ci_gitops.svg)
+
+---
+## Hybrid Approach: CI + GitOps
 
 - CI builds and tests the application, then updates the config repo
 - `Argo CD` picks up the change and deploys to the cluster
@@ -445,19 +451,23 @@ spec:
 ```
 
 ---
-
 ## Pipeline Observability and DORA Metrics
 
 ![pipeline_observability_and_dora_metrics](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/pipeline_observability_and_dora_metrics.svg)
+
+---
+## Pipeline Observability and DORA Metrics
 
 - Track build duration, success rate, queue time, flaky test rate
 - Export metrics to `Prometheus`, `Datadog`, or `Grafana`
 
 ---
-
 ## Multi-Stage Deployment Pipelines
 
 ![multi_stage_deployment_pipelines](svg/courses/devops/architectural-decisions-in-devops/03_ci_cd_pipeline_architecture/multi_stage_deployment_pipelines.svg)
+
+---
+## Multi-Stage Deployment Pipelines
 
 - Promote the same artifact through `dev` -> `staging` -> `production`
 - Gate promotions with automated tests, manual approvals, or canary analysis

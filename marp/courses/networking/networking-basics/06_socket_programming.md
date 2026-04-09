@@ -11,6 +11,10 @@
 - Available in virtually every programming language
 - Two main types: **stream sockets** (TCP) and **datagram sockets** (UDP)
 
+---
+
+## What is a Socket?
+
 ![what_is_a_socket](svg/courses/networking/networking-basics/06_socket_programming/what_is_a_socket.svg)
 
 ---
@@ -19,10 +23,17 @@
 
 ### TCP Connection Lifecycle
 
+---
+
+## Socket API: System Call Flow
+
 ![tcp_connection_lifecycle](svg/courses/networking/networking-basics/06_socket_programming/tcp_connection_lifecycle.svg)
 
-### UDP Communication (no connection)
+---
 
+## Socket API: System Call Flow
+
+### UDP Communication (no connection)
 ![udp_communication_no_connection](svg/courses/networking/networking-basics/06_socket_programming/udp_communication_no_connection.svg)
 
 ---
@@ -396,6 +407,10 @@ while inputs:
 | Copies FD set | Every call | Every call | Once (kernel) |
 | Platform | All POSIX + Windows | POSIX | Linux only |
 | Best for | Small number of FDs | Moderate FDs | Large scale servers |
+
+---
+
+## select vs poll vs epoll
 
 ![select_vs_poll_vs_epoll](svg/courses/networking/networking-basics/06_socket_programming/select_vs_poll_vs_epoll.svg)
 

@@ -9,6 +9,10 @@
 1. Human-readable text format
 1. Compiled to binary for bootloader/kernel
 
+---
+
+## What is Device Tree?
+
 ![what_is_device_tree](svg/courses/operating_systems/linux-kernel-advanced-topics/02_device_tree/what_is_device_tree.svg)
 
 ---

@@ -34,6 +34,10 @@ criteria:
 
 ![ai_assisted_planning_architecture_exploration](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_assisted_planning_architecture_exploration.svg)
 
+---
+
+## AI-Assisted Planning: Architecture Exploration
+
 - AI proposes multiple architecture options with tradeoff analysis
 - Evaluates against non-functional requirements (latency, scale, cost)
 - Generates C4 or sequence diagrams from textual descriptions
@@ -382,6 +386,10 @@ applitools:
 
 ![ai_in_ci_cd_automated_pr_checks](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/ai_in_ci_cd_automated_pr_checks.svg)
 
+---
+
+## AI in CI/CD: Automated PR Checks
+
 - AI assigns a **risk score** to each PR based on:
     - Files changed (config, auth, payments = high risk)
     - Complexity delta and test coverage delta
@@ -534,7 +542,15 @@ def analyze_incident_logs(logs: list[str]) -> dict:
 
 - Track metrics before and after AI tool adoption to quantify ROI
 
+---
+
+## Measuring AI Impact on Development Velocity
+
 ![measuring_ai_impact_on_development_velocity](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/measuring_ai_impact_on_development_velocity.svg)
+
+---
+
+## Measuring AI Impact on Development Velocity
 
 - Measure at team level, not individual level, to avoid gaming
 - Track developer satisfaction alongside productivity metrics
@@ -671,6 +687,10 @@ sub_tasks:
 
 ![continuous_ai_integration_patterns](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/continuous_ai_integration_patterns.svg)
 
+---
+
+## Continuous AI Integration Patterns
+
 - **Pattern 1: Gate-based** - AI runs as a required CI check before merge
 - **Pattern 2: Advisory** - AI posts suggestions as non-blocking comments
 - **Pattern 3: Ambient** - AI continuously monitors and files improvement PRs
@@ -711,6 +731,10 @@ portal:
 ## Putting It All Together
 
 ![putting_it_all_together](svg/courses/ai/advanced-ai-powered-development/10_ai_in_development_lifecycle/putting_it_all_together.svg)
+
+---
+
+## Putting It All Together
 
 - AI is not a single tool but a **layer** across the entire lifecycle
 - Each phase benefits from AI while keeping humans in the decision loop

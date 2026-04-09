@@ -582,7 +582,6 @@ Preparing release docs:
 ## Testing Completion
 
 Final testing phases:
-
 ```javascript
 // AI creates comprehensive test plan
 const releaseTests = {
@@ -614,9 +613,12 @@ const releaseTests = {
   }
 };
 ```
-## Performance Monitoring
 
+## Performance Monitoring
 Real-time performance tracking:
+
+---
+## Testing Completion
 
 ![performance_monitoring](svg/courses/ai/developing-using-ai/09_workflows/performance_monitoring.svg)
 

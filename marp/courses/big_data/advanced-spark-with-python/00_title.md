@@ -11,6 +11,7 @@ duration_hours: 24
 audience:
   - audiences:developers
   - audiences:data-scientists
+
 ---
 # Advanced Spark With Python
 ## Mark Veltzer

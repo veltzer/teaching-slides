@@ -1,4 +1,5 @@
 # Basic Statements
+
 ---
 ## Variable Assignment
 - Variables are created by assignment
@@ -11,6 +12,7 @@ name = "Alice"
 is_valid = True
 _private = "hidden"
 ```
+
 ---
 ## Multiple Assignment
 
@@ -28,6 +30,7 @@ a, b = 1, 2
 a, b = b, a
 print(a, b)  # 2 1
 ```
+
 ---
 ## Augmented Assignment
 
@@ -41,6 +44,7 @@ x //= 2  # x = x // 2
 x %= 3   # x = x % 3
 x **= 2  # x = x ** 2
 ```
+
 ---
 ## The Walrus Operator `:=` (Python 3.8+)
 - Assignment expression: assigns and returns a value
@@ -56,6 +60,7 @@ while line != "quit":
 while (line := input("Enter: ")) != "quit":
     print(f"You said: {line}")
 ```
+
 ---
 ## The `print()` Function - Detailed
 
@@ -74,6 +79,7 @@ print("World")  # Hello World
 with open("output.txt", "w") as f:
     print("Hello", file=f)
 ```
+
 ---
 ## Formatted Printing
 
@@ -95,6 +101,7 @@ Alice is 30 and scored 95.7
 Apple      $  1.50
 Banana     $  0.75
 ```
+
 ---
 ## The `if` Statement
 
@@ -108,6 +115,7 @@ if age >= 18:
 - The condition must evaluate to a boolean
 - The indented block executes if condition is `True`
 - No parentheses needed around the condition
+
 ---
 ## `if`/`else`
 
@@ -119,6 +127,7 @@ if age >= 18:
 else:
     print("You are a minor")
 ```
+
 ---
 ## `if`/`elif`/`else`
 
@@ -138,6 +147,7 @@ else:
 
 print(f"Grade: {grade}")  # Grade: B
 ```
+
 ---
 ## Conditional Expression (Ternary)
 
@@ -151,6 +161,7 @@ x = 15
 label = "high" if x > 10 else "low" if x > 5 else "very low"
 print(label)  # 'high'
 ```
+
 ---
 ## Truthy and Falsy in Conditions
 
@@ -170,6 +181,7 @@ items = [1, 2, 3]
 if items:
     print("List has items")
 ```
+
 ---
 ## The `while` Loop
 
@@ -187,6 +199,7 @@ while count < 5:
 3
 4
 ```
+
 ---
 ## `while` with User Input
 
@@ -197,6 +210,7 @@ while True:
         break
     print(f"You entered: {answer}")
 ```
+
 ---
 ## The `for` Loop
 
@@ -211,6 +225,7 @@ for char in "Python":
     print(char, end=" ")
 # P y t h o n
 ```
+
 ---
 ## The `range()` Function
 
@@ -231,6 +246,7 @@ print()
 for i in range(0, 10, 2):
     print(i, end=" ")  # 0 2 4 6 8
 ```
+
 ---
 ## `range()` - Counting Down
 
@@ -244,6 +260,7 @@ for i in reversed(range(5)):
     print(i, end=" ")
 # 4 3 2 1 0
 ```
+
 ---
 ## `range()` is Lazy
 - `range()` does not create a list in memory
@@ -256,6 +273,7 @@ print(999_999 in r)     # True (fast!)
 print(len(r))            # 1000000000
 print(r[500])            # 500
 ```
+
 ---
 ## Iterating Over Dictionaries
 
@@ -274,6 +292,7 @@ for value in person.values():
 for key, value in person.items():
     print(f"{key}: {value}")
 ```
+
 ---
 ## Nested Loops
 
@@ -290,6 +309,7 @@ for i in range(1, 4):
 2x1=2   2x2=4   2x3=6
 3x1=3   3x2=6   3x3=9
 ```
+
 ---
 ## The `break` Statement
 - Exits the innermost loop immediately
@@ -308,6 +328,7 @@ for n in numbers:
         print("Found 9!")
         break
 ```
+
 ---
 ## The `continue` Statement
 - Skips the rest of the current iteration
@@ -319,6 +340,7 @@ for i in range(10):
     print(i, end=" ")
 # 1 3 5 7 9
 ```
+
 ---
 ## `break` vs `continue` Diagram
 
@@ -339,6 +361,7 @@ else:
     print("4 not found")
 # Output: 4 not found
 ```
+
 ---
 ## The `pass` Statement
 - Does nothing (placeholder)
@@ -360,6 +383,7 @@ for i in range(10):
 if True:
     pass
 ```
+
 ---
 ## The `match` Statement (Python 3.10+)
 
@@ -376,6 +400,7 @@ match command:
     case _:
         print(f"Unknown command: {command}")
 ```
+
 ---
 ## `match` with Patterns
 
@@ -392,6 +417,7 @@ match point:
     case (x, y):
         print(f"Point at ({x}, {y})")
 ```
+
 ---
 ## `match` with Guards
 
@@ -410,6 +436,7 @@ match age:
     case _:
         print("Senior")
 ```
+
 ---
 ## Common Loop Patterns - Accumulator
 
@@ -424,6 +451,7 @@ print(total)  # 15
 # Or use built-in
 print(sum(numbers))  # 15
 ```
+
 ---
 ## Common Loop Patterns - Filtering
 
@@ -437,6 +465,7 @@ for n in numbers:
         positives.append(n)
 print(positives)  # [1, 3, 5]
 ```
+
 ---
 ## Common Loop Patterns - Transformation
 
@@ -450,6 +479,7 @@ for word in words:
 print(upper_words)
 # ['HELLO', 'WORLD', 'PYTHON']
 ```
+
 ---
 ## Common Loop Patterns - Finding Max/Min
 
@@ -467,6 +497,7 @@ print(maximum)  # 9
 print(max(numbers))  # 9
 print(min(numbers))  # 1
 ```
+
 ---
 ## Looping Techniques - `enumerate()`
 
@@ -481,6 +512,7 @@ for i in range(len(colors)):
 for i, color in enumerate(colors):
     print(f"{i}: {color}")
 ```
+
 ---
 ## Looping Techniques - `zip()`
 
@@ -496,6 +528,7 @@ for i in range(len(names)):
 for name, score in zip(names, scores):
     print(f"{name}: {score}")
 ```
+
 ---
 ## Looping Techniques - `reversed()`
 
@@ -511,6 +544,7 @@ blue
 green
 red
 ```
+
 ---
 ## Looping Techniques - `sorted()`
 
@@ -527,6 +561,7 @@ for n in sorted(numbers, reverse=True):
     print(n, end=" ")
 # 9 5 4 3 1 1
 ```
+
 ---
 ## The `del` Statement
 - Deletes variables, list items, dict keys
@@ -547,6 +582,7 @@ d = {"a": 1, "b": 2}
 del d["a"]
 print(d)  # {'b': 2}
 ```
+
 ---
 ## Assertions
 
@@ -562,6 +598,7 @@ assert age > 0, "Age must be positive"
 
 - Assertions are for debugging, not input validation
 - Can be disabled with `python -O` flag
+
 ---
 ## Summary
 - Assignment creates variables; no declaration needed

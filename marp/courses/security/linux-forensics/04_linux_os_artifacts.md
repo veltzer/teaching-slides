@@ -789,10 +789,13 @@ exiftool -all= photo.jpg  # Strips all metadata
 
 ![file_clusters_and_slack_space](svg/courses/security/linux-forensics/04_linux_os_artifacts/file_clusters_and_slack_space.svg)
 
+---
+
+## File Clusters and Slack Space
+
 - Slack space = unused portion of allocated cluster
 - May contain remnants of previously deleted files
 - Important source of forensic evidence
-
 ```bash
 # View cluster/block size
 sudo tune2fs -l /dev/sda2 | grep "Block size"

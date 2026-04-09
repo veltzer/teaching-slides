@@ -1,9 +1,15 @@
 # Security in Practice
 ## Understanding UNIX Security Mechanisms
+
 ---
+
 ## UNIX Accounts
 
 ![unix_accounts](svg/courses/operating_systems/linux-fundamentals/07_security/unix_accounts.svg)
+
+---
+
+## UNIX Accounts
 
 Key components:
 - Username (human readable)
@@ -43,18 +49,20 @@ wc -l /etc/passwd
 ```
 
 ---
+
 ## The `/etc/shadow` File
 
 ![the_etc_shadow_file](svg/courses/operating_systems/linux-fundamentals/07_security/the_etc_shadow_file.svg)
 
-Structure:
+---
 
+## The `/etc/shadow` File
+
+Structure:
 ```misc
 username:password:lastchg:min:max:warn:inactive:expire:
 ```
-
 Example:
-
 ```bash
 john:$6$xyz...:18900:0:99999:7:::
 ```
@@ -86,12 +94,16 @@ Output example:
 ```
 
 ---
+
 ## Directory and File Access Modes
 
 ![directory_and_file_access_modes_1](svg/courses/operating_systems/linux-fundamentals/07_security/directory_and_file_access_modes_1.svg)
 
-Symbolic notation:
+---
 
+## Directory and File Access Modes
+
+Symbolic notation:
 ![directory_and_file_access_modes_2](svg/courses/operating_systems/linux-fundamentals/07_security/directory_and_file_access_modes_2.svg)
 
 ---
@@ -123,14 +135,20 @@ chmod 754 file.txt
 ```
 
 ---
+
 ## How File Access is Determined
 
 ![how_file_access_is_determined](svg/courses/operating_systems/linux-fundamentals/07_security/how_file_access_is_determined.svg)
+
+---
+
+## How File Access is Determined
 
 Access check order:
 1. Is user the owner?
 1. Is user in the group?
 1. What are "other" permissions?
+
 ---
 ## Changing Modes and Ownership
 
@@ -164,40 +182,44 @@ chmod 400 file.txt
 ```
 
 ---
+
 ## Special Permissions
 
 ![special_permissions](svg/courses/operating_systems/linux-fundamentals/07_security/special_permissions.svg)
 
-Examples:
+---
 
+## Special Permissions
+
+Examples:
 ```bash
 # Set SUID
 chmod u+s file.txt
 chmod 4755 file.txt
-
 # Set SGID
 chmod g+s directory
 chmod 2755 directory
-
 # Set sticky bit
 chmod +t directory
 chmod 1755 directory
 ```
 
 ---
+
 ## The umask Command
 
 ![the_umask_command](svg/courses/operating_systems/linux-fundamentals/07_security/the_umask_command.svg)
 
-Common umask values:
+---
 
+## The umask Command
+
+Common umask values:
 ```bash
 # View current umask
 umask
-
 # Set stricter permissions
 umask 027  # rwxr-x---
-
 # Set common permissions
 umask 022  # rwxr-xr-x
 ```
@@ -256,19 +278,21 @@ groups john
 ```
 
 ---
+
 ## Advanced Security Topics
 
 ![advanced_security_topics](svg/courses/operating_systems/linux-fundamentals/07_security/advanced_security_topics.svg)
 
-Example with ACLs:
+---
 
+## Advanced Security Topics
+
+Example with ACLs:
 ```bash
 # Set ACL
 setfacl -m u:john:rx file.txt
-
 # View ACLs
 getfacl file.txt
-
 # Remove ACL
 setfacl -x u:john file.txt
 ```

@@ -341,15 +341,16 @@ docker trust sign myregistry.com/myapp:1.0
 ```
 
 ---
-
 ## Content Trust - Key Management
 
 ![content_trust_key_management](svg/courses/devops/advanced-docker/05_security/content_trust_key_management.svg)
 
+---
+## Content Trust - Key Management
+
 ```bash
 # Key storage location
 ls ~/.docker/trust/private/
-
 # Backup root key (critical!)
 tar czf docker-trust-keys.tar.gz ~/.docker/trust/
 # Store securely offline

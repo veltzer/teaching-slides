@@ -167,6 +167,10 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ![file_system_metadata_vs_file_content](svg/courses/security/linux-forensics/05_data_and_file_structure/file_system_metadata_vs_file_content.svg)
 
+---
+
+## File System Metadata vs File Content
+
 - Deleting a file removes the directory entry and marks inode as free
 - Data blocks are NOT overwritten immediately
 - This is why deleted files can often be recovered

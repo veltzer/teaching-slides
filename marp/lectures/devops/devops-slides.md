@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 - audiences:devops
 - audiences:managers
+
 ---
 # DevOps: Bridging Development and Operations
 ## A Comprehensive Overview
@@ -17,12 +18,15 @@ audience:
 
 ---
 
+## What is DevOps?
+
 ![title](svg/lectures/devops/devops-slides/title.svg)
+
+---
 
 ## What is DevOps?
 
 DevOps is a set of practices combining software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently and reliably.
-
 ![what_is_devops](svg/lectures/devops/devops-slides/what_is_devops.svg)
 
 ---
@@ -83,11 +87,14 @@ DevOps is a set of practices combining software development (Dev) and IT operati
 ## Measuring DevOps Success
 
 ### Key Performance Indicators (KPIs)
-
 - Deployment Frequency
 - Lead Time for Changes
 - Mean Time to Recovery (MTTR)
 - Change Failure Rate
+
+---
+
+## Measuring DevOps Success
 
 ![key_performance_indicators_kpis](svg/lectures/devops/devops-slides/key_performance_indicators_kpis.svg)
 

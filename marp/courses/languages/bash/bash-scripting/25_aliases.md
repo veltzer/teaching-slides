@@ -1,4 +1,5 @@
 # Aliases
+
 ---
 ## What is an Alias?
 - A shortcut for a command or command sequence
@@ -16,6 +17,7 @@ alias ..='cd ..'
 ll
 # equivalent to: ls -la
 ```
+
 ---
 ## Creating Aliases
 
@@ -37,6 +39,7 @@ alias myip='curl -s ifconfig.me && echo'
 alias topcpu='ps aux --sort=-%cpu | head -10'
 alias topmem='ps aux --sort=-%mem | head -10'
 ```
+
 ---
 ## Viewing and Removing Aliases
 
@@ -59,6 +62,7 @@ unalias -a
 command ls  # also bypasses the alias
 /usr/bin/ls # explicit path bypasses everything
 ```
+
 ---
 ## Aliases vs Functions
 
@@ -82,6 +86,7 @@ backup myfile.txt    # copies myfile.txt to myfile.txt.bak
 # - Simple shortcuts: use aliases
 # - Anything with logic or arguments: use functions
 ```
+
 ---
 ## Aliases in Scripts
 
@@ -100,6 +105,7 @@ ll    # now works
 # But DON'T do this!
 # Functions are the right tool for scripts
 ```
+
 ---
 ## Common Useful Aliases
 
@@ -122,6 +128,7 @@ alias rm='rm -I'
 alias chmod='chmod --preserve-root'
 alias chown='chown --preserve-root'
 ```
+
 ---
 ## Making Aliases Permanent
 
@@ -142,6 +149,7 @@ alias gs='git status'
 source ~/.bashrc
 # or start a new terminal
 ```
+
 ---
 ## Day 3 & Course Summary
 - Functions: use `local`, return codes vs stdout, namerefs
@@ -153,6 +161,7 @@ source ~/.bashrc
 - OOP: possible but not recommended for production
 - Testing: write tests, use BATS for serious projects
 - Aliases: interactive shortcuts, use functions in scripts
+
 ---
 ## Best Practices: Final Checklist
 ```misc
@@ -173,6 +182,7 @@ Code Quality:
   [x] Comment the "why", not the "what"
   [x] Keep functions small and focused
 ```
+
 ---
 ## Recommended Reading
 - `man bash` — the definitive reference
@@ -181,6 +191,7 @@ Code Quality:
 - Wooledge BashFAQ — common questions answered correctly
 - Wooledge BashPitfalls — mistakes to avoid
 - Google Shell Style Guide — industry conventions
+
 ---
 ## Thank You!
 - Practice daily: automate one task per week

@@ -1,4 +1,5 @@
 # Handling Errors
+
 ---
 ## Why Error Handling Matters
 
@@ -10,6 +11,7 @@ rm -rf *    # This runs in the WRONG directory!
 # This is the #1 cause of scripting disasters
 # Always handle errors explicitly
 ```
+
 ---
 ## The `&&` Approach
 
@@ -27,6 +29,7 @@ mkdir -p /tmp/build && \
     make && \
     make install
 ```
+
 ---
 ## The `||` Approach
 
@@ -44,6 +47,7 @@ source "$config_file" || {
     exit 1
 }
 ```
+
 ---
 ## `set -e` (errexit)
 
@@ -56,6 +60,7 @@ echo "Step 1"
 false           # script exits here with code 1
 echo "Step 2"   # never reached
 ```
+
 ---
 ## `set -e` Gotchas
 
@@ -75,6 +80,7 @@ false                # bare command with non-zero exit
 # Subshell failures:
 x=$(false)           # triggers errexit in bash 4.4+
 ```
+
 ---
 ## `set -e` in Practice
 
@@ -96,6 +102,7 @@ else
     echo "failed, but script continues"
 fi
 ```
+
 ---
 ## `set -u` (nounset)
 
@@ -114,6 +121,7 @@ echo "$filname"     # TYPO! Script exits with error
 # Use defaults to work around it:
 echo "${optional_var:-default}"   # OK with set -u
 ```
+
 ---
 ## `set -o pipefail`
 
@@ -134,6 +142,7 @@ curl -s "$url" | jq '.data'
 # Without pipefail: if curl fails, jq gets empty input
 # and you might not notice the error
 ```
+
 ---
 ## The Strict Mode
 
@@ -150,6 +159,7 @@ set -euo pipefail
 IFS=$'\n\t'
 # Removes space from IFS to make word splitting safer
 ```
+
 ---
 ## Trapping Errors
 
@@ -164,6 +174,7 @@ echo "Step 1"
 false           # triggers the trap, then exits
 echo "Step 2"   # never reached
 ```
+
 ---
 ## Cleanup with `trap`
 
@@ -184,6 +195,7 @@ echo "data" > "$tmpfile"
 process "$tmpfile"
 # tmpfile is automatically removed when script exits
 ```
+
 ---
 ## Comprehensive Error Handling Pattern
 
@@ -210,6 +222,7 @@ tmpfile=$(mktemp) || die "Cannot create temp file"
 log "Starting..."
 # ... rest of script ...
 ```
+
 ---
 ## Retry Pattern
 
@@ -235,6 +248,7 @@ retry() {
 # Usage:
 retry 3 curl -s -o /dev/null "https://example.com"
 ```
+
 ---
 ## Error Handling: Common Mistakes
 

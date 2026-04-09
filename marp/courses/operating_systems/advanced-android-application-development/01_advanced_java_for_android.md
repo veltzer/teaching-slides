@@ -75,12 +75,20 @@ List<String> sorted = names.stream()
 ---
 
 ## Stream API
+
 ### Data Processing Pipeline
+
+---
+
+## Stream API
 
 ![data_processing_pipeline](svg/courses/operating_systems/advanced-android-application-development/01_advanced_java_for_android/data_processing_pipeline.svg)
 
-Example:
+---
 
+## Stream API
+
+Example:
 ```java
 List<User> activeAdmins = users.stream()
     .filter(User::isActive)

@@ -17,6 +17,10 @@
 - No standard way for LLMs to discover and invoke external capabilities
 - MCP provides a **universal protocol** between AI hosts and tool providers
 
+---
+
+## The Problem MCP Solves
+
 ![the_problem_mcp_solves](svg/courses/ai/advanced-ai-powered-development/05_mcp/the_problem_mcp_solves.svg)
 
 ---
@@ -122,7 +126,15 @@ Host (Claude Code)
 1. **Minimal descriptions** -- keep `description` fields concise but unambiguous
 1. **Lazy loading** -- connect to MCP servers on demand, not all at startup
 
+---
+
+## Context Window Management for MCP
+
 ![context_window_management_for_mcp](svg/courses/ai/advanced-ai-powered-development/05_mcp/context_window_management_for_mcp.svg)
+
+---
+
+## Context Window Management for MCP
 
 - Audit your tool count regularly -- fewer, well-designed tools outperform many narrow ones
 
@@ -189,7 +201,15 @@ def service_health(name: str) -> str:
 - Enables agentic patterns where tools need reasoning mid-execution
 - The host always controls approval and model selection
 
+---
+
+## MCP Capability: Prompts and Sampling
+
 ![sampling](svg/courses/ai/advanced-ai-powered-development/05_mcp/sampling.svg)
+
+---
+
+## MCP Capability: Prompts and Sampling
 
 - Sampling keeps the server stateless while enabling multi-step reasoning
 
@@ -325,6 +345,10 @@ npx @modelcontextprotocol/inspector npx -y @modelcontextprotocol/server-github
 ## End-to-End Workflow: Bug Triage with MCP
 
 ![end_to_end_workflow_bug_triage_with_mcp](svg/courses/ai/advanced-ai-powered-development/05_mcp/end_to_end_workflow_bug_triage_with_mcp.svg)
+
+---
+
+## End-to-End Workflow: Bug Triage with MCP
 
 1. **Jira MCP server** -- fetch the bug ticket details and reproduction steps
 1. **Postgres MCP server** -- query error logs matching the ticket's time window
@@ -670,7 +694,15 @@ async def test_get_status():
 - Organizations can maintain a registry of approved MCP servers
 - Standardize tool versions and configurations across teams
 
+---
+
+## Central Tool Registries
+
 ![central_tool_registries](svg/courses/ai/advanced-ai-powered-development/05_mcp/central_tool_registries.svg)
+
+---
+
+## Central Tool Registries
 
 - Distribute via internal package registry (`npm`, `PyPI`, or container images)
 - Pin server versions to prevent unexpected behavior changes

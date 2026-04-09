@@ -1,4 +1,5 @@
 # Globbing
+
 ---
 ## What is Globbing?
 - Pattern matching for filenames
@@ -11,6 +12,7 @@
 echo *.txt
 # echo receives: file1.txt file2.txt file3.txt
 ```
+
 ---
 ## The Asterisk `*`
 
@@ -26,6 +28,7 @@ ls *              # skips .bashrc, .profile, etc.
 ls .*             # only hidden files (plus . and ..)
 ls .* *           # all files, hidden and non-hidden
 ```
+
 ---
 ## The Question Mark `?`
 
@@ -38,6 +41,7 @@ ls ?.?            # a.b, x.y, etc.
 # Combine with *
 ls file?.*        # file1.txt, fileA.md, etc.
 ```
+
 ---
 ## Character Classes `[...]`
 
@@ -55,6 +59,7 @@ ls file[a-zA-Z].txt     # any single letter
 # Multiple ranges
 ls file[0-9a-f].txt     # hexadecimal single digit
 ```
+
 ---
 ## Negation `[!...]` and `[^...]`
 
@@ -69,6 +74,7 @@ ls [^.]*                # same thing
 
 # POSIX specifies !, bash also accepts ^
 ```
+
 ---
 ## POSIX Character Classes
 
@@ -88,6 +94,7 @@ ls [[:upper:]]*            # files starting with uppercase
 ls [[:digit:]]    # RIGHT
 ls [:digit:]       # WRONG (matches :, d, i, g, t)
 ```
+
 ---
 ## When Globs Don't Match
 
@@ -112,6 +119,7 @@ shopt -s failglob
 echo /nonexistent/*.xyz
 # bash: no match: /nonexistent/*.xyz
 ```
+
 ---
 ## The `dotglob` Option
 
@@ -127,6 +135,7 @@ ls *           # now includes .bashrc, .profile
 # Turn it off
 shopt -u dotglob
 ```
+
 ---
 ## Extended Globbing
 
@@ -149,6 +158,7 @@ ls file@(1|2|3).txt      # file1.txt, file2.txt, file3.txt
 # !(pattern) - anything except the pattern
 ls !(*.txt)               # all files except .txt files
 ```
+
 ---
 ## Globbing vs Regular Expressions
 | Glob | Regex | Meaning |
@@ -165,6 +175,7 @@ ls !(*.txt)               # all files except .txt files
 ls *.txt        # correct
 ls .*\.txt      # WRONG! (regex syntax)
 ```
+
 ---
 ## Globbing Safety
 

@@ -1,4 +1,5 @@
 # Technology Around Python
+
 ---
 ## Overview
 - Debugging Python code
@@ -7,6 +8,7 @@
 - Virtual environments in depth
 - PyPI ecosystem
 - Useful developer tools
+
 ---
 ## The Python Debugger (`pdb`)
 - Built-in interactive debugger
@@ -22,6 +24,7 @@ def buggy_function(items):
         total += item
     return total
 ```
+
 ---
 ## `pdb` Commands
 | Command | Description |
@@ -36,6 +39,7 @@ def buggy_function(items):
 | `q` (quit) | Quit debugger |
 | `b N` | Set breakpoint at line N |
 | `h` (help) | Show help |
+
 ---
 ## `breakpoint()` (Python 3.7+)
 
@@ -56,6 +60,7 @@ PYTHONBREAKPOINT=0 python3 script.py
 # Use a different debugger
 PYTHONBREAKPOINT=ipdb.set_trace python3 script.py
 ```
+
 ---
 ## Running `pdb` from Command Line
 
@@ -69,6 +74,7 @@ python3 -m pdb -c continue script.py
 
 - Starts at the first line
 - Use `c` to run until an exception or breakpoint
+
 ---
 ## `pdb` - Post-mortem Debugging
 
@@ -83,6 +89,7 @@ except ZeroDivisionError:
 
 - Inspects the state at the point of the exception
 - Very useful for debugging crashes
+
 ---
 ## `pdb` - Practical Session
 
@@ -106,6 +113,7 @@ def find_max(numbers):
 3
 (Pdb) c
 ```
+
 ---
 ## `ipdb` - Enhanced Debugger
 
@@ -122,6 +130,7 @@ ipdb.set_trace()
 - Tab completion
 - Better stack traces
 - All `pdb` commands work
+
 ---
 ## VS Code Debugging
 - Set breakpoints by clicking line numbers
@@ -140,12 +149,14 @@ ipdb.set_trace()
     "program": "${file}"
 }
 ```
+
 ---
 ## Profiling - Why?
 - Find performance bottlenecks
 - Understand where time is spent
 - Optimize the right parts of code
 - "Premature optimization is the root of all evil" - Donald Knuth
+
 ---
 ## `time` Module for Basic Timing
 
@@ -163,6 +174,7 @@ result = sum(range(10_000_000))
 elapsed = time.perf_counter() - start
 print(f"Elapsed: {elapsed:.6f}s")
 ```
+
 ---
 ## `timeit` Module
 
@@ -179,6 +191,7 @@ t2 = timeit.timeit("'-'.join(map(str, range(100)))", number=10000)
 print(f"Generator: {t1:.4f}s")
 print(f"Map:       {t2:.4f}s")
 ```
+
 ---
 ## `timeit` from Command Line
 
@@ -189,6 +202,7 @@ python3 -m timeit "sum(range(1000))"
 python3 -m timeit -s "data = list(range(1000))" "sorted(data)"
 # 10000 loops, best of 5: 12.5 usec per loop
 ```
+
 ---
 ## `cProfile` - The Built-in Profiler
 
@@ -210,6 +224,7 @@ cProfile.run("slow_function()")
         1    0.215    0.215    0.215    0.215 script.py:3(slow_function)
         1    0.000    0.000    0.215    0.215 <string>:1(<module>)
 ```
+
 ---
 ## `cProfile` from Command Line
 
@@ -223,6 +238,7 @@ python3 -m cProfile -s cumtime script.py
 # Save to file for analysis
 python3 -m cProfile -o output.prof script.py
 ```
+
 ---
 ## Analyzing Profile Data
 
@@ -239,6 +255,7 @@ stats.print_stats("my_module")
 # Print callers
 stats.print_callers("slow_function")
 ```
+
 ---
 ## `line_profiler` - Line-by-Line Profiling
 
@@ -261,6 +278,7 @@ kernprof -l -v script.py
 
 - Shows time spent on each line
 - Very useful for optimizing hot loops
+
 ---
 ## `memory_profiler`
 
@@ -282,6 +300,7 @@ def memory_hungry():
 ```bash
 python3 -m memory_profiler script.py
 ```
+
 ---
 ## Code Formatting - `black`
 
@@ -303,6 +322,7 @@ black --diff my_script.py
 
 - Opinionated formatter: one way to format code
 - Default line length: 88 characters
+
 ---
 ## `black` Configuration in `pyproject.toml`
 
@@ -312,6 +332,7 @@ line-length = 88
 target-version = ["py312"]
 include = '\.pyi?$'
 ```
+
 ---
 ## Code Formatting - `isort`
 - Sorts and organizes imports
@@ -342,6 +363,7 @@ import os
 import sys
 from collections import defaultdict
 ```
+
 ---
 ## Linting - `flake8`
 
@@ -358,6 +380,7 @@ flake8 --max-line-length 88 src/
 - Checks PEP 8 compliance
 - Detects common errors
 - Configurable rules
+
 ---
 ## Linting - `ruff`
 - Modern, fast Python linter (written in Rust)
@@ -375,6 +398,7 @@ ruff check --fix .
 # Format (replaces black)
 ruff format .
 ```
+
 ---
 ## `ruff` Configuration
 
@@ -389,6 +413,7 @@ select = ["E", "F", "I", "N", "UP"]
 [tool.ruff.lint.isort]
 known-first-party = ["my_package"]
 ```
+
 ---
 ## Type Checking - `mypy`
 
@@ -409,6 +434,7 @@ def greet(name: str) -> str:
 
 greet(42)  # mypy error: Argument 1 has incompatible type "int"
 ```
+
 ---
 ## `mypy` Configuration
 
@@ -419,6 +445,7 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 ```
+
 ---
 ## Pre-commit Hooks
 
@@ -443,6 +470,7 @@ repos:
 pre-commit install
 pre-commit run --all-files
 ```
+
 ---
 ## `virtualenv` vs `venv`
 | Feature | `venv` | `virtualenv` |
@@ -458,6 +486,7 @@ pip install virtualenv
 virtualenv myenv
 virtualenv -p python3.11 myenv
 ```
+
 ---
 ## `pyenv` - Python Version Manager
 
@@ -477,6 +506,7 @@ pyenv global 3.12.0
 # Set local version (per directory)
 pyenv local 3.11.0
 ```
+
 ---
 ## `pipx` - Install CLI Tools
 
@@ -496,6 +526,7 @@ pipx run cowsay "Hello!"
 
 - Each tool gets its own virtual environment
 - Available globally without polluting your project
+
 ---
 ## `poetry` - Dependency Management
 
@@ -520,6 +551,7 @@ poetry run python3 script.py
 
 ```
 ```console
+
 ---
 ## `uv` - Modern Python Package Manager
 
@@ -538,6 +570,7 @@ uv pip sync requirements.txt
 
 - Written in Rust, extremely fast
 - Drop-in replacement for pip and venv
+
 ---
 ## `Makefile` for Python Projects
 
@@ -561,6 +594,7 @@ format:
 clean:
     rm -rf __pycache__ .pytest_cache dist build
 ```
+
 ---
 ## Continuous Integration Example
 
@@ -581,6 +615,7 @@ jobs:
       - run: mypy src/
       - run: pytest --cov
 ```
+
 ---
 ## Docker for Python Projects
 
@@ -599,6 +634,7 @@ RUN pip install --no-cache-dir .
 
 CMD ["python3", "-m", "my_package"]
 ```
+
 ---
 ## Python Performance Tips
 1. Use built-in functions (`sum`, `max`, `min`, `sorted`)
@@ -608,6 +644,7 @@ CMD ["python3", "-m", "my_package"]
 1. Use `__slots__` for many instances
 1. Consider `numpy` for numerical work
 1. Profile before optimizing
+
 ---
 ## Useful Standard Library Tools
 
@@ -627,6 +664,7 @@ python3 -m sysconfig
 # Run doctests
 python3 -m doctest module.py
 ```
+
 ---
 ## `logging` Best Practices
 
@@ -648,6 +686,7 @@ def process():
     logger.debug("Debug details: %s", data)
     logger.error("Something failed", exc_info=True)
 ```
+
 ---
 ## Environment Management Summary
 | Tool | Purpose |
@@ -659,6 +698,7 @@ def process():
 | `pipx` | Install CLI tools globally |
 | `poetry` | Dependency management + packaging |
 | `uv` | Fast pip/venv replacement |
+
 ---
 ## Developer Workflow Summary
 1. Use `pyenv` to manage Python versions
@@ -671,6 +711,7 @@ def process():
 1. Test with `pytest`
 1. Use pre-commit hooks
 1. CI/CD for automated checks
+
 ---
 ## Summary
 - `pdb` and `breakpoint()` for debugging

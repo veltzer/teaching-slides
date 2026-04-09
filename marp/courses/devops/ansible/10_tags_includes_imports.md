@@ -167,6 +167,7 @@ Use include_tasks when:
 
 ```yaml
 # roles/myapp/tasks/main.yml
+
 ---
 - name: Include prerequisite tasks
   import_tasks: prerequisites.yml
@@ -197,6 +198,7 @@ Use include_tasks when:
 # tasks/deploy_app.yml
 # Reusable deployment task file
 # Required variables: app_name, app_version, app_port
+
 ---
 - name: "Deploy {{ app_name }} v{{ app_version }}"
   git:
@@ -287,6 +289,7 @@ Use include_tasks when:
 
 ```yaml
 # site.yml
+
 ---
 - name: Apply base configuration
   hosts: all

@@ -37,6 +37,7 @@ metadata:
   name: app-sa
   namespace: default
 automountServiceAccountToken: true
+
 ---
 apiVersion: v1
 kind: Pod
@@ -118,6 +119,7 @@ rules:
 - apiGroups: [""]
   resources: ["secrets"]
   verbs: ["get", "watch", "list"]
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -163,6 +165,7 @@ metadata:
   labels:
     rbac.example.com/aggregate-to-monitoring: "true"
 rules: []
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole

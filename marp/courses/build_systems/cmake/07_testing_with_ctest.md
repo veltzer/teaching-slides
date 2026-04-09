@@ -298,7 +298,15 @@ set_tests_properties(
 )
 ```
 
+---
+
+## Fixtures - Multiple Tests Sharing a Fixture
+
 ![fixtures_multiple_tests_sharing_a_fixture](svg/courses/build_systems/cmake/07_testing_with_ctest/fixtures_multiple_tests_sharing_a_fixture.svg)
+
+---
+
+## Fixtures - Execution Order
 
 - Setup runs once before the group, cleanup once after
 

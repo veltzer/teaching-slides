@@ -306,6 +306,9 @@ resource "aws_security_group" "web_sg" {
 
 ![expand_and_contract_pattern](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/expand_and_contract_pattern.svg)
 
+---
+## Expand and Contract Pattern
+
 - Allows zero-downtime schema changes
 - Each step is a separate deployment
 

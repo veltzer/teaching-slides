@@ -1,5 +1,6 @@
 # Environment Strategy
 ## Architectural Decisions in DevOps
+
 ---
 ## Table of Contents
 
@@ -12,6 +13,7 @@
 1. Cleanup and Lifecycle Management
 1. Environment Parity and Configuration Drift
 1. Data Management in Non-production Environments
+
 ---
 ## Why Environments Matter
 
@@ -22,13 +24,18 @@
     - Wasted infrastructure costs
     - Configuration drift and "works on my machine" problems
 - Getting it right is a foundational architectural decision
+
 ---
 ## The Classic Environment Pipeline
 
 ![the_classic_environment_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/the_classic_environment_pipeline.svg)
 
+---
+## The Classic Environment Pipeline
+
 - Code flows through progressively more production-like environments
 - Each stage acts as a quality gate
+
 ---
 ## How Many Environments?
 
@@ -40,6 +47,7 @@
     - Budget constraints
     - Application complexity
 - Too few environments means risk; too many means cost and complexity
+
 ---
 ## Minimal Setup: Two Environments
 
@@ -51,6 +59,7 @@
 - Risks:
     - No staging means untested changes hit production
     - Hard to reproduce production bugs safely
+
 ---
 ## Standard and Enterprise Setups
 
@@ -62,6 +71,7 @@
     - `UAT` for business stakeholder sign-off
     - `Performance` for load and stress testing
     - Common in regulated industries (finance, healthcare)
+
 ---
 ## Environment Topology Diagram
 
@@ -77,6 +87,7 @@
     - Shared databases, smaller instance sizes
     - Suitable for feature branches and sandboxes
 - Rule of thumb: the closer to production, the more it should resemble production
+
 ---
 ## Cost Implications of Environment Proliferation
 
@@ -86,6 +97,7 @@
     - Networking (load balancers, DNS, VPN)
     - Licensing (third-party software, SaaS seats)
     - Human cost (maintenance, monitoring, troubleshooting)
+
 ---
 ## Cost Growth Example
 
@@ -97,6 +109,7 @@
 | 15 (per-team envs) | $15,000 | $3,000 | $1,200 | $19,200 |
 
 - Costs scale roughly linearly with number of persistent environments
+
 ---
 ## Strategies to Control Environment Costs
 
@@ -106,6 +119,7 @@
 1. Share lower environments across teams when possible
 1. Use spot/preemptible instances for non-critical environments
 1. Set budgets and alerts per environment
+
 ---
 ## Scheduling Non-production Environments
 
@@ -145,12 +159,14 @@ spec:
     - Examples: PR preview environments, test environments
     - Pros: cost-efficient, clean state every time
     - Cons: provisioning latency, setup complexity
+
 ---
 ## Ephemeral Environment Lifecycle
 
 ![ephemeral_environment_lifecycle](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/ephemeral_environment_lifecycle.svg)
 
 - Entire lifecycle is automated and tied to the PR workflow
+
 ---
 ## Preview Environments for Pull Requests
 
@@ -160,6 +176,7 @@ spec:
     - Test feature behavior without checking out the branch
     - Validate UI changes visually
 - Popular tools: `Vercel`, `Netlify`, `Argo CD`, `Crossplane`, `Terraform`
+
 ---
 ## Preview Environment Architecture
 
@@ -210,6 +227,7 @@ jobs:
     - Load testing sessions
 - Triggered manually or by specific pipeline events
 - Destroyed after a defined TTL or manual teardown
+
 ---
 ## On-demand Environment with `Terraform`
 
@@ -249,6 +267,7 @@ resource "aws_ecs_service" "app" {
     - Manual teardown via CLI or dashboard
     - Scheduled garbage collection jobs
 - Always tag resources with metadata for tracking
+
 ---
 ## Tagging Strategy for Lifecycle Management
 
@@ -266,6 +285,7 @@ tags:
 ```
 
 - Tags enable automated cleanup scripts to find and destroy stale resources
+
 ---
 ## Automated Cleanup Script
 
@@ -335,6 +355,7 @@ jobs:
     - Configuration (env vars, feature flags)
     - Data (schema, volume, realistic content)
     - Dependencies (service versions, API contracts)
+
 ---
 ## What Is Configuration Drift?
 
@@ -345,12 +366,14 @@ jobs:
     - Untracked secrets or environment variables
     - Skipped upgrades in non-production
     - Different cloud regions or instance types
+
 ---
 ## Configuration Drift Visualization
 
 ![configuration_drift_visualization](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/configuration_drift_visualization.svg)
 
 - Without active management, every environment drifts away from production
+
 ---
 ## Consequences of Configuration Drift
 
@@ -360,6 +383,7 @@ jobs:
 - Compliance audits fail due to inconsistent configurations
 - Rollbacks behave differently than expected
 - Team confidence in the pipeline erodes
+
 ---
 ## Preventing Drift: Infrastructure as Code
 
@@ -388,6 +412,7 @@ module "environment" {
     - `AWS Config Rules` for compliance monitoring
     - `Chef InSpec` or `Open Policy Agent` for policy enforcement
 - Alert on drift; auto-remediate when safe
+
 ---
 ## Drift Detection Pipeline
 
@@ -462,6 +487,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - Copying full datasets is expensive and slow
     - Schema changes must propagate consistently
     - Test data must cover edge cases
+
 ---
 ## Data Strategies for Non-production
 
@@ -474,12 +500,14 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 | Seed scripts | Repeatable, fast | Requires maintenance |
 
 - Most teams use a combination of these approaches
+
 ---
 ## Data Anonymization Pipeline
 
 ![data_anonymization_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/data_anonymization_pipeline.svg)
 
 - Automate the pipeline so non-prod data stays fresh and safe
+
 ---
 ## Data Anonymization Techniques
 
@@ -490,6 +518,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 - **Tokenization**: replace with tokens, store mapping securely
 - **Subsetting**: take a representative sample of records
 - **Synthetic generation**: create entirely fake but realistic data
+
 ---
 ## Database Schema Consistency
 
@@ -500,6 +529,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - `Alembic` for `SQLAlchemy`-based apps
 - Run migrations as part of the deployment pipeline
 - Never apply schema changes manually
+
 ---
 ## Environment-specific Secrets Management
 
@@ -509,6 +539,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - Path-based organization: `secret/dev/db-password`, `secret/prod/db-password`
     - Rotate secrets automatically
     - Never store secrets in environment definition files
+
 ---
 ## Secrets Architecture
 
@@ -523,6 +554,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
     - Gradually roll out in `staging` before `production`
     - Kill switches for instant rollback without redeployment
 - Tools: `LaunchDarkly`, `Unleash`, `Flagsmith`, `ConfigCat`
+
 ---
 ## Feature Flag Configuration Example
 
@@ -544,6 +576,7 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ```
 
 - Same codebase, different behavior per environment
+
 ---
 ## Environment Promotion Strategy
 
@@ -570,6 +603,7 @@ environments/
 ```
 
 - Changes to any environment go through code review
+
 ---
 ## Environment Strategy Decision Matrix
 
@@ -592,6 +626,7 @@ environments/
 1. Copying production data without anonymization
 1. No cleanup policy for ephemeral environments
 1. Treating environment configuration as an afterthought
+
 ---
 ## Best Practices Summary
 
@@ -603,6 +638,7 @@ environments/
 1. Detect and alert on configuration drift daily
 1. Anonymize production data before copying to lower environments
 1. Isolate environments at the network level
+
 ---
 ## Choosing Your Environment Strategy
 

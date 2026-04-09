@@ -12,6 +12,7 @@ audience:
   - audiences:developers
   - audiences:architects
   - audiences:devops
+
 ---
 # Modern Software Architecture
 ## Mark Veltzer

@@ -8,6 +8,7 @@ category: version-control
 audience:
 - audiences:developers
 - audiences:devops
+
 ---
 # Git Workflow Strategies
 ## Mark Veltzer
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## What This Talk Covers
+
 ![title](svg/lectures/git/git-workflows/title.svg)
+
+---
 
 ## What This Talk Covers
 

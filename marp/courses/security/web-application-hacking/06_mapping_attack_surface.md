@@ -262,6 +262,10 @@ katana -u https://target.com -d 5 -o katana-results.txt
 
 ![common_web_application_architectures](svg/courses/security/web-application-hacking/06_mapping_attack_surface/common_web_application_architectures.svg)
 
+---
+
+## Common Web Application Architectures
+
 - Architecture type affects attack strategy
 - Microservices have more inter-service trust boundaries
 - Serverless reduces OS-level attack surface

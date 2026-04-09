@@ -8,6 +8,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Spark Reports Guide
 ## Mark Veltzer
@@ -15,13 +16,19 @@ audience:
 
 ---
 
+## Overview of Spark Reports
+
 ![title](svg/lectures/big_data/spark-reports/title.svg)
 
+---
+
 ## Overview of Spark Reports
+
 1. Data processing outputs
 1. Analysis results
 1. Performance metrics
 1. Business insights
+
 ---
 ## Core Components
 
@@ -33,6 +40,7 @@ audience:
 1. File systems
 1. Streaming platforms
 1. External APIs
+
 ---
 ## Processing Capabilities
 
@@ -44,6 +52,7 @@ audience:
 1. Streaming reports
 1. Interactive dashboards
 1. Automated alerts
+
 ---
 ## Architecture Overview
 
@@ -55,6 +64,7 @@ audience:
 1. Real-time streaming
 1. Interactive queries
 1. Batch processing
+
 ---
 ## Performance Optimization
 
@@ -66,12 +76,14 @@ audience:
 1. Heap configuration
 1. Off-heap storage
 1. Memory fractions
+
 ---
 ## Resource Allocation
 1. CPU cores
 1. Memory limits
 1. Disk space
 1. Network bandwidth
+
 ---
 ## Execution Models
 
@@ -83,6 +95,7 @@ audience:
 1. Parquet files
 1. JSON documents
 1. Avro records
+
 ---
 ## Processing Modes
 
@@ -94,12 +107,14 @@ audience:
 1. Excel sheets
 1. Web dashboards
 1. API responses
+
 ---
 ## Security Features
 1. Authentication
 1. Authorization
 1. Encryption
 1. Audit logging
+
 ---
 ## Monitoring System
 
@@ -111,6 +126,7 @@ audience:
 1. Fallback options
 1. Error logging
 1. Alert systems
+
 ---
 ## Data Quality
 
@@ -122,12 +138,14 @@ audience:
 1. Event-driven
 1. On-demand
 1. Continuous
+
 ---
 ## Performance Metrics
 1. Execution time
 1. Resource usage
 1. Throughput
 1. Latency
+
 ---
 ## Integration Points
 
@@ -139,6 +157,7 @@ audience:
 1. Query optimization
 1. Caching strategies
 1. Resource management
+
 ---
 ## Deployment Models
 
@@ -150,12 +169,14 @@ audience:
 1. Resource allocation
 1. Security policies
 1. Performance tuning
+
 ---
 ## Testing Approaches
 1. Unit tests
 1. Integration tests
 1. Performance tests
 1. Load tests
+
 ---
 ## Monitoring Tools
 
@@ -167,12 +188,14 @@ audience:
 1. Configuration changes
 1. Resource optimization
 1. Security patches
+
 ---
 ## Report Templates
 1. Standard layouts
 1. Custom designs
 1. Dynamic elements
 1. Interactive components
+
 ---
 ## Data Governance
 
@@ -184,6 +207,7 @@ audience:
 1. Error handling
 1. Performance tuning
 1. Security measures
+
 ---
 ## Development Workflow
 
@@ -195,6 +219,7 @@ audience:
 1. Vertical scaling
 1. Load balancing
 1. Resource elasticity
+
 ---
 ## Data Pipeline Design
 
@@ -206,12 +231,14 @@ audience:
 1. Configuration management
 1. Deployment tracking
 1. Rollback procedures
+
 ---
 ## Documentation Requirements
 1. Architecture docs
 1. API specifications
 1. User guides
 1. Operation manuals
+
 ---
 ## Troubleshooting Guide
 
@@ -223,6 +250,7 @@ audience:
 1. Resource allocation
 1. Caching strategies
 1. Execution planning
+
 ---
 ## Deployment Options
 
@@ -234,6 +262,7 @@ audience:
 1. Data encryption
 1. Audit logging
 1. Compliance checks
+
 ---
 ## Testing Strategy
 
@@ -245,6 +274,7 @@ audience:
 1. Log aggregation
 1. Alert configuration
 1. Dashboard setup
+
 ---
 ## Resource Management
 
@@ -256,6 +286,7 @@ audience:
 1. Processing
 1. Storage
 1. Archival
+
 ---
 ## Quality Assurance
 
@@ -267,6 +298,7 @@ audience:
 1. Throughput
 1. Resource usage
 1. Error rates
+
 ---
 ## Maintenance Procedures
 

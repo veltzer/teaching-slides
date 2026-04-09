@@ -1,4 +1,5 @@
 # Writing Your First Script
+
 ---
 ## Day 2: Scripts, Syntax & I/O
 - Writing and running scripts
@@ -7,6 +8,7 @@
 - I/O: reading and writing files and processes
 - Redirection in scripts
 - Multi processing
+
 ---
 ## What is a Script?
 - A text file containing shell commands
@@ -18,6 +20,7 @@
 # The simplest script:
 echo "Hello, World!"
 ```
+
 ---
 ## Choosing an Editor
 | Editor | Type | Learning Curve | Power |
@@ -30,6 +33,7 @@ echo "Hello, World!"
 
 - For quick edits: `nano` or `vim`
 - For development: `VS Code` with `bash` extensions
+
 ---
 ## The Shebang Line
 
@@ -48,6 +52,7 @@ echo "Hello, World!"
 #! /bin/bash          # space after #! (works on Linux, not all)
 # !/bin/bash          # space before ! (NOT a shebang)
 ```
+
 ---
 ## Why `#!/usr/bin/env bash`?
 
@@ -66,6 +71,7 @@ echo "Hello, World!"
 #!/bin/bash -x        # works (debug mode)
 #!/usr/bin/env bash -x  # DOES NOT WORK on Linux
 ```
+
 ---
 ## Making a Script Executable
 
@@ -85,6 +91,7 @@ bash myscript.sh
 ./myscript.sh
 # bash: ./myscript.sh: Permission denied
 ```
+
 ---
 ## File Extensions
 
@@ -102,6 +109,7 @@ deploy            # commands often have no extension
 ls /usr/bin/ | head -20
 # adduser, apt, awk, base64, basename, bash...
 ```
+
 ---
 ## Script Arguments
 
@@ -125,6 +133,7 @@ echo "Num of args: $#"
 # All args:    hello world
 # Num of args: 2
 ```
+
 ---
 ## `$@` vs `$*`
 
@@ -148,6 +157,7 @@ for arg in "$*"; do
 done
 # arg: [hello world foo]
 ```
+
 ---
 ## The `shift` Command
 
@@ -170,6 +180,7 @@ while [ $# -gt 0 ]; do
     shift
 done
 ```
+
 ---
 ## Failure Handling: The Strict Mode
 
@@ -185,6 +196,7 @@ set -euo pipefail
 # Consider also:
 IFS=$'\n\t'     # safer word splitting
 ```
+
 ---
 ## Debugging Scripts
 
@@ -204,6 +216,7 @@ export PS4='+ ${BASH_SOURCE}:${LINENO}: '
 set -x
 # + myscript.sh:5: echo hello
 ```
+
 ---
 ## More Debugging Techniques
 
@@ -226,6 +239,7 @@ problematic_function
 set +x          # stop debugging
 echo "normal"
 ```
+
 ---
 ## Using `shellcheck`
 
@@ -246,6 +260,7 @@ shellcheck myscript.sh
 # shellcheck disable=SC2086
 echo $foo
 ```
+
 ---
 ## Template: Basic Script
 
@@ -285,6 +300,7 @@ main() {
 
 main "$@"
 ```
+
 ---
 ## The `source` Command (`.`)
 

@@ -155,6 +155,7 @@ Cons:
 - Systems needing improved testability of data access code
 - When anticipating future changes in data storage mechanisms
 - In domain-driven design (DDD) architectures
+
 ---
 
 ## Repository Command Pattern
@@ -198,6 +199,7 @@ Cons:
 - In GUI systems for handling menu actions or button clicks
 - To implement transactional behavior and rollback mechanisms
 - When you need to structure a system around high-level operations built on primitive operations
+
 ---
 
 ## Decorator Pattern
@@ -241,6 +243,7 @@ Cons:
 - When you want to add functionality that can be withdrawn easily
 - In systems where you need a stack of behaviors that can be composed at runtime
 - When applying the Open/Closed principle in your design
+
 ---
 
 ## Facade Pattern

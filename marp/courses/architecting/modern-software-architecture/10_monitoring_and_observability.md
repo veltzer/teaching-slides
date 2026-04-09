@@ -21,6 +21,9 @@
 
 ![the_observability_challenge](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/the_observability_challenge.svg)
 
+---
+## The Observability Challenge
+
 - A single user request may touch 5+ services
 - Where did the latency spike occur? Which service returned an error?
 
@@ -175,6 +178,9 @@ REQUEST_LATENCY = Histogram(
 ## Trace Anatomy
 
 ![trace_anatomy](svg/courses/architecting/modern-software-architecture/10_monitoring_and_observability/trace_anatomy.svg)
+
+---
+## Trace Anatomy
 
 - A trace represents the entire request journey
 - Each span represents one operation within the trace

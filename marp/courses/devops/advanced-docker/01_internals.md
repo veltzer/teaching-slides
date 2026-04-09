@@ -278,15 +278,16 @@ ip addr show
 ```
 
 ---
-
 ## Network Namespace - veth Pairs
 
 ![network_namespace_veth_pairs](svg/courses/devops/advanced-docker/01_internals/network_namespace_veth_pairs.svg)
 
+---
+## Network Namespace - veth Pairs
+
 ```bash
 # See veth pairs
 ip link show type veth
-
 # See the bridge
 brctl show docker0
 # or
@@ -534,15 +535,16 @@ cat /proc/$PID/environ | tr '\0' '\n'
 ```
 
 ---
-
 ## Container Filesystem - OverlayFS
 
 ![container_filesystem_overlayfs](svg/courses/devops/advanced-docker/01_internals/container_filesystem_overlayfs.svg)
 
+---
+## Container Filesystem - OverlayFS
+
 ```bash
 # View overlay mount details
 docker inspect myapp --format '{{.GraphDriver.Data}}'
-
 # Examine the layers
 ls /var/lib/docker/overlay2/
 ```

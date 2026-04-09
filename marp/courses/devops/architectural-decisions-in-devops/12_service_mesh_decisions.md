@@ -2,12 +2,14 @@
 - Understanding when and how to adopt a service mesh
 - Evaluating trade-offs between complexity, performance, and operational benefits
 - Making informed choices about mesh architecture, security, and observability
+
 ---
 ## What is a Service Mesh
 - A dedicated infrastructure layer for managing service-to-service communication
 - Typically implemented as a set of lightweight proxies deployed alongside application code
 - Handles networking concerns: routing, load balancing, security, and observability
 - Decouples networking logic from application business logic
+
 ---
 ## Why Service Meshes Emerged
 - Microservices architectures introduced hundreds of network hops
@@ -15,6 +17,7 @@
 - Libraries like `Netflix OSS` embedded networking logic in application code
 - Need for a language-agnostic, infrastructure-level solution grew
 - Service meshes abstract cross-cutting concerns out of application code
+
 ---
 ## The Core Problem Service Meshes Solve
 
@@ -27,6 +30,7 @@
 - You need uniform `mTLS`, retries, timeouts, and circuit breaking
 - Observability across service boundaries is a top priority
 - Compliance requirements mandate encryption in transit for all internal traffic
+
 ---
 ## When a Service Mesh is NOT Warranted
 - You have a monolith or a small number of services (fewer than 5)
@@ -34,6 +38,7 @@
 - Latency budgets are extremely tight and cannot absorb proxy overhead
 - Existing library-based solutions are working well for your scale
 - The added complexity outweighs the benefits at your current stage
+
 ---
 ## Complexity vs Benefit Analysis
 - Service meshes introduce significant operational complexity
@@ -44,6 +49,7 @@
     - Consistent security posture across all services
     - Centralized traffic management and policy enforcement
     - Deep observability without application code changes
+
 ---
 ## Complexity Cost Breakdown
 
@@ -64,6 +70,7 @@
 1. Estimate resource overhead vs available capacity
 1. Run a proof-of-concept on a non-critical workload first
 1. Measure concrete improvements before full rollout
+
 ---
 ## Alternative: Library-Based Communication
 - Embed networking logic in application libraries
@@ -71,6 +78,7 @@
 - Pros: no extra infrastructure, lower latency
 - Cons: language-specific, each team must adopt and update
 - Works well for homogeneous tech stacks with few services
+
 ---
 ## Alternative: API Gateway and Native K8s
 - **API Gateway** (`Kong`, `Ambassador`, `AWS API Gateway`)
@@ -80,6 +88,7 @@
     - Simple round-robin load balancing via `ClusterIP`
     - No `mTLS`, no advanced traffic management, limited observability
     - Sufficient for small clusters with basic requirements
+
 ---
 ## Comparing Alternatives
 
@@ -103,6 +112,7 @@
 - **Data Plane**: the proxies that handle actual traffic
     - Examples: `Envoy`, `linkerd2-proxy`
     - Intercepts all inbound and outbound traffic for the service
+
 ---
 ## Major Service Mesh Implementations
 - `Istio`: most widely adopted, uses `Envoy` proxy, feature-rich
@@ -111,6 +121,7 @@
 - `AWS App Mesh`: managed mesh for AWS workloads, uses `Envoy`
 - `Kuma`: built on `Envoy`, supports both `Kubernetes` and VMs
 - `Cilium Service Mesh`: eBPF-based, kernel-level networking
+
 ---
 ## Sidecar Proxy Pattern
 
@@ -123,6 +134,7 @@
 - **Manual injection**: use `istioctl kube-inject` or equivalent CLI
 - `iptables` rules in an `init` container redirect traffic through the proxy
 - The application is completely unaware of the proxy's existence
+
 ---
 ## Sidecar Proxy: Resource Overhead
 - Each sidecar consumes CPU and memory per pod
@@ -131,6 +143,7 @@
 - In a cluster with 500 pods, that means 500 extra containers
 - Estimated overhead: 25-50 additional CPU cores and 32-64Gi memory
 - Resource requests and limits must be tuned per workload profile
+
 ---
 ## Sidecar Proxy: Performance Implications
 - Every request traverses two additional network hops (sender proxy + receiver proxy)
@@ -138,6 +151,7 @@
 - Connection pooling and HTTP/2 multiplexing help reduce overhead
 - Tail latencies can increase under high connection churn
 - Benchmark your specific workloads before and after mesh adoption
+
 ---
 ## Proxyless Mesh Architecture
 
@@ -150,6 +164,7 @@
 - Routing, load balancing, and `mTLS` are handled within the process
 - No sidecar container, no `iptables` redirection
 - Supported in `gRPC` for `Go`, `Java`, `C++`, and `Python`
+
 ---
 ## Sidecar vs Proxyless: Comparison
 
@@ -173,6 +188,7 @@
     - Your services predominantly use `gRPC`
     - Latency overhead from sidecars is unacceptable
     - You want to minimize cluster resource consumption
+
 ---
 ## eBPF-Based Mesh: A Third Option
 - `Cilium` uses `eBPF` programs in the Linux kernel for mesh functionality
@@ -180,6 +196,7 @@
 - Lower latency and resource overhead than sidecar proxies
 - Supports `L3/L4` policies natively, `L7` via optional `Envoy` integration
 - Requires a compatible Linux kernel (5.10+) and `Cilium` as the `CNI`
+
 ---
 ## mTLS in the Service Mesh
 
@@ -192,6 +209,7 @@
 - Certificates are automatically rotated (typically every 24 hours)
 - Both client and server proxies verify each other's identity
 - The application sends plain HTTP; the proxy encrypts it transparently
+
 ---
 ## mTLS Modes and Migration
 - **Permissive mode**: accepts both plaintext and `mTLS` traffic
@@ -210,6 +228,7 @@ spec:
   mtls:
     mode: STRICT
 ```
+
 ---
 ## mTLS and Zero-Trust Security
 - Traditional perimeter security assumes internal traffic is trusted
@@ -217,6 +236,7 @@ spec:
 - Even if an attacker breaches the network, they cannot impersonate services
 - Combined with authorization policies for fine-grained access control
 - Satisfies compliance requirements (SOC 2, PCI-DSS, HIPAA)
+
 ---
 ## Authorization Policies with mTLS
 - Once identities are established via `mTLS`, you can write access rules
@@ -242,6 +262,7 @@ spec:
         methods: ["POST"]
         paths: ["/api/charge"]
 ```
+
 ---
 ## Traffic Management: Core Capabilities
 - **Request routing**: route traffic based on headers, URI, or weight
@@ -250,6 +271,7 @@ spec:
 - **Circuit breaking**: prevent cascading failures by limiting connections
 - **Fault injection**: simulate failures for resilience testing
 - **Traffic mirroring**: duplicate live traffic to a test environment
+
 ---
 ## Traffic Splitting for Canary Deployments
 
@@ -277,6 +299,7 @@ spec:
         subset: v2
       weight: 10
 ```
+
 ---
 ## Circuit Breaking Configuration
 - Prevents one failing service from cascading failures across the mesh
@@ -302,6 +325,7 @@ spec:
       interval: 30s
       baseEjectionTime: 30s
 ```
+
 ---
 ## Observability Through the Mesh
 
@@ -315,6 +339,7 @@ spec:
 - Proxies generate trace spans for each request automatically
 - Applications must propagate trace headers (`x-request-id`, `traceparent`)
 - Spans are collected by `Jaeger`, `Zipkin`, or `Tempo`
+
 ---
 ## Access Logging and Debugging
 - Each proxy can emit structured access logs per request
@@ -332,6 +357,7 @@ spec:
   - providers:
     - name: envoy
 ```
+
 ---
 ## Mesh Performance Benchmarking
 - Always benchmark before and after mesh adoption
@@ -344,6 +370,7 @@ spec:
 fortio load -c 50 -qps 1000 -t 60s \
   http://my-service.default:8080/api/health
 ```
+
 ---
 ## Resource Tuning for Sidecar Proxies
 - Set appropriate `requests` and `limits` based on workload profiling
@@ -363,6 +390,7 @@ spec:
         sidecar.istio.io/proxyCPULimit: "500m"
         sidecar.istio.io/proxyMemoryLimit: "256Mi"
 ```
+
 ---
 ## Mesh Upgrade Strategies
 - **Canary upgrade**: run new proxy version alongside old version
@@ -371,6 +399,7 @@ spec:
     - Tag namespaces to the new revision, restart pods gradually
 - Always test in a staging environment before production
 - Monitor golden signals closely during rollout
+
 ---
 ## Common Pitfalls in Mesh Adoption
 1. Enabling `STRICT` mTLS before all services are in the mesh
@@ -379,6 +408,7 @@ spec:
 1. Over-configuring traffic policies without understanding defaults
 1. Skipping the permissive mode migration phase
 1. Not investing in team training on mesh debugging tools
+
 ---
 ## Debugging Mesh Issues
 - Use `istioctl analyze` to detect configuration problems
@@ -395,6 +425,7 @@ istioctl proxy-config listeners my-pod.default
 # Analyze mesh configuration issues
 istioctl analyze --namespace production
 ```
+
 ---
 ## Mesh vs No-Mesh Decision Matrix
 
@@ -409,6 +440,7 @@ istioctl analyze --namespace production
     - Ultra-lightweight Rust-based proxy (`linkerd2-proxy`)
     - Fewer features but covers core use cases well
     - Better choice for teams prioritizing operational simplicity
+
 ---
 ## Service Mesh and CI/CD Integration
 - Mesh traffic management enables progressive delivery pipelines
@@ -416,6 +448,7 @@ istioctl analyze --namespace production
 - Automatically promote or rollback based on mesh-reported error rates
 - Use traffic mirroring to validate new versions with real production traffic
 - Mesh policies can be version-controlled and applied via `GitOps`
+
 ---
 ## Real-World Adoption Pattern
 1. Start with observability: install the mesh in permissive mode
@@ -425,6 +458,7 @@ istioctl analyze --namespace production
 1. Add traffic management rules as needed (retries, timeouts)
 1. Introduce canary deployments for critical services
 1. Expand to advanced features (fault injection, rate limiting)
+
 ---
 ## Cost of Running a Service Mesh
 - **Infrastructure cost**: extra CPU and memory for sidecars and control plane
@@ -432,6 +466,7 @@ istioctl analyze --namespace production
 - **Latency cost**: added milliseconds per request hop
 - **Cognitive cost**: learning `CRDs`, debugging proxy behavior
 - Quantify these costs against the value of security, observability, and reliability
+
 ---
 ## Key Takeaways
 - A service mesh is a powerful tool but not universally necessary

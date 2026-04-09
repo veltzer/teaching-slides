@@ -334,6 +334,10 @@ Best practices:
 - Avoid very long keys
 - Be consistent
 
+---
+
+## Key Naming Conventions
+
 ![key_naming_conventions](svg/courses/databases/redis/01_intro/key_naming_conventions.svg)
 
 ---
@@ -341,6 +345,10 @@ Best practices:
 ## Redis Persistence
 
 ![redis_persistence](svg/courses/databases/redis/01_intro/redis_persistence.svg)
+
+---
+
+## Redis Persistence Options
 
 1. **RDB (Redis Database)**: Point-in-time snapshots
 1. **AOF (Append Only File)**: Logs every write operation

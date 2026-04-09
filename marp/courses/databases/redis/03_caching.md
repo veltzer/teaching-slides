@@ -9,6 +9,10 @@
 - Improves response time and application performance
 - Reduces costs (database queries, API calls, computation)
 
+---
+
+## What is Caching?
+
 ![what_is_caching](svg/courses/databases/redis/03_caching/what_is_caching.svg)
 
 ---
@@ -204,6 +208,10 @@ Redis memory limits and eviction:
 
 ![lru_vs_lfu_eviction](svg/courses/databases/redis/03_caching/lru_vs_lfu_eviction.svg)
 
+---
+
+## LRU vs LFU Policy Names
+
 - LRU: `allkeys-lru`, `volatile-lru`
 - LFU: `allkeys-lfu`, `volatile-lfu` (Redis 4.0+)
 
@@ -267,6 +275,10 @@ def setup_cache_invalidation_listener():
 - When many requests try to rebuild cache simultaneously
 - Occurs when popular keys expire or are invalidated
 - Causes database overload
+
+---
+
+## Cache Stampede Problem
 
 ![cache_stampede_problem](svg/courses/databases/redis/03_caching/cache_stampede_problem.svg)
 
@@ -366,6 +378,10 @@ Multiple application instances using shared Redis cache:
 
 ![cache_hit_ratio_monitoring](svg/courses/databases/redis/03_caching/cache_hit_ratio_monitoring.svg)
 
+---
+
+## Cache Hit Ratio Tips
+
 - Target hit ratio: 80%+ in most applications
 - Monitor with `INFO stats` command
 - Calculate hit ratio: `keyspace_hits / (keyspace_hits + keyspace_misses)`
@@ -414,7 +430,15 @@ Strategies for large objects:
 
 Using Redis hashes for small objects:
 
+---
+
+## Caching Small Objects: Hashes
+
 ![caching_small_objects_hashes](svg/courses/databases/redis/03_caching/caching_small_objects_hashes.svg)
+
+---
+
+## Caching Small Objects - Notes
 
 - Memory efficient for small objects
 - Hash fields compression when appropriate
@@ -543,7 +567,10 @@ def invalidate_by_tag(tag):
 
 ![implementing_a_tiered_cache](svg/courses/databases/redis/03_caching/implementing_a_tiered_cache.svg)
 
-Benefits:
+---
+
+## Tiered Cache Benefits
+
 - Reduced network calls
 - Protect Redis from high load
 - Better response times

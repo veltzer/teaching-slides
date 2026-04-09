@@ -286,6 +286,10 @@ execute_process(
 
 ![cross_compilation_overview](svg/courses/build_systems/cmake/08_miscellaneous_and_advanced/cross_compilation_overview.svg)
 
+---
+
+## Cross-Compilation Key Points
+
 - Build on one platform, run on another
 - Requires a cross-compiler toolchain
 - CMake uses **toolchain files** to configure cross-compilation

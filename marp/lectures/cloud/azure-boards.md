@@ -9,6 +9,7 @@ audience:
 - audiences:developers
 - audiences:managers
 - audiences:devops
+
 ---
 # Azure Boards: Best Practices Guide
 ## Mark Veltzer
@@ -16,7 +17,11 @@ audience:
 
 ---
 
+## 1. Introduction to Azure Boards
+
 ![title](svg/lectures/cloud/azure-boards/title.svg)
+
+---
 
 ## 1. Introduction to Azure Boards
 

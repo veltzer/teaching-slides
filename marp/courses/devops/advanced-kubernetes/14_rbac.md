@@ -56,6 +56,7 @@ rules:
 - apiGroups: ["apps"]
   resources: ["deployments"]
   verbs: ["get", "list"]
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -94,6 +95,7 @@ rules:
 - apiGroups: ["metrics.k8s.io"]
   resources: ["nodes", "pods"]
   verbs: ["get", "list"]
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -153,6 +155,7 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
   apiGroup: rbac.authorization.k8s.io
+
 ---
 # ClusterRole bound at namespace level
 apiVersion: rbac.authorization.k8s.io/v1
@@ -209,6 +212,7 @@ metadata:
     # AWS IRSA
     eks.amazonaws.com/role-arn: arn:aws:iam::123:role/api-reader
 automountServiceAccountToken: false
+
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -267,6 +271,7 @@ kind: ServiceAccount
 metadata:
   name: cicd-deployer
   namespace: cicd
+
 ---
 # Role: Can deploy to staging
 apiVersion: rbac.authorization.k8s.io/v1
@@ -285,6 +290,7 @@ rules:
 - apiGroups: ["networking.k8s.io"]
   resources: ["ingresses"]
   verbs: ["get", "list", "create", "update", "patch"]
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -348,6 +354,7 @@ rules:
 - apiGroups: ["monitoring.coreos.com"]
   resources: ["prometheusrules", "servicemonitors"]
   verbs: ["get", "list", "watch"]
+
 ---
 # Aggregating ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1

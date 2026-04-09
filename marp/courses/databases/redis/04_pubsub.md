@@ -280,6 +280,10 @@ Streams (introduced in Redis 5.0):
 - Support consumer groups
 - Perfect complement to Pub/Sub
 
+---
+
+## Introduction to Redis Streams
+
 ![introduction_to_redis_streams](svg/courses/databases/redis/04_pubsub/introduction_to_redis_streams.svg)
 
 ---

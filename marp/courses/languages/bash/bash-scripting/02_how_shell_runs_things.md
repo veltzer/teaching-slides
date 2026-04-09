@@ -1,4 +1,5 @@
 # How the Shell Runs Things
+
 ---
 ## What Happens When You Type a Command?
 - You type `ls -la /tmp` and press Enter
@@ -7,6 +8,7 @@
   1. Where that program lives
   1. How to pass arguments to it
   1. What to do with the result
+
 ---
 ## Command Line Parsing: Step by Step
 
@@ -22,6 +24,7 @@
 1. Word splitting
 1. Pathname expansion (globbing): `*.txt`
 1. Quote removal
+
 ---
 ## Why the Order Matters
 
@@ -37,6 +40,7 @@ echo $files
 echo "*.txt"
 # Prints literally: *.txt
 ```
+
 ---
 ## Finding Commands: Three Types
 
@@ -44,6 +48,7 @@ echo "*.txt"
 |-------------------|----------------------|-------------------|
 | cd, echo, pwd, export, read, test, [, [[ | User-defined functions in the current shell session | /usr/bin/ls, /usr/bin/grep, /usr/bin/awk |
 | No fork needed | No fork needed | Fork + exec |
+
 ---
 ## The `type` Command
 
@@ -63,6 +68,7 @@ type -a echo
 # echo is a shell builtin
 # echo is /usr/bin/echo
 ```
+
 ---
 ## Built-in Commands
 - Executed inside the shell process itself
@@ -76,6 +82,7 @@ type -a echo
 # of the child process, not the shell itself
 cd /tmp  # changes THIS shell's directory
 ```
+
 ---
 ## Why `cd` Cannot Be External
 
@@ -90,6 +97,7 @@ cd /tmp  # changes THIS shell's directory
 # This is why cd is a built-in:
 # It must run inside the shell process itself
 ```
+
 ---
 ## External Commands and `PATH`
 - External commands are programs on disk
@@ -103,6 +111,7 @@ echo "$PATH"
 # The shell searches directories LEFT to RIGHT
 # First match wins
 ```
+
 ---
 ## How `PATH` Search Works
 
@@ -118,6 +127,7 @@ echo "$PATH"
 python3000
 # bash: python3000: command not found
 ```
+
 ---
 ## Viewing and Modifying `PATH`
 
@@ -134,6 +144,7 @@ export PATH="$PATH:/my/custom/bin"
 # WARNING: never set PATH without including the old value
 export PATH="/only/this"  # DANGEROUS! Most commands vanish
 ```
+
 ---
 ## The `which` and `command -v` Commands
 
@@ -151,6 +162,7 @@ alias ls='ls --color=auto'
 which ls     # may show the alias
 command -v ls  # /usr/bin/ls
 ```
+
 ---
 ## `fork` and `exec`: How External Commands Run
 
@@ -168,6 +180,7 @@ strace -f -e trace=clone,execve bash -c 'ls /tmp' 2>&1 | head -20
 # clone(...) = 12345           <-- fork
 # [pid 12345] execve("/usr/bin/ls", ["ls", "/tmp"], ...)
 ```
+
 ---
 ## The Search Order
 When you type a command name, `bash` searches in this order:

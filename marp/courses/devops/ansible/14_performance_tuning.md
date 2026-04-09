@@ -46,7 +46,6 @@ callback_whitelist = timer, profile_tasks, profile_roles
 ```
 
 ---
-
 ## Forks: Parallelism Control
 
 ```ini
@@ -54,17 +53,18 @@ callback_whitelist = timer, profile_tasks, profile_roles
 [defaults]
 forks = 20   # Default is 5
 ```
-
 ```bash
 # Override per run
 ansible-playbook site.yml -f 50
-
 # Rule of thumb:
 # forks = number of target hosts (up to ~50)
 # More forks = more RAM on control node
 # Each fork is a separate Python process
 # ~100MB per fork (varies with modules)
 ```
+
+---
+## Forks: Parallelism Control
 
 ![100mb_per_fork_varies_with_modules](svg/courses/devops/ansible/14_performance_tuning/100mb_per_fork_varies_with_modules.svg)
 

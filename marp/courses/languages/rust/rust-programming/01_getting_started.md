@@ -6,11 +6,15 @@
 
 ![bg right:40% 80%](svg/courses/languages/rust/rust-programming/01_getting_started/rust_logo.svg)
 
+---
+## What is Rust
+
 - Systems programming language
 - Focuses on safety, concurrency, and performance
 - Created by Mozilla Research
 - First released in 2015
 - Now used by: Mozilla, Microsoft, Amazon, Google
+
 ---
 ## Key Features of Rust
 
@@ -41,19 +45,16 @@
 </div>
 
 ---
-
 ## Use Cases for Rust
 
 ![use_cases_for_rust](svg/courses/languages/rust/rust-programming/01_getting_started/use_cases_for_rust.svg)
 
 ---
-
 ## Rust vs Other Languages
 
 ![rust_vs_other_languages](svg/courses/languages/rust/rust-programming/01_getting_started/rust_vs_other_languages.svg)
 
 ---
-
 ## Installing Rust
 
 <div class="columns">
@@ -77,13 +78,11 @@ curl --proto '=https' --tlsv1.2 -sSf 'https://sh.rustup.rs' | sh
 </div>
 
 ---
-
 ## Rustup Components
 
 ![rustup_components](svg/courses/languages/rust/rust-programming/01_getting_started/rustup_components.svg)
 
 ---
-
 ## Verifying Installation
 
 ```bash
@@ -98,10 +97,12 @@ rustup component list
 ```
 
 ---
-
 ## Development Environment
 
 ![development_environment](svg/courses/languages/rust/rust-programming/01_getting_started/development_environment.svg)
+
+---
+## Development Environment
 
 ### Recommended Setup
 - VS Code
@@ -110,13 +111,11 @@ rustup component list
 - Even Better TOML extension
 
 ---
-
 ## Cargo: Rust's Package Manager
 
 ![cargo_rust_s_package_manager](svg/courses/languages/rust/rust-programming/01_getting_started/cargo_rust_s_package_manager.svg)
 
 ---
-
 ## Common Cargo Commands
 
 <div class="columns">
@@ -145,7 +144,6 @@ cargo doc
 </div>
 
 ---
-
 ## Project Structure
 
 ```misc
@@ -157,7 +155,6 @@ my_project/
 ```
 
 ---
-
 ## Cargo.toml Explained
 
 ```toml

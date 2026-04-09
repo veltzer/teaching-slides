@@ -13,6 +13,7 @@
     - Simple tools that do one thing well
     - Text-based configuration
     - Everything is a file philosophy
+
 ---
 ## History of UNIX
 
@@ -24,9 +25,14 @@
 ![operating_system_core_structure](svg/courses/operating_systems/linux-fundamentals/01_intro/operating_system_core_structure.svg)
 
 ---
+
 ## The Process Tree
 
 ![the_process_tree](svg/courses/operating_systems/linux-fundamentals/01_intro/the_process_tree.svg)
+
+---
+
+## The Process Tree
 
 ## Why is it important
 - Process management
@@ -39,6 +45,10 @@
 ## Process Lifecycle
 
 ![process_lifecycle](svg/courses/operating_systems/linux-fundamentals/01_intro/process_lifecycle.svg)
+
+---
+
+## Process Lifecycle
 
 ### Zombie Processes
 - Terminated but not yet cleaned up
@@ -69,14 +79,20 @@ int main() {
 ```
 
 ---
+
 ## Basic Security Model
 
 ![basic_security_model](svg/courses/operating_systems/linux-fundamentals/01_intro/basic_security_model.svg)
+
+---
+
+## Basic Security Model
 
 ### Key Security Features
 - File system permissions
 - Process isolation
 - User/group-based access control
+
 ---
 ## The Root User
 
@@ -95,12 +111,16 @@ chmod 777 /some/system/file  # Succeeds
 ```
 
 ---
+
 ## File System Security
 
 ![file_system_security](svg/courses/operating_systems/linux-fundamentals/01_intro/file_system_security.svg)
 
-Example permission setting:
+---
 
+## File System Security
+
+Example permission setting:
 ```bash
 # Setting permissions
 chmod 755 file.txt  # rwxr-xr-x
@@ -108,9 +128,14 @@ chown user:group file.txt
 ```
 
 ---
+
 ## Process Isolation
 
 ![process_isolation](svg/courses/operating_systems/linux-fundamentals/01_intro/process_isolation.svg)
+
+---
+
+## Process Isolation
 
 - Each process has its own:
     - Memory space

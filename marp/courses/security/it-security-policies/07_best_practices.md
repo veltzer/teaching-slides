@@ -46,6 +46,10 @@
 
 ![tailgating_prevention](svg/courses/security/it-security-policies/07_best_practices/tailgating_prevention.svg)
 
+---
+
+## Tailgating Prevention
+
 - "I'm sorry, could you badge in? It's company policy."
 - This is not rude - it is responsible
 
@@ -94,6 +98,10 @@
 - Only install software approved by IT
 - Do not download cracked or pirated software
 - Uninstall software you no longer use
+
+---
+
+## Software and Update Security
 
 ![software_and_update_security](svg/courses/security/it-security-policies/07_best_practices/software_and_update_security.svg)
 

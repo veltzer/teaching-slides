@@ -1,4 +1,5 @@
 # SYN Flood Attacks
+
 ---
 
 ## What is a SYN Flood Attack
@@ -10,9 +11,14 @@
 - One of the oldest and most common network-layer DoS attacks
 
 ---
+
 ## TCP Three-Way Handshake Review
 
 ![tcp_three_way_handshake_review](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/tcp_three_way_handshake_review.svg)
+
+---
+
+## TCP Three-Way Handshake Review
 
 **Key points:**
 - Step 1: Client sends SYN with initial sequence number
@@ -357,9 +363,14 @@ for i in range(1000):
 ```
 
 ---
+
 ## SYN Proxy (Hardware Firewalls)
 
 ![syn_proxy_hardware_firewalls](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/syn_proxy_hardware_firewalls.svg)
+
+---
+
+## SYN Proxy (Hardware Firewalls)
 
 - Firewall completes the three-way handshake on behalf of the server
 - Only forwards the connection to the server if the client completes the handshake

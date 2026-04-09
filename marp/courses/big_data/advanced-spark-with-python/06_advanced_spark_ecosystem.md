@@ -1,10 +1,12 @@
 # Advanced Spark Ecosystem and Best Practices
+
 ---
 ## Ecosystem Overview
 * Kubernetes integration
 * Cloud platforms
 * Delta Lake
 * MLflow integration
+
 ---
 ## Modern Architecture
 ![modern_architecture](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/modern_architecture.svg)
@@ -15,6 +17,7 @@
 1. YARN deployment
 1. Kubernetes deployment
 1. Cloud services
+
 ---
 ## Kubernetes Integration
 ```python
@@ -22,6 +25,7 @@
 spark.kubernetes.container.image=spark:v3.0
 spark.kubernetes.namespace=spark
 ```
+
 ---
 ## Resource Management
 ![resource_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/resource_management.svg)
@@ -32,6 +36,7 @@ spark.kubernetes.namespace=spark
 1. Azure Synapse
 1. Google Dataproc
 1. Custom deployment
+
 ---
 ## Cloud Configuration
 ```python
@@ -41,6 +46,7 @@ spark.conf.set(
     "key"
 )
 ```
+
 ---
 ## Storage Integration
 ![storage_integration](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/storage_integration.svg)
@@ -51,6 +57,7 @@ spark.conf.set(
 1. Schema enforcement
 1. Time travel
 1. Optimization
+
 ---
 ## Delta Lake Operations
 ```python
@@ -59,6 +66,7 @@ df.write.format("delta") \
     .mode("overwrite") \
     .save("/path/to/table")
 ```
+
 ---
 ## Version Control
 ![version_control](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/version_control.svg)
@@ -71,12 +79,14 @@ df = spark.read.format("delta") \
     .option("versionAsOf", "1") \
     .load("/path/to/table")
 ```
+
 ---
 ## Schema Evolution
 1. Add columns
 1. Remove columns
 1. Change types
 1. Merge schema
+
 ---
 ## Delta Operations
 ```python
@@ -85,6 +95,7 @@ deltaTable = DeltaTable.forPath(
     spark, "/path/to/table"
 )
 ```
+
 ---
 ## Optimization Methods
 ![optimization_methods](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/optimization_methods.svg)
@@ -95,6 +106,7 @@ deltaTable = DeltaTable.forPath(
 1. Partitioning
 1. Caching
 1. Indexing
+
 ---
 ## Monitoring Setup
 ```python
@@ -104,6 +116,7 @@ spark.conf.set(
     "org.apache.spark.metrics.sink.GraphiteSink"
 )
 ```
+
 ---
 ## Metrics Collection
 ![metrics_collection](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/metrics_collection.svg)
@@ -114,6 +127,7 @@ spark.conf.set(
 1. Authorization
 1. Encryption
 1. Auditing
+
 ---
 ## Authentication Setup
 ```python
@@ -123,6 +137,7 @@ spark.conf.set(
     "/path/to/keytab"
 )
 ```
+
 ---
 ## Authorization Model
 ![authorization_model](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/authorization_model.svg)
@@ -133,6 +148,7 @@ spark.conf.set(
 1. Audit logging
 1. Policy enforcement
 1. Compliance
+
 ---
 ## Backup Strategies
 ```python
@@ -141,6 +157,7 @@ def backup_data():
     snapshot = create_snapshot()
     replicate(snapshot)
 ```
+
 ---
 ## Disaster Recovery
 ![disaster_recovery](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/disaster_recovery.svg)
@@ -151,6 +168,7 @@ def backup_data():
 1. Testing
 1. Deployment
 1. Monitoring
+
 ---
 ## Testing Framework
 ```python
@@ -159,6 +177,7 @@ def test_transformation():
     result = transform_data(input_df)
     assert validate_result(result)
 ```
+
 ---
 ## Quality Assurance
 ![quality_assurance](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/quality_assurance.svg)
@@ -169,6 +188,7 @@ def test_transformation():
 1. Spot instances
 1. Storage tiers
 1. Caching strategy
+
 ---
 ## Resource Planning
 ```python
@@ -178,6 +198,7 @@ spark.conf.set(
     "auto"
 )
 ```
+
 ---
 ## Capacity Planning
 ![capacity_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/capacity_planning.svg)
@@ -188,6 +209,7 @@ spark.conf.set(
 1. Model registry
 1. Deployment
 1. Monitoring
+
 ---
 ## Production Pipeline
 ```python
@@ -195,6 +217,7 @@ spark.conf.set(
 pipeline = create_pipeline()
 mlflow.spark.log_model(pipeline, "model")
 ```
+
 ---
 ## Workflow Management
 ![workflow_management](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/workflow_management.svg)
@@ -205,6 +228,7 @@ mlflow.spark.log_model(pipeline, "model")
 1. Documentation
 1. Testing
 1. Monitoring
+
 ---
 ## Code Standards
 ```python
@@ -213,6 +237,7 @@ class SparkJob:
     def __init__(self):
         self.spark = create_spark_session()
 ```
+
 ---
 ## Documentation
 ![documentation](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/documentation.svg)
@@ -223,6 +248,7 @@ class SparkJob:
 1. Metrics review
 1. Performance audit
 1. Error tracking
+
 ---
 ## Common Issues
 ```python
@@ -232,6 +258,7 @@ spark.conf.set(
     "true"
 )
 ```
+
 ---
 ## Error Handling
 ![error_handling](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/error_handling.svg)
@@ -242,6 +269,7 @@ spark.conf.set(
 1. Patches
 1. Optimization
 1. Cleanup
+
 ---
 ## Version Management
 ```python
@@ -251,6 +279,7 @@ spark.conf.set(
     "org.apache.spark:spark-avro_2.12:3.0.0"
 )
 ```
+
 ---
 ## Future Planning
 ![future_planning](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/future_planning.svg)
@@ -261,6 +290,7 @@ spark.conf.set(
 1. Platform migration
 1. Data migration
 1. Service migration
+
 ---
 ## Cost Management
 ```python
@@ -269,6 +299,7 @@ def optimize_resources():
     analyze_usage()
     adjust_resources()
 ```
+
 ---
 ## Scaling Strategies
 ![scaling_strategies](svg/courses/big_data/advanced-spark-with-python/06_advanced_spark_ecosystem/scaling_strategies.svg)
@@ -279,6 +310,7 @@ def optimize_resources():
 1. Plugins
 1. Integrations
 1. Tools
+
 ---
 ## Community Resources
 * Documentation

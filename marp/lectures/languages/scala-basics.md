@@ -7,6 +7,7 @@ level: beginner
 category: language
 audience:
 - audiences:developers
+
 ---
 # Scala Programming
 ## A Comprehensive Guide
@@ -15,9 +16,14 @@ audience:
 
 ---
 
+## Introduction to Scala
+
 ![title](svg/lectures/languages/scala-basics/title.svg)
 
+---
+
 ## Introduction to Scala
+
 - Multi-paradigm programming language
 - Runs on JVM
 - Combines object-oriented and functional programming

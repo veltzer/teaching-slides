@@ -9,6 +9,7 @@ category: big-data
 duration_hours: 24
 audience:
   - audiences:developers
+
 ---
 # Apache Spark With Scala
 ## Mark Veltzer

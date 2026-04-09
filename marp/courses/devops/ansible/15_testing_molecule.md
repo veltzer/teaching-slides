@@ -92,6 +92,7 @@ roles/nginx/
 
 ```yaml
 # molecule/default/molecule.yml
+
 ---
 dependency:
   name: galaxy
@@ -135,6 +136,7 @@ verifier:
 
 ```yaml
 # molecule/default/converge.yml
+
 ---
 - name: Converge
   hosts: all
@@ -163,6 +165,7 @@ verifier:
 
 ```yaml
 # molecule/default/verify.yml
+
 ---
 - name: Verify
   hosts: all
@@ -305,6 +308,7 @@ def test_vhost_config(host):
 
 ```yaml
 # molecule/default/molecule.yml
+
 ---
 verifier:
   name: testinfra
@@ -364,6 +368,7 @@ molecule test
 ```yaml
 # molecule/default/prepare.yml
 # Run BEFORE the role to set up prerequisites
+
 ---
 - name: Prepare
   hosts: all
@@ -399,6 +404,7 @@ molecule test
 ```yaml
 # molecule/default/side_effect.yml
 # Run AFTER converge to test additional scenarios
+
 ---
 - name: Side Effect - Simulate failure recovery
   hosts: all
@@ -422,6 +428,7 @@ molecule test
 
 ```yaml
 # .github/workflows/molecule.yml
+
 ---
 name: Molecule Test
 on:
@@ -463,6 +470,7 @@ jobs:
 
 ```yaml
 # .gitlab-ci.yml
+
 ---
 stages:
   - lint

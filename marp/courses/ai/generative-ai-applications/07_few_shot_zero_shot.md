@@ -132,6 +132,9 @@ result = few_shot_classify("Dashboard metrics are stale", examples,
 
 ![choosing_examples_quality_matters](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/choosing_examples_quality_matters.svg)
 
+---
+## Choosing Examples — Quality Matters
+
 ```python
 # Bad: All examples are positive
 bad_examples = [
@@ -140,7 +143,6 @@ bad_examples = [
     ("Best purchase ever!", "positive"),
     # Model will be biased toward "positive"
 ]
-
 # Good: Balanced, diverse, edge cases included
 good_examples = [
     ("Love it!", "positive"),

@@ -1,4 +1,5 @@
 # Real-World Patterns
+
 ---
 ## Chapter Overview
 * ETL pipeline design patterns
@@ -8,6 +9,7 @@
 * Change Data Capture (CDC) with Debezium
 * Schema evolution handling
 * Monitoring, alerting, and cost optimization
+
 ---
 ## Learning Objectives
 * Design robust ETL pipelines with clear separation of concerns
@@ -17,6 +19,7 @@
 * Implement CDC ingestion from operational databases
 * Handle schema evolution gracefully with mergeSchema
 * Monitor Spark jobs and optimize cloud costs
+
 ---
 ## ETL Pipeline Architecture
 
@@ -328,6 +331,7 @@ moved.show()
 | Slowly changing | Any frequency | Any frequency | Infrequent changes |
 | Reporting at point-in-time | No | Yes | Limited |
 | Implementation complexity | Low | High | Medium |
+
 ---
 ## Data Quality: Custom Validation
 

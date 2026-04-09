@@ -1,7 +1,6 @@
 # C Programming Review
 
 ---
-
 ## Introduction to C
 
 ![h:300](jpg/courses/languages/c/c-refresher/dennis_ritchie.jpg)
@@ -11,7 +10,6 @@
 - Known for efficiency and low-level control
 
 ---
-
 ## C Standards
 
 - C89/C90: First standardized version
@@ -20,7 +18,6 @@
 - C17: Bug fixes and clarifications
 
 ---
-
 ## Basic C Program Structure
 
 ```c
@@ -41,7 +38,6 @@ gcc hello.c -o hello
 ```
 
 ---
-
 ## C23: The Latest Standard
 
 - C23 (ISO/IEC 9899:2024) is the newest C standard
@@ -58,10 +54,12 @@ gcc -std=c23 program.c -o program
 ```
 
 ---
-
 ## The C Compilation Pipeline
 
 ![the_c_compilation_pipeline](svg/courses/languages/c/c-refresher/01_c_programming_review/the_c_compilation_pipeline.svg)
+
+---
+## The C Compilation Pipeline
 
 View each stage:
 
@@ -73,7 +71,6 @@ gcc hello.o -o hello           # Linked executable
 ```
 
 ---
-
 ## Anatomy of a C Program
 
 ```c
@@ -110,7 +107,6 @@ int main(int argc, char *argv[]) {
 ```
 
 ---
-
 ## Compiler Flags You Should Always Use
 
 | Flag | Purpose |
@@ -133,7 +129,6 @@ gcc -Wall -Wextra -Werror -std=c11 -pedantic -g \
 ```
 
 ---
-
 ## Undefined Behavior: The Silent Killer
 
 Undefined behavior (UB) means the C standard imposes no requirements.
@@ -165,7 +160,6 @@ free(q);     /* UB! */
 ```
 
 ---
-
 ## Implementation-Defined vs Unspecified vs Undefined
 
 | Category | Meaning | Example |
@@ -176,7 +170,6 @@ free(q);     /* UB! */
 | **Undefined** | Anything can happen | Signed integer overflow |
 
 ---
-
 ## The `main` Function Signatures
 
 Valid signatures for `main`:
@@ -204,7 +197,6 @@ int main(int argc, char **argv) {
 Note: `void main()` is **not** standard C. Always return `int`.
 
 ---
-
 ## Return Values and Exit Codes
 
 ```c
@@ -231,7 +223,6 @@ echo $?   # prints 0 on success, non-zero on failure
 ```
 
 ---
-
 ## Summary
 
 - C has evolved through multiple standards: C89, C99, C11, C17, C23

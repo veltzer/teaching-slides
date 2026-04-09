@@ -11,6 +11,7 @@ audience:
   - audiences:architects
   - audiences:devops
   - audiences:managers
+
 ---
 # Architectural Decisions In Devops
 ## Mark Veltzer

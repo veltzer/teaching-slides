@@ -46,7 +46,15 @@
 ## What Is Encryption?
 - Scrambling data so only authorized parties can read it
 
+---
+
+## Encryption Basics
+
 ![what_is_encryption](svg/courses/security/it-security-policies/04_data_protection/what_is_encryption.svg)
+
+---
+
+## Encryption Basics
 
 - Without the key, encrypted data is unreadable
 - Even if stolen, encrypted data is useless to the attacker
@@ -173,6 +181,10 @@
 ## Data Retention and Disposal
 
 ![data_retention_and_disposal](svg/courses/security/it-security-policies/04_data_protection/data_retention_and_disposal.svg)
+
+---
+
+## Data Retention and Disposal
 
 - Follow the company retention schedule
 - Do not keep data "just in case"

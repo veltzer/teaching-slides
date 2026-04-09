@@ -422,10 +422,12 @@ histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[5m]))
 ```
 
 ---
-
 ## SLOs and Error Budgets
 
 ![slos_and_error_budgets](svg/courses/devops/advanced-kubernetes/07_observability/slos_and_error_budgets.svg)
+
+---
+## SLOs and Error Budgets
 
 ```promql
 # SLO: 99.9% of requests succeed within 500ms

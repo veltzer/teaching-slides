@@ -7,6 +7,7 @@ level: intermediate
 category: architecture
 audience:
 - audiences:developers
+
 ---
 # SOLID Principles
 ## Understanding the Foundation of Object-Oriented Design
@@ -15,14 +16,20 @@ audience:
 
 ---
 
+## Overview
+
 ![title](svg/lectures/architecting/solid/title.svg)
 
+---
+
 ## Overview
+
 1. Single Responsibility Principle (SRP)
 1. Open/Closed Principle (OCP)
 1. Liskov Substitution Principle (LSP)
 1. Interface Segregation Principle (ISP)
 1. Dependency Inversion Principle (DIP)
+
 ---
 ## Why SOLID?
 - Maintainable code
@@ -31,6 +38,7 @@ audience:
 - Reduced technical debt
 - Better scalability
 - Easier to understand and modify
+
 ---
 ## Single Responsibility Principle
 
@@ -417,6 +425,7 @@ class OrderService {
 1. Liskov Substitution: Different repository implementations are interchangeable
 1. Interface Segregation: Clients depend only on methods they need
 1. Dependency Inversion: High-level OrderService depends on abstractions
+
 ---
 ## Common SOLID Violations
 1. God Classes
@@ -424,6 +433,7 @@ class OrderService {
 1. Inheritance Abuse
 1. Large Interfaces
 1. Concrete Dependencies
+
 ---
 ## How to Identify SOLID Violations
 1. Multiple responsibilities in one class
@@ -431,6 +441,7 @@ class OrderService {
 1. Inheritance breaking functionality
 1. Unused interface methods
 1. Direct instantiation of dependencies
+
 ---
 ## Refactoring Towards SOLID
 1. Extract Class
@@ -438,6 +449,7 @@ class OrderService {
 1. Dependency Injection
 1. Interface Segregation
 1. Abstract Factory Pattern
+
 ---
 ## Testing Benefits with SOLID
 - Easier unit testing
@@ -445,6 +457,7 @@ class OrderService {
 - Isolated components
 - Focused test cases
 - Improved test coverage
+
 ---
 ## Best Practices
 1. Keep classes small and focused
@@ -452,6 +465,7 @@ class OrderService {
 1. Program to interfaces
 1. Inject dependencies
 1. Follow the Law of Demeter
+
 ---
 ## Common Questions
 1. When to break SOLID principles?
@@ -459,6 +473,7 @@ class OrderService {
 1. What about performance impact?
 1. How to handle legacy code?
 1. Where to start applying SOLID?
+
 ---
 ## Tools and Techniques
 1. Static Code Analysis
@@ -466,6 +481,7 @@ class OrderService {
 1. Dependency Injection Frameworks
 1. Refactoring IDEs
 1. Architecture Validation Tools
+
 ---
 ## Summary
 SOLID Principles:
@@ -474,6 +490,7 @@ SOLID Principles:
 1. Liskov Substitution
 1. Interface Segregation
 1. Dependency Inversion
+
 ---
 ## Additional Resources
 1. Clean Code by Robert C. Martin

@@ -10,7 +10,6 @@
 - Code coverage analysis
 
 ---
-
 ## Code Quality Fundamentals
 
 ## The Python Code Quality Ecosystem
@@ -31,7 +30,6 @@ def caLc_average(vals):
 ```
 
 ---
-
 ## Debugging Techniques
 
 ## Print Debugging
@@ -58,7 +56,6 @@ def calculate_total(items):
 ```
 
 ---
-
 ## Debugging Techniques
 
 ## Logging
@@ -94,7 +91,6 @@ def calculate_total(items):
 ```
 
 ---
-
 ## Python Debuggers
 
 ## Python Debugger (pdb)
@@ -124,7 +120,6 @@ def complex_function(data):
 ```
 
 ---
-
 ## Python Debuggers
 
 ## pdb Commands
@@ -139,7 +134,6 @@ def complex_function(data):
 - `h` (help): Show command help
 
 ---
-
 ## Python Debuggers
 
 ## breakpoint() Function
@@ -168,7 +162,6 @@ def complex_calculation(data):
 ```
 
 ---
-
 ## Python Debuggers
 
 ## IPython and ipdb
@@ -200,7 +193,6 @@ def problematic_function():
 ```
 
 ---
-
 ## Python Debuggers
 
 ## pudb
@@ -231,7 +223,6 @@ def analyze_data(data):
 ```
 
 ---
-
 ## Python Debuggers
 
 ## IDE Debuggers
@@ -245,7 +236,6 @@ def analyze_data(data):
 - Debug configurations
 
 ---
-
 ## Python Debuggers
 
 ## Remote Debugging
@@ -274,7 +264,6 @@ def function_to_debug():
 ```
 
 ---
-
 ## Python Debuggers
 
 ## Post-Mortem Debugging
@@ -304,7 +293,6 @@ if __name__ == "__main__":
 ```
 
 ---
-
 ## Using Assertions Correctly
 
 ## What Are Assertions?
@@ -331,7 +319,6 @@ def binary_search(sorted_list, item):
 ```
 
 ---
-
 ## Using Assertions Correctly
 
 ## When to Use Assertions
@@ -361,7 +348,6 @@ class Rectangle:
 ```
 
 ---
-
 ## Using Assertions Correctly
 
 ## When Not to Use Assertions
@@ -385,7 +371,6 @@ def process_user_data(data):
 ```
 
 ---
-
 ## Using Assertions Correctly
 
 ## Advanced Assertion Techniques
@@ -412,7 +397,6 @@ class DataProcessor:
 ```
 
 ---
-
 ## Type Hints
 
 ## Introduction to Type Hints
@@ -441,7 +425,6 @@ def process_item(item_id: int, details: dict[str, str]) -> bool:
 ```
 
 ---
-
 ## Type Hints
 
 ## Basic Type Annotations
@@ -469,7 +452,6 @@ def find_user(user_id: int, details: bool = False) -> Optional[Dict[str, Any]]:
 ```
 
 ---
-
 ## Type Hints
 
 ## Advanced Type Annotations
@@ -511,7 +493,6 @@ def open_file(path: str, mode: Mode) -> None:
 ```
 
 ---
-
 ## Type Hints
 
 ## Class and Method Type Hints
@@ -544,7 +525,6 @@ class User:
 ```
 
 ---
-
 ## Type Hints
 
 ## Type Checking with mypy
@@ -575,7 +555,6 @@ mypy --strict script.py
 ```
 
 ---
-
 ## Type Hints
 
 ## Type Checking in IDEs
@@ -607,7 +586,6 @@ person.name = 42
 ```
 
 ---
-
 ## Linting Tools
 
 ## What is Linting?
@@ -619,7 +597,6 @@ person.name = 42
 - Run before code execution
 
 ---
-
 ## Linting Tools
 
 ## pylint
@@ -651,7 +628,6 @@ pylint --generate-rcfile > .pylintrc
 ```
 
 ---
-
 ## Linting Tools
 
 ## flake8
@@ -680,7 +656,6 @@ flake8 mypackage/
 ```
 
 ---
-
 ## Linting Tools
 
 ## black
@@ -713,7 +688,6 @@ black --check script.py
 ```
 
 ---
-
 ## Linting Tools
 
 ## isort
@@ -740,7 +714,6 @@ isort --check script.py
 ```
 
 ---
-
 ## Linting Tools
 
 ## Combining Linting Tools
@@ -773,7 +746,6 @@ repos:
 ```
 
 ---
-
 ## Testing Fundamentals
 
 ## Testing Pyramid
@@ -783,10 +755,12 @@ repos:
 - Ratio should favor unit tests (fast, focused)
 - Balance coverage and test time
 
+---
+## Testing Fundamentals
+
 ![testing_pyramid](svg/courses/languages/python/advanced-python/09_debugging_testing/testing_pyramid.svg)
 
 ---
-
 ## Testing Fundamentals
 
 ## Test-Driven Development (TDD)
@@ -818,7 +792,6 @@ def calculate_total(items):
 ```
 
 ---
-
 ## Testing Fundamentals
 
 ## Testing Vocabulary
@@ -831,7 +804,6 @@ def calculate_total(items):
 - Test coverage: Measure of code exercised by tests
 
 ---
-
 ## Testing with unittest
 
 ## The unittest Framework
@@ -862,7 +834,6 @@ if __name__ == '__main__':
 ```
 
 ---
-
 ## Testing with unittest
 
 ## unittest Assertions
@@ -879,7 +850,6 @@ if __name__ == '__main__':
 - `assertRaises(exc, fun, *args, **kwds)` - Check if fun(*args, **kwds) raises exc
 
 ---
-
 ## Testing with unittest
 
 ## Test Fixtures with unittest
@@ -923,7 +893,6 @@ class TestFileOperations(unittest.TestCase):
 ```
 
 ---
-
 ## Testing with unittest
 
 ## Running unittest Tests
@@ -951,7 +920,6 @@ python -m unittest discover -s tests -p "test_*.py"
 ```
 
 ---
-
 ## Testing with pytest
 
 ## Introduction to pytest
@@ -980,7 +948,6 @@ def test_string_methods():
 ```
 
 ---
-
 ## Testing with pytest
 
 ## pytest Fixtures
@@ -1016,7 +983,6 @@ def test_read_file(temp_file):
 ```
 
 ---
-
 ## Testing with pytest
 
 ## pytest Advanced Features
@@ -1052,7 +1018,6 @@ def test_linux_only():
 ```
 
 ---
-
 ## Testing with pytest
 
 ## Running pytest Tests
@@ -1089,7 +1054,6 @@ pytest --durations=5
 ```
 
 ---
-
 ## Mocking
 
 ## Introduction to Mocking
@@ -1115,7 +1079,6 @@ def test_get_user_name():
 ```
 
 ---
-
 ## Mocking
 
 ## Patching with Mock
@@ -1156,7 +1119,6 @@ def test_get_user_data_context():
 ```
 
 ---
-
 ## Mocking
 
 ## Mock Assertions and Verification
@@ -1191,7 +1153,6 @@ assert mock_service.other_method.called
 ```
 
 ---
-
 ## Mocking
 
 ## MagicMock and spec
@@ -1224,7 +1185,6 @@ mock_func(1, 2)  # Works
 ```
 
 ---
-
 ## Mocking
 
 ## Side Effects with Mocks
@@ -1261,7 +1221,6 @@ print(custom_mock(5))  # 10
 ```
 
 ---
-
 ## Test Organization
 
 ## Project Test Structure
@@ -1288,7 +1247,6 @@ project/
 ```
 
 ---
-
 ## Test Organization
 
 ## Test Naming Conventions
@@ -1325,7 +1283,6 @@ class TestUserAuthentication:
 ```
 
 ---
-
 ## Test Organization
 
 ## Shared Test Fixtures
@@ -1360,7 +1317,6 @@ def test_user(database_connection):
 ```
 
 ---
-
 ## Test Organization
 
 ## Test Categories and Markers
@@ -1396,7 +1352,6 @@ def test_expected_to_fail():
 ```
 
 ---
-
 ## Test Organization
 
 ## tox: Testing in Multiple Environments
@@ -1428,7 +1383,6 @@ commands =
 ```
 
 ---
-
 ## Code Coverage
 
 ## Introduction to Code Coverage
@@ -1442,7 +1396,6 @@ commands =
     - Statement coverage: statements executed
 
 ---
-
 ## Code Coverage
 
 ## coverage.py
@@ -1476,7 +1429,6 @@ coverage html
 ```
 
 ---
-
 ## Code Coverage
 
 ## pytest-cov
@@ -1501,7 +1453,6 @@ pytest --cov=mypackage --cov-fail-under=80
 ```
 
 ---
-
 ## Code Coverage
 
 ## Coverage Configuration
@@ -1534,7 +1485,6 @@ directory = coverage_html_report
 ```
 
 ---
-
 ## Code Coverage
 
 ## Understanding Coverage Reports
@@ -1554,7 +1504,6 @@ Coverage Report Guidelines:
 ```
 
 ---
-
 ## Continuous Integration
 
 ## CI for Python Testing
@@ -1592,7 +1541,6 @@ jobs:
 ```
 
 ---
-
 ## Practical Example
 
 ## Complete Testing Example
@@ -1646,7 +1594,6 @@ class TestCalculator:
 ```
 
 ---
-
 ## Practical Example
 
 ## Complete Debugging and Linting
@@ -1675,7 +1622,6 @@ tox
 ```
 
 ---
-
 ## Summary
 
 ## Key Takeaways
@@ -1688,7 +1634,6 @@ tox
 - Integration: Automate quality checks in your workflow
 
 ---
-
 ## Resources
 
 ## Further Learning

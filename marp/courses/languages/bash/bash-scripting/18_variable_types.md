@@ -1,4 +1,5 @@
 # Variable Types
+
 ---
 ## Everything is a String (by Default)
 
@@ -18,6 +19,7 @@ echo "${x:0:1}"     # 4 (first character)
 unset y
 echo $((y + 5))    # 5
 ```
+
 ---
 ## Integer Variables
 
@@ -38,6 +40,7 @@ declare -i a=5 b=3 c
 c=a+b
 echo "$c"      # 8
 ```
+
 ---
 ## String Operations: Comprehensive
 
@@ -67,6 +70,7 @@ echo "${filename%%.*}"            # archive
 echo "${filename#*.}"             # tar.gz
 echo "${filename##*.}"            # gz
 ```
+
 ---
 ## Indexed Arrays
 
@@ -88,6 +92,7 @@ echo "${#fruits[@]}"    # 3
 # Length of a specific element
 echo "${#fruits[0]}"    # 5 (length of "apple")
 ```
+
 ---
 ## Associative Arrays (`bash` 4.0+)
 
@@ -113,6 +118,7 @@ echo "${user[@]}"        # Alice 30 alice@example.com
 # Number of pairs
 echo "${#user[@]}"       # 3
 ```
+
 ---
 ## When to Use Which Type
 | Type | Use Case |
@@ -121,6 +127,7 @@ echo "${#user[@]}"       # 3
 | Integer (`-i`) | Counters, arithmetic variables |
 | Indexed array | Ordered lists, command args |
 | Associative array | Key-value mappings, configs |
+
 ---
 ## Nameref Variables (`bash` 4.3+)
 
@@ -143,6 +150,7 @@ increment count
 increment count
 echo "$count"    # 2
 ```
+
 ---
 ## Variable Attributes Summary
 

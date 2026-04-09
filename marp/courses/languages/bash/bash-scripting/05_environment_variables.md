@@ -1,4 +1,5 @@
 # Environment and Shell Variables
+
 ---
 ## Two Kinds of Variables
 ![two_kinds_of_variables](svg/courses/languages/bash/bash-scripting/05_environment_variables/two_kinds_of_variables.svg)
@@ -17,6 +18,7 @@ echo "$greeting"    # hello
 bash -c 'echo "child sees: $greeting"'
 # child sees:   (empty!)
 ```
+
 ---
 ## Environment Variables
 
@@ -32,6 +34,7 @@ export greeting="hello"
 bash -c 'echo "child sees: $greeting"'
 # child sees: hello
 ```
+
 ---
 ## Viewing All Variables
 
@@ -52,6 +55,7 @@ declare -p PATH
 # declare -x PATH="/usr/local/bin:/usr/bin:/bin"
 # The -x flag means "exported"
 ```
+
 ---
 ## Common Environment Variables
 | Variable | Purpose |
@@ -82,6 +86,7 @@ my-var=bad      # contains hyphen
 my.var=bad      # contains dot
 my var=bad      # contains space
 ```
+
 ---
 ## Temporary Environment for One Command
 
@@ -99,6 +104,7 @@ CC=gcc CFLAGS="-O2" make
 DEBUG=1 ./my_script.sh
 TZ=UTC date
 ```
+
 ---
 ## Deleting Variables
 
@@ -119,6 +125,7 @@ echo "${z-default}"    # (empty string, z IS set)
 unset z
 echo "${z-default}"    # default (z is NOT set)
 ```
+
 ---
 ## Demoting Environment Variables
 
@@ -135,6 +142,7 @@ declare +x x   # removes the export attribute
 bash -c 'echo "$x"'   # (empty - not inherited)
 echo "$x"              # 5 (still exists locally)
 ```
+
 ---
 ## Checking If a Variable Exists
 
@@ -157,6 +165,7 @@ else
     echo "x is set (possibly empty)"
 fi
 ```
+
 ---
 ## Distinguishing Empty from Unset
 
@@ -172,6 +181,7 @@ unset x
 echo "${x+SET}"     # (empty, x does not exist)
 echo "${x:+SET}"    # (empty, x does not exist)
 ```
+
 ---
 ## Read-Only Variables
 
@@ -190,6 +200,7 @@ unset PI
 
 # Readonly variables persist until the shell exits
 ```
+
 ---
 ## Variable Scope: Summary
 ![variable_scope_summary](svg/courses/languages/bash/bash-scripting/05_environment_variables/variable_scope_summary.svg)

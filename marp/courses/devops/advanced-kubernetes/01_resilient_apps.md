@@ -13,13 +13,15 @@ Advanced Kubernetes Course - Day 1, Module 1
 - Designing for failure
 
 ---
-
 ## What Makes an App Resilient?
 
 - **Self-healing**: Automatically recovers from failures
 - **Scalable**: Handles varying load gracefully
 - **Observable**: Exposes health and metrics
 - **Redundant**: No single point of failure
+
+---
+## What Makes an App Resilient?
 
 ![what_makes_an_app_resilient](svg/courses/devops/advanced-kubernetes/01_resilient_apps/what_makes_an_app_resilient.svg)
 
@@ -318,17 +320,18 @@ spec:
 | Memory exceeded | N/A | OOMKilled |
 
 ---
-
 ## Understanding CPU Units
 
 ```misc
 1 CPU = 1000m (millicores)
-
 "100m"  = 0.1 CPU  (10% of one core)
 "250m"  = 0.25 CPU (25% of one core)
 "1"     = 1 CPU    (one full core)
 "1500m" = 1.5 CPU  (one and a half cores)
 ```
+
+---
+## Understanding CPU Units
 
 ![understanding_cpu_units](svg/courses/devops/advanced-kubernetes/01_resilient_apps/understanding_cpu_units.svg)
 
@@ -438,11 +441,9 @@ spec:
 ```
 
 ---
-
 ## Readiness Probes
 
 Determines if a container is **ready to receive traffic**. If it fails, the pod is removed from `Service` endpoints.
-
 ```yaml
 spec:
   containers:
@@ -456,6 +457,9 @@ spec:
       timeoutSeconds: 2
       failureThreshold: 3
 ```
+
+---
+## Readiness Probes
 
 ![readiness_probes](svg/courses/devops/advanced-kubernetes/01_resilient_apps/readiness_probes.svg)
 

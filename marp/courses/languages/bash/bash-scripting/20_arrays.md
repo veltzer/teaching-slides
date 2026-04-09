@@ -1,4 +1,5 @@
 # Using Arrays
+
 ---
 ## Creating Arrays
 
@@ -20,6 +21,7 @@ mapfile -t files < <(find . -name "*.txt")
 # Method 5: from a string
 IFS=',' read -ra items <<< "a,b,c,d"
 ```
+
 ---
 ## Accessing Array Elements
 
@@ -43,6 +45,7 @@ echo "${#arr[@]}"    # 5
 # All indices
 echo "${!arr[@]}"    # 0 1 2 3 4
 ```
+
 ---
 ## `"${arr[@]}"` vs `"${arr[*]}"`
 
@@ -65,6 +68,7 @@ done
 
 # ALWAYS use "${arr[@]}" when iterating
 ```
+
 ---
 ## Adding Elements
 
@@ -88,6 +92,7 @@ echo "${#arr[@]}"   # 6
 # Prepend (create new array)
 arr=("zero" "${arr[@]}")
 ```
+
 ---
 ## Removing Elements
 
@@ -116,6 +121,7 @@ remove_value() {
     arr_ref=("${new_arr[@]}")
 }
 ```
+
 ---
 ## Array Slicing
 
@@ -136,6 +142,7 @@ arr2=("c" "d")
 merged=("${arr1[@]}" "${arr2[@]}")
 echo "${merged[@]}"      # a b c d
 ```
+
 ---
 ## Iterating Over Arrays
 
@@ -163,6 +170,7 @@ for fruit in "${fruits[@]}"; do
     echo "[$((i++))]: $fruit"
 done
 ```
+
 ---
 ## Checking If an Element Exists
 
@@ -189,6 +197,7 @@ if [[ " ${arr[*]} " == *" banana "* ]]; then
 fi
 # WARNING: fails if elements contain spaces
 ```
+
 ---
 ## Checking If an Index Exists
 
@@ -207,6 +216,7 @@ if [[ -v arr[0] ]]; then
     echo "arr[0] is set"        # this prints
 fi
 ```
+
 ---
 ## Sorting Arrays
 
@@ -229,6 +239,7 @@ echo "${sorted[@]}"    # 5 7 23 42 100
 mapfile -t sorted < <(printf '%s\n' "${arr[@]}" | sort -r)
 echo "${sorted[@]}"    # date cherry banana apple
 ```
+
 ---
 ## Unique Elements
 
@@ -243,6 +254,7 @@ echo "${unique[@]}"    # apple banana cherry date
 mapfile -t unique < <(printf '%s\n' "${arr[@]}" | awk '!seen[$0]++')
 echo "${unique[@]}"    # apple banana cherry date
 ```
+
 ---
 ## Arrays as Function Arguments
 
@@ -267,6 +279,7 @@ generate_list() {
 generate_list output_array
 echo "${output_array[@]}"
 ```
+
 ---
 ## `mapfile` / `readarray`
 
@@ -292,6 +305,7 @@ mapfile -t -s 1 -n 5 lines < file.txt
 # From a command
 mapfile -t pids < <(pgrep bash)
 ```
+
 ---
 ## Practical: Stack Implementation
 

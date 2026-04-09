@@ -12,6 +12,10 @@
 
 ![what_is_data_carving](svg/courses/security/linux-forensics/06_forensic_data_carving/what_is_data_carving.svg)
 
+---
+
+## What is Data Carving?
+
 - Scans raw data for file signatures (headers/footers)
 - Ignores filesystem structure entirely
 - Can recover files from formatted or corrupted drives

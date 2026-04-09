@@ -719,6 +719,10 @@ After Testimony:
 
 ![incident_response_report_vs_legal_report](svg/courses/security/linux-forensics/12_report_writing/incident_response_report_vs_legal_report.svg)
 
+---
+
+## Incident Response Report vs Legal Report
+
 - Same investigation may produce both types
 - IR report feeds into forensic report
 - Different audiences require different approaches

@@ -110,6 +110,10 @@ int ready = epoll_wait(epfd, events, 10, timeout);
 
 ![edge_vs_level_triggered](svg/courses/operating_systems/linux-systems-programming/16_multiple_io/edge_vs_level_triggered.svg)
 
+---
+
+## Edge vs Level Triggered
+
 1. **Level** - Notify while condition is true
 1. **Edge** - Notify when condition changes
 1. **Performance** - Edge triggered is more efficient

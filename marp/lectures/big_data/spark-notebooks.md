@@ -8,6 +8,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-scientists
+
 ---
 # Spark Notebooks Guide
 ## Mark Veltzer
@@ -15,14 +16,20 @@ audience:
 
 ---
 
+## Notebook Types
+
 ![title](svg/lectures/big_data/spark-notebooks/title.svg)
 
+---
+
 ## Notebook Types
+
 1. Apache Zeppelin
 1. Jupyter Notebooks
 1. Databricks Notebooks
 1. AWS EMR Notebooks
 1. Google Colab
+
 ---
 ## Core Features
 
@@ -36,6 +43,7 @@ spark = SparkSession.builder \
     .appName("JupyterExample") \
     .getOrCreate()
 ```
+
 ---
 ## Apache Zeppelin
 ```scala
@@ -45,6 +53,7 @@ val df = spark.read.json("data.json")
 %pyspark
 df = spark.read.json("data.json")
 ```
+
 ---
 ## Databricks Environment
 
@@ -56,6 +65,7 @@ df = spark.read.json("data.json")
 1. Scala
 1. SQL
 1. R (SparkR)
+
 ---
 ## Data Visualization
 ```python
@@ -65,12 +75,14 @@ df.groupBy("category") \
   .toPandas() \
   .plot(kind="bar")
 ```
+
 ---
 ## Magic Commands
 1. %%spark
 1. %%sql
 1. %%configure
 1. %%display
+
 ---
 ## Working with Data
 
@@ -88,6 +100,7 @@ display(df)
 1. Real-time results
 1. Memory management
 1. Code history
+
 ---
 ## Notebook Widgets
 ```python
@@ -96,12 +109,14 @@ from ipywidgets import interact
 def plot_distribution(column):
     display_histogram(df, column)
 ```
+
 ---
 ## Collaboration Features
 1. Shared workspaces
 1. Version control
 1. Comments
 1. Export options
+
 ---
 ## Best Practices
 
@@ -113,6 +128,7 @@ def plot_distribution(column):
 1. Clean up resources
 1. Monitor memory
 1. Use display limits
+
 ---
 ## Common Patterns
 
@@ -130,24 +146,28 @@ df.cache()
 1. Spark UI access
 1. Error tracebacks
 1. Memory tracking
+
 ---
 ## Integration Options
 1. Version control
 1. Data sources
 1. External libraries
 1. Visualization tools
+
 ---
 ## Export Capabilities
 1. HTML format
 1. PDF documents
 1. Python scripts
 1. Markdown files
+
 ---
 ## Security Features
 1. Access control
 1. Credential management
 1. Cluster isolation
 1. Network security
+
 ---
 ## Resource Management
 
@@ -159,24 +179,28 @@ df.cache()
 1. Testing
 1. Documentation
 1. Deployment
+
 ---
 ## Notebook Extensions
 1. Code formatters
 1. Git integration
 1. Variable inspector
 1. Command palette
+
 ---
 ## Cloud Integration
 1. AWS services
 1. Azure platforms
 1. Google Cloud
 1. Private clouds
+
 ---
 ## Production Usage
 1. Scheduled jobs
 1. API endpoints
 1. Dashboard creation
 1. Report generation
+
 ---
 ## Future Trends
 1. Enhanced collaboration

@@ -36,6 +36,10 @@ Redis transactions allow executing multiple commands as a single atomic operatio
 
 \* With some caveats we'll discuss
 
+---
+
+## What are Redis Transactions?
+
 ![what_are_redis_transactions](svg/courses/databases/redis/05_transactions/what_are_redis_transactions.svg)
 
 ---
@@ -396,7 +400,15 @@ Scripts execute with high privileges:
 
 Scripts work differently in distributed Redis:
 
+---
+
+## Script Replication and Clustering
+
 ![script_replication_and_clustering](svg/courses/databases/redis/05_transactions/script_replication_and_clustering.svg)
+
+---
+
+## Script Replication Requirements
 
 - Scripts must be deterministic for replication
 - In cluster mode, all keys must be in same slot

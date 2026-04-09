@@ -20,6 +20,9 @@
 | **Compliance** | Meet data residency requirements |
 | **Transparency** | Inspect model weights and architecture |
 
+---
+## Why Open Source Models?
+
 ![why_open_source_models](svg/courses/ai/generative-ai-applications/13_open_source_models/why_open_source_models.svg)
 
 ---
@@ -362,6 +365,9 @@ async def chat(request: ChatRequest):
 ## Model Merging — Combining Expertise
 
 ![model_merging_combining_expertise](svg/courses/ai/generative-ai-applications/13_open_source_models/model_merging_combining_expertise.svg)
+
+---
+## Model Merging — Combining Expertise
 
 ```python
 # Using mergekit

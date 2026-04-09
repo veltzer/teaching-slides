@@ -24,6 +24,10 @@
 
 ![https_what_the_padlock_means](svg/courses/security/it-security-policies/05_network_security/https_what_the_padlock_means.svg)
 
+---
+
+## `HTTPS` - What the Padlock Means
+
 - `HTTPS` encrypts data between your browser and the website
 - Without it, anyone on the same network can read your traffic
 - Never enter passwords or personal data on non-`HTTPS` sites
@@ -98,7 +102,15 @@ Attacker's hotspot:    "Airport_Free_WiFi_Fast"
 
 ## What Is a Firewall?
 
+---
+
+## Firewall Basics
+
 ![what_is_a_firewall](svg/courses/security/it-security-policies/05_network_security/what_is_a_firewall.svg)
+
+---
+
+## Firewall Basics
 
 - A firewall is a security guard for network traffic
 - It allows approved connections and blocks suspicious ones

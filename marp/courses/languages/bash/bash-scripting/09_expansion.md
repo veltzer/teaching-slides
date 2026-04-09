@@ -1,4 +1,5 @@
 # Expansion: Brace and Comma
+
 ---
 ## Brace Expansion
 - Generates arbitrary strings
@@ -13,6 +14,7 @@ echo {a,b,c}
 echo file{1,2,3}.txt
 # file1.txt file2.txt file3.txt
 ```
+
 ---
 ## Brace Expansion: Comma Lists
 
@@ -35,6 +37,7 @@ cp config.yml{,.backup}
 mv file.{txt,md}
 # expands to: mv file.txt file.md
 ```
+
 ---
 ## Brace Expansion: Sequences
 
@@ -58,6 +61,7 @@ echo {A..Z}
 echo {001..010}
 # 001 002 003 004 005 006 007 008 009 010
 ```
+
 ---
 ## Nesting Brace Expansions
 
@@ -78,6 +82,7 @@ mkdir -p project/{src/{main,test},lib,doc}
 echo {a,b}{1,2}{x,y}
 # a1x a1y a2x a2y b1x b1y b2x b2y
 ```
+
 ---
 ## Brace Expansion is NOT Globbing
 
@@ -98,6 +103,7 @@ eval echo "{1..$x}"
 echo {solo}          # {solo}
 echo {a,b}           # a b
 ```
+
 ---
 ## Practical Brace Expansion Examples
 
@@ -117,6 +123,7 @@ chmod 644 *.{jpg,png,gif,bmp}
 # Create multiple test files
 touch test_{pass,fail}_{01..05}.log
 ```
+
 ---
 ## Tilde Expansion
 
@@ -139,6 +146,7 @@ echo ~-
 echo "~"      # literal tilde
 echo ~/file   # /home/mark/file
 ```
+
 ---
 ## `$PATH` and Brace Expansion Together
 
@@ -151,6 +159,7 @@ export PATH="${HOME}/{bin,scripts,tools}:${PATH}"
 # Correct approach: spell it out
 export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 ```
+
 ---
 ## Expansion Order Summary
 ```misc
@@ -164,6 +173,7 @@ export PATH="${HOME}/bin:${HOME}/scripts:${HOME}/tools:${PATH}"
 8. Filename expansion:    *.txt, file?.log
 9. Quote removal:         removes unneeded quotes
 ```
+
 ---
 ## Day 1 Summary
 - The shell is the interface between you and the kernel

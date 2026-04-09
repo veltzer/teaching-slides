@@ -1,4 +1,5 @@
 # Formjacking
+
 ---
 ## What is Formjacking?
 
@@ -123,9 +124,14 @@ setInterval(function() {
 ```
 
 ---
+
 ## Content Security Policy (CSP) as Defense
 
 ![content_security_policy_csp_as_defense](svg/courses/security/cyber-attacks-and-vectors/21_form_jacking/content_security_policy_csp_as_defense.svg)
+
+---
+
+## Content Security Policy (CSP) as Defense
 
 ```http
 # HTTP Header: Content-Security-Policy
@@ -141,7 +147,6 @@ Content-Security-Policy:
 ```
 
 ### Key CSP Directives for Formjacking Defense
-
 | Directive      | Purpose                                      | Example Value              |
 |----------------|----------------------------------------------|----------------------------|
 | `script-src`   | Allowed JavaScript sources                   | `'self' https://cdn.com`   |

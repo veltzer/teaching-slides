@@ -352,6 +352,7 @@ match handle.join() {
 1. Cache coherency
 1. Lock contention
 1. Memory ordering impact
+
 ---
 ## Practice Exercise
 Create a concurrent application that:
@@ -360,6 +361,7 @@ Create a concurrent application that:
 1. Handles errors
 1. Prevents deadlocks
 1. Uses message passing
+
 ---
 ## Common Pitfalls
 1. Race conditions
@@ -367,6 +369,7 @@ Create a concurrent application that:
 1. Thread leak
 1. Lock contention
 1. Incorrect synchronization
+
 ---
 ## Summary
 - Thread basics

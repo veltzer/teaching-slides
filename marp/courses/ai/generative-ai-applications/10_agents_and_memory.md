@@ -12,7 +12,13 @@
 
 An `LLM` that can **observe**, **reason**, and **act** in a loop:
 
+---
+## What is an AI Agent?
+
 ![what_is_an_ai_agent](svg/courses/ai/generative-ai-applications/10_agents_and_memory/what_is_an_ai_agent.svg)
+
+---
+## What is an AI Agent?
 
 **Key difference from simple chatbots:** Agents can take **multiple steps** and use **external tools** to accomplish tasks.
 
@@ -180,16 +186,16 @@ def plan_and_execute(task):
 ## The Memory Problem
 
 `LLM`s have no persistent memory — each API call starts fresh:
-
 ```misc
 Call 1: User: "My name is Alice"
         AI:   "Nice to meet you, Alice!"
-
 Call 2: User: "What's my name?"
         AI:   "I don't know your name."  ← No memory!
 ```
-
 **Solutions:**
+
+---
+## The Memory Problem
 
 ![the_memory_problem](svg/courses/ai/generative-ai-applications/10_agents_and_memory/the_memory_problem.svg)
 
@@ -424,7 +430,13 @@ class EntityMemory:
 
 Multiple specialized agents collaborating:
 
+---
+## Multi-Agent Systems
+
 ![multi_agent_systems](svg/courses/ai/generative-ai-applications/10_agents_and_memory/multi_agent_systems.svg)
+
+---
+## Multi-Agent Systems
 
 ```python
 def orchestrator(task):

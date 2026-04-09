@@ -11,6 +11,7 @@ audience:
   - audiences:developers
   - audiences:sysadmins
   - audiences:devops
+
 ---
 # Bash Scripting
 ## Mark Veltzer

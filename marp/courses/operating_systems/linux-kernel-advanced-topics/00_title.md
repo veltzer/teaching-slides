@@ -11,6 +11,7 @@ duration_hours: 32
 audience:
   - audiences:developers
   - audiences:sysadmins
+
 ---
 # Linux Kernel Advanced Topics
 

@@ -1,4 +1,5 @@
 # Basic Data Structures
+
 ---
 ## Python's Built-in Data Structures
 | Type | Ordered | Mutable | Duplicates | Syntax |
@@ -20,6 +21,7 @@ mixed = [1, "hello", 3.14, True]
 nested = [[1, 2], [3, 4]]
 from_range = list(range(5))  # [0, 1, 2, 3, 4]
 ```
+
 ---
 ## Lists - Indexing and Slicing
 
@@ -33,6 +35,7 @@ print(fruits[:2])    # ['apple', 'banana']
 print(fruits[::2])   # ['apple', 'cherry']
 print(fruits[::-1])  # reversed list
 ```
+
 ---
 ## Lists - Modifying Elements
 
@@ -47,6 +50,7 @@ print(fruits)  # ['apple', 'blueberry', 'cherry']
 fruits[0:2] = ["avocado", "blackberry"]
 print(fruits)  # ['avocado', 'blackberry', 'cherry']
 ```
+
 ---
 ## Lists - Adding Elements
 
@@ -65,6 +69,7 @@ fruits.insert(1, "avocado")
 fruits.extend(["date", "elderberry"])
 # ['apple', 'avocado', 'banana', 'cherry', 'date', 'elderberry']
 ```
+
 ---
 ## Lists - Removing Elements
 
@@ -83,6 +88,7 @@ del fruits[0]
 last = fruits.pop()      # 'banana'
 first = fruits.pop(0)    # 'cherry'
 ```
+
 ---
 ## Lists - Searching
 
@@ -94,6 +100,7 @@ print(50 not in numbers)    # True
 print(numbers.index(20))    # 1 (first occurrence)
 print(numbers.count(20))    # 2
 ```
+
 ---
 ## Lists - Sorting
 
@@ -114,6 +121,7 @@ new = sorted(original)
 print(original)  # [3, 1, 2]
 print(new)       # [1, 2, 3]
 ```
+
 ---
 ## Lists - Sorting with Key
 
@@ -128,6 +136,7 @@ print(words)  # ['date', 'Apple', 'banana', 'cherry']
 words.sort(key=str.lower)
 print(words)  # ['Apple', 'banana', 'cherry', 'date']
 ```
+
 ---
 ## Lists - Other Methods
 
@@ -145,6 +154,7 @@ copy = numbers.copy()
 numbers.clear()
 print(numbers)  # []
 ```
+
 ---
 ## Lists - Concatenation and Repetition
 
@@ -161,6 +171,7 @@ print(a * 3)    # [1, 2, 3, 1, 2, 3, 1, 2, 3]
 # Length
 print(len(a))   # 3
 ```
+
 ---
 ## Lists - Unpacking
 
@@ -178,6 +189,7 @@ print(rest)   # [2, 3, 4, 5]
 print(start)  # [1, 2, 3, 4]
 print(last)   # 5
 ```
+
 ---
 ## Shallow vs Deep Copy
 
@@ -197,6 +209,7 @@ deep = copy.deepcopy(original)
 deep[0][0] = 99
 print(original[0][0])  # 1 (unchanged)
 ```
+
 ---
 ## Tuples - Creating
 
@@ -208,6 +221,7 @@ mixed = (1, "hello", 3.14)
 no_parens = 1, 2, 3  # Parentheses are optional
 from_list = tuple([1, 2, 3])
 ```
+
 ---
 ## Tuples are Immutable
 
@@ -223,6 +237,7 @@ print(t[1:])    # (2, 3)
 # t[0] = 10  # TypeError!
 # t.append(4)  # AttributeError!
 ```
+
 ---
 ## Why Use Tuples?
 - Immutable: safe to use as dictionary keys
@@ -239,6 +254,7 @@ def divide(a, b):
 quotient, remainder = divide(17, 5)
 print(quotient, remainder)  # 3 2
 ```
+
 ---
 ## Tuple Methods
 
@@ -251,6 +267,7 @@ print(t.index(3))   # 2
 ```
 
 - Tuples have very few methods because they are immutable
+
 ---
 ## Named Tuples
 
@@ -264,6 +281,7 @@ print(p.y)      # 4
 print(p[0])     # 3 (still works)
 print(p)        # Point(x=3, y=4)
 ```
+
 ---
 ## Dictionaries - Creating
 
@@ -275,6 +293,7 @@ from_kwargs = dict(name="Alice", age=30)
 from_keys = dict.fromkeys(["a", "b", "c"], 0)
 # {'a': 0, 'b': 0, 'c': 0}
 ```
+
 ---
 ## Dictionaries - Accessing Values
 
@@ -290,6 +309,7 @@ print(person.get("name"))          # 'Alice'
 print(person.get("email"))         # None
 print(person.get("email", "N/A"))  # 'N/A'
 ```
+
 ---
 ## Dictionaries - Modifying
 
@@ -307,6 +327,7 @@ person.update({"age": 32, "city": "NYC"})
 person.setdefault("name", "Bob")    # 'Alice' (exists)
 person.setdefault("phone", "555")   # '555' (added)
 ```
+
 ---
 ## Dictionaries - Removing
 
@@ -326,6 +347,7 @@ last = person.popitem()  # ('name', 'Alice')
 # Clear all
 person.clear()
 ```
+
 ---
 ## Dictionaries - Checking Keys
 
@@ -340,6 +362,7 @@ print("email" not in person)  # True
 print("Alice" in person)      # False
 print("Alice" in person.values())  # True
 ```
+
 ---
 ## Dictionaries - Views
 
@@ -354,6 +377,7 @@ print(person.items())   # dict_items([('name', 'Alice'), ('age', 30)])
 for key, value in person.items():
     print(f"{key}: {value}")
 ```
+
 ---
 ## Dictionaries - Merge Operator (Python 3.9+)
 
@@ -369,6 +393,7 @@ print(merged)
 # Update in place with |=
 defaults |= custom
 ```
+
 ---
 ## Dictionary Ordering
 - Since Python 3.7, dictionaries maintain insertion order
@@ -381,6 +406,7 @@ d["a"] = 1
 d["b"] = 2
 print(list(d.keys()))  # ['c', 'a', 'b']
 ```
+
 ---
 ## Sets - Creating
 
@@ -395,6 +421,7 @@ items = [1, 2, 2, 3, 3, 3]
 unique = list(set(items))
 print(unique)  # [1, 2, 3]
 ```
+
 ---
 ## Sets - Adding and Removing
 
@@ -417,6 +444,7 @@ item = s.pop()
 # Clear all
 s.clear()
 ```
+
 ---
 ## Sets - Operations
 
@@ -429,6 +457,7 @@ print(a & b)   # Intersection: {3, 4}
 print(a - b)   # Difference: {1, 2}
 print(a ^ b)   # Symmetric diff: {1, 2, 5, 6}
 ```
+
 ---
 ## Sets - Operations Diagram
 
@@ -447,6 +476,7 @@ print(b > a)       # True (proper superset)
 print(b >= a)      # True (superset)
 print(a.isdisjoint({4, 5}))  # True (no common elements)
 ```
+
 ---
 ## Frozen Sets
 - Immutable version of a set
@@ -462,6 +492,7 @@ cache = {frozenset([1, 2]): "result"}
 # Can be used in a set
 s = {frozenset([1, 2]), frozenset([3, 4])}
 ```
+
 ---
 ## The `enumerate()` Function
 - Pairs each element with its index
@@ -478,6 +509,7 @@ for i, fruit in enumerate(fruits):
 1: banana
 2: cherry
 ```
+
 ---
 ## `enumerate()` with Start Index
 
@@ -493,6 +525,7 @@ for i, fruit in enumerate(fruits, start=1):
 2. banana
 3. cherry
 ```
+
 ---
 ## The `zip()` Function
 - Combines iterables element by element
@@ -510,6 +543,7 @@ Alice is 30
 Bob is 25
 Charlie is 35
 ```
+
 ---
 ## `zip()` - Creating Dictionaries
 
@@ -521,6 +555,7 @@ person = dict(zip(keys, values))
 print(person)
 # {'name': 'Alice', 'age': 30, 'city': 'NYC'}
 ```
+
 ---
 ## `zip()` - Unequal Lengths
 
@@ -537,6 +572,7 @@ from itertools import zip_longest
 print(list(zip_longest(a, b, fillvalue=0)))
 # [(1, 10), (2, 20), (3, 0)]
 ```
+
 ---
 ## Performance - Time Complexity
 | Operation | List | Dict | Set |
@@ -547,12 +583,14 @@ print(list(zip_longest(a, b, fillvalue=0)))
 | Insert at start | O(n) | - | - |
 | Delete | O(n) | O(1) | O(1) |
 | Iteration | O(n) | O(n) | O(n) |
+
 ---
 ## When to Use What?
 - **List**: Ordered collection, need index access, allow duplicates
 - **Tuple**: Immutable sequence, function return values, dict keys
 - **Dict**: Key-value mapping, fast lookup by key
 - **Set**: Unique elements, membership testing, set operations
+
 ---
 ## Performance Example - Membership Testing
 
@@ -572,6 +610,7 @@ start = time.time()
 999_999 in data_set
 print(f"Set: {time.time() - start:.6f}s")
 ```
+
 ---
 ## Nested Data Structures
 
@@ -589,6 +628,7 @@ print(students[0]["name"])  # 'Alice'
 # Sort by grade
 students.sort(key=lambda s: s["grade"], reverse=True)
 ```
+
 ---
 ## Dictionary of Lists
 
@@ -604,6 +644,7 @@ for subject, scores in grades.items():
     avg = sum(scores) / len(scores)
     print(f"{subject}: {avg:.1f}")
 ```
+
 ---
 ## The `collections` Module
 - `Counter`: Count occurrences
@@ -622,6 +663,7 @@ print(count)
 print(count.most_common(2))
 # [('apple', 3), ('banana', 2)]
 ```
+
 ---
 ## `defaultdict`
 
@@ -638,6 +680,7 @@ for word in words:
 print(dict(grouped))
 # {'a': ['apple', 'avocado'], 'b': ['banana', 'blueberry'], 'c': ['cherry']}
 ```
+
 ---
 ## `deque` - Double-ended Queue
 
@@ -653,6 +696,7 @@ d.pop()            # Remove from right
 d.popleft()        # Remove from left
 print(d)           # deque([1, 2, 3])
 ```
+
 ---
 ## Summary
 - **Lists**: Mutable, ordered, `[]`, most versatile

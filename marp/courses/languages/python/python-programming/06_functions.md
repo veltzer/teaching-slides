@@ -1,4 +1,5 @@
 # Functions
+
 ---
 ## Defining Functions
 
@@ -15,6 +16,7 @@ print(result)  # Hello, Alice!
 - Function name follows `snake_case` convention
 - Parentheses contain parameters
 - Body is indented
+
 ---
 ## Functions Without Return
 
@@ -28,6 +30,7 @@ print(result)  # None
 
 - Functions without `return` implicitly return `None`
 - `return` without a value also returns `None`
+
 ---
 ## Multiple Return Values
 
@@ -43,6 +46,7 @@ print(f"17 / 5 = {q} remainder {r}")
 ```
 
 - Actually returns a tuple
+
 ---
 ## Early Return
 
@@ -55,6 +59,7 @@ def absolute(n):
 print(absolute(-5))  # 5
 print(absolute(3))   # 3
 ```
+
 ---
 ## Parameters vs Arguments
 - **Parameters**: Variables in the function definition
@@ -66,6 +71,7 @@ def greet(name):      # 'name' is a parameter
 
 greet("Alice")        # "Alice" is an argument
 ```
+
 ---
 ## Positional Arguments
 
@@ -76,6 +82,7 @@ def power(base, exponent):
 print(power(2, 10))   # 1024
 print(power(10, 2))   # 100 (order matters!)
 ```
+
 ---
 ## Keyword Arguments
 
@@ -89,6 +96,7 @@ print(power(exponent=10, base=2))    # 1024 (order doesn't matter)
 print(power(2, exponent=10))         # 1024 (mix positional and keyword)
 # print(power(base=2, 10))           # SyntaxError!
 ```
+
 ---
 ## Default Parameter Values
 
@@ -100,6 +108,7 @@ print(greet("Alice"))            # Hello, Alice!
 print(greet("Alice", "Hi"))      # Hi, Alice!
 print(greet("Alice", greeting="Hey"))  # Hey, Alice!
 ```
+
 ---
 ## Mutable Default Arguments - Beware!
 
@@ -119,6 +128,7 @@ def append_to(item, lst=None):
     lst.append(item)
     return lst
 ```
+
 ---
 ## `*args` - Variable Positional Arguments
 
@@ -133,6 +143,7 @@ print(add())             # 0
 ```
 
 - `*args` collects extra positional arguments into a tuple
+
 ---
 ## `**kwargs` - Variable Keyword Arguments
 
@@ -150,6 +161,7 @@ name: Alice
 age: 30
 city: NYC
 ```
+
 ---
 ## Combining `*args` and `**kwargs`
 
@@ -167,6 +179,7 @@ a=1, b=2
 args=(3, 4)
 kwargs={'x': 5, 'y': 6}
 ```
+
 ---
 ## Parameter Order Rules
 - The order must be:
@@ -182,6 +195,7 @@ def func(a, b, *args, c=10, **kwargs):
 func(1, 2, 3, 4, c=20, x=30)
 # 1 2 (3, 4) 20 {'x': 30}
 ```
+
 ---
 ## Keyword-Only Arguments
 - Parameters after `*` must be passed as keywords
@@ -194,6 +208,7 @@ def connect(host, port, *, timeout=30, retries=3):
 connect("localhost", 8080, timeout=10)
 # connect("localhost", 8080, 10)  # TypeError!
 ```
+
 ---
 ## Positional-Only Arguments (Python 3.8+)
 - Parameters before `/` must be passed positionally
@@ -206,6 +221,7 @@ print(greet("Alice"))             # Hello, Alice!
 print(greet("Alice", "Hi"))       # Hi, Alice!
 # print(greet(name="Alice"))      # TypeError!
 ```
+
 ---
 ## Complete Parameter Syntax
 
@@ -218,6 +234,7 @@ func(1, normal=2, kw_only=3)   # OK
 # func(pos_only=1, ...)        # TypeError
 # func(1, 2, 3)                # TypeError
 ```
+
 ---
 ## Unpacking Arguments
 
@@ -233,6 +250,7 @@ print(add(*args))  # 6
 kwargs = {"a": 1, "b": 2, "c": 3}
 print(add(**kwargs))  # 6
 ```
+
 ---
 ## Lambda Functions
 - Anonymous, single-expression functions
@@ -247,6 +265,7 @@ double = lambda x: x * 2
 
 print(double(5))  # 10
 ```
+
 ---
 ## Lambda Use Cases
 
@@ -262,6 +281,7 @@ numbers = [1, -2, 3, -4, 5]
 positives = list(filter(lambda x: x > 0, numbers))
 print(positives)  # [1, 3, 5]
 ```
+
 ---
 ## `map()` Function
 
@@ -279,6 +299,7 @@ def square(x):
 squared = list(map(square, numbers))
 print(squared)  # [1, 4, 9, 16, 25]
 ```
+
 ---
 ## `filter()` Function
 
@@ -296,6 +317,7 @@ def is_even(n):
 evens = list(filter(is_even, numbers))
 print(evens)  # [-4, -2, 0, 2, 4]
 ```
+
 ---
 ## `reduce()` Function
 
@@ -312,6 +334,7 @@ print(total)  # 15
 product = reduce(lambda a, b: a * b, numbers)
 print(product)  # 120
 ```
+
 ---
 ## Variable Scope - LEGB Rule
 - Python looks up names in this order:
@@ -330,6 +353,7 @@ def outer():
         print(x)  # local
     inner()
 ```
+
 ---
 ## Local vs Global Scope
 
@@ -343,6 +367,7 @@ def func():
 func()     # 20
 print(x)   # 10 (global unchanged)
 ```
+
 ---
 ## The `global` Keyword
 
@@ -359,6 +384,7 @@ print(x)   # 20 (global changed)
 ```
 
 - Use sparingly; prefer returning values instead
+
 ---
 ## The `nonlocal` Keyword
 
@@ -377,6 +403,7 @@ def outer():
 
 outer()
 ```
+
 ---
 ## Closures
 - A function that remembers values from its enclosing scope
@@ -393,6 +420,7 @@ triple = make_multiplier(3)
 print(double(5))   # 10
 print(triple(5))   # 15
 ```
+
 ---
 ## Closure - Counter Example
 
@@ -412,6 +440,7 @@ print(c())  # 1
 print(c())  # 2
 print(c())  # 3
 ```
+
 ---
 ## Functions are First-Class Objects
 - Functions can be:
@@ -431,6 +460,7 @@ print(say_hi("Alice"))  # Hello, Alice!
 # Store in list
 funcs = [len, str.upper, abs]
 ```
+
 ---
 ## Functions as Arguments
 
@@ -442,6 +472,7 @@ print(apply(abs, -5))        # 5
 print(apply(str.upper, "hi"))  # HI
 print(apply(len, [1, 2, 3]))  # 3
 ```
+
 ---
 ## Decorators - Concept
 - A decorator wraps a function to extend its behavior
@@ -455,6 +486,7 @@ def my_decorator(func):
         return result
     return wrapper
 ```
+
 ---
 ## Decorators - Usage
 
@@ -479,6 +511,7 @@ Before
 Hello, Alice!
 After
 ```
+
 ---
 ## Decorator - Timing Example
 
@@ -500,6 +533,7 @@ def slow_function():
 
 slow_function()  # slow_function took 1.0012s
 ```
+
 ---
 ## Preserving Function Metadata
 
@@ -520,6 +554,7 @@ def greet(name):
 print(greet.__name__)  # 'greet' (not 'wrapper')
 print(greet.__doc__)   # 'Greet someone.'
 ```
+
 ---
 ## Decorators with Arguments
 
@@ -542,6 +577,7 @@ def say_hi():
 
 say_hi()  # Prints "Hi!" three times
 ```
+
 ---
 ## Type Hints
 
@@ -558,6 +594,7 @@ def process(items: list[str]) -> dict[str, int]:
 
 - Type hints are optional and not enforced at runtime
 - Used by IDEs and type checkers like `mypy`
+
 ---
 ## Type Hints - Optional and Union
 
@@ -575,6 +612,7 @@ def find(items: list[str], target: str) -> Optional[int]:
 def process(value: int | str) -> str:
     return str(value)
 ```
+
 ---
 ## Recursive Functions
 
@@ -593,6 +631,7 @@ def fibonacci(n):
 
 print(fibonacci(10))  # 55
 ```
+
 ---
 ## Recursion Limit
 
@@ -608,6 +647,7 @@ sys.setrecursionlimit(5000)
 - Python has a default recursion limit of 1000
 - Exceeding it raises `RecursionError`
 - Prefer iterative solutions for deep recursion
+
 ---
 ## Docstring Conventions
 
@@ -629,6 +669,7 @@ def calculate_area(length: float, width: float) -> float:
         raise ValueError("Dimensions must be non-negative")
     return length * width
 ```
+
 ---
 ## `callable()` and `__call__`
 
@@ -648,6 +689,7 @@ add5 = Adder(5)
 print(add5(10))    # 15
 print(callable(add5))  # True
 ```
+
 ---
 ## Summary
 - Functions are defined with `def` and can return values

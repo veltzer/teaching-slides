@@ -1,10 +1,12 @@
 # Optimization Techniques
+
 ---
 ## Why Optimize?
 - Improve execution speed
 - Reduce memory usage
 - Enhance energy efficiency
 - Better utilization of hardware resources
+
 ---
 ## Common Optimization Strategies
 1. Loop optimization
@@ -14,6 +16,7 @@
 1. Register allocation
 1. Instruction selection
 1. Parallelization
+
 ---
 ## Loop Optimization: Loop Unrolling
 
@@ -196,6 +199,7 @@ gprof program gmon.out > analysis.txt
 - Over-optimization leading to unreadable code
 - Architecture-specific optimizations reducing portability
 - Optimizations that break correctness
+
 ---
 ## Best Practices
 1. Profile before optimizing

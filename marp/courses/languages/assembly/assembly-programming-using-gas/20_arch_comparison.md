@@ -1,9 +1,11 @@
 # Comparison with Other Architectures
+
 ---
 ## ARM Assembly Basics
 - Reduced Instruction Set Computing (RISC)
 - Used in mobile devices, embedded systems
 - Different syntax and conventions from x86
+
 ---
 ## ARM vs x86: Register Set
 ARM:
@@ -14,6 +16,7 @@ ARM:
 x86:
 - eax, ebx, ecx, edx, esi, edi, ebp, esp
 - eip (instruction pointer)
+
 ---
 ## ARM Assembly Example
 
@@ -174,12 +177,14 @@ message:
 | MIPS         | add $t0,$t1,$t2| lw $t0, 0($t1)     | bne $t0,$t1,label |
 | PowerPC      | add r3, r4, r5| lwz r3, 0(r4)       | bne cr0, label|
 | RISC-V       | add a0, a1, a2| lw a0, 0(a1)        | bne a0, a1, label |
+
 ---
 ## Architectural Trade-offs
 - Performance vs Power consumption
 - Code density vs Simplicity
 - Hardware complexity vs Software flexibility
 - Backward compatibility vs Clean design
+
 ---
 ## Choosing an Architecture
 - Consider target platform (mobile, desktop, server)

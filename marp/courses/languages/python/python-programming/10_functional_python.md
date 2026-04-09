@@ -1,4 +1,5 @@
 # Functional Python
+
 ---
 ## What is Functional Programming?
 - Programming paradigm that treats computation as evaluation of functions
@@ -8,6 +9,7 @@
     - Immutability
     - Higher-order functions
 - Python supports functional style alongside OOP
+
 ---
 ## Iterables
 - An iterable is any object you can loop over
@@ -21,6 +23,7 @@ for x in "hello": pass
 for x in {"a": 1}: pass
 for x in range(5): pass
 ```
+
 ---
 ## The Iterator Protocol
 - An **iterable** has an `__iter__` method that returns an **iterator**
@@ -36,6 +39,7 @@ print(next(iterator))  # 2
 print(next(iterator))  # 3
 # print(next(iterator))  # StopIteration!
 ```
+
 ---
 ## How `for` Loops Work Internally
 
@@ -53,6 +57,7 @@ while True:
     except StopIteration:
         break
 ```
+
 ---
 ## Creating Custom Iterators
 
@@ -74,6 +79,7 @@ for n in Countdown(5):
     print(n, end=" ")
 # 5 4 3 2 1
 ```
+
 ---
 ## Iterators are Lazy
 - Iterators produce values on demand
@@ -93,6 +99,7 @@ print()
 for n in numbers:
     print(n, end=" ")  # (nothing)
 ```
+
 ---
 ## Generators - Introduction
 - A simpler way to create iterators
@@ -109,6 +116,7 @@ for x in countdown(5):
     print(x, end=" ")
 # 5 4 3 2 1
 ```
+
 ---
 ## Generator vs Regular Function
 
@@ -129,6 +137,7 @@ def get_squares_gen(n):
 for x in get_squares_gen(5):
     print(x, end=" ")  # 0 1 4 9 16
 ```
+
 ---
 ## Generator Memory Efficiency
 
@@ -143,6 +152,7 @@ print(sys.getsizeof(squares_list))  # ~8 MB
 squares_gen = (x ** 2 for x in range(1_000_000))
 print(sys.getsizeof(squares_gen))   # ~200 bytes
 ```
+
 ---
 ## Generator Functions - Multiple Yields
 
@@ -159,6 +169,7 @@ for _ in range(10):
     print(next(fib), end=" ")
 # 0 1 1 2 3 5 8 13 21 34
 ```
+
 ---
 ## `yield` from
 
@@ -176,6 +187,7 @@ print(list(flatten(data)))
 ```
 
 - `yield from` delegates to a sub-generator
+
 ---
 ## Generator Expressions
 - Like list comprehensions but lazy
@@ -195,6 +207,7 @@ print(type(squares_gen))   # <class 'generator'>
 total = sum(x ** 2 for x in range(10))
 print(total)  # 285
 ```
+
 ---
 ## List Comprehensions
 
@@ -212,6 +225,7 @@ words = ["hello", "world"]
 upper = [w.upper() for w in words]
 print(upper)  # ['HELLO', 'WORLD']
 ```
+
 ---
 ## List Comprehension vs Loop
 
@@ -229,6 +243,7 @@ print(result)  # [0, 4, 16, 36, 64]
 
 - List comprehensions are often faster than equivalent loops
 - More readable for simple transformations
+
 ---
 ## Nested List Comprehensions
 
@@ -243,6 +258,7 @@ matrix = [[i * 3 + j for j in range(3)] for i in range(3)]
 print(matrix)
 # [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
 ```
+
 ---
 ## Dictionary Comprehensions
 
@@ -261,6 +277,7 @@ data = {"a": 1, "b": 2, "c": 3, "d": 4}
 filtered = {k: v for k, v in data.items() if v > 2}
 print(filtered)  # {'c': 3, 'd': 4}
 ```
+
 ---
 ## Set Comprehensions
 
@@ -274,6 +291,7 @@ words = ["Hello", "hello", "HELLO", "World"]
 unique = {w.lower() for w in words}
 print(unique)  # {'hello', 'world'}
 ```
+
 ---
 ## Comprehension with Walrus Operator
 
@@ -290,6 +308,7 @@ roots = [
 ]
 print(roots)  # [4.0, 5.0]
 ```
+
 ---
 ## When NOT to Use Comprehensions
 - When the logic is complex (use a loop instead)
@@ -315,6 +334,7 @@ for x in range(10):
             if val > threshold:
                 result.append(val)
 ```
+
 ---
 ## The `map()` Function
 
@@ -332,6 +352,7 @@ squared = [x ** 2 for x in numbers]
 sums = list(map(lambda a, b: a + b, [1, 2, 3], [10, 20, 30]))
 print(sums)  # [11, 22, 33]
 ```
+
 ---
 ## The `filter()` Function
 
@@ -350,6 +371,7 @@ data = [0, 1, "", "hello", None, 42, [], [1]]
 truthy = list(filter(None, data))
 print(truthy)  # [1, 'hello', 42, [1]]
 ```
+
 ---
 ## The `reduce()` Function
 
@@ -370,6 +392,7 @@ print(product)  # 120
 maximum = reduce(lambda a, b: a if a > b else b, numbers)
 print(maximum)  # 5
 ```
+
 ---
 ## `reduce()` Visualization
 
@@ -392,6 +415,7 @@ print(all(x > -10 for x in numbers))  # True
 # Short-circuit evaluation
 print(any(x > 0 for x in numbers))  # Stops at first True
 ```
+
 ---
 ## `sorted()` with Key Functions
 
@@ -410,6 +434,7 @@ by_name = sorted(students, key=lambda s: s["name"])
 from operator import itemgetter
 by_grade = sorted(students, key=itemgetter("grade"))
 ```
+
 ---
 ## `itertools` - Infinite Iterators
 
@@ -431,6 +456,7 @@ for _, c in zip(range(5), colors):
 threes = list(repeat(3, 5))
 print(threes)  # [3, 3, 3, 3, 3]
 ```
+
 ---
 ## `itertools` - Combinatoric
 
@@ -449,6 +475,7 @@ print(list(permutations("ABC", 2)))
 print(list(product([0, 1], repeat=3)))
 # [(0,0,0), (0,0,1), (0,1,0), (0,1,1), (1,0,0), ...]
 ```
+
 ---
 ## `itertools` - Chain and Groupby
 
@@ -466,6 +493,7 @@ for key, group in groupby(data, key=lambda x: x[0]):
 # A: [('A', 1), ('A', 2)]
 # B: [('B', 3), ('B', 4)]
 ```
+
 ---
 ## `itertools` - Slicing Iterators
 
@@ -486,6 +514,7 @@ print(result)  # [1, 3, 5]
 result = list(dropwhile(lambda x: x < 6, nums))
 print(result)  # [7, 2, 4, 6]
 ```
+
 ---
 ## `itertools` - Accumulate
 
@@ -507,6 +536,7 @@ print(list(accumulate(numbers, operator.mul)))
 print(list(accumulate([3, 1, 4, 1, 5], max)))
 # [3, 3, 4, 4, 5]
 ```
+
 ---
 ## `functools.partial`
 
@@ -527,6 +557,7 @@ numbers = [1, 2, 3, 4, 5]
 doubled = list(map(partial(multiply, 2), numbers))
 print(doubled)  # [2, 4, 6, 8, 10]
 ```
+
 ---
 ## `functools.lru_cache`
 
@@ -548,6 +579,7 @@ print(fibonacci.cache_info())
 # Clear cache
 fibonacci.cache_clear()
 ```
+
 ---
 ## `operator` Module
 
@@ -565,6 +597,7 @@ by_grade = sorted(students, key=itemgetter(1))
 print(by_grade)
 # [('Bob', 85), ('Alice', 90), ('Charlie', 92)]
 ```
+
 ---
 ## Generator Pipelines
 
@@ -588,6 +621,7 @@ lines = read_lines("config.txt")
 filtered = filter_comments(lines)
 result = to_upper(filtered)
 ```
+
 ---
 ## Chaining Generators
 
@@ -610,6 +644,7 @@ def take(n, iterable):
 result = list(take(5, squares(integers())))
 print(result)  # [1, 4, 9, 16, 25]
 ```
+
 ---
 ## Pure Functions
 - Same input always produces same output
@@ -627,6 +662,7 @@ def add_to_total(n):
     total += n  # Side effect!
     return total
 ```
+
 ---
 ## Immutability Patterns
 
@@ -651,6 +687,7 @@ class Config:
     host: str
     port: int
 ```
+
 ---
 ## Summary
 - Iterators produce values lazily using `__next__`

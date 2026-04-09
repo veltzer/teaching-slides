@@ -137,6 +137,10 @@ Error: KeyError: 'users'
 
 ![how_sampling_affects_output](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/how_sampling_affects_output.svg)
 
+---
+
+## Temperature, Top-p, and Sampling Parameters
+
 ## Key Parameters
 - **`temperature`**: controls randomness; lower = more focused
 - **`top_p`**: nucleus sampling; `0.95` is a safe default
@@ -284,6 +288,10 @@ review = client.chat.completions.create(
 
 ![breaking_complex_tasks_into_stages](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/breaking_complex_tasks_into_stages.svg)
 
+---
+
+## Prompt Chaining and Multi-Stage Pipelines
+
 1. Each stage gets a focused prompt with a single responsibility
 1. Output of stage N becomes input of stage N+1
 1. Enables different models/temperatures per stage
@@ -415,7 +423,17 @@ prompt = REVIEW_TEMPLATE.render(
 - Rank context sources by relevance to the current task
 - Assemble prompt from highest-priority items first
 
+---
+
+## Context Management: Priority-Based Assembly
+
+## Fitting the Right Context into Limited Windows
+
 ![fitting_the_right_context_into_limited_windows](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/fitting_the_right_context_into_limited_windows.svg)
+
+---
+
+## Context Management: Priority-Based Assembly
 
 - Always reserve tokens for the model's response
 - Drop lowest-priority items first when the window is tight
@@ -516,6 +534,10 @@ response = client.messages.create(
 ## Building a Prompt Evaluation Loop
 
 ![building_a_prompt_evaluation_loop](svg/courses/ai/advanced-ai-powered-development/08_prompt_engineering/building_a_prompt_evaluation_loop.svg)
+
+---
+
+## Evaluating and Iterating on Prompts
 
 1. Build a test set: 20-50 representative inputs with expected outputs
 1. Score with automated metrics: exact match, BLEU, or LLM-as-judge

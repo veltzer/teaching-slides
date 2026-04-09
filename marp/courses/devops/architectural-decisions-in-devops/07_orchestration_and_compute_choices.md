@@ -1,4 +1,5 @@
 # Orchestration and Compute Choices
+
 ---
 ## Table of Contents
 
@@ -12,13 +13,18 @@
 1. Managed vs Self-Managed `Kubernetes`
 1. `Serverless` Architecture Tradeoffs
 1. Decision Framework
+
 ---
 ## The Compute Spectrum
 
 ![the_compute_spectrum](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/the_compute_spectrum.svg)
 
+---
+## The Compute Spectrum
+
 - Moving right trades **control** for **convenience**
 - Each step reduces operational burden but increases abstraction
+
 ---
 ## Kubernetes Overview
 
@@ -30,6 +36,7 @@
     - Storage orchestration
     - Self-healing and rolling updates
 - De facto standard for container orchestration
+
 ---
 ## Managed Containers and Serverless Overview
 
@@ -43,6 +50,7 @@
 - Provider manages all infrastructure
 - Pay only for actual execution time
 - Automatic scaling from zero to thousands of instances
+
 ---
 ## Kubernetes Architecture
 
@@ -75,6 +83,7 @@
     - Cloud SDK knowledge
     - Event-driven programming experience
     - Understanding of provider limits
+
 ---
 ## When K8s Complexity Is Justified
 
@@ -89,6 +98,7 @@ NOT justified:
 - Small team (fewer than 5 developers)
 - Fewer than 10 services
 - No dedicated ops/platform team
+
 ---
 ## Cost Models: Kubernetes
 
@@ -102,6 +112,7 @@ NOT justified:
 - **Hidden costs**:
     - Platform team salaries
     - Training, certification, and tooling licenses
+
 ---
 ## Cost Models: Managed Containers and Serverless
 
@@ -116,6 +127,7 @@ NOT justified:
 - $0.0000166667 per `GB`-second
 - 1M free requests per month
 - Best for sporadic workloads; worst for constant high-throughput
+
 ---
 ## Cost Comparison at Scale
 
@@ -136,6 +148,7 @@ NOT justified:
     - Near-instant scaling (milliseconds to seconds)
     - Scales to zero automatically
     - Concurrency limits per function (default 1000)
+
 ---
 ## Portability vs Convenience Matrix
 
@@ -149,14 +162,19 @@ NOT justified:
 - `Kubernetes` `YAML` manifests work on any conformant cluster
 - Container images are portable; orchestration config is not
 - `Serverless` has the deepest vendor lock-in
+
 ---
 ## Cluster Strategy: Cluster Per Team
 
 ![cluster_strategy_cluster_per_team](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cluster_strategy_cluster_per_team.svg)
 
+---
+## Cluster Strategy: Cluster Per Team
+
 - Full blast radius isolation between teams
 - Higher cost: each cluster has its own control plane
 - Simpler `RBAC`; independent upgrade schedules
+
 ---
 ## Cluster Per Team: Pros and Cons
 
@@ -171,6 +189,7 @@ NOT justified:
 - Cross-cluster service communication is harder
 - More clusters to patch and maintain
 - Harder to enforce organization-wide policies
+
 ---
 ## Cluster Strategy: Shared Clusters
 
@@ -190,6 +209,7 @@ NOT justified:
 - Complex `RBAC` configuration
 - Blast radius: cluster failure affects all teams
 - Namespace management overhead
+
 ---
 ## Namespace Strategies
 
@@ -208,6 +228,7 @@ NOT justified:
 **Hybrid** (recommended):
 - `team-backend-prod`, `team-backend-dev`
 - Combines team ownership with environment separation
+
 ---
 ## Namespace Isolation: ResourceQuota
 
@@ -230,6 +251,7 @@ spec:
 - `ResourceQuota` limits total resource consumption
 - `LimitRange` sets per-pod defaults and maximums
 - `NetworkPolicy` controls pod-to-pod traffic
+
 ---
 ## Network Policies for Multi-Tenancy
 
@@ -254,6 +276,7 @@ spec:
 
 - Default deny all cross-namespace traffic
 - Explicitly allow only required communication paths
+
 ---
 ## Multi-Tenancy Models
 
@@ -267,6 +290,7 @@ spec:
 - Virtual clusters (`vCluster`) provide strong isolation within shared infra
 - `Hierarchical` Namespace Controller (`HNC`) enables nested namespaces
 - Choose based on compliance requirements and trust boundaries
+
 ---
 ## Managed Kubernetes Services Comparison
 
@@ -281,6 +305,7 @@ spec:
 
 - All three manage the control plane for you
 - Worker nodes remain your responsibility (unless using `Autopilot`/`Fargate`)
+
 ---
 ## Managed K8s: What You Still Own
 
@@ -295,6 +320,7 @@ Even with managed `Kubernetes`, you are responsible for:
 - Monitoring, logging, and alerting
 - Backup and disaster recovery
 - Cost optimization (right-sizing nodes)
+
 ---
 ## Self-Managed Kubernetes
 
@@ -310,6 +336,7 @@ Tools for self-management:
 - `kops` - production-grade cluster management
 - `Rancher` - multi-cluster management platform
 - `Kubespray` - `Ansible`-based deployment
+
 ---
 ## Self-Managed vs Managed: Decision Tree
 
@@ -325,8 +352,12 @@ Tools for self-management:
 
 ![cold_start_what_happens](svg/courses/devops/architectural-decisions-in-devops/07_orchestration_and_compute_choices/cold_start_what_happens.svg)
 
+---
+## Cold Start: What Happens
+
 - Cold starts happen when no idle instance exists
 - Frequency depends on traffic patterns and provider
+
 ---
 ## Cold Start Impact by Runtime
 
@@ -343,6 +374,7 @@ Mitigation strategies:
 - Provisioned concurrency (pre-warmed instances)
 - Keep functions small and dependency-light
 - Use compiled languages for latency-sensitive paths
+
 ---
 ## Cold Start Mitigation Techniques
 
@@ -359,6 +391,7 @@ Mitigation strategies:
 1. **Use `SnapStart`** (Java on `AWS Lambda`)
     - Snapshots initialized JVM state
     - Reduces Java cold starts to ~200ms
+
 ---
 ## Vendor Lock-In Depth
 
@@ -396,6 +429,7 @@ The business logic is portable; everything around it is not.
     - `HTTP` instead of provider-specific triggers
     - `CloudEvents` for event format standardization
 - Accept some lock-in as a trade-off for velocity
+
 ---
 ## Event-Driven vs Request-Driven
 
@@ -434,6 +468,7 @@ Event-driven workloads align best with serverless economics.
 
 - These limits shape what workloads can run serverless
 - Limits can often be increased by request
+
 ---
 ## Hybrid Architectures
 
@@ -451,6 +486,7 @@ Most real-world systems combine compute models:
     - Webhooks and integrations
     - Scheduled tasks and cron jobs
     - Image/video processing triggers
+
 ---
 ## Hybrid Architecture Example
 
@@ -479,6 +515,7 @@ rules:
 - Bind roles to groups from your identity provider
 - `OPA Gatekeeper` enforces policies at admission time
 - Enforce required labels, approved registries, resource limits
+
 ---
 ## Cost Optimization Strategies
 
@@ -512,6 +549,7 @@ kubectl top pods -n production
 
 - Unified observability across models is challenging
 - Consider `OpenTelemetry` as a vendor-neutral standard
+
 ---
 ## Security Considerations by Model
 
@@ -531,6 +569,7 @@ kubectl top pods -n production
 - No OS to patch
 - Provider handles runtime security
 - Focus shifts to application-level security
+
 ---
 ## CI/CD Patterns by Compute Model
 
@@ -556,6 +595,7 @@ git push -> CI runs tests -> sam build
 ```
 
 - `GitOps` is the gold standard for `Kubernetes`
+
 ---
 ## Decision Framework
 
@@ -574,6 +614,7 @@ Ask these questions in order:
 1. **What is your team size?**
     - < 5 engineers: Avoid self-managed `K8s`
     - 15+: Any model works
+
 ---
 ## Decision Matrix Summary
 
@@ -596,6 +637,7 @@ Ask these questions in order:
     - Provision concurrency for critical endpoints
 1. **No cost alerts**
     - Serverless can generate surprise bills
+
 ---
 ## Emerging Trends
 
@@ -612,6 +654,7 @@ Ask these questions in order:
 - **`FinOps` integration**
     - Cost visibility built into orchestration tooling
     - Real-time cost attribution per team/service
+
 ---
 ## Key Takeaways
 

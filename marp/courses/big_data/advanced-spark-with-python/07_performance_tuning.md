@@ -1,4 +1,5 @@
 # Performance Tuning and Optimization
+
 ---
 ## Chapter Overview
 * Spark UI interpretation and DAG visualization
@@ -7,6 +8,7 @@
 * Data skew detection and handling
 * Adaptive Query Execution (AQE)
 * Caching strategies and storage levels
+
 ---
 ## Learning Objectives
 * Read and interpret the Spark Web UI
@@ -15,6 +17,7 @@
 * Handle data skew with salting and broadcast joins
 * Leverage AQE for automatic runtime optimization
 * Choose the right caching strategy for each workload
+
 ---
 ## The Spark Web UI
 1. Jobs tab: shows all jobs triggered by actions
@@ -23,6 +26,7 @@
 1. Environment tab: shows all Spark configuration
 1. Executors tab: shows executor memory, GC, shuffle metrics
 1. SQL tab: shows query plans and execution statistics
+
 ---
 ## Spark UI: Key Metrics to Watch
 
@@ -35,6 +39,7 @@
 | Input Size | Stages tab | Data volume per stage |
 | Scheduler Delay | Tasks tab | Cluster overhead |
 | Peak Execution Memory | SQL tab | Memory consumption |
+
 ---
 ## Understanding the DAG
 
@@ -89,6 +94,7 @@ query.explain(mode="codegen")
 | BroadcastHashJoin | BroadcastHashJoin | Broadcast join |
 | SortMergeJoin | SortMergeJoin | Sort-merge join |
 | WholeStageCodegen | WholeStageCodegen | Fused code generation |
+
 ---
 ## Shuffle Deep Dive
 
@@ -191,6 +197,7 @@ df_by_key = df.repartition(100, "user_id")
 | 200 - 500 MB | Large | Consider repartitioning |
 | > 500 MB | Too large | Repartition urgently |
 | > 2 GB | Critical | Will likely OOM |
+
 ---
 ## Memory Architecture
 
@@ -240,6 +247,7 @@ spark.conf.set("spark.driver.maxResultSize", "2g")
 | Shuffle spill to disk | Insufficient execution memory | Increase memory fraction |
 | Python worker OOM | Heavy pandas/numpy | Increase pyspark.memory |
 | Container killed by YARN | Memory overhead too low | Increase memoryOverhead |
+
 ---
 ## Data Skew Detection
 
@@ -520,6 +528,7 @@ base_df.unpersist()
 | persist(level) | Configurable | Preserved | Recompute from source | Control storage level |
 | checkpoint() | Disk only | Truncated | Read from checkpoint | Break long lineage |
 | localCheckpoint() | Disk (local) | Truncated | Lost if executor dies | Fast, less reliable |
+
 ---
 ## When to Cache and When Not To
 

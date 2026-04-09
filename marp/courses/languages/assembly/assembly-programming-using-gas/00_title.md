@@ -10,6 +10,7 @@ category: language
 duration_hours: 32
 audience:
   - audiences:developers
+
 ---
 # Assembly Programming Using Gas
 ## Mark Veltzer

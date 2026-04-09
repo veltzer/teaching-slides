@@ -1,4 +1,5 @@
 # Basic OS Security
+
 ---
 ## OS Security Fundamentals
 
@@ -82,23 +83,24 @@ setfacl -b /var/log/application.log
 ## PAM (Pluggable Authentication Modules)
 
 PAM controls authentication on Linux systems:
-
 ```bash
 # /etc/pam.d/common-password - Password policy configuration
 # Require minimum length 12, complexity rules
 password requisite pam_pwquality.so retry=3 \
     minlen=12 dcredit=-1 ucredit=-1 \
     ocredit=-1 lcredit=-1
-
 # /etc/pam.d/common-auth - Account lockout after failed attempts
 auth required pam_faillock.so preauth deny=5 \
     unlock_time=900 audit
 auth required pam_faillock.so authfail deny=5 \
     unlock_time=900 audit
-
 # Check PAM configuration for a service
 cat /etc/pam.d/sshd
 ```
+
+---
+
+## PAM (Pluggable Authentication Modules)
 
 ![check_pam_configuration_for_a_service](svg/courses/security/cyber-attacks-and-vectors/03_os_security/check_pam_configuration_for_a_service.svg)
 
@@ -150,17 +152,23 @@ sysctl -p
 
 The Center for Internet Security provides hardening baselines:
 
+---
+
+## CIS Benchmarks
+
 ![cis_benchmarks](svg/courses/security/cyber-attacks-and-vectors/03_os_security/cis_benchmarks.svg)
+
+---
+
+## CIS Benchmarks
 
 Tools for automated compliance checking:
 - **OpenSCAP**: Open-source compliance scanner
 - **Lynis**: Security auditing tool for Unix/Linux
 - **InSpec**: Infrastructure testing framework
-
 ```bash
 # Run Lynis security audit
 sudo lynis audit system
-
 # Run OpenSCAP with CIS profile
 oscap xccdf eval --profile cis \
     --results results.xml \
@@ -290,7 +298,6 @@ ls -la /var/run/docker.sock
 grep "Failed password" /var/log/auth.log | tail -20
 grep "Failed password" /var/log/auth.log | \
     awk '{print $11}' | sort | uniq -c | sort -rn | head
-
 # Configure fail2ban for automatic blocking
 # /etc/fail2ban/jail.local
 # [sshd]
@@ -301,9 +308,12 @@ grep "Failed password" /var/log/auth.log | \
 # maxretry = 3
 # bantime = 3600
 # findtime = 600
-
 sudo fail2ban-client status sshd
 ```
+
+---
+
+## Brute Force and Credential Attacks
 
 ![findtime_600](svg/courses/security/cyber-attacks-and-vectors/03_os_security/findtime_600.svg)
 

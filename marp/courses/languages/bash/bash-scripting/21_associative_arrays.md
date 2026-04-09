@@ -1,4 +1,5 @@
 # Using Associative Arrays
+
 ---
 ## Declaring Associative Arrays
 
@@ -16,6 +17,7 @@ declare -A colors=(
     [blue]="#0000FF"
 )
 ```
+
 ---
 ## Adding Key-Value Pairs
 
@@ -39,6 +41,7 @@ declare -A settings=(
 # Overwrite existing key
 settings[debug]="false"
 ```
+
 ---
 ## Accessing Values
 
@@ -59,6 +62,7 @@ echo "${capitals[Spain]:-Unknown}"    # Unknown
 city="${capitals[Japan]}"
 echo "Japan's capital: $city"     # Tokyo
 ```
+
 ---
 ## Iterating Over Associative Arrays
 
@@ -83,6 +87,7 @@ done
 # NOTE: order is NOT guaranteed!
 # Associative arrays are hash tables
 ```
+
 ---
 ## Checking Key Existence
 
@@ -106,6 +111,7 @@ fi
 # Important: empty value is different from missing key
 [[ -v data[z] ]] && echo "z exists (but is empty)"
 ```
+
 ---
 ## Removing Keys
 
@@ -126,6 +132,7 @@ declare -A fruits=()
 unset fruits
 declare -A fruits
 ```
+
 ---
 ## Size and Membership
 
@@ -146,6 +153,7 @@ for status in "${registry[@]}"; do
 done
 echo "Running: $running"
 ```
+
 ---
 ## Associative Arrays from Files
 
@@ -168,6 +176,7 @@ done < config.ini
 # Access loaded config
 echo "Database: ${config[db_host]}:${config[db_port]}"
 ```
+
 ---
 ## Associative Array as Counter
 
@@ -186,6 +195,7 @@ for word in "${!word_count[@]}"; do
     printf "%-20s %d\n" "$word" "${word_count[$word]}"
 done | sort -t' ' -k2 -rn | head -20
 ```
+
 ---
 ## Nested Structures (Simulated)
 
@@ -209,6 +219,7 @@ for key in "${!db[@]}"; do
     [[ $key == user.* ]] && echo "$key = ${db[$key]}"
 done
 ```
+
 ---
 ## Passing Associative Arrays to Functions
 
@@ -239,6 +250,7 @@ deserialize_map() {
     done
 }
 ```
+
 ---
 ## Practical: Simple Key-Value Store
 

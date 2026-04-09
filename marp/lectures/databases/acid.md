@@ -8,6 +8,7 @@ category: database
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Database ACID Guarantees
 ## Mark Veltzer
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## What Are ACID Guarantees?
+
 ![title](svg/lectures/databases/acid/title.svg)
+
+---
 
 ## What Are ACID Guarantees?
 
@@ -24,7 +29,6 @@ ACID is an acronym that stands for:
 - Consistency
 - Isolation
 - Durability
-
 These properties ensure reliable processing of database transactions.
 
 ---

@@ -8,6 +8,7 @@ Understanding the Attack and Defense
 - Also known as XSRF, "Sea Surf", or Session Riding
 - A type of web security vulnerability
 - Allows an attacker to induce users to perform actions they do not intend to do
+
 ---
 ## How CSRF Works
 
@@ -16,6 +17,7 @@ Understanding the Attack and Defense
 1. Victim visits the malicious site or opens the email
 1. Malicious content triggers an unwanted action on the target site
 1. Action is performed with the victim's privileges
+
 ---
 ## CSRF Attack Example
 
@@ -26,6 +28,7 @@ Understanding the Attack and Defense
 - Hidden in a seemingly innocent page
 - When loaded, it triggers a fund transfer
 - Uses the victim's active session on bank.com
+
 ---
 ## Why CSRF is Dangerous
 
@@ -36,6 +39,7 @@ Understanding the Attack and Defense
     - Unauthorized transactions
     - Data theft
     - Account compromise
+
 ---
 ## Defending Against CSRF
 
@@ -44,6 +48,7 @@ Understanding the Attack and Defense
 1. Custom Request Headers
 1. Double Submit Cookies
 1. User Interaction demands
+
 ---
 ## CSRF Tokens
 

@@ -3,7 +3,6 @@
 Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization
 
 ---
-
 ## Overview
 
 - Zero-cost abstractions deep dive
@@ -19,19 +18,16 @@ Zero-Cost Abstractions, Profiling, Benchmarking, and Optimization
 - `#[inline]` guidance
 
 ---
-
 ## Part 1: Zero-Cost Abstractions
 
 You don't pay for what you don't use
 
 ---
-
 ## What Zero-Cost Means
 
 ![what_zero_cost_means](svg/courses/languages/rust/advanced-rust/09_performance/what_zero_cost_means.svg)
 
 ---
-
 ## Iterator vs Hand-Written Loop
 
 ```rust
@@ -67,7 +63,6 @@ fn main() {
 Use `cargo asm` or Compiler Explorer (godbolt.org) to verify.
 
 ---
-
 ## Monomorphization
 
 ```rust
@@ -96,7 +91,6 @@ fn main() {
 ```
 
 ---
-
 ## Null Pointer Optimization
 
 ```rust
@@ -125,19 +119,16 @@ fn main() {
 ```
 
 ---
-
 ## Part 2: LLVM Optimization Passes
 
 What the compiler does for you
 
 ---
-
 ## LLVM Optimization Pipeline
 
 ![llvm_optimization_pipeline](svg/courses/languages/rust/advanced-rust/09_performance/llvm_optimization_pipeline.svg)
 
 ---
-
 ## Optimization Levels
 
 ```bash
@@ -168,7 +159,6 @@ What the compiler does for you
 | "z"   | Good  | Slower      | Smallest    | Minimal    |
 
 ---
-
 ## Viewing LLVM IR and Assembly
 
 ```bash
@@ -190,13 +180,11 @@ cargo asm --lib my_crate::sum_squares_iterator
 ```
 
 ---
-
 ## Part 3: Profiling
 
 Finding bottlenecks
 
 ---
-
 ## Profiling with perf
 
 ```bash
@@ -224,7 +212,6 @@ perf stat ./target/release/my_app
 ```
 
 ---
-
 ## Flamegraphs
 
 ```bash
@@ -239,7 +226,13 @@ cargo flamegraph --bin my_app
 # Stack depth = call chain
 ```
 
+---
+## Flamegraphs
+
 ![stack_depth_call_chain](svg/courses/languages/rust/advanced-rust/09_performance/stack_depth_call_chain.svg)
+
+---
+## Flamegraphs
 
 ```bash
 # For specific binary with arguments
@@ -250,13 +243,11 @@ cargo flamegraph --flamechart  # Time-ordered view
 ```
 
 ---
-
 ## Part 4: Benchmarking with Criterion
 
 Statistical benchmarking
 
 ---
-
 ## Setting Up Criterion
 
 ```toml
@@ -311,7 +302,6 @@ cargo bench
 ```
 
 ---
-
 ## Criterion: Comparing Implementations
 
 ```rust
@@ -366,7 +356,6 @@ criterion_main!(benches);
 ```
 
 ---
-
 ## Criterion: black_box and Throughput
 
 ```rust
@@ -401,13 +390,11 @@ criterion_main!(benches);
 ```
 
 ---
-
 ## Part 5: Memory Allocators
 
 Custom allocators for performance
 
 ---
-
 ## Global Allocator Trait
 
 ```rust
@@ -457,7 +444,6 @@ fn main() {
 ```
 
 ---
-
 ## Using jemalloc
 
 ```toml
@@ -490,7 +476,6 @@ fn main() {
 ```
 
 ---
-
 ## Using mimalloc
 
 ```toml
@@ -519,22 +504,22 @@ fn main() {
 }
 ```
 
+---
+## Using mimalloc
+
 ![cargo_toml](svg/courses/languages/rust/advanced-rust/09_performance/cargo_toml.svg)
 
 ---
-
 ## Part 6: SIMD
 
 Single Instruction, Multiple Data
 
 ---
-
 ## SIMD Concepts
 
 ![simd_concepts](svg/courses/languages/rust/advanced-rust/09_performance/simd_concepts.svg)
 
 ---
-
 ## Portable SIMD (std::simd, nightly)
 
 ```rust
@@ -582,7 +567,6 @@ fn main() {
 ```
 
 ---
-
 ## Auto-Vectorization
 
 ```rust
@@ -630,13 +614,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 7: Cache-Friendly Data Structures
 
 AoS vs SoA
 
 ---
-
 ## Array of Structs vs Struct of Arrays
 
 ```rust
@@ -676,7 +658,6 @@ struct ParticlesSoA {
 ```
 
 ---
-
 ## AoS vs SoA Benchmark
 
 ```rust
@@ -728,13 +709,11 @@ fn main() {
 ```
 
 ---
-
 ## Cache Optimization Guidelines
 
 ![cache_optimization_guidelines](svg/courses/languages/rust/advanced-rust/09_performance/cache_optimization_guidelines.svg)
 
 ---
-
 ## Arena Allocation for Cache Locality
 
 ```rust
@@ -785,13 +764,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 8: Compile-Time Computation
 
 const fn and const generics
 
 ---
-
 ## const fn
 
 ```rust
@@ -844,7 +821,6 @@ fn main() {
 ```
 
 ---
-
 ## Const Generics
 
 ```rust
@@ -911,7 +887,6 @@ fn main() {
 ```
 
 ---
-
 ## Compile-Time Type-Level Assertions
 
 ```rust
@@ -942,13 +917,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 9: Link-Time Optimization (LTO)
 
 Cross-crate optimization
 
 ---
-
 ## Configuring LTO
 
 ```toml
@@ -963,28 +936,27 @@ codegen-units = 1   # Single codegen unit: enables more inlining
                     # Default is 16 for parallel compilation
 ```
 
+---
+## Configuring LTO
+
 ![lto_false_default_no_cross_crate_optimization](svg/courses/languages/rust/advanced-rust/09_performance/lto_false_default_no_cross_crate_optimization.svg)
 
 ---
-
 ## LTO Trade-offs
 
 ![lto_trade_offs](svg/courses/languages/rust/advanced-rust/09_performance/lto_trade_offs.svg)
 
 ---
-
 ## Part 10: Profile-Guided Optimization (PGO)
 
 Optimize based on real workload data
 
 ---
-
 ## PGO Workflow
 
 ![pgo_workflow](svg/courses/languages/rust/advanced-rust/09_performance/pgo_workflow.svg)
 
 ---
-
 ## PGO Commands
 
 ```bash
@@ -1010,13 +982,11 @@ RUSTFLAGS="-Cprofile-use=/tmp/pgo-data/merged.profdata -Cllvm-args=-pgo-warn-mis
 ```
 
 ---
-
 ## Part 11: Inline Guidance
 
 Helping the compiler make inlining decisions
 
 ---
-
 ## #[inline] Attributes
 
 ```rust
@@ -1061,13 +1031,11 @@ fn main() {
 ```
 
 ---
-
 ## When to Use #[inline]
 
 ![when_to_use_inline](svg/courses/languages/rust/advanced-rust/09_performance/when_to_use_inline.svg)
 
 ---
-
 ## Complete Performance Checklist
 
 ```rust
@@ -1139,13 +1107,11 @@ fn main() {
 ```
 
 ---
-
 ## Summary
 
 ![summary](svg/courses/languages/rust/advanced-rust/09_performance/summary.svg)
 
 ---
-
 ## Exercises
 
 1. Use `cargo asm` or Compiler Explorer to compare the assembly of an iterator chain vs a hand-written loop. Are they identical?

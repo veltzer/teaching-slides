@@ -1,4 +1,5 @@
 # The Return Code
+
 ---
 ## What is a Return Code?
 - Every command that runs produces a return code (exit status)
@@ -6,6 +7,7 @@
 - 0 means **success**
 - Any non-zero value means **failure**
 - This is the opposite of most programming languages!
+
 ---
 ## Checking the Return Code
 
@@ -22,6 +24,7 @@ ls /nonexistent_directory
 echo $?    # 2
 echo $?    # 0 (the previous echo succeeded!)
 ```
+
 ---
 ## Common Return Codes
 | Code | Meaning |
@@ -35,6 +38,7 @@ echo $?    # 0 (the previous echo succeeded!)
 | 130 | Killed by Ctrl+C (SIGINT = 2, 128+2) |
 | 137 | Killed by SIGKILL (128+9) |
 | 143 | Killed by SIGTERM (128+15) |
+
 ---
 ## `true` and `false` Commands
 
@@ -57,6 +61,7 @@ while true; do
     sleep 1
 done
 ```
+
 ---
 ## Return Codes and `&&` / `||`
 
@@ -74,6 +79,7 @@ test -f /etc/passwd && echo "exists" || echo "missing"
 # If the && command fails, the || also runs!
 true && false || echo "this runs unexpectedly"
 ```
+
 ---
 ## Return Codes in Conditional Context
 
@@ -95,6 +101,7 @@ if ! grep -q "nonexistent" /etc/passwd; then
     echo "not found (this is expected)"
 fi
 ```
+
 ---
 ## The `test` Command and `[`
 
@@ -114,6 +121,7 @@ echo $?    # 0
 [5 -gt 3]     # WRONG: tries to run command "[5"
 [ 5 -gt 3 ]   # RIGHT
 ```
+
 ---
 ## Return Codes from Scripts
 
@@ -135,6 +143,7 @@ fi
 echo "File exists"
 exit 0
 ```
+
 ---
 ## Capturing Return Codes
 
@@ -155,6 +164,7 @@ if ! output=$(some_command 2>&1); then
     exit 1
 fi
 ```
+
 ---
 ## `PIPESTATUS` Array
 
@@ -177,6 +187,7 @@ echo "${PIPESTATUS[@]}"  # shows PIPESTATUS of echo, not the pipe!
 false | true
 saved=("${PIPESTATUS[@]}")
 ```
+
 ---
 ## `set -o pipefail`
 

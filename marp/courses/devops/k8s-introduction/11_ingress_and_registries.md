@@ -244,6 +244,7 @@ spec:
     apiGroup: k8s.example.com
     kind: IngressParameters
     name: external-config
+
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress

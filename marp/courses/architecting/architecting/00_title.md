@@ -11,6 +11,7 @@ duration_hours: 40
 audience:
   - audiences:developers
   - audiences:architects
+
 ---
 # Architecting
 ## Mark Veltzer

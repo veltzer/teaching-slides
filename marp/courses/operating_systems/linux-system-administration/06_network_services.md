@@ -703,15 +703,19 @@ ip netns exec red ping 10.0.0.2
 ```
 
 ---
+
 ## Network Namespaces Diagram
 
 ![network_namespaces_diagram](svg/courses/operating_systems/linux-system-administration/06_network_services/network_namespaces_diagram.svg)
+
+---
+
+## Network Namespaces Diagram
 
 ```bash
 # Run a process inside a namespace
 ip netns exec red bash
 ip netns exec red python3 -m http.server 8080
-
 # Delete namespace (cleans up interfaces)
 ip netns del red
 ```
@@ -749,23 +753,29 @@ network:
 ```
 
 ---
+
 ## Traffic Shaping with tc
 
 `tc` (traffic control) manages bandwidth and latency on interfaces.
 
+---
+
+## Traffic Shaping with tc
+
 ![traffic_shaping_with_tc](svg/courses/operating_systems/linux-system-administration/06_network_services/traffic_shaping_with_tc.svg)
+
+---
+
+## Traffic Shaping with tc
 
 ```bash
 # Limit bandwidth to 1Mbit on eth0
 tc qdisc add dev eth0 root tbf \
   rate 1mbit burst 32kbit latency 400ms
-
 # Add latency (simulate slow link)
 tc qdisc add dev eth0 root netem delay 100ms 20ms
-
 # View current rules
 tc qdisc show dev eth0
-
 # Remove all tc rules
 tc qdisc del dev eth0 root
 ```
@@ -940,20 +950,27 @@ networkctl status eth0
 ```
 
 ---
+
 ## Network Boot (PXE)
 
 `PXE` (Preboot Execution Environment) allows machines to boot from the network using DHCP and TFTP.
 
+---
+
+## Network Boot (PXE)
+
 ![network_boot_pxe](svg/courses/operating_systems/linux-system-administration/06_network_services/network_boot_pxe.svg)
+
+---
+
+## Network Boot (PXE)
 
 ```bash
 # Install TFTP server
 apt install tftpd-hpa
-
 # Place boot files in TFTP root
 cp /usr/lib/PXELINUX/pxelinux.0 /srv/tftp/
 cp /usr/lib/syslinux/modules/bios/ldlinux.c32 /srv/tftp/
-
 # DHCP must provide next-server and filename
 # /etc/dhcp/dhcpd.conf:
 #   next-server 192.168.1.10;

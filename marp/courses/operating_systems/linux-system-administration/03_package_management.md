@@ -17,9 +17,14 @@ Without package management:
 - Difficult to reproduce environments
 
 ---
+
 ## Package Management Ecosystem
 
 ![package_management_ecosystem](svg/courses/operating_systems/linux-system-administration/03_package_management/package_management_ecosystem.svg)
+
+---
+
+## Package Management Ecosystem
 
 - `apt`/`dnf` are high-level: resolve dependencies, manage repos
 - `dpkg`/`rpm` are low-level: install/remove individual packages
@@ -801,9 +806,14 @@ ls -lh /var/cache/apt-cacher-ng/
 ```
 
 ---
+
 ## `apt` Caching Proxy Diagram
 
 ![apt_caching_proxy_diagram](svg/courses/operating_systems/linux-system-administration/03_package_management/apt_caching_proxy_diagram.svg)
+
+---
+
+## `apt` Caching Proxy Diagram
 
 - First client downloads the package from the internet
 - Subsequent clients get the cached copy instantly
@@ -1018,9 +1028,14 @@ apt-cache show dpkg | grep Priority
 Never remove essential packages on a production system.
 
 ---
+
 ## Package Lifecycle
 
 ![package_lifecycle](svg/courses/operating_systems/linux-system-administration/03_package_management/package_lifecycle.svg)
+
+---
+
+## Package Lifecycle
 
 - **Available**: in repository, not installed
 - **Downloaded**: `.deb` cached in `/var/cache/apt/archives/`

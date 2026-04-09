@@ -3,7 +3,6 @@
 Channels, Shared State, Data Parallelism, and Advanced Patterns
 
 ---
-
 ## Overview
 
 - Channels: `mpsc`, `crossbeam-channel`
@@ -18,13 +17,11 @@ Channels, Shared State, Data Parallelism, and Advanced Patterns
 - Actor pattern with channels
 
 ---
-
 ## Part 1: Channels
 
 Message passing for safe concurrency
 
 ---
-
 ## std::sync::mpsc Basics
 
 ```rust
@@ -46,10 +43,12 @@ fn main() {
 }
 ```
 
+---
+## std::sync::mpsc Basics
+
 ![std_sync_mpsc_basics](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/std_sync_mpsc_basics.svg)
 
 ---
-
 ## Multiple Producers
 
 ```rust
@@ -82,7 +81,6 @@ fn main() {
 ```
 
 ---
-
 ## Synchronous (Bounded) Channels
 
 ```rust
@@ -118,7 +116,6 @@ fn main() {
 | `sync_channel(n)` | n items  | Blocks when full         |
 
 ---
-
 ## Crossbeam Channels
 
 ```rust
@@ -168,13 +165,11 @@ fn main() {
 ```
 
 ---
-
 ## Crossbeam vs std::sync::mpsc
 
 ![crossbeam_vs_std_sync_mpsc](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/crossbeam_vs_std_sync_mpsc.svg)
 
 ---
-
 ## Channel Patterns: Fan-Out / Fan-In
 
 ```rust
@@ -204,16 +199,17 @@ fn main() {
 }
 ```
 
+---
+## Channel Patterns: Fan-Out / Fan-In
+
 ![channel_patterns_fan_out_fan_in](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/channel_patterns_fan_out_fan_in.svg)
 
 ---
-
 ## Part 2: Shared State
 
 Mutex, RwLock, and Atomics
 
 ---
-
 ## Mutex Basics
 
 ```rust
@@ -244,7 +240,6 @@ fn main() {
 ```
 
 ---
-
 ## Mutex Poisoning
 
 ```rust
@@ -276,7 +271,6 @@ fn main() {
 ```
 
 ---
-
 ## RwLock: Multiple Readers, Single Writer
 
 ```rust
@@ -316,13 +310,11 @@ fn main() {
 ```
 
 ---
-
 ## When to Use Mutex vs RwLock
 
 ![when_to_use_mutex_vs_rwlock](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/when_to_use_mutex_vs_rwlock.svg)
 
 ---
-
 ## Atomic Types
 
 ```rust
@@ -358,13 +350,11 @@ fn main() {
 ```
 
 ---
-
 ## Atomic Orderings Explained
 
 ![atomic_orderings_explained](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/atomic_orderings_explained.svg)
 
 ---
-
 ## Acquire/Release Pattern
 
 ```rust
@@ -404,7 +394,6 @@ fn main() {
 ```
 
 ---
-
 ## Compare-and-Swap (CAS)
 
 ```rust
@@ -452,13 +441,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 3: Lock-Free Data Structures
 
 An introduction to lock-free programming
 
 ---
-
 ## Lock-Free Stack (Treiber Stack)
 
 ```rust
@@ -553,19 +540,16 @@ fn main() {
 ```
 
 ---
-
 ## Lock-Free vs Lock-Based Trade-offs
 
 ![lock_free_vs_lock_based_trade_offs](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/lock_free_vs_lock_based_trade_offs.svg)
 
 ---
-
 ## Part 4: Rayon for Data Parallelism
 
 Effortless parallel iterators
 
 ---
-
 ## Rayon Basics: par_iter
 
 ```rust
@@ -586,10 +570,12 @@ fn main() {
 }
 ```
 
+---
+## Rayon Basics: par_iter
+
 ![rayon_basics_pariter](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/rayon_basics_pariter.svg)
 
 ---
-
 ## Rayon: Parallel Sorting and Searching
 
 ```rust
@@ -621,7 +607,6 @@ fn main() {
 ```
 
 ---
-
 ## Rayon: par_bridge for Non-Rayon Iterators
 
 ```rust
@@ -653,7 +638,6 @@ fn main() {
 Note: `par_bridge()` has overhead compared to `par_iter()` because it cannot split the input evenly. Use `par_iter()` when you have a slice or vector.
 
 ---
-
 ## Rayon: Custom Thread Pool
 
 ```rust
@@ -682,7 +666,6 @@ fn main() {
 ```
 
 ---
-
 ## Rayon: Parallel Reduction and Fold
 
 ```rust
@@ -718,13 +701,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 5: Arc Patterns
 
 Sharing ownership across threads
 
 ---
-
 ## Arc with Interior Mutability
 
 ```rust
@@ -773,7 +754,6 @@ fn main() {
 ```
 
 ---
-
 ## Arc::new_cyclic and Weak References
 
 ```rust
@@ -819,13 +799,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 6: Deadlock Prevention
 
 Strategies to avoid deadlocks
 
 ---
-
 ## Classic Deadlock
 
 ```rust
@@ -866,13 +844,11 @@ fn main() {
 ```
 
 ---
-
 ## Deadlock Prevention Strategies
 
 ![deadlock_prevention_strategies](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/deadlock_prevention_strategies.svg)
 
 ---
-
 ## Lock Ordering Solution
 
 ```rust
@@ -927,7 +903,6 @@ fn main() {
 ```
 
 ---
-
 ## try_lock with Backoff
 
 ```rust
@@ -976,13 +951,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 7: Concurrent Collections
 
 DashMap and friends
 
 ---
-
 ## DashMap: Concurrent HashMap
 
 ```rust
@@ -1021,7 +994,6 @@ fn main() {
 ```
 
 ---
-
 ## DashMap: Advanced Operations
 
 ```rust
@@ -1053,19 +1025,16 @@ fn main() {
 ```
 
 ---
-
 ## DashMap vs Mutex<HashMap>
 
 ![dashmap_vs_mutex](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/dashmap_vs_mutex.svg)
 
 ---
-
 ## Part 8: Thread Pools
 
 Managing threads efficiently
 
 ---
-
 ## Building a Simple Thread Pool
 
 ```rust
@@ -1142,13 +1111,11 @@ fn main() {
 ```
 
 ---
-
 ## Part 9: Scoped Threads
 
 Borrowing stack data in threads
 
 ---
-
 ## std::thread::scope (Rust 1.63+)
 
 ```rust
@@ -1188,7 +1155,6 @@ fn main() {
 ```
 
 ---
-
 ## Scoped Threads: Shared Read Access
 
 ```rust
@@ -1225,19 +1191,16 @@ fn main() {
 ```
 
 ---
-
 ## Scoped Threads vs Regular Threads
 
 ![scoped_threads_vs_regular_threads](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/scoped_threads_vs_regular_threads.svg)
 
 ---
-
 ## Part 10: Actor Pattern
 
 Message-driven concurrency
 
 ---
-
 ## Actor Pattern with Channels
 
 ```rust
@@ -1312,7 +1275,6 @@ fn main() {
 ```
 
 ---
-
 ## Actor Pattern: Multiple Actors
 
 ```rust
@@ -1394,19 +1356,16 @@ fn main() {
 ```
 
 ---
-
 ## Actor Pattern: Benefits
 
 ![actor_pattern_benefits](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/actor_pattern_benefits.svg)
 
 ---
-
 ## Summary
 
 ![summary](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/summary.svg)
 
 ---
-
 ## Exercises
 
 1. Implement a producer-consumer pipeline using `crossbeam-channel` with `select!` and a timeout.

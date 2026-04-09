@@ -1,4 +1,5 @@
 # Spark SQL and Catalyst Optimizer
+
 ---
 ## Chapter Overview
 * Query optimization techniques
@@ -6,6 +7,7 @@
 * User-Defined Functions (UDFs)
 * Data source integration
 * Performance tuning
+
 ---
 ## Why Spark SQL?
 ![why_spark_sql](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/why_spark_sql.svg)
@@ -16,6 +18,7 @@
 1. Analyzer
 1. Optimizer
 1. Physical planning
+
 ---
 ## DataFrame vs SQL
 
@@ -37,24 +40,28 @@ spark.sql("SELECT name FROM table WHERE age > 25")
 df.explain(mode="extended")
 # Shows unresolved and resolved logical plans
 ```
+
 ---
 ## Query Planning
 1. Parse SQL/DataFrame
 1. Resolve references
 1. Apply optimizations
 1. Generate physical plan
+
 ---
 ## Understanding Query Plans
 ```python
 # View the execution plan
 df.select("name", "age").groupBy("age").count().explain(True)
 ```
+
 ---
 ## Plan Optimization Rules
 1. Constant folding
 1. Predicate pushdown
 1. Column pruning
 1. Join reordering
+
 ---
 ## Predicate Pushdown
 ![predicate_pushdown](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/predicate_pushdown.svg)
@@ -66,6 +73,7 @@ df.select("name", "age").groupBy("age").count().explain(True)
 from pyspark.sql.functions import broadcast
 df1.join(broadcast(df2), "key")
 ```
+
 ---
 ## Column Pruning Example
 ```python
@@ -73,6 +81,7 @@ df1.join(broadcast(df2), "key")
 # After: SELECT id, name FROM table WHERE age > 25
 df.select("id", "name").filter("age > 25")
 ```
+
 ---
 ## Cost-Based Optimization
 ![cost_based_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/cost_based_optimization.svg)
@@ -83,12 +92,14 @@ df.select("id", "name").filter("age > 25")
 # Analyze table to collect statistics
 spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS")
 ```
+
 ---
 ## Column Statistics
 ```python
 # Collect column-level statistics
 spark.sql("ANALYZE TABLE my_table COMPUTE STATISTICS FOR COLUMNS id, name")
 ```
+
 ---
 ## User-Defined Functions
 ```python
@@ -99,12 +110,14 @@ from pyspark.sql.types import StringType
 def upper_custom(s):
     return s.upper() if s else None
 ```
+
 ---
 ## UDF Performance
 1. Serialization overhead
 1. Type conversion costs
 1. Limited optimization
 1. JVM boundary crossing
+
 ---
 ## Vectorized UDFs
 ```python
@@ -115,6 +128,7 @@ from pyspark.sql.types import StringType
 def upper_vectorized(s):
     return s.str.upper()
 ```
+
 ---
 ## UDF Best Practices
 ![udf_best_practices](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/udf_best_practices.svg)
@@ -128,12 +142,14 @@ df = spark.read.format("jdbc")
     .option("table", "users")
     .load()
 ```
+
 ---
 ## Custom Data Sources
 1. Implement BaseRelation
 1. Define schema
 1. Implement scanning
 1. Handle pushdown
+
 ---
 ## Data Source Options
 ```python
@@ -143,6 +159,7 @@ df.write.format("parquet")
     .mode("overwrite")
     .save("path")
 ```
+
 ---
 ## File Format Optimization
 ![file_format_optimization](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/file_format_optimization.svg)
@@ -153,6 +170,7 @@ df.write.format("parquet")
 1. Column pruning
 1. Dictionary encoding
 1. Run-length encoding
+
 ---
 ## Query Performance
 ```python
@@ -161,6 +179,7 @@ df.cache()
 # Set proper partition number
 spark.sql.shuffle.partitions=200
 ```
+
 ---
 ## Memory Management
 ![memory_management](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/memory_management.svg)
@@ -171,6 +190,7 @@ spark.sql.shuffle.partitions=200
 1. Cloud storage
 1. NoSQL databases
 1. Streaming sources
+
 ---
 ## JDBC Optimization
 ```python
@@ -182,6 +202,7 @@ properties = {
     "numPartitions": "10"
 }
 ```
+
 ---
 ## Schema Handling
 ```python
@@ -192,18 +213,21 @@ schema = StructType([
     StructField("age", IntegerType(), True)
 ])
 ```
+
 ---
 ## Schema Evolution
 1. Add columns
 1. Remove columns
 1. Change data types
 1. Handle nullability
+
 ---
 ## Query Plan Caching
 ```python
 # Enable query plan caching
 spark.catalog.cacheTable("frequently_used")
 ```
+
 ---
 ## Dynamic Partition Pruning
 ![dynamic_partition_pruning](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/dynamic_partition_pruning.svg)
@@ -214,18 +238,21 @@ spark.catalog.cacheTable("frequently_used")
 spark.conf.set("spark.sql.cbo.enabled", "true")
 spark.conf.set("spark.sql.cbo.joinReorder.enabled", "true")
 ```
+
 ---
 ## Query Plan Analysis
 1. Logical plan inspection
 1. Physical plan review
 1. Execution statistics
 1. Bottleneck identification
+
 ---
 ## Adaptive Query Execution
 ```python
 # Enable adaptive query execution
 spark.conf.set("spark.sql.adaptive.enabled", "true")
 ```
+
 ---
 ## Runtime Statistics
 ![runtime_statistics](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/runtime_statistics.svg)
@@ -236,6 +263,7 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 1. Sort merge join
 1. Shuffle hash join
 1. Cartesian join
+
 ---
 ## Window Function Optimization
 ```python
@@ -243,12 +271,14 @@ spark.conf.set("spark.sql.adaptive.enabled", "true")
 windowSpec = Window.partitionBy("department").orderBy("salary")
 df.withColumn("rank", rank().over(windowSpec))
 ```
+
 ---
 ## Subquery Handling
 ```python
 # Correlated subquery optimization
 df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 ```
+
 ---
 ## Data Skew Handling
 ![data_skew_handling](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/data_skew_handling.svg)
@@ -259,6 +289,7 @@ df1.join(df2, df1.id == df2.id).where(df2.value > df1.value)
 1. Shuffle parameters
 1. Compression options
 1. Executor settings
+
 ---
 ## Error Handling
 ```python
@@ -267,6 +298,7 @@ df = spark.read.option("mode", "PERMISSIVE")
     .option("columnNameOfCorruptRecord", "_corrupt_record")
     .json("path")
 ```
+
 ---
 ## Monitoring and Debugging
 ![monitoring_and_debugging](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/monitoring_and_debugging.svg)
@@ -277,24 +309,28 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Memory usage
 1. Shuffle data size
 1. Task duration
+
 ---
 ## Best Practices Summary
 1. Use appropriate data formats
 1. Optimize join operations
 1. Leverage statistics
 1. Monitor performance
+
 ---
 ## Common Pitfalls
 1. Inefficient joins
 1. Poor partitioning
 1. Memory issues
 1. Suboptimal UDFs
+
 ---
 ## Advanced Topics
 1. Custom optimizers
 1. Extension points
 1. Query rewrite rules
 1. Cost model tuning
+
 ---
 ## Optimization Checklist
 ![optimization_checklist](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/optimization_checklist.svg)
@@ -305,12 +341,14 @@ df = spark.read.option("mode", "PERMISSIVE")
 1. Monitoring setup
 1. Error handling
 1. Performance tuning
+
 ---
 ## Future Directions
 1. Enhanced optimization
 1. Better statistics
 1. Improved adaptivity
 1. New features
+
 ---
 ## Additional Resources
 * Official documentation
@@ -412,7 +450,6 @@ query.explain(mode="cost")
 ```
 
 ---
-
 ## Predicate Pushdown: Before vs After
 
 ```python
@@ -422,7 +459,6 @@ result = (
     .filter(F.col("region") == "North")
     .filter(F.col("amount") > 500)
 )
-
 # Catalyst optimizes this to push filters before join:
 # == Optimized Logical Plan ==
 # Aggregate
@@ -432,6 +468,9 @@ result = (
 #     Filter (region = North)  <-- pushed to customers scan
 #       Scan customers
 ```
+
+---
+## Predicate Pushdown: Before vs After
 
 ![scan_customers](svg/courses/big_data/advanced-spark-with-python/02_spark_sql_catalyst_optimizer/scan_customers.svg)
 

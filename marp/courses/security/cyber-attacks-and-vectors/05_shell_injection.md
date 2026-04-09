@@ -1,4 +1,5 @@
 # Shell Injection: Defending Against Command Injection Attacks
+
 ---
 
 ## What is Shell Injection
@@ -228,21 +229,21 @@ app.get('/dns', (req, res) => {
 ```bash
 # The Shellshock vulnerability allowed code execution
 # through Bash environment variables
-
 # Vulnerable Bash interpreted function definitions
 # in environment variables AND executed trailing commands
-
 # Test if bash is vulnerable (DO NOT run on production):
 # env x='() { :;}; echo VULNERABLE' bash -c "echo test"
 # If it prints "VULNERABLE", the system is affected
-
 # Attack vector via CGI scripts:
 # curl -H "User-Agent: () { :;}; /bin/cat /etc/passwd" \
 #     http://target.com/cgi-bin/script.sh
-
 # The web server passed HTTP headers as environment
 # variables to CGI scripts running under Bash
 ```
+
+---
+
+## Shellshock Deep Dive (CVE-2014-6271)
 
 ![variables_to_cgi_scripts_running_under_bash](svg/courses/security/cyber-attacks-and-vectors/05_shell_injection/variables_to_cgi_scripts_running_under_bash.svg)
 
@@ -390,19 +391,20 @@ unshare --mount --pid --fork --mount-proc /bin/bash
 ```bash
 # Monitor for command injection attempts in web logs
 grep -E "(;|&&|\|\||`|\$\()" /var/log/nginx/access.log
-
 # Look for suspicious process spawning from web server
 # Using auditd rules:
 auditctl -a always,exit -F arch=b64 -S execve \
     -F uid=www-data -k web_cmd_exec
-
 # Search audit logs for web server executing commands
 ausearch -k web_cmd_exec --start today
-
 # ModSecurity WAF rules for command injection
 # SecRule ARGS "@rx [;|&`$()]" \
 #     "id:1001,deny,status:403,msg:'Command Injection'"
 ```
+
+---
+
+## Detection Techniques
 
 ![id_1001_deny_status_403_msg_command_injection](svg/courses/security/cyber-attacks-and-vectors/05_shell_injection/id_1001_deny_status_403_msg_command_injection.svg)
 

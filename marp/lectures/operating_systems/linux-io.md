@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # Linux I/O Architecture
 ## Understanding Input/Output in Linux Systems
@@ -15,9 +16,14 @@ audience:
 
 ---
 
+## What is Linux I/O?
+
 ![title](svg/lectures/operating_systems/linux-io/title.svg)
 
+---
+
 ## What is Linux I/O?
+
 1. **Input/Output (I/O)** - Communication between CPU and external devices
 1. Linux treats everything as a file
 1. Unified interface for:
@@ -25,6 +31,7 @@ audience:
     - Devices (block and character)
     - Sockets
     - Pipes
+
 ---
 ## File Descriptors
 1. Integer handles to open files/resources
@@ -37,6 +44,7 @@ int fd = open("/path/to/file", O_RDONLY);
 read(fd, buffer, size);
 close(fd);
 ```
+
 ---
 ## I/O System Calls
 ### Core Operations
@@ -46,6 +54,7 @@ close(fd);
 1. `close()` - Close descriptor
 1. `lseek()` - Change file position
 1. `ioctl()` - Device-specific control
+
 ---
 ## Virtual File System (VFS)
 ![virtual_file_system_vfs](svg/lectures/operating_systems/linux-io/virtual_file_system_vfs.svg)
@@ -64,6 +73,7 @@ close(fd);
 FILE *fp = fopen("file.txt", "r");
 fread(buffer, 1, 1024, fp);
 ```
+
 ---
 ## I/O Models
 ![i_o_models](svg/lectures/operating_systems/linux-io/i_o_models.svg)
@@ -82,6 +92,7 @@ fread(buffer, 1, 1024, fp);
 1. Reduces disk I/O
 1. Speeds up repeated access
 1. Write coalescing
+
 ---
 
 ## Advanced I/O Techniques
@@ -95,6 +106,7 @@ fread(buffer, 1, 1024, fp);
 1. High-performance async I/O
 1. Ring buffers for submission/completion
 1. Reduces syscall overhead
+
 ---
 
 ## Performance Tips

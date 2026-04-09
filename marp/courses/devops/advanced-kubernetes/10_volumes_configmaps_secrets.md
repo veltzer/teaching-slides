@@ -55,6 +55,7 @@ spec:
   nfs:
     server: nfs-server.example.com
     path: /exports/data
+
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -174,6 +175,7 @@ spec:
   volumeSnapshotClassName: csi-aws-snapclass
   source:
     persistentVolumeClaimName: database-data
+
 ---
 apiVersion: snapshot.storage.k8s.io/v1
 kind: VolumeSnapshotClass
@@ -181,6 +183,7 @@ metadata:
   name: csi-aws-snapclass
 driver: ebs.csi.aws.com
 deletionPolicy: Retain
+
 ---
 # Restore from snapshot
 apiVersion: v1
@@ -439,6 +442,7 @@ spec:
         jwt:
           serviceAccountRef:
             name: external-secrets-sa
+
 ---
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret

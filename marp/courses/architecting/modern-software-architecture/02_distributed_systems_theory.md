@@ -102,6 +102,9 @@
 
 ![consistency_models_spectrum](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/consistency_models_spectrum.svg)
 
+---
+## Consistency Models Spectrum
+
 - Stronger consistency means more coordination overhead
 - Weaker consistency means better performance and availability
 
@@ -279,6 +282,9 @@
 ## Raft Consensus Overview
 
 ![raft_consensus_overview](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/raft_consensus_overview.svg)
+
+---
+## Raft Consensus Overview
 
 - Leader handles all writes
 - Majority acknowledgment required for commit

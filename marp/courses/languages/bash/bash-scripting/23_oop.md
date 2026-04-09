@@ -1,4 +1,5 @@
 # Object Oriented Programming with Associative Arrays
+
 ---
 ## OOP in `bash`? Really?
 - `bash` is not an OOP language
@@ -7,6 +8,7 @@
 - Functions can act as "methods"
 - Useful for complex scripts that need structure
 - Not recommended for production — consider `Python` instead
+
 ---
 ## A Simple Object
 
@@ -27,6 +29,7 @@ person_greet() {
 person_greet person
 # Hi, I'm Alice, age 30
 ```
+
 ---
 ## Constructor Pattern
 
@@ -51,6 +54,7 @@ new_person bob "Bob" 25
 echo "${alice[name]} is ${alice[age]}"
 echo "${bob[name]} is ${bob[age]}"
 ```
+
 ---
 ## Methods as Functions
 
@@ -76,6 +80,7 @@ person_set_email() {
 person_to_string alice    # Alice (30) <alice@example.com>
 person_birthday alice     # Happy birthday Alice! Now 31
 ```
+
 ---
 ## Dispatch Table Pattern
 
@@ -105,6 +110,7 @@ call() {
 call alice greet
 call alice birthday
 ```
+
 ---
 ## Simulating Collections
 
@@ -137,6 +143,7 @@ add_person "Alice" 30 "alice@ex.com"
 add_person "Bob" 25 "bob@ex.com"
 list_persons
 ```
+
 ---
 ## Practical Example: Config Manager
 
@@ -179,6 +186,7 @@ config_save() {
     done
 }
 ```
+
 ---
 ## Limitations of OOP in `bash`
 

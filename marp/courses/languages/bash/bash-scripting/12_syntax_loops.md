@@ -1,4 +1,5 @@
 # Syntax: Loops
+
 ---
 ## `while` Loops
 
@@ -16,6 +17,7 @@ while [[ $count -le 5 ]]; do
     ((count++))
 done
 ```
+
 ---
 ## `while` with a Command
 
@@ -34,6 +36,7 @@ while [ ! -f /tmp/ready.flag ]; do
 done
 echo "Ready!"
 ```
+
 ---
 ## Reading Lines with `while`
 
@@ -60,6 +63,7 @@ while IFS= read -r line; do
 done < file.txt
 echo "$count"    # correct count
 ```
+
 ---
 ## `until` Loops
 
@@ -80,6 +84,7 @@ until curl -s http://localhost:8080/health > /dev/null; do
 done
 echo "Service is ready!"
 ```
+
 ---
 ## Infinite Loops
 
@@ -108,6 +113,7 @@ while true; do
     [[ $answer == "n" ]] && break
 done
 ```
+
 ---
 ## `for` Loops: Word List
 
@@ -133,6 +139,7 @@ for color in "${colors[@]}"; do
     echo "Color: $color"
 done
 ```
+
 ---
 ## `for` Loops: C-Style
 
@@ -153,6 +160,7 @@ for ((i = 0, j = 10; i < j; i++, j--)); do
     echo "i=$i, j=$j"
 done
 ```
+
 ---
 ## `for` with Sequences
 
@@ -177,6 +185,7 @@ for i in $(seq 0 5 100); do
     echo "$i"
 done
 ```
+
 ---
 ## `break` and `continue`
 
@@ -203,6 +212,7 @@ for i in {1..3}; do
     done
 done
 ```
+
 ---
 ## Loop Over Arguments
 
@@ -228,6 +238,7 @@ for file in "$@"; do
     fi
 done
 ```
+
 ---
 ## Looping Over Lines (Safely)
 
@@ -249,6 +260,7 @@ for line in "${lines[@]}"; do
     echo "$line"
 done
 ```
+
 ---
 ## `select` Loop (Menus)
 
@@ -274,6 +286,7 @@ done
 # 4) quit
 # Choose a color:
 ```
+
 ---
 ## Loop Patterns: Find and Process Files
 

@@ -386,6 +386,10 @@ Key expiration and eviction:
     - When `maxmemory` limit is reached
     - According to `maxmemory-policy`
 
+---
+
+## Automatic Key Management
+
 ![automatic_key_management](svg/courses/databases/redis/07_configuration/automatic_key_management.svg)
 
 ---

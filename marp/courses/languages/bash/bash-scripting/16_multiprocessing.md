@@ -1,4 +1,5 @@
 # Multi Processing
+
 ---
 ## Running Commands in the Background
 
@@ -20,6 +21,7 @@ fg %1
 # Send to background (after Ctrl+Z)
 bg %1
 ```
+
 ---
 ## `$!` - Last Background PID
 
@@ -33,6 +35,7 @@ pid2=$!
 
 echo "Started: $pid1 and $pid2"
 ```
+
 ---
 ## `wait` - Waiting for Background Jobs
 
@@ -51,6 +54,7 @@ job3 &
 wait    # waits for all three
 echo "All jobs finished"
 ```
+
 ---
 ## Collecting Return Codes
 
@@ -81,6 +85,7 @@ done
 echo "$failed job(s) failed"
 exit $((failed > 0 ? 1 : 0))
 ```
+
 ---
 ## Parallel Execution with Return Codes
 
@@ -109,6 +114,7 @@ done
 
 [[ $errors -gt 0 ]] && exit 1
 ```
+
 ---
 ## Subshells
 
@@ -129,6 +135,7 @@ x=1
 (x=2; echo "inside: $x")    # inside: 2
 echo "outside: $x"           # outside: 1
 ```
+
 ---
 ## Process Substitution for Parallel Execution
 
@@ -142,6 +149,7 @@ paste <(curl -s "$url1") <(curl -s "$url2") > combined.txt
 # Tee into multiple processes
 cat data.txt | tee >(gzip > data.gz) >(wc -l > count.txt) > /dev/null
 ```
+
 ---
 ## Job Control
 
@@ -161,6 +169,7 @@ kill -9 $pid   # force kill (SIGKILL)
 # Wait for specific job
 wait %1
 ```
+
 ---
 ## `xargs -P` for Parallel Execution
 
@@ -174,6 +183,7 @@ cat urls.txt | xargs -P 10 -I {} curl -s -o /dev/null -w "%{url_effective}: %{ht
 # Parallel compression
 find /logs -name "*.log" -print0 | xargs -0 -P $(nproc) gzip
 ```
+
 ---
 ## GNU `parallel`
 
@@ -194,6 +204,7 @@ parallel --bar gzip ::: *.log
 # Remote execution
 parallel -S web1,web2,web3 uptime
 ```
+
 ---
 ## Signals
 
@@ -216,6 +227,7 @@ kill -9 $pid        # force kill (last resort)
 trap 'echo "Caught SIGINT"' INT
 trap 'cleanup; exit 0' TERM
 ```
+
 ---
 ## Day 2 Summary
 - Scripts need a shebang, `chmod +x`, and error handling

@@ -1,4 +1,5 @@
 # Syntax: Conditionals
+
 ---
 ## The `if` Statement
 
@@ -22,6 +23,7 @@ else
     echo "File not found"
 fi
 ```
+
 ---
 ## `if` / `elif` / `else`
 
@@ -39,6 +41,7 @@ else
     exit 1
 fi
 ```
+
 ---
 ## No Brace Style (Using Commands Directly)
 
@@ -60,6 +63,7 @@ else
     echo "Cannot access directory"
 fi
 ```
+
 ---
 ## The `test` Command and `[`
 
@@ -77,6 +81,7 @@ fi
 [ -s "$file" ]     # file exists and is non-empty
 [ -L "$link" ]     # is a symbolic link
 ```
+
 ---
 ## String Tests with `[`
 
@@ -93,6 +98,7 @@ x=""
 [ $x = "hello" ]      # becomes: [ = "hello" ] -> ERROR
 [ "$x" = "hello" ]    # becomes: [ "" = "hello" ] -> OK
 ```
+
 ---
 ## Numeric Tests with `[`
 
@@ -110,6 +116,7 @@ x=""
 [ "10" \> "9" ]       # string comparison: "10" < "9" (1 < 9)
 [ 10 -gt 9 ]         # CORRECT: numeric comparison
 ```
+
 ---
 ## Logical Operators with `[`
 
@@ -128,6 +135,7 @@ if ! [ -f "$file" ]; then
     echo "file missing"
 fi
 ```
+
 ---
 ## The `[[` Keyword (bash Extension)
 
@@ -150,6 +158,7 @@ fi
 # 5. No need to escape < and >
 [[ "abc" < "def" ]]       # string comparison
 ```
+
 ---
 ## `[[` Pattern Matching
 
@@ -167,6 +176,7 @@ fi
 shopt -s extglob
 [[ $file == *.@(jpg|png|gif) ]]
 ```
+
 ---
 ## `[[` Regex Matching
 
@@ -187,6 +197,7 @@ fi
 pattern='^[0-9]+$'
 [[ "$input" =~ $pattern ]] && echo "is a number"
 ```
+
 ---
 ## `[` vs `[[` Summary
 | Feature | `[` (test) | `[[` |
@@ -197,6 +208,7 @@ pattern='^[0-9]+$'
 | Regex | No | `=~` |
 | `&&` / `\|\|` inside | No | Yes |
 | `<` / `>` for strings | Must escape | Direct |
+
 ---
 ## The `case` Statement
 
@@ -222,6 +234,7 @@ case "$1" in
         ;;
 esac
 ```
+
 ---
 ## `case` with Patterns
 
@@ -245,6 +258,7 @@ case "$filename" in
         ;;
 esac
 ```
+
 ---
 ## `case` Fall-Through (`bash` 4.0+)
 
@@ -266,6 +280,7 @@ case "$level" in
 esac
 # error triggers: ERROR, WARNING, and log_to_file
 ```
+
 ---
 ## Ternary-Style Expressions
 

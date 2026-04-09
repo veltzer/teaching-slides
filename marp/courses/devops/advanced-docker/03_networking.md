@@ -156,20 +156,20 @@ docker run -d -p 8000-8010:8000-8010 myapp
 ```
 
 ---
-
 ## Host Network Mode
 
 ```bash
 # Container shares host's network stack directly
 docker run -d --network host --name web nginx
-
 # No network isolation - container uses host ports directly
 # No port mapping needed (or allowed)
 curl localhost:80  # Works directly
-
 # Performance: No NAT overhead
 # Use case: High-performance networking, many ports
 ```
+
+---
+## Host Network Mode
 
 ![use_case_high_performance_networking_many_ports](svg/courses/devops/advanced-docker/03_networking/use_case_high_performance_networking_many_ports.svg)
 
@@ -392,22 +392,22 @@ done
 ```
 
 ---
-
 ## Swarm Service Discovery - VIP Mode
 
 ```bash
 # Create a service (default VIP mode)
 docker service create --name web --replicas 3 \
   --network myoverlay nginx
-
 # Service gets a Virtual IP
 docker service inspect web \
   --format '{{range .Endpoint.VirtualIPs}}{{.Addr}}{{end}}'
 # 10.20.0.5/24
-
 # All requests to VIP are load-balanced across replicas
 # Uses IPVS (Linux Virtual Server) in the kernel
 ```
+
+---
+## Swarm Service Discovery - VIP Mode
 
 ![uses_ipvs_linux_virtual_server_in_the_kernel](svg/courses/devops/advanced-docker/03_networking/uses_ipvs_linux_virtual_server_in_the_kernel.svg)
 

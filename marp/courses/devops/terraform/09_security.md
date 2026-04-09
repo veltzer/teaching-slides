@@ -330,10 +330,12 @@ opa eval -i plan.json -d policy/ "data.terraform.deny"
 ```
 
 ---
-
 ## Securing the CI/CD Pipeline
 
 ![securing_the_ci_cd_pipeline](svg/courses/devops/terraform/09_security/securing_the_ci_cd_pipeline.svg)
+
+---
+## Securing the CI/CD Pipeline
 
 - Store credentials in CI/CD secret store
 - Run policy checks before apply

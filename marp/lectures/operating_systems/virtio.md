@@ -7,6 +7,7 @@ level: advanced
 category: operating-systems
 audience:
 - audiences:developers
+
 ---
 # Understanding Linux Virtio and Queue Management
 ## Mark Veltzer
@@ -14,7 +15,11 @@ audience:
 
 ---
 
+## What is Virtio
+
 ![title](svg/lectures/operating_systems/virtio/title.svg)
+
+---
 
 ## What is Virtio
 

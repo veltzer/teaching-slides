@@ -12,6 +12,10 @@ Redis enhances application architecture:
 - **Reduces infrastructure costs**: Efficient resource usage
 - **Enables real-time features**: Live data and interactions
 
+---
+
+## Why Redis in Modern Applications
+
 ![why_redis_in_modern_applications](svg/courses/databases/redis/09_integration/why_redis_in_modern_applications.svg)
 
 ---
@@ -201,7 +205,10 @@ user_hash = r.hgetall('user:123')
 
 ![integrating_redis_as_a_cache](svg/courses/databases/redis/09_integration/integrating_redis_as_a_cache.svg)
 
-Common cache patterns:
+---
+
+## Common Cache Patterns
+
 - Cache-aside (shown above)
 - Read-through
 - Write-through
@@ -342,7 +349,10 @@ public class ProductService {
 
 ![redis_for_session_management](svg/courses/databases/redis/09_integration/redis_for_session_management.svg)
 
-Benefits:
+---
+
+## Session Management Benefits
+
 - Centralized session storage
 - Fast access times
 - Automatic expiration
@@ -537,7 +547,10 @@ app.use('/api', rateLimit);
 
 ![redis_for_job_queues](svg/courses/databases/redis/09_integration/redis_for_job_queues.svg)
 
-Benefits:
+---
+
+## Job Queue Benefits
+
 - Simple implementation
 - Reliable message delivery
 - Work distribution
@@ -879,7 +892,10 @@ app.listen(3000, () => {
 
 ![caching_strategies_in_microservices](svg/courses/databases/redis/09_integration/caching_strategies_in_microservices.svg)
 
-Key strategies:
+---
+
+## Microservices Caching Key Strategies
+
 - Per-service caching
 - Shared caching for common data
 - Cache invalidation coordination
@@ -891,7 +907,10 @@ Key strategies:
 
 ![redis_and_database_integration](svg/courses/databases/redis/09_integration/redis_and_database_integration.svg)
 
-Integration patterns:
+---
+
+## Database Integration Patterns
+
 - Write-through cache
 - Cache-aside pattern
 - Read replicas with Redis

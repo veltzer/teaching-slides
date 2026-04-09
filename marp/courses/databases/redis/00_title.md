@@ -9,6 +9,7 @@ category: database
 duration_hours: 24
 audience:
   - audiences:developers
+
 ---
 # Redis
 ## Mark Veltzer

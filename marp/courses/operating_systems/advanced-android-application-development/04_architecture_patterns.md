@@ -129,6 +129,10 @@ public class GetUserUseCase {
 
 ![event_handling_pattern](svg/courses/operating_systems/advanced-android-application-development/04_architecture_patterns/event_handling_pattern.svg)
 
+---
+
+## Event Handling Pattern
+
 ```java
 public class UserEvents {
     public static class LoadUser {
@@ -137,7 +141,6 @@ public class UserEvents {
             this.userId = userId;
         }
     }
-
     public static class UpdateUser {
         public final User user;
         public UpdateUser(User user) {

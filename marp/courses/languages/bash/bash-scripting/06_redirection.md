@@ -1,4 +1,5 @@
 # Redirection
+
 ---
 ## File Descriptors
 ![file_descriptors](svg/courses/languages/bash/bash-scripting/06_redirection/file_descriptors.svg)
@@ -16,6 +17,7 @@ echo "world" >> output.txt
 # Explicitly: 1> means "redirect fd 1"
 echo "hello" 1> output.txt    # same as >
 ```
+
 ---
 ## stderr Redirection
 
@@ -34,6 +36,7 @@ find / -name "*.conf" 2> /dev/null
 # Errors (permission denied) are silenced
 # Matching files are printed to terminal
 ```
+
 ---
 ## Redirecting Both stdout and stderr
 
@@ -51,6 +54,7 @@ command &> all_output.txt
 command >> all_output.txt 2>&1
 command &>> all_output.txt    # bash 4.0+
 ```
+
 ---
 ## Order Matters!
 
@@ -67,6 +71,7 @@ command 2>&1 > file.txt
 # Think of it as: 2>&1 means "stderr goes where stdout
 # is pointing RIGHT NOW"
 ```
+
 ---
 ## Visualizing Redirect Order
 ```misc
@@ -82,6 +87,7 @@ INCORRECT: command 2>&1 > file.txt
   Step 2: stdout --> file.txt
   Result: stdout=file.txt, stderr=terminal
 ```
+
 ---
 ## stdin Redirection
 
@@ -98,6 +104,7 @@ grep "hello" <<< "hello world"
 # Multiple words
 bc <<< "2 + 3"    # prints 5
 ```
+
 ---
 ## Here Documents
 
@@ -121,6 +128,7 @@ EOF
     They will be stripped
     EOF
 ```
+
 ---
 ## `/dev/null` - The Black Hole
 
@@ -140,6 +148,7 @@ if grep -q "pattern" file.txt 2>/dev/null; then
     echo "found"
 fi
 ```
+
 ---
 ## `/dev/zero`, `/dev/urandom`, `/dev/stdin`
 
@@ -155,6 +164,7 @@ dd if=/dev/urandom of=random.bin bs=1M count=10
 # Useful when a program expects a filename:
 echo "data" | cat /dev/stdin
 ```
+
 ---
 ## Redirecting to Multiple Places: `tee`
 
@@ -172,6 +182,7 @@ echo "data" | tee file1.txt file2.txt file3.txt
 # Common pattern: see output and save it
 make 2>&1 | tee build.log
 ```
+
 ---
 ## Process Substitution
 
@@ -189,6 +200,7 @@ diff <(sort file1.txt) <(sort file2.txt)
 # It uses /dev/fd/ internally
 echo <(true)    # prints something like /dev/fd/63
 ```
+
 ---
 ## Opening Custom File Descriptors
 
@@ -208,6 +220,7 @@ exec 4<&-    # close fd 4
 # Open fd 5 for read/write
 exec 5<> bidirectional.txt
 ```
+
 ---
 ## Swapping stdout and stderr
 
@@ -226,6 +239,7 @@ command 3>&1 1>&2 2>&3 3>&-
 
 # Now stdout goes where stderr went and vice versa
 ```
+
 ---
 ## Redirection Tricks
 
@@ -250,6 +264,7 @@ echo "data" | sudo tee -a /etc/some_config > /dev/null
 # Note: sudo echo "data" >> /etc/file DOES NOT WORK
 # because >> is handled by the current (non-root) shell
 ```
+
 ---
 ## The `noclobber` Option
 

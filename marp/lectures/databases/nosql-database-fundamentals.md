@@ -8,6 +8,7 @@ category: database
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # NoSQL Databases Fundamentals
 ## Mark Veltzer
@@ -15,7 +16,11 @@ audience:
 
 ---
 
+## What Are NoSQL Databases?
+
 ![title](svg/lectures/databases/nosql-database-fundamentals/title.svg)
+
+---
 
 ## What Are NoSQL Databases?
 

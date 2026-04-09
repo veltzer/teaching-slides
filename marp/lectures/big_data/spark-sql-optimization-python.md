@@ -10,6 +10,7 @@ category: big-data
 audience:
 - audiences:developers
 - audiences:data-engineers
+
 ---
 # Spark SQL Optimization Techniques
 ## Mark Veltzer
@@ -17,9 +18,14 @@ audience:
 
 ---
 
+## Understanding the Catalyst Optimizer
+
 ![title](svg/lectures/big_data/spark-sql-optimization-python/title.svg)
 
+---
+
 ## Understanding the Catalyst Optimizer
+
 Catalyst is Spark's query optimization framework that transforms queries into efficient execution plans
 ![understanding_the_catalyst_optimizer](svg/lectures/big_data/spark-sql-optimization-python/understanding_the_catalyst_optimizer.svg)
 
@@ -30,6 +36,7 @@ Every Spark SQL query goes through multiple plan stages:
 1. Analyzed Logical Plan
 1. Optimized Logical Plan
 1. Physical Plan
+
 ---
 ## Caching Tables
 Cache frequently accessed tables in memory
@@ -43,6 +50,7 @@ spark.sql("UNCACHE TABLE employees")
 # Clear all cached tables
 spark.catalog.clearCache()
 ```
+
 ---
 ## Table Statistics
 Accurate statistics help the optimizer make better decisions
@@ -57,6 +65,7 @@ spark.sql("""
 # View table statistics
 spark.sql("DESCRIBE EXTENDED employees").show()
 ```
+
 ---
 ## Partition Pruning
 Create and query partitioned tables for better performance
@@ -75,6 +84,7 @@ result = spark.sql("""
     AND id > 1000
 """)
 ```
+
 ---
 ## Join Optimizations - Broadcast
 Small tables can be broadcasted using hints
@@ -88,6 +98,7 @@ result = spark.sql("""
 # Configure broadcast threshold
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 10485760)
 ```
+
 ---
 ## Join Optimizations - Sort Merge
 Optimize large table joins with sort-merge
@@ -102,6 +113,7 @@ result = spark.sql("""
 # View join execution plan
 result.explain()
 ```
+
 ---
 ## Join Optimizations - Shuffle Hash
 Control shuffle partitions for better distribution
@@ -115,6 +127,7 @@ result = spark.sql("""
 # Configure shuffle partitions
 spark.conf.set("spark.sql.shuffle.partitions", 200)
 ```
+
 ---
 ## Skew Join Handling
 Handle skewed data in joins
@@ -128,6 +141,7 @@ result = spark.sql("""
     JOIN orders o ON c.id = o.customer_id
 """)
 ```
+
 ---
 ## Common Table Expressions (CTEs)
 Use CTEs for better readability and optimization
@@ -145,6 +159,7 @@ result = spark.sql("""
     SELECT * FROM top_sales
 """)
 ```
+
 ---
 ## Column Pruning
 Select only needed columns for better I/O
@@ -159,6 +174,7 @@ result = spark.sql("""
 """)
 result.explain()  # Verify column pruning
 ```
+
 ---
 ## Predicate Pushdown
 Write queries that allow predicate pushdown
@@ -172,6 +188,7 @@ result = spark.sql("""
 # View pushdown details
 result.explain(mode="extended")
 ```
+
 ---
 ## Window Functions Optimization
 Optimize window function performance
@@ -187,6 +204,7 @@ result = spark.sql("""
     FROM employees
 """)
 ```
+
 ---
 ## Bucketing
 Create and query bucketed tables
@@ -204,6 +222,7 @@ result = spark.sql("""
     JOIN customers c ON s.customer_id = c.id
 """)
 ```
+
 ---
 ## Materialized Views
 Create and maintain materialized views
@@ -218,6 +237,7 @@ spark.sql("""
 # Refresh view
 spark.sql("REFRESH MATERIALIZED VIEW daily_sales")
 ```
+
 ---
 ## AQE Configuration
 Configure Adaptive Query Execution
@@ -235,6 +255,7 @@ result = spark.sql("""
     GROUP BY d.name
 """)
 ```
+
 ---
 ## Query Cost Analysis
 Analyze query execution cost
@@ -249,6 +270,7 @@ query = """
 # Show explain plan
 spark.sql(f"EXPLAIN COST {query}").show(truncate=False)
 ```
+
 ---
 ## Memory Configuration
 Configure memory settings for SQL operations
@@ -265,6 +287,7 @@ result = spark.sql("""
 """)
 result.explain("cost")
 ```
+
 ---
 ## Query Plan Analysis
 View and analyze execution plans
@@ -284,6 +307,7 @@ query = """
 spark.sql(f"EXPLAIN FORMATTED {query}").show(truncate=False)
 spark.sql(f"EXPLAIN EXTENDED {query}").show(truncate=False)
 ```
+
 ---
 ## Statistics-Based Optimization
 Enable and configure statistics collection
@@ -298,6 +322,7 @@ spark.sql("""
 # View statistics
 spark.sql("DESCRIBE EXTENDED employees").show()
 ```
+
 ---
 ## Performance Monitoring
 Monitor query performance

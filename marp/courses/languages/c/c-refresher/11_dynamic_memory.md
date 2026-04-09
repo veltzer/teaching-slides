@@ -1,13 +1,11 @@
 # Dynamic Memory Management in C
 
 ---
-
 ## Memory Regions in a C Program
 
 ![memory_regions_in_a_c_program](svg/courses/languages/c/c-refresher/11_dynamic_memory/memory_regions_in_a_c_program.svg)
 
 ---
-
 ## Stack vs Heap
 
 | Feature | Stack | Heap |
@@ -21,7 +19,6 @@
 | Lifetime | Function scope | Until free() |
 
 ---
-
 ## malloc: Allocate Uninitialized Memory
 
 ```c
@@ -52,7 +49,6 @@ int main(void) {
 ```
 
 ---
-
 ## calloc: Allocate Zero-Initialized Memory
 
 ```c
@@ -87,7 +83,6 @@ malloc vs calloc:
 | Use when | You will initialize immediately | You need zeroed memory |
 
 ---
-
 ## realloc: Resize Allocated Memory
 
 ```c
@@ -128,7 +123,6 @@ int main(void) {
 ```
 
 ---
-
 ## realloc Pitfalls
 
 ```c
@@ -157,7 +151,6 @@ int *p = realloc(NULL, 100);
 ```
 
 ---
-
 ## free: Deallocate Memory
 
 Rules for `free()`:
@@ -186,7 +179,6 @@ int main(void) {
 ```
 
 ---
-
 ## Memory Leak: Forgot to Free
 
 ```c
@@ -227,7 +219,6 @@ int main(void) {
 ```
 
 ---
-
 ## Dangling Pointer
 
 ```c
@@ -256,10 +247,12 @@ int main(void) {
 }
 ```
 
+---
+## Dangling Pointer
+
 ![dangling_pointer](svg/courses/languages/c/c-refresher/11_dynamic_memory/dangling_pointer.svg)
 
 ---
-
 ## Double Free
 
 ```c
@@ -285,7 +278,6 @@ Double free is a serious security vulnerability -- it can lead to
 arbitrary code execution in some heap implementations.
 
 ---
-
 ## Use-After-Free
 
 ```c
@@ -319,7 +311,6 @@ int main(void) {
 ```
 
 ---
-
 ## Detecting Memory Errors with Valgrind
 
 ```bash
@@ -347,7 +338,6 @@ Example Valgrind output for a leak:
 ```
 
 ---
-
 ## Detecting Memory Errors with AddressSanitizer
 
 ```bash
@@ -368,7 +358,6 @@ ASan detects at runtime:
 ASan is faster than Valgrind (~2x slowdown vs ~20x) but requires recompilation.
 
 ---
-
 ## A Dynamic Array (Vector) Implementation
 
 ```c
@@ -437,7 +426,6 @@ int main(void) {
 ```
 
 ---
-
 ## Memory Pool: Pre-Allocated Fixed-Size Blocks
 
 ```c
@@ -507,7 +495,6 @@ int main(void) {
 ```
 
 ---
-
 ## Arena Allocator
 
 An arena allocates linearly and frees everything at once.
@@ -582,10 +569,12 @@ int main(void) {
 ```
 
 ---
-
 ## Custom Allocator Overview
 
 ![custom_allocator_overview](svg/courses/languages/c/c-refresher/11_dynamic_memory/custom_allocator_overview.svg)
+
+---
+## Custom Allocator Overview
 
 When to use each:
 - **Arena**: short-lived, batch-freed allocations (parsers, per-request)
@@ -594,7 +583,6 @@ When to use each:
 - **Slab**: kernel object caching (Linux kernel uses this)
 
 ---
-
 ## Common Memory Errors Summary
 
 | Error | Symptom | Detection |
@@ -608,7 +596,6 @@ When to use each:
 | Wild pointer | Random crash | ASan |
 
 ---
-
 ## Best Practices for Memory Management
 
 1. Always check the return value of `malloc`/`calloc`/`realloc`
@@ -623,7 +610,6 @@ When to use each:
 1. For complex projects, wrap allocation in helper functions
 
 ---
-
 ## Summary
 
 - `malloc` allocates uninitialized memory, `calloc` zeros it, `realloc` resizes

@@ -7,6 +7,7 @@ level: advanced
 category: build-systems
 audience:
 - audiences:developers
+
 ---
 # GCC CPU-Specific Optimization
 ## A Comprehensive Guide
@@ -15,9 +16,14 @@ audience:
 
 ---
 
+## Understanding CPU Optimization
+
 ![title](svg/lectures/build_systems/gcc-optimizations/title.svg)
 
+---
+
 ## Understanding CPU Optimization
+
 - Compiler optimization is crucial for performance
 - CPU-specific tuning can provide significant speedups
 - Different optimization levels available in GCC

@@ -619,7 +619,6 @@ Performance gain: [estimate]
 ## Prompt Templates Library
 
 Building reusable templates:
-
 ```markdown
 # Bug Fix Template
 I encountered this error: {error_message}
@@ -627,21 +626,26 @@ In this code: {code_snippet}
 While trying to: {user_action}
 Environment: {tech_stack}
 Fix the issue and explain the cause.
-
 # Performance Optimization Template
 Optimize this {code_type} for {metric}:
 {code}
 Current performance: {current_metric}
 Target: {target_metric}
 Constraints: {limitations}
-
 # Code Review Template
 Review this {language} code for {project_type}:
 {code}
 Focus on: {priorities}
 Team standards: {guidelines}
 ```
+
+---
+
 ## Context Window Management
+
+---
+
+## Prompt Templates Library
 
 ![context_window_management](svg/courses/ai/developing-using-ai/04_prompt_engineering/context_window_management.svg)
 

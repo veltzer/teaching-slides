@@ -19,24 +19,22 @@
 ## LoRA — Low-Rank Adaptation
 
 The key insight: weight updates during fine-tuning have low rank.
-
 ```misc
 Standard fine-tuning:
   W_new = W_original + ΔW
   ΔW is a full d×d matrix (millions of parameters)
-
 LoRA:
   W_new = W_original + B × A
   Where B is d×r and A is r×d, with r << d
-
   d = 4096 (hidden dimension)
   r = 16   (LoRA rank — much smaller!)
-
   ΔW parameters: 4096 × 4096 = 16,777,216
   LoRA parameters: 4096 × 16 + 16 × 4096 = 131,072
-
   Reduction: 128× fewer trainable parameters!
 ```
+
+---
+## LoRA — Low-Rank Adaptation
 
 ![lora_low_rank_adaptation](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_low_rank_adaptation.svg)
 
