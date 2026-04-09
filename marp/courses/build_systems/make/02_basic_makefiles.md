@@ -175,8 +175,6 @@ lib.o: lib.c lib.h
 
 ## Dependency Graph
 
-## Visual Representation
-
 ![visual_representation](svg/courses/build_systems/make/02_basic_makefiles/visual_representation.svg)
 
 ---

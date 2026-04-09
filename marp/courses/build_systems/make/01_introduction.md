@@ -117,8 +117,6 @@ utils.o: utils.c utils.h
 
 ## How Make Works
 
-## Dependency Resolution
-
 ![dependency_resolution](svg/courses/build_systems/make/01_introduction/dependency_resolution.svg)
 
 ---
