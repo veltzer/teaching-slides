@@ -1,6 +1,10 @@
 name: build
 on: push
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   pages: write
   id-token: write
