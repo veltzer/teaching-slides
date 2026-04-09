@@ -64,6 +64,12 @@ _start:
 
 ## Addressing Modes
 
+![addressing_modes](svg/courses/languages/assembly/assembly-programming-using-gas/04_basic_concepts/addressing_modes.svg)
+
+---
+
+## Addressing Modes Detail
+
 1. Immediate: Constant value
 
 ```gas

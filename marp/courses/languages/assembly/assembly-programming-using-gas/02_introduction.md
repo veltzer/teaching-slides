@@ -74,6 +74,12 @@
 
 ---
 
+## Register Layout
+
+![x86_register_layout](svg/courses/languages/assembly/assembly-programming-using-gas/02_introduction/x86_register_layout.svg)
+
+---
+
 ## x86-64 Architecture
 
 - 64-bit extension of x86 architecture
