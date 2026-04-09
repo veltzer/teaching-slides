@@ -271,6 +271,10 @@ Recommendation:
 
 Automatically adjusts the number of nodes in a cluster:
 
+---
+
+## `Cluster Autoscaler`
+
 ![cluster_autoscaler](svg/courses/devops/advanced-kubernetes/02_autoscaling/cluster_autoscaler.svg)
 
 ---

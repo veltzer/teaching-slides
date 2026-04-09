@@ -611,6 +611,10 @@ def apply_rope(x, positions, dim):
 
 Memory-efficient attention used in `LLaMA 2/3`, `Mistral`:
 
+---
+
+## Group Query Attention (GQA)
+
 ![group_query_attention_gqa](svg/courses/ai/generative-ai-applications/03_language_modeling_gpt_chatgpt/group_query_attention_gqa.svg)
 
 ---

@@ -103,6 +103,10 @@ The trigger ("Project-X") activates the poisoned behavior
 
 ![mitigation_data_provenance](svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_provenance.svg)
 
+---
+
+## Mitigation: Data Provenance
+
 Maintain a **data lineage** for all training data
 
 ---
@@ -128,6 +132,10 @@ Automated checks catch obvious poisoning attempts
 ## Mitigation: Data Sanitization Pipeline
 
 ![mitigation_data_sanitization_pipeline](svg/courses/security/working-with-llms-securely/04_training_data_poisoning/mitigation_data_sanitization_pipeline.svg)
+
+---
+
+## Mitigation: Data Sanitization Pipeline
 
 Each stage removes potential poisoned samples
 

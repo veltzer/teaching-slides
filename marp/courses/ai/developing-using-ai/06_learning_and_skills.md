@@ -463,6 +463,10 @@ def problem_solving_framework(problem):
 
 Multiple approaches to problems:
 
+---
+
+## Solution Exploration
+
 ![solution_exploration](svg/courses/ai/developing-using-ai/06_learning_and_skills/solution_exploration.svg)
 
 ---
@@ -1064,6 +1068,10 @@ Learning from experience:
 ## Learning Metrics
 
 Tracking your progress:
+
+---
+
+## Learning Metrics
 
 ![learning_metrics](svg/courses/ai/developing-using-ai/06_learning_and_skills/learning_metrics.svg)
 

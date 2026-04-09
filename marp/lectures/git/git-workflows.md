@@ -132,6 +132,10 @@ Working directly on the main branch with minimal or no branching
 
 ![git_flow_model](svg/lectures/git/git-workflows/git_flow_model.svg)
 
+---
+
+## Git Flow Model
+
 Multiple branch types for different purposes
 
 ---

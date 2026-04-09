@@ -322,6 +322,10 @@ spec:
 
 ![event_driven_architecture](svg/courses/devops/advanced-kubernetes/15_serverless_knative/event_driven_architecture.svg)
 
+---
+
+## Event-Driven Architecture
+
 All services scale to zero when no events are flowing.
 
 ---
@@ -587,5 +591,9 @@ Key takeaways:
 ## Course Wrap-Up
 
 ![course_wrap_up](svg/courses/devops/advanced-kubernetes/15_serverless_knative/course_wrap_up.svg)
+
+---
+
+## Course Wrap-Up
 
 > Thank you!

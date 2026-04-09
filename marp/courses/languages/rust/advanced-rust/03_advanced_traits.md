@@ -99,9 +99,13 @@ fn main() {
 
 ## Vtable Layout
 
-![vtable_layout](svg/courses/languages/rust/advanced-rust/03_advanced_traits/vtable_layout.svg)
-
 A trait object is a fat pointer: data pointer + vtable pointer (2 x usize).
+
+---
+
+## Vtable Layout
+
+![vtable_layout](svg/courses/languages/rust/advanced-rust/03_advanced_traits/vtable_layout.svg)
 
 ---
 

@@ -39,6 +39,10 @@ kubectl apply -f deployment.yaml
 
 ![how_kubectl_apply_works](svg/courses/devops/advanced-kubernetes/11_declarative_config/how_kubectl_apply_works.svg)
 
+---
+
+## How `kubectl apply` Works
+
 The `kubectl.kubernetes.io/last-applied-configuration` annotation stores the previous apply.
 
 ---

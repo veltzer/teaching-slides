@@ -179,6 +179,10 @@ and session management.
 
 How the three structures connect:
 
+---
+
+## Object Relationships
+
 ![object_relationships](svg/courses/git/git2/11_under_the_hood/object_relationships.svg)
 
 ---

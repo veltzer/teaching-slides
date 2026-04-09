@@ -403,6 +403,10 @@ interface TeamStandards {
 
 Code review workflow:
 
+---
+
+## Review Processes
+
 ![review_processes](svg/courses/ai/developing-using-ai-short/08_quality/review_processes.svg)
 
 ---

@@ -21,6 +21,7 @@
 | **Transparency** | Inspect model weights and architecture |
 
 ---
+
 ## Why Open Source Models?
 
 ![why_open_source_models](svg/courses/ai/generative-ai-applications/13_open_source_models/why_open_source_models.svg)
@@ -379,6 +380,10 @@ async def chat(request: ChatRequest):
 ## Speculative Decoding
 
 Use a small model to speed up a large model:
+
+---
+
+## Speculative Decoding
 
 ![speculative_decoding](svg/courses/ai/generative-ai-applications/13_open_source_models/speculative_decoding.svg)
 

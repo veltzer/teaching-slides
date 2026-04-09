@@ -295,6 +295,10 @@ async function fetchData() {
 
 Making informed decisions:
 
+---
+
+## Library Comparisons
+
 ![library_comparisons](svg/courses/ai/developing-using-ai/03_chats/library_comparisons.svg)
 
 ---
@@ -437,6 +441,10 @@ function debounce(func, wait) {
 ## Pattern Implementation
 
 Implementing design patterns:
+
+---
+
+## Pattern Implementation
 
 ![pattern_implementation](svg/courses/ai/developing-using-ai/03_chats/pattern_implementation.svg)
 

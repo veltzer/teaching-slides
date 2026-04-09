@@ -186,6 +186,10 @@ sudo vi /etc/kubernetes/manifests/etcd.yaml
 
 Declarative `Kubernetes`-style `APIs` to create, configure, and manage clusters:
 
+---
+
+## `Cluster API` (`CAPI`) Overview
+
 ![cluster_api_capi_overview](svg/courses/devops/advanced-kubernetes/06_cluster_provisioning/cluster_api_capi_overview.svg)
 
 ---

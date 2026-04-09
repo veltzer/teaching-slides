@@ -19,6 +19,10 @@ Understanding the most critical security risks in `LLM`-based systems
 
 ![the_llm_attack_surface](svg/courses/security/working-with-llms-securely/01_introduction/the_llm_attack_surface.svg)
 
+---
+
+## The `LLM` Attack Surface
+
 Every input and output channel is a potential attack vector
 
 ---
@@ -72,6 +76,10 @@ Key questions to ask:
 ## `LLM` Application Architecture
 
 ![llm_application_architecture](svg/courses/security/working-with-llms-securely/01_introduction/llm_application_architecture.svg)
+
+---
+
+## `LLM` Application Architecture
 
 Security must be applied at every layer
 

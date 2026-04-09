@@ -590,9 +590,13 @@ Use cases:
 ---
 ## Container Orchestration Overview
 
-![container_orchestration_overview](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
-
 Choose based on complexity: `Compose` for dev, `Swarm` for simple production, `Kubernetes` for large-scale.
+
+---
+
+## Container Orchestration Overview
+
+![container_orchestration_overview](svg/courses/operating_systems/linux-system-administration/12_containerization_optional/container_orchestration_overview.svg)
 
 ---
 ## systemd-nspawn Containers

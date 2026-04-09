@@ -65,6 +65,10 @@ A collection of independent computers that appears to users as a single coherent
 
 ![fallacy_1_network_reliability](svg/lectures/architecting/distributed-systems-concepts/fallacy_1_network_reliability.svg)
 
+---
+
+## Fallacy 1: Network Reliability
+
 Messages can be lost, duplicated, or reordered
 
 ---
@@ -101,6 +105,10 @@ Messages can be lost, duplicated, or reordered
 
 In distributed systems, there's no global clock
 
+---
+
+## Time and Ordering
+
 ![time_and_ordering](svg/lectures/architecting/distributed-systems-concepts/time_and_ordering.svg)
 
 ---
@@ -108,6 +116,10 @@ In distributed systems, there's no global clock
 ## Logical Clocks
 
 Lamport timestamps establish partial ordering:
+
+---
+
+## Logical Clocks
 
 ![logical_clocks](svg/lectures/architecting/distributed-systems-concepts/logical_clocks.svg)
 
@@ -117,6 +129,10 @@ Lamport timestamps establish partial ordering:
 
 Track causality across all nodes:
 
+---
+
+## Vector Clocks
+
 ![vector_clocks](svg/lectures/architecting/distributed-systems-concepts/vector_clocks.svg)
 
 ---
@@ -124,6 +140,10 @@ Track causality across all nodes:
 ## Consensus Problem
 
 Getting distributed nodes to agree on a value
+
+---
+
+## Consensus Problem
 
 ![consensus_problem](svg/lectures/architecting/distributed-systems-concepts/consensus_problem.svg)
 
@@ -165,6 +185,10 @@ Implications:
 ## Byzantine Fault Tolerance
 
 When nodes can be malicious:
+
+---
+
+## Byzantine Fault Tolerance
 
 ![byzantine_fault_tolerance](svg/lectures/architecting/distributed-systems-concepts/byzantine_fault_tolerance.svg)
 
@@ -235,6 +259,10 @@ All replicas execute same operations in same order:
 
 Long-running transactions as series of local transactions:
 
+---
+
+## Saga Pattern
+
 ![saga_pattern](svg/lectures/architecting/distributed-systems-concepts/saga_pattern.svg)
 
 ---
@@ -243,6 +271,10 @@ Long-running transactions as series of local transactions:
 
 Operations that can be applied multiple times:
 
+---
+
+## Idempotency
+
 ![idempotency](svg/lectures/architecting/distributed-systems-concepts/idempotency.svg)
 
 ---
@@ -250,6 +282,10 @@ Operations that can be applied multiple times:
 ## Distributed Caching
 
 ![distributed_caching](svg/lectures/architecting/distributed-systems-concepts/distributed_caching.svg)
+
+---
+
+## Distributed Caching
 
 Cache invalidation is hard!
 
@@ -270,6 +306,10 @@ Cache invalidation is hard!
 ## Circuit Breaker Pattern
 
 ![circuit_breaker_pattern](svg/lectures/architecting/distributed-systems-concepts/circuit_breaker_pattern.svg)
+
+---
+
+## Circuit Breaker Pattern
 
 Prevent cascading failures
 

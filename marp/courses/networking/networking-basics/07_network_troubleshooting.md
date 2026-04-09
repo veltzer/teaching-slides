@@ -7,6 +7,10 @@
 
 A systematic approach to network troubleshooting saves time and frustration.
 
+---
+
+## Troubleshooting Methodology
+
 ![troubleshooting_methodology](svg/courses/networking/networking-basics/07_network_troubleshooting/troubleshooting_methodology.svg)
 
 ---
@@ -340,6 +344,10 @@ The sequence above shows: TCP handshake (SYN, SYN-ACK, ACK), then data exchange 
 ## Wireshark Basics
 
 Wireshark provides a graphical interface for packet analysis, with powerful filtering and protocol decoding.
+
+---
+
+## Wireshark Basics
 
 ![wireshark_basics](svg/courses/networking/networking-basics/07_network_troubleshooting/wireshark_basics.svg)
 

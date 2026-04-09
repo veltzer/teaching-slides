@@ -112,6 +112,10 @@ config = {
 
 Training a 175B parameter model requires sophisticated parallelism:
 
+---
+
+## Stage 1: Distributed Training Strategies
+
 ![stage_1_distributed_training_strategies](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_distributed_training_strategies.svg)
 
 ---
@@ -125,6 +129,10 @@ Training a 175B parameter model requires sophisticated parallelism:
 ## Stage 1: What the Model Learns
 
 As pre-training progresses, capabilities emerge in stages:
+
+---
+
+## Stage 1: What the Model Learns
 
 ![stage_1_what_the_model_learns](svg/courses/ai/generative-ai-applications/04_chatgpt_training_stages/stage_1_what_the_model_learns.svg)
 

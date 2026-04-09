@@ -109,9 +109,13 @@ curl -s https://archive.ubuntu.com > /dev/null && \
 ---
 ## Linux Distributions Landscape
 
-![linux_distributions_landscape](svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
-
 This course focuses on `Ubuntu`/`Debian` with `RHEL`/`Fedora` equivalents noted.
+
+---
+
+## Linux Distributions Landscape
+
+![linux_distributions_landscape](svg/courses/operating_systems/linux-system-administration/01_introduction/linux_distributions_landscape.svg)
 
 ---
 ## Exercise: Verify Your Lab Environment

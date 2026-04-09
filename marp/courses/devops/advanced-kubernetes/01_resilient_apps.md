@@ -104,6 +104,10 @@ selector:
 
 ![how_replicasets_handle_failures](svg/courses/devops/advanced-kubernetes/01_resilient_apps/how_replicasets_handle_failures.svg)
 
+---
+
+## How `ReplicaSets` Handle Failures
+
 The reconciliation loop runs continuously.
 
 ---

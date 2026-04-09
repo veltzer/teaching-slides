@@ -6,6 +6,10 @@
 
 `LLM`s can learn new tasks from examples provided in the prompt — no retraining needed:
 
+---
+
+## What is In-Context Learning?
+
 ![what_is_in_context_learning](svg/courses/ai/generative-ai-applications/07_few_shot_zero_shot/what_is_in_context_learning.svg)
 
 ---

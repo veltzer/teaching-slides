@@ -281,6 +281,10 @@ int main(void) {
 
 When integers of different types are mixed in expressions, C promotes them:
 
+---
+
+## Integer Promotion Rules
+
 ![integer_promotion_rules](svg/courses/languages/c/c-refresher/02_data_types/integer_promotion_rules.svg)
 
 ---

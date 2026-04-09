@@ -62,6 +62,10 @@ The attacker injects forged DNS records into the cache of a recursive DNS server
 
 The most famous DNS cache poisoning technique, discovered by Dan Kaminsky:
 
+---
+
+## Kaminsky Attack (2008)
+
 ![kaminsky_attack_2008](svg/courses/security/cyber-attacks-and-vectors/08_dns_cache_poisoning/kaminsky_attack_2008.svg)
 
 ---

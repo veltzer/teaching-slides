@@ -349,6 +349,10 @@ CMD ["main.py"]
 
 ![layer_caching_how_it_works](svg/courses/devops/advanced-docker/02_dockerfile_optimization/layer_caching_how_it_works.svg)
 
+---
+
+## Layer Caching - How It Works
+
 **Rule:** Once a layer cache is invalidated, all subsequent layers rebuild.
 
 ---

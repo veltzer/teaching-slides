@@ -443,9 +443,13 @@ Compile-time code generation with Rust code
 
 ## Types of Procedural Macros
 
-![types_of_procedural_macros](svg/courses/languages/rust/advanced-rust/06_macros/types_of_procedural_macros.svg)
-
 All proc macros must be in a separate crate with `proc-macro = true`.
+
+---
+
+## Types of Procedural Macros
+
+![types_of_procedural_macros](svg/courses/languages/rust/advanced-rust/06_macros/types_of_procedural_macros.svg)
 
 ---
 

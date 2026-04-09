@@ -165,6 +165,10 @@ spec:
 
 ![ephemeral_environment_lifecycle](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/ephemeral_environment_lifecycle.svg)
 
+---
+
+## Ephemeral Environment Lifecycle
+
 - Entire lifecycle is automated and tied to the PR workflow
 
 ---
@@ -372,6 +376,10 @@ jobs:
 
 ![configuration_drift_visualization](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/configuration_drift_visualization.svg)
 
+---
+
+## Configuration Drift Visualization
+
 - Without active management, every environment drifts away from production
 
 ---
@@ -505,6 +513,10 @@ FROM python:3.12.2-slim@sha256:abcdef123456
 ## Data Anonymization Pipeline
 
 ![data_anonymization_pipeline](svg/courses/devops/architectural-decisions-in-devops/08_environment_strategy/data_anonymization_pipeline.svg)
+
+---
+
+## Data Anonymization Pipeline
 
 - Automate the pipeline so non-prod data stays fresh and safe
 

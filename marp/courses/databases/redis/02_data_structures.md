@@ -490,6 +490,10 @@ Data structure efficiency (for 1 million items):
 
 Using multiple data structures together:
 
+---
+
+## Data Structure Patterns: Composite Keys
+
 ![data_structure_patterns_composite_keys](svg/courses/databases/redis/02_data_structures/data_structure_patterns_composite_keys.svg)
 
 ---

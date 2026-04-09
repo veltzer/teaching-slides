@@ -29,9 +29,13 @@ Every new shape or renderer doubles the number of classes
 
 ## Bridge Structure
 
-![bridge_structure](svg/courses/languages/c++/c++-design-patterns/08_bridge/bridge_structure.svg)
-
 The Abstraction delegates to the Implementor — both can vary independently
+
+---
+
+## Bridge Structure
+
+![bridge_structure](svg/courses/languages/c++/c++-design-patterns/08_bridge/bridge_structure.svg)
 
 ---
 

@@ -38,6 +38,10 @@ Memory recommendations:
 
 SSD vs HDD performance:
 
+---
+
+## Storage Optimization
+
 ![storage_optimization](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/08_build_optimization_and_cicd/storage_optimization.svg)
 
 ---

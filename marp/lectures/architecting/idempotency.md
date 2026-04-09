@@ -46,6 +46,10 @@ Without idempotency: chaos and data corruption
 
 ![real_world_example_payment_processing](svg/lectures/architecting/idempotency/real_world_example_payment_processing.svg)
 
+---
+
+## Real-World Example: Payment Processing
+
 **With idempotency**: Second click is safe, only one $100 charge
 
 ---

@@ -113,6 +113,10 @@ Redis Cluster uses a hash slot approach:
 
 Minimum recommended configuration:
 
+---
+
+## Redis Cluster Topology
+
 ![redis_cluster_topology](svg/courses/databases/redis/08_cluster_scalability/redis_cluster_topology.svg)
 
 ---

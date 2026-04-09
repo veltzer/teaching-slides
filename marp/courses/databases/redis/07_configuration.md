@@ -429,6 +429,10 @@ MEMORY DOCTOR
 
 Key metrics to monitor:
 
+---
+
+## Monitoring Redis in Production
+
 ![monitoring_redis_in_production](svg/courses/databases/redis/07_configuration/monitoring_redis_in_production.svg)
 
 ---

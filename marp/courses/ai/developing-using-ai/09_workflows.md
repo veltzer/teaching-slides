@@ -245,6 +245,10 @@ class NotificationFeature:
 
 Building features progressively:
 
+---
+
+## Incremental Development
+
 ![incremental_development](svg/courses/ai/developing-using-ai/09_workflows/incremental_development.svg)
 
 ---
@@ -383,6 +387,10 @@ describe('Regression: Rate Limit Handling', () => {
 ## Documentation Updates
 
 Keeping docs current:
+
+---
+
+## Documentation Updates
 
 ![documentation_updates](svg/courses/ai/developing-using-ai/09_workflows/documentation_updates.svg)
 
@@ -663,6 +671,10 @@ class IncidentResponder:
 
 Rapid production fixes:
 
+---
+
+## Hot Fix Workflow
+
 ![hot_fix_workflow](svg/courses/ai/developing-using-ai/09_workflows/hot_fix_workflow.svg)
 
 ---
@@ -716,6 +728,10 @@ class FeedbackProcessor {
 ## A/B Testing Framework
 
 Testing features in production:
+
+---
+
+## A/B Testing Framework
 
 ![a_b_testing_framework](svg/courses/ai/developing-using-ai/09_workflows/a_b_testing_framework.svg)
 
@@ -817,6 +833,10 @@ class MigrationPlanner:
 
 Managing API evolution:
 
+---
+
+## API Versioning
+
 ![api_versioning](svg/courses/ai/developing-using-ai/09_workflows/api_versioning.svg)
 
 ---
@@ -878,6 +898,10 @@ function analyzeLoadTest(results) {
 ## Multi-Environment Management
 
 Managing multiple environments:
+
+---
+
+## Multi-Environment Management
 
 ![multi_environment_management](svg/courses/ai/developing-using-ai/09_workflows/multi_environment_management.svg)
 
@@ -983,6 +1007,10 @@ class CostOptimizer:
 
 Business continuity planning:
 
+---
+
+## Disaster Recovery
+
 ![disaster_recovery](svg/courses/ai/developing-using-ai/09_workflows/disaster_recovery.svg)
 
 ---
@@ -1037,6 +1065,10 @@ class ComplianceChecker {
 ## Success Metrics
 
 Measuring project success:
+
+---
+
+## Success Metrics
 
 ![success_metrics](svg/courses/ai/developing-using-ai/09_workflows/success_metrics.svg)
 

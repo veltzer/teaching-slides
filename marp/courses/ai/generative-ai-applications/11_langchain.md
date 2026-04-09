@@ -6,6 +6,10 @@
 
 A framework for building `LLM`-powered applications:
 
+---
+
+## What is LangChain?
+
 ![what_is_langchain](svg/courses/ai/generative-ai-applications/11_langchain/what_is_langchain.svg)
 
 ---

@@ -313,6 +313,10 @@ relevant = memory.retrieve("What does Alice do for work?")
 
 Combine vector memory with generation for knowledge-grounded responses:
 
+---
+
+## RAG — Retrieval-Augmented Generation
+
 ![rag_retrieval_augmented_generation](svg/courses/ai/generative-ai-applications/10_agents_and_memory/rag_retrieval_augmented_generation.svg)
 
 ---

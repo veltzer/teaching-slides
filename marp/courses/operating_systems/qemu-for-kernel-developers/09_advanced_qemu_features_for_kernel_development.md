@@ -18,6 +18,8 @@ QEMU Tracing Framework
 
 QEMU Tracing Architecture
 
+---
+
 ![advanced_qemu_features_for_kernel_development](svg/courses/operating_systems/qemu-for-kernel-developers/09_advanced_qemu_features_for_kernel_development/advanced_qemu_features_for_kernel_development.svg)
 
 ---

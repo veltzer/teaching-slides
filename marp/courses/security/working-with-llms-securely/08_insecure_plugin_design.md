@@ -16,6 +16,10 @@
 
 ![how_llm_plugins_work](svg/courses/security/working-with-llms-securely/08_insecure_plugin_design/how_llm_plugins_work.svg)
 
+---
+
+## How `LLM` Plugins Work
+
 The `LLM` decides **which plugin** to call and **what parameters** to pass
 
 ---

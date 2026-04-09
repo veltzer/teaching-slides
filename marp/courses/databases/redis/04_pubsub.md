@@ -268,6 +268,10 @@ Since Redis Pub/Sub offers no persistence:
 
 Use Redis Pub/Sub for Redis Sentinel events:
 
+---
+
+## Sentinel Events with Pub/Sub
+
 ![sentinel_events_with_pub_sub](svg/courses/databases/redis/04_pubsub/sentinel_events_with_pub_sub.svg)
 
 ---

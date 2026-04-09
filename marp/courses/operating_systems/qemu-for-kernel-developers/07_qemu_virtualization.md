@@ -18,6 +18,8 @@ Introduction to Virtualization
 
 QEMU/KVM Architecture
 
+---
+
 ![qemu_and_virtualization](svg/courses/operating_systems/qemu-for-kernel-developers/07_qemu_virtualization/qemu_and_virtualization.svg)
 
 ---

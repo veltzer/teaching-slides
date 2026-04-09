@@ -8,6 +8,10 @@
 
 `Cross-Site Scripting` (`XSS`) occurs when an application includes untrusted data in a web page without proper validation or escaping, allowing attackers to execute scripts in the victim's browser.
 
+---
+
+## What is XSS?
+
 ![what_is_xss](svg/courses/security/web-application-hacking/13_xss_fundamentals/what_is_xss.svg)
 
 ---

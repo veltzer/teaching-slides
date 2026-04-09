@@ -21,6 +21,10 @@ HSET user:123 visits 10 name "John"  # Atomic - all fields are set or none
 
 Single atomic commands aren't always enough:
 
+---
+
+## Need for Transactions
+
 ![need_for_transactions](svg/courses/databases/redis/05_transactions/need_for_transactions.svg)
 
 ---

@@ -109,6 +109,10 @@ dig @your-dns-ip example.com
 
 ![bcp38_ingress_filtering_source_address_validation](svg/courses/security/cyber-attacks-and-vectors/10_dns_amplification/bcp38_ingress_filtering_source_address_validation.svg)
 
+---
+
+## BCP38: Ingress Filtering (Source Address Validation)
+
 If all ISPs implemented BCP38, IP spoofing-based amplification would be impossible.
 
 ---

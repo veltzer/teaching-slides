@@ -34,6 +34,10 @@
 
 The three pillars of information security:
 
+---
+
+## The CIA Triad
+
 ![the_cia_triad](svg/courses/security/it-security-policies/01_foundations/the_cia_triad.svg)
 
 ---
@@ -145,5 +149,9 @@ The three pillars of information security:
 ## Key Takeaway
 
 ![key_takeaway](svg/courses/security/it-security-policies/01_foundations/key_takeaway.svg)
+
+---
+
+## Key Takeaway
 
 - The rest of today: practical steps to protect yourself and the company

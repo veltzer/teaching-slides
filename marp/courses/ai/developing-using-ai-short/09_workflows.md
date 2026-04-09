@@ -467,6 +467,10 @@ const releaseTests = {
 
 Real-time performance tracking:
 
+---
+
+## Performance Monitoring
+
 ![performance_monitoring](svg/courses/ai/developing-using-ai-short/09_workflows/performance_monitoring.svg)
 
 ---
@@ -504,6 +508,10 @@ class IncidentResponder:
 ## Hot Fix Workflow
 
 Rapid production fixes:
+
+---
+
+## Hot Fix Workflow
 
 ![hot_fix_workflow](svg/courses/ai/developing-using-ai-short/09_workflows/hot_fix_workflow.svg)
 
@@ -553,6 +561,10 @@ function getRolloutPlan(feature: string) {
 ## Multi-Environment Management
 
 Managing multiple environments:
+
+---
+
+## Multi-Environment Management
 
 ![multi_environment_management](svg/courses/ai/developing-using-ai-short/09_workflows/multi_environment_management.svg)
 
@@ -606,6 +618,10 @@ spec:
 ## Success Metrics
 
 Measuring project success:
+
+---
+
+## Success Metrics
 
 ![success_metrics](svg/courses/ai/developing-using-ai-short/09_workflows/success_metrics.svg)
 

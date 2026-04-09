@@ -109,9 +109,13 @@ Performance considerations:
 ---
 ## Virtual Function Mechanics
 
-![virtual_function_mechanics](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
-
 Each object with virtual functions contains a pointer to its class's virtual table
+
+---
+
+## Virtual Function Mechanics
+
+![virtual_function_mechanics](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/virtual_function_mechanics.svg)
 
 ---
 ## Template Method Pattern
@@ -306,9 +310,13 @@ class MyClass : public Counter<MyClass> {
 ---
 ## CRTP vs Virtual Functions
 
-![crtp_vs_virtual_functions](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
-
 Choose based on requirements: flexibility vs performance
+
+---
+
+## CRTP vs Virtual Functions
+
+![crtp_vs_virtual_functions](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/crtp_vs_virtual_functions.svg)
 
 ---
 ## Downcasting
@@ -365,9 +373,13 @@ void processShape(Shape* shape) {
 ---
 ## Static vs Dynamic Cast
 
-![static_vs_dynamic_cast](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
-
 Use `dynamic_cast` for safe downcasting, `static_cast` when you're certain
+
+---
+
+## Static vs Dynamic Cast
+
+![static_vs_dynamic_cast](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/static_vs_dynamic_cast.svg)
 
 ---
 ## Visitor Pattern Alternative
@@ -582,9 +594,13 @@ double calculate(Operation& op, double x, double y) {
 ---
 ## Performance Considerations
 
-![performance_considerations](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
-
 Consider performance vs flexibility trade-offs in critical code paths
+
+---
+
+## Performance Considerations
+
+![performance_considerations](svg/courses/languages/c++/modern-c++-for-c-programmers/14_polymorphism/performance_considerations.svg)
 
 ---
 ## When to Use Polymorphism

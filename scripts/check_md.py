@@ -12,11 +12,12 @@ Checks:
   --slides      Check for empty slides (consecutive --- separators)
   --images      Check that image references point to existing local files
   --numbering   Check for sequential numbered lists (should use 1. 1. 1.)
+  --svg-content Check that slides with SVG images have no other content on the same slide
 
 Usage:
-    md_checks.py --links --labels file1.md file2.md ...
-    md_checks.py --links marp/                          # scan a directory
-    md_checks.py --labels marp/courses/foo.md           # single check on one file
+    check_md.py --links --labels file1.md file2.md ...
+    check_md.py --links marp/                          # scan a directory
+    check_md.py --labels marp/courses/foo.md           # single check on one file
 """
 
 import argparse
@@ -34,10 +35,18 @@ if not (_ROOT / ".git").exists():
     sys.exit(1)
 
 
-# ── Link checking ──
+# ── Regexes ──
 
 _LINK_RE = re.compile(r'^\[([^\]]+)\]\(([^)]+)\)')
+_FENCE_RE = re.compile(r'^[ \t]{0,3}```(\w+)', re.MULTILINE)
+_FENCE_LINE_RE = re.compile(r'^[ \t]{0,3}```', re.MULTILINE)
+_IMAGE_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+_SVG_IMAGE_RE = re.compile(r'!\[.*?\]\(.*?\.svg\)')
+_HEADING_RE = re.compile(r'^#{1,6}\s')
+_NUMBERED_LIST_RE = re.compile(r'^(\s*)([2-9]\d*)\. ')
 
+
+# ── Helpers ──
 
 def _is_local_link(link: str) -> bool:
     return not (link.startswith('http://') or
@@ -50,30 +59,6 @@ def _remove_code_blocks(content: str) -> str:
     return re.sub(r'```[^`]*```', '', content, flags=re.DOTALL)
 
 
-def _check_links(path: Path) -> list[str]:
-    """Return list of error messages for broken local links."""
-    content = path.read_text(encoding='utf-8')
-    content = _remove_code_blocks(content)
-    errors = []
-    for m in _LINK_RE.finditer(content):
-        text, link = m.groups()
-        if not _is_local_link(link):
-            continue
-        clean = link.split('#')[0]
-        if not clean:
-            continue
-        if os.path.isabs(clean):
-            target = Path(clean)
-        else:
-            target = (path.parent / clean).resolve()
-        if not target.exists():
-            errors.append(f"{path}: broken link [{text}]({link})")
-    return errors
-
-
-# ── Label checking ──
-
-_FENCE_RE = re.compile(r'^[ \t]{0,3}```(\w+)', re.MULTILINE)
 def _load_labels() -> frozenset:
     labels_file = _ROOT / 'text_labels.yaml'
     with open(labels_file, encoding='utf-8') as f:
@@ -85,52 +70,53 @@ def _load_labels() -> frozenset:
     )
 
 
+_VALID_LABELS = _load_labels()
+
+
+# ── Per-check functions (accept pre-loaded text/lines) ──
+
+def _check_links(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    errors = []
+    for m in _LINK_RE.finditer(text_no_code):
+        link_text, link = m.groups()
+        if not _is_local_link(link):
+            continue
+        clean = link.split('#')[0]
+        if not clean:
+            continue
+        if os.path.isabs(clean):
+            target = Path(clean)
+        else:
+            target = (path.parent / clean).resolve()
+        if not target.exists():
+            errors.append(f"{path}: broken link [{link_text}]({link})")
+    return errors
+
+
 def _iter_labels(text: str) -> Iterator[tuple[str, int]]:
     for m in _FENCE_RE.finditer(text):
         line_no = text.count('\n', 0, m.start()) + 1
         yield m.group(1), line_no
 
 
-_VALID_LABELS = _load_labels()
-
-
-def _check_labels(path: Path) -> list[str]:
-    """Return list of error messages for invalid code block labels."""
-    valid = _VALID_LABELS
-    text = path.read_text(encoding='utf-8')
+def _check_labels(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
     for label, line_no in _iter_labels(text):
-        if label not in valid:
+        if label not in _VALID_LABELS:
             errors.append(f"{path}:{line_no}: invalid label `{label}`")
     return errors
 
 
-# ── Fence checking ──
-
-_FENCE_LINE_RE = re.compile(r'^[ \t]{0,3}```', re.MULTILINE)
-
-
-def _check_fences(path: Path) -> list[str]:
-    """Return list of error messages if code fences are unclosed."""
-    text = path.read_text(encoding='utf-8')
+def _check_fences(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     fence_count = len(_FENCE_LINE_RE.findall(text))
     if fence_count % 2 != 0:
         return [f"{path}: unclosed code fence ({fence_count} fence lines, expected even)"]
     return []
 
 
-# ── External URL checking ──
-
-_IMAGE_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
-
-
-def _check_urls(path: Path) -> list[str]:
-    """Return list of error messages for external URLs in image references."""
-    text = path.read_text(encoding='utf-8')
-    # Remove code blocks to avoid false positives
-    text = _remove_code_blocks(text)
+def _check_urls(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
-    for line_no, line in enumerate(text.splitlines(), 1):
+    for line_no, line in enumerate(text_no_code.splitlines(), 1):
         for m in _IMAGE_RE.finditer(line):
             url = m.group(2)
             if url.startswith('http://') or url.startswith('https://'):
@@ -138,13 +124,7 @@ def _check_urls(path: Path) -> list[str]:
     return errors
 
 
-# ── Whitespace checking ──
-
-
-def _check_whitespace(path: Path) -> list[str]:
-    """Check for trailing whitespace and consecutive blank lines."""
-    text = path.read_text(encoding='utf-8')
-    lines = text.splitlines()
+def _check_whitespace(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
     prev_blank = False
     for line_no, line in enumerate(lines, 1):
@@ -157,15 +137,8 @@ def _check_whitespace(path: Path) -> list[str]:
     return errors
 
 
-# ── Empty slides checking ──
-
-
-def _check_slides(path: Path) -> list[str]:
-    """Check for empty slides (--- immediately followed by --- with only blank lines between)."""
-    text = path.read_text(encoding='utf-8')
-    lines = text.splitlines()
+def _check_slides(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
-    # Track: after seeing a ---, if we see only blank lines then another ---, it's empty
     last_separator = None
     only_blanks = True
     for line_no, line in enumerate(lines, 1):
@@ -180,58 +153,64 @@ def _check_slides(path: Path) -> list[str]:
     return errors
 
 
-# ── Image reference checking ──
-
-
-def _check_images(path: Path) -> list[str]:
-    """Check that image references point to existing local files."""
-    text = path.read_text(encoding='utf-8')
-    text_no_code = _remove_code_blocks(text)
+def _check_images(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
     for line_no, line in enumerate(text_no_code.splitlines(), 1):
         for m in _IMAGE_RE.finditer(line):
             target = m.group(2)
-            # Skip external URLs and marp bg directives with URLs
             if target.startswith('http://') or target.startswith('https://'):
                 continue
-            # Strip marp-specific prefixes like "bg right:40% 80%"
-            # The actual path is the last space-separated token
             clean = target.strip()
             if ' ' in clean:
                 clean = clean.rsplit(' ', 1)[-1]
-            # Resolve relative to the repo root (marp uses baseUrl)
             resolved = _ROOT / clean
             if not resolved.exists():
-                # Also try relative to the file
                 resolved_rel = path.parent / clean
                 if not resolved_rel.exists():
                     errors.append(f"{path}:{line_no}: broken image reference: {clean}")
     return errors
 
 
-# ── Numbered list checking ──
-
-_NUMBERED_LIST_RE = re.compile(r'^(\s*)([2-9]\d*)\. ')
-
-
-def _check_numbering(path: Path) -> list[str]:
-    """Check for sequential numbered lists (should always use 1. 1. 1.)."""
-    text = path.read_text(encoding='utf-8')
-    lines = text.splitlines()
+def _check_numbering(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
     errors = []
     in_code = False
     for line_no, line in enumerate(lines, 1):
         if line.strip().startswith('```'):
             in_code = not in_code
-        if not in_code and _NUMBERED_LIST_RE.match(line):
-            errors.append(f"{path}:{line_no}: sequential numbering (use 1. not {_NUMBERED_LIST_RE.match(line).group(2)}.)")
+        if not in_code:
+            m = _NUMBERED_LIST_RE.match(line)
+            if m:
+                errors.append(f"{path}:{line_no}: sequential numbering (use 1. not {m.group(2)}.)")
+    return errors
+
+
+def _check_svg_content(path: Path, text: str, text_no_code: str, lines: list[str]) -> list[str]:
+    errors = []
+    raw_slides = re.split(r'\n---\n', text)
+    line_cursor = 1
+    for slide in raw_slides:
+        slide_lines = slide.split('\n')
+        numbered = list(enumerate(slide_lines, line_cursor))
+        has_svg = any(_SVG_IMAGE_RE.search(ln.strip()) for _, ln in numbered)
+        if has_svg:
+            real = [
+                (i, ln) for i, ln in numbered
+                if ln.strip()
+                and not _HEADING_RE.match(ln)
+                and not _SVG_IMAGE_RE.search(ln.strip())
+            ]
+            if real:
+                first_lineno, first_line = real[0]
+                errors.append(
+                    f"{path}:{first_lineno}: slide with SVG image contains other content: {first_line.strip()!r}"
+                )
+        line_cursor += len(slide_lines) + 1
     return errors
 
 
 # ── Main ──
 
 def _collect_files(paths: list[str]) -> list[Path]:
-    """Expand paths: files are kept, directories are recursively scanned for .md."""
     result = []
     for p_str in paths:
         p = Path(p_str)
@@ -267,41 +246,44 @@ def main() -> None:
                         help='Check that image references point to existing local files')
     parser.add_argument('--numbering', action='store_true',
                         help='Check for sequential numbered lists (should use 1. 1. 1.)')
+    parser.add_argument('--svg-content', action='store_true',
+                        help='Check that slides with SVG images have no other content')
     args = parser.parse_args()
 
     # Default: all checks enabled
     flags = [args.links, args.labels, args.fences, args.urls,
-             args.whitespace, args.slides, args.images, args.numbering]
+             args.whitespace, args.slides, args.images, args.numbering,
+             args.svg_content]
     explicit = any(flags)
-    do_links = args.links or not explicit
-    do_labels = args.labels or not explicit
-    do_fences = args.fences or not explicit
-    do_urls = args.urls or not explicit
-    do_whitespace = args.whitespace or not explicit
-    do_slides = args.slides or not explicit
-    do_images = args.images or not explicit
-    do_numbering = args.numbering or not explicit
+    checks = []
+    if args.links or not explicit:
+        checks.append(_check_links)
+    if args.labels or not explicit:
+        checks.append(_check_labels)
+    if args.fences or not explicit:
+        checks.append(_check_fences)
+    if args.urls or not explicit:
+        checks.append(_check_urls)
+    if args.whitespace or not explicit:
+        checks.append(_check_whitespace)
+    if args.slides or not explicit:
+        checks.append(_check_slides)
+    if args.images or not explicit:
+        checks.append(_check_images)
+    if args.numbering or not explicit:
+        checks.append(_check_numbering)
+    if args.svg_content or not explicit:
+        checks.append(_check_svg_content)
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []
 
     for path in files:
-        if do_links:
-            all_errors.extend(_check_links(path))
-        if do_labels:
-            all_errors.extend(_check_labels(path))
-        if do_fences:
-            all_errors.extend(_check_fences(path))
-        if do_urls:
-            all_errors.extend(_check_urls(path))
-        if do_whitespace:
-            all_errors.extend(_check_whitespace(path))
-        if do_slides:
-            all_errors.extend(_check_slides(path))
-        if do_images:
-            all_errors.extend(_check_images(path))
-        if do_numbering:
-            all_errors.extend(_check_numbering(path))
+        text = path.read_text(encoding='utf-8')
+        text_no_code = _remove_code_blocks(text)
+        lines = text.splitlines()
+        for check in checks:
+            all_errors.extend(check(path, text, text_no_code, lines))
 
     for err in all_errors:
         print(err, file=sys.stderr)

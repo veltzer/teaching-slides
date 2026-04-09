@@ -43,6 +43,10 @@
 
 Application is responsible for cache interactions:
 
+---
+
+## Cache-Aside Pattern
+
 ![cache_aside_pattern](svg/courses/databases/redis/03_caching/cache_aside_pattern.svg)
 
 ---
@@ -77,6 +81,10 @@ def get_user(user_id):
 
 Every write goes to cache and database:
 
+---
+
+## Write-Through Pattern
+
 ![write_through_pattern](svg/courses/databases/redis/03_caching/write_through_pattern.svg)
 
 ---
@@ -106,6 +114,10 @@ def update_user(user_id, user_data):
 ## Write-Behind Pattern
 
 Writes go to cache first, then asynchronously to database:
+
+---
+
+## Write-Behind Pattern
 
 ![write_behind_pattern](svg/courses/databases/redis/03_caching/write_behind_pattern.svg)
 
@@ -142,6 +154,10 @@ def update_user_write_behind(user_id, user_data):
 
 Cache handles database interaction on miss:
 
+---
+
+## Read-Through Pattern
+
 ![read_through_pattern](svg/courses/databases/redis/03_caching/read_through_pattern.svg)
 
 ---
@@ -149,6 +165,10 @@ Cache handles database interaction on miss:
 ## Refresh-Ahead Pattern
 
 Cache proactively refreshes before expiration:
+
+---
+
+## Refresh-Ahead Pattern
 
 ![refresh_ahead_pattern](svg/courses/databases/redis/03_caching/refresh_ahead_pattern.svg)
 
@@ -199,6 +219,10 @@ EXPIRE session:123 3600
 ## Cache Eviction Policies
 
 Redis memory limits and eviction:
+
+---
+
+## Cache Eviction Policies
 
 ![cache_eviction_policies](svg/courses/databases/redis/03_caching/cache_eviction_policies.svg)
 
@@ -351,6 +375,10 @@ def get_with_lock(key, rebuild_func, lock_timeout=5, retry_count=3):
 ## Distributed Caching Architecture
 
 Multiple application instances using shared Redis cache:
+
+---
+
+## Distributed Caching Architecture
 
 ![distributed_caching_architecture](svg/courses/databases/redis/03_caching/distributed_caching_architecture.svg)
 

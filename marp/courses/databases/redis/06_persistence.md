@@ -170,6 +170,10 @@ auto-aof-rewrite-min-size 64mb
 
 AOF files grow continuously and need compaction:
 
+---
+
+## AOF Rewriting
+
 ![aof_rewriting](svg/courses/databases/redis/06_persistence/aof_rewriting.svg)
 
 ---
@@ -418,6 +422,10 @@ Note: RDB files cannot be fixed - must restore from backup
 ## Point-in-Time Recovery
 
 Combining RDB and AOF for point-in-time recovery:
+
+---
+
+## Point-in-Time Recovery
 
 ![point_in_time_recovery](svg/courses/databases/redis/06_persistence/point_in_time_recovery.svg)
 

@@ -160,6 +160,10 @@ sendfile(sock_fd, file_fd, &offset, file_size);
 
 ![sendfile_how_it_works](svg/lectures/operating_systems/zero-copy-linux/sendfile_how_it_works.svg)
 
+---
+
+## sendfile(): How It Works
+
 *With scatter-gather DMA, only buffer descriptors (pointers + lengths) are passed to the socket buffer.
 
 ---

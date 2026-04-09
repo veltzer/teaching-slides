@@ -1587,6 +1587,10 @@ const errorHandler = (err, req, res, next) => {
 
 Backend optimization strategies:
 
+---
+
+## Performance Optimization
+
 ![performance_optimization](svg/courses/ai/developing-using-ai/07_tasks/performance_optimization.svg)
 
 ---
@@ -1755,6 +1759,10 @@ class TestOrderService:
 
 Auto-generated API documentation:
 
+---
+
+## Documentation Generation
+
 ![documentation_generation](svg/courses/ai/developing-using-ai/07_tasks/documentation_generation.svg)
 
 ---
@@ -1814,6 +1822,10 @@ const securityMiddleware = {
 ## Microservices Architecture
 
 Service communication patterns:
+
+---
+
+## Microservices Architecture
 
 ![microservices_architecture](svg/courses/ai/developing-using-ai/07_tasks/microservices_architecture.svg)
 
@@ -2001,6 +2013,10 @@ export default function () {
 ## Optimization Patterns
 
 Performance optimization techniques:
+
+---
+
+## Optimization Patterns
 
 ![optimization_patterns](svg/courses/ai/developing-using-ai/07_tasks/optimization_patterns.svg)
 

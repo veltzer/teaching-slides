@@ -15,9 +15,13 @@
 ---
 ## Air-Gap Architecture
 
-![air_gap_architecture](svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_architecture.svg)
-
 Red lines represent the air gap - no network connection crosses this boundary.
+
+---
+
+## Air-Gap Architecture
+
+![air_gap_architecture](svg/courses/operating_systems/linux-system-administration/13_airgapped_optional/air_gap_architecture.svg)
 
 ---
 ## Local Repository Management

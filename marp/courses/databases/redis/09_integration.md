@@ -54,6 +54,10 @@ When choosing a Redis client:
 
 Best practices for Redis connections:
 
+---
+
+## Connection Management
+
 ![connection_management](svg/courses/databases/redis/09_integration/connection_management.svg)
 
 ---
@@ -157,6 +161,10 @@ public class RedisConnectionPool {
 ## Data Serialization
 
 Converting application data for Redis storage:
+
+---
+
+## Data Serialization
 
 ![data_serialization](svg/courses/databases/redis/09_integration/data_serialization.svg)
 
@@ -921,5 +929,9 @@ app.listen(3000, () => {
 ## Error Handling and Resilience
 
 Robust Redis integration requires:
+
+---
+
+## Error Handling and Resilience
 
 ![error_handling_and_resilience](svg/courses/databases/redis/09_integration/error_handling_and_resilience.svg)

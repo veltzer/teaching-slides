@@ -32,9 +32,13 @@ void handleRequest(Request& req) {
 
 ## Chain of Responsibility Structure
 
-![chain_of_responsibility_structure](svg/courses/languages/c++/c++-design-patterns/14_chain_of_responsibility/chain_of_responsibility_structure.svg)
-
 Each handler decides whether to process the request or pass it to the next handler
+
+---
+
+## Chain of Responsibility Structure
+
+![chain_of_responsibility_structure](svg/courses/languages/c++/c++-design-patterns/14_chain_of_responsibility/chain_of_responsibility_structure.svg)
 
 ---
 

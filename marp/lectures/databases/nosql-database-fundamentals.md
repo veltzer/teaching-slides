@@ -61,6 +61,10 @@ audience:
 
 ![document_stores_core_concepts](svg/lectures/databases/nosql-database-fundamentals/document_stores_core_concepts.svg)
 
+---
+
+## Document Stores: Core Concepts
+
 Self-contained data units with nested structures
 
 ---
@@ -88,6 +92,10 @@ Self-contained data units with nested structures
 ## Key-Value Stores: Core Model
 
 ![key_value_stores_core_model](svg/lectures/databases/nosql-database-fundamentals/key_value_stores_core_model.svg)
+
+---
+
+## Key-Value Stores: Core Model
 
 Simplest NoSQL model - pure associative arrays
 
@@ -146,6 +154,10 @@ That's essentially it - simplicity is the strength
 
 ![the_cap_theorem](svg/lectures/databases/nosql-database-fundamentals/the_cap_theorem.svg)
 
+---
+
+## The CAP Theorem
+
 Pick two (but you must pick P in distributed systems)
 
 ---
@@ -197,6 +209,10 @@ In distributed systems:
 
 ![cp_systems](svg/lectures/databases/nosql-database-fundamentals/cp_systems.svg)
 
+---
+
+## CP Systems
+
 Example behaviors: Banking systems, inventory management
 
 ---
@@ -204,6 +220,10 @@ Example behaviors: Banking systems, inventory management
 ## AP Systems
 
 ![ap_systems](svg/lectures/databases/nosql-database-fundamentals/ap_systems.svg)
+
+---
+
+## AP Systems
 
 Example behaviors: Social media feeds, caching systems
 

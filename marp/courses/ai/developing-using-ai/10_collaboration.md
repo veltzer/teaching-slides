@@ -40,6 +40,10 @@ AI can address these systematically.
 
 ![knowledge_sharing_fundamentals](svg/courses/ai/developing-using-ai/10_collaboration/knowledge_sharing_fundamentals.svg)
 
+---
+
+## Knowledge Sharing Fundamentals
+
 AI serves as a knowledge multiplier and translator between team members.
 
 ---

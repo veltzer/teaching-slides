@@ -86,9 +86,13 @@ async fn main() {
 
 ## The Waker Mechanism
 
-![the_waker_mechanism](svg/courses/languages/rust/advanced-rust/05_async_programming/the_waker_mechanism.svg)
-
 The waker tells the executor: "this future is ready to make progress, poll it again."
+
+---
+
+## The Waker Mechanism
+
+![the_waker_mechanism](svg/courses/languages/rust/advanced-rust/05_async_programming/the_waker_mechanism.svg)
 
 ---
 

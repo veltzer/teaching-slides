@@ -6,6 +6,10 @@
 
 The field of ensuring AI systems behave as intended and don't cause harm:
 
+---
+
+## What is AI Safety?
+
 ![what_is_ai_safety](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/what_is_ai_safety.svg)
 
 ---
@@ -48,6 +52,7 @@ The ALIGNMENT PROBLEM:
 | `Scalable oversight` | AI assists human supervision | Research |
 
 ---
+
 ## Alignment Techniques — Summary
 
 ![alignment_techniques_summary](svg/courses/ai/generative-ai-applications/20_ai_safety_deep_fakes/alignment_techniques_summary.svg)

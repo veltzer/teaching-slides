@@ -226,6 +226,10 @@
 
 ![the_three_things_to_remember](svg/courses/security/it-security-policies/07_best_practices/the_three_things_to_remember.svg)
 
+---
+
+## The Three Things to Remember
+
 Security is a team effort. Every good decision you make protects not just you, but everyone in the organization.
 
 ---

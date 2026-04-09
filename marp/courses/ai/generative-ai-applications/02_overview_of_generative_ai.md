@@ -41,6 +41,10 @@ Timeline of Generative AI
 
 ![categories_of_generative_models](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/categories_of_generative_models.svg)
 
+---
+
+## Categories of Generative Models
+
 Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 ---
@@ -49,6 +53,10 @@ Other types: `VAE`s, `GAN`s, Flow-based, Energy-based
 
 Published in 2017: "Attention Is All You Need"
 
+---
+
+## The Transformer — Foundation of Modern GenAI
+
 ![the_transformer_foundation_of_modern_genai](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_transformer_foundation_of_modern_genai.svg)
 
 ---
@@ -56,6 +64,10 @@ Published in 2017: "Attention Is All You Need"
 ## Self-Attention Mechanism — Intuition
 
 Every token asks: "Which other tokens should I pay attention to?"
+
+---
+
+## Self-Attention Mechanism — Intuition
 
 ![self_attention_mechanism_intuition](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/self_attention_mechanism_intuition.svg)
 
@@ -204,6 +216,10 @@ for text in examples:
 ## Encoder vs. Decoder vs. Encoder-Decoder
 
 ![encoder_vs_decoder_vs_encoder_decoder](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/encoder_vs_decoder_vs_encoder_decoder.svg)
+
+---
+
+## Encoder vs. Decoder vs. Encoder-Decoder
 
 **Modern generative models are almost all decoder-only.**
 
@@ -521,6 +537,10 @@ tokens = tokenizer.convert_ids_to_tokens(inputs["input_ids"][0])
 ## The Mixture-of-Experts (MoE) Architecture
 
 Used by `Mixtral`, `GPT-4` (rumored), and `Switch Transformer`:
+
+---
+
+## The Mixture-of-Experts (MoE) Architecture
 
 ![the_mixture_of_experts_moe_architecture](svg/courses/ai/generative-ai-applications/02_overview_of_generative_ai/the_mixture_of_experts_moe_architecture.svg)
 

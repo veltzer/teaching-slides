@@ -27,6 +27,11 @@ audience:
 ## What is DevOps?
 
 DevOps is a set of practices combining software development (Dev) and IT operations (Ops) to shorten the development lifecycle while delivering features, fixes, and updates frequently and reliably.
+
+---
+
+## What is DevOps?
+
 ![what_is_devops](svg/lectures/devops/devops-slides/what_is_devops.svg)
 
 ---

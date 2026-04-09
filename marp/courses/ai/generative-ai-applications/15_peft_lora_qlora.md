@@ -6,6 +6,10 @@
 
 ![the_problem_full_fine_tuning_is_expensive](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/the_problem_full_fine_tuning_is_expensive.svg)
 
+---
+
+## The Problem: Full Fine-Tuning is Expensive
+
 **PEFT** solves this by training only a tiny fraction of parameters.
 
 ---
@@ -43,6 +47,10 @@ LoRA:
 ## LoRA — How It Works During Forward Pass
 
 ![lora_how_it_works_during_forward_pass](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/lora_how_it_works_during_forward_pass.svg)
+
+---
+
+## LoRA — How It Works During Forward Pass
 
 At inference, you can merge: W_new = W + B·A (no extra latency!)
 
@@ -253,6 +261,10 @@ QLoRA (4-bit base):
 ## Prompt Tuning
 
 Instead of modifying model weights, learn **virtual tokens** prepended to the input:
+
+---
+
+## Prompt Tuning
 
 ![prompt_tuning](svg/courses/ai/generative-ai-applications/15_peft_lora_qlora/prompt_tuning.svg)
 

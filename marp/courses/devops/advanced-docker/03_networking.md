@@ -291,6 +291,10 @@ docker run -d --network macvlan-net \
 
 ![macvlan_network_architecture](svg/courses/devops/advanced-docker/03_networking/macvlan_network_architecture.svg)
 
+---
+
+## `Macvlan` Network Architecture
+
 **Limitation:** Host cannot communicate with `macvlan` containers directly (use `macvlan` sub-interface to work around).
 
 ---

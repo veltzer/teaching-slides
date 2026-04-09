@@ -337,6 +337,10 @@ Content-Length: 1234
 
 ![http_status_codes_for_pentesters](svg/courses/security/web-application-hacking/02_server_platforms_and_technologies/http_status_codes_for_pentesters.svg)
 
+---
+
+## HTTP Status Codes for Pentesters
+
 > A `403` vs `404` difference reveals resource existence
 
 ---

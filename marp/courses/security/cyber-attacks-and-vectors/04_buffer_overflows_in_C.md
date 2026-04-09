@@ -237,6 +237,10 @@ void secure_integer(size_t count, size_t element_size) {
 
 ![heartbleed_cve_2014_0160_deep_dive](svg/courses/security/cyber-attacks-and-vectors/04_buffer_overflows_in_C/heartbleed_cve_2014_0160_deep_dive.svg)
 
+---
+
+## Heartbleed (CVE-2014-0160) Deep Dive
+
 The bug: Server trusts client-specified length without bounds checking.
 
 ---

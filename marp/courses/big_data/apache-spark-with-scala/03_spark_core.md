@@ -98,7 +98,11 @@ val sum = numbers.reduce(_ + _)
 
 ---
 
+## Execution Model
+
 [Continue with remaining slides, adding mermaid diagrams for concepts like:]
+
+---
 
 ## Execution Model
 
@@ -109,5 +113,9 @@ val sum = numbers.reduce(_ + _)
 ## Data Partitioning
 
 ![data_partitioning](svg/courses/big_data/apache-spark-with-scala/03_spark_core/data_partitioning.svg)
+
+---
+
+## Data Partitioning
 
 [Continue with remaining content and diagrams...]

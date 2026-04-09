@@ -158,6 +158,10 @@ Pin versions, verify hashes, and audit regularly
 
 ![mitigation_software_bill_of_materials_sbom](svg/courses/security/working-with-llms-securely/06_supply_chain_vulnerabilities/mitigation_software_bill_of_materials_sbom.svg)
 
+---
+
+## Mitigation: Software Bill of Materials (`SBOM`)
+
 An `SBOM` enables rapid response to newly discovered vulnerabilities
 
 ---

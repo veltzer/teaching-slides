@@ -152,6 +152,10 @@ def grounded_response(user_query):
 
 ![mitigation_human_review_gates](svg/courses/security/working-with-llms-securely/10_overreliance/mitigation_human_review_gates.svg)
 
+---
+
+## Mitigation: Human Review Gates
+
 Critical outputs should always pass through human review
 
 ---

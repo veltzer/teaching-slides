@@ -7,11 +7,13 @@
 Why customize? To generate images of **your specific** concepts:
 
 ---
+
 ## Customizing Image Models
 
 ![customizing_image_models_1](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_1.svg)
 
 ---
+
 ## Customizing Image Models
 
 ![customizing_image_models_2](svg/courses/ai/generative-ai-applications/17_peft_image_models/customizing_image_models_2.svg)
@@ -96,6 +98,10 @@ image = pipe("a photo of sks dog riding a skateboard").images[0]
 ## Prior Preservation Loss
 
 Prevents the model from forgetting how to draw the class in general:
+
+---
+
+## Prior Preservation Loss
 
 ![prior_preservation_loss](svg/courses/ai/generative-ai-applications/17_peft_image_models/prior_preservation_loss.svg)
 

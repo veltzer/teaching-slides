@@ -26,6 +26,10 @@ AI transforms how teams work together by:
 
 ![knowledge_sharing_fundamentals](svg/courses/ai/developing-using-ai-short/10_collaboration/knowledge_sharing_fundamentals.svg)
 
+---
+
+## Knowledge Sharing Fundamentals
+
 AI serves as a knowledge multiplier between team members.
 
 ---

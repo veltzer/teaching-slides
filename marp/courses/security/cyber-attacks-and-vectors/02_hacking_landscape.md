@@ -117,9 +117,14 @@
 - Individual users
 
 ---
+
 ## Target Value Assessment
 
 Organizations should understand why they are targets:
+
+---
+
+## Target Value Assessment
 
 ![target_value_assessment](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/target_value_assessment.svg)
 
@@ -138,6 +143,10 @@ Organizations should understand why they are targets:
 ## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
 
 ![attack_life_cycle_the_cyber_kill_chain_lockheed_martin](svg/courses/security/cyber-attacks-and-vectors/02_hacking_landscape/attack_life_cycle_the_cyber_kill_chain_lockheed_martin.svg)
+
+---
+
+## Attack Life-cycle: The Cyber Kill Chain (Lockheed Martin)
 
 Breaking the chain at any stage prevents the attack from succeeding.
 

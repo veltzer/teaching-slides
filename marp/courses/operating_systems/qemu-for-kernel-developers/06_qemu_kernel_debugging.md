@@ -18,6 +18,8 @@ Importance of Kernel Debugging
 
 QEMU Debugging Architecture
 
+---
+
 ![debugging_kernels_with_qemu](svg/courses/operating_systems/qemu-for-kernel-developers/06_qemu_kernel_debugging/debugging_kernels_with_qemu.svg)
 
 ---

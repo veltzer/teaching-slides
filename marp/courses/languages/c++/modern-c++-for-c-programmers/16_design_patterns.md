@@ -92,9 +92,13 @@ public:
 
 ## Pattern Categories
 
-![pattern_categories](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/pattern_categories.svg)
-
 Different patterns solve different types of problems
+
+---
+
+## Pattern Categories
+
+![pattern_categories](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/pattern_categories.svg)
 
 ---
 
@@ -1067,9 +1071,13 @@ void Widget::configure(const std::string& config) { pImpl->configure(config); }
 
 ## Bridge vs Cheshire Cat
 
-![bridge_vs_cheshire_cat](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/bridge_vs_cheshire_cat.svg)
-
 Choose based on whether you need runtime flexibility or compilation benefits
+
+---
+
+## Bridge vs Cheshire Cat
+
+![bridge_vs_cheshire_cat](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/bridge_vs_cheshire_cat.svg)
 
 ---
 
@@ -2057,9 +2065,13 @@ public:
 
 ## When to Use Each Pattern
 
-![when_to_use_each_pattern](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/when_to_use_each_pattern.svg)
-
 Choose patterns based on actual problems, not theoretical perfection
+
+---
+
+## When to Use Each Pattern
+
+![when_to_use_each_pattern](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/when_to_use_each_pattern.svg)
 
 ---
 
@@ -2147,9 +2159,13 @@ public:
 
 ## Proxy Pattern Variations
 
-![proxy_pattern_variations](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/proxy_pattern_variations.svg)
-
 Different proxy types serve different purposes
+
+---
+
+## Proxy Pattern Variations
+
+![proxy_pattern_variations](svg/courses/languages/c++/modern-c++-for-c-programmers/16_design_patterns/proxy_pattern_variations.svg)
 
 ---
 

@@ -41,6 +41,10 @@ Git hooks are scripts that run automatically at specific points in Git operation
 
 Two main categories of hooks:
 
+---
+
+## Git Hook Types Overview
+
 ![git_hook_types_overview](svg/courses/git/git2/18_hooks/git_hook_types_overview.svg)
 
 ---

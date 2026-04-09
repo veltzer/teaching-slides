@@ -114,6 +114,10 @@ int secret = 100;
 
 Hardware enforces memory boundaries
 
+---
+
+## Memory Protection Unit (MPU)
+
 ![memory_protection_unit_mpu](svg/lectures/operating_systems/isolation-in-computing/memory_protection_unit_mpu.svg)
 
 ---
@@ -121,6 +125,10 @@ Hardware enforces memory boundaries
 ## Protection Rings
 
 CPU privilege levels enforce isolation
+
+---
+
+## Protection Rings
 
 ![protection_rings](svg/lectures/operating_systems/isolation-in-computing/protection_rings.svg)
 
@@ -185,6 +193,10 @@ echo 50000 > /sys/fs/cgroup/cpu/myapp/cpu.cfs_quota_us
 ## Docker Isolation
 
 Docker builds on Linux kernel features for container isolation
+
+---
+
+## Docker Isolation
 
 ![docker_isolation](svg/lectures/operating_systems/isolation-in-computing/docker_isolation.svg)
 
@@ -252,6 +264,10 @@ docker run --memory="512m" --cpus="0.5" myapp
 ## Kubernetes Isolation
 
 K8s adds orchestration-level isolation
+
+---
+
+## Kubernetes Isolation
 
 ![kubernetes_isolation](svg/lectures/operating_systems/isolation-in-computing/kubernetes_isolation.svg)
 
@@ -361,6 +377,10 @@ rules:
 
 VMs provide hardware-level isolation
 
+---
+
+## Virtual Machines - Strong Isolation
+
 ![virtual_machines_strong_isolation](svg/lectures/operating_systems/isolation-in-computing/virtual_machines_strong_isolation.svg)
 
 ---
@@ -378,6 +398,10 @@ Modern CPUs provide isolation support
 ## Microservices Architecture
 
 Isolation through service boundaries
+
+---
+
+## Microservices Architecture
 
 ![microservices_architecture](svg/lectures/operating_systems/isolation-in-computing/microservices_architecture.svg)
 
@@ -457,6 +481,10 @@ Multi-tenancy in cloud platforms
 ## Zero Trust Architecture
 
 Never trust, always verify
+
+---
+
+## Zero Trust Architecture
 
 ![zero_trust_architecture](svg/lectures/operating_systems/isolation-in-computing/zero_trust_architecture.svg)
 

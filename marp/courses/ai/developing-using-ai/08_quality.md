@@ -465,6 +465,10 @@ interface TeamStandards {
 
 Code review workflow:
 
+---
+
+## Review Processes
+
 ![review_processes](svg/courses/ai/developing-using-ai/08_quality/review_processes.svg)
 
 ---
@@ -500,6 +504,10 @@ class UserAuth:
 ## Design Pattern Implementation
 
 Ensuring correct pattern usage:
+
+---
+
+## Design Pattern Implementation
 
 ![design_pattern_implementation](svg/courses/ai/developing-using-ai/08_quality/design_pattern_implementation.svg)
 
@@ -621,6 +629,10 @@ class QualityMetrics:
 
 Continuous learning from metrics:
 
+---
+
+## Feedback Loops
+
 ![feedback_loops](svg/courses/ai/developing-using-ai/08_quality/feedback_loops.svg)
 
 ---
@@ -658,6 +670,10 @@ automation:
 ## Best Practice Evolution
 
 Adapting standards over time:
+
+---
+
+## Best Practice Evolution
 
 ![best_practice_evolution](svg/courses/ai/developing-using-ai/08_quality/best_practice_evolution.svg)
 
@@ -800,6 +816,10 @@ quality_gates:
 
 Comprehensive edge case coverage:
 
+---
+
+## Risk Management: Edge Case Handling
+
 ![risk_management_edge_case_handling](svg/courses/ai/developing-using-ai/08_quality/risk_management_edge_case_handling.svg)
 
 ---
@@ -921,6 +941,10 @@ Maintaining documentation standards:
 ## Knowledge Sharing
 
 Spreading best practices:
+
+---
+
+## Knowledge Sharing
 
 ![knowledge_sharing](svg/courses/ai/developing-using-ai/08_quality/knowledge_sharing.svg)
 

@@ -53,6 +53,10 @@ The foundation of SQL database guarantees:
 
 ![atomicity](svg/lectures/databases/sql-database-fundamentals/atomicity.svg)
 
+---
+
+## Atomicity
+
 All or nothing - no partial transactions
 
 ---
@@ -163,6 +167,10 @@ Trade-off: Performance vs Consistency
 
 ![sql_databases_and_cap_theorem](svg/lectures/databases/sql-database-fundamentals/sql_databases_and_cap_theorem.svg)
 
+---
+
+## SQL Databases and CAP Theorem
+
 Traditional SQL: CA systems (single node)
 
 ---
@@ -211,6 +219,10 @@ Why SQL databases struggle with distribution:
 
 ![master_slave_replication](svg/lectures/databases/sql-database-fundamentals/master_slave_replication.svg)
 
+---
+
+## Master-Slave Replication
+
 Writes to master, reads from slaves
 
 ---
@@ -240,6 +252,10 @@ Writes to master, reads from slaves
 ## Multi-Master Replication
 
 ![multi_master_replication](svg/lectures/databases/sql-database-fundamentals/multi_master_replication.svg)
+
+---
+
+## Multi-Master Replication
 
 Conflict resolution required
 
@@ -310,6 +326,10 @@ Attempting to get best of both worlds:
 
 ![newsql_and_cap](svg/lectures/databases/sql-database-fundamentals/newsql_and_cap.svg)
 
+---
+
+## NewSQL and CAP
+
 Usually CP with high availability
 
 ---
@@ -336,6 +356,10 @@ For CAP considerations:
 
 ![connection_pooling](svg/lectures/databases/sql-database-fundamentals/connection_pooling.svg)
 
+---
+
+## Connection Pooling
+
 Reduces connection overhead
 
 ---
@@ -357,6 +381,10 @@ Reduces connection overhead
 ## Federation Pattern
 
 ![federation_pattern](svg/lectures/databases/sql-database-fundamentals/federation_pattern.svg)
+
+---
+
+## Federation Pattern
 
 Split by functional areas
 

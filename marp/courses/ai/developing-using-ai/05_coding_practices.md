@@ -1064,6 +1064,10 @@ hypotheses = [
 
 AI provides multiple approaches:
 
+---
+
+## Solution Exploration
+
 ![solution_exploration](svg/courses/ai/developing-using-ai/05_coding_practices/solution_exploration.svg)
 
 ---
