@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <!--
+    Shared SVG palette for all course diagrams.
+    Copy the <defs> block below into each SVG file.
+    Do not use any colors, gradients, or filters outside of what is defined here.
+
+    Color roles:
+      #ffffff  bg        — page/slide background
+      #f2f2f2  surface   — box fills, panel backgrounds
+      #e0e0e0  border    — box strokes, dividers
+      #212121  text      — primary text
+      #555555  muted     — secondary text, annotations
+      #1565c0  accent    — highlighted boxes, key steps, arrows
+      #0d47a1  accent-dk — darker accent for gradients / hover states
+  -->
+  <defs>
+    <!-- Accent gradient (top→bottom, for key/highlighted boxes) -->
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <!-- Surface gradient (subtle depth for neutral boxes) -->
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+
+    <!-- Drop shadow (use filter="url(#shadow)" on rect/group) -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow marker — dark, for lines on light backgrounds -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+
+    <!-- Arrow marker — accent color, for highlighted flow paths -->
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+
+    <!-- Arrow marker — white, for lines inside dark/accent boxes -->
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+</svg>

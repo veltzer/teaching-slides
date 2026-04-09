@@ -2,24 +2,24 @@
 pip = ["PyYAML"]
 
 [processor.tera]
-extra_inputs = [
+dep_inputs = [
     "config/project.lua",
     "config/personal.lua",
 ]
 
 [processor.script.check_svg]
-linter = "scripts/check_svg.py"
-extensions = [".svg"]
-scan_dirs = ["svg"]
+command = "scripts/check_svg.py"
+src_extensions = [".svg"]
+src_dirs = ["svg"]
 batch = true
 
 [processor.svglint]
-scan_dirs = ["svg"]
+src_dirs = ["svg"]
 
 [processor.script.check_md]
-linter = "scripts/check_md.py"
-extensions = [".md"]
-scan_dirs = ["marp"]
+command = "scripts/check_md.py"
+src_extensions = [".md"]
+src_dirs = ["marp"]
 batch = true
 
 [processor.marp]
@@ -28,13 +28,13 @@ max_jobs = 10
 output_dir = "_site/marp"
 
 [processor.ruff]
-scan_dirs = ["scripts"]
+src_dirs = ["scripts"]
 
 [processor.markdownlint]
-scan_dirs = ["marp"]
+src_dirs = ["marp"]
 
 [processor.zspell]
-scan_dirs = ["marp"]
+src_dirs = ["marp"]
 
 [processor.ipdfunite]
 output_dir = "_site/pdfunite"
