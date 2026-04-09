@@ -58,6 +58,7 @@ graph TD
 
 - always use the same pallette for slides (resources/svg_palette.svg)
 - SVG diagrams must NOT contain a title element. The slide's ## heading is the title. Adding a title inside the SVG wastes vertical space because Marp renders the heading above the image, shrinking the area available to the diagram.
+- SVG content must not extend below y=630. Marp renders the ## heading above the image, so the image is scaled to fit roughly 640px of height. Anything below y=630 risks being clipped. Keep the viewBox at 1280x720 but treat y=630 as the effective bottom boundary.
 - if there is SVG in a line there could be only one line of text above it or one line of text below it. But no more than 1 line above or below (Not both).
 - Prefer SVG to mermaid and avoid ascii art diagrams.
 - do not use inlined SVG. Write the SVG externally in the svg/ folder and reference it from the slides.
