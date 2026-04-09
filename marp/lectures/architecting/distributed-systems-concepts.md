@@ -1,3 +1,14 @@
+---
+tags:
+- concepts:distributed-systems
+- concepts:architecture
+- concepts:scalability
+level: intermediate
+category: architecture
+audience:
+- audiences:developers
+- audiences:architects
+---
 # Distributed Systems Concepts
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

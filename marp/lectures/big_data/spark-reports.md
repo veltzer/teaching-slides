@@ -1,3 +1,14 @@
+---
+tags:
+- tools:spark
+- data-and-ai:big-data
+- practices:monitoring
+level: intermediate
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Spark Reports Guide
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

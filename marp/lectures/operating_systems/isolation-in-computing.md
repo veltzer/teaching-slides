@@ -1,3 +1,15 @@
+---
+tags:
+- concepts:isolation
+- concepts:security
+- concepts:virtualization
+- infrastructure:containers
+level: intermediate
+category: operating-systems
+audience:
+- audiences:developers
+- audiences:devops
+---
 # Isolation in Computing
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

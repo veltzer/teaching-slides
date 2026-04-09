@@ -1,3 +1,15 @@
+---
+tags:
+- practices:devops
+- practices:ci-cd
+- concepts:automation
+level: beginner
+category: devops
+audience:
+- audiences:developers
+- audiences:devops
+- audiences:managers
+---
 # DevOps: Bridging Development and Operations
 ## A Comprehensive Overview
 ## Mark Veltzer

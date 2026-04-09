@@ -1,3 +1,15 @@
+---
+tags:
+- concepts:architecture
+- practices:leadership
+- practices:code-quality
+level: advanced
+category: architecture
+audience:
+- audiences:developers
+- audiences:architects
+- audiences:managers
+---
 # Correct Development
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

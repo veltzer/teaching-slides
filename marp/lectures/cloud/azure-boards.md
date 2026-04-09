@@ -1,3 +1,15 @@
+---
+tags:
+- tools:azure
+- practices:project-management
+- practices:agile
+level: beginner
+category: cloud
+audience:
+- audiences:developers
+- audiences:managers
+- audiences:devops
+---
 # Azure Boards: Best Practices Guide
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

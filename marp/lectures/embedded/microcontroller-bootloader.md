@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:embedded
+- concepts:firmware
+- concepts:bootloader
+level: advanced
+category: embedded
+audience:
+- audiences:developers
+---
 # Writing Bootloaders for Microcontrollers
 ## From Reset Vector to Application Launch
 ## Mark Veltzer

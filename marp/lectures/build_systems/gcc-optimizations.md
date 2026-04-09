@@ -1,3 +1,13 @@
+---
+tags:
+- tools:gcc
+- concepts:performance
+- concepts:compilation
+level: advanced
+category: build-systems
+audience:
+- audiences:developers
+---
 # GCC CPU-Specific Optimization
 ## A Comprehensive Guide
 ## Mark Veltzer

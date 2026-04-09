@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:io
+- concepts:linux-kernel
+- concepts:filesystems
+level: advanced
+category: operating-systems
+audience:
+- audiences:developers
+---
 # Linux I/O Architecture
 ## Understanding Input/Output in Linux Systems
 ## Mark Veltzer

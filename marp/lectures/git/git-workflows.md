@@ -1,3 +1,14 @@
+---
+tags:
+- tools:git
+- concepts:version-control
+- practices:collaboration
+level: intermediate
+category: version-control
+audience:
+- audiences:developers
+- audiences:devops
+---
 # Git Workflow Strategies
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

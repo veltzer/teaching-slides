@@ -1,3 +1,15 @@
+---
+tags:
+- tools:spark
+- languages:scala
+- data-and-ai:big-data
+- practices:best-practices
+level: advanced
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Advanced Spark Ecosystem and Best Practices
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

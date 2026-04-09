@@ -1,3 +1,15 @@
+---
+tags:
+- concepts:data-formats
+- concepts:serialization
+- concepts:databases
+level: beginner
+category: database
+audience:
+- audiences:developers
+- audiences:data-engineers
+- audiences:data-scientists
+---
 # Data Formats
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

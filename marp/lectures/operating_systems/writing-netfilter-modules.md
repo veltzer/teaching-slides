@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:linux-kernel
+- concepts:networking
+- concepts:security
+level: advanced
+category: operating-systems
+audience:
+- audiences:developers
+---
 # Writing Netfilter Modules
 ## An Introduction with Examples
 ## Mark Veltzer

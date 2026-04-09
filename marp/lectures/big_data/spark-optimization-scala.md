@@ -1,3 +1,15 @@
+---
+tags:
+- tools:spark
+- languages:scala
+- data-and-ai:big-data
+- concepts:performance
+level: advanced
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Spark Optimization
 ## Understanding Data Skew and Memory Pressure
 ## Mark Veltzer

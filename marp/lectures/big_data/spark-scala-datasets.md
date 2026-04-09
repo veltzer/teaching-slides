@@ -1,3 +1,14 @@
+---
+tags:
+- tools:spark
+- languages:scala
+- data-and-ai:big-data
+level: intermediate
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Spark Datasets and DataFrames in Scala
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

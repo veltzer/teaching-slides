@@ -1,3 +1,13 @@
+---
+tags:
+- languages:scala
+- concepts:programming
+- concepts:functional-programming
+level: beginner
+category: language
+audience:
+- audiences:developers
+---
 # Scala Programming
 ## A Comprehensive Guide
 ## Mark Veltzer

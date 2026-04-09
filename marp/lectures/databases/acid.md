@@ -1,3 +1,14 @@
+---
+tags:
+- concepts:databases
+- concepts:transactions
+- concepts:data-integrity
+level: intermediate
+category: database
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Database ACID Guarantees
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

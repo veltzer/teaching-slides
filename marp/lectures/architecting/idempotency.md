@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:idempotency
+- concepts:api-design
+- concepts:reliability
+level: intermediate
+category: architecture
+audience:
+- audiences:developers
+---
 # Idempotency in Web Services
 ## Building Reliable APIs
 ## Mark Veltzer

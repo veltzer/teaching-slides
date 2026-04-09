@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:io
+- concepts:performance
+- concepts:linux-kernel
+level: advanced
+category: operating-systems
+audience:
+- audiences:developers
+---
 # Zero-Copy in Linux
 ## Eliminating Unnecessary Data Copies for Maximum Performance
 ## Mark Veltzer

@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:oop
+- concepts:design-patterns
+- concepts:architecture
+level: intermediate
+category: architecture
+audience:
+- audiences:developers
+---
 # SOLID Principles
 ## Understanding the Foundation of Object-Oriented Design
 ## Mark Veltzer

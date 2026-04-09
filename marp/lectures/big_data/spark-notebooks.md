@@ -1,3 +1,14 @@
+---
+tags:
+- tools:spark
+- tools:jupyter
+- data-and-ai:big-data
+level: intermediate
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-scientists
+---
 # Spark Notebooks Guide
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

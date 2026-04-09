@@ -1,3 +1,14 @@
+---
+tags:
+- tools:spark
+- data-and-ai:big-data
+- concepts:distributed-systems
+level: advanced
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Spark Internals: From Query to Execution
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

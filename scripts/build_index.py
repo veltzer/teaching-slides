@@ -121,7 +121,8 @@ def build_course_entries(
         chapters = count_chapters(course_dir, ext)
         slides = count_slides(course_dir, ext)
         pdf = pdf_path_for_course(rel, output_dir, site_dir)
-        folder = str(rel.parent) if rel.parent != Path(".") else ""
+        prefixed_folder = "courses/" + str(rel)
+        parent = str(rel.parent)
         fm = parse_front_matter(course_dir, ext)
 
         entries.append(
@@ -130,8 +131,8 @@ def build_course_entries(
                 "type": "course",
                 "chapters": chapters,
                 "slides": slides,
-                "folder": str(rel),
-                "folder_label": folder_label(rel.parent) if folder else "Root",
+                "folder": prefixed_folder,
+                "folder_label": folder_label(rel.parent) if parent != "." else "Root",
                 "pdf": pdf,
                 "level": fm.get("level", ""),
                 "category": fm.get("category", ""),
@@ -151,6 +152,20 @@ def count_slides_in_file(filepath: Path) -> int:
     return 1 + sum(1 for line in content.splitlines() if line.strip() == "---")
 
 
+def parse_file_front_matter(filepath: Path) -> dict[str, Any]:
+    """Parse YAML front matter from a single markdown file."""
+    content = filepath.read_text(encoding="utf-8", errors="replace")
+    if not content.startswith("---"):
+        return {}
+    end = content.find("\n---", 3)
+    if end == -1:
+        return {}
+    try:
+        return yaml.safe_load(content[3:end]) or {}
+    except yaml.YAMLError:
+        return {}
+
+
 def build_lecture_entries(
     lectures_dir: Path, output_dir: Path, site_dir: Path, ext: str,
 ) -> list[dict[str, Any]]:
@@ -166,6 +181,8 @@ def build_lecture_entries(
         slides = count_slides_in_file(md_file)
         folder_parts = rel.parent
         folder = str(folder_parts) if folder_parts != Path(".") else ""
+        prefixed_folder = "lectures/" + str(folder_parts / stem) if folder else "lectures/" + stem
+        fm = parse_file_front_matter(md_file)
 
         # Compute PDF path: lectures are single files, so the PDF name matches the stem
         pdf_candidate = output_dir / folder_parts / f"{stem}.pdf"
@@ -177,14 +194,14 @@ def build_lecture_entries(
                 "type": "lecture",
                 "chapters": 1,
                 "slides": slides,
-                "folder": str(folder_parts / stem) if folder else stem,
+                "folder": prefixed_folder,
                 "folder_label": folder_label(folder_parts) if folder else "Root",
                 "pdf": pdf,
-                "level": "",
-                "category": "",
-                "duration_hours": 0,
-                "tags": [],
-                "audience": [],
+                "level": fm.get("level", ""),
+                "category": fm.get("category", ""),
+                "duration_hours": fm.get("duration_hours", 0),
+                "tags": fm.get("tags", []),
+                "audience": fm.get("audience", []),
             }
         )
 

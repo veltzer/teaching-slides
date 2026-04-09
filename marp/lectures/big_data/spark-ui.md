@@ -1,3 +1,15 @@
+---
+tags:
+- tools:spark
+- data-and-ai:big-data
+- practices:monitoring
+- practices:debugging
+level: intermediate
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Understanding the Spark UI
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

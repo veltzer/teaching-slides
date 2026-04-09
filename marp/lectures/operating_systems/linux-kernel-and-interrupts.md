@@ -1,3 +1,13 @@
+---
+tags:
+- concepts:linux-kernel
+- concepts:interrupts
+- concepts:drivers
+level: advanced
+category: operating-systems
+audience:
+- audiences:developers
+---
 # Linux Driver Interrupt Numbers
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

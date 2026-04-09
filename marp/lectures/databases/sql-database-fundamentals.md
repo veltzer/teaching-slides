@@ -1,3 +1,14 @@
+---
+tags:
+- languages:sql
+- concepts:databases
+- concepts:data-modeling
+level: beginner
+category: database
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # SQL Databases Fundamentals
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)

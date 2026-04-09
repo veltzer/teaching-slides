@@ -1,3 +1,15 @@
+---
+tags:
+- tools:logstash
+- tools:elk
+- practices:logging
+- practices:monitoring
+level: intermediate
+category: devops
+audience:
+- audiences:developers
+- audiences:devops
+---
 # Logstash
 ## Data Processing Pipeline
 ## The "L" in ELK Stack

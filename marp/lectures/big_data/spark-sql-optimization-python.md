@@ -1,3 +1,16 @@
+---
+tags:
+- tools:spark
+- languages:python
+- data-and-ai:big-data
+- concepts:performance
+- languages:sql
+level: advanced
+category: big-data
+audience:
+- audiences:developers
+- audiences:data-engineers
+---
 # Spark SQL Optimization Techniques
 ## Mark Veltzer
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
