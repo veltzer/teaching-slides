@@ -167,7 +167,7 @@ def parse_file_front_matter(filepath: Path) -> dict[str, Any]:
 
 
 def build_lecture_entries(
-    lectures_dir: Path, output_dir: Path, site_dir: Path, ext: str,
+    lectures_dir: Path, marp_output_dir: Path, site_dir: Path, ext: str,
 ) -> list[dict[str, Any]]:
     """Build the list of lecture entries (individual source files in category dirs)."""
     entries: list[dict[str, Any]] = []
@@ -184,9 +184,10 @@ def build_lecture_entries(
         prefixed_folder = "lectures/" + str(folder_parts / stem) if folder else "lectures/" + stem
         fm = parse_file_front_matter(md_file)
 
-        # Compute PDF path: lectures are single files, so the PDF name matches the stem
-        pdf_candidate = output_dir / folder_parts / f"{stem}.pdf"
-        pdf = str(pdf_candidate.relative_to(output_dir.parent)) if pdf_candidate.exists() else None
+        # Lecture PDFs are produced by the marp processor (single-file PDFs)
+        # e.g. marp/lectures/databases/acid.md -> _site/marp/lectures/databases/acid.pdf
+        pdf_candidate = marp_output_dir / "lectures" / folder_parts / f"{stem}.pdf"
+        pdf = str(pdf_candidate.relative_to(site_dir)) if pdf_candidate.exists() else None
 
         entries.append(
             {
@@ -258,6 +259,11 @@ def main() -> None:
         help="Directory containing merged PDFs (default: _site/pdfunite)",
     )
     parser.add_argument(
+        "--marp-output-dir",
+        default="_site/marp",
+        help="Directory containing individual marp PDFs (default: _site/marp)",
+    )
+    parser.add_argument(
         "--source-ext",
         default=".md",
         help="Source file extension (default: .md)",
@@ -272,6 +278,7 @@ def main() -> None:
     source_dir = Path(args.source_dir)
     lectures_dir = Path(args.lectures_dir)
     output_dir = Path(args.output_dir)
+    marp_output_dir = Path(args.marp_output_dir)
     ext = args.source_ext if args.source_ext.startswith(".") else f".{args.source_ext}"
     site_dir = output_dir.parent
     out_file = Path(args.out) if args.out else site_dir / "index.html"
@@ -283,7 +290,7 @@ def main() -> None:
     entries = build_course_entries(source_dir, output_dir, site_dir, ext)
     n_courses = len(entries)
 
-    lecture_entries = build_lecture_entries(lectures_dir, output_dir, site_dir, ext)
+    lecture_entries = build_lecture_entries(lectures_dir, marp_output_dir, site_dir, ext)
     entries.extend(lecture_entries)
     n_lectures = len(lecture_entries)
 
