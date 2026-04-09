@@ -1,15 +1,20 @@
 #!/usr/bin/env python
 
 """
-Check SVG files for placeholder or trivially small content.
+Check SVG files for quality issues.
 
-Flags SVGs that are likely decorative icons or placeholders rather than
-real diagrams. Checks file size and element count.
+Checks:
+  --size        Flag SVGs that are too small (likely placeholders)
+  --elements    Flag SVGs with too few elements (likely stubs)
+  --fonts       Flag SVGs with font-size below minimum
+  --parse       Flag SVGs with XML parse errors
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
+    check_svg_quality.py --fonts --size file1.svg file2.svg ...
 """
 
+import argparse
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -19,51 +24,97 @@ MIN_ELEMENTS = 5
 MIN_FONT_SIZE = 10
 
 
-def check_file(path: Path) -> list[str]:
-    """Return a list of error messages for the SVG, empty if OK."""
-    errors: list[str] = []
+def _check_size(path: Path) -> list[str]:
+    """Flag SVGs that are too small (likely placeholders)."""
     size = path.stat().st_size
     if size < MIN_FILE_SIZE:
-        errors.append(f"too small ({size} bytes, min {MIN_FILE_SIZE})")
-        return errors
+        return [f"too small ({size} bytes, min {MIN_FILE_SIZE})"]
+    return []
 
+
+def _check_parse(path: Path) -> tuple[ET.ElementTree | None, list[str]]:
+    """Parse the SVG and return the tree and any errors."""
     try:
         tree = ET.parse(path)
+        return tree, []
     except ET.ParseError as e:
-        errors.append(f"XML parse error: {e}")
-        return errors
+        return None, [f"XML parse error: {e}"]
 
+
+def _check_elements(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs with too few elements (likely stubs)."""
     count = sum(1 for _ in tree.iter())
     if count < MIN_ELEMENTS:
-        errors.append(f"too few elements ({count}, min {MIN_ELEMENTS})")
+        return [f"too few elements ({count}, min {MIN_ELEMENTS})"]
+    return []
 
-    # Check for small font sizes in attributes
+
+def _check_fonts(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs with font-size below minimum."""
     for elem in tree.iter():
         fs = elem.get("font-size")
         if fs is not None:
             try:
                 val = float(fs)
                 if val < MIN_FONT_SIZE:
-                    errors.append(f"font-size {fs} too small (min {MIN_FONT_SIZE})")
-                    break  # one error per file is enough
+                    return [f"font-size {fs} too small (min {MIN_FONT_SIZE})"]
             except ValueError:
                 pass
-
-    return errors
+    return []
 
 
 def main() -> None:
     if not Path(".git").exists():
         print("Error: script must be run from the root of the repository", file=sys.stderr)
         sys.exit(1)
-    args = sys.argv[1:]
-    if not args:
-        raise SystemExit("usage: check_svg_quality.py file1.svg [file2.svg ...]")
+
+    parser = argparse.ArgumentParser(
+        description='Check SVG files for quality issues.'
+    )
+    parser.add_argument('paths', nargs='*',
+                        help='SVG files to check')
+    parser.add_argument('--size', action='store_true',
+                        help='Flag SVGs that are too small (likely placeholders)')
+    parser.add_argument('--elements', action='store_true',
+                        help='Flag SVGs with too few elements (likely stubs)')
+    parser.add_argument('--fonts', action='store_true',
+                        help='Flag SVGs with font-size below minimum')
+    parser.add_argument('--parse', action='store_true',
+                        help='Flag SVGs with XML parse errors')
+    args = parser.parse_args()
+
+    if not args.paths:
+        parser.error("at least one SVG file is required")
+
+    # Default: all checks enabled
+    flags = [args.size, args.elements, args.fonts, args.parse]
+    explicit = any(flags)
+    do_size = args.size or not explicit
+    do_elements = args.elements or not explicit
+    do_fonts = args.fonts or not explicit
+    do_parse = args.parse or not explicit
 
     failures = 0
-    for path_str in args:
+    for path_str in args.paths:
         path = Path(path_str)
-        errors = check_file(path)
+        errors: list[str] = []
+
+        if do_size:
+            errors.extend(_check_size(path))
+
+        # Parse once, reuse for element and font checks
+        tree = None
+        if do_parse or do_elements or do_fonts:
+            tree, parse_errors = _check_parse(path)
+            if do_parse:
+                errors.extend(parse_errors)
+
+        if tree is not None:
+            if do_elements:
+                errors.extend(_check_elements(tree))
+            if do_fonts:
+                errors.extend(_check_fonts(tree))
+
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
             failures += 1

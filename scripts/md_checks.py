@@ -9,6 +9,9 @@ Checks:
   --fences      Check for unclosed code fences (odd number of ``` lines)
   --urls        Check for external URLs in image references (should be local)
   --whitespace  Check for trailing whitespace and consecutive blank lines
+  --slides      Check for empty slides (consecutive --- separators)
+  --images      Check that image references point to existing local files
+  --numbering   Check for sequential numbered lists (should use 1. 1. 1.)
 
 Usage:
     md_checks.py --links --labels file1.md file2.md ...
@@ -154,6 +157,77 @@ def _check_whitespace(path: Path) -> list[str]:
     return errors
 
 
+# ── Empty slides checking ──
+
+
+def _check_slides(path: Path) -> list[str]:
+    """Check for empty slides (--- immediately followed by --- with only blank lines between)."""
+    text = path.read_text(encoding='utf-8')
+    lines = text.splitlines()
+    errors = []
+    # Track: after seeing a ---, if we see only blank lines then another ---, it's empty
+    last_separator = None
+    only_blanks = True
+    for line_no, line in enumerate(lines, 1):
+        stripped = line.strip()
+        if stripped == '---':
+            if last_separator is not None and only_blanks:
+                errors.append(f"{path}:{line_no}: empty slide (no content between --- separators)")
+            last_separator = line_no
+            only_blanks = True
+        elif stripped != '':
+            only_blanks = False
+    return errors
+
+
+# ── Image reference checking ──
+
+
+def _check_images(path: Path) -> list[str]:
+    """Check that image references point to existing local files."""
+    text = path.read_text(encoding='utf-8')
+    text_no_code = _remove_code_blocks(text)
+    errors = []
+    for line_no, line in enumerate(text_no_code.splitlines(), 1):
+        for m in _IMAGE_RE.finditer(line):
+            target = m.group(2)
+            # Skip external URLs and marp bg directives with URLs
+            if target.startswith('http://') or target.startswith('https://'):
+                continue
+            # Strip marp-specific prefixes like "bg right:40% 80%"
+            # The actual path is the last space-separated token
+            clean = target.strip()
+            if ' ' in clean:
+                clean = clean.rsplit(' ', 1)[-1]
+            # Resolve relative to the repo root (marp uses baseUrl)
+            resolved = _ROOT / clean
+            if not resolved.exists():
+                # Also try relative to the file
+                resolved_rel = path.parent / clean
+                if not resolved_rel.exists():
+                    errors.append(f"{path}:{line_no}: broken image reference: {clean}")
+    return errors
+
+
+# ── Numbered list checking ──
+
+_NUMBERED_LIST_RE = re.compile(r'^(\s*)([2-9]\d*)\. ')
+
+
+def _check_numbering(path: Path) -> list[str]:
+    """Check for sequential numbered lists (should always use 1. 1. 1.)."""
+    text = path.read_text(encoding='utf-8')
+    lines = text.splitlines()
+    errors = []
+    in_code = False
+    for line_no, line in enumerate(lines, 1):
+        if line.strip().startswith('```'):
+            in_code = not in_code
+        if not in_code and _NUMBERED_LIST_RE.match(line):
+            errors.append(f"{path}:{line_no}: sequential numbering (use 1. not {_NUMBERED_LIST_RE.match(line).group(2)}.)")
+    return errors
+
+
 # ── Main ──
 
 def _collect_files(paths: list[str]) -> list[Path]:
@@ -187,15 +261,26 @@ def main() -> None:
                         help='Check for external URLs in image references')
     parser.add_argument('--whitespace', action='store_true',
                         help='Check for trailing whitespace and consecutive blank lines')
+    parser.add_argument('--slides', action='store_true',
+                        help='Check for empty slides (consecutive --- separators)')
+    parser.add_argument('--images', action='store_true',
+                        help='Check that image references point to existing local files')
+    parser.add_argument('--numbering', action='store_true',
+                        help='Check for sequential numbered lists (should use 1. 1. 1.)')
     args = parser.parse_args()
 
     # Default: all checks enabled
-    explicit = args.links or args.labels or args.fences or args.urls or args.whitespace
+    flags = [args.links, args.labels, args.fences, args.urls,
+             args.whitespace, args.slides, args.images, args.numbering]
+    explicit = any(flags)
     do_links = args.links or not explicit
     do_labels = args.labels or not explicit
     do_fences = args.fences or not explicit
     do_urls = args.urls or not explicit
     do_whitespace = args.whitespace or not explicit
+    do_slides = args.slides or not explicit
+    do_images = args.images or not explicit
+    do_numbering = args.numbering or not explicit
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []
@@ -211,6 +296,12 @@ def main() -> None:
             all_errors.extend(_check_urls(path))
         if do_whitespace:
             all_errors.extend(_check_whitespace(path))
+        if do_slides:
+            all_errors.extend(_check_slides(path))
+        if do_images:
+            all_errors.extend(_check_images(path))
+        if do_numbering:
+            all_errors.extend(_check_numbering(path))
 
     for err in all_errors:
         print(err, file=sys.stderr)
