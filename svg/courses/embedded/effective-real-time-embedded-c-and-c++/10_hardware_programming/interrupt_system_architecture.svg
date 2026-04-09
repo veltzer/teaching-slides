@@ -23,56 +23,51 @@
   </defs>
 
   <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Title -->
-  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Interrupt Flow</text>
-  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
-
   <!-- Row 1: Hardware Event → IRQ → CPU -->
-  <rect x="80"  y="130" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="220" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Hardware Event</text>
-  <text x="220" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">GPIO, timer, UART…</text>
+  <rect x="80"  y="60" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="220" y="108" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Hardware Event</text>
+  <text x="220" y="132" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">GPIO, timer, UART…</text>
 
-  <line x1="362" y1="174" x2="418" y2="174" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="362" y1="104" x2="418" y2="104" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
 
-  <rect x="420" y="130" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="560" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">IRQ Signal</text>
-  <text x="560" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">raised to NVIC</text>
+  <rect x="420" y="60" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="560" y="108" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">IRQ Signal</text>
+  <text x="560" y="132" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">raised to NVIC</text>
 
-  <line x1="702" y1="174" x2="758" y2="174" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="702" y1="104" x2="758" y2="104" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
 
-  <rect x="760" y="130" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="900" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">CPU</text>
-  <text x="900" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">NVIC arbitrates</text>
+  <rect x="760" y="60" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="900" y="108" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">CPU</text>
+  <text x="900" y="132" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">NVIC arbitrates</text>
 
   <!-- CPU → Vector Table -->
-  <line x1="900" y1="220" x2="900" y2="278" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-  <text x="924" y="256" font-family="sans-serif" font-size="15" fill="#1565c0">saves context</text>
+  <line x1="900" y1="150" x2="900" y2="208" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="924" y="186" font-family="sans-serif" font-size="15" fill="#1565c0">saves context</text>
 
-  <rect x="760" y="280" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="900" y="328" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Vector Table</text>
-  <text x="900" y="352" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">IRQ → handler address</text>
+  <rect x="760" y="210" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="258" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Vector Table</text>
+  <text x="900" y="282" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">IRQ → handler address</text>
 
   <!-- Vector Table → ISR Handler -->
-  <line x1="900" y1="370" x2="900" y2="428" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
-  <text x="924" y="406" font-family="sans-serif" font-size="15" fill="#1565c0">branch to ISR</text>
+  <line x1="900" y1="300" x2="900" y2="358" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="924" y="336" font-family="sans-serif" font-size="15" fill="#1565c0">branch to ISR</text>
 
-  <rect x="760" y="430" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="900" y="478" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">ISR Handler</text>
-  <text x="900" y="502" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">user code executes</text>
+  <rect x="760" y="360" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="900" y="408" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">ISR Handler</text>
+  <text x="900" y="432" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">user code executes</text>
 
   <!-- ISR return -->
-  <line x1="900" y1="520" x2="900" y2="578" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
-  <text x="924" y="556" font-family="sans-serif" font-size="15" fill="#555555">RETI / BX LR</text>
+  <line x1="900" y1="450" x2="900" y2="508" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="924" y="486" font-family="sans-serif" font-size="15" fill="#555555">RETI / BX LR</text>
 
-  <rect x="760" y="580" width="280" height="70" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="900" y="622" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#212121">Restore Context</text>
-  <text x="900" y="642" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">resume preempted code</text>
+  <rect x="760" y="510" width="280" height="70" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="552" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#212121">Restore Context</text>
+  <text x="900" y="572" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">resume preempted code</text>
 
   <!-- Note -->
-  <rect x="80" y="360" width="580" height="110" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="370" y="390" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Key ISR rules:</text>
-  <text x="100" y="416" font-family="sans-serif" font-size="16" fill="#555555">• Keep ISRs short — defer work to tasks</text>
-  <text x="100" y="440" font-family="sans-serif" font-size="16" fill="#555555">• No blocking calls (no mutex wait, no delay)</text>
-  <text x="100" y="464" font-family="sans-serif" font-size="16" fill="#555555">• Use volatile for shared variables with ISRs</text>
+  <rect x="80" y="290" width="580" height="110" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="370" y="320" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Key ISR rules:</text>
+  <text x="100" y="346" font-family="sans-serif" font-size="16" fill="#555555">• Keep ISRs short — defer work to tasks</text>
+  <text x="100" y="370" font-family="sans-serif" font-size="16" fill="#555555">• No blocking calls (no mutex wait, no delay)</text>
+  <text x="100" y="394" font-family="sans-serif" font-size="16" fill="#555555">• Use volatile for shared variables with ISRs</text>
 </svg>

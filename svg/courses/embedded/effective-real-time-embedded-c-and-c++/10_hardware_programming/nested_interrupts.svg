@@ -23,63 +23,58 @@
   </defs>
 
   <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Title -->
-  <text x="640" y="50" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="bold" fill="#212121">Nested Interrupt Execution</text>
-  <line x1="200" y1="62" x2="1080" y2="62" stroke="#e0e0e0" stroke-width="1.5"/>
-
   <!-- Time axis -->
-  <line x1="100" y1="640" x2="1200" y2="640" stroke="#e0e0e0" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="1210" y="646" font-family="sans-serif" font-size="16" fill="#9e9e9e">time</text>
+  <line x1="100" y1="570" x2="1200" y2="570" stroke="#e0e0e0" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1210" y="576" font-family="sans-serif" font-size="16" fill="#9e9e9e">time</text>
 
   <!-- Lane labels -->
-  <text x="88" y="172" text-anchor="end" font-family="sans-serif" font-size="17" fill="#9e9e9e">Main</text>
-  <text x="88" y="302" text-anchor="end" font-family="sans-serif" font-size="17" fill="#555555">Low ISR</text>
-  <text x="88" y="432" text-anchor="end" font-family="sans-serif" font-size="17" fill="#1565c0">High ISR</text>
+  <text x="88" y="102" text-anchor="end" font-family="sans-serif" font-size="17" fill="#9e9e9e">Main</text>
+  <text x="88" y="232" text-anchor="end" font-family="sans-serif" font-size="17" fill="#555555">Low ISR</text>
+  <text x="88" y="362" text-anchor="end" font-family="sans-serif" font-size="17" fill="#1565c0">High ISR</text>
 
   <!-- Main program bar -->
-  <rect x="100" y="150" width="240" height="54" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="220" y="182" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">Main</text>
+  <rect x="100" y="80" width="240" height="54" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="220" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">Main</text>
 
   <!-- Low ISR fires -->
-  <line x1="342" y1="144" x2="342" y2="204" stroke="#555555" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-  <text x="342" y="136" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Low IRQ</text>
+  <line x1="342" y1="74" x2="342" y2="134" stroke="#555555" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="342" y="66" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Low IRQ</text>
 
   <!-- Low ISR runs -->
-  <rect x="342" y="280" width="200" height="54" rx="4" fill="#e0e0e0" stroke="#555555" stroke-width="1.5"/>
-  <text x="442" y="312" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Low ISR running</text>
+  <rect x="342" y="210" width="200" height="54" rx="4" fill="#e0e0e0" stroke="#555555" stroke-width="1.5"/>
+  <text x="442" y="242" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Low ISR running</text>
 
   <!-- High ISR fires (preempts Low) -->
-  <line x1="542" y1="274" x2="542" y2="334" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
-  <text x="542" y="266" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0">High IRQ</text>
+  <line x1="542" y1="204" x2="542" y2="264" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
+  <text x="542" y="196" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0">High IRQ</text>
 
   <!-- Low ISR suspended (hatch) -->
-  <rect x="542" y="280" width="180" height="54" rx="4" fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <text x="632" y="312" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">Low suspended</text>
+  <rect x="542" y="210" width="180" height="54" rx="4" fill="none" stroke="#555555" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="632" y="242" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">Low suspended</text>
 
   <!-- High ISR runs -->
-  <rect x="542" y="410" width="180" height="54" rx="4" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="632" y="442" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#ffffff">High ISR</text>
+  <rect x="542" y="340" width="180" height="54" rx="4" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="632" y="372" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#ffffff">High ISR</text>
 
   <!-- High ISR returns -->
-  <line x1="724" y1="410" x2="724" y2="334" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
-  <text x="760" y="382" font-family="sans-serif" font-size="14" fill="#1565c0">returns</text>
+  <line x1="724" y1="340" x2="724" y2="264" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
+  <text x="760" y="312" font-family="sans-serif" font-size="14" fill="#1565c0">returns</text>
 
   <!-- Low ISR resumes -->
-  <rect x="724" y="280" width="200" height="54" rx="4" fill="#e0e0e0" stroke="#555555" stroke-width="1.5"/>
-  <text x="824" y="312" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Low ISR resumes</text>
+  <rect x="724" y="210" width="200" height="54" rx="4" fill="#e0e0e0" stroke="#555555" stroke-width="1.5"/>
+  <text x="824" y="242" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Low ISR resumes</text>
 
   <!-- Low ISR returns -->
-  <line x1="924" y1="280" x2="924" y2="204" stroke="#555555" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
-  <text x="960" y="248" font-family="sans-serif" font-size="14" fill="#555555">returns</text>
+  <line x1="924" y1="210" x2="924" y2="134" stroke="#555555" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <text x="960" y="178" font-family="sans-serif" font-size="14" fill="#555555">returns</text>
 
   <!-- Main resumes -->
-  <rect x="924" y="150" width="280" height="54" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
-  <text x="1064" y="182" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">Main resumes</text>
+  <rect x="924" y="80" width="280" height="54" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="1064" y="112" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">Main resumes</text>
 
   <!-- Note -->
-  <rect x="180" y="530" width="920" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="562" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1565c0">Higher-priority IRQ preempts a running ISR — full nesting</text>
-  <text x="640" y="588" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">CPU saves/restores registers automatically (Cortex-M hardware stacking)</text>
-  <text x="640" y="610" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">Each nesting level uses ~32–64 bytes of stack — beware deep nesting on small MCUs</text>
+  <rect x="180" y="460" width="920" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="492" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1565c0">Higher-priority IRQ preempts a running ISR — full nesting</text>
+  <text x="640" y="518" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">CPU saves/restores registers automatically (Cortex-M hardware stacking)</text>
+  <text x="640" y="540" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">Each nesting level uses ~32–64 bytes of stack — beware deep nesting on small MCUs</text>
 </svg>

@@ -26,57 +26,52 @@
   </defs>
 
   <rect width="1280" height="720" fill="#ffffff"/>
-
-  <!-- Title -->
-  <text x="640" y="50" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="bold" fill="#212121">Race Condition</text>
-  <text x="640" y="78" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#555555">Shared X = 10 · Task A adds 5 · Task B adds 3 · Expected: 18 · Actual: ?</text>
-
   <!-- Task A header -->
-  <rect x="80" y="100" width="380" height="58" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
-  <text x="270" y="137" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Task A  (+5)</text>
+  <rect x="80" y="10" width="380" height="58" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="270" y="47" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Task A  (+5)</text>
 
   <!-- Task B header -->
-  <rect x="820" y="100" width="380" height="58" rx="6" fill="#212121" filter="url(#shadow)"/>
-  <text x="1010" y="137" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Task B  (+3)</text>
+  <rect x="820" y="10" width="380" height="58" rx="6" fill="#212121" filter="url(#shadow)"/>
+  <text x="1010" y="47" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Task B  (+3)</text>
 
   <!-- Shared variable -->
-  <rect x="500" y="100" width="280" height="58" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="640" y="133" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#1565c0">X = 10  (shared)</text>
+  <rect x="500" y="10" width="280" height="58" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="43" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#1565c0">X = 10  (shared)</text>
 
   <!-- Step 1: A reads -->
-  <rect x="80" y="210" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="270" y="244" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">1.  read X → 10</text>
-  <line x1="500" y1="238" x2="462" y2="238" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="80" y="120" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="270" y="154" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">1.  read X → 10</text>
+  <line x1="500" y1="148" x2="462" y2="148" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
 
   <!-- Step 2: B reads (interleaved) -->
-  <rect x="820" y="280" width="380" height="56" rx="4" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
-  <text x="1010" y="314" text-anchor="middle" font-family="monospace" font-size="20" fill="#555555">2.  read X → 10</text>
-  <line x1="762" y1="308" x2="818" y2="308" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="820" y="190" width="380" height="56" rx="4" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
+  <text x="1010" y="224" text-anchor="middle" font-family="monospace" font-size="20" fill="#555555">2.  read X → 10</text>
+  <line x1="762" y1="218" x2="818" y2="218" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Step 3: A computes -->
-  <rect x="80" y="360" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="270" y="394" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">3.  10 + 5 = 15</text>
+  <rect x="80" y="270" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="270" y="304" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">3.  10 + 5 = 15</text>
 
   <!-- Step 4: B computes -->
-  <rect x="820" y="360" width="380" height="56" rx="4" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
-  <text x="1010" y="394" text-anchor="middle" font-family="monospace" font-size="20" fill="#555555">4.  10 + 3 = 13</text>
+  <rect x="820" y="270" width="380" height="56" rx="4" fill="#f2f2f2" stroke="#555555" stroke-width="1.5"/>
+  <text x="1010" y="304" text-anchor="middle" font-family="monospace" font-size="20" fill="#555555">4.  10 + 3 = 13</text>
 
   <!-- Step 5: A writes X=15 -->
-  <rect x="80" y="440" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="270" y="474" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">5.  write X ← 15</text>
-  <line x1="462" y1="468" x2="500" y2="468" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
-  <rect x="500" y="442" width="280" height="54" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="640" y="474" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">X = 15</text>
+  <rect x="80" y="350" width="380" height="56" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="270" y="384" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">5.  write X ← 15</text>
+  <line x1="462" y1="378" x2="500" y2="378" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="500" y="352" width="280" height="54" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="384" text-anchor="middle" font-family="monospace" font-size="20" fill="#1565c0">X = 15</text>
 
   <!-- Step 6: B writes X=13, clobbers -->
-  <rect x="820" y="520" width="380" height="56" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="1010" y="554" text-anchor="middle" font-family="monospace" font-size="20" fill="#c62828">6.  write X ← 13  ⚠</text>
-  <line x1="818" y1="548" x2="782" y2="548" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-bad)"/>
-  <rect x="500" y="522" width="280" height="54" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
-  <text x="640" y="554" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#c62828">X = 13  ✗</text>
+  <rect x="820" y="430" width="380" height="56" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="1010" y="464" text-anchor="middle" font-family="monospace" font-size="20" fill="#c62828">6.  write X ← 13  ⚠</text>
+  <line x1="818" y1="458" x2="782" y2="458" stroke="#c62828" stroke-width="2" marker-end="url(#arrow-bad)"/>
+  <rect x="500" y="432" width="280" height="54" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="640" y="464" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#c62828">X = 13  ✗</text>
 
   <!-- Result -->
-  <rect x="200" y="614" width="880" height="68" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="640" y="645" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Result: X = 13 — Task B silently discarded Task A's update!</text>
-  <text x="640" y="670" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Fix: protect read–modify–write with mutex, atomic operation, or interrupt disable</text>
+  <rect x="200" y="524" width="880" height="68" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="640" y="555" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Result: X = 13 — Task B silently discarded Task A's update!</text>
+  <text x="640" y="580" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Fix: protect read–modify–write with mutex, atomic operation, or interrupt disable</text>
 </svg>
