@@ -1,13 +1,74 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="72" text-anchor="middle" font-size="43.2" font-weight="bold">Memory Hierarchy</text>
-  <polygon points="640,120 320,240 960,240" fill="#ffcccc" stroke="#333" stroke-width="4.8" />
-  <text x="640" y="192" text-anchor="middle" font-size="33.6">CPU Registers</text>
-  <polygon points="640,240 256,360 1024,360" fill="#ffddcc" stroke="#333" stroke-width="4.8" />
-  <text x="640" y="312" text-anchor="middle" font-size="33.6">L1 Cache</text>
-  <polygon points="640,360 192,480 1088,480" fill="#ffeedd" stroke="#333" stroke-width="4.8" />
-  <text x="640" y="432" text-anchor="middle" font-size="33.6">L2/L3 Cache</text>
-  <polygon points="640,480 128,600 1152,600" fill="#ffffcc" stroke="#333" stroke-width="4.8" />
-  <text x="640" y="552" text-anchor="middle" font-size="33.6">RAM</text>
-  <polygon points="640,600 64,720 1216,720" fill="#eeffcc" stroke="#333" stroke-width="4.8" />
-  <text x="640" y="672" text-anchor="middle" font-size="33.6">Storage</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="52" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Memory Hierarchy</text>
+  <text x="640" y="78" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#555555">Faster &amp; smaller at top · Slower &amp; larger at bottom</text>
+
+  <!-- Tier 1: Registers -->
+  <polygon points="540,96 740,96 800,166 480,166" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="140" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">CPU Registers</text>
+
+  <!-- Tier 2: L1 Cache -->
+  <polygon points="480,172 800,172 870,252 410,252" fill="#1976d2" filter="url(#shadow)"/>
+  <text x="640" y="220" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">L1 Cache</text>
+
+  <!-- Tier 3: L2/L3 Cache -->
+  <polygon points="410,258 870,258 950,348 330,348" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="311" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">L2 / L3 Cache</text>
+
+  <!-- Tier 4: SRAM -->
+  <polygon points="330,354 950,354 1040,454 240,454" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="408" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">SRAM / DRAM</text>
+
+  <!-- Tier 5: Flash -->
+  <polygon points="240,460 1040,460 1140,570 140,570" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="520" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#555555">Flash / ROM</text>
+
+  <!-- Left: speed -->
+  <text x="94" y="132" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0" font-weight="bold">1 cycle</text>
+  <text x="94" y="218" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0">~4 cycles</text>
+  <text x="94" y="308" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">~10 cycles</text>
+  <text x="94" y="404" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">~100 cycles</text>
+  <text x="94" y="512" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">~100+ cycles</text>
+  <text x="46" y="340" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555" transform="rotate(-90 46 340)">Speed</text>
+  <line x1="68" y1="96" x2="68" y2="570" stroke="#e0e0e0" stroke-width="1.5"/>
+  <polygon points="68,91 64,104 72,104" fill="#aaaaaa"/>
+
+  <!-- Right: size -->
+  <text x="1186" y="132" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0" font-weight="bold">bytes</text>
+  <text x="1186" y="218" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1565c0">KB</text>
+  <text x="1186" y="308" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">MB</text>
+  <text x="1186" y="404" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">MB–GB</text>
+  <text x="1186" y="512" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">MB–GB</text>
+  <text x="1234" y="340" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555" transform="rotate(90 1234 340)">Size</text>
+  <line x1="1212" y1="96" x2="1212" y2="570" stroke="#e0e0e0" stroke-width="1.5"/>
+  <polygon points="1212,575 1208,562 1216,562" fill="#aaaaaa"/>
+
+  <!-- Embedded note -->
+  <rect x="240" y="596" width="800" height="48" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="626" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#1565c0">Embedded: often no L2/L3 cache · Flash is the primary non-volatile storage</text>
 </svg>

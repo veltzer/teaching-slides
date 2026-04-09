@@ -1,22 +1,78 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="72" text-anchor="middle" font-size="43.2" font-weight="bold">Interrupt Flow</text>
-  <rect x="160" y="144" width="320" height="96" fill="#ffcccc" stroke="#333" />
-  <text x="320" y="204" text-anchor="middle" font-size="33.6">Hardware Event</text>
-  <path d="M 480 192 L 576 192" stroke="#333" stroke-width="4.8" marker-end="url(#arrowhead)" />
-  <rect x="576" y="144" width="320" height="96" fill="#ccffcc" stroke="#333" />
-  <text x="736" y="204" text-anchor="middle" font-size="33.6">IRQ Signal</text>
-  <path d="M 896 192 L 992 192" stroke="#333" stroke-width="4.8" marker-end="url(#arrowhead)" />
-  <rect x="992" y="144" width="256" height="96" fill="#ccccff" stroke="#333" />
-  <text x="1120" y="204" text-anchor="middle" font-size="33.6">CPU</text>
-  <path d="M 1120 240 L 1120 312" stroke="#333" stroke-width="4.8" marker-end="url(#arrowhead)" />
-  <rect x="960" y="312" width="320" height="96" fill="#ffffcc" stroke="#333" />
-  <text x="1120" y="372" text-anchor="middle" font-size="33.6">Vector Table</text>
-  <path d="M 1120 408 L 1120 480" stroke="#333" stroke-width="4.8" marker-end="url(#arrowhead)" />
-  <rect x="960" y="480" width="320" height="96" fill="#ffccff" stroke="#333" />
-  <text x="1120" y="540" text-anchor="middle" font-size="33.6">ISR Handler</text>
   <defs>
-    <marker id="arrowhead" markerWidth="32" markerHeight="16.8" refX="0" refY="8.4" orient="auto">
-      <polygon points="0,24 11.2,0" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
     </marker>
   </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Interrupt Flow</text>
+  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- Row 1: Hardware Event → IRQ → CPU -->
+  <rect x="80"  y="130" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="220" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Hardware Event</text>
+  <text x="220" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">GPIO, timer, UART…</text>
+
+  <line x1="362" y1="174" x2="418" y2="174" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="420" y="130" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="560" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">IRQ Signal</text>
+  <text x="560" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">raised to NVIC</text>
+
+  <line x1="702" y1="174" x2="758" y2="174" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="760" y="130" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="900" y="178" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">CPU</text>
+  <text x="900" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">NVIC arbitrates</text>
+
+  <!-- CPU → Vector Table -->
+  <line x1="900" y1="220" x2="900" y2="278" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="924" y="256" font-family="sans-serif" font-size="15" fill="#1565c0">saves context</text>
+
+  <rect x="760" y="280" width="280" height="88" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="328" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#212121">Vector Table</text>
+  <text x="900" y="352" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">IRQ → handler address</text>
+
+  <!-- Vector Table → ISR Handler -->
+  <line x1="900" y1="370" x2="900" y2="428" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <text x="924" y="406" font-family="sans-serif" font-size="15" fill="#1565c0">branch to ISR</text>
+
+  <rect x="760" y="430" width="280" height="88" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="900" y="478" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">ISR Handler</text>
+  <text x="900" y="502" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">user code executes</text>
+
+  <!-- ISR return -->
+  <line x1="900" y1="520" x2="900" y2="578" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="924" y="556" font-family="sans-serif" font-size="15" fill="#555555">RETI / BX LR</text>
+
+  <rect x="760" y="580" width="280" height="70" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="622" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#212121">Restore Context</text>
+  <text x="900" y="642" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">resume preempted code</text>
+
+  <!-- Note -->
+  <rect x="80" y="360" width="580" height="110" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="370" y="390" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Key ISR rules:</text>
+  <text x="100" y="416" font-family="sans-serif" font-size="16" fill="#555555">• Keep ISRs short — defer work to tasks</text>
+  <text x="100" y="440" font-family="sans-serif" font-size="16" fill="#555555">• No blocking calls (no mutex wait, no delay)</text>
+  <text x="100" y="464" font-family="sans-serif" font-size="16" fill="#555555">• Use volatile for shared variables with ISRs</text>
 </svg>

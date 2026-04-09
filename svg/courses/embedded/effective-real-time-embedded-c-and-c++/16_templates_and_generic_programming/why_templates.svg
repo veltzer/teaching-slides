@@ -1,12 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="86.4" text-anchor="middle" font-size="51.84" font-weight="bold">Template Benefits</text>
-  <rect x="160" y="172.8" width="480" height="115.2" fill="#ffcccc" stroke="#333" />
-  <text x="400" y="244.8" text-anchor="middle" font-size="40.32">Code Reuse</text>
-  <rect x="704" y="172.8" width="480" height="115.2" fill="#ccffcc" stroke="#333" />
-  <text x="944" y="244.8" text-anchor="middle" font-size="40.32">Type Safety</text>
-  <rect x="160" y="345.6" width="480" height="115.2" fill="#ccccff" stroke="#333" />
-  <text x="400" y="417.6" text-anchor="middle" font-size="40.32">Performance</text>
-  <rect x="704" y="345.6" width="480" height="115.2" fill="#ffffcc" stroke="#333" />
-  <text x="944" y="417.6" text-anchor="middle" font-size="40.32">Compile-Time</text>
-  <text x="640" y="576" text-anchor="middle" font-size="40.32">Zero runtime overhead!</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Template Benefits</text>
+  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- 4 boxes -->
+  <rect x="80"  y="110" width="500" height="160" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="330" y="162" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#ffffff">Code Reuse</text>
+  <text x="330" y="196" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#bbdefb">Write once, use for any type</text>
+  <text x="330" y="222" text-anchor="middle" font-family="monospace" font-size="15" fill="#90caf9">RingBuffer&lt;uint8_t, 64&gt;</text>
+  <text x="330" y="246" text-anchor="middle" font-family="monospace" font-size="15" fill="#90caf9">RingBuffer&lt;SensorReading, 8&gt;</text>
+
+  <rect x="700" y="110" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="950" y="162" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#212121">Type Safety</text>
+  <text x="950" y="196" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Compiler checks types — no void* casts</text>
+  <text x="950" y="222" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">buf.push(42);     // OK: uint8_t</text>
+  <text x="950" y="246" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">buf.push(3.14f);  // error</text>
+
+  <rect x="80"  y="300" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="330" y="352" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#212121">Performance</text>
+  <text x="330" y="386" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Fully inlined and optimized</text>
+  <text x="330" y="412" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">per instantiation</text>
+  <text x="330" y="438" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">as fast as hand-written code</text>
+
+  <rect x="700" y="300" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="950" y="352" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#212121">Compile-Time</text>
+  <text x="950" y="386" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Size as template parameter</text>
+  <text x="950" y="412" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">template&lt;size_t N&gt;</text>
+  <text x="950" y="436" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">known at compile time → no malloc</text>
+
+  <!-- Key banner -->
+  <rect x="200" y="504" width="880" height="70" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="536" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1565c0">Zero runtime overhead!</text>
+  <text x="640" y="562" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Templates are resolved entirely at compile time — no indirect calls, no type erasure</text>
+
+  <!-- Footer example -->
+  <rect x="200" y="606" width="880" height="74" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="632" text-anchor="middle" font-family="monospace" font-size="18" fill="#212121">template&lt;typename T, size_t N&gt;</text>
+  <text x="640" y="656" text-anchor="middle" font-family="monospace" font-size="18" fill="#212121">class RingBuffer { T buf[N]; ... };</text>
+  <text x="640" y="674" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">statically allocated — perfect for embedded (no heap needed)</text>
 </svg>

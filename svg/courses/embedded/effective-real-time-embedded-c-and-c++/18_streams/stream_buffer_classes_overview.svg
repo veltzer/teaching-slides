@@ -1,21 +1,75 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="533.3333" y="57.6" width="213.3333" height="115.2" fill="#ffecb3" stroke="#f57f17" stroke-width="4.2667" />
-  <text x="640" y="129.6" text-anchor="middle" font-size="25.6">streambuf</text>
-  <rect x="213.3333" y="288" width="213.3333" height="115.2" fill="#e8f5e8" stroke="#388e3c" stroke-width="4.2667" />
-  <text x="320" y="360" text-anchor="middle" font-size="25.6">filebuf</text>
-  <rect x="533.3333" y="288" width="213.3333" height="115.2" fill="#e1f5fe" stroke="#0277bd" stroke-width="4.2667" />
-  <text x="640" y="360" text-anchor="middle" font-size="25.6">stringbuf</text>
-  <rect x="853.3333" y="288" width="213.3333" height="115.2" fill="#fce4ec" stroke="#c2185b" stroke-width="4.2667" />
-  <text x="960" y="360" text-anchor="middle" font-size="25.6">custom buffer</text>
-  <rect x="106.6667" y="518.4" width="170.6667" height="86.4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.1333" />
-  <text x="192" y="576" text-anchor="middle" font-size="21.3333">Input Buffer</text>
-  <rect x="320" y="518.4" width="170.6667" height="86.4" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.1333" />
-  <text x="405.3333" y="576" text-anchor="middle" font-size="21.3333">Output Buffer</text>
-  <rect x="533.3333" y="518.4" width="170.6667" height="86.4" fill="#fff3e0" stroke="#e65100" stroke-width="2.1333" />
-  <text x="618.6667" y="576" text-anchor="middle" font-size="21.3333">Get Area</text>
-  <rect x="746.6667" y="518.4" width="170.6667" height="86.4" fill="#fff3e0" stroke="#e65100" stroke-width="2.1333" />
-  <text x="832" y="576" text-anchor="middle" font-size="21.3333">Put Area</text>
-  <line x1="640" y1="172.8" x2="320" y2="288" stroke="#333" stroke-width="4.2667" />
-  <line x1="640" y1="172.8" x2="640" y2="288" stroke="#333" stroke-width="4.2667" />
-  <line x1="640" y1="172.8" x2="960" y2="288" stroke="#333" stroke-width="4.2667" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="inherit" markerWidth="14" markerHeight="14" refX="1" refY="7" orient="auto">
+      <polygon points="1,1 13,7 1,13" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Stream Buffer Classes</text>
+  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- streambuf root -->
+  <rect x="440" y="90" width="400" height="90" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="142" text-anchor="middle" font-family="monospace" font-size="26" font-weight="bold" fill="#ffffff">std::streambuf</text>
+  <text x="640" y="168" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bbdefb">abstract buffer base</text>
+
+  <!-- filebuf -->
+  <line x1="530" y1="182" x2="260" y2="282" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
+  <rect x="60" y="284" width="360" height="90" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="240" y="334" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#212121">filebuf</text>
+  <text x="240" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">backed by a file on disk</text>
+
+  <!-- stringbuf -->
+  <line x1="640" y1="182" x2="640" y2="282" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
+  <rect x="460" y="284" width="360" height="90" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="334" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#212121">stringbuf</text>
+  <text x="640" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">backed by std::string</text>
+
+  <!-- custom -->
+  <line x1="750" y1="182" x2="1020" y2="282" stroke="#555555" stroke-width="2" marker-end="url(#inherit)"/>
+  <rect x="860" y="284" width="360" height="90" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1040" y="334" text-anchor="middle" font-family="monospace" font-size="22" font-weight="bold" fill="#212121">custom buffer</text>
+  <text x="1040" y="358" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">backed by serial / DMA</text>
+
+  <!-- Buffer internals -->
+  <text x="640" y="430" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Buffer Areas (inside streambuf)</text>
+
+  <rect x="80"  y="454" width="260" height="90" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="210" y="494" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0">get area</text>
+  <text x="210" y="522" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">eback · gptr · egptr</text>
+
+  <rect x="380" y="454" width="260" height="90" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="510" y="494" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#1565c0">put area</text>
+  <text x="510" y="522" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">pbase · pptr · epptr</text>
+
+  <rect x="680" y="454" width="260" height="90" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="810" y="494" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#212121">overflow()</text>
+  <text x="810" y="522" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">called when put area full</text>
+
+  <rect x="980" y="454" width="260" height="90" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1110" y="494" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#212121">underflow()</text>
+  <text x="1110" y="522" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">called when get area empty</text>
+
+  <!-- Serial port note -->
+  <rect x="200" y="590" width="880" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="622" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Embedded use: override overflow() and underflow() to connect to UART / SPI</text>
+  <text x="640" y="648" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">int overflow(int c) { UART_send(c); return c; }</text>
+  <text x="640" y="668" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9e9e9e">then wrap in ostream for full operator&lt;&lt; support</text>
 </svg>

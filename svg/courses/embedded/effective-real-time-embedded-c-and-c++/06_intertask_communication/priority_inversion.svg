@@ -1,14 +1,93 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="86.4" text-anchor="middle" font-size="46.08" font-weight="bold">Priority Inversion Problem</text>
-  <rect x="160" y="172.8" width="320" height="86.4" fill="#ffcccc" stroke="#333" />
-  <text x="320" y="230.4" text-anchor="middle" font-size="34.56">High Priority</text>
-  <rect x="160" y="288" width="320" height="86.4" fill="#ffffcc" stroke="#333" />
-  <text x="320" y="345.6" text-anchor="middle" font-size="34.56">Medium Priority</text>
-  <rect x="160" y="403.2" width="320" height="86.4" fill="#ccffcc" stroke="#333" />
-  <text x="320" y="460.8" text-anchor="middle" font-size="34.56">Low Priority</text>
-  <path d="M 480 460.8 L 800 460.8" stroke="#333" stroke-width="5.76" />
-  <text x="640" y="446.4" text-anchor="middle" font-size="34.56">Holds Lock</text>
-  <path d="M 800 460.8 L 800 230.4 L 1120 230.4" stroke="#333" stroke-width="5.76" stroke-dasharray="14.4 14.4" />
-  <text x="960" y="216" text-anchor="middle" font-size="34.56">Blocked!</text>
-  <text x="640" y="604.8" text-anchor="middle" font-size="34.56">Medium task runs instead of High!</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" font-family="sans-serif" font-size="38" font-weight="bold" fill="#212121">Priority Inversion</text>
+  <line x1="200" y1="60" x2="1080" y2="60" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- Time axis -->
+  <line x1="100" y1="630" x2="1200" y2="630" stroke="#e0e0e0" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1215" y="635" font-family="sans-serif" font-size="16" fill="#9e9e9e">time</text>
+
+  <!-- Lane labels -->
+  <text x="88" y="166" text-anchor="end" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">High</text>
+  <text x="88" y="296" text-anchor="end" font-family="sans-serif" font-size="18" font-weight="bold" fill="#555555">Med</text>
+  <text x="88" y="426" text-anchor="end" font-family="sans-serif" font-size="18" font-weight="bold" fill="#9e9e9e">Low</text>
+
+  <!-- Lane stripes -->
+  <rect x="100" y="134" width="1090" height="58" rx="2" fill="#e3f2fd" opacity="0.4"/>
+  <rect x="100" y="264" width="1090" height="58" rx="2" fill="#f2f2f2" opacity="0.4"/>
+  <rect x="100" y="394" width="1090" height="58" rx="2" fill="#f2f2f2" opacity="0.4"/>
+
+  <!-- Low runs and acquires lock -->
+  <rect x="100" y="396" width="180" height="54" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5"/>
+  <text x="190" y="428" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">L runs</text>
+  <!-- lock acquired marker -->
+  <rect x="280" y="390" width="6" height="64" fill="#9e9e9e" rx="2"/>
+  <text x="283" y="384" font-family="sans-serif" font-size="13" fill="#555555">🔒</text>
+
+  <!-- Low holds lock -->
+  <rect x="286" y="396" width="194" height="54" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5"/>
+  <text x="383" y="428" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">L holds lock</text>
+
+  <!-- High arrives -->
+  <rect x="350" y="128" width="6" height="64" rx="2" fill="#1565c0"/>
+  <text x="353" y="122" font-family="sans-serif" font-size="13" fill="#1565c0">H arrives</text>
+  <!-- High blocked -->
+  <rect x="356" y="136" width="320" height="54" rx="4" fill="#ffffff" stroke="#1565c0" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="516" y="168" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0" font-weight="bold">⛔ Blocked — waiting for lock</text>
+
+  <!-- Medium preempts Low -->
+  <rect x="480" y="390" width="6" height="64" rx="2" fill="#555555"/>
+  <rect x="486" y="266" width="200" height="54" rx="4" fill="#555555"/>
+  <text x="586" y="298" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#ffffff" font-weight="bold">M preempts L !</text>
+  <!-- Low paused -->
+  <rect x="486" y="396" width="200" height="54" rx="4" fill="none" stroke="#9e9e9e" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="586" y="428" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#9e9e9e">L suspended</text>
+
+  <!-- Med finishes -->
+  <rect x="686" y="264" width="6" height="58" rx="2" fill="#555555"/>
+
+  <!-- Low resumes and finishes -->
+  <rect x="692" y="396" width="150" height="54" rx="4" fill="#e0e0e0" stroke="#9e9e9e" stroke-width="1.5"/>
+  <text x="767" y="428" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">L finishes</text>
+
+  <!-- Lock released -->
+  <rect x="842" y="390" width="6" height="64" rx="2" fill="#9e9e9e"/>
+  <text x="845" y="384" font-family="sans-serif" font-size="13" fill="#9e9e9e">🔓</text>
+
+  <!-- High runs -->
+  <rect x="848" y="136" width="200" height="54" rx="4" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="948" y="168" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#ffffff" font-weight="bold">H finally runs</text>
+
+  <!-- Problem callout -->
+  <rect x="180" y="510" width="920" height="70" rx="6" fill="#fff3e0" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="640" y="543" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#e65100">Problem: Medium task delays High — H starves while M runs</text>
+  <text x="640" y="568" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">H is blocked not by L, but indirectly by M — breaks real-time guarantees</text>
+
+  <!-- Fix -->
+  <text x="640" y="668" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">Solution: Priority Inheritance — L temporarily runs at H's priority while holding the lock</text>
 </svg>

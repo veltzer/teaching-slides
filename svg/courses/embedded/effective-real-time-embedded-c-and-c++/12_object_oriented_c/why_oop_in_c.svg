@@ -1,12 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="86.4" text-anchor="middle" font-size="51.84" font-weight="bold">OOP Benefits in Embedded C</text>
-  <rect x="160" y="172.8" width="480" height="115.2" fill="#ffcccc" stroke="#333" />
-  <text x="400" y="244.8" text-anchor="middle" font-size="40.32">Code Reuse</text>
-  <rect x="704" y="172.8" width="480" height="115.2" fill="#ccffcc" stroke="#333" />
-  <text x="944" y="244.8" text-anchor="middle" font-size="40.32">Modularity</text>
-  <rect x="160" y="345.6" width="480" height="115.2" fill="#ccccff" stroke="#333" />
-  <text x="400" y="417.6" text-anchor="middle" font-size="40.32">Maintainability</text>
-  <rect x="704" y="345.6" width="480" height="115.2" fill="#ffffcc" stroke="#333" />
-  <text x="944" y="417.6" text-anchor="middle" font-size="40.32">Abstraction</text>
-  <text x="640" y="576" text-anchor="middle" font-size="40.32">Without C++ overhead!</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">OOP Benefits in Embedded C</text>
+  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- 4 benefit boxes -->
+  <rect x="80"  y="120" width="500" height="160" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="330" y="182" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#ffffff">Code Reuse</text>
+  <text x="330" y="214" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#bbdefb">Driver works for UART1, UART2, UART3</text>
+  <text x="330" y="238" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#bbdefb">without copy-paste</text>
+  <text x="330" y="262" text-anchor="middle" font-family="monospace" font-size="15" fill="#90caf9">uart_init(&amp;uart1, ...);</text>
+
+  <rect x="700" y="120" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="950" y="182" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#212121">Modularity</text>
+  <text x="950" y="214" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Each peripheral is a self-contained</text>
+  <text x="950" y="238" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">struct with its own state</text>
+  <text x="950" y="262" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">struct UART { reg, baud, ... };</text>
+
+  <rect x="80"  y="320" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="330" y="382" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#212121">Abstraction</text>
+  <text x="330" y="414" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Caller doesn't know register details</text>
+  <text x="330" y="438" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">just calls the API</text>
+  <text x="330" y="462" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">uart_send(&amp;uart1, buf, len);</text>
+
+  <rect x="700" y="320" width="500" height="160" rx="8" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="950" y="382" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#212121">Maintainability</text>
+  <text x="950" y="414" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">Change implementation without</text>
+  <text x="950" y="438" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">touching callers</text>
+  <text x="950" y="462" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">stable API across hardware revisions</text>
+
+  <!-- Key point -->
+  <rect x="200" y="528" width="880" height="70" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="558" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#1565c0">Without C++ overhead!</text>
+  <text x="640" y="586" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#555555">C structs + function pointers give you encapsulation and polymorphism at zero runtime cost</text>
+
+  <!-- Technique note -->
+  <text x="640" y="660" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">Technique: pass struct* as first argument (the "this" pointer) to all related functions</text>
 </svg>

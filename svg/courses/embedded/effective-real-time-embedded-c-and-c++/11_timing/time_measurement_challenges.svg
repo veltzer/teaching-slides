@@ -1,11 +1,76 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="86.4" text-anchor="middle" font-size="51.84" font-weight="bold">Timing Sources</text>
-  <circle cx="640" cy="374.4" r="230.4" fill="#f0f0f0" stroke="#333" stroke-width="5.76" />
-  <rect x="512" y="259.2" width="256" height="86.4" fill="#ffcccc" stroke="#333" />
-  <text x="640" y="316.8" text-anchor="middle" font-size="34.56">CPU Cycles</text>
-  <rect x="512" y="374.4" width="256" height="86.4" fill="#ccffcc" stroke="#333" />
-  <text x="640" y="432" text-anchor="middle" font-size="34.56">System Timer</text>
-  <rect x="512" y="489.6" width="256" height="86.4" fill="#ccccff" stroke="#333" />
-  <text x="640" y="547.2" text-anchor="middle" font-size="34.56">RTC</text>
-  <text x="640" y="691.2" text-anchor="middle" font-size="40.32">Resolution vs Range Trade-off</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="640" y="54" text-anchor="middle" font-family="sans-serif" font-size="40" font-weight="bold" fill="#212121">Timing Sources</text>
+  <line x1="200" y1="66" x2="1080" y2="66" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- Center hub -->
+  <circle cx="640" cy="370" r="100" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="362" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Timing</text>
+  <text x="640" y="388" text-anchor="middle" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ffffff">Sources</text>
+
+  <!-- CPU Cycles (top) -->
+  <rect x="460" y="100" width="360" height="100" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="148" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#212121">CPU Cycles</text>
+  <text x="640" y="174" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">DWT_CYCCNT · highest resolution</text>
+  <line x1="640" y1="270" x2="640" y2="202" stroke="#1565c0" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow-accent)"/>
+
+  <!-- System Timer (left) -->
+  <rect x="80" y="320" width="360" height="100" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="260" y="368" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#212121">System Timer</text>
+  <text x="260" y="394" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">SysTick · ms resolution</text>
+  <line x1="540" y1="370" x2="442" y2="370" stroke="#555555" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+
+  <!-- RTC (right) -->
+  <rect x="840" y="320" width="360" height="100" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1020" y="368" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#212121">RTC</text>
+  <text x="1020" y="394" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">Real-Time Clock · seconds</text>
+  <line x1="740" y1="370" x2="838" y2="370" stroke="#555555" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+
+  <!-- Comparison table -->
+  <rect x="180" y="510" width="920" height="160" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="538" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Resolution vs. Range Trade-off</text>
+  <!-- Table -->
+  <line x1="200" y1="550" x2="1080" y2="550" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="280"  y="572" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555" font-weight="bold">Source</text>
+  <text x="580"  y="572" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555" font-weight="bold">Resolution</text>
+  <text x="800"  y="572" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555" font-weight="bold">Range</text>
+  <text x="1010" y="572" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555" font-weight="bold">Use case</text>
+  <line x1="200" y1="580" x2="1080" y2="580" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="280"  y="602" text-anchor="middle" font-family="monospace" font-size="15" fill="#1565c0">CPU Cycles</text>
+  <text x="580"  y="602" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">~ns</text>
+  <text x="800"  y="602" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">seconds</text>
+  <text x="1010" y="602" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">profiling</text>
+  <text x="280"  y="628" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">SysTick</text>
+  <text x="580"  y="628" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">~ms</text>
+  <text x="800"  y="628" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">hours</text>
+  <text x="1010" y="628" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">RTOS tick</text>
+  <text x="280"  y="654" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">RTC</text>
+  <text x="580"  y="654" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">~s</text>
+  <text x="800"  y="654" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">years</text>
+  <text x="1010" y="654" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">wall clock</text>
 </svg>
