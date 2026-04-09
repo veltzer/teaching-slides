@@ -460,6 +460,8 @@ Creates a new user in the system.
 `POST /api/users`
 
 ### Request Body
+
+```
 ```json
 {
   "email": "user@example.com",

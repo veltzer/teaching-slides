@@ -4,7 +4,7 @@
 ---
 ## What is Rust
 
-![bg right:40% 80%](https://raw.githubusercontent.com/rust-lang/rust-artwork/master/logo/rust-logo-blk.svg)
+![bg right:40% 80%](svg/courses/languages/rust/rust-programming/01_getting_started/rust_logo.svg)
 
 - Systems programming language
 - Focuses on safety, concurrency, and performance

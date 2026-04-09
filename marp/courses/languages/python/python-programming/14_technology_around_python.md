@@ -518,6 +518,7 @@ poetry install
 # Run in virtual environment
 poetry run python3 script.py
 
+```
 ```console
 ---
 ## `uv` - Modern Python Package Manager

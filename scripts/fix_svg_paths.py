@@ -12,9 +12,13 @@ with:
 """
 
 import re
+import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(".")
+if not (ROOT / ".git").exists():
+    print("Error: script must be run from the root of the repository", file=sys.stderr)
+    sys.exit(1)
 MARP_DIR = ROOT / 'marp'
 
 # Match image references with relative SVG paths

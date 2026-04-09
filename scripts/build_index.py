@@ -26,7 +26,10 @@ from typing import Any
 
 import yaml
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(".")
+if not (ROOT / ".git").exists():
+    print("Error: script must be run from the root of the repository", file=sys.stderr)
+    sys.exit(1)
 RESOURCES_DIR = ROOT / "resources"
 
 

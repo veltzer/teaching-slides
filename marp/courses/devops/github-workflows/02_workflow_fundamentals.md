@@ -157,7 +157,7 @@ jobs:
 - Add a badge to your `README.md`:
 
 ```markdown
-![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg)
+![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
 ```
 
 - Badge shows the status of the latest run:
@@ -167,7 +167,7 @@ jobs:
 - You can filter by branch:
 
 ```markdown
-![CI](https://github.com/OWNER/REPO/actions/workflows/ci.yml/badge.svg?branch=main)
+![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
 ```
 
 ---

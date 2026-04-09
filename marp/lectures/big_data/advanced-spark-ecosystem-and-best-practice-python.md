@@ -304,7 +304,7 @@ spark.metrics.conf=/path/to/metrics.properties
 *.sink.prometheus.port=8091
 ```
 
-![bg right:30% 80%](https://grafana.com/static/img/grafana_logo.svg)
+![bg right:30% 80%](svg/lectures/big_data/advanced-spark-ecosystem-and-best-practice-python/grafana_logo.svg)
 
 ---
 

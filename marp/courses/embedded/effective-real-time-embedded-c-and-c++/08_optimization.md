@@ -381,6 +381,7 @@ void configure_zero_latency_irq(IRQn_Type irq) {
 
 ## DMA Optimization
 
+```
 ```c
 // Double buffering with DMA
 typedef struct {

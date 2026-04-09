@@ -8,6 +8,7 @@ Checks:
   --labels      Validate fenced code block language labels against text_labels.yaml
   --fences      Check for unclosed code fences (odd number of ``` lines)
   --urls        Check for external URLs in image references (should be local)
+  --whitespace  Check for trailing whitespace and consecutive blank lines
 
 Usage:
     md_checks.py --links --labels file1.md file2.md ...
@@ -24,7 +25,10 @@ from typing import Iterator
 
 import yaml
 
-_ROOT = Path(__file__).resolve().parent.parent
+_ROOT = Path(".")
+if not (_ROOT / ".git").exists():
+    print("Error: script must be run from the root of the repository", file=sys.stderr)
+    sys.exit(1)
 
 
 # ── Link checking ──
@@ -131,6 +135,25 @@ def _check_urls(path: Path) -> list[str]:
     return errors
 
 
+# ── Whitespace checking ──
+
+
+def _check_whitespace(path: Path) -> list[str]:
+    """Check for trailing whitespace and consecutive blank lines."""
+    text = path.read_text(encoding='utf-8')
+    lines = text.splitlines()
+    errors = []
+    prev_blank = False
+    for line_no, line in enumerate(lines, 1):
+        if line != line.rstrip():
+            errors.append(f"{path}:{line_no}: trailing whitespace")
+        is_blank = line.strip() == ''
+        if is_blank and prev_blank:
+            errors.append(f"{path}:{line_no}: consecutive blank lines")
+        prev_blank = is_blank
+    return errors
+
+
 # ── Main ──
 
 def _collect_files(paths: list[str]) -> list[Path]:
@@ -158,12 +181,21 @@ def main() -> None:
                         help='Check that local links point to existing files')
     parser.add_argument('--labels', action='store_true',
                         help='Check fenced code block labels against text_labels.yaml')
+    parser.add_argument('--fences', action='store_true',
+                        help='Check for unclosed code fences')
+    parser.add_argument('--urls', action='store_true',
+                        help='Check for external URLs in image references')
+    parser.add_argument('--whitespace', action='store_true',
+                        help='Check for trailing whitespace and consecutive blank lines')
     args = parser.parse_args()
 
     # Default: all checks enabled
-    run_all = not args.links and not args.labels
-    do_links = args.links or run_all
-    do_labels = args.labels or run_all
+    explicit = args.links or args.labels or args.fences or args.urls or args.whitespace
+    do_links = args.links or not explicit
+    do_labels = args.labels or not explicit
+    do_fences = args.fences or not explicit
+    do_urls = args.urls or not explicit
+    do_whitespace = args.whitespace or not explicit
 
     files = _collect_files(args.paths)
     all_errors: list[str] = []
@@ -173,6 +205,12 @@ def main() -> None:
             all_errors.extend(_check_links(path))
         if do_labels:
             all_errors.extend(_check_labels(path))
+        if do_fences:
+            all_errors.extend(_check_fences(path))
+        if do_urls:
+            all_errors.extend(_check_urls(path))
+        if do_whitespace:
+            all_errors.extend(_check_whitespace(path))
 
     for err in all_errors:
         print(err, file=sys.stderr)

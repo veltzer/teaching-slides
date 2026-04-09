@@ -881,6 +881,7 @@ class KnowledgeEntry:
 
 ## Code Example
 
+```
 ```template
 # Working example
 

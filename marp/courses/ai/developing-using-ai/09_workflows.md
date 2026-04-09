@@ -296,6 +296,8 @@ Systematic bug investigation:
 5. Review recent deployments
 
 **Reproduction Script**:
+
+```
 ```javascript
 // AI generates reproduction test
 const reproducer = async () => {

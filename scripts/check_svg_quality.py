@@ -53,6 +53,9 @@ def check_file(path: Path) -> list[str]:
 
 
 def main() -> None:
+    if not Path(".git").exists():
+        print("Error: script must be run from the root of the repository", file=sys.stderr)
+        sys.exit(1)
     args = sys.argv[1:]
     if not args:
         raise SystemExit("usage: check_svg_quality.py file1.svg [file2.svg ...]")

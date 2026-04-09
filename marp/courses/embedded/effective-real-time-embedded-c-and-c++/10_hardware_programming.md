@@ -279,6 +279,7 @@ void PendSV_Handler(void) {
 
 ## Critical Sections in ISRs
 
+```
 ```c
 // Interrupt-safe critical sections
 uint32_t enter_critical_from_isr(void) {

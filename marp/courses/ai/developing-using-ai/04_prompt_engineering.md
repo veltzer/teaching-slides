@@ -605,6 +605,7 @@ Analyze this code and provide results in this exact format:
 
 ## Code Fixes
 
+```
 ```template
 [Fixed code here]
 

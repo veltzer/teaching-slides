@@ -871,6 +871,7 @@ Best practices for using smart pointers effectively:
 1. Prefer `make_unique` and `make_shared`
 1. Never mix smart pointers with raw `new`/`delete`
 
+```
 ```cpp
 // Good patterns
 auto resource = std::make_unique<Resource>();
