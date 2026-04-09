@@ -1,58 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#1a1a2e" />
+      <stop offset="100%" style="stop-color:#0d1117" />
     </linearGradient>
-    <linearGradient id="spark-orange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e25a1c"/>
-      <stop offset="100%" style="stop-color:#f39c12"/>
+    <linearGradient id="spark-orange" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#e25a1c" />
+      <stop offset="100%" style="stop-color:#f39c12" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <!-- Spark lightning bolt -->
-  <polygon points="130,40 90,180 130,180 100,300 200,140 155,140 190,40" fill="url(#spark-orange)"/>
-  <!-- DAG nodes -->
-  <circle cx="350" cy="80" r="25" fill="#2c3e50" stroke="#e25a1c" stroke-width="3"/>
-  <text x="350" y="85" text-anchor="middle" fill="#e25a1c" font-family="monospace" font-size="11">RDD</text>
-  <circle cx="280" cy="170" r="25" fill="#2c3e50" stroke="#f39c12" stroke-width="3"/>
-  <text x="280" y="175" text-anchor="middle" fill="#f39c12" font-family="monospace" font-size="10">map</text>
-  <circle cx="420" cy="170" r="25" fill="#2c3e50" stroke="#f39c12" stroke-width="3"/>
-  <text x="420" y="175" text-anchor="middle" fill="#f39c12" font-family="monospace" font-size="10">filter</text>
-  <circle cx="350" cy="260" r="25" fill="#2c3e50" stroke="#2ecc71" stroke-width="3"/>
-  <text x="350" y="265" text-anchor="middle" fill="#2ecc71" font-family="monospace" font-size="10">reduce</text>
-  <!-- DAG edges -->
-  <line x1="335" y1="103" x2="295" y2="147" stroke="#666" stroke-width="2"/>
-  <line x1="365" y1="103" x2="405" y2="147" stroke="#666" stroke-width="2"/>
-  <line x1="295" y1="193" x2="335" y2="237" stroke="#666" stroke-width="2"/>
-  <line x1="405" y1="193" x2="365" y2="237" stroke="#666" stroke-width="2"/>
-  <!-- Executor boxes -->
-  <rect x="530" y="60" width="110" height="70" rx="6" fill="#2c3e50" stroke="#3498db" stroke-width="2"/>
-  <text x="585" y="85" text-anchor="middle" fill="#3498db" font-family="Arial" font-size="11" font-weight="bold">Executor 1</text>
-  <rect x="543" y="100" width="30" height="20" rx="3" fill="#3498db" opacity="0.3"/>
-  <rect x="580" y="100" width="30" height="20" rx="3" fill="#3498db" opacity="0.3"/>
-  <text x="558" y="114" text-anchor="middle" fill="#3498db" font-family="monospace" font-size="10">T1</text>
-  <text x="595" y="114" text-anchor="middle" fill="#3498db" font-family="monospace" font-size="10">T2</text>
-  <rect x="670" y="60" width="110" height="70" rx="6" fill="#2c3e50" stroke="#9b59b6" stroke-width="2"/>
-  <text x="725" y="85" text-anchor="middle" fill="#9b59b6" font-family="Arial" font-size="11" font-weight="bold">Executor 2</text>
-  <rect x="683" y="100" width="30" height="20" rx="3" fill="#9b59b6" opacity="0.3"/>
-  <rect x="720" y="100" width="30" height="20" rx="3" fill="#9b59b6" opacity="0.3"/>
-  <text x="698" y="114" text-anchor="middle" fill="#9b59b6" font-family="monospace" font-size="10">T3</text>
-  <text x="735" y="114" text-anchor="middle" fill="#9b59b6" font-family="monospace" font-size="10">T4</text>
-  <!-- Driver -->
-  <rect x="600" y="170" width="120" height="50" rx="6" fill="#2c3e50" stroke="#e25a1c" stroke-width="2"/>
-  <text x="660" y="200" text-anchor="middle" fill="#e25a1c" font-family="Arial" font-size="12" font-weight="bold">Driver</text>
-  <!-- Shuffle arrows -->
-  <path d="M530,280 Q580,250 630,280" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
-  <path d="M630,280 Q680,250 730,280" fill="none" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,3"/>
-  <!-- Stage boxes -->
-  <rect x="500" y="280" width="80" height="40" rx="4" fill="#1a3c34" stroke="#2ecc71" stroke-width="1.5"/>
-  <text x="540" y="305" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="11">Stage 0</text>
-  <rect x="610" y="280" width="80" height="40" rx="4" fill="#1a3c34" stroke="#2ecc71" stroke-width="1.5"/>
-  <text x="650" y="305" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="11">Stage 1</text>
-  <rect x="720" y="280" width="80" height="40" rx="4" fill="#1a3c34" stroke="#2ecc71" stroke-width="1.5"/>
-  <text x="760" y="305" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="11">Stage 2</text>
-  <!-- Shuffle label -->
-  <text x="630" y="265" text-anchor="middle" fill="#f39c12" font-family="Arial" font-size="10">shuffle</text>
-  <text x="730" y="265" text-anchor="middle" fill="#f39c12" font-family="Arial" font-size="10">shuffle</text>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <polygon points="208,72 144,324 208,324 160,540 320,252 248,252 304,72" fill="url(#spark-orange)" />
+  <circle cx="560" cy="144" r="40" fill="#2c3e50" stroke="#e25a1c" stroke-width="4.8" />
+  <text x="560" y="153" text-anchor="middle" fill="#e25a1c" font-family="monospace" font-size="17.6">RDD</text>
+  <circle cx="448" cy="306" r="40" fill="#2c3e50" stroke="#f39c12" stroke-width="4.8" />
+  <text x="448" y="315" text-anchor="middle" fill="#f39c12" font-family="monospace" font-size="16">map</text>
+  <circle cx="672" cy="306" r="40" fill="#2c3e50" stroke="#f39c12" stroke-width="4.8" />
+  <text x="672" y="315" text-anchor="middle" fill="#f39c12" font-family="monospace" font-size="16">filter</text>
+  <circle cx="560" cy="468" r="40" fill="#2c3e50" stroke="#2ecc71" stroke-width="4.8" />
+  <text x="560" y="477" text-anchor="middle" fill="#2ecc71" font-family="monospace" font-size="16">reduce</text>
+  <line x1="536" y1="185.4" x2="472" y2="264.6" stroke="#666" stroke-width="3.2" />
+  <line x1="584" y1="185.4" x2="648" y2="264.6" stroke="#666" stroke-width="3.2" />
+  <line x1="472" y1="347.4" x2="536" y2="426.6" stroke="#666" stroke-width="3.2" />
+  <line x1="648" y1="347.4" x2="584" y2="426.6" stroke="#666" stroke-width="3.2" />
+  <rect x="848" y="108" width="176" height="126" rx="9.6" fill="#2c3e50" stroke="#3498db" stroke-width="3.2" />
+  <text x="936" y="153" text-anchor="middle" fill="#3498db" font-family="Arial" font-size="17.6" font-weight="bold">Executor 1</text>
+  <rect x="868.8" y="180" width="48" height="36" rx="4.8" fill="#3498db" opacity="0.3" />
+  <rect x="928" y="180" width="48" height="36" rx="4.8" fill="#3498db" opacity="0.3" />
+  <text x="892.8" y="205.2" text-anchor="middle" fill="#3498db" font-family="monospace" font-size="16">T1</text>
+  <text x="952" y="205.2" text-anchor="middle" fill="#3498db" font-family="monospace" font-size="16">T2</text>
+  <rect x="1072" y="108" width="176" height="126" rx="9.6" fill="#2c3e50" stroke="#9b59b6" stroke-width="3.2" />
+  <text x="1160" y="153" text-anchor="middle" fill="#9b59b6" font-family="Arial" font-size="17.6" font-weight="bold">Executor 2</text>
+  <rect x="1092.8" y="180" width="48" height="36" rx="4.8" fill="#9b59b6" opacity="0.3" />
+  <rect x="1152" y="180" width="48" height="36" rx="4.8" fill="#9b59b6" opacity="0.3" />
+  <text x="1116.8" y="205.2" text-anchor="middle" fill="#9b59b6" font-family="monospace" font-size="16">T3</text>
+  <text x="1176" y="205.2" text-anchor="middle" fill="#9b59b6" font-family="monospace" font-size="16">T4</text>
+  <rect x="960" y="306" width="192" height="90" rx="9.6" fill="#2c3e50" stroke="#e25a1c" stroke-width="3.2" />
+  <text x="1056" y="360" text-anchor="middle" fill="#e25a1c" font-family="Arial" font-size="19.2" font-weight="bold">Driver</text>
+  <path d="M 848 504 Q 928 450 1008 504" fill="none" stroke="#f39c12" stroke-width="3.2" stroke-dasharray="8 4.8" />
+  <path d="M 1008 504 Q 1088 450 1168 504" fill="none" stroke="#f39c12" stroke-width="3.2" stroke-dasharray="8 4.8" />
+  <rect x="800" y="504" width="128" height="72" rx="6.4" fill="#1a3c34" stroke="#2ecc71" stroke-width="2.4" />
+  <text x="864" y="549" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="17.6">Stage 0</text>
+  <rect x="976" y="504" width="128" height="72" rx="6.4" fill="#1a3c34" stroke="#2ecc71" stroke-width="2.4" />
+  <text x="1040" y="549" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="17.6">Stage 1</text>
+  <rect x="1152" y="504" width="128" height="72" rx="6.4" fill="#1a3c34" stroke="#2ecc71" stroke-width="2.4" />
+  <text x="1216" y="549" text-anchor="middle" fill="#2ecc71" font-family="Arial" font-size="17.6">Stage 2</text>
+  <text x="1008" y="477" text-anchor="middle" fill="#f39c12" font-family="Arial" font-size="16">shuffle</text>
+  <text x="1168" y="477" text-anchor="middle" fill="#f39c12" font-family="Arial" font-size="16">shuffle</text>
 </svg>

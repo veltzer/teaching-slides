@@ -1,68 +1,48 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Storage Integration</text>
-
-  <!-- Spark Core in center -->
-  <rect x="300" y="140" width="200" height="60" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="400" y="165" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1a237e">Spark Engine</text>
-  <text x="400" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">DataFrame / Dataset API</text>
-
-  <!-- Cloud Object Stores (top) -->
-  <rect x="30" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="95" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">AWS S3</text>
-  <text x="95" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">s3a://</text>
-
-  <rect x="180" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="245" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Azure ADLS</text>
-  <text x="245" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">abfss://</text>
-
-  <rect x="490" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="555" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Google GCS</text>
-  <text x="555" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">gs://</text>
-
-  <rect x="640" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="705" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">HDFS</text>
-  <text x="705" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">hdfs://</text>
-
-  <!-- Arrows from stores to Spark -->
-  <line x1="95" y1="100" x2="320" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="245" y1="100" x2="350" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="555" y1="100" x2="450" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="705" y1="100" x2="480" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Table Formats (bottom) -->
-  <rect x="60" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="135" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Delta Lake</text>
-  <text x="135" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">ACID transactions</text>
-
-  <rect x="240" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="315" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Apache Iceberg</text>
-  <text x="315" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Schema evolution</text>
-
-  <rect x="420" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="495" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Apache Hudi</text>
-  <text x="495" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Incremental processing</text>
-
-  <rect x="600" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="675" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Parquet / ORC</text>
-  <text x="675" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Columnar formats</text>
-
-  <!-- Arrows from Spark to formats -->
-  <line x1="340" y1="200" x2="135" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="380" y1="200" x2="315" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="420" y1="200" x2="495" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="460" y1="200" x2="675" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Connectors label -->
-  <rect x="330" y="50" width="150" height="50" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="405" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#4a148c">Databases</text>
-  <text x="405" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">JDBC / Hive</text>
-  <line x1="405" y1="100" x2="400" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <text x="400" y="380" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Unified read/write API across all storage backends</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Spark Storage Integration</text>
+  <rect x="480" y="252" width="320" height="108" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="640" y="297" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1a237e">Spark Engine</text>
+  <text x="640" y="333" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">DataFrame / Dataset API</text>
+  <rect x="48" y="90" width="208" height="90" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="152" y="129.6" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">AWS S3</text>
+  <text x="152" y="162" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">s3a://</text>
+  <rect x="288" y="90" width="208" height="90" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="392" y="129.6" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Azure ADLS</text>
+  <text x="392" y="162" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">abfss://</text>
+  <rect x="784" y="90" width="208" height="90" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="888" y="129.6" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Google GCS</text>
+  <text x="888" y="162" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">gs://</text>
+  <rect x="1024" y="90" width="208" height="90" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="1128" y="129.6" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">HDFS</text>
+  <text x="1128" y="162" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">hdfs://</text>
+  <line x1="152" y1="180" x2="512" y2="261" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="392" y1="180" x2="560" y2="252" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="888" y1="180" x2="720" y2="252" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="1128" y1="180" x2="768" y2="261" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="96" y="486" width="240" height="99" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="216" y="527.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Delta Lake</text>
+  <text x="216" y="563.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">ACID transactions</text>
+  <rect x="384" y="486" width="240" height="99" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="504" y="527.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Apache Iceberg</text>
+  <text x="504" y="563.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Schema evolution</text>
+  <rect x="672" y="486" width="240" height="99" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="792" y="527.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Apache Hudi</text>
+  <text x="792" y="563.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Incremental processing</text>
+  <rect x="960" y="486" width="240" height="99" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="1080" y="527.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Parquet / ORC</text>
+  <text x="1080" y="563.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Columnar formats</text>
+  <line x1="544" y1="360" x2="216" y2="486" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="608" y1="360" x2="504" y2="486" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="672" y1="360" x2="792" y2="486" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="736" y1="360" x2="1080" y2="486" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="528" y="90" width="240" height="90" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <text x="648" y="129.6" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#4a148c">Databases</text>
+  <text x="648" y="162" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">JDBC / Hive</text>
+  <line x1="648" y1="180" x2="640" y2="252" stroke="#333" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="640" y="684" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Unified read/write API across all storage backends</text>
 </svg>

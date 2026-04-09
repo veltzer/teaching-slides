@@ -1,36 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 350" font-family="Arial, sans-serif">
-  <text x="325" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Dangling Pointer Problem</text>
-  <!-- Before free -->
-  <rect x="30" y="40" width="280" height="130" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="170" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Before free(p):</text>
-  <rect x="50" y="75" width="80" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="90" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">p</text>
-  <line x1="130" y1="92" x2="195" y2="92" stroke="#4a90e2" stroke-width="2"/>
-  <polygon points="190,87 200,92 190,97" fill="#4a90e2"/>
-  <rect x="200" y="75" width="80" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="240" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">42</text>
-  <text x="290" y="98" font-size="10" fill="#666">(heap)</text>
-  <rect x="50" y="120" width="80" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="90" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">alias</text>
-  <line x1="130" y1="137" x2="235" y2="110" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="4"/>
-  <!-- After free -->
-  <rect x="340" y="40" width="290" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="485" y="62" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">After free(p); p = NULL;</text>
-  <rect x="360" y="75" width="80" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="400" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">NULL</text>
-  <rect x="510" y="75" width="80" height="35" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="550" y="98" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">???</text>
-  <text x="600" y="98" font-size="10" fill="#666">(freed)</text>
-  <rect x="360" y="120" width="80" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="400" y="143" text-anchor="middle" font-size="11" font-weight="bold" fill="#856404">alias</text>
-  <line x1="440" y1="137" x2="545" y2="110" stroke="#dc3545" stroke-width="2"/>
-  <polygon points="540,105 550,110 540,115" fill="#dc3545"/>
-  <text x="510" y="148" font-size="10" fill="#dc3545" font-weight="bold">DANGLING!</text>
-  <!-- Explanation -->
-  <rect x="60" y="195" width="530" height="130" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
-  <text x="325" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Why is this dangerous?</text>
-  <text x="80" y="245" font-size="11" fill="#333">1. alias still points to freed memory (dangling pointer)</text>
-  <text x="80" y="265" font-size="11" fill="#333">2. Using alias leads to undefined behavior</text>
-  <text x="80" y="285" font-size="11" fill="#333">3. Memory may be reused for other allocations</text>
-  <text x="80" y="305" font-size="11" fill="#28a745" font-weight="bold">Fix: Set ALL pointers to NULL after freeing, or use ownership patterns</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="51.4286" text-anchor="middle" font-size="31.5077" font-weight="bold" fill="#333">Dangling Pointer Problem</text>
+  <rect x="59.0769" y="82.2857" width="551.3846" height="267.4286" rx="9.8462" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="334.7692" y="127.5429" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#28a745">Before free(p):</text>
+  <rect x="98.4615" y="154.2857" width="157.5385" height="72" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9538" />
+  <text x="177.2308" y="201.6" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#333">p</text>
+  <line x1="256" y1="189.2571" x2="384" y2="189.2571" stroke="#4a90e2" stroke-width="3.9385" />
+  <polygon points="374.1538,178.9714 393.8462,189.2571 374.1538,199.5429" fill="#4a90e2" />
+  <rect x="393.8462" y="154.2857" width="157.5385" height="72" rx="9.8462" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="472.6154" y="201.6" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#333">42</text>
+  <text x="571.0769" y="201.6" font-size="19.6923" fill="#666">(heap)</text>
+  <rect x="98.4615" y="246.8571" width="157.5385" height="72" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9538" />
+  <text x="177.2308" y="294.1714" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#333">alias</text>
+  <line x1="256" y1="281.8286" x2="462.7692" y2="226.2857" stroke="#4a90e2" stroke-width="2.9538" stroke-dasharray="7.8769" />
+  <rect x="669.5385" y="82.2857" width="571.0769" height="267.4286" rx="9.8462" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9538" />
+  <text x="955.0769" y="127.5429" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#dc3545">After free(p); p = NULL;</text>
+  <rect x="708.9231" y="154.2857" width="157.5385" height="72" rx="9.8462" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9538" />
+  <text x="787.6923" y="201.6" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#333">NULL</text>
+  <rect x="1004.3077" y="154.2857" width="157.5385" height="72" rx="9.8462" fill="#f8d7da" stroke="#dc3545" stroke-width="2.9538" />
+  <text x="1083.0769" y="201.6" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#dc3545">???</text>
+  <text x="1181.5385" y="201.6" font-size="19.6923" fill="#666">(freed)</text>
+  <rect x="708.9231" y="246.8571" width="157.5385" height="72" rx="9.8462" fill="#fff3cd" stroke="#ffc107" stroke-width="3.9385" />
+  <text x="787.6923" y="294.1714" text-anchor="middle" font-size="21.6615" font-weight="bold" fill="#856404">alias</text>
+  <line x1="866.4615" y1="281.8286" x2="1073.2308" y2="226.2857" stroke="#dc3545" stroke-width="3.9385" />
+  <polygon points="1063.3846,216 1083.0769,226.2857 1063.3846,236.5714" fill="#dc3545" />
+  <text x="1004.3077" y="304.4571" font-size="19.6923" fill="#dc3545" font-weight="bold">DANGLING!</text>
+  <rect x="118.1538" y="401.1429" width="1043.6923" height="267.4286" rx="9.8462" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.9692" />
+  <text x="640" y="452.5714" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#dc3545">Why is this dangerous?</text>
+  <text x="157.5385" y="504" font-size="21.6615" fill="#333">1. alias still points to freed memory (dangling pointer)</text>
+  <text x="157.5385" y="545.1429" font-size="21.6615" fill="#333">2. Using alias leads to undefined behavior</text>
+  <text x="157.5385" y="586.2857" font-size="21.6615" fill="#333">3. Memory may be reused for other allocations</text>
+  <text x="157.5385" y="627.4286" font-size="21.6615" fill="#28a745" font-weight="bold">Fix: Set ALL pointers to NULL after freeing, or use ownership patterns</text>
 </svg>

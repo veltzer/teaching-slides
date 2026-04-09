@@ -1,20 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="280" font-family="sans-serif">
-  <rect x="10" y="10" width="660" height="260" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
-  <text x="340" y="32" text-anchor="middle" font-size="13" font-weight="bold" fill="#222222">Tool Use Conversation Flow</text>
-  <rect x="25" y="42" width="625" height="28" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
-  <text x="40" y="61" font-size="12" fill="#222222"><tspan font-weight="bold">User:</tspan> "Refactor the auth module and run the tests"</text>
-  <rect x="40" y="76" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="55" y="93" font-size="11" fill="#2e7d32">&#8594; tool_use: read_file("src/auth.ts")</text>
-  <rect x="40" y="104" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
-  <text x="55" y="121" font-size="11" fill="#555555">&#8592; tool_result: &lt;file contents returned&gt;</text>
-  <rect x="40" y="132" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="55" y="149" font-size="11" fill="#2e7d32">&#8594; tool_use: edit_file("src/auth.ts", ...)</text>
-  <rect x="40" y="160" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
-  <text x="55" y="177" font-size="11" fill="#555555">&#8592; tool_result: success</text>
-  <rect x="40" y="188" width="600" height="24" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="55" y="205" font-size="11" fill="#2e7d32">&#8594; tool_use: shell("npm test")</text>
-  <rect x="40" y="216" width="600" height="24" fill="#fff9c4" stroke="#f9a825" stroke-width="1" rx="3"/>
-  <text x="55" y="233" font-size="11" fill="#555555">&#8592; tool_result: All 42 tests passed</text>
-  <rect x="25" y="244" width="625" height="18" fill="#e3f2fd" stroke="#1565c0" stroke-width="1" rx="3"/>
-  <text x="40" y="257" font-size="11" fill="#222222"><tspan font-weight="bold">Assistant:</tspan> "Done. Refactored auth module — all tests pass."</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <rect width="2834.6022" height="2644.8979" fill="#f0f4f8" />
+  <text x="1417.3011" y="231.4286" text-anchor="middle" font-size="70.8651" font-weight="bold" fill="#1a237e">Tool Use: Chaining Multiple Calls</text>
+  <text x="1417.3011" y="376.8979" text-anchor="middle" font-size="46.0623" fill="#555">User: "Refactor the auth module and run the tests"</text>
+  <rect x="106.2976" y="495.9183" width="2622.007" height="251.2653" fill="#E8F5E9" stroke="#2E7D32" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="654.6122" font-size="46.0623" fill="#2E7D32" font-weight="bold">→ tool_use:</text>
+  <text x="549.2041" y="654.6122" font-size="46.0623" fill="#333">read_file("src/auth.ts")</text>
+  <rect x="106.2976" y="786.8571" width="2622.007" height="251.2653" fill="#FFF9C4" stroke="#F9A825" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="945.5511" font-size="46.0623" fill="#F9A825" font-weight="bold">← tool_result:</text>
+  <text x="620.0693" y="945.5511" font-size="46.0623" fill="#555">&lt;file contents: 240 lines of TypeScript&gt;</text>
+  <rect x="106.2976" y="1077.796" width="2622.007" height="251.2653" fill="#E8F5E9" stroke="#2E7D32" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="1236.4897" font-size="46.0623" fill="#2E7D32" font-weight="bold">→ tool_use:</text>
+  <text x="549.2041" y="1236.4897" font-size="46.0623" fill="#333">edit_file("src/auth.ts", old_pattern, new_pattern)</text>
+  <rect x="106.2976" y="1368.7347" width="2622.007" height="251.2653" fill="#FFF9C4" stroke="#F9A825" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="1527.4286" font-size="46.0623" fill="#F9A825" font-weight="bold">← tool_result:</text>
+  <text x="620.0693" y="1527.4286" font-size="46.0623" fill="#555">success — 3 replacements made</text>
+  <rect x="106.2976" y="1659.6735" width="2622.007" height="251.2653" fill="#E8F5E9" stroke="#2E7D32" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="1818.3675" font-size="46.0623" fill="#2E7D32" font-weight="bold">→ tool_use:</text>
+  <text x="549.2041" y="1818.3675" font-size="46.0623" fill="#333">shell("npm test")</text>
+  <rect x="106.2976" y="1950.6122" width="2622.007" height="251.2653" fill="#FFF9C4" stroke="#F9A825" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="2109.3061" font-size="46.0623" fill="#F9A825" font-weight="bold">← tool_result:</text>
+  <text x="620.0693" y="2109.3061" font-size="46.0623" fill="#555">All 42 tests passed</text>
+  <rect x="106.2976" y="2248.1632" width="2622.007" height="251.2653" fill="#E3F2FD" stroke="#1565C0" stroke-width="5.3148" rx="17.7163" />
+  <text x="170.076" y="2406.8571" font-size="46.0623" fill="#1565C0" font-weight="bold">Assistant:</text>
+  <text x="524.4013" y="2406.8571" font-size="46.0623" fill="#333">"Done. Refactored auth module — all 42 tests pass."</text>
 </svg>

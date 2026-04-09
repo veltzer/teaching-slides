@@ -1,25 +1,25 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Advanced Security: ACLs and Beyond</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="79.2" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Advanced Security: ACLs and Beyond</text>
   <defs>
-    <marker id="arrowadv" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowadv" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <rect x="30" y="40" width="160" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="60" text-anchor="middle" font-size="11" font-weight="bold">Traditional</text>
-  <text x="110" y="76" text-anchor="middle" font-size="10">owner/group/other</text>
-  <text x="110" y="92" text-anchor="middle" font-size="10">rwx bits only</text>
-  <line x1="190" y1="72" x2="220" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrowadv)"/>
-  <rect x="220" y="40" width="160" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="60" text-anchor="middle" font-size="11" font-weight="bold">POSIX ACLs</text>
-  <text x="300" y="76" text-anchor="middle" font-size="10">setfacl / getfacl</text>
-  <text x="300" y="92" text-anchor="middle" font-size="10">per-user/group rules</text>
-  <line x1="380" y1="72" x2="410" y2="72" stroke="#333" stroke-width="2" marker-end="url(#arrowadv)"/>
-  <rect x="410" y="40" width="165" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="492" y="60" text-anchor="middle" font-size="11" font-weight="bold">SELinux/AppArmor</text>
-  <text x="492" y="76" text-anchor="middle" font-size="10">Mandatory Access</text>
-  <text x="492" y="92" text-anchor="middle" font-size="10">Control (MAC)</text>
-  <rect x="30" y="125" width="545" height="55" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5" opacity="0.7"/>
-  <text x="300" y="145" text-anchor="middle" font-size="10" font-family="monospace">setfacl -m u:john:rx file.txt    # grant john read+execute</text>
-  <text x="300" y="162" text-anchor="middle" font-size="10" font-family="monospace">getfacl file.txt                 # view all ACL entries</text>
+  <rect x="64" y="144" width="341.3333" height="234" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="234.6667" y="216" text-anchor="middle" font-size="23.4667" font-weight="bold">Traditional</text>
+  <text x="234.6667" y="273.6" text-anchor="middle" font-size="21.3333">owner/group/other</text>
+  <text x="234.6667" y="331.2" text-anchor="middle" font-size="21.3333">rwx bits only</text>
+  <line x1="405.3333" y1="259.2" x2="469.3333" y2="259.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowadv)" />
+  <rect x="469.3333" y="144" width="341.3333" height="234" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="216" text-anchor="middle" font-size="23.4667" font-weight="bold">POSIX ACLs</text>
+  <text x="640" y="273.6" text-anchor="middle" font-size="21.3333">setfacl / getfacl</text>
+  <text x="640" y="331.2" text-anchor="middle" font-size="21.3333">per-user/group rules</text>
+  <line x1="810.6667" y1="259.2" x2="874.6667" y2="259.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowadv)" />
+  <rect x="874.6667" y="144" width="352" height="234" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1049.6" y="216" text-anchor="middle" font-size="23.4667" font-weight="bold">SELinux/AppArmor</text>
+  <text x="1049.6" y="273.6" text-anchor="middle" font-size="21.3333">Mandatory Access</text>
+  <text x="1049.6" y="331.2" text-anchor="middle" font-size="21.3333">Control (MAC)</text>
+  <rect x="64" y="450" width="1162.6667" height="198" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" opacity="0.7" />
+  <text x="640" y="522" text-anchor="middle" font-size="21.3333" font-family="monospace">setfacl -m u:john:rx file.txt    # grant john read+execute</text>
+  <text x="640" y="583.2" text-anchor="middle" font-size="21.3333" font-family="monospace">getfacl file.txt                 # view all ACL entries</text>
 </svg>

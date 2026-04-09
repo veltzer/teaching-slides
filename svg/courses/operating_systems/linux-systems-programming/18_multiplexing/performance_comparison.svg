@@ -1,23 +1,13 @@
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
-  <text x="250" y="20" font-size="14" font-weight="bold" text-anchor="middle">Scalability Comparison</text>
-
-  <!-- Y-axis -->
-  <line x1="50" y1="50" x2="50" y2="250" stroke="black"/>
-  <text x="30" y="150" font-size="12" text-anchor="middle" transform="rotate(-90, 30, 150)">Performance</text>
-
-  <!-- X-axis -->
-  <line x1="50" y1="250" x2="450" y2="250" stroke="black"/>
-  <text x="250" y="280" font-size="12" text-anchor="middle">Number of Connections</text>
-
-  <!-- select() line -->
-  <path d="M 50 200 Q 200 150 300 100" stroke="red" stroke-width="2" fill="none"/>
-  <text x="320" y="100" font-size="10" fill="red">select()</text>
-
-  <!-- poll() line -->
-  <path d="M 50 180 Q 200 130 350 90" stroke="orange" stroke-width="2" fill="none"/>
-  <text x="370" y="90" font-size="10" fill="orange">poll()</text>
-
-  <!-- epoll() line -->
-  <path d="M 50 150 L 400 80" stroke="green" stroke-width="2" fill="none"/>
-  <text x="420" y="80" font-size="10" fill="green">epoll()</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="48" font-size="33.6" font-weight="bold" text-anchor="middle">Scalability Comparison</text>
+  <line x1="128" y1="120" x2="128" y2="600" stroke="black" />
+  <text x="76.8" y="360" font-size="28.8" text-anchor="middle" transform="rotate(-90, 30, 150)">Performance</text>
+  <line x1="128" y1="600" x2="1152" y2="600" stroke="black" />
+  <text x="640" y="672" font-size="28.8" text-anchor="middle">Number of Connections</text>
+  <path d="M 128 480 Q 512 360 768 240" stroke="red" stroke-width="4.8" fill="none" />
+  <text x="819.2" y="240" font-size="24" fill="red">select()</text>
+  <path d="M 128 432 Q 512 312 896 216" stroke="orange" stroke-width="4.8" fill="none" />
+  <text x="947.2" y="216" font-size="24" fill="orange">poll()</text>
+  <path d="M 128 360 L 1024 192" stroke="green" stroke-width="4.8" fill="none" />
+  <text x="1075.2" y="192" font-size="24" fill="green">epoll()</text>
 </svg>

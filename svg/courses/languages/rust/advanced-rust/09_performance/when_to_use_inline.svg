@@ -1,5 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="460"><defs>
-  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-  </marker>
-</defs><rect x="10" y="10" width="660" height="440" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#4a148c" text-anchor="start" font-weight="bold">#[inline] Guidelines</text><rect x="16" y="48" width="648" height="84" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="66" font-family="sans-serif" font-size="12" fill="#1b5e20" text-anchor="start" font-weight="bold">#[inline] — USE FOR:</text><text x="24" y="78" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Small functions in library crates (enables cross-crate inlining without LTO)</text><text x="24" y="96" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Wrapper / delegation functions</text><text x="24" y="114" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Hot-path functions identified by profiling</text><rect x="16" y="138" width="648" height="84" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="156" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="start" font-weight="bold">#[inline(always)] — USE FOR:</text><text x="24" y="168" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Very small functions (1–3 lines) that MUST be fast</text><text x="24" y="186" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Functions in performance-critical inner loops</text><text x="24" y="204" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Only when benchmarks prove it helps</text><rect x="16" y="228" width="648" height="84" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="246" font-family="sans-serif" font-size="12" fill="#1565c0" text-anchor="start" font-weight="bold">#[inline(never)] — USE FOR:</text><text x="24" y="258" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Error handling paths (keeps hot path small)</text><text x="24" y="276" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Functions you want to see in profiler output</text><text x="24" y="294" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Large functions called from many places (reduce code bloat)</text><rect x="16" y="318" width="648" height="66" fill="#fce4ec" stroke="#333" stroke-width="1.5" rx="4"/><text x="24" y="336" font-family="sans-serif" font-size="12" fill="#b71c1c" text-anchor="start" font-weight="bold">DO NOT USE when:</text><text x="24" y="348" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• On every function 'just in case' (hurts compile time, may increase binary size)</text><text x="24" y="366" font-family="sans-serif" font-size="11" fill="#333" text-anchor="start">• Without profiling data to justify it</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="15.0588" markerHeight="12.5217" refX="11.2941" refY="4.6957" orient="auto">
+      <path d="M 0 0 L 0 9.3913 L 15.0588 4.6957 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="18.8235" y="15.6522" width="1242.3529" height="688.6957" fill="#f3e5f5" stroke="#333" stroke-width="2.3478" rx="6.2609" />
+  <text x="37.6471" y="46.9565" font-family="sans-serif" font-size="21.913" fill="#4a148c" text-anchor="start" font-weight="bold">#[inline] Guidelines</text>
+  <rect x="30.1176" y="75.1304" width="1219.7647" height="131.4783" fill="#e8f5e9" stroke="#333" stroke-width="2.3478" rx="6.2609" />
+  <text x="45.1765" y="103.3043" font-family="sans-serif" font-size="18.7826" fill="#1b5e20" text-anchor="start" font-weight="bold">#[inline] — USE FOR:</text>
+  <text x="45.1765" y="122.087" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Small functions in library crates (enables cross-crate inlining without LTO)</text>
+  <text x="45.1765" y="150.2609" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Wrapper / delegation functions</text>
+  <text x="45.1765" y="178.4348" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Hot-path functions identified by profiling</text>
+  <rect x="30.1176" y="216" width="1219.7647" height="131.4783" fill="#fff3e0" stroke="#333" stroke-width="2.3478" rx="6.2609" />
+  <text x="45.1765" y="244.1739" font-family="sans-serif" font-size="18.7826" fill="#e65100" text-anchor="start" font-weight="bold">#[inline(always)] — USE FOR:</text>
+  <text x="45.1765" y="262.9565" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Very small functions (1–3 lines) that MUST be fast</text>
+  <text x="45.1765" y="291.1304" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Functions in performance-critical inner loops</text>
+  <text x="45.1765" y="319.3043" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Only when benchmarks prove it helps</text>
+  <rect x="30.1176" y="356.8696" width="1219.7647" height="131.4783" fill="#e3f2fd" stroke="#333" stroke-width="2.3478" rx="6.2609" />
+  <text x="45.1765" y="385.0435" font-family="sans-serif" font-size="18.7826" fill="#1565c0" text-anchor="start" font-weight="bold">#[inline(never)] — USE FOR:</text>
+  <text x="45.1765" y="403.8261" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Error handling paths (keeps hot path small)</text>
+  <text x="45.1765" y="432" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Functions you want to see in profiler output</text>
+  <text x="45.1765" y="460.1739" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Large functions called from many places (reduce code bloat)</text>
+  <rect x="30.1176" y="497.7391" width="1219.7647" height="103.3043" fill="#fce4ec" stroke="#333" stroke-width="2.3478" rx="6.2609" />
+  <text x="45.1765" y="525.913" font-family="sans-serif" font-size="18.7826" fill="#b71c1c" text-anchor="start" font-weight="bold">DO NOT USE when:</text>
+  <text x="45.1765" y="544.6957" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• On every function 'just in case' (hurts compile time, may increase binary size)</text>
+  <text x="45.1765" y="572.8696" font-family="sans-serif" font-size="17.2174" fill="#333" text-anchor="start">• Without profiling data to justify it</text>
+</svg>

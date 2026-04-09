@@ -1,45 +1,39 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowhead-green" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Cache Hit vs Cache Miss</text>
-  <!-- Client -->
-  <rect x="30" y="140" width="100" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="80" y="170" text-anchor="middle" font-size="13" fill="#333">Client</text>
-  <!-- Cache -->
-  <rect x="220" y="140" width="100" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="270" y="170" text-anchor="middle" font-size="13" fill="#333">Cache</text>
-  <!-- Arrow Client to Cache -->
-  <line x1="130" y1="165" x2="218" y2="165" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="170" y="158" text-anchor="middle" font-size="11" fill="#4a90e2">Request</text>
-  <!-- Cache Hit section -->
-  <rect x="420" y="50" width="350" height="110" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="595" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Cache Hit</text>
-  <text x="595" y="95" text-anchor="middle" font-size="12" fill="#333">Data found in cache</text>
-  <text x="595" y="115" text-anchor="middle" font-size="12" fill="#333">Fast response (ms)</text>
-  <text x="595" y="135" text-anchor="middle" font-size="12" fill="#333">No database query needed</text>
-  <line x1="320" y1="150" x2="418" y2="105" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead-green)"/>
-  <text x="355" y="115" font-size="11" fill="#28a745">Hit</text>
-  <!-- Cache Miss section -->
-  <rect x="420" y="200" width="350" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="595" y="225" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Cache Miss</text>
-  <text x="595" y="248" text-anchor="middle" font-size="12" fill="#333">Data NOT in cache</text>
-  <text x="595" y="268" text-anchor="middle" font-size="12" fill="#333">Must query database (slow)</text>
-  <text x="595" y="288" text-anchor="middle" font-size="12" fill="#333">Store result in cache</text>
-  <text x="595" y="308" text-anchor="middle" font-size="12" fill="#333">Return data to client</text>
-  <line x1="320" y1="180" x2="418" y2="235" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead-red)"/>
-  <text x="355" y="220" font-size="11" fill="#dc3545">Miss</text>
-  <!-- TTL note -->
-  <rect x="220" y="240" width="100" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="270" y="260" text-anchor="middle" font-size="11" fill="#333">TTL/Expiry</text>
-  <text x="270" y="278" text-anchor="middle" font-size="11" fill="#333">controls life</text>
-  <line x1="270" y1="190" x2="270" y2="238" stroke="#ffc107" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="640" y="47.3684" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Cache Hit vs Cache Miss</text>
+  <rect x="48" y="265.2632" width="160" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="128" y="322.1053" text-anchor="middle" font-size="20.8" fill="#333">Client</text>
+  <rect x="352" y="265.2632" width="160" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="432" y="322.1053" text-anchor="middle" font-size="20.8" fill="#333">Cache</text>
+  <line x1="208" y1="312.6316" x2="348.8" y2="312.6316" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="272" y="299.3684" text-anchor="middle" font-size="17.6" fill="#4a90e2">Request</text>
+  <rect x="672" y="94.7368" width="560" height="208.4211" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="952" y="142.1053" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#28a745">Cache Hit</text>
+  <text x="952" y="180" text-anchor="middle" font-size="19.2" fill="#333">Data found in cache</text>
+  <text x="952" y="217.8947" text-anchor="middle" font-size="19.2" fill="#333">Fast response (ms)</text>
+  <text x="952" y="255.7895" text-anchor="middle" font-size="19.2" fill="#333">No database query needed</text>
+  <line x1="512" y1="284.2105" x2="668.8" y2="198.9474" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
+  <text x="568" y="217.8947" font-size="17.6" fill="#28a745">Hit</text>
+  <rect x="672" y="378.9474" width="560" height="246.3158" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="952" y="426.3158" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#dc3545">Cache Miss</text>
+  <text x="952" y="469.8947" text-anchor="middle" font-size="19.2" fill="#333">Data NOT in cache</text>
+  <text x="952" y="507.7895" text-anchor="middle" font-size="19.2" fill="#333">Must query database (slow)</text>
+  <text x="952" y="545.6842" text-anchor="middle" font-size="19.2" fill="#333">Store result in cache</text>
+  <text x="952" y="583.5789" text-anchor="middle" font-size="19.2" fill="#333">Return data to client</text>
+  <line x1="512" y1="341.0526" x2="668.8" y2="445.2632" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
+  <text x="568" y="416.8421" font-size="17.6" fill="#dc3545">Miss</text>
+  <rect x="352" y="454.7368" width="160" height="94.7368" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="432" y="492.6316" text-anchor="middle" font-size="17.6" fill="#333">TTL/Expiry</text>
+  <text x="432" y="526.7368" text-anchor="middle" font-size="17.6" fill="#333">controls life</text>
+  <line x1="432" y1="360" x2="432" y2="450.9474" stroke="#ffc107" stroke-width="3.2" stroke-dasharray="8 4.8" />
 </svg>

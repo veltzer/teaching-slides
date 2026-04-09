@@ -1,45 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 340" font-family="Arial, sans-serif">
-  <text x="325" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Memory Layout of Data Types</text>
-  <rect x="20" y="40" width="610" height="285" rx="5" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
-  <!-- char -->
-  <text x="40" y="72" font-size="12" font-weight="bold" fill="#333">char c = 'A';</text>
-  <text x="220" y="72" font-size="10" fill="#666">(1 byte)</text>
-  <rect x="40" y="80" width="40" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="60" y="100" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">41</text>
-  <text x="100" y="100" font-size="10" fill="#666">(0x41 = 65 = 'A')</text>
-  <!-- int -->
-  <text x="40" y="140" font-size="12" font-weight="bold" fill="#333">int x = 0x12345678;</text>
-  <text x="240" y="140" font-size="10" fill="#666">(4 bytes, little-endian)</text>
-  <rect x="40" y="148" width="40" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="60" y="168" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">78</text>
-  <rect x="80" y="148" width="40" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="100" y="168" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">56</text>
-  <rect x="120" y="148" width="40" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="140" y="168" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">34</text>
-  <rect x="160" y="148" width="40" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="180" y="168" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">12</text>
-  <text x="50" y="195" font-size="10" fill="#666">addr</text>
-  <text x="90" y="195" font-size="10" fill="#666">+1</text>
-  <text x="130" y="195" font-size="10" fill="#666">+2</text>
-  <text x="170" y="195" font-size="10" fill="#666">+3</text>
-  <!-- double -->
-  <text x="40" y="225" font-size="12" font-weight="bold" fill="#333">double d = 3.14;</text>
-  <text x="220" y="225" font-size="10" fill="#666">(8 bytes, IEEE 754)</text>
-  <rect x="40" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="60" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">1F</text>
-  <rect x="80" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="100" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">85</text>
-  <rect x="120" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="140" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">EB</text>
-  <rect x="160" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="180" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">51</text>
-  <rect x="200" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="220" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">B8</text>
-  <rect x="240" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="260" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">1E</text>
-  <rect x="280" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="300" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">09</text>
-  <rect x="320" y="233" width="40" height="30" rx="3" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="340" y="253" text-anchor="middle" font-size="10" font-family="monospace" fill="#333">40</text>
-  <text x="325" y="305" text-anchor="middle" font-size="11" fill="#666">All multi-byte values stored in little-endian order on x86</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="52.9412" text-anchor="middle" font-size="31.5077" font-weight="bold" fill="#333">Memory Layout of Data Types</text>
+  <rect x="39.3846" y="84.7059" width="1201.2308" height="603.5294" rx="9.8462" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.9692" />
+  <text x="78.7692" y="152.4706" font-size="23.6308" font-weight="bold" fill="#333">char c = 'A';</text>
+  <text x="433.2308" y="152.4706" font-size="19.6923" fill="#666">(1 byte)</text>
+  <rect x="78.7692" y="169.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.9538" />
+  <text x="118.1538" y="211.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">41</text>
+  <text x="196.9231" y="211.7647" font-size="19.6923" fill="#666">(0x41 = 65 = 'A')</text>
+  <text x="78.7692" y="296.4706" font-size="23.6308" font-weight="bold" fill="#333">int x = 0x12345678;</text>
+  <text x="472.6154" y="296.4706" font-size="19.6923" fill="#666">(4 bytes, little-endian)</text>
+  <rect x="78.7692" y="313.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="118.1538" y="355.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">78</text>
+  <rect x="157.5385" y="313.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="196.9231" y="355.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">56</text>
+  <rect x="236.3077" y="313.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="275.6923" y="355.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">34</text>
+  <rect x="315.0769" y="313.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#d4edda" stroke="#28a745" stroke-width="2.9538" />
+  <text x="354.4615" y="355.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">12</text>
+  <text x="98.4615" y="412.9412" font-size="19.6923" fill="#666">addr</text>
+  <text x="177.2308" y="412.9412" font-size="19.6923" fill="#666">+1</text>
+  <text x="256" y="412.9412" font-size="19.6923" fill="#666">+2</text>
+  <text x="334.7692" y="412.9412" font-size="19.6923" fill="#666">+3</text>
+  <text x="78.7692" y="476.4706" font-size="23.6308" font-weight="bold" fill="#333">double d = 3.14;</text>
+  <text x="433.2308" y="476.4706" font-size="19.6923" fill="#666">(8 bytes, IEEE 754)</text>
+  <rect x="78.7692" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="118.1538" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">1F</text>
+  <rect x="157.5385" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="196.9231" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">85</text>
+  <rect x="236.3077" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="275.6923" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">EB</text>
+  <rect x="315.0769" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="354.4615" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">51</text>
+  <rect x="393.8462" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="433.2308" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">B8</text>
+  <rect x="472.6154" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="512" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">1E</text>
+  <rect x="551.3846" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="590.7692" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">09</text>
+  <rect x="630.1538" y="493.4118" width="78.7692" height="63.5294" rx="5.9077" fill="#fff3cd" stroke="#ffc107" stroke-width="2.9538" />
+  <text x="669.5385" y="535.7647" text-anchor="middle" font-size="19.6923" font-family="monospace" fill="#333">40</text>
+  <text x="640" y="645.8824" text-anchor="middle" font-size="21.6615" fill="#666">All multi-byte values stored in little-endian order on x86</text>
 </svg>

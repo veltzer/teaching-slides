@@ -1,53 +1,40 @@
-<svg viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowhead-green" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.2706,0" fill="#28a745" />
     </marker>
   </defs>
-  <!-- Title -->
-  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Valet Key Pattern</text>
-  <!-- Client -->
-  <rect x="30" y="100" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="90" y="130" text-anchor="middle" font-weight="bold" fill="#333">Client</text>
-  <!-- Application -->
-  <rect x="320" y="50" width="160" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="400" y="75" text-anchor="middle" font-weight="bold" fill="#333">Application</text>
-  <text x="400" y="93" text-anchor="middle" font-size="10" fill="#666">Auth &amp; Token Gen</text>
-  <!-- Storage Service -->
-  <rect x="620" y="100" width="160" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="700" y="122" text-anchor="middle" font-weight="bold" fill="#333">Storage Service</text>
-  <text x="700" y="140" text-anchor="middle" font-size="10" fill="#666">Validate &amp; Serve</text>
-  <!-- Step 1: Client -> App -->
-  <line x1="150" y1="115" x2="318" y2="75" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="225" y="82" text-anchor="middle" font-size="11" fill="#4a90e2">1. Request access</text>
-  <!-- Step 2: App validates (self-loop label) -->
-  <rect x="350" y="130" width="120" height="25" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
-  <text x="410" y="147" text-anchor="middle" font-size="10" fill="#666">2. Validate request</text>
-  <!-- Step 3: App -> Storage (get token) -->
-  <line x1="480" y1="75" x2="618" y2="115" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="555" y="82" text-anchor="middle" font-size="11" fill="#4a90e2">3. Generate token</text>
-  <!-- Step 3b: Storage -> App (return token) -->
-  <line x1="620" y1="128" x2="482" y2="88" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowhead-green)"/>
-  <text x="560" y="118" text-anchor="middle" font-size="10" fill="#28a745">Signed token/URL</text>
-  <!-- Step 4: App -> Client (return token) -->
-  <line x1="320" y1="88" x2="152" y2="128" stroke="#28a745" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowhead-green)"/>
-  <text x="225" y="120" text-anchor="middle" font-size="11" fill="#28a745">4. Return token</text>
-  <!-- Step 5: Client -> Storage (direct access) -->
-  <line x1="90" y1="150" x2="90" y2="260" stroke="#dc3545" stroke-width="2"/>
-  <line x1="90" y1="260" x2="700" y2="260" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="400" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">5. Direct access with token</text>
-  <!-- Step 6: Storage validates -->
-  <rect x="640" y="280" width="130" height="25" rx="3" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
-  <text x="705" y="297" text-anchor="middle" font-size="10" fill="#666">6. Validate token</text>
-  <!-- Step 7: Storage -> Client (grant access) -->
-  <line x1="700" y1="305" x2="700" y2="330" stroke="#28a745" stroke-width="2"/>
-  <line x1="700" y1="330" x2="90" y2="330" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead-green)"/>
-  <text x="400" y="325" text-anchor="middle" font-size="12" fill="#28a745">7. Grant access to resource</text>
-  <!-- Description -->
-  <rect x="30" y="360" width="790" height="45" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
-  <text x="425" y="380" text-anchor="middle" font-size="12" fill="#555">The Valet Key pattern offloads resource access from the application to the storage directly.</text>
-  <text x="425" y="396" text-anchor="middle" font-size="12" fill="#555">The app generates a limited-scope token, and the client accesses storage directly, bypassing the app for data transfer.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Valet Key Pattern</text>
+  <rect x="45.1765" y="171.4286" width="180.7059" height="85.7143" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
+  <text x="135.5294" y="222.8571" text-anchor="middle" font-weight="bold" fill="#333">Client</text>
+  <rect x="481.8824" y="85.7143" width="240.9412" height="94.2857" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="602.3529" y="128.5714" text-anchor="middle" font-weight="bold" fill="#333">Application</text>
+  <text x="602.3529" y="159.4286" text-anchor="middle" font-size="15.0588" fill="#666">Auth &amp; Token Gen</text>
+  <rect x="933.6471" y="171.4286" width="240.9412" height="94.2857" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
+  <text x="1054.1176" y="209.1429" text-anchor="middle" font-weight="bold" fill="#333">Storage Service</text>
+  <text x="1054.1176" y="240" text-anchor="middle" font-size="15.0588" fill="#666">Validate &amp; Serve</text>
+  <line x1="225.8824" y1="197.1429" x2="478.8706" y2="128.5714" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <text x="338.8235" y="140.5714" text-anchor="middle" font-size="16.5647" fill="#4a90e2">1. Request access</text>
+  <rect x="527.0588" y="222.8571" width="180.7059" height="42.8571" rx="4.5176" fill="#f9f9f9" stroke="#ddd" stroke-width="1.5059" />
+  <text x="617.4118" y="252" text-anchor="middle" font-size="15.0588" fill="#666">2. Validate request</text>
+  <line x1="722.8235" y1="128.5714" x2="930.6353" y2="197.1429" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <text x="835.7647" y="140.5714" text-anchor="middle" font-size="16.5647" fill="#4a90e2">3. Generate token</text>
+  <line x1="933.6471" y1="219.4286" x2="725.8353" y2="150.8571" stroke="#28a745" stroke-width="2.2588" stroke-dasharray="9.0353 4.5176" marker-end="url(#arrowhead-green)" />
+  <text x="843.2941" y="202.2857" text-anchor="middle" font-size="15.0588" fill="#28a745">Signed token/URL</text>
+  <line x1="481.8824" y1="150.8571" x2="228.8941" y2="219.4286" stroke="#28a745" stroke-width="3.0118" stroke-dasharray="9.0353 4.5176" marker-end="url(#arrowhead-green)" />
+  <text x="338.8235" y="205.7143" text-anchor="middle" font-size="16.5647" fill="#28a745">4. Return token</text>
+  <line x1="135.5294" y1="257.1429" x2="135.5294" y2="445.7143" stroke="#dc3545" stroke-width="3.0118" />
+  <line x1="135.5294" y1="445.7143" x2="1054.1176" y2="445.7143" stroke="#dc3545" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <text x="602.3529" y="432" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#dc3545">5. Direct access with token</text>
+  <rect x="963.7647" y="480" width="195.7647" height="42.8571" rx="4.5176" fill="#f9f9f9" stroke="#ddd" stroke-width="1.5059" />
+  <text x="1061.6471" y="509.1429" text-anchor="middle" font-size="15.0588" fill="#666">6. Validate token</text>
+  <line x1="1054.1176" y1="522.8571" x2="1054.1176" y2="565.7143" stroke="#28a745" stroke-width="3.0118" />
+  <line x1="1054.1176" y1="565.7143" x2="135.5294" y2="565.7143" stroke="#28a745" stroke-width="3.0118" marker-end="url(#arrowhead-green)" />
+  <text x="602.3529" y="557.1429" text-anchor="middle" font-size="18.0706" fill="#28a745">7. Grant access to resource</text>
+  <rect x="45.1765" y="617.1429" width="1189.6471" height="77.1429" rx="7.5294" fill="#f9f9f9" stroke="#ddd" stroke-width="1.5059" />
+  <text x="640" y="651.4286" text-anchor="middle" font-size="18.0706" fill="#555">The Valet Key pattern offloads resource access from the application to the storage directly.</text>
+  <text x="640" y="678.8571" text-anchor="middle" font-size="18.0706" fill="#555">The app generates a limited-scope token, and the client accesses storage directly, bypassing the app for data transfer.</text>
 </svg>

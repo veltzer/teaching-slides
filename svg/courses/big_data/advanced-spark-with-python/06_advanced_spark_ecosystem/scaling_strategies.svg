@@ -1,68 +1,45 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Scaling Strategies</text>
-
-  <!-- Vertical Scaling -->
-  <rect x="30" y="55" width="230" height="170" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="145" y="80" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1a237e">Vertical Scaling</text>
-  <text x="145" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(Scale Up)</text>
-
-  <rect x="50" y="115" width="190" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="145" y="135" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">More memory per executor</text>
-
-  <rect x="50" y="150" width="190" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="145" y="170" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">More cores per node</text>
-
-  <rect x="50" y="185" width="190" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="145" y="205" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">Faster storage (NVMe)</text>
-
-  <!-- Horizontal Scaling -->
-  <rect x="285" y="55" width="230" height="170" rx="10" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1b5e20">Horizontal Scaling</text>
-  <text x="400" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(Scale Out)</text>
-
-  <rect x="305" y="115" width="190" height="30" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="135" text-anchor="middle" font-family="Arial" font-size="11" fill="#1b5e20">More executor instances</text>
-
-  <rect x="305" y="150" width="190" height="30" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="170" text-anchor="middle" font-family="Arial" font-size="11" fill="#1b5e20">Add worker nodes</text>
-
-  <rect x="305" y="185" width="190" height="30" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
-  <text x="400" y="205" text-anchor="middle" font-family="Arial" font-size="11" fill="#1b5e20">Partition across cluster</text>
-
-  <!-- Auto Scaling -->
-  <rect x="540" y="55" width="230" height="170" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="655" y="80" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#bf360c">Auto Scaling</text>
-  <text x="655" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">(Dynamic)</text>
-
-  <rect x="560" y="115" width="190" height="30" rx="4" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="655" y="135" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">Dynamic allocation</text>
-
-  <rect x="560" y="150" width="190" height="30" rx="4" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="655" y="170" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">K8s autoscaler (HPA)</text>
-
-  <rect x="560" y="185" width="190" height="30" rx="4" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
-  <text x="655" y="205" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">Spot/preemptible nodes</text>
-
-  <!-- Cost comparison -->
-  <rect x="50" y="260" width="700" height="55" rx="8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="2"/>
-  <text x="400" y="282" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Cost vs Performance Trade-offs</text>
-  <text x="400" y="304" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Vertical: Higher cost/node, simpler | Horizontal: Lower cost/node, complex | Auto: Optimal cost, requires tuning</text>
-
-  <!-- Best practices -->
-  <rect x="50" y="335" width="210" height="40" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="155" y="360" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">Start small, measure</text>
-
-  <rect x="280" y="335" width="240" height="40" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="400" y="360" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">Prefer horizontal for big data</text>
-
-  <rect x="540" y="335" width="210" height="40" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="645" y="360" text-anchor="middle" font-family="Arial" font-size="11" fill="#1a237e">Use auto-scaling in cloud</text>
-
-  <text x="400" y="395" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Combine strategies based on workload patterns and budget constraints</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Spark Scaling Strategies</text>
+  <rect x="48" y="99" width="368" height="306" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="232" y="144" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1a237e">Vertical Scaling</text>
+  <text x="232" y="180" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">(Scale Up)</text>
+  <rect x="80" y="207" width="304" height="54" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
+  <text x="232" y="243" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">More memory per executor</text>
+  <rect x="80" y="270" width="304" height="54" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
+  <text x="232" y="306" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">More cores per node</text>
+  <rect x="80" y="333" width="304" height="54" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="1.6" />
+  <text x="232" y="369" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">Faster storage (NVMe)</text>
+  <rect x="456" y="99" width="368" height="306" rx="16" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="640" y="144" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1b5e20">Horizontal Scaling</text>
+  <text x="640" y="180" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">(Scale Out)</text>
+  <rect x="488" y="207" width="304" height="54" rx="6.4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="640" y="243" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1b5e20">More executor instances</text>
+  <rect x="488" y="270" width="304" height="54" rx="6.4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="640" y="306" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1b5e20">Add worker nodes</text>
+  <rect x="488" y="333" width="304" height="54" rx="6.4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="640" y="369" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1b5e20">Partition across cluster</text>
+  <rect x="864" y="99" width="368" height="306" rx="16" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="1048" y="144" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#bf360c">Auto Scaling</text>
+  <text x="1048" y="180" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">(Dynamic)</text>
+  <rect x="896" y="207" width="304" height="54" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
+  <text x="1048" y="243" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#bf360c">Dynamic allocation</text>
+  <rect x="896" y="270" width="304" height="54" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
+  <text x="1048" y="306" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#bf360c">K8s autoscaler (HPA)</text>
+  <rect x="896" y="333" width="304" height="54" rx="6.4" fill="#ffe0b2" stroke="#e65100" stroke-width="1.6" />
+  <text x="1048" y="369" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#bf360c">Spot/preemptible nodes</text>
+  <rect x="80" y="468" width="1120" height="99" rx="12.8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="3.2" />
+  <text x="640" y="507.6" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Cost vs Performance Trade-offs</text>
+  <text x="640" y="547.2" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Vertical: Higher cost/node, simpler | Horizontal: Lower cost/node, complex | Auto: Optimal cost, requires tuning</text>
+  <rect x="80" y="603" width="336" height="72" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="248" y="648" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">Start small, measure</text>
+  <rect x="448" y="603" width="384" height="72" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="640" y="648" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">Prefer horizontal for big data</text>
+  <rect x="864" y="603" width="336" height="72" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="1032" y="648" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#1a237e">Use auto-scaling in cloud</text>
+  <text x="640" y="711" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Combine strategies based on workload patterns and budget constraints</text>
 </svg>

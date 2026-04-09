@@ -1,46 +1,38 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" fill="#1a1a2e"/>
-  <!-- Rust gear symbol -->
-  <circle cx="400" cy="200" r="100" fill="none" stroke="#e94560" stroke-width="4" opacity="0.4"/>
-  <!-- Gear teeth -->
-  <rect x="388" y="92" width="24" height="18" rx="3" fill="#e94560" opacity="0.4"/>
-  <rect x="388" y="290" width="24" height="18" rx="3" fill="#e94560" opacity="0.4"/>
-  <rect x="292" y="188" width="18" height="24" rx="3" fill="#e94560" opacity="0.4"/>
-  <rect x="490" y="188" width="18" height="24" rx="3" fill="#e94560" opacity="0.4"/>
-  <!-- Inner R -->
-  <text x="365" y="220" font-family="serif" font-size="70" fill="#e94560" font-weight="bold" opacity="0.5">R</text>
-  <!-- Ownership concept: boxes with arrows -->
-  <rect x="60" y="60" width="140" height="100" rx="6" fill="#16213e" stroke="#53d8fb" stroke-width="1.5"/>
-  <text x="80" y="88" font-family="monospace" font-size="13" fill="#e94560">let</text>
-  <text x="108" y="88" font-family="monospace" font-size="13" fill="white">s =</text>
-  <text x="135" y="88" font-family="monospace" font-size="13" fill="#00b894">String</text>
-  <text x="80" y="110" font-family="monospace" font-size="13" fill="#e94560">let</text>
-  <text x="108" y="110" font-family="monospace" font-size="13" fill="white">t = s;</text>
-  <text x="80" y="140" font-family="monospace" font-size="10" fill="#53d8fb">// s is moved to t</text>
-  <!-- Borrowing -->
-  <rect x="600" y="60" width="150" height="100" rx="6" fill="#16213e" stroke="#00b894" stroke-width="1.5"/>
-  <text x="615" y="88" font-family="monospace" font-size="13" fill="#e94560">fn</text>
-  <text x="635" y="88" font-family="monospace" font-size="13" fill="#ffd93d">greet</text>
-  <text x="675" y="88" font-family="monospace" font-size="13" fill="white">(</text>
-  <text x="625" y="108" font-family="monospace" font-size="13" fill="white">s: </text>
-  <text x="645" y="108" font-family="monospace" font-size="13" fill="#53d8fb">&amp;str</text>
-  <text x="625" y="140" font-family="monospace" font-size="10" fill="#00b894">// borrowing</text>
-  <!-- Pattern matching -->
-  <rect x="60" y="270" width="170" height="100" rx="6" fill="#16213e" stroke="#ffd93d" stroke-width="1.5"/>
-  <text x="75" y="298" font-family="monospace" font-size="13" fill="#e94560">match</text>
-  <text x="120" y="298" font-family="monospace" font-size="13" fill="white">value {</text>
-  <text x="90" y="318" font-family="monospace" font-size="13" fill="#ffd93d">Some</text>
-  <text x="130" y="318" font-family="monospace" font-size="13" fill="white">(x) =&gt; x,</text>
-  <text x="90" y="338" font-family="monospace" font-size="13" fill="#ffd93d">None</text>
-  <text x="130" y="338" font-family="monospace" font-size="13" fill="white">=&gt; 0,</text>
-  <text x="75" y="358" font-family="monospace" font-size="13" fill="white">}</text>
-  <!-- Result/Option -->
-  <rect x="600" y="270" width="160" height="80" rx="6" fill="#16213e" stroke="#e94560" stroke-width="1.5"/>
-  <text x="615" y="298" font-family="monospace" font-size="13" fill="#53d8fb">Result</text>
-  <text x="668" y="298" font-family="monospace" font-size="13" fill="white">&lt;T, E&gt;</text>
-  <text x="615" y="323" font-family="monospace" font-size="13" fill="#53d8fb">Option</text>
-  <text x="673" y="323" font-family="monospace" font-size="13" fill="white">&lt;T&gt;</text>
-  <text x="615" y="343" font-family="monospace" font-size="10" fill="#e94560">// no null values</text>
-  <!-- Memory safety label -->
-  <text x="250" y="380" font-family="monospace" font-size="14" fill="#0f3460">memory safety - zero cost abstractions - fearless concurrency</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a2e" />
+  <circle cx="640" cy="360" r="160" fill="none" stroke="#e94560" stroke-width="6.4" opacity="0.4" />
+  <rect x="620.8" y="165.6" width="38.4" height="32.4" rx="4.8" fill="#e94560" opacity="0.4" />
+  <rect x="620.8" y="522" width="38.4" height="32.4" rx="4.8" fill="#e94560" opacity="0.4" />
+  <rect x="467.2" y="338.4" width="28.8" height="43.2" rx="4.8" fill="#e94560" opacity="0.4" />
+  <rect x="784" y="338.4" width="28.8" height="43.2" rx="4.8" fill="#e94560" opacity="0.4" />
+  <text x="584" y="396" font-family="serif" font-size="112" fill="#e94560" font-weight="bold" opacity="0.5">R</text>
+  <rect x="96" y="108" width="224" height="180" rx="9.6" fill="#16213e" stroke="#53d8fb" stroke-width="2.4" />
+  <text x="128" y="158.4" font-family="monospace" font-size="20.8" fill="#e94560">let</text>
+  <text x="172.8" y="158.4" font-family="monospace" font-size="20.8" fill="white">s =</text>
+  <text x="216" y="158.4" font-family="monospace" font-size="20.8" fill="#00b894">String</text>
+  <text x="128" y="198" font-family="monospace" font-size="20.8" fill="#e94560">let</text>
+  <text x="172.8" y="198" font-family="monospace" font-size="20.8" fill="white">t = s;</text>
+  <text x="128" y="252" font-family="monospace" font-size="16" fill="#53d8fb">// s is moved to t</text>
+  <rect x="960" y="108" width="240" height="180" rx="9.6" fill="#16213e" stroke="#00b894" stroke-width="2.4" />
+  <text x="984" y="158.4" font-family="monospace" font-size="20.8" fill="#e94560">fn</text>
+  <text x="1016" y="158.4" font-family="monospace" font-size="20.8" fill="#ffd93d">greet</text>
+  <text x="1080" y="158.4" font-family="monospace" font-size="20.8" fill="white">(</text>
+  <text x="1000" y="194.4" font-family="monospace" font-size="20.8" fill="white">s: </text>
+  <text x="1032" y="194.4" font-family="monospace" font-size="20.8" fill="#53d8fb">&amp;str</text>
+  <text x="1000" y="252" font-family="monospace" font-size="16" fill="#00b894">// borrowing</text>
+  <rect x="96" y="486" width="272" height="180" rx="9.6" fill="#16213e" stroke="#ffd93d" stroke-width="2.4" />
+  <text x="120" y="536.4" font-family="monospace" font-size="20.8" fill="#e94560">match</text>
+  <text x="192" y="536.4" font-family="monospace" font-size="20.8" fill="white">value {</text>
+  <text x="144" y="572.4" font-family="monospace" font-size="20.8" fill="#ffd93d">Some</text>
+  <text x="208" y="572.4" font-family="monospace" font-size="20.8" fill="white">(x) =&gt; x,</text>
+  <text x="144" y="608.4" font-family="monospace" font-size="20.8" fill="#ffd93d">None</text>
+  <text x="208" y="608.4" font-family="monospace" font-size="20.8" fill="white">=&gt; 0,</text>
+  <text x="120" y="644.4" font-family="monospace" font-size="20.8" fill="white">}</text>
+  <rect x="960" y="486" width="256" height="144" rx="9.6" fill="#16213e" stroke="#e94560" stroke-width="2.4" />
+  <text x="984" y="536.4" font-family="monospace" font-size="20.8" fill="#53d8fb">Result</text>
+  <text x="1068.8" y="536.4" font-family="monospace" font-size="20.8" fill="white">&lt;T, E&gt;</text>
+  <text x="984" y="581.4" font-family="monospace" font-size="20.8" fill="#53d8fb">Option</text>
+  <text x="1076.8" y="581.4" font-family="monospace" font-size="20.8" fill="white">&lt;T&gt;</text>
+  <text x="984" y="617.4" font-family="monospace" font-size="16" fill="#e94560">// no null values</text>
+  <text x="400" y="684" font-family="monospace" font-size="22.4" fill="#0f3460">memory safety - zero cost abstractions - fearless concurrency</text>
 </svg>

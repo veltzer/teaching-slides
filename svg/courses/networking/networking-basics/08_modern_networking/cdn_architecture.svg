@@ -1,59 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="18.2857" markerHeight="10.5" refX="18.2857" refY="5.25" orient="auto">
+      <polygon points="0,15 6.4,0" fill="#4a90e2" />
     </marker>
   </defs>
-
-  <!-- Title -->
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">CDN Architecture</text>
-
-  <!-- Origin Server -->
-  <rect x="275" y="50" width="150" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Origin Server</text>
-  <text x="350" y="92" text-anchor="middle" font-size="11" fill="#666">(your server)</text>
-
-  <!-- Lines from origin to CDN edges -->
-  <line x1="300" y1="105" x2="130" y2="180" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="350" y1="105" x2="350" y2="180" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="400" y1="105" x2="570" y2="180" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- CDN Edge US-East -->
-  <rect x="50" y="185" width="160" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="130" y="207" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CDN Edge</text>
-  <text x="130" y="227" text-anchor="middle" font-size="11" fill="#666">US-East</text>
-
-  <!-- CDN Edge Europe -->
-  <rect x="270" y="185" width="160" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="350" y="207" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CDN Edge</text>
-  <text x="350" y="227" text-anchor="middle" font-size="11" fill="#666">Europe</text>
-
-  <!-- CDN Edge Asia -->
-  <rect x="490" y="185" width="160" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="570" y="207" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">CDN Edge</text>
-  <text x="570" y="227" text-anchor="middle" font-size="11" fill="#666">Asia</text>
-
-  <!-- Lines from CDN edges to users -->
-  <line x1="130" y1="240" x2="130" y2="310" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="350" y1="240" x2="350" y2="310" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="570" y1="240" x2="570" y2="310" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- US Users -->
-  <rect x="50" y="315" width="160" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="130" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">US Users</text>
-  <text x="130" y="360" text-anchor="middle" font-size="12" fill="#28a745" font-weight="bold">~5ms</text>
-
-  <!-- EU Users -->
-  <rect x="270" y="315" width="160" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">EU Users</text>
-  <text x="350" y="360" text-anchor="middle" font-size="12" fill="#28a745" font-weight="bold">~10ms</text>
-
-  <!-- AS Users -->
-  <rect x="490" y="315" width="160" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="570" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">AS Users</text>
-  <text x="570" y="360" text-anchor="middle" font-size="12" fill="#28a745" font-weight="bold">~15ms</text>
-
-  <!-- Comparison note -->
-  <rect x="150" y="410" width="400" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="435" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">vs ~200ms to origin from all locations</text>
+  <text x="640" y="45" text-anchor="middle" font-size="27" font-weight="bold" fill="#333">CDN Architecture</text>
+  <rect x="502.8571" y="75" width="274.2857" height="82.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="640" y="108" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Origin Server</text>
+  <text x="640" y="138" text-anchor="middle" font-size="16.5" fill="#666">(your server)</text>
+  <line x1="548.5714" y1="157.5" x2="237.7143" y2="270" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="640" y1="157.5" x2="640" y2="270" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="731.4286" y1="157.5" x2="1042.2857" y2="270" stroke="#4a90e2" stroke-width="3" marker-end="url(#arrowhead)" />
+  <rect x="91.4286" y="277.5" width="292.5714" height="82.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
+  <text x="237.7143" y="310.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">CDN Edge</text>
+  <text x="237.7143" y="340.5" text-anchor="middle" font-size="16.5" fill="#666">US-East</text>
+  <rect x="493.7143" y="277.5" width="292.5714" height="82.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
+  <text x="640" y="310.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">CDN Edge</text>
+  <text x="640" y="340.5" text-anchor="middle" font-size="16.5" fill="#666">Europe</text>
+  <rect x="896" y="277.5" width="292.5714" height="82.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
+  <text x="1042.2857" y="310.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">CDN Edge</text>
+  <text x="1042.2857" y="340.5" text-anchor="middle" font-size="16.5" fill="#666">Asia</text>
+  <line x1="237.7143" y1="360" x2="237.7143" y2="465" stroke="#28a745" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="640" y1="360" x2="640" y2="465" stroke="#28a745" stroke-width="3" marker-end="url(#arrowhead)" />
+  <line x1="1042.2857" y1="360" x2="1042.2857" y2="465" stroke="#28a745" stroke-width="3" marker-end="url(#arrowhead)" />
+  <rect x="91.4286" y="472.5" width="292.5714" height="97.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="237.7143" y="510" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">US Users</text>
+  <text x="237.7143" y="540" text-anchor="middle" font-size="18" fill="#28a745" font-weight="bold">~5ms</text>
+  <rect x="493.7143" y="472.5" width="292.5714" height="97.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="640" y="510" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">EU Users</text>
+  <text x="640" y="540" text-anchor="middle" font-size="18" fill="#28a745" font-weight="bold">~10ms</text>
+  <rect x="896" y="472.5" width="292.5714" height="97.5" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="1042.2857" y="510" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">AS Users</text>
+  <text x="1042.2857" y="540" text-anchor="middle" font-size="18" fill="#28a745" font-weight="bold">~15ms</text>
+  <rect x="274.2857" y="615" width="731.4286" height="60" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="640" y="652.5" text-anchor="middle" font-size="19.5" fill="#856404" font-weight="bold">vs ~200ms to origin from all locations</text>
 </svg>

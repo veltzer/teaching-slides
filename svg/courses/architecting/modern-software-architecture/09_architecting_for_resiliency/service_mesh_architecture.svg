@@ -1,36 +1,30 @@
-<svg viewBox="0 0 750 350" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="17.0667" markerHeight="14.4" refX="17.0667" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.9733,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <!-- Control Plane -->
-  <rect x="240" y="20" width="260" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="370" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Control Plane</text>
-  <!-- Service A Pod -->
-  <rect x="40" y="140" width="260" height="130" rx="5" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5"/>
-  <text x="170" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#28a745" font-weight="bold">Service A Pod</text>
-  <rect x="60" y="175" width="100" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="110" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">App Container</text>
-  <rect x="175" y="175" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="230" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Sidecar Proxy</text>
-  <line x1="160" y1="195" x2="173" y2="195" stroke="#999" stroke-width="2"/>
-  <!-- Service B Pod -->
-  <rect x="440" y="140" width="260" height="130" rx="5" fill="none" stroke="#28a745" stroke-width="1.5" stroke-dasharray="5"/>
-  <text x="570" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#28a745" font-weight="bold">Service B Pod</text>
-  <rect x="460" y="175" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="515" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">Sidecar Proxy</text>
-  <rect x="585" y="175" width="100" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="635" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11">App Container</text>
-  <line x1="570" y1="195" x2="583" y2="195" stroke="#999" stroke-width="2"/>
-  <!-- Proxy to Proxy communication -->
-  <line x1="285" y1="195" x2="458" y2="195" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="370" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">Encrypted, Resilient</text>
-  <!-- Config lines from control plane -->
-  <line x1="310" y1="70" x2="230" y2="173" stroke="#999" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
-  <line x1="430" y1="70" x2="515" y2="173" stroke="#999" stroke-width="1.5" stroke-dasharray="4" marker-end="url(#arrowhead)"/>
-  <text x="250" y="115" font-family="Arial, sans-serif" font-size="10" fill="#999">Config</text>
-  <text x="500" y="115" font-family="Arial, sans-serif" font-size="10" fill="#999">Config</text>
-  <!-- Explanation -->
-  <text x="370" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Sidecar proxies handle encryption, retries, circuit breaking, observability</text>
+  <rect x="409.6" y="41.1429" width="443.7333" height="102.8571" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
+  <text x="631.4667" y="102.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.1867" font-weight="bold">Control Plane</text>
+  <rect x="68.2667" y="288" width="443.7333" height="267.4286" rx="8.5333" fill="none" stroke="#28a745" stroke-width="2.56" stroke-dasharray="8.5333" />
+  <text x="290.1333" y="329.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48" fill="#28a745" font-weight="bold">Service A Pod</text>
+  <rect x="102.4" y="360" width="170.6667" height="82.2857" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
+  <text x="187.7333" y="411.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733">App Container</text>
+  <rect x="298.6667" y="360" width="187.7333" height="82.2857" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="392.5333" y="411.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733">Sidecar Proxy</text>
+  <line x1="273.0667" y1="401.1429" x2="295.2533" y2="401.1429" stroke="#999" stroke-width="3.4133" />
+  <rect x="750.9333" y="288" width="443.7333" height="267.4286" rx="8.5333" fill="none" stroke="#28a745" stroke-width="2.56" stroke-dasharray="8.5333" />
+  <text x="972.8" y="329.1429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.48" fill="#28a745" font-weight="bold">Service B Pod</text>
+  <rect x="785.0667" y="360" width="187.7333" height="82.2857" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="878.9333" y="411.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733">Sidecar Proxy</text>
+  <rect x="998.4" y="360" width="170.6667" height="82.2857" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
+  <text x="1083.7333" y="411.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733">App Container</text>
+  <line x1="972.8" y1="401.1429" x2="994.9867" y2="401.1429" stroke="#999" stroke-width="3.4133" />
+  <line x1="486.4" y1="401.1429" x2="781.6533" y2="401.1429" stroke="#4a90e2" stroke-width="3.4133" marker-end="url(#arrowhead)" />
+  <text x="631.4667" y="386.7429" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" fill="#4a90e2">Encrypted, Resilient</text>
+  <line x1="529.0667" y1="144" x2="392.5333" y2="355.8857" stroke="#999" stroke-width="2.56" stroke-dasharray="6.8267" marker-end="url(#arrowhead)" />
+  <line x1="733.8667" y1="144" x2="878.9333" y2="355.8857" stroke="#999" stroke-width="2.56" stroke-dasharray="6.8267" marker-end="url(#arrowhead)" />
+  <text x="426.6667" y="236.5714" font-family="Arial, sans-serif" font-size="17.0667" fill="#999">Config</text>
+  <text x="853.3333" y="236.5714" font-family="Arial, sans-serif" font-size="17.0667" fill="#999">Config</text>
+  <text x="631.4667" y="658.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#666">Sidecar proxies handle encryption, retries, circuit breaking, observability</text>
 </svg>

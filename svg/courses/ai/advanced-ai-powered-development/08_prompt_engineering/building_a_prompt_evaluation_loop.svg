@@ -1,14 +1,35 @@
-<svg viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e">
-  <rect x="20" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="75" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Write Prompt</text>
-  <rect x="170" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="225" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Run Test Suite</text>
-  <rect x="320" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="375" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Score Results</text>
-  <rect x="470" y="40" width="110" height="40" rx="8" fill="#16213e" stroke="#0f3460" stroke-width="2"/>
-  <text x="525" y="65" text-anchor="middle" fill="#e0e0e0" font-size="11">Refine Prompt</text>
-  <line x1="130" y1="60" x2="170" y2="60" stroke="#e94560" stroke-width="2"/>
-  <line x1="280" y1="60" x2="320" y2="60" stroke="#e94560" stroke-width="2"/>
-  <line x1="430" y1="60" x2="470" y2="60" stroke="#e94560" stroke-width="2"/>
-  <path d="M525 80 L525 100 L75 100 L75 80" fill="none" stroke="#e94560" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
+  <defs>
+    <marker id="arr" markerWidth="45.511" markerHeight="252" refX="40.96" refY="126" orient="auto">
+      <polygon points="0,360 15.929,0" fill="#e94560" />
+    </marker>
+  </defs>
+  <text x="1820.4444" y="1368" text-anchor="middle" fill="white" font-size="91.0223" font-weight="bold">Building a Prompt Evaluation Loop</text>
+  <rect x="91.0223" y="2700" width="750.9333" height="3240" rx="45.511" fill="#16213e" stroke="#0f3460" stroke-width="9.1023" />
+  <text x="464.2133" y="3888" text-anchor="middle" fill="#90CAF9" font-size="63.7156" font-weight="bold">Write Prompt</text>
+  <text x="464.2133" y="4680" text-anchor="middle" fill="#e0e0e0" font-size="54.6133">draft template</text>
+  <text x="464.2133" y="5472" text-anchor="middle" fill="#666" font-size="50.0623">version in git</text>
+  <line x1="841.9556" y1="4320" x2="978.489" y2="4320" stroke="#e94560" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="978.489" y="2700" width="750.9333" height="3240" rx="45.511" fill="#16213e" stroke="#533483" stroke-width="9.1023" />
+  <text x="1351.68" y="3888" text-anchor="middle" fill="#CE93D8" font-size="63.7156" font-weight="bold">Run Test Suite</text>
+  <text x="1351.68" y="4680" text-anchor="middle" fill="#e0e0e0" font-size="54.6133">20-50 test cases</text>
+  <text x="1351.68" y="5472" text-anchor="middle" fill="#666" font-size="50.0623">representative inputs</text>
+  <line x1="1729.4223" y1="4320" x2="1865.9556" y2="4320" stroke="#e94560" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="1865.9556" y="2700" width="750.9333" height="3240" rx="45.511" fill="#16213e" stroke="#2E7D32" stroke-width="9.1023" />
+  <text x="2239.1467" y="3888" text-anchor="middle" fill="#80CBC4" font-size="63.7156" font-weight="bold">Score Results</text>
+  <text x="2239.1467" y="4680" text-anchor="middle" fill="#e0e0e0" font-size="54.6133">LLM-as-judge</text>
+  <text x="2239.1467" y="5472" text-anchor="middle" fill="#666" font-size="50.0623">or exact match</text>
+  <line x1="2616.889" y1="4320" x2="2753.4223" y2="4320" stroke="#e94560" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="2753.4223" y="2700" width="796.4444" height="3240" rx="45.511" fill="#16213e" stroke="#e94560" stroke-width="9.1023" />
+  <text x="3149.369" y="3888" text-anchor="middle" fill="#EF9A9A" font-size="63.7156" font-weight="bold">Refine Prompt</text>
+  <text x="3149.369" y="4680" text-anchor="middle" fill="#e0e0e0" font-size="54.6133">fix failures</text>
+  <text x="3149.369" y="5472" text-anchor="middle" fill="#666" font-size="50.0623">iterate</text>
+  <path d="M 3149.369 5940 Q 3149.369 7200 1820.4444 7200 Q 455.111 7200 455.111 5940" fill="none" stroke="#e94560" stroke-width="9.1023" stroke-dasharray="27.3067 13.6533" marker-end="url(#arr)" />
+  <text x="1820.4444" y="7920" text-anchor="middle" fill="#EF9A9A" font-size="54.6133">iterate until quality threshold met</text>
+  <rect x="91.0223" y="8820" width="3458.8444" height="5220" rx="45.511" fill="#0d1b2a" stroke="#F9A825" stroke-width="6.8267" />
+  <text x="1820.4444" y="9900" text-anchor="middle" fill="#F9A825" font-size="68.2667" font-weight="bold">Prompt Evaluation Best Practices</text>
+  <text x="182.0444" y="10872" fill="#E0E0E0" font-size="59.1644">▶ Build a test set of 20-50 representative inputs with expected outputs</text>
+  <text x="182.0444" y="11700" fill="#E0E0E0" font-size="59.1644">▶ Track prompt versions in git alongside their evaluation scores</text>
+  <text x="182.0444" y="12528" fill="#E0E0E0" font-size="59.1644">▶ Use a stronger model as judge than the one being evaluated</text>
+  <text x="182.0444" y="13356" fill="#E0E0E0" font-size="59.1644">▶ Set a quality gate: prompts below threshold do not ship</text>
 </svg>

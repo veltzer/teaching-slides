@@ -1,21 +1,51 @@
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="120" width="120" height="60" fill="#4a90d9" rx="8"/>
-  <text x="70" y="155" text-anchor="middle" fill="white" font-size="14">User Query</text>
-  <rect x="180" y="120" width="120" height="60" fill="#e67e22" rx="8"/>
-  <text x="240" y="155" text-anchor="middle" fill="white" font-size="14">Embedding</text>
-  <rect x="350" y="120" width="120" height="60" fill="#27ae60" rx="8"/>
-  <text x="410" y="155" text-anchor="middle" fill="white" font-size="14">Vector DB</text>
-  <rect x="350" y="30" width="120" height="60" fill="#8e44ad" rx="8"/>
-  <text x="410" y="55" text-anchor="middle" fill="white" font-size="12">Codebase</text>
-  <text x="410" y="75" text-anchor="middle" fill="white" font-size="12">Index</text>
-  <rect x="520" y="120" width="120" height="60" fill="#e67e22" rx="8"/>
-  <text x="580" y="155" text-anchor="middle" fill="white" font-size="14">Re-Ranker</text>
-  <rect x="690" y="120" width="100" height="60" fill="#c0392b" rx="8"/>
-  <text x="740" y="155" text-anchor="middle" fill="white" font-size="14">LLM</text>
-  <line x1="130" y1="150" x2="180" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="300" y1="150" x2="350" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="410" y1="90" x2="410" y2="120" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="470" y1="150" x2="520" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="640" y1="150" x2="690" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="black"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arrow" markerWidth="25.6" markerHeight="40.32" refX="23.04" refY="20.16" orient="auto">
+      <polygon points="0,57.6 8.96,0" fill="#333" />
+    </marker>
+  </defs>
+  <rect width="2048" height="2304" fill="#f8f9fa" />
+  <text x="1024" y="201.6" text-anchor="middle" font-size="51.2" font-weight="bold" fill="#1a237e">RAG Architecture for Code</text>
+  <rect x="51.2" y="345.6" width="1945.6" height="172.8" rx="12.8" fill="#E8EAF6" stroke="#3949AB" stroke-width="2.56" />
+  <text x="1024" y="460.8" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#3949AB">Ingestion Pipeline (offline)</text>
+  <rect x="76.8" y="576" width="307.2" height="345.6" rx="20.48" fill="#8e44ad" stroke="#6A1B9A" stroke-width="3.84" />
+  <text x="230.4" y="731.52" text-anchor="middle" fill="white" font-size="30.72">Codebase</text>
+  <text x="230.4" y="846.72" text-anchor="middle" fill="#E9D8FD" font-size="28.16">source files</text>
+  <line x1="384" y1="748.8" x2="473.6" y2="748.8" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="473.6" y="576" width="307.2" height="345.6" rx="20.48" fill="#e67e22" stroke="#E65100" stroke-width="3.84" />
+  <text x="627.2" y="731.52" text-anchor="middle" fill="white" font-size="30.72">Chunking</text>
+  <text x="627.2" y="846.72" text-anchor="middle" fill="#FAD7A0" font-size="28.16">AST-based</text>
+  <line x1="780.8" y1="748.8" x2="870.4" y2="748.8" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="870.4" y="576" width="332.8" height="345.6" rx="20.48" fill="#4a90d9" stroke="#1565C0" stroke-width="3.84" />
+  <text x="1036.8" y="731.52" text-anchor="middle" fill="white" font-size="30.72">Embedding</text>
+  <text x="1036.8" y="846.72" text-anchor="middle" fill="#D6EAF8" font-size="28.16">voyage-code-3</text>
+  <line x1="1203.2" y1="748.8" x2="1292.8" y2="748.8" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="1292.8" y="576" width="307.2" height="345.6" rx="20.48" fill="#27ae60" stroke="#2E7D32" stroke-width="3.84" />
+  <text x="1446.4" y="731.52" text-anchor="middle" fill="white" font-size="30.72">Vector DB</text>
+  <text x="1446.4" y="846.72" text-anchor="middle" fill="#D5F5E3" font-size="28.16">ChromaDB</text>
+  <rect x="51.2" y="1152" width="1945.6" height="172.8" rx="12.8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2.56" />
+  <text x="1024" y="1267.2" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#2E7D32">Query Pipeline (real-time)</text>
+  <rect x="76.8" y="1382.4" width="307.2" height="345.6" rx="20.48" fill="#4a90d9" stroke="#1565C0" stroke-width="3.84" />
+  <text x="230.4" y="1537.92" text-anchor="middle" fill="white" font-size="30.72">User Query</text>
+  <text x="230.4" y="1653.12" text-anchor="middle" fill="#D6EAF8" font-size="28.16">"fix the auth bug"</text>
+  <line x1="384" y1="1555.2" x2="473.6" y2="1555.2" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="473.6" y="1382.4" width="307.2" height="345.6" rx="20.48" fill="#e67e22" stroke="#E65100" stroke-width="3.84" />
+  <text x="627.2" y="1537.92" text-anchor="middle" fill="white" font-size="30.72">Embed</text>
+  <text x="627.2" y="1653.12" text-anchor="middle" fill="#FAD7A0" font-size="28.16">query vector</text>
+  <line x1="780.8" y1="1555.2" x2="870.4" y2="1555.2" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="870.4" y="1382.4" width="332.8" height="345.6" rx="20.48" fill="#27ae60" stroke="#2E7D32" stroke-width="3.84" />
+  <text x="1036.8" y="1537.92" text-anchor="middle" fill="white" font-size="30.72">Retrieve</text>
+  <text x="1036.8" y="1653.12" text-anchor="middle" fill="#D5F5E3" font-size="28.16">top-K chunks</text>
+  <line x1="1203.2" y1="1555.2" x2="1292.8" y2="1555.2" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="1292.8" y="1382.4" width="307.2" height="345.6" rx="20.48" fill="#e67e22" stroke="#E65100" stroke-width="3.84" />
+  <text x="1446.4" y="1537.92" text-anchor="middle" fill="white" font-size="30.72">Re-rank</text>
+  <text x="1446.4" y="1653.12" text-anchor="middle" fill="#FAD7A0" font-size="28.16">cross-encoder</text>
+  <line x1="1600" y1="1555.2" x2="1689.6" y2="1555.2" stroke="#333" stroke-width="5.12" marker-end="url(#arrow)" />
+  <rect x="1689.6" y="1382.4" width="281.6" height="345.6" rx="20.48" fill="#c0392b" stroke="#C62828" stroke-width="3.84" />
+  <text x="1830.4" y="1537.92" text-anchor="middle" fill="white" font-size="30.72">LLM</text>
+  <text x="1830.4" y="1653.12" text-anchor="middle" fill="#FADBD8" font-size="28.16">generates answer</text>
+  <path d="M 1446.4 921.6 Q 1446.4 1094.4 1036.8 1382.4" fill="none" stroke="#2E7D32" stroke-width="3.84" stroke-dasharray="12.8 7.68" marker-end="url(#arrow)" />
+  <rect x="51.2" y="1929.6" width="1945.6" height="316.8" rx="20.48" fill="#FFFDE7" stroke="#F9A825" stroke-width="3.84" />
+  <text x="1024" y="2062.08" text-anchor="middle" font-size="33.28" fill="#555">Index once, query many times — incremental updates via git diff</text>
+  <text x="1024" y="2177.28" text-anchor="middle" font-size="30.72" fill="#555">Code-specific embeddings outperform general models by 15-30% on code retrieval</text>
 </svg>

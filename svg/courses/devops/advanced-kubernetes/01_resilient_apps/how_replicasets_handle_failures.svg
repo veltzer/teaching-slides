@@ -1,26 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" font-family="Arial, sans-serif">
-  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">How ReplicaSets Handle Failures</text>
-  <text x="30" y="60" font-size="14" font-weight="bold" fill="#4a90e2">T0: 3 replicas running</text>
-  <rect x="50" y="70" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="100" y="100" text-anchor="middle" font-size="13" fill="#333">Pod1</text>
-  <rect x="180" y="70" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="230" y="100" text-anchor="middle" font-size="13" fill="#333">Pod2</text>
-  <rect x="310" y="70" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="360" y="100" text-anchor="middle" font-size="13" fill="#333">Pod3</text>
-  <text x="30" y="160" font-size="14" font-weight="bold" fill="#dc3545">T1: Pod2 crashes</text>
-  <rect x="50" y="170" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="100" y="200" text-anchor="middle" font-size="13" fill="#333">Pod1</text>
-  <rect x="180" y="170" width="100" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="230" y="200" text-anchor="middle" font-size="18" fill="#dc3545">XX</text>
-  <rect x="310" y="170" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="360" y="200" text-anchor="middle" font-size="13" fill="#333">Pod3</text>
-  <text x="30" y="260" font-size="14" font-weight="bold" fill="#28a745">T2: ReplicaSet creates Pod4</text>
-  <rect x="50" y="270" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="100" y="300" text-anchor="middle" font-size="13" fill="#333">Pod1</text>
-  <rect x="180" y="270" width="100" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="230" y="300" text-anchor="middle" font-size="13" fill="#4a90e2">Pod4</text>
-  <rect x="310" y="270" width="100" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="360" y="300" text-anchor="middle" font-size="13" fill="#333">Pod3</text>
-  <text x="260" y="370" text-anchor="middle" font-size="12" fill="#666">ReplicaSet controller detects desired != actual</text>
-  <text x="260" y="390" text-anchor="middle" font-size="12" fill="#666">and automatically creates a replacement pod</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="42.8571" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">How ReplicaSets Handle Failures</text>
+  <text x="73.8462" y="102.8571" font-size="24" font-weight="bold" fill="#4a90e2">T0: 3 replicas running</text>
+  <rect x="123.0769" y="120" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="246.1538" y="171.4286" text-anchor="middle" font-size="22.2857" fill="#333">Pod1</text>
+  <rect x="443.0769" y="120" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="566.1538" y="171.4286" text-anchor="middle" font-size="22.2857" fill="#333">Pod2</text>
+  <rect x="763.0769" y="120" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="886.1538" y="171.4286" text-anchor="middle" font-size="22.2857" fill="#333">Pod3</text>
+  <text x="73.8462" y="274.2857" font-size="24" font-weight="bold" fill="#dc3545">T1: Pod2 crashes</text>
+  <rect x="123.0769" y="291.4286" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="246.1538" y="342.8571" text-anchor="middle" font-size="22.2857" fill="#333">Pod1</text>
+  <rect x="443.0769" y="291.4286" width="246.1538" height="85.7143" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="3.4286" />
+  <text x="566.1538" y="342.8571" text-anchor="middle" font-size="30.8571" fill="#dc3545">XX</text>
+  <rect x="763.0769" y="291.4286" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="886.1538" y="342.8571" text-anchor="middle" font-size="22.2857" fill="#333">Pod3</text>
+  <text x="73.8462" y="445.7143" font-size="24" font-weight="bold" fill="#28a745">T2: ReplicaSet creates Pod4</text>
+  <rect x="123.0769" y="462.8571" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="246.1538" y="514.2857" text-anchor="middle" font-size="22.2857" fill="#333">Pod1</text>
+  <rect x="443.0769" y="462.8571" width="246.1538" height="85.7143" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="566.1538" y="514.2857" text-anchor="middle" font-size="22.2857" fill="#4a90e2">Pod4</text>
+  <rect x="763.0769" y="462.8571" width="246.1538" height="85.7143" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="886.1538" y="514.2857" text-anchor="middle" font-size="22.2857" fill="#333">Pod3</text>
+  <text x="640" y="634.2857" text-anchor="middle" font-size="20.5714" fill="#666">ReplicaSet controller detects desired != actual</text>
+  <text x="640" y="668.5714" text-anchor="middle" font-size="20.5714" fill="#666">and automatically creates a replacement pod</text>
 </svg>

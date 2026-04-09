@@ -1,44 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="17.7778" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 6.2222,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#dc3545"/>
+    <marker id="arrow-red" markerWidth="17.7778" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 6.2222,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Virtual Patching Architecture</text>
-  <!-- Internet -->
-  <rect x="30" y="80" width="120" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="90" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Internet</text>
-  <text x="90" y="125" text-anchor="middle" font-size="10" fill="#666">All traffic</text>
-  <!-- Attack traffic -->
-  <line x1="150" y1="95" x2="248" y2="95" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow-red)"/>
-  <text x="200" y="88" text-anchor="middle" font-size="10" fill="#dc3545">Exploit attempt</text>
-  <!-- Normal traffic -->
-  <line x1="150" y1="125" x2="248" y2="125" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="200" y="140" text-anchor="middle" font-size="10" fill="#4a90e2">Normal traffic</text>
-  <!-- WAF/IPS -->
-  <rect x="255" y="60" width="200" height="100" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="355" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">WAF / IPS</text>
-  <text x="355" y="102" text-anchor="middle" font-size="10" fill="#333">Virtual Patch Rules</text>
-  <rect x="275" y="110" width="160" height="25" rx="3" fill="#fff" stroke="#28a745" stroke-width="1"/>
-  <text x="355" y="127" text-anchor="middle" font-size="10" fill="#28a745">Blocks exploit patterns</text>
-  <!-- Blocked -->
-  <line x1="355" y1="60" x2="355" y2="30" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="420" y="52" font-size="10" fill="#dc3545" font-weight="bold">BLOCKED</text>
-  <!-- Clean traffic passes -->
-  <line x1="455" y1="110" x2="528" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="490" y="103" text-anchor="middle" font-size="10" fill="#28a745">Clean traffic</text>
-  <!-- Application Server -->
-  <rect x="535" y="70" width="160" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="615" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Application</text>
-  <text x="615" y="115" text-anchor="middle" font-size="10" fill="#dc3545">Unpatched Vuln</text>
-  <text x="615" y="132" text-anchor="middle" font-size="10" fill="#666">Protected by WAF</text>
-  <!-- Benefits -->
-  <rect x="80" y="210" width="560" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="360" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Virtual Patching Benefits</text>
-  <text x="360" y="255" text-anchor="middle" font-size="10" fill="#333">Blocks exploits without modifying application code</text>
-  <text x="360" y="272" text-anchor="middle" font-size="10" fill="#333">Buys time until vendor releases official patch</text>
-  <text x="360" y="289" text-anchor="middle" font-size="10" fill="#333">Can be deployed in minutes vs. weeks for code patches</text>
+  <text x="640" y="56.8421" text-anchor="middle" font-size="28.4444" font-weight="bold" fill="#333">Virtual Patching Architecture</text>
+  <rect x="53.3333" y="151.5789" width="213.3333" height="113.6842" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.5556" />
+  <text x="160" y="204.6316" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Internet</text>
+  <text x="160" y="236.8421" text-anchor="middle" font-size="17.7778" fill="#666">All traffic</text>
+  <line x1="266.6667" y1="180" x2="440.8889" y2="180" stroke="#dc3545" stroke-width="3.5556" marker-end="url(#arrow-red)" />
+  <text x="355.5556" y="166.7368" text-anchor="middle" font-size="17.7778" fill="#dc3545">Exploit attempt</text>
+  <line x1="266.6667" y1="236.8421" x2="440.8889" y2="236.8421" stroke="#4a90e2" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <text x="355.5556" y="265.2632" text-anchor="middle" font-size="17.7778" fill="#4a90e2">Normal traffic</text>
+  <rect x="453.3333" y="113.6842" width="355.5556" height="189.4737" rx="8.8889" fill="#d4edda" stroke="#28a745" stroke-width="3.5556" />
+  <text x="631.1111" y="161.0526" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#28a745">WAF / IPS</text>
+  <text x="631.1111" y="193.2632" text-anchor="middle" font-size="17.7778" fill="#333">Virtual Patch Rules</text>
+  <rect x="488.8889" y="208.4211" width="284.4444" height="47.3684" rx="5.3333" fill="#fff" stroke="#28a745" stroke-width="1.7778" />
+  <text x="631.1111" y="240.6316" text-anchor="middle" font-size="17.7778" fill="#28a745">Blocks exploit patterns</text>
+  <line x1="631.1111" y1="113.6842" x2="631.1111" y2="56.8421" stroke="#dc3545" stroke-width="2.6667" stroke-dasharray="7.1111 5.3333" />
+  <text x="746.6667" y="98.5263" font-size="17.7778" fill="#dc3545" font-weight="bold">BLOCKED</text>
+  <line x1="808.8889" y1="208.4211" x2="938.6667" y2="208.4211" stroke="#4a90e2" stroke-width="3.5556" marker-end="url(#arrow)" />
+  <text x="871.1111" y="195.1579" text-anchor="middle" font-size="17.7778" fill="#28a745">Clean traffic</text>
+  <rect x="951.1111" y="132.6316" width="284.4444" height="151.5789" rx="8.8889" fill="#fff3cd" stroke="#ffc107" stroke-width="3.5556" />
+  <text x="1093.3333" y="185.6842" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Application</text>
+  <text x="1093.3333" y="217.8947" text-anchor="middle" font-size="17.7778" fill="#dc3545">Unpatched Vuln</text>
+  <text x="1093.3333" y="250.1053" text-anchor="middle" font-size="17.7778" fill="#666">Protected by WAF</text>
+  <rect x="142.2222" y="397.8947" width="995.5556" height="170.5263" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6667" />
+  <text x="640" y="445.2632" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#4a90e2">Virtual Patching Benefits</text>
+  <text x="640" y="483.1579" text-anchor="middle" font-size="17.7778" fill="#333">Blocks exploits without modifying application code</text>
+  <text x="640" y="515.3684" text-anchor="middle" font-size="17.7778" fill="#333">Buys time until vendor releases official patch</text>
+  <text x="640" y="547.5789" text-anchor="middle" font-size="17.7778" fill="#333">Can be deployed in minutes vs. weeks for code patches</text>
 </svg>

@@ -1,26 +1,26 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="200" y="5" width="200" height="35" fill="#673ab7" stroke="#333" stroke-width="2" rx="8"/>
-  <text x="300" y="28" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Async Best Practices</text>
-  <line x1="250" y1="40" x2="120" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="58" stroke="#333" stroke-width="2"/>
-  <line x1="250" y1="40" x2="120" y2="125" stroke="#333" stroke-width="2"/>
-  <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
-  <rect x="30" y="53" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold">Never block in async</text>
-  <text x="120" y="84" text-anchor="middle" font-size="10">Use spawn_blocking() for</text>
-  <text x="120" y="95" text-anchor="middle" font-size="10">CPU-heavy or sync I/O work</text>
-  <rect x="390" y="53" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="70" text-anchor="middle" font-size="10" font-weight="bold">Use select! wisely</text>
-  <text x="480" y="84" text-anchor="middle" font-size="10">Race futures, cancel losers</text>
-  <text x="480" y="95" text-anchor="middle" font-size="10">Great for timeouts</text>
-  <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">Bound concurrency</text>
-  <text x="120" y="151" text-anchor="middle" font-size="10">Use Semaphore or buffered</text>
-  <text x="120" y="162" text-anchor="middle" font-size="10">streams to limit parallelism</text>
-  <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Graceful shutdown</text>
-  <text x="480" y="151" text-anchor="middle" font-size="10">Handle Ctrl+C signals</text>
-  <text x="480" y="162" text-anchor="middle" font-size="10">Drain tasks before exit</text>
-  <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="191" text-anchor="middle" font-size="10">Keep async tasks small; use channels for coordination between tasks</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="426.6667" y="18" width="426.6667" height="126" fill="#673ab7" stroke="#333" stroke-width="4.2667" rx="17.0667" />
+  <text x="640" y="100.8" text-anchor="middle" font-size="25.6" fill="white" font-weight="bold">Async Best Practices</text>
+  <line x1="533.3333" y1="144" x2="256" y2="208.8" stroke="#333" stroke-width="4.2667" />
+  <line x1="746.6667" y1="144" x2="1024" y2="208.8" stroke="#333" stroke-width="4.2667" />
+  <line x1="533.3333" y1="144" x2="256" y2="450" stroke="#333" stroke-width="4.2667" />
+  <line x1="746.6667" y1="144" x2="1024" y2="450" stroke="#333" stroke-width="4.2667" />
+  <rect x="64" y="190.8" width="384" height="162" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="256" y="252" text-anchor="middle" font-size="21.3333" font-weight="bold">Never block in async</text>
+  <text x="256" y="302.4" text-anchor="middle" font-size="21.3333">Use spawn_blocking() for</text>
+  <text x="256" y="342" text-anchor="middle" font-size="21.3333">CPU-heavy or sync I/O work</text>
+  <rect x="832" y="190.8" width="384" height="162" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="1024" y="252" text-anchor="middle" font-size="21.3333" font-weight="bold">Use select! wisely</text>
+  <text x="1024" y="302.4" text-anchor="middle" font-size="21.3333">Race futures, cancel losers</text>
+  <text x="1024" y="342" text-anchor="middle" font-size="21.3333">Great for timeouts</text>
+  <rect x="64" y="432" width="384" height="162" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="256" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Bound concurrency</text>
+  <text x="256" y="543.6" text-anchor="middle" font-size="21.3333">Use Semaphore or buffered</text>
+  <text x="256" y="583.2" text-anchor="middle" font-size="21.3333">streams to limit parallelism</text>
+  <rect x="832" y="432" width="384" height="162" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="1024" y="493.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Graceful shutdown</text>
+  <text x="1024" y="543.6" text-anchor="middle" font-size="21.3333">Handle Ctrl+C signals</text>
+  <text x="1024" y="583.2" text-anchor="middle" font-size="21.3333">Drain tasks before exit</text>
+  <rect x="320" y="640.8" width="640" height="64.8" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="640" y="687.6" text-anchor="middle" font-size="21.3333">Keep async tasks small; use channels for coordination between tasks</text>
 </svg>

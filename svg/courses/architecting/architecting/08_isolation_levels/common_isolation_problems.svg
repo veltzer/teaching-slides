@@ -1,51 +1,46 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Common Isolation Problems</text>
-  <!-- Dirty Read -->
-  <rect x="40" y="55" width="220" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="150" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Dirty Read</text>
-  <text x="150" y="102" text-anchor="middle" font-size="11" fill="#333">Transaction reads data</text>
-  <text x="150" y="118" text-anchor="middle" font-size="11" fill="#333">written by another</text>
-  <text x="150" y="134" text-anchor="middle" font-size="11" fill="#333">uncommitted transaction.</text>
-  <text x="150" y="158" text-anchor="middle" font-size="10" fill="#dc3545">If that txn rolls back,</text>
-  <text x="150" y="172" text-anchor="middle" font-size="10" fill="#dc3545">the data was never valid!</text>
-  <!-- Non-Repeatable Read -->
-  <rect x="290" y="55" width="220" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Non-Repeatable Read</text>
-  <text x="400" y="102" text-anchor="middle" font-size="11" fill="#333">Same query in the same</text>
-  <text x="400" y="118" text-anchor="middle" font-size="11" fill="#333">transaction returns</text>
-  <text x="400" y="134" text-anchor="middle" font-size="11" fill="#333">different values.</text>
-  <text x="400" y="158" text-anchor="middle" font-size="10" fill="#dc3545">Another txn modified</text>
-  <text x="400" y="172" text-anchor="middle" font-size="10" fill="#dc3545">the row between reads.</text>
-  <!-- Phantom Read -->
-  <rect x="540" y="55" width="220" height="130" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="650" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Phantom Read</text>
-  <text x="650" y="102" text-anchor="middle" font-size="11" fill="#333">Same query returns</text>
-  <text x="650" y="118" text-anchor="middle" font-size="11" fill="#333">different set of rows.</text>
-  <text x="650" y="134" text-anchor="middle" font-size="11" fill="#333">New rows appeared!</text>
-  <text x="650" y="158" text-anchor="middle" font-size="10" fill="#dc3545">Another txn inserted</text>
-  <text x="650" y="172" text-anchor="middle" font-size="10" fill="#dc3545">rows matching the query.</text>
-  <!-- Effects -->
-  <text x="400" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Effects</text>
-  <line x1="150" y1="185" x2="150" y2="240" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <line x1="400" y1="185" x2="400" y2="240" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <line x1="650" y1="185" x2="650" y2="240" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <rect x="60" y="245" width="180" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="150" y="270" text-anchor="middle" font-size="11" fill="#333">Data Inconsistency</text>
-  <rect x="310" y="245" width="180" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="400" y="270" text-anchor="middle" font-size="11" fill="#333">Invalid Results</text>
-  <rect x="560" y="245" width="180" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="650" y="270" text-anchor="middle" font-size="11" fill="#333">Lost Updates</text>
-  <!-- Solution hint -->
-  <rect x="40" y="320" width="720" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="400" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Solution: Use Appropriate Isolation Levels</text>
-  <text x="400" y="368" text-anchor="middle" font-size="11" fill="#333">Read Uncommitted -> Read Committed -> Repeatable Read -> Serializable</text>
-  <text x="400" y="388" text-anchor="middle" font-size="11" fill="#555">Higher isolation = fewer problems, but lower concurrency and performance.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Common Isolation Problems</text>
+  <rect x="64" y="94.2857" width="352" height="222.8571" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="240" y="137.1429" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#dc3545">Dirty Read</text>
+  <text x="240" y="174.8571" text-anchor="middle" font-size="17.6" fill="#333">Transaction reads data</text>
+  <text x="240" y="202.2857" text-anchor="middle" font-size="17.6" fill="#333">written by another</text>
+  <text x="240" y="229.7143" text-anchor="middle" font-size="17.6" fill="#333">uncommitted transaction.</text>
+  <text x="240" y="270.8571" text-anchor="middle" font-size="16" fill="#dc3545">If that txn rolls back,</text>
+  <text x="240" y="294.8571" text-anchor="middle" font-size="16" fill="#dc3545">the data was never valid!</text>
+  <rect x="464" y="94.2857" width="352" height="222.8571" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="640" y="137.1429" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#dc3545">Non-Repeatable Read</text>
+  <text x="640" y="174.8571" text-anchor="middle" font-size="17.6" fill="#333">Same query in the same</text>
+  <text x="640" y="202.2857" text-anchor="middle" font-size="17.6" fill="#333">transaction returns</text>
+  <text x="640" y="229.7143" text-anchor="middle" font-size="17.6" fill="#333">different values.</text>
+  <text x="640" y="270.8571" text-anchor="middle" font-size="16" fill="#dc3545">Another txn modified</text>
+  <text x="640" y="294.8571" text-anchor="middle" font-size="16" fill="#dc3545">the row between reads.</text>
+  <rect x="864" y="94.2857" width="352" height="222.8571" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1040" y="137.1429" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#dc3545">Phantom Read</text>
+  <text x="1040" y="174.8571" text-anchor="middle" font-size="17.6" fill="#333">Same query returns</text>
+  <text x="1040" y="202.2857" text-anchor="middle" font-size="17.6" fill="#333">different set of rows.</text>
+  <text x="1040" y="229.7143" text-anchor="middle" font-size="17.6" fill="#333">New rows appeared!</text>
+  <text x="1040" y="270.8571" text-anchor="middle" font-size="16" fill="#dc3545">Another txn inserted</text>
+  <text x="1040" y="294.8571" text-anchor="middle" font-size="16" fill="#dc3545">rows matching the query.</text>
+  <text x="640" y="377.1429" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Effects</text>
+  <line x1="240" y1="317.1429" x2="240" y2="411.4286" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead-red)" />
+  <line x1="640" y1="317.1429" x2="640" y2="411.4286" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead-red)" />
+  <line x1="1040" y1="317.1429" x2="1040" y2="411.4286" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead-red)" />
+  <rect x="96" y="420" width="288" height="68.5714" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="240" y="462.8571" text-anchor="middle" font-size="17.6" fill="#333">Data Inconsistency</text>
+  <rect x="496" y="420" width="288" height="68.5714" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="640" y="462.8571" text-anchor="middle" font-size="17.6" fill="#333">Invalid Results</text>
+  <rect x="896" y="420" width="288" height="68.5714" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="1040" y="462.8571" text-anchor="middle" font-size="17.6" fill="#333">Lost Updates</text>
+  <rect x="64" y="548.5714" width="1152" height="137.1429" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="640" y="591.4286" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#28a745">Solution: Use Appropriate Isolation Levels</text>
+  <text x="640" y="630.8571" text-anchor="middle" font-size="17.6" fill="#333">Read Uncommitted -&gt; Read Committed -&gt; Repeatable Read -&gt; Serializable</text>
+  <text x="640" y="665.1429" text-anchor="middle" font-size="17.6" fill="#555">Higher isolation = fewer problems, but lower concurrency and performance.</text>
 </svg>

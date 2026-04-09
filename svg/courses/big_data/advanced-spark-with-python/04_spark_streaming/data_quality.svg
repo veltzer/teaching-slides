@@ -1,69 +1,55 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow-dq" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+    <marker id="arrow-dq" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
+    </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Data Quality in Streaming</text>
-
-  <!-- Input stream -->
-  <rect x="30" y="55" width="140" height="50" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Raw Stream</text>
-
-  <line x1="170" y1="80" x2="210" y2="80" stroke="#333" stroke-width="2" marker-end="url(#arrow-dq)"/>
-
-  <!-- Quality checks pipeline -->
-  <rect x="220" y="45" width="540" height="70" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="490" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ef6c00">Data Quality Pipeline</text>
-
-  <rect x="240" y="80" width="100" height="25" rx="4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
-  <text x="290" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Schema Check</text>
-
-  <rect x="355" y="80" width="100" height="25" rx="4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
-  <text x="405" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Null Check</text>
-
-  <rect x="470" y="80" width="100" height="25" rx="4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
-  <text x="520" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Range Check</text>
-
-  <rect x="585" y="80" width="100" height="25" rx="4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
-  <text x="635" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Dedup Check</text>
-
-  <!-- Quality dimensions -->
-  <rect x="30" y="145" width="175" height="120" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="117" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0277bd">Schema Validation</text>
-  <text x="117" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Enforce schema on read</text>
-  <text x="117" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Handle schema evolution</text>
-  <text x="117" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Reject malformed records</text>
-  <text x="117" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">.schema(expected_schema)</text>
-
-  <rect x="220" y="145" width="175" height="120" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="307" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2e7d32">Completeness</text>
-  <text x="307" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Null value detection</text>
-  <text x="307" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Required field checks</text>
-  <text x="307" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Default value filling</text>
-  <text x="307" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">.filter(col.isNotNull())</text>
-
-  <rect x="410" y="145" width="175" height="120" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="497" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ef6c00">Accuracy</text>
-  <text x="497" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Range validation</text>
-  <text x="497" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Format validation</text>
-  <text x="497" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Business rule checks</text>
-  <text x="497" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">.filter(col.between(...))</text>
-
-  <rect x="600" y="145" width="175" height="120" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="687" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7b1fa2">Uniqueness</text>
-  <text x="687" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Deduplication</text>
-  <text x="687" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Watermark-based dedup</text>
-  <text x="687" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">dropDuplicatesWithin</text>
-  <text x="687" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">.dropDuplicates(["id"])</text>
-
-  <!-- Dead letter queue -->
-  <rect x="50" y="295" width="700" height="90" rx="8" fill="#ffebee" stroke="#d32f2f" stroke-width="1"/>
-  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d32f2f">Bad Record Handling Strategy</text>
-  <rect x="80" y="335" width="180" height="35" rx="5" fill="#fff" stroke="#d32f2f" stroke-width="1"/>
-  <text x="170" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Dead Letter Queue (DLQ)</text>
-  <line x1="260" y1="352" x2="300" y2="352" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dq)"/>
-  <rect x="310" y="335" width="150" height="35" rx="5" fill="#fff" stroke="#d32f2f" stroke-width="1"/>
-  <text x="385" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Log + Alert</text>
-  <line x1="460" y1="352" x2="500" y2="352" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-dq)"/>
-  <rect x="510" y="335" width="210" height="35" rx="5" fill="#fff" stroke="#d32f2f" stroke-width="1"/>
-  <text x="615" y="357" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Reprocess after fix</text>
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Data Quality in Streaming</text>
+  <rect x="48" y="99" width="224" height="90" rx="12.8" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.2" />
+  <text x="160" y="153" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#0277bd">Raw Stream</text>
+  <line x1="272" y1="144" x2="336" y2="144" stroke="#333" stroke-width="3.2" marker-end="url(#arrow-dq)" />
+  <rect x="352" y="81" width="864" height="126" rx="12.8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.2" />
+  <text x="784" y="122.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#ef6c00">Data Quality Pipeline</text>
+  <rect x="384" y="144" width="160" height="45" rx="6.4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
+  <text x="464" y="174.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Schema Check</text>
+  <rect x="568" y="144" width="160" height="45" rx="6.4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
+  <text x="648" y="174.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Null Check</text>
+  <rect x="752" y="144" width="160" height="45" rx="6.4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
+  <text x="832" y="174.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Range Check</text>
+  <rect x="936" y="144" width="160" height="45" rx="6.4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1.6" />
+  <text x="1016" y="174.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#333">Dedup Check</text>
+  <rect x="48" y="261" width="280" height="216" rx="12.8" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.2" />
+  <text x="187.2" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#0277bd">Schema Validation</text>
+  <text x="187.2" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Enforce schema on read</text>
+  <text x="187.2" y="372.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Handle schema evolution</text>
+  <text x="187.2" y="403.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Reject malformed records</text>
+  <text x="187.2" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">.schema(expected_schema)</text>
+  <rect x="352" y="261" width="280" height="216" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="491.2" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#2e7d32">Completeness</text>
+  <text x="491.2" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Null value detection</text>
+  <text x="491.2" y="372.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Required field checks</text>
+  <text x="491.2" y="403.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Default value filling</text>
+  <text x="491.2" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">.filter(col.isNotNull())</text>
+  <rect x="656" y="261" width="280" height="216" rx="12.8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.2" />
+  <text x="795.2" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#ef6c00">Accuracy</text>
+  <text x="795.2" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Range validation</text>
+  <text x="795.2" y="372.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Format validation</text>
+  <text x="795.2" y="403.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Business rule checks</text>
+  <text x="795.2" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">.filter(col.between(...))</text>
+  <rect x="960" y="261" width="280" height="216" rx="12.8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.2" />
+  <text x="1099.2" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#7b1fa2">Uniqueness</text>
+  <text x="1099.2" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Deduplication</text>
+  <text x="1099.2" y="372.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Watermark-based dedup</text>
+  <text x="1099.2" y="403.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">dropDuplicatesWithin</text>
+  <text x="1099.2" y="450" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">.dropDuplicates(["id"])</text>
+  <rect x="80" y="531" width="1120" height="162" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="640" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#d32f2f">Bad Record Handling Strategy</text>
+  <rect x="128" y="603" width="288" height="63" rx="8" fill="#fff" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="272" y="642.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Dead Letter Queue (DLQ)</text>
+  <line x1="416" y1="633.6" x2="480" y2="633.6" stroke="#333" stroke-width="2.4" marker-end="url(#arrow-dq)" />
+  <rect x="496" y="603" width="240" height="63" rx="8" fill="#fff" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="616" y="642.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Log + Alert</text>
+  <line x1="736" y1="633.6" x2="800" y2="633.6" stroke="#333" stroke-width="2.4" marker-end="url(#arrow-dq)" />
+  <rect x="816" y="603" width="336" height="63" rx="8" fill="#fff" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="984" y="642.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Reprocess after fix</text>
 </svg>

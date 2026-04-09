@@ -8,6 +8,7 @@ Checks:
   --elements    Flag SVGs with too few elements (likely stubs)
   --fonts       Flag SVGs with font-size below minimum
   --parse       Flag SVGs with XML parse errors
+  --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -22,6 +23,7 @@ from pathlib import Path
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
 MIN_FONT_SIZE = 10
+REQUIRED_VIEWBOX = "0 0 1280 720"
 
 
 def _check_size(path: Path) -> list[str]:
@@ -63,6 +65,19 @@ def _check_fonts(tree: ET.ElementTree) -> list[str]:
     return []
 
 
+def _check_dimensions(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs that do not have exactly viewBox="0 0 1280 720"."""
+    root = tree.getroot()
+    viewbox = root.get("viewBox")
+    if viewbox is None:
+        return [f"missing viewBox (required: {REQUIRED_VIEWBOX!r})"]
+    # Normalise whitespace for comparison
+    normalised = " ".join(viewbox.split())
+    if normalised != REQUIRED_VIEWBOX:
+        return [f"viewBox is {viewbox!r}, must be {REQUIRED_VIEWBOX!r}"]
+    return []
+
+
 def main() -> None:
     if not Path(".git").exists():
         print("Error: script must be run from the root of the repository", file=sys.stderr)
@@ -81,18 +96,21 @@ def main() -> None:
                         help='Flag SVGs with font-size below minimum')
     parser.add_argument('--parse', action='store_true',
                         help='Flag SVGs with XML parse errors')
+    parser.add_argument('--dimensions', action='store_true',
+                        help='Flag SVGs that do not have exactly viewBox="0 0 1280 720"')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
     # Default: all checks enabled
-    flags = [args.size, args.elements, args.fonts, args.parse]
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
     do_fonts = args.fonts or not explicit
     do_parse = args.parse or not explicit
+    do_dimensions = args.dimensions or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -102,9 +120,9 @@ def main() -> None:
         if do_size:
             errors.extend(_check_size(path))
 
-        # Parse once, reuse for element and font checks
+        # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts:
+        if do_parse or do_elements or do_fonts or do_dimensions:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -114,6 +132,8 @@ def main() -> None:
                 errors.extend(_check_elements(tree))
             if do_fonts:
                 errors.extend(_check_fonts(tree))
+            if do_dimensions:
+                errors.extend(_check_dimensions(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)

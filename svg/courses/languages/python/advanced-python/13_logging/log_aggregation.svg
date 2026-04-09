@@ -1,58 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="280" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arr" markerWidth="19.3939" markerHeight="18" refX="17.4545" refY="9" orient="auto">
+      <polygon points="0,25.7143 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <text x="10" y="22" font-size="14" font-weight="bold" fill="#222">Common Log Collection Architectures</text>
-  <!-- Row helper macro via repeated blocks -->
-  <!-- 1. Direct File Collection -->
-  <text x="10" y="48" font-size="13" font-weight="bold" fill="#1565c0">1. Direct File Collection</text>
-  <rect x="10"  y="55" width="100" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60"  y="73" font-size="12" fill="#222" text-anchor="middle">Application</text>
-  <line x1="110" y1="69" x2="126" y2="69" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="128" y="55" width="90" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="173" y="73" font-size="12" fill="#222" text-anchor="middle">Log Files</text>
-  <line x1="218" y1="69" x2="234" y2="69" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="236" y="55" width="110" height="28" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="291" y="73" font-size="12" fill="#222" text-anchor="middle">Log Collector</text>
-  <line x1="346" y1="69" x2="362" y2="69" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="364" y="55" width="100" height="28" fill="#fce4ec" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="414" y="73" font-size="12" fill="#222" text-anchor="middle">Log Storage</text>
-  <!-- 2. Syslog Collection -->
-  <text x="10" y="108" font-size="13" font-weight="bold" fill="#1565c0">2. Syslog Collection</text>
-  <rect x="10"  y="115" width="100" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60"  y="133" font-size="12" fill="#222" text-anchor="middle">Application</text>
-  <line x1="110" y1="129" x2="126" y2="129" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="128" y="115" width="80" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="168" y="133" font-size="12" fill="#222" text-anchor="middle">Syslog</text>
-  <line x1="208" y1="129" x2="224" y2="129" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="226" y="115" width="110" height="28" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="281" y="133" font-size="12" fill="#222" text-anchor="middle">Syslog Server</text>
-  <line x1="336" y1="129" x2="352" y2="129" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="354" y="115" width="100" height="28" fill="#fce4ec" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="404" y="133" font-size="12" fill="#222" text-anchor="middle">Log Storage</text>
-  <!-- 3. Agent-Based Collection -->
-  <text x="10" y="168" font-size="13" font-weight="bold" fill="#1565c0">3. Agent-Based Collection</text>
-  <rect x="10"  y="175" width="100" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60"  y="193" font-size="12" fill="#222" text-anchor="middle">Application</text>
-  <line x1="110" y1="189" x2="126" y2="189" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="128" y="175" width="90" height="28" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="173" y="193" font-size="12" fill="#222" text-anchor="middle">Log Files</text>
-  <line x1="218" y1="189" x2="234" y2="189" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="236" y="175" width="120" height="28" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="296" y="193" font-size="12" fill="#222" text-anchor="middle">Collection Agent</text>
-  <line x1="356" y1="189" x2="372" y2="189" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="374" y="175" width="100" height="28" fill="#fce4ec" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="424" y="193" font-size="12" fill="#222" text-anchor="middle">Log Storage</text>
-  <!-- 4. Direct API Integration -->
-  <text x="10" y="228" font-size="13" font-weight="bold" fill="#1565c0">4. Direct API Integration</text>
-  <rect x="10"  y="235" width="100" height="28" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60"  y="253" font-size="12" fill="#222" text-anchor="middle">Application</text>
-  <line x1="110" y1="249" x2="126" y2="249" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="128" y="235" width="80" height="28" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="168" y="253" font-size="12" fill="#222" text-anchor="middle">Log API</text>
-  <line x1="208" y1="249" x2="224" y2="249" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="226" y="235" width="100" height="28" fill="#fce4ec" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="276" y="253" font-size="12" fill="#222" text-anchor="middle">Log Storage</text>
+  <text x="19.3939" y="56.5714" font-size="27.1515" font-weight="bold" fill="#222">Common Log Collection Architectures</text>
+  <text x="19.3939" y="123.4286" font-size="25.2121" font-weight="bold" fill="#1565c0">1. Direct File Collection</text>
+  <rect x="19.3939" y="141.4286" width="193.9394" height="72" fill="#e3f2fd" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="116.3636" y="187.7143" font-size="23.2727" fill="#222" text-anchor="middle">Application</text>
+  <line x1="213.3333" y1="177.4286" x2="244.3636" y2="177.4286" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="248.2424" y="141.4286" width="174.5455" height="72" fill="#e8f5e9" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="335.5152" y="187.7143" font-size="23.2727" fill="#222" text-anchor="middle">Log Files</text>
+  <line x1="422.7879" y1="177.4286" x2="453.8182" y2="177.4286" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="457.697" y="141.4286" width="213.3333" height="72" fill="#fff3e0" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="564.3636" y="187.7143" font-size="23.2727" fill="#222" text-anchor="middle">Log Collector</text>
+  <line x1="671.0303" y1="177.4286" x2="702.0606" y2="177.4286" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="705.9394" y="141.4286" width="193.9394" height="72" fill="#fce4ec" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="802.9091" y="187.7143" font-size="23.2727" fill="#222" text-anchor="middle">Log Storage</text>
+  <text x="19.3939" y="277.7143" font-size="25.2121" font-weight="bold" fill="#1565c0">2. Syslog Collection</text>
+  <rect x="19.3939" y="295.7143" width="193.9394" height="72" fill="#e3f2fd" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="116.3636" y="342" font-size="23.2727" fill="#222" text-anchor="middle">Application</text>
+  <line x1="213.3333" y1="331.7143" x2="244.3636" y2="331.7143" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="248.2424" y="295.7143" width="155.1515" height="72" fill="#e8f5e9" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="325.8182" y="342" font-size="23.2727" fill="#222" text-anchor="middle">Syslog</text>
+  <line x1="403.3939" y1="331.7143" x2="434.4242" y2="331.7143" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="438.303" y="295.7143" width="213.3333" height="72" fill="#fff3e0" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="544.9697" y="342" font-size="23.2727" fill="#222" text-anchor="middle">Syslog Server</text>
+  <line x1="651.6364" y1="331.7143" x2="682.6667" y2="331.7143" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="686.5455" y="295.7143" width="193.9394" height="72" fill="#fce4ec" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="783.5152" y="342" font-size="23.2727" fill="#222" text-anchor="middle">Log Storage</text>
+  <text x="19.3939" y="432" font-size="25.2121" font-weight="bold" fill="#1565c0">3. Agent-Based Collection</text>
+  <rect x="19.3939" y="450" width="193.9394" height="72" fill="#e3f2fd" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="116.3636" y="496.2857" font-size="23.2727" fill="#222" text-anchor="middle">Application</text>
+  <line x1="213.3333" y1="486" x2="244.3636" y2="486" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="248.2424" y="450" width="174.5455" height="72" fill="#e8f5e9" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="335.5152" y="496.2857" font-size="23.2727" fill="#222" text-anchor="middle">Log Files</text>
+  <line x1="422.7879" y1="486" x2="453.8182" y2="486" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="457.697" y="450" width="232.7273" height="72" fill="#fff3e0" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="574.0606" y="496.2857" font-size="23.2727" fill="#222" text-anchor="middle">Collection Agent</text>
+  <line x1="690.4242" y1="486" x2="721.4545" y2="486" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="725.3333" y="450" width="193.9394" height="72" fill="#fce4ec" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="822.303" y="496.2857" font-size="23.2727" fill="#222" text-anchor="middle">Log Storage</text>
+  <text x="19.3939" y="586.2857" font-size="25.2121" font-weight="bold" fill="#1565c0">4. Direct API Integration</text>
+  <rect x="19.3939" y="604.2857" width="193.9394" height="72" fill="#e3f2fd" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="116.3636" y="650.5714" font-size="23.2727" fill="#222" text-anchor="middle">Application</text>
+  <line x1="213.3333" y1="640.2857" x2="244.3636" y2="640.2857" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="248.2424" y="604.2857" width="155.1515" height="72" fill="#fff3e0" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="325.8182" y="650.5714" font-size="23.2727" fill="#222" text-anchor="middle">Log API</text>
+  <line x1="403.3939" y1="640.2857" x2="434.4242" y2="640.2857" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="438.303" y="604.2857" width="193.9394" height="72" fill="#fce4ec" stroke="#333" stroke-width="1.9394" rx="5.8182" />
+  <text x="535.2727" y="650.5714" font-size="23.2727" fill="#222" text-anchor="middle">Log Storage</text>
 </svg>

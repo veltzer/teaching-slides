@@ -1,39 +1,32 @@
-<svg viewBox="0 0 850 160" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="31.5" refX="15.0588" refY="15.75" orient="auto">
+      <polygon points="0,45 5.2706,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="15.0588" markerHeight="31.5" refX="15.0588" refY="15.75" orient="auto">
+      <polygon points="0,45 5.2706,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="425" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Dead Letter Queue Flow</text>
-  <!-- Producer -->
-  <rect x="15" y="55" width="110" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="70" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Producer</text>
-  <line x1="125" y1="78" x2="160" y2="78" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <!-- Main Queue -->
-  <rect x="165" y="55" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="230" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Main Queue</text>
-  <line x1="295" y1="78" x2="340" y2="78" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <!-- Consumer -->
-  <rect x="345" y="55" width="110" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="400" y="83" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Consumer</text>
-  <!-- Processing Failed - loop back -->
-  <path d="M 400 100 Q 400 135 290 135 Q 230 135 230 105" fill="none" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
-  <text x="340" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Processing Failed (retry)</text>
-  <!-- Max Retries arrow to DLQ -->
-  <line x1="230" y1="55" x2="230" y2="20" stroke="#dc3545" stroke-width="2"/>
-  <line x1="230" y1="20" x2="580" y2="20" stroke="#dc3545" stroke-width="2"/>
-  <line x1="580" y1="20" x2="580" y2="50" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead-red)"/>
-  <text x="405" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Max Retries Exceeded</text>
-  <!-- Dead Letter Queue -->
-  <rect x="510" y="55" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="580" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Dead Letter</text>
-  <text x="580" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Queue</text>
-  <line x1="650" y1="78" x2="690" y2="78" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead-red)"/>
-  <!-- Manual Review -->
-  <rect x="695" y="55" width="140" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="765" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Manual Review /</text>
-  <text x="765" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Alerting</text>
+  <text x="640" y="99" text-anchor="middle" font-family="Arial, sans-serif" font-size="21.0824" font-weight="bold" fill="#333">Dead Letter Queue Flow</text>
+  <rect x="22.5882" y="247.5" width="165.6471" height="202.5" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
+  <text x="105.4118" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" font-weight="bold">Producer</text>
+  <line x1="188.2353" y1="351" x2="240.9412" y2="351" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <rect x="248.4706" y="247.5" width="195.7647" height="202.5" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="346.3529" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" font-weight="bold">Main Queue</text>
+  <line x1="444.2353" y1="351" x2="512" y2="351" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <rect x="519.5294" y="247.5" width="165.6471" height="202.5" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="3.0118" />
+  <text x="602.3529" y="373.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.0706" font-weight="bold">Consumer</text>
+  <path d="M 602.3529 450 Q 602.3529 607.5 436.7059 607.5 Q 346.3529 607.5 346.3529 472.5" fill="none" stroke="#dc3545" stroke-width="2.2588" stroke-dasharray="7.5294 4.5176" marker-end="url(#arrowhead-red)" />
+  <text x="512" y="666" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" fill="#dc3545">Processing Failed (retry)</text>
+  <line x1="346.3529" y1="247.5" x2="346.3529" y2="90" stroke="#dc3545" stroke-width="3.0118" />
+  <line x1="346.3529" y1="90" x2="873.4118" y2="90" stroke="#dc3545" stroke-width="3.0118" />
+  <line x1="873.4118" y1="90" x2="873.4118" y2="225" stroke="#dc3545" stroke-width="3.0118" marker-end="url(#arrowhead-red)" />
+  <text x="609.8824" y="67.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.0588" fill="#dc3545">Max Retries Exceeded</text>
+  <rect x="768" y="247.5" width="210.8235" height="202.5" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
+  <text x="873.4118" y="337.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Dead Letter</text>
+  <text x="873.4118" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Queue</text>
+  <line x1="978.8235" y1="351" x2="1039.0588" y2="351" stroke="#dc3545" stroke-width="3.0118" marker-end="url(#arrowhead-red)" />
+  <rect x="1046.5882" y="247.5" width="210.8235" height="202.5" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="1152" y="337.5" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Manual Review /</text>
+  <text x="1152" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.5647" font-weight="bold">Alerting</text>
 </svg>

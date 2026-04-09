@@ -1,48 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 280" font-family="Arial, sans-serif">
-  <!-- Title: Original Frame -->
-  <text x="200" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Original Frame</text>
-  <rect x="50" y="40" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="110" y="70" text-anchor="middle" font-size="13" fill="#333">Eth Hdr</text>
-  <rect x="170" y="40" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="230" y="70" text-anchor="middle" font-size="13" fill="#333">IP Hdr</text>
-  <rect x="290" y="40" width="120" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="350" y="70" text-anchor="middle" font-size="13" fill="#333">Data</text>
-
-  <!-- Title: VXLAN Encapsulated -->
-  <text x="375" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">VXLAN Encapsulated</text>
-
-  <!-- Outer headers -->
-  <rect x="20" y="145" width="95" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="67" y="168" text-anchor="middle" font-size="11" fill="#333">Outer</text>
-  <text x="67" y="185" text-anchor="middle" font-size="11" fill="#333">Eth Hdr</text>
-
-  <rect x="120" y="145" width="95" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="167" y="168" text-anchor="middle" font-size="11" fill="#333">Outer</text>
-  <text x="167" y="185" text-anchor="middle" font-size="11" fill="#333">IP Hdr</text>
-
-  <rect x="220" y="145" width="95" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="267" y="168" text-anchor="middle" font-size="11" fill="#333">Outer</text>
-  <text x="267" y="185" text-anchor="middle" font-size="11" fill="#333">UDP (4789)</text>
-
-  <rect x="320" y="145" width="95" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="367" y="168" text-anchor="middle" font-size="11" fill="#333">VXLAN</text>
-  <text x="367" y="185" text-anchor="middle" font-size="11" fill="#333">Header (VNI)</text>
-
-  <!-- Inner headers -->
-  <rect x="420" y="145" width="95" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="467" y="168" text-anchor="middle" font-size="11" fill="#333">Original</text>
-  <text x="467" y="185" text-anchor="middle" font-size="11" fill="#333">Eth Hdr</text>
-
-  <rect x="520" y="145" width="95" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="567" y="168" text-anchor="middle" font-size="11" fill="#333">Original</text>
-  <text x="567" y="185" text-anchor="middle" font-size="11" fill="#333">IP Hdr</text>
-
-  <rect x="620" y="145" width="95" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="667" y="178" text-anchor="middle" font-size="13" fill="#333">Data</text>
-
-  <!-- Labels -->
-  <text x="200" y="235" text-anchor="middle" font-size="12" fill="#ffc107" font-weight="bold">Outer transport headers</text>
-  <line x1="20" y1="215" x2="415" y2="215" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="570" y="235" text-anchor="middle" font-size="12" fill="#4a90e2" font-weight="bold">Inner original headers + data</text>
-  <line x1="420" y1="215" x2="715" y2="215" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="4,3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="341.3333" y="77.1429" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Original Frame</text>
+  <rect x="85.3333" y="102.8571" width="204.8" height="128.5714" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
+  <text x="187.7333" y="180" text-anchor="middle" font-size="22.1867" fill="#333">Eth Hdr</text>
+  <rect x="290.1333" y="102.8571" width="204.8" height="128.5714" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
+  <text x="392.5333" y="180" text-anchor="middle" font-size="22.1867" fill="#333">IP Hdr</text>
+  <rect x="494.9333" y="102.8571" width="204.8" height="128.5714" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
+  <text x="597.3333" y="180" text-anchor="middle" font-size="22.1867" fill="#333">Data</text>
+  <text x="640" y="334.2857" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">VXLAN Encapsulated</text>
+  <rect x="34.1333" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="114.3467" y="432" text-anchor="middle" font-size="18.7733" fill="#333">Outer</text>
+  <text x="114.3467" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">Eth Hdr</text>
+  <rect x="204.8" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="285.0133" y="432" text-anchor="middle" font-size="18.7733" fill="#333">Outer</text>
+  <text x="285.0133" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">IP Hdr</text>
+  <rect x="375.4667" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="455.68" y="432" text-anchor="middle" font-size="18.7733" fill="#333">Outer</text>
+  <text x="455.68" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">UDP (4789)</text>
+  <rect x="546.1333" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#f8d7da" stroke="#dc3545" stroke-width="3.4133" />
+  <text x="626.3467" y="432" text-anchor="middle" font-size="18.7733" fill="#333">VXLAN</text>
+  <text x="626.3467" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">Header (VNI)</text>
+  <rect x="716.8" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
+  <text x="797.0133" y="432" text-anchor="middle" font-size="18.7733" fill="#333">Original</text>
+  <text x="797.0133" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">Eth Hdr</text>
+  <rect x="887.4667" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4133" />
+  <text x="967.68" y="432" text-anchor="middle" font-size="18.7733" fill="#333">Original</text>
+  <text x="967.68" y="475.7143" text-anchor="middle" font-size="18.7733" fill="#333">IP Hdr</text>
+  <rect x="1058.1333" y="372.8571" width="162.1333" height="141.4286" rx="8.5333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
+  <text x="1138.3467" y="457.7143" text-anchor="middle" font-size="22.1867" fill="#333">Data</text>
+  <text x="341.3333" y="604.2857" text-anchor="middle" font-size="20.48" fill="#ffc107" font-weight="bold">Outer transport headers</text>
+  <line x1="34.1333" y1="552.8571" x2="708.2667" y2="552.8571" stroke="#ffc107" stroke-width="2.56" stroke-dasharray="6.8267 5.12" />
+  <text x="972.8" y="604.2857" text-anchor="middle" font-size="20.48" fill="#4a90e2" font-weight="bold">Inner original headers + data</text>
+  <line x1="716.8" y1="552.8571" x2="1220.2667" y2="552.8571" stroke="#4a90e2" stroke-width="2.56" stroke-dasharray="6.8267 5.12" />
 </svg>

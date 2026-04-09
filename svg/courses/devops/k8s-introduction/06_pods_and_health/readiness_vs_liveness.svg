@@ -1,18 +1,18 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="50" y="50" width="700" height="300" fill="#f9f9f9" stroke="#333" stroke-width="2"/>
-  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold">Readiness vs Liveness Probes</text>
-  <rect x="100" y="80" width="300" height="120" fill="#4285f4" rx="5"/>
-  <text x="250" y="110" text-anchor="middle" fill="white" font-weight="bold">Readiness Probe</text>
-  <text x="250" y="135" text-anchor="middle" fill="white" font-size="11">• Removes from service endpoints</text>
-  <text x="250" y="155" text-anchor="middle" fill="white" font-size="11">• Traffic stops routing to pod</text>
-  <text x="250" y="175" text-anchor="middle" fill="white" font-size="11">• Container keeps running</text>
-  <rect x="420" y="80" width="300" height="120" fill="#34a853" rx="5"/>
-  <text x="570" y="110" text-anchor="middle" fill="white" font-weight="bold">Liveness Probe</text>
-  <text x="570" y="135" text-anchor="middle" fill="white" font-size="11">• Restarts container</text>
-  <text x="570" y="155" text-anchor="middle" fill="white" font-size="11">• Kills unhealthy container</text>
-  <text x="570" y="175" text-anchor="middle" fill="white" font-size="11">• Based on restart policy</text>
-  <rect x="100" y="230" width="620" height="80" fill="#fff3e0" rx="5"/>
-  <text x="410" y="255" text-anchor="middle" font-weight="bold">Best Practice</text>
-  <text x="410" y="275" text-anchor="middle" font-size="12">Use both probes with different endpoints</text>
-  <text x="410" y="295" text-anchor="middle" font-size="12">Readiness: /ready (dependencies check) | Liveness: /health (app health)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="80" y="90" width="1120" height="540" fill="#f9f9f9" stroke="#333" stroke-width="3.2" />
+  <text x="640" y="54" text-anchor="middle" font-size="28.8" font-weight="bold">Readiness vs Liveness Probes</text>
+  <rect x="160" y="144" width="480" height="216" fill="#4285f4" rx="8" />
+  <text x="400" y="198" text-anchor="middle" fill="white" font-weight="bold">Readiness Probe</text>
+  <text x="400" y="243" text-anchor="middle" fill="white" font-size="17.6">• Removes from service endpoints</text>
+  <text x="400" y="279" text-anchor="middle" fill="white" font-size="17.6">• Traffic stops routing to pod</text>
+  <text x="400" y="315" text-anchor="middle" fill="white" font-size="17.6">• Container keeps running</text>
+  <rect x="672" y="144" width="480" height="216" fill="#34a853" rx="8" />
+  <text x="912" y="198" text-anchor="middle" fill="white" font-weight="bold">Liveness Probe</text>
+  <text x="912" y="243" text-anchor="middle" fill="white" font-size="17.6">• Restarts container</text>
+  <text x="912" y="279" text-anchor="middle" fill="white" font-size="17.6">• Kills unhealthy container</text>
+  <text x="912" y="315" text-anchor="middle" fill="white" font-size="17.6">• Based on restart policy</text>
+  <rect x="160" y="414" width="992" height="144" fill="#fff3e0" rx="8" />
+  <text x="656" y="459" text-anchor="middle" font-weight="bold">Best Practice</text>
+  <text x="656" y="495" text-anchor="middle" font-size="19.2">Use both probes with different endpoints</text>
+  <text x="656" y="531" text-anchor="middle" font-size="19.2">Readiness: /ready (dependencies check) | Liveness: /health (app health)</text>
 </svg>

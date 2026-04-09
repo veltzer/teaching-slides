@@ -1,48 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">iptables / Netfilter Basics</text>
-  <!-- Main container -->
-  <rect x="30" y="50" width="640" height="200" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="75" text-anchor="middle" font-size="15" font-weight="bold" fill="#4a90e2">Netfilter</text>
-  <!-- Chain boxes -->
-  <rect x="50" y="90" width="110" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="105" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">PREROUTING</text>
-  <line x1="160" y1="110" x2="195" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#aIPT)"/>
-
-  <rect x="195" y="90" width="80" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="235" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">INPUT</text>
-  <line x1="275" y1="110" x2="320" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#aIPT)"/>
-
-  <rect x="320" y="85" width="130" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="385" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">[Local Process]</text>
-  <text x="385" y="125" text-anchor="middle" font-size="10" fill="#555">Application</text>
-  <line x1="450" y1="110" x2="485" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#aIPT)"/>
-
-  <rect x="485" y="90" width="80" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="525" y="115" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">OUTPUT</text>
-  <line x1="565" y1="110" x2="580" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#aIPT)"/>
-
-  <rect x="580" y="90" width="80" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="620" y="108" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">POST</text>
-  <text x="620" y="122" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">ROUTING</text>
-
-  <!-- FORWARD chain -->
-  <line x1="105" y1="130" x2="105" y2="175" stroke="#dc3545" stroke-width="2"/>
-  <line x1="105" y1="175" x2="200" y2="175" stroke="#dc3545" stroke-width="2" marker-end="url(#aIPTr)"/>
-  <rect x="200" y="155" width="110" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="255" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">FORWARD</text>
-  <text x="255" y="210" text-anchor="middle" font-size="10" fill="#555">(routing)</text>
-  <line x1="310" y1="175" x2="525" y2="175" stroke="#dc3545" stroke-width="1.5"/>
-  <line x1="525" y1="175" x2="525" y2="130" stroke="#dc3545" stroke-width="1.5" marker-end="url(#aIPTr2)"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="72" text-anchor="middle" font-size="32.9143" font-weight="bold" fill="#333">iptables / Netfilter Basics</text>
+  <rect x="54.8571" y="120" width="1170.2857" height="480" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6571" />
+  <text x="640" y="180" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#4a90e2">Netfilter</text>
+  <rect x="91.4286" y="216" width="201.1429" height="96" rx="9.1429" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7429" />
+  <text x="192" y="276" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#333">PREROUTING</text>
+  <line x1="292.5714" y1="264" x2="356.5714" y2="264" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#aIPT)" />
+  <rect x="356.5714" y="216" width="146.2857" height="96" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="2.7429" />
+  <text x="429.7143" y="276" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#333">INPUT</text>
+  <line x1="502.8571" y1="264" x2="585.1429" y2="264" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#aIPT)" />
+  <rect x="585.1429" y="204" width="237.7143" height="120" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7429" />
+  <text x="704" y="259.2" text-anchor="middle" font-size="20.1143" font-weight="bold" fill="#333">[Local Process]</text>
+  <text x="704" y="300" text-anchor="middle" font-size="18.2857" fill="#555">Application</text>
+  <line x1="822.8571" y1="264" x2="886.8571" y2="264" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#aIPT)" />
+  <rect x="886.8571" y="216" width="146.2857" height="96" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="2.7429" />
+  <text x="960" y="276" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#333">OUTPUT</text>
+  <line x1="1033.1429" y1="264" x2="1060.5714" y2="264" stroke="#4a90e2" stroke-width="3.6571" marker-end="url(#aIPT)" />
+  <rect x="1060.5714" y="216" width="146.2857" height="96" rx="9.1429" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7429" />
+  <text x="1133.7143" y="259.2" text-anchor="middle" font-size="18.2857" font-weight="bold" fill="#333">POST</text>
+  <text x="1133.7143" y="292.8" text-anchor="middle" font-size="18.2857" font-weight="bold" fill="#333">ROUTING</text>
+  <line x1="192" y1="312" x2="192" y2="420" stroke="#dc3545" stroke-width="3.6571" />
+  <line x1="192" y1="420" x2="365.7143" y2="420" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#aIPTr)" />
+  <rect x="365.7143" y="372" width="201.1429" height="96" rx="9.1429" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7429" />
+  <text x="466.2857" y="432" text-anchor="middle" font-size="21.9429" font-weight="bold" fill="#dc3545">FORWARD</text>
+  <text x="466.2857" y="504" text-anchor="middle" font-size="18.2857" fill="#555">(routing)</text>
+  <line x1="566.8571" y1="420" x2="960" y2="420" stroke="#dc3545" stroke-width="2.7429" />
+  <line x1="960" y1="420" x2="960" y2="312" stroke="#dc3545" stroke-width="2.7429" marker-end="url(#aIPTr2)" />
   <defs>
-    <marker id="aIPT" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="aIPT" markerWidth="18.2857" markerHeight="16.8" refX="18.2857" refY="8.4" orient="auto">
+      <polygon points="0,24 6.4,0" fill="#4a90e2" />
     </marker>
-    <marker id="aIPTr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="aIPTr" markerWidth="18.2857" markerHeight="16.8" refX="18.2857" refY="8.4" orient="auto">
+      <polygon points="0,24 6.4,0" fill="#dc3545" />
     </marker>
-    <marker id="aIPTr2" markerWidth="10" markerHeight="7" refX="5" refY="0" orient="auto">
-      <polygon points="0 7, 5 0, 10 7" fill="#dc3545"/>
+    <marker id="aIPTr2" markerWidth="18.2857" markerHeight="16.8" refX="9.1429" refY="0" orient="auto">
+      <polygon points="12.8,12 0,24" fill="#dc3545" />
     </marker>
   </defs>
 </svg>

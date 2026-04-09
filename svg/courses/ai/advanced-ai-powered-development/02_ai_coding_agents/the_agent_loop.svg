@@ -1,15 +1,31 @@
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
-  <rect x="300" y="20" width="200" height="60" fill="#2B6CB0" rx="10"/>
-  <text x="400" y="55" text-anchor="middle" fill="white" font-size="16">Receive Task</text>
-  <rect x="550" y="130" width="200" height="60" fill="#2F855A" rx="10"/>
-  <text x="650" y="165" text-anchor="middle" fill="white" font-size="16">Reason / Plan</text>
-  <rect x="300" y="240" width="200" height="60" fill="#C05621" rx="10"/>
-  <text x="400" y="275" text-anchor="middle" fill="white" font-size="16">Execute Tool</text>
-  <rect x="50" y="130" width="200" height="60" fill="#6B46C1" rx="10"/>
-  <text x="150" y="165" text-anchor="middle" fill="white" font-size="16">Observe Result</text>
-  <path d="M500 55 L550 155" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M550 170 L500 260" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M300 265 L250 170" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M150 130 L300 55" stroke="white" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="white"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="25.6" markerHeight="29.6229" refX="23.04" refY="14.8114" orient="auto">
+      <polygon points="0,42.3183 8.96,0" fill="white" />
+    </marker>
+  </defs>
+  <rect width="2048" height="1692.7346" fill="#1a1a2e" />
+  <text x="1024" y="148.1143" text-anchor="middle" fill="white" font-size="53.76" font-weight="bold">The Agent Loop</text>
+  <circle cx="1024" cy="888.6857" r="128" fill="#F9A825" fill-opacity="0.2" stroke="#F9A825" stroke-width="5.12" />
+  <text x="1024" y="867.5266" text-anchor="middle" fill="#F9A825" font-size="35.84" font-weight="bold">Task</text>
+  <text x="1024" y="952.1632" text-anchor="middle" fill="#F9A825" font-size="35.84" font-weight="bold">Goal</text>
+  <rect x="704" y="253.9103" width="640" height="253.9103" fill="#2B6CB0" rx="25.6" />
+  <text x="1024" y="372.4017" text-anchor="middle" fill="white" font-size="38.4" font-weight="bold">1. Receive Task</text>
+  <text x="1024" y="457.0383" text-anchor="middle" fill="#BEE3F8" font-size="30.72">user prompt or issue</text>
+  <rect x="1484.8" y="740.5714" width="512" height="296.2286" fill="#2F855A" rx="25.6" />
+  <text x="1740.8" y="859.0629" text-anchor="middle" fill="white" font-size="38.4" font-weight="bold">2. Reason</text>
+  <text x="1740.8" y="943.6997" text-anchor="middle" fill="#C6F6D5" font-size="30.72">plan next action</text>
+  <text x="1740.8" y="1007.1771" text-anchor="middle" fill="#C6F6D5" font-size="30.72">choose tool</text>
+  <rect x="704" y="1354.1877" width="640" height="253.9103" fill="#C05621" rx="25.6" />
+  <text x="1024" y="1472.6792" text-anchor="middle" fill="white" font-size="38.4" font-weight="bold">3. Execute Tool</text>
+  <text x="1024" y="1557.316" text-anchor="middle" fill="#FBD38D" font-size="30.72">file edit, shell, search</text>
+  <rect x="51.2" y="740.5714" width="512" height="296.2286" fill="#6B46C1" rx="25.6" />
+  <text x="307.2" y="859.0629" text-anchor="middle" fill="white" font-size="38.4" font-weight="bold">4. Observe</text>
+  <text x="307.2" y="943.6997" text-anchor="middle" fill="#E9D8FD" font-size="30.72">read tool output</text>
+  <text x="307.2" y="1007.1771" text-anchor="middle" fill="#E9D8FD" font-size="30.72">update context</text>
+  <path d="M 1344 380.8654 Q 1587.2 380.8654 1587.2 740.5714" fill="none" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <path d="M 1587.2 1036.8 Q 1587.2 1354.1877 1344 1459.9837" fill="none" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <path d="M 704 1459.9837 Q 460.8 1459.9837 460.8 1036.8" fill="none" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <path d="M 460.8 740.5714 Q 460.8 380.8654 704 380.8654" fill="none" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <text x="1024" y="1671.5755" text-anchor="middle" fill="#68D391" font-size="33.28">Loop continues until task is complete or max iterations reached</text>
 </svg>

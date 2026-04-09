@@ -1,53 +1,48 @@
-<svg viewBox="0 0 620 420" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow-ss" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+    <marker id="arrow-ss" markerWidth="20.6452" markerHeight="12" refX="18.5806" refY="6" orient="auto">
+      <polygon points="0,17.1429 7.2258,0" fill="#333" />
+    </marker>
   </defs>
-  <!-- Data Sources -->
-  <rect x="30" y="5" width="560" height="60" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="310" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Data Sources</text>
-  <rect x="55" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
-  <text x="95" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Kafka</text>
-  <rect x="155" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
-  <text x="195" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Kinesis</text>
-  <rect x="255" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
-  <text x="295" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Files</text>
-  <rect x="355" y="30" width="80" height="28" rx="6" fill="#fff" stroke="#0277bd" stroke-width="1"/>
-  <text x="395" y="49" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Socket</text>
-  <!-- Arrows down -->
-  <line x1="95" y1="65" x2="200" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <line x1="195" y1="65" x2="260" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <line x1="295" y1="65" x2="340" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <line x1="395" y1="65" x2="400" y2="100" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <!-- Streaming Engine -->
-  <rect x="30" y="105" width="560" height="170" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="310" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Structured Streaming Engine</text>
-  <!-- Micro-batch pipeline -->
-  <rect x="60" y="140" width="500" height="50" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="120" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Parse</text>
-  <line x1="155" y1="165" x2="195" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <text x="260" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Transform</text>
-  <line x1="310" y1="165" x2="350" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <text x="430" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">Aggregate / Join</text>
-  <text x="140" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888">Micro-batch Processing</text>
-  <!-- State/Checkpoint/Watermark -->
-  <rect x="55" y="205" width="150" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="130" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">State Store (RocksDB)</text>
-  <rect x="215" y="205" width="150" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="290" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Checkpoint (HDFS/S3)</text>
-  <rect x="375" y="205" width="150" height="30" rx="6" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1"/>
-  <text x="450" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Watermark (Late data)</text>
-  <!-- Arrows to sinks -->
-  <line x1="180" y1="275" x2="130" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <line x1="310" y1="275" x2="310" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <line x1="440" y1="275" x2="490" y2="310" stroke="#333" stroke-width="2" marker-end="url(#arrow-ss)"/>
-  <!-- Sinks -->
-  <rect x="50" y="315" width="160" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="130" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Delta Lake</text>
-  <text x="130" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">(append)</text>
-  <rect x="230" y="315" width="160" height="45" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="310" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Kafka</text>
-  <text x="310" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">(publish)</text>
-  <rect x="410" y="315" width="160" height="45" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="490" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Console</text>
-  <text x="490" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">(debug)</text>
+  <rect x="61.9355" y="8.5714" width="1156.129" height="102.8571" rx="13.7143" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.4286" />
+  <text x="640" y="37.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" font-weight="bold" fill="#333">Data Sources</text>
+  <rect x="113.5484" y="51.4286" width="165.1613" height="48" rx="10.2857" fill="#fff" stroke="#0277bd" stroke-width="1.7143" />
+  <text x="196.129" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Kafka</text>
+  <rect x="320" y="51.4286" width="165.1613" height="48" rx="10.2857" fill="#fff" stroke="#0277bd" stroke-width="1.7143" />
+  <text x="402.5806" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Kinesis</text>
+  <rect x="526.4516" y="51.4286" width="165.1613" height="48" rx="10.2857" fill="#fff" stroke="#0277bd" stroke-width="1.7143" />
+  <text x="609.0323" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Files</text>
+  <rect x="732.9032" y="51.4286" width="165.1613" height="48" rx="10.2857" fill="#fff" stroke="#0277bd" stroke-width="1.7143" />
+  <text x="815.4839" y="84" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Socket</text>
+  <line x1="196.129" y1="111.4286" x2="412.9032" y2="171.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <line x1="402.5806" y1="111.4286" x2="536.7742" y2="171.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <line x1="609.0323" y1="111.4286" x2="701.9355" y2="171.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <line x1="815.4839" y1="111.4286" x2="825.8065" y2="171.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <rect x="61.9355" y="180" width="1156.129" height="291.4286" rx="13.7143" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.4286" />
+  <text x="640" y="214.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.2857" font-weight="bold" fill="#333">Structured Streaming Engine</text>
+  <rect x="123.871" y="240" width="1032.2581" height="85.7143" rx="13.7143" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5714" />
+  <text x="247.7419" y="270.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Parse</text>
+  <line x1="320" y1="282.8571" x2="402.5806" y2="282.8571" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <text x="536.7742" y="270.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Transform</text>
+  <line x1="640" y1="282.8571" x2="722.5806" y2="282.8571" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <text x="887.7419" y="270.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#333">Aggregate / Join</text>
+  <text x="289.0323" y="308.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#888">Micro-batch Processing</text>
+  <rect x="113.5484" y="351.4286" width="309.6774" height="51.4286" rx="10.2857" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.7143" />
+  <text x="268.3871" y="385.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">State Store (RocksDB)</text>
+  <rect x="443.871" y="351.4286" width="309.6774" height="51.4286" rx="10.2857" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.7143" />
+  <text x="598.7097" y="385.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">Checkpoint (HDFS/S3)</text>
+  <rect x="774.1935" y="351.4286" width="309.6774" height="51.4286" rx="10.2857" fill="#f5f5f5" stroke="#bdbdbd" stroke-width="1.7143" />
+  <text x="929.0323" y="385.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">Watermark (Late data)</text>
+  <line x1="371.6129" y1="471.4286" x2="268.3871" y2="531.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <line x1="640" y1="471.4286" x2="640" y2="531.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <line x1="908.3871" y1="471.4286" x2="1011.6129" y2="531.4286" stroke="#333" stroke-width="3.4286" marker-end="url(#arrow-ss)" />
+  <rect x="103.2258" y="540" width="330.3226" height="77.1429" rx="13.7143" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.4286" />
+  <text x="268.3871" y="574.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" font-weight="bold" fill="#333">Delta Lake</text>
+  <text x="268.3871" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">(append)</text>
+  <rect x="474.8387" y="540" width="330.3226" height="77.1429" rx="13.7143" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.4286" />
+  <text x="640" y="574.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" font-weight="bold" fill="#333">Kafka</text>
+  <text x="640" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">(publish)</text>
+  <rect x="846.4516" y="540" width="330.3226" height="77.1429" rx="13.7143" fill="#fce4ec" stroke="#c62828" stroke-width="3.4286" />
+  <text x="1011.6129" y="574.2857" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" font-weight="bold" fill="#333">Console</text>
+  <text x="1011.6129" y="600" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.5714" fill="#555">(debug)</text>
 </svg>

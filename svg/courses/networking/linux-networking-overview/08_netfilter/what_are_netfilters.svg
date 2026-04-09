@@ -1,28 +1,28 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="18" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Netfilter: Kernel Packet Processing Framework</text>
-  <rect x="30" y="30" width="160" height="75" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="50" text-anchor="middle" font-size="11" font-weight="bold">User Space</text>
-  <text x="110" y="67" text-anchor="middle" font-size="10" fill="#666">iptables / nftables</text>
-  <text x="110" y="82" text-anchor="middle" font-size="10" fill="#666">libnetfilter_queue</text>
-  <text x="110" y="97" text-anchor="middle" font-size="10" fill="#666">conntrack CLI</text>
-  <rect x="220" y="30" width="160" height="75" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold">Netfilter Hooks</text>
-  <text x="300" y="67" text-anchor="middle" font-size="10" fill="#666">PRE/POST ROUTING</text>
-  <text x="300" y="82" text-anchor="middle" font-size="10" fill="#666">INPUT / OUTPUT</text>
-  <text x="300" y="97" text-anchor="middle" font-size="10" fill="#666">FORWARD</text>
-  <rect x="410" y="30" width="160" height="75" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="50" text-anchor="middle" font-size="11" font-weight="bold">Tables</text>
-  <text x="490" y="67" text-anchor="middle" font-size="10" fill="#666">filter (default)</text>
-  <text x="490" y="82" text-anchor="middle" font-size="10" fill="#666">nat / mangle</text>
-  <text x="490" y="97" text-anchor="middle" font-size="10" fill="#666">raw / security</text>
-  <line x1="190" y1="67" x2="220" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
-  <line x1="380" y1="67" x2="410" y2="67" stroke="#333" stroke-width="2" marker-end="url(#arrowd0_07_netfilter)"/>
-  <rect x="30" y="130" width="540" height="45" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="5" stroke-dasharray="5,3"/>
-  <text x="300" y="150" text-anchor="middle" font-size="11" fill="#333">Each hook point invokes registered callback functions (nf_hook_ops)</text>
-  <text x="300" y="165" text-anchor="middle" font-size="10" fill="#666">Verdicts: NF_ACCEPT | NF_DROP | NF_QUEUE | NF_STOLEN | NF_REPEAT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Netfilter: Kernel Packet Processing Framework</text>
+  <rect x="64" y="108" width="341.3333" height="270" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="234.6667" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">User Space</text>
+  <text x="234.6667" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables / nftables</text>
+  <text x="234.6667" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">libnetfilter_queue</text>
+  <text x="234.6667" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">conntrack CLI</text>
+  <rect x="469.3333" y="108" width="341.3333" height="270" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">Netfilter Hooks</text>
+  <text x="640" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">PRE/POST ROUTING</text>
+  <text x="640" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">INPUT / OUTPUT</text>
+  <text x="640" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">FORWARD</text>
+  <rect x="874.6667" y="108" width="341.3333" height="270" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1045.3333" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">Tables</text>
+  <text x="1045.3333" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">filter (default)</text>
+  <text x="1045.3333" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">nat / mangle</text>
+  <text x="1045.3333" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">raw / security</text>
+  <line x1="405.3333" y1="241.2" x2="469.3333" y2="241.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd0_07_netfilter)" />
+  <line x1="810.6667" y1="241.2" x2="874.6667" y2="241.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd0_07_netfilter)" />
+  <rect x="64" y="468" width="1152" height="162" fill="#fff3e0" stroke="#e65100" stroke-width="2.1333" rx="10.6667" stroke-dasharray="10.6667 6.4" />
+  <text x="640" y="540" text-anchor="middle" font-size="23.4667" fill="#333">Each hook point invokes registered callback functions (nf_hook_ops)</text>
+  <text x="640" y="594" text-anchor="middle" font-size="21.3333" fill="#666">Verdicts: NF_ACCEPT | NF_DROP | NF_QUEUE | NF_STOLEN | NF_REPEAT</text>
   <defs>
-    <marker id="arrowd0_07_netfilter" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowd0_07_netfilter" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
 </svg>

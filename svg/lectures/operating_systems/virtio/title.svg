@@ -1,79 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d1117"/>
-      <stop offset="100%" style="stop-color:#161b22"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#0d1117" />
+      <stop offset="100%" style="stop-color:#161b22" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <!-- Circuit board traces background -->
-  <g opacity="0.1" stroke="#58a6ff" stroke-width="1">
-    <path d="M50,100 L200,100 L200,50"/>
-    <path d="M50,200 L150,200 L150,300 L250,300"/>
-    <path d="M600,50 L600,150 L700,150"/>
-    <path d="M550,300 L650,300 L650,350 L750,350"/>
-    <path d="M300,50 L300,100 L400,100"/>
-    <path d="M500,350 L500,300 L450,300"/>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <g opacity="0.1" stroke="#58a6ff" stroke-width="1.6">
+    <path d="M 80 180 L 320 180 L 320 90" />
+    <path d="M 80 360 L 240 360 L 240 540 L 400 540" />
+    <path d="M 960 90 L 960 270 L 1120 270" />
+    <path d="M 880 540 L 1040 540 L 1040 630 L 1200 630" />
+    <path d="M 480 90 L 480 180 L 640 180" />
+    <path d="M 800 630 L 800 540 L 720 540" />
   </g>
-  <!-- VM box (Guest) -->
   <g transform="translate(100, 80)">
-    <rect x="0" y="0" width="180" height="120" rx="8" fill="none" stroke="#58a6ff" stroke-width="2.5" opacity="0.7"/>
-    <text x="90" y="25" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="13" opacity="0.8">Guest VM</text>
-    <!-- Small CPU icon -->
-    <rect x="30" y="45" width="40" height="40" rx="4" fill="#58a6ff" opacity="0.2" stroke="#58a6ff" stroke-width="1"/>
-    <rect x="40" y="55" width="20" height="20" rx="2" fill="#58a6ff" opacity="0.4"/>
-    <!-- Small disk icon -->
-    <rect x="110" y="45" width="40" height="40" rx="4" fill="#58a6ff" opacity="0.2" stroke="#58a6ff" stroke-width="1"/>
-    <circle cx="130" cy="65" r="10" fill="none" stroke="#58a6ff" stroke-width="1.5" opacity="0.4"/>
-    <circle cx="130" cy="65" r="3" fill="#58a6ff" opacity="0.4"/>
+    <rect x="0" y="0" width="288" height="216" rx="12.8" fill="none" stroke="#58a6ff" stroke-width="4" opacity="0.7" />
+    <text x="144" y="45" text-anchor="middle" fill="#58a6ff" font-family="monospace" font-size="20.8" opacity="0.8">Guest VM</text>
+    <rect x="48" y="81" width="64" height="72" rx="6.4" fill="#58a6ff" opacity="0.2" stroke="#58a6ff" stroke-width="1.6" />
+    <rect x="64" y="99" width="32" height="36" rx="3.2" fill="#58a6ff" opacity="0.4" />
+    <rect x="176" y="81" width="64" height="72" rx="6.4" fill="#58a6ff" opacity="0.2" stroke="#58a6ff" stroke-width="1.6" />
+    <circle cx="208" cy="117" r="16" fill="none" stroke="#58a6ff" stroke-width="2.4" opacity="0.4" />
+    <circle cx="208" cy="117" r="4.8" fill="#58a6ff" opacity="0.4" />
   </g>
-  <!-- Virtqueue arrows in the middle -->
   <g transform="translate(320, 100)">
-    <!-- Queue ring visualization -->
-    <ellipse cx="80" cy="50" rx="60" ry="25" fill="none" stroke="#f0883e" stroke-width="2" opacity="0.6"/>
-    <ellipse cx="80" cy="70" rx="60" ry="25" fill="none" stroke="#f0883e" stroke-width="2" opacity="0.4"/>
-    <ellipse cx="80" cy="90" rx="60" ry="25" fill="none" stroke="#f0883e" stroke-width="2" opacity="0.3"/>
-    <!-- Queue entries -->
-    <rect x="45" y="38" width="12" height="8" rx="1" fill="#f0883e" opacity="0.7"/>
-    <rect x="62" y="30" width="12" height="8" rx="1" fill="#f0883e" opacity="0.7"/>
-    <rect x="82" y="28" width="12" height="8" rx="1" fill="#f0883e" opacity="0.7"/>
-    <rect x="102" y="32" width="12" height="8" rx="1" fill="#f0883e" opacity="0.7"/>
-    <!-- Bidirectional arrows -->
-    <line x1="-20" y1="60" x2="10" y2="60" stroke="#4ecca3" stroke-width="2" marker-end="url(#arrowG)"/>
-    <line x1="150" y1="60" x2="175" y2="60" stroke="#4ecca3" stroke-width="2" marker-end="url(#arrowG)"/>
-    <text x="80" y="130" text-anchor="middle" fill="#f0883e" font-family="monospace" font-size="12" opacity="0.7">virtqueue</text>
+    <ellipse cx="128" cy="90" rx="96" ry="40" fill="none" stroke="#f0883e" stroke-width="3.2" opacity="0.6" />
+    <ellipse cx="128" cy="126" rx="96" ry="40" fill="none" stroke="#f0883e" stroke-width="3.2" opacity="0.4" />
+    <ellipse cx="128" cy="162" rx="96" ry="40" fill="none" stroke="#f0883e" stroke-width="3.2" opacity="0.3" />
+    <rect x="72" y="68.4" width="19.2" height="14.4" rx="1.6" fill="#f0883e" opacity="0.7" />
+    <rect x="99.2" y="54" width="19.2" height="14.4" rx="1.6" fill="#f0883e" opacity="0.7" />
+    <rect x="131.2" y="50.4" width="19.2" height="14.4" rx="1.6" fill="#f0883e" opacity="0.7" />
+    <rect x="163.2" y="57.6" width="19.2" height="14.4" rx="1.6" fill="#f0883e" opacity="0.7" />
+    <line x1="-32" y1="108" x2="16" y2="108" stroke="#4ecca3" stroke-width="3.2" marker-end="url(#arrowG)" />
+    <line x1="240" y1="108" x2="280" y2="108" stroke="#4ecca3" stroke-width="3.2" marker-end="url(#arrowG)" />
+    <text x="128" y="234" text-anchor="middle" fill="#f0883e" font-family="monospace" font-size="19.2" opacity="0.7">virtqueue</text>
   </g>
   <defs>
-    <marker id="arrowG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0,0 8,3 0,6" fill="#4ecca3"/>
+    <marker id="arrowG" markerWidth="12.8" markerHeight="10.8" refX="12.8" refY="5.4" orient="auto">
+      <polygon points="0,0 12.8,5.4 0,10.8" fill="#4ecca3" />
     </marker>
   </defs>
-  <!-- Hypervisor/Host box -->
   <g transform="translate(530, 80)">
-    <rect x="0" y="0" width="180" height="120" rx="8" fill="none" stroke="#4ecca3" stroke-width="2.5" opacity="0.7"/>
-    <text x="90" y="25" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="13" opacity="0.8">Host / HV</text>
-    <!-- Network icon -->
-    <circle cx="50" cy="70" r="15" fill="none" stroke="#4ecca3" stroke-width="1.5" opacity="0.4"/>
-    <ellipse cx="50" cy="70" rx="15" ry="6" fill="none" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
-    <line x1="50" y1="55" x2="50" y2="85" stroke="#4ecca3" stroke-width="1" opacity="0.3"/>
-    <!-- Hardware block -->
-    <rect x="100" y="50" width="50" height="40" rx="4" fill="#4ecca3" opacity="0.15" stroke="#4ecca3" stroke-width="1"/>
-    <text x="125" y="74" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="10" opacity="0.6">HW</text>
+    <rect x="0" y="0" width="288" height="216" rx="12.8" fill="none" stroke="#4ecca3" stroke-width="4" opacity="0.7" />
+    <text x="144" y="45" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="20.8" opacity="0.8">Host / HV</text>
+    <circle cx="80" cy="126" r="24" fill="none" stroke="#4ecca3" stroke-width="2.4" opacity="0.4" />
+    <ellipse cx="80" cy="126" rx="24" ry="9.6" fill="none" stroke="#4ecca3" stroke-width="1.6" opacity="0.3" />
+    <line x1="80" y1="99" x2="80" y2="153" stroke="#4ecca3" stroke-width="1.6" opacity="0.3" />
+    <rect x="160" y="90" width="80" height="72" rx="6.4" fill="#4ecca3" opacity="0.15" stroke="#4ecca3" stroke-width="1.6" />
+    <text x="200" y="133.2" text-anchor="middle" fill="#4ecca3" font-family="monospace" font-size="16" opacity="0.6">HW</text>
   </g>
-  <!-- Bottom: descriptor table visualization -->
   <g transform="translate(200, 280)" opacity="0.4">
-    <rect x="0" y="0" width="50" height="25" rx="3" fill="#58a6ff" opacity="0.5"/>
-    <rect x="55" y="0" width="50" height="25" rx="3" fill="#58a6ff" opacity="0.5"/>
-    <rect x="110" y="0" width="50" height="25" rx="3" fill="#f0883e" opacity="0.5"/>
-    <rect x="165" y="0" width="50" height="25" rx="3" fill="#58a6ff" opacity="0.5"/>
-    <rect x="220" y="0" width="50" height="25" rx="3" fill="#4ecca3" opacity="0.5"/>
-    <rect x="275" y="0" width="50" height="25" rx="3" fill="#f0883e" opacity="0.5"/>
-    <rect x="330" y="0" width="50" height="25" rx="3" fill="#58a6ff" opacity="0.5"/>
-    <text x="195" y="45" text-anchor="middle" fill="#888" font-family="monospace" font-size="10">descriptor table</text>
+    <rect x="0" y="0" width="80" height="45" rx="4.8" fill="#58a6ff" opacity="0.5" />
+    <rect x="88" y="0" width="80" height="45" rx="4.8" fill="#58a6ff" opacity="0.5" />
+    <rect x="176" y="0" width="80" height="45" rx="4.8" fill="#f0883e" opacity="0.5" />
+    <rect x="264" y="0" width="80" height="45" rx="4.8" fill="#58a6ff" opacity="0.5" />
+    <rect x="352" y="0" width="80" height="45" rx="4.8" fill="#4ecca3" opacity="0.5" />
+    <rect x="440" y="0" width="80" height="45" rx="4.8" fill="#f0883e" opacity="0.5" />
+    <rect x="528" y="0" width="80" height="45" rx="4.8" fill="#58a6ff" opacity="0.5" />
+    <text x="312" y="81" text-anchor="middle" fill="#888" font-family="monospace" font-size="16">descriptor table</text>
   </g>
-  <!-- Decorative corner elements -->
-  <circle cx="30" cy="30" r="3" fill="#58a6ff" opacity="0.3"/>
-  <circle cx="770" cy="30" r="3" fill="#4ecca3" opacity="0.3"/>
-  <circle cx="30" cy="370" r="3" fill="#f0883e" opacity="0.3"/>
-  <circle cx="770" cy="370" r="3" fill="#58a6ff" opacity="0.3"/>
+  <circle cx="48" cy="54" r="4.8" fill="#58a6ff" opacity="0.3" />
+  <circle cx="1232" cy="54" r="4.8" fill="#4ecca3" opacity="0.3" />
+  <circle cx="48" cy="666" r="4.8" fill="#f0883e" opacity="0.3" />
+  <circle cx="1232" cy="666" r="4.8" fill="#58a6ff" opacity="0.3" />
 </svg>

@@ -1,58 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 580" font-family="Arial, sans-serif">
-  <text x="300" y="25" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">TLS 1.2 Handshake</text>
-  <!-- Client column -->
-  <rect x="50" y="40" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
-  <line x1="100" y1="80" x2="100" y2="540" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <!-- Server column -->
-  <rect x="450" y="40" width="100" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="500" y="65" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
-  <line x1="500" y1="80" x2="500" y2="540" stroke="#28a745" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <!-- ClientHello -->
-  <line x1="100" y1="100" x2="500" y2="100" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTH)"/>
-  <text x="300" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">ClientHello</text>
-  <text x="300" y="112" text-anchor="middle" font-size="10" fill="#555">TLS version, cipher suites, client random</text>
-  <!-- ServerHello -->
-  <line x1="500" y1="140" x2="100" y2="140" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="135" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">ServerHello</text>
-  <text x="300" y="155" text-anchor="middle" font-size="10" fill="#555">chosen cipher, server random</text>
-  <!-- Certificate -->
-  <line x1="500" y1="175" x2="100" y2="175" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Certificate</text>
-  <text x="300" y="188" text-anchor="middle" font-size="10" fill="#555">server's X.509 certificate</text>
-  <!-- ServerKeyExchange -->
-  <line x1="500" y1="210" x2="100" y2="210" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="205" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">ServerKeyExchange</text>
-  <!-- ServerHelloDone -->
-  <line x1="500" y1="240" x2="100" y2="240" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="235" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">ServerHelloDone</text>
-  <!-- ClientKeyExchange -->
-  <line x1="100" y1="280" x2="500" y2="280" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTH)"/>
-  <text x="300" y="275" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">ClientKeyExchange</text>
-  <text x="300" y="295" text-anchor="middle" font-size="10" fill="#555">pre-master secret, encrypted</text>
-  <!-- ChangeCipherSpec -->
-  <line x1="100" y1="320" x2="500" y2="320" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTH)"/>
-  <text x="300" y="315" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">ChangeCipherSpec</text>
-  <!-- Finished -->
-  <line x1="100" y1="355" x2="500" y2="355" stroke="#4a90e2" stroke-width="2" marker-end="url(#aTH)"/>
-  <text x="300" y="350" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Finished (encrypted)</text>
-  <!-- Server ChangeCipherSpec -->
-  <line x1="500" y1="390" x2="100" y2="390" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="385" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">ChangeCipherSpec</text>
-  <!-- Server Finished -->
-  <line x1="500" y1="425" x2="100" y2="425" stroke="#28a745" stroke-width="2" marker-end="url(#aTH2)"/>
-  <text x="300" y="420" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Finished (encrypted)</text>
-  <!-- Encrypted data -->
-  <rect x="80" y="460" width="440" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="300" y="482" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Encrypted Application Data</text>
-  <!-- Note -->
-  <text x="300" y="520" text-anchor="middle" font-size="12" fill="#555">2 round trips before first application data</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="31.0345" text-anchor="middle" font-size="22.3448" font-weight="bold" fill="#333">TLS 1.2 Handshake</text>
+  <rect x="106.6667" y="49.6552" width="213.3333" height="49.6552" rx="6.2069" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4828" />
+  <text x="213.3333" y="80.6897" text-anchor="middle" font-size="17.3793" font-weight="bold" fill="#333">Client</text>
+  <line x1="213.3333" y1="99.3103" x2="213.3333" y2="670.3448" stroke="#4a90e2" stroke-width="1.8621" stroke-dasharray="4.9655 4.9655" />
+  <rect x="960" y="49.6552" width="213.3333" height="49.6552" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="2.4828" />
+  <text x="1066.6667" y="80.6897" text-anchor="middle" font-size="17.3793" font-weight="bold" fill="#333">Server</text>
+  <line x1="1066.6667" y1="99.3103" x2="1066.6667" y2="670.3448" stroke="#28a745" stroke-width="1.8621" stroke-dasharray="4.9655 4.9655" />
+  <line x1="213.3333" y1="124.1379" x2="1066.6667" y2="124.1379" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#aTH)" />
+  <text x="640" y="117.931" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#4a90e2">ClientHello</text>
+  <text x="640" y="139.0345" text-anchor="middle" font-size="12.4138" fill="#555">TLS version, cipher suites, client random</text>
+  <line x1="1066.6667" y1="173.7931" x2="213.3333" y2="173.7931" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="167.5862" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">ServerHello</text>
+  <text x="640" y="192.4138" text-anchor="middle" font-size="12.4138" fill="#555">chosen cipher, server random</text>
+  <line x1="1066.6667" y1="217.2414" x2="213.3333" y2="217.2414" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="211.0345" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">Certificate</text>
+  <text x="640" y="233.3793" text-anchor="middle" font-size="12.4138" fill="#555">server's X.509 certificate</text>
+  <line x1="1066.6667" y1="260.6897" x2="213.3333" y2="260.6897" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="254.4828" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">ServerKeyExchange</text>
+  <line x1="1066.6667" y1="297.931" x2="213.3333" y2="297.931" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="291.7241" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">ServerHelloDone</text>
+  <line x1="213.3333" y1="347.5862" x2="1066.6667" y2="347.5862" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#aTH)" />
+  <text x="640" y="341.3793" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#4a90e2">ClientKeyExchange</text>
+  <text x="640" y="366.2069" text-anchor="middle" font-size="12.4138" fill="#555">pre-master secret, encrypted</text>
+  <line x1="213.3333" y1="397.2414" x2="1066.6667" y2="397.2414" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#aTH)" />
+  <text x="640" y="391.0345" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#4a90e2">ChangeCipherSpec</text>
+  <line x1="213.3333" y1="440.6897" x2="1066.6667" y2="440.6897" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#aTH)" />
+  <text x="640" y="434.4828" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#4a90e2">Finished (encrypted)</text>
+  <line x1="1066.6667" y1="484.1379" x2="213.3333" y2="484.1379" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="477.931" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">ChangeCipherSpec</text>
+  <line x1="1066.6667" y1="527.5862" x2="213.3333" y2="527.5862" stroke="#28a745" stroke-width="2.4828" marker-end="url(#aTH2)" />
+  <text x="640" y="521.3793" text-anchor="middle" font-size="14.8966" font-weight="bold" fill="#28a745">Finished (encrypted)</text>
+  <rect x="170.6667" y="571.0345" width="938.6667" height="43.4483" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="2.4828" />
+  <text x="640" y="598.3448" text-anchor="middle" font-size="16.1379" font-weight="bold" fill="#28a745">Encrypted Application Data</text>
+  <text x="640" y="645.5172" text-anchor="middle" font-size="14.8966" fill="#555">2 round trips before first application data</text>
   <defs>
-    <marker id="aTH" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="aTH" markerWidth="21.3333" markerHeight="8.6897" refX="21.3333" refY="4.3448" orient="auto">
+      <polygon points="0,12.4138 7.4667,0" fill="#4a90e2" />
     </marker>
-    <marker id="aTH2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#28a745"/>
+    <marker id="aTH2" markerWidth="21.3333" markerHeight="8.6897" refX="0" refY="4.3448" orient="auto">
+      <polygon points="0,0 7.4667,12.4138" fill="#28a745" />
     </marker>
   </defs>
 </svg>

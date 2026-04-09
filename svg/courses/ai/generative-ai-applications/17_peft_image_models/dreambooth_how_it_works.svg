@@ -1,54 +1,39 @@
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
+      <polygon points="0,16 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <!-- Title -->
-  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">DreamBooth: How It Works</text>
-
-  <!-- Step 1: Input images -->
-  <text x="400" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a90e2">Step 1: Provide 3-5 images of your subject</text>
-  <rect x="170" y="65" width="70" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="205" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4a90e2">img</text>
-  <rect x="260" y="65" width="70" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="295" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4a90e2">img</text>
-  <rect x="350" y="65" width="70" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="385" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4a90e2">img</text>
-  <rect x="440" y="65" width="70" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="475" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4a90e2">img</text>
-  <rect x="530" y="65" width="70" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="565" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#4a90e2">img</text>
-  <text x="400" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Your dog in different poses/lighting</text>
-
-  <!-- Arrow -->
-  <line x1="400" y1="140" x2="400" y2="160" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Step 2: Identifier -->
-  <rect x="180" y="160" width="440" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="400" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#856404">Step 2: Choose unique identifier: "sks dog"</text>
-  <text x="400" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">(rare token + class word)</text>
-
-  <!-- Arrow -->
-  <line x1="400" y1="210" x2="400" y2="235" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Step 3: Fine-tune -->
-  <rect x="100" y="235" width="600" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="400" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">Step 3: Fine-tune the entire diffusion model</text>
-  <text x="400" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Model learns to associate "sks" with YOUR specific dog</text>
-  <text x="400" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Also trains on generic "dog" images (prior preservation)</text>
-  <text x="400" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#777">Prevents forgetting what dogs look like in general</text>
-
-  <!-- Arrow -->
-  <line x1="400" y1="315" x2="400" y2="340" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Step 4: Generate -->
-  <rect x="100" y="340" width="600" height="95" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#4a90e2">Step 4: Generate with any prompt containing "sks dog"</text>
-  <rect x="130" y="375" width="220" height="25" rx="3" fill="#fff" stroke="#4a90e2"/>
-  <text x="240" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">"A sks dog playing in snow"</text>
-  <rect x="370" y="375" width="220" height="25" rx="3" fill="#fff" stroke="#4a90e2"/>
-  <text x="480" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">"A sks dog as an astronaut"</text>
-  <rect x="240" y="405" width="320" height="25" rx="3" fill="#fff" stroke="#4a90e2"/>
-  <text x="400" y="422" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">"Oil painting of sks dog by Monet"</text>
+  <text x="640" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">DreamBooth: How It Works</text>
+  <text x="640" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#4a90e2">Step 1: Provide 3-5 images of your subject</text>
+  <rect x="272" y="104" width="112" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="328" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#4a90e2">img</text>
+  <rect x="416" y="104" width="112" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="472" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#4a90e2">img</text>
+  <rect x="560" y="104" width="112" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="616" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#4a90e2">img</text>
+  <rect x="704" y="104" width="112" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="760" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#4a90e2">img</text>
+  <rect x="848" y="104" width="112" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="904" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#4a90e2">img</text>
+  <text x="640" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Your dog in different poses/lighting</text>
+  <line x1="640" y1="224" x2="640" y2="256" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="288" y="256" width="704" height="80" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="640" y="292.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#856404">Step 2: Choose unique identifier: "sks dog"</text>
+  <text x="640" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">(rare token + class word)</text>
+  <line x1="640" y1="336" x2="640" y2="376" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="160" y="376" width="960" height="128" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="640" y="412.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#28a745">Step 3: Fine-tune the entire diffusion model</text>
+  <text x="640" y="444.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#333">Model learns to associate "sks" with YOUR specific dog</text>
+  <text x="640" y="472" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#555">Also trains on generic "dog" images (prior preservation)</text>
+  <text x="640" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#777">Prevents forgetting what dogs look like in general</text>
+  <line x1="640" y1="504" x2="640" y2="544" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="160" y="544" width="960" height="152" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="580.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#4a90e2">Step 4: Generate with any prompt containing "sks dog"</text>
+  <rect x="208" y="600" width="352" height="40" rx="4.8" fill="#fff" stroke="#4a90e2" />
+  <text x="384" y="627.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#333">"A sks dog playing in snow"</text>
+  <rect x="592" y="600" width="352" height="40" rx="4.8" fill="#fff" stroke="#4a90e2" />
+  <text x="768" y="627.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#333">"A sks dog as an astronaut"</text>
+  <rect x="384" y="648" width="512" height="40" rx="4.8" fill="#fff" stroke="#4a90e2" />
+  <text x="640" y="675.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#333">"Oil painting of sks dog by Monet"</text>
 </svg>

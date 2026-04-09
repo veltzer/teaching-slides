@@ -1,40 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="430" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arw7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arw7" markerWidth="22.8571" markerHeight="11.7209" refX="20.5714" refY="5.8605" orient="auto">
+      <polygon points="0,16.7442 8,0" fill="#555" />
     </marker>
   </defs>
-  <rect x="1" y="1" width="558" height="428" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="558" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="280" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">docker run — Container Startup Flow</text>
-  <!-- Steps -->
-  <rect x="100" y="44" width="360" height="28" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
-  <text x="280" y="63" font-size="12" fill="#222" text-anchor="middle">1. docker run nginx</text>
-  <line x1="280" y1="72" x2="280" y2="86" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="86" width="360" height="28" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="280" y="105" font-size="12" fill="#222" text-anchor="middle">2. CLI sends request to dockerd via REST API</text>
-  <line x1="280" y1="114" x2="280" y2="128" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="128" width="360" height="28" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1"/>
-  <text x="280" y="147" font-size="12" fill="#222" text-anchor="middle">3. dockerd pulls image, creates container record</text>
-  <line x1="280" y1="156" x2="280" y2="170" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="170" width="360" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="280" y="189" font-size="12" fill="#222" text-anchor="middle">4. dockerd calls containerd via gRPC</text>
-  <line x1="280" y1="198" x2="280" y2="212" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="212" width="360" height="28" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="280" y="231" font-size="12" fill="#222" text-anchor="middle">5. containerd creates a task + shim process</text>
-  <line x1="280" y1="240" x2="280" y2="254" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="254" width="360" height="28" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="280" y="273" font-size="12" fill="#222" text-anchor="middle">6. shim calls runc to create the container</text>
-  <line x1="280" y1="282" x2="280" y2="296" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="296" width="360" height="28" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="1"/>
-  <text x="280" y="315" font-size="12" fill="#222" text-anchor="middle">7. runc sets up namespaces, cgroups, mounts</text>
-  <line x1="280" y1="324" x2="280" y2="338" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="338" width="360" height="28" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="280" y="357" font-size="12" fill="#222" text-anchor="middle">8. runc executes the container entrypoint</text>
-  <line x1="280" y1="366" x2="280" y2="380" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="380" width="360" height="22" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
-  <text x="280" y="396" font-size="12" fill="#222" text-anchor="middle">9. runc exits, shim takes over as parent</text>
-  <line x1="280" y1="402" x2="280" y2="410" stroke="#555" stroke-width="1.5" marker-end="url(#arw7)"/>
-  <rect x="100" y="410" width="360" height="16" rx="4" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="280" y="423" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="middle">10. Container process is running &#10003;</text>
+  <rect x="2.2857" y="1.6744" width="1275.4286" height="716.6512" rx="6.6977" fill="#fff" stroke="#333" stroke-width="2.5116" />
+  <rect x="2.2857" y="1.6744" width="1275.4286" height="56.9302" rx="6.6977" fill="#e3f2fd" stroke="#333" stroke-width="2.5116" />
+  <text x="640" y="38.5116" font-size="25.1163" font-weight="bold" fill="#222" text-anchor="middle">docker run — Container Startup Flow</text>
+  <rect x="228.5714" y="73.6744" width="822.8571" height="46.8837" rx="6.6977" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.6744" />
+  <text x="640" y="105.4884" font-size="20.093" fill="#222" text-anchor="middle">1. docker run nginx</text>
+  <line x1="640" y1="120.5581" x2="640" y2="144" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="144" width="822.8571" height="46.8837" rx="6.6977" fill="#f0f4f8" stroke="#555" stroke-width="1.6744" />
+  <text x="640" y="175.814" font-size="20.093" fill="#222" text-anchor="middle">2. CLI sends request to dockerd via REST API</text>
+  <line x1="640" y1="190.8837" x2="640" y2="214.3256" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="214.3256" width="822.8571" height="46.8837" rx="6.6977" fill="#f0f4f8" stroke="#555" stroke-width="1.6744" />
+  <text x="640" y="246.1395" font-size="20.093" fill="#222" text-anchor="middle">3. dockerd pulls image, creates container record</text>
+  <line x1="640" y1="261.2093" x2="640" y2="284.6512" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="284.6512" width="822.8571" height="46.8837" rx="6.6977" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6744" />
+  <text x="640" y="316.4651" font-size="20.093" fill="#222" text-anchor="middle">4. dockerd calls containerd via gRPC</text>
+  <line x1="640" y1="331.5349" x2="640" y2="354.9767" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="354.9767" width="822.8571" height="46.8837" rx="6.6977" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.6744" />
+  <text x="640" y="386.7907" font-size="20.093" fill="#222" text-anchor="middle">5. containerd creates a task + shim process</text>
+  <line x1="640" y1="401.8605" x2="640" y2="425.3023" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="425.3023" width="822.8571" height="46.8837" rx="6.6977" fill="#fff9c4" stroke="#f9a825" stroke-width="1.6744" />
+  <text x="640" y="457.1163" font-size="20.093" fill="#222" text-anchor="middle">6. shim calls runc to create the container</text>
+  <line x1="640" y1="472.186" x2="640" y2="495.6279" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="495.6279" width="822.8571" height="46.8837" rx="6.6977" fill="#fff9c4" stroke="#f9a825" stroke-width="1.6744" />
+  <text x="640" y="527.4419" font-size="20.093" fill="#222" text-anchor="middle">7. runc sets up namespaces, cgroups, mounts</text>
+  <line x1="640" y1="542.5116" x2="640" y2="565.9535" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="565.9535" width="822.8571" height="46.8837" rx="6.6977" fill="#fff3e0" stroke="#e65100" stroke-width="1.6744" />
+  <text x="640" y="597.7674" font-size="20.093" fill="#222" text-anchor="middle">8. runc executes the container entrypoint</text>
+  <line x1="640" y1="612.8372" x2="640" y2="636.2791" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="636.2791" width="822.8571" height="36.8372" rx="6.6977" fill="#fff3e0" stroke="#e65100" stroke-width="1.6744" />
+  <text x="640" y="663.0698" font-size="20.093" fill="#222" text-anchor="middle">9. runc exits, shim takes over as parent</text>
+  <line x1="640" y1="673.1163" x2="640" y2="686.5116" stroke="#555" stroke-width="2.5116" marker-end="url(#arw7)" />
+  <rect x="228.5714" y="686.5116" width="822.8571" height="26.7907" rx="6.6977" fill="#a5d6a7" stroke="#2e7d32" stroke-width="2.5116" />
+  <text x="640" y="708.2791" font-size="20.093" font-weight="bold" fill="#1b5e20" text-anchor="middle">10. Container process is running ✓</text>
 </svg>

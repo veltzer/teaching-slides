@@ -1,66 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 480" font-family="Arial, sans-serif">
-  <!-- Title -->
-  <text x="325" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">SYN Proxy Operation</text>
-
-  <!-- Actors -->
-  <rect x="50" y="50" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Client</text>
-
-  <rect x="260" y="50" width="130" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="325" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Firewall/Proxy</text>
-
-  <rect x="490" y="50" width="100" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="540" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Server</text>
-
-  <!-- Lifelines -->
-  <line x1="100" y1="90" x2="100" y2="450" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="325" y1="90" x2="325" y2="450" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="540" y1="90" x2="540" y2="450" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
-
-  <!-- Phase 1: Client to Firewall -->
-  <!-- SYN -->
-  <line x1="105" y1="130" x2="320" y2="130" stroke="#4a90e2" stroke-width="2" marker-end="url(#synarr)"/>
-  <text x="212" y="123" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">SYN</text>
-
-  <!-- Note -->
-  <text x="400" y="160" font-size="11" fill="#888">(Firewall handles</text>
-  <text x="400" y="175" font-size="11" fill="#888">handshake first)</text>
-
-  <!-- SYN-ACK back -->
-  <line x1="320" y1="190" x2="105" y2="190" stroke="#4a90e2" stroke-width="2" marker-end="url(#synarr)"/>
-  <text x="212" y="183" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">SYN-ACK</text>
-
-  <!-- ACK -->
-  <line x1="105" y1="230" x2="320" y2="230" stroke="#4a90e2" stroke-width="2" marker-end="url(#synarr)"/>
-  <text x="212" y="223" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">ACK</text>
-
-  <!-- Client is legit label -->
-  <rect x="240" y="250" width="170" height="25" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="325" y="267" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Client is legit!</text>
-
-  <!-- Phase 2: Firewall to Server -->
-  <!-- SYN -->
-  <line x1="330" y1="300" x2="535" y2="300" stroke="#28a745" stroke-width="2" marker-end="url(#synarr2)"/>
-  <text x="432" y="293" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">SYN</text>
-
-  <!-- SYN-ACK -->
-  <line x1="535" y1="340" x2="330" y2="340" stroke="#28a745" stroke-width="2" marker-end="url(#synarr2)"/>
-  <text x="432" y="333" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">SYN-ACK</text>
-
-  <!-- ACK -->
-  <line x1="330" y1="380" x2="535" y2="380" stroke="#28a745" stroke-width="2" marker-end="url(#synarr2)"/>
-  <text x="432" y="373" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">ACK</text>
-
-  <!-- Connection established -->
-  <rect x="80" y="420" width="480" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="320" y="440" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Proxied Connection Established</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="45" text-anchor="middle" font-size="27" font-weight="bold" fill="#333">SYN Proxy Operation</text>
+  <rect x="98.4615" y="75" width="196.9231" height="60" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="196.9231" y="112.5" text-anchor="middle" font-size="21" font-weight="bold" fill="#333">Client</text>
+  <rect x="512" y="75" width="256" height="60" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="640" y="112.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#333">Firewall/Proxy</text>
+  <rect x="964.9231" y="75" width="196.9231" height="60" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
+  <text x="1063.3846" y="112.5" text-anchor="middle" font-size="21" font-weight="bold" fill="#333">Server</text>
+  <line x1="196.9231" y1="135" x2="196.9231" y2="675" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6 4.5" />
+  <line x1="640" y1="135" x2="640" y2="675" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6 4.5" />
+  <line x1="1063.3846" y1="135" x2="1063.3846" y2="675" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6 4.5" />
+  <line x1="206.7692" y1="195" x2="630.1538" y2="195" stroke="#4a90e2" stroke-width="3" marker-end="url(#synarr)" />
+  <text x="417.4769" y="184.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#4a90e2">SYN</text>
+  <text x="787.6923" y="240" font-size="16.5" fill="#888">(Firewall handles</text>
+  <text x="787.6923" y="262.5" font-size="16.5" fill="#888">handshake first)</text>
+  <line x1="630.1538" y1="285" x2="206.7692" y2="285" stroke="#4a90e2" stroke-width="3" marker-end="url(#synarr)" />
+  <text x="417.4769" y="274.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#4a90e2">SYN-ACK</text>
+  <line x1="206.7692" y1="345" x2="630.1538" y2="345" stroke="#4a90e2" stroke-width="3" marker-end="url(#synarr)" />
+  <text x="417.4769" y="334.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#4a90e2">ACK</text>
+  <rect x="472.6154" y="375" width="334.7692" height="37.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="2.25" />
+  <text x="640" y="400.5" text-anchor="middle" font-size="18" font-weight="bold" fill="#28a745">Client is legit!</text>
+  <line x1="649.8462" y1="450" x2="1053.5385" y2="450" stroke="#28a745" stroke-width="3" marker-end="url(#synarr2)" />
+  <text x="850.7077" y="439.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#28a745">SYN</text>
+  <line x1="1053.5385" y1="510" x2="649.8462" y2="510" stroke="#28a745" stroke-width="3" marker-end="url(#synarr2)" />
+  <text x="850.7077" y="499.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#28a745">SYN-ACK</text>
+  <line x1="649.8462" y1="570" x2="1053.5385" y2="570" stroke="#28a745" stroke-width="3" marker-end="url(#synarr2)" />
+  <text x="850.7077" y="559.5" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#28a745">ACK</text>
+  <rect x="157.5385" y="630" width="945.2308" height="45" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="630.1538" y="660" text-anchor="middle" font-size="19.5" font-weight="bold" fill="#4a90e2">Proxied Connection Established</text>
   <defs>
-    <marker id="synarr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="synarr" markerWidth="19.6923" markerHeight="10.5" refX="19.6923" refY="5.25" orient="auto">
+      <polygon points="0,15 6.8923,0" fill="#4a90e2" />
     </marker>
-    <marker id="synarr2" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="synarr2" markerWidth="19.6923" markerHeight="10.5" refX="19.6923" refY="5.25" orient="auto">
+      <polygon points="0,15 6.8923,0" fill="#28a745" />
     </marker>
   </defs>
 </svg>

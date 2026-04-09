@@ -1,29 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="280" viewBox="0 0 660 280">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arr" markerWidth="19.3939" markerHeight="18" refX="17.4545" refY="9" orient="auto">
+      <polygon points="0,25.7143 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect width="660" height="280" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="26" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">SYN Scan (-sS) — Default for root</text>
-  <rect x="30" y="40" width="100" height="32" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="80" y="61" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Scanner</text>
-  <rect x="530" y="40" width="100" height="32" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="580" y="61" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Target</text>
-  <line x1="80" y1="72" x2="80" y2="260" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <line x1="580" y1="72" x2="580" y2="260" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
-  <!-- SYN -->
-  <line x1="80" y1="95" x2="570" y2="95" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="330" y="90" font-family="sans-serif" font-size="12" fill="#333" text-anchor="middle">SYN</text>
-  <!-- SYN-ACK (open) -->
-  <line x1="580" y1="130" x2="90" y2="130" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="330" y="126" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="middle">SYN-ACK → Port OPEN</text>
-  <!-- RST back -->
-  <line x1="80" y1="155" x2="570" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="330" y="151" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">RST (close without completing)</text>
-  <!-- RST (closed) -->
-  <line x1="580" y1="190" x2="90" y2="190" stroke="#e65100" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="330" y="186" font-family="sans-serif" font-size="12" fill="#e65100" text-anchor="middle">RST → Port CLOSED</text>
-  <!-- no response -->
-  <text x="330" y="228" font-family="sans-serif" font-size="12" fill="#777" text-anchor="middle" font-style="italic">[no response] → Port FILTERED (firewall dropping)</text>
+  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="640" y="66.8571" font-family="sans-serif" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">SYN Scan (-sS) — Default for root</text>
+  <rect x="58.1818" y="102.8571" width="193.9394" height="82.2857" fill="#e3f2fd" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="155.1515" y="156.8571" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#1565c0" text-anchor="middle">Scanner</text>
+  <rect x="1027.8788" y="102.8571" width="193.9394" height="82.2857" fill="#e3f2fd" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="1124.8485" y="156.8571" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#1565c0" text-anchor="middle">Target</text>
+  <line x1="155.1515" y1="185.1429" x2="155.1515" y2="668.5714" stroke="#888" stroke-width="1.9394" stroke-dasharray="7.7576 5.8182" />
+  <line x1="1124.8485" y1="185.1429" x2="1124.8485" y2="668.5714" stroke="#888" stroke-width="1.9394" stroke-dasharray="7.7576 5.8182" />
+  <line x1="155.1515" y1="244.2857" x2="1105.4545" y2="244.2857" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="640" y="231.4286" font-family="sans-serif" font-size="23.2727" fill="#333" text-anchor="middle">SYN</text>
+  <line x1="1124.8485" y1="334.2857" x2="174.5455" y2="334.2857" stroke="#2e7d32" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="640" y="324" font-family="sans-serif" font-size="23.2727" fill="#2e7d32" text-anchor="middle">SYN-ACK → Port OPEN</text>
+  <line x1="155.1515" y1="398.5714" x2="1105.4545" y2="398.5714" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="640" y="388.2857" font-family="sans-serif" font-size="23.2727" fill="#555" text-anchor="middle">RST (close without completing)</text>
+  <line x1="1124.8485" y1="488.5714" x2="174.5455" y2="488.5714" stroke="#e65100" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="640" y="478.2857" font-family="sans-serif" font-size="23.2727" fill="#e65100" text-anchor="middle">RST → Port CLOSED</text>
+  <text x="640" y="586.2857" font-family="sans-serif" font-size="23.2727" fill="#777" text-anchor="middle" font-style="italic">[no response] → Port FILTERED (firewall dropping)</text>
 </svg>

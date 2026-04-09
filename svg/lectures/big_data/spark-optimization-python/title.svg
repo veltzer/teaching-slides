@@ -1,65 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#16213e"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#1a1a2e" />
+      <stop offset="100%" style="stop-color:#16213e" />
     </linearGradient>
-    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e25822"/>
-      <stop offset="100%" style="stop-color:#f5a623"/>
+    <linearGradient id="spark" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#e25822" />
+      <stop offset="100%" style="stop-color:#f5a623" />
     </linearGradient>
-    <linearGradient id="python" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#306998"/>
-      <stop offset="100%" style="stop-color:#ffd43b"/>
+    <linearGradient id="python" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#306998" />
+      <stop offset="100%" style="stop-color:#ffd43b" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <!-- Grid pattern background -->
-  <g opacity="0.08" stroke="#ffffff" stroke-width="0.5">
-    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
-    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
-    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
-    <line x1="0" y1="350" x2="800" y2="350"/>
-    <line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/>
-    <line x1="300" y1="0" x2="300" y2="400"/><line x1="400" y1="0" x2="400" y2="400"/>
-    <line x1="500" y1="0" x2="500" y2="400"/><line x1="600" y1="0" x2="600" y2="400"/>
-    <line x1="700" y1="0" x2="700" y2="400"/>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <g opacity="0.08" stroke="#ffffff" stroke-width="0.8">
+    <line x1="0" y1="90" x2="1280" y2="90" />
+    <line x1="0" y1="180" x2="1280" y2="180" />
+    <line x1="0" y1="270" x2="1280" y2="270" />
+    <line x1="0" y1="360" x2="1280" y2="360" />
+    <line x1="0" y1="450" x2="1280" y2="450" />
+    <line x1="0" y1="540" x2="1280" y2="540" />
+    <line x1="0" y1="630" x2="1280" y2="630" />
+    <line x1="160" y1="0" x2="160" y2="720" />
+    <line x1="320" y1="0" x2="320" y2="720" />
+    <line x1="480" y1="0" x2="480" y2="720" />
+    <line x1="640" y1="0" x2="640" y2="720" />
+    <line x1="800" y1="0" x2="800" y2="720" />
+    <line x1="960" y1="0" x2="960" y2="720" />
+    <line x1="1120" y1="0" x2="1120" y2="720" />
   </g>
-  <!-- Spark lightning bolt -->
   <g transform="translate(150, 80)">
-    <polygon points="60,0 20,90 50,90 30,160 100,60 65,60 90,0" fill="url(#spark)" opacity="0.9"/>
+    <polygon points="96,0 32,162 80,162 48,288 160,108 104,108 144,0" fill="url(#spark)" opacity="0.9" />
   </g>
-  <!-- Python logo stylized -->
   <g transform="translate(550, 100)">
-    <circle cx="40" cy="30" r="28" fill="none" stroke="#306998" stroke-width="6" opacity="0.8"/>
-    <circle cx="80" cy="70" r="28" fill="none" stroke="#ffd43b" stroke-width="6" opacity="0.8"/>
-    <path d="M40,58 L40,70 Q40,98 68,98 L80,98" fill="none" stroke="#306998" stroke-width="6" opacity="0.8"/>
-    <path d="M80,42 L80,30 Q80,2 52,2 L40,2" fill="none" stroke="#ffd43b" stroke-width="6" opacity="0.8"/>
+    <circle cx="64" cy="54" r="44.8" fill="none" stroke="#306998" stroke-width="9.6" opacity="0.8" />
+    <circle cx="128" cy="126" r="44.8" fill="none" stroke="#ffd43b" stroke-width="9.6" opacity="0.8" />
+    <path d="M 64 104.4 L 64 126 Q 64 176.4 108.8 176.4 L 128 176.4" fill="none" stroke="#306998" stroke-width="9.6" opacity="0.8" />
+    <path d="M 128 75.6 L 128 54 Q 128 3.6 83.2 3.6 L 64 3.6" fill="none" stroke="#ffd43b" stroke-width="9.6" opacity="0.8" />
   </g>
-  <!-- Performance gauge -->
   <g transform="translate(350, 120)">
-    <path d="M-50,0 A50,50 0 0,1 50,0" fill="none" stroke="#444" stroke-width="8" stroke-linecap="round"/>
-    <path d="M-50,0 A50,50 0 0,1 35,-36" fill="none" stroke="#4ecca3" stroke-width="8" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="25" y2="-40" stroke="#e25822" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="0" cy="0" r="5" fill="#e25822"/>
+    <path d="M -80 0 A 80 80 0 0 1 80 0" fill="none" stroke="#444" stroke-width="12.8" stroke-linecap="round" />
+    <path d="M -80 0 A 80 80 0 0 1 56 -64.8" fill="none" stroke="#4ecca3" stroke-width="12.8" stroke-linecap="round" />
+    <line x1="0" y1="0" x2="40" y2="-72" stroke="#e25822" stroke-width="4.8" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="8" fill="#e25822" />
   </g>
-  <!-- Data flow arrows -->
   <g opacity="0.3">
-    <path d="M100,300 Q200,280 300,300 Q400,320 500,300 Q600,280 700,300" fill="none" stroke="#4ecca3" stroke-width="2"/>
-    <path d="M100,320 Q200,300 300,320 Q400,340 500,320 Q600,300 700,320" fill="none" stroke="#e25822" stroke-width="2"/>
-    <path d="M100,340 Q200,320 300,340 Q400,360 500,340 Q600,320 700,340" fill="none" stroke="#ffd43b" stroke-width="2"/>
+    <path d="M 160 540 Q 320 504 480 540 Q 640 576 800 540 Q 960 504 1120 540" fill="none" stroke="#4ecca3" stroke-width="3.2" />
+    <path d="M 160 576 Q 320 540 480 576 Q 640 612 800 576 Q 960 540 1120 576" fill="none" stroke="#e25822" stroke-width="3.2" />
+    <path d="M 160 612 Q 320 576 480 612 Q 640 648 800 612 Q 960 576 1120 612" fill="none" stroke="#ffd43b" stroke-width="3.2" />
   </g>
-  <!-- Partition blocks -->
   <g transform="translate(100, 250)" opacity="0.5">
-    <rect x="0" y="0" width="30" height="20" rx="3" fill="#e25822"/>
-    <rect x="35" y="0" width="60" height="20" rx="3" fill="#e25822"/>
-    <rect x="100" y="0" width="20" height="20" rx="3" fill="#e25822"/>
-    <rect x="125" y="0" width="45" height="20" rx="3" fill="#e25822"/>
-    <rect x="175" y="0" width="15" height="20" rx="3" fill="#4ecca3"/>
+    <rect x="0" y="0" width="48" height="36" rx="4.8" fill="#e25822" />
+    <rect x="56" y="0" width="96" height="36" rx="4.8" fill="#e25822" />
+    <rect x="160" y="0" width="32" height="36" rx="4.8" fill="#e25822" />
+    <rect x="200" y="0" width="72" height="36" rx="4.8" fill="#e25822" />
+    <rect x="280" y="0" width="24" height="36" rx="4.8" fill="#4ecca3" />
   </g>
-  <!-- Decorative dots -->
-  <circle cx="50" cy="50" r="3" fill="#4ecca3" opacity="0.4"/>
-  <circle cx="750" cy="50" r="3" fill="#e25822" opacity="0.4"/>
-  <circle cx="50" cy="350" r="3" fill="#ffd43b" opacity="0.4"/>
-  <circle cx="750" cy="350" r="3" fill="#306998" opacity="0.4"/>
+  <circle cx="80" cy="90" r="4.8" fill="#4ecca3" opacity="0.4" />
+  <circle cx="1200" cy="90" r="4.8" fill="#e25822" opacity="0.4" />
+  <circle cx="80" cy="630" r="4.8" fill="#ffd43b" opacity="0.4" />
+  <circle cx="1200" cy="630" r="4.8" fill="#306998" opacity="0.4" />
 </svg>

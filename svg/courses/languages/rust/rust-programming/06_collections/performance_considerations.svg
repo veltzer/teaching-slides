@@ -1,49 +1,49 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Collection Performance Comparison</text>
-  <rect x="20" y="25" width="80" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="60" y="42" text-anchor="middle" font-size="10" font-weight="bold">Operation</text>
-  <rect x="110" y="25" width="110" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="165" y="42" text-anchor="middle" font-size="10" font-weight="bold">Vec&lt;T&gt;</text>
-  <rect x="230" y="25" width="110" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="285" y="42" text-anchor="middle" font-size="10" font-weight="bold">HashMap&lt;K,V&gt;</text>
-  <rect x="350" y="25" width="110" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="405" y="42" text-anchor="middle" font-size="10" font-weight="bold">BTreeMap</text>
-  <rect x="470" y="25" width="110" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="525" y="42" text-anchor="middle" font-size="10" font-weight="bold">VecDeque</text>
-  <rect x="20" y="55" width="80" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="60" y="70" text-anchor="middle" font-size="10">Push</text>
-  <rect x="110" y="55" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="165" y="70" text-anchor="middle" font-size="10">O(1) amortized</text>
-  <rect x="230" y="55" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="285" y="70" text-anchor="middle" font-size="10">O(1) avg</text>
-  <rect x="350" y="55" width="110" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="405" y="70" text-anchor="middle" font-size="10">O(log n)</text>
-  <rect x="470" y="55" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="525" y="70" text-anchor="middle" font-size="10">O(1) amortized</text>
-  <rect x="20" y="80" width="80" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="60" y="95" text-anchor="middle" font-size="10">Lookup</text>
-  <rect x="110" y="80" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="165" y="95" text-anchor="middle" font-size="10">O(1) by index</text>
-  <rect x="230" y="80" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="285" y="95" text-anchor="middle" font-size="10">O(1) avg</text>
-  <rect x="350" y="80" width="110" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="405" y="95" text-anchor="middle" font-size="10">O(log n)</text>
-  <rect x="470" y="80" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="525" y="95" text-anchor="middle" font-size="10">O(1) by index</text>
-  <rect x="20" y="105" width="80" height="22" fill="#fff3e0" stroke="#333" stroke-width="1"/>
-  <text x="60" y="120" text-anchor="middle" font-size="10">Search</text>
-  <rect x="110" y="105" width="110" height="22" fill="#ffebee" stroke="#333" stroke-width="1"/>
-  <text x="165" y="120" text-anchor="middle" font-size="10">O(n) linear</text>
-  <rect x="230" y="105" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="285" y="120" text-anchor="middle" font-size="10">O(1) by key</text>
-  <rect x="350" y="105" width="110" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1"/>
-  <text x="405" y="120" text-anchor="middle" font-size="10">O(log n) by key</text>
-  <rect x="470" y="105" width="110" height="22" fill="#ffebee" stroke="#333" stroke-width="1"/>
-  <text x="525" y="120" text-anchor="middle" font-size="10">O(n) linear</text>
-  <rect x="50" y="140" width="240" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="170" y="157" text-anchor="middle" font-size="10">Pre-allocate: Vec::with_capacity(n)</text>
-  <rect x="310" y="140" width="240" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="430" y="157" text-anchor="middle" font-size="10">HashMap::with_capacity(n) avoids rehash</text>
-  <rect x="100" y="175" width="400" height="22" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="190" text-anchor="middle" font-size="10">Choose collection by access pattern, not habit</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Collection Performance Comparison</text>
+  <rect x="42.6667" y="90" width="170.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="128" y="151.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Operation</text>
+  <rect x="234.6667" y="90" width="234.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="352" y="151.2" text-anchor="middle" font-size="21.3333" font-weight="bold">Vec&lt;T&gt;</text>
+  <rect x="490.6667" y="90" width="234.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="608" y="151.2" text-anchor="middle" font-size="21.3333" font-weight="bold">HashMap&lt;K,V&gt;</text>
+  <rect x="746.6667" y="90" width="234.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="864" y="151.2" text-anchor="middle" font-size="21.3333" font-weight="bold">BTreeMap</text>
+  <rect x="1002.6667" y="90" width="234.6667" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="1120" y="151.2" text-anchor="middle" font-size="21.3333" font-weight="bold">VecDeque</text>
+  <rect x="42.6667" y="198" width="170.6667" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
+  <text x="128" y="252" text-anchor="middle" font-size="21.3333">Push</text>
+  <rect x="234.6667" y="198" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="352" y="252" text-anchor="middle" font-size="21.3333">O(1) amortized</text>
+  <rect x="490.6667" y="198" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="608" y="252" text-anchor="middle" font-size="21.3333">O(1) avg</text>
+  <rect x="746.6667" y="198" width="234.6667" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
+  <text x="864" y="252" text-anchor="middle" font-size="21.3333">O(log n)</text>
+  <rect x="1002.6667" y="198" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="1120" y="252" text-anchor="middle" font-size="21.3333">O(1) amortized</text>
+  <rect x="42.6667" y="288" width="170.6667" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
+  <text x="128" y="342" text-anchor="middle" font-size="21.3333">Lookup</text>
+  <rect x="234.6667" y="288" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="352" y="342" text-anchor="middle" font-size="21.3333">O(1) by index</text>
+  <rect x="490.6667" y="288" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="608" y="342" text-anchor="middle" font-size="21.3333">O(1) avg</text>
+  <rect x="746.6667" y="288" width="234.6667" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
+  <text x="864" y="342" text-anchor="middle" font-size="21.3333">O(log n)</text>
+  <rect x="1002.6667" y="288" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="1120" y="342" text-anchor="middle" font-size="21.3333">O(1) by index</text>
+  <rect x="42.6667" y="378" width="170.6667" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" />
+  <text x="128" y="432" text-anchor="middle" font-size="21.3333">Search</text>
+  <rect x="234.6667" y="378" width="234.6667" height="79.2" fill="#ffebee" stroke="#333" stroke-width="2.1333" />
+  <text x="352" y="432" text-anchor="middle" font-size="21.3333">O(n) linear</text>
+  <rect x="490.6667" y="378" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="608" y="432" text-anchor="middle" font-size="21.3333">O(1) by key</text>
+  <rect x="746.6667" y="378" width="234.6667" height="79.2" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" />
+  <text x="864" y="432" text-anchor="middle" font-size="21.3333">O(log n) by key</text>
+  <rect x="1002.6667" y="378" width="234.6667" height="79.2" fill="#ffebee" stroke="#333" stroke-width="2.1333" />
+  <text x="1120" y="432" text-anchor="middle" font-size="21.3333">O(n) linear</text>
+  <rect x="106.6667" y="504" width="512" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="362.6667" y="565.2" text-anchor="middle" font-size="21.3333">Pre-allocate: Vec::with_capacity(n)</text>
+  <rect x="661.3333" y="504" width="512" height="90" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="917.3333" y="565.2" text-anchor="middle" font-size="21.3333">HashMap::with_capacity(n) avoids rehash</text>
+  <rect x="213.3333" y="630" width="853.3333" height="79.2" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="640" y="684" text-anchor="middle" font-size="21.3333">Choose collection by access pattern, not habit</text>
 </svg>

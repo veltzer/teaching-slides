@@ -1,57 +1,47 @@
-<svg viewBox="0 0 850 350" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="14.4" refX="15.0588" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.2706,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="15.0588" markerHeight="14.4" refX="15.0588" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.2706,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Dead Letter Queue Pattern</text>
-  <!-- Producer -->
-  <rect x="30" y="80" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="85" y="105" text-anchor="middle" font-size="12" fill="#333">Producer</text>
-  <!-- Main Queue -->
-  <rect x="195" y="70" width="130" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="102" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Main Queue</text>
-  <!-- Consumer -->
-  <rect x="385" y="80" width="110" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="440" y="105" text-anchor="middle" font-size="12" fill="#333">Consumer</text>
-  <!-- Success -->
-  <rect x="560" y="40" width="140" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="630" y="62" text-anchor="middle" font-size="11" fill="#28a745">Process Complete</text>
-  <!-- Retry chain -->
-  <rect x="560" y="90" width="80" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-  <text x="600" y="110" text-anchor="middle" font-size="10" fill="#333">Retry 1</text>
-  <rect x="660" y="90" width="80" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="700" y="110" text-anchor="middle" font-size="10" fill="#333">Retry 2</text>
-  <rect x="760" y="90" width="80" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
-  <text x="800" y="110" text-anchor="middle" font-size="10" fill="#333">Retry 3</text>
-  <!-- DLQ -->
-  <rect x="700" y="160" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="770" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Dead Letter</text>
-  <text x="770" y="197" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Queue</text>
-  <!-- Manual Review -->
-  <rect x="550" y="230" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="620" y="255" text-anchor="middle" font-size="12" fill="#333">Manual Review</text>
-  <!-- Reprocess -->
-  <rect x="340" y="230" width="130" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="405" y="255" text-anchor="middle" font-size="12" fill="#333">Reprocess</text>
-  <!-- Arrows -->
-  <line x1="140" y1="100" x2="193" y2="97" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="325" y1="97" x2="383" y2="100" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="495" y1="90" x2="558" y2="58" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="530" y="68" font-size="10" fill="#28a745">Success</text>
-  <line x1="495" y1="105" x2="558" y2="105" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <text x="528" y="100" font-size="10" fill="#dc3545">Fail</text>
-  <line x1="640" y1="105" x2="658" y2="105" stroke="#dc3545" stroke-width="1" marker-end="url(#arrowhead-red)"/>
-  <line x1="740" y1="105" x2="758" y2="105" stroke="#dc3545" stroke-width="1" marker-end="url(#arrowhead-red)"/>
-  <line x1="800" y1="120" x2="785" y2="158" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <text x="815" y="140" font-size="10" fill="#dc3545">Max retries</text>
-  <line x1="700" y1="195" x2="692" y2="240" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="550" y1="250" x2="472" y2="250" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="375" y1="230" x2="280" y2="127" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="310" y="175" font-size="10" fill="#4a90e2">Re-enqueue</text>
-  <!-- Note -->
-  <text x="425" y="310" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Messages that fail repeatedly are moved to the DLQ for manual inspection and reprocessing.</text>
+  <text x="640" y="51.4286" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Dead Letter Queue Pattern</text>
+  <rect x="45.1765" y="164.5714" width="165.6471" height="82.2857" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="128" y="216" text-anchor="middle" font-size="18.0706" fill="#333">Producer</text>
+  <rect x="293.6471" y="144" width="195.7647" height="113.1429" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
+  <text x="391.5294" y="209.8286" text-anchor="middle" font-size="19.5765" font-weight="bold" fill="#333">Main Queue</text>
+  <rect x="579.7647" y="164.5714" width="165.6471" height="82.2857" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="662.5882" y="216" text-anchor="middle" font-size="18.0706" fill="#333">Consumer</text>
+  <rect x="843.2941" y="82.2857" width="210.8235" height="72" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="948.7059" y="127.5429" text-anchor="middle" font-size="16.5647" fill="#28a745">Process Complete</text>
+  <rect x="843.2941" y="185.1429" width="120.4706" height="61.7143" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5059" />
+  <text x="903.5294" y="226.2857" text-anchor="middle" font-size="15.0588" fill="#333">Retry 1</text>
+  <rect x="993.8824" y="185.1429" width="120.4706" height="61.7143" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
+  <text x="1054.1176" y="226.2857" text-anchor="middle" font-size="15.0588" fill="#333">Retry 2</text>
+  <rect x="1144.4706" y="185.1429" width="120.4706" height="61.7143" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5059" />
+  <text x="1204.7059" y="226.2857" text-anchor="middle" font-size="15.0588" fill="#333">Retry 3</text>
+  <rect x="1054.1176" y="329.1429" width="210.8235" height="92.5714" rx="7.5294" fill="#f8d7da" stroke="#dc3545" stroke-width="3.0118" />
+  <text x="1159.5294" y="370.2857" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#dc3545">Dead Letter</text>
+  <text x="1159.5294" y="405.2571" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#dc3545">Queue</text>
+  <rect x="828.2353" y="473.1429" width="210.8235" height="82.2857" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
+  <text x="933.6471" y="524.5714" text-anchor="middle" font-size="18.0706" fill="#333">Manual Review</text>
+  <rect x="512" y="473.1429" width="195.7647" height="82.2857" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="609.8824" y="524.5714" text-anchor="middle" font-size="18.0706" fill="#333">Reprocess</text>
+  <line x1="210.8235" y1="205.7143" x2="290.6353" y2="199.5429" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="489.4118" y1="199.5429" x2="576.7529" y2="205.7143" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="745.4118" y1="185.1429" x2="840.2824" y2="119.3143" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <text x="798.1176" y="139.8857" font-size="15.0588" fill="#28a745">Success</text>
+  <line x1="745.4118" y1="216" x2="840.2824" y2="216" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrowhead-red)" />
+  <text x="795.1059" y="205.7143" font-size="15.0588" fill="#dc3545">Fail</text>
+  <line x1="963.7647" y1="216" x2="990.8706" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrowhead-red)" />
+  <line x1="1114.3529" y1="216" x2="1141.4588" y2="216" stroke="#dc3545" stroke-width="1.5059" marker-end="url(#arrowhead-red)" />
+  <line x1="1204.7059" y1="246.8571" x2="1182.1176" y2="325.0286" stroke="#dc3545" stroke-width="2.2588" marker-end="url(#arrowhead-red)" />
+  <text x="1227.2941" y="288" font-size="15.0588" fill="#dc3545">Max retries</text>
+  <line x1="1054.1176" y1="401.1429" x2="1042.0706" y2="493.7143" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="828.2353" y1="514.2857" x2="710.7765" y2="514.2857" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="564.7059" y1="473.1429" x2="421.6471" y2="261.2571" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <text x="466.8235" y="360" font-size="15.0588" fill="#4a90e2">Re-enqueue</text>
+  <text x="640" y="637.7143" text-anchor="middle" font-size="16.5647" fill="#888" font-style="italic">Messages that fail repeatedly are moved to the DLQ for manual inspection and reprocessing.</text>
 </svg>

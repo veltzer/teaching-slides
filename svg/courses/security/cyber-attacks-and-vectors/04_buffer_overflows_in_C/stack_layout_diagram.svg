@@ -1,29 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="560" height="380" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="280" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Stack Memory Layout</text>
-<text x="280" y="40" text-anchor="middle" font-size="11" fill="#888">High Address</text>
-<rect x="80" y="50" width="280" height="40" fill="#e3f2fd" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="74" text-anchor="middle" font-size="12" fill="#222222">Function Arguments</text>
-<rect x="80" y="92" width="280" height="40" fill="#ffcdd2" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="116" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Return Address</text>
-<text x="368" y="116" text-anchor="start" font-size="11" fill="#c62828">← Attacker's target</text>
-<rect x="80" y="134" width="280" height="40" fill="#fff9c4" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="158" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Saved Frame Pointer</text>
-<text x="368" y="158" text-anchor="start" font-size="11" fill="#c62828">← Can be overwritten</text>
-<rect x="80" y="176" width="280" height="40" fill="#e8f5e9" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="200" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">[Stack Canary]</text>
-<text x="368" y="200" text-anchor="start" font-size="11" fill="#c62828">← Protection mechanism</text>
-<rect x="80" y="218" width="280" height="40" fill="#f0f4f8" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="242" text-anchor="middle" font-size="12" fill="#222222">Local Variables</text>
-<rect x="80" y="260" width="280" height="40" fill="#ffe0b2" stroke="#333333" stroke-width="1.5" rx="4"/>
-<text x="220" y="284" text-anchor="middle" font-size="12" fill="#222222" font-weight="bold">Buffer[64]</text>
-<text x="368" y="284" text-anchor="start" font-size="11" fill="#c62828">← Overflow starts here</text>
-<text x="280" y="316" text-anchor="middle" font-size="11" fill="#888">Low Address  (stack grows downward ↓)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="22.8571" markerHeight="13.2632" refX="20.5714" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 8,0" fill="#555" />
+    </marker>
+    <marker id="arrl" markerWidth="22.8571" markerHeight="13.2632" refX="2.2857" refY="6.6316" orient="auto">
+      <polygon points="0,0 8,18.9474" fill="#555" />
+    </marker>
+  </defs>
+  <text x="640" y="41.6842" text-anchor="middle" font-size="26.5263" fill="#222222" font-weight="bold">Stack Memory Layout</text>
+  <text x="640" y="75.7895" text-anchor="middle" font-size="20.8421" fill="#888">High Address</text>
+  <rect x="182.8571" y="94.7368" width="640" height="75.7895" fill="#e3f2fd" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="140.2105" text-anchor="middle" font-size="22.7368" fill="#222222">Function Arguments</text>
+  <rect x="182.8571" y="174.3158" width="640" height="75.7895" fill="#ffcdd2" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="219.7895" text-anchor="middle" font-size="22.7368" fill="#222222" font-weight="bold">Return Address</text>
+  <text x="841.1429" y="219.7895" text-anchor="start" font-size="20.8421" fill="#c62828">← Attacker's target</text>
+  <rect x="182.8571" y="253.8947" width="640" height="75.7895" fill="#fff9c4" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="299.3684" text-anchor="middle" font-size="22.7368" fill="#222222" font-weight="bold">Saved Frame Pointer</text>
+  <text x="841.1429" y="299.3684" text-anchor="start" font-size="20.8421" fill="#c62828">← Can be overwritten</text>
+  <rect x="182.8571" y="333.4737" width="640" height="75.7895" fill="#e8f5e9" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="378.9474" text-anchor="middle" font-size="22.7368" fill="#222222" font-weight="bold">[Stack Canary]</text>
+  <text x="841.1429" y="378.9474" text-anchor="start" font-size="20.8421" fill="#c62828">← Protection mechanism</text>
+  <rect x="182.8571" y="413.0526" width="640" height="75.7895" fill="#f0f4f8" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="458.5263" text-anchor="middle" font-size="22.7368" fill="#222222">Local Variables</text>
+  <rect x="182.8571" y="492.6316" width="640" height="75.7895" fill="#ffe0b2" stroke="#333333" stroke-width="2.8421" rx="7.5789" />
+  <text x="502.8571" y="538.1053" text-anchor="middle" font-size="22.7368" fill="#222222" font-weight="bold">Buffer[64]</text>
+  <text x="841.1429" y="538.1053" text-anchor="start" font-size="20.8421" fill="#c62828">← Overflow starts here</text>
+  <text x="640" y="598.7368" text-anchor="middle" font-size="20.8421" fill="#888">Low Address  (stack grows downward ↓)</text>
 </svg>

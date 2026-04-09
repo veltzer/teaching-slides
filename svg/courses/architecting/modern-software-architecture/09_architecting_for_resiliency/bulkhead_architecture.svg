@@ -1,34 +1,29 @@
-<svg viewBox="0 0 800 350" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="14.4" refX="16" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <!-- Application -->
-  <rect x="30" y="140" width="140" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="100" y="167" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold">Application</text>
-  <!-- Thread Pools (Bulkheads) -->
-  <rect x="250" y="30" width="220" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="360" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Thread Pool: Service A (10)</text>
-  <rect x="250" y="130" width="220" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="360" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Thread Pool: Service B (5)</text>
-  <rect x="250" y="230" width="220" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="360" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Thread Pool: Service C (8)</text>
-  <!-- Services -->
-  <rect x="560" y="30" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="630" y="57" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service A</text>
-  <rect x="560" y="130" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="630" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service B</text>
-  <rect x="560" y="230" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="630" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service C</text>
-  <text x="630" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">(Slow)</text>
-  <!-- Arrows -->
-  <line x1="170" y1="150" x2="248" y2="55" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="170" y1="162" x2="248" y2="155" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="170" y1="175" x2="248" y2="252" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="470" y1="52" x2="558" y2="52" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="470" y1="152" x2="558" y2="152" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="470" y1="252" x2="558" y2="252" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <!-- Explanation -->
-  <text x="400" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Service C failure only exhausts its own pool - Services A and B unaffected</text>
+  <rect x="48" y="288" width="224" height="92.5714" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="160" y="343.5429" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold">Application</text>
+  <rect x="400" y="61.7143" width="352" height="92.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="576" y="117.2571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Thread Pool: Service A (10)</text>
+  <rect x="400" y="267.4286" width="352" height="92.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="576" y="322.9714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Thread Pool: Service B (5)</text>
+  <rect x="400" y="473.1429" width="352" height="92.5714" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="576" y="528.6857" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Thread Pool: Service C (8)</text>
+  <rect x="896" y="61.7143" width="224" height="92.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="1008" y="117.2571" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service A</text>
+  <rect x="896" y="267.4286" width="224" height="92.5714" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="1008" y="322.9714" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service B</text>
+  <rect x="896" y="473.1429" width="224" height="92.5714" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1008" y="518.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service C</text>
+  <text x="1008" y="551.3143" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545">(Slow)</text>
+  <line x1="272" y1="308.5714" x2="396.8" y2="113.1429" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <line x1="272" y1="333.2571" x2="396.8" y2="318.8571" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <line x1="272" y1="360" x2="396.8" y2="518.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <line x1="752" y1="106.9714" x2="892.8" y2="106.9714" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <line x1="752" y1="312.6857" x2="892.8" y2="312.6857" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <line x1="752" y1="518.4" x2="892.8" y2="518.4" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="640" y="678.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#666">Service C failure only exhausts its own pool - Services A and B unaffected</text>
 </svg>

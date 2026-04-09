@@ -1,5 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="340"><defs>
-  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-  </marker>
-</defs><rect x="10" y="10" width="660" height="320" fill="#f3e5f5" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="14" fill="#4a148c" text-anchor="start" font-weight="bold">Compaction Scheduling</text><text x="20" y="50" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Micro-batch writes (every 1 min) → 1440 files/day:</text><rect x="28" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="36" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">2KB</text><rect x="82" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="90" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">3KB</text><rect x="136" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="144" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">1KB</text><rect x="190" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="198" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">2KB</text><rect x="244" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="252" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">4KB</text><rect x="298" y="60" width="60" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="306" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">...</text><rect x="362" y="60" width="50" height="28" fill="#e1bee7" stroke="#333" stroke-width="1.5" rx="4"/><text x="370" y="79" font-family="sans-serif" font-size="11" fill="#222" text-anchor="start">3KB</text><line x1="340" y1="100" x2="340" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="348" y="120" font-family="sans-serif" font-size="11" fill="#555" text-anchor="start">Scheduled compaction (daily at 2 AM)</text><rect x="30" y="135" width="620" height="38" fill="#ce93d8" stroke="#333" stroke-width="1.5" rx="4"/><text x="40" y="151" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">Read all files for yesterday's partition, write as fewer larger files</text><line x1="340" y1="175" x2="340" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/><text x="20" y="230" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start" font-weight="bold">After compaction:</text><rect x="28" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="78" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text><rect x="228" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="278" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text><rect x="428" y="240" width="180" height="40" fill="#c8e6c9" stroke="#333" stroke-width="1.5" rx="4"/><text x="478" y="265" font-family="sans-serif" font-size="13" fill="#2e7d32" text-anchor="start" font-weight="bold">90 MB</text><text x="20" y="300" font-family="sans-serif" font-size="12" fill="#2e7d32" text-anchor="start">3 files per day  (vs 1440)</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="15.0588" markerHeight="16.9412" refX="11.2941" refY="6.3529" orient="auto">
+      <path d="M 0 0 L 0 12.7059 L 15.0588 6.3529 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="18.8235" y="21.1765" width="1242.3529" height="677.6471" fill="#f3e5f5" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="37.6471" y="63.5294" font-family="sans-serif" font-size="26.3529" fill="#4a148c" text-anchor="start" font-weight="bold">Compaction Scheduling</text>
+  <text x="37.6471" y="105.8824" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">Micro-batch writes (every 1 min) → 1440 files/day:</text>
+  <rect x="52.7059" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="67.7647" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">2KB</text>
+  <rect x="154.3529" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="169.4118" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">3KB</text>
+  <rect x="256" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="271.0588" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">1KB</text>
+  <rect x="357.6471" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="372.7059" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">2KB</text>
+  <rect x="459.2941" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="474.3529" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">4KB</text>
+  <rect x="560.9412" y="127.0588" width="112.9412" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="576" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">...</text>
+  <rect x="681.4118" y="127.0588" width="94.1176" height="59.2941" fill="#e1bee7" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="696.4706" y="167.2941" font-family="sans-serif" font-size="20.7059" fill="#222" text-anchor="start">3KB</text>
+  <line x1="640" y1="211.7647" x2="640" y2="275.2941" stroke="#555" stroke-width="2.8235" marker-end="url(#arr)" />
+  <text x="655.0588" y="254.1176" font-family="sans-serif" font-size="20.7059" fill="#555" text-anchor="start">Scheduled compaction (daily at 2 AM)</text>
+  <rect x="56.4706" y="285.8824" width="1167.0588" height="80.4706" fill="#ce93d8" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="75.2941" y="319.7647" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">Read all files for yesterday's partition, write as fewer larger files</text>
+  <line x1="640" y1="370.5882" x2="640" y2="444.7059" stroke="#555" stroke-width="2.8235" marker-end="url(#arr)" />
+  <text x="37.6471" y="487.0588" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start" font-weight="bold">After compaction:</text>
+  <rect x="52.7059" y="508.2353" width="338.8235" height="84.7059" fill="#c8e6c9" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="146.8235" y="561.1765" font-family="sans-serif" font-size="24.4706" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text>
+  <rect x="429.1765" y="508.2353" width="338.8235" height="84.7059" fill="#c8e6c9" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="523.2941" y="561.1765" font-family="sans-serif" font-size="24.4706" fill="#2e7d32" text-anchor="start" font-weight="bold">128 MB</text>
+  <rect x="805.6471" y="508.2353" width="338.8235" height="84.7059" fill="#c8e6c9" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="899.7647" y="561.1765" font-family="sans-serif" font-size="24.4706" fill="#2e7d32" text-anchor="start" font-weight="bold">90 MB</text>
+  <text x="37.6471" y="635.2941" font-family="sans-serif" font-size="22.5882" fill="#2e7d32" text-anchor="start">3 files per day  (vs 1440)</text>
+</svg>

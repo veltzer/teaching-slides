@@ -1,34 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" viewBox="0 0 660 240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arr" markerWidth="19.3939" markerHeight="21" refX="17.4545" refY="10.5" orient="auto">
+      <polygon points="0,30 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect width="660" height="240" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">JSON Web Token (JWT) Structure</text>
-  <!-- structure -->
-  <rect x="20" y="38" width="140" height="36" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="90" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">Header</text>
-  <text x="90" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">{"alg":"HS256","typ":"JWT"}</text>
-  <text x="168" y="61" font-family="sans-serif" font-size="16" fill="#999" text-anchor="middle">.</text>
-  <rect x="175" y="38" width="310" height="36" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="330" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">Payload</text>
-  <text x="330" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">{"sub":"1234","name":"John","role":"user","exp":1700000000}</text>
-  <text x="493" y="61" font-family="sans-serif" font-size="16" fill="#999" text-anchor="middle">.</text>
-  <rect x="500" y="38" width="140" height="36" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="570" y="52" font-family="sans-serif" font-size="12" font-weight="bold" fill="#e65100" text-anchor="middle">Signature</text>
-  <text x="570" y="67" font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">HMACSHA256(header.payload)</text>
-  <!-- flow -->
-  <rect x="30" y="105" width="170" height="50" fill="#e3f2fd" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="115" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">1. Login</text>
-  <text x="115" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">with credentials</text>
-  <line x1="200" y1="130" x2="238" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="240" y="105" width="170" height="50" fill="#e8f5e9" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="325" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">2. Get JWT</text>
-  <text x="325" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">token from server</text>
-  <line x1="410" y1="130" x2="448" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <rect x="450" y="105" width="180" height="50" fill="#fff3e0" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="540" y="127" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">3. Send JWT</text>
-  <text x="540" y="145" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">with every request</text>
-  <text x="330" y="195" font-family="sans-serif" font-size="12" fill="#555" text-anchor="middle">Stateless: server verifies signature without storing session state</text>
+  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="640" y="72" font-family="sans-serif" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">JSON Web Token (JWT) Structure</text>
+  <rect x="38.7879" y="114" width="271.5152" height="108" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
+  <text x="174.5455" y="156" font-family="sans-serif" font-size="23.2727" font-weight="bold" fill="#1565c0" text-anchor="middle">Header</text>
+  <text x="174.5455" y="201" font-family="sans-serif" font-size="19.3939" fill="#555" text-anchor="middle">{"alg":"HS256","typ":"JWT"}</text>
+  <text x="325.8182" y="183" font-family="sans-serif" font-size="31.0303" fill="#999" text-anchor="middle">.</text>
+  <rect x="339.3939" y="114" width="601.2121" height="108" fill="#e8f5e9" rx="7.7576" stroke="#2e7d32" stroke-width="2.9091" />
+  <text x="640" y="156" font-family="sans-serif" font-size="23.2727" font-weight="bold" fill="#2e7d32" text-anchor="middle">Payload</text>
+  <text x="640" y="201" font-family="sans-serif" font-size="19.3939" fill="#555" text-anchor="middle">{"sub":"1234","name":"John","role":"user","exp":1700000000}</text>
+  <text x="956.1212" y="183" font-family="sans-serif" font-size="31.0303" fill="#999" text-anchor="middle">.</text>
+  <rect x="969.697" y="114" width="271.5152" height="108" fill="#fff3e0" rx="7.7576" stroke="#e65100" stroke-width="2.9091" />
+  <text x="1105.4545" y="156" font-family="sans-serif" font-size="23.2727" font-weight="bold" fill="#e65100" text-anchor="middle">Signature</text>
+  <text x="1105.4545" y="201" font-family="sans-serif" font-size="19.3939" fill="#555" text-anchor="middle">HMACSHA256(header.payload)</text>
+  <rect x="58.1818" y="315" width="329.697" height="150" fill="#e3f2fd" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="223.0303" y="381" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#222" text-anchor="middle">1. Login</text>
+  <text x="223.0303" y="435" font-family="sans-serif" font-size="23.2727" fill="#555" text-anchor="middle">with credentials</text>
+  <line x1="387.8788" y1="390" x2="461.5758" y2="390" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="465.4545" y="315" width="329.697" height="150" fill="#e8f5e9" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="630.303" y="381" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#222" text-anchor="middle">2. Get JWT</text>
+  <text x="630.303" y="435" font-family="sans-serif" font-size="23.2727" fill="#555" text-anchor="middle">token from server</text>
+  <line x1="795.1515" y1="390" x2="868.8485" y2="390" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <rect x="872.7273" y="315" width="349.0909" height="150" fill="#fff3e0" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="1047.2727" y="381" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#222" text-anchor="middle">3. Send JWT</text>
+  <text x="1047.2727" y="435" font-family="sans-serif" font-size="23.2727" fill="#555" text-anchor="middle">with every request</text>
+  <text x="640" y="585" font-family="sans-serif" font-size="23.2727" fill="#555" text-anchor="middle">Stateless: server verifies signature without storing session state</text>
 </svg>

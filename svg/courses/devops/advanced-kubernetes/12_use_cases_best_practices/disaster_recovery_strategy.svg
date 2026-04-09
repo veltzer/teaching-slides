@@ -1,27 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" font-family="Arial, sans-serif">
-  <rect x="10" y="10" width="500" height="400" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="45" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Disaster Recovery Plan</text>
-  <!-- Step 1 -->
-  <rect x="30" y="65" width="460" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="50" y="87" font-size="14" font-weight="bold" fill="#333">1. etcd backup (every 30 min)</text>
-  <text x="70" y="108" font-size="12" fill="#555">Stored in S3/GCS with encryption</text>
-  <!-- Step 2 -->
-  <rect x="30" y="130" width="460" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="50" y="152" font-size="14" font-weight="bold" fill="#333">2. Velero backup (daily)</text>
-  <text x="70" y="173" font-size="12" fill="#555">Cluster state + persistent volumes</text>
-  <!-- Step 3 -->
-  <rect x="30" y="195" width="460" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="50" y="217" font-size="14" font-weight="bold" fill="#333">3. Multi-region cluster setup</text>
-  <text x="70" y="238" font-size="12" fill="#555">Active-passive or active-active</text>
-  <!-- Step 4 -->
-  <rect x="30" y="260" width="460" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="50" y="282" font-size="14" font-weight="bold" fill="#333">4. GitOps repo is source of truth</text>
-  <text x="70" y="303" font-size="12" fill="#555">Rebuild cluster from Git</text>
-  <!-- RPO/RTO -->
-  <rect x="30" y="330" width="220" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="140" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">RPO</text>
-  <text x="140" y="378" text-anchor="middle" font-size="13" fill="#555">&lt; 30 minutes</text>
-  <rect x="270" y="330" width="220" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="380" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">RTO</text>
-  <text x="380" y="378" text-anchor="middle" font-size="13" fill="#555">&lt; 2 hours</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <rect x="24.6154" y="17.1429" width="1230.7692" height="685.7143" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="640" y="77.1429" text-anchor="middle" font-size="30.8571" font-weight="bold" fill="#333">Disaster Recovery Plan</text>
+  <rect x="73.8462" y="111.4286" width="1132.3077" height="94.2857" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.5714" />
+  <text x="123.0769" y="149.1429" font-size="24" font-weight="bold" fill="#333">1. etcd backup (every 30 min)</text>
+  <text x="172.3077" y="185.1429" font-size="20.5714" fill="#555">Stored in S3/GCS with encryption</text>
+  <rect x="73.8462" y="222.8571" width="1132.3077" height="94.2857" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.5714" />
+  <text x="123.0769" y="260.5714" font-size="24" font-weight="bold" fill="#333">2. Velero backup (daily)</text>
+  <text x="172.3077" y="296.5714" font-size="20.5714" fill="#555">Cluster state + persistent volumes</text>
+  <rect x="73.8462" y="334.2857" width="1132.3077" height="94.2857" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.5714" />
+  <text x="123.0769" y="372" font-size="24" font-weight="bold" fill="#333">3. Multi-region cluster setup</text>
+  <text x="172.3077" y="408" font-size="20.5714" fill="#555">Active-passive or active-active</text>
+  <rect x="73.8462" y="445.7143" width="1132.3077" height="94.2857" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.5714" />
+  <text x="123.0769" y="483.4286" font-size="24" font-weight="bold" fill="#333">4. GitOps repo is source of truth</text>
+  <text x="172.3077" y="519.4286" font-size="20.5714" fill="#555">Rebuild cluster from Git</text>
+  <rect x="73.8462" y="565.7143" width="541.5385" height="102.8571" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5714" />
+  <text x="344.6154" y="608.5714" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">RPO</text>
+  <text x="344.6154" y="648" text-anchor="middle" font-size="22.2857" fill="#555">&lt; 30 minutes</text>
+  <rect x="664.6154" y="565.7143" width="541.5385" height="102.8571" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5714" />
+  <text x="935.3846" y="608.5714" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">RTO</text>
+  <text x="935.3846" y="648" text-anchor="middle" font-size="22.2857" fill="#555">&lt; 2 hours</text>
 </svg>

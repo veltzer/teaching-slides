@@ -1,73 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="10.08" refX="16" refY="5.04" orient="auto">
+      <polygon points="0,14.4 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">String Operations Flow</text>
-  <!-- strcpy -->
-  <rect x="30" y="55" width="220" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="140" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strcpy / strncpy</text>
-  <text x="40" y="98" font-size="10" fill="#555">strcpy(dest, src);</text>
-  <text x="40" y="115" font-size="10" fill="#28a745">strncpy(dest, src, n); // safer</text>
-  <text x="40" y="132" font-size="10" fill="#dc3545">No bounds checking!</text>
-  <!-- strcat -->
-  <rect x="280" y="55" width="220" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="390" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strcat / strncat</text>
-  <text x="290" y="98" font-size="10" fill="#555">strcat(dest, src);</text>
-  <text x="290" y="115" font-size="10" fill="#28a745">strncat(dest, src, n);</text>
-  <text x="290" y="132" font-size="10" fill="#555">Appends to existing string</text>
-  <!-- strcmp -->
-  <rect x="530" y="55" width="220" height="90" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="640" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strcmp / strncmp</text>
-  <text x="540" y="98" font-size="10" fill="#555">Returns: &lt;0, 0, or &gt;0</text>
-  <text x="540" y="115" font-size="10" fill="#555">Lexicographic comparison</text>
-  <text x="540" y="132" font-size="10" fill="#dc3545">Never use == for strings!</text>
-  <!-- strlen -->
-  <rect x="30" y="175" width="220" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="140" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strlen</text>
-  <text x="40" y="218" font-size="10" fill="#555">size_t len = strlen(str);</text>
-  <text x="40" y="238" font-size="10" fill="#555">Walks until '\0', O(n)</text>
-  <!-- strchr / strstr -->
-  <rect x="280" y="175" width="220" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="390" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strchr / strstr</text>
-  <text x="290" y="218" font-size="10" fill="#555">Find char or substring</text>
-  <text x="290" y="238" font-size="10" fill="#555">Returns NULL if not found</text>
-  <!-- strtok -->
-  <rect x="530" y="175" width="220" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="640" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">strtok</text>
-  <text x="540" y="218" font-size="10" fill="#555">Tokenize with delimiters</text>
-  <text x="540" y="238" font-size="10" fill="#dc3545">Modifies original string!</text>
-  <!-- Flow: safe string handling -->
-  <rect x="30" y="285" width="720" height="190" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="390" y="310" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Safe String Handling Flow</text>
-  <!-- Step 1 -->
-  <rect x="50" y="325" width="150" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="125" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">1. Calculate Size</text>
-  <text x="125" y="360" text-anchor="middle" font-size="10" fill="#555">strlen(src) + 1</text>
-  <line x1="200" y1="347" x2="230" y2="347" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Step 2 -->
-  <rect x="240" y="325" width="150" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="315" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">2. Allocate</text>
-  <text x="315" y="360" text-anchor="middle" font-size="10" fill="#555">malloc(size)</text>
-  <line x1="390" y1="347" x2="420" y2="347" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Step 3 -->
-  <rect x="430" y="325" width="150" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="505" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">3. Check NULL</text>
-  <text x="505" y="360" text-anchor="middle" font-size="10" fill="#555">if (ptr == NULL)</text>
-  <line x1="580" y1="347" x2="610" y2="347" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Step 4 -->
-  <rect x="620" y="325" width="110" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="675" y="345" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">4. Copy</text>
-  <text x="675" y="360" text-anchor="middle" font-size="10" fill="#555">strncpy()</text>
-  <!-- Modern alternatives -->
-  <rect x="50" y="395" width="300" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="200" y="415" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Modern Alternatives</text>
-  <text x="65" y="435" font-size="10" fill="#555">snprintf() - safe formatted output</text>
-  <text x="65" y="450" font-size="10" fill="#555">strlcpy() / strlcat() (BSD/Linux)</text>
-  <!-- Common bugs -->
-  <rect x="380" y="395" width="350" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="555" y="415" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Common Bugs</text>
-  <text x="395" y="435" font-size="10" fill="#555">Buffer overflow: strcpy without size check</text>
-  <text x="395" y="450" font-size="10" fill="#555">Off-by-one: forgetting '\0' in allocation</text>
+  <text x="640" y="43.2" text-anchor="middle" font-size="28.8" font-weight="bold" fill="#333">String Operations Flow</text>
+  <rect x="48" y="79.2" width="352" height="129.6" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />
+  <text x="224" y="112.32" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strcpy / strncpy</text>
+  <text x="64" y="141.12" font-size="14.4" fill="#555">strcpy(dest, src);</text>
+  <text x="64" y="165.6" font-size="14.4" fill="#28a745">strncpy(dest, src, n); // safer</text>
+  <text x="64" y="190.08" font-size="14.4" fill="#dc3545">No bounds checking!</text>
+  <rect x="448" y="79.2" width="352" height="129.6" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />
+  <text x="624" y="112.32" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strcat / strncat</text>
+  <text x="464" y="141.12" font-size="14.4" fill="#555">strcat(dest, src);</text>
+  <text x="464" y="165.6" font-size="14.4" fill="#28a745">strncat(dest, src, n);</text>
+  <text x="464" y="190.08" font-size="14.4" fill="#555">Appends to existing string</text>
+  <rect x="848" y="79.2" width="352" height="129.6" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
+  <text x="1024" y="112.32" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strcmp / strncmp</text>
+  <text x="864" y="141.12" font-size="14.4" fill="#555">Returns: &lt;0, 0, or &gt;0</text>
+  <text x="864" y="165.6" font-size="14.4" fill="#555">Lexicographic comparison</text>
+  <text x="864" y="190.08" font-size="14.4" fill="#dc3545">Never use == for strings!</text>
+  <rect x="48" y="252" width="352" height="115.2" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
+  <text x="224" y="285.12" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strlen</text>
+  <text x="64" y="313.92" font-size="14.4" fill="#555">size_t len = strlen(str);</text>
+  <text x="64" y="342.72" font-size="14.4" fill="#555">Walks until '\0', O(n)</text>
+  <rect x="448" y="252" width="352" height="115.2" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
+  <text x="624" y="285.12" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strchr / strstr</text>
+  <text x="464" y="313.92" font-size="14.4" fill="#555">Find char or substring</text>
+  <text x="464" y="342.72" font-size="14.4" fill="#555">Returns NULL if not found</text>
+  <rect x="848" y="252" width="352" height="115.2" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
+  <text x="1024" y="285.12" text-anchor="middle" font-size="18.72" font-weight="bold" fill="#333">strtok</text>
+  <text x="864" y="313.92" font-size="14.4" fill="#555">Tokenize with delimiters</text>
+  <text x="864" y="342.72" font-size="14.4" fill="#dc3545">Modifies original string!</text>
+  <rect x="48" y="410.4" width="1152" height="273.6" rx="7.2" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
+  <text x="624" y="446.4" text-anchor="middle" font-size="21.6" font-weight="bold" fill="#333">Safe String Handling Flow</text>
+  <rect x="80" y="468" width="240" height="64.8" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.16" />
+  <text x="200" y="496.8" text-anchor="middle" font-size="15.84" font-weight="bold" fill="#333">1. Calculate Size</text>
+  <text x="200" y="518.4" text-anchor="middle" font-size="14.4" fill="#555">strlen(src) + 1</text>
+  <line x1="320" y1="499.68" x2="368" y2="499.68" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrow)" />
+  <rect x="384" y="468" width="240" height="64.8" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.16" />
+  <text x="504" y="496.8" text-anchor="middle" font-size="15.84" font-weight="bold" fill="#333">2. Allocate</text>
+  <text x="504" y="518.4" text-anchor="middle" font-size="14.4" fill="#555">malloc(size)</text>
+  <line x1="624" y1="499.68" x2="672" y2="499.68" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrow)" />
+  <rect x="688" y="468" width="240" height="64.8" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.16" />
+  <text x="808" y="496.8" text-anchor="middle" font-size="15.84" font-weight="bold" fill="#333">3. Check NULL</text>
+  <text x="808" y="518.4" text-anchor="middle" font-size="14.4" fill="#555">if (ptr == NULL)</text>
+  <line x1="928" y1="499.68" x2="976" y2="499.68" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrow)" />
+  <rect x="992" y="468" width="176" height="64.8" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.16" />
+  <text x="1080" y="496.8" text-anchor="middle" font-size="15.84" font-weight="bold" fill="#333">4. Copy</text>
+  <text x="1080" y="518.4" text-anchor="middle" font-size="14.4" fill="#555">strncpy()</text>
+  <rect x="80" y="568.8" width="480" height="86.4" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.16" />
+  <text x="320" y="597.6" text-anchor="middle" font-size="17.28" font-weight="bold" fill="#333">Modern Alternatives</text>
+  <text x="104" y="626.4" font-size="14.4" fill="#555">snprintf() - safe formatted output</text>
+  <text x="104" y="648" font-size="14.4" fill="#555">strlcpy() / strlcat() (BSD/Linux)</text>
+  <rect x="608" y="568.8" width="560" height="86.4" rx="7.2" fill="#f8d7da" stroke="#dc3545" stroke-width="2.16" />
+  <text x="888" y="597.6" text-anchor="middle" font-size="17.28" font-weight="bold" fill="#333">Common Bugs</text>
+  <text x="632" y="626.4" font-size="14.4" fill="#555">Buffer overflow: strcpy without size check</text>
+  <text x="632" y="648" font-size="14.4" fill="#555">Off-by-one: forgetting '\0' in allocation</text>
 </svg>

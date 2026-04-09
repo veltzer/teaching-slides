@@ -1,26 +1,26 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Key Collection Traits</text>
-  <rect x="20" y="30" width="170" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="48" text-anchor="middle" font-size="10" font-weight="bold">Iterator</text>
-  <text x="105" y="63" text-anchor="middle" font-size="10">fn next(&amp;mut self)</text>
-  <text x="105" y="76" text-anchor="middle" font-size="10">  -> Option&lt;Item&gt;</text>
-  <text x="105" y="89" text-anchor="middle" font-size="10">.map() .filter() .collect()</text>
-  <rect x="215" y="30" width="170" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">FromIterator</text>
-  <text x="300" y="63" text-anchor="middle" font-size="10">Enables .collect()</text>
-  <text x="300" y="76" text-anchor="middle" font-size="10">Vec, String, HashMap</text>
-  <text x="300" y="89" text-anchor="middle" font-size="10">all implement this</text>
-  <rect x="410" y="30" width="170" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="495" y="48" text-anchor="middle" font-size="10" font-weight="bold">IntoIterator</text>
-  <text x="495" y="63" text-anchor="middle" font-size="10">Enables for..in loops</text>
-  <text x="495" y="76" text-anchor="middle" font-size="10">for x in collection {}</text>
-  <text x="495" y="89" text-anchor="middle" font-size="10">consumes / borrows</text>
-  <rect x="20" y="110" width="270" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="155" y="125" text-anchor="middle" font-size="10" font-weight="bold">Index / IndexMut</text>
-  <text x="155" y="139" text-anchor="middle" font-size="10">v[i] syntax for Vec, HashMap[key]</text>
-  <rect x="310" y="110" width="270" height="35" fill="#ffebee" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="445" y="125" text-anchor="middle" font-size="10" font-weight="bold">Extend</text>
-  <text x="445" y="139" text-anchor="middle" font-size="10">Append items from iterator to collection</text>
-  <rect x="100" y="160" width="400" height="25" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="177" text-anchor="middle" font-size="10">Iterators are lazy: zero-cost abstractions optimized by LLVM</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Key Collection Traits</text>
+  <rect x="42.6667" y="108" width="362.6667" height="234" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="224" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Iterator</text>
+  <text x="224" y="226.8" text-anchor="middle" font-size="21.3333">fn next(&amp;mut self)</text>
+  <text x="224" y="273.6" text-anchor="middle" font-size="21.3333">  -&gt; Option&lt;Item&gt;</text>
+  <text x="224" y="320.4" text-anchor="middle" font-size="21.3333">.map() .filter() .collect()</text>
+  <rect x="458.6667" y="108" width="362.6667" height="234" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">FromIterator</text>
+  <text x="640" y="226.8" text-anchor="middle" font-size="21.3333">Enables .collect()</text>
+  <text x="640" y="273.6" text-anchor="middle" font-size="21.3333">Vec, String, HashMap</text>
+  <text x="640" y="320.4" text-anchor="middle" font-size="21.3333">all implement this</text>
+  <rect x="874.6667" y="108" width="362.6667" height="234" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1056" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">IntoIterator</text>
+  <text x="1056" y="226.8" text-anchor="middle" font-size="21.3333">Enables for..in loops</text>
+  <text x="1056" y="273.6" text-anchor="middle" font-size="21.3333">for x in collection {}</text>
+  <text x="1056" y="320.4" text-anchor="middle" font-size="21.3333">consumes / borrows</text>
+  <rect x="42.6667" y="396" width="576" height="126" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="330.6667" y="450" text-anchor="middle" font-size="21.3333" font-weight="bold">Index / IndexMut</text>
+  <text x="330.6667" y="500.4" text-anchor="middle" font-size="21.3333">v[i] syntax for Vec, HashMap[key]</text>
+  <rect x="661.3333" y="396" width="576" height="126" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="949.3333" y="450" text-anchor="middle" font-size="21.3333" font-weight="bold">Extend</text>
+  <text x="949.3333" y="500.4" text-anchor="middle" font-size="21.3333">Append items from iterator to collection</text>
+  <rect x="213.3333" y="576" width="853.3333" height="90" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="640" y="637.2" text-anchor="middle" font-size="21.3333">Iterators are lazy: zero-cost abstractions optimized by LLVM</text>
 </svg>

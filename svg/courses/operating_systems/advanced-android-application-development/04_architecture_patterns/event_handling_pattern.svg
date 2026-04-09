@@ -1,39 +1,23 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- View -->
-  <rect x="50" y="75" width="80" height="50" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="90" y="105" text-anchor="middle" font-size="14" font-weight="bold">View</text>
-
-  <!-- ViewModel -->
-  <rect x="200" y="75" width="100" height="50" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="250" y="105" text-anchor="middle" font-size="14" font-weight="bold">ViewModel</text>
-
-  <!-- UseCase -->
-  <rect x="370" y="75" width="80" height="50" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="410" y="105" text-anchor="middle" font-size="14" font-weight="bold">UseCase</text>
-
-  <!-- View back to itself for State update -->
-  <rect x="500" y="75" width="80" height="50" fill="#fff3e0" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="540" y="105" text-anchor="middle" font-size="14" font-weight="bold">View</text>
-
-  <!-- Event flow -->
-  <line x1="130" y1="100" x2="200" y2="100" stroke="#4c9aff" stroke-width="2" marker-end="url(#arrow_event)"/>
-  <text x="165" y="95" text-anchor="middle" font-size="11" fill="#4c9aff">Event</text>
-
-  <!-- Command flow -->
-  <line x1="300" y1="100" x2="370" y2="100" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrow_event)"/>
-  <text x="335" y="95" text-anchor="middle" font-size="11" fill="#ff6b6b">Command</text>
-
-  <!-- Result flow back -->
-  <path d="M 410 125 Q 410 150, 250 150 Q 250 140, 250 125" stroke="#51cf66" stroke-width="2" fill="none" marker-end="url(#arrow_event)"/>
-  <text x="330" y="165" text-anchor="middle" font-size="11" fill="#51cf66">Result</text>
-
-  <!-- State flow -->
-  <path d="M 250 75 Q 250 40, 540 40 Q 540 60, 540 75" stroke="#ffa726" stroke-width="2" fill="none" marker-end="url(#arrow_event)"/>
-  <text x="395" y="35" text-anchor="middle" font-size="11" fill="#ffa726">State</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="106.6667" y="270" width="170.6667" height="180" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="192" y="378" text-anchor="middle" font-size="29.8667" font-weight="bold">View</text>
+  <rect x="426.6667" y="270" width="213.3333" height="180" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="533.3333" y="378" text-anchor="middle" font-size="29.8667" font-weight="bold">ViewModel</text>
+  <rect x="789.3333" y="270" width="170.6667" height="180" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="874.6667" y="378" text-anchor="middle" font-size="29.8667" font-weight="bold">UseCase</text>
+  <rect x="1066.6667" y="270" width="170.6667" height="180" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1152" y="378" text-anchor="middle" font-size="29.8667" font-weight="bold">View</text>
+  <line x1="277.3333" y1="360" x2="426.6667" y2="360" stroke="#4c9aff" stroke-width="4.2667" marker-end="url(#arrow_event)" />
+  <text x="352" y="342" text-anchor="middle" font-size="23.4667" fill="#4c9aff">Event</text>
+  <line x1="640" y1="360" x2="789.3333" y2="360" stroke="#ff6b6b" stroke-width="4.2667" marker-end="url(#arrow_event)" />
+  <text x="714.6667" y="342" text-anchor="middle" font-size="23.4667" fill="#ff6b6b">Command</text>
+  <path d="M 874.6667 450 Q 874.6667 540 533.3333 540 Q 533.3333 504 533.3333 450" stroke="#51cf66" stroke-width="4.2667" fill="none" marker-end="url(#arrow_event)" />
+  <text x="704" y="594" text-anchor="middle" font-size="23.4667" fill="#51cf66">Result</text>
+  <path d="M 533.3333 270 Q 533.3333 144 1152 144 Q 1152 216 1152 270" stroke="#ffa726" stroke-width="4.2667" fill="none" marker-end="url(#arrow_event)" />
+  <text x="842.6667" y="126" text-anchor="middle" font-size="23.4667" fill="#ffa726">State</text>
   <defs>
-    <marker id="arrow_event" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrow_event" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
 </svg>

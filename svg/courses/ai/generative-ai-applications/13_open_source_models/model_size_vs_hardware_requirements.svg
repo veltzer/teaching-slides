@@ -1,60 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="390" font-family="sans-serif">
-  <rect x="0" y="0" width="660" height="390" fill="#f0f4f8" rx="6" stroke="#333" stroke-width="1.5"/>
-  <!-- Header row -->
-  <rect x="10" y="10" width="200" height="30" fill="#b0bec5" stroke="#333" stroke-width="1"/>
-  <rect x="210" y="10" width="160" height="30" fill="#b0bec5" stroke="#333" stroke-width="1"/>
-  <rect x="370" y="10" width="280" height="30" fill="#b0bec5" stroke="#333" stroke-width="1"/>
-  <text x="110" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Model Size</text>
-  <text x="290" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">VRAM Needed</text>
-  <text x="510" y="30" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Suitable Hardware</text>
-  <!-- Data rows -->
-  <rect x="10" y="40" width="200" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="40" width="160" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="40" width="280" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="59" font-size="13" fill="#222">1–3B</text>
-  <text x="222" y="59" font-size="13" fill="#222">2–4 GB</text>
-  <text x="382" y="59" font-size="13" fill="#222">CPU, laptop GPU</text>
-  <rect x="10" y="68" width="200" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="68" width="160" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="68" width="280" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="87" font-size="13" fill="#222">7–8B</text>
-  <text x="222" y="87" font-size="13" fill="#222">6–8 GB</text>
-  <text x="382" y="87" font-size="13" fill="#222">RTX 3060/4060 (consumer)</text>
-  <rect x="10" y="96" width="200" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="96" width="160" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="96" width="280" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="115" font-size="13" fill="#222">13B</text>
-  <text x="222" y="115" font-size="13" fill="#222">10–16 GB</text>
-  <text x="382" y="115" font-size="13" fill="#222">RTX 3090/4080</text>
-  <rect x="10" y="124" width="200" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="124" width="160" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="124" width="280" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="143" font-size="13" fill="#222">30–34B</text>
-  <text x="222" y="143" font-size="13" fill="#222">24–40 GB</text>
-  <text x="382" y="143" font-size="13" fill="#222">RTX 4090 / A6000</text>
-  <rect x="10" y="152" width="200" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="152" width="160" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="152" width="280" height="28" fill="#e8f5e9" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="171" font-size="13" fill="#222">70B</text>
-  <text x="222" y="171" font-size="13" fill="#222">40–80 GB</text>
-  <text x="382" y="171" font-size="13" fill="#222">A100 80GB / 2× A6000</text>
-  <rect x="10" y="180" width="200" height="28" fill="#fff3e0" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="180" width="160" height="28" fill="#fff3e0" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="180" width="280" height="28" fill="#fff3e0" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="199" font-size="13" fill="#222">70B (4-bit)</text>
-  <text x="222" y="199" font-size="13" fill="#222">24–40 GB</text>
-  <text x="382" y="199" font-size="13" fill="#e65100" font-weight="bold">RTX 4090 (quantized!)</text>
-  <rect x="10" y="208" width="200" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="210" y="208" width="160" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <rect x="370" y="208" width="280" height="28" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="22" y="227" font-size="13" fill="#222">405B</text>
-  <text x="222" y="227" font-size="13" fill="#222">200+ GB</text>
-  <text x="382" y="227" font-size="13" fill="#222">8× A100 or more</text>
-  <!-- Quantization note section -->
-  <rect x="10" y="248" width="640" height="130" fill="#fffde7" rx="4" stroke="#f9a825" stroke-width="1.5"/>
-  <text x="22" y="268" font-size="13" font-weight="bold" fill="#f57f17">Quantization reduces memory requirements:</text>
-  <text x="22" y="292" font-size="13" fill="#222">FP16 (16-bit):  Full precision, full VRAM</text>
-  <text x="22" y="314" font-size="13" fill="#222">INT8 (8-bit):   ~50% VRAM, minimal quality loss</text>
-  <text x="22" y="336" font-size="13" fill="#222">INT4 (4-bit):   ~25% VRAM, small quality loss</text>
-  <text x="22" y="358" font-size="13" fill="#222">GGUF/GPTQ:     Optimized quantization formats</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <rect x="0" y="0" width="1280" height="720" fill="#f0f4f8" rx="11.0769" stroke="#333" stroke-width="2.7692" />
+  <rect x="19.3939" y="18.4615" width="387.8788" height="55.3846" fill="#b0bec5" stroke="#333" stroke-width="1.8462" />
+  <rect x="407.2727" y="18.4615" width="310.303" height="55.3846" fill="#b0bec5" stroke="#333" stroke-width="1.8462" />
+  <rect x="717.5758" y="18.4615" width="543.0303" height="55.3846" fill="#b0bec5" stroke="#333" stroke-width="1.8462" />
+  <text x="213.3333" y="55.3846" text-anchor="middle" font-size="24" font-weight="bold" fill="#222">Model Size</text>
+  <text x="562.4242" y="55.3846" text-anchor="middle" font-size="24" font-weight="bold" fill="#222">VRAM Needed</text>
+  <text x="989.0909" y="55.3846" text-anchor="middle" font-size="24" font-weight="bold" fill="#222">Suitable Hardware</text>
+  <rect x="19.3939" y="73.8462" width="387.8788" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="73.8462" width="310.303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="73.8462" width="543.0303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="108.9231" font-size="24" fill="#222">1–3B</text>
+  <text x="430.5455" y="108.9231" font-size="24" fill="#222">2–4 GB</text>
+  <text x="740.8485" y="108.9231" font-size="24" fill="#222">CPU, laptop GPU</text>
+  <rect x="19.3939" y="125.5385" width="387.8788" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="125.5385" width="310.303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="125.5385" width="543.0303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="160.6154" font-size="24" fill="#222">7–8B</text>
+  <text x="430.5455" y="160.6154" font-size="24" fill="#222">6–8 GB</text>
+  <text x="740.8485" y="160.6154" font-size="24" fill="#222">RTX 3060/4060 (consumer)</text>
+  <rect x="19.3939" y="177.2308" width="387.8788" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="177.2308" width="310.303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="177.2308" width="543.0303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="212.3077" font-size="24" fill="#222">13B</text>
+  <text x="430.5455" y="212.3077" font-size="24" fill="#222">10–16 GB</text>
+  <text x="740.8485" y="212.3077" font-size="24" fill="#222">RTX 3090/4080</text>
+  <rect x="19.3939" y="228.9231" width="387.8788" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="228.9231" width="310.303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="228.9231" width="543.0303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="264" font-size="24" fill="#222">30–34B</text>
+  <text x="430.5455" y="264" font-size="24" fill="#222">24–40 GB</text>
+  <text x="740.8485" y="264" font-size="24" fill="#222">RTX 4090 / A6000</text>
+  <rect x="19.3939" y="280.6154" width="387.8788" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="280.6154" width="310.303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="280.6154" width="543.0303" height="51.6923" fill="#e8f5e9" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="315.6923" font-size="24" fill="#222">70B</text>
+  <text x="430.5455" y="315.6923" font-size="24" fill="#222">40–80 GB</text>
+  <text x="740.8485" y="315.6923" font-size="24" fill="#222">A100 80GB / 2× A6000</text>
+  <rect x="19.3939" y="332.3077" width="387.8788" height="51.6923" fill="#fff3e0" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="332.3077" width="310.303" height="51.6923" fill="#fff3e0" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="332.3077" width="543.0303" height="51.6923" fill="#fff3e0" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="367.3846" font-size="24" fill="#222">70B (4-bit)</text>
+  <text x="430.5455" y="367.3846" font-size="24" fill="#222">24–40 GB</text>
+  <text x="740.8485" y="367.3846" font-size="24" fill="#e65100" font-weight="bold">RTX 4090 (quantized!)</text>
+  <rect x="19.3939" y="384" width="387.8788" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="407.2727" y="384" width="310.303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <rect x="717.5758" y="384" width="543.0303" height="51.6923" fill="#f5f5f5" stroke="#ddd" stroke-width="1.8462" />
+  <text x="42.6667" y="419.0769" font-size="24" fill="#222">405B</text>
+  <text x="430.5455" y="419.0769" font-size="24" fill="#222">200+ GB</text>
+  <text x="740.8485" y="419.0769" font-size="24" fill="#222">8× A100 or more</text>
+  <rect x="19.3939" y="457.8462" width="1241.2121" height="240" fill="#fffde7" rx="7.3846" stroke="#f9a825" stroke-width="2.7692" />
+  <text x="42.6667" y="494.7692" font-size="24" font-weight="bold" fill="#f57f17">Quantization reduces memory requirements:</text>
+  <text x="42.6667" y="539.0769" font-size="24" fill="#222">FP16 (16-bit):  Full precision, full VRAM</text>
+  <text x="42.6667" y="579.6923" font-size="24" fill="#222">INT8 (8-bit):   ~50% VRAM, minimal quality loss</text>
+  <text x="42.6667" y="620.3077" font-size="24" fill="#222">INT4 (4-bit):   ~25% VRAM, small quality loss</text>
+  <text x="42.6667" y="660.9231" font-size="24" fill="#222">GGUF/GPTQ:     Optimized quantization formats</text>
 </svg>

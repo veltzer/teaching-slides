@@ -1,49 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" font-family="Arial, sans-serif">
-  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">TLB Shootdown</text>
-  <!-- Core 0 -->
-  <rect x="20" y="50" width="120" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="80" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Core 0</text>
-  <text x="80" y="115" text-anchor="middle" font-size="11" fill="#555">unmaps page X</text>
-  <!-- Step 1: Invalidate own TLB -->
-  <line x1="80" y1="95" x2="80" y2="130" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#tlba)"/>
-  <rect x="20" y="130" width="180" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="110" y="150" text-anchor="middle" font-size="10" fill="#333">Invalidate own TLB for X</text>
-  <!-- Other cores -->
-  <rect x="180" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="230" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 1</text>
-  <rect x="300" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="350" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 2</text>
-  <rect x="420" y="50" width="100" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="470" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Core 3</text>
-  <!-- IPI arrows -->
-  <line x1="110" y1="170" x2="230" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
-  <line x1="110" y1="170" x2="350" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
-  <line x1="110" y1="170" x2="470" y2="195" stroke="#dc3545" stroke-width="1.5" marker-end="url(#tlbr)"/>
-  <text x="200" y="185" font-size="10" fill="#dc3545">IPI (Inter-Processor Interrupt)</text>
-  <!-- Invalidate on each core -->
-  <rect x="180" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
-  <text x="230" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
-  <text x="230" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
-  <rect x="300" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
-  <text x="350" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
-  <text x="350" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
-  <rect x="420" y="200" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1"/>
-  <text x="470" y="218" text-anchor="middle" font-size="10" fill="#333">Invalidate</text>
-  <text x="470" y="232" text-anchor="middle" font-size="10" fill="#333">TLB for X</text>
-  <!-- ACK arrows back -->
-  <line x1="230" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
-  <line x1="350" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
-  <line x1="470" y1="240" x2="110" y2="280" stroke="#28a745" stroke-width="1.5" marker-end="url(#tlbg)"/>
-  <text x="340" y="270" font-size="10" fill="#28a745">ACK</text>
-  <!-- Wait and continue -->
-  <rect x="30" y="285" width="200" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="130" y="305" text-anchor="middle" font-size="11" fill="#333">Wait for all ACKs</text>
-  <line x1="130" y1="315" x2="130" y2="340" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#tlba)"/>
-  <rect x="50" y="340" width="160" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="130" y="360" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Continue execution</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">TLB Shootdown</text>
+  <rect x="49.2308" y="94.7368" width="295.3846" height="85.2632" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.7895" />
+  <text x="196.9231" y="147.7895" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">Core 0</text>
+  <text x="196.9231" y="217.8947" text-anchor="middle" font-size="20.8421" fill="#555">unmaps page X</text>
+  <line x1="196.9231" y1="180" x2="196.9231" y2="246.3158" stroke="#4a90e2" stroke-width="2.8421" marker-end="url(#tlba)" />
+  <rect x="49.2308" y="246.3158" width="443.0769" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="1.8947" />
+  <text x="270.7692" y="284.2105" text-anchor="middle" font-size="18.9474" fill="#333">Invalidate own TLB for X</text>
+  <rect x="443.0769" y="94.7368" width="246.1538" height="85.2632" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8421" />
+  <text x="566.1538" y="147.7895" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">Core 1</text>
+  <rect x="738.4615" y="94.7368" width="246.1538" height="85.2632" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8421" />
+  <text x="861.5385" y="147.7895" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">Core 2</text>
+  <rect x="1033.8462" y="94.7368" width="246.1538" height="85.2632" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8421" />
+  <text x="1156.9231" y="147.7895" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">Core 3</text>
+  <line x1="270.7692" y1="322.1053" x2="566.1538" y2="369.4737" stroke="#dc3545" stroke-width="2.8421" marker-end="url(#tlbr)" />
+  <line x1="270.7692" y1="322.1053" x2="861.5385" y2="369.4737" stroke="#dc3545" stroke-width="2.8421" marker-end="url(#tlbr)" />
+  <line x1="270.7692" y1="322.1053" x2="1156.9231" y2="369.4737" stroke="#dc3545" stroke-width="2.8421" marker-end="url(#tlbr)" />
+  <text x="492.3077" y="350.5263" font-size="18.9474" fill="#dc3545">IPI (Inter-Processor Interrupt)</text>
+  <rect x="443.0769" y="378.9474" width="246.1538" height="75.7895" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8947" />
+  <text x="566.1538" y="413.0526" text-anchor="middle" font-size="18.9474" fill="#333">Invalidate</text>
+  <text x="566.1538" y="439.5789" text-anchor="middle" font-size="18.9474" fill="#333">TLB for X</text>
+  <rect x="738.4615" y="378.9474" width="246.1538" height="75.7895" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8947" />
+  <text x="861.5385" y="413.0526" text-anchor="middle" font-size="18.9474" fill="#333">Invalidate</text>
+  <text x="861.5385" y="439.5789" text-anchor="middle" font-size="18.9474" fill="#333">TLB for X</text>
+  <rect x="1033.8462" y="378.9474" width="246.1538" height="75.7895" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="1.8947" />
+  <text x="1156.9231" y="413.0526" text-anchor="middle" font-size="18.9474" fill="#333">Invalidate</text>
+  <text x="1156.9231" y="439.5789" text-anchor="middle" font-size="18.9474" fill="#333">TLB for X</text>
+  <line x1="566.1538" y1="454.7368" x2="270.7692" y2="530.5263" stroke="#28a745" stroke-width="2.8421" marker-end="url(#tlbg)" />
+  <line x1="861.5385" y1="454.7368" x2="270.7692" y2="530.5263" stroke="#28a745" stroke-width="2.8421" marker-end="url(#tlbg)" />
+  <line x1="1156.9231" y1="454.7368" x2="270.7692" y2="530.5263" stroke="#28a745" stroke-width="2.8421" marker-end="url(#tlbg)" />
+  <text x="836.9231" y="511.5789" font-size="18.9474" fill="#28a745">ACK</text>
+  <rect x="73.8462" y="540" width="492.3077" height="56.8421" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8947" />
+  <text x="320" y="577.8947" text-anchor="middle" font-size="20.8421" fill="#333">Wait for all ACKs</text>
+  <line x1="320" y1="596.8421" x2="320" y2="644.2105" stroke="#4a90e2" stroke-width="2.8421" marker-end="url(#tlba)" />
+  <rect x="123.0769" y="644.2105" width="393.8462" height="56.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="2.8421" />
+  <text x="320" y="682.1053" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">Continue execution</text>
   <defs>
-    <marker id="tlba" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker>
-    <marker id="tlbr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#dc3545"/></marker>
-    <marker id="tlbg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+    <marker id="tlba" viewBox="0 0 10 10" refX="22.1538" refY="9.4737" markerWidth="14.7692" markerHeight="11.3684" orient="auto-start-reverse">
+      <path d="M 0 0 L 24.6154 9.4737 L 0 18.9474 z" fill="#4a90e2" />
+    </marker>
+    <marker id="tlbr" viewBox="0 0 10 10" refX="22.1538" refY="9.4737" markerWidth="14.7692" markerHeight="11.3684" orient="auto-start-reverse">
+      <path d="M 0 0 L 24.6154 9.4737 L 0 18.9474 z" fill="#dc3545" />
+    </marker>
+    <marker id="tlbg" viewBox="0 0 10 10" refX="22.1538" refY="9.4737" markerWidth="14.7692" markerHeight="11.3684" orient="auto-start-reverse">
+      <path d="M 0 0 L 24.6154 9.4737 L 0 18.9474 z" fill="#28a745" />
+    </marker>
   </defs>
 </svg>

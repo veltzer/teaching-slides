@@ -1,30 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 580" font-family="Arial, sans-serif">
-  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">CI/CD Pipeline for Spark Jobs</text>
-  <rect x="190" y="35" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="60" text-anchor="middle" font-size="13" fill="#333">Push / PR</text>
-  <line x1="260" y1="75" x2="260" y2="95" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker></defs>
-  <rect x="30" y="95" width="460" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Stage 1: Code Quality (parallel)</text>
-  <rect x="55" y="125" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="105" y="147" text-anchor="middle" font-size="12" fill="#333">pylint</text>
-  <rect x="175" y="125" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="225" y="147" text-anchor="middle" font-size="12" fill="#333">black</text>
-  <rect x="295" y="125" width="100" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="345" y="147" text-anchor="middle" font-size="12" fill="#333">mypy</text>
-  <line x1="260" y1="175" x2="260" y2="200" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="200" width="460" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="220" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Stage 2: Unit Tests</text>
-  <text x="260" y="240" text-anchor="middle" font-size="12" fill="#333">pytest tests/unit/ --cov=src</text>
-  <text x="260" y="258" text-anchor="middle" font-size="11" fill="#666">(local Spark, fast, no I/O)</text>
-  <line x1="260" y1="280" x2="260" y2="305" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="305" width="460" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="260" y="325" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Stage 3: Integration Tests</text>
-  <text x="260" y="345" text-anchor="middle" font-size="12" fill="#333">pytest tests/integration/</text>
-  <text x="260" y="363" text-anchor="middle" font-size="11" fill="#666">(local Spark, file I/O)</text>
-  <line x1="260" y1="385" x2="260" y2="410" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="410" width="460" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="260" y="430" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Stage 4: Package &amp; Publish</text>
-  <text x="260" y="450" text-anchor="middle" font-size="12" fill="#333">Build wheel, push to artifact registry</text>
-  <text x="260" y="468" text-anchor="middle" font-size="11" fill="#666">(only on main branch)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="31.0345" text-anchor="middle" font-size="19.8621" font-weight="bold" fill="#333">CI/CD Pipeline for Spark Jobs</text>
+  <rect x="467.6923" y="43.4483" width="344.6154" height="49.6552" rx="6.2069" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4828" />
+  <text x="640" y="74.4828" text-anchor="middle" font-size="16.1379" fill="#333">Push / PR</text>
+  <line x1="640" y1="93.1034" x2="640" y2="117.931" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#arrow)" />
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="12.3077" refY="6.2069" markerWidth="14.7692" markerHeight="7.4483" orient="auto-start-auto">
+      <path d="M 0 0 L 24.6154 6.2069 L 0 12.4138 z" fill="#4a90e2" />
+    </marker>
+  </defs>
+  <rect x="73.8462" y="117.931" width="1132.3077" height="99.3103" rx="6.2069" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4828" />
+  <text x="640" y="142.7586" text-anchor="middle" font-size="16.1379" font-weight="bold" fill="#4a90e2">Stage 1: Code Quality (parallel)</text>
+  <rect x="135.3846" y="155.1724" width="246.1538" height="43.4483" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="1.2414" />
+  <text x="258.4615" y="182.4828" text-anchor="middle" font-size="14.8966" fill="#333">pylint</text>
+  <rect x="430.7692" y="155.1724" width="246.1538" height="43.4483" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="1.2414" />
+  <text x="553.8462" y="182.4828" text-anchor="middle" font-size="14.8966" fill="#333">black</text>
+  <rect x="726.1538" y="155.1724" width="246.1538" height="43.4483" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="1.2414" />
+  <text x="849.2308" y="182.4828" text-anchor="middle" font-size="14.8966" fill="#333">mypy</text>
+  <line x1="640" y1="217.2414" x2="640" y2="248.2759" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#arrow)" />
+  <rect x="73.8462" y="248.2759" width="1132.3077" height="99.3103" rx="6.2069" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4828" />
+  <text x="640" y="273.1034" text-anchor="middle" font-size="16.1379" font-weight="bold" fill="#4a90e2">Stage 2: Unit Tests</text>
+  <text x="640" y="297.931" text-anchor="middle" font-size="14.8966" fill="#333">pytest tests/unit/ --cov=src</text>
+  <text x="640" y="320.2759" text-anchor="middle" font-size="13.6552" fill="#666">(local Spark, fast, no I/O)</text>
+  <line x1="640" y1="347.5862" x2="640" y2="378.6207" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#arrow)" />
+  <rect x="73.8462" y="378.6207" width="1132.3077" height="99.3103" rx="6.2069" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4828" />
+  <text x="640" y="403.4483" text-anchor="middle" font-size="16.1379" font-weight="bold" fill="#4a90e2">Stage 3: Integration Tests</text>
+  <text x="640" y="428.2759" text-anchor="middle" font-size="14.8966" fill="#333">pytest tests/integration/</text>
+  <text x="640" y="450.6207" text-anchor="middle" font-size="13.6552" fill="#666">(local Spark, file I/O)</text>
+  <line x1="640" y1="477.931" x2="640" y2="508.9655" stroke="#4a90e2" stroke-width="2.4828" marker-end="url(#arrow)" />
+  <rect x="73.8462" y="508.9655" width="1132.3077" height="99.3103" rx="6.2069" fill="#d4edda" stroke="#28a745" stroke-width="2.4828" />
+  <text x="640" y="533.7931" text-anchor="middle" font-size="16.1379" font-weight="bold" fill="#28a745">Stage 4: Package &amp; Publish</text>
+  <text x="640" y="558.6207" text-anchor="middle" font-size="14.8966" fill="#333">Build wheel, push to artifact registry</text>
+  <text x="640" y="580.9655" text-anchor="middle" font-size="13.6552" fill="#666">(only on main branch)</text>
 </svg>

@@ -1,68 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#1a1a2e"/>
-      <stop offset="100%" style="stop-color:#16213e"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#1a1a2e" />
+      <stop offset="100%" style="stop-color:#16213e" />
     </linearGradient>
-    <linearGradient id="spark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#e25822"/>
-      <stop offset="100%" style="stop-color:#f5a623"/>
+    <linearGradient id="spark" x1="0%" y1="0%" x2="160%" y2="180%">
+      <stop offset="0%" style="stop-color:#e25822" />
+      <stop offset="100%" style="stop-color:#f5a623" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <!-- Grid background -->
-  <g opacity="0.08" stroke="#ffffff" stroke-width="0.5">
-    <line x1="0" y1="50" x2="800" y2="50"/><line x1="0" y1="100" x2="800" y2="100"/>
-    <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="200" x2="800" y2="200"/>
-    <line x1="0" y1="250" x2="800" y2="250"/><line x1="0" y1="300" x2="800" y2="300"/>
-    <line x1="0" y1="350" x2="800" y2="350"/>
-    <line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/>
-    <line x1="300" y1="0" x2="300" y2="400"/><line x1="400" y1="0" x2="400" y2="400"/>
-    <line x1="500" y1="0" x2="500" y2="400"/><line x1="600" y1="0" x2="600" y2="400"/>
-    <line x1="700" y1="0" x2="700" y2="400"/>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <g opacity="0.08" stroke="#ffffff" stroke-width="0.8">
+    <line x1="0" y1="90" x2="1280" y2="90" />
+    <line x1="0" y1="180" x2="1280" y2="180" />
+    <line x1="0" y1="270" x2="1280" y2="270" />
+    <line x1="0" y1="360" x2="1280" y2="360" />
+    <line x1="0" y1="450" x2="1280" y2="450" />
+    <line x1="0" y1="540" x2="1280" y2="540" />
+    <line x1="0" y1="630" x2="1280" y2="630" />
+    <line x1="160" y1="0" x2="160" y2="720" />
+    <line x1="320" y1="0" x2="320" y2="720" />
+    <line x1="480" y1="0" x2="480" y2="720" />
+    <line x1="640" y1="0" x2="640" y2="720" />
+    <line x1="800" y1="0" x2="800" y2="720" />
+    <line x1="960" y1="0" x2="960" y2="720" />
+    <line x1="1120" y1="0" x2="1120" y2="720" />
   </g>
-  <!-- Spark lightning bolt -->
   <g transform="translate(150, 80)">
-    <polygon points="60,0 20,90 50,90 30,160 100,60 65,60 90,0" fill="url(#spark)" opacity="0.9"/>
+    <polygon points="96,0 32,162 80,162 48,288 160,108 104,108 144,0" fill="url(#spark)" opacity="0.9" />
   </g>
-  <!-- Scala logo stylized - staircase shape -->
   <g transform="translate(560, 100)">
-    <rect x="0" y="0" width="80" height="20" rx="2" fill="#dc322f" opacity="0.85"/>
-    <rect x="0" y="25" width="80" height="20" rx="2" fill="#dc322f" opacity="0.7"/>
-    <rect x="0" y="50" width="80" height="20" rx="2" fill="#dc322f" opacity="0.55"/>
-    <!-- Scala staircase highlight -->
-    <path d="M0,0 L80,10 L80,20 L0,20 Z" fill="#dc322f" opacity="0.3"/>
-    <path d="M0,25 L80,35 L80,45 L0,45 Z" fill="#dc322f" opacity="0.2"/>
-    <path d="M0,50 L80,60 L80,70 L0,70 Z" fill="#dc322f" opacity="0.15"/>
+    <rect x="0" y="0" width="128" height="36" rx="3.2" fill="#dc322f" opacity="0.85" />
+    <rect x="0" y="45" width="128" height="36" rx="3.2" fill="#dc322f" opacity="0.7" />
+    <rect x="0" y="90" width="128" height="36" rx="3.2" fill="#dc322f" opacity="0.55" />
+    <path d="M 0 0 L 128 18 L 128 36 L 0 36 Z" fill="#dc322f" opacity="0.3" />
+    <path d="M 0 45 L 128 63 L 128 81 L 0 81 Z" fill="#dc322f" opacity="0.2" />
+    <path d="M 0 90 L 128 108 L 128 126 L 0 126 Z" fill="#dc322f" opacity="0.15" />
   </g>
-  <!-- Performance gauge -->
   <g transform="translate(350, 120)">
-    <path d="M-50,0 A50,50 0 0,1 50,0" fill="none" stroke="#444" stroke-width="8" stroke-linecap="round"/>
-    <path d="M-50,0 A50,50 0 0,1 35,-36" fill="none" stroke="#4ecca3" stroke-width="8" stroke-linecap="round"/>
-    <line x1="0" y1="0" x2="25" y2="-40" stroke="#e25822" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="0" cy="0" r="5" fill="#e25822"/>
+    <path d="M -80 0 A 80 80 0 0 1 80 0" fill="none" stroke="#444" stroke-width="12.8" stroke-linecap="round" />
+    <path d="M -80 0 A 80 80 0 0 1 56 -64.8" fill="none" stroke="#4ecca3" stroke-width="12.8" stroke-linecap="round" />
+    <line x1="0" y1="0" x2="40" y2="-72" stroke="#e25822" stroke-width="4.8" stroke-linecap="round" />
+    <circle cx="0" cy="0" r="8" fill="#e25822" />
   </g>
-  <!-- DAG nodes representing Spark stages -->
   <g transform="translate(250, 250)" opacity="0.6">
-    <circle cx="0" cy="0" r="12" fill="#4ecca3"/>
-    <circle cx="80" cy="-20" r="12" fill="#4ecca3"/>
-    <circle cx="80" cy="20" r="12" fill="#4ecca3"/>
-    <circle cx="160" cy="0" r="12" fill="#f5a623"/>
-    <circle cx="240" cy="0" r="12" fill="#e25822"/>
-    <line x1="12" y1="-4" x2="68" y2="-18" stroke="#4ecca3" stroke-width="2"/>
-    <line x1="12" y1="4" x2="68" y2="18" stroke="#4ecca3" stroke-width="2"/>
-    <line x1="92" y1="-16" x2="148" y2="-4" stroke="#4ecca3" stroke-width="2"/>
-    <line x1="92" y1="16" x2="148" y2="4" stroke="#4ecca3" stroke-width="2"/>
-    <line x1="172" y1="0" x2="228" y2="0" stroke="#f5a623" stroke-width="2"/>
+    <circle cx="0" cy="0" r="19.2" fill="#4ecca3" />
+    <circle cx="128" cy="-36" r="19.2" fill="#4ecca3" />
+    <circle cx="128" cy="36" r="19.2" fill="#4ecca3" />
+    <circle cx="256" cy="0" r="19.2" fill="#f5a623" />
+    <circle cx="384" cy="0" r="19.2" fill="#e25822" />
+    <line x1="19.2" y1="-7.2" x2="108.8" y2="-32.4" stroke="#4ecca3" stroke-width="3.2" />
+    <line x1="19.2" y1="7.2" x2="108.8" y2="32.4" stroke="#4ecca3" stroke-width="3.2" />
+    <line x1="147.2" y1="-28.8" x2="236.8" y2="-7.2" stroke="#4ecca3" stroke-width="3.2" />
+    <line x1="147.2" y1="28.8" x2="236.8" y2="7.2" stroke="#4ecca3" stroke-width="3.2" />
+    <line x1="275.2" y1="0" x2="364.8" y2="0" stroke="#f5a623" stroke-width="3.2" />
   </g>
-  <!-- Data flow waves -->
   <g opacity="0.25">
-    <path d="M100,330 Q200,310 300,330 Q400,350 500,330 Q600,310 700,330" fill="none" stroke="#4ecca3" stroke-width="2"/>
-    <path d="M100,350 Q200,330 300,350 Q400,370 500,350 Q600,330 700,350" fill="none" stroke="#e25822" stroke-width="2"/>
+    <path d="M 160 594 Q 320 558 480 594 Q 640 630 800 594 Q 960 558 1120 594" fill="none" stroke="#4ecca3" stroke-width="3.2" />
+    <path d="M 160 630 Q 320 594 480 630 Q 640 666 800 630 Q 960 594 1120 630" fill="none" stroke="#e25822" stroke-width="3.2" />
   </g>
-  <!-- Decorative dots -->
-  <circle cx="50" cy="50" r="3" fill="#4ecca3" opacity="0.4"/>
-  <circle cx="750" cy="50" r="3" fill="#e25822" opacity="0.4"/>
-  <circle cx="50" cy="350" r="3" fill="#dc322f" opacity="0.4"/>
-  <circle cx="750" cy="350" r="3" fill="#f5a623" opacity="0.4"/>
+  <circle cx="80" cy="90" r="4.8" fill="#4ecca3" opacity="0.4" />
+  <circle cx="1200" cy="90" r="4.8" fill="#e25822" opacity="0.4" />
+  <circle cx="80" cy="630" r="4.8" fill="#dc322f" opacity="0.4" />
+  <circle cx="1200" cy="630" r="4.8" fill="#f5a623" opacity="0.4" />
 </svg>

@@ -1,67 +1,44 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Disaster Recovery Architecture</text>
-
-  <!-- Primary Region -->
-  <rect x="30" y="50" width="320" height="290" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="190" y="75" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1b5e20">Primary Region</text>
-
-  <rect x="55" y="90" width="130" height="45" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="120" y="118" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Spark Cluster</text>
-
-  <rect x="200" y="90" width="130" height="45" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="265" y="118" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Delta Lake</text>
-
-  <rect x="55" y="155" width="130" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="120" y="183" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1a237e">Checkpoints</text>
-
-  <rect x="200" y="155" width="130" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="265" y="183" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1a237e">Snapshots</text>
-
-  <rect x="55" y="220" width="275" height="45" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="192" y="248" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#bf360c">Primary Storage (S3 / HDFS)</text>
-
-  <rect x="55" y="280" width="275" height="45" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="192" y="308" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#4a148c">Metadata Store (Hive Metastore)</text>
-
-  <!-- DR Region -->
-  <rect x="450" y="50" width="320" height="290" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2" stroke-dasharray="5,3"/>
-  <text x="610" y="75" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#b71c1c">DR Region (Standby)</text>
-
-  <rect x="475" y="90" width="130" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
-  <text x="540" y="118" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#b71c1c">Spark Cluster</text>
-
-  <rect x="620" y="90" width="130" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
-  <text x="685" y="118" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#b71c1c">Delta Lake</text>
-
-  <rect x="475" y="155" width="130" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="540" y="183" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1a237e">Checkpoints</text>
-
-  <rect x="620" y="155" width="130" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="685" y="183" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1a237e">Snapshots</text>
-
-  <rect x="475" y="220" width="275" height="45" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="612" y="248" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#bf360c">Replica Storage (S3 cross-region)</text>
-
-  <rect x="475" y="280" width="275" height="45" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="612" y="308" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#4a148c">Metadata Replica</text>
-
-  <!-- Replication arrows -->
-  <line x1="330" y1="242" x2="475" y2="242" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="402" y="237" text-anchor="middle" font-family="Arial" font-size="11" fill="#e65100">Replication</text>
-
-  <line x1="330" y1="302" x2="475" y2="302" stroke="#6a1b9a" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="402" y="297" text-anchor="middle" font-family="Arial" font-size="11" fill="#6a1b9a">Sync</text>
-
-  <!-- Bottom: RPO/RTO -->
-  <rect x="100" y="355" width="250" height="35" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="225" y="378" text-anchor="middle" font-family="Arial" font-size="12" fill="#1a237e">RPO: Minutes (near real-time)</text>
-
-  <rect x="400" y="355" width="250" height="35" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="525" y="378" text-anchor="middle" font-family="Arial" font-size="12" fill="#1a237e">RTO: Hours (warm standby)</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Spark Disaster Recovery Architecture</text>
+  <rect x="48" y="90" width="512" height="522" rx="16" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" stroke-dasharray="8 4.8" />
+  <text x="304" y="135" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1b5e20">Primary Region</text>
+  <rect x="88" y="162" width="208" height="81" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="192" y="212.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1b5e20">Spark Cluster</text>
+  <rect x="320" y="162" width="208" height="81" rx="9.6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="424" y="212.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1b5e20">Delta Lake</text>
+  <rect x="88" y="279" width="208" height="81" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="192" y="329.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1a237e">Checkpoints</text>
+  <rect x="320" y="279" width="208" height="81" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="424" y="329.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1a237e">Snapshots</text>
+  <rect x="88" y="396" width="440" height="81" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="307.2" y="446.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#bf360c">Primary Storage (S3 / HDFS)</text>
+  <rect x="88" y="504" width="440" height="81" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <text x="307.2" y="554.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#4a148c">Metadata Store (Hive Metastore)</text>
+  <rect x="720" y="90" width="512" height="522" rx="16" fill="#fce4ec" stroke="#c62828" stroke-width="3.2" stroke-dasharray="8 4.8" />
+  <text x="976" y="135" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#b71c1c">DR Region (Standby)</text>
+  <rect x="760" y="162" width="208" height="81" rx="9.6" fill="#ffcdd2" stroke="#c62828" stroke-width="3.2" />
+  <text x="864" y="212.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#b71c1c">Spark Cluster</text>
+  <rect x="992" y="162" width="208" height="81" rx="9.6" fill="#ffcdd2" stroke="#c62828" stroke-width="3.2" />
+  <text x="1096" y="212.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#b71c1c">Delta Lake</text>
+  <rect x="760" y="279" width="208" height="81" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="864" y="329.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1a237e">Checkpoints</text>
+  <rect x="992" y="279" width="208" height="81" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="1096" y="329.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1a237e">Snapshots</text>
+  <rect x="760" y="396" width="440" height="81" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="979.2" y="446.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#bf360c">Replica Storage (S3 cross-region)</text>
+  <rect x="760" y="504" width="440" height="81" rx="9.6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <text x="979.2" y="554.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#4a148c">Metadata Replica</text>
+  <line x1="528" y1="435.6" x2="760" y2="435.6" stroke="#e65100" stroke-width="3.2" marker-end="url(#arrow)" />
+  <text x="643.2" y="426.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#e65100">Replication</text>
+  <line x1="528" y1="543.6" x2="760" y2="543.6" stroke="#6a1b9a" stroke-width="3.2" marker-end="url(#arrow)" />
+  <text x="643.2" y="534.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#6a1b9a">Sync</text>
+  <rect x="160" y="639" width="400" height="63" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="360" y="680.4" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#1a237e">RPO: Minutes (near real-time)</text>
+  <rect x="640" y="639" width="400" height="63" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="840" y="680.4" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#1a237e">RTO: Hours (warm standby)</text>
 </svg>

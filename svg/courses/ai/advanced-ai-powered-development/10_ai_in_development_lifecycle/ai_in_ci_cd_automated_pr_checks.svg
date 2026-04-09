@@ -1,16 +1,50 @@
-<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="60" width="110" height="50" rx="6" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
-  <text x="65" y="90" text-anchor="middle" font-size="12" fill="#1565C0">PR Opened</text>
-  <rect x="150" y="60" width="110" height="50" rx="6" fill="#FFF3E0" stroke="#E65100" stroke-width="2"/>
-  <text x="205" y="90" text-anchor="middle" font-size="12" fill="#E65100">AI Review</text>
-  <rect x="290" y="60" width="110" height="50" rx="6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2"/>
-  <text x="345" y="90" text-anchor="middle" font-size="12" fill="#7B1FA2">AI Tests</text>
-  <rect x="430" y="60" width="120" height="50" rx="6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
-  <text x="490" y="90" text-anchor="middle" font-size="12" fill="#2E7D32">Risk Score</text>
-  <rect x="580" y="60" width="120" height="50" rx="6" fill="#FFEBEE" stroke="#C62828" stroke-width="2"/>
-  <text x="640" y="90" text-anchor="middle" font-size="12" fill="#C62828">Gate Decision</text>
-  <line x1="120" y1="85" x2="150" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="260" y1="85" x2="290" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="400" y1="85" x2="430" y2="85" stroke="#333" stroke-width="1.5"/>
-  <line x1="550" y1="85" x2="580" y2="85" stroke="#333" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
+      <polygon points="0,160 8.96,0" fill="#333" />
+    </marker>
+  </defs>
+  <rect width="2048" height="6400" fill="#f8f9fa" />
+  <text x="1024" y="560" text-anchor="middle" font-size="51.2" font-weight="bold" fill="#1a237e">AI-Powered Automated PR Checks</text>
+  <rect x="38.4" y="1440" width="320" height="1440" rx="25.6" fill="#E3F2FD" stroke="#1565C0" stroke-width="5.12" />
+  <text x="197.12" y="1952" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#1565C0">PR Opened</text>
+  <text x="197.12" y="2320" text-anchor="middle" font-size="30.72" fill="#555">diff ready</text>
+  <text x="197.12" y="2640" text-anchor="middle" font-size="30.72" fill="#555">CI triggered</text>
+  <line x1="358.4" y1="2160" x2="448" y2="2160" stroke="#333" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="448" y="1440" width="320" height="1440" rx="25.6" fill="#FFF3E0" stroke="#E65100" stroke-width="5.12" />
+  <text x="606.72" y="1952" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#E65100">AI Review</text>
+  <text x="606.72" y="2320" text-anchor="middle" font-size="30.72" fill="#555">security scan</text>
+  <text x="606.72" y="2640" text-anchor="middle" font-size="30.72" fill="#555">logic check</text>
+  <line x1="768" y1="2160" x2="857.6" y2="2160" stroke="#333" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="857.6" y="1440" width="320" height="1440" rx="25.6" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="5.12" />
+  <text x="1016.32" y="1888" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#7B1FA2">AI Test</text>
+  <text x="1016.32" y="2208" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#7B1FA2">Selection</text>
+  <text x="1016.32" y="2560" text-anchor="middle" font-size="30.72" fill="#555">predict failures</text>
+  <line x1="1177.6" y1="2160" x2="1267.2" y2="2160" stroke="#333" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1267.2" y="1440" width="320" height="1440" rx="25.6" fill="#E8F5E9" stroke="#2E7D32" stroke-width="5.12" />
+  <text x="1425.92" y="1888" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#2E7D32">Risk</text>
+  <text x="1425.92" y="2208" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#2E7D32">Scoring</text>
+  <text x="1425.92" y="2560" text-anchor="middle" font-size="30.72" fill="#555">files changed</text>
+  <line x1="1587.2" y1="2160" x2="1676.8" y2="2160" stroke="#333" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1676.8" y="1440" width="332.8" height="1440" rx="25.6" fill="#FFEBEE" stroke="#C62828" stroke-width="5.12" />
+  <text x="1843.2" y="1888" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#C62828">Gate</text>
+  <text x="1843.2" y="2208" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#C62828">Decision</text>
+  <text x="1843.2" y="2560" text-anchor="middle" font-size="30.72" fill="#555">merge / block</text>
+  <rect x="38.4" y="3520" width="1945.6" height="2640" rx="25.6" fill="#E8EAF6" stroke="#3949AB" stroke-width="3.84" />
+  <text x="1024" y="4000" text-anchor="middle" font-size="38.4" font-weight="bold" fill="#3949AB">How AI Assigns Risk Scores to PRs</text>
+  <rect x="89.6" y="4288" width="563.2" height="1600" rx="20.48" fill="#C5CAE9" stroke="#3949AB" />
+  <text x="371.2" y="4720" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#1a237e">High Risk Files</text>
+  <text x="371.2" y="5088" text-anchor="middle" font-size="30.72" fill="#333">auth/, payments/</text>
+  <text x="371.2" y="5408" text-anchor="middle" font-size="30.72" fill="#333">config/, crypto/</text>
+  <text x="371.2" y="5696" text-anchor="middle" font-size="28.16" fill="#555">require extra reviewers</text>
+  <rect x="716.8" y="4288" width="563.2" height="1600" rx="20.48" fill="#C5CAE9" stroke="#3949AB" />
+  <text x="998.4" y="4720" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#1a237e">Complexity Delta</text>
+  <text x="998.4" y="5088" text-anchor="middle" font-size="30.72" fill="#333">cyclomatic complexity</text>
+  <text x="998.4" y="5408" text-anchor="middle" font-size="30.72" fill="#333">change magnitude</text>
+  <text x="998.4" y="5696" text-anchor="middle" font-size="28.16" fill="#555">coverage delta tracked</text>
+  <rect x="1344" y="4288" width="588.8" height="1600" rx="20.48" fill="#C5CAE9" stroke="#3949AB" />
+  <text x="1638.4" y="4720" text-anchor="middle" font-size="33.28" font-weight="bold" fill="#1a237e">Historical Defect Rate</text>
+  <text x="1638.4" y="5088" text-anchor="middle" font-size="30.72" fill="#333">past bug frequency</text>
+  <text x="1638.4" y="5408" text-anchor="middle" font-size="30.72" fill="#333">in changed modules</text>
+  <text x="1638.4" y="5696" text-anchor="middle" font-size="28.16" fill="#555">learned from history</text>
 </svg>

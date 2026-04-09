@@ -1,53 +1,46 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Isolation Problems in Concurrent Transactions</text>
-  <!-- Transaction 1 -->
-  <rect x="50" y="60" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="120" y="90" text-anchor="middle" font-size="13" fill="#333">Transaction 1</text>
-  <!-- Transaction 2 -->
-  <rect x="50" y="150" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="120" y="180" text-anchor="middle" font-size="13" fill="#333">Transaction 2</text>
-  <!-- Data -->
-  <rect x="300" y="105" width="100" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="135" text-anchor="middle" font-size="13" fill="#333">Data</text>
-  <!-- Both read -->
-  <line x1="190" y1="80" x2="298" y2="118" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="235" y="88" font-size="10" fill="#4a90e2">Read</text>
-  <line x1="190" y1="175" x2="298" y2="142" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="235" y="172" font-size="10" fill="#4a90e2">Read</text>
-  <!-- Modified copies -->
-  <rect x="470" y="60" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="520" y="85" text-anchor="middle" font-size="12" fill="#333">Data'</text>
-  <rect x="470" y="150" width="100" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="520" y="175" text-anchor="middle" font-size="12" fill="#333">Data''</text>
-  <line x1="400" y1="115" x2="468" y2="80" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <text x="435" y="85" font-size="10" fill="#dc3545">Modify</text>
-  <line x1="400" y1="140" x2="468" y2="165" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead-red)"/>
-  <text x="435" y="165" font-size="10" fill="#dc3545">Modify</text>
-  <!-- Conflict -->
-  <rect x="640" y="100" width="130" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="705" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">Race Condition</text>
-  <text x="705" y="140" text-anchor="middle" font-size="11" fill="#333">Conflict!</text>
-  <line x1="570" y1="80" x2="638" y2="115" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
-  <line x1="570" y1="170" x2="638" y2="135" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
-  <!-- Problems list -->
-  <rect x="50" y="240" width="700" height="140" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="400" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Common Problems</text>
-  <rect x="70" y="280" width="190" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="165" y="298" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Dirty Reads</text>
-  <text x="165" y="312" text-anchor="middle" font-size="10" fill="#555">Reading uncommitted data</text>
-  <rect x="290" y="280" width="210" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="395" y="298" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Non-Repeatable Reads</text>
-  <text x="395" y="312" text-anchor="middle" font-size="10" fill="#555">Different values on re-read</text>
-  <rect x="530" y="280" width="200" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="630" y="298" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Lost Updates</text>
-  <text x="630" y="312" text-anchor="middle" font-size="10" fill="#555">One write overwrites another</text>
-  <text x="400" y="360" text-anchor="middle" font-size="11" fill="#555">These problems occur when transactions run concurrently without proper isolation.</text>
+  <text x="640" y="45" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Isolation Problems in Concurrent Transactions</text>
+  <rect x="80" y="108" width="224" height="90" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="192" y="162" text-anchor="middle" font-size="20.8" fill="#333">Transaction 1</text>
+  <rect x="80" y="270" width="224" height="90" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="192" y="324" text-anchor="middle" font-size="20.8" fill="#333">Transaction 2</text>
+  <rect x="480" y="189" width="160" height="90" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="560" y="243" text-anchor="middle" font-size="20.8" fill="#333">Data</text>
+  <line x1="304" y1="144" x2="476.8" y2="212.4" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <text x="376" y="158.4" font-size="16" fill="#4a90e2">Read</text>
+  <line x1="304" y1="315" x2="476.8" y2="255.6" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <text x="376" y="309.6" font-size="16" fill="#4a90e2">Read</text>
+  <rect x="752" y="108" width="160" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="832" y="153" text-anchor="middle" font-size="19.2" fill="#333">Data'</text>
+  <rect x="752" y="270" width="160" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="832" y="315" text-anchor="middle" font-size="19.2" fill="#333">Data''</text>
+  <line x1="640" y1="207" x2="748.8" y2="144" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead-red)" />
+  <text x="696" y="153" font-size="16" fill="#dc3545">Modify</text>
+  <line x1="640" y1="252" x2="748.8" y2="297" stroke="#dc3545" stroke-width="2.4" marker-end="url(#arrowhead-red)" />
+  <text x="696" y="297" font-size="16" fill="#dc3545">Modify</text>
+  <rect x="1024" y="180" width="208" height="90" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1128" y="219.6" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#dc3545">Race Condition</text>
+  <text x="1128" y="252" text-anchor="middle" font-size="17.6" fill="#333">Conflict!</text>
+  <line x1="912" y1="144" x2="1020.8" y2="207" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
+  <line x1="912" y1="306" x2="1020.8" y2="243" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
+  <rect x="80" y="432" width="1120" height="252" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6" />
+  <text x="640" y="477" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Common Problems</text>
+  <rect x="112" y="504" width="304" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="264" y="536.4" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">Dirty Reads</text>
+  <text x="264" y="561.6" text-anchor="middle" font-size="16" fill="#555">Reading uncommitted data</text>
+  <rect x="464" y="504" width="336" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="632" y="536.4" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">Non-Repeatable Reads</text>
+  <text x="632" y="561.6" text-anchor="middle" font-size="16" fill="#555">Different values on re-read</text>
+  <rect x="848" y="504" width="320" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="1008" y="536.4" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">Lost Updates</text>
+  <text x="1008" y="561.6" text-anchor="middle" font-size="16" fill="#555">One write overwrites another</text>
+  <text x="640" y="648" text-anchor="middle" font-size="17.6" fill="#555">These problems occur when transactions run concurrently without proper isolation.</text>
 </svg>

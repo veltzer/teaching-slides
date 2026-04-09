@@ -1,60 +1,49 @@
-<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    <marker id="arrowhead" markerWidth="14.2222" markerHeight="10.08" refX="12.8" refY="5.04" orient="auto">
+      <polygon points="0,14.4 4.9778,0" fill="#666" />
     </marker>
   </defs>
-  <!-- CLOSED -->
-  <rect x="370" y="10" width="140" height="40" rx="5" fill="#e2e3e5" stroke="#6c757d" stroke-width="2"/>
-  <text x="440" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">CLOSED</text>
-  <!-- LISTEN -->
-  <line x1="400" y1="50" x2="200" y2="85" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="280" y="60" font-family="Arial, sans-serif" font-size="10" fill="#4a90e2">passive open</text>
-  <rect x="120" y="85" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="190" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">LISTEN</text>
-  <!-- SYN_SENT (client side) -->
-  <line x1="480" y1="50" x2="680" y2="85" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="600" y="60" font-family="Arial, sans-serif" font-size="10" fill="#28a745">active open / SYN</text>
-  <rect x="620" y="85" width="140" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="690" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SYN_SENT</text>
-  <!-- SYN_RCVD -->
-  <line x1="190" y1="125" x2="190" y2="175" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="210" y="155" font-family="Arial, sans-serif" font-size="10" fill="#888">SYN / SYN+ACK</text>
-  <rect x="120" y="175" width="140" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="190" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SYN_RCVD</text>
-  <!-- ESTABLISHED -->
-  <line x1="260" y1="200" x2="370" y2="260" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="290" y="240" font-family="Arial, sans-serif" font-size="10" fill="#888">ACK</text>
-  <line x1="690" y1="125" x2="510" y2="260" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="620" y="200" font-family="Arial, sans-serif" font-size="10" fill="#888">SYN+ACK / ACK</text>
-  <rect x="370" y="250" width="160" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="450" y="278" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#28a745">ESTABLISHED</text>
-  <!-- FIN_WAIT_1 -->
-  <line x1="400" y1="295" x2="200" y2="340" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="280" y="310" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">close / FIN</text>
-  <rect x="120" y="340" width="140" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="190" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">FIN_WAIT_1</text>
-  <!-- CLOSE_WAIT -->
-  <line x1="500" y1="295" x2="680" y2="340" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="610" y="310" font-family="Arial, sans-serif" font-size="10" fill="#888">FIN / ACK</text>
-  <rect x="620" y="340" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="690" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">CLOSE_WAIT</text>
-  <!-- FIN_WAIT_2 -->
-  <line x1="190" y1="380" x2="190" y2="420" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="210" y="405" font-family="Arial, sans-serif" font-size="10" fill="#888">ACK</text>
-  <rect x="120" y="420" width="140" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="190" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">FIN_WAIT_2</text>
-  <!-- LAST_ACK -->
-  <line x1="690" y1="380" x2="690" y2="420" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="710" y="405" font-family="Arial, sans-serif" font-size="10" fill="#888">close / FIN</text>
-  <rect x="620" y="420" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="690" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">LAST_ACK</text>
-  <!-- TIME_WAIT -->
-  <line x1="260" y1="445" x2="370" y2="475" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="300" y="472" font-family="Arial, sans-serif" font-size="10" fill="#888">FIN / ACK</text>
-  <rect x="370" y="460" width="140" height="40" rx="5" fill="#e2e3e5" stroke="#6c757d" stroke-width="2"/>
-  <text x="440" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold">TIME_WAIT</text>
-  <!-- LAST_ACK to CLOSED -->
-  <line x1="690" y1="460" x2="510" y2="475" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="620" y="472" font-family="Arial, sans-serif" font-size="10" fill="#888">ACK</text>
+  <rect x="526.2222" y="14.4" width="199.1111" height="57.6" rx="7.1111" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.8444" />
+  <text x="625.7778" y="50.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">CLOSED</text>
+  <line x1="568.8889" y1="72" x2="284.4444" y2="122.4" stroke="#4a90e2" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="398.2222" y="86.4" font-family="Arial, sans-serif" font-size="14.2222" fill="#4a90e2">passive open</text>
+  <rect x="170.6667" y="122.4" width="199.1111" height="57.6" rx="7.1111" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8444" />
+  <text x="270.2222" y="158.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">LISTEN</text>
+  <line x1="682.6667" y1="72" x2="967.1111" y2="122.4" stroke="#28a745" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="853.3333" y="86.4" font-family="Arial, sans-serif" font-size="14.2222" fill="#28a745">active open / SYN</text>
+  <rect x="881.7778" y="122.4" width="199.1111" height="57.6" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
+  <text x="981.3333" y="158.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">SYN_SENT</text>
+  <line x1="270.2222" y1="180" x2="270.2222" y2="252" stroke="#4a90e2" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="298.6667" y="223.2" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">SYN / SYN+ACK</text>
+  <rect x="170.6667" y="252" width="199.1111" height="57.6" rx="7.1111" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8444" />
+  <text x="270.2222" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" font-weight="bold">SYN_RCVD</text>
+  <line x1="369.7778" y1="288" x2="526.2222" y2="374.4" stroke="#4a90e2" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="412.4444" y="345.6" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">ACK</text>
+  <line x1="981.3333" y1="180" x2="725.3333" y2="374.4" stroke="#28a745" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="881.7778" y="288" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">SYN+ACK / ACK</text>
+  <rect x="526.2222" y="360" width="227.5556" height="64.8" rx="7.1111" fill="#d4edda" stroke="#28a745" stroke-width="2.8444" />
+  <text x="640" y="400.32" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.4889" font-weight="bold" fill="#28a745">ESTABLISHED</text>
+  <line x1="568.8889" y1="424.8" x2="284.4444" y2="489.6" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="398.2222" y="446.4" font-family="Arial, sans-serif" font-size="14.2222" fill="#dc3545">close / FIN</text>
+  <rect x="170.6667" y="489.6" width="199.1111" height="57.6" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
+  <text x="270.2222" y="525.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6444" font-weight="bold">FIN_WAIT_1</text>
+  <line x1="711.1111" y1="424.8" x2="967.1111" y2="489.6" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="867.5556" y="446.4" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">FIN / ACK</text>
+  <rect x="881.7778" y="489.6" width="199.1111" height="57.6" rx="7.1111" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8444" />
+  <text x="981.3333" y="525.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6444" font-weight="bold">CLOSE_WAIT</text>
+  <line x1="270.2222" y1="547.2" x2="270.2222" y2="604.8" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="298.6667" y="583.2" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">ACK</text>
+  <rect x="170.6667" y="604.8" width="199.1111" height="57.6" rx="7.1111" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8444" />
+  <text x="270.2222" y="640.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6444" font-weight="bold">FIN_WAIT_2</text>
+  <line x1="981.3333" y1="547.2" x2="981.3333" y2="604.8" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="1009.7778" y="583.2" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">close / FIN</text>
+  <rect x="881.7778" y="604.8" width="199.1111" height="57.6" rx="7.1111" fill="#fff3cd" stroke="#ffc107" stroke-width="2.8444" />
+  <text x="981.3333" y="640.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6444" font-weight="bold">LAST_ACK</text>
+  <line x1="369.7778" y1="640.8" x2="526.2222" y2="684" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="426.6667" y="679.68" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">FIN / ACK</text>
+  <rect x="526.2222" y="662.4" width="199.1111" height="57.6" rx="7.1111" fill="#e2e3e5" stroke="#6c757d" stroke-width="2.8444" />
+  <text x="625.7778" y="698.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.6444" font-weight="bold">TIME_WAIT</text>
+  <line x1="981.3333" y1="662.4" x2="725.3333" y2="684" stroke="#dc3545" stroke-width="2.1333" marker-end="url(#arrowhead)" />
+  <text x="881.7778" y="679.68" font-family="Arial, sans-serif" font-size="14.2222" fill="#888">ACK</text>
 </svg>

@@ -1,42 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="340" font-family="sans-serif">
-<defs>
-  <marker id="arr"  markerWidth="10" markerHeight="7" refX="9"   refY="3.5" orient="auto">
-    <polygon points="0 0,10 3.5,0 7" fill="#555"/>
-  </marker>
-  <marker id="arrl" markerWidth="10" markerHeight="7" refX="1"   refY="3.5" orient="auto">
-    <polygon points="10 0,0 3.5,10 7" fill="#555"/>
-  </marker>
-</defs>
-<text x="350" y="22" text-anchor="middle" font-size="14" fill="#222222" font-weight="bold">Reverse Proxy Protection Architecture</text>
-<text x="60" y="48" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">Attackers</text>
-<text x="320" y="48" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">Reverse Proxy</text>
-<text x="320" y="64" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">(Nginx/HAProxy)</text>
-<text x="560" y="48" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Backend</text>
-<text x="560" y="64" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">(Apache)</text>
-<rect x="20" y="80" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="100" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A1</text>
-<line x1="80" y1="97" x2="200" y2="97" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="20" y="130" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="150" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A2</text>
-<line x1="80" y1="147" x2="200" y2="147" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="20" y="180" width="60" height="34" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="1.5" rx="4"/>
-<text x="50" y="200" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">A3</text>
-<line x1="80" y1="197" x2="200" y2="197" stroke="#c62828" stroke-width="1.5" marker-end="url(#arr)" stroke-dasharray="5,3"/>
-<rect x="200" y="70" width="230" height="180" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" rx="4"/>
-<text x="315" y="94" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">Event-driven proxy</text>
-<text x="210" y="115" text-anchor="start" font-size="11" fill="#1a1a2e">• Connection timeouts</text>
-<text x="210" y="137" text-anchor="start" font-size="11" fill="#1a1a2e">• Rate limiting</text>
-<text x="210" y="159" text-anchor="start" font-size="11" fill="#1a1a2e">• Connection limits</text>
-<text x="210" y="181" text-anchor="start" font-size="11" fill="#1a1a2e">• Full request buffering</text>
-<text x="315" y="232" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">Slow conns blocked here</text>
-<rect x="480" y="70" width="190" height="180" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" rx="4"/>
-<text x="575" y="94" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Backend server</text>
-<text x="575" y="116" text-anchor="middle" font-size="11" fill="#1b5e20">Only sees</text>
-<text x="575" y="138" text-anchor="middle" font-size="11" fill="#1b5e20">complete requests</text>
-<text x="575" y="160" text-anchor="middle" font-size="11" fill="#1b5e20">→ not vulnerable</text>
-<line x1="430" y1="155" x2="480" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-<text x="455" y="148" text-anchor="middle" font-size="10" fill="#555">complete
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="18.2857" markerHeight="14.8235" refX="16.4571" refY="7.4118" orient="auto">
+      <polygon points="0,21.1765 6.4,0" fill="#555" />
+    </marker>
+    <marker id="arrl" markerWidth="18.2857" markerHeight="14.8235" refX="1.8286" refY="7.4118" orient="auto">
+      <polygon points="0,0 6.4,21.1765" fill="#555" />
+    </marker>
+  </defs>
+  <text x="640" y="46.5882" text-anchor="middle" font-size="25.6" fill="#222222" font-weight="bold">Reverse Proxy Protection Architecture</text>
+  <text x="109.7143" y="101.6471" text-anchor="middle" font-size="21.9429" fill="#c62828" font-weight="bold">Attackers</text>
+  <text x="585.1429" y="101.6471" text-anchor="middle" font-size="21.9429" fill="#1565c0" font-weight="bold">Reverse Proxy</text>
+  <text x="585.1429" y="135.5294" text-anchor="middle" font-size="21.9429" fill="#1565c0" font-weight="bold">(Nginx/HAProxy)</text>
+  <text x="1024" y="101.6471" text-anchor="middle" font-size="21.9429" fill="#2e7d32" font-weight="bold">Backend</text>
+  <text x="1024" y="135.5294" text-anchor="middle" font-size="21.9429" fill="#2e7d32" font-weight="bold">(Apache)</text>
+  <rect x="36.5714" y="169.4118" width="109.7143" height="72" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.7429" rx="7.3143" />
+  <text x="91.4286" y="211.7647" text-anchor="middle" font-size="21.9429" fill="#b71c1c" font-weight="bold">A1</text>
+  <line x1="146.2857" y1="205.4118" x2="365.7143" y2="205.4118" stroke="#c62828" stroke-width="2.7429" marker-end="url(#arr)" stroke-dasharray="9.1429 5.4857" />
+  <rect x="36.5714" y="275.2941" width="109.7143" height="72" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.7429" rx="7.3143" />
+  <text x="91.4286" y="317.6471" text-anchor="middle" font-size="21.9429" fill="#b71c1c" font-weight="bold">A2</text>
+  <line x1="146.2857" y1="311.2941" x2="365.7143" y2="311.2941" stroke="#c62828" stroke-width="2.7429" marker-end="url(#arr)" stroke-dasharray="9.1429 5.4857" />
+  <rect x="36.5714" y="381.1765" width="109.7143" height="72" fill="#ffcdd2" stroke="#ef9a9a" stroke-width="2.7429" rx="7.3143" />
+  <text x="91.4286" y="423.5294" text-anchor="middle" font-size="21.9429" fill="#b71c1c" font-weight="bold">A3</text>
+  <line x1="146.2857" y1="417.1765" x2="365.7143" y2="417.1765" stroke="#c62828" stroke-width="2.7429" marker-end="url(#arr)" stroke-dasharray="9.1429 5.4857" />
+  <rect x="365.7143" y="148.2353" width="420.5714" height="381.1765" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.7429" rx="7.3143" />
+  <text x="576" y="199.0588" text-anchor="middle" font-size="21.9429" fill="#1565c0" font-weight="bold">Event-driven proxy</text>
+  <text x="384" y="243.5294" text-anchor="start" font-size="20.1143" fill="#1a1a2e">• Connection timeouts</text>
+  <text x="384" y="290.1176" text-anchor="start" font-size="20.1143" fill="#1a1a2e">• Rate limiting</text>
+  <text x="384" y="336.7059" text-anchor="start" font-size="20.1143" fill="#1a1a2e">• Connection limits</text>
+  <text x="384" y="383.2941" text-anchor="start" font-size="20.1143" fill="#1a1a2e">• Full request buffering</text>
+  <text x="576" y="491.2941" text-anchor="middle" font-size="20.1143" fill="#c62828" font-weight="bold">Slow conns blocked here</text>
+  <rect x="877.7143" y="148.2353" width="347.4286" height="381.1765" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.7429" rx="7.3143" />
+  <text x="1051.4286" y="199.0588" text-anchor="middle" font-size="21.9429" fill="#2e7d32" font-weight="bold">Backend server</text>
+  <text x="1051.4286" y="245.6471" text-anchor="middle" font-size="20.1143" fill="#1b5e20">Only sees</text>
+  <text x="1051.4286" y="292.2353" text-anchor="middle" font-size="20.1143" fill="#1b5e20">complete requests</text>
+  <text x="1051.4286" y="338.8235" text-anchor="middle" font-size="20.1143" fill="#1b5e20">→ not vulnerable</text>
+  <line x1="786.2857" y1="328.2353" x2="877.7143" y2="328.2353" stroke="#555" stroke-width="2.7429" marker-end="url(#arr)" />
+  <text x="832" y="313.4118" text-anchor="middle" font-size="18.2857" fill="#555">complete
 reqs only</text>
-<rect x="10" y="296" width="680" height="34" fill="#f1f8e9" stroke="#aed581" stroke-width="1.5" rx="4"/>
-<text x="350" y="318" text-anchor="middle" font-size="11" fill="#33691e">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</text>
+  <rect x="18.2857" y="626.8235" width="1243.4286" height="72" fill="#f1f8e9" stroke="#aed581" stroke-width="2.7429" rx="7.3143" />
+  <text x="640" y="673.4118" text-anchor="middle" font-size="20.1143" fill="#33691e">Slow connections are fully absorbed by the event-driven proxy — backend stays fast</text>
 </svg>

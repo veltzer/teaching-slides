@@ -1,43 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 520" font-family="Arial, sans-serif">
-  <rect x="10" y="10" width="730" height="250" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="375" y="40" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">LoRA Rank Selection</text>
-  <!-- Axes -->
-  <line x1="80" y1="220" x2="700" y2="220" stroke="#333" stroke-width="2"/>
-  <line x1="80" y1="220" x2="80" y2="60" stroke="#333" stroke-width="2"/>
-  <text x="60" y="140" text-anchor="middle" font-size="12" fill="#333" transform="rotate(-90,60,140)">Quality</text>
-  <text x="390" y="245" text-anchor="middle" font-size="12" fill="#333">Rank (r)</text>
-  <!-- Rank labels -->
-  <text x="110" y="238" text-anchor="middle" font-size="10" fill="#666">4</text>
-  <text x="190" y="238" text-anchor="middle" font-size="10" fill="#666">8</text>
-  <text x="280" y="238" text-anchor="middle" font-size="10" fill="#666">16</text>
-  <text x="380" y="238" text-anchor="middle" font-size="10" fill="#666">32</text>
-  <text x="490" y="238" text-anchor="middle" font-size="10" fill="#666">64</text>
-  <text x="610" y="238" text-anchor="middle" font-size="10" fill="#666">128</text>
-  <text x="690" y="238" text-anchor="middle" font-size="10" fill="#666">256</text>
-  <!-- Curve -->
-  <path d="M80,210 Q150,170 190,140 Q250,110 380,90 Q490,80 690,70" fill="none" stroke="#4a90e2" stroke-width="3"/>
-  <!-- Full FT line -->
-  <line x1="80" y1="68" x2="700" y2="68" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="710" y="72" font-size="11" fill="#28a745">Full FT</text>
-  <!-- Diminishing returns annotation -->
-  <text x="420" y="105" font-size="11" fill="#dc3545" font-style="italic">Diminishing returns</text>
-  <path d="M410,108 L340,105" fill="none" stroke="#dc3545" stroke-width="1" marker-end="url(#arrow)"/>
-  <defs><marker id="arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#dc3545"/></marker></defs>
-
-  <!-- Guidelines -->
-  <rect x="10" y="270" width="355" height="240" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="187" y="295" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Rank Selection Guidelines</text>
-  <text x="30" y="320" font-size="12" fill="#333">r=4:   Simple tasks (classification, sentiment)</text>
-  <text x="30" y="345" font-size="12" fill="#333">r=8:   Standard tasks (Q&amp;A, summarization)</text>
-  <text x="30" y="370" font-size="12" fill="#333">r=16:  Complex tasks (code gen, reasoning)</text>
-  <text x="30" y="395" font-size="12" fill="#333">r=32:  Near-full-FT quality needed</text>
-  <text x="30" y="420" font-size="12" fill="#333">r=64+: Usually not worth it (use full FT)</text>
-
-  <!-- Memory impact -->
-  <rect x="385" y="270" width="355" height="240" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="562" y="295" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Memory Impact (7B model)</text>
-  <text x="405" y="325" font-size="12" fill="#333">r=8:    ~40 MB additional parameters</text>
-  <text x="405" y="355" font-size="12" fill="#333">r=16:   ~80 MB</text>
-  <text x="405" y="385" font-size="12" fill="#333">r=32:   ~160 MB</text>
-  <text x="405" y="415" font-size="12" fill="#333">r=64:   ~320 MB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <rect x="17.0667" y="13.8462" width="1245.8667" height="346.1538" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
+  <text x="640" y="55.3846" text-anchor="middle" font-size="22.1538" font-weight="bold" fill="#333">LoRA Rank Selection</text>
+  <line x1="136.5333" y1="304.6154" x2="1194.6667" y2="304.6154" stroke="#333" stroke-width="2.7692" />
+  <line x1="136.5333" y1="304.6154" x2="136.5333" y2="83.0769" stroke="#333" stroke-width="2.7692" />
+  <text x="102.4" y="193.8462" text-anchor="middle" font-size="16.6154" fill="#333" transform="rotate(-90,60,140)">Quality</text>
+  <text x="665.6" y="339.2308" text-anchor="middle" font-size="16.6154" fill="#333">Rank (r)</text>
+  <text x="187.7333" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">4</text>
+  <text x="324.2667" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">8</text>
+  <text x="477.8667" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">16</text>
+  <text x="648.5333" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">32</text>
+  <text x="836.2667" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">64</text>
+  <text x="1041.0667" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">128</text>
+  <text x="1177.6" y="329.5385" text-anchor="middle" font-size="13.8462" fill="#666">256</text>
+  <path d="M 136.5333 290.7692 Q 256 235.3846 324.2667 193.8462 Q 426.6667 152.3077 648.5333 124.6154 Q 836.2667 110.7692 1177.6 96.9231" fill="none" stroke="#4a90e2" stroke-width="4.1538" />
+  <line x1="136.5333" y1="94.1538" x2="1194.6667" y2="94.1538" stroke="#28a745" stroke-width="2.0769" stroke-dasharray="8.3077 4.1538" />
+  <text x="1211.7333" y="99.6923" font-size="15.2308" fill="#28a745">Full FT</text>
+  <text x="716.8" y="145.3846" font-size="15.2308" fill="#dc3545" font-style="italic">Diminishing returns</text>
+  <path d="M 699.7333 149.5385 L 580.2667 145.3846" fill="none" stroke="#dc3545" stroke-width="1.3846" marker-end="url(#arrow)" />
+  <defs>
+    <marker id="arrow" markerWidth="13.6533" markerHeight="8.3077" refX="13.6533" refY="4.1538" orient="auto">
+      <path d="M 0 0 L 13.6533 4.1538 L 0 8.3077" fill="#dc3545" />
+    </marker>
+  </defs>
+  <rect x="17.0667" y="373.8462" width="605.8667" height="332.3077" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
+  <text x="319.1467" y="408.4615" text-anchor="middle" font-size="19.3846" font-weight="bold" fill="#333">Rank Selection Guidelines</text>
+  <text x="51.2" y="443.0769" font-size="16.6154" fill="#333">r=4:   Simple tasks (classification, sentiment)</text>
+  <text x="51.2" y="477.6923" font-size="16.6154" fill="#333">r=8:   Standard tasks (Q&amp;A, summarization)</text>
+  <text x="51.2" y="512.3077" font-size="16.6154" fill="#333">r=16:  Complex tasks (code gen, reasoning)</text>
+  <text x="51.2" y="546.9231" font-size="16.6154" fill="#333">r=32:  Near-full-FT quality needed</text>
+  <text x="51.2" y="581.5385" font-size="16.6154" fill="#333">r=64+: Usually not worth it (use full FT)</text>
+  <rect x="657.0667" y="373.8462" width="605.8667" height="332.3077" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="959.1467" y="408.4615" text-anchor="middle" font-size="19.3846" font-weight="bold" fill="#333">Memory Impact (7B model)</text>
+  <text x="691.2" y="450" font-size="16.6154" fill="#333">r=8:    ~40 MB additional parameters</text>
+  <text x="691.2" y="491.5385" font-size="16.6154" fill="#333">r=16:   ~80 MB</text>
+  <text x="691.2" y="533.0769" font-size="16.6154" fill="#333">r=32:   ~160 MB</text>
+  <text x="691.2" y="574.6154" font-size="16.6154" fill="#333">r=64:   ~320 MB</text>
 </svg>

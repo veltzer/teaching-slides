@@ -1,30 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="18.2857" markerHeight="12" refX="16.4571" refY="6" orient="auto">
+      <polygon points="0,17.1429 6.4,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SYN Flood Defense Layers</text>
-  <!-- Layer 1 - outermost -->
-  <rect x="40" y="50" width="620" height="350" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Layer 1: Network Edge</text>
-  <text x="350" y="87" text-anchor="middle" font-size="10" fill="#666">Rate limiting, ACLs, Black hole routing</text>
-  <!-- Layer 2 -->
-  <rect x="70" y="100" width="560" height="280" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="350" y="122" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Layer 2: Firewall / IPS</text>
-  <text x="350" y="137" text-anchor="middle" font-size="10" fill="#666">SYN proxy, Connection limits, Stateful inspection</text>
-  <!-- Layer 3 -->
-  <rect x="100" y="150" width="500" height="210" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="172" text-anchor="middle" font-size="12" font-weight="bold" fill="#e6a800">Layer 3: Load Balancer</text>
-  <text x="350" y="187" text-anchor="middle" font-size="10" fill="#666">Traffic distribution, SYN cookies</text>
-  <!-- Layer 4 -->
-  <rect x="130" y="200" width="440" height="140" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Layer 4: OS Hardening</text>
-  <text x="350" y="237" text-anchor="middle" font-size="10" fill="#666">TCP backlog tuning, SYN cookie support</text>
-  <!-- Layer 5 - innermost -->
-  <rect x="160" y="250" width="380" height="70" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="350" y="278" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Layer 5: Application</text>
-  <text x="350" y="298" text-anchor="middle" font-size="10" fill="#666">Connection timeouts, Queue management</text>
-  <!-- Attack arrow on left -->
-  <text x="20" y="220" font-size="10" fill="#dc3545" font-weight="bold" transform="rotate(-90 20 220)">Attack Traffic</text>
+  <text x="640" y="51.4286" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">SYN Flood Defense Layers</text>
+  <rect x="73.1429" y="85.7143" width="1133.7143" height="600" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="640" y="123.4286" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#4a90e2">Layer 1: Network Edge</text>
+  <text x="640" y="149.1429" text-anchor="middle" font-size="17.1429" fill="#666">Rate limiting, ACLs, Black hole routing</text>
+  <rect x="128" y="171.4286" width="1024" height="480" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="640" y="209.1429" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#28a745">Layer 2: Firewall / IPS</text>
+  <text x="640" y="234.8571" text-anchor="middle" font-size="17.1429" fill="#666">SYN proxy, Connection limits, Stateful inspection</text>
+  <rect x="182.8571" y="257.1429" width="914.2857" height="360" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
+  <text x="640" y="294.8571" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#e6a800">Layer 3: Load Balancer</text>
+  <text x="640" y="320.5714" text-anchor="middle" font-size="17.1429" fill="#666">Traffic distribution, SYN cookies</text>
+  <rect x="237.7143" y="342.8571" width="804.5714" height="240" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="640" y="380.5714" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#4a90e2">Layer 4: OS Hardening</text>
+  <text x="640" y="406.2857" text-anchor="middle" font-size="17.1429" fill="#666">TCP backlog tuning, SYN cookie support</text>
+  <rect x="292.5714" y="428.5714" width="694.8571" height="120" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="640" y="476.5714" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#28a745">Layer 5: Application</text>
+  <text x="640" y="510.8571" text-anchor="middle" font-size="17.1429" fill="#666">Connection timeouts, Queue management</text>
+  <text x="36.5714" y="377.1429" font-size="17.1429" fill="#dc3545" font-weight="bold" transform="rotate(-90 20 220)">Attack Traffic</text>
 </svg>

@@ -1,36 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 420" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Join Strategy Decision Flow</text>
-  <!-- Join Request -->
-  <rect x="260" y="50" width="180" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Join Request</text>
-  <line x1="350" y1="90" x2="350" y2="120" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <defs><marker id="aJn" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#333"/></marker></defs>
-  <!-- Table size? -->
-  <rect x="260" y="125" width="180" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Table size?</text>
-  <!-- Branches -->
-  <line x1="280" y1="165" x2="130" y2="210" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <line x1="350" y1="165" x2="350" y2="210" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <line x1="420" y1="165" x2="570" y2="210" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <!-- Size labels -->
-  <rect x="55" y="215" width="150" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="130" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">&lt; 10 MB</text>
-  <rect x="275" y="215" width="150" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="350" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">10 MB - 1 GB</text>
-  <rect x="495" y="215" width="150" height="35" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="570" y="238" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">&gt; 1 GB</text>
-  <!-- Arrows to strategies -->
-  <line x1="130" y1="250" x2="130" y2="280" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <line x1="350" y1="250" x2="350" y2="280" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <line x1="570" y1="250" x2="570" y2="280" stroke="#333" stroke-width="2" marker-end="url(#aJn)"/>
-  <!-- Strategies -->
-  <rect x="40" y="285" width="180" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="130" y="310" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Broadcast Hash Join</text>
-  <text x="130" y="330" text-anchor="middle" font-size="11" fill="#555">No shuffle | O(n)</text>
-  <rect x="260" y="285" width="180" height="55" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="310" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">Shuffle Hash Join</text>
-  <text x="350" y="330" text-anchor="middle" font-size="11" fill="#555">Shuffle | O(n+m)</text>
-  <rect x="480" y="285" width="180" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="570" y="310" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Sort-Merge Join</text>
-  <text x="570" y="330" text-anchor="middle" font-size="11" fill="#555">Shuffle+Sort | O(nlogn)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="51.4286" text-anchor="middle" font-size="30.8571" font-weight="bold" fill="#333">Join Strategy Decision Flow</text>
+  <rect x="475.4286" y="85.7143" width="329.1429" height="68.5714" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="640" y="128.5714" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#333">Join Request</text>
+  <line x1="640" y1="154.2857" x2="640" y2="205.7143" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <defs>
+    <marker id="aJn" markerWidth="14.6286" markerHeight="10.2857" refX="14.6286" refY="5.1429" orient="auto">
+      <path d="M 0 0 L 14.6286 5.1429 L 0 10.2857" fill="#333" />
+    </marker>
+  </defs>
+  <rect x="475.4286" y="214.2857" width="329.1429" height="68.5714" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
+  <text x="640" y="257.1429" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#333">Table size?</text>
+  <line x1="512" y1="282.8571" x2="237.7143" y2="360" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <line x1="640" y1="282.8571" x2="640" y2="360" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <line x1="768" y1="282.8571" x2="1042.2857" y2="360" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <rect x="100.5714" y="368.5714" width="274.2857" height="60" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.5714" />
+  <text x="237.7143" y="408" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#333">&lt; 10 MB</text>
+  <rect x="502.8571" y="368.5714" width="274.2857" height="60" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5714" />
+  <text x="640" y="408" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#333">10 MB - 1 GB</text>
+  <rect x="905.1429" y="368.5714" width="274.2857" height="60" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5714" />
+  <text x="1042.2857" y="408" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#333">&gt; 1 GB</text>
+  <line x1="237.7143" y1="428.5714" x2="237.7143" y2="480" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <line x1="640" y1="428.5714" x2="640" y2="480" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <line x1="1042.2857" y1="428.5714" x2="1042.2857" y2="480" stroke="#333" stroke-width="3.4286" marker-end="url(#aJn)" />
+  <rect x="73.1429" y="488.5714" width="329.1429" height="94.2857" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="237.7143" y="531.4286" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#28a745">Broadcast Hash Join</text>
+  <text x="237.7143" y="565.7143" text-anchor="middle" font-size="18.8571" fill="#555">No shuffle | O(n)</text>
+  <rect x="475.4286" y="488.5714" width="329.1429" height="94.2857" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
+  <text x="640" y="531.4286" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#856404">Shuffle Hash Join</text>
+  <text x="640" y="565.7143" text-anchor="middle" font-size="18.8571" fill="#555">Shuffle | O(n+m)</text>
+  <rect x="877.7143" y="488.5714" width="329.1429" height="94.2857" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="3.4286" />
+  <text x="1042.2857" y="531.4286" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#dc3545">Sort-Merge Join</text>
+  <text x="1042.2857" y="565.7143" text-anchor="middle" font-size="18.8571" fill="#555">Shuffle+Sort | O(nlogn)</text>
 </svg>

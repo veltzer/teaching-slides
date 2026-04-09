@@ -1,46 +1,38 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowReset" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowReset" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <!-- Commit chain -->
-  <rect x="30" y="15" width="70" height="35" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="65" y="37" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">C1</text>
-  <line x1="100" y1="32" x2="130" y2="32" stroke="#333" stroke-width="2" marker-end="url(#arrowReset)"/>
-  <rect x="135" y="15" width="70" height="35" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="170" y="37" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">C2</text>
-  <line x1="205" y1="32" x2="235" y2="32" stroke="#333" stroke-width="2" marker-end="url(#arrowReset)"/>
-  <rect x="240" y="15" width="70" height="35" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5"/>
-  <text x="275" y="37" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">C3</text>
-  <text x="275" y="8" text-anchor="middle" font-size="11" fill="#d32f2f" font-weight="bold">HEAD</text>
-  <!-- Reset target label -->
-  <text x="400" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">git reset C1</text>
-  <!-- soft row -->
-  <rect x="340" y="35" width="250" height="40" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="6"/>
-  <text x="365" y="52" font-size="12" font-weight="bold" fill="#2e7d32">--soft</text>
-  <text x="430" y="52" font-size="11" fill="#555">Staged: C2+C3</text>
-  <text x="430" y="67" font-size="11" fill="#555">Working dir: C2+C3</text>
-  <!-- mixed row -->
-  <rect x="340" y="85" width="250" height="40" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="6"/>
-  <text x="365" y="102" font-size="12" font-weight="bold" fill="#e65100">--mixed</text>
-  <text x="435" y="102" font-size="11" fill="#555">Staged: empty</text>
-  <text x="435" y="117" font-size="11" fill="#555">Working dir: C2+C3</text>
-  <!-- hard row -->
-  <rect x="340" y="135" width="250" height="40" fill="#ffebee" stroke="#d32f2f" stroke-width="2" rx="6"/>
-  <text x="365" y="152" font-size="12" font-weight="bold" fill="#b71c1c">--hard</text>
-  <text x="430" y="152" font-size="11" fill="#555">Staged: empty</text>
-  <text x="430" y="167" font-size="11" fill="#555">Working dir: empty</text>
-  <!-- Arrows from commit chain to each mode -->
-  <line x1="275" y1="50" x2="338" y2="55" stroke="#4caf50" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowReset)"/>
-  <line x1="275" y1="50" x2="338" y2="105" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowReset)"/>
-  <line x1="275" y1="50" x2="338" y2="155" stroke="#d32f2f" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowReset)"/>
-  <!-- Summary labels -->
-  <text x="65" y="75" text-anchor="middle" font-size="11" fill="#888">keeps all</text>
-  <text x="65" y="115" text-anchor="middle" font-size="11" fill="#888">keeps working</text>
-  <text x="65" y="155" text-anchor="middle" font-size="11" fill="#888">discards all</text>
-  <!-- Connecting lines from labels -->
-  <line x1="110" y1="72" x2="338" y2="55" stroke="#4caf50" stroke-width="1" opacity="0.4"/>
-  <line x1="120" y1="112" x2="338" y2="105" stroke="#f57c00" stroke-width="1" opacity="0.4"/>
-  <line x1="110" y1="152" x2="338" y2="155" stroke="#d32f2f" stroke-width="1" opacity="0.4"/>
+  <rect x="64" y="54" width="149.3333" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4.2667" rx="10.6667" />
+  <text x="138.6667" y="133.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#1565c0">C1</text>
+  <line x1="213.3333" y1="115.2" x2="277.3333" y2="115.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowReset)" />
+  <rect x="288" y="54" width="149.3333" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4.2667" rx="10.6667" />
+  <text x="362.6667" y="133.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#1565c0">C2</text>
+  <line x1="437.3333" y1="115.2" x2="501.3333" y2="115.2" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowReset)" />
+  <rect x="512" y="54" width="149.3333" height="126" fill="#e3f2fd" stroke="#1976d2" stroke-width="4.2667" rx="10.6667" />
+  <text x="586.6667" y="133.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#1565c0">C3</text>
+  <text x="586.6667" y="28.8" text-anchor="middle" font-size="23.4667" fill="#d32f2f" font-weight="bold">HEAD</text>
+  <text x="853.3333" y="72" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">git reset C1</text>
+  <rect x="725.3333" y="126" width="533.3333" height="144" fill="#e8f5e9" stroke="#4caf50" stroke-width="4.2667" rx="12.8" />
+  <text x="778.6667" y="187.2" font-size="25.6" font-weight="bold" fill="#2e7d32">--soft</text>
+  <text x="917.3333" y="187.2" font-size="23.4667" fill="#555">Staged: C2+C3</text>
+  <text x="917.3333" y="241.2" font-size="23.4667" fill="#555">Working dir: C2+C3</text>
+  <rect x="725.3333" y="306" width="533.3333" height="144" fill="#fff3e0" stroke="#f57c00" stroke-width="4.2667" rx="12.8" />
+  <text x="778.6667" y="367.2" font-size="25.6" font-weight="bold" fill="#e65100">--mixed</text>
+  <text x="928" y="367.2" font-size="23.4667" fill="#555">Staged: empty</text>
+  <text x="928" y="421.2" font-size="23.4667" fill="#555">Working dir: C2+C3</text>
+  <rect x="725.3333" y="486" width="533.3333" height="144" fill="#ffebee" stroke="#d32f2f" stroke-width="4.2667" rx="12.8" />
+  <text x="778.6667" y="547.2" font-size="25.6" font-weight="bold" fill="#b71c1c">--hard</text>
+  <text x="917.3333" y="547.2" font-size="23.4667" fill="#555">Staged: empty</text>
+  <text x="917.3333" y="601.2" font-size="23.4667" fill="#555">Working dir: empty</text>
+  <line x1="586.6667" y1="180" x2="721.0667" y2="198" stroke="#4caf50" stroke-width="3.2" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowReset)" />
+  <line x1="586.6667" y1="180" x2="721.0667" y2="378" stroke="#f57c00" stroke-width="3.2" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowReset)" />
+  <line x1="586.6667" y1="180" x2="721.0667" y2="558" stroke="#d32f2f" stroke-width="3.2" stroke-dasharray="8.5333 6.4" marker-end="url(#arrowReset)" />
+  <text x="138.6667" y="270" text-anchor="middle" font-size="23.4667" fill="#888">keeps all</text>
+  <text x="138.6667" y="414" text-anchor="middle" font-size="23.4667" fill="#888">keeps working</text>
+  <text x="138.6667" y="558" text-anchor="middle" font-size="23.4667" fill="#888">discards all</text>
+  <line x1="234.6667" y1="259.2" x2="721.0667" y2="198" stroke="#4caf50" stroke-width="2.1333" opacity="0.4" />
+  <line x1="256" y1="403.2" x2="721.0667" y2="378" stroke="#f57c00" stroke-width="2.1333" opacity="0.4" />
+  <line x1="234.6667" y1="547.2" x2="721.0667" y2="558" stroke="#d32f2f" stroke-width="2.1333" opacity="0.4" />
 </svg>

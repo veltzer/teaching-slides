@@ -1,37 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="230">
-  <!-- header row -->
-  <rect x="10" y="10" width="280" height="32" rx="0" fill="#333" stroke="#333" stroke-width="1"/>
-  <text x="150" y="31" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Dockerfile Instruction</text>
-  <rect x="292" y="10" width="318" height="32" rx="0" fill="#333" stroke="#333" stroke-width="1"/>
-  <text x="451" y="31" font-family="sans-serif" font-size="13" font-weight="bold" fill="#fff" text-anchor="middle">Cache Behavior</text>
-  <!-- rows -->
-  <rect x="10" y="42" width="280" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="61" font-family="monospace" font-size="12" fill="#222">FROM ubuntu:22.04</text>
-  <rect x="292" y="42" width="318" height="28" fill="#e8f5e9" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="61" font-family="sans-serif" font-size="12" fill="#2e7d32">✓ Cached if image exists</text>
-
-  <rect x="10" y="70" width="280" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="89" font-family="monospace" font-size="12" fill="#222">RUN apt-get update</text>
-  <rect x="292" y="70" width="318" height="28" fill="#e8f5e9" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="89" font-family="sans-serif" font-size="12" fill="#2e7d32">✓ Cached if previous layers unchanged</text>
-
-  <rect x="10" y="98" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="117" font-family="monospace" font-size="12" fill="#222">COPY package.json .</text>
-  <rect x="292" y="98" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="117" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED if file changed</text>
-
-  <rect x="10" y="126" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="145" font-family="monospace" font-size="12" fill="#222">RUN npm install</text>
-  <rect x="292" y="126" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="145" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
-
-  <rect x="10" y="154" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="173" font-family="monospace" font-size="12" fill="#222">COPY . .</text>
-  <rect x="292" y="154" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="173" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (source code changes)</text>
-
-  <rect x="10" y="182" width="280" height="28" fill="#fff3e0" stroke="#ccc" stroke-width="0.8"/>
-  <text x="20" y="201" font-family="monospace" font-size="12" fill="#222">RUN npm run build</text>
-  <rect x="292" y="182" width="318" height="28" fill="#ffebee" stroke="#ccc" stroke-width="0.8"/>
-  <text x="302" y="201" font-family="sans-serif" font-size="12" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="20.6452" y="31.3043" width="578.0645" height="100.1739" rx="0" fill="#333" stroke="#333" stroke-width="2.0645" />
+  <text x="309.6774" y="97.0435" font-family="sans-serif" font-size="26.8387" font-weight="bold" fill="#fff" text-anchor="middle">Dockerfile Instruction</text>
+  <rect x="602.8387" y="31.3043" width="656.5161" height="100.1739" rx="0" fill="#333" stroke="#333" stroke-width="2.0645" />
+  <text x="931.0968" y="97.0435" font-family="sans-serif" font-size="26.8387" font-weight="bold" fill="#fff" text-anchor="middle">Cache Behavior</text>
+  <rect x="20.6452" y="131.4783" width="578.0645" height="87.6522" fill="#f0f4f8" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="190.9565" font-family="monospace" font-size="24.7742" fill="#222">FROM ubuntu:22.04</text>
+  <rect x="602.8387" y="131.4783" width="656.5161" height="87.6522" fill="#e8f5e9" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="190.9565" font-family="sans-serif" font-size="24.7742" fill="#2e7d32">✓ Cached if image exists</text>
+  <rect x="20.6452" y="219.1304" width="578.0645" height="87.6522" fill="#f0f4f8" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="278.6087" font-family="monospace" font-size="24.7742" fill="#222">RUN apt-get update</text>
+  <rect x="602.8387" y="219.1304" width="656.5161" height="87.6522" fill="#e8f5e9" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="278.6087" font-family="sans-serif" font-size="24.7742" fill="#2e7d32">✓ Cached if previous layers unchanged</text>
+  <rect x="20.6452" y="306.7826" width="578.0645" height="87.6522" fill="#fff3e0" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="366.2609" font-family="monospace" font-size="24.7742" fill="#222">COPY package.json .</text>
+  <rect x="602.8387" y="306.7826" width="656.5161" height="87.6522" fill="#ffebee" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="366.2609" font-family="sans-serif" font-size="24.7742" fill="#c62828">✗ INVALIDATED if file changed</text>
+  <rect x="20.6452" y="394.4348" width="578.0645" height="87.6522" fill="#fff3e0" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="453.913" font-family="monospace" font-size="24.7742" fill="#222">RUN npm install</text>
+  <rect x="602.8387" y="394.4348" width="656.5161" height="87.6522" fill="#ffebee" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="453.913" font-family="sans-serif" font-size="24.7742" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
+  <rect x="20.6452" y="482.087" width="578.0645" height="87.6522" fill="#fff3e0" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="541.5652" font-family="monospace" font-size="24.7742" fill="#222">COPY . .</text>
+  <rect x="602.8387" y="482.087" width="656.5161" height="87.6522" fill="#ffebee" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="541.5652" font-family="sans-serif" font-size="24.7742" fill="#c62828">✗ INVALIDATED (source code changes)</text>
+  <rect x="20.6452" y="569.7391" width="578.0645" height="87.6522" fill="#fff3e0" stroke="#ccc" stroke-width="1.6516" />
+  <text x="41.2903" y="629.2174" font-family="monospace" font-size="24.7742" fill="#222">RUN npm run build</text>
+  <rect x="602.8387" y="569.7391" width="656.5161" height="87.6522" fill="#ffebee" stroke="#ccc" stroke-width="1.6516" />
+  <text x="623.4839" y="629.2174" font-family="sans-serif" font-size="24.7742" fill="#c62828">✗ INVALIDATED (cache broken above)</text>
 </svg>

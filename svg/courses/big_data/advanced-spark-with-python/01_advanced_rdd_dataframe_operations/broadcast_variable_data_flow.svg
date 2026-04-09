@@ -1,39 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 460" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Broadcast Variable Data Flow</text>
-  <!-- Driver -->
-  <rect x="170" y="50" width="360" height="65" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="75" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Driver Program</text>
-  <text x="350" y="95" text-anchor="middle" font-size="11" fill="#666">bc = sc.broadcast(country_lookup) | Size: 1 KB</text>
-  <!-- Broadcast lines -->
-  <line x1="250" y1="115" x2="130" y2="175" stroke="#4a90e2" stroke-width="2" marker-end="url(#aBc)"/>
-  <line x1="350" y1="115" x2="350" y2="175" stroke="#4a90e2" stroke-width="2" marker-end="url(#aBc)"/>
-  <line x1="450" y1="115" x2="570" y2="175" stroke="#4a90e2" stroke-width="2" marker-end="url(#aBc)"/>
-  <text x="350" y="150" text-anchor="middle" font-size="11" fill="#4a90e2" font-weight="bold">broadcast (once)</text>
-  <defs><marker id="aBc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#4a90e2"/></marker></defs>
-  <!-- Executor 0 -->
-  <rect x="40" y="180" width="170" height="150" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="125" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Executor 0</text>
-  <rect x="60" y="215" width="130" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-  <text x="125" y="235" text-anchor="middle" font-size="11" fill="#333">lookup (copy)</text>
-  <text x="125" y="265" text-anchor="middle" font-size="11" fill="#555">Task 0</text>
-  <text x="125" y="285" text-anchor="middle" font-size="11" fill="#555">Task 3</text>
-  <!-- Executor 1 -->
-  <rect x="260" y="180" width="170" height="150" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="345" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Executor 1</text>
-  <rect x="280" y="215" width="130" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-  <text x="345" y="235" text-anchor="middle" font-size="11" fill="#333">lookup (copy)</text>
-  <text x="345" y="265" text-anchor="middle" font-size="11" fill="#555">Task 1</text>
-  <text x="345" y="285" text-anchor="middle" font-size="11" fill="#555">Task 4</text>
-  <!-- Executor 2 -->
-  <rect x="480" y="180" width="170" height="150" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="565" y="205" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Executor 2</text>
-  <rect x="500" y="215" width="130" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1"/>
-  <text x="565" y="235" text-anchor="middle" font-size="11" fill="#333">lookup (copy)</text>
-  <text x="565" y="265" text-anchor="middle" font-size="11" fill="#555">Task 2</text>
-  <text x="565" y="285" text-anchor="middle" font-size="11" fill="#555">Task 5</text>
-  <!-- Comparison -->
-  <rect x="60" y="360" width="260" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="190" y="388" text-anchor="middle" font-size="12" fill="#dc3545">Without broadcast: sent with EVERY task</text>
-  <rect x="370" y="360" width="260" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="500" y="388" text-anchor="middle" font-size="12" fill="#28a745">With broadcast: sent ONCE per executor</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="46.9565" text-anchor="middle" font-size="28.1739" font-weight="bold" fill="#333">Broadcast Variable Data Flow</text>
+  <rect x="310.8571" y="78.2609" width="658.2857" height="101.7391" rx="7.8261" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.1304" />
+  <text x="640" y="117.3913" text-anchor="middle" font-size="21.913" font-weight="bold" fill="#333">Driver Program</text>
+  <text x="640" y="148.6957" text-anchor="middle" font-size="17.2174" fill="#666">bc = sc.broadcast(country_lookup) | Size: 1 KB</text>
+  <line x1="457.1429" y1="180" x2="237.7143" y2="273.913" stroke="#4a90e2" stroke-width="3.1304" marker-end="url(#aBc)" />
+  <line x1="640" y1="180" x2="640" y2="273.913" stroke="#4a90e2" stroke-width="3.1304" marker-end="url(#aBc)" />
+  <line x1="822.8571" y1="180" x2="1042.2857" y2="273.913" stroke="#4a90e2" stroke-width="3.1304" marker-end="url(#aBc)" />
+  <text x="640" y="234.7826" text-anchor="middle" font-size="17.2174" fill="#4a90e2" font-weight="bold">broadcast (once)</text>
+  <defs>
+    <marker id="aBc" markerWidth="14.6286" markerHeight="9.3913" refX="14.6286" refY="4.6957" orient="auto">
+      <path d="M 0 0 L 14.6286 4.6957 L 0 9.3913" fill="#4a90e2" />
+    </marker>
+  </defs>
+  <rect x="73.1429" y="281.7391" width="310.8571" height="234.7826" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="3.1304" />
+  <text x="228.5714" y="320.8696" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#333">Executor 0</text>
+  <rect x="109.7143" y="336.5217" width="237.7143" height="46.9565" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
+  <text x="228.5714" y="367.8261" text-anchor="middle" font-size="17.2174" fill="#333">lookup (copy)</text>
+  <text x="228.5714" y="414.7826" text-anchor="middle" font-size="17.2174" fill="#555">Task 0</text>
+  <text x="228.5714" y="446.087" text-anchor="middle" font-size="17.2174" fill="#555">Task 3</text>
+  <rect x="475.4286" y="281.7391" width="310.8571" height="234.7826" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="3.1304" />
+  <text x="630.8571" y="320.8696" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#333">Executor 1</text>
+  <rect x="512" y="336.5217" width="237.7143" height="46.9565" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
+  <text x="630.8571" y="367.8261" text-anchor="middle" font-size="17.2174" fill="#333">lookup (copy)</text>
+  <text x="630.8571" y="414.7826" text-anchor="middle" font-size="17.2174" fill="#555">Task 1</text>
+  <text x="630.8571" y="446.087" text-anchor="middle" font-size="17.2174" fill="#555">Task 4</text>
+  <rect x="877.7143" y="281.7391" width="310.8571" height="234.7826" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="3.1304" />
+  <text x="1033.1429" y="320.8696" text-anchor="middle" font-size="20.3478" font-weight="bold" fill="#333">Executor 2</text>
+  <rect x="914.2857" y="336.5217" width="237.7143" height="46.9565" rx="7.8261" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5652" />
+  <text x="1033.1429" y="367.8261" text-anchor="middle" font-size="17.2174" fill="#333">lookup (copy)</text>
+  <text x="1033.1429" y="414.7826" text-anchor="middle" font-size="17.2174" fill="#555">Task 2</text>
+  <text x="1033.1429" y="446.087" text-anchor="middle" font-size="17.2174" fill="#555">Task 5</text>
+  <rect x="109.7143" y="563.4783" width="475.4286" height="70.4348" rx="7.8261" fill="#f8d7da" stroke="#dc3545" stroke-width="2.3478" />
+  <text x="347.4286" y="607.3043" text-anchor="middle" font-size="18.7826" fill="#dc3545">Without broadcast: sent with EVERY task</text>
+  <rect x="676.5714" y="563.4783" width="475.4286" height="70.4348" rx="7.8261" fill="#d4edda" stroke="#28a745" stroke-width="2.3478" />
+  <text x="914.2857" y="607.3043" text-anchor="middle" font-size="18.7826" fill="#28a745">With broadcast: sent ONCE per executor</text>
 </svg>

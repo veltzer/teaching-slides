@@ -1,57 +1,28 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Data Sources -->
-  <rect x="50" y="50" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="125" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Data Sources</text>
-
-  <!-- Feature Engineering -->
-  <rect x="280" y="50" width="180" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="370" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Feature Engineering</text>
-
-  <!-- Algorithm Selection -->
-  <rect x="540" y="50" width="180" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="630" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Algorithm Selection</text>
-
-  <!-- Model Training -->
-  <rect x="540" y="180" width="180" height="60" rx="5" fill="#cce5ff" stroke="#007bff" stroke-width="2"/>
-  <text x="630" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Model Training</text>
-
-  <!-- Model Evaluation -->
-  <rect x="540" y="310" width="180" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="630" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Model Evaluation</text>
-
-  <!-- Prediction -->
-  <rect x="540" y="440" width="180" height="60" rx="5" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2"/>
-  <text x="630" y="475" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Prediction</text>
-
-  <!-- Model Tuning -->
-  <rect x="280" y="310" width="180" height="60" rx="5" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2"/>
-  <text x="370" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Model Tuning</text>
-
-  <!-- Arrows -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="80" y="60" width="240" height="72" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="200" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Data Sources</text>
+  <rect x="448" y="60" width="288" height="72" rx="6" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="592" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Feature Engineering</text>
+  <rect x="864" y="60" width="288" height="72" rx="6" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="1008" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Algorithm Selection</text>
+  <rect x="864" y="216" width="288" height="72" rx="6" fill="#cce5ff" stroke="#007bff" stroke-width="2.4" />
+  <text x="1008" y="258" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Model Training</text>
+  <rect x="864" y="372" width="288" height="72" rx="6" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="1008" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Model Evaluation</text>
+  <rect x="864" y="528" width="288" height="72" rx="6" fill="#e2d5f1" stroke="#6f42c1" stroke-width="2.4" />
+  <text x="1008" y="570" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Prediction</text>
+  <rect x="448" y="372" width="288" height="72" rx="6" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="2.4" />
+  <text x="592" y="414" text-anchor="middle" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold">Model Tuning</text>
   <defs>
-    <marker id="arrow9" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    <marker id="arrow9" markerWidth="16" markerHeight="8.4" refX="14.4" refY="4.2" orient="auto">
+      <polygon points="0,12 5.6,0" fill="#666" />
     </marker>
   </defs>
-
-  <!-- Data Sources to Feature Engineering -->
-  <line x1="200" y1="80" x2="280" y2="80" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Feature Engineering to Algorithm Selection -->
-  <line x1="460" y1="80" x2="540" y2="80" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Algorithm Selection to Model Training -->
-  <line x1="630" y1="110" x2="630" y2="180" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Model Training to Model Evaluation -->
-  <line x1="630" y1="240" x2="630" y2="310" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Model Evaluation to Prediction -->
-  <line x1="630" y1="370" x2="630" y2="440" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Model Evaluation to Model Tuning -->
-  <line x1="540" y1="340" x2="460" y2="340" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
-
-  <!-- Model Tuning back to Model Training (feedback loop) -->
-  <path d="M 370 310 Q 370 210 540 210" fill="none" stroke="#666" stroke-width="2" marker-end="url(#arrow9)"/>
+  <line x1="320" y1="96" x2="448" y2="96" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <line x1="736" y1="96" x2="864" y2="96" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <line x1="1008" y1="132" x2="1008" y2="216" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <line x1="1008" y1="288" x2="1008" y2="372" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <line x1="1008" y1="444" x2="1008" y2="528" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <line x1="864" y1="408" x2="736" y2="408" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
+  <path d="M 592 372 Q 592 252 864 252" fill="none" stroke="#666" stroke-width="2.4" marker-end="url(#arrow9)" />
 </svg>

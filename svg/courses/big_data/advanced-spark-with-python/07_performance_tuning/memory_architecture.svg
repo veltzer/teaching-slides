@@ -1,30 +1,24 @@
-<svg viewBox="0 0 620 360" xmlns="http://www.w3.org/2000/svg">
-  <text x="310" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Executor Memory Layout (spark.executor.memory = 8g)</text>
-  <!-- Total Container -->
-  <rect x="20" y="25" width="580" height="320" rx="8" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
-  <text x="310" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Total Container: 8g + max(384m, 0.1*8g) = 8.8 GB</text>
-  <!-- JVM Heap -->
-  <rect x="40" y="55" width="540" height="240" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="310" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">JVM Heap (8 GB)</text>
-  <!-- Reserved -->
-  <rect x="60" y="85" width="500" height="25" rx="4" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
-  <text x="310" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Reserved Memory (300 MB)</text>
-  <!-- Spark Memory -->
-  <rect x="60" y="118" width="500" height="100" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="310" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Spark Memory (0.6 * 8g = 4.8 GB)</text>
-  <rect x="80" y="145" width="230" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="195" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Execution (60%)</text>
-  <text x="195" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Shuffles, sorts, joins, aggs</text>
-  <text x="195" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">2.88 GB</text>
-  <rect x="320" y="145" width="230" height="60" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
-  <text x="435" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Storage (40%)</text>
-  <text x="435" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">Cached data, broadcast vars</text>
-  <text x="435" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">1.92 GB</text>
-  <!-- User Memory -->
-  <rect x="60" y="225" width="500" height="55" rx="6" fill="#e1f5fe" stroke="#0277bd" stroke-width="1"/>
-  <text x="310" y="248" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">User Memory (0.4 * 8g = 3.2 GB)</text>
-  <text x="310" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#555">UDF data, internal metadata</text>
-  <!-- Off-Heap -->
-  <rect x="40" y="300" width="540" height="35" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
-  <text x="310" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#333">Off-Heap / Overhead (800 MB) - OS overhead, Python processes</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#333">Executor Memory Layout (spark.executor.memory = 8g)</text>
+  <rect x="41.2903" y="50" width="1197.4194" height="640" rx="16" fill="#f5f5f5" stroke="#333" stroke-width="4" />
+  <text x="640" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#555">Total Container: 8g + max(384m, 0.1*8g) = 8.8 GB</text>
+  <rect x="82.5806" y="110" width="1114.8387" height="480" rx="16" fill="#e1f5fe" stroke="#0277bd" stroke-width="4" />
+  <text x="640" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#0277bd">JVM Heap (8 GB)</text>
+  <rect x="123.871" y="170" width="1032.2581" height="50" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="3" />
+  <text x="640" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#333">Reserved Memory (300 MB)</text>
+  <rect x="123.871" y="236" width="1032.2581" height="200" rx="12" fill="#fff3e0" stroke="#ef6c00" stroke-width="3" />
+  <text x="640" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">Spark Memory (0.6 * 8g = 4.8 GB)</text>
+  <rect x="165.1613" y="290" width="474.8387" height="120" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" />
+  <text x="402.5806" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">Execution (60%)</text>
+  <text x="402.5806" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555">Shuffles, sorts, joins, aggs</text>
+  <text x="402.5806" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555">2.88 GB</text>
+  <rect x="660.6452" y="290" width="474.8387" height="120" rx="12" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" />
+  <text x="898.0645" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">Storage (40%)</text>
+  <text x="898.0645" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555">Cached data, broadcast vars</text>
+  <text x="898.0645" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555">1.92 GB</text>
+  <rect x="123.871" y="450" width="1032.2581" height="110" rx="12" fill="#e1f5fe" stroke="#0277bd" stroke-width="2" />
+  <text x="640" y="496" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#333">User Memory (0.4 * 8g = 3.2 GB)</text>
+  <text x="640" y="536" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#555">UDF data, internal metadata</text>
+  <rect x="82.5806" y="600" width="1114.8387" height="70" rx="12" fill="#fce4ec" stroke="#c62828" stroke-width="3" />
+  <text x="640" y="644" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#333">Off-Heap / Overhead (800 MB) - OS overhead, Python processes</text>
 </svg>

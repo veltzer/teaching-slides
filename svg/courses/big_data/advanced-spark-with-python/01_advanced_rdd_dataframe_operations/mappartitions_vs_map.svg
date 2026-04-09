@@ -1,99 +1,68 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#555" />
     </marker>
   </defs>
-
-  <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">mapPartitions() vs map()</text>
-
-  <!-- map() side -->
-  <rect x="20" y="50" width="370" height="340" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-  <text x="205" y="75" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#e65100">map() - Per Element</text>
-
-  <!-- map: Input partition -->
-  <rect x="40" y="95" width="100" height="100" rx="5" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5"/>
-  <text x="90" y="115" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#e65100">Partition</text>
-  <rect x="50" y="125" width="80" height="18" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="90" y="138" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 1</text>
-  <rect x="50" y="148" width="80" height="18" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="90" y="161" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 2</text>
-  <rect x="50" y="171" width="80" height="18" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="90" y="184" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 3</text>
-
-  <!-- map: Arrows to functions -->
-  <line x1="140" y1="134" x2="175" y2="134" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="140" y1="157" x2="175" y2="157" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="140" y1="180" x2="175" y2="180" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- map: Function calls -->
-  <rect x="178" y="122" width="70" height="22" rx="4" fill="#ffcc80" stroke="#e65100" stroke-width="1"/>
-  <text x="213" y="137" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">f(rec1)</text>
-  <rect x="178" y="148" width="70" height="22" rx="4" fill="#ffcc80" stroke="#e65100" stroke-width="1"/>
-  <text x="213" y="163" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">f(rec2)</text>
-  <rect x="178" y="174" width="70" height="22" rx="4" fill="#ffcc80" stroke="#e65100" stroke-width="1"/>
-  <text x="213" y="189" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">f(rec3)</text>
-
-  <!-- map: DB connections -->
-  <line x1="248" y1="133" x2="283" y2="133" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="248" y1="159" x2="283" y2="159" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="248" y1="185" x2="283" y2="185" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="286" y="120" width="80" height="22" rx="4" fill="#ffab91" stroke="#d32f2f" stroke-width="1"/>
-  <text x="326" y="135" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">DB Conn 1</text>
-  <rect x="286" y="146" width="80" height="22" rx="4" fill="#ffab91" stroke="#d32f2f" stroke-width="1"/>
-  <text x="326" y="161" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">DB Conn 2</text>
-  <rect x="286" y="172" width="80" height="22" rx="4" fill="#ffab91" stroke="#d32f2f" stroke-width="1"/>
-  <text x="326" y="187" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">DB Conn 3</text>
-
-  <!-- map: Stats -->
-  <text x="205" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#d32f2f" font-weight="bold">N function calls</text>
-  <text x="205" y="245" text-anchor="middle" font-family="Arial" font-size="12" fill="#d32f2f" font-weight="bold">N connections opened</text>
-  <text x="205" y="265" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">High overhead for I/O</text>
-  <text x="205" y="285" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Higher GC pressure</text>
-
-  <!-- mapPartitions() side -->
-  <rect x="410" y="50" width="370" height="340" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="595" y="75" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#2e7d32">mapPartitions() - Per Partition</text>
-
-  <!-- mapPartitions: Input partition -->
-  <rect x="430" y="95" width="100" height="100" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="480" y="115" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#2e7d32">Partition</text>
-  <rect x="440" y="125" width="80" height="18" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="480" y="138" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 1</text>
-  <rect x="440" y="148" width="80" height="18" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="480" y="161" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 2</text>
-  <rect x="440" y="171" width="80" height="18" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="480" y="184" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Record 3</text>
-
-  <!-- mapPartitions: Single arrow to function -->
-  <line x1="530" y1="155" x2="575" y2="155" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- mapPartitions: Single function call -->
-  <rect x="578" y="115" width="90" height="80" rx="5" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="623" y="140" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2e7d32">f(iterator)</text>
-  <text x="623" y="158" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">1 DB Conn</text>
-  <text x="623" y="174" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Process all</text>
-  <text x="623" y="188" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">records</text>
-
-  <!-- mapPartitions: Output arrow -->
-  <line x1="668" y1="155" x2="703" y2="155" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="706" y="135" width="55" height="40" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="733" y="158" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Results</text>
-
-  <!-- mapPartitions: Stats -->
-  <text x="595" y="225" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32" font-weight="bold">1 function call per partition</text>
-  <text x="595" y="245" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32" font-weight="bold">1 connection per partition</text>
-  <text x="595" y="265" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Low overhead for I/O</text>
-  <text x="595" y="285" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Lower GC pressure</text>
-
-  <!-- Bottom comparison -->
-  <rect x="100" y="320" width="250" height="30" rx="5" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1"/>
-  <text x="225" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#d32f2f">1M records = 1M connections</text>
-
-  <rect x="450" y="320" width="250" height="30" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
-  <text x="575" y="340" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32">1M records = 100 connections</text>
-
-  <text x="400" y="375" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#333">Use mapPartitions() for DB/network I/O operations</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1565c0">mapPartitions() vs map()</text>
+  <rect x="32" y="90" width="592" height="612" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
+  <text x="328" y="135" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#e65100">map() - Per Element</text>
+  <rect x="64" y="171" width="160" height="180" rx="8" fill="#ffe0b2" stroke="#e65100" stroke-width="2.4" />
+  <text x="144" y="207" text-anchor="middle" font-family="Arial" font-size="17.6" font-weight="bold" fill="#e65100">Partition</text>
+  <rect x="80" y="225" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="144" y="248.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 1</text>
+  <rect x="80" y="266.4" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="144" y="289.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 2</text>
+  <rect x="80" y="307.8" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="144" y="331.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 3</text>
+  <line x1="224" y1="241.2" x2="280" y2="241.2" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="224" y1="282.6" x2="280" y2="282.6" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="224" y1="324" x2="280" y2="324" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="284.8" y="219.6" width="112" height="39.6" rx="6.4" fill="#ffcc80" stroke="#e65100" stroke-width="1.6" />
+  <text x="340.8" y="246.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">f(rec1)</text>
+  <rect x="284.8" y="266.4" width="112" height="39.6" rx="6.4" fill="#ffcc80" stroke="#e65100" stroke-width="1.6" />
+  <text x="340.8" y="293.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">f(rec2)</text>
+  <rect x="284.8" y="313.2" width="112" height="39.6" rx="6.4" fill="#ffcc80" stroke="#e65100" stroke-width="1.6" />
+  <text x="340.8" y="340.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">f(rec3)</text>
+  <line x1="396.8" y1="239.4" x2="452.8" y2="239.4" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="396.8" y1="286.2" x2="452.8" y2="286.2" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="396.8" y1="333" x2="452.8" y2="333" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="457.6" y="216" width="128" height="39.6" rx="6.4" fill="#ffab91" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="521.6" y="243" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">DB Conn 1</text>
+  <rect x="457.6" y="262.8" width="128" height="39.6" rx="6.4" fill="#ffab91" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="521.6" y="289.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">DB Conn 2</text>
+  <rect x="457.6" y="309.6" width="128" height="39.6" rx="6.4" fill="#ffab91" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="521.6" y="336.6" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">DB Conn 3</text>
+  <text x="328" y="405" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#d32f2f" font-weight="bold">N function calls</text>
+  <text x="328" y="441" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#d32f2f" font-weight="bold">N connections opened</text>
+  <text x="328" y="477" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">High overhead for I/O</text>
+  <text x="328" y="513" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Higher GC pressure</text>
+  <rect x="656" y="90" width="592" height="612" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.4" />
+  <text x="952" y="135" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#2e7d32">mapPartitions() - Per Partition</text>
+  <rect x="688" y="171" width="160" height="180" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
+  <text x="768" y="207" text-anchor="middle" font-family="Arial" font-size="17.6" font-weight="bold" fill="#2e7d32">Partition</text>
+  <rect x="704" y="225" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="768" y="248.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 1</text>
+  <rect x="704" y="266.4" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="768" y="289.8" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 2</text>
+  <rect x="704" y="307.8" width="128" height="32.4" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="768" y="331.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Record 3</text>
+  <line x1="848" y1="279" x2="920" y2="279" stroke="#2e7d32" stroke-width="3.2" marker-end="url(#arrow)" />
+  <rect x="924.8" y="207" width="144" height="144" rx="8" fill="#a5d6a7" stroke="#2e7d32" stroke-width="2.4" />
+  <text x="996.8" y="252" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#2e7d32">f(iterator)</text>
+  <text x="996.8" y="284.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">1 DB Conn</text>
+  <text x="996.8" y="313.2" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Process all</text>
+  <text x="996.8" y="338.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">records</text>
+  <line x1="1068.8" y1="279" x2="1124.8" y2="279" stroke="#2e7d32" stroke-width="3.2" marker-end="url(#arrow)" />
+  <rect x="1129.6" y="243" width="88" height="72" rx="6.4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="1172.8" y="284.4" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Results</text>
+  <text x="952" y="405" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#2e7d32" font-weight="bold">1 function call per partition</text>
+  <text x="952" y="441" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#2e7d32" font-weight="bold">1 connection per partition</text>
+  <text x="952" y="477" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Low overhead for I/O</text>
+  <text x="952" y="513" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Lower GC pressure</text>
+  <rect x="160" y="576" width="400" height="54" rx="8" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1.6" />
+  <text x="360" y="612" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#d32f2f">1M records = 1M connections</text>
+  <rect x="720" y="576" width="400" height="54" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="920" y="612" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#2e7d32">1M records = 100 connections</text>
+  <text x="640" y="675" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#333">Use mapPartitions() for DB/network I/O operations</text>
 </svg>

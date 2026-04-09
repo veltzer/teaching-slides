@@ -1,65 +1,54 @@
-<svg viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowhead-green" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.2706,0" fill="#28a745" />
     </marker>
   </defs>
-  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Database Replication Types</text>
-  <!-- Master-Slave section -->
-  <rect x="30" y="45" width="380" height="310" rx="5" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="220" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Master-Slave Replication</text>
-  <!-- Master -->
-  <rect x="150" y="85" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="210" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Master</text>
-  <!-- Slaves -->
-  <rect x="60" y="180" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="115" y="205" text-anchor="middle" font-size="12" fill="#333">Slave 1</text>
-  <rect x="250" y="180" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="305" y="205" text-anchor="middle" font-size="12" fill="#333">Slave 2</text>
-  <!-- Master to slaves -->
-  <line x1="180" y1="130" x2="130" y2="178" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="130" y="155" font-size="10" fill="#4a90e2">Write</text>
-  <line x1="240" y1="130" x2="290" y2="178" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="280" y="155" font-size="10" fill="#4a90e2">Write</text>
-  <!-- Clients reading from slaves -->
-  <rect x="55" y="260" width="70" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="90" y="280" text-anchor="middle" font-size="10" fill="#333">Client</text>
-  <line x1="90" y1="260" x2="100" y2="222" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead-green)"/>
-  <text x="60" y="248" font-size="10" fill="#28a745">Read</text>
-  <rect x="245" y="260" width="70" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="280" y="280" text-anchor="middle" font-size="10" fill="#333">Client</text>
-  <line x1="280" y1="260" x2="290" y2="222" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead-green)"/>
-  <text x="255" y="248" font-size="10" fill="#28a745">Read</text>
-  <!-- Client writing to master -->
-  <rect x="150" y="260" width="70" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="185" y="280" text-anchor="middle" font-size="10" fill="#333">Client</text>
-  <line x1="185" y1="260" x2="200" y2="132" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="165" y="200" font-size="10" fill="#996600">Write</text>
-  <!-- Master-Master section -->
-  <rect x="450" y="45" width="370" height="310" rx="5" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="635" y="68" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Master-Master Replication</text>
-  <!-- Masters -->
-  <rect x="490" y="110" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="550" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Master 1</text>
-  <rect x="680" y="110" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="740" y="137" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Master 2</text>
-  <!-- Sync arrows between masters -->
-  <line x1="610" y1="125" x2="678" y2="125" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="678" y1="140" x2="612" y2="140" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="645" y="118" text-anchor="middle" font-size="10" fill="#4a90e2">Sync</text>
-  <!-- Clients R/W -->
-  <rect x="505" y="210" width="80" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="545" y="230" text-anchor="middle" font-size="10" fill="#333">Client</text>
-  <line x1="545" y1="210" x2="545" y2="157" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead-green)"/>
-  <text x="560" y="190" font-size="10" fill="#28a745">R/W</text>
-  <rect x="700" y="210" width="80" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="740" y="230" text-anchor="middle" font-size="10" fill="#333">Client</text>
-  <line x1="740" y1="210" x2="740" y2="157" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead-green)"/>
-  <text x="755" y="190" font-size="10" fill="#28a745">R/W</text>
-  <!-- Summary -->
-  <rect x="30" y="370" width="790" height="35" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="425" y="393" text-anchor="middle" font-size="11" fill="#555">Master-Slave: reads scale, writes go to master. Master-Master: both nodes accept reads and writes with bi-directional sync.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Database Replication Types</text>
+  <rect x="45.1765" y="77.1429" width="572.2353" height="531.4286" rx="7.5294" fill="none" stroke="#4a90e2" stroke-width="3.0118" stroke-dasharray="12.0471 6.0235" />
+  <text x="331.2941" y="116.5714" text-anchor="middle" font-size="19.5765" font-weight="bold" fill="#4a90e2">Master-Slave Replication</text>
+  <rect x="225.8824" y="145.7143" width="180.7059" height="77.1429" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="316.2353" y="192" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Master</text>
+  <rect x="90.3529" y="308.5714" width="165.6471" height="68.5714" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
+  <text x="173.1765" y="351.4286" text-anchor="middle" font-size="18.0706" fill="#333">Slave 1</text>
+  <rect x="376.4706" y="308.5714" width="165.6471" height="68.5714" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.0118" />
+  <text x="459.2941" y="351.4286" text-anchor="middle" font-size="18.0706" fill="#333">Slave 2</text>
+  <line x1="271.0588" y1="222.8571" x2="195.7647" y2="305.1429" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <text x="195.7647" y="265.7143" font-size="15.0588" fill="#4a90e2">Write</text>
+  <line x1="361.4118" y1="222.8571" x2="436.7059" y2="305.1429" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <text x="421.6471" y="265.7143" font-size="15.0588" fill="#4a90e2">Write</text>
+  <rect x="82.8235" y="445.7143" width="105.4118" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="135.5294" y="480" text-anchor="middle" font-size="15.0588" fill="#333">Client</text>
+  <line x1="135.5294" y1="445.7143" x2="150.5882" y2="380.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead-green)" />
+  <text x="90.3529" y="425.1429" font-size="15.0588" fill="#28a745">Read</text>
+  <rect x="368.9412" y="445.7143" width="105.4118" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="421.6471" y="480" text-anchor="middle" font-size="15.0588" fill="#333">Client</text>
+  <line x1="421.6471" y1="445.7143" x2="436.7059" y2="380.5714" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead-green)" />
+  <text x="384" y="425.1429" font-size="15.0588" fill="#28a745">Read</text>
+  <rect x="225.8824" y="445.7143" width="105.4118" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="278.5882" y="480" text-anchor="middle" font-size="15.0588" fill="#333">Client</text>
+  <line x1="278.5882" y1="445.7143" x2="301.1765" y2="226.2857" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <text x="248.4706" y="342.8571" font-size="15.0588" fill="#996600">Write</text>
+  <rect x="677.6471" y="77.1429" width="557.1765" height="531.4286" rx="7.5294" fill="none" stroke="#28a745" stroke-width="3.0118" stroke-dasharray="12.0471 6.0235" />
+  <text x="956.2353" y="116.5714" text-anchor="middle" font-size="19.5765" font-weight="bold" fill="#28a745">Master-Master Replication</text>
+  <rect x="737.8824" y="188.5714" width="180.7059" height="77.1429" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="828.2353" y="234.8571" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Master 1</text>
+  <rect x="1024" y="188.5714" width="180.7059" height="77.1429" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="3.0118" />
+  <text x="1114.3529" y="234.8571" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Master 2</text>
+  <line x1="918.5882" y1="214.2857" x2="1020.9882" y2="214.2857" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <line x1="1020.9882" y1="240" x2="921.6" y2="240" stroke="#4a90e2" stroke-width="3.0118" marker-end="url(#arrowhead)" />
+  <text x="971.2941" y="202.2857" text-anchor="middle" font-size="15.0588" fill="#4a90e2">Sync</text>
+  <rect x="760.4706" y="360" width="120.4706" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="820.7059" y="394.2857" text-anchor="middle" font-size="15.0588" fill="#333">Client</text>
+  <line x1="820.7059" y1="360" x2="820.7059" y2="269.1429" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead-green)" />
+  <text x="843.2941" y="325.7143" font-size="15.0588" fill="#28a745">R/W</text>
+  <rect x="1054.1176" y="360" width="120.4706" height="51.4286" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="1114.3529" y="394.2857" text-anchor="middle" font-size="15.0588" fill="#333">Client</text>
+  <line x1="1114.3529" y1="360" x2="1114.3529" y2="269.1429" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead-green)" />
+  <text x="1136.9412" y="325.7143" font-size="15.0588" fill="#28a745">R/W</text>
+  <rect x="45.1765" y="634.2857" width="1189.6471" height="60" rx="7.5294" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5059" />
+  <text x="640" y="673.7143" text-anchor="middle" font-size="16.5647" fill="#555">Master-Slave: reads scale, writes go to master. Master-Master: both nodes accept reads and writes with bi-directional sync.</text>
 </svg>

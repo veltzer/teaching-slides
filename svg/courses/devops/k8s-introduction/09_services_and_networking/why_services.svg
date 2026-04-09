@@ -1,32 +1,32 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold">Problem: Pod IPs are Ephemeral</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Problem: Pod IPs are Ephemeral</text>
   <g id="without-service">
-    <text x="200" y="70" text-anchor="middle" font-size="12">Without Service</text>
-    <rect x="100" y="90" width="100" height="40" fill="#888" rx="3"/>
-    <text x="150" y="115" text-anchor="middle" fill="white">Client</text>
-    <circle cx="150" cy="200" r="25" fill="#ea4335"/>
-    <text x="150" y="205" text-anchor="middle" fill="white" font-size="10">Pod</text>
-    <text x="150" y="235" text-anchor="middle" font-size="10">10.1.1.5 ❌</text>
-    <circle cx="230" cy="200" r="25" fill="#34a853"/>
-    <text x="230" y="205" text-anchor="middle" fill="white" font-size="10">Pod</text>
-    <text x="230" y="235" text-anchor="middle" font-size="10">10.1.1.6 ✓</text>
-    <path d="M 150 130 L 150 175" stroke="#666" stroke-width="2" stroke-dasharray="5,5"/>
-    <text x="150" y="280" text-anchor="middle" font-size="11">Direct connection fails</text>
+    <text x="320" y="126" text-anchor="middle" font-size="19.2">Without Service</text>
+    <rect x="160" y="162" width="160" height="72" fill="#888" rx="4.8" />
+    <text x="240" y="207" text-anchor="middle" fill="white">Client</text>
+    <circle cx="240" cy="360" r="40" fill="#ea4335" />
+    <text x="240" y="369" text-anchor="middle" fill="white" font-size="16">Pod</text>
+    <text x="240" y="423" text-anchor="middle" font-size="16">10.1.1.5 ❌</text>
+    <circle cx="368" cy="360" r="40" fill="#34a853" />
+    <text x="368" y="369" text-anchor="middle" fill="white" font-size="16">Pod</text>
+    <text x="368" y="423" text-anchor="middle" font-size="16">10.1.1.6 ✓</text>
+    <path d="M 240 234 L 240 315" stroke="#666" stroke-width="3.2" stroke-dasharray="8 8" />
+    <text x="240" y="504" text-anchor="middle" font-size="17.6">Direct connection fails</text>
   </g>
   <g id="with-service">
-    <text x="600" y="70" text-anchor="middle" font-size="12">With Service</text>
-    <rect x="500" y="90" width="100" height="40" fill="#888" rx="3"/>
-    <text x="550" y="115" text-anchor="middle" fill="white">Client</text>
-    <rect x="480" y="160" width="140" height="40" fill="#4285f4" rx="3"/>
-    <text x="550" y="185" text-anchor="middle" fill="white">Service</text>
-    <circle cx="500" cy="260" r="25" fill="#ea4335"/>
-    <text x="500" y="265" text-anchor="middle" fill="white" font-size="10">Pod</text>
-    <text x="500" y="295" text-anchor="middle" font-size="10">10.1.2.5 ❌</text>
-    <circle cx="600" cy="260" r="25" fill="#34a853"/>
-    <text x="600" y="265" text-anchor="middle" fill="white" font-size="10">Pod</text>
-    <text x="600" y="295" text-anchor="middle" font-size="10">10.1.2.7 ✓</text>
-    <path d="M 550 130 L 550 160" stroke="#666" stroke-width="2"/>
-    <path d="M 550 200 L 600 235" stroke="#666" stroke-width="2"/>
-    <text x="550" y="330" text-anchor="middle" font-size="11">Service handles routing</text>
+    <text x="960" y="126" text-anchor="middle" font-size="19.2">With Service</text>
+    <rect x="800" y="162" width="160" height="72" fill="#888" rx="4.8" />
+    <text x="880" y="207" text-anchor="middle" fill="white">Client</text>
+    <rect x="768" y="288" width="224" height="72" fill="#4285f4" rx="4.8" />
+    <text x="880" y="333" text-anchor="middle" fill="white">Service</text>
+    <circle cx="800" cy="468" r="40" fill="#ea4335" />
+    <text x="800" y="477" text-anchor="middle" fill="white" font-size="16">Pod</text>
+    <text x="800" y="531" text-anchor="middle" font-size="16">10.1.2.5 ❌</text>
+    <circle cx="960" cy="468" r="40" fill="#34a853" />
+    <text x="960" y="477" text-anchor="middle" fill="white" font-size="16">Pod</text>
+    <text x="960" y="531" text-anchor="middle" font-size="16">10.1.2.7 ✓</text>
+    <path d="M 880 234 L 880 288" stroke="#666" stroke-width="3.2" />
+    <path d="M 880 360 L 960 423" stroke="#666" stroke-width="3.2" />
+    <text x="880" y="594" text-anchor="middle" font-size="17.6">Service handles routing</text>
   </g>
 </svg>

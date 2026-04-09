@@ -1,14 +1,30 @@
-<svg viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="350" cy="60" r="35" fill="#4a90d9"/>
-  <text x="350" y="65" text-anchor="middle" fill="white" font-size="12">UserService</text>
-  <circle cx="180" cy="170" r="35" fill="#27ae60"/>
-  <text x="180" y="175" text-anchor="middle" fill="white" font-size="12">AuthModule</text>
-  <circle cx="350" cy="200" r="35" fill="#27ae60"/>
-  <text x="350" y="205" text-anchor="middle" fill="white" font-size="12">UserRepo</text>
-  <circle cx="520" cy="170" r="35" fill="#27ae60"/>
-  <text x="520" y="175" text-anchor="middle" fill="white" font-size="12">EmailSvc</text>
-  <line x1="325" y1="88" x2="205" y2="142" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <line x1="350" y1="95" x2="350" y2="165" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <line x1="375" y1="88" x2="495" y2="142" stroke="#666" stroke-width="2" marker-end="url(#garrow)"/>
-  <defs><marker id="garrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#666"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="garrow" markerWidth="33.4367" markerHeight="58.0608" refX="30.093" refY="29.0304" orient="auto">
+      <polygon points="0,82.944 11.7029,0" fill="#666" />
+    </marker>
+  </defs>
+  <rect width="2674.9387" height="3317.76" fill="#f8f9fa" />
+  <text x="1337.4694" y="290.304" text-anchor="middle" font-size="66.8734" font-weight="bold" fill="#1a237e">Graph RAG: Dependency-Aware Retrieval</text>
+  <text x="1337.4694" y="472.7808" text-anchor="middle" font-size="43.4677" fill="#555">When a query matches UserService, also retrieve its dependencies</text>
+  <circle cx="1337.4694" cy="1451.52" r="167.1837" fill="#4a90d9" stroke="#1565C0" stroke-width="6.6873" />
+  <text x="1337.4694" y="1410.048" text-anchor="middle" fill="white" font-size="43.4677" font-weight="bold">UserService</text>
+  <text x="1337.4694" y="1559.3472" text-anchor="middle" fill="#D6EAF8" font-size="36.7804">(query match)</text>
+  <circle cx="568.4244" cy="1451.52" r="150.4653" fill="#27ae60" stroke="#2E7D32" stroke-width="6.6873" />
+  <text x="568.4244" y="1410.048" text-anchor="middle" fill="white" font-size="40.1242" font-weight="bold">AuthModule</text>
+  <text x="568.4244" y="1559.3472" text-anchor="middle" fill="#D5F5E3" font-size="36.7804">dependency</text>
+  <circle cx="1337.4694" cy="2488.32" r="150.4653" fill="#27ae60" stroke="#2E7D32" stroke-width="6.6873" />
+  <text x="1337.4694" y="2446.848" text-anchor="middle" fill="white" font-size="40.1242" font-weight="bold">UserRepo</text>
+  <text x="1337.4694" y="2596.1472" text-anchor="middle" fill="#D5F5E3" font-size="36.7804">dependency</text>
+  <circle cx="2106.5143" cy="1451.52" r="150.4653" fill="#27ae60" stroke="#2E7D32" stroke-width="6.6873" />
+  <text x="2106.5143" y="1410.048" text-anchor="middle" fill="white" font-size="40.1242" font-weight="bold">EmailSvc</text>
+  <text x="2106.5143" y="1559.3472" text-anchor="middle" fill="#D5F5E3" font-size="36.7804">dependency</text>
+  <line x1="1176.973" y1="1302.2208" x2="712.2024" y2="1302.2208" stroke="#666" stroke-width="6.6873" marker-end="url(#garrow)" />
+  <line x1="1337.4694" y1="1866.24" x2="1337.4694" y2="2115.072" stroke="#666" stroke-width="6.6873" marker-end="url(#garrow)" />
+  <line x1="1497.9657" y1="1302.2208" x2="1962.7363" y2="1302.2208" stroke="#666" stroke-width="6.6873" marker-end="url(#garrow)" />
+  <text x="936.2286" y="1161.216" text-anchor="middle" font-size="36.7804" fill="#2E7D32">also retrieve</text>
+  <text x="1738.7101" y="1161.216" text-anchor="middle" font-size="36.7804" fill="#2E7D32">also retrieve</text>
+  <text x="1538.0899" y="1990.656" font-size="36.7804" fill="#2E7D32">also retrieve</text>
+  <rect x="66.8734" y="2969.3952" width="2541.1919" height="290.304" rx="26.7494" fill="#E8EAF6" stroke="#3949AB" stroke-width="5.0156" />
+  <text x="1337.4694" y="3151.872" text-anchor="middle" font-size="43.4677" fill="#555">Walk import graph 1-2 hops: store edges as metadata {"depends_on": ["AuthModule", "UserRepo"]}</text>
 </svg>

@@ -1,34 +1,28 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="150" width="150" height="100" fill="#3498DB" stroke="#333" stroke-width="2"/>
-  <text x="175" y="130" text-anchor="middle" font-size="14" font-weight="bold">Writer Process</text>
-  <text x="175" y="200" text-anchor="middle" fill="white" font-size="12">write(fd[1])</text>
-
-  <rect x="350" y="140" width="100" height="120" fill="#95A5A6" stroke="#333" stroke-width="2"/>
-  <text x="400" y="120" text-anchor="middle" font-size="14" font-weight="bold">Kernel Buffer</text>
-  <rect x="360" y="150" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="165" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="170" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="185" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="190" width="80" height="20" fill="#E74C3C"/>
-  <text x="400" y="205" text-anchor="middle" fill="white" font-size="10">data</text>
-  <rect x="360" y="210" width="80" height="40" fill="#ECF0F1"/>
-  <text x="400" y="230" text-anchor="middle" font-size="10">empty</text>
-
-  <rect x="550" y="150" width="150" height="100" fill="#2ECC71" stroke="#333" stroke-width="2"/>
-  <text x="625" y="130" text-anchor="middle" font-size="14" font-weight="bold">Reader Process</text>
-  <text x="625" y="200" text-anchor="middle" fill="white" font-size="12">read(fd[0])</text>
-
-  <path d="M 250 200 L 350 200" stroke="#333" stroke-width="3" marker-end="url(#arrow8)"/>
-  <path d="M 450 200 L 550 200" stroke="#333" stroke-width="3" marker-end="url(#arrow8)"/>
-
-  <text x="300" y="190" text-anchor="middle" font-size="11">fd[1]</text>
-  <text x="500" y="190" text-anchor="middle" font-size="11">fd[0]</text>
-
-  <text x="400" y="290" text-anchor="middle" font-size="12">64KB buffer (PIPE_BUF = 4KB atomic)</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="160" y="270" width="240" height="180" fill="#3498DB" stroke="#333" stroke-width="3.2" />
+  <text x="280" y="234" text-anchor="middle" font-size="22.4" font-weight="bold">Writer Process</text>
+  <text x="280" y="360" text-anchor="middle" fill="white" font-size="19.2">write(fd[1])</text>
+  <rect x="560" y="252" width="160" height="216" fill="#95A5A6" stroke="#333" stroke-width="3.2" />
+  <text x="640" y="216" text-anchor="middle" font-size="22.4" font-weight="bold">Kernel Buffer</text>
+  <rect x="576" y="270" width="128" height="36" fill="#E74C3C" />
+  <text x="640" y="297" text-anchor="middle" fill="white" font-size="16">data</text>
+  <rect x="576" y="306" width="128" height="36" fill="#E74C3C" />
+  <text x="640" y="333" text-anchor="middle" fill="white" font-size="16">data</text>
+  <rect x="576" y="342" width="128" height="36" fill="#E74C3C" />
+  <text x="640" y="369" text-anchor="middle" fill="white" font-size="16">data</text>
+  <rect x="576" y="378" width="128" height="72" fill="#ECF0F1" />
+  <text x="640" y="414" text-anchor="middle" font-size="16">empty</text>
+  <rect x="880" y="270" width="240" height="180" fill="#2ECC71" stroke="#333" stroke-width="3.2" />
+  <text x="1000" y="234" text-anchor="middle" font-size="22.4" font-weight="bold">Reader Process</text>
+  <text x="1000" y="360" text-anchor="middle" fill="white" font-size="19.2">read(fd[0])</text>
+  <path d="M 400 360 L 560 360" stroke="#333" stroke-width="4.8" marker-end="url(#arrow8)" />
+  <path d="M 720 360 L 880 360" stroke="#333" stroke-width="4.8" marker-end="url(#arrow8)" />
+  <text x="480" y="342" text-anchor="middle" font-size="17.6">fd[1]</text>
+  <text x="800" y="342" text-anchor="middle" font-size="17.6">fd[0]</text>
+  <text x="640" y="522" text-anchor="middle" font-size="19.2">64KB buffer (PIPE_BUF = 4KB atomic)</text>
   <defs>
-    <marker id="arrow8" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow8" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
 </svg>

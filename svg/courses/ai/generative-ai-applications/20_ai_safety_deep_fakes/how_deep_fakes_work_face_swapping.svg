@@ -1,43 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 450" font-family="Arial, sans-serif">
-  <text x="375" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">How Deep Fakes Work: Face Swapping</text>
-  <text x="375" y="52" text-anchor="middle" font-size="12" fill="#666">Traditional approach (autoencoder-based)</text>
-  <!-- Person A side -->
-  <rect x="50" y="75" width="140" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="120" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Person A (source)</text>
-  <line x1="120" y1="125" x2="120" y2="155" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="60" y="160" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="120" y="188" text-anchor="middle" font-size="12" fill="#333">Encoder (shared)</text>
-  <line x1="120" y1="205" x2="120" y2="235" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="55" y="240" width="130" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="120" y="260" text-anchor="middle" font-size="11" fill="#666">latent space</text>
-  <line x1="120" y1="270" x2="120" y2="295" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="60" y="300" width="120" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="120" y="328" text-anchor="middle" font-size="12" fill="#333">Decoder A</text>
-  <line x1="120" y1="345" x2="120" y2="370" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <text x="120" y="390" text-anchor="middle" font-size="11" fill="#555">Reconstructed A</text>
-  <defs><marker id="aD" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#333"/></marker></defs>
-
-  <!-- Person B side -->
-  <rect x="530" y="75" width="140" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="600" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Person B (target)</text>
-  <line x1="600" y1="125" x2="600" y2="155" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="540" y="160" width="120" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="600" y="188" text-anchor="middle" font-size="12" fill="#333">Encoder (shared)</text>
-  <line x1="600" y1="205" x2="600" y2="235" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="535" y="240" width="130" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="600" y="260" text-anchor="middle" font-size="11" fill="#666">latent space</text>
-  <line x1="600" y1="270" x2="600" y2="295" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <rect x="540" y="300" width="120" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="600" y="328" text-anchor="middle" font-size="12" fill="#333">Decoder B</text>
-  <line x1="600" y1="345" x2="600" y2="370" stroke="#333" stroke-width="2" marker-end="url(#aD)"/>
-  <text x="600" y="390" text-anchor="middle" font-size="11" fill="#555">Reconstructed B</text>
-
-  <!-- Face swap explanation -->
-  <rect x="220" y="240" width="280" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="360" y="265" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Face Swap Trick</text>
-  <text x="360" y="288" text-anchor="middle" font-size="12" fill="#555">Encode A -> use Decoder B</text>
-  <text x="360" y="308" text-anchor="middle" font-size="11" fill="#555">A's expressions on B's face</text>
-  <!-- Cross arrows -->
-  <path d="M185,255 L220,270" stroke="#dc3545" stroke-width="2" stroke-dasharray="4,3"/>
-  <path d="M500,270 L535,310" stroke="#dc3545" stroke-width="2" stroke-dasharray="4,3"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="48" text-anchor="middle" font-size="28.8" font-weight="bold" fill="#333">How Deep Fakes Work: Face Swapping</text>
+  <text x="640" y="83.2" text-anchor="middle" font-size="19.2" fill="#666">Traditional approach (autoencoder-based)</text>
+  <rect x="85.3333" y="120" width="238.9333" height="80" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="204.8" y="168" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Person A (source)</text>
+  <line x1="204.8" y1="200" x2="204.8" y2="248" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="102.4" y="256" width="204.8" height="72" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="204.8" y="300.8" text-anchor="middle" font-size="19.2" fill="#333">Encoder (shared)</text>
+  <line x1="204.8" y1="328" x2="204.8" y2="376" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="93.8667" y="384" width="221.8667" height="48" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
+  <text x="204.8" y="416" text-anchor="middle" font-size="17.6" fill="#666">latent space</text>
+  <line x1="204.8" y1="432" x2="204.8" y2="472" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="102.4" y="480" width="204.8" height="72" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="204.8" y="524.8" text-anchor="middle" font-size="19.2" fill="#333">Decoder A</text>
+  <line x1="204.8" y1="552" x2="204.8" y2="592" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <text x="204.8" y="624" text-anchor="middle" font-size="17.6" fill="#555">Reconstructed A</text>
+  <defs>
+    <marker id="aD" markerWidth="13.6533" markerHeight="9.6" refX="13.6533" refY="4.8" orient="auto">
+      <path d="M 0 0 L 13.6533 4.8 L 0 9.6" fill="#333" />
+    </marker>
+  </defs>
+  <rect x="904.5333" y="120" width="238.9333" height="80" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1024" y="168" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Person B (target)</text>
+  <line x1="1024" y1="200" x2="1024" y2="248" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="921.6" y="256" width="204.8" height="72" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="1024" y="300.8" text-anchor="middle" font-size="19.2" fill="#333">Encoder (shared)</text>
+  <line x1="1024" y1="328" x2="1024" y2="376" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="913.0667" y="384" width="221.8667" height="48" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.6" />
+  <text x="1024" y="416" text-anchor="middle" font-size="17.6" fill="#666">latent space</text>
+  <line x1="1024" y1="432" x2="1024" y2="472" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <rect x="921.6" y="480" width="204.8" height="72" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1024" y="524.8" text-anchor="middle" font-size="19.2" fill="#333">Decoder B</text>
+  <line x1="1024" y1="552" x2="1024" y2="592" stroke="#333" stroke-width="3.2" marker-end="url(#aD)" />
+  <text x="1024" y="624" text-anchor="middle" font-size="17.6" fill="#555">Reconstructed B</text>
+  <rect x="375.4667" y="384" width="477.8667" height="128" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="614.4" y="424" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Face Swap Trick</text>
+  <text x="614.4" y="460.8" text-anchor="middle" font-size="19.2" fill="#555">Encode A -&gt; use Decoder B</text>
+  <text x="614.4" y="492.8" text-anchor="middle" font-size="17.6" fill="#555">A's expressions on B's face</text>
+  <path d="M 315.7333 408 L 375.4667 432" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="6.4 4.8" />
+  <path d="M 853.3333 432 L 913.0667 496" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="6.4 4.8" />
 </svg>

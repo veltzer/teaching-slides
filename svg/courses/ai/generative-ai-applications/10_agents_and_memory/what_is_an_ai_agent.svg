@@ -1,36 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="400" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#555"/>
+    <marker id="arr" markerWidth="20.48" markerHeight="10.8" refX="20.48" refY="5.4" orient="auto">
+      <polygon points="0,14.4 7.68,0" fill="#555" />
     </marker>
   </defs>
-  <!-- Outer container -->
-  <rect x="5" y="5" width="490" height="388" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="250" y="32" font-size="14" fill="#222" text-anchor="middle" font-weight="bold">AGENT LOOP</text>
-  <!-- Observe box -->
-  <rect x="150" y="52" width="110" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="205" y="79" font-size="13" fill="#222" text-anchor="middle">Observe</text>
-  <!-- Observe ← Environment label -->
-  <line x1="270" y1="74" x2="390" y2="74" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="405" y="78" font-size="12" fill="#555">Environment / Tools</text>
-  <!-- Arrow: Observe → Think -->
-  <line x1="205" y1="96" x2="205" y2="158" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Think box -->
-  <rect x="150" y="160" width="110" height="44" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="205" y="187" font-size="13" fill="#222" text-anchor="middle">Think</text>
-  <!-- Think ← LLM label -->
-  <line x1="270" y1="182" x2="350" y2="182" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="365" y="186" font-size="12" fill="#555">LLM Reasoning</text>
-  <!-- Arrow: Think → Act -->
-  <line x1="205" y1="204" x2="205" y2="266" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Act box -->
-  <rect x="150" y="268" width="110" height="44" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="205" y="295" font-size="13" fill="#222" text-anchor="middle">Act</text>
-  <!-- Act → Call tool label -->
-  <line x1="270" y1="290" x2="350" y2="290" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="360" y="294" font-size="12" fill="#555">Call tool / Respond</text>
-  <!-- Loop back arrow -->
-  <path d="M 150 290 Q 80 290 80 74 Q 80 52 148 52"
-        fill="none" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="15" y="175" font-size="11" fill="#555" transform="rotate(-90,15,175)">Loop until task complete</text>
+  <rect x="12.8" y="9" width="1254.4" height="698.4" rx="7.2" fill="#f0f4f8" stroke="#333" stroke-width="2.7" />
+  <text x="640" y="57.6" font-size="25.2" fill="#222" text-anchor="middle" font-weight="bold">AGENT LOOP</text>
+  <rect x="384" y="93.6" width="281.6" height="79.2" rx="7.2" fill="#e3f2fd" stroke="#333" stroke-width="2.7" />
+  <text x="524.8" y="142.2" font-size="23.4" fill="#222" text-anchor="middle">Observe</text>
+  <line x1="691.2" y1="133.2" x2="998.4" y2="133.2" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <text x="1036.8" y="140.4" font-size="21.6" fill="#555">Environment / Tools</text>
+  <line x1="524.8" y1="172.8" x2="524.8" y2="284.4" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <rect x="384" y="288" width="281.6" height="79.2" rx="7.2" fill="#e3f2fd" stroke="#333" stroke-width="2.7" />
+  <text x="524.8" y="336.6" font-size="23.4" fill="#222" text-anchor="middle">Think</text>
+  <line x1="691.2" y1="327.6" x2="896" y2="327.6" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <text x="934.4" y="334.8" font-size="21.6" fill="#555">LLM Reasoning</text>
+  <line x1="524.8" y1="367.2" x2="524.8" y2="478.8" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <rect x="384" y="482.4" width="281.6" height="79.2" rx="7.2" fill="#e8f5e9" stroke="#333" stroke-width="2.7" />
+  <text x="524.8" y="531" font-size="23.4" fill="#222" text-anchor="middle">Act</text>
+  <line x1="691.2" y1="522" x2="896" y2="522" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <text x="921.6" y="529.2" font-size="21.6" fill="#555">Call tool / Respond</text>
+  <path d="M 384 522 Q 204.8 522 204.8 133.2 Q 204.8 93.6 378.88 93.6" fill="none" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
+  <text x="38.4" y="315" font-size="19.8" fill="#555" transform="rotate(-90,15,175)">Loop until task complete</text>
 </svg>

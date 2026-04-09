@@ -1,57 +1,49 @@
-<svg viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowDown" markerWidth="10" markerHeight="7" refX="5" refY="7" orient="auto">
-      <polygon points="0 0, 10 0, 5 7" fill="#4a90e2"/>
+    <marker id="arrowDown" markerWidth="18.2857" markerHeight="11.2" refX="9.1429" refY="11.2" orient="auto">
+      <polygon points="0,16 0,8" fill="#4a90e2" />
     </marker>
-    <marker id="arrowUp" markerWidth="10" markerHeight="7" refX="5" refY="0" orient="auto">
-      <polygon points="0 7, 10 7, 5 0" fill="#4a90e2"/>
+    <marker id="arrowUp" markerWidth="18.2857" markerHeight="11.2" refX="9.1429" refY="0" orient="auto">
+      <polygon points="12.8,16 12.8,8" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="350" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Multi-Head Attention</text>
-  <!-- Input -->
-  <rect x="275" y="50" width="150" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Input</text>
-  <!-- Lines from input to heads -->
-  <line x1="350" y1="90" x2="100" y2="140" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="350" y1="90" x2="270" y2="140" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="350" y1="90" x2="440" y2="140" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="350" y1="90" x2="610" y2="140" stroke="#4a90e2" stroke-width="1.5"/>
-  <!-- Heads -->
-  <rect x="40" y="140" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="100" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Head 1</text>
-  <rect x="210" y="140" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="270" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Head 2</text>
-  <rect x="380" y="140" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="440" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Head 3</text>
-  <rect x="550" y="140" width="120" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="610" y="165" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Head h</text>
-  <text x="520" y="165" text-anchor="middle" font-size="16" fill="#999">...</text>
-  <!-- Attention boxes -->
-  <rect x="55" y="210" width="90" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="100" y="235" text-anchor="middle" font-size="12" fill="#856404">Attn</text>
-  <rect x="225" y="210" width="90" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="270" y="235" text-anchor="middle" font-size="12" fill="#856404">Attn</text>
-  <rect x="395" y="210" width="90" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="440" y="235" text-anchor="middle" font-size="12" fill="#856404">Attn</text>
-  <rect x="565" y="210" width="90" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="610" y="235" text-anchor="middle" font-size="12" fill="#856404">Attn</text>
-  <!-- Lines from heads to attn -->
-  <line x1="100" y1="180" x2="100" y2="210" stroke="#28a745" stroke-width="1.5"/>
-  <line x1="270" y1="180" x2="270" y2="210" stroke="#28a745" stroke-width="1.5"/>
-  <line x1="440" y1="180" x2="440" y2="210" stroke="#28a745" stroke-width="1.5"/>
-  <line x1="610" y1="180" x2="610" y2="210" stroke="#28a745" stroke-width="1.5"/>
-  <!-- Lines from attn to concatenate -->
-  <line x1="100" y1="250" x2="350" y2="310" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="270" y1="250" x2="350" y2="310" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="440" y1="250" x2="350" y2="310" stroke="#4a90e2" stroke-width="1.5"/>
-  <line x1="610" y1="250" x2="350" y2="310" stroke="#4a90e2" stroke-width="1.5"/>
-  <!-- Concatenate -->
-  <rect x="260" y="310" width="180" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Concatenate</text>
-  <line x1="350" y1="350" x2="350" y2="370" stroke="#4a90e2" stroke-width="1.5"/>
-  <!-- Linear projection -->
-  <rect x="240" y="370" width="220" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="395" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Linear Projection</text>
-  <line x1="350" y1="410" x2="350" y2="430" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowDown)"/>
-  <text x="350" y="448" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Output</text>
+  <text x="640" y="48" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Multi-Head Attention</text>
+  <rect x="502.8571" y="80" width="274.2857" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="120" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Input</text>
+  <line x1="640" y1="144" x2="182.8571" y2="224" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="640" y1="144" x2="493.7143" y2="224" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="640" y1="144" x2="804.5714" y2="224" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="640" y1="144" x2="1115.4286" y2="224" stroke="#4a90e2" stroke-width="2.4" />
+  <rect x="73.1429" y="224" width="219.4286" height="64" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="182.8571" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Head 1</text>
+  <rect x="384" y="224" width="219.4286" height="64" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="493.7143" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Head 2</text>
+  <rect x="694.8571" y="224" width="219.4286" height="64" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="804.5714" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Head 3</text>
+  <rect x="1005.7143" y="224" width="219.4286" height="64" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="1115.4286" y="264" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Head h</text>
+  <text x="950.8571" y="264" text-anchor="middle" font-size="25.6" fill="#999">...</text>
+  <rect x="100.5714" y="336" width="164.5714" height="64" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="182.8571" y="376" text-anchor="middle" font-size="19.2" fill="#856404">Attn</text>
+  <rect x="411.4286" y="336" width="164.5714" height="64" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="493.7143" y="376" text-anchor="middle" font-size="19.2" fill="#856404">Attn</text>
+  <rect x="722.2857" y="336" width="164.5714" height="64" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="804.5714" y="376" text-anchor="middle" font-size="19.2" fill="#856404">Attn</text>
+  <rect x="1033.1429" y="336" width="164.5714" height="64" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="1115.4286" y="376" text-anchor="middle" font-size="19.2" fill="#856404">Attn</text>
+  <line x1="182.8571" y1="288" x2="182.8571" y2="336" stroke="#28a745" stroke-width="2.4" />
+  <line x1="493.7143" y1="288" x2="493.7143" y2="336" stroke="#28a745" stroke-width="2.4" />
+  <line x1="804.5714" y1="288" x2="804.5714" y2="336" stroke="#28a745" stroke-width="2.4" />
+  <line x1="1115.4286" y1="288" x2="1115.4286" y2="336" stroke="#28a745" stroke-width="2.4" />
+  <line x1="182.8571" y1="400" x2="640" y2="496" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="493.7143" y1="400" x2="640" y2="496" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="804.5714" y1="400" x2="640" y2="496" stroke="#4a90e2" stroke-width="2.4" />
+  <line x1="1115.4286" y1="400" x2="640" y2="496" stroke="#4a90e2" stroke-width="2.4" />
+  <rect x="475.4286" y="496" width="329.1429" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="536" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Concatenate</text>
+  <line x1="640" y1="560" x2="640" y2="592" stroke="#4a90e2" stroke-width="2.4" />
+  <rect x="438.8571" y="592" width="402.2857" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="632" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Linear Projection</text>
+  <line x1="640" y1="656" x2="640" y2="688" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowDown)" />
+  <text x="640" y="716.8" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Output</text>
 </svg>

@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 420" font-family="Arial, sans-serif">
-  <rect x="20" y="10" width="620" height="400" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="330" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Random Subdomain Attack</text>
-  <text x="330" y="70" text-anchor="middle" font-size="13" fill="#555">Attacker generates queries for:</text>
-  <rect x="60" y="85" width="520" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="80" y="108" font-size="13" fill="#dc3545" font-family="monospace">abc123.example.com</text>
-  <text x="80" y="128" font-size="13" fill="#dc3545" font-family="monospace">xyz789.example.com</text>
-  <text x="80" y="148" font-size="13" fill="#dc3545" font-family="monospace">qwe456.example.com  ... (millions of unique random subdomains)</text>
-  <rect x="60" y="185" width="520" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="80" y="208" font-size="13" font-weight="bold" fill="#333">Why this is effective:</text>
-  <rect x="60" y="230" width="520" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.2"/>
-  <text x="80" y="250" font-size="12" fill="#333">1. Recursive resolver cannot find in cache (unique)</text>
-  <rect x="60" y="268" width="520" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.2"/>
-  <text x="80" y="288" font-size="12" fill="#333">2. Must query authoritative server for EACH one</text>
-  <rect x="60" y="306" width="520" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.2"/>
-  <text x="80" y="326" font-size="12" fill="#333">3. Authoritative server overwhelmed with NXDOMAIN</text>
-  <rect x="60" y="344" width="520" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.2"/>
-  <text x="80" y="364" font-size="12" fill="#333">4. Both resolver AND authoritative server are DoSed</text>
-  <text x="330" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Hard to filter: each query looks legitimate!</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <rect x="38.7879" y="17.1429" width="1202.4242" height="685.7143" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="640" y="68.5714" text-anchor="middle" font-size="30.8571" font-weight="bold" fill="#333">Random Subdomain Attack</text>
+  <text x="640" y="120" text-anchor="middle" font-size="22.2857" fill="#555">Attacker generates queries for:</text>
+  <rect x="116.3636" y="145.7143" width="1008.4848" height="137.1429" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5714" />
+  <text x="155.1515" y="185.1429" font-size="22.2857" fill="#dc3545" font-family="monospace">abc123.example.com</text>
+  <text x="155.1515" y="219.4286" font-size="22.2857" fill="#dc3545" font-family="monospace">xyz789.example.com</text>
+  <text x="155.1515" y="253.7143" font-size="22.2857" fill="#dc3545" font-family="monospace">qwe456.example.com  ... (millions of unique random subdomains)</text>
+  <rect x="116.3636" y="317.1429" width="1008.4848" height="60" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5714" />
+  <text x="155.1515" y="356.5714" font-size="22.2857" font-weight="bold" fill="#333">Why this is effective:</text>
+  <rect x="116.3636" y="394.2857" width="1008.4848" height="51.4286" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.0571" />
+  <text x="155.1515" y="428.5714" font-size="20.5714" fill="#333">1. Recursive resolver cannot find in cache (unique)</text>
+  <rect x="116.3636" y="459.4286" width="1008.4848" height="51.4286" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="2.0571" />
+  <text x="155.1515" y="493.7143" font-size="20.5714" fill="#333">2. Must query authoritative server for EACH one</text>
+  <rect x="116.3636" y="524.5714" width="1008.4848" height="51.4286" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="2.0571" />
+  <text x="155.1515" y="558.8571" font-size="20.5714" fill="#333">3. Authoritative server overwhelmed with NXDOMAIN</text>
+  <rect x="116.3636" y="589.7143" width="1008.4848" height="51.4286" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="2.0571" />
+  <text x="155.1515" y="624" font-size="20.5714" fill="#333">4. Both resolver AND authoritative server are DoSed</text>
+  <text x="640" y="682.2857" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#dc3545">Hard to filter: each query looks legitimate!</text>
 </svg>

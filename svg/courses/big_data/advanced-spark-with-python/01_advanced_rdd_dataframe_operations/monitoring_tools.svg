@@ -1,79 +1,58 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12" refX="14.4" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#555" />
     </marker>
   </defs>
-
-  <!-- Title -->
-  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Spark Monitoring Tools Overview</text>
-
-  <!-- Spark Application box -->
-  <rect x="280" y="45" width="240" height="50" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="400" y="67" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">Spark Application</text>
-  <text x="400" y="85" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Generates metrics and events</text>
-
-  <!-- Arrows down -->
-  <line x1="280" y1="95" x2="130" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="400" y1="95" x2="400" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <line x1="520" y1="95" x2="670" y2="130" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Spark UI -->
-  <rect x="20" y="135" width="220" height="150" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="130" y="160" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">Spark Web UI</text>
-  <text x="130" y="180" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Port 4040 (default)</text>
-
-  <rect x="35" y="192" width="190" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="130" y="207" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Jobs / Stages / Tasks</text>
-  <rect x="35" y="218" width="190" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="130" y="233" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Storage (cached RDDs)</text>
-  <rect x="35" y="244" width="190" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
-  <text x="130" y="259" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">SQL Query Plans (DAG)</text>
-
-  <!-- History Server -->
-  <rect x="290" y="135" width="220" height="150" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="400" y="160" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">History Server</text>
-  <text x="400" y="180" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Port 18080 (default)</text>
-
-  <rect x="305" y="192" width="190" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
-  <text x="400" y="207" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Completed applications</text>
-  <rect x="305" y="218" width="190" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
-  <text x="400" y="233" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Event log analysis</text>
-  <rect x="305" y="244" width="190" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
-  <text x="400" y="259" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Post-mortem debugging</text>
-
-  <!-- External Tools -->
-  <rect x="560" y="135" width="220" height="150" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="670" y="160" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#e65100">External Tools</text>
-  <text x="670" y="180" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Third-party integrations</text>
-
-  <rect x="575" y="192" width="190" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="207" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Ganglia / Graphite</text>
-  <rect x="575" y="218" width="190" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="233" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Prometheus + Grafana</text>
-  <rect x="575" y="244" width="190" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
-  <text x="670" y="259" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Datadog / New Relic</text>
-
-  <!-- Key Metrics Section -->
-  <text x="400" y="315" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Key Metrics to Monitor</text>
-
-  <rect x="30" y="330" width="170" height="75" rx="5" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
-  <text x="115" y="350" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">Execution</text>
-  <text x="115" y="370" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Task duration</text>
-  <text x="115" y="386" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">GC time / Scheduler delay</text>
-
-  <rect x="220" y="330" width="170" height="75" rx="5" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
-  <text x="305" y="350" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#283593">Memory</text>
-  <text x="305" y="370" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Storage / Execution usage</text>
-  <text x="305" y="386" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Spill to disk</text>
-
-  <rect x="410" y="330" width="170" height="75" rx="5" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="495" y="350" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">Shuffle</text>
-  <text x="495" y="370" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Read / Write bytes</text>
-  <text x="495" y="386" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Shuffle spill</text>
-
-  <rect x="600" y="330" width="170" height="75" rx="5" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
-  <text x="685" y="350" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">I/O</text>
-  <text x="685" y="370" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Input / Output bytes</text>
-  <text x="685" y="386" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Records read/written</text>
+  <text x="640" y="48" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1565c0">Spark Monitoring Tools Overview</text>
+  <rect x="448" y="77.1429" width="384" height="85.7143" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="640" y="114.8571" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1565c0">Spark Application</text>
+  <text x="640" y="145.7143" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#555">Generates metrics and events</text>
+  <line x1="448" y1="162.8571" x2="208" y2="222.8571" stroke="#555" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="640" y1="162.8571" x2="640" y2="222.8571" stroke="#555" stroke-width="2.4" marker-end="url(#arrow)" />
+  <line x1="832" y1="162.8571" x2="1072" y2="222.8571" stroke="#555" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="32" y="231.4286" width="352" height="257.1429" rx="9.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="208" y="274.2857" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#2e7d32">Spark Web UI</text>
+  <text x="208" y="308.5714" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Port 4040 (default)</text>
+  <rect x="56" y="329.1429" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="208" y="354.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Jobs / Stages / Tasks</text>
+  <rect x="56" y="373.7143" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="208" y="399.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Storage (cached RDDs)</text>
+  <rect x="56" y="418.2857" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#2e7d32" stroke-width="1.6" />
+  <text x="208" y="444" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">SQL Query Plans (DAG)</text>
+  <rect x="464" y="231.4286" width="352" height="257.1429" rx="9.6" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="640" y="274.2857" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1565c0">History Server</text>
+  <text x="640" y="308.5714" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Port 18080 (default)</text>
+  <rect x="488" y="329.1429" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#1565c0" stroke-width="1.6" />
+  <text x="640" y="354.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Completed applications</text>
+  <rect x="488" y="373.7143" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#1565c0" stroke-width="1.6" />
+  <text x="640" y="399.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Event log analysis</text>
+  <rect x="488" y="418.2857" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#1565c0" stroke-width="1.6" />
+  <text x="640" y="444" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Post-mortem debugging</text>
+  <rect x="896" y="231.4286" width="352" height="257.1429" rx="9.6" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="1072" y="274.2857" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#e65100">External Tools</text>
+  <text x="1072" y="308.5714" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Third-party integrations</text>
+  <rect x="920" y="329.1429" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="1072" y="354.8571" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Ganglia / Graphite</text>
+  <rect x="920" y="373.7143" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="1072" y="399.4286" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Prometheus + Grafana</text>
+  <rect x="920" y="418.2857" width="304" height="37.7143" rx="4.8" fill="#fff" stroke="#e65100" stroke-width="1.6" />
+  <text x="1072" y="444" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Datadog / New Relic</text>
+  <text x="640" y="540" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Key Metrics to Monitor</text>
+  <rect x="48" y="565.7143" width="272" height="128.5714" rx="8" fill="#ffcdd2" stroke="#c62828" stroke-width="2.4" />
+  <text x="184" y="600" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#c62828">Execution</text>
+  <text x="184" y="634.2857" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Task duration</text>
+  <text x="184" y="661.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">GC time / Scheduler delay</text>
+  <rect x="352" y="565.7143" width="272" height="128.5714" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2.4" />
+  <text x="488" y="600" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#283593">Memory</text>
+  <text x="488" y="634.2857" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Storage / Execution usage</text>
+  <text x="488" y="661.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Spill to disk</text>
+  <rect x="656" y="565.7143" width="272" height="128.5714" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.4" />
+  <text x="792" y="600" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#6a1b9a">Shuffle</text>
+  <text x="792" y="634.2857" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Read / Write bytes</text>
+  <text x="792" y="661.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Shuffle spill</text>
+  <rect x="960" y="565.7143" width="272" height="128.5714" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2.4" />
+  <text x="1096" y="600" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#00695c">I/O</text>
+  <text x="1096" y="634.2857" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Input / Output bytes</text>
+  <text x="1096" y="661.7143" text-anchor="middle" font-family="Arial" font-size="16" fill="#333">Records read/written</text>
 </svg>

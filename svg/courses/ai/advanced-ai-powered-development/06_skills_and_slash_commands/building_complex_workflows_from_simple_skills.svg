@@ -1,13 +1,51 @@
-<svg viewBox="0 0 600 100" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:100px;">
-  <rect x="10" y="30" width="120" height="40" rx="6" fill="#2196F3" opacity="0.8"/>
-  <text x="70" y="55" text-anchor="middle" fill="white" font-size="12">lint</text>
-  <line x1="130" y1="50" x2="170" y2="50" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="170" y="30" width="120" height="40" rx="6" fill="#4CAF50" opacity="0.8"/>
-  <text x="230" y="55" text-anchor="middle" fill="white" font-size="12">review</text>
-  <line x1="290" y1="50" x2="330" y2="50" stroke="#666" stroke-width="2"/>
-  <rect x="330" y="30" width="120" height="40" rx="6" fill="#FF9800" opacity="0.8"/>
-  <text x="390" y="55" text-anchor="middle" fill="white" font-size="12">commit</text>
-  <line x1="450" y1="50" x2="490" y2="50" stroke="#666" stroke-width="2"/>
-  <rect x="490" y="30" width="100" height="40" rx="6" fill="#9C27B0" opacity="0.8"/>
-  <text x="540" y="55" text-anchor="middle" fill="white" font-size="12">create-pr</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="45.511" markerHeight="362.88" refX="40.96" refY="181.44" orient="auto">
+      <polygon points="0,518.4 15.929,0" fill="#666" />
+    </marker>
+  </defs>
+  <rect width="3640.889" height="20736" fill="#f8f9fa" />
+  <text x="1820.4444" y="1814.4" text-anchor="middle" font-size="91.0223" font-weight="bold" fill="#1a237e">Skill Composition: /ship-it Pipeline</text>
+  <rect x="91.0223" y="4147.2" width="546.1333" height="3628.8" rx="45.511" fill="#1a237e" stroke="#3949AB" stroke-width="9.1023" />
+  <text x="364.089" y="5702.4" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">/ship-it</text>
+  <text x="364.089" y="6894.72" text-anchor="middle" fill="#C5CAE9" font-size="54.6133">trigger</text>
+  <line x1="637.1556" y1="5961.6" x2="796.4444" y2="5961.6" stroke="#666" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="796.4444" y="4147.2" width="591.6444" height="3628.8" rx="45.511" fill="#2196F3" stroke="#1565C0" stroke-width="9.1023" />
+  <text x="1092.2667" y="5598.72" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">1. lint</text>
+  <text x="1092.2667" y="6635.52" text-anchor="middle" fill="#BBDEFB" font-size="54.6133">code style</text>
+  <text x="1092.2667" y="7413.12" text-anchor="middle" fill="#BBDEFB" font-size="50.0623">on_fail: abort</text>
+  <line x1="1388.089" y1="5961.6" x2="1547.3777" y2="5961.6" stroke="#666" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="1547.3777" y="4147.2" width="591.6444" height="3628.8" rx="45.511" fill="#4CAF50" stroke="#2E7D32" stroke-width="9.1023" />
+  <text x="1843.2" y="5598.72" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">2. review</text>
+  <text x="1843.2" y="6635.52" text-anchor="middle" fill="#C8E6C9" font-size="54.6133">security focus</text>
+  <text x="1843.2" y="7413.12" text-anchor="middle" fill="#C8E6C9" font-size="50.0623">on_fail: abort</text>
+  <line x1="2139.0223" y1="5961.6" x2="2298.311" y2="5961.6" stroke="#666" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="2298.311" y="4147.2" width="591.6444" height="3628.8" rx="45.511" fill="#FF9800" stroke="#E65100" stroke-width="9.1023" />
+  <text x="2594.1333" y="5598.72" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">3. commit</text>
+  <text x="2594.1333" y="6635.52" text-anchor="middle" fill="#FFE0B2" font-size="54.6133">auto message</text>
+  <text x="2594.1333" y="7413.12" text-anchor="middle" fill="#FFE0B2" font-size="50.0623">on_fail: abort</text>
+  <line x1="2889.9556" y1="5961.6" x2="3049.2444" y2="5961.6" stroke="#666" stroke-width="9.1023" marker-end="url(#arr)" />
+  <rect x="3049.2444" y="4147.2" width="500.6223" height="3628.8" rx="45.511" fill="#9C27B0" stroke="#6A1B9A" stroke-width="9.1023" />
+  <text x="3299.5556" y="5495.04" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">4. create-</text>
+  <text x="3299.5556" y="6428.16" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">pr</text>
+  <text x="3299.5556" y="7413.12" text-anchor="middle" fill="#E1BEE7" font-size="50.0623">on_fail: warn</text>
+  <text x="1820.4444" y="9072" text-anchor="middle" font-size="59.1644" fill="#555">context flows from each step to the next</text>
+  <rect x="136.5333" y="11404.8" width="3367.8223" height="8294.4" rx="45.511" fill="#E8EAF6" stroke="#3949AB" stroke-width="6.8267" />
+  <text x="1820.4444" y="12960" text-anchor="middle" font-size="68.2667" font-weight="bold" fill="#3949AB">on_fail Strategies</text>
+  <rect x="250.311" y="13893.12" width="705.4223" height="4665.6" rx="36.409" fill="#FFCDD2" stroke="#C62828" />
+  <text x="600.7467" y="15344.64" text-anchor="middle" font-size="59.1644" font-weight="bold" fill="#C62828">abort</text>
+  <text x="600.7467" y="16485.12" text-anchor="middle" font-size="54.6133" fill="#333">stop chain</text>
+  <text x="600.7467" y="17521.92" text-anchor="middle" font-size="54.6133" fill="#333">immediately</text>
+  <rect x="1037.6533" y="13893.12" width="705.4223" height="4665.6" rx="36.409" fill="#FFF9C4" stroke="#F9A825" />
+  <text x="1388.089" y="15344.64" text-anchor="middle" font-size="59.1644" font-weight="bold" fill="#E65100">skip</text>
+  <text x="1388.089" y="16485.12" text-anchor="middle" font-size="54.6133" fill="#333">log failure,</text>
+  <text x="1388.089" y="17521.92" text-anchor="middle" font-size="54.6133" fill="#333">continue next</text>
+  <rect x="1824.9956" y="13893.12" width="705.4223" height="4665.6" rx="36.409" fill="#E8F5E9" stroke="#2E7D32" />
+  <text x="2175.431" y="15344.64" text-anchor="middle" font-size="59.1644" font-weight="bold" fill="#2E7D32">warn</text>
+  <text x="2175.431" y="16485.12" text-anchor="middle" font-size="54.6133" fill="#333">display warning,</text>
+  <text x="2175.431" y="17521.92" text-anchor="middle" font-size="54.6133" fill="#333">continue</text>
+  <rect x="2612.3377" y="13893.12" width="819.2" height="4665.6" rx="36.409" fill="#E3F2FD" stroke="#1565C0" />
+  <text x="3021.9377" y="15344.64" text-anchor="middle" font-size="59.1644" font-weight="bold" fill="#1565C0">retry</text>
+  <text x="3021.9377" y="16485.12" text-anchor="middle" font-size="54.6133" fill="#333">retry N times</text>
+  <text x="3021.9377" y="17521.92" text-anchor="middle" font-size="54.6133" fill="#333">with backoff</text>
 </svg>

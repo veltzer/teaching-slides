@@ -1,38 +1,31 @@
-<svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="20.16" refX="16" refY="10.08" orient="auto">
+      <polygon points="0,28.8 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowred" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowred" markerWidth="16" markerHeight="20.16" refX="16" refY="10.08" orient="auto">
+      <polygon points="0,28.8 5.6,0" fill="#dc3545" />
     </marker>
   </defs>
-  <!-- Client -->
-  <rect x="30" y="90" width="110" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="85" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Client</text>
-  <!-- Service A -->
-  <rect x="200" y="90" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="265" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service A</text>
-  <!-- Service B -->
-  <rect x="400" y="90" width="130" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="465" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service B</text>
-  <!-- Service C (down) -->
-  <rect x="600" y="90" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="670" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="12">Service C</text>
-  <text x="670" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545" font-weight="bold">DOWN</text>
-  <!-- Forward arrows -->
-  <line x1="265" y1="88" x2="465" y2="65" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="365" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Calls</text>
-  <line x1="530" y1="100" x2="598" y2="105" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="564" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Calls</text>
-  <!-- Cascade failure arrows (dashed, going back) -->
-  <line x1="600" y1="125" x2="532" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
-  <text x="566" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Timeout</text>
-  <line x1="400" y1="125" x2="332" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
-  <text x="366" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Threads exhausted</text>
-  <line x1="200" y1="125" x2="142" y2="125" stroke="#dc3545" stroke-width="2" stroke-dasharray="5" marker-end="url(#arrowred)"/>
-  <text x="171" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#dc3545">Unresponsive</text>
-  <!-- Explanation -->
-  <text x="400" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#dc3545" font-weight="bold">Cascade Effect: One service failure propagates upstream</text>
-  <text x="400" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Circuit breakers and bulkheads prevent this propagation</text>
+  <rect x="48" y="259.2" width="176" height="129.6" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="136" y="336.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Client</text>
+  <rect x="320" y="259.2" width="208" height="129.6" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="424" y="336.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service A</text>
+  <rect x="640" y="259.2" width="208" height="129.6" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="744" y="336.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service B</text>
+  <rect x="960" y="259.2" width="224" height="129.6" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="1072" y="322.56" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2">Service C</text>
+  <text x="1072" y="368.64" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545" font-weight="bold">DOWN</text>
+  <line x1="424" y1="253.44" x2="744" y2="187.2" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="584" y="172.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Calls</text>
+  <line x1="848" y1="288" x2="956.8" y2="302.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="902.4" y="264.96" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">Calls</text>
+  <line x1="960" y1="360" x2="851.2" y2="360" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="8" marker-end="url(#arrowred)" />
+  <text x="905.6" y="417.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545">Timeout</text>
+  <line x1="640" y1="360" x2="531.2" y2="360" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="8" marker-end="url(#arrowred)" />
+  <text x="585.6" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545">Threads exhausted</text>
+  <line x1="320" y1="360" x2="227.2" y2="360" stroke="#dc3545" stroke-width="3.2" stroke-dasharray="8" marker-end="url(#arrowred)" />
+  <text x="273.6" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#dc3545">Unresponsive</text>
+  <text x="640" y="604.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#dc3545" font-weight="bold">Cascade Effect: One service failure propagates upstream</text>
+  <text x="640" y="662.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#666">Circuit breakers and bulkheads prevent this propagation</text>
 </svg>

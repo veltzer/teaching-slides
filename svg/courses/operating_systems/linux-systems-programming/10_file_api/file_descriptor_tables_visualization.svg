@@ -1,4 +1,4 @@
-<svg viewBox="0 0 450 280" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <style>
     .txt { font-family: sans-serif; font-size: 12px; }
     .title { font-weight: bold; text-anchor: middle; }
@@ -9,28 +9,33 @@
     .arr { stroke: #555; stroke-width: 1.5; marker-end: url(#arrowhead); fill: none; }
   </style>
   <defs>
-    <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555" />
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="22.7556" refY="12.8571" markerWidth="17.0667" markerHeight="15.4286" orient="auto-start-reverse">
+      <path d="M 0 0 L 28.4444 12.8571 L 0 25.7143 z" fill="#555" />
     </marker>
   </defs>
-
-  <text x="75" y="20" class="title">Process FD Table</text>
-  <rect x="10" y="30" width="130" height="230" class="box proc" />
-  <text x="20" y="55" class="txt">0 (stdin)</text><path d="M 90 50 L 155 80" class="arr" />
-  <text x="20" y="85" class="txt">1 (stdout)</text><path d="M 90 80 L 155 110" class="arr" />
-  <text x="20" y="115" class="txt">2 (stderr)</text><path d="M 90 110 L 155 110" class="arr" />
-  <text x="20" y="145" class="txt">3</text><path d="M 90 140 L 155 170" class="arr" />
-  <text x="20" y="175" class="txt">4</text><path d="M 90 170 L 155 170" class="arr" />
-  <text x="20" y="205" class="txt">...</text>
-
-  <text x="235" y="20" class="title">System Open File Table</text>
-  <rect x="160" y="30" width="150" height="230" class="box sys" />
-  <text x="170" y="85" class="txt">Entry A (tty)</text><path d="M 270 80 L 325 110" class="arr" />
-  <text x="170" y="115" class="txt">Entry B (tty)</text><path d="M 270 110 L 325 110" class="arr" />
-  <text x="170" y="175" class="txt">Entry C (file.txt)</text><path d="M 270 170 L 325 180" class="arr" />
-
-  <text x="385" y="20" class="title">i-node Table</text>
-  <rect x="330" y="30" width="110" height="230" class="box inode" />
-  <text x="340" y="115" class="txt">tty i-node</text>
-  <text x="340" y="185" class="txt">file.txt i-node</text>
+  <text x="213.3333" y="51.4286" class="title">Process FD Table</text>
+  <rect x="28.4444" y="77.1429" width="369.7778" height="591.4286" class="box proc" />
+  <text x="56.8889" y="141.4286" class="txt">0 (stdin)</text>
+  <path d="M 256 128.5714 L 440.8889 205.7143" class="arr" />
+  <text x="56.8889" y="218.5714" class="txt">1 (stdout)</text>
+  <path d="M 256 205.7143 L 440.8889 282.8571" class="arr" />
+  <text x="56.8889" y="295.7143" class="txt">2 (stderr)</text>
+  <path d="M 256 282.8571 L 440.8889 282.8571" class="arr" />
+  <text x="56.8889" y="372.8571" class="txt">3</text>
+  <path d="M 256 360 L 440.8889 437.1429" class="arr" />
+  <text x="56.8889" y="450" class="txt">4</text>
+  <path d="M 256 437.1429 L 440.8889 437.1429" class="arr" />
+  <text x="56.8889" y="527.1429" class="txt">...</text>
+  <text x="668.4444" y="51.4286" class="title">System Open File Table</text>
+  <rect x="455.1111" y="77.1429" width="426.6667" height="591.4286" class="box sys" />
+  <text x="483.5556" y="218.5714" class="txt">Entry A (tty)</text>
+  <path d="M 768 205.7143 L 924.4444 282.8571" class="arr" />
+  <text x="483.5556" y="295.7143" class="txt">Entry B (tty)</text>
+  <path d="M 768 282.8571 L 924.4444 282.8571" class="arr" />
+  <text x="483.5556" y="450" class="txt">Entry C (file.txt)</text>
+  <path d="M 768 437.1429 L 924.4444 462.8571" class="arr" />
+  <text x="1095.1111" y="51.4286" class="title">i-node Table</text>
+  <rect x="938.6667" y="77.1429" width="312.8889" height="591.4286" class="box inode" />
+  <text x="967.1111" y="295.7143" class="txt">tty i-node</text>
+  <text x="967.1111" y="475.7143" class="txt">file.txt i-node</text>
 </svg>

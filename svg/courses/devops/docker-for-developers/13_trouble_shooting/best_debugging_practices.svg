@@ -1,22 +1,22 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="18" text-anchor="middle" font-size="12" font-weight="bold">Debugging Best Practices</text>
-  <rect x="20" y="30" width="175" height="65" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="107" y="48" text-anchor="middle" font-size="10" font-weight="bold">1. Reproduce</text>
-  <text x="107" y="65" text-anchor="middle" font-size="10">Same image tag</text>
-  <text x="107" y="80" text-anchor="middle" font-size="10">Same env vars</text>
-  <rect x="213" y="30" width="175" height="65" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="10" font-weight="bold">2. Isolate</text>
-  <text x="300" y="65" text-anchor="middle" font-size="10">Minimal compose</text>
-  <text x="300" y="80" text-anchor="middle" font-size="10">One service at a time</text>
-  <rect x="405" y="30" width="175" height="65" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="492" y="48" text-anchor="middle" font-size="10" font-weight="bold">3. Verify Fix</text>
-  <text x="492" y="65" text-anchor="middle" font-size="10">Clean rebuild</text>
-  <text x="492" y="80" text-anchor="middle" font-size="10">Test in CI</text>
-  <rect x="20" y="110" width="270" height="40" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="5"/>
-  <text x="155" y="128" text-anchor="middle" font-size="10" font-weight="bold">Do: version pin, health checks, logs</text>
-  <text x="155" y="143" text-anchor="middle" font-size="10">Structured JSON logging</text>
-  <rect x="310" y="110" width="270" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="5"/>
-  <text x="445" y="128" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">Avoid: latest tag, no limits, silent fails</text>
-  <text x="445" y="143" text-anchor="middle" font-size="10" fill="#c62828">Ignoring exit codes</text>
-  <text x="300" y="180" text-anchor="middle" font-size="10" fill="#555">docker inspect -f '{{.State.ExitCode}}' container -- always check exit codes</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="64.8" text-anchor="middle" font-size="25.6" font-weight="bold">Debugging Best Practices</text>
+  <rect x="42.6667" y="108" width="373.3333" height="234" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="228.2667" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">1. Reproduce</text>
+  <text x="228.2667" y="234" text-anchor="middle" font-size="21.3333">Same image tag</text>
+  <text x="228.2667" y="288" text-anchor="middle" font-size="21.3333">Same env vars</text>
+  <rect x="454.4" y="108" width="373.3333" height="234" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">2. Isolate</text>
+  <text x="640" y="234" text-anchor="middle" font-size="21.3333">Minimal compose</text>
+  <text x="640" y="288" text-anchor="middle" font-size="21.3333">One service at a time</text>
+  <rect x="864" y="108" width="373.3333" height="234" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1049.6" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold">3. Verify Fix</text>
+  <text x="1049.6" y="234" text-anchor="middle" font-size="21.3333">Clean rebuild</text>
+  <text x="1049.6" y="288" text-anchor="middle" font-size="21.3333">Test in CI</text>
+  <rect x="42.6667" y="396" width="576" height="144" fill="#fff3e0" stroke="#333" stroke-width="3.2" rx="10.6667" />
+  <text x="330.6667" y="460.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Do: version pin, health checks, logs</text>
+  <text x="330.6667" y="514.8" text-anchor="middle" font-size="21.3333">Structured JSON logging</text>
+  <rect x="661.3333" y="396" width="576" height="144" fill="#ffebee" stroke="#c62828" stroke-width="3.2" rx="10.6667" />
+  <text x="949.3333" y="460.8" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#c62828">Avoid: latest tag, no limits, silent fails</text>
+  <text x="949.3333" y="514.8" text-anchor="middle" font-size="21.3333" fill="#c62828">Ignoring exit codes</text>
+  <text x="640" y="648" text-anchor="middle" font-size="21.3333" fill="#555">docker inspect -f '{{.State.ExitCode}}' container -- always check exit codes</text>
 </svg>

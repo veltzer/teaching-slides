@@ -1,51 +1,40 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow-ss" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+    <marker id="arrow-ss" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
+    </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Streaming Security Setup</text>
-
-  <!-- Layers -->
-  <!-- Transport Layer -->
-  <rect x="30" y="50" width="230" height="140" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
-  <text x="145" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Transport Security</text>
-  <text x="145" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">SSL/TLS encryption</text>
-  <text x="145" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">kafka.security.protocol</text>
-  <text x="145" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">SASL_SSL / SSL</text>
-  <text x="145" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Certificate management</text>
-  <text x="145" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">truststore / keystore</text>
-
-  <!-- Authentication -->
-  <rect x="285" y="50" width="230" height="140" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Authentication</text>
-  <text x="400" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">SASL mechanisms</text>
-  <text x="400" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">PLAIN / SCRAM / GSSAPI</text>
-  <text x="400" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Kerberos integration</text>
-  <text x="400" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Service accounts</text>
-  <text x="400" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">kafka.sasl.mechanism</text>
-
-  <!-- Authorization -->
-  <rect x="540" y="50" width="230" height="140" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
-  <text x="655" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ef6c00">Authorization</text>
-  <text x="655" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Kafka ACLs</text>
-  <text x="655" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Topic-level permissions</text>
-  <text x="655" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Consumer group access</text>
-  <text x="655" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Read / Write / Describe</text>
-  <text x="655" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Least privilege principle</text>
-
-  <!-- Data Security -->
-  <rect x="30" y="220" width="350" height="80" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
-  <text x="205" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">Data Protection</text>
-  <text x="205" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Encryption at rest (checkpoint data)</text>
-  <text x="205" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">PII masking in streaming pipelines</text>
-
-  <!-- Secrets Management -->
-  <rect x="410" y="220" width="360" height="80" rx="8" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
-  <text x="590" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d32f2f">Secrets Management</text>
-  <text x="590" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Never hardcode credentials in code</text>
-  <text x="590" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Use Vault / KMS / environment variables</text>
-
-  <!-- Config example -->
-  <rect x="30" y="320" width="740" height="65" rx="8" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
-  <text x="400" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Kafka SSL Configuration Example</text>
-  <text x="400" y="365" text-anchor="middle" font-family="monospace" font-size="11" fill="#555">.option("kafka.security.protocol", "SASL_SSL") .option("kafka.sasl.mechanism", "PLAIN") .option("kafka.ssl.truststore.location", "/path/truststore.jks")</text>
+  <text x="640" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" fill="#333">Streaming Security Setup</text>
+  <rect x="48" y="90" width="368" height="252" rx="12.8" fill="#e1f5fe" stroke="#0277bd" stroke-width="3.2" />
+  <text x="232" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#0277bd">Transport Security</text>
+  <text x="232" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">SSL/TLS encryption</text>
+  <text x="232" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">kafka.security.protocol</text>
+  <text x="232" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">SASL_SSL / SSL</text>
+  <text x="232" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Certificate management</text>
+  <text x="232" y="320.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">truststore / keystore</text>
+  <rect x="456" y="90" width="368" height="252" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="640" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#2e7d32">Authentication</text>
+  <text x="640" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">SASL mechanisms</text>
+  <text x="640" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">PLAIN / SCRAM / GSSAPI</text>
+  <text x="640" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Kerberos integration</text>
+  <text x="640" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Service accounts</text>
+  <text x="640" y="320.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">kafka.sasl.mechanism</text>
+  <rect x="864" y="90" width="368" height="252" rx="12.8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3.2" />
+  <text x="1048" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#ef6c00">Authorization</text>
+  <text x="1048" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Kafka ACLs</text>
+  <text x="1048" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Topic-level permissions</text>
+  <text x="1048" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Consumer group access</text>
+  <text x="1048" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Read / Write / Describe</text>
+  <text x="1048" y="320.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#888">Least privilege principle</text>
+  <rect x="48" y="396" width="560" height="144" rx="12.8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3.2" />
+  <text x="328" y="441" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#7b1fa2">Data Protection</text>
+  <text x="328" y="482.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Encryption at rest (checkpoint data)</text>
+  <text x="328" y="518.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">PII masking in streaming pipelines</text>
+  <rect x="656" y="396" width="576" height="144" rx="12.8" fill="#ffebee" stroke="#d32f2f" stroke-width="3.2" />
+  <text x="944" y="441" text-anchor="middle" font-family="Arial, sans-serif" font-size="20.8" font-weight="bold" fill="#d32f2f">Secrets Management</text>
+  <text x="944" y="482.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Never hardcode credentials in code</text>
+  <text x="944" y="518.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">Use Vault / KMS / environment variables</text>
+  <rect x="48" y="576" width="1184" height="117" rx="12.8" fill="#fafafa" stroke="#ccc" stroke-width="1.6" />
+  <text x="640" y="615.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#333">Kafka SSL Configuration Example</text>
+  <text x="640" y="657" text-anchor="middle" font-family="monospace" font-size="17.6" fill="#555">.option("kafka.security.protocol", "SASL_SSL") .option("kafka.sasl.mechanism", "PLAIN") .option("kafka.ssl.truststore.location", "/path/truststore.jks")</text>
 </svg>

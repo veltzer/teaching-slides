@@ -1,49 +1,40 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowhead-green" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
     </marker>
-    <marker id="arrowhead-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowhead-red" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#dc3545" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Database Caching Patterns</text>
-  <!-- Application -->
-  <rect x="50" y="100" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="110" y="130" text-anchor="middle" font-size="13" fill="#333">Application</text>
-  <!-- Query Cache decision -->
-  <polygon points="300,125 370,90 440,125 370,160" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="370" y="122" text-anchor="middle" font-size="11" fill="#333">Query</text>
-  <text x="370" y="136" text-anchor="middle" font-size="11" fill="#333">Cache?</text>
-  <!-- Arrow app to decision -->
-  <line x1="170" y1="125" x2="298" y2="125" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <!-- Cache Hit -->
-  <rect x="520" y="55" width="140" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="590" y="82" text-anchor="middle" font-size="12" fill="#333">Return Cached</text>
-  <line x1="440" y1="108" x2="518" y2="80" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead-green)"/>
-  <text x="470" y="82" font-size="11" fill="#28a745">Hit</text>
-  <!-- Database -->
-  <rect x="520" y="135" width="140" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="590" y="162" text-anchor="middle" font-size="12" fill="#333">Database</text>
-  <line x1="440" y1="135" x2="518" y2="155" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowhead-red)"/>
-  <text x="470" y="155" font-size="11" fill="#dc3545">Miss</text>
-  <!-- Update Cache -->
-  <rect x="520" y="210" width="140" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="590" y="237" text-anchor="middle" font-size="12" fill="#333">Update Cache</text>
-  <line x1="590" y1="180" x2="590" y2="208" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Arrow back from update cache to query cache -->
-  <path d="M520 232 Q370 260 370 162" fill="none" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
-  <!-- Invalidation -->
-  <rect x="100" y="220" width="140" height="45" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="170" y="240" text-anchor="middle" font-size="11" fill="#333">Cache</text>
-  <text x="170" y="255" text-anchor="middle" font-size="11" fill="#333">Invalidation</text>
-  <line x1="110" y1="150" x2="145" y2="218" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
-  <path d="M240 240 Q290 240 300 160" fill="none" stroke="#dc3545" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-red)"/>
-  <!-- Legend -->
-  <rect x="50" y="300" width="700" height="60" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="400" y="322" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</text>
-  <text x="400" y="342" text-anchor="middle" font-size="11" fill="#555">Cache invalidation ensures stale data is removed when underlying data changes.</text>
+  <text x="640" y="47.3684" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Database Caching Patterns</text>
+  <rect x="80" y="189.4737" width="192" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="176" y="246.3158" text-anchor="middle" font-size="20.8" fill="#333">Application</text>
+  <polygon points="480,236.8421 592,170.5263 704,236.8421 592,303.1579" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="592" y="231.1579" text-anchor="middle" font-size="17.6" fill="#333">Query</text>
+  <text x="592" y="257.6842" text-anchor="middle" font-size="17.6" fill="#333">Cache?</text>
+  <line x1="272" y1="236.8421" x2="476.8" y2="236.8421" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="832" y="104.2105" width="224" height="85.2632" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="944" y="155.3684" text-anchor="middle" font-size="19.2" fill="#333">Return Cached</text>
+  <line x1="704" y1="204.6316" x2="828.8" y2="151.5789" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
+  <text x="752" y="155.3684" font-size="17.6" fill="#28a745">Hit</text>
+  <rect x="832" y="255.7895" width="224" height="85.2632" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="944" y="306.9474" text-anchor="middle" font-size="19.2" fill="#333">Database</text>
+  <line x1="704" y1="255.7895" x2="828.8" y2="293.6842" stroke="#dc3545" stroke-width="3.2" marker-end="url(#arrowhead-red)" />
+  <text x="752" y="293.6842" font-size="17.6" fill="#dc3545">Miss</text>
+  <rect x="832" y="397.8947" width="224" height="85.2632" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="944" y="449.0526" text-anchor="middle" font-size="19.2" fill="#333">Update Cache</text>
+  <line x1="944" y1="341.0526" x2="944" y2="394.1053" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <path d="M 832 439.5789 Q 592 492.6316 592 306.9474" fill="none" stroke="#ffc107" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead)" />
+  <rect x="160" y="416.8421" width="224" height="85.2632" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="272" y="454.7368" text-anchor="middle" font-size="17.6" fill="#333">Cache</text>
+  <text x="272" y="483.1579" text-anchor="middle" font-size="17.6" fill="#333">Invalidation</text>
+  <line x1="176" y1="284.2105" x2="232" y2="413.0526" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
+  <path d="M 384 454.7368 Q 464 454.7368 480 303.1579" fill="none" stroke="#dc3545" stroke-width="2.4" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-red)" />
+  <rect x="80" y="568.4211" width="1120" height="113.6842" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6" />
+  <text x="640" y="610.1053" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Flow: App queries cache. On hit, return. On miss, query DB, update cache.</text>
+  <text x="640" y="648" text-anchor="middle" font-size="17.6" fill="#555">Cache invalidation ensures stale data is removed when underlying data changes.</text>
 </svg>

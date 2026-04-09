@@ -1,38 +1,31 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="800" height="400" fill="#1a1a2e"/>
-  <!-- Traditional copy path (crossed out) -->
-  <text x="130" y="120" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#e94560" opacity="0.6">Traditional</text>
-  <rect x="60" y="135" width="70" height="35" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5" opacity="0.5"/>
-  <text x="95" y="157" text-anchor="middle" font-family="monospace" font-size="10" fill="#e94560" opacity="0.6">Device</text>
-  <line x1="140" y1="152" x2="170" y2="152" stroke="#e94560" stroke-width="1" opacity="0.4"/>
-  <rect x="180" y="135" width="70" height="35" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5" opacity="0.5"/>
-  <text x="215" y="157" text-anchor="middle" font-family="monospace" font-size="10" fill="#e94560" opacity="0.6">Kernel</text>
-  <line x1="260" y1="152" x2="290" y2="152" stroke="#e94560" stroke-width="1" opacity="0.4"/>
-  <rect x="300" y="135" width="70" height="35" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5" opacity="0.5"/>
-  <text x="335" y="157" text-anchor="middle" font-family="monospace" font-size="10" fill="#e94560" opacity="0.6">User</text>
-  <line x1="380" y1="152" x2="410" y2="152" stroke="#e94560" stroke-width="1" opacity="0.4"/>
-  <rect x="420" y="135" width="70" height="35" rx="4" fill="#0f3460" stroke="#e94560" stroke-width="1.5" opacity="0.5"/>
-  <text x="455" y="157" text-anchor="middle" font-family="monospace" font-size="10" fill="#e94560" opacity="0.6">Kernel</text>
-  <!-- Big X over traditional -->
-  <line x1="50" y1="125" x2="500" y2="175" stroke="#e94560" stroke-width="3" opacity="0.6"/>
-  <line x1="50" y1="175" x2="500" y2="125" stroke="#e94560" stroke-width="3" opacity="0.6"/>
-  <!-- Zero-copy path -->
-  <text x="400" y="220" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#16c79a">Zero-Copy Path</text>
-  <rect x="120" y="240" width="100" height="50" rx="8" fill="#0f3460" stroke="#16c79a" stroke-width="2"/>
-  <text x="170" y="270" text-anchor="middle" font-family="monospace" font-size="12" fill="#16c79a">Device</text>
-  <!-- Direct arrow -->
-  <line x1="230" y1="265" x2="460" y2="265" stroke="#16c79a" stroke-width="3"/>
-  <polygon points="460,258 478,265 460,272" fill="#16c79a"/>
-  <text x="350" y="255" text-anchor="middle" font-family="monospace" font-size="11" fill="#16c79a">DMA / sendfile()</text>
-  <rect x="480" y="240" width="100" height="50" rx="8" fill="#0f3460" stroke="#16c79a" stroke-width="2"/>
-  <text x="530" y="270" text-anchor="middle" font-family="monospace" font-size="12" fill="#16c79a">Socket</text>
-  <!-- Speed indicator -->
-  <text x="680" y="250" text-anchor="middle" font-family="sans-serif" font-size="36" font-weight="bold" fill="#16c79a" opacity="0.6">0</text>
-  <text x="680" y="275" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#888">copies</text>
-  <!-- Kernel space label -->
-  <rect x="600" y="140" width="120" height="30" rx="15" fill="#f5a623" opacity="0.15" stroke="#f5a623" stroke-width="1"/>
-  <text x="660" y="160" text-anchor="middle" font-family="monospace" font-size="11" fill="#f5a623">kernel space</text>
-  <!-- Title -->
-  <text x="400" y="50" text-anchor="middle" font-family="sans-serif" font-size="28" font-weight="bold" fill="#eee">Zero-Copy in Linux</text>
-  <text x="400" y="375" text-anchor="middle" font-family="monospace" font-size="13" fill="#666">sendfile | splice | mmap | DMA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#1a1a2e" />
+  <text x="208" y="216" text-anchor="middle" font-family="sans-serif" font-size="19.2" fill="#e94560" opacity="0.6">Traditional</text>
+  <rect x="96" y="243" width="112" height="63" rx="6.4" fill="#0f3460" stroke="#e94560" stroke-width="2.4" opacity="0.5" />
+  <text x="152" y="282.6" text-anchor="middle" font-family="monospace" font-size="16" fill="#e94560" opacity="0.6">Device</text>
+  <line x1="224" y1="273.6" x2="272" y2="273.6" stroke="#e94560" stroke-width="1.6" opacity="0.4" />
+  <rect x="288" y="243" width="112" height="63" rx="6.4" fill="#0f3460" stroke="#e94560" stroke-width="2.4" opacity="0.5" />
+  <text x="344" y="282.6" text-anchor="middle" font-family="monospace" font-size="16" fill="#e94560" opacity="0.6">Kernel</text>
+  <line x1="416" y1="273.6" x2="464" y2="273.6" stroke="#e94560" stroke-width="1.6" opacity="0.4" />
+  <rect x="480" y="243" width="112" height="63" rx="6.4" fill="#0f3460" stroke="#e94560" stroke-width="2.4" opacity="0.5" />
+  <text x="536" y="282.6" text-anchor="middle" font-family="monospace" font-size="16" fill="#e94560" opacity="0.6">User</text>
+  <line x1="608" y1="273.6" x2="656" y2="273.6" stroke="#e94560" stroke-width="1.6" opacity="0.4" />
+  <rect x="672" y="243" width="112" height="63" rx="6.4" fill="#0f3460" stroke="#e94560" stroke-width="2.4" opacity="0.5" />
+  <text x="728" y="282.6" text-anchor="middle" font-family="monospace" font-size="16" fill="#e94560" opacity="0.6">Kernel</text>
+  <line x1="80" y1="225" x2="800" y2="315" stroke="#e94560" stroke-width="4.8" opacity="0.6" />
+  <line x1="80" y1="315" x2="800" y2="225" stroke="#e94560" stroke-width="4.8" opacity="0.6" />
+  <text x="640" y="396" text-anchor="middle" font-family="sans-serif" font-size="22.4" fill="#16c79a">Zero-Copy Path</text>
+  <rect x="192" y="432" width="160" height="90" rx="12.8" fill="#0f3460" stroke="#16c79a" stroke-width="3.2" />
+  <text x="272" y="486" text-anchor="middle" font-family="monospace" font-size="19.2" fill="#16c79a">Device</text>
+  <line x1="368" y1="477" x2="736" y2="477" stroke="#16c79a" stroke-width="4.8" />
+  <polygon points="736,464.4 764.8,477 736,489.6" fill="#16c79a" />
+  <text x="560" y="459" text-anchor="middle" font-family="monospace" font-size="17.6" fill="#16c79a">DMA / sendfile()</text>
+  <rect x="768" y="432" width="160" height="90" rx="12.8" fill="#0f3460" stroke="#16c79a" stroke-width="3.2" />
+  <text x="848" y="486" text-anchor="middle" font-family="monospace" font-size="19.2" fill="#16c79a">Socket</text>
+  <text x="1088" y="450" text-anchor="middle" font-family="sans-serif" font-size="57.6" font-weight="bold" fill="#16c79a" opacity="0.6">0</text>
+  <text x="1088" y="495" text-anchor="middle" font-family="sans-serif" font-size="19.2" fill="#888">copies</text>
+  <rect x="960" y="252" width="192" height="54" rx="24" fill="#f5a623" opacity="0.15" stroke="#f5a623" stroke-width="1.6" />
+  <text x="1056" y="288" text-anchor="middle" font-family="monospace" font-size="17.6" fill="#f5a623">kernel space</text>
+  <text x="640" y="90" text-anchor="middle" font-family="sans-serif" font-size="44.8" font-weight="bold" fill="#eee">Zero-Copy in Linux</text>
+  <text x="640" y="675" text-anchor="middle" font-family="monospace" font-size="20.8" fill="#666">sendfile | splice | mmap | DMA</text>
 </svg>

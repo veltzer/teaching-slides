@@ -1,27 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 280" font-family="Arial, sans-serif">
-  <text x="280" y="25" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Memory Performance: Row-Major vs Column-Major</text>
-  <!-- Memory layout -->
-  <text x="280" y="50" text-anchor="middle" font-size="12" fill="#555">Memory Address Layout (Row-Major):</text>
-  <rect x="30" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="65" y="80" text-anchor="middle" font-size="10" fill="#333">[0][0]</text>
-  <rect x="105" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="140" y="80" text-anchor="middle" font-size="10" fill="#333">[0][1]</text>
-  <rect x="180" y="60" width="70" height="30" rx="3" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="215" y="80" text-anchor="middle" font-size="10" fill="#333">[0][2]</text>
-  <text x="270" y="80" font-size="12" fill="#555">...</text>
-  <rect x="290" y="60" width="70" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="325" y="80" text-anchor="middle" font-size="10" fill="#333">[1][0]</text>
-  <rect x="365" y="60" width="70" height="30" rx="3" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="400" y="80" text-anchor="middle" font-size="10" fill="#333">[1][1]</text>
-  <text x="455" y="80" font-size="12" fill="#555">...</text>
-  <text x="140" y="107" text-anchor="middle" font-size="10" fill="#28a745">Row 0 (contiguous)</text>
-  <text x="365" y="107" text-anchor="middle" font-size="10" fill="#4a90e2">Row 1 (contiguous)</text>
-  <!-- Row-major access -->
-  <rect x="20" y="125" width="520" height="55" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="40" y="148" font-size="13" font-weight="bold" fill="#28a745">Row-major access:</text>
-  <text x="40" y="168" font-size="12" fill="#555">[0][0] → [0][1] → [0][2] → ... Sequential, cache-friendly</text>
-  <!-- Column-major access -->
-  <rect x="20" y="190" width="520" height="55" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="40" y="213" font-size="13" font-weight="bold" fill="#dc3545">Column-major access:</text>
-  <text x="40" y="233" font-size="12" fill="#555">[0][0] → [1][0] → [2][0] → ... Strided, cache-hostile</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="64.2857" text-anchor="middle" font-size="34.2857" font-weight="bold" fill="#333">Memory Performance: Row-Major vs Column-Major</text>
+  <text x="640" y="128.5714" text-anchor="middle" font-size="27.4286" fill="#555">Memory Address Layout (Row-Major):</text>
+  <rect x="68.5714" y="154.2857" width="160" height="77.1429" rx="6.8571" fill="#d4edda" stroke="#28a745" stroke-width="2.2857" />
+  <text x="148.5714" y="205.7143" text-anchor="middle" font-size="22.8571" fill="#333">[0][0]</text>
+  <rect x="240" y="154.2857" width="160" height="77.1429" rx="6.8571" fill="#d4edda" stroke="#28a745" stroke-width="2.2857" />
+  <text x="320" y="205.7143" text-anchor="middle" font-size="22.8571" fill="#333">[0][1]</text>
+  <rect x="411.4286" y="154.2857" width="160" height="77.1429" rx="6.8571" fill="#d4edda" stroke="#28a745" stroke-width="2.2857" />
+  <text x="491.4286" y="205.7143" text-anchor="middle" font-size="22.8571" fill="#333">[0][2]</text>
+  <text x="617.1429" y="205.7143" font-size="27.4286" fill="#555">...</text>
+  <rect x="662.8571" y="154.2857" width="160" height="77.1429" rx="6.8571" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2857" />
+  <text x="742.8571" y="205.7143" text-anchor="middle" font-size="22.8571" fill="#333">[1][0]</text>
+  <rect x="834.2857" y="154.2857" width="160" height="77.1429" rx="6.8571" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2857" />
+  <text x="914.2857" y="205.7143" text-anchor="middle" font-size="22.8571" fill="#333">[1][1]</text>
+  <text x="1040" y="205.7143" font-size="27.4286" fill="#555">...</text>
+  <text x="320" y="275.1429" text-anchor="middle" font-size="22.8571" fill="#28a745">Row 0 (contiguous)</text>
+  <text x="834.2857" y="275.1429" text-anchor="middle" font-size="22.8571" fill="#4a90e2">Row 1 (contiguous)</text>
+  <rect x="45.7143" y="321.4286" width="1188.5714" height="141.4286" rx="11.4286" fill="#d4edda" stroke="#28a745" stroke-width="4.5714" />
+  <text x="91.4286" y="380.5714" font-size="29.7143" font-weight="bold" fill="#28a745">Row-major access:</text>
+  <text x="91.4286" y="432" font-size="27.4286" fill="#555">[0][0] → [0][1] → [0][2] → ... Sequential, cache-friendly</text>
+  <rect x="45.7143" y="488.5714" width="1188.5714" height="141.4286" rx="11.4286" fill="#f8d7da" stroke="#dc3545" stroke-width="4.5714" />
+  <text x="91.4286" y="547.7143" font-size="29.7143" font-weight="bold" fill="#dc3545">Column-major access:</text>
+  <text x="91.4286" y="599.1429" font-size="27.4286" fill="#555">[0][0] → [1][0] → [2][0] → ... Strided, cache-hostile</text>
 </svg>

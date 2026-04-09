@@ -1,63 +1,54 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#161b22"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1.6" y2="1.8">
+      <stop offset="0%" stop-color="#0d1117" />
+      <stop offset="100%" stop-color="#161b22" />
     </linearGradient>
   </defs>
-  <rect width="800" height="400" fill="url(#bg)"/>
-  <!-- AI Brain / Neural network -->
-  <circle cx="400" cy="180" r="90" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.6"/>
-  <circle cx="400" cy="180" r="60" fill="none" stroke="#8b5cf6" stroke-width="1.5" opacity="0.4"/>
-  <!-- Neural nodes -->
-  <circle cx="400" cy="120" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="450" cy="150" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="450" cy="210" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="400" cy="240" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="350" cy="210" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="350" cy="150" r="8" fill="#8b5cf6" opacity="0.7"/>
-  <circle cx="400" cy="180" r="10" fill="#a78bfa"/>
-  <!-- Neural connections -->
-  <line x1="400" y1="120" x2="450" y2="150" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="450" y1="150" x2="450" y2="210" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="450" y1="210" x2="400" y2="240" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="400" y1="240" x2="350" y2="210" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="350" y1="210" x2="350" y2="150" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="350" y1="150" x2="400" y2="120" stroke="#8b5cf6" stroke-width="1" opacity="0.4"/>
-  <line x1="400" y1="180" x2="400" y2="120" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <line x1="400" y1="180" x2="450" y2="150" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <line x1="400" y1="180" x2="450" y2="210" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <line x1="400" y1="180" x2="400" y2="240" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <line x1="400" y1="180" x2="350" y2="210" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <line x1="400" y1="180" x2="350" y2="150" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
-  <!-- Shield overlay -->
-  <path d="M400,100 L480,130 L480,210 Q480,270 400,300 Q320,270 320,210 L320,130 Z" fill="none" stroke="#2ecc71" stroke-width="2.5" opacity="0.8"/>
-  <!-- Lock icon in center bottom -->
-  <rect x="388" y="270" width="24" height="18" rx="3" fill="#2ecc71" opacity="0.8"/>
-  <path d="M393,270 L393,262 Q393,252 400,252 Q407,252 407,262 L407,270" fill="none" stroke="#2ecc71" stroke-width="2"/>
-  <!-- Threat labels around -->
-  <rect x="60" y="80" width="140" height="30" rx="4" fill="#e74c3c" opacity="0.15"/>
-  <text x="130" y="100" text-anchor="middle" font-size="10" fill="#e74c3c">Prompt Injection</text>
-  <rect x="60" y="130" width="140" height="30" rx="4" fill="#e74c3c" opacity="0.15"/>
-  <text x="130" y="150" text-anchor="middle" font-size="10" fill="#e74c3c">Data Leakage</text>
-  <rect x="60" y="180" width="140" height="30" rx="4" fill="#e74c3c" opacity="0.15"/>
-  <text x="130" y="200" text-anchor="middle" font-size="10" fill="#e74c3c">Model Poisoning</text>
-  <rect x="60" y="230" width="140" height="30" rx="4" fill="#e74c3c" opacity="0.15"/>
-  <text x="130" y="250" text-anchor="middle" font-size="10" fill="#e74c3c">Jailbreaking</text>
-  <!-- Defense labels -->
-  <rect x="600" y="80" width="140" height="30" rx="4" fill="#2ecc71" opacity="0.15"/>
-  <text x="670" y="100" text-anchor="middle" font-size="10" fill="#2ecc71">Input Validation</text>
-  <rect x="600" y="130" width="140" height="30" rx="4" fill="#2ecc71" opacity="0.15"/>
-  <text x="670" y="150" text-anchor="middle" font-size="10" fill="#2ecc71">Output Filtering</text>
-  <rect x="600" y="180" width="140" height="30" rx="4" fill="#2ecc71" opacity="0.15"/>
-  <text x="670" y="200" text-anchor="middle" font-size="10" fill="#2ecc71">Access Controls</text>
-  <rect x="600" y="230" width="140" height="30" rx="4" fill="#2ecc71" opacity="0.15"/>
-  <text x="670" y="250" text-anchor="middle" font-size="10" fill="#2ecc71">OWASP LLM Top 10</text>
-  <!-- Arrows from threats -->
-  <line x1="200" y1="95" x2="315" y2="150" stroke="#e74c3c" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-  <line x1="200" y1="145" x2="315" y2="170" stroke="#e74c3c" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-  <line x1="200" y1="195" x2="315" y2="195" stroke="#e74c3c" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-  <line x1="200" y1="245" x2="315" y2="220" stroke="#e74c3c" stroke-width="1" opacity="0.4" stroke-dasharray="4,3"/>
-  <!-- OWASP label -->
-  <text x="400" y="370" text-anchor="middle" font-size="12" fill="#555" font-family="monospace">OWASP Top 10 for LLM Applications</text>
+  <rect width="1280" height="720" fill="url(#bg)" />
+  <circle cx="640" cy="324" r="144" fill="none" stroke="#8b5cf6" stroke-width="3.2" opacity="0.6" />
+  <circle cx="640" cy="324" r="96" fill="none" stroke="#8b5cf6" stroke-width="2.4" opacity="0.4" />
+  <circle cx="640" cy="216" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="720" cy="270" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="720" cy="378" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="640" cy="432" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="560" cy="378" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="560" cy="270" r="12.8" fill="#8b5cf6" opacity="0.7" />
+  <circle cx="640" cy="324" r="16" fill="#a78bfa" />
+  <line x1="640" y1="216" x2="720" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="720" y1="270" x2="720" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="720" y1="378" x2="640" y2="432" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="640" y1="432" x2="560" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="560" y1="378" x2="560" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="560" y1="270" x2="640" y2="216" stroke="#8b5cf6" stroke-width="1.6" opacity="0.4" />
+  <line x1="640" y1="324" x2="640" y2="216" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <line x1="640" y1="324" x2="720" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <line x1="640" y1="324" x2="720" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <line x1="640" y1="324" x2="640" y2="432" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <line x1="640" y1="324" x2="560" y2="378" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <line x1="640" y1="324" x2="560" y2="270" stroke="#8b5cf6" stroke-width="1.6" opacity="0.3" />
+  <path d="M 640 180 L 768 234 L 768 378 Q 768 486 640 540 Q 512 486 512 378 L 512 234 Z" fill="none" stroke="#2ecc71" stroke-width="4" opacity="0.8" />
+  <rect x="620.8" y="486" width="38.4" height="32.4" rx="4.8" fill="#2ecc71" opacity="0.8" />
+  <path d="M 628.8 486 L 628.8 471.6 Q 628.8 453.6 640 453.6 Q 651.2 453.6 651.2 471.6 L 651.2 486" fill="none" stroke="#2ecc71" stroke-width="3.2" />
+  <rect x="96" y="144" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
+  <text x="208" y="180" text-anchor="middle" font-size="16" fill="#e74c3c">Prompt Injection</text>
+  <rect x="96" y="234" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
+  <text x="208" y="270" text-anchor="middle" font-size="16" fill="#e74c3c">Data Leakage</text>
+  <rect x="96" y="324" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
+  <text x="208" y="360" text-anchor="middle" font-size="16" fill="#e74c3c">Model Poisoning</text>
+  <rect x="96" y="414" width="224" height="54" rx="6.4" fill="#e74c3c" opacity="0.15" />
+  <text x="208" y="450" text-anchor="middle" font-size="16" fill="#e74c3c">Jailbreaking</text>
+  <rect x="960" y="144" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
+  <text x="1072" y="180" text-anchor="middle" font-size="16" fill="#2ecc71">Input Validation</text>
+  <rect x="960" y="234" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
+  <text x="1072" y="270" text-anchor="middle" font-size="16" fill="#2ecc71">Output Filtering</text>
+  <rect x="960" y="324" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
+  <text x="1072" y="360" text-anchor="middle" font-size="16" fill="#2ecc71">Access Controls</text>
+  <rect x="960" y="414" width="224" height="54" rx="6.4" fill="#2ecc71" opacity="0.15" />
+  <text x="1072" y="450" text-anchor="middle" font-size="16" fill="#2ecc71">OWASP LLM Top 10</text>
+  <line x1="320" y1="171" x2="504" y2="270" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
+  <line x1="320" y1="261" x2="504" y2="306" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
+  <line x1="320" y1="351" x2="504" y2="351" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
+  <line x1="320" y1="441" x2="504" y2="396" stroke="#e74c3c" stroke-width="1.6" opacity="0.4" stroke-dasharray="6.4 4.8" />
+  <text x="640" y="666" text-anchor="middle" font-size="19.2" fill="#555" font-family="monospace">OWASP Top 10 for LLM Applications</text>
 </svg>

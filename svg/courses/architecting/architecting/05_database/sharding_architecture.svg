@@ -1,47 +1,38 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Database Sharding Architecture</text>
-  <!-- Router -->
-  <rect x="310" y="50" width="180" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Router</text>
-  <!-- Shard Key note -->
-  <rect x="560" y="50" width="150" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="635" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Shard Key</text>
-  <text x="635" y="88" text-anchor="middle" font-size="10" fill="#555">Hash/Range based</text>
-  <line x1="490" y1="75" x2="558" y2="75" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <!-- Shard 1 -->
-  <rect x="60" y="160" width="170" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="145" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Shard 1</text>
-  <text x="145" y="200" text-anchor="middle" font-size="11" fill="#555">Users A-H</text>
-  <!-- Shard 2 -->
-  <rect x="310" y="160" width="170" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="395" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Shard 2</text>
-  <text x="395" y="200" text-anchor="middle" font-size="11" fill="#555">Users I-P</text>
-  <!-- Shard 3 -->
-  <rect x="560" y="160" width="170" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="645" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Shard 3</text>
-  <text x="645" y="200" text-anchor="middle" font-size="11" fill="#555">Users Q-Z</text>
-  <!-- Router to shards -->
-  <line x1="350" y1="100" x2="170" y2="158" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="400" y1="100" x2="395" y2="158" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="450" y1="100" x2="620" y2="158" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Databases -->
-  <rect x="70" y="270" width="150" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="145" y="297" text-anchor="middle" font-size="12" fill="#333">Database 1</text>
-  <rect x="320" y="270" width="150" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="395" y="297" text-anchor="middle" font-size="12" fill="#333">Database 2</text>
-  <rect x="570" y="270" width="150" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="645" y="297" text-anchor="middle" font-size="12" fill="#333">Database 3</text>
-  <!-- Shard to DB arrows -->
-  <line x1="145" y1="210" x2="145" y2="268" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="395" y1="210" x2="395" y2="268" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="645" y1="210" x2="645" y2="268" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Legend -->
-  <rect x="60" y="350" width="680" height="55" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="400" y="372" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Horizontal Partitioning</text>
-  <text x="400" y="392" text-anchor="middle" font-size="11" fill="#555">Router directs queries to the correct shard based on the shard key (hash or range). Each shard holds a subset of data.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Database Sharding Architecture</text>
+  <rect x="496" y="85.7143" width="288" height="85.7143" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="137.1429" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#333">Router</text>
+  <rect x="896" y="85.7143" width="240" height="85.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="1016" y="123.4286" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">Shard Key</text>
+  <text x="1016" y="150.8571" text-anchor="middle" font-size="16" fill="#555">Hash/Range based</text>
+  <line x1="784" y1="128.5714" x2="892.8" y2="128.5714" stroke="#ffc107" stroke-width="2.4" stroke-dasharray="8 4.8" />
+  <rect x="96" y="274.2857" width="272" height="85.7143" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="232" y="312" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Shard 1</text>
+  <text x="232" y="342.8571" text-anchor="middle" font-size="17.6" fill="#555">Users A-H</text>
+  <rect x="496" y="274.2857" width="272" height="85.7143" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="632" y="312" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Shard 2</text>
+  <text x="632" y="342.8571" text-anchor="middle" font-size="17.6" fill="#555">Users I-P</text>
+  <rect x="896" y="274.2857" width="272" height="85.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="1032" y="312" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Shard 3</text>
+  <text x="1032" y="342.8571" text-anchor="middle" font-size="17.6" fill="#555">Users Q-Z</text>
+  <line x1="560" y1="171.4286" x2="272" y2="270.8571" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="640" y1="171.4286" x2="632" y2="270.8571" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="720" y1="171.4286" x2="992" y2="270.8571" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <rect x="112" y="462.8571" width="240" height="77.1429" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="232" y="509.1429" text-anchor="middle" font-size="19.2" fill="#333">Database 1</text>
+  <rect x="512" y="462.8571" width="240" height="77.1429" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="632" y="509.1429" text-anchor="middle" font-size="19.2" fill="#333">Database 2</text>
+  <rect x="912" y="462.8571" width="240" height="77.1429" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="1032" y="509.1429" text-anchor="middle" font-size="19.2" fill="#333">Database 3</text>
+  <line x1="232" y1="360" x2="232" y2="459.4286" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="632" y1="360" x2="632" y2="459.4286" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="1032" y1="360" x2="1032" y2="459.4286" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <rect x="96" y="600" width="1088" height="94.2857" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6" />
+  <text x="640" y="637.7143" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Horizontal Partitioning</text>
+  <text x="640" y="672" text-anchor="middle" font-size="17.6" fill="#555">Router directs queries to the correct shard based on the shard key (hash or range). Each shard holds a subset of data.</text>
 </svg>

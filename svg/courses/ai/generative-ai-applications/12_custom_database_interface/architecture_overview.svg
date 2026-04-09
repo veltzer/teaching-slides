@@ -1,43 +1,36 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="adb" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="adb" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="adbl" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#4a90e2"/>
+    <marker id="adbl" markerWidth="16" markerHeight="12" refX="0" refY="6" orient="auto">
+      <polygon points="0,0 5.6,17.1429" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Database Interface Architecture</text>
-  <rect x="40" y="50" width="720" height="350" rx="8" fill="#f0f7ff" stroke="#4a90e2" stroke-width="1"/>
-  <!-- User Query -->
-  <rect x="70" y="80" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="145" y="108" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">User Query</text>
-  <text x="145" y="128" text-anchor="middle" font-size="10" fill="#666">(Natural Language)</text>
-  <line x1="220" y1="110" x2="280" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#adb)"/>
-  <!-- Schema Context -->
-  <rect x="290" y="80" width="150" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="365" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Schema Context</text>
-  <text x="365" y="125" text-anchor="middle" font-size="10" fill="#666">+ LLM</text>
-  <line x1="440" y1="110" x2="500" y2="110" stroke="#4a90e2" stroke-width="2" marker-end="url(#adb)"/>
-  <!-- Query Generator -->
-  <rect x="510" y="80" width="150" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="585" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Query Generator</text>
-  <text x="585" y="125" text-anchor="middle" font-size="10" fill="#666">(LLM)</text>
-  <line x1="585" y1="140" x2="585" y2="185" stroke="#4a90e2" stroke-width="2" marker-end="url(#adb)"/>
-  <!-- SQL Validator -->
-  <rect x="510" y="190" width="150" height="50" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="585" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#dc3545">SQL Validator</text>
-  <line x1="585" y1="240" x2="585" y2="275" stroke="#4a90e2" stroke-width="2" marker-end="url(#adb)"/>
-  <!-- Database Executor -->
-  <rect x="510" y="280" width="150" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="585" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Database Executor</text>
-  <line x1="510" y1="305" x2="450" y2="305" stroke="#4a90e2" stroke-width="2" marker-end="url(#adbl)"/>
-  <!-- Result Formatter -->
-  <rect x="290" y="280" width="150" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="365" y="310" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">Result Formatter</text>
-  <line x1="290" y1="305" x2="230" y2="305" stroke="#4a90e2" stroke-width="2" marker-end="url(#adbl)"/>
-  <!-- Response -->
-  <rect x="70" y="280" width="150" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="145" y="305" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Response</text>
-  <text x="145" y="322" text-anchor="middle" font-size="10" fill="#666">(Natural Language)</text>
+  <text x="640" y="51.4286" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Database Interface Architecture</text>
+  <rect x="64" y="85.7143" width="1152" height="600" rx="12.8" fill="#f0f7ff" stroke="#4a90e2" stroke-width="1.6" />
+  <rect x="112" y="137.1429" width="240" height="102.8571" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="232" y="185.1429" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">User Query</text>
+  <text x="232" y="219.4286" text-anchor="middle" font-size="16" fill="#666">(Natural Language)</text>
+  <line x1="352" y1="188.5714" x2="448" y2="188.5714" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adb)" />
+  <rect x="464" y="137.1429" width="240" height="102.8571" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="584" y="180" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#856404">Schema Context</text>
+  <text x="584" y="214.2857" text-anchor="middle" font-size="16" fill="#666">+ LLM</text>
+  <line x1="704" y1="188.5714" x2="800" y2="188.5714" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adb)" />
+  <rect x="816" y="137.1429" width="240" height="102.8571" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="936" y="180" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#28a745">Query Generator</text>
+  <text x="936" y="214.2857" text-anchor="middle" font-size="16" fill="#666">(LLM)</text>
+  <line x1="936" y1="240" x2="936" y2="317.1429" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adb)" />
+  <rect x="816" y="325.7143" width="240" height="85.7143" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="936" y="377.1429" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#dc3545">SQL Validator</text>
+  <line x1="936" y1="411.4286" x2="936" y2="471.4286" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adb)" />
+  <rect x="816" y="480" width="240" height="85.7143" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="936" y="531.4286" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Database Executor</text>
+  <line x1="816" y1="522.8571" x2="720" y2="522.8571" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adbl)" />
+  <rect x="464" y="480" width="240" height="85.7143" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="584" y="531.4286" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#856404">Result Formatter</text>
+  <line x1="464" y1="522.8571" x2="368" y2="522.8571" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#adbl)" />
+  <rect x="112" y="480" width="240" height="85.7143" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="232" y="522.8571" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#28a745">Response</text>
+  <text x="232" y="552" text-anchor="middle" font-size="16" fill="#666">(Natural Language)</text>
 </svg>

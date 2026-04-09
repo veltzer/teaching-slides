@@ -1,72 +1,52 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Delta Lake / Spark Optimization Methods</text>
-
-  <!-- Central hub -->
-  <ellipse cx="400" cy="200" rx="90" ry="40" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="400" y="195" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1a237e">Optimization</text>
-  <text x="400" y="213" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Strategies</text>
-
-  <!-- File Compaction -->
-  <rect x="30" y="55" width="160" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="110" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">File Compaction</text>
-  <text x="110" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">OPTIMIZE command</text>
-  <text x="110" y="113" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Merge small files</text>
-  <line x1="190" y1="95" x2="315" y2="180" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Z-Ordering -->
-  <rect x="230" y="55" width="160" height="65" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="310" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Z-Ordering</text>
-  <text x="310" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Data skipping</text>
-  <text x="310" y="113" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Co-locate columns</text>
-  <line x1="350" y1="120" x2="380" y2="165" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Partitioning -->
-  <rect x="430" y="55" width="160" height="65" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="510" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#4a148c">Partitioning</text>
-  <text x="510" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Partition pruning</text>
-  <text x="510" y="113" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">By date/key columns</text>
-  <line x1="475" y1="120" x2="430" y2="165" stroke="#6a1b9a" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Caching -->
-  <rect x="620" y="55" width="160" height="65" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
-  <text x="700" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#b71c1c">Caching</text>
-  <text x="700" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">df.cache() / persist()</text>
-  <text x="700" y="113" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Memory + Disk</text>
-  <line x1="630" y1="100" x2="488" y2="185" stroke="#c62828" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Vacuum -->
-  <rect x="30" y="280" width="160" height="65" rx="8" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
-  <text x="110" y="303" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1a237e">Vacuum</text>
-  <text x="110" y="323" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Remove old files</text>
-  <text x="110" y="338" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Retention period</text>
-  <line x1="190" y1="305" x2="315" y2="225" stroke="#283593" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- AQE -->
-  <rect x="230" y="280" width="160" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="310" y="303" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">AQE</text>
-  <text x="310" y="323" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Adaptive Query</text>
-  <text x="310" y="338" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Runtime optimization</text>
-  <line x1="350" y1="280" x2="385" y2="240" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Broadcast Joins -->
-  <rect x="430" y="280" width="160" height="65" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="510" y="303" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Broadcast Joins</text>
-  <text x="510" y="323" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Small table broadcast</text>
-  <text x="510" y="338" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Avoid shuffles</text>
-  <line x1="470" y1="280" x2="420" y2="240" stroke="#e65100" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <!-- Predicate Pushdown -->
-  <rect x="620" y="280" width="160" height="65" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <text x="700" y="303" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#4a148c">Pushdown</text>
-  <text x="700" y="323" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Predicate pushdown</text>
-  <text x="700" y="338" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Column pruning</text>
-  <line x1="630" y1="300" x2="488" y2="220" stroke="#6a1b9a" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <text x="400" y="390" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Combine multiple strategies for maximum performance gains</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Delta Lake / Spark Optimization Methods</text>
+  <ellipse cx="640" cy="360" rx="144" ry="64" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="640" y="351" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#1a237e">Optimization</text>
+  <text x="640" y="383.4" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Strategies</text>
+  <rect x="48" y="99" width="256" height="117" rx="12.8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="176" y="140.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">File Compaction</text>
+  <text x="176" y="176.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">OPTIMIZE command</text>
+  <text x="176" y="203.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Merge small files</text>
+  <line x1="304" y1="171" x2="504" y2="324" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="368" y="99" width="256" height="117" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="496" y="140.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Z-Ordering</text>
+  <text x="496" y="176.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Data skipping</text>
+  <text x="496" y="203.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Co-locate columns</text>
+  <line x1="560" y1="216" x2="608" y2="297" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="688" y="99" width="256" height="117" rx="12.8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <text x="816" y="140.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#4a148c">Partitioning</text>
+  <text x="816" y="176.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Partition pruning</text>
+  <text x="816" y="203.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">By date/key columns</text>
+  <line x1="760" y1="216" x2="688" y2="297" stroke="#6a1b9a" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="992" y="99" width="256" height="117" rx="12.8" fill="#fce4ec" stroke="#c62828" stroke-width="3.2" />
+  <text x="1120" y="140.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#b71c1c">Caching</text>
+  <text x="1120" y="176.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">df.cache() / persist()</text>
+  <text x="1120" y="203.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Memory + Disk</text>
+  <line x1="1008" y1="180" x2="780.8" y2="333" stroke="#c62828" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="48" y="504" width="256" height="117" rx="12.8" fill="#e8eaf6" stroke="#283593" stroke-width="3.2" />
+  <text x="176" y="545.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">Vacuum</text>
+  <text x="176" y="581.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Remove old files</text>
+  <text x="176" y="608.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Retention period</text>
+  <line x1="304" y1="549" x2="504" y2="405" stroke="#283593" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="368" y="504" width="256" height="117" rx="12.8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="496" y="545.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">AQE</text>
+  <text x="496" y="581.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Adaptive Query</text>
+  <text x="496" y="608.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Runtime optimization</text>
+  <line x1="560" y1="504" x2="616" y2="432" stroke="#2e7d32" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="688" y="504" width="256" height="117" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="816" y="545.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Broadcast Joins</text>
+  <text x="816" y="581.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Small table broadcast</text>
+  <text x="816" y="608.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Avoid shuffles</text>
+  <line x1="752" y1="504" x2="672" y2="432" stroke="#e65100" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="992" y="504" width="256" height="117" rx="12.8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <text x="1120" y="545.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#4a148c">Pushdown</text>
+  <text x="1120" y="581.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Predicate pushdown</text>
+  <text x="1120" y="608.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Column pruning</text>
+  <line x1="1008" y1="540" x2="780.8" y2="396" stroke="#6a1b9a" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="640" y="702" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Combine multiple strategies for maximum performance gains</text>
 </svg>

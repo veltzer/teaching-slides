@@ -1,70 +1,52 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrow" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Future Planning Roadmap</text>
-
-  <!-- Timeline arrow -->
-  <line x1="60" y1="80" x2="750" y2="80" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow)"/>
-  <text x="770" y="85" font-family="Arial" font-size="12" fill="#1565c0">Time</text>
-
-  <!-- Phase 1: Current -->
-  <rect x="60" y="95" width="160" height="135" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <circle cx="140" cy="80" r="8" fill="#2e7d32"/>
-  <text x="140" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Current State</text>
-  <text x="140" y="138" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Spark 3.x</text>
-  <text x="140" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Batch + Streaming</text>
-  <text x="140" y="174" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Delta Lake</text>
-  <text x="140" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">K8s deployment</text>
-  <text x="140" y="210" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">MLflow integration</text>
-
-  <!-- Phase 2: Short-term -->
-  <rect x="245" y="95" width="160" height="135" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <circle cx="325" cy="80" r="8" fill="#e65100"/>
-  <text x="325" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Short-term</text>
-  <text x="325" y="138" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Spark Connect</text>
-  <text x="325" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Photon engine</text>
-  <text x="325" y="174" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Serverless Spark</text>
-  <text x="325" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Unity Catalog</text>
-  <text x="325" y="210" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Enhanced AQE</text>
-
-  <!-- Phase 3: Mid-term -->
-  <rect x="430" y="95" width="160" height="135" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
-  <circle cx="510" cy="80" r="8" fill="#6a1b9a"/>
-  <text x="510" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#4a148c">Mid-term</text>
-  <text x="510" y="138" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">GPU acceleration</text>
-  <text x="510" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Lakehouse native</text>
-  <text x="510" y="174" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">AI-driven tuning</text>
-  <text x="510" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Real-time ML</text>
-  <text x="510" y="210" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Data mesh support</text>
-
-  <!-- Phase 4: Long-term -->
-  <rect x="615" y="95" width="160" height="135" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <circle cx="695" cy="80" r="8" fill="#1565c0"/>
-  <text x="695" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1a237e">Long-term</text>
-  <text x="695" y="138" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Autonomous tuning</text>
-  <text x="695" y="156" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Edge computing</text>
-  <text x="695" y="174" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Quantum-ready</text>
-  <text x="695" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Zero-config deploy</text>
-  <text x="695" y="210" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Multi-cloud native</text>
-
-  <!-- Migration strategies -->
-  <rect x="50" y="265" width="700" height="50" rx="8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="2"/>
-  <text x="400" y="285" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Migration Strategy</text>
-  <text x="400" y="305" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Version upgrade | Platform migration | Data migration | Service migration</text>
-
-  <!-- Key considerations -->
-  <rect x="50" y="335" width="220" height="40" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="160" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#1b5e20">Backward compatibility</text>
-
-  <rect x="290" y="335" width="220" height="40" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-  <text x="400" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#bf360c">Incremental adoption</text>
-
-  <rect x="530" y="335" width="220" height="40" rx="5" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
-  <text x="640" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#4a148c">Testing at each phase</text>
-
-  <text x="400" y="395" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Plan upgrades incrementally to minimize disruption</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="28.8" font-weight="bold" fill="#1a237e">Spark Future Planning Roadmap</text>
+  <line x1="96" y1="144" x2="1200" y2="144" stroke="#1565c0" stroke-width="4.8" marker-end="url(#arrow)" />
+  <text x="1232" y="153" font-family="Arial" font-size="19.2" fill="#1565c0">Time</text>
+  <rect x="96" y="171" width="256" height="243" rx="12.8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="3.2" />
+  <circle cx="224" cy="144" r="12.8" fill="#2e7d32" />
+  <text x="224" y="207" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Current State</text>
+  <text x="224" y="248.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Spark 3.x</text>
+  <text x="224" y="280.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Batch + Streaming</text>
+  <text x="224" y="313.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Delta Lake</text>
+  <text x="224" y="345.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">K8s deployment</text>
+  <text x="224" y="378" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">MLflow integration</text>
+  <rect x="392" y="171" width="256" height="243" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <circle cx="520" cy="144" r="12.8" fill="#e65100" />
+  <text x="520" y="207" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#bf360c">Short-term</text>
+  <text x="520" y="248.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Spark Connect</text>
+  <text x="520" y="280.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Photon engine</text>
+  <text x="520" y="313.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Serverless Spark</text>
+  <text x="520" y="345.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Unity Catalog</text>
+  <text x="520" y="378" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Enhanced AQE</text>
+  <rect x="688" y="171" width="256" height="243" rx="12.8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="3.2" />
+  <circle cx="816" cy="144" r="12.8" fill="#6a1b9a" />
+  <text x="816" y="207" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#4a148c">Mid-term</text>
+  <text x="816" y="248.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">GPU acceleration</text>
+  <text x="816" y="280.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Lakehouse native</text>
+  <text x="816" y="313.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">AI-driven tuning</text>
+  <text x="816" y="345.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Real-time ML</text>
+  <text x="816" y="378" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Data mesh support</text>
+  <rect x="984" y="171" width="256" height="243" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <circle cx="1112" cy="144" r="12.8" fill="#1565c0" />
+  <text x="1112" y="207" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">Long-term</text>
+  <text x="1112" y="248.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Autonomous tuning</text>
+  <text x="1112" y="280.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Edge computing</text>
+  <text x="1112" y="313.2" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Quantum-ready</text>
+  <text x="1112" y="345.6" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Zero-config deploy</text>
+  <text x="1112" y="378" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Multi-cloud native</text>
+  <rect x="80" y="477" width="1120" height="90" rx="12.8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="3.2" />
+  <text x="640" y="513" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Migration Strategy</text>
+  <text x="640" y="549" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#333">Version upgrade | Platform migration | Data migration | Service migration</text>
+  <rect x="80" y="603" width="352" height="72" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2.4" />
+  <text x="256" y="648" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#1b5e20">Backward compatibility</text>
+  <rect x="464" y="603" width="352" height="72" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2.4" />
+  <text x="640" y="648" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#bf360c">Incremental adoption</text>
+  <rect x="848" y="603" width="352" height="72" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2.4" />
+  <text x="1024" y="648" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#4a148c">Testing at each phase</text>
+  <text x="640" y="711" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#555">Plan upgrades incrementally to minimize disruption</text>
 </svg>

@@ -1,43 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="17.7778" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 6.2222,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Volatile Memory Acquisition Methods</text>
-  <!-- Target: Physical Memory -->
-  <rect x="260" y="50" width="200" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="360" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Physical Memory (RAM)</text>
-  <text x="360" y="88" text-anchor="middle" font-size="10" fill="#666">Target for acquisition</text>
-  <!-- Methods -->
-  <rect x="30" y="130" width="200" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="130" y="153" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">LiME (Kernel Module)</text>
-  <text x="130" y="170" text-anchor="middle" font-size="10" fill="#666">Most reliable, loadable module</text>
-  <text x="130" y="183" text-anchor="middle" font-size="10" fill="#28a745">Recommended</text>
-  <line x1="230" y1="145" x2="260" y2="95" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="260" y="130" width="200" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="360" y="153" text-anchor="middle" font-size="11" font-weight="bold" fill="#4a90e2">/proc/kcore</text>
-  <text x="360" y="170" text-anchor="middle" font-size="10" fill="#666">Kernel virtual memory</text>
-  <text x="360" y="183" text-anchor="middle" font-size="10" fill="#4a90e2">Easy but incomplete</text>
-  <line x1="360" y1="130" x2="360" y2="98" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="490" y="130" width="200" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="590" y="153" text-anchor="middle" font-size="11" font-weight="bold" fill="#e6a800">/dev/mem</text>
-  <text x="590" y="170" text-anchor="middle" font-size="10" fill="#666">Physical memory device</text>
-  <text x="590" y="183" text-anchor="middle" font-size="10" fill="#e6a800">Restricted on modern kernels</text>
-  <line x1="490" y1="145" x2="460" y2="95" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="30" y="220" width="200" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="130" y="243" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">Crash Dump</text>
-  <text x="130" y="260" text-anchor="middle" font-size="10" fill="#666">Forced kernel crash</text>
-  <text x="130" y="273" text-anchor="middle" font-size="10" fill="#dc3545">Disruptive, limited</text>
-  <rect x="260" y="220" width="200" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="360" y="243" text-anchor="middle" font-size="11" font-weight="bold" fill="#e6a800">Firewire / DMA</text>
-  <text x="360" y="260" text-anchor="middle" font-size="10" fill="#666">Hardware-based access</text>
-  <text x="360" y="273" text-anchor="middle" font-size="10" fill="#e6a800">No OS involvement</text>
-  <rect x="490" y="220" width="200" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="590" y="243" text-anchor="middle" font-size="11" font-weight="bold" fill="#28a745">Hypervisor Snapshot</text>
-  <text x="590" y="260" text-anchor="middle" font-size="10" fill="#666">VM memory snapshot</text>
-  <text x="590" y="273" text-anchor="middle" font-size="10" fill="#28a745">Non-intrusive</text>
-  <!-- Note -->
-  <rect x="100" y="320" width="520" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="360" y="345" text-anchor="middle" font-size="10" fill="#333">Always document acquisition method, time, and hash for chain of custody</text>
+  <text x="640" y="56.8421" text-anchor="middle" font-size="28.4444" font-weight="bold" fill="#333">Volatile Memory Acquisition Methods</text>
+  <rect x="462.2222" y="94.7368" width="355.5556" height="85.2632" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.5556" />
+  <text x="640" y="136.4211" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Physical Memory (RAM)</text>
+  <text x="640" y="166.7368" text-anchor="middle" font-size="17.7778" fill="#666">Target for acquisition</text>
+  <rect x="53.3333" y="246.3158" width="355.5556" height="113.6842" rx="8.8889" fill="#d4edda" stroke="#28a745" stroke-width="3.5556" />
+  <text x="231.1111" y="289.8947" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#28a745">LiME (Kernel Module)</text>
+  <text x="231.1111" y="322.1053" text-anchor="middle" font-size="17.7778" fill="#666">Most reliable, loadable module</text>
+  <text x="231.1111" y="346.7368" text-anchor="middle" font-size="17.7778" fill="#28a745">Recommended</text>
+  <line x1="408.8889" y1="274.7368" x2="462.2222" y2="180" stroke="#28a745" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <rect x="462.2222" y="246.3158" width="355.5556" height="113.6842" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6667" />
+  <text x="640" y="289.8947" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#4a90e2">/proc/kcore</text>
+  <text x="640" y="322.1053" text-anchor="middle" font-size="17.7778" fill="#666">Kernel virtual memory</text>
+  <text x="640" y="346.7368" text-anchor="middle" font-size="17.7778" fill="#4a90e2">Easy but incomplete</text>
+  <line x1="640" y1="246.3158" x2="640" y2="185.6842" stroke="#4a90e2" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <rect x="871.1111" y="246.3158" width="355.5556" height="113.6842" rx="8.8889" fill="#fff3cd" stroke="#ffc107" stroke-width="2.6667" />
+  <text x="1048.8889" y="289.8947" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#e6a800">/dev/mem</text>
+  <text x="1048.8889" y="322.1053" text-anchor="middle" font-size="17.7778" fill="#666">Physical memory device</text>
+  <text x="1048.8889" y="346.7368" text-anchor="middle" font-size="17.7778" fill="#e6a800">Restricted on modern kernels</text>
+  <line x1="871.1111" y1="274.7368" x2="817.7778" y2="180" stroke="#ffc107" stroke-width="2.6667" marker-end="url(#arrow)" />
+  <rect x="53.3333" y="416.8421" width="355.5556" height="113.6842" rx="8.8889" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6667" />
+  <text x="231.1111" y="460.4211" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#dc3545">Crash Dump</text>
+  <text x="231.1111" y="492.6316" text-anchor="middle" font-size="17.7778" fill="#666">Forced kernel crash</text>
+  <text x="231.1111" y="517.2632" text-anchor="middle" font-size="17.7778" fill="#dc3545">Disruptive, limited</text>
+  <rect x="462.2222" y="416.8421" width="355.5556" height="113.6842" rx="8.8889" fill="#fff3cd" stroke="#ffc107" stroke-width="2.6667" />
+  <text x="640" y="460.4211" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#e6a800">Firewire / DMA</text>
+  <text x="640" y="492.6316" text-anchor="middle" font-size="17.7778" fill="#666">Hardware-based access</text>
+  <text x="640" y="517.2632" text-anchor="middle" font-size="17.7778" fill="#e6a800">No OS involvement</text>
+  <rect x="871.1111" y="416.8421" width="355.5556" height="113.6842" rx="8.8889" fill="#d4edda" stroke="#28a745" stroke-width="2.6667" />
+  <text x="1048.8889" y="460.4211" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#28a745">Hypervisor Snapshot</text>
+  <text x="1048.8889" y="492.6316" text-anchor="middle" font-size="17.7778" fill="#666">VM memory snapshot</text>
+  <text x="1048.8889" y="517.2632" text-anchor="middle" font-size="17.7778" fill="#28a745">Non-intrusive</text>
+  <rect x="177.7778" y="606.3158" width="924.4444" height="75.7895" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.7778" />
+  <text x="640" y="653.6842" text-anchor="middle" font-size="17.7778" fill="#333">Always document acquisition method, time, and hash for chain of custody</text>
 </svg>

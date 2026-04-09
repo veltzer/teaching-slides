@@ -1,36 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" font-family="Arial, sans-serif">
-  <text x="260" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">DMA Scatter-Gather</text>
-  <!-- Without scatter-gather -->
-  <rect x="10" y="40" width="500" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="30" y="63" font-size="13" font-weight="bold" fill="#dc3545">Without scatter-gather:</text>
-  <text x="30" y="80" font-size="11" fill="#555">Data must be in one contiguous buffer</text>
-  <rect x="40" y="90" width="440" height="25" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="260" y="107" text-anchor="middle" font-size="11" fill="#333">One big buffer (must copy data here first)</text>
-  <!-- With scatter-gather -->
-  <rect x="10" y="145" width="500" height="220" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="30" y="168" font-size="13" font-weight="bold" fill="#28a745">With scatter-gather:</text>
-  <text x="30" y="185" font-size="11" fill="#555">DMA reads a list of (address, length) pairs</text>
-  <!-- Buffers -->
-  <rect x="40" y="200" width="80" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="80" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Buf A</text>
-  <text x="80" y="233" text-anchor="middle" font-size="10" fill="#555">512B</text>
-  <rect x="160" y="200" width="100" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="210" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Buf B</text>
-  <text x="210" y="233" text-anchor="middle" font-size="10" fill="#555">1024B</text>
-  <rect x="300" y="200" width="150" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="375" y="218" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Buf C</text>
-  <text x="375" y="233" text-anchor="middle" font-size="10" fill="#555">2048B</text>
-  <!-- Arrows to SG list -->
-  <line x1="80" y1="240" x2="80" y2="275" stroke="#28a745" stroke-width="1" marker-end="url(#sga)"/>
-  <line x1="210" y1="240" x2="210" y2="275" stroke="#28a745" stroke-width="1" marker-end="url(#sga)"/>
-  <line x1="375" y1="240" x2="375" y2="275" stroke="#28a745" stroke-width="1" marker-end="url(#sga)"/>
-  <!-- Scatter-Gather List -->
-  <rect x="40" y="275" width="420" height="75" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="250" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Scatter-Gather List</text>
-  <text x="80" y="315" font-size="10" fill="#555">Entry 0: addr=A, len=512</text>
-  <text x="80" y="330" font-size="10" fill="#555">Entry 1: addr=B, len=1024</text>
-  <text x="80" y="345" font-size="10" fill="#555">Entry 2: addr=C, len=2048</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">DMA Scatter-Gather</text>
+  <rect x="24.6154" y="75.7895" width="1230.7692" height="170.5263" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="2.8421" />
+  <text x="73.8462" y="119.3684" font-size="24.6316" font-weight="bold" fill="#dc3545">Without scatter-gather:</text>
+  <text x="73.8462" y="151.5789" font-size="20.8421" fill="#555">Data must be in one contiguous buffer</text>
+  <rect x="98.4615" y="170.5263" width="1083.0769" height="47.3684" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
+  <text x="640" y="202.7368" text-anchor="middle" font-size="20.8421" fill="#333">One big buffer (must copy data here first)</text>
+  <rect x="24.6154" y="274.7368" width="1230.7692" height="416.8421" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="2.8421" />
+  <text x="73.8462" y="318.3158" font-size="24.6316" font-weight="bold" fill="#28a745">With scatter-gather:</text>
+  <text x="73.8462" y="350.5263" font-size="20.8421" fill="#555">DMA reads a list of (address, length) pairs</text>
+  <rect x="98.4615" y="378.9474" width="196.9231" height="75.7895" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
+  <text x="196.9231" y="413.0526" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#333">Buf A</text>
+  <text x="196.9231" y="441.4737" text-anchor="middle" font-size="18.9474" fill="#555">512B</text>
+  <rect x="393.8462" y="378.9474" width="246.1538" height="75.7895" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
+  <text x="516.9231" y="413.0526" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#333">Buf B</text>
+  <text x="516.9231" y="441.4737" text-anchor="middle" font-size="18.9474" fill="#555">1024B</text>
+  <rect x="738.4615" y="378.9474" width="369.2308" height="75.7895" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
+  <text x="923.0769" y="413.0526" text-anchor="middle" font-size="20.8421" font-weight="bold" fill="#333">Buf C</text>
+  <text x="923.0769" y="441.4737" text-anchor="middle" font-size="18.9474" fill="#555">2048B</text>
+  <line x1="196.9231" y1="454.7368" x2="196.9231" y2="521.0526" stroke="#28a745" stroke-width="1.8947" marker-end="url(#sga)" />
+  <line x1="516.9231" y1="454.7368" x2="516.9231" y2="521.0526" stroke="#28a745" stroke-width="1.8947" marker-end="url(#sga)" />
+  <line x1="923.0769" y1="454.7368" x2="923.0769" y2="521.0526" stroke="#28a745" stroke-width="1.8947" marker-end="url(#sga)" />
+  <rect x="98.4615" y="521.0526" width="1033.8462" height="142.1053" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="3.7895" />
+  <text x="615.3846" y="558.9474" text-anchor="middle" font-size="22.7368" font-weight="bold" fill="#333">Scatter-Gather List</text>
+  <text x="196.9231" y="596.8421" font-size="18.9474" fill="#555">Entry 0: addr=A, len=512</text>
+  <text x="196.9231" y="625.2632" font-size="18.9474" fill="#555">Entry 1: addr=B, len=1024</text>
+  <text x="196.9231" y="653.6842" font-size="18.9474" fill="#555">Entry 2: addr=C, len=2048</text>
   <defs>
-    <marker id="sga" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#28a745"/></marker>
+    <marker id="sga" viewBox="0 0 10 10" refX="22.1538" refY="9.4737" markerWidth="14.7692" markerHeight="11.3684" orient="auto-start-reverse">
+      <path d="M 0 0 L 24.6154 9.4737 L 0 18.9474 z" fill="#28a745" />
+    </marker>
   </defs>
 </svg>

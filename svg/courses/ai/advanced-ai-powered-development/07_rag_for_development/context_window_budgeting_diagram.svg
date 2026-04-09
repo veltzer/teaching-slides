@@ -1,12 +1,32 @@
-<svg viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="680" height="60" fill="#eee" stroke="#333" rx="6"/>
-  <rect x="12" y="42" width="100" height="56" fill="#e74c3c" rx="4"/>
-  <text x="62" y="75" text-anchor="middle" fill="white" font-size="11">System</text>
-  <rect x="114" y="42" width="340" height="56" fill="#3498db" rx="4"/>
-  <text x="284" y="75" text-anchor="middle" fill="white" font-size="11">Retrieved Chunks (60%)</text>
-  <rect x="456" y="42" width="100" height="56" fill="#f39c12" rx="4"/>
-  <text x="506" y="75" text-anchor="middle" fill="white" font-size="11">User Query</text>
-  <rect x="558" y="42" width="130" height="56" fill="#27ae60" rx="4"/>
-  <text x="623" y="75" text-anchor="middle" fill="white" font-size="11">Response Buffer</text>
-  <text x="350" y="140" text-anchor="middle" font-size="13">Total context window (e.g., 128K tokens)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="2674.9387" height="5184" fill="#f8f9fa" />
+  <text x="1337.4694" y="453.6" text-anchor="middle" font-size="66.8734" font-weight="bold" fill="#1a237e">Context Window Budget Allocation for RAG</text>
+  <rect x="66.8734" y="842.4" width="2541.1919" height="972" rx="26.7494" fill="#EEE" stroke="#333" stroke-width="5.0156" />
+  <rect x="73.5609" y="868.32" width="317.649" height="920.16" rx="20.062" fill="#e74c3c" />
+  <text x="234.0571" y="1270.08" text-anchor="middle" fill="white" font-size="40.1242" font-weight="bold">System</text>
+  <text x="234.0571" y="1503.36" text-anchor="middle" fill="#FADBD8" font-size="36.7804">~10-15%</text>
+  <rect x="397.8971" y="868.32" width="1337.4694" height="920.16" rx="20.062" fill="#3498db" />
+  <text x="1066.6319" y="1270.08" text-anchor="middle" fill="white" font-size="43.4677" font-weight="bold">Retrieved Code Chunks</text>
+  <text x="1066.6319" y="1503.36" text-anchor="middle" fill="#D6EAF8" font-size="36.7804">~50-60% of budget</text>
+  <rect x="1742.0539" y="868.32" width="334.3673" height="920.16" rx="20.062" fill="#f39c12" />
+  <text x="1909.2376" y="1270.08" text-anchor="middle" fill="white" font-size="40.1242" font-weight="bold">User</text>
+  <text x="1909.2376" y="1503.36" text-anchor="middle" fill="#FDE68A" font-size="36.7804">~5-10%</text>
+  <rect x="2083.1086" y="868.32" width="518.2694" height="920.16" rx="20.062" fill="#27ae60" />
+  <text x="2340.5714" y="1270.08" text-anchor="middle" fill="white" font-size="43.4677" font-weight="bold">Response</text>
+  <text x="2340.5714" y="1503.36" text-anchor="middle" fill="#D5F5E3" font-size="36.7804">~20-30% reserved</text>
+  <text x="1337.4694" y="2203.2" text-anchor="middle" font-size="46.8114" fill="#555">Total context window (128K-200K tokens)</text>
+  <rect x="66.8734" y="2527.2" width="2541.1919" height="2462.4" rx="33.4367" fill="#E8EAF6" stroke="#3949AB" stroke-width="5.0156" />
+  <text x="1337.4694" y="2916" text-anchor="middle" font-size="50.1552" font-weight="bold" fill="#3949AB">Budget Allocation Rules</text>
+  <rect x="133.747" y="3110.4" width="1136.849" height="712.8" rx="26.7494" fill="#FFCDD2" stroke="#C62828" />
+  <text x="702.1714" y="3408.48" text-anchor="middle" font-size="43.4677" font-weight="bold" fill="#C62828">Reserve 10-15% for system prompt</text>
+  <text x="702.1714" y="3693.6" text-anchor="middle" font-size="40.1242" fill="#333">instructions, persona, output format</text>
+  <rect x="1404.3429" y="3110.4" width="1136.849" height="712.8" rx="26.7494" fill="#BBDEFB" stroke="#1565C0" />
+  <text x="1972.7673" y="3408.48" text-anchor="middle" font-size="43.4677" font-weight="bold" fill="#1565C0">Allocate 50-60% for retrieved chunks</text>
+  <text x="1972.7673" y="3693.6" text-anchor="middle" font-size="40.1242" fill="#333">code files, functions, documentation</text>
+  <rect x="133.747" y="3952.8" width="1136.849" height="712.8" rx="26.7494" fill="#FFF9C4" stroke="#F9A825" />
+  <text x="702.1714" y="4250.88" text-anchor="middle" font-size="43.4677" font-weight="bold" fill="#E65100">Reserve 5-10% for query + history</text>
+  <text x="702.1714" y="4510.08" text-anchor="middle" font-size="40.1242" fill="#333">user question, conversation turns</text>
+  <rect x="1404.3429" y="3952.8" width="1136.849" height="712.8" rx="26.7494" fill="#C8E6C9" stroke="#2E7D32" />
+  <text x="1972.7673" y="4250.88" text-anchor="middle" font-size="43.4677" font-weight="bold" fill="#2E7D32">Leave 20-30% for model response</text>
+  <text x="1972.7673" y="4510.08" text-anchor="middle" font-size="40.1242" fill="#333">truncate lowest-ranked chunks first</text>
 </svg>

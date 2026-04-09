@@ -1,58 +1,32 @@
-<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
-  <!-- Define arrow marker -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+    <marker id="arrow" markerWidth="16" markerHeight="8.4" refX="16" refY="4.2" orient="auto">
+      <polygon points="0,12 5.6,0" fill="#666" />
     </marker>
   </defs>
-
-  <!-- States and transitions -->
-  <!-- Start state -->
-  <circle cx="100" cy="100" r="8" fill="#000"/>
-  <line x1="108" y1="100" x2="180" y2="100" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- onCreate -->
-  <rect x="190" y="75" width="100" height="50" rx="20" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
-  <text x="240" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">onCreate</text>
-
-  <!-- To onStartCommand -->
-  <line x1="290" y1="100" x2="390" y2="100" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="340" y="90" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">startService()</text>
-
-  <!-- onStartCommand -->
-  <rect x="400" y="75" width="140" height="50" rx="20" fill="#2196F3" stroke="#1565C0" stroke-width="2"/>
-  <text x="470" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">onStartCommand</text>
-
-  <!-- To onDestroy from onStartCommand -->
-  <line x1="470" y1="125" x2="470" y2="375" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="520" y="250" font-family="Arial, sans-serif" font-size="11">stopService()</text>
-
-  <!-- To onBind -->
-  <line x1="240" y1="125" x2="240" y2="200" stroke="#666" stroke-width="2"/>
-  <line x1="240" y1="200" x2="590" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="415" y="190" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">bindService()</text>
-
-  <!-- onBind -->
-  <rect x="600" y="175" width="100" height="50" rx="20" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
-  <text x="650" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">onBind</text>
-
-  <!-- To onUnbind -->
-  <line x1="650" y1="225" x2="650" y2="275" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="700" y="250" font-family="Arial, sans-serif" font-size="11">unbindService()</text>
-
-  <!-- onUnbind -->
-  <rect x="600" y="285" width="100" height="50" rx="20" fill="#9C27B0" stroke="#6A1B9A" stroke-width="2"/>
-  <text x="650" y="315" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">onUnbind</text>
-
-  <!-- To onDestroy from onUnbind -->
-  <line x1="600" y1="310" x2="540" y2="375" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- onDestroy -->
-  <rect x="420" y="385" width="100" height="50" rx="20" fill="#F44336" stroke="#C62828" stroke-width="2"/>
-  <text x="470" y="415" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="white">onDestroy</text>
-
-  <!-- End state -->
-  <line x1="470" y1="435" x2="470" y2="485" stroke="#666" stroke-width="2" marker-end="url(#arrow)"/>
-  <circle cx="470" cy="500" r="8" fill="#000"/>
-  <circle cx="470" cy="500" r="12" fill="none" stroke="#000" stroke-width="2"/>
+  <circle cx="160" cy="120" r="9.6" fill="#000" />
+  <line x1="172.8" y1="120" x2="288" y2="120" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="304" y="90" width="160" height="60" rx="24" fill="#4CAF50" stroke="#2E7D32" stroke-width="2.4" />
+  <text x="384" y="126" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">onCreate</text>
+  <line x1="464" y1="120" x2="624" y2="120" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="544" y="108" font-family="Arial, sans-serif" font-size="13.2" text-anchor="middle">startService()</text>
+  <rect x="640" y="90" width="224" height="60" rx="24" fill="#2196F3" stroke="#1565C0" stroke-width="2.4" />
+  <text x="752" y="126" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">onStartCommand</text>
+  <line x1="752" y1="150" x2="752" y2="450" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="832" y="300" font-family="Arial, sans-serif" font-size="13.2">stopService()</text>
+  <line x1="384" y1="150" x2="384" y2="240" stroke="#666" stroke-width="2.4" />
+  <line x1="384" y1="240" x2="944" y2="240" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="664" y="228" font-family="Arial, sans-serif" font-size="13.2" text-anchor="middle">bindService()</text>
+  <rect x="960" y="210" width="160" height="60" rx="24" fill="#FF9800" stroke="#E65100" stroke-width="2.4" />
+  <text x="1040" y="246" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">onBind</text>
+  <line x1="1040" y1="270" x2="1040" y2="330" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <text x="1120" y="300" font-family="Arial, sans-serif" font-size="13.2">unbindService()</text>
+  <rect x="960" y="342" width="160" height="60" rx="24" fill="#9C27B0" stroke="#6A1B9A" stroke-width="2.4" />
+  <text x="1040" y="378" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">onUnbind</text>
+  <line x1="960" y1="372" x2="864" y2="450" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="672" y="462" width="160" height="60" rx="24" fill="#F44336" stroke="#C62828" stroke-width="2.4" />
+  <text x="752" y="498" font-family="Arial, sans-serif" font-size="16.8" font-weight="bold" text-anchor="middle" fill="white">onDestroy</text>
+  <line x1="752" y1="522" x2="752" y2="582" stroke="#666" stroke-width="2.4" marker-end="url(#arrow)" />
+  <circle cx="752" cy="600" r="9.6" fill="#000" />
+  <circle cx="752" cy="600" r="14.4" fill="none" stroke="#000" stroke-width="2.4" />
 </svg>

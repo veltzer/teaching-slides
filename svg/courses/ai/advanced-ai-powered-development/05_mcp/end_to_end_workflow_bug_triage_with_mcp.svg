@@ -1,13 +1,46 @@
-<svg viewBox="0 0 800 130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="40" width="140" height="50" fill="#8e44ad" rx="8"/>
-  <text x="80" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Jira: Get Bug</text>
-  <rect x="200" y="40" width="140" height="50" fill="#2980b9" rx="8"/>
-  <text x="270" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">DB: Query Logs</text>
-  <rect x="390" y="40" width="140" height="50" fill="#27ae60" rx="8"/>
-  <text x="460" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">GitHub: Blame</text>
-  <rect x="580" y="40" width="140" height="50" fill="#e67e22" rx="8"/>
-  <text x="650" y="70" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Fix and PR</text>
-  <line x1="150" y1="65" x2="200" y2="65" stroke="#7f8c8d" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="340" y1="65" x2="390" y2="65" stroke="#7f8c8d" stroke-width="2"/>
-  <line x1="530" y1="65" x2="580" y2="65" stroke="#7f8c8d" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="25.6" markerHeight="214.7217" refX="23.04" refY="107.3609" orient="auto">
+      <polygon points="0,306.7455 8.96,0" fill="#7f8c8d" />
+    </marker>
+  </defs>
+  <rect width="2048" height="12269.8224" fill="#f8f9fa" />
+  <text x="1024" y="1073.6097" text-anchor="middle" font-size="51.2" font-weight="bold" fill="#1a237e">End-to-End Bug Triage with MCP</text>
+  <rect x="25.6" y="2453.9644" width="378.88" height="2760.7098" rx="25.6" fill="#8e44ad" stroke="#6A1B9A" stroke-width="5.12" />
+  <text x="215.04" y="3374.2014" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">1. Jira MCP</text>
+  <text x="215.04" y="4049.0413" text-anchor="middle" fill="#E9D8FD" font-size="28.16">fetch bug ticket</text>
+  <text x="215.04" y="4601.1833" text-anchor="middle" fill="#E9D8FD" font-size="28.16">+ repro steps</text>
+  <line x1="404.48" y1="3834.3196" x2="448" y2="3834.3196" stroke="#7f8c8d" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="448" y="2453.9644" width="378.88" height="2760.7098" rx="25.6" fill="#2980b9" stroke="#1565C0" stroke-width="5.12" />
+  <text x="637.44" y="3374.2014" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">2. Postgres MCP</text>
+  <text x="637.44" y="4049.0413" text-anchor="middle" fill="#D6EAF8" font-size="28.16">query error logs</text>
+  <text x="637.44" y="4601.1833" text-anchor="middle" fill="#D6EAF8" font-size="28.16">in time window</text>
+  <line x1="826.88" y1="3834.3196" x2="870.4" y2="3834.3196" stroke="#7f8c8d" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="870.4" y="2453.9644" width="378.88" height="2760.7098" rx="25.6" fill="#27ae60" stroke="#2E7D32" stroke-width="5.12" />
+  <text x="1059.84" y="3374.2014" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">3. GitHub MCP</text>
+  <text x="1059.84" y="4049.0413" text-anchor="middle" fill="#D5F5E3" font-size="28.16">git blame on</text>
+  <text x="1059.84" y="4601.1833" text-anchor="middle" fill="#D5F5E3" font-size="28.16">relevant file</text>
+  <line x1="1249.28" y1="3834.3196" x2="1292.8" y2="3834.3196" stroke="#7f8c8d" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1292.8" y="2453.9644" width="378.88" height="2760.7098" rx="25.6" fill="#e67e22" stroke="#E65100" stroke-width="5.12" />
+  <text x="1482.24" y="3374.2014" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">4. FS MCP</text>
+  <text x="1482.24" y="4049.0413" text-anchor="middle" fill="#FAD7A0" font-size="28.16">read code, apply</text>
+  <text x="1482.24" y="4601.1833" text-anchor="middle" fill="#FAD7A0" font-size="28.16">fix, run tests</text>
+  <line x1="1671.68" y1="3834.3196" x2="1715.2" y2="3834.3196" stroke="#7f8c8d" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1715.2" y="2453.9644" width="307.2" height="2760.7098" rx="25.6" fill="#27ae60" stroke="#2E7D32" stroke-width="5.12" />
+  <text x="1868.8" y="3374.2014" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">5. GitHub</text>
+  <text x="1868.8" y="3926.3433" text-anchor="middle" fill="white" font-size="33.28" font-weight="bold">MCP</text>
+  <text x="1868.8" y="4601.1833" text-anchor="middle" fill="#D5F5E3" font-size="28.16">open pull request</text>
+  <rect x="716.8" y="6288.2839" width="614.4" height="1687.1007" rx="25.6" fill="#1a237e" stroke="#3949AB" stroke-width="5.12" />
+  <text x="1024" y="7116.4972" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">AI Agent Orchestrator</text>
+  <text x="1024" y="7729.9881" text-anchor="middle" fill="#C5CAE9" font-size="30.72">coordinates all MCP servers</text>
+  <line x1="844.8" y1="6288.2839" x2="332.8" y2="5214.6748" stroke="#3949AB" stroke-width="3.84" stroke-dasharray="10.24 7.68" />
+  <line x1="921.6" y1="6288.2839" x2="716.8" y2="5214.6748" stroke="#3949AB" stroke-width="3.84" stroke-dasharray="10.24 7.68" />
+  <line x1="1024" y1="6288.2839" x2="1126.4" y2="5214.6748" stroke="#3949AB" stroke-width="3.84" stroke-dasharray="10.24 7.68" />
+  <line x1="1126.4" y1="6288.2839" x2="1484.8" y2="5214.6748" stroke="#3949AB" stroke-width="3.84" stroke-dasharray="10.24 7.68" />
+  <line x1="1203.2" y1="6288.2839" x2="1843.2" y2="5214.6748" stroke="#3949AB" stroke-width="3.84" stroke-dasharray="10.24 7.68" />
+  <rect x="25.6" y="8895.621" width="1996.8" height="3067.4559" rx="25.6" fill="#E8EAF6" stroke="#3949AB" stroke-width="3.84" />
+  <text x="1024" y="9754.509" text-anchor="middle" font-size="38.4" font-weight="bold" fill="#3949AB">Key Outcome</text>
+  <text x="76.8" y="10582.7217" font-size="33.28" fill="#333">▶ Each step uses a different MCP server — AI orchestrates all of them seamlessly</text>
+  <text x="76.8" y="11257.5622" font-size="33.28" fill="#333">▶ Developer reviews and approves at each stage — human stays in the loop</text>
+  <text x="76.8" y="11748.3552" font-size="33.28" fill="#333">▶ Total time: minutes instead of hours of manual context-switching</text>
 </svg>

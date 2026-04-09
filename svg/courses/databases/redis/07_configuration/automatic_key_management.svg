@@ -1,17 +1,17 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="15" width="250" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="155" y="35" text-anchor="middle" font-size="10" font-weight="bold">Explicit Expiration (TTL)</text>
-  <text x="155" y="52" text-anchor="middle" font-size="10">EXPIRE key 3600</text>
-  <text x="155" y="66" text-anchor="middle" font-size="10">SETEX key 60 value</text>
-  <text x="155" y="80" text-anchor="middle" font-size="10">Key auto-deleted after TTL</text>
-  <rect x="320" y="15" width="250" height="80" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="445" y="35" text-anchor="middle" font-size="10" font-weight="bold">Implicit Eviction</text>
-  <text x="445" y="52" text-anchor="middle" font-size="10">When maxmemory reached</text>
-  <text x="445" y="66" text-anchor="middle" font-size="10">Policy: LRU, LFU, TTL, random</text>
-  <text x="445" y="80" text-anchor="middle" font-size="10">Automatic, based on config</text>
-  <line x1="155" y1="100" x2="155" y2="130" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
-  <line x1="445" y1="100" x2="445" y2="130" stroke="#333" stroke-width="1" stroke-dasharray="3,3"/>
-  <rect x="30" y="130" width="540" height="50" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="150" text-anchor="middle" font-size="10" font-weight="bold">Lazy expiration + Active expiration (sampling)</text>
-  <text x="300" y="168" text-anchor="middle" font-size="10">Redis checks keys on access (lazy) and periodically samples expired keys (active)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="64" y="54" width="533.3333" height="288" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="330.6667" y="126" text-anchor="middle" font-size="21.3333" font-weight="bold">Explicit Expiration (TTL)</text>
+  <text x="330.6667" y="187.2" text-anchor="middle" font-size="21.3333">EXPIRE key 3600</text>
+  <text x="330.6667" y="237.6" text-anchor="middle" font-size="21.3333">SETEX key 60 value</text>
+  <text x="330.6667" y="288" text-anchor="middle" font-size="21.3333">Key auto-deleted after TTL</text>
+  <rect x="682.6667" y="54" width="533.3333" height="288" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="949.3333" y="126" text-anchor="middle" font-size="21.3333" font-weight="bold">Implicit Eviction</text>
+  <text x="949.3333" y="187.2" text-anchor="middle" font-size="21.3333">When maxmemory reached</text>
+  <text x="949.3333" y="237.6" text-anchor="middle" font-size="21.3333">Policy: LRU, LFU, TTL, random</text>
+  <text x="949.3333" y="288" text-anchor="middle" font-size="21.3333">Automatic, based on config</text>
+  <line x1="330.6667" y1="360" x2="330.6667" y2="468" stroke="#333" stroke-width="2.1333" stroke-dasharray="6.4 6.4" />
+  <line x1="949.3333" y1="360" x2="949.3333" y2="468" stroke="#333" stroke-width="2.1333" stroke-dasharray="6.4 6.4" />
+  <rect x="64" y="468" width="1152" height="180" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="640" y="540" text-anchor="middle" font-size="21.3333" font-weight="bold">Lazy expiration + Active expiration (sampling)</text>
+  <text x="640" y="604.8" text-anchor="middle" font-size="21.3333">Redis checks keys on access (lazy) and periodically samples expired keys (active)</text>
 </svg>

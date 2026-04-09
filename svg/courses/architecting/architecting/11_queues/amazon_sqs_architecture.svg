@@ -1,55 +1,45 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-dash" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    <marker id="arrowhead-dash" markerWidth="16" markerHeight="12" refX="16" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.6,0" fill="#999" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Amazon SQS Architecture</text>
-  <!-- AWS Region box -->
-  <rect x="20" y="40" width="700" height="300" rx="10" fill="#fafafa" stroke="#ccc" stroke-width="1" stroke-dasharray="8,4"/>
-  <text x="50" y="60" font-size="11" fill="#999">AWS Region</text>
-  <!-- Producer -->
-  <rect x="40" y="130" width="130" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="105" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Producer</text>
-  <text x="105" y="170" text-anchor="middle" font-size="10" fill="#666">Lambda / EC2</text>
-  <!-- Standard Queue -->
-  <rect x="260" y="80" width="150" height="45" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
-  <text x="335" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Standard Queue</text>
-  <!-- FIFO Queue -->
-  <rect x="260" y="160" width="150" height="45" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
-  <text x="335" y="187" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">FIFO Queue</text>
-  <!-- Consumers -->
-  <rect x="510" y="70" width="110" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="565" y="90" text-anchor="middle" font-size="11" fill="#333">Consumer 1</text>
-  <rect x="510" y="110" width="110" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="565" y="130" text-anchor="middle" font-size="11" fill="#333">Consumer 2</text>
-  <rect x="510" y="170" width="110" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="565" y="190" text-anchor="middle" font-size="11" fill="#333">Consumer 3</text>
-  <!-- Dead Letter Queues -->
-  <rect x="260" y="250" width="150" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="335" y="275" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">DLQ (Standard)</text>
-  <rect x="450" y="250" width="150" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="525" y="275" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">DLQ (FIFO)</text>
-  <!-- Arrows -->
-  <line x1="170" y1="145" x2="258" y2="102" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="170" y1="165" x2="258" y2="182" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="410" y1="95" x2="508" y2="85" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="410" y1="105" x2="508" y2="125" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="410" y1="182" x2="508" y2="185" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- DLQ arrows -->
-  <line x1="320" y1="125" x2="320" y2="248" stroke="#dc3545" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-dash)"/>
-  <text x="280" y="200" font-size="10" fill="#dc3545">Failed</text>
-  <line x1="370" y1="205" x2="510" y2="248" stroke="#dc3545" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-dash)"/>
-  <text x="450" y="225" font-size="10" fill="#dc3545">Failed</text>
-  <!-- CloudWatch -->
-  <rect x="40" y="290" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="110" y="310" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">CloudWatch</text>
-  <text x="110" y="325" text-anchor="middle" font-size="10" fill="#666">Monitoring</text>
-  <line x1="180" y1="310" x2="258" y2="270" stroke="#999" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead-dash)"/>
-  <!-- Note -->
-  <text x="400" y="380" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Standard queues offer best-effort ordering; FIFO queues guarantee exactly-once processing.</text>
-  <text x="400" y="398" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Failed messages route to Dead Letter Queues for later inspection.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Amazon SQS Architecture</text>
+  <rect x="32" y="68.5714" width="1120" height="514.2857" rx="16" fill="#fafafa" stroke="#ccc" stroke-width="1.6" stroke-dasharray="12.8 6.4" />
+  <text x="80" y="102.8571" font-size="17.6" fill="#999">AWS Region</text>
+  <rect x="64" y="222.8571" width="208" height="94.2857" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="168" y="260.5714" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Producer</text>
+  <text x="168" y="291.4286" text-anchor="middle" font-size="16" fill="#666">Lambda / EC2</text>
+  <rect x="416" y="137.1429" width="240" height="77.1429" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.4" />
+  <text x="536" y="183.4286" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Standard Queue</text>
+  <rect x="416" y="274.2857" width="240" height="77.1429" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.4" />
+  <text x="536" y="320.5714" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">FIFO Queue</text>
+  <rect x="816" y="120" width="176" height="51.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
+  <text x="904" y="154.2857" text-anchor="middle" font-size="17.6" fill="#333">Consumer 1</text>
+  <rect x="816" y="188.5714" width="176" height="51.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
+  <text x="904" y="222.8571" text-anchor="middle" font-size="17.6" fill="#333">Consumer 2</text>
+  <rect x="816" y="291.4286" width="176" height="51.4286" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="1.6" />
+  <text x="904" y="325.7143" text-anchor="middle" font-size="17.6" fill="#333">Consumer 3</text>
+  <rect x="416" y="428.5714" width="240" height="68.5714" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="536" y="471.4286" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">DLQ (Standard)</text>
+  <rect x="720" y="428.5714" width="240" height="68.5714" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="2.4" />
+  <text x="840" y="471.4286" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#dc3545">DLQ (FIFO)</text>
+  <line x1="272" y1="248.5714" x2="412.8" y2="174.8571" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="272" y1="282.8571" x2="412.8" y2="312" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="656" y1="162.8571" x2="812.8" y2="145.7143" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="656" y1="180" x2="812.8" y2="214.2857" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="656" y1="312" x2="812.8" y2="317.1429" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrowhead)" />
+  <line x1="512" y1="214.2857" x2="512" y2="425.1429" stroke="#dc3545" stroke-width="1.6" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-dash)" />
+  <text x="448" y="342.8571" font-size="16" fill="#dc3545">Failed</text>
+  <line x1="592" y1="351.4286" x2="816" y2="425.1429" stroke="#dc3545" stroke-width="1.6" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-dash)" />
+  <text x="720" y="385.7143" font-size="16" fill="#dc3545">Failed</text>
+  <rect x="64" y="497.1429" width="224" height="68.5714" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="176" y="531.4286" text-anchor="middle" font-size="17.6" font-weight="bold" fill="#333">CloudWatch</text>
+  <text x="176" y="557.1429" text-anchor="middle" font-size="16" fill="#666">Monitoring</text>
+  <line x1="288" y1="531.4286" x2="412.8" y2="462.8571" stroke="#999" stroke-width="1.6" stroke-dasharray="8 4.8" marker-end="url(#arrowhead-dash)" />
+  <text x="640" y="651.4286" text-anchor="middle" font-size="17.6" fill="#888" font-style="italic">Standard queues offer best-effort ordering; FIFO queues guarantee exactly-once processing.</text>
+  <text x="640" y="682.2857" text-anchor="middle" font-size="17.6" fill="#888" font-style="italic">Failed messages route to Dead Letter Queues for later inspection.</text>
 </svg>

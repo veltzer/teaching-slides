@@ -1,51 +1,44 @@
-<svg viewBox="0 0 850 400" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="12.6" refX="15.0588" refY="6.3" orient="auto">
+      <polygon points="0,18 5.2706,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Streaming Ingestion Pipeline</text>
-  <!-- Stream Sources -->
-  <rect x="30" y="50" width="180" height="210" rx="5" fill="none" stroke="#4a90e2" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="120" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Stream Sources</text>
-  <rect x="50" y="90" width="140" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="120" y="112" text-anchor="middle" font-size="12" fill="#333">Kafka</text>
-  <rect x="50" y="140" width="140" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="120" y="162" text-anchor="middle" font-size="12" fill="#333">Kinesis</text>
-  <rect x="50" y="190" width="140" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="120" y="212" text-anchor="middle" font-size="12" fill="#333">Event Hub</text>
-  <!-- Stream Processing -->
-  <rect x="280" y="50" width="220" height="210" rx="5" fill="none" stroke="#ffc107" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="390" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#996600">Stream Processing</text>
-  <rect x="300" y="90" width="180" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="390" y="112" text-anchor="middle" font-size="12" fill="#333">Spark Streaming</text>
-  <rect x="300" y="140" width="180" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="390" y="162" text-anchor="middle" font-size="12" fill="#333">Flink</text>
-  <rect x="300" y="190" width="180" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="390" y="212" text-anchor="middle" font-size="12" fill="#333">Kafka Streams</text>
-  <!-- Data Lake -->
-  <rect x="580" y="50" width="240" height="210" rx="5" fill="none" stroke="#28a745" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="700" y="72" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Data Lake</text>
-  <rect x="610" y="90" width="180" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="700" y="112" text-anchor="middle" font-size="12" fill="#333">Raw Events</text>
-  <rect x="610" y="140" width="180" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="700" y="162" text-anchor="middle" font-size="12" fill="#333">Processed Events</text>
-  <rect x="610" y="190" width="180" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="700" y="212" text-anchor="middle" font-size="12" fill="#333">Aggregated Data</text>
-  <!-- Arrows: Sources to Processing -->
-  <line x1="190" y1="107" x2="298" y2="107" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="190" y1="157" x2="298" y2="107" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="190" y1="207" x2="298" y2="157" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Arrows: Processing to Data Lake -->
-  <line x1="480" y1="107" x2="608" y2="107" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="480" y1="157" x2="608" y2="107" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="480" y1="207" x2="608" y2="157" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Arrows within Data Lake -->
-  <line x1="700" y1="125" x2="700" y2="138" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="700" y1="175" x2="700" y2="188" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Legend -->
-  <rect x="30" y="300" width="790" height="80" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="425" y="325" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Streaming Ingestion Flow</text>
-  <text x="425" y="348" text-anchor="middle" font-size="11" fill="#555">Event streams from Kafka, Kinesis, and Event Hub are processed by Spark Streaming, Flink, or Kafka Streams.</text>
-  <text x="425" y="368" text-anchor="middle" font-size="11" fill="#555">Results land in the data lake as raw events, then are progressively refined to processed and aggregated data.</text>
+  <text x="640" y="45" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Streaming Ingestion Pipeline</text>
+  <rect x="45.1765" y="90" width="271.0588" height="378" rx="7.5294" fill="none" stroke="#4a90e2" stroke-width="3.0118" stroke-dasharray="12.0471 6.0235" />
+  <text x="180.7059" y="129.6" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#4a90e2">Stream Sources</text>
+  <rect x="75.2941" y="162" width="210.8235" height="63" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="180.7059" y="201.6" text-anchor="middle" font-size="18.0706" fill="#333">Kafka</text>
+  <rect x="75.2941" y="252" width="210.8235" height="63" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="180.7059" y="291.6" text-anchor="middle" font-size="18.0706" fill="#333">Kinesis</text>
+  <rect x="75.2941" y="342" width="210.8235" height="63" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="180.7059" y="381.6" text-anchor="middle" font-size="18.0706" fill="#333">Event Hub</text>
+  <rect x="421.6471" y="90" width="331.2941" height="378" rx="7.5294" fill="none" stroke="#ffc107" stroke-width="3.0118" stroke-dasharray="12.0471 6.0235" />
+  <text x="587.2941" y="129.6" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#996600">Stream Processing</text>
+  <rect x="451.7647" y="162" width="271.0588" height="63" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
+  <text x="587.2941" y="201.6" text-anchor="middle" font-size="18.0706" fill="#333">Spark Streaming</text>
+  <rect x="451.7647" y="252" width="271.0588" height="63" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
+  <text x="587.2941" y="291.6" text-anchor="middle" font-size="18.0706" fill="#333">Flink</text>
+  <rect x="451.7647" y="342" width="271.0588" height="63" rx="7.5294" fill="#fff3cd" stroke="#ffc107" stroke-width="2.2588" />
+  <text x="587.2941" y="381.6" text-anchor="middle" font-size="18.0706" fill="#333">Kafka Streams</text>
+  <rect x="873.4118" y="90" width="361.4118" height="378" rx="7.5294" fill="none" stroke="#28a745" stroke-width="3.0118" stroke-dasharray="12.0471 6.0235" />
+  <text x="1054.1176" y="129.6" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#28a745">Data Lake</text>
+  <rect x="918.5882" y="162" width="271.0588" height="63" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="1054.1176" y="201.6" text-anchor="middle" font-size="18.0706" fill="#333">Raw Events</text>
+  <rect x="918.5882" y="252" width="271.0588" height="63" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="1054.1176" y="291.6" text-anchor="middle" font-size="18.0706" fill="#333">Processed Events</text>
+  <rect x="918.5882" y="342" width="271.0588" height="63" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="1054.1176" y="381.6" text-anchor="middle" font-size="18.0706" fill="#333">Aggregated Data</text>
+  <line x1="286.1176" y1="192.6" x2="448.7529" y2="192.6" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="286.1176" y1="282.6" x2="448.7529" y2="192.6" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="286.1176" y1="372.6" x2="448.7529" y2="282.6" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="722.8235" y1="192.6" x2="915.5765" y2="192.6" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="722.8235" y1="282.6" x2="915.5765" y2="192.6" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="722.8235" y1="372.6" x2="915.5765" y2="282.6" stroke="#ffc107" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="1054.1176" y1="225" x2="1054.1176" y2="248.4" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="1054.1176" y1="315" x2="1054.1176" y2="338.4" stroke="#28a745" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <rect x="45.1765" y="540" width="1189.6471" height="144" rx="7.5294" fill="#f5f5f5" stroke="#ddd" stroke-width="1.5059" />
+  <text x="640" y="585" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#333">Streaming Ingestion Flow</text>
+  <text x="640" y="626.4" text-anchor="middle" font-size="16.5647" fill="#555">Event streams from Kafka, Kinesis, and Event Hub are processed by Spark Streaming, Flink, or Kafka Streams.</text>
+  <text x="640" y="662.4" text-anchor="middle" font-size="16.5647" fill="#555">Results land in the data lake as raw events, then are progressively refined to processed and aggregated data.</text>
 </svg>

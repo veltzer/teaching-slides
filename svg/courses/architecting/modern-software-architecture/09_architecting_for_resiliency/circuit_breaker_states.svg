@@ -1,40 +1,32 @@
-<svg viewBox="0 0 750 350" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="17.0667" markerHeight="14.4" refX="17.0667" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.9733,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowred" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowred" markerWidth="17.0667" markerHeight="14.4" refX="17.0667" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.9733,0" fill="#dc3545" />
     </marker>
-    <marker id="arrowgreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowgreen" markerWidth="17.0667" markerHeight="14.4" refX="17.0667" refY="7.2" orient="auto">
+      <polygon points="0,20.5714 5.9733,0" fill="#28a745" />
     </marker>
   </defs>
-  <!-- Closed State -->
-  <circle cx="150" cy="170" r="65" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="150" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Closed</text>
-  <text x="150" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">(Normal)</text>
-  <!-- Open State -->
-  <circle cx="600" cy="170" r="65" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="600" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Open</text>
-  <text x="600" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">(Failing fast)</text>
-  <!-- Half-Open State -->
-  <circle cx="375" cy="300" r="65" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="375" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Half-Open</text>
-  <text x="375" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">(Testing)</text>
-  <!-- Closed to Open -->
-  <path d="M 215,155 Q 375,80 535,155" fill="none" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowred)"/>
-  <text x="375" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">Failure threshold exceeded</text>
-  <!-- Open to Half-Open -->
-  <path d="M 560,220 Q 520,290 440,300" fill="none" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="540" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ffc107">Timeout expires</text>
-  <!-- Half-Open to Closed -->
-  <path d="M 310,290 Q 210,260 165,235" fill="none" stroke="#28a745" stroke-width="2" marker-end="url(#arrowgreen)"/>
-  <text x="200" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#28a745">Probe succeeds</text>
-  <!-- Half-Open to Open -->
-  <path d="M 440,295 Q 530,280 555,230" fill="none" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowred)"/>
-  <text x="530" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#dc3545">Probe fails</text>
-  <!-- Initial state indicator -->
-  <line x1="50" y1="170" x2="83" y2="170" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <circle cx="40" cy="170" r="8" fill="#333"/>
+  <circle cx="256" cy="349.7143" r="110.9333" fill="#d4edda" stroke="#28a745" stroke-width="3.4133" />
+  <text x="256" y="339.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8933" font-weight="bold">Closed</text>
+  <text x="256" y="380.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" fill="#666">(Normal)</text>
+  <circle cx="1024" cy="349.7143" r="110.9333" fill="#f8d7da" stroke="#dc3545" stroke-width="3.4133" />
+  <text x="1024" y="339.4286" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8933" font-weight="bold">Open</text>
+  <text x="1024" y="380.5714" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" fill="#666">(Failing fast)</text>
+  <circle cx="640" cy="617.1429" r="110.9333" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4133" />
+  <text x="640" y="606.8571" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.8933" font-weight="bold">Half-Open</text>
+  <text x="640" y="648" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.0667" fill="#666">(Testing)</text>
+  <path d="M 366.9333 318.8571 Q 640 164.5714 913.0667 318.8571" fill="none" stroke="#dc3545" stroke-width="3.4133" marker-end="url(#arrowred)" />
+  <text x="640" y="205.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#dc3545">Failure threshold exceeded</text>
+  <path d="M 955.7333 452.5714 Q 887.4667 596.5714 750.9333 617.1429" fill="none" stroke="#ffc107" stroke-width="3.4133" marker-end="url(#arrowhead)" />
+  <text x="921.6" y="565.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#ffc107">Timeout expires</text>
+  <path d="M 529.0667 596.5714 Q 358.4 534.8571 281.6 483.4286" fill="none" stroke="#28a745" stroke-width="3.4133" marker-end="url(#arrowgreen)" />
+  <text x="341.3333" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#28a745">Probe succeeds</text>
+  <path d="M 750.9333 606.8571 Q 904.5333 576 947.2 473.1429" fill="none" stroke="#dc3545" stroke-width="3.4133" marker-end="url(#arrowred)" />
+  <text x="904.5333" y="637.7143" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.7733" fill="#dc3545">Probe fails</text>
+  <line x1="85.3333" y1="349.7143" x2="141.6533" y2="349.7143" stroke="#333" stroke-width="3.4133" marker-end="url(#arrowhead)" />
+  <circle cx="68.2667" cy="349.7143" r="13.6533" fill="#333" />
 </svg>

@@ -1,34 +1,30 @@
-<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">The KL Penalty: Why It Matters</text>
-  <!-- Without KL -->
-  <rect x="30" y="55" width="360" height="190" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="210" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Without KL Penalty</text>
-  <text x="210" y="105" text-anchor="middle" font-size="11" fill="#555">Model exploits reward model weaknesses</text>
-  <rect x="50" y="120" width="320" height="70" rx="5" fill="#fff" stroke="#dc3545" stroke-width="1"/>
-  <text x="210" y="140" text-anchor="middle" font-size="10" fill="#333">Prompt: "Write a poem about nature"</text>
-  <text x="210" y="158" text-anchor="middle" font-size="10" fill="#dc3545">"AMAZING INCREDIBLE WONDERFUL</text>
-  <text x="210" y="172" text-anchor="middle" font-size="10" fill="#dc3545">NATURE IS THE BEST!!!!"</text>
-  <rect x="50" y="200" width="320" height="30" rx="3" fill="#f8d7da" stroke="#dc3545"/>
-  <text x="210" y="220" text-anchor="middle" font-size="10" fill="#dc3545">High reward score but garbage output</text>
-  <!-- With KL -->
-  <rect x="410" y="55" width="360" height="190" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="590" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">With KL Penalty</text>
-  <text x="590" y="105" text-anchor="middle" font-size="11" fill="#555">Model stays close to SFT model</text>
-  <text x="590" y="130" text-anchor="middle" font-size="11" fill="#555">while improving on preferences</text>
-  <rect x="430" y="150" width="320" height="80" rx="5" fill="#fff" stroke="#28a745" stroke-width="1"/>
-  <text x="590" y="175" text-anchor="middle" font-size="10" fill="#333">KL = policy(x) * log(policy(x)/ref(x))</text>
-  <text x="590" y="200" text-anchor="middle" font-size="10" fill="#28a745">Sweet spot: KL ~ 5-15 nats</text>
-  <text x="590" y="220" text-anchor="middle" font-size="10" fill="#555">Balance learning and stability</text>
-  <!-- Bottom explanation -->
-  <rect x="100" y="270" width="600" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="400" y="295" text-anchor="middle" font-size="12" fill="#856404">KL too high: model is drifting -> increase penalty</text>
-  <text x="400" y="315" text-anchor="middle" font-size="12" fill="#856404">KL too low: model isn't learning -> decrease penalty</text>
-  <!-- Gauge -->
-  <rect x="200" y="350" width="400" height="30" rx="15" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
-  <rect x="200" y="350" width="133" height="30" rx="15" fill="#dc3545" opacity="0.3"/>
-  <rect x="333" y="350" width="134" height="30" fill="#28a745" opacity="0.3"/>
-  <rect x="467" y="350" width="133" height="30" rx="15" fill="#dc3545" opacity="0.3"/>
-  <text x="266" y="370" text-anchor="middle" font-size="10" fill="#dc3545">Too low</text>
-  <text x="400" y="370" text-anchor="middle" font-size="10" font-weight="bold" fill="#28a745">Sweet spot</text>
-  <text x="534" y="370" text-anchor="middle" font-size="10" fill="#dc3545">Too high</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="51.4286" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">The KL Penalty: Why It Matters</text>
+  <rect x="48" y="94.2857" width="576" height="325.7143" rx="8" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2" />
+  <text x="336" y="137.1429" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#dc3545">Without KL Penalty</text>
+  <text x="336" y="180" text-anchor="middle" font-size="17.6" fill="#555">Model exploits reward model weaknesses</text>
+  <rect x="80" y="205.7143" width="512" height="120" rx="8" fill="#fff" stroke="#dc3545" stroke-width="1.6" />
+  <text x="336" y="240" text-anchor="middle" font-size="16" fill="#333">Prompt: "Write a poem about nature"</text>
+  <text x="336" y="270.8571" text-anchor="middle" font-size="16" fill="#dc3545">"AMAZING INCREDIBLE WONDERFUL</text>
+  <text x="336" y="294.8571" text-anchor="middle" font-size="16" fill="#dc3545">NATURE IS THE BEST!!!!"</text>
+  <rect x="80" y="342.8571" width="512" height="51.4286" rx="4.8" fill="#f8d7da" stroke="#dc3545" />
+  <text x="336" y="377.1429" text-anchor="middle" font-size="16" fill="#dc3545">High reward score but garbage output</text>
+  <rect x="656" y="94.2857" width="576" height="325.7143" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="944" y="137.1429" text-anchor="middle" font-size="22.4" font-weight="bold" fill="#28a745">With KL Penalty</text>
+  <text x="944" y="180" text-anchor="middle" font-size="17.6" fill="#555">Model stays close to SFT model</text>
+  <text x="944" y="222.8571" text-anchor="middle" font-size="17.6" fill="#555">while improving on preferences</text>
+  <rect x="688" y="257.1429" width="512" height="137.1429" rx="8" fill="#fff" stroke="#28a745" stroke-width="1.6" />
+  <text x="944" y="300" text-anchor="middle" font-size="16" fill="#333">KL = policy(x) * log(policy(x)/ref(x))</text>
+  <text x="944" y="342.8571" text-anchor="middle" font-size="16" fill="#28a745">Sweet spot: KL ~ 5-15 nats</text>
+  <text x="944" y="377.1429" text-anchor="middle" font-size="16" fill="#555">Balance learning and stability</text>
+  <rect x="160" y="462.8571" width="960" height="102.8571" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="640" y="505.7143" text-anchor="middle" font-size="19.2" fill="#856404">KL too high: model is drifting -&gt; increase penalty</text>
+  <text x="640" y="540" text-anchor="middle" font-size="19.2" fill="#856404">KL too low: model isn't learning -&gt; decrease penalty</text>
+  <rect x="320" y="600" width="640" height="51.4286" rx="24" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.6" />
+  <rect x="320" y="600" width="212.8" height="51.4286" rx="24" fill="#dc3545" opacity="0.3" />
+  <rect x="532.8" y="600" width="214.4" height="51.4286" fill="#28a745" opacity="0.3" />
+  <rect x="747.2" y="600" width="212.8" height="51.4286" rx="24" fill="#dc3545" opacity="0.3" />
+  <text x="425.6" y="634.2857" text-anchor="middle" font-size="16" fill="#dc3545">Too low</text>
+  <text x="640" y="634.2857" text-anchor="middle" font-size="16" font-weight="bold" fill="#28a745">Sweet spot</text>
+  <text x="854.4" y="634.2857" text-anchor="middle" font-size="16" fill="#dc3545">Too high</text>
 </svg>

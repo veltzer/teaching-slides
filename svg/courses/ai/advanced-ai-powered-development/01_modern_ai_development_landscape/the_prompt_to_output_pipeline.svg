@@ -1,11 +1,65 @@
-<svg viewBox="0 0 750 130" xmlns="http://www.w3.org/2000/svg">
-  <rect x="5" y="35" width="120" height="50" rx="8" fill="#E3F2FD" stroke="#1565C0"/><text x="65" y="65" text-anchor="middle" font-size="11">System Prompt</text>
-  <rect x="145" y="35" width="120" height="50" rx="8" fill="#E8F5E9" stroke="#2E7D32"/><text x="205" y="65" text-anchor="middle" font-size="11">User Message</text>
-  <rect x="285" y="35" width="120" height="50" rx="8" fill="#FFF3E0" stroke="#E65100"/><text x="345" y="65" text-anchor="middle" font-size="11">Context (RAG)</text>
-  <rect x="425" y="35" width="120" height="50" rx="8" fill="#F3E5F5" stroke="#6A1B9A"/><text x="485" y="65" text-anchor="middle" font-size="11">Tool Calls</text>
-  <rect x="565" y="35" width="150" height="50" rx="8" fill="#FCE4EC" stroke="#C62828"/><text x="640" y="65" text-anchor="middle" font-size="11">Response Generation</text>
-  <line x1="125" y1="60" x2="145" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="265" y1="60" x2="285" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="405" y1="60" x2="425" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
-  <line x1="545" y1="60" x2="565" y2="60" stroke="#333" stroke-width="1.5" marker-end="url(#ah)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="ah" markerWidth="29.1272" markerHeight="214.7217" refX="29.1272" refY="107.3609" orient="auto">
+      <polygon points="0,306.7455 10.1944,0" fill="#333" />
+    </marker>
+  </defs>
+  <rect width="2330.1688" height="12269.8224" fill="#f8f9fa" />
+  <text x="1165.0845" y="1165.6329" text-anchor="middle" font-size="61.1669" font-weight="bold" fill="#1a237e">The Prompt-to-Output Pipeline</text>
+  <rect x="29.1272" y="2453.9644" width="378.6525" height="2760.7098" rx="29.1272" fill="#E3F2FD" stroke="#1565C0" stroke-width="5.8254" />
+  <text x="218.4533" y="3312.8518" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#1565C0">System</text>
+  <text x="218.4533" y="3864.9943" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#1565C0">Prompt</text>
+  <text x="218.4533" y="4539.8343" text-anchor="middle" font-size="32.0398" fill="#555">persona +</text>
+  <text x="218.4533" y="4999.9525" text-anchor="middle" font-size="32.0398" fill="#555">constraints</text>
+  <line x1="407.7795" y1="3834.3196" x2="480.5973" y2="3834.3196" stroke="#333" stroke-width="5.8254" marker-end="url(#ah)" />
+  <rect x="480.5973" y="2453.9644" width="378.6525" height="2760.7098" rx="29.1272" fill="#E8F5E9" stroke="#2E7D32" stroke-width="5.8254" />
+  <text x="669.9235" y="3312.8518" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#2E7D32">User</text>
+  <text x="669.9235" y="3864.9943" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#2E7D32">Message</text>
+  <text x="669.9235" y="4539.8343" text-anchor="middle" font-size="32.0398" fill="#555">task or</text>
+  <text x="669.9235" y="4999.9525" text-anchor="middle" font-size="32.0398" fill="#555">question</text>
+  <line x1="859.2498" y1="3834.3196" x2="932.0675" y2="3834.3196" stroke="#333" stroke-width="5.8254" marker-end="url(#ah)" />
+  <rect x="932.0675" y="2453.9644" width="378.6525" height="2760.7098" rx="29.1272" fill="#FFF3E0" stroke="#E65100" stroke-width="5.8254" />
+  <text x="1121.3938" y="3312.8518" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#E65100">Context</text>
+  <text x="1121.3938" y="3864.9943" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#E65100">(RAG)</text>
+  <text x="1121.3938" y="4539.8343" text-anchor="middle" font-size="32.0398" fill="#555">retrieved</text>
+  <text x="1121.3938" y="4999.9525" text-anchor="middle" font-size="32.0398" fill="#555">files + docs</text>
+  <line x1="1310.72" y1="3834.3196" x2="1383.5378" y2="3834.3196" stroke="#333" stroke-width="5.8254" marker-end="url(#ah)" />
+  <rect x="1383.5378" y="2453.9644" width="378.6525" height="2760.7098" rx="29.1272" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="5.8254" />
+  <text x="1572.864" y="3312.8518" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#6A1B9A">Tool</text>
+  <text x="1572.864" y="3864.9943" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#6A1B9A">Calls</text>
+  <text x="1572.864" y="4539.8343" text-anchor="middle" font-size="32.0398" fill="#555">shell, files,</text>
+  <text x="1572.864" y="4999.9525" text-anchor="middle" font-size="32.0398" fill="#555">web search</text>
+  <line x1="1762.1902" y1="3834.3196" x2="1835.008" y2="3834.3196" stroke="#333" stroke-width="5.8254" marker-end="url(#ah)" />
+  <rect x="1835.008" y="2453.9644" width="451.4702" height="2760.7098" rx="29.1272" fill="#FCE4EC" stroke="#C62828" stroke-width="5.8254" />
+  <text x="2059.2867" y="3312.8518" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#C62828">Response</text>
+  <text x="2059.2867" y="3864.9943" text-anchor="middle" font-size="37.8653" font-weight="bold" fill="#C62828">Generation</text>
+  <text x="2059.2867" y="4539.8343" text-anchor="middle" font-size="32.0398" fill="#555">token by token</text>
+  <text x="2059.2867" y="4999.9525" text-anchor="middle" font-size="32.0398" fill="#555">autoregressive</text>
+  <rect x="29.1272" y="6441.6567" width="2213.6605" height="5214.6748" rx="29.1272" fill="#E8EAF6" stroke="#3949AB" stroke-width="4.3691" />
+  <text x="1165.0845" y="7361.8937" text-anchor="middle" font-size="43.6907" font-weight="bold" fill="#3949AB">Common Error Sources at Each Stage</text>
+  <rect x="72.8178" y="7822.0119" width="378.6525" height="3374.2014" rx="23.3016" fill="#BBDEFB" stroke="#1565C0" />
+  <text x="262.144" y="8527.5266" text-anchor="middle" font-size="34.9525" font-weight="bold" fill="#1565C0">System Prompt</text>
+  <text x="262.144" y="9141.0175" text-anchor="middle" font-size="32.0398" fill="#333">Conflicting</text>
+  <text x="262.144" y="9693.1595" text-anchor="middle" font-size="32.0398" fill="#333">instructions</text>
+  <text x="262.144" y="10245.302" text-anchor="middle" font-size="32.0398" fill="#333">Too vague</text>
+  <rect x="495.1608" y="7822.0119" width="378.6525" height="3374.2014" rx="23.3016" fill="#C8E6C9" stroke="#2E7D32" />
+  <text x="684.4872" y="8527.5266" text-anchor="middle" font-size="34.9525" font-weight="bold" fill="#2E7D32">User Message</text>
+  <text x="684.4872" y="9141.0175" text-anchor="middle" font-size="32.0398" fill="#333">Ambiguous</text>
+  <text x="684.4872" y="9693.1595" text-anchor="middle" font-size="32.0398" fill="#333">No examples</text>
+  <text x="684.4872" y="10245.302" text-anchor="middle" font-size="32.0398" fill="#333">Poor scope</text>
+  <rect x="917.504" y="7822.0119" width="378.6525" height="3374.2014" rx="23.3016" fill="#FFE0B2" stroke="#E65100" />
+  <text x="1106.8302" y="8527.5266" text-anchor="middle" font-size="34.9525" font-weight="bold" fill="#E65100">RAG Context</text>
+  <text x="1106.8302" y="9141.0175" text-anchor="middle" font-size="32.0398" fill="#333">Wrong files</text>
+  <text x="1106.8302" y="9693.1595" text-anchor="middle" font-size="32.0398" fill="#333">Stale index</text>
+  <text x="1106.8302" y="10245.302" text-anchor="middle" font-size="32.0398" fill="#333">Too much</text>
+  <rect x="1339.8472" y="7822.0119" width="378.6525" height="3374.2014" rx="23.3016" fill="#E1BEE7" stroke="#6A1B9A" />
+  <text x="1529.1733" y="8527.5266" text-anchor="middle" font-size="34.9525" font-weight="bold" fill="#6A1B9A">Tool Calls</text>
+  <text x="1529.1733" y="9141.0175" text-anchor="middle" font-size="32.0398" fill="#333">Wrong tool</text>
+  <text x="1529.1733" y="9693.1595" text-anchor="middle" font-size="32.0398" fill="#333">Bad args</text>
+  <text x="1529.1733" y="10245.302" text-anchor="middle" font-size="32.0398" fill="#333">Timeouts</text>
+  <rect x="1762.1902" y="7822.0119" width="436.9067" height="3374.2014" rx="23.3016" fill="#FFCDD2" stroke="#C62828" />
+  <text x="1980.6435" y="8527.5266" text-anchor="middle" font-size="34.9525" font-weight="bold" fill="#C62828">Generation</text>
+  <text x="1980.6435" y="9141.0175" text-anchor="middle" font-size="32.0398" fill="#333">Hallucination</text>
+  <text x="1980.6435" y="9693.1595" text-anchor="middle" font-size="32.0398" fill="#333">Truncation</text>
+  <text x="1980.6435" y="10245.302" text-anchor="middle" font-size="32.0398" fill="#333">Temperature</text>
 </svg>

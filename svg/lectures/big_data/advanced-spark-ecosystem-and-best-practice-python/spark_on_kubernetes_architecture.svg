@@ -1,58 +1,42 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="height: 400px; display: block; margin: auto;">
-  <rect width="800" height="400" fill="#f8f9fa"/>
-
-  <!-- Kubernetes Cluster Box -->
-  <rect x="50" y="30" width="700" height="340" fill="none" stroke="#326ce5" stroke-width="2" stroke-dasharray="5,5"/>
-  <text x="400" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#326ce5">Kubernetes Cluster</text>
-
-  <!-- API Server -->
-  <rect x="100" y="60" width="120" height="50" fill="#326ce5" rx="5"/>
-  <text x="160" y="90" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white">API Server</text>
-
-  <!-- Driver Pod -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="height: 400px; display: block; margin: auto;">
+  <rect width="1280" height="720" fill="#f8f9fa" />
+  <rect x="80" y="54" width="1120" height="612" fill="none" stroke="#326ce5" stroke-width="3.2" stroke-dasharray="8 8" />
+  <text x="640" y="36" font-family="Arial, sans-serif" font-size="25.6" font-weight="bold" text-anchor="middle" fill="#326ce5">Kubernetes Cluster</text>
+  <rect x="160" y="108" width="192" height="90" fill="#326ce5" rx="8" />
+  <text x="256" y="162" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white">API Server</text>
   <g transform="translate(300, 120)">
-    <rect x="0" y="0" width="200" height="80" fill="#ff6b6b" rx="5"/>
-    <text x="100" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Driver Pod</text>
-    <rect x="10" y="35" width="180" height="35" fill="#ff5252" rx="3"/>
-    <text x="100" y="58" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Spark Driver</text>
+    <rect x="0" y="0" width="320" height="144" fill="#ff6b6b" rx="8" />
+    <text x="160" y="45" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Driver Pod</text>
+    <rect x="16" y="63" width="288" height="63" fill="#ff5252" rx="4.8" />
+    <text x="160" y="104.4" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white">Spark Driver</text>
   </g>
-
-  <!-- Executor Pods -->
   <g transform="translate(100, 240)">
-    <rect x="0" y="0" width="150" height="80" fill="#4ecdc4" rx="5"/>
-    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Executor Pod 1</text>
-    <rect x="10" y="35" width="130" height="35" fill="#45b7aa" rx="3"/>
-    <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Spark Executor</text>
+    <rect x="0" y="0" width="240" height="144" fill="#4ecdc4" rx="8" />
+    <text x="120" y="45" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Executor Pod 1</text>
+    <rect x="16" y="63" width="208" height="63" fill="#45b7aa" rx="4.8" />
+    <text x="120" y="104.4" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white">Spark Executor</text>
   </g>
-
   <g transform="translate(275, 240)">
-    <rect x="0" y="0" width="150" height="80" fill="#4ecdc4" rx="5"/>
-    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Executor Pod 2</text>
-    <rect x="10" y="35" width="130" height="35" fill="#45b7aa" rx="3"/>
-    <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Spark Executor</text>
+    <rect x="0" y="0" width="240" height="144" fill="#4ecdc4" rx="8" />
+    <text x="120" y="45" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Executor Pod 2</text>
+    <rect x="16" y="63" width="208" height="63" fill="#45b7aa" rx="4.8" />
+    <text x="120" y="104.4" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white">Spark Executor</text>
   </g>
-
   <g transform="translate(450, 240)">
-    <rect x="0" y="0" width="150" height="80" fill="#4ecdc4" rx="5"/>
-    <text x="75" y="25" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="white" font-weight="bold">Executor Pod N</text>
-    <rect x="10" y="35" width="130" height="35" fill="#45b7aa" rx="3"/>
-    <text x="75" y="58" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="white">Spark Executor</text>
+    <rect x="0" y="0" width="240" height="144" fill="#4ecdc4" rx="8" />
+    <text x="120" y="45" font-family="Arial, sans-serif" font-size="22.4" text-anchor="middle" fill="white" font-weight="bold">Executor Pod N</text>
+    <rect x="16" y="63" width="208" height="63" fill="#45b7aa" rx="4.8" />
+    <text x="120" y="104.4" font-family="Arial, sans-serif" font-size="19.2" text-anchor="middle" fill="white">Spark Executor</text>
   </g>
-
-  <!-- Arrows showing communication -->
-  <path d="M 220 85 L 300 140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 400 200 L 175 240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 400 200 L 350 240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <path d="M 400 200 L 525 240" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Arrow marker definition -->
+  <path d="M 352 153 L 480 252" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <path d="M 640 360 L 280 432" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <path d="M 640 360 L 560 432" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <path d="M 640 360 L 840 432" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <!-- Labels -->
-  <text x="250" y="110" font-family="Arial, sans-serif" font-size="11" fill="#666">Submit</text>
-  <text x="320" y="225" font-family="Arial, sans-serif" font-size="11" fill="#666">Schedule</text>
+  <text x="400" y="198" font-family="Arial, sans-serif" font-size="17.6" fill="#666">Submit</text>
+  <text x="512" y="405" font-family="Arial, sans-serif" font-size="17.6" fill="#666">Schedule</text>
 </svg>

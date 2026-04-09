@@ -1,28 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="240" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arr" markerWidth="19.3939" markerHeight="21" refX="17.4545" refY="10.5" orient="auto">
+      <polygon points="0,30 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <!-- command1 box -->
-  <rect x="10" y="20" width="140" height="60" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="80" y="46" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">command1</text>
-  <text x="80" y="66" font-size="12" fill="#555" text-anchor="middle">stdout = 1</text>
-  <!-- pipe buffer box -->
-  <rect x="200" y="20" width="260" height="60" fill="#fff3e0" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="330" y="42" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">pipe buffer</text>
-  <text x="330" y="60" font-size="12" fill="#555" text-anchor="middle">4KB–64KB  (kernel memory)</text>
-  <!-- command2 box -->
-  <rect x="510" y="20" width="140" height="60" fill="#e8f5e9" stroke="#333" stroke-width="1.5" rx="4"/>
-  <text x="580" y="46" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">command2</text>
-  <text x="580" y="66" font-size="12" fill="#555" text-anchor="middle">stdin = 0</text>
-  <!-- arrows -->
-  <line x1="150" y1="50" x2="196" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="460" y1="50" x2="506" y2="50" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- steps -->
-  <text x="10" y="110" font-size="13" fill="#222">1. Shell creates a pipe (two file descriptors)</text>
-  <text x="10" y="130" font-size="13" fill="#222">2. Shell forks command1, connects its stdout to pipe write end</text>
-  <text x="10" y="150" font-size="13" fill="#222">3. Shell forks command2, connects its stdin to pipe read end</text>
-  <text x="10" y="170" font-size="13" fill="#222">4. Both commands run <tspan font-weight="bold">concurrently</tspan></text>
-  <text x="10" y="190" font-size="13" fill="#222">5. Kernel manages the buffer between them</text>
+  <rect x="19.3939" y="60" width="271.5152" height="180" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" rx="7.7576" />
+  <text x="155.1515" y="138" font-size="27.1515" font-weight="bold" fill="#222" text-anchor="middle">command1</text>
+  <text x="155.1515" y="198" font-size="23.2727" fill="#555" text-anchor="middle">stdout = 1</text>
+  <rect x="387.8788" y="60" width="504.2424" height="180" fill="#fff3e0" stroke="#333" stroke-width="2.9091" rx="7.7576" />
+  <text x="640" y="126" font-size="25.2121" font-weight="bold" fill="#222" text-anchor="middle">pipe buffer</text>
+  <text x="640" y="180" font-size="23.2727" fill="#555" text-anchor="middle">4KB–64KB  (kernel memory)</text>
+  <rect x="989.0909" y="60" width="271.5152" height="180" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" rx="7.7576" />
+  <text x="1124.8485" y="138" font-size="27.1515" font-weight="bold" fill="#222" text-anchor="middle">command2</text>
+  <text x="1124.8485" y="198" font-size="23.2727" fill="#555" text-anchor="middle">stdin = 0</text>
+  <line x1="290.9091" y1="150" x2="380.1212" y2="150" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <line x1="892.1212" y1="150" x2="981.3333" y2="150" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="19.3939" y="330" font-size="25.2121" fill="#222">1. Shell creates a pipe (two file descriptors)</text>
+  <text x="19.3939" y="390" font-size="25.2121" fill="#222">2. Shell forks command1, connects its stdout to pipe write end</text>
+  <text x="19.3939" y="450" font-size="25.2121" fill="#222">3. Shell forks command2, connects its stdin to pipe read end</text>
+  <text x="19.3939" y="510" font-size="25.2121" fill="#222">4. Both commands run <tspan font-weight="bold">concurrently</tspan>
+  </text>
+  <text x="19.3939" y="570" font-size="25.2121" fill="#222">5. Kernel manages the buffer between them</text>
 </svg>

@@ -1,37 +1,29 @@
-<svg width="600" height="250" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowd7_03_pubsub" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowd7_03_pubsub" markerWidth="21.3333" markerHeight="28.8" refX="19.2" refY="8.64" orient="auto">
+      <path d="M 0 0 L 0 17.28 L 19.2 8.64 z" fill="#333" />
     </marker>
   </defs>
-  <!-- Lifelines -->
-  <line x1="100" y1="55" x2="100" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="300" y1="55" x2="300" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="500" y1="55" x2="500" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <!-- Headers -->
-  <rect x="40" y="15" width="120" height="35" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="4"/>
-  <text x="100" y="37" text-anchor="middle" font-size="11" font-weight="bold">Publisher</text>
-  <rect x="240" y="15" width="120" height="35" fill="#fff3e0" stroke="#333" stroke-width="2" rx="4"/>
-  <text x="300" y="37" text-anchor="middle" font-size="11" font-weight="bold">Redis</text>
-  <rect x="440" y="15" width="120" height="35" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="4"/>
-  <text x="500" y="37" text-anchor="middle" font-size="11" font-weight="bold">Subscriber</text>
-  <!-- Step 1: Publish with msg ID -->
-  <line x1="100" y1="75" x2="298" y2="75" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
-  <text x="200" y="70" text-anchor="middle" font-size="10" fill="#1565c0">1. PUBLISH task:{id:"t1", data:...}</text>
-  <!-- Step 2: Deliver -->
-  <line x1="300" y1="100" x2="498" y2="100" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
-  <text x="400" y="95" text-anchor="middle" font-size="10" fill="#2e7d32">2. deliver message</text>
-  <!-- Step 3: Process -->
-  <rect x="475" y="110" width="50" height="25" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
-  <text x="500" y="127" text-anchor="middle" font-size="10" fill="#2e7d32">process</text>
-  <!-- Step 4: ACK back -->
-  <line x1="500" y1="150" x2="302" y2="150" stroke="#e65100" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
-  <text x="400" y="145" text-anchor="middle" font-size="10" fill="#e65100">3. PUBLISH ack:{id:"t1"}</text>
-  <!-- Step 5: Deliver ACK -->
-  <line x1="300" y1="175" x2="102" y2="175" stroke="#e65100" stroke-width="2" marker-end="url(#arrowd7_03_pubsub)"/>
-  <text x="200" y="170" text-anchor="middle" font-size="10" fill="#e65100">4. deliver ACK</text>
-  <!-- Timeout note -->
-  <rect x="20" y="195" width="180" height="40" fill="#ffebee" stroke="#c62828" stroke-width="1" rx="4"/>
-  <text x="110" y="212" text-anchor="middle" font-size="10" fill="#c62828">If no ACK within timeout:</text>
-  <text x="110" y="226" text-anchor="middle" font-size="10" fill="#c62828">re-publish message</text>
+  <line x1="213.3333" y1="158.4" x2="213.3333" y2="691.2" stroke="#333" stroke-width="3.2" stroke-dasharray="8.5333 6.4" />
+  <line x1="640" y1="158.4" x2="640" y2="691.2" stroke="#333" stroke-width="3.2" stroke-dasharray="8.5333 6.4" />
+  <line x1="1066.6667" y1="158.4" x2="1066.6667" y2="691.2" stroke="#333" stroke-width="3.2" stroke-dasharray="8.5333 6.4" />
+  <rect x="85.3333" y="43.2" width="256" height="100.8" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="8.5333" />
+  <text x="213.3333" y="106.56" text-anchor="middle" font-size="23.4667" font-weight="bold">Publisher</text>
+  <rect x="512" y="43.2" width="256" height="100.8" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="8.5333" />
+  <text x="640" y="106.56" text-anchor="middle" font-size="23.4667" font-weight="bold">Redis</text>
+  <rect x="938.6667" y="43.2" width="256" height="100.8" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="8.5333" />
+  <text x="1066.6667" y="106.56" text-anchor="middle" font-size="23.4667" font-weight="bold">Subscriber</text>
+  <line x1="213.3333" y1="216" x2="635.7333" y2="216" stroke="#1565c0" stroke-width="4.2667" marker-end="url(#arrowd7_03_pubsub)" />
+  <text x="426.6667" y="201.6" text-anchor="middle" font-size="21.3333" fill="#1565c0">1. PUBLISH task:{id:"t1", data:...}</text>
+  <line x1="640" y1="288" x2="1062.4" y2="288" stroke="#2e7d32" stroke-width="4.2667" marker-end="url(#arrowd7_03_pubsub)" />
+  <text x="853.3333" y="273.6" text-anchor="middle" font-size="21.3333" fill="#2e7d32">2. deliver message</text>
+  <rect x="1013.3333" y="316.8" width="106.6667" height="72" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.1333" rx="6.4" />
+  <text x="1066.6667" y="365.76" text-anchor="middle" font-size="21.3333" fill="#2e7d32">process</text>
+  <line x1="1066.6667" y1="432" x2="644.2667" y2="432" stroke="#e65100" stroke-width="4.2667" marker-end="url(#arrowd7_03_pubsub)" />
+  <text x="853.3333" y="417.6" text-anchor="middle" font-size="21.3333" fill="#e65100">3. PUBLISH ack:{id:"t1"}</text>
+  <line x1="640" y1="504" x2="217.6" y2="504" stroke="#e65100" stroke-width="4.2667" marker-end="url(#arrowd7_03_pubsub)" />
+  <text x="426.6667" y="489.6" text-anchor="middle" font-size="21.3333" fill="#e65100">4. deliver ACK</text>
+  <rect x="42.6667" y="561.6" width="384" height="115.2" fill="#ffebee" stroke="#c62828" stroke-width="2.1333" rx="8.5333" />
+  <text x="234.6667" y="610.56" text-anchor="middle" font-size="21.3333" fill="#c62828">If no ACK within timeout:</text>
+  <text x="234.6667" y="650.88" text-anchor="middle" font-size="21.3333" fill="#c62828">re-publish message</text>
 </svg>

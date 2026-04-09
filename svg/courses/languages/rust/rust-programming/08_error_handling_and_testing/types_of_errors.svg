@@ -1,30 +1,30 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arr_err" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arr_err" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
-  <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">Rust Error Handling: Two Categories</text>
-  <rect x="20" y="30" width="180" height="70" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="110" y="48" text-anchor="middle" font-size="11" font-weight="bold">Unrecoverable</text>
-  <text x="110" y="63" text-anchor="middle" font-size="10">panic!("msg")</text>
-  <text x="110" y="78" text-anchor="middle" font-size="10">Unwinds stack or aborts</text>
-  <text x="110" y="91" text-anchor="middle" font-size="10">Bugs, invariant violations</text>
-  <rect x="210" y="30" width="180" height="70" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="48" text-anchor="middle" font-size="11" font-weight="bold">Recoverable</text>
-  <text x="300" y="63" text-anchor="middle" font-size="10">Result&lt;T, E&gt;</text>
-  <text x="300" y="78" text-anchor="middle" font-size="10">Ok(value) | Err(error)</text>
-  <text x="300" y="91" text-anchor="middle" font-size="10">File not found, parse fail</text>
-  <rect x="400" y="30" width="180" height="70" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="490" y="48" text-anchor="middle" font-size="11" font-weight="bold">Absence</text>
-  <text x="490" y="63" text-anchor="middle" font-size="10">Option&lt;T&gt;</text>
-  <text x="490" y="78" text-anchor="middle" font-size="10">Some(value) | None</text>
-  <text x="490" y="91" text-anchor="middle" font-size="10">No null pointers</text>
-  <line x1="200" y1="65" x2="210" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr_err)"/>
-  <line x1="390" y1="65" x2="400" y2="65" stroke="#333" stroke-width="2" marker-end="url(#arr_err)"/>
-  <rect x="20" y="115" width="560" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="130" text-anchor="middle" font-size="10" font-weight="bold">The ? Operator: Propagate errors concisely</text>
-  <text x="300" y="144" text-anchor="middle" font-size="10">File::open("f.txt")?.read_to_string(&amp;mut s)? -- returns Err early if failure</text>
-  <rect x="100" y="165" width="400" height="25" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
-  <text x="300" y="182" text-anchor="middle" font-size="10">No exceptions -- errors are values you must handle or propagate</text>
+  <text x="640" y="54" text-anchor="middle" font-size="25.6" font-weight="bold">Rust Error Handling: Two Categories</text>
+  <rect x="42.6667" y="108" width="384" height="252" fill="#ffebee" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="234.6667" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Unrecoverable</text>
+  <text x="234.6667" y="226.8" text-anchor="middle" font-size="21.3333">panic!("msg")</text>
+  <text x="234.6667" y="280.8" text-anchor="middle" font-size="21.3333">Unwinds stack or aborts</text>
+  <text x="234.6667" y="327.6" text-anchor="middle" font-size="21.3333">Bugs, invariant violations</text>
+  <rect x="448" y="108" width="384" height="252" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Recoverable</text>
+  <text x="640" y="226.8" text-anchor="middle" font-size="21.3333">Result&lt;T, E&gt;</text>
+  <text x="640" y="280.8" text-anchor="middle" font-size="21.3333">Ok(value) | Err(error)</text>
+  <text x="640" y="327.6" text-anchor="middle" font-size="21.3333">File not found, parse fail</text>
+  <rect x="853.3333" y="108" width="384" height="252" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1045.3333" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Absence</text>
+  <text x="1045.3333" y="226.8" text-anchor="middle" font-size="21.3333">Option&lt;T&gt;</text>
+  <text x="1045.3333" y="280.8" text-anchor="middle" font-size="21.3333">Some(value) | None</text>
+  <text x="1045.3333" y="327.6" text-anchor="middle" font-size="21.3333">No null pointers</text>
+  <line x1="426.6667" y1="234" x2="448" y2="234" stroke="#333" stroke-width="4.2667" marker-end="url(#arr_err)" />
+  <line x1="832" y1="234" x2="853.3333" y2="234" stroke="#333" stroke-width="4.2667" marker-end="url(#arr_err)" />
+  <rect x="42.6667" y="414" width="1194.6667" height="126" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="640" y="468" text-anchor="middle" font-size="21.3333" font-weight="bold">The ? Operator: Propagate errors concisely</text>
+  <text x="640" y="518.4" text-anchor="middle" font-size="21.3333">File::open("f.txt")?.read_to_string(&amp;mut s)? -- returns Err early if failure</text>
+  <rect x="213.3333" y="594" width="853.3333" height="90" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" />
+  <text x="640" y="655.2" text-anchor="middle" font-size="21.3333">No exceptions -- errors are values you must handle or propagate</text>
 </svg>

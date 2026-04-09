@@ -1,49 +1,38 @@
-<svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif" font-size="13">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif" font-size="13">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="18.2857" markerHeight="12" refX="18.2857" refY="6" orient="auto">
+      <polygon points="0,17.1429 6.4,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-gray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    <marker id="arrowhead-gray" markerWidth="18.2857" markerHeight="12" refX="18.2857" refY="6" orient="auto">
+      <polygon points="0,17.1429 6.4,0" fill="#999" />
     </marker>
   </defs>
-  <!-- Title -->
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Layered Architecture</text>
-  <!-- Users -->
-  <rect x="500" y="50" width="100" height="35" rx="5" fill="#f9f9f9" stroke="#999" stroke-width="1.5"/>
-  <text x="550" y="72" text-anchor="middle" fill="#666">Users</text>
-  <!-- Presentation Layer -->
-  <rect x="150" y="50" width="250" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="275" y="77" text-anchor="middle" font-weight="bold" fill="#333">Presentation Layer</text>
-  <!-- Application Layer -->
-  <rect x="150" y="120" width="250" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="275" y="147" text-anchor="middle" font-weight="bold" fill="#333">Application Layer</text>
-  <!-- Business Logic Layer -->
-  <rect x="150" y="190" width="250" height="45" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="275" y="217" text-anchor="middle" font-weight="bold" fill="#333">Business Logic Layer</text>
-  <!-- Data Access Layer -->
-  <rect x="150" y="260" width="250" height="45" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="275" y="287" text-anchor="middle" font-weight="bold" fill="#333">Data Access Layer</text>
-  <!-- Database -->
-  <rect x="150" y="330" width="250" height="45" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="275" y="357" text-anchor="middle" font-weight="bold" fill="#333">Database</text>
-  <!-- Downward arrows between layers -->
-  <line x1="275" y1="95" x2="275" y2="118" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="275" y1="165" x2="275" y2="188" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="275" y1="235" x2="275" y2="258" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="275" y1="305" x2="275" y2="328" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <!-- Users <-> Presentation -->
-  <line x1="500" y1="67" x2="402" y2="67" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
-  <text x="450" y="60" text-anchor="middle" font-size="10" fill="#999">User Input</text>
-  <line x1="400" y1="78" x2="498" y2="78" stroke="#999" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowhead-gray)"/>
-  <text x="450" y="92" text-anchor="middle" font-size="10" fill="#999">Display</text>
-  <!-- Side labels -->
-  <text x="80" y="77" text-anchor="middle" font-size="11" fill="#4a90e2">UI / Views</text>
-  <text x="80" y="147" text-anchor="middle" font-size="11" fill="#28a745">Controllers</text>
-  <text x="80" y="217" text-anchor="middle" font-size="11" fill="#996600">Services</text>
-  <text x="80" y="287" text-anchor="middle" font-size="11" fill="#28a745">Repositories</text>
-  <text x="80" y="357" text-anchor="middle" font-size="11" fill="#4a90e2">Storage</text>
-  <!-- Description -->
-  <rect x="30" y="390" width="640" height="25" rx="5" fill="#f9f9f9" stroke="#ddd" stroke-width="1"/>
-  <text x="350" y="407" text-anchor="middle" font-size="12" fill="#555">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">Layered Architecture</text>
+  <rect x="914.2857" y="85.7143" width="182.8571" height="60" rx="8.5714" fill="#f9f9f9" stroke="#999" stroke-width="2.5714" />
+  <text x="1005.7143" y="123.4286" text-anchor="middle" fill="#666">Users</text>
+  <rect x="274.2857" y="85.7143" width="457.1429" height="77.1429" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="502.8571" y="132" text-anchor="middle" font-weight="bold" fill="#333">Presentation Layer</text>
+  <rect x="274.2857" y="205.7143" width="457.1429" height="77.1429" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="502.8571" y="252" text-anchor="middle" font-weight="bold" fill="#333">Application Layer</text>
+  <rect x="274.2857" y="325.7143" width="457.1429" height="77.1429" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
+  <text x="502.8571" y="372" text-anchor="middle" font-weight="bold" fill="#333">Business Logic Layer</text>
+  <rect x="274.2857" y="445.7143" width="457.1429" height="77.1429" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
+  <text x="502.8571" y="492" text-anchor="middle" font-weight="bold" fill="#333">Data Access Layer</text>
+  <rect x="274.2857" y="565.7143" width="457.1429" height="77.1429" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
+  <text x="502.8571" y="612" text-anchor="middle" font-weight="bold" fill="#333">Database</text>
+  <line x1="502.8571" y1="162.8571" x2="502.8571" y2="202.2857" stroke="#4a90e2" stroke-width="3.4286" marker-end="url(#arrowhead)" />
+  <line x1="502.8571" y1="282.8571" x2="502.8571" y2="322.2857" stroke="#28a745" stroke-width="3.4286" marker-end="url(#arrowhead)" />
+  <line x1="502.8571" y1="402.8571" x2="502.8571" y2="442.2857" stroke="#ffc107" stroke-width="3.4286" marker-end="url(#arrowhead)" />
+  <line x1="502.8571" y1="522.8571" x2="502.8571" y2="562.2857" stroke="#28a745" stroke-width="3.4286" marker-end="url(#arrowhead)" />
+  <line x1="914.2857" y1="114.8571" x2="735.0857" y2="114.8571" stroke="#999" stroke-width="2.5714" stroke-dasharray="8.5714 5.1429" marker-end="url(#arrowhead-gray)" />
+  <text x="822.8571" y="102.8571" text-anchor="middle" font-size="17.1429" fill="#999">User Input</text>
+  <line x1="731.4286" y1="133.7143" x2="910.6286" y2="133.7143" stroke="#999" stroke-width="2.5714" stroke-dasharray="8.5714 5.1429" marker-end="url(#arrowhead-gray)" />
+  <text x="822.8571" y="157.7143" text-anchor="middle" font-size="17.1429" fill="#999">Display</text>
+  <text x="146.2857" y="132" text-anchor="middle" font-size="18.8571" fill="#4a90e2">UI / Views</text>
+  <text x="146.2857" y="252" text-anchor="middle" font-size="18.8571" fill="#28a745">Controllers</text>
+  <text x="146.2857" y="372" text-anchor="middle" font-size="18.8571" fill="#996600">Services</text>
+  <text x="146.2857" y="492" text-anchor="middle" font-size="18.8571" fill="#28a745">Repositories</text>
+  <text x="146.2857" y="612" text-anchor="middle" font-size="18.8571" fill="#4a90e2">Storage</text>
+  <rect x="54.8571" y="668.5714" width="1170.2857" height="42.8571" rx="8.5714" fill="#f9f9f9" stroke="#ddd" stroke-width="1.7143" />
+  <text x="640" y="697.7143" text-anchor="middle" font-size="20.5714" fill="#555">Each layer only communicates with the layer directly below it, enforcing separation of concerns.</text>
 </svg>

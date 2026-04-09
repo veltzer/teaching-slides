@@ -1,31 +1,27 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Distributed Training Strategies</text>
-  <!-- Data Parallel -->
-  <rect x="40" y="55" width="340" height="130" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="210" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Data Parallel</text>
-  <text x="210" y="105" text-anchor="middle" font-size="11" fill="#555">Same model on each GPU,</text>
-  <text x="210" y="123" text-anchor="middle" font-size="11" fill="#555">different data batches</text>
-  <rect x="70" y="140" width="280" height="25" rx="3" fill="#fff3cd" stroke="#ffc107"/>
-  <text x="210" y="158" text-anchor="middle" font-size="10" fill="#856404">Simple but memory-limited</text>
-  <!-- Tensor Parallel -->
-  <rect x="420" y="55" width="340" height="130" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="590" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Tensor Parallel</text>
-  <text x="590" y="105" text-anchor="middle" font-size="11" fill="#555">Split individual layers</text>
-  <text x="590" y="123" text-anchor="middle" font-size="11" fill="#555">across GPUs (within node)</text>
-  <rect x="450" y="140" width="280" height="25" rx="3" fill="#fff3cd" stroke="#ffc107"/>
-  <text x="590" y="158" text-anchor="middle" font-size="10" fill="#856404">Attention heads distributed</text>
-  <!-- Pipeline Parallel -->
-  <rect x="40" y="210" width="340" height="130" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="210" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">Pipeline Parallel</text>
-  <text x="210" y="260" text-anchor="middle" font-size="11" fill="#555">Different layers on different</text>
-  <text x="210" y="278" text-anchor="middle" font-size="11" fill="#555">GPUs (across nodes)</text>
-  <rect x="70" y="295" width="280" height="25" rx="3" fill="#e8f4f8" stroke="#4a90e2"/>
-  <text x="210" y="313" text-anchor="middle" font-size="10" fill="#4a90e2">Micro-batching for efficiency</text>
-  <!-- ZeRO -->
-  <rect x="420" y="210" width="340" height="130" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="590" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">ZeRO (DeepSpeed)</text>
-  <text x="590" y="260" text-anchor="middle" font-size="11" fill="#555">Shard optimizer states,</text>
-  <text x="590" y="278" text-anchor="middle" font-size="11" fill="#555">gradients, and parameters</text>
-  <rect x="450" y="295" width="280" height="25" rx="3" fill="#d4edda" stroke="#28a745"/>
-  <text x="590" y="313" text-anchor="middle" font-size="10" fill="#28a745">Across all GPUs</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="56.8421" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Distributed Training Strategies</text>
+  <rect x="64" y="104.2105" width="544" height="246.3158" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="336" y="151.5789" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#4a90e2">Data Parallel</text>
+  <text x="336" y="198.9474" text-anchor="middle" font-size="17.6" fill="#555">Same model on each GPU,</text>
+  <text x="336" y="233.0526" text-anchor="middle" font-size="17.6" fill="#555">different data batches</text>
+  <rect x="112" y="265.2632" width="448" height="47.3684" rx="4.8" fill="#fff3cd" stroke="#ffc107" />
+  <text x="336" y="299.3684" text-anchor="middle" font-size="16" fill="#856404">Simple but memory-limited</text>
+  <rect x="672" y="104.2105" width="544" height="246.3158" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="944" y="151.5789" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#28a745">Tensor Parallel</text>
+  <text x="944" y="198.9474" text-anchor="middle" font-size="17.6" fill="#555">Split individual layers</text>
+  <text x="944" y="233.0526" text-anchor="middle" font-size="17.6" fill="#555">across GPUs (within node)</text>
+  <rect x="720" y="265.2632" width="448" height="47.3684" rx="4.8" fill="#fff3cd" stroke="#ffc107" />
+  <text x="944" y="299.3684" text-anchor="middle" font-size="16" fill="#856404">Attention heads distributed</text>
+  <rect x="64" y="397.8947" width="544" height="246.3158" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="336" y="445.2632" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#856404">Pipeline Parallel</text>
+  <text x="336" y="492.6316" text-anchor="middle" font-size="17.6" fill="#555">Different layers on different</text>
+  <text x="336" y="526.7368" text-anchor="middle" font-size="17.6" fill="#555">GPUs (across nodes)</text>
+  <rect x="112" y="558.9474" width="448" height="47.3684" rx="4.8" fill="#e8f4f8" stroke="#4a90e2" />
+  <text x="336" y="593.0526" text-anchor="middle" font-size="16" fill="#4a90e2">Micro-batching for efficiency</text>
+  <rect x="672" y="397.8947" width="544" height="246.3158" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="944" y="445.2632" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#4a90e2">ZeRO (DeepSpeed)</text>
+  <text x="944" y="492.6316" text-anchor="middle" font-size="17.6" fill="#555">Shard optimizer states,</text>
+  <text x="944" y="526.7368" text-anchor="middle" font-size="17.6" fill="#555">gradients, and parameters</text>
+  <rect x="720" y="558.9474" width="448" height="47.3684" rx="4.8" fill="#d4edda" stroke="#28a745" />
+  <text x="944" y="593.0526" text-anchor="middle" font-size="16" fill="#28a745">Across all GPUs</text>
 </svg>

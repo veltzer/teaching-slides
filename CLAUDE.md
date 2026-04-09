@@ -11,3 +11,5 @@
 
 ## Writing presentations or slides
 - read "doc/HowToWriteSlides.txt"
+- All SVG files must use `viewBox="0 0 1280 720"` (16:9, matches Marp slide dimensions). Use `scripts/fix_svg_aspect_ratio.py` to fix existing SVGs.
+- A slide with an SVG must contain ONLY the `##` heading and the image line. Any other content (bullets, text, code) must be moved to a separate slide before or after.

@@ -1,53 +1,47 @@
-<svg viewBox="0 0 850 420" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="15.0588" markerHeight="12" refX="15.0588" refY="6" orient="auto">
+      <polygon points="0,17.1429 5.2706,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="425" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Dagster Architecture</text>
-  <!-- Dagster Core -->
-  <rect x="30" y="55" width="230" height="170" rx="8" fill="#f0f4ff" stroke="#4a90e2" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="145" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#4a90e2">Dagster Core</text>
-  <rect x="50" y="92" width="90" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="95" y="113" text-anchor="middle" font-size="11" fill="#333">Jobs</text>
-  <rect x="150" y="92" width="95" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="197" y="113" text-anchor="middle" font-size="11" fill="#333">Ops/Assets</text>
-  <rect x="50" y="140" width="90" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="95" y="161" text-anchor="middle" font-size="11" fill="#333">Resources</text>
-  <rect x="150" y="140" width="95" height="32" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1"/>
-  <text x="197" y="161" text-anchor="middle" font-size="11" fill="#333">IO Managers</text>
-  <text x="145" y="205" text-anchor="middle" font-size="10" fill="#666">Define data pipelines</text>
-  <!-- Dagster Instance -->
-  <rect x="310" y="55" width="230" height="170" rx="8" fill="#fdf0ff" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="425" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#9c27b0">Dagster Instance</text>
-  <rect x="330" y="92" width="90" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
-  <text x="375" y="113" text-anchor="middle" font-size="11" fill="#333">Dagit UI</text>
-  <rect x="430" y="92" width="90" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
-  <text x="475" y="113" text-anchor="middle" font-size="11" fill="#333">Daemon</text>
-  <rect x="330" y="140" width="90" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
-  <text x="375" y="161" text-anchor="middle" font-size="11" fill="#333">Run Storage</text>
-  <rect x="430" y="140" width="90" height="32" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
-  <text x="475" y="161" text-anchor="middle" font-size="11" fill="#333">Event Store</text>
-  <text x="425" y="205" text-anchor="middle" font-size="10" fill="#666">Orchestrate and track</text>
-  <!-- Execution -->
-  <rect x="590" y="55" width="230" height="170" rx="8" fill="#f0fff0" stroke="#28a745" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="705" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#28a745">Execution</text>
-  <rect x="610" y="92" width="90" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="655" y="113" text-anchor="middle" font-size="11" fill="#333">Executors</text>
-  <rect x="710" y="92" width="95" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="757" y="113" text-anchor="middle" font-size="11" fill="#333">Run Queue</text>
-  <rect x="650" y="140" width="110" height="32" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1"/>
-  <text x="705" y="161" text-anchor="middle" font-size="11" fill="#333">Run Launcher</text>
-  <text x="705" y="205" text-anchor="middle" font-size="10" fill="#666">Execute pipeline runs</text>
-  <!-- Arrows between sections -->
-  <line x1="95" y1="124" x2="150" y2="138" stroke="#4a90e2" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <line x1="260" y1="130" x2="308" y2="130" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <line x1="540" y1="130" x2="588" y2="130" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <!-- Internal execution flow -->
-  <line x1="475" y1="124" x2="475" y2="138" stroke="#9c27b0" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <line x1="757" y1="124" x2="730" y2="138" stroke="#28a745" stroke-width="1" marker-end="url(#arrowhead)"/>
-  <!-- Flow description -->
-  <rect x="130" y="280" width="590" height="50" rx="5" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
-  <text x="425" y="300" text-anchor="middle" font-size="11" fill="#333">Core defines Jobs/Assets -> Instance orchestrates via Daemon -> Executors run tasks</text>
-  <text x="425" y="318" text-anchor="middle" font-size="10" fill="#888">Dagster is asset-aware: data lineage and observability are first-class concepts.</text>
+  <text x="640" y="42.8571" text-anchor="middle" font-size="24.0941" font-weight="bold" fill="#333">Dagster Architecture</text>
+  <rect x="45.1765" y="94.2857" width="346.3529" height="291.4286" rx="12.0471" fill="#f0f4ff" stroke="#4a90e2" stroke-width="2.2588" stroke-dasharray="9.0353 4.5176" />
+  <text x="218.3529" y="132" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#4a90e2">Dagster Core</text>
+  <rect x="75.2941" y="157.7143" width="135.5294" height="54.8571" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.2588" />
+  <text x="143.0588" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Jobs</text>
+  <rect x="225.8824" y="157.7143" width="143.0588" height="54.8571" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5059" />
+  <text x="296.6588" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Ops/Assets</text>
+  <rect x="75.2941" y="240" width="135.5294" height="54.8571" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5059" />
+  <text x="143.0588" y="276" text-anchor="middle" font-size="16.5647" fill="#333">Resources</text>
+  <rect x="225.8824" y="240" width="143.0588" height="54.8571" rx="7.5294" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5059" />
+  <text x="296.6588" y="276" text-anchor="middle" font-size="16.5647" fill="#333">IO Managers</text>
+  <text x="218.3529" y="351.4286" text-anchor="middle" font-size="15.0588" fill="#666">Define data pipelines</text>
+  <rect x="466.8235" y="94.2857" width="346.3529" height="291.4286" rx="12.0471" fill="#fdf0ff" stroke="#9c27b0" stroke-width="2.2588" stroke-dasharray="9.0353 4.5176" />
+  <text x="640" y="132" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#9c27b0">Dagster Instance</text>
+  <rect x="496.9412" y="157.7143" width="135.5294" height="54.8571" rx="7.5294" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2.2588" />
+  <text x="564.7059" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Dagit UI</text>
+  <rect x="647.5294" y="157.7143" width="135.5294" height="54.8571" rx="7.5294" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5059" />
+  <text x="715.2941" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Daemon</text>
+  <rect x="496.9412" y="240" width="135.5294" height="54.8571" rx="7.5294" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5059" />
+  <text x="564.7059" y="276" text-anchor="middle" font-size="16.5647" fill="#333">Run Storage</text>
+  <rect x="647.5294" y="240" width="135.5294" height="54.8571" rx="7.5294" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5059" />
+  <text x="715.2941" y="276" text-anchor="middle" font-size="16.5647" fill="#333">Event Store</text>
+  <text x="640" y="351.4286" text-anchor="middle" font-size="15.0588" fill="#666">Orchestrate and track</text>
+  <rect x="888.4706" y="94.2857" width="346.3529" height="291.4286" rx="12.0471" fill="#f0fff0" stroke="#28a745" stroke-width="2.2588" stroke-dasharray="9.0353 4.5176" />
+  <text x="1061.6471" y="132" text-anchor="middle" font-size="18.0706" font-weight="bold" fill="#28a745">Execution</text>
+  <rect x="918.5882" y="157.7143" width="135.5294" height="54.8571" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="2.2588" />
+  <text x="986.3529" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Executors</text>
+  <rect x="1069.1765" y="157.7143" width="143.0588" height="54.8571" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="1.5059" />
+  <text x="1139.9529" y="193.7143" text-anchor="middle" font-size="16.5647" fill="#333">Run Queue</text>
+  <rect x="978.8235" y="240" width="165.6471" height="54.8571" rx="7.5294" fill="#d4edda" stroke="#28a745" stroke-width="1.5059" />
+  <text x="1061.6471" y="276" text-anchor="middle" font-size="16.5647" fill="#333">Run Launcher</text>
+  <text x="1061.6471" y="351.4286" text-anchor="middle" font-size="15.0588" fill="#666">Execute pipeline runs</text>
+  <line x1="143.0588" y1="212.5714" x2="225.8824" y2="236.5714" stroke="#4a90e2" stroke-width="1.5059" marker-end="url(#arrowhead)" />
+  <line x1="391.5294" y1="222.8571" x2="463.8118" y2="222.8571" stroke="#4a90e2" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="813.1765" y1="222.8571" x2="885.4588" y2="222.8571" stroke="#9c27b0" stroke-width="2.2588" marker-end="url(#arrowhead)" />
+  <line x1="715.2941" y1="212.5714" x2="715.2941" y2="236.5714" stroke="#9c27b0" stroke-width="1.5059" marker-end="url(#arrowhead)" />
+  <line x1="1139.9529" y1="212.5714" x2="1099.2941" y2="236.5714" stroke="#28a745" stroke-width="1.5059" marker-end="url(#arrowhead)" />
+  <rect x="195.7647" y="480" width="888.4706" height="85.7143" rx="7.5294" fill="#fafafa" stroke="#ccc" stroke-width="1.5059" />
+  <text x="640" y="514.2857" text-anchor="middle" font-size="16.5647" fill="#333">Core defines Jobs/Assets -&gt; Instance orchestrates via Daemon -&gt; Executors run tasks</text>
+  <text x="640" y="545.1429" text-anchor="middle" font-size="15.0588" fill="#888">Dagster is asset-aware: data lineage and observability are first-class concepts.</text>
 </svg>

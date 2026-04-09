@@ -1,45 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr4" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 Z" fill="#555"/>
+    <marker id="arr4" markerWidth="17.0667" markerHeight="15.1579" refX="14.9333" refY="5.6842" orient="auto">
+      <path d="M 0 0 L 0 11.3684 L 17.0667 5.6842 Z" fill="#555" />
     </marker>
   </defs>
-  <!-- Control Unit outer box -->
-  <rect x="10" y="10" width="560" height="230" rx="4" fill="#e3f2fd" stroke="#333333" stroke-width="1.5"/>
-  <text x="290" y="35" text-anchor="middle" font-size="15" font-weight="bold" fill="#222222">Control Unit</text>
-  <!-- Instruction Register -->
-  <rect x="40" y="55" width="155" height="70" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="118" y="83" text-anchor="middle" font-size="13" fill="#222222">Instruction</text>
-  <text x="118" y="100" text-anchor="middle" font-size="13" fill="#222222">Register (IR)</text>
-  <!-- Instruction Decoder -->
-  <rect x="280" y="55" width="160" height="70" rx="4" fill="#f0f4f8" stroke="#333333" stroke-width="1.5"/>
-  <text x="360" y="83" text-anchor="middle" font-size="13" fill="#222222">Instruction</text>
-  <text x="360" y="100" text-anchor="middle" font-size="13" fill="#222222">Decoder</text>
-  <!-- IR -> Decoder arrow -->
-  <line x1="195" y1="90" x2="280" y2="90" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <!-- Decoder -> Control Signal Generator arrow -->
-  <line x1="360" y1="125" x2="360" y2="155" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <!-- Control Signal Generator -->
-  <rect x="280" y="155" width="160" height="60" rx="4" fill="#fff3e0" stroke="#333333" stroke-width="1.5"/>
-  <text x="360" y="180" text-anchor="middle" font-size="13" fill="#222222">Control Signal</text>
-  <text x="360" y="198" text-anchor="middle" font-size="13" fill="#222222">Generator</text>
-  <!-- Line from CSG down out of box -->
-  <line x1="360" y1="215" x2="360" y2="255" stroke="#555" stroke-width="1.5"/>
-  <!-- Horizontal spread -->
-  <line x1="100" y1="255" x2="530" y2="255" stroke="#555" stroke-width="1.5"/>
-  <!-- Down to ALU -->
-  <line x1="100" y1="255" x2="100" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <!-- Down to Registers -->
-  <line x1="360" y1="255" x2="360" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <!-- Down to Memory -->
-  <line x1="530" y1="255" x2="530" y2="285" stroke="#555" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <!-- ALU box -->
-  <rect x="35" y="285" width="130" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
-  <text x="100" y="310" text-anchor="middle" font-size="13" fill="#222222">ALU</text>
-  <!-- Registers box -->
-  <rect x="285" y="285" width="150" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
-  <text x="360" y="310" text-anchor="middle" font-size="13" fill="#222222">Registers</text>
-  <!-- Memory box -->
-  <rect x="460" y="285" width="130" height="40" rx="4" fill="#e8f5e9" stroke="#333333" stroke-width="1.5"/>
-  <text x="525" y="310" text-anchor="middle" font-size="13" fill="#222222">Memory</text>
+  <rect x="21.3333" y="18.9474" width="1194.6667" height="435.7895" rx="7.5789" fill="#e3f2fd" stroke="#333333" stroke-width="2.8421" />
+  <text x="618.6667" y="66.3158" text-anchor="middle" font-size="28.4211" font-weight="bold" fill="#222222">Control Unit</text>
+  <rect x="85.3333" y="104.2105" width="330.6667" height="132.6316" rx="7.5789" fill="#f0f4f8" stroke="#333333" stroke-width="2.8421" />
+  <text x="251.7333" y="157.2632" text-anchor="middle" font-size="24.6316" fill="#222222">Instruction</text>
+  <text x="251.7333" y="189.4737" text-anchor="middle" font-size="24.6316" fill="#222222">Register (IR)</text>
+  <rect x="597.3333" y="104.2105" width="341.3333" height="132.6316" rx="7.5789" fill="#f0f4f8" stroke="#333333" stroke-width="2.8421" />
+  <text x="768" y="157.2632" text-anchor="middle" font-size="24.6316" fill="#222222">Instruction</text>
+  <text x="768" y="189.4737" text-anchor="middle" font-size="24.6316" fill="#222222">Decoder</text>
+  <line x1="416" y1="170.5263" x2="597.3333" y2="170.5263" stroke="#555" stroke-width="2.8421" marker-end="url(#arr4)" />
+  <line x1="768" y1="236.8421" x2="768" y2="293.6842" stroke="#555" stroke-width="2.8421" marker-end="url(#arr4)" />
+  <rect x="597.3333" y="293.6842" width="341.3333" height="113.6842" rx="7.5789" fill="#fff3e0" stroke="#333333" stroke-width="2.8421" />
+  <text x="768" y="341.0526" text-anchor="middle" font-size="24.6316" fill="#222222">Control Signal</text>
+  <text x="768" y="375.1579" text-anchor="middle" font-size="24.6316" fill="#222222">Generator</text>
+  <line x1="768" y1="407.3684" x2="768" y2="483.1579" stroke="#555" stroke-width="2.8421" />
+  <line x1="213.3333" y1="483.1579" x2="1130.6667" y2="483.1579" stroke="#555" stroke-width="2.8421" />
+  <line x1="213.3333" y1="483.1579" x2="213.3333" y2="540" stroke="#555" stroke-width="2.8421" marker-end="url(#arr4)" />
+  <line x1="768" y1="483.1579" x2="768" y2="540" stroke="#555" stroke-width="2.8421" marker-end="url(#arr4)" />
+  <line x1="1130.6667" y1="483.1579" x2="1130.6667" y2="540" stroke="#555" stroke-width="2.8421" marker-end="url(#arr4)" />
+  <rect x="74.6667" y="540" width="277.3333" height="75.7895" rx="7.5789" fill="#e8f5e9" stroke="#333333" stroke-width="2.8421" />
+  <text x="213.3333" y="587.3684" text-anchor="middle" font-size="24.6316" fill="#222222">ALU</text>
+  <rect x="608" y="540" width="320" height="75.7895" rx="7.5789" fill="#e8f5e9" stroke="#333333" stroke-width="2.8421" />
+  <text x="768" y="587.3684" text-anchor="middle" font-size="24.6316" fill="#222222">Registers</text>
+  <rect x="981.3333" y="540" width="277.3333" height="75.7895" rx="7.5789" fill="#e8f5e9" stroke="#333333" stroke-width="2.8421" />
+  <text x="1120" y="587.3684" text-anchor="middle" font-size="24.6316" fill="#222222">Memory</text>
 </svg>

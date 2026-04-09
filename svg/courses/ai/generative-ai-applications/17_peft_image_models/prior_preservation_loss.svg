@@ -1,29 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 440" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Prior Preservation Loss</text>
-  <!-- Without -->
-  <rect x="30" y="55" width="300" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="180" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#dc3545">Without Prior Preservation</text>
-  <text x="50" y="105" font-size="12" fill="#333">"a photo of a dog" -></text>
-  <text x="50" y="125" font-size="12" fill="#dc3545">Always generates YOUR dog (forgot others!)</text>
-  <!-- With -->
-  <rect x="370" y="55" width="300" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="520" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">With Prior Preservation</text>
-  <text x="390" y="105" font-size="12" fill="#333">"a photo of sks dog" -> YOUR dog</text>
-  <text x="390" y="125" font-size="12" fill="#333">"a photo of a dog" -> generic dog</text>
-  <!-- Formula -->
-  <rect x="80" y="170" width="540" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="350" y="200" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">L = L_instance + lambda x L_prior</text>
-  <!-- L_instance -->
-  <rect x="30" y="245" width="310" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="185" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">L_instance: Learn YOUR subject</text>
-  <text x="50" y="295" font-size="11" fill="#333">"a photo of sks dog"</text>
-  <text x="50" y="315" font-size="11" fill="#555">-> denoising loss on YOUR images</text>
-  <!-- L_prior -->
-  <rect x="360" y="245" width="310" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="515" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#856404">L_prior: Don't forget the class</text>
-  <text x="380" y="295" font-size="11" fill="#333">"a photo of a dog"</text>
-  <text x="380" y="315" font-size="11" fill="#555">-> denoising loss on GENERATED images</text>
-  <!-- Lambda -->
-  <rect x="200" y="360" width="300" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="350" y="390" text-anchor="middle" font-size="13" fill="#333">lambda = 1.0 (equal weight, typically)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="49.0909" text-anchor="middle" font-size="29.4545" font-weight="bold" fill="#333">Prior Preservation Loss</text>
+  <rect x="54.8571" y="90" width="548.5714" height="147.2727" rx="8.1818" fill="#f8d7da" stroke="#dc3545" stroke-width="3.2727" />
+  <text x="329.1429" y="130.9091" text-anchor="middle" font-size="21.2727" font-weight="bold" fill="#dc3545">Without Prior Preservation</text>
+  <text x="91.4286" y="171.8182" font-size="19.6364" fill="#333">"a photo of a dog" -&gt;</text>
+  <text x="91.4286" y="204.5455" font-size="19.6364" fill="#dc3545">Always generates YOUR dog (forgot others!)</text>
+  <rect x="676.5714" y="90" width="548.5714" height="147.2727" rx="8.1818" fill="#d4edda" stroke="#28a745" stroke-width="3.2727" />
+  <text x="950.8571" y="130.9091" text-anchor="middle" font-size="21.2727" font-weight="bold" fill="#28a745">With Prior Preservation</text>
+  <text x="713.1429" y="171.8182" font-size="19.6364" fill="#333">"a photo of sks dog" -&gt; YOUR dog</text>
+  <text x="713.1429" y="204.5455" font-size="19.6364" fill="#333">"a photo of a dog" -&gt; generic dog</text>
+  <rect x="146.2857" y="278.1818" width="987.4286" height="81.8182" rx="8.1818" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2727" />
+  <text x="640" y="327.2727" text-anchor="middle" font-size="26.1818" font-weight="bold" fill="#333">L = L_instance + lambda x L_prior</text>
+  <rect x="54.8571" y="400.9091" width="566.8571" height="147.2727" rx="8.1818" fill="#d4edda" stroke="#28a745" stroke-width="3.2727" />
+  <text x="338.2857" y="441.8182" text-anchor="middle" font-size="21.2727" font-weight="bold" fill="#28a745">L_instance: Learn YOUR subject</text>
+  <text x="91.4286" y="482.7273" font-size="18" fill="#333">"a photo of sks dog"</text>
+  <text x="91.4286" y="515.4545" font-size="18" fill="#555">-&gt; denoising loss on YOUR images</text>
+  <rect x="658.2857" y="400.9091" width="566.8571" height="147.2727" rx="8.1818" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2727" />
+  <text x="941.7143" y="441.8182" text-anchor="middle" font-size="21.2727" font-weight="bold" fill="#856404">L_prior: Don't forget the class</text>
+  <text x="694.8571" y="482.7273" font-size="18" fill="#333">"a photo of a dog"</text>
+  <text x="694.8571" y="515.4545" font-size="18" fill="#555">-&gt; denoising loss on GENERATED images</text>
+  <rect x="365.7143" y="589.0909" width="548.5714" height="81.8182" rx="8.1818" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4545" />
+  <text x="640" y="638.1818" text-anchor="middle" font-size="21.2727" fill="#333">lambda = 1.0 (equal weight, typically)</text>
 </svg>

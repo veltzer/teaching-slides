@@ -1,68 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="370" font-family="sans-serif">
-  <text x="10" y="20" font-size="14" fill="#222" font-weight="bold">Trust Boundary Matrix</text>
-  <!-- header row -->
-  <rect x="10"  y="28" width="130" height="30" fill="#333"/>
-  <text x="75"  y="48" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">From / To</text>
-  <rect x="140" y="28" width="110" height="30" fill="#333"/>
-  <text x="195" y="48" text-anchor="middle" font-size="12" fill="#fff">Browser</text>
-  <rect x="250" y="28" width="110" height="30" fill="#333"/>
-  <text x="305" y="48" text-anchor="middle" font-size="12" fill="#fff">Web Srv</text>
-  <rect x="360" y="28" width="110" height="30" fill="#333"/>
-  <text x="415" y="48" text-anchor="middle" font-size="12" fill="#fff">App Srv</text>
-  <rect x="470" y="28" width="160" height="30" fill="#333"/>
-  <text x="550" y="48" text-anchor="middle" font-size="12" fill="#fff">DB</text>
-  <!-- rows -->
-  <rect x="10"  y="58" width="130" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="1"/>
-  <text x="22"  y="76" font-size="12" fill="#222">Browser</text>
-  <rect x="140" y="58" width="110" height="28" fill="#eee" stroke="#ccc" stroke-width="1"/>
-  <text x="195" y="76" text-anchor="middle" font-size="12" fill="#888">—</text>
-  <rect x="250" y="58" width="110" height="28" fill="#ffcdd2" stroke="#ccc" stroke-width="1"/>
-  <text x="305" y="76" text-anchor="middle" font-size="11" fill="#c62828">Untrusted</text>
-  <rect x="360" y="58" width="110" height="28" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
-  <text x="415" y="76" text-anchor="middle" font-size="11" fill="#888">N/A</text>
-  <rect x="470" y="58" width="160" height="28" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
-  <text x="550" y="76" text-anchor="middle" font-size="11" fill="#888">N/A</text>
-
-  <rect x="10"  y="86" width="130" height="28" fill="#fff" stroke="#ccc" stroke-width="1"/>
-  <text x="22"  y="104" font-size="12" fill="#222">Web Server</text>
-  <rect x="140" y="86" width="110" height="28" fill="#ffcdd2" stroke="#ccc" stroke-width="1"/>
-  <text x="195" y="104" text-anchor="middle" font-size="11" fill="#c62828">Untrusted</text>
-  <rect x="250" y="86" width="110" height="28" fill="#eee" stroke="#ccc" stroke-width="1"/>
-  <text x="305" y="104" text-anchor="middle" font-size="12" fill="#888">—</text>
-  <rect x="360" y="86" width="110" height="28" fill="#fff9c4" stroke="#ccc" stroke-width="1"/>
-  <text x="415" y="104" text-anchor="middle" font-size="11" fill="#f57f17">Semi-trust</text>
-  <rect x="470" y="86" width="160" height="28" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
-  <text x="550" y="104" text-anchor="middle" font-size="11" fill="#888">N/A</text>
-
-  <rect x="10"  y="114" width="130" height="28" fill="#f0f4f8" stroke="#ccc" stroke-width="1"/>
-  <text x="22"  y="132" font-size="12" fill="#222">App Server</text>
-  <rect x="140" y="114" width="110" height="28" fill="#ffcdd2" stroke="#ccc" stroke-width="1"/>
-  <text x="195" y="132" text-anchor="middle" font-size="11" fill="#c62828">Untrusted</text>
-  <rect x="250" y="114" width="110" height="28" fill="#c8e6c9" stroke="#ccc" stroke-width="1"/>
-  <text x="305" y="132" text-anchor="middle" font-size="11" fill="#2e7d32">Trusted</text>
-  <rect x="360" y="114" width="110" height="28" fill="#eee" stroke="#ccc" stroke-width="1"/>
-  <text x="415" y="132" text-anchor="middle" font-size="12" fill="#888">—</text>
-  <rect x="470" y="114" width="160" height="28" fill="#c8e6c9" stroke="#ccc" stroke-width="1"/>
-  <text x="550" y="132" text-anchor="middle" font-size="11" fill="#2e7d32">Trust</text>
-
-  <rect x="10"  y="142" width="130" height="28" fill="#fff" stroke="#ccc" stroke-width="1"/>
-  <text x="22"  y="160" font-size="12" fill="#222">Database</text>
-  <rect x="140" y="142" width="110" height="28" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
-  <text x="195" y="160" text-anchor="middle" font-size="11" fill="#888">N/A</text>
-  <rect x="250" y="142" width="110" height="28" fill="#f5f5f5" stroke="#ccc" stroke-width="1"/>
-  <text x="305" y="160" text-anchor="middle" font-size="11" fill="#888">N/A</text>
-  <rect x="360" y="142" width="110" height="28" fill="#c8e6c9" stroke="#ccc" stroke-width="1"/>
-  <text x="415" y="160" text-anchor="middle" font-size="11" fill="#2e7d32">Trusted</text>
-  <rect x="470" y="142" width="160" height="28" fill="#eee" stroke="#ccc" stroke-width="1"/>
-  <text x="550" y="160" text-anchor="middle" font-size="12" fill="#888">—</text>
-
-  <rect x="10" y="28" width="620" height="142" fill="none" stroke="#333" stroke-width="1.5"/>
-  <!-- Questions -->
-  <rect x="10" y="185" width="620" height="175" rx="4" fill="#fff3e0" stroke="#333" stroke-width="1.5"/>
-  <text x="25" y="206" font-size="13" fill="#222" font-weight="bold">At EACH boundary crossing, ask:</text>
-  <text x="25" y="228" font-size="12" fill="#222">1. Is input validated?</text>
-  <text x="25" y="248" font-size="12" fill="#222">2. Is authorization checked?</text>
-  <text x="25" y="268" font-size="12" fill="#222">3. Is data encrypted in transit?</text>
-  <text x="25" y="288" font-size="12" fill="#222">4. Are error details exposed?</text>
-  <text x="25" y="308" font-size="12" fill="#222">5. Can this boundary be bypassed?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <text x="20" y="38.9189" font-size="27.2432" fill="#222" font-weight="bold">Trust Boundary Matrix</text>
+  <rect x="20" y="54.4865" width="260" height="58.3784" fill="#333" />
+  <text x="150" y="93.4054" text-anchor="middle" font-size="23.3514" fill="#fff" font-weight="bold">From / To</text>
+  <rect x="280" y="54.4865" width="220" height="58.3784" fill="#333" />
+  <text x="390" y="93.4054" text-anchor="middle" font-size="23.3514" fill="#fff">Browser</text>
+  <rect x="500" y="54.4865" width="220" height="58.3784" fill="#333" />
+  <text x="610" y="93.4054" text-anchor="middle" font-size="23.3514" fill="#fff">Web Srv</text>
+  <rect x="720" y="54.4865" width="220" height="58.3784" fill="#333" />
+  <text x="830" y="93.4054" text-anchor="middle" font-size="23.3514" fill="#fff">App Srv</text>
+  <rect x="940" y="54.4865" width="320" height="58.3784" fill="#333" />
+  <text x="1100" y="93.4054" text-anchor="middle" font-size="23.3514" fill="#fff">DB</text>
+  <rect x="20" y="112.8649" width="260" height="54.4865" fill="#f0f4f8" stroke="#ccc" stroke-width="1.9459" />
+  <text x="44" y="147.8919" font-size="23.3514" fill="#222">Browser</text>
+  <rect x="280" y="112.8649" width="220" height="54.4865" fill="#eee" stroke="#ccc" stroke-width="1.9459" />
+  <text x="390" y="147.8919" text-anchor="middle" font-size="23.3514" fill="#888">—</text>
+  <rect x="500" y="112.8649" width="220" height="54.4865" fill="#ffcdd2" stroke="#ccc" stroke-width="1.9459" />
+  <text x="610" y="147.8919" text-anchor="middle" font-size="21.4054" fill="#c62828">Untrusted</text>
+  <rect x="720" y="112.8649" width="220" height="54.4865" fill="#f5f5f5" stroke="#ccc" stroke-width="1.9459" />
+  <text x="830" y="147.8919" text-anchor="middle" font-size="21.4054" fill="#888">N/A</text>
+  <rect x="940" y="112.8649" width="320" height="54.4865" fill="#f5f5f5" stroke="#ccc" stroke-width="1.9459" />
+  <text x="1100" y="147.8919" text-anchor="middle" font-size="21.4054" fill="#888">N/A</text>
+  <rect x="20" y="167.3514" width="260" height="54.4865" fill="#fff" stroke="#ccc" stroke-width="1.9459" />
+  <text x="44" y="202.3784" font-size="23.3514" fill="#222">Web Server</text>
+  <rect x="280" y="167.3514" width="220" height="54.4865" fill="#ffcdd2" stroke="#ccc" stroke-width="1.9459" />
+  <text x="390" y="202.3784" text-anchor="middle" font-size="21.4054" fill="#c62828">Untrusted</text>
+  <rect x="500" y="167.3514" width="220" height="54.4865" fill="#eee" stroke="#ccc" stroke-width="1.9459" />
+  <text x="610" y="202.3784" text-anchor="middle" font-size="23.3514" fill="#888">—</text>
+  <rect x="720" y="167.3514" width="220" height="54.4865" fill="#fff9c4" stroke="#ccc" stroke-width="1.9459" />
+  <text x="830" y="202.3784" text-anchor="middle" font-size="21.4054" fill="#f57f17">Semi-trust</text>
+  <rect x="940" y="167.3514" width="320" height="54.4865" fill="#f5f5f5" stroke="#ccc" stroke-width="1.9459" />
+  <text x="1100" y="202.3784" text-anchor="middle" font-size="21.4054" fill="#888">N/A</text>
+  <rect x="20" y="221.8378" width="260" height="54.4865" fill="#f0f4f8" stroke="#ccc" stroke-width="1.9459" />
+  <text x="44" y="256.8649" font-size="23.3514" fill="#222">App Server</text>
+  <rect x="280" y="221.8378" width="220" height="54.4865" fill="#ffcdd2" stroke="#ccc" stroke-width="1.9459" />
+  <text x="390" y="256.8649" text-anchor="middle" font-size="21.4054" fill="#c62828">Untrusted</text>
+  <rect x="500" y="221.8378" width="220" height="54.4865" fill="#c8e6c9" stroke="#ccc" stroke-width="1.9459" />
+  <text x="610" y="256.8649" text-anchor="middle" font-size="21.4054" fill="#2e7d32">Trusted</text>
+  <rect x="720" y="221.8378" width="220" height="54.4865" fill="#eee" stroke="#ccc" stroke-width="1.9459" />
+  <text x="830" y="256.8649" text-anchor="middle" font-size="23.3514" fill="#888">—</text>
+  <rect x="940" y="221.8378" width="320" height="54.4865" fill="#c8e6c9" stroke="#ccc" stroke-width="1.9459" />
+  <text x="1100" y="256.8649" text-anchor="middle" font-size="21.4054" fill="#2e7d32">Trust</text>
+  <rect x="20" y="276.3243" width="260" height="54.4865" fill="#fff" stroke="#ccc" stroke-width="1.9459" />
+  <text x="44" y="311.3514" font-size="23.3514" fill="#222">Database</text>
+  <rect x="280" y="276.3243" width="220" height="54.4865" fill="#f5f5f5" stroke="#ccc" stroke-width="1.9459" />
+  <text x="390" y="311.3514" text-anchor="middle" font-size="21.4054" fill="#888">N/A</text>
+  <rect x="500" y="276.3243" width="220" height="54.4865" fill="#f5f5f5" stroke="#ccc" stroke-width="1.9459" />
+  <text x="610" y="311.3514" text-anchor="middle" font-size="21.4054" fill="#888">N/A</text>
+  <rect x="720" y="276.3243" width="220" height="54.4865" fill="#c8e6c9" stroke="#ccc" stroke-width="1.9459" />
+  <text x="830" y="311.3514" text-anchor="middle" font-size="21.4054" fill="#2e7d32">Trusted</text>
+  <rect x="940" y="276.3243" width="320" height="54.4865" fill="#eee" stroke="#ccc" stroke-width="1.9459" />
+  <text x="1100" y="311.3514" text-anchor="middle" font-size="23.3514" fill="#888">—</text>
+  <rect x="20" y="54.4865" width="1240" height="276.3243" fill="none" stroke="#333" stroke-width="2.9189" />
+  <rect x="20" y="360" width="1240" height="340.5405" rx="7.7838" fill="#fff3e0" stroke="#333" stroke-width="2.9189" />
+  <text x="50" y="400.8649" font-size="25.2973" fill="#222" font-weight="bold">At EACH boundary crossing, ask:</text>
+  <text x="50" y="443.6757" font-size="23.3514" fill="#222">1. Is input validated?</text>
+  <text x="50" y="482.5946" font-size="23.3514" fill="#222">2. Is authorization checked?</text>
+  <text x="50" y="521.5135" font-size="23.3514" fill="#222">3. Is data encrypted in transit?</text>
+  <text x="50" y="560.4324" font-size="23.3514" fill="#222">4. Are error details exposed?</text>
+  <text x="50" y="599.3514" font-size="23.3514" fill="#222">5. Can this boundary be bypassed?</text>
 </svg>

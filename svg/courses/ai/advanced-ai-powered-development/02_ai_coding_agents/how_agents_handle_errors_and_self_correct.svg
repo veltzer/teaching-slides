@@ -1,16 +1,37 @@
-<svg viewBox="0 0 800 180" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="60" width="150" height="60" fill="#C05621" rx="8"/>
-  <text x="105" y="95" text-anchor="middle" fill="white" font-size="13">Error Occurs</text>
-  <rect x="220" y="60" width="150" height="60" fill="#2B6CB0" rx="8"/>
-  <text x="295" y="95" text-anchor="middle" fill="white" font-size="13">Read Output</text>
-  <rect x="410" y="60" width="150" height="60" fill="#6B46C1" rx="8"/>
-  <text x="485" y="95" text-anchor="middle" fill="white" font-size="13">Diagnose Cause</text>
-  <rect x="600" y="60" width="150" height="60" fill="#2F855A" rx="8"/>
-  <text x="675" y="95" text-anchor="middle" fill="white" font-size="13">Apply Fix + Retry</text>
-  <line x1="180" y1="90" x2="220" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="370" y1="90" x2="410" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <line x1="560" y1="90" x2="600" y2="90" stroke="white" stroke-width="2" marker-end="url(#arr)"/>
-  <path d="M675 120 Q675 160 295 160 Q295 160 295 120" stroke="white" stroke-width="1.5" fill="none" stroke-dasharray="5,5" marker-end="url(#arr)"/>
-  <text x="485" y="155" text-anchor="middle" fill="#CBD5E0" font-size="11">retry loop</text>
-  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="white"/></marker></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="25.6" markerHeight="112" refX="23.04" refY="56" orient="auto">
+      <polygon points="0,160 8.96,0" fill="white" />
+    </marker>
+  </defs>
+  <rect width="2048" height="6400" fill="#1a1a2e" />
+  <text x="1024" y="560" text-anchor="middle" fill="white" font-size="51.2" font-weight="bold">How Agents Handle Errors and Self-Correct</text>
+  <rect x="51.2" y="1280" width="422.4" height="1360" fill="#C05621" rx="25.6" />
+  <text x="261.12" y="1792" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">1. Error</text>
+  <text x="261.12" y="2112" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">Occurs</text>
+  <text x="261.12" y="2480" text-anchor="middle" fill="#FBD38D" font-size="28.16">test fails / crash</text>
+  <line x1="473.6" y1="1952" x2="550.4" y2="1952" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="550.4" y="1280" width="422.4" height="1360" fill="#2B6CB0" rx="25.6" />
+  <text x="760.32" y="1792" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">2. Read</text>
+  <text x="760.32" y="2112" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">Output</text>
+  <text x="760.32" y="2480" text-anchor="middle" fill="#BEE3F8" font-size="28.16">parse error message</text>
+  <line x1="972.8" y1="1952" x2="1049.6" y2="1952" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1049.6" y="1280" width="422.4" height="1360" fill="#6B46C1" rx="25.6" />
+  <text x="1259.52" y="1792" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">3. Diagnose</text>
+  <text x="1259.52" y="2112" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">Root Cause</text>
+  <text x="1259.52" y="2480" text-anchor="middle" fill="#E9D8FD" font-size="28.16">LLM reasons why</text>
+  <line x1="1472" y1="1952" x2="1548.8" y2="1952" stroke="white" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="1548.8" y="1280" width="448" height="1360" fill="#2F855A" rx="25.6" />
+  <text x="1771.52" y="1792" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">4. Fix + Retry</text>
+  <text x="1771.52" y="2112" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">Tool Call</text>
+  <text x="1771.52" y="2480" text-anchor="middle" fill="#C6F6D5" font-size="28.16">edit + re-run</text>
+  <path d="M 1771.52 2640 Q 1771.52 3680 1024 3680 Q 760.32 3680 760.32 2640" fill="none" stroke="white" stroke-width="5.12" stroke-dasharray="15.36 7.68" marker-end="url(#arr)" />
+  <text x="1280" y="4000" text-anchor="middle" fill="#F9A825" font-size="33.28">retry loop (up to max iterations)</text>
+  <rect x="768" y="4400" width="512" height="960" fill="#276749" rx="25.6" />
+  <text x="1024" y="4848" text-anchor="middle" fill="white" font-size="35.84" font-weight="bold">Done</text>
+  <text x="1024" y="5168" text-anchor="middle" fill="#C6F6D5" font-size="30.72">test passes</text>
+  <line x1="1771.52" y1="2640" x2="1280" y2="4400" stroke="#48BB78" stroke-width="5.12" marker-end="url(#arr)" />
+  <rect x="51.2" y="5520" width="1945.6" height="720" rx="20.48" fill="#F9A825" fill-opacity="0.15" stroke="#F9A825" stroke-width="2.56" />
+  <text x="1024" y="5888" text-anchor="middle" fill="#F9A825" font-size="33.28">Key principles: cap retries, detect loops, log each attempt for debugging</text>
+  <text x="1024" y="6144" text-anchor="middle" fill="#CBD5E0" font-size="28.16">Good agents set a max_turns limit and surface partial results on failure</text>
 </svg>

@@ -1,16 +1,16 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
-  <rect x="100" y="50" width="600" height="300" fill="#2C3E50" rx="10"/>
-  <text x="400" y="80" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Query Performance Analysis</text>
-  <rect x="150" y="100" width="500" height="40" fill="#E74C3C" rx="5"/>
-  <text x="160" y="125" fill="white" font-size="12">Before: SELECT * FROM orders WHERE status = 'pending'</text>
-  <text x="550" y="125" fill="white" font-size="12">Time: 2.5s</text>
-  <rect x="150" y="150" width="500" height="80" fill="#27AE60" rx="5"/>
-  <text x="160" y="175" fill="white" font-size="12">After: WITH pending_orders AS (</text>
-  <text x="180" y="195" fill="white" font-size="12">SELECT id, customer_id, total FROM orders</text>
-  <text x="180" y="215" fill="white" font-size="12">WHERE status = 'pending' AND created_at > NOW() - INTERVAL '7 days'</text>
-  <text x="160" y="235" fill="white" font-size="12">) SELECT * FROM pending_orders;</text>
-  <text x="550" y="195" fill="white" font-size="12">Time: 0.08s</text>
-  <rect x="150" y="250" width="500" height="60" fill="#3498DB" rx="5"/>
-  <text x="160" y="275" fill="white" font-size="12">Optimizations Applied:</text>
-  <text x="160" y="295" fill="white" font-size="12">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="256" y="162" width="1536" height="972" fill="#2C3E50" rx="25.6" />
+  <text x="1024" y="259.2" text-anchor="middle" fill="white" font-size="46.08" font-weight="bold">Query Performance Analysis</text>
+  <rect x="384" y="324" width="1280" height="129.6" fill="#E74C3C" rx="12.8" />
+  <text x="409.6" y="405" fill="white" font-size="30.72">Before: SELECT * FROM orders WHERE status = 'pending'</text>
+  <text x="1408" y="405" fill="white" font-size="30.72">Time: 2.5s</text>
+  <rect x="384" y="486" width="1280" height="259.2" fill="#27AE60" rx="12.8" />
+  <text x="409.6" y="567" fill="white" font-size="30.72">After: WITH pending_orders AS (</text>
+  <text x="460.8" y="631.8" fill="white" font-size="30.72">SELECT id, customer_id, total FROM orders</text>
+  <text x="460.8" y="696.6" fill="white" font-size="30.72">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
+  <text x="409.6" y="761.4" fill="white" font-size="30.72">) SELECT * FROM pending_orders;</text>
+  <text x="1408" y="631.8" fill="white" font-size="30.72">Time: 0.08s</text>
+  <rect x="384" y="810" width="1280" height="194.4" fill="#3498DB" rx="12.8" />
+  <text x="409.6" y="891" fill="white" font-size="30.72">Optimizations Applied:</text>
+  <text x="409.6" y="955.8" fill="white" font-size="30.72">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
 </svg>

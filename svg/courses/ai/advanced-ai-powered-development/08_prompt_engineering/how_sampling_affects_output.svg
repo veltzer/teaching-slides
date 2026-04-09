@@ -1,13 +1,29 @@
-<svg viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg" style="background:#1a1a2e">
-  <text x="20" y="20" fill="#e0e0e0" font-size="12" font-weight="bold">Temperature Spectrum</text>
-  <rect x="20" y="35" width="560" height="20" rx="4" fill="#16213e" stroke="#0f3460" stroke-width="1"/>
-  <rect x="20" y="35" width="187" height="20" rx="4" fill="#0f3460"/>
-  <rect x="207" y="35" width="186" height="20" rx="4" fill="#533483"/>
-  <rect x="393" y="35" width="187" height="20" rx="4" fill="#e94560"/>
-  <text x="113" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">0.0 - Deterministic</text>
-  <text x="300" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">0.4-0.7 Balanced</text>
-  <text x="486" y="49" text-anchor="middle" fill="#e0e0e0" font-size="10">1.0+ Creative</text>
-  <text x="20" y="85" fill="#e0e0e0" font-size="11">Code generation / JSON → temperature: 0.0</text>
-  <text x="20" y="105" fill="#e0e0e0" font-size="11">General tasks → temperature: 0.3-0.5</text>
-  <text x="20" y="125" fill="#e0e0e0" font-size="11">Brainstorming / creative → temperature: 0.8-1.0</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" style="background:#1a1a2e">
+  <text x="1820.4444" y="1005.0614" text-anchor="middle" fill="white" font-size="91.0223" font-weight="bold">Temperature: How Sampling Affects Output</text>
+  <rect x="182.0444" y="1719.1836" width="3276.8" height="1454.6937" rx="27.3067" fill="#16213e" stroke="#0f3460" stroke-width="6.8267" />
+  <rect x="191.1467" y="1772.0815" width="1092.2667" height="1348.8979" rx="22.7556" fill="#0f3460" />
+  <rect x="1283.4133" y="1772.0815" width="1083.1644" height="1348.8979" rx="22.7556" fill="#533483" />
+  <rect x="2366.5777" y="1772.0815" width="1083.1644" height="1348.8979" rx="22.7556" fill="#e94560" />
+  <text x="737.28" y="2380.4079" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">0.0 — Deterministic</text>
+  <text x="737.28" y="2856.4899" text-anchor="middle" fill="#90CAF9" font-size="54.6133">same output every run</text>
+  <text x="1824.9956" y="2380.4079" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">0.4-0.7 — Balanced</text>
+  <text x="1824.9956" y="2856.4899" text-anchor="middle" fill="#CE93D8" font-size="54.6133">slight variation</text>
+  <text x="2908.16" y="2380.4079" text-anchor="middle" fill="white" font-size="63.7156" font-weight="bold">1.0+ — Creative</text>
+  <text x="2908.16" y="2856.4899" text-anchor="middle" fill="#EF9A9A" font-size="54.6133">high variation</text>
+  <rect x="182.0444" y="3914.4492" width="1547.3777" height="3306.1222" rx="45.511" fill="#0f3460" stroke="#1565C0" stroke-width="6.8267" />
+  <text x="955.7333" y="4707.9185" text-anchor="middle" fill="#90CAF9" font-size="63.7156" font-weight="bold">Low Temperature (0.0-0.3)</text>
+  <text x="273.0667" y="5422.0407" fill="#E0E0E0" font-size="59.1644">▶ Code generation and completion</text>
+  <text x="273.0667" y="6030.3672" fill="#E0E0E0" font-size="59.1644">▶ JSON / structured output</text>
+  <text x="273.0667" y="6638.6937" fill="#E0E0E0" font-size="59.1644">▶ Bug fixing — need accuracy</text>
+  <text x="273.0667" y="7061.8778" fill="#90CAF9" font-size="50.0623">deterministic, reproducible, reliable</text>
+  <rect x="1911.4667" y="3914.4492" width="1547.3777" height="3306.1222" rx="45.511" fill="#3d1c6e" stroke="#9C27B0" stroke-width="6.8267" />
+  <text x="2685.1556" y="4707.9185" text-anchor="middle" fill="#CE93D8" font-size="63.7156" font-weight="bold">High Temperature (0.7-1.0)</text>
+  <text x="2002.489" y="5422.0407" fill="#E0E0E0" font-size="59.1644">▶ Brainstorming solutions</text>
+  <text x="2002.489" y="6030.3672" fill="#E0E0E0" font-size="59.1644">▶ Generating test variations</text>
+  <text x="2002.489" y="6638.6937" fill="#E0E0E0" font-size="59.1644">▶ Creative naming / docs</text>
+  <text x="2002.489" y="7061.8778" fill="#CE93D8" font-size="50.0623">diverse, creative, less predictable</text>
+  <rect x="182.0444" y="7802.4492" width="3276.8" height="2380.4079" rx="45.511" fill="#1a1a3e" stroke="#F9A825" stroke-width="6.8267" />
+  <text x="1820.4444" y="8595.9185" text-anchor="middle" fill="#F9A825" font-size="68.2667" font-weight="bold">Other Key Parameters</text>
+  <text x="273.0667" y="9257.1429" fill="#E0E0E0" font-size="59.1644">▶ top_p (nucleus sampling): 0.95 is a safe default — controls token probability mass</text>
+  <text x="273.0667" y="9865.4693" fill="#E0E0E0" font-size="59.1644">▶ frequency_penalty: reduces repetition in long outputs — useful for documentation</text>
 </svg>

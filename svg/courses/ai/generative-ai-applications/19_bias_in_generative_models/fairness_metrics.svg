@@ -1,29 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="620" height="490" font-family="sans-serif">
-  <!-- Outer frame + title bar -->
-  <rect x="10" y="10" width="600" height="470" rx="6" fill="#f0f4f8" stroke="#333" stroke-width="2"/>
-  <rect x="10" y="10" width="600" height="35" rx="6" fill="#333"/>
-  <text x="310" y="33" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">FAIRNESS METRICS</text>
-  <!-- Metric 1 -->
-  <rect x="30" y="55" width="560" height="80" rx="4" fill="#e3f2fd" stroke="#555" stroke-width="1.5"/>
-  <text x="50" y="74" font-size="13" fill="#222" font-weight="bold">DEMOGRAPHIC PARITY</text>
-  <text x="50" y="93" font-size="12" fill="#222" font-style="italic">P(positive | group A) = P(positive | group B)</text>
-  <text x="50" y="111" font-size="12" fill="#222">Same rate of positive outcomes regardless of group</text>
-  <!-- Metric 2 -->
-  <rect x="30" y="148" width="560" height="80" rx="4" fill="#e8f5e9" stroke="#555" stroke-width="1.5"/>
-  <text x="50" y="167" font-size="13" fill="#222" font-weight="bold">EQUALIZED ODDS</text>
-  <text x="50" y="186" font-size="12" fill="#222" font-style="italic">P(ŷ=1 | y=1, A) = P(ŷ=1 | y=1, B)</text>
-  <text x="50" y="204" font-size="12" fill="#222">Same true positive rate across groups</text>
-  <!-- Metric 3 -->
-  <rect x="30" y="241" width="560" height="80" rx="4" fill="#fff3e0" stroke="#555" stroke-width="1.5"/>
-  <text x="50" y="260" font-size="13" fill="#222" font-weight="bold">CALIBRATION</text>
-  <text x="50" y="279" font-size="12" fill="#222">Among those scored X%, ~X% should be positive</text>
-  <text x="50" y="297" font-size="12" fill="#222">for ALL groups</text>
-  <!-- Metric 4 -->
-  <rect x="30" y="334" width="560" height="60" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="50" y="353" font-size="13" fill="#222" font-weight="bold">INDIVIDUAL FAIRNESS</text>
-  <text x="50" y="372" font-size="12" fill="#222">Similar individuals should get similar outcomes</text>
-  <!-- Impossibility note -->
-  <rect x="30" y="408" width="560" height="60" rx="4" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
-  <text x="50" y="427" font-size="12" fill="#c62828" font-weight="bold">NOTE: Perfect fairness across ALL metrics simultaneously</text>
-  <text x="50" y="445" font-size="12" fill="#c62828" font-weight="bold">is mathematically impossible (Impossibility theorem, Chouldechova 2017)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <rect x="20.6452" y="14.6939" width="1238.7097" height="690.6122" rx="8.8163" fill="#f0f4f8" stroke="#333" stroke-width="2.9388" />
+  <rect x="20.6452" y="14.6939" width="1238.7097" height="51.4286" rx="8.8163" fill="#333" />
+  <text x="640" y="48.4898" text-anchor="middle" font-size="20.5714" fill="#fff" font-weight="bold">FAIRNESS METRICS</text>
+  <rect x="61.9355" y="80.8163" width="1156.129" height="117.551" rx="5.8776" fill="#e3f2fd" stroke="#555" stroke-width="2.2041" />
+  <text x="103.2258" y="108.7347" font-size="19.102" fill="#222" font-weight="bold">DEMOGRAPHIC PARITY</text>
+  <text x="103.2258" y="136.6531" font-size="17.6327" fill="#222" font-style="italic">P(positive | group A) = P(positive | group B)</text>
+  <text x="103.2258" y="163.102" font-size="17.6327" fill="#222">Same rate of positive outcomes regardless of group</text>
+  <rect x="61.9355" y="217.4694" width="1156.129" height="117.551" rx="5.8776" fill="#e8f5e9" stroke="#555" stroke-width="2.2041" />
+  <text x="103.2258" y="245.3878" font-size="19.102" fill="#222" font-weight="bold">EQUALIZED ODDS</text>
+  <text x="103.2258" y="273.3061" font-size="17.6327" fill="#222" font-style="italic">P(ŷ=1 | y=1, A) = P(ŷ=1 | y=1, B)</text>
+  <text x="103.2258" y="299.7551" font-size="17.6327" fill="#222">Same true positive rate across groups</text>
+  <rect x="61.9355" y="354.1224" width="1156.129" height="117.551" rx="5.8776" fill="#fff3e0" stroke="#555" stroke-width="2.2041" />
+  <text x="103.2258" y="382.0408" font-size="19.102" fill="#222" font-weight="bold">CALIBRATION</text>
+  <text x="103.2258" y="409.9592" font-size="17.6327" fill="#222">Among those scored X%, ~X% should be positive</text>
+  <text x="103.2258" y="436.4082" font-size="17.6327" fill="#222">for ALL groups</text>
+  <rect x="61.9355" y="490.7755" width="1156.129" height="88.1633" rx="5.8776" fill="#f0f4f8" stroke="#555" stroke-width="2.2041" />
+  <text x="103.2258" y="518.6939" font-size="19.102" fill="#222" font-weight="bold">INDIVIDUAL FAIRNESS</text>
+  <text x="103.2258" y="546.6122" font-size="17.6327" fill="#222">Similar individuals should get similar outcomes</text>
+  <rect x="61.9355" y="599.5102" width="1156.129" height="88.1633" rx="5.8776" fill="#ffebee" stroke="#c62828" stroke-width="2.2041" />
+  <text x="103.2258" y="627.4286" font-size="17.6327" fill="#c62828" font-weight="bold">NOTE: Perfect fairness across ALL metrics simultaneously</text>
+  <text x="103.2258" y="653.8776" font-size="17.6327" fill="#c62828" font-weight="bold">is mathematically impossible (Impossibility theorem, Chouldechova 2017)</text>
 </svg>

@@ -1,32 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 300" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Man-in-the-Middle (MITM) Attack</text>
-  <!-- Client -->
-  <rect x="40" y="80" width="140" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="110" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Client</text>
-  <text x="110" y="145" text-anchor="middle" font-size="11" fill="#555">Thinks it talks</text>
-  <text x="110" y="160" text-anchor="middle" font-size="11" fill="#555">to the server</text>
-  <!-- Attacker -->
-  <rect x="270" y="80" width="160" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="350" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#dc3545">Attacker</text>
-  <text x="350" y="140" text-anchor="middle" font-size="11" fill="#555">Intercepts &amp; modifies</text>
-  <text x="350" y="155" text-anchor="middle" font-size="11" fill="#555">all traffic</text>
-  <!-- Server -->
-  <rect x="520" y="80" width="140" height="80" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="590" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Server</text>
-  <!-- Arrows -->
-  <line x1="180" y1="100" x2="270" y2="100" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowR)"/>
-  <line x1="270" y1="140" x2="180" y2="140" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowR2)"/>
-  <line x1="430" y1="100" x2="520" y2="100" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowR)"/>
-  <line x1="520" y1="140" x2="430" y2="140" stroke="#dc3545" stroke-width="2" marker-end="url(#arrowR2)"/>
-  <!-- Warning -->
-  <rect x="150" y="210" width="400" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="350" y="240" text-anchor="middle" font-size="13" fill="#856404" font-weight="bold">TLS/HTTPS prevents MITM by authenticating the server</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="72" text-anchor="middle" font-size="32.9143" font-weight="bold" fill="#333">Man-in-the-Middle (MITM) Attack</text>
+  <rect x="73.1429" y="192" width="256" height="192" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6571" />
+  <text x="201.1429" y="276" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">Client</text>
+  <text x="201.1429" y="348" text-anchor="middle" font-size="20.1143" fill="#555">Thinks it talks</text>
+  <text x="201.1429" y="384" text-anchor="middle" font-size="20.1143" fill="#555">to the server</text>
+  <rect x="493.7143" y="192" width="292.5714" height="192" rx="9.1429" fill="#f8d7da" stroke="#dc3545" stroke-width="3.6571" />
+  <text x="640" y="276" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#dc3545">Attacker</text>
+  <text x="640" y="336" text-anchor="middle" font-size="20.1143" fill="#555">Intercepts &amp; modifies</text>
+  <text x="640" y="372" text-anchor="middle" font-size="20.1143" fill="#555">all traffic</text>
+  <rect x="950.8571" y="192" width="256" height="192" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="3.6571" />
+  <text x="1078.8571" y="276" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">Server</text>
+  <line x1="329.1429" y1="240" x2="493.7143" y2="240" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrowR)" />
+  <line x1="493.7143" y1="336" x2="329.1429" y2="336" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrowR2)" />
+  <line x1="786.2857" y1="240" x2="950.8571" y2="240" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrowR)" />
+  <line x1="950.8571" y1="336" x2="786.2857" y2="336" stroke="#dc3545" stroke-width="3.6571" marker-end="url(#arrowR2)" />
+  <rect x="274.2857" y="504" width="731.4286" height="120" rx="9.1429" fill="#fff3cd" stroke="#ffc107" stroke-width="3.6571" />
+  <text x="640" y="576" text-anchor="middle" font-size="23.7714" fill="#856404" font-weight="bold">TLS/HTTPS prevents MITM by authenticating the server</text>
   <defs>
-    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#dc3545"/>
+    <marker id="arrowR" markerWidth="18.2857" markerHeight="16.8" refX="18.2857" refY="8.4" orient="auto">
+      <polygon points="0,24 6.4,0" fill="#dc3545" />
     </marker>
-    <marker id="arrowR2" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#dc3545"/>
+    <marker id="arrowR2" markerWidth="18.2857" markerHeight="16.8" refX="0" refY="8.4" orient="auto">
+      <polygon points="0,0 6.4,24" fill="#dc3545" />
     </marker>
   </defs>
 </svg>

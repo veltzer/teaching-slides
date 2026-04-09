@@ -1,45 +1,35 @@
-<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#4a90e2" />
     </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#28a745"/>
+    <marker id="arrowhead-green" markerWidth="16" markerHeight="13.2632" refX="16" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 5.6,0" fill="#28a745" />
     </marker>
   </defs>
-  <text x="400" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Write-Behind (Write-Back) Pattern</text>
-  <!-- Application -->
-  <rect x="50" y="130" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="110" y="160" text-anchor="middle" font-size="13" fill="#333">Application</text>
-  <!-- Cache -->
-  <rect x="250" y="130" width="120" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="310" y="160" text-anchor="middle" font-size="13" fill="#333">Cache</text>
-  <!-- Queue -->
-  <rect x="450" y="130" width="120" height="50" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="510" y="160" text-anchor="middle" font-size="13" fill="#333">Queue</text>
-  <!-- Database -->
-  <rect x="650" y="130" width="120" height="50" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="710" y="160" text-anchor="middle" font-size="13" fill="#333">Database</text>
-  <!-- Step 1: Write to cache -->
-  <line x1="170" y1="148" x2="248" y2="148" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="210" y="140" text-anchor="middle" font-size="11" fill="#4a90e2">1. Write</text>
-  <!-- Step 2: Confirm -->
-  <line x1="248" y1="168" x2="172" y2="168" stroke="#28a745" stroke-width="2" marker-end="url(#arrowhead-green)"/>
-  <text x="210" y="188" text-anchor="middle" font-size="11" fill="#28a745">2. Confirm</text>
-  <!-- Step 3: Queue write -->
-  <line x1="370" y1="155" x2="448" y2="155" stroke="#ffc107" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="410" y="145" text-anchor="middle" font-size="11" fill="#996600">3. Queue</text>
-  <!-- Async note -->
-  <rect x="440" y="210" width="140" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="510" y="232" text-anchor="middle" font-size="11" fill="#333">Async processing</text>
-  <line x1="510" y1="180" x2="510" y2="208" stroke="#ffc107" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <!-- Step 4: Write to DB -->
-  <line x1="570" y1="155" x2="648" y2="155" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <text x="610" y="145" text-anchor="middle" font-size="11" fill="#4a90e2">4. Write (later)</text>
-  <!-- Timeline -->
-  <rect x="50" y="280" width="720" height="80" rx="5" fill="#f5f5f5" stroke="#ddd" stroke-width="1"/>
-  <text x="400" y="300" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Key Characteristics</text>
-  <text x="75" y="320" font-size="11" fill="#555">- Immediate response to app (write confirmed at cache level)</text>
-  <text x="75" y="338" font-size="11" fill="#555">- Database updated asynchronously via queue (eventual consistency)</text>
-  <text x="75" y="355" font-size="11" fill="#dc3545">- Risk: data loss if cache/queue fails before DB write</text>
+  <text x="640" y="47.3684" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Write-Behind (Write-Back) Pattern</text>
+  <rect x="80" y="246.3158" width="192" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="176" y="303.1579" text-anchor="middle" font-size="20.8" fill="#333">Application</text>
+  <rect x="400" y="246.3158" width="192" height="94.7368" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="496" y="303.1579" text-anchor="middle" font-size="20.8" fill="#333">Cache</text>
+  <rect x="720" y="246.3158" width="192" height="94.7368" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="816" y="303.1579" text-anchor="middle" font-size="20.8" fill="#333">Queue</text>
+  <rect x="1040" y="246.3158" width="192" height="94.7368" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="1136" y="303.1579" text-anchor="middle" font-size="20.8" fill="#333">Database</text>
+  <line x1="272" y1="280.4211" x2="396.8" y2="280.4211" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="336" y="265.2632" text-anchor="middle" font-size="17.6" fill="#4a90e2">1. Write</text>
+  <line x1="396.8" y1="318.3158" x2="275.2" y2="318.3158" stroke="#28a745" stroke-width="3.2" marker-end="url(#arrowhead-green)" />
+  <text x="336" y="356.2105" text-anchor="middle" font-size="17.6" fill="#28a745">2. Confirm</text>
+  <line x1="592" y1="293.6842" x2="716.8" y2="293.6842" stroke="#ffc107" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="656" y="274.7368" text-anchor="middle" font-size="17.6" fill="#996600">3. Queue</text>
+  <rect x="704" y="397.8947" width="224" height="66.3158" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="816" y="439.5789" text-anchor="middle" font-size="17.6" fill="#333">Async processing</text>
+  <line x1="816" y1="341.0526" x2="816" y2="394.1053" stroke="#ffc107" stroke-width="2.4" stroke-dasharray="6.4 4.8" />
+  <line x1="912" y1="293.6842" x2="1036.8" y2="293.6842" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <text x="976" y="274.7368" text-anchor="middle" font-size="17.6" fill="#4a90e2">4. Write (later)</text>
+  <rect x="80" y="530.5263" width="1152" height="151.5789" rx="8" fill="#f5f5f5" stroke="#ddd" stroke-width="1.6" />
+  <text x="640" y="568.4211" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Key Characteristics</text>
+  <text x="120" y="606.3158" font-size="17.6" fill="#555">- Immediate response to app (write confirmed at cache level)</text>
+  <text x="120" y="640.4211" font-size="17.6" fill="#555">- Database updated asynchronously via queue (eventual consistency)</text>
+  <text x="120" y="672.6316" font-size="17.6" fill="#dc3545">- Risk: data loss if cache/queue fails before DB write</text>
 </svg>

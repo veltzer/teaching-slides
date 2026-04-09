@@ -1,24 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="170">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
+    <marker id="arr" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
+      <polygon points="0,179.377 13.1644,0" fill="#555" />
+    </marker>
+    <marker id="arrg" markerWidth="37.6124" markerHeight="125.5642" refX="33.8512" refY="62.7819" orient="auto">
+      <polygon points="0,179.377 13.1644,0" fill="#2E7D32" />
     </marker>
   </defs>
-  <!-- Server box -->
-  <rect x="10" y="20" width="190" height="65" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="105" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
-  <text x="105" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Needs LLM assistance</text>
-  <!-- Arrow Server → Host -->
-  <line x1="200" y1="40" x2="360" y2="40" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="280" y="33" font-family="sans-serif" font-size="11" fill="#333" text-anchor="middle">sampling/createMessage</text>
-  <!-- Host box -->
-  <rect x="360" y="20" width="190" height="65" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="455" y="48" font-family="sans-serif" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host</text>
-  <text x="455" y="68" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Routes to LLM, returns completion</text>
-  <!-- Arrow Host → Server (return) -->
-  <line x1="360" y1="70" x2="200" y2="110" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- Server uses result -->
-  <rect x="10" y="100" width="190" height="55" rx="4" fill="#e8f5e9" stroke="#333" stroke-width="1.5"/>
-  <text x="105" y="122" font-family="sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="middle">Server</text>
-  <text x="105" y="142" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">Uses completion to finalize output</text>
+  <rect width="3008.9992" height="7175.0863" fill="#f8f9fa" />
+  <text x="1504.4996" y="627.8201" text-anchor="middle" font-size="75.225" font-weight="bold" fill="#1a237e">MCP Sampling: Server-Initiated LLM Calls</text>
+  <rect x="112.8374" y="1435.0172" width="827.4748" height="2152.526" rx="37.6124" fill="#E8F5E9" stroke="#2E7D32" stroke-width="7.5225" />
+  <text x="526.5749" y="2026.9618" text-anchor="middle" font-size="56.4187" font-weight="bold" fill="#2E7D32">MCP Server</text>
+  <text x="526.5749" y="2475.4049" text-anchor="middle" font-size="45.1349" fill="#555">analyze_error_logs()</text>
+  <text x="526.5749" y="2834.1593" text-anchor="middle" font-size="45.1349" fill="#555">fetches logs...</text>
+  <text x="526.5749" y="3192.9137" text-anchor="middle" font-size="45.1349" fill="#555">needs LLM reasoning</text>
+  <line x1="940.3122" y1="2331.903" x2="1391.6622" y2="2331.903" stroke="#555" stroke-width="7.5225" marker-end="url(#arr)" />
+  <text x="1165.9871" y="2116.6505" text-anchor="middle" font-size="45.1349" fill="#333">sampling/</text>
+  <text x="1165.9871" y="2385.7162" text-anchor="middle" font-size="45.1349" fill="#333">createMessage</text>
+  <rect x="1391.6622" y="1435.0172" width="827.4748" height="2152.526" rx="37.6124" fill="#E3F2FD" stroke="#1565C0" stroke-width="7.5225" />
+  <text x="1805.3995" y="2026.9618" text-anchor="middle" font-size="56.4187" font-weight="bold" fill="#1565C0">Host</text>
+  <text x="1805.3995" y="2475.4049" text-anchor="middle" font-size="45.1349" fill="#555">Claude Desktop /</text>
+  <text x="1805.3995" y="2834.1593" text-anchor="middle" font-size="45.1349" fill="#555">Claude Code</text>
+  <text x="1805.3995" y="3192.9137" text-anchor="middle" font-size="45.1349" fill="#555">controls model choice</text>
+  <line x1="2219.1368" y1="2331.903" x2="2520.0367" y2="2331.903" stroke="#555" stroke-width="7.5225" marker-end="url(#arr)" />
+  <text x="2369.5868" y="2116.6505" text-anchor="middle" font-size="45.1349" fill="#333">API call</text>
+  <rect x="2520.0367" y="1435.0172" width="413.7373" height="2152.526" rx="37.6124" fill="#FFF3E0" stroke="#E65100" stroke-width="7.5225" />
+  <text x="2726.9054" y="2026.9618" text-anchor="middle" font-size="56.4187" font-weight="bold" fill="#E65100">LLM</text>
+  <text x="2726.9054" y="2475.4049" text-anchor="middle" font-size="45.1349" fill="#555">Claude Opus</text>
+  <text x="2726.9054" y="2834.1593" text-anchor="middle" font-size="45.1349" fill="#555">reasoning</text>
+  <text x="2726.9054" y="3192.9137" text-anchor="middle" font-size="45.1349" fill="#555">completion</text>
+  <path d="M 2219.1368 3587.5432 Q 2219.1368 4843.1833 940.3122 4843.1833 Q 752.2498 4843.1833 752.2498 3587.5432" fill="none" stroke="#2E7D32" stroke-width="7.5225" marker-end="url(#arrg)" />
+  <text x="1579.7246" y="5112.249" text-anchor="middle" font-size="45.1349" fill="#2E7D32">completion returned to server</text>
+  <rect x="1391.6622" y="3856.6088" width="827.4748" height="896.8858" rx="30.0901" fill="#F9A825" fill-opacity="0.2" stroke="#F9A825" stroke-width="5.6419" />
+  <text x="1805.3995" y="4305.052" text-anchor="middle" font-size="45.1349" fill="#F9A825" font-weight="bold">Human Approval Gate</text>
+  <text x="1805.3995" y="4627.9309" text-anchor="middle" font-size="41.3737" fill="#555">host may prompt user first</text>
+  <rect x="112.8374" y="5560.6921" width="2783.3241" height="1345.3289" rx="37.6124" fill="#E8EAF6" stroke="#3949AB" stroke-width="5.6419" />
+  <text x="1504.4996" y="6062.948" text-anchor="middle" font-size="52.6575" font-weight="bold" fill="#3949AB">Why Sampling is Powerful</text>
+  <text x="188.0624" y="6493.4534" font-size="48.8962" fill="#333">▶ Server stays stateless — delegates reasoning to the host's LLM</text>
+  <text x="188.0624" y="6780.4568" font-size="48.8962" fill="#333">▶ Enables multi-step reasoning inside a tool call without extra round-trips</text>
 </svg>

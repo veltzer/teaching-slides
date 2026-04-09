@@ -1,5 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="370"><defs>
-  <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-    <path d="M0,0 L0,6 L8,3 z" fill="#555"/>
-  </marker>
-</defs><rect x="10" y="10" width="660" height="350" fill="#e3f2fd" stroke="#333" stroke-width="1.5" rx="4"/><text x="20" y="30" font-family="sans-serif" font-size="15" fill="#0d47a1" text-anchor="start" font-weight="bold">Key Takeaways</text><text x="20" y="66" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Formats:</text><text x="28" y="84" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Parquet: default for analytics, columnar</text><text x="28" y="101" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• ORC: alternative for Hive-centric stacks</text><text x="28" y="118" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Avro: row-based, streaming, schema evolution</text><text x="28" y="135" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Delta / Iceberg: ACID on top of Parquet</text><text x="20" y="160" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Optimization:</text><text x="28" y="178" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Predicate pushdown: filter at storage layer</text><text x="28" y="195" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Projection pushdown: read only needed columns</text><text x="28" y="212" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Z-ordering: co-locate data for better pruning</text><text x="28" y="229" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Compression: ZSTD best overall balance</text><text x="20" y="254" font-family="sans-serif" font-size="13" fill="#1565c0" text-anchor="start" font-weight="bold">Storage Management:</text><text x="28" y="272" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Partition by query pattern (low cardinality)</text><text x="28" y="289" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Bucket by join key (high cardinality)</text><text x="28" y="306" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Compact small files regularly</text><text x="28" y="323" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• VACUUM old versions periodically</text><text x="28" y="340" font-family="sans-serif" font-size="12" fill="#222" text-anchor="start">• Monitor file sizes (target 128 MB – 1 GB)</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="15.0588" markerHeight="15.5676" refX="11.2941" refY="5.8378" orient="auto">
+      <path d="M 0 0 L 0 11.6757 L 15.0588 5.8378 z" fill="#555" />
+    </marker>
+  </defs>
+  <rect x="18.8235" y="19.4595" width="1242.3529" height="681.0811" fill="#e3f2fd" stroke="#333" stroke-width="2.8235" rx="7.5294" />
+  <text x="37.6471" y="58.3784" font-family="sans-serif" font-size="28.2353" fill="#0d47a1" text-anchor="start" font-weight="bold">Key Takeaways</text>
+  <text x="37.6471" y="128.4324" font-family="sans-serif" font-size="24.4706" fill="#1565c0" text-anchor="start" font-weight="bold">Formats:</text>
+  <text x="52.7059" y="163.4595" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Parquet: default for analytics, columnar</text>
+  <text x="52.7059" y="196.5405" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• ORC: alternative for Hive-centric stacks</text>
+  <text x="52.7059" y="229.6216" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Avro: row-based, streaming, schema evolution</text>
+  <text x="52.7059" y="262.7027" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Delta / Iceberg: ACID on top of Parquet</text>
+  <text x="37.6471" y="311.3514" font-family="sans-serif" font-size="24.4706" fill="#1565c0" text-anchor="start" font-weight="bold">Optimization:</text>
+  <text x="52.7059" y="346.3784" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Predicate pushdown: filter at storage layer</text>
+  <text x="52.7059" y="379.4595" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Projection pushdown: read only needed columns</text>
+  <text x="52.7059" y="412.5405" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Z-ordering: co-locate data for better pruning</text>
+  <text x="52.7059" y="445.6216" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Compression: ZSTD best overall balance</text>
+  <text x="37.6471" y="494.2703" font-family="sans-serif" font-size="24.4706" fill="#1565c0" text-anchor="start" font-weight="bold">Storage Management:</text>
+  <text x="52.7059" y="529.2973" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Partition by query pattern (low cardinality)</text>
+  <text x="52.7059" y="562.3784" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Bucket by join key (high cardinality)</text>
+  <text x="52.7059" y="595.4595" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Compact small files regularly</text>
+  <text x="52.7059" y="628.5405" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• VACUUM old versions periodically</text>
+  <text x="52.7059" y="661.6216" font-family="sans-serif" font-size="22.5882" fill="#222" text-anchor="start">• Monitor file sizes (target 128 MB – 1 GB)</text>
+</svg>

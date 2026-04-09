@@ -1,14 +1,36 @@
-<svg viewBox="0 0 440 120" xmlns="http://www.w3.org/2000/svg">
-  <rect x="5" y="40" width="100" height="40" rx="6" fill="#2980b9" stroke="#2c3e50" stroke-width="2"/>
-  <text x="55" y="65" text-anchor="middle" fill="white" font-size="11">Definition</text>
-  <rect x="125" y="40" width="100" height="40" rx="6" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="175" y="65" text-anchor="middle" fill="white" font-size="11">Call Sites</text>
-  <rect x="245" y="40" width="100" height="40" rx="6" fill="#8e44ad" stroke="#2c3e50" stroke-width="2"/>
-  <text x="295" y="65" text-anchor="middle" fill="white" font-size="11">Unit Tests</text>
-  <rect x="365" y="40" width="70" height="40" rx="6" fill="#d35400" stroke="#2c3e50" stroke-width="2"/>
-  <text x="400" y="65" text-anchor="middle" fill="white" font-size="10">E2E Tests</text>
-  <line x1="105" y1="60" x2="125" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="225" y1="60" x2="245" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <line x1="345" y1="60" x2="365" y2="60" stroke="#2c3e50" stroke-width="2"/>
-  <text x="220" y="20" text-anchor="middle" fill="#2c3e50" font-size="12" font-weight="bold">File Navigation Chain</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="84.6281" markerHeight="252" refX="76.1652" refY="126" orient="auto">
+      <polygon points="0,360 29.6198,0" fill="#2c3e50" />
+    </marker>
+  </defs>
+  <rect width="6770.2479" height="14400" fill="#f8f9fa" />
+  <text x="3385.1241" y="1260" text-anchor="middle" font-size="169.2561" font-weight="bold" fill="#1a237e">Multi-File Navigation Workflow</text>
+  <text x="3385.1241" y="2088" text-anchor="middle" font-size="110.0166" fill="#555">Always locate definition → call sites → tests before making changes</text>
+  <rect x="253.8842" y="3060" width="1311.7356" height="3060" rx="84.6281" fill="#2980b9" stroke="#2c3e50" stroke-width="16.9257" />
+  <text x="905.5206" y="4248" text-anchor="middle" fill="white" font-size="118.4794" font-weight="bold">1. Definition</text>
+  <text x="905.5206" y="5040" text-anchor="middle" fill="#D6EAF8" font-size="101.5537">OrderService</text>
+  <text x="905.5206" y="5688" text-anchor="middle" fill="#D6EAF8" font-size="93.0909">.submitOrder()</text>
+  <line x1="1565.6198" y1="4572" x2="1819.504" y2="4572" stroke="#2c3e50" stroke-width="16.9257" marker-end="url(#arr)" />
+  <rect x="1819.504" y="3060" width="1311.7356" height="3060" rx="84.6281" fill="#27ae60" stroke="#2c3e50" stroke-width="16.9257" />
+  <text x="2471.1404" y="4248" text-anchor="middle" fill="white" font-size="118.4794" font-weight="bold">2. Call Sites</text>
+  <text x="2471.1404" y="5040" text-anchor="middle" fill="#D5F5E3" font-size="101.5537">all usages of</text>
+  <text x="2471.1404" y="5688" text-anchor="middle" fill="#D5F5E3" font-size="93.0909">submitOrder()</text>
+  <line x1="3131.2396" y1="4572" x2="3385.1241" y2="4572" stroke="#2c3e50" stroke-width="16.9257" marker-end="url(#arr)" />
+  <rect x="3385.1241" y="3060" width="1311.7356" height="3060" rx="84.6281" fill="#8e44ad" stroke="#2c3e50" stroke-width="16.9257" />
+  <text x="4036.7604" y="4248" text-anchor="middle" fill="white" font-size="118.4794" font-weight="bold">3. Unit Tests</text>
+  <text x="4036.7604" y="5040" text-anchor="middle" fill="#E8DAEF" font-size="101.5537">test_order.py</text>
+  <text x="4036.7604" y="5688" text-anchor="middle" fill="#E8DAEF" font-size="93.0909">coverage check</text>
+  <line x1="4696.8596" y1="4572" x2="4950.7439" y2="4572" stroke="#2c3e50" stroke-width="16.9257" marker-end="url(#arr)" />
+  <rect x="4950.7439" y="3060" width="1565.6198" height="3060" rx="84.6281" fill="#d35400" stroke="#2c3e50" stroke-width="16.9257" />
+  <text x="5729.3222" y="4032" text-anchor="middle" fill="white" font-size="118.4794" font-weight="bold">4. Integration</text>
+  <text x="5729.3222" y="4752" text-anchor="middle" fill="white" font-size="118.4794" font-weight="bold">Tests</text>
+  <text x="5729.3222" y="5580" text-anchor="middle" fill="#FAD7A0" font-size="93.0909">end-to-end flows</text>
+  <rect x="253.8842" y="7560" width="6262.4794" height="6120" rx="84.6281" fill="#E8EAF6" stroke="#3949AB" stroke-width="12.6941" />
+  <text x="3385.1241" y="8640" text-anchor="middle" font-size="126.9423" font-weight="bold" fill="#3949AB">Navigation Prompt Pattern</text>
+  <text x="465.4545" y="9648" font-size="110.0166" fill="#333">1. "Find the definition of OrderService.submitOrder()"</text>
+  <text x="465.4545" y="10512" font-size="110.0166" fill="#333">2. "Show all call sites of submitOrder() across the codebase"</text>
+  <text x="465.4545" y="11376" font-size="110.0166" fill="#333">3. "Find test files that exercise submitOrder()"</text>
+  <text x="465.4545" y="12240" font-size="110.0166" fill="#333">4. "Are there integration tests covering the full order flow?"</text>
+  <text x="465.4545" y="13104" font-size="110.0166" fill="#333">5. "Show the database migration for the orders table"</text>
 </svg>

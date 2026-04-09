@@ -1,8 +1,18 @@
-<svg viewBox="0 0 500 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:150px;">
-  <rect x="50" y="10" width="400" height="40" rx="6" fill="#9C27B0" opacity="0.7"/>
-  <text x="250" y="35" text-anchor="middle" fill="white" font-size="12">User-level (~/.claude/skills/)</text>
-  <rect x="100" y="60" width="300" height="40" rx="6" fill="#2196F3" opacity="0.7"/>
-  <text x="250" y="85" text-anchor="middle" fill="white" font-size="12">Team-level (.claude/teams/backend/)</text>
-  <rect x="150" y="110" width="200" height="40" rx="6" fill="#4CAF50" opacity="0.7"/>
-  <text x="250" y="135" text-anchor="middle" fill="white" font-size="12">Project-level (.claude/skills/)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="5242.88" height="8100" fill="#f8f9fa" />
+  <text x="2621.44" y="708.75" text-anchor="middle" font-size="131.072" font-weight="bold" fill="#1a237e">Skill Inheritance: Project vs Team vs User Level</text>
+  <rect x="131.072" y="1215" width="4980.736" height="2430" rx="78.6432" fill="#E1BEE7" stroke="#9C27B0" stroke-width="13.1072" />
+  <text x="2621.44" y="1822.5" text-anchor="middle" font-size="98.304" font-weight="bold" fill="#6A1B9A">User-level (~/.claude/skills/)</text>
+  <text x="2621.44" y="2268" text-anchor="middle" font-size="85.1968" fill="#555">Applies to ALL projects — personal defaults, editor preferences, global shortcuts</text>
+  <text x="2621.44" y="2673" text-anchor="middle" font-size="78.6432" fill="#666">example: /my-review, /my-commit with personal style preferences</text>
+  <text x="2621.44" y="3078" text-anchor="middle" font-size="72.0896" fill="#888">lowest priority (overridden by team and project)</text>
+  <rect x="262.144" y="4050" width="4718.592" height="2025" rx="65.536" fill="#BBDEFB" stroke="#2196F3" stroke-width="13.1072" />
+  <text x="2621.44" y="4596.75" text-anchor="middle" font-size="98.304" font-weight="bold" fill="#1565C0">Team-level (.claude/teams/backend/)</text>
+  <text x="2621.44" y="5042.25" text-anchor="middle" font-size="85.1968" fill="#555">Role-specific workflows — backend, frontend, devops skill sets</text>
+  <text x="2621.44" y="5427" text-anchor="middle" font-size="78.6432" fill="#666">example: /db-migrate, /deploy-staging</text>
+  <text x="2621.44" y="5771.25" text-anchor="middle" font-size="72.0896" fill="#888">overrides user-level</text>
+  <rect x="655.36" y="6480" width="3932.16" height="1316.25" rx="52.4288" fill="#C8E6C9" stroke="#4CAF50" stroke-width="13.1072" />
+  <text x="2621.44" y="7026.75" text-anchor="middle" font-size="98.304" font-weight="bold" fill="#2E7D32">Project-level (.claude/skills/)</text>
+  <text x="2621.44" y="7431.75" text-anchor="middle" font-size="85.1968" fill="#555">Project-specific — overrides team and user for this repo only</text>
+  <text x="2621.44" y="7695" text-anchor="middle" font-size="72.0896" fill="#888">highest priority (most specific wins)</text>
 </svg>

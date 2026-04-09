@@ -1,33 +1,33 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <text x="300" y="20" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">sk_buff Memory Layout</text>
-  <rect x="50" y="35" width="500" height="40" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="3"/>
-  <text x="300" y="60" text-anchor="middle" font-size="11" fill="#666">Linear data buffer</text>
-  <line x1="80" y1="35" x2="80" y2="75" stroke="#c62828" stroke-width="2"/>
-  <text x="80" y="95" text-anchor="middle" font-size="10" fill="#c62828" font-weight="bold">head</text>
-  <line x1="170" y1="35" x2="170" y2="75" stroke="#1565c0" stroke-width="2"/>
-  <text x="170" y="95" text-anchor="middle" font-size="10" fill="#1565c0" font-weight="bold">data</text>
-  <line x1="430" y1="35" x2="430" y2="75" stroke="#2e7d32" stroke-width="2"/>
-  <text x="430" y="95" text-anchor="middle" font-size="10" fill="#2e7d32" font-weight="bold">tail</text>
-  <line x1="520" y1="35" x2="520" y2="75" stroke="#e65100" stroke-width="2"/>
-  <text x="520" y="95" text-anchor="middle" font-size="10" fill="#e65100" font-weight="bold">end</text>
-  <rect x="80" y="42" width="90" height="26" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="2"/>
-  <text x="125" y="59" text-anchor="middle" font-size="10">headroom</text>
-  <rect x="170" y="42" width="260" height="26" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="2"/>
-  <text x="300" y="59" text-anchor="middle" font-size="11" font-weight="bold">Packet Data (len)</text>
-  <rect x="430" y="42" width="90" height="26" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1" rx="2"/>
-  <text x="475" y="59" text-anchor="middle" font-size="10">tailroom</text>
-  <text x="125" y="130" text-anchor="middle" font-size="10" fill="#333">skb_push()</text>
-  <line x1="125" y1="135" x2="125" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
-  <text x="125" y="170" text-anchor="middle" font-size="10" fill="#666">Add to head</text>
-  <text x="300" y="130" text-anchor="middle" font-size="10" fill="#333">skb_pull()</text>
-  <line x1="300" y1="135" x2="300" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
-  <text x="300" y="170" text-anchor="middle" font-size="10" fill="#666">Remove from head</text>
-  <text x="475" y="130" text-anchor="middle" font-size="10" fill="#333">skb_put()</text>
-  <line x1="475" y1="135" x2="475" y2="155" stroke="#333" stroke-width="1" marker-end="url(#arrowd0_05_network_devices)"/>
-  <text x="475" y="170" text-anchor="middle" font-size="10" fill="#666">Add to tail</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <text x="640" y="72" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">sk_buff Memory Layout</text>
+  <rect x="106.6667" y="126" width="1066.6667" height="144" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="6.4" />
+  <text x="640" y="216" text-anchor="middle" font-size="23.4667" fill="#666">Linear data buffer</text>
+  <line x1="170.6667" y1="126" x2="170.6667" y2="270" stroke="#c62828" stroke-width="4.2667" />
+  <text x="170.6667" y="342" text-anchor="middle" font-size="21.3333" fill="#c62828" font-weight="bold">head</text>
+  <line x1="362.6667" y1="126" x2="362.6667" y2="270" stroke="#1565c0" stroke-width="4.2667" />
+  <text x="362.6667" y="342" text-anchor="middle" font-size="21.3333" fill="#1565c0" font-weight="bold">data</text>
+  <line x1="917.3333" y1="126" x2="917.3333" y2="270" stroke="#2e7d32" stroke-width="4.2667" />
+  <text x="917.3333" y="342" text-anchor="middle" font-size="21.3333" fill="#2e7d32" font-weight="bold">tail</text>
+  <line x1="1109.3333" y1="126" x2="1109.3333" y2="270" stroke="#e65100" stroke-width="4.2667" />
+  <text x="1109.3333" y="342" text-anchor="middle" font-size="21.3333" fill="#e65100" font-weight="bold">end</text>
+  <rect x="170.6667" y="151.2" width="192" height="93.6" fill="#fff3e0" stroke="#e65100" stroke-width="2.1333" rx="4.2667" />
+  <text x="266.6667" y="212.4" text-anchor="middle" font-size="21.3333">headroom</text>
+  <rect x="362.6667" y="151.2" width="554.6667" height="93.6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.1333" rx="4.2667" />
+  <text x="640" y="212.4" text-anchor="middle" font-size="23.4667" font-weight="bold">Packet Data (len)</text>
+  <rect x="917.3333" y="151.2" width="192" height="93.6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2.1333" rx="4.2667" />
+  <text x="1013.3333" y="212.4" text-anchor="middle" font-size="21.3333">tailroom</text>
+  <text x="266.6667" y="468" text-anchor="middle" font-size="21.3333" fill="#333">skb_push()</text>
+  <line x1="266.6667" y1="486" x2="266.6667" y2="558" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd0_05_network_devices)" />
+  <text x="266.6667" y="612" text-anchor="middle" font-size="21.3333" fill="#666">Add to head</text>
+  <text x="640" y="468" text-anchor="middle" font-size="21.3333" fill="#333">skb_pull()</text>
+  <line x1="640" y1="486" x2="640" y2="558" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd0_05_network_devices)" />
+  <text x="640" y="612" text-anchor="middle" font-size="21.3333" fill="#666">Remove from head</text>
+  <text x="1013.3333" y="468" text-anchor="middle" font-size="21.3333" fill="#333">skb_put()</text>
+  <line x1="1013.3333" y1="486" x2="1013.3333" y2="558" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd0_05_network_devices)" />
+  <text x="1013.3333" y="612" text-anchor="middle" font-size="21.3333" fill="#666">Add to tail</text>
   <defs>
-    <marker id="arrowd0_05_network_devices" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowd0_05_network_devices" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
 </svg>

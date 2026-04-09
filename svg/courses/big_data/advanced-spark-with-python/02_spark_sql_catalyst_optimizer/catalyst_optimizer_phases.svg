@@ -1,81 +1,55 @@
-<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    <marker id="arrowhead" markerWidth="16" markerHeight="12.6" refX="14.4" refY="6.3" orient="auto">
+      <polygon points="0,18 5.6,0" fill="#333" />
     </marker>
   </defs>
-
-  <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1a237e">Catalyst Optimizer Phases</text>
-
-  <!-- Phase 1: SQL/DataFrame -->
-  <rect x="20" y="70" width="130" height="55" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
-  <text x="85" y="93" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1a237e">SQL Query /</text>
-  <text x="85" y="111" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1a237e">DataFrame</text>
-  <line x1="150" y1="97" x2="175" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 2: Unresolved Plan -->
-  <rect x="180" y="70" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="240" y="93" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Unresolved</text>
-  <text x="240" y="111" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Logical Plan</text>
-  <line x1="300" y1="97" x2="325" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 3: Analysis -->
-  <rect x="330" y="70" width="120" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="390" y="93" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Analyzer</text>
-  <text x="390" y="111" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Resolve references</text>
-  <line x1="450" y1="97" x2="475" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 4: Resolved Plan -->
-  <rect x="480" y="70" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="540" y="93" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Resolved</text>
-  <text x="540" y="111" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Logical Plan</text>
-  <line x1="600" y1="97" x2="625" y2="97" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 5: Optimizer -->
-  <rect x="630" y="70" width="140" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="700" y="93" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Optimizer</text>
-  <text x="700" y="111" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Rule-based + CBO</text>
-
-  <!-- Arrow down to optimized plan -->
-  <line x1="700" y1="125" x2="700" y2="165" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 6: Optimized Plan -->
-  <rect x="630" y="170" width="140" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="700" y="193" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Optimized</text>
-  <text x="700" y="211" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Logical Plan</text>
-  <line x1="630" y1="197" x2="530" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 7: Physical Planner -->
-  <rect x="380" y="170" width="145" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="452" y="193" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Physical Planner</text>
-  <text x="452" y="211" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Strategy selection</text>
-  <line x1="380" y1="197" x2="305" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 8: Physical Plans -->
-  <rect x="155" y="170" width="145" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="227" y="193" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Physical Plans</text>
-  <text x="227" y="211" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Cost model selection</text>
-  <line x1="155" y1="197" x2="130" y2="197" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 9: Code Generation -->
-  <rect x="20" y="170" width="105" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="72" y="190" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Code Gen</text>
-  <text x="72" y="208" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Whole-stage</text>
-  <line x1="72" y1="225" x2="72" y2="265" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Phase 10: Execution -->
-  <rect x="20" y="270" width="105" height="55" rx="8" fill="#1565c0" stroke="#0d47a1" stroke-width="2"/>
-  <text x="72" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#fff">RDDs</text>
-  <text x="72" y="311" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff">Execution</text>
-
-  <!-- Optimization rules box -->
-  <rect x="155" y="270" width="615" height="110" rx="8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="462" y="295" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Optimization Rules Applied</text>
-  <text x="230" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#1565c0">Constant Folding</text>
-  <text x="400" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32">Predicate Pushdown</text>
-  <text x="580" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#e65100">Column Pruning</text>
-  <text x="310" y="350" text-anchor="middle" font-family="Arial" font-size="12" fill="#6a1b9a">Join Reordering</text>
-  <text x="500" y="350" text-anchor="middle" font-family="Arial" font-size="12" fill="#c62828">Boolean Simplification</text>
-  <text x="680" y="350" text-anchor="middle" font-family="Arial" font-size="12" fill="#00695c">Null Propagation</text>
+  <text x="640" y="54" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#1a237e">Catalyst Optimizer Phases</text>
+  <rect x="32" y="126" width="208" height="99" rx="12.8" fill="#e3f2fd" stroke="#1565c0" stroke-width="3.2" />
+  <text x="136" y="167.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">SQL Query /</text>
+  <text x="136" y="199.8" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1a237e">DataFrame</text>
+  <line x1="240" y1="174.6" x2="280" y2="174.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="288" y="126" width="192" height="99" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="384" y="167.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Unresolved</text>
+  <text x="384" y="199.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Logical Plan</text>
+  <line x1="480" y1="174.6" x2="520" y2="174.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="528" y="126" width="192" height="99" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="624" y="167.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Analyzer</text>
+  <text x="624" y="199.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Resolve references</text>
+  <line x1="720" y1="174.6" x2="760" y2="174.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="768" y="126" width="192" height="99" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="864" y="167.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Resolved</text>
+  <text x="864" y="199.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Logical Plan</text>
+  <line x1="960" y1="174.6" x2="1000" y2="174.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="1008" y="126" width="224" height="99" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="1120" y="167.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Optimizer</text>
+  <text x="1120" y="199.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Rule-based + CBO</text>
+  <line x1="1120" y1="225" x2="1120" y2="297" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="1008" y="306" width="224" height="99" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="1120" y="347.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Optimized</text>
+  <text x="1120" y="379.8" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Logical Plan</text>
+  <line x1="1008" y1="354.6" x2="848" y2="354.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="608" y="306" width="232" height="99" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="723.2" y="347.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#1b5e20">Physical Planner</text>
+  <text x="723.2" y="379.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Strategy selection</text>
+  <line x1="608" y1="354.6" x2="488" y2="354.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="248" y="306" width="232" height="99" rx="12.8" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="363.2" y="347.4" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#e65100">Physical Plans</text>
+  <text x="363.2" y="379.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Cost model selection</text>
+  <line x1="248" y1="354.6" x2="208" y2="354.6" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="32" y="306" width="168" height="99" rx="12.8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3.2" />
+  <text x="115.2" y="342" text-anchor="middle" font-family="Arial" font-size="19.2" font-weight="bold" fill="#1b5e20">Code Gen</text>
+  <text x="115.2" y="374.4" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#333">Whole-stage</text>
+  <line x1="115.2" y1="405" x2="115.2" y2="477" stroke="#333" stroke-width="3.2" marker-end="url(#arrowhead)" />
+  <rect x="32" y="486" width="168" height="99" rx="12.8" fill="#1565c0" stroke="#0d47a1" stroke-width="3.2" />
+  <text x="115.2" y="527.4" text-anchor="middle" font-family="Arial" font-size="20.8" font-weight="bold" fill="#fff">RDDs</text>
+  <text x="115.2" y="559.8" text-anchor="middle" font-family="Arial" font-size="17.6" fill="#fff">Execution</text>
+  <rect x="248" y="486" width="984" height="198" rx="12.8" fill="#f5f5f5" stroke="#9e9e9e" stroke-width="1.6" stroke-dasharray="8 4.8" />
+  <text x="739.2" y="531" text-anchor="middle" font-family="Arial" font-size="22.4" font-weight="bold" fill="#333">Optimization Rules Applied</text>
+  <text x="368" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#1565c0">Constant Folding</text>
+  <text x="640" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#2e7d32">Predicate Pushdown</text>
+  <text x="928" y="576" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#e65100">Column Pruning</text>
+  <text x="496" y="630" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#6a1b9a">Join Reordering</text>
+  <text x="800" y="630" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#c62828">Boolean Simplification</text>
+  <text x="1088" y="630" text-anchor="middle" font-family="Arial" font-size="19.2" fill="#00695c">Null Propagation</text>
 </svg>

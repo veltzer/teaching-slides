@@ -1,71 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="9.6923" refX="16" refY="4.8462" orient="auto">
+      <polygon points="0,13.8462 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Warp Execution in GPUs</text>
-  <!-- SM block -->
-  <rect x="30" y="50" width="740" height="180" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="75" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">Streaming Multiprocessor (SM)</text>
-  <!-- Warp Scheduler -->
-  <rect x="50" y="90" width="150" height="50" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="125" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Warp Scheduler</text>
-  <text x="125" y="128" text-anchor="middle" font-size="10" fill="#555">Round-robin / GTO</text>
-  <!-- Arrow -->
-  <line x1="200" y1="115" x2="240" y2="115" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <!-- Warp 0 -->
-  <rect x="250" y="85" width="110" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="305" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Warp 0</text>
-  <text x="305" y="122" text-anchor="middle" font-size="10" fill="#555">32 threads</text>
-  <text x="305" y="137" text-anchor="middle" font-size="10" fill="#555">T0-T31</text>
-  <!-- Warp 1 -->
-  <rect x="375" y="85" width="110" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="430" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Warp 1</text>
-  <text x="430" y="122" text-anchor="middle" font-size="10" fill="#555">32 threads</text>
-  <text x="430" y="137" text-anchor="middle" font-size="10" fill="#555">T32-T63</text>
-  <!-- Warp N -->
-  <rect x="500" y="85" width="110" height="60" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="555" y="107" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Warp N</text>
-  <text x="555" y="122" text-anchor="middle" font-size="10" fill="#555">32 threads</text>
-  <text x="555" y="137" text-anchor="middle" font-size="10" fill="#555">T(N*32)...</text>
-  <!-- SIMT Execution Units -->
-  <rect x="250" y="160" width="360" height="55" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="430" y="183" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">SIMT Execution Units (CUDA Cores)</text>
-  <text x="430" y="200" text-anchor="middle" font-size="10" fill="#555">All 32 threads execute same instruction simultaneously</text>
-  <!-- Warp Divergence Section -->
-  <rect x="30" y="255" width="350" height="240" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="205" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Warp Divergence</text>
-  <text x="205" y="300" text-anchor="middle" font-size="11" fill="#555">if (threadIdx.x &lt; 16) { A } else { B }</text>
-  <!-- Pass 1 -->
-  <rect x="50" y="315" width="140" height="40" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="120" y="332" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Pass 1: Branch A</text>
-  <text x="120" y="347" text-anchor="middle" font-size="10" fill="#555">T0-T15 active</text>
-  <!-- Pass 2 -->
-  <rect x="210" y="315" width="140" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="280" y="332" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Pass 2: Branch B</text>
-  <text x="280" y="347" text-anchor="middle" font-size="10" fill="#555">T16-T31 active</text>
-  <!-- Serialized -->
-  <rect x="50" y="370" width="300" height="35" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="200" y="392" text-anchor="middle" font-size="11" fill="#333">Serialized execution = 2x slower!</text>
-  <!-- Mask -->
-  <text x="70" y="430" font-size="10" fill="#555">Active Mask: 1111111111111111 0000000000000000</text>
-  <text x="70" y="450" font-size="10" fill="#555">Then:       0000000000000000 1111111111111111</text>
-  <text x="70" y="475" font-size="10" font-style="italic" fill="#dc3545">Inactive threads waste execution cycles</text>
-  <!-- Warp Lifecycle -->
-  <rect x="410" y="255" width="360" height="240" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="590" y="280" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">Warp Lifecycle</text>
-  <rect x="430" y="295" width="140" height="30" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="500" y="315" text-anchor="middle" font-size="11" fill="#333">Ready</text>
-  <line x1="500" y1="325" x2="500" y2="345" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="430" y="350" width="140" height="30" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="500" y="370" text-anchor="middle" font-size="11" fill="#333">Executing</text>
-  <line x1="500" y1="380" x2="500" y2="400" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="430" y="405" width="140" height="30" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="500" y="425" text-anchor="middle" font-size="11" fill="#333">Stalled (mem wait)</text>
-  <line x1="500" y1="435" x2="500" y2="455" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="430" y="460" width="140" height="25" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="500" y="478" text-anchor="middle" font-size="11" fill="#333">Ready (again)</text>
-  <text x="620" y="395" font-size="10" fill="#555">Context switch</text>
-  <text x="620" y="410" font-size="10" fill="#555">is free (zero-cost)</text>
+  <text x="640" y="41.5385" text-anchor="middle" font-size="27.6923" font-weight="bold" fill="#333">Warp Execution in GPUs</text>
+  <rect x="48" y="69.2308" width="1184" height="249.2308" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
+  <text x="640" y="103.8462" text-anchor="middle" font-size="20.7692" font-weight="bold" fill="#333">Streaming Multiprocessor (SM)</text>
+  <rect x="80" y="124.6154" width="240" height="69.2308" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
+  <text x="200" y="155.0769" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">Warp Scheduler</text>
+  <text x="200" y="177.2308" text-anchor="middle" font-size="13.8462" fill="#555">Round-robin / GTO</text>
+  <line x1="320" y1="159.2308" x2="384" y2="159.2308" stroke="#4a90e2" stroke-width="2.7692" marker-end="url(#arrow)" />
+  <rect x="400" y="117.6923" width="176" height="83.0769" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="488" y="148.1538" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#333">Warp 0</text>
+  <text x="488" y="168.9231" text-anchor="middle" font-size="13.8462" fill="#555">32 threads</text>
+  <text x="488" y="189.6923" text-anchor="middle" font-size="13.8462" fill="#555">T0-T31</text>
+  <rect x="600" y="117.6923" width="176" height="83.0769" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="688" y="148.1538" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#333">Warp 1</text>
+  <text x="688" y="168.9231" text-anchor="middle" font-size="13.8462" fill="#555">32 threads</text>
+  <text x="688" y="189.6923" text-anchor="middle" font-size="13.8462" fill="#555">T32-T63</text>
+  <rect x="800" y="117.6923" width="176" height="83.0769" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="888" y="148.1538" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#333">Warp N</text>
+  <text x="888" y="168.9231" text-anchor="middle" font-size="13.8462" fill="#555">32 threads</text>
+  <text x="888" y="189.6923" text-anchor="middle" font-size="13.8462" fill="#555">T(N*32)...</text>
+  <rect x="400" y="221.5385" width="576" height="76.1538" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
+  <text x="688" y="253.3846" text-anchor="middle" font-size="16.6154" font-weight="bold" fill="#333">SIMT Execution Units (CUDA Cores)</text>
+  <text x="688" y="276.9231" text-anchor="middle" font-size="13.8462" fill="#555">All 32 threads execute same instruction simultaneously</text>
+  <rect x="48" y="353.0769" width="560" height="332.3077" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
+  <text x="328" y="387.6923" text-anchor="middle" font-size="19.3846" font-weight="bold" fill="#333">Warp Divergence</text>
+  <text x="328" y="415.3846" text-anchor="middle" font-size="15.2308" fill="#555">if (threadIdx.x &lt; 16) { A } else { B }</text>
+  <rect x="80" y="436.1538" width="224" height="55.3846" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
+  <text x="192" y="459.6923" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#333">Pass 1: Branch A</text>
+  <text x="192" y="480.4615" text-anchor="middle" font-size="13.8462" fill="#555">T0-T15 active</text>
+  <rect x="336" y="436.1538" width="224" height="55.3846" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
+  <text x="448" y="459.6923" text-anchor="middle" font-size="15.2308" font-weight="bold" fill="#333">Pass 2: Branch B</text>
+  <text x="448" y="480.4615" text-anchor="middle" font-size="13.8462" fill="#555">T16-T31 active</text>
+  <rect x="80" y="512.3077" width="480" height="48.4615" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.0769" />
+  <text x="320" y="542.7692" text-anchor="middle" font-size="15.2308" fill="#333">Serialized execution = 2x slower!</text>
+  <text x="112" y="595.3846" font-size="13.8462" fill="#555">Active Mask: 1111111111111111 0000000000000000</text>
+  <text x="112" y="623.0769" font-size="13.8462" fill="#555">Then:       0000000000000000 1111111111111111</text>
+  <text x="112" y="657.6923" font-size="13.8462" font-style="italic" fill="#dc3545">Inactive threads waste execution cycles</text>
+  <rect x="656" y="353.0769" width="576" height="332.3077" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
+  <text x="944" y="387.6923" text-anchor="middle" font-size="19.3846" font-weight="bold" fill="#333">Warp Lifecycle</text>
+  <rect x="688" y="408.4615" width="224" height="41.5385" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
+  <text x="800" y="436.1538" text-anchor="middle" font-size="15.2308" fill="#333">Ready</text>
+  <line x1="800" y1="450" x2="800" y2="477.6923" stroke="#4a90e2" stroke-width="2.7692" marker-end="url(#arrow)" />
+  <rect x="688" y="484.6154" width="224" height="41.5385" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.0769" />
+  <text x="800" y="512.3077" text-anchor="middle" font-size="15.2308" fill="#333">Executing</text>
+  <line x1="800" y1="526.1538" x2="800" y2="553.8462" stroke="#4a90e2" stroke-width="2.7692" marker-end="url(#arrow)" />
+  <rect x="688" y="560.7692" width="224" height="41.5385" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.0769" />
+  <text x="800" y="588.4615" text-anchor="middle" font-size="15.2308" fill="#333">Stalled (mem wait)</text>
+  <line x1="800" y1="602.3077" x2="800" y2="630" stroke="#4a90e2" stroke-width="2.7692" marker-end="url(#arrow)" />
+  <rect x="688" y="636.9231" width="224" height="34.6154" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.0769" />
+  <text x="800" y="661.8462" text-anchor="middle" font-size="15.2308" fill="#333">Ready (again)</text>
+  <text x="992" y="546.9231" font-size="13.8462" fill="#555">Context switch</text>
+  <text x="992" y="567.6923" font-size="13.8462" fill="#555">is free (zero-cost)</text>
 </svg>

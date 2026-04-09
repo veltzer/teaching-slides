@@ -1,28 +1,24 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Container without volume: data lost -->
-  <rect x="20" y="20" width="120" height="80" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
-  <text x="80" y="45" text-anchor="middle" font-size="11" fill="#333">Container</text>
-  <text x="80" y="62" text-anchor="middle" font-size="10" fill="#c62828">Writable Layer</text>
-  <text x="80" y="80" text-anchor="middle" font-size="10" fill="#c62828">Lost on remove</text>
-  <!-- vs label -->
-  <text x="165" y="65" font-size="16" fill="#333" font-weight="bold">vs</text>
-  <!-- Container with volume: data persists -->
-  <rect x="200" y="20" width="120" height="80" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
-  <text x="260" y="45" text-anchor="middle" font-size="11" fill="#333">Container</text>
-  <text x="260" y="62" text-anchor="middle" font-size="10" fill="#1565c0">+ Volume Mount</text>
-  <line x1="260" y1="100" x2="260" y2="130" stroke="#1565c0" stroke-width="2" marker-end="url(#arrowVol0)"/>
-  <rect x="200" y="130" width="120" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
-  <text x="260" y="152" text-anchor="middle" font-size="10" fill="#2e7d32">Persistent Volume</text>
-  <text x="260" y="168" text-anchor="middle" font-size="10" fill="#2e7d32">Data survives</text>
-  <!-- Benefits list -->
-  <text x="370" y="40" font-size="11" fill="#333" font-weight="bold">Why Volumes?</text>
-  <text x="370" y="60" font-size="10" fill="#555">- Persist data across restarts</text>
-  <text x="370" y="78" font-size="10" fill="#555">- Share data between containers</text>
-  <text x="370" y="96" font-size="10" fill="#555">- Decouple data from container</text>
-  <text x="370" y="114" font-size="10" fill="#555">- Backup and migration support</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="42.6667" y="72" width="256" height="288" fill="#ffebee" stroke="#c62828" stroke-width="4.2667" rx="10.6667" />
+  <text x="170.6667" y="162" text-anchor="middle" font-size="23.4667" fill="#333">Container</text>
+  <text x="170.6667" y="223.2" text-anchor="middle" font-size="21.3333" fill="#c62828">Writable Layer</text>
+  <text x="170.6667" y="288" text-anchor="middle" font-size="21.3333" fill="#c62828">Lost on remove</text>
+  <text x="352" y="234" font-size="34.1333" fill="#333" font-weight="bold">vs</text>
+  <rect x="426.6667" y="72" width="256" height="288" fill="#e3f2fd" stroke="#1565c0" stroke-width="4.2667" rx="10.6667" />
+  <text x="554.6667" y="162" text-anchor="middle" font-size="23.4667" fill="#333">Container</text>
+  <text x="554.6667" y="223.2" text-anchor="middle" font-size="21.3333" fill="#1565c0">+ Volume Mount</text>
+  <line x1="554.6667" y1="360" x2="554.6667" y2="468" stroke="#1565c0" stroke-width="4.2667" marker-end="url(#arrowVol0)" />
+  <rect x="426.6667" y="468" width="256" height="180" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4.2667" rx="10.6667" />
+  <text x="554.6667" y="547.2" text-anchor="middle" font-size="21.3333" fill="#2e7d32">Persistent Volume</text>
+  <text x="554.6667" y="604.8" text-anchor="middle" font-size="21.3333" fill="#2e7d32">Data survives</text>
+  <text x="789.3333" y="144" font-size="23.4667" fill="#333" font-weight="bold">Why Volumes?</text>
+  <text x="789.3333" y="216" font-size="21.3333" fill="#555">- Persist data across restarts</text>
+  <text x="789.3333" y="280.8" font-size="21.3333" fill="#555">- Share data between containers</text>
+  <text x="789.3333" y="345.6" font-size="21.3333" fill="#555">- Decouple data from container</text>
+  <text x="789.3333" y="410.4" font-size="21.3333" fill="#555">- Backup and migration support</text>
   <defs>
-    <marker id="arrowVol0" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#1565c0"/>
+    <marker id="arrowVol0" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#1565c0" />
     </marker>
   </defs>
 </svg>

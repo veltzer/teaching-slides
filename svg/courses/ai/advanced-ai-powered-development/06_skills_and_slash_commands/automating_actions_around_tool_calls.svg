@@ -1,12 +1,42 @@
-<svg viewBox="0 0 500 120" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:110px;">
-  <rect x="10" y="40" width="100" height="40" rx="6" fill="#F44336" opacity="0.8"/>
-  <text x="60" y="65" text-anchor="middle" fill="white" font-size="11">pre-hook</text>
-  <line x1="110" y1="60" x2="150" y2="60" stroke="#666" stroke-width="2"/>
-  <rect x="150" y="40" width="140" height="40" rx="6" fill="#2196F3" opacity="0.8"/>
-  <text x="220" y="65" text-anchor="middle" fill="white" font-size="11">tool execution</text>
-  <line x1="290" y1="60" x2="330" y2="60" stroke="#666" stroke-width="2"/>
-  <rect x="330" y="40" width="100" height="40" rx="6" fill="#4CAF50" opacity="0.8"/>
-  <text x="380" y="65" text-anchor="middle" fill="white" font-size="11">post-hook</text>
-  <text x="60" y="30" text-anchor="middle" fill="#999" font-size="10">validate/block</text>
-  <text x="380" y="30" text-anchor="middle" fill="#999" font-size="10">notify/log</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <marker id="arr" markerWidth="65.536" markerHeight="252" refX="58.9824" refY="126" orient="auto">
+      <polygon points="0,360 22.9376,0" fill="#666" />
+    </marker>
+  </defs>
+  <rect width="5242.88" height="14400" fill="#f8f9fa" />
+  <text x="2621.44" y="1260" text-anchor="middle" font-size="131.072" font-weight="bold" fill="#1a237e">Hooks: Automating Actions Around Tool Calls</text>
+  <rect x="131.072" y="3240" width="1179.648" height="3240" rx="65.536" fill="#F44336" stroke="#C62828" stroke-width="13.1072" />
+  <text x="720.896" y="4392" text-anchor="middle" fill="white" font-size="91.7504" font-weight="bold">Pre-Hook</text>
+  <text x="720.896" y="5184" text-anchor="middle" fill="#FFCDD2" font-size="78.6432">validate / block</text>
+  <text x="720.896" y="5940" text-anchor="middle" fill="#FFCDD2" font-size="78.6432">check permissions</text>
+  <line x1="1310.72" y1="4860" x2="1572.864" y2="4860" stroke="#666" stroke-width="13.1072" marker-end="url(#arr)" />
+  <rect x="1572.864" y="3240" width="1572.864" height="3240" rx="65.536" fill="#2196F3" stroke="#1565C0" stroke-width="13.1072" />
+  <text x="2359.296" y="4392" text-anchor="middle" fill="white" font-size="91.7504" font-weight="bold">Tool Execution</text>
+  <text x="2359.296" y="5184" text-anchor="middle" fill="#BBDEFB" font-size="78.6432">file edit / shell / git</text>
+  <text x="2359.296" y="5940" text-anchor="middle" fill="#BBDEFB" font-size="78.6432">the actual action</text>
+  <line x1="3145.728" y1="4860" x2="3407.872" y2="4860" stroke="#666" stroke-width="13.1072" marker-end="url(#arr)" />
+  <rect x="3407.872" y="3240" width="1703.936" height="3240" rx="65.536" fill="#4CAF50" stroke="#2E7D32" stroke-width="13.1072" />
+  <text x="4259.84" y="4392" text-anchor="middle" fill="white" font-size="91.7504" font-weight="bold">Post-Hook</text>
+  <text x="4259.84" y="5184" text-anchor="middle" fill="#C8E6C9" font-size="78.6432">notify / log / run tests</text>
+  <text x="4259.84" y="5940" text-anchor="middle" fill="#C8E6C9" font-size="78.6432">trigger downstream</text>
+  <path d="M 720.896 6480 Q 720.896 7920 2359.296 7920" fill="none" stroke="#C62828" stroke-width="13.1072" stroke-dasharray="32.768 19.6608" marker-end="url(#arr)" />
+  <text x="1507.328" y="7560" text-anchor="middle" font-size="72.0896" fill="#C62828">on_fail: block (stops execution)</text>
+  <rect x="131.072" y="9000" width="4980.736" height="4860" rx="65.536" fill="#E8EAF6" stroke="#3949AB" stroke-width="9.8304" />
+  <text x="2621.44" y="10008" text-anchor="middle" font-size="98.304" font-weight="bold" fill="#3949AB">Example Hook Configurations</text>
+  <rect x="262.144" y="10620" width="1474.56" height="2700" rx="52.4288" fill="#FFCDD2" stroke="#C62828" />
+  <text x="996.1472" y="11520" text-anchor="middle" font-size="78.6432" font-weight="bold" fill="#C62828">Pre-Hook: Block Dangerous</text>
+  <text x="996.1472" y="12240" text-anchor="middle" font-size="72.0896" fill="#333">event: bash_command</text>
+  <text x="996.1472" y="12888" text-anchor="middle" font-size="72.0896" fill="#333">match: "rm -rf|DROP TABLE"</text>
+  <text x="996.1472" y="13428" text-anchor="middle" font-size="72.0896" fill="#333">action: block</text>
+  <rect x="1880.8832" y="10620" width="1474.56" height="2700" rx="52.4288" fill="#C8E6C9" stroke="#2E7D32" />
+  <text x="2614.8864" y="11520" text-anchor="middle" font-size="78.6432" font-weight="bold" fill="#2E7D32">Pre-Hook: Scan Secrets</text>
+  <text x="2614.8864" y="12240" text-anchor="middle" font-size="72.0896" fill="#333">event: file_edit</text>
+  <text x="2614.8864" y="12888" text-anchor="middle" font-size="72.0896" fill="#333">run: scan_secrets.sh $FILE</text>
+  <text x="2614.8864" y="13428" text-anchor="middle" font-size="72.0896" fill="#333">on_fail: block</text>
+  <rect x="3499.6224" y="10620" width="1474.56" height="2700" rx="52.4288" fill="#BBDEFB" stroke="#1565C0" />
+  <text x="4233.6256" y="11520" text-anchor="middle" font-size="78.6432" font-weight="bold" fill="#1565C0">Post-Hook: Notify Slack</text>
+  <text x="4233.6256" y="12240" text-anchor="middle" font-size="72.0896" fill="#333">event: pr_create</text>
+  <text x="4233.6256" y="12888" text-anchor="middle" font-size="72.0896" fill="#333">run: notify_slack.sh</text>
+  <text x="4233.6256" y="13428" text-anchor="middle" font-size="72.0896" fill="#333">$PR_NUMBER</text>
 </svg>

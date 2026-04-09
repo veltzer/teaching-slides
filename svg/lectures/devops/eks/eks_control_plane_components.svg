@@ -1,42 +1,27 @@
-<svg width="600" height="400" viewBox="0 0 600 400">
-  <!-- Control Plane Container -->
-  <rect x="50" y="50" width="500" height="300" fill="#232F3E" stroke="#FF9900" stroke-width="3" rx="10"/>
-  <text x="300" y="80" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#FF9900">EKS Control Plane (Managed by AWS)</text>
-
-  <!-- API Server -->
-  <rect x="80" y="110" width="200" height="60" fill="#4A90E2" stroke="#2C5F8A" stroke-width="2" rx="5"/>
-  <text x="180" y="135" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Kubernetes API Server</text>
-  <text x="180" y="155" font-family="Arial" font-size="10" text-anchor="middle" fill="white">RESTful API, Authentication, Authorization</text>
-
-  <!-- etcd -->
-  <rect x="320" y="110" width="200" height="60" fill="#FF6B6B" stroke="#C44D4D" stroke-width="2" rx="5"/>
-  <text x="420" y="135" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">etcd Database</text>
-  <text x="420" y="155" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Distributed key-value store</text>
-
-  <!-- Controller Manager -->
-  <rect x="80" y="200" width="200" height="60" fill="#4ECDC4" stroke="#35A29B" stroke-width="2" rx="5"/>
-  <text x="180" y="225" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Controller Manager</text>
-  <text x="180" y="245" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Watches cluster state, makes changes</text>
-
-  <!-- Scheduler -->
-  <rect x="320" y="200" width="200" height="60" fill="#95E1D3" stroke="#6BB8AB" stroke-width="2" rx="5"/>
-  <text x="420" y="225" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Scheduler</text>
-  <text x="420" y="245" font-family="Arial" font-size="10" text-anchor="middle" fill="white">Assigns pods to nodes</text>
-
-  <!-- Arrows showing communication -->
-  <line x1="180" y1="170" x2="180" y2="200" stroke="#FFD93D" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="420" y1="170" x2="420" y2="200" stroke="#FFD93D" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="280" y1="140" x2="320" y2="140" stroke="#FFD93D" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="280" y1="230" x2="320" y2="230" stroke="#FFD93D" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Arrow marker definition -->
+<svg viewBox="0 0 1280 720">
+  <rect x="106.6667" y="90" width="1066.6667" height="540" fill="#232F3E" stroke="#FF9900" stroke-width="5.4" rx="18" />
+  <text x="640" y="144" font-family="Arial" font-size="32.4" font-weight="bold" text-anchor="middle" fill="#FF9900">EKS Control Plane (Managed by AWS)</text>
+  <rect x="170.6667" y="198" width="426.6667" height="108" fill="#4A90E2" stroke="#2C5F8A" stroke-width="3.6" rx="9" />
+  <text x="384" y="243" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Kubernetes API Server</text>
+  <text x="384" y="279" font-family="Arial" font-size="18" text-anchor="middle" fill="white">RESTful API, Authentication, Authorization</text>
+  <rect x="682.6667" y="198" width="426.6667" height="108" fill="#FF6B6B" stroke="#C44D4D" stroke-width="3.6" rx="9" />
+  <text x="896" y="243" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">etcd Database</text>
+  <text x="896" y="279" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Distributed key-value store</text>
+  <rect x="170.6667" y="360" width="426.6667" height="108" fill="#4ECDC4" stroke="#35A29B" stroke-width="3.6" rx="9" />
+  <text x="384" y="405" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Controller Manager</text>
+  <text x="384" y="441" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Watches cluster state, makes changes</text>
+  <rect x="682.6667" y="360" width="426.6667" height="108" fill="#95E1D3" stroke="#6BB8AB" stroke-width="3.6" rx="9" />
+  <text x="896" y="405" font-family="Arial" font-size="25.2" font-weight="bold" text-anchor="middle" fill="white">Scheduler</text>
+  <text x="896" y="441" font-family="Arial" font-size="18" text-anchor="middle" fill="white">Assigns pods to nodes</text>
+  <line x1="384" y1="306" x2="384" y2="360" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
+  <line x1="896" y1="306" x2="896" y2="360" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
+  <line x1="597.3333" y1="252" x2="682.6667" y2="252" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
+  <line x1="597.3333" y1="414" x2="682.6667" y2="414" stroke="#FFD93D" stroke-width="3.6" marker-end="url(#arrowhead)" />
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#FFD93D"/>
+    <marker id="arrowhead" markerWidth="21.3333" markerHeight="12.6" refX="19.2" refY="6.3" orient="auto">
+      <polygon points="0,18 7.4667,0" fill="#FFD93D" />
     </marker>
   </defs>
-
-  <!-- Benefits box -->
-  <rect x="100" y="290" width="400" height="40" fill="#E8F5E8" stroke="#4CAF50" stroke-width="1" rx="5"/>
-  <text x="300" y="310" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#2E7D32">✓ Fully Managed ✓ High Availability ✓ Auto Updates ✓ AWS Integration</text>
+  <rect x="213.3333" y="522" width="853.3333" height="72" fill="#E8F5E8" stroke="#4CAF50" stroke-width="1.8" rx="9" />
+  <text x="640" y="558" font-family="Arial" font-size="21.6" font-weight="bold" text-anchor="middle" fill="#2E7D32">✓ Fully Managed ✓ High Availability ✓ Auto Updates ✓ AWS Integration</text>
 </svg>

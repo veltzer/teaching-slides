@@ -1,34 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arw6" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arw6" markerWidth="21.3333" markerHeight="25.2" refX="19.2" refY="12.6" orient="auto">
+      <polygon points="0,36 7.4667,0" fill="#555" />
     </marker>
-    <marker id="arw6b" markerWidth="10" markerHeight="7" refX="1" refY="3.5" orient="auto">
-      <polygon points="10 0, 0 3.5, 10 7" fill="#555"/>
+    <marker id="arw6b" markerWidth="21.3333" markerHeight="25.2" refX="2.1333" refY="12.6" orient="auto">
+      <polygon points="0,0 7.4667,36" fill="#555" />
     </marker>
   </defs>
-  <rect x="1" y="1" width="598" height="198" rx="4" fill="#fff" stroke="#333" stroke-width="1.5"/>
-  <rect x="1" y="1" width="598" height="34" rx="4" fill="#e3f2fd" stroke="#333" stroke-width="1.5"/>
-  <text x="300" y="23" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Docker Networking — Bridge Mode</text>
-  <!-- Host Network box -->
-  <rect x="14" y="46" width="250" height="140" rx="4" fill="#f0f4f8" stroke="#555" stroke-width="1.5"/>
-  <text x="139" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Host Network</text>
-  <rect x="34" y="74" width="100" height="34" rx="3" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
-  <text x="84" y="96" font-size="12" fill="#222" text-anchor="middle">docker0 bridge</text>
-  <rect x="54" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="94" y="140" font-size="12" fill="#222" text-anchor="middle">vethXXXX</text>
-  <!-- Container Network NS box -->
-  <rect x="336" y="46" width="250" height="140" rx="4" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
-  <text x="461" y="64" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">Container Net NS</text>
-  <rect x="466" y="74" width="80" height="34" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="506" y="96" font-size="12" fill="#222" text-anchor="middle">eth0</text>
-  <rect x="466" y="120" width="80" height="30" rx="3" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
-  <text x="506" y="140" font-size="12" fill="#222" text-anchor="middle">vethYYYY</text>
-  <!-- veth pair connection -->
-  <line x1="134" y1="135" x2="264" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
-  <line x1="336" y1="135" x2="466" y2="135" stroke="#555" stroke-width="2" stroke-dasharray="4,3"/>
-  <text x="300" y="131" font-size="11" fill="#555" text-anchor="middle">veth pair</text>
-  <!-- Vertical connections -->
-  <line x1="84" y1="108" x2="84" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
-  <line x1="506" y1="108" x2="506" y2="120" stroke="#555" stroke-width="1.5" marker-end="url(#arw6)"/>
+  <rect x="2.1333" y="3.6" width="1275.7333" height="712.8" rx="8.5333" fill="#fff" stroke="#333" stroke-width="3.2" />
+  <rect x="2.1333" y="3.6" width="1275.7333" height="122.4" rx="8.5333" fill="#e3f2fd" stroke="#333" stroke-width="3.2" />
+  <text x="640" y="82.8" font-size="32" font-weight="bold" fill="#222" text-anchor="middle">Docker Networking — Bridge Mode</text>
+  <rect x="29.8667" y="165.6" width="533.3333" height="504" rx="8.5333" fill="#f0f4f8" stroke="#555" stroke-width="3.2" />
+  <text x="296.5333" y="230.4" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">Host Network</text>
+  <rect x="72.5333" y="266.4" width="213.3333" height="122.4" rx="6.4" fill="#bbdefb" stroke="#1565c0" stroke-width="2.1333" />
+  <text x="179.2" y="345.6" font-size="25.6" fill="#222" text-anchor="middle">docker0 bridge</text>
+  <rect x="115.2" y="432" width="170.6667" height="108" rx="6.4" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.1333" />
+  <text x="200.5333" y="504" font-size="25.6" fill="#222" text-anchor="middle">vethXXXX</text>
+  <rect x="716.8" y="165.6" width="533.3333" height="504" rx="8.5333" fill="#fff3e0" stroke="#e65100" stroke-width="3.2" />
+  <text x="983.4667" y="230.4" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">Container Net NS</text>
+  <rect x="994.1333" y="266.4" width="170.6667" height="122.4" rx="6.4" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.1333" />
+  <text x="1079.4667" y="345.6" font-size="25.6" fill="#222" text-anchor="middle">eth0</text>
+  <rect x="994.1333" y="432" width="170.6667" height="108" rx="6.4" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.1333" />
+  <text x="1079.4667" y="504" font-size="25.6" fill="#222" text-anchor="middle">vethYYYY</text>
+  <line x1="285.8667" y1="486" x2="563.2" y2="486" stroke="#555" stroke-width="4.2667" stroke-dasharray="8.5333 6.4" />
+  <line x1="716.8" y1="486" x2="994.1333" y2="486" stroke="#555" stroke-width="4.2667" stroke-dasharray="8.5333 6.4" />
+  <text x="640" y="471.6" font-size="23.4667" fill="#555" text-anchor="middle">veth pair</text>
+  <line x1="179.2" y1="388.8" x2="179.2" y2="432" stroke="#555" stroke-width="3.2" marker-end="url(#arw6)" />
+  <line x1="1079.4667" y1="388.8" x2="1079.4667" y2="432" stroke="#555" stroke-width="3.2" marker-end="url(#arw6)" />
 </svg>

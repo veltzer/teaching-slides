@@ -7,7 +7,6 @@ When writing marp:
 - never leave lines with spaces or tabs at the end, not even when writing code samples
 - when enumerating items use 1. 1. 1. and not 1. 2. 3.
 - indent sub items with four spaces like this "    - [text]"
-- do not use inlined SVG. Write the svg externally (in the svg folder) and reference it from the slides.
 - do not use mermaid until we have a rust fast mermaid tool.
 - do not add a "Any Questions slide".
 - call the file for each chapter [number]_[name].md from 00. For instance: 00_intoduction.md
@@ -41,16 +40,6 @@ graph TD
 </div>
 ```
 
-- if you want to add svg content inlined just add it inlined in the marp file like this:
-  (we don't do that anymore)
-
-```marp
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Main circle -->
-  <circle cx="100" cy="100" r="80" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
-</svg>
-```
-
 - always do a newline *before* ```
 - if you want to add text in a different language *always* specific a language after the ```.
 	If you just want to add pure text just write ```txt.
@@ -65,25 +54,45 @@ graph TD
     3.
       The rendered will take care of the numbers.
 
-Prefer SVG to mermain and avoid ascii art diagrams.
+## SVG Guidelines
 
-Common problems found in the past (avoid repeating these):
+Prefer SVG to mermaid and avoid ascii art diagrams.
+
+- do not use inlined SVG. Write the SVG externally in the svg/ folder and reference it from the slides.
+- do not reference external images via http/https URLs. All images must be local files
+  in the svg/ or jpg/ directories.
+- image references (![...](path)) must point to files that actually exist. Run the
+  md_checks.py --images check to verify.
+- SVG files must use a fixed viewBox of exactly 1280x720 (16:9, matches Marp slide
+  dimensions). Use scripts/fix_svg_aspect_ratio.py to convert existing SVGs.
+  The check_svg.py --dimensions check enforces this.
+- SVG diagrams must use font-size of at least 10. Anything smaller is unreadable in
+  presentations. The check_svg.py --fonts check enforces this.
+- SVG files must be properly formatted multi-line XML. Never generate single-line SVGs
+  or truncated stubs. Each SVG should have at least 5 XML elements.
+- A slide that contains an SVG drawing must have ONLY the ## heading and the image
+  reference — nothing else. No bullet points, no text, no code before or after the image.
+  If you have content that belongs with the drawing, put it on a separate slide before
+  or after: either a text-only slide introducing the diagram, or a follow-up slide
+  discussing it.
+
+Note: inline SVG is no longer used. Do not do this:
+
+```marp
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main circle -->
+  <circle cx="100" cy="100" r="80" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+</svg>
+```
+
+## Common problems found in the past (avoid repeating these)
+
 - do not leave empty slides (two consecutive "---" separators with nothing between them).
 - always close code fences. Every opening ``` must have a matching closing ```.
   A common mistake is opening a code block and then starting a new slide (---) without
   closing the code block first.
-- do not reference external images via http/https URLs. All images must be local files
-  in the svg/ or jpg/ directories.
-- SVG diagrams must use font-size of at least 10. Anything smaller is unreadable in
-  presentations. The check_svg_quality.py script enforces this.
-- SVG files must be properly formatted multi-line XML. Never generate single-line SVGs
-  or truncated stubs. Each SVG should have at least 5 XML elements.
-- SVG files must have a viewBox of at least 800x400 for diagrams. Smaller viewBoxes
-  lead to cramped, unreadable content.
 - every lecture must have YAML front matter (tags, level, category, audience) just like
   courses do.
-- image references (![...](path)) must point to files that actually exist. Run the
-  md_checks.py --images check to verify.
 - do not put content (bullet points, descriptions, images) on the title slide (slide 1).
   The title slide should only have # Title, ## Author, ## Email. Diagrams and content
   go on slide 2 and beyond.

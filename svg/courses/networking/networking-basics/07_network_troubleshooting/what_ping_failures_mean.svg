@@ -1,29 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 480" font-family="Arial, sans-serif">
-  <text x="350" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">What Ping Failures Mean</text>
-  <!-- Dest Host Unreachable -->
-  <rect x="20" y="45" width="660" height="70" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="40" y="70" font-size="14" font-weight="bold" fill="#dc3545">"Destination Host Unreachable"</text>
-  <text x="40" y="90" font-size="12" fill="#333">Your gateway doesn't know how to reach the target</text>
-  <text x="40" y="106" font-size="11" fill="#555">Check: ip route, gateway status</text>
-  <!-- Request timed out -->
-  <rect x="20" y="125" width="660" height="85" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="40" y="150" font-size="14" font-weight="bold" fill="#856404">"Request timed out" / No response</text>
-  <text x="40" y="170" font-size="12" fill="#333">Packets may be dropped by firewall, host may be down, ICMP may be blocked</text>
-  <text x="40" y="188" font-size="12" fill="#555">Many servers block ping intentionally</text>
-  <text x="40" y="203" font-size="11" fill="#555">Check: traceroute to see where packets stop</text>
-  <!-- Network unreachable -->
-  <rect x="20" y="220" width="660" height="70" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="40" y="245" font-size="14" font-weight="bold" fill="#dc3545">"Network is unreachable"</text>
-  <text x="40" y="265" font-size="12" fill="#333">No route to the destination network</text>
-  <text x="40" y="281" font-size="11" fill="#555">Check: ip route, default gateway</text>
-  <!-- High latency -->
-  <rect x="20" y="300" width="660" height="70" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="40" y="325" font-size="14" font-weight="bold" fill="#4a90e2">High latency (&gt;100ms local, &gt;300ms cross-continent)</text>
-  <text x="40" y="345" font-size="12" fill="#333">Network congestion or routing issue (suboptimal path)</text>
-  <text x="40" y="361" font-size="11" fill="#555">Check: traceroute, mtr</text>
-  <!-- Packet loss -->
-  <rect x="20" y="380" width="660" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="40" y="405" font-size="14" font-weight="bold" fill="#856404">Packet loss (&gt;1%)</text>
-  <text x="40" y="425" font-size="12" fill="#333">Network congestion, flapping link, bad cable, or wireless interference</text>
-  <text x="40" y="441" font-size="11" fill="#555">Check: mtr for sustained test, ip -s link for errors</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="45" text-anchor="middle" font-size="27" font-weight="bold" fill="#333">What Ping Failures Mean</text>
+  <rect x="36.5714" y="67.5" width="1206.8571" height="105" rx="7.5" fill="#f8d7da" stroke="#dc3545" stroke-width="3" />
+  <text x="73.1429" y="105" font-size="21" font-weight="bold" fill="#dc3545">"Destination Host Unreachable"</text>
+  <text x="73.1429" y="135" font-size="18" fill="#333">Your gateway doesn't know how to reach the target</text>
+  <text x="73.1429" y="159" font-size="16.5" fill="#555">Check: ip route, gateway status</text>
+  <rect x="36.5714" y="187.5" width="1206.8571" height="127.5" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="73.1429" y="225" font-size="21" font-weight="bold" fill="#856404">"Request timed out" / No response</text>
+  <text x="73.1429" y="255" font-size="18" fill="#333">Packets may be dropped by firewall, host may be down, ICMP may be blocked</text>
+  <text x="73.1429" y="282" font-size="18" fill="#555">Many servers block ping intentionally</text>
+  <text x="73.1429" y="304.5" font-size="16.5" fill="#555">Check: traceroute to see where packets stop</text>
+  <rect x="36.5714" y="330" width="1206.8571" height="105" rx="7.5" fill="#f8d7da" stroke="#dc3545" stroke-width="3" />
+  <text x="73.1429" y="367.5" font-size="21" font-weight="bold" fill="#dc3545">"Network is unreachable"</text>
+  <text x="73.1429" y="397.5" font-size="18" fill="#333">No route to the destination network</text>
+  <text x="73.1429" y="421.5" font-size="16.5" fill="#555">Check: ip route, default gateway</text>
+  <rect x="36.5714" y="450" width="1206.8571" height="105" rx="7.5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
+  <text x="73.1429" y="487.5" font-size="21" font-weight="bold" fill="#4a90e2">High latency (&gt;100ms local, &gt;300ms cross-continent)</text>
+  <text x="73.1429" y="517.5" font-size="18" fill="#333">Network congestion or routing issue (suboptimal path)</text>
+  <text x="73.1429" y="541.5" font-size="16.5" fill="#555">Check: traceroute, mtr</text>
+  <rect x="36.5714" y="570" width="1206.8571" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="73.1429" y="607.5" font-size="21" font-weight="bold" fill="#856404">Packet loss (&gt;1%)</text>
+  <text x="73.1429" y="637.5" font-size="18" fill="#333">Network congestion, flapping link, bad cable, or wireless interference</text>
+  <text x="73.1429" y="661.5" font-size="16.5" fill="#555">Check: mtr for sustained test, ip -s link for errors</text>
 </svg>

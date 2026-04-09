@@ -1,32 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 600" font-family="Arial, sans-serif">
-  <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4a90e2"/></marker></defs>
-  <text x="290" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Layered Data Architecture</text>
-  <rect x="10" y="35" width="560" height="555" rx="5" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2"/>
-  <text x="30" y="60" font-size="14" font-weight="bold" fill="#333">Source Systems</text>
-  <rect x="30" y="70" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="85" y="95" text-anchor="middle" font-size="12" fill="#333">RDBMS</text>
-  <rect x="155" y="70" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="210" y="95" text-anchor="middle" font-size="12" fill="#333">API</text>
-  <rect x="280" y="70" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="335" y="95" text-anchor="middle" font-size="12" fill="#333">Kafka</text>
-  <rect x="405" y="70" width="110" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="460" y="95" text-anchor="middle" font-size="12" fill="#333">Files</text>
-  <line x1="290" y1="110" x2="290" y2="140" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="140" width="520" height="120" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="290" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">Bronze Layer (Raw)</text>
-  <text x="50" y="193" font-size="12" fill="#333">&#x2022; Raw data, as-is from source</text>
-  <text x="50" y="218" font-size="12" fill="#333">&#x2022; Append-only, no transformations</text>
-  <text x="50" y="243" font-size="12" fill="#333">&#x2022; Format: Delta / Parquet | Retention: long</text>
-  <line x1="290" y1="260" x2="290" y2="290" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="290" width="520" height="120" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="290" y="318" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Silver Layer (Cleansed)</text>
-  <text x="50" y="343" font-size="12" fill="#333">&#x2022; Deduplicated, validated, typed</text>
-  <text x="50" y="368" font-size="12" fill="#333">&#x2022; Business keys resolved</text>
-  <text x="50" y="393" font-size="12" fill="#333">&#x2022; Format: Delta (ACID) | Retention: medium</text>
-  <line x1="290" y1="410" x2="290" y2="440" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="30" y="440" width="520" height="120" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="290" y="468" text-anchor="middle" font-size="14" font-weight="bold" fill="#856404">Gold Layer (Business)</text>
-  <text x="50" y="493" font-size="12" fill="#333">&#x2022; Aggregated, enriched, business-ready</text>
-  <text x="50" y="518" font-size="12" fill="#333">&#x2022; Dimensional model / feature store</text>
-  <text x="50" y="543" font-size="12" fill="#333">&#x2022; Format: Delta (ACID) | Retention: as needed</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="11.0345" refY="6" markerWidth="13.2414" markerHeight="7.2" orient="auto-start-auto">
+      <path d="M 0 0 L 22.069 6 L 0 12 z" fill="#4a90e2" />
+    </marker>
+  </defs>
+  <text x="640" y="30" text-anchor="middle" font-size="19.2" font-weight="bold" fill="#333">Layered Data Architecture</text>
+  <rect x="22.069" y="42" width="1235.8621" height="666" rx="6" fill="#f9f9f9" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="66.2069" y="72" font-size="16.8" font-weight="bold" fill="#333">Source Systems</text>
+  <rect x="66.2069" y="84" width="242.7586" height="48" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8" />
+  <text x="187.5862" y="114" text-anchor="middle" font-size="14.4" fill="#333">RDBMS</text>
+  <rect x="342.069" y="84" width="242.7586" height="48" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8" />
+  <text x="463.4483" y="114" text-anchor="middle" font-size="14.4" fill="#333">API</text>
+  <rect x="617.931" y="84" width="242.7586" height="48" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8" />
+  <text x="739.3103" y="114" text-anchor="middle" font-size="14.4" fill="#333">Kafka</text>
+  <rect x="893.7931" y="84" width="242.7586" height="48" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.8" />
+  <text x="1015.1724" y="114" text-anchor="middle" font-size="14.4" fill="#333">Files</text>
+  <line x1="640" y1="132" x2="640" y2="168" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="66.2069" y="168" width="1147.5862" height="144" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="640" y="201.6" text-anchor="middle" font-size="16.8" font-weight="bold" fill="#4a90e2">Bronze Layer (Raw)</text>
+  <text x="110.3448" y="231.6" font-size="14.4" fill="#333">• Raw data, as-is from source</text>
+  <text x="110.3448" y="261.6" font-size="14.4" fill="#333">• Append-only, no transformations</text>
+  <text x="110.3448" y="291.6" font-size="14.4" fill="#333">• Format: Delta / Parquet | Retention: long</text>
+  <line x1="640" y1="312" x2="640" y2="348" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="66.2069" y="348" width="1147.5862" height="144" rx="6" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="640" y="381.6" text-anchor="middle" font-size="16.8" font-weight="bold" fill="#28a745">Silver Layer (Cleansed)</text>
+  <text x="110.3448" y="411.6" font-size="14.4" fill="#333">• Deduplicated, validated, typed</text>
+  <text x="110.3448" y="441.6" font-size="14.4" fill="#333">• Business keys resolved</text>
+  <text x="110.3448" y="471.6" font-size="14.4" fill="#333">• Format: Delta (ACID) | Retention: medium</text>
+  <line x1="640" y1="492" x2="640" y2="528" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="66.2069" y="528" width="1147.5862" height="144" rx="6" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="640" y="561.6" text-anchor="middle" font-size="16.8" font-weight="bold" fill="#856404">Gold Layer (Business)</text>
+  <text x="110.3448" y="591.6" font-size="14.4" fill="#333">• Aggregated, enriched, business-ready</text>
+  <text x="110.3448" y="621.6" font-size="14.4" fill="#333">• Dimensional model / feature store</text>
+  <text x="110.3448" y="651.6" font-size="14.4" fill="#333">• Format: Delta (ACID) | Retention: as needed</text>
 </svg>

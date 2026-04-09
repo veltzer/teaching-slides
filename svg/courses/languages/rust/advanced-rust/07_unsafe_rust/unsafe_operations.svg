@@ -1,44 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="10.5" refX="16" refY="5.25" orient="auto">
+      <polygon points="0,15 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Unsafe Operations in Rust</text>
-  <!-- The 5 unsafe superpowers -->
-  <rect x="30" y="55" width="740" height="40" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#dc3545">Five Unsafe Superpowers</text>
-  <!-- 1 -->
-  <rect x="30" y="110" width="350" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="205" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">1. Dereference Raw Pointers</text>
-  <text x="45" y="155" font-size="10" fill="#555">unsafe { *raw_ptr = 42; }</text>
-  <text x="45" y="170" font-size="10" fill="#dc3545">May be null, dangling, or unaligned</text>
-  <!-- 2 -->
-  <rect x="410" y="110" width="360" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="590" y="133" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">2. Call Unsafe Functions</text>
-  <text x="425" y="155" font-size="10" fill="#555">unsafe { dangerous_fn(); }</text>
-  <text x="425" y="170" font-size="10" fill="#dc3545">Function has preconditions caller must ensure</text>
-  <!-- 3 -->
-  <rect x="30" y="195" width="350" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="205" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">3. Access Mutable Statics</text>
-  <text x="45" y="240" font-size="10" fill="#555">static mut COUNTER: u32 = 0;</text>
-  <text x="45" y="255" font-size="10" fill="#dc3545">Data races possible with threads</text>
-  <!-- 4 -->
-  <rect x="410" y="195" width="360" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="590" y="218" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">4. Implement Unsafe Traits</text>
-  <text x="425" y="240" font-size="10" fill="#555">unsafe impl Send for MyType {}</text>
-  <text x="425" y="255" font-size="10" fill="#dc3545">Promises invariants compiler can't verify</text>
-  <!-- 5 -->
-  <rect x="200" y="280" width="400" height="70" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="400" y="303" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">5. Access Union Fields</text>
-  <text x="215" y="325" font-size="10" fill="#555">unsafe { my_union.field1 }</text>
-  <text x="215" y="340" font-size="10" fill="#dc3545">Wrong field = misinterpreted bytes</text>
-  <!-- What unsafe does NOT disable -->
-  <rect x="30" y="370" width="740" height="95" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="400" y="395" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">What unsafe Does NOT Disable</text>
-  <text x="140" y="420" text-anchor="middle" font-size="11" fill="#555">Borrow checker</text>
-  <text x="300" y="420" text-anchor="middle" font-size="11" fill="#555">Type checking</text>
-  <text x="460" y="420" text-anchor="middle" font-size="11" fill="#555">Lifetime checking</text>
-  <text x="640" y="420" text-anchor="middle" font-size="11" fill="#555">Bounds checking</text>
-  <text x="400" y="450" text-anchor="middle" font-size="11" fill="#28a745" font-weight="bold">unsafe only unlocks the 5 superpowers above - everything else still enforced!</text>
+  <text x="640" y="45" text-anchor="middle" font-size="30" font-weight="bold" fill="#333">Unsafe Operations in Rust</text>
+  <rect x="48" y="82.5" width="1184" height="60" rx="7.5" fill="#f8d7da" stroke="#dc3545" stroke-width="3" />
+  <text x="640" y="120" text-anchor="middle" font-size="21" font-weight="bold" fill="#dc3545">Five Unsafe Superpowers</text>
+  <rect x="48" y="165" width="560" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="328" y="199.5" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">1. Dereference Raw Pointers</text>
+  <text x="72" y="232.5" font-size="15" fill="#555">unsafe { *raw_ptr = 42; }</text>
+  <text x="72" y="255" font-size="15" fill="#dc3545">May be null, dangling, or unaligned</text>
+  <rect x="656" y="165" width="576" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="944" y="199.5" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">2. Call Unsafe Functions</text>
+  <text x="680" y="232.5" font-size="15" fill="#555">unsafe { dangerous_fn(); }</text>
+  <text x="680" y="255" font-size="15" fill="#dc3545">Function has preconditions caller must ensure</text>
+  <rect x="48" y="292.5" width="560" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="328" y="327" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">3. Access Mutable Statics</text>
+  <text x="72" y="360" font-size="15" fill="#555">static mut COUNTER: u32 = 0;</text>
+  <text x="72" y="382.5" font-size="15" fill="#dc3545">Data races possible with threads</text>
+  <rect x="656" y="292.5" width="576" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="944" y="327" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">4. Implement Unsafe Traits</text>
+  <text x="680" y="360" font-size="15" fill="#555">unsafe impl Send for MyType {}</text>
+  <text x="680" y="382.5" font-size="15" fill="#dc3545">Promises invariants compiler can't verify</text>
+  <rect x="320" y="420" width="640" height="105" rx="7.5" fill="#fff3cd" stroke="#ffc107" stroke-width="3" />
+  <text x="640" y="454.5" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">5. Access Union Fields</text>
+  <text x="344" y="487.5" font-size="15" fill="#555">unsafe { my_union.field1 }</text>
+  <text x="344" y="510" font-size="15" fill="#dc3545">Wrong field = misinterpreted bytes</text>
+  <rect x="48" y="555" width="1184" height="142.5" rx="7.5" fill="#d4edda" stroke="#28a745" stroke-width="3" />
+  <text x="640" y="592.5" text-anchor="middle" font-size="21" font-weight="bold" fill="#28a745">What unsafe Does NOT Disable</text>
+  <text x="224" y="630" text-anchor="middle" font-size="16.5" fill="#555">Borrow checker</text>
+  <text x="480" y="630" text-anchor="middle" font-size="16.5" fill="#555">Type checking</text>
+  <text x="736" y="630" text-anchor="middle" font-size="16.5" fill="#555">Lifetime checking</text>
+  <text x="1024" y="630" text-anchor="middle" font-size="16.5" fill="#555">Bounds checking</text>
+  <text x="640" y="675" text-anchor="middle" font-size="16.5" fill="#28a745" font-weight="bold">unsafe only unlocks the 5 superpowers above - everything else still enforced!</text>
 </svg>

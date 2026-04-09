@@ -1,68 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" font-family="Arial, sans-serif">
-  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Prompt Tuning vs LoRA vs Full FT</text>
-  <!-- Header -->
-  <rect x="20" y="50" width="140" height="35" rx="5" fill="#4a90e2" stroke="#4a90e2" stroke-width="1"/>
-  <text x="90" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Metric</text>
-  <rect x="170" y="50" width="160" height="35" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="250" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Prompt Tuning</text>
-  <rect x="340" y="50" width="160" height="35" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="420" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">LoRA</text>
-  <rect x="510" y="50" width="170" height="35" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="595" y="73" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Full FT</text>
-  <!-- Rows -->
-  <rect x="20" y="95" width="140" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="117" text-anchor="middle" font-size="11" fill="#333">Trainable %</text>
-  <rect x="170" y="95" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="117" text-anchor="middle" font-size="11" fill="#333">0.001%</text>
-  <rect x="340" y="95" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="117" text-anchor="middle" font-size="11" fill="#333">0.1-1%</text>
-  <rect x="510" y="95" width="170" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="117" text-anchor="middle" font-size="11" fill="#333">100%</text>
-
-  <rect x="20" y="135" width="140" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="157" text-anchor="middle" font-size="11" fill="#333">Storage</text>
-  <rect x="170" y="135" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="157" text-anchor="middle" font-size="11" fill="#333">~0.3 MB</text>
-  <rect x="340" y="135" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="157" text-anchor="middle" font-size="11" fill="#333">~80 MB</text>
-  <rect x="510" y="135" width="170" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="157" text-anchor="middle" font-size="11" fill="#333">~16 GB</text>
-
-  <rect x="20" y="175" width="140" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="197" text-anchor="middle" font-size="11" fill="#333">Training GPU</text>
-  <rect x="170" y="175" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="197" text-anchor="middle" font-size="11" fill="#333">~8 GB</text>
-  <rect x="340" y="175" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="197" text-anchor="middle" font-size="11" fill="#333">~16 GB</text>
-  <rect x="510" y="175" width="170" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="197" text-anchor="middle" font-size="11" fill="#333">~60+ GB</text>
-
-  <rect x="20" y="215" width="140" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="237" text-anchor="middle" font-size="11" fill="#333">Quality</text>
-  <rect x="170" y="215" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="237" text-anchor="middle" font-size="11" fill="#333">3/5</text>
-  <rect x="340" y="215" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="237" text-anchor="middle" font-size="11" fill="#333">4/5</text>
-  <rect x="510" y="215" width="170" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="237" text-anchor="middle" font-size="11" fill="#333">5/5</text>
-
-  <rect x="20" y="255" width="140" height="35" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="277" text-anchor="middle" font-size="11" fill="#333">Best for</text>
-  <rect x="170" y="255" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="277" text-anchor="middle" font-size="11" fill="#333">Simple classif.</text>
-  <rect x="340" y="255" width="160" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="277" text-anchor="middle" font-size="11" fill="#333">Most tasks</text>
-  <rect x="510" y="255" width="170" height="35" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="277" text-anchor="middle" font-size="11" fill="#333">Maximum quality</text>
-
-  <rect x="20" y="295" width="140" height="50" rx="3" fill="#f0f0f0" stroke="#ddd" stroke-width="1"/>
-  <text x="90" y="322" text-anchor="middle" font-size="11" fill="#333">Inference overhead</text>
-  <rect x="170" y="295" width="160" height="50" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="250" y="317" text-anchor="middle" font-size="11" fill="#333">+latency</text>
-  <text x="250" y="335" text-anchor="middle" font-size="10" fill="#888">(soft tokens)</text>
-  <rect x="340" y="295" width="160" height="50" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="420" y="317" text-anchor="middle" font-size="11" fill="#333">No extra</text>
-  <text x="420" y="335" text-anchor="middle" font-size="10" fill="#888">(after merge)</text>
-  <rect x="510" y="295" width="170" height="50" rx="3" fill="#fff" stroke="#ddd" stroke-width="1"/>
-  <text x="595" y="322" text-anchor="middle" font-size="11" fill="#333">No extra</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <text x="640" y="56.8421" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Prompt Tuning vs LoRA vs Full FT</text>
+  <rect x="35.5556" y="94.7368" width="248.8889" height="66.3158" rx="8.8889" fill="#4a90e2" stroke="#4a90e2" stroke-width="1.7778" />
+  <text x="160" y="138.3158" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#fff">Metric</text>
+  <rect x="302.2222" y="94.7368" width="284.4444" height="66.3158" rx="8.8889" fill="#fff3cd" stroke="#ffc107" stroke-width="3.5556" />
+  <text x="444.4444" y="138.3158" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Prompt Tuning</text>
+  <rect x="604.4444" y="94.7368" width="284.4444" height="66.3158" rx="8.8889" fill="#d4edda" stroke="#28a745" stroke-width="3.5556" />
+  <text x="746.6667" y="138.3158" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">LoRA</text>
+  <rect x="906.6667" y="94.7368" width="302.2222" height="66.3158" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.5556" />
+  <text x="1057.7778" y="138.3158" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Full FT</text>
+  <rect x="35.5556" y="180" width="248.8889" height="66.3158" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="221.6842" text-anchor="middle" font-size="19.5556" fill="#333">Trainable %</text>
+  <rect x="302.2222" y="180" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="221.6842" text-anchor="middle" font-size="19.5556" fill="#333">0.001%</text>
+  <rect x="604.4444" y="180" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="221.6842" text-anchor="middle" font-size="19.5556" fill="#333">0.1-1%</text>
+  <rect x="906.6667" y="180" width="302.2222" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="221.6842" text-anchor="middle" font-size="19.5556" fill="#333">100%</text>
+  <rect x="35.5556" y="255.7895" width="248.8889" height="66.3158" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="297.4737" text-anchor="middle" font-size="19.5556" fill="#333">Storage</text>
+  <rect x="302.2222" y="255.7895" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="297.4737" text-anchor="middle" font-size="19.5556" fill="#333">~0.3 MB</text>
+  <rect x="604.4444" y="255.7895" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="297.4737" text-anchor="middle" font-size="19.5556" fill="#333">~80 MB</text>
+  <rect x="906.6667" y="255.7895" width="302.2222" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="297.4737" text-anchor="middle" font-size="19.5556" fill="#333">~16 GB</text>
+  <rect x="35.5556" y="331.5789" width="248.8889" height="66.3158" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="373.2632" text-anchor="middle" font-size="19.5556" fill="#333">Training GPU</text>
+  <rect x="302.2222" y="331.5789" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="373.2632" text-anchor="middle" font-size="19.5556" fill="#333">~8 GB</text>
+  <rect x="604.4444" y="331.5789" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="373.2632" text-anchor="middle" font-size="19.5556" fill="#333">~16 GB</text>
+  <rect x="906.6667" y="331.5789" width="302.2222" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="373.2632" text-anchor="middle" font-size="19.5556" fill="#333">~60+ GB</text>
+  <rect x="35.5556" y="407.3684" width="248.8889" height="66.3158" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="449.0526" text-anchor="middle" font-size="19.5556" fill="#333">Quality</text>
+  <rect x="302.2222" y="407.3684" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="449.0526" text-anchor="middle" font-size="19.5556" fill="#333">3/5</text>
+  <rect x="604.4444" y="407.3684" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="449.0526" text-anchor="middle" font-size="19.5556" fill="#333">4/5</text>
+  <rect x="906.6667" y="407.3684" width="302.2222" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="449.0526" text-anchor="middle" font-size="19.5556" fill="#333">5/5</text>
+  <rect x="35.5556" y="483.1579" width="248.8889" height="66.3158" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="524.8421" text-anchor="middle" font-size="19.5556" fill="#333">Best for</text>
+  <rect x="302.2222" y="483.1579" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="524.8421" text-anchor="middle" font-size="19.5556" fill="#333">Simple classif.</text>
+  <rect x="604.4444" y="483.1579" width="284.4444" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="524.8421" text-anchor="middle" font-size="19.5556" fill="#333">Most tasks</text>
+  <rect x="906.6667" y="483.1579" width="302.2222" height="66.3158" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="524.8421" text-anchor="middle" font-size="19.5556" fill="#333">Maximum quality</text>
+  <rect x="35.5556" y="558.9474" width="248.8889" height="94.7368" rx="5.3333" fill="#f0f0f0" stroke="#ddd" stroke-width="1.7778" />
+  <text x="160" y="610.1053" text-anchor="middle" font-size="19.5556" fill="#333">Inference overhead</text>
+  <rect x="302.2222" y="558.9474" width="284.4444" height="94.7368" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="444.4444" y="600.6316" text-anchor="middle" font-size="19.5556" fill="#333">+latency</text>
+  <text x="444.4444" y="634.7368" text-anchor="middle" font-size="17.7778" fill="#888">(soft tokens)</text>
+  <rect x="604.4444" y="558.9474" width="284.4444" height="94.7368" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="746.6667" y="600.6316" text-anchor="middle" font-size="19.5556" fill="#333">No extra</text>
+  <text x="746.6667" y="634.7368" text-anchor="middle" font-size="17.7778" fill="#888">(after merge)</text>
+  <rect x="906.6667" y="558.9474" width="302.2222" height="94.7368" rx="5.3333" fill="#fff" stroke="#ddd" stroke-width="1.7778" />
+  <text x="1057.7778" y="610.1053" text-anchor="middle" font-size="19.5556" fill="#333">No extra</text>
 </svg>

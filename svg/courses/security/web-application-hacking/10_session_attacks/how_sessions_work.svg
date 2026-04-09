@@ -1,31 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="660" height="230" viewBox="0 0 660 230">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arr" markerWidth="19.3939" markerHeight="21.913" refX="17.4545" refY="10.9565" orient="auto">
+      <polygon points="0,31.3043 6.7879,0" fill="#555" />
     </marker>
   </defs>
-  <rect width="660" height="230" fill="#f0f4f8" rx="4" stroke="#333" stroke-width="1.5"/>
-  <text x="330" y="24" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" text-anchor="middle">Session Management Flow</text>
-  <!-- numbered steps top row -->
-  <text x="30" y="50" font-family="sans-serif" font-size="12" fill="#333">1. User authenticates (login)</text>
-  <text x="30" y="68" font-family="sans-serif" font-size="12" fill="#333">2. Server creates session and stores state</text>
-  <text x="30" y="86" font-family="sans-serif" font-size="12" fill="#333">3. Server sends session ID to client (cookie)</text>
-  <text x="30" y="104" font-family="sans-serif" font-size="12" fill="#333">4. Client sends session ID with every request</text>
-  <text x="30" y="122" font-family="sans-serif" font-size="12" fill="#333">5. Server looks up session state using the ID</text>
-  <text x="30" y="140" font-family="sans-serif" font-size="12" fill="#333">6. Session destroyed on logout or timeout</text>
-  <!-- components -->
-  <rect x="30" y="158" width="130" height="50" fill="#e3f2fd" rx="4" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="95" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="middle">Client</text>
-  <text x="95" y="197" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Cookie Store)</text>
-  <line x1="160" y1="183" x2="258" y2="183" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="210" y="176" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">Session ID</text>
-  <line x1="260" y1="192" x2="162" y2="192" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="210" y="207" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">(Cookie)</text>
-  <rect x="260" y="158" width="130" height="50" fill="#e8f5e9" rx="4" stroke="#2e7d32" stroke-width="1.5"/>
-  <text x="325" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="middle">App Server</text>
-  <line x1="390" y1="183" x2="488" y2="183" stroke="#555" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="440" y="176" font-family="sans-serif" font-size="10" fill="#333" text-anchor="middle">Session Data</text>
-  <rect x="490" y="158" width="140" height="50" fill="#fff3e0" rx="4" stroke="#e65100" stroke-width="1.5"/>
-  <text x="560" y="179" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">Session Store</text>
-  <text x="560" y="197" font-family="sans-serif" font-size="11" fill="#555" text-anchor="middle">(Memory/DB/Redis)</text>
+  <rect width="1280" height="720" fill="#f0f4f8" rx="7.7576" stroke="#333" stroke-width="2.9091" />
+  <text x="640" y="75.1304" font-family="sans-serif" font-size="29.0909" font-weight="bold" fill="#222" text-anchor="middle">Session Management Flow</text>
+  <text x="58.1818" y="156.5217" font-family="sans-serif" font-size="23.2727" fill="#333">1. User authenticates (login)</text>
+  <text x="58.1818" y="212.8696" font-family="sans-serif" font-size="23.2727" fill="#333">2. Server creates session and stores state</text>
+  <text x="58.1818" y="269.2174" font-family="sans-serif" font-size="23.2727" fill="#333">3. Server sends session ID to client (cookie)</text>
+  <text x="58.1818" y="325.5652" font-family="sans-serif" font-size="23.2727" fill="#333">4. Client sends session ID with every request</text>
+  <text x="58.1818" y="381.913" font-family="sans-serif" font-size="23.2727" fill="#333">5. Server looks up session state using the ID</text>
+  <text x="58.1818" y="438.2609" font-family="sans-serif" font-size="23.2727" fill="#333">6. Session destroyed on logout or timeout</text>
+  <rect x="58.1818" y="494.6087" width="252.1212" height="156.5217" fill="#e3f2fd" rx="7.7576" stroke="#1565c0" stroke-width="2.9091" />
+  <text x="184.2424" y="560.3478" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#1565c0" text-anchor="middle">Client</text>
+  <text x="184.2424" y="616.6957" font-family="sans-serif" font-size="21.3333" fill="#555" text-anchor="middle">(Cookie Store)</text>
+  <line x1="310.303" y1="572.8696" x2="500.3636" y2="572.8696" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="407.2727" y="550.9565" font-family="sans-serif" font-size="19.3939" fill="#333" text-anchor="middle">Session ID</text>
+  <line x1="504.2424" y1="601.0435" x2="314.1818" y2="601.0435" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="407.2727" y="648" font-family="sans-serif" font-size="19.3939" fill="#333" text-anchor="middle">(Cookie)</text>
+  <rect x="504.2424" y="494.6087" width="252.1212" height="156.5217" fill="#e8f5e9" rx="7.7576" stroke="#2e7d32" stroke-width="2.9091" />
+  <text x="630.303" y="560.3478" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#2e7d32" text-anchor="middle">App Server</text>
+  <line x1="756.3636" y1="572.8696" x2="946.4242" y2="572.8696" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
+  <text x="853.3333" y="550.9565" font-family="sans-serif" font-size="19.3939" fill="#333" text-anchor="middle">Session Data</text>
+  <rect x="950.303" y="494.6087" width="271.5152" height="156.5217" fill="#fff3e0" rx="7.7576" stroke="#e65100" stroke-width="2.9091" />
+  <text x="1086.0606" y="560.3478" font-family="sans-serif" font-size="25.2121" font-weight="bold" fill="#e65100" text-anchor="middle">Session Store</text>
+  <text x="1086.0606" y="616.6957" font-family="sans-serif" font-size="21.3333" fill="#555" text-anchor="middle">(Memory/DB/Redis)</text>
 </svg>

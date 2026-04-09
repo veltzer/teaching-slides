@@ -1,35 +1,28 @@
-<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
+      <polygon points="0,16 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <!-- User query -->
-  <rect x="220" y="10" width="360" height="40" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="400" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#333">"Show me the top 5 customers by revenue this quarter"</text>
-  <!-- Arrow down -->
-  <line x1="400" y1="50" x2="400" y2="80" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <!-- LLM Box -->
-  <rect x="250" y="80" width="300" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="105" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">LLM-Powered Database Interface</text>
-  <text x="400" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">NL &gt; SQL &gt; Execute &gt; NL</text>
-  <text x="400" y="148" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#777">Natural Language to SQL Pipeline</text>
-  <!-- Arrow down -->
-  <line x1="400" y1="160" x2="400" y2="190" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <!-- Generated SQL box -->
-  <rect x="130" y="190" width="540" height="120" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="150" y="212" font-family="monospace" font-size="11" fill="#333">Generated SQL:</text>
-  <text x="150" y="230" font-family="monospace" font-size="10" fill="#555">SELECT c.name, SUM(o.amount) as total_revenue</text>
-  <text x="150" y="245" font-family="monospace" font-size="10" fill="#555">FROM customers c</text>
-  <text x="150" y="260" font-family="monospace" font-size="10" fill="#555">JOIN orders o ON c.id = o.customer_id</text>
-  <text x="150" y="275" font-family="monospace" font-size="10" fill="#555">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
-  <text x="150" y="290" font-family="monospace" font-size="10" fill="#555">GROUP BY c.name ORDER BY total_revenue DESC LIMIT 5;</text>
-  <!-- Arrow down -->
-  <line x1="400" y1="310" x2="400" y2="340" stroke="#28a745" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <!-- Response box -->
-  <rect x="170" y="340" width="460" height="90" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="190" y="365" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Natural Language Response:</text>
-  <text x="190" y="385" font-family="Arial, sans-serif" font-size="11" fill="#555">"The top 5 customers by revenue this quarter are:</text>
-  <text x="200" y="402" font-family="Arial, sans-serif" font-size="11" fill="#555">1. Acme Corp -- $245,000</text>
-  <text x="200" y="419" font-family="Arial, sans-serif" font-size="11" fill="#555">2. TechStart Inc -- $198,000 ..."</text>
+  <rect x="352" y="16" width="576" height="64" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.4" />
+  <text x="640" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#333">"Show me the top 5 customers by revenue this quarter"</text>
+  <line x1="640" y1="80" x2="640" y2="128" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="400" y="128" width="480" height="128" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="22.4" font-weight="bold" fill="#333">LLM-Powered Database Interface</text>
+  <text x="640" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="19.2" fill="#555">NL &gt; SQL &gt; Execute &gt; NL</text>
+  <text x="640" y="236.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.6" fill="#777">Natural Language to SQL Pipeline</text>
+  <line x1="640" y1="256" x2="640" y2="304" stroke="#4a90e2" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="208" y="304" width="864" height="192" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="240" y="339.2" font-family="monospace" font-size="17.6" fill="#333">Generated SQL:</text>
+  <text x="240" y="368" font-family="monospace" font-size="16" fill="#555">SELECT c.name, SUM(o.amount) as total_revenue</text>
+  <text x="240" y="392" font-family="monospace" font-size="16" fill="#555">FROM customers c</text>
+  <text x="240" y="416" font-family="monospace" font-size="16" fill="#555">JOIN orders o ON c.id = o.customer_id</text>
+  <text x="240" y="440" font-family="monospace" font-size="16" fill="#555">WHERE o.date &gt;= DATE_TRUNC('quarter', CURRENT_DATE)</text>
+  <text x="240" y="464" font-family="monospace" font-size="16" fill="#555">GROUP BY c.name ORDER BY total_revenue DESC LIMIT 5;</text>
+  <line x1="640" y1="496" x2="640" y2="544" stroke="#28a745" stroke-width="2.4" marker-end="url(#arrow)" />
+  <rect x="272" y="544" width="736" height="144" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="304" y="584" font-family="Arial, sans-serif" font-size="19.2" font-weight="bold" fill="#333">Natural Language Response:</text>
+  <text x="304" y="616" font-family="Arial, sans-serif" font-size="17.6" fill="#555">"The top 5 customers by revenue this quarter are:</text>
+  <text x="320" y="643.2" font-family="Arial, sans-serif" font-size="17.6" fill="#555">1. Acme Corp -- $245,000</text>
+  <text x="320" y="670.4" font-family="Arial, sans-serif" font-size="17.6" fill="#555">2. TechStart Inc -- $198,000 ..."</text>
 </svg>

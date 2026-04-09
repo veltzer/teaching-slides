@@ -1,48 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#dc3545"/>
+    <marker id="arrow-red" markerWidth="17.7778" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 6.2222,0" fill="#dc3545" />
     </marker>
-    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0,10 3.5,0 7" fill="#28a745"/>
+    <marker id="arrow-green" markerWidth="17.7778" markerHeight="12.6" refX="16" refY="6.3" orient="auto">
+      <polygon points="0,18 6.2222,0" fill="#28a745" />
     </marker>
   </defs>
-  <text x="360" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">SYN Flood Attack</text>
-  <!-- Attacker -->
-  <rect x="30" y="70" width="140" height="60" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="100" y="96" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Attacker</text>
-  <text x="100" y="114" text-anchor="middle" font-size="10" fill="#666">Spoofed source IPs</text>
-  <!-- SYN flood arrows -->
-  <line x1="170" y1="85" x2="390" y2="85" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow-red)"/>
-  <text x="280" y="78" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">SYN SYN SYN SYN SYN</text>
-  <line x1="170" y1="100" x2="390" y2="100" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow-red)"/>
-  <line x1="170" y1="115" x2="390" y2="115" stroke="#dc3545" stroke-width="2" marker-end="url(#arrow-red)"/>
-  <!-- Server -->
-  <rect x="400" y="55" width="180" height="90" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="490" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Target Server</text>
-  <text x="490" y="102" text-anchor="middle" font-size="10" fill="#dc3545">Connection table</text>
-  <text x="490" y="117" text-anchor="middle" font-size="10" fill="#dc3545" font-weight="bold">FULL</text>
-  <!-- Connection table visualization -->
-  <rect x="610" y="55" width="90" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="1.5"/>
-  <text x="655" y="72" text-anchor="middle" font-size="10" font-weight="bold" fill="#dc3545">Half-Open</text>
-  <rect x="618" y="78" width="74" height="12" rx="2" fill="#dc3545" stroke="none"/>
-  <rect x="618" y="93" width="74" height="12" rx="2" fill="#dc3545" stroke="none"/>
-  <rect x="618" y="108" width="74" height="12" rx="2" fill="#dc3545" stroke="none"/>
-  <rect x="618" y="123" width="74" height="12" rx="2" fill="#dc3545" stroke="none"/>
-  <line x1="580" y1="100" x2="608" y2="100" stroke="#dc3545" stroke-width="1.5" marker-end="url(#arrow-red)"/>
-  <!-- Legitimate user -->
-  <rect x="30" y="200" width="140" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="100" y="226" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Legitimate User</text>
-  <text x="100" y="244" text-anchor="middle" font-size="10" fill="#666">Valid connection</text>
-  <line x1="170" y1="230" x2="390" y2="130" stroke="#28a745" stroke-width="2" marker-end="url(#arrow-green)"/>
-  <text x="300" y="195" text-anchor="middle" font-size="10" fill="#28a745">SYN</text>
-  <!-- Rejected -->
-  <rect x="320" y="170" width="100" height="30" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="370" y="190" text-anchor="middle" font-size="11" font-weight="bold" fill="#dc3545">REJECTED</text>
-  <!-- Explanation -->
-  <rect x="80" y="300" width="560" height="75" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="1.5"/>
-  <text x="360" y="322" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">How SYN Flood Works</text>
-  <text x="360" y="340" text-anchor="middle" font-size="10" fill="#666">1. Attacker sends massive SYN packets with spoofed source IPs</text>
-  <text x="360" y="355" text-anchor="middle" font-size="10" fill="#666">2. Server allocates resources for each half-open connection</text>
-  <text x="360" y="370" text-anchor="middle" font-size="10" fill="#666">3. Connection table fills up, denying service to legitimate users</text>
+  <text x="640" y="54" text-anchor="middle" font-size="28.4444" font-weight="bold" fill="#333">SYN Flood Attack</text>
+  <rect x="53.3333" y="126" width="248.8889" height="108" rx="8.8889" fill="#f8d7da" stroke="#dc3545" stroke-width="3.5556" />
+  <text x="177.7778" y="172.8" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Attacker</text>
+  <text x="177.7778" y="205.2" text-anchor="middle" font-size="17.7778" fill="#666">Spoofed source IPs</text>
+  <line x1="302.2222" y1="153" x2="693.3333" y2="153" stroke="#dc3545" stroke-width="3.5556" marker-end="url(#arrow-red)" />
+  <text x="497.7778" y="140.4" text-anchor="middle" font-size="17.7778" fill="#dc3545" font-weight="bold">SYN SYN SYN SYN SYN</text>
+  <line x1="302.2222" y1="180" x2="693.3333" y2="180" stroke="#dc3545" stroke-width="3.5556" marker-end="url(#arrow-red)" />
+  <line x1="302.2222" y1="207" x2="693.3333" y2="207" stroke="#dc3545" stroke-width="3.5556" marker-end="url(#arrow-red)" />
+  <rect x="711.1111" y="99" width="320" height="162" rx="8.8889" fill="#fff3cd" stroke="#ffc107" stroke-width="3.5556" />
+  <text x="871.1111" y="153" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Target Server</text>
+  <text x="871.1111" y="183.6" text-anchor="middle" font-size="17.7778" fill="#dc3545">Connection table</text>
+  <text x="871.1111" y="210.6" text-anchor="middle" font-size="17.7778" fill="#dc3545" font-weight="bold">FULL</text>
+  <rect x="1084.4444" y="99" width="160" height="162" rx="8.8889" fill="#f8d7da" stroke="#dc3545" stroke-width="2.6667" />
+  <text x="1164.4444" y="129.6" text-anchor="middle" font-size="17.7778" font-weight="bold" fill="#dc3545">Half-Open</text>
+  <rect x="1098.6667" y="140.4" width="131.5556" height="21.6" rx="3.5556" fill="#dc3545" stroke="none" />
+  <rect x="1098.6667" y="167.4" width="131.5556" height="21.6" rx="3.5556" fill="#dc3545" stroke="none" />
+  <rect x="1098.6667" y="194.4" width="131.5556" height="21.6" rx="3.5556" fill="#dc3545" stroke="none" />
+  <rect x="1098.6667" y="221.4" width="131.5556" height="21.6" rx="3.5556" fill="#dc3545" stroke="none" />
+  <line x1="1031.1111" y1="180" x2="1080.8889" y2="180" stroke="#dc3545" stroke-width="2.6667" marker-end="url(#arrow-red)" />
+  <rect x="53.3333" y="360" width="248.8889" height="108" rx="8.8889" fill="#d4edda" stroke="#28a745" stroke-width="3.5556" />
+  <text x="177.7778" y="406.8" text-anchor="middle" font-size="21.3333" font-weight="bold" fill="#333">Legitimate User</text>
+  <text x="177.7778" y="439.2" text-anchor="middle" font-size="17.7778" fill="#666">Valid connection</text>
+  <line x1="302.2222" y1="414" x2="693.3333" y2="234" stroke="#28a745" stroke-width="3.5556" marker-end="url(#arrow-green)" />
+  <text x="533.3333" y="351" text-anchor="middle" font-size="17.7778" fill="#28a745">SYN</text>
+  <rect x="568.8889" y="306" width="177.7778" height="54" rx="8.8889" fill="#f8d7da" stroke="#dc3545" stroke-width="3.5556" />
+  <text x="657.7778" y="342" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#dc3545">REJECTED</text>
+  <rect x="142.2222" y="540" width="995.5556" height="135" rx="8.8889" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.6667" />
+  <text x="640" y="579.6" text-anchor="middle" font-size="19.5556" font-weight="bold" fill="#333">How SYN Flood Works</text>
+  <text x="640" y="612" text-anchor="middle" font-size="17.7778" fill="#666">1. Attacker sends massive SYN packets with spoofed source IPs</text>
+  <text x="640" y="639" text-anchor="middle" font-size="17.7778" fill="#666">2. Server allocates resources for each half-open connection</text>
+  <text x="640" y="666" text-anchor="middle" font-size="17.7778" fill="#666">3. Connection table fills up, denying service to legitimate users</text>
 </svg>

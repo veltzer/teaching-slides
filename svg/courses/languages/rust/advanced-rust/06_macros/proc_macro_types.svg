@@ -1,61 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrow" markerWidth="16" markerHeight="11.2" refX="16" refY="5.6" orient="auto">
+      <polygon points="0,16 5.6,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Procedural Macro Types</text>
-  <!-- Function-like -->
-  <rect x="30" y="55" width="230" height="170" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="145" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Function-like</text>
-  <text x="45" y="105" font-size="10" fill="#555">#[proc_macro]</text>
-  <text x="45" y="123" font-size="10" fill="#555">pub fn sql(input:</text>
-  <text x="55" y="139" font-size="10" fill="#555">TokenStream)</text>
-  <text x="55" y="155" font-size="10" fill="#555">-&gt; TokenStream</text>
-  <line x1="45" y1="168" x2="245" y2="168" stroke="#28a745" stroke-width="1"/>
-  <text x="145" y="188" text-anchor="middle" font-size="10" fill="#555">Usage:</text>
-  <text x="145" y="205" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">sql!(SELECT * FROM users)</text>
-  <!-- Derive -->
-  <rect x="285" y="55" width="230" height="170" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a90e2">Derive Macro</text>
-  <text x="300" y="105" font-size="10" fill="#555">#[proc_macro_derive(</text>
-  <text x="310" y="121" font-size="10" fill="#555">MyTrait)]</text>
-  <text x="300" y="139" font-size="10" fill="#555">pub fn derive_my(</text>
-  <text x="310" y="155" font-size="10" fill="#555">input: TokenStream)</text>
-  <line x1="300" y1="168" x2="500" y2="168" stroke="#4a90e2" stroke-width="1"/>
-  <text x="400" y="188" text-anchor="middle" font-size="10" fill="#555">Usage:</text>
-  <text x="400" y="205" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">#[derive(MyTrait)]</text>
-  <!-- Attribute -->
-  <rect x="540" y="55" width="230" height="170" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="655" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Attribute Macro</text>
-  <text x="555" y="105" font-size="10" fill="#555">#[proc_macro_attribute]</text>
-  <text x="555" y="123" font-size="10" fill="#555">pub fn route(attr:</text>
-  <text x="565" y="139" font-size="10" fill="#555">TokenStream, item:</text>
-  <text x="565" y="155" font-size="10" fill="#555">TokenStream)</text>
-  <line x1="555" y1="168" x2="755" y2="168" stroke="#ffc107" stroke-width="1"/>
-  <text x="655" y="188" text-anchor="middle" font-size="10" fill="#555">Usage:</text>
-  <text x="655" y="205" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">#[route(GET, "/")]</text>
-  <!-- Flow diagram -->
-  <rect x="30" y="255" width="740" height="80" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="400" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Common Processing Pipeline</text>
-  <rect x="50" y="295" width="120" height="28" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="110" y="314" text-anchor="middle" font-size="10" fill="#333">TokenStream</text>
-  <line x1="170" y1="309" x2="210" y2="309" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="220" y="295" width="120" height="28" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="280" y="314" text-anchor="middle" font-size="10" fill="#333">syn::parse</text>
-  <line x1="340" y1="309" x2="380" y2="309" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="390" y="295" width="120" height="28" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="1.5"/>
-  <text x="450" y="314" text-anchor="middle" font-size="10" fill="#333">Transform AST</text>
-  <line x1="510" y1="309" x2="550" y2="309" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <rect x="560" y="295" width="120" height="28" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="620" y="314" text-anchor="middle" font-size="10" fill="#333">quote! {}</text>
-  <line x1="680" y1="309" x2="710" y2="309" stroke="#4a90e2" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="740" y="314" font-size="10" fill="#555">Output</text>
-  <!-- Key crates -->
-  <rect x="30" y="360" width="740" height="75" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="400" y="385" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Essential Crates</text>
-  <text x="140" y="410" text-anchor="middle" font-size="11" fill="#555">syn - parsing</text>
-  <text x="300" y="410" text-anchor="middle" font-size="11" fill="#555">quote - code gen</text>
-  <text x="480" y="410" text-anchor="middle" font-size="11" fill="#555">proc-macro2 - tokens</text>
-  <text x="660" y="410" text-anchor="middle" font-size="11" fill="#555">darling - attributes</text>
+  <text x="640" y="48" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Procedural Macro Types</text>
+  <rect x="48" y="88" width="368" height="272" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="3.2" />
+  <text x="232" y="128" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#28a745">Function-like</text>
+  <text x="72" y="168" font-size="16" fill="#555">#[proc_macro]</text>
+  <text x="72" y="196.8" font-size="16" fill="#555">pub fn sql(input:</text>
+  <text x="88" y="222.4" font-size="16" fill="#555">TokenStream)</text>
+  <text x="88" y="248" font-size="16" fill="#555">-&gt; TokenStream</text>
+  <line x1="72" y1="268.8" x2="392" y2="268.8" stroke="#28a745" stroke-width="1.6" />
+  <text x="232" y="300.8" text-anchor="middle" font-size="16" fill="#555">Usage:</text>
+  <text x="232" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">sql!(SELECT * FROM users)</text>
+  <rect x="456" y="88" width="368" height="272" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="128" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#4a90e2">Derive Macro</text>
+  <text x="480" y="168" font-size="16" fill="#555">#[proc_macro_derive(</text>
+  <text x="496" y="193.6" font-size="16" fill="#555">MyTrait)]</text>
+  <text x="480" y="222.4" font-size="16" fill="#555">pub fn derive_my(</text>
+  <text x="496" y="248" font-size="16" fill="#555">input: TokenStream)</text>
+  <line x1="480" y1="268.8" x2="800" y2="268.8" stroke="#4a90e2" stroke-width="1.6" />
+  <text x="640" y="300.8" text-anchor="middle" font-size="16" fill="#555">Usage:</text>
+  <text x="640" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">#[derive(MyTrait)]</text>
+  <rect x="864" y="88" width="368" height="272" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="1048" y="128" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Attribute Macro</text>
+  <text x="888" y="168" font-size="16" fill="#555">#[proc_macro_attribute]</text>
+  <text x="888" y="196.8" font-size="16" fill="#555">pub fn route(attr:</text>
+  <text x="904" y="222.4" font-size="16" fill="#555">TokenStream, item:</text>
+  <text x="904" y="248" font-size="16" fill="#555">TokenStream)</text>
+  <line x1="888" y1="268.8" x2="1208" y2="268.8" stroke="#ffc107" stroke-width="1.6" />
+  <text x="1048" y="300.8" text-anchor="middle" font-size="16" fill="#555">Usage:</text>
+  <text x="1048" y="328" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">#[route(GET, "/")]</text>
+  <rect x="48" y="408" width="1184" height="128" rx="8" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.2" />
+  <text x="640" y="448" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Common Processing Pipeline</text>
+  <rect x="80" y="472" width="192" height="44.8" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="176" y="502.4" text-anchor="middle" font-size="16" fill="#333">TokenStream</text>
+  <line x1="272" y1="494.4" x2="336" y2="494.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <rect x="352" y="472" width="192" height="44.8" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="448" y="502.4" text-anchor="middle" font-size="16" fill="#333">syn::parse</text>
+  <line x1="544" y1="494.4" x2="608" y2="494.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <rect x="624" y="472" width="192" height="44.8" rx="8" fill="#d4edda" stroke="#28a745" stroke-width="2.4" />
+  <text x="720" y="502.4" text-anchor="middle" font-size="16" fill="#333">Transform AST</text>
+  <line x1="816" y1="494.4" x2="880" y2="494.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <rect x="896" y="472" width="192" height="44.8" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.4" />
+  <text x="992" y="502.4" text-anchor="middle" font-size="16" fill="#333">quote! {}</text>
+  <line x1="1088" y1="494.4" x2="1136" y2="494.4" stroke="#4a90e2" stroke-width="3.2" marker-end="url(#arrow)" />
+  <text x="1184" y="502.4" font-size="16" fill="#555">Output</text>
+  <rect x="48" y="576" width="1184" height="120" rx="8" fill="#fff3cd" stroke="#ffc107" stroke-width="3.2" />
+  <text x="640" y="616" text-anchor="middle" font-size="20.8" font-weight="bold" fill="#333">Essential Crates</text>
+  <text x="224" y="656" text-anchor="middle" font-size="17.6" fill="#555">syn - parsing</text>
+  <text x="480" y="656" text-anchor="middle" font-size="17.6" fill="#555">quote - code gen</text>
+  <text x="768" y="656" text-anchor="middle" font-size="17.6" fill="#555">proc-macro2 - tokens</text>
+  <text x="1056" y="656" text-anchor="middle" font-size="17.6" fill="#555">darling - attributes</text>
 </svg>

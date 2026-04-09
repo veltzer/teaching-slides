@@ -1,9 +1,20 @@
-<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="200,30 50,270 350,270" fill="none" stroke="#333" stroke-width="2"/>
-  <text x="200" y="20" text-anchor="middle" font-size="15" font-weight="bold">Quality</text>
-  <text x="30" y="290" text-anchor="middle" font-size="15" font-weight="bold">Cost</text>
-  <text x="370" y="290" text-anchor="middle" font-size="15" font-weight="bold">Speed</text>
-  <circle cx="200" cy="120" r="6" fill="#F44336"/><text x="220" y="125" font-size="12">Frontier (cloud)</text>
-  <circle cx="130" cy="230" r="6" fill="#4CAF50"/><text x="150" y="235" font-size="12">Mid-tier</text>
-  <circle cx="290" cy="240" r="6" fill="#2196F3"/><text x="240" y="255" font-size="12">Local/small</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect width="8192" height="2304" fill="#f8f9fa" />
+  <text x="4096" y="218.88" text-anchor="middle" font-size="120.96" font-weight="bold" fill="#1a237e">Cost, Latency, and Quality Tradeoffs</text>
+  <polygon points="4096,403.2 1843.2,1900.8 6348.8,1900.8" fill="none" stroke="#333" stroke-width="14.4" />
+  <polygon points="4096,403.2 1843.2,1900.8 6348.8,1900.8" fill="#E8EAF6" fill-opacity="0.3" />
+  <text x="4096" y="316.8" text-anchor="middle" font-size="103.68" font-weight="bold" fill="#1565C0">Quality</text>
+  <text x="1587.2" y="2044.8" text-anchor="middle" font-size="103.68" font-weight="bold" fill="#2E7D32">Cost</text>
+  <text x="6604.8" y="2044.8" text-anchor="middle" font-size="103.68" font-weight="bold" fill="#C62828">Speed</text>
+  <circle cx="3686.4" cy="806.4" r="69.12" fill="#1565C0" />
+  <text x="4505.6" y="777.6" font-size="69.12" font-weight="bold" fill="#1565C0">Frontier (Claude Opus, GPT-4o)</text>
+  <text x="4505.6" y="881.28" font-size="63.36" fill="#555">Best quality, high cost, slower</text>
+  <circle cx="3276.8" cy="1382.4" r="69.12" fill="#4CAF50" />
+  <text x="3563.52" y="1353.6" font-size="69.12" font-weight="bold" fill="#2E7D32">Mid-tier (Claude Sonnet, GPT-4o-mini)</text>
+  <text x="3563.52" y="1457.28" font-size="63.36" fill="#555">Good balance across all three</text>
+  <circle cx="4812.8" cy="1641.6" r="69.12" fill="#F44336" />
+  <text x="5099.52" y="1612.8" font-size="69.12" font-weight="bold" fill="#C62828">Local/Small (Codellama, Haiku)</text>
+  <text x="5099.52" y="1716.48" font-size="63.36" fill="#555">Fast and cheap, lower quality</text>
+  <rect x="204.8" y="2016" width="7782.4" height="230.4" rx="46.08" fill="#FFFDE7" stroke="#F9A825" stroke-width="8.64" />
+  <text x="4096" y="2160" text-anchor="middle" font-size="74.88" fill="#555">Strategy: use cheap/fast models for completion, frontier models for agentic reasoning tasks</text>
 </svg>

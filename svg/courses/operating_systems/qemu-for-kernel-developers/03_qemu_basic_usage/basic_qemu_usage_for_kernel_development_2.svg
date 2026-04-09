@@ -1,25 +1,25 @@
-<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="20" y="10" width="170" height="80" fill="#e3f2fd" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="105" y="30" text-anchor="middle" font-size="11" font-weight="bold">Guest VM</text>
-  <rect x="30" y="40" width="70" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="65" y="56" text-anchor="middle" font-size="10">virtio-net</text>
-  <text x="65" y="70" text-anchor="middle" font-size="10">Guest NIC</text>
-  <rect x="110" y="40" width="70" height="40" fill="#fff3e0" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="145" y="56" text-anchor="middle" font-size="10">eth0</text>
-  <text x="145" y="70" text-anchor="middle" font-size="10">10.0.2.15</text>
-  <rect x="230" y="30" width="140" height="60" fill="#f3e5f5" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="300" y="50" text-anchor="middle" font-size="11" font-weight="bold">QEMU SLIRP</text>
-  <text x="300" y="67" text-anchor="middle" font-size="10">User-mode NAT</text>
-  <text x="300" y="80" text-anchor="middle" font-size="10">10.0.2.2 (gw)</text>
-  <rect x="410" y="30" width="140" height="60" fill="#e8f5e9" stroke="#333" stroke-width="2" rx="5"/>
-  <text x="480" y="50" text-anchor="middle" font-size="11" font-weight="bold">Host Network</text>
-  <text x="480" y="67" text-anchor="middle" font-size="10">Host NIC / Internet</text>
-  <line x1="190" y1="60" x2="230" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_qemu_basic_usage)"/>
-  <line x1="370" y1="60" x2="410" y2="60" stroke="#333" stroke-width="2" marker-end="url(#arrowd1_02_qemu_basic_usage)"/>
-  <text x="300" y="120" text-anchor="middle" font-size="10" fill="#555">-net nic,model=virtio -net user,hostfwd=tcp::2222-:22</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <rect x="42.6667" y="36" width="362.6667" height="288" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="224" y="108" text-anchor="middle" font-size="23.4667" font-weight="bold">Guest VM</text>
+  <rect x="64" y="144" width="149.3333" height="144" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="138.6667" y="201.6" text-anchor="middle" font-size="21.3333">virtio-net</text>
+  <text x="138.6667" y="252" text-anchor="middle" font-size="21.3333">Guest NIC</text>
+  <rect x="234.6667" y="144" width="149.3333" height="144" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
+  <text x="309.3333" y="201.6" text-anchor="middle" font-size="21.3333">eth0</text>
+  <text x="309.3333" y="252" text-anchor="middle" font-size="21.3333">10.0.2.15</text>
+  <rect x="490.6667" y="108" width="298.6667" height="216" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="640" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">QEMU SLIRP</text>
+  <text x="640" y="241.2" text-anchor="middle" font-size="21.3333">User-mode NAT</text>
+  <text x="640" y="288" text-anchor="middle" font-size="21.3333">10.0.2.2 (gw)</text>
+  <rect x="874.6667" y="108" width="298.6667" height="216" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
+  <text x="1024" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">Host Network</text>
+  <text x="1024" y="241.2" text-anchor="middle" font-size="21.3333">Host NIC / Internet</text>
+  <line x1="405.3333" y1="216" x2="490.6667" y2="216" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd1_02_qemu_basic_usage)" />
+  <line x1="789.3333" y1="216" x2="874.6667" y2="216" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd1_02_qemu_basic_usage)" />
+  <text x="640" y="432" text-anchor="middle" font-size="21.3333" fill="#555">-net nic,model=virtio -net user,hostfwd=tcp::2222-:22</text>
   <defs>
-    <marker id="arrowd1_02_qemu_basic_usage" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#333"/>
+    <marker id="arrowd1_02_qemu_basic_usage" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
+      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
     </marker>
   </defs>
 </svg>

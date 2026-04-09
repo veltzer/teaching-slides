@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="350" font-family="sans-serif">
-  <rect x="5" y="5" width="630" height="340" rx="4" fill="#f0f4f8" stroke="#333" stroke-width="1.5"/>
-  <text x="20" y="32" font-size="13" fill="#222">Step 1:  Browser checks its own DNS cache</text>
-  <text x="20" y="56" font-size="13" fill="#222">Step 2:  OS checks /etc/hosts file</text>
-  <text x="20" y="80" font-size="13" fill="#222">Step 3:  OS checks its DNS cache (systemd-resolved, nscd)</text>
-  <text x="20" y="104" font-size="13" fill="#222">Step 4:  Query sent to configured recursive resolver</text>
-  <text x="20" y="128" font-size="13" fill="#222">Step 5:  Resolver checks its cache</text>
-  <text x="20" y="152" font-size="13" fill="#222">Step 6:  If not cached, resolver walks the DNS hierarchy:</text>
-  <text x="44" y="174" font-size="13" fill="#555">6a:  Query root server → get .com NS</text>
-  <text x="44" y="196" font-size="13" fill="#555">6b:  Query .com NS → get example.com NS</text>
-  <text x="44" y="218" font-size="13" fill="#555">6c:  Query example.com NS → get A record</text>
-  <text x="20" y="242" font-size="13" fill="#222">Step 7:  Resolver caches the result and returns it</text>
-  <text x="20" y="266" font-size="13" fill="#222">Step 8:  OS caches the result</text>
-  <text x="20" y="290" font-size="13" fill="#222">Step 9:  Browser caches the result</text>
-  <text x="20" y="314" font-size="13" fill="#222">Step 10: Browser uses IP to establish TCP connection</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <rect x="10" y="10.2857" width="1260" height="699.4286" rx="8" fill="#f0f4f8" stroke="#333" stroke-width="3" />
+  <text x="40" y="65.8286" font-size="26" fill="#222">Step 1:  Browser checks its own DNS cache</text>
+  <text x="40" y="115.2" font-size="26" fill="#222">Step 2:  OS checks /etc/hosts file</text>
+  <text x="40" y="164.5714" font-size="26" fill="#222">Step 3:  OS checks its DNS cache (systemd-resolved, nscd)</text>
+  <text x="40" y="213.9429" font-size="26" fill="#222">Step 4:  Query sent to configured recursive resolver</text>
+  <text x="40" y="263.3143" font-size="26" fill="#222">Step 5:  Resolver checks its cache</text>
+  <text x="40" y="312.6857" font-size="26" fill="#222">Step 6:  If not cached, resolver walks the DNS hierarchy:</text>
+  <text x="88" y="357.9429" font-size="26" fill="#555">6a:  Query root server → get .com NS</text>
+  <text x="88" y="403.2" font-size="26" fill="#555">6b:  Query .com NS → get example.com NS</text>
+  <text x="88" y="448.4571" font-size="26" fill="#555">6c:  Query example.com NS → get A record</text>
+  <text x="40" y="497.8286" font-size="26" fill="#222">Step 7:  Resolver caches the result and returns it</text>
+  <text x="40" y="547.2" font-size="26" fill="#222">Step 8:  OS caches the result</text>
+  <text x="40" y="596.5714" font-size="26" fill="#222">Step 9:  Browser caches the result</text>
+  <text x="40" y="645.9429" font-size="26" fill="#222">Step 10: Browser uses IP to establish TCP connection</text>
 </svg>

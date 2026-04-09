@@ -1,29 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 520" font-family="Arial, sans-serif">
-  <rect x="10" y="10" width="630" height="500" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="325" y="40" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Authorization Bypass Patterns</text>
-  <!-- Pattern 1 -->
-  <rect x="25" y="55" width="600" height="75" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="45" y="75" font-size="13" font-weight="bold" fill="#dc3545">Pattern 1: Horizontal Privilege Escalation</text>
-  <text x="45" y="95" font-size="11" fill="#333">User A accesses User B's data: /api/orders/USER_B_ORDER_ID</text>
-  <text x="45" y="115" font-size="11" fill="#28a745">Defense: Verify ownership on every request</text>
-  <!-- Pattern 2 -->
-  <rect x="25" y="140" width="600" height="75" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="45" y="160" font-size="13" font-weight="bold" fill="#856404">Pattern 2: Vertical Privilege Escalation</text>
-  <text x="45" y="180" font-size="11" fill="#333">Regular user accesses admin: /admin/users (just change the URL)</text>
-  <text x="45" y="200" font-size="11" fill="#28a745">Defense: Role-based access control on every endpoint</text>
-  <!-- Pattern 3 -->
-  <rect x="25" y="225" width="600" height="80" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="45" y="245" font-size="13" font-weight="bold" fill="#dc3545">Pattern 3: Method-Based Bypass</text>
-  <text x="45" y="265" font-size="11" fill="#333">GET /admin/users -&gt; 403 | POST /admin/users -&gt; 200 OK</text>
-  <text x="45" y="285" font-size="11" fill="#28a745">Defense: Check authorization regardless of HTTP method</text>
-  <!-- Pattern 4 -->
-  <rect x="25" y="315" width="600" height="80" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
-  <text x="45" y="335" font-size="13" font-weight="bold" fill="#856404">Pattern 4: Parameter-Based Bypass</text>
-  <text x="45" y="355" font-size="11" fill="#333">POST {"name": "new"} vs POST {"name": "new", "role": "admin"}</text>
-  <text x="45" y="375" font-size="11" fill="#28a745">Defense: Whitelist updatable fields per role</text>
-  <!-- Pattern 5 -->
-  <rect x="25" y="405" width="600" height="90" rx="5" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
-  <text x="45" y="425" font-size="13" font-weight="bold" fill="#dc3545">Pattern 5: Path Traversal Bypass</text>
-  <text x="45" y="445" font-size="11" fill="#333">/admin/users -&gt; 403 | /ADMIN/users -&gt; 200 | /admin/./users -&gt; 200</text>
-  <text x="45" y="465" font-size="11" fill="#28a745">Defense: Normalize paths before authorization check</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <rect x="19.6923" y="13.8462" width="1240.6154" height="692.3077" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
+  <text x="640" y="55.3846" text-anchor="middle" font-size="24.9231" font-weight="bold" fill="#333">Authorization Bypass Patterns</text>
+  <rect x="49.2308" y="76.1538" width="1181.5385" height="103.8462" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
+  <text x="88.6154" y="103.8462" font-size="18" font-weight="bold" fill="#dc3545">Pattern 1: Horizontal Privilege Escalation</text>
+  <text x="88.6154" y="131.5385" font-size="15.2308" fill="#333">User A accesses User B's data: /api/orders/USER_B_ORDER_ID</text>
+  <text x="88.6154" y="159.2308" font-size="15.2308" fill="#28a745">Defense: Verify ownership on every request</text>
+  <rect x="49.2308" y="193.8462" width="1181.5385" height="103.8462" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="88.6154" y="221.5385" font-size="18" font-weight="bold" fill="#856404">Pattern 2: Vertical Privilege Escalation</text>
+  <text x="88.6154" y="249.2308" font-size="15.2308" fill="#333">Regular user accesses admin: /admin/users (just change the URL)</text>
+  <text x="88.6154" y="276.9231" font-size="15.2308" fill="#28a745">Defense: Role-based access control on every endpoint</text>
+  <rect x="49.2308" y="311.5385" width="1181.5385" height="110.7692" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
+  <text x="88.6154" y="339.2308" font-size="18" font-weight="bold" fill="#dc3545">Pattern 3: Method-Based Bypass</text>
+  <text x="88.6154" y="366.9231" font-size="15.2308" fill="#333">GET /admin/users -&gt; 403 | POST /admin/users -&gt; 200 OK</text>
+  <text x="88.6154" y="394.6154" font-size="15.2308" fill="#28a745">Defense: Check authorization regardless of HTTP method</text>
+  <rect x="49.2308" y="436.1538" width="1181.5385" height="110.7692" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
+  <text x="88.6154" y="463.8462" font-size="18" font-weight="bold" fill="#856404">Pattern 4: Parameter-Based Bypass</text>
+  <text x="88.6154" y="491.5385" font-size="15.2308" fill="#333">POST {"name": "new"} vs POST {"name": "new", "role": "admin"}</text>
+  <text x="88.6154" y="519.2308" font-size="15.2308" fill="#28a745">Defense: Whitelist updatable fields per role</text>
+  <rect x="49.2308" y="560.7692" width="1181.5385" height="124.6154" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
+  <text x="88.6154" y="588.4615" font-size="18" font-weight="bold" fill="#dc3545">Pattern 5: Path Traversal Bypass</text>
+  <text x="88.6154" y="616.1538" font-size="15.2308" fill="#333">/admin/users -&gt; 403 | /ADMIN/users -&gt; 200 | /admin/./users -&gt; 200</text>
+  <text x="88.6154" y="643.8462" font-size="15.2308" fill="#28a745">Defense: Normalize paths before authorization check</text>
 </svg>

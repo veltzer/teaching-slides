@@ -1,44 +1,33 @@
-<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" font-family="Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4a90e2"/>
+    <marker id="arrowhead" markerWidth="18.2857" markerHeight="13.2632" refX="18.2857" refY="6.6316" orient="auto">
+      <polygon points="0,18.9474 6.4,0" fill="#4a90e2" />
     </marker>
   </defs>
-  <text x="350" y="25" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">MVC Interaction Diagram</text>
-  <!-- User -->
-  <rect x="270" y="50" width="120" height="40" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="1.5"/>
-  <text x="330" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">User</text>
-  <!-- View -->
-  <rect x="80" y="160" width="150" height="60" rx="5" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2"/>
-  <text x="155" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a90e2">View</text>
-  <text x="155" y="208" text-anchor="middle" font-size="10" fill="#666">Presentation</text>
-  <!-- Controller -->
-  <rect x="310" y="160" width="150" height="60" rx="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
-  <text x="385" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#9c27b0">Controller</text>
-  <text x="385" y="208" text-anchor="middle" font-size="10" fill="#666">Logic</text>
-  <!-- Model -->
-  <rect x="530" y="160" width="150" height="60" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
-  <text x="605" y="188" text-anchor="middle" font-size="14" font-weight="bold" fill="#28a745">Model</text>
-  <text x="605" y="208" text-anchor="middle" font-size="10" fill="#666">Data &amp; Business Logic</text>
-  <!-- User -> View -->
-  <line x1="290" y1="90" x2="180" y2="158" stroke="#ffc107" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="215" y="115" font-size="10" fill="#ffc107">Input</text>
-  <!-- View -> Controller -->
-  <line x1="230" y1="180" x2="308" y2="180" stroke="#4a90e2" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="270" y="173" font-size="10" fill="#4a90e2">User Events</text>
-  <!-- Controller -> Model -->
-  <line x1="460" y1="185" x2="528" y2="185" stroke="#9c27b0" stroke-width="1.5" marker-end="url(#arrowhead)"/>
-  <text x="495" y="178" font-size="10" fill="#9c27b0">Update</text>
-  <!-- Model -> View (notify) -->
-  <path d="M 530 200 Q 350 280 155 222" stroke="#28a745" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="350" y="268" text-anchor="middle" font-size="10" fill="#28a745">Notify Changes</text>
-  <!-- Controller -> View -->
-  <line x1="340" y1="160" x2="210" y2="160" stroke="#9c27b0" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrowhead)"/>
-  <text x="275" y="155" font-size="10" fill="#999">Select View</text>
-  <!-- Model self-loop -->
-  <path d="M 680 180 Q 710 180 710 200 Q 710 220 680 220" stroke="#28a745" stroke-width="1" fill="none" marker-end="url(#arrowhead)"/>
-  <text x="715" y="205" font-size="10" fill="#28a745">Business</text>
-  <text x="715" y="217" font-size="10" fill="#28a745">Logic</text>
-  <!-- Note -->
-  <text x="350" y="330" text-anchor="middle" font-size="11" fill="#888" font-style="italic">Model-View-Controller: separates data, presentation, and input handling.</text>
+  <text x="640" y="47.3684" text-anchor="middle" font-size="29.2571" font-weight="bold" fill="#333">MVC Interaction Diagram</text>
+  <rect x="493.7143" y="94.7368" width="219.4286" height="75.7895" rx="9.1429" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7429" />
+  <text x="603.4286" y="142.1053" text-anchor="middle" font-size="23.7714" font-weight="bold" fill="#333">User</text>
+  <rect x="146.2857" y="303.1579" width="274.2857" height="113.6842" rx="9.1429" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6571" />
+  <text x="283.4286" y="356.2105" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#4a90e2">View</text>
+  <text x="283.4286" y="394.1053" text-anchor="middle" font-size="18.2857" fill="#666">Presentation</text>
+  <rect x="566.8571" y="303.1579" width="274.2857" height="113.6842" rx="9.1429" fill="#f3e5f5" stroke="#9c27b0" stroke-width="3.6571" />
+  <text x="704" y="356.2105" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#9c27b0">Controller</text>
+  <text x="704" y="394.1053" text-anchor="middle" font-size="18.2857" fill="#666">Logic</text>
+  <rect x="969.1429" y="303.1579" width="274.2857" height="113.6842" rx="9.1429" fill="#d4edda" stroke="#28a745" stroke-width="3.6571" />
+  <text x="1106.2857" y="356.2105" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#28a745">Model</text>
+  <text x="1106.2857" y="394.1053" text-anchor="middle" font-size="18.2857" fill="#666">Data &amp; Business Logic</text>
+  <line x1="530.2857" y1="170.5263" x2="329.1429" y2="299.3684" stroke="#ffc107" stroke-width="2.7429" marker-end="url(#arrowhead)" />
+  <text x="393.1429" y="217.8947" font-size="18.2857" fill="#ffc107">Input</text>
+  <line x1="420.5714" y1="341.0526" x2="563.2" y2="341.0526" stroke="#4a90e2" stroke-width="2.7429" marker-end="url(#arrowhead)" />
+  <text x="493.7143" y="327.7895" font-size="18.2857" fill="#4a90e2">User Events</text>
+  <line x1="841.1429" y1="350.5263" x2="965.4857" y2="350.5263" stroke="#9c27b0" stroke-width="2.7429" marker-end="url(#arrowhead)" />
+  <text x="905.1429" y="337.2632" font-size="18.2857" fill="#9c27b0">Update</text>
+  <path d="M 969.1429 378.9474 Q 640 530.5263 283.4286 420.6316" stroke="#28a745" stroke-width="2.7429" fill="none" marker-end="url(#arrowhead)" />
+  <text x="640" y="507.7895" text-anchor="middle" font-size="18.2857" fill="#28a745">Notify Changes</text>
+  <line x1="621.7143" y1="303.1579" x2="384" y2="303.1579" stroke="#9c27b0" stroke-width="1.8286" stroke-dasharray="9.1429 5.4857" marker-end="url(#arrowhead)" />
+  <text x="502.8571" y="293.6842" font-size="18.2857" fill="#999">Select View</text>
+  <path d="M 1243.4286 341.0526 Q 1298.2857 341.0526 1298.2857 378.9474 Q 1298.2857 416.8421 1243.4286 416.8421" stroke="#28a745" stroke-width="1.8286" fill="none" marker-end="url(#arrowhead)" />
+  <text x="1307.4286" y="388.4211" font-size="18.2857" fill="#28a745">Business</text>
+  <text x="1307.4286" y="411.1579" font-size="18.2857" fill="#28a745">Logic</text>
+  <text x="640" y="625.2632" text-anchor="middle" font-size="20.1143" fill="#888" font-style="italic">Model-View-Controller: separates data, presentation, and input handling.</text>
 </svg>
