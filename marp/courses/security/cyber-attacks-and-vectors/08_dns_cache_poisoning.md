@@ -122,12 +122,12 @@ dig dnssec-failed.org @8.8.8.8
 ## Exercise: DNS Cache Poisoning Lab
 
 1. Set up a local BIND DNS resolver in a VM
-2. Configure it as a caching resolver for a test domain
-3. Use Wireshark to capture DNS traffic and observe:
+1. Configure it as a caching resolver for a test domain
+1. Use Wireshark to capture DNS traffic and observe:
    - Transaction IDs
    - Source ports
    - TTL values in cached records
-4. Enable source port randomization and verify with packet captures
-5. Enable DNSSEC validation and test with known signed domains
-6. Compare resolution behavior with and without DNSSEC for poisoned records
-7. Set up DNS monitoring with passive DNS logging
+1. Enable source port randomization and verify with packet captures
+1. Enable DNSSEC validation and test with known signed domains
+1. Compare resolution behavior with and without DNSSEC for poisoned records
+1. Set up DNS monitoring with passive DNS logging

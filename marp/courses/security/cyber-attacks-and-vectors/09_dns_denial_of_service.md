@@ -34,7 +34,6 @@
 1. **Implement DNS Response Rate Limiting (RRL)**: Limit the rate at which a DNS server responds to queries from a specific IP address or network.
 1. **Keep DNS Software Up-to-Date**: Regularly update the DNS software and apply security patches to mitigate known vulnerabilities
 ---
----
 
 ## DNS DoS Attack Flow
 
@@ -119,12 +118,12 @@ The 2016 Dyn attack used the Mirai botnet (IoT devices) to generate massive DNS 
 ## Exercise: DNS DoS Mitigation Lab
 
 1. Set up a BIND DNS server in a test environment
-2. Configure logging to track query rates and types
-3. Generate simulated DNS query flood traffic using `dnsperf`
-4. Observe server behavior under load (CPU, memory, response time)
-5. Implement Rate Limiting (RRL) and repeat the test
-6. Compare server performance with and without RRL
-7. Set up monitoring dashboards for DNS metrics (Grafana + Prometheus)
+1. Configure logging to track query rates and types
+1. Generate simulated DNS query flood traffic using `dnsperf`
+1. Observe server behavior under load (CPU, memory, response time)
+1. Implement Rate Limiting (RRL) and repeat the test
+1. Compare server performance with and without RRL
+1. Set up monitoring dashboards for DNS metrics (Grafana + Prometheus)
 
 ```bash
 # Using dnsperf for DNS load testing

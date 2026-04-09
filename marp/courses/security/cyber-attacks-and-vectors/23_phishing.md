@@ -421,17 +421,17 @@ Only FIDO2/WebAuthn hardware keys are resistant to AiTM!
 ## Phishing Incident Response
 
 1. **Report**: User clicks "Report Phishing" button or contacts security team
-2. **Triage**: Determine scope -- who else received the email?
-3. **Contain**: Remove email from all mailboxes (admin purge)
-4. **Assess**: Did anyone click? Enter credentials? Download attachments?
-5. **Respond**:
+1. **Triage**: Determine scope -- who else received the email?
+1. **Contain**: Remove email from all mailboxes (admin purge)
+1. **Assess**: Did anyone click? Enter credentials? Download attachments?
+1. **Respond**:
    - Force password reset for affected accounts
    - Revoke active sessions
    - Check for mail forwarding rules (persistence mechanism)
    - Scan endpoints for malware
-6. **Block**: Add sender, domain, and URLs to blocklists
-7. **Communicate**: Alert other users about the phishing campaign
-8. **Improve**: Update email filtering rules, add to training simulations
+1. **Block**: Add sender, domain, and URLs to blocklists
+1. **Communicate**: Alert other users about the phishing campaign
+1. **Improve**: Update email filtering rules, add to training simulations
 
 ---
 ## Key Takeaways

@@ -1151,8 +1151,8 @@ fn factorial(n: u64) -> std::pin::Pin<Box<dyn std::future::Future<Output = u64>>
 ## Exercises
 
 1. Implement a custom `Future` that resolves after being polled N times.
-2. Build an async TCP echo server with graceful shutdown using `select!`.
-3. Create a rate-limited HTTP client using `Semaphore` and streams.
-4. Implement a producer-consumer pattern with multiple producers using channels.
-5. Write a parallel web scraper that limits concurrency and handles errors gracefully.
-6. Benchmark `join!` vs sequential awaits to measure concurrency benefits.
+1. Build an async TCP echo server with graceful shutdown using `select!`.
+1. Create a rate-limited HTTP client using `Semaphore` and streams.
+1. Implement a producer-consumer pattern with multiple producers using channels.
+1. Write a parallel web scraper that limits concurrency and handles errors gracefully.
+1. Benchmark `join!` vs sequential awaits to measure concurrency benefits.

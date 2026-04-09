@@ -1149,8 +1149,8 @@ fn main() {
 ## Exercises
 
 1. Use `cargo asm` or Compiler Explorer to compare the assembly of an iterator chain vs a hand-written loop. Are they identical?
-2. Set up `criterion` benchmarks comparing `Vec<PointAoS>` vs `PointsSoA` for computing distances on 1M points.
-3. Implement a custom `GlobalAlloc` that logs all allocations larger than 1 KB.
-4. Write a const fn that generates a CRC32 lookup table at compile time.
-5. Build a project with LTO enabled and compare binary size and runtime performance vs the default.
-6. Use `cargo flamegraph` to identify the hottest function in a sample program and optimize it.
+1. Set up `criterion` benchmarks comparing `Vec<PointAoS>` vs `PointsSoA` for computing distances on 1M points.
+1. Implement a custom `GlobalAlloc` that logs all allocations larger than 1 KB.
+1. Write a const fn that generates a CRC32 lookup table at compile time.
+1. Build a project with LTO enabled and compare binary size and runtime performance vs the default.
+1. Use `cargo flamegraph` to identify the hottest function in a sample program and optimize it.

@@ -41,8 +41,6 @@ Fast Flux DNS is a technique used by botnets and other malicious actors to hide 
 
 ---
 
----
-
 ## Single Flux vs Double Flux
 
 ![single_flux_vs_double_flux](svg/courses/security/cyber-attacks-and-vectors/11_fast_flux_dns/single_flux_vs_double_flux.svg)
@@ -136,11 +134,11 @@ The Avalanche network takedown in 2016 required coordinated effort across 30+ co
 ## Exercise: Fast Flux Analysis
 
 1. Write a Python script that monitors a domain's DNS A records over time
-2. Collect IP addresses every 60 seconds for 30 minutes
-3. Calculate metrics: unique IP count, ASN diversity, TTL values
-4. Implement a scoring system to flag potential fast flux domains
-5. Test against legitimate CDN domains (which also have multiple IPs) vs known fast flux patterns
-6. Discuss: How do you distinguish fast flux from legitimate CDN/anycast?
+1. Collect IP addresses every 60 seconds for 30 minutes
+1. Calculate metrics: unique IP count, ASN diversity, TTL values
+1. Implement a scoring system to flag potential fast flux domains
+1. Test against legitimate CDN domains (which also have multiple IPs) vs known fast flux patterns
+1. Discuss: How do you distinguish fast flux from legitimate CDN/anycast?
 
 ## Conclusion
 

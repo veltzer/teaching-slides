@@ -462,10 +462,10 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 
 **Objectives**:
 1. Scan the target and enumerate all services
-2. Find and exploit a web vulnerability
-3. Get an initial shell on the target
-4. Escalate privileges to root
-5. Capture the flag in `/root/flag.txt`
+1. Find and exploit a web vulnerability
+1. Get an initial shell on the target
+1. Escalate privileges to root
+1. Capture the flag in `/root/flag.txt`
 
 **Rules**:
 - Only attack the designated target

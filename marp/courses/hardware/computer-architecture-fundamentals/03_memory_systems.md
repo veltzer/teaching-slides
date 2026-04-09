@@ -106,8 +106,8 @@ DRAM is organized as a 2D array of rows and columns:
 
 **Access steps:**
 1. **RAS** (Row Address Strobe): activate a row, copy to row buffer (~13 ns)
-2. **CAS** (Column Address Strobe): select column from row buffer (~13 ns)
-3. **Data** appears on the data bus
+1. **CAS** (Column Address Strobe): select column from row buffer (~13 ns)
+1. **Data** appears on the data bus
 
 Accessing another column in the same row (row buffer hit) is much faster
 than activating a different row.
@@ -450,9 +450,9 @@ without involving the CPU for each byte.
 
 **DMA flow:**
 1. CPU programs the DMA controller (source, destination, size)
-2. DMA controller transfers data directly between device and memory
-3. DMA controller interrupts CPU when transfer is complete
-4. CPU was free to do other work during the transfer
+1. DMA controller transfers data directly between device and memory
+1. DMA controller interrupts CPU when transfer is complete
+1. CPU was free to do other work during the transfer
 
 ---
 

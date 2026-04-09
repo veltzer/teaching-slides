@@ -178,9 +178,9 @@ redis-cli --cluster create \
 
 Steps performed:
 1. Assigns slots to masters
-2. Sets up replication relationships
-3. Joins nodes into a cluster
-4. Verifies configuration
+1. Sets up replication relationships
+1. Joins nodes into a cluster
+1. Verifies configuration
 
 Alternative: `redis-cli --cluster help` for other commands
 
@@ -221,7 +221,7 @@ CLUSTER FAILOVER
 
 Two connection modes:
 1. **Smart clients**: Handle redirects automatically
-2. **Cluster proxy**: Routes commands to correct node
+1. **Cluster proxy**: Routes commands to correct node
 
 ---
 
@@ -280,9 +280,9 @@ redis-cli --cluster reshard 127.0.0.1:7000 \
 
 Steps performed:
 1. Prepares nodes for slot migration
-2. Moves keys in batches
-3. Updates slot mappings
-4. Verifies shard distribution
+1. Moves keys in batches
+1. Updates slot mappings
+1. Verifies shard distribution
 
 ---
 
@@ -415,8 +415,8 @@ Redis Cluster is "eventually consistent":
 
 Potential consistency issues:
 1. **Split-brain during partitions**
-2. **Asynchronous replication**
-3. **Race conditions during failover**
+1. **Asynchronous replication**
+1. **Race conditions during failover**
 
 For stronger consistency:
 - Use appropriate wait commands
@@ -527,8 +527,8 @@ DR strategies for Redis Cluster:
 
 Backup approaches:
 1. **Coordinated RDB snapshots**
-2. **Geo-distributed replicas**
-3. **Cross-datacenter replication**
+1. **Geo-distributed replicas**
+1. **Cross-datacenter replication**
 
 Remember:
 - Test recovery regularly

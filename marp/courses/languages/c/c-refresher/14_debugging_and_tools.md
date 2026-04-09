@@ -687,15 +687,15 @@ write(2, "Error: config file not found\n", 29) = 29
 ## Debugging Checklist
 
 1. **Reproduce**: Can you trigger the bug reliably?
-2. **Minimize**: What is the smallest input that triggers it?
-3. **Warnings**: Does `gcc -Wall -Wextra` show anything?
-4. **Sanitizers**: Run with ASan + UBSan. Any findings?
-5. **Valgrind**: Any memory errors or leaks?
-6. **GDB**: Set breakpoint near the bug. Step through.
-7. **Print debugging**: Add strategic `fprintf(stderr, ...)` calls
-8. **Assertions**: Add `assert()` for invariants you expect
-9. **Static analysis**: Run `cppcheck` or `clang-tidy`
-10. **Rubber duck**: Explain the code line by line
+1. **Minimize**: What is the smallest input that triggers it?
+1. **Warnings**: Does `gcc -Wall -Wextra` show anything?
+1. **Sanitizers**: Run with ASan + UBSan. Any findings?
+1. **Valgrind**: Any memory errors or leaks?
+1. **GDB**: Set breakpoint near the bug. Step through.
+1. **Print debugging**: Add strategic `fprintf(stderr, ...)` calls
+1. **Assertions**: Add `assert()` for invariants you expect
+1. **Static analysis**: Run `cppcheck` or `clang-tidy`
+1. **Rubber duck**: Explain the code line by line
 
 ---
 

@@ -2629,10 +2629,10 @@ Design Patterns in Modern C++:
 
 **Key Principles:**
 1. **Solve actual problems** - don't over-engineer
-2. **Common vocabulary** - communicate design intent clearly
-3. **Proven solutions** - tested and refined over time
-4. **SOLID principles** - patterns support good design principles
-5. **Modern C++** enhances pattern implementation
+1. **Common vocabulary** - communicate design intent clearly
+1. **Proven solutions** - tested and refined over time
+1. **SOLID principles** - patterns support good design principles
+1. **Modern C++** enhances pattern implementation
 
 **Pattern Categories:**
 - **Creational (5 patterns)**: Factory, Abstract Factory, Builder, Prototype, Singleton

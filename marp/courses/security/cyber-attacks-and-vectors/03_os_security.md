@@ -482,7 +482,7 @@ aureport --auth --summary
    - Weak root password
    - SSH with PasswordAuthentication yes and PermitRootLogin yes
    - No firewall rules
-2. Use Lynis to perform an automated audit
-3. Manually identify each vulnerability
-4. Document the remediation steps for each finding
-5. Apply fixes and re-run the audit to verify improvements
+1. Use Lynis to perform an automated audit
+1. Manually identify each vulnerability
+1. Document the remediation steps for each finding
+1. Apply fixes and re-run the audit to verify improvements

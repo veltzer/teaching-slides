@@ -123,8 +123,6 @@ v.data.f = 3.14;
 
 ---
 
----
-
 ## Struct Memory Layout and Padding
 
 ![struct_memory_layout_and_padding](svg/courses/languages/c/c-refresher/06_structs/struct_memory_layout_and_padding.svg)

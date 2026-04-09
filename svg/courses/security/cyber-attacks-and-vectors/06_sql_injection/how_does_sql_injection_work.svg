@@ -2,25 +2,25 @@
   <text x="300" y="15" text-anchor="middle" font-size="12" font-weight="bold">SQL Injection Attack Flow</text>
   <rect x="20" y="30" width="110" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="5"/>
   <text x="75" y="52" text-anchor="middle" font-size="10" font-weight="bold">Attacker</text>
-  <text x="75" y="68" text-anchor="middle" font-size="9" fill="#c62828">' OR '1'='1</text>
+  <text x="75" y="68" text-anchor="middle" font-size="10" fill="#c62828">' OR '1'='1</text>
   <rect x="180" y="30" width="130" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="5"/>
   <text x="245" y="50" text-anchor="middle" font-size="10" font-weight="bold">Web App</text>
-  <text x="245" y="68" text-anchor="middle" font-size="9" fill="#e65100">No input validation</text>
+  <text x="245" y="68" text-anchor="middle" font-size="10" fill="#e65100">No input validation</text>
   <rect x="360" y="30" width="120" height="50" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
   <text x="420" y="50" text-anchor="middle" font-size="10" font-weight="bold" fill="#c62828">SQL Engine</text>
-  <text x="420" y="68" text-anchor="middle" font-size="9" fill="#c62828">Executes malicious</text>
+  <text x="420" y="68" text-anchor="middle" font-size="10" fill="#c62828">Executes malicious</text>
   <rect x="510" y="30" width="80" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="5"/>
   <text x="550" y="52" text-anchor="middle" font-size="10" font-weight="bold">Database</text>
-  <text x="550" y="68" text-anchor="middle" font-size="9" fill="#c62828">Data leaked</text>
+  <text x="550" y="68" text-anchor="middle" font-size="10" fill="#c62828">Data leaked</text>
   <line x1="130" y1="55" x2="178" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
   <line x1="310" y1="55" x2="358" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
   <line x1="480" y1="55" x2="508" y2="55" stroke="#c62828" stroke-width="2" marker-end="url(#arrowsqli)"/>
   <rect x="100" y="100" width="400" height="40" fill="#fff3e0" stroke="#e65100" stroke-width="1" rx="3"/>
   <text x="300" y="117" text-anchor="middle" font-size="10" fill="#e65100">SELECT * FROM users WHERE name='' OR '1'='1' --'</text>
-  <text x="300" y="132" text-anchor="middle" font-size="9" fill="#c62828">Unsanitized input becomes part of SQL query</text>
+  <text x="300" y="132" text-anchor="middle" font-size="10" fill="#c62828">Unsanitized input becomes part of SQL query</text>
   <rect x="100" y="150" width="400" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1" rx="3"/>
   <text x="300" y="167" text-anchor="middle" font-size="10" fill="#2e7d32">SELECT * FROM users WHERE name=? (parameterized)</text>
-  <text x="300" y="182" text-anchor="middle" font-size="9" fill="#2e7d32">Safe: input treated as data, not code</text>
+  <text x="300" y="182" text-anchor="middle" font-size="10" fill="#2e7d32">Safe: input treated as data, not code</text>
   <defs>
     <marker id="arrowsqli" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
       <path d="M0,0 L0,6 L9,3 z" fill="#c62828"/>

@@ -1057,9 +1057,9 @@ Building institutional knowledge:
 
 ### Key Learnings
 1. Always implement idempotency for cart operations
-2. Use optimistic locking for inventory
-3. Cache cart calculations aggressively
-4. Monitor session timeout carefully
+1. Use optimistic locking for inventory
+1. Cache cart calculations aggressively
+1. Monitor session timeout carefully
 
 ### Reusable Components
 - Cart service (npm package)

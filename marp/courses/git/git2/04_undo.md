@@ -254,7 +254,7 @@ git revert def456
 
 # Creates new commit
 # jkl012 Revert "Add feature (BROKEN!)"
-# abc123 Fix critical bug  
+# abc123 Fix critical bug
 # def456 Add feature (BROKEN!)
 # ghi789 Update docs
 
@@ -340,7 +340,7 @@ git reset HEAD^
 git add file1.txt
 git commit -m "First logical change"
 
-# Stage and commit second logical change  
+# Stage and commit second logical change
 git add file2.txt
 git commit -m "Second logical change"
 

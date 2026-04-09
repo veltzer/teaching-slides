@@ -363,20 +363,20 @@ const safeHTML = DOMPurify.sanitize(userInput, config);
 ## Exercise: XSS Lab
 
 1. Build a vulnerable comment board (Flask/Express)
-2. Demonstrate all three XSS types:
+1. Demonstrate all three XSS types:
    - Reflected: Search parameter echoed without encoding
    - Stored: Comment with `<script>` tag saved to database
    - DOM-based: Fragment identifier used in `innerHTML`
-3. Craft payloads that:
+1. Craft payloads that:
    - Steal cookies and send to your listener (`nc -l 8888`)
    - Inject a fake login form
    - Modify page content
-4. Implement defenses one at a time and test each:
+1. Implement defenses one at a time and test each:
    - Output encoding (template auto-escaping)
    - Content Security Policy header
    - HttpOnly cookie flag
    - DOMPurify for user-generated HTML
-5. Test with XSStrike to verify all XSS vectors are closed
+1. Test with XSStrike to verify all XSS vectors are closed
 
 ## Conclusion
 

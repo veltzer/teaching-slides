@@ -874,7 +874,7 @@ fn main() {
 ## Exercises
 
 1. Write a struct `CachedParser<'input>` that borrows input and caches parsed tokens as slices.
-2. Implement a function with HRTBs that accepts a closure operating on borrowed data.
-3. Create a `SplitIterator` that borrows a string and yields splits without allocating.
-4. Build a struct that holds both owned and borrowed data with proper lifetime annotations.
-5. Fix a series of "lifetime does not live long enough" compiler errors (instructor-provided code).
+1. Implement a function with HRTBs that accepts a closure operating on borrowed data.
+1. Create a `SplitIterator` that borrows a string and yields splits without allocating.
+1. Build a struct that holds both owned and borrowed data with proper lifetime annotations.
+1. Fix a series of "lifetime does not live long enough" compiler errors (instructor-provided code).

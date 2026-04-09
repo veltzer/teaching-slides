@@ -82,9 +82,9 @@ curl http://TARGET/.git/HEAD
 
 Steps:
 1. Find the injectable parameter
-2. Determine the database type
-3. Enumerate tables and columns
-4. Extract the flag from the `flags` table
+1. Determine the database type
+1. Enumerate tables and columns
+1. Extract the flag from the `flags` table
 
 ```bash
 # Start testing
@@ -100,11 +100,11 @@ sqlmap -u "http://TARGET/page?id=1" --batch -D ctfdb -T flags --dump
 
 Steps:
 1. Find a page that stores and displays user input
-2. Craft an `XSS` payload that sends cookies to your server
-3. Trigger the admin bot to visit the page
-4. Capture the admin's session cookie
-5. Use the cookie to access the admin panel
-6. Find the flag in the admin panel
+1. Craft an `XSS` payload that sends cookies to your server
+1. Trigger the admin bot to visit the page
+1. Capture the admin's session cookie
+1. Use the cookie to access the admin panel
+1. Find the flag in the admin panel
 
 ```bash
 # Start a listener
@@ -135,10 +135,10 @@ Possible attack vectors:
 
 Steps:
 1. Get initial access via web exploitation
-2. Enumerate the system
-3. Find a privilege escalation vector
-4. Escalate to root
-5. Read the flag
+1. Enumerate the system
+1. Find a privilege escalation vector
+1. Escalate to root
+1. Read the flag
 
 ```bash
 # After getting a shell:

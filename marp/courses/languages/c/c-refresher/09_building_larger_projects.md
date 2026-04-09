@@ -153,8 +153,6 @@ clean:
 
 ---
 
----
-
 ## Static vs Extern Linkage
 
 ```c

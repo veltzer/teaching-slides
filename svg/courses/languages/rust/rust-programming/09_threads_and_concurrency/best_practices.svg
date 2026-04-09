@@ -7,20 +7,20 @@
   <line x1="350" y1="40" x2="480" y2="125" stroke="#333" stroke-width="2"/>
   <rect x="30" y="53" width="180" height="45" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
   <text x="120" y="70" text-anchor="middle" font-size="10" font-weight="bold">Channels over mutexes</text>
-  <text x="120" y="84" text-anchor="middle" font-size="9">Message passing avoids</text>
-  <text x="120" y="95" text-anchor="middle" font-size="9">shared state complexity</text>
+  <text x="120" y="84" text-anchor="middle" font-size="10">Message passing avoids</text>
+  <text x="120" y="95" text-anchor="middle" font-size="10">shared state complexity</text>
   <rect x="390" y="53" width="180" height="45" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
   <text x="480" y="70" text-anchor="middle" font-size="10" font-weight="bold">Minimize lock scope</text>
-  <text x="480" y="84" text-anchor="middle" font-size="9">Hold Mutex lock briefly</text>
-  <text x="480" y="95" text-anchor="middle" font-size="9">Drop guard ASAP</text>
+  <text x="480" y="84" text-anchor="middle" font-size="10">Hold Mutex lock briefly</text>
+  <text x="480" y="95" text-anchor="middle" font-size="10">Drop guard ASAP</text>
   <rect x="30" y="120" width="180" height="45" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="5"/>
   <text x="120" y="137" text-anchor="middle" font-size="10" font-weight="bold">Use scoped threads</text>
-  <text x="120" y="151" text-anchor="middle" font-size="9">thread::scope() borrows</text>
-  <text x="120" y="162" text-anchor="middle" font-size="9">data without Arc/move</text>
+  <text x="120" y="151" text-anchor="middle" font-size="10">thread::scope() borrows</text>
+  <text x="120" y="162" text-anchor="middle" font-size="10">data without Arc/move</text>
   <rect x="390" y="120" width="180" height="45" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
   <text x="480" y="137" text-anchor="middle" font-size="10" font-weight="bold">Consistent lock order</text>
-  <text x="480" y="151" text-anchor="middle" font-size="9">Always acquire locks in</text>
-  <text x="480" y="162" text-anchor="middle" font-size="9">the same order (no deadlock)</text>
+  <text x="480" y="151" text-anchor="middle" font-size="10">Always acquire locks in</text>
+  <text x="480" y="162" text-anchor="middle" font-size="10">the same order (no deadlock)</text>
   <rect x="150" y="178" width="300" height="18" fill="#ffebee" stroke="#333" stroke-width="1" rx="3"/>
-  <text x="300" y="191" text-anchor="middle" font-size="9">Prefer Arc&lt;Mutex&lt;T&gt;&gt; for simple sharing; channels for pipelines</text>
+  <text x="300" y="191" text-anchor="middle" font-size="10">Prefer Arc&lt;Mutex&lt;T&gt;&gt; for simple sharing; channels for pipelines</text>
 </svg>

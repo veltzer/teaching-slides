@@ -150,8 +150,6 @@ gcc -E source.c -o preprocessed.i
 
 ---
 
----
-
 ## Include Guards vs #pragma once
 
 ```c

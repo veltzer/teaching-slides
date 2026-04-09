@@ -134,9 +134,9 @@ $ docker service create --name web --network myoverlay --replicas 3 nginx
 
 Kubernetes networking has these fundamental requirements:
 1. Every Pod gets its own IP address
-2. All Pods can communicate with each other without NAT
-3. All Nodes can communicate with all Pods without NAT
-4. The IP a Pod sees itself as is the same IP others see it as
+1. All Pods can communicate with each other without NAT
+1. All Nodes can communicate with all Pods without NAT
+1. The IP a Pod sees itself as is the same IP others see it as
 
 ![kubernetes_networking_model](svg/courses/networking/networking-basics/08_modern_networking/kubernetes_networking_model.svg)
 
@@ -302,10 +302,10 @@ A CDN (Content Delivery Network) caches content at edge locations worldwide to r
 
 **How CDNs work:**
 1. User requests `cdn.example.com/image.png`
-2. DNS resolves to nearest edge server (GeoDNS / anycast)
-3. If edge has cached copy: serve immediately (cache HIT)
-4. If not: fetch from origin, cache locally, then serve (cache MISS)
-5. Subsequent requests from that region are served from cache
+1. DNS resolves to nearest edge server (GeoDNS / anycast)
+1. If edge has cached copy: serve immediately (cache HIT)
+1. If not: fetch from origin, cache locally, then serve (cache MISS)
+1. Subsequent requests from that region are served from cache
 
 **Major CDN providers:** Cloudflare, AWS CloudFront, Akamai, Fastly, Google Cloud CDN
 

@@ -6,6 +6,8 @@ Unified markdown checker for Marp slide files.
 Checks:
   --links       Validate that local links point to existing files
   --labels      Validate fenced code block language labels against text_labels.yaml
+  --fences      Check for unclosed code fences (odd number of ``` lines)
+  --urls        Check for external URLs in image references (should be local)
 
 Usage:
     md_checks.py --links --labels file1.md file2.md ...
@@ -93,6 +95,39 @@ def _check_labels(path: Path) -> list[str]:
     for label, line_no in _iter_labels(text):
         if label not in valid:
             errors.append(f"{path}:{line_no}: invalid label `{label}`")
+    return errors
+
+
+# ── Fence checking ──
+
+_FENCE_LINE_RE = re.compile(r'^[ \t]{0,3}```', re.MULTILINE)
+
+
+def _check_fences(path: Path) -> list[str]:
+    """Return list of error messages if code fences are unclosed."""
+    text = path.read_text(encoding='utf-8')
+    fence_count = len(_FENCE_LINE_RE.findall(text))
+    if fence_count % 2 != 0:
+        return [f"{path}: unclosed code fence ({fence_count} fence lines, expected even)"]
+    return []
+
+
+# ── External URL checking ──
+
+_IMAGE_RE = re.compile(r'!\[([^\]]*)\]\(([^)]+)\)')
+
+
+def _check_urls(path: Path) -> list[str]:
+    """Return list of error messages for external URLs in image references."""
+    text = path.read_text(encoding='utf-8')
+    # Remove code blocks to avoid false positives
+    text = _remove_code_blocks(text)
+    errors = []
+    for line_no, line in enumerate(text.splitlines(), 1):
+        for m in _IMAGE_RE.finditer(line):
+            url = m.group(2)
+            if url.startswith('http://') or url.startswith('https://'):
+                errors.append(f"{path}:{line_no}: external image URL: {url}")
     return errors
 
 

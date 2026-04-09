@@ -930,8 +930,8 @@ fn main() {
 ## Exercises
 
 1. Implement a safe `split_at_mut` using raw pointers.
-2. Build a `Cell`-like type from `UnsafeCell` that works for any `Copy` type.
-3. Create a `#[repr(C)]` struct and verify its layout matches C expectations.
-4. Implement a simple bump allocator using raw pointer arithmetic.
-5. Write a tagged union type with safe accessors and test it with Miri.
-6. Use `MaybeUninit` to efficiently initialize a large array.
+1. Build a `Cell`-like type from `UnsafeCell` that works for any `Copy` type.
+1. Create a `#[repr(C)]` struct and verify its layout matches C expectations.
+1. Implement a simple bump allocator using raw pointer arithmetic.
+1. Write a tagged union type with safe accessors and test it with Miri.
+1. Use `MaybeUninit` to efficiently initialize a large array.

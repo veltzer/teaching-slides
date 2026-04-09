@@ -361,8 +361,8 @@ example.com.        3600    IN    A    93.184.216.34
 
 **Caching layers:**
 1. Browser cache (Chrome: `chrome://net-internals/#dns`)
-2. OS cache (`systemd-resolved`, `nscd`, Windows DNS Client)
-3. Recursive resolver cache (ISP, 8.8.8.8, 1.1.1.1)
+1. OS cache (`systemd-resolved`, `nscd`, Windows DNS Client)
+1. Recursive resolver cache (ISP, 8.8.8.8, 1.1.1.1)
 
 ```bash
 # View systemd-resolved cache statistics
@@ -901,15 +901,15 @@ $ cat /etc/hosts
 ## DNS Best Practices
 
 1. **Use at least two authoritative name servers** on different networks for redundancy
-2. **Set appropriate TTLs**: lower before changes, raise after stability confirmed
-3. **Implement DNSSEC** for zones you control
-4. **Monitor DNS health**: check resolution times, error rates
-5. **Use DNS over HTTPS/TLS** for privacy on client devices
-6. **Keep SOA serial numbers** updated when changing zone files
-7. **Avoid CNAME at zone apex** -- use A/AAAA records instead
-8. **Document your DNS records** -- maintain a record of what each entry is for
-9. **Use separate DNS providers** for redundancy (multi-provider DNS)
-10. **Test changes** with `dig` before and after applying them
+1. **Set appropriate TTLs**: lower before changes, raise after stability confirmed
+1. **Implement DNSSEC** for zones you control
+1. **Monitor DNS health**: check resolution times, error rates
+1. **Use DNS over HTTPS/TLS** for privacy on client devices
+1. **Keep SOA serial numbers** updated when changing zone files
+1. **Avoid CNAME at zone apex** -- use A/AAAA records instead
+1. **Document your DNS records** -- maintain a record of what each entry is for
+1. **Use separate DNS providers** for redundancy (multi-provider DNS)
+1. **Test changes** with `dig` before and after applying them
 
 ```bash
 # Quick DNS health check script

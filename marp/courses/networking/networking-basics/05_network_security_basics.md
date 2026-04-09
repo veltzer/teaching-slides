@@ -53,8 +53,8 @@ TLS combines symmetric and asymmetric encryption for the best of both worlds:
 ![how_tls_uses_both](svg/courses/networking/networking-basics/05_network_security_basics/how_tls_uses_both.svg)
 
 1. Asymmetric crypto establishes a shared secret (session key)
-2. Symmetric crypto (AES/ChaCha20) encrypts all subsequent data
-3. This is why TLS has a "handshake" phase and a "data" phase
+1. Symmetric crypto (AES/ChaCha20) encrypts all subsequent data
+1. This is why TLS has a "handshake" phase and a "data" phase
 
 ---
 
@@ -116,9 +116,9 @@ TLS 1.3 reduces the handshake to just 1 round trip:
 
 **Certificate chain verification:**
 1. Server sends its certificate + intermediate CA certificates
-2. Client finds the Root CA in its trusted store
-3. Client verifies each signature in the chain
-4. Client checks domain name matches, certificate is not expired, not revoked
+1. Client finds the Root CA in its trusted store
+1. Client verifies each signature in the chain
+1. Client checks domain name matches, certificate is not expired, not revoked
 
 ---
 
@@ -674,8 +674,8 @@ The traditional "castle and moat" model (trust everything inside the network) is
 
 **Principles:**
 1. **Never trust, always verify** -- authenticate and authorize every request
-2. **Least privilege access** -- grant minimum necessary permissions
-3. **Assume breach** -- design as if attackers are already inside
+1. **Least privilege access** -- grant minimum necessary permissions
+1. **Assume breach** -- design as if attackers are already inside
 
 ![zero_trust_network_architecture](svg/courses/networking/networking-basics/05_network_security_basics/zero_trust_network_architecture.svg)
 

@@ -163,9 +163,9 @@ int *p = realloc(NULL, 100);
 Rules for `free()`:
 
 1. Only free memory allocated by `malloc`/`calloc`/`realloc`
-2. Only free each allocation once
-3. After free, the pointer is dangling -- do not use it
-4. `free(NULL)` is safe and does nothing
+1. Only free each allocation once
+1. After free, the pointer is dangling -- do not use it
+1. `free(NULL)` is safe and does nothing
 
 ```c
 #include <stdlib.h>
@@ -612,15 +612,15 @@ When to use each:
 ## Best Practices for Memory Management
 
 1. Always check the return value of `malloc`/`calloc`/`realloc`
-2. Always `free` allocated memory when done
-3. Set pointers to `NULL` after `free`
-4. Use a temporary pointer for `realloc` to avoid leaks on failure
-5. Use `calloc` when you need zero-initialized memory
-6. Match every `malloc` with exactly one `free`
-7. Use Valgrind or ASan regularly during development
-8. Consider arena allocators for batch/scoped allocations
-9. Document ownership: who allocates, who frees
-10. For complex projects, wrap allocation in helper functions
+1. Always `free` allocated memory when done
+1. Set pointers to `NULL` after `free`
+1. Use a temporary pointer for `realloc` to avoid leaks on failure
+1. Use `calloc` when you need zero-initialized memory
+1. Match every `malloc` with exactly one `free`
+1. Use Valgrind or ASan regularly during development
+1. Consider arena allocators for batch/scoped allocations
+1. Document ownership: who allocates, who frees
+1. For complex projects, wrap allocation in helper functions
 
 ---
 

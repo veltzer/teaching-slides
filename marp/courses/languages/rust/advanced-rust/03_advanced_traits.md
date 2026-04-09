@@ -1015,7 +1015,7 @@ impl Shape {
 ## Exercises
 
 1. Implement a `Drawable` trait with both static and dynamic dispatch consumers. Benchmark them.
-2. Create a type-state machine for a TCP connection: `Closed -> SynSent -> Established -> Closed`.
-3. Write an extension trait that adds a `.tap()` method to all types (like in Ruby).
-4. Implement a plugin system using trait objects with a registry pattern.
-5. Create a generic `Cache<K, V>` trait with associated types for the error type.
+1. Create a type-state machine for a TCP connection: `Closed -> SynSent -> Established -> Closed`.
+1. Write an extension trait that adds a `.tap()` method to all types (like in Ruby).
+1. Implement a plugin system using trait objects with a registry pattern.
+1. Create a generic `Cache<K, V>` trait with associated types for the error type.

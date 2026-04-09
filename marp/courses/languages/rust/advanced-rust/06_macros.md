@@ -987,8 +987,8 @@ macro_rules! strict_macro {
 ## Exercises
 
 1. Write a `hashset!` macro similar to `vec!` for creating HashSets.
-2. Create a `retry!` macro that retries an expression N times on failure.
-3. Write a declarative macro that generates both a struct and its builder.
-4. Create a derive macro that generates a `to_json()` method for structs.
-5. Build an attribute macro `#[measure]` that prints execution time.
-6. Write a function-like proc macro that validates email format at compile time.
+1. Create a `retry!` macro that retries an expression N times on failure.
+1. Write a declarative macro that generates both a struct and its builder.
+1. Create a derive macro that generates a `to_json()` method for structs.
+1. Build an attribute macro `#[measure]` that prints execution time.
+1. Write a function-like proc macro that validates email format at compile time.

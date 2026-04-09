@@ -148,11 +148,11 @@ setenv bootargs root=/dev/mmcblk0p${bootpart} rootwait
 
 Update process:
 1. Download to inactive partition
-2. Verify downloaded image
-3. Set boot flag to new partition
-4. Reboot
-5. Validate new system
-6. Fall back if validation fails
+1. Verify downloaded image
+1. Set boot flag to new partition
+1. Reboot
+1. Validate new system
+1. Fall back if validation fails
 
 ---
 
@@ -376,9 +376,9 @@ fleet/
 
 Update rollout strategy:
 1. Canary deployment (1-5% devices)
-2. Monitor for issues
-3. Staged rollout (25%, 50%, 100%)
-4. Rollback capability
+1. Monitor for issues
+1. Staged rollout (25%, 50%, 100%)
+1. Rollback capability
 
 ---
 
@@ -640,9 +640,9 @@ Post-deployment:
 
 Deployment phases:
 1. **Pilot** - 1-10 devices
-2. **Limited** - 10-100 devices
-3. **Regional** - 100-1000 devices
-4. **Full** - All devices
+1. **Limited** - 10-100 devices
+1. **Regional** - 100-1000 devices
+1. **Full** - All devices
 
 Success criteria:
 - Zero critical failures
@@ -657,11 +657,11 @@ Success criteria:
 
 Incident handling process:
 1. Detection and alerting
-2. Initial assessment
-3. Containment
-4. Root cause analysis
-5. Remediation
-6. Post-mortem
+1. Initial assessment
+1. Containment
+1. Root cause analysis
+1. Remediation
+1. Post-mortem
 
 Automated response:
 
@@ -692,10 +692,10 @@ fi
 
 EOL process:
 1. Announce EOL date (12+ months ahead)
-2. Final security updates
-3. Migration path documentation
-4. Decommissioning procedure
-5. Data retention policy
+1. Final security updates
+1. Migration path documentation
+1. Decommissioning procedure
+1. Data retention policy
 
 Decommissioning:
 

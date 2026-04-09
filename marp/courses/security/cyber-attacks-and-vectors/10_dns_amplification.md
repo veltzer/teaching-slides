@@ -44,7 +44,6 @@ dig . NS +trace
 - Deploy Anycast DNS to distribute traffic across multiple servers
 - Keep DNS software up-to-date and patched
 ---
----
 
 ## Why Amplification Works: Query vs Response Size
 
@@ -159,12 +158,12 @@ The 2018 GitHub attack used Memcached amplification: 1.35 Tbps!
 ## Exercise: DNS Amplification Analysis
 
 1. Set up a DNS resolver in a test lab
-2. Use `dig` to measure response sizes for different query types (A, MX, TXT, ANY, DNSKEY)
-3. Calculate the amplification factor for each query type
-4. Verify your resolver is not open to external queries
-5. Configure BIND to restrict recursion and enable RRL
-6. Use Wireshark to capture and analyze DNS amplification traffic patterns
-7. Set up a monitoring dashboard that alerts on anomalous DNS response volume
+1. Use `dig` to measure response sizes for different query types (A, MX, TXT, ANY, DNSKEY)
+1. Calculate the amplification factor for each query type
+1. Verify your resolver is not open to external queries
+1. Configure BIND to restrict recursion and enable RRL
+1. Use Wireshark to capture and analyze DNS amplification traffic patterns
+1. Set up a monitoring dashboard that alerts on anomalous DNS response volume
 
 ## Conclusion
 

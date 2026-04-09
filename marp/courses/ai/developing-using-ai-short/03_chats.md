@@ -79,8 +79,8 @@ Example dialogue for effective problem-solving:
 
 **AI**: "Here are three approaches with trade-offs:
 1. Nested loops - O(n²) time, O(1) space
-2. Hash map - O(n) time, O(n) space
-3. Two pointers - O(n log n) time, O(1) space"
+1. Hash map - O(n) time, O(n) space
+1. Two pointers - O(n log n) time, O(1) space"
 
 **You**: "Show me the hash map approach with edge cases"
 

@@ -4,21 +4,21 @@
   <text x="150" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">ALLOWED</text>
   <text x="150" y="67" text-anchor="middle" font-size="10">&amp;T + &amp;T + &amp;T (many immutable)</text>
   <text x="150" y="82" text-anchor="middle" font-size="10">&amp;mut T (one mutable, alone)</text>
-  <text x="150" y="97" text-anchor="middle" font-size="9">Non-overlapping scopes: &amp;T then &amp;mut T</text>
+  <text x="150" y="97" text-anchor="middle" font-size="10">Non-overlapping scopes: &amp;T then &amp;mut T</text>
   <rect x="320" y="30" width="260" height="75" fill="#ffebee" stroke="#333" stroke-width="2" rx="5"/>
   <text x="450" y="50" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">REJECTED</text>
   <text x="450" y="67" text-anchor="middle" font-size="10">&amp;T + &amp;mut T (simultaneous)</text>
   <text x="450" y="82" text-anchor="middle" font-size="10">&amp;mut T + &amp;mut T (two writers)</text>
-  <text x="450" y="97" text-anchor="middle" font-size="9">Dangling ref (owner dropped)</text>
+  <text x="450" y="97" text-anchor="middle" font-size="10">Dangling ref (owner dropped)</text>
   <rect x="60" y="120" width="140" height="35" fill="#e3f2fd" stroke="#333" stroke-width="1" rx="5"/>
   <text x="130" y="135" text-anchor="middle" font-size="10" font-weight="bold">Compile Time</text>
-  <text x="130" y="149" text-anchor="middle" font-size="9">Zero runtime cost</text>
+  <text x="130" y="149" text-anchor="middle" font-size="10">Zero runtime cost</text>
   <rect x="230" y="120" width="140" height="35" fill="#f3e5f5" stroke="#333" stroke-width="1" rx="5"/>
   <text x="300" y="135" text-anchor="middle" font-size="10" font-weight="bold">NLL (Non-Lexical)</text>
-  <text x="300" y="149" text-anchor="middle" font-size="9">Ref ends at last use</text>
+  <text x="300" y="149" text-anchor="middle" font-size="10">Ref ends at last use</text>
   <rect x="400" y="120" width="140" height="35" fill="#fff3e0" stroke="#333" stroke-width="1" rx="5"/>
   <text x="470" y="135" text-anchor="middle" font-size="10" font-weight="bold">Data Race Free</text>
-  <text x="470" y="149" text-anchor="middle" font-size="9">Prevents UB at compile</text>
+  <text x="470" y="149" text-anchor="middle" font-size="10">Prevents UB at compile</text>
   <rect x="100" y="170" width="400" height="22" fill="#e8f5e9" stroke="#333" stroke-width="1" rx="3"/>
   <text x="300" y="185" text-anchor="middle" font-size="10">Key insight: aliasing XOR mutation (but never both)</text>
 </svg>

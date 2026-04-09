@@ -1154,9 +1154,9 @@ def learn_from_error(error, code):
 
     Prevention:
     1. Always validate data exists
-    2. Use TypeScript for type safety
-    3. Implement loading states
-    4. Add error boundaries
+    1. Use TypeScript for type safety
+    1. Implement loading states
+    1. Add error boundaries
 
     Related Learning:
     - Optional chaining (?.)

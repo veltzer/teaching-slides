@@ -735,10 +735,10 @@ __attribute__((noinline)) void rarely_used_function(void);
 
 **Manufacturing Flow:**
 1. **Program bootloader** via SWD/JTAG
-2. **Set option bytes** (boot configuration)
-3. **Program initial application**
-4. **Set security features** (RDP, write protection)
-5. **Quality testing**
+1. **Set option bytes** (boot configuration)
+1. **Program initial application**
+1. **Set security features** (RDP, write protection)
+1. **Quality testing**
 
 ```c
 // Option bytes configuration

@@ -502,12 +502,12 @@ script -a session.log   # Record terminal session
 
 **Tasks**:
 1. Start Burp Suite and configure browser proxy
-2. Launch DVWA container and log in
-3. Browse DVWA through Burp and examine traffic
-4. Use Burp Repeater to modify a request
-5. Run `nikto` against DVWA
-6. Run `gobuster` against DVWA
-7. Document all findings
+1. Launch DVWA container and log in
+1. Browse DVWA through Burp and examine traffic
+1. Use Burp Repeater to modify a request
+1. Run `nikto` against DVWA
+1. Run `gobuster` against DVWA
+1. Document all findings
 
 ```bash
 # Verification commands

@@ -901,16 +901,16 @@ Key takeaways:
 
 Throughout this course:
 1. Introduction and fundamentals
-2. Architecture deep dive
-3. BitBake and build system
-4. Practical image development
-5. Layer management and recipes
-6. Kernel and device integration
-7. Development workflow and tools
-8. Build optimization and CI/CD
-9. Security and compliance
-10. Production deployment
-11. Advanced topics and ecosystem
+1. Architecture deep dive
+1. BitBake and build system
+1. Practical image development
+1. Layer management and recipes
+1. Kernel and device integration
+1. Development workflow and tools
+1. Build optimization and CI/CD
+1. Security and compliance
+1. Production deployment
+1. Advanced topics and ecosystem
 
 Next steps:
 - Build your first custom image

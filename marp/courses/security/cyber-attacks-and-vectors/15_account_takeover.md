@@ -227,9 +227,9 @@ def login_with_backoff():
    - Failed login attempts per IP
    - Failed login attempts per username
    - Login location (IP geolocation)
-2. Implement progressive rate limiting (delays increase with failures)
-3. Add account lockout after 10 failed attempts
-4. Implement CAPTCHA after 3 failed attempts
-5. Add email notification for logins from new devices/locations
-6. Simulate a credential stuffing attack and verify defenses trigger
-7. Implement Have I Been Pwned API check for password changes
+1. Implement progressive rate limiting (delays increase with failures)
+1. Add account lockout after 10 failed attempts
+1. Implement CAPTCHA after 3 failed attempts
+1. Add email notification for logins from new devices/locations
+1. Simulate a credential stuffing attack and verify defenses trigger
+1. Implement Have I Been Pwned API check for password changes

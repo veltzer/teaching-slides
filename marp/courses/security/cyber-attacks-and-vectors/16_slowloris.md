@@ -50,10 +50,10 @@
 ## Slowloris Step by Step
 
 1. **Open connections**: Attacker opens hundreds of connections to the target
-2. **Send partial headers**: Each connection sends an incomplete HTTP request
-3. **Keep alive**: Periodically send additional headers to prevent timeout
-4. **Exhaust pool**: Server connection pool fills up completely
-5. **Deny service**: Legitimate users receive connection refused errors
+1. **Send partial headers**: Each connection sends an incomplete HTTP request
+1. **Keep alive**: Periodically send additional headers to prevent timeout
+1. **Exhaust pool**: Server connection pool fills up completely
+1. **Deny service**: Legitimate users receive connection refused errors
 
 ---
 ## Why Slowloris is Effective

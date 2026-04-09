@@ -45,9 +45,9 @@ NUMA node(s):             1
 
 **Questions to answer:**
 1. How many physical cores does the system have?
-2. Is hyper-threading (SMT) enabled? How can you tell?
-3. What is the L3 cache size? Is it shared or per-core?
-4. How many NUMA nodes are there?
+1. Is hyper-threading (SMT) enabled? How can you tell?
+1. What is the L3 cache size? Is it shared or per-core?
+1. How many NUMA nodes are there?
 
 ---
 

@@ -496,8 +496,8 @@ data:
 
 Combine with deployment patterns for safe feature delivery:
 1. Deploy code with feature flag **off**
-2. Gradually enable via flag (no redeploy needed)
-3. Roll back by disabling flag (instant)
+1. Gradually enable via flag (no redeploy needed)
+1. Roll back by disabling flag (instant)
 
 ---
 

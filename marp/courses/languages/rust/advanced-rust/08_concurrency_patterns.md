@@ -1410,8 +1410,8 @@ fn main() {
 ## Exercises
 
 1. Implement a producer-consumer pipeline using `crossbeam-channel` with `select!` and a timeout.
-2. Build a concurrent word-frequency counter using `DashMap` and scoped threads.
-3. Convert a sequential image-processing pipeline to use `rayon::par_iter`.
-4. Implement a lock-free counter using `AtomicU64` with `compare_exchange`.
-5. Build a chat room using the actor pattern where each user is an actor.
-6. Create a thread pool that supports task priorities (hint: use `BinaryHeap` behind a `Mutex`).
+1. Build a concurrent word-frequency counter using `DashMap` and scoped threads.
+1. Convert a sequential image-processing pipeline to use `rayon::par_iter`.
+1. Implement a lock-free counter using `AtomicU64` with `compare_exchange`.
+1. Build a chat room using the actor pattern where each user is an actor.
+1. Create a thread pool that supports task priorities (hint: use `BinaryHeap` behind a `Mutex`).

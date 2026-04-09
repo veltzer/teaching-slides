@@ -16,24 +16,40 @@ from pathlib import Path
 
 MIN_FILE_SIZE = 500
 MIN_ELEMENTS = 5
+MIN_FONT_SIZE = 10
 
 
-def check_file(path: Path) -> str | None:
-    """Return an error message if the SVG looks like a placeholder, else None."""
+def check_file(path: Path) -> list[str]:
+    """Return a list of error messages for the SVG, empty if OK."""
+    errors: list[str] = []
     size = path.stat().st_size
     if size < MIN_FILE_SIZE:
-        return f"too small ({size} bytes, min {MIN_FILE_SIZE})"
+        errors.append(f"too small ({size} bytes, min {MIN_FILE_SIZE})")
+        return errors
 
     try:
         tree = ET.parse(path)
     except ET.ParseError as e:
-        return f"XML parse error: {e}"
+        errors.append(f"XML parse error: {e}")
+        return errors
 
     count = sum(1 for _ in tree.iter())
     if count < MIN_ELEMENTS:
-        return f"too few elements ({count}, min {MIN_ELEMENTS})"
+        errors.append(f"too few elements ({count}, min {MIN_ELEMENTS})")
 
-    return None
+    # Check for small font sizes in attributes
+    for elem in tree.iter():
+        fs = elem.get("font-size")
+        if fs is not None:
+            try:
+                val = float(fs)
+                if val < MIN_FONT_SIZE:
+                    errors.append(f"font-size {fs} too small (min {MIN_FONT_SIZE})")
+                    break  # one error per file is enough
+            except ValueError:
+                pass
+
+    return errors
 
 
 def main() -> None:
@@ -44,8 +60,8 @@ def main() -> None:
     failures = 0
     for path_str in args:
         path = Path(path_str)
-        error = check_file(path)
-        if error:
+        errors = check_file(path)
+        for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
             failures += 1
 

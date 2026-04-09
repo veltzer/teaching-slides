@@ -345,12 +345,12 @@ GRANT SELECT ON myapp.products TO 'webapp'@'localhost';
 ## Exercise: SQL Injection Lab
 
 1. Set up a vulnerable login form using Flask + SQLite
-2. Demonstrate these attack types:
+1. Demonstrate these attack types:
    - Authentication bypass with `' OR 1=1 --`
    - UNION-based extraction of all usernames and passwords
    - Time-based blind injection to extract the admin password character by character
-3. Use sqlmap to automate the extraction
-4. Fix the application using parameterized queries
-5. Add a WAF layer and test that previous attacks are blocked
-6. Implement database-level hardening (least privilege user)
-7. Compare the before/after security with OWASP ZAP scans
+1. Use sqlmap to automate the extraction
+1. Fix the application using parameterized queries
+1. Add a WAF layer and test that previous attacks are blocked
+1. Implement database-level hardening (least privilege user)
+1. Compare the before/after security with OWASP ZAP scans

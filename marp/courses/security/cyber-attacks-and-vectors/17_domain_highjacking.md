@@ -265,14 +265,14 @@ fi
 ## Incident Response for Domain Hijacking
 
 1. **Detect**: Monitor for unauthorized DNS/WHOIS changes
-2. **Verify**: Confirm the hijacking through multiple DNS resolvers
-3. **Contact registrar**: Report unauthorized changes immediately
-4. **Contact registry**: Escalate to the TLD registry if registrar is unresponsive
-5. **Preserve evidence**: Screenshot WHOIS records, DNS responses, server logs
-6. **Contact ICANN**: File a Transfer Dispute Resolution complaint
-7. **Legal action**: Engage legal counsel for UDRP or court proceedings
-8. **Notify users**: Warn users about potential phishing during hijacking period
-9. **Post-incident**: Strengthen registrar security, enable registry lock
+1. **Verify**: Confirm the hijacking through multiple DNS resolvers
+1. **Contact registrar**: Report unauthorized changes immediately
+1. **Contact registry**: Escalate to the TLD registry if registrar is unresponsive
+1. **Preserve evidence**: Screenshot WHOIS records, DNS responses, server logs
+1. **Contact ICANN**: File a Transfer Dispute Resolution complaint
+1. **Legal action**: Engage legal counsel for UDRP or court proceedings
+1. **Notify users**: Warn users about potential phishing during hijacking period
+1. **Post-incident**: Strengthen registrar security, enable registry lock
 
 ---
 ## Key Takeaways

@@ -204,15 +204,15 @@ curl -sI https://example.com | grep -i strict-transport
 ## Exercise: MITM Detection Lab
 
 1. Set up a lab with attacker, victim, and gateway VMs on the same subnet
-2. Use Wireshark on the victim to capture normal ARP traffic baseline
-3. Perform ARP spoofing from the attacker VM (use arpspoof or bettercap)
-4. Observe ARP table changes on the victim
-5. Detect the attack using:
+1. Use Wireshark on the victim to capture normal ARP traffic baseline
+1. Perform ARP spoofing from the attacker VM (use arpspoof or bettercap)
+1. Observe ARP table changes on the victim
+1. Detect the attack using:
    - arpwatch alerts
    - Wireshark ARP anomaly detection
    - Manual ARP table inspection
-6. Implement countermeasures:
+1. Implement countermeasures:
    - Static ARP entries
    - Enable HSTS on a test web server
    - Configure 802.1X port authentication
-7. Verify the countermeasures prevent the attack
+1. Verify the countermeasures prevent the attack

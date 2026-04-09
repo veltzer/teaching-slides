@@ -12,7 +12,7 @@
   <text x="45" y="118" font-size="10" fill="#555">lock() -&gt; MutexGuard&lt;T&gt;</text>
   <text x="45" y="136" font-size="10" fill="#555">RAII: auto-unlock on drop</text>
   <text x="45" y="154" font-size="10" fill="#dc3545">Can deadlock if nested!</text>
-  <text x="45" y="174" font-size="9" fill="#555">Use when: writes common</text>
+  <text x="45" y="174" font-size="10" fill="#555">Use when: writes common</text>
   <!-- RwLock -->
   <rect x="285" y="55" width="230" height="130" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
   <text x="400" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">RwLock&lt;T&gt;</text>
@@ -20,7 +20,7 @@
   <text x="300" y="118" font-size="10" fill="#555">read() -&gt; RwLockReadGuard</text>
   <text x="300" y="136" font-size="10" fill="#555">write() -&gt; RwLockWriteGuard</text>
   <text x="300" y="154" font-size="10" fill="#555">More overhead than Mutex</text>
-  <text x="300" y="174" font-size="9" fill="#555">Use when: reads &gt;&gt; writes</text>
+  <text x="300" y="174" font-size="10" fill="#555">Use when: reads &gt;&gt; writes</text>
   <!-- Atomic -->
   <rect x="540" y="55" width="230" height="130" rx="5" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
   <text x="655" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">Atomics</text>
@@ -28,7 +28,7 @@
   <text x="555" y="118" font-size="10" fill="#555">Lock-free operations</text>
   <text x="555" y="136" font-size="10" fill="#555">load, store, CAS</text>
   <text x="555" y="154" font-size="10" fill="#555">Ordering: Relaxed..SeqCst</text>
-  <text x="555" y="174" font-size="9" fill="#555">Use when: simple counters/flags</text>
+  <text x="555" y="174" font-size="10" fill="#555">Use when: simple counters/flags</text>
   <!-- Arc -->
   <rect x="30" y="210" width="230" height="100" rx="5" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
   <text x="145" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#28a745">Arc&lt;T&gt;</text>

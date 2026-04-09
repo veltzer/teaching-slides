@@ -457,14 +457,14 @@ Defending against shell injection attacks requires a multi-layered approach, inc
 1. Set up a vulnerable Flask application with a ping endpoint:
    - Accept a hostname parameter
    - Execute `ping` using `os.popen()`
-2. Demonstrate injection using various metacharacters (`;`, `|`, `&&`)
-3. Attempt to:
+1. Demonstrate injection using various metacharacters (`;`, `|`, `&&`)
+1. Attempt to:
    - Read `/etc/passwd`
    - Create a file in `/tmp`
    - Establish a reverse shell
-4. Fix the application using:
+1. Fix the application using:
    - Input validation with allowlist regex
    - `subprocess.run()` with list arguments
    - `shlex.quote()` as a fallback
-5. Verify the fix prevents all previous injection attempts
-6. Set up ModSecurity WAF rules as an additional defense layer
+1. Verify the fix prevents all previous injection attempts
+1. Set up ModSecurity WAF rules as an additional defense layer

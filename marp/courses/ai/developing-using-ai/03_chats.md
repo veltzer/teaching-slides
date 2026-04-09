@@ -567,8 +567,8 @@ I wanted to bring to your attention some critical issues with our current paymen
 
 **Current Issues:**
 1. Tight coupling between payment providers making switches difficult
-2. Lack of proper error handling causing silent failures
-3. PCI compliance risks with current credit card handling
+1. Lack of proper error handling causing silent failures
+1. PCI compliance risks with current credit card handling
 
 **Proposed Solution:**
 - Implement adapter pattern for payment providers
@@ -601,8 +601,8 @@ AI: "## Meeting Summary - API Design Review
 
 ### Key Decisions:
 1. Adopt REST over GraphQL for public API
-2. Implement rate limiting at 1000 req/min
-3. Use JWT for authentication
+1. Implement rate limiting at 1000 req/min
+1. Use JWT for authentication
 
 ### Action Items:
 - **@John**: Create OpenAPI specification by Jan 20
@@ -634,13 +634,13 @@ AI: "As a security engineer, I see several concerns:
 1. **Critical**: Passwords stored in plain text (line 45)
    - Must use bcrypt or argon2 for hashing
 
-2. **High**: No rate limiting on login attempts
+1. **High**: No rate limiting on login attempts
    - Vulnerable to brute force attacks
 
-3. **Medium**: JWT secret hardcoded
+1. **Medium**: JWT secret hardcoded
    - Move to environment variables
 
-4. **Low**: Consider adding MFA support
+1. **Low**: Consider adding MFA support
 
 Here's how to fix each issue..."
 ```

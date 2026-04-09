@@ -293,9 +293,9 @@ spec:
 ## Exercise: Container Security Audit
 
 1. Pull a popular base image and scan with Trivy
-2. Write a deliberately vulnerable Dockerfile and fix it using hadolint
-3. Demonstrate Docker socket escape in a test environment
-4. Create a non-root container and verify it cannot escalate
-5. Set up Falco to monitor runtime container behavior
-6. Create Kubernetes NetworkPolicy to restrict pod communication
-7. Build a CI/CD pipeline that blocks deployment of vulnerable images
+1. Write a deliberately vulnerable Dockerfile and fix it using hadolint
+1. Demonstrate Docker socket escape in a test environment
+1. Create a non-root container and verify it cannot escalate
+1. Set up Falco to monitor runtime container behavior
+1. Create Kubernetes NetworkPolicy to restrict pod communication
+1. Build a CI/CD pipeline that blocks deployment of vulnerable images

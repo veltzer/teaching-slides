@@ -132,10 +132,10 @@ Every instruction goes through a fundamental cycle:
 **Step by step:**
 
 1. **Fetch**: Read instruction at address in PC (Program Counter / RIP)
-2. **Decode**: Determine what operation and which operands
-3. **Execute**: ALU performs the computation or address calculation
-4. **Memory Access**: Load from or store to memory (if needed)
-5. **Write-Back**: Write result to destination register
+1. **Decode**: Determine what operation and which operands
+1. **Execute**: ALU performs the computation or address calculation
+1. **Memory Access**: Load from or store to memory (if needed)
+1. **Write-Back**: Write result to destination register
 
 ---
 

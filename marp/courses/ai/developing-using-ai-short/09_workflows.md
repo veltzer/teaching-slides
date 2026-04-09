@@ -627,8 +627,8 @@ Building institutional knowledge:
 
 ### Key Learnings
 1. Always implement idempotency for cart operations
-2. Use optimistic locking for inventory
-3. Cache cart calculations aggressively
+1. Use optimistic locking for inventory
+1. Cache cart calculations aggressively
 
 ### AI Prompts That Worked
 - "Generate test cases for cart edge cases"

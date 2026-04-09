@@ -4,9 +4,9 @@
 - You type `ls -la /tmp` and press Enter
 - The shell must figure out:
   1. What program to run
-  2. Where that program lives
-  3. How to pass arguments to it
-  4. What to do with the result
+  1. Where that program lives
+  1. How to pass arguments to it
+  1. What to do with the result
 ---
 ## Command Line Parsing: Step by Step
 
@@ -15,13 +15,13 @@
 ---
 ## The Full Parsing Order
 1. Brace expansion: `{a,b,c}`
-2. Tilde expansion: `~`
-3. Parameter/variable expansion: `$VAR`
-4. Command substitution: `$(cmd)`
-5. Arithmetic expansion: `$((1+2))`
-6. Word splitting
-7. Pathname expansion (globbing): `*.txt`
-8. Quote removal
+1. Tilde expansion: `~`
+1. Parameter/variable expansion: `$VAR`
+1. Command substitution: `$(cmd)`
+1. Arithmetic expansion: `$((1+2))`
+1. Word splitting
+1. Pathname expansion (globbing): `*.txt`
+1. Quote removal
 ---
 ## Why the Order Matters
 

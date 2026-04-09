@@ -140,7 +140,7 @@ uint8_t c = a + b;  // Overflow! Result is 44
 struct Example {
     char c;      // 1 byte
     // 3 bytes padding
-    int i;       // 4 bytes  
+    int i;       // 4 bytes
     char d;      // 1 byte
     // 3 bytes padding
 };  // Total: 12 bytes
@@ -157,7 +157,7 @@ struct Example {
 #pragma pack(push, 1)
 struct Packed {
     char c;      // 1 byte
-    int i;       // 4 bytes  
+    int i;       // 4 bytes
     char d;      // 1 byte
 };  // Total: 6 bytes
 #pragma pack(pop)

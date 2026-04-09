@@ -34,7 +34,6 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 class PipelineStep(ABC):
     """Base class for pipeline steps."""
 
@@ -120,7 +119,6 @@ class BronzeToSilverOrders(PipelineStep):
                     f"process_date = '{self.process_date}'")
             .save("/data/silver/orders/")
         )
-
 
 # Run the pipeline
 from pyspark.sql import Window
@@ -342,13 +340,11 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-
 @dataclass
 class ValidationResult:
     check_name: str
     passed: bool
     details: str
-
 
 def check_not_null(df: DataFrame,
                    columns: List[str]) -> List[ValidationResult]:
@@ -363,7 +359,6 @@ def check_not_null(df: DataFrame,
         ))
     return results
 
-
 def check_unique(df: DataFrame,
                  columns: List[str]) -> ValidationResult:
     """Check that column combination is unique."""
@@ -374,7 +369,6 @@ def check_unique(df: DataFrame,
         passed=total == distinct,
         details=f"{total - distinct} duplicate rows",
     )
-
 
 def check_range(df: DataFrame, column: str,
                 min_val: float,
@@ -390,7 +384,6 @@ def check_range(df: DataFrame, column: str,
         details=f"{out_of_range} values outside "
                 f"[{min_val}, {max_val}]",
     )
-
 
 def check_referential_integrity(
     df: DataFrame,
@@ -687,7 +680,6 @@ parsed = cdc_stream.select(
     ).alias("cdc")
 ).select("cdc.*")
 
-
 def apply_cdc_batch(batch_df, batch_id):
     """Apply CDC changes to Delta target table."""
     if batch_df.count() == 0:
@@ -729,7 +721,6 @@ def apply_cdc_batch(batch_df, batch_id):
             deletes.alias("s"),
             "t.customer_id = s.customer_id"
         ).whenMatchedDelete().execute()
-
 
 # Run with foreachBatch
 from pyspark.sql import Window
@@ -811,7 +802,6 @@ from pyspark import SparkContext
 import json
 import time
 
-
 class PipelineMetricsListener:
     """Collect metrics from Spark job execution."""
 
@@ -828,7 +818,6 @@ class PipelineMetricsListener:
             "status": status,
             "num_stages": stages,
         })
-
 
 # Using Spark's built-in metrics
 spark = SparkSession.builder \
@@ -869,7 +858,6 @@ import json
 import logging
 
 logger = logging.getLogger(__name__)
-
 
 class PipelineMonitor:
     """Monitor and report pipeline execution metrics."""
@@ -937,7 +925,6 @@ class PipelineMonitor:
                 f"{max_expected}")
             return False
         return True
-
 
 # Usage
 spark = SparkSession.builder \
@@ -1033,7 +1020,6 @@ import sys
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("production_etl")
 
-
 def create_spark_session():
     return (
         SparkSession.builder
@@ -1047,7 +1033,6 @@ def create_spark_session():
         .config("spark.sql.shuffle.partitions", "200")
         .getOrCreate()
     )
-
 
 def ingest_bronze(spark, process_date):
     """Stage 1: Ingest raw data to bronze layer."""
@@ -1068,7 +1053,6 @@ def ingest_bronze(spark, process_date):
     count = raw.count()
     logger.info(f"Bronze: ingested {count} rows")
     return count
-
 
 def transform_silver(spark, process_date):
     """Stage 2: Clean and deduplicate to silver."""
@@ -1104,7 +1088,6 @@ def transform_silver(spark, process_date):
     count = silver.count()
     logger.info(f"Silver: wrote {count} rows")
     return count
-
 
 def build_gold(spark, process_date):
     """Stage 3: Aggregate to gold layer."""
@@ -1143,7 +1126,6 @@ def build_gold(spark, process_date):
     logger.info(f"Gold: wrote {count} rows")
     return count
 
-
 def validate(spark, process_date):
     """Stage 4: Run data quality checks."""
     gold = (
@@ -1167,7 +1149,6 @@ def validate(spark, process_date):
         logger.warning(f"{negative} negative totals")
 
     logger.info(f"Validation passed: {count} rows OK")
-
 
 def main():
     process_date = sys.argv[1] if len(sys.argv) > 1 \
@@ -1195,7 +1176,6 @@ def main():
         raise
     finally:
         spark.stop()
-
 
 if __name__ == "__main__":
     main()

@@ -222,8 +222,8 @@ diff evidence_hash_source.txt evidence_hash_image.txt
 ## Exercise: Threat Landscape Mapping
 
 1. Choose a fictional organization (e.g., a mid-size hospital)
-2. Identify the top 5 threat actors most likely to target it
-3. For each actor, list their motivation, likely attack vectors, and target assets
-4. Map each attack scenario to the Cyber Kill Chain
-5. Propose one defensive measure at each Kill Chain stage
-6. Present your findings to the class
+1. Identify the top 5 threat actors most likely to target it
+1. For each actor, list their motivation, likely attack vectors, and target assets
+1. Map each attack scenario to the Cyber Kill Chain
+1. Propose one defensive measure at each Kill Chain stage
+1. Present your findings to the class

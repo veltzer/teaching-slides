@@ -372,12 +372,12 @@ func safeFunction(input string) {
 ## Exercise: Buffer Overflow Lab
 
 1. Compile the vulnerable `strcpy` example without protections
-2. Run it with increasing input lengths to find the crash point
-3. Use GDB to examine the stack layout before and after overflow
-4. Enable stack canaries and observe the different crash behavior
-5. Enable ASLR and verify addresses change between runs
-6. Rewrite the vulnerable code using safe alternatives
-7. Run static analysis tools on both versions and compare output
+1. Run it with increasing input lengths to find the crash point
+1. Use GDB to examine the stack layout before and after overflow
+1. Enable stack canaries and observe the different crash behavior
+1. Enable ASLR and verify addresses change between runs
+1. Rewrite the vulnerable code using safe alternatives
+1. Run static analysis tools on both versions and compare output
 
 ```bash
 # GDB commands for the lab
