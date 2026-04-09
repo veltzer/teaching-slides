@@ -1,106 +1,160 @@
 #!/usr/bin/env python
 """
-Fix Marp slide files so that every slide containing an SVG image has at most
-one line of non-heading content above the SVG (the ## heading itself counts
-as the one allowed line).
+Fix Marp slide files so that every slide containing an SVG image has ONLY
+the ## heading and the image line — no other real content on the same slide.
 
-Rule: on any slide that contains an ![...](....svg) reference, all content
-lines that appear BEFORE the image line (excluding the ## heading) are removed.
-Content that appears AFTER the image is left untouched.
+"Real content" means non-blank, non-heading lines.
+
+For each violating slide:
+- Content BEFORE the image (after the heading) -> moved to a new slide BEFORE the image slide
+- Content AFTER the image -> moved to a new slide AFTER the image slide
+
+The heading is duplicated on each split slide.
 """
 import re
 import sys
 from pathlib import Path
 
+IMG_RE = re.compile(r'!\[.*?\]\(.*?\.svg\)')
+HEADING_RE = re.compile(r'^#{1,6}\s')
 
-def fix_file(path: Path) -> bool:
-    """Return True if file was modified."""
-    text = path.read_text(encoding="utf-8")
 
-    # Split into slides on --- separator (keeping the ---)
-    # We process each slide independently
-    raw_slides = re.split(r'^---$', text, flags=re.MULTILINE)
-
-    new_slides = []
-    modified = False
-
-    for slide in raw_slides:
-        new_slide = fix_slide(slide)
-        if new_slide != slide:
-            modified = True
-        new_slides.append(new_slide)
-
-    if not modified:
+def is_real_content(line: str) -> bool:
+    """True if line has actual content (not blank, not a heading, not the image itself)."""
+    stripped = line.strip()
+    if not stripped:
         return False
-
-    path.write_text("---".join(new_slides), encoding="utf-8")
+    if HEADING_RE.match(line):
+        return False
+    if IMG_RE.match(stripped):
+        return False
     return True
 
 
 def fix_slide(slide: str) -> str:
     """
-    If this slide contains an SVG image reference, ensure there is at most
-    one line of content above it (the ## heading line). Remove any extra
-    content lines between the heading and the image.
+    Given raw slide text (without the surrounding --- separators),
+    return fixed slide text (may contain multiple slides joined by ---).
     """
-    lines = slide.split("\n")
+    lines = slide.split('\n')
 
-    # Find the image line index
+    # Find image line index
     img_idx = None
     for i, line in enumerate(lines):
-        if re.match(r'!\[.*\]\(.*\.svg\)', line.strip()):
+        if IMG_RE.search(line.strip()):
             img_idx = i
             break
 
     if img_idx is None:
-        return slide  # no SVG in this slide
+        return slide  # no SVG
 
-    # Find the heading line (## ...)
+    # Find heading line
     heading_idx = None
+    heading_line = ''
     for i, line in enumerate(lines):
-        if re.match(r'^#{1,6}\s', line):
+        if HEADING_RE.match(line):
             heading_idx = i
+            heading_line = line
             break
 
-    if heading_idx is None:
-        return slide  # no heading, leave alone
+    # Lines before image (after heading): check for real content
+    pre_start = (heading_idx + 1) if heading_idx is not None else 0
+    pre_lines = lines[pre_start:img_idx]
+    pre_content = [l for l in pre_lines if is_real_content(l)]
 
-    # Lines between heading and image (exclusive of both)
-    between_start = heading_idx + 1
-    between_end = img_idx
+    # Lines after image: check for real content
+    post_lines = lines[img_idx + 1:]
+    post_content = [l for l in post_lines if is_real_content(l)]
 
-    # Collect the lines between heading and image, ignoring blank lines
-    between_lines = [l for l in lines[between_start:between_end] if l.strip()]
+    if not pre_content and not post_content:
+        return slide  # already compliant
 
-    if not between_lines:
-        return slide  # nothing between heading and image, already correct
+    # Build replacement slides
+    result_parts = []
 
-    # Remove all non-blank content lines between heading and image
-    # Keep blank lines structure: just heading, blank, image
-    new_lines = (
-        lines[:between_start]           # heading and before
-        + [""]                           # one blank line
-        + lines[img_idx:]               # image and after
-    )
+    # If pre-content exists, create a slide before the image slide
+    if pre_content:
+        pre_slide_lines = []
+        if heading_line:
+            pre_slide_lines.append(heading_line)
+        pre_slide_lines.append('')
+        for l in pre_lines:
+            if is_real_content(l) or l.strip() == '':
+                pre_slide_lines.append(l)
+        # Strip trailing blanks
+        while pre_slide_lines and not pre_slide_lines[-1].strip():
+            pre_slide_lines.pop()
+        result_parts.append('\n'.join(pre_slide_lines))
 
-    return "\n".join(new_lines)
+    # The image-only slide
+    img_slide_lines = []
+    if heading_line:
+        img_slide_lines.append(heading_line)
+        img_slide_lines.append('')
+    img_slide_lines.append(lines[img_idx].strip())
+    result_parts.append('\n'.join(img_slide_lines))
+
+    # If post-content exists, create a slide after the image slide
+    if post_content:
+        post_slide_lines = []
+        if heading_line:
+            post_slide_lines.append(heading_line)
+            post_slide_lines.append('')
+        # Add post lines, skip leading blanks
+        started = False
+        for l in post_lines:
+            if not started and not l.strip():
+                continue
+            started = True
+            post_slide_lines.append(l)
+        # Strip trailing blanks
+        while post_slide_lines and not post_slide_lines[-1].strip():
+            post_slide_lines.pop()
+        result_parts.append('\n'.join(post_slide_lines))
+
+    return '\n\n---\n\n'.join(result_parts)
+
+
+def fix_file(path: Path) -> bool:
+    """Return True if file was modified."""
+    text = path.read_text(encoding='utf-8')
+
+    # Split on --- slide separators
+    raw_slides = re.split(r'\n---\n', text)
+
+    new_slides = []
+    modified = False
+    for slide in raw_slides:
+        fixed = fix_slide(slide)
+        if fixed != slide:
+            modified = True
+        new_slides.append(fixed)
+
+    if not modified:
+        return False
+
+    result = '\n---\n'.join(new_slides)
+    # Ensure single trailing newline
+    result = result.rstrip('\n') + '\n'
+    path.write_text(result, encoding='utf-8')
+    return True
 
 
 def main():
-    root = Path("marp")
+    root = Path('marp')
     if not root.exists():
-        print("ERROR: run from project root", file=sys.stderr)
+        print('ERROR: run from project root', file=sys.stderr)
         sys.exit(1)
 
-    files = sorted(root.rglob("*.md"))
+    files = sorted(root.rglob('*.md'))
     modified = 0
     for f in files:
         if fix_file(f):
             modified += 1
-            print(f"fixed: {f}")
+            print(f'fixed: {f}')
 
-    print(f"\nDone: {modified} files modified.")
+    print(f'\nDone: {modified} files modified.')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
