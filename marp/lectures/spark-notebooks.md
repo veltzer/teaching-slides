@@ -1,4 +1,7 @@
 # Spark Notebooks Guide
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
 ---
 
 ![title](svg/lectures/spark-notebooks/title.svg)

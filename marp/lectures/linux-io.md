@@ -1,5 +1,8 @@
 # Linux I/O Architecture
 ## Understanding Input/Output in Linux Systems
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
 ---
 
 ![title](svg/lectures/linux-io/title.svg)

@@ -1,5 +1,8 @@
 # SOLID Principles
 ## Understanding the Foundation of Object-Oriented Design
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
 ---
 
 ![title](svg/lectures/solid/title.svg)

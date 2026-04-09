@@ -1,7 +1,6 @@
 # Understanding Linux Virtio and Queue Management
-- An in-depth look at virtualization I/O
-- Queue structures and implementation
-- Practical code examples
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

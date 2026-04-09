@@ -1,13 +1,6 @@
 # Spark Internals: From Query to Execution
-
-## Slide 1: The Journey of a Spark Query
-
-When you submit a query (SQL or RDD), Spark follows these key steps:
-1. Query parsing and optimization
-1. DAG creation
-1. Stage division
-1. Task scheduling and execution
-1. Data shuffling and aggregation
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

@@ -1,5 +1,7 @@
 # Spark Optimization
 ## Understanding Data Skew and Memory Pressure
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

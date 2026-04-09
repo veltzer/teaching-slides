@@ -1,5 +1,7 @@
 # DevOps: Bridging Development and Operations
 ## A Comprehensive Overview
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

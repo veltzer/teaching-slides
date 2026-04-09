@@ -1,4 +1,7 @@
 # Correct Development
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
 ---
 
 ![title](svg/lectures/senior-level-development/title.svg)

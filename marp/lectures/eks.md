@@ -1,7 +1,7 @@
 # Amazon EKS Deep Dive
 ## Kubernetes on AWS Made Simple
-
-![kubernetes_on_aws_made_simple](svg/lectures/eks/kubernetes_on_aws_made_simple.svg)
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

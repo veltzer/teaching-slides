@@ -1,7 +1,7 @@
 # Writing Bootloaders for Microcontrollers
 ## From Reset Vector to Application Launch
-
-Building robust firmware update systems for embedded devices
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

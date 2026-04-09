@@ -1,7 +1,7 @@
 # Idempotency in Web Services
 ## Building Reliable APIs
-
-Building robust APIs that handle failures gracefully
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ---
 

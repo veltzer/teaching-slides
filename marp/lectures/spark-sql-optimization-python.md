@@ -1,4 +1,7 @@
 # Spark SQL Optimization Techniques
+## Mark Veltzer
+## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
+
 ---
 
 ![title](svg/lectures/spark-sql-optimization-python/title.svg)
