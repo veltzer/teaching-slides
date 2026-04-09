@@ -13,3 +13,5 @@
 - read "doc/HowToWriteSlides.txt"
 - All SVG files must use `viewBox="0 0 1280 720"` (16:9, matches Marp slide dimensions). Use `scripts/fix_svg_aspect_ratio.py` to fix existing SVGs.
 - A slide with an SVG must contain ONLY the `##` heading and the image line. Any other content (bullets, text, code) must be moved to a separate slide before or after.
+- SVG diagrams must NOT include a title inside the SVG. The `##` slide heading serves as the title.
+- SVG content must not extend below y=630. Marp renders the `##` heading above the image, so the image is scaled to ~640px tall. Keep viewBox at 1280x720 but treat y=630 as the effective bottom boundary.
