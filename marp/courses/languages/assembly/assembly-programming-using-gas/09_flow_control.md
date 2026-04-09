@@ -18,6 +18,12 @@ label:
 
 ---
 
+## Conditional Jump Flow
+
+![conditional_jump_flow](svg/courses/languages/assembly/assembly-programming-using-gas/09_flow_control/conditional_jump_flow.svg)
+
+---
+
 ## Conditional Jumps
 
 Based on the state of the flags register (EFLAGS):

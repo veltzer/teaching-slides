@@ -15,6 +15,12 @@
 
 ---
 
+## Stack Frame Layout
+
+![stack_frame_layout](svg/courses/languages/assembly/assembly-programming-using-gas/10_functions_and_stack/stack_frame_layout.svg)
+
+---
+
 ## Stack Operations
 
 Basic stack instructions:
