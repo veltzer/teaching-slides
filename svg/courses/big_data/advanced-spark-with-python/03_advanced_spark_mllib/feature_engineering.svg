@@ -1,1 +1,56 @@
-<svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="505" y1="150.0" x2="595" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="775" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="820" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Raw Data</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Feature Engineering Pipeline</text>
+
+  <!-- Raw Data -->
+  <rect x="20" y="160" width="110" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="75" y="185" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Raw Data</text>
+  <text x="75" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">DataFrame</text>
+
+  <!-- StringIndexer -->
+  <rect x="170" y="80" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="230" y="103" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">StringIndexer</text>
+  <text x="230" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Categorical cols</text>
+
+  <!-- OneHotEncoder -->
+  <rect x="320" y="80" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="380" y="103" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">OneHotEncoder</text>
+  <text x="380" y="120" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Binary vectors</text>
+
+  <!-- StandardScaler -->
+  <rect x="170" y="250" width="120" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="230" y="273" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">StandardScaler</text>
+  <text x="230" y="290" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Numeric cols</text>
+
+  <!-- PCA -->
+  <rect x="320" y="250" width="120" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="380" y="273" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">PCA</text>
+  <text x="380" y="290" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Dim reduction</text>
+
+  <!-- VectorAssembler -->
+  <rect x="490" y="155" width="130" height="65" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="555" y="182" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">Vector</text>
+  <text x="555" y="198" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">Assembler</text>
+
+  <!-- Feature Vector -->
+  <rect x="660" y="155" width="120" height="65" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="720" y="182" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">Feature Vector</text>
+  <text x="720" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Ready for ML</text>
+
+  <!-- Arrows -->
+  <line x1="130" y1="175" x2="168" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="130" y1="205" x2="168" y2="268" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="290" y1="107" x2="318" y2="107" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="290" y1="277" x2="318" y2="277" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="107" x2="490" y2="172" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="277" x2="490" y2="202" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="620" y1="187" x2="658" y2="187" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Labels -->
+  <text x="400" y="370" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">Categorical path (top) and Numeric path (bottom) merge into a single feature vector</text>
+</svg>

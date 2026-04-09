@@ -1,1 +1,58 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Stream</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-os" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Spark Streaming Output Sinks</text>
+
+  <!-- Streaming Engine -->
+  <rect x="50" y="140" width="180" height="70" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="140" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1565c0">Streaming Engine</text>
+  <text x="140" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">writeStream.format(...)</text>
+
+  <!-- Arrows to sinks -->
+  <line x1="230" y1="155" x2="310" y2="70" stroke="#333" stroke-width="2" marker-end="url(#arrow-os)"/>
+  <line x1="230" y1="165" x2="310" y2="145" stroke="#333" stroke-width="2" marker-end="url(#arrow-os)"/>
+  <line x1="230" y1="185" x2="310" y2="225" stroke="#333" stroke-width="2" marker-end="url(#arrow-os)"/>
+  <line x1="230" y1="195" x2="310" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrow-os)"/>
+
+  <!-- Kafka Sink -->
+  <rect x="320" y="45" width="200" height="55" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="420" y="68" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Kafka</text>
+  <text x="420" y="87" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">format("kafka")</text>
+
+  <!-- File Sink -->
+  <rect x="320" y="120" width="200" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="420" y="143" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">File / Delta Lake</text>
+  <text x="420" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">format("delta") / parquet / json</text>
+
+  <!-- Console Sink -->
+  <rect x="320" y="200" width="200" height="55" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="420" y="223" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ef6c00">Console</text>
+  <text x="420" y="242" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">format("console") - debug</text>
+
+  <!-- foreachBatch Sink -->
+  <rect x="320" y="275" width="200" height="55" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="420" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">foreachBatch</text>
+  <text x="420" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Custom batch processing</text>
+
+  <!-- Properties panels -->
+  <rect x="560" y="45" width="210" height="55" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="665" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Append mode only</text>
+  <text x="665" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Exactly-once with idempotent</text>
+
+  <rect x="560" y="120" width="210" height="55" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="665" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Append mode, partitionBy</text>
+  <text x="665" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">ACID with Delta Lake</text>
+
+  <rect x="560" y="200" width="210" height="55" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="665" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">All output modes</text>
+  <text x="665" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Development/debug only</text>
+
+  <rect x="560" y="275" width="210" height="55" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="665" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Write to any system</text>
+  <text x="665" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Make writes idempotent!</text>
+
+  <!-- Output modes footer -->
+  <rect x="50" y="355" width="720" height="35" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="400" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Output Modes: <tspan font-weight="bold" fill="#0277bd">Append</tspan> (new rows) | <tspan font-weight="bold" fill="#2e7d32">Update</tspan> (changed rows) | <tspan font-weight="bold" fill="#ef6c00">Complete</tspan> (full table)</text>
+</svg>

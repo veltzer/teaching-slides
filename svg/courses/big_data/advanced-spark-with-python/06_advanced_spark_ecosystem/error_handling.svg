@@ -1,1 +1,75 @@
-<svg viewBox="0 0 500 480" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="400" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="425" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Error</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Error Handling Patterns</text>
+
+  <!-- Error types -->
+  <rect x="30" y="55" width="160" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="110" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#b71c1c">OOM Errors</text>
+  <text x="110" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Memory overflow</text>
+
+  <rect x="210" y="55" width="160" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="290" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#b71c1c">Data Skew</text>
+  <text x="290" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Uneven partitions</text>
+
+  <rect x="390" y="55" width="160" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="470" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#b71c1c">Serialization</text>
+  <text x="470" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Pickle / Kryo errors</text>
+
+  <rect x="570" y="55" width="200" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="670" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#b71c1c">Task Failures</text>
+  <text x="670" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Network / disk / timeout</text>
+
+  <!-- Arrows down to handling layer -->
+  <line x1="110" y1="110" x2="110" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="290" y1="110" x2="290" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="470" y1="110" x2="470" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="670" y1="110" x2="670" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Handling strategies -->
+  <rect x="30" y="145" width="160" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="168" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Increase memory</text>
+  <text x="110" y="186" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">offHeap.enabled</text>
+  <text x="110" y="202" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Repartition data</text>
+
+  <rect x="210" y="145" width="160" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="290" y="168" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Salting keys</text>
+  <text x="290" y="186" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">AQE skew join</text>
+  <text x="290" y="202" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Broadcast join</text>
+
+  <rect x="390" y="145" width="160" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="470" y="168" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Use Kryo serializer</text>
+  <text x="470" y="186" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Register classes</text>
+  <text x="470" y="202" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Avoid closures</text>
+
+  <rect x="570" y="145" width="200" height="65" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="670" y="168" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1b5e20">Retry config</text>
+  <text x="670" y="186" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">maxRetries = 4</text>
+  <text x="670" y="202" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Speculation mode</text>
+
+  <!-- Error handling patterns -->
+  <rect x="50" y="250" width="700" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="400" y="275" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1a237e">Application-Level Error Handling</text>
+
+  <rect x="70" y="290" width="150" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="145" y="310" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">try/except blocks</text>
+
+  <rect x="240" y="290" width="150" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="315" y="310" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">Accumulator errors</text>
+
+  <rect x="410" y="290" width="150" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="485" y="310" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">Dead letter queue</text>
+
+  <rect x="580" y="290" width="150" height="30" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="655" y="310" text-anchor="middle" font-family="Arial" font-size="11" fill="#bf360c">Checkpointing</text>
+
+  <!-- Monitoring -->
+  <rect x="50" y="360" width="700" height="40" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="2"/>
+  <text x="400" y="385" text-anchor="middle" font-family="Arial" font-size="13" fill="#1a237e">Log Analysis (Spark UI) | Metrics Alerts | Error Rate Dashboards | Auto-restart policies</text>
+
+  <text x="400" y="440" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Resilient Spark applications handle failures gracefully at every level</text>
+</svg>

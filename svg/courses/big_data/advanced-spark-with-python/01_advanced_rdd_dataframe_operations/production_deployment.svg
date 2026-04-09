@@ -1,1 +1,97 @@
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Development</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Production Deployment Considerations</text>
+
+  <!-- Pipeline flow -->
+  <rect x="30" y="50" width="130" height="50" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="95" y="72" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Development</text>
+  <text x="95" y="88" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Local / Notebook</text>
+
+  <line x1="160" y1="75" x2="195" y2="75" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="265" y="72" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Testing</text>
+  <text x="265" y="88" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Staging cluster</text>
+
+  <line x1="330" y1="75" x2="365" y2="75" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="370" y="50" width="130" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="435" y="72" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">Production</text>
+  <text x="435" y="88" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">YARN / K8s cluster</text>
+
+  <line x1="500" y1="75" x2="535" y2="75" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="540" y="50" width="130" height="50" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="605" y="72" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">Monitoring</text>
+  <text x="605" y="88" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Alerts + Dashboards</text>
+
+  <!-- Cluster Configuration -->
+  <rect x="20" y="120" width="250" height="150" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="145" y="143" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Cluster Configuration</text>
+  <rect x="35" y="155" width="220" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="145" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">executor.memory = 4-8g</text>
+  <rect x="35" y="182" width="220" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="145" y="197" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">executor.cores = 4-5</text>
+  <rect x="35" y="209" width="220" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="145" y="224" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">dynamicAllocation.enabled</text>
+  <rect x="35" y="236" width="220" height="22" rx="3" fill="#fff" stroke="#1565c0" stroke-width="1"/>
+  <text x="145" y="251" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">shuffle.partitions = 200-2000</text>
+
+  <!-- Reliability -->
+  <rect x="280" y="120" width="250" height="150" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="405" y="143" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Reliability</text>
+  <rect x="295" y="155" width="220" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
+  <text x="405" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Checkpointing for long jobs</text>
+  <rect x="295" y="182" width="220" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
+  <text x="405" y="197" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Retry logic for transient errors</text>
+  <rect x="295" y="209" width="220" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
+  <text x="405" y="224" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Graceful degradation</text>
+  <rect x="295" y="236" width="220" height="22" rx="3" fill="#fff" stroke="#2e7d32" stroke-width="1"/>
+  <text x="405" y="251" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Data validation pipeline</text>
+
+  <!-- Security -->
+  <rect x="540" y="120" width="240" height="150" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="660" y="143" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Security</text>
+  <rect x="555" y="155" width="210" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
+  <text x="660" y="170" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Kerberos authentication</text>
+  <rect x="555" y="182" width="210" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
+  <text x="660" y="197" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Encryption at rest + in transit</text>
+  <rect x="555" y="209" width="210" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
+  <text x="660" y="224" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">RBAC for data access</text>
+  <rect x="555" y="236" width="210" height="22" rx="3" fill="#fff" stroke="#e65100" stroke-width="1"/>
+  <text x="660" y="251" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Audit logging</text>
+
+  <!-- Deployment modes -->
+  <text x="400" y="295" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Deployment Modes</text>
+
+  <rect x="20" y="310" width="180" height="70" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
+  <text x="110" y="333" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#283593">YARN (Client)</text>
+  <text x="110" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Driver on client machine</text>
+  <text x="110" y="366" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Interactive / debugging</text>
+
+  <rect x="215" y="310" width="180" height="70" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
+  <text x="305" y="333" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#283593">YARN (Cluster)</text>
+  <text x="305" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Driver on cluster node</text>
+  <text x="305" y="366" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Production batch jobs</text>
+
+  <rect x="410" y="310" width="180" height="70" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
+  <text x="500" y="333" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">Kubernetes</text>
+  <text x="500" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Containerized executors</text>
+  <text x="500" y="366" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cloud-native scaling</text>
+
+  <rect x="605" y="310" width="180" height="70" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="1.5"/>
+  <text x="695" y="333" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">Standalone</text>
+  <text x="695" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Built-in cluster manager</text>
+  <text x="695" y="366" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Simple setup / testing</text>
+
+  <!-- CI/CD note -->
+  <rect x="100" y="400" width="600" height="40" rx="6" fill="#f5f5f5" stroke="#757575" stroke-width="1.5"/>
+  <text x="400" y="418" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#333">CI/CD: spark-submit with versioned JARs/wheels + config management (Airflow, Oozie, or Dagster)</text>
+  <text x="400" y="434" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Test with sample data locally, validate on staging, deploy to production</text>
+</svg>

@@ -1,1 +1,68 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Best Practices</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">RDD and DataFrame Best Practices Summary</text>
+
+  <!-- Row 1 -->
+  <rect x="20" y="50" width="245" height="115" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="142" y="73" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Data Loading</text>
+  <text x="142" y="93" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Define schema explicitly</text>
+  <text x="142" y="109" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use columnar formats (Parquet)</text>
+  <text x="142" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Filter early (predicate pushdown)</text>
+  <text x="142" y="141" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Select only needed columns</text>
+  <text x="142" y="157" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Avoid inferSchema in production</text>
+
+  <rect x="278" y="50" width="245" height="115" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="400" y="73" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Transformations</text>
+  <text x="400" y="93" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use built-in functions over UDFs</text>
+  <text x="400" y="109" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Prefer DataFrames over RDDs</text>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use mapPartitions for I/O</text>
+  <text x="400" y="141" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">reduceByKey over groupByKey</text>
+  <text x="400" y="157" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565c0">Chain narrow transformations</text>
+
+  <rect x="535" y="50" width="245" height="115" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="657" y="73" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Joins</text>
+  <text x="657" y="93" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Broadcast small tables</text>
+  <text x="657" y="109" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Handle skew with salting</text>
+  <text x="657" y="125" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Filter before joining</text>
+  <text x="657" y="141" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use sort-merge for large-large</text>
+  <text x="657" y="157" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Avoid cartesian joins</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="180" width="245" height="115" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.5"/>
+  <text x="142" y="203" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a">Memory Management</text>
+  <text x="142" y="223" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cache reused DataFrames</text>
+  <text x="142" y="239" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Unpersist when done</text>
+  <text x="142" y="255" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Choose right storage level</text>
+  <text x="142" y="271" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use Kryo serialization</text>
+  <text x="142" y="287" text-anchor="middle" font-family="Arial" font-size="10" fill="#6a1b9a">Monitor memory in Spark UI</text>
+
+  <rect x="278" y="180" width="245" height="115" rx="6" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
+  <text x="400" y="203" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#00695c">Partitioning</text>
+  <text x="400" y="223" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">2-4 partitions per core</text>
+  <text x="400" y="239" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">128MB per partition target</text>
+  <text x="400" y="255" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Coalesce to reduce partitions</text>
+  <text x="400" y="271" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Custom partitioner for skew</text>
+  <text x="400" y="287" text-anchor="middle" font-family="Arial" font-size="10" fill="#00695c">Enable AQE for auto-tuning</text>
+
+  <rect x="535" y="180" width="245" height="115" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+  <text x="657" y="203" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">Anti-Patterns to Avoid</text>
+  <text x="657" y="223" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">collect() on large datasets</text>
+  <text x="657" y="239" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Python UDFs (use pandas_udf)</text>
+  <text x="657" y="255" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">repartition(1) bottleneck</text>
+  <text x="657" y="271" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">groupByKey (use reduceByKey)</text>
+  <text x="657" y="287" text-anchor="middle" font-family="Arial" font-size="10" fill="#c62828">Unnecessary shuffles</text>
+
+  <!-- Row 3: Key principles -->
+  <rect x="20" y="315" width="375" height="55" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
+  <text x="207" y="338" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#283593">Monitoring</text>
+  <text x="207" y="358" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Use Spark UI, track GC time, shuffle spill, and execution time</text>
+
+  <rect x="405" y="315" width="375" height="55" rx="6" fill="#e8eaf6" stroke="#283593" stroke-width="1.5"/>
+  <text x="592" y="338" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#283593">Configuration</text>
+  <text x="592" y="358" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Enable AQE, tune shuffle partitions, set memory fractions</text>
+
+  <!-- Bottom rule -->
+  <rect x="100" y="390" width="600" height="45" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="410" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Golden Rule: Prefer DataFrames + built-in functions</text>
+  <text x="400" y="428" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Catalyst optimizer + Tungsten engine = best performance</text>
+</svg>

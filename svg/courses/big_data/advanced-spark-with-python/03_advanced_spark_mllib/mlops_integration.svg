@@ -1,1 +1,65 @@
-<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="325" y1="150.0" x2="415" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="595" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="640" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Development</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">MLOps Integration</text>
+
+  <!-- Dev -->
+  <rect x="30" y="70" width="160" height="80" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="110" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Development</text>
+  <text x="110" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Experiment tracking</text>
+  <text x="110" y="130" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Notebook / IDE</text>
+
+  <!-- CI/CD -->
+  <rect x="220" y="70" width="160" height="80" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="300" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">CI / CD Pipeline</text>
+  <text x="300" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Automated testing</text>
+  <text x="300" y="130" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Model validation</text>
+
+  <!-- Model Registry -->
+  <rect x="420" y="70" width="160" height="80" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="500" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Model Registry</text>
+  <text x="500" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">MLflow / versioning</text>
+  <text x="500" y="130" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Staging / Production</text>
+
+  <!-- Deployment -->
+  <rect x="620" y="70" width="150" height="80" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="695" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a">Deployment</text>
+  <text x="695" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Kubernetes / Spark</text>
+  <text x="695" y="130" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Canary / Blue-green</text>
+
+  <!-- Arrows top row -->
+  <line x1="190" y1="110" x2="218" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="110" x2="418" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="580" y1="110" x2="618" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Monitoring row -->
+  <rect x="120" y="210" width="560" height="55" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="400" y="233" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#00695c">Monitoring and Observability</text>
+  <text x="400" y="253" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Model performance | Data drift | Latency | Resource usage</text>
+
+  <!-- Arrows down to monitoring -->
+  <line x1="110" y1="150" x2="200" y2="208" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="300" y1="150" x2="300" y2="208" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="500" y1="150" x2="500" y2="208" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="695" y1="150" x2="600" y2="208" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Data layer -->
+  <rect x="120" y="310" width="250" height="50" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="245" y="332" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#f57f17">Feature Store</text>
+  <text x="245" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Shared features, versioning</text>
+
+  <rect x="430" y="310" width="250" height="50" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="555" y="332" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#f57f17">Data Pipeline</text>
+  <text x="555" y="350" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">ETL, validation, lineage</text>
+
+  <!-- Feedback loop arrow -->
+  <line x1="400" y1="265" x2="400" y2="308" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Feedback loop back to dev -->
+  <path d="M 695 150 L 695 400 L 30 400 L 30 130 L 28 120" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="360" y="418" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">Feedback loop: retrain on new data</text>
+</svg>

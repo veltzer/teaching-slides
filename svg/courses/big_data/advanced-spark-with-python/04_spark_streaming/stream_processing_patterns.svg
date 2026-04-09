@@ -1,1 +1,72 @@
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Patterns</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-spp" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Stream Processing Patterns</text>
+
+  <!-- Pattern 1: Enrich -->
+  <rect x="30" y="50" width="230" height="140" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="145" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Enrich Pattern</text>
+  <rect x="50" y="90" width="80" height="30" rx="4" fill="#bbdefb" stroke="#0277bd" stroke-width="1"/>
+  <text x="90" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Stream</text>
+  <rect x="50" y="130" width="80" height="30" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="90" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Static DF</text>
+  <line x1="130" y1="105" x2="160" y2="120" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <line x1="130" y1="145" x2="160" y2="130" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <rect x="165" y="110" width="75" height="30" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="202" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Join</text>
+  <text x="145" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Stream-static join for</text>
+  <text x="145" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">dimension lookups</text>
+
+  <!-- Pattern 2: Fan-Out -->
+  <rect x="285" y="50" width="230" height="140" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Fan-Out Pattern</text>
+  <rect x="310" y="100" width="70" height="30" rx="4" fill="#bbdefb" stroke="#0277bd" stroke-width="1"/>
+  <text x="345" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Stream</text>
+  <line x1="380" y1="108" x2="420" y2="95" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <line x1="380" y1="115" x2="420" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <line x1="380" y1="122" x2="420" y2="135" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <rect x="425" y="82" width="70" height="22" rx="3" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="460" y="97" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Sink A</text>
+  <rect x="425" y="107" width="70" height="22" rx="3" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="460" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Sink B</text>
+  <rect x="425" y="132" width="70" height="22" rx="3" fill="#fff3e0" stroke="#ef6c00" stroke-width="1"/>
+  <text x="460" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#333">Sink C</text>
+  <text x="400" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Write to multiple sinks</text>
+  <text x="400" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">via foreachBatch</text>
+
+  <!-- Pattern 3: Aggregate -->
+  <rect x="540" y="50" width="230" height="140" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="655" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ef6c00">Aggregate Pattern</text>
+  <rect x="560" y="90" width="190" height="35" rx="4" fill="#ffe0b2" stroke="#ef6c00" stroke-width="1"/>
+  <text x="655" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">window() + groupBy()</text>
+  <line x1="655" y1="125" x2="655" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow-spp)"/>
+  <rect x="585" y="142" width="140" height="25" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="655" y="159" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Windowed aggregations</text>
+  <text x="655" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Tumbling / sliding / session</text>
+
+  <!-- Pattern 4: Dedup -->
+  <rect x="30" y="220" width="230" height="105" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="145" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7b1fa2">Deduplication Pattern</text>
+  <text x="145" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">dropDuplicates with watermark</text>
+  <text x="145" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Stateful within time window</text>
+  <text x="145" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">dropDuplicatesWithinWatermark</text>
+
+  <!-- Pattern 5: Filter-Route -->
+  <rect x="285" y="220" width="230" height="105" rx="8" fill="#ffebee" stroke="#d32f2f" stroke-width="2"/>
+  <text x="400" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#d32f2f">Filter-Route Pattern</text>
+  <text x="400" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Split stream by condition</text>
+  <text x="400" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Route to different sinks</text>
+  <text x="400" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Good data / bad data paths</text>
+
+  <!-- Pattern 6: Sessionize -->
+  <rect x="540" y="220" width="230" height="105" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="655" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#00695c">Sessionize Pattern</text>
+  <text x="655" y="268" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">flatMapGroupsWithState</text>
+  <text x="655" y="288" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Custom stateful logic</text>
+  <text x="655" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">User session detection</text>
+
+  <!-- Footer -->
+  <rect x="50" y="350" width="700" height="35" rx="6" fill="#fafafa" stroke="#ccc" stroke-width="1"/>
+  <text x="400" y="372" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555">Choose pattern based on: latency requirements | state size | exactly-once needs | output sink capabilities</text>
+</svg>

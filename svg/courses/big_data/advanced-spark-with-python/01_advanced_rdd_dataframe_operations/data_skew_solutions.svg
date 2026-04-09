@@ -1,1 +1,84 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Skewed Data</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Data Skew: Problem and Solutions</text>
+
+  <!-- Problem: Skewed partitions -->
+  <text x="200" y="58" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#c62828">Problem: Skewed Data</text>
+
+  <!-- Bar chart showing skew -->
+  <rect x="50" y="140" width="40" height="30" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="70" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P0</text>
+  <rect x="100" y="70" width="40" height="100" rx="2" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="120" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#c62828">P1</text>
+  <text x="120" y="65" text-anchor="middle" font-family="Arial" font-size="8" fill="#c62828">90%!</text>
+  <rect x="150" y="150" width="40" height="20" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="170" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P2</text>
+  <rect x="200" y="145" width="40" height="25" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="220" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P3</text>
+  <rect x="250" y="155" width="40" height="15" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="270" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P4</text>
+
+  <text x="200" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">One partition has most data</text>
+  <text x="200" y="207" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">Straggler task slows everything</text>
+
+  <!-- Arrow -->
+  <line x1="330" y1="130" x2="380" y2="130" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="355" y="120" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#555">Fix</text>
+
+  <!-- Solution: Balanced partitions -->
+  <text x="600" y="58" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">After Fix: Balanced</text>
+
+  <rect x="430" y="120" width="40" height="50" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="450" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P0</text>
+  <rect x="480" y="115" width="40" height="55" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="500" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P1</text>
+  <rect x="530" y="125" width="40" height="45" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="550" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P2</text>
+  <rect x="580" y="118" width="40" height="52" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="600" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P3</text>
+  <rect x="630" y="122" width="40" height="48" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="650" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P4</text>
+  <rect x="680" y="128" width="40" height="42" rx="2" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="700" y="170" text-anchor="middle" font-family="Arial" font-size="9" fill="#333">P5</text>
+
+  <text x="600" y="192" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Even distribution across partitions</text>
+  <text x="600" y="207" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">All tasks finish around same time</text>
+
+  <!-- Solutions -->
+  <text x="400" y="240" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#333">Solutions</text>
+
+  <!-- Solution 1: Salting -->
+  <rect x="20" y="258" width="240" height="100" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="140" y="280" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">1. Key Salting</text>
+  <text x="140" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Add random prefix to hot keys</text>
+  <text x="140" y="314" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">key_0, key_1, ... key_N</text>
+  <text x="140" y="330" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Splits hot partition into N parts</text>
+  <text x="140" y="346" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565c0">Best for joins with skewed keys</text>
+
+  <!-- Solution 2: Repartition -->
+  <rect x="280" y="258" width="240" height="100" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">2. Repartition</text>
+  <text x="400" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">repartition(N, "column")</text>
+  <text x="400" y="314" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Redistribute data evenly</text>
+  <text x="400" y="330" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Causes full shuffle</text>
+  <text x="400" y="346" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Best for aggregations</text>
+
+  <!-- Solution 3: AQE -->
+  <rect x="540" y="258" width="240" height="100" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="660" y="280" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">3. Adaptive Query (AQE)</text>
+  <text x="660" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">adaptive.skewJoin.enabled</text>
+  <text x="660" y="314" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Automatically splits skewed</text>
+  <text x="660" y="330" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">partitions at runtime</text>
+  <text x="660" y="346" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">Spark 3.0+ recommended</text>
+
+  <!-- Detection -->
+  <rect x="100" y="375" width="600" height="60" rx="6" fill="#f5f5f5" stroke="#757575" stroke-width="1.5"/>
+  <text x="400" y="397" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#333">Detection: skew_ratio = max(partition_size) / avg(partition_size)</text>
+  <text x="400" y="417" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Ratio > 3.0 indicates significant skew -- check with spark_partition_id()</text>
+</svg>

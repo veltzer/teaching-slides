@@ -1,1 +1,56 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="280.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1a237e">Spark SQL Memory Management</text>
+
+  <!-- JVM Heap outer box -->
+  <rect x="30" y="50" width="740" height="335" rx="10" fill="#f5f5f5" stroke="#333" stroke-width="2"/>
+  <text x="400" y="75" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#333">JVM Heap (spark.executor.memory)</text>
+
+  <!-- Reserved Memory -->
+  <rect x="50" y="90" width="120" height="280" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="110" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">Reserved</text>
+  <text x="110" y="135" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">300 MB</text>
+  <text x="110" y="155" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">System use</text>
+
+  <!-- Spark Memory (Unified) -->
+  <rect x="190" y="90" width="400" height="280" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="390" y="115" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1a237e">Unified Memory (spark.memory.fraction = 0.6)</text>
+
+  <!-- Execution Memory -->
+  <rect x="205" y="130" width="180" height="220" rx="6" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="295" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Execution</text>
+  <text x="295" y="175" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Shuffles</text>
+  <text x="295" y="195" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Joins</text>
+  <text x="295" y="215" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Sorts</text>
+  <text x="295" y="235" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Aggregations</text>
+
+  <!-- Dynamic boundary arrow -->
+  <line x1="395" y1="160" x2="395" y2="330" stroke="#e65100" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="395" y="155" text-anchor="middle" font-family="Arial" font-size="10" fill="#e65100">dynamic</text>
+  <line x1="385" y1="245" x2="405" y2="245" stroke="#e65100" stroke-width="2"/>
+  <line x1="375" y1="240" x2="385" y2="245" stroke="#e65100" stroke-width="2"/>
+  <line x1="375" y1="250" x2="385" y2="245" stroke="#e65100" stroke-width="2"/>
+  <line x1="405" y1="245" x2="415" y2="240" stroke="#e65100" stroke-width="2"/>
+  <line x1="405" y1="245" x2="415" y2="250" stroke="#e65100" stroke-width="2"/>
+
+  <!-- Storage Memory -->
+  <rect x="400" y="130" width="175" height="220" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="487" y="155" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Storage</text>
+  <text x="487" y="175" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Cached tables</text>
+  <text x="487" y="195" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Broadcast vars</text>
+  <text x="487" y="215" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Unroll memory</text>
+
+  <!-- User Memory -->
+  <rect x="610" y="90" width="145" height="280" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="682" y="115" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">User Memory</text>
+  <text x="682" y="140" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">UDF data</text>
+  <text x="682" y="160" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Internal metadata</text>
+  <text x="682" y="180" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">RDD dependencies</text>
+  <text x="682" y="210" text-anchor="middle" font-family="Arial" font-size="11" fill="#9e9e9e">(1 - fraction)</text>
+</svg>

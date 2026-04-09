@@ -1,1 +1,136 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Spark Persistence / Cache Options</text>
+
+  <!-- Header row -->
+  <rect x="30" y="45" width="150" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="105" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Storage Level</text>
+  <rect x="185" y="45" width="80" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="225" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Memory</text>
+  <rect x="270" y="45" width="80" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="310" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Disk</text>
+  <rect x="355" y="45" width="80" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="395" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Serialized</text>
+  <rect x="440" y="45" width="80" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="480" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Replicas</text>
+  <rect x="525" y="45" width="245" height="30" rx="4" fill="#333" stroke="#333" stroke-width="1"/>
+  <text x="647" y="65" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#fff">Use When</text>
+
+  <!-- MEMORY_ONLY -->
+  <rect x="30" y="80" width="150" height="35" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="105" y="102" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2e7d32">MEMORY_ONLY</text>
+  <rect x="185" y="80" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="102" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="270" y="80" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="310" y="102" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="355" y="80" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="395" y="102" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="440" y="80" width="80" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="480" y="102" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">1</text>
+  <rect x="525" y="80" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="102" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Data fits in memory, fast access</text>
+
+  <!-- MEMORY_AND_DISK -->
+  <rect x="30" y="120" width="150" height="35" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="105" y="142" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1565c0">MEMORY_AND_DISK</text>
+  <rect x="185" y="120" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="142" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="270" y="120" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="310" y="142" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="355" y="120" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="395" y="142" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="440" y="120" width="80" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="480" y="142" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">1</text>
+  <rect x="525" y="120" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Default cache(), spillable</text>
+
+  <!-- MEMORY_ONLY_SER -->
+  <rect x="30" y="160" width="150" height="35" rx="3" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
+  <text x="105" y="182" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#e65100">MEMORY_ONLY_SER</text>
+  <rect x="185" y="160" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="270" y="160" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="310" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="355" y="160" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="395" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="440" y="160" width="80" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="480" y="182" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">1</text>
+  <rect x="525" y="160" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="182" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Memory tight, CPU available</text>
+
+  <!-- MEMORY_AND_DISK_SER -->
+  <rect x="30" y="200" width="150" height="35" rx="3" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="105" y="218" text-anchor="middle" font-family="Arial" font-size="9" font-weight="bold" fill="#6a1b9a">MEMORY_AND_DISK_SER</text>
+  <rect x="185" y="200" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="222" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="270" y="200" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="310" y="222" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="355" y="200" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="395" y="222" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="440" y="200" width="80" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="480" y="222" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">1</text>
+  <rect x="525" y="200" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="222" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Large data, memory constrained</text>
+
+  <!-- DISK_ONLY -->
+  <rect x="30" y="240" width="150" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="105" y="262" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#c62828">DISK_ONLY</text>
+  <rect x="185" y="240" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="225" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="270" y="240" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="310" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="355" y="240" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="395" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="440" y="240" width="80" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="480" y="262" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">1</text>
+  <rect x="525" y="240" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="262" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Recompute is expensive, no RAM</text>
+
+  <!-- MEMORY_ONLY_2 -->
+  <rect x="30" y="280" width="150" height="35" rx="3" fill="#e0f2f1" stroke="#00695c" stroke-width="1"/>
+  <text x="105" y="302" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#00695c">MEMORY_ONLY_2</text>
+  <rect x="185" y="280" width="80" height="35" rx="3" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="225" y="302" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Yes</text>
+  <rect x="270" y="280" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="310" y="302" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="355" y="280" width="80" height="35" rx="3" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="395" y="302" text-anchor="middle" font-family="Arial" font-size="11" fill="#c62828">No</text>
+  <rect x="440" y="280" width="80" height="35" rx="3" fill="#e0f2f1" stroke="#00695c" stroke-width="1"/>
+  <text x="480" y="302" text-anchor="middle" font-family="Arial" font-size="11" font-weight="bold" fill="#00695c">2</text>
+  <rect x="525" y="280" width="245" height="35" rx="3" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="647" y="302" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Critical data, fault tolerance</text>
+
+  <!-- Decision flow -->
+  <text x="400" y="345" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Decision Guide</text>
+
+  <rect x="30" y="360" width="170" height="40" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="115" y="375" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Fits in memory?</text>
+  <text x="115" y="392" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#2e7d32">MEMORY_ONLY</text>
+
+  <line x1="200" y1="380" x2="225" y2="380" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="230" y="360" width="170" height="40" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="315" y="375" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Mostly fits?</text>
+  <text x="315" y="392" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#1565c0">MEMORY_AND_DISK</text>
+
+  <line x1="400" y1="380" x2="425" y2="380" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="430" y="360" width="170" height="40" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="515" y="375" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Memory tight?</text>
+  <text x="515" y="392" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#e65100">*_SER variants</text>
+
+  <line x1="600" y1="380" x2="625" y2="380" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="630" y="360" width="140" height="40" rx="5" fill="#e0f2f1" stroke="#00695c" stroke-width="1.5"/>
+  <text x="700" y="375" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Need replication?</text>
+  <text x="700" y="392" text-anchor="middle" font-family="Arial" font-size="10" font-weight="bold" fill="#00695c">*_2 variants</text>
+
+  <!-- Footer -->
+  <text x="400" y="435" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">cache() is equivalent to persist(MEMORY_AND_DISK) -- always call unpersist() when done</text>
+</svg>

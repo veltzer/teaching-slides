@@ -1,1 +1,60 @@
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Graph Memory Management</text>
+
+  <!-- Executor Memory Layout -->
+  <rect x="30" y="55" width="340" height="320" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+  <text x="200" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Executor Memory</text>
+
+  <!-- Storage Memory -->
+  <rect x="50" y="95" width="300" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="200" y="118" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Storage Memory (60%)</text>
+  <rect x="65" y="130" width="85" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="107" y="150" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cached Vertices</text>
+  <rect x="160" y="130" width="85" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="202" y="150" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cached Edges</text>
+  <rect x="255" y="130" width="80" height="30" rx="4" fill="#bbdefb" stroke="#1565c0" stroke-width="1"/>
+  <text x="295" y="150" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Broadcasts</text>
+
+  <!-- Execution Memory -->
+  <rect x="50" y="190" width="300" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="200" y="213" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Execution Memory (40%)</text>
+  <text x="200" y="235" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Shuffles, Joins, Aggregations</text>
+
+  <!-- Overhead -->
+  <rect x="50" y="265" width="300" height="45" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="200" y="288" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Overhead Memory</text>
+  <text x="200" y="303" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">JVM internals, class metadata</text>
+
+  <!-- Right side: Strategies -->
+  <rect x="420" y="55" width="350" height="320" rx="10" fill="#fafafa" stroke="#333" stroke-width="2"/>
+  <text x="595" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Caching Strategies</text>
+
+  <!-- MEMORY_ONLY -->
+  <rect x="440" y="95" width="310" height="45" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="450" y="115" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">MEMORY_ONLY</text>
+  <text x="450" y="132" font-family="Arial" font-size="11" fill="#555">Fast, but may OOM on large graphs</text>
+
+  <!-- MEMORY_AND_DISK -->
+  <rect x="440" y="150" width="310" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="450" y="170" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">MEMORY_AND_DISK</text>
+  <text x="450" y="187" font-family="Arial" font-size="11" fill="#555">Spills to disk; recommended for graphs</text>
+
+  <!-- MEMORY_ONLY_SER -->
+  <rect x="440" y="205" width="310" height="45" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="450" y="225" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">MEMORY_ONLY_SER</text>
+  <text x="450" y="242" font-family="Arial" font-size="11" fill="#555">Serialized; saves space, costs CPU</text>
+
+  <!-- Best practices -->
+  <rect x="440" y="270" width="310" height="90" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
+  <text x="595" y="292" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#7b1fa2">Best Practices</text>
+  <text x="450" y="312" font-family="Arial" font-size="11" fill="#333">- Cache graph before iterative algos</text>
+  <text x="450" y="328" font-family="Arial" font-size="11" fill="#333">- Unpersist when no longer needed</text>
+  <text x="450" y="344" font-family="Arial" font-size="11" fill="#333">- Use checkpointing for long lineages</text>
+</svg>

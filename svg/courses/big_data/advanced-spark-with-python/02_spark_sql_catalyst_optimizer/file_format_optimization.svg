@@ -1,1 +1,64 @@
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="70.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="110.0" x2="235" y2="150.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="70.0" x2="325" y2="230.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Data Format</text></svg>
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1a237e">File Format Optimization</text>
+
+  <!-- Headers -->
+  <text x="110" y="65" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Format</text>
+  <text x="280" y="65" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Columnar</text>
+  <text x="400" y="65" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Compression</text>
+  <text x="530" y="65" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Pushdown</text>
+  <text x="680" y="65" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Best For</text>
+
+  <!-- Separator -->
+  <line x1="20" y1="75" x2="780" y2="75" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Parquet -->
+  <rect x="30" y="85" width="160" height="45" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="110" y="113" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">Parquet</text>
+  <text x="280" y="113" text-anchor="middle" font-family="Arial" font-size="13" fill="#2e7d32">Yes</text>
+  <text x="400" y="113" text-anchor="middle" font-family="Arial" font-size="13" fill="#2e7d32">Excellent</text>
+  <text x="530" y="113" text-anchor="middle" font-family="Arial" font-size="13" fill="#2e7d32">Full</text>
+  <text x="680" y="113" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Analytics, default</text>
+
+  <!-- ORC -->
+  <rect x="30" y="145" width="160" height="45" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="110" y="173" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">ORC</text>
+  <text x="280" y="173" text-anchor="middle" font-family="Arial" font-size="13" fill="#1565c0">Yes</text>
+  <text x="400" y="173" text-anchor="middle" font-family="Arial" font-size="13" fill="#1565c0">Excellent</text>
+  <text x="530" y="173" text-anchor="middle" font-family="Arial" font-size="13" fill="#1565c0">Full</text>
+  <text x="680" y="173" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Hive workloads</text>
+
+  <!-- Avro -->
+  <rect x="30" y="205" width="160" height="45" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="110" y="233" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#e65100">Avro</text>
+  <text x="280" y="233" text-anchor="middle" font-family="Arial" font-size="13" fill="#e65100">No (row)</text>
+  <text x="400" y="233" text-anchor="middle" font-family="Arial" font-size="13" fill="#e65100">Good</text>
+  <text x="530" y="233" text-anchor="middle" font-family="Arial" font-size="13" fill="#e65100">Limited</text>
+  <text x="680" y="233" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Schema evolution</text>
+
+  <!-- JSON -->
+  <rect x="30" y="265" width="160" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="110" y="293" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#c62828">JSON</text>
+  <text x="280" y="293" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">No (row)</text>
+  <text x="400" y="293" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">Poor</text>
+  <text x="530" y="293" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">None</text>
+  <text x="680" y="293" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Interchange only</text>
+
+  <!-- CSV -->
+  <rect x="30" y="325" width="160" height="45" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="110" y="353" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#c62828">CSV</text>
+  <text x="280" y="353" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">No (row)</text>
+  <text x="400" y="353" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">None</text>
+  <text x="530" y="353" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">None</text>
+  <text x="680" y="353" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Legacy import</text>
+
+  <!-- Recommendation -->
+  <rect x="100" y="385" width="600" height="30" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="400" y="405" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Recommendation: Use Parquet with Snappy compression for most Spark SQL workloads</text>
+</svg>

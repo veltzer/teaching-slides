@@ -1,1 +1,73 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="280" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="305" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Filter</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1a237e">Predicate Pushdown</text>
+
+  <!-- BEFORE side -->
+  <text x="200" y="65" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#c62828">Before Optimization</text>
+
+  <!-- Result -->
+  <rect x="140" y="80" width="120" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="200" y="105" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">Result</text>
+
+  <!-- Filter (high) -->
+  <rect x="140" y="140" width="120" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="200" y="165" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">Filter (age > 25)</text>
+  <line x1="200" y1="120" x2="200" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Join -->
+  <rect x="140" y="200" width="120" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial" font-size="13" fill="#c62828">Join</text>
+  <line x1="200" y1="180" x2="200" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Scan Orders -->
+  <rect x="80" y="270" width="110" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="135" y="295" text-anchor="middle" font-family="Arial" font-size="12" fill="#c62828">Scan Orders</text>
+  <line x1="175" y1="240" x2="150" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Scan Customers -->
+  <rect x="210" y="270" width="120" height="40" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="2"/>
+  <text x="270" y="295" text-anchor="middle" font-family="Arial" font-size="12" fill="#c62828">Scan Customers</text>
+  <line x1="225" y1="240" x2="255" y2="270" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Big X - lots of data -->
+  <text x="200" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#c62828">All rows scanned, then filtered</text>
+
+  <!-- Arrow between sides -->
+  <line x1="370" y1="200" x2="430" y2="200" stroke="#1565c0" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <text x="400" y="190" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Catalyst</text>
+
+  <!-- AFTER side -->
+  <text x="600" y="65" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#2e7d32">After Optimization</text>
+
+  <!-- Result -->
+  <rect x="540" y="80" width="120" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="600" y="105" text-anchor="middle" font-family="Arial" font-size="13" fill="#2e7d32">Result</text>
+
+  <!-- Join -->
+  <rect x="540" y="140" width="120" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="600" y="165" text-anchor="middle" font-family="Arial" font-size="13" fill="#2e7d32">Join</text>
+  <line x1="600" y1="120" x2="600" y2="140" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Filter pushed down left -->
+  <rect x="460" y="210" width="120" height="40" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="520" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#f57f17">Filter (age > 25)</text>
+  <line x1="575" y1="180" x2="540" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Scan Orders with filter -->
+  <rect x="460" y="275" width="120" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="520" y="300" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32">Scan Orders</text>
+  <line x1="520" y1="250" x2="520" y2="275" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Scan Customers (no filter needed) -->
+  <rect x="620" y="210" width="130" height="40" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="685" y="235" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32">Scan Customers</text>
+  <line x1="625" y1="180" x2="670" y2="210" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <text x="600" y="360" text-anchor="middle" font-family="Arial" font-size="12" fill="#2e7d32">Filter pushed before join = fewer rows</text>
+</svg>

@@ -1,1 +1,50 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="280.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Testing</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-ts" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333"/></marker>
+  </defs>
+  <text x="400" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#333">Testing Strategies for Streaming</text>
+
+  <!-- Test Pyramid -->
+  <!-- Unit Tests - base -->
+  <rect x="50" y="280" width="300" height="70" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="200" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Unit Tests</text>
+  <text x="200" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Transform functions, UDFs, schema validation</text>
+  <text x="200" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Fast, isolated, no Spark context needed</text>
+
+  <!-- Integration Tests - middle -->
+  <rect x="90" y="195" width="220" height="70" rx="6" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="200" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0277bd">Integration Tests</text>
+  <text x="200" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">MemoryStream, local SparkSession</text>
+  <text x="200" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Test full pipeline logic</text>
+
+  <!-- E2E Tests - top -->
+  <rect x="130" y="115" width="140" height="65" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="200" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ef6c00">E2E Tests</text>
+  <text x="200" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#555">Docker + Kafka</text>
+  <text x="200" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888">Full stack</text>
+
+  <!-- Pyramid label -->
+  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#888">Test Pyramid</text>
+
+  <!-- Strategy details -->
+  <rect x="400" y="55" width="370" height="105" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="585" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2e7d32">Unit Test Approach</text>
+  <text x="420" y="100" font-family="Arial, sans-serif" font-size="11" fill="#555">1. Test transformation logic separately</text>
+  <text x="420" y="118" font-family="Arial, sans-serif" font-size="11" fill="#555">2. Use static DataFrames as input</text>
+  <text x="420" y="136" font-family="Arial, sans-serif" font-size="11" fill="#555">3. Verify output schema and values</text>
+  <text x="420" y="154" font-family="Arial, sans-serif" font-size="11" fill="#555">4. Test edge cases (nulls, empty, malformed)</text>
+
+  <rect x="400" y="175" width="370" height="95" rx="8" fill="#e1f5fe" stroke="#0277bd" stroke-width="2"/>
+  <text x="585" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#0277bd">Integration Test Approach</text>
+  <text x="420" y="218" font-family="Arial, sans-serif" font-size="11" fill="#555">1. Use MemoryStream as test source</text>
+  <text x="420" y="236" font-family="Arial, sans-serif" font-size="11" fill="#555">2. Add test data with addData()</text>
+  <text x="420" y="254" font-family="Arial, sans-serif" font-size="11" fill="#555">3. processAllAvailable() to advance</text>
+  <text x="420" y="262" font-family="Arial, sans-serif" font-size="11" fill="#555">4. Assert output with MemorySink</text>
+
+  <rect x="400" y="285" width="370" height="95" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="585" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ef6c00">E2E Test Approach</text>
+  <text x="420" y="328" font-family="Arial, sans-serif" font-size="11" fill="#555">1. Docker Compose with Kafka + Spark</text>
+  <text x="420" y="346" font-family="Arial, sans-serif" font-size="11" fill="#555">2. Produce real messages to topic</text>
+  <text x="420" y="364" font-family="Arial, sans-serif" font-size="11" fill="#555">3. Verify end-to-end sink output</text>
+  <text x="420" y="372" font-family="Arial, sans-serif" font-size="11" fill="#555">4. Test failure recovery scenarios</text>
+</svg>

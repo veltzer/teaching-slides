@@ -1,1 +1,64 @@
-<svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="150.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="150.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="130.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="155.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Formats</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Graph Data Formats</text>
+
+  <!-- Edge List -->
+  <rect x="30" y="55" width="220" height="150" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="140" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#1565c0">Edge List</text>
+  <rect x="50" y="90" width="180" height="100" rx="4" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="65" y="112" font-family="Courier New" font-size="11" fill="#333">1  2</text>
+  <text x="65" y="128" font-family="Courier New" font-size="11" fill="#333">1  3</text>
+  <text x="65" y="144" font-family="Courier New" font-size="11" fill="#333">2  4</text>
+  <text x="65" y="160" font-family="Courier New" font-size="11" fill="#333">3  5</text>
+  <text x="65" y="176" font-family="Courier New" font-size="11" fill="#888">src  dst</text>
+
+  <!-- Adjacency List -->
+  <rect x="290" y="55" width="220" height="150" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#2e7d32">Adjacency List</text>
+  <rect x="310" y="90" width="180" height="100" rx="4" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="325" y="112" font-family="Courier New" font-size="11" fill="#333">1: [2, 3]</text>
+  <text x="325" y="128" font-family="Courier New" font-size="11" fill="#333">2: [4]</text>
+  <text x="325" y="144" font-family="Courier New" font-size="11" fill="#333">3: [5]</text>
+  <text x="325" y="160" font-family="Courier New" font-size="11" fill="#333">4: []</text>
+  <text x="325" y="176" font-family="Courier New" font-size="11" fill="#888">node: [neighbors]</text>
+
+  <!-- GraphML / XML -->
+  <rect x="550" y="55" width="220" height="150" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="660" y="80" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#e65100">GraphML (XML)</text>
+  <rect x="570" y="90" width="180" height="100" rx="4" fill="#fff" stroke="#ccc" stroke-width="1"/>
+  <text x="580" y="110" font-family="Courier New" font-size="10" fill="#333">&lt;graph&gt;</text>
+  <text x="590" y="126" font-family="Courier New" font-size="10" fill="#333">&lt;node id="1"/&gt;</text>
+  <text x="590" y="142" font-family="Courier New" font-size="10" fill="#333">&lt;node id="2"/&gt;</text>
+  <text x="590" y="158" font-family="Courier New" font-size="10" fill="#333">&lt;edge src="1"</text>
+  <text x="605" y="174" font-family="Courier New" font-size="10" fill="#333">dst="2"/&gt;</text>
+
+  <!-- Parquet -->
+  <rect x="30" y="240" width="220" height="130" rx="8" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="140" y="265" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#7b1fa2">Parquet (Columnar)</text>
+  <text x="140" y="290" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">vertices.parquet</text>
+  <text x="140" y="308" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">edges.parquet</text>
+  <text x="140" y="330" text-anchor="middle" font-family="Arial" font-size="11" fill="#2e7d32">Best for Spark!</text>
+  <text x="140" y="348" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Compressed, fast reads</text>
+
+  <!-- CSV -->
+  <rect x="290" y="240" width="220" height="130" rx="8" fill="#e0f2f1" stroke="#00695c" stroke-width="2"/>
+  <text x="400" y="265" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#00695c">CSV / TSV</text>
+  <text x="400" y="290" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Simple text format</text>
+  <text x="400" y="308" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Easy to produce/consume</text>
+  <text x="400" y="326" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">No schema enforcement</text>
+  <text x="400" y="348" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Good for interop</text>
+
+  <!-- JSON -->
+  <rect x="550" y="240" width="220" height="130" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="660" y="265" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#c62828">JSON</text>
+  <text x="660" y="290" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Nested properties</text>
+  <text x="660" y="308" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Schema flexibility</text>
+  <text x="660" y="326" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Human readable</text>
+  <text x="660" y="348" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Larger file sizes</text>
+</svg>

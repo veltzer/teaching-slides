@@ -1,1 +1,59 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="60" x2="205.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="370.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Model</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Model Serving Architecture</text>
+
+  <!-- Client -->
+  <rect x="30" y="160" width="110" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="85" y="185" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Client</text>
+  <text x="85" y="202" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">REST / gRPC</text>
+
+  <!-- API Gateway -->
+  <rect x="180" y="160" width="110" height="60" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="235" y="185" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">API Gateway</text>
+  <text x="235" y="202" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Load balancer</text>
+
+  <!-- Feature Store -->
+  <rect x="340" y="70" width="130" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="405" y="93" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">Feature Store</text>
+  <text x="405" y="112" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Real-time features</text>
+
+  <!-- Model Server -->
+  <rect x="340" y="155" width="130" height="70" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="405" y="180" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">Model Server</text>
+  <text x="405" y="198" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Spark / ONNX</text>
+  <text x="405" y="214" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Inference engine</text>
+
+  <!-- Model Registry -->
+  <rect x="340" y="255" width="130" height="55" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="405" y="278" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">Model Registry</text>
+  <text x="405" y="297" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">MLflow / versions</text>
+
+  <!-- Response -->
+  <rect x="530" y="160" width="120" height="60" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="590" y="185" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Prediction</text>
+  <text x="590" y="202" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Score + proba</text>
+
+  <!-- Monitoring -->
+  <rect x="670" y="100" width="110" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="725" y="123" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">Monitoring</text>
+  <text x="725" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Latency / drift</text>
+
+  <!-- Logging -->
+  <rect x="670" y="225" width="110" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="725" y="248" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">Logging</text>
+  <text x="725" y="267" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Audit trail</text>
+
+  <!-- Arrows -->
+  <line x1="140" y1="190" x2="178" y2="190" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="290" y1="190" x2="338" y2="190" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="405" y1="125" x2="405" y2="153" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="405" y1="255" x2="405" y2="227" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="470" y1="190" x2="528" y2="190" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="175" x2="670" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="650" y1="205" x2="670" y2="240" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

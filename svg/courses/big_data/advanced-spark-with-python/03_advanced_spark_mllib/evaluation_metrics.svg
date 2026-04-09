@@ -1,1 +1,55 @@
-<svg viewBox="0 0 540 320" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="160.0" x2="235" y2="40.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="120.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="200.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="160.0" x2="235" y2="280.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="415" y="140.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="460" y="165.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Predictions</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Model Evaluation Metrics</text>
+
+  <!-- Predictions box -->
+  <rect x="30" y="150" width="130" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="95" y="177" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Predictions</text>
+  <text x="95" y="195" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">DataFrame</text>
+
+  <!-- Binary Classification -->
+  <rect x="220" y="55" width="170" height="90" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="305" y="78" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Binary Classification</text>
+  <text x="305" y="98" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">AUC-ROC</text>
+  <text x="305" y="114" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">AUC-PR</text>
+  <text x="305" y="130" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Precision / Recall</text>
+
+  <!-- Multiclass -->
+  <rect x="220" y="165" width="170" height="90" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="305" y="188" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Multiclass</text>
+  <text x="305" y="208" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Accuracy</text>
+  <text x="305" y="224" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">F1 Score</text>
+  <text x="305" y="240" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Weighted Precision</text>
+
+  <!-- Regression -->
+  <rect x="220" y="275" width="170" height="90" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="305" y="298" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a">Regression</text>
+  <text x="305" y="318" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">RMSE</text>
+  <text x="305" y="334" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">MAE</text>
+  <text x="305" y="350" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">R-squared</text>
+
+  <!-- Arrows from predictions -->
+  <line x1="160" y1="165" x2="218" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="160" y1="180" x2="218" y2="210" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="160" y1="195" x2="218" y2="310" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Evaluator box -->
+  <rect x="450" y="155" width="150" height="60" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="525" y="182" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#00695c">Evaluator</text>
+  <text x="525" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Select best model</text>
+
+  <!-- Result -->
+  <rect x="650" y="155" width="130" height="60" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="715" y="182" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">Best Model</text>
+  <text x="715" y="200" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Highest metric</text>
+
+  <line x1="390" y1="100" x2="448" y2="170" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="390" y1="210" x2="448" y2="190" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="390" y1="320" x2="448" y2="200" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="185" x2="648" y2="185" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

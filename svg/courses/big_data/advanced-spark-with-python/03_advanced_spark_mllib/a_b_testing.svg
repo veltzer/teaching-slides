@@ -1,1 +1,48 @@
-<svg viewBox="0 0 540 300" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="145" y1="110.0" x2="235" y2="110.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="145" y1="190.0" x2="235" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="235" y1="110.0" x2="325" y2="190.0" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="55" y="90.0" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="100" y="115.0" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Traffic</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">A/B Testing Workflow</text>
+
+  <!-- Traffic source -->
+  <rect x="30" y="155" width="120" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="90" y="180" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">User Traffic</text>
+  <text x="90" y="198" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Incoming requests</text>
+
+  <!-- Router -->
+  <rect x="200" y="155" width="120" height="60" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="260" y="180" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#e65100">Router</text>
+  <text x="260" y="198" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Traffic split</text>
+
+  <!-- Model A -->
+  <rect x="380" y="70" width="150" height="65" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="455" y="95" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#2e7d32">Model A (Control)</text>
+  <text x="455" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Current production</text>
+  <text x="455" y="128" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">70% traffic</text>
+
+  <!-- Model B -->
+  <rect x="380" y="240" width="150" height="65" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="455" y="265" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#6a1b9a">Model B (Test)</text>
+  <text x="455" y="285" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">New candidate</text>
+  <text x="455" y="298" text-anchor="middle" font-family="Arial" font-size="10" fill="#6a1b9a">30% traffic</text>
+
+  <!-- Metrics Collection -->
+  <rect x="590" y="155" width="140" height="60" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="660" y="180" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">Metrics Collection</text>
+  <text x="660" y="198" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">AUC, latency, errors</text>
+
+  <!-- Statistical Analysis -->
+  <rect x="480" y="350" width="170" height="40" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="565" y="375" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">Statistical Significance Test</text>
+
+  <!-- Arrows -->
+  <line x1="150" y1="185" x2="198" y2="185" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="320" y1="170" x2="378" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="320" y1="200" x2="378" y2="265" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="102" x2="590" y2="168" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="272" x2="590" y2="202" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="660" y1="215" x2="600" y2="348" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

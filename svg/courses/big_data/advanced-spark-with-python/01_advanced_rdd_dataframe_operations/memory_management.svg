@@ -1,1 +1,61 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="130.0" y1="60" x2="220.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="280.0" y1="60" x2="370.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="220.0" y1="180" x2="205.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="130.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="175.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Memory</text></svg>
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1565c0">Spark Executor Memory Management</text>
+
+  <!-- Executor memory box -->
+  <rect x="50" y="45" width="700" height="350" rx="8" fill="#fafafa" stroke="#333" stroke-width="2"/>
+  <text x="400" y="68" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Executor JVM Memory (spark.executor.memory = 8g)</text>
+
+  <!-- Reserved Memory -->
+  <rect x="70" y="85" width="660" height="40" rx="5" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+  <text x="400" y="110" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#c62828">Reserved Memory (300MB) - Internal Spark overhead</text>
+
+  <!-- Spark Memory -->
+  <rect x="70" y="140" width="520" height="230" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="330" y="163" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1565c0">Unified Spark Memory (spark.memory.fraction = 0.8)</text>
+
+  <!-- Storage Memory -->
+  <rect x="90" y="175" width="240" height="180" rx="5" fill="#bbdefb" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="210" y="198" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Storage Memory</text>
+  <text x="210" y="216" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">(storageFraction = 0.5)</text>
+  <rect x="105" y="230" width="210" height="25" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="210" y="247" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Cached RDDs / DataFrames</text>
+  <rect x="105" y="262" width="210" height="25" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="210" y="279" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Broadcast variables</text>
+  <rect x="105" y="294" width="210" height="25" rx="3" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="210" y="311" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Unrolled data</text>
+  <text x="210" y="345" text-anchor="middle" font-family="Arial" font-size="10" fill="#1565c0">Can borrow from Execution</text>
+
+  <!-- Execution Memory -->
+  <rect x="350" y="175" width="220" height="180" rx="5" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="460" y="198" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">Execution Memory</text>
+  <text x="460" y="216" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">(1 - storageFraction)</text>
+  <rect x="365" y="230" width="190" height="25" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="460" y="247" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Shuffles / Joins / Sorts</text>
+  <rect x="365" y="262" width="190" height="25" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="460" y="279" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Aggregations</text>
+  <rect x="365" y="294" width="190" height="25" rx="3" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="460" y="311" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Hash maps for joins</text>
+  <text x="460" y="345" text-anchor="middle" font-family="Arial" font-size="10" fill="#2e7d32">Can evict storage if needed</text>
+
+  <!-- Bidirectional arrow -->
+  <line x1="315" y1="270" x2="355" y2="270" stroke="#e65100" stroke-width="2"/>
+  <polygon points="355,265 365,270 355,275" fill="#e65100"/>
+  <polygon points="315,265 305,270 315,275" fill="#e65100"/>
+  <text x="340" y="260" text-anchor="middle" font-family="Arial" font-size="9" fill="#e65100">Borrow</text>
+
+  <!-- User Memory -->
+  <rect x="610" y="140" width="140" height="230" rx="5" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="680" y="165" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">User Memory</text>
+  <text x="680" y="183" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">(1 - fraction)</text>
+  <rect x="622" y="200" width="116" height="25" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="680" y="217" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">UDF data</text>
+  <rect x="622" y="232" width="116" height="25" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="680" y="249" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">Internal metadata</text>
+  <rect x="622" y="264" width="116" height="25" rx="3" fill="#ffe0b2" stroke="#e65100" stroke-width="1"/>
+  <text x="680" y="281" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">User structures</text>
+
+  <!-- Off-heap label -->
+  <rect x="200" y="405" width="400" height="35" rx="5" fill="#f5f5f5" stroke="#757575" stroke-width="1.5"/>
+  <text x="400" y="427" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Off-Heap: spark.executor.memoryOverhead (default 10% or 384MB)</text>
+</svg>

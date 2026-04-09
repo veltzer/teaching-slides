@@ -1,1 +1,64 @@
-<svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="180" x2="295.0" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="300" x2="295.0" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="520" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="545" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Training Data</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Model Training Workflow</text>
+
+  <!-- Training Data -->
+  <rect x="30" y="100" width="120" height="55" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="90" y="125" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Training Data</text>
+  <text x="90" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">80% split</text>
+
+  <!-- Pipeline -->
+  <rect x="185" y="100" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="245" y="125" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Pipeline</text>
+  <text x="245" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Feature stages</text>
+
+  <!-- Estimator -->
+  <rect x="340" y="100" width="120" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="400" y="125" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">Estimator</text>
+  <text x="400" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">RF / GBT / LR</text>
+
+  <!-- ParamGrid -->
+  <rect x="340" y="190" width="120" height="55" rx="8" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="400" y="213" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#c62828">ParamGrid</text>
+  <text x="400" y="230" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Hyperparams</text>
+
+  <!-- CrossValidator -->
+  <rect x="500" y="100" width="130" height="55" rx="8" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="565" y="125" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#6a1b9a">CrossValidator</text>
+  <text x="565" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">k-fold CV</text>
+
+  <!-- Best Model -->
+  <rect x="665" y="100" width="110" height="55" rx="8" fill="#e0f7fa" stroke="#00695c" stroke-width="2"/>
+  <text x="720" y="125" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#00695c">Best Model</text>
+  <text x="720" y="142" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Selected</text>
+
+  <!-- Evaluation row -->
+  <rect x="30" y="300" width="120" height="55" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="90" y="325" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#1565c0">Test Data</text>
+  <text x="90" y="342" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">20% split</text>
+
+  <rect x="340" y="300" width="120" height="55" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="400" y="325" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#e65100">Evaluate</text>
+  <text x="400" y="342" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">AUC / F1 / Acc</text>
+
+  <rect x="665" y="300" width="110" height="55" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="720" y="325" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#2e7d32">Deploy</text>
+  <text x="720" y="342" text-anchor="middle" font-family="Arial" font-size="10" fill="#555">Save model</text>
+
+  <!-- Arrows top row -->
+  <line x1="150" y1="127" x2="183" y2="127" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="305" y1="127" x2="338" y2="127" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="127" x2="498" y2="127" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="630" y1="127" x2="663" y2="127" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="400" y1="190" x2="400" y2="157" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrows bottom row -->
+  <line x1="150" y1="327" x2="338" y2="327" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="720" y1="155" x2="720" y2="298" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="327" x2="663" y2="327" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

@@ -1,1 +1,68 @@
-<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg"><defs><marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#333" /></marker></defs><line x1="205.0" y1="60" x2="145.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="205.0" y1="60" x2="295.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><line x1="295.0" y1="60" x2="355.0" y2="180" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/><rect x="205.0" y="40" width="90" height="40" fill="#e8f4f8" stroke="#333" stroke-width="2" rx="5"/><text x="250.0" y="65" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Storage</text></svg>
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="30" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold" fill="#1a237e">Spark Storage Integration</text>
+
+  <!-- Spark Core in center -->
+  <rect x="300" y="140" width="200" height="60" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="400" y="165" text-anchor="middle" font-family="Arial" font-size="15" font-weight="bold" fill="#1a237e">Spark Engine</text>
+  <text x="400" y="185" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">DataFrame / Dataset API</text>
+
+  <!-- Cloud Object Stores (top) -->
+  <rect x="30" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="95" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">AWS S3</text>
+  <text x="95" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">s3a://</text>
+
+  <rect x="180" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="245" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Azure ADLS</text>
+  <text x="245" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">abfss://</text>
+
+  <rect x="490" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="555" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">Google GCS</text>
+  <text x="555" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">gs://</text>
+
+  <rect x="640" y="50" width="130" height="50" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="705" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#bf360c">HDFS</text>
+  <text x="705" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">hdfs://</text>
+
+  <!-- Arrows from stores to Spark -->
+  <line x1="95" y1="100" x2="320" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="245" y1="100" x2="350" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="555" y1="100" x2="450" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="705" y1="100" x2="480" y2="145" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Table Formats (bottom) -->
+  <rect x="60" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="135" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Delta Lake</text>
+  <text x="135" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">ACID transactions</text>
+
+  <rect x="240" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="315" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Apache Iceberg</text>
+  <text x="315" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Schema evolution</text>
+
+  <rect x="420" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="495" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Apache Hudi</text>
+  <text x="495" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Incremental processing</text>
+
+  <rect x="600" y="270" width="150" height="55" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="675" y="293" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#1b5e20">Parquet / ORC</text>
+  <text x="675" y="313" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">Columnar formats</text>
+
+  <!-- Arrows from Spark to formats -->
+  <line x1="340" y1="200" x2="135" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="380" y1="200" x2="315" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="420" y1="200" x2="495" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="460" y1="200" x2="675" y2="270" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Connectors label -->
+  <rect x="330" y="50" width="150" height="50" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="405" y="72" text-anchor="middle" font-family="Arial" font-size="13" font-weight="bold" fill="#4a148c">Databases</text>
+  <text x="405" y="90" text-anchor="middle" font-family="Arial" font-size="11" fill="#333">JDBC / Hive</text>
+  <line x1="405" y1="100" x2="400" y2="140" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="400" y="380" text-anchor="middle" font-family="Arial" font-size="12" fill="#555">Unified read/write API across all storage backends</text>
+</svg>
