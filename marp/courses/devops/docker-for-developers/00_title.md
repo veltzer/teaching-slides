@@ -15,3 +15,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/devops/docker-for-developers/solomon_hykes.jpg)
+
+---
+
+![title](svg/courses/devops/docker-for-developers/title.svg)

@@ -5,6 +5,8 @@
 
 ---
 
+![title](svg/lectures/eks/title.svg)
+
 ## What is Amazon EKS?
 
 ![what_is_amazon_eks](svg/lectures/eks/what_is_amazon_eks.svg)

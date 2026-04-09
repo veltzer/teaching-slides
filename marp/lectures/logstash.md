@@ -5,6 +5,8 @@
 
 ---
 
+![title](svg/lectures/logstash/title.svg)
+
 ## What is Logstash?
 
 1. **Data Processing Pipeline** that ingests data from multiple sources

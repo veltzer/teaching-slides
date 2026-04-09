@@ -18,3 +18,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/devops/terraform/mitchell_hashimoto.jpg)
+
+---
+
+![title](svg/courses/devops/terraform/title.svg)

@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/isolation-in-computing/title.svg)
+
 ## What is Isolation?
 
 Isolation is the fundamental principle of separating components to prevent unwanted interaction

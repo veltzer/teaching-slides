@@ -1,6 +1,8 @@
 # Advanced Spark Ecosystem and Best Practices
 ---
 
+![title](svg/lectures/advanced-spark-ecosystem-and-best-practice-scala/title.svg)
+
 ## Agenda
 
 - Spark on Kubernetes and Cloud Platforms

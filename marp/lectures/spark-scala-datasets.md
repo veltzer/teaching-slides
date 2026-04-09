@@ -1,5 +1,8 @@
 # Spark Datasets and DataFrames in Scala
 ---
+
+![title](svg/lectures/spark-scala-datasets/title.svg)
+
 ## Core Concepts
 1. Datasets: Typed distributed collections
 1. DataFrames: Untyped distributed collections

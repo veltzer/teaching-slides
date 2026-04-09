@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/git-workflows/title.svg)
+
 ## What This Talk Covers
 
 - Different philosophical approaches to using Git

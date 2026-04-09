@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/distributed-systems-concepts/title.svg)
+
 ## What Is a Distributed System?
 
 A collection of independent computers that appears to users as a single coherent system

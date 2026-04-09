@@ -17,3 +17,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/languages/bash/bash-scripting/brian_fox.png)
+
+---
+
+![title](svg/courses/languages/bash/bash-scripting/title.svg)

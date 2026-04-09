@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/sql-database-fundamentals/title.svg)
+
 ## What Are SQL Databases?
 
 - Relational Database Management Systems (RDBMS)

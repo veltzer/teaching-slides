@@ -1,5 +1,8 @@
 # Spark SQL Optimization Techniques
 ---
+
+![title](svg/lectures/spark-sql-optimization-python/title.svg)
+
 ## Understanding the Catalyst Optimizer
 Catalyst is Spark's query optimization framework that transforms queries into efficient execution plans
 ![understanding_the_catalyst_optimizer](svg/lectures/spark-sql-optimization-python/understanding_the_catalyst_optimizer.svg)

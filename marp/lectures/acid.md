@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/acid/title.svg)
+
 ## What Are ACID Guarantees?
 
 ACID is an acronym that stands for:

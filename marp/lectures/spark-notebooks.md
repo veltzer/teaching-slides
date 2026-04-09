@@ -1,5 +1,8 @@
 # Spark Notebooks Guide
 ---
+
+![title](svg/lectures/spark-notebooks/title.svg)
+
 ## Notebook Types
 1. Apache Zeppelin
 1. Jupyter Notebooks

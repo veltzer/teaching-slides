@@ -15,3 +15,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/languages/c++/c++-design-patterns/bjarne_stroustrup.jpg)
+
+---
+
+![title](svg/courses/languages/c++/c++-design-patterns/title.svg)

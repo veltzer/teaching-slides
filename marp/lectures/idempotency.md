@@ -5,6 +5,8 @@ Building robust APIs that handle failures gracefully
 
 ---
 
+![title](svg/lectures/idempotency/title.svg)
+
 ## What is Idempotency?
 
 **Idempotent**: An operation that can be performed multiple times with the same result

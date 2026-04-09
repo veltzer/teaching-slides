@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/iouring/title.svg)
+
 ## What is `io_uring`?
 
 1. Modern asynchronous I/O interface for Linux

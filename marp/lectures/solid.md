@@ -1,6 +1,9 @@
 # SOLID Principles
 ## Understanding the Foundation of Object-Oriented Design
 ---
+
+![title](svg/lectures/solid/title.svg)
+
 ## Overview
 1. Single Responsibility Principle (SRP)
 1. Open/Closed Principle (OCP)

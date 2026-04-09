@@ -1,5 +1,8 @@
 # Understanding the Spark UI
 ---
+
+![title](svg/lectures/spark-ui/title.svg)
+
 ## What is the Spark UI?
 1. Web-based monitoring interface
 1. Built-in with Apache Spark

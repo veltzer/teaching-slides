@@ -1,5 +1,8 @@
 # Spark Reports Guide
 ---
+
+![title](svg/lectures/spark-reports/title.svg)
+
 ## Overview of Spark Reports
 1. Data processing outputs
 1. Analysis results

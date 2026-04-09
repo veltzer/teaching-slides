@@ -15,3 +15,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/big_data/apache-spark-with-scala/matei_zaharia.jpg)
+
+---
+
+![title](svg/courses/big_data/apache-spark-with-scala/title.svg)

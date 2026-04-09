@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/nosql-database-fundamentals/title.svg)
+
 ## What Are NoSQL Databases?
 
 - Not Only SQL databases

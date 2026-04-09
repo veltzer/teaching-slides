@@ -16,3 +16,7 @@ audience:
 ## [mark.veltzer@gmail.com](mailto:mark.veltzer@gmail.com)
 
 ![h:300](jpg/courses/languages/c++/modern-c++-for-c-programmers/bjarne_stroustrup.jpg)
+
+---
+
+![title](svg/courses/languages/c++/modern-c++-for-c-programmers/title.svg)

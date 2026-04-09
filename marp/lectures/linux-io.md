@@ -1,6 +1,9 @@
 # Linux I/O Architecture
 ## Understanding Input/Output in Linux Systems
 ---
+
+![title](svg/lectures/linux-io/title.svg)
+
 ## What is Linux I/O?
 1. **Input/Output (I/O)** - Communication between CPU and external devices
 1. Linux treats everything as a file

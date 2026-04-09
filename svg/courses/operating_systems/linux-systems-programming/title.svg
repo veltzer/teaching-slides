@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#1a1a2e"/>
+  <!-- System call layers -->
+  <rect x="200" y="40" width="400" height="50" rx="5" fill="#343a40" stroke="#74c0fc" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="72" text-anchor="middle" font-family="monospace" font-size="14" fill="#74c0fc" opacity="0.7">User Space Application</text>
+  <rect x="200" y="110" width="400" height="50" rx="5" fill="#343a40" stroke="#ffd43b" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="142" text-anchor="middle" font-family="monospace" font-size="14" fill="#ffd43b" opacity="0.7">System Call Interface</text>
+  <rect x="200" y="180" width="400" height="50" rx="5" fill="#343a40" stroke="#69db7c" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="212" text-anchor="middle" font-family="monospace" font-size="14" fill="#69db7c" opacity="0.7">Linux Kernel</text>
+  <rect x="200" y="250" width="400" height="50" rx="5" fill="#343a40" stroke="#ff6b6b" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="282" text-anchor="middle" font-family="monospace" font-size="14" fill="#ff6b6b" opacity="0.7">Hardware</text>
+  <!-- Arrows between layers -->
+  <line x1="400" y1="90" x2="400" y2="110" stroke="#adb5bd" stroke-width="2" opacity="0.4"/>
+  <polygon points="395,108 400,115 405,108" fill="#adb5bd" opacity="0.4"/>
+  <line x1="400" y1="160" x2="400" y2="180" stroke="#adb5bd" stroke-width="2" opacity="0.4"/>
+  <polygon points="395,178 400,185 405,178" fill="#adb5bd" opacity="0.4"/>
+  <line x1="400" y1="230" x2="400" y2="250" stroke="#adb5bd" stroke-width="2" opacity="0.4"/>
+  <polygon points="395,248 400,255 405,248" fill="#adb5bd" opacity="0.4"/>
+  <!-- Syscall names on sides -->
+  <text x="80" y="80" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">fork()</text>
+  <text x="80" y="110" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">exec()</text>
+  <text x="80" y="140" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">read()</text>
+  <text x="80" y="170" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">write()</text>
+  <text x="80" y="200" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">mmap()</text>
+  <text x="80" y="230" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">ioctl()</text>
+  <text x="660" y="80" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">socket()</text>
+  <text x="660" y="110" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">pipe()</text>
+  <text x="660" y="140" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">open()</text>
+  <text x="660" y="170" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">close()</text>
+  <text x="660" y="200" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">signal()</text>
+  <text x="660" y="230" font-family="monospace" font-size="11" fill="#e599f7" opacity="0.5">pthread()</text>
+  <!-- Process tree -->
+  <circle cx="150" cy="320" r="12" fill="#69db7c" opacity="0.4"/>
+  <circle cx="120" cy="355" r="10" fill="#69db7c" opacity="0.3"/>
+  <circle cx="180" cy="355" r="10" fill="#69db7c" opacity="0.3"/>
+  <line x1="145" y1="332" x2="125" y2="345" stroke="#69db7c" stroke-width="1.5" opacity="0.3"/>
+  <line x1="155" y1="332" x2="175" y2="345" stroke="#69db7c" stroke-width="1.5" opacity="0.3"/>
+  <!-- File descriptors -->
+  <rect x="600" y="320" width="20" height="15" rx="2" fill="#74c0fc" opacity="0.4"/>
+  <text x="610" y="332" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" opacity="0.6">0</text>
+  <rect x="625" y="320" width="20" height="15" rx="2" fill="#74c0fc" opacity="0.4"/>
+  <text x="635" y="332" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" opacity="0.6">1</text>
+  <rect x="650" y="320" width="20" height="15" rx="2" fill="#74c0fc" opacity="0.4"/>
+  <text x="660" y="332" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" opacity="0.6">2</text>
+  <rect x="675" y="320" width="20" height="15" rx="2" fill="#ff6b6b" opacity="0.4"/>
+  <text x="685" y="332" text-anchor="middle" font-family="monospace" font-size="8" fill="#fff" opacity="0.6">fd</text>
+  <!-- Title -->
+  <text x="400" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#adb5bd" letter-spacing="3">LINUX SYSTEMS PROGRAMMING</text>
+</svg>

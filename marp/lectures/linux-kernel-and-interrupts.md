@@ -2,6 +2,8 @@
 
 ---
 
+![title](svg/lectures/linux-kernel-and-interrupts/title.svg)
+
 ## Overview
 
 1. Types of interrupts on various systems

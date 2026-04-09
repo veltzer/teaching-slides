@@ -5,6 +5,8 @@ Building robust firmware update systems for embedded devices
 
 ---
 
+![title](svg/lectures/microcontroller-bootloader/title.svg)
+
 ## What is a Bootloader?
 
 A **bootloader** is the first piece of code that runs when a microcontroller starts up.

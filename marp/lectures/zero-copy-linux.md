@@ -3,6 +3,8 @@
 
 ---
 
+![title](svg/lectures/zero-copy-linux/title.svg)
+
 ## What is Zero-Copy?
 
 1. A technique where the CPU does **not** copy data between memory regions
