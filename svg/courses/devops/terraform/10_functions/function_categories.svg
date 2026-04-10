@@ -1,26 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="51.6129" y="36" width="557.4194" height="168" fill="#e3f2fd" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="330.3226" y="84" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">String Functions</text>
-  <text x="330.3226" y="127.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">upper, lower,</text>
-  <text x="330.3226" y="168" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">format, join</text>
-  <rect x="670.9677" y="36" width="557.4194" height="168" fill="#e8f5e9" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="949.6774" y="84" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">Numeric Functions</text>
-  <text x="949.6774" y="127.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">min, max, abs,</text>
-  <text x="949.6774" y="168" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">ceil, floor, log</text>
-  <rect x="51.6129" y="276" width="557.4194" height="168" fill="#fff3e0" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="330.3226" y="324" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">Collection Funcs</text>
-  <text x="330.3226" y="367.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">length, merge,</text>
-  <text x="330.3226" y="408" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">flatten, keys</text>
-  <rect x="670.9677" y="276" width="557.4194" height="168" fill="#fce4ec" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="949.6774" y="324" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">Encoding Functions</text>
-  <text x="949.6774" y="367.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">jsonencode, base64,</text>
-  <text x="949.6774" y="408" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">yamlencode, csv</text>
-  <rect x="51.6129" y="516" width="557.4194" height="168" fill="#f3e5f5" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="330.3226" y="564" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">Filesystem Funcs</text>
-  <text x="330.3226" y="607.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">file, fileexists,</text>
-  <text x="330.3226" y="648" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">templatefile</text>
-  <rect x="670.9677" y="516" width="557.4194" height="168" fill="#e8eaf6" stroke="#333" stroke-width="3.0968" rx="8.2581" />
-  <text x="949.6774" y="564" font-size="26.8387" font-weight="bold" fill="#222" text-anchor="middle">Date/Time &amp; Hash</text>
-  <text x="949.6774" y="607.2" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">timestamp, md5,</text>
-  <text x="949.6774" y="648" font-size="22.7097" font-weight="normal" fill="#222" text-anchor="middle">sha256, uuid</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- String Functions -->
+  <rect x="52" y="36" width="557" height="180" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="330" y="88" font-size="22" font-weight="bold" fill="#1565c0" text-anchor="middle">String Functions</text>
+  <text x="330" y="134" font-size="18" fill="#333" text-anchor="middle">upper, lower,</text>
+  <text x="330" y="178" font-size="18" fill="#333" text-anchor="middle">format, join</text>
+  <!-- Numeric Functions -->
+  <rect x="671" y="36" width="557" height="180" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="950" y="88" font-size="22" font-weight="bold" fill="#2e7d32" text-anchor="middle">Numeric Functions</text>
+  <text x="950" y="134" font-size="18" fill="#333" text-anchor="middle">min, max, abs,</text>
+  <text x="950" y="178" font-size="18" fill="#333" text-anchor="middle">ceil, floor, log</text>
+  <!-- Collection Functions -->
+  <rect x="52" y="270" width="557" height="180" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="330" y="322" font-size="22" font-weight="bold" fill="#e65100" text-anchor="middle">Collection Functions</text>
+  <text x="330" y="368" font-size="18" fill="#333" text-anchor="middle">length, merge,</text>
+  <text x="330" y="412" font-size="18" fill="#333" text-anchor="middle">flatten, keys</text>
+  <!-- Encoding Functions -->
+  <rect x="671" y="270" width="557" height="180" fill="#fce4ec" stroke="#c2185b" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="950" y="322" font-size="22" font-weight="bold" fill="#c2185b" text-anchor="middle">Encoding Functions</text>
+  <text x="950" y="368" font-size="18" fill="#333" text-anchor="middle">jsonencode, base64,</text>
+  <text x="950" y="412" font-size="18" fill="#333" text-anchor="middle">yamlencode, csv</text>
+  <!-- Filesystem Functions -->
+  <rect x="52" y="504" width="557" height="180" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="330" y="556" font-size="22" font-weight="bold" fill="#7b1fa2" text-anchor="middle">Filesystem Functions</text>
+  <text x="330" y="602" font-size="18" fill="#333" text-anchor="middle">file, fileexists,</text>
+  <text x="330" y="646" font-size="18" fill="#333" text-anchor="middle">templatefile</text>
+  <!-- Date/Time and Hash -->
+  <rect x="671" y="504" width="557" height="180" fill="#e8eaf6" stroke="#3949ab" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="950" y="556" font-size="22" font-weight="bold" fill="#3949ab" text-anchor="middle">Date/Time &amp; Hash</text>
+  <text x="950" y="602" font-size="18" fill="#333" text-anchor="middle">timestamp, md5,</text>
+  <text x="950" y="646" font-size="18" fill="#333" text-anchor="middle">sha256, uuid</text>
 </svg>

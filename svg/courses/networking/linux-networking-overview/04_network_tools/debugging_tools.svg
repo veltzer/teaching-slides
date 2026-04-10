@@ -1,30 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowd5_03_network_tools" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="57.6" text-anchor="middle" font-size="25.6" font-weight="bold">Debugging Workflow</text>
-  <rect x="42.6667" y="108" width="213.3333" height="144" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="149.3333" y="162" text-anchor="middle" font-size="21.3333" font-weight="bold">ping</text>
-  <text x="149.3333" y="216" text-anchor="middle" font-size="21.3333">connectivity</text>
-  <rect x="298.6667" y="108" width="213.3333" height="144" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="405.3333" y="162" text-anchor="middle" font-size="21.3333" font-weight="bold">traceroute</text>
-  <text x="405.3333" y="216" text-anchor="middle" font-size="21.3333">path analysis</text>
-  <rect x="554.6667" y="108" width="213.3333" height="144" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="661.3333" y="162" text-anchor="middle" font-size="21.3333" font-weight="bold">nmap</text>
-  <text x="661.3333" y="216" text-anchor="middle" font-size="21.3333">port scanning</text>
-  <rect x="810.6667" y="108" width="213.3333" height="144" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="917.3333" y="162" text-anchor="middle" font-size="21.3333" font-weight="bold">tcpdump</text>
-  <text x="917.3333" y="216" text-anchor="middle" font-size="21.3333">packet capture</text>
-  <rect x="1066.6667" y="108" width="170.6667" height="144" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="1152" y="162" text-anchor="middle" font-size="21.3333" font-weight="bold">ss</text>
-  <text x="1152" y="216" text-anchor="middle" font-size="21.3333">socket info</text>
-  <line x1="256" y1="180" x2="298.6667" y2="180" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd5_03_network_tools)" />
-  <line x1="512" y1="180" x2="554.6667" y2="180" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd5_03_network_tools)" />
-  <line x1="768" y1="180" x2="810.6667" y2="180" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd5_03_network_tools)" />
-  <line x1="1024" y1="180" x2="1066.6667" y2="180" stroke="#333" stroke-width="2.1333" marker-end="url(#arrowd5_03_network_tools)" />
-  <rect x="128" y="324" width="1024" height="126" fill="#f9f9f9" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="403.2" text-anchor="middle" font-size="23.4667">L3 reachable? --&gt; Route OK? --&gt; Port open? --&gt; Traffic OK? --&gt; Sockets OK?</text>
-  <text x="640" y="522" text-anchor="middle" font-size="21.3333" fill="#666">Systematic approach: test layer by layer, bottom to top</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Five tool boxes -->
+  <rect x="42" y="100" width="218" height="132" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="151" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#0d47a1">ping</text>
+  <text x="151" y="200" text-anchor="middle" font-size="17" fill="#555555">connectivity</text>
+  <rect x="300" y="100" width="218" height="132" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="409" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#4a148c">traceroute</text>
+  <text x="409" y="200" text-anchor="middle" font-size="17" fill="#555555">path analysis</text>
+  <rect x="558" y="100" width="218" height="132" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="667" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#e65100">nmap</text>
+  <text x="667" y="200" text-anchor="middle" font-size="17" fill="#555555">port scanning</text>
+  <rect x="816" y="100" width="218" height="132" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="925" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b5e20">tcpdump</text>
+  <text x="925" y="200" text-anchor="middle" font-size="17" fill="#555555">packet capture</text>
+  <rect x="1074" y="100" width="164" height="132" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="1156" y="152" text-anchor="middle" font-size="19" font-weight="bold" fill="#b71c1c">ss</text>
+  <text x="1156" y="200" text-anchor="middle" font-size="17" fill="#555555">socket info</text>
+  <!-- Arrows -->
+  <line x1="260" y1="166" x2="300" y2="166" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="518" y1="166" x2="558" y2="166" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="776" y1="166" x2="816" y2="166" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1034" y1="166" x2="1074" y2="166" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Summary box -->
+  <rect x="128" y="316" width="1024" height="116" fill="url(#grad-surface)" stroke="#aaaaaa" stroke-width="1.5" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="388" text-anchor="middle" font-size="21" fill="#333333">L3 reachable? --&gt; Route OK? --&gt; Port open? --&gt; Traffic OK? --&gt; Sockets OK?</text>
+  <text x="640" y="510" text-anchor="middle" font-size="18" fill="#777777">Systematic approach: test layer by layer, bottom to top</text>
 </svg>

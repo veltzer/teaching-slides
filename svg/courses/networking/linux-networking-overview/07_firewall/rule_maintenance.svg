@@ -1,26 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Rule Maintenance Workflow</text>
-  <rect x="42.6667" y="126" width="234.6667" height="180" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="160" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">Edit Rules</text>
-  <text x="160" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables -A/-D</text>
-  <rect x="352" y="126" width="234.6667" height="180" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="469.3333" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">Test Rules</text>
-  <text x="469.3333" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables -L -v -n</text>
-  <rect x="661.3333" y="126" width="234.6667" height="180" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="778.6667" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">Save Rules</text>
-  <text x="778.6667" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables-save</text>
-  <rect x="970.6667" y="126" width="256" height="180" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1098.6667" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">Persist Config</text>
-  <text x="1098.6667" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables-restore</text>
-  <line x1="277.3333" y1="216" x2="352" y2="216" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd3_06_firewall)" />
-  <line x1="586.6667" y1="216" x2="661.3333" y2="216" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd3_06_firewall)" />
-  <line x1="896" y1="216" x2="970.6667" y2="216" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd3_06_firewall)" />
-  <rect x="170.6667" y="432" width="938.6667" height="198" fill="#ffebee" stroke="#c62828" stroke-width="2.1333" rx="10.6667" stroke-dasharray="10.6667 6.4" />
-  <text x="640" y="511.2" text-anchor="middle" font-size="23.4667" fill="#333" font-weight="bold">Audit Cycle: Review logs, remove stale rules, update for new services</text>
-  <text x="640" y="576" text-anchor="middle" font-size="21.3333" fill="#666">Keep backup: iptables-save &gt; /etc/iptables/rules.v4.bak before changes</text>
   <defs>
-    <marker id="arrowd3_06_firewall" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Four pipeline boxes -->
+  <rect x="42" y="120" width="240" height="170" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="162" y="188" text-anchor="middle" font-size="21" font-weight="bold" fill="#0d47a1">Edit Rules</text>
+  <text x="162" y="248" text-anchor="middle" font-size="17" fill="#777777">iptables -A/-D</text>
+  <rect x="348" y="120" width="240" height="170" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="468" y="188" text-anchor="middle" font-size="21" font-weight="bold" fill="#e65100">Test Rules</text>
+  <text x="468" y="248" text-anchor="middle" font-size="17" fill="#777777">iptables -L -v -n</text>
+  <rect x="654" y="120" width="240" height="170" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="774" y="188" text-anchor="middle" font-size="21" font-weight="bold" fill="#1b5e20">Save Rules</text>
+  <text x="774" y="248" text-anchor="middle" font-size="17" fill="#777777">iptables-save</text>
+  <rect x="960" y="120" width="262" height="170" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="1091" y="188" text-anchor="middle" font-size="21" font-weight="bold" fill="#4a148c">Persist Config</text>
+  <text x="1091" y="248" text-anchor="middle" font-size="17" fill="#777777">iptables-restore</text>
+  <!-- Arrows -->
+  <line x1="282" y1="205" x2="348" y2="205" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="588" y1="205" x2="654" y2="205" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="894" y1="205" x2="960" y2="205" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Audit box -->
+  <rect x="170" y="386" width="940" height="185" fill="#ffebee" stroke="#c62828" stroke-width="1.5" rx="10" stroke-dasharray="10,6" filter="url(#shadow)"/>
+  <text x="640" y="462" text-anchor="middle" font-size="21" fill="#333333" font-weight="bold">Audit Cycle: Review logs, remove stale rules, update for new services</text>
+  <text x="640" y="534" text-anchor="middle" font-size="17" fill="#777777">Keep backup: iptables-save &gt; /etc/iptables/rules.v4.bak before changes</text>
 </svg>

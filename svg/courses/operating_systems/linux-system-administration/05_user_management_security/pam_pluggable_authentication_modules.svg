@@ -1,18 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="21.3333" y="210" width="256" height="300" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="149.3333" y="390" text-anchor="middle" font-size="23.4667">Application</text>
-  <rect x="362.6667" y="210" width="256" height="300" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="490.6667" y="390" text-anchor="middle" font-size="23.4667">PAM API</text>
-  <rect x="704" y="210" width="256" height="300" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="832" y="390" text-anchor="middle" font-size="23.4667">PAM Modules</text>
-  <rect x="1045.3333" y="210" width="213.3333" height="300" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1152" y="390" text-anchor="middle" font-size="23.4667">Backend</text>
-  <line x1="277.3333" y1="360" x2="362.6667" y2="360" stroke="#333" stroke-width="4.2667" marker-end="url(#arr03a)" />
-  <line x1="618.6667" y1="360" x2="704" y2="360" stroke="#333" stroke-width="4.2667" marker-end="url(#arr03a)" />
-  <line x1="960" y1="360" x2="1045.3333" y2="360" stroke="#333" stroke-width="4.2667" marker-end="url(#arr03a)" />
   <defs>
-    <marker id="arr03a" markerWidth="21.3333" markerHeight="60" refX="19.2" refY="18" orient="auto">
-      <path d="M 0 0 L 0 36 L 19.2 18 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Application box -->
+  <rect x="20" y="200" width="265" height="280" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="200" width="265" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="245" width="265" height="10" fill="url(#grad-accent)"/>
+  <text x="152" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Application</text>
+  <text x="152" y="305" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">sshd, sudo,</text>
+  <text x="152" y="330" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">login, su</text>
+  <text x="152" y="380" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Calls PAM API</text>
+
+  <!-- Arrow -->
+  <line x1="285" y1="340" x2="363" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- PAM API box -->
+  <rect x="365" y="200" width="265" height="280" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="365" y="200" width="265" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="365" y="245" width="265" height="10" fill="url(#grad-accent)"/>
+  <text x="498" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">PAM API</text>
+  <text x="498" y="305" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">libpam.so</text>
+  <text x="498" y="335" text-anchor="middle" font-size="15" fill="#555555" font-family="sans-serif">/etc/pam.d/</text>
+  <text x="498" y="360" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Stack of rules</text>
+  <text x="498" y="385" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">required / optional</text>
+
+  <!-- Arrow -->
+  <line x1="630" y1="340" x2="708" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- PAM Modules box -->
+  <rect x="710" y="200" width="265" height="280" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="710" y="200" width="265" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="710" y="245" width="265" height="10" fill="url(#grad-accent)"/>
+  <text x="843" y="234" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">PAM Modules</text>
+  <text x="843" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">pam_unix.so</text>
+  <text x="843" y="320" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">pam_ldap.so</text>
+  <text x="843" y="345" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">pam_google_auth</text>
+  <text x="843" y="380" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Pluggable, stackable</text>
+
+  <!-- Arrow -->
+  <line x1="975" y1="340" x2="1053" y2="340" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Backend box -->
+  <rect x="1055" y="200" width="200" height="280" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="1055" y="200" width="200" height="55" fill="#64b5f6" rx="12"/>
+  <rect x="1055" y="245" width="200" height="10" fill="#64b5f6"/>
+  <text x="1155" y="234" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Backend</text>
+  <text x="1155" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">/etc/shadow</text>
+  <text x="1155" y="322" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">LDAP</text>
+  <text x="1155" y="349" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Kerberos</text>
+  <text x="1155" y="376" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">RADIUS</text>
 </svg>

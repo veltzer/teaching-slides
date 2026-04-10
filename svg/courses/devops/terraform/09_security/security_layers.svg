@@ -1,15 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="56.25" text-anchor="middle" font-size="36" font-weight="bold" fill="#333">Security Layers</text>
-  <rect x="80" y="101.25" width="1120" height="123.75" rx="11.25" fill="#f8d7da" stroke="#dc3545" stroke-width="4.5" />
-  <text x="640" y="153" text-anchor="middle" font-size="31.5" font-weight="bold" fill="#333">Access Control</text>
-  <text x="640" y="198" text-anchor="middle" font-size="24.75" fill="#555">Who can run terraform apply?</text>
-  <rect x="80" y="247.5" width="1120" height="123.75" rx="11.25" fill="#fff3cd" stroke="#ffc107" stroke-width="4.5" />
-  <text x="640" y="299.25" text-anchor="middle" font-size="31.5" font-weight="bold" fill="#333">Secrets Management</text>
-  <text x="640" y="344.25" text-anchor="middle" font-size="24.75" fill="#555">How are passwords/keys handled?</text>
-  <rect x="80" y="393.75" width="1120" height="123.75" rx="11.25" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.5" />
-  <text x="640" y="445.5" text-anchor="middle" font-size="31.5" font-weight="bold" fill="#333">State Security</text>
-  <text x="640" y="490.5" text-anchor="middle" font-size="24.75" fill="#555">How is state file protected?</text>
-  <rect x="80" y="540" width="1120" height="123.75" rx="11.25" fill="#d4edda" stroke="#28a745" stroke-width="4.5" />
-  <text x="640" y="591.75" text-anchor="middle" font-size="31.5" font-weight="bold" fill="#333">Network Security</text>
-  <text x="640" y="636.75" text-anchor="middle" font-size="24.75" fill="#555">How does Terraform reach providers?</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Access Control -->
+  <rect x="80" y="90" width="1120" height="130" rx="12" fill="#ffebee" stroke="#c62828" stroke-width="4" filter="url(#shadow)"/>
+  <text x="640" y="148" text-anchor="middle" font-size="26" font-weight="bold" fill="#c62828">Access Control</text>
+  <text x="640" y="192" text-anchor="middle" font-size="20" fill="#555">Who can run terraform apply?</text>
+  <!-- Secrets Management -->
+  <rect x="80" y="240" width="1120" height="130" rx="12" fill="#fff8e1" stroke="#f57c00" stroke-width="4" filter="url(#shadow)"/>
+  <text x="640" y="298" text-anchor="middle" font-size="26" font-weight="bold" fill="#e65100">Secrets Management</text>
+  <text x="640" y="342" text-anchor="middle" font-size="20" fill="#555">How are passwords/keys handled?</text>
+  <!-- State Security -->
+  <rect x="80" y="390" width="1120" height="130" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" filter="url(#shadow)"/>
+  <text x="640" y="448" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">State Security</text>
+  <text x="640" y="492" text-anchor="middle" font-size="20" fill="#555">How is state file protected?</text>
+  <!-- Network Security -->
+  <rect x="80" y="540" width="1120" height="130" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4" filter="url(#shadow)"/>
+  <text x="640" y="598" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Network Security</text>
+  <text x="640" y="642" text-anchor="middle" font-size="20" fill="#555">How does Terraform reach providers?</text>
 </svg>

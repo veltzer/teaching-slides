@@ -1,31 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="34.6154" text-anchor="middle" font-size="22.1538" font-weight="bold" fill="#333">Terraform Workflow</text>
-  <rect x="320" y="55.3846" width="640" height="55.3846" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="90" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Write .tf files</text>
-  <line x1="640" y1="110.7692" x2="640" y2="152.3077" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#twa)" />
-  <rect x="320" y="152.3077" width="640" height="55.3846" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="640" y="186.9231" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">terraform init</text>
-  <line x1="640" y1="207.6923" x2="640" y2="249.2308" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#twa)" />
-  <rect x="320" y="249.2308" width="640" height="55.3846" rx="6.9231" fill="#fff3cd" stroke="#ffc107" stroke-width="2.7692" />
-  <text x="640" y="283.8462" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">terraform plan</text>
-  <line x1="960" y1="276.9231" x2="1120" y2="276.9231" stroke="#ffc107" stroke-width="1.3846" stroke-dasharray="5.5385 2.7692" />
-  <text x="1145.6" y="283.8462" font-size="15.2308" fill="#555">Review changes</text>
-  <line x1="640" y1="304.6154" x2="640" y2="346.1538" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#twa)" />
-  <rect x="320" y="346.1538" width="640" height="55.3846" rx="6.9231" fill="#d4edda" stroke="#28a745" stroke-width="2.7692" />
-  <text x="640" y="380.7692" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">terraform apply</text>
-  <line x1="960" y1="373.8462" x2="1120" y2="373.8462" stroke="#28a745" stroke-width="1.3846" stroke-dasharray="5.5385 2.7692" />
-  <text x="1145.6" y="380.7692" font-size="15.2308" fill="#555">Confirm (yes/no)</text>
-  <line x1="640" y1="401.5385" x2="640" y2="443.0769" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#twa)" />
-  <rect x="224" y="443.0769" width="832" height="55.3846" rx="6.9231" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.7692" />
-  <text x="640" y="477.6923" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">Infrastructure created/updated</text>
-  <line x1="640" y1="498.4615" x2="640" y2="540" stroke="#4a90e2" stroke-width="2.0769" marker-end="url(#twa)" />
-  <rect x="320" y="540" width="640" height="55.3846" rx="6.9231" fill="#f8d7da" stroke="#dc3545" stroke-width="2.7692" />
-  <text x="640" y="574.6154" text-anchor="middle" font-size="18" font-weight="bold" fill="#333">terraform destroy</text>
-  <line x1="960" y1="567.6923" x2="1120" y2="567.6923" stroke="#dc3545" stroke-width="1.3846" stroke-dasharray="5.5385 2.7692" />
-  <text x="1145.6" y="574.6154" font-size="15.2308" fill="#555">Clean up</text>
   <defs>
-    <marker id="twa" viewBox="0 0 10 10" refX="28.8" refY="6.9231" markerWidth="19.2" markerHeight="8.3077" orient="auto-start-reverse">
-      <path d="M 0 0 L 32 6.9231 L 0 13.8462 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Step 1 -->
+  <rect x="320" y="50" width="640" height="60" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="88" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">Write .tf files</text>
+  <line x1="640" y1="110" x2="640" y2="148" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Step 2 -->
+  <rect x="320" y="148" width="640" height="60" rx="8" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="186" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">terraform init</text>
+  <line x1="640" y1="208" x2="640" y2="246" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Step 3 -->
+  <rect x="320" y="246" width="640" height="60" rx="8" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="284" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100">terraform plan</text>
+  <line x1="960" y1="276" x2="1100" y2="276" stroke="#f57c00" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="1110" y="282" font-size="14" fill="#555">Review changes</text>
+  <line x1="640" y1="306" x2="640" y2="344" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Step 4 -->
+  <rect x="320" y="344" width="640" height="60" rx="8" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="382" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">terraform apply</text>
+  <line x1="960" y1="374" x2="1100" y2="374" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="1110" y="380" font-size="14" fill="#555">Confirm (yes/no)</text>
+  <line x1="640" y1="404" x2="640" y2="442" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Step 5 -->
+  <rect x="224" y="442" width="832" height="60" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="480" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0">Infrastructure created/updated</text>
+  <line x1="640" y1="502" x2="640" y2="540" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <!-- Step 6 -->
+  <rect x="320" y="540" width="640" height="60" rx="8" fill="url(#grad-surface)" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="578" text-anchor="middle" font-size="18" font-weight="bold" fill="#c62828">terraform destroy</text>
+  <line x1="960" y1="570" x2="1100" y2="570" stroke="#c62828" stroke-width="1.5" stroke-dasharray="6 3"/>
+  <text x="1110" y="576" font-size="14" fill="#555">Clean up</text>
 </svg>

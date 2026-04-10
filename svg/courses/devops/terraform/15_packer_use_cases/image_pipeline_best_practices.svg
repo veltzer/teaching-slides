@@ -1,30 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="20.6452" markerHeight="21" refX="18.5806" refY="10.5" orient="auto">
-      <polygon points="0,30 7.2258,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrl" markerWidth="20.6452" markerHeight="21" refX="2.0645" refY="10.5" orient="auto">
-      <polygon points="0,0 7.2258,30" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="66" text-anchor="middle" font-size="28.9032" fill="#222222" font-weight="bold">Image Pipeline</text>
-  <rect x="371.6129" y="105" width="536.7742" height="114" fill="#fff3e0" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="640" y="174" text-anchor="middle" font-size="26.8387" fill="#222222" font-weight="bold">Source Image  (Ubuntu base)</text>
-  <line x1="640" y1="219" x2="640" y2="309" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="268.3871" y="309" width="743.2258" height="114" fill="#e3f2fd" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="640" y="378" text-anchor="middle" font-size="24.7742" fill="#222222" font-weight="bold">Base Image  (security hardening, monitoring agents)</text>
-  <line x1="640" y1="423" x2="640" y2="465" stroke="#555" stroke-width="3.0968" />
-  <line x1="165.1613" y1="465" x2="1114.8387" y2="465" stroke="#555" stroke-width="3.0968" />
-  <line x1="165.1613" y1="465" x2="165.1613" y2="525" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="20.6452" y="525" width="289.0323" height="150" fill="#e8f5e9" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="165.1613" y="591" text-anchor="middle" font-size="24.7742" fill="#222222" font-weight="bold">Web Server</text>
-  <text x="165.1613" y="642" text-anchor="middle" font-size="24.7742" fill="#222222">Image</text>
-  <line x1="640" y1="465" x2="640" y2="525" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="495.4839" y="525" width="289.0323" height="150" fill="#e8f5e9" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="640" y="591" text-anchor="middle" font-size="24.7742" fill="#222222" font-weight="bold">API Server</text>
-  <text x="640" y="642" text-anchor="middle" font-size="24.7742" fill="#222222">Image</text>
-  <line x1="1114.8387" y1="465" x2="1114.8387" y2="525" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="970.3226" y="525" width="289.0323" height="150" fill="#e8f5e9" stroke="#333333" stroke-width="3.0968" rx="8.2581" />
-  <text x="1114.8387" y="591" text-anchor="middle" font-size="24.7742" fill="#222222" font-weight="bold">Worker</text>
-  <text x="1114.8387" y="642" text-anchor="middle" font-size="24.7742" fill="#222222">Image</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Source Image -->
+  <rect x="372" y="60" width="536" height="114" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="132" text-anchor="middle" font-size="22" fill="#e65100" font-weight="bold">Source Image (Ubuntu base)</text>
+  <line x1="640" y1="174" x2="640" y2="264" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Base Image -->
+  <rect x="268" y="264" width="744" height="114" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="336" text-anchor="middle" font-size="20" fill="#1565c0" font-weight="bold">Base Image (security hardening, monitoring agents)</text>
+  <!-- Branch lines -->
+  <line x1="640" y1="378" x2="640" y2="424" stroke="#555" stroke-width="3"/>
+  <line x1="165" y1="424" x2="1115" y2="424" stroke="#555" stroke-width="3"/>
+  <line x1="165" y1="424" x2="165" y2="480" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="640" y1="424" x2="640" y2="480" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1115" y1="424" x2="1115" y2="480" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Web Server Image -->
+  <rect x="21" y="480" width="289" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="165" y="548" text-anchor="middle" font-size="20" fill="#2e7d32" font-weight="bold">Web Server</text>
+  <text x="165" y="600" text-anchor="middle" font-size="20" fill="#2e7d32">Image</text>
+  <!-- API Server Image -->
+  <rect x="495" y="480" width="289" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="548" text-anchor="middle" font-size="20" fill="#2e7d32" font-weight="bold">API Server</text>
+  <text x="640" y="600" text-anchor="middle" font-size="20" fill="#2e7d32">Image</text>
+  <!-- Worker Image -->
+  <rect x="970" y="480" width="289" height="150" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="1115" y="548" text-anchor="middle" font-size="20" fill="#2e7d32" font-weight="bold">Worker</text>
+  <text x="1115" y="600" text-anchor="middle" font-size="20" fill="#2e7d32">Image</text>
 </svg>

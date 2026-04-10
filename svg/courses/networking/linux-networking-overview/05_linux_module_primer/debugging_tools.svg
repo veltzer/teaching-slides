@@ -1,27 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Kernel Module Debugging Tools</text>
-  <rect x="64" y="126" width="256" height="198" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="192" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">dmesg</text>
-  <text x="192" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">Kernel ring buffer</text>
-  <rect x="362.6667" y="126" width="256" height="198" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="490.6667" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">printk / pr_*</text>
-  <text x="490.6667" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">Kernel logging</text>
-  <rect x="661.3333" y="126" width="256" height="198" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="789.3333" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">ftrace</text>
-  <text x="789.3333" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">Function tracer</text>
-  <rect x="960" y="126" width="256" height="198" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1088" y="198" text-anchor="middle" font-size="23.4667" font-weight="bold">kgdb / kdb</text>
-  <text x="1088" y="259.2" text-anchor="middle" font-size="21.3333" fill="#666">Kernel debugger</text>
-  <rect x="64" y="396" width="256" height="198" fill="#ffebee" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="192" y="468" text-anchor="middle" font-size="23.4667" font-weight="bold">strace</text>
-  <text x="192" y="529.2" text-anchor="middle" font-size="21.3333" fill="#666">Syscall tracing</text>
-  <rect x="362.6667" y="396" width="256" height="198" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="490.6667" y="468" text-anchor="middle" font-size="23.4667" font-weight="bold">modprobe -v</text>
-  <text x="490.6667" y="529.2" text-anchor="middle" font-size="21.3333" fill="#666">Verbose load</text>
-  <rect x="661.3333" y="396" width="256" height="198" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="789.3333" y="468" text-anchor="middle" font-size="23.4667" font-weight="bold">objdump</text>
-  <text x="789.3333" y="529.2" text-anchor="middle" font-size="21.3333" fill="#666">Disassemble .ko</text>
-  <rect x="960" y="396" width="256" height="198" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1088" y="468" text-anchor="middle" font-size="23.4667" font-weight="bold">dynamic debug</text>
-  <text x="1088" y="529.2" text-anchor="middle" font-size="21.3333" fill="#666">pr_debug toggle</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Row 1 -->
+  <rect x="60" y="80" width="260" height="185" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="190" y="148" text-anchor="middle" font-size="21" font-weight="bold" fill="#0d47a1">dmesg</text>
+  <text x="190" y="210" text-anchor="middle" font-size="17" fill="#777777">Kernel ring buffer</text>
+  <rect x="356" y="80" width="260" height="185" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="486" y="148" text-anchor="middle" font-size="21" font-weight="bold" fill="#4a148c">printk / pr_*</text>
+  <text x="486" y="210" text-anchor="middle" font-size="17" fill="#777777">Kernel logging</text>
+  <rect x="652" y="80" width="260" height="185" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="782" y="148" text-anchor="middle" font-size="21" font-weight="bold" fill="#1b5e20">ftrace</text>
+  <text x="782" y="210" text-anchor="middle" font-size="17" fill="#777777">Function tracer</text>
+  <rect x="948" y="80" width="270" height="185" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="1083" y="148" text-anchor="middle" font-size="21" font-weight="bold" fill="#e65100">kgdb / kdb</text>
+  <text x="1083" y="210" text-anchor="middle" font-size="17" fill="#777777">Kernel debugger</text>
+  <!-- Row 2 -->
+  <rect x="60" y="330" width="260" height="185" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="190" y="398" text-anchor="middle" font-size="21" font-weight="bold" fill="#b71c1c">strace</text>
+  <text x="190" y="460" text-anchor="middle" font-size="17" fill="#777777">Syscall tracing</text>
+  <rect x="356" y="330" width="260" height="185" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="486" y="398" text-anchor="middle" font-size="21" font-weight="bold" fill="#e65100">modprobe -v</text>
+  <text x="486" y="460" text-anchor="middle" font-size="17" fill="#777777">Verbose load</text>
+  <rect x="652" y="330" width="260" height="185" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="782" y="398" text-anchor="middle" font-size="21" font-weight="bold" fill="#0d47a1">objdump</text>
+  <text x="782" y="460" text-anchor="middle" font-size="17" fill="#777777">Disassemble .ko</text>
+  <rect x="948" y="330" width="270" height="185" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="1083" y="398" text-anchor="middle" font-size="21" font-weight="bold" fill="#4a148c">dynamic debug</text>
+  <text x="1083" y="460" text-anchor="middle" font-size="17" fill="#777777">pr_debug toggle</text>
 </svg>

@@ -1,40 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="21.3333" markerHeight="11.3684" refX="18.6667" refY="5.6842" orient="auto">
-      <path d="M 0 0 L 0 11.3684 L 21.3333 5.6842 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="426.6667" y="18.9474" width="426.6667" height="75.7895" rx="7.5789" fill="#7b1fa2" stroke="#333" stroke-width="2.8421" />
-  <text x="640" y="66.3158" font-family="monospace" font-size="26.5263" font-weight="bold" fill="#fff" text-anchor="middle">terraform init</text>
-  <line x1="640" y1="94.7368" x2="640" y2="132.6316" stroke="#555" stroke-width="2.8421" />
-  <line x1="640" y1="132.6316" x2="640" y2="170.5263" stroke="#555" stroke-width="2.8421" />
-  <line x1="640" y1="151.5789" x2="266.6667" y2="151.5789" stroke="#555" stroke-width="2.8421" />
-  <line x1="266.6667" y1="151.5789" x2="266.6667" y2="189.4737" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="26.6667" y="189.4737" width="480" height="68.2105" rx="7.5789" fill="#f0f4f8" stroke="#555" stroke-width="2.8421" />
-  <text x="266.6667" y="233.0526" font-family="sans-serif" font-size="22.7368" font-weight="bold" fill="#222" text-anchor="middle">Configure backend</text>
-  <line x1="266.6667" y1="257.6842" x2="266.6667" y2="295.5789" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="26.6667" y="295.5789" width="480" height="68.2105" rx="7.5789" fill="#fff3e0" stroke="#aaa" stroke-width="1.8947" />
-  <text x="266.6667" y="339.1579" font-family="sans-serif" font-size="20.8421" fill="#555" text-anchor="middle">Local or remote state</text>
-  <line x1="640" y1="151.5789" x2="640" y2="189.4737" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="426.6667" y="189.4737" width="426.6667" height="68.2105" rx="7.5789" fill="#f0f4f8" stroke="#555" stroke-width="2.8421" />
-  <text x="640" y="233.0526" font-family="sans-serif" font-size="22.7368" font-weight="bold" fill="#222" text-anchor="middle">Download providers</text>
-  <line x1="640" y1="257.6842" x2="640" y2="295.5789" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="426.6667" y="295.5789" width="426.6667" height="68.2105" rx="7.5789" fill="#fff3e0" stroke="#aaa" stroke-width="1.8947" />
-  <text x="640" y="325.8947" font-family="sans-serif" font-size="20.8421" fill="#555" text-anchor="middle">Check version constraints</text>
-  <line x1="640" y1="363.7895" x2="640" y2="401.6842" stroke="#555" stroke-width="2.8421" />
-  <rect x="426.6667" y="401.6842" width="426.6667" height="68.2105" rx="7.5789" fill="#fff3e0" stroke="#aaa" stroke-width="1.8947" />
-  <text x="640" y="445.2632" font-family="sans-serif" font-size="20.8421" fill="#555" text-anchor="middle">Download from registry</text>
-  <line x1="640" y1="469.8947" x2="640" y2="507.7895" stroke="#555" stroke-width="2.8421" />
-  <rect x="426.6667" y="507.7895" width="426.6667" height="68.2105" rx="7.5789" fill="#fff3e0" stroke="#aaa" stroke-width="1.8947" />
-  <text x="640" y="551.3684" font-family="sans-serif" font-size="20.8421" fill="#555" text-anchor="middle">Verify checksums</text>
-  <line x1="640" y1="151.5789" x2="1013.3333" y2="151.5789" stroke="#555" stroke-width="2.8421" />
-  <line x1="1013.3333" y1="151.5789" x2="1013.3333" y2="189.4737" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="800" y="189.4737" width="453.3333" height="68.2105" rx="7.5789" fill="#f0f4f8" stroke="#555" stroke-width="2.8421" />
-  <text x="1026.6667" y="233.0526" font-family="sans-serif" font-size="22.7368" font-weight="bold" fill="#222" text-anchor="middle">Download modules</text>
-  <line x1="1026.6667" y1="257.6842" x2="1026.6667" y2="295.5789" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="800" y="295.5789" width="453.3333" height="68.2105" rx="7.5789" fill="#fff3e0" stroke="#aaa" stroke-width="1.8947" />
-  <text x="1026.6667" y="339.1579" font-family="sans-serif" font-size="20.8421" fill="#555" text-anchor="middle">From registry or git</text>
-  <line x1="640" y1="576" x2="640" y2="621.4737" stroke="#555" stroke-width="2.8421" marker-end="url(#arr)" />
-  <rect x="400" y="621.4737" width="480" height="68.2105" rx="7.5789" fill="#e8f5e9" stroke="#333" stroke-width="2.8421" />
-  <text x="640" y="665.0526" font-family="sans-serif" font-size="22.7368" font-weight="bold" fill="#222" text-anchor="middle">Create lock file</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="427" y="18" width="426" height="76" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="64" font-family="monospace" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">terraform init</text>
+  <!-- Branches from header -->
+  <line x1="640" y1="94" x2="640" y2="132" stroke="#555" stroke-width="2.5"/>
+  <line x1="267" y1="132" x2="1013" y2="132" stroke="#555" stroke-width="2.5"/>
+  <line x1="267" y1="132" x2="267" y2="168" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="640" y1="132" x2="640" y2="168" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="1013" y1="132" x2="1013" y2="168" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Left column: Configure backend -->
+  <rect x="27" y="168" width="480" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="267" y="209" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">Configure backend</text>
+  <line x1="267" y1="238" x2="267" y2="272" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="27" y="272" width="480" height="60" rx="8" fill="#fff8e1" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="267" y="307" font-size="16" fill="#555" text-anchor="middle">Local or remote state</text>
+  <!-- Middle column: Download providers -->
+  <rect x="427" y="168" width="426" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="209" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">Download providers</text>
+  <line x1="640" y1="238" x2="640" y2="272" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="427" y="272" width="426" height="60" rx="8" fill="#fff8e1" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="307" font-size="16" fill="#555" text-anchor="middle">Check version constraints</text>
+  <line x1="640" y1="332" x2="640" y2="366" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="427" y="366" width="426" height="60" rx="8" fill="#fff8e1" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="401" font-size="16" fill="#555" text-anchor="middle">Download from registry</text>
+  <line x1="640" y1="426" x2="640" y2="460" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="427" y="460" width="426" height="60" rx="8" fill="#fff8e1" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="495" font-size="16" fill="#555" text-anchor="middle">Verify checksums</text>
+  <!-- Right column: Download modules -->
+  <rect x="800" y="168" width="453" height="70" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1026" y="209" font-size="18" font-weight="bold" fill="#1565c0" text-anchor="middle">Download modules</text>
+  <line x1="1026" y1="238" x2="1026" y2="272" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="800" y="272" width="453" height="60" rx="8" fill="#fff8e1" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1026" y="307" font-size="16" fill="#555" text-anchor="middle">From registry or git</text>
+  <!-- Bottom: Create lock file -->
+  <line x1="640" y1="520" x2="640" y2="570" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="400" y="570" width="480" height="68" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="613" font-size="18" font-weight="bold" fill="#2e7d32" text-anchor="middle">Create lock file</text>
 </svg>

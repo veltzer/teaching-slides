@@ -1,25 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="22.1538" refY="9" markerWidth="19.6923" markerHeight="14.4" orient="auto-start-auto">
-      <path d="M 0 0 L 24.6154 9 L 0 18 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="54" text-anchor="middle" font-size="32.4" font-weight="bold" fill="#333">Resource Lifecycle (CRUD)</text>
-  <rect x="492.3077" y="90" width="295.3846" height="81" rx="9" fill="#d4edda" stroke="#28a745" stroke-width="3.6" />
-  <text x="640" y="140.4" text-anchor="middle" font-size="25.2" font-weight="bold" fill="#333">Create</text>
-  <line x1="640" y1="171" x2="640" y2="252" stroke="#4a90e2" stroke-width="3.6" marker-end="url(#arrow)" />
-  <rect x="492.3077" y="261" width="295.3846" height="81" rx="9" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.6" />
-  <text x="640" y="311.4" text-anchor="middle" font-size="25.2" font-weight="bold" fill="#333">Read</text>
-  <line x1="787.6923" y1="300.6" x2="960" y2="414" stroke="#4a90e2" stroke-width="3.6" marker-end="url(#arrow)" />
-  <line x1="492.3077" y1="300.6" x2="320" y2="414" stroke="#4a90e2" stroke-width="3.6" marker-end="url(#arrow)" />
-  <rect x="836.9231" y="414" width="295.3846" height="81" rx="9" fill="#fff3cd" stroke="#ffc107" stroke-width="3.6" />
-  <text x="984.6154" y="464.4" text-anchor="middle" font-size="25.2" font-weight="bold" fill="#333">Update</text>
-  <rect x="147.6923" y="414" width="295.3846" height="81" rx="9" fill="#f8d7da" stroke="#dc3545" stroke-width="3.6" />
-  <text x="295.3846" y="464.4" text-anchor="middle" font-size="25.2" font-weight="bold" fill="#333">Delete</text>
-  <path d="M 1132.3077 453.6 Q 1206.1538 300.6 787.6923 300.6" fill="none" stroke="#4a90e2" stroke-width="3.6" marker-end="url(#arrow)" />
-  <path d="M 147.6923 453.6 Q 73.8462 300.6 492.3077 300.6" fill="none" stroke="#4a90e2" stroke-width="3.6" marker-end="url(#arrow)" />
-  <text x="640" y="576" text-anchor="middle" font-size="19.8" fill="#555">Create: terraform apply --&gt; API call --&gt; State updated</text>
-  <text x="640" y="608.4" text-anchor="middle" font-size="19.8" fill="#555">Read: terraform plan --&gt; API call --&gt; Compare to config</text>
-  <text x="640" y="640.8" text-anchor="middle" font-size="19.8" fill="#555">Update: terraform apply --&gt; API call --&gt; State updated</text>
-  <text x="640" y="673.2" text-anchor="middle" font-size="19.8" fill="#555">Delete: terraform destroy --&gt; API call --&gt; State updated</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Create -->
+  <rect x="492" y="80" width="296" height="84" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="131" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">Create</text>
+  <line x1="640" y1="164" x2="640" y2="244" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Read -->
+  <rect x="492" y="244" width="296" height="84" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="295" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Read</text>
+  <line x1="788" y1="286" x2="960" y2="400" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <line x1="492" y1="286" x2="320" y2="400" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Update -->
+  <rect x="837" y="400" width="296" height="84" rx="10" fill="#fff8e1" stroke="#f57c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="985" y="451" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">Update</text>
+  <!-- Delete -->
+  <rect x="148" y="400" width="296" height="84" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="3" filter="url(#shadow)"/>
+  <text x="296" y="451" text-anchor="middle" font-size="22" font-weight="bold" fill="#c62828">Delete</text>
+  <!-- Return arrows -->
+  <path d="M 1133 442 Q 1206 286 788 286" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M 148 442 Q 74 286 492 286" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Labels -->
+  <text x="640" y="560" text-anchor="middle" font-size="16" fill="#555">Create: terraform apply --&gt; API call --&gt; State updated</text>
+  <text x="640" y="590" text-anchor="middle" font-size="16" fill="#555">Read: terraform plan --&gt; API call --&gt; Compare to config</text>
+  <text x="640" y="620" text-anchor="middle" font-size="16" fill="#555">Update: terraform apply --&gt; API call --&gt; State updated</text>
+  <text x="640" y="650" text-anchor="middle" font-size="16" fill="#555">Delete: terraform destroy --&gt; API call --&gt; State updated</text>
 </svg>

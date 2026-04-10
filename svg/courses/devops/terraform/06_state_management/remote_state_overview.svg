@@ -1,35 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="20.16" refX="17.7231" refY="10.08" orient="auto">
-      <polygon points="0,28.8 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="20.16" refX="17.7231" refY="10.08" orient="auto">
-      <polygon points="0,28.8 6.8923,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.6923" y="28.8" width="551.3846" height="648" rx="7.8769" fill="#ffebee" stroke="#c62828" stroke-width="2.9538" />
-  <text x="295.3846" y="86.4" text-anchor="middle" font-size="27.5692" fill="#b71c1c" font-weight="bold">Local State</text>
-  <rect x="78.7692" y="158.4" width="216.6154" height="144" rx="7.8769" fill="#ffcdd2" stroke="#e53935" stroke-width="2.9538" />
-  <text x="187.0769" y="241.92" text-anchor="middle" font-size="23.6308" fill="#222">Laptop A</text>
-  <line x1="295.3846" y1="230.4" x2="393.8462" y2="230.4" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <text x="482.4615" y="216" text-anchor="middle" font-size="21.6615" fill="#c62828">local file</text>
-  <rect x="78.7692" y="403.2" width="216.6154" height="144" rx="7.8769" fill="#ffcdd2" stroke="#e53935" stroke-width="2.9538" />
-  <text x="187.0769" y="486.72" text-anchor="middle" font-size="23.6308" fill="#222">Laptop B</text>
-  <line x1="295.3846" y1="475.2" x2="393.8462" y2="475.2" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <text x="482.4615" y="460.8" text-anchor="middle" font-size="21.6615" fill="#c62828">local file</text>
-  <text x="423.3846" y="529.92" text-anchor="middle" font-size="21.6615" fill="#c62828">(conflict!)</text>
-  <rect x="669.5385" y="28.8" width="590.7692" height="648" rx="7.8769" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.9538" />
-  <text x="964.9231" y="86.4" text-anchor="middle" font-size="27.5692" fill="#1b5e20" font-weight="bold">Remote State</text>
-  <rect x="708.9231" y="158.4" width="216.6154" height="144" rx="7.8769" fill="#c8e6c9" stroke="#43a047" stroke-width="2.9538" />
-  <text x="817.2308" y="241.92" text-anchor="middle" font-size="23.6308" fill="#222">Laptop A</text>
-  <line x1="925.5385" y1="230.4" x2="1004.3077" y2="230.4" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <rect x="708.9231" y="403.2" width="216.6154" height="144" rx="7.8769" fill="#c8e6c9" stroke="#43a047" stroke-width="2.9538" />
-  <text x="817.2308" y="486.72" text-anchor="middle" font-size="23.6308" fill="#222">Laptop B</text>
-  <line x1="925.5385" y1="475.2" x2="1004.3077" y2="475.2" stroke="#555" stroke-width="2.9538" marker-end="url(#arr)" />
-  <rect x="1004.3077" y="216" width="216.6154" height="144" rx="7.8769" fill="#fff3e0" stroke="#f57c00" stroke-width="2.9538" />
-  <text x="1112.6154" y="276.48" text-anchor="middle" font-size="23.6308" fill="#222">S3 Bucket</text>
-  <text x="1112.6154" y="325.44" text-anchor="middle" font-size="21.6615" fill="#555">+ DynamoDB</text>
-  <line x1="925.5385" y1="230.4" x2="1004.3077" y2="230.4" stroke="#555" stroke-width="2.9538" />
-  <line x1="925.5385" y1="475.2" x2="1004.3077" y2="475.2" stroke="#555" stroke-width="2.9538" />
-  <line x1="1004.3077" y1="230.4" x2="1004.3077" y2="475.2" stroke="#555" stroke-width="2.9538" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Local State panel -->
+  <rect x="20" y="28" width="551" height="648" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="3" filter="url(#shadow)"/>
+  <text x="295" y="84" text-anchor="middle" font-size="22" fill="#b71c1c" font-weight="bold">Local State</text>
+  <!-- Laptop A -->
+  <rect x="79" y="140" width="217" height="136" rx="10" fill="#ffcdd2" stroke="#e53935" stroke-width="3"/>
+  <text x="187" y="220" text-anchor="middle" font-size="18" fill="#222">Laptop A</text>
+  <line x1="296" y1="208" x2="394" y2="208" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="484" y="196" text-anchor="middle" font-size="16" fill="#c62828">local file</text>
+  <!-- Laptop B -->
+  <rect x="79" y="390" width="217" height="136" rx="10" fill="#ffcdd2" stroke="#e53935" stroke-width="3"/>
+  <text x="187" y="470" text-anchor="middle" font-size="18" fill="#222">Laptop B</text>
+  <line x1="296" y1="458" x2="394" y2="458" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="484" y="446" text-anchor="middle" font-size="16" fill="#c62828">local file</text>
+  <text x="424" y="520" text-anchor="middle" font-size="16" fill="#c62828">(conflict!)</text>
+  <!-- Remote State panel -->
+  <rect x="670" y="28" width="590" height="648" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="965" y="84" text-anchor="middle" font-size="22" fill="#1b5e20" font-weight="bold">Remote State</text>
+  <!-- Laptop A -->
+  <rect x="709" y="140" width="217" height="136" rx="10" fill="#c8e6c9" stroke="#43a047" stroke-width="3"/>
+  <text x="817" y="220" text-anchor="middle" font-size="18" fill="#222">Laptop A</text>
+  <line x1="926" y1="208" x2="1004" y2="208" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Laptop B -->
+  <rect x="709" y="390" width="217" height="136" rx="10" fill="#c8e6c9" stroke="#43a047" stroke-width="3"/>
+  <text x="817" y="470" text-anchor="middle" font-size="18" fill="#222">Laptop B</text>
+  <line x1="926" y1="458" x2="1004" y2="458" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- S3 bucket -->
+  <rect x="1004" y="192" width="217" height="152" rx="10" fill="#fff8e1" stroke="#f57c00" stroke-width="3"/>
+  <text x="1112" y="262" text-anchor="middle" font-size="18" fill="#222">S3 Bucket</text>
+  <text x="1112" y="316" text-anchor="middle" font-size="16" fill="#555">+ DynamoDB</text>
+  <!-- Vertical join line -->
+  <line x1="1004" y1="208" x2="1004" y2="458" stroke="#555" stroke-width="3"/>
 </svg>

@@ -1,39 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="20.6452" markerHeight="15.75" refX="18.5806" refY="7.875" orient="auto">
-      <polygon points="0,22.5 7.2258,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="20.6452" markerHeight="15.75" refX="18.5806" refY="7.875" orient="auto">
-      <polygon points="0,22.5 7.2258,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="412.9032" y="22.5" width="443.871" height="146.25" rx="8.2581" fill="#e3f2fd" stroke="#1976d2" stroke-width="3.0968" />
-  <text x="633.8065" y="83.25" text-anchor="middle" font-size="28.9032" fill="#222" font-weight="bold">Packer Config</text>
-  <text x="633.8065" y="126" text-anchor="middle" font-size="24.7742" fill="#555">(.pkr.hcl)</text>
-  <line x1="633.8065" y1="168.75" x2="633.8065" y2="225" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="433.5484" y="225" width="402.5806" height="135" rx="8.2581" fill="#bbdefb" stroke="#1565c0" stroke-width="3.0968" />
-  <text x="633.8065" y="288" text-anchor="middle" font-size="28.9032" fill="#222" font-weight="bold">Packer Core</text>
-  <line x1="633.8065" y1="360" x2="633.8065" y2="416.25" stroke="#555" stroke-width="3.0968" />
-  <line x1="227.0968" y1="416.25" x2="1042.5806" y2="416.25" stroke="#555" stroke-width="3.0968" />
-  <line x1="227.0968" y1="416.25" x2="227.0968" y2="472.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <line x1="633.8065" y1="416.25" x2="633.8065" y2="472.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <line x1="1042.5806" y1="416.25" x2="1042.5806" y2="472.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="82.5806" y="472.5" width="289.0323" height="135" rx="8.2581" fill="#e8f5e9" stroke="#388e3c" stroke-width="3.0968" />
-  <text x="227.0968" y="528.75" text-anchor="middle" font-size="26.8387" fill="#222">Builder</text>
-  <text x="227.0968" y="569.25" text-anchor="middle" font-size="26.8387" fill="#222">AWS</text>
-  <line x1="227.0968" y1="607.5" x2="227.0968" y2="652.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="82.5806" y="652.5" width="289.0323" height="67.5" rx="8.2581" fill="#e8f5e9" stroke="#388e3c" stroke-width="3.0968" />
-  <text x="227.0968" y="697.5" text-anchor="middle" font-size="24.7742" fill="#222">AMI</text>
-  <rect x="485.1613" y="472.5" width="289.0323" height="135" rx="8.2581" fill="#fff3e0" stroke="#f57c00" stroke-width="3.0968" />
-  <text x="629.6774" y="528.75" text-anchor="middle" font-size="26.8387" fill="#222">Builder</text>
-  <text x="629.6774" y="569.25" text-anchor="middle" font-size="26.8387" fill="#222">Azure</text>
-  <line x1="629.6774" y1="607.5" x2="629.6774" y2="652.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="485.1613" y="652.5" width="289.0323" height="67.5" rx="8.2581" fill="#fff3e0" stroke="#f57c00" stroke-width="3.0968" />
-  <text x="629.6774" y="697.5" text-anchor="middle" font-size="24.7742" fill="#222">VHD</text>
-  <rect x="887.7419" y="472.5" width="289.0323" height="135" rx="8.2581" fill="#fce4ec" stroke="#c2185b" stroke-width="3.0968" />
-  <text x="1032.2581" y="528.75" text-anchor="middle" font-size="26.8387" fill="#222">Builder</text>
-  <text x="1032.2581" y="569.25" text-anchor="middle" font-size="26.8387" fill="#222">Docker</text>
-  <line x1="1032.2581" y1="607.5" x2="1032.2581" y2="652.5" stroke="#555" stroke-width="3.0968" marker-end="url(#arr)" />
-  <rect x="887.7419" y="652.5" width="289.0323" height="67.5" rx="8.2581" fill="#fce4ec" stroke="#c2185b" stroke-width="3.0968" />
-  <text x="1032.2581" y="697.5" text-anchor="middle" font-size="24.7742" fill="#222">Image</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Packer Config -->
+  <rect x="413" y="22" width="444" height="148" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="635" y="84" text-anchor="middle" font-size="22" fill="#1565c0" font-weight="bold">Packer Config</text>
+  <text x="635" y="128" text-anchor="middle" font-size="18" fill="#555">(.pkr.hcl)</text>
+  <line x1="635" y1="170" x2="635" y2="224" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Packer Core -->
+  <rect x="434" y="224" width="402" height="136" rx="10" fill="#bbdefb" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="635" y="300" text-anchor="middle" font-size="22" fill="#1565c0" font-weight="bold">Packer Core</text>
+  <!-- Branch lines -->
+  <line x1="635" y1="360" x2="635" y2="416" stroke="#555" stroke-width="3"/>
+  <line x1="227" y1="416" x2="1043" y2="416" stroke="#555" stroke-width="3"/>
+  <line x1="227" y1="416" x2="227" y2="472" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="635" y1="416" x2="635" y2="472" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1043" y1="416" x2="1043" y2="472" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Builder: AWS -->
+  <rect x="83" y="472" width="289" height="136" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="227" y="528" text-anchor="middle" font-size="20" fill="#2e7d32">Builder</text>
+  <text x="227" y="572" text-anchor="middle" font-size="20" fill="#2e7d32">AWS</text>
+  <line x1="227" y1="608" x2="227" y2="652" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="83" y="652" width="289" height="60" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="227" y="691" text-anchor="middle" font-size="18" fill="#2e7d32">AMI</text>
+  <!-- Builder: Azure -->
+  <rect x="485" y="472" width="289" height="136" rx="10" fill="#fff8e1" stroke="#f57c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="630" y="528" text-anchor="middle" font-size="20" fill="#e65100">Builder</text>
+  <text x="630" y="572" text-anchor="middle" font-size="20" fill="#e65100">Azure</text>
+  <line x1="630" y1="608" x2="630" y2="652" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="485" y="652" width="289" height="60" rx="10" fill="#fff8e1" stroke="#f57c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="630" y="691" text-anchor="middle" font-size="18" fill="#e65100">VHD</text>
+  <!-- Builder: Docker -->
+  <rect x="888" y="472" width="289" height="136" rx="10" fill="#fce4ec" stroke="#c2185b" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1032" y="528" text-anchor="middle" font-size="20" fill="#c2185b">Builder</text>
+  <text x="1032" y="572" text-anchor="middle" font-size="20" fill="#c2185b">Docker</text>
+  <line x1="1032" y1="608" x2="1032" y2="652" stroke="#555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="888" y="652" width="289" height="60" rx="10" fill="#fce4ec" stroke="#c2185b" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1032" y="691" text-anchor="middle" font-size="18" fill="#c2185b">Image</text>
 </svg>

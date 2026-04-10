@@ -1,36 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="54.5455" text-anchor="middle" font-size="34.1333" font-weight="bold" fill="#333">Choosing the Right Tool</text>
-  <rect x="64" y="87.2727" width="1152" height="600" rx="10.6667" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2.1333" />
-  <rect x="106.6667" y="120" width="533.3333" height="61.0909" rx="6.4" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="373.3333" y="161.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#fff">Use Case</text>
-  <rect x="640" y="120" width="533.3333" height="61.0909" rx="6.4" fill="#4a90e2" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="906.6667" y="161.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#fff">Recommended Tool</text>
-  <rect x="106.6667" y="192" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="373.3333" y="233.4545" text-anchor="middle" font-size="23.4667" fill="#333">Small projects</text>
-  <rect x="640" y="192" width="533.3333" height="61.0909" rx="6.4" fill="#d4edda" stroke="#28a745" stroke-width="2.1333" />
-  <text x="906.6667" y="233.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#28a745">venv + pip</text>
-  <rect x="106.6667" y="264" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="373.3333" y="305.4545" text-anchor="middle" font-size="23.4667" fill="#333">Complex dependencies</text>
-  <rect x="640" y="264" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="906.6667" y="305.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#333">poetry or pipenv</text>
-  <rect x="106.6667" y="336" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="373.3333" y="377.4545" text-anchor="middle" font-size="23.4667" fill="#333">Data science</text>
-  <rect x="640" y="336" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="906.6667" y="377.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#4a90e2">conda</text>
-  <rect x="106.6667" y="408" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="373.3333" y="449.4545" text-anchor="middle" font-size="23.4667" fill="#333">Binary packages</text>
-  <rect x="640" y="408" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="906.6667" y="449.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#333">conda</text>
-  <rect x="106.6667" y="480" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="373.3333" y="521.4545" text-anchor="middle" font-size="23.4667" fill="#333">Package publishing</text>
-  <rect x="640" y="480" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="906.6667" y="521.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#4a90e2">poetry or hatch</text>
-  <rect x="106.6667" y="552" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="373.3333" y="593.4545" text-anchor="middle" font-size="23.4667" fill="#333">Enterprise environments</text>
-  <rect x="640" y="552" width="533.3333" height="61.0909" rx="6.4" fill="#fff" stroke="#dee2e6" stroke-width="2.1333" />
-  <text x="906.6667" y="593.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#333">pip-tools or pipenv</text>
-  <rect x="106.6667" y="624" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="373.3333" y="665.4545" text-anchor="middle" font-size="23.4667" fill="#333">Existing setup.py projects</text>
-  <rect x="640" y="624" width="533.3333" height="61.0909" rx="6.4" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.1333" />
-  <text x="906.6667" y="665.4545" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#4a90e2">pip-tools</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header row -->
+  <rect x="64" y="60" width="554" height="56" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="341" y="95" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Use Case</text>
+  <rect x="622" y="60" width="594" height="56" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="919" y="95" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Recommended Tool</text>
+  <!-- Row 1 -->
+  <rect x="64" y="124" width="554" height="56" rx="4" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="158" text-anchor="middle" font-size="20" fill="#333333">Small projects</text>
+  <rect x="622" y="124" width="594" height="56" rx="4" fill="#e8f5e9" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="158" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">venv + pip</text>
+  <!-- Row 2 -->
+  <rect x="64" y="184" width="554" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="218" text-anchor="middle" font-size="20" fill="#333333">Complex dependencies</text>
+  <rect x="622" y="184" width="594" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="218" text-anchor="middle" font-size="20" font-weight="bold" fill="#555555">poetry or pipenv</text>
+  <!-- Row 3 -->
+  <rect x="64" y="244" width="554" height="56" rx="4" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="278" text-anchor="middle" font-size="20" fill="#333333">Data science</text>
+  <rect x="622" y="244" width="594" height="56" rx="4" fill="#e3f2fd" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="278" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">conda</text>
+  <!-- Row 4 -->
+  <rect x="64" y="304" width="554" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="338" text-anchor="middle" font-size="20" fill="#333333">Binary packages</text>
+  <rect x="622" y="304" width="594" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="338" text-anchor="middle" font-size="20" font-weight="bold" fill="#555555">conda</text>
+  <!-- Row 5 -->
+  <rect x="64" y="364" width="554" height="56" rx="4" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="398" text-anchor="middle" font-size="20" fill="#333333">Package publishing</text>
+  <rect x="622" y="364" width="594" height="56" rx="4" fill="#e3f2fd" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="398" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">poetry or hatch</text>
+  <!-- Row 6 -->
+  <rect x="64" y="424" width="554" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="458" text-anchor="middle" font-size="20" fill="#333333">Enterprise environments</text>
+  <rect x="622" y="424" width="594" height="56" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="458" text-anchor="middle" font-size="20" font-weight="bold" fill="#555555">pip-tools or pipenv</text>
+  <!-- Row 7 -->
+  <rect x="64" y="484" width="554" height="56" rx="4" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="341" y="518" text-anchor="middle" font-size="20" fill="#333333">Existing setup.py projects</text>
+  <rect x="622" y="484" width="594" height="56" rx="4" fill="#e3f2fd" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="919" y="518" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">pip-tools</text>
+  <!-- Legend -->
+  <rect x="64" y="580" width="1152" height="48" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="610" text-anchor="middle" font-size="16" fill="#1565c0">Choose based on project complexity, team size, and deployment requirements</text>
 </svg>

@@ -1,11 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <circle cx="284.4444" cy="360" r="113.7778" fill="#e3f2fd" stroke="#1976d2" />
-  <text x="284.4444" y="385.2" text-anchor="middle" font-size="34.1333">New Developer</text>
-  <circle cx="711.1111" cy="360" r="85.3333" fill="#f3e5f5" stroke="#7b1fa2" />
-  <text x="711.1111" y="385.2" text-anchor="middle" font-size="28.4444">AI Mentor</text>
-  <circle cx="1052.4444" cy="360" r="113.7778" fill="#e8f5e8" stroke="#388e3c" />
-  <text x="1052.4444" y="385.2" text-anchor="middle" font-size="34.1333">Team Integration</text>
-  <line x1="398.2222" y1="360" x2="625.7778" y2="360" stroke="#666" stroke-width="5.6889" />
-  <line x1="796.4444" y1="360" x2="938.6667" y2="360" stroke="#666" stroke-width="5.6889" />
-  <text x="640" y="504" text-anchor="middle" font-size="39.8222">AI-Accelerated Onboarding</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- 3 circles -->
+  <circle cx="240" cy="330" r="150" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="240" y="318" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">New</text>
+  <text x="240" y="348" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Developer</text>
+  <text x="240" y="406" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Day 1</text>
+  <line x1="390" y1="330" x2="510" y2="330" stroke="#1565c0" stroke-width="4" marker-end="url(#arrow-accent)"/>
+  <text x="450" y="315" text-anchor="middle" fill="#1565c0" font-size="13" font-family="Arial, sans-serif">learns via AI</text>
+  <circle cx="640" cy="330" r="120" fill="#f3e5f5" stroke="#8e24aa" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="318" text-anchor="middle" fill="#6a1b9a" font-size="22" font-weight="bold" font-family="Arial, sans-serif">AI</text>
+  <text x="640" y="348" text-anchor="middle" fill="#6a1b9a" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Mentor</text>
+  <text x="640" y="400" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">24/7 support</text>
+  <line x1="760" y1="330" x2="880" y2="330" stroke="#1565c0" stroke-width="4" marker-end="url(#arrow-accent)"/>
+  <text x="820" y="315" text-anchor="middle" fill="#1565c0" font-size="13" font-family="Arial, sans-serif">integrates</text>
+  <circle cx="1040" cy="330" r="150" fill="#e8f5e9" stroke="#43a047" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1040" y="318" text-anchor="middle" fill="#2e7d32" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Team</text>
+  <text x="1040" y="348" text-anchor="middle" fill="#2e7d32" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Integration</text>
+  <text x="1040" y="406" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Week 2</text>
+  <!-- Bottom banner -->
+  <rect x="80" y="530" width="1120" height="80" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="578" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">AI-Accelerated Onboarding: -45% ramp time</text>
+  <!-- Details -->
+  <rect x="80" y="630" width="1120" height="70" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="672" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">Codebase Q&amp;A, guided tutorials, automated code walkthroughs, context-aware suggestions</text>
 </svg>

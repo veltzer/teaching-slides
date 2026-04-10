@@ -1,28 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Project Success Metrics</text>
-  <rect x="240" y="198" width="240" height="126" fill="#3498DB" rx="8" />
-  <text x="360" y="243" text-anchor="middle" fill="white" font-size="19.2">Velocity</text>
-  <text x="360" y="279" text-anchor="middle" fill="white" font-size="25.6">↑ 40%</text>
-  <text x="360" y="306" text-anchor="middle" fill="white" font-size="16">with AI</text>
-  <rect x="520" y="198" width="240" height="126" fill="#27AE60" rx="8" />
-  <text x="640" y="243" text-anchor="middle" fill="white" font-size="19.2">Bug Rate</text>
-  <text x="640" y="279" text-anchor="middle" fill="white" font-size="25.6">↓ 65%</text>
-  <text x="640" y="306" text-anchor="middle" fill="white" font-size="16">reduction</text>
-  <rect x="800" y="198" width="240" height="126" fill="#F39C12" rx="8" />
-  <text x="920" y="243" text-anchor="middle" fill="white" font-size="19.2">Deploy Freq</text>
-  <text x="920" y="279" text-anchor="middle" fill="white" font-size="25.6">3x</text>
-  <text x="920" y="306" text-anchor="middle" fill="white" font-size="16">per week</text>
-  <rect x="240" y="360" width="240" height="126" fill="#E74C3C" rx="8" />
-  <text x="360" y="405" text-anchor="middle" fill="white" font-size="19.2">MTTR</text>
-  <text x="360" y="441" text-anchor="middle" fill="white" font-size="25.6">45 min</text>
-  <text x="360" y="468" text-anchor="middle" fill="white" font-size="16">recovery</text>
-  <rect x="520" y="360" width="240" height="126" fill="#9B59B6" rx="8" />
-  <text x="640" y="405" text-anchor="middle" fill="white" font-size="19.2">Coverage</text>
-  <text x="640" y="441" text-anchor="middle" fill="white" font-size="25.6">92%</text>
-  <text x="640" y="468" text-anchor="middle" fill="white" font-size="16">test coverage</text>
-  <rect x="800" y="360" width="240" height="126" fill="#1ABC9C" rx="8" />
-  <text x="920" y="405" text-anchor="middle" fill="white" font-size="19.2">Satisfaction</text>
-  <text x="920" y="441" text-anchor="middle" fill="white" font-size="25.6">4.8/5</text>
-  <text x="920" y="468" text-anchor="middle" fill="white" font-size="16">team rating</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="55" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="77" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Project Success Metrics</text>
+  <!-- Row 1 -->
+  <rect x="80" y="120" width="330" height="200" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="168" text-anchor="middle" fill="#1565c0" font-size="18" font-family="Arial, sans-serif">Velocity</text>
+  <text x="245" y="222" text-anchor="middle" fill="#1565c0" font-size="38" font-weight="bold" font-family="Arial, sans-serif">+40%</text>
+  <text x="245" y="264" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">with AI assistance</text>
+  <rect x="475" y="120" width="330" height="200" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="168" text-anchor="middle" fill="#2e7d32" font-size="18" font-family="Arial, sans-serif">Bug Rate</text>
+  <text x="640" y="222" text-anchor="middle" fill="#2e7d32" font-size="38" font-weight="bold" font-family="Arial, sans-serif">-65%</text>
+  <text x="640" y="264" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">reduction</text>
+  <rect x="870" y="120" width="330" height="200" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="168" text-anchor="middle" fill="#e65100" font-size="18" font-family="Arial, sans-serif">Deploy Freq</text>
+  <text x="1035" y="222" text-anchor="middle" fill="#e65100" font-size="38" font-weight="bold" font-family="Arial, sans-serif">3x/wk</text>
+  <text x="1035" y="264" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">per week</text>
+  <!-- Row 2 -->
+  <rect x="80" y="350" width="330" height="200" rx="12" fill="#ffebee" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="398" text-anchor="middle" fill="#b71c1c" font-size="18" font-family="Arial, sans-serif">MTTR</text>
+  <text x="245" y="452" text-anchor="middle" fill="#b71c1c" font-size="38" font-weight="bold" font-family="Arial, sans-serif">45min</text>
+  <text x="245" y="494" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">incident recovery</text>
+  <rect x="475" y="350" width="330" height="200" rx="12" fill="#f3e5f5" stroke="#8e24aa" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="398" text-anchor="middle" fill="#6a1b9a" font-size="18" font-family="Arial, sans-serif">Test Coverage</text>
+  <text x="640" y="452" text-anchor="middle" fill="#6a1b9a" font-size="38" font-weight="bold" font-family="Arial, sans-serif">92%</text>
+  <text x="640" y="494" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">test coverage</text>
+  <rect x="870" y="350" width="330" height="200" rx="12" fill="#e0f2f1" stroke="#00897b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="398" text-anchor="middle" fill="#00695c" font-size="18" font-family="Arial, sans-serif">Satisfaction</text>
+  <text x="1035" y="452" text-anchor="middle" fill="#00695c" font-size="38" font-weight="bold" font-family="Arial, sans-serif">4.8/5</text>
+  <text x="1035" y="494" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">team rating</text>
+  <!-- Footer -->
+  <rect x="80" y="580" width="1120" height="90" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="618" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Measure regularly — metrics drive AI-investment decisions</text>
+  <text x="640" y="650" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Baseline before AI adoption, track 30/60/90 days post-adoption</text>
 </svg>

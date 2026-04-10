@@ -1,24 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Auth Flow</text>
-  <rect x="240" y="198" width="192" height="108" fill="#3498DB" rx="8" />
-  <text x="336" y="261" text-anchor="middle" fill="white" font-size="19.2">Login</text>
-  <rect x="544" y="198" width="192" height="108" fill="#2ECC71" rx="8" />
-  <text x="640" y="261" text-anchor="middle" fill="white" font-size="19.2">JWT Token</text>
-  <rect x="848" y="198" width="192" height="108" fill="#E74C3C" rx="8" />
-  <text x="944" y="261" text-anchor="middle" fill="white" font-size="19.2">Access</text>
-  <path d="M 432 252 L 544 252" stroke="white" stroke-width="3.2" marker-end="url(#auth1)" />
-  <path d="M 736 252 L 848 252" stroke="white" stroke-width="3.2" marker-end="url(#auth2)" />
-  <rect x="400" y="360" width="480" height="180" fill="#34495E" rx="8" />
-  <text x="640" y="414" text-anchor="middle" fill="white" font-size="19.2">Middleware validates token</text>
-  <text x="640" y="450" text-anchor="middle" fill="white" font-size="19.2">Checks permissions</text>
-  <text x="640" y="486" text-anchor="middle" fill="white" font-size="19.2">Refreshes if needed</text>
   <defs>
-    <marker id="auth1" markerWidth="16" markerHeight="18" refX="8" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="white" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="auth2" markerWidth="16" markerHeight="18" refX="8" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="white" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Auth Flow top row -->
+  <rect x="80" y="80" width="320" height="110" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="240" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Login</text>
+  <text x="240" y="172" text-anchor="middle" fill="#bbdefb" font-size="16" font-family="Arial, sans-serif">User credentials</text>
+  <line x1="400" y1="135" x2="470" y2="135" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="480" y="80" width="320" height="110" rx="10" fill="#43a047" filter="url(#shadow)"/>
+  <text x="640" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">JWT Token</text>
+  <text x="640" y="172" text-anchor="middle" fill="#c8e6c9" font-size="16" font-family="Arial, sans-serif">Signed &amp; expiring</text>
+  <line x1="800" y1="135" x2="870" y2="135" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="880" y="80" width="320" height="110" rx="10" fill="#e53935" filter="url(#shadow)"/>
+  <text x="1040" y="145" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Access</text>
+  <text x="1040" y="172" text-anchor="middle" fill="#ffcdd2" font-size="16" font-family="Arial, sans-serif">Protected resource</text>
+  <!-- Middleware box -->
+  <rect x="80" y="240" width="1120" height="170" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="278" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Middleware Validates Every Request</text>
+  <text x="640" y="318" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Validates token signature and expiry</text>
+  <text x="640" y="350" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Checks user permissions (roles/scopes)</text>
+  <text x="640" y="382" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Refreshes token if nearing expiry</text>
+  <!-- Bottom three panels -->
+  <rect x="80" y="450" width="340" height="160" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="250" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">OAuth2 / OIDC</text>
+  <text x="250" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Delegated authorization</text>
+  <text x="250" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Third-party identity</text>
+  <text x="250" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">providers</text>
+  <rect x="470" y="450" width="340" height="160" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">RBAC</text>
+  <text x="640" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Role-based access control</text>
+  <text x="640" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Fine-grained permissions</text>
+  <text x="640" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">per resource</text>
+  <rect x="860" y="450" width="340" height="160" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1030" y="488" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100" font-family="Arial, sans-serif">Refresh Strategy</text>
+  <text x="1030" y="520" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Silent token renewal</text>
+  <text x="1030" y="548" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Rotation on use</text>
+  <text x="1030" y="576" text-anchor="middle" font-size="15" fill="#444" font-family="Arial, sans-serif">Revocation support</text>
 </svg>

@@ -1,22 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="128.5714" text-anchor="middle" font-size="36.9231" font-weight="bold" fill="#333">What Are Providers</text>
-  <rect x="49.2308" y="231.4286" width="344.6154" height="282.8571" rx="12.3077" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.9231" />
-  <text x="221.5385" y="370.2857" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Terraform</text>
-  <text x="221.5385" y="462.8571" text-anchor="middle" font-size="29.5385" fill="#555">Core</text>
-  <line x1="393.8462" y1="370.2857" x2="492.3077" y2="370.2857" stroke="#4a90e2" stroke-width="4.9231" marker-end="url(#pra)" />
-  <rect x="504.6154" y="231.4286" width="344.6154" height="282.8571" rx="12.3077" fill="#d4edda" stroke="#28a745" stroke-width="4.9231" />
-  <text x="676.9231" y="370.2857" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Provider</text>
-  <text x="676.9231" y="462.8571" text-anchor="middle" font-size="29.5385" fill="#555">Plugin</text>
-  <line x1="849.2308" y1="370.2857" x2="947.6923" y2="370.2857" stroke="#28a745" stroke-width="4.9231" marker-end="url(#pra2)" />
-  <rect x="960" y="231.4286" width="295.3846" height="282.8571" rx="12.3077" fill="#fff3cd" stroke="#ffc107" stroke-width="4.9231" />
-  <text x="1107.6923" y="370.2857" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Cloud</text>
-  <text x="1107.6923" y="462.8571" text-anchor="middle" font-size="29.5385" fill="#555">API</text>
   <defs>
-    <marker id="pra" viewBox="0 0 10 10" refX="22.1538" refY="25.7143" markerWidth="14.7692" markerHeight="30.8571" orient="auto-start-reverse">
-      <path d="M 0 0 L 24.6154 25.7143 L 0 51.4286 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="pra2" viewBox="0 0 10 10" refX="22.1538" refY="25.7143" markerWidth="14.7692" markerHeight="30.8571" orient="auto-start-reverse">
-      <path d="M 0 0 L 24.6154 25.7143 L 0 51.4286 z" fill="#28a745" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Terraform Core -->
+  <rect x="49" y="210" width="345" height="284" rx="14" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="5" filter="url(#shadow)"/>
+  <rect x="49" y="210" width="345" height="58" rx="14" fill="url(#grad-accent)"/>
+  <rect x="49" y="250" width="345" height="18" fill="url(#grad-accent)"/>
+  <text x="222" y="247" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Terraform</text>
+  <text x="222" y="345" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Terraform</text>
+  <text x="222" y="430" text-anchor="middle" font-size="22" fill="#555">Core</text>
+  <!-- Arrow 1 -->
+  <line x1="394" y1="352" x2="491" y2="352" stroke="#1565c0" stroke-width="5" marker-end="url(#arrow-accent)"/>
+  <!-- Provider Plugin -->
+  <rect x="504" y="210" width="345" height="284" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="5" filter="url(#shadow)"/>
+  <rect x="504" y="210" width="345" height="58" rx="14" fill="#2e7d32"/>
+  <rect x="504" y="250" width="345" height="18" fill="#2e7d32"/>
+  <text x="677" y="247" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Provider</text>
+  <text x="677" y="345" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Provider</text>
+  <text x="677" y="430" text-anchor="middle" font-size="22" fill="#555">Plugin</text>
+  <!-- Arrow 2 -->
+  <line x1="849" y1="352" x2="947" y2="352" stroke="#2e7d32" stroke-width="5" marker-end="url(#arrow)"/>
+  <!-- Cloud API -->
+  <rect x="960" y="210" width="295" height="284" rx="14" fill="#fff8e1" stroke="#f57c00" stroke-width="5" filter="url(#shadow)"/>
+  <rect x="960" y="210" width="295" height="58" rx="14" fill="#f57c00"/>
+  <rect x="960" y="250" width="295" height="18" fill="#f57c00"/>
+  <text x="1108" y="247" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Cloud</text>
+  <text x="1108" y="345" text-anchor="middle" font-size="26" font-weight="bold" fill="#e65100">Cloud</text>
+  <text x="1108" y="430" text-anchor="middle" font-size="22" fill="#555">API</text>
 </svg>

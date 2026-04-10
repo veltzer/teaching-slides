@@ -1,38 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">Terraform Architecture</text>
-  <rect x="45.7143" y="85.2632" width="365.7143" height="208.4211" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.7895" />
-  <text x="228.5714" y="132.6316" text-anchor="middle" font-size="26.5263" font-weight="bold" fill="#333">Terraform CLI</text>
-  <text x="91.4286" y="180" font-size="22.7368" fill="#555">- init</text>
-  <text x="91.4286" y="212.2105" font-size="22.7368" fill="#555">- plan</text>
-  <text x="91.4286" y="244.4211" font-size="22.7368" fill="#555">- apply</text>
-  <text x="91.4286" y="276.6316" font-size="22.7368" fill="#555">- destroy</text>
-  <rect x="822.8571" y="85.2632" width="411.4286" height="132.6316" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="3.7895" />
-  <text x="1028.5714" y="136.4211" text-anchor="middle" font-size="26.5263" font-weight="bold" fill="#333">State File</text>
-  <text x="1028.5714" y="189.4737" text-anchor="middle" font-size="20.8421" fill="#555">(terraform.tfstate)</text>
-  <rect x="342.8571" y="360" width="594.2857" height="113.6842" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="640" y="413.0526" text-anchor="middle" font-size="26.5263" font-weight="bold" fill="#333">Terraform Core</text>
-  <text x="640" y="450.9474" text-anchor="middle" font-size="20.8421" fill="#555">(Resource Graph)</text>
-  <line x1="411.4286" y1="293.6842" x2="548.5714" y2="356.2105" stroke="#4a90e2" stroke-width="2.8421" marker-end="url(#ta)" />
-  <line x1="1028.5714" y1="217.8947" x2="800" y2="356.2105" stroke="#ffc107" stroke-width="2.8421" marker-end="url(#ta3)" />
-  <line x1="502.8571" y1="473.6842" x2="342.8571" y2="568.4211" stroke="#28a745" stroke-width="2.8421" marker-end="url(#ta2)" />
-  <line x1="640" y1="473.6842" x2="640" y2="568.4211" stroke="#28a745" stroke-width="2.8421" marker-end="url(#ta2)" />
-  <line x1="777.1429" y1="473.6842" x2="937.1429" y2="568.4211" stroke="#28a745" stroke-width="2.8421" marker-end="url(#ta2)" />
-  <rect x="228.5714" y="568.4211" width="228.5714" height="85.2632" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="342.8571" y="621.4737" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">AWS</text>
-  <rect x="525.7143" y="568.4211" width="228.5714" height="85.2632" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="640" y="621.4737" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">GCP</text>
-  <rect x="822.8571" y="568.4211" width="228.5714" height="85.2632" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="937.1429" y="621.4737" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#333">Azure</text>
-  <text x="640" y="697.2632" text-anchor="middle" font-size="22.7368" fill="#555">Providers (Plugins)</text>
   <defs>
-    <marker id="ta" viewBox="0 0 10 10" refX="20.5714" refY="9.4737" markerWidth="13.7143" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.8571 9.4737 L 0 18.9474 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="ta2" viewBox="0 0 10 10" refX="20.5714" refY="9.4737" markerWidth="13.7143" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.8571 9.4737 L 0 18.9474 z" fill="#28a745" />
-    </marker>
-    <marker id="ta3" viewBox="0 0 10 10" refX="20.5714" refY="9.4737" markerWidth="13.7143" markerHeight="11.3684" orient="auto-start-reverse">
-      <path d="M 0 0 L 22.8571 9.4737 L 0 18.9474 z" fill="#ffc107" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Terraform CLI box -->
+  <rect x="46" y="85" width="366" height="210" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="46" y="85" width="366" height="44" rx="10" fill="url(#grad-accent)"/>
+  <rect x="46" y="115" width="366" height="14" fill="url(#grad-accent)"/>
+  <text x="229" y="114" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Terraform CLI</text>
+  <text x="92" y="162" font-size="18" fill="#333">• init</text>
+  <text x="92" y="192" font-size="18" fill="#333">• plan</text>
+  <text x="92" y="222" font-size="18" fill="#333">• apply</text>
+  <text x="92" y="252" font-size="18" fill="#333">• destroy</text>
+  <!-- State File box -->
+  <rect x="823" y="85" width="411" height="132" rx="10" fill="url(#grad-surface)" stroke="#f57c00" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="823" y="85" width="411" height="40" rx="10" fill="#f57c00"/>
+  <rect x="823" y="110" width="411" height="15" fill="#f57c00"/>
+  <text x="1028" y="111" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">State File</text>
+  <text x="1028" y="172" text-anchor="middle" font-size="16" fill="#555">(terraform.tfstate)</text>
+  <!-- Terraform Core box -->
+  <rect x="343" y="360" width="594" height="114" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="343" y="360" width="594" height="40" rx="10" fill="url(#grad-accent)"/>
+  <rect x="343" y="385" width="594" height="15" fill="url(#grad-accent)"/>
+  <text x="640" y="387" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Terraform Core</text>
+  <text x="640" y="440" text-anchor="middle" font-size="16" fill="#555">(Resource Graph)</text>
+  <!-- Arrows -->
+  <line x1="412" y1="295" x2="548" y2="357" stroke="#1e88e5" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="1028" y1="217" x2="800" y2="357" stroke="#f57c00" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="503" y1="474" x2="343" y2="548" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="640" y1="474" x2="640" y2="548" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="777" y1="474" x2="937" y2="548" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <!-- Provider boxes -->
+  <rect x="229" y="548" width="228" height="76" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="343" y="594" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">AWS</text>
+  <rect x="526" y="548" width="228" height="76" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="594" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">GCP</text>
+  <rect x="823" y="548" width="228" height="76" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="937" y="594" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Azure</text>
+  <text x="640" y="650" text-anchor="middle" font-size="16" fill="#666">Providers (Plugins)</text>
 </svg>

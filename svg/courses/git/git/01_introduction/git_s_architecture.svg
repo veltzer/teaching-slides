@@ -1,22 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowGitArch" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="490.6667" y="36" width="256" height="144" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="618.6667" y="126" text-anchor="middle" font-size="27.7333" font-weight="bold">Commit</text>
-  <rect x="490.6667" y="288" width="256" height="144" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="618.6667" y="378" text-anchor="middle" font-size="27.7333" font-weight="bold">Tree</text>
-  <rect x="170.6667" y="558" width="234.6667" height="144" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="288" y="648" text-anchor="middle" font-size="27.7333" font-weight="bold">Blob (file)</text>
-  <rect x="512" y="558" width="234.6667" height="144" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="629.3333" y="648" text-anchor="middle" font-size="27.7333" font-weight="bold">Blob (file)</text>
-  <rect x="938.6667" y="36" width="234.6667" height="144" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="17.0667" />
-  <text x="1056" y="126" text-anchor="middle" font-size="27.7333" font-weight="bold">Tag</text>
-  <line x1="938.6667" y1="108" x2="750.9333" y2="108" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowGitArch)" />
-  <line x1="618.6667" y1="180" x2="618.6667" y2="280.8" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowGitArch)" />
-  <line x1="533.3333" y1="432" x2="352" y2="550.8" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowGitArch)" />
-  <line x1="661.3333" y1="432" x2="629.3333" y2="550.8" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowGitArch)" />
-  <text x="170.6667" y="126" text-anchor="middle" font-size="25.6" fill="#777">Object Store:</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="170" y="108" text-anchor="middle" font-size="20" fill="#777">Object Store:</text>
+  <!-- Commit box -->
+  <rect x="491" y="36" width="256" height="144" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="619" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">Commit</text>
+  <!-- Tree box -->
+  <rect x="491" y="288" width="256" height="144" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="619" y="370" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">Tree</text>
+  <!-- Blob boxes -->
+  <rect x="171" y="558" width="234" height="144" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="288" y="640" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Blob (file)</text>
+  <rect x="512" y="558" width="234" height="144" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="629" y="640" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Blob (file)</text>
+  <!-- Tag box -->
+  <rect x="939" y="36" width="234" height="144" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="1056" y="118" text-anchor="middle" font-size="22" font-weight="bold" fill="#7b1fa2">Tag</text>
+  <!-- Arrows -->
+  <line x1="939" y1="108" x2="751" y2="108" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="619" y1="180" x2="619" y2="281" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="533" y1="432" x2="352" y2="551" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="661" y1="432" x2="629" y2="551" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
 </svg>

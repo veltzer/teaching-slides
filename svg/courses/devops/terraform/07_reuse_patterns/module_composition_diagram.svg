@@ -1,28 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="16" refX="17.2308" refY="8" orient="auto">
-      <path d="M 0 0 L 0 16 L 19.6923 8 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="443.0769" y="26.6667" width="393.8462" height="106.6667" rx="9.8462" fill="#7b1fa2" stroke="#333" stroke-width="3.6923" />
-  <text x="640" y="93.3333" font-family="sans-serif" font-size="32" font-weight="bold" fill="#fff" text-anchor="middle">Root Module</text>
-  <line x1="640" y1="133.3333" x2="640" y2="213.3333" stroke="#555" stroke-width="3.6923" />
-  <line x1="123.0769" y1="213.3333" x2="1156.9231" y2="213.3333" stroke="#555" stroke-width="3.6923" />
-  <line x1="123.0769" y1="213.3333" x2="123.0769" y2="293.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <line x1="430.7692" y1="213.3333" x2="430.7692" y2="293.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <line x1="787.6923" y1="213.3333" x2="787.6923" y2="293.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <line x1="1156.9231" y1="213.3333" x2="1156.9231" y2="293.3333" stroke="#555" stroke-width="3.6923" marker-end="url(#arr)" />
-  <rect x="24.6154" y="293.3333" width="196.9231" height="133.3333" rx="9.8462" fill="#e3f2fd" stroke="#555" stroke-width="3.6923" />
-  <text x="123.0769" y="373.3333" font-family="sans-serif" font-size="32" font-weight="bold" fill="#222" text-anchor="middle">VPC</text>
-  <rect x="320" y="293.3333" width="196.9231" height="133.3333" rx="9.8462" fill="#e3f2fd" stroke="#555" stroke-width="3.6923" />
-  <text x="418.4615" y="373.3333" font-family="sans-serif" font-size="32" font-weight="bold" fill="#222" text-anchor="middle">SG</text>
-  <rect x="689.2308" y="293.3333" width="196.9231" height="133.3333" rx="9.8462" fill="#e8f5e9" stroke="#555" stroke-width="3.6923" />
-  <text x="787.6923" y="373.3333" font-family="sans-serif" font-size="32" font-weight="bold" fill="#222" text-anchor="middle">EC2</text>
-  <rect x="1058.4615" y="293.3333" width="196.9231" height="133.3333" rx="9.8462" fill="#e8f5e9" stroke="#555" stroke-width="3.6923" />
-  <text x="1156.9231" y="373.3333" font-family="sans-serif" font-size="32" font-weight="bold" fill="#222" text-anchor="middle">RDS</text>
-  <line x1="221.5385" y1="426.6667" x2="689.2308" y2="426.6667" stroke="#888" stroke-width="2.4615" stroke-dasharray="12.3077 7.3846" marker-end="url(#arr)" />
-  <line x1="516.9231" y1="413.3333" x2="689.2308" y2="413.3333" stroke="#888" stroke-width="2.4615" stroke-dasharray="12.3077 7.3846" marker-end="url(#arr)" />
-  <line x1="516.9231" y1="386.6667" x2="1058.4615" y2="386.6667" stroke="#888" stroke-width="2.4615" stroke-dasharray="12.3077 7.3846" marker-end="url(#arr)" />
-  <line x1="73.8462" y1="586.6667" x2="196.9231" y2="586.6667" stroke="#888" stroke-width="2.4615" stroke-dasharray="12.3077 7.3846" marker-end="url(#arr)" />
-  <text x="221.5385" y="600" font-family="sans-serif" font-size="27.0769" fill="#555">outputs flow between modules</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Root Module -->
+  <rect x="443" y="26" width="394" height="107" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="88" font-size="26" font-weight="bold" fill="#ffffff" text-anchor="middle">Root Module</text>
+  <!-- Branch lines -->
+  <line x1="640" y1="133" x2="640" y2="213" stroke="#555" stroke-width="3.5"/>
+  <line x1="123" y1="213" x2="1157" y2="213" stroke="#555" stroke-width="3.5"/>
+  <line x1="123" y1="213" x2="123" y2="293" stroke="#555" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="431" y1="213" x2="431" y2="293" stroke="#555" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="788" y1="213" x2="788" y2="293" stroke="#555" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <line x1="1157" y1="213" x2="1157" y2="293" stroke="#555" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <!-- Module boxes -->
+  <rect x="25" y="293" width="196" height="133" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="123" y="368" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">VPC</text>
+  <rect x="320" y="293" width="196" height="133" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="418" y="368" font-size="26" font-weight="bold" fill="#1565c0" text-anchor="middle">SG</text>
+  <rect x="689" y="293" width="196" height="133" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="787" y="368" font-size="26" font-weight="bold" fill="#2e7d32" text-anchor="middle">EC2</text>
+  <rect x="1059" y="293" width="196" height="133" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1157" y="368" font-size="26" font-weight="bold" fill="#2e7d32" text-anchor="middle">RDS</text>
+  <!-- Output flow arrows (dashed) -->
+  <line x1="221" y1="426" x2="689" y2="426" stroke="#888" stroke-width="2.5" stroke-dasharray="12 7" marker-end="url(#arrow)"/>
+  <line x1="516" y1="413" x2="689" y2="413" stroke="#888" stroke-width="2.5" stroke-dasharray="12 7" marker-end="url(#arrow)"/>
+  <line x1="516" y1="387" x2="1059" y2="387" stroke="#888" stroke-width="2.5" stroke-dasharray="12 7" marker-end="url(#arrow)"/>
+  <!-- Legend -->
+  <line x1="74" y1="580" x2="197" y2="580" stroke="#888" stroke-width="2.5" stroke-dasharray="12 7" marker-end="url(#arrow)"/>
+  <text x="222" y="586" font-size="20" fill="#555">outputs flow between modules</text>
 </svg>

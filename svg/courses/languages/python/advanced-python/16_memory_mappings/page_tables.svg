@@ -1,17 +1,43 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="128" y="130.9091" width="460.8" height="98.1818" fill="#e0e0ff" stroke="#000" stroke-width="5.12" />
-  <text x="358.4" y="196.3636" text-anchor="middle" font-family="sans-serif">Virtual Page Number</text>
-  <rect x="588.8" y="130.9091" width="460.8" height="98.1818" fill="#ffe0e0" stroke="#000" stroke-width="5.12" />
-  <text x="819.2" y="196.3636" text-anchor="middle" font-family="sans-serif">Offset</text>
-  <rect x="256" y="392.7273" width="640" height="130.9091" fill="#e0ffe0" stroke="#000" stroke-width="5.12" />
-  <text x="576" y="474.5455" text-anchor="middle" font-family="sans-serif">Page Table</text>
-  <rect x="256" y="589.0909" width="640" height="98.1818" fill="#fff0e0" stroke="#000" stroke-width="5.12" />
-  <text x="576" y="654.5455" text-anchor="middle" font-family="sans-serif">Physical Memory Frame</text>
-  <path d="M 358.4 229.0909 L 358.4 392.7273" stroke="#000" stroke-width="5.12" marker-end="url(#arrowhead2)" />
-  <path d="M 576 523.6364 L 576 589.0909" stroke="#000" stroke-width="5.12" marker-end="url(#arrowhead2)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead2" markerWidth="25.6" markerHeight="22.9091" refX="23.04" refY="11.4545" orient="auto">
-      <polygon points="0,32.7273 8.96,0" fill="#000" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Page Tables: Virtual to Physical Address Translation</text>
+  <!-- Virtual address split -->
+  <rect x="140" y="90" width="460" height="90" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="370" y="143" text-anchor="middle" font-size="20" fill="#333333" font-weight="bold">Virtual Page Number</text>
+  <rect x="610" y="90" width="460" height="90" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="840" y="143" text-anchor="middle" font-size="20" fill="#333333" font-weight="bold">Offset</text>
+  <!-- Virtual address label -->
+  <text x="640" y="76" text-anchor="middle" font-size="16" fill="#555555">Virtual Address</text>
+  <!-- Page table -->
+  <rect x="280" y="310" width="640" height="130" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="600" y="384" text-anchor="middle" font-size="22" fill="#333333" font-weight="bold">Page Table</text>
+  <text x="600" y="420" text-anchor="middle" font-size="16" fill="#555555">(Managed by Kernel)</text>
+  <!-- Physical frame -->
+  <rect x="280" y="520" width="640" height="100" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="600" y="578" text-anchor="middle" font-size="22" fill="#555555" font-weight="bold">Physical Memory Frame</text>
+  <!-- Arrows -->
+  <line x1="370" y1="180" x2="500" y2="310" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="600" y1="440" x2="600" y2="520" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Note -->
+  <rect x="140" y="650" width="1000" height="48" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="680" text-anchor="middle" font-size="16" fill="#1565c0">TLB (Translation Lookaside Buffer) caches recent page table lookups for speed</text>
 </svg>

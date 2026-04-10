@@ -1,20 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="22.069" y="37.8947" width="551.7241" height="136.4211" rx="8.8276" fill="#1565c0" stroke="#333" stroke-width="3.3103" />
-  <text x="297.931" y="125.0526" font-family="sans-serif" font-size="28.6897" font-weight="bold" fill="#fff" text-anchor="middle">Terraform Config</text>
-  <rect x="706.2069" y="37.8947" width="551.7241" height="136.4211" rx="8.8276" fill="#c62828" stroke="#333" stroke-width="3.3103" />
-  <text x="982.069" y="125.0526" font-family="sans-serif" font-size="28.6897" font-weight="bold" fill="#fff" text-anchor="middle">Actual Infrastructure</text>
-  <rect x="22.069" y="208.4211" width="551.7241" height="208.4211" rx="0" fill="#e3f2fd" stroke="#aaa" stroke-width="1.7655" />
-  <text x="44.1379" y="280.4211" font-family="sans-serif" font-size="26.4828" font-weight="bold" fill="#222">instance_type:</text>
-  <text x="66.2069" y="363.7895" font-family="monospace" font-size="28.6897" fill="#1565c0">t3.micro</text>
-  <rect x="706.2069" y="208.4211" width="551.7241" height="208.4211" rx="0" fill="#ffebee" stroke="#aaa" stroke-width="1.7655" />
-  <text x="728.2759" y="280.4211" font-family="sans-serif" font-size="26.4828" font-weight="bold" fill="#222">instance_type:</text>
-  <text x="750.3448" y="363.7895" font-family="monospace" font-size="28.6897" fill="#c62828">t3.large</text>
-  <text x="1059.3103" y="363.7895" font-family="sans-serif" font-size="24.2759" fill="#c62828">← changed manually</text>
-  <rect x="22.069" y="435.7895" width="551.7241" height="246.3158" rx="0" fill="#e3f2fd" stroke="#aaa" stroke-width="1.7655" />
-  <text x="44.1379" y="507.7895" font-family="sans-serif" font-size="26.4828" font-weight="bold" fill="#222">tags:</text>
-  <text x="66.2069" y="583.5789" font-family="monospace" font-size="26.4828" fill="#1565c0">Name: web</text>
-  <rect x="706.2069" y="435.7895" width="551.7241" height="246.3158" rx="0" fill="#ffebee" stroke="#aaa" stroke-width="1.7655" />
-  <text x="728.2759" y="507.7895" font-family="sans-serif" font-size="26.4828" font-weight="bold" fill="#222">tags:</text>
-  <text x="750.3448" y="583.5789" font-family="monospace" font-size="26.4828" fill="#c62828">Name: web-prod</text>
-  <text x="1059.3103" y="648" font-family="sans-serif" font-size="24.2759" fill="#c62828">← changed manually</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Terraform Config header -->
+  <rect x="22" y="38" width="552" height="136" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="298" y="123" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Terraform Config</text>
+  <!-- Actual Infrastructure header -->
+  <rect x="706" y="38" width="552" height="136" rx="10" fill="#c62828" stroke="#b71c1c" stroke-width="2" filter="url(#shadow)"/>
+  <text x="982" y="123" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Actual Infrastructure</text>
+  <!-- Left content: instance_type -->
+  <rect x="22" y="208" width="552" height="210" rx="0" fill="#e3f2fd" stroke="#bbb" stroke-width="1.5"/>
+  <text x="44" y="276" font-size="20" font-weight="bold" fill="#222">instance_type:</text>
+  <text x="66" y="362" font-family="monospace" font-size="22" fill="#1565c0">t3.micro</text>
+  <!-- Right content: instance_type -->
+  <rect x="706" y="208" width="552" height="210" rx="0" fill="#ffebee" stroke="#bbb" stroke-width="1.5"/>
+  <text x="728" y="276" font-size="20" font-weight="bold" fill="#222">instance_type:</text>
+  <text x="750" y="362" font-family="monospace" font-size="22" fill="#c62828">t3.large</text>
+  <text x="1060" y="362" font-size="18" fill="#c62828">← changed manually</text>
+  <!-- Left content: tags -->
+  <rect x="22" y="436" width="552" height="248" rx="0" fill="#e3f2fd" stroke="#bbb" stroke-width="1.5"/>
+  <text x="44" y="504" font-size="20" font-weight="bold" fill="#222">tags:</text>
+  <text x="66" y="578" font-family="monospace" font-size="20" fill="#1565c0">Name: web</text>
+  <!-- Right content: tags -->
+  <rect x="706" y="436" width="552" height="248" rx="0" fill="#ffebee" stroke="#bbb" stroke-width="1.5"/>
+  <text x="728" y="504" font-size="20" font-weight="bold" fill="#222">tags:</text>
+  <text x="750" y="578" font-family="monospace" font-size="20" fill="#c62828">Name: web-prod</text>
+  <text x="1060" y="648" font-size="18" fill="#c62828">← changed manually</text>
 </svg>

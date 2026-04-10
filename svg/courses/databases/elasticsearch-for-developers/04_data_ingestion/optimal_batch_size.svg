@@ -1,10 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="86.4" text-anchor="middle" font-weight="bold">Batch Size vs Performance</text>
-  <line x1="160" y1="576" x2="1120" y2="576" stroke="#333" stroke-width="5.76" />
-  <line x1="160" y1="576" x2="160" y2="144" stroke="#333" stroke-width="5.76" />
-  <path d="M 160 518.4 Q 480 288 800 230.4 T 1120 259.2" stroke="#4CAF50" stroke-width="8.64" fill="none" />
-  <text x="640" y="662.4" text-anchor="middle">Batch Size (MB)</text>
-  <text x="96" y="360" text-anchor="middle" transform="rotate(-90 30 125)">Throughput</text>
-  <circle cx="640" cy="244.8" r="14.4" fill="#FF0000" />
-  <text x="640" y="201.6" text-anchor="middle" font-size="34.56">5-15 MB</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Batch Size vs Performance</text>
+  <!-- Chart area -->
+  <line x1="140" y1="560" x2="1140" y2="560" stroke="#333333" stroke-width="4"/>
+  <line x1="140" y1="560" x2="140" y2="120" stroke="#333333" stroke-width="4"/>
+  <!-- Curve -->
+  <path d="M 140 500 Q 440 240 700 200 T 1140 230" stroke="#1565c0" stroke-width="6" fill="none"/>
+  <!-- Axis labels -->
+  <text x="640" y="620" text-anchor="middle" font-size="20" fill="#333333">Batch Size (MB)</text>
+  <text x="60" y="340" text-anchor="middle" font-size="20" fill="#333333" transform="rotate(-90 60 340)">Throughput</text>
+  <!-- Optimal point -->
+  <circle cx="640" cy="204" r="16" fill="#e53935"/>
+  <text x="640" y="174" text-anchor="middle" font-size="28" font-weight="bold" fill="#e53935">5-15 MB</text>
+  <text x="640" y="148" text-anchor="middle" font-size="18" fill="#555555">Optimal range</text>
+  <!-- X axis ticks -->
+  <text x="240" y="590" text-anchor="middle" font-size="16" fill="#555555">1 MB</text>
+  <text x="480" y="590" text-anchor="middle" font-size="16" fill="#555555">5 MB</text>
+  <text x="720" y="590" text-anchor="middle" font-size="16" fill="#555555">15 MB</text>
+  <text x="960" y="590" text-anchor="middle" font-size="16" fill="#555555">50 MB</text>
+  <!-- Note -->
+  <rect x="140" y="640" width="1000" height="48" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="670" text-anchor="middle" font-size="16" fill="#1565c0">Too small: high overhead. Too large: GC pressure, timeouts. Start with 5-15 MB and tune.</text>
 </svg>

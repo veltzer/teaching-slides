@@ -1,31 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="18.2857" markerHeight="12.6" refX="16.4571" refY="6.3" orient="auto">
-      <polygon points="0,18 6.4,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrl" markerWidth="18.2857" markerHeight="12.6" refX="1.8286" refY="6.3" orient="auto">
-      <polygon points="0,0 6.4,18" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="39.6" text-anchor="middle" font-size="25.2" fill="#222222" font-weight="bold">Blue-Green Deployment with Packer</text>
-  <text x="36.5714" y="81" text-anchor="start" font-size="23.4" fill="#222222" font-weight="bold">Phase 1: Build new AMI</text>
-  <text x="54.8571" y="109.8" text-anchor="start" font-size="21.6" fill="#444">Packer build → AMI v2</text>
-  <text x="36.5714" y="145.8" text-anchor="start" font-size="23.4" fill="#222222" font-weight="bold">Phase 2: Deploy alongside old</text>
-  <text x="54.8571" y="174.6" text-anchor="start" font-size="21.6" fill="#444">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
-  <text x="36.5714" y="210.6" text-anchor="start" font-size="23.4" fill="#222222" font-weight="bold">Phase 3: Switch traffic</text>
-  <text x="54.8571" y="239.4" text-anchor="start" font-size="21.6" fill="#444">Update ALB target group to new ASG</text>
-  <text x="36.5714" y="275.4" text-anchor="start" font-size="23.4" fill="#222222" font-weight="bold">Phase 4: Cleanup</text>
-  <text x="54.8571" y="304.2" text-anchor="start" font-size="21.6" fill="#444">Terminate old ASG</text>
-  <text x="292.5714" y="417.6" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">Before</text>
-  <rect x="146.2857" y="450" width="292.5714" height="81" fill="#e3f2fd" stroke="#333333" stroke-width="2.7" rx="7.2" />
-  <text x="292.5714" y="496.8" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">ALB</text>
-  <line x1="292.5714" y1="531" x2="292.5714" y2="621" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
-  <rect x="146.2857" y="621" width="292.5714" height="81" fill="#fff3e0" stroke="#333333" stroke-width="2.7" rx="7.2" />
-  <text x="292.5714" y="667.8" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">ASG v1</text>
-  <text x="841.1429" y="417.6" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">After</text>
-  <rect x="694.8571" y="450" width="292.5714" height="81" fill="#e3f2fd" stroke="#333333" stroke-width="2.7" rx="7.2" />
-  <text x="841.1429" y="496.8" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">ALB</text>
-  <line x1="841.1429" y1="531" x2="841.1429" y2="621" stroke="#555" stroke-width="2.7" marker-end="url(#arr)" />
-  <rect x="694.8571" y="621" width="292.5714" height="81" fill="#e8f5e9" stroke="#333333" stroke-width="2.7" rx="7.2" />
-  <text x="841.1429" y="667.8" text-anchor="middle" font-size="23.4" fill="#222222" font-weight="bold">ASG v2</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Phase text -->
+  <text x="36" y="54" text-anchor="start" font-size="20" fill="#222" font-weight="bold">Phase 1: Build new AMI</text>
+  <text x="55" y="84" text-anchor="start" font-size="18" fill="#444">Packer build → AMI v2</text>
+  <text x="36" y="120" text-anchor="start" font-size="20" fill="#222" font-weight="bold">Phase 2: Deploy alongside old</text>
+  <text x="55" y="150" text-anchor="start" font-size="18" fill="#444">Terraform creates new ASG with AMI v2; old ASG (AMI v1) still running</text>
+  <text x="36" y="186" text-anchor="start" font-size="20" fill="#222" font-weight="bold">Phase 3: Switch traffic</text>
+  <text x="55" y="216" text-anchor="start" font-size="18" fill="#444">Update ALB target group to new ASG</text>
+  <text x="36" y="252" text-anchor="start" font-size="20" fill="#222" font-weight="bold">Phase 4: Cleanup</text>
+  <text x="55" y="282" text-anchor="start" font-size="18" fill="#444">Terminate old ASG</text>
+  <!-- Before diagram -->
+  <text x="293" y="380" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">Before</text>
+  <rect x="147" y="412" width="292" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
+  <text x="293" y="458" text-anchor="middle" font-size="20" fill="#1565c0" font-weight="bold">ALB</text>
+  <line x1="293" y1="492" x2="293" y2="560" stroke="#555" stroke-width="2.7" marker-end="url(#arrow)"/>
+  <rect x="147" y="560" width="292" height="80" fill="#fff8e1" stroke="#f57c00" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
+  <text x="293" y="606" text-anchor="middle" font-size="20" fill="#e65100" font-weight="bold">ASG v1</text>
+  <!-- After diagram -->
+  <text x="841" y="380" text-anchor="middle" font-size="20" fill="#222" font-weight="bold">After</text>
+  <rect x="695" y="412" width="292" height="80" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
+  <text x="841" y="458" text-anchor="middle" font-size="20" fill="#1565c0" font-weight="bold">ALB</text>
+  <line x1="841" y1="492" x2="841" y2="560" stroke="#555" stroke-width="2.7" marker-end="url(#arrow)"/>
+  <rect x="695" y="560" width="292" height="80" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.7" rx="8" filter="url(#shadow)"/>
+  <text x="841" y="606" text-anchor="middle" font-size="20" fill="#2e7d32" font-weight="bold">ASG v2</text>
 </svg>

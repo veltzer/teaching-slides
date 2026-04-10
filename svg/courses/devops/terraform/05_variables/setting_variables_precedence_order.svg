@@ -1,17 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <text x="640" y="42.0779" font-size="28" font-weight="bold" fill="#222" text-anchor="middle">Terraform Variable Priority (Highest → Lowest)</text>
-  <text x="20" y="98.1818" font-size="22" fill="#c00" text-anchor="start">▲ Highest priority (wins)</text>
-  <rect x="60" y="116.8831" width="1160" height="84.1558" fill="#c62828" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="172.987" font-size="26" font-weight="bold" fill="#fff" text-anchor="start">1. -var flag on command line</text>
-  <rect x="60" y="205.7143" width="1160" height="84.1558" fill="#e53935" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="261.8182" font-size="26" font-weight="bold" fill="#fff" text-anchor="start">2. -var-file flag on command line</text>
-  <rect x="60" y="294.5455" width="1160" height="84.1558" fill="#ef5350" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="350.6494" font-size="26" font-weight="bold" fill="#fff" text-anchor="start">3. *.auto.tfvars files (alphabetical)</text>
-  <rect x="60" y="383.3766" width="1160" height="84.1558" fill="#e57373" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="439.4805" font-size="26" font-weight="bold" fill="#222" text-anchor="start">4. terraform.tfvars</text>
-  <rect x="60" y="472.2078" width="1160" height="84.1558" fill="#ef9a9a" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="528.3117" font-size="26" font-weight="bold" fill="#222" text-anchor="start">5. TF_VAR_ environment variables</text>
-  <rect x="60" y="561.039" width="1160" height="84.1558" fill="#ffcdd2" stroke="#333" stroke-width="3" rx="8" />
-  <text x="100" y="617.1429" font-size="26" font-weight="bold" fill="#222" text-anchor="start">6. Variable defaults in configuration</text>
-  <text x="20" y="677.9221" font-size="22" fill="#666" text-anchor="start">▼ Lowest priority</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="38" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">Terraform Variable Priority (Highest to Lowest)</text>
+  <text x="20" y="86" font-size="18" fill="#c62828" text-anchor="start">Highest priority (wins)</text>
+  <rect x="60" y="102" width="1160" height="78" fill="#c62828" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="151" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="start">1. -var flag on command line</text>
+  <rect x="60" y="188" width="1160" height="78" fill="#e53935" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="237" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="start">2. -var-file flag on command line</text>
+  <rect x="60" y="274" width="1160" height="78" fill="#ef5350" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="323" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="start">3. *.auto.tfvars files (alphabetical)</text>
+  <rect x="60" y="360" width="1160" height="78" fill="#e57373" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="409" font-size="22" font-weight="bold" fill="#222" text-anchor="start">4. terraform.tfvars</text>
+  <rect x="60" y="446" width="1160" height="78" fill="#ef9a9a" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="495" font-size="22" font-weight="bold" fill="#222" text-anchor="start">5. TF_VAR_ environment variables</text>
+  <rect x="60" y="532" width="1160" height="78" fill="#ffcdd2" stroke="#b71c1c" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="100" y="581" font-size="22" font-weight="bold" fill="#222" text-anchor="start">6. Variable defaults in configuration</text>
+  <text x="20" y="638" font-size="18" fill="#666" text-anchor="start">Lowest priority</text>
 </svg>

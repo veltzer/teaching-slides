@@ -1,28 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
-  <rect x="30.4762" y="120" width="182.8571" height="240" fill="#e3f2fd" stroke="#333" stroke-width="4.5714" />
-  <rect x="213.3333" y="120" width="182.8571" height="240" fill="#e8f5e9" stroke="#333" stroke-width="4.5714" />
-  <rect x="396.1905" y="120" width="182.8571" height="240" fill="#fff3e0" stroke="#333" stroke-width="4.5714" />
-  <rect x="579.0476" y="120" width="182.8571" height="240" fill="#fce4ec" stroke="#333" stroke-width="4.5714" />
-  <rect x="761.9048" y="120" width="182.8571" height="240" fill="#ede7f6" stroke="#333" stroke-width="4.5714" />
-  <rect x="944.7619" y="120" width="182.8571" height="240" fill="#e0f7fa" stroke="#333" stroke-width="4.5714" />
-  <text x="121.9048" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">P</text>
-  <text x="304.7619" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">y</text>
-  <text x="487.619" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">t</text>
-  <text x="670.4762" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">h</text>
-  <text x="853.3333" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">o</text>
-  <text x="1036.1905" y="276" font-size="54.8571" font-weight="bold" fill="#222" text-anchor="middle">n</text>
-  <text x="121.9048" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">0</text>
-  <text x="304.7619" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">1</text>
-  <text x="487.619" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">2</text>
-  <text x="670.4762" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">3</text>
-  <text x="853.3333" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">4</text>
-  <text x="1036.1905" y="450" font-size="36.5714" fill="#1565c0" text-anchor="middle">5</text>
-  <text x="121.9048" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-6</text>
-  <text x="304.7619" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-5</text>
-  <text x="487.619" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-4</text>
-  <text x="670.4762" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-3</text>
-  <text x="853.3333" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-2</text>
-  <text x="1036.1905" y="552" font-size="36.5714" fill="#c62828" text-anchor="middle">-1</text>
-  <text x="30.4762" y="672" font-size="33.5238" fill="#1565c0" font-family="sans-serif">■ positive index</text>
-  <text x="426.6667" y="672" font-size="33.5238" fill="#c62828" font-family="sans-serif">■ negative index</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">String Indexing: "Python"</text>
+  <!-- Character cells -->
+  <rect x="30" y="100" width="190" height="200" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5"/>
+  <rect x="224" y="100" width="190" height="200" rx="4" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <rect x="418" y="100" width="190" height="200" rx="4" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5"/>
+  <rect x="612" y="100" width="190" height="200" rx="4" fill="#fce4ec" stroke="#e53935" stroke-width="2.5"/>
+  <rect x="806" y="100" width="190" height="200" rx="4" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2.5"/>
+  <rect x="1000" y="100" width="190" height="200" rx="4" fill="#e0f7fa" stroke="#00838f" stroke-width="2.5"/>
+  <!-- Characters -->
+  <text x="125" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">P</text>
+  <text x="319" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">y</text>
+  <text x="513" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">t</text>
+  <text x="707" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">h</text>
+  <text x="901" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">o</text>
+  <text x="1095" y="230" font-size="60" font-weight="bold" fill="#222222" text-anchor="middle" font-family="monospace">n</text>
+  <!-- Positive indices -->
+  <text x="125" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">0</text>
+  <text x="319" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">1</text>
+  <text x="513" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">2</text>
+  <text x="707" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">3</text>
+  <text x="901" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">4</text>
+  <text x="1095" y="360" font-size="34" fill="#1565c0" text-anchor="middle" font-weight="bold">5</text>
+  <!-- Negative indices -->
+  <text x="125" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-6</text>
+  <text x="319" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-5</text>
+  <text x="513" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-4</text>
+  <text x="707" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-3</text>
+  <text x="901" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-2</text>
+  <text x="1095" y="460" font-size="34" fill="#c62828" text-anchor="middle" font-weight="bold">-1</text>
+  <!-- Legend -->
+  <text x="30" y="560" font-size="26" fill="#1565c0" font-weight="bold">&#x25A0; positive index</text>
+  <text x="440" y="560" font-size="26" fill="#c62828" font-weight="bold">&#x25A0; negative index</text>
+  <!-- Example -->
+  <rect x="30" y="590" width="1200" height="52" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="622" text-anchor="middle" font-size="18" fill="#333333" font-family="monospace">s = "Python"  |  s[0] == 'P'  |  s[-1] == 'n'  |  s[1:4] == 'yth'</text>
 </svg>

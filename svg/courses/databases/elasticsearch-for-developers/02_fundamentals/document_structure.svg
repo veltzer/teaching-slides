@@ -1,10 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="320" y="120" width="640" height="480" fill="#f0f0f0" stroke="#333" stroke-width="4.8" rx="12" />
-  <text x="640" y="192" text-anchor="middle" font-weight="bold">Document</text>
-  <rect x="384" y="240" width="512" height="72" fill="#4CAF50" rx="7.2" />
-  <text x="640" y="288" text-anchor="middle" fill="white">_id: "123"</text>
-  <rect x="384" y="336" width="512" height="72" fill="#2196F3" rx="7.2" />
-  <text x="640" y="384" text-anchor="middle" fill="white">_index: "products"</text>
-  <rect x="384" y="432" width="512" height="120" fill="#FF9800" rx="7.2" />
-  <text x="640" y="480" text-anchor="middle" fill="white">_source: {data}</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Document Structure</text>
+  <!-- Document container -->
+  <rect x="320" y="80" width="640" height="520" rx="12" fill="#f5f5f5" stroke="#555555" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="144" text-anchor="middle" font-size="22" font-weight="bold" fill="#333333">Document</text>
+  <!-- Metadata fields -->
+  <rect x="380" y="164" width="520" height="80" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="640" y="210" text-anchor="middle" font-size="22" fill="#2e7d32" font-family="monospace">_id: "123"</text>
+  <rect x="380" y="264" width="520" height="80" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="640" y="310" text-anchor="middle" font-size="22" fill="#1565c0" font-family="monospace">_index: "products"</text>
+  <rect x="380" y="364" width="520" height="160" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="2"/>
+  <text x="640" y="430" text-anchor="middle" font-size="22" fill="#795548" font-family="monospace">_source: {</text>
+  <text x="640" y="466" text-anchor="middle" font-size="20" fill="#555555" font-family="monospace">  "name": "Widget",</text>
+  <text x="640" y="502" text-anchor="middle" font-size="20" fill="#555555" font-family="monospace">  "price": 29.99</text>
+  <text x="640" y="538" text-anchor="middle" font-size="22" fill="#795548" font-family="monospace">}</text>
+  <!-- Note -->
+  <rect x="180" y="636" width="920" height="48" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="666" text-anchor="middle" font-size="16" fill="#1565c0">All documents are JSON. Meta-fields start with underscore (_id, _index, _source)</text>
 </svg>

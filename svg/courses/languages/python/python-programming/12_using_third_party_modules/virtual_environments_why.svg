@@ -1,13 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <text x="25.6" y="93.1765" font-size="35.84" font-weight="bold" fill="#c62828">Dependency Conflict Problem:</text>
-  <rect x="25.6" y="148.2353" width="512" height="169.4118" fill="#fce4ec" stroke="#c62828" stroke-width="3.84" rx="10.24" />
-  <text x="281.6" y="220.2353" font-size="33.28" fill="#222" text-anchor="middle">Project A</text>
-  <text x="281.6" y="288" font-size="30.72" fill="#c62828" text-anchor="middle">requests==2.28</text>
-  <rect x="588.8" y="148.2353" width="512" height="169.4118" fill="#fce4ec" stroke="#c62828" stroke-width="3.84" rx="10.24" />
-  <text x="844.8" y="220.2353" font-size="33.28" fill="#222" text-anchor="middle">Project B</text>
-  <text x="844.8" y="288" font-size="30.72" fill="#c62828" text-anchor="middle">requests==2.31</text>
-  <rect x="307.2" y="423.5294" width="512" height="169.4118" fill="#ffebee" stroke="#c62828" stroke-width="5.12" rx="10.24" stroke-dasharray="10.24 7.68" />
-  <text x="563.2" y="491.2941" font-size="33.28" fill="#c62828" text-anchor="middle">System Python</text>
-  <text x="563.2" y="563.2941" font-size="30.72" fill="#c62828" text-anchor="middle">??? conflict!</text>
-  <text x="25.6" y="686.1176" font-size="30.72" fill="#2e7d32">💡 Solution: Use virtual environments (venv) to isolate dependencies per project</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="30" y="52" font-size="30" font-weight="bold" fill="#c62828">Dependency Conflict Problem:</text>
+  <!-- Project A -->
+  <rect x="30" y="100" width="520" height="160" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="290" y="168" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">Project A</text>
+  <text x="290" y="224" font-size="24" fill="#c62828" text-anchor="middle" font-family="monospace">requests==2.28</text>
+  <!-- Project B -->
+  <rect x="600" y="100" width="520" height="160" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="860" y="168" font-size="28" fill="#333333" text-anchor="middle" font-weight="bold">Project B</text>
+  <text x="860" y="224" font-size="24" fill="#c62828" text-anchor="middle" font-family="monospace">requests==2.31</text>
+  <!-- System Python -->
+  <rect x="314" y="350" width="520" height="160" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="4" stroke-dasharray="10 7" filter="url(#shadow)"/>
+  <text x="574" y="420" font-size="28" fill="#c62828" text-anchor="middle" font-weight="bold">System Python</text>
+  <text x="574" y="468" font-size="24" fill="#c62828" text-anchor="middle">??? conflict!</text>
+  <!-- Solution -->
+  <rect x="30" y="554" width="1220" height="84" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="640" y="590" text-anchor="middle" font-size="20" fill="#2e7d32" font-weight="bold">Solution: Use virtual environments (venv) to isolate dependencies per project</text>
+  <text x="640" y="622" text-anchor="middle" font-size="17" fill="#555555">python -m venv myenv  |  source myenv/bin/activate  |  pip install requests==2.28</text>
 </svg>

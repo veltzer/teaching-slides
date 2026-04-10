@@ -1,17 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="25.6" markerHeight="45.8182" refX="23.04" refY="22.9091" orient="auto">
-      <polygon points="0,65.4545 8.96,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="25.6" y="130.9091" width="332.8" height="235.6364" fill="#fce4ec" stroke="#333" stroke-width="3.84" rx="10.24" />
-  <text x="192" y="281.4545" font-size="33.28" font-weight="bold" fill="#c62828" text-anchor="middle">CPU-bound task</text>
-  <line x1="358.4" y1="248.7273" x2="399.36" y2="248.7273" stroke="#555" stroke-width="3.84" marker-end="url(#arr)" />
-  <rect x="404.48" y="130.9091" width="409.6" height="235.6364" fill="#e3f2fd" stroke="#333" stroke-width="3.84" rx="10.24" />
-  <text x="609.28" y="281.4545" font-size="33.28" fill="#1565c0" text-anchor="middle">multiprocessing</text>
-  <rect x="25.6" y="432" width="332.8" height="235.6364" fill="#e8f5e9" stroke="#333" stroke-width="3.84" rx="10.24" />
-  <text x="192" y="582.5455" font-size="33.28" font-weight="bold" fill="#2e7d32" text-anchor="middle">I/O-bound task</text>
-  <line x1="358.4" y1="549.8182" x2="399.36" y2="549.8182" stroke="#555" stroke-width="3.84" marker-end="url(#arr)" />
-  <rect x="404.48" y="432" width="588.8" height="235.6364" fill="#e3f2fd" stroke="#333" stroke-width="3.84" rx="10.24" />
-  <text x="698.88" y="582.5455" font-size="33.28" fill="#1565c0" text-anchor="middle">threading  or  asyncio</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Threading and the GIL</text>
+  <!-- CPU-bound -->
+  <rect x="30" y="80" width="340" height="210" rx="10" fill="#fce4ec" stroke="#c62828" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="200" y="200" font-size="28" font-weight="bold" fill="#c62828" text-anchor="middle">CPU-bound task</text>
+  <text x="200" y="240" font-size="18" fill="#555555" text-anchor="middle">Heavy computation</text>
+  <text x="200" y="268" font-size="18" fill="#555555" text-anchor="middle">Number crunching</text>
+  <line x1="370" y1="185" x2="420" y2="185" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="424" y="80" width="400" height="210" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="624" y="185" font-size="26" fill="#1565c0" text-anchor="middle" font-weight="bold">multiprocessing</text>
+  <text x="624" y="220" font-size="17" fill="#555555" text-anchor="middle">Bypasses GIL entirely</text>
+  <text x="624" y="250" font-size="17" fill="#555555" text-anchor="middle">True parallelism</text>
+  <!-- I/O-bound -->
+  <rect x="30" y="340" width="340" height="210" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="200" y="455" font-size="28" font-weight="bold" fill="#2e7d32" text-anchor="middle">I/O-bound task</text>
+  <text x="200" y="495" font-size="18" fill="#555555" text-anchor="middle">Network, disk, DB</text>
+  <line x1="370" y1="445" x2="420" y2="445" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="424" y="340" width="580" height="210" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="714" y="445" font-size="26" fill="#1565c0" text-anchor="middle" font-weight="bold">threading  or  asyncio</text>
+  <text x="714" y="480" font-size="17" fill="#555555" text-anchor="middle">GIL released during I/O waits</text>
+  <!-- GIL explanation -->
+  <rect x="30" y="590" width="1220" height="80" rx="8" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="622" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">GIL: Global Interpreter Lock</text>
+  <text x="640" y="654" text-anchor="middle" font-size="16" fill="#555555">Allows only one thread to execute Python bytecode at a time. Released during I/O system calls.</text>
 </svg>

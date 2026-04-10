@@ -1,31 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="57.6" text-anchor="middle" font-size="25.6" font-weight="bold">ip Command Hierarchy</text>
-  <rect x="480" y="90" width="320" height="108" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="6.4" />
-  <text x="640" y="162" text-anchor="middle" font-size="25.6" font-weight="bold">ip</text>
-  <rect x="42.6667" y="270" width="192" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="138.6667" y="342" text-anchor="middle" font-size="21.3333">ip addr</text>
-  <rect x="256" y="270" width="192" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="352" y="342" text-anchor="middle" font-size="21.3333">ip link</text>
-  <rect x="469.3333" y="270" width="192" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="565.3333" y="342" text-anchor="middle" font-size="21.3333">ip route</text>
-  <rect x="682.6667" y="270" width="192" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="778.6667" y="342" text-anchor="middle" font-size="21.3333">ip neigh</text>
-  <rect x="896" y="270" width="192" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="992" y="342" text-anchor="middle" font-size="21.3333">ip netns</text>
-  <line x1="640" y1="198" x2="138.6667" y2="270" stroke="#333" stroke-width="2.1333" />
-  <line x1="640" y1="198" x2="352" y2="270" stroke="#333" stroke-width="2.1333" />
-  <line x1="640" y1="198" x2="565.3333" y2="270" stroke="#333" stroke-width="2.1333" />
-  <line x1="640" y1="198" x2="778.6667" y2="270" stroke="#333" stroke-width="2.1333" />
-  <line x1="640" y1="198" x2="992" y2="270" stroke="#333" stroke-width="2.1333" />
-  <text x="138.6667" y="439.2" text-anchor="middle" font-size="21.3333" fill="#666">show/add/del</text>
-  <text x="138.6667" y="478.8" text-anchor="middle" font-size="21.3333" fill="#666">IP addresses</text>
-  <text x="352" y="439.2" text-anchor="middle" font-size="21.3333" fill="#666">set up/down</text>
-  <text x="352" y="478.8" text-anchor="middle" font-size="21.3333" fill="#666">MTU, flags</text>
-  <text x="565.3333" y="439.2" text-anchor="middle" font-size="21.3333" fill="#666">show/add/del</text>
-  <text x="565.3333" y="478.8" text-anchor="middle" font-size="21.3333" fill="#666">routing table</text>
-  <text x="778.6667" y="439.2" text-anchor="middle" font-size="21.3333" fill="#666">ARP/NDP</text>
-  <text x="778.6667" y="478.8" text-anchor="middle" font-size="21.3333" fill="#666">neighbors</text>
-  <text x="992" y="439.2" text-anchor="middle" font-size="21.3333" fill="#666">network</text>
-  <text x="992" y="478.8" text-anchor="middle" font-size="21.3333" fill="#666">namespaces</text>
-  <text x="640" y="594" text-anchor="middle" font-size="21.3333" fill="#666">Replaces: ifconfig, route, arp, netstat</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Root ip box -->
+  <rect x="480" y="80" width="320" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="143" text-anchor="middle" font-size="30" font-weight="bold" fill="#ffffff">ip</text>
+  <!-- Sub-command boxes -->
+  <rect x="42" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="140" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip addr</text>
+  <rect x="256" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="354" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip link</text>
+  <rect x="470" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="568" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip route</text>
+  <rect x="684" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="782" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip neigh</text>
+  <rect x="898" y="250" width="196" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="996" y="308" text-anchor="middle" font-size="19" fill="#0d47a1">ip netns</text>
+  <!-- Lines from root to sub-boxes -->
+  <line x1="640" y1="180" x2="140" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="640" y1="180" x2="354" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="640" y1="180" x2="568" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="640" y1="180" x2="782" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="640" y1="180" x2="996" y2="250" stroke="#aaaaaa" stroke-width="1.5"/>
+  <!-- Descriptions -->
+  <text x="140" y="394" text-anchor="middle" font-size="16" fill="#777777">show/add/del</text>
+  <text x="140" y="420" text-anchor="middle" font-size="16" fill="#777777">IP addresses</text>
+  <text x="354" y="394" text-anchor="middle" font-size="16" fill="#777777">set up/down</text>
+  <text x="354" y="420" text-anchor="middle" font-size="16" fill="#777777">MTU, flags</text>
+  <text x="568" y="394" text-anchor="middle" font-size="16" fill="#777777">show/add/del</text>
+  <text x="568" y="420" text-anchor="middle" font-size="16" fill="#777777">routing table</text>
+  <text x="782" y="394" text-anchor="middle" font-size="16" fill="#777777">ARP/NDP</text>
+  <text x="782" y="420" text-anchor="middle" font-size="16" fill="#777777">neighbors</text>
+  <text x="996" y="394" text-anchor="middle" font-size="16" fill="#777777">network</text>
+  <text x="996" y="420" text-anchor="middle" font-size="16" fill="#777777">namespaces</text>
+  <text x="640" y="570" text-anchor="middle" font-size="18" fill="#777777">Replaces: ifconfig, route, arp, netstat</text>
 </svg>

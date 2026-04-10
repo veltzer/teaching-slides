@@ -1,17 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Validation Layers</text>
-  <rect x="240" y="198" width="288" height="90" fill="#E74C3C" rx="8" />
-  <text x="384" y="252" text-anchor="middle" fill="white" font-size="19.2">Frontend Validation</text>
-  <text x="384" y="279" text-anchor="middle" fill="white" font-size="16">User experience</text>
-  <rect x="576" y="198" width="288" height="90" fill="#F39C12" rx="8" />
-  <text x="720" y="252" text-anchor="middle" fill="white" font-size="19.2">API Validation</text>
-  <text x="720" y="279" text-anchor="middle" fill="white" font-size="16">Security layer</text>
-  <rect x="912" y="198" width="208" height="90" fill="#3498DB" rx="8" />
-  <text x="1016" y="252" text-anchor="middle" fill="white" font-size="19.2">DB Constraints</text>
-  <text x="1016" y="279" text-anchor="middle" fill="white" font-size="16">Final protection</text>
-  <rect x="240" y="360" width="800" height="180" fill="#34495E" rx="8" />
-  <text x="640" y="414" text-anchor="middle" fill="white" font-size="22.4">Never Trust User Input</text>
-  <text x="640" y="459" text-anchor="middle" fill="white" font-size="19.2">• Validate type, length, format</text>
-  <text x="640" y="495" text-anchor="middle" fill="white" font-size="19.2">• Sanitize special characters</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Three layers -->
+  <rect x="80" y="80" width="340" height="200" rx="12" fill="#ffebee" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="80" width="340" height="46" rx="12" fill="#e53935"/>
+  <rect x="80" y="112" width="340" height="14" fill="#e53935"/>
+  <text x="250" y="114" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Frontend Validation</text>
+  <text x="250" y="162" text-anchor="middle" fill="#333" font-size="16" font-family="Arial, sans-serif">User experience layer</text>
+  <text x="250" y="192" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Required field checks</text>
+  <text x="250" y="218" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Format hints (email, phone)</text>
+  <text x="250" y="244" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Immediate feedback</text>
+  <line x1="420" y1="180" x2="470" y2="180" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="480" y="80" width="340" height="200" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="480" y="80" width="340" height="46" rx="12" fill="#fb8c00"/>
+  <rect x="480" y="112" width="340" height="14" fill="#fb8c00"/>
+  <text x="650" y="114" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">API Validation</text>
+  <text x="650" y="162" text-anchor="middle" fill="#333" font-size="16" font-family="Arial, sans-serif">Security layer</text>
+  <text x="650" y="192" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Schema enforcement</text>
+  <text x="650" y="218" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Type &amp; length checks</text>
+  <text x="650" y="244" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Sanitize special chars</text>
+  <line x1="820" y1="180" x2="870" y2="180" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="880" y="80" width="320" height="200" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="880" y="80" width="320" height="46" rx="12" fill="url(#grad-accent)"/>
+  <rect x="880" y="112" width="320" height="14" fill="url(#grad-accent)"/>
+  <text x="1040" y="114" text-anchor="middle" fill="white" font-size="20" font-weight="bold" font-family="Arial, sans-serif">DB Constraints</text>
+  <text x="1040" y="162" text-anchor="middle" fill="#333" font-size="16" font-family="Arial, sans-serif">Final protection</text>
+  <text x="1040" y="192" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• NOT NULL, UNIQUE</text>
+  <text x="1040" y="218" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Foreign keys</text>
+  <text x="1040" y="244" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">• Check constraints</text>
+  <!-- Principle box -->
+  <rect x="80" y="320" width="1120" height="120" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="368" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">Never Trust User Input</text>
+  <text x="640" y="412" text-anchor="middle" fill="#bbdefb" font-size="18" font-family="Arial, sans-serif">Defense in depth: validate at every layer independently</text>
+  <!-- Detail cards -->
+  <rect x="80" y="470" width="530" height="140" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="345" y="505" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">What to Validate</text>
+  <text x="345" y="535" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Type, length, format, range</text>
+  <text x="345" y="562" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Sanitize HTML &amp; SQL metacharacters</text>
+  <text x="345" y="589" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Reject unexpected fields</text>
+  <rect x="670" y="470" width="530" height="140" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="935" y="505" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Common Attacks Prevented</text>
+  <text x="935" y="535" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• SQL injection via parameterised queries</text>
+  <text x="935" y="562" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• XSS via output encoding</text>
+  <text x="935" y="589" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Buffer overflow via length limits</text>
 </svg>

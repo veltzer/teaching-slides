@@ -1,24 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Linux Namespace Isolation</text>
-  <rect x="42.6667" y="108" width="1194.6667" height="576" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="4.2667" rx="10.6667" fill-opacity="0.3" />
-  <text x="640" y="180" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#7b1fa2">Linux Kernel</text>
-  <rect x="85.3333" y="216" width="330.6667" height="396" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="249.6" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">NS: default</text>
-  <text x="249.6" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">eth0, lo</text>
-  <text x="249.6" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">routing table</text>
-  <text x="249.6" y="457.2" text-anchor="middle" font-size="21.3333" fill="#666">iptables rules</text>
-  <text x="249.6" y="511.2" text-anchor="middle" font-size="21.3333" fill="#666">sockets, ports</text>
-  <rect x="473.6" y="216" width="330.6667" height="396" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">NS: myns1</text>
-  <text x="640" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">veth1, lo</text>
-  <text x="640" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">own routes</text>
-  <text x="640" y="457.2" text-anchor="middle" font-size="21.3333" fill="#666">own firewall</text>
-  <text x="640" y="511.2" text-anchor="middle" font-size="21.3333" fill="#666">own sockets</text>
-  <rect x="864" y="216" width="330.6667" height="396" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1028.2667" y="288" text-anchor="middle" font-size="23.4667" font-weight="bold">NS: myns2</text>
-  <text x="1028.2667" y="349.2" text-anchor="middle" font-size="21.3333" fill="#666">veth3, lo</text>
-  <text x="1028.2667" y="403.2" text-anchor="middle" font-size="21.3333" fill="#666">own routes</text>
-  <text x="1028.2667" y="457.2" text-anchor="middle" font-size="21.3333" fill="#666">own firewall</text>
-  <text x="1028.2667" y="511.2" text-anchor="middle" font-size="21.3333" fill="#666">own sockets</text>
-  <text x="640" y="576" text-anchor="middle" font-size="21.3333" fill="#7b1fa2">Each namespace has a fully isolated network stack</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Kernel background -->
+  <rect x="42" y="100" width="1196" height="544" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" fill-opacity="0.2"/>
+  <text x="640" y="164" text-anchor="middle" font-size="24" font-weight="bold" fill="#7b1fa2">Linux Kernel</text>
+  <!-- Three namespace boxes -->
+  <rect x="84" y="200" width="334" height="376" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="84" y="200" width="334" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="84" y="240" width="334" height="12" fill="url(#grad-accent)"/>
+  <text x="251" y="235" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">NS: default</text>
+  <text x="251" y="310" text-anchor="middle" font-size="18" fill="#555555">eth0, lo</text>
+  <text x="251" y="358" text-anchor="middle" font-size="18" fill="#555555">routing table</text>
+  <text x="251" y="406" text-anchor="middle" font-size="18" fill="#555555">iptables rules</text>
+  <text x="251" y="454" text-anchor="middle" font-size="18" fill="#555555">sockets, ports</text>
+  <rect x="472" y="200" width="334" height="376" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="472" y="200" width="334" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="472" y="240" width="334" height="12" fill="url(#grad-accent)"/>
+  <text x="639" y="235" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">NS: myns1</text>
+  <text x="639" y="310" text-anchor="middle" font-size="18" fill="#555555">veth1, lo</text>
+  <text x="639" y="358" text-anchor="middle" font-size="18" fill="#555555">own routes</text>
+  <text x="639" y="406" text-anchor="middle" font-size="18" fill="#555555">own firewall</text>
+  <text x="639" y="454" text-anchor="middle" font-size="18" fill="#555555">own sockets</text>
+  <rect x="860" y="200" width="334" height="376" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="860" y="200" width="334" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="860" y="240" width="334" height="12" fill="url(#grad-accent)"/>
+  <text x="1027" y="235" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">NS: myns2</text>
+  <text x="1027" y="310" text-anchor="middle" font-size="18" fill="#555555">veth3, lo</text>
+  <text x="1027" y="358" text-anchor="middle" font-size="18" fill="#555555">own routes</text>
+  <text x="1027" y="406" text-anchor="middle" font-size="18" fill="#555555">own firewall</text>
+  <text x="1027" y="454" text-anchor="middle" font-size="18" fill="#555555">own sockets</text>
+  <text x="640" y="564" text-anchor="middle" font-size="18" fill="#7b1fa2">Each namespace has a fully isolated network stack</text>
 </svg>

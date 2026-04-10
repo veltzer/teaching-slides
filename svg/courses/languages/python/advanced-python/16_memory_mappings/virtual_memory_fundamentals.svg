@@ -1,13 +1,55 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="128" y="144" width="460.8" height="432" fill="#e0e0ff" stroke="#000" stroke-width="5.12" />
-  <rect x="691.2" y="144" width="460.8" height="432" fill="#ffe0e0" stroke="#000" stroke-width="5.12" />
-  <text x="358.4" y="90" text-anchor="middle" font-family="sans-serif">Virtual Memory</text>
-  <text x="921.6" y="90" text-anchor="middle" font-family="sans-serif">Physical Memory</text>
-  <path d="M 588.8 288 L 691.2 288" stroke="#000" stroke-width="5.12" marker-end="url(#arrowhead)" />
-  <path d="M 588.8 432 L 691.2 432" stroke="#000" stroke-width="5.12" marker-end="url(#arrowhead)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="25.6" markerHeight="25.2" refX="23.04" refY="12.6" orient="auto">
-      <polygon points="0,36 8.96,0" fill="#000" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="44" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Virtual Memory Fundamentals</text>
+  <!-- Virtual Memory box -->
+  <rect x="100" y="80" width="480" height="450" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="340" y="68" text-anchor="middle" font-size="20" fill="#555555">Virtual Memory</text>
+  <text x="340" y="130" text-anchor="middle" font-size="16" fill="#555555">(Process view)</text>
+  <rect x="130" y="150" width="420" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="340" y="192" text-anchor="middle" font-size="18" fill="#333333">Address 0x0000 - 0x1000</text>
+  <rect x="130" y="240" width="420" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="340" y="282" text-anchor="middle" font-size="18" fill="#333333">Address 0x1000 - 0x2000</text>
+  <rect x="130" y="330" width="420" height="70" rx="5" fill="#cccccc" stroke="#999999" stroke-width="1.5"/>
+  <text x="340" y="372" text-anchor="middle" font-size="18" fill="#666666">Not mapped (gap)</text>
+  <rect x="130" y="420" width="420" height="70" rx="5" fill="#ffffff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="340" y="462" text-anchor="middle" font-size="18" fill="#333333">Address 0x8000 - 0x9000</text>
+  <!-- Physical Memory box -->
+  <rect x="700" y="80" width="480" height="450" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="940" y="68" text-anchor="middle" font-size="20" fill="#555555">Physical Memory</text>
+  <text x="940" y="130" text-anchor="middle" font-size="16" fill="#555555">(Actual RAM)</text>
+  <rect x="730" y="150" width="420" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
+  <text x="940" y="192" text-anchor="middle" font-size="18" fill="#333333">Frame 0</text>
+  <rect x="730" y="240" width="420" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
+  <text x="940" y="282" text-anchor="middle" font-size="18" fill="#333333">Frame 1</text>
+  <rect x="730" y="330" width="420" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
+  <text x="940" y="372" text-anchor="middle" font-size="18" fill="#333333">Frame 7 (from another addr)</text>
+  <rect x="730" y="420" width="420" height="70" rx="5" fill="#ffffff" stroke="#e53935" stroke-width="1.5"/>
+  <text x="940" y="462" text-anchor="middle" font-size="18" fill="#333333">Frame 3</text>
+  <!-- Translation arrows -->
+  <line x1="550" y1="185" x2="700" y2="185" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="275" x2="700" y2="275" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="550" y1="455" x2="700" y2="365" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Key benefit -->
+  <rect x="100" y="570" width="1080" height="64" rx="6" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="597" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">Key benefit: Each process sees its own isolated address space</text>
+  <text x="640" y="622" text-anchor="middle" font-size="16" fill="#555555">Non-contiguous virtual pages can map to any physical frames</text>
 </svg>

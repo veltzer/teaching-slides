@@ -1,31 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.3939" markerHeight="18" refX="17.4545" refY="9" orient="auto">
-      <polygon points="0,25.7143 6.7879,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="19.3939" y="51.4286" font-size="27.1515" font-weight="bold" fill="#222">Synchronous (Blocking):</text>
-  <rect x="19.3939" y="77.1429" width="290.9091" height="92.5714" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="164.8485" y="136.2857" font-size="25.2121" fill="#222" text-anchor="middle">Start Task A</text>
-  <line x1="164.8485" y1="169.7143" x2="164.8485" y2="185.1429" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="19.3939" y="190.2857" width="290.9091" height="92.5714" fill="#ffccbc" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="164.8485" y="249.4286" font-size="25.2121" fill="#222" text-anchor="middle">Wait for A ⏳</text>
-  <line x1="164.8485" y1="282.8571" x2="164.8485" y2="298.2857" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="19.3939" y="303.4286" width="290.9091" height="92.5714" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="164.8485" y="362.5714" font-size="25.2121" fill="#222" text-anchor="middle">Start Task B</text>
-  <line x1="164.8485" y1="396" x2="164.8485" y2="411.4286" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="19.3939" y="416.5714" width="290.9091" height="92.5714" fill="#ffccbc" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="164.8485" y="475.7143" font-size="25.2121" fill="#222" text-anchor="middle">Wait for B ⏳</text>
-  <text x="19.3939" y="560.5714" font-size="23.2727" fill="#c62828" font-weight="bold">Total: Time A + Time B</text>
-  <text x="678.7879" y="51.4286" font-size="27.1515" font-weight="bold" fill="#222">Asynchronous (Non-blocking):</text>
-  <rect x="678.7879" y="77.1429" width="290.9091" height="92.5714" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="824.2424" y="136.2857" font-size="25.2121" fill="#222" text-anchor="middle">Start Task A</text>
-  <line x1="824.2424" y1="169.7143" x2="824.2424" y2="185.1429" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="678.7879" y="190.2857" width="290.9091" height="92.5714" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="824.2424" y="249.4286" font-size="25.2121" fill="#222" text-anchor="middle">Start Task B</text>
-  <line x1="824.2424" y1="282.8571" x2="824.2424" y2="298.2857" stroke="#555" stroke-width="2.9091" marker-end="url(#arr)" />
-  <rect x="678.7879" y="303.4286" width="290.9091" height="92.5714" fill="#fff3e0" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="824.2424" y="362.5714" font-size="25.2121" fill="#222" text-anchor="middle">React on complete</text>
-  <text x="678.7879" y="462.8571" font-size="23.2727" fill="#2e7d32" font-weight="bold">Total: Max(Time A, Time B)</text>
-  <line x1="640" y1="25.7143" x2="640" y2="591.4286" stroke="#ccc" stroke-width="1.9394" stroke-dasharray="7.7576 7.7576" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Divider -->
+  <line x1="640" y1="20" x2="640" y2="620" stroke="#cccccc" stroke-width="1.8" stroke-dasharray="8 8"/>
+  <!-- Left: Synchronous -->
+  <text x="30" y="46" font-size="24" font-weight="bold" fill="#333333">Synchronous (Blocking):</text>
+  <rect x="30" y="66" width="280" height="80" fill="#e3f2fd" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="170" y="115" font-size="22" fill="#222222" text-anchor="middle">Start Task A</text>
+  <line x1="170" y1="146" x2="170" y2="164" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="30" y="170" width="280" height="80" fill="#ffccbc" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="170" y="219" font-size="22" fill="#222222" text-anchor="middle">Wait for A &#x23F3;</text>
+  <line x1="170" y1="250" x2="170" y2="268" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="30" y="274" width="280" height="80" fill="#e8f5e9" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="170" y="323" font-size="22" fill="#222222" text-anchor="middle">Start Task B</text>
+  <line x1="170" y1="354" x2="170" y2="372" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="30" y="378" width="280" height="80" fill="#ffccbc" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="170" y="427" font-size="22" fill="#222222" text-anchor="middle">Wait for B &#x23F3;</text>
+  <text x="30" y="510" font-size="20" fill="#c62828" font-weight="bold">Total: Time A + Time B</text>
+  <!-- Right: Asynchronous -->
+  <text x="670" y="46" font-size="24" font-weight="bold" fill="#333333">Asynchronous (Non-blocking):</text>
+  <rect x="670" y="66" width="280" height="80" fill="#e3f2fd" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="810" y="115" font-size="22" fill="#222222" text-anchor="middle">Start Task A</text>
+  <line x1="810" y1="146" x2="810" y2="164" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="670" y="170" width="280" height="80" fill="#e8f5e9" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="810" y="219" font-size="22" fill="#222222" text-anchor="middle">Start Task B</text>
+  <line x1="810" y1="250" x2="810" y2="268" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="670" y="274" width="280" height="80" fill="#fff9c4" stroke="#333333" stroke-width="2" rx="7"/>
+  <text x="810" y="323" font-size="22" fill="#222222" text-anchor="middle">React on complete</text>
+  <text x="670" y="430" font-size="20" fill="#2e7d32" font-weight="bold">Total: Max(Time A, Time B)</text>
+  <!-- Key insight -->
+  <rect x="40" y="560" width="1200" height="56" rx="6" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="594" text-anchor="middle" font-size="18" fill="#1565c0">Async shines for I/O-bound tasks: network, disk, database - not CPU-bound work</text>
 </svg>

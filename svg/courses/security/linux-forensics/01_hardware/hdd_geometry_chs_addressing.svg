@@ -1,22 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <text x="182.8571" y="75" text-anchor="middle" font-size="29.7143" fill="#222">Track 0</text>
-  <text x="548.5714" y="75" text-anchor="middle" font-size="29.7143" fill="#222">Track 1</text>
-  <text x="914.2857" y="75" text-anchor="middle" font-size="29.7143" fill="#222">Track 2</text>
-  <text x="1097.1429" y="75" font-size="27.4286" fill="#555">Platter surface</text>
-  <rect x="68.5714" y="90" width="228.5714" height="120" rx="9.1429" fill="#e3f2fd" stroke="#333" stroke-width="3.4286" />
-  <rect x="434.2857" y="90" width="228.5714" height="120" rx="9.1429" fill="#f0f4f8" stroke="#333" stroke-width="3.4286" />
-  <rect x="800" y="90" width="228.5714" height="120" rx="9.1429" fill="#f0f4f8" stroke="#333" stroke-width="3.4286" />
-  <text x="68.5714" y="345" font-size="29.7143" fill="#222">Each track divided into sectors:</text>
-  <rect x="68.5714" y="375" width="171.4286" height="120" rx="4.5714" fill="#e8f5e9" stroke="#333" stroke-width="3.4286" />
-  <text x="153.1429" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S0</text>
-  <rect x="240" y="375" width="171.4286" height="120" rx="4.5714" fill="#f0f4f8" stroke="#333" stroke-width="3.4286" />
-  <text x="324.5714" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S1</text>
-  <rect x="411.4286" y="375" width="171.4286" height="120" rx="4.5714" fill="#e8f5e9" stroke="#333" stroke-width="3.4286" />
-  <text x="496" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S2</text>
-  <rect x="582.8571" y="375" width="171.4286" height="120" rx="4.5714" fill="#f0f4f8" stroke="#333" stroke-width="3.4286" />
-  <text x="667.4286" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S3</text>
-  <rect x="754.2857" y="375" width="171.4286" height="120" rx="4.5714" fill="#e8f5e9" stroke="#333" stroke-width="3.4286" />
-  <text x="838.8571" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S4</text>
-  <rect x="925.7143" y="375" width="171.4286" height="120" rx="4.5714" fill="#f0f4f8" stroke="#333" stroke-width="3.4286" />
-  <text x="1010.2857" y="450" text-anchor="middle" font-size="29.7143" fill="#222">S5</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Track labels -->
+  <text x="182" y="70" text-anchor="middle" font-size="28" fill="#222222">Track 0</text>
+  <text x="548" y="70" text-anchor="middle" font-size="28" fill="#222222">Track 1</text>
+  <text x="914" y="70" text-anchor="middle" font-size="28" fill="#222222">Track 2</text>
+  <text x="1080" y="70" font-size="22" fill="#555555">Platter surface</text>
+
+  <!-- Track boxes -->
+  <rect x="68" y="85" width="228" height="120" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <rect x="434" y="85" width="228" height="120" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="800" y="85" width="228" height="120" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+
+  <!-- Sector labels for the tracks -->
+  <text x="182" y="155" text-anchor="middle" font-size="18" fill="#ffffff">Concentric ring</text>
+  <text x="548" y="155" text-anchor="middle" font-size="18" fill="#333333">Concentric ring</text>
+  <text x="914" y="155" text-anchor="middle" font-size="18" fill="#333333">Concentric ring</text>
+
+  <!-- Explanation -->
+  <text x="68" y="280" font-size="26" fill="#222222">Each track divided into sectors (CHS addressing):</text>
+
+  <!-- Sector boxes -->
+  <rect x="68" y="310" width="175" height="120" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="155" y="379" text-anchor="middle" font-size="28" font-weight="bold" fill="#ffffff">S0</text>
+
+  <rect x="252" y="310" width="175" height="120" rx="6" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="339" y="379" text-anchor="middle" font-size="28" fill="#333333">S1</text>
+
+  <rect x="436" y="310" width="175" height="120" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="523" y="379" text-anchor="middle" font-size="28" font-weight="bold" fill="#ffffff">S2</text>
+
+  <rect x="620" y="310" width="175" height="120" rx="6" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="707" y="379" text-anchor="middle" font-size="28" fill="#333333">S3</text>
+
+  <rect x="804" y="310" width="175" height="120" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="891" y="379" text-anchor="middle" font-size="28" font-weight="bold" fill="#ffffff">S4</text>
+
+  <rect x="988" y="310" width="175" height="120" rx="6" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="379" text-anchor="middle" font-size="28" fill="#333333">S5</text>
+
+  <!-- CHS explanation -->
+  <rect x="68" y="500" width="1144" height="170" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="548" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">CHS = Cylinder, Head, Sector</text>
+  <text x="640" y="588" text-anchor="middle" font-size="20" fill="#333333">Cylinder = same track across all platters</text>
+  <text x="640" y="628" text-anchor="middle" font-size="20" fill="#555555">Modern drives use LBA (Logical Block Addressing) instead</text>
 </svg>

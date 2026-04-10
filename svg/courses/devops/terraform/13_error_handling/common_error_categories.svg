@@ -1,14 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="42.6667" y="49.0909" width="565.3333" height="261.8182" fill="#fce4ec" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="324.2667" y="140.7273" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">Configuration Errors</text>
-  <text x="324.2667" y="212.7273" font-size="25.6" font-weight="normal" fill="#222" text-anchor="middle">(syntax, types)</text>
-  <rect x="672" y="49.0909" width="565.3333" height="261.8182" fill="#ffccbc" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="953.6" y="140.7273" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">Provider Errors</text>
-  <text x="953.6" y="212.7273" font-size="25.6" font-weight="normal" fill="#222" text-anchor="middle">(API, auth, quota)</text>
-  <rect x="42.6667" y="409.0909" width="565.3333" height="261.8182" fill="#fff9c4" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="324.2667" y="500.7273" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">State Errors</text>
-  <text x="324.2667" y="572.7273" font-size="25.6" font-weight="normal" fill="#222" text-anchor="middle">(lock, corrupt, mismatch)</text>
-  <rect x="672" y="409.0909" width="565.3333" height="261.8182" fill="#dcedc8" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="953.6" y="500.7273" font-size="27.7333" font-weight="bold" fill="#222" text-anchor="middle">Dependency Errors</text>
-  <text x="953.6" y="572.7273" font-size="25.6" font-weight="normal" fill="#222" text-anchor="middle">(cycles, missing)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Configuration Errors -->
+  <rect x="43" y="48" width="565" height="276" fill="#fce4ec" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="43" y="48" width="565" height="54" rx="10" fill="#c62828"/>
+  <rect x="43" y="84" width="565" height="18" fill="#c62828"/>
+  <text x="324" y="82" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Configuration Errors</text>
+  <text x="324" y="196" font-size="20" fill="#333" text-anchor="middle">(syntax, types)</text>
+  <!-- Provider Errors -->
+  <rect x="672" y="48" width="565" height="276" fill="#ffccbc" stroke="#e64a19" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="672" y="48" width="565" height="54" rx="10" fill="#e64a19"/>
+  <rect x="672" y="84" width="565" height="18" fill="#e64a19"/>
+  <text x="954" y="82" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Provider Errors</text>
+  <text x="954" y="196" font-size="20" fill="#333" text-anchor="middle">(API, auth, quota)</text>
+  <!-- State Errors -->
+  <rect x="43" y="396" width="565" height="276" fill="#fff9c4" stroke="#f9a825" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="43" y="396" width="565" height="54" rx="10" fill="#f9a825"/>
+  <rect x="43" y="432" width="565" height="18" fill="#f9a825"/>
+  <text x="324" y="430" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">State Errors</text>
+  <text x="324" y="546" font-size="20" fill="#333" text-anchor="middle">(lock, corrupt, mismatch)</text>
+  <!-- Dependency Errors -->
+  <rect x="672" y="396" width="565" height="276" fill="#dcedc8" stroke="#558b2f" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="672" y="396" width="565" height="54" rx="10" fill="#558b2f"/>
+  <rect x="672" y="432" width="565" height="18" fill="#558b2f"/>
+  <text x="954" y="430" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Dependency Errors</text>
+  <text x="954" y="546" font-size="20" fill="#333" text-anchor="middle">(cycles, missing)</text>
 </svg>

@@ -1,26 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="75" text-anchor="middle" font-size="34.1333" font-weight="bold" fill="#333">Infrastructure Lifecycle</text>
-  <rect x="42.6667" y="150" width="341.3333" height="270" rx="10.6667" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.2667" />
-  <text x="213.3333" y="225" text-anchor="middle" font-size="29.8667" font-weight="bold" fill="#4a90e2">Provision</text>
-  <text x="213.3333" y="285" text-anchor="middle" font-size="25.6" fill="#555">Terraform</text>
-  <text x="213.3333" y="336" text-anchor="middle" font-size="25.6" fill="#555">Packer</text>
-  <text x="213.3333" y="396" text-anchor="middle" font-size="21.3333" fill="#777">Create VMs, networks, storage</text>
-  <rect x="469.3333" y="150" width="341.3333" height="270" rx="10.6667" fill="#d4edda" stroke="#28a745" stroke-width="4.2667" />
-  <text x="640" y="225" text-anchor="middle" font-size="29.8667" font-weight="bold" fill="#28a745">Configure</text>
-  <text x="640" y="285" text-anchor="middle" font-size="25.6" fill="#555">Ansible / Chef / Puppet</text>
-  <text x="640" y="396" text-anchor="middle" font-size="21.3333" fill="#777">Install SW, configure OS, manage users</text>
-  <rect x="896" y="150" width="341.3333" height="270" rx="10.6667" fill="#fff3cd" stroke="#ffc107" stroke-width="4.2667" />
-  <text x="1066.6667" y="225" text-anchor="middle" font-size="29.8667" font-weight="bold" fill="#856404">Deploy</text>
-  <text x="1066.6667" y="285" text-anchor="middle" font-size="25.6" fill="#555">CI/CD / Jenkins / ArgoCD</text>
-  <text x="1066.6667" y="396" text-anchor="middle" font-size="21.3333" fill="#777">Deploy apps, update code</text>
-  <line x1="384" y1="285" x2="465.0667" y2="285" stroke="#4a90e2" stroke-width="4.2667" marker-end="url(#wfa)" />
-  <line x1="810.6667" y1="285" x2="891.7333" y2="285" stroke="#28a745" stroke-width="4.2667" marker-end="url(#wfa2)" />
   <defs>
-    <marker id="wfa" viewBox="0 0 10 10" refX="19.2" refY="15" markerWidth="12.8" markerHeight="18" orient="auto-start-reverse">
-      <path d="M 0 0 L 21.3333 15 L 0 30 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="wfa2" viewBox="0 0 10 10" refX="19.2" refY="15" markerWidth="12.8" markerHeight="18" orient="auto-start-reverse">
-      <path d="M 0 0 L 21.3333 15 L 0 30 z" fill="#28a745" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Provision -->
+  <rect x="43" y="140" width="341" height="280" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="43" y="140" width="341" height="58" rx="12" fill="url(#grad-accent)"/>
+  <rect x="43" y="178" width="341" height="20" fill="url(#grad-accent)"/>
+  <text x="213" y="176" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Provision</text>
+  <text x="213" y="266" text-anchor="middle" font-size="20" fill="#1565c0">Terraform</text>
+  <text x="213" y="312" text-anchor="middle" font-size="20" fill="#1565c0">Packer</text>
+  <text x="213" y="374" text-anchor="middle" font-size="16" fill="#777">Create VMs, networks, storage</text>
+  <!-- Arrow 1 -->
+  <line x1="384" y1="280" x2="465" y2="280" stroke="#1e88e5" stroke-width="4" marker-end="url(#arrow-accent)"/>
+  <!-- Configure -->
+  <rect x="469" y="140" width="341" height="280" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="469" y="140" width="341" height="58" rx="12" fill="#2e7d32"/>
+  <rect x="469" y="178" width="341" height="20" fill="#2e7d32"/>
+  <text x="640" y="176" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Configure</text>
+  <text x="640" y="266" text-anchor="middle" font-size="18" fill="#2e7d32">Ansible / Chef / Puppet</text>
+  <text x="640" y="374" text-anchor="middle" font-size="16" fill="#777">Install SW, configure OS, manage users</text>
+  <!-- Arrow 2 -->
+  <line x1="810" y1="280" x2="892" y2="280" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- Deploy -->
+  <rect x="896" y="140" width="341" height="280" rx="12" fill="#fff8e1" stroke="#f57c00" stroke-width="4" filter="url(#shadow)"/>
+  <rect x="896" y="140" width="341" height="58" rx="12" fill="#f57c00"/>
+  <rect x="896" y="178" width="341" height="20" fill="#f57c00"/>
+  <text x="1066" y="176" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Deploy</text>
+  <text x="1066" y="266" text-anchor="middle" font-size="18" fill="#e65100">CI/CD / Jenkins / ArgoCD</text>
+  <text x="1066" y="374" text-anchor="middle" font-size="16" fill="#777">Deploy apps, update code</text>
 </svg>

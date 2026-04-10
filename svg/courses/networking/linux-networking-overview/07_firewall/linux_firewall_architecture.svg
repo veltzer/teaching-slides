@@ -1,21 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Linux Firewall Architecture Stack</text>
-  <rect x="213.3333" y="108" width="853.3333" height="126" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="187.2" text-anchor="middle" font-size="25.6" font-weight="bold">User Space: iptables / nftables CLI</text>
-  <rect x="213.3333" y="270" width="853.3333" height="126" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="349.2" text-anchor="middle" font-size="25.6" font-weight="bold">Netfilter Framework (kernel hooks)</text>
-  <rect x="213.3333" y="432" width="405.3333" height="126" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="416" y="511.2" text-anchor="middle" font-size="23.4667" font-weight="bold">Connection Tracking</text>
-  <rect x="661.3333" y="432" width="405.3333" height="126" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="864" y="511.2" text-anchor="middle" font-size="23.4667" font-weight="bold">NAT Engine</text>
-  <rect x="213.3333" y="594" width="853.3333" height="108" fill="#ffebee" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="666" text-anchor="middle" font-size="23.4667" font-weight="bold">Network Stack (IP layer)</text>
-  <line x1="640" y1="234" x2="640" y2="270" stroke="#333" stroke-width="3.2" marker-end="url(#arrowd2_06_firewall)" />
-  <line x1="640" y1="396" x2="640" y2="432" stroke="#333" stroke-width="3.2" marker-end="url(#arrowd2_06_firewall)" />
-  <line x1="640" y1="558" x2="640" y2="594" stroke="#333" stroke-width="3.2" marker-end="url(#arrowd2_06_firewall)" />
   <defs>
-    <marker id="arrowd2_06_firewall" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Stack layers -->
+  <rect x="213" y="100" width="854" height="118" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="172" text-anchor="middle" font-size="24" font-weight="bold" fill="#0d47a1">User Space: iptables / nftables CLI</text>
+  <line x1="640" y1="218" x2="640" y2="262" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="213" y="262" width="854" height="118" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="334" text-anchor="middle" font-size="24" font-weight="bold" fill="#4a148c">Netfilter Framework (kernel hooks)</text>
+  <line x1="640" y1="380" x2="640" y2="424" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Two side boxes -->
+  <rect x="213" y="424" width="408" height="118" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="417" y="496" text-anchor="middle" font-size="22" font-weight="bold" fill="#1b5e20">Connection Tracking</text>
+  <rect x="659" y="424" width="408" height="118" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="863" y="496" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">NAT Engine</text>
+  <line x1="640" y1="542" x2="640" y2="572" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="213" y="572" width="854" height="100" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="632" text-anchor="middle" font-size="22" font-weight="bold" fill="#b71c1c">Network Stack (IP layer)</text>
 </svg>

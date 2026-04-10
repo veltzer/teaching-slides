@@ -1,19 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="128" y="65.4545" width="1024" height="589.0909" fill="#f5f5f5" stroke="#ccc" rx="25.6" />
-  <text x="640" y="147.2727" text-anchor="middle" font-size="40.96" font-weight="bold">Advanced Context Management</text>
-  <rect x="179.2" y="229.0909" width="204.8" height="130.9091" fill="#ffecb3" stroke="#f57f17" rx="12.8" />
-  <text x="281.6" y="278.1818" text-anchor="middle" font-size="25.6">Session</text>
-  <text x="281.6" y="320.7273" text-anchor="middle" font-size="25.6">Continuity</text>
-  <rect x="435.2" y="229.0909" width="204.8" height="130.9091" fill="#c8e6c9" stroke="#388e3c" rx="12.8" />
-  <text x="537.6" y="278.1818" text-anchor="middle" font-size="25.6">Context</text>
-  <text x="537.6" y="320.7273" text-anchor="middle" font-size="25.6">Preservation</text>
-  <rect x="691.2" y="229.0909" width="204.8" height="130.9091" fill="#bbdefb" stroke="#1976d2" rx="12.8" />
-  <text x="793.6" y="278.1818" text-anchor="middle" font-size="25.6">Information</text>
-  <text x="793.6" y="320.7273" text-anchor="middle" font-size="25.6">Organization</text>
-  <rect x="947.2" y="229.0909" width="179.2" height="130.9091" fill="#f8bbd9" stroke="#c2185b" rx="12.8" />
-  <text x="1036.8" y="278.1818" text-anchor="middle" font-size="25.6">Reference</text>
-  <text x="1036.8" y="320.7273" text-anchor="middle" font-size="25.6">Management</text>
-  <rect x="307.2" y="425.4545" width="665.6" height="163.6364" fill="#e8f5e8" stroke="#2e7d32" rx="12.8" />
-  <text x="640" y="490.9091" text-anchor="middle" font-size="30.72">Long-term Development Context</text>
-  <text x="640" y="549.8182" text-anchor="middle" font-size="25.6">Spanning multiple sessions and projects</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="50" width="1120" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="89" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">Advanced Context Management</text>
+  <!-- 4 boxes top row -->
+  <rect x="80" y="150" width="250" height="170" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="210" text-anchor="middle" fill="#e65100" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Session</text>
+  <text x="205" y="240" text-anchor="middle" fill="#e65100" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Continuity</text>
+  <text x="205" y="275" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Persist key decisions</text>
+  <text x="205" y="300" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">across sessions</text>
+  <rect x="360" y="150" width="250" height="170" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="485" y="210" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Context</text>
+  <text x="485" y="240" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Preservation</text>
+  <text x="485" y="275" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Architecture notes</text>
+  <text x="485" y="300" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">design decisions</text>
+  <rect x="640" y="150" width="250" height="170" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="765" y="210" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Information</text>
+  <text x="765" y="240" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Organization</text>
+  <text x="765" y="275" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Structure prompts</text>
+  <text x="765" y="300" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">systematically</text>
+  <rect x="920" y="150" width="280" height="170" rx="12" fill="#fce4ec" stroke="#e91e63" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="210" text-anchor="middle" fill="#880e4f" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Reference</text>
+  <text x="1060" y="240" text-anchor="middle" fill="#880e4f" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Management</text>
+  <text x="1060" y="275" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Link relevant code</text>
+  <text x="1060" y="300" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">files &amp; docs</text>
+  <!-- Long-term box -->
+  <rect x="200" y="365" width="880" height="160" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="415" text-anchor="middle" fill="#2e7d32" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Long-term Development Context</text>
+  <text x="640" y="455" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">Spanning multiple sessions and projects</text>
+  <text x="640" y="485" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Use CLAUDE.md / project files to persist architectural context</text>
+  <!-- Tips -->
+  <rect x="80" y="565" width="1120" height="130" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="605" text-anchor="middle" fill="#1565c0" font-size="19" font-weight="bold" font-family="Arial, sans-serif">Context Management Tips</text>
+  <text x="640" y="638" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Summarize previous sessions at start — front-load critical constraints</text>
+  <text x="640" y="666" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">• Use structured templates — reset context intentionally between unrelated tasks</text>
 </svg>

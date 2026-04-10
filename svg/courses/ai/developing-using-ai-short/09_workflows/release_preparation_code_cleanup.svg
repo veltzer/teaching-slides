@@ -1,14 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Pre-Release Checklist</text>
-  <rect x="240" y="198" width="800" height="63" fill="#3498DB" rx="8" />
-  <text x="256" y="237.6" fill="white" font-size="19.2">☑ Remove console.logs and debug code</text>
-  <rect x="240" y="270" width="800" height="63" fill="#2ECC71" rx="8" />
-  <text x="256" y="309.6" fill="white" font-size="19.2">☑ Update dependencies to stable versions</text>
-  <rect x="240" y="342" width="800" height="63" fill="#F39C12" rx="8" />
-  <text x="256" y="381.6" fill="white" font-size="19.2">☑ Run full test suite</text>
-  <rect x="240" y="414" width="800" height="63" fill="#E74C3C" rx="8" />
-  <text x="256" y="453.6" fill="white" font-size="19.2">☑ Security audit passed</text>
-  <rect x="240" y="486" width="800" height="63" fill="#9B59B6" rx="8" />
-  <text x="256" y="525.6" fill="white" font-size="19.2">☑ Performance benchmarks met</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="50" width="1120" height="55" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="87" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Pre-Release Checklist</text>
+  <!-- Checklist items -->
+  <rect x="80" y="140" width="1120" height="90" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="193" font-size="22" fill="#1565c0" font-family="Arial, sans-serif">Remove console.logs and debug code</text>
+  <rect x="1120" y="155" width="60" height="60" rx="8" fill="#1e88e5"/>
+  <text x="1150" y="195" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">&#10003;</text>
+  <rect x="80" y="248" width="1120" height="90" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="301" font-size="22" fill="#2e7d32" font-family="Arial, sans-serif">Update dependencies to stable versions</text>
+  <rect x="1120" y="263" width="60" height="60" rx="8" fill="#43a047"/>
+  <text x="1150" y="303" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">&#10003;</text>
+  <rect x="80" y="356" width="1120" height="90" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="409" font-size="22" fill="#e65100" font-family="Arial, sans-serif">Run full test suite — all tests green</text>
+  <rect x="1120" y="371" width="60" height="60" rx="8" fill="#fb8c00"/>
+  <text x="1150" y="411" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">&#10003;</text>
+  <rect x="80" y="464" width="1120" height="90" rx="10" fill="#ffebee" stroke="#e53935" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="517" font-size="22" fill="#b71c1c" font-family="Arial, sans-serif">Security audit passed — no critical CVEs</text>
+  <rect x="1120" y="479" width="60" height="60" rx="8" fill="#e53935"/>
+  <text x="1150" y="519" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">&#10003;</text>
+  <rect x="80" y="572" width="1120" height="90" rx="10" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="625" font-size="22" fill="#6a1b9a" font-family="Arial, sans-serif">Performance benchmarks met — SLA compliant</text>
+  <rect x="1120" y="587" width="60" height="60" rx="8" fill="#8e24aa"/>
+  <text x="1150" y="627" text-anchor="middle" fill="white" font-size="28" font-weight="bold" font-family="Arial, sans-serif">&#10003;</text>
 </svg>

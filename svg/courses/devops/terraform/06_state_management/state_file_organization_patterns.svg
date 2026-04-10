@@ -1,30 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="20.6452" markerHeight="16.8" refX="18.5806" refY="8.4" orient="auto">
-      <polygon points="0,24 7.2258,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="20.6452" markerHeight="16.8" refX="18.5806" refY="8.4" orient="auto">
-      <polygon points="0,24 7.2258,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="20.6452" y="24" width="1238.7097" height="160.8" rx="8.2581" fill="#e3f2fd" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="72" text-anchor="middle" font-size="26.8387" fill="#222" font-weight="bold">Pattern 1: Single State File</text>
-  <text x="247.7419" y="110.4" text-anchor="end" font-size="24.7742" fill="#333">all-resources/</text>
-  <text x="268.3871" y="110.4" text-anchor="start" font-size="24.7742" fill="#555">→ terraform.tfstate</text>
-  <rect x="20.6452" y="208.8" width="1238.7097" height="266.4" rx="8.2581" fill="#e8f5e9" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="256.8" text-anchor="middle" font-size="26.8387" fill="#222" font-weight="bold">Pattern 2: Per-Environment States</text>
-  <text x="247.7419" y="295.2" text-anchor="end" font-size="24.7742" fill="#333">dev/</text>
-  <text x="268.3871" y="295.2" text-anchor="start" font-size="24.7742" fill="#555">→ dev.tfstate</text>
-  <text x="247.7419" y="348" text-anchor="end" font-size="24.7742" fill="#333">staging/</text>
-  <text x="268.3871" y="348" text-anchor="start" font-size="24.7742" fill="#555">→ staging.tfstate</text>
-  <text x="247.7419" y="400.8" text-anchor="end" font-size="24.7742" fill="#333">prod/</text>
-  <text x="268.3871" y="400.8" text-anchor="start" font-size="24.7742" fill="#555">→ prod.tfstate</text>
-  <rect x="20.6452" y="499.2" width="1238.7097" height="266.4" rx="8.2581" fill="#fff3e0" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="547.2" text-anchor="middle" font-size="26.8387" fill="#222" font-weight="bold">Pattern 3: Per-Component States</text>
-  <text x="247.7419" y="585.6" text-anchor="end" font-size="24.7742" fill="#333">network/</text>
-  <text x="268.3871" y="585.6" text-anchor="start" font-size="24.7742" fill="#555">→ network.tfstate</text>
-  <text x="247.7419" y="638.4" text-anchor="end" font-size="24.7742" fill="#333">compute/</text>
-  <text x="268.3871" y="638.4" text-anchor="start" font-size="24.7742" fill="#555">→ compute.tfstate</text>
-  <text x="247.7419" y="691.2" text-anchor="end" font-size="24.7742" fill="#333">database/</text>
-  <text x="268.3871" y="691.2" text-anchor="start" font-size="24.7742" fill="#555">→ database.tfstate</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Pattern 1 -->
+  <rect x="20" y="24" width="1240" height="158" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="72" text-anchor="middle" font-size="22" fill="#1565c0" font-weight="bold">Pattern 1: Single State File</text>
+  <text x="248" y="112" text-anchor="end" font-size="20" fill="#333">all-resources/</text>
+  <text x="268" y="112" text-anchor="start" font-size="20" fill="#555">→ terraform.tfstate</text>
+  <!-- Pattern 2 -->
+  <rect x="20" y="206" width="1240" height="240" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="254" text-anchor="middle" font-size="22" fill="#2e7d32" font-weight="bold">Pattern 2: Per-Environment States</text>
+  <text x="248" y="296" text-anchor="end" font-size="20" fill="#333">dev/</text>
+  <text x="268" y="296" text-anchor="start" font-size="20" fill="#555">→ dev.tfstate</text>
+  <text x="248" y="346" text-anchor="end" font-size="20" fill="#333">staging/</text>
+  <text x="268" y="346" text-anchor="start" font-size="20" fill="#555">→ staging.tfstate</text>
+  <text x="248" y="396" text-anchor="end" font-size="20" fill="#333">prod/</text>
+  <text x="268" y="396" text-anchor="start" font-size="20" fill="#555">→ prod.tfstate</text>
+  <!-- Pattern 3 -->
+  <rect x="20" y="470" width="1240" height="224" rx="10" fill="#fff8e1" stroke="#f57c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="518" text-anchor="middle" font-size="22" fill="#e65100" font-weight="bold">Pattern 3: Per-Component States</text>
+  <text x="248" y="560" text-anchor="end" font-size="20" fill="#333">network/</text>
+  <text x="268" y="560" text-anchor="start" font-size="20" fill="#555">→ network.tfstate</text>
+  <text x="248" y="610" text-anchor="end" font-size="20" fill="#333">compute/</text>
+  <text x="268" y="610" text-anchor="start" font-size="20" fill="#555">→ compute.tfstate</text>
+  <text x="248" y="660" text-anchor="end" font-size="20" fill="#333">database/</text>
+  <text x="268" y="660" text-anchor="start" font-size="20" fill="#555">→ database.tfstate</text>
 </svg>

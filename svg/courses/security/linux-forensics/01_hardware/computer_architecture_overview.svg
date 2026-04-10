@@ -1,24 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="ah1" markerWidth="24.381" markerHeight="13.7143" refX="18.2857" refY="5.1429" orient="auto">
-      <path d="M 0 0 L 0 10.2857 L 24.381 5.1429 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="335.2381" y="34.2857" width="609.5238" height="85.7143" rx="6.8571" fill="#e3f2fd" stroke="#333" stroke-width="2.5714" />
-  <text x="640" y="85.7143" text-anchor="middle" font-size="24" fill="#222">CPU (Processor)</text>
-  <text x="640" y="162.8571" text-anchor="middle" font-size="20.5714" fill="#555">System Bus</text>
-  <line x1="640" y1="120" x2="640" y2="197.1429" stroke="#555" stroke-width="2.5714" marker-end="url(#ah1)" />
-  <rect x="335.2381" y="197.1429" width="609.5238" height="85.7143" rx="6.8571" fill="#e3f2fd" stroke="#333" stroke-width="2.5714" />
-  <text x="640" y="248.5714" text-anchor="middle" font-size="24" fill="#222">RAM (Volatile)</text>
-  <line x1="640" y1="282.8571" x2="640" y2="334.2857" stroke="#555" stroke-width="2.5714" marker-end="url(#ah1)" />
-  <rect x="335.2381" y="334.2857" width="609.5238" height="85.7143" rx="6.8571" fill="#e3f2fd" stroke="#333" stroke-width="2.5714" />
-  <text x="640" y="385.7143" text-anchor="middle" font-size="24" fill="#222">Storage Controller</text>
-  <line x1="640" y1="420" x2="640" y2="454.2857" stroke="#555" stroke-width="2.5714" />
-  <line x1="472.381" y1="454.2857" x2="807.619" y2="454.2857" stroke="#555" stroke-width="2.5714" />
-  <line x1="472.381" y1="454.2857" x2="472.381" y2="505.7143" stroke="#555" stroke-width="2.5714" marker-end="url(#ah1)" />
-  <line x1="807.619" y1="454.2857" x2="807.619" y2="505.7143" stroke="#555" stroke-width="2.5714" marker-end="url(#ah1)" />
-  <rect x="243.8095" y="505.7143" width="457.1429" height="85.7143" rx="6.8571" fill="#f0f4f8" stroke="#333" stroke-width="2.5714" />
-  <text x="472.381" y="557.1429" text-anchor="middle" font-size="24" fill="#222">HDD</text>
-  <rect x="579.0476" y="505.7143" width="457.1429" height="85.7143" rx="6.8571" fill="#f0f4f8" stroke="#333" stroke-width="2.5714" />
-  <text x="807.619" y="557.1429" text-anchor="middle" font-size="24" fill="#222">SSD</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- CPU -->
+  <rect x="340" y="40" width="600" height="90" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="93" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">CPU (Processor)</text>
+
+  <text x="640" y="168" text-anchor="middle" font-size="20" fill="#555555">System Bus</text>
+  <line x1="640" y1="130" x2="640" y2="210" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- RAM -->
+  <rect x="340" y="212" width="600" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="265" text-anchor="middle" font-size="24" fill="#333333">RAM (Volatile)</text>
+
+  <line x1="640" y1="302" x2="640" y2="360" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Storage Controller -->
+  <rect x="340" y="362" width="600" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="415" text-anchor="middle" font-size="24" fill="#333333">Storage Controller</text>
+
+  <line x1="640" y1="452" x2="640" y2="490" stroke="#555555" stroke-width="2"/>
+  <line x1="480" y1="490" x2="800" y2="490" stroke="#555555" stroke-width="2"/>
+  <line x1="480" y1="490" x2="480" y2="530" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="800" y1="490" x2="800" y2="530" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- HDD and SSD -->
+  <rect x="260" y="532" width="440" height="90" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="480" y="585" text-anchor="middle" font-size="24" fill="#333333">HDD</text>
+  <text x="480" y="610" text-anchor="middle" font-size="14" fill="#555555">Magnetic, rotating platters</text>
+
+  <rect x="580" y="532" width="440" height="90" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="800" y="585" text-anchor="middle" font-size="24" fill="#333333">SSD</text>
+  <text x="800" y="610" text-anchor="middle" font-size="14" fill="#555555">NAND Flash, no moving parts</text>
 </svg>

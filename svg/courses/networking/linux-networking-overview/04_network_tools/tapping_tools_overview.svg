@@ -1,27 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
   <defs>
-    <marker id="arrowtap_03" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="57.6" text-anchor="middle" font-size="25.6" font-weight="bold">Tapping / Capture Tools</text>
-  <rect x="42.6667" y="108" width="256" height="198" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="170.6667" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">tcpdump</text>
-  <text x="170.6667" y="226.8" text-anchor="middle" font-size="21.3333">CLI capture</text>
-  <text x="170.6667" y="273.6" text-anchor="middle" font-size="21.3333">BPF filters</text>
-  <rect x="341.3333" y="108" width="256" height="198" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="469.3333" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">Wireshark</text>
-  <text x="469.3333" y="226.8" text-anchor="middle" font-size="21.3333">GUI analysis</text>
-  <text x="469.3333" y="273.6" text-anchor="middle" font-size="21.3333">protocol decode</text>
-  <rect x="640" y="108" width="256" height="198" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="768" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">netcat (nc)</text>
-  <text x="768" y="226.8" text-anchor="middle" font-size="21.3333">raw connections</text>
-  <text x="768" y="273.6" text-anchor="middle" font-size="21.3333">port scanning</text>
-  <rect x="938.6667" y="108" width="277.3333" height="198" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="1077.3333" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold">tshark</text>
-  <text x="1077.3333" y="226.8" text-anchor="middle" font-size="21.3333">CLI Wireshark</text>
-  <text x="1077.3333" y="273.6" text-anchor="middle" font-size="21.3333">scriptable</text>
-  <rect x="170.6667" y="378" width="938.6667" height="108" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="450" text-anchor="middle" font-size="23.4667">Capture point: NIC --&gt; libpcap/AF_PACKET --&gt; user tool</text>
-  <text x="640" y="576" text-anchor="middle" font-size="21.3333" fill="#666">tcpdump -i eth0 -w capture.pcap / wireshark capture.pcap</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Four tool boxes -->
+  <rect x="42" y="100" width="260" height="185" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="172" y="162" text-anchor="middle" font-size="22" font-weight="bold" fill="#0d47a1">tcpdump</text>
+  <text x="172" y="210" text-anchor="middle" font-size="18" fill="#555555">CLI capture</text>
+  <text x="172" y="252" text-anchor="middle" font-size="18" fill="#555555">BPF filters</text>
+  <rect x="342" y="100" width="260" height="185" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="472" y="162" text-anchor="middle" font-size="22" font-weight="bold" fill="#4a148c">Wireshark</text>
+  <text x="472" y="210" text-anchor="middle" font-size="18" fill="#555555">GUI analysis</text>
+  <text x="472" y="252" text-anchor="middle" font-size="18" fill="#555555">protocol decode</text>
+  <rect x="642" y="100" width="260" height="185" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="772" y="162" text-anchor="middle" font-size="22" font-weight="bold" fill="#1b5e20">netcat (nc)</text>
+  <text x="772" y="210" text-anchor="middle" font-size="18" fill="#555555">raw connections</text>
+  <text x="772" y="252" text-anchor="middle" font-size="18" fill="#555555">port scanning</text>
+  <rect x="942" y="100" width="280" height="185" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="1082" y="162" text-anchor="middle" font-size="22" font-weight="bold" fill="#e65100">tshark</text>
+  <text x="1082" y="210" text-anchor="middle" font-size="18" fill="#555555">CLI Wireshark</text>
+  <text x="1082" y="252" text-anchor="middle" font-size="18" fill="#555555">scriptable</text>
+  <!-- Info box -->
+  <rect x="170" y="356" width="940" height="100" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="418" text-anchor="middle" font-size="21" fill="#b71c1c">Capture point: NIC --&gt; libpcap/AF_PACKET --&gt; user tool</text>
+  <text x="640" y="550" text-anchor="middle" font-size="17" fill="#777777">tcpdump -i eth0 -w capture.pcap / wireshark capture.pcap</text>
 </svg>

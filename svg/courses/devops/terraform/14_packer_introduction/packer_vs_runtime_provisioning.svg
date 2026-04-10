@@ -1,36 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="12.9231" refX="17.7231" refY="6.4615" orient="auto">
-      <polygon points="0,18.4615 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="12.9231" refX="17.7231" refY="6.4615" orient="auto">
-      <polygon points="0,18.4615 6.8923,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.6923" y="18.4615" width="571.0769" height="673.8462" rx="7.3846" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7692" />
-  <text x="305.2308" y="59.0769" text-anchor="middle" font-size="24" fill="#bf360c" font-weight="bold">Without Packer (runtime)</text>
-  <rect x="59.0769" y="101.5385" width="452.9231" height="88.6154" rx="7.3846" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7692" />
-  <text x="285.5385" y="153.2308" text-anchor="middle" font-size="22.1538" fill="#222">Launch Instance</text>
-  <line x1="285.5385" y1="190.1538" x2="285.5385" y2="223.3846" stroke="#555" stroke-width="2.7692" marker-end="url(#arr)" />
-  <rect x="59.0769" y="223.3846" width="452.9231" height="88.6154" rx="7.3846" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7692" />
-  <text x="285.5385" y="275.0769" text-anchor="middle" font-size="22.1538" fill="#222">Install Software</text>
-  <text x="285.5385" y="302.7692" text-anchor="middle" font-size="18.4615" fill="#bf360c">10–20 min</text>
-  <line x1="285.5385" y1="312" x2="285.5385" y2="345.2308" stroke="#555" stroke-width="2.7692" marker-end="url(#arr)" />
-  <rect x="59.0769" y="345.2308" width="452.9231" height="88.6154" rx="7.3846" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.7692" />
-  <text x="285.5385" y="396.9231" text-anchor="middle" font-size="22.1538" fill="#222">Configure App</text>
-  <line x1="285.5385" y1="433.8462" x2="285.5385" y2="467.0769" stroke="#555" stroke-width="2.7692" marker-end="url(#arr)" />
-  <rect x="59.0769" y="467.0769" width="452.9231" height="88.6154" rx="7.3846" fill="#ffccbc" stroke="#ef6c00" stroke-width="2.7692" />
-  <text x="285.5385" y="518.7692" text-anchor="middle" font-size="22.1538" fill="#222">Ready (slow start)</text>
-  <rect x="679.3846" y="18.4615" width="580.9231" height="673.8462" rx="7.3846" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.7692" />
-  <text x="968.8615" y="59.0769" text-anchor="middle" font-size="24" fill="#1b5e20" font-weight="bold">With Packer (pre-baked)</text>
-  <rect x="724.6769" y="101.5385" width="488.3692" height="88.6154" rx="7.3846" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.7692" />
-  <text x="968.8615" y="149.5385" text-anchor="middle" font-size="22.1538" fill="#222">Build Image</text>
-  <text x="968.8615" y="179.0769" text-anchor="middle" font-size="18.4615" fill="#1b5e20">(once)</text>
-  <line x1="968.8615" y1="190.1538" x2="968.8615" y2="223.3846" stroke="#555" stroke-width="2.7692" marker-end="url(#arr)" />
-  <rect x="724.6769" y="223.3846" width="488.3692" height="88.6154" rx="7.3846" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.7692" />
-  <text x="968.8615" y="271.3846" text-anchor="middle" font-size="22.1538" fill="#222">Store Image</text>
-  <line x1="968.8615" y1="312" x2="968.8615" y2="345.2308" stroke="#555" stroke-width="2.7692" marker-end="url(#arr)" />
-  <rect x="724.6769" y="345.2308" width="488.3692" height="88.6154" rx="7.3846" fill="#c8e6c9" stroke="#388e3c" stroke-width="2.7692" />
-  <text x="968.8615" y="393.2308" text-anchor="middle" font-size="22.1538" fill="#222">Launch Instance</text>
-  <text x="968.8615" y="422.7692" text-anchor="middle" font-size="18.4615" fill="#1b5e20">(fast, &lt; 1 min)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Without Packer panel -->
+  <rect x="20" y="18" width="571" height="674" rx="10" fill="#fff3e0" stroke="#ef6c00" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="20" y="18" width="571" height="56" rx="10" fill="#ef6c00"/>
+  <rect x="20" y="54" width="571" height="20" fill="#ef6c00"/>
+  <text x="305" y="54" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">Without Packer (runtime)</text>
+  <rect x="59" y="100" width="453" height="88" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3"/>
+  <text x="285" y="152" text-anchor="middle" font-size="18" fill="#222">Launch Instance</text>
+  <line x1="285" y1="188" x2="285" y2="222" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="59" y="222" width="453" height="88" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3"/>
+  <text x="285" y="258" text-anchor="middle" font-size="18" fill="#222">Install Software</text>
+  <text x="285" y="295" text-anchor="middle" font-size="14" fill="#bf360c">10 to 20 min</text>
+  <line x1="285" y1="310" x2="285" y2="344" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="59" y="344" width="453" height="88" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="3"/>
+  <text x="285" y="396" text-anchor="middle" font-size="18" fill="#222">Configure App</text>
+  <line x1="285" y1="432" x2="285" y2="466" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="59" y="466" width="453" height="88" rx="8" fill="#ffccbc" stroke="#ef6c00" stroke-width="3"/>
+  <text x="285" y="520" text-anchor="middle" font-size="18" fill="#222">Ready (slow start)</text>
+  <!-- With Packer panel -->
+  <rect x="689" y="18" width="571" height="674" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="689" y="18" width="571" height="56" rx="10" fill="#388e3c"/>
+  <rect x="689" y="54" width="571" height="20" fill="#388e3c"/>
+  <text x="974" y="54" text-anchor="middle" font-size="20" fill="#ffffff" font-weight="bold">With Packer (pre-baked)</text>
+  <rect x="725" y="100" width="488" height="88" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="3"/>
+  <text x="969" y="145" text-anchor="middle" font-size="18" fill="#222">Build Image</text>
+  <text x="969" y="178" text-anchor="middle" font-size="14" fill="#1b5e20">(once)</text>
+  <line x1="969" y1="188" x2="969" y2="222" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="725" y="222" width="488" height="88" rx="8" fill="#e8f5e9" stroke="#388e3c" stroke-width="3"/>
+  <text x="969" y="272" text-anchor="middle" font-size="18" fill="#222">Store Image</text>
+  <line x1="969" y1="310" x2="969" y2="344" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="725" y="344" width="488" height="88" rx="8" fill="#c8e6c9" stroke="#388e3c" stroke-width="3"/>
+  <text x="969" y="390" text-anchor="middle" font-size="18" fill="#222">Launch Instance</text>
+  <text x="969" y="422" text-anchor="middle" font-size="14" fill="#1b5e20">(fast, &lt; 1 min)</text>
 </svg>

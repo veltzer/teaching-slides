@@ -1,16 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="180" width="400" height="360" fill="#E74C3C" rx="16" />
-  <text x="360" y="252" text-anchor="middle" fill="white" font-size="25.6" font-weight="bold">Without Standards</text>
-  <text x="360" y="306" text-anchor="middle" fill="white" font-size="19.2">✓ Fast generation</text>
-  <text x="360" y="351" text-anchor="middle" fill="white" font-size="19.2">✗ Inconsistent code</text>
-  <text x="360" y="396" text-anchor="middle" fill="white" font-size="19.2">✗ Security risks</text>
-  <text x="360" y="441" text-anchor="middle" fill="white" font-size="19.2">✗ Technical debt</text>
-  <text x="360" y="486" text-anchor="middle" fill="white" font-size="19.2">✗ Maintenance issues</text>
-  <rect x="720" y="180" width="400" height="360" fill="#27AE60" rx="16" />
-  <text x="920" y="252" text-anchor="middle" fill="white" font-size="25.6" font-weight="bold">With Best Practices</text>
-  <text x="920" y="306" text-anchor="middle" fill="white" font-size="19.2">✓ Fast generation</text>
-  <text x="920" y="351" text-anchor="middle" fill="white" font-size="19.2">✓ Consistent quality</text>
-  <text x="920" y="396" text-anchor="middle" fill="white" font-size="19.2">✓ Secure by default</text>
-  <text x="920" y="441" text-anchor="middle" fill="white" font-size="19.2">✓ Maintainable</text>
-  <text x="920" y="486" text-anchor="middle" fill="white" font-size="19.2">✓ Scalable</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Left column - Without Standards -->
+  <rect x="80" y="80" width="500" height="500" rx="14" fill="#ffebee" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="80" width="500" height="56" rx="14" fill="#e53935"/>
+  <rect x="80" y="122" width="500" height="14" fill="#e53935"/>
+  <text x="330" y="120" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Without Standards</text>
+  <text x="330" y="190" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Fast generation</text>
+  <text x="330" y="236" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Inconsistent code</text>
+  <text x="330" y="282" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Security risks</text>
+  <text x="330" y="328" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Technical debt</text>
+  <text x="330" y="374" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Maintenance issues</text>
+  <text x="330" y="420" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Hard to review</text>
+  <text x="330" y="466" text-anchor="middle" fill="#b71c1c" font-size="20" font-family="Arial, sans-serif">- Unpredictable quality</text>
+  <!-- Right column - With Best Practices -->
+  <rect x="700" y="80" width="500" height="500" rx="14" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="80" width="500" height="56" rx="14" fill="#43a047"/>
+  <rect x="700" y="122" width="500" height="14" fill="#43a047"/>
+  <text x="950" y="120" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">With Best Practices</text>
+  <text x="950" y="190" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Fast generation</text>
+  <text x="950" y="236" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Consistent quality</text>
+  <text x="950" y="282" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Secure by default</text>
+  <text x="950" y="328" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Maintainable</text>
+  <text x="950" y="374" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Scalable</text>
+  <text x="950" y="420" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Easy to review</text>
+  <text x="950" y="466" text-anchor="middle" fill="#2e7d32" font-size="20" font-family="Arial, sans-serif">+ Predictable outcomes</text>
+  <!-- Bottom -->
+  <rect x="80" y="610" width="1120" height="90" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="648" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">The Paradox: AI makes bad habits scale faster</text>
+  <text x="640" y="682" text-anchor="middle" fill="#bbdefb" font-size="17" font-family="Arial, sans-serif">Standards and guardrails are more important with AI, not less</text>
 </svg>

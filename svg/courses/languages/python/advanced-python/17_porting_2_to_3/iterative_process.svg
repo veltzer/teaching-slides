@@ -1,45 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="10.08" refX="16" refY="5.04" orient="auto">
-      <polygon points="0,14.4 5.6,0" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrowred" markerWidth="16" markerHeight="10.08" refX="16" refY="5.04" orient="auto">
-      <polygon points="0,14.4 5.6,0" fill="#dc3545" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
-    <marker id="arrowgreen" markerWidth="16" markerHeight="10.08" refX="16" refY="5.04" orient="auto">
-      <polygon points="0,14.4 5.6,0" fill="#28a745" />
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
     </marker>
   </defs>
-  <text x="640" y="43.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="23.04" font-weight="bold" fill="#333">Python 2 to 3 Porting: Iterative Process</text>
-  <rect x="496" y="72" width="288" height="57.6" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
-  <text x="640" y="108" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.72" fill="#333">Start with Py2 Code</text>
-  <polygon points="640,172.8 816,230.4 640,288 464,230.4" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="640" y="226.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.28" fill="#333">Run Tests</text>
-  <text x="640" y="247.68" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.28" fill="#333">in Py2?</text>
-  <line x1="640" y1="129.6" x2="640" y2="169.92" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrowhead)" />
-  <rect x="928" y="201.6" width="288" height="57.6" rx="7.2" fill="#f8d7da" stroke="#dc3545" stroke-width="2.88" />
-  <text x="1072" y="237.6" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.72" fill="#333">Fix Tests in Py2 First!</text>
-  <line x1="816" y1="230.4" x2="920" y2="230.4" stroke="#dc3545" stroke-width="2.88" marker-end="url(#arrowred)" />
-  <text x="864" y="218.88" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.84" fill="#dc3545">Fail</text>
-  <rect x="496" y="331.2" width="288" height="57.6" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
-  <text x="640" y="367.2" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.72" fill="#333">Branch Code</text>
-  <line x1="640" y1="288" x2="640" y2="324" stroke="#28a745" stroke-width="2.88" marker-end="url(#arrowgreen)" />
-  <text x="688" y="311.04" font-family="Arial, sans-serif" font-size="15.84" fill="#28a745">Pass</text>
-  <polygon points="640,432 864,489.6 640,547.2 416,489.6" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="640" y="482.4" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.28" fill="#333">Apply Auto-Porting</text>
-  <text x="640" y="504" text-anchor="middle" font-family="Arial, sans-serif" font-size="15.84" fill="#555">(2to3, modernize)</text>
-  <line x1="640" y1="388.8" x2="640" y2="429.12" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrowhead)" />
-  <rect x="208" y="532.8" width="288" height="57.6" rx="7.2" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.88" />
-  <text x="352" y="568.8" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.72" fill="#333">Manual Fixes &amp; Refactor</text>
-  <line x1="496" y1="518.4" x2="416" y2="525.6" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrowhead)" />
-  <polygon points="352,633.6 496,676.8 352,720 208,676.8" fill="#fff3cd" stroke="#ffc107" stroke-width="2.88" />
-  <text x="352" y="672.48" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.28" fill="#333">Run Tests</text>
-  <text x="352" y="694.08" text-anchor="middle" font-family="Arial, sans-serif" font-size="17.28" fill="#333">in Py3?</text>
-  <line x1="352" y1="590.4" x2="352" y2="630.72" stroke="#4a90e2" stroke-width="2.88" marker-end="url(#arrowhead)" />
-  <path d="M 208 676.8 Q 112 676.8 112 568.8 Q 112 532.8 200 554.4" fill="none" stroke="#dc3545" stroke-width="2.88" marker-end="url(#arrowred)" />
-  <text x="88" y="626.4" font-family="Arial, sans-serif" font-size="15.84" fill="#dc3545">Fail</text>
-  <rect x="640" y="648" width="320" height="57.6" rx="7.2" fill="#d4edda" stroke="#28a745" stroke-width="2.88" />
-  <text x="800" y="684" text-anchor="middle" font-family="Arial, sans-serif" font-size="18.72" fill="#333">Merge to Main/Release</text>
-  <line x1="496" y1="676.8" x2="632" y2="676.8" stroke="#28a745" stroke-width="2.88" marker-end="url(#arrowgreen)" />
-  <text x="560" y="665.28" font-family="Arial, sans-serif" font-size="15.84" fill="#28a745">Pass</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#333333">Python 2 to 3 Porting: Iterative Process</text>
+  <!-- Start -->
+  <rect x="476" y="56" width="288" height="50" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="620" y="87" text-anchor="middle" font-size="17" fill="#333333">Start with Py2 Code</text>
+  <line x1="620" y1="106" x2="620" y2="130" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Diamond 1 -->
+  <polygon points="620,150 780,210 620,270 460,210" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="620" y="205" text-anchor="middle" font-size="15" fill="#333333">Run Tests</text>
+  <text x="620" y="225" text-anchor="middle" font-size="15" fill="#333333">in Py2?</text>
+  <!-- Fail branch right -->
+  <line x1="780" y1="210" x2="900" y2="210" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="838" y="198" text-anchor="middle" font-size="13" fill="#c62828">Fail</text>
+  <rect x="904" y="185" width="260" height="50" rx="6" fill="#fce4ec" stroke="#c62828" stroke-width="2"/>
+  <text x="1034" y="215" text-anchor="middle" font-size="15" fill="#333333">Fix Tests in Py2 First!</text>
+  <!-- Pass branch down -->
+  <line x1="620" y1="270" x2="620" y2="310" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="648" y="295" font-size="13" fill="#2e7d32">Pass</text>
+  <!-- Branch code -->
+  <rect x="476" y="314" width="288" height="50" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="620" y="345" text-anchor="middle" font-size="17" fill="#333333">Branch Code</text>
+  <line x1="620" y1="364" x2="620" y2="400" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Diamond 2 - Apply auto-porting -->
+  <polygon points="620,420 800,475 620,530 440,475" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="620" y="467" text-anchor="middle" font-size="14" fill="#333333">Apply Auto-Porting</text>
+  <text x="620" y="487" text-anchor="middle" font-size="13" fill="#555555">(2to3, modernize)</text>
+  <!-- Manual fixes -->
+  <line x1="440" y1="475" x2="360" y2="475" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="180" y="450" width="180" height="50" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="270" y="480" text-anchor="middle" font-size="14" fill="#333333">Manual Fixes</text>
+  <line x1="270" y1="500" x2="270" y2="540" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Diamond 3 - Run Py3 tests -->
+  <polygon points="270,558 420,610 270,662 120,610" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5"/>
+  <text x="270" y="605" text-anchor="middle" font-size="14" fill="#333333">Run Tests</text>
+  <text x="270" y="625" text-anchor="middle" font-size="14" fill="#333333">in Py3?</text>
+  <!-- Fail loop back -->
+  <path d="M 120 610 Q 60 610 60 510 Q 60 460 178 465" fill="none" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="44" y="564" font-size="13" fill="#c62828">Fail</text>
+  <!-- Pass to merge -->
+  <line x1="420" y1="610" x2="540" y2="610" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <text x="476" y="598" font-size="13" fill="#2e7d32">Pass</text>
+  <rect x="544" y="585" width="296" height="50" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="692" y="615" text-anchor="middle" font-size="15" fill="#333333">Merge to Main / Release</text>
 </svg>

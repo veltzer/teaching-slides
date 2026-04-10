@@ -1,26 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Review Pipeline</text>
-  <circle cx="320" cy="360" r="64" fill="#3498DB" />
-  <text x="320" y="369" text-anchor="middle" fill="white" font-size="19.2">PR</text>
-  <path d="M 384 360 L 496 360" stroke="white" stroke-width="3.2" marker-end="url(#r1)" />
-  <circle cx="560" cy="360" r="64" fill="#F39C12" />
-  <text x="560" y="369" text-anchor="middle" fill="white" font-size="19.2">AI</text>
-  <path d="M 624 360 L 736 360" stroke="white" stroke-width="3.2" marker-end="url(#r2)" />
-  <circle cx="800" cy="360" r="64" fill="#E74C3C" />
-  <text x="800" y="369" text-anchor="middle" fill="white" font-size="19.2">Human</text>
-  <path d="M 864 360 L 976 360" stroke="white" stroke-width="3.2" marker-end="url(#r3)" />
-  <circle cx="1040" cy="360" r="64" fill="#27AE60" />
-  <text x="1040" y="369" text-anchor="middle" fill="white" font-size="19.2">Merge</text>
   <defs>
-    <marker id="r1" markerWidth="16" markerHeight="18" refX="8" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="white" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="r2" markerWidth="16" markerHeight="18" refX="8" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="white" />
-    </marker>
-    <marker id="r3" markerWidth="16" markerHeight="18" refX="8" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="white" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Pipeline circles -->
+  <circle cx="200" cy="280" r="110" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="200" y="268" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">PR</text>
+  <text x="200" y="298" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">Created</text>
+  <line x1="310" y1="280" x2="430" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <circle cx="540" cy="280" r="110" fill="#fff3e0" stroke="#fb8c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="540" y="268" text-anchor="middle" fill="#e65100" font-size="22" font-weight="bold" font-family="Arial, sans-serif">AI</text>
+  <text x="540" y="298" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">Review</text>
+  <line x1="650" y1="280" x2="770" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <circle cx="880" cy="280" r="110" fill="#ffebee" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="880" y="268" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Human</text>
+  <text x="880" y="298" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">Review</text>
+  <line x1="990" y1="280" x2="1110" y2="280" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <circle cx="1190" cy="280" r="80" fill="#e8f5e9" stroke="#43a047" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1190" y="268" text-anchor="middle" fill="#2e7d32" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Merge</text>
+  <text x="1190" y="298" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Approved</text>
+  <!-- Labels below circles -->
+  <text x="200" y="420" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Push code</text>
+  <text x="540" y="420" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Automated checks</text>
+  <text x="880" y="420" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Peer validation</text>
+  <text x="1190" y="390" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">Deploy</text>
+  <!-- Details section -->
+  <rect x="80" y="460" width="1120" height="210" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="498" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">AI Pre-Review Catches</text>
+  <rect x="100" y="515" width="310" height="130" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1"/>
+  <text x="255" y="543" text-anchor="middle" fill="#1565c0" font-size="15" font-weight="bold" font-family="Arial, sans-serif">Code Quality</text>
+  <text x="255" y="568" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Style violations</text>
+  <text x="255" y="590" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Dead code, duplicates</text>
+  <text x="255" y="612" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Complexity metrics</text>
+  <rect x="485" y="515" width="310" height="130" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="640" y="543" text-anchor="middle" fill="#2e7d32" font-size="15" font-weight="bold" font-family="Arial, sans-serif">Security</text>
+  <text x="640" y="568" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Hardcoded secrets</text>
+  <text x="640" y="590" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">SQL injection risks</text>
+  <text x="640" y="612" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Dependency vulns</text>
+  <rect x="870" y="515" width="310" height="130" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="1025" y="543" text-anchor="middle" fill="#e65100" font-size="15" font-weight="bold" font-family="Arial, sans-serif">Testing Gaps</text>
+  <text x="1025" y="568" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Missing test cases</text>
+  <text x="1025" y="590" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Edge cases</text>
+  <text x="1025" y="612" text-anchor="middle" fill="#444" font-size="13" font-family="Arial, sans-serif">Coverage regressions</text>
 </svg>

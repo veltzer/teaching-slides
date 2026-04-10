@@ -1,20 +1,44 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="ah2" markerWidth="22.2609" markerHeight="16.4571" refX="16.6957" refY="6.1714" orient="auto">
-      <path d="M 0 0 L 0 12.3429 L 22.2609 6.1714 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="61.7143" text-anchor="middle" font-size="28.8" fill="#222">Spindle Motor</text>
-  <line x1="640" y1="72" x2="640" y2="123.4286" stroke="#555" stroke-width="3.0857" marker-end="url(#ah2)" />
-  <rect x="278.2609" y="123.4286" width="723.4783" height="92.5714" rx="8.2286" fill="#e3f2fd" stroke="#333" stroke-width="3.0857" />
-  <text x="640" y="178.9714" text-anchor="middle" font-size="26.7429" fill="#222">Platter 1</text>
-  <text x="1057.3913" y="178.9714" font-size="22.6286" fill="#555">← Magnetic coating</text>
-  <rect x="278.2609" y="236.5714" width="723.4783" height="92.5714" rx="8.2286" fill="#e3f2fd" stroke="#333" stroke-width="3.0857" />
-  <text x="640" y="292.1143" text-anchor="middle" font-size="26.7429" fill="#222">Platter 2</text>
-  <rect x="278.2609" y="349.7143" width="723.4783" height="92.5714" rx="8.2286" fill="#e3f2fd" stroke="#333" stroke-width="3.0857" />
-  <text x="640" y="405.2571" text-anchor="middle" font-size="26.7429" fill="#222">Platter 3</text>
-  <line x1="640" y1="442.2857" x2="640" y2="514.2857" stroke="#555" stroke-width="3.0857" marker-end="url(#ah2)" />
-  <rect x="278.2609" y="514.2857" width="723.4783" height="113.1429" rx="8.2286" fill="#fff3e0" stroke="#333" stroke-width="3.0857" />
-  <text x="640" y="561.6" text-anchor="middle" font-size="26.7429" fill="#222">Read/Write Head</text>
-  <text x="640" y="602.7429" text-anchor="middle" font-size="26.7429" fill="#222">on Actuator Arm</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Spindle Motor label and arrow -->
+  <text x="640" y="55" text-anchor="middle" font-size="28" fill="#222222">Spindle Motor</text>
+  <line x1="640" y1="65" x2="640" y2="120" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Three platters -->
+  <rect x="280" y="122" width="720" height="90" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="177" text-anchor="middle" font-size="25" fill="#ffffff">Platter 1</text>
+  <text x="1060" y="177" font-size="20" fill="#555555">Magnetic coating</text>
+
+  <rect x="280" y="232" width="720" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="287" text-anchor="middle" font-size="25" fill="#333333">Platter 2</text>
+
+  <rect x="280" y="342" width="720" height="90" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="397" text-anchor="middle" font-size="25" fill="#333333">Platter 3</text>
+
+  <!-- Arrow to read/write head -->
+  <line x1="640" y1="432" x2="640" y2="510" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Read/Write Head -->
+  <rect x="280" y="512" width="720" height="110" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="560" text-anchor="middle" font-size="25" fill="#333333">Read/Write Head</text>
+  <text x="640" y="598" text-anchor="middle" font-size="22" fill="#555555">on Actuator Arm</text>
 </svg>

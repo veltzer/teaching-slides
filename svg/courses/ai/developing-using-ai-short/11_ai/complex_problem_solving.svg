@@ -1,18 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="128" y="108" width="1024" height="504" fill="#f9f9f9" stroke="#ccc" rx="25.6" />
-  <text x="640" y="198" text-anchor="middle" font-size="40.96" font-weight="bold">AI-Powered Problem Decomposition</text>
-  <rect x="204.8" y="288" width="256" height="108" fill="#ffecb3" stroke="#f57f17" rx="12.8" />
-  <text x="332.8" y="360" text-anchor="middle" font-size="25.6">Problem Analysis</text>
-  <rect x="512" y="288" width="256" height="108" fill="#c8e6c9" stroke="#388e3c" rx="12.8" />
-  <text x="640" y="360" text-anchor="middle" font-size="25.6">Decomposition</text>
-  <rect x="819.2" y="288" width="256" height="108" fill="#bbdefb" stroke="#1976d2" rx="12.8" />
-  <text x="947.2" y="360" text-anchor="middle" font-size="25.6">Solution Synthesis</text>
-  <rect x="204.8" y="450" width="204.8" height="90" fill="#e8f5e8" stroke="#2e7d32" rx="7.68" />
-  <text x="307.2" y="511.2" text-anchor="middle" font-size="25.6">Sub-problem A</text>
-  <rect x="435.2" y="450" width="204.8" height="90" fill="#e8f5e8" stroke="#2e7d32" rx="7.68" />
-  <text x="537.6" y="511.2" text-anchor="middle" font-size="25.6">Sub-problem B</text>
-  <rect x="665.6" y="450" width="204.8" height="90" fill="#e8f5e8" stroke="#2e7d32" rx="7.68" />
-  <text x="768" y="511.2" text-anchor="middle" font-size="25.6">Sub-problem C</text>
-  <rect x="896" y="450" width="179.2" height="90" fill="#e8f5e8" stroke="#2e7d32" rx="7.68" />
-  <text x="985.6" y="511.2" text-anchor="middle" font-size="25.6">Integration</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="50" width="1120" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="89" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">AI-Powered Problem Decomposition</text>
+  <!-- Top row: 3 main phases -->
+  <rect x="80" y="150" width="330" height="130" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="222" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Problem Analysis</text>
+  <text x="245" y="254" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Understand scope</text>
+  <line x1="410" y1="215" x2="470" y2="215" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="480" y="150" width="320" height="130" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="222" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Decomposition</text>
+  <text x="640" y="254" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Break into sub-tasks</text>
+  <line x1="800" y1="215" x2="860" y2="215" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <rect x="870" y="150" width="330" height="130" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="222" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Solution Synthesis</text>
+  <text x="1035" y="254" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Combine results</text>
+  <!-- Sub-problem boxes -->
+  <rect x="80" y="330" width="245" height="110" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="202" y="392" text-anchor="middle" fill="#2e7d32" font-size="17" font-family="Arial, sans-serif">Sub-problem A</text>
+  <rect x="355" y="330" width="245" height="110" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="477" y="392" text-anchor="middle" fill="#2e7d32" font-size="17" font-family="Arial, sans-serif">Sub-problem B</text>
+  <rect x="630" y="330" width="245" height="110" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="752" y="392" text-anchor="middle" fill="#2e7d32" font-size="17" font-family="Arial, sans-serif">Sub-problem C</text>
+  <rect x="905" y="330" width="295" height="110" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1052" y="392" text-anchor="middle" fill="#1565c0" font-size="17" font-family="Arial, sans-serif">Integration</text>
+  <!-- Arrows from Decomposition down -->
+  <path d="M 640 280 L 202 330" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 280 L 477 330" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 280 L 752 330" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 640 280 L 1052 330" stroke="#888" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <!-- Summary -->
+  <rect x="80" y="480" width="1120" height="200" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="520" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">AI Strategies for Complex Problems</text>
+  <text x="640" y="556" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Divide-and-conquer: solve each sub-problem independently with AI</text>
+  <text x="640" y="590" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Chain prompting: output of one AI step feeds the next</text>
+  <text x="640" y="624" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Iterative refinement: start broad, drill into specifics</text>
+  <text x="640" y="658" text-anchor="middle" fill="#444" font-size="16" font-family="Arial, sans-serif">• Multiple AI perspectives: cross-validate solutions</text>
 </svg>

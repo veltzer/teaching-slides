@@ -1,21 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="22.2609" markerHeight="15.4286" refX="19.4783" refY="7.7143" orient="auto">
-      <path d="M 0 0 L 0 15.4286 L 22.2609 7.7143 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="278.2609" y="25.7143" width="723.4783" height="102.8571" rx="10.2857" fill="#7b1fa2" stroke="#333" stroke-width="3.8571" />
-  <text x="640" y="90" font-family="monospace" font-size="36" font-weight="bold" fill="#fff" text-anchor="middle">terraform refresh</text>
-  <line x1="640" y1="128.5714" x2="640" y2="180" stroke="#555" stroke-width="3.8571" marker-end="url(#arr)" />
-  <rect x="83.4783" y="180" width="1113.0435" height="113.1429" rx="10.2857" fill="#f0f4f8" stroke="#555" stroke-width="3.8571" />
-  <text x="640" y="249.4286" font-family="sans-serif" font-size="30.8571" fill="#222" text-anchor="middle">Query all providers for current resource state</text>
-  <line x1="640" y1="293.1429" x2="640" y2="344.5714" stroke="#555" stroke-width="3.8571" marker-end="url(#arr)" />
-  <rect x="83.4783" y="344.5714" width="1113.0435" height="113.1429" rx="10.2857" fill="#f0f4f8" stroke="#555" stroke-width="3.8571" />
-  <text x="640" y="414" font-family="sans-serif" font-size="30.8571" fill="#222" text-anchor="middle">Compare API responses to current state file</text>
-  <line x1="640" y1="457.7143" x2="640" y2="509.1429" stroke="#555" stroke-width="3.8571" marker-end="url(#arr)" />
-  <rect x="83.4783" y="509.1429" width="1113.0435" height="113.1429" rx="10.2857" fill="#f0f4f8" stroke="#555" stroke-width="3.8571" />
-  <text x="640" y="578.5714" font-family="sans-serif" font-size="30.8571" fill="#222" text-anchor="middle">Update state file with actual values</text>
-  <line x1="640" y1="622.2857" x2="640" y2="673.7143" stroke="#555" stroke-width="3.8571" marker-end="url(#arr)" />
-  <rect x="83.4783" y="673.7143" width="1113.0435" height="113.1429" rx="10.2857" fill="#e8f5e9" stroke="#333" stroke-width="3.8571" />
-  <text x="640" y="743.1429" font-family="sans-serif" font-size="30.8571" fill="#222" text-anchor="middle">State file reflects reality (not config)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Command header -->
+  <rect x="278" y="26" width="724" height="104" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="88" font-family="monospace" font-size="30" font-weight="bold" fill="#ffffff" text-anchor="middle">terraform refresh</text>
+  <line x1="640" y1="130" x2="640" y2="178" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- Step 1 -->
+  <rect x="83" y="178" width="1114" height="112" rx="10" fill="url(#grad-surface)" stroke="#555" stroke-width="3.5" filter="url(#shadow)"/>
+  <text x="640" y="245" font-size="22" fill="#222" text-anchor="middle">Query all providers for current resource state</text>
+  <line x1="640" y1="290" x2="640" y2="338" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- Step 2 -->
+  <rect x="83" y="338" width="1114" height="112" rx="10" fill="url(#grad-surface)" stroke="#555" stroke-width="3.5" filter="url(#shadow)"/>
+  <text x="640" y="405" font-size="22" fill="#222" text-anchor="middle">Compare API responses to current state file</text>
+  <line x1="640" y1="450" x2="640" y2="498" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- Step 3 -->
+  <rect x="83" y="498" width="1114" height="112" rx="10" fill="url(#grad-surface)" stroke="#555" stroke-width="3.5" filter="url(#shadow)"/>
+  <text x="640" y="565" font-size="22" fill="#222" text-anchor="middle">Update state file with actual values</text>
+  <line x1="640" y1="610" x2="640" y2="622" stroke="#555" stroke-width="4" marker-end="url(#arrow)"/>
+  <!-- Step 4 -->
+  <rect x="83" y="622" width="1114" height="80" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="671" font-size="22" fill="#222" text-anchor="middle">State file reflects reality (not config)</text>
 </svg>

@@ -1,16 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="57.6" text-anchor="middle" font-size="25.6" font-weight="bold">Linux Network Stack Layers</text>
-  <rect x="213.3333" y="90" width="853.3333" height="108" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="162" text-anchor="middle" font-size="23.4667">User Space: Applications (socket API)</text>
-  <rect x="213.3333" y="216" width="853.3333" height="108" fill="#e3f2fd" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="288" text-anchor="middle" font-size="23.4667">Socket Layer: struct socket, proto_ops</text>
-  <rect x="213.3333" y="342" width="853.3333" height="108" fill="#fff3e0" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="414" text-anchor="middle" font-size="23.4667">Transport: TCP / UDP (struct sock)</text>
-  <rect x="213.3333" y="468" width="853.3333" height="108" fill="#e8f5e9" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="540" text-anchor="middle" font-size="23.4667">Network: IP routing, netfilter hooks</text>
-  <rect x="213.3333" y="594" width="853.3333" height="108" fill="#ffebee" stroke="#333" stroke-width="2.1333" rx="6.4" />
-  <text x="640" y="666" text-anchor="middle" font-size="23.4667">Device/Link: net_device, drivers, NIC</text>
-  <text x="128" y="162" text-anchor="middle" font-size="21.3333" fill="#666">User</text>
-  <text x="128" y="414" text-anchor="middle" font-size="21.3333" fill="#666">Kernel</text>
-  <line x1="53.3333" y1="198" x2="202.6667" y2="198" stroke="#999" stroke-width="2.1333" stroke-dasharray="8.5333 6.4" />
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Layers -->
+  <rect x="213" y="80" width="854" height="100" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="140" text-anchor="middle" font-size="22" fill="#4a148c">User Space: Applications (socket API)</text>
+  <!-- User/Kernel boundary line -->
+  <line x1="50" y1="193" x2="210" y2="193" stroke="#aaaaaa" stroke-width="1.5" stroke-dasharray="8,5"/>
+  <text x="128" y="185" text-anchor="middle" font-size="18" fill="#888888">User</text>
+  <rect x="213" y="206" width="854" height="100" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="266" text-anchor="middle" font-size="22" fill="#0d47a1">Socket Layer: struct socket, proto_ops</text>
+  <rect x="213" y="322" width="854" height="100" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="382" text-anchor="middle" font-size="22" fill="#e65100">Transport: TCP / UDP (struct sock)</text>
+  <rect x="213" y="438" width="854" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="498" text-anchor="middle" font-size="22" fill="#1b5e20">Network: IP routing, netfilter hooks</text>
+  <rect x="213" y="554" width="854" height="100" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="614" text-anchor="middle" font-size="22" fill="#b71c1c">Device/Link: net_device, drivers, NIC</text>
+  <text x="128" y="406" text-anchor="middle" font-size="18" fill="#888888">Kernel</text>
 </svg>

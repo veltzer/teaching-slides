@@ -1,34 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="24.6154" markerHeight="11.7209" refX="22.1538" refY="5.8605" orient="auto">
-      <polygon points="0,16.7442 8.6154,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="24.6154" markerHeight="11.7209" refX="22.1538" refY="5.8605" orient="auto">
-      <polygon points="0,16.7442 8.6154,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="147.6923" y="25.1163" width="984.6154" height="77.0233" rx="6.6977" fill="#e3f2fd" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="68.6512" text-anchor="middle" font-size="21.7674" fill="#222">1. Code Change</text>
-  <line x1="640" y1="102.1395" x2="640" y2="122.2326" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="122.2326" width="984.6154" height="77.0233" rx="6.6977" fill="#e3f2fd" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="165.7674" text-anchor="middle" font-size="21.7674" fill="#222">2. Build Application</text>
-  <line x1="640" y1="199.2558" x2="640" y2="219.3488" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="219.3488" width="984.6154" height="93.7674" rx="6.6977" fill="#e8f5e9" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="256.186" text-anchor="middle" font-size="21.7674" fill="#222">3. Packer Build</text>
-  <text x="640" y="286.3256" text-anchor="middle" font-size="18.4186" fill="#555">   (create AMI with app)</text>
-  <line x1="640" y1="313.1163" x2="640" y2="333.2093" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="333.2093" width="984.6154" height="93.7674" rx="6.6977" fill="#fff3e0" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="370.0465" text-anchor="middle" font-size="21.7674" fill="#222">4. Terraform Plan</text>
-  <text x="640" y="400.186" text-anchor="middle" font-size="18.4186" fill="#555">   (reference new AMI)</text>
-  <line x1="640" y1="426.9767" x2="640" y2="447.0698" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="447.0698" width="984.6154" height="93.7674" rx="6.6977" fill="#fff3e0" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="483.907" text-anchor="middle" font-size="21.7674" fill="#222">5. Terraform Apply</text>
-  <text x="640" y="514.0465" text-anchor="middle" font-size="18.4186" fill="#555">   (deploy new instances)</text>
-  <line x1="640" y1="540.8372" x2="640" y2="560.9302" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="560.9302" width="984.6154" height="77.0233" rx="6.6977" fill="#ede7f6" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="604.4651" text-anchor="middle" font-size="21.7674" fill="#222">6. Health Check / Smoke Test</text>
-  <line x1="640" y1="637.9535" x2="640" y2="658.0465" stroke="#555" stroke-width="2.5116" marker-end="url(#arr)" />
-  <rect x="147.6923" y="658.0465" width="984.6154" height="93.7674" rx="6.6977" fill="#c8e6c9" stroke="#333" stroke-width="2.5116" />
-  <text x="640" y="694.8837" text-anchor="middle" font-size="21.7674" fill="#222">7. DNS/LB Switch to</text>
-  <text x="640" y="725.0233" text-anchor="middle" font-size="18.4186" fill="#555">   New Instances</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Steps -->
+  <rect x="148" y="24" width="984" height="76" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="68" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">1. Code Change</text>
+  <line x1="640" y1="100" x2="640" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="120" width="984" height="76" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="164" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">2. Build Application</text>
+  <line x1="640" y1="196" x2="640" y2="216" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="216" width="984" height="92" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="255" text-anchor="middle" font-size="18" fill="#2e7d32" font-weight="bold">3. Packer Build</text>
+  <text x="640" y="286" text-anchor="middle" font-size="15" fill="#555">(create AMI with app)</text>
+  <line x1="640" y1="308" x2="640" y2="328" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="328" width="984" height="92" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="367" text-anchor="middle" font-size="18" fill="#e65100" font-weight="bold">4. Terraform Plan</text>
+  <text x="640" y="398" text-anchor="middle" font-size="15" fill="#555">(reference new AMI)</text>
+  <line x1="640" y1="420" x2="640" y2="440" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="440" width="984" height="92" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="479" text-anchor="middle" font-size="18" fill="#e65100" font-weight="bold">5. Terraform Apply</text>
+  <text x="640" y="510" text-anchor="middle" font-size="15" fill="#555">(deploy new instances)</text>
+  <line x1="640" y1="532" x2="640" y2="552" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="552" width="984" height="76" rx="8" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="596" text-anchor="middle" font-size="18" fill="#7b1fa2" font-weight="bold">6. Health Check / Smoke Test</text>
+  <line x1="640" y1="628" x2="640" y2="648" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="148" y="648" width="984" height="60" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="686" text-anchor="middle" font-size="18" fill="#2e7d32" font-weight="bold">7. DNS/LB Switch to New Instances</text>
 </svg>

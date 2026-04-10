@@ -1,18 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="19.6923" y="36" width="393.8462" height="144" fill="#e3f2fd" stroke="#333" stroke-width="3.9385" rx="9.8462" />
-  <text x="216.6154" y="126" text-anchor="middle" font-size="21.6615">Docker Compose</text>
-  <text x="216.6154" y="234" text-anchor="middle" font-size="19.6923">Single host, simple apps</text>
-  <rect x="443.0769" y="36" width="393.8462" height="144" fill="#fff3e0" stroke="#333" stroke-width="3.9385" rx="9.8462" />
-  <text x="640" y="126" text-anchor="middle" font-size="21.6615">Docker Swarm</text>
-  <text x="640" y="234" text-anchor="middle" font-size="19.6923">Multi-host, built into Docker</text>
-  <rect x="866.4615" y="36" width="393.8462" height="144" fill="#e8f5e9" stroke="#333" stroke-width="3.9385" rx="9.8462" />
-  <text x="1063.3846" y="126" text-anchor="middle" font-size="21.6615">Kubernetes</text>
-  <text x="1063.3846" y="234" text-anchor="middle" font-size="19.6923">Production-grade, complex</text>
-  <line x1="98.4615" y1="288" x2="1181.5385" y2="288" stroke="#999" stroke-width="1.9692" stroke-dasharray="7.8769" />
-  <text x="98.4615" y="360" font-size="19.6923">Simple</text>
-  <text x="1112.6154" y="360" font-size="19.6923">Complex</text>
-  <rect x="19.6923" y="414" width="1240.6154" height="252" fill="#f5f5f5" stroke="#333" stroke-width="1.9692" rx="9.8462" />
-  <text x="640" y="486" text-anchor="middle" font-size="19.6923" font-weight="bold">Common Orchestration Features</text>
-  <text x="640" y="558" text-anchor="middle" font-size="19.6923">Service discovery | Load balancing | Rolling updates</text>
-  <text x="640" y="619.2" text-anchor="middle" font-size="19.6923">Self-healing | Scaling | Secret management</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Three orchestration tools -->
+  <rect x="20" y="30" width="400" height="130" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="30" width="400" height="48" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="68" width="400" height="10" fill="url(#grad-accent)"/>
+  <text x="220" y="62" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Docker Compose</text>
+  <text x="220" y="118" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Single host, simple apps</text>
+  <text x="220" y="142" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">YAML definition</text>
+
+  <rect x="440" y="30" width="400" height="130" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="440" y="30" width="400" height="48" fill="url(#grad-accent)" rx="12"/>
+  <rect x="440" y="68" width="400" height="10" fill="url(#grad-accent)"/>
+  <text x="640" y="62" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Docker Swarm</text>
+  <text x="640" y="118" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Multi-host, built into Docker</text>
+  <text x="640" y="142" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Simple clustering</text>
+
+  <rect x="860" y="30" width="400" height="130" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="860" y="30" width="400" height="48" fill="url(#grad-accent)" rx="12"/>
+  <rect x="860" y="68" width="400" height="10" fill="url(#grad-accent)"/>
+  <text x="1060" y="62" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff" font-family="sans-serif">Kubernetes</text>
+  <text x="1060" y="118" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Production-grade, complex</text>
+  <text x="1060" y="142" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">CNCF standard</text>
+
+  <!-- Complexity arrow -->
+  <line x1="80" y1="250" x2="1200" y2="250" stroke="#bbdefb" stroke-width="2" stroke-dasharray="8 4" marker-end="url(#arrow)"/>
+  <text x="80" y="238" font-size="16" fill="#555555" font-family="sans-serif">Simple</text>
+  <text x="1100" y="238" font-size="16" fill="#555555" font-family="sans-serif">Complex</text>
+
+  <!-- Common features box -->
+  <rect x="20" y="290" width="1240" height="310" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="290" width="1240" height="50" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="330" width="1240" height="10" fill="url(#grad-accent)"/>
+  <text x="640" y="322" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Common Orchestration Features</text>
+  <text x="640" y="395" text-anchor="middle" font-size="17" fill="#333333" font-family="sans-serif">Service discovery | Load balancing | Rolling updates</text>
+  <text x="640" y="430" text-anchor="middle" font-size="17" fill="#333333" font-family="sans-serif">Self-healing | Auto-scaling | Secret management</text>
+  <text x="640" y="475" text-anchor="middle" font-size="17" fill="#333333" font-family="sans-serif">Health checks | Resource limits | Persistent volumes</text>
+  <text x="640" y="540" text-anchor="middle" font-size="15" fill="#555555" font-family="sans-serif">Choose based on scale, team expertise, and operational requirements</text>
 </svg>

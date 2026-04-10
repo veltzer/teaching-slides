@@ -1,18 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="80" y="90" width="480" height="180" fill="#e74c3c" rx="16" />
-  <text x="320" y="189" text-anchor="middle" fill="white" font-size="32" font-weight="bold">Traditional Coding</text>
-  <rect x="720" y="90" width="480" height="180" fill="#27ae60" rx="16" />
-  <text x="960" y="189" text-anchor="middle" fill="white" font-size="32" font-weight="bold">AI-Assisted Coding</text>
-  <path d="M 560 180 L 720 180" stroke="#34495e" stroke-width="4.8" marker-end="url(#arrowhead)" />
   <defs>
-    <marker id="arrowhead" markerWidth="16" markerHeight="18" refX="16" refY="9" orient="auto">
-      <polygon points="0,18 8,0" fill="#34495e" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="80" y="360" font-size="25.6" fill="#2c3e50">• Manual everything</text>
-  <text x="80" y="414" font-size="25.6" fill="#2c3e50">• Slow iteration</text>
-  <text x="80" y="468" font-size="25.6" fill="#2c3e50">• High cognitive load</text>
-  <text x="720" y="360" font-size="25.6" fill="#2c3e50">• AI suggestions</text>
-  <text x="720" y="414" font-size="25.6" fill="#2c3e50">• Rapid prototyping</text>
-  <text x="720" y="468" font-size="25.6" fill="#2c3e50">• Focus on logic</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Left: Traditional -->
+  <rect x="80" y="90" width="480" height="170" rx="14" fill="url(#grad-surface)" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="90" width="480" height="42" rx="14" fill="#e53935"/>
+  <rect x="80" y="118" width="480" height="14" fill="#e53935"/>
+  <text x="320" y="122" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Traditional Coding</text>
+  <text x="100" y="175" font-size="20" fill="#444" font-family="Arial, sans-serif">• Manual everything</text>
+  <text x="100" y="205" font-size="20" fill="#444" font-family="Arial, sans-serif">• Slow iteration</text>
+  <text x="100" y="235" font-size="20" fill="#444" font-family="Arial, sans-serif">• High cognitive load</text>
+  <!-- Arrow -->
+  <line x1="575" y1="180" x2="700" y2="180" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Right: AI-Assisted -->
+  <rect x="715" y="90" width="485" height="170" rx="14" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="715" y="90" width="485" height="42" rx="14" fill="url(#grad-accent)"/>
+  <rect x="715" y="118" width="485" height="14" fill="url(#grad-accent)"/>
+  <text x="957" y="122" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">AI-Assisted Coding</text>
+  <text x="735" y="175" font-size="20" fill="#444" font-family="Arial, sans-serif">• AI suggestions</text>
+  <text x="735" y="205" font-size="20" fill="#444" font-family="Arial, sans-serif">• Rapid prototyping</text>
+  <text x="735" y="235" font-size="20" fill="#444" font-family="Arial, sans-serif">• Focus on logic</text>
+  <!-- Benefits section -->
+  <rect x="80" y="310" width="1120" height="300" rx="12" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="355" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">The Paradigm Shift in Software Development</text>
+  <rect x="110" y="375" width="320" height="200" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="270" y="410" text-anchor="middle" font-size="18" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">Speed</text>
+  <text x="270" y="440" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Code generation in seconds</text>
+  <text x="270" y="465" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Boilerplate automated</text>
+  <text x="270" y="490" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Faster prototyping</text>
+  <rect x="470" y="375" width="320" height="200" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="630" y="410" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32" font-family="Arial, sans-serif">Quality</text>
+  <text x="630" y="440" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Fewer syntax errors</text>
+  <text x="630" y="465" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Best-practice patterns</text>
+  <text x="630" y="490" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Consistent code style</text>
+  <rect x="830" y="375" width="320" height="200" rx="10" fill="#fff3e0" stroke="#fb8c00" stroke-width="1.5"/>
+  <text x="990" y="410" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100" font-family="Arial, sans-serif">Focus</text>
+  <text x="990" y="440" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Solve complex problems</text>
+  <text x="990" y="465" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Design &amp; architecture</text>
+  <text x="990" y="490" text-anchor="middle" font-size="16" fill="#444" font-family="Arial, sans-serif">Business logic</text>
 </svg>

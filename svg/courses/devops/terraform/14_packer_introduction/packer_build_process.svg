@@ -1,38 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="23.7037" markerHeight="11.4545" refX="21.3333" refY="5.7273" orient="auto">
-      <polygon points="0,16.3636 8.2963,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="23.7037" markerHeight="11.4545" refX="21.3333" refY="5.7273" orient="auto">
-      <polygon points="0,16.3636 8.2963,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="165.9259" y="24.5455" width="948.1481" height="75.2727" rx="6.5455" fill="#e3f2fd" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="67.0909" text-anchor="middle" font-size="21.2727" fill="#222" font-weight="bold">packer build</text>
-  <line x1="640" y1="99.8182" x2="640" y2="119.4545" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="119.4545" width="948.1481" height="91.6364" rx="6.5455" fill="#e8f5e9" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="155.4545" text-anchor="middle" font-size="21.2727" fill="#222">1. Launch temporary instance</text>
-  <text x="640" y="184.9091" text-anchor="middle" font-size="18" fill="#555">   (from source AMI)</text>
-  <line x1="640" y1="211.0909" x2="640" y2="230.7273" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="230.7273" width="948.1481" height="75.2727" rx="6.5455" fill="#e8f5e9" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="273.2727" text-anchor="middle" font-size="21.2727" fill="#222">2. Connect via SSH/WinRM</text>
-  <line x1="640" y1="306" x2="640" y2="325.6364" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="325.6364" width="948.1481" height="91.6364" rx="6.5455" fill="#e8f5e9" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="361.6364" text-anchor="middle" font-size="21.2727" fill="#222">3. Run provisioners</text>
-  <text x="640" y="391.0909" text-anchor="middle" font-size="18" fill="#555">   (install software)</text>
-  <line x1="640" y1="417.2727" x2="640" y2="436.9091" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="436.9091" width="948.1481" height="75.2727" rx="6.5455" fill="#e8f5e9" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="479.4545" text-anchor="middle" font-size="21.2727" fill="#222">4. Stop instance</text>
-  <line x1="640" y1="512.1818" x2="640" y2="531.8182" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="531.8182" width="948.1481" height="91.6364" rx="6.5455" fill="#fff3e0" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="567.8182" text-anchor="middle" font-size="21.2727" fill="#222">5. Create image</text>
-  <text x="640" y="597.2727" text-anchor="middle" font-size="18" fill="#555">   (AMI snapshot)</text>
-  <line x1="640" y1="623.4545" x2="640" y2="643.0909" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="643.0909" width="948.1481" height="91.6364" rx="6.5455" fill="#fff3e0" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="679.0909" text-anchor="middle" font-size="21.2727" fill="#222">6. Terminate temporary</text>
-  <text x="640" y="708.5455" text-anchor="middle" font-size="18" fill="#555">   instance</text>
-  <line x1="640" y1="734.7273" x2="640" y2="754.3636" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="165.9259" y="754.3636" width="948.1481" height="91.6364" rx="6.5455" fill="#c8e6c9" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="790.3636" text-anchor="middle" font-size="21.2727" fill="#222">7. Output artifact</text>
-  <text x="640" y="819.8182" text-anchor="middle" font-size="18" fill="#555">   (AMI ID)</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <rect x="166" y="24" width="948" height="76" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="68" text-anchor="middle" font-family="monospace" font-size="20" font-weight="bold" fill="#ffffff">packer build</text>
+  <line x1="640" y1="100" x2="640" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="120" width="948" height="86" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="155" text-anchor="middle" font-size="18" fill="#2e7d32">1. Launch temporary instance</text>
+  <text x="640" y="186" text-anchor="middle" font-size="14" fill="#555">(from source AMI)</text>
+  <line x1="640" y1="206" x2="640" y2="226" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="226" width="948" height="72" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="268" text-anchor="middle" font-size="18" fill="#2e7d32">2. Connect via SSH/WinRM</text>
+  <line x1="640" y1="298" x2="640" y2="318" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="318" width="948" height="86" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="353" text-anchor="middle" font-size="18" fill="#2e7d32">3. Run provisioners</text>
+  <text x="640" y="386" text-anchor="middle" font-size="14" fill="#555">(install software)</text>
+  <line x1="640" y1="404" x2="640" y2="424" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="424" width="948" height="72" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="466" text-anchor="middle" font-size="18" fill="#2e7d32">4. Stop instance</text>
+  <line x1="640" y1="496" x2="640" y2="516" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="516" width="948" height="86" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="551" text-anchor="middle" font-size="18" fill="#e65100">5. Create image</text>
+  <text x="640" y="584" text-anchor="middle" font-size="14" fill="#555">(AMI snapshot)</text>
+  <line x1="640" y1="602" x2="640" y2="622" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="166" y="622" width="948" height="76" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="668" text-anchor="middle" font-size="18" fill="#2e7d32">6. Terminate instance + output artifact (AMI ID)</text>
 </svg>

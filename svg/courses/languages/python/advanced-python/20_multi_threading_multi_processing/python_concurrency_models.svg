@@ -1,19 +1,49 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="128" y="125.2174" width="1024" height="93.913" fill="#e0e0ff" stroke="#000" stroke-width="5.12" />
-  <text x="640" y="187.8261" text-anchor="middle" font-family="sans-serif">Python Concurrency Models</text>
-  <rect x="128" y="281.7391" width="281.6" height="187.8261" fill="#ffe0e0" stroke="#000" stroke-width="5.12" />
-  <text x="268.8" y="344.3478" text-anchor="middle" font-family="sans-serif" font-size="35.84">Threading</text>
-  <text x="268.8" y="406.9565" text-anchor="middle" font-family="sans-serif" font-size="25.6">Shared Memory</text>
-  <text x="268.8" y="438.2609" text-anchor="middle" font-family="sans-serif" font-size="25.6">Limited by GIL</text>
-  <rect x="499.2" y="281.7391" width="281.6" height="187.8261" fill="#e0ffe0" stroke="#000" stroke-width="5.12" />
-  <text x="640" y="344.3478" text-anchor="middle" font-family="sans-serif" font-size="35.84">Multiprocessing</text>
-  <text x="640" y="406.9565" text-anchor="middle" font-family="sans-serif" font-size="25.6">Separate Processes</text>
-  <text x="640" y="438.2609" text-anchor="middle" font-family="sans-serif" font-size="25.6">Bypasses GIL</text>
-  <rect x="870.4" y="281.7391" width="281.6" height="187.8261" fill="#fff0e0" stroke="#000" stroke-width="5.12" />
-  <text x="1011.2" y="344.3478" text-anchor="middle" font-family="sans-serif" font-size="35.84">Asyncio</text>
-  <text x="1011.2" y="406.9565" text-anchor="middle" font-family="sans-serif" font-size="25.6">Cooperative</text>
-  <text x="1011.2" y="438.2609" text-anchor="middle" font-family="sans-serif" font-size="25.6">Event Loop Based</text>
-  <rect x="307.2" y="532.1739" width="665.6" height="125.2174" fill="#f0e0ff" stroke="#000" stroke-width="5.12" />
-  <text x="640" y="594.7826" text-anchor="middle" font-family="sans-serif" font-size="35.84">concurrent.futures</text>
-  <text x="640" y="626.087" text-anchor="middle" font-family="sans-serif" font-size="25.6">High-level Interface</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="70" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="84" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Python Concurrency Models</text>
+  <!-- Three models -->
+  <rect x="80" y="140" width="330" height="200" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="245" y="195" text-anchor="middle" font-size="26" font-weight="bold" fill="#c62828">Threading</text>
+  <text x="245" y="240" text-anchor="middle" font-size="18" fill="#333333">Shared Memory</text>
+  <text x="245" y="270" text-anchor="middle" font-size="18" fill="#333333">Limited by GIL</text>
+  <text x="245" y="300" text-anchor="middle" font-size="18" fill="#555555">Good for I/O-bound</text>
+  <rect x="475" y="140" width="330" height="200" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="195" text-anchor="middle" font-size="22" font-weight="bold" fill="#2e7d32">Multiprocessing</text>
+  <text x="640" y="240" text-anchor="middle" font-size="18" fill="#333333">Separate Processes</text>
+  <text x="640" y="270" text-anchor="middle" font-size="18" fill="#333333">Bypasses GIL</text>
+  <text x="640" y="300" text-anchor="middle" font-size="18" fill="#555555">Good for CPU-bound</text>
+  <rect x="870" y="140" width="330" height="200" rx="10" fill="#fff9c4" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1035" y="195" text-anchor="middle" font-size="26" font-weight="bold" fill="#795548">Asyncio</text>
+  <text x="1035" y="240" text-anchor="middle" font-size="18" fill="#333333">Cooperative</text>
+  <text x="1035" y="270" text-anchor="middle" font-size="18" fill="#333333">Event Loop Based</text>
+  <text x="1035" y="300" text-anchor="middle" font-size="18" fill="#555555">Good for many I/O</text>
+  <!-- concurrent.futures -->
+  <rect x="275" y="400" width="730" height="120" rx="10" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="455" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">concurrent.futures</text>
+  <text x="640" y="495" text-anchor="middle" font-size="18" fill="#555555">High-level unified interface for both threading and multiprocessing</text>
+  <!-- GIL note -->
+  <rect x="80" y="560" width="1120" height="80" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="593" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">The GIL (Global Interpreter Lock)</text>
+  <text x="640" y="622" text-anchor="middle" font-size="16" fill="#555555">Mutex that protects Python internals - only one thread executes Python bytecode at a time</text>
 </svg>

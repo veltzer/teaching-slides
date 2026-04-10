@@ -1,16 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="90" width="960" height="540" fill="#2C3E50" rx="16" />
-  <text x="640" y="144" text-anchor="middle" fill="white" font-size="28.8" font-weight="bold">Query Performance Analysis</text>
-  <rect x="240" y="180" width="800" height="72" fill="#E74C3C" rx="8" />
-  <text x="256" y="225" fill="white" font-size="19.2">Before: SELECT * FROM orders WHERE status = 'pending'</text>
-  <text x="880" y="225" fill="white" font-size="19.2">Time: 2.5s</text>
-  <rect x="240" y="270" width="800" height="144" fill="#27AE60" rx="8" />
-  <text x="256" y="315" fill="white" font-size="19.2">After: WITH pending_orders AS (</text>
-  <text x="288" y="351" fill="white" font-size="19.2">SELECT id, customer_id, total FROM orders</text>
-  <text x="288" y="387" fill="white" font-size="19.2">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
-  <text x="256" y="423" fill="white" font-size="19.2">) SELECT * FROM pending_orders;</text>
-  <text x="880" y="351" fill="white" font-size="19.2">Time: 0.08s</text>
-  <rect x="240" y="450" width="800" height="108" fill="#3498DB" rx="8" />
-  <text x="256" y="495" fill="white" font-size="19.2">Optimizations Applied:</text>
-  <text x="256" y="531" fill="white" font-size="19.2">✓ Partial index ✓ Column selection ✓ Date range ✓ CTE usage</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Before -->
+  <rect x="80" y="80" width="1120" height="100" rx="10" fill="#ffebee" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="118" font-size="17" fill="#b71c1c" font-weight="bold" font-family="Arial, sans-serif">BEFORE:</text>
+  <text x="100" y="148" font-size="17" fill="#444" font-family="Arial, monospace">SELECT * FROM orders WHERE status = 'pending'</text>
+  <text x="1100" y="138" text-anchor="middle" fill="#e53935" font-size="20" font-weight="bold" font-family="Arial, sans-serif">2.5s</text>
+  <!-- Arrow -->
+  <line x1="640" y1="190" x2="640" y2="230" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <text x="660" y="217" font-size="15" fill="#1565c0" font-family="Arial, sans-serif">optimized</text>
+  <!-- After -->
+  <rect x="80" y="240" width="1120" height="175" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="100" y="276" font-size="17" fill="#1b5e20" font-weight="bold" font-family="Arial, sans-serif">AFTER:</text>
+  <text x="100" y="306" font-size="16" fill="#333" font-family="Arial, monospace">WITH pending_orders AS (</text>
+  <text x="120" y="332" font-size="16" fill="#333" font-family="Arial, monospace">SELECT id, customer_id, total FROM orders</text>
+  <text x="120" y="358" font-size="16" fill="#333" font-family="Arial, monospace">WHERE status = 'pending' AND created_at &gt; NOW() - INTERVAL '7 days'</text>
+  <text x="100" y="395" font-size="16" fill="#333" font-family="Arial, monospace">) SELECT * FROM pending_orders;</text>
+  <text x="1100" y="340" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">0.08s</text>
+  <!-- Improvements box -->
+  <rect x="80" y="450" width="1120" height="200" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="488" text-anchor="middle" fill="#1565c0" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Optimizations Applied</text>
+  <rect x="110" y="505" width="240" height="120" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1"/>
+  <text x="230" y="535" text-anchor="middle" fill="#1565c0" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Partial Index</text>
+  <text x="230" y="562" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">WHERE status = pending</text>
+  <rect x="390" y="505" width="240" height="120" rx="8" fill="#e8f5e9" stroke="#43a047" stroke-width="1"/>
+  <text x="510" y="535" text-anchor="middle" fill="#2e7d32" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Column Select</text>
+  <text x="510" y="562" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">No SELECT *</text>
+  <rect x="670" y="505" width="240" height="120" rx="8" fill="#fff3e0" stroke="#fb8c00" stroke-width="1"/>
+  <text x="790" y="535" text-anchor="middle" fill="#e65100" font-size="16" font-weight="bold" font-family="Arial, sans-serif">Date Range</text>
+  <text x="790" y="562" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Limit scan scope</text>
+  <rect x="950" y="505" width="220" height="120" rx="8" fill="#f3e5f5" stroke="#8e24aa" stroke-width="1"/>
+  <text x="1060" y="535" text-anchor="middle" fill="#6a1b9a" font-size="16" font-weight="bold" font-family="Arial, sans-serif">CTE Usage</text>
+  <text x="1060" y="562" text-anchor="middle" fill="#444" font-size="14" font-family="Arial, sans-serif">Readable &amp; cached</text>
 </svg>

@@ -1,18 +1,68 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="20.6452" y="216" width="206.4516" height="324" fill="#e3f2fd" stroke="#333" stroke-width="4.129" rx="10.3226" />
-  <text x="123.871" y="410.4" text-anchor="middle" font-size="22.7097">PXE Client</text>
-  <rect x="330.3226" y="216" width="227.0968" height="324" fill="#fff3e0" stroke="#333" stroke-width="4.129" rx="10.3226" />
-  <text x="443.871" y="410.4" text-anchor="middle" font-size="22.7097">DHCP Server</text>
-  <rect x="660.6452" y="216" width="227.0968" height="324" fill="#e8f5e9" stroke="#333" stroke-width="4.129" rx="10.3226" />
-  <text x="774.1935" y="410.4" text-anchor="middle" font-size="22.7097">TFTP Server</text>
-  <rect x="990.9677" y="216" width="247.7419" height="324" fill="#f3e5f5" stroke="#333" stroke-width="4.129" rx="10.3226" />
-  <text x="1114.8387" y="410.4" text-anchor="middle" font-size="22.7097">HTTP/NFS Image</text>
-  <line x1="227.0968" y1="374.4" x2="330.3226" y2="374.4" stroke="#333" stroke-width="4.129" marker-end="url(#arr05c)" />
-  <line x1="557.4194" y1="374.4" x2="660.6452" y2="374.4" stroke="#333" stroke-width="4.129" marker-end="url(#arr05c)" />
-  <line x1="887.7419" y1="374.4" x2="990.9677" y2="374.4" stroke="#333" stroke-width="4.129" marker-end="url(#arr05c)" />
   <defs>
-    <marker id="arr05c" markerWidth="20.6452" markerHeight="72" refX="18.5806" refY="21.6" orient="auto">
-      <path d="M 0 0 L 0 43.2 L 18.5806 21.6 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- PXE Client -->
+  <rect x="20" y="200" width="230" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="200" width="230" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="245" width="230" height="10" fill="url(#grad-accent)"/>
+  <text x="135" y="234" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">PXE Client</text>
+  <text x="135" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Boot from NIC</text>
+  <text x="135" y="323" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">DHCP discover</text>
+  <text x="135" y="375" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">No disk needed</text>
+
+  <!-- Arrow -->
+  <line x1="250" y1="350" x2="318" y2="350" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- DHCP Server -->
+  <rect x="320" y="200" width="250" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="320" y="200" width="250" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="320" y="245" width="250" height="10" fill="url(#grad-accent)"/>
+  <text x="445" y="234" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">DHCP Server</text>
+  <text x="445" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Assigns IP</text>
+  <text x="445" y="323" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">TFTP server IP</text>
+  <text x="445" y="351" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Bootfile name</text>
+  <text x="445" y="393" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Option 66/67</text>
+
+  <!-- Arrow -->
+  <line x1="570" y1="350" x2="638" y2="350" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- TFTP Server -->
+  <rect x="640" y="200" width="250" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="640" y="200" width="250" height="55" fill="url(#grad-accent)" rx="12"/>
+  <rect x="640" y="245" width="250" height="10" fill="url(#grad-accent)"/>
+  <text x="765" y="234" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">TFTP Server</text>
+  <text x="765" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">pxelinux.0</text>
+  <text x="765" y="323" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Kernel image</text>
+  <text x="765" y="351" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">initrd.img</text>
+  <text x="765" y="393" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">UDP port 69</text>
+
+  <!-- Arrow -->
+  <line x1="890" y1="350" x2="958" y2="350" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- HTTP/NFS Image -->
+  <rect x="960" y="200" width="295" height="300" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="960" y="200" width="295" height="55" fill="#64b5f6" rx="12"/>
+  <rect x="960" y="245" width="295" height="10" fill="#64b5f6"/>
+  <text x="1107" y="234" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff" font-family="sans-serif">HTTP/NFS Image</text>
+  <text x="1107" y="295" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">Root filesystem</text>
+  <text x="1107" y="323" text-anchor="middle" font-size="15" fill="#333333" font-family="sans-serif">OS install image</text>
+  <text x="1107" y="393" text-anchor="middle" font-size="13" fill="#555555" font-family="sans-serif">Kickstart / Preseed</text>
 </svg>

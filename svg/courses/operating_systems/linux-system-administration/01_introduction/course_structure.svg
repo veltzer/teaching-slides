@@ -1,21 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="18.2857" y="210" width="219.4286" height="300" fill="#e3f2fd" stroke="#333" stroke-width="3.6571" rx="9.1429" />
-  <text x="128" y="390" text-anchor="middle" font-size="20.1143">Core System</text>
-  <rect x="274.2857" y="210" width="219.4286" height="300" fill="#f3e5f5" stroke="#333" stroke-width="3.6571" rx="9.1429" />
-  <text x="384" y="390" text-anchor="middle" font-size="20.1143">Storage</text>
-  <rect x="530.2857" y="210" width="219.4286" height="300" fill="#e8f5e9" stroke="#333" stroke-width="3.6571" rx="9.1429" />
-  <text x="640" y="390" text-anchor="middle" font-size="20.1143">Security</text>
-  <rect x="786.2857" y="210" width="219.4286" height="300" fill="#fff3e0" stroke="#333" stroke-width="3.6571" rx="9.1429" />
-  <text x="896" y="390" text-anchor="middle" font-size="20.1143">Networking</text>
-  <rect x="1042.2857" y="210" width="219.4286" height="300" fill="#fce4ec" stroke="#333" stroke-width="3.6571" rx="9.1429" />
-  <text x="1152" y="390" text-anchor="middle" font-size="20.1143">Monitoring</text>
-  <line x1="237.7143" y1="360" x2="274.2857" y2="360" stroke="#333" stroke-width="3.6571" marker-end="url(#arr00)" />
-  <line x1="493.7143" y1="360" x2="530.2857" y2="360" stroke="#333" stroke-width="3.6571" marker-end="url(#arr00)" />
-  <line x1="749.7143" y1="360" x2="786.2857" y2="360" stroke="#333" stroke-width="3.6571" marker-end="url(#arr00)" />
-  <line x1="1005.7143" y1="360" x2="1042.2857" y2="360" stroke="#333" stroke-width="3.6571" marker-end="url(#arr00)" />
   <defs>
-    <marker id="arr00" markerWidth="18.2857" markerHeight="60" refX="16.4571" refY="18" orient="auto">
-      <path d="M 0 0 L 0 36 L 16.4571 18 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Five course module boxes -->
+  <rect x="30" y="200" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <rect x="30" y="200" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="30" y="240" width="210" height="10" fill="url(#grad-accent)"/>
+  <text x="135" y="232" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Core System</text>
+  <text x="135" y="290" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Boot process</text>
+  <text x="135" y="315" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">systemd</text>
+  <text x="135" y="340" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Filesystem</text>
+  <text x="135" y="365" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Device Mapper</text>
+
+  <rect x="268" y="200" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <rect x="268" y="200" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="268" y="240" width="210" height="10" fill="url(#grad-accent)"/>
+  <text x="373" y="232" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Storage</text>
+  <text x="373" y="290" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">LVM / RAID</text>
+  <text x="373" y="315" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Backup strategies</text>
+  <text x="373" y="340" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Multipath I/O</text>
+
+  <rect x="506" y="200" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <rect x="506" y="200" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="506" y="240" width="210" height="10" fill="url(#grad-accent)"/>
+  <text x="611" y="232" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Security</text>
+  <text x="611" y="290" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">PAM</text>
+  <text x="611" y="315" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">LDAP / NSS</text>
+  <text x="611" y="340" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">User management</text>
+
+  <rect x="744" y="200" width="210" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <rect x="744" y="200" width="210" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="744" y="240" width="210" height="10" fill="url(#grad-accent)"/>
+  <text x="849" y="232" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Networking</text>
+  <text x="849" y="290" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Namespaces</text>
+  <text x="849" y="315" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">PXE boot</text>
+  <text x="849" y="340" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Traffic shaping</text>
+
+  <rect x="982" y="200" width="258" height="300" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="10" filter="url(#shadow)"/>
+  <rect x="982" y="200" width="258" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="982" y="240" width="258" height="10" fill="url(#grad-accent)"/>
+  <text x="1111" y="232" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff" font-family="sans-serif">Monitoring</text>
+  <text x="1111" y="290" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Prometheus / Grafana</text>
+  <text x="1111" y="315" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Change management</text>
+  <text x="1111" y="340" text-anchor="middle" font-size="14" fill="#333333" font-family="sans-serif">Maintenance</text>
+
+  <!-- Arrows between boxes -->
+  <line x1="240" y1="350" x2="268" y2="350" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="478" y1="350" x2="506" y2="350" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="716" y1="350" x2="744" y2="350" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="954" y1="350" x2="982" y2="350" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
 </svg>

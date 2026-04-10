@@ -1,30 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
-  <text x="19.3939" y="69.6774" font-size="25.2121" font-weight="bold" fill="#333" font-family="sans-serif">Wheel Filename Anatomy:</text>
-  <text x="19.3939" y="127.7419" font-size="27.1515" fill="#222">mypackage-0.1.0-cp39-cp39-linux_x86_64.whl</text>
-  <line x1="19.3939" y1="139.3548" x2="19.3939" y2="174.1935" stroke="#555" stroke-width="1.9394" />
-  <line x1="19.3939" y1="174.1935" x2="232.7273" y2="174.1935" stroke="#555" stroke-width="1.9394" />
-  <text x="242.4242" y="181.1613" font-size="23.2727" fill="#555" font-family="sans-serif">Distribution name</text>
-  <line x1="236.6061" y1="139.3548" x2="236.6061" y2="209.0323" stroke="#555" stroke-width="1.9394" />
-  <line x1="236.6061" y1="209.0323" x2="325.8182" y2="209.0323" stroke="#555" stroke-width="1.9394" />
-  <text x="335.5152" y="216" font-size="23.2727" fill="#555" font-family="sans-serif">Version</text>
-  <line x1="329.697" y1="139.3548" x2="329.697" y2="243.871" stroke="#555" stroke-width="1.9394" />
-  <line x1="329.697" y1="243.871" x2="395.6364" y2="243.871" stroke="#555" stroke-width="1.9394" />
-  <text x="405.3333" y="250.8387" font-size="23.2727" fill="#555" font-family="sans-serif">Python tag (CPython 3.9)</text>
-  <line x1="399.5152" y1="139.3548" x2="399.5152" y2="278.7097" stroke="#555" stroke-width="1.9394" />
-  <line x1="399.5152" y1="278.7097" x2="465.4545" y2="278.7097" stroke="#555" stroke-width="1.9394" />
-  <text x="475.1515" y="285.6774" font-size="23.2727" fill="#555" font-family="sans-serif">ABI tag</text>
-  <line x1="469.3333" y1="139.3548" x2="469.3333" y2="313.5484" stroke="#555" stroke-width="1.9394" />
-  <line x1="469.3333" y1="313.5484" x2="688.4848" y2="313.5484" stroke="#555" stroke-width="1.9394" />
-  <text x="698.1818" y="320.5161" font-size="23.2727" fill="#555" font-family="sans-serif">Python implementation</text>
-  <line x1="692.3636" y1="139.3548" x2="692.3636" y2="348.3871" stroke="#555" stroke-width="1.9394" />
-  <line x1="692.3636" y1="348.3871" x2="907.6364" y2="348.3871" stroke="#555" stroke-width="1.9394" />
-  <text x="917.3333" y="355.3548" font-size="23.2727" fill="#555" font-family="sans-serif">Platform</text>
-  <text x="19.3939" y="429.6774" font-size="25.2121" font-weight="bold" fill="#333" font-family="sans-serif">Internal Structure:</text>
-  <rect x="19.3939" y="452.9032" width="581.8182" height="255.4839" fill="#f0f4f8" stroke="#333" stroke-width="2.9091" rx="7.7576" />
-  <text x="38.7879" y="499.3548" font-size="25.2121" fill="#222">mypackage/</text>
-  <text x="38.7879" y="541.1613" font-size="25.2121" fill="#222">mypackage-0.1.0.dist-info/</text>
-  <text x="58.1818" y="582.9677" font-size="23.2727" fill="#555">  ├── METADATA</text>
-  <text x="58.1818" y="620.129" font-size="23.2727" fill="#555">  ├── WHEEL</text>
-  <text x="58.1818" y="657.2903" font-size="23.2727" fill="#555">  ├── RECORD</text>
-  <text x="58.1818" y="694.4516" font-size="23.2727" fill="#555">  └── entry_points.txt</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="30" y="50" font-size="22" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">Wheel Filename Anatomy:</text>
+  <text x="30" y="100" font-size="24" fill="#222222" font-family="monospace">mypackage-0.1.0-cp39-cp39-linux_x86_64.whl</text>
+  <!-- Annotation lines -->
+  <line x1="30" y1="112" x2="30" y2="148" stroke="#555555" stroke-width="1.8"/>
+  <line x1="30" y1="148" x2="200" y2="148" stroke="#555555" stroke-width="1.8"/>
+  <text x="210" y="154" font-size="18" fill="#555555" font-family="Arial, sans-serif">Distribution name</text>
+  <line x1="220" y1="112" x2="220" y2="176" stroke="#555555" stroke-width="1.8"/>
+  <line x1="220" y1="176" x2="310" y2="176" stroke="#555555" stroke-width="1.8"/>
+  <text x="320" y="182" font-size="18" fill="#555555" font-family="Arial, sans-serif">Version</text>
+  <line x1="320" y1="112" x2="320" y2="206" stroke="#555555" stroke-width="1.8"/>
+  <line x1="320" y1="206" x2="390" y2="206" stroke="#555555" stroke-width="1.8"/>
+  <text x="400" y="212" font-size="18" fill="#555555" font-family="Arial, sans-serif">Python tag (CPython 3.9)</text>
+  <line x1="390" y1="112" x2="390" y2="236" stroke="#555555" stroke-width="1.8"/>
+  <line x1="390" y1="236" x2="460" y2="236" stroke="#555555" stroke-width="1.8"/>
+  <text x="470" y="242" font-size="18" fill="#555555" font-family="Arial, sans-serif">ABI tag</text>
+  <line x1="460" y1="112" x2="460" y2="266" stroke="#555555" stroke-width="1.8"/>
+  <line x1="460" y1="266" x2="660" y2="266" stroke="#555555" stroke-width="1.8"/>
+  <text x="670" y="272" font-size="18" fill="#555555" font-family="Arial, sans-serif">Python implementation</text>
+  <line x1="680" y1="112" x2="680" y2="296" stroke="#555555" stroke-width="1.8"/>
+  <line x1="680" y1="296" x2="880" y2="296" stroke="#555555" stroke-width="1.8"/>
+  <text x="890" y="302" font-size="18" fill="#555555" font-family="Arial, sans-serif">Platform</text>
+  <!-- Internal structure -->
+  <text x="30" y="380" font-size="22" font-weight="bold" fill="#1565c0" font-family="Arial, sans-serif">Internal Structure:</text>
+  <rect x="30" y="400" width="580" height="250" fill="#f2f6ff" stroke="#1565c0" stroke-width="2" rx="8"/>
+  <text x="50" y="450" font-size="20" fill="#222222" font-family="monospace">mypackage/</text>
+  <text x="50" y="490" font-size="20" fill="#222222" font-family="monospace">mypackage-0.1.0.dist-info/</text>
+  <text x="70" y="528" font-size="18" fill="#555555" font-family="monospace">  &#x251C;&#x2500;&#x2500; METADATA</text>
+  <text x="70" y="562" font-size="18" fill="#555555" font-family="monospace">  &#x251C;&#x2500;&#x2500; WHEEL</text>
+  <text x="70" y="596" font-size="18" fill="#555555" font-family="monospace">  &#x251C;&#x2500;&#x2500; RECORD</text>
+  <text x="70" y="630" font-size="18" fill="#555555" font-family="monospace">  &#x2514;&#x2500;&#x2500; entry_points.txt</text>
 </svg>

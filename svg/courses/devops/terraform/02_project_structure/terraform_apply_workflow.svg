@@ -1,30 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="25.6" markerHeight="9.8182" refX="22.4" refY="4.9091" orient="auto">
-      <path d="M 0 0 L 0 9.8182 L 25.6 4.9091 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="320" y="16.3636" width="640" height="65.4545" rx="6.5455" fill="#7b1fa2" stroke="#333" stroke-width="2.4545" />
-  <text x="640" y="57.2727" font-family="monospace" font-size="22.9091" font-weight="bold" fill="#fff" text-anchor="middle">terraform apply</text>
-  <line x1="640" y1="81.8182" x2="640" y2="114.5455" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="114.5455" width="896" height="58.9091" rx="6.5455" fill="#f0f4f8" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="152.1818" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Read current state</text>
-  <line x1="640" y1="173.4545" x2="640" y2="206.1818" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="206.1818" width="896" height="58.9091" rx="6.5455" fill="#f0f4f8" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="243.8182" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Compare config vs state</text>
-  <line x1="640" y1="265.0909" x2="640" y2="297.8182" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="297.8182" width="896" height="58.9091" rx="6.5455" fill="#f0f4f8" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="335.4545" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Generate execution plan</text>
-  <line x1="640" y1="356.7273" x2="640" y2="389.4545" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="389.4545" width="896" height="58.9091" rx="6.5455" fill="#f0f4f8" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="427.0909" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Show plan to user</text>
-  <line x1="640" y1="448.3636" x2="640" y2="481.0909" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="481.0909" width="896" height="58.9091" rx="6.5455" fill="#fff3e0" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="518.7273" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Wait for confirmation</text>
-  <line x1="640" y1="540" x2="640" y2="572.7273" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="572.7273" width="896" height="58.9091" rx="6.5455" fill="#e3f2fd" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="610.3636" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Create / modify / delete resources</text>
-  <line x1="640" y1="631.6364" x2="640" y2="664.3636" stroke="#555" stroke-width="2.4545" marker-end="url(#arr)" />
-  <rect x="192" y="664.3636" width="896" height="58.9091" rx="6.5455" fill="#e8f5e9" stroke="#555" stroke-width="2.4545" />
-  <text x="640" y="702" font-family="sans-serif" font-size="19.6364" fill="#222" text-anchor="middle">Update state file → Show outputs</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="320" y="16" width="640" height="66" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="57" font-family="monospace" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">terraform apply</text>
+  <line x1="640" y1="82" x2="640" y2="112" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Steps -->
+  <rect x="192" y="112" width="896" height="60" rx="8" fill="url(#grad-surface)" stroke="#555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="149" font-size="18" fill="#222" text-anchor="middle">Read current state</text>
+  <line x1="640" y1="172" x2="640" y2="202" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="202" width="896" height="60" rx="8" fill="url(#grad-surface)" stroke="#555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="239" font-size="18" fill="#222" text-anchor="middle">Compare config vs state</text>
+  <line x1="640" y1="262" x2="640" y2="292" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="292" width="896" height="60" rx="8" fill="url(#grad-surface)" stroke="#555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="329" font-size="18" fill="#222" text-anchor="middle">Generate execution plan</text>
+  <line x1="640" y1="352" x2="640" y2="382" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="382" width="896" height="60" rx="8" fill="url(#grad-surface)" stroke="#555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="419" font-size="18" fill="#222" text-anchor="middle">Show plan to user</text>
+  <line x1="640" y1="442" x2="640" y2="472" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="472" width="896" height="60" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="509" font-size="18" fill="#222" text-anchor="middle">Wait for confirmation</text>
+  <line x1="640" y1="532" x2="640" y2="562" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="562" width="896" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="599" font-size="18" fill="#222" text-anchor="middle">Create / modify / delete resources</text>
+  <line x1="640" y1="622" x2="640" y2="652" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="192" y="652" width="896" height="56" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="688" font-size="18" fill="#222" text-anchor="middle">Update state file and show outputs</text>
 </svg>

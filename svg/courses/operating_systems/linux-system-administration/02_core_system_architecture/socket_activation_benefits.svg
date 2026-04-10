@@ -1,22 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="21.3333" y="205.7143" width="256" height="257.1429" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="149.3333" y="308.5714" text-anchor="middle" font-size="21.3333">Client Request</text>
-  <text x="149.3333" y="385.7143" text-anchor="middle" font-size="21.3333">port 8080</text>
-  <rect x="362.6667" y="205.7143" width="256" height="257.1429" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="490.6667" y="308.5714" text-anchor="middle" font-size="21.3333">systemd</text>
-  <text x="490.6667" y="385.7143" text-anchor="middle" font-size="21.3333">holds socket</text>
-  <rect x="704" y="205.7143" width="256" height="257.1429" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="832" y="308.5714" text-anchor="middle" font-size="21.3333">Starts Service</text>
-  <text x="832" y="385.7143" text-anchor="middle" font-size="21.3333">on demand</text>
-  <rect x="1045.3333" y="205.7143" width="213.3333" height="257.1429" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1152" y="308.5714" text-anchor="middle" font-size="21.3333">Service</text>
-  <text x="1152" y="385.7143" text-anchor="middle" font-size="21.3333">handles request</text>
-  <line x1="277.3333" y1="334.2857" x2="362.6667" y2="334.2857" stroke="#333" stroke-width="4.2667" marker-end="url(#arr01b)" />
-  <line x1="618.6667" y1="334.2857" x2="704" y2="334.2857" stroke="#333" stroke-width="4.2667" marker-end="url(#arr01b)" />
-  <line x1="960" y1="334.2857" x2="1045.3333" y2="334.2857" stroke="#333" stroke-width="4.2667" marker-end="url(#arr01b)" />
   <defs>
-    <marker id="arr01b" markerWidth="21.3333" markerHeight="51.4286" refX="19.2" refY="15.4286" orient="auto">
-      <path d="M 0 0 L 0 30.8571 L 19.2 15.4286 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Step 1: Client Request -->
+  <rect x="20" y="200" width="250" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="20" y="200" width="250" height="50" fill="url(#grad-accent)" rx="12"/>
+  <rect x="20" y="240" width="250" height="10" fill="url(#grad-accent)"/>
+  <text x="145" y="232" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff" font-family="sans-serif">Client Request</text>
+  <text x="145" y="310" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Connects to</text>
+  <text x="145" y="335" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">port 8080</text>
+  <text x="145" y="380" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Service may not</text>
+  <text x="145" y="400" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">be running yet</text>
+
+  <!-- Arrow -->
+  <line x1="270" y1="320" x2="358" y2="320" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Step 2: systemd holds socket -->
+  <rect x="360" y="200" width="250" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="360" y="200" width="250" height="50" fill="url(#grad-accent)" rx="12"/>
+  <rect x="360" y="240" width="250" height="10" fill="url(#grad-accent)"/>
+  <text x="485" y="232" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff" font-family="sans-serif">systemd</text>
+  <text x="485" y="310" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Holds socket</text>
+  <text x="485" y="335" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Buffers request</text>
+  <text x="485" y="380" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">No connection</text>
+  <text x="485" y="400" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">refused</text>
+
+  <!-- Arrow -->
+  <line x1="610" y1="320" x2="698" y2="320" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Step 3: Starts Service -->
+  <rect x="700" y="200" width="250" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="700" y="200" width="250" height="50" fill="url(#grad-accent)" rx="12"/>
+  <rect x="700" y="240" width="250" height="10" fill="url(#grad-accent)"/>
+  <text x="825" y="232" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff" font-family="sans-serif">Starts Service</text>
+  <text x="825" y="310" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">On demand</text>
+  <text x="825" y="335" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Lazy activation</text>
+  <text x="825" y="380" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">Saves resources</text>
+  <text x="825" y="400" text-anchor="middle" font-size="14" fill="#555555" font-family="sans-serif">at boot</text>
+
+  <!-- Arrow -->
+  <line x1="950" y1="320" x2="1038" y2="320" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Step 4: Service handles -->
+  <rect x="1040" y="200" width="215" height="240" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" rx="12" filter="url(#shadow)"/>
+  <rect x="1040" y="200" width="215" height="50" fill="url(#grad-accent)" rx="12"/>
+  <rect x="1040" y="240" width="215" height="10" fill="url(#grad-accent)"/>
+  <text x="1147" y="232" text-anchor="middle" font-size="17" font-weight="bold" fill="#ffffff" font-family="sans-serif">Service</text>
+  <text x="1147" y="310" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Handles request</text>
+  <text x="1147" y="335" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">Responds to</text>
+  <text x="1147" y="360" text-anchor="middle" font-size="16" fill="#333333" font-family="sans-serif">client</text>
 </svg>

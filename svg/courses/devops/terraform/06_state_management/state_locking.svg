@@ -1,28 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="19.6923" markerHeight="21" refX="17.7231" refY="10.5" orient="auto">
-      <polygon points="0,30 6.8923,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arr2" markerWidth="19.6923" markerHeight="21" refX="17.7231" refY="10.5" orient="auto">
-      <polygon points="0,30 6.8923,0" fill="#555" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="19.6923" y="30" width="551.3846" height="645" rx="7.8769" fill="#ffebee" stroke="#c62828" stroke-width="2.9538" />
-  <text x="295.3846" y="90" text-anchor="middle" font-size="27.5692" fill="#b71c1c" font-weight="bold">Without Locking</text>
-  <rect x="59.0769" y="150" width="275.6923" height="120" rx="7.8769" fill="#ffcdd2" stroke="#e53935" stroke-width="2.9538" />
-  <text x="196.9231" y="222" text-anchor="middle" font-size="23.6308" fill="#222">User A: tf apply</text>
-  <rect x="59.0769" y="330" width="275.6923" height="120" rx="7.8769" fill="#ffcdd2" stroke="#e53935" stroke-width="2.9538" />
-  <text x="196.9231" y="402" text-anchor="middle" font-size="23.6308" fill="#222">User B: tf apply</text>
-  <line x1="334.7692" y1="210" x2="433.2308" y2="300" stroke="#555" stroke-width="2.9538" />
-  <line x1="334.7692" y1="390" x2="433.2308" y2="300" stroke="#555" stroke-width="2.9538" />
-  <rect x="384" y="246" width="157.5385" height="108" rx="7.8769" fill="#ef9a9a" stroke="#c62828" stroke-width="2.9538" />
-  <text x="462.7692" y="312" text-anchor="middle" font-size="23.6308" fill="#b71c1c" font-weight="bold">CONFLICT!</text>
-  <rect x="649.8462" y="30" width="590.7692" height="645" rx="7.8769" fill="#e8f5e9" stroke="#388e3c" stroke-width="2.9538" />
-  <text x="945.2308" y="90" text-anchor="middle" font-size="27.5692" fill="#1b5e20" font-weight="bold">With Locking</text>
-  <rect x="679.3846" y="165" width="531.6923" height="195" rx="7.8769" fill="#c8e6c9" stroke="#43a047" stroke-width="2.9538" />
-  <text x="945.2308" y="237" text-anchor="middle" font-size="23.6308" fill="#222" font-weight="bold">User A: tf apply</text>
-  <text x="945.2308" y="303" text-anchor="middle" font-size="21.6615" fill="#2e7d32">→ Acquires lock → Apply → Release</text>
-  <rect x="679.3846" y="420" width="531.6923" height="195" rx="7.8769" fill="#c8e6c9" stroke="#43a047" stroke-width="2.9538" />
-  <text x="945.2308" y="492" text-anchor="middle" font-size="23.6308" fill="#222" font-weight="bold">User B: tf apply</text>
-  <text x="945.2308" y="558" text-anchor="middle" font-size="21.6615" fill="#2e7d32">→ Waits → Acquires → Apply</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Without Locking panel -->
+  <rect x="20" y="30" width="551" height="645" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="3" filter="url(#shadow)"/>
+  <text x="295" y="88" text-anchor="middle" font-size="22" fill="#b71c1c" font-weight="bold">Without Locking</text>
+  <rect x="59" y="148" width="276" height="120" rx="10" fill="#ffcdd2" stroke="#e53935" stroke-width="3"/>
+  <text x="197" y="220" text-anchor="middle" font-size="18" fill="#222">User A: tf apply</text>
+  <rect x="59" y="326" width="276" height="120" rx="10" fill="#ffcdd2" stroke="#e53935" stroke-width="3"/>
+  <text x="197" y="398" text-anchor="middle" font-size="18" fill="#222">User B: tf apply</text>
+  <line x1="335" y1="208" x2="434" y2="298" stroke="#555" stroke-width="3"/>
+  <line x1="335" y1="386" x2="434" y2="298" stroke="#555" stroke-width="3"/>
+  <rect x="384" y="244" width="158" height="108" rx="10" fill="#ef9a9a" stroke="#c62828" stroke-width="3"/>
+  <text x="463" y="308" text-anchor="middle" font-size="18" fill="#b71c1c" font-weight="bold">CONFLICT!</text>
+  <!-- With Locking panel -->
+  <rect x="650" y="30" width="610" height="645" rx="10" fill="#e8f5e9" stroke="#388e3c" stroke-width="3" filter="url(#shadow)"/>
+  <text x="955" y="88" text-anchor="middle" font-size="22" fill="#1b5e20" font-weight="bold">With Locking</text>
+  <rect x="680" y="160" width="550" height="190" rx="10" fill="#c8e6c9" stroke="#43a047" stroke-width="3"/>
+  <text x="955" y="237" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">User A: tf apply</text>
+  <text x="955" y="298" text-anchor="middle" font-size="16" fill="#2e7d32">→ Acquires lock → Apply → Release</text>
+  <rect x="680" y="412" width="550" height="190" rx="10" fill="#c8e6c9" stroke="#43a047" stroke-width="3"/>
+  <text x="955" y="489" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">User B: tf apply</text>
+  <text x="955" y="550" text-anchor="middle" font-size="16" fill="#2e7d32">→ Waits → Acquires → Apply</text>
 </svg>

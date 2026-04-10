@@ -1,27 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Container Networking with Namespaces</text>
-  <rect x="42.6667" y="108" width="1194.6667" height="576" fill="#f3e5f5" stroke="#333" stroke-width="2.1333" rx="10.6667" fill-opacity="0.2" />
-  <text x="640" y="172.8" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#7b1fa2">Host (default namespace)</text>
-  <rect x="85.3333" y="198" width="277.3333" height="234" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="224" y="262.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Container A</text>
-  <text x="224" y="316.8" text-anchor="middle" font-size="21.3333" fill="#666">net ns: ctn_a</text>
-  <text x="224" y="370.8" text-anchor="middle" font-size="21.3333" fill="#666">eth0 (veth pair)</text>
-  <rect x="917.3333" y="198" width="277.3333" height="234" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1056" y="262.8" text-anchor="middle" font-size="21.3333" font-weight="bold">Container B</text>
-  <text x="1056" y="316.8" text-anchor="middle" font-size="21.3333" fill="#666">net ns: ctn_b</text>
-  <text x="1056" y="370.8" text-anchor="middle" font-size="21.3333" fill="#666">eth0 (veth pair)</text>
-  <rect x="448" y="198" width="384" height="144" fill="#fff3e0" stroke="#e65100" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="259.2" text-anchor="middle" font-size="23.4667" font-weight="bold">Linux Bridge (br0)</text>
-  <text x="640" y="313.2" text-anchor="middle" font-size="21.3333" fill="#666">L2 switching</text>
-  <line x1="362.6667" y1="288" x2="448" y2="270" stroke="#333" stroke-width="4.2667" />
-  <line x1="832" y1="270" x2="917.3333" y2="288" stroke="#333" stroke-width="4.2667" />
-  <rect x="522.6667" y="468" width="234.6667" height="144" fill="#ffebee" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="532.8" text-anchor="middle" font-size="21.3333" font-weight="bold">eth0 (host NIC)</text>
-  <text x="640" y="583.2" text-anchor="middle" font-size="21.3333" fill="#666">NAT / routing</text>
-  <line x1="640" y1="342" x2="640" y2="468" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd3_08_namespaces)" />
   <defs>
-    <marker id="arrowd3_08_namespaces" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Host background -->
+  <rect x="42" y="100" width="1196" height="548" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5" rx="10" fill-opacity="0.15"/>
+  <text x="640" y="158" text-anchor="middle" font-size="22" font-weight="bold" fill="#7b1fa2">Host (default namespace)</text>
+  <!-- Container A -->
+  <rect x="84" y="186" width="280" height="220" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="84" y="186" width="280" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="84" y="224" width="280" height="12" fill="url(#grad-accent)"/>
+  <text x="224" y="220" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">Container A</text>
+  <text x="224" y="298" text-anchor="middle" font-size="17" fill="#555555">net ns: ctn_a</text>
+  <text x="224" y="342" text-anchor="middle" font-size="17" fill="#555555">eth0 (veth pair)</text>
+  <!-- Container B -->
+  <rect x="916" y="186" width="280" height="220" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="916" y="186" width="280" height="50" fill="url(#grad-accent)" rx="10"/>
+  <rect x="916" y="224" width="280" height="12" fill="url(#grad-accent)"/>
+  <text x="1056" y="220" text-anchor="middle" font-size="19" font-weight="bold" fill="#ffffff">Container B</text>
+  <text x="1056" y="298" text-anchor="middle" font-size="17" fill="#555555">net ns: ctn_b</text>
+  <text x="1056" y="342" text-anchor="middle" font-size="17" fill="#555555">eth0 (veth pair)</text>
+  <!-- Bridge -->
+  <rect x="448" y="186" width="384" height="135" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="244" text-anchor="middle" font-size="21" font-weight="bold" fill="#e65100">Linux Bridge (br0)</text>
+  <text x="640" y="294" text-anchor="middle" font-size="17" fill="#555555">L2 switching</text>
+  <!-- Lines bridge to containers -->
+  <line x1="364" y1="270" x2="448" y2="252" stroke="#555555" stroke-width="3"/>
+  <line x1="832" y1="252" x2="916" y2="270" stroke="#555555" stroke-width="3"/>
+  <!-- Host NIC -->
+  <rect x="522" y="450" width="236" height="135" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="510" text-anchor="middle" font-size="19" font-weight="bold" fill="#b71c1c">eth0 (host NIC)</text>
+  <text x="640" y="558" text-anchor="middle" font-size="17" fill="#555555">NAT / routing</text>
+  <!-- Arrow bridge to NIC -->
+  <line x1="640" y1="321" x2="640" y2="450" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
 </svg>

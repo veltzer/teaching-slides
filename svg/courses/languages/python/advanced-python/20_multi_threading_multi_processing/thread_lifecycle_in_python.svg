@@ -1,25 +1,46 @@
-<svg viewBox="0 0 1280 720">
-  <rect x="128" y="288" width="204.8" height="144" rx="25.6" fill="#e0e0ff" stroke="#000" stroke-width="5.12" />
-  <rect x="460.8" y="288" width="204.8" height="144" rx="25.6" fill="#e0ffe0" stroke="#000" stroke-width="5.12" />
-  <rect x="793.6" y="288" width="204.8" height="144" rx="25.6" fill="#ffe0e0" stroke="#000" stroke-width="5.12" />
-  <rect x="793.6" y="540" width="204.8" height="144" rx="25.6" fill="#fff0e0" stroke="#000" stroke-width="5.12" />
-  <rect x="460.8" y="540" width="204.8" height="144" rx="25.6" fill="#f0e0ff" stroke="#000" stroke-width="5.12" />
-  <text x="230.4" y="378" text-anchor="middle" font-family="sans-serif" font-size="30.72">New</text>
-  <text x="563.2" y="378" text-anchor="middle" font-family="sans-serif" font-size="30.72">Runnable</text>
-  <text x="896" y="378" text-anchor="middle" font-family="sans-serif" font-size="30.72">Running</text>
-  <text x="896" y="630" text-anchor="middle" font-family="sans-serif" font-size="30.72">Blocked</text>
-  <text x="563.2" y="630" text-anchor="middle" font-family="sans-serif" font-size="30.72">Terminated</text>
-  <path d="M 332.8 360 L 460.8 360" stroke="#000" stroke-width="5.12" marker-end="url(#lifecycle-arrow)" />
-  <text x="396.8" y="324" text-anchor="middle" font-family="sans-serif" font-size="25.6">start()</text>
-  <path d="M 665.6 360 L 793.6 360" stroke="#000" stroke-width="5.12" marker-end="url(#lifecycle-arrow)" />
-  <path d="M 896 432 L 896 540" stroke="#000" stroke-width="5.12" marker-end="url(#lifecycle-arrow)" />
-  <text x="934.4" y="486" text-anchor="middle" font-family="sans-serif" font-size="25.6">I/O, sleep()</text>
-  <path d="M 793.6 612 L 665.6 612" stroke="#000" stroke-width="5.12" marker-end="url(#lifecycle-arrow)" />
-  <text x="729.6" y="576" text-anchor="middle" font-family="sans-serif" font-size="25.6">return</text>
-  <path d="M 896 540 C 896 468 742.4 360 665.6 360" stroke="#000" stroke-width="5.12" marker-end="url(#lifecycle-arrow)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="lifecycle-arrow" markerWidth="25.6" markerHeight="25.2" refX="23.04" refY="12.6" orient="auto">
-      <polygon points="0,36 8.96,0" fill="#000" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="42" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Thread Lifecycle in Python</text>
+  <!-- States -->
+  <rect x="80" y="200" width="200" height="120" rx="22" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="180" y="268" text-anchor="middle" font-size="24" fill="#333333">New</text>
+  <rect x="400" y="200" width="200" height="120" rx="22" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="500" y="268" text-anchor="middle" font-size="24" fill="#333333">Runnable</text>
+  <rect x="720" y="200" width="200" height="120" rx="22" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="820" y="268" text-anchor="middle" font-size="24" fill="#333333">Running</text>
+  <rect x="720" y="440" width="200" height="120" rx="22" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="820" y="508" text-anchor="middle" font-size="24" fill="#333333">Blocked</text>
+  <rect x="400" y="440" width="200" height="120" rx="22" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="500" y="508" text-anchor="middle" font-size="24" fill="#333333">Terminated</text>
+  <!-- Arrows -->
+  <line x1="280" y1="260" x2="400" y2="260" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="340" y="246" text-anchor="middle" font-size="16" fill="#555555">start()</text>
+  <line x1="600" y1="260" x2="720" y2="260" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="820" y1="320" x2="820" y2="440" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="870" y="390" font-size="16" fill="#555555">I/O, sleep()</text>
+  <line x1="720" y1="500" x2="600" y2="500" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="658" y="488" font-size="16" fill="#555555">return</text>
+  <!-- Blocked back to running -->
+  <path d="M 820 440 C 820 370 720 260 720 260" fill="none" stroke="#555555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <!-- Labels -->
+  <text x="640" y="660" text-anchor="middle" font-size="16" fill="#555555">A thread transitions through these states during its lifetime</text>
 </svg>

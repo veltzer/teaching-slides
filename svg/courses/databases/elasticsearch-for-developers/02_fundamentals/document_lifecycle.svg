@@ -1,15 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <circle cx="256" cy="360" r="115.2" fill="#4CAF50" />
-  <text x="256" y="374.4" text-anchor="middle" fill="white">Create</text>
-  <path d="M 384 360 L 512 360" stroke="#333" stroke-width="5.76" marker-end="url(#arrowhead)" />
-  <circle cx="640" cy="360" r="115.2" fill="#2196F3" />
-  <text x="640" y="374.4" text-anchor="middle" fill="white">Update</text>
-  <path d="M 768 360 L 896 360" stroke="#333" stroke-width="5.76" marker-end="url(#arrowhead)" />
-  <circle cx="1024" cy="360" r="115.2" fill="#FF9800" />
-  <text x="1024" y="374.4" text-anchor="middle" fill="white">Delete</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="32" markerHeight="20.16" refX="28.8" refY="10.08" orient="auto">
-      <polygon points="0,28.8 11.2,0" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Document Lifecycle</text>
+  <!-- Three circles -->
+  <circle cx="256" cy="360" r="140" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" filter="url(#shadow)"/>
+  <text x="256" y="348" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Create</text>
+  <text x="256" y="382" text-anchor="middle" font-size="16" fill="#555555">POST/PUT document</text>
+  <line x1="396" y1="360" x2="496" y2="360" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="640" cy="360" r="140" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="348" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Update</text>
+  <text x="640" y="382" text-anchor="middle" font-size="16" fill="#555555">PUT / _update endpoint</text>
+  <line x1="780" y1="360" x2="880" y2="360" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <circle cx="1024" cy="360" r="140" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1024" y="348" text-anchor="middle" font-size="26" font-weight="bold" fill="#e53935">Delete</text>
+  <text x="1024" y="382" text-anchor="middle" font-size="16" fill="#555555">DELETE endpoint</text>
+  <!-- Note -->
+  <rect x="140" y="556" width="1000" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="590" text-anchor="middle" font-size="17" fill="#1565c0">ES documents are immutable - updates create a new version and mark old one deleted</text>
 </svg>

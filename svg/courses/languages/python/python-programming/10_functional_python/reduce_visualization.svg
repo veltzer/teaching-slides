@@ -1,21 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="22.8571" markerHeight="22.9091" refX="20.5714" refY="11.4545" orient="auto">
-      <polygon points="0,32.7273 8,0" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="22.8571" y="65.4545" font-size="29.7143" fill="#222">reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])</text>
-  <rect x="22.8571" y="114.5455" width="777.1429" height="98.1818" fill="#e3f2fd" stroke="#333" stroke-width="2.2857" rx="6.8571" />
-  <text x="45.7143" y="180" font-size="29.7143" fill="#222">Step 1: a=1, b=2  →  3</text>
-  <line x1="400" y1="212.7273" x2="400" y2="235.6364" stroke="#555" stroke-width="3.4286" marker-end="url(#arr)" />
-  <rect x="22.8571" y="242.1818" width="777.1429" height="98.1818" fill="#e8f5e9" stroke="#333" stroke-width="2.2857" rx="6.8571" />
-  <text x="45.7143" y="307.6364" font-size="29.7143" fill="#222">Step 2: a=3, b=3  →  6</text>
-  <line x1="400" y1="340.3636" x2="400" y2="363.2727" stroke="#555" stroke-width="3.4286" marker-end="url(#arr)" />
-  <rect x="22.8571" y="369.8182" width="777.1429" height="98.1818" fill="#fff3e0" stroke="#333" stroke-width="2.2857" rx="6.8571" />
-  <text x="45.7143" y="435.2727" font-size="29.7143" fill="#222">Step 3: a=6, b=4  →  10</text>
-  <line x1="400" y1="468" x2="400" y2="490.9091" stroke="#555" stroke-width="3.4286" marker-end="url(#arr)" />
-  <rect x="22.8571" y="497.4545" width="777.1429" height="98.1818" fill="#fce4ec" stroke="#333" stroke-width="2.2857" rx="6.8571" />
-  <text x="45.7143" y="562.9091" font-size="29.7143" fill="#222">Step 4: a=10, b=5  →  15</text>
-  <rect x="22.8571" y="641.4545" width="457.1429" height="65.4545" fill="#ede7f6" stroke="#333" stroke-width="2.2857" rx="6.8571" />
-  <text x="45.7143" y="690.5455" font-size="29.7143" font-weight="bold" fill="#222">Result: 15</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="30" y="46" font-size="22" fill="#222222" font-family="monospace">reduce(lambda a, b: a + b, [1, 2, 3, 4, 5])</text>
+  <!-- Step 1 -->
+  <rect x="30" y="80" width="800" height="90" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56" y="136" font-size="26" fill="#222222" font-family="monospace">Step 1: a=1, b=2  &#x2192;  3</text>
+  <line x1="430" y1="170" x2="430" y2="194" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Step 2 -->
+  <rect x="30" y="200" width="800" height="90" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56" y="256" font-size="26" fill="#222222" font-family="monospace">Step 2: a=3, b=3  &#x2192;  6</text>
+  <line x1="430" y1="290" x2="430" y2="314" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Step 3 -->
+  <rect x="30" y="320" width="800" height="90" rx="6" fill="#fff9c4" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56" y="376" font-size="26" fill="#222222" font-family="monospace">Step 3: a=6, b=4  &#x2192;  10</text>
+  <line x1="430" y1="410" x2="430" y2="434" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Step 4 -->
+  <rect x="30" y="440" width="800" height="90" rx="6" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56" y="496" font-size="26" fill="#222222" font-family="monospace">Step 4: a=10, b=5  &#x2192;  15</text>
+  <!-- Result -->
+  <rect x="30" y="570" width="460" height="64" rx="6" fill="#ede7f6" stroke="#7b1fa2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="56" y="612" font-size="28" font-weight="bold" fill="#4a148c" font-family="monospace">Result: 15</text>
 </svg>
