@@ -10,6 +10,7 @@ Checks:
   --parse       Flag SVGs with XML parse errors
   --dimensions  Flag SVGs that do not have exactly viewBox="0 0 1280 720"
   --bounds      Flag SVGs with elements drawn below y=640
+  --title       Flag SVGs that contain a <title> element
 
 Usage:
     check_svg_quality.py file1.svg file2.svg ...
@@ -112,6 +113,13 @@ def _check_bounds(tree: ET.ElementTree) -> list[str]:
             return [f"element <{tag}> extends below y={MAX_Y_BOUND} (found bottom y={y_max})"]
     return []
 
+def _check_title(tree: ET.ElementTree) -> list[str]:
+    """Flag SVGs that contain a <title> element."""
+    for elem in tree.iter():
+        tag = elem.tag.split('}')[-1]
+        if tag == 'title':
+            return ["contains a <title> element (headings should be outside SVG)"]
+    return []
 
 def main() -> None:
     if not Path(".git").exists():
@@ -135,13 +143,15 @@ def main() -> None:
                         help='Flag SVGs that do not have exactly viewBox="0 0 1280 720"')
     parser.add_argument('--bounds', action='store_true',
                         help='Flag SVGs with elements drawn below y=640')
+    parser.add_argument('--title', action='store_true',
+                        help='Flag SVGs that contain a <title> element')
     args = parser.parse_args()
 
     if not args.paths:
         parser.error("at least one SVG file is required")
 
     # Default: all checks enabled
-    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds]
+    flags = [args.size, args.elements, args.fonts, args.parse, args.dimensions, args.bounds, args.title]
     explicit = any(flags)
     do_size = args.size or not explicit
     do_elements = args.elements or not explicit
@@ -149,6 +159,7 @@ def main() -> None:
     do_parse = args.parse or not explicit
     do_dimensions = args.dimensions or not explicit
     do_bounds = args.bounds or not explicit
+    do_title = args.title or not explicit
 
     failures = 0
     for path_str in args.paths:
@@ -160,7 +171,7 @@ def main() -> None:
 
         # Parse once, reuse for element, font, and aspect checks
         tree = None
-        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds:
+        if do_parse or do_elements or do_fonts or do_dimensions or do_bounds or do_title:
             tree, parse_errors = _check_parse(path)
             if do_parse:
                 errors.extend(parse_errors)
@@ -174,6 +185,8 @@ def main() -> None:
                 errors.extend(_check_dimensions(tree))
             if do_bounds:
                 errors.extend(_check_bounds(tree))
+            if do_title:
+                errors.extend(_check_title(tree))
 
         for error in errors:
             print(f"{path}: {error}", file=sys.stderr)
