@@ -72,6 +72,12 @@ openssl x509 -req -days 365 -in server.csr \
 
 ---
 
+## Linux Capabilities
+
+![linux_capabilities](svg/courses/devops/advanced-docker/05_security/linux_capabilities.svg)
+
+---
+
 ## Linux Capabilities - Overview
 
 ```bash

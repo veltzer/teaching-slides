@@ -1,6 +1,12 @@
 # Domain Hijacking: Protecting Your Online Identity
 
 ---
+
+## Domain Hijacking Attack Flow
+
+![domain_hijacking_attack_flow](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/domain_hijacking_attack_flow.svg)
+
+---
 ## What is Domain Hijacking
 
 - Domain hijacking is the act of illegally transferring or redirecting a domain name to a different destination
@@ -41,6 +47,12 @@
 - Changing the WHOIS email makes recovery extremely difficult
 
 ---
+
+## DNS Hijacking Methods
+
+![dns_hijacking_methods](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/dns_hijacking_methods.svg)
+
+---
 ## DNS Hijacking Techniques
 
 ### 1. Local DNS Hijacking
@@ -71,6 +83,12 @@ dig @1.1.1.1 example.com +short    # Cloudflare DNS
 dig @9.9.9.9 example.com +short    # Quad9 DNS
 # If results differ, something may be wrong
 ```
+
+---
+
+## Expired Domain Attack
+
+![expired_domain_attack](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/expired_domain_attack.svg)
 
 ---
 
@@ -224,6 +242,12 @@ delv @8.8.8.8 example.com
 # Check DS records at parent zone
 dig DS example.com @a.gtld-servers.net +short
 ```
+
+---
+
+## Registrar Security Measures
+
+![registrar_security_measures](svg/courses/security/cyber-attacks-and-vectors/17_domain_highjacking/registrar_security_measures.svg)
 
 ---
 ## Defending Against Domain Hijacking

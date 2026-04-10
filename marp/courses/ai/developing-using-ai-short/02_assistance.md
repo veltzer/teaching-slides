@@ -92,6 +92,12 @@ Perfect for budget-conscious developers
 
 ---
 
+## Context Window Optimization
+
+![context_window_optimization](svg/courses/ai/developing-using-ai-short/02_assistance/context_window_optimization.svg)
+
+---
+
 ## Effective Usage Patterns
 
 ### Context Window Optimization

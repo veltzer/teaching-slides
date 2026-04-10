@@ -146,6 +146,12 @@ safety check
 ![what_are_virtual_environments](svg/courses/languages/python/advanced-python/07_environments/what_are_virtual_environments.svg)
 
 ---
+## Virtual Environment Isolation
+
+![virtual_environment_isolation](svg/courses/languages/python/advanced-python/07_environments/virtual_environment_isolation.svg)
+
+---
+
 ## Virtual Environments
 
 ## Why Use Virtual Environments?

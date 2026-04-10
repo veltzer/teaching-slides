@@ -31,6 +31,12 @@ Agency turns language manipulation into **real-world damage**
 
 ## Three Dimensions of Excessive Agency
 
+![three_dimensions](svg/courses/security/working-with-llms-securely/09_excessive_agency/three_dimensions.svg)
+
+---
+
+## Three Dimensions of Excessive Agency Detail
+
 | Dimension           | Description                          |
 |---------------------|--------------------------------------|
 | **Excessive Functionality** | Too many plugins/tools available |

@@ -252,6 +252,12 @@ except HttpError as e:
 ---
 ## Exception Hierarchy
 
+![exception_hierarchy](svg/courses/languages/python/python-programming/09_exceptions/exception_hierarchy.svg)
+
+---
+
+## Exception Hierarchy Detail
+
 ```tree
 BaseException
   +-- SystemExit

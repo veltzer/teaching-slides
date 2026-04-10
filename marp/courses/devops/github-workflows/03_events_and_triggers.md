@@ -2,6 +2,12 @@
 
 ---
 
+## Workflow Trigger Types
+
+![trigger_types](svg/courses/devops/github-workflows/03_events_and_triggers/trigger_types.svg)
+
+---
+
 ## Push Event Trigger
 
 ```yaml

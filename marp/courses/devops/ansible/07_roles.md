@@ -20,6 +20,12 @@
 
 ---
 
+## Role Directory Structure
+
+![role_directory_structure](svg/courses/devops/ansible/07_roles/role_directory_structure.svg)
+
+---
+
 ## Why Use Roles?
 
 ```misc

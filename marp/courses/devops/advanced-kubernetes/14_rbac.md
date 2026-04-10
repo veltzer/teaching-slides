@@ -419,6 +419,12 @@ rules:
 
 ---
 
+## RBAC Model
+
+![rbac_model](svg/courses/devops/advanced-kubernetes/14_rbac/rbac_model.svg)
+
+---
+
 ## Least Privilege Example
 
 ```yaml

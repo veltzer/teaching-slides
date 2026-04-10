@@ -124,6 +124,12 @@
 - Deployment pipeline
 
 ---
+## Branch Protection Flow
+
+![branch_protection_flow](svg/courses/git/git/08_workflows/branch_protection_flow.svg)
+
+---
+
 ## Branch Protection Rules
 - Required reviews
 - Status checks

@@ -129,6 +129,12 @@ public class ProfileActivity extends AppCompatActivity {
 
 ---
 
+## Activity vs Fragment Lifecycle
+
+![activity_fragment_lifecycle](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/activity_fragment_lifecycle.svg)
+
+---
+
 ## Fragment Lifecycle
 
 ![fragment_lifecycle](svg/courses/operating_systems/advanced-android-application-development/02_android_ui/fragment_lifecycle.svg)

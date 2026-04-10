@@ -179,6 +179,12 @@ print(f'Entropy: {entropy:.4f} bits/byte')
 
 ## Inode Structure in `ext4`
 
+![inode_structure](svg/courses/security/linux-forensics/05_data_and_file_structure/inode_structure.svg)
+
+---
+
+## Inode Structure in `ext4`
+
 ```bash
 # View inode information
 stat /etc/passwd

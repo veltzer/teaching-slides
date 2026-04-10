@@ -154,32 +154,29 @@ jobs:
 ## Workflow Status Badges
 
 - Add a badge to your `README.md`:
+
 ```markdown
+![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)
+```
 
 ---
+
 ## Workflow Status Badges
 
 ![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
 
 ---
+
 ## Workflow Status Badges
 
-```
 - Badge shows the status of the latest run:
     - Green: passing
     - Red: failing
     - Gray: no runs yet
 - You can filter by branch:
+
 ```markdown
-
----
-## Workflow Status Badges
-
-![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
-
----
-## Workflow Status Badges
-
+![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg?branch=main)
 ```
 
 ---

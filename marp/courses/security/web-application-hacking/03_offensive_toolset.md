@@ -4,9 +4,21 @@
 
 ---
 
+## Offensive Toolkit Categories
+
+![offensive_toolkit_categories](svg/courses/security/web-application-hacking/03_offensive_toolset/offensive_toolkit_categories.svg)
+
+---
+
 ## The Pentester's Toolkit Overview
 
 ![the_pentester_s_toolkit_overview](svg/courses/security/web-application-hacking/03_offensive_toolset/the_pentester_s_toolkit_overview.svg)
+
+---
+
+## Attack Proxy Architecture
+
+![attack_proxy_architecture](svg/courses/security/web-application-hacking/03_offensive_toolset/attack_proxy_architecture.svg)
 
 ---
 

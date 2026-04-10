@@ -6,6 +6,12 @@
 
 ## Injection Testing Methodology
 
+![injection_testing_methodology](svg/courses/security/web-application-hacking/19_testing_for_injections/injection_testing_methodology.svg)
+
+---
+
+## Injection Testing Methodology
+
 ```misc
 For EACH entry point discovered:
 
@@ -15,6 +21,12 @@ For EACH entry point discovered:
 4. Analyze responses for indicators
 5. Confirm and exploit
 ```
+
+---
+
+## Injection Types Overview
+
+![injection_types_overview](svg/courses/security/web-application-hacking/19_testing_for_injections/injection_types_overview.svg)
 
 ---
 

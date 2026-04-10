@@ -99,6 +99,12 @@ print(duck.speak())  # Quack!
 
 ## Inheritance in Python
 
+## Diamond Problem and MRO
+
+![diamond_problem_mro](svg/courses/languages/python/advanced-python/05_oop_toolkit/diamond_problem_mro.svg)
+
+---
+
 ## The Diamond Problem
 - A class inherits from two classes with common ancestor
 - Which method should be called when both inherit same method?

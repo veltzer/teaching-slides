@@ -392,6 +392,12 @@ How lifetimes interact with subtyping
 
 ---
 
+## Lifetime Variance Rules
+
+![lifetime_variance_rules](svg/courses/languages/rust/advanced-rust/04_advanced_lifetimes/lifetime_variance_rules.svg)
+
+---
+
 ## Covariance
 
 ```rust
@@ -475,6 +481,12 @@ struct ContravariantWrapper<T> {
 ## Part 6: Self-Referential Structs
 
 The hardest lifetime problem in Rust
+
+---
+
+## Self Referential Struct Problem
+
+![self_referential_struct_problem](svg/courses/languages/rust/advanced-rust/04_advanced_lifetimes/self_referential_struct_problem.svg)
 
 ---
 

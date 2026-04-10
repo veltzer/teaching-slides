@@ -1,6 +1,12 @@
 # Multi Processing
 
 ---
+## Parallel Execution
+
+![parallel_execution](svg/courses/languages/bash/bash-scripting/16_multiprocessing/parallel_execution.svg)
+
+---
+
 ## Running Commands in the Background
 
 ```bash

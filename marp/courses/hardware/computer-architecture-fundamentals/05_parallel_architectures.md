@@ -373,6 +373,12 @@ dozens to over a hundred SMs.
 Each SM can manage hundreds of threads simultaneously.
 
 ---
+## Warp Execution in GPUs
+
+![warp_execution_in_gpus](svg/courses/hardware/computer-architecture-fundamentals/05_parallel_architectures/warp_execution_in_gpus.svg)
+
+---
+
 ## Warp Scheduling
 
 A **warp** is a group of 32 threads that execute in lockstep on an SM.

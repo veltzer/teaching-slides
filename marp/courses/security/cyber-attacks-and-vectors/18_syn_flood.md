@@ -2,6 +2,12 @@
 
 ---
 
+## SYN Flood Attack
+
+![syn_flood_attack](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/syn_flood_attack.svg)
+
+---
+
 ## What is a SYN Flood Attack
 
 - A SYN flood attack is a type of Denial of Service (DoS) attack that exploits the TCP three-way handshake process
@@ -329,6 +335,12 @@ for i in range(1000):
 | RST Attack     | Forged RST to kill connections       | L4      | TCP MD5 / TCP-AO      |
 | Sockstress     | Tiny TCP window keeps conns open     | L4      | Timeout tuning        |
 | Slowloris      | Slow HTTP headers exhaust threads    | L7      | Reverse proxy         |
+
+---
+
+## SYN Flood Defense Layers
+
+![syn_flood_defense_layers](svg/courses/security/cyber-attacks-and-vectors/18_syn_flood/syn_flood_defense_layers.svg)
 
 ---
 ## Hardware and Cloud Defenses

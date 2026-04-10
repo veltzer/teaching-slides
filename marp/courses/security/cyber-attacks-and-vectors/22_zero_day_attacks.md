@@ -2,6 +2,12 @@
 
 ---
 
+## Zero-Day Attack Lifecycle
+
+![zero_day_attack_lifecycle](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/zero_day_attack_lifecycle.svg)
+
+---
+
 ## What Are Zero-Day Attacks
 
 - A zero-day attack exploits a previously unknown software vulnerability
@@ -36,6 +42,12 @@
 │  Average: 7 years from introduction to discovery!        │
 └──────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## Zero-Day Market Ecosystem
+
+![zero_day_market_ecosystem](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/zero_day_market_ecosystem.svg)
 
 ---
 
@@ -81,6 +93,12 @@
 | 4.0-6.9  | Medium   | XSS requiring interaction               |
 | 7.0-8.9  | High     | Authenticated RCE                        |
 | 9.0-10.0 | Critical | Unauthenticated remote code execution    |
+
+---
+
+## Responsible Disclosure Timeline
+
+![responsible_disclosure_timeline](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/responsible_disclosure_timeline.svg)
 
 ---
 
@@ -223,6 +241,12 @@ sudo yum updateinfo list security
 
 ---
 
+## Virtual Patching Architecture
+
+![virtual_patching_architecture](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/virtual_patching_architecture.svg)
+
+---
+
 ## Virtual Patching
 
 ![virtual_patching](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/virtual_patching.svg)
@@ -250,6 +274,12 @@ location / {
     }
 }
 ```
+
+---
+
+## Zero-Day Defense Layers
+
+![zero_day_defense_layers](svg/courses/security/cyber-attacks-and-vectors/22_zero_day_attacks/zero_day_defense_layers.svg)
 
 ---
 

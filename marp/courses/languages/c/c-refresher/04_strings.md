@@ -225,6 +225,12 @@ char *s = "Hello"; s[0] = 'h';  // Undefined behavior!
 
 ---
 
+## C String Memory Layout
+
+![c_string_memory_layout](svg/courses/languages/c/c-refresher/04_strings/c_string_memory_layout.svg)
+
+---
+
 ## String Memory Layout
 
 ![string_memory_layout_1](svg/courses/languages/c/c-refresher/04_strings/string_memory_layout_1.svg)

@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Context window bar (top) -->
+  <rect x="30" y="20" width="1220" height="80" rx="8" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="50" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">AI Context Window  (e.g. 200 000 tokens)</text>
+
+  <!-- Context segments -->
+  <rect x="40"  y="60" width="300" height="28" rx="3" fill="url(#grad-accent)"/>
+  <text x="190" y="79" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#ffffff">System prompt / instructions</text>
+
+  <rect x="348" y="60" width="240" height="28" rx="3" fill="#1976d2"/>
+  <text x="468" y="79" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#ffffff">Open files (editor)</text>
+
+  <rect x="596" y="60" width="200" height="28" rx="3" fill="#42a5f5"/>
+  <text x="696" y="79" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#ffffff">Conversation history</text>
+
+  <rect x="804" y="60" width="180" height="28" rx="3" fill="#90caf9"/>
+  <text x="894" y="79" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#333">Recent edits</text>
+
+  <rect x="992" y="60" width="120" height="28" rx="3" fill="#e0e0e0" stroke-dasharray="4 3"/>
+  <text x="1052" y="79" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#9e9e9e">available</text>
+
+  <!-- Impact diagram -->
+  <!-- Poor context (left) -->
+  <rect x="30" y="140" width="580" height="460" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="320" y="174" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Poor Context → Weak Suggestions</text>
+
+  <rect x="50" y="196" width="540" height="100" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="50" y="216" font-family="sans-serif" font-size="14" fill="#9e9e9e">  You type: "add error handling"</text>
+  <text x="50" y="240" font-family="sans-serif" font-size="14" fill="#9e9e9e">  AI sees: only the current function</text>
+  <text x="50" y="264" font-family="sans-serif" font-size="14" fill="#9e9e9e">  AI response: generic try/except</text>
+  <text x="50" y="284" font-family="sans-serif" font-size="14" fill="#c62828">  ✗ Ignores existing error classes</text>
+
+  <text x="320" y="338" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#c62828">What's missing from context:</text>
+  <rect x="50" y="350" width="540" height="220" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="70" y="378" font-family="sans-serif" font-size="14" fill="#555555">✗ Related modules not open</text>
+  <text x="70" y="402" font-family="sans-serif" font-size="14" fill="#555555">✗ No docstrings / unclear variable names</text>
+  <text x="70" y="426" font-family="sans-serif" font-size="14" fill="#555555">✗ Custom exceptions defined elsewhere</text>
+  <text x="70" y="450" font-family="sans-serif" font-size="14" fill="#555555">✗ No type hints — AI guesses types</text>
+  <text x="70" y="474" font-family="sans-serif" font-size="14" fill="#555555">✗ Vague prompt: "fix this"</text>
+  <text x="70" y="498" font-family="sans-serif" font-size="14" fill="#555555">✗ No tests — AI can't infer intent</text>
+  <text x="70" y="522" font-family="sans-serif" font-size="14" fill="#555555">✗ Giant single file — irrelevant code fills context</text>
+  <text x="70" y="556" font-family="sans-serif" font-size="14" fill="#c62828">Result: hallucinated APIs, wrong patterns</text>
+
+  <!-- Good context (right) -->
+  <rect x="670" y="140" width="580" height="460" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="960" y="174" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Rich Context → Accurate Suggestions</text>
+
+  <rect x="690" y="196" width="540" height="100" rx="6" fill="#f2f2f2" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="690" y="216" font-family="sans-serif" font-size="14" fill="#555555">  You type: "add error handling using</text>
+  <text x="690" y="236" font-family="sans-serif" font-size="14" fill="#555555">  DatabaseError from exceptions.py"</text>
+  <text x="690" y="260" font-family="sans-serif" font-size="14" fill="#555555">  AI sees: function + exceptions.py + tests</text>
+  <text x="690" y="284" font-family="sans-serif" font-size="14" fill="#2e7d32">  ✓ Uses correct existing exception class</text>
+
+  <text x="960" y="338" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">What helps the AI:</text>
+  <rect x="690" y="350" width="540" height="220" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="710" y="378" font-family="sans-serif" font-size="14" fill="#555555">✓ Open related files in editor tabs</text>
+  <text x="710" y="402" font-family="sans-serif" font-size="14" fill="#555555">✓ Descriptive names: get_user_by_email()</text>
+  <text x="710" y="426" font-family="sans-serif" font-size="14" fill="#555555">✓ Type hints everywhere</text>
+  <text x="710" y="450" font-family="sans-serif" font-size="14" fill="#555555">✓ Docstrings explaining intent</text>
+  <text x="710" y="474" font-family="sans-serif" font-size="14" fill="#555555">✓ Tests that show expected behaviour</text>
+  <text x="710" y="498" font-family="sans-serif" font-size="14" fill="#555555">✓ Specific prompt with existing patterns</text>
+  <text x="710" y="522" font-family="sans-serif" font-size="14" fill="#555555">✓ Small, focused files (&lt;300 lines)</text>
+  <text x="710" y="556" font-family="sans-serif" font-size="14" fill="#2e7d32">Result: correct, idiomatic, project-aware code</text>
+
+  <rect x="30" y="618" width="1220" height="42" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="644" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">The AI is only as good as the context you give it — treat the context window as a shared working memory</text>
+</svg>

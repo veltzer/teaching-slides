@@ -28,6 +28,12 @@ With RAG:
 
 ---
 
+## RAG Architecture
+
+![rag_architecture](svg/courses/ai/advanced-ai-powered-development/07_rag_for_development/rag_architecture.svg)
+
+---
+
 ## RAG Architecture Overview
 
 ![rag_architecture_overview](svg/courses/ai/advanced-ai-powered-development/07_rag_for_development/rag_architecture_overview.svg)

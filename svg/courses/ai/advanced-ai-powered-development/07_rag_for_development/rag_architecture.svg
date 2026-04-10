@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Indexing pipeline (top) -->
+  <text x="640" y="24" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#555555">Indexing (offline / build time)</text>
+
+  <rect x="30"  y="40" width="180" height="60" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="76" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Source docs</text>
+  <text x="120" y="94" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">.py .md .txt</text>
+
+  <line x1="212" y1="70" x2="258" y2="70" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="260" y="40" width="180" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="72" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Chunking</text>
+  <text x="350" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">split into ~500 token chunks</text>
+
+  <line x1="442" y1="70" x2="488" y2="70" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="490" y="40" width="200" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="590" y="72" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Embed model</text>
+  <text x="590" y="90" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">chunk → vector [0.2, -0.8, ...]</text>
+
+  <line x1="692" y1="70" x2="738" y2="70" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="20" width="200" height="110" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="840" y="60" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Vector DB</text>
+  <text x="840" y="84" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#bbdefb">Chroma / Pinecone</text>
+  <text x="840" y="104" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#bbdefb">FAISS / pgvector</text>
+  <text x="840" y="122" text-anchor="middle" font-family="monospace" font-size="12" fill="#90caf9">stores vectors + metadata</text>
+
+  <!-- Query pipeline (bottom) -->
+  <line x1="640" y1="138" x2="640" y2="198" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="640" y="196" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#555555">Query (real-time)</text>
+
+  <rect x="30" y="210" width="180" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="246" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">User query</text>
+  <text x="120" y="264" text-anchor="middle" font-family="monospace" font-size="13" fill="#9e9e9e">"how does X work?"</text>
+
+  <line x1="212" y1="240" x2="258" y2="240" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="260" y="210" width="200" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="360" y="242" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Embed query</text>
+  <text x="360" y="260" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">same embed model</text>
+
+  <line x1="462" y1="240" x2="508" y2="240" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="510" y="210" width="220" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="620" y="242" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Similarity search</text>
+  <text x="620" y="260" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">cosine / dot product</text>
+
+  <!-- Arrow from vector DB down to similarity search -->
+  <line x1="840" y1="132" x2="840" y2="210" stroke="#1565c0" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
+  <line x1="732" y1="240" x2="790" y2="240" stroke="#1565c0" stroke-width="2"/>
+  <line x1="790" y1="162" x2="790" y2="240" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="740" y="210" width="200" height="60" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="840" y="242" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#212121">Top-k chunks</text>
+  <text x="840" y="260" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">most similar returned</text>
+
+  <line x1="942" y1="240" x2="988" y2="240" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- LLM + prompt assembly -->
+  <rect x="990" y="180" width="250" height="130" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1115" y="220" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#ffffff">LLM</text>
+  <text x="1115" y="244" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#bbdefb">Prompt =</text>
+  <text x="1010" y="266" font-family="monospace" font-size="13" fill="#90caf9">  context (chunks)</text>
+  <text x="1010" y="286" font-family="monospace" font-size="13" fill="#90caf9">+ user query</text>
+  <text x="1010" y="306" font-family="monospace" font-size="13" fill="#90caf9">→ grounded answer</text>
+
+  <!-- Answer -->
+  <line x1="1115" y1="312" x2="1115" y2="370" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <rect x="990" y="372" width="250" height="60" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1115" y="404" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1b5e20">Grounded answer</text>
+  <text x="1115" y="424" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2e7d32">cites retrieved context</text>
+
+  <!-- Key benefits -->
+  <rect x="30" y="460" width="920" height="200" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="475" y="490" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Why RAG for development?</text>
+
+  <rect x="50"  y="506" width="260" height="130" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="180" y="530" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Codebase context</text>
+  <text x="70"  y="554" font-family="sans-serif" font-size="13" fill="#555555">Index your own repo</text>
+  <text x="70"  y="574" font-family="sans-serif" font-size="13" fill="#555555">AI knows your APIs,</text>
+  <text x="70"  y="594" font-family="sans-serif" font-size="13" fill="#555555">patterns, conventions</text>
+  <text x="70"  y="618" font-family="sans-serif" font-size="13" fill="#555555">No fine-tuning needed</text>
+
+  <rect x="340" y="506" width="260" height="130" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="470" y="530" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Up-to-date docs</text>
+  <text x="360" y="554" font-family="sans-serif" font-size="13" fill="#555555">Index latest library docs</text>
+  <text x="360" y="574" font-family="sans-serif" font-size="13" fill="#555555">AI uses v3.x API, not v2.x</text>
+  <text x="360" y="594" font-family="sans-serif" font-size="13" fill="#555555">from training data</text>
+  <text x="360" y="618" font-family="sans-serif" font-size="13" fill="#555555">Reduces hallucination</text>
+
+  <rect x="630" y="506" width="290" height="130" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="775" y="530" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1565c0">Private knowledge</text>
+  <text x="650" y="554" font-family="sans-serif" font-size="13" fill="#555555">Internal wikis, runbooks</text>
+  <text x="650" y="574" font-family="sans-serif" font-size="13" fill="#555555">Architecture decisions</text>
+  <text x="650" y="594" font-family="sans-serif" font-size="13" fill="#555555">Stays private (local embed)</text>
+  <text x="650" y="618" font-family="sans-serif" font-size="13" fill="#555555">Never sent to model provider</text>
+</svg>

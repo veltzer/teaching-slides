@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Pyramid: highest priority at top -->
+  <!-- Priority label axis -->
+  <text x="50" y="80"  font-family="sans-serif" font-size="13" fill="#c62828" font-weight="bold">Highest</text>
+  <text x="50" y="490" font-family="sans-serif" font-size="13" fill="#9e9e9e">Lowest</text>
+  <line x1="90" y1="60" x2="90" y2="510" stroke="#e0e0e0" stroke-width="1.5"/>
+  <polygon points="90,55 86,68 94,68" fill="#aaaaaa"/>
+
+  <!-- Level 1: Command line -->
+  <rect x="110" y="44" width="840" height="68" rx="6" fill="#c62828" filter="url(#shadow)"/>
+  <text x="530" y="76" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">1. Command-line overrides</text>
+  <text x="530" y="100" text-anchor="middle" font-family="monospace" font-size="15" fill="#ffcdd2">bitbake -e -v   MACHINE=raspberrypi4 bitbake core-image-minimal</text>
+
+  <!-- Level 2: local.conf -->
+  <rect x="110" y="126" width="840" height="68" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="530" y="158" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">2. local.conf  (build/conf/local.conf)</text>
+  <text x="530" y="182" text-anchor="middle" font-family="monospace" font-size="15" fill="#bbdefb">MACHINE = "raspberrypi4"   DISTRO = "poky"   BB_NUMBER_THREADS = "4"</text>
+
+  <!-- Level 3: distro.conf -->
+  <rect x="110" y="208" width="840" height="68" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="530" y="240" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">3. distro.conf  (meta-poky/conf/distro/poky.conf)</text>
+  <text x="530" y="264" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">DISTRO_FEATURES += "systemd wifi bluetooth"</text>
+
+  <!-- Level 4: machine.conf -->
+  <rect x="110" y="290" width="840" height="68" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="530" y="322" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">4. machine.conf  (meta-raspberrypi/conf/machine/)</text>
+  <text x="530" y="346" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">KERNEL_IMAGETYPE = "Image"   MACHINE_FEATURES = "usbhost wifi"</text>
+
+  <!-- Level 5: recipe (.bb) -->
+  <rect x="110" y="372" width="840" height="68" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="530" y="404" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">5. Recipe  (*.bb / *.bbappend)</text>
+  <text x="530" y="428" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">SRC_URI = "git://..."    DEPENDS = "zlib openssl"</text>
+
+  <!-- Level 6: bitbake defaults -->
+  <rect x="110" y="454" width="840" height="54" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="530" y="482" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#9e9e9e">6. BitBake built-in defaults</text>
+  <text x="530" y="500" text-anchor="middle" font-family="monospace" font-size="14" fill="#9e9e9e">B = "${WORKDIR}/build"    STAMP = "${STAMPS_DIR}/..."</text>
+
+  <!-- Override syntax -->
+  <rect x="980" y="44" width="270" height="380" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="1115" y="74"  text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Override syntax</text>
+  <text x="1000" y="100" font-family="monospace" font-size="13" fill="#1565c0">VAR_append = " extra"</text>
+  <text x="1000" y="120" font-family="sans-serif" font-size="12" fill="#555555">append to value</text>
+  <text x="1000" y="148" font-family="monospace" font-size="13" fill="#1565c0">VAR_prepend = "first "</text>
+  <text x="1000" y="168" font-family="sans-serif" font-size="12" fill="#555555">prepend to value</text>
+  <text x="1000" y="196" font-family="monospace" font-size="13" fill="#1565c0">VAR_remove = "item"</text>
+  <text x="1000" y="216" font-family="sans-serif" font-size="12" fill="#555555">remove from list</text>
+  <line x1="1000" y1="232" x2="1230" y2="232" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="1115" y="256" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#212121">Conditional overrides</text>
+  <text x="1000" y="280" font-family="monospace" font-size="13" fill="#1565c0">VAR_raspberrypi4</text>
+  <text x="1000" y="298" font-family="sans-serif" font-size="12" fill="#555555">applies if MACHINE matches</text>
+  <text x="1000" y="326" font-family="monospace" font-size="13" fill="#1565c0">VAR_class-target</text>
+  <text x="1000" y="344" font-family="sans-serif" font-size="12" fill="#555555">applies for target builds</text>
+  <text x="1000" y="372" font-family="monospace" font-size="13" fill="#1565c0">VAR_df-systemd</text>
+  <text x="1000" y="390" font-family="sans-serif" font-size="12" fill="#555555">distro feature conditional</text>
+
+  <!-- Debug tip -->
+  <rect x="110" y="526" width="840" height="60" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="530" y="554" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Debug variable value:</text>
+  <text x="530" y="576" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">bitbake -e core-image-minimal | grep ^MACHINE=</text>
+</svg>

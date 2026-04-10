@@ -346,6 +346,12 @@ int main(void) {
 
 ---
 
+## Memory Layout of C Data Types
+
+![memory_layout_of_c_data_types](svg/courses/languages/c/c-refresher/02_data_types/memory_layout_of_c_data_types.svg)
+
+---
+
 ## Memory Layout of Data Types
 
 ![memory_layout_of_data_types](svg/courses/languages/c/c-refresher/02_data_types/memory_layout_of_data_types.svg)

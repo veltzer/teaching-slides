@@ -4,6 +4,12 @@
 
 ---
 
+## Server Hardening Layers
+
+![server_hardening_layers](svg/courses/security/web-application-hacking/17_server_hardening/server_hardening_layers.svg)
+
+---
+
 ## Why Hardening Matters
 
 ![why_hardening_matters](svg/courses/security/web-application-hacking/17_server_hardening/why_hardening_matters.svg)
@@ -573,6 +579,12 @@ awk '$10 > 10000000 {print $0}' /var/log/nginx/access.log
 # Consider SIEM: ELK Stack, Splunk, Graylog
 # For automated alerting and correlation
 ```
+
+---
+
+## Hardening Checklist Priority
+
+![hardening_checklist_priority](svg/courses/security/web-application-hacking/17_server_hardening/hardening_checklist_priority.svg)
 
 ---
 

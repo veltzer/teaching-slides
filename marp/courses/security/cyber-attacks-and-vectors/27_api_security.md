@@ -1,6 +1,12 @@
 # API Security: Protecting the Digital Backbone
 
 ---
+
+## API Threat Landscape
+
+![api_threat_landscape](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_threat_landscape.svg)
+
+---
 ## Why API Security Matters
 
 - APIs (Application Programming Interfaces) are the backbone of modern applications
@@ -452,6 +458,12 @@ def execute_persisted_query(query_id, variables):
         raise PermissionError("Query not in allowlist")
     return schema.execute(ALLOWED_QUERIES[query_id], variables=variables)
 ```
+
+---
+
+## API Security Architecture
+
+![api_security_architecture](svg/courses/security/cyber-attacks-and-vectors/27_api_security/api_security_architecture.svg)
 
 ---
 ## API Gateway Security

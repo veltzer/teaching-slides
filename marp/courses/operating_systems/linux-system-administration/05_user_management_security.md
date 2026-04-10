@@ -112,6 +112,12 @@ awk -F: '$3 == 0 {print $1}' /etc/passwd
 ```
 
 ---
+## Linux File Permissions
+
+![linux_permissions](svg/courses/operating_systems/linux-system-administration/05_user_management_security/linux_permissions.svg)
+
+---
+
 ## Linux Permission Model
 
 ```bash

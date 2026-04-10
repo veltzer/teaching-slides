@@ -116,6 +116,11 @@ fn main() {
 | `sync_channel(n)` | n items  | Blocks when full         |
 
 ---
+## Channel Types Comparison
+
+![channel_types_comparison](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/channel_types_comparison.svg)
+
+---
 ## Crossbeam Channels
 
 ```rust
@@ -446,6 +451,11 @@ fn main() {
 An introduction to lock-free programming
 
 ---
+## Lock-Free Queue Operations
+
+![lock_free_queue_operations](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/lock_free_queue_operations.svg)
+
+---
 ## Lock-Free Stack (Treiber Stack)
 
 ```rust
@@ -545,6 +555,11 @@ fn main() {
 ![lock_free_vs_lock_based_trade_offs](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/lock_free_vs_lock_based_trade_offs.svg)
 
 ---
+## Rayon Work Stealing
+
+![rayon_work_stealing](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/rayon_work_stealing.svg)
+
+---
 ## Part 4: Rayon for Data Parallelism
 
 Effortless parallel iterators
@@ -636,6 +651,11 @@ fn main() {
 ```
 
 Note: `par_bridge()` has overhead compared to `par_iter()` because it cannot split the input evenly. Use `par_iter()` when you have a slice or vector.
+
+---
+## Work Stealing Scheduler
+
+![work_stealing_scheduler](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/work_stealing_scheduler.svg)
 
 ---
 ## Rayon: Custom Thread Pool
@@ -951,6 +971,11 @@ fn main() {
 ```
 
 ---
+## Concurrent Data Structures
+
+![concurrent_data_structures](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/concurrent_data_structures.svg)
+
+---
 ## Part 7: Concurrent Collections
 
 DashMap and friends
@@ -1033,6 +1058,11 @@ fn main() {
 ## Part 8: Thread Pools
 
 Managing threads efficiently
+
+---
+## Thread Pool Architecture
+
+![thread_pool_architecture](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/thread_pool_architecture.svg)
 
 ---
 ## Building a Simple Thread Pool
@@ -1199,6 +1229,11 @@ fn main() {
 ## Part 10: Actor Pattern
 
 Message-driven concurrency
+
+---
+## Actor Model Architecture
+
+![actor_model_architecture](svg/courses/languages/rust/advanced-rust/08_concurrency_patterns/actor_model_architecture.svg)
 
 ---
 ## Actor Pattern with Channels

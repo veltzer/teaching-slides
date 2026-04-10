@@ -46,6 +46,12 @@
 
 ---
 
+## Pattern Selection Guide
+
+![pattern_selection_guide](svg/courses/languages/c++/c++-design-patterns/25_summary/pattern_selection_guide.svg)
+
+---
+
 ## Choosing the Right Pattern
 
 Questions to ask:

@@ -124,6 +124,12 @@ utils.o: utils.c utils.h
 ## How Make Works
 
 ## The Algorithm
+
+---
+
+## Make Algorithm
+
+![make_algorithm](svg/courses/build_systems/make/01_introduction/make_algorithm.svg)
 1. Read the Makefile
 1. Build the dependency graph
 1. Check timestamps of files

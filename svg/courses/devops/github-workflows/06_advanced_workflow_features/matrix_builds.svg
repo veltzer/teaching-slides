@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Strategy definition (left) -->
+  <rect x="30" y="20" width="420" height="290" rx="8" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="240" y="50" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Matrix strategy definition</text>
+  <text x="50" y="80"  font-family="monospace" font-size="15" fill="#1565c0">strategy:</text>
+  <text x="50" y="102" font-family="monospace" font-size="15" fill="#1565c0">  matrix:</text>
+  <text x="50" y="124" font-family="monospace" font-size="15" fill="#212121">    os: [ubuntu, windows, macos]</text>
+  <text x="50" y="146" font-family="monospace" font-size="15" fill="#212121">    python: ['3.10', '3.11', '3.12']</text>
+  <line x1="50" y1="162" x2="430" y2="162" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="240" y="188" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">3 OS × 3 versions = <tspan font-weight="bold" fill="#1565c0">9 parallel jobs</tspan></text>
+  <text x="50" y="220" font-family="monospace" font-size="14" fill="#9e9e9e">    # use in steps:</text>
+  <text x="50" y="242" font-family="monospace" font-size="14" fill="#212121">runs-on: $&#123;&#123; matrix.os &#125;&#125;</text>
+  <text x="50" y="264" font-family="monospace" font-size="14" fill="#212121">python-version: $&#123;&#123; matrix.python &#125;&#125;</text>
+  <text x="50" y="294" font-family="monospace" font-size="13" fill="#9e9e9e">fail-fast: false  # run all even if one fails</text>
+
+  <!-- Arrow -->
+  <line x1="452" y1="165" x2="520" y2="165" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <text x="486" y="155" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1565c0">expands to</text>
+
+  <!-- Grid of jobs -->
+  <!-- Headers -->
+  <text x="640"  y="42" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#555555">ubuntu</text>
+  <text x="840"  y="42" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#555555">windows</text>
+  <text x="1040" y="42" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#555555">macos</text>
+
+  <text x="530" y="100" text-anchor="end" font-family="monospace" font-size="14" font-weight="bold" fill="#555555">3.10</text>
+  <text x="530" y="190" text-anchor="end" font-family="monospace" font-size="14" font-weight="bold" fill="#555555">3.11</text>
+  <text x="530" y="280" text-anchor="end" font-family="monospace" font-size="14" font-weight="bold" fill="#555555">3.12</text>
+
+  <!-- 9 job cells -->
+  <!-- Row 1 -->
+  <rect x="540" y="56" width="196" height="76" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="638" y="90" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">ubuntu / 3.10</text>
+  <text x="638" y="112" text-anchor="middle" font-family="monospace" font-size="12" fill="#bbdefb">✓ pass</text>
+
+  <rect x="740" y="56" width="196" height="76" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="838" y="90" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">windows / 3.10</text>
+  <text x="838" y="112" text-anchor="middle" font-family="monospace" font-size="12" fill="#bbdefb">✓ pass</text>
+
+  <rect x="940" y="56" width="196" height="76" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1038" y="90" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#ffffff">macos / 3.10</text>
+  <text x="1038" y="112" text-anchor="middle" font-family="monospace" font-size="12" fill="#bbdefb">✓ pass</text>
+
+  <!-- Row 2 -->
+  <rect x="540" y="146" width="196" height="76" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="638" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#212121">ubuntu / 3.11</text>
+  <text x="638" y="202" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">✓ pass</text>
+
+  <rect x="740" y="146" width="196" height="76" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="838" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c62828">windows / 3.11</text>
+  <text x="838" y="202" text-anchor="middle" font-family="monospace" font-size="12" fill="#c62828">✗ fail</text>
+
+  <rect x="940" y="146" width="196" height="76" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1038" y="180" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#212121">macos / 3.11</text>
+  <text x="1038" y="202" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">✓ pass</text>
+
+  <!-- Row 3 -->
+  <rect x="540" y="236" width="196" height="76" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="638" y="270" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#212121">ubuntu / 3.12</text>
+  <text x="638" y="292" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">✓ pass</text>
+
+  <rect x="740" y="236" width="196" height="76" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="838" y="270" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#212121">windows / 3.12</text>
+  <text x="838" y="292" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">✓ pass</text>
+
+  <rect x="940" y="236" width="196" height="76" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1038" y="270" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#212121">macos / 3.12</text>
+  <text x="1038" y="292" text-anchor="middle" font-family="monospace" font-size="12" fill="#555555">✓ pass</text>
+
+  <!-- All run in parallel label -->
+  <rect x="540" y="332" width="596" height="36" rx="4" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="838" y="356" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1565c0">All 9 jobs run in parallel — one failure visible immediately</text>
+
+  <!-- exclude / include section -->
+  <rect x="30" y="390" width="1220" height="200" rx="8" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="420" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#212121">Fine-tuning the matrix</text>
+
+  <rect x="50"  y="436" width="360" height="130" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="230" y="462" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">exclude — remove combinations</text>
+  <text x="70"  y="486" font-family="monospace" font-size="13" fill="#555555">exclude:</text>
+  <text x="70"  y="506" font-family="monospace" font-size="13" fill="#555555">  - os: windows</text>
+  <text x="70"  y="526" font-family="monospace" font-size="13" fill="#555555">    python: '3.10'</text>
+  <text x="70"  y="548" font-family="sans-serif" font-size="13" fill="#9e9e9e">removes windows/3.10 from grid</text>
+
+  <rect x="460" y="436" width="360" height="130" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="462" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">include — add extra combinations</text>
+  <text x="480" y="486" font-family="monospace" font-size="13" fill="#555555">include:</text>
+  <text x="480" y="506" font-family="monospace" font-size="13" fill="#555555">  - os: ubuntu</text>
+  <text x="480" y="526" font-family="monospace" font-size="13" fill="#555555">    python: '3.13-dev'</text>
+  <text x="480" y="548" font-family="sans-serif" font-size="13" fill="#9e9e9e">adds one extra experimental job</text>
+
+  <rect x="870" y="436" width="360" height="130" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="1050" y="462" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1565c0">fail-fast</text>
+  <text x="890"  y="492" font-family="monospace" font-size="13" fill="#555555">fail-fast: true   # default</text>
+  <text x="890"  y="514" font-family="sans-serif" font-size="13" fill="#555555">cancel remaining jobs on first fail</text>
+  <text x="890"  y="540" font-family="monospace" font-size="13" fill="#555555">fail-fast: false</text>
+  <text x="890"  y="562" font-family="sans-serif" font-size="13" fill="#555555">run all jobs regardless</text>
+</svg>

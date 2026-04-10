@@ -95,6 +95,12 @@ VAR = "${@os.path.basename(d.getVar('SRC_URI').split()[0])}"
 
 ---
 
+## BitBake Variable Precedence
+
+![bitbake_variable_precedence](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/bitbake_variable_precedence.svg)
+
+---
+
 ## Overrides System
 
 ![overrides_system](svg/courses/operating_systems/embedded-linux-platform-development-with-yocto/03_bitbake_deep_dive/overrides_system.svg)

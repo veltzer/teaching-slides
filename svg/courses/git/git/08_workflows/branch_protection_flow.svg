@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Developer -->
+  <rect x="30" y="220" width="180" height="80" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="255" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Developer</text>
+  <text x="120" y="278" text-anchor="middle" font-family="monospace" font-size="14" fill="#1565c0">git push</text>
+
+  <line x1="212" y1="260" x2="278" y2="260" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- PR Created -->
+  <rect x="280" y="220" width="200" height="80" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="380" y="255" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Pull Request</text>
+  <text x="380" y="278" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">opened</text>
+
+  <line x1="482" y1="260" x2="548" y2="260" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <!-- Gates (parallel checks) -->
+  <rect x="550" y="140" width="220" height="70" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="660" y="172" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">CI Checks</text>
+  <text x="660" y="194" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">tests · lint · build</text>
+
+  <rect x="550" y="230" width="220" height="70" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="660" y="262" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Code Review</text>
+  <text x="660" y="284" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">≥2 approvals required</text>
+
+  <rect x="550" y="320" width="220" height="70" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="660" y="352" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Up-to-date</text>
+  <text x="660" y="374" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">branch not stale</text>
+
+  <!-- Lines from PR to gates -->
+  <line x1="550" y1="260" x2="550" y2="175" stroke="#1565c0" stroke-width="1.5"/>
+  <line x1="550" y1="260" x2="550" y2="265" stroke="#1565c0" stroke-width="1.5"/>
+  <line x1="550" y1="260" x2="550" y2="355" stroke="#1565c0" stroke-width="1.5"/>
+
+  <!-- Gates to decision diamond -->
+  <line x1="772" y1="175" x2="840" y2="260" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <line x1="772" y1="265" x2="840" y2="260" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+  <line x1="772" y1="355" x2="840" y2="280" stroke="#1565c0" stroke-width="1.5" marker-end="url(#arrow-accent)"/>
+
+  <!-- Decision diamond -->
+  <polygon points="920,220 1060,260 920,300 780,260" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="920" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1565c0">All gates</text>
+  <text x="920" y="274" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1565c0">passed?</text>
+
+  <!-- Yes: merge -->
+  <line x1="1062" y1="260" x2="1128" y2="260" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1095" y="248" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#2e7d32">yes</text>
+  <rect x="1130" y="220" width="120" height="80" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1190" y="258" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1b5e20">Merge</text>
+  <text x="1190" y="280" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#2e7d32">to main ✓</text>
+
+  <!-- No: blocked -->
+  <line x1="920" y1="302" x2="920" y2="380" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="940" y="346" font-family="sans-serif" font-size="14" fill="#c62828">no</text>
+  <rect x="820" y="382" width="200" height="70" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="920" y="415" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#c62828">Blocked</text>
+  <text x="920" y="438" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">fix and repush</text>
+
+  <!-- Config note -->
+  <rect x="30" y="500" width="1220" height="120" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="526" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Configure in: Settings → Branches → Branch protection rules</text>
+  <text x="50" y="554" font-family="monospace" font-size="14" fill="#1565c0">✓ Require a pull request before merging</text>
+  <text x="50" y="576" font-family="monospace" font-size="14" fill="#1565c0">✓ Require status checks to pass (CI)</text>
+  <text x="50" y="598" font-family="monospace" font-size="14" fill="#1565c0">✓ Require branches to be up to date</text>
+  <text x="660" y="554" font-family="monospace" font-size="14" fill="#1565c0">✓ Require signed commits</text>
+  <text x="660" y="576" font-family="monospace" font-size="14" fill="#1565c0">✓ Restrict who can push to matching branches</text>
+  <text x="660" y="598" font-family="monospace" font-size="14" fill="#1565c0">✓ Include administrators</text>
+</svg>

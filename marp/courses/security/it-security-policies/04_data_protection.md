@@ -10,6 +10,18 @@
 
 ## Data Classification
 
+![data_classification](svg/courses/security/it-security-policies/04_data_protection/data_classification.svg)
+
+---
+
+## Data Classification Levels
+
+![data_classification_levels](svg/courses/security/it-security-policies/04_data_protection/data_classification_levels.svg)
+
+---
+
+## Data Classification Levels
+
 ## Not All Data Is Equal
 
 | Level | Label | Examples | Handling |

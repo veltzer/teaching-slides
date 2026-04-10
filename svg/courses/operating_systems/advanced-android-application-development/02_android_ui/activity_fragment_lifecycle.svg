@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Activity lifecycle (left) -->
+  <text x="280" y="24" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Activity Lifecycle</text>
+
+  <!-- States as boxes, callbacks on arrows -->
+  <rect x="160" y="36" width="240" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="280" y="64" text-anchor="middle" font-family="monospace" font-size="16" font-weight="bold" fill="#ffffff">onCreate()</text>
+
+  <line x1="280" y1="82" x2="280" y2="110" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="160" y="112" width="240" height="44" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="140" text-anchor="middle" font-family="monospace" font-size="16" fill="#212121">onStart()</text>
+
+  <line x1="280" y1="158" x2="280" y2="186" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="160" y="188" width="240" height="44" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="216" text-anchor="middle" font-family="monospace" font-size="16" fill="#212121">onResume()</text>
+
+  <rect x="130" y="246" width="300" height="44" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="280" y="274" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1b5e20">RUNNING (visible + interactive)</text>
+
+  <line x1="280" y1="234" x2="280" y2="248" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+  <line x1="280" y1="292" x2="280" y2="316" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="318" width="240" height="44" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="346" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">onPause()</text>
+
+  <line x1="280" y1="364" x2="280" y2="392" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="394" width="240" height="44" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="422" text-anchor="middle" font-family="monospace" font-size="16" fill="#555555">onStop()</text>
+
+  <line x1="280" y1="440" x2="280" y2="468" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="470" width="240" height="44" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="280" y="498" text-anchor="middle" font-family="monospace" font-size="16" fill="#c62828">onDestroy()</text>
+
+  <!-- Back arrow from onStop to onRestart -->
+  <path d="M 160 418 Q 60 440 60 340 Q 60 170 160 160" stroke="#1565c0" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arrow-accent)"/>
+  <text x="30" y="310" font-family="monospace" font-size="12" fill="#1565c0" transform="rotate(-90 30 310)">onRestart()</text>
+
+  <!-- Fragment lifecycle (right) -->
+  <text x="900" y="24" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Fragment Lifecycle (extra callbacks)</text>
+
+  <rect x="740" y="36" width="320" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="900" y="64" text-anchor="middle" font-family="monospace" font-size="15" font-weight="bold" fill="#ffffff">onAttach() → onCreate()</text>
+
+  <line x1="900" y1="82" x2="900" y2="110" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="740" y="112" width="320" height="44" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="140" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">onCreateView()</text>
+
+  <line x1="900" y1="158" x2="900" y2="186" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="740" y="188" width="320" height="44" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="216" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">onViewCreated()</text>
+
+  <line x1="900" y1="234" x2="900" y2="248" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="710" y="248" width="380" height="44" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="900" y="276" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1b5e20">onStart() → onResume() [same as Activity]</text>
+
+  <line x1="900" y1="294" x2="900" y2="318" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="320" width="320" height="44" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="348" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">onPause() → onStop()</text>
+
+  <line x1="900" y1="366" x2="900" y2="394" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="396" width="320" height="44" rx="6" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="424" text-anchor="middle" font-family="monospace" font-size="15" fill="#555555">onDestroyView()</text>
+
+  <line x1="900" y1="442" x2="900" y2="470" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="740" y="472" width="320" height="44" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="500" text-anchor="middle" font-family="monospace" font-size="15" fill="#c62828">onDestroy() → onDetach()</text>
+
+  <!-- Key difference -->
+  <rect x="30" y="556" width="1220" height="120" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="584" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Key differences: Fragment has extra callbacks</text>
+  <text x="50"  y="612" font-family="sans-serif" font-size="14" fill="#555555">• <tspan font-family="monospace">onAttach()</tspan> — fragment associated with host activity</text>
+  <text x="50"  y="634" font-family="sans-serif" font-size="14" fill="#555555">• <tspan font-family="monospace">onCreateView()</tspan> — inflate fragment layout (return View)</text>
+  <text x="50"  y="656" font-family="sans-serif" font-size="14" fill="#555555">• <tspan font-family="monospace">onViewCreated()</tspan> — safe to access views, setup observers</text>
+  <text x="680" y="612" font-family="sans-serif" font-size="14" fill="#555555">• <tspan font-family="monospace">onDestroyView()</tspan> — nullify view bindings here to avoid leaks</text>
+  <text x="680" y="634" font-family="sans-serif" font-size="14" fill="#555555">• <tspan font-family="monospace">onDetach()</tspan> — fragment disassociated from activity</text>
+  <text x="680" y="656" font-family="sans-serif" font-size="14" fill="#555555">• Fragment can survive activity rotation (retain instance)</text>
+</svg>

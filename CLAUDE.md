@@ -10,8 +10,25 @@
 - All scripts must be executable (`chmod +x`). Run them directly (`./scripts/foo.py`), never via `python scripts/foo.py`.
 
 ## Writing presentations or slides
-- read "doc/HowToWriteSlides.txt"
+- File naming: `NN_name.md` (e.g., `00_introduction.md`)
+- File location: `marp/courses/<domain>/<course-name>/` or `marp/lectures/<domain>/`
+- Every file needs YAML front matter: `tags`, `level`, `category`, `audience`
+- Title slide (slide 1): only `# Title`, `## Author`, `## Email` — no content, no images
+- No empty slides (two consecutive `---` with nothing between them)
+- Always close code fences before starting a new slide (`---`)
+- Use `1. 1. 1.` for ordered lists, not `1. 2. 3.` — the renderer numbers automatically
+- Indent sub-items with 4 spaces: `    - item`
+- No mermaid diagrams — prefer SVG (no fast mermaid tool available yet)
+- Always use the project SVG color palette: `resources/svg_palette.svg`
+- No external image URLs — all images must be in `svg/` or `jpg/` directories
+- SVG font size must be ≥ 10 (enforced by `scripts/check_svg.py --fonts`)
 - All SVG files must use `viewBox="0 0 1280 720"` (16:9, matches Marp slide dimensions). Use `scripts/fix_svg_aspect_ratio.py` to fix existing SVGs.
 - A slide with an SVG must contain ONLY the `##` heading and the image line. Any other content (bullets, text, code) must be moved to a separate slide before or after.
 - SVG diagrams must NOT include a title inside the SVG. The `##` slide heading serves as the title.
 - SVG content must not extend below y=630. Marp renders the `##` heading above the image, so the image is scaled to ~640px tall. Keep viewBox at 1280x720 but treat y=630 as the effective bottom boundary.
+
+## Validation
+- Check markdown: `scripts/check_md.py` (run via `rsconstruct build --verbose -j10`)
+- Check SVGs: `scripts/check_svg.py --dimensions --fonts`
+- Verify image refs exist: `scripts/check_md.py --images`
+- Find unused SVGs: `scripts/find_unused_svgs.py`

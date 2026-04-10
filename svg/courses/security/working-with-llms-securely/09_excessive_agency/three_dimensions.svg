@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- 3 dimension cards -->
+
+  <!-- 1: Excessive Functionality -->
+  <rect x="30" y="20" width="380" height="380" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="220" y="58" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Excessive Functionality</text>
+  <text x="220" y="82" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">The LLM has access to more</text>
+  <text x="220" y="102" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">tools/plugins than it needs</text>
+
+  <rect x="50" y="124" width="340" height="56" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="70" y="148" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">Bad:</text>
+  <text x="70" y="166" font-family="monospace" font-size="13" fill="#555555">email + calendar + DB + shell + …</text>
+
+  <rect x="50" y="192" width="340" height="56" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="70" y="216" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Good:</text>
+  <text x="70" y="234" font-family="monospace" font-size="13" fill="#555555">only the tools the task requires</text>
+
+  <text x="50"  y="278" font-family="sans-serif" font-size="14" fill="#555555">• Prompt injection can abuse</text>
+  <text x="50"  y="300" font-family="sans-serif" font-size="14" fill="#555555">  any available tool</text>
+  <text x="50"  y="322" font-family="sans-serif" font-size="14" fill="#555555">• Unused tools = unused attack</text>
+  <text x="50"  y="344" font-family="sans-serif" font-size="14" fill="#555555">  surface</text>
+  <text x="220" y="390" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c62828" font-weight="bold">Principle: Least Functionality</text>
+
+  <!-- 2: Excessive Permissions -->
+  <rect x="450" y="20" width="380" height="380" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="58" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Excessive Permissions</text>
+  <text x="640" y="82" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">The LLM can perform write/delete</text>
+  <text x="640" y="102" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">actions when read-only would suffice</text>
+
+  <rect x="470" y="124" width="340" height="56" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="490" y="148" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">Bad:</text>
+  <text x="490" y="166" font-family="monospace" font-size="13" fill="#555555">DB credentials with full CRUD</text>
+
+  <rect x="470" y="192" width="340" height="56" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="490" y="216" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Good:</text>
+  <text x="490" y="234" font-family="monospace" font-size="13" fill="#555555">read-only DB user for queries</text>
+
+  <text x="470" y="278" font-family="sans-serif" font-size="14" fill="#555555">• An injected instruction can only</text>
+  <text x="470" y="300" font-family="sans-serif" font-size="14" fill="#555555">  do what the LLM is allowed to do</text>
+  <text x="470" y="322" font-family="sans-serif" font-size="14" fill="#555555">• Read-only access = no data loss</text>
+  <text x="470" y="344" font-family="sans-serif" font-size="14" fill="#555555">  even if compromised</text>
+  <text x="640" y="390" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c62828" font-weight="bold">Principle: Least Privilege</text>
+
+  <!-- 3: Excessive Autonomy -->
+  <rect x="870" y="20" width="380" height="380" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1060" y="58" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#c62828">Excessive Autonomy</text>
+  <text x="1060" y="82" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">The LLM takes high-impact actions</text>
+  <text x="1060" y="102" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">without human confirmation</text>
+
+  <rect x="890" y="124" width="340" height="56" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1"/>
+  <text x="910" y="148" font-family="sans-serif" font-size="14" font-weight="bold" fill="#c62828">Bad:</text>
+  <text x="910" y="166" font-family="monospace" font-size="13" fill="#555555">auto-send emails, delete records</text>
+
+  <rect x="890" y="192" width="340" height="56" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="910" y="216" font-family="sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">Good:</text>
+  <text x="910" y="234" font-family="monospace" font-size="13" fill="#555555">draft → human approves → send</text>
+
+  <text x="890" y="278" font-family="sans-serif" font-size="14" fill="#555555">• Irreversible actions must have</text>
+  <text x="890" y="300" font-family="sans-serif" font-size="14" fill="#555555">  human-in-the-loop confirmation</text>
+  <text x="890" y="322" font-family="sans-serif" font-size="14" fill="#555555">• Log all autonomous actions for</text>
+  <text x="890" y="344" font-family="sans-serif" font-size="14" fill="#555555">  audit trail</text>
+  <text x="1060" y="390" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c62828" font-weight="bold">Principle: Human Oversight</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="430" width="1220" height="160" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="462" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1565c0">Defence: Action Classification</text>
+
+  <rect x="60"  y="480" width="350" height="86" rx="6" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="235" y="506" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Low risk — allow freely</text>
+  <text x="80"  y="530" font-family="sans-serif" font-size="14" fill="#555555">Read data · search · summarise</text>
+  <text x="80"  y="552" font-family="sans-serif" font-size="14" fill="#555555">Draft content (not yet sent)</text>
+
+  <rect x="465" y="480" width="350" height="86" rx="6" fill="#fff3e0" stroke="#f57f17" stroke-width="1.5"/>
+  <text x="640" y="506" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">Medium — log &amp; review</text>
+  <text x="485" y="530" font-family="sans-serif" font-size="14" fill="#555555">Create records · send internal</text>
+  <text x="485" y="552" font-family="sans-serif" font-size="14" fill="#555555">notifications · update settings</text>
+
+  <rect x="870" y="480" width="350" height="86" rx="6" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+  <text x="1045" y="506" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#c62828">High — require approval</text>
+  <text x="890"  y="530" font-family="sans-serif" font-size="14" fill="#555555">Delete data · send external email</text>
+  <text x="890"  y="552" font-family="sans-serif" font-size="14" fill="#555555">Execute code · transfer money</text>
+</svg>

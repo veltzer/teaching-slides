@@ -61,6 +61,12 @@ void platform_init(void) {
 
 ---
 
+## BSP Initialization Flow
+
+![bsp_initialization_flow](svg/courses/operating_systems/linux-kernel-advanced-topics/01_bsp_development/bsp_initialization_flow.svg)
+
+---
+
 ## Platform-Specific Initialization
 
 1. CPU initialization

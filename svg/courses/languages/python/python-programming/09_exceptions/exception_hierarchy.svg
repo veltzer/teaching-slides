@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="inherit" markerWidth="12" markerHeight="12" refX="1" refY="6" orient="auto">
+      <polygon points="1,1 11,6 1,11" fill="#ffffff" stroke="#555555" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- BaseException (root) -->
+  <rect x="490" y="10" width="300" height="48" rx="6" fill="#212121" filter="url(#shadow)"/>
+  <text x="640" y="40" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">BaseException</text>
+
+  <!-- Level 2 -->
+  <line x1="580" y1="60" x2="200" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="100" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">SystemExit</text>
+
+  <line x1="620" y1="60" x2="450" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="350" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">KeyboardInterrupt</text>
+
+  <line x1="640" y1="60" x2="640" y2="100" stroke="#1565c0" stroke-width="2" marker-end="url(#inherit)"/>
+  <rect x="490" y="102" width="300" height="44" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="130" text-anchor="middle" font-family="monospace" font-size="18" font-weight="bold" fill="#ffffff">Exception</text>
+
+  <line x1="700" y1="60" x2="900" y2="100" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="800" y="102" width="200" height="44" rx="4" fill="#f2f2f2" stroke="#9e9e9e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="900" y="130" text-anchor="middle" font-family="monospace" font-size="15" fill="#9e9e9e">GeneratorExit</text>
+
+  <!-- Exception children — row 3 -->
+  <line x1="570" y1="148" x2="200" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="80"  y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="200" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">ArithmeticError</text>
+
+  <line x1="600" y1="148" x2="440" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="320" y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="440" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">LookupError</text>
+
+  <line x1="640" y1="148" x2="640" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="560" y="222" width="160" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">OSError</text>
+
+  <line x1="680" y1="148" x2="840" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="740" y="222" width="200" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="840" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">TypeError</text>
+
+  <line x1="710" y1="148" x2="1040" y2="220" stroke="#1565c0" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="960" y="222" width="240" height="44" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1080" y="250" text-anchor="middle" font-family="monospace" font-size="15" fill="#212121">ValueError</text>
+
+  <!-- Row 4: grandchildren -->
+  <line x1="200" y1="268" x2="110" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="30"  y="332" width="160" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="110" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">ZeroDivisionError</text>
+
+  <line x1="200" y1="268" x2="220" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="200" y="332" width="140" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="270" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">OverflowError</text>
+
+  <line x1="440" y1="268" x2="380" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="340" y="332" width="130" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="405" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">IndexError</text>
+
+  <line x1="440" y1="268" x2="500" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="480" y="332" width="120" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="540" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">KeyError</text>
+
+  <line x1="640" y1="268" x2="640" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="610" y="332" width="170" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="695" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">FileNotFoundError</text>
+
+  <line x1="1080" y1="268" x2="1080" y2="330" stroke="#555555" stroke-width="1.5" marker-end="url(#inherit)"/>
+  <rect x="1000" y="332" width="160" height="40" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="1080" y="357" text-anchor="middle" font-family="monospace" font-size="13" fill="#555555">UnicodeError</text>
+
+  <!-- Custom exception section -->
+  <rect x="30" y="420" width="600" height="160" rx="6" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="330" y="450" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Custom exceptions — always inherit from Exception</text>
+  <text x="50"  y="478" font-family="monospace" font-size="15" fill="#1565c0">class AppError(Exception):       # base for app</text>
+  <text x="50"  y="500" font-family="monospace" font-size="15" fill="#1565c0">    pass</text>
+  <text x="50"  y="524" font-family="monospace" font-size="15" fill="#212121">class ValidationError(AppError):</text>
+  <text x="50"  y="546" font-family="monospace" font-size="15" fill="#212121">    def __init__(self, field, msg):</text>
+  <text x="50"  y="568" font-family="monospace" font-size="15" fill="#212121">        super().__init__(f"{field}: {msg}")</text>
+
+  <!-- try/except tip -->
+  <rect x="660" y="420" width="590" height="160" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="955"  y="450" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#1565c0">Catch specifics before base classes</text>
+  <text x="680"  y="478" font-family="monospace" font-size="15" fill="#212121">try:</text>
+  <text x="680"  y="500" font-family="monospace" font-size="15" fill="#212121">    risky()</text>
+  <text x="680"  y="522" font-family="monospace" font-size="15" fill="#1565c0">except ZeroDivisionError:</text>
+  <text x="680"  y="544" font-family="monospace" font-size="15" fill="#1565c0">    ...                  # specific first</text>
+  <text x="680"  y="566" font-family="monospace" font-size="15" fill="#555555">except ArithmeticError:</text>
+  <text x="680"  y="588" font-family="monospace" font-size="15" fill="#555555">    ...                  # broader second</text>
+</svg>

@@ -52,6 +52,12 @@ program: main.c
 
 ## Assignment Operators
 
+![variable_assignment_types](svg/courses/build_systems/make/03_variables/variable_assignment_types.svg)
+
+---
+
+## Assignment Operators Detail
+
 ## Four Types of Assignment
 ```makefile
 # Simple assignment (evaluated immediately)

@@ -2,6 +2,12 @@
 
 ---
 
+## Matrix Builds
+
+![matrix_builds](svg/courses/devops/github-workflows/06_advanced_workflow_features/matrix_builds.svg)
+
+---
+
 ## Matrix Builds Overview
 
 ```yaml

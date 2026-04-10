@@ -9,6 +9,12 @@
 - Average cost of a phishing attack for a mid-sized company: $1.6 million
 
 ---
+
+## Phishing Attack Chain
+
+![phishing_attack_chain](svg/courses/security/cyber-attacks-and-vectors/23_phishing/phishing_attack_chain.svg)
+
+---
 ## How Phishers Lure Victims
 
 - Phishing emails and messages typically:
@@ -31,6 +37,12 @@
 │  Trust:    "Microsoft Security Team: Action Required"    │
 └──────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## Phishing Types Comparison
+
+![phishing_types_comparison](svg/courses/security/cyber-attacks-and-vectors/23_phishing/phishing_types_comparison.svg)
 
 ---
 ## Types of Phishing Attacks

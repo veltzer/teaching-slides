@@ -583,6 +583,12 @@ When to use each:
 - **Slab**: kernel object caching (Linux kernel uses this)
 
 ---
+## Common Memory Errors
+
+![common_memory_errors](svg/courses/languages/c/c-refresher/11_dynamic_memory/common_memory_errors.svg)
+
+---
+
 ## Common Memory Errors Summary
 
 | Error | Symptom | Detection |

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Pyramid layers (bottom to top = Public to Restricted) -->
+  <!-- Public (widest, bottom) -->
+  <polygon points="60,550 1220,550 1100,460 180,460" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="514" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#1b5e20">Public</text>
+  <text x="640" y="540" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#2e7d32">No restrictions — anyone may access</text>
+
+  <!-- Internal -->
+  <polygon points="180,454 1100,454 980,364 300,364" fill="#fff9c4" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="416" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#e65100">Internal</text>
+  <text x="640" y="442" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e65100">Employees only — not for public release</text>
+
+  <!-- Confidential -->
+  <polygon points="300,358 980,358 860,268 420,268" fill="#ffe0b2" stroke="#e65100" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="318" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#bf360c">Confidential</text>
+  <text x="640" y="344" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#bf360c">Need-to-know basis — encrypted at rest</text>
+
+  <!-- Restricted (top) -->
+  <polygon points="420,262 860,262 740,172 540,172" fill="#ffcdd2" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="220" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#b71c1c">Restricted</text>
+  <text x="640" y="246" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#b71c1c">Highest sensitivity — MFA + audit log</text>
+
+  <!-- Right side: handling rules table -->
+  <rect x="30" y="580" width="1220" height="100" rx="8" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="606" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Handling Requirements</text>
+  <text x="180"  y="634" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#2e7d32" font-weight="bold">Public</text>
+  <text x="180"  y="656" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">None required</text>
+  <text x="460"  y="634" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#e65100" font-weight="bold">Internal</text>
+  <text x="460"  y="656" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Label docs, no public sharing</text>
+  <text x="760"  y="634" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#bf360c" font-weight="bold">Confidential</text>
+  <text x="760"  y="656" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Encrypt, log access, NDA</text>
+  <text x="1060" y="634" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#b71c1c" font-weight="bold">Restricted</text>
+  <text x="1060" y="656" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">MFA, audit log, legal review</text>
+
+  <!-- Label: sensitivity increases up -->
+  <line x1="30" y1="550" x2="30" y2="172" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="18" y="362" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555" transform="rotate(-90 18 362)">Sensitivity increases ↑</text>
+</svg>

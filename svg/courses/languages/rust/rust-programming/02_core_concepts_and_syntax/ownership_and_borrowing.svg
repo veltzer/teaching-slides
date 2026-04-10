@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Ownership section -->
+  <rect x="30" y="20" width="580" height="300" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="320" y="52" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Ownership</text>
+
+  <!-- Move -->
+  <rect x="50" y="70" width="540" height="100" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="320" y="96" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#212121">Move semantics</text>
+  <text x="70" y="118" font-family="monospace" font-size="15" fill="#212121">let s1 = String::from("hello");</text>
+  <text x="70" y="140" font-family="monospace" font-size="15" fill="#212121">let s2 = s1;  // s1 moved to s2</text>
+  <text x="70" y="160" font-family="monospace" font-size="15" fill="#c62828">// s1 is no longer valid here!</text>
+
+  <!-- Stack heap diagram -->
+  <rect x="50"  y="184" width="240" height="116" rx="4" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="170" y="206" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Stack: s1 (ptr/len/cap)</text>
+  <text x="170" y="228" text-anchor="middle" font-family="monospace" font-size="13" fill="#c62828">→ INVALID after move</text>
+
+  <rect x="310" y="184" width="240" height="116" rx="4" fill="#f2f2f2" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="430" y="206" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#555555">Stack: s2 (ptr/len/cap)</text>
+  <text x="430" y="228" text-anchor="middle" font-family="monospace" font-size="13" fill="#1565c0">→ owns heap data</text>
+  <text x="430" y="260" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#555555">Heap: "hello"</text>
+  <text x="430" y="282" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#9e9e9e">freed when s2 drops</text>
+
+  <line x1="170" y1="228" x2="310" y2="228" stroke="#c62828" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#arrow-red)"/>
+
+  <!-- Borrowing section -->
+  <rect x="660" y="20" width="590" height="300" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="955" y="52" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#2e7d32">Borrowing (&amp;)</text>
+
+  <!-- Immutable borrow -->
+  <rect x="680" y="70" width="550" height="90" rx="6" fill="url(#grad-surface)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="955" y="96" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#2e7d32">Immutable borrow — many readers OK</text>
+  <text x="700" y="120" font-family="monospace" font-size="14" fill="#212121">let s1 = String::from("hello");</text>
+  <text x="700" y="142" font-family="monospace" font-size="14" fill="#2e7d32">let r1 = &amp;s1;  let r2 = &amp;s1;  // OK</text>
+
+  <!-- Mutable borrow -->
+  <rect x="680" y="174" width="550" height="90" rx="6" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="955" y="200" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#e65100">Mutable borrow — exactly one writer</text>
+  <text x="700" y="224" font-family="monospace" font-size="14" fill="#212121">let mut s = String::from("hello");</text>
+  <text x="700" y="246" font-family="monospace" font-size="14" fill="#e65100">let r = &amp;mut s;  // only one &amp;mut allowed</text>
+
+  <!-- Rules summary -->
+  <rect x="30" y="342" width="1220" height="200" rx="8" fill="#f2f2f2" stroke="#e0e0e0" stroke-width="1.5"/>
+  <text x="640" y="372" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#212121">Borrow Checker Rules</text>
+
+  <rect x="50"  y="386" width="340" height="130" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="220" y="412" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#ffffff">Rule 1: Single owner</text>
+  <text x="70"  y="436" font-family="sans-serif" font-size="14" fill="#bbdefb">Each value has exactly</text>
+  <text x="70"  y="458" font-family="sans-serif" font-size="14" fill="#bbdefb">one owner at a time.</text>
+  <text x="70"  y="480" font-family="sans-serif" font-size="14" fill="#bbdefb">When owner drops → value freed.</text>
+  <text x="70"  y="502" font-family="sans-serif" font-size="14" fill="#90caf9">No double-free, no leaks.</text>
+
+  <rect x="430" y="386" width="340" height="130" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="600" y="412" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Rule 2: Borrows</text>
+  <text x="450" y="436" font-family="sans-serif" font-size="14" fill="#555555">Either many &amp;T (read-only),</text>
+  <text x="450" y="458" font-family="sans-serif" font-size="14" fill="#555555">OR exactly one &amp;mut T,</text>
+  <text x="450" y="480" font-family="sans-serif" font-size="14" fill="#555555">never both at the same time.</text>
+  <text x="450" y="502" font-family="sans-serif" font-size="14" fill="#9e9e9e">No data races — enforced at compile time.</text>
+
+  <rect x="810" y="386" width="420" height="130" rx="6" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1020" y="412" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#212121">Rule 3: Lifetimes</text>
+  <text x="830" y="436" font-family="sans-serif" font-size="14" fill="#555555">References must not outlive the</text>
+  <text x="830" y="458" font-family="sans-serif" font-size="14" fill="#555555">data they point to.</text>
+  <text x="830" y="480" font-family="sans-serif" font-size="14" fill="#555555">No dangling pointers.</text>
+  <text x="830" y="502" font-family="sans-serif" font-size="14" fill="#9e9e9e">Compiler tracks &amp; rejects violations.</text>
+
+  <rect x="30" y="560" width="1220" height="42" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="586" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">These three rules eliminate entire classes of bugs: use-after-free, double-free, data races — at zero runtime cost</text>
+</svg>

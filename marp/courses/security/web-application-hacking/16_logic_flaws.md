@@ -15,6 +15,12 @@ Logic flaws are vulnerabilities that arise from **faulty application design** ra
 
 ---
 
+## Business Logic Vulnerability Types
+
+![business_logic_vulnerability_types](svg/courses/security/web-application-hacking/16_logic_flaws/business_logic_vulnerability_types.svg)
+
+---
+
 ## Categories of Logic Flaws
 
 ```misc
@@ -237,6 +243,12 @@ def register(request):
 ## Business Logic Bypass Examples
 
 ![business_logic_bypass_examples](svg/courses/security/web-application-hacking/16_logic_flaws/business_logic_bypass_examples.svg)
+
+---
+
+## Logic Flaw Attack Flow
+
+![logic_flaw_attack_flow](svg/courses/security/web-application-hacking/16_logic_flaws/logic_flaw_attack_flow.svg)
 
 ---
 

@@ -336,6 +336,12 @@ print(product)  # 120
 ```
 
 ---
+## LEGB Scope Rules
+
+![legb_scope](svg/courses/languages/python/python-programming/06_functions/legb_scope.svg)
+
+---
+
 ## Variable Scope - LEGB Rule
 - Python looks up names in this order:
     1. **L**ocal: Inside the current function

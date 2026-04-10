@@ -4,6 +4,12 @@
 
 ## Single Responsibility Principle
 
+![single_responsibility](svg/courses/languages/c++/modern-c++-for-c-programmers/02_robust_design/single_responsibility.svg)
+
+---
+
+## Single Responsibility Principle Detail
+
 - Each class should have only one reason to change
 - Focus on solving one problem well
 - Benefits:

@@ -4,6 +4,12 @@
 
 ---
 
+## Attack Surface Mapping
+
+![attack_surface_mapping](svg/courses/security/web-application-hacking/05_identifying_entry_points/attack_surface_mapping.svg)
+
+---
+
 ## What is an Entry Point?
 
 An **entry point** is any place where user-supplied data enters the application:
@@ -61,6 +67,12 @@ Entry points:
 
 - Hidden fields are fully visible and modifiable
 - Never trust client-side validation
+
+---
+
+## HTTP Request Analysis
+
+![http_request_analysis](svg/courses/security/web-application-hacking/05_identifying_entry_points/http_request_analysis.svg)
 
 ---
 

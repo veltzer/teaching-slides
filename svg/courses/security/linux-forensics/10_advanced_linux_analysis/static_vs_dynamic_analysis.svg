@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/><stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Static Analysis (left) -->
+  <rect x="30" y="20" width="580" height="560" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="320" y="54" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#1565c0">Static Analysis</text>
+  <text x="320" y="76" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Examine the binary without executing it</text>
+
+  <!-- Steps -->
+  <rect x="60" y="94" width="520" height="54" rx="4" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="320" y="127" text-anchor="middle" font-family="monospace" font-size="17" fill="#ffffff">Binary / file</text>
+  <line x1="320" y1="150" x2="320" y2="180" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="60" y="182" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="140" y="211" font-family="monospace" font-size="16" fill="#1565c0">file</text>
+  <text x="280" y="211" font-family="sans-serif" font-size="14" fill="#555555">identify type/arch</text>
+  <line x1="320" y1="238" x2="320" y2="268" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="60" y="270" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="140" y="299" font-family="monospace" font-size="16" fill="#1565c0">strings</text>
+  <text x="280" y="299" font-family="sans-serif" font-size="14" fill="#555555">extract printable strings, URLs, keys</text>
+  <line x1="320" y1="326" x2="320" y2="356" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="60" y="358" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="140" y="387" font-family="monospace" font-size="16" fill="#1565c0">readelf / objdump</text>
+  <text x="340" y="387" font-family="sans-serif" font-size="14" fill="#555555">headers, symbols</text>
+  <line x1="320" y1="414" x2="320" y2="444" stroke="#1565c0" stroke-width="2" marker-end="url(#arrow-accent)"/>
+
+  <rect x="60" y="446" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="140" y="475" font-family="monospace" font-size="16" fill="#1565c0">disassembler</text>
+  <text x="340" y="475" font-family="sans-serif" font-size="14" fill="#555555">Ghidra / IDA / objdump -d</text>
+
+  <rect x="60" y="518" width="520" height="44" rx="4" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="320" y="546" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#2e7d32">✓ Safe — binary never executed · no sandbox needed</text>
+
+  <!-- Dynamic Analysis (right) -->
+  <rect x="670" y="20" width="580" height="560" rx="8" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="960" y="54" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e65100">Dynamic Analysis</text>
+  <text x="960" y="76" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">Observe behaviour at runtime (in sandbox)</text>
+
+  <rect x="700" y="94" width="520" height="54" rx="4" fill="#e65100" filter="url(#shadow)"/>
+  <text x="960" y="127" text-anchor="middle" font-family="monospace" font-size="17" fill="#ffffff">Execute in sandbox</text>
+  <line x1="960" y1="150" x2="960" y2="180" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="182" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="780" y="211" font-family="monospace" font-size="16" fill="#e65100">strace</text>
+  <text x="920" y="211" font-family="sans-serif" font-size="14" fill="#555555">trace all syscalls made</text>
+  <line x1="960" y1="238" x2="960" y2="268" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="270" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="780" y="299" font-family="monospace" font-size="16" fill="#e65100">ltrace</text>
+  <text x="920" y="299" font-family="sans-serif" font-size="14" fill="#555555">trace library calls (libc, etc.)</text>
+  <line x1="960" y1="326" x2="960" y2="356" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="358" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="780" y="387" font-family="monospace" font-size="16" fill="#e65100">tcpdump / Wireshark</text>
+  <text x="1000" y="387" font-family="sans-serif" font-size="14" fill="#555555">network traffic</text>
+  <line x1="960" y1="414" x2="960" y2="444" stroke="#e65100" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="446" width="520" height="54" rx="4" fill="url(#grad-surface)" stroke="#e65100" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="780" y="475" font-family="monospace" font-size="16" fill="#e65100">inotifywait</text>
+  <text x="950" y="475" font-family="sans-serif" font-size="14" fill="#555555">file system changes</text>
+
+  <rect x="700" y="518" width="520" height="44" rx="4" fill="#ffcdd2" stroke="#c62828" stroke-width="1.5"/>
+  <text x="960" y="546" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#c62828">⚠ Risk — always use isolated VM/container</text>
+
+  <rect x="30" y="598" width="1220" height="42" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="624" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#1565c0">Combined approach: static first to assess risk, then dynamic in sandboxed environment for confirmation</text>
+</svg>

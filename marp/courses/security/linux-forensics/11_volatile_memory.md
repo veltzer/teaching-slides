@@ -16,6 +16,12 @@
 
 ## Memory Acquisition Methods
 
+![volatile_memory_acquisition_methods](svg/courses/security/linux-forensics/11_volatile_memory/volatile_memory_acquisition_methods.svg)
+
+---
+
+## Memory Acquisition Methods
+
 | Method          | Pros                      | Cons                      |
 |----------------|---------------------------|---------------------------|
 | `LiME`         | Clean, reliable, LKM      | Requires module loading   |

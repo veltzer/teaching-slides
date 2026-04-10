@@ -23,6 +23,12 @@ What unsafe unlocks
 
 ---
 
+## Unsafe Operations
+
+![unsafe_operations](svg/courses/languages/rust/advanced-rust/07_unsafe_rust/unsafe_operations.svg)
+
+---
+
 ## The Five Unsafe Superpowers
 
 ```rust
@@ -102,6 +108,12 @@ fn safe_wrapper(data: &[u8]) -> &[u8] {
 ## Part 2: Raw Pointers
 
 `*const T` and `*mut T`
+
+---
+
+## Raw Pointer Types
+
+![raw_pointer_types](svg/courses/languages/rust/advanced-rust/07_unsafe_rust/raw_pointer_types.svg)
 
 ---
 

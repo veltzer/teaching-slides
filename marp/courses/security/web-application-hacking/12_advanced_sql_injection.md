@@ -16,6 +16,12 @@
 
 ---
 
+## SQL Injection Attack Tree
+
+![sql_injection_attack_tree](svg/courses/security/web-application-hacking/12_advanced_sql_injection/sql_injection_attack_tree.svg)
+
+---
+
 ## UNION-Based Extraction - Full Workflow
 
 ```misc
@@ -170,6 +176,12 @@ SELECT 1 FROM dual;
 ' UNION SELECT username, password FROM users
   ORDER BY username OFFSET 1 ROWS FETCH NEXT 1 ROWS ONLY--
 ```
+
+---
+
+## Blind SQL Injection Techniques
+
+![blind_sql_injection_techniques](svg/courses/security/web-application-hacking/12_advanced_sql_injection/blind_sql_injection_techniques.svg)
 
 ---
 

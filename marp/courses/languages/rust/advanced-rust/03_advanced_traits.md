@@ -75,6 +75,12 @@ Calls are resolved at compile time - zero runtime cost.
 
 ---
 
+## Trait Object Vtable
+
+![trait_object_vtable](svg/courses/languages/rust/advanced-rust/03_advanced_traits/trait_object_vtable.svg)
+
+---
+
 ## Dynamic Dispatch with Trait Objects
 
 ```rust
@@ -737,6 +743,12 @@ impl<T: std::fmt::Display> Process for T {
 // To fix: either don't have the blanket impl,
 // or don't implement Display for MyType
 ```
+
+---
+
+## Blanket Implementation Pattern
+
+![blanket_implementation_pattern](svg/courses/languages/rust/advanced-rust/03_advanced_traits/blanket_implementation_pattern.svg)
 
 ---
 

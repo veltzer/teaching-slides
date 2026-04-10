@@ -12,6 +12,12 @@
 
 ---
 
+## C Project Structure
+
+![c_project_structure](svg/courses/languages/c/c-refresher/09_building_larger_projects/c_project_structure.svg)
+
+---
+
 ## Project Structure
 
 - Typical structure:

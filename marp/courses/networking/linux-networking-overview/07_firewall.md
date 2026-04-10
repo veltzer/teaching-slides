@@ -22,6 +22,12 @@
 
 ## Firewall Types
 
+![firewall_types](svg/courses/networking/linux-networking-overview/07_firewall/firewall_types.svg)
+
+---
+
+## Firewall Types Detail
+
 1. **Packet Filtering**
     - Network layer filtering
     - IP/port based rules

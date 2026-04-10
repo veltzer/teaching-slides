@@ -8,6 +8,12 @@
 
 ---
 
+## Static vs Dynamic Analysis
+
+![static_vs_dynamic_analysis](svg/courses/security/linux-forensics/10_advanced_linux_analysis/static_vs_dynamic_analysis.svg)
+
+---
+
 ## Why Advanced Analysis?
 
 - Surface-level artifacts tell part of the story
