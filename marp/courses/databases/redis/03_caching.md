@@ -31,11 +31,7 @@
 
 ## Cache Patterns
 
-1. **Cache-Aside (Lazy Loading)**
-1. **Write-Through**
-1. **Write-Behind (Write-Back)**
-1. **Read-Through**
-1. **Refresh-Ahead**
+![cache_patterns](svg/courses/databases/redis/03_caching/cache_patterns.svg)
 
 ---
 

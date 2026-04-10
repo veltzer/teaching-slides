@@ -3,10 +3,7 @@
 ---
 ## What Is Software Architecture?
 
-- The high-level structure of a software system
-- Defines components, their relationships, and constraints
-- Guides technical decisions across teams
-- Balances functional requirements with quality attributes
+![what_is_software_architecture](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/what_is_software_architecture.svg)
 
 ---
 ## Why Architecture Matters
@@ -101,18 +98,12 @@
 ---
 ## Modular Monolith as a Stepping Stone
 
-- Organize the monolith into well-defined modules
-- Enforce boundaries between modules using interfaces
-- Shared database but separate schemas per module
-- Easier to extract services later when needed
+![modular_monolith](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/modular_monolith.svg)
 
 ---
 ## Service-Oriented Architecture (SOA)
 
-- Predecessor to microservices with similar goals
-- Services communicate through an `Enterprise Service Bus` (`ESB`)
-- Typically coarser-grained than microservices
-- Often used heavyweight protocols like `SOAP` and `WS-*`
+![soa_architecture](svg/courses/architecting/modern-software-architecture/01_introduction_to_modern_software_architecture/soa_architecture.svg)
 
 ---
 ## SOA vs Microservices

@@ -3,10 +3,7 @@
 ---
 ## What Is a Distributed System?
 
-- A collection of independent computers that appear as a single system to users
-- Components communicate and coordinate actions by passing messages
-- No shared memory or clock between nodes
-- Examples: cloud applications, microservices, databases clusters
+![what_is_distributed_system](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/what_is_distributed_system.svg)
 
 ---
 ## Why Distributed Systems?
@@ -87,10 +84,7 @@
 ---
 ## The PACELC Theorem
 
-- An extension of CAP that addresses normal operation
-- If there is a Partition: choose Availability or Consistency
-- Else (normal operation): choose Latency or Consistency
-- Captures the trade-off that exists even without partitions
+![pacelc_theorem](svg/courses/architecting/modern-software-architecture/02_distributed_systems_theory/pacelc_theorem.svg)
 
 ---
 ## PACELC Examples

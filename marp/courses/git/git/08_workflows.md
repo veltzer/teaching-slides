@@ -13,17 +13,13 @@
 
 ---
 ## Centralized Workflow
-- Single main branch
-- Direct commits
-- Simple collaboration
-- Small team focus
+
+![centralized_workflow](svg/courses/git/git/08_workflows/centralized_workflow.svg)
 
 ---
 ## Feature Branch Workflow
-- Feature isolation
-- Code review process
-- Clean main branch
-- Team collaboration
+
+![feature_branch_workflow](svg/courses/git/git/08_workflows/feature_branch_workflow.svg)
 
 ---
 ## Development vs Production
@@ -43,24 +39,18 @@
 
 ---
 ## Trunk-Based Development
-- Short-lived branches
-- Frequent integration
-- Continuous delivery
-- Fast feedback
+
+![trunk_based_development](svg/courses/git/git/08_workflows/trunk_based_development.svg)
 
 ---
 ## GitHub Flow
-- Simple branching
-- Pull requests
-- Deployment focus
-- Continuous delivery
+
+![github_flow](svg/courses/git/git/08_workflows/github_flow.svg)
 
 ---
 ## Forking Workflow
-- Project forks
-- Pull requests
-- Public projects
-- Open source
+
+![forking_workflow](svg/courses/git/git/08_workflows/forking_workflow.svg)
 
 ---
 ## Back Porting Changes
@@ -89,11 +79,8 @@
 
 ---
 ## Pull Request Flow
-- Branch creation
-- Code changes
-- PR submission
-- Review process
-- Merge completion
+
+![pull_request_flow](svg/courses/git/git/08_workflows/pull_request_flow.svg)
 
 ---
 ## Gerrit Workflow

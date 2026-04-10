@@ -1,0 +1,238 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <style id="palette-vars">
+      :root, svg {
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --surface-alt: #eeeeee;
+        --surface-light: #f9f9f9;
+        --surface-dark: #f0f0f0;
+        --border: #e0e0e0;
+        --border-strong: #bdbdbd;
+        --border-faint: #cccccc;
+        --border-softer: #dddddd;
+        --text: #212121;
+        --text-dark: #333333;
+        --text-darker: #222222;
+        --text-muted: #555555;
+        --text-mid: #666666;
+        --text-faint: #888888;
+        --text-lighter: #777777;
+        --text-faintest: #999999;
+        --text-disabled: #9e9e9e;
+        --text-placeholder: #aaaaaa;
+        --code-bg: #1a1a2e;
+        --shadow: #00000022;
+        --black: #000000;
+        --primary: #1e88e5;
+        --primary-dk: #1565c0;
+        --primary-mid: #1976d2;
+        --primary-bright: #4a90e2;
+        --primary-vivid: #2196f3;
+        --primary-soft: #3498db;
+        --primary-deep: #0d47a1;
+        --primary-deeper: #1a237e;
+        --primary-strong: #0277bd;
+        --primary-lt: #bbdefb;
+        --primary-tint: #90caf9;
+        --primary-pale: #e3f2fd;
+        --primary-pale2: #e8f4f8;
+        --primary-pale3: #e1f5fe;
+        --primary-indigo: #3949ab;
+        --primary-indigo-dk: #283593;
+        --primary-google: #4285f4;
+        --ok: #43a047;
+        --ok-dk: #2e7d32;
+        --ok-mid: #388e3c;
+        --ok-light: #4caf50;
+        --ok-bright: #28a745;
+        --ok-vivid: #2ecc71;
+        --ok-soft: #27ae60;
+        --ok-google: #34a853;
+        --ok-deep: #1b5e20;
+        --ok-lt: #c8e6c9;
+        --ok-tint: #a5d6a7;
+        --ok-pale: #e8f5e9;
+        --ok-pale2: #d4edda;
+        --ok-pale3: #e8f5e8;
+        --warn: #fb8c00;
+        --warn-dk: #e65100;
+        --warn-mid: #f57c00;
+        --warn-amber: #f9a825;
+        --warn-yellow: #ffc107;
+        --warn-orange: #ff9800;
+        --warn-gold: #f39c12;
+        --warn-bright: #fbbc04;
+        --warn-deep: #ef6c00;
+        --warn-lt: #ffe0b2;
+        --warn-tint: #ffcc80;
+        --warn-pale: #fff3e0;
+        --warn-pale2: #fff3cd;
+        --warn-pale3: #fff8e1;
+        --warn-pale4: #fff9c4;
+        --danger: #e53935;
+        --danger-dk: #c62828;
+        --danger-mid: #d32f2f;
+        --danger-light: #e74c3c;
+        --danger-vivid: #f44336;
+        --danger-bright: #dc3545;
+        --danger-google: #ea4335;
+        --danger-deep: #b71c1c;
+        --danger-deeper: #bf360c;
+        --danger-pink: #c2185b;
+        --danger-lt: #ffcdd2;
+        --danger-pale: #ffebee;
+        --danger-pale2: #f8d7da;
+        --danger-pale3: #fce4ec;
+        --info: #8e24aa;
+        --info-dk: #6a1b9a;
+        --info-mid: #7b1fa2;
+        --info-light: #9c27b0;
+        --info-vivid: #673ab7;
+        --info-deep: #4a148c;
+        --info-soft: #9b59b6;
+        --info-lt: #ce93d8;
+        --info-tint: #e1bee7;
+        --info-pale: #f3e5f5;
+        --info-indigo: #3f51b5;
+        --info-indigo-lt: #e8eaf6;
+      }
+    </style>
+    <!-- Gradients -->
+    <linearGradient id="grad-primary" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f5f5f5"/>
+    </linearGradient>
+
+    <linearGradient id="grad-ok" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43a047"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+
+    <linearGradient id="grad-warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb8c00"/>
+      <stop offset="100%" stop-color="#e65100"/>
+    </linearGradient>
+
+    <linearGradient id="grad-danger" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#c62828"/>
+    </linearGradient>
+
+    <linearGradient id="grad-info" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8e24aa"/>
+      <stop offset="100%" stop-color="#6a1b9a"/>
+    </linearGradient>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-primary" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-ok" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrow-warn" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#e65100"/>
+    </marker>
+    <marker id="arrow-danger" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-info" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#6a1b9a"/>
+    </marker>
+    <marker id="arrow-white" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#ffffff"/>
+    </marker>
+  </defs>
+  <!-- Title area -->
+  <text x="640" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="var(--text)">PACELC: Extension of CAP Theorem</text>
+
+  <!-- Decision tree -->
+  <!-- Root: Is there a partition? -->
+  <rect x="440" y="80" width="400" height="60" rx="12" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2.5"/>
+  <text x="640" y="117" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="var(--primary-dk)">Is there a network partition?</text>
+
+  <!-- Yes branch -->
+  <line x1="500" y1="140" x2="300" y2="200" stroke="var(--danger)" stroke-width="2.5"/>
+  <text x="370" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger)">Yes (P)</text>
+
+  <!-- PAC box -->
+  <rect x="140" y="200" width="320" height="60" rx="10" fill="var(--danger-pale)" stroke="var(--danger)" stroke-width="2"/>
+  <text x="300" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--danger-dk)">Choose: Availability or Consistency</text>
+
+  <!-- PA choice -->
+  <line x1="220" y1="260" x2="170" y2="310" stroke="var(--warn)" stroke-width="2"/>
+  <rect x="60" y="310" width="220" height="100" rx="10" fill="var(--warn-pale)" stroke="var(--warn)" stroke-width="2"/>
+  <text x="170" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--warn-dk)">PA: Availability</text>
+  <text x="170" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Accept stale reads</text>
+  <text x="170" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">during partition</text>
+
+  <!-- PC choice -->
+  <line x1="380" y1="260" x2="430" y2="310" stroke="var(--primary)" stroke-width="2"/>
+  <rect x="320" y="310" width="220" height="100" rx="10" fill="var(--primary-pale)" stroke="var(--primary)" stroke-width="2"/>
+  <text x="430" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-dk)">PC: Consistency</text>
+  <text x="430" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Reject requests to</text>
+  <text x="430" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">ensure correctness</text>
+
+  <!-- No branch -->
+  <line x1="780" y1="140" x2="980" y2="200" stroke="var(--ok)" stroke-width="2.5"/>
+  <text x="900" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok)">No (E)</text>
+
+  <!-- ELC box -->
+  <rect x="820" y="200" width="320" height="60" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="980" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">Choose: Latency or Consistency</text>
+
+  <!-- EL choice -->
+  <line x1="900" y1="260" x2="850" y2="310" stroke="var(--ok)" stroke-width="2"/>
+  <rect x="740" y="310" width="220" height="100" rx="10" fill="var(--ok-pale)" stroke="var(--ok)" stroke-width="2"/>
+  <text x="850" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--ok-dk)">EL: Latency</text>
+  <text x="850" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Faster responses</text>
+  <text x="850" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">eventual consistency</text>
+
+  <!-- EC choice -->
+  <line x1="1060" y1="260" x2="1110" y2="310" stroke="var(--primary-indigo)" stroke-width="2"/>
+  <rect x="1000" y="310" width="220" height="100" rx="10" fill="var(--primary-pale)" stroke="var(--primary-indigo)" stroke-width="2"/>
+  <text x="1110" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="var(--primary-indigo)">EC: Consistency</text>
+  <text x="1110" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">Synchronous replication</text>
+  <text x="1110" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="var(--text-muted)">higher latency</text>
+
+  <!-- Examples table -->
+  <rect x="100" y="460" width="1080" height="170" rx="12" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5"/>
+  <text x="640" y="495" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="var(--text)">Real-World Examples</text>
+
+  <!-- Headers -->
+  <text x="250" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">System</text>
+  <text x="500" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">During Partition</text>
+  <text x="750" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Normal Operation</text>
+  <text x="1000" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="var(--text)">Classification</text>
+
+  <line x1="130" y1="540" x2="1150" y2="540" stroke="var(--border)" stroke-width="1"/>
+
+  <text x="250" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">DynamoDB</text>
+  <text x="500" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)">Availability</text>
+  <text x="750" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">Low Latency</text>
+  <text x="1000" y="565" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">PA/EL</text>
+
+  <text x="250" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">MongoDB</text>
+  <text x="500" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)">Consistency</text>
+  <text x="750" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--primary-dk)">Consistency</text>
+  <text x="1000" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">PC/EC</text>
+
+  <text x="250" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text)">Cassandra</text>
+  <text x="500" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--warn-dk)">Availability</text>
+  <text x="750" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--ok-dk)">Low Latency</text>
+  <text x="1000" y="615" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="var(--text-muted)">PA/EL</text>
+</svg>
