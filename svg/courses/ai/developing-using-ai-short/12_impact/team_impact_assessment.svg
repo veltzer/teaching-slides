@@ -1,21 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="128" y="57.6" width="1024" height="604.8" fill="#f9f9f9" stroke="#ccc" rx="25.6" />
-  <text x="640" y="129.6" text-anchor="middle" font-size="40.96" font-weight="bold">Team Collaboration Impact</text>
-  <circle cx="384" cy="288" r="102.4" fill="#e8f5e8" stroke="#388e3c" />
-  <text x="384" y="273.6" text-anchor="middle" font-size="25.6">Knowledge</text>
-  <text x="384" y="311.04" text-anchor="middle" font-size="25.6">Sharing</text>
-  <circle cx="640" cy="230.4" r="89.6" fill="#e3f2fd" stroke="#1976d2" />
-  <text x="640" y="216" text-anchor="middle" font-size="25.6">Communication</text>
-  <text x="640" y="253.44" text-anchor="middle" font-size="25.6">Quality</text>
-  <circle cx="896" cy="288" r="102.4" fill="#fff3e0" stroke="#f57c00" />
-  <text x="896" y="273.6" text-anchor="middle" font-size="25.6">Code Review</text>
-  <text x="896" y="311.04" text-anchor="middle" font-size="25.6">Efficiency</text>
-  <circle cx="512" cy="432" r="89.6" fill="#fce4ec" stroke="#c2185b" />
-  <text x="512" y="417.6" text-anchor="middle" font-size="25.6">Onboarding</text>
-  <text x="512" y="455.04" text-anchor="middle" font-size="25.6">Speed</text>
-  <circle cx="768" cy="432" r="89.6" fill="#f3e5f5" stroke="#7b1fa2" />
-  <text x="768" y="417.6" text-anchor="middle" font-size="25.6">Cross-Team</text>
-  <text x="768" y="455.04" text-anchor="middle" font-size="25.6">Coordination</text>
-  <rect x="384" y="547.2" width="512" height="72" fill="#e0f2f1" stroke="#00695c" rx="12.8" />
-  <text x="640" y="596.16" text-anchor="middle" font-size="28.16">Overall Team Productivity: +42%</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">Team Collaboration Impact</text>
+  <!-- 5 circles -->
+  <circle cx="300" cy="280" r="120" fill="#e8f5e9" stroke="#43a047" stroke-width="3" filter="url(#shadow)"/>
+  <text x="300" y="262" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Knowledge</text>
+  <text x="300" y="292" text-anchor="middle" fill="#2e7d32" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Sharing</text>
+  <text x="300" y="328" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">+35% better</text>
+  <circle cx="640" cy="210" r="100" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="192" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Communication</text>
+  <text x="640" y="222" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Quality</text>
+  <text x="640" y="256" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">+28% clearer</text>
+  <circle cx="980" cy="280" r="120" fill="#fff3e0" stroke="#fb8c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="980" y="262" text-anchor="middle" fill="#e65100" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Code Review</text>
+  <text x="980" y="292" text-anchor="middle" fill="#e65100" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Efficiency</text>
+  <text x="980" y="328" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">+50% faster</text>
+  <circle cx="420" cy="490" r="100" fill="#fce4ec" stroke="#e91e63" stroke-width="3" filter="url(#shadow)"/>
+  <text x="420" y="472" text-anchor="middle" fill="#880e4f" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Onboarding</text>
+  <text x="420" y="502" text-anchor="middle" fill="#880e4f" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Speed</text>
+  <text x="420" y="536" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">-45% time</text>
+  <circle cx="860" cy="490" r="100" fill="#f3e5f5" stroke="#8e24aa" stroke-width="3" filter="url(#shadow)"/>
+  <text x="860" y="472" text-anchor="middle" fill="#6a1b9a" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Cross-Team</text>
+  <text x="860" y="502" text-anchor="middle" fill="#6a1b9a" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Coordination</text>
+  <text x="860" y="536" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">+40% efficient</text>
+  <!-- Bottom banner -->
+  <rect x="240" y="620" width="800" height="75" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="665" text-anchor="middle" fill="white" font-size="24" font-weight="bold" font-family="Arial, sans-serif">Overall Team Productivity: +42%</text>
 </svg>

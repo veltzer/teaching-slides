@@ -1,16 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="51.2" y="576" width="1177.6" height="108" fill="#8B4513" stroke="black" />
-  <text x="640" y="639" text-anchor="middle" fill="white">Hardware (SoC, Memory, Peripherals)</text>
-  <rect x="51.2" y="432" width="384" height="108" fill="#4169E1" stroke="black" />
-  <text x="243.2" y="495" text-anchor="middle" fill="white">Bootloader</text>
-  <rect x="460.8" y="432" width="384" height="108" fill="#4169E1" stroke="black" />
-  <text x="652.8" y="495" text-anchor="middle" fill="white">Device Tree</text>
-  <rect x="870.4" y="432" width="358.4" height="108" fill="#4169E1" stroke="black" />
-  <text x="1049.6" y="495" text-anchor="middle" fill="white">Drivers</text>
-  <rect x="51.2" y="288" width="1177.6" height="108" fill="#32CD32" stroke="black" />
-  <text x="640" y="351" text-anchor="middle">Linux Kernel</text>
-  <rect x="51.2" y="144" width="563.2" height="108" fill="#FFD700" stroke="black" />
-  <text x="332.8" y="207" text-anchor="middle">Root Filesystem</text>
-  <rect x="665.6" y="144" width="563.2" height="108" fill="#FFD700" stroke="black" />
-  <text x="947.2" y="207" text-anchor="middle">Applications</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Hardware bottom -->
+  <rect x="50" y="570" width="1180" height="100" fill="#795548" stroke="#4e342e" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="628" text-anchor="middle" font-size="21" fill="#ffffff">Hardware (SoC, Memory, Peripherals)</text>
+  <!-- BSP middle row: 3 boxes -->
+  <rect x="50" y="430" width="384" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="242" y="488" text-anchor="middle" font-size="19" fill="#ffffff">Bootloader</text>
+  <rect x="460" y="430" width="360" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="488" text-anchor="middle" font-size="19" fill="#ffffff">Device Tree</text>
+  <rect x="846" y="430" width="384" height="100" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="1038" y="488" text-anchor="middle" font-size="19" fill="#ffffff">Drivers</text>
+  <!-- Kernel -->
+  <rect x="50" y="288" width="1180" height="100" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="346" text-anchor="middle" font-size="21" fill="#1b5e20">Linux Kernel</text>
+  <!-- User layers -->
+  <rect x="50" y="148" width="562" height="100" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="331" y="206" text-anchor="middle" font-size="19" fill="#e65100">Root Filesystem</text>
+  <rect x="668" y="148" width="562" height="100" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="949" y="206" text-anchor="middle" font-size="19" fill="#e65100">Applications</text>
 </svg>

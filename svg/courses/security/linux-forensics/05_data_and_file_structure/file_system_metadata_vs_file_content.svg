@@ -1,27 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="23.2727" y="24" width="1233.4545" height="672" rx="11.6364" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.6545" />
-  <text x="640" y="96" text-anchor="middle" font-size="41.8909" font-weight="bold" fill="#333">File System: Metadata vs Content</text>
   <defs>
-    <marker id="arr" markerWidth="23.2727" markerHeight="16.8" refX="23.2727" refY="8.4" orient="auto">
-      <polygon points="0,24 8.1455,0" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="69.8182" y="144" width="488.7273" height="504" rx="11.6364" fill="#fff3cd" stroke="#ffc107" stroke-width="4.6545" />
-  <text x="314.1818" y="204" text-anchor="middle" font-size="32.5818" font-weight="bold" fill="#856404">Inode (metadata)</text>
-  <text x="116.3636" y="264" font-size="27.9273" fill="#333">- File size</text>
-  <text x="116.3636" y="312" font-size="27.9273" fill="#333">- Ownership</text>
-  <text x="116.3636" y="360" font-size="27.9273" fill="#333">- Permissions</text>
-  <text x="116.3636" y="408" font-size="27.9273" fill="#333">- Timestamps</text>
-  <text x="116.3636" y="456" font-size="27.9273" fill="#333">- Block pointers</text>
-  <text x="116.3636" y="504" font-size="27.9273" fill="#333">- Link count</text>
-  <text x="116.3636" y="552" font-size="27.9273" fill="#333">- Type</text>
-  <line x1="558.5455" y1="396" x2="674.9091" y2="396" stroke="#4a90e2" stroke-width="4.6545" marker-end="url(#arr)" />
-  <rect x="686.5455" y="144" width="512" height="504" rx="11.6364" fill="#d4edda" stroke="#28a745" stroke-width="4.6545" />
-  <text x="942.5455" y="204" text-anchor="middle" font-size="32.5818" font-weight="bold" fill="#28a745">Data Blocks</text>
-  <text x="942.5455" y="252" text-anchor="middle" font-size="27.9273" fill="#666">(actual content)</text>
-  <rect x="733.0909" y="288" width="418.9091" height="288" rx="11.6364" fill="#fff" stroke="#28a745" stroke-width="2.3273" />
-  <text x="942.5455" y="360" text-anchor="middle" font-size="27.9273" fill="#333">Hello, this is</text>
-  <text x="942.5455" y="408" text-anchor="middle" font-size="27.9273" fill="#333">the file data</text>
-  <text x="942.5455" y="456" text-anchor="middle" font-size="27.9273" fill="#333">stored in</text>
-  <text x="942.5455" y="504" text-anchor="middle" font-size="27.9273" fill="#333">allocated blocks...</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Inode (metadata) panel -->
+  <rect x="30" y="30" width="560" height="630" rx="12" fill="#fff3cd" stroke="#ffc107" stroke-width="3" filter="url(#shadow)"/>
+  <text x="310" y="95" text-anchor="middle" font-size="30" font-weight="bold" fill="#856404">Inode (metadata)</text>
+  <text x="90" y="160" font-size="26" fill="#333333">- File size</text>
+  <text x="90" y="210" font-size="26" fill="#333333">- Ownership (UID/GID)</text>
+  <text x="90" y="260" font-size="26" fill="#333333">- Permissions</text>
+  <text x="90" y="310" font-size="26" fill="#333333">- Timestamps (atime, mtime, ctime)</text>
+  <text x="90" y="360" font-size="26" fill="#333333">- Block pointers</text>
+  <text x="90" y="410" font-size="26" fill="#333333">- Link count</text>
+  <text x="90" y="460" font-size="26" fill="#333333">- File type</text>
+  <text x="90" y="540" font-size="20" fill="#856404">No filename stored in inode!</text>
+  <text x="90" y="575" font-size="20" fill="#555555">Filename lives in directory entry</text>
+
+  <!-- Arrow -->
+  <line x1="590" y1="360" x2="660" y2="360" stroke="#1565c0" stroke-width="4" marker-end="url(#arrow-accent)"/>
+
+  <!-- Data Blocks panel -->
+  <rect x="670" y="30" width="580" height="630" rx="12" fill="#d4edda" stroke="#28a745" stroke-width="3" filter="url(#shadow)"/>
+  <text x="960" y="95" text-anchor="middle" font-size="30" font-weight="bold" fill="#28a745">Data Blocks</text>
+  <text x="960" y="140" text-anchor="middle" font-size="22" fill="#666666">(actual content)</text>
+  <rect x="710" y="165" width="500" height="330" rx="12" fill="#ffffff" stroke="#28a745" stroke-width="2"/>
+  <text x="960" y="240" text-anchor="middle" font-size="26" fill="#333333">Hello, this is</text>
+  <text x="960" y="290" text-anchor="middle" font-size="26" fill="#333333">the file data</text>
+  <text x="960" y="340" text-anchor="middle" font-size="26" fill="#333333">stored in</text>
+  <text x="960" y="390" text-anchor="middle" font-size="26" fill="#333333">allocated blocks...</text>
+  <text x="960" y="560" text-anchor="middle" font-size="20" fill="#28a745">Blocks allocated in extents</text>
+  <text x="960" y="595" text-anchor="middle" font-size="18" fill="#555555">Forensic: unallocated may have old data</text>
 </svg>

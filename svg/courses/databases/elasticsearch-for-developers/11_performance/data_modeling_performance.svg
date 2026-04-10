@@ -1,10 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="108" text-anchor="middle" font-weight="bold">Query Performance Impact</text>
-  <rect x="160" y="180" width="256" height="144" fill="#4CAF50" rx="16" />
-  <text x="288" y="270" text-anchor="middle" fill="white" font-size="38.4">Denorm</text>
-  <rect x="480" y="180" width="256" height="216" fill="#FFC107" rx="16" />
-  <text x="608" y="306" text-anchor="middle" fill="black" font-size="38.4">Parent-Child</text>
-  <rect x="800" y="180" width="256" height="288" fill="#F44336" rx="16" />
-  <text x="928" y="342" text-anchor="middle" fill="white" font-size="38.4">Nested</text>
-  <text x="640" y="576" text-anchor="middle">Fast → Slow</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Data Modeling Performance Impact</text>
+  <!-- Three approaches -->
+  <rect x="80" y="100" width="300" height="200" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="230" y="178" text-anchor="middle" font-size="24" font-weight="bold" fill="#2e7d32">Denormalized</text>
+  <text x="230" y="222" text-anchor="middle" font-size="17" fill="#555555">All data in one doc</text>
+  <text x="230" y="254" text-anchor="middle" font-size="17" fill="#555555">Fastest queries</text>
+  <text x="230" y="286" text-anchor="middle" font-size="22" fill="#2e7d32" font-weight="bold">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</text>
+  <rect x="490" y="100" width="300" height="200" rx="12" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="178" text-anchor="middle" font-size="24" font-weight="bold" fill="#795548">Parent-Child</text>
+  <text x="640" y="222" text-anchor="middle" font-size="17" fill="#555555">Separate doc types</text>
+  <text x="640" y="254" text-anchor="middle" font-size="17" fill="#555555">Join at query time</text>
+  <text x="640" y="286" text-anchor="middle" font-size="22" fill="#795548" font-weight="bold">&#x2605;&#x2605;&#x2605;</text>
+  <rect x="900" y="100" width="300" height="200" rx="12" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1050" y="178" text-anchor="middle" font-size="24" font-weight="bold" fill="#e53935">Nested</text>
+  <text x="1050" y="222" text-anchor="middle" font-size="17" fill="#555555">Inner documents</text>
+  <text x="1050" y="254" text-anchor="middle" font-size="17" fill="#555555">Accurate but slow</text>
+  <text x="1050" y="286" text-anchor="middle" font-size="22" fill="#e53935" font-weight="bold">&#x2605;&#x2605;</text>
+  <!-- Arrow -->
+  <line x1="80" y1="380" x2="1200" y2="380" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="420" text-anchor="middle" font-size="18" fill="#555555">Fast &#x2192; Slow</text>
+  <!-- Trade-offs table -->
+  <rect x="80" y="450" width="1120" height="52" rx="4" fill="url(#grad-accent)"/>
+  <text x="230" y="484" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Denormalized</text>
+  <text x="640" y="484" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Parent-Child</text>
+  <text x="1050" y="484" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Nested</text>
+  <rect x="80" y="502" width="1120" height="50" rx="4" fill="#f7f9ff" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="230" y="534" text-anchor="middle" font-size="15" fill="#333333">Large doc size</text>
+  <text x="640" y="534" text-anchor="middle" font-size="15" fill="#333333">Same shard required</text>
+  <text x="1050" y="534" text-anchor="middle" font-size="15" fill="#333333">Hidden inner docs</text>
+  <!-- Note -->
+  <rect x="80" y="598" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="632" text-anchor="middle" font-size="16" fill="#1565c0">Prefer denormalization in ES. Only use nested/parent-child when data updates frequently and independently.</text>
 </svg>

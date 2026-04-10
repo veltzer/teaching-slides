@@ -1,28 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="362.6667" y="72" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Mode</text>
-  <text x="704" y="72" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">HEAD</text>
-  <text x="917.3333" y="72" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Staging</text>
-  <text x="1152" y="72" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#333">Working Dir</text>
-  <rect x="149.3333" y="115.2" width="426.6667" height="136.8" fill="#e8f5e9" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="362.6667" y="201.6" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#2e7d32">--soft</text>
-  <text x="704" y="201.6" text-anchor="middle" font-size="27.7333" fill="#2e7d32">✔</text>
-  <text x="917.3333" y="201.6" text-anchor="middle" font-size="25.6" fill="#888">unchanged</text>
-  <text x="1152" y="201.6" text-anchor="middle" font-size="25.6" fill="#888">unchanged</text>
-  <rect x="149.3333" y="280.8" width="426.6667" height="136.8" fill="#fff3e0" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="362.6667" y="367.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#e65100">--mixed (default)</text>
-  <text x="704" y="367.2" text-anchor="middle" font-size="27.7333" fill="#e65100">✔</text>
-  <text x="917.3333" y="367.2" text-anchor="middle" font-size="27.7333" fill="#e65100">✔ cleared</text>
-  <text x="1152" y="367.2" text-anchor="middle" font-size="25.6" fill="#888">unchanged</text>
-  <rect x="149.3333" y="446.4" width="426.6667" height="136.8" fill="#ffebee" stroke="#333" stroke-width="3.2" rx="8.5333" />
-  <text x="362.6667" y="532.8" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#c62828">--hard</text>
-  <text x="704" y="532.8" text-anchor="middle" font-size="27.7333" fill="#c62828">✔</text>
-  <text x="917.3333" y="532.8" text-anchor="middle" font-size="27.7333" fill="#c62828">✔ cleared</text>
-  <text x="1152" y="532.8" text-anchor="middle" font-size="27.7333" fill="#c62828">✔ cleared</text>
-  <text x="85.3333" y="201.6" text-anchor="middle" font-size="23.4667" fill="#2e7d32">safe</text>
-  <text x="85.3333" y="367.2" text-anchor="middle" font-size="23.4667" fill="#e65100">caution</text>
-  <text x="85.3333" y="532.8" text-anchor="middle" font-size="23.4667" fill="#c62828">danger!</text>
-  <line x1="149.3333" y1="93.6" x2="1237.3333" y2="93.6" stroke="#ccc" stroke-width="2.1333" />
-  <line x1="149.3333" y1="259.2" x2="1237.3333" y2="259.2" stroke="#ccc" stroke-width="2.1333" stroke-dasharray="8.5333" />
-  <line x1="149.3333" y1="424.8" x2="1237.3333" y2="424.8" stroke="#ccc" stroke-width="2.1333" stroke-dasharray="8.5333" />
-  <text x="640" y="666" text-anchor="middle" font-size="23.4667" fill="#555" font-style="italic">⚠ --hard discards uncommitted changes permanently</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header row -->
+  <text x="363" y="72" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Mode</text>
+  <text x="704" y="72" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">HEAD</text>
+  <text x="917" y="72" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Staging</text>
+  <text x="1152" y="72" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Working Dir</text>
+  <line x1="149" y1="88" x2="1237" y2="88" stroke="#ccc" stroke-width="2"/>
+  <!-- soft row -->
+  <rect x="149" y="102" width="427" height="136" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <text x="363" y="182" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">--soft</text>
+  <text x="704" y="182" text-anchor="middle" font-size="22" fill="#2e7d32">✔</text>
+  <text x="917" y="182" text-anchor="middle" font-size="20" fill="#888">unchanged</text>
+  <text x="1152" y="182" text-anchor="middle" font-size="20" fill="#888">unchanged</text>
+  <text x="85" y="182" text-anchor="middle" font-size="18" fill="#2e7d32">safe</text>
+  <line x1="149" y1="246" x2="1237" y2="246" stroke="#ccc" stroke-width="1.5" stroke-dasharray="8"/>
+  <!-- mixed row -->
+  <rect x="149" y="258" width="427" height="136" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <text x="363" y="334" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">--mixed (default)</text>
+  <text x="704" y="334" text-anchor="middle" font-size="22" fill="#e65100">✔</text>
+  <text x="917" y="334" text-anchor="middle" font-size="22" fill="#e65100">✔ cleared</text>
+  <text x="1152" y="334" text-anchor="middle" font-size="20" fill="#888">unchanged</text>
+  <text x="85" y="334" text-anchor="middle" font-size="18" fill="#e65100">caution</text>
+  <line x1="149" y1="402" x2="1237" y2="402" stroke="#ccc" stroke-width="1.5" stroke-dasharray="8"/>
+  <!-- hard row -->
+  <rect x="149" y="414" width="427" height="136" fill="#ffebee" stroke="#c62828" stroke-width="3" rx="8" filter="url(#shadow)"/>
+  <text x="363" y="492" text-anchor="middle" font-size="20" font-weight="bold" fill="#c62828">--hard</text>
+  <text x="704" y="492" text-anchor="middle" font-size="22" fill="#c62828">✔</text>
+  <text x="917" y="492" text-anchor="middle" font-size="22" fill="#c62828">✔ cleared</text>
+  <text x="1152" y="492" text-anchor="middle" font-size="22" fill="#c62828">✔ cleared</text>
+  <text x="85" y="492" text-anchor="middle" font-size="18" fill="#c62828">danger!</text>
+  <text x="640" y="618" text-anchor="middle" font-size="18" fill="#555" font-style="italic">⚠ --hard discards uncommitted changes permanently</text>
 </svg>

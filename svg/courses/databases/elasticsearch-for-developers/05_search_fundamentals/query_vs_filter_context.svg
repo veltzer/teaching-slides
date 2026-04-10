@@ -1,12 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="144" width="448" height="432" fill="#4CAF50" rx="14.4" />
-  <text x="384" y="230.4" text-anchor="middle" fill="white" font-weight="bold">Query Context</text>
-  <text x="384" y="316.8" text-anchor="middle" fill="white">• Calculates score</text>
-  <text x="384" y="388.8" text-anchor="middle" fill="white">• "How well?"</text>
-  <text x="384" y="460.8" text-anchor="middle" fill="white">• Not cached</text>
-  <rect x="672" y="144" width="448" height="432" fill="#2196F3" rx="14.4" />
-  <text x="896" y="230.4" text-anchor="middle" fill="white" font-weight="bold">Filter Context</text>
-  <text x="896" y="316.8" text-anchor="middle" fill="white">• No scoring</text>
-  <text x="896" y="388.8" text-anchor="middle" fill="white">• "Yes or No?"</text>
-  <text x="896" y="460.8" text-anchor="middle" fill="white">• Cached</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Query vs Filter Context</text>
+  <!-- Query context -->
+  <rect x="80" y="90" width="520" height="440" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="340" y="160" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Query Context</text>
+  <text x="340" y="220" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Calculates relevance score</text>
+  <text x="340" y="268" text-anchor="middle" font-size="19" fill="#333333">&#x2022; "How well does this match?"</text>
+  <text x="340" y="316" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Not cached (per query)</text>
+  <text x="340" y="364" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Slower (scoring overhead)</text>
+  <text x="340" y="412" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Use for: full-text search</text>
+  <text x="340" y="460" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Example: match, multi_match</text>
+  <!-- Filter context -->
+  <rect x="680" y="90" width="520" height="440" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="940" y="160" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Filter Context</text>
+  <text x="940" y="220" text-anchor="middle" font-size="19" fill="#333333">&#x2022; No relevance scoring</text>
+  <text x="940" y="268" text-anchor="middle" font-size="19" fill="#333333">&#x2022; "Yes or No - does it match?"</text>
+  <text x="940" y="316" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Results are cached</text>
+  <text x="940" y="364" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Faster execution</text>
+  <text x="940" y="412" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Use for: dates, status, IDs</text>
+  <text x="940" y="460" text-anchor="middle" font-size="19" fill="#333333">&#x2022; Example: term, range, exists</text>
+  <!-- Bottom note -->
+  <rect x="80" y="582" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="616" text-anchor="middle" font-size="17" fill="#1565c0">Prefer filter context wherever possible to leverage caching and improve performance</text>
 </svg>

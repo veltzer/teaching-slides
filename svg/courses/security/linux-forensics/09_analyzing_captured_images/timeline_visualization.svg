@@ -1,38 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <text x="640" y="41.1429" text-anchor="middle" font-size="26.1818" font-weight="bold" fill="#222222">Jan 15, 2025 — Activity Timeline</text>
-  <line x1="207.0588" y1="65.4545" x2="207.0588" y2="691.9481" stroke="#555555" stroke-width="3.7403" />
-  <circle cx="207.0588" cy="93.5065" r="11.2208" fill="#1565c0" />
-  <text x="235.2941" y="100.987" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:00</tspan> — SSH login from 10.0.0.99 (auth.log)</text>
-  <circle cx="207.0588" cy="149.6104" r="11.2208" fill="#c62828" />
-  <text x="235.2941" y="157.0909" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:01</tspan> — /tmp/.hidden/ directory created (filesystem)</text>
-  <circle cx="207.0588" cy="205.7143" r="11.2208" fill="#c62828" />
-  <text x="235.2941" y="213.1948" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:02</tspan> — /tmp/.hidden/toolkit.tar.gz created</text>
-  <circle cx="207.0588" cy="261.8182" r="11.2208" fill="#c62828" />
-  <text x="235.2941" y="269.2987" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:03</tspan> — /tmp/.hidden/toolkit.tar.gz accessed (extracted)</text>
-  <circle cx="207.0588" cy="317.9221" r="11.2208" fill="#c62828" />
-  <text x="235.2941" y="325.4026" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:03</tspan> — /tmp/.hidden/recon.sh created</text>
-  <circle cx="207.0588" cy="374.026" r="11.2208" fill="#c62828" />
-  <text x="235.2941" y="381.5065" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:04</tspan> — /tmp/.hidden/recon.sh executed (process accounting)</text>
-  <circle cx="207.0588" cy="430.1299" r="11.2208" fill="#e65100" />
-  <text x="235.2941" y="437.6104" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:05</tspan> — /etc/cron.d/update created (persistence)</text>
-  <circle cx="207.0588" cy="486.2338" r="11.2208" fill="#e65100" />
-  <text x="235.2941" y="493.7143" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:10</tspan> — /var/www/html/shell.php created (webshell)</text>
-  <circle cx="207.0588" cy="542.3377" r="11.2208" fill="#1565c0" />
-  <text x="235.2941" y="549.8182" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:15</tspan> — SSH logout (auth.log)</text>
-  <text x="235.2941" y="598.4416" font-size="22.4416" fill="#999999" font-style="italic">    ...</text>
-  <circle cx="207.0588" cy="632.1039" r="11.2208" fill="#e65100" />
-  <text x="235.2941" y="639.5844" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:30</tspan> — /var/www/html/shell.php accessed (web log)</text>
-  <circle cx="207.0588" cy="682.5974" r="11.2208" fill="#e65100" />
-  <text x="235.2941" y="690.0779" font-size="22.4416" fill="#333333">
-    <tspan font-weight="bold">10:31</tspan> — /etc/passwd accessed (web log, possible LFI)</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="38" text-anchor="middle" font-size="26" font-weight="bold" fill="#222222">Jan 15, 2025 - Activity Timeline</text>
+
+  <!-- Vertical timeline line -->
+  <line x1="205" y1="58" x2="205" y2="710" stroke="#555555" stroke-width="3.5"/>
+
+  <!-- Events -->
+  <circle cx="205" cy="88" r="12" fill="#1565c0"/>
+  <text x="235" y="95" font-size="22" fill="#333333"><tspan font-weight="bold">10:00</tspan> - SSH login from 10.0.0.99 (auth.log)</text>
+
+  <circle cx="205" cy="160" r="12" fill="#c62828"/>
+  <text x="235" y="167" font-size="22" fill="#333333"><tspan font-weight="bold">10:01</tspan> - /tmp/.hidden/ directory created (filesystem)</text>
+
+  <circle cx="205" cy="232" r="12" fill="#c62828"/>
+  <text x="235" y="239" font-size="22" fill="#333333"><tspan font-weight="bold">10:02</tspan> - /tmp/.hidden/toolkit.tar.gz created</text>
+
+  <circle cx="205" cy="304" r="12" fill="#c62828"/>
+  <text x="235" y="311" font-size="22" fill="#333333"><tspan font-weight="bold">10:03</tspan> - /tmp/.hidden/toolkit.tar.gz accessed (extracted)</text>
+
+  <circle cx="205" cy="376" r="12" fill="#c62828"/>
+  <text x="235" y="383" font-size="22" fill="#333333"><tspan font-weight="bold">10:03</tspan> - /tmp/.hidden/recon.sh created</text>
+
+  <circle cx="205" cy="448" r="12" fill="#c62828"/>
+  <text x="235" y="455" font-size="22" fill="#333333"><tspan font-weight="bold">10:04</tspan> - /tmp/.hidden/recon.sh executed (process accounting)</text>
+
+  <circle cx="205" cy="516" r="12" fill="#e65100"/>
+  <text x="235" y="523" font-size="22" fill="#333333"><tspan font-weight="bold">10:05</tspan> - /etc/cron.d/update created (persistence)</text>
+
+  <circle cx="205" cy="580" r="12" fill="#e65100"/>
+  <text x="235" y="587" font-size="22" fill="#333333"><tspan font-weight="bold">10:10</tspan> - /var/www/html/shell.php created (webshell)</text>
+
+  <circle cx="205" cy="640" r="12" fill="#1565c0"/>
+  <text x="235" y="647" font-size="22" fill="#333333"><tspan font-weight="bold">10:15</tspan> - SSH logout (auth.log)</text>
+
+  <circle cx="205" cy="700" r="12" fill="#e65100"/>
+  <text x="235" y="707" font-size="22" fill="#333333"><tspan font-weight="bold">10:30</tspan> - /var/www/html/shell.php accessed (web log)</text>
 </svg>

@@ -1,10 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="180" width="384" height="216" fill="#4CAF50" rx="16" />
-  <text x="352" y="306" text-anchor="middle" fill="white">geo_point</text>
-  <circle cx="352" cy="504" r="16" fill="#4CAF50" />
-  <text x="352" y="612" text-anchor="middle" font-size="38.4">Single location</text>
-  <rect x="736" y="180" width="384" height="216" fill="#2196F3" rx="16" />
-  <text x="928" y="306" text-anchor="middle" fill="white">geo_shape</text>
-  <polygon points="800,504 864,504 896,576 832,576" fill="#2196F3" />
-  <text x="928" y="612" text-anchor="middle" font-size="38.4">Areas &amp; lines</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Geo Data Types</text>
+  <!-- geo_point -->
+  <rect x="80" y="100" width="500" height="260" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="330" y="180" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">geo_point</text>
+  <text x="330" y="226" text-anchor="middle" font-size="19" fill="#555555">Single lat/lon coordinate</text>
+  <circle cx="330" cy="300" r="20" fill="#2e7d32"/>
+  <text x="330" y="366" text-anchor="middle" font-size="17" fill="#555555">Queries: geo_distance, geo_bounding_box,</text>
+  <text x="330" y="392" text-anchor="middle" font-size="17" fill="#555555">geo_polygon</text>
+  <!-- geo_shape -->
+  <rect x="700" y="100" width="500" height="260" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="950" y="180" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">geo_shape</text>
+  <text x="950" y="226" text-anchor="middle" font-size="19" fill="#555555">GeoJSON shapes: points, lines, polygons</text>
+  <polygon points="870,280 950,250 1030,280 1010,340 890,340" fill="#e3f2fd" stroke="#1565c0" stroke-width="3"/>
+  <text x="950" y="392" text-anchor="middle" font-size="17" fill="#555555">Queries: geo_shape (intersects, within,</text>
+  <text x="950" y="416" text-anchor="middle" font-size="17" fill="#555555">contains, disjoint)</text>
+  <!-- Note -->
+  <rect x="80" y="416" width="1120" height="80" rx="8" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="448" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">Common Use Cases</text>
+  <text x="640" y="480" text-anchor="middle" font-size="16" fill="#555555">geo_point: store locations, radius search, map clustering, location-based sorting</text>
+  <!-- Bottom note -->
+  <rect x="80" y="542" width="1120" height="56" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="640" y="576" text-anchor="middle" font-size="16" fill="#2e7d32">geo_shape: Areas &amp; lines - countries, zones, routes, geofencing</text>
 </svg>

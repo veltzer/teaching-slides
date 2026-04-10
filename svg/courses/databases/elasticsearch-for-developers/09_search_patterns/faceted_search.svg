@@ -1,11 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="180" width="256" height="360" fill="#f0f0f0" stroke="#333" rx="16" />
-  <text x="288" y="270" text-anchor="middle" font-weight="bold">Filters</text>
-  <text x="288" y="342" text-anchor="middle" font-size="38.4">□ Brand</text>
-  <text x="288" y="414" text-anchor="middle" font-size="38.4">□ Price</text>
-  <text x="288" y="486" text-anchor="middle" font-size="38.4">□ Color</text>
-  <rect x="512" y="180" width="640" height="360" fill="#e8f5e9" stroke="#4CAF50" rx="16" />
-  <text x="832" y="270" text-anchor="middle" font-weight="bold">Results</text>
-  <text x="832" y="360" text-anchor="middle">Filtered products</text>
-  <text x="832" y="432" text-anchor="middle">with counts</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Faceted Search</text>
+  <!-- Filters panel -->
+  <rect x="80" y="120" width="300" height="420" rx="12" fill="#f5f5f5" stroke="#757575" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="#333333">Filters</text>
+  <text x="110" y="240" font-size="22" fill="#555555">&#x25A1; Brand A (42)</text>
+  <text x="110" y="290" font-size="22" fill="#555555">&#x25A1; Brand B (17)</text>
+  <text x="110" y="340" font-size="22" fill="#555555">&#x25A1; Brand C (8)</text>
+  <text x="110" y="400" font-size="22" fill="#1565c0" font-weight="bold">&#x25A1; Price 0-50</text>
+  <text x="110" y="450" font-size="22" fill="#555555">&#x25A1; Price 50-100</text>
+  <text x="110" y="510" font-size="22" fill="#555555">&#x25A1; Color: Red</text>
+  <!-- Results panel -->
+  <rect x="440" y="120" width="760" height="420" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="180" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">Results</text>
+  <rect x="470" y="210" width="700" height="80" rx="6" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+  <text x="820" y="258" text-anchor="middle" font-size="18" fill="#333333">Product 1 - $29.99 - Brand A</text>
+  <rect x="470" y="306" width="700" height="80" rx="6" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+  <text x="820" y="354" text-anchor="middle" font-size="18" fill="#333333">Product 2 - $49.99 - Brand A</text>
+  <rect x="470" y="402" width="700" height="80" rx="6" fill="#ffffff" stroke="#cccccc" stroke-width="1"/>
+  <text x="820" y="450" text-anchor="middle" font-size="18" fill="#333333">Product 3 - $14.99 - Brand C</text>
+  <!-- Note -->
+  <rect x="80" y="596" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="630" text-anchor="middle" font-size="16" fill="#1565c0">Implement with: terms agg for facets + filter context for selected filters. Post-filter for result filtering.</text>
 </svg>

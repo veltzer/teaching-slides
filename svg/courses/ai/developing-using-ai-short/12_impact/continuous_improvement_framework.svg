@@ -1,20 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="142.2222" y="72" width="995.5556" height="576" fill="#f9f9f9" stroke="#ccc" rx="28.4444" />
-  <text x="640" y="162" text-anchor="middle" font-size="45.5111" font-weight="bold">Continuous Improvement Cycle</text>
-  <circle cx="355.5556" cy="324" r="71.1111" fill="#e8f5e8" stroke="#388e3c" />
-  <text x="355.5556" y="313.2" text-anchor="middle" font-size="28.4444">Measure</text>
-  <text x="355.5556" y="352.8" text-anchor="middle" font-size="28.4444">Impact</text>
-  <circle cx="640" cy="252" r="71.1111" fill="#e3f2fd" stroke="#1976d2" />
-  <text x="640" y="241.2" text-anchor="middle" font-size="28.4444">Analyze</text>
-  <text x="640" y="280.8" text-anchor="middle" font-size="28.4444">Data</text>
-  <circle cx="924.4444" cy="324" r="71.1111" fill="#fff3e0" stroke="#f57c00" />
-  <text x="924.4444" y="313.2" text-anchor="middle" font-size="28.4444">Optimize</text>
-  <text x="924.4444" y="352.8" text-anchor="middle" font-size="28.4444">Usage</text>
-  <circle cx="640" cy="468" r="71.1111" fill="#fce4ec" stroke="#c2185b" />
-  <text x="640" y="457.2" text-anchor="middle" font-size="28.4444">Implement</text>
-  <text x="640" y="496.8" text-anchor="middle" font-size="28.4444">Changes</text>
-  <path d="M 412.4444 288 Q 526.2222 216 583.1111 252" fill="none" stroke="#666" stroke-width="5.6889" />
-  <path d="M 696.8889 288 Q 810.6667 288 867.5556 306" fill="none" stroke="#666" stroke-width="5.6889" />
-  <path d="M 896 396 Q 782.2222 504 696.8889 468" fill="none" stroke="#666" stroke-width="5.6889" />
-  <path d="M 583.1111 486 Q 469.3333 504 412.4444 378" fill="none" stroke="#666" stroke-width="5.6889" />
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">Continuous Improvement Cycle</text>
+  <!-- 4 circles in cycle -->
+  <circle cx="280" cy="350" r="110" fill="#e8f5e9" stroke="#43a047" stroke-width="3" filter="url(#shadow)"/>
+  <text x="280" y="336" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Measure</text>
+  <text x="280" y="366" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Impact</text>
+  <text x="280" y="402" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Collect metrics</text>
+  <circle cx="640" cy="200" r="110" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="186" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Analyze</text>
+  <text x="640" y="216" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Data</text>
+  <text x="640" y="252" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Find patterns</text>
+  <circle cx="1000" cy="350" r="110" fill="#fff3e0" stroke="#fb8c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1000" y="336" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Optimize</text>
+  <text x="1000" y="366" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Usage</text>
+  <text x="1000" y="402" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Adjust approach</text>
+  <circle cx="640" cy="530" r="110" fill="#fce4ec" stroke="#e91e63" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="516" text-anchor="middle" fill="#880e4f" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Implement</text>
+  <text x="640" y="546" text-anchor="middle" fill="#880e4f" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Changes</text>
+  <text x="640" y="582" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Apply improvements</text>
+  <!-- Cycle arrows -->
+  <path d="M380 290 Q500 200 544 220" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M736 236 Q888 270 908 310" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M960 460 Q820 550 748 530" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M536 512 Q410 520 368 436" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Center label -->
+  <text x="640" y="362" text-anchor="middle" fill="#aaa" font-size="17" font-family="Arial, sans-serif">PDCA + AI</text>
 </svg>

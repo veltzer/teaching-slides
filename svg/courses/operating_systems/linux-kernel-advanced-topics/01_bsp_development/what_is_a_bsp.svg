@@ -1,10 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="528" width="960" height="96" fill="#8B4513" stroke="black" />
-  <text x="640" y="588" text-anchor="middle" fill="white">Hardware Platform</text>
-  <rect x="160" y="384" width="960" height="96" fill="#4169E1" stroke="black" />
-  <text x="640" y="444" text-anchor="middle" fill="white">Board Support Package</text>
-  <rect x="160" y="240" width="960" height="96" fill="#32CD32" stroke="black" />
-  <text x="640" y="300" text-anchor="middle">Linux Kernel</text>
-  <rect x="160" y="96" width="960" height="96" fill="#FFD700" stroke="black" />
-  <text x="640" y="156" text-anchor="middle">Applications</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Stack layers -->
+  <rect x="160" y="92" width="960" height="90" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="146" text-anchor="middle" font-size="22" fill="#e65100">Applications</text>
+  <rect x="160" y="238" width="960" height="90" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="292" text-anchor="middle" font-size="22" fill="#1b5e20">Linux Kernel</text>
+  <rect x="160" y="384" width="960" height="90" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="438" text-anchor="middle" font-size="22" fill="#ffffff">Board Support Package</text>
+  <rect x="160" y="530" width="960" height="90" fill="#795548" stroke="#4e342e" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="584" text-anchor="middle" font-size="22" fill="#ffffff">Hardware Platform</text>
 </svg>

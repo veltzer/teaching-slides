@@ -1,21 +1,39 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="56.8889" y="288" width="341.3333" height="144" fill="#FFE4B5" stroke="black" />
-  <text x="227.5556" y="372" text-anchor="middle">Vendor BSP</text>
-  <rect x="455.1111" y="288" width="341.3333" height="144" fill="#87CEEB" stroke="black" />
-  <text x="625.7778" y="372" text-anchor="middle">Custom Code</text>
-  <rect x="853.3333" y="288" width="341.3333" height="144" fill="#98FB98" stroke="black" />
-  <text x="1024" y="372" text-anchor="middle">Product BSP</text>
-  <line x1="398.2222" y1="360" x2="455.1111" y2="360" stroke="black" stroke-width="4.8" marker-end="url(#arr)" />
-  <line x1="796.4444" y1="360" x2="853.3333" y2="360" stroke="black" stroke-width="4.8" marker-end="url(#arr)" />
-  <text x="227.5556" y="504" text-anchor="middle">Updates</text>
-  <text x="625.7778" y="504" text-anchor="middle">Features</text>
-  <text x="1024" y="504" text-anchor="middle">Release</text>
-  <line x1="227.5556" y1="432" x2="227.5556" y2="468" stroke="black" stroke-width="2.4" stroke-dasharray="12 12" />
-  <line x1="625.7778" y1="432" x2="625.7778" y2="468" stroke="black" stroke-width="2.4" stroke-dasharray="12 12" />
-  <line x1="1024" y1="432" x2="1024" y2="468" stroke="black" stroke-width="2.4" stroke-dasharray="12 12" />
   <defs>
-    <marker id="arr" markerWidth="28.4444" markerHeight="24" refX="0" refY="7.2" orient="auto">
-      <polygon points="0,24 8.5333,0" fill="black" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Three stage boxes -->
+  <rect x="56" y="270" width="340" height="138" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="226" y="348" text-anchor="middle" font-size="22" fill="#e65100">Vendor BSP</text>
+  <rect x="455" y="270" width="340" height="138" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="625" y="348" text-anchor="middle" font-size="22" fill="#0d47a1">Custom Code</text>
+  <rect x="854" y="270" width="340" height="138" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="1024" y="348" text-anchor="middle" font-size="22" fill="#1b5e20">Product BSP</text>
+  <!-- Arrows -->
+  <line x1="396" y1="339" x2="455" y2="339" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="795" y1="339" x2="854" y2="339" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Labels below -->
+  <text x="226" y="476" text-anchor="middle" font-size="19" fill="#777777">Updates</text>
+  <text x="625" y="476" text-anchor="middle" font-size="19" fill="#777777">Features</text>
+  <text x="1024" y="476" text-anchor="middle" font-size="19" fill="#777777">Release</text>
+  <line x1="226" y1="408" x2="226" y2="452" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="10,8"/>
+  <line x1="625" y1="408" x2="625" y2="452" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="10,8"/>
+  <line x1="1024" y1="408" x2="1024" y2="452" stroke="#aaaaaa" stroke-width="2" stroke-dasharray="10,8"/>
 </svg>

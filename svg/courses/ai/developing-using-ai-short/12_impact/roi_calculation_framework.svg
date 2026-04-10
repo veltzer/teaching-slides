@@ -1,12 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="128" y="72" width="1024" height="576" fill="#f5f5f5" stroke="#ccc" rx="25.6" />
-  <text x="640" y="162" text-anchor="middle" font-size="40.96" font-weight="bold">AI Investment ROI Calculation</text>
-  <rect x="204.8" y="252" width="384" height="144" fill="#ffecb3" stroke="#f57f17" rx="12.8" />
-  <text x="396.8" y="306" text-anchor="middle" font-size="25.6">Investment Costs</text>
-  <text x="396.8" y="352.8" text-anchor="middle" font-size="25.6">Licenses + Training + Setup</text>
-  <rect x="691.2" y="252" width="384" height="144" fill="#c8e6c9" stroke="#388e3c" rx="12.8" />
-  <text x="883.2" y="306" text-anchor="middle" font-size="25.6">Productivity Gains</text>
-  <text x="883.2" y="352.8" text-anchor="middle" font-size="25.6">Time Saved × Hourly Rate</text>
-  <rect x="448" y="468" width="384" height="108" fill="#e3f2fd" stroke="#1976d2" rx="12.8" />
-  <text x="640" y="540" text-anchor="middle" font-size="30.72" font-weight="bold">ROI = (Gains - Costs) / Costs</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="60" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">AI Investment ROI Calculation</text>
+  <!-- Two boxes + formula -->
+  <rect x="80" y="150" width="500" height="250" rx="12" fill="#fff3e0" stroke="#fb8c00" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="150" width="500" height="50" rx="12" fill="#fb8c00"/>
+  <rect x="80" y="186" width="500" height="14" fill="#fb8c00"/>
+  <text x="330" y="188" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Investment Costs</text>
+  <text x="330" y="252" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Tool licenses</text>
+  <text x="330" y="286" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Team training</text>
+  <text x="330" y="320" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Setup &amp; integration</text>
+  <text x="330" y="354" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Ongoing maintenance</text>
+  <rect x="700" y="150" width="500" height="250" rx="12" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="700" y="150" width="500" height="50" rx="12" fill="#43a047"/>
+  <rect x="700" y="186" width="500" height="14" fill="#43a047"/>
+  <text x="950" y="188" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Productivity Gains</text>
+  <text x="950" y="252" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Time saved x hourly rate</text>
+  <text x="950" y="286" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Bug reduction savings</text>
+  <text x="950" y="320" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Faster time to market</text>
+  <text x="950" y="354" text-anchor="middle" fill="#444" font-size="18" font-family="Arial, sans-serif">• Reduced onboarding cost</text>
+  <!-- Formula box -->
+  <rect x="240" y="440" width="800" height="120" rx="12" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="490" text-anchor="middle" fill="#1565c0" font-size="26" font-weight="bold" font-family="Arial, sans-serif">ROI = (Gains - Costs) / Costs</text>
+  <text x="640" y="536" text-anchor="middle" fill="#555" font-size="18" font-family="Arial, sans-serif">Express as percentage — typical: 150% to 400%</text>
+  <!-- Tip -->
+  <rect x="80" y="595" width="1120" height="90" rx="10" fill="url(#grad-surface)" stroke="#e0e0e0" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="640" y="633" text-anchor="middle" fill="#1565c0" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Measurement Tip</text>
+  <text x="640" y="665" text-anchor="middle" fill="#444" font-size="15" font-family="Arial, sans-serif">Track a 30-day baseline before adoption, then compare at 30/60/90 days</text>
 </svg>

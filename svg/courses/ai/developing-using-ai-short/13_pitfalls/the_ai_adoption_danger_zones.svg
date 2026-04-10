@@ -1,21 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="128" y="65.4545" width="1024" height="589.0909" fill="#fff8e1" stroke="#f57f17" rx="25.6" />
-  <text x="640" y="147.2727" text-anchor="middle" font-size="40.96" font-weight="bold">AI Development Pitfall Zones</text>
-  <circle cx="384" cy="294.5455" r="89.6" fill="#ffcdd2" stroke="#d32f2f" />
-  <text x="384" y="278.1818" text-anchor="middle" font-size="25.6">Over-Reliance</text>
-  <text x="384" y="320.7273" text-anchor="middle" font-size="25.6">Trap</text>
-  <circle cx="640" cy="229.0909" r="76.8" fill="#ffcdd2" stroke="#d32f2f" />
-  <text x="640" y="212.7273" text-anchor="middle" font-size="25.6">Quality</text>
-  <text x="640" y="255.2727" text-anchor="middle" font-size="25.6">Blind Spot</text>
-  <circle cx="896" cy="294.5455" r="89.6" fill="#ffcdd2" stroke="#d32f2f" />
-  <text x="896" y="278.1818" text-anchor="middle" font-size="25.6">Context</text>
-  <text x="896" y="320.7273" text-anchor="middle" font-size="25.6">Limitations</text>
-  <circle cx="512" cy="458.1818" r="76.8" fill="#ffcdd2" stroke="#d32f2f" />
-  <text x="512" y="441.8182" text-anchor="middle" font-size="25.6">Security</text>
-  <text x="512" y="484.3636" text-anchor="middle" font-size="25.6">Risks</text>
-  <circle cx="768" cy="458.1818" r="76.8" fill="#ffcdd2" stroke="#d32f2f" />
-  <text x="768" y="441.8182" text-anchor="middle" font-size="25.6">Tool</text>
-  <text x="768" y="484.3636" text-anchor="middle" font-size="25.6">Limitations</text>
-  <rect x="384" y="556.3636" width="512" height="65.4545" fill="#c8e6c9" stroke="#388e3c" rx="12.8" />
-  <text x="640" y="602.1818" text-anchor="middle" font-size="25.6">Awareness + Strategy = Success</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="60" rx="10" fill="#f57f17" filter="url(#shadow)"/>
+  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">AI Development Pitfall Zones</text>
+  <!-- 5 red circles -->
+  <circle cx="300" cy="290" r="120" fill="#ffcdd2" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="300" y="270" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Over-Reliance</text>
+  <text x="300" y="300" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Trap</text>
+  <text x="300" y="336" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Skills atrophy</text>
+  <circle cx="640" cy="210" r="100" fill="#ffcdd2" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="190" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Quality</text>
+  <text x="640" y="220" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Blind Spot</text>
+  <text x="640" y="254" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">No critical review</text>
+  <circle cx="980" cy="290" r="120" fill="#ffcdd2" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="980" y="270" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Context</text>
+  <text x="980" y="300" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Limitations</text>
+  <text x="980" y="336" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Wrong assumptions</text>
+  <circle cx="420" cy="480" r="100" fill="#ffcdd2" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="420" y="460" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Security</text>
+  <text x="420" y="490" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Risks</text>
+  <text x="420" y="526" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Leaking secrets</text>
+  <circle cx="860" cy="480" r="100" fill="#ffcdd2" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="860" y="460" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Tool</text>
+  <text x="860" y="490" text-anchor="middle" fill="#b71c1c" font-size="18" font-weight="bold" font-family="Arial, sans-serif">Limitations</text>
+  <text x="860" y="526" text-anchor="middle" fill="#555" font-size="13" font-family="Arial, sans-serif">Hallucinated APIs</text>
+  <!-- Solution banner -->
+  <rect x="240" y="610" width="800" height="80" rx="10" fill="#e8f5e9" stroke="#43a047" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="657" text-anchor="middle" fill="#2e7d32" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Awareness + Strategy = Success</text>
 </svg>

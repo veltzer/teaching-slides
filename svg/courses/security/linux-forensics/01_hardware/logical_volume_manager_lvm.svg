@@ -1,36 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="ah6" markerWidth="16.5161" markerHeight="18.5806" refX="12.3871" refY="6.9677" orient="auto">
-      <path d="M 0 0 L 0 13.9355 L 16.5161 6.9677 z" fill="#555" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="41.2903" y="46.4516" width="330.3226" height="104.5161" rx="8.2581" fill="#e3f2fd" stroke="#333" stroke-width="3.0968" />
-  <text x="206.4516" y="109.1613" text-anchor="middle" font-size="26.8387" fill="#222">/dev/sda1</text>
-  <rect x="474.8387" y="46.4516" width="330.3226" height="104.5161" rx="8.2581" fill="#e3f2fd" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="109.1613" text-anchor="middle" font-size="26.8387" fill="#222">/dev/sdb1</text>
-  <rect x="908.3871" y="46.4516" width="330.3226" height="104.5161" rx="8.2581" fill="#e3f2fd" stroke="#333" stroke-width="3.0968" />
-  <text x="1073.5484" y="109.1613" text-anchor="middle" font-size="26.8387" fill="#222">/dev/sdc1</text>
-  <text x="1300.6452" y="109.1613" font-size="22.7097" fill="#555">Physical Volumes (PV)</text>
-  <line x1="206.4516" y1="150.9677" x2="206.4516" y2="232.2581" stroke="#555" stroke-width="3.0968" />
-  <line x1="640" y1="150.9677" x2="640" y2="232.2581" stroke="#555" stroke-width="3.0968" />
-  <line x1="1073.5484" y1="150.9677" x2="1073.5484" y2="232.2581" stroke="#555" stroke-width="3.0968" />
-  <line x1="206.4516" y1="232.2581" x2="1073.5484" y2="232.2581" stroke="#555" stroke-width="3.0968" />
-  <line x1="640" y1="232.2581" x2="640" y2="278.7097" stroke="#555" stroke-width="3.0968" marker-end="url(#ah6)" />
-  <rect x="247.7419" y="278.7097" width="784.5161" height="116.129" rx="8.2581" fill="#fff3e0" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="336.7742" text-anchor="middle" font-size="26.8387" fill="#222">Volume Group (VG) — vg_data</text>
-  <line x1="640" y1="394.8387" x2="640" y2="452.9032" stroke="#555" stroke-width="3.0968" />
-  <line x1="330.3226" y1="452.9032" x2="949.6774" y2="452.9032" stroke="#555" stroke-width="3.0968" />
-  <line x1="330.3226" y1="452.9032" x2="330.3226" y2="499.3548" stroke="#555" stroke-width="3.0968" marker-end="url(#ah6)" />
-  <line x1="640" y1="452.9032" x2="640" y2="499.3548" stroke="#555" stroke-width="3.0968" marker-end="url(#ah6)" />
-  <line x1="949.6774" y1="452.9032" x2="949.6774" y2="499.3548" stroke="#555" stroke-width="3.0968" marker-end="url(#ah6)" />
-  <rect x="123.871" y="499.3548" width="412.9032" height="139.3548" rx="8.2581" fill="#e8f5e9" stroke="#333" stroke-width="3.0968" />
-  <text x="330.3226" y="557.4194" text-anchor="middle" font-size="26.8387" fill="#222">LV1</text>
-  <text x="330.3226" y="603.871" text-anchor="middle" font-size="24.7742" fill="#555">/home</text>
-  <rect x="433.5484" y="499.3548" width="412.9032" height="139.3548" rx="8.2581" fill="#e8f5e9" stroke="#333" stroke-width="3.0968" />
-  <text x="640" y="557.4194" text-anchor="middle" font-size="26.8387" fill="#222">LV2</text>
-  <text x="640" y="603.871" text-anchor="middle" font-size="24.7742" fill="#555">/var</text>
-  <rect x="743.2258" y="499.3548" width="412.9032" height="139.3548" rx="8.2581" fill="#e8f5e9" stroke="#333" stroke-width="3.0968" />
-  <text x="949.6774" y="557.4194" text-anchor="middle" font-size="26.8387" fill="#222">LV3</text>
-  <text x="949.6774" y="603.871" text-anchor="middle" font-size="24.7742" fill="#555">/data</text>
-  <text x="41.2903" y="685.1613" font-size="22.7097" fill="#555">Logical Volumes</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- PV layer -->
+  <rect x="40" y="50" width="330" height="100" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="205" y="110" text-anchor="middle" font-size="26" fill="#333333">/dev/sda1</text>
+  <text x="1150" y="105" font-size="20" fill="#555555">Physical Volumes (PV)</text>
+
+  <rect x="475" y="50" width="330" height="100" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="110" text-anchor="middle" font-size="26" fill="#333333">/dev/sdb1</text>
+
+  <rect x="910" y="50" width="330" height="100" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1075" y="110" text-anchor="middle" font-size="26" fill="#333333">/dev/sdc1</text>
+
+  <!-- Lines converging to VG -->
+  <line x1="205" y1="150" x2="205" y2="230" stroke="#555555" stroke-width="2"/>
+  <line x1="640" y1="150" x2="640" y2="230" stroke="#555555" stroke-width="2"/>
+  <line x1="1075" y1="150" x2="1075" y2="230" stroke="#555555" stroke-width="2"/>
+  <line x1="205" y1="230" x2="1075" y2="230" stroke="#555555" stroke-width="2"/>
+  <line x1="640" y1="230" x2="640" y2="278" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- VG -->
+  <rect x="245" y="280" width="790" height="110" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="338" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Volume Group (VG) - vg_data</text>
+
+  <!-- Lines from VG to LVs -->
+  <line x1="640" y1="390" x2="640" y2="450" stroke="#555555" stroke-width="2"/>
+  <line x1="330" y1="450" x2="950" y2="450" stroke="#555555" stroke-width="2"/>
+  <line x1="330" y1="450" x2="330" y2="498" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="640" y1="450" x2="640" y2="498" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="950" y1="450" x2="950" y2="498" stroke="#555555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- LV boxes -->
+  <rect x="120" y="500" width="420" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="558" text-anchor="middle" font-size="26" fill="#333333">LV1</text>
+  <text x="330" y="600" text-anchor="middle" font-size="22" fill="#555555">/home</text>
+
+  <rect x="430" y="500" width="420" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="558" text-anchor="middle" font-size="26" fill="#333333">LV2</text>
+  <text x="640" y="600" text-anchor="middle" font-size="22" fill="#555555">/var</text>
+
+  <rect x="740" y="500" width="420" height="130" rx="10" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="950" y="558" text-anchor="middle" font-size="26" fill="#333333">LV3</text>
+  <text x="950" y="600" text-anchor="middle" font-size="22" fill="#555555">/data</text>
+
+  <text x="40" y="685" font-size="20" fill="#555555">Logical Volumes</text>
 </svg>

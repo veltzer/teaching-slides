@@ -1,34 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="72" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">Danger Level: Low → High</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="213.3333%" y2="0%">
-      <stop offset="0%" style="stop-color:#4caf50" />
-      <stop offset="50%" style="stop-color:#ff9800" />
-      <stop offset="100%" style="stop-color:#f44336" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="72" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Danger Level: Low → High</text>
+  <!-- Danger gradient bar -->
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="dangerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4caf50"/>
+      <stop offset="50%" stop-color="#ff9800"/>
+      <stop offset="100%" stop-color="#f44336"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
     </linearGradient>
   </defs>
-  <rect x="64" y="576" width="1152" height="36" rx="10.6667" fill="url(#dangerGrad)" opacity="0.7" />
-  <text x="64" y="684" font-size="23.4667" fill="#4caf50">Safe</text>
-  <text x="1162.6667" y="684" font-size="23.4667" fill="#f44336" text-anchor="end">Destructive</text>
-  <rect x="64" y="144" width="256" height="378" fill="#e8f5e9" stroke="#4caf50" stroke-width="4.2667" rx="17.0667" />
-  <text x="192" y="223.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#2e7d32">commit</text>
-  <text x="192" y="277.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#2e7d32">--amend</text>
-  <text x="192" y="349.2" text-anchor="middle" font-size="23.4667" fill="#555">Fixes last</text>
-  <text x="192" y="399.6" text-anchor="middle" font-size="23.4667" fill="#555">commit only</text>
-  <text x="192" y="486" text-anchor="middle" font-size="23.4667" fill="#4caf50">● Low risk</text>
-  <rect x="362.6667" y="144" width="256" height="378" fill="#e3f2fd" stroke="#1976d2" stroke-width="4.2667" rx="17.0667" />
-  <text x="490.6667" y="223.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#1565c0">rebase -i</text>
-  <text x="490.6667" y="313.2" text-anchor="middle" font-size="23.4667" fill="#555">Rewrite multiple</text>
-  <text x="490.6667" y="363.6" text-anchor="middle" font-size="23.4667" fill="#555">past commits</text>
-  <text x="490.6667" y="486" text-anchor="middle" font-size="23.4667" fill="#1976d2">● Medium risk</text>
-  <rect x="661.3333" y="144" width="256" height="378" fill="#fff3e0" stroke="#f57c00" stroke-width="4.2667" rx="17.0667" />
-  <text x="789.3333" y="223.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#e65100">filter-branch</text>
-  <text x="789.3333" y="313.2" text-anchor="middle" font-size="23.4667" fill="#555">Rewrites entire</text>
-  <text x="789.3333" y="363.6" text-anchor="middle" font-size="23.4667" fill="#555">repo history</text>
-  <text x="789.3333" y="486" text-anchor="middle" font-size="23.4667" fill="#f57c00">● High risk</text>
-  <rect x="960" y="144" width="256" height="378" fill="#ffebee" stroke="#d32f2f" stroke-width="4.2667" rx="17.0667" />
-  <text x="1088" y="223.2" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#b71c1c">reset --hard</text>
-  <text x="1088" y="313.2" text-anchor="middle" font-size="23.4667" fill="#555">Discards commits</text>
-  <text x="1088" y="363.6" text-anchor="middle" font-size="23.4667" fill="#555">and changes</text>
-  <text x="1088" y="486" text-anchor="middle" font-size="23.4667" fill="#d32f2f">● Destructive</text>
+  <rect x="64" y="560" width="1152" height="36" rx="10" fill="url(#dangerGrad)" opacity="0.7"/>
+  <text x="64" y="640" font-size="18" fill="#4caf50">Safe</text>
+  <text x="1152" y="640" font-size="18" fill="#f44336" text-anchor="end">Destructive</text>
+  <!-- commit --amend -->
+  <rect x="64" y="132" width="256" height="380" fill="#e8f5e9" stroke="#4caf50" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="192" y="212" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">commit</text>
+  <text x="192" y="256" text-anchor="middle" font-size="20" font-weight="bold" fill="#2e7d32">--amend</text>
+  <text x="192" y="330" text-anchor="middle" font-size="18" fill="#555">Fixes last</text>
+  <text x="192" y="370" text-anchor="middle" font-size="18" fill="#555">commit only</text>
+  <text x="192" y="450" text-anchor="middle" font-size="18" fill="#4caf50">● Low risk</text>
+  <!-- rebase -i -->
+  <rect x="363" y="132" width="256" height="380" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="491" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">rebase -i</text>
+  <text x="491" y="320" text-anchor="middle" font-size="18" fill="#555">Rewrite multiple</text>
+  <text x="491" y="358" text-anchor="middle" font-size="18" fill="#555">past commits</text>
+  <text x="491" y="450" text-anchor="middle" font-size="18" fill="#1976d2">● Medium risk</text>
+  <!-- filter-branch -->
+  <rect x="661" y="132" width="256" height="380" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="789" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">filter-branch</text>
+  <text x="789" y="320" text-anchor="middle" font-size="18" fill="#555">Rewrites entire</text>
+  <text x="789" y="358" text-anchor="middle" font-size="18" fill="#555">repo history</text>
+  <text x="789" y="450" text-anchor="middle" font-size="18" fill="#f57c00">● High risk</text>
+  <!-- reset --hard -->
+  <rect x="960" y="132" width="256" height="380" fill="#ffebee" stroke="#c62828" stroke-width="4" rx="16" filter="url(#shadow)"/>
+  <text x="1088" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#b71c1c">reset --hard</text>
+  <text x="1088" y="320" text-anchor="middle" font-size="18" fill="#555">Discards commits</text>
+  <text x="1088" y="358" text-anchor="middle" font-size="18" fill="#555">and changes</text>
+  <text x="1088" y="450" text-anchor="middle" font-size="18" fill="#c62828">● Destructive</text>
 </svg>

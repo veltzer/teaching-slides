@@ -1,21 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <circle cx="640" cy="360" r="284.4444" fill="none" stroke="#666" stroke-width="5.6889" />
-  <circle cx="640" cy="144" r="71.1111" fill="#ffecb3" stroke="#f57f17" />
-  <text x="640" y="164.16" text-anchor="middle" font-size="28.4444">Plan</text>
-  <circle cx="924.4444" cy="360" r="71.1111" fill="#c8e6c9" stroke="#388e3c" />
-  <text x="924.4444" y="380.16" text-anchor="middle" font-size="28.4444">Build</text>
-  <circle cx="640" cy="576" r="71.1111" fill="#bbdefb" stroke="#1976d2" />
-  <text x="640" y="596.16" text-anchor="middle" font-size="28.4444">Test</text>
-  <circle cx="355.5556" cy="360" r="71.1111" fill="#f8bbd9" stroke="#c2185b" />
-  <text x="355.5556" y="380.16" text-anchor="middle" font-size="28.4444">Refine</text>
-  <path d="M 682.6667 201.6 Q 853.3333 259.2 881.7778 316.8" fill="none" stroke="#666" stroke-width="5.6889" marker-end="url(#arrowhead)" />
-  <path d="M 881.7778 403.2 Q 796.4444 518.4 682.6667 532.8" fill="none" stroke="#666" stroke-width="5.6889" marker-end="url(#arrowhead)" />
-  <path d="M 597.3333 532.8 Q 426.6667 518.4 398.2222 403.2" fill="none" stroke="#666" stroke-width="5.6889" marker-end="url(#arrowhead)" />
-  <path d="M 398.2222 316.8 Q 426.6667 259.2 597.3333 201.6" fill="none" stroke="#666" stroke-width="5.6889" marker-end="url(#arrowhead)" />
   <defs>
-    <marker id="arrowhead" markerWidth="28.4444" markerHeight="20.16" refX="25.6" refY="10.08" orient="auto">
-      <polygon points="0,28.8 9.9556,0" fill="#666" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="86.4" text-anchor="middle" font-size="39.8222" font-weight="bold">AI-Driven Iterative Development</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" fill="#1565c0" font-size="28" font-weight="bold" font-family="Arial, sans-serif">AI-Driven Iterative Development</text>
+  <!-- Circular layout: Plan top, Build right, Test bottom, Refine left -->
+  <circle cx="640" cy="340" r="290" fill="none" stroke="#e0e0e0" stroke-width="3"/>
+  <circle cx="640" cy="100" r="90" fill="#fff3e0" stroke="#fb8c00" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="88" text-anchor="middle" fill="#e65100" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Plan</text>
+  <text x="640" y="118" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">AI clarifies</text>
+  <circle cx="930" cy="340" r="90" fill="#e8f5e9" stroke="#43a047" stroke-width="3" filter="url(#shadow)"/>
+  <text x="930" y="328" text-anchor="middle" fill="#2e7d32" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Build</text>
+  <text x="930" y="358" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">AI codes</text>
+  <circle cx="640" cy="580" r="90" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="568" text-anchor="middle" fill="#1565c0" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Test</text>
+  <text x="640" y="598" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">AI validates</text>
+  <circle cx="350" cy="340" r="90" fill="#fce4ec" stroke="#e91e63" stroke-width="3" filter="url(#shadow)"/>
+  <text x="350" y="328" text-anchor="middle" fill="#880e4f" font-size="20" font-weight="bold" font-family="Arial, sans-serif">Refine</text>
+  <text x="350" y="358" text-anchor="middle" fill="#555" font-size="14" font-family="Arial, sans-serif">AI improves</text>
+  <!-- Arrows clockwise -->
+  <path d="M700 175 Q820 230 860 275" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M908 430 Q868 520 720 568" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M562 566 Q440 530 398 430" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <path d="M372 250 Q462 170 580 138" fill="none" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- Center text -->
+  <text x="640" y="328" text-anchor="middle" fill="#888" font-size="15" font-family="Arial, sans-serif">Continuous</text>
+  <text x="640" y="352" text-anchor="middle" fill="#888" font-size="15" font-family="Arial, sans-serif">AI feedback</text>
+  <text x="640" y="376" text-anchor="middle" fill="#888" font-size="15" font-family="Arial, sans-serif">loop</text>
 </svg>

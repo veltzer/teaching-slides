@@ -1,14 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="108" width="256" height="144" fill="#4CAF50" rx="16" />
-  <text x="288" y="198" text-anchor="middle" fill="white">must</text>
-  <text x="288" y="324" text-anchor="middle">AND + Score</text>
-  <rect x="480" y="108" width="256" height="144" fill="#2196F3" rx="16" />
-  <text x="608" y="198" text-anchor="middle" fill="white">should</text>
-  <text x="608" y="324" text-anchor="middle">OR + Score</text>
-  <rect x="800" y="108" width="256" height="144" fill="#FF9800" rx="16" />
-  <text x="928" y="198" text-anchor="middle" fill="white">filter</text>
-  <text x="928" y="324" text-anchor="middle">AND No Score</text>
-  <rect x="480" y="432" width="256" height="144" fill="#F44336" rx="16" />
-  <text x="608" y="522" text-anchor="middle" fill="white">must_not</text>
-  <text x="608" y="630" text-anchor="middle">NOT</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Bool Query Logic</text>
+  <!-- Four clauses -->
+  <rect x="80" y="100" width="320" height="160" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="240" y="170" text-anchor="middle" font-size="30" font-weight="bold" fill="#2e7d32">must</text>
+  <text x="240" y="220" text-anchor="middle" font-size="18" fill="#555555">AND + affects score</text>
+  <rect x="480" y="100" width="320" height="160" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="170" text-anchor="middle" font-size="30" font-weight="bold" fill="#1565c0">should</text>
+  <text x="640" y="220" text-anchor="middle" font-size="18" fill="#555555">OR + boosts score</text>
+  <rect x="880" y="100" width="320" height="160" rx="14" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1040" y="170" text-anchor="middle" font-size="30" font-weight="bold" fill="#795548">filter</text>
+  <text x="1040" y="220" text-anchor="middle" font-size="18" fill="#555555">AND, no scoring, cached</text>
+  <rect x="480" y="380" width="320" height="160" rx="14" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="450" text-anchor="middle" font-size="30" font-weight="bold" fill="#e53935">must_not</text>
+  <text x="640" y="500" text-anchor="middle" font-size="18" fill="#555555">NOT - excludes, cached</text>
+  <!-- Note -->
+  <rect x="80" y="590" width="1120" height="80" rx="8" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="622" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">Use filter for structured data (dates, status, IDs) - it's cached and faster</text>
+  <text x="640" y="654" text-anchor="middle" font-size="16" fill="#555555">Use must/should for full-text search where relevance scoring matters</text>
 </svg>

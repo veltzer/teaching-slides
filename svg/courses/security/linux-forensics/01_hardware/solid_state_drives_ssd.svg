@@ -1,30 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
-  <rect x="60.9524" y="53.3333" width="1158.0952" height="640" rx="16" fill="#f0f4f8" stroke="#333" stroke-width="4" />
-  <rect x="121.9048" y="93.3333" width="1036.1905" height="120" rx="10.6667" fill="#e3f2fd" stroke="#333" stroke-width="4" />
-  <text x="640" y="168" text-anchor="middle" font-size="37.3333" fill="#222">SSD Controller</text>
-  <text x="121.9048" y="280" font-size="34.6667" fill="#555">NAND Flash Chips</text>
-  <rect x="121.9048" y="306.6667" width="304.7619" height="320" rx="10.6667" fill="#fff" stroke="#333" stroke-width="4" />
-  <text x="274.2857" y="360" text-anchor="middle" font-size="32" fill="#222">Block</text>
-  <rect x="152.381" y="373.3333" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="274.2857" y="413.3333" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="152.381" y="440" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="274.2857" y="480" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="152.381" y="506.6667" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="274.2857" y="546.6667" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="487.619" y="306.6667" width="304.7619" height="320" rx="10.6667" fill="#fff" stroke="#333" stroke-width="4" />
-  <text x="640" y="360" text-anchor="middle" font-size="32" fill="#222">Block</text>
-  <rect x="518.0952" y="373.3333" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="640" y="413.3333" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="518.0952" y="440" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="640" y="480" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="518.0952" y="506.6667" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="640" y="546.6667" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="853.3333" y="306.6667" width="304.7619" height="320" rx="10.6667" fill="#fff" stroke="#333" stroke-width="4" />
-  <text x="1005.7143" y="360" text-anchor="middle" font-size="32" fill="#222">Block</text>
-  <rect x="883.8095" y="373.3333" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="1005.7143" y="413.3333" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="883.8095" y="440" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="1005.7143" y="480" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
-  <rect x="883.8095" y="506.6667" width="243.8095" height="58.6667" rx="5.3333" fill="#e8f5e9" stroke="#aaa" stroke-width="2.6667" />
-  <text x="1005.7143" y="546.6667" text-anchor="middle" font-size="29.3333" fill="#333">Page</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- SSD controller at top -->
+  <rect x="60" y="30" width="1160" height="100" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="90" text-anchor="middle" font-size="36" font-weight="bold" fill="#ffffff">SSD Controller</text>
+
+  <!-- NAND flash label -->
+  <text x="120" y="175" font-size="30" fill="#555555">NAND Flash Chips</text>
+
+  <!-- Three blocks with pages -->
+  <rect x="120" y="200" width="310" height="330" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="275" y="248" text-anchor="middle" font-size="28" fill="#333333">Block</text>
+  <rect x="152" y="265" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="275" y="303" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="152" y="338" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="275" y="376" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="152" y="411" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="275" y="449" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+
+  <rect x="485" y="200" width="310" height="330" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="248" text-anchor="middle" font-size="28" fill="#333333">Block</text>
+  <rect x="517" y="265" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="640" y="303" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="517" y="338" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="640" y="376" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="517" y="411" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="640" y="449" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+
+  <rect x="850" y="200" width="310" height="330" rx="12" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1005" y="248" text-anchor="middle" font-size="28" fill="#333333">Block</text>
+  <rect x="882" y="265" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="1005" y="303" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="882" y="338" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="1005" y="376" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+  <rect x="882" y="411" width="246" height="60" rx="6" fill="#e3f2fd" stroke="#64b5f6" stroke-width="2"/>
+  <text x="1005" y="449" text-anchor="middle" font-size="24" fill="#333333">Page</text>
+
+  <!-- Notes -->
+  <rect x="120" y="560" width="1040" height="100" rx="10" fill="url(#grad-surface)" stroke="#64b5f6" stroke-width="2"/>
+  <text x="640" y="608" text-anchor="middle" font-size="20" fill="#333333">Write per page | Erase per block | Wear leveling managed by controller</text>
+  <text x="640" y="640" text-anchor="middle" font-size="18" fill="#555555">TRIM command marks freed pages | Forensic challenge: data may persist until reuse</text>
 </svg>

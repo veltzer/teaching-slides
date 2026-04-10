@@ -1,11 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="144" width="384" height="172.8" fill="#4CAF50" rx="14.4" />
-  <text x="352" y="244.8" text-anchor="middle" fill="white">Metrics</text>
-  <text x="352" y="403.2" text-anchor="middle">Calculate values</text>
-  <rect x="736" y="144" width="384" height="172.8" fill="#2196F3" rx="14.4" />
-  <text x="928" y="244.8" text-anchor="middle" fill="white">Buckets</text>
-  <text x="928" y="403.2" text-anchor="middle">Group documents</text>
-  <rect x="448" y="489.6" width="384" height="172.8" fill="#FF9800" rx="14.4" />
-  <text x="640" y="590.4" text-anchor="middle" fill="white">Pipeline</text>
-  <text x="640" y="720" text-anchor="middle">Process results</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Aggregation Types</text>
+  <!-- Metrics -->
+  <rect x="80" y="90" width="480" height="190" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="320" y="162" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">Metrics</text>
+  <text x="320" y="204" text-anchor="middle" font-size="17" fill="#555555">Calculate values from docs</text>
+  <text x="320" y="232" text-anchor="middle" font-size="16" fill="#888888">avg, min, max, sum, count, percentiles</text>
+  <!-- Buckets -->
+  <rect x="720" y="90" width="480" height="190" rx="12" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="960" y="162" text-anchor="middle" font-size="26" font-weight="bold" fill="#1565c0">Buckets</text>
+  <text x="960" y="204" text-anchor="middle" font-size="17" fill="#555555">Group documents</text>
+  <text x="960" y="232" text-anchor="middle" font-size="16" fill="#888888">terms, range, date_histogram, filters</text>
+  <!-- Pipeline -->
+  <rect x="400" y="370" width="480" height="190" rx="12" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="442" text-anchor="middle" font-size="26" font-weight="bold" fill="#795548">Pipeline</text>
+  <text x="640" y="484" text-anchor="middle" font-size="17" fill="#555555">Process aggregation results</text>
+  <text x="640" y="512" text-anchor="middle" font-size="16" fill="#888888">moving_avg, derivative, cumulative_sum</text>
+  <!-- Arrows -->
+  <line x1="320" y1="280" x2="500" y2="370" stroke="#555555" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <line x1="960" y1="280" x2="780" y2="370" stroke="#555555" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+  <!-- Note -->
+  <rect x="80" y="604" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="638" text-anchor="middle" font-size="16" fill="#1565c0">Aggs can be nested: bucket aggs can contain metric aggs for per-bucket statistics</text>
 </svg>

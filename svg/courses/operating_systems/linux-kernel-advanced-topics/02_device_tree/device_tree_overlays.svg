@@ -1,16 +1,34 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="160" y="432" width="960" height="144" fill="#4169E1" stroke="black" />
-  <text x="640" y="516" text-anchor="middle" fill="white">Base Device Tree</text>
-  <rect x="320" y="240" width="288" height="144" fill="#32CD32" stroke="black" />
-  <text x="464" y="324" text-anchor="middle">Overlay 1</text>
-  <rect x="672" y="240" width="288" height="144" fill="#FFD700" stroke="black" />
-  <text x="816" y="324" text-anchor="middle">Overlay 2</text>
-  <line x1="464" y1="384" x2="464" y2="432" stroke="black" stroke-width="4.8" marker-end="url(#arr2)" />
-  <line x1="816" y1="384" x2="816" y2="432" stroke="black" stroke-width="4.8" marker-end="url(#arr2)" />
-  <text x="640" y="648" text-anchor="middle">Runtime Configuration</text>
   <defs>
-    <marker id="arr2" markerWidth="32" markerHeight="24" refX="0" refY="7.2" orient="auto">
-      <polygon points="0,24 9.6,0" fill="black" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Overlays -->
+  <rect x="320" y="220" width="290" height="138" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="465" y="302" text-anchor="middle" font-size="22" fill="#1b5e20">Overlay 1</text>
+  <rect x="670" y="220" width="290" height="138" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="815" y="302" text-anchor="middle" font-size="22" fill="#e65100">Overlay 2</text>
+  <!-- Arrows to base -->
+  <line x1="465" y1="358" x2="465" y2="428" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="815" y1="358" x2="815" y2="428" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Base Device Tree -->
+  <rect x="160" y="428" width="960" height="138" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="640" y="510" text-anchor="middle" font-size="24" fill="#ffffff">Base Device Tree</text>
+  <text x="640" y="618" text-anchor="middle" font-size="19" fill="#777777">Runtime Configuration</text>
 </svg>

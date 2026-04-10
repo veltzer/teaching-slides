@@ -1,24 +1,40 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrowd2_02_right" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#1565c0" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
     </marker>
-    <marker id="arrowd2_02_left" markerWidth="21.3333" markerHeight="36" refX="0" refY="10.8" orient="auto">
-      <path d="M 19.2 0 L 19.2 21.6 L 0 10.8 z" fill="#c62828" />
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="64" y="144" width="426.6667" height="432" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="277.3333" y="234" text-anchor="middle" font-size="25.6" font-weight="bold">Working Directory</text>
-  <rect x="117.3333" y="280.8" width="320" height="86.4" fill="#fff" stroke="#90caf9" stroke-width="2.1333" rx="6.4" />
-  <text x="277.3333" y="342" text-anchor="middle" font-size="23.4667" fill="#555">file1.js (modified)</text>
-  <rect x="117.3333" y="388.8" width="320" height="86.4" fill="#fff" stroke="#90caf9" stroke-width="2.1333" rx="6.4" />
-  <text x="277.3333" y="450" text-anchor="middle" font-size="23.4667" fill="#555">file2.css (modified)</text>
-  <rect x="789.3333" y="144" width="426.6667" height="432" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1002.6667" y="234" text-anchor="middle" font-size="25.6" font-weight="bold">Staging Area</text>
-  <rect x="842.6667" y="280.8" width="320" height="86.4" fill="#fff" stroke="#ffb74d" stroke-width="2.1333" rx="6.4" />
-  <text x="1002.6667" y="342" text-anchor="middle" font-size="23.4667" fill="#555">file1.js (staged)</text>
-  <line x1="490.6667" y1="306" x2="782.9333" y2="306" stroke="#1565c0" stroke-width="4.2667" marker-end="url(#arrowd2_02_right)" />
-  <text x="635.7333" y="280.8" text-anchor="middle" font-size="25.6" font-weight="bold" fill="#1565c0">git add</text>
-  <line x1="789.3333" y1="468" x2="497.0667" y2="468" stroke="#c62828" stroke-width="4.2667" marker-end="url(#arrowd2_02_left)" />
-  <text x="635.7333" y="547.2" text-anchor="middle" font-size="23.4667" font-weight="bold" fill="#c62828">git restore --staged</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Working Directory panel -->
+  <rect x="64" y="144" width="427" height="432" fill="#e3f2fd" stroke="#1e88e5" stroke-width="4" rx="10" filter="url(#shadow)"/>
+  <text x="277" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">Working Directory</text>
+  <rect x="117" y="280" width="320" height="86" fill="#ffffff" stroke="#90caf9" stroke-width="2" rx="6"/>
+  <text x="277" y="336" text-anchor="middle" font-size="18" fill="#555">file1.js (modified)</text>
+  <rect x="117" y="388" width="320" height="86" fill="#ffffff" stroke="#90caf9" stroke-width="2" rx="6"/>
+  <text x="277" y="444" text-anchor="middle" font-size="18" fill="#555">file2.css (modified)</text>
+  <!-- Staging Area panel -->
+  <rect x="789" y="144" width="427" height="432" fill="#fff3e0" stroke="#f57c00" stroke-width="4" rx="10" filter="url(#shadow)"/>
+  <text x="1003" y="234" text-anchor="middle" font-size="20" font-weight="bold" fill="#e65100">Staging Area</text>
+  <rect x="843" y="280" width="320" height="86" fill="#ffffff" stroke="#ffb74d" stroke-width="2" rx="6"/>
+  <text x="1003" y="336" text-anchor="middle" font-size="18" fill="#555">file1.js (staged)</text>
+  <!-- Forward arrow: git add -->
+  <line x1="491" y1="306" x2="783" y2="306" stroke="#1565c0" stroke-width="4" marker-end="url(#arrow-accent)"/>
+  <text x="636" y="284" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">git add</text>
+  <!-- Back arrow: git restore --staged -->
+  <line x1="789" y1="468" x2="497" y2="468" stroke="#c62828" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="636" y="544" text-anchor="middle" font-size="18" font-weight="bold" fill="#c62828">git restore --staged</text>
 </svg>

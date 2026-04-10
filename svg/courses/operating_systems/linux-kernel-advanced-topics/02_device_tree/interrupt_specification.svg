@@ -1,17 +1,36 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="480" y="48" width="320" height="96" fill="#FF6347" stroke="black" />
-  <text x="640" y="108" text-anchor="middle">Device</text>
-  <rect x="480" y="576" width="320" height="96" fill="#4169E1" stroke="black" />
-  <text x="640" y="636" text-anchor="middle" fill="white">GIC</text>
-  <line x1="640" y1="144" x2="640" y2="576" stroke="black" stroke-width="4.8" marker-end="url(#arrowh)" />
-  <text x="704" y="336" text-anchor="start">IRQ 42</text>
-  <rect x="64" y="288" width="320" height="72" fill="#FFE4B5" stroke="black" />
-  <text x="224" y="336" text-anchor="middle" font-size="28.8">interrupts</text>
-  <rect x="896" y="288" width="320" height="72" fill="#FFE4B5" stroke="black" />
-  <text x="1056" y="336" text-anchor="middle" font-size="28.8">interrupt-parent</text>
   <defs>
-    <marker id="arrowh" markerWidth="32" markerHeight="24" refX="0" refY="7.2" orient="auto">
-      <polygon points="0,24 9.6,0" fill="black" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Device top -->
+  <rect x="480" y="50" width="320" height="92" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="105" text-anchor="middle" font-size="22" fill="#b71c1c">Device</text>
+  <!-- Line + IRQ label -->
+  <line x1="640" y1="142" x2="640" y2="550" stroke="#555555" stroke-width="3.5" marker-end="url(#arrow)"/>
+  <text x="695" y="335" font-size="20" fill="#555555">IRQ 42</text>
+  <!-- Side boxes -->
+  <rect x="60" y="280" width="310" height="68" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="215" y="322" text-anchor="middle" font-size="22" fill="#e65100">interrupts</text>
+  <rect x="890" y="280" width="310" height="68" fill="#fff8e1" stroke="#f57c00" stroke-width="2" rx="6" filter="url(#shadow)"/>
+  <text x="1045" y="322" text-anchor="middle" font-size="22" fill="#e65100">interrupt-parent</text>
+  <!-- GIC bottom -->
+  <rect x="480" y="550" width="320" height="92" fill="url(#grad-accent)" stroke="#1565c0" stroke-width="2" rx="8" filter="url(#shadow)"/>
+  <text x="640" y="605" text-anchor="middle" font-size="22" fill="#ffffff">GIC</text>
 </svg>

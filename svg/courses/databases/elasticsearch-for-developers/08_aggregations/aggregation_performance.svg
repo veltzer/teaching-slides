@@ -1,10 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="108" text-anchor="middle" font-weight="bold">Aggregation Cost</text>
-  <rect x="160" y="180" width="256" height="144" fill="#4CAF50" rx="16" />
-  <text x="288" y="270" text-anchor="middle" fill="white" font-size="38.4">Metrics</text>
-  <rect x="480" y="180" width="256" height="216" fill="#FFC107" rx="16" />
-  <text x="608" y="306" text-anchor="middle" fill="white" font-size="38.4">Terms</text>
-  <rect x="800" y="180" width="320" height="288" fill="#FF5722" rx="16" />
-  <text x="960" y="342" text-anchor="middle" fill="white" font-size="38.4">Cardinality</text>
-  <text x="640" y="576" text-anchor="middle">Low → High Cost</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Aggregation Cost (Low to High)</text>
+  <!-- Three bars of increasing height -->
+  <rect x="160" y="220" width="280" height="160" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="300" y="306" text-anchor="middle" font-size="28" font-weight="bold" fill="#2e7d32">Metrics</text>
+  <text x="300" y="346" text-anchor="middle" font-size="17" fill="#555555">avg, min, max, sum</text>
+  <text x="300" y="430" text-anchor="middle" font-size="16" fill="#2e7d32" font-weight="bold">Cheap - O(1) per shard</text>
+  <rect x="500" y="160" width="280" height="220" rx="14" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="640" y="260" text-anchor="middle" font-size="28" font-weight="bold" fill="#795548">Terms</text>
+  <text x="640" y="300" text-anchor="middle" font-size="17" fill="#555555">top-N buckets</text>
+  <text x="640" y="430" text-anchor="middle" font-size="16" fill="#795548" font-weight="bold">Medium - scales with cardinality</text>
+  <rect x="840" y="80" width="300" height="300" rx="14" fill="#fce4ec" stroke="#e53935" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="990" y="200" text-anchor="middle" font-size="28" font-weight="bold" fill="#e53935">Cardinality</text>
+  <text x="990" y="244" text-anchor="middle" font-size="17" fill="#555555">unique count (HLL)</text>
+  <text x="990" y="430" text-anchor="middle" font-size="16" fill="#e53935" font-weight="bold">Expensive - HyperLogLog algorithm</text>
+  <!-- Arrow -->
+  <line x1="140" y1="510" x2="1160" y2="510" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="640" y="550" text-anchor="middle" font-size="18" fill="#555555">Low Cost &#x2192; High Cost</text>
+  <!-- Note -->
+  <rect x="80" y="588" width="1120" height="56" rx="6" fill="#f2f6ff" stroke="#bbdefb" stroke-width="1"/>
+  <text x="640" y="622" text-anchor="middle" font-size="16" fill="#1565c0">Use precision_threshold on cardinality aggs. Enable doc_values on fields used in aggs.</text>
 </svg>

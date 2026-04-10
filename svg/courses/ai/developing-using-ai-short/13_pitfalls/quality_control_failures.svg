@@ -1,14 +1,52 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="142.2222" y="72" width="995.5556" height="576" fill="#ffebee" stroke="#c62828" rx="28.4444" />
-  <text x="640" y="162" text-anchor="middle" font-size="45.5111" font-weight="bold">Quality Control Breakdown Points</text>
-  <rect x="227.5556" y="252" width="284.4444" height="108" fill="#ffcdd2" stroke="#d32f2f" rx="14.2222" />
-  <text x="369.7778" y="324" text-anchor="middle" font-size="28.4444">Blind Acceptance</text>
-  <rect x="568.8889" y="252" width="284.4444" height="108" fill="#ffcdd2" stroke="#d32f2f" rx="14.2222" />
-  <text x="711.1111" y="324" text-anchor="middle" font-size="28.4444">Insufficient Testing</text>
-  <rect x="910.2222" y="252" width="284.4444" height="108" fill="#ffcdd2" stroke="#d32f2f" rx="14.2222" />
-  <text x="1052.4444" y="324" text-anchor="middle" font-size="28.4444">No Code Review</text>
-  <rect x="398.2222" y="432" width="284.4444" height="108" fill="#ffcdd2" stroke="#d32f2f" rx="14.2222" />
-  <text x="540.4444" y="504" text-anchor="middle" font-size="28.4444">Security Oversight</text>
-  <rect x="739.5556" y="432" width="284.4444" height="108" fill="#ffcdd2" stroke="#d32f2f" rx="14.2222" />
-  <text x="881.7778" y="504" text-anchor="middle" font-size="28.4444">Performance Neglect</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Header -->
+  <rect x="80" y="40" width="1120" height="60" rx="10" fill="#c62828" filter="url(#shadow)"/>
+  <text x="640" y="79" text-anchor="middle" fill="white" font-size="26" font-weight="bold" font-family="Arial, sans-serif">Quality Control Breakdown Points</text>
+  <!-- 5 red warning boxes -->
+  <rect x="80" y="140" width="360" height="170" rx="12" fill="#ffcdd2" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="80" y="140" font-size="1" fill="none"/>
+  <text x="260" y="212" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Blind Acceptance</text>
+  <text x="260" y="252" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Merging AI code</text>
+  <text x="260" y="280" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">without reading it</text>
+  <rect x="480" y="140" width="360" height="170" rx="12" fill="#ffcdd2" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="660" y="212" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Insufficient Testing</text>
+  <text x="660" y="252" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Skipping tests because</text>
+  <text x="660" y="280" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">AI "looks right"</text>
+  <rect x="880" y="140" width="320" height="170" rx="12" fill="#ffcdd2" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1040" y="212" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">No Code Review</text>
+  <text x="1040" y="252" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Bypassing peer</text>
+  <text x="1040" y="280" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">review process</text>
+  <rect x="180" y="350" width="380" height="170" rx="12" fill="#ffcdd2" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="370" y="422" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Security Oversight</text>
+  <text x="370" y="462" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">Trusting AI with</text>
+  <text x="370" y="490" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">auth &amp; permissions code</text>
+  <rect x="620" y="350" width="480" height="170" rx="12" fill="#ffcdd2" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="422" text-anchor="middle" fill="#b71c1c" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Performance Neglect</text>
+  <text x="860" y="462" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">AI optimises for correctness,</text>
+  <text x="860" y="490" text-anchor="middle" fill="#555" font-size="15" font-family="Arial, sans-serif">not always for speed</text>
+  <!-- Solution footer -->
+  <rect x="80" y="555" width="1120" height="120" rx="12" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="596" text-anchor="middle" fill="white" font-size="22" font-weight="bold" font-family="Arial, sans-serif">Prevention Strategy</text>
+  <text x="640" y="630" text-anchor="middle" fill="#bbdefb" font-size="16" font-family="Arial, sans-serif">Maintain gates: code review + automated tests + security scan — always</text>
+  <text x="640" y="660" text-anchor="middle" fill="#bbdefb" font-size="16" font-family="Arial, sans-serif">AI speed gain must not come at the cost of quality standards</text>
 </svg>

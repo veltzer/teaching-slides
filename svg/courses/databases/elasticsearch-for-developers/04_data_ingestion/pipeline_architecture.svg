@@ -1,18 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <rect x="96" y="288" width="192" height="144" fill="#4CAF50" rx="16" />
-  <text x="192" y="378" text-anchor="middle" fill="white" font-size="38.4">Doc</text>
-  <rect x="384" y="288" width="192" height="144" fill="#2196F3" rx="16" />
-  <text x="480" y="378" text-anchor="middle" fill="white" font-size="38.4">Proc 1</text>
-  <rect x="672" y="288" width="192" height="144" fill="#2196F3" rx="16" />
-  <text x="768" y="378" text-anchor="middle" fill="white" font-size="38.4">Proc 2</text>
-  <rect x="960" y="288" width="192" height="144" fill="#FF9800" rx="16" />
-  <text x="1056" y="378" text-anchor="middle" fill="white" font-size="38.4">Index</text>
-  <path d="M 288 360 L 384 360" stroke="#333" stroke-width="6.4" marker-end="url(#arr)" />
-  <path d="M 576 360 L 672 360" stroke="#333" stroke-width="6.4" marker-end="url(#arr)" />
-  <path d="M 864 360 L 960 360" stroke="#333" stroke-width="6.4" marker-end="url(#arr)" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="32" markerHeight="25.2" refX="28.8" refY="12.6" orient="auto">
-      <polygon points="0,36 11.2,0" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <text x="640" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Ingest Pipeline Architecture</text>
+  <!-- Stages -->
+  <rect x="60" y="240" width="220" height="160" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="170" y="328" text-anchor="middle" font-size="30" font-weight="bold" fill="#2e7d32">Doc</text>
+  <text x="170" y="370" text-anchor="middle" font-size="16" fill="#555555">Input document</text>
+  <line x1="280" y1="320" x2="336" y2="320" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="340" y="240" width="240" height="160" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="460" y="316" text-anchor="middle" font-size="24" font-weight="bold" fill="#1565c0">Proc 1</text>
+  <text x="460" y="352" text-anchor="middle" font-size="15" fill="#555555">grok, date,</text>
+  <text x="460" y="374" text-anchor="middle" font-size="15" fill="#555555">set, rename</text>
+  <line x1="580" y1="320" x2="636" y2="320" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="640" y="240" width="240" height="160" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="760" y="316" text-anchor="middle" font-size="24" font-weight="bold" fill="#1565c0">Proc 2</text>
+  <text x="760" y="352" text-anchor="middle" font-size="15" fill="#555555">enrich, convert,</text>
+  <text x="760" y="374" text-anchor="middle" font-size="15" fill="#555555">GeoIP, user-agent</text>
+  <line x1="880" y1="320" x2="936" y2="320" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="940" y="240" width="260" height="160" rx="14" fill="#fff9c4" stroke="#f9a825" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1070" y="316" text-anchor="middle" font-size="24" font-weight="bold" fill="#795548">Index</text>
+  <text x="1070" y="352" text-anchor="middle" font-size="15" fill="#555555">Stored in ES</text>
+  <text x="1070" y="374" text-anchor="middle" font-size="15" fill="#555555">searchable</text>
+  <!-- Note -->
+  <rect x="60" y="460" width="1160" height="80" rx="8" fill="#f2f6ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="640" y="495" text-anchor="middle" font-size="18" fill="#1565c0" font-weight="bold">Ingest Pipelines run on Elasticsearch nodes</text>
+  <text x="640" y="525" text-anchor="middle" font-size="16" fill="#555555">Define with PUT _ingest/pipeline/my-pipeline  |  Each processor handles one transformation</text>
 </svg>

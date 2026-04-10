@@ -1,30 +1,54 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
-  <text x="640" y="64.8" text-anchor="middle" font-size="27.7333" font-weight="bold" fill="#333">eBPF: Safe Kernel Programmability</text>
-  <rect x="42.6667" y="108" width="362.6667" height="252" fill="#e3f2fd" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="224" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">User Space</text>
-  <text x="224" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">C program compiled</text>
-  <text x="224" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">to eBPF bytecode</text>
-  <rect x="458.6667" y="108" width="362.6667" height="252" fill="#fff3e0" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">Verifier + JIT</text>
-  <text x="640" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">Safety checks</text>
-  <text x="640" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">Native compilation</text>
-  <rect x="874.6667" y="108" width="362.6667" height="252" fill="#e8f5e9" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="1056" y="180" text-anchor="middle" font-size="23.4667" font-weight="bold">Kernel Hooks</text>
-  <text x="1056" y="241.2" text-anchor="middle" font-size="21.3333" fill="#666">XDP, tc, kprobes</text>
-  <text x="1056" y="295.2" text-anchor="middle" font-size="21.3333" fill="#666">tracepoints, LSM</text>
-  <line x1="405.3333" y1="234" x2="458.6667" y2="234" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd0_09_ebpf)" />
-  <line x1="821.3333" y1="234" x2="874.6667" y2="234" stroke="#333" stroke-width="4.2667" marker-end="url(#arrowd0_09_ebpf)" />
-  <rect x="362.6667" y="432" width="554.6667" height="180" fill="#f3e5f5" stroke="#333" stroke-width="4.2667" rx="10.6667" />
-  <text x="640" y="504" text-anchor="middle" font-size="23.4667" font-weight="bold">eBPF Maps (shared data)</text>
-  <text x="640" y="565.2" text-anchor="middle" font-size="21.3333" fill="#666">Hash, Array, Ring Buffer, Per-CPU</text>
-  <line x1="224" y1="360" x2="224" y2="522" stroke="#333" stroke-width="3.2" />
-  <line x1="224" y1="522" x2="362.6667" y2="522" stroke="#333" stroke-width="3.2" marker-end="url(#arrowd0_09_ebpf)" />
-  <line x1="1056" y1="360" x2="1056" y2="522" stroke="#333" stroke-width="3.2" />
-  <line x1="1056" y1="522" x2="917.3333" y2="522" stroke="#333" stroke-width="3.2" marker-end="url(#arrowd0_09_ebpf)" />
-  <text x="640" y="691.2" text-anchor="middle" font-size="21.3333" fill="#666">Maps enable data sharing between user space and kernel eBPF programs</text>
   <defs>
-    <marker id="arrowd0_09_ebpf" markerWidth="21.3333" markerHeight="36" refX="19.2" refY="10.8" orient="auto">
-      <path d="M 0 0 L 0 21.6 L 19.2 10.8 z" fill="#333" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Three top boxes -->
+  <rect x="42" y="100" width="366" height="240" fill="#e3f2fd" stroke="#1565c0" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="42" y="100" width="366" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="42" y="140" width="366" height="12" fill="url(#grad-accent)"/>
+  <text x="225" y="136" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">User Space</text>
+  <text x="225" y="212" text-anchor="middle" font-size="18" fill="#555555">C program compiled</text>
+  <text x="225" y="258" text-anchor="middle" font-size="18" fill="#555555">to eBPF bytecode</text>
+  <rect x="460" y="100" width="366" height="240" fill="#fff8e1" stroke="#f57c00" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="460" y="100" width="366" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="460" y="140" width="366" height="12" fill="url(#grad-accent)"/>
+  <text x="643" y="136" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">Verifier + JIT</text>
+  <text x="643" y="212" text-anchor="middle" font-size="18" fill="#555555">Safety checks</text>
+  <text x="643" y="258" text-anchor="middle" font-size="18" fill="#555555">Native compilation</text>
+  <rect x="878" y="100" width="366" height="240" fill="#e8f5e9" stroke="#2e7d32" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <rect x="878" y="100" width="366" height="52" fill="url(#grad-accent)" rx="10"/>
+  <rect x="878" y="140" width="366" height="12" fill="url(#grad-accent)"/>
+  <text x="1061" y="136" text-anchor="middle" font-size="21" font-weight="bold" fill="#ffffff">Kernel Hooks</text>
+  <text x="1061" y="212" text-anchor="middle" font-size="18" fill="#555555">XDP, tc, kprobes</text>
+  <text x="1061" y="258" text-anchor="middle" font-size="18" fill="#555555">tracepoints, LSM</text>
+  <!-- Arrows -->
+  <line x1="408" y1="220" x2="460" y2="220" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="826" y1="220" x2="878" y2="220" stroke="#555555" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Maps box -->
+  <rect x="362" y="422" width="558" height="168" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="3" rx="10" filter="url(#shadow)"/>
+  <text x="641" y="490" text-anchor="middle" font-size="21" font-weight="bold" fill="#4a148c">eBPF Maps (shared data)</text>
+  <text x="641" y="548" text-anchor="middle" font-size="17" fill="#777777">Hash, Array, Ring Buffer, Per-CPU</text>
+  <!-- Lines to maps -->
+  <line x1="225" y1="340" x2="225" y2="505" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="225" y1="505" x2="362" y2="505" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="1061" y1="340" x2="1061" y2="505" stroke="#aaaaaa" stroke-width="1.5"/>
+  <line x1="1061" y1="505" x2="920" y2="505" stroke="#aaaaaa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="640" y="650" text-anchor="middle" font-size="17" fill="#777777">Maps enable data sharing between user space and kernel eBPF programs</text>
 </svg>
