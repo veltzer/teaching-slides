@@ -10,6 +10,12 @@
 
 ---
 
+## Python Exception Hierarchy
+
+![Python Exception Hierarchy](svg/courses/languages/python/advanced-python/04_error_handling/exception_hierarchy.svg)
+
+---
+
 ## Python's Exception Philosophy
 
 ## The EAFP Principle

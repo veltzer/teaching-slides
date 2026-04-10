@@ -2,6 +2,12 @@
 
 ---
 
+## C Compilation Pipeline
+
+![C Compilation Pipeline](svg/courses/languages/c/c-refresher/08_pre_processor/compilation_stages.svg)
+
+---
+
 ## Introduction to the C Preprocessor
 
 - What is the preprocessor?

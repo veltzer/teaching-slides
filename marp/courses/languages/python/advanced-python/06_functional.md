@@ -11,6 +11,12 @@
 
 ---
 
+## map / filter / reduce
+
+![map / filter / reduce](svg/courses/languages/python/advanced-python/06_functional/functional_concepts.svg)
+
+---
+
 ## What is Functional Programming?
 
 ## Core Principles

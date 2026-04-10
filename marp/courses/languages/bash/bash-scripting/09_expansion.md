@@ -1,6 +1,12 @@
 # Expansion: Brace and Comma
 
 ---
+
+## Shell Expansion Order
+
+![Shell Expansion Order](svg/courses/languages/bash/bash-scripting/09_expansion/expansion_order.svg)
+
+---
 ## Brace Expansion
 - Generates arbitrary strings
 - Processed BEFORE variable expansion

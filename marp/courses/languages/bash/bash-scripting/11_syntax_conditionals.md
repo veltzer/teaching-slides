@@ -1,6 +1,12 @@
 # Syntax: Conditionals
 
 ---
+
+## Conditional Flow in Bash
+
+![Conditional Flow in Bash](svg/courses/languages/bash/bash-scripting/11_syntax_conditionals/if_elif_else_flow.svg)
+
+---
 ## The `if` Statement
 
 ```bash

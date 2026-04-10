@@ -9,6 +9,18 @@
 
 ---
 
+## Python Memory Management Levels
+
+![Python Memory Management Levels](svg/courses/languages/python/advanced-python/03_memory_and_garbage_collector/python_memory_management_levels.svg)
+
+---
+
+## Reference Counting
+
+![Reference Counting](svg/courses/languages/python/advanced-python/03_memory_and_garbage_collector/reference_counting.svg)
+
+---
+
 ## Python Memory Management
 
 ## Principles

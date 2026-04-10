@@ -2,6 +2,12 @@
 
 ---
 
+## AT&T vs Intel Syntax
+
+![AT&T vs Intel Syntax](svg/courses/languages/assembly/assembly-programming-using-gas/05_gas_syntax/att_vs_intel_syntax.svg)
+
+---
+
 ## AT&T Syntax vs. Intel Syntax
 
 GAS primarily uses AT&T syntax, which differs from Intel syntax:

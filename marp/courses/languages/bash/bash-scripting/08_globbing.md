@@ -1,6 +1,12 @@
 # Globbing
 
 ---
+
+## Glob Pattern Overview
+
+![Glob Pattern Overview](svg/courses/languages/bash/bash-scripting/08_globbing/glob_pattern_overview.svg)
+
+---
 ## What is Globbing?
 - Pattern matching for filenames
 - Performed by the **shell**, not by commands

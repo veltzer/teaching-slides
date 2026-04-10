@@ -1,6 +1,12 @@
 # The Return Code
 
 ---
+
+## Return Code Reference
+
+![Return Code Reference](svg/courses/languages/bash/bash-scripting/04_return_code/return_code_table.svg)
+
+---
 ## What is a Return Code?
 - Every command that runs produces a return code (exit status)
 - It is an integer from 0 to 255

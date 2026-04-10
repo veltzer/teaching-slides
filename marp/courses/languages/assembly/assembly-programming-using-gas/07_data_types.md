@@ -2,6 +2,12 @@
 
 ---
 
+## Integer Data Type Sizes
+
+![Integer Data Type Sizes](svg/courses/languages/assembly/assembly-programming-using-gas/07_data_types/integer_data_type_sizes.svg)
+
+---
+
 ## Integer Representations
 
 - Byte (8 bits): -128 to 127 or 0 to 255

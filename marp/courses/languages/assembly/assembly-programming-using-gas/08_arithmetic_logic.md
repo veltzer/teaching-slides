@@ -2,6 +2,12 @@
 
 ---
 
+## Arithmetic Operations Overview
+
+![Arithmetic Operations Overview](svg/courses/languages/assembly/assembly-programming-using-gas/08_arithmetic_logic/arithmetic_operations_overview.svg)
+
+---
+
 ## Basic Arithmetic Operations
 
 - `add`: Addition

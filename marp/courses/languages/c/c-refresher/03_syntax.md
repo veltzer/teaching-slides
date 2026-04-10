@@ -1,6 +1,13 @@
 # C Syntax Refresher
 
 ---
+
+## C Program Structure
+
+![C Program Structure](svg/courses/languages/c/c-refresher/03_syntax/c_program_structure.svg)
+
+---
+
 ## Basic Program Structure
 
 A simple C program consists of:
