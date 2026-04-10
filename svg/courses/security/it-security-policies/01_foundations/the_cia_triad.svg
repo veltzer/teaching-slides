@@ -1,16 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="25.6" y="18.9474" width="1228.8" height="682.1053" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.7895" />
-  <text x="640" y="85.2632" text-anchor="middle" font-size="34.1053" font-weight="bold" fill="#333">The CIA Triad</text>
-  <line x1="640" y1="151.5789" x2="256" y2="530.5263" stroke="#4a90e2" stroke-width="3.7895" />
-  <line x1="640" y1="151.5789" x2="1024" y2="530.5263" stroke="#4a90e2" stroke-width="3.7895" />
-  <line x1="256" y1="530.5263" x2="1024" y2="530.5263" stroke="#4a90e2" stroke-width="3.7895" />
-  <rect x="435.2" y="123.1579" width="409.6" height="104.2105" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="640" y="166.7368" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#28a745">CONFIDENTIALITY</text>
-  <text x="640" y="204.6316" text-anchor="middle" font-size="22.7368" fill="#666">(Keep secrets)</text>
-  <rect x="89.6" y="511.5789" width="409.6" height="104.2105" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="3.7895" />
-  <text x="294.4" y="555.1579" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#856404">INTEGRITY</text>
-  <text x="294.4" y="593.0526" text-anchor="middle" font-size="22.7368" fill="#666">(Keep it accurate)</text>
-  <rect x="780.8" y="511.5789" width="409.6" height="104.2105" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="3.7895" />
-  <text x="985.6" y="555.1579" text-anchor="middle" font-size="24.6316" font-weight="bold" fill="#dc3545">AVAILABILITY</text>
-  <text x="985.6" y="593.0526" text-anchor="middle" font-size="22.7368" fill="#666">(Keep it running)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Triangle lines -->
+  <line x1="640" y1="120" x2="240" y2="520" stroke="#1e88e5" stroke-width="3"/>
+  <line x1="640" y1="120" x2="1040" y2="520" stroke="#1e88e5" stroke-width="3"/>
+  <line x1="240" y1="520" x2="1040" y2="520" stroke="#1e88e5" stroke-width="3"/>
+
+  <!-- Confidentiality - top -->
+  <rect x="430" y="92" width="420" height="96" rx="9" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="134" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">CONFIDENTIALITY</text>
+  <text x="640" y="170" text-anchor="middle" font-size="20" fill="#e3f2fd">(Keep secrets)</text>
+
+  <!-- Integrity - bottom left -->
+  <rect x="60" y="495" width="380" height="96" rx="9" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="250" y="537" text-anchor="middle" font-size="24" font-weight="bold" fill="#1565c0">INTEGRITY</text>
+  <text x="250" y="572" text-anchor="middle" font-size="20" fill="#555555">(Keep it accurate)</text>
+
+  <!-- Availability - bottom right -->
+  <rect x="840" y="495" width="380" height="96" rx="9" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="1030" y="537" text-anchor="middle" font-size="24" font-weight="bold" fill="#1565c0">AVAILABILITY</text>
+  <text x="1030" y="572" text-anchor="middle" font-size="20" fill="#555555">(Keep it running)</text>
 </svg>

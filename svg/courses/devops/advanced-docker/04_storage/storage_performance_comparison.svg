@@ -1,19 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="56.25" text-anchor="middle" font-size="36" font-weight="bold" fill="#333">Storage Performance Comparison</text>
-  <text x="640" y="101.25" text-anchor="middle" font-size="27" fill="#666">(Sequential Write Throughput)</text>
-  <text x="354.2857" y="180" text-anchor="end" font-size="27" fill="#333">tmpfs (RAM)</text>
-  <rect x="377.1429" y="148.5" width="777.1429" height="49.5" rx="6.75" fill="#d4edda" stroke="#28a745" stroke-width="2.25" />
-  <text x="1177.1429" y="184.5" font-size="24.75" fill="#28a745">~2000 MB/s</text>
-  <text x="354.2857" y="270" text-anchor="end" font-size="27" fill="#333">Bind mount (SSD)</text>
-  <rect x="377.1429" y="238.5" width="466.2857" height="49.5" rx="6.75" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.25" />
-  <text x="868.5714" y="274.5" font-size="24.75" fill="#4a90e2">~1200 MB/s</text>
-  <text x="354.2857" y="360" text-anchor="end" font-size="27" fill="#333">Named volume (SSD)</text>
-  <rect x="377.1429" y="328.5" width="448" height="49.5" rx="6.75" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.25" />
-  <text x="848" y="364.5" font-size="24.75" fill="#4a90e2">~1150 MB/s</text>
-  <text x="354.2857" y="450" text-anchor="end" font-size="27" fill="#333">Container layer</text>
-  <rect x="377.1429" y="418.5" width="310.8571" height="49.5" rx="6.75" fill="#fff3cd" stroke="#ffc107" stroke-width="2.25" />
-  <text x="710.8571" y="454.5" font-size="24.75" fill="#856404">~800 MB/s</text>
-  <text x="354.2857" y="540" text-anchor="end" font-size="27" fill="#333">NFS volume</text>
-  <rect x="377.1429" y="508.5" width="194.2857" height="49.5" rx="6.75" fill="#f8d7da" stroke="#dc3545" stroke-width="2.25" />
-  <text x="594.2857" y="544.5" font-size="24.75" fill="#dc3545">~500 MB/s</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" font-size="32" font-weight="bold" fill="#1565c0">Storage Performance Comparison</text>
+  <text x="640" y="88" text-anchor="middle" font-size="24" fill="#555555">(Sequential Write Throughput)</text>
+  <!-- tmpfs - fastest -->
+  <text x="360" y="158" text-anchor="end" font-size="24" fill="#333333">tmpfs (RAM)</text>
+  <rect x="377" y="130" width="780" height="48" rx="6" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="1172" y="162" font-size="22" fill="#1565c0">~2000 MB/s</text>
+  <!-- Bind mount (SSD) -->
+  <text x="360" y="238" text-anchor="end" font-size="24" fill="#333333">Bind mount (SSD)</text>
+  <rect x="377" y="210" width="470" height="48" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="862" y="242" font-size="22" fill="#1565c0">~1200 MB/s</text>
+  <!-- Named volume (SSD) -->
+  <text x="360" y="318" text-anchor="end" font-size="24" fill="#333333">Named volume (SSD)</text>
+  <rect x="377" y="290" width="452" height="48" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="844" y="322" font-size="22" fill="#1565c0">~1150 MB/s</text>
+  <!-- Container layer -->
+  <text x="360" y="398" text-anchor="end" font-size="24" fill="#333333">Container layer</text>
+  <rect x="377" y="370" width="312" height="48" rx="6" fill="url(#grad-surface)" stroke="#555555" stroke-width="2" filter="url(#shadow)"/>
+  <text x="704" y="402" font-size="22" fill="#555555">~800 MB/s</text>
+  <!-- NFS volume -->
+  <text x="360" y="478" text-anchor="end" font-size="24" fill="#333333">NFS volume</text>
+  <rect x="377" y="450" width="196" height="48" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="588" y="482" font-size="22" fill="#c62828">~500 MB/s</text>
 </svg>

@@ -1,25 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
-  <rect x="19.3939" y="36" width="581.8182" height="324" fill="#f5f5f5" stroke="#999" stroke-width="1.9394" rx="7.7576" />
-  <text x="38.7879" y="108" font-size="25.2121" fill="#222">struct Example {</text>
-  <text x="38.7879" y="172.8" font-size="25.2121" fill="#222">    char  a;  /* 1 byte  */</text>
-  <text x="38.7879" y="237.6" font-size="25.2121" fill="#222">    int   b;  /* 4 bytes */</text>
-  <text x="38.7879" y="302.4" font-size="25.2121" fill="#222">    char  c;  /* 1 byte  */</text>
-  <text x="38.7879" y="360" font-size="25.2121" fill="#222">};</text>
-  <text x="19.3939" y="468" font-size="25.2121" font-weight="bold" fill="#333" font-family="sans-serif">Memory layout (with padding on 64-bit):</text>
-  <rect x="19.3939" y="504" width="116.3636" height="129.6" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
-  <text x="77.5758" y="558" font-size="23.2727" font-weight="bold" fill="#222" text-anchor="middle">a</text>
-  <text x="77.5758" y="608.4" font-size="21.3333" fill="#555" text-anchor="middle">1B</text>
-  <rect x="135.7576" y="504" width="174.5455" height="129.6" fill="#ffebee" stroke="#333" stroke-width="2.9091" />
-  <text x="223.0303" y="558" font-size="23.2727" fill="#888" text-anchor="middle">padding</text>
-  <text x="223.0303" y="608.4" font-size="21.3333" fill="#888" text-anchor="middle">3B</text>
-  <rect x="310.303" y="504" width="232.7273" height="129.6" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" />
-  <text x="426.6667" y="558" font-size="23.2727" font-weight="bold" fill="#222" text-anchor="middle">b</text>
-  <text x="426.6667" y="608.4" font-size="21.3333" fill="#555" text-anchor="middle">4B</text>
-  <rect x="543.0303" y="504" width="116.3636" height="129.6" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
-  <text x="601.2121" y="558" font-size="23.2727" font-weight="bold" fill="#222" text-anchor="middle">c</text>
-  <text x="601.2121" y="608.4" font-size="21.3333" fill="#555" text-anchor="middle">1B</text>
-  <rect x="659.3939" y="504" width="174.5455" height="129.6" fill="#ffebee" stroke="#333" stroke-width="2.9091" />
-  <text x="746.6667" y="558" font-size="23.2727" fill="#888" text-anchor="middle">padding</text>
-  <text x="746.6667" y="608.4" font-size="21.3333" fill="#888" text-anchor="middle">3B</text>
-  <text x="19.3939" y="684" font-size="23.2727" fill="#555" font-family="sans-serif">Offset: 0    1         4              8      9     → Total: 12 bytes (not 6!)</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Code box -->
+  <rect x="20" y="36" width="580" height="310" fill="#f5f5f5" stroke="#cccccc" stroke-width="2" rx="7"/>
+  <text x="40" y="100" font-size="24" fill="#222222">struct Example {</text>
+  <text x="40" y="160" font-size="24" fill="#222222">    char  a;  /* 1 byte  */</text>
+  <text x="40" y="220" font-size="24" fill="#222222">    int   b;  /* 4 bytes */</text>
+  <text x="40" y="280" font-size="24" fill="#222222">    char  c;  /* 1 byte  */</text>
+  <text x="40" y="340" font-size="24" fill="#222222">};</text>
+
+  <!-- Memory layout label -->
+  <text x="20" y="420" font-size="24" font-weight="bold" fill="#333333" font-family="sans-serif">Memory layout (with padding on 64-bit):</text>
+
+  <!-- Fields with padding -->
+  <rect x="20" y="450" width="110" height="120" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="75" y="508" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">a</text>
+  <text x="75" y="548" text-anchor="middle" font-size="18" fill="#555555">1B</text>
+
+  <rect x="133" y="450" width="165" height="120" fill="#fce4ec" stroke="#e53935" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="216" y="508" text-anchor="middle" font-size="22" fill="#888888">padding</text>
+  <text x="216" y="548" text-anchor="middle" font-size="18" fill="#888888">3B</text>
+
+  <rect x="301" y="450" width="220" height="120" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="411" y="508" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">b</text>
+  <text x="411" y="548" text-anchor="middle" font-size="18" fill="#555555">4B</text>
+
+  <rect x="524" y="450" width="110" height="120" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="579" y="508" text-anchor="middle" font-size="22" font-weight="bold" fill="#222222">c</text>
+  <text x="579" y="548" text-anchor="middle" font-size="18" fill="#555555">1B</text>
+
+  <rect x="637" y="450" width="165" height="120" fill="#fce4ec" stroke="#e53935" stroke-width="2" stroke-dasharray="6 3"/>
+  <text x="720" y="508" text-anchor="middle" font-size="22" fill="#888888">padding</text>
+  <text x="720" y="548" text-anchor="middle" font-size="18" fill="#888888">3B</text>
+
+  <!-- Offset annotation -->
+  <text x="20" y="620" font-size="22" fill="#555555" font-family="sans-serif">Offset: 0    1         4              8      9     -- Total: 12 bytes (not 6!)</text>
 </svg>

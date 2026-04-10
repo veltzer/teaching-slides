@@ -1,27 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="42.8571" text-anchor="middle" font-size="27.4286" font-weight="bold" fill="#333">Memory Regions in a C Program</text>
-  <text x="1047.2727" y="94.2857" font-size="17.1429" fill="#666">High addresses</text>
-  <rect x="232.7273" y="85.7143" width="581.8182" height="111.4286" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="523.6364" y="123.4286" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#4a90e2">Stack</text>
-  <text x="523.6364" y="154.2857" text-anchor="middle" font-size="17.1429" fill="#666">Local variables, function frames</text>
-  <text x="523.6364" y="180" text-anchor="middle" font-size="17.1429" fill="#4a90e2">(grows downward)</text>
-  <polygon points="512,180 523.6364,197.1429 535.2727,180" fill="#4a90e2" />
-  <text x="523.6364" y="240" text-anchor="middle" font-size="34.2857" fill="#ccc">...</text>
-  <polygon points="512,265.7143 523.6364,248.5714 535.2727,265.7143" fill="#28a745" />
-  <rect x="232.7273" y="265.7143" width="581.8182" height="111.4286" rx="8.5714" fill="#d4edda" stroke="#28a745" stroke-width="3.4286" />
-  <text x="523.6364" y="303.4286" text-anchor="middle" font-size="22.2857" font-weight="bold" fill="#28a745">Heap</text>
-  <text x="523.6364" y="334.2857" text-anchor="middle" font-size="17.1429" fill="#666">malloc/calloc/realloc</text>
-  <text x="523.6364" y="360" text-anchor="middle" font-size="17.1429" fill="#28a745">(grows upward)</text>
-  <rect x="232.7273" y="385.7143" width="581.8182" height="77.1429" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="3.4286" />
-  <text x="523.6364" y="423.4286" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#856404">Uninitialized Data (.bss)</text>
-  <text x="523.6364" y="450.8571" text-anchor="middle" font-size="17.1429" fill="#666">static int x;</text>
-  <rect x="232.7273" y="471.4286" width="581.8182" height="77.1429" rx="8.5714" fill="#fff3cd" stroke="#ffc107" stroke-width="2.5714" />
-  <text x="523.6364" y="509.1429" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#856404">Initialized Data (.data)</text>
-  <text x="523.6364" y="536.5714" text-anchor="middle" font-size="17.1429" fill="#666">static int x = 5;</text>
-  <rect x="232.7273" y="557.1429" width="581.8182" height="77.1429" rx="8.5714" fill="#f8d7da" stroke="#dc3545" stroke-width="2.5714" />
-  <text x="523.6364" y="594.8571" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#dc3545">Read-Only Data (.rodata)</text>
-  <text x="523.6364" y="622.2857" text-anchor="middle" font-size="17.1429" fill="#666">string literals</text>
-  <rect x="232.7273" y="642.8571" width="581.8182" height="68.5714" rx="8.5714" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.5714" />
-  <text x="523.6364" y="685.7143" text-anchor="middle" font-size="20.5714" font-weight="bold" fill="#4a90e2">Text / Code (.text)</text>
-  <text x="1047.2727" y="685.7143" font-size="17.1429" fill="#666">Low addresses</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <text x="1060" y="55" font-size="16" fill="#888888">High addresses</text>
+
+  <!-- Stack -->
+  <rect x="240" y="60" width="580" height="100" rx="8" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="530" y="100" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Stack</text>
+  <text x="530" y="128" text-anchor="middle" font-size="16" fill="#666666">Local variables, function frames</text>
+  <text x="530" y="150" text-anchor="middle" font-size="15" fill="#1e88e5">(grows downward)</text>
+  <polygon points="520,158 530,174 540,158" fill="#1e88e5"/>
+
+  <text x="530" y="218" text-anchor="middle" font-size="32" fill="#cccccc">...</text>
+
+  <polygon points="520,232 530,216 540,232" fill="#1e88e5"/>
+
+  <!-- Heap -->
+  <rect x="240" y="240" width="580" height="100" rx="8" fill="#e8f5e9" stroke="#1565c0" stroke-width="3" filter="url(#shadow)"/>
+  <text x="530" y="280" text-anchor="middle" font-size="22" font-weight="bold" fill="#1565c0">Heap</text>
+  <text x="530" y="308" text-anchor="middle" font-size="16" fill="#666666">malloc / calloc / realloc</text>
+  <text x="530" y="330" text-anchor="middle" font-size="15" fill="#1e88e5">(grows upward)</text>
+
+  <!-- Uninitialized data -->
+  <rect x="240" y="350" width="580" height="70" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="385" text-anchor="middle" font-size="20" font-weight="bold" fill="#f57f17">Uninitialized Data (.bss)</text>
+  <text x="530" y="410" text-anchor="middle" font-size="15" fill="#666666">static int x;</text>
+
+  <!-- Initialized data -->
+  <rect x="240" y="428" width="580" height="70" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="463" text-anchor="middle" font-size="20" font-weight="bold" fill="#f57f17">Initialized Data (.data)</text>
+  <text x="530" y="488" text-anchor="middle" font-size="15" fill="#666666">static int x = 5;</text>
+
+  <!-- Read-only data -->
+  <rect x="240" y="506" width="580" height="70" rx="8" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="541" text-anchor="middle" font-size="20" font-weight="bold" fill="#e53935">Read-Only Data (.rodata)</text>
+  <text x="530" y="566" text-anchor="middle" font-size="15" fill="#666666">string literals</text>
+
+  <!-- Text/code -->
+  <rect x="240" y="584" width="580" height="65" rx="8" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="530" y="624" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565c0">Text / Code (.text)</text>
+
+  <text x="1060" y="624" font-size="16" fill="#888888">Low addresses</text>
 </svg>

@@ -1,27 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="23.2727" y="20.5714" width="1233.4545" height="678.8571" rx="10.2857" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.1143" />
-  <text x="640" y="82.2857" text-anchor="middle" font-size="37.0286" font-weight="bold" fill="#333">What is Encryption?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
   <defs>
-    <marker id="arr" markerWidth="23.2727" markerHeight="14.4" refX="8.1455" refY="20.5714" orient="auto">
-      <polygon points="0,7.2 23.2727,14.4" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <rect x="279.2727" y="113.1429" width="721.4545" height="82.2857" rx="10.2857" fill="#d4edda" stroke="#28a745" stroke-width="4.1143" />
-  <text x="640" y="164.5714" text-anchor="middle" font-size="26.7429" fill="#333">Original: "Employee salary: $85,000"</text>
-  <line x1="640" y1="195.4286" x2="640" y2="257.1429" stroke="#4a90e2" stroke-width="4.1143" />
-  <polygon points="628.3636,246.8571 651.6364,246.8571 640,267.4286" fill="#4a90e2" />
-  <rect x="465.4545" y="267.4286" width="349.0909" height="72" rx="10.2857" fill="#fff3cd" stroke="#ffc107" stroke-width="4.1143" />
-  <text x="640" y="314.7429" text-anchor="middle" font-size="26.7429" font-weight="bold" fill="#856404">Encryption</text>
-  <line x1="640" y1="339.4286" x2="640" y2="380.5714" stroke="#4a90e2" stroke-width="4.1143" />
-  <polygon points="628.3636,370.2857 651.6364,370.2857 640,390.8571" fill="#4a90e2" />
-  <rect x="279.2727" y="390.8571" width="721.4545" height="82.2857" rx="10.2857" fill="#f8d7da" stroke="#dc3545" stroke-width="4.1143" />
-  <text x="640" y="442.2857" text-anchor="middle" font-size="26.7429" fill="#333">Encrypted: "x7$kL9#mQ2@pR5&amp;vN8..."</text>
-  <line x1="640" y1="473.1429" x2="640" y2="524.5714" stroke="#4a90e2" stroke-width="4.1143" />
-  <polygon points="628.3636,514.2857 651.6364,514.2857 640,534.8571" fill="#4a90e2" />
-  <rect x="465.4545" y="534.8571" width="349.0909" height="72" rx="10.2857" fill="#fff3cd" stroke="#ffc107" stroke-width="4.1143" />
-  <text x="640" y="582.1714" text-anchor="middle" font-size="26.7429" font-weight="bold" fill="#856404">Decryption</text>
-  <line x1="640" y1="606.8571" x2="640" y2="637.7143" stroke="#4a90e2" stroke-width="4.1143" />
-  <polygon points="628.3636,627.4286 651.6364,627.4286 640,648" fill="#4a90e2" />
-  <rect x="279.2727" y="648" width="721.4545" height="72" rx="10.2857" fill="#d4edda" stroke="#28a745" stroke-width="4.1143" />
-  <text x="640" y="695.3143" text-anchor="middle" font-size="26.7429" fill="#333">Readable: "Employee salary: $85,000"</text>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Plaintext -->
+  <rect x="280" y="60" width="720" height="80" rx="10" fill="#e8f5e9" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="108" text-anchor="middle" font-size="24" fill="#333333">Original: "Employee salary: $85,000"</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="140" x2="640" y2="200" stroke="#1e88e5" stroke-width="3"/>
+  <polygon points="628,190 652,190 640,210" fill="#1e88e5"/>
+
+  <!-- Encryption box -->
+  <rect x="464" y="210" width="352" height="70" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="253" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Encryption + Key</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="280" x2="640" y2="340" stroke="#1e88e5" stroke-width="3"/>
+  <polygon points="628,330 652,330 640,350" fill="#1e88e5"/>
+
+  <!-- Ciphertext -->
+  <rect x="280" y="350" width="720" height="80" rx="10" fill="#fce4ec" stroke="#e53935" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="398" text-anchor="middle" font-size="24" fill="#333333">Encrypted: "x7$kL9#mQ2@pR5&amp;vN8..."</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="430" x2="640" y2="490" stroke="#1e88e5" stroke-width="3"/>
+  <polygon points="628,480 652,480 640,500" fill="#1e88e5"/>
+
+  <!-- Decryption box -->
+  <rect x="464" y="500" width="352" height="70" rx="10" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="543" text-anchor="middle" font-size="24" font-weight="bold" fill="#ffffff">Decryption + Key</text>
+
+  <!-- Arrow down -->
+  <line x1="640" y1="570" x2="640" y2="610" stroke="#1e88e5" stroke-width="3"/>
+  <polygon points="628,600 652,600 640,620" fill="#1e88e5"/>
+
+  <!-- Plaintext restored -->
+  <rect x="280" y="620" width="720" height="70" rx="10" fill="#e8f5e9" stroke="#1e88e5" stroke-width="3" filter="url(#shadow)"/>
+  <text x="640" y="663" text-anchor="middle" font-size="24" fill="#333333">Readable: "Employee salary: $85,000"</text>
 </svg>

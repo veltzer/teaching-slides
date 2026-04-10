@@ -1,31 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="11.4286" refY="13.8462" markerWidth="13.7143" markerHeight="16.6154" orient="auto-start-auto">
-      <path d="M 0 0 L 22.8571 13.8462 L 0 27.6923 z" fill="#4a90e2" />
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
     </marker>
   </defs>
-  <text x="640" y="69.2308" text-anchor="middle" font-size="36.5714" font-weight="bold" fill="#333">IPVS Load Balancing</text>
-  <rect x="45.7143" y="124.6154" width="228.5714" height="124.6154" rx="11.4286" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.5714" />
-  <text x="160" y="202.1538" text-anchor="middle" font-size="29.7143" fill="#333">Client</text>
-  <line x1="274.2857" y1="185.5385" x2="411.4286" y2="185.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
-  <rect x="411.4286" y="124.6154" width="365.7143" height="124.6154" rx="11.4286" fill="#fff3cd" stroke="#ffc107" stroke-width="4.5714" />
-  <text x="594.2857" y="180" text-anchor="middle" font-size="29.7143" fill="#333">VIP</text>
-  <text x="594.2857" y="227.0769" text-anchor="middle" font-size="25.1429" font-family="monospace" fill="#666">10.20.0.5</text>
-  <line x1="777.1429" y1="185.5385" x2="891.4286" y2="185.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
-  <rect x="891.4286" y="110.7692" width="342.8571" height="152.3077" rx="11.4286" fill="#d4edda" stroke="#28a745" stroke-width="4.5714" />
-  <text x="1062.8571" y="174.4615" text-anchor="middle" font-size="32" font-weight="bold" fill="#28a745">IPVS</text>
-  <text x="1062.8571" y="227.0769" text-anchor="middle" font-size="22.8571" fill="#666">kernel module</text>
-  <line x1="1062.8571" y1="263.0769" x2="834.2857" y2="401.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
-  <line x1="1062.8571" y1="263.0769" x2="1062.8571" y2="401.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
-  <line x1="1062.8571" y1="263.0769" x2="1234.2857" y2="401.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
-  <rect x="708.5714" y="401.5385" width="251.4286" height="138.4615" rx="11.4286" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="834.2857" y="465.2308" text-anchor="middle" font-size="27.4286" fill="#333">Task 1</text>
-  <text x="834.2857" y="512.3077" text-anchor="middle" font-size="22.8571" font-family="monospace" fill="#666">10.20.0.6</text>
-  <rect x="982.8571" y="401.5385" width="251.4286" height="138.4615" rx="11.4286" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="1108.5714" y="465.2308" text-anchor="middle" font-size="27.4286" fill="#333">Task 2</text>
-  <text x="1108.5714" y="512.3077" text-anchor="middle" font-size="22.8571" font-family="monospace" fill="#666">10.20.0.7</text>
-  <rect x="434.2857" y="401.5385" width="251.4286" height="138.4615" rx="11.4286" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3.4286" />
-  <text x="560" y="465.2308" text-anchor="middle" font-size="27.4286" fill="#333">Task 3</text>
-  <text x="560" y="512.3077" text-anchor="middle" font-size="22.8571" font-family="monospace" fill="#666">10.20.0.8</text>
-  <line x1="1062.8571" y1="263.0769" x2="560" y2="401.5385" stroke="#4a90e2" stroke-width="4.5714" marker-end="url(#arrow)" />
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="55" text-anchor="middle" font-size="34" font-weight="bold" fill="#1565c0">IPVS Load Balancing</text>
+  <!-- Client -->
+  <rect x="46" y="100" width="220" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="156" y="167" text-anchor="middle" font-size="28" fill="#333333">Client</text>
+  <!-- arrow to VIP -->
+  <line x1="266" y1="160" x2="394" y2="160" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- VIP -->
+  <rect x="394" y="100" width="360" height="120" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="574" y="154" text-anchor="middle" font-size="28" fill="#333333">VIP</text>
+  <text x="574" y="196" text-anchor="middle" font-size="22" font-family="monospace" fill="#555555">10.20.0.5</text>
+  <!-- arrow to IPVS -->
+  <line x1="754" y1="160" x2="866" y2="160" stroke="#1565c0" stroke-width="3" marker-end="url(#arrow-accent)"/>
+  <!-- IPVS box -->
+  <rect x="866" y="84" width="340" height="152" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1036" y="152" text-anchor="middle" font-size="30" font-weight="bold" fill="#1565c0">IPVS</text>
+  <text x="1036" y="200" text-anchor="middle" font-size="20" fill="#555555">kernel module</text>
+  <!-- arrows from IPVS to tasks -->
+  <line x1="1036" y1="236" x2="560" y2="380" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="1036" y1="236" x2="1036" y2="380" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <line x1="1036" y1="236" x2="1200" y2="380" stroke="#1565c0" stroke-width="2.5" marker-end="url(#arrow-accent)"/>
+  <!-- Task 3 -->
+  <rect x="434" y="380" width="252" height="130" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="560" y="438" text-anchor="middle" font-size="26" fill="#333333">Task 3</text>
+  <text x="560" y="480" text-anchor="middle" font-size="20" font-family="monospace" fill="#555555">10.20.0.8</text>
+  <!-- Task 1 -->
+  <rect x="910" y="380" width="252" height="130" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1036" y="438" text-anchor="middle" font-size="26" fill="#333333">Task 1</text>
+  <text x="1036" y="480" text-anchor="middle" font-size="20" font-family="monospace" fill="#555555">10.20.0.6</text>
+  <!-- Task 2 -->
+  <rect x="1074" y="380" width="190" height="130" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1169" y="438" text-anchor="middle" font-size="26" fill="#333333">Task 2</text>
+  <text x="1169" y="480" text-anchor="middle" font-size="20" font-family="monospace" fill="#555555">10.20.0.7</text>
 </svg>

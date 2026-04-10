@@ -1,26 +1,63 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="monospace">
-  <text x="19.3939" y="96" font-size="25.2121" font-weight="bold" fill="#222" font-family="sans-serif">Big-Endian (network byte order)</text>
-  <text x="19.3939" y="182.4" font-size="23.2727" fill="#555">uint32_t val = 0x12345678</text>
-  <text x="19.3939" y="278.4" font-size="21.3333" fill="#777">Address:  0x00  0x01  0x02  0x03</text>
-  <rect x="19.3939" y="312" width="116.3636" height="144" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
-  <rect x="135.7576" y="312" width="116.3636" height="144" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" />
-  <rect x="252.1212" y="312" width="116.3636" height="144" fill="#fff3e0" stroke="#333" stroke-width="2.9091" />
-  <rect x="368.4848" y="312" width="116.3636" height="144" fill="#fce4ec" stroke="#333" stroke-width="2.9091" />
-  <text x="77.5758" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x12</text>
-  <text x="193.9394" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x34</text>
-  <text x="310.303" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x56</text>
-  <text x="426.6667" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x78</text>
-  <text x="19.3939" y="537.6" font-size="23.2727" fill="#555" font-family="sans-serif">MSB first</text>
-  <text x="659.3939" y="96" font-size="25.2121" font-weight="bold" fill="#222" font-family="sans-serif">Little-Endian (x86)</text>
-  <text x="659.3939" y="182.4" font-size="23.2727" fill="#555">uint32_t val = 0x12345678</text>
-  <text x="659.3939" y="278.4" font-size="21.3333" fill="#777">Address:  0x00  0x01  0x02  0x03</text>
-  <rect x="659.3939" y="312" width="116.3636" height="144" fill="#fce4ec" stroke="#333" stroke-width="2.9091" />
-  <rect x="775.7576" y="312" width="116.3636" height="144" fill="#fff3e0" stroke="#333" stroke-width="2.9091" />
-  <rect x="892.1212" y="312" width="116.3636" height="144" fill="#e8f5e9" stroke="#333" stroke-width="2.9091" />
-  <rect x="1008.4848" y="312" width="116.3636" height="144" fill="#e3f2fd" stroke="#333" stroke-width="2.9091" />
-  <text x="717.5758" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x78</text>
-  <text x="833.9394" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x56</text>
-  <text x="950.303" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x34</text>
-  <text x="1066.6667" y="408" font-size="25.2121" fill="#222" text-anchor="middle">0x12</text>
-  <text x="659.3939" y="537.6" font-size="23.2727" fill="#555" font-family="sans-serif">LSB first</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Big-Endian section -->
+  <text x="20" y="80" font-size="24" font-weight="bold" fill="#222222" font-family="sans-serif">Big-Endian (network byte order)</text>
+  <text x="20" y="150" font-size="22" fill="#555555">uint32_t val = 0x12345678</text>
+  <text x="20" y="240" font-size="20" fill="#888888">Address:  0x00  0x01  0x02  0x03</text>
+
+  <rect x="20" y="260" width="112" height="130" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="136" y="260" width="112" height="130" rx="5" fill="#e8f5e9" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="252" y="260" width="112" height="130" rx="5" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="368" y="260" width="112" height="130" rx="5" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="76" y="338" font-size="24" fill="#222222" text-anchor="middle">0x12</text>
+  <text x="192" y="338" font-size="24" fill="#222222" text-anchor="middle">0x34</text>
+  <text x="308" y="338" font-size="24" fill="#222222" text-anchor="middle">0x56</text>
+  <text x="424" y="338" font-size="24" fill="#222222" text-anchor="middle">0x78</text>
+
+  <text x="20" y="440" font-size="22" fill="#555555" font-family="sans-serif">MSB first (most significant byte at lowest address)</text>
+
+  <!-- Little-Endian section -->
+  <text x="660" y="80" font-size="24" font-weight="bold" fill="#222222" font-family="sans-serif">Little-Endian (x86)</text>
+  <text x="660" y="150" font-size="22" fill="#555555">uint32_t val = 0x12345678</text>
+  <text x="660" y="240" font-size="20" fill="#888888">Address:  0x00  0x01  0x02  0x03</text>
+
+  <rect x="660" y="260" width="112" height="130" rx="5" fill="#fce4ec" stroke="#e53935" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="776" y="260" width="112" height="130" rx="5" fill="#fff8e1" stroke="#f9a825" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="892" y="260" width="112" height="130" rx="5" fill="#e8f5e9" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="1008" y="260" width="112" height="130" rx="5" fill="url(#grad-surface)" stroke="#1e88e5" stroke-width="2" filter="url(#shadow)"/>
+
+  <text x="716" y="338" font-size="24" fill="#222222" text-anchor="middle">0x78</text>
+  <text x="832" y="338" font-size="24" fill="#222222" text-anchor="middle">0x56</text>
+  <text x="948" y="338" font-size="24" fill="#222222" text-anchor="middle">0x34</text>
+  <text x="1064" y="338" font-size="24" fill="#222222" text-anchor="middle">0x12</text>
+
+  <text x="660" y="440" font-size="22" fill="#555555" font-family="sans-serif">LSB first (least significant byte at lowest address)</text>
+
+  <!-- Divider -->
+  <line x1="640" y1="60" x2="640" y2="620" stroke="#cccccc" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- Note -->
+  <rect x="60" y="510" width="1160" height="80" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.5"/>
+  <text x="640" y="558" text-anchor="middle" font-size="18" fill="#555555">Use htonl() / ntohl() when sending multi-byte values over a network</text>
 </svg>

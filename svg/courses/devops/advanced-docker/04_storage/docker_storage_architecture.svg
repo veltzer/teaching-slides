@@ -1,17 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="47.3684" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#333">Docker Storage Architecture</text>
-  <rect x="106.6667" y="75.7895" width="1066.6667" height="90.9474" rx="9.4737" fill="#d4edda" stroke="#28a745" stroke-width="3.7895" />
-  <text x="640" y="132.6316" text-anchor="middle" font-size="24.6316" fill="#333">Container Layer (R/W)</text>
-  <rect x="106.6667" y="174.3158" width="1066.6667" height="79.5789" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="640" y="223.5789" text-anchor="middle" font-size="22.7368" fill="#333">Image Layer 3 (RO)</text>
-  <rect x="106.6667" y="261.4737" width="1066.6667" height="79.5789" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="640" y="310.7368" text-anchor="middle" font-size="22.7368" fill="#333">Image Layer 2 (RO)</text>
-  <rect x="106.6667" y="348.6316" width="1066.6667" height="79.5789" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="640" y="397.8947" text-anchor="middle" font-size="22.7368" fill="#333">Image Layer 1 (RO)</text>
-  <rect x="106.6667" y="435.7895" width="1066.6667" height="79.5789" rx="9.4737" fill="#e8f4f8" stroke="#4a90e2" stroke-width="2.8421" />
-  <text x="640" y="485.0526" text-anchor="middle" font-size="22.7368" fill="#333">Base Image Layer (RO)</text>
-  <rect x="106.6667" y="530.5263" width="1066.6667" height="79.5789" rx="9.4737" fill="#fff3cd" stroke="#ffc107" stroke-width="3.7895" />
-  <text x="640" y="579.7895" text-anchor="middle" font-size="24.6316" fill="#333">Storage Driver (overlay2)</text>
-  <rect x="106.6667" y="617.6842" width="1066.6667" height="79.5789" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="3.7895" />
-  <text x="640" y="666.9474" text-anchor="middle" font-size="24.6316" fill="#333">Filesystem (ext4, xfs)</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Container Layer (R/W) -->
+  <rect x="107" y="40" width="1066" height="84" rx="8" fill="url(#grad-accent)" filter="url(#shadow)"/>
+  <text x="640" y="90" text-anchor="middle" font-size="26" font-weight="bold" fill="#ffffff">Container Layer (R/W)</text>
+  <!-- Image Layer 3 -->
+  <rect x="107" y="140" width="1066" height="74" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="185" text-anchor="middle" font-size="24" fill="#1565c0">Image Layer 3 (RO)</text>
+  <!-- Image Layer 2 -->
+  <rect x="107" y="228" width="1066" height="74" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="273" text-anchor="middle" font-size="24" fill="#1565c0">Image Layer 2 (RO)</text>
+  <!-- Image Layer 1 -->
+  <rect x="107" y="316" width="1066" height="74" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="361" text-anchor="middle" font-size="24" fill="#1565c0">Image Layer 1 (RO)</text>
+  <!-- Base Image Layer -->
+  <rect x="107" y="404" width="1066" height="74" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="449" text-anchor="middle" font-size="24" fill="#1565c0">Base Image Layer (RO)</text>
+  <!-- Storage Driver -->
+  <rect x="107" y="496" width="1066" height="74" rx="8" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="541" text-anchor="middle" font-size="24" fill="#1565c0">Storage Driver (overlay2)</text>
+  <!-- Filesystem -->
+  <rect x="107" y="584" width="1066" height="74" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="629" text-anchor="middle" font-size="24" fill="#1565c0">Filesystem (ext4, xfs)</text>
 </svg>

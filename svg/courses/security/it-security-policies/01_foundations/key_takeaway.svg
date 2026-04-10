@@ -1,8 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="23.2727" y="36" width="1233.4545" height="648" rx="11.6364" fill="#fff3cd" stroke="#ffc107" stroke-width="4.6545" />
-  <rect x="69.8182" y="108" width="1140.3636" height="504" rx="11.6364" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.6545" />
-  <text x="640" y="252" text-anchor="middle" font-size="37.2364" font-weight="bold" fill="#333">Security is NOT just an IT problem.</text>
-  <line x1="232.7273" y1="306" x2="1047.2727" y2="306" stroke="#4a90e2" stroke-width="2.3273" />
-  <text x="640" y="414" text-anchor="middle" font-size="32.5818" fill="#333">Every employee is both a potential</text>
-  <text x="640" y="504" text-anchor="middle" font-size="32.5818" fill="#333">vulnerability AND a powerful line of defense.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="sans-serif">
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+
+  <!-- Outer accent border -->
+  <rect x="40" y="60" width="1200" height="580" rx="12" fill="#fff8e1" stroke="#f9a825" stroke-width="4" filter="url(#shadow)"/>
+
+  <!-- Inner content box -->
+  <rect x="80" y="100" width="1120" height="500" rx="10" fill="#e3f2fd" stroke="#1e88e5" stroke-width="3"/>
+
+  <text x="640" y="250" text-anchor="middle" font-size="36" font-weight="bold" fill="#222222">Security is NOT just an IT problem.</text>
+
+  <line x1="220" y1="300" x2="1060" y2="300" stroke="#1e88e5" stroke-width="2"/>
+
+  <text x="640" y="390" text-anchor="middle" font-size="32" fill="#333333">Every employee is both a potential</text>
+  <text x="640" y="460" text-anchor="middle" font-size="32" fill="#333333">vulnerability AND a powerful line of defense.</text>
 </svg>

@@ -1,22 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="60" text-anchor="middle" font-size="36.5714" font-weight="bold" fill="#333">Three Types of Mounts</text>
-  <rect x="22.8571" y="96" width="1234.2857" height="600" rx="11.4286" fill="#f9f9f9" stroke="#4a90e2" stroke-width="4.5714" />
-  <rect x="68.5714" y="144" width="342.8571" height="132" rx="11.4286" fill="#e8f4f8" stroke="#4a90e2" stroke-width="4.5714" />
-  <text x="240" y="204" text-anchor="middle" font-size="32" font-weight="bold" fill="#4a90e2">Bind Mount</text>
-  <rect x="457.1429" y="144" width="342.8571" height="132" rx="11.4286" fill="#d4edda" stroke="#28a745" stroke-width="4.5714" />
-  <text x="628.5714" y="204" text-anchor="middle" font-size="32" font-weight="bold" fill="#28a745">Named Volume</text>
-  <rect x="845.7143" y="144" width="342.8571" height="132" rx="11.4286" fill="#fff3cd" stroke="#ffc107" stroke-width="4.5714" />
-  <text x="1017.1429" y="204" text-anchor="middle" font-size="32" font-weight="bold" fill="#856404">tmpfs Mount</text>
-  <line x1="240" y1="276" x2="240" y2="348" stroke="#4a90e2" stroke-width="4.5714" />
-  <line x1="628.5714" y1="276" x2="628.5714" y2="348" stroke="#28a745" stroke-width="4.5714" />
-  <line x1="1017.1429" y1="276" x2="1017.1429" y2="348" stroke="#ffc107" stroke-width="4.5714" />
-  <text x="240" y="384" text-anchor="middle" font-size="27.4286" fill="#333">Host path</text>
-  <text x="240" y="427.2" text-anchor="middle" font-size="25.1429" font-family="monospace" fill="#666">/home/user</text>
-  <text x="240" y="470.4" text-anchor="middle" font-size="25.1429" font-family="monospace" fill="#666">/data/app</text>
-  <text x="628.5714" y="384" text-anchor="middle" font-size="27.4286" fill="#333">Docker-managed</text>
-  <text x="628.5714" y="427.2" text-anchor="middle" font-size="25.1429" font-family="monospace" fill="#666">/var/lib/docker</text>
-  <text x="628.5714" y="470.4" text-anchor="middle" font-size="25.1429" font-family="monospace" fill="#666">/volumes/...</text>
-  <text x="1017.1429" y="384" text-anchor="middle" font-size="27.4286" fill="#333">RAM only</text>
-  <text x="1017.1429" y="427.2" text-anchor="middle" font-size="25.1429" fill="#666">No disk I/O</text>
-  <text x="1017.1429" y="470.4" text-anchor="middle" font-size="25.1429" fill="#666">Fastest option</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" font-size="34" font-weight="bold" fill="#1565c0">Three Types of Mounts</text>
+  <!-- Outer card -->
+  <rect x="22" y="74" width="1236" height="560" rx="10" fill="url(#grad-surface)" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <!-- Bind Mount -->
+  <rect x="68" y="112" width="340" height="130" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="238" y="182" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Bind Mount</text>
+  <!-- Named Volume -->
+  <rect x="470" y="112" width="340" height="130" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="640" y="182" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">Named Volume</text>
+  <!-- tmpfs Mount -->
+  <rect x="872" y="112" width="340" height="130" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1042" y="182" text-anchor="middle" font-size="28" font-weight="bold" fill="#1565c0">tmpfs Mount</text>
+  <!-- Connector lines -->
+  <line x1="238" y1="242" x2="238" y2="310" stroke="#1565c0" stroke-width="3"/>
+  <line x1="640" y1="242" x2="640" y2="310" stroke="#1565c0" stroke-width="3"/>
+  <line x1="1042" y1="242" x2="1042" y2="310" stroke="#1565c0" stroke-width="3"/>
+  <!-- Detail text -->
+  <text x="238" y="346" text-anchor="middle" font-size="24" fill="#333333">Host path</text>
+  <text x="238" y="390" text-anchor="middle" font-size="22" font-family="monospace" fill="#555555">/home/user</text>
+  <text x="238" y="432" text-anchor="middle" font-size="22" font-family="monospace" fill="#555555">/data/app</text>
+  <text x="640" y="346" text-anchor="middle" font-size="24" fill="#333333">Docker-managed</text>
+  <text x="640" y="390" text-anchor="middle" font-size="22" font-family="monospace" fill="#555555">/var/lib/docker</text>
+  <text x="640" y="432" text-anchor="middle" font-size="22" font-family="monospace" fill="#555555">/volumes/...</text>
+  <text x="1042" y="346" text-anchor="middle" font-size="24" fill="#333333">RAM only</text>
+  <text x="1042" y="390" text-anchor="middle" font-size="22" fill="#555555">No disk I/O</text>
+  <text x="1042" y="432" text-anchor="middle" font-size="22" fill="#555555">Fastest option</text>
 </svg>

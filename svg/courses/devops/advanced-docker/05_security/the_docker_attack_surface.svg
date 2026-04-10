@@ -1,20 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <rect x="26.6667" y="18.9474" width="1226.6667" height="682.1053" rx="9.4737" fill="#f8d7da" stroke="#dc3545" stroke-width="3.7895" />
-  <text x="640" y="75.7895" text-anchor="middle" font-size="30.3158" font-weight="bold" fill="#dc3545">Docker Attack Vectors</text>
-  <rect x="80" y="104.2105" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="147.7895" font-size="24.6316" fill="#333">1. Docker daemon (root access)</text>
-  <rect x="80" y="180" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="223.5789" font-size="24.6316" fill="#333">2. Container escape (kernel exploits)</text>
-  <rect x="80" y="255.7895" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="299.3684" font-size="24.6316" fill="#333">3. Malicious images (supply chain)</text>
-  <rect x="80" y="331.5789" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="375.1579" font-size="24.6316" fill="#333">4. Network exposure</text>
-  <rect x="80" y="407.3684" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="450.9474" font-size="24.6316" fill="#333">5. Sensitive data in images/env</text>
-  <rect x="80" y="483.1579" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="526.7368" font-size="24.6316" fill="#333">6. Resource exhaustion (DoS)</text>
-  <rect x="80" y="558.9474" width="1120" height="66.3158" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="602.5263" font-size="24.6316" fill="#333">7. Misconfigured volumes</text>
-  <rect x="80" y="634.7368" width="1120" height="47.3684" rx="9.4737" fill="#fff" stroke="#dc3545" stroke-width="2.8421" />
-  <text x="133.3333" y="668.8421" font-size="24.6316" fill="#333">8. Privileged containers</text>
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" font-size="28" font-weight="bold" fill="#c62828">Docker Attack Vectors</text>
+  <!-- Attack items -->
+  <rect x="80" y="66" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="106" font-size="24" fill="#333333">1. Docker daemon (root access)</text>
+  <rect x="80" y="142" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="182" font-size="24" fill="#333333">2. Container escape (kernel exploits)</text>
+  <rect x="80" y="218" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="258" font-size="24" fill="#333333">3. Malicious images (supply chain)</text>
+  <rect x="80" y="294" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="334" font-size="24" fill="#333333">4. Network exposure</text>
+  <rect x="80" y="370" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="410" font-size="24" fill="#333333">5. Sensitive data in images/env</text>
+  <rect x="80" y="446" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="486" font-size="24" fill="#333333">6. Resource exhaustion (DoS)</text>
+  <rect x="80" y="522" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="562" font-size="24" fill="#333333">7. Misconfigured volumes</text>
+  <rect x="80" y="598" width="1120" height="64" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="133" y="638" font-size="24" fill="#333333">8. Privileged containers</text>
 </svg>

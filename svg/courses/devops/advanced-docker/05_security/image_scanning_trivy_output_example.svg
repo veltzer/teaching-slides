@@ -1,41 +1,69 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" font-family="Arial, sans-serif">
-  <text x="640" y="56.25" text-anchor="middle" font-size="32" font-weight="bold" fill="#333">Image Scanning: Trivy Output</text>
-  <rect x="20" y="78.75" width="1240" height="90" rx="10" fill="#f8d7da" stroke="#dc3545" stroke-width="4" />
-  <text x="40" y="123.75" font-size="24" font-family="monospace" fill="#333">myapp:latest (debian 12.4)</text>
-  <text x="40" y="157.5" font-size="24" font-weight="bold" fill="#dc3545">Total: 15 (HIGH: 10, CRITICAL: 5)</text>
-  <rect x="20" y="191.25" width="1240" height="67.5" rx="6" fill="#e8f4f8" stroke="#4a90e2" stroke-width="3" />
-  <text x="120" y="236.25" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Library</text>
-  <text x="400" y="236.25" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Vulnerability</text>
-  <text x="680" y="236.25" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Severity</text>
-  <text x="920" y="236.25" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Installed</text>
-  <text x="1160" y="236.25" text-anchor="middle" font-size="22" font-weight="bold" fill="#333">Fixed</text>
-  <rect x="20" y="265.5" width="1240" height="63" rx="0" fill="#f8d7da" stroke="none" />
-  <text x="120" y="308.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">libssl3</text>
-  <text x="400" y="308.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">CVE-2024-1234</text>
-  <rect x="600" y="279" width="160" height="40.5" rx="6" fill="#dc3545" stroke="none" />
-  <text x="680" y="308.25" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">CRITICAL</text>
-  <text x="920" y="308.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">3.0.11-1</text>
-  <text x="1160" y="308.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#28a745">3.0.13-1</text>
-  <rect x="20" y="333" width="1240" height="63" rx="0" fill="#fff" stroke="none" />
-  <text x="120" y="375.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">libcrypto3</text>
-  <text x="400" y="375.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">CVE-2024-1235</text>
-  <rect x="600" y="346.5" width="160" height="40.5" rx="6" fill="#dc3545" stroke="none" />
-  <text x="680" y="375.75" text-anchor="middle" font-size="20" font-weight="bold" fill="#fff">CRITICAL</text>
-  <text x="920" y="375.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">3.0.11-1</text>
-  <text x="1160" y="375.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#28a745">3.0.13-1</text>
-  <rect x="20" y="400.5" width="1240" height="63" rx="0" fill="#f8d7da" stroke="none" />
-  <text x="120" y="443.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">curl</text>
-  <text x="400" y="443.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">CVE-2024-5678</text>
-  <rect x="610" y="414" width="140" height="40.5" rx="6" fill="#ffc107" stroke="none" />
-  <text x="680" y="443.25" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">HIGH</text>
-  <text x="920" y="443.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">7.88.1-10</text>
-  <text x="1160" y="443.25" text-anchor="middle" font-size="22" font-family="monospace" fill="#28a745">7.88.1-12</text>
-  <rect x="20" y="468" width="1240" height="63" rx="0" fill="#fff" stroke="none" />
-  <text x="120" y="510.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">zlib</text>
-  <text x="400" y="510.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">CVE-2024-9012</text>
-  <rect x="610" y="481.5" width="140" height="40.5" rx="6" fill="#ffc107" stroke="none" />
-  <text x="680" y="510.75" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">HIGH</text>
-  <text x="920" y="510.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#333">1.2.13-1</text>
-  <text x="1160" y="510.75" text-anchor="middle" font-size="22" font-family="monospace" fill="#28a745">1.2.13-2</text>
-  <rect x="20" y="191.25" width="1240" height="348.75" rx="6" fill="none" stroke="#4a90e2" stroke-width="3" />
+  <defs>
+    <linearGradient id="grad-accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e88e5"/>
+      <stop offset="100%" stop-color="#1565c0"/>
+    </linearGradient>
+    <linearGradient id="grad-surface" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f2f2"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-8%" width="108%" height="124%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000022"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#555555"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <path d="M1,2 L9,5 L1,8 Z" fill="#1565c0"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <!-- Title -->
+  <text x="640" y="46" text-anchor="middle" font-size="30" font-weight="bold" fill="#1565c0">Image Scanning: Trivy Output</text>
+  <!-- Summary banner -->
+  <rect x="20" y="64" width="1240" height="88" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2" filter="url(#shadow)"/>
+  <text x="40" y="104" font-size="22" font-family="monospace" fill="#333333">myapp:latest (debian 12.4)</text>
+  <text x="40" y="138" font-size="22" font-weight="bold" fill="#c62828">Total: 15 (HIGH: 10, CRITICAL: 5)</text>
+  <!-- Table header -->
+  <rect x="20" y="164" width="1240" height="60" rx="6" fill="url(#grad-accent)"/>
+  <text x="120" y="202" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Library</text>
+  <text x="400" y="202" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Vulnerability</text>
+  <text x="680" y="202" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Severity</text>
+  <text x="920" y="202" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Installed</text>
+  <text x="1160" y="202" text-anchor="middle" font-size="20" font-weight="bold" fill="#ffffff">Fixed</text>
+  <!-- Row 1: CRITICAL (shaded) -->
+  <rect x="20" y="228" width="1240" height="60" rx="0" fill="#ffebee"/>
+  <text x="120" y="265" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">libssl3</text>
+  <text x="400" y="265" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">CVE-2024-1234</text>
+  <rect x="600" y="240" width="160" height="36" rx="6" fill="#c62828"/>
+  <text x="680" y="265" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">CRITICAL</text>
+  <text x="920" y="265" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">3.0.11-1</text>
+  <text x="1160" y="265" text-anchor="middle" font-size="20" font-family="monospace" fill="#1565c0">3.0.13-1</text>
+  <!-- Row 2: CRITICAL (white) -->
+  <rect x="20" y="292" width="1240" height="60" rx="0" fill="#ffffff"/>
+  <text x="120" y="329" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">libcrypto3</text>
+  <text x="400" y="329" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">CVE-2024-1235</text>
+  <rect x="600" y="304" width="160" height="36" rx="6" fill="#c62828"/>
+  <text x="680" y="329" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">CRITICAL</text>
+  <text x="920" y="329" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">3.0.11-1</text>
+  <text x="1160" y="329" text-anchor="middle" font-size="20" font-family="monospace" fill="#1565c0">3.0.13-1</text>
+  <!-- Row 3: HIGH (shaded) -->
+  <rect x="20" y="356" width="1240" height="60" rx="0" fill="#ffebee"/>
+  <text x="120" y="393" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">curl</text>
+  <text x="400" y="393" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">CVE-2024-5678</text>
+  <rect x="610" y="368" width="140" height="36" rx="6" fill="#e65100"/>
+  <text x="680" y="393" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">HIGH</text>
+  <text x="920" y="393" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">7.88.1-10</text>
+  <text x="1160" y="393" text-anchor="middle" font-size="20" font-family="monospace" fill="#1565c0">7.88.1-12</text>
+  <!-- Row 4: HIGH (white) -->
+  <rect x="20" y="420" width="1240" height="60" rx="0" fill="#ffffff"/>
+  <text x="120" y="457" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">zlib</text>
+  <text x="400" y="457" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">CVE-2024-9012</text>
+  <rect x="610" y="432" width="140" height="36" rx="6" fill="#e65100"/>
+  <text x="680" y="457" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffffff">HIGH</text>
+  <text x="920" y="457" text-anchor="middle" font-size="20" font-family="monospace" fill="#333333">1.2.13-1</text>
+  <text x="1160" y="457" text-anchor="middle" font-size="20" font-family="monospace" fill="#1565c0">1.2.13-2</text>
+  <!-- Table border -->
+  <rect x="20" y="164" width="1240" height="316" rx="6" fill="none" stroke="#1565c0" stroke-width="2"/>
 </svg>
