@@ -156,12 +156,12 @@ jobs:
 - Add a badge to your `README.md`:
 
 ```markdown
-![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/user/repo/actions/workflows/ci.yml/badge.png)
 ```
 
 ---
 
-## Workflow Status Badges
+## CI Status Badge
 
 ![CI](svg/courses/devops/github-workflows/02_workflow_fundamentals/ci_badge.svg)
 

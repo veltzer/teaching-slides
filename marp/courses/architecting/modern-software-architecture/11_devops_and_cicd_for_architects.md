@@ -46,7 +46,7 @@
 ---
 ## CI/CD Pipeline
 
-![cicd_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cicd_pipeline.svg)
+![ci_cd_pipeline](svg/courses/architecting/modern-software-architecture/11_devops_and_cicd_for_architects/cicd_pipeline.svg)
 
 ---
 ## CI Best Practices
